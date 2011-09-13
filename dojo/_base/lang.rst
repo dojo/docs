@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo._base.lang
+dojo/_base/lang
 ===============
 
 :Available: since V0.9
@@ -40,6 +40,15 @@ Features
 * `dojo.isAlien <dojo/isAlien>`_
 
   Checks if the parameter is a built-in function
+
+* `dojo.trim <dojo/trim>`_
+
+  Trim whitespace from a String
+
+* `dojo.replace <dojo/replace>`_
+
+  Simple templates with parameterized substitutions.
+
 
 
 ========
