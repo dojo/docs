@@ -407,8 +407,8 @@ Document Lifecycle
 
   Signal fired by impending window destruction
 
-Ajax / IO
----------
+Ajax / IO (dojo/_base/xhr)
+--------------------------
 
 * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
 
