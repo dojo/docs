@@ -17,6 +17,7 @@ Introduction
 
 ``dojo.removeAttr()`` removes an attribute. It is modeled after DOM's `removeAttribute <https://developer.mozilla.org/En/DOM/Element.removeAttribute>`_, but unlike the latter it normalizes standard attribute names to smooth over differences between browsers, or to provide convenient aliases, e.g., ``className`` is aliased to ``class``, and so on. The same algorithm is used by `dojo.attr <dojo/attr>`_.
 
+Since dojo 1.7, dojo.removeAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.remove in dojo/dom-attr.
 
 =====
 Usage
@@ -40,7 +41,6 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.removeAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.remove in dojo/dom-attr.
 
 .. code-block :: javascript
 
