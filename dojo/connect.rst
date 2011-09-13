@@ -68,33 +68,33 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-	require(["dojo/_base/connect"], function(connect) {
-		// When obj.onchange(), do ui.update():
-		connect.connect(obj, "onchange", ui, "update");
-		connect.connect(obj, "onchange", ui, ui.update); // same
+  require(["dojo/_base/connect"], function(connect) {
+    // When obj.onchange(), do ui.update():
+    connect.connect(obj, "onchange", ui, "update");
+    connect.connect(obj, "onchange", ui, ui.update); // same
 
-		// Using return value for disconnect:
-		var link = connect.connect(obj, "onchange", ui, "update");
-		...
-		connect.disconnect(link);
+    // Using return value for disconnect:
+    var link = connect.connect(obj, "onchange", ui, "update");
+    ...
+    connect.disconnect(link);
 
-		// When onglobalevent executes, watcher.handler is invoked:
-		connect.connect(null, "onglobalevent", watcher, "handler");
+    // When onglobalevent executes, watcher.handler is invoked:
+    connect.connect(null, "onglobalevent", watcher, "handler");
 
-		// When ob.onCustomEvent executes, customEventHandler is invoked:
-		connect.connect(ob, "onCustomEvent", null, "customEventHandler");
-		connect.connect(ob, "onCustomEvent", "customEventHandler"); // same
+    // When ob.onCustomEvent executes, customEventHandler is invoked:
+    connect.connect(ob, "onCustomEvent", null, "customEventHandler");
+    connect.connect(ob, "onCustomEvent", "customEventHandler"); // same
 
-		// When ob.onCustomEvent executes, customEventHandler is invoked
-		// with the same scope (this):
-		connect.connect(ob, "onCustomEvent", null, customEventHandler);
-		connect.connect(ob, "onCustomEvent", customEventHandler); // same
+    // When ob.onCustomEvent executes, customEventHandler is invoked
+    // with the same scope (this):
+    connect.connect(ob, "onCustomEvent", null, customEventHandler);
+    connect.connect(ob, "onCustomEvent", customEventHandler); // same
 
-		// When globalEvent executes, globalHandler is invoked
-		// with the same scope (this):
-		connect.connect(null, "globalEvent", null, globalHandler);
-		connect.connect("globalEvent", globalHandler); // same
-	});
+    // When globalEvent executes, globalHandler is invoked
+    // with the same scope (this):
+    connect.connect(null, "globalEvent", null, globalHandler);
+    connect.connect("globalEvent", globalHandler); // same
+  });
 
 
 Dojo < 1.7
@@ -102,31 +102,31 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-	// When obj.onchange(), do ui.update():
-	dojo.connect(obj, "onchange", ui, "update");
-	dojo.connect(obj, "onchange", ui, ui.update); // same
+    // When obj.onchange(), do ui.update():
+    dojo.connect(obj, "onchange", ui, "update");
+    dojo.connect(obj, "onchange", ui, ui.update); // same
 
-	// Using return value for disconnect:
-	var link = dojo.connect(obj, "onchange", ui, "update");
-	...
-	dojo.disconnect(link);
+    // Using return value for disconnect:
+    var link = dojo.connect(obj, "onchange", ui, "update");
+    ...
+    dojo.disconnect(link);
 
-	// When onglobalevent executes, watcher.handler is invoked:
-	dojo.connect(null, "onglobalevent", watcher, "handler");
+    // When onglobalevent executes, watcher.handler is invoked:
+    dojo.connect(null, "onglobalevent", watcher, "handler");
 
-	// When ob.onCustomEvent executes, customEventHandler is invoked:
-	dojo.connect(ob, "onCustomEvent", null, "customEventHandler");
-	dojo.connect(ob, "onCustomEvent", "customEventHandler"); // same
+    // When ob.onCustomEvent executes, customEventHandler is invoked:
+    dojo.connect(ob, "onCustomEvent", null, "customEventHandler");
+    dojo.connect(ob, "onCustomEvent", "customEventHandler"); // same
 
-	// When ob.onCustomEvent executes, customEventHandler is invoked
-	// with the same scope (this):
-	dojo.connect(ob, "onCustomEvent", null, customEventHandler);
-	dojo.connect(ob, "onCustomEvent", customEventHandler); // same
+    // When ob.onCustomEvent executes, customEventHandler is invoked
+    // with the same scope (this):
+    dojo.connect(ob, "onCustomEvent", null, customEventHandler);
+    dojo.connect(ob, "onCustomEvent", customEventHandler); // same
 
-	// When globalEvent executes, globalHandler is invoked
-	// with the same scope (this):
-	dojo.connect(null, "globalEvent", null, globalHandler);
-	dojo.connect("globalEvent", globalHandler); // same
+    // When globalEvent executes, globalHandler is invoked
+    // with the same scope (this):
+    dojo.connect(null, "globalEvent", null, globalHandler);
+    dojo.connect("globalEvent", globalHandler); // same
 
 
 ========
