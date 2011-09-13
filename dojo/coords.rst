@@ -24,13 +24,14 @@ The dojo coords function is used to obtain a plethora of coordinate information 
 
 for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px, with page absolute coordinates (border-box) of 700px on the x axis and 900px on the y axis.
 
+Since dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before.
+
 =====
 Usage
 =====
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
  :linenos:
