@@ -21,6 +21,7 @@ On top of that several browsers deal with attribute setting and getting in diffe
 
 If an attribute was not specified for the DOM node, it will return a falsy value (see `dojo.hasAttr <dojo/hasAttr>`_). If you want to get a default value for missing attributes, use `dojo.getNodeProp <dojo/getNodeProp>`_, which always falls back to properties, if they are available.
 
+In dojo 1.7, dojo.attr has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 =====
 Usage
@@ -42,7 +43,6 @@ value
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.attr has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
 
