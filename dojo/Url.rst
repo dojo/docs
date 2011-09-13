@@ -18,15 +18,15 @@ Dojo 1.7(AMD)
   
    <script type="text/javascript">
 	require(["dojo/_base/url","dojo/dom","dojo/ready"],function(url,dom,ready){
-		ready(function(){
-			dom.byId("scheme").innerHTML =	  (new url("http://localhost:8080/home/")).scheme //  'http'
-			dom.byId("host").innerHTML =	  (new url("http://localhost:8080/home/")).host// 'localhost'
-                        dom.byId("port").innerHTML =	  (new url("http://localhost:8080/home/")).port//  '8080'
-			dom.byId("path").innerHTML =	  (new url("http://localhost:8080/home/")).path // '/home/'
-			dom.byId("authority").innerHTML = (new url("http://localhost:8080/home/")).authority // 'localhost:8080'
-                        dom.byId("user").innerHTML =	  (new url("http://username:pwd@localhost:8080/home/")).user //  'username'
-                        dom.byId("pwd").innerHTML =	  (new url("http://username:pwd@localhost:8080/home/")).password //  'pwd'
-		});
+	 ready(function(){
+	   dom.byId("scheme").innerHTML =	(new url("http://localhost:8080/home/")).scheme //  'http'
+	   dom.byId("host").innerHTML =	(new url("http://localhost:8080/home/")).host// 'localhost'
+           dom.byId("port").innerHTML =	(new url("http://localhost:8080/home/")).port//  '8080'
+           dom.byId("path").innerHTML =	(new url("http://localhost:8080/home/")).path // '/home/'
+	   dom.byId("authority").innerHTML = (new url("http://localhost:8080/home/")).authority // 'localhost:8080'
+           dom.byId("user").innerHTML =	(new url("http://username:pwd@localhost:8080/home/")).user //  'username'
+           dom.byId("pwd").innerHTML =	(new url("http://username:pwd@localhost:8080/home/")).password //  'pwd'
+	   });
 		
 	});
     </script>
