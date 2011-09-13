@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo._base.html
+dojo/_base/html
 ===============
 
 :Status: Draft
@@ -11,7 +11,7 @@ dojo._base.html
     :depth: 2
 
 
-**dojo._base.html** contains basic DOM handling functions.
+**dojo/_base/html** module contains basic DOM & HTML handling functions for backward compatibility purpose.
 
 As with all dojo._base components, these functions are included within Dojo Base. This module is basically an alias of other modules (like "dojo/dom", "dojo/attr"...), it's just for compatibility. For Dojo 1.7 (AMD), You get this functionality by coding "require(['dojo/_base/html'], function() { ... });". For Dojo < 1.7, You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
