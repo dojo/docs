@@ -23,6 +23,7 @@ The dojo.position function is used to obtain position and size information about
 
 for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x-axis and 900px on the y-axis.
 
+Since dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of geom.position in dojo/dom-geometry.
 
 =====
 Usage
@@ -30,7 +31,6 @@ Usage
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of geom.position in dojo/dom-geometry.
 
 .. code-block :: javascript
  :linenos:
