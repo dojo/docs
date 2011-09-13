@@ -27,15 +27,6 @@ substitute() is a workhorse and the basis for dijit's templating.  It performs p
 .. cv-compound::
   
   .. cv:: javascript
-
-    // Dojo 1.7 (AMD)
-    <script type="text/javascript">
-        require(['dojo/ready', 'dojo/string', 'dojo/dom'], function(ready, dstring, dom){
-            ready(function(){
-                console.log(dstring.trim(dom.byId("foo").innerHTML));
-            });
-        });
-    </script>
     
     // Dojo < 1.7
     <script type="text/javascript">
