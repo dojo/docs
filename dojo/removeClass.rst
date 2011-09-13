@@ -17,6 +17,8 @@ Introduction
 
 Follows the same pattern as most Dojo functionality by accepting a string ID of a Node, or a DOM Node reference, removing a passed class from the class="" attribute.
 
+Since dojo 1.7, dojo.removeClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.remove in dojo/dom-class.
+
 =====
 Usage
 =====
@@ -32,7 +34,6 @@ Space-separated classes, arrays, and optional removing of all classes are suppor
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.removeClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.remove in dojo/dom-class.
 
 .. code-block :: javascript
 
