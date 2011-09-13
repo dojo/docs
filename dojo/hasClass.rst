@@ -11,6 +11,8 @@ dojo.hasClass
 
 Returns a boolean depending on whether or not a node has a passed class string.
 
+Since dojo 1.7, dojo.hasClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.contains in dojo/dom-class.
+
 =====
 Usage
 =====
@@ -24,7 +26,6 @@ It returns ``true`` if the node has the class, and ``false`` otherwise.
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.hasClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.contains in dojo/dom-class.
 
 .. code-block :: javascript
 
