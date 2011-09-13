@@ -15,7 +15,7 @@ To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ fir
 ``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and
 take special cross-browser consideration when creating and placing the nodes. 
 
-In dojo 1.7, dojo.place has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.place in dojo/dom.
+Since dojo 1.7, dojo.place has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.place in dojo/dom.
 
 ========
 Overview
