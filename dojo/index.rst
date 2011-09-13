@@ -109,182 +109,6 @@ String Utilities
 
   Simple templates with parameterized substitutions.
 
-DOM (dojo/dom)
---------------
-
-from 1.7 + dojo/dom module collects following part of dojo APIs
-
-* `dojo.query <dojo/query>`_
-
-  The swiss army knife of DOM node manipulation in Dojo.
-
-* `dojo.NodeList <dojo/NodeList>`_
-
-  A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
-
-* `dojo.byId <dojo/byId>`_
-
-  Select a DOM node by 'id'.
-
-* dojo.isDescendant
-
-* dojo.setSelectable
-
-* Manipulation (dojo/dom-construct)
-
-  * dojo.toDom
-
-    Instantiates an HTML fragment returning the corresponding DOM.
-
-  * `dojo.create <dojo/create>`_
-
-    Creates a dom node with optional values and placement
-
-  * `dojo.place <dojo/place>`_
-
-    Place DOM nodes relative to others
-
-  * `dojo.destroy <dojo/destroy>`_
-
-    Destroy a DOM element
-
-  * `dojo.empty <dojo/empty>`_
-
-    Empty the contents of a DOM element
-
-
-* Attributes (dojo/dom-attr)
-
-  * `dojo.attr <dojo/attr>`_
-
-    Modifying DOM node attributes
-
-  * `dojo.getAttr <dojo/getAttr>`_
-
-    Gets an attribute on an HTML element.
-
-  * `dojo.setAttr <dojo/setAttr>`_
-
-    Sets an attribute on an HTML element.
-
-  * `dojo.hasAttr <dojo/hasAttr>`_
-
-    Returns true if the requested attribute is specified on the given element, and false otherwise.
-
-  * `dojo.removeAttr <dojo/removeAttr>`_
-
-    Removes an attribute from an HTML element.
-
-  * `dojo.getNodeProp <dojo/getNodeProp>`_
-
-    Returns an effective value of a property or an attribute.
-
-* Form (dojo/dom-form)
-
-  * `dojo.fieldToObject <dojo/fieldToObject>`_
-
-    Serialize a form field to a JavaScript object.
-
-  * `dojo.formToJson <dojo/formToJson>`_
-
-    Create an object from an form node
-
-  * `dojo.formToObject <dojo/formToObject>`_
-
-    Serialize a form node to a JavaScript object.
-
-  * `dojo.formToQuery <dojo/formToQuery>`_
-
-    Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
-
-* Styles (dojo/dom-style)
-
-  * `dojo.style <dojo/style>`_
-
-    A getter/setter for styles on a DOM node
-
-  * `dojo.getComputedStyle <dojo/getComputedStyle>`_
-
-    Return a cachable object of all computed styles for a node
-
-  * `dojo.getStyle <dojo/getStyle>`_
-
-    Accesses styles on a node.
-
-  * `dojo.setStyle <dojo/setStyle>`_
-
-    Sets styles on a node.
-
-* Class (dojo/dom-class)
-
-  * `dojo.hasClass <dojo/hasClass>`_
-
-    Returns a boolean depending on whether or not a node has a passed class string.
-
-  * `dojo.addClass <dojo/addClass>`_
-
-    Adds a CSS class to a node.
-
-  * `dojo.removeClass <dojo/removeClass>`_
-
-    Removes a class from a Node.
-
-  * `dojo.toggleClass <dojo/toggleClass>`_
-
-    Toggles a className (or now in 1.4 an array of classNames).
-
-  * `dojo.replaceClass <dojo/replaceClass>`_
-
-    Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass 
-
-* Geometry (dojo/dom-geometry)
-
-  * `dojo.coords <dojo/coords>`_
-
-    Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
-
-  * `dojo.position <dojo/position>`_
-
-    Getter for the border-box x/y coordinates and size of a DOM node.
-  
-  * `dojo.marginBox <dojo/marginBox>`_
-
-    Getter/setter for the margin-box of node
-
-  * `dojo.contentBox <dojo/contentBox>`_
-
-    Getter/setter for the content-box of node
-
-  * `dojo.getMarginBox <dojo.getMarginBox>`_
-
-    Get an object that encodes the width, height, left and top positions of the node's margin box. 
-
-  * `dojo.setMarginBox <dojo.setMarginBox>`_ 
-
-    Sets the size of the node's margin box and placement (left/top), irrespective of box model. 
-
-  * `dojo.getContentBox <dojo.getContentBox>`_
-
-    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model. 
-
-  * `dojo.setContentSize <dojo.setContentSize>`_ 
-
-    Sets the size of the node's contents, irrespective of margins, padding, or borders. 
-
-* Property (dojo/dom-prop)
-
-  * `dojo.prop <dojo/prop>`_
-
-    Gets or sets a property on an HTML element.
-
-  * `dojo.getProp <dojo/getProp>`_
-
-    Gets a property on an HTML element. 
-
-  * `dojo.setProp <dojo/setProp>`_
-
-    Sets a property on an HTML element.
-
 HTML Utility (dojo/_base/html)
 ------------------------------
 * `dojo/_base/html <dojo/_base/html>`_
@@ -756,6 +580,181 @@ Dojo Core
 
   String utilities for Dojo
 
+DOM (dojo/dom*)
+---------------
+
+from 1.7 + dojo/dom module collects following part of dojo APIs
+
+* `dojo.query <dojo/query>`_
+
+  The swiss army knife of DOM node manipulation in Dojo.
+
+* `dojo.NodeList <dojo/NodeList>`_
+
+  A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
+
+* `dojo.byId <dojo/byId>`_
+
+  Select a DOM node by 'id'.
+
+* dojo.isDescendant
+
+* dojo.setSelectable
+
+* Manipulation (dojo/dom-construct)
+
+  * dojo.toDom
+
+    Instantiates an HTML fragment returning the corresponding DOM.
+
+  * `dojo.create <dojo/create>`_
+
+    Creates a dom node with optional values and placement
+
+  * `dojo.place <dojo/place>`_
+
+    Place DOM nodes relative to others
+
+  * `dojo.destroy <dojo/destroy>`_
+
+    Destroy a DOM element
+
+  * `dojo.empty <dojo/empty>`_
+
+    Empty the contents of a DOM element
+
+
+* Attributes (dojo/dom-attr)
+
+  * `dojo.attr <dojo/attr>`_
+
+    Modifying DOM node attributes
+
+  * `dojo.getAttr <dojo/getAttr>`_
+
+    Gets an attribute on an HTML element.
+
+  * `dojo.setAttr <dojo/setAttr>`_
+
+    Sets an attribute on an HTML element.
+
+  * `dojo.hasAttr <dojo/hasAttr>`_
+
+    Returns true if the requested attribute is specified on the given element, and false otherwise.
+
+  * `dojo.removeAttr <dojo/removeAttr>`_
+
+    Removes an attribute from an HTML element.
+
+  * `dojo.getNodeProp <dojo/getNodeProp>`_
+
+    Returns an effective value of a property or an attribute.
+
+* Form (dojo/dom-form)
+
+  * `dojo.fieldToObject <dojo/fieldToObject>`_
+
+    Serialize a form field to a JavaScript object.
+
+  * `dojo.formToJson <dojo/formToJson>`_
+
+    Create an object from an form node
+
+  * `dojo.formToObject <dojo/formToObject>`_
+
+    Serialize a form node to a JavaScript object.
+
+  * `dojo.formToQuery <dojo/formToQuery>`_
+
+    Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
+
+* Styles (dojo/dom-style)
+
+  * `dojo.style <dojo/style>`_
+
+    A getter/setter for styles on a DOM node
+
+  * `dojo.getComputedStyle <dojo/getComputedStyle>`_
+
+    Return a cachable object of all computed styles for a node
+
+  * `dojo.getStyle <dojo/getStyle>`_
+
+    Accesses styles on a node.
+
+  * `dojo.setStyle <dojo/setStyle>`_
+
+    Sets styles on a node.
+
+* Class (dojo/dom-class)
+
+  * `dojo.hasClass <dojo/hasClass>`_
+
+    Returns a boolean depending on whether or not a node has a passed class string.
+
+  * `dojo.addClass <dojo/addClass>`_
+
+    Adds a CSS class to a node.
+
+  * `dojo.removeClass <dojo/removeClass>`_
+
+    Removes a class from a Node.
+
+  * `dojo.toggleClass <dojo/toggleClass>`_
+
+    Toggles a className (or now in 1.4 an array of classNames).
+
+  * `dojo.replaceClass <dojo/replaceClass>`_
+
+    Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass 
+
+* Geometry (dojo/dom-geometry)
+
+  * `dojo.coords <dojo/coords>`_
+
+    Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
+
+  * `dojo.position <dojo/position>`_
+
+    Getter for the border-box x/y coordinates and size of a DOM node.
+  
+  * `dojo.marginBox <dojo/marginBox>`_
+
+    Getter/setter for the margin-box of node
+
+  * `dojo.contentBox <dojo/contentBox>`_
+
+    Getter/setter for the content-box of node
+
+  * `dojo.getMarginBox <dojo.getMarginBox>`_
+
+    Get an object that encodes the width, height, left and top positions of the node's margin box. 
+
+  * `dojo.setMarginBox <dojo.setMarginBox>`_ 
+
+    Sets the size of the node's margin box and placement (left/top), irrespective of box model. 
+
+  * `dojo.getContentBox <dojo.getContentBox>`_
+
+    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model. 
+
+  * `dojo.setContentSize <dojo.setContentSize>`_ 
+
+    Sets the size of the node's contents, irrespective of margins, padding, or borders. 
+
+* Property (dojo/dom-prop)
+
+  * `dojo.prop <dojo/prop>`_
+
+    Gets or sets a property on an HTML element.
+
+  * `dojo.getProp <dojo/getProp>`_
+
+    Gets a property on an HTML element. 
+
+  * `dojo.setProp <dojo/setProp>`_
+
+    Sets a property on an HTML element.
 
 ========
 See also
