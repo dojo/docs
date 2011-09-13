@@ -26,6 +26,20 @@ Examples:
 .. code-block :: javascript
   :linenos:
   
+  //Dojo 1.7 (AMD)
+  require(['dojo/_base/lang'], function(lang){
+    function show(str){
+      return "|" + lang.trim(str) + "|";
+    }
+  
+    var output1 = show("   one");
+    var output2 = show("two ");
+    var output3 = show("   three ");
+    var output4 = show("\tfour\r\n");
+    var output5 = show("\f\n\r\t\vF I V E\f\n\r\t\v");
+  });
+
+  //Dojo < 1.7
   function show(str){
     return "|" + dojo.trim(str) + "|";
   }
