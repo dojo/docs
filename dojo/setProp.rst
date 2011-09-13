@@ -3,8 +3,6 @@
 dojo.setProp
 =============
 
-:Available: since V1.2
-
 .. contents::
    :depth: 2
 
@@ -18,7 +16,7 @@ Handles normalized setting of properties on DOM nodes.
 
 When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself. 
 
-Since 1.7 it is an alias of prop.set in dojo/dom-prop.
+Since dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.set in dojo/dom-prop.
 
 =====
 Usage
@@ -43,7 +41,6 @@ This API will return the DOM node.
 ========
 Examples
 ========
-In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.set in dojo/dom-prop.
 
 Dojo 1.7 (AMD)
 --------------
