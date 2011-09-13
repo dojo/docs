@@ -348,14 +348,6 @@ Connect (dojo/_base/connect)
 
   Connects events to methods
 
-* `NodeList.connect <dojo/NodeList#connect>`_
-
-  Connects events to every node in the list, like dojo.connect
-
-* `NodeList.events <dojo/NodeList#events>`_
-
-  Common event names mapped as functions on a NodeList - eg: .onclick(function(){})
-
 * `dojo.disconnect <dojo/disconnect>`_
 
   Disconnects methods from linked topics
@@ -375,6 +367,16 @@ Connect (dojo/_base/connect)
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   Ensure that everytime an event is called, a message is published on the topic.
+
+NodeList (dojo/_base/NodeList)
+------------------------------
+* `NodeList.connect <dojo/NodeList#connect>`_
+
+  Connects events to every node in the list, like dojo.connect
+
+* `NodeList.events <dojo/NodeList#events>`_
+
+  Common event names mapped as functions on a NodeList - eg: .onclick(function(){})
 
 Event (dojo/_base/event)
 ------------------------
