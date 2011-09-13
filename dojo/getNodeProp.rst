@@ -21,6 +21,8 @@ It is useful when you don't care if somebody set an attribute on a node in HTML,
 
 There is no corresponding ``dojo.setNodeProp``. If you want to set a property value, use straight assignment.
 
+Since dojo 1.7, dojo.getNodeProp has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.getNodeProp in dojo/dom-attr.
+
 =====
 Usage
 =====
@@ -43,7 +45,6 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getNodeProp has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.getNodeProp in dojo/dom-attr.
 
 .. code-block :: javascript
 
