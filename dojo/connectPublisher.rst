@@ -19,6 +19,7 @@ Introduction
 dojo.connectPublisher is an automation of this common form:
 
 [ Dojo 1.7 AMD ]
+
 .. code-block :: javascript
   
   require(["dojo/_base/connect"], function(connect) {
