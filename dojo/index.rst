@@ -57,8 +57,8 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
-Language Utilities
-------------------
+Language Utilities (dojo/_base/lang)
+------------------------------------
 
 
 * `dojo.hitch <dojo/hitch>`_
