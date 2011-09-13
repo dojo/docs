@@ -1,8 +1,8 @@
 ## page was renamed from 1.2/dojo/connect
 #format dojo_rst
 
-dojo.connect
-============
+dojo.connect (dojo/_base/connect)
+=================================
 
 :Project owner: ?--
 :Available: since V?
@@ -16,7 +16,7 @@ dojo.connect connects events to methods, so that after the event occurs, the new
 Preferred event handling mechanism is now dojo/on 
 =================================================
 
-Dojo versions prior to 1.7 used the connect module for event handing features.  As of Dojo 1.7, the preferred way of handling events is to use the new lightweight dojo/on module.  For compatibility reasons, the dojo.connect api's will remain fully supported through remaining 1.x releases, but will likely be removed in Dojo 2.0.  Migration from connect() to on() should be straightforward as the api signature is very similar.
+Dojo versions prior to 1.7 used the connect module for event handling.  As of Dojo 1.7, the preferred way of handling events is to use the new lightweight dojo/on module.  For compatibility reasons, the dojo.connect api's will remain fully supported through remaining 1.x releases, but will likely be removed in Dojo 2.0.  Migration from connect() to on() should be straightforward as the api signature is very similar.
 
 ============
 Introduction
