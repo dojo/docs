@@ -19,6 +19,7 @@ Introduction
 
 Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
 
+Since dojo 1.7, dojo.hasAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.has in dojo/dom-attr.
 
 =====
 Usage
@@ -45,7 +46,6 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.hasAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.has in dojo/dom-attr.
 
 .. code-block :: javascript
 
