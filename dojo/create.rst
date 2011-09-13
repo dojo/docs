@@ -25,7 +25,7 @@ It can be used with existing nodes too, if you want to assign new attributes and
 
 To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
 
-In dojo 1.7, dojo.create has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.create in dojo/dom.
+Since dojo 1.7, dojo.create has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.create in dojo/dom.
 
 =====
 Usage
