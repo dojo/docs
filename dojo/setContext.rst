@@ -19,8 +19,7 @@ Introduction
 
 For example, `dojo.query <dojo/query>`_ references the "window" global variable when performing searches by default.
 
-Dojo 1.7 (AMD)
---------------
+[ Dojo 1.7 AMD ]
 
 .. code-block :: javascript
   :linenos:
@@ -36,8 +35,7 @@ Dojo 1.7 (AMD)
   </script>
 
 
-Dojo < 1.7
-----------
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos:
@@ -119,8 +117,7 @@ HTML
 JavaScript
 ~~~~~~~~~~
 
-Dojo 1.7 (AMD)
---------------
+[ Dojo 1.7 AMD ]
 
 .. code-block :: javascript
  :linenos:
@@ -143,8 +140,7 @@ Dojo 1.7 (AMD)
   });
 
 
-Dojo < 1.7
-----------
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
  :linenos:
