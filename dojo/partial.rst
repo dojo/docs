@@ -11,6 +11,23 @@ Have you ever wanted to control arguments being passed into a function?  For exa
 
 Lets take a quick look at a pseudo-code example of using partial:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
+    var dataLoaded = function(someFirstParam, data, ioargs) {};
+
+    var args = {
+      url: "foo",
+      load: dataLoaded
+    };
+    xhr.get(args);  
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
 
   var dataLoaded = function(someFirstParam, data, ioargs) {};
@@ -18,11 +35,28 @@ Lets take a quick look at a pseudo-code example of using partial:
   var args = {
     url: "foo",
     load: dataLoaded
-  }
+  };
   dojo.xhrGet(args);  
 
 Okay, so that will invoke the dataLoaded function when the xhrGet function returns ... but load of xhrGet expects param structure of:
 load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations are honored even with that new first param called 'someFirstParam'?  Enter dojo.partial!  Here's how you would do it:
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
+    var dataLoaded = function(someFirstParam, data, ioargs) {};
+
+    var args = {
+      url: "foo",
+      load: lang.partial(dataLoaded, "firstValue");
+    };
+    xhr.get(args);  
+  });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
 
