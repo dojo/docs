@@ -24,6 +24,11 @@ Use this to test if a variable is a string
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    if(lang.isString(foo)){ ...    
+  });
+  // Dojo < 1.7
   if(dojo.isString(foo)){ ...
 
 
