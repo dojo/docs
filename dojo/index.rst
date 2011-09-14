@@ -135,6 +135,31 @@ Deferred Utility (dojo/_base/Deferred)
 
   Communication between asynchronous calls
 
+Kernel (dojo/_base/kernel)
+--------------------------
+
+from 1.7 + dojo/_base/kernel module collects following part of dojo APIs
+
+* `dojo.deprecated <dojo/deprecated>`_
+
+  Log a debug message to indicate that a behavior has been deprecated
+
+* `dojo.eval <dojo/eval>`_
+
+  Evaluate some string of JavaScript
+
+* `dojo.locale <dojo/locale>`_
+
+  A string containing the current locale as defined by Dojo
+
+* `dojo.moduleUrl <dojo/moduleUrl>`_
+
+  Returns a URL relative to a module
+
+* `dojo.version <dojo/version>`_
+
+  The current version number of Dojo
+
 Window (dojo/_base/window)
 --------------------------
 
@@ -285,8 +310,6 @@ Package System
 
 * `dojo.provide <dojo/provide>`_
 
-* `dojo.moduleUrl <dojo/moduleUrl>`_
-
 JSON Tools (dojo/_base/json)
 ----------------------------
 
@@ -338,14 +361,6 @@ Colors
 Miscellaneous Base
 ------------------
 
-* `dojo.deprecated <dojo/deprecated>`_
-
-  Log a debug message to indicate that a behavior has been deprecated
-
-* `dojo.eval <dojo/eval>`_
-
-  Evaluate some string of JavaScript
-
 * `dojo.global <dojo/global>`_
 
   Alias for the global scope
@@ -353,14 +368,6 @@ Miscellaneous Base
 * `dojo.keys <dojo/keys>`_
 
   A collection of key constants.
-
-* `dojo.locale <dojo/locale>`_
-
-  A string containing the current locale as defined by Dojo
-
-* `dojo.version <dojo/version>`_
-
-  The current version number of Dojo
 
 * `dojo._Url <dojo/Url>`_
 
