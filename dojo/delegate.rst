@@ -63,13 +63,13 @@ Programmatic example
 
  <script type="text/javascript">
    require(["dojo/_base/lang", function(lang) {
-      var anOldObject = { bar: "baz" };
-      var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
-      myNewObject.bar == "baz"; // delegated to anOldObject
-      anOldObject.thud == undefined; // by definition
-      myNewObject.thud == "xyzzy"; // mixed in from props
-      anOldObject.bar = "thonk";
-      myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
+     var anOldObject = { bar: "baz" };
+     var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
+     myNewObject.bar == "baz"; // delegated to anOldObject
+     anOldObject.thud == undefined; // by definition
+     myNewObject.thud == "xyzzy"; // mixed in from props
+     anOldObject.bar = "thonk";
+     myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
    });
  </script>
 
