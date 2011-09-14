@@ -24,17 +24,36 @@ Default contentHandler
 
 The default contentHandler is text, and requires no action:
 
+[ Dojo 1.7 AMD ]
+
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-     dojo.xhrGet({
-         url:"foo.txt",
-         load: function(data){
-             // this uses the default dojo.contentHandlers.text. It simply returns plaintext.
-         }
+     require(["dojo/_base/xhr"], function(xhr) {
+        xhr.get({
+           url:"foo.txt",
+           load: function(data){
+              // this uses the default dojo.contentHandlers.text. It simply returns plaintext.
+           }
+        });
      });
  </script>
+
+
+[ Dojo < 1.7 ]
+
+.. code-block :: javascript
+ :linenos:
+
+  <script type="text/javascript">
+     dojo.xhrGet({
+        url:"foo.txt",
+        load: function(data){
+           // this uses the default dojo.contentHandlers.text. It simply returns plaintext.
+        }
+     });
+  </script>
 
 
 Available Handlers
@@ -59,6 +78,29 @@ Using a pre-defined handler
 
 This example shows, how to use the pre-defined json contentHandler:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/xhr"], function(xhr) {
+     xhr.get({
+        url:"foo.json",
+        // here comes the contentHandler:
+        handleAs: "json",
+        load: function(data){
+           if(data && !data.error){
+              // see if our response contains an `error` member. { error:"Something is wrong" } for example
+           }else{
+              // something went wrong :)
+           }
+        }
+     });
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -81,12 +123,37 @@ Creating a custom handler
 
 To create a custom contentHandler, simply mix a new key into the dojo.contentHandlers object defining the 'handleAs' value. The XHR object is passed to this function. For example: 
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
+     lang.mixin(xhr.contentHandlers, {
+        "makeUpper": function(req){
+           return req.responseText.toUpperCase();
+        }
+     });
+
+     // then later:
+     xhr.post({
+        url:"foo.php", 
+        handleAs:"makeUpper",
+        load: function(data){
+           // data is a CAPS version of the original responseText
+        }
+     });
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.mixin(dojo.contentHandlers, {
       "makeUpper": function(xhr){
-           return xhr.responseText.toUpper();
+           return xhr.responseText.toUpperCase();
        }
   });
 
@@ -103,13 +170,37 @@ One can create any number of content handlers, and can do about anything they ch
 
 For instance, we can create a handler that will populate a node with the response text automatically:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom) {
+      var ioArgs = {
+          url:"foo.html", 
+          handleAs:"loadNode",
+          node: "someId"
+      };
+
+      // you don't need to mix(), you can just set the object directly if you prefer:
+      xhr.contentHandlers.loadNode = function(req){
+          var n = dom.byId(ioArgs.node);
+          n && (n.innerHTML = req.responseText);
+      };
+
+      xhr.get(ioArgs);
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
   // you don't need to mix(), you can just set the object directly if you prefer:
   dojo.contentHandlers.loadNode = function(xhr){
       var n = dojo.byId(xhr.ioArgs.node);
-      n && n.innerHTML = xhr.responseText;
+      n && (n.innerHTML = xhr.responseText);
   }
 
   // to use:
@@ -126,6 +217,32 @@ Using dual handlers
 -------------------
 
 The other contentHandlers are all functions. If you like, you can define a new handler that acts as if it were another handler and doing something else. Simply call the other contentHandler passing the xhr reference you were passed in your custom handler:
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+ :linenos:
+
+    require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
+        xhr.contentHandlers.wrappedJSON = function(req){
+            // like handleAs:"json", but mixes an additional bit into the response always.
+            var json = xhr.contentHandles.json(req);
+            return lang.mixin(json, { _wrapped_by_app:true });
+        };
+
+        xhr.get({
+            url:"users.json",
+            handleAs:"wrappedJSON",
+            load: function(data){
+                if(data._wrapped_by_app){
+                    console.log("neat!");
+                }
+            }
+        });
+    });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
  :linenos:
@@ -151,6 +268,22 @@ Overwriting a handler
 ---------------------
 
 Standard AOP techniques apply. If you find yourself needing to *replace* a contentHandler but preserve the original beahvior, simply duck-punch around it:
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+ :linenos:
+
+    require(["dojo/_base/xhr"], function(xhr) {
+        // a handler that always escapes html fragments. not exceptionally useful though:
+        var oldtext = xhr.contentHandlers.text;
+        xhr.contentHandles.text = function(req){
+            return oldtext.apply(this, arguments).reaplce("<", "&lt;");
+        };
+    });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
  :linenos:
