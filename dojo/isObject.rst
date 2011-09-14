@@ -24,6 +24,11 @@ Use this to test if a variable is an Object.
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    lang.isObject(foo);
+  });
+  // Dojo < 1.7
   dojo.isObject(foo) 
 
 Returns true if it is a JavaScript object (or an Array, a Function or null).
@@ -31,6 +36,14 @@ Returns true if it is a JavaScript object (or an Array, a Function or null).
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    if(lang.isObject(foo)) {
+      // do something...
+    }
+  });
+
+  // Dojo < 1.7
   // Check, if variable "foo" is an object:
   if(dojo.isObject(foo)){ 
       // do something...
