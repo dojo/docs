@@ -31,11 +31,36 @@ isArray returns a Boolean you can use directly in conditionals:
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", function(lang) {
+    if(lang.isArray(someVariable)) {
+      // do something
+    }
+  });
+  // Dojo < 1.7
   if(dojo.isArray(someVariable)) {
     // do something
   }
 
 Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forEach>`_
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos: 
+
+  require(["dojo/_base/lang", "dojo/_base/array"], function(lang) {
+    if(lang.isArray(list)) {
+      array.forEach(list, function(item, i) {
+        // each item in list
+      });
+    } else {
+      // something went wrong? we wanted an array here
+    }
+  });
+  
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos: 
