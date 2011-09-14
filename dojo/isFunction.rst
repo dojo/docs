@@ -19,6 +19,21 @@ As with all dojo._base components, these functions are included within Dojo Base
 Usage
 =====
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/lang"], function(lang) {
+    var ref = function(a,b){ return a };
+    if(lang.isFunction(ref)){
+      ref();
+    }
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
  :linenos:
 
@@ -28,6 +43,22 @@ Usage
   }
 
 This also works with classes created by `dojo.declare <dojo/declare>`_
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
+    declare("Thing", null, { constructor: function(){ });
+    var ref = Thing;
+    if(dojo.isFunction(ref)){
+      var mine = new ref();
+    }
+  });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos:
@@ -39,6 +70,24 @@ This also works with classes created by `dojo.declare <dojo/declare>`_
   }
 
 A common pattern is to have a a string version of a fully declared class. You can use dojo.isFunction to tell if you need to convert it to a function or not:
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang", function(lang) {
+    // some dynamic class to use:
+    var thing = "dijit.Dialog";
+    // check it out first:
+    if(!lang.isFunction(thing)){
+      thing = lang.getObject(thing);
+    }
+    var dialog = new thing({ title:"bar" });
+  });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos:
