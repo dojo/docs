@@ -52,7 +52,7 @@ This also works with classes created by `dojo.declare <dojo/declare>`_
   require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
     declare("Thing", null, { constructor: function(){ });
     var ref = Thing;
-    if(dojo.isFunction(ref)){
+    if(lang.isFunction(ref)){
       var mine = new ref();
     }
   });
