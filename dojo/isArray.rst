@@ -82,6 +82,12 @@ It is important to understand that dojo.isArray checks to see if the provided va
 
 .. code-block :: javascript
 
+ // Dojo 1.7 (AMD)
+ require(["dojo/_base/lang", function(lang) {
+   lang.isArray = function(it){
+     return it && Object.prototype.toString.call(it)=="[object Array]";
+   });
+ });
  dojo.isArray = function(it){
     return it && Object.prototype.toString.call(it)=="[object Array]";
  });
