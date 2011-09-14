@@ -305,7 +305,7 @@ Layout
                     case "DEF":
                         statements;
                         break;
-                    defaults:
+                    default:
                         statements;
                         // no break keyword on the last case - it's redundant.
                 }
