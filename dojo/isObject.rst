@@ -42,7 +42,6 @@ Returns true if it is a JavaScript object (or an Array, a Function or null).
       // do something...
     }
   });
-
   // Dojo < 1.7
   // Check, if variable "foo" is an object:
   if(dojo.isObject(foo)){ 
