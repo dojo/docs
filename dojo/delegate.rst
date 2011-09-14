@@ -27,6 +27,11 @@ Usage
  :linenos:
 
  <script type="text/javascript">
+   // Dojo 1.7 (AMD)
+   require(["dojo/_base/lang", function(lang) {
+      var myNewObject = lang.delegate(anOldObject, { myNewProperty: "value or text"});
+   });
+   // Dojo < 1.7
    var myNewObject = dojo.delegate(anOldObject, { myNewProperty: "value or text"});
  </script>
 
@@ -50,6 +55,26 @@ Examples
 
 Programmatic example
 --------------------
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(["dojo/_base/lang", function(lang) {
+      var anOldObject = { bar: "baz" };
+      var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
+      myNewObject.bar == "baz"; // delegated to anOldObject
+      anOldObject.thud == undefined; // by definition
+      myNewObject.thud == "xyzzy"; // mixed in from props
+      anOldObject.bar = "thonk";
+      myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
+   });
+ </script>
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
  :linenos:
