@@ -68,28 +68,6 @@ Basic Example
 
 Let's look at a quick example:
 
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
- 
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang"], function(lang) {
-        var myObj = {
-          foo: "bar"
-        };
-        var func = lang.hitch(myObj, function() {
-          console.log(this.foo);
-        });
-        func();
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
-
 .. code-example::
   :type: inline
  
@@ -112,30 +90,6 @@ Using Methods in the Scope
 
 Let's say I want to call a method in a given scope. I could do:
 
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
-  :toolbar: none
-
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang"], function(lang) {
-        var myObj = {
-          foo: "bar",
-          method: function(someArg) {
-            console.log(this.foo);
-          }
-        };
-        var func = lang.hitch(myObj, myObj.method);
-        func();
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
-
 .. code-example::
   :type: inline
   :toolbar: none
@@ -154,30 +108,6 @@ Let's say I want to call a method in a given scope. I could do:
     </script>
 
 But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
-
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
-  :toolbar: none
-
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang"], function(lang) {
-        var myObj = {
-          foo: "bar",
-          method: function(someArg) {
-            console.log(this.foo);
-          }
-        };
-        var func = lang.hitch(myObj, "method");
-        func();
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
 
 .. code-example::
   :type: inline
@@ -202,30 +132,6 @@ Providing Arguments
 -------------------
 
 You can also provide arguments to the function you're calling. Here's an example:
-
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
-  :toolbar: none
-
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang"], function(lang) {
-        var myObj = {
-          foo: "bar",
-          method: function(someArg) {
-            console.log(someArg+" "+this.foo);
-          }
-        };
-        var func = lang.hitch(myObj, "method", "baz");
-        func();
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
 
 .. code-example::
   :type: inline
@@ -259,41 +165,10 @@ Let's say I want to stop right clicking on my page. This is a one-liner with doj
   .. javascript::
 
     <script type="text/javascript">
-      // Dojo 1.7 (AMD)
-      require(["dojo/_base/lang"], function(lang) {
-        document.onconextmenu = lang.hitch(dojo, "stopEvent");
-      });
-      // Dojo < 1.7
       document.onconextmenu = dojo.hitch(dojo, "stopEvent");
     </script>
 
 Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's in an object, I can't use 'this' anymore in that function.
-
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
-  :toolbar: none
-
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
-        var myObj = {
-          foo: "bar",
-          method: function(someArg) {
-            console.log(this.foo+" "+data);
-          }
-        };
-        xhr.get({
-          url: "/something.php",
-          load: myObj.method
-        });
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
 
 .. code-example::
   :type: inline
@@ -315,32 +190,6 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
     </script>
 
 The above example won't work. If we want to access this.foo, we need to have 'method' called inside of 'myObj'. Giving myObj.method to dojo.xhrGet only passes the function. You can use dojo.hitch to get around this:
-
-[ Dojo 1.7 AMD ]
-
-.. code-example::
-  :type: inline
-  :toolbar: none
-
-  .. javascript::
-
-    <script type="text/javascript">
-      require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
-        var myObj = {
-          foo: "bar",
-          method: function(data) {
-            console.log(this.foo+" "+data);
-          }
-        };
-        xhr.get({
-          url: "/something.php",
-          load: lang.hitch(myObj, "method")
-        });
-      });
-    </script>
-
-
-[ Dojo < 1.7 ]
 
 .. code-example::
   :type: inline
