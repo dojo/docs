@@ -30,18 +30,30 @@ To use dojo.hash to listen for hash changes:
 1. Add the appropriate require statement:
 
    .. code-block :: javascript
+   
+      //Dojo 1.7(AMD)
+      require(["dojo/hash"], function(hash){
+         //Write your code here
+      });
 
+      //Dojo < 1.7
       dojo.require("dojo.hash");
    ..
 
 2. Subscribe to /dojo/hashchange event:
 
    .. code-block :: javascript
-
-       dojo.subscribe("/dojo/hashchange", context, callback);
+  
+    //Dojo 1.7 (AMD)
+    require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
+        connect.subscribe("/dojo/hashchange", context, callback);
+    });
+	
+    //Dojo < 1.7
+    dojo.subscribe("/dojo/hashchange", context, callback);
    ..
 
-   Whenever the hash changes, your callback will be called with the new hash value passed as the first parameter.
+Whenever the hash changes, your callback will be called with the new hash value passed as the first parameter.
 
 
 Manipulating the URL
@@ -55,14 +67,27 @@ Setter
 
   .. code-block :: javascript
 
-      dojo.hash("someHashValue");
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash"], function(hash) {
+        hash("someHashValue");
+    });
+	
+    //Dojo < 1.7
+    dojo.hash("someHashValue");
   ..
+
 
   To update the hash without creating a new entry in the back history, pass true as the second (replace) param. This will update the URL to the new hash, and will replace the current history state:
 
   .. code-block :: javascript
 
-      dojo.hash("someHashValue",true);
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash"], function(hash) {
+        hash("someHashValue",true);
+    });
+	
+    //Dojo < 1.7
+    dojo.hash("someHashValue",true);
   ..
 
 Getter
@@ -70,9 +95,16 @@ Getter
   dojo.hash() with no parameters returns the current hash value.
 
   .. code-block :: javascript
-
-      var hashValue = dojo.hash();
+  
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash"], function(hash) {
+        var hashValue = hash();
+    });
+	
+    //Dojo < 1.7 
+    var hashValue = dojo.hash();
   ..
+
 
 Examples
 ========
@@ -80,25 +112,40 @@ Examples
 1) Subscribe to the hashchange event:
 
    .. code-block :: javascript
-
-       dojo.subscribe("/dojo/hashchange", context, callback);
+   
+    //Dojo 1.7 (AMD)
+    require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
+        connect.subscribe("/dojo/hashchange", context, callback);
+    });
+	
+    //Dojo < 1.7
+    dojo.subscribe("/dojo/hashchange", context, callback);
    ..
 
 2) Set the hash using query notation:
 
    .. code-block :: javascript
-
-       function() {
-           var obj = {
-               firstParam: true,
-               secondParam: false
-           }
-           dojo.hash(dojo.objectToQuery(obj));
-       }
-
+   
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
+        var obj = {
+            firstParam: true,
+            secondParam: false
+        }
+        hash(ioQuery.objectToQuery(obj));
+    });
+	
+    //Dojo < 1.7
+    function() {
+        var obj = {
+            firstParam: true,
+            secondParam: false
+        }
+        dojo.hash(dojo.objectToQuery(obj));
+    }
    ..
 
-  Hash: #firstParam=true&secondParam=false
+ Hash: #firstParam=true&secondParam=false
 
 
 3) Parse this hash and add a parameter using query notation:
@@ -107,12 +154,21 @@ Examples
 
  .. code-block :: javascript
 
-     function updateHash() {
-         var obj = dojo.queryToObject(dojo.hash());  //get
-         obj.someNewParam = true;  
-         dojo.hash(dojo.objectToQuery(obj));  //set
-     }
-
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
+        function updateHash() {
+            var obj = ioQuery.queryToObject(dojo.hash());  //get
+            obj.someNewParam = true;  
+            hash(ioQuery.objectToQuery(obj));  //set
+        }
+    });
+    
+    //Dojo < 1.7
+    function updateHash() {
+        var obj = dojo.queryToObject(dojo.hash());  //get
+        obj.someNewParam = true;  
+        dojo.hash(dojo.objectToQuery(obj));  //set
+    }
  ..
 
  End hash: #firstParam=true&secondParam=false&someNewParam=true
@@ -121,13 +177,25 @@ Examples
 
    .. code-block :: javascript
 
-       function callback(hash) {
-           //hashchange event!
-           var obj = dojo.queryToObject(hash);
-           if (obj.firstParam) {
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
+        function callback(hash) {
+            //hashchange event!
+            var obj = ioQuery.queryToObject(hash);
+            if (obj.firstParam) {
                 // do something
-           }
-       }
+            }
+        }
+    });
+    
+    //Dojo < 1.7
+    function callback(hash) {
+        //hashchange event!
+        var obj = dojo.queryToObject(hash);
+        if (obj.firstParam) {
+            // do something
+        }
+    }
    ..
 
 5) Get and set the hash using slash notation:
@@ -136,14 +204,23 @@ Examples
 
  .. code-block :: javascript
 
-     function updateHash() {
-         var obj = dojo.hash().split("/");
-         obj.push("trailingSegment");
-         dojo.hash(obj.join("/"));
-     }
-
+    //Dojo 1.7 (AMD)
+    require(["dojo/hash"], function(hash) {
+        function updateHash() {
+            var obj = hash().split("/");
+            obj.push("trailingSegment");
+            hash(obj.join("/"));
+        }
+    });
+    
+    //Dojo < 1.7
+    function updateHash() {
+        var obj = dojo.hash().split("/");
+        obj.push("trailingSegment");
+        dojo.hash(obj.join("/"));
+    }
  ..
-
+ 
  End hash:  #/firstSegment/secondSegment/trailingSegment
 
 Advanced
