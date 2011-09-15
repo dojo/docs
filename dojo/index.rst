@@ -189,8 +189,8 @@ from 1.7 + dojo/_base/window module collects following part of dojo APIs
 
   Call callback with documentObject as dojo.doc
 
-Effects
--------
+Effects (dojo/_base/fx)
+-----------------------
 
 * `dojo.animateProperty <dojo/animateProperty>`_
 
