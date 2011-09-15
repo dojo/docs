@@ -38,8 +38,8 @@ Returns true if it is like an Array.
   :linenos:
 
   // Dojo 1.7 (AMD)
-  // Check, if variable "foo" is like an array:
   require(["dojo/_base/lang", function(lang) {
+    // Check, if variable "foo" is like an array:
     if(lang.isArrayLike(foo)) {
       // do something...
     }
