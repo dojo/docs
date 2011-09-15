@@ -4,7 +4,7 @@
 dojo.addOnLoad
 ==============
 
-dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dojo.require() (and their recursive dependencies) have loaded before firing. 
+dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing. 
 
 Sooner or later, every Javascript programmer tries something like this:
 
@@ -22,11 +22,25 @@ Sooner or later, every Javascript programmer tries something like this:
 
 It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
 
-dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. So this code:
+dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. When use dojo1.7, you should require 'dojo/ready' and use 'ready((...))' function instead. So this code:
 
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD)
+  function setAfrobeat(){
+     document.musicPrefs.other.value="Afrobeat";
+  }
+  require("dojo/ready", function(ready) {
+       ready(function(){
+           setAfrobeat();
+       });
+  });
+
+.. code-block :: javascript
+  :linenos:
+
+  //Dojo < 1.7
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
@@ -37,6 +51,17 @@ conveniently replaces the one above. When the function is small, you may prefer 
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD)
+  require("dojo/ready", function(ready) {
+       ready(function(){
+           document.musicPrefs.other.value="Afrobeat";
+       });
+  });
+
+.. code-block :: javascript
+  :linenos:
+
+  //Dojo < 1.7
   dojo.addOnLoad(
     function(){
       document.musicPrefs.other.value="Afrobeat";
@@ -45,11 +70,27 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 This is the function literal or anonymous function construct of JavaScript. If it looks really, really wierd to you, take a peek ahead at Functions as Variables for an explanation.
 
-Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function call dojo.require() to load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
+Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function will load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD)
+  require("dojo/ready", function(ready) {
+       ready(function(){
+             require("dijit/Dialog","dijit/TitlePane", function() {
+                  ready(function(){
+                        // dijit.Dialog and friends are ready, create one from a node with id="bar"
+                        var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar"); 
+                  });
+             });
+       });
+  });
+
+.. code-block :: javascript
+  :linenos:
+
+  //Dojo < 1.7
   dojo.addOnLoad(function(){
     dojo.require("dijit.Dialog");
     dojo.require("dijit.TitlePane");
