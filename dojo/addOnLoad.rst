@@ -22,7 +22,7 @@ Sooner or later, every Javascript programmer tries something like this:
 
 It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
 
-dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. When use dojo1.7, you should require 'dojo/ready' and use 'ready((...))' function instead. So this code:
+dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. It is currently deprecated and replaced by dojo.ready function. When use dojo1.7, you should require 'dojo/ready' and use 'ready((...))' function instead. So this code:
 
 .. code-block :: javascript
   :linenos:
