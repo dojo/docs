@@ -38,6 +38,7 @@ Returns true if it is a JavaScript object (or an Array, a Function or null).
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
+    // Check, if variable "foo" is an object:
     if(lang.isObject(foo)) {
       // do something...
     }
