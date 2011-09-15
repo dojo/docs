@@ -27,11 +27,20 @@ The Dojo build system will inline the HTML as a string where the ``dojo.cache`` 
 Usage
 =====
 
-``dojo.cache`` is a Dojo Core module, not part of Dojo Base so you need to *dojo.require("dojo.cache")* to load it:
+``dojo.cache`` is a Dojo Core module, To include the Dojo cache on your page, require the module `dojo.cache`. When use dojo 1.7, you should require ``dojo.text.js`` because the related functions used to define in ``dojo.cache.js`` has been moved.
 
 .. code-block :: javascript
+  
+  //Dojo 1.7 (AMD)
+  require("dojo/text",function(){
+      //write your code here
+  });
+  
+.. code-block :: javascript
 
+  //Dojo < 1.7
   dojo.require("dojo.cache");
+  
 
 ``dojo.cache`` takes the following arguments:
 
@@ -79,8 +88,18 @@ This is the usual, most common use of the dojo.cache call:
 .. code-block :: javascript
  :linenos:
 
+  //Dojo 1.7 (AMD)
+  require("dojo/text",function(){
+    var text = dojo.cache("my.module", "template.html");
+  });
+  
+.. code-block :: javascript
+ :linenos:
+
+ //Dojo 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache("my.module", "template.html");
+ 
  
 If my/module/template.html contained the text "<div>Hello World</div>", then the text variable will have that value.
 
@@ -89,8 +108,18 @@ An example using the sanitize: true option:
 .. code-block :: javascript
  :linenos:
 
+  //Dojo 1.7 (AMD)
+  require("dojo/text",function(){
+    var text = dojo.cache("my.module", "template.html", {sanitize: true});
+  });
+
+.. code-block :: javascript
+ :linenos:
+
+ //Dojo < 1.7
  dojo.require("dojo.cache");
- var text = dojo.cache("my.module", "template.html", {sanitize: true});
+ var text = dojo.cache("my.module", "template.html");
+
 
 If my/module/template.html contains "<html><body><h1>Hello</h1></body></html>", the text variable will contain just "<h1>Hello</h1>".
 
@@ -99,12 +128,21 @@ Example using an object that has like the previous example, but uses an object w
 .. code-block :: javascript
  :linenos:
 
+  //Dojo 1.7 (AMD)
+  require("dojo/text",function(){
+    var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
+  });
+
+.. code-block :: javascript
+ :linenos:
+
+ //Dojo < 1.7
  dojo.require("dojo.cache");
- var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
+ var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true}); 
 
 
 ========
 See Also
 ========
 
-* `dojo.moduleUrl <dojo/moduleUrl>`_
+* `dojo.require <dojo/require>`_
