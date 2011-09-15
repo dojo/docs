@@ -60,6 +60,14 @@ Simply require the module:
 
 .. code-block :: javascript
 
+  //Dojo 1.7(AMD)
+  require("dojo/uacss",function(){
+	//write your code here
+  });
+  
+.. code-block :: javascript
+
+  //Dojo < 1.7
   dojo.require("dojo.uacss");
 
 And then reference the class names from CSS rules, etc:
