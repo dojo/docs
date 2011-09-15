@@ -23,6 +23,17 @@ The simplest way to use dojo.getObject is to pass a dot-separated string as show
  :linenos:
 
  <script type="text/javascript">
+   // Dojo 1.7 (AMD)
+   require(["dojo/_base/lang"], function(lang) {
+      // define an object
+      var foo = {
+        bar: "some value"
+      };
+
+      // get the "foo.bar" property
+      lang.getObject("foo.bar");  // returns "some value"
+   });
+   // Dojo < 1.7
    // define an object
    var foo = {
      bar: "some value"
@@ -38,6 +49,23 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
  :linenos:
 
  <script type="text/javascript">
+   // Dojo 1.7 (AMD)
+   require(["dojo/_base/lang"], function(lang) {
+      // define an object
+      var foo = {
+        bar: "some value"
+      };
+
+      // get the "foo.baz" property, create it if it doesn't exist
+      lang.getObject("foo.baz", true); // returns foo.baz - an empty object {}
+      /*
+        foo == {
+          bar: "some value",
+          baz: {}
+        }
+      */
+   });
+   // Dojo < 1.7
    // define an object
    var foo = {
      bar: "some value"
@@ -59,6 +87,17 @@ You can also pass an object as the third parameter. This will define the context
  :linenos:
 
  <script type="text/javascript">
+   // Dojo 1.7 (AMD)
+   require(["dojo/_base/lang"], function(lang) {
+      // define an object
+      var foo = {
+         bar: "some value"
+      };
+
+      // get the "bar" property of the foo object
+      lang.getObject("bar", false, foo); // returns "some value"
+   });
+   // Dojo 1.7
    // define an object
    var foo = {
      bar: "some value"
