@@ -24,6 +24,11 @@ Use this to test if a variable is a built-in function.
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", function(lang) {
+    lang.isAlien(foo) 
+  });
+  // Dojo < 1.7
   dojo.isAlien(foo) 
 
 Returns true if it is a built-in function or some other kind of oddball that *should* report as a function but doesn't.
@@ -31,6 +36,14 @@ Returns true if it is a built-in function or some other kind of oddball that *sh
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", function(lang) {
+    // Check, if variable "foo" is a built-in function:
+    if(dojo.isAlien(foo)){
+      // do something...
+    }
+  });
+  // Dojo < 1.7
   // Check, if variable "foo" is a built-in function:
   if(dojo.isAlien(foo)){ 
       // do something...
