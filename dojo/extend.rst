@@ -10,6 +10,13 @@ We can use dojo.extend to extend functionality into existing classes. Consider t
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", "dijit.TitlePane"], function(lang, titlePane) {
+    lang.extend(titlePane, {
+      randomAttribute:"value"
+    }); 
+  });
+  // Dojo < 1.7
   dojo.require("dijit.TitlePane");
   dojo.extend(dijit.TitlePane, {
       randomAttribute:"value"
@@ -32,6 +39,13 @@ A potentially confusing result of the above actually provides us a lot of flexib
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", "dijit._Widget"], function(lang, _widget) {
+    lang.extend(_widget, {
+      region:"center"
+    });
+  });
+  // Dojo < 1.7
   dojo.extend(dijit._Widget, {
       region:"center"
   });
