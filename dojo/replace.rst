@@ -68,6 +68,7 @@ If the second argument is an object, all names within braces are interpreted as 
 You can see this code in action:
 
 .. code-example::
+  :linenos:
   :toolbar: none
   :width:  600
   :height: 400
@@ -78,6 +79,7 @@ You can see this code in action:
 [ Dojo 1.7 AMD ]
 
 .. javascript::
+  :linenos:
   :label: Object example
 
     <script>
