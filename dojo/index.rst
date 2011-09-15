@@ -119,6 +119,10 @@ Language Utilities (dojo/_base/lang)
 
   Set a property from a dot-separated string, such as "A.B.C"
 
+* `dojo.exists <dojo/exists>`_
+
+  Determine if an object supports a given method
+
 HTML Utility (dojo/_base/html)
 ------------------------------
 * `dojo/_base/html <dojo/_base/html>`_
@@ -323,10 +327,6 @@ Objects / OO Tools
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
-
-* `dojo.exists <dojo/exists>`_
-
-  Determine if an object supports a given method
 
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
