@@ -45,6 +45,14 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 
 .. code-block :: javascript
 
+  //Dojo 1.7 (AMD)
+  require("dojo/parser",function(parser){
+       //write your code here
+  });
+  
+.. code-block :: javascript
+
+  //Dojo < 1.7
   dojo.require("dojo.parser");
 
 ``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly `require <dojo/require>`_ the module than to assume it has been loaded.
@@ -60,7 +68,15 @@ There are two ways to run the dojo.parser: manually, or before onLoad.
 To execute the parser manually, simply call the function ``parse``:
 
 .. code-block :: javascript
+
+  //Dojo 1.7 (AMD)
+  require("dojo/parser",function(parser){
+       parser.parse();
+  });
+
+.. code-block :: javascript
   
+  //Dojo < 1.7
   dojo.parser.parse();
 
 To run the parser when your page loads, add a data-dojo-config="parseOnLoad: true" to your dojo script tag:
@@ -426,6 +442,20 @@ Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the n
 
 .. code-block :: javascript
 
+  //Dojo 1.7 (AMD)
+  require(["dojo/_base/xhr","dojo/parser","dojo/dom"], function(xhr,parser,dom){
+	  xhr.get({
+		url: "widgets.html",
+		load: function(data){
+			dom.byId("container").innerHTML = data;
+			parser.parse("container");
+		}
+	  });
+  });
+  
+.. code-block :: javascript
+
+  //Dojo < 1.7
   dojo.xhrGet({
     url: "widgets.html",
     load: function(data){
@@ -438,13 +468,23 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 .. code-block :: javascript
 
+  //Dojo 1.7 (AMD)
+  require(["dojo/parser","dojo/ready"],function(parser,ready){
+       ready(function(){
+          // do something();
+          parser.parse();
+       });
+  });
+
+.. code-block :: javascript
+
+  //Dojo < 1.7
   dojo.require("dojo.parser");
   dojo.addOnLoad(function(){
        // do something();
        dojo.parser.parse();
   });
-
-
+  
 
 See Also
 --------
