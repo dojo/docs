@@ -120,7 +120,8 @@ You can see this code in action:
       });
     </script>
 
-  Minimalistic HTML for our example.
+
+Minimalistic HTML for our example.
 
   .. html::
     :label: Minimal HTML.
