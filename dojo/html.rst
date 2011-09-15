@@ -29,7 +29,27 @@ Examples
 ========
 
 .. codeviewer::
+   
+    //Dojo 1.7 (AMD)
+    <script type="text/javascript">
+    require(["dojo/html","dojo/ready"], function(html,ready) {
+        ready(function(){
+            // the first argument is a node reference
+            console.log("loaded");
+            html.set(dojo.byId("mycontent"), "loaded!");
+        });
+    });
+    </script>
 
+    <div id="mycontent">
+      Loading...
+    </div>
+
+
+
+.. codeviewer::
+	
+    //Dojo < 1.7
     <script type="text/javascript">
     dojo.require("dojo.html");
     dojo.addOnLoad(function() {
@@ -43,11 +63,46 @@ Examples
       Loading...
     </div>
 
-Of course, if that was all you needed to do, you'd be better of just setting innerHTML directly. The value of dojo.html.set comes when things get a little less trivial: 
 
+Of course, if that was all you needed to do, you'd be better of just setting innerHTML directly. The value of dojo.html.set comes when things get a little less trivial: 
 
 .. codeviewer::
 
+    //Dojo 1.7 (AMD)
+    <button id="setbtn">Click to set content</button>
+    <table id="mytable">
+      <tr><td>Nothing here yet</td></tr>
+    </table>
+
+
+    <script type="text/javascript">
+    require(["dojo/html","dojo/dom","dojo/_base/connect","dijit.form.NumberTextBox"], function(html,dom,connect,numberTextBox) {
+    var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function() {
+
+      html.set(dom.byId("mytable"), '<tr>'
+        +'<td><label>How much?</label></td>'
+        +'<td><input type="text" dojoType="dijit.form.NumberTextBox" value="0"'
+        +  ' constraints="{min:0,max:20,places:0}"'
+        +  ' promptMessage= "Enter a value between 0 and +20"'
+        +  ' required= "true" invalidMessage= "Wrong!" />'
+        +'</td>'
+        +'</tr>', {
+          parseContent: true, 
+          onBegin: function() {
+              this.inherited("onBegin", arguments);
+          }
+      });
+      connect.disconnect(sethandle); 
+      sethandle = null;
+      dom.byId("setbtn").innerHTML = "Done"; 
+    })
+    });
+    </script>
+	
+
+.. codeviewer::
+
+    //Dojo < 1.7
     <button id="setbtn">Click to set content</button>
     <table id="mytable">
       <tr><td>Nothing here yet</td></tr>
