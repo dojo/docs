@@ -315,6 +315,15 @@ In some cases you may want to use different braces, e.g., because your interpola
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    var output = lang.replace(
+      "Hello, %[0] %[2] AKA %[3]!",
+      ["Robert", "X", "Cringely", "Bob"],
+      /\%\[([^\]]+)\]/g
+    );
+  });
+  // Dojo < 1.7
   var output = dojo.replace(
     "Hello, %[0] %[2] AKA %[3]!",
     ["Robert", "X", "Cringely", "Bob"],
