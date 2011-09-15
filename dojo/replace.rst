@@ -590,6 +590,56 @@ Let's add a simple formatting to substituted fields. We will use the following n
 
 In this example we are going to format numbers as fixed or exponential with optional precision.
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang"], function(lang) {
+    function format(tmpl, dict, formatters){
+      // convert dict to a function, if needed
+      var fn = lang.isFunction(dict) ? dict : function(_, name){
+        return lang.getObject(name, false, dict);
+      };
+      // perform the substitution
+      return lang.replace(tmpl, function(_, name){
+        var parts = name.split(":"),
+        value = fn(_, parts[0]);
+        if(parts.length > 1){
+          value = formatters[parts[1]](value, parts.slice(2));
+        }
+        return value;
+      });
+    }
+    // simple numeric formatters
+    var customFormatters = {
+      f: function(value, opts){
+        // return formatted as a fixed number
+        var precision = opts && opts.length && opts[0];
+        return Number(value).toFixed(precision);
+      },
+      e: function(value, opts){
+        // return formatted as an exponential number
+        var precision = opts && opts.length && opts[0];
+        return Number(value).toExponential(precision);
+      }
+    };
+    // that is how we use it:
+    var output1 = format(
+      "pi = {pi}<br>pi:f = {pi:f}<br>pi:f:5 = {pi:f:5}",
+      {pi: Math.PI, big: 1234567890},
+      customFormatters
+    );
+    var output2 = format(
+      "big = {big}<br>big:e = {big:e}<br>big:e:5 = {big:e:5}",
+      {pi: Math.PI, big: 1234567890},
+      customFormatters
+    );
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
