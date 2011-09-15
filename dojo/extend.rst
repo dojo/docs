@@ -40,8 +40,8 @@ A potentially confusing result of the above actually provides us a lot of flexib
   :linenos:
 
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang", "dijit._Widget"], function(lang, _widget) {
-    lang.extend(_widget, {
+  require(["dojo/_base/lang", "dijit._Widget"], function(lang, _Widget) {
+    lang.extend(_Widget, {
       region:"center"
     });
   });
@@ -54,6 +54,32 @@ The side-effect of this is a documentation nightmare. Now ``every`` Dijit appear
 
 Example :  dojo.extend vs dojo.mixin
 -------------------------------------
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+    require(["dojo/_base/lang", "dojo/dom-form"], function(lang, form) {
+        //define a class
+        var myClass = function() {
+            this.defaultProp = "default value";
+        };
+        myClass.prototype = new myClass();
+        console.log("the class (unmodified):", form.toJson(myClass.prototype));
+    
+        // extend the class
+        lang.extend(myClass, {"extendedProp": "extendedValue"});
+        console.log("the class (modified with lang.extend):", form.toJson(myClass.prototype));
+    
+        var t = new myClass();
+        // add new properties to the instance of our class
+        lang.mixin(t, {"myProp": "myValue"});
+        console.log("the instance (modified with lang.mixin):", form.toJson(t));
+    });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos:
