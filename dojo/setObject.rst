@@ -37,6 +37,11 @@ Wheras with `dojo.setObject`, we can shorten that to:
 
 .. code-block:: javascript
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    lang.setObject("parent.child.prop", "some value", obj);
+  });
+  // Dojo < 1.7
   dojo.setObject("parent.child.prop", "some value", obj);
 
 
