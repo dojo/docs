@@ -25,6 +25,11 @@ Similar to `dojo.isArray() <dojo/isArray>`_ but more permissive.
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang", function(lang) {
+    lang.isArrayLike(foo);
+  });
+  // Dojo < 1.7
   dojo.isArrayLike(foo) 
 
 Returns true if it is like an Array.
@@ -32,6 +37,14 @@ Returns true if it is like an Array.
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  // Check, if variable "foo" is like an array:
+  require(["dojo/_base/lang", function(lang) {
+    if(lang.isArrayLike(foo)) {
+      // do something...
+    }
+  });
+  // Dojo < 1.7
   // Check, if variable "foo" is like an array:
   if(dojo.isArrayLike(foo)){ 
       // do something...
