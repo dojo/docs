@@ -80,6 +80,7 @@ Alternatly, you can pass an empty object as the first mix, and mix another objec
     var newObject = lang.mixin({}, b);
     lang.mixin(newObject, c);
     lang.mixin(newObject, lang.mixin(e, f));
+    // and so on
   });
   // Dojo < 1.7
   var newObject = dojo.mixin({}, b);
