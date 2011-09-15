@@ -28,6 +28,28 @@ With dictionary
 
 If the second argument is an object, all names within braces are interpreted as property names within this object. All names separated by ``.`` (dot) will be interpreted as subobjects. This default behavior provides a great flexibility:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang"], function(lang) {
+    var output = lang.replace(
+      "Hello, {name.first} {name.last} AKA {nick}!",
+      {
+        name: {
+          first:  "Robert",
+          middle: "X",
+          last:   "Cringely"
+        },
+        nick: "Bob"
+      }
+    );
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -52,6 +74,32 @@ You can see this code in action:
   :djConfig: parseOnLoad: false
 
   A complex object can be used with dojo.replace.
+
+[ Dojo 1.7 AMD ]
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom) {
+        ready(function(){
+          dom.byId("output").innerHTML = lang.replace(
+            "Hello, {name.first} {name.last} AKA {nick}!",
+            {
+              name: {
+                first:  "Robert",
+                middle: "X",
+                last:   "Cringely"
+              },
+              nick: "Bob"
+            }
+          );
+        });
+      });
+    </script>
+
+
+[ Dojo < 1.7 ]
 
   .. javascript::
     :label: Object example
@@ -89,6 +137,14 @@ In most cases you may prefer an array notation effectively simulating the venera
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/lang"], function(lang) {
+    var output = lang.replace(
+      "Hello, {0} {2} AKA {3}!",
+      ["Robert", "X", "Cringely", "Bob"]
+    );
+  });
+  // Dojo < 1.7
   var output = dojo.replace(
     "Hello, {0} {2} AKA {3}!",
     ["Robert", "X", "Cringely", "Bob"]
