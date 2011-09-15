@@ -378,6 +378,29 @@ Highlighting substitutions
 
 Let's add highlighting to all substituted fields:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang"], function(lang) {
+    function hiliteReplace(tmpl, dict){
+      // add highlights first
+      var hilited = lang.replace(tmpl, function(_, name){
+        return "<span class='hilite'>{" + name + "}</span>";
+      });
+      // now perform real substitutions
+      return lang.replace(hilited, dict);
+    }
+    // that is how we use it:
+    var output = hiliteReplace("Hello, {0} {2} AKA {3}!",
+      ["Robert", "X", "Cringely", "Bob"]
+    );
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -443,6 +466,40 @@ Escaping substitutions
 ----------------------
 
 Let's escape substituted text for HTML to prevent possible exploits. Dijit templates implement similar technique. We will borrow Dijit syntax: all names starting with ``!`` are going to be placed as is (example: ``{!abc}``), while everything else is going to be filtered.
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang"], function(lang) {
+    function safeReplace(tmpl, dict){
+      // convert dict to a function, if needed
+      var fn = lang.isFunction(dict) ? dict : function(_, name){
+        return lang.getObject(name, false, dict);
+      };
+      // perform the substitution
+      return lang.replace(tmpl, function(_, name){
+        if(name.charAt(0) == '!'){
+          // no escaping
+          return fn(_, name.slice(1));
+        }
+        // escape
+        return fn(_, name).
+          replace(/&/g, "&amp;").
+          replace(/</g, "&lt;").
+          replace(/>/g, "&gt;").
+          replace(/"/g, "&quot;");
+      });
+    }
+    // that is how we use it:
+    var output = safeReplace("<div>{0}</div",
+      ["<script>alert('Let\' break stuff!');</script>"]
+    );
+  });
+
+
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   :linenos:
