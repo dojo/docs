@@ -69,6 +69,10 @@ Language Utilities (dojo/_base/lang)
 
   Function that generates a wrapper function that ensures a function will only ever execute globally.
 
+* `dojo.clone <dojo/clone>`_
+
+  Clones objects (including DOM nodes) and all children.
+
 * `dojo.delegate <dojo/delegate>`_
 
   Returns a new object which "looks" to obj for properties which it does not have a value for.
