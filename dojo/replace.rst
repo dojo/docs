@@ -77,8 +77,8 @@ You can see this code in action:
 
 [ Dojo 1.7 AMD ]
 
-  .. javascript::
-    :label: Object example
+.. javascript::
+  :label: Object example
 
     <script>
       require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom) {
@@ -101,8 +101,8 @@ You can see this code in action:
 
 [ Dojo < 1.7 ]
 
-  .. javascript::
-    :label: Object example
+.. javascript::
+  :label: Object example
 
     <script>
       dojo.addOnLoad(function(){
