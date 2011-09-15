@@ -123,8 +123,8 @@ You can see this code in action:
 
 Minimalistic HTML for our example.
 
-  .. html::
-    :label: Minimal HTML.
+.. html::
+  :label: Minimal HTML.
 
     <p id="output"></p>
 
