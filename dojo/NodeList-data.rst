@@ -41,8 +41,11 @@ The API to *data* is very simple. Each node has some arbitrary object hash of da
 
   // [ Dojo 1.6 and earlier ]
   dojo.query("#mynode").data("datakey", "This is the data I'm setting");
+
   // [ Dojo 1.7 AMD ]
-  query("#mynode").data("datakey", "This is the data I'm setting");
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      query("#mynode").data("datakey", "This is the data I'm setting");
+  });
 
 Now, the node with id="mynode" has a string data item under the key *datakey*. We can later get this data by calling *data* with only the key name:
 
@@ -50,9 +53,12 @@ Now, the node with id="mynode" has a string data item under the key *datakey*. W
 
   // [ Dojo 1.6 and earlier ]
   var mydata = dojo.query("#mynode").data("datakey");
+
   // [ Dojo 1.7 AMD ]
-  var mydata = query("#mynode").data("datakey");
-  if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      var mydata = query("#mynode").data("datakey");
+      if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
+  });
 
 Notice we need to access the return of `dojo.query <dojo/query>`_ as if it were an array, despite there only being one node in the list. *data* always returns an Array when acting as a getter. If the list has more than one item, the return array will have that many items as well. 
 
@@ -63,9 +69,12 @@ We can set any type of data at some key name, be it a String, Array, Object, and
   // [ Dojo 1.6 and earlier ]
   dojo.query("#someNode").data("myarray", [1,2]);
   dojo.query("#diffNode").data("handlerFunction", function(){ ... });
+
   // [ Dojo 1.7 AMD ]
-  query("#someNode").data("myarray", [1,2]);
-  query("#diffNode").data("handlerFunction", function(){ ... }); 
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      query("#someNode").data("myarray", [1,2]);
+      query("#diffNode").data("handlerFunction", function(){ ... }); 
+  });
 
 Or an example of using an object has *as* the actual data:
 
@@ -88,16 +97,18 @@ Or an example of using an object has *as* the actual data:
 
 .. javascript::
 
-  query("#navNode").data("special-information", {
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+     query("#navNode").data("special-information", {
        huh: "the Data at `special-information` is this complex object",
        anumber: 42,
        thelist: [1,2,3]
-  });
+     });
 
-  // get it back:
-  var data = query("#navNode").data("special-information")[0];
-  data.anumber++;
-  data.thelist.push(4);
+     // get it back:
+     var data = query("#navNode").data("special-information")[0];
+     data.anumber++;
+     data.thelist.push(4);
+  });
 
 Like other Dojo APIs, *data* accepts an object argument, which would be mixed into the node's data set. For example:
 
@@ -117,13 +128,15 @@ Like other Dojo APIs, *data* accepts an object argument, which would be mixed in
 
 .. javascript::
 
-  // like calling .data("a", 'b").data("c", "d").data("e", [1,2,3]
-  query("#foo").data({
-     a:"b", c:"d", e:[1,2,3]
-  });
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      // like calling .data("a", 'b").data("c", "d").data("e", [1,2,3]
+      query("#foo").data({
+         a:"b", c:"d", e:[1,2,3]
+      });
 
-  query("#foo").data("a")[0]; // "b"
-  query("#foo").data("e")[0]; // [1,2,3]
+      query("#foo").data("a")[0]; // "b"
+      query("#foo").data("e")[0]; // [1,2,3]
+  });
 
 This is useful when needing to set multiple independent data keys. Note how this differs from calling:
 
@@ -133,9 +146,12 @@ This is useful when needing to set multiple independent data keys. Note how this
   dojo.query("#foo").data("stuff", {
       a:"b", c:"d", e:[1,2,3]
   });
+
   // [ Dojo 1.7 AMD ]
-  query("#foo").data("stuff", {
-      a:"b", c:"d", e:[1,2,3]
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      query("#foo").data("stuff", {
+          a:"b", c:"d", e:[1,2,3]
+      });
   });
 
 Here were stashing this object at the key *stuff*, as compared to the previous example where each of the object keys we used as data keys.
@@ -149,8 +165,11 @@ There are several different types of returns that can come from *NodeList.data*.
 
   // [ Dojo 1.6 and earlier ]
   dojo.query("#bar").data("foo", 10).onclick(function(){ alert(dojo.query(this).data("foo")[0] == 10) });
+
   // [ Dojo 1.7 AMD ]
-  query("#bar").data("foo", 10).onclick(function(){ alert(query(this).data("foo")[0] == 10) });
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+        query("#bar").data("foo", 10).onclick(function(){ alert(query(this).data("foo")[0] == 10) });
+  });
 
 When acting as a getter, NodeList.data *always* returns an Array. The array is populated with either the data at the requested key, or the entire data set if called with no arguments.
 
@@ -167,10 +186,12 @@ When acting as a getter, NodeList.data *always* returns an Array. The array is p
 
 .. javascript::
 
-  query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
-  // calling with no arguments return _entire_ data set bound to node. 
-  var data = query("#bar").data()[0];
-  console.log(data.a, data.c, data.e); // logs "b" "d" [1,2,3]
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
+      // calling with no arguments return _entire_ data set bound to node. 
+      var data = query("#bar").data()[0];
+      console.log(data.a, data.c, data.e); // logs "b" "d" [1,2,3]
+  });
 
 Private APIs
 ------------
@@ -201,16 +222,17 @@ Here is a comparison:
 
 .. javascript::
 
-   // setters:
-   query("#bar").data("baz", 10);
-   dojo._nodeData("bar", "baz", 10);
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+       // setters:
+       query("#bar").data("baz", 10);
+       dojo._nodeData("bar", "baz", 10);
 
-   // getter, _nodeData does _not_ return an Array:
-   var data = query("#bar").data("baz")[0];
-   var dat2 = dojo._nodeData("bar", "baz"); 
+       // getter, _nodeData does _not_ return an Array:
+       var data = query("#bar").data("baz")[0];
+       var dat2 = dojo._nodeData("bar", "baz"); 
 
-   if(data == dat2){ alert("see?") }
-
+       if(data == dat2){ alert("see?") }
+  });
 
 ============
 Data Removal
@@ -223,9 +245,12 @@ The *removeData* API works nearly the same as *data*. Calling *removeData* with 
   // [ Dojo 1.6 and earlier ]
   dojo.query("#bar").removeData(); // erases all information
   dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
+
   // [ Dojo 1.7 AMD ]
-  query("#bar").removeData(); // erases all information
-  query("#baz").removeData("e"); // removed [1,2,3] for instance
+  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+      query("#bar").removeData(); // erases all information
+      query("#baz").removeData("e"); // removed [1,2,3] for instance
+  });
 
 There is, however, no way to remove a list of keys. An example of how to do so would look like:
 
@@ -240,8 +265,10 @@ There is, however, no way to remove a list of keys. An example of how to do so w
 
 .. javascript::
 
-  var remover = lang.partial(dojo._removeNodeData, "nodeId");
-  array.forEach(["key", "otherkey", "somekey"], remover);
+  require(["dojo/_base/lang","dojo/_base/array", "dojo/NodeList-data"], function(lang, array, nodeListData){
+      var remover = lang.partial(nodeListData._removeNodeData, "nodeId");
+      array.forEach(["key", "otherkey", "somekey"], remover);
+  });
 
 =====================
 Memory Considerations
