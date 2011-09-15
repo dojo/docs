@@ -67,10 +67,6 @@ Features
 
 * `dojo.extend <dojo/extend>`_
 
-* `dojo.delegate <dojo/delegate>`_
-
-  Delegate an Object (beget)
-
 * `dojo.getObject <dojo/getObject>`_
 
   Get a property from a dot-separated string, such as "A.B.C"
