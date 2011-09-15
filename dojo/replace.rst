@@ -198,6 +198,39 @@ Essentially these arguments are the same as in `String.replace() <https://develo
 
 Let's take a look at example:
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo_base/array", "dojo/_base/lang"], function(array, lang) {
+    // helper function
+    function sum(a){
+      var t = 0;
+      array.forEach(a, function(x){ t += x; });
+      return t;
+    }
+
+    var output = lang.replace(
+      "{count} payments averaging {avg} USD per payment.",
+      lang.hitch(
+        { payments: [11, 16, 12] },
+        function(_, key){
+          switch(key){
+            case "count": return this.payments.length;
+            case "min":   return Math.min.apply(Math, this.payments);
+            case "max":   return Math.max.apply(Math, this.payments);
+            case "sum":   return sum(this.payments);
+            case "avg":   return sum(this.payments) / this.payments.length;
+          }
+        }
+      )
+    );
+  });
+
+
+[ Dojo < 1.7 ]
+
 .. code-block :: javascript
   :linenos:
 
