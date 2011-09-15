@@ -27,7 +27,7 @@ The Dojo build system will inline the HTML as a string where the ``dojo.cache`` 
 Usage
 =====
 
-``dojo.cache`` is a Dojo Core module, To include the Dojo cache on your page, require the module `dojo.cache`. When use dojo 1.7, you should require ``dojo.text.js`` because the related functions used to define in ``dojo.cache.js`` has been moved.
+``dojo.cache`` is a Dojo Core module, To include the Dojo cache on your page, require the module `dojo.cache`. When use dojo 1.7, you should require ``dojo.text.js`` because the related functions used to define in ``dojo.cache.js`` have been moved.
 
 .. code-block :: javascript
   
