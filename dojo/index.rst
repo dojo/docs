@@ -763,13 +763,27 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 IO-Query (dojo/io-query)
 ------------------------
 
-* `ioQuery.objectToQuery <dojo/objectToQuery>`_
+* `ObjectToQuery <dojo/objectToQuery>`_
 
   Takes a name/value mapping object and returns a string representing a URL-encoded version of that object.
   
-* `ioQuery.queryToObject <dojo/queryToObject>`_
+* `QueryToObject <dojo/queryToObject>`_
 
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
+  
+  
+
+Robot (dojo/robot & dojo/robotx)
+--------------------------------
+
+* `dojo/robot <dojo/robot>`_
+
+  Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of their
+  elements themselves
+  
+* `dojo/robotx <dojo/robotx>`_
+
+  Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
 
 
 ========
