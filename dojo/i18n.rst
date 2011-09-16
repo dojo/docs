@@ -20,6 +20,22 @@ Usage
 
 dojo.i18n.getLocalization gets a reference to an Object with localized strings, as loaded by dojo.requireLocalization()
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+    require(["dojo/i18n"], function(i18n) {
+        var validate = i18n.getLocalization("dijit.form", "validate");
+        console.log(validate.invalidMessage);
+    });
+ </script>
+
+Dojo < 1.7
+--------------
+ 
 .. code-block :: javascript
  :linenos:
 
