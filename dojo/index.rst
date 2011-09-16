@@ -331,10 +331,6 @@ Objects / OO Tools
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
-  
-* `dojo.io-query <dojo/io-query>`_
-
-  This module defines query string processing functions.
 
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
@@ -762,6 +758,15 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
   * `dojo.setProp <dojo/setProp>`_
 
     Sets a property on an HTML element.
+    
+    
+IO-Query (dojo/io-query)
+------------------------
+
+* `dojo.io-query <dojo/io-query>`_
+
+  This module defines query string processing functions.
+
 
 ========
 See also
