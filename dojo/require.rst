@@ -59,6 +59,22 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD)
+  require(["dojo/ready","dojo/fx"], function(ready,fx) {
+       ready(function(){
+             require(["dijit/form/Button","dojo/_base/window"], function(btn,win) {
+                  ready(function(){
+                        new dijit.form.Button({}).placeAt(win.body()); 
+                  });
+             });
+       });
+  });
+
+
+.. code-block :: javascript
+  :linenos:
+
+  //Dojo < 1.7
   dojo.require("dojo.fx");
   dojo.addOnLoad(function(){
       dojo.require("dijit.form.Button");
@@ -74,7 +90,21 @@ Usage
 Simply pass it a string:
 
 .. code-block :: javascript
+    
+    //Dojo 1.7 (AMD)
+    // load dojo/fx.js:
+    require(["dojo/fx"], function(fx) {
+        //Write your code here
+    });
+    
+    // load dojox/widget/Toaster.js:
+    require(["dojo/widget/Toaster"], function(Toaster) {
+        //Write your code here
+    });   
 
+.. code-block :: javascript
+
+  //Dojo <1.7
   // load dojo/fx.js:
   dojo.require("dojo.fx");
 
