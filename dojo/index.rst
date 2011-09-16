@@ -331,6 +331,8 @@ Objects / OO Tools
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
+  
+* `dojo.io-query <dojo/io-query>`_
 
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
