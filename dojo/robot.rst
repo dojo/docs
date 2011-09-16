@@ -15,10 +15,10 @@ Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of 
 Features
 ========
 
-* `doh.robot.mouseMoveAt`_
+* `doh.robot.mouseMoveAt`
 
   Moves the mouse over the specified node at the specified relative x,y offset.
 
-* `dojo.queryToObject <dojo/queryToObject>`_
+* `doh.robot.scrollIntoView`
 
-  Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
+  Scroll the passed node into view, if it is not.
