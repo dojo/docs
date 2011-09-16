@@ -25,7 +25,14 @@ To use dojo.back:
 
    .. code-block :: javascript
 
+      // dojo 1.7 (AMD)
+      require(["dojo/back"], function(back){
+          back.setInitialState(state);
+      });
+
+      // dojo < 1.7
       dojo.require("dojo.back");
+      dojo.back.setInitialState(state);
    ..
 
 2. Register the initial state of the page by calling:
