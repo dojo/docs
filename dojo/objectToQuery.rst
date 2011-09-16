@@ -22,6 +22,32 @@ Usage
 
 Usage is simple and straightforward, you pass the object you wish converted to a query string and the function will return the query string.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(["dojo/io-query"], function(ioQuery) {
+       var uri = "http://some.server.org/somecontext/";
+       var query = {
+         foo: ["bar", "baz"],
+         bit: "byte"     
+       };
+       //Assemble the new uri with its query string attached.
+       var queryStr = ioQuery.objectToQuery(query);
+       uri = uri + "?" + queryStr;
+
+       //The uri should look like:
+       // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
+   });
+ </script>
+ 
+
+Dojo < 1.7
+--------------
+
 .. code-block :: javascript
  :linenos:
 
