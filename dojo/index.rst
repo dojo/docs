@@ -334,6 +334,8 @@ Objects / OO Tools
   
 * `dojo.io-query <dojo/io-query>`_
 
+  This module defines query string processing functions.
+
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
 * `dojo.queryToObject <dojo/queryToObject>`_
