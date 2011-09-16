@@ -763,9 +763,13 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 IO-Query (dojo/io-query)
 ------------------------
 
-* `dojo.io-query <dojo/io-query>`_
+* `ioQuery.objectToQuery <dojo/objectToQuery>`_
 
-  This module defines query string processing functions.
+  Takes a name/value mapping object and returns a string representing a URL-encoded version of that object.
+  
+* `ioQuery.queryToObject <dojo/queryToObject>`_
+
+  Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
 
 
 ========
