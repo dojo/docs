@@ -14,6 +14,15 @@ Usage
 
 .. code-block :: javascript
   
+  // dojo 1.7 (AMD)
+  require(["dojo/cookie"], function(cookie){      
+     // To set a cookie
+     cookie(cookieName, cookieValue, cookieProps);
+     // To get a cookie
+     var cookieValue = cookie(cookieName);
+  });
+
+  // dojo < 1.7
   // To set a cookie
   dojo.cookie(cookieName, cookieValue, cookieProps);
   // To get a cookie
