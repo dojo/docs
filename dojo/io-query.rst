@@ -1,7 +1,7 @@
 #format dojo_rst
 
 
-dojo.io-query
+dojo/io-query
 =============
 
 :Available: since V1.7
@@ -9,6 +9,7 @@ dojo.io-query
 .. contents::
     :depth: 2
 
+This module defines query string processing functions which contain objectToQuery and queryToObject.
 
 ========
 Features
