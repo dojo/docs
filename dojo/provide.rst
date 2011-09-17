@@ -27,6 +27,25 @@ dojo.provide is an integral part of Dojo's module system and its loader. dojo.pr
 
 This code example is for a my/module.js file. Note the convention of placing the dojo.provide call before dojo.require calls.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   define(['dojo/_base/kernel', 'dojo/io/script', 'dojo/_base/loader'], function(dojo, ioScript){
+     dojo.provide("my.module");
+
+     //dojo.provide made sure that my.module was created as a JavaScript object,
+     //so properties can be assigned to it:
+     my.module.name = "my module";
+   });
+ </script>
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
