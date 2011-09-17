@@ -26,6 +26,33 @@ Since working with the DOM or JavaScript during a `window.onunload` event is not
 Usage
 =====
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(['dojo/_base/unload'], function(baseUnload){
+     // declare a function to do the unload work
+     var unLoad = function() {
+       // do some unload stuff
+       alert("unloading...");
+     }
+     // pass a function pointer
+     baseUnload.addOnUnload(unLoad);
+
+     // call a method of an object
+     baseUnload.addOnUnload(window, "unLoad");
+  
+     // pass an object and an anonymous function
+     baseUnload.addOnUnload(window, function() {alert("we're out of here!");});
+   });
+ </script>
+   
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
