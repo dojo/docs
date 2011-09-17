@@ -20,6 +20,27 @@ This function takes an object and converts it to a String serialization of that 
 Examples
 ========
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+  require(['dojo/_base/json'],function(dojo){
+    //require on dojo/_base/json will return the actual object of dojo
+    
+    // a simple object
+    var obj = { a:"one", b:3, c:true };
+
+    // convert it to a string:
+    var data = dojo.toJson(obj);
+    console.log(data, typeof data);
+  });
+  >>> {"a":"one","b":3,"c":true} string
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
