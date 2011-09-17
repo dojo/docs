@@ -248,7 +248,7 @@ NodeList (dojo/_base/NodeList)
 Event (dojo/_base/event)
 ------------------------
 
-* `dojo._base.event <dojo/_base/event>`_
+* `dojo/_base/event <dojo/_base/event>`_
 
   Defines dojo DOM event API.
 
