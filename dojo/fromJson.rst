@@ -19,6 +19,18 @@ This function creates a JavaScript object from a passed JSON string, such as one
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD)
+  require(['dojo/_base/xhr'],function(xhr){
+    xhr.get({
+      url:"foo.php", handleAs:"json",
+      load: function(data){
+        // data is a JavaScript object. The content of foo.php
+        // was passed through dojo.fromJson
+      }
+    });
+  });
+
+  //Dojo < 1.7
   dojo.xhrGet({ 
     url:"foo.php", handleAs:"json",
     load: function(data){
@@ -30,6 +42,24 @@ This function creates a JavaScript object from a passed JSON string, such as one
 =====
 Usage
 =====
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+  :linenos:
+  
+  require(['dojo/_base/json'],function(dojo){ 
+    //require on dojo/_base/json will return the actual object of dojo
+    var json = '{"a":"one","b":3,"c":true}'; 
+    var obj = dojo.fromJson(json);
+    console.log(obj.a, obj.b, obj.c);
+  });
+  
+  >>> one 3 true
+  
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
   :linenos:
