@@ -24,6 +24,33 @@ When a user exits the page to visit another page, the page is unloaded and a `wi
 Usage
 =====
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(['dojo/_base/unload'],function(baseUnload){
+     // declare a function to do the unload work
+     var unLoad = function() {
+       // do some unload stuff
+       alert("unloading...");
+     }
+     // pass a function pointer
+     baseUnload.addOnWindowUnload(unLoad);
+
+     // call a method of an object
+     baseUnload.addOnWindowUnload(window, "unLoad");
+
+     // pass an object and an anonymous function
+     baseUnload.addOnWindowUnload(window, function() {alert("we're out of here!");});
+   });
+ </script>
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
