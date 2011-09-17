@@ -53,6 +53,21 @@ props       Object                An object whose properties are copied (mixed i
 
 Example:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+  
+  require(['dojo/_base/declare'], function(declare){
+    declare("my.Thinger", null, {
+      constructor: function(/* Object */args){
+        declare.safeMixin(this, args);
+      }
+    });
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
