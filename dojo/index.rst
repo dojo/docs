@@ -332,10 +332,6 @@ Objects / OO Tools
 
   Creates a constructor using a compact notation for inheritance and prototype extension
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
-
-* `dojo.queryToObject <dojo/queryToObject>`_
-
 * `NodeList.instantiate <dojo/NodeList#instantiate>`_
 
   Create classes out of each node in the list
@@ -763,11 +759,11 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 IO-Query (dojo/io-query)
 ------------------------
 
-* `ObjectToQuery <dojo/objectToQuery>`_
+* `dojo.objectToQuery <dojo/objectToQuery>`_
 
   Takes a name/value mapping object and returns a string representing a URL-encoded version of that object.
   
-* `QueryToObject <dojo/queryToObject>`_
+* `dojo.queryToObject <dojo/queryToObject>`_
 
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
   
