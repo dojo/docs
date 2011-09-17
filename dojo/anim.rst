@@ -27,6 +27,29 @@ The `dojo.Animation` object returned from `dojo.anim` will be already playing wh
 Usage
 =====
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(['dojo/_base/fx'], function(fx){
+     fx.anim(node, properties, duration, easing, onEnd, delay);
+   });   
+ </script>
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.anim(node, properties, duration, easing, onEnd, delay);
+ </script>
+
+
 Here is the definition of arguments:
 
 ===========  ==============  ======================================================================
