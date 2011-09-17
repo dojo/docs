@@ -292,8 +292,8 @@ Ajax / IO (dojo/_base/xhr)
 
 * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 
-Package System
---------------
+Package System (defined in dojo/_base/loader)
+---------------------------------------------
 
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
