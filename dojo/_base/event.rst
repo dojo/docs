@@ -1,7 +1,7 @@
 ## page was renamed from 1.2/dojo/event
 #format dojo_rst
 
-dojo._base.event
+dojo/_base/event
 ================
 
 :Status: Draft
