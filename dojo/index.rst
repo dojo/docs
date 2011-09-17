@@ -360,6 +360,8 @@ Miscellaneous Base
 
   dojo._Url is used to manage the url object.
 
+* `dojo/_base/sniff <quickstart/browser-sniffing>`_
+  dojo/_base/sniff is introduced in dojo 1.7 as the browser detection utility.
 
 =========
 Dojo Core
