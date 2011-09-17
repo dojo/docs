@@ -316,16 +316,12 @@ JSON Tools (dojo/_base/json)
 
   Returns a JSON serialization of an object
 
-Objects / OO Tools
-------------------
+Objects / OO Tool (dojo/_base/declare)
+--------------------------------------
 
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
-
-* `NodeList.instantiate <dojo/NodeList#instantiate>`_
-
-  Create classes out of each node in the list
 
 
 Colors
@@ -585,6 +581,10 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 * `dojo.NodeList <dojo/NodeList>`_
 
   A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
+
+* `NodeList.instantiate <dojo/NodeList#instantiate>`_
+
+  Create classes out of each node in the list
 
 * `dojo.byId <dojo/byId>`_
 
