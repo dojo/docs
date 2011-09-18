@@ -1452,6 +1452,44 @@ The result is a superclass method or ``undefined``, if it was not found. You can
 
 Examples:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null,
+      m1: function(){
+        // ...
+      },
+      m2: function(){
+        // ...
+      }
+    });
+
+    var B = declare(A, {
+      logAndCall: function(name, method, args){
+        console.log("Calling " + name + "...");
+        method.apply(this, args);
+        console.log("...done");
+      },
+      m1: function(){
+        var supermethod = this.getInherited(arguments);
+        this.logAndCall("A.m1", supermethod, [1, 2]);
+      }
+    });
+
+    var x = new B();
+    x.m2 = function(){
+      // we need to use a name here because
+      // this method was not properly annotated:
+      var supermethod = this.getInherited("m2", arguments);
+      this.logAndCall("A.m2", supermethod, [1, 2]);
+    };
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -1495,6 +1533,35 @@ The method accepts one argument: class (constructor). It returns ``true``/``fals
 
 Examples:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null);
+    var B = declare(null);
+    var C = declare(null);
+
+    var D = declare([A, B]);
+
+    var x = new D();
+
+    console.log(x instanceof A);     // true
+    console.log(x.isInstanceOf(A));  // true
+
+    console.log(x instanceof B);     // false
+    console.log(x.isInstanceOf(B));  // true
+
+    console.log(x instanceof C);     // false
+    console.log(x.isInstanceOf(C));  // false
+
+    console.log(x instanceof D);     // true
+    console.log(x.isInstanceOf(D));  // true
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -1524,6 +1591,51 @@ Using "raw" classes with dojo.declare()
 ``dojo.declare`` allows to use "raw" classes created by other means as a superclass. Such classes are considered to be monolithic (because their structure cannot be introspected) and they cannot use advanced features like `inherited()`_. But their methods will be called by `inherited()`_ and all their methods can be chained (see Chaining_) including constructors.
 
 Examples:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
+    // plain vanilla constructor
+    var A = function(){
+      this.a = 42;
+    };
+    A.prototype.m1 = function(){
+      // ...
+    };
+
+    // another plain vanilla constructor
+    var B = function(){
+      this.b = "abc";
+    };
+    lang.extend(B, {
+      m2: function(){
+        // ...
+      }
+    });
+
+    var C = declare([A, B], {
+      m1: function(){
+        return this.inherited(arguments);
+      },
+      m2: function(){
+        return this.inherited(arguments);
+      }
+    });
+
+    var x = new C();
+    // both A and B will be called at this point
+
+    console.log(x.isInstanceOf(A)); // true
+    console.log(x.isInstanceOf(B)); // true
+
+    x.m1(); // A.m1 will be called via this.inherited()
+    x.m2(); // B.m2 will be called via this.inherited()
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
