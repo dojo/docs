@@ -773,6 +773,53 @@ Chained methods should not return values: all returned values are going to be ig
 
 There are two ways to chain methods: **after** and **before** (`AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare', 'dojo/dom-construct'], function(declare, ctr){
+    var A = declare(null, {
+      "-chains-": {
+        init:    "after",
+        destroy: "before"
+      },
+      init: function(token){
+        this.initialized = true;
+        this.token = token;
+        this.node = dojo.create("div", null, dojo.body());
+        console.log("A.init");
+      },
+      destroy: function(){
+        ctr.destroy(this.node);
+        this.node = null;
+        console.log("A.destroy");
+      }
+    });
+    var B = declare(A, {
+      init: function(token){
+        console.log("B.init");
+        // more code
+      },
+      destroy: function(){
+        console.log("B.destroy");
+        // more code
+      }
+    });
+
+    var x = new B();
+    x.init(42);
+    x.destroy();
+  });
+
+  // prints:
+  // A.init
+  // B.init
+  // B.destroy
+  // A.destroy
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -828,6 +875,31 @@ Default constructor chaining
 
 By default all constructors are chained using **after** algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null,
+      constructor: function(){ console.log("A"); }
+    };
+    var B = declare(A,
+      constructor: function(){ console.log("B"); }
+    };
+    var C = declare(B,
+      constructor: function(){ console.log("C"); }
+    };
+    new C();
+  });
+
+  // prints:
+  // A
+  // B
+  // C
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -867,6 +939,42 @@ Manual constructor chaining
 New in 1.4.
 
 In some cases users may want to redefine how initialization works. In this case the chaining should be turned off so ``this.inherited()`` can be used instead.
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null,
+      constructor: function(){
+        console.log("A");
+      }
+    };
+    var B = declare(A,
+      "-chains-": {
+        constructor: "manual"
+      },
+      constructor: function(){
+        console.log("B");
+      }
+    };
+    var C = declare(B,
+      constructor: function(){
+        console.log("C - 1");
+        this.inherited(arguments);
+        console.log("C - 2");
+      }
+    };
+    var x = new C();
+  });
+
+  // prints:
+  // C - 1
+  // B
+  // C - 2
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -924,6 +1032,35 @@ The method has one argument: an object to mix in. It returns the constructor its
 
 Example:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null, {
+      m1: function(){
+        // ...
+      }
+    });
+
+    A.extend({
+      m1: function(){
+        // this method will replace the original method
+        // ...
+      },
+      m2: function(){
+        // ...
+      }
+    });
+
+    var x = new A();
+    a.m1();
+    a.m2();
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -952,6 +1089,78 @@ Internally this method uses `dojo.safeMixin <dojo/safeMixin>`_.
 **Important note:** Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods would not be replaced because they are already copied.
 
 Example:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null, {
+      m1: function(){ console.log("A org"); },
+      m2: function(){ console.log("A org"); }
+    });
+
+    var B = declare(null, {
+      m2: function(){ this.inherited(arguments); console.log("B org"); },
+      m3: function(){ this.inherited(arguments); console.log("B org"); }
+    });
+
+    var C = declare(null, {
+      m3: function(){ this.inherited(arguments); console.log("C org"); },
+      m4: function(){ this.inherited(arguments); console.log("C org"); }
+    });
+
+    var ABC = declare([A, B, C], {});
+
+    // now A is the true base, B and C are mixed in
+
+    var abc = new ABC();
+
+    abc instanceof A; // true
+    abc instanceof B; // false
+    abc instanceof C; // false
+
+    // use isInstanceOf() to check if you include
+    // proper mixins
+
+    // let's list top methods:
+    // m1 comes from A (inherited)
+    // m2 comes from B (copied)
+    // m3 comes from C (copied)
+    // m4 comes from D (copied)
+
+    abc.m1(); // A org
+    abc.m2(); // A org, B org
+    abc.m3(); // B org, C org
+    abc.m4(); // C org
+
+    // let's extend() all prototypes
+
+    A.extend({
+      m1: function(){ console.log("A new"); },
+      m2: function(){ console.log("A new"); }
+    });
+
+    B.extend({
+      m2: function(){ this.inherited(arguments); console.log("B new"); },
+      m3: function(){ this.inherited(arguments); console.log("B new"); }
+    });
+
+    C.extend({
+      m3: function(){ this.inherited(arguments); console.log("C new"); },
+      m4: function(){ this.inherited(arguments); console.log("C new"); }
+    });
+
+    // observe that top copied methods are not changed
+
+    abc.m1(); // A new
+    abc.m2(); // A new, B org
+    abc.m3(); // B new, C org
+    abc.m4(); // C org
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -1040,6 +1249,103 @@ It returns whatever value was returned by a superclass method that was called. I
 
 
 Examples:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
+    var A = declare(null,
+      m1: function(){
+        // ...
+      },
+      m2: function(){
+        // ...
+      },
+      m3: function(){
+        // ...
+      },
+      m4: function(){
+        // ...
+      },
+      m5: function(){
+        // ...
+      }
+    };
+
+    var B = declare(A, {
+      m1: function(){
+        // simple super call with the same arguments
+        this.inherited(arguments);
+        // super call with new arguments
+        this.inherited(arguments, [1, 2, 3]);
+      }
+    });
+
+    // extend B using extend()
+    B.extend({
+      m2: function(){
+        // this method is going to be properly annotated =>
+        // we can use the same form of this.inherited() as
+        // normal methods:
+        // simple super call with the same arguments
+        this.inherited(arguments);
+        // super call with new arguments
+        this.inherited(arguments, ["a"]);
+      }
+    });
+
+    // extend B using lang.extend()
+    lang.extend(B, {
+      m3: function(){
+        // this method is not annotated =>
+        // we should supply its name when calling
+        // a superclass:
+        // simple super call with the same arguments
+        this.inherited("m3", arguments);
+        // super call with new arguments
+        this.inherited("m3", arguments, ["a"]);
+      }
+    });
+
+    // let's create an instance
+    var x = new B();
+    x.m1();
+    x.m2();
+    x.m3();
+    x.m4(); // A.m4() is called
+    x.m5(); // A.m5() is called
+
+    // add a method on the fly using declare.safeMixin()
+    declare.safeMixin(x, {
+      m4: function(){
+        // this method is going to be properly annotated =>
+        // we can use the same form of this.inherited() as
+        // normal methods:
+        // simple super call with the same arguments
+        this.inherited(arguments);
+        // super call with new arguments
+        this.inherited(arguments, ["a"]);
+      }
+    });
+
+    // add a method on the fly
+    x.m5 = function(){
+      // this method is not annotated =>
+      // we should supply its name when calling
+      // a superclass:
+      // simple super call with the same arguments
+      this.inherited("m5", arguments);
+      // super call with new arguments
+      this.inherited("m5", arguments, ["a"]);
+    };
+
+    x.m4(); // our instance-specific method is called
+    x.m5(); // our instance-specific method is called
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
