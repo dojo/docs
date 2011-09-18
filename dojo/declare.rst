@@ -123,6 +123,25 @@ Now we have a 'base class', called my.Thinger.
 
 If we don't want a globally accessible class we can easily make it local (since 1.4):
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
+    var localThinger = declare(null, {
+      count: 100,
+      constructor: function(args){
+        lang.mixin(this, args);
+      }
+    });
+    var thing1 = new localThinger();
+    var thing2 = new localThinger({ count:200 });
+    console.log(thing1.count, thing2.count);
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -137,6 +156,25 @@ If we don't want a globally accessible class we can easily make it local (since 
   console.log(thing1.count, thing2.count);
 
 To show how the inheritance chain works, we will create a new class derived from ``my.Thinger``:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("my.OtherThinger", [my.Thinger], {
+      divisor: 5,
+      constructor: function(args){
+        console.log('OtherThinger constructor called');
+        this.total = this.count / this.divisor;
+      }
+    });
+    var thing = new my.OtherThinger({ count:50 });
+    console.log(thing.total); // 10
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -155,6 +193,24 @@ First, the constructor of ``my.Thinger`` is called, mixing in the args parameter
 
 Above we passed an object hash exclusively as the parameter to our Class instantiation. The constructor is passed whichever arguments are passed during instantiation.
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("Person", null, {
+      constructor: function(name, age, currentResidence){
+        this.name=name;
+        this.age=age;
+        this.currentResidence = currentResidence;
+      }
+    });
+    var folk = new Person("phiggins", 42, "Tennessee");
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -170,6 +226,30 @@ Above we passed an object hash exclusively as the parameter to our Class instant
 Each of the ordered parameters are passed (as seen by the constructor's function signature) and then manually added to ``this`` by direct variable assignment.
 
 Let's add some content to a new class by giving it a name and showing what the constructor can do. Following is a Person class with a constructor and a ``moveToNewState()`` function:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("Person", null, {
+      constructor: function(name, age, currentResidence){
+        this.name = name;
+        this.age = age;
+        this.currentResidence = currentResidence;
+      },
+      moveToNewState: function(newState){
+        this.currentResidence = newState;
+      }
+    });
+    var folk = new Person("phiggins", 28, "Tennessee");
+    console.log(folk.currentResidence);
+    folk.moveToNewState("Oregon");
+    console.log(folk.currentResidence);
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
