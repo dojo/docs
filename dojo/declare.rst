@@ -280,6 +280,25 @@ Arrays and Objects as member variables
 
 If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets its own copy. Simple types (literal strings and numbers) are fine to declare in the class directly.
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("my.classes.bar", my.classes.foo, {
+      someData: [1, 2, 3, 4], // doesn't do what I want: ends up being static
+      numItem : 5, // one per bar
+      strItem : "string", // one per bar
+
+      constructor: function() {
+        this.someData = [ ]; // better, each bar has its own array
+        this.expensiveResource = new expensiveResource(); // one per bar
+      }
+    });
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -296,6 +315,23 @@ If your class contains arrays or other objects, they should be declared in the c
   });
 
 On the other hand, if you want an object or array to be static (shared between all instances of *my.classes.bar*), then you should do something like this:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("my.classes.bar", my.classes.foo, {
+      constructor: function() {
+        console.debug("this is bar object # " + this.statics.counter++);
+      },
+
+      statics: { counter: 0, somethingElse: "hello" }
+    });
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -327,6 +363,32 @@ Inheritance
 ===========
 
 A person can only do so much, so let's create an Employee class that extends the Person class. The second argument in the ``dojo.declare`` function is for extending classes.
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("Employee", Person, {
+      constructor: function(name, age, currentResidence, position){
+        // Remember, Person constructor is called automatically
+        // before this constructor.
+        this.password = "";
+        this.position = position;
+      },
+
+      login: function(){
+        if(this.password){
+          alert('you have successfully logged in');
+        }else{
+          alert('please ask the administrator for your password');
+        }
+      }
+    });
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -362,6 +424,34 @@ The Employee class passes the arguments down to the Person class (which uses onl
 Adding more arguments at the end of the argument list is a common idiom in Dojo. All arguments are passed to all constructors, but ancestor constructors take only first N arguments they know of ignoring the rest.
 
 Another popular idiom is to pass an object as one of the arguments using it is a property bag. Each class takes from the bag properties they can understand. Below is rewriting of our example to demonstrate this technique:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var Person2 = declare(null, {
+      constructor: function(args){
+        this.name = args.name;
+        this.age = args.age;
+        this.currentResidence = args.currentResidence;
+      }
+      // more methods
+    });
+  
+    var Employee2 = declare(Person2, {
+      constructor: function(args){
+        // Remember, Person constructor is called automatically
+        // before this constructor.
+        this.password = "";
+        this.position = args.position;
+      }
+      // more methods
+    });
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
