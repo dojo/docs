@@ -87,6 +87,25 @@ Here, we've declared a simple class named ``my.Thinger``, not based on anything,
 
 The `dojo.mixin <dojo/mixin>`_ call (in the constructor) then mixes the variable count into the properties of the instance, making it available as a member of the instance. We can supply defaults to use from within ``dojo.declare`` itself.
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("my.Thinger", null, {
+      count: 100,
+      constructor: function(args){
+        declare.safeMixin(this, args);
+      }
+    });
+    var thing1 = new my.Thinger();
+    var thing2 = new my.Thinger({ count:200 });
+    console.log(thing1.count, thing2.count);
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
