@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.declare (dojo/declare)
-===========================
+dojo.declare (dojo/_base/declare)
+=================================
 
 :Available: since V0.9
 
