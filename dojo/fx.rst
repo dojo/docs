@@ -54,7 +54,7 @@ Additionally, there is a collection of easing functions living in the  `dojo.fx.
 See also
 ========
 
-* `dojo._base.fx <dojo/_base/fx>`_
+* `dojo/_base/fx <dojo/_base/fx>`_
 
   Basic animation functions in Dojo Base
 
