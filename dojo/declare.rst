@@ -518,6 +518,39 @@ In static languages like Java, you must use typecasts to make an object "act lik
 
 Suppose, for example, you have a class called ``VanillaSoftServe``, and classes ``MandMs`` and ``CookieDough``.  Here's how to make a ``Blizzard``:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    declare("VanillaSoftServe", null, {
+      constructor: function() { console.debug ("mixing in Vanilla"); }
+    });
+
+    declare("MandMs", null, {
+      constructor: function() { console.debug("mixing in MandM's"); },
+      kind: "plain"
+    });
+
+    declare("CookieDough", null, {
+      chunkSize: "medium"
+    });
+
+    declare("Blizzard", [VanillaSoftServe, MandMs, CookieDough], {
+        constructor: function() {
+             console.debug("A blizzard with " +
+                 this.kind + " M and Ms and " +
+                 this.chunkSize +" chunks of cookie dough."
+             );
+        }
+    });
+    // make a Blizzard:
+    new Blizzard();
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -555,6 +588,25 @@ Inheritance chains
 ==================
 
 Given:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null);
+    var B = declare(null);
+    var C = declare(null);
+    var D = declare([A, B]);
+    var E = declare([B, C]);
+    var F = declare([A, C]);
+    var G = declare([D, E]);
+    var H = declare([D, F]);
+    var I = declare([D, E, F]);
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
@@ -623,6 +675,21 @@ Inheritance
 
 Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
 
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    var A = declare(null);
+    var B = declare(null);
+    var C = declare([A, B]);
+    var D = declare([B, A]);
+    var E = declare([C, D]);
+  });
+
+[Dojo < 1.7]
+
 .. code-block :: javascript
   :linenos:
 
@@ -635,6 +702,27 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
 As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ inheritance will be linearized correctly including the famous `Diamond problem <http://en.wikipedia.org/wiki/Diamond_problem>`_.
 
 In same rare cases it is possible to build a linear chain, which cannot reuse the base class:
+
+[Dojo 1.7 (AMD)]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(['dojo/_base/declare'], function(declare){
+    // the first batch
+    var A = declare(null);
+    var B = declare(A);
+    var C = declare(B);
+
+    // the second batch
+    var D = declare(null);
+    var E = declare([D, B]);
+
+    // the quirky case
+    var F = declare([C, E]);
+  });
+
+[Dojo < 1.7]
 
 .. code-block :: javascript
   :linenos:
