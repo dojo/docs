@@ -319,7 +319,7 @@ JSON Tools (dojo/_base/json)
 Objects / OO Tool (dojo/_base/declare)
 --------------------------------------
 
-* `dojo.declare <dojo/declare>`_
+* `dojo.declare (dojo/_base/declare) <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
 
