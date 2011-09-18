@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo._base.fx
+dojo/_base/fx
 =============
 
 :Status: Draft
