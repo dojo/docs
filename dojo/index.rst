@@ -252,18 +252,6 @@ Event (dojo/_base/event)
 
   Defines dojo DOM event API.
 
-
-Document Lifecycle - Onload (dojo/ready)
-----------------------------------------
-
-* `dojo.addOnLoad <dojo/addOnLoad>`_
-
-  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
-
-* `dojo.ready <dojo/ready>`_
-
-  **1.4+** Alias for `dojo.addOnLoad <dojo/addOnLoad>`_
-
 Document Lifecycle - Unload (dojo/_base/unload)
 -----------------------------------------------
 
@@ -786,6 +774,17 @@ Robot (dojo/robot & dojo/robotx)
 * `dojo/robotx <dojo/robotx>`_
 
   Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
+
+Document Lifecycle - Onload (dojo/ready)
+----------------------------------------
+
+* `dojo.addOnLoad <dojo/addOnLoad>`_
+
+  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
+
+* `dojo.ready <dojo/ready>`_
+
+  **1.4+** Alias for `dojo.addOnLoad <dojo/addOnLoad>`_
 
 ========
 See also
