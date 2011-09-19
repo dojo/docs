@@ -44,14 +44,6 @@ Declarative example1
 
 In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "hello2" respectively) are bound to the same reference location in the data model i.e. "hello" via the "ref" expression "model.hello". Both will have an initial value of "Hello World". Thereafter, a change in the value of either of the two textboxes will cause an update of the value in the data model at location "hello" which will in turn cause a matching update of the value in the other textbox.
 
-=================
-Available Methods
-=================
-
-* `dojox.mvc._DataBindingMixin.ref <dojox/mvc/_BindingMixin#ref>`_
-
-Bind the specified property of the target to the specified property of the source with the supplied transformation.
-
 
 ======================
 Parameters
@@ -60,7 +52,7 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type         |Default   |Description                                                                                             |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|type              |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
+|ref               |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
 |                  |StatefulModel|          |a location within an existing datamodel and may be a relative reference based on the parent / container |
 |                  |             |          |data binding (dot-separated string).                                                                    |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
@@ -70,19 +62,11 @@ Parameters
 Available Methods
 =================
 
-* `dojox.mvc.BindInputs <dojox/mvc/BindInputs>`_
+* `dojox.mvc._DataBindingMixin.isValid <dojox/mvc/_BindingMixin#isValid>`_
 
-Bind the values at the sources specified in the first argument array such that a composing function in the second argument is called when any of the values changes.
-
-
-======================
-Parameters
-======================
-
-+------------------+----------+-------------+--------------------------------------------------------------------------------------------------------+
-|Parameter         |Type      |Default      |Description                                                                                             |
-+------------------+----------+-------------+--------------------------------------------------------------------------------------------------------+
-|sourceBindArray   |Stateful[]|             |The array of dojo.Stateful objects to watch values changes on.                                          |
-+------------------+----------+-------------+--------------------------------------------------------------------------------------------------------+
-|func              |String    |             |The composing function that is called when any of the source values change.                             |
-+------------------+----------+-------------+--------------------------------------------------------------------------------------------------------+
+Returns the validity of the data binding. This function is meant to provide an API bridge to the dijit API. Validity of data-bound dijits is a function of multiple concerns: 
+* The validity of the value as ascertained by the data binding and constraints specified in the data model (usually semantic).
+* The validity of the value as ascertained by the widget itself based on widget constraints (usually syntactic).
+In order for dijits to function correctly in data-bound environments, it is imperative that their isValid() functions
+assess the model validity of the data binding via the this.inherited(arguments) hierarchy and declare any values
+failing the test as invalid.
