@@ -27,10 +27,8 @@ Features
 ========
 
 * `First-class client-side data model, StatefulModel  <dojox/mvc/StatefulModel>`_
-
-* First-class client-side data model
-* Simple data binding layer
-* Data binding mixin for dijits
+* `Simple data binding layer, Bind  <dojox/mvc/Bind>`_
+* `Data binding mixin for dijits, _DataBindingMixin  <dojox/mvc/_DataBindingMixin>`_
 * A number of new widgets and MVC containers, including:
 
   * Output- A data-bound output widget
