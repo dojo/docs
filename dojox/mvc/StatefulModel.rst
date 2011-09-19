@@ -24,11 +24,11 @@ Constructor Parameters
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 |Parameter   |Type     |Default             |Description                                                                                             |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
-|data        |Object   |                    |The plain JavaScript object / data structure used to initialize this model. At any point in time, it    | |            |         |                    |holds the lasted saved model state.  Either data or store property must be provided.                    |
-|            |         |                    |                                                                                                        |
+|data        |Object   |                    |The plain JavaScript object / data structure used to initialize this model. At any point in time, it    |
+|            |         |                    |holds the lasted saved model state.  Either data or store property must be provided.                    |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
-|store       |DataStore|                    | The data store from where to retrieve initial data for this model. An optional query may also be       | |            |         |                    | provided along with this store. Either data or store property must be provided.                        |
-|            |         |                    |                                                                                                        |
+|store       |DataStore|                    | The data store from where to retrieve initial data for this model. An optional query may also be       |
+|            |         |                    | provided along with this store. Either data or store property must be provided.                        |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 
 
