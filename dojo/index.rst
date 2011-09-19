@@ -735,6 +735,10 @@ Miscellaneous Core
 
   Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
 
+* `dojo.Stateful <dojo/Stateful>`_
+
+  Get and set named properties in conjunction with the ability to monitor these properties for changes
+
 * `dojo.cldr <dojo/cldr>`_
 
   A Common Locale Data Repository (CLDR) implementation
