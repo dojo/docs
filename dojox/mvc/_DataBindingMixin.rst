@@ -65,8 +65,8 @@ Available Methods
 * `dojox.mvc._DataBindingMixin.isValid <dojox/mvc/_BindingMixin#isValid>`_
 
 Returns the validity of the data binding. This function is meant to provide an API bridge to the dijit API. Validity of data-bound dijits is a function of multiple concerns: 
-* The validity of the value as ascertained by the data binding and constraints specified in the data model (usually semantic).
-* The validity of the value as ascertained by the widget itself based on widget constraints (usually syntactic).
+* 'The validity of the value as ascertained by the data binding and constraints specified in the data model (usually semantic).'
+* 'The validity of the value as ascertained by the widget itself based on widget constraints (usually syntactic).'
 In order for dijits to function correctly in data-bound environments, it is imperative that their isValid() functions
 assess the model validity of the data binding via the this.inherited(arguments) hierarchy and declare any values
 failing the test as invalid.
