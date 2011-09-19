@@ -373,10 +373,6 @@ Dojo Core
 
   A Common Locale Data Repository (CLDR) implementation
 
-* `dojo.cache <dojo/cache>`_
-
-  **1.4+** A mechanism to cache inline text.
-
 * `dojo.colors <dojo/colors>`_
 
   CSS color manipulation functions
@@ -388,56 +384,6 @@ Dojo Core
 * `dojo.currency <dojo/currency>`_
 
   Localized formatting and parsing routines for currency data
-
-* `dojo.data <dojo/data>`_
-
-  A uniform data access layer
-
-  * `dojo.data.api <dojo/data/api>`_
-
-  * `dojo.data.api.Read <dojo/data/api/Read>`_
-
-  * `dojo.data.api.Write <dojo/data/api/Write>`_
-
-  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
-
-  * `dojo.data.api.Notification <dojo/data/api/Notification>`_
-
-  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
-
-  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
-
-* `dojo.date <dojo/date>`_
-
-  Date manipulation utilities
-
-  * dojo.date.locale
-
-    Offers a library of localization methods to format and parse dates and times
-
-    * `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
-
-      Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
-
-    * `dojo.date.locale.format <dojo/date/locale/format>`_
-
-      Formats a Date object as a String, using locale-specific settings or custom patterns.
-
-    * `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
-
-      Used to get localized strings from dojo.cldr for day or month names.
-
-    * `dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`_
-
-      Determines if the date falls on a weekend, according to local custom.
-
-    * `dojo.date.locale.parse <dojo/date/locale/parse>`_
-
-      Converts a properly formatted string to a primitive Date object, using locale-specific settings.
-
-    * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
-
-      Builds the regular needed to parse a localized date
 
 * `dojo.DeferredList <dojo/DeferredList>`_
 
@@ -478,34 +424,6 @@ Dojo Core
 * `dojo.regexp <dojo/regexp>`_
 
   Regular expressions and Builder resources
-
-* `dojo.robot <dojo/robot>`_
-
-  experimental module for DOH users
-
-* `dojo.robotx <dojo/robotx>`_
-
-  experimental module for DOH users
-
-* `dojo.store <dojo/store>`_
-
-  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace `dojo.data <dojo/data>`_
-
-  * `dojo.store.Memory <dojo/store/Memory>`_
-
-    A data access interface for in memory storage
-
-  * `dojo.store.JsonRest <dojo/store/JsonRest>`_
-
-    A data access interface for a RESTful service providing JSON data
-
-  * `dojo.store.Observable <dojo/store/Observable>`_
-
-    A wrapper for data stores that are observable
-
-  * `dojo.store.Cache <dojo/store/Cache>`_
-
-    A wrapper for data stores that are cacheable
 
 * `dojo.string <dojo/string>`_
 
@@ -783,6 +701,89 @@ Browser's History (dojo/back & dojo/hash)
 * `dojo.hash <dojo/hash>`_ (dojo/hash)
  
   Normalized onhashchange module
+
+Data (dojo/data)
+----------------
+* `dojo.data <dojo/data>`_
+
+  A uniform data access layer
+
+  * `dojo.data.api <dojo/data/api>`_
+
+  * `dojo.data.api.Read <dojo/data/api/Read>`_
+
+  * `dojo.data.api.Write <dojo/data/api/Write>`_
+
+  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
+
+  * `dojo.data.api.Notification <dojo/data/api/Notification>`_
+
+  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+
+  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+
+Store (dojo/store)
+------------------
+* `dojo.store <dojo/store>`_
+
+  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace `dojo.data <dojo/data>`_
+
+  * `dojo.store.Memory <dojo/store/Memory>`_
+
+    A data access interface for in memory storage
+
+  * `dojo.store.JsonRest <dojo/store/JsonRest>`_
+
+    A data access interface for a RESTful service providing JSON data
+
+  * `dojo.store.Observable <dojo/store/Observable>`_
+
+    A wrapper for data stores that are observable
+
+  * `dojo.store.Cache <dojo/store/Cache>`_
+
+    A wrapper for data stores that are cacheable
+
+Cache (dojo/cache)
+------------------
+* `dojo.cache <dojo/cache>`_
+
+  **1.4+** A mechanism to cache inline text.
+
+Date (dojo/date)
+----------------
+* `dojo.date <dojo/date>`_
+
+  Date manipulation utilities
+
+  * dojo.date.locale
+
+    Offers a library of localization methods to format and parse dates and times
+
+    * `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
+
+      Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
+
+    * `dojo.date.locale.format <dojo/date/locale/format>`_
+
+      Formats a Date object as a String, using locale-specific settings or custom patterns.
+
+    * `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
+
+      Used to get localized strings from dojo.cldr for day or month names.
+
+    * `dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`_
+
+      Determines if the date falls on a weekend, according to local custom.
+
+    * `dojo.date.locale.parse <dojo/date/locale/parse>`_
+
+      Converts a properly formatted string to a primitive Date object, using locale-specific settings.
+
+    * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
+
+      Builds the regular needed to parse a localized date
+
 
 ========
 See also
