@@ -31,6 +31,35 @@ All `XHR` functions follow the same pattern in the `property-bag` configuration 
 
 Example usage:
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/xhr"], function(xhr){      
+      // post some data, ignore the response:
+      xhr.xhrPost({ 
+          form: "someFormId", // read the url: from the action="" of the <form>
+          timeout: 3000, // give up after 3 seconds
+          content: { part:"one", another:"part" } // creates ?part=one&another=part with GET, Sent as POST data when using xhrPost
+      });
+
+      // get some data, convert to JSON
+      xhr.xhrGet({
+          url:"data.json", 
+          handleAs:"json",
+          load: function(data){
+              for(var i in data){
+                 console.log("key", i, "value", data[i]);
+              }  
+          }
+      });
+  });
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
   :linenos:
 
@@ -63,6 +92,40 @@ There are three methods one can attach to the XHR Options object to determine wh
 * load - executed when a successful Ajax call is complete. Is passed the data and an object of the XHR properties.
 * error - executed when an Ajax call times out, or otherwise fails. Is passed the error and an object of the XHR properties.
 * handle - combination of load and error callbacks, fired when either of the two conditions are met. In the success case, behaves just like load:, and in the failure case like error:
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/lang","dojo/_base/xhr"], function(lang, xhr){
+      xhr.xhrPost({
+         form:"someForm",
+         load: function(data, ioArgs){
+             // ioArgs is loaded with XHR information, but not useful in simple cases
+             // data is the response from the form's action="" url
+         },
+         error: function(err, ioArgs){
+             // again, ioArgs is useful, but not in simple cases
+             console.error(err); // display the error
+         }
+      });
+      // or like this:
+      xhr.xhrPost({
+          form:"someForm",
+          handle: function(dataOrError, ioArgs){
+             if(lang.isString(dataOrError)){
+                // handleAs defaults to text, so look for a string here
+             }else{
+                // this must be an error object
+             }
+          }
+      });
+  });
+
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
  :linenos: 
