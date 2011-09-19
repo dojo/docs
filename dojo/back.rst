@@ -27,18 +27,23 @@ To use dojo.back:
 
       // dojo 1.7 (AMD)
       require(["dojo/back"], function(back){
-          back.setInitialState(state);
+          
       });
 
       // dojo < 1.7
       dojo.require("dojo.back");
-      dojo.back.setInitialState(state);
    ..
 
 2. Register the initial state of the page by calling:
 
    .. code-block :: javascript
 
+      // dojo 1.7 (AMD)
+      require(["dojo/back"], function(back){
+          back.setInitialState(state);
+      });
+
+      // dojo < 1.7
        dojo.back.setInitialState(state);
    ..
 
@@ -64,7 +69,15 @@ To use dojo.back:
    .. code-block :: javascript
 
        <body>
-         <script type="text/javascript">dojo.back.init();</script>
+         <script type="text/javascript">
+              // dojo 1.7 (AMD)
+              require(["dojo/back"], function(back){
+                   back.init();
+              });
+
+             // dojo < 1.7
+             dojo.back.init();
+         </script>
          (rest of the body here)
        </body>
 
@@ -79,8 +92,13 @@ To register a state object that represents the result of a user action, use the 
 
 .. code-block :: javascript
 
-  dojo.back.addToHistory(state);
+  // dojo 1.7 (AMD)
+  require(["dojo/back"], function(back){
+     back.addToHistory(state);
+  });
 
+  // dojo < 1.7
+  dojo.back.addToHistory(state);
 
 Change the URL in the location bar
 ----------------------------------
