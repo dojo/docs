@@ -48,7 +48,7 @@ In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "
 Available Methods
 =================
 
-* `dojox.mvc.Bind <dojox/mvc/Bind>`_
+* `dojox.mvc._DataBindingMixin.ref <dojox/mvc/_BindingMixin#ref>`_
 
 Bind the specified property of the target to the specified property of the source with the supplied transformation.
 
@@ -57,22 +57,13 @@ Bind the specified property of the target to the specified property of the sourc
 Parameters
 ======================
 
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|Parameter         |Type     |Default       |Description                                                                                             |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|source            |Stateful |              |The source dojo.Stateful object for the bind.                                                           |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|sourceProp        |String   |              |The name of the source's property whose change triggers the bind.                                       |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|target            |Stateful |              |The target dojo.Stateful object for the bind whose property will be updated with the result of the      |
-|                  |         |              |function.                                                                                               |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|targetProp        |String   |              |The name of the target's property to be updated with the result of the function.                        |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|func              |Function |              |The optional calculation to be performed to obtain the target property value.                           |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
-|bindOnlyIfUnequal |Function | false        |Whether the bind notification should happen only if the old and new values are unequal (optional).      |
-+------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
++------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
+|Parameter         |Type         |Default   |Description                                                                                             |
++------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
+|type              |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
+|                  |StatefulModel|          |a location within an existing datamodel and may be a relative reference based on the parent / container |
+|                  |             |          |data binding (dot-separated string).                                                                    |
++------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 =================
