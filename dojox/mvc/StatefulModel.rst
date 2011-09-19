@@ -53,6 +53,11 @@ Commits this data model:
 Saves the current state such that a subsequent reset will not undo any prior changes.
 Persists client-side changes to the data store, if a store has been supplied as a parameter or at instantiation.
 
+* `dojox.mvc.StatefulModel.toPlainObject <dojox/mvc/StatefulModel#toPlainObject>`_
+
+Produces and returns a plain JavaScript object representation of the data
+currently within this data model.
+
 
 =====
 Usage
