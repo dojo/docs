@@ -267,8 +267,8 @@ Document Lifecycle - Unload (dojo/_base/unload)
 
   Signal fired by impending window destruction
 
-Ajax / IO (dojo/_base/xhr)
---------------------------
+Ajax / XHR (dojo/_base/xhr)
+---------------------------
 
 * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
 
@@ -477,16 +477,6 @@ Dojo Core
 
   Utility classes to enable loading of resources for internationalization
 
-* Additional AJAX I/O transports (dojo.io)
-
-  * `dojo.io.iframe <dojo/io/iframe>`_
-
-    Sends an AJAX I/O call using an IFrame
-
-  * `dojo.io.script <dojo/io/script>`_
-
-    Sends a JSONP request using a script tag
-
 * `dojo.jaxer <dojo/jaxer>`_
 
 * `dojo.NodeList-data <dojo/NodeList-data>`_
@@ -528,22 +518,6 @@ Dojo Core
 * `dojo.robotx <dojo/robotx>`_
 
   experimental module for DOH users
-
-* `dojo.rpc <dojo/rpc>`_
-
-  Communicate via Remote Procedure Calls (RPC) with Backend Servers
-
-  * `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
-
-    Generic JSONP service
-
-  * `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
-
-    JSON RPC service
-
-  * `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
-
-    RPC service class
 
 * `dojo.store <dojo/store>`_
 
@@ -761,8 +735,6 @@ IO-Query (dojo/io-query)
 
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
   
-  
-
 Robot (dojo/robot & dojo/robotx)
 --------------------------------
 
@@ -785,6 +757,36 @@ Document Lifecycle - Onload (dojo/ready)
 * `dojo.ready <dojo/ready>`_
 
   **1.4+** Alias for `dojo.addOnLoad <dojo/addOnLoad>`_
+
+AJAX I/O transports (dojo/io/\*)
+--------------------------------
+
+* `dojo.io.iframe <dojo/io/iframe>`_
+
+  Sends an AJAX I/O call using an IFrame
+
+* `dojo.io.script <dojo/io/script>`_
+
+  Sends a JSONP request using a script tag
+
+AJAX RPC transports (dojo/rpc/\*)
+---------------------------------
+
+* `dojo.rpc <dojo/rpc>`_
+
+  Communicate via Remote Procedure Calls (RPC) with Backend Servers
+
+* `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
+
+  Generic JSONP service
+
+* `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
+
+  JSON RPC service
+
+* `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
+
+  RPC service class
 
 ========
 See also
