@@ -4,7 +4,6 @@
 dojo/robot
 =============
 
-:Available: since V1.7
 
 .. contents::
     :depth: 2
