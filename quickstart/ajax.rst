@@ -39,14 +39,14 @@ Dojo 1.7 (AMD)
 
   require(["dojo/_base/xhr"], function(xhr){      
       // post some data, ignore the response:
-      xhr.xhrPost({ 
+      xhr.post({ 
           form: "someFormId", // read the url: from the action="" of the <form>
           timeout: 3000, // give up after 3 seconds
           content: { part:"one", another:"part" } // creates ?part=one&another=part with GET, Sent as POST data when using xhrPost
       });
 
       // get some data, convert to JSON
-      xhr.xhrGet({
+      xhr.get({
           url:"data.json", 
           handleAs:"json",
           load: function(data){
@@ -100,7 +100,7 @@ Dojo 1.7 (AMD)
   :linenos:
 
   require(["dojo/_base/lang","dojo/_base/xhr"], function(lang, xhr){
-      xhr.xhrPost({
+      xhr.post({
          form:"someForm",
          load: function(data, ioArgs){
              // ioArgs is loaded with XHR information, but not useful in simple cases
@@ -112,7 +112,7 @@ Dojo 1.7 (AMD)
          }
       });
       // or like this:
-      xhr.xhrPost({
+      xhr.post({
           form:"someForm",
           handle: function(dataOrError, ioArgs){
              if(lang.isString(dataOrError)){
