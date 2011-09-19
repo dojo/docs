@@ -63,8 +63,10 @@ The created data model has the following properties:
 * It enables dijits or custom components in the view to "bind" to
 data within the model. A bind creates a bi-directional update
 mechanism between the bound view and the underlying data:
+
 * The data model is "live" data i.e. it maintains any updates
 driven by the view on the underlying data.
+
 * The data model issues updates to portions of the view if the
 data they bind to is updated in the model. For example, if two
 dijits are bound to the same part of a data model, updating the
