@@ -42,6 +42,7 @@ Declarative example1
 	<input id="hello2" data-dojo-type="dijit.form.TextBox"
 		data-dojo-props="ref: model.hello"></input>
 
+In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "hello2" respectively) are bound to the same reference location in the data model i.e. "hello" via the "ref" expression "model.hello". Both will have an initial value of "Hello World". Thereafter, a change in the value of either of the two textboxes will cause an update of the value in the data model at location "hello" which will in turn cause a matching update of the value in the other textbox.
 
 =================
 Available Methods
