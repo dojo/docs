@@ -31,6 +31,18 @@ Constructor Parameters
 |            |         |                    | provided along with this store. Either data or store property must be provided.                        |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 
+=================
+Available Methods
+=================
+
+* `dojox.mvc.StatefulModel.valid <dojox/mvc/StatefulModel#valid>`_
+
+Whether this model deems the associated data to be valid.
+
+* `dojox.mvc.StatefulModel.value <dojox/mvc/StatefulModel#valid>`_
+
+The associated value (if this is a leaf node). The value of intermediate nodes in the model is not defined.
+
 
 =====
 Usage
