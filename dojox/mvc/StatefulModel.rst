@@ -35,15 +35,15 @@ Constructor Parameters
 Available Methods
 =================
 
-* `dojox.mvc.StatefulModel.valid <dojox/mvc/StatefulModel#valid>`_
+* `StatefulModel.valid <dojox/mvc/StatefulModel#valid>`_
 
 Whether this model deems the associated data to be valid.
 
-* `dojox.mvc.StatefulModel.value <dojox/mvc/StatefulModel#valid>`_
+* `StatefulModel.value <dojox/mvc/StatefulModel#value>`_
 
 The associated value (if this is a leaf node). The value of intermediate nodes in the model is not defined.
 
-* `dojox.mvc.StatefulModel.reset <dojox/mvc/StatefulModel#reset>`_
+* `StatefulModel.reset <dojox/mvc/StatefulModel#reset>`_
 
 Resets this data model values to its original state. Structural changes to the data model (such as adds or removes)are not restored.
 
@@ -53,10 +53,27 @@ Commits this data model:
 Saves the current state such that a subsequent reset will not undo any prior changes.
 Persists client-side changes to the data store, if a store has been supplied as a parameter or at instantiation.
 
-* `dojox.mvc.StatefulModel.toPlainObject <dojox/mvc/StatefulModel#toPlainObject>`_
+* `StatefulModel.toPlainObject <dojox/mvc/StatefulModel#toPlainObject>`_
 
 Produces and returns a plain JavaScript object representation of the data
 currently within this data model.
+
+* `StatefulModel.add <dojox/mvc/StatefulModel#add>`_
+
+Adds the dojo.Stateful tree represented by the given dojox.mvc.StatefulModel at the given property name. In case of arrays, the property names are indices passed as Strings. An addition of such a dojo.Stateful node results in right-shifting any trailing sibling nodes.
+
+* `StatefulModel.remove <dojox/mvc/StatefulModel#remove>`_
+
+Removes the dojo.Stateful tree at the given property name. In case of arrays, the property names are indices passed as Strings. A removal of such a dojo.Stateful node results in left-shifting any trailing sibling nodes.
+
+* `StatefulModel.valueOf <dojox/mvc/StatefulModel#valueOf>`_
+
+Returns the value representation of the data currently within this data model
+
+* `StatefulModel.toString <dojox/mvc/StatefulModel#toString>`_
+
+Returns the string representation of the data currently within this data model.
+
 
 
 =====
