@@ -797,6 +797,17 @@ Miscellaneous Core
 
   String utilities for Dojo
 
+* `dojo.mouse <dojo/mouse>`_
+
+  Provides extension events for hovering and mouse button utility functions
+
+* `dojo.on <dojo/on>`_
+
+  Provides normalized event listening and event dispatching functionality
+
+* `dojo.require <dojo/require>`_
+
+  Loads a Dojo module, by name
 
 ========
 See also
