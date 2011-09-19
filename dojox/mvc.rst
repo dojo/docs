@@ -26,7 +26,9 @@ We begin by introducing a first-class client-side data model based on dojo.State
 Features
 ========
 
-* First-class client-side data model <dojox/mvc/StatefulModel>`_
+* `First-class client-side data model, StatefulModel  <dojox/mvc/StatefulModel>`_
+
+* First-class client-side data model
 * Simple data binding layer
 * Data binding mixin for dijits
 * A number of new widgets and MVC containers, including:
