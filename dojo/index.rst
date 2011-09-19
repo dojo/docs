@@ -59,8 +59,6 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 
 Language Utilities (dojo/_base/lang)
 ------------------------------------
-
-
 * `dojo.hitch <dojo/hitch>`_
 
   Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
@@ -247,7 +245,6 @@ NodeList (dojo/_base/NodeList)
 
 Event (dojo/_base/event)
 ------------------------
-
 * `dojo/_base/event <dojo/_base/event>`_
 
   Defines dojo DOM event API.
@@ -368,10 +365,6 @@ Dojo Core
 
   A registry to make contextual calling/searching easier
 
-* `dojo.back <dojo/back>`_
-
-  Browser history management resources (Back button functionality)
-
 * `dojo.behavior <dojo/behavior>`_
 
   Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
@@ -464,11 +457,6 @@ Dojo Core
 
   Google Gears
 
-* `dojo.hash <dojo/hash>`_
- 
-  Normalized onhashchange module
-
-
 * `dojo.html <dojo/html>`_
 
   Inserting contents in HTML nodes
@@ -478,26 +466,6 @@ Dojo Core
   Utility classes to enable loading of resources for internationalization
 
 * `dojo.jaxer <dojo/jaxer>`_
-
-* `dojo.NodeList-data <dojo/NodeList-data>`_
-
-  Adds a .data() and .removeData() API to `dojo.query <dojo/query>`_ operations
-
-* `dojo.NodeList-fx <dojo/NodeList-fx>`_
-
-  Adds dojo.fx animation support to dojo.query()
-
-* `dojo.NodeList-html <dojo/NodeList-html>`_
-
-  Adds a chainable html method to dojo.query()
-
-* `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
-
-  **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML.
-
-* `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
-
-  **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
 
 * `dojo.number <dojo/number>`_
 
@@ -545,20 +513,7 @@ Dojo Core
 
 DOM (dojo/dom*)
 ---------------
-
 from 1.7 + dojo/dom module collects following part of dojo APIs
-
-* `dojo.query <dojo/query>`_
-
-  The swiss army knife of DOM node manipulation in Dojo.
-
-* `dojo.NodeList <dojo/NodeList>`_
-
-  A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
-
-* `NodeList.instantiate <dojo/NodeList#instantiate>`_
-
-  Create classes out of each node in the list
 
 * `dojo.byId <dojo/byId>`_
 
@@ -726,7 +681,6 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
     
 IO-Query (dojo/io-query)
 ------------------------
-
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
   Takes a name/value mapping object and returns a string representing a URL-encoded version of that object.
@@ -737,7 +691,6 @@ IO-Query (dojo/io-query)
   
 Robot (dojo/robot & dojo/robotx)
 --------------------------------
-
 * `dojo/robot <dojo/robot>`_
 
   Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of their
@@ -749,7 +702,6 @@ Robot (dojo/robot & dojo/robotx)
 
 Document Lifecycle - Onload (dojo/ready)
 ----------------------------------------
-
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
@@ -760,7 +712,6 @@ Document Lifecycle - Onload (dojo/ready)
 
 AJAX I/O transports (dojo/io/\*)
 --------------------------------
-
 * `dojo.io.iframe <dojo/io/iframe>`_
 
   Sends an AJAX I/O call using an IFrame
@@ -771,7 +722,6 @@ AJAX I/O transports (dojo/io/\*)
 
 AJAX RPC transports (dojo/rpc/\*)
 ---------------------------------
-
 * `dojo.rpc <dojo/rpc>`_
 
   Communicate via Remote Procedure Calls (RPC) with Backend Servers
@@ -787,6 +737,52 @@ AJAX RPC transports (dojo/rpc/\*)
 * `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
 
   RPC service class
+
+Query (dojo/query)
+------------------
+* `dojo.query <dojo/query>`_
+
+  The swiss army knife of DOM node manipulation in Dojo.
+
+NodeList (dojo/NodeList-\*)
+---------------------------
+* `dojo.NodeList <dojo/NodeList>`_
+
+  A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
+
+* `NodeList.instantiate <dojo/NodeList#instantiate>`_
+
+  Create classes out of each node in the list
+
+* `dojo.NodeList-data <dojo/NodeList-data>`_
+
+  Adds a .data() and .removeData() API to `dojo.query <dojo/query>`_ operations
+
+* `dojo.NodeList-fx <dojo/NodeList-fx>`_
+
+  Adds dojo.fx animation support to dojo.query()
+
+* `dojo.NodeList-html <dojo/NodeList-html>`_
+
+  Adds a chainable html method to dojo.query()
+
+* `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
+
+  **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML.
+
+* `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
+
+  **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
+
+Browser's History (dojo/back & dojo/hash)
+-----------------------------------------
+* `dojo.back <dojo/back>`_ (dojo/back)
+
+  Browser history management resources (Back button functionality)
+
+* `dojo.hash <dojo/hash>`_ (dojo/hash)
+ 
+  Normalized onhashchange module
 
 ========
 See also
