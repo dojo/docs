@@ -13,12 +13,18 @@ dojox.mvc.Bind
 .. contents::
    :depth: 2
 
+
+=================
+Available Methods
+=================
+
+* `dojox.mvc.Bind <dojox/mvc/Bind>`_
+
 Bind the specified property of the target to the specified property of the source with the supplied transformation.
 
 
-
 ======================
-Constructor Parameters
+Parameters
 ======================
 
 +------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
