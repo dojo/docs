@@ -716,6 +716,14 @@ Date (dojo/date)
 
       Builds the regular needed to parse a localized date
 
+DND (dojo/dnd)
+--------------
+* `dojo.dnd <dojo/dnd>`_
+
+  Drag and Drop
+
+  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+
 Miscellaneous Core
 ------------------
 
@@ -746,12 +754,6 @@ Miscellaneous Core
 * `dojo.DeferredList <dojo/DeferredList>`_
 
   Event handling for a group of Deferred objects
-
-* `dojo.dnd <dojo/dnd>`_
-
-  Drag and Drop
-
-  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
 
 * `dojo.fx <dojo/fx>`_
 
