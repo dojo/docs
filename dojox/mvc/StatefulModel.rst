@@ -103,6 +103,7 @@ will generate the dojo.Stateful tree as shown:
 		 // node is accessed using the expression "model.prop1", the leaf2 node is accessed using
 		 // the expression "model.prop2.leaf2" and so on.
 
+
 - Each of the dojo.Stateful nodes in the model may store data as well
 as associated "meta-data", which includes things such as whether
 the data is required or readOnly etc. This meta-data differs from
@@ -150,6 +151,7 @@ widget examples:
 		 <input id="helloInput" dojoType="dijit.form.TextBox"
 		 		 ref="model.hello">
 
+
 or
 
 .. code-block :: javascript
@@ -167,6 +169,7 @@ or
 
 		 <input id="helloInput" data-dojo-type="dijit.form.TextBox"
 		 		 data-dojo-props="ref: 'model.hello'">
+
 
 Such data binding awareness for dijits is added by extending the
 dijit._WidgetBase class to include data binding capabilities
