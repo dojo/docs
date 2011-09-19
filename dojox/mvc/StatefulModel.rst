@@ -60,18 +60,18 @@ on the nature of the store.
 
 The created data model has the following properties:
 
-- It enables dijits or custom components in the view to "bind" to
+* It enables dijits or custom components in the view to "bind" to
 data within the model. A bind creates a bi-directional update
 mechanism between the bound view and the underlying data:
-- The data model is "live" data i.e. it maintains any updates
+* The data model is "live" data i.e. it maintains any updates
 driven by the view on the underlying data.
-- The data model issues updates to portions of the view if the
+* The data model issues updates to portions of the view if the
 data they bind to is updated in the model. For example, if two
 dijits are bound to the same part of a data model, updating the
 value of one in the view will cause the data model to issue an
 update to the other containing the new value.
 
-- The data model internally creates a tree of dojo.Stateful
+* The data model internally creates a tree of dojo.Stateful
 objects that matches the input, which is effectively a plain
 JavaScript object i.e. "pure data". This tree allows dijits or
 other view components to bind to any node within the data model.
@@ -104,7 +104,7 @@ will generate the dojo.Stateful tree as shown:
 		 // the expression "model.prop2.leaf2" and so on.
 
 
-- Each of the dojo.Stateful nodes in the model may store data as well
+* Each of the dojo.Stateful nodes in the model may store data as well
 as associated "meta-data", which includes things such as whether
 the data is required or readOnly etc. This meta-data differs from
 that maintained by, for example, an individual dijit in that this
@@ -112,7 +112,7 @@ is maintained by the datamodel and may therefore be affected by
 datamodel-level constraints that span multiple dijits or even
 additional criteria such as server-side computations.
 
-- When the model is backed by a dojo.store or dojo.data query, the
+* When the model is backed by a dojo.store or dojo.data query, the
 client-side updates can be persisted once the client is ready to
 "submit" the changes (which may include both value changes or
 structural changes - adds/deletes). The datamodel allows control
