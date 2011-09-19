@@ -739,6 +739,10 @@ Miscellaneous Core
 
   Get and set named properties in conjunction with the ability to monitor these properties for changes
 
+* `dojo.aspect <dojo/aspect>`_
+
+  Provides aspect oriented programming facilities to attach additional functionality to existing methods
+
 * `dojo.cldr <dojo/cldr>`_
 
   A Common Locale Data Repository (CLDR) implementation
