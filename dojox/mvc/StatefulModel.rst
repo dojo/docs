@@ -43,6 +43,16 @@ Whether this model deems the associated data to be valid.
 
 The associated value (if this is a leaf node). The value of intermediate nodes in the model is not defined.
 
+* `dojox.mvc.StatefulModel.reset <dojox/mvc/StatefulModel#reset>`_
+
+Resets this data model values to its original state. Structural changes to the data model (such as adds or removes)are not restored.
+
+* `dojox.mvc.StatefulModel.commit <dojox/mvc/StatefulModel#commit>`_
+
+Commits this data model:
+Saves the current state such that a subsequent reset will not undo any prior changes.
+Persists client-side changes to the data store, if a store has been supplied as a parameter or at instantiation.
+
 
 =====
 Usage
