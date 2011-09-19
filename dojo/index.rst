@@ -361,74 +361,6 @@ Miscellaneous Base
 Dojo Core
 =========
 
-* `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
-
-  A registry to make contextual calling/searching easier
-
-* `dojo.behavior <dojo/behavior>`_
-
-  Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
-
-* `dojo.cldr <dojo/cldr>`_
-
-  A Common Locale Data Repository (CLDR) implementation
-
-* `dojo.colors <dojo/colors>`_
-
-  CSS color manipulation functions
-
-* `dojo.cookie <dojo/cookie>`_
-
-  Simple HTTP cookie manipulation
-
-* `dojo.currency <dojo/currency>`_
-
-  Localized formatting and parsing routines for currency data
-
-* `dojo.DeferredList <dojo/DeferredList>`_
-
-  Event handling for a group of Deferred objects
-
-* `dojo.dnd <dojo/dnd>`_
-
-  Drag and Drop
-
-  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
-
-* `dojo.fx <dojo/fx>`_
-
-  Effects library on top of Base animations
-
-* `dojo.gears <dojo/gears>`_
-
-  Google Gears
-
-* `dojo.html <dojo/html>`_
-
-  Inserting contents in HTML nodes
-
-* `dojo.i18n <dojo/i18n>`_
-
-  Utility classes to enable loading of resources for internationalization
-
-* `dojo.jaxer <dojo/jaxer>`_
-
-* `dojo.number <dojo/number>`_
-
-  Localized formatting and parsing methods for number data
-
-* `dojo.parser <dojo/parser>`_
-
-  The Dom/Widget parsing package
-
-* `dojo.regexp <dojo/regexp>`_
-
-  Regular expressions and Builder resources
-
-* `dojo.string <dojo/string>`_
-
-  String utilities for Dojo
-
 DOM (dojo/dom*)
 ---------------
 from 1.7 + dojo/dom module collects following part of dojo APIs
@@ -783,6 +715,77 @@ Date (dojo/date)
     * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
 
       Builds the regular needed to parse a localized date
+
+Miscellaneous Core
+------------------
+
+* `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
+
+  A registry to make contextual calling/searching easier
+
+* `dojo.behavior <dojo/behavior>`_
+
+  Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
+
+* `dojo.cldr <dojo/cldr>`_
+
+  A Common Locale Data Repository (CLDR) implementation
+
+* `dojo.colors <dojo/colors>`_
+
+  CSS color manipulation functions
+
+* `dojo.cookie <dojo/cookie>`_
+
+  Simple HTTP cookie manipulation
+
+* `dojo.currency <dojo/currency>`_
+
+  Localized formatting and parsing routines for currency data
+
+* `dojo.DeferredList <dojo/DeferredList>`_
+
+  Event handling for a group of Deferred objects
+
+* `dojo.dnd <dojo/dnd>`_
+
+  Drag and Drop
+
+  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+
+* `dojo.fx <dojo/fx>`_
+
+  Effects library on top of Base animations
+
+* `dojo.gears <dojo/gears>`_
+
+  Google Gears
+
+* `dojo.html <dojo/html>`_
+
+  Inserting contents in HTML nodes
+
+* `dojo.i18n <dojo/i18n>`_
+
+  Utility classes to enable loading of resources for internationalization
+
+* `dojo.jaxer <dojo/jaxer>`_
+
+* `dojo.number <dojo/number>`_
+
+  Localized formatting and parsing methods for number data
+
+* `dojo.parser <dojo/parser>`_
+
+  The Dom/Widget parsing package
+
+* `dojo.regexp <dojo/regexp>`_
+
+  Regular expressions and Builder resources
+
+* `dojo.string <dojo/string>`_
+
+  String utilities for Dojo
 
 
 ========
