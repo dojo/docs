@@ -5,7 +5,7 @@ dojox.mvc
 
 :Status: Draft
 :Version: 0.1
-:Authors: Rahul Akolkar
+:Authors: Rahul Akolkar, Ed Chatelain
 :Developers: Rahul Akolkar, Ed Chatelain
 :Available: since V1.7
 
