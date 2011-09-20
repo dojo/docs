@@ -1,4 +1,4 @@
-mat dojo_rst
+#format dojo_rst
 
 dojox.mvc.Generate
 ===================
@@ -15,10 +15,26 @@ dojox.mvc.Generate
 
 A container that generates a view based on the data model its bound to. A generate introspects its data binding and creates a view contained in it that allows displaying the bound data. Child dijits or custom view components inside it inherit their parent data binding context from it.
 
-
 ======================
 Parameters
 ======================
+
++------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
+|Parameter         |Type         |Default                          |Description                                                                      |
++------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
+|widgetMapping     |Object       |{"String" : "dijit.form.TextBox"}|The mapping of types to a widget class.                                          |
+|                  |             |                                 |ie: {'String' : 'dojox.mobile.TextBox'}                                          |
++------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
+|classMapping      |Object       |{"Label" : "generate-label-cell",|The mapping of class to use for each node.                                       |
+|                  |             |"String" : "generate-dijit-cell",|                                                                                 |
+|                  |             |"Heading" : "generate-heading",  |                                                                                 |
+|                  |             |"Row" : "row"}                   |                                                                                 |
++------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
+|idNameMapping     |Object       |{"String" : "textbox_t"}         |The mapping of id and name to use. Set idNameMapping to override this. A count   |
+|                  |             |"String" : "generate-dijit-cell",|will be added to the id and name.                                                |
+|                  |             |"Heading" : "generate-heading",  |                                                                                 |
+|                  |             |"Row" : "row"}                   |                                                                                 |
++------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
 
 
 ========
