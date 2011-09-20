@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.mvc.Repeat
-===============
+=================
 
 :Status: Draft
 :Version: 0.1
@@ -73,17 +73,18 @@ Declarative example
 		</script>
 
 
-					<!--
-						The repeat container denotes a templated UI that operates over a collection
-						of data records.
-						The UI can be customized for each iteration using properties such as
-						${this.index} for the iteration index.
-					-->
-					<div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
-						<div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
-							<label class="cell" for="nameInput${this.index}">Name:</label>
-							<input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}" data-dojo-props="ref: 'First'"></input>
-						</div>
+				<!--
+					The repeat container denotes a templated UI that operates over a collection
+					of data records.
+					The UI can be customized for each iteration using properties such as
+					${this.index} for the iteration index.
+				-->
+				<div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
+					<div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
+						<label class="cell" for="nameInput${this.index}">Name:</label>							
+						<input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}" 
+											data-dojo-props="ref: 'First'"></input>
 					</div>
+				</div>
 
 In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
