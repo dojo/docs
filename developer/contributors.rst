@@ -650,6 +650,7 @@ A list of corporations or organizations with a CLA on file:
 * SUPSI
 * Suretec Systems, Ltd. 
 * TeamPatent, LLC: Rocky Kahn, Heng Liu
+* The Digital Conglomerate Magazine, Inc.
 * The Frontier Group
 * Tietoteema Oy 
 * University of Toronto 
