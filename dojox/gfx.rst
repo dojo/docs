@@ -714,11 +714,11 @@ Implementation notes
 
 Shape-specific methods are used to hide the complexity of event handling for non-HTML DOM based renderers (e.g., Silverlight).
 
-The 1.7 release introduces a new experimental canvas renderer with input event support. It is enabled by default when the gfxRenderer is set to ‘canvas’. In case you don’t want to use this new implementation but the legacy one, set the ‘canvasEvent’ property to false in the dojo config. For example:
+The 1.7 release introduces a new experimental canvas renderer with input event support. It is enabled by default when the gfxRenderer is set to ‘canvas’. In case you don’t want to use this new implementation but the legacy one, set the ‘canvasEvents’ property to false in the dojo config. For example:
 
   .. code-block :: javascript
 
-    dojoConfig: { canvasEvent:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
+    dojoConfig: { canvasEvents:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
 
 The new canvas renderer supports the following events: oncontextmenu, onclick, ondblclick, onmouseenter, onmouseleave, onmouseout, onmousedown, touchstart, mouseup, touchend, onmouseover, onmousemove, touchmove, keydown, keyup.
 
