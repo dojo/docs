@@ -42,6 +42,6 @@ All other browsers: (0.9).toFixed(1) yields "1.0"
 See Also
 ========
 
- * dojo.currency
+ * `dojo.currency <dojo/currency>`_
 
 TODO: add references to CLDR, setting locale in Dojo, binary floating point issues
