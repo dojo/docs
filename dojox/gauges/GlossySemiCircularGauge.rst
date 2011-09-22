@@ -13,6 +13,7 @@ dojox.gauges.GlossySemiCircularGauge
 
 A glossy semi circular gauge, used to display numerical data.
 
+.. image:: GlossySemiCircularGauge.png
 
 ============
 Introduction
