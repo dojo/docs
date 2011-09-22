@@ -110,7 +110,7 @@ In AMD syntax:
       });
   
 
-Take a look at the source and you will see that it is simple to create charts.
+As you can see from the source it is simple to create charts.
 
 As part of configuring any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
