@@ -24,7 +24,7 @@ Constructor Parameters
 |transition    |String    |"slide"  |The default animated transition effect for child items. If a child item does not have its own transition   |
 |              |          |         |parameter specified, this value is used as its animated transition type. You can choose from the standard  |
 |              |          |         |transition types, "slide", "fade", "flip", or from the extended transition types, "cover", "coverv",       |
-|              |          |         |"dissolve", "flip2", "reveal", "revealv", "scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut".   |
+|              |          |         |"dissolve", "reveal", "revealv", "scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut".            |
 |              |          |         |If "none" is specified, transition occurs immediately without animation.                                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |iconBase      |String    |""       |The default icon path for child items. If a child item does not have its own icon parameter specified,     |
