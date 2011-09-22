@@ -6,7 +6,7 @@ dojox.gauges.GlossyHorizontalGauge
 :Status: Draft
 :Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
-:Available: since V?
+:Available: since 1.7
 
 .. contents::
    :depth: 2
