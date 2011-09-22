@@ -14,6 +14,8 @@ dojox.gauges.GlossyCircularGauge
 A glossy circular gauge with a variety of indicators, used to display numerical data.
 
 
+.. image:: GlossyCircularGauge.png
+
 ============
 Introduction
 ============
