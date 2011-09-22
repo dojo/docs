@@ -13,6 +13,7 @@ dojox.gauges.GlossyHorizontalGauge
 
 A glossy horizontal gauge with a variety of indicators, used to display numerical data.
 
+.. image:: GlossyHorizontalGauge.png
 
 ============
 Introduction
