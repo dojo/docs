@@ -6,7 +6,7 @@ dojox.gauges.GlossyCircularGauge
 :Status: Draft
 :Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
-:Available: since V?
+:Available: since 1.7
 
 .. contents::
    :depth: 2
@@ -83,7 +83,7 @@ Here are the other customizable parameters.
 Examples
 ========
 
-Speedometer style gauge (programmatic)
+circular gauge (programmatic)
 ---------------------------------------------------------------
 
 .. cv-compound::
