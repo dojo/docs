@@ -27,6 +27,6 @@ format()/parse()
 See Also
 ========
 
- * dojo.number
+ * `dojo.number <dojo/number>`_
 
 TODO: add references to CLDR, setting locale in Dojo, binary floating point issues
