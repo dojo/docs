@@ -87,7 +87,7 @@ In AMD syntax:
   :height: 250
   :width: 360
   :toolbar: versions
-  :version: Trunk
+  :version: trunk
 
   .. html::
 
