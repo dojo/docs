@@ -28,28 +28,41 @@ So don't get confused by the new Date() statements in the tests, the second para
 Usage
 =====
 
-.. codeviewer::
-  
-  <style type="text/css">
-    @import "dojox/widget/DocTester/DocTester.css"; 
-  </style>
-  <script type="text/javascript">
-    dojo.require("dojox.widget.DocTester");
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+
+  require(["dojo/date"], function(date){
+     var date1 = new Date(2000, 2, 1);
+     date1.toUTCString(); // note that even toUTCString output is implementation-dependent
+     //output: "Wed, 01 Mar 2000 05:00:00 GMT"
+
+     var date2 = date.add(date1, "month", -1);
+     date2.toUTCString();
+     //output: "Tue, 01 Feb 2000 05:00:00 GMT"
+
+     date.difference(date1, date2, "day");
+     //output: -29
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
     dojo.require("dojo.date");
     
-    dojo.addOnLoad(function(){
-      var docTest = new dojox.widget.DocTester({}, "docTest");
-    });
-  </script>
-  <div id="docTest">
-    >>> var date1 = new Date(2000, 2, 1); date1.toUTCString(); // note that even toUTCString output is implementation-dependent
-    "Wed, 01 Mar 2000 05:00:00 GMT"
-    >>> var date2 = dojo.date.add(date1, "month", -1); date2.toUTCString();
-    "Tue, 01 Feb 2000 05:00:00 GMT"
-    >>> dojo.date.difference(date1, date2, "day")
-    -29
-  </div>
+    var date1 = new Date(2000, 2, 1);
+    date1.toUTCString(); // note that even toUTCString output is implementation-dependent
+    //output: "Wed, 01 Mar 2000 05:00:00 GMT"
 
+    var date2 = dojo.date.add(date1, "month", -1);
+    date2.toUTCString();
+    //output: "Tue, 01 Feb 2000 05:00:00 GMT"
+
+    dojo.date.difference(date1, date2, "day");
+    //output: -29
 
 ========
 See Also
