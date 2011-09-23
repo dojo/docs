@@ -801,7 +801,7 @@ Miscellaneous Core
 
   Provides extension events for hovering and mouse button utility functions
 
-* `dojo.on <dojo/on>`_
+* `dojo/on <dojo/on>`_
 
   Provides normalized event listening and event dispatching functionality
 
