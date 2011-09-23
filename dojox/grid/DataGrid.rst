@@ -136,7 +136,7 @@ editable
 formatter
   A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.  The returned value that is inserted into the page can be any legal HTML.  In dojo 1.3 and earlier, it should *not* be a dijit Widget as that is not parsed.  ``New in 1.4`` You can return a dijit Widget and it will be placed in that location in the cell.  ``New in 1.4`` You can also return a dojo.Deferred and can then pass the deferred's callback function a string to insert at a later point in time.
 
-- Note: When a widget is returned from a formatter, it's important to use the following way to ensure widget.destroyed() is called when the page containing it get destroyed - this may happen when grid is scrolled away from the current view-port or when the grid instance is destroyed, otherwise significant memory increase will be observed when keep scrolling the Grid or keep creating/destroying the Grid. See * `#13961 <http://bugs.dojotoolkit.org/ticket/13961>`_
+- Note: When a widget is returned from a formatter, it's important to use the following way to ensure widget.destroyed() is called when the page containing it get destroyed - this may happen when grid is scrolled away from the current view-port or when the grid instance is destroyed, otherwise significant memory increase will be observed when Grid is kept scrolling or creating/destroying. See the related `#13961 <http://bugs.dojotoolkit.org/ticket/13961>`_
 
 .. code-block :: javascript
   :linenos:
