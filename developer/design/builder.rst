@@ -123,7 +123,7 @@ command:
 
 .. code-block :: text
 
-node.js path/to/dojo.js load=path/to/startup-module.js <program arguments>
+  node.js path/to/dojo.js load=path/to/startup-module.js <program arguments>
 
 Traditionally, the dojo build system is executed from the /util/buildscripts directory. For example, assuming the source
 version of the Dojo Toolkit is installed at ~/dev/dtk/, in order to build the Dojo base profile with node.js, execute the
@@ -131,26 +131,26 @@ following command:
 
 .. code-block :: text
 
-~/dev/dtk/util/buildscripts> node.js ../../dojo/dojo.js load=build profile=base
+  ~/dev/dtk/util/buildscripts> node.js ../../dojo/dojo.js load=build profile=base
 
 Rhino may also be used. Owing the the requisite Java noise, its command is more complicated:
 
 .. code-block :: text
 
-~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main  ../../dojo/dojo.js baseUrl=../../dojo" profile=base
+  ~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main  ../../dojo/dojo.js baseUrl=../../dojo" profile=base
 
 In order to ease this pain, util/buildscripts/ includes a shell script (Unix, Linux, OS X) and batch program
 (Windows). For the shell script, simply issue the command
 
 .. code-block :: text
 
-~/dev/dtk/util/buildscripts> ./build.sh profile=base
+  ~/dev/dtk/util/buildscripts> ./build.sh profile=base
 
 And for Windows:
 
 .. code-block :: text
 
-~/dev/dtk/util/buildscripts> ./build.bat profile=base
+  ~/dev/dtk/util/buildscripts> ./build.bat profile=base
 
 The shell script will prefer node.js if it is available. The Windows batch file always uses Rhino, but includes some
 hints about how to use node.js if you have a node.js installed.
@@ -611,16 +611,16 @@ Command Line Switches
 In addition to the ``profile``, ``dojoConfig``, ``require``, and ``package`` command line switches mentioned in xxx, the
 build system defines the following "action" switches:
 
---release
+release
   Process all profiles resources, discover and transform all resources
 
---check
+check
   Process all profiles resources and command line switches and dump the computed profile to the console
 
---help
+help
   Print the help message
 
---version
+version
   Print the version number of the build program
 
 Although the "action=switch" defined by the v1.6- system may be used, that syntax is deprecated and you should just
@@ -635,7 +635,7 @@ as follows:
 
 .. code-block :: text
 
-~/dev/dtk/util/buildscripts> ./build.sh --profile myApp --basePath /www/deploy/myApp --release
+  ~/dev/dtk/util/buildscripts> ./build.sh --profile myApp --basePath /www/deploy/myApp --release
 
 This example also demonstrates the ``release`` command line switch which is instructs the build system to process all
 profiles and execute the transforms. In addition to release, the build system defines the following actions:
