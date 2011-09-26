@@ -636,6 +636,3 @@ as follows:
 .. code-block :: text
 
   ~/dev/dtk/util/buildscripts> ./build.sh --profile myApp --basePath /www/deploy/myApp --release
-
-This example also demonstrates the ``release`` command line switch which is instructs the build system to process all
-profiles and execute the transforms. In addition to release, the build system defines the following actions:
