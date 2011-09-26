@@ -41,7 +41,7 @@ analysis, dead code removal, and so on.
 Although the new system has many new capabilities, it is 100% compatible with version 1.6- profiles.
 
 This tutorial and reference describes the Dojo build system in its entirety. Understanding the dojo loader is an
-important prerequisite to using the builder. See `The Dojo Loader'_ for details.
+important prerequisite to using the builder. See The Dojo Loader for details.
 
 ===============
 Design Overview
@@ -297,7 +297,7 @@ Fundamentals of v1.7+ Profiles
 -----------------------------
 
 Starting with v1.7, source trees are specified to the build system exactly as they are specified to the loader: by a
-package configuration (see `The Dojo Loader`_ for details on how to write a package configuration). The only difference between the
+package configuration (see The Dojo Loader for details on how to write a package configuration). The only difference between the
 loader and the build system is that the loader uses the property ``baseUrl`` whereas the build system uses the property
 ``basePath``. The destination location for processed package trees is also specified by a package configuration. By
 default the source package configuration is used to compute the destination location with the exception that the
@@ -639,6 +639,3 @@ as follows:
 
 This example also demonstrates the ``release`` command line switch which is instructs the build system to process all
 profiles and execute the transforms. In addition to release, the build system defines the following actions:
-
-
-.. _The Dojo Loader: http://livedocs.dojotoolkit.org/developer/design/loader
