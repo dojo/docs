@@ -229,11 +229,11 @@ This example shows you how to use the tree to build a navigation menu.
                 identifier: 'id',
                 label: 'name',
                 items: [
-                   { id: 1, name: 'Root Item', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree', root: true,
+                   { id: 1, name: 'Dijit Tree API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree', root: true,
                       children:[{_reference: 2}, {_reference: 3}, {_reference: 4}] },
-                   { id: 2, name: 'Item 1', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree.model' },
-                   { id: 3, name: 'Item 2', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.ForestStoreModel' },
-                   { id: 4, name: 'Item 3', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.TreeStoreModel' },
+                   { id: 2, name: 'Dijit Tree.model API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree.model' },
+                   { id: 3, name: 'Dijit Tree.ForestStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.ForestStoreModel' },
+                   { id: 4, name: 'Dijit Tree.TreeStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.TreeStoreModel' },
                 ]
              }
           });
