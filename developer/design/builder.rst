@@ -294,7 +294,7 @@ system can consume v1.6- profiles. But before I describe backcompat, let's look 
 files to process and where to write them.
 
 Fundamentals of v1.7+ Profiles
------------------------------
+------------------------------
 
 Starting with v1.7, source trees are specified to the build system exactly as they are specified to the loader: by a
 package configuration (see The Dojo Loader for details on how to write a package configuration). The only difference between the
@@ -460,9 +460,9 @@ Burned In Loader Config
 TODO
 
 
-=========================
+===================
 Processing Profiles
-=========================
+===================
 
 New to v1.7+, the build system can process many individual profiles from many disparate sources during a single
 build. The following command line options are available to indicate which profiles to process.
