@@ -103,8 +103,8 @@ Here's a summary of the design:
 * TransformJobs maps a particular resource to an ordered set of transforms to apply to that resource.
 
 * Resources are discovered by a discovery process; once discovered, the system applies each resource to the predicates in
-transformJobs to find the transforms to apply, and then controls the application of all prescribed transforms to all
-discovered resources until the last gate is passed and then terminates.
+  transformJobs to find the transforms to apply, and then controls the application of all prescribed transforms to all
+  discovered resources until the last gate is passed and then terminates.
 
 The system is highly configurable: the discovery process(es), transforms, transform-gate associations, and transformJobs
 are all configurable through the profile. The system provides a default configuration so you won't have to bother with
@@ -205,10 +205,10 @@ second item gave a path where the Javascript resources for that module tree resi
 
 .. code-block :: javascript
 
-prefixes = [
-    ["dojo", "~/dev/dtk/dojo"],
-    ["dijit", "../dijit"]
-]
+  prefixes = [
+      ["dojo", "~/dev/dtk/dojo"],
+      ["dijit", "../dijit"]
+  ]
 
 If no dojo path was given then it was assumed to be "../../dojo", relative to the current working directory. Since the
 v1.6- build system assumed (without directly saying so) that the build program was always invoked from the
@@ -253,25 +253,25 @@ property values:
 
 .. code-block :: javascript
 
-prefixes = [
-    ["dojo", "~/dev/dtk/dojo"],
-    ["dijit", "../dijit"]
-],
-
-layers = [{
-    name:"../myPackage/main.js",
-    dependencies:["myPackage.menu", "myPackage.scrollbar", "myPackage.mainWindow"]
-});
-
+  prefixes = [
+      ["dojo", "~/dev/dtk/dojo"],
+      ["dijit", "../dijit"]
+  ],
+  
+  layers = [{
+      name:"../myPackage/main.js",
+      dependencies:["myPackage.menu", "myPackage.scrollbar", "myPackage.mainWindow"]
+  });
+  
 In this example, the v1.6- build system would behave as the following ``prefixes`` value was provided:
 
 .. code-block :: javascript
 
-prefixes = [
-    ["dojo", "~/dev/dtk/dojo"],
-    ["dijit", "../dijit"]
-    ["myPackage", "../myPackage"]
-],
+  prefixes = [
+      ["dojo", "~/dev/dtk/dojo"],
+      ["dijit", "../dijit"]
+      ["myPackage", "../myPackage"]
+  ]
 
 In version 1.6-, the aggregate of all the module trees described by ``prefixes`` (including those implied by ``layers``)
 described which files the build system processed.
@@ -307,16 +307,16 @@ in v1.6- profiles. Here is an example of a v1.7 profile that mirrors the example
 
 .. code-block :: javascript
 
-profile = {
-  basePath:"~/dev/dtk",
-  packages:[{
-    name:"dojo"
-  },{
-    name:"dijit"
-  },{
-    name:"myPackage"
-  }]
-};
+  profile = {
+    basePath:"~/dev/dtk",
+    packages:[{
+      name:"dojo"
+    },{
+      name:"dijit"
+    },{
+      name:"myPackage"
+    }]
+  };
 
 As described in the loader tutorial, the location for dojo, dijit, and myPackage is computed by appending the package
 name to ``basePath`` (remember ``basePath`` in the build system is equivalent to ``baseUrl`` in the loader). So these packages are
