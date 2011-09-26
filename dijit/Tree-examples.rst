@@ -209,3 +209,51 @@ But the tree will display and work properly regardless, and for simple markup, e
   .. cv:: html
 
     <div id="treeOne"></div>
+
+Example to build a tree menu with links on nodes
+-----------------------------------------------------------
+
+This example shows you how to use the tree to build a navigation menu.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+        <script type="text/javascript">
+       dojo.require("dojo.data.ItemFileWriteStore");
+       dojo.require( "dijit.Tree" );
+
+       function initTree() {
+          var treeStore = new dojo.data.ItemFileWriteStore({ data:
+             {
+                identifier: 'id',
+                label: 'name',
+                items: [
+                   { id: 1, name: 'Root Item', url: 'root.html', root: true,
+                      children:[{_reference: 2}, {_reference: 3}, {_reference: 4}] },
+                   { id: 2, name: 'Item 1', url: 'item1.php' },
+                   { id: 3, name: 'Item 2', url: 'item2.php' },
+                   { id: 4, name: 'Item 3', url: 'item3.php' },
+                ]
+             }
+          });
+        
+          var treeModel = new dijit.tree.ForestStoreModel({
+             store: treeStore,
+             query: { 'root': true }
+          });
+
+          var navTree = new dijit.Tree({model: treeModel, showRoot: false }, "navTree")
+		  
+		  navTree.onClick = function (item) {
+			  /* load the url from datastore */
+			  location.href = item.url;
+		  }; 
+       }
+     
+       dojo.addOnLoad(initTree);
+    </script>
+
+  .. cv:: html
+
+    <div id="navTree"></div>
