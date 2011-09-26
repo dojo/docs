@@ -229,11 +229,11 @@ This example shows you how to use the tree to build a navigation menu.
                 identifier: 'id',
                 label: 'name',
                 items: [
-                   { id: 1, name: 'Root Item', url: 'root.html', root: true,
+                   { id: 1, name: 'Root Item', url: 'http://dojotoolkit.org/api/1.6/1.2/dijit.Tree', root: true,
                       children:[{_reference: 2}, {_reference: 3}, {_reference: 4}] },
-                   { id: 2, name: 'Item 1', url: 'item1.php' },
-                   { id: 3, name: 'Item 2', url: 'item2.php' },
-                   { id: 4, name: 'Item 3', url: 'item3.php' },
+                   { id: 2, name: 'Item 1', url: 'http://dojotoolkit.org/api/1.6/1.2/dijit.Tree' },
+                   { id: 3, name: 'Item 2', url: 'http://dojotoolkit.org/api/1.6/1.2/dijit.Tree' },
+                   { id: 4, name: 'Item 3', url: 'http://dojotoolkit.org/api/1.6/1.2/dijit.Tree' },
                 ]
              }
           });
