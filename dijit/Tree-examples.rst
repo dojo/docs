@@ -210,10 +210,10 @@ But the tree will display and work properly regardless, and for simple markup, e
 
     <div id="treeOne"></div>
 
-Example to build a tree menu with links on nodes
+Example how to build a tree menu with links on nodes
 -----------------------------------------------------------
 
-This example shows you how to use the tree to build a navigation menu.
+This example shows you how to use a tree to build a navigation menu.
 
 .. cv-compound::
 
