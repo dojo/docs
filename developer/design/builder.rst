@@ -15,7 +15,9 @@ The Dojo Build System
 ============
 Introduction
 ============
-
+<table>
+<tr><td>col1</td><td>col2</td></tr>
+</table>
 This document describes the Dojo build system as of v1.7. The build system released with v1.7 is a completely new design
 and implementation compared to the build system that was released with Dojo versions 1.0.x - 1.6.x. The key capability
 of the new system is the ability to consume and optimize modules that conform to the Asynchronous/Module Definition
