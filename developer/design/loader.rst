@@ -11,7 +11,7 @@ The Dojo Loader
 :Author: Rawld Gill
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 The Dojo Loader
 
