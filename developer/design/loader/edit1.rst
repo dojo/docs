@@ -1149,7 +1149,7 @@ As of v1.7, the Dojo loader supports Rhino and node.js out of the box. Loading t
 .. code-block :: bash
 
   #!/bin/bash
-  node dojo/dojo.js load=config.js load=main.js
+  node dojo/dojo.js load=config load=main
 
 And like this with Rhino:
 
