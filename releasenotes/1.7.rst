@@ -91,7 +91,7 @@ dojo/on
 This new module provides a new event handling system with support for a number of new features including:
 
  - event delegation - Event types can include selectors to specify targets like on(list, "li:click", onListItemClickHandler);
- - extension events - Custom event types can be used (and created). New dojo.gestures implement extension events.
+ - extension events - Custom event types can be used (and created). New dojox.gesture.* implement extension events.
  - pausable events - Event handling can be paused with the on.pausable function.
  - execute-once events - Listeners can be set to fire only once with on.once.
  - emitting events - Native style events can be dispatched with on.emit(target, "click", event);
@@ -165,33 +165,6 @@ dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can w
       dojo.touch.press(node, function(e){});
 
 Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
-
-
-dojo/gesture
-------------
-
-Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktop (single gestures) and various touch devices. 
-
-This new module provides following functionality:
-
-- Register/un-register a global singleton gesture instance
-- Bind dojoj/on handlers for each gesture event e.g. tap, taphold, doubletap ...
-- Fire a gesture event on the target node
- 
-dojo/gesture/tap
-
-- Provide common tap gestures(single touch) including tap, tap.hold and tap.doubletap
-- Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
- 
-dojo/gesture/swipe
-
-- Provide common swipe gestures(single touch) including swipe, swipe.left | right | up | down
-- Customizable settings e.g. swipeSpeed, valid swipeRange
-
-Also `a quick demo <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/touch/demo.html>`_ shows dijit/form/HorizontalSlider and dojo/dnd can now work well on iOS4+ with the new dojo/touch and dojo/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture(multiple touch).
- 
-Please refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for more details.
-
 
 =====
 Dijit
@@ -294,6 +267,33 @@ Gfx
       group.connect("onmousedown", function(evt){ var s = evt.gfxTarget; ... });
 
 
+Gesture
+------------
+
+Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktop (single gestures) and various touch devices. 
+
+dojox/gesture/Base
+
+An abstract parental class for various gesture implementations, it's mainly responsible for::
+- Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap ...
+- Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'.
+- Firing and bubbling gesture events with on() API.
+A gesture implementation only needs to extend this with appropriate phase handlers overwritten, e.g. press()|move()|release()|cancel for recognizing and firing gestures
+ 
+dojox/gesture/tap
+
+- Provide common tap gestures(single touch only) including tap, tap.hold and tap.doubletap
+- Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
+ 
+dojox/gesture/swipe
+
+- Provide common swipe gestures(single touch only) including swipe, swipe.end
+
+Also `a quick demo <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/touch/demo.html>`_ shows dijit/form/HorizontalSlider and dojo/dnd can now work well on iOS4+ with the new dojo/touch and dojo/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture(multiple touch).
+ 
+Please refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for more details.
+
+
 Grid
 ----
 DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
@@ -301,11 +301,11 @@ DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
 - Numerous issues have been fixed for 1.7, please refer to the `defect list <http://trac.dojotoolkit.org/query?status=closed&component=DojoX+Grid&order=priority&milestone=1.7&col=id&col=summary&col=type&col=priority>`_ for more details.
  
  
-Gridx
+GridX
 
-- Gridx is an incubation project provided as a basis for the next generation of Dojo Grid. 
-- Gridx provides a highly extensible core and a rich set of modules to be loaded on demand, appropriate modules can be picked up to constitute different Grid instances e.g. MiniGrid(MobileGrid）, AdvancedGrid, TreeGrid etc.
-- Gridx is `demo only <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/gridx/demo.html>`_ and not for production use in 1.7 
+- An incubation project being worked closely with 'dgrid<https://github.com/kriszyp/dgrid>'_ for the next generation of Dojo Grid.
+- Provides a highly extensible core and a rich set of modules to be loaded on demand, appropriate modules can be picked up to constitute different Grid instances e.g. MiniGrid(MobileGrid）, AdvancedGrid, TreeGrid etc.
+- Gridx is `demo only <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/gridx/demo.html>`_ in 1.7 time frame.
 
 
 Mobile
