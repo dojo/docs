@@ -270,28 +270,28 @@ Gfx
 Gesture
 ------------
 
-Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktop (single gestures) and various touch devices. 
+Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures that can run well on difference devices including desktop (single gestures) and various touch devices. 
 
 dojox/gesture/Base
 
-An abstract parental class for various gesture implementations, it's mainly responsible for::
+An abstract parental class for various gesture implementations, it's mainly responsible for:
 - Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap ...
-- Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'.
-- Firing and bubbling gesture events with on() API.
+- Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'
+- Firing and bubbling gesture events with on() API
 A gesture implementation only needs to extend this with appropriate phase handlers overwritten, e.g. press()|move()|release()|cancel for recognizing and firing gestures
  
 dojox/gesture/tap
 
-- Provide common tap gestures(single touch only) including tap, tap.hold and tap.doubletap
+- Provide common tap gestures including tap, tap.hold and tap.doubletap(single touch only)
 - Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
  
 dojox/gesture/swipe
 
-- Provide common swipe gestures(single touch only) including swipe, swipe.end
+- Provide common swipe gestures including swipe, swipe.end(single touch only)
 
-Also `a quick demo <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/touch/demo.html>`_ shows dijit/form/HorizontalSlider and dojo/dnd can now work well on iOS4+ with the new dojo/touch and dojo/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture(multiple touch).
+Also `a quick demo <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/touch/demo.html>`_ that shows dijit/form/HorizontalSlider and dojo/dnd can now run well on iOS4+ with the new dojo/touch and dojox/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture that support multiple touch.
  
-Please refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for more details.
+Please refer to `dojox/gesture doc(TODO) <dojox/gesture>`_ for more details.
 
 
 Grid
