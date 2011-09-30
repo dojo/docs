@@ -12,45 +12,16 @@ The Dojo Build System
 
 The Dojo Build System
 
+''This document describes the Dojo build system as of v1.7. Historical documentation describing the legacy build system
+is available here: xxx''
+
 ============
 Introduction
 ============
 
-This document describes the Dojo build system as of v1.7. The build system released with v1.7 is a completely new design
-and implementation compared to the build system that was released with Dojo versions 1.0.x - 1.6.x. The key capability
-of the new system is the ability to consume and optimize modules that conform to the Asynchronous/Module Definition
-specification as well as modules the use the the legacy loader API (dojo.require, dojo.provide and the rest). It also
-includes several new features:
-
-* The ability to run on node.js, often decreasing build times by a factor of 10 or more.
-
-* The ability to consume CommonJS package descriptions, greatly simplifying build profile construction.
-
-* The ability to consume run-time configurations (i.e., dojoConfig values).
-
-* Greatly enhanced capability to specify the location and content of source and destination file hierarchies.
-
-* The ability to trim dead code as identified by static has.js feature values
-
-Perhaps most interesting, the new system is also intended to serve as a generalized, Javascript-based platform for
-processing a set of resources. The traditional purpose of the build system--transforming a set of resources into a set
-of optimized resources for deployment--is but one example of potential uses of the system. As the Dojo community moves
-forward towards Dojo 2.0, the new system will likely be used for such tasks as automatic code generation, static semantic
-analysis, dead code removal, and so on.
-
-Although the new system has many new capabilities, it is 100% compatible with version 1.6- profiles.
-
-This tutorial and reference describes the Dojo build system in its entirety. Understanding the dojo loader is an
-important prerequisite to using the builder. See The Dojo Loader for details.
-
-===============
-Design Overview
-===============
-
-The Dojo build system is a general-purpose program for transforming resources. Although general purpose, it was built to
-solve the problem of transforming a set of resources that comprise a browser-based application in order to improve the
-load-time performance of that application. For this particular purpose, two kinds of transformations are
-typical:
+The Dojo build system is a general-purpose program for transforming a set of resources. It was built to solve the
+problem of transforming a set of resources that comprise an application in order to improve the performance of that
+application. For this particular purpose, two kinds of transformations are typical:
 
 * The content of a resource is analyzed and those portions not required are removed. An example is removing code branches
   as indicated by has.js feature values known at build time.
@@ -66,323 +37,569 @@ program results in a serial chain of downloads (for example, module A requires m
 this until module A is evaluated). Using these techniques to optimize non-trivial applications often results in
 improving load times by a factor of 10 or more.
 
-The semantics of any particular transform range from trivial to quite powerful. The Dojo build system includes several
-transforms. Further, the system is designed so that transforms may be easily constructed and plugged into the transform
-engine. We hope that the system fosters a community of transforms solving problems like automatic document generation,
-code formatting, static semantic analysis, and so on.
+These kind of optimization are termed "deployment optimizations", and the build system includes a rich set of such
+optimizations that may be applied to an application prior to deployment. However, the build system is not limited to
+these kind of transforms. At its core, the build system is an engine for applying an ordered, synchronized, configurable
+set of transforms to a configurable input set. Examples of other usages include document generators, style checkers,
+code formatters, lint checkers, and many more. In some ways it is like a make program, except the external processes
+that typical make programs execute can be implemented within its the pluggable transform infrastructure. Of course external
+processes can be executes as well.
 
-The overall design of the system is simple. It "discovers" a set of resources and applies an ordered set of
+This document describes using the build system for deployment optimizations. See xxx for information about writing your
+own custom transforms and configuring the build system for other uses.
+
+========
+Overview
+========
+
+The overall design of the system is simple. It "discovers" a set of resources and applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
-"profile" which is a user-configurable Javascript object.
+user-configurable Javascript object termed a "profile".
 
-The dojo build system includes a discovery process that discovers resources as indicated by profile properties. You can
-add additional discovery processes and/or remove the default discovery process. For now, the important point is that
-there is some process that "discovers" resources and then "starts" these resources in the configurable transformation
-process.
+When a resource is discovered, it is tagged with one or more flags that help identify the role of that resource. For
+example, an AMD module may be tagged "AMD". The profile controls how resources are tagged. After a resource is
+discovered and tagged, the system assigns a set of transforms that are to be applied to that resource. This assignment
+is based on the resource tags and/or filename and is also controlled by the profile. Then the system takes over and
+automatically applies each assigned transform. Once all assigned transforms have been applied to all discovered
+resources the program terminates.
 
-When a resource is started, the system queries the profile for the set of transforms that should be applied to that
-particular resource. The profile includes the property transformJobs, a vector of [predicate, transform vector]
-pairs. Each started resource is applied to each predicate and the transform vector associated with the first predicate
-that returns true gives the set of transforms to apply to that particular resource.
+Let's look at a couple of examples. Perhaps the simplest transform is to do nothing--don't read the resource, don't
+write the resource, don't do anything. Such a "noop" may be applied to version control files, backup files, and other
+such files that should not be moved to the deployment tree. 
 
-Transforms are functions that take a resource and do some resource-dependent work. Reading, applying dojo pragmas,
-parsing, dependency tracing, and writing are all examples of transforms. Obviously, transforms must be applied in a
-prescribed order (for example, reading before writing). Further, some transforms may operate on multiple resources that
-have already undergone a prescribed set of transforms. For these kinds of transforms, the system provides synchronization
-machinery to ensure that all resources have completed transformation up to a prescribed step before any resource is
-allowed to proceed to the next step. Such steps are termed "gates". Any gate that is designated such that all
-resources must pass the previous gate before any resource is allowed to begin the designated gate is termed a
-"synchronized gate". A gate is associated with each transform.
+A slightly more interesting example is a resource that is copied from the development tree to the deployment
+tree. Notice that part of such a process causes the build system to "know" that the deployment tree will contain the
+resource. This knowledge may be used by other transforms that ensure requisite files exist. For example, a CSS style
+sheet checker could check to see that all referenced images existed.
 
-Here's a summary of the design:
+Perhaps the most important transform for resource deployment is dependency scanning Javascript modules and then bundling
+dependencies into a single resource to reduce the HTTP transactions required to load a resource.
 
-* Transforms are functions applied to resources.
+Available Deployment Optimization Transforms
+--------------------------------------------
 
-* Each transform is associated with a gate; gates give the order transforms are applied.
+Dojo includes the deployment optimization transforms listed below. This document gives an overview of each
+transform; a more-detailed reference guide is also available for each transform.
 
-* TransformJobs maps a particular resource to an ordered set of transforms to apply to that resource.
+compactCss
+  Compacts CSS style sheets.
 
-* Resources are discovered by a discovery process; once discovered, the system applies each resource to the predicates in
-  transformJobs to find the transforms to apply, and then controls the application of all prescribed transforms to all
-  discovered resources until the last gate is passed and then terminates.
+copy
+  Copies a resource from a source location to a destination location.
 
-The system is highly configurable: the discovery process(es), transforms, transform-gate associations, and transformJobs
-are all configurable through the profile. The system provides a default configuration so you won't have to bother with
-configuring this machinery until and unless you want to do something special. Further details about how to write
-customized processes will be covered in another tutorial; the remainder of this tutorial will describe the dojo-provided
-transforms that an be used to optimize programs for deployment.
+depsDump
+  Prints the module dependency tree of an application.
+
+depsScan
+  Determines a modules dependencies and interns dojo.cache string resources.
+
+dojoBoot
+  Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
+
+dojoPragmas
+  Applies dojo pragmas to a resource.
+
+dojoReport
+  Outputs a report describing a single run of the deployment optimization transforms.
+
+hasFindAll
+  Outputs a report of all has.js usages.
+
+hasFixup
+  Trims dead code branches consequent to has feature values known at build time.
+
+hasReport
+  Outputs a report describing the name and location of all has.js feature tests
+
+insertSymbols
+  Inserts debugging symbols into Javascript resources.
+
+read
+  Reads a resource from the file system.
+
+write
+  Write a resource to the file system.
+
+writeAmd
+  Writes an AMD module to the file system.
+
+writeCss
+  Writes a CSS style sheet to the file system
+
+writeDojo
+  Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
+
+writeOptimized
+  Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
+
+Quick Reference Guide
+---------------------
+
+A _quick reference guide_ is available that lists all command line options and profile switches that control resource
+discovery and the transforms.
+
+Advanced Topics
+---------------
+
+The build system may be used to execute advanced deployment optimization scenarios. These are discussed in
+separate documents as follows:
+
+xxx
+  Describes how to build a custom dojo.js with a nonstandard set of modules.
+
+xxx 
+
+  Describes how to build packages that relocate module namespaces (this feature replaces the legacy so-called
+  multi-version feature).
+
+Road Map
+--------
+
+The remainder of this document describes how use the build system for deployment optimization. The following topics are
+covered in order:
+
+1. How to invoke the system.
+
+2. How to control the build system with command line switches.
+
+3. How to configure profiles to indicate what resources to discover and where to output the transformed resources.
+
+4. What set of transforms are available and the kinds of resources those transforms are applied to.
+
+========================
+Assumptions for Examples 
+========================
+
+This document contains several examples. It assumes the source distribution of the Dojo Toolkit, version 1.7 or greater,
+is installed at ~/dev/dtk/. If you are a Windows user, "~" is shorthand for the user's home directory; substitute
+whatever directory is convenient for you. For all users, there is nothing special about ~/dev/. We are just using to
+indicate the root of that holds the Dojo Toolkit source distribution.
+
+Unless specifically stated otherwise, all examples assume the current working directory is
+~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the the build system, both rather a convenience
+to not have to path to the build system executable.
 
 =========================
 Invoking the Build System
 =========================
 
-The build system is a program comprised of a set of AMD modules that may be executed by node.js or Rhino. The program is
-distributed with the source version of the Dojo Toolkit as a CommonJS package. The source tree resides at util/build/. A
-new feature of Dojo 1.7 is the ability to run console-based Javascript programs in node by issuing the following
-command:
+The build system is a Javascript program comprised of a set of AMD modules that may be executed by node.js or Rhino. The
+program is distributed with the source version of the Dojo Toolkit. The source tree resides at util/build/. Dojo can be
+used to execute console-based Javascript programs in node by issuing the following command:
 
 .. code-block :: text
 
   node.js path/to/dojo.js load=path/to/startup-module.js <program arguments>
 
-Traditionally, the dojo build system is executed from the /util/buildscripts directory. For example, assuming the source
-version of the Dojo Toolkit is installed at ~/dev/dtk/, in order to build the Dojo base profile with node.js, execute the
-following command:
+Traditionally, the dojo build system is executed from the /util/buildscripts/ directory. For example, assuming the source
+version of the Dojo Toolkit is installed at ~/dev/dtk/, in order to invoke the build system and print the help
+message, issue the command:
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> node.js ../../dojo/dojo.js load=build profile=base
+  ~/dev/dtk/util/buildscripts> node.js ../../dojo/dojo.js load=build --help
 
 Rhino may also be used. Owing the the requisite Java noise, its command is more complicated:
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main  ../../dojo/dojo.js baseUrl=../../dojo" profile=base
+  ~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main  ../../dojo/dojo.js baseUrl=../../dojo" --help
 
-In order to ease this pain, util/buildscripts/ includes a shell script (Unix, Linux, OS X) and batch program
-(Windows). For the shell script, simply issue the command
+In order to ease this pain, util/buildscripts/ includes a batch program for Windows and a shell script for non-Windows
+environments. For the shell script, simply issue the command
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> ./build.sh profile=base
+  ~/dev/dtk/util/buildscripts> ./build.sh --help
 
 And for Windows:
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> ./build.bat profile=base
+  ~/dev/dtk/util/buildscripts> ./build.bat --help
 
-The shell script will prefer node.js if it is available. The Windows batch file always uses Rhino, but includes some
-hints about how to use node.js if you have a node.js installed.
+The shell script will prefer node.js if it is available. If you would rather use Rhino, you can use the command line
+swith ```bin=java``` like this:
+
+.. code-block :: text
+
+  ~/dev/dtk/util/buildscripts> ./build.sh bin=java --help
+
+The Windows batch file always uses Rhino, but includes some hints about how to use node.js if you have a node.js
+installed.
+
+Although the legacy build system could be executed when /util/buildscripts/ was ''not'' the current working directory, to
+do so required a carefully constructed profile. Indeed, many profiles provided with Dojo source distributions won't work
+unless /util/buildscripts/ is the current working directory. The current build system has no such restriction.
 
 =====================
-Controlling The Build
+Command Line Switches
 =====================
 
 The build system is controlled by a Javascript object termed a "profile" which instructs the system what files to
-process, how to process them, and where to write the output. The profile itself is constructed from one or more inputs:
+process and how to process them. The profile itself is constructed from one or more inputs:
 
-* one or more Javascript resources that contain a profile object
+1. Zero or more Javascript resources that contain a profile object, as specified by the command line switch
+```profile``` which requires a filename argument that points to a profile resource.
 
-* one or more package.json resources that describe a CommonJS package, optionally pointing to an external,
-  package-dependent profile resource
+2. Zero or more package.json resources that describe a CommonJS package, as specified by the command line switch
+```package``` which requires a path that contains a package.json resource.
 
-* one or more loader configuration variables (dojoConfig or require)
+3. Zero or more loader configuration variables (dojoConfig or require), as specified by the command line switches
+```require``` or ```dojoConfig``` which require a filename argument that points to a Javascript resource that contains a
+loader configuration.
 
-* command line switches
+4. Zero or more other command line switches that give (profile-property-name, profile-property-value) pairs.
 
-The build system processes each resource described above in the order provided on the command line; if two or more
-resources attempt to set the same profile property, then the last input wins. Some profile properties are mixed one or
-two-level deep; see xxx). The command line switches are always processed last, so they will always override any existing
-profile property.
+The build system processes each resource described above (Items 1-3) in the order provided on the command line; if two
+or more resources attempt to set the same profile property, then the last input wins. Some profile properties are mixed
+one or two-level deep; see xxx for a description about how each profile property is mixed. The command line switches in
+Item 4 are always processed last, so they will always override any existing profile property.
 
-Prior to v1.7, the build system expected command line switches to have the form
+Command line switches have the form
 
-``variable=value``
-
-Although v1.7 can consume switches provided as such, this format is deprecated in favor of the more-transitional form:
-
-``-variable value``
+-''variable'' ''value''
 
 Or...
 
-``--long-variable-name value``
+--''long-variable-name'' ''value''
 
-Not all switches have short name (single-dash) variants. See xxx for a complete list of command line switches.
+Not all switches have short-name (single-dash) variants. See xxx for a complete list of command line switches.
+
+The build system also supports switches to have the form
+
+''variable''=''value''
+
+This was the form required by the legacy build system released with Dojo v1.6-; it is deprecated in favor of the
+more-traditional form.
+
+The build system includes the command switch ```check-args``` which processes the command line, reads all profile,
+package, dojoConfig, and require resources, and then prints out the raw input and the resulting mixed profile. This
+switch is a great resource for understanding and debugging how a particular build system invocation is consuming the
+command line. For example,
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --v1 someValue --v2 123 --true true --false false --null null --check-args
+    running under node.js
+    {
+    		false:false,
+    		null:null,
+    		profiles:[],
+    		true:true,
+    		v1:"someValue",
+    		v2:123
+    }
+
+This example points out that number, true, false, and null values are not stored as strings but rather are converted to
+Javascript numbers, booleans, and null.
+
+==============
+Profile Basics
+==============
+
+A profile is a Javascript object that controls the build application. As described above, it is constructed as the
+aggregate of one or more resources specified on the command line. Usually, a profile resource is used as the basis for
+the aggregate.
+
+A profile resource is a Javascript resource that defines the variable ```profile```, which must be a Javascript
+object. Typically, a profile resource is given the file type
+".profile.js". /util/build/examples/simple-profile1.profile.js contains a trivial example; here are the contents of that
+resource:
+
+.. code-block :: javascript
+
+  var profile = {
+    someProperty:"someValue",
+    someOtherProperty:"someOtherValue"
+  };
+
+If we invoke the build system with the ```profile``` switch indicating that profile and dump the result with the
+```check-args``` switch, this is what you'll see:
+
+.. code-block :: text
+
+  ~/dev/dtk/util/buildscripts:./build.sh --profile ../build/examples/simple1 --check-args
+  running under node.js
+  processing profile resource /home/rcgill/dev/dtk/util/build/examples/simple1.profile.js
+  {profiles:[{
+					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
+  					 someOtherProperty:"someOtherValue",
+					 someProperty:"someValue"
+  				}]}
+
+Notice the build system automatically appends the ".profile.js" suffix to the profile argument if that argument does not
+contain a file type. When a profile argument is given with no file type, ''and'' the profile argument contains no path
+segments, ''and'' the profile resource does not exist in the current working directory, then the build system will try
+to find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js" as
+usual. It is possible to specify a profile with a file type different than ".profile.js" by including the file type in
+the profile argument.
+
+Notice that the property ```basePath``` was automatically added to the profile object and set to the path at which the
+profile resides. If the profile contained the property ```basePath``` and the value of that property was a relative
+path, then the build system would automatically resolve that path with respect to the directory in which the profile
+resources resides--''not'' the current working directory. For example, /util/build/examples/relative-base-path.profile.profile.js
+has contents:
+
+.. code-block :: javascript
+
+    var profile = {
+    	basePath:"."
+    };
+
+Which causes the following ```basePath``` initialization:
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --profile ../build/examples/relative-base-path --check-args
+    running under node.js
+    processing profile resource /home/rcgill/dev/dtk/util/build/examples/relative-base-path.profile.js
+    {profiles:[{basePath:"/home/rcgill/dev/dtk/util/build/examples"}]}
+
+```basePath``` is used as the reference path when resolving relative source paths. This design allows a profile resource
+to be constructed and reside within a package hierarchy in such a way that it is independent of both the location of
+the package hierarchy within the file system and the current working directory at the time the build program is
+invoked.
+
+Profile resources are Javascript resources that are evaluated by the build system. They are not restricted to hold
+JSON. They can, and often will, contain functions. For example, /util/build/examples/profile-with-code.profile.js
+has contents:
+
+.. code-block :: javascript
+
+    function timestamp(){
+    	// this function isn't really necessary...
+    	// just using it to show you can call a function to get a profile property value
+    	var d = new Date();
+    	return d.getFullYear() + '-' + (d.getMonth()+1) + "-" + d.getDate() + "-" +
+    		d.getHours() + ':' + d.getMinutes() + ":" + d.getSeconds();
+    }
+    
+    var profile = {
+    	basePath:".",
+    	buildTimestamp:timestamp()
+    };
+
+When exercised with the ```check-args``` switch, you should see something like this:
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --profile ../build/examples/profile-with-code --check-args
+    running under node.js
+    processing profile resource /home/rcgill/dev/dtk/util/build/examples/profile-with-code.profile.js
+    {profiles:[{
+    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
+    					 buildTimestamp:"2011-9-29-21:34:2"
+    				}]}
+
+The command switch ```dojoConfig``` cause the build system read configurations as given by a variable ```dojoConfig```
+as if it was an ordinary profiles. The next section describes how the build system consumes ordinary
+configurations. Also note that the dojo loader will simply ignore any configuration variable that it does not
+define. These two feature combine to allow all or part of an application's build profile to be contained within the
+application configuration. For example, /util/build/examples/dojoConfig.js has contents:
+
+.. code-block :: javascript
+
+    var dojoConfig = {
+    	packages:[{
+    		name:"dojo",
+    		location:"../../../dojo"
+    	},{
+    		name:"dijit",
+    		location:"../../../dijig"
+    	}]
+    };
+
+When exercised with the ```check-args``` switch, you should see something like this:
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../build/examples/dojoConfig.js --check-args
+    running under node.js
+    processing dojoConfig resource /home/rcgill/dev/dtk/util/build/examples/dojoConfig.js
+    {profiles:[{
+    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
+    					 packages:[
+    					 		{
+    					 				location:"../../../dojo",
+    					 				name:"dojo"
+    					 		},
+    					 		{
+    					 				location:"../../../dijig",
+    					 				name:"dijit"
+    					 		}
+    					 ]
+    				}]}
+
+Notice that basePath, as automatically provided by the build system, when combined with the package locations, give the
+correct locations of the dojo and dijit packages. Also take note that you must provide the complete filename, including
+a the file type (if any).
+
+The command switch ```require``` is similar to ```dojoConfig```, but processes a configuration argument applied to the
+global AMD require function. For example, /util/build/examples/require.js has contents:
+
+.. code-block :: javascript
+
+    require({
+    	packages:[{
+    		name:"dojo",
+    		location:"../../../dojo"
+    	},{
+    		name:"dijit",
+    		location:"../../../dijig"
+    	}]
+    });
+
+When exercised with the ```check-args``` switch, you should see something like this:
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --require ../build/examples/require.js --check-args
+    running under node.js
+    processing require resource /home/rcgill/dev/dtk/util/build/examples/require.js
+    {profiles:[{
+    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
+    					 packages:[
+    					 		{
+    					 				location:"../../../dojo",
+    					 				name:"dojo"
+    					 		},
+    					 		{
+    					 				location:"../../../dijig",
+    					 				name:"dijit"
+    					 		}
+    					 ]
+    				}]}
+
+As usual, if absent or relative, basePath is automatically computed. Just like ```dojoConfig```, you must provide the
+complete filename.
+
+The command switch ```package``` indicates a package.json file or files, and works slightly differently than the others
+discussed so far. First, since the filename is fixed ("package.json"), the file path at which the package.json file
+resides is given. Second, more than one package.json files may be given by providing a comma-separated list of file
+paths.
+
+As each package.json resource is processed, a profile object is manufactured with the following contents (the variable
+```packageJson``` in the code that follows represents the package.jon object):
+
+.. code-block :: text
+
+    {
+    	basePath:
+    	packages:[{
+    		name:packageJson.progName || packageJson.name,
+    		packageJson:{
+    			__selfFilename:<path at which the package.Json file resides>
+    			<packageJson properties>
+    	}]
+    }
+
+Notice that the package.json object is embedded in the package object that the package.json object represents. Also
+notice that the property ```__selfFilename``` is set the the absolute path at which the package.Json file resides and is
+added to the package.Json object. This gives the reference path for any relative paths found in the package.json object,
+the ```lib``` path in particular.
 
 ====================
 Specifying Resources
 ====================
 
-This section describes how a build profile specifies which files to read and where to write them.
+The build system "discovers" the set of resources to process by traversing a set of file system trees, individual
+directories, and/or individual filenames. There are two ways to specify which trees, directories, and/or files to
+discover:
 
-Methods Used in Dojo Version 1.6-
----------------------------------
+* provide an explicit list of trees, directories, and/or filenames by providing values for the profile properties
+  ```trees```, ```dirs```, and ```files```.
 
-In v1.6-, the profiles contained two properties that described which files to read: ``prefixes`` and ``layers``. ``prefixes`` was an
-array of pairs. The first item in each pair gave a top-level module name (e.g., "dojo", "dijit", "myPackage"); the
-second item gave a path where the Javascript resources for that module tree resided. For example,
+* provide a loader configuration that includes one or more package configurations. All resources in the tree implied by
+  the package configuration ```location property``` will be discovered.
 
-.. code-block :: javascript
+Trees, Dirs, and Files
+----------------------
 
-  prefixes = [
-      ["dojo", "~/dev/dtk/dojo"],
-      ["dijit", "../dijit"]
-  ]
+The profile properties ```trees```, ```dirs```, and ```files``` all have the same format: an array of (source,
+destination [,ignore]) pairs or triples. The source and destination are path names for ```trees``` and ```dirs``` and
+filenames for ```files```. In each case the properties say where to discover resources and where to output the
+discovered resources after they have been transformed. 
 
-If no dojo path was given then it was assumed to be "../../dojo", relative to the current working directory. Since the
-v1.6- build system assumed (without directly saying so) that the build program was always invoked from the
-util/buildscripts/ directory, this had the net effect of causing dojo directory to default to the same location as the
-dojo being used with the build program.
+The optional ignore value is a regular expression that finds resources that should be ignored. As each resource is
+discovered, the full filename (including the complete path), is tested against the regular expression; if the regular
+expression is satisfied, then the resource is not entered into the transform process. The ignore parameter should not be
+used with ```files```, since this property gives a specific set of filenames to discover; if you want to ignore a
+specific filename, then just don't put it into the ```files``` property to begin with. Typically, the ignore regular
+expression is used to exclude files such as version control files and editor backup files that ought not be part of a
+deployment. A common ignore regular expression is ```/(\/\.)|(~$)/```.
 
-If a relative path was given for the dojo directory, it was take to be relative to the current working directory, again,
-assumed to be the util/buildscripts/ directory.
+In the case of ```trees```, the discover process discovers all files in the file system hierarchy rooted at each given
+source path and schedules those resources for writing to the same relative location in the hierarchy rooted at the
+associated destination path. ```dirs``` works the same except that only each single directory is processed--the tree is
+not traversed. Lastly, ```files``` simply lists a set of specific files to discover.
 
-If a relative path was given for any top-level module other than dojo, then the path was taken to be relative to the dojo
-directory. So in the example above, the path for dijit resolves to "~/dev/dtk/dojo/../dijit" = "~/dev/dtk/dijit".
+Relative Paths
+--------------
 
-In v1.6-, the ``layers`` property contained an array of objects, with each object containing several properties:
+Typically, profiles should ''not'' contain absolute paths. Instead all paths should be relative which allows project
+trees to be copied to different environments without affects location semantics. All relative source paths, for example,
+a relative source value in a ```trees``` item, are computed with respect to the profile property ```basePath```. Recall
+from the previous section that the build system will automatically resolve a relative ```basePath``` value with respect
+to the path in which the profile resides, and if missing, ```basePath``` defaults to ```"."```.
 
-``name``
-  The resource name of a module to build (a single Javascript resource); relative paths were relative to the
-  dojo directory.
+Relative destination paths are computed with respect to the profile property ```releaseDir```, optionally with a
+concatenated path segment given by profile property ```releaseName``` (if any). If ```releaseDir``` is relative, then it
+is taken to be relative to ```basePath```; if ```releaseDir``` is missing, then it defaults to ```"./release"```. 
 
-``dependencies``
-  An array of module names to bundle into the built version of the module given by name.
+Let's look at a best-practice example. Consider the following file hierarchy (note: the Dojo Toolkit is distributed with
+the package.json and profile files indicated above. They are also a good source of examples):
 
-``layerDependencies``
-  An array of module names to exclude from the built version of the module given by name.
+.. code-block :: text
 
-``copyrightFile``
-  Filename of a simple text file that was prepended to build layer files. If omitted, the default Dojo
-  copyright notice was used instead.
+    ~/dev
+        /dtk
+            /dojo
+                package.json
+                dojo.profile.js
+            /dijit
+                package.json
+                dijit.profile.js
+            /dojox
+            /util
+                /doh
+                    package.json
+                    doh.profile.js
+        /acme
+            main.html
+            config.js
+            /lib
+                package.json
+                app.profile.js
+        /acme-deploy
+            /lib
+                /dojo
+                /dijit
+                /acme
 
-A 1.6- layer object could also contained the properties ``resourceName``, ``discard``, ``keepRequires``, ``customBase``;
-however, these are not relavent to this discussion, so I'll ignore them.
-
-The intent of a layer object is to describe a so-called "layer" module which is an aggregation of several modules. The
-aggregations is computed to include the module given by name, plus its dependency tree, plus any modules given in
-``dependencies`` plus their dependency trees, minus any modules given in ``layerDependencies`` and their dependency
-trees. Often, modules mentioned in ``layerDependencies`` will themselves be layer modules, but they may also be
-ordinary modules.
-
-Notice that each layer object may describe one or more top-level modules in its ``dependencies`` property. If a top-level
-module was discovered in a layer's ``dependencies`` property that was not explicitly given in the ``prefixes`` property, then that
-module was automatically added to prefixes as a sibling of the dojo tree. Consider the following ``prefixes`` and ``layers``
-property values:
-
-.. code-block :: javascript
-
-  prefixes = [
-      ["dojo", "~/dev/dtk/dojo"],
-      ["dijit", "../dijit"]
-  ],
-  
-  layers = [{
-      name:"../myPackage/main.js",
-      dependencies:["myPackage.menu", "myPackage.scrollbar", "myPackage.mainWindow"]
-  });
-  
-In this example, the v1.6- build system would behave as the following ``prefixes`` value was provided:
-
-.. code-block :: javascript
-
-  prefixes = [
-      ["dojo", "~/dev/dtk/dojo"],
-      ["dijit", "../dijit"]
-      ["myPackage", "../myPackage"]
-  ]
-
-In version 1.6-, the aggregate of all the module trees described by ``prefixes`` (including those implied by ``layers``)
-described which files the build system processed.
-
-In version 1.6-, the profile properties ``releaseDir`` and ``releaseName`` were concatenated to indicated where to write all
-processed module trees, and all module trees were written as siblings whether or not they were siblings as input. If a
-relative path was given for ``releaseDir``, it is taken to be relative to the current working directory, as usual, assumed
-to be util/buildscripts/. The default value for ``releaseDir`` was "../../release". A non-empty ``releaseName`` caused an
-additional path segment to be concatenated to ``releaseDir``; the default value for releaseName was "dojo". Consequently, by
-default, the build system would output a tree rooted at "release/dojo", with release/ located as a sibling of the dojo
-directory.
-
-If you take a moment and consider the design described above, you'll see that it is really describing a system that
-builds several packages, denoted by top-level module names. As usual, Dojo was well ahead of its time as this system
-predates the CommonJS package system by several years. On the other side of the coin the system is highly "dojo centric"
-assuming that all "packages" are relative to dojo and further, by default, computing the location of both dojo and the
-output directories relative to the /util/buildscripts directory. This design is clearly awkward and completely reworked
-as of v1.7. That said, and in spite of the fact I wrote the entire description in past tense, the version 1.7 build
-system can consume v1.6- profiles. But before I describe backcompat, let's look at the new design for specifying which
-files to process and where to write them.
-
-Fundamentals of v1.7+ Profiles
-------------------------------
-
-Starting with v1.7, source trees are specified to the build system exactly as they are specified to the loader: by a
-package configuration (see The Dojo Loader for details on how to write a package configuration). The only difference between the
-loader and the build system is that the loader uses the property ``baseUrl`` whereas the build system uses the property
-``basePath``. The destination location for processed package trees is also specified by a package configuration. By
-default the source package configuration is used to compute the destination location with the exception that the
-property ``destBasePath`` is used in place of ``basePath``. Finally, build profile resources are specified by providing a
-Javascript resource that defines the variable ``profile`` instead of the variable ``dependencies`` found
-in v1.6- profiles. Here is an example of a v1.7 profile that mirrors the example given in the previous section:
+Let's assume the acme directory holds an application and it is desired to write the built resource hierarchy for the
+application to the directory ~/dev/acme-deploy. In the case, the acme profile file at ~/dev/acme/lib/app.profile.js
+might like like this:
 
 .. code-block :: javascript
 
-  profile = {
-    basePath:"~/dev/dtk",
-    packages:[{
-      name:"dojo"
-    },{
-      name:"dijit"
-    },{
-      name:"myPackage"
-    }]
-  };
+    var profile = {
+    	// point basePath to ~/dev
+    	basePath:"../..",
+    
+    	releaseDir:"./acme-deploy",
+    	trees:[
+            ["./dtk/dojo", "./lib/dojo"]
+            ["./dtk/dijit", "./lib/dijit"]
+            ["./acme/lib", "./lib/acme"]
+    }
 
-As described in the loader tutorial, the location for dojo, dijit, and myPackage is computed by appending the package
-name to ``basePath`` (remember ``basePath`` in the build system is equivalent to ``baseUrl`` in the loader). So these packages are
-located at ~/dev/dtk/dojo, ~/dev/dtk/dijit, and ~/dev/dtk/myPackage, respectively.
+Caution: this is not the best way to express this profile; in a moment we'll see how package configurations should be
+used instead. However, this example illustrates a three of key points:
 
-If a relative ``releaseDir`` is given, then the path is taken to be relative to ``basePath``. For version 1.7-, releaseDir
-defaults to "./release" and ``releaseName`` defaults to null. So the built packages will be located at
-~/dev/dtk/release/dojo, ~/dev/dtk/release/dijit, and ~/dev/dtk/release/myPackage.
-
-The flexibility of the package configuration variable allows the build system to source trees from anywhere and write
-the processed output anywhere. It is a much more flexible, not-dojo-centric system for specifying where to read and write
-files.
-
-v1.7 keeps the ``layers`` property but cleans it up a bit. Like 1.6-, ``layers`` is an array of layer objects. Each object
-may contain the following properties:
-
-``name``
-  The AMD module name of the layer
-
-``include``
-  An array of AMD module names indicating the modules to include in the layer; analogous to ``dependencies`` in 1.6-.
-
-``exclude``
-  An array of AMD module names indicating the modules to exclude from the layer; analogous to ``layerDependencies`` in 1.6-.
-
-``copyright``
-  Copyright text to include in the layer
-
-``copyrightFile``
-  [optional] Same as 1.6-.
-
-Unlike 1.6-, v1.7+ will not derive implied packages from layer object's ``include`` or ``exclude`` properties. If you want to
-reference a package, put it in the packages configuration.
-
-Backwards Compatibility
------------------------
-
-The build system can deduce that it is being given a 1.6- profile by noticing a profile resource defines the property
-``dependencies`` and does not define the property ``profile``. When a v1.6- profile is detected, the build system converts
-that profile into a 1.7+ profile on-the-fly as follows:
-
-* The set of top-level modules is computed as usual in v1.6- by taking the union of all modules explicitly given in the
-  prefixes property and all top-level modules implied in the dependencies and layerDependencies properties of any layer
-  objects.
-
-* All top-level modules are interpreted as unique packages and a package configuration is constructed for each package.
-
-* If a relative path is given for the dojo package, it is assumed to be relative to the /util/buildscripts
-  directory; otherwise, if no path is given for the dojo package, it is assumed to be the same dojo tree as is being
-  used to execute the build program (typically /util/buildscripts/../../dojo/)
-
-* If a relative path is given for any other package, it is assumed to be relative to the dojo package as computed above.
-
-* ``basePath`` is computed to be the parent of the dojo package; notice that since all package locations are explicitly
-  computed to be absolute paths as described above, ``basePath`` does not enter into the calculation of any package path.
-
-* The v1.6- default values for ``releaseDir`` and ``releaseName`` are "/util/build/../../release" and "dojo", respectively
-  (exactly as they are in 1.6-), which results in the v1.6 behavior.
-
-For the most part, you can provide a version 1.6- profile to the v1.7+ build system and it will Just Work. As I'll
-describe below, the version 1.7 build system includes the ability to process multiple profiles. If you utilize this
-capability, I strongly recommend you convert all your profiles to the v1.7+ format.
-
-=========================
-Advanced Profile Features
-=========================
+1. Paths ofte can be relative, and when the can be relative, they should be relative.
+2. Resources can be discovered anywhere within the reachable file system.
+3. The tree layout can be changed between source and destination locations.
 
 Resource Tags
 -------------
@@ -411,38 +628,108 @@ tags:
 ``miniExclude``
   The resource should not be copied to the destination of the profile property "mini" is truthy.
 
-Trees, Dirs, and Files
-----------------------
+Using a Package Configuration
+-----------------------------
 
-Notice that a package gives a root for all package resources in the package location property. Typically, it is not
-desirable to blindly process every file in the file system hierarchy rooted at a package location. For example, backup
-files and files used by a version control system (e.g., .svn or .git directories) should not be included in the build
-process. 
-
-In order to refine which files are discovered, each package may explicitly include the property ``trees`` which gives an
-array of triples of (source, destination, regular-expression). source and destination are paths that say the source and
-destination location of file hierarchy trees to discover; regular-expression indicates the files that should be ignored
-in the source tree. If relative paths are provided, they are relative to the package location and package destination
-location, respectively. If no trees are given, the the build system automatically provides the following default value:
+Recall a package configuration includes the property ```location``` that gives the root of all package resources. If
+```location``` is missing, then it is taken to be the package name. If ```location``` is ''not'' an absolute URL (the
+usual case), then it is prefixed with the loader configuration property ```baseUrl```. Since ```baseUrl``` makes little
+sense in the context of the build system which is executed with respect to the local file system rather than an HTTP
+server, the build system uses the profile property ```basePath``` in place of ```baseUrl``` when resolving relative
+paths. With the exception of substituting ```basePath``` for ```baseUrl``` the build system consumes package
+configurations just like the loader. Here is the previous example expressed using this feature:
 
 .. code-block :: javascript
 
-  trees:[
+    var profile = {
+    	// point basePath to ~/dev
+    	basePath:"../..",
+    
+    	releaseDir:"./acme-deploy",
+		packages:[{
+			name:dojo,
+			location:"./dtk/dojo"
+		},{
+			name:dijit,
+			location:"./dtk/dijit"
+		},{
+			name:acme,
+			location:"./acme/lib"
+		}]
+    }
+
+The destination location may be given explicitly in the optional, per-package ```destLocation``` property. If it is
+missing, then it defaults to the package name, a child of the the release directory.
+
+The real power if this feature is not expressing these package hierarchies in a profile, but rather using the
+application configurtion to get the hierarchies for free. For example, assume the acme application expressed its
+configuration in the resource ~/dev/acme/config.js like this:
+
+.. code-block :: javascript
+
+    var dojoConfig = {
+    	// point basePath to ~/dev
+    	basePath:"..",
+		
+		packages:[{
+			name:dojo,
+			location:"./dtk/dojo"
+		},{
+			name:dijit,
+			location:"./dtk/dijit"
+		},{
+			name:acme,
+			location:"./acme/lib"
+		}]
+
+		deps:["main"]
+	}
+
+This configuration is used during to load the application, maybe something like this in the <head> element in ~/dev/acme/main.html.
+
+.. code-block :: html
+
+    <head>
+        <script src="./config.js"></script>
+    	<script src="../dtk/dojo/dojo.js"></script>
+    	<!-- other stuff...maybe -->
+    </head>
+
+Given this, the profile at ~/dev/acme/lib/app.profile.js could be rewritten like this:
+
+.. code-block :: javascript
+
+    var profile = {
+    	// point basePath to ~/dev
+    	basePath:"../..",
+    
+    	releaseDir:"./acme-deploy",
+    }
+
+Finally, both the config.js and profile must be provided to the building to get the desired effect
+
+
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --profile ../../acme/lib/app.profile.js --release
+
+Notice how this design eliminates the need to repeat resource location information. Since the development version of
+the application has already specified this information; there is no reason to force an independent specification for the
+build profile.
+
+Package configurations consumed by the build system can also include the ```trees```, ```dirs```, ```files```, and
+```resourceTags``` properties. Relative source paths found in any of these items are computed with respect to the
+package ```location``` property. If none of these are provided, then ```trees``` defaults to
+
+.. code-block :: javascript
+
     [".", ".", /(\/\.)|(~$)/]
-  ]
 
-This default causes all files in the package source location to be discovered and destined for the package
-destination location with the exception of any file that begins with a dot (typically a hidden file used by editors
-or version control) or ends with "~$", an Emacs backup filename.
+This prevents version control files and editor backup files from being processed.
 
-Although uncommon, the ``trees`` array can contain any number of triples, allowing trees outside the package to be processed
-as part of the package.
-
-The build system similarly allows the properties ``dirs`` and ``files``, both arrays of triples as described above, to be
-included in a package configuration. As the names imply, the items in ``dirs`` indicate single directories to be processed
-while ``files`` indicates single files to be processed.
-
-The per-package ``trees``, ``dirs``, and ``files`` profile machinery to include any reachable file in the build process.
+=========================
+Advanced Profile Features
+=========================
 
 Dojo Pragmas
 ------------
@@ -458,43 +745,6 @@ Burned In Loader Config
 -----------------------
 
 TODO
-
-
-===================
-Processing Profiles
-===================
-
-New to v1.7+, the build system can process many individual profiles from many disparate sources during a single
-build. The following command line options are available to indicate which profiles to process.
-
-``--profile filename``
-  If filename does not end in ".js", then it is assumed to be a profile distributed with the Dojo source release
-  located in util/buildscripts/profiles. Otherwise, filename is assumed to give the name of a Javascript resource
-  that provides either a v1.6- or v1.7+ profile.
-
-``--dojoConfig filename``
-  filename must give the name of a Javascript resource that contains the a variable named dojoConfig that
-  contains a loader configuration. Note that a loader configuration provides a set of package configurations which is
-  sufficient to instruct the build system on which resources to transform. Optionally, the dojoConfig variable may
-  include the property ``dojoBuild`` which may contain profile properties in addition to those (or to override those) at the top
-  level of ``dojoConfig``. For example, the property ``basePath`` may be provided directly as a property of ``dojoConfig`` (of
-  course this property is meaningless to the loader) or indirectly at ``dojoConfigl.dojoBuild.basePath``.
-
-``--require filename``
-  filename must give the name of a Javascript resource that contains the variable ``require`` which is interpreted
-  just as ``dojoConfig`` described above or an application of the function ``require`` to a configuration object. In the latter
-  case, the configuration object is interpreted just as ``dojoConfig`` described above.
-
-``--package filename``
-  filename must give the name of a package.json file. The package.json file is used to describe a single package to be
-  transformed by the build system. Optionally, the property ``dojoBuild`` may be used to specify the a profile for the
-  package. This indirection is necessary since it is illegal for JSON files to contain executable code (for example, the
-  functions used to tag resources).
-
-A single invocation of the build system may include any number of any of the above profile resources. If multiple
-resources are given, then each resource is processed left to right, aggregating properties found in later profiles with
-those found in earlier profiles. See individual properties descriptions for a description about how a multiple values
-for a particular are mixed.
 
 ==========================
 Profile Property Reference
@@ -523,7 +773,7 @@ files
 packages
   An array of package configurations objects. Packages are mixed on a per-package level. Package configuration objects
   may contain the properties name, location, main, and packageMap as described in xxx. The destination location for a package
-  is given by the anlogous properties destName, destLocation, destMain, and destPackageMap. Typically, the destination
+  is given by the analogous properties destName, destLocation, destMain, and destPackageMap. Typically, the destination
   properties are derived from the source properties with destName===name, destLocation===destBasePath/destName,
   destMain===main, and destPackageMap===packageMap. Packages may also contain the properties trees, dirs, and files as
   described in xxx.
