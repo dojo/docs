@@ -98,7 +98,7 @@ In AMD syntax:
 
 .. code-block :: javascript
 
-      require(["dojox/chart/Chart", "dojox/charting/Lines", "dojo/ready"], function(Chart, Lines, ready){
+      require(["dojox/chart/Chart", "dojox/charting/plot2d/Lines", "dojo/ready"], function(Chart, Lines, ready){
         ready(function(){
   	  var chart1 = new Chart("chartamd");
   	  chart1.addPlot("default", {type: Lines});
