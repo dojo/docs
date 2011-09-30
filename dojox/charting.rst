@@ -66,6 +66,7 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
 
     <script type="text/javascript">
       dojo.require("dojox.charting.Chart");
+      dojo.require("dojox.charting.axis2d.Default");
       dojo.require("dojox.charting.plot2d.Lines");
       makeCharts = function(){
   	var chart1 = new dojox.charting.Chart("simplechart");
@@ -83,6 +84,7 @@ In historical syntax:
 .. code-block :: javascript
 
       dojo.require("dojox.charting.Chart");
+      dojo.require("dojox.charting.axis2d.Default");
       dojo.require("dojox.charting.plot2d.Lines");
       makeCharts = function(){
   	var chart1 = new dojox.charting.Chart("simplechart");
@@ -99,7 +101,8 @@ In AMD syntax:
 
 .. code-block :: javascript
 
-      require(["dojox/chart/Chart", "dojox/charting/plot2d/Lines", "dojo/ready"], function(Chart, Lines, ready){
+      require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"], 
+        function(Chart, Default, Lines, ready){
         ready(function(){
   	  var chart1 = new Chart("chartamd");
   	  chart1.addPlot("default", {type: Lines});
