@@ -275,9 +275,11 @@ Based on dojo.touch and dojo.on, this new module provides a mechanism to write g
 dojox/gesture/Base
 
 An abstract parental class for various gesture implementations, it's mainly responsible for:
-- Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap ...
+
+- Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap
 - Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'
 - Firing and bubbling gesture events with on() API
+
 A gesture implementation only needs to extend this with appropriate phase handlers overwritten, e.g. press()|move()|release()|cancel for recognizing and firing gestures
  
 dojox/gesture/tap
@@ -303,7 +305,7 @@ DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
  
 GridX
 
-- An incubation project being worked closely with 'dgrid<https://github.com/kriszyp/dgrid>'_ for the next generation of Dojo Grid.
+- An incubation project being worked closely with 'dgrid <https://github.com/kriszyp/dgrid>'_ for the next generation of Dojo Grid.
 - Provides a highly extensible core and a rich set of modules to be loaded on demand, appropriate modules can be picked up to constitute different Grid instances e.g. MiniGrid(MobileGrid）, AdvancedGrid, TreeGrid etc.
 - Gridx is `demo only <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/gridx/demo.html>`_ in 1.7 time frame.
 
