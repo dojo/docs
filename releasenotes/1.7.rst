@@ -305,7 +305,7 @@ DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
  
 GridX
 
-- An incubation project being worked closely with 'dgrid <https://github.com/kriszyp/dgrid>'_ for the next generation of Dojo Grid.
+- An incubation project being worked closely with `dgrid <https://github.com/kriszyp/dgrid>`_ for the next generation of Dojo Grid.
 - Provides a highly extensible core and a rich set of modules to be loaded on demand, appropriate modules can be picked up to constitute different Grid instances e.g. MiniGrid(MobileGrid）, AdvancedGrid, TreeGrid etc.
 - Gridx is `demo only <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/gridx/demo.html>`_ in 1.7 time frame.
 
