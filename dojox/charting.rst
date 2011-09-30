@@ -82,7 +82,7 @@ In historical syntax:
 .. code-block :: javascript
 
       dojo.require("dojox.charting.Chart");
-      dojo.require("dojox.charting.Lines");
+      dojo.require("dojox.charting.plot2d.Lines");
       makeCharts = function(){
   	var chart1 = new dojox.charting.Chart2D("simplechart");
   	chart1.addPlot("default", {type: "Lines"});
