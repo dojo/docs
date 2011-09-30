@@ -12,7 +12,8 @@ The Dojo Build System
 
 The Dojo Build System
 
-*This document describes the Dojo build system as of v1.7. Historical documentation describing the legacy build system is available here: xxx*
+*This document describes the Dojo build system as of v1.7. Historical documentation describing the legacy build system
+is available here: xxx*
 
 ============
 Introduction
@@ -22,8 +23,8 @@ The Dojo build system is a general-purpose program for transforming a set of res
 problem of transforming a set of resources that comprise an application in order to improve the performance of that
 application. For this particular purpose, two kinds of transformations are typical:
 
-* The content of a resource is analyzed and those portions not required are removed. An example is removing code branches
-  as indicated by has.js feature values known at build time.
+* The content of a resource is analyzed and those portions not required are removed. An example is removing dead code
+  branches as indicated by has.js feature values known at build time.
 
 * Several resources may be bundled into a single resource so that a single server transaction results in downloading
   those resources. An example is combining several AMD module definitions into a single resource.
@@ -42,7 +43,7 @@ these kind of transforms. At its core, the build system is an engine for applyin
 set of transforms to a configurable input set. Examples of other usages include document generators, style checkers,
 code formatters, lint checkers, and many more. In some ways it is like a make program, except the external processes
 that typical make programs execute can be implemented within its the pluggable transform infrastructure. Of course external
-processes can be executes as well.
+processes can be executed as well.
 
 This document describes using the build system for deployment optimizations. See xxx for information about writing your
 own custom transforms and configuring the build system for other uses.
@@ -218,7 +219,7 @@ And for Windows:
   ~/dev/dtk/util/buildscripts> ./build.bat --help
 
 The shell script will prefer node.js if it is available. If you would rather use Rhino, you can use the command line
-swith ```bin=java``` like this:
+swith ``bin=java`` like this:
 
 .. code-block :: text
 
@@ -227,7 +228,7 @@ swith ```bin=java``` like this:
 The Windows batch file always uses Rhino, but includes some hints about how to use node.js if you have a node.js
 installed.
 
-Although the legacy build system could be executed when /util/buildscripts/ was ''not'' the current working directory, to
+Although the legacy build system could be executed when /util/buildscripts/ was *not* the current working directory, to
 do so required a carefully constructed profile. Indeed, many profiles provided with Dojo source distributions won't work
 unless /util/buildscripts/ is the current working directory. The current build system has no such restriction.
 
@@ -239,13 +240,13 @@ The build system is controlled by a Javascript object termed a "profile" which i
 process and how to process them. The profile itself is constructed from one or more inputs:
 
 1. Zero or more Javascript resources that contain a profile object, as specified by the command line switch
-```profile``` which requires a filename argument that points to a profile resource.
+``profile`` which requires a filename argument that points to a profile resource.
 
 2. Zero or more package.json resources that describe a CommonJS package, as specified by the command line switch
-```package``` which requires a path that contains a package.json resource.
+``package`` which requires a path that contains a package.json resource.
 
 3. Zero or more loader configuration variables (dojoConfig or require), as specified by the command line switches
-```require``` or ```dojoConfig``` which require a filename argument that points to a Javascript resource that contains a
+``require`` or ``dojoConfig`` which require a filename argument that points to a Javascript resource that contains a
 loader configuration.
 
 4. Zero or more other command line switches that give (profile-property-name, profile-property-value) pairs.
@@ -257,22 +258,22 @@ Item 4 are always processed last, so they will always override any existing prof
 
 Command line switches have the form
 
--''variable'' ''value''
+-*variable* *value*
 
 Or...
 
---''long-variable-name'' ''value''
+--*long-variable-name* *value*
 
 Not all switches have short-name (single-dash) variants. See xxx for a complete list of command line switches.
 
 The build system also supports switches to have the form
 
-''variable''=''value''
+*variable*=*value*
 
 This was the form required by the legacy build system released with Dojo v1.6-; it is deprecated in favor of the
 more-traditional form.
 
-The build system includes the command switch ```check-args``` which processes the command line, reads all profile,
+The build system includes the command switch ``check-args`` which processes the command line, reads all profile,
 package, dojoConfig, and require resources, and then prints out the raw input and the resulting mixed profile. This
 switch is a great resource for understanding and debugging how a particular build system invocation is consuming the
 command line. For example,
@@ -301,7 +302,7 @@ A profile is a Javascript object that controls the build application. As describ
 aggregate of one or more resources specified on the command line. Usually, a profile resource is used as the basis for
 the aggregate.
 
-A profile resource is a Javascript resource that defines the variable ```profile```, which must be a Javascript
+A profile resource is a Javascript resource that defines the variable ``profile``, which must be a Javascript
 object. Typically, a profile resource is given the file type
 ".profile.js". /util/build/examples/simple-profile1.profile.js contains a trivial example; here are the contents of that
 resource:
@@ -313,8 +314,8 @@ resource:
     someOtherProperty:"someOtherValue"
   };
 
-If we invoke the build system with the ```profile``` switch indicating that profile and dump the result with the
-```check-args``` switch, this is what you'll see:
+If we invoke the build system with the ``profile`` switch indicating that profile and dump the result with the
+``check-args`` switch, this is what you'll see:
 
 .. code-block :: text
 
@@ -328,16 +329,16 @@ If we invoke the build system with the ```profile``` switch indicating that prof
   				}]}
 
 Notice the build system automatically appends the ".profile.js" suffix to the profile argument if that argument does not
-contain a file type. When a profile argument is given with no file type, ''and'' the profile argument contains no path
-segments, ''and'' the profile resource does not exist in the current working directory, then the build system will try
+contain a file type. When a profile argument is given with no file type, *and* the profile argument contains no path
+segments, *and* the profile resource does not exist in the current working directory, then the build system will try
 to find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js" as
 usual. It is possible to specify a profile with a file type different than ".profile.js" by including the file type in
 the profile argument.
 
-Notice that the property ```basePath``` was automatically added to the profile object and set to the path at which the
-profile resides. If the profile contained the property ```basePath``` and the value of that property was a relative
+Notice that the property ``basePath`` was automatically added to the profile object and set to the path at which the
+profile resides. If the profile contained the property ``basePath`` and the value of that property was a relative
 path, then the build system would automatically resolve that path with respect to the directory in which the profile
-resources resides--''not'' the current working directory. For example, /util/build/examples/relative-base-path.profile.profile.js
+resources resides--*not* the current working directory. For example, /util/build/examples/relative-base-path.profile.profile.js
 has contents:
 
 .. code-block :: javascript
@@ -346,7 +347,7 @@ has contents:
     	basePath:"."
     };
 
-Which causes the following ```basePath``` initialization:
+Which causes the following ``basePath`` initialization:
 
 .. code-block :: text
 
@@ -355,7 +356,7 @@ Which causes the following ```basePath``` initialization:
     processing profile resource /home/rcgill/dev/dtk/util/build/examples/relative-base-path.profile.js
     {profiles:[{basePath:"/home/rcgill/dev/dtk/util/build/examples"}]}
 
-```basePath``` is used as the reference path when resolving relative source paths. This design allows a profile resource
+``basePath`` is used as the reference path when resolving relative source paths. This design allows a profile resource
 to be constructed and reside within a package hierarchy in such a way that it is independent of both the location of
 the package hierarchy within the file system and the current working directory at the time the build program is
 invoked.
@@ -379,7 +380,7 @@ has contents:
     	buildTimestamp:timestamp()
     };
 
-When exercised with the ```check-args``` switch, you should see something like this:
+When exercised with the ``check-args`` switch, you should see something like this:
 
 .. code-block :: text
 
@@ -391,7 +392,7 @@ When exercised with the ```check-args``` switch, you should see something like t
     					 buildTimestamp:"2011-9-29-21:34:2"
     				}]}
 
-The command switch ```dojoConfig``` cause the build system read configurations as given by a variable ```dojoConfig```
+The command switch ``dojoConfig`` cause the build system read configurations as given by a variable ``dojoConfig``
 as if it was an ordinary profiles. The next section describes how the build system consumes ordinary
 configurations. Also note that the dojo loader will simply ignore any configuration variable that it does not
 define. These two feature combine to allow all or part of an application's build profile to be contained within the
@@ -409,7 +410,7 @@ application configuration. For example, /util/build/examples/dojoConfig.js has c
     	}]
     };
 
-When exercised with the ```check-args``` switch, you should see something like this:
+When exercised with the ``check-args`` switch, you should see something like this:
 
 .. code-block :: text
 
@@ -434,7 +435,7 @@ Notice that basePath, as automatically provided by the build system, when combin
 correct locations of the dojo and dijit packages. Also take note that you must provide the complete filename, including
 a the file type (if any).
 
-The command switch ```require``` is similar to ```dojoConfig```, but processes a configuration argument applied to the
+The command switch ``require`` is similar to ``dojoConfig``, but processes a configuration argument applied to the
 global AMD require function. For example, /util/build/examples/require.js has contents:
 
 .. code-block :: javascript
@@ -449,7 +450,7 @@ global AMD require function. For example, /util/build/examples/require.js has co
     	}]
     });
 
-When exercised with the ```check-args``` switch, you should see something like this:
+When exercised with the ``check-args`` switch, you should see something like this:
 
 .. code-block :: text
 
@@ -470,16 +471,16 @@ When exercised with the ```check-args``` switch, you should see something like t
     					 ]
     				}]}
 
-As usual, if absent or relative, basePath is automatically computed. Just like ```dojoConfig```, you must provide the
+As usual, if absent or relative, basePath is automatically computed. Just like ``dojoConfig``, you must provide the
 complete filename.
 
-The command switch ```package``` indicates a package.json file or files, and works slightly differently than the others
+The command switch ``package`` indicates a package.json file or files, and works slightly differently than the others
 discussed so far. First, since the filename is fixed ("package.json"), the file path at which the package.json file
 resides is given. Second, more than one package.json files may be given by providing a comma-separated list of file
 paths.
 
 As each package.json resource is processed, a profile object is manufactured with the following contents (the variable
-```packageJson``` in the code that follows represents the package.jon object):
+``packageJson`` in the code that follows represents the package.jon object):
 
 .. code-block :: text
 
@@ -494,9 +495,9 @@ As each package.json resource is processed, a profile object is manufactured wit
     }
 
 Notice that the package.json object is embedded in the package object that the package.json object represents. Also
-notice that the property ```__selfFilename``` is set the the absolute path at which the package.Json file resides and is
+notice that the property ``__selfFilename`` is set the the absolute path at which the package.Json file resides and is
 added to the package.Json object. This gives the reference path for any relative paths found in the package.json object,
-the ```lib``` path in particular.
+the ``lib`` path in particular.
 
 ====================
 Specifying Resources
@@ -507,44 +508,44 @@ directories, and/or individual filenames. There are two ways to specify which tr
 discover:
 
 * provide an explicit list of trees, directories, and/or filenames by providing values for the profile properties
-  ```trees```, ```dirs```, and ```files```.
+  ``trees``, ``dirs``, and ``files``.
 
 * provide a loader configuration that includes one or more package configurations. All resources in the tree implied by
-  the package configuration ```location property``` will be discovered.
+  the package configuration ``location property`` will be discovered.
 
 Trees, Dirs, and Files
 ----------------------
 
-The profile properties ```trees```, ```dirs```, and ```files``` all have the same format: an array of (source,
-destination [,ignore]) pairs or triples. The source and destination are path names for ```trees``` and ```dirs``` and
-filenames for ```files```. In each case the properties say where to discover resources and where to output the
+The profile properties ``trees``, ``dirs``, and ``files`` all have the same format: an array of (source,
+destination [,ignore]) pairs or triples. The source and destination are path names for ``trees`` and ``dirs`` and
+filenames for ``files``. In each case the properties say where to discover resources and where to output the
 discovered resources after they have been transformed. 
 
 The optional ignore value is a regular expression that finds resources that should be ignored. As each resource is
 discovered, the full filename (including the complete path), is tested against the regular expression; if the regular
 expression is satisfied, then the resource is not entered into the transform process. The ignore parameter should not be
-used with ```files```, since this property gives a specific set of filenames to discover; if you want to ignore a
-specific filename, then just don't put it into the ```files``` property to begin with. Typically, the ignore regular
+used with ``files``, since this property gives a specific set of filenames to discover; if you want to ignore a
+specific filename, then just don't put it into the ``files`` property to begin with. Typically, the ignore regular
 expression is used to exclude files such as version control files and editor backup files that ought not be part of a
-deployment. A common ignore regular expression is ```/(\/\.)|(~$)/```.
+deployment. A common ignore regular expression is ``/(\/\.)|(~$)/``.
 
-In the case of ```trees```, the discover process discovers all files in the file system hierarchy rooted at each given
+In the case of ``trees``, the discover process discovers all files in the file system hierarchy rooted at each given
 source path and schedules those resources for writing to the same relative location in the hierarchy rooted at the
-associated destination path. ```dirs``` works the same except that only each single directory is processed--the tree is
-not traversed. Lastly, ```files``` simply lists a set of specific files to discover.
+associated destination path. ``dirs`` works the same except that only each single directory is processed--the tree is
+not traversed. Lastly, ``files`` simply lists a set of specific files to discover.
 
 Relative Paths
 --------------
 
-Typically, profiles should ''not'' contain absolute paths. Instead all paths should be relative which allows project
+Typically, profiles should *not* contain absolute paths. Instead all paths should be relative which allows project
 trees to be copied to different environments without affects location semantics. All relative source paths, for example,
-a relative source value in a ```trees``` item, are computed with respect to the profile property ```basePath```. Recall
-from the previous section that the build system will automatically resolve a relative ```basePath``` value with respect
-to the path in which the profile resides, and if missing, ```basePath``` defaults to ```"."```.
+a relative source value in a ``trees`` item, are computed with respect to the profile property ``basePath``. Recall
+from the previous section that the build system will automatically resolve a relative ``basePath`` value with respect
+to the path in which the profile resides, and if missing, ``basePath`` defaults to ``"."``.
 
-Relative destination paths are computed with respect to the profile property ```releaseDir```, optionally with a
-concatenated path segment given by profile property ```releaseName``` (if any). If ```releaseDir``` is relative, then it
-is taken to be relative to ```basePath```; if ```releaseDir``` is missing, then it defaults to ```"./release"```. 
+Relative destination paths are computed with respect to the profile property ``releaseDir``, optionally with a
+concatenated path segment given by profile property ``releaseName`` (if any). If ``releaseDir`` is relative, then it
+is taken to be relative to ``basePath``; if ``releaseDir`` is missing, then it defaults to ``"./release"``. 
 
 Let's look at a best-practice example. Consider the following file hierarchy (note: the Dojo Toolkit is distributed with
 the package.json and profile files indicated above. They are also a good source of examples):
@@ -630,12 +631,12 @@ tags:
 Using a Package Configuration
 -----------------------------
 
-Recall a package configuration includes the property ```location``` that gives the root of all package resources. If
-```location``` is missing, then it is taken to be the package name. If ```location``` is ''not'' an absolute URL (the
-usual case), then it is prefixed with the loader configuration property ```baseUrl```. Since ```baseUrl``` makes little
+Recall a package configuration includes the property ``location`` that gives the root of all package resources. If
+``location`` is missing, then it is taken to be the package name. If ``location`` is *not* an absolute URL (the
+usual case), then it is prefixed with the loader configuration property ``baseUrl``. Since ``baseUrl`` makes little
 sense in the context of the build system which is executed with respect to the local file system rather than an HTTP
-server, the build system uses the profile property ```basePath``` in place of ```baseUrl``` when resolving relative
-paths. With the exception of substituting ```basePath``` for ```baseUrl``` the build system consumes package
+server, the build system uses the profile property ``basePath`` in place of ``baseUrl`` when resolving relative
+paths. With the exception of substituting ``basePath`` for ``baseUrl`` the build system consumes package
 configurations just like the loader. Here is the previous example expressed using this feature:
 
 .. code-block :: javascript
@@ -657,7 +658,7 @@ configurations just like the loader. Here is the previous example expressed usin
 		}]
     }
 
-The destination location may be given explicitly in the optional, per-package ```destLocation``` property. If it is
+The destination location may be given explicitly in the optional, per-package ``destLocation`` property. If it is
 missing, then it defaults to the package name, a child of the the release directory.
 
 The real power if this feature is not expressing these package hierarchies in a profile, but rather using the
@@ -716,9 +717,9 @@ Notice how this design eliminates the need to repeat resource location informati
 the application has already specified this information; there is no reason to force an independent specification for the
 build profile.
 
-Package configurations consumed by the build system can also include the ```trees```, ```dirs```, ```files```, and
-```resourceTags``` properties. Relative source paths found in any of these items are computed with respect to the
-package ```location``` property. If none of these are provided, then ```trees``` defaults to
+Package configurations consumed by the build system can also include the ``trees``, ``dirs``, ``files``, and
+``resourceTags`` properties. Relative source paths found in any of these items are computed with respect to the
+package ``location`` property. If none of these are provided, then ``trees`` defaults to
 
 .. code-block :: javascript
 
