@@ -51,3 +51,7 @@ While it is possible to trigger the event by directly calling the onfoo() or onM
 One can upgrade most classes with onEvent methods to be usable with dojo/on by simply adding the Evented class as a base class.
 
 Note that some event emitting objects, like Dijit widgets, have their own event emitting implementation, and define their own event names.
+
+Transitioning to Dojo 2.0
+-------------------------
+There are a number of objects in Dojo (like Dnd and Animation) that are derived from Evented. However, these event emitting objects are likely to change their events (both names and emitted event objects) in 2.0, so one should not assume that code using dojo/Evented to listen to Dojo objects will work unchanged in 2.0.
