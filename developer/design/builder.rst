@@ -12,7 +12,7 @@ The Dojo Build System
 
 The Dojo Build System
 
-This document describes the Dojo ''build'' system as of v1.7. Historical documentation describing the legacy build system is available here: xxx
+''This document describes the Dojo build system as of v1.7. Historical documentation describing the legacy build system is available here: xxx''
 
 ============
 Introduction
