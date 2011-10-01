@@ -983,7 +983,92 @@ tags:
 Transforms
 ==========
 
-The Dojo Toolkit includes the transforms listed in xxx. They are applied to discovered resources as follows:
+The Dojo Toolkit includes the transforms described in this section. These descriptions are overview; each transform
+contains a separate reference page with details.
+
+Transform depsDump
+------------------
+
+Prints the module dependency tree of an application.
+
+Transform depsScan
+------------------
+
+Determines a modules dependencies and interns dojo.cache string resources.
+
+Transform dojoBoot
+------------------
+
+Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
+
+Transform dojoPragmas
+---------------------
+
+Applies dojo pragmas to a resource.
+
+Transform dojoReport
+---------------------
+
+Outputs a report describing a single run of the deployment optimization transforms.
+
+Transform hasFindAll
+--------------------
+
+Outputs a report of all has.js usages.
+
+Transform hasFixup
+------------------
+
+Trims dead code branches consequent to has feature values known at build time.
+
+Transform hasReport
+-------------------
+
+Outputs a report describing the name and location of all has.js feature tests.
+
+Transform insertSymbols
+-----------------------
+
+Inserts debugging symbols into Javascript resources.
+
+Transform read
+--------------
+
+Reads a resource from the file system.
+
+Transform write
+---------------
+
+Writes a resource to the file system.
+
+Transform writeAmd
+------------------
+
+Writes an AMD module to the file system.
+
+Transform writeCss
+------------------
+
+Writes a CSS style sheet to the file system
+
+Transform writeDojo
+-------------------
+
+Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
+
+Transform writeOptimized
+------------------------
+
+Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
+
+
+===================
+Applying Transforms
+===================
+
+As each resource is discovered, it is submitted to a series of
+transforms. The build system decides which transforms to apply by testing each resource against the conditions listed
+below, in the order listed. The first test that passes indicates the transforms to apply.
 
 1. Tagged ``ignore``
 
@@ -997,10 +1082,12 @@ The Dojo Toolkit includes the transforms listed in xxx. They are applied to disc
 
   * Same as [1]
 
-tagged ``copyOnly``
+4. Tagged ``copyOnly``
+
   * Copy resource from source location to destination location (copy).
 
-the module ``"dojo/dojo"``
+5. The module ``"dojo/dojo"``
+
   * Read the resource (read)
   * Apply dojo progras (dojoPragmas)
   * Find all has.js applications (hasFindAll)
@@ -1008,22 +1095,26 @@ the module ``"dojo/dojo"``
   * Write the processed loader module to the destination with a configuration (writeDojo)
   * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
 
-modules with the segment ``"/nls/"`` in their module identifier
+6. Modules with the segment ``"/nls/"`` in their module identifier
+
   * Read the resource (read)
   * Apply dojo progras (dojoPragmas)
   * Find all has.js applications (hasFindAll)
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
 
-resources  with ``"/nls/"`` in their filename and the filetype of ".js"
-  * Same as above
+7. resources  with ``"/nls/"`` in their filename and the filetype of ".js"
 
-tagged ``"synthetic"`` and ``"amd"``
+  * Same as [6].
+
+8. Tagged ``"synthetic"`` and ``"amd"``
+
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
   * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
 
-tagged ``"amd"``
+9. Tagged ``"amd"``
+
   * Read the resource (read)
   * Apply dojo progras (dojoPragmas)
   * Find all has.js applications (hasFindAll)
@@ -1034,28 +1125,33 @@ tagged ``"amd"``
   * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
 
 
-, or resource has a filetype of ".js" and is tagged ``"test"`` and ``profile.copyT
+10. Resource has a filetype of ".js" and is tagged ``"test"`` and ``profile.copyTests`` is build
 
+  * Same at [9].
 
+11. Resource has filetype of ".js" and is tagged is not tagged ``"test"``
 
-=========================
-Advanced Profile Features
-=========================
+  * Same as [9].
 
-Dojo Pragmas
-------------
+12. Tagged as ``"test"``
 
-TODO
+  * Read the resource (read)
+  * Apply dojo progras (dojoPragmas)
+  * Write the processed  module to the destination (write)
 
-Replacements
-------------
+13. Resource has file type of ".html" or ".htm"
 
-TODO
+  * Same at [12].
 
-Burned In Loader Config
------------------------
+14. Resource has file type of ".css"
 
-TODO
+  * Read the resource (read)
+  * Optimize CSS (optimizeCss)
+  * Write the processed  module to the destination (write)
+
+15. Any other resource
+
+  * Copy resource from source location to destination location (copy).
 
 ==========================
 Profile Property Reference
@@ -1165,12 +1261,21 @@ system, and AMD module format in 1.7: ``localeList``, ``loader``, ``log``, ``xdD
 ``expandProvide``, ``buildLayers``, ``query``, ``removeDefaultNameSpace``, ``addGuards``.
 
 
-=====================
-Command Line Switches
-=====================
+==============================
+Command Line Switche Reference
+==============================
 
-In addition to the ``profile``, ``dojoConfig``, ``require``, and ``package`` command line switches mentioned in xxx, the
-build system defines the following "action" switches:
+profile
+  TODO
+
+dojoConfig
+  TODO
+
+require
+  TODO
+
+package
+  TODO
 
 release
   Process all profiles resources, discover and transform all resources
@@ -1183,6 +1288,12 @@ help
 
 version
   Print the version number of the build program
+
+check
+  TODO
+
+check-args
+  TODO
 
 Although the "action=switch" defined by the v1.6- system may be used, that syntax is deprecated and you should just
 specify the switch.
