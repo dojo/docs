@@ -985,9 +985,7 @@ Transforms
 
 The Dojo Toolkit includes the transforms listed in xxx. They are applied to discoverd resources as follows:
 
-tagged **miniExclude** and ``profile.mini`` is true, or...
-tagged **test** and ``profile.copyTests`` is false, or...
-tagged **ignore**
+tagged **miniExclude** and ``profile.mini`` is true, or tagged **test** and ``profile.copyTests`` is false, or tagged **ignore**
   Do nothing; the resource is not read or written.
 
 tagged **copyOnly**
