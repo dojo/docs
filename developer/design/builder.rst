@@ -52,7 +52,7 @@ own custom transforms and configuring the build system for other uses.
 Overview
 ========
 
-The overall design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
+The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
 user-configurable Javascript object termed a "profile".
 
@@ -68,9 +68,9 @@ resource, don't do anything. Such a "noop" may be applied to version control fil
 that should not be moved to the deployment tree.
 
 A slightly more interesting example is a resource that is copied from the development tree to the deployment
-tree. Notice that part of such a process causes the build system to "know" that the deployment tree will contain the
-resource. This knowledge may be used by other transforms that ensure requisite files exist. For example, a CSS style
-sheet checker could check to see that all referenced images existed.
+tree. Notice the build system to "know" that the deployment tree will contain the resource. This knowledge may be used
+by other transforms that ensure requisite files exist. For example, a CSS style sheet checker could check to see that
+all referenced images exist.
 
 Perhaps the most important transform for resource deployment is dependency scanning Javascript modules and then bundling
 dependencies into a single resource to reduce the HTTP transactions required to load a resource.
@@ -78,7 +78,7 @@ dependencies into a single resource to reduce the HTTP transactions required to 
 Available Deployment Optimization Transforms
 --------------------------------------------
 
-Dojo includes the deployment optimization transforms listed below. This document gives an overview of each
+The Dojo Toolkit includes the deployment optimization transforms listed below. This document gives an overview of each
 transform; a more-detailed reference guide is also available for each transform.
 
 compactCss
@@ -138,11 +138,10 @@ Quick Reference Guide
 A quick reference guide (TODO--link) is available that lists all command line options and profile switches that control resource
 discovery and the transforms.
 
-Advanced Topics
----------------
+Extra Features
+--------------
 
-The build system may be used to execute advanced deployment optimization scenarios. These are discussed in
-separate documents as follows:
+These are discussed in separate documents as follows:
 
 xxx
   Describes how to scan HTML files to automatically create a profile.
@@ -151,8 +150,8 @@ xxx
   Describes how to build a custom dojo.js with a nonstandard set of modules.
 
 xxx 
-  Describes how to build packages that relocate module namespaces (this feature replaces the legacy so-called
-  multi-version feature).
+  Describes how to build packages that relocate module namespaces (this feature replaces the so-called
+  multi-version feature available with the legacy loader and builder).
 
 Road Map
 --------
@@ -205,7 +204,9 @@ Rhino may also be used. Owing to the requisite Java noise, its command is more c
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main  ../../dojo/dojo.js baseUrl=../../dojo" --help
+  ~/dev/dtk/util/buildscripts> java -Xms256m -Xmx256m \
+  -cp ../shrinksafe/js.jar:../closureCompiler/compiler.jar:../shrinksafe/shrinksafe.jar org.mozilla.javascript.tools.shell.Main \
+   ../../dojo/dojo.js baseUrl=../../dojo" --help
 
 In order to ease this pain, util/buildscripts/ includes a batch program for Windows and a shell script for non-Windows
 environments. For the shell script, issue the command
@@ -249,36 +250,35 @@ process and how to process them. The profile itself is constructed from one or m
 loader configuration.
 
 3. Zero or more package.json resources that describe a CommonJS package, as specified by the command line switch
-``--package``. Thiw switch requires a path that contains a package.json resource.
+``--package``. This switch requires a path that points to a directory that contains a package.json resource.
 
 4. Zero or more other command line switches that give (profile-property-name, profile-property-value) pairs.
 
 The build system processes each resource described above (Items 1-3) in the order provided on the command line; if two
-or more resources attempt to set the same profile property, then the last input wins. Some profile properties are mixed
-one or two-level deep; see xxx for a description about how each profile property is mixed. The command line switches in
-Item 4 are always processed last, so they will always override any existing profile property.
+or more resources attempt to set the same profile property, then the last input wins. Some profile properties are more
+deeply; see xxx for a description about how each profile property is mixed. The command line switches in Item 4 are
+processed last, so they will always override any existing profile property.
 
 Command line switches have the form
 
--*variable* *value*
+  -*variable* *value*
 
 Or...
 
---*long-variable-name* *value*
+  --*long-variable-name* *value*
 
 Not all switches have short-name (single-dash) variants. See xxx for a complete list of command line switches.
 
 The build system also supports switches to have the form
 
-*variable* = *value*
+  *variable*=*value*
 
 This was the form required by the legacy build system released with Dojo v1.6-; it is deprecated in favor of the
 more-traditional form.
 
 The build system includes the command switch ``--check-args`` which processes the command line, reads all profile,
-dojoConfig, require, and package resources, and then prints out the raw input and the resulting mixed profile. This
-switch is a great resource for understanding and debugging how a particular build system invocation is consuming the
-command line. For example,
+dojoConfig, require, and package resources, and then prints out the raw input. This switch is a great tool for
+understanding and debugging how a particular build system invocation is consuming the command line. For example,
 
 .. code-block :: text
 
@@ -300,9 +300,9 @@ Javascript numbers, booleans, and null.
 Profile Basics
 ==============
 
-A profile is a Javascript object that controls the build application. As described above, it is constructed as the
-aggregate of one or more resources specified on the command line. Usually, a profile resource is used as the basis for
-the aggregate and then augmented by one or more loader configurations and/or CommonJS package.json resources.
+As described above, the profile used for any particular invocation of the build system is constructed as the aggregate
+of one or more resources specified on the command line. Usually, either a profile resource or a loader configuration
+resource is used as the basis for the aggregate.
 
 Profile Resources
 -----------------
@@ -335,10 +335,10 @@ If we invoke the build system with the ``profile`` switch indicating that profil
 
 Notice the build system automatically appends the ".profile.js" suffix to the profile argument if that argument does not
 contain a file type. When a profile argument is given with no file type, *and* the profile argument contains no path
-segments, *and* the profile resource does not exist in the current working directory, then the build system will try
-to find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js" as
-usual. It is possible to specify a profile with a file type different than ".profile.js" by including the file type in
-the profile argument.
+segments, *and* the profile resource does not exist in the current working directory, then the build system will try to
+find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js". It is
+possible to specify a profile with a file type different than ".profile.js" by including the file type in the profile
+argument. Or course your can give the ".profile.js" type explicitly as well.
 
 Notice that the property ``basePath`` was automatically added to the profile object and set to the path at which the
 profile resides. If the profile contains the property ``basePath`` and the value of that property is a relative
@@ -361,10 +361,9 @@ Which causes the following ``basePath`` initialization:
     processing profile resource /home/rcgill/dev/dtk/util/build/examples/relative-base-path.profile.js
     {profiles:[{basePath:"/home/rcgill/dev/dtk/util/build/examples"}]}
 
-``basePath`` is used as the reference path when resolving relative source paths. This design allows a profile resource
-to be constructed and reside within a package hierarchy in such a way that it is independent of both the location of
-the package hierarchy within the greater file system and the current working directory at the time the build program is
-invoked.
+``basePath`` is used as the reference path when resolving relative source paths. This design allows the semantics of
+relative paths contained within the profile resource te be independent of both the location of the package hierarchy
+within the greater file system and the current working directory at the time the build program is invoked.
 
 Profile resources are Javascript resources that are evaluated by the build system. They are not restricted to hold
 JSON. They can, and often will, contain functions. For example, /util/build/examples/profile-with-code.profile.js
@@ -400,11 +399,11 @@ When exercised with the ``check-args`` switch, you should see something like thi
 Congifuruation Resources
 ------------------------
 
-The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig``
-as if it was an ordinary profile. The next section describes how the build system consumes 
-configurations. Also note that the dojo loader will simply ignore any configuration variable that it does not
-define. These two feature combine to allow all or part of an application's build profile to be contained within the
-application configuration. For example, /util/build/examples/dojoConfig.js has contents:
+The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig`` as
+if it was an ordinary profile. The next section describes how the build system consumes configurations. Also note that
+the dojo loader will simply ignore any configuration variable that it does not define. These two feature combine to
+allow all or part of an application's build profile to be contained within the application configuration. For example,
+/util/build/examples/dojoConfig.js has contents:
 
 .. code-block :: javascript
 
@@ -487,11 +486,11 @@ package.json Resources
 
 The command switch ``package`` indicates a package.json file or files, and works slightly differently than the others
 discussed so far. First, since the filename is fixed ("package.json"), the file path at which the package.json file
-resides is given. Second, more than one package.json files may be given by providing a comma-separated list of file
-paths.
+resides is given, absent the explicit name "package.json". Second, more than one package.json files may be given by
+providing a comma-separated list of file paths.
 
 As each package.json resource is processed, a profile object is manufactured with the following contents (the variable
-``packageJson`` in the code that follows represents the package.jon object):
+``packageJson`` in the code that follows represents the package.json object):
 
 .. code-block :: text
 
@@ -501,14 +500,14 @@ As each package.json resource is processed, a profile object is manufactured wit
     		name:packageJson.progName || packageJson.name,
     		packageJson:{
     			__selfFilename:<path at which the package.Json file resides>
-    			<packageJson properties>
+    			<remaining packageJson properties>
     	}]
     }
 
-Notice that the package.json object is embedded in the package object that the package.json object represents. Also
-notice that the property ``__selfFilename`` is set the the absolute path at which the package.Json file resides and is
-added to the package.Json object. This gives the reference path for any relative paths found in the package.json object,
-the ``lib`` path in particular.
+Notice that the package.json object is embedded in a package configuration object that the package.json object
+represents. Also notice that the property ``__selfFilename`` is set the the absolute path at which the package.Json file
+resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
+package.json object, the ``directories.lib`` path in particular.
 
 ====================
 Specifying Resources
@@ -522,7 +521,8 @@ discover:
   ``trees``, ``dirs``, and ``files``.
 
 * provide a loader configuration that includes one or more package configurations. All resources in the tree implied by
-  the package configuration ``location`` property will be discovered.
+  the package configuration ``location`` property will be discovered; further, each package configuration may contain
+  it's own set of ``trees``, ``dirs``, and ``files`` properties.
 
 Trees, Dirs, and Files
 ----------------------
@@ -532,11 +532,11 @@ destination [,ignore]) pairs or triples. The source and destination are path nam
 filenames for ``files``. In each case the properties say where to discover resources and where to output the
 discovered resources after they have been transformed. 
 
-The optional ignore value is a regular expression that finds resources that should be ignored. As each resource is
+The optional ignore value is a regular expression that solves for resources that should be ignored. As each resource is
 discovered, the full filename (including the complete path), is tested against the regular expression; if the regular
 expression is satisfied, then the resource is not entered into the transform process. The ignore parameter should not be
-used with ``files``, since this property gives a specific set of filenames to discover; if you want to ignore a
-specific filename, then just don't put it into the ``files`` property to begin with. Typically, the ignore regular
+used with ``files``, since this property gives a specific set of filenames to discover; after all, if you want to ignore
+a specific filename, then just don't put it into the ``files`` property to begin with. Typically, the ignore regular
 expression is used to exclude files such as version control files and editor backup files that ought not be part of a
 deployment. A common ignore regular expression is ``/(\/\.)|(~$)/``.
 
@@ -555,8 +555,9 @@ from the previous section that the build system will automatically resolve a rel
 to the path in which the profile resides, and if missing, ``basePath`` defaults to ``"."``.
 
 Relative destination paths are computed with respect to the profile property ``releaseDir``, optionally with a
-concatenated path segment given by profile property ``releaseName`` (if any). If ``releaseDir`` is relative, then it
-is taken to be relative to ``basePath``; if ``releaseDir`` is missing, then it defaults to ``"./release"``. 
+concatenated path segment given by profile property ``releaseName``. If ``releaseDir`` is relative, then it
+is taken to be relative to ``basePath``; if ``releaseDir`` is missing, then it defaults to ``"./release"``. The result
+of normalizing ``releaseDir`` (if necessary) and appending ``releaseName`` (if any) is termed "destBasePath".
 
 Let's look at an example. Consider the following file hierarchy (note: the Dojo Toolkit is distributed with
 the package.json and profile files indicated below--these are a good source of examples):
@@ -579,9 +580,9 @@ the package.json and profile files indicated below--these are a good source of e
         /acme
             main.html
             config.js
+            app.profile.js
             /lib
                 package.json
-                app.profile.js
         /acme-deploy
             /lib
                 /dojo
@@ -589,14 +590,14 @@ the package.json and profile files indicated below--these are a good source of e
                 /acme
 
 Let's assume the acme directory holds an application and it is desired to write the built resource hierarchy for the
-application to the directory ~/dev/acme-deploy. In this case, the acme profile file at ~/dev/acme/lib/app.profile.js
+application to the directory ~/dev/acme-deploy. In this case, the acme profile file at ~/dev/acme/app.profile.js
 might like like this:
 
 .. code-block :: javascript
 
     var profile = {
     	// point basePath to ~/dev
-    	basePath:"../..",
+    	basePath:"..",
     
     	releaseDir:"./acme-deploy",
     	trees:[
@@ -606,7 +607,7 @@ might like like this:
     }
 
 Caution: this is not the best way to express this profile; in a moment we'll see how package configurations should be
-used instead. However, this example illustrates a three of key points:
+used instead. However, this example illustrates three key points:
 
 1. Paths can usually be relative. When they can be relative, they should be relative.
 2. Resources can be discovered anywhere within the reachable file system.
@@ -627,9 +628,12 @@ configurations just like the loader. Here is the previous example expressed usin
 
     var profile = {
     	// point basePath to ~/dev
-    	basePath:"../..",
-    
-    	releaseDir:"./acme-deploy",
+    	basePath:"..",
+
+		// point releaseDir to ~/dev/acme-deploy
+    	releaseDir:"./acme-deploy"
+ 
+		// now a typical loader packages configuration
 		packages:[{
 			name:dojo,
 			location:"./dtk/dojo"
@@ -639,7 +643,7 @@ configurations just like the loader. Here is the previous example expressed usin
 		},{
 			name:acme,
 			location:"./acme/lib"
-		}]
+		}],
     }
 
 The destination location of each package may be given explicitly in the optional, per-package ``destLocation``
@@ -652,9 +656,7 @@ configuration in the resource ~/dev/acme/config.js like this:
 .. code-block :: javascript
 
     var dojoConfig = {
-    	// point basePath to ~/dev
-    	basePath:"..",
-		
+		// loader configuration...
 		packages:[{
 			name:dojo,
 			location:"./dtk/dojo"
@@ -664,13 +666,11 @@ configuration in the resource ~/dev/acme/config.js like this:
 		},{
 			name:acme,
 			location:"./acme/lib"
-		}]
-
+		}],
 		deps:["main"]
 	}
 
-Remember the dojo loader will simply ignore the ``basePath`` property; it is only meaningful to the build system. This
-configuration may be used to load the application, maybe something like this in the <head> element in
+This configuration may be used to load the application, maybe something like this in the <head> element in
 ~/dev/acme/main.html.
 
 .. code-block :: html
@@ -681,55 +681,146 @@ configuration may be used to load the application, maybe something like this in 
     	<!-- other stuff...maybe -->
     </head>
 
-Given this, the profile at ~/dev/acme/lib/app.profile.js could be rewritten like this:
+Given this, the profile at ~/dev/acme/app.profile.js could be rewritten like this:
 
 .. code-block :: javascript
 
     var profile = {
     	// point basePath to ~/dev
-    	basePath:"../..",
-    
+    	basePath:"..",
     	releaseDir:"./acme-deploy",
     }
 
 Finally, both the config.js and profile must be provided to the build system to get the desired effect
 
+.. code-block :: text
+
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --profile ../../acme/app --release
+
+(Call this example "config and profile" it is equivalent to the example "config with embedded profile" described below.)
+
+This idea of leveraging a loader config can be taken further. Since the dojo loader will simply ignore properties that
+it does not define, you can put profile properties directly in the loader configuration. For example,
+~/dev/acme/config.js could be written as follows:
+
+.. code-block :: javascript
+
+    var dojoConfig = {
+		// loader configuration...
+		packages:[{
+			name:dojo,
+			location:"./dtk/dojo"
+		},{
+			name:dijit,
+			location:"./dtk/dijit"
+		},{
+			name:acme,
+			location:"./acme/lib"
+		}],
+		deps:["main"],
+
+		// now for some profile properties...
+
+    	// point basePath to ~/dev
+    	basePath:"..",
+
+		// point releaseDir to ~/dev/acme-deploy
+    	releaseDir:"./acme-deploy"
+	}
+
+This eliminates the need for the profile resource completely.
+
+The build system recognizes the property ``build`` which may hold a profile object that is mixed into the configuration
+object as if the profile object was specified on the command line following the configuration resource. This design
+serves two purposes:
+
+1. It keeps all build-time profile properties nicely bundled under a single property in what is otherwise a loader
+configuration object.
+
+2. It provides a method to make changes to some of the loader configuration when it is consumed as a build profile.
+
+For example, the previous loader configuration could be rewritten as follows:
+
+.. code-block :: javascript
+
+    var dojoConfig = {
+		// loader configuration...
+		packages:[{
+			name:dojo,
+			location:"./dtk/dojo"
+		},{
+			name:dijit,
+			location:"./dtk/dijit"
+		},{
+			name:acme,
+			location:"./acme/lib"
+		}],
+		deps:["main"],
+
+		// now for some profile properties...
+		build:{
+		    // point basePath to ~/dev
+    		basePath:"..",
+
+			// point releaseDir to ~/dev/acme-deploy
+			releaseDir:"./acme-deploy"
+		}
+	}
+
+And used to execute a build like this:
 
 .. code-block :: text
 
-    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --profile ../../acme/lib/app.profile.js --release
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --release
 
-Notice how this design eliminates the need to repeat resource location information. Since the development version of
-the application has already specified this information; there is no reason to force an independent specification for the
-build profile.
+(Call this example "config with embedded profile"; it is equivalent to the example "config and profile" described above.)
 
-Package configurations consumed by the build system can also include the ``trees``, ``dirs``, and ``files``
-properties. Relative source paths found in any of these items are computed with respect to the package ``location``
-property. If none of these are provided, then ``trees`` defaults to
+Notice how this design eliminates the need to repeat resource location information. Since the development version of the
+application has already specified (and debugged!) this information; there is no reason to force an independent
+specification for the build profile.
+
+There are a few additional details about package configurations when they are consumed by the build system. First, they
+can specify different values for all package config object properties as follows:
+
+* ``name`` may be changed by giving a value for ``destName``
+* ``location`` may be changed by giving a value for ``destLocation``
+* ``main`` may be changed by giving a value for ``destMain``
+* ``packageMap`` may be changed by giving a value for ``destPackageMap``
+
+If ``destName`` is not provided, then is defaults to ``name``. The same applies for the other properties. ``location``,
+if relative, is computed with respect to ``basePath``; relative ``destLocation`` is computed with respect to the
+computed destBasePath.
+
+Second, package configurations can include the ``trees``, ``dirs``, and ``files`` properties. Relative source paths are
+computed with respect to the package ``location`` property; relative destination paths are computed with respect to the
+package ``destLocation`` property. The tree
 
 .. code-block :: javascript
 
     [".", ".", /(\/\.)|(~$)/]
 
+is automatically provided. You can change change the ignore value by giving an explicit tree item with source and destination
+paths of ".".
+
 Leveraging package.json Resources
 ---------------------------------
 
-It is also possible to use a package.json resource to discover the location of resources defined by a particular
-package. Recall the package.json property ``directories.lib`` provides the root directory of a package's resources. When
-the build system is provided a package configuration that includes the property ``packageJson``, it will consume the
-following properties of that object:
+The build system can use a package.json resource to discover the location of resources and find a default profile for a
+particular package. Recall, you can provide a package configuration that includes the property ``packageJson`` by
+specifying a package.json resource with the command line switch ``--package``. When the build system encounters such a
+package config, it will consume the following properties of that object:
 
-* ``directories.lib``, indicating the root of the package's resources
-* ``main``, indicating the package's main module, if any
-* ``version``, indicating the packages version
+* ``directories.lib``, indicating the packages ``location`` property value.
+* ``main``, indicating the package's ``main`` property value
+* ``version``, indicating the package's version
 * ``dojo.profile``, indicating the default profile associated with the package
 
 Relative paths are computed with respect to the path at which the package.json resource resides.
 
 Given this design, you could build the acme example *without* mentioning the dojo or dijit packages in the profile,
 instead supplying the command line argument ``--package ../../dojo,../../dijit``. In practice, this technique is
-typically used only to execute the default profile of a package. Fore example, the default profile for dojo can be build
-like this:
+typically used to execute the default profile of a package. Fore example, the default profile for dojo can be build like
+this:
 
 .. code-block :: text
 
@@ -749,17 +840,18 @@ configuration ``location`` property. If a package.json resource is found and tha
 property, then the build system automatically consumes that default profile for that package. The build system will use
 any properties in the default profile that are not explicitly mentioned a profile provided at the command line; this
 allows an easy way to selectively override profile property values found in the default profile for a particular
-package.
+package or build scenario.
 
 Mixing Multiple Profile Sources
 -------------------------------
 
-Porfiles can come from many sources:
+Porfiles and profile properties can come from many sources:
 
-* profiles resources
-* dataConfig and/or require configuration objects
+* profile resources
+* dataConfig and/or require configuration resources
 * package.json resources
 * default profiles as given by package.json resources
+* individual profile property values can be given directly on the command line
 
 This begs the question, what happens when multiple sources try to set the same package property? The answer: generally,
 properties are mixed so that properties that come from sources specified later on the command line overwrite properties
@@ -819,14 +911,17 @@ Then the following profile object would be computed:
       }]
   }
 
-Best Practices
---------------
+Lastly, any profile property given on the command line will overwrite any value for that property as computed by mixing
+various other profile resources.
+
+Advice
+------
 
 Clearly, there are a lot of ways to specify profiles in general and how resources are discovered in particular. Build
 scenarios can be trivial or complex, depending upon the particular application. If you've got a tricky use case, the
 design described above can almost-certainly handle it. To put a fine point on this, the build system can discover
 resources from any reachable path and similarly write transformed resources to any reachable path. There are no
-assumptions, restrictions, or requirements imposed by where and how the Dojo Toolkit hierarchy is install.
+assumptions, restrictions, or requirements imposed by where and how the Dojo Toolkit hierarchy is installed.
 
 Typically, the best way to organize a profile for an application is as follows:
 
@@ -846,15 +941,15 @@ Typically, the best way to organize a profile for an application is as follows:
 
 Alternatives/extentions to this general procedure include:
 
-* Providing a default profile for each package the application defines
+* Providing a default profile for each package the application defines.
 
 * Including all build profile values in the loader configuration resource (they will simply be ignored by the loader).
 
 * Making the configuration configurable, typically depending on a URL query parameter or build switch.
 
-Don't be concerned about the need to download an extra resource to configuration the application. As well see in xxx,
+Don't be concerned about the need to download an extra resource to configure the application. As well see in xxx,
 the writeDojo transform allows a customized configuration to be embedded in the loader resource and the replacements
-transform allows chunks resources, like the configuration script element, to be replaced--perhaps with nothing.
+transform allows chunks of resources, like the configuration script element, to be replaced--perhaps with nothing.
 
 =============
 Resource Tags
@@ -864,12 +959,12 @@ The most fundamental attribute of a resource used to indicate which transforms t
 this usually isn't enough. For example, it may be desirable to not apply any transforms to test resources. The build
 system includes machinery to "tag" resources with various flags that may be used to signal which transforms to apply.
 
-Optionally, a profile and each package configuration may contain the property ``resourceTags``, a hash from tag name to
+A profile and each package configuration may contain the property ``resourceTags``, a hash from tag name to
 function. Each function takes two arguments, filename and module-id, and returns true if a given resource should be
 tagged with the associated tag or false otherwise. All tag tests are applied to every resource and any single resource
 may be tagged with several tag names. See the resources dojo/dojo.profile.js for an example.
 
-The dojo build system decides which transforms to apply to a particular resource based its filetype and the following
+The dojo build system decides which transforms to apply to a particular resource based its file type and the following
 tags:
 
 ``test``
@@ -883,6 +978,23 @@ tags:
 
 ``miniExclude``
   The resource should not be copied to the destination of the profile property "mini" is truthy.
+
+==========
+Transforms
+==========
+
+The Dojo Toolkit includes the transforms listed in xxx. They are applied to discoverd resources as follows:
+
+tagged **miniExclude** and ``profile.mini`` is true, or...
+tagged **test** and ``profile.copyTests`` is false, or...
+tagged **ignore**
+  Do nothing; the resource is not read or written.
+
+tagged **copyOnly**
+  Copy resource from source location to destination location (copy).
+
+
+
 
 =========================
 Advanced Profile Features
