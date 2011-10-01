@@ -983,14 +983,58 @@ tags:
 Transforms
 ==========
 
-The Dojo Toolkit includes the transforms listed in xxx. They are applied to discoverd resources as follows:
+The Dojo Toolkit includes the transforms listed in xxx. They are applied to discovered resources as follows:
 
-tagged **miniExclude** and ``profile.mini`` is true, or tagged **test** and ``profile.copyTests`` is false, or tagged **ignore**
-  Do nothing; the resource is not read or written.
+1. Tagged ``ignore``
 
-tagged **copyOnly**
-  Copy resource from source location to destination location (copy).
+  * Do nothing; the resource is not read or written
 
+2. Tagged ``miniExclude`` and ``profile.mini`` is true
+
+  * Same as [1]
+
+3. Tagged ``test`` and ``profile.copyTests`` is false
+
+  * Same as [1]
+
+tagged ``copyOnly``
+  * Copy resource from source location to destination location (copy).
+
+the module ``"dojo/dojo"``
+  * Read the resource (read)
+  * Apply dojo progras (dojoPragmas)
+  * Find all has.js applications (hasFindAll)
+  * Trim dead code branches as given by static, build-time has feature values (hasFixup)
+  * Write the processed loader module to the destination with a configuration (writeDojo)
+  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+
+modules with the segment ``"/nls/"`` in their module identifier
+  * Read the resource (read)
+  * Apply dojo progras (dojoPragmas)
+  * Find all has.js applications (hasFindAll)
+  * Find all dependencies for the module (depsScan)
+  * Write the processed  module to the destination (writeAmd)
+
+resources  with ``"/nls/"`` in their filename and the filetype of ".js"
+  * Same as above
+
+tagged ``"synthetic"`` and ``"amd"``
+  * Find all dependencies for the module (depsScan)
+  * Write the processed  module to the destination (writeAmd)
+  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+
+tagged ``"amd"``
+  * Read the resource (read)
+  * Apply dojo progras (dojoPragmas)
+  * Find all has.js applications (hasFindAll)
+  * Insert debugging symbols (insertSymbols)
+  * Trim dead code branches as given by static, build-time has feature values (hasFixup)
+  * Find all dependencies for the module (depsScan)
+  * Write the processed  module to the destination (writeAmd)
+  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+
+
+, or resource has a filetype of ".js" and is tagged ``"test"`` and ``profile.copyT
 
 
 
