@@ -20,7 +20,7 @@ Description
 ===========
 
 This transform copies a resource from the discovered source location to the discovered destination location. On Windows,
-the build-in command processor ``copy`` command is used; ``cp` is used in all other environments.
+the build-in command processor ``copy`` command is used; ``cp`' is used in all other environments.
 
 =============
 Profile Knobs
