@@ -56,12 +56,12 @@ module. The dependencies for module *x* with unique identifier *y* are listed in
 contains an array of unique identifiers giving the modules upon which *y* depends.
 
 The JSON object is output to the filename given by the profile property ``depsDumpFilename``; relative filenames are
-computed with respect to the computed destBaseBase property (see xxx). If ``depsDumpFilename is missing or falsy, then
+computed with respect to the computed destBaseBase property (see xxx). If ``depsDumpFilename`` is missing or falsy, then
 the JSON object is not output.
 
 The transform may be also used to output a Graphvis (http://www.graphviz.org/) digraph dot program. The program is
 output to the filename given by the profile property ``depsDumpDotFilename``; relative filenames are computed with
-respect to the computed destBaseBase property (see xxx). If ``depsDumpDotFilename is missing or falsy, then the program
+respect to the computed destBaseBase property (see xxx). If ``depsDumpDotFilename`` is missing or falsy, then the program
 is not output.
 
 The modules contained in the dot program may be limited by provided an explict set of modules in the profile property
@@ -83,6 +83,10 @@ This could then be used to generate a PNG of the graph as follows (assuming Grap
 
    ~/dev/dtk/util/buildscripts:./build.sh --profile base --profile ../build/examples/dojo-base-json-dot --release
    ~/dev/dtk/util/buildscripts:dot -Tpng ../../release/dojo/dojo-base-json.dot -o ../../release/dojo/dojo-base-json.png
+
+The resulting image should look something like this:
+
+.. image :: dojo-base-json.png
 
 =============
 Profile Knobs
