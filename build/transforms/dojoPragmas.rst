@@ -22,7 +22,7 @@ Description
 Dojo pragmas are instructions contained in a resource that cause a particular build system feature to be invoked. All
 Dojo pragmas are expressed with the following syntax 
 
-``//>>`` *pragma* *pragma-arguments*
+**//>>** *pragma* *pragma-arguments*
 
 Some pragmas do not have arguments. A Dojo pragma expression must be contained on a single line.
 
@@ -33,7 +33,7 @@ sequence will be ignored.
 
 Currently there are five pragmas:
 
-``includeStart(``*tag* ``,`` *condition* ``)``
+**includeStart(** *tag* **,** *condition* **)**
   indicates a block should be conditionally removed if *condition* is falsy; identical to
   ``excludeStart`` except that *condition* is interpreted conversely.
 
