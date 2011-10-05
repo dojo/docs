@@ -27,7 +27,7 @@ available (if truthy) or never available (if falsy). If multiple profile resourc
 the command line. The special value of -1 indicates the feature is *not* known at build time and should be removed from
 the final ``staticHasFeature`` map. For example, assume the following two profile resources exists
 
-*profile-a"
+*profile-a*
 
 .. code-block :: javascript
 
@@ -41,7 +41,7 @@ the final ``staticHasFeature`` map. For example, assume the following two profil
   };
 
 
-*profile-b"
+*profile-b*
 
 .. code-block :: javascript
 
@@ -94,7 +94,7 @@ characteristics:
 
 * quotes may be either single- or double-quotes
 
-Given a has feature *x* where the profile property ``staticHasFeatures[`` *x ``]`` is truthy, this profile will rewrite
+Given a has feature *x* where the profile property ``staticHasFeatures[`` *x* ``]`` is truthy, this profile will rewrite
 
 ``has.add(`` *x*
 
