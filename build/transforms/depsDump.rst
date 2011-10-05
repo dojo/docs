@@ -35,9 +35,11 @@ rooted at the property ``idTree`` of the output JSON object. Consider the follow
 			"*":0
 			_base:{
 				array:{
-					"*":1,
+					"*":1
+				},
 				lang:{
-					"*":2,
+					"*":2
+				},
 				// etc.
 			},
 			// etc.
