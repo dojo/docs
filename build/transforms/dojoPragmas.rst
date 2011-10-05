@@ -33,14 +33,14 @@ sequence will be ignored.
 
 Currently there are five pragmas:
 
-``includeStart(``*tag* ``,`` *condition*``)``
+``includeStart(``*tag* ``,`` *condition* ``)``
   indicates a block should be conditionally removed if *condition* is falsy; identical to
   ``excludeStart`` except that *condition* is interpreted conversely.
 
 ``includeEnd(``*tag*``)``
   block terminator for ``includeStart`` with equivalent *tag*
 
-``excludeStart(``*tag* ``,`` *condition*``)`` 
+``excludeStart(``*tag* ``,`` *condition* ``)`` 
   indicates a block should be conditionally removed if *condition* is truthy; identical to
   ``includeStart`` except that *condition* is interpreted conversely.
 
@@ -61,7 +61,7 @@ For ``includeStart`` and ``excludeStart``, *condition* is evaluated with the fol
 ``filename``
   hold the source filename of the resource that is being processed
 
-For example, assume a build is excuted with a profile defined as follows:
+For example, assume a build is executed with a profile defined as follows:
 
 .. code-block :: javascript
 
