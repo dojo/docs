@@ -26,28 +26,28 @@ Dojo pragmas are expressed with the following syntax
 
 Some pragmas do not have arguments. A Dojo pragma expression must be contained on a single line.
 
-The ``//>>`` sequence may appear anywhere, including within a block comment, which may be desireable, as well as within
+The **//>>** sequence may appear anywhere, including within a block comment, which may be desireable, as well as within
 a string or regular expression, where it is usually not intended to be interpretted as a pragma. In this latter
-defective case, if the word following the ``//>>`` sequence is not a valid dojo pragma, a warning will be issued and the
+defective case, if the word following the **//>>** sequence is not a valid dojo pragma, a warning will be issued and the
 sequence will be ignored.
 
 Currently there are five pragmas:
 
-**includeStart(** *tag* **,** *condition* **)**
+**includeStart((** *tag* **,** *condition* **)**
   indicates a block should be conditionally removed if *condition* is falsy; identical to
   ``excludeStart`` except that *condition* is interpreted conversely.
 
-``includeEnd(``*tag*``)``
+**includeEnd(** *tag* **)**
   block terminator for ``includeStart`` with equivalent *tag*
 
-``excludeStart(``*tag* ``,`` *condition* ``)`` 
+**excludeStart((** *tag* **,** *condition* **)**
   indicates a block should be conditionally removed if *condition* is truthy; identical to
   ``includeStart`` except that *condition* is interpreted conversely.
 
-``includeEnd(`` *tag* ``)``
+**excludeEnd(** *tag* **)**
   block terminator for ``excludeStart`` with *tag*
 
-``pure-amd``
+**pure-amd**
   indicates a module is a proper AMD module; used by the depsScan transform
 
 **Warning**: The has.js API which allows code blocks and/or entire modules to be conditionally included/excluded at
@@ -61,7 +61,7 @@ For ``includeStart`` and ``excludeStart``, *condition* is evaluated with the fol
 ``filename``
   hold the source filename of the resource that is being processed
 
-For example, assume a build is executed with a profile defined as follows:
+For example, assume a build is excuted with a profile defined as follows:
 
 .. code-block :: javascript
 
@@ -76,7 +76,7 @@ the first block is untouched while the second block would be deleted from the bu
 
 .. code-block :: javascript
 
-  //>>includeStart("firstBlock", kwargs.myVariable=="myValue")
+ //>>includeStart("firstBlock", kwargs.myVariable=="myValue")
   console.log("block one");
   //>>includeEnd("firstBlock")
 
@@ -88,7 +88,7 @@ By changing the value of the profile property ``myVariable`` to "yourValue" the 
 second block left untouched; by failing to define ``myVariable`` or defining it to some value other then either
 "myValue" or "yourValue", both blocks would be deleted.
 
-Whitespace between/around the ``//>>`` sequence, pragma name, parenthesis, and comma is ignored.
+Whitespace between/around the **//>>** sequence, pragma name, parenthesis, and comma is ignored.
 
 Tag names may be reused. They can be used to indicate the intended semantics. For example,
 
