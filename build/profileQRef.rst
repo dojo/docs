@@ -6,8 +6,7 @@ Quick Reference of all Profile Properties
 :Version: 1.7
 :Author: Rawld Gill
 
-.. contents::
-   :depth: 2
+
 
 ===============
 Program Control
