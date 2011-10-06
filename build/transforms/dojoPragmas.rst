@@ -111,8 +111,8 @@ it remains on the single line that contains the pragma and is legal Javascript t
 Profile Knobs
 =============
 
-The entire profile object is placed in the lexical variable ``kwargs`` when the condition associated with the pragmas ``includeStart`` and
-``excludeEnd`` are evaluated. Any property in the profile may be used to affect these conditions.
+The entire profile object is placed in the lexical variable ``kwargs`` when thea condition associated with the pragmas
+``includeStart`` and ``excludeEnd`` is evaluated. Any property in the profile may be used to affect these conditions.
 
 ===============
 Source Location
