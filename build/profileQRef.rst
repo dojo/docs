@@ -18,7 +18,7 @@ Program Control
 Transform: copy
 ===============
 
-`Transform Documentation Page... <build/transforms/copy>`_
+`copy transform reference... <build/transforms/copy>`_
 
 None.
 
@@ -26,7 +26,7 @@ None.
 Transform: depsDump
 ===================
 
-`Transform Documentation Page... <build/transforms/depsDump>`_
+`depsDump transform reference... <build/transforms/depsDump>`_
 
 ``depsDumpFilename`` (default = ``undefined``)
 
@@ -48,7 +48,7 @@ Transform: depsDump
 Transform: depsScan
 ===================
 
-`Transform Documentation Page... <build/transforms/depsScan>`_
+`depsScan transform reference... <build/transforms/depsScan>`_
 
 ``platform`` (default = ``undefined``)
 
@@ -89,7 +89,7 @@ legacy modules to properly-expressed AMD modules.
 Transform: dojoPragmas
 ======================
 
-`Transform Documentation Page... <build/transforms/dojoPragmas>`_
+`dojoPragmas transform reference... <build/transforms/dojoPragmas>`_
 
 The entire profile object is placed in the lexical variable ``kwargs`` when thea condition associated with the pragmas
 ``includeStart`` and ``excludeEnd`` is evaluated. Any property in the profile may be used to affect these conditions.
@@ -98,7 +98,7 @@ The entire profile object is placed in the lexical variable ``kwargs`` when thea
 Transform: dojoReport
 =====================
 
-`Transform Documentation Page... <build/transforms/dojoReport>`_
+`dojoReport transform reference... <build/transforms/dojoReport>`_
 
 This section not complete; please consult source at util/build/transforms/dojoReport.js
 
@@ -106,7 +106,7 @@ This section not complete; please consult source at util/build/transforms/dojoRe
 Transform: hasFindAll
 =====================
 
-`Transform Documentation Page... <build/transforms/hasFindAll>`_
+`hadFindAll transform reference... <build/transforms/hasFindAll>`_
 
 ``hasReport`` (default = ``undefined``)
   * [*truthy*] A report of all has tests and their locations is written in the build report.
@@ -117,7 +117,7 @@ Transform: hasFindAll
 Transform: hasFixup
 ===================
 
-`Transform Documentation Page... <build/transforms/hasFixup>`_
+`hasFixup transform reference... <build/transforms/hasFixup>`_
 
 ``staticHasFeatures`` (default = xxx)
 
@@ -130,7 +130,7 @@ Transform: hasFixup
 Transform: insertSymbols
 ========================
 
-`Transform Documentation Page... <build/transforms/insertSymbols>`_
+`insertSymbols transform reference... <build/transforms/insertSymbols>`_
 
 This section not complete; please consult source at util/build/transforms/insertSymbols.js
 
@@ -138,7 +138,7 @@ This section not complete; please consult source at util/build/transforms/insert
 Transform: optimizeCss
 ======================
 
-`Transform Documentation Page... <build/transforms/optimizeCss>`_
+`optimizeCss transform reference... <build/transforms/optimizeCss>`_
 
 This section not complete; please consult source at util/build/transforms/optimizeCss.js
 
@@ -146,7 +146,7 @@ This section not complete; please consult source at util/build/transforms/optimi
 Transform: read
 ===============
 
-`Transform Documentation Page... <build/transforms/read>`_
+`read transform reference... <build/transforms/read>`_
 
 This section not complete; please consult source at util/build/transforms/read.js
 
@@ -154,7 +154,7 @@ This section not complete; please consult source at util/build/transforms/read.j
 Transform: write
 ================
 
-`Transform Documentation Page... <build/transforms/write>`_
+`write transform reference... <build/transforms/write>`_
 
 None.
 
@@ -162,7 +162,7 @@ None.
 Transform: writeAmd
 ===================
 
-`Transform Documentation Page... <build/transforms/writeAmd>`_
+`writeAmd transform reference... <build/transforms/writeAmd>`_
 
 ``layers`` (default = ``undefined``)
   * [*map from module identifier to layer item*] Indicates the given module should be written as a layer.
@@ -205,7 +205,7 @@ Layer items are Javascript objects with the following properties
 Transform: writeDojo
 ====================
 
-`Transform Documentation Page... <build/transforms/writeDojo>`_
+`writeDojo transform reference... <build/transforms/writeDojo>`_
 
 ``defaultConfig`` (default = see below)
   * [*object that gives the default loader configuration*] Used to build up the default loader configuration. Typically
@@ -242,7 +242,7 @@ Transform: writeDojo
 Transform: writeOptimized
 =========================
 
-`Transform Documentation Page... <build/transforms/writeOptimize>`_
+`writeOptimize transform reference... <build/transforms/writeOptimize>`_
 
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
