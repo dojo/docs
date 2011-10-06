@@ -6,6 +6,15 @@ Quick Reference of all Profile Properties for Optimization Build Program
 :Version: 1.7
 :Author: Rawld Gill
 
+=======================
+Reference Documentation
+=======================
+
+  * `The Dojo Build System <build/buildSystem>`_: The top-level tutorial and reference that describes the basic
+    operation of the build system when used for deployment optimizations.
+
+  * `Build Document Catalog <build/index>`_: A complete list of build system documentation resources.
+
 ==============================
 Command Line Switch Reference
 ==============================
@@ -57,7 +66,7 @@ as follows:
 
   ~/dev/dtk/util/buildscripts> ./build.sh --profile myApp --basePath /www/deploy/myApp --release
 
-*note*: although the "action=switch" defined by the v1.6- system may be used, that syntax is deprecated and you should just
+*note*: although **action=** *switch* defined by the v1.6- system may be used, that syntax is deprecated and you should just
 specify the switch.
 
 *note*: the clean action has been removed. Since the system is now extremely flexible is describing where output is
