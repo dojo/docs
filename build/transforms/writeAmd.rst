@@ -140,6 +140,10 @@ Profile Knobs
 
   * [*map from module identifier to layer item*] Indicates the given module should be written as a layer.
 
+  If multiple layer objects are given by multiple profile resources, they are mixed on a per-layer basis, as profile
+  items are processed left to right on the command line. For example, if two profile resources define the "x/y/z" layer,
+  the layer item that exists in the last profile processed will overwrite the first layer item completely.
+
 ``insertAbsMids`` (default = ``undefined``)
 
   * [*truthy*] Causes the transform to ensure that every AMD define application includes a module identifier argument.
@@ -167,8 +171,9 @@ Layer items are Javascript objects with the following properties
 
 ``copyright`` (default = "")
   If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
-  module; otherwise, if a string, then the string gives the value to use as copyright text; otherwise, no copyright text
-  is output.
+  module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
+  layer item. If a string that does not give an existing filename, the string it interpretted as an explicit copyright
+  message. If no string value is given, then no copyright text is output.
 
 ===============
 Source Location
