@@ -100,22 +100,24 @@ module resource to be evaluated. For example, if the resource text for the modul
 
 And x/y/z is a member module of a layer, then that layer will inject a loader cache configuration value as follows:
 
-require({cache:{
-  "x/y/z":function(){
-    // some code outside the AMD define application
-    console.log("hello, world; you shouldn't do this, but you can");
+.. code-block :: javascript
+
+  require({cache:{
+    "x/y/z":function(){
+      // some code outside the AMD define application
+      console.log("hello, world; you shouldn't do this, but you can");
+      
+      define([/* x/y/x dependencies */], function(/* dependency lexical variables */) {
+        console.log("in x/y/z's factory");
+      });
+      
+      
+      // some more code outside the AMD define application
+      console.log("don't do this either...but you can");
+    }
     
-    define([/* x/y/x dependencies */], function(/* dependency lexical variables */) {
-      console.log("in x/y/z's factory");
-    });
-    
-    
-    // some more code outside the AMD define application
-    console.log("don't do this either...but you can");
-  }
-  
-  // other member modules as required
-}});
+    // other member modules as required
+  }});
 
 This causes the module to be available to the loader upon demand, but the contents of the module's resource is *not*
 evaluated unless and until the module is actually demanded by the run-time execution path. At that point the function is
