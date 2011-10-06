@@ -33,7 +33,7 @@ truthy, then a map from has feature test to the list of modules that use each te
 Profile Knobs
 =============
 
-``hasReport`` (default = undefined)
+``hasReport`` (default = ``undefined``)
   * [*truthy*] A report of all has tests and their locations is written in the build report.
 
   * [*falsy*] No has location report is written.
