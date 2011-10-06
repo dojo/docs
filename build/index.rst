@@ -14,15 +14,15 @@ The Dojo Build System
 The Dojo build system is a general-purpose program for transforming a set of resources. It was built to solve the
 problem of transforming a set of resources that comprise an application in order to improve the performance of that
 application. These kind of optimization are termed "deployment optimizations", and the build system includes a rich set
-of such optimizations that may be applied to an application prior to deployment.
+of such optimizations.
 
 However, the build system is not limited to these kind of transforms. At its core, the build system is an engine for
 applying an ordered, synchronized, configurable set of transforms to a configurable input set. Examples of other usages
 include document generators, style checkers, code formatters, lint checkers, and many more. In some ways it is like a
-make program, except the external processes that typical make programs execute can be implemented within its the
+make program, except the external processes that typical make programs execute can be implemented within the build system's
 pluggable transform infrastructure. Of course external processes can be executed as well.
 
-The follow reference documentation is available for the build system
+*Note: the build system was completely redesigned and reimplemented in version 1.7. The pre-1.7 build system is still important to some existing installations. All historical documentation for that system is listed at* `The Dojo Build System Prior to version 1.7`_
 
 `The Build System <build/buildSystem>`_
   The top-level tutorial and reference that describes the basic operation of the build system when used for deployment optimizations.
