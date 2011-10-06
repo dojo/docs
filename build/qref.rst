@@ -1,7 +1,8 @@
 #format dojo_rst
 
-Quick Reference of all Profile Properties for Optimization Build Program
-========================================================================
+
+Quick Reference for Optimization Build Program
+==============================================
 
 :Version: 1.7
 :Author: Rawld Gill
