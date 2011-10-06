@@ -19,7 +19,7 @@ Writes a resource a destination location.
 Description
 ===========
 
-This transform writes the possible-transformed resource text to the distination unless the resource has been tagged
+This transform writes the possible-transformed resource text to the destination unless the resource has been tagged
 "noWrite". If the resoure has been tagged noWrite, the transform does nothing.
 
 Note: typically a noWrite tag is added during some other transform that contains logic that makes a decision the
