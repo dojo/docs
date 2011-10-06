@@ -1,6 +1,6 @@
 #format dojo_rst
 
-Build Transform depsDump
+Build Transform depsScan
 ========================
 
 :Version: 1.7
@@ -126,7 +126,7 @@ Profile Knobs
     "dojox". Additional names may be added if required; however, it is highly advised that users of this feature convert
     their modules to proper AMD modules which eliminates the need for this feature.
 
-``scopeMap`` (default = undefined)
+``scopeMap`` (default = ``undefined``)
 
   * [*map from top-level module identifier to relocated top-level module identifier (string)*] The property names of
     ``scopeMap`` are used to populate ``scopeNames``; the property values of ``scopeMap`` are not meaningful to the
