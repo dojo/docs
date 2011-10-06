@@ -43,7 +43,7 @@ for complete documentation.
   Determines a module's dependencies and interns legacy dojo.cache string resources.
 
 `dojoPragmas <build/transforms/dojoPragmas>`_
-  pplies dojo pragmas to a resource.
+  Applies dojo pragmas to a resource.
 
 `dojoReport <build/transforms/dojoReport>`_
   Outputs a report describing a single run of the deployment optimization transforms.
