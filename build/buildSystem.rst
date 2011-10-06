@@ -987,7 +987,7 @@ below, in the order listed. The first test that passes indicates the transforms 
   * Find all has.js applications (hasFindAll)
   * Trim dead code branches as given by static, build-time has feature values (hasFixup)
   * Write the processed loader module to the destination with a configuration (writeDojo)
-  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
 
 6. Modules with the segment ``"/nls/"`` in their module identifier
 
