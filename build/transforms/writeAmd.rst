@@ -137,7 +137,6 @@ Profile Knobs
 
 
 ``layers`` (default = ``undefined``)
-
   * [*map from module identifier to layer item*] Indicates the given module should be written as a layer.
 
   If multiple layer objects are given by multiple profile resources, they are mixed on a per-layer basis, as profile
@@ -145,7 +144,6 @@ Profile Knobs
   the layer item that exists in the last profile processed will overwrite the first layer item completely.
 
 ``insertAbsMids`` (default = ``undefined``)
-
   * [*truthy*] Causes the transform to ensure that every AMD define application includes a module identifier argument.
 
   * [*falsy*] The transform does nothing to the module identifier argument in define applications. In particular, a
