@@ -22,7 +22,7 @@ include document generators, style checkers, code formatters, lint checkers, and
 make program, except the external processes that typical make programs execute can be implemented within the build system's
 pluggable transform infrastructure. Of course external processes can be executed as well.
 
-*Note: the build system was completely redesigned and reimplemented in version 1.7. The pre-1.7 build system is still important to some existing installations. All historical documentation for that system is listed at* `The Dojo Build System Prior to version 1.7`_
+*Note*: the build system was completely redesigned and reimplemented in version 1.7. The pre-1.7 build system is still important to some existing installations. All historical documentation for that system is listed at `The Dojo Build System Prior to version 1.7`_
 
 `The Build System <build/buildSystem>`_
   The top-level tutorial and reference that describes the basic operation of the build system when used for deployment optimizations.
