@@ -6,28 +6,49 @@ Quick Reference of all Profile Properties for Optimization Build Program
 :Version: 1.7
 :Author: Rawld Gill
 
-
 ==============================
 Command Line Switch Reference
 ==============================
 
---profile profile-name    Read and process the profile given by *profile-name*. If *profile-name* does not include a file
-                          type, then the file type ".profile.js" is assumed. If *profile-name* does not include a file
-                          type **and** the *profile-name* does not contain any path segments **and** the implied
-                          filename is not found in the current working directory, then the program attempts to read the
-                          profile from the /utils/buildscripts/profiles directory.
--p profile-name           Equivalent to --profile
---dojoConfig filename     Read and process a loader configuration object given by the variable ``dojoConfig`` that must
-                          exist in the resource given by *filename*.
---require filename        Read and process a loader configuration application that must exist in the resource given by
-                          *filename*.
---package path            Read and process a package.json resource that must exist in the directory given by *path*.
---release                 Process all profiles resources, discover and transform all resources.
---check                   Process all command line switches and dump the computed profile to the console.
---help                    Print the help message
---version                 Print the version number of the build program
---check-args              Process all command line switches and dump the raw profile resources to the console (the
-                          profile resources are not aggregated).
+``--profile`` *profile-name*
+  Read and process the profile given by *profile-name*. If *profile-name* does not include a file type, then the file
+  type ".profile.js" is assumed. If *profile-name* does not include a file type **and** the *profile-name* does not
+  contain any path segments **and** the implied filename is not found in the current working directory, then the program
+  attempts to read the profile from the /utils/buildscripts/profiles directory.
+
+``-p`` *profile-name*
+  Equivalent to --profile
+
+``--dojoConfig`` *filename*
+  Read and process a loader configuration object given by the variable ``dojoConfig`` that must exist in the resource given by *filename*.
+
+``--require`` *filename*
+  Read and process a loader configuration application that must exist in the resource given by *filename*.
+
+``--package`` *path* 
+  Read and process a package.json resource that must exist in the directory given by *path*.
+
+``--release``                
+  Process all profiles resources, discover and transform all resources.
+
+``-r`` *filename*
+  Equivalent to --release
+
+``--check``                   
+  Process all command line switches and dump the computed profile to the console.
+
+``--check-args``              
+  Process all command line switches and dump the raw profile resources to the console (the profile resources are not
+  aggregated).
+
+``--check-discovery``
+  Echo all discovered resources and exit
+
+``--help``                    
+  Print the help message
+
+``--version``                 
+  Print the version number of the build program
 
 Any scalar profile property can be specified on the command line. For example, ``basePath`` could be specified
 as follows:
