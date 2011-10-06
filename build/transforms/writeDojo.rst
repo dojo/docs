@@ -187,7 +187,7 @@ Profile Knobs
 
 ``defaultConfig`` (default = see below)
   * [*object that gives the default loader configuration*] Used to build up the default loader configuration. Typically
-  not provided.
+    not provided.
 
 ``userConfig`` (default = ``"this.dojoConfig || this.djConfig || this.require || {}"``)
   * [*string*] The explit text to write for the user configuration applied to the loader factory.
