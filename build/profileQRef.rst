@@ -6,8 +6,6 @@ Quick Reference of all Profile Properties
 :Version: 1.7
 :Author: Rawld Gill
 
-
-
 ===============
 Program Control
 ===============
@@ -20,11 +18,15 @@ Program Control
 Transform: copy
 ===============
 
+`Transform Documentation Page... <build/transforms/copy>`_
+
 None.
 
 ===================
 Transform: depsDump
 ===================
+
+`Transform Documentation Page... <build/transforms/depsDump>`_
 
 ``depsDumpFilename`` (default = ``undefined``)
 
@@ -45,6 +47,8 @@ Transform: depsDump
 ===================
 Transform: depsScan
 ===================
+
+`Transform Documentation Page... <build/transforms/depsScan>`_
 
 ``platform`` (default = ``undefined``)
 
@@ -81,9 +85,11 @@ Transform: depsScan
 **Warning**: All knobs mentioned above support legacy features which are deprecated. It is strongly encouraged to convert
 legacy modules to properly-expressed AMD modules.
 
-========================
-`Transform dojoPragmas`_
-========================
+======================
+Transform: dojoPragmas
+======================
+
+`Transform Documentation Page... <build/transforms/dojoPragmas>`_
 
 The entire profile object is placed in the lexical variable ``kwargs`` when thea condition associated with the pragmas
 ``includeStart`` and ``excludeEnd`` is evaluated. Any property in the profile may be used to affect these conditions.
@@ -92,11 +98,15 @@ The entire profile object is placed in the lexical variable ``kwargs`` when thea
 Transform: dojoReport
 =====================
 
+`Transform Documentation Page... <build/transforms/dojoReport>`_
+
 This section not complete; please consult source at util/build/transforms/dojoReport.js
 
 =====================
 Transform: hasFindAll
 =====================
+
+`Transform Documentation Page... <build/transforms/hasFindAll>`_
 
 ``hasReport`` (default = ``undefined``)
   * [*truthy*] A report of all has tests and their locations is written in the build report.
@@ -106,6 +116,8 @@ Transform: hasFindAll
 ===================
 Transform: hasFixup
 ===================
+
+`Transform Documentation Page... <build/transforms/hasFixup>`_
 
 ``staticHasFeatures`` (default = xxx)
 
@@ -118,11 +130,15 @@ Transform: hasFixup
 Transform: insertSymbols
 ========================
 
+`Transform Documentation Page... <build/transforms/insertSymbols>`_
+
 This section not complete; please consult source at util/build/transforms/insertSymbols.js
 
 ======================
 Transform: optimizeCss
 ======================
+
+`Transform Documentation Page... <build/transforms/optimizeCss>`_
 
 This section not complete; please consult source at util/build/transforms/optimizeCss.js
 
@@ -130,17 +146,23 @@ This section not complete; please consult source at util/build/transforms/optimi
 Transform: read
 ===============
 
+`Transform Documentation Page... <build/transforms/read>`_
+
 This section not complete; please consult source at util/build/transforms/read.js
 
 ================
 Transform: write
 ================
 
+`Transform Documentation Page... <build/transforms/write>`_
+
 None.
 
 ===================
 Transform: writeAmd
 ===================
+
+`Transform Documentation Page... <build/transforms/writeAmd>`_
 
 ``layers`` (default = ``undefined``)
   * [*map from module identifier to layer item*] Indicates the given module should be written as a layer.
@@ -183,6 +205,8 @@ Layer items are Javascript objects with the following properties
 Transform: writeDojo
 ====================
 
+`Transform Documentation Page... <build/transforms/writeDojo>`_
+
 ``defaultConfig`` (default = see below)
   * [*object that gives the default loader configuration*] Used to build up the default loader configuration. Typically
      not provided.
@@ -217,6 +241,8 @@ Transform: writeDojo
 =========================
 Transform: writeOptimized
 =========================
+
+`Transform Documentation Page... <build/transforms/writeOptimize>`_
 
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
@@ -272,5 +298,3 @@ Transform: writeOptimized
   * ["warn"] All console applications are stripped except ``console.error``.
 
   * ["all"] All console applications are stripped.
-
-.. _Transform dojoPragmas: build/transforms/dojoPragmas
