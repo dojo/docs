@@ -81,9 +81,9 @@ Transform: depsScan
 **Warning**: All knobs mentioned above support legacy features which are deprecated. It is strongly encouraged to convert
 legacy modules to properly-expressed AMD modules.
 
-======================
-Transform: dojoPragmas
-======================
+========================
+`Transform dojoPragmas`_
+========================
 
 The entire profile object is placed in the lexical variable ``kwargs`` when thea condition associated with the pragmas
 ``includeStart`` and ``excludeEnd`` is evaluated. Any property in the profile may be used to affect these conditions.
@@ -272,3 +272,5 @@ Transform: writeOptimized
   * ["warn"] All console applications are stripped except ``console.error``.
 
   * ["all"] All console applications are stripped.
+
+.. _Transform dojoPragmas: build/transforms/dojoPragmas
