@@ -1,7 +1,7 @@
 #format dojo_rst
 
-Dojo Build System
-=================
+Dojo Build System (Pre 1.7)
+===========================
 
 :Authors: James Burke, Peter Higgins, Scott Jenkins, Alex Russell, Josh Trutwin, Kris Zyp
 :Available: since V1.0
