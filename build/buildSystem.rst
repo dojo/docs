@@ -783,7 +783,7 @@ package or build scenario.
 Mixing Multiple Profile Sources
 -------------------------------
 
-Porfiles and profile properties can come from many sources:
+Profiles and profile properties can come from many sources:
 
 * profile resources
 * dataConfig and/or require configuration resources
