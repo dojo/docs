@@ -529,7 +529,7 @@ the package.json and profile files indicated below--these are a good source of e
 
 Let's assume the acme directory holds an application and it is desired to write the built resource hierarchy for the
 application to the directory ~/dev/acme-deploy. In this case, the acme profile file at ~/dev/acme/app.profile.js
-might like like this:
+might look like this:
 
 .. code-block :: javascript
 
@@ -587,7 +587,7 @@ configurations just like the loader. Here is the previous example expressed usin
 The destination location of each package may be given explicitly in the optional, per-package ``destLocation``
 property. If it is missing, then it defaults to the package name, a child of the the release directory.
 
-The real power if this feature is not expressing these package hierarchies in a profile, but rather using the
+The real power of this feature is not expressing these package hierarchies in a profile, but rather using the
 application configuration to get the hierarchies for free. For example, assume the acme application expressed its
 configuration in the resource ~/dev/acme/config.js like this:
 
