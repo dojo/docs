@@ -1005,7 +1005,7 @@ below, in the order listed. The first test that passes indicates the transforms 
 
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
-  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
 
 9. Tagged ``"amd"``
 
@@ -1016,7 +1016,7 @@ below, in the order listed. The first test that passes indicates the transforms 
   * Trim dead code branches as given by static, build-time has feature values (hasFixup)
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
-  * Optimize the module with shrinksafe of the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
 
 
 10. Resource has a filetype of ".js" and is tagged ``"test"`` and ``profile.copyTests`` is build
