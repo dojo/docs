@@ -643,7 +643,7 @@ it does not define, you can put profile properties directly in the loader config
 
 .. code-block :: javascript
 
-    var dojoConfig = {
+	var dojoConfig = {
 		// loader configuration...
 		packages:[{
 			name:dojo,
@@ -659,11 +659,11 @@ it does not define, you can put profile properties directly in the loader config
 
 		// now for some profile properties...
 
-    	// point basePath to ~/dev
-    	basePath:"..",
+		// point basePath to ~/dev
+		basePath:"..",
 
 		// point releaseDir to ~/dev/acme-deploy
-    	releaseDir:"./acme-deploy"
+		releaseDir:"./acme-deploy"
 	}
 
 This eliminates the need for the profile resource completely.
@@ -681,7 +681,7 @@ For example, the previous loader configuration could be rewritten as follows:
 
 .. code-block :: javascript
 
-    var dojoConfig = {
+	var dojoConfig = {
 		// loader configuration...
 		packages:[{
 			name:dojo,
@@ -697,8 +697,8 @@ For example, the previous loader configuration could be rewritten as follows:
 
 		// now for some profile properties...
 		build:{
-		    // point basePath to ~/dev
-    		basePath:"..",
+			// point basePath to ~/dev
+    			basePath:"..",
 
 			// point releaseDir to ~/dev/acme-deploy
 			releaseDir:"./acme-deploy"
