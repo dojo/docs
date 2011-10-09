@@ -737,7 +737,7 @@ package ``destLocation`` property. The tree
 
     [".", ".", /(\/\.)|(~$)/]
 
-is automatically provided. You can change change the ignore value by giving an explicit tree item with source and destination
+is automatically provided. You can change the ignore value by giving an explicit tree item with source and destination
 paths of ".".
 
 Leveraging package.json Resources
