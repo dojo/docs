@@ -171,4 +171,4 @@ See also
 
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Support tree structure data
 
-* `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid/>`_ - Provides lazy loading and virtual scrolling for huge children rows
+* `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid/>`_ - Provides lazy loading and virtual scrolling for nested levels of huge children rows
