@@ -416,6 +416,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A grid with support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
 
+  * `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`_
+
+    An extended version of TreeGrid that can lazy load huge nested child rows.
+
   * the old dojox.grid.Grid
 
     This old version is only available for compatible reasons
