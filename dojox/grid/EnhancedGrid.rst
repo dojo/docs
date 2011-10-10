@@ -161,7 +161,7 @@ EnhancedGrid provides the same a11y support level as `DataGrid <dojox/grid/DataG
 Known Issues
 ============
 
-* See the `outstanding tickets for the EnhancedGrid <http://bugs.dojotoolkit.org/query?status=assigned&status=new&status=reopened&component=DojoX+Grid&order=priority&owner=Evan&type=defect&col=id&col=summary&col=status&col=type&col=priority&col=milestone&report=93#no2>`_.
+* See the `outstanding tickets for the EnhancedGrid <http://bugs.dojotoolkit.org/query?owner=Evan&status=accepted&status=assigned&status=new&status=reopened&type=defect&summary=~enhanced&col=id&col=summary&col=status&col=type&col=priority&col=milestone&col=component&order=priority>`_.
 
 ========
 See also
