@@ -155,7 +155,7 @@ Following is a complete list of EnahancedGrid plugins, please refer to the separ
 Accessibility
 =============
 
-EnhancedGrid provides the same a11y support level as `DataGrid <dojox/grid/DataGrid#accessibility-in-1-3-and-beyond>`_  or see the above plugin pages for more details.
+EnhancedGrid provides the same a11y support level as `DataGrid <dojox/grid/DataGrid#accessibility-in-1-3-and-beyond>`_ , or see the above plugin pages for more details.
 
 ============
 Known Issues
