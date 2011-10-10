@@ -151,6 +151,11 @@ Following is a complete list of EnahancedGrid plugins, please refer to the separ
 * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Grid preferences persistence e.g column width|order and sorting order.
 * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Searching grid content by regular expressions or simple wildcard pattern.
 
+=============
+Accessibility
+=============
+
+EnhancedGrid provide the same a11y support level as `DataGrid <dojox/grid/DataGrid#accessibility-in-1-3-and-beyond>`_ 
 
 ============
 Known Issues
