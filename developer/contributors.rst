@@ -200,6 +200,7 @@ A list of individuals who have signed Dojo CLAs:
 * Harris, Jeffrey 
 * Harrison, Matthew 
 * Harter, Laurie 
+* Hartmann, Michel
 * Hashim, Ahmed 
 * Hayden, Jennifer 
 * Hayes, Kyle 
