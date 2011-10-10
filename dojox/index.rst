@@ -418,7 +418,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`_
 
-    An extended version of TreeGrid that can lazy load huge nested child rows.
+    An extended version of TreeGrid that can lazy load huge nested levels of children rows.
 
   * the old dojox.grid.Grid
 
