@@ -1404,6 +1404,10 @@ See also
 
   This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
 
+* `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`_
+
+  An extended version of TreeGrid that can lazy load nested levels of huge children rows.
+
 * `Grid Plugin API <dojox/grid/pluginAPI>`_
 
 * `Demos on how to display and edit date value in grid cells <dojox/grid/griddate>`_
