@@ -364,6 +364,12 @@ Examples
 
 For example of the LazyTreeGrid with a ForestStoreModel and client side data source, please see the file dojox/grid/tests/test_treegrid_lazyloading.html.
 
+=============
+Accessibility
+=============
+
+LazyTreeGrid provides the same a11y support level as `DataGrid <dojox/grid/DataGrid#accessibility-in-1-3-and-beyond>`_ .
+
 ========
 See Also
 ========
