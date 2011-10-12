@@ -15,6 +15,7 @@ A list of individuals who have signed Dojo CLAs:
 * Alpert, John Izaaic 
 * Ambrosi, Lucas
 * Anderson, Christian O. 
+* Anderson, Matt
 * Andrews, Jesse 
 * Anuruddha, Dilan 
 * Armstrong, Kevin 
