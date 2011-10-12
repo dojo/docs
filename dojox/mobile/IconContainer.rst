@@ -64,6 +64,8 @@ Each icon content may consist of one or more dojo widgets. Loading of all the ne
 
 Below is an example of lazy loading of icon contents. Before the dojo parser runs, the dojoType attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit.ColorPalette and dijit.ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open icons.
 
+Note that currently lazy loading is supported only in the sync mode, since lazy loading is performed synchronously using dojo.require.
+
 .. code-block :: html
 
   <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
