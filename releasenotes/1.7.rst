@@ -305,7 +305,7 @@ DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
  
 Next generation of Grid
 
-- Incubation projects `dgrid <https://github.com/kriszyp/dgrid>`_  and `gridx <https://github.com/evanhw/gridx>`_ are also in progress and working closely for the next generation of Grid.
+- Incubation projects `dgrid <https://github.com/SitePen/dgrid>`_  and `gridx <https://github.com/evanhw/gridx>`_ are also in progress and working closely for the next generation of Grid.
 
 
 Mobile
