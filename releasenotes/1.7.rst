@@ -303,11 +303,9 @@ DataGrid/EnhancedGrid/TreeGrid/LazyTreeGrid
 - Numerous issues have been fixed for 1.7, please refer to the `defect list <http://trac.dojotoolkit.org/query?status=closed&component=DojoX+Grid&order=priority&milestone=1.7&col=id&col=summary&col=type&col=priority>`_ for more details.
  
  
-GridX
+Next generation of Grid
 
-- An incubation project being worked closely with `dgrid <https://github.com/kriszyp/dgrid>`_ for the next generation of Dojo Grid.
-- Provides a highly extensible core and a rich set of modules to be loaded on demand, appropriate modules can be picked up to constitute different Grid instances e.g. MiniGrid(MobileGrid）, AdvancedGrid, TreeGrid etc.
-- Gridx is `demo only <http://archive.dojotoolkit.org/dojo-2011-07-18/dojotoolkit/demos/gridx/demo.html>`_ in 1.7 time frame.
+- Incubation projects `dgrid <https://github.com/kriszyp/dgrid>`_  and `gridx <https://github.com/evanhw/gridx>`_ are also in progress and working closely for the next generation of Grid.
 
 
 Mobile
