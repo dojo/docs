@@ -8,6 +8,16 @@ Dojo 1.7 Release Notes
 .. contents::
    :depth: 3
 
+=============
+Documentation
+=============
+
+Considerable effort has been put into making Dojo 1.7's documentation better than ever.
+
+  `Reference Guide (1.7RC1 Draft) <http://livedocs.dojotoolkit.org/>`_
+
+  `API Docs (1.7RC1 Draft) <http://staging.dojotoolkit.org/api/>`_
+
 ===============
 Browser support
 ===============
@@ -23,7 +33,7 @@ Desktop
 
 Mobile (dojox/mobile)
 
-  * iOS 4.x (Safari) (including all Dijit widgets except Editor, Dialog)
+  * iOS 4.x, 5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2, 2.3, 3.0 
   * Blackberry 6 
   * Mobile compatibility on desktop browsers: IE 8, 9, Firefox 3.6, 4, 5, Safari 5.0, 5.1, Chrome 13 and later
@@ -169,6 +179,8 @@ Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
 =====
 Dijit
 =====
+
+Dijit widgets should now "just work" on supported mobile devices, with the exception of Editor and Dialog widgets.  This is intended to allow web apps built for desktop browsers to continue to be functional when browsed on mobile devices.  
 
 _WidgetBase
 -----------
