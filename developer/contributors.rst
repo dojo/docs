@@ -487,6 +487,7 @@ A list of individuals who have signed Dojo CLAs:
 * Sotherland, Jamie
 * Souzis, Adam 
 * Sowden, Paul 
+* Speich, Simon
 * Squisky 
 * Stallworthy, Phillip
 * Stancapiano, Luca 
