@@ -320,7 +320,12 @@ Next generation of Grid
 
 Mobile
 ------
- - BlackBerry OS6 theme has been added.
+
+Dojo Mobile is now considered a first class Mobile library, fully supporting lightweight (baseless) AMD loading and the new Dojo Build System. A new reference guide has been written for the Dojo Mobile project, and full API docs are now available.  
+
+  `Dojo Mobile Reference Guide <http://livedocs.dojotoolkit.org/dojox/mobile>`_
+
+ - BlackBerry OS6 theme has been added.  For the full list of supported mobile devices & OS' see above.
  - dojox.mobile.deviceTheme is a device theme loader, which detects the mobile device being used and automatically loads an appropriate theme
  - New SpinWheel widget allows you to select values from spin wheels. Two variations, SpinWheelDatePicker and SpinWheelTimePicker, are also available.
  - New Carousel widget shows a list of images from which you can select an item.
