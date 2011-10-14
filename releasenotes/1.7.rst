@@ -76,8 +76,6 @@ Note that in async mode many modules which were implicitly loaded before now (in
 
 Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/api's will continue through 1.8.
 
-Completion of AMD conversion (Rawld etc. please fill this in)
-
 Limitations:
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
@@ -368,7 +366,13 @@ OpenLayers Maps
 Util
 ====
 
-The build tool has been replaced, but it supports the same options as before.   It now runs on node.js too (in addition to rhino).   (TODO: Rawld, fill this in)
+Build Tool Updates
+------------------
+
+The Build Tools have been completely reimplemented in Dojo 1.7, to take full advantage of AMD and has() and optionally Node.js and Closure Compiler, while still being fully backward compatible with the old build tools.  A complete reference guide has being prepared here with all the information: 
+
+  `Build Tool Reference Guide (1.7RC1 Draft) <http://livedocs.dojotoolkit.org/build/buildSystem>`_
+
 
 =========
 Migration
