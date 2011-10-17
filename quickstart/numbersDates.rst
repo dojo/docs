@@ -104,7 +104,7 @@ Examples
 
 The following examples show how date and time patterns are interpreted in the U.S. locale. The given date and time are 2001-07-04 12:08:56 local time in the U.S. Pacific Time time zone.
 
-.. csv-table:: Title
+.. csv-table:: Examples
    :header: "Date and Time Pattern","Result"
 
     "yyyy.MM.dd G 'at' HH:mm:ss "," 	2001.07.04 AD at 12:08:56 PDT"
@@ -116,8 +116,3 @@ The following examples show how date and time patterns are interpreted in the U.
     "EEE, d MMM yyyy HH:mm:ss "," 	Wed, 4 Jul 2001 12:08:56 -0700"
     "yyMMddHHmmss"," 	010704120856-0700"
     "yyyy-MM-dd'T'HH:mm:ss.SSS"," 	2001-07-04T12:08:56.235-0700"
-
-.. code-block :: javascript
-  :linenos:
-
-  <script type="text/javascript">alert("Your code");</script>
