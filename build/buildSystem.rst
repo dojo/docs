@@ -334,7 +334,7 @@ When exercised with the ``check-args`` switch, you should see something like thi
     					 buildTimestamp:"2011-9-29-21:34:2"
     				}]}
 
-Congifuruation Resources
+Configuration Resources
 ------------------------
 
 The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig`` as
