@@ -359,8 +359,10 @@ dojo.some
     array.some(arrayObject, callback, thisObject);
   });
 
-Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
-Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect function to tell you whether an array has some of the asked values:
+Semantically, calling ``dojo.some`` is like asking, "does the test this function performs hold true for at least one item ('some item') in the array?"  Like ``dojo.forEach``, ``dojo.some`` iterates over the items in an array; however, it stops and returns ``true`` as soon as it encounters an item for which the provided callback returns ``true``.  If the callback doesn't return ``true`` for even a single item, ``dojo.some`` returns ``false``.
+
+For example, imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
+Now your bank policies only allow you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect function to tell you whether an array has some values satisfying this condition:
 
 .. cv-compound::
 
@@ -407,7 +409,9 @@ dojo.every
     array.every(arrayObject, callback, thisObject);
   });
 
-Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
+``dojo.every`` is somewhat of a spiritual opposite to ``dojo.some`` - in this case, it's like asking, "does this test hold true for *every* item in the array?"  In other words, if even one invocation of the callback returns ``false``, ``dojo.every`` immediately short-circuits and returns false.  If all iterations of the callback return ``true``, so does ``dojo.every``.
+
+Let's get back to our bank manager example.  A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
 An example:
 
 .. cv-compound::
@@ -439,3 +443,5 @@ An example:
     <div>The content of our test array is [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}].</div>
     <button id="refButton7" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxSome" type="button">Is the client allowed to get the credit?</button>
     <div id="result7"></div>
+
+As you may have guessed, due to the short-circuiting nature of ``dojo.some`` and ``dojo.every``, they can be cleverly employed as more efficient alternatives to ``forEach`` in cases where there is potential to break out of the loop early and save processing.
