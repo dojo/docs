@@ -1482,7 +1482,7 @@ NOTE:
 
 .. code-block :: html
  
-  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9">
  
 TODO: To be certain of this doctype fix, it would be good to list a few doctypes that are known to *not* work.
 
