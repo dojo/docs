@@ -362,7 +362,7 @@ Filter Bar
 
 Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column". 
 
-.. image:: filterbar-definefilterbtn.png
+.. image:: filterbar-definefilterbtn-1.png
 
 Clicking directly on the filter bar will also show the Filter Definition Dialog, but setting the value of the "Column" field to the column that the mouse is over.
 
