@@ -366,19 +366,19 @@ Clicking the button on the filter bar will show the Filter Definition Dialog wit
 
 Clicking directly on the filter bar will also show the Filter Definition Dialog, but setting the value of the "Column" field to the column that the mouse is over.
 
-.. image:: filterbar-somecolumn.png
+.. image:: filterbar-somecolumn-1.png
 
 Hovering over the filterbar for 300 msec will trigger the Filter Status Tooltip.
 
-.. image:: filterbar-showtooltip.png
+.. image:: filterbar-showtooltip-1.png
 
 When there's a filter defined, the clear filter button will be shown, and the status tip will look like this:
 
-.. image:: filterbar-clearbtn.png
+.. image:: filterbar-clearbtn-1.png
 
 If ``closeFilterbarButton`` is true, there will be a close-filterbar button at the right end of the filter bar.
 
-.. image:: filterbar-closebtn.png
+.. image:: filterbar-closebtn-1.png
 
 When the filter bar is hidden, there is a function to bring it out: ``showFilterBar``
 
@@ -426,7 +426,7 @@ Different data types have different sets of conditions and different kinds of fo
 
 The value field for Number type only accepts number. 
 
-.. image:: defdialog-numbervaluebox.png
+.. image:: defdialog-numbervaluebox-1.png
 
 The value field for String type can have auto-complete capability (if set autoComplete in the grid structure). 
 
