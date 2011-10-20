@@ -278,7 +278,7 @@ Property                       Type      Default Value    Description
 itemsName                      String    "items"          The name of the items in the data store. 
                                                           For example, if the data in the store are records of songs, you may set it to "songs", 
                                                           so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
-closeFilterbarButton           Boolean   false            Whether to hide the close-filterbar button.
+closeFilterbarButton           Boolean   false            Whether to show the close-filterbar button.
 ruleCount                      Number    3                The maximum rule count of a filter. Defult to 3. If set to 0 or Infinity, infinite rules are supported. 
 ruleCountToConfirmClearFilter  Number    2                If the filter rule count is larger than or equal to this value, then a confirm dialog will show when 
                                                           clearing filter. If set to less than 1 or null, then always show the confirm dialog. If set to Infinity, 
@@ -358,7 +358,7 @@ The UI of this plugin consists of 3 components: a filter bar within the grid, a 
 Filter Bar
 ----------
 
-.. image:: filterbar.png
+.. image:: filterbar-1.png
 
 Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column". 
 
