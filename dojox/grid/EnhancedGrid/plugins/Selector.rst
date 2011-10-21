@@ -254,11 +254,11 @@ Swipe range selection using mouse:
 
 Extend selection using keyboard:
 
-.. image:: selector-col-swiperangekey.gif
+.. image:: selector-col-swiperangekey-1.gif
 
 Hole CTRL to modify current selection:
 
-.. image:: selector-cell-deselectrangemouse.gif
+.. image:: selector-cell-deselectrangemouse-1.gif
 
 
 Events
