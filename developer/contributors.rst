@@ -405,6 +405,7 @@ A list of individuals who have signed Dojo CLAs:
 * Prevoteau, Eric 
 * Prokopiev, Eugene 
 * Pupius, Dan 
+* Pu, Li
 * Rahalski, Vitali 
 * Reed, Joshua Allen 
 * Rees, David
