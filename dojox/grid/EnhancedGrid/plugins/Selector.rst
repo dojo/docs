@@ -187,9 +187,9 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
-    data-dojo-props="store:mystore, structure:'mystructure',
-    plugins:{
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
+    store="mystore" structure="mystructure" 
+    plugins="{
       selector: /* a Boolean value or an configuration object */{}
   }" ></div>
 
@@ -248,9 +248,9 @@ Here's some demos for selecting operations:
 
 Swipe range selection using mouse:
 
-.. image:: selector-row-swiperangemouse.gif
+.. image:: selector-row-swiperangemouse-1.gif
 
-.. image:: selector-cell-swiperangemouse.gif
+.. image:: selector-cell-swiperangemouse-1.gif
 
 Extend selection using keyboard:
 
