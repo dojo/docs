@@ -286,9 +286,9 @@ If your grid is created declaratively:
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
-    data-dojo-props="store:mystore, structure:'mystructure',
-    plugins:{
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
+    store="mystore" structure="mystructure" 
+    plugins="{
       dnd: /* a Boolean value or an argument object */{}
   }" ></div>
 
@@ -377,15 +377,15 @@ If enabled, selected rows/columns/cells can be dragged within grid.
 
 Dragging Columns
 
-.. image:: dnd-within-cols.gif
+.. image:: dnd-within-cols-1.gif
 
 Dragging Rows
 
-.. image:: dnd-within-rows.gif
+.. image:: dnd-within-rows-1.gif
 
 Dragging Cells
 
-.. image:: dnd-within-cells.gif
+.. image:: dnd-within-cells-1.gif
 
 
 
@@ -397,27 +397,27 @@ Note: Dragging columns across grids is not supported.
 
 Moving rows across grids
 
-.. image:: dnd-togrid-rows.gif
+.. image:: dnd-togrid-rows-1.gif
 
 Copy rows across grids
 
-.. image:: dnd-togrid-rows-copy.gif
+.. image:: dnd-togrid-rows-copy-1.gif
 
 Moving cells across grids
 
-.. image:: dnd-togrid-cells.gif
+.. image:: dnd-togrid-cells-1.gif
 
 Copy cells across grids
 
-.. image:: dnd-togrid-cells-copy.gif
+.. image:: dnd-togrid-cells-copy-1.gif
 
 If selected cells do not form a rectangle, they can not be dragged:
 
-.. image:: dnd-cannotdndshape.png
+.. image:: dnd-cannotdndshape-1.png
 
 Because the grid lazy loads store data, and extended selection is supported, it is possible to select rows or cells that are not loaded to the client side yet. If this situation occurs, it's not allowed to "drop" these unloaded objects to another grid:
 
-.. image:: dnd-unloadedrows.gif
+.. image:: dnd-unloadedrows-1.gif
 
 DnD from Grid to Other Widgets
 ------------------------------
@@ -466,8 +466,8 @@ The HTML is:
 .. code-block :: html
   :linenos:
   
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="store:test_store, structure:'layout', rowSelector:'20px',
-    plugins:{
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
+    plugins="{
       dnd: {copyOnly: true}
     }"
   ></div>
@@ -513,7 +513,7 @@ The JavaScript code is:
 
 And here is the effect:
 
-.. image:: dnd-tootherwidget.gif
+.. image:: dnd-tootherwidget-1.gif
 
 Public Methods
 --------------
