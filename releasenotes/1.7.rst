@@ -107,7 +107,9 @@ This new module provides a new event handling system with support for a number o
  - touch event normalization - Touch events are normalized across Android, iOS, etc.
  - has()-based feature detection - This makes possible to create browser specific builds that exclude unneeded features (like IE normalization)
 
-This also sheds some of the legacy keypress event handling code (best practice is to use keydown instead), and reduces code size. 
+This also sheds some of the legacy keypress event handling code (best practice is to use keydown instead), and reduces code size.
+
+This API is planned to replace the existing dojo.connect API in Dojo 2.0. The arguments passed to event handlers for non-DOM events and the event names used for non-DOM events are expected to change in Dojo 2.0, so Dojo 1.x applications that connect to non-DOM events should not necessarily migrate existing code to dojo/on if it is being done in an attempt to be future-proof.
 
 dojo/query
 ----------
