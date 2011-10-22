@@ -15,7 +15,9 @@ dijit.form.Button
 Introduction
 ============
 
-The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>. The default value for the `type` attribute is `button`. However, if creating Button widgets via markup using IE8 in strict mode, the default value is changed by the browser to `submit`. Because of this, users are encouraged to always specify an explicit `type` attribute.
+The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>. The default value for the `type` attribute is `button`.
+
+**When creating dijit Buttons declaratively from a <button> element, you *must* specify a type attribute or it will not work consistently across browsers (in IE8, the type will incorrectly default to "submit").**
 
 
 ========
