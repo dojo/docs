@@ -169,17 +169,6 @@ The on.once function allows you to register a listener that will be called just 
 
   on.once(finishedButton, "click", onFinished);
 
-Publish/Subscribe
------------------
-
-Dojo provides a centralize hub for publishing and subscribing to global messages by topic (dojo/on and dojo.connect use the same hub). One can subscribe to these messages by using on() without the first target argument, and one can publish by using on.emit() with the first target argument. For example:
-
-.. code-block :: javascript
-
-  on("some/topic", listener); // listener will be called when a message is published for this topic
-  ...
-  on.emit("some/topic", "hi there", "additional arguments"); // publish a message
-
 
 Converting from dojo.connect
 ----------------------------
