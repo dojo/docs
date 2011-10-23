@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo/on
-=======
+dojo/topic
+==========
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
