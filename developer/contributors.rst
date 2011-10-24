@@ -412,6 +412,7 @@ A list of individuals who have signed Dojo CLAs:
 * Reicke, Craig 
 * Reimann, Marcus 
 * Remeika, Bob 
+* Rhode, Devin
 * Rhodes, Aaron 
 * Rice, Torrey 
 * Riley, William 
