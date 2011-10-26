@@ -805,6 +805,10 @@ Miscellaneous Core
 
   Provides normalized event listening and event dispatching functionality
 
+* `dojo/touch <dojo/touch>`_
+
+  Provides standardized touch events
+
 * `dojo.require <dojo/require>`_
 
   Loads a Dojo module, by name
