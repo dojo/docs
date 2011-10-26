@@ -392,6 +392,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A module to display geographical content
 
+* `dojox.gesture<dojox/gesture>`_
+
+  Gesture events that can run well across a wide range of deivces
+
 * `dojox.gfx <dojox/gfx>`_
 
   Cross-browser vector graphics API
