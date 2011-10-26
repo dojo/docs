@@ -319,9 +319,9 @@ Then we can define the rotate gesture like:
   </script>
   
 
-=================
-Supported devices
-=================
+========================
+Supported devices in 1.7
+========================
 
 dojox/gesture is working well with:
 
