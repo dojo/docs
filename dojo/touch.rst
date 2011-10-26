@@ -17,10 +17,10 @@ This module provides an unified set of touch events - press|move|release|cancel,
 
 The rationale is very simple - press|move|release|cancel are:
 
-- 1. Mapped to touchstart|touchmove|touchend|touchcancel on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
+ - Mapped to touchstart|touchmove|touchend|touchcancel on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
 
 
-- 2. Mapped to mousedown|mousemove|mouseup|mouseleave on desktops. 
+ - Mapped to mousedown|mousemove|mouseup|mouseleave on desktops. 
 
 So by using dojo/touch, we don't need to worry about changing to appropriate native events when switching devices.
 
