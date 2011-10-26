@@ -394,7 +394,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.gesture <dojox/gesture>`_
 
-  Gesture events that can run well across a wide range of deivces
+  Provides gesture events that can run well across a wide range of deivces
 
 * `dojox.gfx <dojox/gfx>`_
 
