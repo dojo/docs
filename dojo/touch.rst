@@ -21,7 +21,7 @@ The rationale is very simple - "press|move|release|cancel" are mapped to:
 
 - "mousedown | mousemove | mouseup | mouseleave" on desktops. 
 
-So by using dojo/touch, we don't need to worry about appropriate native events when switching devices.
+So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms.
 
 
 ======
