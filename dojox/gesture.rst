@@ -18,15 +18,15 @@ This module provides a machinery for writing unified gesture events which can ru
 
 dojox/gesture has been designed with the follwing ratinales:
 
-1. Device neutral
+- Device neutral
 
 The target is to be compatible with most popular devices(single touch gestures should also work well on desktops). Please see 1.7 supported devices
 
-2. Compatibility and reusability
+- Compatibility and reusability
 
 Applicable and can be used with existing dijit widgets, dojo core(dnd), dojox/mobile or dojox/charting etc.
 
-3. Scalability
+- Scalability
 
 A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
