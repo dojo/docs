@@ -20,7 +20,7 @@ dojox/gesture has been designed with the follwing ratinales:
 
 - Device neutral
 
-The target is to be compatible with most popular devices(single touch gestures should also work well on desktops). Please see 1.7 supported devices
+The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
 
 - Compatibility and reusability
 
@@ -322,6 +322,7 @@ Then we can define the rotate gesture like:
 =================
 Supported devices
 =================
+
 dojox/gesture is working well with:
 
 1. Desktops
@@ -331,8 +332,9 @@ dojox/gesture is working well with:
 - Android 2.2/2.3
 - iOS 3/4  
 
+
 ============
-Further plan
+Future plan
 ============
 
 A rich set of enhancements is being planned for the further versions:
