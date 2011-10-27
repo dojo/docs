@@ -25,7 +25,7 @@ dojox/gesture has been designed with the follwing ratinales:
 
 - Device neutral - The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
 
-- Compatibility and reusability - Applicable and can be used with existing dijit widgets, dojo core(dnd), dojox/mobile or dojox/charting etc.
+- Compatibility and reusability - Applicable and can be used with dijit widgets, dojo core(dnd), dojox/mobile or dojox/charting etc.
 
 - Scalability - A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
