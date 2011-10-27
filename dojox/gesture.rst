@@ -25,13 +25,9 @@ dojox/gesture has been designed with the follwing ratinales:
 
 - Device neutral - The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
 
-- Compatibility and reusability
+- Compatibility and reusability - Applicable and can be used with existing dijit widgets, dojo core(dnd), dojox/mobile or dojox/charting etc.
 
-Applicable and can be used with existing dijit widgets, dojo core(dnd), dojox/mobile or dojox/charting etc.
-
-- Scalability
-
-A modularized event processing mechanism makes it very easy to extend with more customized gestures.
+- Scalability - A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
 
 The most key thing dojox/gesture does is to standardize touch and gesture events across devices. These unified gestue events are fist divided into several internal phase events with smaller graduality - "press |  move | release | cancel" which will then be mapped to approprieate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
