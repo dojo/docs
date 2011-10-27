@@ -23,9 +23,7 @@ Rationale
 
 dojox/gesture has been designed with the follwing ratinales:
 
-- Device neutral
-
-The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
+- Device neutral - The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
 
 - Compatibility and reusability
 
