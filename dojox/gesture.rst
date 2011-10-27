@@ -16,6 +16,11 @@ Introduction
 
 This module provides a machinery for writing unified gesture events which can run well across a wide range of deivces(most single touch gesture events can also work well on desktops).
 
+
+=========
+Rationale
+=========
+
 dojox/gesture has been designed with the follwing ratinales:
 
 - Device neutral
@@ -30,10 +35,6 @@ Applicable and can be used with existing dijit widgets, dojo core(dnd), dojox/mo
 
 A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
-
-=========
-Rationale
-=========
 
 The most key thing dojox/gesture does is to standardize touch and gesture events across devices. These unified gestue events are fist divided into several internal phase events with smaller graduality - "press |  move | release | cancel" which will then be mapped to approprieate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
 
