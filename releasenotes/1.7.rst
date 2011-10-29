@@ -373,7 +373,7 @@ Build Tool Updates
 
 The Build Tools have been completely reimplemented in Dojo 1.7, to take full advantage of AMD and has() and optionally Node.js and Closure Compiler, while still being fully backward compatible with the old build tools.  A complete reference guide has being prepared here with all the information: 
 
-  `Build Tool Reference Guide (1.7RC1 Draft) <http://livedocs.dojotoolkit.org/build/buildSystem>`_
+  `Build Tool Reference Guide (1.7 Draft) <http://livedocs.dojotoolkit.org/build/buildSystem>`_
 
 
 =========
