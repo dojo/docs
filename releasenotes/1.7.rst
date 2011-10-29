@@ -12,9 +12,9 @@ Documentation
 
 Considerable effort has been put into making Dojo 1.7's documentation better than ever.
 
-  `Reference Guide (1.7RC1 Draft) <http://livedocs.dojotoolkit.org/>`_
+  `Reference Guide (1.7 Draft) <http://livedocs.dojotoolkit.org/>`_
 
-  `API Docs (1.7RC1 Draft) <http://staging.dojotoolkit.org/api/>`_
+  `API Docs (1.7 Draft) <http://staging.dojotoolkit.org/api/>`_
 
 ===============
 Browser support
