@@ -85,4 +85,4 @@ dojo/touch is the underneath basis for `dojox/gesture <dojox/gesture>`_
 Known Issues
 ============
 
-If a device (like blackberry phones or some high end desktop computers) has both mouse and touch, dojo.touch will only monitor touch events, ideally it should be monitoring both. Please also See the `#13048 <http://bugs.dojotoolkit.org/ticket/13048>`_.
+If a device (like blackberry phones or some high end desktop computers) has both mouse and touch, dojo.touch will only monitor touch events, ideally it should be monitoring both. Please also See `#13048 <http://bugs.dojotoolkit.org/ticket/13048>`_.
