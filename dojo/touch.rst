@@ -28,7 +28,7 @@ So by using dojo/touch, we don't need to worry about appropriate native events w
 Usages
 ======
 
-dojo/touch is based on `dojo/on <dojo/on>`_ and provides press|move|release|cancel as 4 event handles. Following below are detail usage samples:
+dojo/touch is based on `dojo/on <dojo/on>`_ and provides "press | move | release | cancel" as 4 event handles. Following below are detail usages:
 
 
 1. Used with dojo/on
