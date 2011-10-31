@@ -314,6 +314,14 @@ Then we can define the rotate gesture like:
           return dojox.gesture.rotate;
         });
   </script>
+
+
+====
+Demo
+====
+The `Touch & Gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture. 
+
+Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
   
 
 ========================
