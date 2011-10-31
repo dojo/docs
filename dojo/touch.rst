@@ -15,7 +15,7 @@ Introduction
 
 This module provides an unified set of touch events - "press | move | release | cancel", which can run well across a wide range of devices(including desktops). 
 
-The rationale is very simple - "press|move|release|cancel" are mapped to:
+The rationale is very simple - "press | move | release | cancel" are mapped to:
 
 - "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
 
