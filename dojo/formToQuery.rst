@@ -8,7 +8,7 @@ dojo.formToQuery
 .. contents::
    :depth: 2
 
-Helper function for converting a HTML form to a JSON string
+Helper function for converting a HTML form into an URL-encoded query string.
 
 ============
 Introduction
