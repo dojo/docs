@@ -30,7 +30,7 @@ dojox/gesture has been designed with the follwing ratinales:
 - Scalability - A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
 
-The most key thing dojox/gesture does is to standardize touch and gesture events across devices. These unified gestue events are fist divided into several internal phase events with smaller graduality - "press |  move | release | cancel" which will then be mapped to approprieate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
+The most key thing dojox/gesture does is standardizing touch and gesture events across devices. These unified gestue events are fist divided into several internal phase events with smaller graduality - "press |  move | release | cancel" which will then be mapped to approprieate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
 
 .. image:: gesture2.jpg
 
