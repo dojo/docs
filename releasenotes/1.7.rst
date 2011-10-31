@@ -164,9 +164,9 @@ This module provides an unified set of touch events - "press | move | release | 
 
 The rationale is very simple - "press | move | release | cancel" are mapped to:
 
-- "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
+ - "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
 
-- "mousedown | mousemove | mouseup | mouseleave" on desktops. 
+ - "mousedown | mousemove | mouseup | mouseleave" on desktops. 
 
 So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms
 
@@ -291,20 +291,20 @@ dojox/gesture/Base
 
 An abstract parental class for various gesture implementations, it's mainly responsible for:
 
-- Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap
-- Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'
-- Firing and bubbling gesture events with on() API
+ - Binding on() listener handlers for supported gesture events, e.g. tap, taphold, doubletap
+ - Monitoring underneath events and process different phases - 'press'|'move'|'release'|'cancel'
+ - Firing and bubbling gesture events with on() API
 
 A gesture implementation only needs to extend this and overwrite appropriate phase handlers, e.g. press()|move()|release()|cancel for recognizing and firing gestures
  
 dojox/gesture/tap(single touch only)
 
-- Provide common tap gestures including tap, tap.hold and tap.doubletap
-- Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
+ - Provide common tap gestures including tap, tap.hold and tap.doubletap
+ - Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
  
 dojox/gesture/swipe(single touch only)
 
-- Provide common swipe gestures including swipe, swipe.end
+ - Provide common swipe gestures including swipe, swipe.end
 
 Also `a quick demo <http://http://demos.dojotoolkit.org/demos/touch/demo.html>`_ that shows dijit/form/HorizontalSlider and dojo/dnd can now run well on iOS4+ with the new dojo/touch and dojox/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture that support multiple touch.
  
