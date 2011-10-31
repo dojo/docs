@@ -160,7 +160,15 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
 dojo/touch
 ----------
 
-This new module provides a device neutral way to handle touchstart | touchmove | touchend with the native event properties normalized. 
+This module provides an unified set of touch events - "press | move | release | cancel", which can run well across a wide range of devices(including desktops). 
+
+The rationale is very simple - "press | move | release | cancel" are mapped to:
+
+- "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
+
+- "mousedown | mousemove | mouseup | mouseleave" on desktops. 
+
+So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms
 
 dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can work well across desktop and touch devices(Android 2.3/2.3 and iOS3+ for 1.7):
 
@@ -169,7 +177,7 @@ dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can w
       //listen to 'touchstart' on touch devices and 'mousedown' on desktops
       dojo.touch.press(node, function(e){});
 
-Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
+Please refer to `dojo/touch doc <dojo/touch>`_ for more details.
 
 =====
 Dijit
