@@ -306,7 +306,7 @@ dojox/gesture/swipe(single touch only)
 
  - Provide common swipe gestures including swipe, swipe.end
 
-Also `a quick demo <http://http://demos.dojotoolkit.org/demos/touch/demo.html>`_ that shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
+Also the `touch & gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
  
 Please refer to `dojox/gesture doc <dojox/gesture>`_ for more details.
 
