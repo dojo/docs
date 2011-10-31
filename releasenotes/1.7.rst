@@ -54,10 +54,10 @@ Note that in async mode many modules which were implicitly loaded before now (in
 
   .. code-block :: html
 
-           <script type="text/javascript" src="/dojo/dojo.js"
-              djConfig="parseOnLoad: true, async: true"></script>
+           <script src="/dojo/dojo.js"
+              data-dojo-config="parseOnLoad: true, async: true"></script>
      
-          <script language="JavaScript" type="text/javascript">
+          <script>
              require([
                  "dojo/_base/html",   // needed for dojo.byId
                  "dojo/parser",       // needed for parseOnLoad to run
