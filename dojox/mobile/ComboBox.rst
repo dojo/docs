@@ -83,3 +83,5 @@ Using inline OPTION tags
   <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
 
 .. image:: ComboBoxDataList.png
+
+The DataList widget must be defined prior to the ComboBox widget since it defines the currently selected value for the ComboBox.
