@@ -1,0 +1,70 @@
+#format dojo_rst
+
+Dojo 1.8 Release Notes
+======================
+
+(documentation in progress)
+
+.. contents::
+   :depth: 3
+
+
+===============
+Browser support
+===============
+
+The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
+
+Desktop
+
+  * Firefox 5-7
+  * Safari 5.0-5.1 and Chrome 13 and later
+  * IE 6-9
+  * Opera 10.50 and later (Dojo core only)
+
+Mobile (dojox/mobile)
+
+  * iOS 4.x,5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
+  * Android 2.2, 2.3, 3.1 
+  * Blackberry 6 
+  * Mobile compatibility on desktop browsers: IE 8-9, Firefox 3.6-7, Safari 5.0-5.1, Chrome 13 and later
+
+  TODO: Link to page with specific vendor device models tested on 
+
+=========
+Dojo Base
+=========
+
+=========
+Dojo Core
+=========
+
+Parser
+------
+
+=====
+Dijit
+=====
+
+DateTextBox
+-----------
+DateTextBox's drop down Calendar no longer automatically opens upon clicking the input area, unless the hasDownArrow=false option is set (in which case that's the only way to open the drop down Calendar).
+
+Dialog
+------
+Sizing improved for when Dialog is too big to fit in viewport.   Also, sizing automatically adjusts if users resizes the browser window.
+
+
+=====
+DojoX
+=====
+
+
+====
+Util
+====
+
+
+=========
+Migration
+=========
