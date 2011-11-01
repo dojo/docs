@@ -14,7 +14,7 @@ dojox.gesture
 Introduction
 ============
 
-This module provides a machinery for writing unified gesture events which can run well across a wide range of deivces(most single touch gesture events can also work well on desktops).
+This module provides a machinery for writing unified gesture events which can run well across a wide range of devices(most single touch gesture events can also work well on desktops).
 
 
 =========
