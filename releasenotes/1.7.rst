@@ -50,7 +50,7 @@ Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loadin
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
 
-Note that in async mode many modules which were implicitly loaded before now (including dojo.parser) need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).   For example:
+Note that in async mode many modules which were implicitly loaded before (including dojo.parser) now need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).   For example:
 
   .. code-block :: html
 
@@ -156,6 +156,8 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
        </div>
 
 **Note** there is no support for deprecated attribute ``prop`` as an attribute of the ``type="dojo/watch"`` script tag.  The parser only recognises the attribute ``data-dojo-prop``.
+
+**Reminder:** when operating in asynchronous mode, you need to explicitly load ``dojo/parser`` in order for ``parseOnLoad: true`` to operate.  (In non-async mode, it will be required automatically with a deprecation warning.)  Technically, ``dojo/parser`` was never automatically loaded, but prior to 1.7, it would be transitively loaded in many cases, due to it being loaded by ``dijit/_Templated``, which was relied upon by many widgets.
 
 dojo/touch
 ----------
