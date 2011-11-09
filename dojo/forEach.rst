@@ -49,15 +49,7 @@ For this simple loop, `dojo.forEach` isn't anything exciting. But combined with 
 .. code-block :: javascript
   :linenos:
 
-  //Before dojo 1.7
-  dojo.forEach(
-    dojo.query("select"),
-    function(selectTag) {
-      selectTag.disabled = true;
-    }
-  );
-  
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array", "dojo/query"], function(array, query){
     array.forEach(
       query("select"),
@@ -66,6 +58,14 @@ For this simple loop, `dojo.forEach` isn't anything exciting. But combined with 
       }
     );
   });
+  
+  // Dojo < 1.7
+  dojo.forEach(
+    dojo.query("select"),
+    function(selectTag) {
+      selectTag.disabled = true;
+    }
+  );
 
 How cool is that? (Answer: very!) There's no monkeying around with DOM functions, no using tedious names or id's, and it continues to work even when you add new SELECT tags.
 
@@ -73,35 +73,33 @@ Running ``dojo.forEach`` on a ``dojo.query`` result is so common, that Dojo defi
 
 .. code-block :: javascript
   :linenos:
-
-  //Before dojo 1.7
-  dojo.query("select").forEach(function(selectTag){
-      selectTag.disabled = true;
-  });
   
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/query"], function(query){
     query("select").forEach(function(selectTag){
       selectTag.disabled = true;
     });
   });
+  
+  // Dojo < 1.7
+  dojo.query("select").forEach(function(selectTag){
+      selectTag.disabled = true;
+  });
 
 does the same thing. But that's not all! New in 1.0 you can collapse the function down to its body, passed in as a string like so:
-
-// 1.0 only.
 
 .. code-block :: javascript
   :linenos:
   
-  //Before dojo 1.7
-  dojo.query("select").forEach("item.disabled = true;");
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/query"], function(query){
     query("select").forEach("item.disabled = true;");
   });
+  
+  // Dojo < 1.7
+  dojo.query("select").forEach("item.disabled = true;");
 
-Ay carumba! That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back.
+That's a lot of functionality from a single method! Once you get used to the syntax, you'll never want to go back.
 
 See Also
 ========
