@@ -26,14 +26,13 @@ Usage
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // Dojo 1.7 (AMD)
+   // Dojo 1.7+ (AMD)
    require(["dojo/_base/lang", function(lang) {
       var myNewObject = lang.delegate(anOldObject, { myNewProperty: "value or text"});
    });
+
    // Dojo < 1.7
    var myNewObject = dojo.delegate(anOldObject, { myNewProperty: "value or text"});
- </script>
 
 dojo.delegate accepts two arguments:
 
@@ -56,7 +55,7 @@ Examples
 Programmatic example
 --------------------
 
-[ Dojo 1.7 AMD ]
+[ Dojo 1.7+ AMD ]
 
 .. code-block :: javascript
  :linenos:
