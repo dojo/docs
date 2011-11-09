@@ -75,7 +75,7 @@ Basic Example
 
 .. cv-compound::
 
-  Let's look at a quick runnong example:
+  Let's look at a quick running example:
 
   .. cv:: javascript
     
