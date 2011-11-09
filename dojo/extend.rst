@@ -10,12 +10,13 @@ We can use dojo.extend to extend functionality into existing classes. Consider t
 .. code-block :: javascript
   :linenos:
 
-  // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang", "dijit.TitlePane"], function(lang, titlePane) {
-    lang.extend(titlePane, {
+  // Dojo 1.7+ (AMD)
+  require(["dojo/_base/lang", "dijit/TitlePane"], function(lang, TitlePane) {
+    lang.extend(TitlePane, {
       randomAttribute:"value"
     }); 
   });
+
   // Dojo < 1.7
   dojo.require("dijit.TitlePane");
   dojo.extend(dijit.TitlePane, {
@@ -34,19 +35,20 @@ After the extend, any new instances of a TitlePane will have the 'randomAttribut
 Extending _Widget
 -----------------
 
-A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from `dijit._Widget` in one way or another. Some widgets, like the `BorderContainer <dijit/layout/BorderContainer>`_ can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _Widget with the member, and anyone using any widget within a BorderContainer can specitiy a region:
+A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the `BorderContainer <dijit/layout/BorderContainer>`_ can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specitiy a region:
 
 .. code-block :: javascript
   :linenos:
 
-  // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang", "dijit._Widget"], function(lang, _Widget) {
-    lang.extend(_Widget, {
+  // Dojo 1.7+ (AMD)
+  require(["dojo/_base/lang", "dijit/_WidgetBase"], function(lang, _WidgetBase) {
+    lang.extend(_WidgetBase, {
       region:"center"
     });
   });
+
   // Dojo < 1.7
-  dojo.extend(dijit._Widget, {
+  dojo.extend(dijit._WidgetBase, {
       region:"center"
   });
 
@@ -55,27 +57,27 @@ The side-effect of this is a documentation nightmare. Now ``every`` Dijit appear
 Example :  dojo.extend vs dojo.mixin
 -------------------------------------
 
-[ Dojo 1.7 AMD ]
+[ Dojo 1.7+ (AMD) ]
 
 .. code-block :: javascript
   :linenos:
 
-    require(["dojo/_base/lang", "dojo/dom-form"], function(lang, form) {
+    require(["dojo/_base/lang", "dojo/json"], function(lang, json) {
         //define a class
         var myClass = function() {
             this.defaultProp = "default value";
         };
-        myClass.prototype = new myClass();
-        console.log("the class (unmodified):", form.toJson(myClass.prototype));
+        myClass.prototype = {};
+        console.log("the class (unmodified):", json.stringify(myClass.prototype));
     
         // extend the class
         lang.extend(myClass, {"extendedProp": "extendedValue"});
-        console.log("the class (modified with lang.extend):", form.toJson(myClass.prototype));
+        console.log("the class (modified with lang.extend):", json.stringify(myClass.prototype));
     
         var t = new myClass();
         // add new properties to the instance of our class
         lang.mixin(t, {"myProp": "myValue"});
-        console.log("the instance (modified with lang.mixin):", form.toJson(t));
+        console.log("the instance (modified with lang.mixin):", json.stringify(t));
     });
 
 
@@ -88,7 +90,7 @@ Example :  dojo.extend vs dojo.mixin
     var myClass = function() {
         this.defaultProp = "default value";
     };
-    myClass.prototype = new myClass();
+    myClass.prototype = {};
     console.log("the class (unmodified):", dojo.toJson(myClass.prototype));
     
     // extend the class
