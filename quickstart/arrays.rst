@@ -19,13 +19,14 @@ dojo.indexOf
 
 .. code-block :: javascript
 
-  //before dojo 1.7
-  dojo.indexOf(array, valueToFind, fromIndex, findLast)
-  
-  //from dojo 1.7 on
+ 
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     array.indexOf(arrayObject, valueToFind, fromIndex, findLast);
   });
+
+  // Dojo < 1.7
+  dojo.indexOf(array, valueToFind, fromIndex, findLast)
 
 
 dojo.indexOf lets you easily determine the index of an element in an array. It locates the first index of the provided value in the passed array. If the value is not found, -1 is returned.
@@ -63,13 +64,13 @@ dojo.lastIndexOf
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  dojo.lastIndexOf(array, valueToFind, fromIndex)
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
-    dojo.lastIndexOf(arrayObject, valueToFind, fromIndex);
+    array.lastIndexOf(arrayObject, valueToFind, fromIndex);
   });
+
+  // Dojo < 1.7
+  dojo.lastIndexOf(array, valueToFind, fromIndex)
 
 dojo.lastIndexOf lets you easily determine the last index of an element in an array. It locates the last index of the provided value in the passed array. If the value is not found, -1 is returned.
 
@@ -108,15 +109,15 @@ dojo.forEach
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  dojo.forEach(array, callback, fromIndex)
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     array.forEach(arrayObject, callback, fromIndex);
   });
 
-This is a heavylifter you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
+  // Dojo < 1.7
+  dojo.forEach(array, callback, fromIndex)
+
+This is a heavy lifter you will use often when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
 Note the "i" variable which returns the current position of an iteration
 
 .. cv-compound::
@@ -217,13 +218,13 @@ dojo.filter
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  filteredArray = dojo.filter(unfilteredArray, callback, thisObject)
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     filteredArray = array.filter(unfilteredArray, callback, thisObject);
   });
+
+  // Dojo < 1.7
+  filteredArray = dojo.filter(unfilteredArray, callback, thisObject)
 
 There are many cases when you have an array and want to filter it by a certain condition, ``dojo.filter`` will only keep values from ``unfilteredArray`` for which ``callback`` returns ``true``. The original array is not modified.
 
@@ -288,13 +289,13 @@ dojo.map
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  dojo.map(array, callback, thisObject)
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     array.map(arrayObject, callback, thisObject);
   });
+
+  // Dojo < 1.7
+  dojo.map(array, callback, thisObject)
 
 Another great function provided by Dojo is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
 
@@ -351,13 +352,13 @@ dojo.some
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  dojo.some(array, callback, thisObject);
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     array.some(arrayObject, callback, thisObject);
   });
+
+  // Dojo < 1.7
+  dojo.some(array, callback, thisObject);
 
 Semantically, calling ``dojo.some`` is like asking, "does the test this function performs hold true for at least one item ('some item') in the array?"  Like ``dojo.forEach``, ``dojo.some`` iterates over the items in an array; however, it stops and returns ``true`` as soon as it encounters an item for which the provided callback returns ``true``.  If the callback doesn't return ``true`` for even a single item, ``dojo.some`` returns ``false``.
 
@@ -401,13 +402,13 @@ dojo.every
 
 .. code-block :: javascript
 
-  //Before dojo 1.7
-  dojo.every(array, callback, thisObject);
-
-  //From dojo 1.7 on
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
     array.every(arrayObject, callback, thisObject);
   });
+
+  // Dojo < 1.7
+  dojo.every(array, callback, thisObject);
 
 ``dojo.every`` is somewhat of a spiritual opposite to ``dojo.some`` - in this case, it's like asking, "does this test hold true for *every* item in the array?"  In other words, if even one invocation of the callback returns ``false``, ``dojo.every`` immediately short-circuits and returns false.  If all iterations of the callback return ``true``, so does ``dojo.every``.
 
