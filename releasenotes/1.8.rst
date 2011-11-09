@@ -17,7 +17,7 @@ The following browsers are supported. If a browser is not supported, it still ma
 
 Desktop
 
-  * Firefox 5-7
+  * Firefox 5-8
   * Safari 5.0-5.1 and Chrome 13 and later
   * IE 6-9
   * Opera 10.50 and later (Dojo core only)
