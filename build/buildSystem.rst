@@ -915,7 +915,7 @@ tags:
   The resource is an AMD module.
 
 ``miniExclude``
-  The resource should not be copied to the destination of the profile property "mini" is truthy.
+  The resource should not be copied to the destination if the profile property "mini" is truthy.
 
 ==========
 Transforms
