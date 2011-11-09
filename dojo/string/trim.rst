@@ -15,4 +15,4 @@ This function implements a frequently required functionality: it removes white-s
 
 This function is a bigger yet speedier version of `dojo.trim <dojo/trim>`_. Otherwise these two functions are absolutely identical. The main difference is `dojo.trim <dojo/trim>`_ is part of the Dojo Base and as such is immediately available as soon as ``dojo.js`` is included, while dojo.string.trim is a part of ``dojo.string`` module, which should be explicitly required (see `dojo.require <dojo/require>`_).
 
-Please refer to `dojo.trim <dojo/trim>`_ documentation for code examples. Just substitute ``dojo.trim`` with ``dojo.string.trim``.
+Please refer to `dojo.trim <dojo/trim>`_ documentation for code examples. Just substitute ``dojo.trim`` with ``dojo.string.trim``.  (In AMD context, instead of requiring ``dojo/_base/lang`` and invoking ``lang.trim``, you would require ``dojo/string`` and invoke ``string.trim``.)
