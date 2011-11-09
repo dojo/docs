@@ -31,12 +31,13 @@ isArray returns a Boolean you can use directly in conditionals:
 .. code-block :: javascript
  :linenos:
 
-  // Dojo 1.7 (AMD)
+  // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang", function(lang) {
     if(lang.isArray(someVariable)) {
       // do something
     }
   });
+
   // Dojo < 1.7
   if(dojo.isArray(someVariable)) {
     // do something
@@ -44,12 +45,12 @@ isArray returns a Boolean you can use directly in conditionals:
 
 Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forEach>`_
 
-[ Dojo 1.7 AMD ]
+[ Dojo 1.7+ (AMD) ]
 
 .. code-block :: javascript
   :linenos: 
 
-  require(["dojo/_base/lang", "dojo/_base/array"], function(lang) {
+  require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array) {
     if(lang.isArray(list)) {
       array.forEach(list, function(item, i) {
         // each item in list
@@ -82,12 +83,14 @@ It is important to understand that dojo.isArray checks to see if the provided va
 
 .. code-block :: javascript
 
- // Dojo 1.7 (AMD)
+ // Dojo 1.7+ (AMD)
  require(["dojo/_base/lang", function(lang) {
    lang.isArray = function(it){
      return it && Object.prototype.toString.call(it)=="[object Array]";
    });
  });
+
+ // Dojo < 1.7
  dojo.isArray = function(it){
     return it && Object.prototype.toString.call(it)=="[object Array]";
  });
