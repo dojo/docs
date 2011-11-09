@@ -26,14 +26,14 @@ Usage
 .. code-block :: javascript
  :linenos:
 
- //Before dojo 1.7
+ // Before dojo 1.7
  var changedArray = dojo.map([1, 2, 3, 4], function(item){ return item+1; });
-   console.log(changedArray); //returns [2, 3, 4, 5]
+ console.log(changedArray); // logs [2, 3, 4, 5]
 
- //From dojo 1.7 on
+ // From dojo 1.7 on
  require(["dojo/_base/array"], function(array){
    var changedArray = array.map([1,2,3,4], function(item){ return item+1; });
-   console.log(changedArray); // returns [2,3,4,5]
+   console.log(changedArray); // logs [2,3,4,5]
  });
 
 ========
