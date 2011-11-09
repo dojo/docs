@@ -15,18 +15,17 @@ This function implements a frequently required functionality: it removes white-s
 
 Dojo's implementation was informed by `Steven Levithan's blog post <http://blog.stevenlevithan.com/archives/faster-trim-javascript>`_. We chose to implement the compact yet performant version. If your application requires even more speed, check out `dojo.string.trim <dojo/string/trim>`_, which implements the fastest version.
 
-===========
-Basic Usage
-===========
+=====
+Usage
+=====
 
 dojo.trim accepts the only argument: a string to be trimmed.
 
-Examples:
+[ Dojo 1.7+ (AMD) ]
 
 .. code-block :: javascript
   :linenos:
   
-  //Dojo 1.7 (AMD)
   require(['dojo/_base/lang'], function(lang){
     function show(str){
       return "|" + lang.trim(str) + "|";
@@ -39,7 +38,11 @@ Examples:
     var output5 = show("\f\n\r\t\vF I V E\f\n\r\t\v");
   });
 
-  //Dojo < 1.7
+[ Dojo < 1.7 ]
+
+.. code-block :: javascript
+  :linenos:
+
   function show(str){
     return "|" + dojo.trim(str) + "|";
   }
@@ -50,15 +53,9 @@ Examples:
   var output4 = show("\tfour\r\n");
   var output5 = show("\f\n\r\t\vF I V E\f\n\r\t\v");
 
-You can see the result here:
-
-.. code-example::
-  :toolbar: none
-  :width:  600
-  :height: 400
-  :djConfig: parseOnLoad: false
-
-  Examples of dojo.trim().
+========
+Examples
+========
 
   .. javascript::
     :label: Object example
