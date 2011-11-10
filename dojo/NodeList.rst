@@ -25,12 +25,12 @@ Introduction
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
       var nl = query(".selectable");
       // NodeLists have length like all other arrays
       console.log( nl.length );
 
-      // hide each element
+      // hide each element (using style method added by NodeList-dom module)
       nl.style("display","none");
   });
 
@@ -54,7 +54,7 @@ You can also create NodeLists manually and since NodeLists are "just an Array" a
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/dom", "dojo/NodeList-dom"], function(query, dom){
       // create an instance of a NodeList
       var nl = new query.NodeList();
       nl.push(dom.byId("someId"));
@@ -84,7 +84,7 @@ The helper functions attached to the NodeList typically return the same instance
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
         // get all "li" elements
       query("ul > li").
         // make them visible but, slightly transparent
@@ -150,7 +150,7 @@ For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
       // all elements with class="hidden"
       query(".hidden").
         style({ opacity:0, visibility:"visible" }).
@@ -176,7 +176,7 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){  
       var nl = query(".foo"); // an array of nodes, NodeList
       var coords = nl.coords(); // an array of objects { w, h, t, l }
       nl.forEach(function(n, i){
@@ -199,16 +199,18 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
 Events with NodeLists
 =====================
 
-``NodeList.connect()`` is provided as a way to add event handlers to all DOM Nodes in the list, matching the `dojo.connect <dojo/connect>`_ API, assuming again the node to connect to is the current item in the list:
+``NodeList.connect()`` is provided as a way to add event handlers to all DOM Nodes in the list, matching the `dojo.connect <dojo/connect>`_ API, assuming again the node to connect to is the current item in the list.
+
+In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the `dojo/on <dojo/on>`_ API.  ``NodeList.connect()`` is still available via the ``dojo/_base/NodeList`` module, which is pulled in automatically in legacy mode for backwards compatibility.
 
 [ V1.7+ AMD ]
 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/_base/fx"], function(query, baseFx){
       query(".readyToFade").
-        connect("onclick", function(evt){
+        on("click", function(evt){
           baseFx.fadeIn({ node: evt.target }).play();
       });
   });
@@ -230,7 +232,7 @@ You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect t
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){  
        query(".readyToFade").
          onclick(function(evt){
            baseFx.fadeIn({ node: evt.target }).play();
@@ -254,14 +256,14 @@ Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/dom-style", "dojo/_base/NodeList"], function(query, domStyle){
        // setup some basic hovering behavior:
        query(".foo.bar")
          .onmouseenter(function(e){
-             style.set(e.target, "opacity", 1);
+             domStyle.set(e.target, "opacity", 1);
          })
          .onmouseleave(function(e){
-             style.set(e.target, "opacity", 0.5);
+             domStyle.set(e.target, "opacity", 0.5);
          });
   });
    
@@ -287,7 +289,7 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo/_base/xhr"], function(query, xhr){  
+  require(["dojo/query", "dojo/_base/xhr", "dojo/_base/NodeList"], function(query, xhr){  
       // make an existing form use Ajax/xhrPost
       query("#myForm").onsubmit(function(e){
         // note that the event is always passed and has methods not regularly
@@ -339,7 +341,7 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/_base/lang", "dojo/query"], function(lang, query){  
+  require(["dojo/_base/lang", "dojo/query", "dojo/NodeList-dom"], function(lang, query){  
       lang.extend(query.NodeList, {
         makeRed: function(){
           this.style({ color:"red" });
@@ -378,13 +380,9 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/ready",
-    "dojo/query",
-    "dojo/NodeList-fx"], function(ready, query){
-      ready(function(){
-        query(".readyToFade").fadeIn().play();
-      });
-    });
+  require(["dojo/query", "dojo/NodeList-fx", "dojo/domReady!"], function(query){
+    query(".readyToFade").fadeIn().play();
+  });
 
 [ V1.6 and earlier ]
 
@@ -425,7 +423,7 @@ Array Methods
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
       // we only want to style the first one
       query("a").at(0).style("fontWeight", "bold");
 
@@ -452,7 +450,7 @@ As of Dojo 1.5, .at() can also accept negative indices.
   :linenos:
   
   require(["dojo/query"], function(query){  
-      query("a").at(0, -1).onclick(fn);
+      query("a").at(0, -1).on("click", fn);
   });
 
 [ V1.6 and earlier ]
@@ -469,7 +467,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){  
     query("a")
       .at(0)
          .onclick(function(e){ ... })
@@ -546,7 +544,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
       });
 
       // or using the string version:
-      var parents = query("a").some("return item.parentNode;");
+      var parents = query("a").map("return item.parentNode;");
   });
 
 [ V1.6 and earlier ]
@@ -560,7 +558,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
     });
 
   // or using the string version:
-  var parents = dojo.query("a").some("return item.parentNode;");
+  var parents = dojo.query("a").map("return item.parentNode;");
 
 :slice:
   Used for grabbing only some of the elements in the list. Like `Array.slice <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:slice>`_, returns a new ``dojo.NodeList`` from a subset of the current list (can be chained).
@@ -570,7 +568,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
   
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
      query("a").slice(1, -1).addClass("emphasis");
   });
 
@@ -590,7 +588,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){  
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){  
       var anchors = query("a");
       // remove 3, starting with the second
       var removed = anchors.splice(1, 3);
@@ -672,11 +670,11 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo/dom-style"], function(query, style){  
+  require(["dojo/query", "dojo/dom-style"], function(query, domStyle){  
       var anchors = query("a");
       // remove the last item from the list
       var a = anchors.pop();
-      style.set(a, "fontWeight", "bold");
+      domStyle.set(a, "fontWeight", "bold");
   });
 
 [ V1.6 and earlier ]
@@ -698,11 +696,11 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo/dom-style"], function(query, style){  
+  require(["dojo/query", "dojo/dom-style"], function(query, domStyle){  
       var anchors = query("a");
       // remove the first item from the list
       var a = anchors.shift();
-      style.set(a, "fontWeight", "bold");
+      domStyle.set(a, "fontWeight", "bold");
   });
 
 [ V1.6 and earlier ]
@@ -772,7 +770,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo/dom"], function(query, dom){  
+  require(["dojo/query"], function(query){  
       var hasFoo = query("a").
          some(function(node){
          return node.innerHTML == "foo";
@@ -803,15 +801,11 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query"], function(query){      
-    // require(["dojo.NodeList-traverse"...]); must be added in your code to use query().children() (new in 1.4)
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){      
     var areOnlyChildren = query("a").
         every(function(node){
            return query(node.parentNode).children().length == 1
         });
-
-     // or using the string version (item is the node):
-     var areOnlyChildren = query("a").every("return query(item.parentNode).children().length == 1;");
   }); 
 
 [ V1.6 and earlier ]
@@ -836,9 +830,8 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo.NodeList-traverse"], function(query){        
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){        
     // a list of anchors that are only children, same as query("a:only-child")
-    // require(["dojo.NodeList-traverse"...]); must be added in your code to use query().children() (new in 1.4)
     var onlyChildren = query("a").
         filter(function(node){
           return query(node.parentNode).children().length == 1;
@@ -888,7 +881,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   :linenos:
 
   // search for all anchor tags under several nodes:
-  require(["dojo/query"], function(query){      
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){      
       var anchors = query("#foo, #bar").query("a");
   }); 
 
@@ -919,7 +912,7 @@ Event Methods
 .. code-block :: javascript
   :linenos:
   
-  require(["dojo/query", "dojo/_base/connect"], function(query){      
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){      
       query("a.external").connect("onclick", function(e){
         // `this` here refers to the node, as we've not explicitly set the context to something
       });
@@ -946,7 +939,7 @@ As a convenience, several common events are mapped as direct function calls. For
   :linenos:
 
   var fn = function(e){ console.warn(e.target); }
-  require(["dojo/query", "dojo/_base/connect"], function(query){      
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){      
       query("a").onclick(fn);
       query("a").connect("onclick", fn);
   }); 
@@ -969,7 +962,7 @@ It is also possible to manipulate the scope of the callback, just as `dojo.conne
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/query", "dojo/_base/connect"], function(query){      
+  require(["dojo/query", "dojo/_base/NodeList"], function(query){      
       query("a").onclick(obj, "method"); 
       query("a").onclick(obj, obj.method);
   }); 
