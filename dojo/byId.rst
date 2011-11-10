@@ -11,7 +11,7 @@ dojo.byId
 
 This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
 
-Since dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of dom.byId in dojo/dom.
+Since dojo 1.7, dojo.byId is defined in the ``dojo/dom`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -20,20 +20,22 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
-
-  require(["dojo/_base/html"], function(dojo){  // Note, dom or any other variable name can be used     
-      // fetch a node by id="someNode"
-      var node = dojo.byId("someNode");
-  });
-
-It's recommended to use dom.byId to replace dojo.byId.
+When using AMD in a fully baseless application, ``byId`` is accessed from the ``dojo/dom`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/dom"], function(dom){  // Note, dom or any other variable name can be used     
+  require(["dojo/dom"], function(dom){
       // fetch a node by id="someNode"
       var node = dom.byId("someNode");
+  });
+
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.byId`` in the ``define`` or ``require`` callback:
+
+.. code-block :: javascript
+
+  require(["dojo"], function(dojo){
+      // fetch a node by id="someNode"
+      var node = dojo.byId("someNode");
   });
 
 
@@ -109,10 +111,10 @@ Most (if not all) functions in Dojo accept either a string or DomNode as a param
   :linenos:
 
   // dojo 1.7 (AMD)
-  require(["dojo/dom", "dojo/dom-style"], function(dom, style){
-    style.set(dom.byId("foo"), "opacity", 0.5);
+  require(["dojo/dom", "dojo/dom-style"], function(dom, domStyle){
+    domStyle.set(dom.byId("foo"), "opacity", 0.5);
     // is identical to:
-    style.set("foo", "opacity", 0.5);
+    domStyle.set("foo", "opacity", 0.5);
   });
   
 
