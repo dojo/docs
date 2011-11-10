@@ -26,7 +26,7 @@ dojo.trim accepts the only argument: a string to be trimmed.
 .. code-block :: javascript
   :linenos:
   
-  require(['dojo/_base/lang'], function(lang){
+  require(["dojo/_base/lang"], function(lang){
     function show(str){
       return "|" + lang.trim(str) + "|";
     }
@@ -56,6 +56,14 @@ dojo.trim accepts the only argument: a string to be trimmed.
 ========
 Examples
 ========
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :djConfig: parseOnLoad: false
+
+  Examples of dojo.trim().
 
   .. javascript::
     :label: Object example
