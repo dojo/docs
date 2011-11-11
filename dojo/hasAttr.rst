@@ -19,7 +19,7 @@ Introduction
 
 Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
 
-Since dojo 1.7, dojo.hasAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.has in dojo/dom-attr.
+Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the ``has`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -28,6 +28,12 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+ // Dojo 1.7+ (AMD)
+ require(["dojo/dom-attr"], function(domAttr){
+   result = domAttr.has(node, attr);
+ });
+ 
+ // Dojo < 1.7
  result = dojo.hasAttr(node, attr);
 
 node
@@ -44,21 +50,23 @@ result
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``has`` is accessed from the ``dojo/dom-attr`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){
-      dojo.hasAttr("nodeId", "foo");
+  require(["dojo/dom-attr"], function(domAttr){   
+    domAttr.has("nodeId", "foo");
   });
 
-It's recommended to use attr.has in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.hasAttr`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(attr){   
-      attr.has("nodeId", "foo");
+  require(["dojo"], function(dojo){
+    dojo.hasAttr("nodeId", "foo");
   });
 
 Dojo < 1.7
