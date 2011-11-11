@@ -778,7 +778,7 @@ There are two ways to chain methods: **after** and **before** (`AOP <http://en.w
 .. code-block :: javascript
   :linenos:
 
-  require(['dojo/_base/declare', 'dojo/dom-construct'], function(declare, ctr){
+  require(['dojo/_base/declare', 'dojo/dom-construct'], function(declare, domConstruct){
     var A = declare(null, {
       "-chains-": {
         init:    "after",
@@ -791,7 +791,7 @@ There are two ways to chain methods: **after** and **before** (`AOP <http://en.w
         console.log("A.init");
       },
       destroy: function(){
-        ctr.destroy(this.node);
+        domConstruct.destroy(this.node);
         this.node = null;
         console.log("A.destroy");
       }
