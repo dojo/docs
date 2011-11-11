@@ -21,7 +21,7 @@ This document is more to do with how to arrange your source files so that the bu
 
 There are several pages of existing documentation that describe the background and theory to the localization process:
 
- - `Internalization Quickstart <quickstart/internalization/index>`_
+ - `Internationalization Quickstart <quickstart/internationalization/index>`_
  - `getLocalization <dojo/i18n/getLocalization>`_
  - `requireLocalization <dojo/requireLocalization>`_
 
