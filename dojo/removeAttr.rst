@@ -17,7 +17,7 @@ Introduction
 
 ``dojo.removeAttr()`` removes an attribute. It is modeled after DOM's `removeAttribute <https://developer.mozilla.org/En/DOM/Element.removeAttribute>`_, but unlike the latter it normalizes standard attribute names to smooth over differences between browsers, or to provide convenient aliases, e.g., ``className`` is aliased to ``class``, and so on. The same algorithm is used by `dojo.attr <dojo/attr>`_.
 
-Since dojo 1.7, dojo.removeAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.remove in dojo/dom-attr.
+Since Dojo 1.7, ``dojo.removeAttr`` is exposed via the ``remove`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -26,6 +26,12 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+ // Dojo 1.7+ (AMD)
+ require(["dojo/dom-attr"], function(domAttr){
+   domAttr.remove(node, attr);
+ });
+ 
+ // Dojo < 1.7
  dojo.removeAttr(node, attr);
 
 node
@@ -39,21 +45,23 @@ attr
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``remove`` is accessed from the ``dojo/dom-attr`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
-      dojo.removeAttr("model", "disabled");
+  require(["dojo/dom-attr"], function(domAttr){   
+      domAttr.remove("model", "disabled");
   });
 
-It's recommended to use attr.remove in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.removeAttr`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(attr){   
-      attr.remove("model", "disabled");
+  require(["dojo"], function(dojo){   
+      dojo.removeAttr("model", "disabled");
   });
 
 Dojo < 1.7
