@@ -17,8 +17,9 @@ Introduction
 
 dijit._Templated is a mixin for most widgets in dijit. It takes an HTML template, and creates the widget's DOM tree according to that template. In other words, it implements buildRendering() for you.
 
-Note that the underscore in the name implies not that _Template is a private class, but rather that it's a mixin, rather than a widget.
+Note that the underscore in the name implies not that _Templated is a private class, but rather that it's a mixin, rather than a widget.
 
+**Dojo 1.7 Note:** As of Dojo 1.7, _Templated is deprecated in favor of the more atomic `dijit/_TemplatedMixin <dijit/_TemplatedMixin>` and `dijit/_WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` mixins.  _Templated is still present in 1.x for backwards-compatibility.
 
 =====
 Usage
