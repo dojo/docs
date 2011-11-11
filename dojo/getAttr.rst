@@ -50,12 +50,12 @@ When using AMD format in a fully baseless application, ``get`` is accessed from 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr", "dojo/dom"], function(attr, dom){   
+  require(["dojo/dom-attr", "dojo/dom"], function(domAttr, dom){   
       // get the current value of the "foo" attribute on a node
-      attr.get(dom.byId("nodeId"), "foo");
+      domAttr.get(dom.byId("nodeId"), "foo");
 
       // or we can just pass the id:
-      attr.get("nodeId", "foo");
+      domAttr.get("nodeId", "foo");
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getAttr`` in the ``define`` or ``require`` callback:
