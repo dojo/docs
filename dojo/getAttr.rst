@@ -15,7 +15,7 @@ Introduction
 
 ``dojo.getAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or default value.
 
-Since dojo 1.7, dojo.getAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.get in dojo/dom-attr.
+Since Dojo 1.7, ``dojo.getAttr`` is exposed via the ``get`` method of the ``dojo/dom-attr`` module.  An alias is kept in dojo/_base/html for backward-compatibility.
 
 =====
 Usage
@@ -24,6 +24,12 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-attr"], function(domAttr){
+    domAttr.get(node, attr);
+  });
+
+  // Dojo < 1.7
   dojo.getAttr(node, attr);
 
 node
@@ -40,17 +46,7 @@ Examples
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
-
-  require(["dojo/_base/html", "dojo/dom"], function(dojo, dom){   
-      // get the current value of the "foo" attribute on a node
-      dojo.getAttr(dom.byId("nodeId"), "foo");
-
-      // or we can just pass the id:
-      dojo.getAttr("nodeId", "foo");
-  });
-
-It's recommended to use attr.get in dojo 1.7.
+When using AMD format in a fully baseless application, ``get`` is accessed from the ``dojo/dom-attr`` module.
 
 .. code-block :: javascript
 
@@ -61,6 +57,19 @@ It's recommended to use attr.get in dojo 1.7.
       // or we can just pass the id:
       attr.get("nodeId", "foo");
   });
+
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.getAttr`` in the ``define`` or ``require`` callback:
+
+.. code-block :: javascript
+
+  require(["dojo"], function(dojo){   
+      // get the current value of the "foo" attribute on a node
+      dojo.getAttr(dojo.byId("nodeId"), "foo");
+
+      // or we can just pass the id:
+      dojo.getAttr("nodeId", "foo");
+  });
+
 
 Dojo < 1.7
 ----------
