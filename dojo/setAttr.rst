@@ -54,13 +54,13 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(attr){   
+  require(["dojo/dom-attr"], function(domAttr){   
       // use setAttr() to set the tab index
-      attr.set("nodeId", "tabIndex", 3);
+      domAttr.set("nodeId", "tabIndex", 3);
 
       // Again, only set style as an object hash of styles:
       var obj = { color:"#fff", backgroundColor:"#000" };
-      attr.set("someNode", "style", obj);
+      domAttr.set("someNode", "style", obj);
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setAttr`` in the ``define`` or ``require`` callback:
