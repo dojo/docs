@@ -419,9 +419,3 @@ And the page shows the new dijit and its localised string (you can see that Bar 
   The string: FRENCH this is a test FRENCH
   
   BAR The string: FRENCH BAR this is a test BAR FRENCH BAR
-
-========================
-A Note About ArcGIS/ESRI
-========================
-
-This write-up is designed to cover a basic, standalone, non-xd build of dojo.  At the time of writing, I know very little about ArcGIS.  I have seen `http://coreyalix.blogspot.com/2010/12/dojo-custom-builds-with-localized.html`_ and it seems quite a run-around.  I cannot say whether that author was doing the right thing, and if possible this section should be extended to cover localising dijits loaded as xd resources that are not local to the dojo_xd.js being used as the core loader.
