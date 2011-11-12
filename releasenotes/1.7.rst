@@ -395,13 +395,15 @@ Loader/Builder related
 
 <script>
 ````````
-Previously you may have been loading modules or layers via script tags, ex:
+Previously you may have been loading modules or layers via script tags, for example:
 
    .. code-block :: html
 
       <script src="/mysite/app/MyWidget.js">
 
-This no longer works, and will give errors about "foo multiply defined".   Instead you must load it through dojo.require():
+Although this idiom will still work with the standard, built distribution, it is deprecated. Further, it no longer
+works with unbuilt versions of the toolkit (e.g. the source distribution), and will result in the program failing to
+load and give "multipleDefine" errors in the console. Instead you must load it through dojo.require():
 
    .. code-block :: javascript
 
