@@ -269,7 +269,7 @@ There are several additional editor plugins provided by dijit and are listed out
 |                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and           |
 |                                             |                 |inserting images (<img> tags).  The plugin provides basic, but             |
 |                                             |                 |decent validating Tooltip Dialog editors for working with both types       |
-|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_           |
+|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_      |
 +---------------------------------------------+-----------------+---------------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                               |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it             |
