@@ -403,7 +403,7 @@ Previously you may have been loading modules or layers via script tags, for exam
 
 Although this idiom will still work with the standard, built distribution, it is deprecated. Further, it no longer
 works with unbuilt versions of the toolkit (e.g. the source distribution), and will result in the program failing to
-load and give "multipleDefine" errors in the console. Instead you must load it through dojo.require():
+load and give "multipleDefine" errors in the console. Instead you must load it through ``dojo.require()``:
 
    .. code-block :: javascript
 
@@ -421,10 +421,10 @@ Prior to v1.7, it was possible to define global functions within a module by wri
       dojo.provide("my.module");
       function myOnClick(){ ... }
 
-On some browsers, in some cases, ```myOnClick()``` would be defined in the global space.
+On some browsers, in some cases, ``myOnClick()`` would be defined in the global space.
 
 Starting with v1.7, *all* modules are evaluated within a closing function which results in the definition above residing within
-the closure--not the global space. If you really want to add a function in the global space from within a module, then use ```dojo.global```:
+the closure--not the global space. If you really want to add a function in the global space from within a module, then use ``dojo.global``:
 
    .. code-block :: html
 
