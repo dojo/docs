@@ -115,6 +115,6 @@ See also
 
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `dijit._Widget <dijit/_Widget>`_
-* `dijit/form/Select`_
-* `dijit/form/DropDownButton`_
-* `dijit/popup`_
+* `dijit/form/Select <dijit/form/Select>`_
+* `dijit/form/DropDownButton <dijit/form/DropDownButton>`_
+* `dijit/popup <dijit/popup>`_
