@@ -414,41 +414,22 @@ Or the new AMD require() API.
 
 Global variables
 ````````````````
-If your JS files want to declare global variables, perhaps to be used by widgets, ex:
+Prior to v1.7, it was possible to define global functions within a module by writing something like this:
 
    .. code-block :: html
 
-      <script>
-         function myOnClick(){ ... }
-      </script>
-      ...
-      <button dojoType="dijit.form.Button" onClick="myOnClick">...</button>
+      dojo.provide("my.module");
+      function myOnClick(){ ... }
 
-Then you need to declare them with this syntax:
+On some browsers, in some cases, ```myOnClick()``` would be defined in the global space.
 
-   .. code-block :: html
-
-      <script>
-         myOnClick = function(){ ... }
-      </script>
-
-The following syntax will not work, and will give errors about not being able to find the symbox:
+Starting with v1.7, *all* modules are evaluated within a closing function which results in the definition above residing within
+the closure--not the global space. If you really want to add a function in the global space from within a module, then use ```dojo.global```:
 
    .. code-block :: html
 
-      <script>
-         function myOnClick(){ ... }
-      </script>
-
-Nor will this:
-
-   .. code-block :: html
-
-      <script>
-         var myOnClick = function(){ ... };
-      </script>
-
-This is especially true for builds.
+      dojo.provide("my.module");
+      dojo.global.myOnClick = function(){ ... }
 
 debugAtAllCosts
 ```````````````
@@ -457,7 +438,9 @@ The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.
 Possible workarounds for a particular app are:
 
  * Convert the app to AMD and load with async:true, thereby using a standard AMD loader which script-injects everything.
- * Do a build, which converts all legacy modules to AMD modules. (Note: to do a true conversion that takes advantage of all of the features of AMD and removes things like dojo.getObject requires more work than the build app can do mechanically.)
+ * Do a build, which converts all legacy modules to AMD modules. 
+
+Note: to do a true conversion that takes advantage of all of the features of AMD and removes things like dojo.getObject requires more work than the build app can do mechanically.
 
 Dojo Core
 ---------
