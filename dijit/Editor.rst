@@ -251,43 +251,43 @@ Additional Editor Plugins
 
 There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Please note that several of the plugins actually provide multiple capabilities.  To make full use of those plugins, you must register the editor with each capability (short name).  A quick summary of the provided function is below:
 
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**Short Name(s)**|**Description**                                                       |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the editor contents between             |
-|                                             |                 |Right-To-Left and Left-ToRight                                        |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.TextColor              |foreColor and    |A plugin that provides two actions for altering text color in the     |
-|                                             |hiliteColor      |editor, the font color (foreColor) and the background color           |
-|                                             |                 |(hiliteColor).                                                        |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.FontChoice             |fontName,        |A plugin that allows users to edit certain properties of text, such as|
-|                                             |fontSize, and    |the size, the font name, and the block formatting (<p>, <pre>, etc)   |
-|                                             |formatBlock      |                                                                      |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.LinkDialog             |createLink       |A plugin that provides two actions involving links to external        |
-|                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and      |
-|                                             |                 |inserting images (<img> tags).  The plugin provides basic, but        |
-|                                             |                 |decent validating Tooltip Dialog editors for working with both types  |
-|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_      |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
-|                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
-|                                             |                 |takes over the full viewport of the browser window object.  Note that |
-|                                             |                 |running the editor in an iframe means the editor can only take over   |
-|                                             |                 |the iframe.                                                           |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.ViewSource             |viewsource       |A toolbar button plus hotkey for invoking an action that toggles the  |
-|                                             |                 |viewport of the editor between Rich-Text and HTML view.               |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.Print                  |print            |A toolbar button that allows you to print the contents of the editor  |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.NewPage                |newpage          |A toolbar button that allows you clear the contents of the editor     |
-|                                             |                 |to a default state, such as blank.  **New to Dojo toolkit 1.4.**      |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|**Plugin**                                   |**Short Name(s)**|**Description**                                                            |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the editor contents between                  |
+|                                             |                 |Right-To-Left and Left-ToRight                                             |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.TextColor              |foreColor and    |A plugin that provides two actions for altering text color in the          |
+|                                             |hiliteColor      |editor, the font color (foreColor) and the background color                |
+|                                             |                 |(hiliteColor).                                                             |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.FontChoice             |fontName,        |A plugin that allows users to edit certain properties of text, such as     |
+|                                             |fontSize, and    |the size, the font name, and the block formatting (<p>, <pre>, etc)        |
+|                                             |formatBlock      |                                                                           |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.LinkDialog             |createLink       |A plugin that provides two actions involving links to external             |
+|                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and           |
+|                                             |                 |inserting images (<img> tags).  The plugin provides basic, but             |
+|                                             |                 |decent validating Tooltip Dialog editors for working with both types       |
+|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_           |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                               |
+|                                             |                 |action that will toggle the editor's fullscreen mode, where it             |
+|                                             |                 |takes over the full viewport of the browser window object.  Note that      |
+|                                             |                 |running the editor in an iframe means the editor can only take over        |
+|                                             |                 |the iframe.                                                                |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                               |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.ViewSource             |viewsource       |A toolbar button plus hotkey for invoking an action that toggles the       |
+|                                             |                 |viewport of the editor between Rich-Text and HTML view.                    |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                               |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.Print                  |print            |A toolbar button that allows you to print the contents of the editor       |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                               |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
+|dijit._editor.plugins.NewPage                |newpage          |A toolbar button that allows you clear the contents of the editor          |
+|                                             |                 |to a default state, such as blank.  **New to Dojo toolkit 1.4.**           |
++---------------------------------------------+-----------------+---------------------------------------------------------------------------+
 
 Please refer to each plugin's detail page for more information about it.
 
