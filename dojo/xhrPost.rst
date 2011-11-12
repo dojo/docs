@@ -37,7 +37,7 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 
 +------------------+---------------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs. xhrPost will convert this into proper POST format and send it with the post      |
-|                  |data. Note that this parameter is handled differently from `dojo.xhrGet <dojo/xhrGet>`_, which encodes it as a query string      |
+|                  |data. Note that this parameter is handled differently from `dojo.xhrGet <dojo/xhrGet>`_, which encodes it as a query string |
 |                  |in url.                                                                                                                          |
 |                  |                                                                                                                                 |
 |                  |**This parameter is optional**                                                                                                   |
