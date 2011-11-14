@@ -77,7 +77,47 @@ Note that many core and dijit modules have been converted to use minimal depende
 Limitations:
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
-  DTL (dojox.dtl - Django Templating) 
+  DTL (dojox.dtl - Django Templating) : While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter). 
+
+  The following table lists the default tag libraries and their corresponding tags:
+
+  +----------------------+---------------------------------------------------------------------------+
+  | Tag Library          | Tags                                                                      |
+  +======================+===========================================================================+
+  | dojox/dtl/tag/date   | now                                                                       |
+  +----------------------+---------------------------------------------------------------------------+
+  | dojox/dtl/tag/logic  | if, for, ifequal, ifnotequal                                              |
+  +----------------------+---------------------------------------------------------------------------+
+  | dojox/dtl/tag/loader | extends, block, include, load, ssi                                        |
+  +----------------------+---------------------------------------------------------------------------+
+  | dojox/dtl/tag/misc   | comment, debug, filter, firstof, spaceless, templatetag, widthratio, with |
+  +----------------------+---------------------------------------------------------------------------+
+  | dojox/dtl/tag/loop   | cycle, ifchanged, regroup                                                 |
+  +----------------------+---------------------------------------------------------------------------+
+
+  For example, if a template uses the "{% for" tag, a 'require("dojox/dtl/tag/logic")' must be done by the application so that the logic.js tag library (where 'for' is defined) is included.
+
+  The following table lists the default filter libraries and their corresponding filters
+
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | Filter Library               | Filters                                                                                           |
+  +==============================+===================================================================================================+ 
+  | dojox/dtl/filter/dates       | date, time, timesince, timeuntil                                                                  |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/htmlstrings | linebreaks, linebreaksbr, removetags, striptags                                                   |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/integers    | add, get_digit                                                                                    |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/lists       | dictsort, dictsortreversed, first, join, length, length_is, random, slice, unordered_list         |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/logic       | default, default_if_none, divisibleby, yesno                                                      |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/misc        | filesizeformat, pluralize, phone2numeric, pprint                                                  |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
+  | dojox/dtl/filter/strings     | addslashes, capfirst, center, cut, fix_ampersands, floatformat, iriencode, linenumbers,           |
+  |                              | ljust, lower, make_list, rjust, slugify, stringformat, title, truncatewords, truncatewords_html,  | 
+  |                              | upper, urlencode, urlize, urlizetrunc, wordcount, wordwrap                                        |
+  +------------------------------+---------------------------------------------------------------------------------------------------+
 
 has.js
 ------
