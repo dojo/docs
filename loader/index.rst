@@ -21,9 +21,9 @@ The idea of a module system is fairly straight-forward:
 
   * construct a loader that implements the API so that modules can be assembled into a complete program at run-time
 
-With these two blocks in place, large Javascript programs can be divided into many--perhaps hundreds--of small modules,
+With these two blocks in place, large JavaScript programs can be divided into many--perhaps hundreds--of small modules,
 thereby greatly simplifying program construction. Indeed, the Dojo Toolkit itself is expressed in terms of many smallish
-Javascript resources.
+JavaScript resources.
 
 Since each individual resource implies an HTTP transaction to download that resource, bandwidth and latency constraints
 can result in sluggish loading performance. Fortunately, this problem is easy to fix. Once the program is constructed,
@@ -31,14 +31,14 @@ the modules can be analyzed by a program and aggregated so that only few resourc
 those resources containing several logical modules. Typcially, this step occurs when moving from development to
 deployment.
 
-Dojo was among the first Javascript libraries to define a module API and publish a loader and build application to solve
+Dojo was among the first JavaScript libraries to define a module API and publish a loader and build application to solve
 all of these problems. The original API included the functions ``dojo.require`` (request a module), ``dojo.provide``
 (define a module), and other supporting functions. This API is now termed the "legacy API". 
 
-Since early 2010, there has been a renewed interest in improving Javascript modules systems. A single API has
+Since early 2010, there has been a renewed interest in improving JavaScript modules systems. A single API has
 emerged: `the Asynchronous Module Definition (AMD) API <https://github.com/amdjs/amdjs-api/wiki/AMD>`_ ("AMD API"). This
 API has seen dramatic uptake over 2011 and has become the defacto standard for constructing client-side
-Javascript modules. While keeping the promise of backward compatibility for the 1.x product line, Dojo fully supports
+JavaScript modules. While keeping the promise of backward compatibility for the 1.x product line, Dojo fully supports
 this standard as of v1.7.0. (Note: Dojo will drop support for the legacy API in version 2.0).
 
 In version 1.7.0, the Dojo loader and build system have been completely rewritten to support **both** the AMD API and
@@ -54,5 +54,5 @@ The tutorials and reference manuals listed below describe all of this machinery.
 `The Dojo Legacy Module System <loader/legacy>`_
   Describes how the Dojo AMD loader works with legacy modules.
 
-`The Dojo Build System <build>`_
+`The Dojo Build System <build/index>`_
   The top page for the build system documentation.
