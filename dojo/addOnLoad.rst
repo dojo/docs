@@ -4,6 +4,13 @@
 dojo.addOnLoad
 ==============
 
+dojo.addOnLoad() has been deprecated in favor of the (equivalent) `dojo.ready <dojo/ready>`_ function, and more recently, in favor of the `The AMD API <loader/amd#the-amd-api>`_, and the `domReady! plugin <dojo/domReady>`_.
+
+The documentation below is preserved for legacy purposes:
+
+=================
+Old Documentation
+=================
 dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing. 
 
 Sooner or later, every Javascript programmer tries something like this:
