@@ -11,7 +11,7 @@ Writing Your Own Widget
 
 It's hard for you to leave well-enough alone. We give you widgets, and now you want to change them. Or you want to make your own.
 
-No problem! Dijit components are extendible, so you can make changes without touching the source code. In a way, you already do this by specifying your own attributes - e.g. sliders that go from 0-100 look different than those going from 0-200. But sometimes you need to go further. Maybe you need to create different behavior for onClick, or substitute a custom validation routine. This kind of modification uses extension points described in Common Attributes. You can add your own code to extension points through markup or through pure JavaScript calls to dojo.declare.
+No problem! Dijit components are extensible, so you can make changes without touching the source code. In a way, you already do this by specifying your own attributes - e.g. sliders that go from 0-100 look different than those going from 0-200. But sometimes you need to go further. Maybe you need to create different behavior for onClick, or substitute a custom validation routine. This kind of modification uses extension points described in Common Attributes. You can add your own code to extension points through markup or through pure JavaScript calls to dojo.declare.
 
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration data-dojo-type attribute - or through dojo.declare.
 
@@ -31,7 +31,7 @@ Technically, a widget can be any javascript "class" that implements a constructo
   }
 
 
-However, all the widgets in dijit and dojox, are built on top of the `dijit._Widget <dijit/_Widget>`_ base class.
+However, all the widgets in dijit and dojox, are built on top of the `dijit._WidgetBase <dijit/_WidgetBase>`_ base class.
 
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
@@ -42,11 +42,11 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
 	:label: The widget definition
 
 	<script>
-		dojo.require("dijit._Widget");
+		dojo.require("dijit._WidgetBase");
 		dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
+		dojo.ready(function(){
+			dojo.declare("MyFirstBehavioralWidget", [dijit._WidgetBase], {
 					// put methods, attributes, etc. here
 			});
 	
@@ -81,13 +81,13 @@ Here's a simple example of a widget that creates it's own DOM tree:
 	:label: Define the widget and instantiate programmatically
 
 	<script>
-		dojo.require('dijit._Widget');
+		dojo.require('dijit._WidgetBase');
 		// the dojo.parser is only needed, if you want 
 		// to instantiate the widget declaratively (in markup)
 		// dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("MyFirstWidget",[dijit._Widget], {
+		dojo.ready(function(){
+			dojo.declare("MyFirstWidget",[dijit._WidgetBase], {
 				buildRendering: function(){
 					// create the DOM for this widget
 					this.domNode = dojo.create("button", {innerHTML: "push me"});
@@ -118,10 +118,10 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 	:label: Define the widget
 
 	<script>
-		dojo.require("dijit._Widget");
+		dojo.require("dijit._WidgetBase");
 		dojo.require("dojo.parser");
-		dojo.addOnLoad(function(){
-			dojo.declare("Counter", [dijit._Widget], {
+		dojo.ready(function(){
+			dojo.declare("Counter", [dijit._WidgetBase], {
 				// counter
 				_i: 0,
 	
@@ -156,7 +156,7 @@ postCreate() is called after buildRendering() is finished, and is typically used
 =================
 Templated Widgets
 =================
-OK, we've seen how to create a widget based directly on the `dijit._Widget <dijit/_Widget>`_ class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called `dijit._Templated <dijit/_Templated>`_ that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
+OK, we've seen how to create a widget based directly on the `dijit._WidgetBase <dijit/_WidgetBase>`_ class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ that makes all of this easier.  _TemplatedMixin implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
 
 Let's start using templates by expanding on our counter example, but making it a little more complicated.  The user will be able to specify a label for the button, and the count will be printed after the button.  The user will also be able to specify a label for the counter.
 
@@ -177,7 +177,7 @@ The first thing to do is to create some plain HTML to show you want the widget t
 
 Note that the template should have a single top level root node.
 
-Next, we modify the template above with some commands for _Templated:
+Next, we modify the template above with some commands for _TemplatedMixin:
 
 .. code-block:: html
 
@@ -186,7 +186,7 @@ Next, we modify the template above with some commands for _Templated:
 	&nbsp;count: <span data-dojo-attach-point='counter'>0</span>"
   </div>
 
-data-dojo-attach-point and data-dojo-attach-event are documented in detail on the `dijit._Templated <dijit/_Templated>`_ page, but the important thing to note is that data-dojo-attach-event sets up a listener for events on the DOM nodes, and data-dojo-attach-point sets up a pointer to the DOM nodes.
+data-dojo-attach-point and data-dojo-attach-event are documented in detail on the `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ page, but the important thing to note is that data-dojo-attach-event sets up a listener for events on the DOM nodes, and data-dojo-attach-point sets up a pointer to the DOM nodes.
 
 So, putting that all together the source becomes:
 
@@ -196,12 +196,12 @@ So, putting that all together the source becomes:
   .. javascript::
 
 	<script type="text/javascript">
-		dojo.require("dijit._Widget");
-		dojo.require("dijit._Templated");
+		dojo.require("dijit._WidgetBase");
+		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("FancyCounter", [dijit._Widget, dijit._Templated], {
+		dojo.ready(function(){
+			dojo.declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
 				// counter
 				_i: 0,
 	
@@ -293,12 +293,12 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
   .. javascript::
 
 	<script type="text/javascript">
-		dojo.require("dijit._Widget");
-		dojo.require("dijit._Templated");
+		dojo.require("dijit._WidgetBase");
+		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("BusinessCard", [dijit._Widget, dijit._Templated], {
+		dojo.ready(function(){
+			dojo.declare("BusinessCard", [dijit._WidgetBase, dijit._TemplatedMixin], {
 				templateString:
 					"<div class='businessCard'>" +
 						"<div>Name: <span data-dojo-attach-point='nameNode'></span></div>" +
@@ -380,12 +380,12 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
   .. javascript::
 
 	<script type="text/javascript">
-		dojo.require("dijit._Widget");
-		dojo.require("dijit._Templated");
+		dojo.require("dijit._WidgetBase");
+		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("HidePane",[dijit._Widget], {
+		dojo.ready(function(){
+			dojo.declare("HidePane",[dijit._WidgetBase], {
 				// parameters
 				open: true,
 	
@@ -429,7 +429,7 @@ eg:
 .. code-block :: javascript
   :linenos:
 
-  dojo.declare("my.Thinger", dijit._Widget, {
+  dojo.declare("my.Thinger", dijit._WidgetBase, {
 	
 	   value:9,
 	
@@ -460,7 +460,7 @@ In the common case of non-behavioral widgets (that create a new DOM tree to repl
 
 The attach point where that input is copied is called containerNode.   In other words, if you check myButton.containerNode.innerHTML in the above example, it will be "press me".
 
-For widgets that mixin _Templated, that is handled automatically, as long as the template specifies data-dojo-attach-point="containerNode".
+For widgets that mixin _TemplatedMixin, that is handled automatically, as long as the template specifies data-dojo-attach-point="containerNode".
 
 
 Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via `dojo.cache() <dojo/cache>`_.
@@ -471,12 +471,12 @@ Having said all that, now we define the widget, referencing this template via th
   .. javascript::
 
 	<script>
-		dojo.require("dijit._Widget");
-		dojo.require("dijit._Templated");
+		dojo.require("dijit._WidgetBase");
+		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 	
-		dojo.addOnLoad(function(){
-			dojo.declare("MyButton",[dijit._Widget, dijit._Templated], {
+		dojo.ready(function(){
+			dojo.declare("MyButton",[dijit._WidgetBase, dijit._TemplatedMixin], {
 				templateString:
 					"<button data-dojo-attach-point='containerNode'></button>"
 			});
@@ -605,7 +605,6 @@ See also
 ========
 
 * `Declaring a widget in markup <dijit/Declaration>`_
-* Widgets in templates are discussed on the `dijit._Templated <dijit/_Templated>`_ page
+* Widgets in templates are discussed on the `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_ page
 * `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
 * `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
-* `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_
