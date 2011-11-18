@@ -252,7 +252,7 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
 When you have nested tabs you should set the nested parameter to true, to make the formatting distinctive from the outer TabContainer.
 
 Nested tabs programatically
------------
+---------------------------
 This an example of nested tabs created programatically. If there is no nested tab in a tab, content pane is inserted instead.
 
 .. cv-compound::
