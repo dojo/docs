@@ -28,12 +28,13 @@ Here’s an example that tries to put a popup tooltip either to the right, or as
  :linenos:
 
      require(["dijit/place"], function(place){
-         place.around(tooltip, textbox, ["after", "before"]
+         place.around(tooltip, textbox, ["after", "before"], true);
      });
 
 
+Note that the third argument should normally be true, unless the page is in RTL (Arabic or Hebrew), in which case it should be false.
 
-The possible values for the position parameter are:
+The possible values for the position parameters (inside the array of the second argument) are:
 
 	* before: places drop down to the left of the anchor node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
 	* after: places drop down to the right of the anchor node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
