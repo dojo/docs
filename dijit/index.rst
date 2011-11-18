@@ -10,6 +10,23 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 
 * `About Dijit <dijit/info>`_
 
+
+=========
+Utilities
+=========
+
+Utility methods and classes used by widgets or by applications with widgets.
+
+* `dijit.a11y <dijit/a11y>`_ - functions about tab index
+* `dijit.focus <dijit/focus>`_ - keeps track of focused node and active widgets
+* `dijit.hccss <dijit/hccss>`_ - for detecting when IE or FF is in high contrast (aka no background images) mode
+* `dijit.place <dijit/place>`_ - low level code for positioning popups / drop downs
+* `dijit.popup <dijit/popup>`_ - high level library routines for positioning popups / drop downs
+* `dijit.registry <dijit/registry>`_ - registry of all widgets on the page
+* `dijit.typematic <dijit/typematic>`_ - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
+
+
+
 =======
 Widgets
 =======
