@@ -7,9 +7,44 @@ dojo/domReady
 Introduction
 ============
 
-dojo/domReady is an AMD plugin that resolves when the DOM has finished loading.
+dojo/domReady! is an AMD plugin that resolves when the DOM has finished loading.
 
-For example, this code will wait until the DOM has finished loading and then change all anchors to be read:
+Sooner or later, every Javascript programmer tries something like this:
+
+.. code-block :: javascript
+  :linenos:
+
+  <script>
+    if(dayOfWeek == "Sunday"){
+       document.musicPrefs.other.value = "Afrobeat";
+    }
+  </script>
+  <form name="musicPrefs">
+    <input type="text" name="other">
+  ...
+
+It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
+
+.. code-block :: javascript
+  :linenos:
+
+  function setAfrobeat(){
+     document.musicPrefs.other.value="Afrobeat";
+  }
+  require("dojo/domReady!", setAfrobeat);
+
+.. code-block :: javascript
+
+conveniently replaces the one above. When the function is small, you may prefer to write it inline:
+
+.. code-block :: javascript
+  :linenos:
+
+  require("dojo/domReady!", function() {
+           document.musicPrefs.other.value="Afrobeat";
+  });
+
+For a more complicated example, this code will wait until the DOM has finished loading and then change all anchors to be read:
 
 .. code-block :: javascript
  :linenos:
@@ -19,7 +54,7 @@ For example, this code will wait until the DOM has finished loading and then cha
       query(".a").style("color", "red");
   });
 
-dojo/domReady! is similar to `dojo.ready <dojo/ready>`_ or `dojo.addOnLoad <dojo/addOnLoad>`_ but more granular, because it merely waits for the DOM to finish loading, without waiting for other require() or dojo.require() calls.
+dojo/domReady! is similar to `dojo.ready <dojo/ready>`_ or `dojo.addOnLoad <dojo/addOnLoad>`_, but more granular, because dojo/domReady! merely waits for the DOM to finish loading, without waiting for other require() or dojo.require() calls to complete.
 
 ========================
 dojo/domReady! and dijit
