@@ -41,7 +41,7 @@ The doLayout attribute currently only works for top tabs, left/bottom/right tabs
 
 Right Tabs
 ----------
-Tabs at the right, no strip 
+Tabs at the right, no strip.  Note that right tabs don't work in conjunction with doLayout=false.
 
 .. cv-compound::
 
@@ -70,7 +70,7 @@ Tabs at the right, no strip
 
 Left Tabs
 ---------
-Tabs at the left, with a strip.   Note that left, right, and bottom tabs don't work in conjunction with doLayout=false.
+Tabs at the left, with a strip.  Note that left tabs don't work in conjunction with doLayout=false.
 
 .. cv-compound::
 
@@ -99,7 +99,7 @@ Tabs at the left, with a strip.   Note that left, right, and bottom tabs don't w
 
 Bottom Tabs
 -----------
-Tabs at the bottom,with a strip.   Note that left, right, and bottom tabs don't work in conjunction with doLayout=false.
+Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjunction with doLayout=false.
 
 .. cv-compound::
 
@@ -169,7 +169,7 @@ Here's an example that parses existing DOM and creates tabs,
 similar to what the parser does:
 
 .. cv-compound::
- 
+
   As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
 
   .. cv:: javascript
@@ -181,13 +181,13 @@ similar to what the parser does:
         dojo.query(".tc1cp").forEach(function(n){
             new dijit.layout.ContentPane({
                 // just pass a title: attribute, this, we're stealing from the node
-                title: dojo.attr(n,"title") 
+                title: dojo.attr(n,"title")
             }, n);
         });
         var tc = new dijit.layout.TabContainer({
-            style: dojo.attr("tc1-prog", "style") 
+            style: dojo.attr("tc1-prog", "style")
         },"tc1-prog");
-        tc.startup(); 
+        tc.startup();
     });
     </script>
 
@@ -250,3 +250,75 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
     </div>
 
 When you have nested tabs you should set the nested parameter to true, to make the formatting distinctive from the outer TabContainer.
+
+Nested tabs programatically
+-----------
+This an example of nested tabs created programatically. If there is no nested tab in a tab, content pane is inserted instead.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+	dojo.require("dijit.layout.TabContainer");
+	dojo.require("dijit.layout.ContentPane");
+	dojo.addOnLoad(function() {
+		var tabs = [{
+			title: 'Tab 1',
+			sub: [{
+				title: 'My 1st inner',
+				content: 'Lorem ipsum dolor sit amet'
+			}, {
+				title: 'My 2nd inner',
+				content: 'Consectetur adipiscing elit'
+			}]
+		}, {
+			title: 'Tab 2',
+			sub: [{
+				title: 'My 3rd inner',
+				content: 'Vivamus orci massa rhoncus a lacinia'
+			}, {
+				title: 'My 4th inner',
+				content: 'Fusce sed orci magna, vitae aliquet quam'
+			}]
+		}, {
+			title: 'Tab 3',
+			sub: []
+		}];
+		var tabContainer = new dijit.layout.TabContainer({
+			doLayout: false
+		}, 'tabContainer');
+		dojo.forEach(tabs, function(tab) {
+			if (!tab.sub.length) {
+				var cp = new dijit.layout.ContentPane({
+					title: tab.title,
+					content: 'No sub tabs'
+				});
+				tabContainer.addChild(cp);
+				return;
+			}
+			var subTab = new dijit.layout.TabContainer({
+				title: tab.title,
+				doLayout: false,
+				nested: true
+			});
+			dojo.forEach(tab.sub, function(sub) {
+				var cp = new dijit.layout.ContentPane({
+					title: sub.title,
+					content: sub.content
+				});
+				subTab.addChild(cp);
+			});
+			tabContainer.addChild(subTab);
+		});
+		// _Container widgets will call startup on their children already
+		tabContainer.startup();
+	});   
+    </script>
+
+  The html is very simple
+
+  .. cv :: html
+
+<div id='tabContainer'>
+</div>
