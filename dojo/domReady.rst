@@ -11,7 +11,7 @@ dojo/domReady! is an AMD plugin that resolves when the DOM has finished loading.
 
 Sooner or later, every Javascript programmer tries something like this:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <script>
