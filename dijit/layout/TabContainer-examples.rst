@@ -316,9 +316,6 @@ This an example of nested tabs created programatically. If there is no nested ta
 	});   
     </script>
 
-  The html is very simple
-
   .. cv :: html
 
-<div id='tabContainer'>
-</div>
+    <div id='tabContainer'> </div>
