@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo/domReady
-=============
+dojo/domReady!
+==============
 
 ============
 Introduction
@@ -44,7 +44,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
            document.musicPrefs.other.value="Afrobeat";
   });
 
-For a more complicated example, this code will wait until the DOM has finished loading and then change all anchors to be read:
+As a more complicated example, this code will wait until the DOM has finished loading and then change all anchors to be red:
 
 .. code-block :: javascript
  :linenos:
