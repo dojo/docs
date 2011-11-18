@@ -328,7 +328,7 @@ Following methods should be implemented:
 * ``constructor(manager)`` --- the constructor of the class takes a single parameter --- the instance of Manager_, which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation. In this case Manager_ calls its method ``makeAvatar()``. By default Avatar constructs ``<table>``.
 * ``destroy()`` --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
 * ``update()`` --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually. Usually this method is called by Manager_ automatically.
-* ``_generateText()`` --- semi-public method, which is called by ``update()`` to render the header test. The default implementation returns a number of dragged items as a string. You can override this method for localization purposes, or to change the text however you like.
+* ``_generateText()`` --- semi-public method, which is called by ``update()`` to render the header text. The default implementation returns a number of dragged items as a string. You can override this method for localization purposes, or to change the text however you like.
 
 The default implementation of the Avatar class does the following:
 
