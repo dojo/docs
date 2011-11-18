@@ -16,7 +16,7 @@ Handles normalized setting of properties on DOM nodes.
 
 When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself. 
 
-Since dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.set in dojo/dom-prop.
+Since Dojo 1.7, ``dojo.setProp`` is exposed via the ``set`` method of the ``dojo/dom-prop`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -25,6 +25,12 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-prop"], function(domProp){
+    domProp.set(node, name, value);
+  });
+  
+  // Dojo < 1.7
   dojo.setProp(node, name, value);
 
 node
@@ -42,12 +48,47 @@ This API will return the DOM node.
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``set`` is accessed from the ``dojo/dom-prop`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/dom-prop", "dojo/dom-style"], function(domProp, domStyle){   
+      // Set the tab index 
+      domProp.set("nodeId", "tabIndex", 3); 
+
+      // Set multiple values at once, including event handlers: 
+      domProp.set("formId", { 
+          "foo": "bar", 
+          "tabIndex": -1, 
+          "method": "POST", 
+          "onsubmit": function(e){ 
+              dojo.stopEvent(e); 
+              dojo.xhrPost({ form: "formId" }); 
+          } 
+      });
+
+      // Style is a special case: Only set with an object hash of styles 
+      domProp.set("someNode",{ 
+          id:"bar", 
+          style:{ 
+              width:"200px", height:"100px", color:"#000" 
+          } 
+      }); 
+
+      // Again, only set style as an object hash of styles: 
+      var obj = { color:"#fff", backgroundColor:"#000" }; 
+      domProp.set("someNode", "style", obj); 
+      domStyle.set("someNode", obj); 
+  });
+
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.setProp`` in the ``define`` or ``require`` callback:
+
+.. code-block :: javascript
+
+  require(["dojo"], function(dojo){   
       // Set the tab index 
       dojo.setProp("nodeId", "tabIndex", 3); 
 
@@ -74,39 +115,6 @@ Dojo 1.7 (AMD)
       var obj = { color:"#fff", backgroundColor:"#000" }; 
       dojo.setProp("someNode", "style", obj); 
       dojo.style("someNode", obj); 
-  });
-
-It's recommended to use prop.set in dojo 1.7.
-
-.. code-block :: javascript
-
-  require(["dojo/dom-prop", "dojo/dom-style"], function(prop, style){   
-      // Set the tab index 
-      prop.set("nodeId", "tabIndex", 3); 
-
-      // Set multiple values at once, including event handlers: 
-      prop.set("formId", { 
-          "foo": "bar", 
-          "tabIndex": -1, 
-          "method": "POST", 
-          "onsubmit": function(e){ 
-              dojo.stopEvent(e); 
-              dojo.xhrPost({ form: "formId" }); 
-          } 
-      });
-
-      // Style is a special case: Only set with an object hash of styles 
-      prop.set("someNode",{ 
-          id:"bar", 
-          style:{ 
-              width:"200px", height:"100px", color:"#000" 
-          } 
-      }); 
-
-      // Again, only set style as an object hash of styles: 
-      var obj = { color:"#fff", backgroundColor:"#000" }; 
-      prop.set("someNode", "style", obj); 
-      style.set("someNode", obj); 
   });
 
 Dojo < 1.7
@@ -114,32 +122,32 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-      // Set the tab index 
-      dojo.setProp("nodeId", "tabIndex", 3); 
+  // Set the tab index 
+  dojo.setProp("nodeId", "tabIndex", 3); 
 
-      // Set multiple values at once, including event handlers: 
-      dojo.setProp("formId", { 
-          "foo": "bar", 
-          "tabIndex": -1, 
-          "method": "POST", 
-          "onsubmit": function(e){ 
-              dojo.stopEvent(e); 
-              dojo.xhrPost({ form: "formId" }); 
-          } 
-      });
+  // Set multiple values at once, including event handlers: 
+  dojo.setProp("formId", { 
+      "foo": "bar", 
+      "tabIndex": -1, 
+      "method": "POST", 
+      "onsubmit": function(e){ 
+          dojo.stopEvent(e); 
+          dojo.xhrPost({ form: "formId" }); 
+      } 
+  });
 
-      // Style is a special case: Only set with an object hash of styles 
-      dojo.setProp("someNode",{ 
-          id:"bar", 
-          style:{ 
-              width:"200px", height:"100px", color:"#000" 
-          } 
-      }); 
+  // Style is a special case: Only set with an object hash of styles 
+  dojo.setProp("someNode",{ 
+      id:"bar", 
+      style:{ 
+          width:"200px", height:"100px", color:"#000" 
+      } 
+  }); 
 
-      // Again, only set style as an object hash of styles: 
-      var obj = { color:"#fff", backgroundColor:"#000" }; 
-      dojo.setProp("someNode", "style", obj); 
-      dojo.style("someNode", obj); 
+  // Again, only set style as an object hash of styles: 
+  var obj = { color:"#fff", backgroundColor:"#000" }; 
+  dojo.setProp("someNode", "style", obj); 
+  dojo.style("someNode", obj); 
 
 ========
 See also
