@@ -14,4 +14,4 @@ All work in DojoC is still covered under Contributor License Agreement (`CLA <ht
 What's in DojoC?
 ----------------
 
-Lots of experimental code, and all the DojoCampus widgets and code. For instance, the FeatureExplorer source is available in explorer/ ... There are several partially working Adobe AIR demos in demos/air/, and several widgets in sandbox/ 
+Lots of experimental code, and all the DojoCampus widgets and code. For instance, the FeatureExplorer source is available in explorer/ . There are several partially working Adobe AIR demos in demos/air/, and several widgets in sandbox/ 
