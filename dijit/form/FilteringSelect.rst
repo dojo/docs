@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/FilteringSelect:
 
 dijit.form.FilteringSelect
 ==========================
@@ -17,13 +17,13 @@ The FilteringSelect widget is a replacement for the native SELECT element.
 Usage
 =====
 
-Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed in the INPUT box and the hidden text value to be submitted to the server on FORM submit. Unlike SELECT, the user can also freely type text and partially matched values will be shown in a pop-up menu below the INPUT text box. Unlike a `ComboBox <dijit/form/ComboBox>`_ widget, unmatched user text will be flagged as an error.
+Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed in the INPUT box and the hidden text value to be submitted to the server on FORM submit. Unlike SELECT, the user can also freely type text and partially matched values will be shown in a pop-up menu below the INPUT text box. Unlike a :ref:`ComboBox <dijit/form/ComboBox>` widget, unmatched user text will be flagged as an error.
 
 On FORM submit, the hidden text value associated with the displayed value of a non-disabled FilteringSelect widget is submitted using a hidden native INPUT text box if the *name* attribute was specified at widget creation time. Invalid input will result in a blank submitted text value.
 
-FilteringSelect widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the `dojo.data <dojo/data>`_ section for complete details.
+FilteringSelect widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the :ref:`dojo.data <dojo/data>` section for complete details.
 
-`note:` When using a DataStore with FilteringSelect, the store must implement the `Identity API <dojo/data/api/Identity>`_.
+`note:` When using a DataStore with FilteringSelect, the store must implement the :ref:`Identity API <dojo/data/api/Identity>`.
 
 
 ========
@@ -526,4 +526,4 @@ When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spok
 See Also
 ========
 
-* There's a `Select <dijit/form/Select>`_ widget in the `dijit.form <dijit/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
+* There's a :ref:`Select <dijit/form/Select>` widget in the :ref:`dijit.form <dijit/form>` project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).

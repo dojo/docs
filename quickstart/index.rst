@@ -1,6 +1,4 @@
-## page was renamed from quickstart
-## page was renamed from 1.2/quickstart
-#format dojo_rst
+.. _quickstart/index:
 
 Getting started
 ===============
@@ -12,19 +10,19 @@ Getting started
    :alt: Dojo Documentation
    :class: logowelcome;
 
-* `Getting started fast <quickstart/gettingstarted>`_
-* `Hello World tutorial <quickstart/helloworld>`_
-* `History of Dojo <quickstart/introduction/history>`_
-* `Licensing <quickstart/introduction/licensing>`_
-* `Why Choose Dojo? <quickstart/introduction/whydojo>`_
+* :ref:`Getting started fast <quickstart/gettingstarted>`
+* :ref:`Hello World tutorial <quickstart/helloworld>`
+* :ref:`History of Dojo <quickstart/introduction/history>`
+* :ref:`Licensing <quickstart/introduction/licensing>`
+* :ref:`Why Choose Dojo? <quickstart/introduction/whydojo>`
 
 ============
 Installation
 ============
 
-* `Configuring Dojo with dojoConfig <dojo/config>`_
-* `Using Dojo from a CDN <quickstart/cross-domain>`_
-* `Local installation guide <quickstart/install>`_
+* :ref:`Configuring Dojo with dojoConfig <dojo/config>`
+* :ref:`Using Dojo from a CDN <quickstart/cross-domain>`
+* :ref:`Local installation guide <quickstart/install>`
 
 
 ==================
@@ -34,55 +32,55 @@ Base Functionality
 JavaScript Extensions
 ---------------------
 
-* `Dojo basics <quickstart/dojo-basics>`_
-* `Arrays <quickstart/arrays>`_
-* `Browser Sniffing <quickstart/browser-sniffing>`_
-* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
-* `OOP with dojo.declare() <quickstart/oop>`_
-* `Dojo Topic System <quickstart/topics>`_
+* :ref:`Dojo basics <quickstart/dojo-basics>`
+* :ref:`Arrays <quickstart/arrays>`
+* :ref:`Browser Sniffing <quickstart/browser-sniffing>`
+* :ref:`Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`
+* :ref:`OOP with dojo.declare() <quickstart/oop>`
+* :ref:`Dojo Topic System <quickstart/topics>`
 
 AJAX
 ----
 
-* `AJAX <quickstart/ajax>`_
-* `Back button and history integration <quickstart/back>`_
+* :ref:`AJAX <quickstart/ajax>`
+* :ref:`Back button and history integration <quickstart/back>`
 
 DOM Manipulation & CSS Queries
 ------------------------------
 
-* `dojo.query() and other DOM magic <quickstart/dom>`_
+* :ref:`dojo.query() and other DOM magic <quickstart/dom>`
 
 Events
 ------
 
-* `The event system <quickstart/events>`_
+* :ref:`The event system <quickstart/events>`
 
 Internationalization
 --------------------
 
-* `Internationalization (i18n) <quickstart/internationalization/index>`_
+* :ref:`Internationalization (i18n) <quickstart/internationalization/index>`
 
 ==========
 Animations
 ==========
 
-* `FX / Animations <quickstart/Animation>`_
+* :ref:`FX / Animations <quickstart/Animation>`
 
 
 =======
 Widgets
 =======
 
-* `Dijit, Dojo's widget Library <dijit/info>`_
-* `UI Development <quickstart/interfacedesign>`_
-* `Themes and Theming <dijit/themes>`_
-* `DojoX Widgets <dojox/widget>`_
+* :ref:`Dijit, Dojo's widget Library <dijit/info>`
+* :ref:`UI Development <quickstart/interfacedesign>`
+* :ref:`Themes and Theming <dijit/themes>`
+* :ref:`DojoX Widgets <dojox/widget>`
 
 Widget developers notes:
 ------------------------
-* `Writing Widgets <quickstart/writingWidgets>`_
-* `Widget Hierarchies <quickstart/widgetHierarchies>`_
-* `Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`_
+* :ref:`Writing Widgets <quickstart/writingWidgets>`
+* :ref:`Widget Hierarchies <quickstart/widgetHierarchies>`
+* :ref:`Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`
 
 
 ======================
@@ -92,18 +90,18 @@ Stores and Data Stores
 dojo.data
 ---------
 
-* `Using Datastores <quickstart/data/usingdatastores>`_
-* `Reference manual <quickstart/data>`_
+* :ref:`Using Datastores <quickstart/data/usingdatastores>`
+* :ref:`Reference manual <quickstart/data>`
 
 dojo.store
 ----------
 
-* `Using Stores <quickstart/store>`_
+* :ref:`Using Stores <quickstart/store>`
 
 Other Information
 -----------------
 
-* `Implementing RESTful Services Server-Side <quickstart/rest>`_
+* :ref:`Implementing RESTful Services Server-Side <quickstart/rest>`
 
 =============
 Drag and Drop
@@ -116,7 +114,7 @@ Drag and Drop
 Charting
 ========
 
-* `dojox.charting <dojox/charting>`_
+* :ref:`dojox.charting <dojox/charting>`
 
 
 =========================
@@ -133,23 +131,23 @@ Testing, Debugging and Tuning
 Testing
 -------
 
-* Unit Testing:  Using `D.O.H, the Dojo Objective Harness <util/doh>`_
-* Automated keyboard/mouse tests using `DOH robot <util/dohrobot>`_
+* Unit Testing:  Using :ref:`D.O.H, the Dojo Objective Harness <util/doh>`
+* Automated keyboard/mouse tests using :ref:`DOH robot <util/dohrobot>`
 
 Debugging
 ---------
 
-* `Debugging tutorial <quickstart/debugging>`_
+* :ref:`Debugging tutorial <quickstart/debugging>`
 
 Tuning
 ------
 
-* `Tuning your installation with Custom Builds <quickstart/custom-builds>`_
+* :ref:`Tuning your installation with Custom Builds <quickstart/custom-builds>`
 
 
 ========
 See also
 ========
 
-* `Key Links <key-links>`_ - a collection of current and useful Dojo demos and tutorials
-* `Multiple Versions of Dojo on a Page <quickstart/multiversion>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
+* :ref:`Key Links <key-links>` - a collection of current and useful Dojo demos and tutorials
+* :ref:`Multiple Versions of Dojo on a Page <quickstart/multiversion>` - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.

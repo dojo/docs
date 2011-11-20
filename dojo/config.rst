@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/config:
 
 dojo.config (dojo/_base/config)
 ===============================
@@ -19,7 +19,7 @@ Dojo allows developers to override certain global settings that control how the 
 
 * When using dojo.parser to trigger automatic parsing of dijit objects
 * During the debugging phase of application development
-* When setting specific `i18n <dojo/i18n>`__ or localization settings
+* When setting specific :ref:`i18n <dojo/i18n>` or localization settings
 * If you rename core dojo components or place dojo resources in non-standard locations
 
 
@@ -102,7 +102,7 @@ Both the data-dojo-config script attribute and the dojoConfig global have the sa
 3. Including dojoConfig in a Custom Build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When creating a custom build it is possible to bake the dojoConfig object into the build via the scopeDjConfig parameter. You can learn more about the scopeDjConfig parameter in the `Dojo build system build script docs <build/buildScript>`_.
+When creating a custom build it is possible to bake the dojoConfig object into the build via the scopeDjConfig parameter. You can learn more about the scopeDjConfig parameter in the :ref:`Dojo build system build script docs <build/buildScript>`.
 
 dojoConfig Parameters
 ---------------------
@@ -134,7 +134,7 @@ debugAtAllCosts: true
 Language and Localization Settings in dojoConfig
 ------------------------------------------------
 
-There is an extensive discussion of the i18n features of dojo in the `tutorial on i18n <quickstart/internationalization/index>`_. Here we'll briefly cover the two dojoConfig variables that apply to these settings:
+There is an extensive discussion of the i18n features of dojo in the :ref:`tutorial on i18n <quickstart/internationalization/index>`. Here we'll briefly cover the two dojoConfig variables that apply to these settings:
 
 locale: 'en-us'
   By default, dojo determines the locale of the application by pulling the locale from the browser navigator object.  However, developers can force the default locale by using the dojoConfig locale setting, often done by app servers to establish locale based on user preferences.  Dojo's locale must be established at bootstrap time and cannot be changed later.  Locales must be specified in all lowercase with dashes separating variants.
@@ -153,7 +153,7 @@ baseUrl: '/assets/mydojo/'
   When using multiple versions of dojo in parallel in a given site, or if the core dojo.js file has been renamed when creating a custom build, the baseUrl parameter should be used to indicate where the dojo core is located. This may also be necessary for sites that use the <base> tag which can confuse some browsers (e.g. IE6). The value for baseUrl should be the directory that contains the dojo.js or dojo.xd.js file. The value should always be defined with an ending slash (/) character.
 
 modulePaths: {'foo': '../../bar'}
-  Using this parameter is the equivalent of calling dojo.registerModulePath('foo','../../bar') and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, some informations you can find at `dojo.registerModulePath <dojo/registerModulePath>`__.
+  Using this parameter is the equivalent of calling dojo.registerModulePath('foo','../../bar') and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, some informations you can find at :ref:`dojo.registerModulePath <dojo/registerModulePath>`.
 
 Other Options
 -------------
@@ -203,7 +203,7 @@ If you are developing a widget or otherwise providing an API not available in Do
 
   var dojoConfig = { parseOnLoad:true, myCustomVariable:true }
 
-This creates a `new` configuration parameter named ``myCustomVariable``. To use this in your application code or widgets, use the ``dojo.config`` member. For instance, a simple `dojo.declare <dojo/declare>`_ call:
+This creates a `new` configuration parameter named ``myCustomVariable``. To use this in your application code or widgets, use the ``dojo.config`` member. For instance, a simple :ref:`dojo.declare <dojo/declare>` call:
 
 .. code-block :: javascript
   :linenos:

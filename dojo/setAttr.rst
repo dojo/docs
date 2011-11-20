@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/setAttr:
 
 dojo.setAttr
 ============
@@ -13,7 +13,7 @@ Sets an attribute on an HTML element.
 Introduction
 ============
 
-``dojo.setAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It handles normalized setting of attributes on DOM Nodes. When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added
+``dojo.setAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It handles normalized setting of attributes on DOM Nodes. When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added
 using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself. It returns the DOM node.
 
 Since Dojo 1.7, ``dojo.setAttr`` is exposed via the ``set`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
@@ -94,18 +94,18 @@ See also
 
 DOM operations:
 
-* `dojo.attr <dojo/attr>`_
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.getAttr <dojo/getAttr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr <dojo/removeAttr>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.getAttr <dojo/getAttr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.removeAttr <dojo/removeAttr>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
 
 External links:
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/attr:
 
 dojo.attr
 =========
@@ -15,13 +15,13 @@ A getter and setter for DOM attributes, events and CSS styles
 Introduction
 ============
 
-``dojo.attr()`` gives you a unified API to deal with DOM Node attribute and property values. It checks an attribute and if there is a property with the same name, it will get/set its value. Otherwise it will work with DOM node attributes.
+``dojo.attr()`` gives you a unified API to deal with DOM node attribute and property values. It checks an attribute and if there is a property with the same name, it will get/set its value. Otherwise it will work with DOM node attributes.
 
 On top of that several browsers deal with attribute setting and getting in different ways.
 
-If an attribute was not specified for the DOM node, it will return a falsy value (see `dojo.hasAttr <dojo/hasAttr>`_). If you want to get a default value for missing attributes, use `dojo.getNodeProp <dojo/getNodeProp>`_, which always falls back to properties, if they are available.
+If an attribute was not specified for the DOM node, it will return a falsy value (see :ref:`dojo.hasAttr <dojo/hasAttr>`). If you want to get a default value for missing attributes, use :ref:`dojo.getNodeProp <dojo/getNodeProp>`, which always falls back to properties, if they are available.
 
-Since dojo 1.7, dojo.attr has been kept in dojo/_base/html as a compatibility of dojo version before, it's recommended to use attr.get, attr.set to replace this API.
+Since Dojo 1.7, ``dojo.attr`` is exposed via the ``get`` and ``set`` methods of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -30,7 +30,15 @@ Usage
 .. code-block :: javascript
  :linenos:
 
- dojo.attr(node, attr, value);
+ // Dojo 1.7+ (AMD)
+ require(["dojo/dom/attr"], function(domAttr){
+   domAttr.get(node, attr); // get
+   domAttr.set(node, attr, value); // set
+ });
+ 
+ // Dojo < 1.7
+ dojo.attr(node, attr); // get
+ dojo.attr(node, attr, value); // set
 
 node
   id or reference of the DOM node to get/set style for
@@ -44,24 +52,26 @@ value
 Dojo 1.7 (AMD)
 --------------
 
+When using AMD format in a fully baseless application, ``get`` and ``set`` are accessed from the ``dojo/dom-attr`` module.
+
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){      
-      // get node id
-      dojo.attr(node, "id");
-      // set node id
-      dojo.attr(node, "id", "myId");
+  require(["dojo/dom-attr"], function(domAttr){      
+      // get node title
+      domAttr.get(node, "title");
+      // set node title
+      domAttr.set(node, "title", "my title");
   });
 
-It's recommended to use `attr.get <dojo/getAttr>`_, `attr.set <dojo/setAttr>`_ to replace dojo.attr.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.attr`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(attr){      
-      // get node id
-      attr.get(node, "id");
-      // set node id
-      attr.set(node, "id", "myId");
+  require(["dojo"], function(dojo){      
+      // get node title
+      dojo.attr(node, "title");
+      // set node title
+      dojo.attr(node, "title", "my title");
   });
 
 
@@ -70,10 +80,10 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-  // get node id
-  dojo.attr(node, "id");
-  // set node id
-  dojo.attr(node, "id", "myId");
+  // get node title
+  dojo.attr(node, "title");
+  // set node title
+  dojo.attr(node, "title", "my title");
 
 Notes on event handlers
 -----------------------
@@ -82,8 +92,8 @@ This function can be used to associate a function with a DOM event. Please note 
 
 * Only functions are supported. If you want to use strings, convert them to functions first.
 * Setting an event handler removes a previously set event handler, if it was set with ``dojo.attr()`` too.
-* Internally it uses `dojo.connect <dojo/connect>`_ to attach an event handler. See `dojo.connect <dojo/connect>`_ for more details on event processing.
-* Unlike `dojo.connect <dojo/connect>`_ no handle is returned. It means that there is no simple way to remove the event handler: use ``dojo.attr()`` to set event handlers only in simple cases. Always consider to use `dojo.connect <dojo/connect>`_ and `dojo.disconnect <dojo/disconnect>`_ instead.
+* Internally it uses :ref:`dojo.connect <dojo/connect>` to attach an event handler. See :ref:`dojo.connect <dojo/connect>` for more details on event processing.
+* Unlike :ref:`dojo.connect <dojo/connect>` no handle is returned. It means that there is no simple way to remove the event handler: use ``dojo.attr()`` to set event handlers only in simple cases. Always consider to use :ref:`dojo.connect <dojo/connect>` and :ref:`dojo.disconnect <dojo/disconnect>` instead.
 
 ========
 Examples
@@ -99,6 +109,10 @@ The following example will set several attributes such as the "tabindex" and "na
   .. cv:: javascript
 
     <script type="text/javascript">
+      // load modules for widgets in HTML to parse
+      dojo.require("dojo.parser");
+      dojo.require("dijit.form.Button");
+      
       setAttributes = function(){
           dojo.attr('testNode', {
                     tabIndex: 1,
@@ -126,14 +140,18 @@ The following example will set several attributes such as the "tabindex" and "na
 Setting events
 --------------
 
-This example will demonstrate how you can set events using dojo.attr(). You should still consider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularity with using `dojo.connect <dojo/connect>`_.  In particular you get a handle to later disconnect the event.
+This example will demonstrate how you can set events using dojo.attr(). You should still consider using :ref:`dojo.connect <dojo/connect>` when you are dealing with events since you are getting lots more possibilities and granularity with using :ref:`dojo.connect <dojo/connect>`.  In particular you get a handle to later disconnect the event.
 
 .. cv-compound::
 
   .. cv:: javascript
 
     <script type="text/javascript">
-      setupHandlers = function(){
+      // load modules for widgets in HTML to parse
+      dojo.require("dojo.parser");
+      dojo.require("dijit.form.Button");
+      
+      function setupHandlers(){
           dojo.attr("testNodeTwo", "onmouseover", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse is over");
           });
@@ -153,13 +171,17 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
 Setting styles
 --------------
 
-The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to `dojo.style() <dojo/style>`_.
+The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to :ref:`dojo.style() <dojo/style>`.
 
 .. cv-compound::
 
   .. cv:: javascript
 
     <script type="text/javascript">
+      // load modules for widgets in HTML to parse
+      dojo.require("dojo.parser");
+      dojo.require("dijit.form.Button");
+      
       changeStyle = function(){
           dojo.attr("testNodeThree", "style", {padding: "5px", border: "1px solid #ccc", background: "#eee"});
       }
@@ -176,18 +198,18 @@ See also
 
 DOM operations:
 
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.getAttr <dojo/getAttr>`_
-* `dojo.setAttr <dojo/setAttr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr <dojo/attr>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.getAttr <dojo/getAttr>`
+* :ref:`dojo.setAttr <dojo/setAttr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.removeAttr <dojo/attr>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
 
 External links:
 

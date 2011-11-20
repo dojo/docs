@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/av/widget:
 
 dojox.av.widget
 ===============
@@ -53,6 +53,6 @@ See the test file in the SDK for more information.
 See also
 ========
 
-* `dojox.av <dojox/av>`_
-* `dojox.av.FLAudio <dojox/av/FLAudio>`_
-* `dojox.av.FLVideo <dojox/av/FLVideo>`_
+* :ref:`dojox.av <dojox/av>`
+* :ref:`dojox.av.FLAudio <dojox/av/FLAudio>`
+* :ref:`dojox.av.FLVideo <dojox/av/FLVideo>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/on/pre1.7:
 
 Using the dojo/on module with pre-AMD-style Dojo api's
 ======================================================

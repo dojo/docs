@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/events:
 
 JavaScript events and Dojo
 ==========================
@@ -22,7 +22,7 @@ Your connected function is called when the event occurs. With simple events, whe
 
 Dojo's event system is flexible and gives you a few options for connecting your functions. In the core package, you have both simple events (which use a signal and slot system, similar to Qt's) and topics. In this section, you'll learn the following:
 
-* how to connect functions to one another with `dojo.connect <dojo/connect>`_
+* how to connect functions to one another with :ref:`dojo.connect <dojo/connect>`
 * what comes with an event object
 * how to connect functions with topics and even publish your own objects to the topic
 * how to enjoy event-based programming
@@ -32,18 +32,18 @@ Dojo's event system is flexible and gives you a few options for connecting your 
 Simple Connections
 ==================
 
-Dojo provides a pair of functions to handle many of your event-handling needs: ``dojo.connect`` and ``dojo.disconnect``. With `dojo.connect <dojo/connect>`_, you can link one function to fire when another does, handling DOM events and custom functions with a single mechanism. Additionally, `dojo.connect <dojo/connect>`_ allows you to connect as many functions to an event as necessary. With `dojo.disconnect <dojo/disconnect>`_, you can cancel a connection, assuming you've kept some reference to it.
+Dojo provides a pair of functions to handle many of your event-handling needs: ``dojo.connect`` and ``dojo.disconnect``. With :ref:`dojo.connect <dojo/connect>`, you can link one function to fire when another does, handling DOM events and custom functions with a single mechanism. Additionally, :ref:`dojo.connect <dojo/connect>` allows you to connect as many functions to an event as necessary. With :ref:`dojo.disconnect <dojo/disconnect>`, you can cancel a connection, assuming you've kept some reference to it.
 
 How does it work?
 -----------------
 
 Imagine that you're hungry and have decided to cook a pizza in your oven. The pizza will take 17 minutes, so you set a timer. You have better things to do than sit around your kitchen hanging out by the timer though, so you get your brother and tell him, "When you hear the oven timer, take the pizza out of the oven and bring me a slice." Your brother can only keep track of one thing at a time, and you don't want your house to burn down, so you tell your sister, "When you hear the over timer, turn off the oven." Because you're a little worried that your dirty oven might start to smoke, you tell them both, "If you hear the smoke alarm, come get me and then go outside." After you get your pizza, you tell your brother and sister that they don't have to worry about the oven alarm now and that they can go play until you call for them again. You then set the oven alarm to wake you up from a nap.
 
-In this example, your siblings are functions. Your telling them to respond to certain events, such as "onPizzaDone" and "onHouseOnFire" performs the same function as `dojo.connect <dojo/connect>`_ - it sets up your siblings (functions) to listen for an event and perform their tasks when they receive notice. The various alarms are similar to event objects; they inform your siblings of important details about the situation (such as what is beeping). Telling your siblings that they don't need to worry about the oven alarm anymore is similar to `dojo.disconnect <dojo/disconnect>`_; the next time the oven alarm goes off, it means that you need to wake up, and you don't want your brother hunting for a pizza needlessly, so you've told him to stop listening to that event.
+In this example, your siblings are functions. Your telling them to respond to certain events, such as "onPizzaDone" and "onHouseOnFire" performs the same function as :ref:`dojo.connect <dojo/connect>` - it sets up your siblings (functions) to listen for an event and perform their tasks when they receive notice. The various alarms are similar to event objects; they inform your siblings of important details about the situation (such as what is beeping). Telling your siblings that they don't need to worry about the oven alarm anymore is similar to :ref:`dojo.disconnect <dojo/disconnect>`; the next time the oven alarm goes off, it means that you need to wake up, and you don't want your brother hunting for a pizza needlessly, so you've told him to stop listening to that event.
 
 Syntax
 ------
-`dojo.connect <dojo/connect>`_ takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introdction provided in `Functions Used Everywhere <quickstart/dojo-basics#dojo-connect>`_.
+:ref:`dojo.connect <dojo/connect>` takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introdction provided in :ref:`Functions Used Everywhere <quickstart/dojo-basics>`.
 
 dojo.connect has the following signature (acceptable types in square brackets):
 
@@ -86,7 +86,7 @@ Connecting to a DOM Event
 -------------------------
 
 To connect a function to a DOM event with Dojo, you first need to get the node that you want to connect to. Here, I'll use the venerable
-`dojo.byId <dojo/byId>`_.
+:ref:`dojo.byId <dojo/byId>`.
 
 .. code-block :: javascript
 
@@ -123,7 +123,7 @@ Now, if I also want to connect someObject.bar() to #firstLink, we can do that to
 
 Because I've used Dojo's event handling, I can connect an arbitrary number of functions to fire on an event.
 
-To stop listening to all the registered event handlers stored in ``firstLinkConnections``, pass the values in the Array to `dojo.disconnect <dojo/disconnect>`_
+To stop listening to all the registered event handlers stored in ``firstLinkConnections``, pass the values in the Array to :ref:`dojo.disconnect <dojo/disconnect>`
 
 .. code-block :: javascript
 
@@ -149,7 +149,7 @@ Using dojo.connect on Dom Events is only the beginning or the power contained wi
 * onmouseleave - a normalized version of onmouseout that *wont* fire more than you'd like (only once when leaving)
 * onsubmit - a form has been submitted
 
-All of these events are also mapped into `dojo.NodeList <dojo/NodeList>`_ as direct methods. To register an onclick event for many nodes at once:
+All of these events are also mapped into :ref:`dojo.NodeList <dojo/NodeList>` as direct methods. To register an onclick event for many nodes at once:
 
 .. code-block :: javascript
   :linenos:
@@ -183,7 +183,7 @@ Connecting to MouseWheel events
 -------------------------------
 
 One event not mentioned above, though entirely useful: onmousewheel (okay, it's two events, which is the reason for pointing this out ... )
-All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's `isSomething <quickstart/browser-sniffing>`_ variables:
+All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`isSomething <quickstart/browser-sniffing>` variables:
 
 .. code-block :: javascript
 
@@ -202,7 +202,7 @@ Although different browsers report keyboard events differently, you can write po
 
   - Setup an onkeypress (not onkeydown) handler to monitor both printable and non-printable keys
 
-  - For non-printable keys (arrows, function keys, etc) compare evt.keyCode against the `Key code constants <dojo/keys>`_, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
+  - For non-printable keys (arrows, function keys, etc) compare evt.keyCode against the :ref:`Key code constants <dojo/keys>`, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
 
   - Ignore onkeypress events where keyCode == dojo.keys.CTRL, dojo.keys.SHIFT, etc. as these may occur as part of a user pressing (for example) Ctrl-C.
 
@@ -262,7 +262,7 @@ To disconnect listeners from events, you simply pass the connection handle (the 
 
   dojo.disconnect(objectConnections[3]);
 
-Or, by using `dojo.forEach <dojo/forEach>`_, passing ``dojo.disconnect`` as a function reference as illustrated earlier:
+Or, by using :ref:`dojo.forEach <dojo/forEach>`, passing ``dojo.disconnect`` as a function reference as illustrated earlier:
 
 .. code-block :: javascript
 
@@ -309,7 +309,7 @@ In this case calling myFunc() will call the new object.method(), which will then
 The Event Object
 ================
 
-When you connect a function to a DOM event with `dojo.connect <dojo/connect>`_, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
+When you connect a function to a DOM event with :ref:`dojo.connect <dojo/connect>`, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
 
 Assume that your function has been called by dojo.connect and takes an argument named ``event``, like:
 
@@ -337,7 +337,7 @@ Dojo normalizes the following methods with an event object:
 * event.preventDefault - prevent an event's default behavior (e.g., a link from loading a new page)
 * event.stopPropagation - prevent an event from triggering a parent node's event
 
-Additionally, `dojo.stopEvent(event) <dojo/stopEvent>`_ will prevent both default behavior any any propagation (bubbling) of an event.
+Additionally, :ref:`dojo.stopEvent(event) <dojo/stopEvent>` will prevent both default behavior any any propagation (bubbling) of an event.
 
 
 ====================
@@ -346,19 +346,19 @@ Page Load and Unload
 
 Dojo has three functions recommended for registering code to run on page load and unload:
 
-* `dojo.addOnLoad(func) <dojo/addOnLoad>`_ - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
+* :ref:`dojo.addOnLoad(func) <dojo/addOnLoad>` - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
 
-* `dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`_ - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
+* :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
 
-* `dojo.addOnUnload(func) <dojo/addOnUnload>`_ - This also runs on page unload, but earlier than `dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`_, avoiding the restrictions mentioned above.   However, the function specified to `dojo.addOnUnload(func) <dojo/addOnUnload>` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
+* :ref:`dojo.addOnUnload(func) <dojo/addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `dojo.addOnUnload(func) <dojo/addOnUnload>` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
 
-Like dojo.connect(), these methods are useful because multiple pieces of code calling `dojo.addOnLoad(func) <dojo/addOnLoad>`_ etc. won't overwrite each other.
+Like dojo.connect(), these methods are useful because multiple pieces of code calling :ref:`dojo.addOnLoad(func) <dojo/addOnLoad>` etc. won't overwrite each other.
 
 ==================
 Topic Based Events
 ==================
 
-In addition to the simple event system created by `dojo.connect <dojo/connect>`_, dojo offers support for anonymous publication and subscription of objects, via `dojo.publish <dojo/publish>`_ and `dojo.subcribe <dojo/subscribe>`_. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  `dojo.publish <dojo/publish>`_ calls any functions that are connected to the topic via `dojo.subcribe <dojo/subscribe>`_, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, `dojo.unsubcribe <dojo/unsubscribe>`_ will cause a previously subscribed function to no longer be called when `dojo.publish <dojo/publish>`_ is called in the future
+In addition to the simple event system created by :ref:`dojo.connect <dojo/connect>`, dojo offers support for anonymous publication and subscription of objects, via :ref:`dojo.publish <dojo/publish>` and :ref:`dojo.subcribe <dojo/subscribe>`. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  :ref:`dojo.publish <dojo/publish>` calls any functions that are connected to the topic via :ref:`dojo.subcribe <dojo/subscribe>`, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, :ref:`dojo.unsubcribe <dojo/unsubscribe>` will cause a previously subscribed function to no longer be called when :ref:`dojo.publish <dojo/publish>` is called in the future
 
 How does it work?
 -----------------

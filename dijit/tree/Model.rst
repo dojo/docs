@@ -1,10 +1,9 @@
-## page was renamed from dijit/TreeModel
-#format dojo_rst
+.. _dijit/tree/Model:
 
 dijit.tree.Model
 ================
 
-A `dijit.Tree <dijit/Tree>`_ presents a view onto some hierarchical data.  The "TreeModel" represents the actual data.
+A :ref:`dijit.Tree <dijit/Tree>` presents a view onto some hierarchical data.  The "TreeModel" represents the actual data.
 
 Usually, the data ultimately comes from a data store, but the Tree
 interfaces with a "dijit.tree.Model", an Object matching a certain API of methods the tree needs.
@@ -25,8 +24,8 @@ rather than parents having a list of their children:
 
 There are two model implementations included with Tree:
 
-  * `dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>`_: interface to a data store with a single item that represents the root of the tree.  For example, a data store of employees where the root is the CEO of the company.
-  * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_: interface to a data store with multiple top level items.  For example, a data store of places (countries, states, cities).  If the data store doesn't have a single root item ("world" in this example) then ForestStoreModel is the interface for it.
+  * :ref:`dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>`: interface to a data store with a single item that represents the root of the tree.  For example, a data store of employees where the root is the CEO of the company.
+  * :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`: interface to a data store with multiple top level items.  For example, a data store of places (countries, states, cities).  If the data store doesn't have a single root item ("world" in this example) then ForestStoreModel is the interface for it.
 
 The above models have the following functions:
 
@@ -40,9 +39,9 @@ The above models have the following functions:
 
   * handle "writes" from the Tree back to the data store, by DnD.  DnD could be of items within the tree, or items dropped from an external location.
 
-The full API for a model is document at `dijit.tree.model <http://api.dojotoolkit.org/jsdoc/HEAD/dijit.tree.model>`_.
+The full API for a model is documented at `dijit.tree.model <http://api.dojotoolkit.org/jsdoc/HEAD/dijit.tree.model>`_.
 
-The most important methods (ie, the ones that you are likely to need to override when using `dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) are:
+The most important methods (ie, the ones that you are likely to need to override when using :ref:`dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) are:
 
 getChildren()
 -------------
@@ -53,7 +52,7 @@ reference their parent rather than vice-versa.
 mayHaveChildren()
 -----------------
 For efficiency reasons, Tree doesn't want to query for the children of an item until it needs to display them.
-It doesn't want to query for children just to see if it should draw an exando (+) icon or not.
+It doesn't want to query for children just to see if it should draw an expando (+) icon or not.
 
 Thus, the method mayHaveChildren() returning true indicates that either:
 
@@ -73,10 +72,10 @@ overridden to operate based on the type of item, for example:
 pasteItem()
 -----------
 pasteItem() is called when something is dropped onto the Tree, and it's job is to update the data store.
-That sounds fairly simple, but it becomes complex when [you are using `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_ and]
+That sounds fairly simple, but it becomes complex when [you are using :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>` and]
 the node being dropped will become a top level item in the data store.
 
-For example, imagine that your data store contains all the countries in the world, and you are using `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_ to fabricate a top-level Tree node called "World" that parents the countries.   If the user
+For example, imagine that your data store contains all the countries in the world, and you are using :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>` to fabricate a top-level Tree node called "World" that parents the countries.   If the user
 drops a new country under "World", it needs to be added to the data store with some kind of flag indicating that it's a top-level
 node, and that code has to be custom written.
 

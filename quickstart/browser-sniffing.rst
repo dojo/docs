@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/browser-sniffing:
 
 Browser (User Agent) Sniffing
 =============================
@@ -16,7 +16,7 @@ When feature detection is not an option, Dojo provides a number of ``is`` variab
 
 As of Dojo 1.7, the user agent sniffing code has been split out into a separate module, ``dojo/_base/sniff``, so that AMD applications can choose to only load it if necessary.  This module is automatically loaded as part of dojo base for legacy applications, and continues to expose the "is" properties on the ``dojo`` object until 2.0.
 
-The sniff module augments the basic set of has() tests (see `dojo/has <dojo/has>`_) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for other features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize out unwanted code paths for specific browsers.
+The sniff module augments the basic set of has() tests (see :ref:`dojo/has <dojo/has>`) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for other features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize out unwanted code paths for specific browsers.
 
 The sniff module defines the following properties / has-features:
 
@@ -194,4 +194,4 @@ This example has the same result, but loads more code because it's using the ful
 See also
 ========
 
-* `dojo._base.loader, the bootstrap module and home of the discussed variables <dojo/base/loader>`_
+* :ref:`dojo._base.loader, the bootstrap module and home of the discussed variables <dojo/base/loader>`

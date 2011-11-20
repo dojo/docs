@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _howto:
 
 How to become a dojo doc ninja
 ==============================
@@ -74,19 +74,19 @@ Links
 
 If you want to link to wiki internal pages use following syntax::
 
-  `Some Link text <dijit/Dialog>`_
+  :ref:`Some Link text <dijit/Dialog>`
 
-Will create following link: `Some Link text <dijit/Dialog>`_
+Will create following link: :ref:`Some Link text <dijit/Dialog>`
 
 When you want to use the same link location twice you would do it like this::
 
-  My `link`_ is very cool and is my `link`_
+  My :ref:`link` is very cool and is my :ref:`link`
 
   .. _link: my/link
 
 The result will be:
 
-My `link`_ is very cool and is my `link`_
+My :ref:`link` is very cool and is my :ref:`link`
 
 .. _link: my/link
 

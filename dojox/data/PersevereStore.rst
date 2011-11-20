@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/PersevereStore:
 
 dojox.data.PersevereStore
 =========================

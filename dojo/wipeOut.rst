@@ -1,1 +1,1 @@
-#format dojo_rst
+.. _dojo/wipeOut:

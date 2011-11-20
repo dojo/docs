@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/declare:
 
 dojo.declare (dojo/_base/declare)
 =================================
@@ -85,7 +85,7 @@ Here, we've declared a simple class named ``my.Thinger``, not based on anything,
   var thing = new my.Thinger({ count:100 });
   console.log(thing.count);
 
-The `dojo.mixin <dojo/mixin>`_ call (in the constructor) then mixes the variable count into the properties of the instance, making it available as a member of the instance. We can supply defaults to use from within ``dojo.declare`` itself.
+The :ref:`dojo.mixin <dojo/mixin>` call (in the constructor) then mixes the variable count into the properties of the instance, making it available as a member of the instance. We can supply defaults to use from within ``dojo.declare`` itself.
 
 [Dojo 1.7 (AMD)]
 
@@ -482,7 +482,7 @@ Calling Superclass Methods
 
 Often when you're overriding a method, you want to *add* something to the superclasses method, not totally replace it.  Dojo has helper functions to make this easy.
 
-But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see `Manual constructor chaining`_ below.
+But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see :ref:`Manual constructor chaining` below.
 
 For all other methods, you can use ``this.inherited()`` to call the superclass method of the same name.  Take for example:
 
@@ -505,7 +505,7 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 
   this.inherited(arguments, [ customArg1, customArg2 ]);
 
-See `inherited()`_ for more details.
+See :ref:`inherited()` for more details.
 
 
 ====================
@@ -649,7 +649,7 @@ Another useful bit of information: only the first base (the last in an inheritan
   console.log(D instanceof A); // true
   console.log(D instanceof B); // false
 
-How to get around it? Use `isInstanceOf()`_.
+How to get around it? Use :ref:`isInstanceOf()`.
 
 Now on to more complex cases:
 
@@ -754,7 +754,7 @@ As you can see in one case ``B`` follows after ``A`` and in the other case it fo
 
   F -> C -> B -> D -> A
 
-As you can see all dependency rules are satisfied, yet the chain's tail doesn't match ``C`` as we are accustomed to see. Obviously ``instanceof`` would be useless in this case, but `isInstanceOf()`_ will work just fine. So when in doubt use `isInstanceOf()`_.
+As you can see all dependency rules are satisfied, yet the chain's tail doesn't match ``C`` as we are accustomed to see. Obviously ``instanceof`` would be useless in this case, but :ref:`isInstanceOf()` will work just fine. So when in doubt use :ref:`isInstanceOf()`.
 
 Chaining
 --------
@@ -920,16 +920,11 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 
 The exact algorithm of an instance initialization for chained constructors:
 
-#. If the first argument of constructor is an object and it has ``preamble()`` property, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
-#. If the class has its own ``preamble()`` method, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
-#. Superclass constructors are called recursively with original arguments, which could be overridden or modified by two passes of ``preamble()`` described above.
-#. The class own constructor is called with original arguments (unless they were modified indirectly by ``preamble()`` or superclass constructors).
-#. When all constructors are finished, and the instance is initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by ``preamble()`` or superclass constructors).
 
 Notes:
 
 * A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes.
-* If you do need to modify arguments of superclass constructors consider `Manual constructor chaining`_ as a better alternative to ``preamble()``.
+* If you do need to modify arguments of superclass constructors consider :ref:`Manual constructor chaining` as a better alternative to ``preamble()``.
 * If a class doesn't use ``preamble()`` it switches the initialization to the fast path making an instantiation substantially faster.
 * For historical reasons ``preamble()`` is called for classes without a constructor and even for the last class in the superclass list, which doesn't have a superclass.
 
@@ -1009,8 +1004,6 @@ The example above doesn't call the constructor of ``A`` at all, and runs some co
 
 The exact algorithm of an instance initialization for manual constructors:
 
-#. The top-most constructor is called with original arguments. It is up to this constructor to call a superclass constructor using ``this.inherited()``. While doing so it can substitute arguments.
-#. When the instance is initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by superclass constructors).
 
 Notes:
 
@@ -1026,7 +1019,7 @@ Every constructor created by ``dojo.declare`` defines some convenience methods.
 extend
 ~~~~~~
 
-This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it annotates function properties the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
+This constructor method adds new properties to the constructor's prototype the same way as :ref:`dojo.extend <dojo/extend>` works. The difference is that it annotates function properties the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
 
 The method has one argument: an object to mix in. It returns the constructor itself, which can be used for chained calls.
 
@@ -1084,7 +1077,7 @@ Example:
   a.m1();
   a.m2();
 
-Internally this method uses `dojo.safeMixin <dojo/safeMixin>`_.
+Internally this method uses :ref:`dojo.safeMixin <dojo/safeMixin>`.
 
 **Important note:** Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods would not be replaced because they are already copied.
 
@@ -1243,7 +1236,7 @@ The method is used to call a superclass method. It accepts up to three arguments
 
 * Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an un-annotated method, otherwise it will be deduced from the method itself.
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
-* Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used. If this argument is a literal constant ``true``, then the found super method is not executed but returned as a value (see `getInherited()`_).
+* Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used. If this argument is a literal constant ``true``, then the found super method is not executed but returned as a value (see :ref:`getInherited()`).
 
 It returns whatever value was returned by a superclass method that was called. If it turned out that there is no superclass method to call, ``inherited()`` doesn't do anything and returns ``undefined``.
 
@@ -1441,14 +1434,14 @@ Examples:
 getInherited()
 ~~~~~~~~~~~~~~
 
-This is a companion method to `inherited()`_. The difference is that it doesn't execute the found method, but returns it. It is up to the user to call it with proper arguments.
+This is a companion method to :ref:`inherited()`. The difference is that it doesn't execute the found method, but returns it. It is up to the user to call it with proper arguments.
 
 The method accepts up to two arguments:
 
-* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
+* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an un-annotated method (the same rule as for :ref:`inherited()`).
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 
-The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
+The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use :ref:`inherited()` directly for some reasons.
 
 Examples:
 
@@ -1522,7 +1515,7 @@ Examples:
     this.logAndCall("A.m2", supermethod, [1, 2]);
   };
 
-Internally this method is a helper, which calls `inherited()`_ with ``true`` as the last argument.
+Internally this method is a helper, which calls :ref:`inherited()` with ``true`` as the last argument.
 
 isInstanceOf()
 ~~~~~~~~~~~~~~
@@ -1588,7 +1581,7 @@ Examples:
 Using "raw" classes with dojo.declare()
 ---------------------------------------
 
-``dojo.declare`` allows to use "raw" classes created by other means as a superclass. Such classes are considered to be monolithic (because their structure cannot be introspected) and they cannot use advanced features like `inherited()`_. But their methods will be called by `inherited()`_ and all their methods can be chained (see Chaining_) including constructors.
+``dojo.declare`` allows to use "raw" classes created by other means as a superclass. Such classes are considered to be monolithic (because their structure cannot be introspected) and they cannot use advanced features like :ref:`inherited()`. But their methods will be called by :ref:`inherited()` and all their methods can be chained (see Chaining_) including constructors.
 
 Examples:
 
@@ -1681,7 +1674,7 @@ Meta-information
 
 All meta-information is a subject to change and should not be used in the course of normal coding. If you use it, be ready to update your code, when it changes.
 
-Every constructor produced with ``dojo.declare`` carries a meta-information required for internal plumbing and for introspection. It is implemented as a property called ``_meta`` on a constructor. ``_meta`` has following properties:
+Every constructor produced with ``dojo.declare`` carries a meta-information required for internal plumbing and for introspection. It is implemented as a property called :ref:``meta`` on a constructor. :ref:``meta`` has following properties:
 
 bases
   List of all superclasses produced by the C3 linearization algorithm (see Inheritance_ for more details). The very first item in the list is the class itself.
@@ -1697,9 +1690,9 @@ parents
 
 Additionally a prototype has a special property named ``declaredClass``, if the class was named when created by ``dojo.declare``. If it was an anonymous class, this property can be missing, or it can be a auto-generated name in the form of ``uniqName_NNN``, where ``NNN`` is some unique number. This property is used internally to distinguish between different classes. It is not meant for end users, but it can be useful for debugging.
 
-Every instance created by ``dojo.declare``'d class has a special property called ``_inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
+Every instance created by ``dojo.declare``'d class has a special property called :ref:``inherited``, which is used to speed up :ref:`inherited()` calls. Please don't touch it.
 
-Every method mixed in by ``dojo.declare`` or `dojo.safeMixin <dojo/safeMixin>`_ is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
+Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by :ref:`inherited()` and :ref:`getInherited()` to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
 
 ========
 See Also

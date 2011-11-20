@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mvc/Output:
 
 dojox.mvc.Output
 ===========================
@@ -33,7 +33,7 @@ Parameters
 Available Methods
 =================
 
-* `dojox.mvc.Output.set <dojox/mvc/Output#set>`_
+* :ref:`dojox.mvc.Output.set <dojox/mvc/Output>`
 
 Override and refresh output on value change. 
 

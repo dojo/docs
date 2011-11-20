@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/place:
 
 dijit.place
 ===========
@@ -14,7 +14,7 @@ dijit.place
 Introduction
 ============
 
-dijit/place is used to place one DOMNode relative to another DOMNode, or specified rectangle.   It is mainly used internally by dijit, by the `dijit.popup <dijit/popup>`_ code and by `dijit.Menu <dijit/Menu>`_ for displaying context menus.
+dijit/place is used to place one DOMNode relative to another DOMNode, or specified rectangle.   It is mainly used internally by dijit, by the :ref:`dijit.popup <dijit/popup>` code and by :ref:`dijit.Menu <dijit/Menu>` for displaying context menus.
 
 ======
 Around

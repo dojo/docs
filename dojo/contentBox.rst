@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/contentBox:
 
 dojo.contentBox
 ===============
@@ -27,50 +27,43 @@ In either usage it returns an object in the expected format of box. The object m
 
 for a node offset from its parent 50px to the left, 200px from the top with a content-width of 300px and a content-height of 150px.
 
-Since dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before. It's recommended to use geom.getMarginBox and geom.setContentSize to replace this API.
+Since Dojo 1.7, ``dojo.contentBox`` is exposed via the ``getContentBox`` and ``setContentSize`` methods of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``getContentBox`` and ``setContentSize`` are accessed from the ``dojo/dom-geometry`` module.
 
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/dom-geometry"], function(domGeom){   
      // Get the content-box size of a node
-     var contentBox = dojo.contentBox(domNode);
+     var contentBox = domGeom.getContentBox(domNode);
 
      // Set domNode content-box to 300px x 150px
-     dojo.contentBox(domNode, {w: 300, h: 400});
+     domGeom.setContentSize(domNode, {w: 300, h: 150});
   });
 
-It is also can use `dojo.getContentBox <dojo.getContentBox>`_ and `dojo.setContentSize <dojo.setContentSize>`_ to do this operation.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.contentBox`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/_base/html"], function(dojo){   
-     // Get the content-box size of a node
-     var contentBox = dojo.getContentBox(domNode);
+  require(["dojo"], function(dojo){   
+    // Get the content-box size of a node
+    var contentBox = dojo.contentBox(domNode);
 
-     // Set domNode content-box to 300px x 150px
-     dojo.setContentSize(domNode, {w: 300, h: 400});
-  });
+    // Set domNode content-box to 300px x 150px
+    dojo.contentBox(domNode, {w: 300, h: 150});
 
-It's recommended to use geom.getMarginBox and geom.setContentSize in dojo 1.7.
-
-.. code-block :: javascript
- :linenos:
-
-  require(["dojo/dom-geometry"], function(geom){   
-     // Get the content-box size of a node
-     var contentBox = geom.getContentBox(domNode);
-
-     // Set domNode content-box to 300px x 150px
-     geom.setContentSize(domNode, {w: 300, h: 400});
+    // You can also use dojo.getMarginBox and dojo.setMarginBox individually:
+    var contentBox = dojo.getContentBox(domNode);
+    dojo.setContentSize(domNode, {w: 300, h: 150});
   });
 
 Dojo < 1.7
@@ -83,7 +76,11 @@ Dojo < 1.7
    var contentBox = dojo.contentBox(domNode);
 
    // Set domNode content-box to 300px x 150px
-    dojo.contentBox(domNode, {w: 300, h: 400});
+   dojo.contentBox(domNode, {w: 300, h: 150});
+   
+   // You can also use dojo.getMarginBox and dojo.setMarginBox individually:
+   var contentBox = dojo.getContentBox(domNode);
+   dojo.setContentSize(domNode, {w: 300, h: 150});
 
 ========
 Examples
@@ -167,13 +164,13 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 Comparison of various DOM node position/size methods
 ----------------------------------------------------
 
-`Link: Comparison of various DOM node position/size methods. <dojo/position#comparison-of-various-dom-node-position-size-methods>`_
+:ref:`Link: Comparison of various DOM node position/size methods. <dojo/position>`
 
 
 ========
 See also
 ========
 
-* `dojo.marginBox <dojo/marginBox>`_
-* `dojo.getContentBox <dojo.getContentBox>`_
-* `dojo.setContentSize <dojo.setContentSize>`_ 
+* :ref:`dojo.marginBox <dojo/marginBox>`
+* :ref:`dojo.getContentBox <dojo.getContentBox>`
+* :ref:`dojo.setContentSize <dojo.setContentSize>` 

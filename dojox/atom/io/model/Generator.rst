@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/io/model/Generator:
 
 dojox.atom.io.model.Generator
 =============================
@@ -45,4 +45,4 @@ Below are all the functions implemented by this model class.
 See Also: 
 =========
 
-* `dojox.atom.io.model <dojox/atom/io/model>`_
+* :ref:`dojox.atom.io.model <dojox/atom/io/model>`

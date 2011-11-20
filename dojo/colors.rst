@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dojo/colors:
 
 dojo.colors
 ===========
 
-A module which augments the base `dojo.Color <dojo/Color>`_ class with additional methods and named colors. This is not included in base ``dojo.js`` by default for size reasons. 
+A module which augments the base :ref:`dojo.Color <dojo/Color>` class with additional methods and named colors. This is not included in base ``dojo.js`` by default for size reasons. 
 
 methods
 =======
@@ -26,4 +26,4 @@ The module also adds a `sanitize` method to dojo.Color.prototype. This method en
 See Also:
 =========
 
-* `dojo.Color <dojo/Color>`_
+* :ref:`dojo.Color <dojo/Color>`

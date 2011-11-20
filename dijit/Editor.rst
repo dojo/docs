@@ -1,6 +1,4 @@
-## page was renamed from 1.2/dijit/Editor
-## page was renamed from dijit/Editor
-#format dojo_rst
+.. _dijit/Editor:
 
 dijit.Editor
 ============
@@ -249,7 +247,7 @@ This is a list of the default commands (plugins) supported by the editor as buil
 Additional Editor Plugins
 =========================
 
-There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Please note that several of the plugins actually provide multiple capabilities.  To make full use of those plugins, you must register the editor with each capability (short name).  A quick summary of the provided function is below:
+There are several additional editor plugins provided by dijit and are listed out on the page: :ref:`dijit._editor.plugins <dijit/_editor/plugins>`.  These plugins add very useful functionality above and beyond the basics of editor.  Please note that several of the plugins actually provide multiple capabilities.  To make full use of those plugins, you must register the editor with each capability (short name).  A quick summary of the provided function is below:
 
 +---------------------------------------------+-----------------+---------------------------------------------------------------------------+
 |**Plugin**                                   |**Short Name(s)**|**Description**                                                            |
@@ -269,7 +267,7 @@ There are several additional editor plugins provided by dijit and are listed out
 |                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and           |
 |                                             |                 |inserting images (<img> tags).  The plugin provides basic, but             |
 |                                             |                 |decent validating Tooltip Dialog editors for working with both types       |
-|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_      |
+|                                             |                 |of external links. See also :ref:`<dojox/editor/plugins/LocalImage>`      |
 +---------------------------------------------+-----------------+---------------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                               |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it             |
@@ -291,7 +289,7 @@ There are several additional editor plugins provided by dijit and are listed out
 
 Please refer to each plugin's detail page for more information about it.
 
-DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.  These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.  Please refer to the `landing page <dojox/editor/plugins>`_ for more information about them.  Below is a quick description of each.
+DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.  These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.  Please refer to the :ref:`landing page <dojox/editor/plugins>` for more information about them.  Below is a quick description of each.
 
 
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+

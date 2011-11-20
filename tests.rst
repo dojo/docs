@@ -1,1 +1,0 @@
-#REDIRECT tests/index

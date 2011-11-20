@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/writingWidgets/example:
 
 Building a widget from scratch
 ==============================

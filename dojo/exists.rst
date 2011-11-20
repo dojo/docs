@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/exists:
 
 dojo.exists
 ===========
@@ -78,5 +78,5 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
 See also
 ========
 
-* `dojo.getObject <dojo/getObject>`_
-* `dojo.setObject <dojo/setObject>`_
+* :ref:`dojo.getObject <dojo/getObject>`
+* :ref:`dojo.setObject <dojo/setObject>`

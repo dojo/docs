@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/charting/DataChart:
 
 dojox.charting.DataChart
 =========================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/setStyle:
 
 dojo.setStyle
 =============
@@ -13,7 +13,7 @@ Sets styles on a node.
 Introduction
 ============
 
-``dojo.setStyle()`` is a companion function for `dojo.style <dojo/style>`_. It sets styles on a node.
+``dojo.setStyle()`` is a companion function for :ref:`dojo.style <dojo/style>`. It sets styles on a node.
 
 Since dojo 1.7, dojo.setStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of style.set in dojo/dom-style.
 
@@ -136,10 +136,10 @@ See also
 
 DOM operations:
 
-* `dojo.style <dojo/style>`_
-* `dojo.getComputedStyle <dojo/getComputedStyle>`_
-* `dojo.getStyle <dojo/getStyle>`_
-* `dojo.attr <dojo/attr>`_
+* :ref:`dojo.style <dojo/style>`
+* :ref:`dojo.getComputedStyle <dojo/getComputedStyle>`
+* :ref:`dojo.getStyle <dojo/getStyle>`
+* :ref:`dojo.attr <dojo/attr>`
 
 External links:
 

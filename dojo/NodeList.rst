@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/NodeList
-#format dojo_rst
+.. _dojo/NodeList:
 
 dojo.NodeList
 =============
@@ -18,7 +17,7 @@ dojo.NodeList
 Introduction
 ============
 
-`dojo.query <dojo/query>`_ returns instances of ``dojo.NodeList``:
+:ref:`dojo.query <dojo/query>` returns instances of ``dojo.NodeList``:
 
 [ V1.7+ AMD ]
 
@@ -141,9 +140,9 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
       node.innerHTML += " - found";
   });  
 
-The syntax is the same as `dojo.forEach <dojo/forEach>`_ except that the first parameter (the array) is implicitly provided. This pattern is repeated throught the ``dojo.NodeList`` API.
+The syntax is the same as :ref:`dojo.forEach <dojo/forEach>` except that the first parameter (the array) is implicitly provided. This pattern is repeated throught the ``dojo.NodeList`` API.
 
-For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined API. That API is mapped into ``NodeList``, dropping the node parameter and calling ``dojo.style`` on each node in the list:
+For instance, :ref:`dojo.style() <dojo/style>` styles a single Node around a defined API. That API is mapped into ``NodeList``, dropping the node parameter and calling ``dojo.style`` on each node in the list:
 
 [ V1.7+ AMD ]
 
@@ -199,9 +198,9 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
 Events with NodeLists
 =====================
 
-``NodeList.connect()`` is provided as a way to add event handlers to all DOM Nodes in the list, matching the `dojo.connect <dojo/connect>`_ API, assuming again the node to connect to is the current item in the list.
+``NodeList.connect()`` is provided as a way to add event handlers to all DOM Nodes in the list, matching the :ref:`dojo.connect <dojo/connect>` API, assuming again the node to connect to is the current item in the list.
 
-In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the `dojo/on <dojo/on>`_ API.  ``NodeList.connect()`` is still available via the ``dojo/_base/NodeList`` module, which is pulled in automatically in legacy mode for backwards compatibility.
+In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the :ref:`dojo/on <dojo/on>` API.  ``NodeList.connect()`` is still available via the ``dojo/_base/NodeList`` module, which is pulled in automatically in legacy mode for backwards compatibility.
 
 [ V1.7+ AMD ]
 
@@ -225,7 +224,7 @@ In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the `dojo/on
       dojo.fadeIn({ node: evt.target }).play();
     });
 
-You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect the same results. As a convenience, many DOM events are exposed on ``NodeList`` directly as functions, so the above example could be written out as:
+You can pass any event you would to :ref:`dojo.connect <dojo/connect>`, and expect the same results. As a convenience, many DOM events are exposed on ``NodeList`` directly as functions, so the above example could be written out as:
 
 [ V1.7+ AMD ]
 
@@ -249,7 +248,7 @@ You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect t
        dojo.fadeIn({ node: evt.target }).play();
      });
 
-Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, ``omouseout``, ``ondblclick``, all the `normal dom events <quickstart/events>`_ you'd expect, and as of 1.2, ``onsubmit``, ``onload``, and ``onerror``.
+Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, ``omouseout``, ``ondblclick``, all the :ref:`normal dom events <quickstart/events>` you'd expect, and as of 1.2, ``onsubmit``, ``onload``, and ``onerror``.
 
 [ V1.7+ AMD ]
 
@@ -328,13 +327,13 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 This example prevents the form from submitting and instead uses Ajax to send the data to the form's ``action=""`` url in an unobtrusive manner.
 
-An event delegation API is provided in `dojox.NodeList.delegate <dojox/NodeList/delegate>`_
+An event delegation API is provided in :ref:`dojox.NodeList.delegate <dojox/NodeList/delegate>`
 
 ==================
 Extending NodeList
 ==================
 
-Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class makes them available to dojo.query calls. Simply use `dojo.extend <dojo/extend>`_ to mix new functionality into the prototype of the ``NodeList`` class:
+Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class makes them available to dojo.query calls. Simply use :ref:`dojo.extend <dojo/extend>` to mix new functionality into the prototype of the ``NodeList`` class:
 
 [ V1.7+ AMD ]
 
@@ -399,13 +398,13 @@ The NodeList animations do *not* return the NodeList instance. Instead, they ret
 
 Additional Extensions
 ---------------------
-  * **New in 1.7** `dojo.NodeList-dom <dojo/NodeList-dom>`_ - provides dom manipulation APIs (included in dojo base for back-compat)
-  * `dojo.NodeList-data <dojo/NodeList-data>`_ - provides ``data`` and ``removeData`` APIs
-  * `dojo.NodeList-traverse <dojo/NodeList-traverse>`_ - provides a variety of DOM Traversal APIs, like ``parents`` and ``closest``
-  * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_ - additional DOM Manipulation APIs
-  * `dojo.NodeList-fx <dojo/NodeList-fx>`_ - Provides `dojo.Animation <dojo/Animation>`_ support to NodeLists
-  * `dojo.NodeList-html <dojo/NodeList-html>`_ - Advanced content-setter functionality (with `dojo.parser <dojo/parser>`_ support. 
-  * `dojox.NodeList.delegate <dojox/NodeList/delegate>`_ - Event delegation for dojo.NodeList
+  * **New in 1.7** :ref:`dojo.NodeList-dom <dojo/NodeList-dom>` - provides dom manipulation APIs (included in dojo base for back-compat)
+  * :ref:`dojo.NodeList-data <dojo/NodeList-data>` - provides ``data`` and ``removeData`` APIs
+  * :ref:`dojo.NodeList-traverse <dojo/NodeList-traverse>` - provides a variety of DOM Traversal APIs, like ``parents`` and ``closest``
+  * :ref:`dojo.NodeList-manipulate <dojo/NodeList-manipulate>` - additional DOM Manipulation APIs
+  * :ref:`dojo.NodeList-fx <dojo/NodeList-fx>` - Provides :ref:`dojo.Animation <dojo/Animation>` support to NodeLists
+  * :ref:`dojo.NodeList-html <dojo/NodeList-html>` - Advanced content-setter functionality (with :ref:`dojo.parser <dojo/parser>` support. 
+  * :ref:`dojox.NodeList.delegate <dojox/NodeList/delegate>` - Event delegation for dojo.NodeList
 
 
 ===========
@@ -896,7 +895,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 DOM Methods
 -----------
 
-**[Note]** Since V1.7, the basic DOM APIs have been moved into ``dojo/NodeList-dom``. Please see `dojo/NodeList-dom <dojo/NodeList-dom>`_ for details.
+**[Note]** Since V1.7, the basic DOM APIs have been moved into ``dojo/NodeList-dom``. Please see :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` for details.
 
 When using Dojo in legacy applications (e.g. without ``async: true`` in ``dojoConfig``), ``dojo/NodeList-dom`` is automatically loaded for backwards compatibility.
 
@@ -905,7 +904,7 @@ Event Methods
 -------------
 
 :connect:
-  Connect to an event of all the nodes in this list. Follows the pattern of `dojo.connect <dojo/connect>`_, though assumes each node in the list to be the target to connect to.
+  Connect to an event of all the nodes in this list. Follows the pattern of :ref:`dojo.connect <dojo/connect>`, though assumes each node in the list to be the target to connect to.
 
 [ V1.7+ AMD ]
 
@@ -955,7 +954,7 @@ As a convenience, several common events are mapped as direct function calls. For
 
 The full list of methods that are mapped in this way are: ``onblur``, ``onfocus``, ``onchange``, ``onclick``, ``onerror``, ``onkeydown``, ``onkeypress``, ``onkeyup``, ``onload``, ``onmousedown``, ``onmouseenter``, ``onmouseleave``, ``onmousemove``, ``onmouseout``, ``onmouseover``, ``onmouseup``, and ``onsubmit``.
 
-It is also possible to manipulate the scope of the callback, just as `dojo.connect <dojo/connect>`_ would:
+It is also possible to manipulate the scope of the callback, just as :ref:`dojo.connect <dojo/connect>` would:
 
 [ V1.7+ AMD ]
 
@@ -979,4 +978,4 @@ It is also possible to manipulate the scope of the callback, just as `dojo.conne
 Animation
 ---------
 
-Adding animation to lists of nodes requires including the module ``dojo.NodeList-fx`` which adds the required methods to instances of ``dojo.NodeList``. Please refer to `dojo.NodeList-fx <dojo/NodeList-fx>`_ for details.
+Adding animation to lists of nodes requires including the module ``dojo.NodeList-fx`` which adds the required methods to instances of ``dojo.NodeList``. Please refer to :ref:`dojo.NodeList-fx <dojo/NodeList-fx>` for details.

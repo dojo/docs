@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fieldToObject:
 
 dojo.fieldToObject
 ==================
@@ -18,7 +18,7 @@ Introduction
 
 This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form field and converts the field's value to a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values.
 
-This function is used internally by `dojo.formToObject <dojo/formToObject>`_ to convert each form field to a value.
+This function is used internally by :ref:`dojo.formToObject <dojo/formToObject>` to convert each form field to a value.
 
 Since dojo 1.7, dojo.fieldToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.fieldToObject in dojo/dom-form.
 
@@ -114,4 +114,4 @@ Example 1: Using fieldToObject to get field values
 See also
 ========
 
-* `dojo.formToObject <dojo/formToObject>`_
+* :ref:`dojo.formToObject <dojo/formToObject>`

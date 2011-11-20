@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/getStyle:
 
 dojo.getStyle
 =============
@@ -13,7 +13,7 @@ Accesses styles on a node.
 Introduction
 ============
 
-``dojo.getStyle()`` is a companion function for `dojo.style <dojo/style>`_. It gets the style value uses the computed style for the node, so the value
+``dojo.getStyle()`` is a companion function for :ref:`dojo.style <dojo/style>`. It gets the style value uses the computed style for the node, so the value
 will be a calculated value, not just the immediate node.style value. Also when getting values, use specific style names, like "borderBottomWidth" instead of "border" since compound values like "border" are not necessarily reflected as expected. If you want to get node dimensions, use `dojo.marginBox()`, `dojo.contentBox()` or `dojo.position()`..
 
 Since dojo 1.7, dojo.getStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of style.get in dojo/dom-style.
@@ -80,7 +80,7 @@ See also
 
 DOM operations:
 
-* `dojo.style <dojo/style>`_
-* `dojo.getComputedStyle <dojo/getComputedStyle>`_
-* `dojo.setStyle <dojo/setStyle>`_
-* `dojo.attr <dojo/attr>`_
+* :ref:`dojo.style <dojo/style>`
+* :ref:`dojo.getComputedStyle <dojo/getComputedStyle>`
+* :ref:`dojo.setStyle <dojo/setStyle>`
+* :ref:`dojo.attr <dojo/attr>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx-geometric-properties:
 
 dojox.gfx.matrix
 ================
@@ -15,7 +15,7 @@ dojox.gfx.matrix
 Coordinates and transformations
 ===============================
 
-In order to understand transformations you need to be familiar with fundamentals of matrices (matrix multiplication, multiplication of a vector by a matrix, order of multiplications). `dojox.gfx <dojox/gfx>`_ uses a mnemonic way to describe a matrix: ``xx`` scales an ``X`` component of a coordinate, ``yy`` scales a ``Y`` component, ``xy``, and ``yx`` affect both components, ``dx`` moves an ``X`` component, and ``dy`` moves a ``Y`` component. If you want to refresh your memory, read our `Matrix tutorial <dojox/gfx/matrix-tutorial>`_.
+In order to understand transformations you need to be familiar with fundamentals of matrices (matrix multiplication, multiplication of a vector by a matrix, order of multiplications). :ref:`dojox.gfx <dojox/gfx>` uses a mnemonic way to describe a matrix: ``xx`` scales an ``X`` component of a coordinate, ``yy`` scales a ``Y`` component, ``xy``, and ``yx`` affect both components, ``dx`` moves an ``X`` component, and ``dy`` moves a ``Y`` component. If you want to refresh your memory, read our :ref:`Matrix tutorial <dojox/gfx/matrix-tutorial>`.
 
 Simple examples:
 
@@ -35,7 +35,7 @@ There is a shortcut for scaling --- if a number N is used instead of a matrix, i
 
 There is a shortcut for multiplication (see multiply_ for details) --- is an array is used it is treated as an array of matrices, and all matrices will be multiplied to produce the final matrix.
 
-`dojox.gfx.matrix <dojox/gfx/matrix>`_ defines ``Matrix2D`` class, as well as numerous helpers (``Matrix2D`` is propagated to ``dojox.gfx`` namespace for convenience). Most important of them (all in ``dojox.gfx.matrix`` namespace) are listed below.
+:ref:`dojox.gfx.matrix <dojox/gfx/matrix>` defines ``Matrix2D`` class, as well as numerous helpers (``Matrix2D`` is propagated to ``dojox.gfx`` namespace for convenience). Most important of them (all in ``dojox.gfx.matrix`` namespace) are listed below.
 
 ==========================
 Matrix2D and normalization

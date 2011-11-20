@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Roller:
 
 dojox.widget.Roller
 ===================
@@ -119,7 +119,7 @@ The animations can do whatever your creativity will permit. Just name the "show 
 	this._setupConnects();		
   }
 
-Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in ``_setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``. 
+Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``. 
 
 Custom Styles 
 -------------

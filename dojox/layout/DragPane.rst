@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/layout/DragPane:
 
 dojox.layout.DragPane
 =====================

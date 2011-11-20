@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dojox/data/HtmlTableStore:
 
 dojox.data.HtmlTableStore
 =========================
 
-**NOTE:**   This store is deprecated. Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
+**NOTE:**   This store is deprecated. Please use :ref:`dojox.data.HtmlStore <dojox/data/HtmlStore>`.
 
 :Status: Contributed, Draft
 :Version: 1.0
@@ -93,7 +93,7 @@ The item attributes are defined by the <thead>  tag of the referenced table. Eac
 Query Syntax
 ============
 
-The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
+The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
 ========
 Examples

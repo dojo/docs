@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/FisheyeList:
 
 dojox.widget.FisheyeList
 ========================
@@ -60,4 +60,4 @@ http://demos.dojotoolkit.org/demos/fisheye/
 See also
 ========
 
-* `dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`_
+* :ref:`dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget:
 
 dojox.widget
 ============
@@ -9,7 +9,7 @@ dojox.widget
 .. contents::
     :depth: 2
 
-This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and doesn't typically fall into any other classification of use, like `dojox.form <dojox/form>`_ or `dojox.layout <dojox/layout>`_
+This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and doesn't typically fall into any other classification of use, like :ref:`dojox.form <dojox/form>` or :ref:`dojox.layout <dojox/layout>`
 
 
 =================
@@ -18,110 +18,110 @@ Available Widgets
 
 Here is an up to date list of dojox.widget components. Note: Some of these are newly added, and appear in different versions of Dojo, so may simply be unavailable in older versions:
 
-* `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
+* :ref:`dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`
 
   A circular gauge with a variety of indicators, used to display numerical data
 
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_
+* :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`
 
   A rotator that automatically transitions between child nodes
 
-* `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
+* :ref:`dojox.widget.BarGauge <dojox/widget/BarGauge>`
 
   A horizontal bar gauge with a few indicators, used to display numerical data
 
-* `dojox.widget.Calendar <dojox/widget/Calendar>`_
+* :ref:`dojox.widget.Calendar <dojox/widget/Calendar>`
 
   An extended dijit._Calendar
 
-* `dojox.widget.CalendarFx <dojox/widget/CalendarFx>`_
+* :ref:`dojox.widget.CalendarFx <dojox/widget/CalendarFx>`
 
   An extended dijit._Calendar with FX
 
-* `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_
+* :ref:`dojox.widget.ColorPicker <dojox/widget/ColorPicker>`
 
   A HSV Color Picker, similar to PhotoShop
 
-* `dojox.widget.Dialog <dojox/widget/Dialog>`_
+* :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
-  An extension to `dijit.Dialog <dijit/Dialog>`_
+  An extension to :ref:`dijit.Dialog <dijit/Dialog>`
 
-* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_
+* :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>`
 
-  Base class for `dojox.widget.Dialog <dojox/widget/Dialog>`_
+  Base class for :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
-* `dojox.widget.DocTester <dojox/widget/DocTester>`_
+* :ref:`dojox.widget.DocTester <dojox/widget/DocTester>`
 
   A widget to run DocTests inside an HTML page
 
-* `dojox.widget.FilePicker <dojox/widget/FilePicker>`_
+* :ref:`dojox.widget.FilePicker <dojox/widget/FilePicker>`
 
   A specialized version of RollingList that handles file informatione
 
-* `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_
+* :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>`
 
   A OSX-style Fisheye Menu
 
-* `dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`_
+* :ref:`dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`
 
   A more robust Fisheye Widget, which fish-eyes' any CSS property
 
-* `dojox.widget.Iterator <dojox/widget/Iterator>`_
+* :ref:`dojox.widget.Iterator <dojox/widget/Iterator>`
 
   A basic array and data store iterator class
 
-* `dojox.widget.Loader <dojox/widget/Loader>`_
+* :ref:`dojox.widget.Loader <dojox/widget/Loader>`
 
   A small experimental Ajax Activity indicator
 
-* `dojox.widget.Pager <dojox/widget/Pager>`_
+* :ref:`dojox.widget.Pager <dojox/widget/Pager>`
 
-  A `dojo.data <dojo/data>`_ powered Pager Widget, displaying a few items in a horizontal or vertical UI
+  A :ref:`dojo.data <dojo/data>` powered Pager Widget, displaying a few items in a horizontal or vertical UI
 
-* `dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`_
+* :ref:`dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`
 
   A menu item that can be used as a placeholder
 
-* `dojox.widget.Portlet <dojox/widget/Portlet>`_
+* :ref:`dojox.widget.Portlet <dojox/widget/Portlet>`
 
   An enhanced TitlePane designed to be used with the dojox.layout.GridContainer
 
-  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
+  * :ref:`dojox.widget.FeedPortlet <dojox/widget/Portlet>`
 
     An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list
 
-* `dojox.widget.Roller <dojox/widget/Roller>`_
+* :ref:`dojox.widget.Roller <dojox/widget/Roller>`
 
   An unobtrusive "roller", displaying one message from a list in a loop
 
-* `dojox.widget.RollingList <dojox/widget/RollingList>`_
+* :ref:`dojox.widget.RollingList <dojox/widget/RollingList>`
 
   A rolling list that can be tied to a data store with children
 
-* `dojox.widget.Rotator <dojox/widget/Rotator>`_
+* :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`
 
   A widget for rotating through child nodes using transitions
 
-* `dojox.widget.SortList <dojox/widget/SortList>`_
+* :ref:`dojox.widget.SortList <dojox/widget/SortList>`
 
   A small sortable unordered-list
 
-* `dojox.widget.Standby <dojox/widget/Standby>`_
+* :ref:`dojox.widget.Standby <dojox/widget/Standby>`
  
   A small 'This section is busy' overlay blocking widget
 
-* `dojox.widget.Toaster <dojox/widget/Toaster>`_
+* :ref:`dojox.widget.Toaster <dojox/widget/Toaster>`
 
   A message display system, showing warnings, errors and other messages unobtrusively
 
-* `dojox.widget.TitleGroup <dojox/widget/TitleGroup>`_
+* :ref:`dojox.widget.TitleGroup <dojox/widget/TitleGroup>`
   
-  A lightweight container widgets which manages the state of children `TitlePane <dijit/TitlePane>`_ widgets. Similar to an `AccordionContainer <dijit/layout/AccordionContainer>`_ though has variable height panes.
+  A lightweight container widgets which manages the state of children :ref:`TitlePane <dijit/TitlePane>` widgets. Similar to an :ref:`AccordionContainer <dijit/layout/AccordionContainer>` though has variable height panes.
 
-* `dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`_
+* :ref:`dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`
 
   Shows the "yellow bar" at the top of the screen when the user is to be notified that they should upgrade their browser or a plugin.
 
-* `dojox.widget.Wizard <dojox/widget/Wizard>`_
+* :ref:`dojox.widget.Wizard <dojox/widget/Wizard>`
 
   A simple widget providing a step-by-step wizard like UI

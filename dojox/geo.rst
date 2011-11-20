@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/geo:
 
 dojox.geo
 =========
@@ -7,10 +7,10 @@ Namespace containing Dojo geographical related modules.
 
 Currently consists of:
 
-* `dojox.geo.charting <dojox/geo/charting>`_
+* :ref:`dojox.geo.charting <dojox/geo/charting>`
 
   A module to mix charting data with basic map display
 
-* `dojox.geo.openlayers <dojox/geo/openlayers>`_
+* :ref:`dojox.geo.openlayers <dojox/geo/openlayers>`
 
   A module to display advanced layered maps (from several commercial providers) overlaid by rich graphic components. 

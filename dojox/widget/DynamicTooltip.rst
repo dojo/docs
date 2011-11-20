@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/DynamicTooltip:
 
 dojox.widget.DynamicTooltip
 ===========================
@@ -11,7 +11,7 @@ dojox.widget.DynamicTooltip
 .. contents::
    :depth: 2
 
-An **experimental** addition to standard `dijit.Tooltip <dijit/Tooltip>`_ functionality allowing remotely loaded content to appear.
+An **experimental** addition to standard :ref:`dijit.Tooltip <dijit/Tooltip>` functionality allowing remotely loaded content to appear.
 
 ============
 Introduction

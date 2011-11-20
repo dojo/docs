@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_DisplayMixin:
 
 dojox.form.manager._DisplayMixin
 ================================
@@ -15,11 +15,11 @@ dojox.form.manager._DisplayMixin
 Introduction
 ============
 
-This class is the component of the form manager. It should be used together with `\_Mixin <dojox/form/manager/_Mixin>`_.
+This class is the component of the form manager. It should be used together with :ref:`\_Mixin <dojox/form/manager/_Mixin>`.
 
-The mixin provides commonly used methods to show/hide attached nodes (see `controlled elements <dojox/form/manager#controlled-elements>`_ for more details) by modifying ``display`` property of node's ``style`` using ``"none"`` value to hide the node, and ``""`` value to show it. It doesn't use any other ``display`` values.
+The mixin provides commonly used methods to show/hide attached nodes (see :ref:`controlled elements <dojox/form/manager>` for more details) by modifying ``display`` property of node's ``style`` using ``"none"`` value to hide the node, and ``""`` value to show it. It doesn't use any other ``display`` values.
 
-This mixin is modeled after `\_EnableMixin <dojox/form/manager/_EnableMixin>`_.
+This mixin is modeled after :ref:`\_EnableMixin <dojox/form/manager/_EnableMixin>`.
 
 ======================
 Methods and properties
@@ -30,7 +30,7 @@ This section describes all public methods and properties of the dojox.form.manag
 gatherDisplayState
 ~~~~~~~~~~~~~~~~~~
 
-This method collects show/hide status information in a dictionary object as Boolean values (``true`` means shown). It is modeled after `\_valueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin#gatherformvalues>`_.
+This method collects show/hide status information in a dictionary object as Boolean values (``true`` means shown). It is modeled after :ref:`\_valueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin>`.
 
 There are three ways to use this method:
 

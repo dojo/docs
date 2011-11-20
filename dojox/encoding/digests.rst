@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/digests:
 
 dojox.encoding.digests
 ======================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/Preview:
 
 dojox.editor.plugins.Preview
 ============================
@@ -219,6 +219,6 @@ Applying stylesheets to preview content
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dijit._editor.plugins <dijit/_editor/plugins>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/IconItem:
 
 dojox.mobile.IconItem
 =====================
@@ -92,4 +92,4 @@ Parameters from this widget:
 Examples
 ========
 
-See examples of `dojox.mobile.IconContainer <dojox/mobile/IconContainer>`_.
+See examples of :ref:`dojox.mobile.IconContainer <dojox/mobile/IconContainer>`.

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/AutoRotator:
 
 dojox.widget.AutoRotator
 ========================
@@ -17,7 +17,7 @@ A rotator that automatically transitions between child nodes.
 Introduction
 ============
 
-Adds automatic rotating to the `dojox.widget.Rotator <dojox/widget/Rotator>`_. The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
+Adds automatic rotating to the :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`. The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
 
 
 =====
@@ -36,7 +36,7 @@ random               boolean  Determines if the panes should cycle randomly. The
 reverse              boolean  Causes the rotator to rotate in reverse order. The default value is "false".
 ===================  =======  ======================================================================
 
-The AutoRotator follows the same general Guidelines as the `dojox.widget.Rotator <dojox/widget/Rotator>`_.
+The AutoRotator follows the same general Guidelines as the :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`.
 
 
 ========
@@ -222,9 +222,9 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
 See also
 ========
 
-* `dojox.widget.Rotator <dojox/widget/Rotator>`_ is the base class of the AutoRotator.
-* `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ manipulates a Rotator or AutoRotator.
-* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_ is a fade and crossfade transition for the Rotator.
-* `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_ is a pan and continuous pan transition for the Rotator.
-* `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_ is a sliding transition for the Rotator.
-* `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_ is a wiping transition for the Rotator.
+* :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` is the base class of the AutoRotator.
+* :ref:`dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>` manipulates a Rotator or AutoRotator.
+* :ref:`dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>` is a fade and crossfade transition for the Rotator.
+* :ref:`dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>` is a pan and continuous pan transition for the Rotator.
+* :ref:`dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>` is a sliding transition for the Rotator.
+* :ref:`dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>` is a wiping transition for the Rotator.

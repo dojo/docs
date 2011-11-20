@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/date/locale/format:
 
 dojo.date.locale.format
 =======================
@@ -227,4 +227,4 @@ Render the current Date in several ways using format(). The inverse operation to
 See also
 ========
 
-* `dojo.date.locale <dojo/date/locale>`_
+* :ref:`dojo.date.locale <dojo/date/locale>`

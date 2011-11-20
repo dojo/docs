@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/scenario-base:
 
 Building a Base-only dojo.js
 ============================

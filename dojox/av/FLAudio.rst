@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/av/FLAudio:
 
 dojox.av.FLAudio
 ================
@@ -90,6 +90,6 @@ Programmatic example
 See also
 ========
 
-* `dojox.av <dojox/av>`_
-* `dojox.av.FLVideo <dojox/av/FLVideo>`_
-* `dojox.av.widget <dojox/av/widget>`_
+* :ref:`dojox.av <dojox/av>`
+* :ref:`dojox.av.FLVideo <dojox/av/FLVideo>`
+* :ref:`dojox.av.widget <dojox/av/widget>`

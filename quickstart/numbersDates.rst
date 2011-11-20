@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/numbersDates:
 
 Parsing, Formatting, and Validating: Dates and Numbers
 ======================================================
@@ -22,7 +22,7 @@ Constraints
 To override the defaults, you can use the "constraints" attribute.  "constraints" is an
 object passed to functions responsible for validating, parsing, and formatting the data in the box, and
 various properties may be provided to override system or locale-specific defaults.  Constraints are handled in Dojo low-level routines in
-`dojo.date <dojo/date>`_, dojo.currency and dojo.number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:
+:ref:`dojo.date <dojo/date>`, dojo.currency and dojo.number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:
 
 Number Constraints
 ------------------

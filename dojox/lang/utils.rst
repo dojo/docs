@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/utils:
 
 dojox.lang.utils
 ================

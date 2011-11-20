@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/_FormSelectWidget:
 
 dijit/form/_FormSelectWidget
 ============================
@@ -8,19 +8,19 @@ dijit/form/_FormSelectWidget
 :Available: since 1.4
 :Version: 1.7
 
-dijit/form/_FormSelectWidget is a dijit Widget mixin that adds functionality for working with HTML <select>-like widgets. It is used by `dijit/form/Select`_ and `dojox/form/CheckedMultiSelect`_. It extends `dijit/form/_FormValueWidget`_ with the ability to handle multiple values and retrieve options from a `dojo/data`_ store.
+dijit/form/_FormSelectWidget is a dijit Widget mixin that adds functionality for working with HTML <select>-like widgets. It is used by :ref:`dijit/form/Select` and :ref:`dojox/form/CheckedMultiSelect`. It extends :ref:`dijit/form/_FormValueWidget` with the ability to handle multiple values and retrieve options from a :ref:`dojo/data` store.
 
 =====
 Usage
 =====
 
-See `dijit/form/Select`_ for usage information.
+See :ref:`dijit/form/Select` for usage information.
 
 ========
 See also
 ========
 
-* `Writing Widgets <quickstart/writingWidgets>`_
-* `dijit/_Widget`_
-* `dijit/form/Select`_
-* `dojox/form/CheckedMultiSelect`_
+* :ref:`Writing Widgets <quickstart/writingWidgets>`
+* :ref:`dijit/_Widget`
+* :ref:`dijit/form/Select`
+* :ref:`dojox/form/CheckedMultiSelect`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/app/view:
 
 dojox.app.view
 ================

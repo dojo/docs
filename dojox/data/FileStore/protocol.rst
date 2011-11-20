@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/FileStore/protocol:
 
 dojox.data.FileStore: Technical/Protocol Details
 ================================================

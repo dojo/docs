@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/data:
 
 dojo.data
 =========
@@ -24,18 +24,18 @@ Usage
 
 Basic store usage consists primarily of creating stores from which items are fetched, registering handlers to deal with the return of data from a ``fetch()`` operation, and fetching attribute values from the returned items. Advanced usage often includes pagination though large data sets, using write and update APIs to provide editing interfaces, and the creation of custom stores. 
 
-* `dojo.data.api <dojo/data/api>`_ 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
-* `dojo.data.api.Notification <dojo/data/api/Notification>`_
-* `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
-* `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+* :ref:`dojo.data.api <dojo/data/api>` 
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
+* :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
+* :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
+* :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`
 
 
 ========
 See also
 ========
 
-* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
-* `Additional available Datastores <dojox/data>`_
+* :ref:`Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`
+* :ref:`Additional available Datastores <dojox/data>`

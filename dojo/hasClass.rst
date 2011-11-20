@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/hasClass:
 
 dojo.hasClass
 =============
@@ -11,7 +11,7 @@ dojo.hasClass
 
 Returns a boolean depending on whether or not a node has a passed class string.
 
-Since dojo 1.7, dojo.hasClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.contains in dojo/dom-class.
+Since Dojo 1.7, ``dojo.hasClass`` is exposed via the ``contains`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -24,23 +24,25 @@ The function takes two arguments:
 
 It returns ``true`` if the node has the class, and ``false`` otherwise.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``contains`` is accessed from the ``dojo/dom-class`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/dom-class"], function(domClass){   
       // Do something if a node with id="someNode" has class="aSillyClassName" present
-      if(dojo.hasClass("someNode","aSillyClassName")){ ... }
+      if(domClass.contains("someNode","aSillyClassName")){ ... }
   });
 
-It's recommended to use cls.contains in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.hasClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-class"], function(cls){   
+  require(["dojo"], function(dojo){   
       // Do something if a node with id="someNode" has class="aSillyClassName" present
-      if(cls.contains("someNode","aSillyClassName")){ ... }
+      if(dojo.hasClass("someNode","aSillyClassName")){ ... }
   });
 
 Dojo < 1.7
@@ -65,9 +67,9 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 .. code-block :: javascript
   :linenos:
 
-  // Dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){   
-    if(cls.contains("bam", "foo")){
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){   
+    if(domClass.contains("bam", "foo")){
       /* it does */
     }
   });
@@ -77,15 +79,15 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
     /* it does */
   }
 
-Using `dojo.query <dojo/query>`_ to find a node and check if it has a class:
+Using :ref:`dojo.query <dojo/query>` to find a node and check if it has a class:
 
 .. code-block :: javascript
   :linenos:
 
-  // Dojo 1.7 (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(cls, query){   
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(domClass, query){   
      query(".something").forEach(function(node){
-       if(cls.contains(node, "else"){
+       if(domClass.contains(node, "else"){
           /* it does */
        }
     });
@@ -98,13 +100,13 @@ Using `dojo.query <dojo/query>`_ to find a node and check if it has a class:
      }
   });
 
-Note: You do not need to explicitly check for ``dojo.hasClass`` before adding or removing a class with `dojo.addClass <dojo/addClass>`_ or `dojo.removeClass <dojo/removeClass>`_, they do it for you.
+Note: You do not need to explicitly check for ``dojo.hasClass`` before adding or removing a class with :ref:`dojo.addClass <dojo/addClass>` or :ref:`dojo.removeClass <dojo/removeClass>`, they do it for you.
 
 
 ========
 See also
 ========
 
-* `dojo.addClass <dojo/addClass>`_
-* `dojo.removeClass <dojo/removeClass>`_
-* `dojo.toggleClass <dojo/toggleClass>`_
+* :ref:`dojo.addClass <dojo/addClass>`
+* :ref:`dojo.removeClass <dojo/removeClass>`
+* :ref:`dojo.toggleClass <dojo/toggleClass>`

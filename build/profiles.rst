@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/profiles:
 
 build profiles
 ==============
@@ -107,7 +107,7 @@ dependencies
 
    Advanced notes
       * When the builder parses for dependencies in your source files, it is looking for the standard dojo.require('module-name') syntax via regular expression.  If you use the syntax dojo['require'] (or any other legal JavaScript construct), the builder will not recognize the dependency and will not include that resource.
-      * The advanced `keepRequires <build/keepRequires>`_ option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
+      * The advanced :ref:`keepRequires <build/keepRequires>` option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
      
 layerDependencies
    Specifies other layers which are *prerequisites* for this layer; resources in the prerequisite layers are not duplicated in the current layer being built.  That is, if the builder locates a ``dojo.require`` statement in a source file, but that resource has already been placed in one of the layers specified as one of the layer dependencies, that resource will not be included in the current layer.
@@ -120,12 +120,12 @@ layerDependencies
 keepRequires
    Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
 
-   See the `keepRequires detailed description <build/keepRequires>`_.
+   See the :ref:`keepRequires detailed description <build/keepRequires>`.
 
 customBase
    Optional.  Used to build exceptionally small ``dojo.js`` layer, not including all of the standard Dojo Base.
 
-   See the `customBase detailed description <build/customBase>`_.
+   See the :ref:`customBase detailed description <build/customBase>`.
 
 
 ========

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/Breadcrumb:
 
 dojox.editor.plugins.Breadcrumb
 ===============================
@@ -26,7 +26,7 @@ Once required in and enabled, this plugin provides the following features to dij
 Limitations
 ===========
 
-* This plugin does not work well with the `full screen <dijit/_editor/plugins/FullScreen>`_ plugin.  In Full screen mode the footer toolbar is out of view.  This will be fixed in a later version of dojo.  It requires minor updated to Editor as well as the full screen and view source plugins.
+* This plugin does not work well with the :ref:`full screen <dijit/_editor/plugins/FullScreen>` plugin.  In Full screen mode the footer toolbar is out of view.  This will be fixed in a later version of dojo.  It requires minor updated to Editor as well as the full screen and view source plugins.
 
 
 =====
@@ -117,6 +117,6 @@ Basic Usage
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dijit._editor.plugins <dijit/_editor/plugins>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

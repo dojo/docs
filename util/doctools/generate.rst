@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _util/doctools/generate:
 
 Generating API Documentation
 ============================
@@ -17,7 +17,7 @@ Running the doctools parser to extract API documentation data
 Introduction
 ============
 
-In `Dojo Inline Documentation <util/doctools/markup>`_ we detailed the markup syntax and conventions available to document your API inline in your code. These inline docs can be extracted using the doctools parser - a php-based script available in util/docscripts in your svn checkout of the Dojo Toolkit. The parser generates xml and/or json of the entirety of the configured namespaces (dojo, dijit and dojox by default).
+In :ref:`Dojo Inline Documentation <util/doctools/markup>` we detailed the markup syntax and conventions available to document your API inline in your code. These inline docs can be extracted using the doctools parser - a php-based script available in util/docscripts in your svn checkout of the Dojo Toolkit. The parser generates xml and/or json of the entirety of the configured namespaces (dojo, dijit and dojox by default).
 
 ===================
 Defining Namespaces
@@ -77,6 +77,6 @@ Parsing a large codebase (like dojo/dijit/dojox) may take several minutes.
 See Also
 ========
 
-- `Dojo documentation tools overview <util/doctools>`_
-- `API doc syntax <util/doctools/markup>`_ - how to markup API documentation in your code
-- `Viewing the API output data <util/doctools/viewer>`_ - how to setup and load the extracted API data into a web-based viewer
+- :ref:`Dojo documentation tools overview <util/doctools>`
+- :ref:`API doc syntax <util/doctools/markup>` - how to markup API documentation in your code
+- :ref:`Viewing the API output data <util/doctools/viewer>` - how to setup and load the extracted API data into a web-based viewer

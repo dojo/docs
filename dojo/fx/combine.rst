@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fx/combine:
 
 dojo.fx.combine
 ===============
@@ -71,12 +71,12 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
 See Also
 ========
 
-* `Animation Quickstart <quickstart/Animation>`_
-* `Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`_
-* `dojo.fx.chain <dojo/fx/chain>`_
-* `dojo.animateProperty <dojo/animateProperty>`_
-* `dojo.fadeOut <dojo/fadeOut>`_
-* `dojo.fadeIn <dojo/fadeIn>`_
-* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
-* `dojo.fx.slideTo <dojo/fx/slideTo>`_
+* :ref:`Animation Quickstart <quickstart/Animation>`
+* :ref:`Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`
+* :ref:`dojo.fx.chain <dojo/fx/chain>`
+* :ref:`dojo.animateProperty <dojo/animateProperty>`
+* :ref:`dojo.fadeOut <dojo/fadeOut>`
+* :ref:`dojo.fadeIn <dojo/fadeIn>`
+* :ref:`dojo.fx.wipeOut <dojo/fx/wipeOut>`
+* :ref:`dojo.fx.wipeIn <dojo/fx/wipeIn>`
+* :ref:`dojo.fx.slideTo <dojo/fx/slideTo>`

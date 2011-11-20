@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/dynamic-content-loading:
 
 Dynamic Content Loading
 =======================

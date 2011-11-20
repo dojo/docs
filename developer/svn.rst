@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _developer/svn:
 
 Getting the Code from Source Control
 ====================================

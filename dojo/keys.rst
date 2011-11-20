@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dojo/keys:
 
 Key Constants
 =============
 
-Dojo provides normalized constants for all the available keys you can press, which is passed in an Event Object when using `dojo.connect <quickstart/events>`_. 
+Dojo provides normalized constants for all the available keys you can press, which is passed in an Event Object when using :ref:`dojo.connect <quickstart/events>`. 
 
 Available Keys
 --------------

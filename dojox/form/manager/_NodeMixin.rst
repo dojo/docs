@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_NodeMixin:
 
 dojox.form.manager._NodeMixin
 =============================
@@ -15,7 +15,7 @@ dojox.form.manager._NodeMixin
 Introduction
 ============
 
-This class defines low-level primitives for form nodes. It is complimentary to and should be used together with `dojox.form.manager._Mixin <dojox/form/manager/_Mixin>`_.
+This class defines low-level primitives for form nodes. It is complimentary to and should be used together with :ref:`dojox.form.manager._Mixin <dojox/form/manager/_Mixin>`.
 
 On startup this mixin inspects its body and registers all found form nodes (``<input>``, ``<select>``, ``<textarea>``, ``<button>``) unless they are part of some form widget.
 
@@ -28,12 +28,12 @@ This section describes all public methods and properties of the dojox.form.manag
 Value access
 ------------
 
-Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use `_ValueMixin <dojox/form/manager/_ValueMixin>`_.
+Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use :ref:`_ValueMixin <dojox/form/manager/_ValueMixin>`.
 
 formNodeValue
 ~~~~~~~~~~~~~
 
-This method allows to get/set values of controlled form nodes. It is modeled after `dojox.form.manager._Mixin's formWidgetValue() <dojox/form/manager/_Mixin#formwidgetvalue>`_. It can be used two ways: with one parameter to get the value, and with two parameters to set the value:
+This method allows to get/set values of controlled form nodes. It is modeled after :ref:`dojox.form.manager._Mixin's formWidgetValue() <dojox/form/manager/_Mixin>`. It can be used two ways: with one parameter to get the value, and with two parameters to set the value:
 
 .. code-block :: javascript
 
@@ -42,7 +42,7 @@ This method allows to get/set values of controlled form nodes. It is modeled aft
   // writing the value
   fm.formNodeValue("lastName", "Smith");
 
-The first parameter is a name of `a controlled form element <dojox/form/manager#controlled-elements>`_ (a string). The optional second parameter is a value to be set. It is usually a string too.
+The first parameter is a name of :ref:`a controlled form element <dojox/form/manager>` (a string). The optional second parameter is a value to be set. It is usually a string too.
 
 The returned value is:
 
@@ -55,7 +55,7 @@ Inspection
 Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
 
 Note: this section is similar to
-This method allows to get/set values of controlled form nodes. It is modeled after `dojox.form.manager._Mixin's inspectFormWidget() <dojox/form/manager/_Mixin#inspection>`_.
+This method allows to get/set values of controlled form nodes. It is modeled after :ref:`dojox.form.manager._Mixin's inspectFormWidget() <dojox/form/manager/_Mixin>`.
 
 inspectFormNodes
 ~~~~~~~~~~~~~~~~
@@ -134,12 +134,12 @@ Registration
 
 These functions can register/unregister form nodes. In most cases these methods are not used directly because dojox.form.manager._NodeMixin registers all children form nodes automatically. But if you create/delete nodes dynamically, you should register/unregister them manually.
 
-Note: methods in this section are modeled on `dojox.form.manager._Mixin's registration <dojox/form/manager/_Mixin#registration>`_.
+Note: methods in this section are modeled on :ref:`dojox.form.manager._Mixin's registration <dojox/form/manager/_Mixin>`.
 
 registerNode
 ~~~~~~~~~~~~
 
-This method registers a form node with a form manager, and connects its observers. This node is not required to be a descendant of the form manager it is being registered with. This method is modeled on `dojox.form.manager._Mixin's registerWidget() <dojox/form/manager/_Mixin#registerwidget>`_. Two signatures are recognized:
+This method registers a form node with a form manager, and connects its observers. This node is not required to be a descendant of the form manager it is being registered with. This method is modeled on :ref:`dojox.form.manager._Mixin's registerWidget() <dojox/form/manager/_Mixin>`. Two signatures are recognized:
 
 1. Register by node id:
 
@@ -156,7 +156,7 @@ This method registers a form node with a form manager, and connects its observer
 unregisterNode
 ~~~~~~~~~~~~~~
 
-This method disconnects form node's observers, and removes it from internal structures of a form manager. This method is modeled on `dojox.form.manager._Mixin's unregisterWidget() <dojox/form/manager/_Mixin#unregisterwidget>`_. The only way to unregister a form node is by its form name:
+This method disconnects form node's observers, and removes it from internal structures of a form manager. This method is modeled on :ref:`dojox.form.manager._Mixin's unregisterWidget() <dojox/form/manager/_Mixin>`. The only way to unregister a form node is by its form name:
 
 .. code-block :: javascript
 
@@ -167,7 +167,7 @@ registerNodeDescendants
 
 This method calls registerNode_ for every descendant form node of a given DOM node. This method is useful when you add several form nodes dynamically. These nodes do not need to be descendants of the form manager they are being registered with.
 
-This method is modeled on `dojox.form.manager._Mixin's registerWidgetDescendants() <dojox/form/manager/_Mixin#registerwidgetdescendants>`_.
+This method is modeled on :ref:`dojox.form.manager._Mixin's registerWidgetDescendants() <dojox/form/manager/_Mixin>`.
 
 Like with registerNode_ two signatures are recognized:
 
@@ -188,17 +188,17 @@ unregisterNodeDescendants
 
 This method calls unregisterNode_ for every descendant form node of a given DOM node. Its signature is the same as registerNodeDescendants_'s signature (both variants).
 
-This method is modeled on `dojox.form.manager._Mixin's unregisterWidgetDescendants() <dojox/form/manager/_Mixin#unregisterwidgetdescendants>`_.
+This method is modeled on :ref:`dojox.form.manager._Mixin's unregisterWidgetDescendants() <dojox/form/manager/_Mixin>`.
 
 Lifecycle
 ---------
 
-Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._Mixin <dojox/form/manager/_Mixin>`_ in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
+Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix :ref:`dojox.form.manager._Mixin <dojox/form/manager/_Mixin>` in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
 
 destroy
 ~~~~~~~
 
-This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see `dijit._Widget <dijit/_Widget>`_.
+This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
 ====================
 Additional functions

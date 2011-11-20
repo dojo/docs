@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _hosted_dojo:
 
 Hosted Dojo
 ===============

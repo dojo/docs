@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/CssClassStore:
 
 dojox.data.CssClassStore
 ========================
@@ -45,7 +45,7 @@ Item Attributes
 Query Syntax
 ============
 
-The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
+The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
 ========
 Examples

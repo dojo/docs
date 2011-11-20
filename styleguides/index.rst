@@ -1,7 +1,6 @@
-## page was renamed from styleguide/index
-#format dojo_rst
+.. _styleguides/index:
 
 Dojo Styleguides
 ================
 
-* `CSS Styleguide <styleguides/css>`_
+* :ref:`CSS Styleguide <styleguides/css>`

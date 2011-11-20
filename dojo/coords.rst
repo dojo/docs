@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/coords:
 
 dojo.coords
 ===========
@@ -18,25 +18,25 @@ Getter for the complete coordinates of a dom node.
 Introduction
 ============
 
-The dojo coords function is used to obtain a plethora of coordinate information about a dom node.  The type of information it returns is relative positin to its parent in the form of 'left' and 'top' values, the width and height of the dom node, and absolute position in the form of page x and y coordinates.  Effectively, it is a combination of margin box values `dojo.marginBox <dojo/marginBox>`_ and `dojo.position <dojo/position>`_.  Because of this redunancy and because the return attributes use differeing box-types, this method is being deprecated beginning with Dojo 1.4 but is being kept active for backward compatibility.  The return object looks like:
+The dojo coords function is used to obtain a plethora of coordinate information about a dom node.  The type of information it returns is relative positin to its parent in the form of 'left' and 'top' values, the width and height of the dom node, and absolute position in the form of page x and y coordinates.  Effectively, it is a combination of margin box values :ref:`dojo.marginBox <dojo/marginBox>` and :ref:`dojo.position <dojo/position>`.  Because of this redundancy and because the return attributes use differing box-types, this method is being deprecated beginning with Dojo 1.4 but is being kept active for backward compatibility.  The return object looks like:
 
 { l: 50, t: 200, w: 300: h: 150, x: 700, y: 900, }
 
 for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px, with page absolute coordinates (border-box) of 700px on the x axis and 900px on the y axis.
 
-Since dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before.
+Since dojo 1.7, ``dojo.coords`` is available in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo"], function(dojo){   
      var coords = dojo.coords(node);
   });
 
@@ -111,7 +111,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
 Comparison of various DOM node position/size methods
 ----------------------------------------------------
 
-`Link: Comparison of various DOM node position/size methods. <dojo/position#comparison-of-various-dom-node-position-size-methods>`_
+:ref:`Link: Comparison of various DOM node position/size methods. <dojo/position>`
 
 =====
 Notes

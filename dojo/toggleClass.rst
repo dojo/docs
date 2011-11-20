@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/toggleClass:
 
 dojo.toggleClass
 ================
@@ -17,7 +17,7 @@ Introduction
 
 dojo.toggleClass adds a class to node if not present, or removes if present.
 
-Since dojo 1.7, dojo.toggleClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.toggle in dojo/dom-class.
+Since Dojo 1.7, ``dojo.toggleClass`` is exposed via the ``toggle`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -30,21 +30,23 @@ The function takes up to three arguments:
 3. Optional. A Boolean flag. If ``true`` we add classes, otherwise we remove classes. If not specified, the class will be removed if it is already present on the node, and added otherwise.
 
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``toggle`` is accessed from the ``dojo/dom-class`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
-      dojo.toggleClass("someNode", "hovered"); 
+  require(["dojo/dom-class"], function(domClass){
+      domClass.toggle("someNode", "hovered"); 
   });
 
-It's recommended to use cls.toggle in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.toggleClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-class"], function(cls){   
-      cls.toggle("someNode", "hovered"); 
+  require(["dojo"], function(dojo){   
+      dojo.toggleClass("someNode", "hovered"); 
   });
 
 Dojo < 1.7
@@ -65,9 +67,9 @@ The following example adds the class "style1" to the node "example1", if there i
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.toggle("example1", "style1");
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.toggle("example1", "style1");
   });
 
   // dojo < 1.7
@@ -87,6 +89,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function toggle1() {
@@ -112,9 +115,9 @@ The following example adds the class "style2" to the node "example2", no matter 
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.toggle("example2", "style2", true);
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.toggle("example2", "style2", true);
   });
 
   // dojo < 1.7
@@ -135,6 +138,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function toggle2() {
@@ -156,12 +160,12 @@ See it in action:
 Toggle multiple nodes
 ---------------------
 
-toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
+toggleClass is also available for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+  // dojo 1.7+ (AMD)
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){
       query("#example3 div").toggleClass("style3");
   });
 
@@ -183,6 +187,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function toggle3() {
@@ -208,19 +213,19 @@ See it in action:
 Technical information
 =====================
 
-This function is a simple convenience wrapper for `dojo.hasClass <dojo/hasClass>`_, `dojo.addClass <dojo/addClass>`_ and `dojo.removeClass <dojo/removeClass>`_:
+This function is a simple convenience wrapper for :ref:`dojo.hasClass <dojo/hasClass>`, :ref:`dojo.addClass <dojo/addClass>` and :ref:`dojo.removeClass <dojo/removeClass>`.  A simplified version would look something like this:
 
 .. code-block :: javascript
   :linenos:
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(cls, query){
-      dojo.toggleClass = function(node, classStr, condition){
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+    function toggle(node, classStr, condition){
       if(condition === undefined){
-        condition = !cls.contains(node, classStr);
+        condition = !domClass.contains(node, classStr);
       }
-      cls[condition ? "add" : "remove"](node, classStr);
-    };
+      domClass[condition ? "add" : "remove"](node, classStr);
+    }
   });
 
   // dojo < 1.7
@@ -236,6 +241,6 @@ This function is a simple convenience wrapper for `dojo.hasClass <dojo/hasClass>
 See also
 ========
 
-* `dojo.addClass <dojo/addClass>`_
-* `dojo.hasClass <dojo/hasClass>`_
-* `dojo.removeClass <dojo/removeClass>`_
+* :ref:`dojo.addClass <dojo/addClass>`
+* :ref:`dojo.hasClass <dojo/hasClass>`
+* :ref:`dojo.removeClass <dojo/removeClass>`

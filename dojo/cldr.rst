@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/cldr:
 
 dojo.cldr
 =========
@@ -115,6 +115,6 @@ The following example prints out the monetary data (places and round) for EUR (E
 See also
 ========
 
-* `dojo.date.locale <dojo/date/locale>`_
-* `dojo.number <dojo/number>`_
-* `dojo.currency <dojo/currency>`_
+* :ref:`dojo.date.locale <dojo/date/locale>`
+* :ref:`dojo.number <dojo/number>`
+* :ref:`dojo.currency <dojo/currency>`

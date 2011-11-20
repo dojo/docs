@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gauges/AnalogGauge:
 
 dojox.gauges.AnalogGauge
 ========================

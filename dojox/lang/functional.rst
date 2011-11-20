@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/functional:
 
 dojox.lang.functional
 =====================
@@ -24,4 +24,4 @@ External references:
 
 Subprojects:
 
-* `dojox.lang.function.object <dojox/lang/functional/object>`_
+* :ref:`dojox.lang.function.object <dojox/lang/functional/object>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/google-stores:
 
 dojox.data Google-based Service Stores
 ======================================
@@ -8,4 +8,4 @@ dojox.data Google-based Service Stores
 See Also:
 =========
 
-* `dojo.data <dojo/data>`_
+* :ref:`dojo.data <dojo/data>`

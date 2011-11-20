@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/keepRequires:
 
 Dojo build system:  keepRequires
 ==================================
@@ -49,4 +49,4 @@ TODOC:  Make an example profile, but people who would use this feature shouldn't
 See also
 ========
 
-* Main page for the `build system <build/index>`_
+* Main page for the :ref:`build system <build/index>`

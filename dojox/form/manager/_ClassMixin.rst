@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_ClassMixin:
 
 dojox.form.manager._ClassMixin
 ==============================
@@ -15,9 +15,9 @@ dojox.form.manager._ClassMixin
 Introduction
 ============
 
-This class is the component of the form manager. It should be used together with `\_Mixin <dojox/form/manager/_Mixin>`_.
+This class is the component of the form manager. It should be used together with :ref:`\_Mixin <dojox/form/manager/_Mixin>`.
 
-The mixin provides commonly used methods to add/remove a CSS class, or detect its presence. It operates only on form nodes and attached nodes (see `controlled elements <dojox/form/manager#controlled-elements>`_ for more classification details).
+The mixin provides commonly used methods to add/remove a CSS class, or detect its presence. It operates only on form nodes and attached nodes (see :ref:`controlled elements <dojox/form/manager>` for more classification details).
 
 ======================
 Methods and properties
@@ -28,7 +28,7 @@ This section describes all public methods and properties of the *dojox.form.mana
 gatherClassState
 ~~~~~~~~~~~~~~~~
 
-This method collects the presence of the specified CSS class in a dictionary object as Boolean values (``true`` means the CSS class is present). It is loosely modeled after `\_EnableMixin's gatherFromValues() <dojox/form/manager/_EnableMixin#gatherenablestate>`_.
+This method collects the presence of the specified CSS class in a dictionary object as Boolean values (``true`` means the CSS class is present). It is loosely modeled after :ref:`\_EnableMixin's gatherFromValues() <dojox/form/manager/_EnableMixin>`.
 
 There are three ways to use this method:
 
@@ -99,7 +99,7 @@ Example:
 Tips
 ====
 
-Note that the dictionary form of addClass_ and removeClass_ methods always ignores values. While there is a way to collect the presence of a class, there is no direct way to reflect it back. If you want to do that you can use `inspect() <dojox/form/manager/_Mixin#inspect>`_ method of `_Mixin <dojox/form/manager/_Mixin>`_:
+Note that the dictionary form of addClass_ and removeClass_ methods always ignores values. While there is a way to collect the presence of a class, there is no direct way to reflect it back. If you want to do that you can use :ref:`inspect() <dojox/form/manager/_Mixin>` method of :ref:`_Mixin <dojox/form/manager/_Mixin>`:
 
 .. code-block :: javascript
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/NumberSpinner:
 
 dijit.form.NumberSpinner
 ========================
@@ -10,7 +10,7 @@ dijit.form.NumberSpinner
 .. contents::
     :depth: 2
 
-The NumberSpinner is similar to `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_, but makes integer entry easier when small adjustments are required. 
+The NumberSpinner is similar to :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`, but makes integer entry easier when small adjustments are required. 
 
 
 =====
@@ -28,7 +28,7 @@ Examples
 The Basic Version
 -----------------
 
-This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  You have all the options available in the `Dojo constraint language <quickstart/numbersDates>`_, shared by `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_ and other widgets.
+This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  You have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`, shared by :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` and other widgets.
 
 .. cv-compound::
 

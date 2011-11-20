@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/ComboBox:
 
 dijit.form.ComboBox
 ===================
@@ -20,9 +20,9 @@ Like a SELECT combo-box, you provide a list of acceptable values. But like an IN
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
 
-ComboBox widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the `dojo.data <dojo/data>`_ section for complete details.
+ComboBox widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the :ref:`dojo.data <dojo/data>` section for complete details.
 
-`note:` ComboBox only has a single value that matches what is displayed while `FilteringSelect <dijit/form/FilteringSelect>`_ incorporates a hidden value that corresponds to the displayed value.  
+`note:` ComboBox only has a single value that matches what is displayed while :ref:`FilteringSelect <dijit/form/FilteringSelect>` incorporates a hidden value that corresponds to the displayed value.  
 
 ========
 Examples
@@ -105,7 +105,7 @@ To set the default value for this example, specify the *value* attribute in the 
 Codependent FilteringSelect/ComboBox widgets
 --------------------------------------------
 
-`The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example. <dijit/form/FilteringSelect#codependent-filteringselect-combobox-widgets>`_
+:ref:`The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example. <dijit/form/FilteringSelect>`
 
 
 =============

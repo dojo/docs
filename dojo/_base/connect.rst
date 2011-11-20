@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/connect:
 
 dojo._base.connect
 ==================
@@ -22,26 +22,26 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.connect <dojo/connect>`_
+* :ref:`dojo.connect <dojo/connect>`
 
   Connects events to methods
 
-* `dojo.disconnect <dojo/disconnect>`_
+* :ref:`dojo.disconnect <dojo/disconnect>`
 
   Disconnects methods from linked topics
 
-* `dojo.subscribe <dojo/subscribe>`_
+* :ref:`dojo.subscribe <dojo/subscribe>`
 
   Linked a listener to a named topic
 
-* `dojo.unsubscribe <dojo/unsubscribe>`_
+* :ref:`dojo.unsubscribe <dojo/unsubscribe>`
 
   Remove a topic listener
 
-* `dojo.publish <dojo/publish>`_
+* :ref:`dojo.publish <dojo/publish>`
 
   Publish an event to all subscribers of a topic
 
-* `dojo.connectPublisher <dojo/connectPublisher>`_
+* :ref:`dojo.connectPublisher <dojo/connectPublisher>`
 
   Ensure that everytime an event is called, a message is published on the topic.

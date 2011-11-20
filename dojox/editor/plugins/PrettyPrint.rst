@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/PrettyPrint:
 
 dojox.editor.plugins.PrettyPrint
 ================================
@@ -205,7 +205,7 @@ Configured indent and line length
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dijit._editor.plugins <dijit/_editor/plugins>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
-* `dojox.html.format <dojox/html/format>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dojox.html.format <dojox/html/format>`

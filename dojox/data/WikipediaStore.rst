@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/WikipediaStore:
 
 dojox.data.WikipediaStore
 =========================
@@ -10,7 +10,7 @@ dojox.data.WikipediaStore
 .. contents::
   :depth: 3
 
-The Wikipedia store is a datastore that extends `dojox.data.ServiceStore <dojox/data/ServiceStore>`_.  Its putpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcar searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox.
+The Wikipedia store is a datastore that extends :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>`.  Its putpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcar searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox.
 
 ==============
 Supported APIs
@@ -18,7 +18,7 @@ Supported APIs
 
 The following dojo.data APIs are implemented by XmlStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 
 ===============

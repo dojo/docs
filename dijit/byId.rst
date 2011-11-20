@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/byId:
 
 dijit.byId
 ==========
@@ -9,7 +9,7 @@ dijit.byId
 .. contents::
    :depth: 2
 
-dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to `dojo.byId <dojo/byId>`_ but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.  
+dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.  
 
 
 ============
@@ -200,4 +200,4 @@ Attribute data-dojo-id is not required, it is there as a convenience.
 See also
 ========
 
-* `dojo.byId <dojo/byId>`_
+* :ref:`dojo.byId <dojo/byId>`

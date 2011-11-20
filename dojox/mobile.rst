@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile:
 
 Dojo Mobile
 ===========
@@ -28,105 +28,105 @@ Available Widgets
 Views
 -----
 
-* `View <dojox/mobile/View>`_
+* :ref:`View <dojox/mobile/View>`
 
   A container that represents a mobile device screen
 
-* `ScrollableView <dojox/mobile/ScrollableView>`_
+* :ref:`ScrollableView <dojox/mobile/ScrollableView>`
 
   A view with touch scroll capability
 
-* `SwapView <dojox/mobile/SwapView>`_
+* :ref:`SwapView <dojox/mobile/SwapView>`
 
   A view that can be swiped horizontally (formerly known as FlippableView)
 
 Heading
 -------
 
-* `Heading <dojox/mobile/Heading>`_
+* :ref:`Heading <dojox/mobile/Heading>`
 
   A navigation bar that appears at the top
 
-* `ToolBarButton <dojox/mobile/ToolBarButton>`_
+* :ref:`ToolBarButton <dojox/mobile/ToolBarButton>`
 
   A button that is placed in the Heading widget
 
 Lists
 -----
 
-* `RoundRectCategory <dojox/mobile/RoundRectCategory>`_
+* :ref:`RoundRectCategory <dojox/mobile/RoundRectCategory>`
 
   Rounded-corner list category
 
-* `EdgeToEdgeCategory <dojox/mobile/EdgeToEdgeCategory>`_
+* :ref:`EdgeToEdgeCategory <dojox/mobile/EdgeToEdgeCategory>`
 
   Edge-To-Edge list category
 
-* `RoundRectList <dojox/mobile/RoundRectList>`_
+* :ref:`RoundRectList <dojox/mobile/RoundRectList>`
 
   A list of items in a rounded-corner rectangle
 
-* `EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`_
+* :ref:`EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`
 
   A list of items with equal width
 
-* `RoundRectDataList <dojox/mobile/RoundRectDataList>`_
+* :ref:`RoundRectDataList <dojox/mobile/RoundRectDataList>`
 
   RoundRectList with dojo.data support
 
-* `EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`_
+* :ref:`EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`
 
   EdgeToEdgeList with dojo.data support
 
-* `ListItem <dojox/mobile/ListItem>`_
+* :ref:`ListItem <dojox/mobile/ListItem>`
 
   A list item to use in a list widget
 
 IconContainer
 -------------
 
-* `IconContainer <dojox/mobile/IconContainer>`_
+* :ref:`IconContainer <dojox/mobile/IconContainer>`
 
   A container to house icons for actions/events
 
-* `IconItem <dojox/mobile/IconItem>`_
+* :ref:`IconItem <dojox/mobile/IconItem>`
 
   A widget for representing an icon and associated actions
 
 TabBar
 ------
 
-* `TabBar <dojox/mobile/TabBar>`_
+* :ref:`TabBar <dojox/mobile/TabBar>`
 
   A bar that can have TabBarButtons to control visibility of views
 
-* `TabBarButton <dojox/mobile/TabBarButton>`_
+* :ref:`TabBarButton <dojox/mobile/TabBarButton>`
 
   A button that is placed in the TabBar widget
 
 Panes
 -----
 
-* `RoundRect <dojox/mobile/RoundRect>`_
+* :ref:`RoundRect <dojox/mobile/RoundRect>`
 
   A rounded-corner rectangle boxes
 
-* `ContentPane <dojox/mobile/ContentPane>`_
+* :ref:`ContentPane <dojox/mobile/ContentPane>`
 
   A pane that can load and display HTML content/fragments. Similar to dijit/layout/ContentPane.
 
 Openers
 -------
 
-* `Opener <dojox/mobile/Opener>`_
+* :ref:`Opener <dojox/mobile/Opener>`
 
   A component that encapsulates the mechanism for displaying secondary views such as dialogs.  Openers take screen sizes into account and can display the next view as a slide-in dialog (phone) or inside a tooltip dialog (tablet)
 
-* `Overlay <dojox/mobile/Overlay>`_
+* :ref:`Overlay <dojox/mobile/Overlay>`
 
   A component that displays a secondary view which partially occludes the original using a slide in transition effect. Useful for displaying dialogs.  
 
-* `Tooltip <dojox/mobile/Tooltip>`_
+* :ref:`Tooltip <dojox/mobile/Tooltip>`
 
   A 
 
@@ -134,91 +134,91 @@ Openers
 Form Controls
 -------------
 
-* `Button <dojox/mobile/Button>`_
+* :ref:`Button <dojox/mobile/Button>`
 
   A button that changes the color when pressed
 
-* `CheckBox <dojox/mobile/CheckBox>`_
+* :ref:`CheckBox <dojox/mobile/CheckBox>`
 
   A checkbox component displaying a boolean value.
 
-* `ComboBox <dojox/mobile/ComboBox>`_
+* :ref:`ComboBox <dojox/mobile/ComboBox>`
 
   A combo box allowing user to edit input values with the built-in keyboard.
 
-* `ExpandingTextArea <dojox/mobile/ExpandingTextArea>`_
+* :ref:`ExpandingTextArea <dojox/mobile/ExpandingTextArea>`
 
   A text area that can automatically adjust its dimensions based on how much content it holds.
 
-* `RadioButton <dojox/mobile/RadioButton>`_
+* :ref:`RadioButton <dojox/mobile/RadioButton>`
 
   A component for displaying a discrete set of selectable items.
 
-* `Slider <dojox/mobile/Slider>`_
+* :ref:`Slider <dojox/mobile/Slider>`
 
   A control that allows changing a numeric value by touching and dragging a slide handle. 
 
-* `Switch <dojox/mobile/Switch>`_
+* :ref:`Switch <dojox/mobile/Switch>`
 
   A toggle switch with a sliding knob.  Useful for displaying boolean settings.
 
-* `TextArea <dojox/mobile/TextArea>`_
+* :ref:`TextArea <dojox/mobile/TextArea>`
 
   A multi-line text input control.
 
-* `TextBox <dojox/mobile/TextBox>`_
+* :ref:`TextBox <dojox/mobile/TextBox>`
 
   A text input control.
 
-* `ToggleButton <dojox/mobile/ToggleButton>`_
+* :ref:`ToggleButton <dojox/mobile/ToggleButton>`
 
   A button that can toggle between two states.
 
 Layout
 ------
 
-* `FixedSplitter <dojox/mobile/FixedSplitter>`_
+* :ref:`FixedSplitter <dojox/mobile/FixedSplitter>`
 
   A layout component that displays two content areas, with the position between the areas fixed at a given position.
 
-* `FixedSplitterPane <dojox/mobile/FixedSplitterPane>`_
+* :ref:`FixedSplitterPane <dojox/mobile/FixedSplitterPane>`
 
   Used for the two content areas in a fixed splitter control.
 
 Indicators
 ----------
 
-* `PageIndicator <dojox/mobile/PageIndicator>`_
+* :ref:`PageIndicator <dojox/mobile/PageIndicator>`
 
   A
 
-* `ProgressIndicator <dojox/mobile/ProgressIndicator>`_
+* :ref:`ProgressIndicator <dojox/mobile/ProgressIndicator>`
 
   A round spinning graphical indicator
 
 Carousel
 --------
 
-* `Carousel <dojox/mobile/Carousel>`_
+* :ref:`Carousel <dojox/mobile/Carousel>`
 
   A widget that manages a list of images or content, and displays a paging indicator.  Allows a user to flick left/right to move between content items.
 
 Spin Wheel
 ----------
 
-* `SpinWheel <dojox/mobile/SpinWheel>`_
+* :ref:`SpinWheel <dojox/mobile/SpinWheel>`
 
   A value picker component that has one or more slots.
 
-* `SpinWheelSlot <dojox/mobile/SpinWheelSlot>`_
+* :ref:`SpinWheelSlot <dojox/mobile/SpinWheelSlot>`
 
   A slot that is placed in a SpinWheel.
 
-* `SpinWheelDatePicker <dojox/mobile/SpinWheelDatePicker>`_
+* :ref:`SpinWheelDatePicker <dojox/mobile/SpinWheelDatePicker>`
 
   A date picker component that is derived from SpinWheel.
 
-* `SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>`_
+* :ref:`SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>`
 
   A time picker component that is derived from SpinWheel.
 
@@ -388,15 +388,15 @@ Example (using older HTML (non-validating) and mobile parser)
 Programmer's Guide
 ==================
 
-* `Dynamic Content Loading <dojox/mobile/dynamic-content-loading>`_
-* `Listening to Transition Events <dojox/mobile/transition-events>`_
-* `Cross-browser Support <dojox/mobile/cross-browser-support>`_
-* `Internationalization (i18n) <dojox/mobile/internationalization>`_
-* `Build <dojox/mobile/build>`_
+* :ref:`Dynamic Content Loading <dojox/mobile/dynamic-content-loading>`
+* :ref:`Listening to Transition Events <dojox/mobile/transition-events>`
+* :ref:`Cross-browser Support <dojox/mobile/cross-browser-support>`
+* :ref:`Internationalization (i18n) <dojox/mobile/internationalization>`
+* :ref:`Build <dojox/mobile/build>`
 
 ========
 Appendix
 ========
 
-* `Frequently Asked Questions <dojox/mobile/faq>`_
-* `Differences between 1.6 and 1.7 <dojox/mobile/differences-16-17>`_
+* :ref:`Frequently Asked Questions <dojox/mobile/faq>`
+* :ref:`Differences between 1.6 and 1.7 <dojox/mobile/differences-16-17>`

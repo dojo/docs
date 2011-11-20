@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mdnd:
 
 dojox.mdnd
 ==========
@@ -75,4 +75,4 @@ How to use the component:
 See also
 ========
 
-* `dojo.dnd <dojo/dnd>`_ Drag and Drop
+* :ref:`dojo.dnd <dojo/dnd>` Drag and Drop

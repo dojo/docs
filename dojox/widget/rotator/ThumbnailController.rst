@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/rotator/ThumbnailController:
 
 dojox.widget.rotator.ThumbnailController
 ========================================
@@ -10,7 +10,7 @@ dojox.widget.rotator.ThumbnailController
 .. contents::
    :depth: 2
 
-A controller that manipulates a `dojox.widget.Rotator <dojox/widget/Rotator>`_ or `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ by displaying thumbnails for each pane.
+A controller that manipulates a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` by displaying thumbnails for each pane.
 
 ============
 Introduction
@@ -169,5 +169,5 @@ Declarative example
 See also
 ========
 
-* `dojox.widget.Rotator <dojox/widget/Rotator>`_ rotates through a series of panes using a transitions.
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ adds automatic rotating to a Rotator.
+* :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` rotates through a series of panes using a transitions.
+* :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` adds automatic rotating to a Rotator.

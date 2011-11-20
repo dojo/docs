@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx/utils/toJson:
 
 dojox.gfx.utils.toJson
 ======================
@@ -81,6 +81,6 @@ Programmatic example
 See also
 ========
 
-* `dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`_
+* :ref:`dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`
 
   Rebuild the dojox.gfx.Surface object from the provided JSON

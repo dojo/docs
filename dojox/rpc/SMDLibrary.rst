@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dojox/rpc/SMDLibrary:
 
 SMDLibrary
 ==========
 
-Here lives several `Service-based <dojox/rpc/Service>`_ SMD's contributed to Dojo. They wrap major public API's for convenience.
+Here lives several :ref:`Service-based <dojox/rpc/Service>` SMD's contributed to Dojo. They wrap major public API's for convenience.
 
 * ``google.smd`` - Provides access to all Google AJAX API processes. Web, Image, Book, Blog, Local, News, Feeds, and Translate.
 * ``yahoo.smd`` - Utilizes Yahoo, Inc's public RPC 

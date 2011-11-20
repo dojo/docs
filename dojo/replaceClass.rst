@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/replaceClass:
 
 dojo.replaceClass
 =================
@@ -14,7 +14,7 @@ Introduction
 
 Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass.
 
-Since dojo 1.7, dojo.replaceClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.replace in dojo/dom-class.
+Since Dojo 1.7, ``dojo.replaceClass`` is exposed via the ``replace`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -26,21 +26,23 @@ The function takes up to three arguments:
 2. A String class name to add, or several space-separated class names, or an array of class names. 
 3. A String class name to remove, or several space-separated class names, or an array of class names. 
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``replace`` is accessed from the ``dojo/dom-class`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
-      dojo.replaceClass("someNode", "add1 add2", "remove1 remove2"); 
+  require(["dojo/dom-class"], function(domClass){
+      domClass.replace("someNode", "add1 add2", "remove1 remove2");
   });
 
-It's recommended to use cls.replace in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.replaceClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-class"], function(cls){   
-      cls.replace("someNode", "add1 add2", "remove1 remove2"); 
+  require(["dojo"], function(dojo){
+      dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");
   });
 
 Dojo < 1.7
@@ -48,7 +50,7 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");  
+    dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");
 
 ========
 Examples
@@ -61,9 +63,9 @@ The following example replace all classes with addMe :
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.replace("someNode", "addMe"); 
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.replace("someNode", "addMe"); 
   });
 
   // dojo < 1.7
@@ -74,8 +76,8 @@ Available in `dojo.NodeList()` for multiple toggles
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+  // dojo 1.7+ (AMD)
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){
       query(".findMe").replaceClass("addMe", "removeMe"); 
   });
 
@@ -86,7 +88,7 @@ Available in `dojo.NodeList()` for multiple toggles
 See also
 ========
 
-* `dojo.addClass <dojo/addClass>`_
-* `dojo.removeClass <dojo/removeClass>`_
-* `dojo.hasClass <dojo/hasClass>`_
-* `dojo.toggleClass <dojo/toggleClass>`_
+* :ref:`dojo.addClass <dojo/addClass>`
+* :ref:`dojo.removeClass <dojo/removeClass>`
+* :ref:`dojo.hasClass <dojo/hasClass>`
+* :ref:`dojo.toggleClass <dojo/toggleClass>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/AtomReadStore:
 
 dojox.data.AtomReadStore
 ==========================
@@ -18,7 +18,7 @@ The AtomReadStore is a store designed to provide read-only access to `Atom XML <
 API Support
 ===========
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 ==================
 Constructor Params

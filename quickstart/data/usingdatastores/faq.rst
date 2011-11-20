@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/data/usingdatastores/faq:
 
 dojo.data FAQ
 =============
@@ -19,9 +19,9 @@ Because the dojo.data API is asynchronous be definition. The return value from f
 Question 2:  I introspected items from ItemFileReadStore using javascript associative map walking and it has all these '_' variables! Why?
 ==========================================================================================================================================
 
-Items from a datastore are supposed to be treated as opaque handles. This is by definition of the API, which can be read in the `API section <dojo/data/api>`_. dojo.data.ItemFileReadStore and dojo.data.ItemFileWriteStore store several bits of important internal information on each item, such as what store instance it came form, what its internal index is (for O(1) lookup performance), and internal maps of who has references to the item. This is all critical information needed by the store to make item processing efficient. It is also information that should never be relied on directly, it should only be used by the store itself.
+Items from a datastore are supposed to be treated as opaque handles. This is by definition of the API, which can be read in the :ref:`API section <dojo/data/api>`. dojo.data.ItemFileReadStore and dojo.data.ItemFileWriteStore store several bits of important internal information on each item, such as what store instance it came form, what its internal index is (for O(1) lookup performance), and internal maps of who has references to the item. This is all critical information needed by the store to make item processing efficient. It is also information that should never be relied on directly, it should only be used by the store itself.
 
-All store access should go through the `dojo.data.api.Read <dojo/data/api/Read>`_ functions. Below is a list of the common functions and what you use them for:
+All store access should go through the :ref:`dojo.data.api.Read <dojo/data/api/Read>` functions. Below is a list of the common functions and what you use them for:
 
 * **store.getAttributes(item):**  Returns an array list of all public attributes of an item. Only attributes returned in this list should ever be used as data.
 * **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item. For multi-valued attributes, you should use store.getValues(item, attribute);  
@@ -156,7 +156,7 @@ No. A store's internal data format can be whatever is most efficient for that st
 Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server. Why?
 ==============================================================================================================
 
-Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides over-ridable hook functions that users must provide in order to send data to an external service. See the `Write Section <dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
+Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides over-ridable hook functions that users must provide in order to send data to an external service. See the :ref:`Write Section <dojo/data/ItemFileWriteStore>` of the ItemFileWriteStore docs.
 
 =================================================================================================================================================================================
 Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object. When I access it through store.getValue(), it has been modified. Why?
@@ -165,7 +165,7 @@ Question 9:  In one of my items in ItemFileReadStore I defined an attribute valu
 This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore. So, when it processes that attribute, it updates it into ItemFileReadStore internal format and therefore
 attributes on it should also be accessed through store functions, such as getValue(). This is easily detectable by using the ItemFileReadStore's isItem() function.
 
-If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters. See the `custom types <dojo/data/ItemFileReadStore#items-with-custom-types>`_ documentation for more details.
+If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters. See the :ref:`custom types <dojo/data/ItemFileReadStore>` documentation for more details.
 
 ==================================================================================================================================================================================================================================
 Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier. The store blows up with an error about no identifier when fetching. Why does it care? 
@@ -190,7 +190,7 @@ This question is easier to understand with a bit of sample ItemFile*Store input.
 
 Note above that the child object nested off someValue doesn't have a *myid* attribute. Why does this cause ItemFile*Store an issue. This is effectively answered by question 9 on this page. This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.
 
-Because it is treated as a datastore item, it must have an identifier to comply with the needs of the `dojo.data.api.Identity <dojo/data/api/Identity>`_ specification. Identity requires that all items be able to be uniquely looked up by an identifier. It does not state in a hierarchy of items only root items can be looked up by an identifier. Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unqiue identifiers as well so the Identity API implementation can be satisfied.
+Because it is treated as a datastore item, it must have an identifier to comply with the needs of the :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` specification. Identity requires that all items be able to be uniquely looked up by an identifier. It does not state in a hierarchy of items only root items can be looked up by an identifier. Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unqiue identifiers as well so the Identity API implementation can be satisfied.
 
 This is also necessary for support for widgets like dijit.Tree, when write support is required. It needs the capability of looking up an item from a store by its identifier, regardless of its position (root item or child of another item). Effectively, if an object in a datastore is identifiable as a datastore item (store.isItem(possibleItem)), and that store implements the Identity API, then that item must return a value for store.getIdentity(possibleItem). In other words, Hierarchy is irrelevant to whether or not an item has an identifier. All data store items in an Identity implementing store must return a value that can then be used to look the item back up later.
 

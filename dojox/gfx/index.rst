@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx/index:
 
 dojox.gfx
 =========
@@ -26,17 +26,17 @@ Features
 
 * Individual graphics objects:
 
-  * `Surface <dojox/gfx/surface>`_
-  * `Group <dojox/gfx/group>`_
-  * `Rectangle <dojox/gfx/rectangle>`_
-  * `Circle <dojox/gfx/circle>`_
-  * `Ellipse <dojox/gfx/ellipse>`_
-  * `Line <dojox/gfx/line>`_
-  * `Polyline <dojox/gfx/polyline>`_
-  * `Path <dojox/gfx/path>`_
-  * `Image <dojox/gfx/image>`_
-  * `Text <dojox/gfx/text>`_
-  * `TextPath <dojox/gfx/textPath>`_
+  * :ref:`Surface <dojox/gfx/surface>`
+  * :ref:`Group <dojox/gfx/group>`
+  * :ref:`Rectangle <dojox/gfx/rectangle>`
+  * :ref:`Circle <dojox/gfx/circle>`
+  * :ref:`Ellipse <dojox/gfx/ellipse>`
+  * :ref:`Line <dojox/gfx/line>`
+  * :ref:`Polyline <dojox/gfx/polyline>`
+  * :ref:`Path <dojox/gfx/path>`
+  * :ref:`Image <dojox/gfx/image>`
+  * :ref:`Text <dojox/gfx/text>`
+  * :ref:`TextPath <dojox/gfx/textPath>`
 
 * Shape Properties:
 
@@ -49,7 +49,7 @@ Features
 * Coordinates and Transformations
 * Utilities
 
-  * `Serialization functions <dojox/gfx/utils>`_ to serialize a dojox.gfx.Surface into a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers
+  * :ref:`Serialization functions <dojox/gfx/utils>` to serialize a dojox.gfx.Surface into a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers
 
 * Considerations and Caveats
 

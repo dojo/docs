@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/writingWidgets:
 
 Writing Your Own Widget
 =======================
@@ -31,7 +31,7 @@ Technically, a widget can be any javascript "class" that implements a constructo
   }
 
 
-However, all the widgets in dijit and dojox, are built on top of the `dijit._WidgetBase <dijit/_WidgetBase>`_ base class.
+However, all the widgets in dijit and dojox, are built on top of the :ref:`dijit._WidgetBase <dijit/_WidgetBase>` base class.
 
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
@@ -156,7 +156,7 @@ postCreate() is called after buildRendering() is finished, and is typically used
 =================
 Templated Widgets
 =================
-OK, we've seen how to create a widget based directly on the `dijit._WidgetBase <dijit/_WidgetBase>`_ class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ that makes all of this easier.  _TemplatedMixin implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
+OK, we've seen how to create a widget based directly on the :ref:`dijit._WidgetBase <dijit/_WidgetBase>` class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` that makes all of this easier.  _TemplatedMixin implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
 
 Let's start using templates by expanding on our counter example, but making it a little more complicated.  The user will be able to specify a label for the button, and the count will be printed after the button.  The user will also be able to specify a label for the counter.
 
@@ -186,7 +186,7 @@ Next, we modify the template above with some commands for _TemplatedMixin:
 	&nbsp;count: <span data-dojo-attach-point='counter'>0</span>"
   </div>
 
-data-dojo-attach-point and data-dojo-attach-event are documented in detail on the `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ page, but the important thing to note is that data-dojo-attach-event sets up a listener for events on the DOM nodes, and data-dojo-attach-point sets up a pointer to the DOM nodes.
+data-dojo-attach-point and data-dojo-attach-event are documented in detail on the :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` page, but the important thing to note is that data-dojo-attach-event sets up a listener for events on the DOM nodes, and data-dojo-attach-point sets up a pointer to the DOM nodes.
 
 So, putting that all together the source becomes:
 
@@ -463,7 +463,7 @@ The attach point where that input is copied is called containerNode.   In other 
 For widgets that mixin _TemplatedMixin, that is handled automatically, as long as the template specifies data-dojo-attach-point="containerNode".
 
 
-Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via `dojo.cache() <dojo/cache>`_.
+Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via :ref:`dojo.cache() <dojo/cache>`.
 
 .. code-example::
   :djConfig: parseOnLoad: false
@@ -583,8 +583,8 @@ Accessibility
 
 These pages list how to make your widgets accessible to people with poor/no vision, etc.
 
-* `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
-* `Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`_
+* :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
+* :ref:`Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`
 
 ============================
 Alternate Templating Engines
@@ -594,7 +594,7 @@ There's an alternate template syntax for widgets which lets you have conditional
 
 * DTL
 
-  * `DTL <dojox/dtl>`_  (currently the top page from the above link has been copied to)
+  * :ref:`DTL <dojox/dtl>`  (currently the top page from the above link has been copied to)
 
 * Mustache
   
@@ -604,7 +604,7 @@ There's an alternate template syntax for widgets which lets you have conditional
 See also
 ========
 
-* `Declaring a widget in markup <dijit/Declaration>`_
-* Widgets in templates are discussed on the `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_ page
-* `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
-* `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
+* :ref:`Declaring a widget in markup <dijit/Declaration>`
+* Widgets in templates are discussed on the :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` page
+* :ref:`Example: File Upload Dialog Box <quickstart/writingWidgets/example>`
+* :ref:`Dropdowns and Popups <quickstart/writingWidgets/popups>`

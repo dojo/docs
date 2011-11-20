@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/TabBarButton:
 
 dojox.mobile.TabBarButton
 =========================
@@ -87,10 +87,10 @@ Parameters from this widget:
 Usage
 =====
 
-Use this widget as child widgets of the `dojox.mobile.TabBar <dojox/mobile/TabBar>`_ widget.
+Use this widget as child widgets of the :ref:`dojox.mobile.TabBar <dojox/mobile/TabBar>` widget.
 
 ========
 Examples
 ========
 
-See the `dojox.mobile.TabBar <dojox/mobile/TabBar>`_ widget for various examples.
+See the :ref:`dojox.mobile.TabBar <dojox/mobile/TabBar>` widget for various examples.

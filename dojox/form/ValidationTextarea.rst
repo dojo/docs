@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/ValidationTextarea:
 
 dojox.form.ValidationTextarea
 =============================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/data/api.Read:
 
 dojo.data.api.Read
 ==================

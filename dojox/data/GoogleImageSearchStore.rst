@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/GoogleImageSearchStore:
 
 dojox.data.GoogleImageSearchStore
 =================================
@@ -122,9 +122,10 @@ Programmatic example
           var imgCell = dojo.create("td", {}, row);
           var link = dojo.create("a", {
                              href: store.getValue(item, "unescapedUrl"),
+                             target: "_blank"
                            }, imgCell);
           dojo.create("img", {
-                             src: store.getValue(item, "tbUrl"),
+                             src: store.getValue(item, "tbUrl")
                            }, link);
         })
       };

@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo
-#format dojo_rst
+.. _dojo/index:
 
 Dojo
 ====
@@ -21,7 +20,7 @@ dojo.js
 
 This file provides the bootstrap for loading other modules, in particular the ``require()`` function, previously known as ``dojo.require()``.
 
-See the `loader documentation <loader/index>`_ for details.
+See the :ref:`loader documentation <loader/index>` for details.
 
 For backwards-compatibility, when dojo.js is included without the async:false configuration flag, all the symbols in dojo/_base
 are implicitly loaded.
@@ -40,120 +39,120 @@ The dojo/_base files will be maintained until the 2.0 release.   See details bel
 Configuring Dojo (dojo/_base/config)
 ------------------------------------
 
-* `dojoConfig (dojo/_base/config) <dojo/config>`_
+* :ref:`dojoConfig (dojo/_base/config) <dojo/config>`
 
   Possibility to override certain global settings that control how the framework operates
 
 Array utilities (dojo/_base/array)
 ----------------------------------
 
-Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the `Array QuickStart <quickstart/arrays>`_ for an overview.
+Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the :ref:`Array QuickStart <quickstart/arrays>` for an overview.
 
-* `dojo.forEach <dojo/forEach>`_
+* :ref:`dojo.forEach <dojo/forEach>`
 
   Invokes a callback function for every item in array
 
-* `dojo.map <dojo/map>`_
+* :ref:`dojo.map <dojo/map>`
 
   Applies a callback to each element of arr and returns an Array with the results
 
-* `dojo.some <dojo/some>`_
+* :ref:`dojo.some <dojo/some>`
 
   Iterate over an array, escaping when the callback returns true for some logic check.
 
-* `dojo.every <dojo/every>`_
+* :ref:`dojo.every <dojo/every>`
 
   Iterate over an array, escaping when the callback returns false for some logic check.
 
-* `dojo.filter <dojo/filter>`_
+* :ref:`dojo.filter <dojo/filter>`
 
   Iterate over an array, reducing the array based on the callback return.
 
-* `dojo.indexOf <dojo/indexOf>`_
+* :ref:`dojo.indexOf <dojo/indexOf>`
 
   Find the index of some element in an Array.
 
-* `NodeList array methods <dojo/NodeList#array>`_
+* :ref:`NodeList array methods <dojo/NodeList>`
 
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
 Language Utilities (dojo/_base/lang)
 ------------------------------------
-* `dojo.hitch <dojo/hitch>`_
+* :ref:`dojo.hitch <dojo/hitch>`
 
   Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
 
-* `dojo.partial <dojo/partial>`_
+* :ref:`dojo.partial <dojo/partial>`
 
   Function that generates a wrapper function that ensures a function will only ever execute globally.
 
-* `dojo.clone <dojo/clone>`_
+* :ref:`dojo.clone <dojo/clone>`
 
   Clones objects (including DOM nodes) and all children.
 
-* `dojo.delegate <dojo/delegate>`_
+* :ref:`dojo.delegate <dojo/delegate>`
 
   Returns a new object which "looks" to obj for properties which it does not have a value for.
 
-* `dojo.isString <dojo/isString>`_
+* :ref:`dojo.isString <dojo/isString>`
 
   Checks if the parameter is a String
 
-* `dojo.isArray <dojo/isArray>`_
+* :ref:`dojo.isArray <dojo/isArray>`
 
   Checks if the parameter is an Array
 
-* `dojo.isFunction <dojo/isFunction>`_
+* :ref:`dojo.isFunction <dojo/isFunction>`
 
   Checks if the parameter is a Function
 
-* `dojo.isObject <dojo/isObject>`_
+* :ref:`dojo.isObject <dojo/isObject>`
 
   Checks if the parameter is an Object
 
-* `dojo.isArrayLike <dojo/isArrayLike>`_
+* :ref:`dojo.isArrayLike <dojo/isArrayLike>`
 
   Checks if the parameter is like an Array
 
-* `dojo.isAlien <dojo/isAlien>`_
+* :ref:`dojo.isAlien <dojo/isAlien>`
 
   Checks if the parameter is a built-in function
 
-* `dojo.trim <dojo/trim>`_
+* :ref:`dojo.trim <dojo/trim>`
 
   Trim whitespace from a String
 
-* `dojo.replace <dojo/replace>`_
+* :ref:`dojo.replace <dojo/replace>`
 
   Simple templates with parameterized substitutions.
 
-* `dojo.mixin <dojo/mixin>`_
+* :ref:`dojo.mixin <dojo/mixin>`
 
   Mixes one object into another. Can be used as a shallow copy
 
-* `dojo.extend <dojo/extend>`_
+* :ref:`dojo.extend <dojo/extend>`
 
-* `dojo.getObject <dojo/getObject>`_
+* :ref:`dojo.getObject <dojo/getObject>`
 
   Get a property from a dot-separated string, such as "A.B.C"
 
-* `dojo.setObject <dojo/setObject>`_
+* :ref:`dojo.setObject <dojo/setObject>`
 
   Set a property from a dot-separated string, such as "A.B.C"
 
-* `dojo.exists <dojo/exists>`_
+* :ref:`dojo.exists <dojo/exists>`
 
   Determine if an object supports a given method
 
 HTML Utility (dojo/_base/html)
 ------------------------------
-The `dojo/_base/html <dojo/_base/html>`_ module contains basic DOM & HTML handling functions for backward compatibility purpose.
+The :ref:`dojo/_base/html <dojo/_base/html>` module contains basic DOM & HTML handling functions for backward compatibility purpose.
 
 New code should use the dojo/dom* modules (see "Dojo core" section below for details).
 
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
-* `dojo.Deferred <dojo/Deferred>`_
+* :ref:`dojo.Deferred <dojo/Deferred>`
 
   Communication between asynchronous calls
 
@@ -162,23 +161,23 @@ Kernel (dojo/_base/kernel)
 
 from 1.7 + dojo/_base/kernel module collects following part of dojo APIs
 
-* `dojo.deprecated <dojo/deprecated>`_
+* :ref:`dojo.deprecated <dojo/deprecated>`
 
   Log a debug message to indicate that a behavior has been deprecated
 
-* `dojo.eval <dojo/eval>`_
+* :ref:`dojo.eval <dojo/eval>`
 
   Evaluate some string of JavaScript
 
-* `dojo.locale <dojo/locale>`_
+* :ref:`dojo.locale <dojo/locale>`
 
   A string containing the current locale as defined by Dojo
 
-* `dojo.moduleUrl <dojo/moduleUrl>`_
+* :ref:`dojo.moduleUrl <dojo/moduleUrl>`
 
   Returns a URL relative to a module
 
-* `dojo.version <dojo/version>`_
+* :ref:`dojo.version <dojo/version>`
 
   The current version number of Dojo
 
@@ -187,161 +186,161 @@ Window (dojo/_base/window)
 
 from 1.7 + dojo/_base/window module collects following part of dojo APIs
 
-* `dojo.doc <dojo/doc>`_
+* :ref:`dojo.doc <dojo/doc>`
 
   Alias for the current document.
 
-* `dojo.body <dojo/body>`_
+* :ref:`dojo.body <dojo/body>`
 
   Return the body element of the document
 
-* `dojo.setContext <dojo/setContext>`_
+* :ref:`dojo.setContext <dojo/setContext>`
 
   Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
 
-* `dojo.withGlobal <dojo/withGlobal>`_
+* :ref:`dojo.withGlobal <dojo/withGlobal>`
 
   Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
 
-* `dojo.withDoc <dojo/withDoc>`_
+* :ref:`dojo.withDoc <dojo/withDoc>`
 
   Call callback with documentObject as dojo.doc
 
 Effects (dojo/_base/fx)
 -----------------------
 
-* `dojo.animateProperty <dojo/animateProperty>`_
+* :ref:`dojo.animateProperty <dojo/animateProperty>`
 
-  The workhorse of most `dojo.fx <dojo/fx>`_ animations. Used for animating CSS properties
+  The workhorse of most :ref:`dojo.fx <dojo/fx>` animations. Used for animating CSS properties
 
-* `dojo.Animation <dojo/Animation>`_
+* :ref:`dojo.Animation <dojo/Animation>`
 
   **1.4+** previously dojo._Animation, the class behind all dojo.fx
 
-* `dojo.anim <dojo/anim>`_
+* :ref:`dojo.anim <dojo/anim>`
 
   Shorthand version of animateProperty using positional arguments
 
-* `dojo.fadeOut <dojo/fadeOut>`_
+* :ref:`dojo.fadeOut <dojo/fadeOut>`
 
-* `dojo.fadeIn <dojo/fadeIn>`_
+* :ref:`dojo.fadeIn <dojo/fadeIn>`
 
 Connect (dojo/_base/connect)
 ----------------------------
 
-This module provides event handling for DOM nodes, and AOP for functions.   However, it is superceded by the `dojo/on <dojo/on>`_, `dojo/aspect <dojo/aspect>`_, and `dojo/topic <dojo/topic>`_ modules, which should be used for new code.
+This module provides event handling for DOM nodes, and AOP for functions.   However, it is superceded by the :ref:`dojo/on <dojo/on>`, :ref:`dojo/aspect <dojo/aspect>`, and :ref:`dojo/topic <dojo/topic>` modules, which should be used for new code.
 
 The methods defined in this module are:
 
-* `dojo.connect <dojo/connect>`_
+* :ref:`dojo.connect <dojo/connect>`
 
   Connects events to methods
 
-* `dojo.disconnect <dojo/disconnect>`_
+* :ref:`dojo.disconnect <dojo/disconnect>`
 
   Disconnects methods from linked topics
 
-* `dojo.subscribe <dojo/subscribe>`_
+* :ref:`dojo.subscribe <dojo/subscribe>`
 
   Linked a listener to a named topic
 
-* `dojo.unsubscribe <dojo/unsubscribe>`_
+* :ref:`dojo.unsubscribe <dojo/unsubscribe>`
 
   Remove a topic listener
 
-* `dojo.publish <dojo/publish>`_
+* :ref:`dojo.publish <dojo/publish>`
 
   Publish an event to all subscribers of a topic
 
-* `dojo.connectPublisher <dojo/connectPublisher>`_
+* :ref:`dojo.connectPublisher <dojo/connectPublisher>`
 
   Ensure that everytime an event is called, a message is published on the topic.
 
 NodeList (dojo/_base/NodeList)
 ------------------------------
-* `NodeList.connect <dojo/NodeList#connect>`_
+* :ref:`NodeList.connect <dojo/NodeList>`
 
   Connects events to every node in the list, like dojo.connect
 
-* `NodeList.events <dojo/NodeList#events>`_
+* :ref:`NodeList.events <dojo/NodeList>`
 
   Common event names mapped as functions on a NodeList - eg: .onclick(function(){})
 
 Event (dojo/_base/event)
 ------------------------
-The `dojo/_base/event <dojo/_base/event>`_ module defines dojo DOM event API.   See the dojo/_base/connect section above.
+The :ref:`dojo/_base/event <dojo/_base/event>` module defines dojo DOM event API.   See the dojo/_base/connect section above.
 
 
 Document Lifecycle - Unload (dojo/_base/unload)
 -----------------------------------------------
 
-* `dojo.addOnUnload <dojo/addOnUnload>`_
+* :ref:`dojo.addOnUnload <dojo/addOnUnload>`
 
   Call functions when the page unloads
 
-* `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
+* :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>`
 
   Call functions when window.onunload fires
 
-* `dojo.windowUnloaded <dojo/windowUnloaded>`_
+* :ref:`dojo.windowUnloaded <dojo/windowUnloaded>`
 
   Signal fired by impending window destruction
 
 Ajax / XHR (dojo/_base/xhr)
 ---------------------------
 
-* `IO Pipeline Topics <dojo/ioPipelineTopics>`_
+* :ref:`IO Pipeline Topics <dojo/ioPipelineTopics>`
 
-* `dojo.contentHandlers <dojo/contentHandlers>`_
+* :ref:`dojo.contentHandlers <dojo/contentHandlers>`
 
   **1.4+** Pre-defined XHR content handlers, and an extension point to add your own custom handling.
 
-* `dojo.xhr <dojo/xhr>`_
+* :ref:`dojo.xhr <dojo/xhr>`
 
   Core for all xhr* verbs, eg: xhrPost, getGet
 
-* `dojo.xhrDelete <dojo/xhrDelete>`_
+* :ref:`dojo.xhrDelete <dojo/xhrDelete>`
 
-* `dojo.xhrGet <dojo/xhrGet>`_
+* :ref:`dojo.xhrGet <dojo/xhrGet>`
 
-* `dojo.xhrPost <dojo/xhrPost>`_
+* :ref:`dojo.xhrPost <dojo/xhrPost>`
 
-* `dojo.xhrPut <dojo/xhrPut>`_
+* :ref:`dojo.xhrPut <dojo/xhrPut>`
 
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_
+* :ref:`dojo.rawXhrPost <dojo/rawXhrPost>`
 
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
+* :ref:`dojo.rawXhrPut <dojo/rawXhrPut>`
 
 Package System (defined in dojo/_base/loader)
 ---------------------------------------------
 
-This module is defining deprecated symbols for loading.   See the `loader documentation <loader/index>`_ for details on new replacement API's.
+This module is defining deprecated symbols for loading.   See the :ref:`loader documentation <loader/index>` for details on new replacement API's.
 
-* `dojo.registerModulePath <dojo/registerModulePath>`_
+* :ref:`dojo.registerModulePath <dojo/registerModulePath>`
 
   Maps module name to a path
 
-* `dojo.require <dojo/require>`_
+* :ref:`dojo.require <dojo/require>`
 
   Loads a Javascript module from the appropriate URI
 
-* `dojo.provide <dojo/provide>`_
+* :ref:`dojo.provide <dojo/provide>`
 
 JSON Tools (dojo/_base/json)
 ----------------------------
 
-* `dojo.fromJson <dojo/fromJson>`_
+* :ref:`dojo.fromJson <dojo/fromJson>`
 
   Parses a JSON string to return a JavaScript object
 
-* `dojo.toJson <dojo/toJson>`_
+* :ref:`dojo.toJson <dojo/toJson>`
 
   Returns a JSON serialization of an object
 
 Objects / OO Tool (dojo/_base/declare)
 --------------------------------------
 
-* `dojo.declare (dojo/_base/declare) <dojo/declare>`_
+* :ref:`dojo.declare (dojo/_base/declare) <dojo/declare>`
 
   Creates a constructor using a compact notation for inheritance and prototype extension
 
@@ -349,7 +348,7 @@ Objects / OO Tool (dojo/_base/declare)
 Colors
 ------
 
-* `dojo._base.Color <dojo/_base/Color>`_
+* :ref:`dojo._base.Color <dojo/_base/Color>`
 
   Color object and utility functions to handle colors.
   Details on
@@ -366,19 +365,19 @@ Colors
 Miscellaneous Base
 ------------------
 
-* `dojo.global <dojo/global>`_
+* :ref:`dojo.global <dojo/global>`
 
   Alias for the global scope
 
-* `dojo.keys <dojo/keys>`_
+* :ref:`dojo.keys <dojo/keys>`
 
   A collection of key constants.
 
-* `dojo._Url <dojo/Url>`_
+* :ref:`dojo._Url <dojo/Url>`
 
   dojo._Url is used to manage the url object.
 
-* `dojo/_base/sniff <quickstart/browser-sniffing>`_
+* :ref:`dojo/_base/sniff <quickstart/browser-sniffing>`
 
   dojo/_base/sniff is introduced in dojo 1.7 as the browser detection utility.
 
@@ -392,7 +391,7 @@ DOM (dojo/dom*)
 ---------------
 from 1.7 + dojo/dom module collects following part of dojo APIs
 
-* `dojo.byId <dojo/byId>`_
+* :ref:`dojo.byId <dojo/byId>`
 
   Select a DOM node by 'id'.
 
@@ -406,312 +405,312 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Instantiates an HTML fragment returning the corresponding DOM.
 
-  * `dojo.create <dojo/create>`_
+  * :ref:`dojo.create <dojo/create>`
 
     Creates a dom node with optional values and placement
 
-  * `dojo.place <dojo/place>`_
+  * :ref:`dojo.place <dojo/place>`
 
     Place DOM nodes relative to others
 
-  * `dojo.destroy <dojo/destroy>`_
+  * :ref:`dojo.destroy <dojo/destroy>`
 
     Destroy a DOM element
 
-  * `dojo.empty <dojo/empty>`_
+  * :ref:`dojo.empty <dojo/empty>`
 
     Empty the contents of a DOM element
 
 
 * Attributes (dojo/dom-attr)
 
-  * `dojo.attr <dojo/attr>`_
+  * :ref:`dojo.attr <dojo/attr>`
 
     Modifying DOM node attributes
 
-  * `dojo.getAttr <dojo/getAttr>`_
+  * :ref:`dojo.getAttr <dojo/getAttr>`
 
     Gets an attribute on an HTML element.
 
-  * `dojo.setAttr <dojo/setAttr>`_
+  * :ref:`dojo.setAttr <dojo/setAttr>`
 
     Sets an attribute on an HTML element.
 
-  * `dojo.hasAttr <dojo/hasAttr>`_
+  * :ref:`dojo.hasAttr <dojo/hasAttr>`
 
     Returns true if the requested attribute is specified on the given element, and false otherwise.
 
-  * `dojo.removeAttr <dojo/removeAttr>`_
+  * :ref:`dojo.removeAttr <dojo/removeAttr>`
 
     Removes an attribute from an HTML element.
 
-  * `dojo.getNodeProp <dojo/getNodeProp>`_
+  * :ref:`dojo.getNodeProp <dojo/getNodeProp>`
 
     Returns an effective value of a property or an attribute.
 
 * Form (dojo/dom-form)
 
-  * `dojo.fieldToObject <dojo/fieldToObject>`_
+  * :ref:`dojo.fieldToObject <dojo/fieldToObject>`
 
     Serialize a form field to a JavaScript object.
 
-  * `dojo.formToJson <dojo/formToJson>`_
+  * :ref:`dojo.formToJson <dojo/formToJson>`
 
     Create an object from an form node
 
-  * `dojo.formToObject <dojo/formToObject>`_
+  * :ref:`dojo.formToObject <dojo/formToObject>`
 
     Serialize a form node to a JavaScript object.
 
-  * `dojo.formToQuery <dojo/formToQuery>`_
+  * :ref:`dojo.formToQuery <dojo/formToQuery>`
 
     Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
 
 * Styles (dojo/dom-style)
 
-  * `dojo.style <dojo/style>`_
+  * :ref:`dojo.style <dojo/style>`
 
     A getter/setter for styles on a DOM node
 
-  * `dojo.getComputedStyle <dojo/getComputedStyle>`_
+  * :ref:`dojo.getComputedStyle <dojo/getComputedStyle>`
 
     Return a cachable object of all computed styles for a node
 
-  * `dojo.getStyle <dojo/getStyle>`_
+  * :ref:`dojo.getStyle <dojo/getStyle>`
 
     Accesses styles on a node.
 
-  * `dojo.setStyle <dojo/setStyle>`_
+  * :ref:`dojo.setStyle <dojo/setStyle>`
 
     Sets styles on a node.
 
 * Class (dojo/dom-class)
 
-  * `dojo.hasClass <dojo/hasClass>`_
+  * :ref:`dojo.hasClass <dojo/hasClass>`
 
     Returns a boolean depending on whether or not a node has a passed class string.
 
-  * `dojo.addClass <dojo/addClass>`_
+  * :ref:`dojo.addClass <dojo/addClass>`
 
     Adds a CSS class to a node.
 
-  * `dojo.removeClass <dojo/removeClass>`_
+  * :ref:`dojo.removeClass <dojo/removeClass>`
 
     Removes a class from a Node.
 
-  * `dojo.toggleClass <dojo/toggleClass>`_
+  * :ref:`dojo.toggleClass <dojo/toggleClass>`
 
     Toggles a className (or now in 1.4 an array of classNames).
 
-  * `dojo.replaceClass <dojo/replaceClass>`_
+  * :ref:`dojo.replaceClass <dojo/replaceClass>`
 
     Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass 
 
 * Geometry (dojo/dom-geometry)
 
-  * `dojo.coords <dojo/coords>`_
+  * :ref:`dojo.coords <dojo/coords>`
 
     Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
 
-  * `dojo.position <dojo/position>`_
+  * :ref:`dojo.position <dojo/position>`
 
     Getter for the border-box x/y coordinates and size of a DOM node.
   
-  * `dojo.marginBox <dojo/marginBox>`_
+  * :ref:`dojo.marginBox <dojo/marginBox>`
 
     Getter/setter for the margin-box of node
 
-  * `dojo.contentBox <dojo/contentBox>`_
+  * :ref:`dojo.contentBox <dojo/contentBox>`
 
     Getter/setter for the content-box of node
 
-  * `dojo.getMarginBox <dojo.getMarginBox>`_
+  * :ref:`dojo.getMarginBox <dojo.getMarginBox>`
 
     Get an object that encodes the width, height, left and top positions of the node's margin box. 
 
-  * `dojo.setMarginBox <dojo.setMarginBox>`_ 
+  * :ref:`dojo.setMarginBox <dojo.setMarginBox>` 
 
     Sets the size of the node's margin box and placement (left/top), irrespective of box model. 
 
-  * `dojo.getContentBox <dojo.getContentBox>`_
+  * :ref:`dojo.getContentBox <dojo.getContentBox>`
 
     Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model. 
 
-  * `dojo.setContentSize <dojo.setContentSize>`_ 
+  * :ref:`dojo.setContentSize <dojo.setContentSize>` 
 
     Sets the size of the node's contents, irrespective of margins, padding, or borders. 
 
 * Property (dojo/dom-prop)
 
-  * `dojo.prop <dojo/prop>`_
+  * :ref:`dojo.prop <dojo/prop>`
 
     Gets or sets a property on an HTML element.
 
-  * `dojo.getProp <dojo/getProp>`_
+  * :ref:`dojo.getProp <dojo/getProp>`
 
     Gets a property on an HTML element. 
 
-  * `dojo.setProp <dojo/setProp>`_
+  * :ref:`dojo.setProp <dojo/setProp>`
 
     Sets a property on an HTML element.
     
     
 IO-Query (dojo/io-query)
 ------------------------
-* `dojo.objectToQuery <dojo/objectToQuery>`_
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>`
 
   Takes a name/value mapping object and returns a string representing a URL-encoded version of that object.
   
-* `dojo.queryToObject <dojo/queryToObject>`_
+* :ref:`dojo.queryToObject <dojo/queryToObject>`
 
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
   
 Robot (dojo/robot & dojo/robotx)
 --------------------------------
-* `dojo/robot <dojo/robot>`_
+* :ref:`dojo/robot <dojo/robot>`
 
   Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of their
   elements themselves
   
-* `dojo/robotx <dojo/robotx>`_
+* :ref:`dojo/robotx <dojo/robotx>`
 
   Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
 
 Document Lifecycle - Onload (dojo/ready)
 ----------------------------------------
-* `dojo.addOnLoad <dojo/addOnLoad>`_
+* :ref:`dojo.addOnLoad <dojo/addOnLoad>`
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
 
-* `dojo.ready <dojo/ready>`_
+* :ref:`dojo.ready <dojo/ready>`
 
-  **1.4+** Alias for `dojo.addOnLoad <dojo/addOnLoad>`_
+  **1.4+** Alias for :ref:`dojo.addOnLoad <dojo/addOnLoad>`
 
 AJAX I/O transports (dojo/io/\*)
 --------------------------------
-* `dojo.io.iframe <dojo/io/iframe>`_
+* :ref:`dojo.io.iframe <dojo/io/iframe>`
 
   Sends an AJAX I/O call using an IFrame
 
-* `dojo.io.script <dojo/io/script>`_
+* :ref:`dojo.io.script <dojo/io/script>`
 
   Sends a JSONP request using a script tag
 
 AJAX RPC transports (dojo/rpc/\*)
 ---------------------------------
-* `dojo.rpc <dojo/rpc>`_
+* :ref:`dojo.rpc <dojo/rpc>`
 
   Communicate via Remote Procedure Calls (RPC) with Backend Servers
 
-* `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
+* :ref:`dojo.rpc.JsonpService <dojo/rpc/JsonpService>`
 
   Generic JSONP service
 
-* `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
+* :ref:`dojo.rpc.JsonService <dojo/rpc/JsonService>`
 
   JSON RPC service
 
-* `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
+* :ref:`dojo.rpc.RpcService <dojo/rpc/RpcService>`
 
   RPC service class
 
 Query (dojo/query)
 ------------------
-* `dojo.query <dojo/query>`_
+* :ref:`dojo.query <dojo/query>`
 
   The swiss army knife of DOM node manipulation in Dojo.
 
 NodeList (dojo/NodeList-\*)
 ---------------------------
-* `dojo.NodeList <dojo/NodeList>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
 
   A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
 
-* `NodeList.instantiate <dojo/NodeList#instantiate>`_
+* :ref:`NodeList.instantiate <dojo/NodeList>`
 
   Create classes out of each node in the list
 
-* `dojo.NodeList-data <dojo/NodeList-data>`_
+* :ref:`dojo.NodeList-data <dojo/NodeList-data>`
 
-  Adds a .data() and .removeData() API to `dojo.query <dojo/query>`_ operations
+  Adds a .data() and .removeData() API to :ref:`dojo.query <dojo/query>` operations
 
-* `dojo.NodeList-fx <dojo/NodeList-fx>`_
+* :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`
 
   Adds dojo.fx animation support to dojo.query()
 
-* `dojo.NodeList-html <dojo/NodeList-html>`_
+* :ref:`dojo.NodeList-html <dojo/NodeList-html>`
 
   Adds a chainable html method to dojo.query()
 
-* `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
+* :ref:`dojo.NodeList-manipulate <dojo/NodeList-manipulate>`
 
   **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML.
 
-* `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
+* :ref:`dojo.NodeList-traverse <dojo/NodeList-traverse>`
 
   **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
 
 Browser's History (dojo/back & dojo/hash)
 -----------------------------------------
-* `dojo.back <dojo/back>`_ (dojo/back)
+* :ref:`dojo.back <dojo/back>` (dojo/back)
 
   Browser history management resources (Back button functionality)
 
-* `dojo.hash <dojo/hash>`_ (dojo/hash)
+* :ref:`dojo.hash <dojo/hash>` (dojo/hash)
  
   Normalized onhashchange module
 
 Data (dojo/data)
 ----------------
-* `dojo.data <dojo/data>`_
+* :ref:`dojo.data <dojo/data>`
 
   A uniform data access layer
 
-  * `dojo.data.api <dojo/data/api>`_
+  * :ref:`dojo.data.api <dojo/data/api>`
 
-  * `dojo.data.api.Read <dojo/data/api/Read>`_
+  * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
-  * `dojo.data.api.Write <dojo/data/api/Write>`_
+  * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
 
-  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
+  * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
-  * `dojo.data.api.Notification <dojo/data/api/Notification>`_
+  * :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
 
-  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+  * :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
-  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+  * :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`
 
 Store (dojo/store)
 ------------------
-* `dojo.store <dojo/store>`_
+* :ref:`dojo.store <dojo/store>`
 
-  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace `dojo.data <dojo/data>`_
+  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace :ref:`dojo.data <dojo/data>`
 
-  * `dojo.store.Memory <dojo/store/Memory>`_
+  * :ref:`dojo.store.Memory <dojo/store/Memory>`
 
     A data access interface for in memory storage
 
-  * `dojo.store.JsonRest <dojo/store/JsonRest>`_
+  * :ref:`dojo.store.JsonRest <dojo/store/JsonRest>`
 
     A data access interface for a RESTful service providing JSON data
 
-  * `dojo.store.Observable <dojo/store/Observable>`_
+  * :ref:`dojo.store.Observable <dojo/store/Observable>`
 
     A wrapper for data stores that are observable
 
-  * `dojo.store.Cache <dojo/store/Cache>`_
+  * :ref:`dojo.store.Cache <dojo/store/Cache>`
 
     A wrapper for data stores that are cacheable
 
 Cache (dojo/cache)
 ------------------
-* `dojo.cache <dojo/cache>`_
+* :ref:`dojo.cache <dojo/cache>`
 
   **1.4+** A mechanism to cache inline text.
 
 Date (dojo/date)
 ----------------
-* `dojo.date <dojo/date>`_
+* :ref:`dojo.date <dojo/date>`
 
   Date manipulation utilities
 
@@ -719,124 +718,124 @@ Date (dojo/date)
 
     Offers a library of localization methods to format and parse dates and times
 
-    * `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
+    * :ref:`dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`
 
       Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
 
-    * `dojo.date.locale.format <dojo/date/locale/format>`_
+    * :ref:`dojo.date.locale.format <dojo/date/locale/format>`
 
       Formats a Date object as a String, using locale-specific settings or custom patterns.
 
-    * `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
+    * :ref:`dojo.date.locale.getNames <dojo/date/locale/getNames>`
 
       Used to get localized strings from dojo.cldr for day or month names.
 
-    * `dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`_
+    * :ref:`dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`
 
       Determines if the date falls on a weekend, according to local custom.
 
-    * `dojo.date.locale.parse <dojo/date/locale/parse>`_
+    * :ref:`dojo.date.locale.parse <dojo/date/locale/parse>`
 
       Converts a properly formatted string to a primitive Date object, using locale-specific settings.
 
-    * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
+    * :ref:`dojo.date.locale.regexp <dojo/date/locale/regexp>`
 
       Builds the regular needed to parse a localized date
 
 DND (dojo/dnd)
 --------------
-* `dojo.dnd <dojo/dnd>`_
+* :ref:`dojo.dnd <dojo/dnd>`
 
   Drag and Drop
 
-  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+  * :ref:`dojo.dnd.Moveable <dojo/dnd/Moveable>`
 
 Miscellaneous Core
 ------------------
 
-* `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
+* :ref:`dojo.AdapterRegistry <dojo/AdapterRegistry>`
 
   A registry to make contextual calling/searching easier
 
-* `dojo.behavior <dojo/behavior>`_
+* :ref:`dojo.behavior <dojo/behavior>`
 
   Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
 
-* `dojo.Stateful <dojo/Stateful>`_
+* :ref:`dojo.Stateful <dojo/Stateful>`
 
   Get and set named properties in conjunction with the ability to monitor these properties for changes
 
-* `dojo.aspect <dojo/aspect>`_
+* :ref:`dojo.aspect <dojo/aspect>`
 
   Provides aspect oriented programming facilities to attach additional functionality to existing methods
 
-* `dojo.cldr <dojo/cldr>`_
+* :ref:`dojo.cldr <dojo/cldr>`
 
   A Common Locale Data Repository (CLDR) implementation
 
-* `dojo.colors <dojo/colors>`_
+* :ref:`dojo.colors <dojo/colors>`
 
   CSS color manipulation functions
 
-* `dojo.cookie <dojo/cookie>`_
+* :ref:`dojo.cookie <dojo/cookie>`
 
   Simple HTTP cookie manipulation
 
-* `dojo.currency <dojo/currency>`_
+* :ref:`dojo.currency <dojo/currency>`
 
   Localized formatting and parsing routines for currency data
 
-* `dojo.DeferredList <dojo/DeferredList>`_
+* :ref:`dojo.DeferredList <dojo/DeferredList>`
 
   Event handling for a group of Deferred objects
 
-* `dojo.fx <dojo/fx>`_
+* :ref:`dojo.fx <dojo/fx>`
 
   Effects library on top of Base animations
 
-* `dojo.gears <dojo/gears>`_
+* :ref:`dojo.gears <dojo/gears>`
 
   Google Gears
 
-* `dojo.html <dojo/html>`_
+* :ref:`dojo.html <dojo/html>`
 
   Inserting contents in HTML nodes
 
-* `dojo.i18n <dojo/i18n>`_
+* :ref:`dojo.i18n <dojo/i18n>`
 
   Utility classes to enable loading of resources for internationalization
 
-* `dojo.jaxer <dojo/jaxer>`_
+* :ref:`dojo.jaxer <dojo/jaxer>`
 
-* `dojo.number <dojo/number>`_
+* :ref:`dojo.number <dojo/number>`
 
   Localized formatting and parsing methods for number data
 
-* `dojo.parser <dojo/parser>`_
+* :ref:`dojo.parser <dojo/parser>`
 
   The Dom/Widget parsing package
 
-* `dojo.regexp <dojo/regexp>`_
+* :ref:`dojo.regexp <dojo/regexp>`
 
   Regular expressions and Builder resources
 
-* `dojo.string <dojo/string>`_
+* :ref:`dojo.string <dojo/string>`
 
   String utilities for Dojo
 
-* `dojo.mouse <dojo/mouse>`_
+* :ref:`dojo.mouse <dojo/mouse>`
 
   Provides extension events for hovering and mouse button utility functions
 
-* `dojo/on <dojo/on>`_
+* :ref:`dojo/on <dojo/on>`
 
   Provides normalized event listening and event dispatching functionality
 
-* `dojo/touch <dojo/touch>`_
+* :ref:`dojo/touch <dojo/touch>`
 
   Provides standardized touch events
 
-* `dojo.require <dojo/require>`_
+* :ref:`dojo.require <dojo/require>`
 
   Loads a Dojo module, by name
 
@@ -844,10 +843,10 @@ Miscellaneous Core
 See also
 ========
 
-* `Dijit <dijit/index>`__
+* :ref:`Dijit <dijit/index>`
 
   The widget system layered on top of Dojo
 
-* `DojoX <dojox/index>`__
+* :ref:`DojoX <dojox/index>`
 
   An area for development of extensions to the Dojo toolkit

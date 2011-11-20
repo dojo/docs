@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/rest:
 
 Implementing a RESTful Service Server-Side
 ==========================================
@@ -129,14 +129,14 @@ While not currently implemented in either of the JSON REST consumers in Dojo, so
 Dojo and REST
 =============
 
-The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the `dojo.store.JsonRest <dojo/store/JsonRest>`_ and the `dojox.data.JsonRestStore <dojo/data/JsonRestStore>`_.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the `dojo.data.ObjectStore <dojo/data/ObjectStore>`_ is possible.
+The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` and the :ref:`dojox.data.JsonRestStore <dojo/data/JsonRestStore>`.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` is possible.
 
 dojo.store.JsonRest
 -------------------
 
-Introduced in Dojo 1.6, the dojo.store.JsonRest is a good an efficient implementation of a RESTful consumer.  To make it have feature parity with the `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_, the developer should wrap the store in `dojo.store.Observable <dojo/store/Observable>`_ and `dojo.store.Cache <dojo/store/Cache>`_.
+Introduced in Dojo 1.6, the dojo.store.JsonRest is a good an efficient implementation of a RESTful consumer.  To make it have feature parity with the :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`, the developer should wrap the store in :ref:`dojo.store.Observable <dojo/store/Observable>` and :ref:`dojo.store.Cache <dojo/store/Cache>`.
 
-The `dojo.store.JsonRest <dojo/store/JsonRest>`_ defaults to assuming the identifier property of each element is ``id``, therefore if your provider returns an elements identifier in that field, most developers simply need to specify the target URI for the collection.
+The :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` defaults to assuming the identifier property of each element is ``id``, therefore if your provider returns an elements identifier in that field, most developers simply need to specify the target URI for the collection.
 
 An example of programatically creating a full featured store would be:
 
@@ -151,7 +151,7 @@ More details can be found in their respective Dojo documentation pages.
 dojox.data.JsonRestStore
 ------------------------
 
-Introduced in Dojo 1.2, the `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ has been the "workhorse" of Dojo DataStores.  It provides the `Read <dojo/data/api/Read>`_, `Identity <dojo/data/api/Identity>`_, `Write <dojo/data/api/Write>`_ and `Notification <dojo/data/api/Notification>`_ dojo.data APIs.
+Introduced in Dojo 1.2, the :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` has been the "workhorse" of Dojo DataStores.  It provides the :ref:`Read <dojo/data/api/Read>`, :ref:`Identity <dojo/data/api/Identity>`, :ref:`Write <dojo/data/api/Write>` and :ref:`Notification <dojo/data/api/Notification>` dojo.data APIs.
 
 An example programmatic declaration would be:
 
@@ -174,7 +174,7 @@ An example of declarative would be:
 RESTful Conventions the Dojo Way
 --------------------------------
 
-Both the `dojo.store.JsonRest <dojo/store/JsonRest>`_ and `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ provide some enhancements to the basic RESTful functionality.
+Both the :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` and :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` provide some enhancements to the basic RESTful functionality.
 
 Query
 ~~~~~
@@ -230,7 +230,7 @@ So, if a request was for a count of 10 items starting at 5, but there are only 1
 JSON the Dojo Way
 -----------------
 
-While JSON is a great way of describing arbitrary objects, it doesn't have a standard for referencing.  The good news is that Dojo solves that via `dojox.json.ref <dojox/json/ref>`_ which provides everything you need.  It is also generally used by the rest of the framework, including the JSON REST datastores and stores.  This gives you quite a bit of flexibility in how you provide data.
+While JSON is a great way of describing arbitrary objects, it doesn't have a standard for referencing.  The good news is that Dojo solves that via :ref:`dojox.json.ref <dojox/json/ref>` which provides everything you need.  It is also generally used by the rest of the framework, including the JSON REST datastores and stores.  This gives you quite a bit of flexibility in how you provide data.
 
 Mainly, it focuses on the attribute name ``$ref`` which provides a "pointer" to the rest of the data.  In a REST services, this is a URI.  When a client requests the data from the store, and the store doesn't have it, it will attempt to fetch the data at the supplied URI.  The typical way this is used is on collection URIs to provide references to the full resource, when you only want to provide a portion of the data up front.  For example, let's assume you want to provide information about pages of a book and you have the following collection URI:
 
@@ -281,7 +281,7 @@ Would return something like:
 	  "children": {"$ref":"1/page"}
 	}
 
-There is a lot more you can do with referencing, but viewing the `dojox.json.ref <dojox/json/ref>`_ page is the best way to get a complete picture.  Just remember that your references should contain a relative URI to the appropriate information.
+There is a lot more you can do with referencing, but viewing the :ref:`dojox.json.ref <dojox/json/ref>` page is the best way to get a complete picture.  Just remember that your references should contain a relative URI to the appropriate information.
 
 ==========================
 Server-Side Implementation

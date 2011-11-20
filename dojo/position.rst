@@ -1,5 +1,4 @@
-## page was copied from dojo/coords
-#format dojo_rst
+.. _dojo/position:
 
 dojo.position
 =============
@@ -23,29 +22,31 @@ The dojo.position function is used to obtain position and size information about
 
 for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x-axis and 900px on the y-axis.
 
-Since dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of geom.position in dojo/dom-geometry.
+Since Dojo 1.7, ``dojo.position`` is exposed via the ``position`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``position`` is accessed from the ``dojo/dom-geometry`` module.
 
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/_base/html"], function(dojo){   
-     var obj = dojo.position(node);
+  require(["dojo/dom-geometry"], function(domGeom){
+     var obj = domGeom.position(node);
   });
 
-It's recommended to use geom.position in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.position`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/dom-geometry"], function(geom){   
-     var obj = geom.position(node);
+  require(["dojo"], function(dojo){   
+     var obj = dojo.position(node);
   });
 
 Dojo < 1.7

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/node:
 
 *Proposal* for dojo.Node object
 =================================

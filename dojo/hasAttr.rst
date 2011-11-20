@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/hasAttr:
 
 dojo.hasAttr
 ============
@@ -15,7 +15,7 @@ Checks a node for the presence of an attribute.
 Introduction
 ============
 
-``dojo.hasAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy value otherwise.
+``dojo.hasAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy value otherwise.
 
 Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
 
@@ -116,18 +116,18 @@ See also
 
 DOM operations:
 
-* `dojo.attr <dojo/attr>`_
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.getAttr <dojo/getAttr>`_
-* `dojo.setAttr <dojo/setAttr>`_
-* `dojo.removeAttr <dojo/removeAttr>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.getAttr <dojo/getAttr>`
+* :ref:`dojo.setAttr <dojo/setAttr>`
+* :ref:`dojo.removeAttr <dojo/removeAttr>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
 
 External links:
 

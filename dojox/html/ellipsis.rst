@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/html/ellipsis:
 
 dojox.html.ellipsis
 ===================

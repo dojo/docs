@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dijit/layout/LinkPane:
 
 dijit.layout.LinkPane
 =====================
 
-A simple widget which acts similarly to a `ContentPane <dijit/layout/ContentPane>`_ with the subtle difference being the innerHTML of the widget is used as the title, and works exclusively with remote html (by way of a href="" attribute)
+A simple widget which acts similarly to a :ref:`ContentPane <dijit/layout/ContentPane>` with the subtle difference being the innerHTML of the widget is used as the title, and works exclusively with remote html (by way of a href="" attribute)
 
 Example:
 ========
@@ -14,7 +14,7 @@ When the parser runs and sees this node, a content pane will be generated with t
   
   <a href="foo.html" data-dojo-type="dijit.layout.LinkPane">Hello</a>
 
-This can be used in other layout widgets, such as a `TabContainer <dijit/layout/TabContainer>`_:
+This can be used in other layout widgets, such as a :ref:`TabContainer <dijit/layout/TabContainer>`:
 
 .. code-block :: html
 
@@ -27,4 +27,4 @@ This can be used in other layout widgets, such as a `TabContainer <dijit/layout/
 See Also:
 =========
 
-* `dijit.layout <dijit/layout>`_
+* :ref:`dijit.layout <dijit/layout>`

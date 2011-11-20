@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/layout/RadioGroup:
 
 dojox.layout.RadioGroup
 =======================
@@ -11,7 +11,7 @@ dojox.layout.RadioGroup
 .. contents::
    :depth: 2
 
-dojox.layout.RadioGroup is a variety of `StackContainer <dijit/layout/StackContainer>`_ enhancements providing animated transitions.
+dojox.layout.RadioGroup is a variety of :ref:`StackContainer <dijit/layout/StackContainer>` enhancements providing animated transitions.
 
 
 ============

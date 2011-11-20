@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/forEach
-#format dojo_rst
+.. _dojo/forEach:
 
 dojo.forEach
 ============
@@ -44,7 +43,7 @@ dojo.forEach() cannot terminate a loop (save for throwing an exception). Use doj
 
 We use an anonymous function to define the operation. This function is always passed 3 arguments: the current item value, the index in the list being iterated over, an a reference to the list itself.
 
-For this simple loop, `dojo.forEach` isn't anything exciting. But combined with other Dojo functions, especially `dojo.query() <dojo/query>`_, it becomes remarkably useful. Consider this snippet, which disables all ``<select>`` tags on the page:
+For this simple loop, `dojo.forEach` isn't anything exciting. But combined with other Dojo functions, especially :ref:`dojo.query() <dojo/query>`, it becomes remarkably useful. Consider this snippet, which disables all ``<select>`` tags on the page:
 
 .. code-block :: javascript
   :linenos:
@@ -103,11 +102,11 @@ That's a lot of functionality from a single method! Once you get used to the syn
 
 See Also
 ========
-- `dojo.map <dojo/map>`_ - The Dojo version of Array.map
-- `dojo.filter <dojo/filter>`_ - Helps you narrow down the items in a list
-- `dojo.some <dojo/some>`_ - Does any item in the list meet your critera?
-- `dojo.every <dojo/every>`_ - Do *all* items in the list meet your critera?
-- `dojo.indexOf <dojo/indexOf>`_ - Find something in a list easily
-- `dojo.lastIndexOf <dojo/lastIndexOf>`_ - Find something in the list easily, but starting from the back
-- `dojo.query <dojo/query>`_ - A CSS query engine that returns instances of ``dojo.NodeList``
-- `dojo.NodeList <dojo/NodeList>`_ - A subclass of Array which can also have forEach applied.
+- :ref:`dojo.map <dojo/map>` - The Dojo version of Array.map
+- :ref:`dojo.filter <dojo/filter>` - Helps you narrow down the items in a list
+- :ref:`dojo.some <dojo/some>` - Does any item in the list meet your critera?
+- :ref:`dojo.every <dojo/every>` - Do *all* items in the list meet your critera?
+- :ref:`dojo.indexOf <dojo/indexOf>` - Find something in a list easily
+- :ref:`dojo.lastIndexOf <dojo/lastIndexOf>` - Find something in the list easily, but starting from the back
+- :ref:`dojo.query <dojo/query>` - A CSS query engine that returns instances of ``dojo.NodeList``
+- :ref:`dojo.NodeList <dojo/NodeList>` - A subclass of Array which can also have forEach applied.

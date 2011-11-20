@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/subscribe:
 
 dojo.subscribe
 ==============
@@ -16,7 +16,7 @@ Linked a listener to a named topic.
 Introduction
 ============
 
-Subscribe is a part of the the Dojo Topic system used to register a function listening to a named channel. The channel is sent data via `dojo.publish <dojo/publish>`_.
+Subscribe is a part of the the Dojo Topic system used to register a function listening to a named channel. The channel is sent data via :ref:`dojo.publish <dojo/publish>`.
 
 =====
 Usage
@@ -83,12 +83,12 @@ Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on w
   // Dojo < 1.7
   dojo.subscribe("/foo/*", function(data){ /* handle */ });
 
-While this works when using `cometd <dojox/cometd>`_'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported. 
+While this works when using :ref:`cometd <dojox/cometd>`'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported. 
 
 Subscribing with scope
 ----------------------
 
-Subscribe uses `dojo.hitch <dojo/hitch>`_ under the covers to provide more advanced functionality for controlling in which context the attached function will be called. 
+Subscribe uses :ref:`dojo.hitch <dojo/hitch>` under the covers to provide more advanced functionality for controlling in which context the attached function will be called. 
 
 Consider the following object:
 
@@ -132,4 +132,4 @@ Alternately, you can pass a named function instead of an anonymous function with
   // Dojo < 1.7
   dojo.subscribe("/foo/bar", obj, "anon");
 
-This will execute `obj.anon()` in the scope of `obj`, passing in whatever data the accompanying `dojo.publish <dojo/publish>`_ call sent.
+This will execute `obj.anon()` in the scope of `obj`, passing in whatever data the accompanying :ref:`dojo.publish <dojo/publish>` call sent.

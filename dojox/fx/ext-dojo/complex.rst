@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/fx/ext-dojo/complex:
 
 dojox.fx.ext-dojo.complex
 =========================

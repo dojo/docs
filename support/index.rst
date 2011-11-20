@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _support/index:
 
 Support for the Dojo Toolkit
 ============================
@@ -33,7 +33,7 @@ Maling list
 -----------
 
 * `The dojo-interest mailing list <http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest>`_
-* `More info <support/nabble>`_ on the mailing list and the nabble archive.
+* :ref:`More info <support/nabble>` on the mailing list and the nabble archive.
 
 Chat
 ----
@@ -73,4 +73,4 @@ The source
 See also
 ========
 
-* `Dojo Key Links <key-links>`_
+* :ref:`Dojo Key Links <key-links>`

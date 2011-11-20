@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/withDoc:
 
 dojo.withDoc
 ===============
@@ -102,4 +102,4 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 See also
 ========
 
-* `dojo.doc <dojo/doc>`_
+* :ref:`dojo.doc <dojo/doc>`

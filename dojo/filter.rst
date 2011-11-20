@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/filter:
 
 dojo.filter
 ===========
@@ -7,4 +7,4 @@ dojo.filter
 Usage & examples
 ================
 
-See array documentation : `dojo.filter <quickstart/arrays#dojo-filter>`_.
+See array documentation : :ref:`dojo.filter <quickstart/arrays>`.

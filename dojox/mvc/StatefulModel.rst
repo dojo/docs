@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mvc/StatefulModel:
 
 dojox.mvc.StatefulModel
 =======================
@@ -35,42 +35,42 @@ Constructor Parameters
 Available Methods
 =================
 
-* `StatefulModel.valid <dojox/mvc/StatefulModel#valid>`_
+* :ref:`StatefulModel.valid <dojox/mvc/StatefulModel>`
 
 Whether this model deems the associated data to be valid.
 
-* `StatefulModel.value <dojox/mvc/StatefulModel#value>`_
+* :ref:`StatefulModel.value <dojox/mvc/StatefulModel>`
 
 The associated value (if this is a leaf node). The value of intermediate nodes in the model is not defined.
 
-* `StatefulModel.reset <dojox/mvc/StatefulModel#reset>`_
+* :ref:`StatefulModel.reset <dojox/mvc/StatefulModel>`
 
 Resets this data model values to its original state. Structural changes to the data model (such as adds or removes)are not restored.
 
-* `dojox.mvc.StatefulModel.commit <dojox/mvc/StatefulModel#commit>`_
+* :ref:`dojox.mvc.StatefulModel.commit <dojox/mvc/StatefulModel>`
 
 Commits this data model:
 Saves the current state such that a subsequent reset will not undo any prior changes.
 Persists client-side changes to the data store, if a store has been supplied as a parameter or at instantiation.
 
-* `StatefulModel.toPlainObject <dojox/mvc/StatefulModel#toPlainObject>`_
+* :ref:`StatefulModel.toPlainObject <dojox/mvc/StatefulModel>`
 
 Produces and returns a plain JavaScript object representation of the data
 currently within this data model.
 
-* `StatefulModel.add <dojox/mvc/StatefulModel#add>`_
+* :ref:`StatefulModel.add <dojox/mvc/StatefulModel>`
 
 Adds the dojo.Stateful tree represented by the given dojox.mvc.StatefulModel at the given property name. In case of arrays, the property names are indices passed as Strings. An addition of such a dojo.Stateful node results in right-shifting any trailing sibling nodes.
 
-* `StatefulModel.remove <dojox/mvc/StatefulModel#remove>`_
+* :ref:`StatefulModel.remove <dojox/mvc/StatefulModel>`
 
 Removes the dojo.Stateful tree at the given property name. In case of arrays, the property names are indices passed as Strings. A removal of such a dojo.Stateful node results in left-shifting any trailing sibling nodes.
 
-* `StatefulModel.valueOf <dojox/mvc/StatefulModel#valueOf>`_
+* :ref:`StatefulModel.valueOf <dojox/mvc/StatefulModel>`
 
 Returns the value representation of the data currently within this data model
 
-* `StatefulModel.toString <dojox/mvc/StatefulModel#toString>`_
+* :ref:`StatefulModel.toString <dojox/mvc/StatefulModel>`
 
 Returns the string representation of the data currently within this data model.
 

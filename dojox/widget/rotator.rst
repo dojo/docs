@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/rotator:
 
 dojox.widget.rotator
 ====================
@@ -10,7 +10,7 @@ dojox.widget.rotator
 .. contents::
     :depth: 2
 
-This is a collection of transitions and a `dojox.widget.Rotator <dojox/widget/Rotator>`_ controller.
+This is a collection of transitions and a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` controller.
 
 =================
 Available Widgets
@@ -18,26 +18,26 @@ Available Widgets
 
 Here is an up to date list of dojox.widget.rotator components:
 
-* `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_
+* :ref:`dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`
 
   A controller that manipulates a Rotator or AutoRotator.
 
-* `dojox.widget.rotator.ThumbnailController <dojox/widget/rotator/ThumbnailController>`_
+* :ref:`dojox.widget.rotator.ThumbnailController <dojox/widget/rotator/ThumbnailController>`
 
   A rotator controller that displays thumbnails of each rotator pane.
 
-* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_
+* :ref:`dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`
 
   Provides fading and crossfading transitions for Rotators.
 
-* `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_
+* :ref:`dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`
 
   Provides panning and continuous panning transitions for Rotators.
 
-* `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_
+* :ref:`dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`
 
   Provides sliding transitions for Rotators.
 
-* `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_
+* :ref:`dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`
 
   Provides wiping transitions for Rotators.

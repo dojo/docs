@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/FlickrRestStore:
 
 dojox.data.FlickrRestStore
 ==========================
@@ -14,9 +14,9 @@ FlickrRestStore is one such store. The purpose of FlickrRestStore is to wrapper 
 
 The following dojo.data APIs are implemented by FlickrRestStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
  
-FlickrRestStore is built upon `FlickrStore <dojox/data/FlickrStore>`_, a store which reads from Flickr's more simplistic public API. However, FlickrRestStore provides many more features:
+FlickrRestStore is built upon :ref:`FlickrStore <dojox/data/FlickrStore>`, a store which reads from Flickr's more simplistic public API. However, FlickrRestStore provides many more features:
 
 ========
 Features

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/html/entities/decode:
 
 dojox.html.entities.decode
 ==========================
@@ -104,5 +104,5 @@ Decoding custom entities in a text string
 See Also
 ========
 
-* `dojox.html.entities <dojox/html/entities>`_
-* `dojox.html.entities.encode <dojox/html/entities/encode>`_
+* :ref:`dojox.html.entities <dojox/html/entities>`
+* :ref:`dojox.html.entities.encode <dojox/html/entities/encode>`

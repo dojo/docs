@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/registry:
 
 dijit/registry
 ==============
@@ -15,9 +15,9 @@ Introduction
 
 dijit/registry stores a collection of all the dijit widgets within a page. It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID). It contains functions formerly found on the root ``dijit`` object for looking up widgets, such as ``dijit.byId`` and ``dijit.byNode``.
 
-In Dojo 1.6 and earlier, the registry is an instance of `dijit/WidgetSet`_. Starting in Dojo 1.7, it is its own object.
+In Dojo 1.6 and earlier, the registry is an instance of :ref:`dijit/WidgetSet`. Starting in Dojo 1.7, it is its own object.
 
-Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some). Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0). If you need to iterate over the entire registry, it is best to call ``registry.toArray`` and use the standard `dojo/array`_ functions.
+Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some). Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0). If you need to iterate over the entire registry, it is best to call ``registry.toArray`` and use the standard :ref:`dojo/array` functions.
 
 =====
 Usage
@@ -111,5 +111,5 @@ The following will return the TextBox widget, **not** the Form widget:
 See also
 ========
 
-* `dijit.WidgetSet <dijit/WidgetSet>`_
-* `dojo.NodeList <dojo/NodeList>`_
+* :ref:`dijit.WidgetSet <dijit/WidgetSet>`
+* :ref:`dojo.NodeList <dojo/NodeList>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/behavior:
 
 dojo.behavior
 =============
@@ -12,7 +12,7 @@ dojo.behavior
 .. contents::
     :depth: 2
 
-A very simple, lightweight mechanism for applying code to existing documents, based around `dojo.query <dojo/query>`_ for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
+A very simple, lightweight mechanism for applying code to existing documents, based around :ref:`dojo.query <dojo/query>` for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
 
 
 =====
@@ -115,7 +115,7 @@ The ``found:`` function is applied to all found nodes. The ``onclick:`` identifi
 Behaviors with topics
 =====================
 
-Using Dojo's `native topic system <quickstart/topics>`_, you can pass a named channel, and any node found during the apply() period will publish on that channel:
+Using Dojo's :ref:`native topic system <quickstart/topics>`, you can pass a named channel, and any node found during the apply() period will publish on that channel:
 
 .. code-block :: javascript
 

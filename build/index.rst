@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/index:
 
 The Dojo Build System
 =====================
@@ -22,12 +22,12 @@ include document generators, style checkers, code formatters, lint checkers, and
 make program, except the external processes that typical make programs execute can be implemented within the build system's
 pluggable transform infrastructure. Of course external processes can be executed as well.
 
-*Note*: the build system was completely redesigned and reimplemented in version 1.7. The pre-1.7 build system is still important to some existing installations. All historical documentation for that system is listed at `The Dojo Build System Prior to version 1.7`_
+*Note*: the build system was completely redesigned and reimplemented in version 1.7. The pre-1.7 build system is still important to some existing installations. All historical documentation for that system is listed at :ref:`The Dojo Build System Prior to version 1.7`
 
-`The Build System <build/buildSystem>`_
+:ref:`The Build System <build/buildSystem>`
   The top-level tutorial and reference that describes the basic operation of the build system when used for deployment optimizations.
 
-`Quick Reference for Optimization Build Program <build/qref>`_
+:ref:`Quick Reference for Optimization Build Program <build/qref>`
   A quick reference manual for all build system switches and knobs.
 
 ==================================
@@ -37,52 +37,52 @@ Deployment Optimization Transforms
 The Dojo Toolkit includes the deployment optimization transforms listed below. See individual transform reference pages
 for complete documentation.
 
-`copy <build/transforms/copy>`_
+:ref:`copy <build/transforms/copy>`
   Copies a resource from a source location to a destination location.
 
-`depsDump <build/transforms/depsDump>`_
+:ref:`depsDump <build/transforms/depsDump>`
   Prints the module dependency graph of one or more modules.
 
-`depsScan <build/transforms/depsScan>`_
+:ref:`depsScan <build/transforms/depsScan>`
   Determines a module's dependencies and interns legacy dojo.cache string resources.
 
-`dojoPragmas <build/transforms/dojoPragmas>`_
+:ref:`dojoPragmas <build/transforms/dojoPragmas>`
   Applies dojo pragmas to a resource.
 
-`dojoReport <build/transforms/dojoReport>`_
+:ref:`dojoReport <build/transforms/dojoReport>`
   Outputs a report describing a single run of the deployment optimization transforms.
 
-`hasFindAll <build/transforms/hasFindAll>`_
+:ref:`hasFindAll <build/transforms/hasFindAll>`
   Finds and optionally reports all has.js feature test usages.
 
-`hasFixup <build/transforms/hasFixup>`_
+:ref:`hasFixup <build/transforms/hasFixup>`
   Trims dead code branches consequent to has feature values known at build time.
 
-`hasReport <build/transforms/hasReport>`_
+:ref:`hasReport <build/transforms/hasReport>`
   Outputs a report describing the name and location of all has.js feature tests.
 
-`insertSymbols <build/transforms/insertSymbols>`_
+:ref:`insertSymbols <build/transforms/insertSymbols>`
   Inserts debugging symbols into Javascript resources.
 
-`optimizeCss <build/transforms/optimizeCss>`_
+:ref:`optimizeCss <build/transforms/optimizeCss>`
   Inlines CSS imports and/or removes comments from CSS files.
 
-`read <build/transforms/read>`_
+:ref:`read <build/transforms/read>`
   Reads a resource from the file system.
 
-`write <build/transforms/write>`_
+:ref:`write <build/transforms/write>`
   Writes a resource to the file system.
 
-`writeAmd <build/transforms/writeAmd>`_
+:ref:`writeAmd <build/transforms/writeAmd>`
   Writes an AMD module to the file system.
 
-`writeCss <build/transforms/writeCss>`_
+:ref:`writeCss <build/transforms/writeCss>`
   Writes a CSS style sheet to the file system
 
-`writeDojo <build/transforms/writeDojo>`_
+:ref:`writeDojo <build/transforms/writeDojo>`
   Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
-`writeOptimized <build/transforms/writeOptimized>`_
+:ref:`writeOptimized <build/transforms/writeOptimized>`
   Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
 
 ==========================================
@@ -93,5 +93,5 @@ The build system was completely redesigned and reimplemented in version 1.7. The
 before 1.7 is still important to some existing installations. All historical documentation for that system is listed
 below:
 
-`The Dojo Build System Prior To 1.7 <build/pre17/build>`_
+:ref:`The Dojo Build System Prior To 1.7 <build/pre17/build>`
   The main tutorial and reference for the build system prior to version 1.7.

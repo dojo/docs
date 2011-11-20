@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/BarGauge:
 
 dojox.widget.BarGauge
 =====================

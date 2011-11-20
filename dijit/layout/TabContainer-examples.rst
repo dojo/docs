@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/layout/TabContainer-examples:
 
 More TabContainer Examples
 ==========================
@@ -170,7 +170,7 @@ similar to what the parser does:
 
 .. cv-compound::
 
-  As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
+  As a simple example, we'll use :ref:`dojo.query <dojo/query>` to find and create the ContentPanes used in the TabContainer
 
   .. cv:: javascript
 

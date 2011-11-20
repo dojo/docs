@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/writingWidgets/a11yTesting:
 
 Testing Widgets for Accessibility
 =================================

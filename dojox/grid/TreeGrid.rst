@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/TreeGrid:
 
 dojox.grid.TreeGrid
 ===================
@@ -171,16 +171,16 @@ For more examples, please see the files dojox/grid/tests/test_treegrid.html, doj
 See also
 ========
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+* :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 
   The base grid
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
   An enhanced version of the base grid, which extends it in numerous useful ways
 
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
 
-* `Grid Plugin API <dojox/grid/pluginAPI>`_
+* :ref:`Grid Plugin API <dojox/grid/pluginAPI>`

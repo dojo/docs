@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojox/grid
-#format dojo_rst
+.. _dojox/grid/index:
 
 dojox.grid
 ==========
@@ -11,21 +10,21 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
 Dojo Toolkit offers three different Grid widgets:
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+* :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 
   A visual grid/table much like a spreadsheet.
 
   .. image:: DataGrid.png
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
   An enhanced version of the base grid, which extends it in numerous useful ways. ``New in 1.4``
 
   .. image:: EnhancedGrid.png
 
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure. ``New in 1.4``
+  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure. ``New in 1.4``
 
   .. image:: TreeGrid.png
 
@@ -41,4 +40,4 @@ Dojo Toolkit V1.1 offered an old version of the grid as dojox.grid.Grid. This ol
 See also
 ========
 
-* `Grid Plugin API <dojox/grid/pluginAPI>`_
+* :ref:`Grid Plugin API <dojox/grid/pluginAPI>`

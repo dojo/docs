@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/date/locale/getNames:
 
 dojo.date.locale.getNames
 =========================
@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* `dojo.date.locale <dojo/date/locale>`_
+* :ref:`dojo.date.locale <dojo/date/locale>`

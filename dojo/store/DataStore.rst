@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/store/DataStore:
 
 dojo.store.DataStore
 ====================
@@ -10,7 +10,7 @@ dojo.store.DataStore
 .. contents::
     :depth: 3
 
-**dojo.store.DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new `Dojo Object Store API <dojo/store>`_.
+**dojo.store.DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
 ========

@@ -1,3 +1,3 @@
-#format dojo_rst
+.. _developer/design/loader:
 
-This document has been relocated `here <loader/legacy>`_
+This document has been relocated :ref:`here <loader/legacy>`

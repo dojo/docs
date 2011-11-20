@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/secure/DOM:
 
 dojox.secure.DOM
 ================

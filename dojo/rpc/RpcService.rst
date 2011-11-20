@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/rpc/RpcService:
 
 dojo.rpc.RpcService
 ===================
@@ -19,7 +19,7 @@ Introduction
 
 This class provide SMD v.1 parsing facilities as well as all hooks to implement RPC services.
 
-Dojo ships in with a `JSON RPC Service <dojo/rpc/JsonService>`_ and a `JSONP RPC Service <dojo/rpc/JsonpService>`_.
+Dojo ships in with a :ref:`JSON RPC Service <dojo/rpc/JsonService>` and a :ref:`JSONP RPC Service <dojo/rpc/JsonpService>`.
 
 
 =====
@@ -93,5 +93,5 @@ TODO
 See also
 ========
 
-* `dojo.rpc <dojo/rpc>`_
-* `dojox.rpc <dojox/rpc>`_
+* :ref:`dojo.rpc <dojo/rpc>`
+* :ref:`dojox.rpc <dojox/rpc>`

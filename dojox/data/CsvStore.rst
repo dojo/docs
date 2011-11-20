@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/CsvStore:
 
 dojox.data.CsvStore
 ===================
@@ -26,8 +26,8 @@ Note that in the above data, the first row is always assumed to be the column na
 
 The following dojo.data APIs are implemented by CsvStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 ==================
 Constructor Params
@@ -57,7 +57,7 @@ Constructor Params
 Query Syntax
 ============
 
-The query syntax used by dojox.data.CsvStore is identical to the query syntax used by `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+The query syntax used by dojox.data.CsvStore is identical to the query syntax used by :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
 =============
 Query Options

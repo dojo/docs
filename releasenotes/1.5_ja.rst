@@ -1,6 +1,6 @@
-#format dojo_rst
+.. _releasenotes/1.5_ja:
 
-この文書は `1.5 <releasenotes/1.5>`_ の翻訳版です。もし翻訳にエラーがあったり、オリジナルの文書が更新されている場合は、英語で書かれたオリジナル文書の最新版を信頼してください。
+この文書は :ref:`1.5 <releasenotes/1.5>` の翻訳版です。もし翻訳にエラーがあったり、オリジナルの文書が更新されている場合は、英語で書かれたオリジナル文書の最新版を信頼してください。
 
 Dojo 1.5 リリース・ノート
 =========================
@@ -82,7 +82,7 @@ dojo.Stateful
 
 参照:
 
-* `dojo.Stateful <dojo/Stateful>`_
+* :ref:`dojo.Stateful <dojo/Stateful>`
 * `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
 * `Stateful blog post <http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/>`_
 
@@ -102,7 +102,7 @@ ClaroはDijitとdojox.Gridの新しいテーマです。(以前はLucidと呼ば
 Claroテーマは、LTR(left-to-right: 左から右)、RTL(right-to-left: 右から左)のどちらの文章方向の表示もサポートします。また、Dojo 1.5がサポートするすべてのブラウザをサポートしますが、一部のスタイルはグレースフル デグラデーション（訳注：表現能力の低いブラウザでも能力に応じた見栄えが得られる工夫）になります。例えば、IE6における24ビットPNGや、IE6, IE7, IE8におけるラウンドコーナー(角丸)はサポートされません。
 
 
-Dijitテーマ(Claro, Tundra, Nihilo, Soria)に関する詳細情報および更新情報は `Themes and Theming <dijit/themes>`_ (英語)を参照してください。
+Dijitテーマ(Claro, Tundra, Nihilo, Soria)に関する詳細情報および更新情報は :ref:`Themes and Theming <dijit/themes>` (英語)を参照してください。
 
 他のテーマからClaroへ切り替える際の注意点
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -388,21 +388,21 @@ Editor
 
 * Smileyプラグイン (1.4にも存在したが動作していませんでした。今は動作します。)
 
-* `dojox.editor.plugins.CollapsibleToolbar <dojox/editor/plugins/CollapsibleToolbar>`_ -- グリッドのヘッダーを変更し、折り畳み可能なツールバーに変換するプラグインです。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
+* :ref:`dojox.editor.plugins.CollapsibleToolbar <dojox/editor/plugins/CollapsibleToolbar>` -- グリッドのヘッダーを変更し、折り畳み可能なツールバーに変換するプラグインです。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
 
-* `dojox.editor.plugins.Blockquote <dojox/editor/plugins/Blockquote>`_ -- ツールバーに引用(blockquote)ボタンを追加するプラグインです。ブロック内のテキストを<blockquote>タグで囲んだり、<blockquote>タグを外したりします。また、広範囲の選択領域に対しても適用可能で、テキストのブロックやインライン要素のそれぞれをblockquoteで囲みます。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
+* :ref:`dojox.editor.plugins.Blockquote <dojox/editor/plugins/Blockquote>` -- ツールバーに引用(blockquote)ボタンを追加するプラグインです。ブロック内のテキストを<blockquote>タグで囲んだり、<blockquote>タグを外したりします。また、広範囲の選択領域に対しても適用可能で、テキストのブロックやインライン要素のそれぞれをblockquoteで囲みます。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
 
-* `dojox.editor.plugins.PasteFromWord <dojox/editor/plugins/PasteFromWord>`_ -- ツールバーに'paste from word'アイコンを追加するプラグインです。Microsoft Wordあるいは類似のプログラムの内容をペースト可能なダイアログを開き、ペーストされた入力に対してフィルターを実行し、エディタにとってはやっかいな余計なHTMLを取り除き、きれいなHTMLにします。
+* :ref:`dojox.editor.plugins.PasteFromWord <dojox/editor/plugins/PasteFromWord>` -- ツールバーに'paste from word'アイコンを追加するプラグインです。Microsoft Wordあるいは類似のプログラムの内容をペースト可能なダイアログを開き、ペーストされた入力に対してフィルターを実行し、エディタにとってはやっかいな余計なHTMLを取り除き、きれいなHTMLにします。
 
-* `dojox.editor.plugins.InsertAnchor <dojox/editor/plugins/InsertAnchor>`_ -- ツールバーに'insert anchor'アイコンを追加するプラグインです。アンカー(anchor)は<a>タグの特別な形で、文書内の特定の段落にリンクする場合に使われます。このプラグインは、ページ内のどこがアンカーであるかがわかるように、CSSを使って可視化します。また、ダブルクリックによりアンカーの編集を可能にします。
+* :ref:`dojox.editor.plugins.InsertAnchor <dojox/editor/plugins/InsertAnchor>` -- ツールバーに'insert anchor'アイコンを追加するプラグインです。アンカー(anchor)は<a>タグの特別な形で、文書内の特定の段落にリンクする場合に使われます。このプラグインは、ページ内のどこがアンカーであるかがわかるように、CSSを使って可視化します。また、ダブルクリックによりアンカーの編集を可能にします。
 
-* `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>`_ -- このプラグインは、UXチームからのフィードバックに基づいて、レイアウトとキーボード操作を向上させるための更新がされました。機能的には同じです。
+* :ref:`dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>` -- このプラグインは、UXチームからのフィードバックに基づいて、レイアウトとキーボード操作を向上させるための更新がされました。機能的には同じです。
 
-* `dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>`_ - dijit.ColorPaletteではなくdojox.widget.ColorPickerを使ってテキスト色および背景色の選択を実装するプラグインです。
+* :ref:`dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>` - dijit.ColorPaletteではなくdojox.widget.ColorPickerを使ってテキスト色および背景色の選択を実装するプラグインです。
 
-* `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- 共通フォーマットオプション(訳注：太字、イタリック等)に対し、CSSスタイル(<span>タグのstyle属性を使用)またはセマンティック(<b>, <i>等のタグを使用)のどちらかにエディタの内容を双方向に変換するフィルター(前処理および後処理)を追加するUIのない実験的なプラグインです。出力に使うモードは設定可能です。入力に使うモードは、スタイルに関するブラウザのネイティブコマンドがうまく動作するように適切なモードが決定されます。
+* :ref:`dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>` -- 共通フォーマットオプション(訳注：太字、イタリック等)に対し、CSSスタイル(<span>タグのstyle属性を使用)またはセマンティック(<b>, <i>等のタグを使用)のどちらかにエディタの内容を双方向に変換するフィルター(前処理および後処理)を追加するUIのない実験的なプラグインです。出力に使うモードは設定可能です。入力に使うモードは、スタイルに関するブラウザのネイティブコマンドがうまく動作するように適切なモードが決定されます。
 
-* `dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>`_ --  ユーザーがエディタにステータスを表示させることを可能にするエディタ下部のバーを追加するプラグインです。メッセージの表示は、editor.statusBar属性に直接値をセットするか、pub/subを使って行います。また、エディタがリサイズ可能なコンテントペイン内にない場合に使えるようにオプショナルのリサイズハンドルを提供します。
+* :ref:`dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>` --  ユーザーがエディタにステータスを表示させることを可能にするエディタ下部のバーを追加するプラグインです。メッセージの表示は、editor.statusBar属性に直接値をセットするか、pub/subを使って行います。また、エディタがリサイズ可能なコンテントペイン内にない場合に使えるようにオプショナルのリサイズハンドルを提供します。
 
 
 Geo
@@ -422,7 +422,7 @@ GFX
 Lang
 ----
 
-新しいモジュールを追加: `dojox.lang.async <dojox/lang/async>`_. 非同期オペレーション(dojo.Deferredを返すもの)の順序を調整します。次の調整がサポートされます。
+新しいモジュールを追加: :ref:`dojox.lang.async <dojox/lang/async>`. 非同期オペレーション(dojo.Deferredを返すもの)の順序を調整します。次の調整がサポートされます。
 
 * Sequentially(順次): 直前のオペレーションが成功裏に終了した直後に次のオペレーションを開始します。
 * In parallel(並列): すべてのオペレーションを同時に開始し、すべてが終了するのを待ちます。
@@ -438,7 +438,7 @@ Lang
 Layout
 ------
 
-GridContainerは `MDnD`_ を使って書き直され、GridContainerLiteが導入されました。GridContainerの使い方は、acceptTypes属性の変更のみで、概ねこれまでと同じです。従来のacceptTypes属性は、例えば'dojox.widget.Portlet,dijit.layout.ContentPane'のようなコンマ区切りのリストを取りました。それは任意の文字列を取るように変更されました。その文字列は、子ウィジェットの'dndType'までマッチします。例：GridContainerにおいてacceptTypes="Portlet,SomeCustomWidget"、子ウィジェットにおいてdndType="Portlet" or dndType="SomeCustomWidget"
+GridContainerは :ref:`MDnD` を使って書き直され、GridContainerLiteが導入されました。GridContainerの使い方は、acceptTypes属性の変更のみで、概ねこれまでと同じです。従来のacceptTypes属性は、例えば'dojox.widget.Portlet,dijit.layout.ContentPane'のようなコンマ区切りのリストを取りました。それは任意の文字列を取るように変更されました。その文字列は、子ウィジェットの'dndType'までマッチします。例：GridContainerにおいてacceptTypes="Portlet,SomeCustomWidget"、子ウィジェットにおいてdndType="Portlet" or dndType="SomeCustomWidget"
 
 
 MDnD

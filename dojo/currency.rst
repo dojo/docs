@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/currency:
 
 dojo.currency
 =============
@@ -27,6 +27,6 @@ format()/parse()
 See Also
 ========
 
- * `dojo.number <dojo/number>`_
+ * :ref:`dojo.number <dojo/number>`
 
 TODO: add references to CLDR, setting locale in Dojo, binary floating point issues

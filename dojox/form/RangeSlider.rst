@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/RangeSlider:
 
 dojox.form.RangeSlider
 ======================
@@ -12,13 +12,13 @@ dojox.form.RangeSlider
 .. contents::
    :depth: 2
 
-The RangeSlider is a descendant of `dijit.form.Slider <dijit/form/Slider>`_ that allows a selection of a range of values.
+The RangeSlider is a descendant of :ref:`dijit.form.Slider <dijit/form/Slider>` that allows a selection of a range of values.
 
 ============
 Introduction
 ============
 
-The RangeSlider differs from the `dijit.form.Slider <dijit/form/Slider>`_ by providing two handles that allow you to select a range of values across the scale.  There is the **dojox.form.HorizontalRangeSlider** and the **dojox.form.VerticalRangeSlider** which provide a horizontal and vertical version respectively.
+The RangeSlider differs from the :ref:`dijit.form.Slider <dijit/form/Slider>` by providing two handles that allow you to select a range of values across the scale.  There is the **dojox.form.HorizontalRangeSlider** and the **dojox.form.VerticalRangeSlider** which provide a horizontal and vertical version respectively.
 
 
 =====
@@ -168,4 +168,4 @@ TODO: provide accessibility information
 See also
 ========
 
-* See `dijit.form.Slider <dijit/form/Slider>`_ for more information.
+* See :ref:`dijit.form.Slider <dijit/form/Slider>` for more information.

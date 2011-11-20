@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/number:
 
 dojo.number
 ===========
@@ -42,6 +42,6 @@ All other browsers: (0.9).toFixed(1) yields "1.0"
 See Also
 ========
 
- * `dojo.currency <dojo/currency>`_
+ * :ref:`dojo.currency <dojo/currency>`
 
 TODO: add references to CLDR, setting locale in Dojo, binary floating point issues

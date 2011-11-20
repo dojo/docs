@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/xhr:
 
 dojo.xhr
 ==============
@@ -26,17 +26,17 @@ Dojo provides a solid set of battle-tested XHR wrapper functions to allow you to
 Features
 ========
 
-* `dojo.formToJson <dojo/formToJson>`_ : Convert a DOM Form to JSON. It is an alias to domForm.toJson function.
-* `dojo.formToObject <dojo/formToObject>`_ : Convert a DOM Form to a JavaScript object.It is an alias to domForm.toObject function.
-* `dojo.formToQuery <dojo/formToQuery>`_ : Convert a DOM Form to a query string.It is an alias to domForm.toQuery function.
-* `dojo.objectToQuery <dojo/objectToQuery>`_ : Convert a JavaScript object to a query string.It is an alias to ioq.objectToQuery function
-* `dojo.queryToObject <dojo/queryToObject>`_ : Convert a query string to a JavaScript Object.It is an alias to ioq.queryToObject function
-* `dojo.xhrDelete <dojo/xhrDelete>`_ : Use HTTP DELETE method to make an xhr call.
-* `dojo.xhrGet <dojo/xhrGet>`_ : Use HTTP GET method to make an xhr call.
-* `dojo.xhrPost <dojo/xhrPost>`_ : Use HTTP POST method to make an xhr call.
-* `dojo.xhrPut <dojo/xhrPut>`_ : Use HTTP PUT method to make an xhr call.
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_ : Use HTTP POST method to make an xhr call.
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_ : Use HTTP PUT method to make an xhr call.
+* :ref:`dojo.formToJson <dojo/formToJson>` : Convert a DOM Form to JSON. It is an alias to domForm.toJson function.
+* :ref:`dojo.formToObject <dojo/formToObject>` : Convert a DOM Form to a JavaScript object.It is an alias to domForm.toObject function.
+* :ref:`dojo.formToQuery <dojo/formToQuery>` : Convert a DOM Form to a query string.It is an alias to domForm.toQuery function.
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>` : Convert a JavaScript object to a query string.It is an alias to ioq.objectToQuery function
+* :ref:`dojo.queryToObject <dojo/queryToObject>` : Convert a query string to a JavaScript Object.It is an alias to ioq.queryToObject function
+* :ref:`dojo.xhrDelete <dojo/xhrDelete>` : Use HTTP DELETE method to make an xhr call.
+* :ref:`dojo.xhrGet <dojo/xhrGet>` : Use HTTP GET method to make an xhr call.
+* :ref:`dojo.xhrPost <dojo/xhrPost>` : Use HTTP POST method to make an xhr call.
+* :ref:`dojo.xhrPut <dojo/xhrPut>` : Use HTTP PUT method to make an xhr call.
+* :ref:`dojo.rawXhrPost <dojo/rawXhrPost>` : Use HTTP POST method to make an xhr call.
+* :ref:`dojo.rawXhrPut <dojo/rawXhrPut>` : Use HTTP PUT method to make an xhr call.
 
 
 ========
@@ -45,7 +45,7 @@ Examples
 
 Each of the functions above have example use cases provided in their documentation.  Please refer to those examples for further details on the particular function usage.
 
-One example is included below to get you started with xhrGet.  For more xhrGet examples, refer to the `xhrGet documentation <dojo/xhrGet>`_.
+One example is included below to get you started with xhrGet.  For more xhrGet examples, refer to the :ref:`xhrGet documentation <dojo/xhrGet>`.
 
 Example 1:  dojo.xhrGet and form submission.
 --------------------------------------------
@@ -128,6 +128,6 @@ In fact, the attribute "form:" could be set on each node, not only on form nodes
 See also
 ========
 
-* `quickstart/ajax <quickstart/ajax>`__
+* :ref:`quickstart/ajax <quickstart/ajax>`
 
   AJAX quickstart tutorial

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Dialog:
 
 dojox.widget.Dialog
 ===================
@@ -11,7 +11,7 @@ dojox.widget.Dialog
 .. contents::
    :depth: 2
 
-This is an extension to the `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_ providing additional sizing options, animations, and styling. 
+This is an extension to the :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` providing additional sizing options, animations, and styling. 
 
 ============
 Introduction
@@ -63,6 +63,6 @@ Notes
 See also
 ========
 
-* `dijit.Dialog <dijit/Dialog>`_ 
-* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_
+* :ref:`dijit.Dialog <dijit/Dialog>` 
+* :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>`
 * `Nightly Test <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_Dialog.html>`_

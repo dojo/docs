@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/io/model/Entry:
 
 dojox.atom.io.model.Entry
 =========================
@@ -17,7 +17,7 @@ This object represents a Entry tag in an ATOM feed, the core container object of
 Public properties (and their types):
 ====================================
 
-This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_ so please refer to it for the list of properties it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties it inherits.
 
 Below are the additional properties defined by this model class:
 
@@ -31,7 +31,7 @@ Below are the additional properties defined by this model class:
 Public functions (and their return types):
 ==========================================
 
-This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_ so please refer to it for the list of functions it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it inherits.
 
 Below are all the additional functions implemented by this model class.
 
@@ -51,5 +51,5 @@ Below are all the additional functions implemented by this model class.
 See Also: 
 =========
 
-* `dojox.atom.io.model <dojox/atom/io/model>`_
-* `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_
+* :ref:`dojox.atom.io.model <dojox/atom/io/model>`
+* :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`

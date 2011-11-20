@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/parser:
 
 The Dojo Parser
 ===============
@@ -10,9 +10,9 @@ The Dojo Parser
 .. contents::
     :depth: 3
 
-The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit/index>`_. By `decorated` we mean use of a `data-dojo-type` (dojoType) attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
+The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` (dojoType) attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
 
-This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
+This is not limited to Dijit, or :ref:`dojo.declare <dojo/declare>`. 
 
 Inside your HTML you mark nodes for the parser by setting the data-dojo-type attribute, to specify the class of the widget, and other attributes, to specify parameters to the widget.   For example:
 
@@ -55,7 +55,7 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
   //Dojo < 1.7
   dojo.require("dojo.parser");
 
-``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly `require <dojo/require>`_ the module than to assume it has been loaded.
+``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly :ref:`require <dojo/require>` the module than to assume it has been loaded.
 
 Also, starting in 1.7, many widgets extend `dijit._TemplatedMixin <dijit/_TemplatedMixin>` rather than `dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
 
@@ -438,7 +438,7 @@ Caveats
 Examples
 --------
 
-Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the nodes decorated with ``data-dojo-type``'s into widgets:
+Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert the nodes decorated with ``data-dojo-type``'s into widgets:
 
 .. code-block :: javascript
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/Stateful:
 
 dojo.Stateful
 =============
@@ -61,15 +61,15 @@ Dojo < 1.7
 Available Methods
 =================
 
-* `Stateful.get <dojo/Stateful#get>`_
+* :ref:`Stateful.get <dojo/Stateful>`
 
   Get a property on a Stateful instance. ***new in 1.5***
 
-* `Stateful.set <dojo/Stateful#set>`_
+* :ref:`Stateful.set <dojo/Stateful>`
 
   Set a property on a Stateful instance. ***new in 1.5***
 
-* `Stateful.watch <dojo/Stateful#watch>`_
+* :ref:`Stateful.watch <dojo/Stateful>`
 
   Watches a property for changes. ***new in 1.5***
 
@@ -223,5 +223,5 @@ returns:
 See also
 ========
 
-* `dijit._Widget.set/get <dijit/_Widget>`_ a setter or getter for properties of Dijits
+* :ref:`dijit._Widget.set/get <dijit/_Widget>` a setter or getter for properties of Dijits
 * Introductory article on dojo.Stateful - http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/

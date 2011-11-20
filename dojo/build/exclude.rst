@@ -1,8 +1,8 @@
-#format dojo_rst
+.. _dojo/build/exclude:
 
 Dojo build system:  conditional exclusions
 ==========================================
 
 TODOC:  Delete this page, I created it in the wrong part of the heirarchy.  Replacement build/exclude
 
-`replacement page <build/exclude>`_
+:ref:`replacement page <build/exclude>`

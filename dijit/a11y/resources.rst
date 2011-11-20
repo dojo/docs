@@ -1,5 +1,4 @@
-## page was renamed from dijit-a11y-resources
-#format dojo_rst
+.. _dijit/a11y/resources:
 
 Dijit Accessibility Resources
 =============================
@@ -143,7 +142,7 @@ The role or state can also be specified via variables. This example shows an exc
 High Contrast Mode Detection
 ----------------------------
 
-As discussed in the `Dijit A11y Strategy <dijit/a11y/strategy>`_ section, dijit performs a check to determine if high contrast mode or images off mode has been set in the browser. When this mode is detected the dijit-a11y class is set onto the body element of the page. Approprite dijit-a11y classes have been defined that make appropriate text alternatives visible for any CSS background images (which are no longer visible when high contrast mode has been set) that have been used within the widgets.
+As discussed in the :ref:`Dijit A11y Strategy <dijit/a11y/strategy>` section, dijit performs a check to determine if high contrast mode or images off mode has been set in the browser. When this mode is detected the dijit-a11y class is set onto the body element of the page. Approprite dijit-a11y classes have been defined that make appropriate text alternatives visible for any CSS background images (which are no longer visible when high contrast mode has been set) that have been used within the widgets.
 
 .. code-block :: javascript
 

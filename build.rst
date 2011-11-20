@@ -1,1 +1,0 @@
-#REDIRECT build/index

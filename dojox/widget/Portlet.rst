@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Portlet:
 
 dojox.widget.Portlet
 ====================
@@ -295,4 +295,4 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 See also
 ========
 
-* `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
+* :ref:`dojox.layout.GridContainer <dojox/layout/GridContainer>`

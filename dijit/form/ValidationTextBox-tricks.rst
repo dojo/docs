@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/ValidationTextBox-tricks:
 
 dijit.form.ValidationTextBox (Tips, Tricks and the Edge-Cases)
 ==============================================================

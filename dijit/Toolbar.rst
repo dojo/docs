@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Toolbar:
 
 dijit.Toolbar
 =============
@@ -55,7 +55,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
     <span id="toolbar"></span>
 
 
-Note that iconClass is a CSS class that's been defined by the theme, see `Themes <dijit/themes>`_ for details.
+Note that iconClass is a CSS class that's been defined by the theme, see :ref:`Themes <dijit/themes>` for details.
 
 Declarative example
 -------------------
@@ -92,7 +92,7 @@ Creation from markup is even easier.
 Drop Downs
 ==========
 
-By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.form.ComboButton <dijit/form/ComboButton>`_ you can make a toolbar with drop downs.
+By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`dijit.form.ComboButton <dijit/form/ComboButton>` you can make a toolbar with drop downs.
 
 .. cv-compound::
 
@@ -150,4 +150,4 @@ In hign contrast mode when a toggle button is checked an html entity charcter (â
 See also
 ========
 
-* `dijit.MenuBar <dijit/MenuBar>`_
+* :ref:`dijit.MenuBar <dijit/MenuBar>`

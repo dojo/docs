@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/oop:
 
 OOP with Dojo
 =============
@@ -8,5 +8,5 @@ OOP with Dojo
 See Also
 --------
 
-  * `dojo.declare <dojo/declare>`_
-  * `Writing Widgets <quickstart/writingWidgets>`_
+  * :ref:`dojo.declare <dojo/declare>`
+  * :ref:`Writing Widgets <quickstart/writingWidgets>`

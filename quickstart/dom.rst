@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/dom:
 
 DOM Utilities
 =============
@@ -15,13 +15,13 @@ DOM Utilities
 Introduction
 ============
 
-Dojo provides a host of DOM utility functions. This guide covers combined usage of `dojo.style <dojo/style>`_, `dojo.create <dojo/create>`_, `dojo.attr <dojo/attr>`_, and a number of other base utilities for DOM convenience. 
+Dojo provides a host of DOM utility functions. This guide covers combined usage of :ref:`dojo.style <dojo/style>`, :ref:`dojo.create <dojo/create>`, :ref:`dojo.attr <dojo/attr>`, and a number of other base utilities for DOM convenience. 
 
 ========================
 Locating and Using Nodes
 ========================
 
-All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by `dojo.addOnLoad <dojo/addOnLoad>`_
+All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by :ref:`dojo.addOnLoad <dojo/addOnLoad>`
 
 .. code-block :: javascript
   :linenos:
@@ -35,7 +35,7 @@ Once we've ensured our code will only execute after the DOM is ready, we can mov
 Using ID's
 ----------
 
-The fastest, and most common, way of locating an element is by it's ``id`` attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter to write, safer to use version of ``document.getElementById``:
+The fastest, and most common, way of locating an element is by it's ``id`` attribute. Dojo provides :ref:`dojo.byId <dojo/byId>` - a shorter to write, safer to use version of ``document.getElementById``:
 
 .. code-block :: javascript
   :linenos:
@@ -56,7 +56,7 @@ Here, we locate a node with id="someId", and set it's ``innerHTML`` to new conte
 CSS Selectors
 -------------
 
-It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides `dojo.query <dojo/query>`_ - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - `dojo.NodeList <dojo/NodeList>`_ - that has oodles of useful DOM manipulation functions easily available. 
+It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides :ref:`dojo.query <dojo/query>` - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - :ref:`dojo.NodeList <dojo/NodeList>` - that has oodles of useful DOM manipulation functions easily available. 
 
 .. code-block :: javascript
   :linenos:
@@ -144,7 +144,7 @@ By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefi
 document vs. dojo.doc
 ---------------------
 
-It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference the global `dojo.doc <dojo/doc>`_ when accessing the current document. For instance:
+It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference the global :ref:`dojo.doc <dojo/doc>` when accessing the current document. For instance:
 
 .. code-block :: javascript
   :linenos:
@@ -160,7 +160,7 @@ It is very common to see the special global 'document' used throughout JavaScrip
   // though, to just create, this is best:
   dojo.create("div");
 
-They have identical length in characters, but by using ``dojo.doc`` you are able to ensure your code will execute in switched contexts, such as iframes and popups. To switch the context for code that uses ``dojo.doc``, ``dojo.body()``, and ``dojo.global`` see the documentation for `dojo.setContext <dojo/setContext>`_.
+They have identical length in characters, but by using ``dojo.doc`` you are able to ensure your code will execute in switched contexts, such as iframes and popups. To switch the context for code that uses ``dojo.doc``, ``dojo.body()``, and ``dojo.global`` see the documentation for :ref:`dojo.setContext <dojo/setContext>`.
 
 ==================
 Manipulating Nodes
@@ -171,7 +171,7 @@ Once you are comfortable with the various ways of finding nodes in the DOM, appl
 Node styles
 -----------
 
-TODOC: see `dojo.style <dojo/style>`_
+TODOC: see :ref:`dojo.style <dojo/style>`
 
 Node attributes
 ---------------
@@ -184,7 +184,7 @@ Each DomNode has a series of attributes available for setting and getting. A lot
   var n = dojo.byId("foo");
   console.log(n.id == "foo"); // true
 
-Though for full cross browser compatibility and convenience, it is recommended you access and set attributes through `dojo.attr <dojo/attr>`_. The API for dojo.attr is straightforward:
+Though for full cross browser compatibility and convenience, it is recommended you access and set attributes through :ref:`dojo.attr <dojo/attr>`. The API for dojo.attr is straightforward:
 
 .. code-block :: javascript
   :linenos:
@@ -208,7 +208,7 @@ The ``style`` attribute is special. One can set an "inline style" by setting an 
 
      <div style="padding:3px; color:red; height:123px">Lorem, baby!</div>
 
-Though this isn't an ``attribute`` per se. Just as `dojo.style <dojo/style>`_ (described above) accepts an object-hash of style properties, you can pass a style:{} pair to dojo.attr, and set styles in a dojo.attr call:
+Though this isn't an ``attribute`` per se. Just as :ref:`dojo.style <dojo/style>` (described above) accepts an object-hash of style properties, you can pass a style:{} pair to dojo.attr, and set styles in a dojo.attr call:
 
 .. code-block :: javascript
   :linenos:
@@ -264,7 +264,7 @@ In order to destroy a single node or a list of nodes, Dojo Toolkit provides the 
 
 * Since V1.3:
 
-  * `dojo.destroy(node) <dojo/destroy>`_
+  * :ref:`dojo.destroy(node) <dojo/destroy>`
 
 * From V1.0 to V1.2:
 

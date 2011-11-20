@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/xhrPost:
 
 dojo.xhrPost
 ============
@@ -13,7 +13,7 @@ dojo.xhrPost
 Introduction
 ============
 
-The dojo.xhrPost() function is another the cornerstone function of AJAX development.  Much like its `GET counterpart <dojo/xhrGet>`_ (dojo.xhrGet), its purpose is to provide an easy to use and consistent interface to making asynchronous calls.  The dojo.xhrPost is geared towards  sending data to the server, most often by posting FORM data, or some content body.  This function, in essence, implements making an asynchronous HTTP POST request.
+The dojo.xhrPost() function is another the cornerstone function of AJAX development.  Much like its :ref:`GET counterpart <dojo/xhrGet>` (dojo.xhrGet), its purpose is to provide an easy to use and consistent interface to making asynchronous calls.  The dojo.xhrPost is geared towards  sending data to the server, most often by posting FORM data, or some content body.  This function, in essence, implements making an asynchronous HTTP POST request.
 
 The following information should get you up and going with dojo.xhrPost().  As with all dojo functions, always refer to the API docs for detailed information.
 
@@ -21,23 +21,23 @@ The following information should get you up and going with dojo.xhrPost().  As w
 Limitations
 ===========
 
-* Unable to post binary data. Consider `dojo.io.iframe <dojo/io/iframe>`_
-* The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
+* Unable to post binary data. Consider :ref:`dojo.io.iframe <dojo/io/iframe>`
+* The limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`
 
 =====
 Usage
 =====
 
-The xhrPost() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with an HTTP POST request.
+The xhrPost() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the :ref:`dojo.xhrGet parameters <dojo/xhrGet>` are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with an HTTP POST request.
 
 dojo.xhrPost supported object properties
 ----------------------------------------
 
-All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_
+All of the dojo.xhrGet :ref:`object properties <dojo/xhrGet>`
 
 +------------------+---------------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs. xhrPost will convert this into proper POST format and send it with the post      |
-|                  |data. Note that this parameter is handled differently from `dojo.xhrGet <dojo/xhrGet>`_, which encodes it as a query string |
+|                  |data. Note that this parameter is handled differently from :ref:`dojo.xhrGet <dojo/xhrGet>`, which encodes it as a query string |
 |                  |in url.                                                                                                                          |
 |                  |                                                                                                                                 |
 |                  |**This parameter is optional**                                                                                                   |
@@ -56,17 +56,17 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 
 **content**, **form**, and **postData** are mutually exclusive parameters. Please use only one at a time.
 
-If you want to send some parameters in a query string, while making POST, you should include them in url yourself. Dojo provides a special helper for that: `dojo.objectToQuery() <dojo/objectToQuery>`_, which can convert a dictionary into a valid query string --- just like `dojo.xhrGet <dojo/xhrGet>`_ does.
+If you want to send some parameters in a query string, while making POST, you should include them in url yourself. Dojo provides a special helper for that: :ref:`dojo.objectToQuery() <dojo/objectToQuery>`, which can convert a dictionary into a valid query string --- just like :ref:`dojo.xhrGet <dojo/xhrGet>` does.
 
 Return type (dojo.Deferred)
 ---------------------------
 
-The return type is the same as dojo.xhrGet.  Please refer to the `return type <dojo/xhrGet#return-type-dojo-deferred>`_ documentation for details.
+The return type is the same as dojo.xhrGet.  Please refer to the :ref:`return type <dojo/xhrGet>` documentation for details.
 
 Handling Status Codes
 ---------------------
 
-Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet `status code documentation <dojo/xhrGet#handling-status-codes>`_ for details.
+Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
 ========
 Examples
@@ -186,7 +186,7 @@ Example 2: dojo.xhrPost call to send some text data
 See also
 ========
 
-* `dojo.xhrGet <dojo/xhrGet>`_
-* `dojo.xhrPut <dojo/xhrPut>`_
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
-* `dojo.xhrDelete <dojo/xhrDelete>`_
+* :ref:`dojo.xhrGet <dojo/xhrGet>`
+* :ref:`dojo.xhrPut <dojo/xhrPut>`
+* :ref:`dojo.rawXhrPut <dojo/rawXhrPut>`
+* :ref:`dojo.xhrDelete <dojo/xhrDelete>`

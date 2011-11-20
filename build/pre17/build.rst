@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/pre17/build:
 
 Dojo Build System (Pre 1.7)
 ===========================
@@ -9,7 +9,7 @@ Dojo Build System (Pre 1.7)
 .. contents::
    :depth: 3
 
-**Caution** This document refers to the build system available prior to version 1.7. See `The Dojo Build System <build>`_ for a documentation
+**Caution** This document refers to the build system available prior to version 1.7. See :ref:`The Dojo Build System <build>` for a documentation
 on the current build system.
 
 The Dojo build system creates efficient versions of Dojo and application modules for deployment.
@@ -18,7 +18,7 @@ The Dojo build system creates efficient versions of Dojo and application modules
 Introduction
 ============
 
-Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each "`dojo.require <dojo/require>`_" statement results in a synchronous HTTP call to the server to retrieve a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but the module needs to be loaded before it can be used).  
+Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each ":ref:`dojo.require <dojo/require>`" statement results in a synchronous HTTP call to the server to retrieve a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but the module needs to be loaded before it can be used).  
 
 Because browsers wait for each synchronous web call to finish before allowing anything else to happen, this can substantially impair performance. Large apps that have many dependencies can take a very long time to load when a build isn't used, or flash and redraw several times.
 
@@ -149,13 +149,13 @@ To use the build system, you must have the following:
 
         As a best practice, your source tree should *not* be under your Dojo distribution's source tree.  By keeping it independent, you make it easier to make new builds when new versions of Dojo are available.
 
-    4.  **A profile**, which you create, that controls how the build system creates your custom build.  For details on this, see the `build profiles page <build/profiles>`_.
+    4.  **A profile**, which you create, that controls how the build system creates your custom build.  For details on this, see the :ref:`build profiles page <build/profiles>`.
 
 ========
 Profiles
 ========
 
-The profile is a file which defines exactly what the build system will include in your built version of dojo.  For a detailed discussion of the profile and all of its options, see `profiles <build/profiles>`_.
+The profile is a file which defines exactly what the build system will include in your built version of dojo.  For a detailed discussion of the profile and all of its options, see :ref:`profiles <build/profiles>`.
 
 The profile should be a file named *something*\.profile\.js, and it contains a single JavaScript object called ``dependencies``.  The main property within ``dependencies`` is ``layers``, which is an array of definitions of the layers that should be built.
 
@@ -264,7 +264,7 @@ Take notice that backslashes in prefix paths do not work on windows.
 Build Script
 ============
 
-To actually begin your build, you use the ``build.sh`` (or ``build.bat`` on Windows).  For full details on the arguments to ``build``, see `build script <build/buildScript>`_.
+To actually begin your build, you use the ``build.sh`` (or ``build.bat`` on Windows).  For full details on the arguments to ``build``, see :ref:`build script <build/buildScript>`.
 
 A typical build command looks something like this:
 
@@ -369,14 +369,14 @@ Other Advanced Topics
 ---------------------
 The following build topics are for expert users, and not needed for routine builds:
 
-    * conditional inclusion via the `excludeStart and excludeStop <build/exclude>`_ pragmas
-    * prevent inlining of a resource named in a dojo.require with `keepRequires <build/keepRequires>`_
+    * conditional inclusion via the :ref:`excludeStart and excludeStop <build/exclude>` pragmas
+    * prevent inlining of a resource named in a dojo.require with :ref:`keepRequires <build/keepRequires>`
     * layerDependencies
     * discard
     * .uncompressed.js
-    * create extremely small custom base ``Dojo.js`` builds with `customBase <build/customBase>`_
-    * Faster loading of layer files by reducing dojo.provide usage with the `expandProvide <build/expand-provide>`_ parameter
-    * Minimizing ``dojo.js`` for mobile platforms with the `webkitMobile <build/webkit-mobile>`_ parameter
+    * create extremely small custom base ``Dojo.js`` builds with :ref:`customBase <build/customBase>`
+    * Faster loading of layer files by reducing dojo.provide usage with the :ref:`expandProvide <build/expand-provide>` parameter
+    * Minimizing ``dojo.js`` for mobile platforms with the :ref:`webkitMobile <build/webkit-mobile>` parameter
     * more...
 
 =======================
@@ -388,7 +388,7 @@ TODOC:  All of the following, with both build invocation command line and profil
 Directory Layout
 ----------------
 
-See `possible directory layout <build/directoryLayout>`_ for the directory scheme used in these example scenarios.  This layout is designed to allow Dojo and private namespaces to work together without mixing source file trees.
+See :ref:`possible directory layout <build/directoryLayout>` for the directory scheme used in these example scenarios.  This layout is designed to allow Dojo and private namespaces to work together without mixing source file trees.
 
 Basic Scenarios
 ---------------
@@ -406,12 +406,12 @@ A simple default `release build <build/scenario-release>`_ that creates the basi
 Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo `base build <build/scenario-base>`_ which only builds the Dojo core into a layer, without Dijit and the other name spaces. 
+A small Dojo :ref:`base build <build/scenario-base>` which only builds the Dojo core into a layer, without Dijit and the other name spaces. 
 
 Basic Cross Domain Build
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-A basic cross-domain build of Dojo and some required components from dijit: `Basic cross domain build <build/scenario-xDomain>`_
+A basic cross-domain build of Dojo and some required components from dijit: :ref:`Basic cross domain build <build/scenario-xDomain>`
 
 Custom Namespace Scenarios
 --------------------------
@@ -419,12 +419,12 @@ Custom Namespace Scenarios
 Same Domain
 ~~~~~~~~~~~
 
-A same domain build creating a layer including both Dojo and custom namespace components: `Custom module build <build/customBase>`_
+A same domain build creating a layer including both Dojo and custom namespace components: :ref:`Custom module build <build/customBase>`
 
 Cross Domain 
 ~~~~~~~~~~~~
 
-A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  `Cross domain custom name space build <build/xDomain>`_
+A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  :ref:`Cross domain custom name space build <build/xDomain>`
 
 
 Advanced and Special Purpose Scenarios
@@ -433,16 +433,16 @@ Advanced and Special Purpose Scenarios
 Micro Build
 ~~~~~~~~~~~
 
-An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  `Micro-build <build/scenario-micro>`_
+An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  :ref:`Micro-build <build/scenario-micro>`
 
 
 ========
 See Also
 ========
 
-* `Build Profiles <build/profiles>`_
-* `Build Script <build/buildScript>`_
-* `Simple Build System Example <build/simpleExample>`_
+* :ref:`Build Profiles <build/profiles>`
+* :ref:`Build Script <build/buildScript>`
+* :ref:`Simple Build System Example <build/simpleExample>`
 * `Scaffolding a Buildable Dojo Application <http://blog.rebeccamurphey.com/scaffolding-a-buildable-dojo-application>`_
 
 

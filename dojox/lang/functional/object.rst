@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/functional/object:
 
 dojox.lang.functional.object
 ============================
@@ -17,4 +17,4 @@ Functional helpers to deal with JavaScript objects.
 See Also
 ========
 
-* `dojox.lang.functional <dojox/lang/functional>`_
+* :ref:`dojox.lang.functional <dojox/lang/functional>`

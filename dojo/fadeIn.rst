@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fadeIn:
 
 dojo.fadeIn
 ===========
@@ -10,7 +10,7 @@ dojo.fadeIn
 .. contents::
     :depth: 2
 
-This function is a helper function that wraps the `dojo.animateProperty <dojo/animateProperty>`_ function to provide an easy interface to fading a node into view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a fade-in is desired.
+This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to fading a node into view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a fade-in is desired.
 
 ==========
 Parameters
@@ -24,7 +24,7 @@ The *dojo.fadeIn* takes an object as its parameter.  This object defines what do
 Return value
 ============
 
-The *dojo.fadeIn* function returns an instance of dojo._Animation.  To execute the fadeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+The *dojo.fadeIn* function returns an instance of dojo._Animation.  To execute the fadeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
 ========
 Examples
@@ -134,5 +134,5 @@ Example 3:  Fade in a dom node with an easing function
 See Also
 ========
 
-* `dojo/fadeOut <dojo/fadeOut>`_
-* `Animation Quickstart <quickstart/Animation>`_
+* :ref:`dojo/fadeOut <dojo/fadeOut>`
+* :ref:`Animation Quickstart <quickstart/Animation>`

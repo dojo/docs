@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/disconnect:
 
 dojo.disconnect
 ===============
@@ -16,7 +16,7 @@ Disconnects methods from linked events.
 Introduction
 ============
 
-Dojo's `event <quickstart/events>`_ system provides `dojo.disconnect` to cleanly remove event listeners created by `dojo.connect <dojo/connect>`_. The more events in the page that exist, the more the browser (or otherwise) has to do. 
+Dojo's :ref:`event <quickstart/events>` system provides `dojo.disconnect` to cleanly remove event listeners created by :ref:`dojo.connect <dojo/connect>`. The more events in the page that exist, the more the browser (or otherwise) has to do. 
 
 =====
 Usage
@@ -51,9 +51,9 @@ For example, to setup a function to run when a node is clicked, then remove it a
       dojo.disconnect(handle);
   });
 
-This works with any connection `dojo.connect <dojo/connect>`_ is able to make: DOM Connections, Dijit events, etc. 
+This works with any connection :ref:`dojo.connect <dojo/connect>` is able to make: DOM Connections, Dijit events, etc. 
 
-A very common pattern is to store a series of return values in an array, and use `dojo.forEach <dojo/forEach>`_ to iterate over them, disconnecting several connections at once:
+A very common pattern is to store a series of return values in an array, and use :ref:`dojo.forEach <dojo/forEach>` to iterate over them, disconnecting several connections at once:
 
 [ Dojo 1.7 AMD ]
 

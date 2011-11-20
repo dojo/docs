@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/secure/capability:
 
 dojox.secure.capability
 =======================

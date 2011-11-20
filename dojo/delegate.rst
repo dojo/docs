@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/delegate:
 
 dojo.delegate
 =============

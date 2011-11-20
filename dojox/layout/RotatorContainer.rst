@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/layout/RotatorContainer:
 
 dojox.layout.RotatorContainer
 =============================
@@ -19,13 +19,13 @@ Introduction
 
 The RotatorContainer cycles through the child panes with a crossfade transition.
 
-This widget is on the verge of being deprecated. It has been replaced by the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_, a lightweight version that has more features and doesn't require dijit.
+This widget is on the verge of being deprecated. It has been replaced by the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`, a lightweight version that has more features and doesn't require dijit.
 
 =====
 Usage
 =====
 
-Since the RotatorContainer is a layout widget, it's children must be a layout widget such as a `dijit.layout.ContentPane <dijit/layout/ContentPane>`_.
+Since the RotatorContainer is a layout widget, it's children must be a layout widget such as a :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
 
 ====================  =======  ========================================================================================
 Parameter             Type     Description
@@ -74,4 +74,4 @@ Declarative example
 See also
 ========
 
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ is a replacement widget for the RotatorContainer that is more lightweight and has more features.
+* :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` is a replacement widget for the RotatorContainer that is more lightweight and has more features.

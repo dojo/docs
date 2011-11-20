@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/removeAttr:
 
 dojo.removeAttr
 ===============
@@ -97,18 +97,18 @@ See also
 
 DOM operations:
 
-* `dojo.attr <dojo/attr>`_
-* `dojo.getAttr <dojo/getAttr>`_
-* `dojo.setAttr <dojo/setAttr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.getAttr <dojo/getAttr>`
+* :ref:`dojo.setAttr <dojo/setAttr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
 
 External links:
 

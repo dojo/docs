@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/xDomain:
 
 Build System:  Cross-Domain (xDomain) Builds
 ============================================

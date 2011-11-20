@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/io/script:
 
 dojo.io.script
 ===============
@@ -14,7 +14,7 @@ dojo.io.script
 Introduction
 ============
 
-This is an alternate IO mechanism to `dojo.xhrGet <dojo/xhrGet>`_ that has the capability of doing cross-site data access.  It accomplishes this feat by doing an IO call via a dynamically inserted <SCRIPT> tag into your web page.
+This is an alternate IO mechanism to :ref:`dojo.xhrGet <dojo/xhrGet>` that has the capability of doing cross-site data access.  It accomplishes this feat by doing an IO call via a dynamically inserted <SCRIPT> tag into your web page.
 
 =====
 JSONP

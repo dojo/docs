@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fx/Toggler:
 
 ===============
 dojo.fx.Toggler
@@ -13,7 +13,7 @@ dojo.fx.Toggler
 .. contents::
     :depth: 2
 
-The dojo.fx.Toggler is a helper class for wrapping a DOM node with 'FX' to use when showing and hiding that node.  By default it uses the `dojo.fadeIn <dojo/fadeIn>`_ for showing and `dojo.fadeOut <dojo/fadeOut>`_ for hiding of a node.  The Togger is set up by passing in an JavaScript object of parameters that define the node, the animation functions to use, and the duration for the show and hide operations.
+The dojo.fx.Toggler is a helper class for wrapping a DOM node with 'FX' to use when showing and hiding that node.  By default it uses the :ref:`dojo.fadeIn <dojo/fadeIn>` for showing and :ref:`dojo.fadeOut <dojo/fadeOut>` for hiding of a node.  The Togger is set up by passing in an JavaScript object of parameters that define the node, the animation functions to use, and the duration for the show and hide operations.
 
 
 ======================
@@ -50,7 +50,7 @@ Constructor Parameters
 show() and hide() return values
 ===============================
 
-The functions *Toggler.show()* and *Toggler.hide()* both return the animation object for the animation in play.  This object can be used to stop, pause, set the current animation location 'percentage', and get the status of the animation.  For more information on animation objects, refer to the excellent `Animation Quickstart <quickstart/Animation>`_
+The functions *Toggler.show()* and *Toggler.hide()* both return the animation object for the animation in play.  This object can be used to stop, pause, set the current animation location 'percentage', and get the status of the animation.  For more information on animation objects, refer to the excellent :ref:`Animation Quickstart <quickstart/Animation>`
 
 ========
 Examples

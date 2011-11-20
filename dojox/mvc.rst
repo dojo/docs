@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mvc:
 
 dojox.mvc
 =========
@@ -26,15 +26,15 @@ We begin by introducing a first-class client-side data model based on dojo.State
 Features
 ========
 
-* `First-class client-side data model, StatefulModel  <dojox/mvc/StatefulModel>`_
-* `Simple data binding layer, Bind  <dojox/mvc/Bind>`_
-* `Data binding mixin for dijits, _DataBindingMixin  <dojox/mvc/_DataBindingMixin>`_
+* :ref:`First-class client-side data model, StatefulModel  <dojox/mvc/StatefulModel>`
+* :ref:`Simple data binding layer, Bind  <dojox/mvc/Bind>`
+* :ref:`Data binding mixin for dijits, _DataBindingMixin  <dojox/mvc/_DataBindingMixin>`
 * A number of new widgets and MVC containers, including:
 
-  * `Output- A data-bound output widget  <dojox/mvc/Output>`_  
-  * `Group- An aggregation of widgets with the same parent data binding context  <dojox/mvc/Group>`_  
-  * `Repeat- A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`_  
-  * `Generate- A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`_  
+  * :ref:`Output- A data-bound output widget  <dojox/mvc/Output>`  
+  * :ref:`Group- An aggregation of widgets with the same parent data binding context  <dojox/mvc/Group>`  
+  * :ref:`Repeat- A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`  
+  * :ref:`Generate- A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`  
 
  
 =====

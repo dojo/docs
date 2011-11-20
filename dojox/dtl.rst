@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/dtl:
 
 dojox.dtl
 =========
@@ -57,7 +57,7 @@ allows for new DOM-centric capabilities.
 Markup Syntax
 =============
 
-Since Dojo implements markup just as it is in Django's implementation, the best place to visit would be `The Django Book`_ or the `Django Template Language Documentation`_.
+Since Dojo implements markup just as it is in Django's implementation, the best place to visit would be :ref:`The Django Book` or the :ref:`Django Template Language Documentation`.
 
 But in case you are just itching to know what it looks like, it's made up of some simple parts: ``{% tags %}``, ``{{ variables }}``, ``{{ variables|filtered }}`` and ``{{ variables|more:"advanced"|filtering }}``. Sometimes tags have groupings of tags, sometimes they work alone.
 

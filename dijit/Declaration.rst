@@ -1,5 +1,4 @@
-## page was renamed from dijit/_Declaration
-#format dojo_rst
+.. _dijit/Declaration:
 
 dijit.Declaration
 =================
@@ -90,7 +89,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 A few things to note here:
 
    * using the <script type='dojo/method'> tag, you can define methods in the widget
-   * data-dojo-attach-event and data-dojo-attach-point work the same as in `dijit._Templated <dijit/_Templated>`_
+   * data-dojo-attach-event and data-dojo-attach-point work the same as in :ref:`dijit._Templated <dijit/_Templated>`
 
 Extending Other Widgets
 -----------------------
@@ -138,5 +137,5 @@ Note that dojo/connect is not suitable for methods that need to return a value.
 Notes
 =====
 - widgetsInTemplate is automatically set to true, so any widgets you place in the template will be automatically filled in.
-- If you do not specify mixin, the widget class will be a subclass of `dijit._Widget <dijit/_Widget>`_ and mix in `dijit._Templated <dijit/_Templated>`_. If you specify mixin, the first class listed must be a subclass of `dijit._Widget <dijit/_Widget>`_. At least one of the mixins should itself mixin `dijit._Templated <dijit/_Templated>`_, or you should supply `dijit._Templated <dijit/_Templated>`_ yourself as a mixin.
+- If you do not specify mixin, the widget class will be a subclass of :ref:`dijit._Widget <dijit/_Widget>` and mix in :ref:`dijit._Templated <dijit/_Templated>`. If you specify mixin, the first class listed must be a subclass of :ref:`dijit._Widget <dijit/_Widget>`. At least one of the mixins should itself mixin :ref:`dijit._Templated <dijit/_Templated>`, or you should supply :ref:`dijit._Templated <dijit/_Templated>` yourself as a mixin.
 - Only one extension point implementation of preamble.

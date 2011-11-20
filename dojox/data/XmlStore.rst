@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/XmlStore:
 
 dojox.data.XmlStore
 ===================
@@ -20,9 +20,9 @@ Supported APIs
 
 The following dojo.data APIs are implemented by XmlStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_  
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`  
 
   * **New for dojo 1.3!**  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
 
@@ -126,7 +126,7 @@ _getDeleteUrl(item)
 Query Syntax
 ============
 
-The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. For example, the following query object will locate all items that have attributes of those names that match both of those values:
+The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. For example, the following query object will locate all items that have attributes of those names that match both of those values:
 
 .. code-block :: javascript
  :linenos:
@@ -372,4 +372,4 @@ Connecting XmlStore to dojox.grid.DataGrid
 More examples
 =============
 
-There are `more extensive examples <dojox/data/XmlStore-examples>`_ of using the xmlstore
+There are :ref:`more extensive examples <dojox/data/XmlStore-examples>` of using the xmlstore

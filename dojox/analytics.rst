@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/analytics:
 
 dojox.analytics
 ===============
@@ -27,7 +27,7 @@ Plugins included at this time:
 * idle - reports idle/activity 
 * consoleMessages - reports console.* messages to the server	
 
-Additionally, a `Google Ananlytics <dojox/analytics/Urchin>`_ (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code. 
+Additionally, a :ref:`Google Ananlytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code. 
 
 
 =====

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _releasenotes/1.2:
 
 Dojo 1.2.0 Release Notes
 ========================

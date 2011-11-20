@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/setContext:
 
 dojo.setContext
 ===============
@@ -17,7 +17,7 @@ Introduction
 
 "dojo.setContext" allows many of Dojo's core functions to easily switch context (e.g. from the current window to an iframe) with a single function call.
 
-For example, `dojo.query <dojo/query>`_ references the "window" global variable when performing searches by default.
+For example, :ref:`dojo.query <dojo/query>` references the "window" global variable when performing searches by default.
 
 [ Dojo 1.7 AMD ]
 

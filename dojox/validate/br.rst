@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/validate/br:
 
 dojox.validate.br
 =================
@@ -68,4 +68,4 @@ Basic Usage
 See Also
 ========
 
-* `dojox.validate <dojox/validate>`_
+* :ref:`dojox.validate <dojox/validate>`

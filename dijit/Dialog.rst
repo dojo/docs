@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Dialog:
 
 dijit.Dialog
 ============
@@ -36,7 +36,7 @@ Usage
    });
  </script>
 
-After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="claro"`` attribute (or some other applicable `theme name <dijit/themes>`_) to your <body> tag, in order to show the Dialog with the right styles:
+After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`) to your <body> tag, in order to show the Dialog with the right styles:
 
 .. code-block :: html
 
@@ -132,7 +132,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
 Coloring the Underlay
 ---------------------
 
-If you wish to alter the default color for the underlay, you do so in CSS. The underlay receives an ID to match the Dialog, suffixed with ``_underlay``, which you can define a css class for:
+If you wish to alter the default color for the underlay, you do so in CSS. The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a css class for:
 
 .. cv-compound::
  
@@ -526,8 +526,8 @@ Known Issues
 See also
 ========
 
-* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_ - mixin of dijit.Dialog and dojox.layout.ContentPane
-* `dojox.widget.Dialog <dojox/widget/Dialog>`_ - more flexible dialog allowing animations and different styles/theme support
-* `dojox.image.Lightbox <dojox/image/Lightbox>`_ - a dojo-based Lightbox implementation
-* `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
-* `dijit/TooltipDialog <dijit/TooltipDialog>`_ - modal tooltip with rich content for user interactions (forms ...)
+* :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` - mixin of dijit.Dialog and dojox.layout.ContentPane
+* :ref:`dojox.widget.Dialog <dojox/widget/Dialog>` - more flexible dialog allowing animations and different styles/theme support
+* :ref:`dojox.image.Lightbox <dojox/image/Lightbox>` - a dojo-based Lightbox implementation
+* :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
+* :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` - modal tooltip with rich content for user interactions (forms ...)

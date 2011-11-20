@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/helloworld:
 
 Hello, World!
 =============
@@ -56,9 +56,7 @@ As it can be seen above, the page is a just a standard HTML skeleton with three 
 
 1. A couple of CSS style sheets. The one marked Tundra is the *theme* we will use from Dijit for this example.  There are other themes available.
 
-#. A script element inserted into the head section. This script element is responsible for loading the base Dojo script that provides access to all the other Dojo functionality that we will use.
 
-#. Lastly, we place the Tundra CSS class in the ``BODY`` tag.
 
 Creating a Button Widget
 ------------------------
@@ -465,12 +463,7 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 1. `The documentation page for Dojo <http://dojotoolkit.org/documentation/>`_ with links to all documentation.
 
-#. `Events with Dojo <http://dojotoolkit.org/documentation/tutorials/1.6/events/>`_. How you can link functions to the normal JS events the Dojo way.
 
-#. `Dojo XmlHttpRequest <dojo/xhr>`_. The foundation for AJAX in Dojo.
 
-#. `Writing custom widgets <quickstart/writingWidgets>`_. Create your own widget.
 
-#. `Dojo Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/>`_ from current nightly build (good for learning how things work)
 
-#. `Dijit Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/>`_ from the current nightly build (good for learning how widgets work)

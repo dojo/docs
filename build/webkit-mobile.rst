@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/webkit-mobile:
 
 Special Dojo Build: WebKit Mobile 
 ===================================

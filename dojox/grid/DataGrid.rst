@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/DataGrid:
 
 dojox.grid.DataGrid
 ===================
@@ -159,7 +159,7 @@ The structure of the table can also be set programmatically.  The ``<table>`` at
 
 Event handling
 --------------
-Event handlers can be associated with the DataGrid.  Many of these events are expected to be handled by the DataGrid itself.  Grabbing these events without passing the event on to the grid can cause unexpected results.  As such, it is wise to add an event handler as opposed to replace the event handler.   Consider using `dojo.connect() <dojo/connect>`_.
+Event handlers can be associated with the DataGrid.  Many of these events are expected to be handled by the DataGrid itself.  Grabbing these events without passing the event on to the grid can cause unexpected results.  As such, it is wise to add an event handler as opposed to replace the event handler.   Consider using :ref:`dojo.connect() <dojo/connect>`.
 
 The following handlers are defined:
 
@@ -1396,21 +1396,21 @@ The DojoX DataGrid is a complicated widget created via Scripting.  It has been e
 See also
 ========
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
   An enhanced version of the base grid, which extends it in numerous useful ways
 
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
 
-* `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`_
+* :ref:`dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`
 
   An extended version of TreeGrid that can lazy load and virtual scroll nested levels of huge children rows.
 
-* `Grid Plugin API <dojox/grid/pluginAPI>`_
+* :ref:`Grid Plugin API <dojox/grid/pluginAPI>`
 
-* `Demos on how to display and edit date value in grid cells <dojox/grid/griddate>`_
+* :ref:`Demos on how to display and edit date value in grid cells <dojox/grid/griddate>`
 
 * `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
 * `New Features in Dojo Grid 1.2 <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_

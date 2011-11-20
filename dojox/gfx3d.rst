@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx3d:
 
 dojox.gfx3d
 ===========
@@ -12,4 +12,4 @@ dojox.gfx3d
 .. contents::
    :depth: 2
 
-Simple 3D graphics library built on top of `dojox.gfx <dojox/gfx>`_.
+Simple 3D graphics library built on top of :ref:`dojox.gfx <dojox/gfx>`.

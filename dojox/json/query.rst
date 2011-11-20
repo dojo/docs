@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/json/query:
 
 dojox.json.query
 ================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/Animation:
 
 Animations and Effects with Dojo
 ================================
@@ -94,7 +94,7 @@ The standard set of properties for specifying animation settings (via the Object
 
 :easing:
   An easing (timing) function to apply to the effect, such as exponential curve, bounce, etc.  Dojo provides a number of easing functions in the
-  `dojo.fx.easing <dojo/fx/easing>`_ module. **optional**
+  :ref:`dojo.fx.easing <dojo/fx/easing>` module. **optional**
 
 :rate:
   By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot 
@@ -199,7 +199,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
 
   }).play();
 
-You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use `dojo.connect <dojo/connect>`_ to connect directly to the instance and listen for the function calls.
+You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the instance and listen for the function calls.
 
 .. code-block :: javascript
  :linenos:
@@ -304,7 +304,7 @@ Here, we've created a fadeOut animation, and run it immediately. At the end of t
 Animating CSS Properties
 ------------------------
 
-In addition to generic animations, Dojo provides shorthand helper functions for animating CSS properties via the `animateProperty <dojo/animateProperty>`_ API. An example where this specialized animation API simplifies specifying animation would be when you need to fade a background color property from red to green to indicate status changes.
+In addition to generic animations, Dojo provides shorthand helper functions for animating CSS properties via the :ref:`animateProperty <dojo/animateProperty>` API. An example where this specialized animation API simplifies specifying animation would be when you need to fade a background color property from red to green to indicate status changes.
 
 =================================
 Core Animations: Advanced helpers
@@ -397,7 +397,7 @@ To fade out two nodes simultaneously:
         dojo.fx.combine([anim1, anim2]).play();
     });
 
-(Notice we wrapped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which `addOnLoad <dojo/addOnLoad>`_ alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
+(Notice we wrapped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which :ref:`addOnLoad <dojo/addOnLoad>` alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
 
 Javascript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
 
@@ -557,7 +557,7 @@ Animation Easing
 
 Have you ever wanted to perform an animated effect such as fade out, fade in, wipe in, but apply the effect in a non-linear way? For example, wouldn't it be cool to have a fade in accelerate the rate at which the node appears the further along in the animation duration it is, or provide a bit of bounce to your slide in animation? The functions which control the timing of the animation is handled through the 'easing' property of the arguments passed to the animation creation functions.
 
-Instead of having to write the easing function yourself, dojo provides a collection of standard easing functions to use as this parameter to get a variety of effects.  See `Easing functions <dojo/fx/easing>`_ for more information on the easing function provided out of the box.
+Instead of having to write the easing function yourself, dojo provides a collection of standard easing functions to use as this parameter to get a variety of effects.  See :ref:`Easing functions <dojo/fx/easing>` for more information on the easing function provided out of the box.
 
 ============
 Text Effects
@@ -571,4 +571,4 @@ Animation in Dojo 1.5 widgets
 
 Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. 
 
-See details on application of animation in specific Digits in `Themes and theming <dijit/themes#animation>`_.
+See details on application of animation in specific Digits in :ref:`Themes and theming <dijit/themes>`.

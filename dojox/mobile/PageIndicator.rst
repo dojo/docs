@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/PageIndicator:
 
 dojox.mobile.PageIndicator
 ==============================
@@ -10,7 +10,7 @@ dojox.mobile.PageIndicator
 .. contents::
     :depth: 2
 
-PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with `dojox.mobile.SwapView <dojox/mobile/SwapView>`_. It is also internally used in `dojox.mobile.Carousel <dojox/mobile/Carousel>`_.
+PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with :ref:`dojox.mobile.SwapView <dojox/mobile/SwapView>`. It is also internally used in :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`.
 
 .. image:: PageIndicator.png
 

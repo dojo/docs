@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/query
-#format dojo_rst
+.. _dojo/query:
 
 dojo.query
 ==========
@@ -16,7 +15,7 @@ dojo.query
 Introduction
 ============
 
-XHR is half of the AJAX story. Once you make a request for data and receive it via `dojo.xhr <dojo/_base/xhr>`__, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
+XHR is half of the AJAX story. Once you make a request for data and receive it via :ref:`dojo.xhr <dojo/_base/xhr>`, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
 
 A bad solution: using the DOM API
 ---------------------------------
@@ -91,7 +90,7 @@ Dojo < 1.7
     });
   });
 
-The returned object of a **dojo.query()** call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the **dojo.NodeList** class are supported and encouraged.
+The returned object of a **dojo.query()** call is an instance of :ref:`dojo.NodeList <dojo/NodeList>`, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the **dojo.NodeList** class are supported and encouraged.
 
 
 ========

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/TimeTextBox:
 
 dijit.form.TimeTextBox
 ======================
@@ -18,11 +18,11 @@ Introduction
 
 ``dijit.form.TimeTextBox``:
 
-* is a `mapped form control <dijit/form#mapped>`_
-* validates against locale-sepcific `i18n <dojo/i18n>`_ rules
+* is a :ref:`mapped form control <dijit/form>`
+* validates against locale-sepcific :ref:`i18n <dojo/i18n>` rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, etc.
 
-`Options defined by the dojo.date package <quickstart/numbersDates#date-constraints>`_ to alter the way times are formatted and parsed can be specified in the TimeTextBox ``constraints`` object.
+:ref:`Options defined by the dojo.date package <quickstart/numbersDates>` to alter the way times are formatted and parsed can be specified in the TimeTextBox ``constraints`` object.
 
 =====
 Usage
@@ -88,6 +88,6 @@ Declarative example
 Accessibility
 =============
 
-See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
 
 The time picker popup associated with the TimeTextBox is not yet fully accessible.  However, the TimeTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.  These messages are implemented in a format that is accessible to all users.   

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/layout/ExpandoPane:
 
 dojox.layout.ExpandoPane
 ========================
@@ -12,20 +12,20 @@ dojox.layout.ExpandoPane
 .. contents::
    :depth: 2
 
-dojox.layout.ExpandoPane is a self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`_.
+dojox.layout.ExpandoPane is a self-collapsing widget for use in a :ref:`BorderContainer <dijit/layout/BorderContainer>`.
 
 
 ============
 Introduction
 ============
 
-This is an experimental widget which provides Expando-like capabilities to a region in a Dijit `BorderContainer <dijit/layout/BorderContainer>`_. The use is able to single-click an icon to open or close the region. 
+This is an experimental widget which provides Expando-like capabilities to a region in a Dijit :ref:`BorderContainer <dijit/layout/BorderContainer>`. The use is able to single-click an icon to open or close the region. 
 
 =====
 Usage
 =====
 
-The ExpandoPane is used in a similar way to the way a dijit `ContentPane <dijit/layout/ContentPane>`_ is used, but it provides a user interface to "collapse" and "expand" the Pane.
+The ExpandoPane is used in a similar way to the way a dijit :ref:`ContentPane <dijit/layout/ContentPane>` is used, but it provides a user interface to "collapse" and "expand" the Pane.
 
 You should ensure that you include the ExpandoPane CSS in your application in order to have the pane render properly:
 

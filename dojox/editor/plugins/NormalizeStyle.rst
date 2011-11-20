@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/NormalizeStyle:
 
 dojox.editor.plugins.NormalizeStyle
 ===================================
@@ -22,7 +22,7 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 
 * Converts CSS styles to b, i, u, etc, tags or vice-versa, depending on the option.
 * Uses 'internal editor format' when putting content in, meaning it coverts to CSS or semantic, based on which the native RTE code works best with.
-* Very useful when paired with `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_.
+* Very useful when paired with :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`.
 
 =====
 Usage
@@ -185,7 +185,7 @@ Configured css mode
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dijit._editor.plugins <dijit/_editor/plugins>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
-* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`

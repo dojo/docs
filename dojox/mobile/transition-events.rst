@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/transition-events:
 
 Listening to Transition Events
 ==============================

@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dijit/focus:
 
 dijit/focus
 ===========
 
-:Author: Colin Snover
+:Author: Colin Snover, Bill Keese
 :Version: 1.7
 
 .. contents::
@@ -67,6 +67,39 @@ Watching for focus changes
 
 Note that two changes will occur when element focus changes: the first change will be from the old element to ``null``, and the second change will be from ``null`` to the new element.
 
+Tracking active widgets
+-----------------------
+At any point in time there is a set of (for lack of a better word) "active" or "focused" widgets, meaning the currently focused widget and that widget's ancestors.   "Ancestor" can mean either DOM ancestor (ex: TextBox --> Form), or a logical parent-child relationship (ex: TooltipDialog --> DropDownButton).
+
+
+For example, if focus is on a TextBox inside a TabContainer inside a TooltipDialog triggered by a DropDownButton, the stack would be
+TextBox --> ContentPane --> TabContainer --> TooltipDialog --> DropDownButton.
+
+The activeStack[] parameter indicates this set of widgets, and an app can monitor changes to activeStack[] by:
+
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus" ], function(focusUtil){
+    focusUtil.watch("activeStack", function(name, oldValue, newValue){
+      console.log("Focused widget + ancestors: ", newValue.join(", "));
+    });
+  });
+
+An app can also monitor widget-focus / widget-blur events to tell when widgets enter or leave the stack:
+
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus" ], function(focusUtil){
+    focusUtil.on("widget-focus", function(widget){
+      console.log("Focused widget", widget);
+    });
+    focusUtil.on("widget-blur", function(widget){
+      console.log("Blurred widget", widget);
+    });
+  });
+
 Listening for focus changes in iframes
 --------------------------------------
 
@@ -87,5 +120,5 @@ If you don’t register an iframe, when focus changes to elements within the ifr
 See also
 ========
 
-* `dojo/Stateful`_
-* `dijit/_FocusMixin`_
+* :ref:`dojo/Stateful`
+* :ref:`dijit/_FocusMixin`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/NodeList-traverse:
 
 dojo.NodeList-traverse
 ========================
@@ -11,13 +11,13 @@ dojo.NodeList-traverse
 .. contents::
    :depth: 2
 
-Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_ for traversing the DOM. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
+Method extensions to :ref:`dojo.NodeList <dojo/NodeList>`/:ref:`dojo.query <dojo/query>` for traversing the DOM. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
 
 ============
 Introduction
 ============
 
-Doing a dojo.require("dojo.NodeList-traverse") (since Dojo 1.7 you're suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-traverse"])) will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier traversal of the DOM as it relates to the nodes in the dojo.NodeList.
+Doing a dojo.require("dojo.NodeList-traverse") (since Dojo 1.7 you're suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-traverse"])) will add some addition methods to :ref:`dojo.NodeList <dojo/NodeList>` (the return object from a :ref:`dojo.query <dojo/query>` call) that allow easier traversal of the DOM as it relates to the nodes in the dojo.NodeList.
 
 
 =====

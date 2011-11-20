@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/Cookie:
 
 dojox.grid.EnhancedGrid.plugins.Cookie
 ======================================
@@ -143,7 +143,7 @@ Here is some examples on how to use the API:
 See Also
 ========
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+* :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

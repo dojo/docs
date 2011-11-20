@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/date/stamp:
 
 dojo.date.stamp
 ===============
@@ -51,6 +51,6 @@ Usage
 See Also
 ========
 
-* `dojo.date.* <dojo/date>`_
-* `dojo.date.locale.* <dojo/date/locale>`_
+* :ref:`dojo.date.* <dojo/date>`
+* :ref:`dojo.date.locale.* <dojo/date/locale>`
 * `Dojo Cookie: Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_

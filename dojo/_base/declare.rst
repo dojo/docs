@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/declare:
 
 dojo._base.declare
 ==================
@@ -19,6 +19,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.declare <dojo/declare>`_
+* :ref:`dojo.declare <dojo/declare>`
 
   Creates a constructor using a compact notation for inheritance and prototype extension

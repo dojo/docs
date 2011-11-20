@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/OpmlStore:
 
 dojox.data.OpmlStore
 ====================
@@ -15,8 +15,8 @@ OpmlStore is a simple read-only store provided by Dojo and contained in the Dojo
 
 The following dojo.data APIs are implemented by OpmlStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_ - *Identity is implemented as the index number of the <outline> node*
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` - *Identity is implemented as the index number of the <outline> node*
 
 The following example shows an Opml data source:
 
@@ -101,7 +101,7 @@ Constructor Params
 Query Syntax
 ============
 
-The query syntax used by dojox.data.OpmlStore is identical to the query syntax used by `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+The query syntax used by dojox.data.OpmlStore is identical to the query syntax used by :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
 =============
 Query Options
@@ -146,7 +146,7 @@ Connecting OpmlStore to dijit.Tree
 ----------------------------------
 
 *Since Opml data can be hierarchical, the Tree widget is an excellent demo for it. A similar demo can be seen with ItemFileReadStore.*
-`here <quickstart/data/usingdatastores/simple>`_
+:ref:`here <quickstart/data/usingdatastores/simple>`
 
 .. cv-compound ::
   

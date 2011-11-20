@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/custom-builds:
 
 Custom Builds
 ====================================
@@ -11,7 +11,7 @@ Custom Builds
 .. contents::
    :depth: 4
 
-How to use Dojo's custom build system to package your code for optimal runtime performance. This guide briefly covers many common usages and parameters. See the `full build documentation <build/index>`_ for all the details.
+How to use Dojo's custom build system to package your code for optimal runtime performance. This guide briefly covers many common usages and parameters. See the :ref:`full build documentation <build/index>` for all the details.
 
 
 ============
@@ -20,10 +20,6 @@ Introduction
 
 A Dojo custom build speeds performance by doing the following:
 
-#. First, it groups together modules into ''layers''.  A layer, which is one big .js file, loads faster than the individual .js modules that comprise it
-#. Second, it ''interns'' external non-JavaScript files.  This is most important for Dijit templates, which are kept in a separate HTML file.  Interning pulls the entire file in and assigns it to a string.
-#. Third, it smooshes the layer down with ShrinkSafe.  ShrinkSafe removes unneeded whitespace and comments, and compacts variable names down to smaller ones.  This file downloads and parses faster than the original.
-#. Finally, it copies all non-layered scripts to the appropriate places.  While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer.  If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
 
 The catch?  You have to designate the modules in each layer with a ''profile'', which is something like a Makefile or Ant script.  But that's not too hard if you know your app well.
 
@@ -205,8 +201,6 @@ xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox i
 
 **For Dojo 0.9 through 1.1.x:** there is a `bug about loading dojox.gfx with an xdomain build <http://trac.dojotoolkit.org/ticket/4462>`_. This is **fixed in Dojo 1.2**. If you want to use dojox.gfx with an xdomain build of Dojo 0.9-1.1.x, there are some workarounds until the bug gets fixed:
 
-#. Include dojox/gfx.js directly in your page with a script tag in the HTML source, after the dojo.js script tag (do not use gfx.xd.js, use gfx.js).
-#. Include dojox.gfx in a layer file that you load via a script tag in the HTML source (load the .js layer file, not the .xd.js layer file).
 
 How to use xdomain builds in web pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

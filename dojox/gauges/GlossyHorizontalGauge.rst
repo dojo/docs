@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gauges/GlossyHorizontalGauge:
 
 dojox.gauges.GlossyHorizontalGauge
 ==================================

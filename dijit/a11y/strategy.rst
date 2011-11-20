@@ -1,5 +1,4 @@
-## page was renamed from dijit-a11y-strategy
-#format dojo_rst
+.. _dijit/a11y/strategy:
 
 Dijit Accessibility Strategy
 ============================
@@ -99,6 +98,6 @@ In order to assist with key event handling, an onkey event has been added to Doj
 Implement ARIA Specification
 ----------------------------
 
-ARIA techniques (described in the `Dijit Accessibility <dijit/a11y/index>`_ section) allow creating sophisticated UI components using scripting which can be identified to assistive technology. In the future, user agents can also make use of this information to provide additional visual clues about components as well. For example, client side validation of a text entry component that was marked using the ARIA invalid attribute could be visually identified by the browser rather than requiring the developer to provide a specific style or text identification on the component.
+ARIA techniques (described in the :ref:`Dijit Accessibility <dijit/a11y/index>` section) allow creating sophisticated UI components using scripting which can be identified to assistive technology. In the future, user agents can also make use of this information to provide additional visual clues about components as well. For example, client side validation of a text entry component that was marked using the ARIA invalid attribute could be visually identified by the browser rather than requiring the developer to provide a specific style or text identification on the component.
 
 The ARIA information is being added into the dijit widgets Methods have been added into dijit to enable setting the ARIA information. The roles and states for a widget can be set via the widget template or within the widget scripting code. The details of these methods are discussed later in this document. In addition to providing the roles and states for each component, there are some architectural considerations as well. For components that represent a hierarchy, such as a tree or menu, it is important to identify parent and child relationships. For items where position or count are important it may be necessary to hierarchically group elements or identify a set of related elements as a group. In some cases there are specific ARIA roles for grouping items such as treegroup for tree items within the same level. If no specific grouping role is provided the generic group role can be used.

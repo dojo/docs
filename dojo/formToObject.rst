@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/formToObject:
 
 dojo.formToObject
 ==================
@@ -127,7 +127,7 @@ Create an object version of a form with Dijit widgets
 See also
 ========
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
-* `dojo.queryToObject <dojo/queryToObject>`_
-* `dojo.formToQuery <dojo/formToQuery>`_
-* `dojo.formToJson <dojo/formToJson>`_
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>`
+* :ref:`dojo.queryToObject <dojo/queryToObject>`
+* :ref:`dojo.formToQuery <dojo/formToQuery>`
+* :ref:`dojo.formToJson <dojo/formToJson>`

@@ -1,1 +1,1 @@
-This was renamed to dojo/on.
+.. _dojo/listen:

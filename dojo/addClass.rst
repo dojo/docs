@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/addClass:
 
 dojo.addClass
 =============
@@ -11,7 +11,7 @@ dojo.addClass
 
 Safely adds a CSS class or a set of classes to a node avoiding duplications.
 
-Since dojo 1.7, dojo.addClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.add in dojo/dom-class.
+Since Dojo 1.7, ``dojo.addClass`` is exposed via the ``add`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -24,23 +24,25 @@ The function takes two arguments:
 
 Space-separated classes and arrays are supported since 1.4.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``add`` is accessed from the ``dojo/dom-class`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/dom-class"], function(domClass){
       // Add a class to some node: 
-      dojo.addClass("someNode", "anewClass");
+      domClass.add("someNode", "anewClass");
   });
 
-It's recommended to use cls.add in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.addClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-class"], function(cls){   
+  require(["dojo"], function(dojo){
       // Add a class to some node: 
-      cls.add("someNode", "anewClass");
+      dojo.addClass("someNode", "anewClass");
   });
 
 Dojo < 1.7
@@ -62,9 +64,9 @@ The following example adds the class "style1" to the node "example1":
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.add("example1", "style1");
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.add("example1", "style1");
   });
 
   // dojo < 1.7
@@ -84,6 +86,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function add1() {
@@ -109,9 +112,9 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.add("example1", "style1 style2");
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.add("example1", "style1 style2");
   });
 
   // dojo < 1.7
@@ -133,6 +136,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function add1() {
@@ -158,9 +162,9 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class"], function(cls){
-      cls.add("example1", ["style1", "style2"]);
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-class"], function(domClass){
+      domClass.add("example1", ["style1", "style2"]);
   });
 
   // dojo < 1.7
@@ -181,6 +185,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function add1() {
@@ -202,13 +207,13 @@ See it in action:
 Add to multiple nodes
 ---------------------
 
-``addClass`` is also available for `NodeLists <dojo/NodeList>`_, so that it's also possible to add classes for multiple nodes. The following example adds the class for each node in the NodeList returned from dojo.query:
+``addClass`` is also available for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to add classes for multiple nodes. The following example adds the class for each node in the NodeList returned from dojo.query:
 
 .. code-block :: javascript
 
-  //dojo 1.7 (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(cls, query){
-      query("#example3 div").add("style3");
+  // dojo 1.7+ (AMD)
+  require(["dojo/query", "dojo/NodeList-dom"], function(query){
+      query("#example3 div").addClass("style3");
   });
 
   // dojo < 1.7
@@ -229,6 +234,7 @@ See it in action:
   .. cv:: javascript
 
     <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
         function add3() {
@@ -255,6 +261,6 @@ See it in action:
 See also
 ========
 
-* `dojo.hasClass <dojo/hasClass>`_
-* `dojo.removeClass <dojo/removeClass>`_
-* `dojo.toggleClass <dojo/toggleClass>`_
+* :ref:`dojo.hasClass <dojo/hasClass>`
+* :ref:`dojo.removeClass <dojo/removeClass>`
+* :ref:`dojo.toggleClass <dojo/toggleClass>`

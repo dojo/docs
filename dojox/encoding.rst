@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding:
 
 dojox.encoding
 ==============
@@ -10,10 +10,10 @@ dojox.encoding
 The DojoX Encoding project is a repository for various types of encoding algorithms,
 including compression, digest generation (such as MD5 and SHA) and cryptography.
 
-* `dojox.encoding.compression <dojox/encoding/compression>`_
-* `dojox.encoding.crypto <dojox/encoding/crypto>`_
-* `dojox.encoding.digests <dojox/encoding/digests>`_
-* `dojox.encoding.ascii85 <dojox/encoding/ascii85>`_
-* `dojox.encoding.base64 <dojox/encoding/base64>`_
-* `dojox.encoding.bits <dojox/encoding/bits>`_
-* `dojox.encoding.easy64 <dojox/encoding/easy64>`_
+* :ref:`dojox.encoding.compression <dojox/encoding/compression>`
+* :ref:`dojox.encoding.crypto <dojox/encoding/crypto>`
+* :ref:`dojox.encoding.digests <dojox/encoding/digests>`
+* :ref:`dojox.encoding.ascii85 <dojox/encoding/ascii85>`
+* :ref:`dojox.encoding.base64 <dojox/encoding/base64>`
+* :ref:`dojox.encoding.bits <dojox/encoding/bits>`
+* :ref:`dojox.encoding.easy64 <dojox/encoding/easy64>`

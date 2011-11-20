@@ -1,5 +1,4 @@
-## page was copied from welcome
-#format rst
+.. _bookmigration:
 
 Dojo Book Migration
 ==============================================================
@@ -17,7 +16,7 @@ Dojo Book Outline
 `The Book of Dojo <http://dojotoolkit.org/book/dojo-book-1-0>`_.
 
 * `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
-  maps to: `How to Install the Dojo Toolkit <quickstart/install>`_ (complete)
+  maps to: :ref:`How to Install the Dojo Toolkit <quickstart/install>` (complete)
 * `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_ -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>> (complete)
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_ (complete)
 * `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_ (N/A, don't need to copy over)
@@ -40,8 +39,8 @@ Dojo Book Outline
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_ (done: doughays)
     * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textarea <dijit/form/Textarea>`_ (complete)
     * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_,  
-       `ValidationTextbox <dijit/form/ValidationTextBox>`_, `CurrencyTextbox <dijit/form/CurrencyTextBox>`_, `NumberTextbox <dijit/form/NumberTextBox>`_, (all complete)
-       `DateTextbox <dijit/form/DateTextBox>`_ and `TimeTextbox <dijit/form/TimeTextBox>`_ [[CraigRiecke, complete]]
+       :ref:`ValidationTextbox <dijit/form/ValidationTextBox>`, :ref:`CurrencyTextbox <dijit/form/CurrencyTextBox>`, :ref:`NumberTextbox <dijit/form/NumberTextBox>`, (all complete)
+       :ref:`DateTextbox <dijit/form/DateTextBox>` and :ref:`TimeTextbox <dijit/form/TimeTextBox>` [[CraigRiecke, complete]]
 
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_ (complete)
 
@@ -55,9 +54,9 @@ Dojo Book Outline
 
     * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_. maps to 
 
-          * `Button <dijit/form/Button>`_ (complete)
-          * `DropDownButton <dijit/form/DropDownButton>`_ (complete)
-          * `ComboButton <dijit/form/ComboButton>`_ (complete)
+          * :ref:`Button <dijit/form/Button>` (complete)
+          * :ref:`DropDownButton <dijit/form/DropDownButton>` (complete)
+          * :ref:`ComboButton <dijit/form/ComboButton>` (complete)
 
     * `Dijit Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_. maps to: `Menu <dijit/Menu>`_ (complete)
     * `Dijit Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_. maps to: `Toolbar <dijit/Toolbar>`_ (complete)
@@ -67,8 +66,8 @@ Dojo Book Outline
     * `Dijit ProgressBar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/progress-bar>`_. maps to: `ProgressBar <dijit/ProgressBar>`_ (complete)
     * `Dijit Tooltip <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/tooltip>`_. maps to: `Tooltip <dijit/Tooltip>`_ (complete)
     * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: 
-         * `Dialog <dijit/Dialog>`_ (complete)
-         * and `TooltipDialog <dijit/TooltipDialog>`_ (complete)
+         * :ref:`Dialog <dijit/Dialog>` (complete)
+         * and :ref:`TooltipDialog <dijit/TooltipDialog>` (complete)
     * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_ (complete)
 
   * `Advanced Editing and Display <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display>`_.

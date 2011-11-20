@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/io/httpParse:
 
 dojox.io.httpParse
 ==================

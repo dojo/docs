@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/store:
 
 dojo.store
 ==========
@@ -108,23 +108,23 @@ Core Stores included with Dojo
 
 The following stores, store wrappers, and utilities ship with Dojo. These provide a solid base of good modular components for using stores and building more complex store technology. The following two core stores based on the typical pattern of in-memory and server-based data stores:
 
-* `dojo.store.Memory <dojo/store/Memory>`_
+* :ref:`dojo.store.Memory <dojo/store/Memory>`
 
   An in-memory object store that queries, modifies, and accesses client-side in-memory data. This can be created with a simple array of JavaScript objects.
 
-* `dojo.store.JsonRest <dojo/store/JsonRest>`_
+* :ref:`dojo.store.JsonRest <dojo/store/JsonRest>`
 
   An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
 
 There is also an adapter store for using legacy Dojo Data stores with the new API:
 
-* `dojo.store.DataStore <dojo/store/DataStore>`_
+* :ref:`dojo.store.DataStore <dojo/store/DataStore>`
 
 We are also moving in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and adds functionality. Several key store wrappers:
 
-* `dojo.store.Observable <dojo/store/Observable>`_ This augments a store with the data monitoring capability, adding a observe method on the query result sets that notifies of data changes.
+* :ref:`dojo.store.Observable <dojo/store/Observable>` This augments a store with the data monitoring capability, adding a observe method on the query result sets that notifies of data changes.
 
-* `dojo.store.Cache <dojo/store/Cache>`_
+* :ref:`dojo.store.Cache <dojo/store/Cache>`
 
   Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
 
@@ -140,11 +140,11 @@ With this one can easily mix and match wrappers and base stores to achieve vario
 
 There are also a couple of utility modules:
 
-* `dojo.store.util.SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>`_
+* :ref:`dojo.store.util.SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>`
 
   This is basic query engine that provides simple object hash style filtering or function based filtering.
 
-* `dojo.store.util.QueryResults <dojo/store/util/QueryResults>`_
+* :ref:`dojo.store.util.QueryResults <dojo/store/util/QueryResults>`
 
   This utility will take an array or a promise for an array and return a result set object with all the standard iterative methods that should be available on a result set (forEach, map, and filter).
 
@@ -171,9 +171,9 @@ I believe this generally facilitates all of the Dojo Data functionality. Some of
 Design Goals
 ============
 
-* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the `XHR calls <dojo/_base/xhr>`_. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
+* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the :ref:`XHR calls <dojo/_base/xhr>`. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
 
-* We want to maintain the same level of functionality that `Dojo Data <dojo/data>`_ provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
+* We want to maintain the same level of functionality that :ref:`Dojo Data <dojo/data>` provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
 
 * Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
 

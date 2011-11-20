@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/io:
 
 dojo.io
 =======
@@ -7,5 +7,5 @@ Namespace containing official Dojo I/O related modules.
 
 Currently consists of:
 
-* `dojo.io.script <dojo/io/script>`_
-* `dojo.io.iframe <dojo/io/iframe>`_
+* :ref:`dojo.io.script <dojo/io/script>`
+* :ref:`dojo.io.iframe <dojo/io/iframe>`

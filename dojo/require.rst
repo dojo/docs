@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/require
-#format dojo_rst
+.. _dojo/require:
 
 dojo.require
 ============
@@ -23,7 +22,7 @@ In order to use a Dojo module or widget, you have to load the module with dojo.r
 Dojo's package concept
 ----------------------
 
-Dojo's code is split into modules which are similar to packages in Java except that in Dojo a module can contain both constructors (like classes in Java) and simple functions. For example, the "dojo.string" module contains a number of functions, such as `dojo.string.substitute() <dojo/string>`_. The "`dojo.dnd <dojo/dnd>`_" module contains a number of constructors such as dojo.dnd.Container dojo.dnd.Source in additon to top-level functions and properties on the dojo.dnd object.
+Dojo's code is split into modules which are similar to packages in Java except that in Dojo a module can contain both constructors (like classes in Java) and simple functions. For example, the "dojo.string" module contains a number of functions, such as :ref:`dojo.string.substitute() <dojo/string>`. The ":ref:`dojo.dnd <dojo/dnd>`" module contains a number of constructors such as dojo.dnd.Container dojo.dnd.Source in additon to top-level functions and properties on the dojo.dnd object.
 
 Naming conventions
 ------------------
@@ -37,7 +36,7 @@ At first, it may seem painful to require all modules, but Dojo rewards by:
 
 * Loading any dependent scripts for you.
 
-  If `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_ requires `dojo.number <dojo/number>`_, you still need only require dijit.form.NumberTextBox.
+  If :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>` requires :ref:`dojo.number <dojo/number>`, you still need only require dijit.form.NumberTextBox.
 
 * Preventing loading Dojo packages twice.
 
@@ -52,7 +51,7 @@ So you might wonder "So, don't I have to require the dojo module itself to use d
 Cooperation with addOnLoad
 ---------------------------
 
-dojo.require works directly with `dojo.addOnLoad <dojo/addOnLoad>`_. While modules are being loaded, any addOnLoad functions will wait until all dependencies are solved before firing again.
+dojo.require works directly with :ref:`dojo.addOnLoad <dojo/addOnLoad>`. While modules are being loaded, any addOnLoad functions will wait until all dependencies are solved before firing again.
 
 Additionally, you can re-call addOnLoad anytime you immediately call dojo.require, in order to ensure the modules and dependencies are ready. Even after page load!
 
@@ -111,7 +110,7 @@ Simply pass it a string:
   // load dojox/widget/Toaster.js:
   dojo.require("dojox.widget.Toaster");
 
-Throughout Dojo, the pattern above remains consistent. However, by using `dojo.registerModulePath <dojo/registerModulePath>`_ in your code, you are able to redefine the meaning of parts of namespaces. 
+Throughout Dojo, the pattern above remains consistent. However, by using :ref:`dojo.registerModulePath <dojo/registerModulePath>` in your code, you are able to redefine the meaning of parts of namespaces. 
 
 ========
 Examples

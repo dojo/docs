@@ -1,6 +1,4 @@
-## page was renamed from 1.2/dijit/form
-## page was renamed from dijit/form
-#format dojo_rst
+.. _dijit/form:
 
 dijit.form
 ==========
@@ -16,7 +14,7 @@ dijit.form
 
 The dijit.form package contains "form widgets". What's a form widget? It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
 
-The widgets can be used in a FORM tag, in a `dijit.form.Form <dijit/form/Form>`_ widget, or outside of a form.
+The widgets can be used in a FORM tag, in a :ref:`dijit.form.Form <dijit/form/Form>` widget, or outside of a form.
 
 Note not to confuse the dijit.form module with the dijit.form.Form widget.
 
@@ -30,19 +28,19 @@ The dijit.form widgets are:
 Buttons
 -------
 
-* `dijit.form.Button <dijit/form/Button>`_
+* :ref:`dijit.form.Button <dijit/form/Button>`
 
   A representation of a normal <button> or <input type="submit/reset/button" />
 
-* `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ 
+* :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` 
 
   A button which displays a menu or some other popup when you press it
 
-* `dijit.form.ComboButton <dijit/form/ComboButton>`_
+* :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`
 
   A button with an arrow to show a drop down (often a menu)
 
-* `dijit.form.ToggleButton <dijit/form/ToggleButton>`_
+* :ref:`dijit.form.ToggleButton <dijit/form/ToggleButton>`
 
   A cross between a Button and a Checkbox widget
 
@@ -51,84 +49,84 @@ Input widgets
 
 All Widgets, that are similar to <input>:
 
-* `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
+* :ref:`dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`
 
   A specialized input widget for monetary values, much like the currency type in spreadsheet programs
 
-* `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
+* :ref:`dijit.form.DateTextBox <dijit/form/DateTextBox>`
 
   An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
-* `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
+* :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>`
 
   An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
 
-* `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
+* :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`
 
   A input widget which restricts input to numeric input
 
-* `dijit.form.TextBox <dijit/form/TextBox>`_
+* :ref:`dijit.form.TextBox <dijit/form/TextBox>`
 
   A basic <input type="text">-style form control. You can use ``type="hidden"`` to have hidden inputs compatible with ``dijit.form.Form``.
 
-* `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
+* :ref:`dijit.form.TimeTextBox <dijit/form/TimeTextBox>`
 
   A time input control which allows either typing or choosing a time from any time-picker widget
 
-* `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+* :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
 
 TextArea
 --------
 
-* `dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`_
+* :ref:`dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`
 
   A simple wrapper of <textarea>; equivalent functionality
 
-* `dijit.form.Textarea <dijit/form/Textarea>`_
+* :ref:`dijit.form.Textarea <dijit/form/Textarea>`
 
   An auto expanding/contracting <textarea>
 
 Select widgets
 --------------
 
-* `dijit.form.Select <dijit/form/Select>`_
+* :ref:`dijit.form.Select <dijit/form/Select>`
 
   A styleable drop down select box (similar to html select element)
 
-* `dijit.form.ComboBox <dijit/form/ComboBox>`_
+* :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`
 
   This is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions
 
-* `dijit.form.MultiSelect <dijit/form/MultiSelect>`_
+* :ref:`dijit.form.MultiSelect <dijit/form/MultiSelect>`
 
   The MultiSelect widget allows the selection of multiple items
 
-* `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
+* :ref:`dijit.form.FilteringSelect <dijit/form/FilteringSelect>`
 
   Similar to a <select> but with type-ahead filtering of the drop down list
 
-There are also some select widgets in the `dojox.form <dojox/form>`_ project.
+There are also some select widgets in the :ref:`dojox.form <dojox/form>` project.
 
 Miscellaneous
 -------------
 
-* `dijit.form.Form <dijit/form/Form>`_
+* :ref:`dijit.form.Form <dijit/form/Form>`
 
   Corresponds to a <form> itself; wraps other widgets
 
-* `dijit.form.Slider <dijit/form/Slider>`_
+* :ref:`dijit.form.Slider <dijit/form/Slider>`
 
   A scale with a handle you can drag up/down or left/right to select a value
 
-* `dijit.form.CheckBox <dijit/form/CheckBox>`_
+* :ref:`dijit.form.CheckBox <dijit/form/CheckBox>`
 
   Nearly the same as an HTML checkbox, but with fancy styling
 
-* `dijit.form.RadioButton <dijit/form/RadioButton>`_
+* :ref:`dijit.form.RadioButton <dijit/form/RadioButton>`
 
   To select one choice from a list
 
-There are also some notable widgets in `dojox.form <dojox/form>`_ and `dojox.widget <dojox/widget>`_ that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
+There are also some notable widgets in :ref:`dojox.form <dojox/form>` and :ref:`dojox.widget <dojox/widget>` that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
 
 
 ===============
@@ -141,7 +139,7 @@ There are three parts to form validation:
 
 * validation tooltips
 
-* prevention of form submit: using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid
+* prevention of form submit: using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form submission if any of the fields are invalid
 
 Color change
 ------------
@@ -166,7 +164,7 @@ The validation tooltips are only displayed while the field is focused (and after
 
 Prevent form submission
 -----------------------
-Using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid.  Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
+Using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form submission if any of the fields are invalid.  Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
 
 =================================
 Use Dijit Form Controls All Over!

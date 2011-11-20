@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/ioPipelineTopics:
 
 IO Pipeline Topics
 ==================
@@ -10,7 +10,7 @@ IO Pipeline Topics
 .. contents::
    :depth: 2
 
-Topics that are published via `dojo.publish <dojo/publish>`_ that correspond to events in the Input/Output (IO) pipeline used by Dojo.
+Topics that are published via :ref:`dojo.publish <dojo/publish>` that correspond to events in the Input/Output (IO) pipeline used by Dojo.
 
 ============
 Introduction
@@ -109,5 +109,5 @@ Dojo < 1.7
 See also
 ========
 
-* `dojo.publish <dojo/publish>`_
-* `dojo.subscribe <dojo/subscribe>`_
+* :ref:`dojo.publish <dojo/publish>`
+* :ref:`dojo.subscribe <dojo/subscribe>`

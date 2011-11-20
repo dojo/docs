@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_FormMixin:
 
 dojox.form.manager._FormMixin
 =============================
@@ -15,7 +15,7 @@ dojox.form.manager._FormMixin
 Introduction
 ============
 
-This class is the component of the form manager. It should be used together with `_Mixin <dojox/form/manager/_Mixin>`_.
+This class is the component of the form manager. It should be used together with :ref:`_Mixin <dojox/form/manager/_Mixin>`.
 
 If the widget is based on ``<form>`` element, this mixin provides the enhanced functionality to reset and submit the form using the standard browser form submitting process. ``onreset`` and ``onsubmit`` events are processed automatically.
 
@@ -75,7 +75,7 @@ Example:
     // some form widget has failed the validation
   }
 
-*Note: this method doesn't validate form nodes controlled by* `_NodeMixin <dojox/form/manager/_NodeMixin>`_ *or node attributes of the form manager widget. You should implement your own validation for them.*
+*Note: this method doesn't validate form nodes controlled by* :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>` *or node attributes of the form manager widget. You should implement your own validation for them.*
 
 isForm
 ~~~~~~
@@ -129,7 +129,7 @@ Lifecycle methods are part of every widget. They are used to initialize and dest
 startup
 ~~~~~~~
 
-This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see `dijit._Widget <dijit/_Widget>`_.
+This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
 ====
 Tips

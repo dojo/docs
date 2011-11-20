@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/analytics/Urchin:
 
 dojox.analytics.Urchin
 ======================
@@ -40,7 +40,7 @@ or directly on the data-dojo-config attribute of your ``dojo.js`` script tag:
 
    <script src="js/dojo/dojo.js" data-dojo-config="urchin: UA-12345-67"></script>
 
-Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the `parser <dojo/parser>`_), you simply need to add a tag somewhere in your page:
+Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the :ref:`parser <dojo/parser>`), you simply need to add a tag somewhere in your page:
 
 .. code-block :: html
   :linenos:

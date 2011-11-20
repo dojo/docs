@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/isString:
 
 dojo.isString
 =============
@@ -151,8 +151,8 @@ Test against isString()
 See also
 ========
 
-* `dojo.isArray <dojo/isArray>`_ - Checks if the parameter is an Array
-* `dojo.isFunction <dojo/isFunction>`_ - Checks if the parameter is a Function
-* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
-* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
-* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
+* :ref:`dojo.isArray <dojo/isArray>` - Checks if the parameter is an Array
+* :ref:`dojo.isFunction <dojo/isFunction>` - Checks if the parameter is a Function
+* :ref:`dojo.isObject <dojo/isObject>` - Checks if the parameter is an Object
+* :ref:`dojo.isArrayLike <dojo/isArrayLike>` - Checks if the parameter is like an Array
+* :ref:`dojo.isAlien <dojo/isAlien>` - Checks if the parameter is a built-in function

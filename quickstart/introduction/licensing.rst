@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/introduction/licensing:
 
 Dojo licensing
 ==============

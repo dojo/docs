@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/data/ItemFileWriteStore:
 
 dojo.data.ItemFileWriteStore
 ============================
@@ -11,23 +11,23 @@ dojo.data.ItemFileWriteStore
 .. contents::
   :depth: 2
 
-Dojo core provides the ItemFileWriteStore store as an extension to ItemFileReadStore that adds on the dojo.data.api.Write and dojo.data.api.Notification API support to ItemFileReadStore. It was specifically created as a separate class so that if you only need read capability, you do not incur the download penalty of the write and notification API support if you won't use it. If your application needs to write to the ItemFileStore instead of just Read, then ItemFileWriteStore is the store you should instantiate. The input data format is identical to `ItemFileReadStore <dojo/data/ItemFileReadStore>`_.
+Dojo core provides the ItemFileWriteStore store as an extension to ItemFileReadStore that adds on the dojo.data.api.Write and dojo.data.api.Notification API support to ItemFileReadStore. It was specifically created as a separate class so that if you only need read capability, you do not incur the download penalty of the write and notification API support if you won't use it. If your application needs to write to the ItemFileStore instead of just Read, then ItemFileWriteStore is the store you should instantiate. The input data format is identical to :ref:`ItemFileReadStore <dojo/data/ItemFileReadStore>`.
 
 
 ===========
 API Support
 ===========
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
-* `dojo.data.api.Notification <dojo/data/api/Notification>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
+* :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
 
 ======================
 Constructor Parameters
 ======================
 
-The constructor for ItemFileWriteStore takes the same parameters as `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ 
+The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>` 
 
 ============
 Custom Types
@@ -66,7 +66,7 @@ So, when Date objects are encountered, ItemFileWriteStore automatically serializ
 Query Syntax
 ============
 
-The query syntax for ItemFileWriteStore is identical to the query syntax of ItemFileReadStore so see that `section <dojo/data/ItemFileReadStore>`_  for more information.
+The query syntax for ItemFileWriteStore is identical to the query syntax of ItemFileReadStore so see that :ref:`section <dojo/data/ItemFileReadStore>`  for more information.
 
 =============
 The Write API
@@ -139,7 +139,7 @@ To put it more simply, say you have Item C which is referenced by Items A and B.
 The Notification API
 ====================
 
-ItemFileWriteStore supports dojo.data.api.Notification. This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions. These events are functions on the store that widgets and user code can *dojo.connect* to. This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another. For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
+ItemFileWriteStore supports dojo.data.api.Notification. This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions. These events are functions on the store that widgets and user code can *dojo.connect* to. This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another. For more details on Notification in general, please refer to the :ref:`Notification section <dojo/data/api/Notification>` of the dojo.data API.
 
 ===================
 Pseudocode Examples

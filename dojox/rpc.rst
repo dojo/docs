@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojox/rpc
-#format dojo_rst
+.. _dojox/rpc:
 
 dojox.rpc
 =========
@@ -7,12 +6,12 @@ dojox.rpc
 :Status: Contributed, Draft
 :Version: 1.0
 
-The DojoX RPC Project is an enhanced version of `dojo.rpc <dojo/rpc>`_, and will replace it in 2.0. RPC, or remote procedure call, is a system for communicating with a backend using a variety of flexible transports, all wrapped around a single class called a `Service <dojox/rpc/Service>`_
+The DojoX RPC Project is an enhanced version of :ref:`dojo.rpc <dojo/rpc>`, and will replace it in 2.0. RPC, or remote procedure call, is a system for communicating with a backend using a variety of flexible transports, all wrapped around a single class called a :ref:`Service <dojox/rpc/Service>`
 
 Demonstration
 -------------
 
-This is an example of the Google API using the pre-defined google.smd in the `SMD Library <dojox/rpc/SMDLibrary>`_. Unless you are Google, the transport will be x-domain by way of `io.script <dojo/io/script>`_, so be sure to include that as well. (RPC can be used locally as well, using built in XHR transports) 
+This is an example of the Google API using the pre-defined google.smd in the :ref:`SMD Library <dojox/rpc/SMDLibrary>`. Unless you are Google, the transport will be x-domain by way of :ref:`io.script <dojo/io/script>`, so be sure to include that as well. (RPC can be used locally as well, using built in XHR transports) 
 
 .. cv-compound::
 

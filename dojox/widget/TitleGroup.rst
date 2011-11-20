@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/TitleGroup:
 
 dojox.widget.TitleGroup
 =======================
@@ -6,7 +6,7 @@ dojox.widget.TitleGroup
 :since: 1.6.0
 :author: dante
 
-A container widget which delegates a connection between children `TitlePanes <dijit/TitlePane>`_. Behaves similarly to an `AccordionContainer <dijit/layout/AccordionContainer>`_ though has a variable overall height and does not "dock" to other layout widgets, such as a `BorderContainer <dijit/layout/BorderContainer>`_. 
+A container widget which delegates a connection between children :ref:`TitlePanes <dijit/TitlePane>`. Behaves similarly to an :ref:`AccordionContainer <dijit/layout/AccordionContainer>` though has a variable overall height and does not "dock" to other layout widgets, such as a :ref:`BorderContainer <dijit/layout/BorderContainer>`. 
 
 Examples
 ========
@@ -92,6 +92,6 @@ Adding and removing children:
 See Also:
 =========
 
-* `dijit.TitlePane <dijit/TitlePane>`_
-* `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
+* :ref:`dijit.TitlePane <dijit/TitlePane>`
+* :ref:`dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`
 * `The original blog and motivation <http://www.sitepen.com/blog/2008/10/21/quick-fixes-and-dojo-support/>`_

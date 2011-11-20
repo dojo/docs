@@ -1,11 +1,11 @@
-#format dojo_rst
+.. _dojo/NodeList-html:
 
 dojo.NodeList-html
 ==================
 
-Extends base `dojo.NodeList <dojo/NodeList>`_ with functionality from `dojo.html <dojo/html>`_ for complex content setting.
+Extends base :ref:`dojo.NodeList <dojo/NodeList>` with functionality from :ref:`dojo.html <dojo/html>` for complex content setting.
 
 See Also
 ========
 
-* `dojo.place <dojo/place>`_
+* :ref:`dojo.place <dojo/place>`

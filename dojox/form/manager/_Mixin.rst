@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_Mixin:
 
 dojox.form.manager._Mixin
 =========================
@@ -15,7 +15,7 @@ dojox.form.manager._Mixin
 Introduction
 ============
 
-This class is the main component of the form manager, which provides the initialization and core functionality. It can be used on its own as a mixin to other widgets, or as a part of `dojox.form.Manager <dojox/form/Manager>`_. All other form manager mixins require this class to be mixed in as well.
+This class is the main component of the form manager, which provides the initialization and core functionality. It can be used on its own as a mixin to other widgets, or as a part of :ref:`dojox.form.Manager <dojox/form/Manager>`. All other form manager mixins require this class to be mixed in as well.
 
 On startup this mixin inspects its body and registers all found form widgets, and attached nodes (by ``data-dojo-attach-point``). Additionally it provides some low-level properties and methods to handle controlled elements.
 
@@ -33,7 +33,7 @@ Only one property falls under this category: watch_.
 watch
 ~~~~~
 
-This is a Boolean property, which is used to control `observers <dojox/form/manager#event-processing>`_. When this property is ``true`` change events are processed and passed to relevant observers as usual. When it is ``false``, change events are ignored.
+This is a Boolean property, which is used to control :ref:`observers <dojox/form/manager>`. When this property is ``true`` change events are processed and passed to relevant observers as usual. When it is ``false``, change events are ignored.
 
 This property is useful when you want to modify/update controlled elements, but you don't want to cause observers to run.
 
@@ -54,9 +54,9 @@ Example:
 Value access
 ------------
 
-Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use `_ValueMixin <dojox/form/manager/_ValueMixin>`_.
+Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use :ref:`_ValueMixin <dojox/form/manager/_ValueMixin>`.
 
-Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `formNodeValue <dojox/form/manager/_NodeMixin#formnodevalue>`_.
+Note: :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>` implements a complimentary method: :ref:`formNodeValue <dojox/form/manager/_NodeMixin>`.
 
 formWidgetValue
 ~~~~~~~~~~~~~~~
@@ -70,7 +70,7 @@ This method allows to get/set values of controlled form widgets. It can be used 
   // writing the value
   fm.formWidgetValue("lastName", "Smith");
 
-The first parameter is a name of `a controlled form element <dojox/form/manager#controlled-elements>`_ (a string). The optional second parameter is a value to be set. It is usually a string too.
+The first parameter is a name of :ref:`a controlled form element <dojox/form/manager>` (a string). The optional second parameter is a value to be set. It is usually a string too.
 
 The returned value is:
 
@@ -80,7 +80,7 @@ The returned value is:
 formPointValue
 ~~~~~~~~~~~~~~
 
-This method is similar to formWidgetValue_ method but works on `nodes attached to the widget itself <dojox/form/manager#controlled-elements>`_:
+This method is similar to formWidgetValue_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`:
 
 .. code-block :: javascript
 
@@ -96,7 +96,7 @@ Inspection
 
 Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
 
-Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `inspectFormNodes <dojox/form/manager/_NodeMixin#inspectformnodes>`_.
+Note: :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>` implements a complimentary method: :ref:`inspectFormNodes <dojox/form/manager/_NodeMixin>`.
 
 inspectFormWidgets
 ~~~~~~~~~~~~~~~~~~
@@ -173,7 +173,7 @@ What ``inspector`` does is up to you. It can modify or just read widget values. 
 inspectAttachedPoints
 ~~~~~~~~~~~~~~~~~~~~~
 
-This method is similar to inspectFormWidgets_ method but works on `nodes attached to the widget itself <dojox/form/manager#controlled-elements>`_. The only difference is the inspector signature, which uses a DOM node instead of a widget:
+This method is similar to inspectFormWidgets_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`. The only difference is the inspector signature, which uses a DOM node instead of a widget:
 
 .. code-block :: javascript
 
@@ -196,7 +196,7 @@ Everything else is the same. Example:
 inspect
 ~~~~~~~
 
-This is the high-level method, which has the same signature as inspectFormWidgets_ and inspectAttachedPoints_. The major difference is: it iterates over widgets **and** attached nodes **and** form nodes (for the last one you have to include `_NodeMixin <dojox/form/manager/_NodeMixin>`_):
+This is the high-level method, which has the same signature as inspectFormWidgets_ and inspectAttachedPoints_. The major difference is: it iterates over widgets **and** attached nodes **and** form nodes (for the last one you have to include :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>`):
 
 .. code-block :: javascript
 
@@ -214,7 +214,7 @@ Registration
 
 These functions can register/unregister widgets. In most cases these methods are not used directly because dojox.form.manager._Mixin registers all children form widgets automatically. But if you create/delete widgets dynamically, you should register/unregister them manually.
 
-Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements complimentary methods: `registerNode <dojox/form/manager/_NodeMixin#registernode>`_, `unregisterNode <dojox/form/manager/_NodeMixin#unregisternode>`_, `registerNodeDescendants <dojox/form/manager/_NodeMixin#registernodedescendants>`_, `unregisterNodeDescendants <dojox/form/manager/_NodeMixin#unregisternodedescendants>`_.
+Note: :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>` implements complimentary methods: :ref:`registerNode <dojox/form/manager/_NodeMixin>`, :ref:`unregisterNode <dojox/form/manager/_NodeMixin>`, :ref:`registerNodeDescendants <dojox/form/manager/_NodeMixin>`, :ref:`unregisterNodeDescendants <dojox/form/manager/_NodeMixin>`.
 
 registerWidget
 ~~~~~~~~~~~~~~
@@ -286,12 +286,12 @@ Lifecycle methods are part of every widget. They are used to initialize and dest
 startup
 ~~~~~~~
 
-This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see `dijit._Widget <dijit/_Widget>`_.
+This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
 destroy
 ~~~~~~~
 
-This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see `dijit._Widget <dijit/_Widget>`_.
+This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
 ====================
 Additional functions
@@ -317,7 +317,7 @@ This adapter is useful when you want to do a uniform processing of form elements
 dojox.form.manager.inspectorAdapter
 -----------------------------------
 
-This is a slightly different adapter for arrays versus widgets/nodes. The difference with `dojox.form.manager.actionAdapter`_ is in case of arrays it applies the inspector only to the first element of the array.
+This is a slightly different adapter for arrays versus widgets/nodes. The difference with :ref:`dojox.form.manager.actionAdapter` is in case of arrays it applies the inspector only to the first element of the array.
 
 .. code-block :: javascript
 
@@ -332,10 +332,10 @@ This adapter is useful when you want to do a uniform inspection of form elements
 dojox.form.manager._keys
 ------------------------
 
-This function takes an object and returns an array of all keys. It is very similar to `dojox.lang.functional.object.keys() <dojox/lang/functional/object#keys>`_. It is defined there only to reduce the dependency on other packages.
+This function takes an object and returns an array of all keys. It is very similar to :ref:`dojox.lang.functional.object.keys() <dojox/lang/functional/object>`. It is defined there only to reduce the dependency on other packages.
 
 ===============
 Technical notes
 ===============
 
-_Mixin extends `dijit._Widget <dijit/_Widget>`_ with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the `dojox.form.manager event processing documentation <dojox/form/manager#event-processing>`_.
+_Mixin extends :ref:`dijit._Widget <dijit/_Widget>` with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the :ref:`dojox.form.manager event processing documentation <dojox/form/manager>`.

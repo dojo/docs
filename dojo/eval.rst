@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/eval:
 
 dojo.eval
 =========

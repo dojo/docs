@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/globalization-guidelines/index:
 
 Globalization Guidelines
 ========================
@@ -25,26 +25,26 @@ Use the following guidelines to implement internationalization.
 
 
 ===========================================================================================================
-`Encoding Guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`_
+:ref:`Encoding Guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
 ===========================================================================================================
 
-* `You should always use UTF-8 for encoding settings wherever applicable. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-should-always-use-utf-8-for-encoding-settings-wherever-applicable>`_
-* `You should encode all text files in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-should-encode-all-text-files-in-utf-8>`_
-* `You must specify the UTF-8 encoding in every HTML file before any non-English characters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-specify-the-utf-8-encoding-in-every-html-file-before-any-non-english-characters>`_
-* `You must use the BOM header for UTF-16 files. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-the-bom-header-for-utf-16-files>`_
-* `You must use UTF-8 to decode XHR request parameters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-utf-8-to-decode-xhr-request-parameters>`_
-* `You must use UTF-8 encoding when using a non-English string in a URL. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-utf-8-encoding-when-using-a-non-english-string-in-a-url>`_
-* `You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-set-content-type-in-an-http-response-header-if-the-response-is-not-encoded-in-utf-8>`_
+* :ref:`You should always use UTF-8 for encoding settings wherever applicable. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You should encode all text files in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You must specify the UTF-8 encoding in every HTML file before any non-English characters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You must use the BOM header for UTF-16 files. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You must use UTF-8 to decode XHR request parameters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You must use UTF-8 encoding when using a non-English string in a URL. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
+* :ref:`You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
 
 
 ===============================================================================================================================================
-`Locale and Resource Bundle Guidelines <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`_
+:ref:`Locale and Resource Bundle Guidelines <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
 ===============================================================================================================================================
 
-* `You must set dojoConfig.locale in all files to the same as the locale used by the server code. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-must-set-dojoconfig-locale-in-all-files-to-achieve-server-based-personalization>`_
-* `You must always use resource bundle to store the strings displayed to users. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-must-always-use-resource-bundles-to-store-the-strings-displayed-to-users>`_
-* `You should use dojoConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-should-use-dojoconfig-locale-to-set-the-default-locale-and-extra-locales-and-use-only-dojo-requirelocalization-without-the-locale-parameter>`_
-* `You may make a build to include resource bundles in the locales that you use. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-may-make-a-build-to-include-resource-bundles-in-the-locales-that-you-use>`_
+* :ref:`You must set dojoConfig.locale in all files to the same as the locale used by the server code. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
+* :ref:`You must always use resource bundle to store the strings displayed to users. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
+* :ref:`You should use dojoConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
+* :ref:`You may make a build to include resource bundles in the locales that you use. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
 
 
 ==============================

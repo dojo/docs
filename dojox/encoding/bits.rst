@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/bits:
 
 dojox.encoding.bits
 ===================

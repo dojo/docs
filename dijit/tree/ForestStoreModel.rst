@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dijit/tree/ForestStoreModel:
 
 dijit.tree.ForestStoreModel
 ===========================
 
-The ForestStoreModel connects a data store with multiple "root" items to a `dijit.Tree <dijit/Tree>`_.
+The ForestStoreModel connects a data store with multiple "root" items to a :ref:`dijit.Tree <dijit/Tree>`.
 
 An example might be a geographical database; there are multiple continents but no ''single'' top level item called "world".
 

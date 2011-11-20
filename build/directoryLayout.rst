@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/directoryLayout:
 
 Sample Directory Layout for Builds
 ==================================

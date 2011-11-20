@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/NodeList:
 
 dojox.NodeList
 ==============
@@ -9,16 +9,16 @@ dojox.NodeList
 :author: bill
 :since: 1.6.0
 
-A project containing modules which explicitly extend `dojo.NodeList <dojo/NodeList>`_, which is the result of calling `dojo.query <dojo/query>`_
+A project containing modules which explicitly extend :ref:`dojo.NodeList <dojo/NodeList>`, which is the result of calling :ref:`dojo.query <dojo/query>`
 
 =======
 Modules
 =======
 
-* `dojox.NodeList.delegate <dojox/NodeList/delegate>`_ - provides a ``delegate`` method, for event delegation
+* :ref:`dojox.NodeList.delegate <dojox/NodeList/delegate>` - provides a ``delegate`` method, for event delegation
 
 ========
 See Also
 ========
 
-  * `dojo.NodeList <dojo/NodeList>`_
+  * :ref:`dojo.NodeList <dojo/NodeList>`

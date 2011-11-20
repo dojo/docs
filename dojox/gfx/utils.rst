@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx/utils:
 
 dojox.gfx.utils
 ===============
@@ -15,23 +15,23 @@ The *dojox.gfx.utils* module is a set of utility functions for working with dojo
 Provided functions
 ==================
 
-* `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
+* :ref:`dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`
 
   Serialize the passed surface object to JSON form
 
-* `dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`_
+* :ref:`dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`
 
   Rebuild the dojox.gfx.Surface object from the provided JSON
 
-* `dojox.gfx.utils.serialize <dojox/gfx/utils/serialize>`_
+* :ref:`dojox.gfx.utils.serialize <dojox/gfx/utils/serialize>`
 
   Serialize the passed surface object to JavaScript Object form
 
-* `dojox.gfx.utils.deserialize <dojox/gfx/utils/deserialize>`_
+* :ref:`dojox.gfx.utils.deserialize <dojox/gfx/utils/deserialize>`
 
   Rebuild the dojox.gfx.Surface object from the provided JS representation.
 
-* `dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>`_ 
+* :ref:`dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>` 
 
   Serialize the passed surface object to SVG text.
 

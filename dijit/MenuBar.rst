@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/MenuBar:
 
 dijit.MenuBar
 =============
@@ -136,4 +136,4 @@ Close a submenu                               Esc, or use right arrow to navigat
 See also
 ========
 
-* See `dijit.Menu <dijit/Menu>`_.
+* See :ref:`dijit.Menu <dijit/Menu>`.

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/io/iframe:
 
 dojo.io.iframe
 ==============
@@ -21,13 +21,13 @@ The iframe IO functions are intended to handle complex IO operations that cannot
 * Calling a service on a server other than the one that originated the calling page (cross-domain request). Note that in this case, the response body cannot be read.  So you can send stuff, but not get any replies.
 * Uploading files from a form (File Input controls).  The normal XHR mechanism cannot access file data referenced by file selection tags as a security measure.  An iframe, however, can, so by proxying those calls through an iframe make it possible to still do file uploads in an asynchronous manner.
 
-It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responese back in a very specific format, please refer to the `Additional Information <dojo/io/iframe#id1>`_ section.
+It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responese back in a very specific format, please refer to the :ref:`Additional Information <dojo/io/iframe>` section.
 
 =====
 Usage
 =====
 
-Usage is similar to `dojo.xhrGet <dojo/xhrGet>`_ and `dojo.xhrPost <dojo/xhrPost>`_.  Please see below for information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
+Usage is similar to :ref:`dojo.xhrGet <dojo/xhrGet>` and :ref:`dojo.xhrPost <dojo/xhrPost>`.  Please see below for information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
 
 dojo.io.iframe supported object properties
 -------------------------------------------
@@ -220,5 +220,5 @@ See Also
 
 A common use of dojo.io.iframe is for uploading files in an Ajax-like manner. There are prefabricated widgets to do this as well, some using iframe transports, some using flash 9+
 
-* `File Uploader <dojox/form/FileUploader>`_
-* `File Input <dojox/form/FileInput>`_
+* :ref:`File Uploader <dojox/form/FileUploader>`
+* :ref:`File Input <dojox/form/FileInput>`

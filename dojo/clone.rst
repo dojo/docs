@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/clone:
 
 dojo.clone
 ===============
@@ -39,7 +39,7 @@ Simply pass _something_ to dojo.clone, and a new version of that _something_ wil
   // clone an array
   var newarray = dojo.clone(["a","b","c"]);
   
-Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is `byId <dojo/byId>`_, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
+Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is :ref:`byId <dojo/byId>`, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
 
 .. code-block :: javascript
   :linenos:
@@ -55,7 +55,7 @@ Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node 
   var newnode = dojo.clone(node);
   dojo.attr(newnode, "id", "someNewId");
 
-If you have a pointer to some node already, or want to avoid id's all together, `dojo.query <dojo/query>`_ may be useful:
+If you have a pointer to some node already, or want to avoid id's all together, :ref:`dojo.query <dojo/query>` may be useful:
 
 .. code-block :: javascript
   :linenos:

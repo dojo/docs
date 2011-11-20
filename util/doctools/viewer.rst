@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _util/doctools/viewer:
 
 Viewing the Generated API Docs
 ===============================
@@ -41,14 +41,14 @@ If you point your browser at http://localhost/test.php (or whatever hostname you
 Get the viewer code
 ===================
 
-We're going to get a copy of the code behind dojotoolkit.org/api and customize that lightly to create our own API viewer. Lets start by getting an export. In your terminal/shell/cmd-prompt, move into your 'api' directory, and type:
+We're going to get a copy of the code behind dojotoolkit.org/api and customize that lightly to create our own API viewer. Lets start by getting an export. In your terminal/shell/cmd-prompt, move into your web root directory, and type:
 
 .. code-block :: php
   :linenos:
     
   svn export http://svn.dojotoolkit.org/website/trunk/api api
 
-That should create the 'api' sub-directory, and fill it with a load of php file and other assets. Note, we're doing an export here, not a checkout, so its divorced from the SVN copy. That means its yours to change, but if you prefer you can use svn checkout for those parts you want to be able to update with any changes from the remote repository. 
+That should create the 'api' sub-directory, and fill it with a load of php files and other assets. Note, we're doing an export here, not a checkout, so its divorced from the SVN copy. That means its yours to change, but if you prefer you can use svn checkout for those parts you want to be able to update with any changes from the remote repository. 
 
 ====================
 Configure the Viewer
@@ -84,7 +84,7 @@ Now, you can point your browser at http://localhost/api/, (or whatever hostname 
 Import API Data
 ====================
 
-Now to get our own API data into the viewer. If you've followed the `generation <util/doctools/generate>`_ steps, you should be in possession of an xml file, which is the API data for your namespace. We need to import that data, so navigate (in your browser) to lib/upload.php. 
+Now to get our own API data into the viewer. If you've followed the :ref:`generation <util/doctools/generate>` steps, you should be in possession of an xml file, which is the API data for your namespace. We need to import that data, so navigate (in your browser) to lib/upload.php. 
 
 This barebones upload page asks for two variables: a version number, and a URL to your XML file.
 Note that it must be a URL and NOT a straight-up file.  The URL can be anything (cURL is used
@@ -121,6 +121,6 @@ That value is referring to a subdirectory name of the 'themes' directory. Peek i
 See Also
 ========
 
-- `Dojo documentation tools overview <util/doctools>`_
-- `API doc syntax <util/doctools/markup>`_ - how to markup API documentation in your code
-- `Running the generation tools <util/doctools/generate>`_ - directories setup, defining custom namespaces, configuring and running the generation tools
+- :ref:`Dojo documentation tools overview <util/doctools>`
+- :ref:`API doc syntax <util/doctools/markup>` - how to markup API documentation in your code
+- :ref:`Running the generation tools <util/doctools/generate>` - directories setup, defining custom namespaces, configuring and running the generation tools

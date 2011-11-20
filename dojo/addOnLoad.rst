@@ -1,10 +1,9 @@
-## page was renamed from 1.2/dojo/addOnLoad
-#format dojo_rst
+.. _dojo/addOnLoad:
 
 dojo.addOnLoad
 ==============
 
-dojo.addOnLoad() has been deprecated in favor of the (equivalent) `dojo.ready <dojo/ready>`_ function, and more recently, in favor of the `The AMD API <loader/amd#the-amd-api>`_, and the `domReady! plugin <dojo/domReady>`_.
+dojo.addOnLoad() has been deprecated in favor of the (equivalent) :ref:`dojo.ready <dojo/ready>` function, and more recently, in favor of the :ref:`The AMD API <loader/amd>`, and the :ref:`domReady! plugin <dojo/domReady>`.
 
 The documentation below is preserved for legacy purposes:
 

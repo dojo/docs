@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/charting:
 
 dojox.charting
 ==============
@@ -50,7 +50,7 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Charting Basics
 ===============
 
-Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See `AMD loader documentation <developer/design/loader>`_ for more details on AMD.
+Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See :ref:`AMD loader documentation <developer/design/loader>` for more details on AMD.
 
 .. code-example::
   :type: inline
@@ -215,7 +215,7 @@ Tension allows you to add some curve to the lines on you plot. By default this o
  * **"x"** is similar to "X" but assumes that the point set is closed (a loop). It can be used when plotting true XY data.
  * **"S"** for a quadratic bezier smooth lines.
 
-Shadows allow you to add a shadow effect, and can be a `dojox.gfx <dojox/gfx>`_ stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
+Shadows allow you to add a shadow effect, and can be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
 .. code-block :: javascript
   :linenos:
@@ -413,9 +413,9 @@ The animate parameter is itself an object that can takes several parameters incl
 * easing: the easing function to use for the animation
 * rate: the animation rate
 
-Basically these are the same parameters than the ones passe to dojo.Animation. See `Animation quickstart <quickstart/Animation#animation-properties>`_ documentation for details.
+Basically these are the same parameters than the ones passe to dojo.Animation. See :ref:`Animation quickstart <quickstart/Animation>` documentation for details.
 
-See `Animated Chart <dojox/charting#id1>`_ for a full example.
+See :ref:`Animated Chart <dojox/charting>` for a full example.
 
 
 ================
@@ -665,15 +665,15 @@ For pie type charts you can specify additional information: the text label for e
 Using dojo.data Data Sources with Charts
 ----------------------------------------
 
-dojox.charting.DataSeries is used to connect to `dojo.data <dojo/data>`_ stores. User should create it and pass it instead of a data array in chart.addSeries() call.
+dojox.charting.DataSeries is used to connect to :ref:`dojo.data <dojo/data>` stores. User should create it and pass it instead of a data array in chart.addSeries() call.
 
 DataSeries' constructor has following parameters:
 
 ====== ========================== ======= ===========
 Name   Type                       Default Description
 ====== ========================== ======= ===========
-store  object                     none    Data store to use. Should implement at least `dojo.data.api.Read <dojo/data/api/Read>`_ and `dojo.data.api.Identity <dojo/data/api/Identity>`_. If it implements `dojo.data.api.Notification <dojo/data/api/Notification>`_, it will be used to redraw chart dynamically.
-kwArgs object                     none    Used for fetching items. Will vary depending upon store. See `dojo.data.api.Read.fetch() <dojo/data/api/Read#fetch>`_ for details.
+store  object                     none    Data store to use. Should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
+kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo.data.api.Read.fetch() <dojo/data/api/Read>` for details.
 value  object | function | string “value” Function, which takes a store, and an object handle, and produces an output possibly inspecting the store's item. Or a dictionary object, which tells what names to extract from an object and how to map them to an output. Or a field name to be used as a numeric output.
 ====== ========================== ======= ===========
 
@@ -1337,7 +1337,7 @@ Here is a clustered bar chart with a rendering animation:
 
     <div id="animChart" style="width: 300px; height: 300px;"></div>
 
-See `Plots Animation <dojox/charting#plots-animation>`_ for more details.
+See :ref:`Plots Animation <dojox/charting>` for more details.
 
 
 3D Chart

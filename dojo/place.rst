@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/place:
 
 dojo.place
 ==========
@@ -10,12 +10,11 @@ dojo.place
 .. contents::
    :depth: 3
 
-To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
+To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>` first.
 
-``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and
-take special cross-browser consideration when creating and placing the nodes. 
+``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and take special cross-browser consideration when creating and placing the nodes. 
 
-Since dojo 1.7, dojo.place has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.place in dojo/dom.
+Since Dojo 1.7, ``dojo.place`` is exposed via the ``place`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 ========
 Overview
@@ -26,7 +25,13 @@ The function takes up to three arguments:
 .. code-block :: javascript
   :linenos:
 
-    dojo.place(node, refNode, pos)
+    // Dojo 1.7+ (AMD)
+    require(["dojo/dom-construct"], function(domConstruct){
+      domConstruct.place(node, refNode, pos);
+    };
+    
+    // Dojo < 1.7
+    dojo.place(node, refNode, pos);
 
 node
   Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node. 
@@ -63,25 +68,26 @@ The naming of the positions are intentionally concise.
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``place`` is accessed from the ``dojo/dom-construct`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){
-      // place node to refNode
-       dojo.place(node, refNode, "first");
+  require(["dojo/dom-construct"], function(domConstruct){
+      // place node as first child of refNode
+      domConstruct.place(node, refNode, "first");
   });
 
-It's recommended to use ctr.place in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.place`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used     
-      // place node to refNode
-       ctr.place(node, refNode, "first");
+  require(["dojo"], function(dojo){
+      // place node as first child of refNode
+      dojo.place(node, refNode, "first");
   });
-
 
 Dojo < 1.7
 ----------
@@ -324,16 +330,17 @@ Alternatives
 Place using dojo.create()
 -------------------------
 
-An alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way avoiding possible differences.
+An alternative way to place (and create) a node is :ref:`dojo.create <dojo/create>`. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally :ref:`dojo.attr <dojo/attr>` and :ref:`dojo.place <dojo/place>` to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of :ref:`dojo.create <dojo/create>` is that by using :ref:`dojo.attr <dojo/attr>` all attributes will be applied in a browser-independent way avoiding possible differences.
 
 .. code-block :: javascript
   :linenos:
 
   // the third and fourth options are passed to dojo.place()
   // create a div, and place(n, dojo.body(), "first");
-  // dojo 1.7 (AMD)
-  require(["dojo/dom-construct", "dojo/_base/window"], function(ctr){
-     ctr.create("div", null, win.body(), "first");
+  
+  // dojo 1.7+ (AMD)
+  require(["dojo/dom-construct", "dojo/_base/window"], function(domConstruct, win){
+     domConstruct.create("div", null, win.body(), "first");
   });
 
   // dojo < 1.7
@@ -343,7 +350,7 @@ An alternative way to place (and create) a node is `dojo.create <dojo/create>`_.
 See also
 ========
 
-* `dojo.create <dojo/create>`_
-* `dojo.empty <dojo/empty>`_
-* `dojo.destroy <dojo/destroy>`_
-* `DOM Utilities <quickstart/dom>`_
+* :ref:`dojo.create <dojo/create>`
+* :ref:`dojo.empty <dojo/empty>`
+* :ref:`dojo.destroy <dojo/destroy>`
+* :ref:`DOM Utilities <quickstart/dom>`

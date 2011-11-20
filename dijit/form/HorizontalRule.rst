@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/HorizontalRule:
 
 dijit.form.HorizontalRule
 =========================
@@ -10,9 +10,9 @@ dijit.form.HorizontalRule
 :Version:
 :Authors: 
 
-This widget is used primarily for creating Hash marks for the `dijit.form.HorizontalSlider <dijit/form/Slider>`_ widget. The rule can be dispalyed either above or below the slider by specifying the value of the container as "topDecoration" or "bottomDecoration" respectively. The number of hash marks to be displayed is to be specified through the 'count' attribute.
+This widget is used primarily for creating Hash marks for the :ref:`dijit.form.HorizontalSlider <dijit/form/Slider>` widget. The rule can be dispalyed either above or below the slider by specifying the value of the container as "topDecoration" or "bottomDecoration" respectively. The number of hash marks to be displayed is to be specified through the 'count' attribute.
 
-For examples of using this widget along with the HorizontalSlider refer `dijit.form.HorizontalSlider <dijit/form/Slider>`_ .
+For examples of using this widget along with the HorizontalSlider refer :ref:`dijit.form.HorizontalSlider <dijit/form/Slider>` .
 
 Standalone Ruler
 ----------------
@@ -45,4 +45,4 @@ Standalone Ruler
 See Also
 ====================
 
-See `dijit.form.HorizontalSlider <dijit/form/Slider>`_.
+See :ref:`dijit.form.HorizontalSlider <dijit/form/Slider>`.

@@ -1,4 +1,4 @@
-= Mailing List Archive =
+.. _support/nabble:
 
 The mailing list is a good way to ask questions about Dojo
  * check the archive first

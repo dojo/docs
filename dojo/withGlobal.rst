@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/withGlobal:
 
 dojo.withGlobal
 ===============
@@ -69,7 +69,7 @@ Dojo < 1.7
 See also
 ========
 
-* `dojo.global <dojo/global>`_
-* `dojo.doc <dojo/doc>`_
-* `dojo.withDoc <dojo/withDoc>`_
-* `dojo.setContext <dojo/setContext>`_
+* :ref:`dojo.global <dojo/global>`
+* :ref:`dojo.doc <dojo/doc>`
+* :ref:`dojo.withDoc <dojo/withDoc>`
+* :ref:`dojo.setContext <dojo/setContext>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/FileStore:
 
 dojox.data.FileStore
 ====================
@@ -22,8 +22,8 @@ Features
 
 1. The client javascript and example server php script implement the following dojo.data APIs:
 
-   - `dojo.data.api.Read <dojo/data/api/Read>`_ and
-   - `dojo.data.api.Identity <dojo/data/api/Identity>`_.
+   - :ref:`dojo.data.api.Read <dojo/data/api/Read>` and
+   - :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`.
 
 2. A deliberately simple client side implementation for use as a reference when implementing other server side stores that wish to provide lazy-loading as defined by the dojo.data.api.Read spec. The client code is deliberately small to make it easy to understand.
 
@@ -37,7 +37,7 @@ Features
 
 7. An example implementation of the back end service in PHP. The example is documented cleanly and is less than five hundred lines of code, making it relatively easy to dissect and understand.
 
-8. Works directly with all current data bound widgets in dijit, including `dijit.Tree <dijit/Tree>`_, `dijit.form.ComboBox <dijit/form/ComboBox>`_, and as well `dojox.grid <dojox/grid>`_.
+8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`, and as well :ref:`dojox.grid <dojox/grid>`.
 
 
 ==============
@@ -264,4 +264,4 @@ Technical/Protocol Details
 
 The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
 
-`Protocol Information <dojox/data/FileStore/protocol>`_
+:ref:`Protocol Information <dojox/data/FileStore/protocol>`

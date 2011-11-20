@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/ValidationTextBox:
 
 dijit.form.ValidationTextBox
 ============================
@@ -16,7 +16,7 @@ Introduction
 
 A ValidationTextBox is an <input>-like widget that checks to make sure the user's input is valid (according to a specified criterion).  It flags invalid input by changing the box color, showing an icon, and displaying a tooltip detailing the error.  
 
-Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a `dijit.form.Form <dijit/form/Form>`_ widget.
+Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a :ref:`dijit.form.Form <dijit/form/Form>` widget.
 
 
 =====
@@ -42,7 +42,7 @@ Methods:
 isValid()
     Method that calls validator function.
 validator()
-    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: `tips <dijit/form/ValidationTextBox-tricks>`_.
+    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: :ref:`tips <dijit/form/ValidationTextBox-tricks>`.
 displayMessage()
     Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
 
@@ -132,7 +132,7 @@ The ValidationTextBox widget uses native HTML INPUT (type=text) controls.
 Screen Readers
 --------------
 
-If an invalid value is entered into a validating Text Box the "state" of the Text box changes, i.e. its background color changes. To accomodate users who are blind, the Text Box's `ARIA state <quickstart/writingWidgets/a11y#assigning-states-as-of-1-0>`_ is changed to "invalid" so a screen reader can notify the screen reader user. In addition to the "state" change, a pop-up appears. When the pop-up appears screen readers should read the contents of the pop-up. The pop-up text comes from the "invalidMessage" parameter.
+If an invalid value is entered into a validating Text Box the "state" of the Text box changes, i.e. its background color changes. To accomodate users who are blind, the Text Box's :ref:`ARIA state <quickstart/writingWidgets/a11y>` is changed to "invalid" so a screen reader can notify the screen reader user. In addition to the "state" change, a pop-up appears. When the pop-up appears screen readers should read the contents of the pop-up. The pop-up text comes from the "invalidMessage" parameter.
 
 Known Issues
 ------------
@@ -145,4 +145,4 @@ As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fi
 See also
 ========
 
-* `Tips, tricks and edge cases for dijit.form.ValidationTextBox <dijit/form/ValidationTextBox-tricks>`_.
+* :ref:`Tips, tricks and edge cases for dijit.form.ValidationTextBox <dijit/form/ValidationTextBox-tricks>`.

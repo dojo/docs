@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/stopEvent:
 
 dojo.stopEvent
 ==============
@@ -50,4 +50,4 @@ TO DOC
 See Also:
 =========
 
-* `The event QuickStart <quickstart/events>`_
+* :ref:`The event QuickStart <quickstart/events>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Tree:
 
 dijit.Tree
 ==========
@@ -18,7 +18,7 @@ Dojo makes easy trees easy, and hard trees possible. In particular, you can:
 * Nest items to an arbitrary depth ... each branch is independently expandable
 * Apply different icons to different leaf or branch items
 * Setup a global handler for when a user clicks or double clicks a particular nodes.
-* Tree will automatically reflect changes made to the underlying data store (when connected to the data store through the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_)
+* Tree will automatically reflect changes made to the underlying data store (when connected to the data store through the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`)
 * Allow nodes to be dragged and dropped through the familiar Dojo DnD API.
 * Drag and drop onto the tree, which updates the data store indirectly
 
@@ -39,7 +39,7 @@ Note also that a Tree has an idea of a currently selected item, such as the curr
 
 Model
 -----
-The real power comes in the `tree model <dijit/tree/Model>`_, which represents the hierarchical data that the tree will display.   Tree can interface to any class implementing the model API, but typically either the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_ are used, both of which themselves interface with the powerful dojo.data API.
+The real power comes in the :ref:`tree model <dijit/tree/Model>`, which represents the hierarchical data that the tree will display.   Tree can interface to any class implementing the model API, but typically either the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>` are used, both of which themselves interface with the powerful dojo.data API.
 
 It's important to note that the tree is merely a '''view''' onto the model.  The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.  It's also in charge of handle drop operations, when someone drags and drops an item onto the tree.
 
@@ -52,7 +52,7 @@ Data Stores
 -----------
 Although not required, usually the model interfaces with a dojo.data store.
 
-There can be many different types of stores, such as stores that work from XML vs. stores that work from JSON, stores that execute on the client vs. stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.  All the stores, though, have the same API, so they can be connected to with either `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_, depending on whether there is a single or multiple top level item in the store.
+There can be many different types of stores, such as stores that work from XML vs. stores that work from JSON, stores that execute on the client vs. stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.  All the stores, though, have the same API, so they can be connected to with either :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`, depending on whether there is a single or multiple top level item in the store.
 
 One might wonder why Tree doesn't interface directly with a dojo.data store.   There are a number of reasons:
 
@@ -167,7 +167,7 @@ connecting the Tree directly to a store instead of using a model.
 
 That works fairly well, but will fail if mayHaveChildren() returns false for items with no children.
 The definition of mayHaveChildren() for "empty folders" is actually somewhat vague, so it's best not to depend on it.
-A better getIconClass() method for a Tree connected (through a model) to a `dojox.data.FileStore <dojox/data/FileStore>`_
+A better getIconClass() method for a Tree connected (through a model) to a :ref:`dojox.data.FileStore <dojox/data/FileStore>`
 would determine if the item was a folder or not based on whether or not the item had the "directory" attribute
 (and it was set to true):
 
@@ -237,16 +237,16 @@ People often ask:
 
   * how do I update a tree (adding or deleting items)?
 
-You can't update the tree directly, but rather you need to update the model.   Usually the model is connected to a data store and in that case you need to update the data store.  Thus, you need to use a data store that allows updates (through it's official API), like `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_.
+You can't update the tree directly, but rather you need to update the model.   Usually the model is connected to a data store and in that case you need to update the data store.  Thus, you need to use a data store that allows updates (through it's official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
 
   * how do I refresh a Tree from the store?
 
-This isn't supported.   The store needs to notify the tree of any changes to the data.  Currently this is really only supported (out of the box) by `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_, as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
+This isn't supported.   The store needs to notify the tree of any changes to the data.  Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`, as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
 ===================
 Lazy Loading A Tree
 ===================
-People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.  If you use a data store that is lazy loading, such as `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_ or `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_, then the data will be loaded lazily.
+People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.  If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`, then the data will be loaded lazily.
 
 
 =============
@@ -262,7 +262,7 @@ Tree's support drag and drop, meaning that a user can:
 In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model, which in turn sends it to the data store (updating the underlying data).   Thus:
 
   * the model must implement the pasteItem() method
-  * the store must implement the `dojo.data.api.Write <dojo/data/api/Write>`_ interface
+  * the store must implement the :ref:`dojo.data.api.Write <dojo/data/api/Write>` interface
 
 In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSource"); and the dndController="dijit.tree.dndSource" parameter must be specified to the tree
 
@@ -466,7 +466,7 @@ By default, a Tree will remember which branches were opened/closed.   To use thi
 More examples
 =============
 
-There are `more extensive examples <dijit/Tree-examples>`_ of using the tree
+There are :ref:`more extensive examples <dijit/Tree-examples>` of using the tree
 
 
 =============

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/registerModulePath:
 
 dojo.registerModulePath
 =======================
@@ -177,5 +177,5 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 See Also
 ========
 
-* `dojoConfig.modulePaths <dojo/config#finding-resources-in-non-standard-locations>`_
-* `dojo.moduleUrl <dojo/moduleUrl>`_
+* :ref:`dojoConfig.modulePaths <dojo/config>`
+* :ref:`dojo.moduleUrl <dojo/moduleUrl>`

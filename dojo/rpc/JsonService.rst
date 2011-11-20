@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/rpc/JsonService:
 
 dojo.rpc.JsonService
 ====================
@@ -55,5 +55,5 @@ TODO: example
 See also
 ========
 
-* `dojo.rpc <dojo/rpc>`_
-* `dojox.rpc <dojox/rpc>`_
+* :ref:`dojo.rpc <dojo/rpc>`
+* :ref:`dojox.rpc <dojox/rpc>`

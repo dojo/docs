@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/SpinWheel:
 
 dojox.mobile.SpinWheel
 ======================

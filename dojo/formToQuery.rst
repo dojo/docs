@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/formToQuery:
 
 dojo.formToQuery
 ================
@@ -18,7 +18,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 *dojo.objectToQuery(dojo.formToObject("formid"));*  
 
-You can refer to the `dojo.formToObject <dojo/formToObject>`_ and `dojo.objectToQuery <dojo/objectToQuery>`_ documentation for more details on the general behavior.
+You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` and :ref:`dojo.objectToQuery <dojo/objectToQuery>` documentation for more details on the general behavior.
 
 Since dojo 1.7, dojo.formToQuery has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toQuery in dojo/dom-form.
 
@@ -154,7 +154,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
 See also
 ========
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
-* `dojo.queryToObject <dojo/queryToObject>`_
-* `dojo.formToJson <dojo/formToJson>`_
-* `dojo.formToObject <dojo/formToObject>`_
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>`
+* :ref:`dojo.queryToObject <dojo/queryToObject>`
+* :ref:`dojo.formToJson <dojo/formToJson>`
+* :ref:`dojo.formToObject <dojo/formToObject>`

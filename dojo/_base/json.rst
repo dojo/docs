@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/json:
 
 dojo._base.json
 ===============
@@ -19,10 +19,10 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.fromJson <dojo/fromJson>`_
+* :ref:`dojo.fromJson <dojo/fromJson>`
 
   Parses a JSON string to return a JavaScript object
 
-* `dojo.toJson <dojo/toJson>`_
+* :ref:`dojo.toJson <dojo/toJson>`
 
   Returns a JSON serialization of an object

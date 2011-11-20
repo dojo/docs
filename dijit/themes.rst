@@ -1,5 +1,4 @@
-## page was renamed from dijit-themes
-#format dojo_rst
+.. _dijit/themes:
 
 Themes and Theming
 ==================
@@ -18,7 +17,7 @@ Themes must be included by the inclusion of the theme's root file from the relat
 
   <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
 
-and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like `Dialog <dijit/Dialog>`_ intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. code-block :: html
 
@@ -284,7 +283,7 @@ Then add a theme class name to the parent <body> element, like:
 
   <body class="tundra">
 
-`note:` The reason the Tundra theme requires a class=tundra on the "<body>" tag (or some other tag) is because the rules all list a hierarchy like ".tundra .dojoButton". This is done to prevent the `tundra` class from affecting any of your page styles. This also ensures all widgets in the page have the same CSS rules (some widgets like `Dialog <dijit/Dialog>`_ intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+`note:` The reason the Tundra theme requires a class=tundra on the "<body>" tag (or some other tag) is because the rules all list a hierarchy like ".tundra .dojoButton". This is done to prevent the `tundra` class from affecting any of your page styles. This also ensures all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. code-block :: html
 
@@ -664,7 +663,7 @@ In Dojo 1.5, the loadingAnimation.gif is used in the following widgets: dijit.Tr
 
 See animation in action in the `Claro <http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/themes/themeTester.html?theme=claro>`_ theme rendered in the themeTester.html page.
 
-See more on `Animations and Effects with Dojo. <quickstart/Animation>`_
+See more on :ref:`Animations and Effects with Dojo. <quickstart/Animation>`
 
 Overriding a theme
 ------------------

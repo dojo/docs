@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image:
 
 dojox.image
 ===========
@@ -59,38 +59,38 @@ Additional Components
 
 There are several additional widgets available in the project. Each has it's own requirements and usage:
 
-* `dojox.image.Badge <dojox/image/Badge>`_
+* :ref:`dojox.image.Badge <dojox/image/Badge>`
 
   Attach images or background images, and let them loop.
 
-* `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
+* :ref:`dojox.image.FlickrBadge <dojox/image/FlickrBadge>`
 
   An extension on dojox.image.Badge, using Flickr as a data provider. Flickr API key needed.
 
-* `dojox.image.Gallery <dojox/image/Gallery>`_
+* :ref:`dojox.image.Gallery <dojox/image/Gallery>`
 
   A combination of a SlideShow and ThumbnailPicker into a mashup Gallery thing.
 
-* `dojox.image.Lightbox <dojox/image/Lightbox>`_
+* :ref:`dojox.image.Lightbox <dojox/image/Lightbox>`
 
   A widget which shows a single image (or groups of images) in a custom modal Dialog
 
-* `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ 
+* :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` 
 
   Similar to a Lightbox, though much lighter weight, and animated to center from position in page. 
 
-* `dojox.image.Magnifier <dojox/image/Magnifier>`_
+* :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`
 
-  A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`__ widget
+  A dojox.gfx-based version of the :ref:`MagnifierLite <dojox/image/MagnifierLite>` widget
 
-* `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
+* :ref:`dojox.image.MagnifierLite <dojox/image/MagnifierLite>`
 
   A simple hover behavior for images, showing a zoomed version of a size image
 
-* `dojox.image.SlideShow <dojox/image/SlideShow>`_
+* :ref:`dojox.image.SlideShow <dojox/image/SlideShow>`
 
   A slideshow of images. Used by Gallery for viewport.
 
-* `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
+* :ref:`dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`
 
   A dojo.data-powered ThumbnailPicker, which powers Gallery

@@ -1,6 +1,6 @@
-#format dojo_rst
+.. _dojox/fx/ext-dojo/NodeList:
 
 dojox.fx.ext-dojo.NodeList
 ==========================
 
-This module with a lengthy name simply maps `dojox.fx base functions <dojox/fx>`_ into `dojo.NodeList <dojo/NodeList>`_, making these animations available on lists of nodes by calling `dojo.query() <dojo/query>`_.
+This module with a lengthy name simply maps :ref:`dojox.fx base functions <dojox/fx>` into :ref:`dojo.NodeList <dojo/NodeList>`, making these animations available on lists of nodes by calling :ref:`dojo.query() <dojo/query>`.

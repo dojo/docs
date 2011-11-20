@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/query:
 
 dojo._base.query
 ================
@@ -20,6 +20,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.query <dojo/query>`_
+* :ref:`dojo.query <dojo/query>`
 
   The swiss army knife of DOM node manipulation in Dojo

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/geo/charting/Map:
 
 
 dojox.geo.charting.Map

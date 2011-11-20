@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _djConfig:
 
 djConfig
 ========
@@ -8,4 +8,4 @@ djConfig
 .. contents::
    :depth: 2
 
-Moved to `dojo.config <dojo/config>`_
+Moved to :ref:`dojo.config <dojo/config>`

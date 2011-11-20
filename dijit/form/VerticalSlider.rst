@@ -1,6 +1,6 @@
-#format dojo_rst
+.. _dijit/form/VerticalSlider:
 
 dijit.form.VerticalSlider
 =========================
 
-This widget and the accompanying `dijit.form.HorizontalSlider <dijit/form/Slider>`_ are described in a common `dijit.form.Slider document <dijit/form/Slider>`_
+This widget and the accompanying :ref:`dijit.form.HorizontalSlider <dijit/form/Slider>` are described in a common :ref:`dijit.form.Slider document <dijit/form/Slider>`

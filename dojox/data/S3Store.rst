@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/S3Store:
 
 dojox.data.S3Store
 ===========================

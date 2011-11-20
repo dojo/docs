@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/ComboBox:
 
 dojox.mobile.ComboBox
 =====================
@@ -18,7 +18,7 @@ Like SELECT, you provide a list of acceptable values. But like an INPUT text fie
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted if the name attribute was specified at widget creation time.
 
-ComboBox widgets are dojo.store-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.store fetch them from a server-based store. The unified dojo.store architecture can get its data from various places such as databases and web services. See the new `Dojo Object Store API <dojo/store>`_ section for complete details.
+ComboBox widgets are dojo.store-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.store fetch them from a server-based store. The unified dojo.store architecture can get its data from various places such as databases and web services. See the new :ref:`Dojo Object Store API <dojo/store>` section for complete details.
 
 
 ======================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/data/ItemFileReadStore:
 
 dojo.data.ItemFileReadStore
 ===========================
@@ -26,8 +26,8 @@ Supported APIs
 
 The following dojo.data APIs are implemented by ItemFileReadStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 
 ======================
@@ -1075,4 +1075,4 @@ See Also
 ========
 
 * `Refeshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
-* Consider `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_ if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavour of store.
+* Consider :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavour of store.

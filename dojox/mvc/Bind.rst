@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mvc/Bind:
 
 dojox.mvc.Bind
 =======================
@@ -18,7 +18,7 @@ dojox.mvc.Bind
 Available Methods
 =================
 
-* `dojox.mvc.Bind <dojox/mvc/Bind>`_
+* :ref:`dojox.mvc.Bind <dojox/mvc/Bind>`
 
 Bind the specified property of the target to the specified property of the source with the supplied transformation.
 
@@ -49,7 +49,7 @@ Parameters
 Available Methods
 =================
 
-* `dojox.mvc.BindInputs <dojox/mvc/BindInputs>`_
+* :ref:`dojox.mvc.BindInputs <dojox/mvc/BindInputs>`
 
 Bind the values at the sources specified in the first argument array such that a composing function in the second argument is called when any of the values changes.
 

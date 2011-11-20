@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/TextBox:
 
 dijit.form.TextBox
 ==================
@@ -20,15 +20,15 @@ dijit.form.TextBox has rudimentary text-scrubbing functions that trim or proper-
 it does not validate the entered text. Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
 HTML control, even if you don't have to do any input scrubbing. However:
 
-* If the input is a number, use `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_ or `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_.
+* If the input is a number, use :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>` or :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>`.
   These boxes ensure only digits, decimal points and group separators (specific to the locale) are entered.
-* If the input is currency, use `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_ instead.
-* If the input is a date, use `dijit.form.DateTextBox <dijit/form/DateTextBox>`_ which validates date input according to the locale, and
+* If the input is currency, use :ref:`dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>` instead.
+* If the input is a date, use :ref:`dijit.form.DateTextBox <dijit/form/DateTextBox>` which validates date input according to the locale, and
   adds a little pop-up calendar for easy selection.
-* If the input is a time, use `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_ which features a scrolling day-planner-like time chooser.
-* If the input is a list of values, use `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_. If you'd like to include free-form values too, 
-  use `dijit.form.ComboBox <dijit/form/ComboBox>`_. These two look like <select> controls but can use Dijit TextBox attributes as well.
-* If text can be validated with a regular expression, use `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_.
+* If the input is a time, use :ref:`dijit.form.TimeTextBox <dijit/form/TimeTextBox>` which features a scrolling day-planner-like time chooser.
+* If the input is a list of values, use :ref:`dijit.form.FilteringSelect <dijit/form/FilteringSelect>`. If you'd like to include free-form values too, 
+  use :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`. These two look like <select> controls but can use Dijit TextBox attributes as well.
+* If text can be validated with a regular expression, use :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`.
 
 
 ========

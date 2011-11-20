@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/fx
-#format dojo_rst
+.. _dojo/fx/easing:
 
 dojo.fx.easing
 ==============
@@ -215,6 +214,6 @@ Example: Playing with Easing
 See Also
 ========
 
-* `dojo.fadeIn <dojo/fadeIn>`_ - Examples show using the expoOut easing.
+* :ref:`dojo.fadeIn <dojo/fadeIn>` - Examples show using the expoOut easing.
 
-* `dojo.fadeOut <dojo/fadeOut>`_ - Examples show using the expoOut easing.
+* :ref:`dojo.fadeOut <dojo/fadeOut>` - Examples show using the expoOut easing.

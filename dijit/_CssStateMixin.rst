@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/_CssStateMixin:
 
 dijit._CssStateMixin
 ====================

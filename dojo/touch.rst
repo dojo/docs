@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/touch:
 
 dojo.touch
 ==========
@@ -28,7 +28,7 @@ So by using dojo/touch, we don't need to worry about appropriate native events w
 Usages
 ======
 
-dojo/touch is based on `dojo/on <dojo/on>`_ and provides "press | move | release | cancel" 4 event handles. Following below are detail usages:
+dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | release | cancel" 4 event handles. Following below are detail usages:
 
 
 1. Used with dojo/on
@@ -78,7 +78,7 @@ dojo/touch is based on `dojo/on <dojo/on>`_ and provides "press | move | release
 Relationship with dojo/gesture
 ==============================
 
-dojo/touch is the underneath basis for `dojox/gesture <dojox/gesture>`_
+dojo/touch is the underneath basis for :ref:`dojox/gesture <dojox/gesture>`
 
 
 ============

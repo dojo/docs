@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _internals:
 
 Behind the scenes
 =================
@@ -73,5 +73,5 @@ DojoBook
 Proposals
 ---------
 
-  * `dojo.node <dojo/node>`_
-  * `dojo.store <dojo/store>`_
+  * :ref:`dojo.node <dojo/node>`
+  * :ref:`dojo.store <dojo/store>`

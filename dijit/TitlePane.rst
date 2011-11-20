@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/TitlePane:
 
 dijit.TitlePane
 ===============
@@ -14,7 +14,7 @@ dijit.TitlePane
 Introduction
 ============
 
-A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard. It extends `ContentPane <dijit/layout/ContentPane>`_ but since it isn't used inside other layout widgets it's not in the dijit.layout module.
+A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard. It extends :ref:`ContentPane <dijit/layout/ContentPane>` but since it isn't used inside other layout widgets it's not in the dijit.layout module.
 
 
 =====

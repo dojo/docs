@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/date/locale/isWeekend:
 
 dojo.date.locale.isWeekend
 ==========================
@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* `dojo.date.locale <dojo/date/locale>`_
+* :ref:`dojo.date.locale <dojo/date/locale>`

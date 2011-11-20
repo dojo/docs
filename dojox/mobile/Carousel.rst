@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/Carousel:
 
 dojox.mobile.Carousel
 =====================

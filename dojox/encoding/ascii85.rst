@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/ascii85:
 
 dojox.encoding.ascii85
 ======================

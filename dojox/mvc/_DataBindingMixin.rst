@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mvc/_DataBindingMixin:
 
 dojox.mvc._DataBindingMixin
 ===========================
@@ -34,7 +34,7 @@ Parameters
 Available Methods
 =================
 
-* `dojox.mvc._DataBindingMixin.isValid <dojox/mvc/_BindingMixin#isValid>`_
+* :ref:`dojox.mvc._DataBindingMixin.isValid <dojox/mvc/_BindingMixin>`
 
 Returns the validity of the data binding. This function is meant to provide an API bridge to the dijit API. Validity of data-bound dijits is a function of multiple concerns: 
 

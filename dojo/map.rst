@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/map:
 
 dojo.map
 ========
@@ -86,7 +86,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
     </ul>
     </div>
 
-This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: `dojo.clone <dojo/clone>`_
+This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: :ref:`dojo.clone <dojo/clone>`
 
 .. cv-compound::
 

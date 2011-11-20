@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/ColorPicker:
 
 dojox.widget.ColorPicker
 ========================
@@ -17,7 +17,7 @@ A Photoshop-like HSV ColorPicker widget.
 Introduction
 ============
 
-This ColorPicker adds many options to the standard `ColorPallete <dijit/ColorPalette>`_ available in Dijit. 
+This ColorPicker adds many options to the standard :ref:`ColorPallete <dijit/ColorPalette>` available in Dijit. 
 
 =====
 Usage

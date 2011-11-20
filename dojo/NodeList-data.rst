@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/NodeList-data:
 
 dojo.NodeList-data
 ==================
@@ -13,11 +13,11 @@ dojo.NodeList-data
 Overview
 ========
 
-Provides a simple Data abstraction API to `dojo.NodeList <dojo/NodeList>`_, which is the result of calling `dojo.query <dojo/query>`_. This allows you to bind data items to individual nodes, knowing you will be able to retrieve the data later if you get a reference to that node. 
+Provides a simple Data abstraction API to :ref:`dojo.NodeList <dojo/NodeList>`, which is the result of calling :ref:`dojo.query <dojo/query>`. This allows you to bind data items to individual nodes, knowing you will be able to retrieve the data later if you get a reference to that node. 
 
-The public APIs for the module are exposed on `dojo.NodeList <dojo/NodeList>`_ as *data* and *removeData*. The *data* method acts as a setter getter, and *removeData* does as it's name suggests: remove all or some data from this node reference.
+The public APIs for the module are exposed on :ref:`dojo.NodeList <dojo/NodeList>` as *data* and *removeData*. The *data* method acts as a setter getter, and *removeData* does as it's name suggests: remove all or some data from this node reference.
 
-For Dojo 1.6 and earlier, the include the *data* APIs in your environment issue an appropriate `dojo.require <dojo/require>`_ call:
+For Dojo 1.6 and earlier, the include the *data* APIs in your environment issue an appropriate :ref:`dojo.require <dojo/require>` call:
 
 .. javascript ::
 
@@ -60,7 +60,7 @@ Now, the node with id="mynode" has a string data item under the key *datakey*. W
       if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
   });
 
-Notice we need to access the return of `dojo.query <dojo/query>`_ as if it were an array, despite there only being one node in the list. *data* always returns an Array when acting as a getter. If the list has more than one item, the return array will have that many items as well. 
+Notice we need to access the return of :ref:`dojo.query <dojo/query>` as if it were an array, despite there only being one node in the list. *data* always returns an Array when acting as a getter. If the list has more than one item, the return array will have that many items as well. 
 
 We can set any type of data at some key name, be it a String, Array, Object, and even functions. 
 
@@ -196,7 +196,7 @@ When acting as a getter, NodeList.data *always* returns an Array. The array is p
 Private APIs
 ------------
 
-Though nonstandard, NodeList-data provides several "private" APIs. These functions are used with the NodeList "adapters", and mixed in from the single-node variant. If you are more comfortable with using direct node access, feel free to use these APIs. There name may change, but their function signature cannot, as the power the public *data* and *removeData* exported to `NodeList <dojo/NodeList>`_
+Though nonstandard, NodeList-data provides several "private" APIs. These functions are used with the NodeList "adapters", and mixed in from the single-node variant. If you are more comfortable with using direct node access, feel free to use these APIs. There name may change, but their function signature cannot, as the power the public *data* and *removeData* exported to :ref:`NodeList <dojo/NodeList>`
 
 :dojo._nodeData(node, key, value): Can be called by passing a String or DomNode reference in the first position. All other arguments are shifted over.
 :dojo._removeNodeData(node, key): Can be called by passing a String or DomNode reference in the first position. 
@@ -276,11 +276,11 @@ Memory Considerations
 
 There is no automatic node-deletion tracking going on. If you bind data to a node, and destroy that node directly or indirectly, the data will persist in the cache. In small pages, the memory consumption of this data cache is probably not worth considering. In large pages, or single-page-ajax apps that seldom or never refresh, the memory could increase indefinitely, leading to what could be perceived as a *leak*. It is **highly** recommended you manually clear out data on nodes you no longer need. If this is not a possibility due to engineering, or loose coupling, a single garbage collection API is provided: ``dojo._gcNodeData()``
 
-You can call ``_gcNodeData`` at any time. It will remove items from the cache for nodes that no longer exist in the DOM. This function could be **wildly** expensive, especially on pages with a large DOM. Again, though this API is provided, it is **highly** recommended you manually manage your Data items if in a scenario leading to these potential "leaks". 
+You can call :ref:``gcNodeData`` at any time. It will remove items from the cache for nodes that no longer exist in the DOM. This function could be **wildly** expensive, especially on pages with a large DOM. Again, though this API is provided, it is **highly** recommended you manually manage your Data items if in a scenario leading to these potential "leaks". 
 
 =========
 See Also
 =========
 
-  * `dojo.data <dojo/data>`_ - dojo.data is an opaque Data API, unrelated to direct node references. More powerful and abstract than this node-data module. 
-  * `dijit._Widget <dijit/_Widget>`_ - If you have complex data and relationships between components and nodes, perhaps you are thinking about it wrong. dijit._Widget provides another take on data-node binding by providing an API to Objects exclusively, each bound to at the least a top-level DomNode. This base class powers the entire Dijit UI library, and is very small. 
+  * :ref:`dojo.data <dojo/data>` - dojo.data is an opaque Data API, unrelated to direct node references. More powerful and abstract than this node-data module. 
+  * :ref:`dijit._Widget <dijit/_Widget>` - If you have complex data and relationships between components and nodes, perhaps you are thinking about it wrong. dijit._Widget provides another take on data-node binding by providing an API to Objects exclusively, each bound to at the least a top-level DomNode. This base class powers the entire Dijit UI library, and is very small. 

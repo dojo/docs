@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/QueryReadStore:
 
 dojox.data.QueryReadStore
 ==========================
@@ -12,7 +12,7 @@ dojox.data.QueryReadStore
   :depth: 2
 
 
-QueryReadStore is very similar to `ItemFileReadStore <dojo/data/ItemFileReadStore>`_. They both use JSON as their exchange format. The difference is in the way they query data. ItemFileReadStore makes one fetch from the server, and handles all sorting and filtering in the client. That's fine for hundreds of records, even thousands. But for hundreds of thousands of records or slow Internet connections, that's less feasible.
+QueryReadStore is very similar to :ref:`ItemFileReadStore <dojo/data/ItemFileReadStore>`. They both use JSON as their exchange format. The difference is in the way they query data. ItemFileReadStore makes one fetch from the server, and handles all sorting and filtering in the client. That's fine for hundreds of records, even thousands. But for hundreds of thousands of records or slow Internet connections, that's less feasible.
 
 ==============
 Supported APIs
@@ -20,8 +20,8 @@ Supported APIs
 
 The following dojo.data APIs are implemented by QueryReadStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_ - 
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` - 
 
 
 ============
@@ -75,14 +75,14 @@ Server Side implementation
 
 The server side is where all the heavy work of QueryReadStore occurs. Specifically all query matching and sorting should happen here and only the items that match the parameters should be returned to the server. To help you in development of your own remote service, dojo includes a demonstration PHP file that implements a basic version of the QueryReadStore server component. You can find this basic implementation at: *dojox/data/tests/stores/QueryReadStore.php*. The server portion hands over a portion of the states that fits the query.
 
-Your implementation could be similar to the sample php, or it could translate your queries to run against a database via SQL. That decision is entirely up to you. Another good example store to help understand how to develop server backed datastores is `dojox.data/FileStore <dojox/data/FileStore>`_
+Your implementation could be similar to the sample php, or it could translate your queries to run against a database via SQL. That decision is entirely up to you. Another good example store to help understand how to develop server backed datastores is :ref:`dojox.data/FileStore <dojox/data/FileStore>`
 
 
 =============================
 Example Client Implementation
 =============================
 
-For a fully functional example extension of QueryReadStore, please follow this `link <dojox/data/QueryReadStore/example>`_
+For a fully functional example extension of QueryReadStore, please follow this :ref:`link <dojox/data/QueryReadStore/example>`
 
 
 ===================

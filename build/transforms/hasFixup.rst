@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/transforms/hasFixup:
 
 Build Transform hasFixup
 ========================

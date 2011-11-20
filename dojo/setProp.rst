@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/setProp:
 
 dojo.setProp
 =============
@@ -155,5 +155,5 @@ See also
 
 DOM operations:
 
-* `dojo.prop <dojo/prop>`_
-* `dojo.getProp <dojo/getProp>`_
+* :ref:`dojo.prop <dojo/prop>`
+* :ref:`dojo.getProp <dojo/getProp>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/isArray:
 
 dojo.isArray
 ============
@@ -43,7 +43,7 @@ isArray returns a Boolean you can use directly in conditionals:
     // do something
   }
 
-Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forEach>`_
+Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo/forEach>`
 
 [ Dojo 1.7+ (AMD) ]
 
@@ -216,8 +216,8 @@ Test against isArray()
 See also
 ========
 
-* `dojo.isString <dojo/isString>`_ - Checks if the parameter is a String
-* `dojo.isFunction <dojo/isFunction>`_ - Checks if the parameter is a Function
-* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
-* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
-* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
+* :ref:`dojo.isString <dojo/isString>` - Checks if the parameter is a String
+* :ref:`dojo.isFunction <dojo/isFunction>` - Checks if the parameter is a Function
+* :ref:`dojo.isObject <dojo/isObject>` - Checks if the parameter is an Object
+* :ref:`dojo.isArrayLike <dojo/isArrayLike>` - Checks if the parameter is like an Array
+* :ref:`dojo.isAlien <dojo/isAlien>` - Checks if the parameter is a built-in function

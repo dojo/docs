@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/MultiSelect:
 
 dijit.form.MultiSelect
 ======================

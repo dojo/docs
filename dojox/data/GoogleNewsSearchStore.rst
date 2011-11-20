@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/GoogleNewsSearchStore:
 
 dojox.data.GoogleNewsSearchStore
 ================================

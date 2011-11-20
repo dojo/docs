@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/rpc/Rest:
 
 dojox.rpc.Rest
 ==============
@@ -114,4 +114,4 @@ You can also use the SMD service to generate a REST service:
 See also
 ========
 
-* `dojox.rpc <dojox/rpc>`_
+* :ref:`dojox.rpc <dojox/rpc>`

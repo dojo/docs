@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/connect
-#format dojo_rst
+.. _dojo/connect:
 
 dojo.connect (dojo/_base/connect)
 =================================
@@ -133,5 +132,5 @@ Dojo < 1.7
 See also
 ========
 
-* `Event QuickStart <quickstart/events>`_ for a good introduction
-* `dojo.connectPublisher <dojo/connectPublisher>`_
+* :ref:`Event QuickStart <quickstart/events>` for a good introduction
+* :ref:`dojo.connectPublisher <dojo/connectPublisher>`

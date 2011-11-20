@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/ToolBarButton:
 
 dojox.mobile.ToolBarButton
 ==========================
@@ -79,10 +79,10 @@ Parameters from this widget:
 Usage
 =====
 
-Use this widget as child widgets of the `dojox.mobile.Heading <dojox/mobile/Heading>`_ widget.
+Use this widget as child widgets of the :ref:`dojox.mobile.Heading <dojox/mobile/Heading>` widget.
 
 ========
 Examples
 ========
 
-See the `dojox.mobile.Heading <dojox/mobile/Heading>`_ widget for various examples.
+See the :ref:`dojox.mobile.Heading <dojox/mobile/Heading>` widget for various examples.

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/getNodeProp:
 
 dojo.getNodeProp
 ================
@@ -15,7 +15,7 @@ Returns a property value falling back to an attribute, if property is not availa
 Introduction
 ============
 
-``dojo.getNodeProp`` is a companion function for `dojo.attr <dojo/attr>`_. Unlike the latter it favors properties falling back on attributes, if a property was not present.
+``dojo.getNodeProp`` is a companion function for :ref:`dojo.attr <dojo/attr>`. Unlike the latter it favors properties falling back on attributes, if a property was not present.
 
 It is useful when you don't care if somebody set an attribute on a node in HTML, or not, but you want to read a default/current value, which is used by a browser. For example, if user didn't specify ``type`` attribute on ``input`` element, it is default value is ``"text"``. You don't need to know all defaults, or how browser interprets missing attributes exactly, just use ``dojo.getNodeProp``.
 
@@ -114,18 +114,18 @@ See also
 
 DOM operations:
 
-* `dojo.attr <dojo/attr>`_
-* `dojo.getAttr <dojo/getAttr>`_
-* `dojo.setAttr <dojo/setAttr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr <dojo/attr>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.getAttr <dojo/getAttr>`
+* :ref:`dojo.setAttr <dojo/setAttr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.removeAttr <dojo/attr>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
 
 External links:
 

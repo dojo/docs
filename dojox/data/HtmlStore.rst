@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/HtmlStore:
 
 dojox.data.HtmlStore
 =========================
@@ -12,15 +12,15 @@ dojox.data.HtmlStore
   :depth: 2
 
 
-HtmlStore is an improved version of the older `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL. 
+HtmlStore is an improved version of the older :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL. 
 
 
 ===========
 API Support
 ===========
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 
 ==================
@@ -175,7 +175,7 @@ List:
 Query Syntax
 ============
 
-The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
+The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
 
 ========

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/bi-directional-text:
 
 Bi-directional Text (Bi-Di)
 ===========================

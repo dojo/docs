@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/TooltipDialog:
 
 dijit.TooltipDialog
 ===================
@@ -143,4 +143,4 @@ Navigate to previous focusable element in the tooltip dialog	shift-tab
 Close the tooltip dialog                                        escape
 ============================================================    =================================================
 
-See the detailed Keyboard Navigation Notes and Known Issues in `dijit.Dialog <dijit/Dialog#accessibility>`_
+See the detailed Keyboard Navigation Notes and Known Issues in :ref:`dijit.Dialog <dijit/Dialog>`

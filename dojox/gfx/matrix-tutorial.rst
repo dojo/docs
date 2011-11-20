@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx/matrix-tutorial:
 
 Matrix tutorial
 ===============
@@ -39,7 +39,7 @@ This is the very important fact that gives us the ability to combine transformat
 
 Effectively all transformations are always applied from right to left sequentially, and they can be combined producing a matrix, which defines a complex transformation.
 
-`dojox.gfx <dojox/gfx>`_ defines several constants and functions to deal with matrices. Below is the list of their formal definitions:
+:ref:`dojox.gfx <dojox/gfx>` defines several constants and functions to deal with matrices. Below is the list of their formal definitions:
 
 * ``identity`` does nothing:
 

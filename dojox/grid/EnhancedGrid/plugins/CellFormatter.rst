@@ -1,3 +1,3 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/CellFormatter:
 
 DELETE ME

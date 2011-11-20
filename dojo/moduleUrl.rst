@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/moduleUrl:
 
 dojo.moduleUrl
 ==============
@@ -55,5 +55,5 @@ Dojo < 1.7
 See also
 ========
 
-* `dojo.registerModulePath <dojo/registerModulePath>`_
-* `dojo.cache <dojo/cache>`_
+* :ref:`dojo.registerModulePath <dojo/registerModulePath>`
+* :ref:`dojo.cache <dojo/cache>`

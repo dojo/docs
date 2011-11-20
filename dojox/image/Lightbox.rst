@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/Lightbox:
 
 dojox.image.Lightbox
 ====================
@@ -71,7 +71,7 @@ Any dojox.image.Lightbox-es on the same page share an instance of a dojox.image.
      <a dojoType="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a> 
   </div>
 
-With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the `parser <dojo/parser>`_ runs. 
+With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the :ref:`parser <dojo/parser>` runs. 
 
 A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' to show a the image defined by the Lightbox that triggered the event.
 
@@ -142,7 +142,7 @@ Lightbox from dojo.data
 Styling The Dialog
 ==================
 
-LightboxDialog extends `dijit.Dialog <dijit/Dialog>`_, so the same 'rule' applies concerning the underlay. The Widget used to block the background page while the Dialog is visible receives an ``id`` based on the Dialog itself. For instance, the MasterDialog used has an id of ``dojoxLightboxDialog``, causing the underlay id to become ``dojoxLightboxDialog_underlay``. You can use plain CSS targeting that id:
+LightboxDialog extends :ref:`dijit.Dialog <dijit/Dialog>`, so the same 'rule' applies concerning the underlay. The Widget used to block the background page while the Dialog is visible receives an ``id`` based on the Dialog itself. For instance, the MasterDialog used has an id of ``dojoxLightboxDialog``, causing the underlay id to become ``dojoxLightboxDialog_underlay``. You can use plain CSS targeting that id:
 
 .. code-block :: html
 
@@ -150,7 +150,7 @@ LightboxDialog extends `dijit.Dialog <dijit/Dialog>`_, so the same 'rule' applie
     #dojoxLightboxDialog_underlay { background-color:blue }
     </style>
 
-The part ``_underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
+The part :ref:``underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
 
 
 ====

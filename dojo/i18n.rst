@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/i18n:
 
 =========
 dojo.i18n
@@ -12,7 +12,7 @@ dojo.i18n
 
 Utility classes to enable loading of resources for internationalization.
 
-Used exclusively with `dojo.requireLocalization <dojo/requireLocalization>`_.
+Used exclusively with :ref:`dojo.requireLocalization <dojo/requireLocalization>`.
 
 =====
 Usage
@@ -48,5 +48,5 @@ Dojo < 1.7
 See also
 ========
 
-* `Internationalization Quickstart <quickstart/internationalization/index>`_
-* `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
+* :ref:`Internationalization Quickstart <quickstart/internationalization/index>`
+* :ref:`Translatable Resource bundles <quickstart/internationalization/resource-bundling>`

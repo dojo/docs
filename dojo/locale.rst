@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/locale:
 
 dojo.locale
 ===========
@@ -44,4 +44,4 @@ A simple call of dojo.locale.
 See also
 ========
 
-* `Language and Localization Settings in dojoConfig <dojo/config#language-and-localization-settings-in-dojoconfig>`_
+* :ref:`Language and Localization Settings in dojoConfig <dojo/config>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/windowUnloaded:
 
 dojo.windowUnloaded
 ===================
@@ -10,11 +10,11 @@ dojo.windowUnloaded
 .. contents::
    :depth: 2
 
-Signal fired by impending window destruction. Favor using `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_ instead of this method directly.
+Signal fired by impending window destruction. Favor using :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>` instead of this method directly.
 
 ========
 See also
 ========
 
- * `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
- * `dojo.addOnUnload <dojo/addOnUnload>`_ - similar to addOnWindowUnload but for the onbeforeunload event.
+ * :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>`
+ * :ref:`dojo.addOnUnload <dojo/addOnUnload>` - similar to addOnWindowUnload but for the onbeforeunload event.

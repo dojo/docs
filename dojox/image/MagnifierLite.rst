@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/MagnifierLite:
 
 dojox.image.MagnifierLite
 =========================
@@ -22,7 +22,7 @@ dojox.image.MagnifierLite offers an unobtrusive way to add an unstyled overlay a
 
 The logic behind requiring the src image to be large is “it’s going to be downloaded, anyway” so this method avoids having to make thumbnails and two http requests among other things.
 
-This is the base class for `dojox.image.Magnifier <dojox/image/Magnifier>`_, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
+This is the base class for :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
 
 
 =====
@@ -92,4 +92,4 @@ Declarative example
 See also
 ========
 
-* `dojox.image.Magnifier <dojox/image/Magnifier>`_
+* :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`

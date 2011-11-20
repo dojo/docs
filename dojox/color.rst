@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/color:
 
 dojox.color
 ===========
@@ -12,10 +12,10 @@ The DojoX Color project both adds functionality to dojo.color and includes a pai
 generating color palettes (``dojox.color.Palette``) as well as advanced colorspace functions
 (``dojox.color.Colorspace``), making more advanced functionality available for use.
 
-`dojox.color.Palette <dojox/color/Palette>`_ will generate a set of colors based on a single color
+:ref:`dojox.color.Palette <dojox/color/Palette>` will generate a set of colors based on a single color
 and a chosen color theory rule.
 
-`dojox.color.Colorspace <dojox/color/Colorspace>`_ provides a slew of functionality to convert
+:ref:`dojox.color.Colorspace <dojox/color/Colorspace>` provides a slew of functionality to convert
 colors to various advanced models (such as XYZ, xyY, Lab, Luv, LCHab) as well as working with
 various color profiles (such as Adobe RGB, ColorMatch RGB, NTSC, PAL and more).
 
@@ -41,4 +41,4 @@ the methods should be self-explanatory.  To create a ``dojo.Color`` or ``dojox.c
 use the *from* methods, directly on ``dojox.color``; to convert an existing ``dojo.Color`` or 
 ``dojox.color.Color`` object to a specific model, use the *to* methods.
 
-For more information on the Palette, please visit the `Palette <dojox/color/Palette>`_ page.
+For more information on the Palette, please visit the :ref:`Palette <dojox/color/Palette>` page.

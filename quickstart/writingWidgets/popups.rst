@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/writingWidgets/popups:
 
 Dropdowns and Pop-ups
 =====================
@@ -30,7 +30,7 @@ Opening a pop-up from a parent widget involves calling ``popup.open`` with a kwA
 parent (Widget)
   The widget that is displaying the pop-up.
 popup (Widget, required)
-  The widget to display as a pop-up. This can be any dijit widget; some widgets that are commonly used as popups include `dijit.ColorPalette <dijit/ColorPalette>`_, `dijit.Menu <dijit/Menu>`_, and `dijit.Calendar <dijit/Calendar>`_.
+  The widget to display as a pop-up. This can be any dijit widget; some widgets that are commonly used as popups include :ref:`dijit.ColorPalette <dijit/ColorPalette>`, :ref:`dijit.Menu <dijit/Menu>`, and :ref:`dijit.Calendar <dijit/Calendar>`.
 around (DomNode)
   A DOM node that should be used as a reference point for placing the pop-up. For pop-ups that are not meant to be placed around an element, use ``x`` and ``y`` instead  
 x (number)
@@ -60,7 +60,7 @@ padding (``{x: Number, y: Number}``)
 
 While only the ``popup`` property is required, most pop-ups will normally need to also provide ``onCancel`` and ``onExecute`` callbacks (as explained below) as well as either an ``around`` or ``x`` and ``y`` properties.
 
-Here’s an example that roughly illustrates how `dijit/_HasDropDown`_ opens and closes pop-ups:
+Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens and closes pop-ups:
 
 .. code-block :: javascript
  :linenos:
@@ -105,7 +105,7 @@ It’s important to note here that the parent widget is responsible for both ope
 Pop-up widgets
 ==============
 
-Any normal widget can be used as a pop-up. For example, `dijit/Calendar`_ is a normal widget that can be displayed inline in the page, but is used as a pop-up by the `DateTextBox <dijit/form/DateTextBox>`_ widget. In other words, there’s no need for a ``_PopupWidget`` base class for pop-up widgets. However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
+Any normal widget can be used as a pop-up. For example, :ref:`dijit/Calendar` is a normal widget that can be displayed inline in the page, but is used as a pop-up by the :ref:`DateTextBox <dijit/form/DateTextBox>` widget. In other words, there’s no need for a :ref:``PopupWidget`` base class for pop-up widgets. However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
 
 .. code-block :: javascript
 
@@ -156,7 +156,7 @@ If the user clicks a blank section of the screen in order to close the pop-up in
 Stacks
 ======
 
-Pop-ups can open other pop-ups. This ability is leveraged heavily by `dijit/Menu`_. To facilitate this, dijit/popup keeps track of the entire stack of open pop-ups. In the case when a hierarchy of pop-ups all need to be closed at once, calling ``popup.close`` on the top-most pop-up will close all child pop-ups. This means that parent widgets do not need to maintain their own stack of pop-ups in order to ensure that they can clean up properly after themselves.
+Pop-ups can open other pop-ups. This ability is leveraged heavily by :ref:`dijit/Menu`. To facilitate this, dijit/popup keeps track of the entire stack of open pop-ups. In the case when a hierarchy of pop-ups all need to be closed at once, calling ``popup.close`` on the top-most pop-up will close all child pop-ups. This means that parent widgets do not need to maintain their own stack of pop-ups in order to ensure that they can clean up properly after themselves.
 
 =================
 Keyboard handling
@@ -170,8 +170,8 @@ Note that in neither of these cases does the dijit/popup code directly close any
 Popup DOM node positioning
 ==========================
 
-``popup.moveOffScreen`` should be called on any nodes that will be used as pop-ups. Its main function, besides hiding the node, is to attach it as a direct child of ``<body>``. The reason this is done is to ensure the node doesn’t get cut off if it is inside a ``<div>`` with a short height. (For example, given a button inside a `dijit/layout/TabContainer`_, the pop-up might want to overflow past the bottom of the TabContainer.)
+``popup.moveOffScreen`` should be called on any nodes that will be used as pop-ups. Its main function, besides hiding the node, is to attach it as a direct child of ``<body>``. The reason this is done is to ensure the node doesn’t get cut off if it is inside a ``<div>`` with a short height. (For example, given a button inside a :ref:`dijit/layout/TabContainer`, the pop-up might want to overflow past the bottom of the TabContainer.)
 
-Note that this design decision makes TAB key handling particularly difficult, and it’s not handled perfectly: if a user hits the TAB key while on a sub-menu of a `dijit/MenuBar`_, or any drop down from a `dijit/form/DropDownButton`_, they probably expect the focus to go to the next element after the MenuBar/DropDownButton. However, since the drop-down has actually been repositioned as the last element in ``<body>``, just letting the browser handle the TAB key won't do what the user expects.
+Note that this design decision makes TAB key handling particularly difficult, and it’s not handled perfectly: if a user hits the TAB key while on a sub-menu of a :ref:`dijit/MenuBar`, or any drop down from a :ref:`dijit/form/DropDownButton`, they probably expect the focus to go to the next element after the MenuBar/DropDownButton. However, since the drop-down has actually been repositioned as the last element in ``<body>``, just letting the browser handle the TAB key won't do what the user expects.
 
-As a compromise, the TAB key (while focus is on a pop-up) will re-focus on the DropDownButton/MenuBarItem that spawned the top pop-up. This is handled by the code that calls ``popup.open``, in the return handler for ``onCancel``. See `dijit/form/DropDownButton`_ for an example.
+As a compromise, the TAB key (while focus is on a pop-up) will re-focus on the DropDownButton/MenuBarItem that spawned the top pop-up. This is handled by the code that calls ``popup.open``, in the return handler for ``onCancel``. See :ref:`dijit/form/DropDownButton` for an example.

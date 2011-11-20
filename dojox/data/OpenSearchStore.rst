@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/OpenSearchStore:
 
 dojox.data.OpenSearchStore
 ==========================
@@ -11,7 +11,7 @@ dojox.data.OpenSearchStore
 .. contents::
    :depth: 2
 
-A store implementing the dojo.data.Read API for talking to OpenSearch based search providing services.  For specific information on the concepts of dojo.data and its APIs please refer to the `API documentation <dojo/data/api>`_.
+A store implementing the dojo.data.Read API for talking to OpenSearch based search providing services.  For specific information on the concepts of dojo.data and its APIs please refer to the :ref:`API documentation <dojo/data/api>`.
 
 ============
 Introduction
@@ -40,7 +40,7 @@ Supported APIs
 
 The following dojo.data APIs are implemented by OpenSearchStore:
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 ======================
 Constructor Parameters

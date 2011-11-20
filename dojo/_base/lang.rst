@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/lang:
 
 dojo/_base/lang
 ===============
@@ -17,65 +17,65 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.hitch <dojo/hitch>`_
+* :ref:`dojo.hitch <dojo/hitch>`
 
   Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
 
-* `dojo.partial <dojo/partial>`_
+* :ref:`dojo.partial <dojo/partial>`
 
   Function that generates a wrapper function that ensures a function will only ever execute globally.
 
-* `dojo.clone <dojo/clone>`_
+* :ref:`dojo.clone <dojo/clone>`
 
   Clones objects (including DOM nodes) and all children.
 
-* `dojo.delegate <dojo/delegate>`_
+* :ref:`dojo.delegate <dojo/delegate>`
 
   Returns a new object which "looks" to obj for properties which it does not have a value for.
 
-* `dojo.isString <dojo/isString>`_
+* :ref:`dojo.isString <dojo/isString>`
 
   Checks if the parameter is a String
 
-* `dojo.isArray <dojo/isArray>`_
+* :ref:`dojo.isArray <dojo/isArray>`
 
   Checks if the parameter is an Array
 
-* `dojo.isFunction <dojo/isFunction>`_
+* :ref:`dojo.isFunction <dojo/isFunction>`
 
   Checks if the parameter is a Function
 
-* `dojo.isObject <dojo/isObject>`_
+* :ref:`dojo.isObject <dojo/isObject>`
 
   Checks if the parameter is a Object
 
-* `dojo.isArrayLike <dojo/isArrayLike>`_
+* :ref:`dojo.isArrayLike <dojo/isArrayLike>`
 
   Checks if the parameter is like an Array
 
-* `dojo.isAlien <dojo/isAlien>`_
+* :ref:`dojo.isAlien <dojo/isAlien>`
 
   Checks if the parameter is a built-in function
 
-* `dojo.trim <dojo/trim>`_
+* :ref:`dojo.trim <dojo/trim>`
 
   Trim whitespace from a String
 
-* `dojo.replace <dojo/replace>`_
+* :ref:`dojo.replace <dojo/replace>`
 
   Simple templates with parameterized substitutions.
 
-* `dojo.mixin <dojo/mixin>`_
+* :ref:`dojo.mixin <dojo/mixin>`
 
   Mixes one object into another. Can be used as a shallow copy
 
-* `dojo.extend <dojo/extend>`_
+* :ref:`dojo.extend <dojo/extend>`
 
-* `dojo.getObject <dojo/getObject>`_
+* :ref:`dojo.getObject <dojo/getObject>`
 
   Get a property from a dot-separated string, such as "A.B.C"
 
-* `dojo.setObject <dojo/setObject>`_
+* :ref:`dojo.setObject <dojo/setObject>`
 
   Set a property from a dot-separated string, such as "A.B.C"
 
@@ -85,4 +85,4 @@ Features
 See also
 ========
 
-* `dojox.lang <dojox/lang/index>`_
+* :ref:`dojox.lang <dojox/lang/index>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/Uploader:
 
 dojox.form.Uploader
 =======================
@@ -22,7 +22,7 @@ Features
  - The Uploader may be placed in a form and will "just work". Actually, the Uploader will block the form's submit event and take over its duties of collecting the field values and uploading the data to the server using the form's action attribute, or the url property given to the Uploader.
  - The tabIndex attribute is supported.
  - An additional widget, dojox.form.uploader.FileList is provided to show the selection set and visualize the upload progress.
- - `dojox.form.uploader.FileList <dojox/form/uploader/FileList>`_
+ - :ref:`dojox.form.uploader.FileList <dojox/form/uploader/FileList>`
 	
 Important Note
 --------------

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/GoogleFeedStore:
 
 dojox.data.GoogleFeedStore
 ==========================
@@ -21,7 +21,7 @@ The GoogleFeedStore is a store designed to work against Google's feed reading AJ
 API Support
 ===========
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 ==================
 Constructor Params

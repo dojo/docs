@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/fx/style:
 
 dojox.fx.style
 ==============
@@ -17,7 +17,7 @@ This module provides Animated CSS class transisitons for nodes, or in other word
 Usage
 =====
 
-These API's are identical to their plain Dojo counterparts: `dojo.addClass <dojo/addClass>`_, `dojo.removeClass <dojo/removeClass>`_, `dojo.toggleClass <dojo/toggleClass>`_, though they return an instance of a dojo.Animation, and require you to call .play()
+These API's are identical to their plain Dojo counterparts: :ref:`dojo.addClass <dojo/addClass>`, :ref:`dojo.removeClass <dojo/removeClass>`, :ref:`dojo.toggleClass <dojo/toggleClass>`, though they return an instance of a dojo.Animation, and require you to call .play()
 
 .. code-block :: javascript
  :linenos:
@@ -47,7 +47,7 @@ Additionally, you can pass in an animation "magic arg", defining additional prop
         duration:5000, onEnd: function(node){ console.log("we're done with", node) }
     }).play();
 
-The only variation here is toggleClass, whose third parameter can be used to force adding or removing (just as `dojo.toggleClass <dojo/toggleClass>`_ does). In this case, you need to pass undefined value in third position, and the animation arg object in the fourth:
+The only variation here is toggleClass, whose third parameter can be used to force adding or removing (just as :ref:`dojo.toggleClass <dojo/toggleClass>` does). In this case, you need to pass undefined value in third position, and the animation arg object in the fourth:
 
 .. code-block :: javascript
   :linenos:
@@ -56,20 +56,20 @@ The only variation here is toggleClass, whose third parameter can be used to for
         duration:1500, easing: dojo.fx.easing.backOut
     }).play();
 
-The returns of these functions can be applied to a `dojo.fx.combine <dojo/fx/combine>`_ or `chain <dojo/fx/chain>`_ call.
+The returns of these functions can be applied to a :ref:`dojo.fx.combine <dojo/fx/combine>` or :ref:`chain <dojo/fx/chain>` call.
 
 =================
 NodeList Morphing
 =================
 
-An ext-dojo module exists for these functions as well. They can be included into `dojo.NodeList <dojo/NodeList>`_ by requiring the appropriate module:
+An ext-dojo module exists for these functions as well. They can be included into :ref:`dojo.NodeList <dojo/NodeList>` by requiring the appropriate module:
 
 .. code-block :: javascript 
   :linenos:
 
   dojo.require("dojox.fx.ext-dojo.NodeList-style");
 
-This allows you to use these functions automatically with `dojo.query <dojo/query>`_, though to not conflict with dojo.query's own .addClass, .removeClass, and .toggleClass, these functions are suffixed with "Fx": .addClassFx, .removeClassFx, and .toggleClassFx respectively.
+This allows you to use these functions automatically with :ref:`dojo.query <dojo/query>`, though to not conflict with dojo.query's own .addClass, .removeClass, and .toggleClass, these functions are suffixed with "Fx": .addClassFx, .removeClassFx, and .toggleClassFx respectively.
 
 .. code-block :: javascript
   :linenos:

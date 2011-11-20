@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/CouchDBRestStore:
 
 dojox.data.CouchDBRestStore
 ===========================

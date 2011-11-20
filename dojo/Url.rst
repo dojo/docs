@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/Url:
 
 dojo._Url
 =============

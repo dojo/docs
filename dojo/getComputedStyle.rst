@@ -1,7 +1,7 @@
-#format dojo_rst
+.. _dojo/getComputedStyle:
 
-dojo.getStyle
-=============
+dojo.getComputedStyle
+=====================
 
 .. contents::
    :depth: 2
@@ -12,12 +12,13 @@ Returns a "computed style" object.
 Introduction
 ============
 
-``dojo.getComputedStyle()`` is a companion function for `dojo.style <dojo/style>`_. It gets a "computed style" object which can be used to gather information about the current state of the rendered node.
+``dojo.getComputedStyle()`` is a companion function for :ref:`dojo.style <dojo/style>`. It gets a "computed style" object which can be used to gather information about the current state of the rendered node.
 Note that this may behave differently on different browsers. Values may have different formats and value encodings across browsers.
 Note also that this method is expensive.  Wherever possible, reuse the returned object.
 Use the dojo.style() method for more consistent (pixelized) return values.
 
-Since dojo 1.7, dojo.getComputedStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of style.getComputedStyle in dojo/dom-style.
+Since Dojo 1.7, ``dojo.getComputedStyle`` is exposed via the ``getComputedStyle`` method of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+
 
 =====
 Usage
@@ -26,6 +27,12 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-style"], function(domStyle){
+    domStyle.getComputedStyle(node);
+  });
+  
+  // Dojo < 1.7
   dojo.getComputedStyle(node);
 
 node
@@ -35,28 +42,30 @@ node
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``getComputedStyle`` is accessed from the ``dojo/dom-style`` module.
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
-      dojo.getComputedStyle(dojo.byId('foo')).borderWidth;
+  require(["dojo/dom-style", "dojo/dom"], function(domStyle, dom){   
+    domStyle.getComputedStyle(dom.byId("foo")).borderWidth;
+
+    // Reusing the returned object, avoiding multiple lookups:
+    var cs = domStyle.getComputedStyle(dom.byId("someNode"));
+    var w = cs.width, h = cs.height;
+  });
+
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.getComputedStyle`` in the ``define`` or ``require`` callback:
+
+.. code-block :: javascript
+
+  require(["dojo"], function(dojo){   
+      dojo.getComputedStyle(dojo.byId("foo")).borderWidth;
 
       // Reusing the returned object, avoiding multiple lookups:
       var cs = dojo.getComputedStyle(dojo.byId("someNode"));
-      var w = cs.width, h = cs.height;
-  });
-
-It's recommended to use style.getComputedStyle in dojo 1.7.
-
-.. code-block :: javascript
-
-  require(["dojo/dom-style", "dojo/dom"], function(style, dom){   
-      style.getComputedStyle(dom.byId('foo')).borderWidth;
-
-      // Reusing the returned object, avoiding multiple lookups:
-      var cs = style.getComputedStyle(dom.byId("someNode"));
       var w = cs.width, h = cs.height;
   });
 
@@ -65,7 +74,7 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    dojo.getComputedStyle(dojo.byId('foo')).borderWidth;
+    dojo.getComputedStyle(dojo.byId("foo")).borderWidth;
 
     // Reusing the returned object, avoiding multiple lookups:
     var cs = dojo.getComputedStyle(dojo.byId("someNode"));
@@ -77,7 +86,7 @@ See also
 
 DOM operations:
 
-* `dojo.style <dojo/style>`_
-* `dojo.getStyle <dojo/getStyle>`_
-* `dojo.setStyle <dojo/setStyle>`_
-* `dojo.attr <dojo/attr>`_
+* :ref:`dojo.style <dojo/style>`
+* :ref:`dojo.getStyle <dojo/getStyle>`
+* :ref:`dojo.setStyle <dojo/setStyle>`
+* :ref:`dojo.attr <dojo/attr>`

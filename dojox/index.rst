@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/index:
 
 DojoX
 =====
@@ -6,421 +6,421 @@ DojoX
 DojoX is an area for development of extensions to the Dojo toolkit. It is a repository for more stable and mature extensions and also acts as an incubator for experimental code, a testbed for additions to the main toolkit. Unlike Dojo and Dijit, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.
 
 
-* `About DojoX <dojox/info>`_
+* :ref:`About DojoX <dojox/info>`
 
 These sections cover the available projects shipped with the Dojo Toolkit:
 
-* `dojox.analytics <dojox/analytics>`_
+* :ref:`dojox.analytics <dojox/analytics>`
 
   An analytic and client monitoring system
 
-  * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
+  * :ref:`dojox.analytics.Urchin <dojox/analytics/Urchin>`
 
-* `dojox.app <dojox/app>`_
+* :ref:`dojox.app <dojox/app>`
 
   Implements the application framework using dojox.mvc for web application on desktop and mobile platforms
 
-* `dojox.atom <dojox/atom>`_
+* :ref:`dojox.atom <dojox/atom>`
 
   Implements the Atom Syndication Format and Atom Publishing Protocol
 
-  * `dojox.atom.io.model <dojox/atom/io/model>`_
+  * :ref:`dojox.atom.io.model <dojox/atom/io/model>`
 
     A JavaScript model of an ATOM feed
 
-  * `dojox.atom.io.Connection <dojox/atom/io/Connection>`_
+  * :ref:`dojox.atom.io.Connection <dojox/atom/io/Connection>`
 
     A IO class for performing APP (ATOM Publishing Protocol) styled IO actions with a server
 
-* `dojox.av <dojox/av>`_
+* :ref:`dojox.av <dojox/av>`
 
   Brings audio and video capabilities to the Open Web
 
-  * `dojox.av.FLAudio <dojox/av/FLAudio>`_
+  * :ref:`dojox.av.FLAudio <dojox/av/FLAudio>`
 
     Provides the ability of implementing MP3 sounds into your dojo applications
 
 
-  * `dojox.av.FLVideo <dojox/av/FLVideo>`_
+  * :ref:`dojox.av.FLVideo <dojox/av/FLVideo>`
 
     Provides the ability to play Flash movie files (FLVs) within the dojo environment
 
 
-  * `dojox.av.widget <dojox/av/widget>`_
+  * :ref:`dojox.av.widget <dojox/av/widget>`
 
     Provides base player control widgets for building a media player
 
-* `dojox.charting <dojox/charting>`_
+* :ref:`dojox.charting <dojox/charting>`
 
   Amazing charting library
 
-* `dojox.collections <dojox/collections>`_
+* :ref:`dojox.collections <dojox/collections>`
 
   Offers methods to handle common collections, like ArrayLists or Dictionaries
 
-* `dojox.color <dojox/color>`_
+* :ref:`dojox.color <dojox/color>`
 
   Extends dojo.color/dojo.Color and adds advanced color model/matching functionality
 
-  * `dojox.color.Palette <dojox/color/Palette>`_
+  * :ref:`dojox.color.Palette <dojox/color/Palette>`
 
-    A color palette generator and handler (used extensively in `dojox.charting <dojox/charting>`_)
+    A color palette generator and handler (used extensively in :ref:`dojox.charting <dojox/charting>`)
 
-* `dojox.cometd <dojox/cometd>`_
+* :ref:`dojox.cometd <dojox/cometd>`
 
   A cometd client written in Dojo
 
-* `dojox.data <dojox/data>`_
+* :ref:`dojox.data <dojox/data>`
 
   Additional data stores and data store helpers
 
-  * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
+  * :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`
 
-    A clone of `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`__, which supports more complex queries than the simple AND format property matching
+    A clone of :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`, which supports more complex queries than the simple AND format property matching
 
-  * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
+  * :ref:`dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`
 
-    A clone of `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`__, which supports more complex queries than the simple AND format property matching
+    A clone of :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`, which supports more complex queries than the simple AND format property matching
 
-  * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
+  * :ref:`dojox.data.AtomReadStore <dojox/data/AtomReadStore>`
 
     A store designed to provide read-only access to Atom XML documents
 
-  * `dojox.data.ClientFilter <dojox/data/ClientFilter>`_
+  * :ref:`dojox.data.ClientFilter <dojox/data/ClientFilter>`
 
     An abstract data store module for adding updateable result set functionality to an existing data store class
 
-  * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
+  * :ref:`dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`
 
     A datastore for connecting to the open source document-oriented database Apache CouchDB
 
-  * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
+  * :ref:`dojox.data.CssClassStore <dojox/data/CssClassStore>`
 
-    A read interface based on the `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
+    A read interface based on the :ref:`dojox.data.CssRuleStore <dojox/data/CssRuleStore>`
 
-  * `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
+  * :ref:`dojox.data.CssRuleStore <dojox/data/CssRuleStore>`
 
     A read interface to the CSS rules loaded in the current page
 
-  * `dojox.data.CsvStore <dojox/data/CsvStore>`_
+  * :ref:`dojox.data.CsvStore <dojox/data/CsvStore>`
 
     A read interface that works with CSV formated data files
 
-  * `dojox.data.FileStore <dojox/data/FileStore>`_
+  * :ref:`dojox.data.FileStore <dojox/data/FileStore>`
 
     A lightweight data store implementation for accessing details about a remote FileSystem
 
-  * `dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`_
+  * :ref:`dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`
 
     Provides access to the Flickr photo sharing site's REST API
 
-  * `dojox.data.FlickrStore <dojox/data/FlickrStore>`_
+  * :ref:`dojox.data.FlickrStore <dojox/data/FlickrStore>`
 
     A wrapper to the public photo feed of the Flickr service
 
-  * `dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`_
+  * :ref:`dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`
 
     A Google AJAX API powered data store for retrieving RSS and Atom feeds from Google
 
-  * `dojox.data.GoogleSearchStore <dojox/data/GoogleSearchStore>`_
+  * :ref:`dojox.data.GoogleSearchStore <dojox/data/GoogleSearchStore>`
 
     Several data stores to interface Google's AJAX search services:
 
-    * `dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`_
+    * :ref:`dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`
 
       A data store for retrieving search results from Google
 
-    * `dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`_
+    * :ref:`dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`
 
       A data store for retrieving search results from Google Blogs
 
-    * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
+    * :ref:`dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`
 
       A data store for retrieving search results from Google Location Search
 
-    * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
+    * :ref:`dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`
 
       A data store for retrieving search results from Google Video
 
-    * `dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`_
+    * :ref:`dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`
 
       A data store for retrieving search results from Google News
 
-    * `dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`_
+    * :ref:`dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`
 
       A data store for retrieving search results from Google Book
 
-    * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
+    * :ref:`dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`
 
       A data store for retrieving search results from Google Image
 
-  * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
+  * :ref:`dojox.data.HtmlStore <dojox/data/HtmlStore>`
 
-    An enhanced replacement for `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_ to work with HTML tables, lists, and collections of DIV and SPAN tags.
+    An enhanced replacement for :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>` to work with HTML tables, lists, and collections of DIV and SPAN tags.
 
-  * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_ (*deprecated*)
+  * :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>` (*deprecated*)
 
     A read interface to work with HTML tables
 
-  * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
+  * :ref:`dojox.data.jsonPathStore <dojox/data/jsonPathStore>`
 
     A local (in memory) store which can attach a dojo.data interface to each javascript object and uses jsonPath as the query language
 
-  * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
+  * :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`
 
     A lightweight data store implementation of a RESTful client
 
-  * `dojox.data.KeyValueStore <dojox/data/KeyValueStore>`_
+  * :ref:`dojox.data.KeyValueStore <dojox/data/KeyValueStore>`
 
     An interface for reading property style files (key/value pairs)
 
-  * `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
+  * :ref:`dojox.data.OpmlStore <dojox/data/OpmlStore>`
 
     A read-only store to work with Opml formatted XML files
 
-  * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
+  * :ref:`dojox.data.PersevereStore <dojox/data/PersevereStore>`
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle Persevere's special features
+    An extension of :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` to handle Persevere's special features
 
-  * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
+  * :ref:`dojox.data.PicasaStore <dojox/data/PicasaStore>`
 
     A data store interface to one of the basic services of the Picasa service, the public photo feed
 
-  * `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
+  * :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>`
 
     A read-only store, which makes a request to the server for each sorting or query in order to work with big datasets
 
-  * `dojox.data.S3Store <dojox/data/S3Store>`_
+  * :ref:`dojox.data.S3Store <dojox/data/S3Store>`
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle Amazon's S3 service using JSON data
+    An extension of :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` to handle Amazon's S3 service using JSON data
 
-  * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
+  * :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>`
 
     ServiceStore and it's subclasses are a generalized dojo.data implementation for any webservice
 
-  * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
+  * :ref:`dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`
 
     A data store interface to use the SnapLogic framework
 
-  * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
+  * :ref:`dojox.data.WikipediaStore <dojox/data/WikipediaStore>`
 
-    An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`_ to use Wikipedia's search service
+    An extension of :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>` to use Wikipedia's search service
 
-  * `dojox.data.XmlStore <dojox/data/XmlStore>`_
+  * :ref:`dojox.data.XmlStore <dojox/data/XmlStore>`
 
     A read and write interface to basic XML data
 
-  * `dojox.data.dom <dojox/data/dom>`_
+  * :ref:`dojox.data.dom <dojox/data/dom>`
 
     A set of DOM manipulation functions
 
-* `dojox.date <dojox/date>`_
+* :ref:`dojox.date <dojox/date>`
 
   A collection of date-related enhancements and utilities, including national calendars.
 
-  * `dojox.date.buddhist <dojox/date/buddhist>`_
+  * :ref:`dojox.date.buddhist <dojox/date/buddhist>`
 
     A date-like class representing the Thai buddhist calendar
 
-  * `dojox.date.hebrew <dojox/date/hebrew>`_
+  * :ref:`dojox.date.hebrew <dojox/date/hebrew>`
 
     A date-like class representing the Hebrew calendar
 
-  * `dojox.date.islamic <dojox/date/islamic>`_
+  * :ref:`dojox.date.islamic <dojox/date/islamic>`
 
     A date-like class representing the Islamic or Hijri calendar
 
-* `dojox.drawing <dojox/drawing>`_
+* :ref:`dojox.drawing <dojox/drawing>`
 
   Vector graphics drawing editor
 
-* `dojox.dtl <dojox/dtl>`_
+* :ref:`dojox.dtl <dojox/dtl>`
 
   Django Template Language implementation
 
-* `dojox.editor <dojox/editor>`_
+* :ref:`dojox.editor <dojox/editor>`
 
   Extensions for dijit.Editor
 
-* `dojox.embed <dojox/embed>`_
+* :ref:`dojox.embed <dojox/embed>`
 
   Base code for embedding external objects like Flash, Quicktime
 
-* `dojox.encoding <dojox/encoding>`_
+* :ref:`dojox.encoding <dojox/encoding>`
 
   All sorts of string encoding algorithms, including compression, crypto and more.
 
-* `dojox.flash <dojox/flash>`_
+* :ref:`dojox.flash <dojox/flash>`
 
   Utilities to embed and communicate with Flash-based objects
 
-* `dojox.form <dojox/form>`_
+* :ref:`dojox.form <dojox/form>`
 
-  Additional form-related widgets beyond `dijit.form <dijit/form>`_ functionality
+  Additional form-related widgets beyond :ref:`dijit.form <dijit/form>` functionality
 
-  * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+  * :ref:`dojox.form.BusyButton <dojox/form/BusyButton>`
 
     A new Button with progresss indicator built in, for indicating processing after you press the button
 
-  * `dojox.form.CheckedMultiSelect <dojox/form/CheckedMultiSelect>`_
+  * :ref:`dojox.form.CheckedMultiSelect <dojox/form/CheckedMultiSelect>`
 
     A multi-select widget (similar to html select with multiple=true) that uses check boxes
 
-  * `dojox.form.DateTextBox <dojox/form/DateTextBox>`_
+  * :ref:`dojox.form.DateTextBox <dojox/form/DateTextBox>`
 
     description?
 
-  * `dojox.form.DropDownSelect <dojox/form/DropDownSelect>`_
+  * :ref:`dojox.form.DropDownSelect <dojox/form/DropDownSelect>`
 
-    A styleable drop down select box (similar to html select element). Moved to dijit.form.Select. See also `dijit.form.Select <dijit/form/Select>`_
+    A styleable drop down select box (similar to html select element). Moved to dijit.form.Select. See also :ref:`dijit.form.Select <dijit/form/Select>`
 
-  * `dojox.form.DropDownStack <dojox/form/DropDownStack>`_
+  * :ref:`dojox.form.DropDownStack <dojox/form/DropDownStack>`
 
     A widget for enabling/disabling parts of a form based on a selection
 
-  * `dojox.form.FileInput <dojox/form/FileInput>`_ (covers base, Auto, and Blind)
+  * :ref:`dojox.form.FileInput <dojox/form/FileInput>` (covers base, Auto, and Blind)
 
-    A series of experimental Vanilla input type="file" widgets for uploading files. See also `dojox.form.Uploader <dojox/form/Uploader>`_
+    A series of experimental Vanilla input type="file" widgets for uploading files. See also :ref:`dojox.form.Uploader <dojox/form/Uploader>`
 
-  * `dojox.form.FilePickerTextBox <dojox/form/FilePickerTextBox>`_
+  * :ref:`dojox.form.FilePickerTextBox <dojox/form/FilePickerTextBox>`
 
     A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown
 
-  * `dojox.form.FileUploader <dojox/form/FileUploader>`_
+  * :ref:`dojox.form.FileUploader <dojox/form/FileUploader>`
 
-    Deprecated old multi-file uploader that shows progress as the files are uploading. Use `dojox.form.Uploader <dojox/form/Uploader>`_ instead.
+    Deprecated old multi-file uploader that shows progress as the files are uploading. Use :ref:`dojox.form.Uploader <dojox/form/Uploader>` instead.
 
-  * `dojox.form.ListInput <dojox/form/ListInput>`_
+  * :ref:`dojox.form.ListInput <dojox/form/ListInput>`
 
     The ListInput widget allows you to create a list of elements.
 
-  * `dojox.form.manager <dojox/form/manager/index>`__
+  * :ref:`dojox.form.manager <dojox/form/manager/index>`
 
     A package to manage complex event-driven dynamic forms
 
-  * `dojox.form.Manager (widget) <dojox/form/Manager>`_
+  * :ref:`dojox.form.Manager (widget) <dojox/form/Manager>`
 
-    A widget that uses `dojox.form.manager <dojox/form/manager>`_ to handle dynamic forms
+    A widget that uses :ref:`dojox.form.manager <dojox/form/manager>` to handle dynamic forms
 
-  * `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
+  * :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 
     Extension to ComboBox to allow "tag" style input using a datastore using a delimeter.
 
-  * `dojox.form.PasswordValidator <dojox/form/PasswordValidator>`_
+  * :ref:`dojox.form.PasswordValidator <dojox/form/PasswordValidator>`
 
     A widget that simplifies the "Old/New/Verify" password construct used on many web pages
 
-  * `dojox.form.RadioStack <dojox/form/RadioStack>`_
+  * :ref:`dojox.form.RadioStack <dojox/form/RadioStack>`
 
     A widget for enabling/disabling parts of a form based on a selection
 
-  * `dojox.form.RangeSlider <dojox/form/RangeSlider>`_
+  * :ref:`dojox.form.RangeSlider <dojox/form/RangeSlider>`
 
     A widget that allows a range of values to be selected along a scale
 
-  * `dojox.form.Rating <dojox/form/Rating>`_
+  * :ref:`dojox.form.Rating <dojox/form/Rating>`
 
     A widget that allows users to rate items
 
-  * `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
+  * :ref:`dojox.form.TimeSpinner <dojox/form/TimeSpinner>`
 
     This widget is the same as dijit.form.NumberSpinner, but for the time component of a date object instead
 
-  * `dojox.form.Uploader <dojox/form/Uploader>`_
+  * :ref:`dojox.form.Uploader <dojox/form/Uploader>`
 
     A widget that adds functionality to a standard HTML file input. It hides the actual uploader and substitutes a dijit.form.Button.
 
-* `dojox.fx <dojox/fx>`_
+* :ref:`dojox.fx <dojox/fx>`
 
   Extension animations to the core dojo FX project
 
-  * `dojox.fx.crossFade <dojox/fx/crossFade>`_
+  * :ref:`dojox.fx.crossFade <dojox/fx/crossFade>`
 
     Crossfade two nodes easily
 
-  * `dojox.fx.highlight <dojox/fx/highlight>`_
+  * :ref:`dojox.fx.highlight <dojox/fx/highlight>`
 
     Animates the background color of a node, and returns it to the color it was
 
-  * `dojox.fx.sizeTo <dojox/fx/sizeTo>`_
+  * :ref:`dojox.fx.sizeTo <dojox/fx/sizeTo>`
 
     Size a node about it's center to a new width/height
 
-  * `dojox.fx.slideBy <dojox/fx/slideBy>`_
+  * :ref:`dojox.fx.slideBy <dojox/fx/slideBy>`
 
     Slide a node by a t,l offset
 
-  * `dojox.fx.style <dojox/fx/style>`_
+  * :ref:`dojox.fx.style <dojox/fx/style>`
 
     Module to provide CSS animations
 
-  * `dojox.fx.scroll <dojox/fx/scroll>`_
+  * :ref:`dojox.fx.scroll <dojox/fx/scroll>`
 
     Module to provide scroll-related FX
 
-  * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
+  * :ref:`dojox.fx.wipeTo <dojox/fx/wipeTo>`
 
-* `dojox.gantt <dojox/gantt>`_
+* :ref:`dojox.gantt <dojox/gantt>`
 
   A project and resource management tool
 
-* `dojox.gauges <dojox/gauges>`_
+* :ref:`dojox.gauges <dojox/gauges>`
 
   A collection of gauge widgets used to display numerical data
 
-  * `dojox.gauges.AnalogGauge <dojox/gauges/AnalogGauge>`_
+  * :ref:`dojox.gauges.AnalogGauge <dojox/gauges/AnalogGauge>`
 
     A circular gauge with a variety of indicators, used to display numerical data
 
-  * `dojox.gauges.BarGauge <dojox/gauges/BarGauge>`_
+  * :ref:`dojox.gauges.BarGauge <dojox/gauges/BarGauge>`
 
     A horizontal bar gauge with a few indicators, used to display numerical data
 
-  * `dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`_
+  * :ref:`dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`
 
     A cirular gauge.
 
-  * `dojox.gauges.GlossySemiCircularGauge <dojox/gauges/GlossySemiCircularGauge>`_
+  * :ref:`dojox.gauges.GlossySemiCircularGauge <dojox/gauges/GlossySemiCircularGauge>`
 
     A semi cirular gauge.
 
-  * `dojox.gauges.GlossyHorizontalGauge <dojox/gauges/GlossyHorizontalGauge>`_
+  * :ref:`dojox.gauges.GlossyHorizontalGauge <dojox/gauges/GlossyHorizontalGauge>`
 
     An horizontal gauge.
 
-* `dojox.geo <dojox/geo>`_
+* :ref:`dojox.geo <dojox/geo>`
 
   A module to display geographical content
 
-* `dojox.gesture <dojox/gesture>`_
+* :ref:`dojox.gesture <dojox/gesture>`
 
   Provides gesture events that can run well across a wide range of deivces
 
-* `dojox.gfx <dojox/gfx>`_
+* :ref:`dojox.gfx <dojox/gfx>`
 
   Cross-browser vector graphics API
 
-* `dojox.gfx3d <dojox/gfx3d>`_
+* :ref:`dojox.gfx3d <dojox/gfx3d>`
 
   A 3d API for dojox.gfx
 
-* `dojox.grid <dojox/grid>`_
+* :ref:`dojox.grid <dojox/grid>`
 
   Dojo Toolkits Grid Widgets
 
-  * `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+  * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 
     A visual grid/table much like a spreadsheet
 
-  * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+  * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
     An enhanced version of the base grid, which extends it in numerous useful ways
 
-  * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+  * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-    A grid with support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+    A grid with support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
 
-  * `dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`_
+  * :ref:`dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`
 
     An extended version of TreeGrid that can lazy load and virtual scroll nested levels of huge children rows.
 
@@ -428,359 +428,359 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     This old version is only available for compatible reasons
 
-  * `Grid Plugin API <dojox/grid/pluginAPI>`_
+  * :ref:`Grid Plugin API <dojox/grid/pluginAPI>`
 
-* `dojox.help <dojox/help>`_
-* `dojox.highlight <dojox/highlight>`_
+* :ref:`dojox.help <dojox/help>`
+* :ref:`dojox.highlight <dojox/highlight>`
 
   A client-side syntax highlighting engine
 
-* `dojox.html <dojox/html>`_
+* :ref:`dojox.html <dojox/html>`
 
   Additional HTML helper functions
 
-  * `dojox.html.format <dojox/html/format>`_
+  * :ref:`dojox.html.format <dojox/html/format>`
 
     A package which offers additional HTML helper functions for formatting HTML text
 
-  * `dojox.html.set <dojox/html/set>`_
+  * :ref:`dojox.html.set <dojox/html/set>`
 
     A generic content setter, including adding new stylesheets and evaluating scripts (was part of ContentPane loaders, now separated for generic usage)
 
-  * `dojox.html.metrics <dojox/html/metrics>`_
+  * :ref:`dojox.html.metrics <dojox/html/metrics>`
 
     Translate CSS values to pixel values, calculate scrollbar sizes and font resizes
 
-  * `dojox.html.styles <dojox/html/styles>`_
+  * :ref:`dojox.html.styles <dojox/html/styles>`
 
     Insert, remove and toggle CSS rules as well as search document for style sheets
 
-* `dojox.image <dojox/image>`_
+* :ref:`dojox.image <dojox/image>`
 
   A collection of image-related widgets
 
-  * `dojox.image.Badge <dojox/image/Badge>`_
+  * :ref:`dojox.image.Badge <dojox/image/Badge>`
 
     Attach images or background images, and let them loop
 
-  * `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
+  * :ref:`dojox.image.FlickrBadge <dojox/image/FlickrBadge>`
 
     An extension on dojox.image.Badge, using Flickr as a data provider
 
-  * `dojox.image.Gallery <dojox/image/Gallery>`_
+  * :ref:`dojox.image.Gallery <dojox/image/Gallery>`
 
     A combination of a SlideShow and ThumbnailPicker
 
-  * `dojox.image.Lightbox <dojox/image/Lightbox>`_
+  * :ref:`dojox.image.Lightbox <dojox/image/Lightbox>`
 
     A widget which shows a single image (or groups of images) in a Dialog
 
-  * `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ 
+  * :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` 
 
     Similar to a Lightbox, though much lighter weight, and animated to center from position in page. 
 
-  * `dojox.image.Magnifier <dojox/image/Magnifier>`_
+  * :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`
 
-    A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`_ widget
+    A dojox.gfx-based version of the :ref:`MagnifierLite <dojox/image/MagnifierLite>` widget
 
-  * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`_
+  * :ref:`dojox.image.MagnifierLite <dojox/image/MagnifierLite>`
 
     A simple hover behavior for images, showing a zoomed version of a size image
 
-  * `dojox.image.SlideShow <dojox/image/SlideShow>`_
+  * :ref:`dojox.image.SlideShow <dojox/image/SlideShow>`
 
     A slideshow of images
 
-  * `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
+  * :ref:`dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`
 
     A dojo.data-powered ThumbnailPicker
 
-* `dojox.io <dojox/io>`_
+* :ref:`dojox.io <dojox/io>`
 
   Extensions to the Core dojo.io transports
 
-* `dojox.json <dojox/json>`_
+* :ref:`dojox.json <dojox/json>`
 
   DojoX JSON Modules
 
-  * `dojox.json.query <dojox/json/query>`_
+  * :ref:`dojox.json.query <dojox/json/query>`
 
     A comprehensive object data query tool
 
-  * `dojox.json.schema <dojox/json/schema>`_
+  * :ref:`dojox.json.schema <dojox/json/schema>`
 
     An object validation tool based on JSON Schema
 
-  * `dojox.json.ref <dojox/json/ref>`_
+  * :ref:`dojox.json.ref <dojox/json/ref>`
 
     JSON Referencing capable serializer and deserializer
 
-* `dojox.jsonPath <dojox/jsonPath>`_
+* :ref:`dojox.jsonPath <dojox/jsonPath>`
 
   A query system for JavaScript objects
 
-* `dojox.lang <dojox/lang/index>`_
+* :ref:`dojox.lang <dojox/lang/index>`
 
   JavaScript language extensions for supporting AOP, FP and other language constructs
 
-  * `dojox.lang.aspect <dojox/lang/aspect>`_
+  * :ref:`dojox.lang.aspect <dojox/lang/aspect>`
 
     Provides a framework for aspect-oriented programming.
 
-  * `dojox.lang.async <dojox/lang/async>`_
+  * :ref:`dojox.lang.async <dojox/lang/async>`
 
     Provides helpers for event-driven programming.
 
-  * `dojox.lang.docs <dojox/lang/docs>`_
+  * :ref:`dojox.lang.docs <dojox/lang/docs>`
 
     Provides schemas on Dojo's classes from the API documentation
 
-  * `dojox.lang.functional <dojox/lang/functional>`_
+  * :ref:`dojox.lang.functional <dojox/lang/functional>`
 
     Functional language constructs, including currying and lambda
 
-  * `dojox.lang.observable <dojox/lang/observable>`_
+  * :ref:`dojox.lang.observable <dojox/lang/observable>`
 
     Provides construction of objects such that property access and modification can be controlled, i.e. provides a form of getters/setters
 
-  * `dojox.lang.oo <dojox/lang/oo>`_
+  * :ref:`dojox.lang.oo <dojox/lang/oo>`
 
     Provides mixers to support traits and mixins for object-oriented programming.
 
-  * `dojox.lang.typed <dojox/lang/typed>`_
+  * :ref:`dojox.lang.typed <dojox/lang/typed>`
 
     Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions.
 
-* `dojox.layout <dojox/layout>`_
+* :ref:`dojox.layout <dojox/layout>`
 
-  Experimental and additional extensions to `Dijit Layout <dijit/layout>`__ Widgets
+  Experimental and additional extensions to :ref:`Dijit Layout <dijit/layout>` Widgets
 
-  * `dojox.layout.ContentPane <dojox/layout/ContentPane>`_
+  * :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>`
 
     An extension to dijit.layout.ContentPane providing script execution, among other things
 
-  * `dojox.layout.DragPane <dojox/layout/DragPane>`_
+  * :ref:`dojox.layout.DragPane <dojox/layout/DragPane>`
 
     Provides drag-based scrolling for divs with overflow
 
-  * `dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`_
+  * :ref:`dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`
 
-    A self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`__
+    A self-collapsing widget for use in a :ref:`BorderContainer <dijit/layout/BorderContainer>`
 
-  * `dojox.layout.FloatingPane <dojox/layout/FloatingPane>`_
+  * :ref:`dojox.layout.FloatingPane <dojox/layout/FloatingPane>`
 
     An experimental floating window
 
-  * `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
+  * :ref:`dojox.layout.GridContainer <dojox/layout/GridContainer>`
 
     A panel-like layout mechanism, allowing Drag and Drop between regions
 
-  * `dojox.layout.RadioGroup <dojox/layout/RadioGroup>`_
+  * :ref:`dojox.layout.RadioGroup <dojox/layout/RadioGroup>`
 
-    A variety of `StackContainer <dijit/layout/StackContainer>`__ enhancements providing animated transitions
+    A variety of :ref:`StackContainer <dijit/layout/StackContainer>` enhancements providing animated transitions
 
-  * `dojox.layout.ResizeHandle <dojox/layout/ResizeHandle>`_
+  * :ref:`dojox.layout.ResizeHandle <dojox/layout/ResizeHandle>`
 
     A small widget to provide resizing of a parent node
 
-  * `dojox.layout.RotatorContainer <dojox/layout/RotatorContainer>`_
+  * :ref:`dojox.layout.RotatorContainer <dojox/layout/RotatorContainer>`
 
     An extended StackContainer suited for presentational purposes
 
-  * `dojox.layout.ScrollPane <dojox/layout/ScrollPane>`_
+  * :ref:`dojox.layout.ScrollPane <dojox/layout/ScrollPane>`
 
     An interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal
 
-  * `dojox.layout.TableContainer <dojox/layout/TableContainer>`_
+  * :ref:`dojox.layout.TableContainer <dojox/layout/TableContainer>`
 
     A simple layout widget that lays out its child widgets using a Table element.
 
-  * `dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`_
+  * :ref:`dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`
 
     A custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child
 
-* `dojox.math <dojox/math>`_
+* :ref:`dojox.math <dojox/math>`
 
   A collection of various advanced math functions
 
-* `dojox.mdnd <dojox/mdnd>`_
+* :ref:`dojox.mdnd <dojox/mdnd>`
 
   Experimental coordinates based moveable drag and drop. Use stable `dojo.dnd <dojo/dnd>` instead.
 
-* `dojox.mobile <dojox/mobile>`_
+* :ref:`dojox.mobile <dojox/mobile>`
 
   A collection of utilities to get native look&feel on webapps for iPhone/iPad/Android
 
-* `dojox.mvc <dojox/mvc>`_
+* :ref:`dojox.mvc <dojox/mvc>`
 
   A collection of features for enabling Model-View-Controller (MVC) patterns in Dojo
 
-* `dojox.NodeList <dojox/NodeList>`_ - Additional extensions to `dojo.NodeList <dojo/NodeList>`_
-* `dojox.off <dojox/off>`_
-* `dojox.presentation <dojox/presentation>`_
-* `dojox.resources <dojox/resources>`_
-* `dojox.robot <dojox/robot>`_
-* `dojox.rpc <dojox/rpc>`_
+* :ref:`dojox.NodeList <dojox/NodeList>` - Additional extensions to :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojox.off <dojox/off>`
+* :ref:`dojox.presentation <dojox/presentation>`
+* :ref:`dojox.resources <dojox/resources>`
+* :ref:`dojox.robot <dojox/robot>`
+* :ref:`dojox.rpc <dojox/rpc>`
 
   Extended classes to communicate via Remote Procedure Calls (RPC) with Backend Servers
 
-  * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
-  * `dojox.rpc.Client <dojox/rpc/Client>`_
-  * `dojox.rpc.JsonRest <dojox/rpc/JsonRest>`_
-  * `dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`_
-  * `dojox.rpc.LocalStorageRest <dojox/rpc/LocalStorageRest>`_
-  * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
+  * :ref:`dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`
+  * :ref:`dojox.rpc.Client <dojox/rpc/Client>`
+  * :ref:`dojox.rpc.JsonRest <dojox/rpc/JsonRest>`
+  * :ref:`dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`
+  * :ref:`dojox.rpc.LocalStorageRest <dojox/rpc/LocalStorageRest>`
+  * :ref:`dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`
 
     Provides automatic offline capabilities to the JsonRest/JsonRestStore modules
 
-  * `dojox.rpc.ProxiedPath <dojox/rpc/ProxiedPath>`_
-  * `dojox.rpc.Rest <dojox/rpc/Rest>`_
+  * :ref:`dojox.rpc.ProxiedPath <dojox/rpc/ProxiedPath>`
+  * :ref:`dojox.rpc.Rest <dojox/rpc/Rest>`
 
     Provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE
 
-  * `dojox.rpc.Service <dojox/rpc/Service>`_
+  * :ref:`dojox.rpc.Service <dojox/rpc/Service>`
 
     The foundation of most dojox.RPC transportation
 
-* `dojox.secure <dojox/secure>`_
-* `dojox.sketch <dojox/sketch>`_
-* `dojox.sql <dojox/sql>`_
+* :ref:`dojox.secure <dojox/secure>`
+* :ref:`dojox.sketch <dojox/sketch>`
+* :ref:`dojox.sql <dojox/sql>`
 
   objects to support Dojo Offline (dojox.off)  DEPRECATED
 
-* `dojox.storage <dojox/storage>`_
+* :ref:`dojox.storage <dojox/storage>`
 
   Objects for mass storage within the browser
 
-* `dojox.string <dojox/string>`_
+* :ref:`dojox.string <dojox/string>`
 
   A collection of various objects for advanced string manipulation, including a Builder and a tokenizer
 
-* `dojox.testing <dojox/testing>`_
-* `dojox.timing <dojox/timing>`_
+* :ref:`dojox.testing <dojox/testing>`
+* :ref:`dojox.timing <dojox/timing>`
 
   A set of objects to perform advanced time-based tasks, including a basic Timer
 
-* `dojox.uuid <dojox/uuid>`_
+* :ref:`dojox.uuid <dojox/uuid>`
 
   Universally Unique Identifier (UUID) implementations, including an implementation of UUID 2
 
-* `dojox.validate <dojox/validate>`_
+* :ref:`dojox.validate <dojox/validate>`
 
   Additional input validation methods
 
-* `dojox.widget <dojox/widget>`_
+* :ref:`dojox.widget <dojox/widget>`
 
   A collection of un-categorized widgets, or code not requiring its own package
 
-  * `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
+  * :ref:`dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`
 
     A circular gauge with a variety of indicators, used to display numerical data
 
-  * `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_
+  * :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`
 
     A rotator that automatically transitions between child nodes
 
-  * `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
+  * :ref:`dojox.widget.BarGauge <dojox/widget/BarGauge>`
 
     A horizontal bar gauge with a few indicators, used to display numerical data
 
-  * `dojox.widget.Calendar <dojox/widget/Calendar>`_
+  * :ref:`dojox.widget.Calendar <dojox/widget/Calendar>`
 
     An extended dijit._Calendar
 
-  * `dojox.widget.CalendarFx <dojox/widget/CalendarFx>`_
+  * :ref:`dojox.widget.CalendarFx <dojox/widget/CalendarFx>`
 
     An extended dijit._Calendar with FX
 
-  * `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_
+  * :ref:`dojox.widget.ColorPicker <dojox/widget/ColorPicker>`
 
     A HSV Color Picker, similar to PhotoShop
 
-  * `dojox.widget.Dialog <dojox/widget/Dialog>`_
+  * :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
-    An extension to `dijit.Dialog <dijit/Dialog>`__ which provides additional sizing options, animations, and styling
+    An extension to :ref:`dijit.Dialog <dijit/Dialog>` which provides additional sizing options, animations, and styling
 
-  * `dojox.widget.DocTester <dojox/widget/DocTester>`_
+  * :ref:`dojox.widget.DocTester <dojox/widget/DocTester>`
 
     A widget to run DocTests inside an HTML page
 
-  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
+  * :ref:`dojox.widget.FeedPortlet <dojox/widget/Portlet>`
 
     An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list
 
-  * `dojox.widget.FilePicker <dojox/widget/FilePicker>`_
+  * :ref:`dojox.widget.FilePicker <dojox/widget/FilePicker>`
 
     A specialized version of RollingList that handles file informatione
 
-  * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_
+  * :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>`
 
     A OSX-style Fisheye Menu
 
-  * `dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`_
+  * :ref:`dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`
 
     A more robust Fisheye Widget, which fish-eyes' any CSS property
 
-  * `dojox.widget.Iterator <dojox/widget/Iterator>`_
+  * :ref:`dojox.widget.Iterator <dojox/widget/Iterator>`
 
     A basic array and data store iterator class
 
-  * `dojox.widget.Loader <dojox/widget/Loader>`_
+  * :ref:`dojox.widget.Loader <dojox/widget/Loader>`
 
     A small experimental Ajax Activity indicator (deprecated, will be moved to dojo-c)
 
-  * `dojox.widget.Pager <dojox/widget/Pager>`_
+  * :ref:`dojox.widget.Pager <dojox/widget/Pager>`
 
-    A `dojo.data <dojo/data>`_ powered Pager Widget, displaying a few items in a horizontal or vertical UI
+    A :ref:`dojo.data <dojo/data>` powered Pager Widget, displaying a few items in a horizontal or vertical UI
 
-  * `dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`_
+  * :ref:`dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`
 
     A menu item that can be used as a placeholder.
 
-  * `dojox.widget.Portlet <dojox/widget/Portlet>`_
+  * :ref:`dojox.widget.Portlet <dojox/widget/Portlet>`
 
     An enhanced TitlePane designed to be used with the dojox.layout.GridContainer
 
-  * `dojox.widget.Roller <dojox/widget/Roller>`_
+  * :ref:`dojox.widget.Roller <dojox/widget/Roller>`
 
     An unobtrusive "roller", displaying one message from a list in a loop
 
-  * `dojox.widget.RollingList <dojox/widget/RollingList>`_
+  * :ref:`dojox.widget.RollingList <dojox/widget/RollingList>`
 
     A rolling list that can be tied to a data store with children
 
-  * `dojox.widget.Rotator <dojox/widget/Rotator>`_
+  * :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`
 
     A widget for rotating through child nodes using transitions
 
-  * `dojox.widget.SortList <dojox/widget/SortList>`_
+  * :ref:`dojox.widget.SortList <dojox/widget/SortList>`
 
     A small sortable unordered-list
 
-  * `dojox.widget.Standby <dojox/widget/Standby>`_
+  * :ref:`dojox.widget.Standby <dojox/widget/Standby>`
 
     A small widget that can be used to mark sections of a page as busy, processing, unavailable, etc.
 
-  * `dojox.widget.Toaster <dojox/widget/Toaster>`_
+  * :ref:`dojox.widget.Toaster <dojox/widget/Toaster>`
 
     A message display system, showing warnings, errors and other messages unobtrusively
 
-  * `dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`_
+  * :ref:`dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`
 
     Shows the "yellow bar" at the top of the screen when the user is to be notified that they should upgrade their browser or a plugin.
 
-  * `dojox.widget.Wizard <dojox/widget/Wizard>`_
+  * :ref:`dojox.widget.Wizard <dojox/widget/Wizard>`
 
     A simple widget providing a step-by-step wizard like UI
 
-* `dojox.wire <dojox/wire>`_
+* :ref:`dojox.wire <dojox/wire>`
 
   Declarative data binding and action tags for simplified MVC
 
-* `dojox.xml <dojox/xml>`_
+* :ref:`dojox.xml <dojox/xml>`
 
   XML utilities
 
-* `dojox.xmpp <dojox/xmpp>`_
+* :ref:`dojox.xmpp <dojox/xmpp>`
 
   XMPP (Jabber Client) Service implementation in pure javascript

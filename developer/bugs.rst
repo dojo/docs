@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _developer/bugs:
 
 Notes on how to use bug tracking
 ================================

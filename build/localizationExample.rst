@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/localizationExample:
 
 Localized Build Example
 =======================
@@ -21,9 +21,9 @@ This document is more to do with how to arrange your source files so that the bu
 
 There are several pages of existing documentation that describe the background and theory to the localization process:
 
- - `Internationalization Quickstart <quickstart/internationalization/index>`_
- - `getLocalization <dojo/i18n/getLocalization>`_
- - `requireLocalization <dojo/requireLocalization>`_
+ - :ref:`Internationalization Quickstart <quickstart/internationalization/index>`
+ - :ref:`getLocalization <dojo/i18n/getLocalization>`
+ - :ref:`requireLocalization <dojo/requireLocalization>`
 
 Here we provide a practical walkthrough of applying localisation to actual dijits and an actual build profile.
 
@@ -335,7 +335,7 @@ then dojo will automatically serve the page with the ``fr`` string resources, an
 Trees of Locales
 ================
 
-Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The `requireLocalization <dojo/requireLocalization>`_ page mentions that the bundles for each locale is merged to provide a single javascript object.  An example would be useful at this point.
+Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The :ref:`requireLocalization <dojo/requireLocalization>` page mentions that the bundles for each locale is merged to provide a single javascript object.  An example would be useful at this point.
 
 If we provide the following:
 

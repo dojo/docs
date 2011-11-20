@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/av/FLVideo:
 
 dojox.av.FLVideo
 ================
@@ -48,6 +48,6 @@ For examples, please refer to the test file in the SDK: dojox/av/tests/testFLVid
 See also
 ========
 
-* `dojox.av <dojox/av>`_
-* `dojox.av.FLAudio <dojox/av/FLAudio>`_
-* `dojox.av.widget <dojox/av/widget>`_
+* :ref:`dojox.av <dojox/av>`
+* :ref:`dojox.av.FLAudio <dojox/av/FLAudio>`
+* :ref:`dojox.av.widget <dojox/av/widget>`

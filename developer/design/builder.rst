@@ -1,3 +1,3 @@
-#format dojo_rst
+.. _developer/design/builder:
 
-This document has been relocated `here <build/buildSystem>`_
+This document has been relocated :ref:`here <build/buildSystem>`

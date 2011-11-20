@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/Color:
 
 dojo.Color
 ================
@@ -26,7 +26,7 @@ Features
 
 * **dojo.Color.named**
 
-  An array of named Colors. Those are only the 16 named colors defined by the HTML 4 standard. If you need all named colors from the CSS3 standard you have to require `dojo.colors <dojo/colors>`_
+  An array of named Colors. Those are only the 16 named colors defined by the HTML 4 standard. If you need all named colors from the CSS3 standard you have to require :ref:`dojo.colors <dojo/colors>`
 
 * **dojo.blendColors**
 

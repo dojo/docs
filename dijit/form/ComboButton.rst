@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/ComboButton:
 
 dijit.form.ComboButton
 ======================

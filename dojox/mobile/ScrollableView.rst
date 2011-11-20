@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/ScrollableView:
 
 dojox.mobile.ScrollableView
 ===========================
@@ -57,7 +57,7 @@ Inherited from dojox.mobile.scrollable:
 =====
 Usage
 =====
-Basic usage is the same as for `dojox.mobile.View <dojox/mobile/View>`_. If you do not need fixed-positioned header and/or footer bars, you should use `dojox.mobile.View <dojox/mobile/View>`_.
+Basic usage is the same as for :ref:`dojox.mobile.View <dojox/mobile/View>`. If you do not need fixed-positioned header and/or footer bars, you should use :ref:`dojox.mobile.View <dojox/mobile/View>`.
 
 ========
 Examples

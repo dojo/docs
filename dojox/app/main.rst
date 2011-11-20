@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/app/main:
 
 dojox.app.main
 ==============

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/crypto:
 
 dojox.encoding.crypto
 =====================
@@ -11,7 +11,7 @@ The crypto module of DojoX Encoding brings common symmetrical cryptography to yo
 At the time of writing (Dojo Toolkit 1.3 release), 2 algorithms are available:
 
 * dojox.encoding.crypto.Blowfish
-* `dojox.encoding.crypto.SimpleAES <dojox/encoding/crypto/SimpleAES>`_
+* :ref:`dojox.encoding.crypto.SimpleAES <dojox/encoding/crypto/SimpleAES>`
 
 However, more are planned for future releases, including the following:
 
@@ -33,10 +33,10 @@ keyword arguments object passed. For example:
   var plaintext = dojox.encoding.crypto.SimpleAES.decrypt(ciphertext, myPassword);
 
 In general, the returned text is encoded using the base64 algorithm; however, SimpleAES is hard-coded
-to only return Hex-formatted strings (there is a reason for this, please see the `SimpleAES <dojox/encoding/crypto/SimpleAES>`_
+to only return Hex-formatted strings (there is a reason for this, please see the :ref:`SimpleAES <dojox/encoding/crypto/SimpleAES>`
 page).
 
-As with `dojox.encoding.digests <dojox/encoding/digests>`_, there is a common arguments object that all implementations within
+As with :ref:`dojox.encoding.digests <dojox/encoding/digests>`, there is a common arguments object that all implementations within
 crypto should allow for.  This object takes the following form:
 
 .. code-block :: javascript

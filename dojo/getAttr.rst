@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/getAttr:
 
 dojo.getAttr
 ============
@@ -13,7 +13,7 @@ Gets an attribute on an HTML element.
 Introduction
 ============
 
-``dojo.getAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or default value.
+``dojo.getAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or default value.
 
 Since Dojo 1.7, ``dojo.getAttr`` is exposed via the ``get`` method of the ``dojo/dom-attr`` module.  An alias is kept in dojo/_base/html for backward-compatibility.
 
@@ -88,18 +88,18 @@ See also
 
 DOM operations:
 
-* `dojo.attr <dojo/attr>`_
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.setAttr <dojo/setAttr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr <dojo/removeAttr>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.setAttr <dojo/setAttr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.removeAttr <dojo/removeAttr>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
-* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
+* :ref:`dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`
 
 External links:
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/scenario-micro:
 
 A CustomBase Dojo Build
 =======================

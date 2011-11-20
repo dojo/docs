@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/index:
 
 dojox.lang
 ==========
@@ -18,35 +18,35 @@ JavaScript language extensions for supporting AOP, FP and other language constru
 Features
 ========
 
-* `dojox.lang.aspect <dojox/lang/aspect>`_
+* :ref:`dojox.lang.aspect <dojox/lang/aspect>`
 
   Provides a framework for aspect-oriented programming.
 
-* `dojox.lang.async <dojox/lang/async>`_
+* :ref:`dojox.lang.async <dojox/lang/async>`
 
   Provides helpers for event-driven programming.
 
-* `dojox.lang.docs <dojox/lang/docs>`_
+* :ref:`dojox.lang.docs <dojox/lang/docs>`
 
   Provides schemas on Dojo's classes from the API documentation. This can used for runtime access to class metadata information such as descriptions and type information. This can be used in conjunction with dojox.lang.typed to enforce typing on Dojo's classes using the API information.
 
-* `dojox.lang.functional <dojox/lang/functional>`_
+* :ref:`dojox.lang.functional <dojox/lang/functional>`
 
   Provides lambda functions, and common functional operations.
 
-* `dojox.lang.observable <dojox/lang/observable>`_
+* :ref:`dojox.lang.observable <dojox/lang/observable>`
 
   Provides construction of objects that such that property access and modification can be controlled, i.e. provides a form of getters/setters.
 
-* `dojox.lang.oo <dojox/lang/oo>`_
+* :ref:`dojox.lang.oo <dojox/lang/oo>`
 
   Provides mixers to support traits and mixins for object-oriented programming.
 
-* `dojox.lang.typed <dojox/lang/typed>`_
+* :ref:`dojox.lang.typed <dojox/lang/typed>`
 
   Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions.
 
-* `dojox.lang.utils <dojox/lang/utils>`_
+* :ref:`dojox.lang.utils <dojox/lang/utils>`
 
   Object handling utilities for changing two objects to the same type, updating properties of objects from another object and merge two objects.
 
@@ -55,4 +55,4 @@ Features
 See also
 ========
 
-* `dojo._base.lang <dojo/_base/lang>`_
+* :ref:`dojo._base.lang <dojo/_base/lang>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/window:
 
 dojo._base.window
 =================
@@ -17,22 +17,22 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.doc <dojo/doc>`_
+* :ref:`dojo.doc <dojo/doc>`
 
   Alias for the current document
 
-* `dojo.body <dojo/body>`_
+* :ref:`dojo.body <dojo/body>`
 
   Return the body element of the document
 
-* `dojo.setContext <dojo/setContext>`_
+* :ref:`dojo.setContext <dojo/setContext>`
 
   Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
 
-* `dojo.withGlobal <dojo/withGlobal>`_
+* :ref:`dojo.withGlobal <dojo/withGlobal>`
 
   Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
 
-* `dojo.withDoc <dojo/withDoc>`_
+* :ref:`dojo.withDoc <dojo/withDoc>`
 
   Call callback with documentObject as dojo.doc

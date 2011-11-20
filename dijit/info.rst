@@ -1,5 +1,4 @@
-## page was renamed from dijit
-#format dojo_rst
+.. _dijit/info:
 
 Dijit
 =====
@@ -40,9 +39,9 @@ is identical to:
   </script>
   <div data-dojo-type="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
 
-The declarative method requires you include the `dojo.parser <dojo/parser>`_ and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
+The declarative method requires you include the :ref:`dojo.parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
 
-**note:** Dijit uses a special function for access, `dijit.byId() <dijit/byId>`_ ... This is **not** the same as `dojo.byId <dojo/byId>`_, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <dijit/registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+**note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit.registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. code-block :: html
   :linenos:
@@ -59,7 +58,7 @@ The declarative method requires you include the `dojo.parser <dojo/parser>`_ and
      <p>I am some content</p>
   </div> 
 
-If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other `DOM manipulation <quickstart/dom>`_:
+If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other :ref:`DOM manipulation <quickstart/dom>`:
 
 .. code-block :: javascript
   :linenos:
@@ -99,7 +98,7 @@ All Dijits follow the same programmatic convention. Create a new instance with t
   var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
   dialog.show();
 
-This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <dijit/Dialog>`_. You can pass a node reference directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
+This will cause the creator to use the node with id="makeADialog", and turn it into a :ref:`Dialog <dijit/Dialog>`. You can pass a node reference directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
 
 .. code-block :: javascript
   :linenos:
@@ -136,7 +135,7 @@ Specifically, to get/set attributes after initialization, you need to use the ``
   // set to the current date
   myDateTextBox.set('value', new Date());
 
-Set() also supports a hash API like `dojo.attr() <dojo/attr>`_, for setting multiple attributes:
+Set() also supports a hash API like :ref:`dojo.attr() <dojo/attr>`, for setting multiple attributes:
 
 .. code-block :: javascript
  :linenos:
@@ -168,9 +167,9 @@ There are several attributes common to (most) all Dijit instances. These appear 
   // hide a widget with id="myThiner"
   dojo.style(dijit.byId("myThinger").domNode, "display", "none"); 
 
-* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .set() to set and load content, this is the node that will be targeted for that content.
+* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a :ref:`dijit.Dialog <dijit/Dialog>` only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .set() to set and load content, this is the node that will be targeted for that content.
 
-* declaredClass - this is actually a relic of `dojo.declare <dojo/declare>`_, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
+* declaredClass - this is actually a relic of :ref:`dojo.declare <dojo/declare>`, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
 
 .. code-block :: javascript
  :linenos:
@@ -210,7 +209,7 @@ Themes
 
 Dijit comes bundled with four themes: Claro (new in Dojo 1.5), Tundra, Soria, and Nihilo. Themes are collections of images (icons and background images) and CSS, and brings a common visual style and color scheme to all the widgets. You can override the theme by container or by widget element to add nuance and flair.
 
-To learn more about themes, see `Dijit Themes and Theming <dijit/themes>`_.
+To learn more about themes, see :ref:`Dijit Themes and Theming <dijit/themes>`.
 
 
 ===============
@@ -225,7 +224,7 @@ Locating Widgets
 
 There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of its member properties) through that widget. There are three "main" ways to access a widget:
 
-The simplest way to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.registry <dijit/registry>`_.
+The simplest way to access a widget is :ref:`dijit.byId <dijit/byId>`. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the :ref:`dijit.registry <dijit/registry>`.
 
 With the following markup:
 
@@ -241,7 +240,7 @@ The Dialog instance would be available through the byId call to `myDialog`:
 
   dijit.byId("myDialog").show(); // show my dialog instance
 
-If the ID is unknown for some reason, the function `dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_ can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
+If the ID is unknown for some reason, the function :ref:`dijit.getEnclosingWidget <dijit/getEnclosingWidget>` can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
 
 .. code-block :: javascript
   :linenos:
@@ -260,7 +259,7 @@ The last, most common method, is a lot like ``getEnclosingWidget``, though it on
   var widget = dijit.byNode(node); // now, w == widget 
   widget.show(); 
 
-Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNode>`_, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
+Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit/byNode>`, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
 
 .. code-block :: javascript
   :linenos:
@@ -270,7 +269,7 @@ Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNo
       if(w){ w.show(); }
   });
 
-There are other ways of accessing and manipulating widgets, mostly involving the `dijit.registry <dijit/registry>`_, a collection of all widgets active on a page. 
+There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit.registry <dijit/registry>`, a collection of all widgets active on a page. 
 
 ==================
 Behavioral widgets

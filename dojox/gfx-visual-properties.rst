@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx-visual-properties:
 
 Shape properties
 ================
@@ -55,19 +55,19 @@ Newly created shapes use ``null`` for all their visual and geometric properties 
 Color
 =====
 
-Color is the fundamental property in HTML and graphics. Dojo handles colors as a part of the base. See details in `dojo.Color <dojo/Color>`_. The additional module of `dojo.colors <dojo/colors>`_ adds CSS3 color goodies: a huge list of named colors, HSL color space, a grayscale helper.
+Color is the fundamental property in HTML and graphics. Dojo handles colors as a part of the base. See details in :ref:`dojo.Color <dojo/Color>`. The additional module of :ref:`dojo.colors <dojo/colors>` adds CSS3 color goodies: a huge list of named colors, HSL color space, a grayscale helper.
 
 Anywhere color is accepted following objects can be used to define it:
 
 * A valid color name, like: ``"white"``, ``"black"``, ``"red"``, ``"green"``, ``"lime"``, ``"blue"``, ``"navy"``, ``"gray"``, ``"silver"``.
 
-  If you want to support all CSS3 color names, don’t forget to require `dojo.colors <dojo/colors>`_ module.
+  If you want to support all CSS3 color names, don’t forget to require :ref:`dojo.colors <dojo/colors>` module.
 
 * A valid CSS color code, e.g., ``"#FF0000"`` or ``"#f00"``.
 
 * An array of RGB or RGBA values, e.g, ``[255, 0, 0]`` or ``[255, 0, 0, 1.0]``.
 
-* A valid `dojo.Color <dojo/Color>`_ object. Internally all other color definitions are converted to this object.
+* A valid :ref:`dojo.Color <dojo/Color>` object. Internally all other color definitions are converted to this object.
 
 ===============
 Stroke property

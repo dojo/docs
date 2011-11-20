@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/CurrencyTextBox:
 
 dijit.form.CurrencyTextBox
 ==========================
@@ -10,7 +10,7 @@ dijit.form.CurrencyTextBox
 .. contents::
     :depth: 2
 
-CurrencyTextBox widgets inherit all the attributes and behaviors of the `NumberTextBox <dijit/form/NumberTextBox>`_ widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
+CurrencyTextBox widgets inherit all the attributes and behaviors of the :ref:`NumberTextBox <dijit/form/NumberTextBox>` widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
 
 
 =====
@@ -91,4 +91,4 @@ In this example using euros with German formatting, the invalid message contains
 Accessibility
 =============
 
-See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`

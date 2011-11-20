@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/FileInput:
 
 dojox.form.FileInput
 ====================
@@ -11,7 +11,7 @@ dojox.form.FileInput
 
 The FileInput class provides a foundation for a series of FileInput widgets: FileInput, FileInputAuto and FileInputBlind. 
 
-Unless you have a clinical aversion to Flash, it is recommended you use the newer `FileUploader <dojox/form/FileUploader>`_ and provided in the DojoX Form project.
+Unless you have a clinical aversion to Flash, it is recommended you use the newer :ref:`FileUploader <dojox/form/FileUploader>` and provided in the DojoX Form project.
 
 ============
 Introduction
@@ -43,5 +43,5 @@ The three types are described as:
 See also
 ========
 
-* `FileUploader <dojox/form/FileUploader>`_
-* `IFrame IO <dojo/io/iframe>`_
+* :ref:`FileUploader <dojox/form/FileUploader>`
+* :ref:`IFrame IO <dojo/io/iframe>`

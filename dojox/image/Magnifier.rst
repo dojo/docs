@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/Magnifier:
 
 dojox.image.Magnifier
 =====================
@@ -11,7 +11,7 @@ dojox.image.Magnifier
 .. contents::
    :depth: 2
 
-A dojox.gfx-based version of the `MagnifierLite widget <dojox/image/MagnifierLite>`_.
+A dojox.gfx-based version of the :ref:`MagnifierLite widget <dojox/image/MagnifierLite>`.
 
 
 ============

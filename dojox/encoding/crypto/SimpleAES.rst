@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/crypto/SimpleAES:
 
 dojox.encoding.crypto.SimpleAES
 ===============================
@@ -10,7 +10,7 @@ dojox.encoding.crypto.SimpleAES
 Unlike other crypto implementations within DojoX Encoding, the SimpleAES implementation is hard-coded using
 a modified version of CBC (Cipher Block Chaining) mode, along with a non-standard formatting.  The reasons
 for this are because of eventual plans to use this implementation, modified from the implementation by
-Brad Neuberg for `dojox.off <dojox/off>`_ (within the "private" `dojox.sql <dojox/sql>`_ project) to refactor
+Brad Neuberg for :ref:`dojox.off <dojox/off>` (within the "private" :ref:`dojox.sql <dojox/sql>` project) to refactor
 and replace dojox.sql.
 
 This implementation differs from the dojox.sql implementation in the following ways:

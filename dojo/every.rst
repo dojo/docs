@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/every:
 
 dojo.every
 ==========
@@ -7,4 +7,4 @@ dojo.every
 Usage & examples
 ================
 
-See array documentation : `dojo.every <quickstart/arrays#dojo-every>`_.
+See array documentation : :ref:`dojo.every <quickstart/arrays>`.

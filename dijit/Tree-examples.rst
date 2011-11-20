@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Tree-examples:
 
 dijit.Tree examples
 ===================

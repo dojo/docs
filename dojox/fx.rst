@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/fx:
 
 dojox.fx
 ========
@@ -17,14 +17,14 @@ Base Animations
 
 These are the animations provided by calling ``dojo.require("dojox.fx");``
 
-* `dojox.fx.wipeTo <dojox/fx/wipeTo>`_ - allows you to wipe a node to a specific height or width
+* :ref:`dojox.fx.wipeTo <dojox/fx/wipeTo>` - allows you to wipe a node to a specific height or width
 * dojox.fx.sizeTo - animates a node about it's center to a defined width and height
 * dojox.fx.slideBy - slide a node by a defined offset
 * dojox.fx.crossFade - conveniently fade two nodes simultaneously
 * dojox.fx.highlight - highlights a node for a short timespan
 * dojox.fx.fadeTo - fade a node to a defined opacity
 
-Additionally, dojox.fx includes the Dojo Core `animations <dojo/fx>`_, and creates aliases to them in the dojox.fx namespace. For instance:
+Additionally, dojox.fx includes the Dojo Core :ref:`animations <dojo/fx>`, and creates aliases to them in the dojox.fx namespace. For instance:
 
 .. code-block :: javascript
 
@@ -38,41 +38,41 @@ The DojoX FX project also contains additional functions, group by role.
 
 * dojox.fx.scroll - Provides window and node scrolling animation: dojox.fx.smoothScroll
 * dojox.fx.Shadow - An experimental cross-browser drop-shadow
-* `dojox.fx.style <dojox/fx/style>`_ - An experimental API to animate the effects of adding, toggling, and removing class names from nodes.
+* :ref:`dojox.fx.style <dojox/fx/style>` - An experimental API to animate the effects of adding, toggling, and removing class names from nodes.
  
   * dojox.fx.addClass
   * dojox.fx.removeClass
   * dojox.fx.toggleClass 
 
-* dojox.fx.easing - **deprecated**, module moved to `dojo.fx.easing <dojo/fx/easing>`_ in Dojo 1.3
+* dojox.fx.easing - **deprecated**, module moved to :ref:`dojo.fx.easing <dojo/fx/easing>` in Dojo 1.3
 * dojox.fx.flip - An experimental simulated 3d effect API
 * dojox.fx.split - A series of animations for breaking nodes into parts, and transitioning them
 * dojox.fx.text - An extension of fx.split, which works exclusively on text nodes. 
-* `dojox.fx.Timeline <dojox/fx/Timeline>`_ - An advanced *dojo._Line* replacement
+* :ref:`dojox.fx.Timeline <dojox/fx/Timeline>` - An advanced *dojo._Line* replacement
 
 NodeList Supplements
 --------------------
 
-A cross-namespace module which mixes all the Core dojox.fx animations into `dojo.NodeList <dojo/NodeList>`_ is available with the module:
+A cross-namespace module which mixes all the Core dojox.fx animations into :ref:`dojo.NodeList <dojo/NodeList>` is available with the module:
 
 .. code-block :: javascript
 
   dojo.require("dojox.fx.ext-dojo.NodeList");
 
-This allows you to use `dojo.query <dojo/query>`_ to select groups of nodes and create animation instances from them.
+This allows you to use :ref:`dojo.query <dojo/query>` to select groups of nodes and create animation instances from them.
 
-Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to `dojo.query <dojo/query>`_ as well:
+Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to :ref:`dojo.query <dojo/query>` as well:
 
 .. code-block :: javascript
  
   dojo.require("dojox.fx.ext-dojo.NodeList-style");
 
-Read more about CSS morphing at `dojox.fx.style docs <dojox/fx/style>`_
+Read more about CSS morphing at :ref:`dojox.fx.style docs <dojox/fx/style>`
 
 Base Dojo Extensions
 --------------------
 
-A few modules mix into the `dojo <dojo/index>`_ namespace, as denoted by their module names:
+A few modules mix into the :ref:`dojo <dojo/index>` namespace, as denoted by their module names:
 
-* `dojox.fx.ext-dojo.complex <dojox/fx/ext-dojo/complex>`_
-* `dojox.fx.ext-dojo.reverse <dojox/fx/ext-dojo/reverse>`_
+* :ref:`dojox.fx.ext-dojo.complex <dojox/fx/ext-dojo/complex>`
+* :ref:`dojox.fx.ext-dojo.reverse <dojox/fx/ext-dojo/reverse>`

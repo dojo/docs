@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/ThumbnailPicker:
 
 dojox.image.ThumbnailPicker
 ===========================
@@ -11,7 +11,7 @@ dojox.image.ThumbnailPicker
 .. contents::
    :depth: 2
 
-A `dojo.data-powered <dojo/data>`_ ThumbnailPicker.
+A :ref:`dojo.data-powered <dojo/data>` ThumbnailPicker.
 
 
 ============

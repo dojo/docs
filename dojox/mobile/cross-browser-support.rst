@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/cross-browser-support:
 
 Cross-browser Support
 =====================

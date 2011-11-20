@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/some:
 
 dojo.some
 =========
@@ -7,4 +7,4 @@ dojo.some
 Usage & examples
 ================
 
-See array documentation : `dojo.some <quickstart/arrays#dojo-some>`_.
+See array documentation : :ref:`dojo.some <quickstart/arrays>`.

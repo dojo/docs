@@ -1,6 +1,4 @@
-## page was renamed from dojo/array
-## page was renamed from 1.2/dojo/array
-#format dojo_rst
+.. _quickstart/arrays:
 
 Arrays and Dojo
 ===============
@@ -343,7 +341,7 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
     </ul>
     </div>
 
-For complete documentation and more examples please check the `dojo.map documentation <dojo/map>`_
+For complete documentation and more examples please check the :ref:`dojo.map documentation <dojo/map>`
 
 
 =========

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data:
 
 dojox.data
 ==========
@@ -17,139 +17,139 @@ The DojoX Data project is a container for extensions and extra example stores th
 Features
 ========
 
-* `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
+* :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`
 
-  A clone of `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`__, which supports more complex queries than the simple AND format property matching
+  A clone of :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`, which supports more complex queries than the simple AND format property matching
 
-* `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
+* :ref:`dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`
 
-  A clone of `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`__, which supports more complex queries than the simple AND format property matching
+  A clone of :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`, which supports more complex queries than the simple AND format property matching
 
-* `dojox.data.AppStore <dojox/data/AppStore>`_
+* :ref:`dojox.data.AppStore <dojox/data/AppStore>`
 
   A store implementing an Atom store with complete ATOM Publishing Protocol support. Allows reading and writing of ATOM formatted feeds.
 
-* `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
+* :ref:`dojox.data.AtomReadStore <dojox/data/AtomReadStore>`
 
   A store designed to provide read-only access to Atom XML documents
 
-* `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
+* :ref:`dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`
 
   A datastore for connecting to the open source document-oriented database Apache CouchDB
 
-* `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
+* :ref:`dojox.data.CssClassStore <dojox/data/CssClassStore>`
 
-  A read interface based on the `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`__
+  A read interface based on the :ref:`dojox.data.CssRuleStore <dojox/data/CssRuleStore>`
 
-* `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
+* :ref:`dojox.data.CssRuleStore <dojox/data/CssRuleStore>`
 
   A read interface to the CSS rules loaded in the current page
 
-* `dojox.data.CsvStore <dojox/data/CsvStore>`_
+* :ref:`dojox.data.CsvStore <dojox/data/CsvStore>`
 
   A read interface that works with CSV formated data files
 
-* `dojox.data.FileStore <dojox/data/FileStore>`_
+* :ref:`dojox.data.FileStore <dojox/data/FileStore>`
 
   A lightweight data store implementation for accessing details about a remote FileSystem
 
-* `dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`_
+* :ref:`dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`
 
   Provides access to the Flickr photo sharing site's REST API
 
-* `dojox.data.FlickrStore <dojox/data/FlickrStore>`_
+* :ref:`dojox.data.FlickrStore <dojox/data/FlickrStore>`
 
   A wrapper to the public photo feed of the Flickr service
 
-* `dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`_
+* :ref:`dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`
 
   A Google AJAX API powered data store for retrieving RSS and Atom feeds from Google
 
-* `dojox.data.GoogleSearchStore <dojox/data/GoogleSearchStore>`_
+* :ref:`dojox.data.GoogleSearchStore <dojox/data/GoogleSearchStore>`
 
   Several data stores to interface Google's AJAX search services:
 
-  * `dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`_
+  * :ref:`dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`
 
     A data store for retrieving search results from Google
 
-  * `dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`_
+  * :ref:`dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`
 
     A data store for retrieving search results from Google Blogs
 
-  * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
+  * :ref:`dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`
 
     A data store for retrieving search results from Google Location Search
 
-  * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
+  * :ref:`dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`
 
     A data store for retrieving search results from Google Video
 
-  * `dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`_
+  * :ref:`dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`
 
     A data store for retrieving search results from Google News
 
-  * `dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`_
+  * :ref:`dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`
 
     A data store for retrieving search results from Google Book
 
-  * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
+  * :ref:`dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`
 
     A data store for retrieving search results from Google Image
 
-* `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
+* :ref:`dojox.data.HtmlStore <dojox/data/HtmlStore>`
 
-  An extension of `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`__ to work with HTML tables, lists, and collections of DIV and SPAN tags
+  An extension of :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>` to work with HTML tables, lists, and collections of DIV and SPAN tags
 
-* `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
+* :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`
 
   A read interface to work with HTML tables
 
-* `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
+* :ref:`dojox.data.jsonPathStore <dojox/data/jsonPathStore>`
 
   A local (in memory) store which can attach a dojo.data interface to each javascript object and uses jsonPath as the query language
 
-* `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
+* :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`
 
   A lightweight data store implementation of a RESTful client
 
-* `dojox.data.KeyValueStore <dojox/data/KeyValueStore>`_
+* :ref:`dojox.data.KeyValueStore <dojox/data/KeyValueStore>`
 
   An interface for reading property style files (key/value pairs)
 
-* `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
+* :ref:`dojox.data.OpmlStore <dojox/data/OpmlStore>`
 
   A read-only store to work with Opml formatted XML files
 
-* `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
+* :ref:`dojox.data.PersevereStore <dojox/data/PersevereStore>`
 
-  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Persevere's special features
+  An extension of :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` to handle Persevere's special features
 
-* `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
+* :ref:`dojox.data.PicasaStore <dojox/data/PicasaStore>`
 
   A data store interface to one of the basic services of the Picasa service, the public photo feed
 
-* `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
+* :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>`
 
   A read-only store, which makes a request to the server for each sorting or query in order to work with big datasets
 
-* `dojox.data.S3Store <dojox/data/S3Store>`_
+* :ref:`dojox.data.S3Store <dojox/data/S3Store>`
 
-  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Amazon's S3 service using JSON data
+  An extension of :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>` to handle Amazon's S3 service using JSON data
 
-* `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
+* :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>`
 
   ServiceStore and it's subclasses are a generalized dojo.data implementation for any webservice
 
-* `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
+* :ref:`dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`
 
   A data store interface to use the SnapLogic framework
 
-* `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
+* :ref:`dojox.data.WikipediaStore <dojox/data/WikipediaStore>`
 
-  An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`__ to use Wikipedia's search service
+  An extension of :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>` to use Wikipedia's search service
 
-* `dojox.data.XmlStore <dojox/data/XmlStore>`_
+* :ref:`dojox.data.XmlStore <dojox/data/XmlStore>`
 
   A read and write interface to basic XML data
 
@@ -158,5 +158,5 @@ Features
 See also
 ========
 
-* `Dojo Data Introduction <dojo/data>`_
-* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
+* :ref:`Dojo Data Introduction <dojo/data>`
+* :ref:`Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`

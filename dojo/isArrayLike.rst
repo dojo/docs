@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/isArrayLike:
 
 dojo.isArrayLike
 ================
@@ -20,7 +20,7 @@ Usage
 =====
 
 Use this to test if a variable is like an Array.
-Similar to `dojo.isArray() <dojo/isArray>`_ but more permissive.
+Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 
 .. code-block :: javascript
   :linenos:
@@ -170,8 +170,8 @@ Test against isArrayLike()
 See also
 ========
 
-* `dojo.isString <dojo/isString>`_ - Checks if the parameter is a String
-* `dojo.isArray <dojo/isArray>`_ - Checks if the parameter is an Array
-* `dojo.isFunction <dojo/isFunction>`_ - Checks if the parameter is a Function
-* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
-* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
+* :ref:`dojo.isString <dojo/isString>` - Checks if the parameter is a String
+* :ref:`dojo.isArray <dojo/isArray>` - Checks if the parameter is an Array
+* :ref:`dojo.isFunction <dojo/isFunction>` - Checks if the parameter is a Function
+* :ref:`dojo.isObject <dojo/isObject>` - Checks if the parameter is an Object
+* :ref:`dojo.isAlien <dojo/isAlien>` - Checks if the parameter is a built-in function

@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dijit/layout/TabContainer
-#format dojo_rst
+.. _dijit/layout/TabContainer:
 
 dijit.layout.TabContainer
 =========================
@@ -212,9 +211,9 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
 More examples
 =============
 
-There are several more examples of basic use cases `available <dijit/layout/TabContainer-examples>`_ 
+There are several more examples of basic use cases :ref:`available <dijit/layout/TabContainer-examples>` 
 
-Like `dijit.layout.StackContainer <dijit/layout/StackContainer>`_, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
+Like :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
 
 Manipulating Children
 ---------------------
@@ -294,7 +293,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 TabContainer Events
 -------------------
 
-There are two methods of observing TabContainer *shenanigans*. The first, by using `dojo.subscribe <dojo/subscribe>`_. Each TabContainer `publishes <dojo/publish>`_ notices based on the *id* of the Container. Several different actions are tracked this way:
+There are two methods of observing TabContainer *shenanigans*. The first, by using :ref:`dojo.subscribe <dojo/subscribe>`. Each TabContainer :ref:`publishes <dojo/publish>` notices based on the *id* of the Container. Several different actions are tracked this way:
 
 .. code-block :: javascript
   :linenos:
@@ -312,7 +311,7 @@ There are two methods of observing TabContainer *shenanigans*. The first, by usi
       console.log("Child is gone: ", child); // but not destroyed!
   });
 
-the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via `dojo.connect <dojo/connect>`_:
+the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via :ref:`dojo.connect <dojo/connect>`:
 
 .. code-block :: javascript
   :linenos:
@@ -330,7 +329,7 @@ the -selectChild subscription will not execute if the selected child is already 
 
 This simply uses dojo.connect to listen to the native function calls. 
 
-A common request for ``selectChild`` functionality is to know both the *new* and *old* widgets being transitioned. The easiest way to accomplish this is connect to the "private" ``_transition`` method of a TabContainer:
+A common request for ``selectChild`` functionality is to know both the *new* and *old* widgets being transitioned. The easiest way to accomplish this is connect to the "private" :ref:``transition`` method of a TabContainer:
 
 .. code-block :: javascript
   :linenos:
@@ -341,7 +340,7 @@ A common request for ``selectChild`` functionality is to know both the *new* and
       console.log("I am now showing: ", newPage);
   });
 
-It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the ``_setupChild`` function to ensure you are notified of the children already existing in markup. This is only relevant if you are subclassing for reason:
+It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the :ref:``setupChild`` function to ensure you are notified of the children already existing in markup. This is only relevant if you are subclassing for reason:
 
 .. code-block :: javascript
   :linenos:

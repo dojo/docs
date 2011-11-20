@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/setObject:
 
 dojo.setObject
 ==============
@@ -89,5 +89,5 @@ Examples
 See also
 ========
 
-* `dojo.exists <dojo/exists>`_
-* `dojo.getObject <dojo/getObject>`_
+* :ref:`dojo.exists <dojo/exists>`
+* :ref:`dojo.getObject <dojo/getObject>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/NodeList/delegate:
 
 dojox.NodeList.delegate
 =======================
@@ -13,7 +13,7 @@ dojox.NodeList.delegate
 Overview
 ========
 
-A module providing an event delegation API to `dojo.NodeList <dojo/NodeList>`_
+A module providing an event delegation API to :ref:`dojo.NodeList <dojo/NodeList>`
 
 Delegate() monitors nodes in this NodeList for [bubbled] events on nodes that match a given selector.
 
@@ -68,5 +68,5 @@ Example
 See Also
 ========
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojox.NodeList <dojox/NodeList>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojox.NodeList <dojox/NodeList>`

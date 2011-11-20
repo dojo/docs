@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/xhrGet:
 
 dojo.xhrGet
 ===========
@@ -564,8 +564,8 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
 See also
 ========
 
-* `dojo.xhrPost <dojo/xhrPost>`_
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_
-* `dojo.xhrPut <dojo/xhrPut>`_
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
-* `dojo.xhrDelete <dojo/xhrDelete>`_
+* :ref:`dojo.xhrPost <dojo/xhrPost>`
+* :ref:`dojo.rawXhrPost <dojo/rawXhrPost>`
+* :ref:`dojo.xhrPut <dojo/xhrPut>`
+* :ref:`dojo.rawXhrPut <dojo/rawXhrPut>`
+* :ref:`dojo.xhrDelete <dojo/xhrDelete>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _developer/index:
 
 Dojo Developer's Notebook
 =========================
@@ -8,14 +8,14 @@ Dojo Developer's Notebook
 
 This section contains or links to information useful to contributors or committers to dojo:
 
-* `Style guide <developer/styleguide>`_
+* :ref:`Style guide <developer/styleguide>`
 
 * `Contributor list <developer/contributors>`_ - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to dojo
 
-* `Rules and Responsibilities for Dojo Committers <developer/rules>`_
+* :ref:`Rules and Responsibilities for Dojo Committers <developer/rules>`
 
-* `Source control access <developer/svn>`_
+* :ref:`Source control access <developer/svn>`
 
-* `Using Trac and Dojo / Notes for Committers <developer/bugs>`_
+* :ref:`Using Trac and Dojo / Notes for Committers <developer/bugs>`
 
-* `Projects <developer/projects>`_ - roadmap and planned future projects
+* :ref:`Projects <developer/projects>` - roadmap and planned future projects

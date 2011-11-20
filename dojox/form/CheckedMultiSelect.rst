@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/CheckedMultiSelect:
 
 dojox.form.CheckedMultiSelect
 =============================

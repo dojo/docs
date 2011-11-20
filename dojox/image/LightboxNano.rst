@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/LightboxNano:
 
 dojox.image.LightboxNano
 ========================
@@ -129,7 +129,7 @@ Standard way to declaratively create the LightboxNano
      <img src="/path/to/small/image.jpg">
  </a>
 
-Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_.
+Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
 .. code-block :: javascript
  :linenos:

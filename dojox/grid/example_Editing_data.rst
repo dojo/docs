@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/example_Editing_data:
 
 Editing data
 ------------

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/manager/_EnableMixin:
 
 dojox.form.manager._EnableMixin
 ===============================
@@ -15,9 +15,9 @@ dojox.form.manager._EnableMixin
 Introduction
 ============
 
-This class is the component of the form manager. It should be used together with `\_Mixin <dojox/form/manager/_Mixin>`_.
+This class is the component of the form manager. It should be used together with :ref:`\_Mixin <dojox/form/manager/_Mixin>`.
 
-The mixin provides commonly used methods to enable/disable form elements. It operates only on form widgets collected by `\_Mixin <dojox/form/manager/_Mixin>`_ and form nodes collected by `\_NodeMixin <dojox/form/manager/_NodeMixin>`_ (see `controlled elements <dojox/form/manager#controlled-elements>`_ for more details).
+The mixin provides commonly used methods to enable/disable form elements. It operates only on form widgets collected by :ref:`\_Mixin <dojox/form/manager/_Mixin>` and form nodes collected by :ref:`\_NodeMixin <dojox/form/manager/_NodeMixin>` (see :ref:`controlled elements <dojox/form/manager>` for more details).
 
 ======================
 Methods and properties
@@ -28,7 +28,7 @@ This section describes all public methods and properties of the dojox.form.manag
 gatherEnableState
 ~~~~~~~~~~~~~~~~~
 
-This method collects enable/disable state information in a dictionary object as Boolean values (``true`` means enabled). It is modeled after `\_ValueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin#gatherformvalues>`_.
+This method collects enable/disable state information in a dictionary object as Boolean values (``true`` means enabled). It is modeled after :ref:`\_ValueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin>`.
 
 There are three ways to use this method:
 

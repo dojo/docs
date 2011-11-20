@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/html/entities:
 
 dojox.html.entities
 ===================
@@ -49,11 +49,11 @@ Then call the encode and decode functions with that as the map to use instead of
 Functions
 =========
 
-* `dojox.html.entities.encode <dojox/html/entities/encode>`_ - A function for encoding entity (special) characters in a text string
-* `dojox.html.entities.decode <dojox/html/entities/decode>`_ - A function for decoding entity (special) characters in a text string
+* :ref:`dojox.html.entities.encode <dojox/html/entities/encode>` - A function for encoding entity (special) characters in a text string
+* :ref:`dojox.html.entities.decode <dojox/html/entities/decode>` - A function for decoding entity (special) characters in a text string
 
 ========
 See Also
 ========
 
-* `dojox.html <dojox/html>`_
+* :ref:`dojox.html <dojox/html>`

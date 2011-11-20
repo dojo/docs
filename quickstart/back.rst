@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/back:
 
 Backbuttons and Dojo
 ====================

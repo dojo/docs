@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/embed/Flash:
 
 dojox.embed.Flash
 =================
@@ -215,5 +215,5 @@ Declarative example
 See also
 ========
 
-* `dojox.embed <dojox/embed>`_ Base code for embedding external objects like Flash, Quicktime
+* :ref:`dojox.embed <dojox/embed>` Base code for embedding external objects like Flash, Quicktime
 * http://kb2.adobe.com/cps/127/tn_12701.html - Flash object and embed tag

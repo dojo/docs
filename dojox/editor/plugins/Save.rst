@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/Save:
 
 dojox.editor.plugins.Save
 =========================
@@ -191,5 +191,5 @@ Customizing a save
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

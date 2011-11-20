@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _releasenotes/1.6:
 
 Dojo 1.6 Release Notes
 ======================
@@ -75,7 +75,7 @@ New API, based on the W3C IndexedDB's object store API, and intended to
 provide a next generation, simplified successor to Dojo Data and Dojo
 Storage. This is based on discussions on the dojo-dev mailing list:
 http://thread.gmane.org/gmane.comp.web.dojo.devel/12314/focus=12316.
-And the `documentation <dojo/store>`_.
+And the :ref:`documentation <dojo/store>`.
 
 NodeList
 --------
@@ -83,7 +83,7 @@ closest(), orphan(), and filter() enhanced to work on any selector rather than j
 
 NodeList-data
 -------------
-New module, providing ``data`` and ``removeData`` API's to dojo.NodeList. See `NodeList-data <dojo/NodeList-data>`_
+New module, providing ``data`` and ``removeData`` API's to dojo.NodeList. See :ref:`NodeList-data <dojo/NodeList-data>`
 
 Parser
 ------
@@ -273,24 +273,24 @@ New project called dojox.NodeList, currently adding a delegate() method to NodeL
 
 TitleGroup
 ----------
-New widget `TitleGroup <dojox/widget/TitleGroup>`_ in dojox.widgets, like an AccordionContainer without an predefined height (i.e., the AccordionContainer version of a TabContainer with the doLayout=false)
+New widget :ref:`TitleGroup <dojox/widget/TitleGroup>` in dojox.widgets, like an AccordionContainer without an predefined height (i.e., the AccordionContainer version of a TabContainer with the doLayout=false)
 
 Dialog
 ------
-New base class dialog and small refactoring of `dojox.widget.Dialog <dojox/widget/Dialog>`_ to use `Dialog Simple mixin <dojox/widget/DialogSimple>`_
+New base class dialog and small refactoring of :ref:`dojox.widget.Dialog <dojox/widget/Dialog>` to use :ref:`Dialog Simple mixin <dojox/widget/DialogSimple>`
 
 Editor
 ------
 New plugins are available for the following features:
 
-  * `Auto-save  <dojox/editor/plugins/AutoSave>`_
-  * `Find/Replace  <dojox/editor/plugins/FindReplace>`_
-  * `Paste image inline  <dojox/editor/plugins/LocalImage>`_
-  * `Batch spell check  <dojox/editor/plugins/SpellCheck>`_
-  * `Recognize URL as a link  <dojox/editor/plugins/AutoUrlLink>`_
-  * `Set color on table cells, row, columns (background)  <dojox/editor/plugins/ColorTableCell>`_
-  * `Spell Check as You Type  <dojox/editor/plugins/SpellCheck>`_
-  * `Size table column via drag  <dojox/editor/plugins/ResizeTableColumn>`_
+  * :ref:`Auto-save  <dojox/editor/plugins/AutoSave>`
+  * :ref:`Find/Replace  <dojox/editor/plugins/FindReplace>`
+  * :ref:`Paste image inline  <dojox/editor/plugins/LocalImage>`
+  * :ref:`Batch spell check  <dojox/editor/plugins/SpellCheck>`
+  * :ref:`Recognize URL as a link  <dojox/editor/plugins/AutoUrlLink>`
+  * :ref:`Set color on table cells, row, columns (background)  <dojox/editor/plugins/ColorTableCell>`
+  * :ref:`Spell Check as You Type  <dojox/editor/plugins/SpellCheck>`
+  * :ref:`Size table column via drag  <dojox/editor/plugins/ResizeTableColumn>`
 
 
 DataGrid
@@ -302,28 +302,28 @@ EnhancedGrid
 ------------
 An improved plugin mechanism as well as a rich set of new features:
 
-  * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
-  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
-  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
-  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells.
-  * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
-  * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
-  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
-  * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
-  * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
+  * :ref:`Filter <dojox/grid/EnhancedGrid/plugins/Filter>` - Support for defining rules to filter grid content in various data types.
+  * :ref:`Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>` - Support for exporting grid content to various formats.
+  * :ref:`Printer <dojox/grid/EnhancedGrid/plugins/Printer>` - Provide convenient ways to printing grid.
+  * :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` - Unified extended selection support for rows, columns and cells.
+  * :ref:`DnD <dojox/grid/EnhancedGrid/plugins/DnD>` - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
+  * :ref:`Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>` - A different approach to work with huge data set besides the default virtual scrolling way
+  * :ref:`CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>` - Support for merging adjacent cells within a row.
+  * :ref:`Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>` - Persistence of grid preferences, like column width, column order and sorting order.
+  * :ref:`Search <dojox/grid/EnhancedGrid/plugins/Search>` - Support for searching the grid by regular expressions as well as wildcard pattern.
 
 
 LazyTreeGrid
 ------------
 Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set(with huge children rows) for TreeGrid
 
-  * `LazyTreeGrid  <dojox/grid/LazyTreeGrid>`_
+  * :ref:`LazyTreeGrid  <dojox/grid/LazyTreeGrid>`
 
 Uploader
 --------
 An HTML5 file input that handles multiple file selections, upload progress, and deprecates to a SWF file for non-HTML5 compliant browsers (ergo, IE6-IE9) The dojox.form.Uploader is an improvement upon, and replaces the dojox.form.FileUploader. Uploader works very well in Dialogs and Tabs, which were the bane of FielUploader.
 
-  * `Uploader  <dojox/form/Uploader>`_
+  * :ref:`Uploader  <dojox/form/Uploader>`
 
 ====
 Util
@@ -345,11 +345,11 @@ The claro theme no longer automatically includes its CSS reset file for page lev
 
 Popups and drop downs
 ---------------------
-For accessibility reasons the `dijit.popup <dijit/popup>`_ code now hides popup / dropdown widgets with style="display: none" rather than style="visiblity:hidden; top: -9999px".   (Actually that style is on a wrapper node.)   This may cause issues for popup / drop down  widgets that do layout on initialization.   In that case you should defer the layout until the first onShow() call for the widget.
+For accessibility reasons the :ref:`dijit.popup <dijit/popup>` code now hides popup / dropdown widgets with style="display: none" rather than style="visiblity:hidden; top: -9999px".   (Actually that style is on a wrapper node.)   This may cause issues for popup / drop down  widgets that do layout on initialization.   In that case you should defer the layout until the first onShow() call for the widget.
 
 BorderContainer border
 ----------------------
-The `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_ widget now has no predefined border.   You can specify a border via a style tag if your application needs one.   However, aesthetically the widget should have no border in most cases, including when it's at 100% of the viewport size, or when it's nested inside another layout widget.
+The :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>` widget now has no predefined border.   You can specify a border via a style tag if your application needs one.   However, aesthetically the widget should have no border in most cases, including when it's at 100% of the viewport size, or when it's nested inside another layout widget.
 
 Showing dialog from hyperlink
 -----------------------------

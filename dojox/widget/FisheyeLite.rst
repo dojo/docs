@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/FisheyeLite:
 
 dojox.widget.FisheyeLite
 ========================
@@ -129,4 +129,4 @@ This widget is one of the few official widgets which utilize the optional parame
 See also
 ========
 
-* `FisheyeList <dojox/widget/FisheyeList>`_ is a heavier, more-Dock-like variation on this widget.
+* :ref:`FisheyeList <dojox/widget/FisheyeList>` is a heavier, more-Dock-like variation on this widget.

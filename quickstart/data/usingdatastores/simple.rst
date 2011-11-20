@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/data/usingdatastores/simple:
 
 A Simple Data Source
 ====================

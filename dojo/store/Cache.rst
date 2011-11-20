@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/store/Cache:
 
 dojo.store.Cache
 ================
@@ -10,7 +10,7 @@ dojo.store.Cache
 .. contents::
     :depth: 3
 
-**dojo.store.Cache** is a object store wrapper for caching data from one store in another store. This store follows the `Dojo Object Store API <dojo/store>`_.
+**dojo.store.Cache** is a object store wrapper for caching data from one store in another store. This store follows the :ref:`Dojo Object Store API <dojo/store>`.
 
 
 ============

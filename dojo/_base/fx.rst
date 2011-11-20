@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/fx:
 
 dojo/_base/fx
 =============
@@ -19,18 +19,18 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.animateProperty <dojo/animateProperty>`_
-* `dojo.fadeIn <dojo/fadeIn>`_ 
-* `dojo.fadeOut <dojo/fadeIn>`_ 
+* :ref:`dojo.animateProperty <dojo/animateProperty>`
+* :ref:`dojo.fadeIn <dojo/fadeIn>` 
+* :ref:`dojo.fadeOut <dojo/fadeIn>` 
 
 ========
 See also
 ========
 
-* `dojo.fx <dojo/fx>`_
+* :ref:`dojo.fx <dojo/fx>`
 
   Advanced animation functions in dojo.fx
 
-* `dojox.fx <dojox/fx>`_
+* :ref:`dojox.fx <dojox/fx>`
 
   More advanced animation functions in dojox.fx

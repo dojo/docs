@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/io/model:
 
 dojox.atom.io.model
 ===================
@@ -25,39 +25,39 @@ Classes defined in the model
 
 When the model file is loaded, several classes are defined that represent ATOM tags.  Please refer to the following table for the class names and a description of what they represent.  Each entry in the class name table also acts as a link to specific documentation about that class and what core functions it provides.
 
-:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_:
+::ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`:
   A generic superclass used to represent specific ATOM details that are common for many ATOM tags 
 
-:`dojox.atom.io.model.Category <dojox/atom/io/model/Category>`_:
+::ref:`dojox.atom.io.model.Category <dojox/atom/io/model/Category>`:
   Model to represent the Category tag of an ATOM document.  Contains all Category properties and a toString function for serializing it back to XML
 
-:`dojox.atom.io.model.Content <dojox/atom/io/model/Content>`_:
+::ref:`dojox.atom.io.model.Content <dojox/atom/io/model/Content>`:
   Model to represent the Content style tags in an ATOM document.  This is used to represent Summary, Content, Title, and Subtitle elements in an ATOM
   feed.  In other words, it represents any element that can contain Text, HTML, XHTML, etc as content format.  It also has a toString function used to 
   generate the corresponding XML tag
 
-:`dojox.atom.io.model.Link <dojox/atom/io/model/Link>`_:
+::ref:`dojox.atom.io.model.Link <dojox/atom/io/model/Link>`:
   Atom link element.  Used for representing link attributes.  Handles multiple link types (edit, alt, etc.)
 
-:`dojox.atom.io.model.Person  <dojox/atom/io/model/Person>`_:
+::ref:`dojox.atom.io.model.Person  <dojox/atom/io/model/Person>`:
   Atom person element. Used to represent authors and contributors.
 
-:`dojox.atom.io.model.Entry <dojox/atom/io/model/Entry>`_:
+::ref:`dojox.atom.io.model.Entry <dojox/atom/io/model/Entry>`:
   Atom entry element. Represents an Atom entry, including storing the authors, contributors, title, content, and so on.
 
-:`dojox.atom.io.model.Feed <dojox/atom/io/model/Feed>`_:
+::ref:`dojox.atom.io.model.Feed <dojox/atom/io/model/Feed>`:
   Atom feed element. Represents an Atom Feed, including the feed elements such as the title and author, and also represents the entry list. 
 
-:`dojox.atom.io.model.Generator <dojox/atom/io/model/Generator>`_:
+::ref:`dojox.atom.io.model.Generator <dojox/atom/io/model/Generator>`:
   Atom generator element
 
-:`dojox.atom.io.model.Service <dojox/atom/io/model/Service>`_:
+::ref:`dojox.atom.io.model.Service <dojox/atom/io/model/Service>`:
   Atom service element
 
-:`dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`_:
+::ref:`dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`:
   Atom workspace element
 
-:`dojox.atom.io.model.Collection <dojox/atom/io/model/Collection>`_:
+::ref:`dojox.atom.io.model.Collection <dojox/atom/io/model/Collection>`:
   Atom collection element
 
 
@@ -272,5 +272,5 @@ Example 3: Modify a loaded feed
 See Also
 ========
 
-* `dojox.atom.io.Connection <dojox/atom/io/Connection>`_: An IO class that simplifies doing APP for an ATOM feed.
-* `dojox.data.AppStore <dojox/data/AppStore>`_: A datastore built upon the *io* modules and provides full APP support.
+* :ref:`dojox.atom.io.Connection <dojox/atom/io/Connection>`: An IO class that simplifies doing APP for an ATOM feed.
+* :ref:`dojox.data.AppStore <dojox/data/AppStore>`: A datastore built upon the *io* modules and provides full APP support.

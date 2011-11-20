@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/EdgeToEdgeCategory:
 
 dojox.mobile.EdgeToEdgeCategory
 ===============================
@@ -10,7 +10,7 @@ dojox.mobile.EdgeToEdgeCategory
 .. contents::
     :depth: 2
 
-EdgeToEdgeCategory is a category header for an `edge-to-edge list <dojox/mobile/EdgeToEdgeList>`_. 
+EdgeToEdgeCategory is a category header for an :ref:`edge-to-edge list <dojox/mobile/EdgeToEdgeList>`. 
 
 .. image:: EdgeToEdgeCategory.png
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/example_Programmatically_creating_a_DataGrid:
 
 Programmatically creating a DataGrid
 ------------------------------------

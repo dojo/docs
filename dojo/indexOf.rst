@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/indexOf:
 
 dojo.indexOf
 ============

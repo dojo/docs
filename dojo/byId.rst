@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/byId
-#format dojo_rst
+.. _dojo/byId:
 
 dojo.byId
 =========
@@ -185,7 +184,7 @@ The following example lets a node by id dissapear from the screen
 
 See Also
 --------
-- `dijit.byId <dijit/byId>`_ - Accessing a Dijit widget by id.
+- :ref:`dijit.byId <dijit/byId>` - Accessing a Dijit widget by id.
 
 References
 ----------

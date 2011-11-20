@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/NodeList-manipulate:
 
 dojo.NodeList-manipulate
 ========================
@@ -11,14 +11,14 @@ dojo.NodeList-manipulate
 .. contents::
    :depth: 2
 
-Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_ that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
+Method extensions to :ref:`dojo.NodeList <dojo/NodeList>`/:ref:`dojo.query <dojo/query>` that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
 
 
 ============
 Introduction
 ============
 
-Doing a dojo.require("dojo.NodeList-manipulate") (since Dojo 1.7, it's suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-manipulate"]).) will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier manipulation of HTML as it relates to the nodes in the dojo.NodeList.
+Doing a dojo.require("dojo.NodeList-manipulate") (since Dojo 1.7, it's suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-manipulate"]).) will add some addition methods to :ref:`dojo.NodeList <dojo/NodeList>` (the return object from a :ref:`dojo.query <dojo/query>` call) that allow easier manipulation of HTML as it relates to the nodes in the dojo.NodeList.
 
 
 =====
@@ -137,7 +137,7 @@ Assume a DOM created by this markup:
 
 html
 --------------------
-An alias for the "innerHTML" method, but only defined if there is not an existing "html" method on dojo.NodeList. Be careful if you are working in an environment where it is possible that `dojo.NodeList-html <dojo/NodeList-html>`_ could have been loaded, since its definition of "html" will take precedence.
+An alias for the "innerHTML" method, but only defined if there is not an existing "html" method on dojo.NodeList. Be careful if you are working in an environment where it is possible that :ref:`dojo.NodeList-html <dojo/NodeList-html>` could have been loaded, since its definition of "html" will take precedence.
 
 If you are not sure if dojo.NodeList-html could be loaded, use the "innerHTML" method.
 
@@ -999,5 +999,5 @@ Results in this DOM structure:
 See also
 ========
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList-traverse <dojo/NodeList-traverse>`

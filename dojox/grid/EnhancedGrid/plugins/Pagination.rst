@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/Pagination:
 
 dojox.grid.EnhancedGrid.plugins.Pagination
 ==========================================
@@ -252,6 +252,6 @@ gotoLastPage        N/A                                    N/A                  
 See Also
 ========
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid

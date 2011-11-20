@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Rotator:
 
 dojox.widget.Rotator
 ====================
@@ -269,7 +269,7 @@ Example of using different transitions per pane.
     <button onclick="myRotatorInstance4.prev();">Prev</button>
     <button onclick="myRotatorInstance4.next();">Next</button>
 
-Example of using passing in transition parameters. In this case, the `Pan <dojox/widget/rotator/Pan>`_ transition is told to do a continuous pan from the current pane to the target pane while transitioning to any panes in between. We also specify a duration of the actual pan transition and tell it to do a quick transition.
+Example of using passing in transition parameters. In this case, the :ref:`Pan <dojox/widget/rotator/Pan>` transition is told to do a continuous pan from the current pane to the target pane while transitioning to any panes in between. We also specify a duration of the actual pan transition and tell it to do a quick transition.
 
 .. code-example::
 
@@ -416,15 +416,15 @@ Example
 Waiting for Event Topic
 =======================
 
-The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ page for a code example.
+The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` page for a code example.
 
 ========
 See also
 ========
 
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
-* `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ manipulates a Rotator or AutoRotator.
-* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_ is a fade and crossfade transition for the Rotator.
-* `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_ is a pan and continuous pan transition for the Rotator.
-* `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_ is a sliding transition for the Rotator.
-* `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_ is a wiping transition for the Rotator.
+* :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` extends this Rotator adding automatic transitioning.
+* :ref:`dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>` manipulates a Rotator or AutoRotator.
+* :ref:`dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>` is a fade and crossfade transition for the Rotator.
+* :ref:`dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>` is a pan and continuous pan transition for the Rotator.
+* :ref:`dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>` is a sliding transition for the Rotator.
+* :ref:`dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>` is a wiping transition for the Rotator.

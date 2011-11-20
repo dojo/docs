@@ -1,8 +1,8 @@
-#format dojo_rst
+.. _build/restoreRequire:
 
 Dojo build system:  restoreRequire
 ==================================
 
 FIXME:  delete this page, Peter has indicated the feature name was actually keepRequires.
 
-* Repplacement page `keepRequires <build/keepRequires>`_
+* Repplacement page :ref:`keepRequires <build/keepRequires>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/gettingstarted:
 
 Getting started with some simple steps
 ======================================
@@ -14,7 +14,7 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
 
 .. code-block :: html
 
-    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js"></script>   
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>   
 
 
 Dojo's now included on your page, no install, no fuss. So what do you get for all that hard work? 
@@ -60,6 +60,6 @@ Example
 See also
 ========
 
-* `Using Dojo from a CDN <quickstart/cross-domain>`_
-* `Installation instructions & Tutorials <quickstart/index>`_
+* :ref:`Using Dojo from a CDN <quickstart/cross-domain>`
+* :ref:`Installation instructions & Tutorials <quickstart/index>`
 * `Dojo Base API CheatSheet <http://download.dojotoolkit.org/current-stable/cheat.html>`_ - covers all the API's provided from including ``dojo.js`` on a page.

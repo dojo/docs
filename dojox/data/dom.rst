@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/dom:
 
 dojox.data.dom
 ===============

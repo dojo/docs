@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/NodeList/removeAttr:
 
 dojo.NodeList.removeAttr
 ========================
@@ -16,9 +16,9 @@ Removes an attribute from a list f DOM nodes.
 Introduction
 ============
 
-``NodeList.removeAttr`` adapts `dojo.removeAttr <dojo/removeAttr>`_ for use with node lists by applying it to every node in the list.
+``NodeList.removeAttr`` adapts :ref:`dojo.removeAttr <dojo/removeAttr>` for use with node lists by applying it to every node in the list.
 
-See `dojo.removeAttr <dojo/removeAttr>`_ for more details.
+See :ref:`dojo.removeAttr <dojo/removeAttr>` for more details.
 
 
 =====
@@ -67,16 +67,16 @@ See also
 
 DOM operations:
 
-* `dojo.removeAttr <dojo/removeAttr>`_
-* `dojo.attr <dojo/attr>`_
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.style <dojo/style>`_
+* :ref:`dojo.removeAttr <dojo/removeAttr>`
+* :ref:`dojo.attr <dojo/attr>`
+* :ref:`dojo.hasAttr <dojo/hasAttr>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
+* :ref:`dojo.style <dojo/style>`
 
 NodeList:
 
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
+* :ref:`dojo.NodeList.attr <dojo/NodeList/attr>`
 
 External links:
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/uacss:
 
 dojo.uacss
 ============
@@ -14,7 +14,7 @@ dojo.uacss
 Introduction
 ============
 
-By doing a dojo.require("dojo.uacss" CSS classes will be added to your document's <html> tag.   The classes include:
+By doing a dojo.require("dojo.uacss") CSS classes will be added to your document's <html> tag.   The classes include:
 
 1. Browser and browser version
 
@@ -22,6 +22,7 @@ By doing a dojo.require("dojo.uacss" CSS classes will be added to your document'
    - dj_ie6: Internet explorer version 6
    - dj_ie7: Internet explorer version 7
    - dj_ie8: Internet explorer version 8
+   - dj_ie9: Internet explorer version 9
    - dj_opera: Opera
    - dj_khtml: KHTML
    - dj_safari: Safari
@@ -35,12 +36,12 @@ By doing a dojo.require("dojo.uacss" CSS classes will be added to your document'
 
 3. browser functionality
 
+   - dj_quirks: Browser is running in quirks mode rather than standards mode
    - dj_iequirks: Internet explorer is running in quirks mode rather than standards mode
    - dj_contentBox: standard sizing, where style="..." tag refers to size of the content box
    - dj_borderBox: behavior of IE6 and IE in quirks mode where style="..." refers to the size including padding and border
 
-4. BIDI
-If the document is in right-to-left mode (for Arabic and Hebrew text), then it has the
+4. BIDI If the document is in right-to-left mode (for Arabic and Hebrew text), then it has the
 
    - dj_rtl: RTL mode
 
@@ -61,7 +62,7 @@ Simply require the module:
 .. code-block :: javascript
 
   //Dojo 1.7(AMD)
-  require("dojo/uacss",function(){
+  require(["dojo/uacss"],function(){
 	//write your code here
   });
   

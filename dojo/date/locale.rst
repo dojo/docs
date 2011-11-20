@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/date/locale:
 
 dojo.date.locale
 ================
@@ -27,27 +27,27 @@ Available Methods
 
 dojo.date.locale offers the following methods:
 
-* `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
+* :ref:`dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`
 
   Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
 
-* `dojo.date.locale.format <dojo/date/locale/format>`_
+* :ref:`dojo.date.locale.format <dojo/date/locale/format>`
 
   Formats a Date object as a String, using locale-specific settings or custom patterns.
 
-* `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
+* :ref:`dojo.date.locale.getNames <dojo/date/locale/getNames>`
 
   Used to get localized strings from dojo.cldr for day or month names.
 
-* `dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`_
+* :ref:`dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`
 
   Determines if the date falls on a weekend, according to local custom.
 
-* `dojo.date.locale.parse <dojo/date/locale/parse>`_
+* :ref:`dojo.date.locale.parse <dojo/date/locale/parse>`
 
   Converts a properly formatted string to a primitive Date object, using locale-specific settings.
 
-* `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
+* :ref:`dojo.date.locale.regexp <dojo/date/locale/regexp>`
 
   Builds the regular needed to parse a localized date
 
@@ -56,4 +56,4 @@ dojo.date.locale offers the following methods:
 See also
 ========
 
-* `Cultural conventions: Date, Number and Currency <quickstart/internationalization/number-and-currency-formatting>`_
+* :ref:`Cultural conventions: Date, Number and Currency <quickstart/internationalization/number-and-currency-formatting>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/TablePlugins:
 
 dojox.editor.plugins.TablePlugins
 =================================

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/xhrPut:
 
 dojo.xhrPut
 ===========
@@ -21,18 +21,18 @@ The following information should get you up and going with dojo.xhrPut().  As wi
 Limitations
 ===========
 
-The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
+The limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`
 
 =====
 Usage
 =====
 
-The xhrPut() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a PUT.
+The xhrPut() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the :ref:`dojo.xhrGet parameters <dojo/xhrGet>` are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a PUT.
 
 dojo.xhrPost supported object properties
 ----------------------------------------
 
-All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_
+All of the dojo.xhrGet :ref:`object properties <dojo/xhrGet>`
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**putData**       |A string of data you wish to send as the put body.  dojo.xhrPut (and dojo.rawXhrPut), do not do any processing of this      |
@@ -45,12 +45,12 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 Return type (dojo.Deferred)
 ---------------------------
 
-The return type is the same as dojo.xhrGet.  Please refer to the `return type <dojo/xhrGet#return-type-dojo-deferred>`_ documentation for details.
+The return type is the same as dojo.xhrGet.  Please refer to the :ref:`return type <dojo/xhrGet>` documentation for details.
 
 Handling Status Codes
 ---------------------
 
-Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet `status code documentation <dojo/xhrGet#handling-status-codes>`_ for details.
+Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
 ========
 Examples
@@ -110,7 +110,7 @@ Example 1: dojo.xhrPut call to send some text data
 See also
 ========
 
-* `dojo.xhrGet <dojo/xhrGet>`_
-* `dojo.xhrPost <dojo/xhrPost>`_
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_
-* `dojo.xhrDelete <dojo/xhrDelete>`_
+* :ref:`dojo.xhrGet <dojo/xhrGet>`
+* :ref:`dojo.xhrPost <dojo/xhrPost>`
+* :ref:`dojo.rawXhrPost <dojo/rawXhrPost>`
+* :ref:`dojo.xhrDelete <dojo/xhrDelete>`

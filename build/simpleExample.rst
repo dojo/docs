@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/simpleExample:
 
 Simple Buildsystem Examples
 ===========================
@@ -17,7 +17,7 @@ This document provides some simple examples of using the Dojo build system, how 
 Introduction
 ============
 
-For an introduction to the build system, see `the overview <build/index>`_. This page assumes you already know you want a build, but are not quite sure how to go about it. 
+For an introduction to the build system, see :ref:`the overview <build/index>`. This page assumes you already know you want a build, but are not quite sure how to go about it. 
 
 Like most parts of Dojo the build system has been designed to be both powerful and flexible. There are a lot of different options available to tweak your system but, for the majority of first-time users, sticking to the defaults in this example will do you just fine.
 
@@ -86,5 +86,5 @@ Cons of this approach
 See also
 ========
 
- * `Build Home <build/index>`_
- * `Directory layout <build/directoryLayout>`_
+ * :ref:`Build Home <build/index>`
+ * :ref:`Directory layout <build/directoryLayout>`

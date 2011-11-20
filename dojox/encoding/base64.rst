@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/encoding/base64:
 
 dojox.encoding.base64
 =====================
@@ -29,5 +29,5 @@ To decode a base64-encoded string:
 
 Note that this is a slightly inefficient implementation, based on the need to operate solely on byte arrays.
 If you are operating on arrays of words (32-bit numbers as opposed to 8-bit), including any of the
-`dojox.encoding.digests <dojox/encoding/digests>`_ will also make the method ``dojox.encoding.digests.wordToBase64``
+:ref:`dojox.encoding.digests <dojox/encoding/digests>` will also make the method ``dojox.encoding.digests.wordToBase64``
 available for use, which is a much more efficient implementation.

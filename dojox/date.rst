@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/date:
 
 dojox.date
 ==========

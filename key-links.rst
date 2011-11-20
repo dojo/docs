@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _key-links:
 
 Key Links
 =========
@@ -278,4 +278,4 @@ There are many blogs exclusively or partly devoted to dojo.
 See also
 ========
 
-* `Installation instructions & Tutorials <quickstart/index>`_
+* :ref:`Installation instructions & Tutorials <quickstart/index>`

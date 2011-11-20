@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/XmlStore-examples:
 
 dojox.data.XmlStore examples
 =============================

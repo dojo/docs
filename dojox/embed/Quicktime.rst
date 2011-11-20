@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/embed/Quicktime:
 
 dojox.embed.Quicktime
 =====================

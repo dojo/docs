@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _developer/contributors:
 
 
 A list of individuals who have signed Dojo CLAs:
@@ -413,6 +413,7 @@ A list of individuals who have signed Dojo CLAs:
 * Reicke, Craig 
 * Reimann, Marcus 
 * Remeika, Bob 
+* Repta, Martin
 * Rhode, Devin
 * Rhodes, Aaron 
 * Rice, Torrey 
@@ -532,6 +533,7 @@ A list of individuals who have signed Dojo CLAs:
 * Trutwin, Josh 
 * Tynan, Dylan 
 * Tyson, Matt 
+* Ukrop, Jakub
 * Ultis, Jonathan 
 * Uren, Richard 
 * Vachou, Travis 
@@ -586,6 +588,7 @@ A list of individuals who have signed Dojo CLAs:
 * Zamir, Brett
 * Zammetti, Frank 
 * Zastrow, Bettina 
+* Zboron, Lukas
 * Zhang, Carrie 
 * Zhang, Stephen 
 * Zhang, Xiaoming

@@ -1,1 +1,1 @@
-#redirect quickstart/browser-sniffing
+.. _dojo/isFF:

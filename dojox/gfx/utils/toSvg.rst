@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/gfx/utils/toSvg:
 
 dojox.gfx.utils.toSvg
 =====================
@@ -109,6 +109,6 @@ Programmatic example
 See also
 ========
 
-* `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
+* :ref:`dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`
 
   Serialize the passed surface object to JSON form

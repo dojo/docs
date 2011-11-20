@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/NodeList-dom:
 
 dojo/NodeList-dom
 =================
@@ -9,26 +9,26 @@ This module contains extension to dojo/NodeList to provide capability of manipul
 
 Click on a method name to see a documentation page for it.
 
-:`attr <dojo/NodeList/attr>`_:
-  Attribute getter/setter for this list of nodes. Mimics `dojo.attr <dojo/attr>`_, excluding the node passed.
+::ref:`attr <dojo/NodeList/attr>`:
+  Attribute getter/setter for this list of nodes. Mimics :ref:`dojo.attr <dojo/attr>`, excluding the node passed.
 
-:`removeAttr <dojo/NodeList/removeAttr>`_:
-  **New in 1.4** - Forcefully remove the passed attribute from a node. Mimics `dojo.removeAttr <dojo/removeAttr>`_.
+::ref:`removeAttr <dojo/NodeList/removeAttr>`:
+  **New in 1.4** - Forcefully remove the passed attribute from a node. Mimics :ref:`dojo.removeAttr <dojo/removeAttr>`.
 
 :style:
-  Get or set styles to the nodes in this list. For more information see `dojo.style <dojo/style>`_
+  Get or set styles to the nodes in this list. For more information see :ref:`dojo.style <dojo/style>`
 
 :addClass:
-  Add the passed class to the nodes in this list. For more information see `dojo.addClass <dojo/addClass>`_
+  Add the passed class to the nodes in this list. For more information see :ref:`dojo.addClass <dojo/addClass>`
 
 :removeClass:
-  Remove the passed class to the nodes in this list. For more information see `dojo.removeClass <dojo/removeClass>`_
+  Remove the passed class to the nodes in this list. For more information see :ref:`dojo.removeClass <dojo/removeClass>`
 
 :toggleClass:
-  Add the passed class to the nodes in this list, if the class is not present, otherwise removes it. For more information see `dojo.toggleClass <dojo/toggleClass>`_
+  Add the passed class to the nodes in this list, if the class is not present, otherwise removes it. For more information see :ref:`dojo.toggleClass <dojo/toggleClass>`
 
 :place:
-  Places elements of this node list relative to the first element matched by queryOrNode. Returns the original NodeList. For more information, see `dojo.place <dojo/place>`_
+  Places elements of this node list relative to the first element matched by queryOrNode. Returns the original NodeList. For more information, see :ref:`dojo.place <dojo/place>`
 
 :orphan:
   Removes elements in this list that match the filter from their parents and returns them as a new NodeList.
@@ -40,7 +40,7 @@ Click on a method name to see a documentation page for it.
   Add a node, NodeList or some HTML as a string to every item in the list.  Returns the original list.
 
 :empty:
-  Empties the content of the nodes in this list, leaving the nodes in place. see `dojo.empty <dojo/empty>`_
+  Empties the content of the nodes in this list, leaving the nodes in place. see :ref:`dojo.empty <dojo/empty>`
 
 :coords:
   Partially "deprecated", using NodeList.position is recommended in Dojo 1.4 and higher. Returns the coordinate values

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/NestedSorting:
 
 dojox.grid.EnhancedGrid.plugins.NestedSorting
 =============================================
@@ -162,7 +162,7 @@ with JavaScript way
   }, div);
   grid.startup();
     
-When nested sorting is enabled, you can also use comparatorMap for custom sorting; see `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ on DojoCampus.org for more details.
+When nested sorting is enabled, you can also use comparatorMap for custom sorting; see :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>` on DojoCampus.org for more details.
 
 Scenario
 --------
@@ -241,5 +241,5 @@ Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes ap
 See Also
 ========
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid

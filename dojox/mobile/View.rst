@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/View:
 
 dojox.mobile.View
 =================

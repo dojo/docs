@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/app:
 
 dojox.app
 =========
@@ -34,25 +34,25 @@ Application structure overview.
 
 Components in dojox.app
 
-`dojox.app.view <dojox/app/view>`_
+:ref:`dojox.app.view <dojox/app/view>`
 - dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
 
-`dojox.app.bind <dojox/app/bind>`_
+:ref:`dojox.app.bind <dojox/app/bind>`
 - dojox.app.bind is used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
 
-`dojox.app.model <dojox/app/model>`_
+:ref:`dojox.app.model <dojox/app/model>`
 - dojox.app.model creates statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
 
-`dojox.app.scene <dojox/app/scene>`_
+:ref:`dojox.app.scene <dojox/app/scene>`
 - dojox.app.scene is used to create the layout for each child view, manage the transition between views, resize layout to fit the display area. A scene can contains one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
 
-`dojox.app.module.env <dojox/app/module/env>`_
+:ref:`dojox.app.module.env <dojox/app/module/env>`
 - dojox.app.module.env provides dojo, dijit, dojox environment.
 
-`dojox.app.module.histroy <dojox/app/module/history>`_
+:ref:`dojox.app.module.histroy <dojox/app/module/history>`
 - dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API. 
 
-`dojox.app.main <dojox/app/main>`_
+:ref:`dojox.app.main <dojox/app/main>`
 - dojox.app.main(Application) is used to create a dojox.app application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse.
 
 =============

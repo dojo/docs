@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/formToJson:
 
 dojo.formToJson
 ===============
@@ -18,7 +18,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 *dojo.toJson(dojo.formToObject("formid"));*  
 
-You can refer to the `dojo.formToObject <dojo/formToObject>`_ documentation for more details.
+You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` documentation for more details.
 
 Since dojo 1.7, dojo.formToJson has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toJson in dojo/dom-form.
 
@@ -152,7 +152,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
 See also
 ========
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
-* `dojo.queryToObject <dojo/queryToObject>`_
-* `dojo.formToQuery <dojo/formToQuery>`_
-* `dojo.formToObject <dojo/formToObject>`_
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>`
+* :ref:`dojo.queryToObject <dojo/queryToObject>`
+* :ref:`dojo.formToQuery <dojo/formToQuery>`
+* :ref:`dojo.formToObject <dojo/formToObject>`

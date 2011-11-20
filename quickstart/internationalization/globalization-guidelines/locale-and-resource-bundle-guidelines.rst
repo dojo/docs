@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines:
 
 Globalization Guidelines: Locale and Resource Bundle
 ====================================================

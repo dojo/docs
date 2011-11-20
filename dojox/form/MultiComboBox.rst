@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/MultiComboBox:
 
 dojox.form.MultiComboBox
 ========================
@@ -13,7 +13,7 @@ dojox.form.MultiComboBox
 Introduction
 ============
 
-This widget is an experimental extension to `ComboBox <dijit/form/ComboBox>`_ to allow "tag" style input using a datastore using a delimeter. 
+This widget is an experimental extension to :ref:`ComboBox <dijit/form/ComboBox>` to allow "tag" style input using a datastore using a delimeter. 
 
 =====
 Usage
@@ -42,5 +42,5 @@ A `delimiter` variable can be set to indicate which key triggers a new value. It
 See also
 ========
 
-  * `dojox.form <dojox/form>`_
-  * `dijit.form <dijit/form>`_
+  * :ref:`dojox.form <dojox/form>`
+  * :ref:`dijit.form <dijit/form>`

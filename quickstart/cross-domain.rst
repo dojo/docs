@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/cross-domain:
 
 Cross-Domain Dojo
 =================
@@ -20,16 +20,9 @@ A cross-domain Dojo build is one which can be loaded from the server other than 
 
 Advantages
 ----------
-#. You get more connections in MSIE, since you can load from another domain. Faster loading.
-#. You get increased cacheability/startup if many of your applications use the same installation.
-#. Resource loading does not block the rest of the page from filling in as with Dojo's normal, synchronous loading.
-#. With a local install, your ISP may otherwise charge you for all of those Dojo bits that you are serving.
 
 Disadvantages
 -------------
-#. You have to use a cross-domain build of Dojo. All CDN-hosted distributions are already XDified, but if you are using your own servers, you have to `build a custom Dojo distribution <quickstart/custom-builds>`_ for it.
-#. The coding gets a little more complicated, as some things don't work the same in an XD build as in a local one. See 'Caveats and Gotchas' below.
-#. You become dependent on the CDN's status. CDNs don't go down often, but when they do, your Dojo application may be impaired or even rendered temporarily useless.
 
 ======================================
 Using a cross-domain Dojo distribution
@@ -48,7 +41,7 @@ Google `hosts a cross-domain Dojo distribution <http://code.google.com/apis/ajax
 
 .. code-block :: html
 
-  <script src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.xd.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js"></script>
 
 or by using Google API:
 
@@ -68,11 +61,11 @@ AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To
 
 .. code-block :: html
 
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.xd.js"></script> 
+  <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.js"></script> 
 
 Making a custom build
 ---------------------
-See the `custom builds <quickstart/custom-builds>`_ page.
+See the :ref:`custom builds <quickstart/custom-builds>` page.
 
 
 Caveats and Gotchas
@@ -143,7 +136,7 @@ To use Dojo from a CDN alongside your own local/custom namespace, you must regis
       <!-- Bootstrap Dojo From AOL's CDN-->
       <script 
           type="text/javascript"
-          src="http://o.aolcdn.com/dojo/1.2/dojo/dojo.xd.js">
+          src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js">
       </script>
 
       <script type="text/javascript">

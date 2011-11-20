@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Menu:
 
 dijit.Menu
 ==========
@@ -19,7 +19,7 @@ Introduction
 The Menu widget is used for three types of menus:
 
   * context menu, typically otherwise known as a right-click or popup menu
-  * drop down menu from `dijit.form.ComboButton <dijit/form/ComboButton>`_, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_, and `dijit.MenuBar <dijit/MenuBar>`_ widgets.
+  * drop down menu from :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit.MenuBar <dijit/MenuBar>` widgets.
   * statically positioned menu on the screen, typically a left-hand-side navigation menu
 
 MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right. A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.

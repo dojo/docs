@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/Tooltip:
 
 dijit.Tooltip
 =============
@@ -16,7 +16,7 @@ Introduction
 
 Tooltip is similar to the title="" attribute in regular HTML, but is much more flexible. You can control the display timing, and specify arbitrary (rich-text) HTML for the tooltip contents.
 
-Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `dijit.TooltipDialog <dijit/TooltipDialog>`_ instead.
+Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the :ref:`dijit.TooltipDialog <dijit/TooltipDialog>` instead.
 
 
 =====
@@ -106,7 +106,7 @@ Here's a tooltip created programmatically:
 Declarative markup
 ------------------
 
-And here's a tooltip created from markup connected to a `dijit.form.Button <dijit/form/Button>`_ widget:
+And here's a tooltip created from markup connected to a :ref:`dijit.form.Button <dijit/form/Button>` widget:
 
 .. cv-compound::
 
@@ -164,5 +164,5 @@ Tooltips are not spoken in IE 8 with JAWS 10. This is because Dijit Tooltips are
 See also
 ========
 
-* `dijit.TooltipDialog <dijit/TooltipDialog>`_ - displays a tooltip that contains form elements (like a dialog)
-* `dojox.widget.DynamicTooltip <dojox/widget/DynamicTooltip>`_ - addition to dijit.Tooltip functionality allowing remotely loaded content to appear
+* :ref:`dijit.TooltipDialog <dijit/TooltipDialog>` - displays a tooltip that contains form elements (like a dialog)
+* :ref:`dojox.widget.DynamicTooltip <dojox/widget/DynamicTooltip>` - addition to dijit.Tooltip functionality allowing remotely loaded content to appear

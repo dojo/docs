@@ -1,1 +1,1 @@
-#redirect dojo/i18n
+.. _dojo/i18n/getLocalization:

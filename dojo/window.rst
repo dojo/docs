@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/window:
 
 
 dojo.window
@@ -16,15 +16,15 @@ dojo.window
 Features
 ========
 
-* `dojo.window.getBox <dojo/window/getBox>`_
+* :ref:`dojo.window.getBox <dojo/window/getBox>`
 
   Returns the size of the viewport as a {w: 123, h: 456} Object
 
-* `dojo.window.get <dojo/window/get>`_
+* :ref:`dojo.window.get <dojo/window/get>`
 
   Returns the window corresponding to a document
 
-* `dojo.window/scrollIntoView <dojo/window/scrollIntoView>`_
+* :ref:`dojo.window/scrollIntoView <dojo/window/scrollIntoView>`
 
   Scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.
 
@@ -33,4 +33,4 @@ Features
 See also
 ========
 
-* `dojo._base.window <dojo/_base/window>`_
+* :ref:`dojo._base.window <dojo/_base/window>`

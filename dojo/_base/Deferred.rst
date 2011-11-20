@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/Deferred:
 
 dojo._base.Deferred
 ===================
@@ -19,6 +19,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.Deferred <dojo/Deferred>`_
+* :ref:`dojo.Deferred <dojo/Deferred>`
 
   Communication between threads

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/JsonRestStore:
 
 dojox.data.JsonRestStore
 ========================
@@ -19,7 +19,7 @@ Introduction
 
 JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. This data store allows you to communicate with server side database/persistent data storage using the Dojo Data API with JavaScript and efficiently handles create, read, update, and delete (CRUD) operations. This can greatly simplify client server communication, interacting can be done simply using straightforward JavaScript instead of having to build your communication for CRUD actions. In addition, Dojo data stores can plugin to many Dojo widgets (Dijits).
 
-JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for `lazy loading <quickstart/data/usingdatastores/lazyloading>`_. These references are automatically resolved such that properties are accessed as normal datastore attributes.
+JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for :ref:`lazy loading <quickstart/data/usingdatastores/lazyloading>`. These references are automatically resolved such that properties are accessed as normal datastore attributes.
 
 JsonRestStore caches objects that have been retrieved from the server locally in memory. This allows object identity to be preserved even if an object is loaded from the server multiple times (the target object will be updated rather than a new object created). Also fetching an item by identity will attempt to look in the local cache first before requesting the item from the server.
 
@@ -32,24 +32,24 @@ Features
 
 1. The datastore implements the following dojo.data APIs:  
 
-   - `dojo.data.api.Read <dojo/data/api/Read>`_, 
-   - `dojo.data.api.Identity <dojo/data/api/Identity>`_, 
-   - `dojo.data.api.Write <dojo/data/api/Write>`_, 
-   - `dojo.data.api.Notification <dojo/data/api/Notification>`_.
+   - :ref:`dojo.data.api.Read <dojo/data/api/Read>`, 
+   - :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`, 
+   - :ref:`dojo.data.api.Write <dojo/data/api/Write>`, 
+   - :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`.
 
 2. Client/server interaction follows the HTTP specification for RESTful interaction, using standard HTTP verbs and headers to handle updates, paging, and id assignment.
 
 3. Full JSON Referencing capabilities. Create circular references, multiples references, reference objects from other tables, and even references objects from other domains
 
-4. Flexible modular design allows for easy extension and customization. Multiple subclasses in Dojo already use JsonRestStore, including `CouchDBRestStore <dojox/data/CouchDBRestStore>`_, `PersevereStore <dojox/data/PersevereStore>`_, and `S3Store <dojox/data/S3Store>`_. Custom queries can easily be generated.
+4. Flexible modular design allows for easy extension and customization. Multiple subclasses in Dojo already use JsonRestStore, including :ref:`CouchDBRestStore <dojox/data/CouchDBRestStore>`, :ref:`PersevereStore <dojox/data/PersevereStore>`, and :ref:`S3Store <dojox/data/S3Store>`. Custom queries can easily be generated.
 
-5. Integrates with the `dojox.rpc.Service <dojox/rpc/Service>`_ system, any service can be customized to be a REST service for the system.
+5. Integrates with the :ref:`dojox.rpc.Service <dojox/rpc/Service>` system, any service can be customized to be a REST service for the system.
 
-6. Integrates with `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_ for automatic offline usage. Application built JsonRestStore can almost instantaneously be made offline.
+6. Integrates with :ref:`dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>` for automatic offline usage. Application built JsonRestStore can almost instantaneously be made offline.
 
 7. Integrates with the RestChannels Comet module to support server sent notifications of data changes. The data store automatically routes these updates as data notifications to widgets.
 
-8. Works directly with all current data bound widgets in dijit, including `dijit.Tree <dijit/Tree>`_, `dijit.form.ComboButton <dijit/form/ComboButton>`_, and as well `dojox.grid <dojox/grid>`_.
+8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, and as well :ref:`dojox.grid <dojox/grid>`.
 
 
 =====

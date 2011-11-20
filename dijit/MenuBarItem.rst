@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/MenuBarItem:
 
 dijit.MenuBarItem
 =================
@@ -79,4 +79,4 @@ Activate a menu item                       		Spacebar or enter
 Implementation Notes
 ====================
 
-See `dijit.MenuBar <dijit/MenuBar>`_.
+See :ref:`dijit.MenuBar <dijit/MenuBar>`.

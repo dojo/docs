@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/dojo-basics:
 
 Functions used Everywhere
 =========================
@@ -39,7 +39,7 @@ It may seem painful to require all modules, but Dojo rewards by:
 dojo.addOnLoad
 ==============
 
-This registers a function to be run when the document (and all `required <dojo/require>`_ dependencies) are ready. Simply pass it a function:
+This registers a function to be run when the document (and all :ref:`required <dojo/require>` dependencies) are ready. Simply pass it a function:
 
 .. code-block :: javascript
   
@@ -74,14 +74,14 @@ This is more or less an alias to ``document.getElementById``. Simply pass ``dojo
 
 ``.innerHTML`` is a basic property of DOM Elements. Here, we're setting the content of the node with ``id="someNode"`` to say "found me!"
 
-Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: `dojo.query <dojo/query>`__) to avoid conflicts.
+Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: :ref:`dojo.query <dojo/query>`) to avoid conflicts.
 
 
 ==========
 dijit.byId
 ==========
 
-``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. Difference can be found at `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_, but the basics are: 
+``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. Difference can be found at :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`, but the basics are: 
 
 * If you are using just a normal domNode, use dojo.byId
 * If you are working with a Dijit, use dijit.byId
@@ -96,7 +96,7 @@ dijit.byId
      dialog.show();
   }
 
-``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget <dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
+``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by :ref:`dijit._Widget <dijit/_Widget>`, and adds in additional specific methods depending on the type of Dijit. 
 
 
 ==========
@@ -114,9 +114,9 @@ dojo.query
     });
   });
 
-The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
+The returned object of a ``dojo.query()`` call is an instance of :ref:`dojo.NodeList <dojo/NodeList>`, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
 
-Read more about `dojo.query <dojo/query>`__...
+Read more about :ref:`dojo.query <dojo/query>`...
 
 
 ============
@@ -146,7 +146,7 @@ Can be written as:
 
 We used an anonymous function here to define the operation. This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself. 
 
-For this simple loop, forEach isn't anything exciting. But combined with other Dojo functions, especially `dojo.query <dojo/query>`__, it becomes remarkably useful. Consider this snippet, which disables all SELECT tags on the page:
+For this simple loop, forEach isn't anything exciting. But combined with other Dojo functions, especially :ref:`dojo.query <dojo/query>`, it becomes remarkably useful. Consider this snippet, which disables all SELECT tags on the page:
 
 .. code-block :: javascript
 
@@ -235,7 +235,7 @@ The Dojo event system allows you to connect to DOM elements or nodes or plain Ja
 
 *note*: in the above examples, we're connecting to (the lowercase) ``onclick``, which differs from ``onClick``. If you are using ``dojo.connect`` to listen to a Dijit widget function, Dijit uses mixedCases for it's naming convention. The lowercase version is used for DOM events, and the mixedCase version is for Dijit events.
 
-``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the `full rundown <dojo/connect>`_ for more examples and use-cases.
+``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the :ref:`full rundown <dojo/connect>` for more examples and use-cases.
 
 
 ========

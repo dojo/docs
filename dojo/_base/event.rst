@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/event
-#format dojo_rst
+.. _dojo/_base/event:
 
 dojo/_base/event
 ================
@@ -15,7 +14,7 @@ dojo/_base/event
 
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
-See `Dojo's Event System <quickstart/events>`__ for information on the event system.
+See :ref:`Dojo's Event System <quickstart/events>` for information on the event system.
 
 dojo.stopEvent
 ==============
@@ -74,5 +73,5 @@ Since V0.9 most of the functionality from the dojo.event package has moved to do
 See also
 ========
 
-* `Dojo's Event System <quickstart/events>`__
-* `dojo.behavior with Events <dojo/behavior#behaviors-with-events>`__
+* :ref:`Dojo's Event System <quickstart/events>`
+* :ref:`dojo.behavior with Events <dojo/behavior>`

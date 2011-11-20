@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/provide:
 
 dojo.provide
 ============
@@ -65,4 +65,4 @@ Multiple dojo.provide calls can live in a file, but outside of built layer, it i
 See also
 ========
 
-* `dojo.require <dojo/require>`_
+* :ref:`dojo.require <dojo/require>`

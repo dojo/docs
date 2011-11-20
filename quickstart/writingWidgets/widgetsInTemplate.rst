@@ -1,1 +1,1 @@
-#redirect dijit/_Templated
+.. _quickstart/writingWidgets/widgetsInTemplate:

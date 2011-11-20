@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/example_simple_grid:
 
 A simple Grid
 -------------

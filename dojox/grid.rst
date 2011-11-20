@@ -1,1 +1,1 @@
-#redirect dojox/grid/index
+.. _dojox/grid:

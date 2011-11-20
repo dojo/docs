@@ -1,6 +1,4 @@
-## page was renamed from 1.2/dijit/ColorPalette
-## page was renamed from dijit/ColorPalette
-#format dojo_rst
+.. _dijit/ColorPalette:
 
 dijit.ColorPalette
 ==================
@@ -31,7 +29,7 @@ Widget Construction Parameters
 Return Values
 =============
 
-As with all dijit widgets, the selected value can be obtained through the widget *attr("value")* function.  The return type is an instance of `dojo.Color <dojo/_base/Color>`_.  
+As with all dijit widgets, the selected value can be obtained through the widget *attr("value")* function.  The return type is an instance of :ref:`dojo.Color <dojo/_base/Color>`.  
 
 ========
 Examples

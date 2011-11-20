@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/geo/openlayers:
 
 
 dojox.geo.openlayers

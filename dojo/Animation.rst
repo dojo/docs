@@ -1,4 +1,4 @@
-#FORMAT dojo_rst
+.. _dojo/Animation:
 
 ==============
 dojo.Animation
@@ -12,7 +12,7 @@ This class is a foundation class for the various built in Dojo Effects.
 See Also:
 =========
 
-  * `The Animation Guide <quickstart/Animation>`_
-  * `dojo.fx <dojo/fx>`_
-  * `dojo.NodeList-fx <dojo/NodeList-fx>`_
-  * `dojox.fx <dojox/fx>`_
+  * :ref:`The Animation Guide <quickstart/Animation>`
+  * :ref:`dojo.fx <dojo/fx>`
+  * :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`
+  * :ref:`dojox.fx <dojox/fx>`

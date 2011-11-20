@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/store/Memory:
 
 dojo.store.Memory
 =================
@@ -10,7 +10,7 @@ dojo.store.Memory
 .. contents::
     :depth: 3
 
-**dojo.store.Memory** is a object store wrapper for JavaScript/JSON available directly with an array. This store implements the new `Dojo Object Store API <dojo/store>`_.
+**dojo.store.Memory** is a object store wrapper for JavaScript/JSON available directly with an array. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
 ============
@@ -49,4 +49,4 @@ See Also
 
 You may also wish to use the Observable store wrapper to add notifications of changes to data:
 
-`dojo/store/Observable <dojo/store/Observable>`_
+:ref:`dojo/store/Observable <dojo/store/Observable>`

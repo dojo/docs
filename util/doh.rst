@@ -1,5 +1,4 @@
-## page was renamed from quickstart/doh
-#format dojo_rst
+.. _util/doh:
 
 D.O.H: Dojo Objective Harness
 =============================

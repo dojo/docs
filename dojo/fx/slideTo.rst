@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fx/slideTo:
 
 dojo.fx.slideTo
 ===============
@@ -12,7 +12,7 @@ dojo.fx.slideTo
 .. contents::
     :depth: 2
 
-This function is a helper function that wraps the `dojo.animateProperty <dojo/animateProperty>`_ function to provide an easy interface to sliding a node from its current position to a new position on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a slide of a node is desired.
+This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to sliding a node from its current position to a new position on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a slide of a node is desired.
 
 **NOTE:** This function works best on absolutely positioned nodes.
 
@@ -20,7 +20,7 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fx.slideTo* function takes an object as its parameter.  This object defines what dom node to act on, how long the slide to should take (in milliseconds, and an optional easing function. All standard `dojo.Animation <dojo/Animation>`_ properties apply with the addition of two special properties for only *slideTo*:
+The *dojo.fx.slideTo* function takes an object as its parameter.  This object defines what dom node to act on, how long the slide to should take (in milliseconds, and an optional easing function. All standard :ref:`dojo.Animation <dojo/Animation>` properties apply with the addition of two special properties for only *slideTo*:
 
 :top:  The position to move the top corner of the node to in absolute pixels
 :left:  The position to move the left corner for the node to, in absolute pixels.
@@ -30,7 +30,7 @@ The *dojo.fx.slideTo* function takes an object as its parameter.  This object de
 Return value
 ============
 
-The *dojo.fx.slideTo* function returns an instance of dojo._Animation.  To execute the slideTo, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+The *dojo.fx.slideTo* function returns an instance of dojo._Animation.  To execute the slideTo, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
 ========
 Examples
@@ -77,12 +77,12 @@ Example 1:  Slide a dom node right 200 pixels.
 See Also
 ========
 
-* `dojo.fadeIn <dojo/fadeIn>`_
-* `dojo.fadeOut <dojo/fadeOut>`_
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
-* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_
-* `dojo.fx.chain <dojo/fx/chain>`_
-* `dojo.fx.combine <dojo/fx/combine>`_
-* `Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`_
-* `dojo.animateProperty <dojo/animateProperty>`_
-* `Animation Quickstart <quickstart/Animation>`_
+* :ref:`dojo.fadeIn <dojo/fadeIn>`
+* :ref:`dojo.fadeOut <dojo/fadeOut>`
+* :ref:`dojo.fx.wipeIn <dojo/fx/wipeIn>`
+* :ref:`dojo.fx.wipeOut <dojo/fx/wipeOut>`
+* :ref:`dojo.fx.chain <dojo/fx/chain>`
+* :ref:`dojo.fx.combine <dojo/fx/combine>`
+* :ref:`Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`
+* :ref:`dojo.animateProperty <dojo/animateProperty>`
+* :ref:`Animation Quickstart <quickstart/Animation>`

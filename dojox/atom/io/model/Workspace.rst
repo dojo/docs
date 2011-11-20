@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/io/model/Workspace:
 
 dojox.atom.io.model.Workspace
 =============================
@@ -43,4 +43,4 @@ Below are all the functions implemented by this model class.
 See Also: 
 =========
 
-* `dojox.atom.io.model <dojox/atom/io/model>`_
+* :ref:`dojox.atom.io.model <dojox/atom/io/model>`

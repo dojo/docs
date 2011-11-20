@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/data/api/Identity:
 
 dojo.data.api.Identity
 ======================

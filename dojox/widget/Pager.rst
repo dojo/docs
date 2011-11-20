@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Pager:
 
 dojox.widget.Pager
 ==================
@@ -79,5 +79,5 @@ Declarative example: Horizontal Pager
 See also
 ========
 
-* `Using Datastores <quickstart/data/usingdatastores>`_
+* :ref:`Using Datastores <quickstart/data/usingdatastores>`
 * `Planned cleanups and enhancements for dojox.widget.Pager <http://trac.dojotoolkit.org/ticket/8012>`_

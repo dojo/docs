@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _releasenotes/1.7:
 
 Dojo 1.7 Release Notes
 ======================
@@ -24,7 +24,7 @@ The following browsers are supported. If a browser is not supported, it still ma
 
 Desktop
 
-  * Firefox 3.6-7
+  * Firefox 3.6-8
   * Safari 5.0-5.1 and Chrome 13 and later
   * IE 6-9
   * Opera 10.50 and later (Dojo core only)
@@ -63,7 +63,9 @@ Note that in async mode many modules which were implicitly loaded before (includ
                  "dojo/parser",       // needed for parseOnLoad to run
                  "dijit/_base/manager",  // needed for dijit.byId
                  ...
-             ]);
+             ], function(html, parser, manager){
+                  // callback when above modules finish loading
+             });
     
              function update(){
                  var viewNode = dojo.byId("view1");
@@ -77,7 +79,7 @@ Note that many core and dijit modules have been converted to use minimal depende
 Limitations:
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
-  DTL (dojox.dtl - Django Templating) : While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter). 
+DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter). 
 
   The following table lists the default tag libraries and their corresponding tags:
 
@@ -121,7 +123,7 @@ Some existing Dojo <1.7 modules were designed such that they only work in sync l
 
 has.js
 ------
-Dojo 1.7 introduces support for the `has() feature detection api <dojo/has>`_.  Most Dojo core and dijit modules have been converted to use feature detection.  This work will continue for 1.8.
+Dojo 1.7 introduces support for the :ref:`has() feature detection api <dojo/has>`.  Most Dojo core and dijit modules have been converted to use feature detection.  This work will continue for 1.8.
 
 dojo.connect
 ------------
@@ -212,20 +214,22 @@ The rationale is very simple - "press | move | release | cancel" are mapped to:
 
 So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms
 
-dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can work well across desktop and touch devices(Android 2.3/2.3 and iOS3+ for 1.7):
+dojo/touch is based on :ref:`dojo/on <dojo/on>` and the following sample usage can work well across desktop and touch devices(Android 2.3/2.3 and iOS3+ for 1.7):
 
    .. code-block :: javascript
       
       //listen to 'touchstart' on touch devices and 'mousedown' on desktops
       dojo.touch.press(node, function(e){});
 
-Please refer to `dojo/touch doc <dojo/touch>`_ for more details.
+Please refer to :ref:`dojo/touch doc <dojo/touch>` for more details.
 
 =====
 Dijit
 =====
 
-Dijit widgets should now "just work" on supported mobile devices, with the exception of Editor and Dialog widgets.  This is intended to allow web apps built for desktop browsers to continue to be functional when browsed on mobile devices.  
+Dijit widgets should now "just work" on supported mobile devices, with the exception of the Editor widget.  This is intended to allow web apps built for desktop browsers to continue to be functional when browsed on mobile devices.
+
+For Dialog your app must set draggable=false in order for the [x] close icon (in the Dialog's upper right hand corner) to work.   This limitation will be removed in a future release. 
 
 _WidgetBase
 -----------
@@ -281,8 +285,8 @@ dijit.CalendarLite is a new widget aimed towards mobile use.   It's like Calenda
 
 ComboBox, FilteringSelect
 -------------------------
-These classes have been enhanced to accept a `dojo.store <dojo/store>`_ (the new store API) for the store parameter. 
-The old `dojo.data API <dojo/data/api/Read>`_ is still supported.
+These classes have been enhanced to accept a :ref:`dojo.store <dojo/store>` (the new store API) for the store parameter. 
+The old :ref:`dojo.data API <dojo/data/api/Read>` is still supported.
 
 =====
 DojoX
@@ -327,7 +331,7 @@ Gfx
 Gesture
 ------------
 
-Based on `dojo/touch <dojo/touch>`_ and `dojo/on <dojo/on>`_, this new module provides a mechanism to write gestures that can run well on difference devices including desktop (for single gestures) and various touch devices.
+Based on :ref:`dojo/touch <dojo/touch>` and :ref:`dojo/on <dojo/on>`, this new module provides a mechanism to write gestures that can run well on difference devices including desktop (for single gestures) and various touch devices.
 
 dojox/gesture/Base
 
@@ -350,7 +354,7 @@ dojox/gesture/swipe(single touch only)
 
 Also the `touch & gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture. Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
  
-Please refer to `dojox/gesture doc <dojox/gesture>`_ for more details.
+Please refer to :ref:`dojox/gesture doc <dojox/gesture>` for more details.
 
 
 Grid
@@ -504,7 +508,7 @@ Dijit
 
 - For ComboBox/FilteringSelect, if you need to set the store after creation, be sure to use the set("store", myStore) API rather than just setting it directly (myCombo.store = myStore).    The latter will fail when myStore is an old dojo.data store rather than the new dojo.store API.
 
-- If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new `dojo.store <dojo/store>`_ API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a javascript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
+- If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new :ref:`dojo.store <dojo/store>` API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a javascript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
 
 - If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _thank-you:
 
 Thank you!
 ----------
@@ -24,6 +24,7 @@ A big "thank you" goes to
 * Jared Jurkiewicz,
 * Bill Keese, 
 * Kitson P. Kelly,
+* Lesley Kelly,
 * Tobias Klipstein, 
 * kolban,
 * Wolfram Kriesing,

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/differences-16-17:
 
 Differences between 1.6 and 1.7
 ===============================
@@ -65,25 +65,25 @@ Ex. test_transition-animations.html?theme=Android
 New Widgets
 -----------
 
-* `dojox.mobile.SpinWheel <dojox/mobile/SpinWheel>`_
-* `dojox.mobile.SpinWheelSlot <dojox/mobile/SpinWheelSlot>`_
-* `dojox.mobile.SpinWheelDatePicker <dojox/mobile/SpinWheelDatePicker>`_
-* `dojox.mobile.SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>`_
-* `dojox.mobile.RoundRectDataList <dojox/mobile/RoundRectDataList>`_
-* `dojox.mobile.EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`_
-* `dojox.mobile.ContentPane <dojox/mobile/ContentPane>`_
-* `dojox.mobile.Carousel <dojox/mobile/Carousel>`_
-* `dojox.mobile.PageIndicator <dojox/mobile/PageIndicator>`_
-* `dojox.mobile.Opener <dojox/mobile/Opener>`_
-* `dojox.mobile.Overlay <dojox/mobile/Overlay>`_
-* `dojox.mobile.Tooltip <dojox/mobile/Tooltip>`_
-* `dojox.mobile.CheckBox <dojox/mobile/CheckBox>`_
-* `dojox.mobile.ComboBox <dojox/mobile/ComboBox>`_
-* `dojox.mobile.ExpandingTextArea <dojox/mobile/ExpandingTextArea>`_
-* `dojox.mobile.RadioButton <dojox/mobile/RadioButton>`_
-* `dojox.mobile.Slider <dojox/mobile/Slider>`_
-* `dojox.mobile.Switch <dojox/mobile/Switch>`_
-* `dojox.mobile.TextArea <dojox/mobile/TextArea>`_
-* `dojox.mobile.TextBox <dojox/mobile/TextBox>`_
-* `dojox.mobile.ToggleButton <dojox/mobile/ToggleButton>`_
-* `dojox.mobile. <dojox/mobile/>`_
+* :ref:`dojox.mobile.SpinWheel <dojox/mobile/SpinWheel>`
+* :ref:`dojox.mobile.SpinWheelSlot <dojox/mobile/SpinWheelSlot>`
+* :ref:`dojox.mobile.SpinWheelDatePicker <dojox/mobile/SpinWheelDatePicker>`
+* :ref:`dojox.mobile.SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>`
+* :ref:`dojox.mobile.RoundRectDataList <dojox/mobile/RoundRectDataList>`
+* :ref:`dojox.mobile.EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`
+* :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>`
+* :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`
+* :ref:`dojox.mobile.PageIndicator <dojox/mobile/PageIndicator>`
+* :ref:`dojox.mobile.Opener <dojox/mobile/Opener>`
+* :ref:`dojox.mobile.Overlay <dojox/mobile/Overlay>`
+* :ref:`dojox.mobile.Tooltip <dojox/mobile/Tooltip>`
+* :ref:`dojox.mobile.CheckBox <dojox/mobile/CheckBox>`
+* :ref:`dojox.mobile.ComboBox <dojox/mobile/ComboBox>`
+* :ref:`dojox.mobile.ExpandingTextArea <dojox/mobile/ExpandingTextArea>`
+* :ref:`dojox.mobile.RadioButton <dojox/mobile/RadioButton>`
+* :ref:`dojox.mobile.Slider <dojox/mobile/Slider>`
+* :ref:`dojox.mobile.Switch <dojox/mobile/Switch>`
+* :ref:`dojox.mobile.TextArea <dojox/mobile/TextArea>`
+* :ref:`dojox.mobile.TextBox <dojox/mobile/TextBox>`
+* :ref:`dojox.mobile.ToggleButton <dojox/mobile/ToggleButton>`
+* :ref:`dojox.mobile. <dojox/mobile/>`

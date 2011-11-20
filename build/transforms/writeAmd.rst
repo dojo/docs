@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/transforms/writeAmd:
 
 Build Transform writeAmd
 ========================

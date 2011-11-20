@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/DropDownButton:
 
 dijit.form.DropDownButton
 =========================
@@ -68,7 +68,7 @@ As usual you can create the DropDown button widget declaratively using the data-
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 
-Here's one displaying a `TooltipDialog <dijit/TooltipDialog>`_:
+Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 
 .. cv-compound::
 
@@ -91,7 +91,7 @@ Here's one displaying a `TooltipDialog <dijit/TooltipDialog>`_:
       </div>
     </div>
 
-Note that DropDownButton is often used in `dijit.Toolbar <dijit/Toolbar>`_.
+Note that DropDownButton is often used in :ref:`dijit.Toolbar <dijit/Toolbar>`.
 
 
 =============

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/json/schema:
 
 dojox.json.schema
 =================

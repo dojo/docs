@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/io/windowName:
 
 dojox.io.windowName
 ===================

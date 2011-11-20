@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/ServiceStore:
 
 dojox.data.ServiceStore
 =======================

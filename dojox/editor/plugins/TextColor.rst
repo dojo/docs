@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor/plugins/TextColor:
 
 dojox.editor.plugins.TextColor
 ==============================
@@ -12,7 +12,7 @@ dojox.editor.plugins.TextColor
 .. contents::
     :depth: 2
 
-Have you wanted a better text color selection plugin that allows for colors that span the entire RGB color space instead of the selected colors provided by `the dijit TextColor Plugin <dijit/_editor/plugins/TextColor>`_  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar that make use of the dojox.widget.ColorPicker instead of the dijit.ColorPalette for color selection.
+Have you wanted a better text color selection plugin that allows for colors that span the entire RGB color space instead of the selected colors provided by :ref:`the dijit TextColor Plugin <dijit/_editor/plugins/TextColor>`  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar that make use of the dojox.widget.ColorPicker instead of the dijit.ColorPalette for color selection.
 
 ========
 Features
@@ -229,7 +229,7 @@ Basic Usage: Both foreground and background color buttons together
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dijit._editor.plugins <dijit/_editor/plugins>`_
-* `dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
+* :ref:`dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

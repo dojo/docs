@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _releasenotes/1.1:
 
 Dojo 1.1 release notes
 ======================

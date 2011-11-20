@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/requireLocalization:
 
 dojo.requireLocalization
 ========================
@@ -43,5 +43,5 @@ Usage
 See also
 ========
 
-* `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
+* :ref:`Translatable Resource bundles <quickstart/internationalization/resource-bundling>`
 * http://www.ibm.com/developerworks/web/library/wa-dojo/index.html

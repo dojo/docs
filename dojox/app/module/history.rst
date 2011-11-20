@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/app/module/history:
 
 dojox.app.module.history
 ============================

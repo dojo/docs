@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/connectPublisher:
 
 dojo.connectPublisher
 =====================
@@ -67,7 +67,7 @@ Usage
   var foo = dojo.connectPublisher(topic, obj, event);
 
 
-Returns a handle which can be passed to `dojo.disconnect() <dojo/disconnect>`_ to disable subsequent automatic publication on the topic.
+Returns a handle which can be passed to :ref:`dojo.disconnect() <dojo/disconnect>` to disable subsequent automatic publication on the topic.
 
 =========  ===========  =============================================================================
 Parameter  Type         Description
@@ -101,7 +101,7 @@ Programmatic example
 See also
 ========
 
-* `Event QuickStart <quickstart/events>`_
-* `dojo.connect <dojo/connect>`_
-* `dojo.publish <dojo/publish>`_
-* `dojo.disconnect <dojo/disconnect>`_
+* :ref:`Event QuickStart <quickstart/events>`
+* :ref:`dojo.connect <dojo/connect>`
+* :ref:`dojo.publish <dojo/publish>`
+* :ref:`dojo.disconnect <dojo/disconnect>`

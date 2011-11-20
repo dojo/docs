@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _build/buildSystem:
 
 The Dojo Build System
 =====================
@@ -11,9 +11,9 @@ The Dojo Build System
    :depth: 2
 
 *This document describes the Dojo build system as of v1.7. Historical documentation describing the build system prior
-version 1.7 is available* `here <build/pre17/build>`_.
+version 1.7 is available* :ref:`here <build/pre17/build>`.
 
-*See* `The Dojo Build System <build/index>`_ *for a complete list of build system documentation resources.*
+*See* :ref:`The Dojo Build System <build/index>` *for a complete list of build system documentation resources.*
 
 ============
 Introduction
@@ -94,16 +94,16 @@ Extra Features
 
 These are discussed in separate documents as follows:
 
-* `Generating a Profile from HTML files <build/htmlToProfile>`_ describes how to scan HTML files to automatically create
+* :ref:`Generating a Profile from HTML files <build/htmlToProfile>` describes how to scan HTML files to automatically create
   a profile.
 
-* `Transform writeDojo <build/transforms/writeDojo>`_ describes how to build a custom dojo.js with a nonstandard set of
+* :ref:`Transform writeDojo <build/transforms/writeDojo>` describes how to build a custom dojo.js with a nonstandard set of
   modules.
 
-* `Relocating Packages <build/relocatingPackages>`_ describes how to build packages that relocate module namespaces
+* :ref:`Relocating Packages <build/relocatingPackages>` describes how to build packages that relocate module namespaces
   (this feature replaces the so-called multi-version feature available with the legacy loader and builder).
 
-* For a description of backward compatibility features see `Processing Legacy Build Profiles <build/legacyBackCompat>`_.
+* For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
 ========================
 Assumptions for Examples 
@@ -443,7 +443,7 @@ As each package.json resource is processed, a profile object is manufactured wit
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
-represents. Also notice that the property ``__selfFilename`` is set the the absolute path at which the package.Json file
+represents. Also notice that the property :ref:``selfFilename`` is set the the absolute path at which the package.Json file
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
@@ -924,37 +924,37 @@ Transforms
 The Dojo Toolkit includes the deployment optimization transforms listed below. See individual transform reference pages
 for complete documentation.
 
-* `copy <build/transforms/copy>`_: Copies a resource from a source location to a destination location.
+* :ref:`copy <build/transforms/copy>`: Copies a resource from a source location to a destination location.
 
-* `depsDump <build/transforms/depsDump>`_: Prints the module dependency graph of one or more modules.
+* :ref:`depsDump <build/transforms/depsDump>`: Prints the module dependency graph of one or more modules.
 
-* `depsScan <build/transforms/depsScan>`_: Determines a module's dependencies and interns legacy dojo.cache string resources.
+* :ref:`depsScan <build/transforms/depsScan>`: Determines a module's dependencies and interns legacy dojo.cache string resources.
 
-* `dojoPragmas <build/transforms/dojoPragmas>`_: Applies dojo pragmas to a resource.
+* :ref:`dojoPragmas <build/transforms/dojoPragmas>`: Applies dojo pragmas to a resource.
 
-* `dojoReport <build/transforms/dojoReport>`_: Outputs a report describing a single run of the deployment optimization transforms.
+* :ref:`dojoReport <build/transforms/dojoReport>`: Outputs a report describing a single run of the deployment optimization transforms.
 
-* `hasFindAll <build/transforms/hasFindAll>`_: Finds and optionally reports all has.js feature test usages.
+* :ref:`hasFindAll <build/transforms/hasFindAll>`: Finds and optionally reports all has.js feature test usages.
 
-* `hasFixup <build/transforms/hasFixup>`_: Trims dead code branches consequent to has feature values known at build time.
+* :ref:`hasFixup <build/transforms/hasFixup>`: Trims dead code branches consequent to has feature values known at build time.
 
-* `hasReport <build/transforms/hasReport>`_: Outputs a report describing the name and location of all has.js feature tests.
+* :ref:`hasReport <build/transforms/hasReport>`: Outputs a report describing the name and location of all has.js feature tests.
 
-* `insertSymbols <build/transforms/insertSymbols>`_: Inserts debugging symbols into Javascript resources.
+* :ref:`insertSymbols <build/transforms/insertSymbols>`: Inserts debugging symbols into Javascript resources.
 
-* `optimizeCss <build/transforms/optimizeCss>`_: Inlines CSS imports and/or removes comments from CSS files.
+* :ref:`optimizeCss <build/transforms/optimizeCss>`: Inlines CSS imports and/or removes comments from CSS files.
 
-* `read <build/transforms/read>`_: Reads a resource from the file system.
+* :ref:`read <build/transforms/read>`: Reads a resource from the file system.
 
-* `write <build/transforms/write>`_: Writes a resource to the file system.
+* :ref:`write <build/transforms/write>`: Writes a resource to the file system.
 
-* `writeAmd <build/transforms/writeAmd>`_: Writes an AMD module to the file system.
+* :ref:`writeAmd <build/transforms/writeAmd>`: Writes an AMD module to the file system.
 
-* `writeCss <build/transforms/writeCss>`_: Writes a CSS style sheet to the file system
+* :ref:`writeCss <build/transforms/writeCss>`: Writes a CSS style sheet to the file system
 
-* `writeDojo <build/transforms/writeDojo>`_: Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
+* :ref:`writeDojo <build/transforms/writeDojo>`: Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
-* `writeOptimized <build/transforms/writeOptimized>`_: Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
+* :ref:`writeOptimized <build/transforms/writeOptimized>`: Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
 
 ===================
 Applying Transforms
@@ -1051,4 +1051,4 @@ below, in the order listed. The first test that passes indicates the transforms 
 Command Line and Profile Property Reference
 ===========================================
 
-See `Build Profile Quick Reference Guide <build/qref>`_
+See :ref:`Build Profile Quick Reference Guide <build/qref>`

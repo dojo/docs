@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/store/JsonRest:
 
 dojo/store/JsonRest
 ========================
@@ -11,7 +11,7 @@ dojo/store/JsonRest
 .. contents::
     :depth: 3
 
-**dojo/store/JsonRest** is a lightweight object store implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities. This store implements the new `Dojo Object Store API <dojo/store>`_.
+**dojo/store/JsonRest** is a lightweight object store implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
 ============
@@ -60,7 +60,7 @@ Method Mapping
 With the JsonRest store, store methods should intuitively map to HTTP methods:
 
 * get(id) - This will trigger a GET request to {target}{id}.
-* query(query, options) - This will trigger a GET request to {target}{query}. If ``query`` is an object, it will be serialized using `dojo.objectToQuery <dojo/objectToQuery>`_. If ``query`` is a string, it is appended to the URL as-is. If ``options`` includes a ``sort`` property, it will be serialized as a query parameter as well; see `Sorting`_ for more information.
+* query(query, options) - This will trigger a GET request to {target}{query}. If ``query`` is an object, it will be serialized using :ref:`dojo.objectToQuery <dojo/objectToQuery>`. If ``query`` is a string, it is appended to the URL as-is. If ``options`` includes a ``sort`` property, it will be serialized as a query parameter as well; see :ref:`Sorting` for more information.
 * remove(id) - This will trigger a DELETE request to {target}{id}.
 * put(object, options) - If object includes an identity property, or options includes an id, this will trigger a PUT request to {target}{id} with the request body being the provided object serialized as JSON. If no identity is provided, then a POST request is made to the store's target URL (no id appended) with the object as the body. If the options.incremental property is true, then a POST request is made to {target}{id} with the object as the body. You may also include an options.overwrite property. If overwrite is set to true, then an If-Match: * header is included. If overwrite is set to false, then an If-None-Match: * header is included.
 * add(object, options) - This behaves exactly like put(object, options), except that options.overwrite is set to false, indicating that a new object must be created.

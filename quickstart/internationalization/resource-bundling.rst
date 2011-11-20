@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/resource-bundling:
 
 Translatable Resource bundles
 =============================
@@ -15,7 +15,7 @@ Translatable Resource bundles
 Introduction
 ============
 
-`dojo.i18n <dojo/i18n>`_ solves a problem in Javascript: now that we've implemented a significant amount of logic on the client, there are i18n issues which cannot easily be solved by server substitution. Furthermore, server substitution scales poorly and exposes the client-side toolkit to a particular server architecture. With a client-side internationalization framework, the integration point moves to the browser where simple or complex logic can be applied without becoming a bottleneck. This architecture also encourages encapsulation and efficient caching both at edge servers and in the browser. And, while all translations are present on the server, rest assured that only those which match the user's locale are requested by the client and sent over the wire.
+:ref:`dojo.i18n <dojo/i18n>` solves a problem in Javascript: now that we've implemented a significant amount of logic on the client, there are i18n issues which cannot easily be solved by server substitution. Furthermore, server substitution scales poorly and exposes the client-side toolkit to a particular server architecture. With a client-side internationalization framework, the integration point moves to the browser where simple or complex logic can be applied without becoming a bottleneck. This architecture also encourages encapsulation and efficient caching both at edge servers and in the browser. And, while all translations are present on the server, rest assured that only those which match the user's locale are requested by the client and sent over the wire.
 
 The methods used in Dojo to substitute localized resources are intended for Dojo-generated content. There are trade-offs to this approach, such as trading server-load for client-side response time. It is usually best to continue using the same mechanism to localize the rest of the page, which is typically a webapp server, rather than trying to force everything on the page through Dojo and Javascript. This does mean that there will usually be two different sets of resources to manage, translate, and deploy. Dojo and Dijit will soon provide translations for many major languages, and additional translations may be provided by the community. Those augmenting Dojo or writing their own widgets will need to create and translate their own set of resources, as needed.
 
@@ -27,17 +27,17 @@ Localizing Strings
 ==================
 
 dojo.requireLocalization() / dojo.i18n.getLocalization()
-  these methods leverage `Dojo's package concept <dojo/require>`_ to load localized resources. Each translated resource is implemented as a file containing a Javascript Object (see JSON notation) where each property may be a string or any other Javascript type. Resources are located within the directory structure beneath a specially named "nls" directory (short for native language support). Each translation is made available in a subdirectory named by locale.
+  these methods leverage :ref:`Dojo's package concept <dojo/require>` to load localized resources. Each translated resource is implemented as a file containing a Javascript Object (see JSON notation) where each property may be a string or any other Javascript type. Resources are located within the directory structure beneath a specially named "nls" directory (short for native language support). Each translation is made available in a subdirectory named by locale.
 
 dojo.requireLocalization
 ------------------------
 
-`dojo.requireLocalization() <dojo/requireLocalization>`_ is used to declare usage of these resources and load them in the same way that dojo.requires() pulls in Javascript packages, but using the translation appropriate to the caller. The location of the bundle is specified using two arguments: the first is the directory structure containing the nls directory; the second is the name of the file in that directory containing the localized resources. The locale used is discovered at runtime from the browser, or specified by an override in `dojoConfig <dojo/config#language-and-localization-settings-in-dojoconfig>`_. If `dojoConfig.extraLocale <dojo/config#language-and-localization-settings-in-dojoconfig>`_ is set, the localizations in that list will be loaded also.
+:ref:`dojo.requireLocalization() <dojo/requireLocalization>` is used to declare usage of these resources and load them in the same way that dojo.requires() pulls in Javascript packages, but using the translation appropriate to the caller. The location of the bundle is specified using two arguments: the first is the directory structure containing the nls directory; the second is the name of the file in that directory containing the localized resources. The locale used is discovered at runtime from the browser, or specified by an override in :ref:`dojoConfig <dojo/config>`. If :ref:`dojoConfig.extraLocale <dojo/config>` is set, the localizations in that list will be loaded also.
 
 dojo.i18n.getLocalization
 -------------------------
 
-Use `dojo.i18n.getLocalization() <dojo/i18n/getLocalization>`_ to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
+Use :ref:`dojo.i18n.getLocalization() <dojo/i18n/getLocalization>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
 
 .. code-block :: javascript
  :linenos:
@@ -66,7 +66,7 @@ Translation subdirectories are searched and mixed in such a way that variants ca
 See also
 ========
 
-* `dojo.i18n <dojo/i18n>`_
-* `dojo.requireLocalization <dojo/requireLocalization>`_
-* `dojo.i18n.getLocalization <dojo/i18n/getLocalization>`_
-* `Language and Localization Settings in dojoConfig <dojo/config#language-and-localization-settings-in-dojoconfig>`_
+* :ref:`dojo.i18n <dojo/i18n>`
+* :ref:`dojo.requireLocalization <dojo/requireLocalization>`
+* :ref:`dojo.i18n.getLocalization <dojo/i18n/getLocalization>`
+* :ref:`Language and Localization Settings in dojoConfig <dojo/config>`

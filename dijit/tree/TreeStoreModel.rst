@@ -1,10 +1,9 @@
-## page was copied from dijit/TreeStoreModel
-#format dojo_rst
+.. _dijit/tree/TreeStoreModel:
 
 dijit.tree.TreeStoreModel
 =========================
 
-The TreeStoreModel connects a data store with a single "root" item to a `dijit.Tree <dijit/Tree>`_.
+The TreeStoreModel connects a data store with a single "root" item to a :ref:`dijit.Tree <dijit/Tree>`.
 
 An example might be an employee database where the company's CEO is the root item, and all other
 employees report directly or indirectly to the CEO.

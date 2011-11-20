@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/safeMixin:
 
 dojo.safeMixin
 ==============
@@ -9,13 +9,13 @@ dojo.safeMixin
 .. contents::
    :depth: 2
 
-``dojo.safeMixin`` is a companion function for `dojo.declare <dojo/declare>`_. It has the same functionality as `dojo.mixin <dojo/mixin>`_, but additionally it annotates all copied methods compatibly with `dojo.declare <dojo/declare>`_. This decoration can affect how ``this.inherited()`` works in mixed-in methods.
+``dojo.safeMixin`` is a companion function for :ref:`dojo.declare <dojo/declare>`. It has the same functionality as :ref:`dojo.mixin <dojo/mixin>`, but additionally it annotates all copied methods compatibly with :ref:`dojo.declare <dojo/declare>`. This decoration can affect how ``this.inherited()`` works in mixed-in methods.
 
 ===========
 Basic Usage
 ===========
 
-The function is usually used with classes and instances produced by `dojo.declare <dojo/declare>`_. It takes two parameters (both objects): target and source of properties. Just like `dojo.mixin <dojo/mixin>`_ it returns ``target``.
+The function is usually used with classes and instances produced by :ref:`dojo.declare <dojo/declare>`. It takes two parameters (both objects): target and source of properties. Just like :ref:`dojo.mixin <dojo/mixin>` it returns ``target``.
 
 .. code-block :: javascript
   :linenos:
@@ -69,7 +69,7 @@ The function is usually used with classes and instances produced by `dojo.declar
 Technical details
 =================
 
-While copying properties ``dojo.safeMixin`` (and `dojo.declare <dojo/declare>`_) annotates methods. All other properties are copied unmodified. On any function it adds a single property: ``nom``, which value is a name of the function property.
+While copying properties ``dojo.safeMixin`` (and :ref:`dojo.declare <dojo/declare>`) annotates methods. All other properties are copied unmodified. On any function it adds a single property: ``nom``, which value is a name of the function property.
 
 .. code-block :: javascript
   :linenos:

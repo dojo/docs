@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/example_Working_with_selections:
 
 Working with selections
 -----------------------

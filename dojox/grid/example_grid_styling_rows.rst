@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/example_grid_styling_rows:
 
 Grid styling : Rows 
 -------------------

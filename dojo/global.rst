@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/global:
 
 dojo.global
 ===========
@@ -42,5 +42,5 @@ Though this example is clearly targeted at a browser environment, by using `dojo
 See also
 ========
 
-* `dojo.withGlobal <dojo/withGlobal>`_
-* `dojo.doc <dojo/doc>`_ 
+* :ref:`dojo.withGlobal <dojo/withGlobal>`
+* :ref:`dojo.doc <dojo/doc>` 

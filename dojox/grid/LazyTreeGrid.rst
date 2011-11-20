@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/LazyTreeGrid:
 
 dojox.grid.LazyTreeGrid
 =======================
@@ -285,7 +285,7 @@ An example LazyTreeGridStoreModel definition would look like this:
 Structure Definition
 --------------------
 
-LazyTreeGrid does not support nested structure, as well as aggregate and itemAggregates. The following example is a LazyTreeGrid defined via HTML, just like the `dojox.grid.DataGrid <dojox/grid/DataGrid>`_:
+LazyTreeGrid does not support nested structure, as well as aggregate and itemAggregates. The following example is a LazyTreeGrid defined via HTML, just like the :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`:
 
 .. code-block :: javascript
   :linenos:
@@ -368,20 +368,20 @@ For example of the LazyTreeGrid with a ForestStoreModel and client side data sou
 Accessibility
 =============
 
-LazyTreeGrid provides the same a11y support level as `DataGrid <dojox/grid/DataGrid#accessibility-in-1-3-and-beyond>`_ .
+LazyTreeGrid provides the same a11y support level as :ref:`DataGrid <dojox/grid/DataGrid>` .
 
 ========
 See Also
 ========
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+* :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 
   The base grid
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
   An enhanced version of the base grid, which extends it in numerous useful ways
 
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

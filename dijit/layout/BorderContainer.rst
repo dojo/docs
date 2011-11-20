@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dijit/layout/BorderContainer
-#format dojo_rst
+.. _dijit/layout/BorderContainer:
 
 dijit.layout.BorderContainer
 ============================

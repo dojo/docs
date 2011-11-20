@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/fx/wipeOut:
 
 dojo.fx.wipeOut
 ===============
@@ -12,7 +12,7 @@ dojo.fx.wipeOut
 .. contents::
     :depth: 2
 
-This function is a helper function that wraps the `dojo.animateProperty <dojo/animateProperty>`_ function to provide an easy interface to wiping a node out of view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a wipe-out is desired.
+This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to wiping a node out of view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a wipe-out is desired.
 
 **NOTE:** The wipe end wipes from a height of 0px to the full height of the target dom node.
 
@@ -20,13 +20,13 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fx.wipeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe out should take (in milliseconds, and an optional easing function.  All standard `dojo.Animation <dojo/Animation>`_ events and parameters apply, with no custom additions for this function.
+The *dojo.fx.wipeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe out should take (in milliseconds, and an optional easing function.  All standard :ref:`dojo.Animation <dojo/Animation>` events and parameters apply, with no custom additions for this function.
 
 ============
 Return value
 ============
 
-The *dojo.fx.wipeOut* function returns an instance of dojo._Animation.  To execute the wipeOut, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+The *dojo.fx.wipeOut* function returns an instance of dojo._Animation.  To execute the wipeOut, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
 ========
 Examples
@@ -139,6 +139,6 @@ Example 3:  Wipe out a dom node with an easing function
 See Also
 ========
 
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
-* `dojo.animateProperty <dojo/animateProperty>`_
-* `Animation Quickstart <quickstart/Animation>`_
+* :ref:`dojo.fx.wipeIn <dojo/fx/wipeIn>`
+* :ref:`dojo.animateProperty <dojo/animateProperty>`
+* :ref:`Animation Quickstart <quickstart/Animation>`

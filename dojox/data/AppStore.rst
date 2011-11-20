@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/AppStore:
 
 dojox.data.AppStore
 ===================
@@ -31,9 +31,9 @@ Supported APIs
 
 The following dojo.data APIs are implemented by AppStore:
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 ======================
 Constructor Parameters
@@ -112,7 +112,7 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 Usage
 =====
 
-The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well.  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all data-bound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
+The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well.  Please refer to the :ref:`dojo.data API <dojo/data/api>` page for more details.  In general, since it conforms to the dojo.data API, all data-bound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
 
 
 Attribute List
@@ -150,7 +150,7 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 
 **Complex Properties**
 
-Complex properties are those that require more than a simple string to represent their values.  The current items in the ATOM feed entry that are represented this way are 'Author', 'Contributor' and 'Link'.  All of these have either sub-tags or attributes that are important information.  These attributes are modeled as their own classes in `dojox.atom.io.model.js <dojox/atom/io/model>`_.  The information about each is below:
+Complex properties are those that require more than a simple string to represent their values.  The current items in the ATOM feed entry that are represented this way are 'Author', 'Contributor' and 'Link'.  All of these have either sub-tags or attributes that are important information.  These attributes are modeled as their own classes in :ref:`dojox.atom.io.model.js <dojox/atom/io/model>`.  The information about each is below:
 
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 | **Attribute** | **Implementing Class**                                                             | **Properties**                         |
@@ -183,7 +183,7 @@ Complex properties are those that require more than a simple string to represent
 Query Syntax
 ============
 
-The fetch method query syntax for AppStore is the same as `ItemFilereadStore <dojo/data/ItemFileReadStore>`_. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
+The fetch method query syntax for AppStore is the same as :ref:`ItemFilereadStore <dojo/data/ItemFileReadStore>`. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
 .. code-block :: javascript
 
@@ -450,5 +450,5 @@ Example 4: Write example: Changing Title and showing in DataGrid
 See also
 ========
 
-* `dojox.atom <dojox/atom>`_
-* `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
+* :ref:`dojox.atom <dojox/atom>`
+* :ref:`dojox.data.AtomReadStore <dojox/data/AtomReadStore>`

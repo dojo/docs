@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/embed:
 
 dojox.embed
 ===========
@@ -16,6 +16,6 @@ that normally hamper the use of a plug-in within a scripting environment.
 At the time of writing (Dojo Toolkit 1.3 release), ``dojox.embed`` comprises three main
 constructors:
 
-* `dojox.embed.Flash <dojox/embed/Flash>`_
-* `dojox.embed.Object <dojox/embed/Object>`_
-* `dojox.embed.Quicktime <dojox/embed/Quicktime>`_
+* :ref:`dojox.embed.Flash <dojox/embed/Flash>`
+* :ref:`dojox.embed.Object <dojox/embed/Object>`
+* :ref:`dojox.embed.Quicktime <dojox/embed/Quicktime>`

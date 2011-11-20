@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/isFunction:
 
 dojo.isFunction
 ===============
@@ -42,7 +42,7 @@ Usage
     ref();
   }
 
-This also works with classes created by `dojo.declare <dojo/declare>`_
+This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 
 [ Dojo 1.7+ (AMD) ]
 
@@ -82,7 +82,7 @@ A common pattern is to have a string version of a fully declared class. You can 
   }
   var dialog = new thing({ title:"bar" });
 
-One could use `dojo.isString <dojo/isString>`_ for a similar check.
+One could use :ref:`dojo.isString <dojo/isString>` for a similar check.
 
 
 ========
@@ -204,9 +204,9 @@ Test against isFunction()
 See also
 ========
 
-* `dojo.getObject <dojo/getObject>`_ - Returns the property of an object from a dot-separated string such as "A.B.C"
-* `dojo.isString <dojo/isString>`_ - Checks if the parameter is a String
-* `dojo.isArray <dojo/isArray>`_ - Checks if the parameter is an Array
-* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
-* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
-* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
+* :ref:`dojo.getObject <dojo/getObject>` - Returns the property of an object from a dot-separated string such as "A.B.C"
+* :ref:`dojo.isString <dojo/isString>` - Checks if the parameter is a String
+* :ref:`dojo.isArray <dojo/isArray>` - Checks if the parameter is an Array
+* :ref:`dojo.isObject <dojo/isObject>` - Checks if the parameter is an Object
+* :ref:`dojo.isArrayLike <dojo/isArrayLike>` - Checks if the parameter is like an Array
+* :ref:`dojo.isAlien <dojo/isAlien>` - Checks if the parameter is a built-in function

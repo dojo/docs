@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/image/Badge:
 
 dojox.image.Badge
 =================

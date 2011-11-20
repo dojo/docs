@@ -1,5 +1,4 @@
-## page was renamed from dijit-a11y
-#format dojo_rst
+.. _dijit/a11y/index:
 
 Dijit Accessibility (a11y)
 ==========================

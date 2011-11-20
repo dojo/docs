@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/Rating:
 
 dojox.widget.Rating
 ===================
@@ -32,9 +32,6 @@ Quick Start
 
 The following example shows how the default widget works. Make it work by
 
-#. using the attribute ``data-dojo-type="dojox.form.Rating"`` on the node that shall contain the rating widget
-#. require the code by adding ``dojo.require("dojox.form.Rating");`` in your JS code
-#. import the CSS file ``<style type="text/css">@import "dojox/form/resources/Rating.css";</style>``, otherwise it won't know how to style and what images to use.
 
 Now you are set and the rating widget should render and be useable.
 

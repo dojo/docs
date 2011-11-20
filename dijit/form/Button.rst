@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/form/Button:
 
 dijit.form.Button
 =================
@@ -154,9 +154,9 @@ In order to identify the button description to the screen reader, all buttons sh
 See also
 ========
 
-* `dijit.form.ComboButton <dijit/form/ComboButton>`_ - regular button with an arrow on the right to show a drop down (often a menu)
-* `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ - displays some kind of drop down, often a menu, when pressed
-* `dijit.form.ToggleButton <dijit/form/ToggleButton>`_ - combination of Button and Checkbox widget
-* `dojox.form.BusyButton <dojox/form/BusyButton>`_ - implements more user friendly form submission
-* `dojox.mobile.Button <dojox/mobile/Button>`_ - simple button widget for mobiles
-* `dojox.mobile.ToolBarButton <dojox/mobile/ToolBarButton>`_ - button placed in the Heading widget for mobiles
+* :ref:`dijit.form.ComboButton <dijit/form/ComboButton>` - regular button with an arrow on the right to show a drop down (often a menu)
+* :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` - displays some kind of drop down, often a menu, when pressed
+* :ref:`dijit.form.ToggleButton <dijit/form/ToggleButton>` - combination of Button and Checkbox widget
+* :ref:`dojox.form.BusyButton <dojox/form/BusyButton>` - implements more user friendly form submission
+* :ref:`dojox.mobile.Button <dojox/mobile/Button>` - simple button widget for mobiles
+* :ref:`dojox.mobile.ToolBarButton <dojox/mobile/ToolBarButton>` - button placed in the Heading widget for mobiles

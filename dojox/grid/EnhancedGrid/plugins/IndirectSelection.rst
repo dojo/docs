@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/IndirectSelection:
 
 dojox.grid.EnhancedGrid.plugins.IndirectSelection
 =================================================
@@ -19,7 +19,7 @@ This feature provides indirect row selection support either through
   * Radio buttons - for single row selection, and
   * Check boxes - for multiple row selections
 
-Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the `specification of the base Grid <dojox/grid>`_.
+Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the :ref:`specification of the base Grid <dojox/grid>`.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -276,12 +276,12 @@ or
 Known Issues
 ============
 
-* There are known compatibility issues when Indirect Selection is used together with `Selector <Selector>`_ plugin
+* There are known compatibility issues when Indirect Selection is used together with :ref:`Selector <Selector>` plugin
 
 
 ========
 See Also
 ========
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid 
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid 

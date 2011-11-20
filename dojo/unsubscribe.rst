@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/unsubscribe:
 
 dojo.unsubscribe
 ================
@@ -16,4 +16,4 @@ Remove a topic listener.
 Introduction
 ============
 
-This function simply removes a topic subscription based on a handle returned from `dojo.subscribe <dojo/subscribe>`_. It is best explained with it's companion functions `publish <dojo/publish>`_ and `subscribe <dojo/subscribe>`_, so it is recommended you visit those documents for more information.
+This function simply removes a topic subscription based on a handle returned from :ref:`dojo.subscribe <dojo/subscribe>`. It is best explained with it's companion functions :ref:`publish <dojo/publish>` and :ref:`subscribe <dojo/subscribe>`, so it is recommended you visit those documents for more information.

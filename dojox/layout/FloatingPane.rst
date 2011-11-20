@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/layout/FloatingPane:
 
 dojox.layout.FloatingPane
 =========================
@@ -17,7 +17,7 @@ dojox.layout.FloatingPane is an **experimental** floating window.
 Introduction
 ============
 
-The dojox.layout.FloatingPane class provides flexible support for floating panes which can be resized, minimized/maximized and layered dynamically, similar to application windows within the web page. Unlike `dijit.Dialog <dijit/Dialog>`_, FloatingPane is not modal and it is designed to allow multiple active windows. A special dock widget (dojox.layout.Dock) is used to provide the user interface for restoring minimized (docked) windows.
+The dojox.layout.FloatingPane class provides flexible support for floating panes which can be resized, minimized/maximized and layered dynamically, similar to application windows within the web page. Unlike :ref:`dijit.Dialog <dijit/Dialog>`, FloatingPane is not modal and it is designed to allow multiple active windows. A special dock widget (dojox.layout.Dock) is used to provide the user interface for restoring minimized (docked) windows.
 
 
 =====
@@ -122,4 +122,4 @@ Troubleshooting
 See also
 ========
 
-* `dijit.Dialog <dijit/Dialog>`_
+* :ref:`dijit.Dialog <dijit/Dialog>`

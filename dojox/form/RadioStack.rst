@@ -1,1 +1,1 @@
-#redirect dojox/form/DropDownStack
+.. _dojox/form/RadioStack:

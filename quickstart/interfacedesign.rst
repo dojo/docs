@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/interfacedesign:
 
 UI Development with the Dojo Toolkit
 ====================================

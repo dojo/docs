@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _developer/styleguide:
 
 Dojo Style Guide
 ================
@@ -8,7 +8,7 @@ Dojo Style Guide
 
 This document follows the basic outline of the `Java Programming Conventions Guide <http://geosoft.no/javastyle.html>`_.
  
-Widget authors are expected to adhere to this style guide and also to the `Dojo Accessibility Design Requirements <developer/a11y-requirements>`_ guidelines.
+Widget authors are expected to adhere to this style guide and also to the :ref:`Dojo Accessibility Design Requirements <developer/a11y-requirements>` guidelines.
 
 General
 -------
@@ -411,7 +411,7 @@ Documentation
 Markup Guidelines
 ~~~~~~~~~~~~~~~~~
 
-Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the `Dojo Inline Documentation <util/doctools/markup>`_ for information on dojo's proprietary format.
+Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the :ref:`Dojo Inline Documentation <util/doctools/markup>` for information on dojo's proprietary format.
 
 CSS
 ~~~

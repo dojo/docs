@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/Standby:
 
 dojox.widget.Standby
 ====================

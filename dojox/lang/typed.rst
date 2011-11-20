@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/typed:
 
 dojox.lang.typed
 ================
@@ -77,4 +77,4 @@ All classes declared with dojo.declare from this point on can have schema defini
 See also
 ========
 
-* `dojox.lang.docs <dojox/lang/docs>`_
+* :ref:`dojox.lang.docs <dojox/lang/docs>`

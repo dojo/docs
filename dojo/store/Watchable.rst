@@ -1,1 +1,1 @@
-This has been moved to dojo/store/Observable
+.. _dojo/store/Watchable:

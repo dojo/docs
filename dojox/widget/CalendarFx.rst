@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/widget/CalendarFx:
 
 =======================
 dojox.widget.CalendarFx  
@@ -9,5 +9,5 @@ dojox.widget.CalendarFx
 See Also
 ========
 
-* `dojox.widget.Calendar <dojox/widget/Calendar>`_
+* :ref:`dojox.widget.Calendar <dojox/widget/Calendar>`
 * `Nightly Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_Calendar.html>`_

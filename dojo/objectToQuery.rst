@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/objectToQuery:
 
 dojo.objectToQuery
 ==================
@@ -14,7 +14,7 @@ Helper function for converting a JavaScript object into a properly encoded query
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a JavaScript object and converts it to a query string suitable to append onto a URI.  This function is useful in constructing URIs quickly and cleanly, with the proper special character encoding.  The resultant query string can be converted back to a JavaScript object by the function `dojo.queryToObject  <dojo/queryToObject>`_
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a JavaScript object and converts it to a query string suitable to append onto a URI.  This function is useful in constructing URIs quickly and cleanly, with the proper special character encoding.  The resultant query string can be converted back to a JavaScript object by the function :ref:`dojo.queryToObject  <dojo/queryToObject>`
 
 =====
 Usage
@@ -112,7 +112,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
 See also
 ========
 
-* `dojo.queryToObject <dojo/queryToObject>`_
-* `dojo.formToQuery <dojo/formToQuery>`_
-* `dojo.formToObject <dojo/formToObject>`_
-* `dojo.formToJson <dojo/formToJson>`_
+* :ref:`dojo.queryToObject <dojo/queryToObject>`
+* :ref:`dojo.formToQuery <dojo/formToQuery>`
+* :ref:`dojo.formToObject <dojo/formToObject>`
+* :ref:`dojo.formToJson <dojo/formToJson>`

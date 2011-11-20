@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/Heading:
 
 dojox.mobile.Heading
 ====================
@@ -11,7 +11,7 @@ dojox.mobile.Heading
     :depth: 2
 
 Heading is a widget that represents a navigation bar, which usually appears at the top of an application. It usually displays the title of the current view and can contain a navigational control.
-If you use it with `dojox.mobile.ScrollableView <dojox/mobile/ScrollableView>`_, it can also be used as a fixed header bar or a fixed footer bar. In such cases, specify the fixed="top" attribute to be a fixed header bar or the fixed="bottom" attribute to be a fixed footer bar.
+If you use it with :ref:`dojox.mobile.ScrollableView <dojox/mobile/ScrollableView>`, it can also be used as a fixed header bar or a fixed footer bar. In such cases, specify the fixed="top" attribute to be a fixed header bar or the fixed="bottom" attribute to be a fixed footer bar.
 Heading can have one or more ToolBarButton widgets as its children.
 
 .. image:: Heading.png

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/widget:
 
 dojox.atom.widget
 =================
@@ -16,15 +16,15 @@ dojox.atom.widget offers widgets for reading and editing ATOM feeds.
 Features
 ========
 
-* `dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`_
+* :ref:`dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`
 
   An ATOM feed viewer that allows for viewing a feed, deleting entries, and editing entries
 
-* `dojox.atom.widget.FeedEntryViewer <dojox/atom/widget/FeedEntryViewer>`_
+* :ref:`dojox.atom.widget.FeedEntryViewer <dojox/atom/widget/FeedEntryViewer>`
 
   An ATOM feed entry editor for publishing updated ATOM entries, or viewing non-editable entries
 
-* `dojox.atom.widget.FeedEntryEditor <dojox/atom/widget/FeedEntryEditor>`_
+* :ref:`dojox.atom.widget.FeedEntryEditor <dojox/atom/widget/FeedEntryEditor>`
 
   An ATOM feed entry editor that allows viewing of the individual attributes of an entry
 
@@ -33,4 +33,4 @@ Features
 See also
 ========
 
-* `dojox.atom <dojox/atom>`_
+* :ref:`dojox.atom <dojox/atom>`

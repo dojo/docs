@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/toJson:
 
 dojo.toJson
 ===========
@@ -58,5 +58,5 @@ TODOC: Date objects in objects
 See Also:
 =========
 
-* `dojo.fromJson <dojo/fromJson>`_ 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
+* :ref:`dojo.fromJson <dojo/fromJson>` 
+* :ref:`dojo.objectToQuery <dojo/objectToQuery>`

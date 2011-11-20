@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/editor:
 
 dojox.editor
 ============
@@ -23,4 +23,4 @@ The dojox.editor component is a holding place for additional features for the di
 See also
 ========
 
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

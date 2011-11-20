@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/_editor/plugins/ViewSource:
 
 dijit._editor.plugins.ViewSource
 ================================
@@ -95,8 +95,8 @@ Other useful notes
 
 This plugin is particularly powerful when it is combined with the following plugins:
 
-* `dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_ - Edit the document in the full 'viewport' of the window running dojo.
-* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
+* :ref:`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>` - Edit the document in the full 'viewport' of the window running dojo.
+* :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>` - Format the content in the editor so that it is easily human readable and modifiable.
 
 
 ===================
@@ -336,5 +336,5 @@ This example also organizes the toolbar a bit.
 See Also
 ========
 
-* `dijit.Editor <dijit/Editor>`_
-* `dojox.editor.plugins <dojox/editor/plugins>`_
+* :ref:`dijit.Editor <dijit/Editor>`
+* :ref:`dojox.editor.plugins <dojox/editor/plugins>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/byNode:
 
 dijit.byNode
 ============
@@ -15,5 +15,5 @@ Finds a Dijit instance reference by a passed node reference.
 See Also:
 =========
 
-* `The dijit registry <dijit/registry>`_
-* `dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_
+* :ref:`The dijit registry <dijit/registry>`
+* :ref:`dijit.getEnclosingWidget <dijit/getEnclosingWidget>`

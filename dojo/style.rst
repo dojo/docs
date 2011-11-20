@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/style:
 
 dojo.style
 ==========
@@ -80,7 +80,7 @@ Dojo 1.7 (AMD)
       });
   });
 
-It's recommended to use `style.get <dojo/getAttr>`_, `style.set <dojo/setAttr>`_ to replace dojo.style.
+It's recommended to use :ref:`style.get <dojo/getAttr>`, :ref:`style.set <dojo/setAttr>` to replace dojo.style.
 
 .. code-block :: javascript
 
@@ -361,18 +361,18 @@ Tips
 
 * Getting the value for a compound style value (like background or border): you need to ask for specific properties, like bottomBorderWidth. Getting the "background" compound value is not reflected in the way you might think when using getComputedStyle.
 
-* For getting a node's dimensions, use `dojo.marginBox <dojo/marginBox>`_ or `dojo.contentBox <dojo/contentBox>`_: the .width and .style properties are not accurate from getComputedStyle.
+* For getting a node's dimensions, use :ref:`dojo.marginBox <dojo/marginBox>` or :ref:`dojo.contentBox <dojo/contentBox>`: the .width and .style properties are not accurate from getComputedStyle.
 
 
 ========
 See also
 ========
 
-* `dojo.getStyle <dojo/getStyle>`_
-* `dojo.setStyle <dojo/setStyle>`_
-* `dojo.addClass <dojo/addClass>`_
-* `dojo.hasClass <dojo/hasClass>`_
-* `dojo.removeClass <dojo/removeClass>`_
-* `dojo.toggleClass <dojo/toggleClass>`_
-* `dojo.query <dojo/query>`_
-* `dojo.NodeList <dojo/NodeList>`_
+* :ref:`dojo.getStyle <dojo/getStyle>`
+* :ref:`dojo.setStyle <dojo/setStyle>`
+* :ref:`dojo.addClass <dojo/addClass>`
+* :ref:`dojo.hasClass <dojo/hasClass>`
+* :ref:`dojo.removeClass <dojo/removeClass>`
+* :ref:`dojo.toggleClass <dojo/toggleClass>`
+* :ref:`dojo.query <dojo/query>`
+* :ref:`dojo.NodeList <dojo/NodeList>`

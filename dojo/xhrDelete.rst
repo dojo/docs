@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/xhrDelete:
 
 dojo.xhrDelete
 ==============
@@ -21,28 +21,28 @@ The following information should get you up and going with dojo.xhrDelete().  As
 Limitations
 ===========
 
-The general limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_.  Also be aware that your server side must permit the DELETE operation for this method to work with a server.  Some servers by default disable HTTP DELETE support.  So, when using this method be sure your server allows HTTP DELETE and that your services will understand and do the appropriate action.
+The general limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`.  Also be aware that your server side must permit the DELETE operation for this method to work with a server.  Some servers by default disable HTTP DELETE support.  So, when using this method be sure your server allows HTTP DELETE and that your services will understand and do the appropriate action.
 
 =====
 Usage
 =====
 
-The xhrDelete() function takes an object as its parameter.  This object defines how the xhrDelete should operate.  Generally the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a DELETE.  Bear in mind that since the HTTP DELETE operation is for deleting resources at a URI, the URI (URL + query params), are the critical identifiers.  DELETEs do not normally have content bodies.
+The xhrDelete() function takes an object as its parameter.  This object defines how the xhrDelete should operate.  Generally the :ref:`dojo.xhrGet parameters <dojo/xhrGet>` are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a DELETE.  Bear in mind that since the HTTP DELETE operation is for deleting resources at a URI, the URI (URL + query params), are the critical identifiers.  DELETEs do not normally have content bodies.
 
 dojo.xhrDelete supported object properties
 ------------------------------------------
 
-All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_
+All of the dojo.xhrGet :ref:`object properties <dojo/xhrGet>`
 
 Return type (dojo.Deferred)
 ---------------------------
 
-The return type is the same as dojo.xhrGet.  Please refer to the `return type <dojo/xhrGet#return-type-dojo-deferred>`_ documentation for details.
+The return type is the same as dojo.xhrGet.  Please refer to the :ref:`return type <dojo/xhrGet>` documentation for details.
 
 Handling Status Codes
 ---------------------
 
-Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet `status code documentation <dojo/xhrGet#handling-status-codes>`_ for details.
+Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
 ========
 Examples
@@ -101,8 +101,8 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
 See also
 ========
 
-* `dojo.xhrGet <dojo/xhrGet>`_
-* `dojo.xhrPost <dojo/xhrPost>`_
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_
-* `dojo.xhrPut <dojo/xhrPut>`_
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
+* :ref:`dojo.xhrGet <dojo/xhrGet>`
+* :ref:`dojo.xhrPost <dojo/xhrPost>`
+* :ref:`dojo.rawXhrPost <dojo/rawXhrPost>`
+* :ref:`dojo.xhrPut <dojo/xhrPut>`
+* :ref:`dojo.rawXhrPut <dojo/rawXhrPut>`

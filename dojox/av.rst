@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/av:
 
 dojox.av
 ========
@@ -18,16 +18,16 @@ DojoX A/V aims to bring audio and video capabilities to the Open Web, first by w
 Available Components
 ====================
 
-* `dojox.av.FLAudio <dojox/av/FLAudio>`_
+* :ref:`dojox.av.FLAudio <dojox/av/FLAudio>`
 
   Provides the ability of implementing MP3 sounds into your dojo applications
 
 
-* `dojox.av.FLVideo <dojox/av/FLVideo>`_
+* :ref:`dojox.av.FLVideo <dojox/av/FLVideo>`
 
   Provides the ability to play Flash movie files (FLVs) within the dojo environment
 
 
-* `dojox.av.widget <dojox/av/widget>`_
+* :ref:`dojox.av.widget <dojox/av/widget>`
 
   Provides base player control widgets for building a media player

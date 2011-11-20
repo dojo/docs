@@ -1,5 +1,4 @@
-## page was renamed from 1.2/dojo/html
-#format dojo_rst
+.. _dojo/html:
 
 dojo.html
 =========
@@ -15,13 +14,13 @@ dojo.html
  
 As of version 1.2, **dojo.html** is home to a single public helper method: **dojo.html.set()**. It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
 
-As of version 1.3, `dojo.place() <dojo/place>`__ accepts HTML strings for inserting HTML, and may be a better choice for simple HTML insertion. Unless you need to use the params capabilities of **dojo.html.set**, you should use dojo.place(cont, node, "only"). dojo.place() has more robust support for injecting an HTML string into the DOM, but it only handles inserting an HTML string as DOM elements, or inserting a DOM node. dojo.place does not handle NodeList insertions or the other capabilities as defined by the params argument for dojo.html.set().
+As of version 1.3, :ref:`dojo.place() <dojo/place>` accepts HTML strings for inserting HTML, and may be a better choice for simple HTML insertion. Unless you need to use the params capabilities of **dojo.html.set**, you should use dojo.place(cont, node, "only"). dojo.place() has more robust support for injecting an HTML string into the DOM, but it only handles inserting an HTML string as DOM elements, or inserting a DOM node. dojo.place does not handle NodeList insertions or the other capabilities as defined by the params argument for dojo.html.set().
 
 =====
 Usage
 =====
 
-You can think of dojo.html.set() like the good old `ContentPane <dijit/layout/ContentPane>`__, but outside of a "Pane".
+You can think of dojo.html.set() like the good old :ref:`ContentPane <dijit/layout/ContentPane>`, but outside of a "Pane".
 
 
 ========
@@ -165,13 +164,13 @@ What else comes out of the box? set takes the following optional params to confi
 Background
 ==========
 
-If all of this seems a little familiar to you, its because this functionality previously lived inside the `ContentPane <dijit/layout/ContentPane>`_ widget (since dojo's early days). The goal of ``dojo.html.set``, the ``_ContentSetter`` and the helper methods it employs were to make this functionality available outside of the dijit context, and promote code reuse both across the toolkit and in your code. Some of the other options you may have used in 0.4, or `dojox.layout.ContentPane <dojox/layout/ContentPane>`_ are destined to live in a dojox counterpart to this module, and should be available by 1.2's release.   
+If all of this seems a little familiar to you, its because this functionality previously lived inside the :ref:`ContentPane <dijit/layout/ContentPane>` widget (since dojo's early days). The goal of ``dojo.html.set``, the :ref:``ContentSetter`` and the helper methods it employs were to make this functionality available outside of the dijit context, and promote code reuse both across the toolkit and in your code. Some of the other options you may have used in 0.4, or :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` are destined to live in a dojox counterpart to this module, and should be available by 1.2's release.   
 
 
 ========
 See also
 ========
 
-* `dojo._base.html <dojo/_base/html>`__
+* :ref:`dojo._base.html <dojo/_base/html>`
 
   Basic DOM handling functions, included in Dojo Base

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/TimeSpinner:
 
 dojox.form.TimeSpinner
 ======================
@@ -61,5 +61,5 @@ Declarative example
 See also
 ========
 
-* `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_ An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
-* `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_ A time input control which allows either typing or choosing a time from any time-picker widget
+* :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>` An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
+* :ref:`dijit.form.TimeTextBox <dijit/form/TimeTextBox>` A time input control which allows either typing or choosing a time from any time-picker widget

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/docs:
 
 dojox.lang.docs
 ===============
@@ -45,4 +45,4 @@ dojox.lang.docs should be used with the -src distribution of Dojo, as it must be
 See also
 ========
 
-* `dojox.lang.typed <dojox/lang/typed>`_
+* :ref:`dojox.lang.typed <dojox/lang/typed>`

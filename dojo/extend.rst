@@ -1,9 +1,9 @@
-#format dojo_rst
+.. _dojo/extend:
 
 dojo.extend
 -----------
 
-Dojo extend works much like `dojo.mixin <dojo/mixin>`_, though works directly on an object's prototype. Following the same pattern as mixin, dojo.extend mixes members from the right-most object into the first object, modifying the object directly.
+Dojo extend works much like :ref:`dojo.mixin <dojo/mixin>`, though works directly on an object's prototype. Following the same pattern as mixin, dojo.extend mixes members from the right-most object into the first object, modifying the object directly.
 
 We can use dojo.extend to extend functionality into existing classes. Consider the following:
 
@@ -23,7 +23,7 @@ We can use dojo.extend to extend functionality into existing classes. Consider t
       randomAttribute:"value"
   }); 
 
-The way the `dojo.parser <dojo/parser>`_ works, a custom attribute on the node will be recognized, as in the interest of performance, only declared members are mixed as part of the parsing process. Before the above dojo.extend() call, this sample would not recognize the follow markup:
+The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the node will be recognized, as in the interest of performance, only declared members are mixed as part of the parsing process. Before the above dojo.extend() call, this sample would not recognize the follow markup:
 
 .. code-block :: html
   :linenos:
@@ -35,7 +35,7 @@ After the extend, any new instances of a TitlePane will have the 'randomAttribut
 Extending _Widget
 -----------------
 
-A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the `BorderContainer <dijit/layout/BorderContainer>`_ can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specitiy a region:
+A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the :ref:`BorderContainer <dijit/layout/BorderContainer>` can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specitiy a region:
 
 .. code-block :: javascript
   :linenos:

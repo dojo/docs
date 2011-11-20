@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/form/uploader/FileList:
 
 dojox.form.uploader.FileList
 ============================

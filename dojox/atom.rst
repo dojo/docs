@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom:
 
 dojox.atom
 ==========
@@ -27,7 +27,7 @@ Available Sub-projects
 
   * **model.js**:  A module that defines a JavaScript model of the ATOM XML data feed.  It allows for easier lookup of ATOM attributes and generation of ATOM formatted XML documents.
 
-  * **Connection.js**:  A module that wrappers the JavaScript model for an ATOM feed and provides several helper functions for getting feeds, updating entries, creating new entries, and deleting entries.  Under the covers it uses model.js and the `dojo.xhr <dojo/xhr>`_ functions to implement the full APP (ATOM Publishing Protocol).
+  * **Connection.js**:  A module that wrappers the JavaScript model for an ATOM feed and provides several helper functions for getting feeds, updating entries, creating new entries, and deleting entries.  Under the covers it uses model.js and the :ref:`dojo.xhr <dojo/xhr>` functions to implement the full APP (ATOM Publishing Protocol).
 
 * **widget**:  Example widgets that use the ATOM IO later and model to render and edit ATOM feeds.  These are primarily examples and may not be perfect.
 * **tests**: Tests for the various modules.
@@ -38,11 +38,11 @@ Usage
 
 For specific usage, please see each module's documentation page:
 
-* `dojox.atom.io.model <dojox/atom/io/model>`_
-* `dojox.atom.io.Connection <dojox/atom/io/Connection>`_
+* :ref:`dojox.atom.io.model <dojox/atom/io/model>`
+* :ref:`dojox.atom.io.Connection <dojox/atom/io/Connection>`
 
 ========
 See Also
 ========
 
-* `dojox.data.AppStore <dojox/data/AppStore>`_: A datastore built upon the *io* modules and provides full APP support.
+* :ref:`dojox.data.AppStore <dojox/data/AppStore>`: A datastore built upon the *io* modules and provides full APP support.

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/publish:
 
 dojo.publish
 ============
@@ -16,7 +16,7 @@ Publish an event to all subscribers of a `topic`. Publish is provided as part of
 Introduction
 ============
 
-`dojo.publish` is one of three topic-related functions used to publish (broadcast?) any kind of information within the application, to be received by other functions `subscribed <dojo/subscribe>`_ to the same channel. A channel can be any string in almost any form you like. Additionally, like other Dojo `event <quickstart/events>`_ functions, a `dojo.unsubscribe <dojo/unsubscribe>`_ function is provided to disconnect subscriptions to channels.
+`dojo.publish` is one of three topic-related functions used to publish (broadcast?) any kind of information within the application, to be received by other functions :ref:`subscribed <dojo/subscribe>` to the same channel. A channel can be any string in almost any form you like. Additionally, like other Dojo :ref:`event <quickstart/events>` functions, a :ref:`dojo.unsubscribe <dojo/unsubscribe>` function is provided to disconnect subscriptions to channels.
 
 ========
 Examples
@@ -62,7 +62,7 @@ When executed, the anonymous function registered in the subscription is executed
 Removing a Subscription
 -----------------------
 
-Subscribe returns a handle to later be used for disconnecting a subscription, much like the relationship between `dojo.connect <dojo/connect>`_ and `dojo.disconnect <dojo/disconnect>`_. Simply pass the handle as the only argument to `dojo.unsubscribe <dojo/unsubscribe>`_ to no longer receive updates:
+Subscribe returns a handle to later be used for disconnecting a subscription, much like the relationship between :ref:`dojo.connect <dojo/connect>` and :ref:`dojo.disconnect <dojo/disconnect>`. Simply pass the handle as the only argument to :ref:`dojo.unsubscribe <dojo/unsubscribe>` to no longer receive updates:
 
 .. code-block :: javascript
  :linenos:
@@ -86,11 +86,11 @@ In the above example, we're disconnecting the handle from within the subscribed 
 See also
 ========
 
-Many other components use this topic mechanism for communication. For instance, `Drag and Drop <dojo/dnd>`_ uses the channels ``/dnd/move/start`` and ``/dnd/move/end`` to publish information about drag operations, and the developer is intended to subscribe to these as needed.
+Many other components use this topic mechanism for communication. For instance, :ref:`Drag and Drop <dojo/dnd>` uses the channels ``/dnd/move/start`` and ``/dnd/move/end`` to publish information about drag operations, and the developer is intended to subscribe to these as needed.
 
-Additionally, the `Cometd <dojox/cometd>`_ client implements a variation of publish/subscribe/unsubscribe for it's communication. The mechanism is identical, though with comet the subscription can exist on other clients on different hosts and domains.
+Additionally, the :ref:`Cometd <dojox/cometd>` client implements a variation of publish/subscribe/unsubscribe for it's communication. The mechanism is identical, though with comet the subscription can exist on other clients on different hosts and domains.
 
-Several `Dijit widgets <dijit/index>`_ use publish to alert the user (and other internal parts of their operation) about state changes. For instance, any time a new Tab is added to a `TabContainer <dijit/layout/TabContainer>`_, a message is sent out on a channel based on the id of the Tabs:
+Several :ref:`Dijit widgets <dijit/index>` use publish to alert the user (and other internal parts of their operation) about state changes. For instance, any time a new Tab is added to a :ref:`TabContainer <dijit/layout/TabContainer>`, a message is sent out on a channel based on the id of the Tabs:
 
 .. code-block :: javascript
  :linenos:

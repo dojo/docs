@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/animateProperty:
 
 dojo.animateProperty
 ====================
@@ -247,4 +247,4 @@ To change the framerate you use the rate attribute which defines the pause betwe
     <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateDefault">Animate (default fps)</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateSlow">Animate (1 fps)</button></p>
     <div id="animateProperty">This will be animated</div>
 
-For more on Animations overall, see the `FX User Guide <quickstart/Animation>`_
+For more on Animations overall, see the :ref:`FX User Guide <quickstart/Animation>`

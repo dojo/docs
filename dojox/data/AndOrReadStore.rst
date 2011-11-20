@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/AndOrReadStore:
 
 dojox.data.AndOrReadStore
 ==========================
@@ -11,7 +11,7 @@ dojox.data.AndOrReadStore
 .. contents::
   :depth: 3
 
-dojox.data.AndOrReadStore is a clone of dojo.data.ItemFileReadStore. The only significant difference is that it supports more complex queries than the simple AND format property matching. Specifically, it can perform AND and ORing, and NOT. For general functions, data format, and information refer to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_.
+dojox.data.AndOrReadStore is a clone of dojo.data.ItemFileReadStore. The only significant difference is that it supports more complex queries than the simple AND format property matching. Specifically, it can perform AND and ORing, and NOT. For general functions, data format, and information refer to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`.
 
 ==============
 Supported APIs
@@ -19,8 +19,8 @@ Supported APIs
 
 The following dojo.data APIs are implemented by AndOrReadStore
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 ============
 Query Syntax

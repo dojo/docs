@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/lang/async:
 
 dojox.lang.async
 ================

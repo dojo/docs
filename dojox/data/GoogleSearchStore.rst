@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/GoogleSearchStore:
 
 dojox.data.GoogleSearchStore
 ============================
@@ -28,7 +28,7 @@ The GoogleSearchStore is actually a collection of stores designed to work with G
 API Support
 ===========
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 ==================
 Constructor Params

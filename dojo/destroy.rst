@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/destroy:
 
 dojo.destroy
 ============
@@ -18,7 +18,7 @@ Introduction
 
 dojo.destroy removes a node from its parent, clobbering it and all of its children.
 
-Since dojo 1.7, dojo.destroy has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.destroy in dojo/dom.
+Since Dojo 1.7, ``dojo.destroy`` is exposed via the ``destroy`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -27,27 +27,25 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
- :linenos:
-
-  <script type="text/javascript">
-    require(["dojo/_base/html"], function(dojo){     
-       // Destroy a node byId:
-       dojo.destroy("someId");
-    });
-  </script>
-
-It's recommended to use ctr.destroy in dojo 1.7.
+When using AMD format in a fully baseless application, ``destroy`` is accessed from the ``dojo/dom-construct`` module.
 
 .. code-block :: javascript
  :linenos:
 
-  <script type="text/javascript">
-    require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used      
-       // Destroy a node byId:
-       ctr.destroy("someId");
-    });
-  </script>
+  require(["dojo/dom-construct"], function(domConstruct){
+    // Destroy a node byId:
+    domConstruct.destroy("someId");
+  });
+
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.destroy`` in the ``define`` or ``require`` callback:
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo"], function(dojo){
+    // Destroy a node byId:
+    dojo.destroy("someId");
+  });
 
 Dojo < 1.7
 ----------
@@ -55,10 +53,8 @@ Dojo < 1.7
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // Destroy a node byId:
-   dojo.destroy("someId");
- </script>
+  // Destroy a node byId:
+  dojo.destroy("someId");
 
 This function only works with DomNodes, and returns nothing.
 
@@ -161,8 +157,8 @@ Destroy all nodes in a list by reference
 See also
 ========
 
-* `dojo.place <dojo/place>`_
-* `dojo.create <dojo/create>`_
-* `dojo.empty <dojo/empty>`_
-* `DOM Utilities <quickstart/dom>`_
-* `How to destroy a dijit widget <dijit/_Widget#lifecycle>`_
+* :ref:`dojo.place <dojo/place>`
+* :ref:`dojo.create <dojo/create>`
+* :ref:`dojo.empty <dojo/empty>`
+* :ref:`DOM Utilities <quickstart/dom>`
+* :ref:`How to destroy a dijit widget <dijit/_Widget>`

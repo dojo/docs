@@ -1,5 +1,4 @@
-## page was renamed from dojoc
-#format dojo_rst
+.. _dojoc/index:
 
 DojoC
 =====

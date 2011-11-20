@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/RailsStore:
 
 dojox.data.RailsStore
 =====================

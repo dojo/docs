@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/layout:
 
 dijit.layout
 ============
@@ -425,4 +425,4 @@ If you want to notify a widget that it's size has been changed, you omit that ar
 Writing Layout Widgets
 ======================
 
-See the `dijit.layout.LayoutWidget <dijit/layout/_LayoutWidget>`_ section for details on how to write a layout widget.
+See the :ref:`dijit.layout.LayoutWidget <dijit/layout/_LayoutWidget>` section for details on how to write a layout widget.

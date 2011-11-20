@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/globalization-guidelines/encoding-guidelines:
 
 Globalization Guidelines: Encoding
 ==================================

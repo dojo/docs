@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/getObject:
 
 dojo.getObject
 ===============
@@ -77,7 +77,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
    }
  */
 
-You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is `dojo.global <dojo/global>`_.
+You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is :ref:`dojo.global <dojo/global>`.
 
 .. code-block :: javascript
  :linenos:
@@ -107,5 +107,5 @@ You can also pass an object as the third parameter. This will define the context
 See also
 ========
 
-* `dojo.setObject <dojo/setObject>`_
-* `dojo.exists <dojo/exists>`_
+* :ref:`dojo.setObject <dojo/setObject>`
+* :ref:`dojo.exists <dojo/exists>`

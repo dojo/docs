@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/html/set:
 
 dojox.html.set
 ==============
@@ -16,7 +16,7 @@ Extensions to content setting utilities in dojo.html
 Introduction
 ============
 
-dojox.html.set and its helper dojox.html._ContentSetter extend the content-setting available in their `dojo.html <dojo/html>`_ counterparts, by adding support for executing scripts, adding style. The _ContentSetter provides this functionality to the `dojox.layout.ContentPane <dojox/layout/ContentPane>`_ widget.
+dojox.html.set and its helper dojox.html._ContentSetter extend the content-setting available in their :ref:`dojo.html <dojo/html>` counterparts, by adding support for executing scripts, adding style. The _ContentSetter provides this functionality to the :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` widget.
 
 Be careful: Loading content with script and style blocks is often a questionable practice. A more secure and recommended solution is, to load just pure data with the help of the available Dojo datastores. But beside this general principle, there are also valid use cases, and times when loading content with scripts is the only option available. In such cases, dojox.html.set() can help you.
 
@@ -82,6 +82,6 @@ Set content with styles
 See also
 ========
 
-* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
+* :ref:`Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`
 
   As a more secure alternative for loading pure data

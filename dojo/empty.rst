@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/empty:
 
 dojo.empty
 ==========
@@ -18,37 +18,35 @@ Introduction
 
 dojo.empty safely removes all children of the node.
 
-Since dojo 1.7, dojo.empty has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.empty in dojo/dom.
+Since Dojo 1.7, ``dojo.empty`` is exposed via the ``empty`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
 =====
 
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``empty`` is accessed from the ``dojo/dom-construct`` module.
 
 .. code-block :: javascript
  :linenos:
 
-  <script type="text/javascript">
-    require(["dojo/_base/html"], function(dojo){ 
-       // Empty node's children byId:
-       dojo.empty("someId");
-    });
-  </script>
+  require(["dojo/dom-construct"], function(domConstruct){
+    // Empty node's children byId:
+    domConstruct.empty("someId");
+  });
 
-It's recommended to use ctr.empty in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.empty`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
  :linenos:
 
-  <script type="text/javascript">
-    require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used      
-       // Empty node's children byId:
-       ctr.empty("someId");
-    });
-  </script>
+  require(["dojo"], function(dojo){ 
+    // Empty node's children byId:
+    dojo.empty("someId");
+  });
 
 Dojo < 1.7
 ----------
@@ -56,10 +54,8 @@ Dojo < 1.7
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // Empty node's children byId:
-   dojo.empty("someId");
- </script>
+  // Empty node's children byId:
+  dojo.empty("someId");
 
 This function only works with DomNodes, and returns nothing.
 
@@ -173,7 +169,7 @@ Empty all nodes in a list by reference
 See also
 ========
 
-* `dojo.create <dojo/create>`_
-* `dojo.place <dojo/place>`_
-* `dojo.destroy <dojo/destroy>`_
-* `DOM Utilities <quickstart/dom>`_
+* :ref:`dojo.create <dojo/create>`
+* :ref:`dojo.place <dojo/place>`
+* :ref:`dojo.destroy <dojo/destroy>`
+* :ref:`DOM Utilities <quickstart/dom>`

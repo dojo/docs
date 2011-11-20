@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _todo:
 
 Docu Wiki ToDo
 ==============
@@ -15,19 +15,19 @@ The following pages need more love:
 Dojo Core
 =========
 
-* `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
+* :ref:`dojo.AdapterRegistry <dojo/AdapterRegistry>`
 
   needed: full page
 
-* `dojo.currency <dojo/currency>`_
+* :ref:`dojo.currency <dojo/currency>`
 
   needed: setting locale in Dojo, binary floating point issues
 
-* `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
+* :ref:`dojo.rpc.JsonpService <dojo/rpc/JsonpService>`
 
   needed: full page
 
-* `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
+* :ref:`dojo.rpc.JsonService <dojo/rpc/JsonService>`
 
   needed: full page
 
@@ -36,7 +36,7 @@ Dojo Core
 Dijit
 =====
 
-* `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`_
+* :ref:`dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`
 
   needed: full page
 
@@ -45,135 +45,135 @@ Dijit
 DojoX
 =====
 
-* `dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`_
+* :ref:`dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`
 
   needed: Document the widgets. The IO layer is already documented.
 
-* `dojox.atom.widget.FeedEntryViewer <dojox/atom/widget/FeedEntryViewer>`_
+* :ref:`dojox.atom.widget.FeedEntryViewer <dojox/atom/widget/FeedEntryViewer>`
 
   needed: Document the widgets. The IO layer is already documented.
 
-* `dojox.atom.widget.FeedEntryEditor <dojox/atom/widget/FeedEntryEditor>`_
+* :ref:`dojox.atom.widget.FeedEntryEditor <dojox/atom/widget/FeedEntryEditor>`
 
   needed: Document the widgets. The IO layer is already documented.
 
-* `dojox.av.FLAudio <dojox/av/FLAudio>`_
+* :ref:`dojox.av.FLAudio <dojox/av/FLAudio>`
 
   needed: errors in the example, no audio directory within tests available on the server
 
-* `dojox.charting <dojox/charting>`_ ``ttrenka``
+* :ref:`dojox.charting <dojox/charting>` ``ttrenka``
 
   needed: explanation about periodic updating, split apart into multiple pages for each major concept, add inline chart demos, add chart and legend widget properties/events table, using dojo data sources with charts/chart widgets
 
-* `dojox.collections <dojox/collections>`_
+* :ref:`dojox.collections <dojox/collections>`
 
   needed: full page
 
-* `dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`_
+* :ref:`dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`
 
   This example is unfinished, should we delete it?
 
-* `dojox.form.DateTextBox <dojox/form/DateTextBox>`_
+* :ref:`dojox.form.DateTextBox <dojox/form/DateTextBox>`
 
   needed: full page
 
-* `dojox.form.DropDownStack <dojox/form/DropDownStack>`_
+* :ref:`dojox.form.DropDownStack <dojox/form/DropDownStack>`
 
   needed: full page
 
-* `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
+* :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 
   needed: full page
 
-* `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
+* :ref:`dojox.form.TimeSpinner <dojox/form/TimeSpinner>`
 
   needed: full page
 
-* `dojox.gfx <dojox/gfx>`_ 
+* :ref:`dojox.gfx <dojox/gfx>` 
 
   needed: split apart into multiple pages for each major concept, add inline gfx demos
 
-* `dojox.html.metrics <dojox/html/metrics>`_
+* :ref:`dojox.html.metrics <dojox/html/metrics>`
 
   needed: full page
 
-* `dojox.html.styles <dojox/html/styles>`_
+* :ref:`dojox.html.styles <dojox/html/styles>`
 
   needed: full page
 
-* `dojox.image.Badge <dojox/image/Badge>`_
+* :ref:`dojox.image.Badge <dojox/image/Badge>`
 
   needed: full page
 
-* `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
+* :ref:`dojox.image.MagnifierLite <dojox/image/MagnifierLite>`
 
   needed: available parameters and their description
 
-* `dojox.io.httpParse <dojox/io/httpParse>`_
+* :ref:`dojox.io.httpParse <dojox/io/httpParse>`
 
   needed: full page
 
-* `dojox.io.OAuth <dojox/io/OAuth>`_
+* :ref:`dojox.io.OAuth <dojox/io/OAuth>`
 
   needed: usage, examples
 
-* `dojox.io.scriptFrame <dojox/io/scriptFrame>`_
+* :ref:`dojox.io.scriptFrame <dojox/io/scriptFrame>`
 
   needed: full page
 
-* `dojox.io.windowName <dojox/io/windowName>`_
+* :ref:`dojox.io.windowName <dojox/io/windowName>`
 
   needed: full page
 
-* `dojox.io.xhrMultiPart <dojox/io/xhrMultiPart>`_
+* :ref:`dojox.io.xhrMultiPart <dojox/io/xhrMultiPart>`
 
   needed: full page
 
-* `dojox.io.xhrPlugins <dojox/io/xhrPlugins>`_
+* :ref:`dojox.io.xhrPlugins <dojox/io/xhrPlugins>`
 
   needed: usage, examples
 
-* `dojox.io.xhrWindowNamePlugin <dojox/io/xhrWindowNamePlugin>`_
+* :ref:`dojox.io.xhrWindowNamePlugin <dojox/io/xhrWindowNamePlugin>`
 
   needed: full page
 
-* `dojox.layout.ContentPane <dojox/layout/ContentPane>`_
+* :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>`
 
   needed: full page
 
-* `dojox.layout.DragPane <dojox/layout/DragPane>`_
+* :ref:`dojox.layout.DragPane <dojox/layout/DragPane>`
 
   needed: full page
 
-* `dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`_
+* :ref:`dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`
 
   needed: programmatic example
 
-* `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
+* :ref:`dojox.layout.GridContainer <dojox/layout/GridContainer>`
 
   needed: params, examples, adding/removing regions, columns
 
-* `dojox.layout.RadioGroup <dojox/layout/RadioGroup>`_
+* :ref:`dojox.layout.RadioGroup <dojox/layout/RadioGroup>`
 
   needed: full page
 
-* `dojox.layout.ScrollPane <dojox/layout/ScrollPane>`_
+* :ref:`dojox.layout.ScrollPane <dojox/layout/ScrollPane>`
 
   needed: full page
 
-* `dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`_
+* :ref:`dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`
 
   needed: full page
 
-* `dojox.mdnd <dojox/mdnd>`_
+* :ref:`dojox.mdnd <dojox/mdnd>`
 
   needed: full page
 
-* `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
+* :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>` 
 
   needed: full page
 
-* `dojox.widget.DataPresentation <dojox/widget/DataPresentation>`_
+* :ref:`dojox.widget.DataPresentation <dojox/widget/DataPresentation>`
 
   add changes from http://trac.dojotoolkit.org/changeset/20698 (allow the line stroke style to be customized)
 

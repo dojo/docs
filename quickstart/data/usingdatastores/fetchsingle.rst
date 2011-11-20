@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/data/usingdatastores/fetchsingle:
 
 Selecting single items
 ======================
@@ -6,7 +6,7 @@ Selecting single items
 .. contents::
   :depth: 3
 
-A common desire is to retrieve a single item of data and display it in some fashion. Dojo.data provides an API definition that can be implemented by DataStores to make this a simple operation. The API is called the Identity API and the definition can be found `here <dojo/data/api/Identity>`_.
+A common desire is to retrieve a single item of data and display it in some fashion. Dojo.data provides an API definition that can be implemented by DataStores to make this a simple operation. The API is called the Identity API and the definition can be found :ref:`here <dojo/data/api/Identity>`.
 
 For this example, we'll assume the following simple data source:
 
@@ -29,7 +29,7 @@ For this example, we'll assume the following simple data source:
 Examples
 ========
 
-The following example will make use of APIs defined by both `Read <dojo/data/api/Read>`_ and `Identity <dojo/data/api/Identity>`_. In specific, they use:
+The following example will make use of APIs defined by both :ref:`Read <dojo/data/api/Read>` and :ref:`Identity <dojo/data/api/Identity>`. In specific, they use:
 
 **Identity**
   fetchItemByIdentity() Fetches an item by its key value. Because the identity value of each item is unique, you are guaranteed at most one answer back. 

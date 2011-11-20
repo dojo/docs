@@ -1,1 +1,0 @@
-#REDIRECT dojox/form/RangeSlider

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/mobile/Switch:
 
 dojox.mobile.Switch
 ===================

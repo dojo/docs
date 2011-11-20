@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/atom/io/Connection:
 
 dojox.atom.io.Connection
 ========================
@@ -23,7 +23,7 @@ This module simplifies performing APP by handling the configuration of all the n
 Limitations
 ===========
 
-Since this module uses the core `dojo.xhr <dojo/xhr>`_ functions for performing server communication, it is limited by the browser same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
+Since this module uses the core :ref:`dojo.xhr <dojo/xhr>` functions for performing server communication, it is limited by the browser same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
 
 ======================
 Constructor Parameters
@@ -190,5 +190,5 @@ Example 2: Update an entry in a Feed
 See Also
 ========
 
-* `dojox.atom.io.model <dojox/atom/io/model>`_: The backing model for the Feed used by this connection API.
-* `dojox.data.AppStore <dojox/data/AppStore>`_: A datastore built ontop of this API.  Provides full APP support.
+* :ref:`dojox.atom.io.model <dojox/atom/io/model>`: The backing model for the Feed used by this connection API.
+* :ref:`dojox.data.AppStore <dojox/data/AppStore>`: A datastore built ontop of this API.  Provides full APP support.

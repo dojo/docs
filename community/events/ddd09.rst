@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _community/events/ddd09:
 
 Dojo Developer Day 2009
 =======================

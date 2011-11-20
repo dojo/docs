@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/_base/NodeList:
 
 dojo._base.NodeList
 ===================
@@ -19,6 +19,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `dojo.NodeList <dojo/NodeList>`_
+* :ref:`dojo.NodeList <dojo/NodeList>`
 
   A class to handle a list of DOM nodes

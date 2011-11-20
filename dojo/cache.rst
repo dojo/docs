@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojo/cache:
 
 dojo.cache
 ==========
@@ -145,4 +145,4 @@ Example using an object that has like the previous example, but uses an object w
 See Also
 ========
 
-* `dojo.require <dojo/require>`_
+* :ref:`dojo.require <dojo/require>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _shrinksafe/index:
 
 ShrinkSafe 
 ==========
@@ -68,4 +68,4 @@ Known bugs
 See also
 ========
 
-* `Dojo Builds <build/index>`_
+* :ref:`Dojo Builds <build/index>`

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/grid/EnhancedGrid/plugins/Menus:
 
 dojox.grid.EnhancedGrid.plugins.Menu
 =============================================
@@ -305,7 +305,7 @@ Tips
 ----
 * How to get selected rows, columns or even cells when the menu is popped up?
 
-1. Normally, when `Selector <Selector>`_ plugin is off, we can get selected rows by: 
+1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by: 
 
 .. code-block :: javascript
   :linenos:
@@ -313,19 +313,19 @@ Tips
   grid.selection.getSelected()
 
 
-2. When `Selector <Selector>`_ plugin if turned on, we can get the selected rows/column/cell with the following way:
+2. When :ref:`Selector <Selector>` plugin if turned on, we can get the selected rows/column/cell with the following way:
 
 .. code-block :: javascript
   :linenos:
 
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
-More details please refer to `Selector <Selector>`_ plugin
+More details please refer to :ref:`Selector <Selector>` plugin
 
 
 ========
 See Also
 ========
 
-* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid

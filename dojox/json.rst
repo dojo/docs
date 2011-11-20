@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/json:
 
 dojox.json
 ==========
@@ -17,14 +17,14 @@ DojoX JSON is set of tools for working with JSON and object data structures.
 Features
 ========
 
-* `dojox.json.query <dojox/json/query>`_
+* :ref:`dojox.json.query <dojox/json/query>`
 
   JSONQuery is a comprehensive object data query tool.
 
-* `dojox.json.schema <dojox/json/schema>`_
+* :ref:`dojox.json.schema <dojox/json/schema>`
 
   This module is object validation tool implementing JSON Schema.
 
-* `dojox.json.ref <dojox/json/ref>`_
+* :ref:`dojox.json.ref <dojox/json/ref>`
 
   This module provides extensive serialization, deserialization, and indexing capabilities with JSON Referencing.

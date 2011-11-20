@@ -1,6 +1,6 @@
-#format dojo_rst
+.. _quickstart/doh:
 
 D.O.H
 =====
 
-Moved to `util/doh <util/doh>`_
+Moved to :ref:`util/doh <util/doh>`

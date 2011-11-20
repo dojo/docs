@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/io/xhrPlugins:
 
 dojox.io.xhrPlugins
 ===================

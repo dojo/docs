@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _quickstart/internationalization/number-and-currency-formatting:
 
 Cultural conventions: Date, Number and Currency
 ===============================================
@@ -15,7 +15,7 @@ Cultural conventions: Date, Number and Currency
 Dates and Times
 ===============
 
-Unlike standard Javascript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of `dojo.date.locale <dojo/date/locale>`_. 
+Unlike standard Javascript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`. 
 
 For example, look at the following date formatted using the default locale for the user (in this case, English - United States) and also with a specific locale override of Chinese - PRC China:
 
@@ -62,7 +62,7 @@ Also, it is possible to reverse the process and parse String objects into Dates.
 
 Special patterns may be specified may be used to provide custom formats, however using such a pattern overrides the locale-specific behavior and may result in an application that is not properly localized. The patterns used follow the specification and are similar to those used by the Java dateformat class (e.g. MMddyyyy).
 
-Also available under `dojo.cldr.supplemental <dojo/cldr#dojo-cldr-supplemental>`_ are routines to provide the first day of the week and the start and end of the weekend, according to local custom.
+Also available under :ref:`dojo.cldr.supplemental <dojo/cldr>` are routines to provide the first day of the week and the start and end of the weekend, according to local custom.
 
 
 ======================
@@ -74,7 +74,7 @@ The formatting and parsing of numbers is handled in much the same way. Conventio
 dojo.number
 -----------
 
-Dojo provides the facilities to properly format and parse numbers on a localized basis using the methods in `dojo.number <dojo/number>`_:
+Dojo provides the facilities to properly format and parse numbers on a localized basis using the methods in :ref:`dojo.number <dojo/number>`:
 
 .. code-block :: javascript
  :linenos:
@@ -96,7 +96,7 @@ Other options may be specified to limit output to a certain number of decimal pl
 dojo.currency
 -------------
 
-`dojo.currency <dojo/currency>`_ combines the functionality of dojo.number to use the appropriate syntax with knowledge of the conventions associated with a particular currency -- this includes the number of decimal places typically used with a currency, rounding conventions, and the currency symbol which itself may be rendered differently according to locale, any of these may be overridden. When calling dojo.currency APIs, be sure to specify a currency according to its 3-letter ISO-4217 symbol.
+:ref:`dojo.currency <dojo/currency>` combines the functionality of dojo.number to use the appropriate syntax with knowledge of the conventions associated with a particular currency -- this includes the number of decimal places typically used with a currency, rounding conventions, and the currency symbol which itself may be rendered differently according to locale, any of these may be overridden. When calling dojo.currency APIs, be sure to specify a currency according to its 3-letter ISO-4217 symbol.
 
 .. code-block :: javascript
  :linenos:
@@ -126,4 +126,4 @@ Note: handling of Hindi and Arabic style numerals is planned for 1.0, but not ye
 Locale support
 ==============
 
-It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as Javascript objects in the Dojo repository under `dojo.cldr <dojo/cldr>`_. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.
+It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as Javascript objects in the Dojo repository under :ref:`dojo.cldr <dojo/cldr>`. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.

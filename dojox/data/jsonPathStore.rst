@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dojox/data/jsonPathStore:
 
 dojox.data.jsonPathStore
 ========================
@@ -20,17 +20,17 @@ A local (in memory) store which can attach a dojo.data interface to each JavaScr
 Introduction
 ============
 
-JsonPathStore is intended to allow any Object data structure to easily be accessed and controlled by various widgets. It uses `JsonPath </dojox/JsonPath`_ as a query language. It is a very lightweight server, yet it is flexible enough to allow you to define a single store maintaining several unrelated data sets in a single store. Furthermore, it implements a synchronous mode which makes manipulation of the store possible when appropriate for an application.
+JsonPathStore is intended to allow any Object data structure to easily be accessed and controlled by various widgets. It uses :ref:`JsonPath </dojox/JsonPath` as a query language. It is a very lightweight server, yet it is flexible enough to allow you to define a single store maintaining several unrelated data sets in a single store. Furthermore, it implements a synchronous mode which makes manipulation of the store possible when appropriate for an application.
 
 
 ==============
 Supported APIs
 ==============
 
-* `dojo.data.api.Read <dojo/data/api/Read>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_
-* `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Notification <dojo/data/api/Notification>`_
+* :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
+* :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+* :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
 
 * release also includes experimental synchronous API.
 

@@ -1,4 +1,4 @@
-#format dojo_rst
+.. _dijit/CheckedMenuItem:
 
 dijit.CheckedMenuItem
 =====================
@@ -148,4 +148,4 @@ check/uncheck menu item			      Spacebar or enter
 Implementation Notes
 ====================
 
-See `dijit.Menu <dijit/Menu>`_.
+See :ref:`dijit.Menu <dijit/Menu>`.
