@@ -90,4 +90,4 @@ Accessibility
 
 See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
 
-The time picker popup associated with the TimeTextBox is not yet fully accessible.  However, the TimeTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.  These messages are implemented in a format that is accessible to all users.   
+The time picker popup associated with the TimeTextBox is not yet fully accessible.  However, the TimeTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.  These messages are implemented in a format that is accessible to all users.

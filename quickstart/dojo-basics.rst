@@ -12,7 +12,7 @@ Functions used Everywhere
 .. contents::
     :depth: 2
 
-It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase. These are dojo-fundamentals, and should be memorized if possible. 
+It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase. These are dojo-fundamentals, and should be memorized if possible.
 
 
 ============
@@ -26,7 +26,7 @@ This is the core of the Dojo package system, and loads functionality not provide
   dojo.require("dojo.fx"); // load dojo/fx.js
   dojo.require("dojox.widget.Toaster"); // load dojox/widget/Toaster.js
 
-The general rule-of-thumb is: if you are calling a function or class like: dojo.some.randomFunction(), you will need to load the ``dojo.some`` module. If you don't, your scripts will throw a "dojo.some not defined" or "dojo.some.randomFunction not defined. There are a few exceptions to this rule, all of which are covered later in this guide. 
+The general rule-of-thumb is: if you are calling a function or class like: dojo.some.randomFunction(), you will need to load the ``dojo.some`` module. If you don't, your scripts will throw a "dojo.some not defined" or "dojo.some.randomFunction not defined. There are a few exceptions to this rule, all of which are covered later in this guide.
 
 It may seem painful to require all modules, but Dojo rewards by:
 
@@ -44,7 +44,7 @@ This registers a function to be run when the document (and all :ref:`required <d
 .. code-block :: javascript
   
   dojo.addOnLoad(function(){
-     console.log("document ready!"); 
+     console.log("document ready!");
   });
 
 That example passes an anonymous function. You can pass named functions as well:
@@ -81,7 +81,7 @@ Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't 
 dijit.byId
 ==========
 
-``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. Difference can be found at :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`, but the basics are: 
+``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. Difference can be found at :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`, but the basics are:
 
 * If you are using just a normal domNode, use dojo.byId
 * If you are working with a Dijit, use dijit.byId
@@ -96,7 +96,7 @@ dijit.byId
      dialog.show();
   }
 
-``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by :ref:`dijit._Widget <dijit/_Widget>`, and adds in additional specific methods depending on the type of Dijit. 
+``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by :ref:`dijit._Widget <dijit/_Widget>`, and adds in additional specific methods depending on the type of Dijit.
 
 
 ==========
@@ -137,14 +137,14 @@ Can be written as:
 
 .. code-block :: javascript
 
-  dojo.forEach(queueEntries, 
+  dojo.forEach(queueEntries,
       function(oneEntry, index, array) {
           console.debug(oneEntry + " at index " + index);
       }
   );
 
 
-We used an anonymous function here to define the operation. This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself. 
+We used an anonymous function here to define the operation. This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself.
 
 For this simple loop, forEach isn't anything exciting. But combined with other Dojo functions, especially :ref:`dojo.query <dojo/query>`, it becomes remarkably useful. Consider this snippet, which disables all SELECT tags on the page:
 
@@ -158,11 +158,11 @@ For this simple loop, forEach isn't anything exciting. But combined with other D
   );
 
 
-There's no monkeying around with DOM functions, no using tedious names or id's, and it continues to work even when you add new SELECT tags. 
+There's no monkeying around with DOM functions, no using tedious names or id's, and it continues to work even when you add new SELECT tags.
 
 Running dojo.forEach on a dojo.query result is so common, that Dojo defines a shortcut. This snippet:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   dojo.query("select").forEach(
     function(selectTag) {
@@ -173,7 +173,7 @@ Running dojo.forEach on a dojo.query result is so common, that Dojo defines a sh
 
 does the same thing. But that's not all!  *New in 1.0*, you can collapse the function down to its body, passed in as a string like so:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   // >= 1.0 only.
   dojo.query("select", document).forEach("item.disabled = true;");
@@ -207,7 +207,7 @@ It is also possible to use the Dojo event model to connect simple objects. To de
 
   var exampleObj = {
       counter: 0,
-      foo: function(){ 
+      foo: function(){
           alert("foo");
           this.counter++;
       },
@@ -220,7 +220,7 @@ It is also possible to use the Dojo event model to connect simple objects. To de
 
 So lets say that I want ``exampleObj.bar()`` to get called whenever ``exampleObj.foo()`` is called. We can set this up the same way that we do with DOM events:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   dojo.connect(exampleObj, "foo", exampleObj, "bar");
 

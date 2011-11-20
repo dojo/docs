@@ -35,15 +35,15 @@ Programmatic example
 	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
 
 	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This is a content pane", 
+				title:"This is a content pane",
 				content:"Hi!"
 	  }));
 	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This is as well", 
+				title:"This is as well",
 				content:"Hi how are you?"
           }));
 	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This too", 
+				title:"This too",
 				content:"Hello im fine.. thnx"
 	  }));
 	  aContainer.startup();

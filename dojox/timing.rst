@@ -38,7 +38,7 @@ Other elements
 
 dojox.timing.Streamer is an object designed to facilitate streaming/buffer-type
 scenarios; it takes an input and an output function, will execute the output
-function onTick, and run the input function when the internal buffer gets 
+function onTick, and run the input function when the internal buffer gets
 beneath a certain threshold of items.  This can be useful for something timed--
 such as updating a data plot at every N interval, and getting new data from
 a source when there's less than X data points in the internal buffer (think

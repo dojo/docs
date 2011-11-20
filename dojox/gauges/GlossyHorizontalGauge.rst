@@ -46,15 +46,15 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksInterval       |  "10"                                   |  The interval beetwen each majors tick                         |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |   
+| majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          | 
+| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | minorTicksColor          |  "#c4c4c4"                              |  Color of the minor tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | color                    |  "black"                                |  Color of the gauge                                            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| markerColor              |  "#c4c4c4"                              |  Color of the value marker                                     | 
+| markerColor              |  "#c4c4c4"                              |  Color of the value marker                                     |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | font                     |  "normal normal normal 10pt sans-serif" |  Definition of the font used to display the values on the scale|
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
@@ -79,7 +79,7 @@ Slider style gauge (programmatic)
 The HTML <div> element to display the gauge widget:
 
 .. code-block :: html
-  :linenos:  
+  :linenos:
   
     <div id="HorizontalGauge" ></div>
 
@@ -91,7 +91,7 @@ The Javascript code creating the gauge:
   
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
-        dojo.require('dojox.gauges.GlossyHorizontalGauge');                
+        dojo.require('dojox.gauges.GlossyHorizontalGauge');
         makeGauge = function(){
         	var glossygauge = new dojox.gauges.GlossyHorizontalGauge({
         		background: [255, 255, 255, 0],

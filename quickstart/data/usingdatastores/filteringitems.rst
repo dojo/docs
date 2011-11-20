@@ -18,7 +18,7 @@ In any event, on to what querying is all about:
 
 Given a dataset like:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   { identifier: 'name',
     items: [
@@ -36,7 +36,7 @@ Given a dataset like:
 
 There are times it would be useful to only work with a subset of those items. For example, maybe you want to locate things only found in the spices aisle. In other words, you want to find all items that match:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   
   { aisle: "Spice" }
 
@@ -46,26 +46,26 @@ And you don't care what the other attributes are. For dojo.data.ItemFileReadStor
 
   So, for dojo.data.ItemFileReadStore, if you wanted to find all items in aisles starting with *Condiment*, the query is simply:
   
-  .. code-block :: javascript 
+  .. code-block :: javascript
 
     { aisle: "Condiment*" }
 
 
   For dojo.data.ItemFileReadStore, multiple attributes assume an "and" between the terms. So a query like the following one will match spices with the word pepper inside them, but not "green peppers" in the vegetable aisle:
 
-  .. code-block :: javascript 
+  .. code-block :: javascript
 
     { name: "*pepper*", aisle: "Spices" }
 
 
 Once we have constructed the query, we pass it to fetch() along with the other parameters as shown in the following example:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
-  itemStore .fetch({ 
+  itemStore .fetch({
     query: { name: "*pepper*", aisle: "Spices" },
-    onComplete: 
-    ...    
+    onComplete:
+    ...
   });
 
 ====================================
@@ -74,13 +74,13 @@ Case sensitivity and other modifiers
 
 That's great, but what if I don't care about case sensitivity?  Dojo.data also provides a method for augmenting the query with options through the use of the queryOptions object. By default, dojo.data only defines two options that datastores should honor. They are *ignoreCase* and *deep*, and both are boolean valued. The ignoreCase option tells the datastore to compare the attributes for matches, but do so case-insensitively. The *deep* option only applies to stores which represent hierarchical data, and it instructs the search to search all child items (as well as all root items), for a match. So, if we take the above example and say we want to just ignore case so we get 'Black Pepper' and 'white pepper' as matches, the fetch call becomes:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
-  itemStore .fetch({ 
+  itemStore .fetch({
     query: { name: "*pepper*", aisle: "Spices" },
     queryOptions: { ignoreCase: true },
-    onComplete: 
-    ...    
+    onComplete:
+    ...
   });
 
 So,in general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
@@ -90,7 +90,7 @@ So,in general, any option that would affect the behavior of a query, such as mak
 Flexible store syntax
 =====================
 
-Why isn't it just SQL for a query?  Why can each store potentially define their own query syntax?  The simple and short answer to this question is that not all datastores are backed directly by a database that handles SQL. An immediate example is ItemFileReadStore, which just uses a structured JSON list for its data, so its query looks like structured JSON. Other examples would be datastores that wrap on top of services like Flickr and Delicious, because neither of those take SQL as the syntax for their services. 
+Why isn't it just SQL for a query?  Why can each store potentially define their own query syntax?  The simple and short answer to this question is that not all datastores are backed directly by a database that handles SQL. An immediate example is ItemFileReadStore, which just uses a structured JSON list for its data, so its query looks like structured JSON. Other examples would be datastores that wrap on top of services like Flickr and Delicious, because neither of those take SQL as the syntax for their services.
 
 Therefore, the dojo.data API defines basic guidelines and syntax stores that can be easily mapped to a service (for example, attribute names can map directly to parameters in a query string). The same is true for an SQL backed datastore. The attributes become substitutions in a prepared statement that the stores use (when they pass back the query to the server) and a simple common pattern matching syntax, the * and ?, which also map easily across a wide variety of datasource query syntax.
 
@@ -113,11 +113,11 @@ Query for all Spices  (Basic query)
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var storeData = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -128,7 +128,7 @@ Query for all Spices  (Basic query)
         ]};
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -137,7 +137,7 @@ Query for all Spices  (Basic query)
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -147,7 +147,7 @@ Query for all Spices  (Basic query)
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -173,7 +173,7 @@ Query for all Spices  (Basic query)
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click to find the spices!</div>
@@ -183,7 +183,7 @@ Query for all Spices  (Basic query)
     </span>
 
 
-Query for all food in aisles starting with C 
+Query for all food in aisles starting with C
 --------------------------------------------
 
 *Basic query with wildcard*
@@ -196,11 +196,11 @@ Query for all food in aisles starting with C
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData2 = { identifier: 'name', 
+      var storeData2 = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -211,7 +211,7 @@ Query for all food in aisles starting with C
         ]};
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init2 () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -220,7 +220,7 @@ Query for all food in aisles starting with C
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list2");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -230,7 +230,7 @@ Query for all food in aisles starting with C
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list2");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -257,7 +257,7 @@ Query for all food in aisles starting with C
         dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click to find the items in an aisle starting with C!</div>
@@ -282,11 +282,11 @@ Enter your own query for name and aisle
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
 
-      var storeData3 = { identifier: 'name', 
+      var storeData3 = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -297,7 +297,7 @@ Enter your own query for name and aisle
         ]};
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init3 () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -307,16 +307,16 @@ Enter your own query for name and aisle
              //Build up the query from the input boxes.
              var name = nameBox.getValue();
              if ( name && dojo.trim(name) !== "" ) {
-               queryObj["name"] = name;       
+               queryObj["name"] = name;
              }
              var aisle = aisleBox.getValue();
              if ( aisle && dojo.trim(aisle) !== "" ) {
-               queryObj["aisle"] = aisle;       
+               queryObj["aisle"] = aisle;
              }
 
              var qNode = dojo.byId("query");
              if (qNode ) {
-               qNode.innerHTML = dojo.toJson(queryObj);   
+               qNode.innerHTML = dojo.toJson(queryObj);
              }
 
 
@@ -329,13 +329,13 @@ Enter your own query for name and aisle
 
              var qoNode = dojo.byId("queryOptions");
              if (qoNode ) {
-               qoNode.innerHTML = dojo.toJson(queryOptionsObj);   
+               qoNode.innerHTML = dojo.toJson(queryOptionsObj);
              }
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -345,7 +345,7 @@ Enter your own query for name and aisle
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -372,7 +372,7 @@ Enter your own query for name and aisle
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
 
     <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>

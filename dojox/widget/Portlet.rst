@@ -48,7 +48,7 @@ Usage
    </div>
 
    <div>
-     The Contents of the portlet go here  
+     The Contents of the portlet go here
    </div>
  </div>
 
@@ -82,12 +82,12 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
       <div dojoType="dojox.widget.Portlet" title="A Simple Portlet">
 	<div dojoType="dojox.widget.PortletSettings">
           This is a simple settings widget.
-          Put whatever you like in here       
+          Put whatever you like in here
 	</div>
 
 	<div style="height: 100px;">
 	  The contents of the portlet go in here.
-          Try clicking the settings icon in the title bar to see the settings. 
+          Try clicking the settings icon in the title bar to see the settings.
             
 	</div>
     </div>
@@ -101,7 +101,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 Basic Feed Portlet
 ------------------
 
-This example shows a FeedPortlet with a single URL.  A FeedPortlet is an extension of Portlet, and can be used to load an 
+This example shows a FeedPortlet with a single URL.  A FeedPortlet is an extension of Portlet, and can be used to load an
 'Atom <http://en.wikipedia.org/wiki/Atom_(standard)>'_ or 'RSS <http://en.wikipedia.org/wiki/RSS>'_ feed and display it as a list.
 The FeedPortlet displays the titles of the feed items, and shows the contents of each item, or story, in a tooltip when the mouse hovers over it.
 
@@ -121,7 +121,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. html::
    
-      <div dojoType="dojox.widget.FeedPortlet" title="Todays News" 
+      <div dojoType="dojox.widget.FeedPortlet" title="Todays News"
 	id="todaysNews"
 	url="http://news.google.com/news?hl=en&topic=t&output=atom"
 	maxResults="5"
@@ -166,7 +166,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   .. html::
    
-      <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News" 
+      <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
 	id="todaysNews"
 	maxResults="5"
 	>
@@ -236,7 +236,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 	hasResizableColumns="false"
 	opacity="0.3"
 	nbZones="2"
-	allowAutoScroll="true" 
+	allowAutoScroll="true"
 	withHandles="true"
 	handleClasses="dijitTitlePaneTitle"
 	region="center"
@@ -254,7 +254,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
         </div>
 
 
-        <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News" 
+        <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
           id="todaysNews"
           maxResults="5">
           <select dojoType="dojox.widget.PortletFeedSettings">

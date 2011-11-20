@@ -29,7 +29,7 @@ Table of core API naming constructs:
 +---------------------+------------------------------+-----------------------------------+
 | class               | CamelCase                    |                                   |
 +---------------------+------------------------------+-----------------------------------+
-| public method       | mixedCase                    | whether class or instance         | 
+| public method       | mixedCase                    | whether class or instance         |
 |                     |                              | method. lower_case() is           |
 |                     |                              | acceptable only if the particular |
 |                     |                              | function is mimicking another     |
@@ -42,7 +42,7 @@ Table of core API naming constructs:
  
 Table of constructs that are not visible in the API, and therefore carry less weight of enforcement.
 
-+-----------------------+---------------------------+ 
++-----------------------+---------------------------+
 | Construct             | Convention                |
 +-----------------------+---------------------------+
 | private method        | _mixedCase                |
@@ -67,12 +67,12 @@ Naming Conventions
 
         .. javascript::
 
-            var NodeTypes = { 
+            var NodeTypes = {
                 Element: 1,
                 DOCUMENT: 2
             };
     
-    #. Abbreviations and acronyms SHOULD NOT be UPPERCASE when used as a name: 
+    #. Abbreviations and acronyms SHOULD NOT be UPPERCASE when used as a name:
         
         ``getInnerHTML()``, ``getXML()``, ``XmlDocument``
     
@@ -105,13 +105,13 @@ Naming Conventions
 
     #. Variables with a large scope SHOULD have globally unambiguous names; ambiguity MAY be  distinguished by module membership. Variables with small or private scope MAY have terse names.
 
-    #. The name of the return object is implicit, and SHOULD be avoided in a method name: 
+    #. The name of the return object is implicit, and SHOULD be avoided in a method name:
     
         .. javascript:
         
             getHandler(); // NOT getEventHandler()``
 
-    #. Public names SHOULD be as clear as necessary and SHOULD avoid unclear shortenings and contractions: 
+    #. Public names SHOULD be as clear as necessary and SHOULD avoid unclear shortenings and contractions:
     
         .. javascript::
         
@@ -157,7 +157,7 @@ Specific Naming Conventions
 
     #. The terms ``initialize`` or ``init`` CAN be used where an object or a concept is established.
 
-    #. UI Control variables SHOULD be suffixed by the control type. Examples: 
+    #. UI Control variables SHOULD be suffixed by the control type. Examples:
         
         ``leftComboBox, topScrollPane``
     
@@ -197,7 +197,7 @@ Files
             
             var o = someObject.get(
                 Expression1,
-                Expression2, 
+                Expression2,
                 Expression3
             );
             
@@ -244,7 +244,7 @@ Variables
         #. Floating point constants SHOULD ALWAYS be written with a digit before the decimal point.
         
 Layout
-------        
+------
 
     #. Block statements.
     
@@ -340,7 +340,7 @@ Layout
         #. The following reserved words SHOULD NOT be followed by a space:
 
             * break
-            * catch 
+            * catch
             * continue
             * do
             * else
@@ -348,7 +348,7 @@ Layout
             * for
             * function if anonymous. eg: ``var foo = function(){};``
             * if
-            * return 
+            * return
             * switch
             * this
             * try
@@ -377,11 +377,11 @@ Layout
 
         #. Semi-colons SHOULD NOT be preceded by a space.
 
-        #. Function calls and method calls SHOULD NOT be followed by a space. 
+        #. Function calls and method calls SHOULD NOT be followed by a space.
         
             .. javascript::
             
-                doSomething(someParameter); // not doSomething (someParameter); 
+                doSomething(someParameter); // not doSomething (someParameter);
         
         #. Logical units within a block SHOULD be separated by one blank line.
 
@@ -389,8 +389,8 @@ Layout
 
     #. Line length
     
-        There's no line length limit in dojo although 120 characters (treating tabs as 4 spaces) is a 
-        guideline. In particular code examples embedded into the API documentation may benefit from 
+        There's no line length limit in dojo although 120 characters (treating tabs as 4 spaces) is a
+        guideline. In particular code examples embedded into the API documentation may benefit from
         longer lines, since they start out already indented by 4 or 5 tabs.
         
     #. Comments
@@ -424,9 +424,9 @@ The CSS styling basically inherits all the rules from JavaScript, that means "ke
         color: red;
    }
    
-   .className1, 
+   .className1,
    #someId {
-        color: blue; 
+        color: blue;
    }
 
 Mainly the rules are:
@@ -434,4 +434,4 @@ Mainly the rules are:
   * each selector is on a new line
   * the opening curly brace is preceded by a space
   * the key value pairs have a space after the colon
-  * every block is followed by an empty new line 
+  * every block is followed by an empty new line

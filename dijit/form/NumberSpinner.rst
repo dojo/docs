@@ -10,14 +10,14 @@ dijit.form.NumberSpinner
 .. contents::
     :depth: 2
 
-The NumberSpinner is similar to :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`, but makes integer entry easier when small adjustments are required. 
+The NumberSpinner is similar to :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`, but makes integer entry easier when small adjustments are required.
 
 
 =====
 Usage
 =====
 
-* The down and up arrow buttons "spin" the number up and down. 
+* The down and up arrow buttons "spin" the number up and down.
 * Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
 
 
@@ -75,12 +75,12 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
 
       <div id="spinnerId"></div>
 
-**Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.  
+**Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.
 
 Change Events
 -------------
 
-Like regular <input> boxes, the onChange event fires only when the box loses focus.  Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.  
+Like regular <input> boxes, the onChange event fires only when the box loses focus.  Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.
 
 If you'd like onChange to fire after every button click, set the attribute intermediateChanges, as in this example:
 

@@ -18,7 +18,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+    <span data-dojo-type="dojo.data.ItemFileWriteStore"
         data-dojo-id="store3"
         data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
@@ -38,12 +38,12 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         style="width: 400px; height: 200px;">
         <thead>
             <tr>
-                <th width="200px" 
+                <th width="200px"
                     field="name">Country/Continent Name</th>
-                <th width="auto" 
-                    field="type" 
-                    cellType="dojox.grid.cells.Select" 
-                    options="country,city,continent" 
+                <th width="auto"
+                    field="type"
+                    cellType="dojox.grid.cells.Select"
+                    options="country,city,continent"
                     editable="true">Type</th>
             </tr>
         </thead>
@@ -53,7 +53,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         Add Row
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // set the properties for the new item:
-            var myNewItem = {type: "country", name: "Fill this country name"}; 
+            var myNewItem = {type: "country", name: "Fill this country name"};
             // Insert the new item into the store:
             // (we use store3 from the example above in this example)
             store3.newItem(myNewItem);
@@ -67,7 +67,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
             var items = grid5.selection.getSelected();
             if(items.length){
                 // Iterate through the list of selected items.
-                // The current item is available in the variable 
+                // The current item is available in the variable
                 // "selectedItem" within the following function:
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {

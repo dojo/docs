@@ -62,46 +62,46 @@ Query the first three photos from a user
 
   jsonFlickrApi({
     "photos":{
-      "page":1, 
-      "pages":98, 
+      "page":1,
+      "pages":98,
       "perpage":3,
-      "total":"489", 
+      "total":"489",
       "photo":[
          {
-           "id":"1352049918", 
-           "owner":"44153025@N00", 
-           "secret":"5636009306", 
-           "server":"1111", 
-           "farm":2, 
-           "title":"The Liffey Panorama", 
-           "ispublic":1, 
-           "isfriend":0, 
+           "id":"1352049918",
+           "owner":"44153025@N00",
+           "secret":"5636009306",
+           "server":"1111",
+           "farm":2,
+           "title":"The Liffey Panorama",
+           "ispublic":1,
+           "isfriend":0,
            "isfamily":0
-         }, 
+         },
          {
-           "id":"1351120079", 
-           "owner":"44153025@N00", 
-           "secret":"880bf6a003", 
-           "server":"1027", 
-           "farm":2, 
-           "title":"Many Hands make pretty flowers", 
-           "ispublic":1, 
-           "isfriend":0, 
+           "id":"1351120079",
+           "owner":"44153025@N00",
+           "secret":"880bf6a003",
+           "server":"1027",
+           "farm":2,
+           "title":"Many Hands make pretty flowers",
+           "ispublic":1,
+           "isfriend":0,
            "isfamily":0
-         }, 
+         },
          {
-           "id":"1322051485", 
-           "owner":"44153025@N00", 
-           "secret":"b7c529335d", 
-           "server":"1110", 
-           "farm":2, 
-           "title":"Wok'n'Roll baby!", 
-           "ispublic":1, 
-           "isfriend":0, 
+           "id":"1322051485",
+           "owner":"44153025@N00",
+           "secret":"b7c529335d",
+           "server":"1110",
+           "farm":2,
+           "title":"Wok'n'Roll baby!",
+           "ispublic":1,
+           "isfriend":0,
            "isfamily":0
          }
        ]
-    }, 
+    },
     "stat":"ok"}
   )
 
@@ -185,11 +185,11 @@ sort
 
     * interestingness
 
-  If an attribute is not specified, the default is date-posted  
+  If an attribute is not specified, the default is date-posted
 
   * descending: If set to true, the photos are sorted in descending order. If set to false, or not specified, the photos are sorted in ascending order.
 
-**Note:** Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. 
+**Note:** Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters.
 
 ==============
 Usage Examples
@@ -207,7 +207,7 @@ Listing nature pictures
       dojo.require("dijit.form.Button");
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
          //Function to perform a fetch on the datastore when a button is clicked
@@ -216,7 +216,7 @@ Listing nature pictures
            //Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                while (list.firstChild) {
                  list.removeChild(list.firstChild);
                }
@@ -226,7 +226,7 @@ Listing nature pictures
            //Callback for processing a returned list of items.
            function gotItems(items, request) {
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                var i;
                for (i = 0; i < items.length; i++) {
                  var item = items[i];
@@ -253,7 +253,7 @@ Listing nature pictures
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.FlickrRestStore" data-dojo-id="flickrStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Find nature pictures!</div>

@@ -20,7 +20,7 @@ Description
 ===========
 
 Dojo pragmas are instructions contained in a resource that cause a particular build system feature to be invoked. All
-Dojo pragmas are expressed with the following syntax 
+Dojo pragmas are expressed with the following syntax
 
 **//>>** *pragma* *pragma-arguments*
 

@@ -17,11 +17,11 @@ Introduction
 
 The ``build.sh`` (unix) or ``build.bat`` (Windows) script located in the Dojo source distrubtion tree under ``\\util\buildscripts`` is used to trigger the build process.
 
-**Notes**  
+**Notes**
 
   * For advanced users, the command line arguments to the script are passed in to the ``build.js`` execution environment as part of the overall ``kwArgs`` object that it receives.
   
-  * Any of the following parameters can be set directly in the profile file as part of the overall `dependencies` Object 
+  * Any of the following parameters can be set directly in the profile file as part of the overall `dependencies` Object
 
 =====
 Usage
@@ -51,7 +51,7 @@ releaseDir=../../release/
 
 
 copyTests=true
-  Turn on or off copying of test files.  
+  Turn on or off copying of test files.
 
   When off (any non-truthy value--however ``false`` is your clearest choice), the Dojo test directory is not copied into your release distribution.  This can reduce the overall size of your distribution.
 
@@ -62,7 +62,7 @@ action=help
      Remove the releaseDir and any contents it may have.
 
   release
-     Build the release directories.  
+     Build the release directories.
 
   Note:  when you specify ``release``, the ``clean`` option is implied automatically, *unless* you use the ``buildLayers`` option.
 
@@ -74,7 +74,7 @@ symbol=
 internStrings=true
   Turn on or off widget template file interning.
 
-  Normally, during the build process, one of the things that the builder does is take the separate HTML template files used by templated Dojo widgets (there are many of these in :ref:`Dijit <dijit/index>`) and convert them to inline string values within the as-built source file for the widget (as well as any layers that widget is built into).  
+  Normally, during the build process, one of the things that the builder does is take the separate HTML template files used by templated Dojo widgets (there are many of these in :ref:`Dijit <dijit/index>`) and convert them to inline string values within the as-built source file for the widget (as well as any layers that widget is built into).
 
 scopeMap=
   Change the default dojo, dijit and dojox scope names to something else. Useful if you want to use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox references. Format is a string that contains no spaces, and is similar to the djConfig.scopeMap value (note that the backslashes below are required to avoid shell escaping): ``scopeMap=[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]``
@@ -125,7 +125,7 @@ stripConsole=
   Strips console method calls from JS source. Applied to layers and individual modules resource files. Valid values are "normal" (strips all but console.warn and console.error calls), "all" (strips all console calls), "normal,warn" (strips all but console.error calls), "normal,error" (strips all but console.warn errors).
 
 version=0.0.0.dev
-  The build will be stamped with this version string.  That is, the ``dojo.version`` value specified in the as built version will contain this version number. 
+  The build will be stamped with this version string.  That is, the ``dojo.version`` value specified in the as built version will contain this version number.
 
   This parameter does not affect the names of the directories created by the build system.
 

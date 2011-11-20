@@ -9,7 +9,7 @@ dojo.fx.wipeIn
 :Status: Draft
 :Version: 1.2
 
-Dojox.fx.wipeTo lets you wipe the size of a node to a defined size. 
+Dojox.fx.wipeTo lets you wipe the size of a node to a defined size.
 
 Wiping in a node with "display: none; position: absolute;"
 ----------------------------------------------------------
@@ -24,15 +24,15 @@ Wiping in a node with "display: none; position: absolute;"
 
     function wipeInOne(){
       dojox.fx.wipeTo({
-        node: "wipeDisplayNode", 
-        duration: 300, 
+        node: "wipeDisplayNode",
+        duration: 300,
         height: 200
       }).play();
     }
 
     function wipeOutOne(){
       dojox.fx.wipeOut({
-        node: "wipeDisplayNode", 
+        node: "wipeDisplayNode",
         duration: 300
       }).play();
     }

@@ -16,7 +16,7 @@ dojox.layout.ResizeHandle
 Introduction
 ============
 
-dojox.layout.ResizeHandle is a small widget to provide resizing of some attached node. It is experimental, and subject to API changes. 
+dojox.layout.ResizeHandle is a small widget to provide resizing of some attached node. It is experimental, and subject to API changes.
 
 =====
 Usage
@@ -36,7 +36,7 @@ You will likely want to use the default styles as well:
 
     <link rel="stylesheet" href="path/to/dojo/dojox/layout/resources/ResizeHandle.css" />
 
-This provides simple styling for your ResizeHandle, and a default handle icon. 
+This provides simple styling for your ResizeHandle, and a default handle icon.
 
 ========
 Examples
@@ -45,7 +45,7 @@ Examples
 Programmatic example
 --------------------
 
-This example assumes a node with id="someNodeId" exists, is position:relative, and uses the defaults of ResizeHandle. 
+This example assumes a node with id="someNodeId" exists, is position:relative, and uses the defaults of ResizeHandle.
 
 .. code-block :: javascript
   :linenos:
@@ -57,7 +57,7 @@ This example assumes a node with id="someNodeId" exists, is position:relative, a
 Declarative example
 -------------------
 
-This example assumes all defaults, and attaches to a parent node. 
+This example assumes all defaults, and attaches to a parent node.
 
 .. code-block :: html
   :linenos:
@@ -110,18 +110,18 @@ By default, the resiable will be constrained to a minimum size of 100px x 100px,
 
   new dojox.layout.ResizeHandle({
      targetId: "foo",
-     minWidth:125, 
+     minWidth:125,
      minHeight:200
   }).placeAt("foo");
 
-In Dojo 1.3 or higher, if you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature. 
+In Dojo 1.3 or higher, if you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature.
 
 .. code-block :: javascript
   :linenos:
 
   new dojox.layout.ResizeHandle({
      targetId:"foo",
-     constrainMax:true, 
+     constrainMax:true,
      maxHeight:500, maxWidth:300
   }).placeAt("foo");
 
@@ -137,11 +137,11 @@ By specifying a maxHeight/maxWidth at startup, a special instance object is crea
           // calculate new max based on where we are
           w: xy.w - offset, h: xy.h - offset
       }
-  }); 
+  });
 
 This will adjust the constraints when a node is finished moving, and has had it's position changed.
 
-Experimental, and available in Dojo 1.3 is a ``fixedAspect`` boolean property, which will attempt to retain a resizeable node's aspect ratio while resizing. The ratio is determined when resizing begins, so if the target was resized by another means, the handle will retain whichever current aspect ratio is used. 
+Experimental, and available in Dojo 1.3 is a ``fixedAspect`` boolean property, which will attempt to retain a resizeable node's aspect ratio while resizing. The ratio is determined when resizing begins, so if the target was resized by another means, the handle will retain whichever current aspect ratio is used.
 
 Resize Notification
 -------------------

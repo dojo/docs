@@ -73,20 +73,20 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
               dojo.byId("response").innerHTML = "Delete completed";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
               //docs server.  This is fine.  Just treat it as a success for purposes of the example.
               dojo.byId("response").innerHTML = "Delete completed";
             }
           }
           dojo.byId("response").innerHTML = "Delete requested..."
           //Call the asynchronous xhrDelete
-          var deferred = dojo.xhrDelete(xhrArgs);  
+          var deferred = dojo.xhrDelete(xhrArgs);
         });
       }
       dojo.addOnLoad(deleteUri);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Push the button to request a DELETE via xhr.</b>
     <br>

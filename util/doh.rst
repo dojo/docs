@@ -19,7 +19,7 @@ Usually when people think of a scripting language, it's often in context of ease
 Enter D.O.H.  The Dojo Objective Harness.
 -----------------------------------------
 
-Just to get it out of the way ... D.O.H. is both an acronym of Dojo Objective Harness *and* a play on the now commonplace expression of frustration 'DOH!'.  But aside from the very silly name it is a unit test framework developed by the Dojo Toolkit Community (primarily by Alex Russell), in an attempt to solve the complexities of testing JavaScript.  For example, in JavaScript, the use of XHR to request remote data asynchronously is commonplace ... and yet few Unit Test frameworks provided any mechanism by which to actually be able test asynchronous functions.  Furthermore, most Unit Test Frameworks end up with specific dependencies on certain browsers or runtime environments.  Again, D.O.H. tries not to limit itself in this manner, it's both flexible, extendable, and runs in many environments from browsers to JS runtime environments such as Rhino.  
+Just to get it out of the way ... D.O.H. is both an acronym of Dojo Objective Harness *and* a play on the now commonplace expression of frustration 'DOH!'.  But aside from the very silly name it is a unit test framework developed by the Dojo Toolkit Community (primarily by Alex Russell), in an attempt to solve the complexities of testing JavaScript.  For example, in JavaScript, the use of XHR to request remote data asynchronously is commonplace ... and yet few Unit Test frameworks provided any mechanism by which to actually be able test asynchronous functions.  Furthermore, most Unit Test Frameworks end up with specific dependencies on certain browsers or runtime environments.  Again, D.O.H. tries not to limit itself in this manner, it's both flexible, extendable, and runs in many environments from browsers to JS runtime environments such as Rhino.
 
 It's main purpose is a framework for developers (both dojo committers and others), to unit test out JavaScript functions and custom widgets.  Its goal isn't soo much as a way to test a full-blown web application as it is to test the parts that make up the applications in a cross-browser (and even non-browser), compatible manner.  By having a good set of unit tests, developers can feel confident that code changes they later make do not cause regressions in existing functions.
 
@@ -66,12 +66,12 @@ D.O.H. resides in the utils project of the dojo toolkit.  Users can find it expl
 ==================================
 That's great, but how do I use it?
 ==================================
-Okay, that's wonderful!  It's a unit test environment that's flexible.  So ... how the heck does someone use it?  Well, lets start small.  The first thing we can do is look at using the browser runner to run a small set of unit tests in dojo.  This is done just by loading runner.html in a web browser.  What runner.html does is load runner.js and _browserRunner.js.  This defines a global object, 'doh', that has numerous test registration and assertion functions that can be used by unit tests.  Runner.html also does something else, if no module URL was provided for it to load tests from, the runner.html will automatically load the file: *dojo/tests/module.js*.  All that file does is use the dojo module loading system to load in all the test files for core dojo.  It then just executes all the currently registered tests and displays the results in the browser.  
+Okay, that's wonderful!  It's a unit test environment that's flexible.  So ... how the heck does someone use it?  Well, lets start small.  The first thing we can do is look at using the browser runner to run a small set of unit tests in dojo.  This is done just by loading runner.html in a web browser.  What runner.html does is load runner.js and _browserRunner.js.  This defines a global object, 'doh', that has numerous test registration and assertion functions that can be used by unit tests.  Runner.html also does something else, if no module URL was provided for it to load tests from, the runner.html will automatically load the file: *dojo/tests/module.js*.  All that file does is use the dojo module loading system to load in all the test files for core dojo.  It then just executes all the currently registered tests and displays the results in the browser.
 
 Okay, so starting up DOH is as simple as running runner.html ... but now you may be asking how do I load *my* tests?  Simple!  You pass it as a query parameter to the runner,html.  For example, say you just want to run the dojo.date tests, you would load the following in your browser:
-*util/doh/runner.html?testModule=tests.date*   What this does is instruct the runner to look in dojo/tests and load the date.js file.  Please note here that you do not have to put your unit tests in dojo/tests!  The browser runner just has a default search path to look in dojo/ for a module in addition to looking at the assumed path of tests/date.js.  
+*util/doh/runner.html?testModule=tests.date*   What this does is instruct the runner to look in dojo/tests and load the date.js file.  Please note here that you do not have to put your unit tests in dojo/tests!  The browser runner just has a default search path to look in dojo/ for a module in addition to looking at the assumed path of tests/date.js.
 
-What most developers do is define their own tests in their module's directory under tests/.  you can see this as a common pattern in dojox.  For example, dojox/data/tests have all the dojox.data unit tests.  You can also note that dojox/data/tests has a runTests.html.  All that runTests.html does is redirect back to util/doh/runner.html and set the testModule parameter.  It's a simple helper file that module owners use to quick-launch their unit tests.  
+What most developers do is define their own tests in their module's directory under tests/.  you can see this as a common pattern in dojox.  For example, dojox/data/tests have all the dojox.data unit tests.  You can also note that dojox/data/tests has a runTests.html.  All that runTests.html does is redirect back to util/doh/runner.html and set the testModule parameter.  It's a simple helper file that module owners use to quick-launch their unit tests.
 
 ----------------------
 What is a test module?
@@ -106,7 +106,7 @@ Example Test Module: Simple test registration
       tearDown: function(){
       }
     },
-    // ...     
+    // ...
   ]);
 
 Example Test Module: Module that loads other modules
@@ -129,7 +129,7 @@ Notes on Registering Tests
 * Names of functions or of test fixtures must be unique per test group.  D.O.H. records results by using the name as a hash key on the results objects.
 
 ------------------
-Performance Tests 
+Performance Tests
 ------------------
 
 (Dojo 1.4 and higher)
@@ -153,7 +153,7 @@ What a performance fixture does is the following:
       average: number //The average time a single iteration of the test function takes.  exxecutionTime/testIterations
    }
 
-* At the end of all the performance tests, if the tests were run in a browser, D.O.H. then calculates statistical information off the run, such as standard deviation, max, min, median, and the like.  It also then plots each trial out using dojox.charting.DataChart (if available).  All this data is displayed on the 'Performance Tests Results' page.  To see this in action, take a look at the `dojox.gfx performance tests <http://archive.dojotoolkit.org/nightly/checkout/dojox/gfx/tests/performance/runTests.html>`_ in nightly.  
+* At the end of all the performance tests, if the tests were run in a browser, D.O.H. then calculates statistical information off the run, such as standard deviation, max, min, median, and the like.  It also then plots each trial out using dojox.charting.DataChart (if available).  All this data is displayed on the 'Performance Tests Results' page.  To see this in action, take a look at the `dojox.gfx performance tests <http://archive.dojotoolkit.org/nightly/checkout/dojox/gfx/tests/performance/runTests.html>`_ in nightly.
 
 You can also look at how to write performance tests by looking at: dojox/gfx/tests/performance/\* in your extract of Dojo 1.4 or development trunk.
 
@@ -198,13 +198,13 @@ These functions are the test functions you use inside your unit tests in order t
 
 doh.assertTrue(boolean)
 -----------------------
-  This function asserts that  particular condition is true.  If the condition is not true, the function will throw an Error object.  
+  This function asserts that  particular condition is true.  If the condition is not true, the function will throw an Error object.
 
   * Note:  This function is aliased to doh.t();
 
 doh.assertFalse(boolean)
 ------------------------
-  This function asserts that particular condition is false.  If the condition is not false, the function will throw an Error object.  
+  This function asserts that particular condition is false.  If the condition is not false, the function will throw an Error object.
 
   * Note:  This function is aliased to doh.f();
 
@@ -228,7 +228,7 @@ D.O.H. is flexible in how you define tests.  In some respects, perhaps it is too
 
 Simple tests (no setup, standalone, synchronous test)
 -----------------------------------------------------
-A lot of testing involves checking a widget or JavaScript API or the like and doesn't require any initial setup or teardown to do.  These are simple to define.  You simply write it as a function object.  This object can then be registered through the doh.register() functions. 
+A lot of testing involves checking a widget or JavaScript API or the like and doesn't require any initial setup or teardown to do.  These are simple to define.  You simply write it as a function object.  This object can then be registered through the doh.register() functions.
 
 .. code-block :: javascript
 

@@ -45,7 +45,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.pos
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
      var obj = dojo.position(node);
   });
 
@@ -86,7 +86,7 @@ This example shows how to center a small DOM node (with background image) over a
       }
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <span id="span1" class="centered" style=""></span>
     <div id="div1" class="container" style=""></div>
@@ -122,7 +122,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 .. code-example ::
   :version: 1.4-2.0
 
-  .. javascript :: 
+  .. javascript ::
 
     <script type="text/javascript">
     function compareMethods(){
@@ -145,7 +145,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
     });
     </script>
 
-  .. html :: 
+  .. html ::
 
     <fieldset style="display:inline;border:15px solid gray;border-width:15px 0 0 15px;margin:0px;padding:0px;font:14px monospace;background-color:white;outline:1px dotted black;">
 	<fieldset style="display:inline;border:0px;border:0px;padding:0px;width:270px;height:165px;overflow:hidden;position:relative;left:-15px;top:-15px;">

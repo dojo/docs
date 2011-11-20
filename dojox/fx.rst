@@ -42,12 +42,12 @@ The DojoX FX project also contains additional functions, group by role.
  
   * dojox.fx.addClass
   * dojox.fx.removeClass
-  * dojox.fx.toggleClass 
+  * dojox.fx.toggleClass
 
 * dojox.fx.easing - **deprecated**, module moved to :ref:`dojo.fx.easing <dojo/fx/easing>` in Dojo 1.3
 * dojox.fx.flip - An experimental simulated 3d effect API
 * dojox.fx.split - A series of animations for breaking nodes into parts, and transitioning them
-* dojox.fx.text - An extension of fx.split, which works exclusively on text nodes. 
+* dojox.fx.text - An extension of fx.split, which works exclusively on text nodes.
 * :ref:`dojox.fx.Timeline <dojox/fx/Timeline>` - An advanced *dojo._Line* replacement
 
 NodeList Supplements

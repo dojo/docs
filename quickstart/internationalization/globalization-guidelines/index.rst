@@ -79,4 +79,4 @@ Dijit Widgets Guidelines
 
 * You should not specify both the height and the width of a widget to be translated by numeric units.
 * You must ensure that all resources used in widgets are localizable.
-* You should consider BiDi support in development and customization. 
+* You should consider BiDi support in development and customization.

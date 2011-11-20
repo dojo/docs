@@ -19,7 +19,7 @@ Widget Construction Parameters
 +--------------------------------------+---------------------------------------------------------------------------------------------+
 |**Parameter**                         |**Description**                                                                              |
 +--------------------------------------+---------------------------------------------------------------------------------------------+
-| palette                              |A string defining the size of the palette.  Can only take one of two values, 7x10 or 3x4.    | 
+| palette                              |A string defining the size of the palette.  Can only take one of two values, 7x10 or 3x4.    |
 |                                      |The default value is 7x10.                                                                   |
 |                                      |                                                                                             |
 |                                      |**optional**                                                                                 |
@@ -29,7 +29,7 @@ Widget Construction Parameters
 Return Values
 =============
 
-As with all dijit widgets, the selected value can be obtained through the widget *attr("value")* function.  The return type is an instance of :ref:`dojo.Color <dojo/_base/Color>`.  
+As with all dijit widgets, the selected value can be obtained through the widget *attr("value")* function.  The return type is an instance of :ref:`dojo.Color <dojo/_base/Color>`.
 
 ========
 Examples

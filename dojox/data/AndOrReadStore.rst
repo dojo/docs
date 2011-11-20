@@ -25,11 +25,11 @@ The following dojo.data APIs are implemented by AndOrReadStore
 ============
 Query Syntax
 ============
-AndOrReadStore supports all the same query capability as dojo.data.ItemFileReadStore as well as several others that allow for more complicated queries. In specific, it allows for chaining of ANDs, ORs, and NOTs for attributes (along with wildcards), for a much more flexible structure. 
+AndOrReadStore supports all the same query capability as dojo.data.ItemFileReadStore as well as several others that allow for more complicated queries. In specific, it allows for chaining of ANDs, ORs, and NOTs for attributes (along with wildcards), for a much more flexible structure.
 
 **Supported Operators:**
   
-  , NOT AND OR ( ) ! && ||  Note: "," included for legacy queries (translated to AND). 
+  , NOT AND OR ( ) ! && ||  Note: "," included for legacy queries (translated to AND).
 
 ===============
 Example queries
@@ -69,18 +69,18 @@ Finding all Continents and Cities
       dojo.require("dojox.data.AndOrReadStore");
       dojo.require("dijit.form.Button");
 
-      var geoData = { 
+      var geoData = {
         'identifier': 'name',
         'label': 'name',
         'items': [
           { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' }, 
+            { 'name':'Egypt', 'type':'country' },
             { 'name':'Kenya', 'type':'country', children:[
               { 'name':'Nairobi', 'type':'city' },
               { 'name':'Mombasa', 'type':'city' } ]
             },
             { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' } 
+              { 'name':'Khartoum', 'type':'city' }
             } ]
           },
           { 'name':'Asia', 'type':'continent', 'children':[
@@ -112,12 +112,12 @@ Finding all Continents and Cities
           { 'name':'South America', 'type':'continent', children:[
             { 'name':'Brazil', 'type':'country', 'population':'186 million' },
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          } 
+          }
         ]
-      };    
+      };
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init2 () {
         //Function to perform a fetch on the datastore when a button is clicked
@@ -126,7 +126,7 @@ Finding all Continents and Cities
           //Callback to perform an action when the data items are starting to be returned:
           function clearOldCList(size, request) {
             var list = dojo.byId("list2");
-            if (list) { 
+            if (list) {
               while (list.firstChild) {
                 list.removeChild(list.firstChild);
               }
@@ -136,7 +136,7 @@ Finding all Continents and Cities
           //Callback for processing a returned list of items.
           function gotItems(items, request) {
             var list = dojo.byId("list2");
-            if (list) { 
+            if (list) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -162,7 +162,7 @@ Finding all Continents and Cities
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.AndOrReadStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Find continents!</div>

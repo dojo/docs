@@ -53,15 +53,15 @@ Here is the definition of arguments:
 ===========  =============  ======================================================================
 Parameter    Type           Description
 ===========  =============  ======================================================================
-module       String|Object  Can be a String or an Object. 
+module       String|Object  Can be a String or an Object.
 
-                            If a String, the module name to use for the base part of the URL, similar to module argument to `dojo.moduleUrl 
-                            <dojo/moduleUrl>`_. 
+                            If a String, the module name to use for the base part of the URL, similar to module argument to `dojo.moduleUrl
+                            <dojo/moduleUrl>`_.
                             
                             If an Object, something that has a .toString() method that generates a valid path for the cache item. For example, a
                             dojo._Url object
 
-url          String         The rest of the path to append to the path derived from the module argument. 
+url          String         The rest of the path to append to the path derived from the module argument.
 
                             If "module" is an object, then this second argument should be the "configValue" argument instead.
 configValue  String|Object  Can be a String or an Object.
@@ -138,7 +138,7 @@ Example using an object that has like the previous example, but uses an object w
 
  //Dojo < 1.7
  dojo.require("dojo.cache");
- var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true}); 
+ var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
 
 
 ========

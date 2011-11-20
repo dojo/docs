@@ -21,7 +21,7 @@ Description
 
 The transform outputs the dependency graph of all discovered modules (both AMD and legacy) in a fairly compressed JSON
 resource. The format includes a map from module name to unique identifier and then uses the unique identifiers to output
-the dependency graph, thereby eliminating verbose module identifiers. 
+the dependency graph, thereby eliminating verbose module identifiers.
 
 The unique identifiers are continuously increasing integers, starting at zero. The map is encapsulted in a tree of
 nested objects. The dotted Javascript property name for any property indicates the module name by replacing the dots

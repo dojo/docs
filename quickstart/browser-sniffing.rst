@@ -85,12 +85,12 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
           "dojo/dom", // alias DOM api to "dom"
           "dojo/_base/sniff", // load browser-related has feature tests
           "dojo/domReady!"], // wait until DOM is loaded
-       function (has, arrayUtil, dom){ 
+       function (has, arrayUtil, dom){
 
     function makeFancyAnswer(who){
       if(has(who)){
         return "Yes, it's version " + has(who);
-      }else{ 
+      }else{
         return "No";
       }
     }
@@ -102,7 +102,7 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
 
     arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n) {
       dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
-    });    
+    });
     makeAtLeastAnswer("ie", 7);
     makeAtLeastAnswer("ff", 3);
     makeAtLeastAnswer("opera", 9);
@@ -145,7 +145,7 @@ This example has the same result, but loads more code because it's using the ful
   function makeFancyAnswer(who){
     if(dojo["is" + who]){
       return "Yes, it's version " + dojo["is" + who];
-    }else{ 
+    }else{
       return "No";
     }
   }
@@ -159,7 +159,7 @@ This example has the same result, but loads more code because it's using the ful
     dojo.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],
                  function(n) {
                    dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
-                 });    
+                 });
     makeAtLeastAnswer("IE", 7);
     makeAtLeastAnswer("FF", 3);
     makeAtLeastAnswer("Opera", 9);

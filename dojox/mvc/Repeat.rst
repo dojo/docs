@@ -81,8 +81,8 @@ Declarative example
 				-->
 				<div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
 					<div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
-						<label class="cell" for="nameInput${this.index}">Name:</label>							
-						<input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}" 
+						<label class="cell" for="nameInput${this.index}">Name:</label>
+						<input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}"
 											data-dojo-props="ref: 'First'"></input>
 					</div>
 				</div>

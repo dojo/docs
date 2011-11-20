@@ -25,7 +25,7 @@ Third-Party Licenses
 Dojo uses code from other open source projects, subject to the terms of their licenses. Those licenses and software copyright notices are listed below:
 
     * Firebug Lite (Dojo Base): BSD License http://trac.dojotoolkit.org/browser/dojo/trunk/_firebug/LICENSE
-    * Common Locale Data Repository, CLDR (Dojo Base): Unicode License http://trac.dojotoolkit.org/browser/dojo/trunk/cldr/LICENSE> 
+    * Common Locale Data Repository, CLDR (Dojo Base): Unicode License http://trac.dojotoolkit.org/browser/dojo/trunk/cldr/LICENSE>
     * dojo.css (Dojo Base): BSD License http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE>
     * AES Encryption Algorithm (DojoX SQL): BSD License http://trac.dojotoolkit.org/browser/dojox/trunk/_sql/LICENSE
     * MD5 and SHA1 Encruption Algorithms (DojoX Cryptography): BSD License http://trac.dojotoolkit.org/browser/dojox/trunk/crypto/LICENSE

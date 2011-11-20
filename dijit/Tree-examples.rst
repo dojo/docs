@@ -53,7 +53,7 @@ Expanding and Focusing tree nodes programmatically
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
@@ -117,7 +117,7 @@ The following example contains workaround code for this problem, as well as an e
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore,query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
@@ -142,7 +142,7 @@ Simply set the ``openOnClick`` attribute to ``false``
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
@@ -248,7 +248,7 @@ This example shows you how to use a tree to build a navigation menu.
 		  navTree.onClick = function (item) {
 			  /* load the url from datastore */
 			  location.href = item.url;
-		  }; 
+		  };
        }
      
        dojo.addOnLoad(initTree);

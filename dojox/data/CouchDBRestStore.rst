@@ -39,7 +39,7 @@ This will return a object where each property name is the name of the store, and
 See also
 ========
 
-* `Apache CouchDB <http://couchdb.apache.org/>`_  
+* `Apache CouchDB <http://couchdb.apache.org/>`_
 
   The Apache CouchDB project homepage
 

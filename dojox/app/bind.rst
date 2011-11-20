@@ -76,7 +76,7 @@ Sample application configuration for data to be bound
     "names": {
       "params":{
         "store": {"$ref":"#stores.namesStore"}
-      }	       
+      }
     }
   }
 

@@ -81,10 +81,10 @@ If you have a pointer to some node already, or want to avoid id's all together, 
       dojo.place(dojo.clone(n), dojo.body());
   }
 
-dojo.clone is always "deep". Cyclic (e.g., circular or DAG) cases are explicitly not supported due to speed and space concerns. 
+dojo.clone is always "deep". Cyclic (e.g., circular or DAG) cases are explicitly not supported due to speed and space concerns.
 
     * If you want a shallow copy of an object y = dojo.mixin({}, x);
     * If you want a shallow copy of an array: y = dojo.map(x, "return value;");
-    * The rest will be covered by the deep copy: y = dojo.clone(x); 
+    * The rest will be covered by the deep copy: y = dojo.clone(x);
 
-TODOC: clone + events? 
+TODOC: clone + events?

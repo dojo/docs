@@ -52,7 +52,7 @@ The pattern of using the GoogleImageSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleImageSearchStore();
 
   var query = {text: "dojo ajax toolkit"};
@@ -94,7 +94,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 

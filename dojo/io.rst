@@ -3,7 +3,7 @@
 dojo.io
 =======
 
-Namespace containing official Dojo I/O related modules. 
+Namespace containing official Dojo I/O related modules.
 
 Currently consists of:
 

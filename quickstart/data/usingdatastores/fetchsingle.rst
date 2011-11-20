@@ -12,11 +12,11 @@ For this example, we'll assume the following simple data source:
 
 .. code-block :: javascript
 
-  { identifier: 'name', 
+  { identifier: 'name',
     items: [
       { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
       { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-      { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+      { name: 'Basil', aisle: 'Spices', price: 3.59  },
       { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
       { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01  },
       { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -32,7 +32,7 @@ Examples
 The following example will make use of APIs defined by both :ref:`Read <dojo/data/api/Read>` and :ref:`Identity <dojo/data/api/Identity>`. In specific, they use:
 
 **Identity**
-  fetchItemByIdentity() Fetches an item by its key value. Because the identity value of each item is unique, you are guaranteed at most one answer back. 
+  fetchItemByIdentity() Fetches an item by its key value. Because the identity value of each item is unique, you are guaranteed at most one answer back.
 **Read**
   getValue() Takes an item and an attribute and returns the associated value
 
@@ -49,11 +49,11 @@ This example shows how to fetch items by their identity programmatically.
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData = { identifier: 'name', 
+      var storeData = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -64,8 +64,8 @@ This example shows how to fetch items by their identity programmatically.
 
         //This function performs some basic dojo initialization. In this case it connects the ComboBox
         //onChange event to a function which invokes the fetchItemByIdentity function. The fetchItemByIdentity
-        //function uses the value selected in the combobox to do a lookup on the datastore for an item with the 
-        //identifier that matches the combobox value. If it gets one, the price and aisle are updated, if it 
+        //function uses the value selected in the combobox to do a lookup on the datastore for an item with the
+        //identifier that matches the combobox value. If it gets one, the price and aisle are updated, if it
         //does not locate one, the then the values are set to N/A and 0.00.
         function init () {
            //Function to perform a lookup on the datastore on each change event of the combo box.
@@ -92,7 +92,7 @@ This example shows how to fetch items by their identity programmatically.
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     Pick a grocery item: <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:foodStore, searchAttr:'name'" data-dojo-id="combo"></div>

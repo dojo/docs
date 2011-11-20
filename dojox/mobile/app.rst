@@ -27,10 +27,10 @@ First, you've to create a basic front page that will initialize information and 
   <html>
     <head>
       <!-- this should be dynamically generated -->
-      <link href="/js/dojox/mobile/themes/iphone/iphone-app.css" rel="stylesheet"> 
-      <script type="text/javascript" src="/js/dojo/dojo.js" ></script> 
-      <script type="text/javascript" src="/js/dojox/mobile/app.js"></script> 
-      <script language="JavaScript" type="text/javascript"> 
+      <link href="/js/dojox/mobile/themes/iphone/iphone-app.css" rel="stylesheet">
+      <script type="text/javascript" src="/js/dojo/dojo.js" ></script>
+      <script type="text/javascript" src="/js/dojox/mobile/app.js"></script>
+      <script language="JavaScript" type="text/javascript">
         dojo.requireIf(!dojo.isWebKit, "dojox.mobile.app.compat");
       
         var appInfo = {
@@ -39,7 +39,7 @@ First, you've to create a basic front page that will initialize information and 
         };
         
         dojo.ready(dojox.mobile.app.init);
-      </script> 
+      </script>
     </head>
     <body>
     </body>
@@ -49,7 +49,7 @@ Note that all JS inclusions are static because some browsers may fail on ``dojo.
 
 This simple examples defines an application whose main scene is "main". When calling ``dojox.mobile.app.init()``, the framework will try to fetch the scene template and its JS initialization code. By default templates are under ``app/views/[scene]/[scene]-scene.html`` and "Assistants" (that is, JS initialization code) is under ``app/assistants/[scene]-assistant.js``. If you want to modify this, you'll have to redeclare ``dojox.mobile.app.resolveTemplate`` and ``dojox.mobile.app.resolveAssistant``.
 
-To load an initial scene other than 'main', set the 'initialScene' value in appInfo to the name of that scene, e.g. 
+To load an initial scene other than 'main', set the 'initialScene' value in appInfo to the name of that scene, e.g.
 
 .. code-block:: html
 

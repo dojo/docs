@@ -20,8 +20,8 @@ Features
 ========
 
 * :ref:`dojo.animateProperty <dojo/animateProperty>`
-* :ref:`dojo.fadeIn <dojo/fadeIn>` 
-* :ref:`dojo.fadeOut <dojo/fadeIn>` 
+* :ref:`dojo.fadeIn <dojo/fadeIn>`
+* :ref:`dojo.fadeOut <dojo/fadeIn>`
 
 ========
 See also

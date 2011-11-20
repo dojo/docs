@@ -59,7 +59,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 		}
 		
 		var cssFiles = [
-			"{{ baseUrl }}dojox/grid/tests/enhanced/support/print_style1.css", 
+			"{{ baseUrl }}dojox/grid/tests/enhanced/support/print_style1.css",
 			"{{ baseUrl }}dojox/grid/tests/enhanced/support/print_style2.css"
 		];
 		function printAll(){
@@ -163,7 +163,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 	
 	#gridContainer{
-		width: 100%; 
+		width: 100%;
 		height: 250px;
 	}
     </style>
@@ -195,7 +195,7 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
       printer: true

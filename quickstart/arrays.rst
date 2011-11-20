@@ -35,15 +35,15 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 
     <script type="text/javascript">
     // this Button is just to make the demo look nicer:
-    dojo.require("dijit.form.Button"); 
+    dojo.require("dijit.form.Button");
 
     var arrIndxOf = ["foo", "hoo", "zoo"];
 
     var testIndxOf = function() {
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
-            "<p>The index of the word 'zoo' within the array is " + position + "</p>", 
-            "result1", 
+            "<p>The index of the word 'zoo' within the array is " + position + "</p>",
+            "result1",
             "after"
         );
     }
@@ -80,15 +80,15 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
     <script type="text/javascript">
     // this Button is just to make the demo look nicer:
-    dojo.require("dijit.form.Button"); 
+    dojo.require("dijit.form.Button");
 
     var arrLastIndxOf = ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"];
 
     var testLastIndxOf = function() {
         var position = dojo.lastIndexOf(arrLastIndxOf , "zoo");
         dojo.place(
-            "<p>The last index of the word 'zoo' within the array is " + position + "</p>", 
-            "result2", 
+            "<p>The last index of the word 'zoo' within the array is " + position + "</p>",
+            "result2",
             "after"
         );
     }
@@ -235,15 +235,15 @@ Say you have an array of people with a last name. You would like to filter those
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
-    var arr = [{surname: "Washington", name: "Paul"}, 
-               {surname: "Gordon", name: "Amie"}, 
-               {surname: "Meyer", name: "Sofie"}, 
-               {surname: "Jaysons", name: "Josh"}, 
-               {surname: "Washington", name: "George"}, 
-               {surname: "Doormat", name: "Amber"}, 
-               {surname: "Smith", name: "Susan"}, 
-               {surname: "Hill", name: "Strawberry"}, 
-               {surname: "Washington", name: "Dan"}, 
+    var arr = [{surname: "Washington", name: "Paul"},
+               {surname: "Gordon", name: "Amie"},
+               {surname: "Meyer", name: "Sofie"},
+               {surname: "Jaysons", name: "Josh"},
+               {surname: "Washington", name: "George"},
+               {surname: "Doormat", name: "Amber"},
+               {surname: "Smith", name: "Susan"},
+               {surname: "Hill", name: "Strawberry"},
+               {surname: "Washington", name: "Dan"},
                {surname: "Dojo", name: "Master"}];
 
     var filterArray = function(){
@@ -369,7 +369,7 @@ Now your bank policies only allow you to give each client one credit over 1 mill
 
     <script type="text/javascript">
     // this Button is just to make the demo look nicer:
-    dojo.require("dijit.form.Button"); 
+    dojo.require("dijit.form.Button");
 
     var arrIndxSome = [200000, 500000, 350000, 1000000, 75, 3];
 
@@ -380,8 +380,8 @@ Now your bank policies only allow you to give each client one credit over 1 mill
             result = 'no, there aren no such items';
         }
         dojo.place(
-            "<p>The answer is: " + result + "</p>", 
-            "result6", 
+            "<p>The answer is: " + result + "</p>",
+            "result6",
             "after"
         );
     }
@@ -419,7 +419,7 @@ An example:
 
     <script type="text/javascript">
     // this Button is just to make the demo look nicer:
-    dojo.require("dijit.form.Button"); 
+    dojo.require("dijit.form.Button");
 
     var arrIndxEvery = [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}];
 
@@ -430,8 +430,8 @@ An example:
             result = 'no, unfortunately not';
         }
         dojo.place(
-            "<p>The answer is: " + result + "</p>", 
-            "result7", 
+            "<p>The answer is: " + result + "</p>",
+            "result7",
             "after"
         );
     }

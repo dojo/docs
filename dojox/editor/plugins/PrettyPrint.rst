@@ -10,7 +10,7 @@ dojox.editor.plugins.PrettyPrint
 .. contents::
     :depth: 2
 
-Have you ever wanted to pull your hair out because the content from dijit.Editor was formatted so badly it looked like the output from some crazed demonic minion bent on causing insanity?   Well, I know I sure have, and thus was born the PrettyPrint plugin for the dijit.Editor.  What this plugin does is take the output that comes from dijit.Editor.attr("value"), (or dijit.Editor.getValue()), and reformats it with reasonably indented structure, cleaned up line wrapping, and other general structural cleanup to make it much more human-readable.  
+Have you ever wanted to pull your hair out because the content from dijit.Editor was formatted so badly it looked like the output from some crazed demonic minion bent on causing insanity?   Well, I know I sure have, and thus was born the PrettyPrint plugin for the dijit.Editor.  What this plugin does is take the output that comes from dijit.Editor.attr("value"), (or dijit.Editor.getValue()), and reformats it with reasonably indented structure, cleaned up line wrapping, and other general structural cleanup to make it much more human-readable.
 
 This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.  Calls to get the value of the editor (editor.getValue() or editor.attr("value")) will return decently formatted HTML.
 
@@ -25,7 +25,7 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 * Normalizes CSS names, quotes, and semi-colons.
 * Sorts CSS 'style' names alphabetically.
 * Wrapping of text lines consistently and allowing the user to specify a max line length.
-* Configurable encoding entity characters in the TEXT elements of the document.  
+* Configurable encoding entity characters in the TEXT elements of the document.
 * All done automatically, no toolbar buttons, no extra user actions required.
 
 =====
@@ -86,7 +86,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div data-dojo-type="dijit.Editor" 
+  <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'prettyprint', indentBy: 3, lineLength: 80, entityMap: [['<', 'lt'],['>', 'gt']], xhtml: true}]">
   </div>
 
@@ -135,7 +135,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -188,7 +188,7 @@ Configured indent and line length
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

@@ -43,7 +43,7 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/_base/html"], function(dojo){
       // Passing only an ID or node returns the computed style object of the node:
       dojo.getStyle("thinger");
 
@@ -55,7 +55,7 @@ It's recommended to use style.get in dojo 1.7.
 
 .. code-block :: javascript
 
-  require(["dojo/dom-style"], function(style){   
+  require(["dojo/dom-style"], function(style){
       // Passing only an ID or node returns the computed style object of the node:
       style.get("thinger");
 

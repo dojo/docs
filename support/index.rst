@@ -6,7 +6,7 @@ Support for the Dojo Toolkit
 .. contents::
    :depth: 2
 
-Dojo is a `hundred point <http://dojofoundation.org/about/hundredpoint>`_ open source project with a `liberal license <http://dojotoolkit.org/license>`_. As such, there is no official entity that promises free support. However, the developers and community provide a number of ways in which support may be found, both free and commercial. 
+Dojo is a `hundred point <http://dojofoundation.org/about/hundredpoint>`_ open source project with a `liberal license <http://dojotoolkit.org/license>`_. As such, there is no official entity that promises free support. However, the developers and community provide a number of ways in which support may be found, both free and commercial.
 
 For the free options, realize that the community is on a volunteer basis and that no-one is obligated to help with your problem. If you ask a good question, such that it (and it's answer) will be instructive to other users, then it's more likely to be answered. If this isn't sufficient for your needs, consider one of the commercial options.
 

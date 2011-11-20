@@ -83,12 +83,12 @@ Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on w
   // Dojo < 1.7
   dojo.subscribe("/foo/*", function(data){ /* handle */ });
 
-While this works when using :ref:`cometd <dojox/cometd>`'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported. 
+While this works when using :ref:`cometd <dojox/cometd>`'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported.
 
 Subscribing with scope
 ----------------------
 
-Subscribe uses :ref:`dojo.hitch <dojo/hitch>` under the covers to provide more advanced functionality for controlling in which context the attached function will be called. 
+Subscribe uses :ref:`dojo.hitch <dojo/hitch>` under the covers to provide more advanced functionality for controlling in which context the attached function will be called.
 
 Consider the following object:
 
@@ -105,17 +105,17 @@ Consider the following object:
 To execute an anonymous function in the scope of `obj`:
 
 .. code-block :: javascript
- :linenos: 
+ :linenos:
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
-    connect.subscribe("/foo/bar", obj, function(data){ 
+    connect.subscribe("/foo/bar", obj, function(data){
       // here 'this' refers to the obj instance
       this.member = "published";
     });
   });
   // Dojo < 1.7
-  dojo.subscribe("/foo/bar", obj, function(data){ 
+  dojo.subscribe("/foo/bar", obj, function(data){
       // here 'this' refers to the obj instance
       this.member = "published";
   });

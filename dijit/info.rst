@@ -8,28 +8,28 @@ Dijit
 .. contents::
     :depth: 2
 
-*Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML). 
+*Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML).
 
 ============
 Dijit Basics
 ============
 
-You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way. 
+You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way.
 
 .. code-block :: javascript
   :linenos:
 
-  dojo.require("dijit.Dialog"); 
+  dojo.require("dijit.Dialog");
   dojo.addOnLoad(function(){
     // create a "hidden" Dialog:
     var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
     dialog.startup();
 
-    // Hint: In order to open the dialog, you have to call 
+    // Hint: In order to open the dialog, you have to call
     // dialog.show();
   });
 
-is identical to: 
+is identical to:
 
 .. code-block :: html
   :linenos:
@@ -48,15 +48,15 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
 
   <script type="text/javascript">
      dojo.addOnLoad(function(){
-         // dojo.byId("foobar") would only be a normal domNode. 
+         // dojo.byId("foobar") would only be a normal domNode.
          var myDialog = dijit.byId("foobar");
-        myDialog.set("content", "<p>I've been replaced!</p>"); 
+        myDialog.set("content", "<p>I've been replaced!</p>");
          myDialog.show();
      });
   </script>
   <div data-dojo-type="dijit.Dialog" id="foobar" title="Foo!">
      <p>I am some content</p>
-  </div> 
+  </div>
 
 If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other :ref:`DOM manipulation <quickstart/dom>`:
 
@@ -87,9 +87,9 @@ Otherwise, a unique ID will be generated for you:
   :linenos:
 
   var dialog = new dijit.Dialog({ title:"No ID" })
-  console.log(dialog.get("id")); 
+  console.log(dialog.get("id"));
   
-All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference". 
+All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference".
 
 .. code-block :: javascript
   :linenos:
@@ -165,7 +165,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
  :linenos:
 
   // hide a widget with id="myThiner"
-  dojo.style(dijit.byId("myThinger").domNode, "display", "none"); 
+  dojo.style(dijit.byId("myThinger").domNode, "display", "none");
 
 * .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a :ref:`dijit.Dialog <dijit/Dialog>` only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .set() to set and load content, this is the node that will be targeted for that content.
 
@@ -201,7 +201,7 @@ Event handlers can be setup programmatically (as above), or declaratively, like:
            console.log("clicked, event object is ", evt);
      </script>
      Click me!
-  </div> 
+  </div>
 
 ======
 Themes
@@ -256,8 +256,8 @@ The last, most common method, is a lot like ``getEnclosingWidget``, though it on
 
   var w = dijit.byId("myDialog");
   var node = w.domNode; // this is a bad example, but illustrates the relationship
-  var widget = dijit.byNode(node); // now, w == widget 
-  widget.show(); 
+  var widget = dijit.byNode(node); // now, w == widget
+  widget.show();
 
 Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit/byNode>`, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
 
@@ -265,11 +265,11 @@ Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit
   :linenos:
 
   dojo.connect(someNode, "onclick", function(e){
-      var w = dijit.byNode(e.target); 
+      var w = dijit.byNode(e.target);
       if(w){ w.show(); }
   });
 
-There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit.registry <dijit/registry>`, a collection of all widgets active on a page. 
+There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit.registry <dijit/registry>`, a collection of all widgets active on a page.
 
 ==================
 Behavioral widgets
@@ -310,7 +310,7 @@ This comes naturally if you are instantiating from markup.  For example, a behav
 
    <a href="..." data-dojo-type="dojoc.widget.ConfirmAnchor">
 
-Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit. 
+Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit.
 
 
 ========

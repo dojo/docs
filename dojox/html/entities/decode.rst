@@ -46,7 +46,7 @@ Decoding HTML and LATIN-1 entities in a text string
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <!-- 
+    <!--
       Note that for the text below, the reason for the encoding og & is that textarea auto-decodes them
       when input this way, so it needs to be escaped so the textarea returns a still-encoded string.
     -->
@@ -77,7 +77,7 @@ Decoding custom entities in a text string
 
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("bEncode2"), "onClick", function(){
-           var customMap =[["\u0026","amp"]]; 
+           var customMap =[["\u0026","amp"]];
            var input = dojo.byId("input2");
            var output = dojo.byId("output2");
            output.value = dojox.html.entities.decode(input.value, customMap);

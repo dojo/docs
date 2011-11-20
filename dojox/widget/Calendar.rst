@@ -54,7 +54,7 @@ Examples
 Programmatic examples
 ---------------------
 
-This example shows the standard calendar being created from code.  Include the Calendar.css file, define a HTML node where the calendar is to be placed, load the dojox/widget/Calendar.js file using ''dojo.require'', then instantiate the widget. 
+This example shows the standard calendar being created from code.  Include the Calendar.css file, define a HTML node where the calendar is to be placed, load the dojox/widget/Calendar.js file using ''dojo.require'', then instantiate the widget.
 
 .. cv-compound::
 
@@ -74,7 +74,7 @@ This example shows the standard calendar being created from code.  Include the C
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             // create the dialog:
             var cal_1 = new dojox.widget.Calendar({}, dojo.byId("cal_1"));
             dojo.connect(cal_1, "onValueSelected", function(date){
@@ -83,7 +83,7 @@ This example shows the standard calendar being created from code.  Include the C
         });
     </script>
 
-This example shows just the daily calendar being instantiated, with no month or year options.  
+This example shows just the daily calendar being instantiated, with no month or year options.
 
 .. cv-compound::
   
@@ -101,7 +101,7 @@ This example shows just the daily calendar being instantiated, with no month or 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             // create the dialog:
             var cal_2 = new dojox.widget.DailyCalendar({}, dojo.byId("cal_2"));
             dojo.connect(cal_2, "onValueSelected", function(date){
@@ -186,7 +186,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
-        dojo.declare("dojox.widget.CustomDayAndYearCalendar", 
+        dojo.declare("dojox.widget.CustomDayAndYearCalendar",
 	  [dojox.widget._CalendarBase,
 	   dojox.widget._CalendarDay,
 	   dojox.widget._CalendarYear], {});

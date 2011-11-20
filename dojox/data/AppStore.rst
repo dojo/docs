@@ -17,7 +17,7 @@ A store implementing an Atom store with complete ATOM Publishing Protocol suppor
 Introduction
 ============
 
-The dojox.data.AppStore is an data store implementation of the ATOM Publishing Protocol (APP).  It makes use of the dojox.atom subproject for handling ATOM feeds and entries.  
+The dojox.data.AppStore is an data store implementation of the ATOM Publishing Protocol (APP).  It makes use of the dojox.atom subproject for handling ATOM feeds and entries.
 
 ===========
 Limitations
@@ -73,12 +73,12 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 		<link rel='alternate' href='http://example.com/1.html'/>
 		<summary type='html'>
 			<p>This is a sample entry in our Atom feed.  It is simply a large paragraph in the summary.<p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras cursus. Aliquam eget metus sed leo lacinia 
-			rutrum. Nunc lacus lacus, viverra placerat, laoreet nec, placerat vel, eros. Donec nec magna id sem commodo rutrum. 
-			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean pede. Quisque vel 
-			leo. In vitae nisi. Curabitur sodales congue nibh. Maecenas ultrices ante nec ipsum. Aenean quis nibh. Aenean semper, 
-			quam vitae ullamcorper euismod, arcu leo tincidunt nunc, vel pulvinar turpis dolor a elit. Praesent nonummy nunc 
-			faucibus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus laoreet, 
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras cursus. Aliquam eget metus sed leo lacinia
+			rutrum. Nunc lacus lacus, viverra placerat, laoreet nec, placerat vel, eros. Donec nec magna id sem commodo rutrum.
+			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean pede. Quisque vel
+			leo. In vitae nisi. Curabitur sodales congue nibh. Maecenas ultrices ante nec ipsum. Aenean quis nibh. Aenean semper,
+			quam vitae ullamcorper euismod, arcu leo tincidunt nunc, vel pulvinar turpis dolor a elit. Praesent nonummy nunc
+			faucibus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus laoreet,
 			ante auctor condimentum venenatis, magna quam varius elit, at feugiat dolor metus id quam. Etiam enim.<p>
 		</summary>
 		<author>
@@ -93,12 +93,12 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 		<link rel='alternate' href='http://example.com/2.html'/>
 		<summary type='text'>
 			This is a sample entry in our Atom feed.  It is simply a large paragraph in the summary. This is straight text.
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras cursus. Aliquam eget metus sed leo lacinia 
-			rutrum. Nunc lacus lacus, viverra placerat, laoreet nec, placerat vel, eros. Donec nec magna id sem commodo rutrum. 
-			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean pede. Quisque vel 
-			leo. In vitae nisi. Curabitur sodales congue nibh. Maecenas ultrices ante nec ipsum. Aenean quis nibh. Aenean semper, 
-			quam vitae ullamcorper euismod, arcu leo tincidunt nunc, vel pulvinar turpis dolor a elit. Praesent nonummy nunc 
-			faucibus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus laoreet, 
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras cursus. Aliquam eget metus sed leo lacinia
+			rutrum. Nunc lacus lacus, viverra placerat, laoreet nec, placerat vel, eros. Donec nec magna id sem commodo rutrum.
+			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean pede. Quisque vel
+			leo. In vitae nisi. Curabitur sodales congue nibh. Maecenas ultrices ante nec ipsum. Aenean quis nibh. Aenean semper,
+			quam vitae ullamcorper euismod, arcu leo tincidunt nunc, vel pulvinar turpis dolor a elit. Praesent nonummy nunc
+			faucibus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus laoreet,
 			ante auctor condimentum venenatis, magna quam varius elit, at feugiat dolor metus id quam. Etiam enim.
 		</summary>
 		<author>
@@ -169,7 +169,7 @@ Complex properties are those that require more than a simple string to represent
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 | link          | dojox.atom.io.model.Link                                                           | href: The web address the link goes to |
 |               |                                                                                    |                                        |
-|               |                                                                                    | hrefLang: The language the href goes to|                                                                                   
+|               |                                                                                    | hrefLang: The language the href goes to|
 |               |                                                                                    |                                        |
 |               |                                                                                    | title: The title of the link           |
 |               |                                                                                    |                                        |
@@ -259,10 +259,10 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
                 list.appendChild(dojo.doc.createElement("br"));
                 list.appendChild(dojo.doc.createTextNode(updated));
                 list.appendChild(dojo.doc.createElement("br"));
-                list.appendChild(dojo.doc.createElement("br"));                
+                list.appendChild(dojo.doc.createElement("br"));
               }
             }
-          } 
+          }
           appStore.fetch({onComplete: gotEntries});
         });
       }
@@ -270,7 +270,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
       dojo.addOnLoad(initSimple);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the store and display feed titles</div>
     <br>
@@ -306,10 +306,10 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
                 list.appendChild(dojo.doc.createElement("br"));
                 list.appendChild(dojo.doc.createTextNode(updated));
                 list.appendChild(dojo.doc.createElement("br"));
-                list.appendChild(dojo.doc.createElement("br"));                
+                list.appendChild(dojo.doc.createElement("br"));
               }
             }
-          } 
+          }
           appStore.fetch({query: {title: "*Editable*"}, onComplete: gotEntries});
         });
       }
@@ -317,7 +317,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
       dojo.addOnLoad(initSimple2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
     <br>
@@ -352,7 +352,7 @@ Example 3: Connecting AppStore to DataGrid
                 }
               }
               return ret;
-            } 
+            }
           },
           { field: "updated", name: "Last Modified", width: 'auto' }
         ]
@@ -365,7 +365,7 @@ Example 3: Connecting AppStore to DataGrid
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
     <div data-dojo-id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore, query:{}, structure:layout" style="width: 600px; height: 200px;"></div>
@@ -426,13 +426,13 @@ Example 4: Write example: Changing Title and showing in DataGrid
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore2" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
     <div data-dojo-id="thegrid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore2, query:{}, structure:layout2" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
-    <button id="changeTitleButton" data-dojo-type="dijit.form.Button">Change all titles!</button> 
+    <button id="changeTitleButton" data-dojo-type="dijit.form.Button">Change all titles!</button>
   
   .. cv:: css
 

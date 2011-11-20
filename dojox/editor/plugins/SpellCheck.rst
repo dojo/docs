@@ -86,7 +86,7 @@ timeout                   Number             True          30                   
 bufferLength              Number             True          100                      Specify the max character number in the body of a http GET request.
                                                                                     This parameter is used when the server-side has a request size restriction.
 <other arguments>         N/A                True          N/A                      Any other argument that will be passed to the server untouched.
-                                                                                    For example, lang: 'en', enableDebugging: true, etc. 
+                                                                                    For example, lang: 'en', enableDebugging: true, etc.
 ========================  =================  ============  =======================  =============================================================================
 
 Set up the server
@@ -153,7 +153,7 @@ Skip
 There are two ways to ignore the word in the **Not found** text field and move to the next word. The ignored word will be considered recognized as long as the editor is not destroyed.
 
 * Click the **Skip** button.
-* Or type **Enter** in the **Not found** text field. 
+* Or type **Enter** in the **Not found** text field.
 
 .. image:: Skip.png
 
@@ -353,7 +353,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

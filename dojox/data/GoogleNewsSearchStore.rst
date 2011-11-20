@@ -48,7 +48,7 @@ The pattern of using the GoogleNewsSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleNewsSearchStore();
 
   var query = {text: "Ajax"};
@@ -91,7 +91,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 

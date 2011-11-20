@@ -74,9 +74,9 @@ Usage
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
-              {id: 1, type: apple}, 
+              {id: 1, type: apple},
               {id: 2, type: orange}
-         ], 
+         ],
          vegetables: [
               {id: 3, type: "brocolli"}
          ]
@@ -93,19 +93,19 @@ data
   JSON String or Javascript Object
   JSON String or Javascript object this store will control JSON is converted into an object, and an object passed to the store will be used directly. If no data and no url is provide, an empty object, {}, will be used as the initial store.
 
-url - string   
+url - string
   Load data from this url in JSON format and use the Object created from the data as the data source.
 
-indexOnLoad - Boolean 
+indexOnLoad - Boolean
   Parse the data object and set individual objects up as appropriate. This will add meta data and assign id's to objects that dont' have them as defined by the idAttribute option. Disabling this option will keep this parsing from happening until a query is performed at which time only the top level of an item has meta info stored. This might work in some situations, but you will almost always want to indexOnLoad or use another option which will create an index. Defaults to true.
 
 idAttribute - string
   Defaults to '_id'. The name of the attribute that holds an objects id. This can be a preexisting id provided by the server. If an ID isn't already provided when an object is fetched or added to the store, the autoIdentity system will generate an id for it and add it to the index. There are utility routines for exporting data from the store that can clean any generated IDs before exporting and leave preexisting id's in tact.
 
-metaLabel - string 
+metaLabel - string
   Defaults to '_meta' overrides the attribute name that is used by the store for attaching meta information to an object while in the store's control. Defaults to '_meta'.
 
-hideMetaAttributes - Boolean 
+hideMetaAttributes - Boolean
   Defaults to False. When enabled, calls to getAttributes() will not include the meta attribute.
 
 autoIdPrefix: string
@@ -129,9 +129,9 @@ Programmatic example
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
-              {id: 1, type: apple}, 
+              {id: 1, type: apple},
               {id: 2, type: orange}
-         ], 
+         ],
          vegetables: [
               {id: 3, type: "brocolli"}
          ]

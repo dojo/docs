@@ -46,7 +46,7 @@ Declarative example
 
 .. code-block :: html
 
-		<script type="text/javascript" >	
+		<script type="text/javascript" >
 			function updateView() {
 				var modeldata = dojo.fromJson(dijit.byId("modelArea").value);
 				var model = dojox.mvc.newStatefulModel({ data : modeldata });

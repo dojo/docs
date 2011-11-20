@@ -32,7 +32,7 @@ parent (Widget)
 popup (Widget, required)
   The widget to display as a pop-up. This can be any dijit widget; some widgets that are commonly used as popups include :ref:`dijit.ColorPalette <dijit/ColorPalette>`, :ref:`dijit.Menu <dijit/Menu>`, and :ref:`dijit.Calendar <dijit/Calendar>`.
 around (DomNode)
-  A DOM node that should be used as a reference point for placing the pop-up. For pop-ups that are not meant to be placed around an element, use ``x`` and ``y`` instead  
+  A DOM node that should be used as a reference point for placing the pop-up. For pop-ups that are not meant to be placed around an element, use ``x`` and ``y`` instead
 x (number)
   The absolute horizontal position in pixels at which to place the pop-up.
 y (number)

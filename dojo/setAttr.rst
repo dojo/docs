@@ -54,7 +54,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(domAttr){   
+  require(["dojo/dom-attr"], function(domAttr){
       // use setAttr() to set the tab index
       domAttr.set("nodeId", "tabIndex", 3);
 

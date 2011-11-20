@@ -17,14 +17,14 @@ A dojo.Animation extension which adds functionality that animates a "complex pro
 
 The standard animation doesn't know what to do with something like rect(...). This class identifies complex properties by they being a string and having parenthesis. If so, that property is made into a dojox.fx._Complex object and the getValue() is obtained from there.
 
-Frankly, the clip style is not very useful nor exciting. But the dojox.fx.ext-dojo.complex class will animate any property contained within parenthesis. So it can also be used with (and is actually intended for) CSS3 properties, such as transform: 
+Frankly, the clip style is not very useful nor exciting. But the dojox.fx.ext-dojo.complex class will animate any property contained within parenthesis. So it can also be used with (and is actually intended for) CSS3 properties, such as transform:
 
 .. code-block :: css
  :linenos:
  
- transform: rotate(10deg) translateX(0px)  
+ transform: rotate(10deg) translateX(0px)
  
-or even gradients (it would only affect the properties within the color-stops): 
+or even gradients (it would only affect the properties within the color-stops):
 
 .. code-block :: css
  :linenos:

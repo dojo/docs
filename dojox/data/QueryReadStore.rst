@@ -21,7 +21,7 @@ Supported APIs
 The following dojo.data APIs are implemented by QueryReadStore
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
-* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` - 
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` -
 
 
 ============
@@ -103,9 +103,9 @@ Connecting QueryReadStore to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
-    <b>Combo lookup of states through QueryReadStore</b><br> 
+    <b>Combo lookup of states through QueryReadStore</b><br>
     <div data-dojo-type="dojox.data.QueryReadStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php'" data-dojo-id="comboStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'name', pageSize:100"></div>
 
@@ -124,8 +124,8 @@ Connecting QueryReadStore to dijit.form.FilteringSelect
       dojo.require("dijit.form.FilteringSelect");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
-    <b>FilteringSelect lookup of states through QueryReadStore</b><br> 
+    <b>FilteringSelect lookup of states through QueryReadStore</b><br>
     <div data-dojo-type="dojox.data.QueryReadStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php'" data-dojo-id="comboStore2"></div>
     <div data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:comboStore2, searchAttr:'name', pageSize:100"></div>

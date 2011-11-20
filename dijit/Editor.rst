@@ -354,7 +354,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |                                             |hiliteColor           |dojox.widget.ColorPicker as the color selector.                       |
 |                                             |                      |**New to Dojo toolkit 1.5.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.Blockquote              |blockquote            |A plugin for marking a section as a quite by wrapping it in a         | 
+|dojox.editor.plugins.Blockquote              |blockquote            |A plugin for marking a section as a quite by wrapping it in a         |
 |                                             |                      |blockquote tag.                                                       |
 |                                             |                      |**New to Dojo toolkit 1.5.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
@@ -423,7 +423,7 @@ The arrow keys will not work within any optional drop down lists such as ComboBo
 Screen Reader Issues
 --------------------
 
-In order for the screen reader to announce a label for the editor, the developer must include a label element that is associated with the editor using the for attribute.   When the editor is created, Dojo will create a title element for the HTML document within the editor that contains the label text.  The screen reader will announce that title when the editor component gets focus. 
+In order for the screen reader to announce a label for the editor, the developer must include a label element that is associated with the editor using the for attribute.   When the editor is created, Dojo will create a title element for the HTML document within the editor that contains the label text.  The screen reader will announce that title when the editor component gets focus.
 
 Known Issues
 ------------

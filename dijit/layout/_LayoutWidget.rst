@@ -84,7 +84,7 @@ See also the lifecycle of a standard widget in :ref:`dijit._Widget <dijit/_Widge
 addChild()
 ----------
 
-Children can be added to a layout widget before or after it's been started (via the startup() call on it, or an ancestor in it's hierarchy). 
+Children can be added to a layout widget before or after it's been started (via the startup() call on it, or an ancestor in it's hierarchy).
 Thus, addChild() and removeChild() must work before or after the widget has been started.
 They can reference the this._started field to detect this state.
 

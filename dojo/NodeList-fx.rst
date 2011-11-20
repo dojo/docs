@@ -10,7 +10,7 @@ dojo.NodeList-fx
 .. contents::
    :depth: 2
 
-This module incorporates :ref:`dojo.fx <dojo/fx>` functionality into :ref:`dojo.query <dojo/query>` by extending the :ref:`dojo.NodeList <dojo/NodeList>` Class. 
+This module incorporates :ref:`dojo.fx <dojo/fx>` functionality into :ref:`dojo.query <dojo/query>` by extending the :ref:`dojo.NodeList <dojo/NodeList>` Class.
 
 API
 ---
@@ -50,7 +50,7 @@ To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
 
   .. cv:: html
 
-     <button id="fadebutton">Fade Them Out</button> 
+     <button id="fadebutton">Fade Them Out</button>
      <div id="fadebuttontarget">
         <li class="thinger">Item One</li>
         <li class="thinger">Item Two</li>
@@ -74,14 +74,14 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
 .. code-block :: javascript
   :linenos:
 
-  dojo.require("dojo.NodeList-fx"); 
+  dojo.require("dojo.NodeList-fx");
   dojo.ready(function(){
        dojo.query("li.evens")
-           .fadeOut({ 
-              duration:1000, 
-              onEnd: function(){ ... }, 
+           .fadeOut({
+              duration:1000,
+              onEnd: function(){ ... },
               // begin playing immediately, and return the nodeList for further iteration
-              auto:true 
+              auto:true
            })
            .onclick(doSomething)
        ;
@@ -97,11 +97,11 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
     "dojo/NodeList-fx"], function(ready, query, nodeListFx){
       ready(function(){
         query("li.evens")
-          .fadeOut({ 
-            duration:1000, 
-            onEnd: function(){ ... }, 
+          .fadeOut({
+            duration:1000,
+            onEnd: function(){ ... },
             // begin playing immediately, and return the nodeList for further iteration
-            auto:true 
+            auto:true
           })
           .onclick(doSomething);
       };

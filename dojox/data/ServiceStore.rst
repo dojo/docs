@@ -62,16 +62,16 @@ This is a schema object for this store. This should be JSON Schema format.
 
 The *service* parameter
 
-This is the service object that is used to retrieve lazy data and save results 
+This is the service object that is used to retrieve lazy data and save results
 The function should be directly callable with a single parameter of an object id to be loaded
 
 The *idAttribute* parameter
 
 Defaults to 'id'. The name of the attribute that holds an objects id.
-This can be a preexisting id provided by the server.  
+This can be a preexisting id provided by the server.
 If an ID isn't already provided when an object
 is fetched or added to the store, the autoIdentity system
-will generate an id for it and add it to the index. 
+will generate an id for it and add it to the index.
 
 The *syncMode* parameter
 

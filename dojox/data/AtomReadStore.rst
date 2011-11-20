@@ -29,10 +29,10 @@ The following parameters are supported by the GoogleFeedStore implementation.
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**      | **description**                                                                          | **type**             |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
-|label          |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
+|label          |The attribute of the search returns to use as the item's label. Defaults to               |string                |
 |               |titleNoFormatting.                                                                        |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
-|url            |The url to a service or an XML document that represents the store                         |string                | 
+|url            |The url to a service or an XML document that represents the store                         |string                |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 |sendQuery      |A boolean indicate to add a query string to the service URL.                              | string               |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
@@ -119,13 +119,13 @@ Example Usage of using AtomReadStore with a DataGrid
       ];
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.AtomReadStore" data-dojo-id="feedStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/atom1.xml'"></div>
-    <div id="feedGrid" 
+    <div id="feedGrid"
       data-dojo-id="feedGrid"
       style="width: 750px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="store:feedStore,
       structure:'layoutResults',
       query:{},

@@ -33,7 +33,7 @@ There is really no right answer. A CDN distribution delivers geographic caching 
 
 Available CDNs
 --------------
-In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2". While you can specify a more specific version, such as "1.2.3", it is recommended you use a major version number (1.2) -- newer dot-releases will be pushed to the /1.2/ URL automatically. 
+In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2". While you can specify a more specific version, such as "1.2.3", it is recommended you use a major version number (1.2) -- newer dot-releases will be pushed to the /1.2/ URL automatically.
 
 Google
 ~~~~~~
@@ -61,7 +61,7 @@ AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To
 
 .. code-block :: html
 
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.js"></script> 
+  <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.js"></script>
 
 Making a custom build
 ---------------------
@@ -104,7 +104,7 @@ Usage example
       function loader () {
           dojo.require ("dijit.Editor");
           dojo.addOnLoad(callback);
-      }    
+      }
 
       function callback () {
           new dijit.Editor ({}, dojo.byId("editorNode"));
@@ -126,7 +126,7 @@ To use Dojo from a CDN alongside your own local/custom namespace, you must regis
 
       <script type="text/javascript">
           var dojoConfig={
-            parseOnLoad: true, 
+            parseOnLoad: true,
             isDebug: true,
             baseUrl: "./",
             modulePaths: { my: "relative/path/to/local/dijits" }
@@ -134,7 +134,7 @@ To use Dojo from a CDN alongside your own local/custom namespace, you must regis
       </script>
       
       <!-- Bootstrap Dojo From AOL's CDN-->
-      <script 
+      <script
           type="text/javascript"
           src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js">
       </script>

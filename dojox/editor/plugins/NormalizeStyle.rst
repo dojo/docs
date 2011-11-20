@@ -65,7 +65,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div data-dojo-type="dijit.Editor" 
+  <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'normalizestyle', mode: "css", condenseSpans: false}]">
   </div>
 
@@ -115,7 +115,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -168,7 +168,7 @@ Configured css mode
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

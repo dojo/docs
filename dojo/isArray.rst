@@ -48,7 +48,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 [ Dojo 1.7+ (AMD) ]
 
 .. code-block :: javascript
-  :linenos: 
+  :linenos:
 
   require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array) {
     if(lang.isArray(list)) {
@@ -64,7 +64,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 [ Dojo < 1.7 ]
 
 .. code-block :: javascript
-  :linenos: 
+  :linenos:
 
   if(dojo.isArray(list)) {
     dojo.forEach(list, function(item, i) {
@@ -128,7 +128,7 @@ Test against isArray()
             // Is t an Array?
             if (dojo.isArray(t)) {
                 // dojooo: t is an array!
-                dojo.attr(resultDiv, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is an array.<br />Try another button.");
 
                 // Change the backgroundColor:
@@ -138,8 +138,8 @@ Test against isArray()
                 });
             } else {
                 // no chance, this can't be an array:
-                dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be an array with such a value " 
+                dojo.attr(resultDiv, "innerHTML",
+                    "No chance: 't' can't be an array with such a value "
                      + "('t' seems to be a " + typeof t + ").<br />"
                      + "Try another button.");
 

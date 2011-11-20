@@ -91,7 +91,7 @@ Dojo
 Dijit
 =====
 
-Dijit is Dojo's themeable, accessible, easy-to-customize UI Library. There are many widgets to choose from, so be sure to check out the :ref:`quickstart <quickstart/index>` guide which covers the basics. Dijit requires ``dojo.js`` and other Core modules. 
+Dijit is Dojo's themeable, accessible, easy-to-customize UI Library. There are many widgets to choose from, so be sure to check out the :ref:`quickstart <quickstart/index>` guide which covers the basics. Dijit requires ``dojo.js`` and other Core modules.
 
 * :ref:`Dijit Reference <dijit/index>`
 

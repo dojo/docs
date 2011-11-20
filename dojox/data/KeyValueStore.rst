@@ -103,7 +103,7 @@ List out all the attributes and values of a key/value data set
         ];
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -112,7 +112,7 @@ List out all the attributes and values of a key/value data set
              //Callback to perform an action when the data items are starting to be returned:
              function clearList(size, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -122,7 +122,7 @@ List out all the attributes and values of a key/value data set
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -150,7 +150,7 @@ List out all the attributes and values of a key/value data set
                 alert("lookup failed.");
              }
              
-             //Fetch the data in a sorted order. 
+             //Fetch the data in a sorted order.
              kvStore.fetch({onBegin: clearList, onComplete: gotItems, onError: fetchFailed});
            }
            //Link the click event of the button to driving the fetch.
@@ -160,7 +160,7 @@ List out all the attributes and values of a key/value data set
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData" data-dojo-id="kvStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Show me the key/value info!</div>
@@ -201,14 +201,14 @@ Connecting key/value store to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
 
-    <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br> 
+    <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br>
     <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData2" data-dojo-id="kvStore2"></div>
     <div style="width: 400px; height: 200px;">
-      <div id="grid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="grid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:kvStore2,
         structure:'layoutKeyValue',
         query:{},
@@ -249,8 +249,8 @@ Connecting key/value store to dijit.form.ComboBox
       ];
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
-    <b>dijit.form.ComboBox connected to the KeyValueStore:</b><br> 
+    <b>dijit.form.ComboBox connected to the KeyValueStore:</b><br>
     <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData3" data-dojo-id="kvStore3"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:kvStore3, searchAttr:'key'"></div>

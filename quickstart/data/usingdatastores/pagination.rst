@@ -11,12 +11,12 @@ As shown in the other datastore sections, the fetch method of the Read API can q
 The paging mechanism is used by specifying a start parameter in the fetch arguments. The start parameter says where, in the full list of items, to start returning items. The index 0 is the first item in the collection. The second argument you specify is the count argument. This option tells dojo.data how many items, starting at start, to return in a request. If start isn't specified, it is assumed to be 0. If count isn't specified, it is assumed to return all the items starting at start until it reaches the end of the collection. With this mechanism, you can implement simple paging easily.
 
 =======================
-Pagination general flow 
+Pagination general flow
 =======================
 
 To demonstrate the paging function, we'll assume an ItemFileReadStore with the following datasource:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   { identifier: 'name',
     items: [
@@ -70,7 +70,7 @@ The following example code fragment shows the general flow with Pagination:
   //Define how we handle the items when we get it
   var itemsLoaded = function(items, request){
     if (items.length < pageSize){
-      //We have found all the items and are at the end of our set.  
+      //We have found all the items and are at the end of our set.
       outOfItems = true;
     }else{
       outOfItems = false;
@@ -100,11 +100,11 @@ Paging over items
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var storeData = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -127,7 +127,7 @@ Paging over items
            //Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                while (list.firstChild) {
                  list.removeChild(list.firstChild);
                }
@@ -142,7 +142,7 @@ Paging over items
              currentStart = request.start;
              currentCount = request.count;
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                var i;
                for (i = 0; i < items.length; i++) {
                  var item = items[i];
@@ -186,7 +186,7 @@ Paging over items
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="back">Click me for the previous page!</div>

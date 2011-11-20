@@ -893,13 +893,13 @@ Assume a DOM created by this markup:
   :linenos:
 
   <div class="container">
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
     <div class="red">Red One</div>
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
     <div class="blue">Blue One</div>
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
     <div class="red">Red Two</div>
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
     <div class="blue">Blue Two</div>
   </div>
 
@@ -929,12 +929,12 @@ Results in this DOM structure:
   :linenos:
 
   <div class="container">
-    <div class="spacer">___</div>	
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
+    <div class="spacer">___</div>
     <div class="red">Red One</div>
     <div class="red">Red Two</div>
-    <div class="spacer">___</div>	
-    <div class="spacer">___</div>	
+    <div class="spacer">___</div>
+    <div class="spacer">___</div>
     <div class="red">Red One</div>
     <div class="red">Red Two</div>
   </div>

@@ -40,7 +40,7 @@ Creating a Gallery and setting a simple data source
   //Define the attribute names used to access the items in the data store
   var itemNameMap = {imageThumbAttr: "thumb", imageLargeAttr: "large"};
 
-  //Define the request, with no query, and a count of 20, so 20 items will be 
+  //Define the request, with no query, and a count of 20, so 20 items will be
   //requested with each request
   var request = {query: {}, count: 20};
   dijit.byId('gallery1').setDataStore(imageItemStore, request, itemNameMap);
@@ -56,15 +56,15 @@ Creating a Gallery with a FlickrRestStore
  :linenos:
 
   <script type="text/javascript">
-  //Declare a FlickrRestStore data store.  This is used to access images from the 
+  //Declare a FlickrRestStore data store.  This is used to access images from the
   //Flickr (www.flickr.com) photo sharing website.
   var flickrRestStore = new dojox.data.FlickrRestStore();
 
-  //Define the request, with a count of 20, so 20 items will be requested with 
-  //each request. The query specifies information used to access Flickr, 
-  //including a user ID (optional) and API key (required).  
-  //You can also specify a sort order, tags to search for, and the matching 
-  //mode for the tags, which can be "any" or "all", which equate to boolean "or" 
+  //Define the request, with a count of 20, so 20 items will be requested with
+  //each request. The query specifies information used to access Flickr,
+  //including a user ID (optional) and API key (required).
+  //You can also specify a sort order, tags to search for, and the matching
+  //mode for the tags, which can be "any" or "all", which equate to boolean "or"
   //and a boolean "and" respectively
   var request = {
         query: {
@@ -96,14 +96,14 @@ Setting the image width and height
 Setting Page Size and AutoLoad
 
 It is possible to define how many images are requested from the data store with each request.
-This affects the performance. The larger the page size, the slower a request may be, but 
+This affects the performance. The larger the page size, the slower a request may be, but
 there will be fewer requests. The smaller the page size, the quicker a request may be, but
 there will be more requests. It is specified by altering the pageSize attribute.
 
 By default, the Gallery will preload one page of images at a time. This gives a better user
 experience, as the user will have to wait less time to view an image. However, it may
 download more images than the user wishes to view. The autoloading of images can be disabled
-by setting the autoLoad attribute to "false". 
+by setting the autoLoad attribute to "false".
 
 
 
@@ -114,12 +114,12 @@ by setting the autoLoad attribute to "false".
 
 Changing the time interval in a SlideShow
 
-The images in the large pane of the Gallery can be made to run a slide show by clicking 
+The images in the large pane of the Gallery can be made to run a slide show by clicking
 its "Play" button. The amount of time between changing images can be configured by setting
 the slideshowInterval attribute to the number of seconds required.
 
 
 .. code-block :: javascript
- :linenos:   
+ :linenos:
 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="slideshowInterval:5"></div>

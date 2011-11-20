@@ -475,9 +475,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A widget which shows a single image (or groups of images) in a Dialog
 
-  * :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` 
+  * :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>`
 
-    Similar to a Lightbox, though much lighter weight, and animated to center from position in page. 
+    Similar to a Lightbox, though much lighter weight, and animated to center from position in page.
 
   * :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`
 

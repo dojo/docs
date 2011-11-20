@@ -40,17 +40,17 @@ As you can see, these should be expressions that evaluate to true or false. Upgr
  function(){
      var evals = true;
      try{ evals = !google.gears; }catch(e){}
-     return evals;	
+     return evals;
  }
  
-If doing something simple like testing a browser or version, a try/catch is not necessary: 
+If doing something simple like testing a browser or version, a try/catch is not necessary:
  
  
 .. code-block :: javascript
  :linenos:
  
  function(){
-     return dojo.isIE < Infinity;	
+     return dojo.isIE < Infinity;
  }
  
 Examples
@@ -65,7 +65,7 @@ A programmatic example:
      notifications:[
          {
              validate:function(){
-                 return dojo.isIE<7;	
+                 return dojo.isIE<7;
              },
              message:   '<span>You're using IE6? Really? Seriously?</span><a href="http://www.getfirefox.net/">Get Firefox</a>'
          },
@@ -73,11 +73,11 @@ A programmatic example:
              validate:function(){
                  var evals = true;
                  try{ evals = dojox.embed.Flash.available<14}catch(e){}
-                 return evals;	
+                 return evals;
              },
              message:   '<span>This app needs a version of Flash that has never been released.</span><a href="http://www.adobe.com/downloads/">Get Flash Player</a>'
          }
-     ]	
+     ]
  });
  
 A markup example:
@@ -88,11 +88,11 @@ A markup example:
  <div data-dojo-type="dojox.widget.UpgradeBar" id="upgradeBar" data-dojo-props="noRemindButton:'Do not Remind Me Again'">
      <div validate="dojo.isIE<7">
          <span>Unrecognized device attempting to read Internet files. Recommend that you:"</span>
-         <a href="http://www.getfirefox.net/">Get Firefox</a>	
+         <a href="http://www.getfirefox.net/">Get Firefox</a>
      </div>
      <div validate="dojo.isFF<3.5">
          <span>The rest of the planet has upgraded. Your turn:</span>
-         <a href="http://www.getfirefox.net/">Get Firefox</a>	
+         <a href="http://www.getfirefox.net/">Get Firefox</a>
      </div>
      <div validate="dojox.embed.Flash.available<9">
          <span>If the browser vendors paid attention to the File Input spec I wouldn't have to ask you to upgrade. But I do....</span>

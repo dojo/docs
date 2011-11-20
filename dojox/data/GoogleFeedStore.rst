@@ -32,7 +32,7 @@ The following parameters are supported by the GoogleFeedStore implementation.
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**    | **description**                                                                          | **type**             |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
-|label        |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
+|label        |The attribute of the search returns to use as the item's label. Defaults to               |string                |
 |             |titleNoFormatting.                                                                        |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 |key          |Your Google API key (optional)                                                            | string               |
@@ -112,7 +112,7 @@ Example Usage
             text = dojo.trim(text);
             if (text !== "" ) {
               var query = { url: text };
-              dijit.byId("feedGrid").setQuery(query);           
+              dijit.byId("feedGrid").setQuery(query);
             }
          }
          dojo.connect(dijit.byId("searchButton"), "onClick", search);
@@ -120,7 +120,7 @@ Example Usage
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Input feed URL here:</b>
     <br>
@@ -132,14 +132,14 @@ Example Usage
     <br>
     <br>
     <div style="width: 750px; height: 300px;">
-      <div id="feedGrid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="feedGrid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:feedStore,
         structure:'layoutResults',
         query:{url:'http://news.google.com/nwshp?hl=en&tab=wn&output=atom'},
         rowsPerPage:40">
       </div>
-    </div> 
+    </div>
 
   .. cv:: css
 

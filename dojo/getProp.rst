@@ -6,13 +6,13 @@ dojo.getProp
 .. contents::
    :depth: 2
 
-Gets a property on an HTML element. 
+Gets a property on an HTML element.
 
 ============
 Introduction
 ============
 
-Handles normalized getting of properties on DOM nodes. 
+Handles normalized getting of properties on DOM nodes.
 
 Since Dojo 1.7, ``dojo.getProp`` is exposed via the ``get`` method of the ``dojo/dom-prop`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
@@ -32,10 +32,10 @@ Usage
   dojo.getProp(node, name);
 
 node
-  id or reference to the element to get the property on 
+  id or reference to the element to get the property on
 
 name
-  the name of the property to get. 
+  the name of the property to get.
 
 
 ========
@@ -49,24 +49,24 @@ When using AMD format in a fully baseless application, ``get`` is accessed from 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-prop", "dojo/dom"], function(domProp, dom){   
-      // get the current value of the "foo" property on a node 
-      domProp.get(dom.byId("nodeId"), "foo"); 
+  require(["dojo/dom-prop", "dojo/dom"], function(domProp, dom){
+      // get the current value of the "foo" property on a node
+      domProp.get(dom.byId("nodeId"), "foo");
 
-      // or we can just pass the id: 
-      domProp.get("nodeId", "foo"); 
+      // or we can just pass the id:
+      domProp.get("nodeId", "foo");
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getProp`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
-      // get the current value of the "foo" property on a node 
-      dojo.getProp(dojo.byId("nodeId"), "foo"); 
+  require(["dojo"], function(dojo){
+      // get the current value of the "foo" property on a node
+      dojo.getProp(dojo.byId("nodeId"), "foo");
 
-      // or we can just pass the id: 
-      dojo.getProp("nodeId", "foo"); 
+      // or we can just pass the id:
+      dojo.getProp("nodeId", "foo");
   });
 
 Dojo < 1.7
@@ -74,11 +74,11 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    // get the current value of the "foo" property on a node 
-    dojo.getProp(dojo.byId("nodeId"), "foo"); 
+    // get the current value of the "foo" property on a node
+    dojo.getProp(dojo.byId("nodeId"), "foo");
 
-    // or we can just pass the id: 
-    dojo.getProp("nodeId", "foo"); 
+    // or we can just pass the id:
+    dojo.getProp("nodeId", "foo");
 
 ========
 See also

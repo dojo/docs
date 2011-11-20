@@ -46,7 +46,7 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html", "dojo/query"], function(dojo, query){      
+  require(["dojo/_base/html", "dojo/query"], function(dojo, query){
       // Passing only an ID or node returns the computed style object of the node:
       dojo.style("thinger");
 
@@ -84,7 +84,7 @@ It's recommended to use :ref:`style.get <dojo/getAttr>`, :ref:`style.set <dojo/s
 
 .. code-block :: javascript
 
-  require(["dojo/dom-style", "dojo/query"], function(style, query){    
+  require(["dojo/dom-style", "dojo/query"], function(style, query){
       // Passing only an ID or node returns the computed style object of the node:
       style.get("thinger");
 

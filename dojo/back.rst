@@ -105,8 +105,8 @@ Change the URL in the location bar
 
 To change the URL in the browser's location bar, include a **changeUrl** property on the state object.
 
-* If this property is set to true, dojo.back will generate a unique value for the fragment identifier. 
-* If it is set to any other value (except undefined, null, 0 or empty string), then that value will be used as the fragment identifier. 
+* If this property is set to true, dojo.back will generate a unique value for the fragment identifier.
+* If it is set to any other value (except undefined, null, 0 or empty string), then that value will be used as the fragment identifier.
 
 This will allow users to bookmark the page.
 

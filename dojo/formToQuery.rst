@@ -14,9 +14,9 @@ Helper function for converting a HTML form into an URL-encoded query string.
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a query string sitable for passing on a URI.  This function is identical to doing the operation: 
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a query string sitable for passing on a URI.  This function is identical to doing the operation:
 
-*dojo.objectToQuery(dojo.formToObject("formid"));*  
+*dojo.objectToQuery(dojo.formToObject("formid"));*
 
 You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` and :ref:`dojo.objectToQuery <dojo/objectToQuery>` documentation for more details on the general behavior.
 
@@ -102,7 +102,7 @@ Example 1: Using formToQuery to create an query string version of a form
       dojo.addOnLoad(convertForm);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertForm" data-dojo-type="dijit.form.Button" type="button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
@@ -136,7 +136,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
       dojo.addOnLoad(convertFormDijits);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertFormDijits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>

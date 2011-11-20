@@ -86,7 +86,7 @@ Would retrieve something like:
           {"id": 1, "userName": "jsmith", "firstName": "John", "lastName": "Smith"},
           {"id": 2, "userName": "jdoe", "firstName": "Jane", "lastName": "Doe"},
           {"id": 3, "userName": "bill", "firstName": "Bill", "lastName": "Keese"}
-        ]          
+        ]
 
 While requesting a specific resource like:
 
@@ -166,7 +166,7 @@ An example of declarative would be:
 
 .. code-block:: html
 
-	<div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore" 
+	<div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore"
 	    data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
 
 *Note* it is necessary to use ``data-dojo-id`` with non-Widget (dijit) declarative objects, like DataStores in order to make available a JavaScript variable that can be passed to other declarative objects.  Also it should be noted that these objects do not get destroyed if their containing widget is destroyed and the variable is declared in a global scope.

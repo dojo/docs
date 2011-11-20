@@ -15,7 +15,7 @@ Dojo Book Outline
 
 `The Book of Dojo <http://dojotoolkit.org/book/dojo-book-1-0>`_.
 
-* `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
+* `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_.
   maps to: :ref:`How to Install the Dojo Toolkit <quickstart/install>` (complete)
 * `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_ -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>> (complete)
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_ (complete)
@@ -38,7 +38,7 @@ Dojo Book Outline
     * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_ [[CraigRiecke]].
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_ (done: doughays)
     * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textarea <dijit/form/Textarea>`_ (complete)
-    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_,  
+    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_,
        :ref:`ValidationTextbox <dijit/form/ValidationTextBox>`, :ref:`CurrencyTextbox <dijit/form/CurrencyTextBox>`, :ref:`NumberTextbox <dijit/form/NumberTextBox>`, (all complete)
        :ref:`DateTextbox <dijit/form/DateTextBox>` and :ref:`TimeTextbox <dijit/form/TimeTextBox>` [[CraigRiecke, complete]]
 
@@ -52,7 +52,7 @@ Dojo Book Outline
 
   * `Command Control <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control>`_.
 
-    * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_. maps to 
+    * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_. maps to
 
           * :ref:`Button <dijit/form/Button>` (complete)
           * :ref:`DropDownButton <dijit/form/DropDownButton>` (complete)
@@ -65,7 +65,7 @@ Dojo Book Outline
 
     * `Dijit ProgressBar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/progress-bar>`_. maps to: `ProgressBar <dijit/ProgressBar>`_ (complete)
     * `Dijit Tooltip <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/tooltip>`_. maps to: `Tooltip <dijit/Tooltip>`_ (complete)
-    * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: 
+    * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to:
          * :ref:`Dialog <dijit/Dialog>` (complete)
          * and :ref:`TooltipDialog <dijit/TooltipDialog>` (complete)
     * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_ (complete)

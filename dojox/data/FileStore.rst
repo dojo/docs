@@ -67,7 +67,7 @@ All items returned by a query to the FileStore and will generally have the follo
 |             |don’t care about its children, you don’t have to load them.  Should be accessed by the multivalue        |          |
 |             |*getValues()* accessor.                                                                                  |          |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
-|modified     |An integer indicating the last modified date.  This is the file timestamp from the system                |integer   |          
+|modified     |An integer indicating the last modified date.  This is the file timestamp from the system                |integer   |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 
 
@@ -80,7 +80,7 @@ The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadS
 .. code-block :: javascript
  :linenos:
 
-  {  
+  {
     name: "foo*.txt"
   }
 
@@ -101,8 +101,8 @@ Using the dojox.dataFileStore is generally simple. The store takes three possibl
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 |url                  |The URL of the service that provides the server-side implementation that processes the queries |string              |
 |                     |returns the results. Note that because of the same origin policy of the browser, the service   |                    |
-|                     |must reside in the same domain as the loaded page. To access urls outside of the domain, you   |                    | 
-|                     |must use a proxy. **This parameter is required**                                               |                    | 
+|                     |must reside in the same domain as the loaded page. To access urls outside of the domain, you   |                    |
+|                     |must use a proxy. **This parameter is required**                                               |                    |
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 |pathAsQueryParam     |This parameter alters the behavior of the dojo.data.api.Identity functions. By default it is   |boolean             |
 |                     |false. When it is false, any request for the information of a single file theough a            |                    |
@@ -125,7 +125,7 @@ Using the dojox.dataFileStore is generally simple. The store takes three possibl
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 |options              |This is a comma separated list of options that dojox.data.FileStore will pass to the service as|string              |
 |                     |a JSON encoded string array. These options can be used to configure certain behaviors of the   |                    |
-|                     |dojox.data.FileStore. The example PHP implementation provided in demos supports the following  |                    | 
+|                     |dojox.data.FileStore. The example PHP implementation provided in demos supports the following  |                    |
 |                     |                                                                                               |                    |
 |                     |**expand**: This option instructs the store to inflate all child files of a directory so that  |                    |
 |                     |lazy-loading through isItemLoaded() and loadItem() is not necessary. This options is           |                    |
@@ -187,7 +187,7 @@ Attaching the FileStore to dijit.Tree declaratively
     <div>
       <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php', pathAsQueryParam:true" data-dojo-id="dojoFiles"></div>
       <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="fileModel" data-dojo-props="store:dojoFiles, query:{}, rootId:'DojoFiles', rootLabel:'Dojo Files', childrenAttrs:'children'"></div>
-      <div id="tree" data-dojo-type="dijit.Tree" data-dojo-props="model:fileModel" ></div>  
+      <div id="tree" data-dojo-type="dijit.Tree" data-dojo-props="model:fileModel" ></div>
     </div>
 
 Attaching the FileStore to dijit.form.ComboBox declaratively
@@ -206,7 +206,7 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
 
     <div>
       <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php', pathAsQueryParam:true" data-dojo-id="comboStore"></div>
-      <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'path'" value="./demos"></div> 
+      <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'path'" value="./demos"></div>
     </div>
 
 Attaching the FileStore to dojox.grid.DataGrid declaratively
@@ -223,8 +223,8 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
   .. cv :: html
 
-    <span data-dojo-type="dojox.data.FileStore" 
-      data-dojo-id="fileStore3" 
+    <span data-dojo-type="dojox.data.FileStore"
+      data-dojo-id="fileStore3"
       data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php',
       pathAsQueryParam:true">
     </span>
@@ -262,6 +262,6 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 Technical/Protocol Details
 ==========================
 
-The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
+The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.
 
 :ref:`Protocol Information <dojox/data/FileStore/protocol>`

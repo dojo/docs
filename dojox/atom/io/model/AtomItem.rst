@@ -20,7 +20,7 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | ATOM_URI        | The URI of the Atom namespace                                                               |                                                                 
+| String                     | ATOM_URI        | The URI of the Atom namespace                                                               |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | links           | Houses multiple dojox.atom.io.model.Link objects of the links associated with this Atom item|
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
@@ -29,7 +29,7 @@ Public properties (and their types):
 | Array                      | categories      | Houses the dojox.atom.io.model.Category objects associated with this Atom item              |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | contributors    | Houses the idojox.atom.io.model.Person objects of the contributors                          |
-+----------------------------+-----------------+---------------------------------------------------------------------------------------------+ 
++----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | icon            | The URL to the icon for this item.                                                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | id              | The ID of this item                                                                         |
@@ -84,7 +84,7 @@ Below are all the functions implemented by this model class.
 | Number            | removeCategories(String scheme, String term)         | Removes all categories matching the given scheme, returning |
 |                   |                                                      | the number of categories removed.                           |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | setTitle(String str, String type)                    | Sets the title of this item to the given str with the given | 
+| undefined         | setTitle(String str, String type)                    | Sets the title of this item to the given str with the given |
 |                   |                                                      | type, such as text, html, xml, etc.                         |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | addExtension(String name_space, String name,         | Adds in an extension namespace into the item.               |
@@ -102,7 +102,7 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
-See Also: 
+See Also:
 =========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`

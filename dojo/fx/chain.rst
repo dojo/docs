@@ -59,7 +59,7 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
       dojo.addOnLoad(basicChain);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicButton">Fade and Wipe in Nodes!!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>

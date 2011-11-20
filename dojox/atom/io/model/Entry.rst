@@ -48,7 +48,7 @@ Below are all the additional functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
-See Also: 
+See Also:
 =========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`

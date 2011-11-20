@@ -13,7 +13,7 @@ Terms
 =====
 
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
-+ **Term**      | **Equivalent Database Term** | **Description**                                                                                | 
++ **Term**      | **Equivalent Database Term** | **Description**                                                                                |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | data store    | cursor                       | A JavaScript object that reads data from a data source and makes that data available as data   |
 |               |                              | items through dojo.data APIs.                                                                  |
@@ -34,7 +34,7 @@ Terms
 | identity      | primary key                  |An identifier that can be used to uniquely identify an item within the context of a single      |
 |               |                              |datastore.  Note that identifiers should be immutable.                                          |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
-| query         | WHERE clause of the SQL      |A specification or request that asks a datastore for some subset of the items it knows about. A |  
+| query         | WHERE clause of the SQL      |A specification or request that asks a datastore for some subset of the items it knows about. A |
 |               | select.                      |query is often an object with a set of attribute/value pairs that define what attributes should |
 |               |                              |be matched. It is possible, however, that the query could be a string or a number.              |
 |               |                              |**Note:** It is highly recommended that all stores use an object structure of attribute         |
@@ -45,7 +45,7 @@ Terms
 |               |                              |APIs.                                                                                           |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | internal data |                              |The private data structures that a datastore uses to cache data in local memory                 |
-| representation|                              |(for example XML DOM nodes, anonymous JSON objects, or arrays of arrays).                       |  
+| representation|                              |(for example XML DOM nodes, anonymous JSON objects, or arrays of arrays).                       |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | request       | SQL select                   |The parameters used to limit and sort a set of items. This includes the query, sorting          |
 |               |                              |attributes, upper and lower limits, and callbacks.                                              |

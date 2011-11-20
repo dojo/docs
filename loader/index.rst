@@ -33,7 +33,7 @@ deployment.
 
 Dojo was among the first JavaScript libraries to define a module API and publish a loader and build application to solve
 all of these problems. The original API included the functions ``dojo.require`` (request a module), ``dojo.provide``
-(define a module), and other supporting functions. This API is now termed the "legacy API". 
+(define a module), and other supporting functions. This API is now termed the "legacy API".
 
 Since early 2010, there has been a renewed interest in improving JavaScript modules systems. A single API has
 emerged: `the Asynchronous Module Definition (AMD) API <https://github.com/amdjs/amdjs-api/wiki/AMD>`_ ("AMD API"). This

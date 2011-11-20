@@ -22,7 +22,7 @@ dojox.image.MagnifierLite offers an unobtrusive way to add an unstyled overlay a
 
 The logic behind requiring the src image to be large is “it’s going to be downloaded, anyway” so this method avoids having to make thumbnails and two http requests among other things.
 
-This is the base class for :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
+This is the base class for :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling.
 
 
 =====
@@ -50,17 +50,17 @@ Declarative example
   .. cv:: javascript
 
        <script type="text/javascript">
-         dojo.require("dijit.form.Button"); 	 
-         dojo.require("dojox.image.MagnifierLite");                
+         dojo.require("dijit.form.Button");
+         dojo.require("dojox.image.MagnifierLite");
        </script>
        
   .. cv:: html
 
-       <p>Programmatic: (destroy() removes this.domNode)<br></p>	
+       <p>Programmatic: (destroy() removes this.domNode)<br></p>
 		
-       <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" 
+       <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185"
                  dojoType="dojox.image.MagnifierLite"
-                      src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 
+                      src="http://www.zelda-infinite.com/games/zelda1/overworld.png" />
 
                 <button data-dojo-type="dijit.form.Button" id="foob">
 			Make It
@@ -84,7 +84,7 @@ Declarative example
   .. cv:: css
 
    <style>
-    @import "{{baseUrl}}dojox/image/resources/image.css";   
+    @import "{{baseUrl}}dojox/image/resources/image.css";
    </style>
 
 

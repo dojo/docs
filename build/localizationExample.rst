@@ -349,7 +349,7 @@ And they contain the following (just the strings are provided here, the full fil
 
 .. code-block :: text
 
-  testdijits/nls/Foo.js 
+  testdijits/nls/Foo.js
         test: 'this is a test'
   
   testdijits/nls/fr/Foo.js

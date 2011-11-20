@@ -16,9 +16,9 @@ dojox.geo.openlayers
 Overview
 --------
 
-Dojo's dojox.geo.openlayers module provides a mapping component based on the OpenLayers (http://www.openlayers.org) library. This component is mainly a wrapper of the OpenLayers library with additional features such as displaying geo-referenced GFX shape and placing geo-referenced widgets on a background map. Two components are available : a div based component and a widget based component so you can either create a map in a programmatic way or use markup to insert a map in a web page. 
+Dojo's dojox.geo.openlayers module provides a mapping component based on the OpenLayers (http://www.openlayers.org) library. This component is mainly a wrapper of the OpenLayers library with additional features such as displaying geo-referenced GFX shape and placing geo-referenced widgets on a background map. Two components are available : a div based component and a widget based component so you can either create a map in a programmatic way or use markup to insert a map in a web page.
 
-This Map component is intended to display a background map with graphical GFX or widget overlay. The background map can come from various online map providers such as OpenStreetMap, Google Maps of ESRI Maps. Note that you may have to include specific map provider javascript library in order to have access to the corresponding mapping service.  
+This Map component is intended to display a background map with graphical GFX or widget overlay. The background map can come from various online map providers such as OpenStreetMap, Google Maps of ESRI Maps. Note that you may have to include specific map provider javascript library in order to have access to the corresponding mapping service.
 
 In any cases, you will have to include the OpenLayers library in order to use the dojox.geo.openlayers module.
 
@@ -109,7 +109,7 @@ Some examples of how to set/change the base layer type:
   
     require([ "dojox/geo/openlayers/Map", "dijit/form/CheckBox" ], function(){
       dojo.addOnLoad(function(){
-      map = new dojox.geo.openlayers.Map("map", {      
+      map = new dojox.geo.openlayers.Map("map", {
         baseLayerType : dojox.geo.openlayers.BaseLayerType.ARCGIS
       });
       map.fitTo([ -160, 70, 160, -70 ]);
@@ -157,12 +157,12 @@ Programmatic version:
   require([ "dojox/geo/openlayers/Map"], function(){
 
     dojo.addOnLoad(function(){
-      var map = new dojox.geo.openlayers.Map("map");			
+      var map = new dojox.geo.openlayers.Map("map");
       // This is New York location
       var ny = {
         latitude : 40.71427,
         longitude : -74.00597
-      };			
+      };
       // fit to New York with 0.1 degrees extent
       map.fitTo({
         position : [ ny.longitude, ny.latitude ],
@@ -189,7 +189,7 @@ Markup version:
   </head>
   <body class="tundra">
   
-    <div id="map" dojoType="dojox.geo.openlayers.widget.Map" 
+    <div id="map" dojoType="dojox.geo.openlayers.widget.Map"
                   initialLocation="{position : [ -74.00597, 40.71427 ], extent : 0.1 }"
                   style="background-color: #b5d0d0; width: 100%; height: 100%;">
     </div>
@@ -199,7 +199,7 @@ Markup version:
 Positioning shapes on the map
 -----------------------------
 
-The OpenLayers mapping component allows to position GFX shapes on the map at specified locations. The location of the shape is specified as longitude and latitude coordinates. To place such a shape on the map, you will need to insert a dedicated dojox.geo.openlayer.GfxLayer layer in the map and add dojox.geo.openlayers.GeometryFeature s to it. The GeometryFeature class defines the position and the type of shape to display. 
+The OpenLayers mapping component allows to position GFX shapes on the map at specified locations. The location of the shape is specified as longitude and latitude coordinates. To place such a shape on the map, you will need to insert a dedicated dojox.geo.openlayer.GfxLayer layer in the map and add dojox.geo.openlayers.GeometryFeature s to it. The GeometryFeature class defines the position and the type of shape to display.
 
 The following code shows how to display a point at the New York location. A circle is displayed as it is the default GFX shape to be displayed for a Point geometry.
 
@@ -212,7 +212,7 @@ The following code shows how to display a point at the New York location. A circ
   
       dojo.addOnLoad(function(){
         // create a map widget.
-        var map = new dojox.geo.openlayers.Map("map");			
+        var map = new dojox.geo.openlayers.Map("map");
        // This is New York
         var ny = {
           latitude : 40.71427,
@@ -291,7 +291,7 @@ You can also place polylines on the map. In this case, you will need to create a
       var map = new dojox.geo.openlayers.Map("map");
       // create a GfxLayer
       var layer = new dojox.geo.openlayers.GfxLayer();
-      // towns objects already have a x and y field. 
+      // towns objects already have a x and y field.
       var pts = new dojox.geo.openlayers.LineString(towns);
       // create a GeometryFeature
       var f = new dojox.geo.openlayers.GeometryFeature(pts);
@@ -300,7 +300,7 @@ You can also place polylines on the map. In this case, you will need to create a
       // add the feature to the layer
       layer.addFeature(f);
       // add layer to the map
-      map.addLayer(layer);	
+      map.addLayer(layer);
     });
   });
  </script>
@@ -310,7 +310,7 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
 .. code-block :: javascript
  :linenos:
  
- <script type="text/javascript">  
+ <script type="text/javascript">
    require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
              "dojox/geo/openlayers/GeometryFeature" ], function(){
      var towns = [ {
@@ -354,7 +354,7 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
       var layer = new dojox.geo.openlayers.GfxLayer();
       // The array of geometries
       var a = [];
-      // towns objects already have a x and y field. 
+      // towns objects already have a x and y field.
       var pts = new dojox.geo.openlayers.LineString(towns);
       a.push(pts);
       // make a point for each line.
@@ -374,7 +374,7 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
      layer.addFeature(f);
      // add layer to the map
      map.addLayer(layer);
-     // fit to New York with 0.1 degrees extent   
+     // fit to New York with 0.1 degrees extent
    });
  });
  </script>
@@ -411,8 +411,8 @@ Example that shows a star at Paris location:
       // create a GeometryFeature
       var f = new dojox.geo.openlayers.GeometryFeature(p);
       // create a star graphic
-      f.createShape = myCreateShape;      
-      f.setStroke([ 0, 0, 0 ]);      
+      f.createShape = myCreateShape;
+      f.setStroke([ 0, 0, 0 ]);
       f.setFill([ 0, 128, 128 ]);
       // add the feature to the layer
       layer.addFeature(f);
@@ -467,7 +467,7 @@ Example that shows a star at Paris location:
  </script>
  
 
-The styling of the GFX shapes is done through the setFill and setStroke methods of the GeometryFeature class. These fill and stroke parameters are simply passed to the shape at display time and depend on the kind of shape displayed. 
+The styling of the GFX shapes is done through the setFill and setStroke methods of the GeometryFeature class. These fill and stroke parameters are simply passed to the shape at display time and depend on the kind of shape displayed.
 
 The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two followinf code are equivalent.
 

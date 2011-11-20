@@ -30,7 +30,7 @@ Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
     lang.isArrayLike(foo)
   });
   // Dojo < 1.7
-  dojo.isArrayLike(foo) 
+  dojo.isArrayLike(foo)
 
 Returns true if it is like an Array.
 
@@ -46,7 +46,7 @@ Returns true if it is like an Array.
   });
   // Dojo < 1.7
   // Check, if variable "foo" is like an array:
-  if(dojo.isArrayLike(foo)){ 
+  if(dojo.isArrayLike(foo)){
       // do something...
   }
 
@@ -82,7 +82,7 @@ Test against isArrayLike()
             // Is t like an Array?
             if (dojo.isArrayLike(t)) {
                 // dojooo: t is like an array!
-                dojo.attr(resultDiv, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is like an array.<br />Try another button.");
 
                 // Change the backgroundColor:
@@ -92,8 +92,8 @@ Test against isArrayLike()
                 });
             } else {
                 // no chance, this can't be an array:
-                dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be like an array with such a value " 
+                dojo.attr(resultDiv, "innerHTML",
+                    "No chance: 't' can't be like an array with such a value "
                      + "('t' seems to be a " + typeof t + ").<br />"
                      + "Try another button.");
 

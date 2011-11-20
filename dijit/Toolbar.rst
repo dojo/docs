@@ -83,7 +83,7 @@ Creation from markup is even easier.
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste', showLabel:false">Paste</div
         ><!-- The following adds a line between toolbar sections
             --><span data-dojo-type="dijit.ToolbarSeparator"></span
-         ><div data-dojo-type="dijit.form.ToggleButton" id="toolbar1.bold" 
+         ><div data-dojo-type="dijit.form.ToggleButton" id="toolbar1.bold"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">Bold</div>
    </div>
 

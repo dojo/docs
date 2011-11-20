@@ -39,7 +39,7 @@ The following parameters are supported by all Google store implementations.
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**      | **description**                                                                          | **type**             |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
-|label          |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
+|label          |The attribute of the search returns to use as the item's label. Defaults to               |string                |
 |               |titleNoFormatting.                                                                        |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 |key            |Your Google API key (optional)                                                            | string               |
@@ -222,7 +222,7 @@ dojox.data.GoogleNewsSearchStore
 |location         |The location of the news story.                                                                                              |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |relatedStories   |An optional array of objects specifying related stories. Each object has the following subset of properties:                 |
-|                 |"title", "titleNoFormatting", "url", "unescapedUrl", "publisher", "location", "publishedDate".                               |              
+|                 |"title", "titleNoFormatting", "url", "unescapedUrl", "publisher", "location", "publishedDate".                               |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -290,7 +290,7 @@ The query syntax for all stores is simple. Most only take a single object with t
 Query Example
 -------------
 
-.. code-block :: javascript 
+.. code-block :: javascript
  
   {
     "text" : "Find me"
@@ -301,7 +301,7 @@ Query Syntax for GoogleLocalSearchStore
 
 New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when searching, its allowed syntax is:
 
-.. code-block :: javascript 
+.. code-block :: javascript
  
   {
     "text" : "Find me"
@@ -361,9 +361,9 @@ Searching multiple Google services at once
             text = dojo.trim(text);
             if (text !== "" ) {
               var query = { text: text };
-              dijit.byId("webGrid").setQuery(query);           
+              dijit.byId("webGrid").setQuery(query);
               dijit.byId("newsGrid").setQuery(query);
-              dijit.byId("imageGrid").setQuery(query); 
+              dijit.byId("imageGrid").setQuery(query);
             }
          }
          dojo.connect(dijit.byId("searchButton"), "onClick", search);
@@ -371,7 +371,7 @@ Searching multiple Google services at once
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Input search text:</b>
     <br>
@@ -380,15 +380,15 @@ Searching multiple Google services at once
     <br>
     <div data-dojo-type="dijit.form.Button" id="searchButton">Search!</div>
     <div data-dojo-type="dojox.data.GoogleWebSearchStore" data-dojo-id="webStore"></div>
-    <div data-dojo-type="dojox.data.GoogleImageSearchStore" data-dojo-id="imageStore"></div>    
+    <div data-dojo-type="dojox.data.GoogleImageSearchStore" data-dojo-id="imageStore"></div>
     <div data-dojo-type="dojox.data.GoogleNewsSearchStore" data-dojo-id="newsStore"></div>
     <br>
     <br>
     <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
-        <div id="webGrid" 
+        <div id="webGrid"
           style="width: 750px; height: 300px;"
-          data-dojo-type="dojox.grid.DataGrid" 
+          data-dojo-type="dojox.grid.DataGrid"
           data-dojo-props="store:webStore,
           structure:layoutResults,
           query:{text:'Dojo'},
@@ -397,19 +397,19 @@ Searching multiple Google services at once
       </div>
       <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
         <div style="width: 750px; height: 300px;">
-          <div id="imageGrid" 
-            data-dojo-type="dojox.grid.DataGrid" 
+          <div id="imageGrid"
+            data-dojo-type="dojox.grid.DataGrid"
             data-dojo-props="store:imageStore,
             structure:layoutResults,
             query:{text:'Dojo'},
             rowsPerPage:40">
           </div>
-        </div> 
+        </div>
       </div>
       <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
-        <div id="newsGrid" 
+        <div id="newsGrid"
           style="width: 750px; height: 300px;"
-          data-dojo-type="dojox.grid.DataGrid" 
+          data-dojo-type="dojox.grid.DataGrid"
           data-dojo-props="store:newsStore,
           structure:layoutResults,
           query:{text:'Dojo'},

@@ -29,7 +29,7 @@ You can then add "dojoxEllipsis" on any node that you want to ellipsis-ize.  In 
 Selecting Text in FF
 ====================
 
-The XUL description tag that is used to accomplish this functionality in Firefox has a couple of limitations.  First, it does not support any sort of markup within the text that is being truncated.  Second, the text that is displayed is not selectable via mouse cursor.  To overcome these limitations, there is an iframe-based truncation routine that can be used.  This method is much less efficient than the XUL (default) way - but exists for these special cases.  When a node contains markup within it, the iframe-based routine is automatically called.  If you wish to force a text-only node's text content to be selectable via mouse, you can specify an additional class on the node, called "dojoxEllipsisSelectable". 
+The XUL description tag that is used to accomplish this functionality in Firefox has a couple of limitations.  First, it does not support any sort of markup within the text that is being truncated.  Second, the text that is displayed is not selectable via mouse cursor.  To overcome these limitations, there is an iframe-based truncation routine that can be used.  This method is much less efficient than the XUL (default) way - but exists for these special cases.  When a node contains markup within it, the iframe-based routine is automatically called.  If you wish to force a text-only node's text content to be selectable via mouse, you can specify an additional class on the node, called "dojoxEllipsisSelectable".
 
 ``NOTE:`` All other browsers besides Firefox will automatically handle HTML and the text will be selectable - without any performance hit.
 

@@ -23,8 +23,8 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
-	var animation = fx.fadeOut({ // returns a dojo._Animation 
-		// this is an Object containing properties used to define the 
+	var animation = fx.fadeOut({ // returns a dojo._Animation
+		// this is an Object containing properties used to define the
 		//animation
 		node:"aStringId"
 	});
@@ -37,7 +37,7 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
     :linenos:
 	
     //Dojo < 1.7
-    var animation = dojo.fadeOut({ // returns a dojo._Animation 
+    var animation = dojo.fadeOut({ // returns a dojo._Animation
         // this is an Object containing properties used to define the animation
         node:"aStringId"
     });
@@ -74,7 +74,7 @@ All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 .. code-block :: javascript
     :linenos:
 		
-    //Dojo < 1.7 
+    //Dojo < 1.7
     var target = dojo.byId("someId").parentNode;
     dojo.fadeOut({ node: target }).play();
 
@@ -90,28 +90,28 @@ The standard set of properties for specifying animation settings (via the Object
   Delay, in milliseconds, before the animation starts.  The default is 0ms. **optional**
 
 :duration:
-  How long, in milliseconds, the animation will run.  The default is 350 milliseconds (.35 seconds) **optional** 
+  How long, in milliseconds, the animation will run.  The default is 350 milliseconds (.35 seconds) **optional**
 
 :easing:
   An easing (timing) function to apply to the effect, such as exponential curve, bounce, etc.  Dojo provides a number of easing functions in the
   :ref:`dojo.fx.easing <dojo/fx/easing>` module. **optional**
 
 :rate:
-  By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot 
-  slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you 
+  By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot
+  slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you
   should specify a rate of 200 (milliseconds between each frame **optional**
 
 :repeat:
   How many times the animation will be played.  Default: 0. **optional**
 
 :curve:
-  An array two values, or an instance of a `dojo._Line`. Used as the start and end points for a given animation. Typically not used directly by 
+  An array two values, or an instance of a `dojo._Line`. Used as the start and end points for a given animation. Typically not used directly by
   end-users, though allows usage of the Animation class outside of Node effects
 
 Animation Events
 ----------------
 
-Performing custom behavior at specific points during an animation is done using callback functions (also set via the Object parameter to the animation function).  These functions will be executed at various stages during an animation's life-cycle. 
+Performing custom behavior at specific points during an animation is done using callback functions (also set via the Object parameter to the animation function).  These functions will be executed at various stages during an animation's life-cycle.
 
 The standard set of events that are fired during stages of an animation are:
 
@@ -148,7 +148,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
-    fx.fadeOut({ 
+    fx.fadeOut({
     // some node, by id to animate:
     node:"someId",
 
@@ -176,7 +176,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
   :linenos:
 
   //Dojo < 1.7
-  dojo.fadeOut({ 
+  dojo.fadeOut({
 	// some node, by id to animate:
 	node:"someId",
 	
@@ -256,11 +256,11 @@ You can define these callback functions as part of the Object parameter used to 
     }).play();
 
 
-===============	
+===============
 Base Animations
 ===============
 
-Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same Object parameter format for specifying properties of the animation, and several additional options are used in advanced cases. 
+Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same Object parameter format for specifying properties of the animation, and several additional options are used in advanced cases.
 
 Fading Example
 --------------
@@ -299,7 +299,7 @@ To fade out a node, alter it's contents, and fade it back in:
         }
     }).play();
 
-Here, we've created a fadeOut animation, and run it immediately. At the end of the animation (set here to use the default duration by omitting the `duration:` parameter), we set the node reference's `.innerHTML` property to something new, and fade it back in, again using the default duration. 
+Here, we've created a fadeOut animation, and run it immediately. At the end of the animation (set here to use the default duration by omitting the `duration:` parameter), we set the node reference's `.innerHTML` property to something new, and fade it back in, again using the default duration.
 
 Animating CSS Properties
 ------------------------
@@ -310,8 +310,8 @@ In addition to generic animations, Dojo provides shorthand helper functions for 
 Core Animations: Advanced helpers
 =================================
 
-Above the Base Animations (those contained entirely within dojo.js), there are several modules 
-available within the toolkit for advanced animation control. 
+Above the Base Animations (those contained entirely within dojo.js), there are several modules
+available within the toolkit for advanced animation control.
 
 To use these extended functions, you must include the `dojo.fx` module:
 
@@ -329,7 +329,7 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 +**Method**                     |**Usage**                                                                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | fadeIn                        |require(["**dojo/_base/fx**"],function(fx){                                                 |
-|                               |fx.fadeIn("SomeNode");});                                                                   | 
+|                               |fx.fadeIn("SomeNode");});                                                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | fadeOut                       |require(["**dojo/_base/fx**"],function(fx){                                                 |
 |                               |fx.fadeIn("SomeNode");});                                                                   |
@@ -356,14 +356,14 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
     //Dojo < 1.7
     dojo.require("dojo.fx");
 
-The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`. 
+The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`.
 
 
 =================================
 Chaining and Combining Animations
 =================================
 
-Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of animations in an array. 
+Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of animations in an array.
 
 `combine` merges the array of animations them into one animation instance to control them all in parallel, whereas `chain` merges the animations into a single animation, playing back each of the animations in series, or one right after the other.
 
@@ -496,7 +496,7 @@ Chain works in much the same way - though plays each animation one right after t
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx) {
 	coreFx.chain([
-		fx.fadeIn({ node: "foo" }), 
+		fx.fadeIn({ node: "foo" }),
 		fx.fadeIn({ node: "bar" })
 	]).play();
  });
@@ -506,11 +506,11 @@ Chain works in much the same way - though plays each animation one right after t
 
     //Dojo < 1.7
     dojo.fx.chain([
-        dojo.fadeIn({ node: "foo" }), 
+        dojo.fadeIn({ node: "foo" }),
         dojo.fadeIn({ node: "bar" })
     ]).play();
 
-All of the same patterns apply to chain as to other animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus. 
+All of the same patterns apply to chain as to other animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus.
 
 combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
 
@@ -548,7 +548,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
     // combine and play any available animations waiting
     dojo.fx.combine(anims).play();
 
-Obviously, any logic for determining if a node should participate in an animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list. 
+Obviously, any logic for determining if a node should participate in an animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list.
 
 
 ================
@@ -569,6 +569,6 @@ As mentioned above, the dojox/fx module provides additional effects over and bey
 Animation in Dojo 1.5 widgets
 =============================
 
-Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. 
+Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3.
 
 See details on application of animation in specific Digits in :ref:`Themes and theming <dijit/themes>`.

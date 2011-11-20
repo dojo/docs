@@ -101,7 +101,7 @@ In AMD syntax:
 
 .. code-block :: javascript
 
-      require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"], 
+      require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
         function(Chart, Default, Lines, ready){
         ready(function(){
   	  var chart1 = new Chart("chartamd");
@@ -138,8 +138,8 @@ And here comes an example:
   :linenos:
 
   var chart = new dojox.charting.Chart("test", {
-    title: "Production(Quantity)", 
-    titlePos: "bottom", 
+    title: "Production(Quantity)",
+    titlePos: "bottom",
     titleGap: 25,
     titleFont: "normal normal normal 15pt Arial",
     titleFontColor: "orange"
@@ -1053,11 +1053,11 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
   chart.addAxis("y", {vertical: true});
   chart.addPlot("default", {type: "Columns", enableCache: true});
   chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.MouseIndicator(chart, "default", { series: "Series A", 
-      font: "normal normal bold 12pt Tahoma",	
+  new dojox.charting.action2d.MouseIndicator(chart, "default", { series: "Series A",
+      font: "normal normal bold 12pt Tahoma",
       fillFunc: function(v){
 	return v.y>55?"green":"red";
-      }, 	
+      },
       labelFunc: function(v){
         return "x: "+v.x+", y:"+v.y;
       }});
@@ -1133,8 +1133,8 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
   chart.addAxis("y", {vertical: true});
   chart.addPlot("default", {type: "Columns", enableCache: true});
   chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.TouchIndicator(chart, "default", { 
-     series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma", 
+  new dojox.charting.action2d.TouchIndicator(chart, "default", {
+     series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma",
      fillFunc: function(v1, v2){
 	if(v2){
 	  return v2.y>v1.y?"green":"red";

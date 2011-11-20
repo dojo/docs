@@ -232,7 +232,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
                     <label for="dob">Order
                 </td>
                 <td>
-                    <input type="radio" name="order" value="Food"> Food  
+                    <input type="radio" name="order" value="Food"> Food
                     <input type="radio" name="order" value="Drinks"> Drinks
                 </td>
             </tr>

@@ -151,13 +151,13 @@ The v1.6- build system rewrites the module like this:
 
   dojo.loader.define(
     // [1] the provide(s) included in this module
-    ["my.module"],  
+    ["my.module"],
 
     // [2] the require(s) included in this module
-    ["your.module"], 
+    ["your.module"],
 
 	// [3] the module's code
-    function(){     
+    function(){
       dojo.provide("my.module");
       dojo.require("your.module");
       doSomethingSpectaculor();
@@ -180,7 +180,7 @@ from Javascript text without fully parsing the text! And without removing commen
 "discover" loader API applications that aren't really there and/or miss others.
 
 Be that as it may, the v1.6- cross-domain loader removes comments with a regular expression, sniffs for legacy loader
-API applications, and constructs a "built" module on-the-fly. 
+API applications, and constructs a "built" module on-the-fly.
 
 Note that the cross-domain loader goes in and out of cross-domain mode. As long as only local modules are being loaded,
 it operates just like the normal synchronous loader. But once a single resource is dojo.require'd that exists
@@ -224,8 +224,8 @@ A sketch of the v1.6- built version of this module suitable for cross-domain loa
     ["dojox.gfx"],
   
     // [2] the dojo.require(s) included in this module
-    [ 
-      "dojox.gfx.matrix", 
+    [
+      "dojox.gfx.matrix",
       "dojox.gfx._base",
       [dojox.gfx.renderer == "svg", "dojox.gfx.svg"],
       [dojox.gfx.renderer == "vml", "dojox.gfx.vml"],
@@ -234,7 +234,7 @@ A sketch of the v1.6- built version of this module suitable for cross-domain loa
     ],
 
     // [3] the module's code
-    function(){ 
+    function(){
     }
   );
 
@@ -248,7 +248,7 @@ dojo.loadInit and/or dojo.require[After]If applications while in cross-domain mo
 
 There is one last, obscure API contained in the legacy loader to discuss: so-called "multi-version" support. The key
 capability of the multi-version machinery is the ability to load two or more independent instances of dojo, dijit,
-dojox, or other library(s) expressed in the legacy API on the same page. 
+dojox, or other library(s) expressed in the legacy API on the same page.
 
 Here's how it works. Notice that the legacy API depends on top-level objects (like dojo, dijit, and dojox) existing in
 the global namespace. So the machinery must have the ability to "relocate" new instances of a particular top-level
@@ -272,7 +272,7 @@ could be rewritten by the build system to relocate it into acmeUtils:
     [],
 
     // [3] the module's code
-    function(dojo){ 
+    function(dojo){
       // the dojo/behavior module, completely unedited
 	  dojo.behavior = new function(){
         //...
@@ -320,7 +320,7 @@ asynchronously. Further, when some or all of the modules are cross domain, the l
 cross-domain mode--which is actually asynchronous. Finally, the loader must provide support for injecting legacy
 elements with a script element to facilitate cross-domain loading.
 
-The v1.7+ loader has two basic modes of operation: 
+The v1.7+ loader has two basic modes of operation:
 
 * asynchronous: modules are loaded asynchronously as per the AMD specification. The loader is put in the asynchronous
   mode by setting the configuration variable async to truthy but not "sync" or "legacyAsync". This mode was described
@@ -618,7 +618,7 @@ this:
       dojo.requireIf(my.module.switch==2, my.module2);
   });
 
-  // rewritten my.module  
+  // rewritten my.module
   define(["myDojo","dojo/loadInit!*loadInit_8"], function(dojo){
     dojo.provide("my.module");
     dojo.require("your.module");

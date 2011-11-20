@@ -12,7 +12,7 @@ dojox.encoding.digests
 
 DojoX Encoding includes a set of *hashing* algorithms, also known as digests, to aid with common hashing tasks
 (such as CRC checks, password validation, etc.).  All hashing algorithms (MD5 and SHA1 at the time of writing,
-with plans for the SHA2 family of digests) follow the same API, so that you can swap out algorithms with 
+with plans for the SHA2 family of digests) follow the same API, so that you can swap out algorithms with
 relative ease.
 
 Each digest exposes a single function, with a private HMAC function as well, such as the following:

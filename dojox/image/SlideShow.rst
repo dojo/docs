@@ -37,7 +37,7 @@ Setting the Display Interval
 ----------------------------
 
 It is possible to define the number of seconds between image transitions when running an automated slideshow. To do this,
-set the slideshowInterval attribute. For example, to set a three second interval between changing the displayed image, 
+set the slideshowInterval attribute. For example, to set a three second interval between changing the displayed image,
 use the code below
 
 .. code-block :: javascript
@@ -61,7 +61,7 @@ For example:
 .. code-block :: javascript
  :linenos:
  
-  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" 
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
      data-dojo-props="titleTemplate:'My title is: @title, this is image @current out of @total'">
   </div>
 
@@ -69,16 +69,16 @@ For example:
 Setting the Maximum Image Dimensions
 ------------------------------------
 
-To override the default height and width of the widget, set the imageHeight and imageWidth attributes. 
-Images are automatically scaled to fit either the max height or width, depending on which of their 
-dimensions is greater. 
+To override the default height and width of the widget, set the imageHeight and imageWidth attributes.
+Images are automatically scaled to fit either the max height or width, depending on which of their
+dimensions is greater.
 
 
 
 .. code-block :: javascript
  :linenos:
  
-  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" 
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
      data-dojo-props="imageWidth:600, imageHeight:300">
   </div>
 
@@ -117,7 +117,7 @@ Setting the Data Store on the Slideshow
 ---------------------------------------
 
 The Slideshow widget reads the image information from dojo.data objects. To set the data source for the Slideshow
-widget, first create one of the available data stores, such as the dojo.data.ItemFileReadStore or 
+widget, first create one of the available data stores, such as the dojo.data.ItemFileReadStore or
 dojox.data.FlickrRestStore. Next, create a request object, which optionally contains a query.
 
 .. code-block :: javascript
@@ -127,15 +127,15 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
    <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
    <script type="text/javascript">
       dojo.addOnLoad(function() {
-         //Define the request, saying that 20 records should be fetched at a time, 
+         //Define the request, saying that 20 records should be fetched at a time,
          //and to start at record 0
       var request= {count:20, start:0};
 
-      //Tell the widget to request the "large" parameter, as different 
+      //Tell the widget to request the "large" parameter, as different
       //stores may use different parameter names
       var itemNameMap = {imageLargeAttr: "large"};
 
-      //Call the setDataStore function, passing it the data store, the request object, 
+      //Call the setDataStore function, passing it the data store, the request object,
       //and the name map.
       dijit.byId('slideshow1').setDataStore(imageItemStore, request, itemNameMap);
    });
@@ -166,10 +166,10 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
  :linenos:
 
   dojo.subscribe(
-     dijit.byId('slideshow1').getShowTopicName(), 
+     dijit.byId('slideshow1').getShowTopicName(),
      function(packet) {
-     alert("Got index: " + packet.index 
-           + ", url: " + packet.url 
+     alert("Got index: " + packet.index
+           + ", url: " + packet.url
            + ", and title: " + packet.title);
   });
 
@@ -181,7 +181,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
  :linenos:
 
   dojo.subscribe(
-     dijit.byId('slideshow1').getLoadTopicName(), 
+     dijit.byId('slideshow1').getLoadTopicName(),
      function(index) {
         alert("Got index: " +index);
   });
@@ -193,9 +193,9 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
   	<script type="text/javascript">
 		dojo.require("dojox.image.SlideShow");
-		dojo.require("dojox.data.FlickrRestStore");		
+		dojo.require("dojox.data.FlickrRestStore");
 			
-		dojo.addOnLoad(function(){		
+		dojo.addOnLoad(function(){
 			
 			//INitialize the store with a FlickrRestStore
 			var flickrRestStore = new dojox.data.FlickrRestStore();

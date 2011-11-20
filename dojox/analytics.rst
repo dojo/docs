@@ -18,16 +18,16 @@ Analytics is an analytic and client monitoring system. Including the base analyt
 Introduction
 ============
 
-Plugins included at this time: 
+Plugins included at this time:
 
 * dojo - reports dojo startup  collected information
 * window - reports available window information to the server
-* mouseOver - allows periodic sampling of mouseOver 
+* mouseOver - allows periodic sampling of mouseOver
 * mouseClick - reports any mouse clicks to the server
-* idle - reports idle/activity 
-* consoleMessages - reports console.* messages to the server	
+* idle - reports idle/activity
+* consoleMessages - reports console.* messages to the server
 
-Additionally, a :ref:`Google Ananlytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code. 
+Additionally, a :ref:`Google Ananlytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code.
 
 
 =====
@@ -46,15 +46,15 @@ Usage
           // include the analytics system
           dojo.require("dojox.analytics");
 
-          // this plugin returns the informatin dojo collects when it launches 
+          // this plugin returns the informatin dojo collects when it launches
 	  dojo.require("dojox.analytics.plugins.dojo");
 
 	  // this plugin return the information the window has when it launches
 	  // and it also ties to a few events such as window.option
 	  dojo.require("dojox.analytics.plugins.window");
 
-	  // this plugin tracks console. message, It logs console.error, warn, and 
-	  // info messages to the tracker.  It also defines console.rlog() which 
+	  // this plugin tracks console. message, It logs console.error, warn, and
+	  // info messages to the tracker.  It also defines console.rlog() which
 	  // can be used to log only to the server.  Note that if isDebug() is disabled
 	  // you will still see the console messages on the sever, but not in the actual
 	  // browser console.
@@ -77,7 +77,7 @@ Available dojoConfig Options
 ============================
 
 Base
-==== 
+====
  * sendInterval - The time between posts of new data to the server. Data will be queued and then sent off when the interval has passed. Defaults to 5000 ms
  * inTransitRetry - If the interval has passed and the client already has an in progress transmission, the client will back off this amount of time. Defaults to 200ms
  * dataUrl - The url you wish to send the data logs to

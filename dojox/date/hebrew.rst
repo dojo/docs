@@ -30,16 +30,16 @@ Code snippet below illustrates most common usage of Hebrew calenadar.
  :linenos:
 
   <script type="text/javascript">
-    dojo.require("dojox.date.hebrew");     
+    dojo.require("dojox.date.hebrew");
     dojo.require("dojox.date.hebrew.Date");
-    dojo.require("dojox.date.hebrew.locale"); 
+    dojo.require("dojox.date.hebrew.locale");
   </script>
   <html><title> Hebrew calendar </title><body>
-    <input id="hebcal" 
-       name="noDOMvalue" 
-       value="2009-03-10" 
-       type="text" 
-       dojoType="dijit.form.DateTextBox" 
+    <input id="hebcal"
+       name="noDOMvalue"
+       value="2009-03-10"
+       type="text"
+       dojoType="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
        lang="en"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
@@ -53,7 +53,7 @@ Hebrew calenadar package comprises of following three files:
 
     * dojox.date.hebrew.Date implements logic of Hebrew calendar and provides support for date conversion between Gregorian and Hebrew calendars
     * dojox.date.hebrew.locale includes implementation of functions responsible for conversion between two possible representations of Hebrew date: String representation and Date object. It also provides date formatting capabilities.
-    * dojox.date.hebrew.numerals - provides support for Hebrew numerals. 
+    * dojox.date.hebrew.numerals - provides support for Hebrew numerals.
 
 Hebrew calendar and DateTextBox
 -------------------------------
@@ -75,13 +75,13 @@ The code snippet below illustrates conversion between two possible representatio
  :linenos:
 
   <script type="text/javascript">
-   var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'}; 
+   var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'};
 
    // converts string representation of Hebrew date to Date object
-   var dateHeb = dojox.date.hebrew.locale.parse("י"ד אדר שני תשס"ט", options); 
+   var dateHeb = dojox.date.hebrew.locale.parse("י"ד אדר שני תשס"ט", options);
 
    // formats Hebrew date object and serialize it into a string
-   var dateHebString = dojox.date.hebrew.locale.format(dateHeb,options); 
+   var dateHebString = dojox.date.hebrew.locale.format(dateHeb,options);
   </script>
 
 
@@ -95,16 +95,16 @@ Code snippet below illustrates usage of Hebrew calendar in the context of graphi
  :linenos:
 
   <script type="text/javascript">
-    dojo.require("dojox.date.hebrew");     
+    dojo.require("dojox.date.hebrew");
     dojo.require("dojox.date.hebrew.Date");
-    dojo.require("dojox.date.hebrew.locale"); 
+    dojo.require("dojox.date.hebrew.locale");
   </script>
   <html><title> Hebrew calendar </title><body>
-    <input id="hebcal" 
-       name="noDOMvalue" 
-       value="2009-03-10" 
-       type="text" 
-       dojoType="dijit.form.DateTextBox" 
+    <input id="hebcal"
+       name="noDOMvalue"
+       value="2009-03-10"
+       type="text"
+       dojoType="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
        lang="en"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"

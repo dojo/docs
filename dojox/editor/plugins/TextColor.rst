@@ -113,7 +113,7 @@ Basic Usage: foreColor (Text Color)
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -165,7 +165,7 @@ Basic Usage: hiliteColor (Text Background Color)
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -217,7 +217,7 @@ Basic Usage: Both foreground and background color buttons together
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

@@ -14,14 +14,14 @@ We can use dojo.extend to extend functionality into existing classes. Consider t
   require(["dojo/_base/lang", "dijit/TitlePane"], function(lang, TitlePane) {
     lang.extend(TitlePane, {
       randomAttribute:"value"
-    }); 
+    });
   });
 
   // Dojo < 1.7
   dojo.require("dijit.TitlePane");
   dojo.extend(dijit.TitlePane, {
       randomAttribute:"value"
-  }); 
+  });
 
 The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the node will be recognized, as in the interest of performance, only declared members are mixed as part of the parsing process. Before the above dojo.extend() call, this sample would not recognize the follow markup:
 
@@ -30,7 +30,7 @@ The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the no
   
      <div data-dojo-type="dijit.TitlePane" data-dojo-props="randomAttribute:'newValue'"></div>
 
-After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype). 
+After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype).
 
 Extending _Widget
 -----------------
@@ -52,7 +52,7 @@ A potentially confusing result of the above actually provides us a lot of flexib
       region:"center"
   });
 
-The side-effect of this is a documentation nightmare. Now ``every`` Dijit appears to have a region variable, when in fact it is just there for the benefit of BorderContainer. 
+The side-effect of this is a documentation nightmare. Now ``every`` Dijit appears to have a region variable, when in fact it is just there for the benefit of BorderContainer.
 
 Example :  dojo.extend vs dojo.mixin
 -------------------------------------

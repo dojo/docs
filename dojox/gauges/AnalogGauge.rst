@@ -5,7 +5,7 @@ dojox.gauges.AnalogGauge
 
 :Status: Draft
 :Version: 1.2
-:Project owner: 
+:Project owner:
 :Available: since V?
 
 .. contents::
@@ -93,13 +93,13 @@ A partial circle gauge with two indicators (programmatic)
           },
           indicators: [
             new dojox.gauges.AnalogArrowIndicator({
-              value:17, 
+              value:17,
               width: 3,
-              hover:'Value: 17', 
+              hover:'Value: 17',
               title: 'Value'
            }),
            new dojox.gauges.AnalogLineIndicator({
-             value:6, 
+             value:6,
              color:'#D00000',
              width: 3,
              hover:'Target: 6',

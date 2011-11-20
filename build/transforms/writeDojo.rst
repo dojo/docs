@@ -169,7 +169,7 @@ as a replacement for any embedded version numbers found in the layer. The proper
 Where major, minor, and patch must all be positive integers and flag can be anything. Any less significant subset may be
 ommitted; ommitted minor and patch segments default to "0"; an ommitted flag segment defaults to an empty string.
 
-If present, the dojo/dojo layer is searched for the pattern 
+If present, the dojo/dojo layer is searched for the pattern
 
   ``/major:\s*\d*,\s*minor:\s*\d*,\s*patch:\s*\d*,\s*flag:\s*".*?"\s*,/``
 
@@ -199,7 +199,7 @@ Profile Knobs
   resulting loader will not automatically consume a global ``dojoConfig``, ``djConfig``, or ``require`` loader
   configuration object.
 
-``version`` (default = *the version given by the dojo package*) 
+``version`` (default = *the version given by the dojo package*)
   * [*string*] A string with the format *major* **.** minor* **.** *patch* **.** *flag*, where major, minor, and patch
     must all be positive integers and flag can be anything. Any less significant subset may be ommitted; ommitted minor
     and patch segments default to "0"; an ommitted flag segment defaults to an empty string.

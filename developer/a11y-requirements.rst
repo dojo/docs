@@ -42,15 +42,15 @@ Interaction does NOT rely on color alone
 
 This is perhaps the most confusing requirement and most difficult to describe. It tries to address color blindness issues where a person may not be able to perceive certain colors. It does not mean you can not use color! However, when you use color to distinguish behavior such as active, selected, or focused elements, there must be enough contrast between the colors used for the difference to be apparent if the color itself can not be seen. A few examples are in order.
 
-Here is a dojo tab container displayed using the blue soria theme. The first tab is active and has a darker blue background color. The non-active tabs are displayed in the lighter blue. Since there is a difference in contrast, the use of the background color is acceptable. 
+Here is a dojo tab container displayed using the blue soria theme. The first tab is active and has a darker blue background color. The non-active tabs are displayed in the lighter blue. Since there is a difference in contrast, the use of the background color is acceptable.
 
 .. image:: soriatabcontainer.png
 
-If color is removed, the difference between the active and non-active tabs can still be distinguished as demonstrated in the image below. 
+If color is removed, the difference between the active and non-active tabs can still be distinguished as demonstrated in the image below.
 
 .. image:: soriatabcontainergrey.png
 
-The following two images show another example using the dojo menu in the tundra theme. A blue background is applied to to the menu item with focus. 
+The following two images show another example using the dojo menu in the tundra theme. A blue background is applied to to the menu item with focus.
 
 .. image:: tundramenu.png
 

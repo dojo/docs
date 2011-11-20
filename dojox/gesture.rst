@@ -159,7 +159,7 @@ The above parameters are supposed to be only changed seldomly with the following
             //use it
             on(node, myTap, function(e){});
             on(node, myTap.hold, function(e){});
-            on(node, myTap.doubletap, function(e){});            
+            on(node, myTap.doubletap, function(e){});
         }
   </script>
   
@@ -235,7 +235,7 @@ dy                  Delta distance on Y axis, dy < 0 means is moving up, dy > 0 
 Bubble the gesture event
 =============================
 
-A gesture event behaves all the same as a native Event. Besides getting useful informaton from the fired gesture event, we can also stop bubbling it. 
+A gesture event behaves all the same as a native Event. Besides getting useful informaton from the fired gesture event, we can also stop bubbling it.
 
 The following sample shows how we can easily stop a gesture event from bubbling to parent node:
 
@@ -264,7 +264,7 @@ Write a new gesture
 
 It's very easy to customize a new gesture with following steps:
 
-- Extend dojox/gesture/Base 
+- Extend dojox/gesture/Base
 - Overwrite phase handlers on demand - "press() | move() | release() | cancel()"
 - Recognize and fire gesture events during different phases
 
@@ -304,7 +304,7 @@ Then we can define the rotate gesture like:
               this.fire(node, {type: "rotate.end", ...});
             },
             cancel: function(data, e){
-              // clean up 
+              // clean up
             }
           });
 
@@ -319,7 +319,7 @@ Then we can define the rotate gesture like:
 ====
 Demo
 ====
-The `Touch & Gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture. 
+The `Touch & Gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture.
 
 Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
   
@@ -335,7 +335,7 @@ dojox/gesture is working well with:
 
 2. Touch devices
 - Android 2.2/2.3
-- iOS 3/4  
+- iOS 3/4
 
 
 ============

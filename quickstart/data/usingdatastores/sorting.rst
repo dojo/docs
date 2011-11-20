@@ -14,7 +14,7 @@ Items are, in general, returned in an indeterminate order. This isn't always wha
 
 The sort array will look something like the following example:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   var sortKeys = [{attribute: "aisle", descending: true}];
 
@@ -46,11 +46,11 @@ Showing how sort attributes affect ordering
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var storeData = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -60,7 +60,7 @@ Showing how sort attributes affect ordering
         ]};
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -69,7 +69,7 @@ Showing how sort attributes affect ordering
              //Callback to perform an action when the data items are starting to be returned:
              function clearSortedList(size, request) {
                var list = dojo.byId("sortedList");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -78,7 +78,7 @@ Showing how sort attributes affect ordering
 
              function clearUnSortedList(size, request) {
                var list = dojo.byId("unSortedList");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -88,7 +88,7 @@ Showing how sort attributes affect ordering
              //Callback for processing a returned list of items.
              function gotSortedItems(items, request) {
                var list = dojo.byId("sortedList");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -110,7 +110,7 @@ Showing how sort attributes affect ordering
              //Callback for processing a returned list of unsorted items.
              function gotUnSortedItems(items, request) {
                var list = dojo.byId("unSortedList");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -134,10 +134,10 @@ Showing how sort attributes affect ordering
                 alert("lookup failed.");
              }
              
-             //Fetch the data in a sorted order. 
+             //Fetch the data in a sorted order.
              foodStore.fetch({onBegin: clearSortedList, onComplete: gotSortedItems, onError: fetchFailed, sort: [{ attribute: "aisle"},{attribute: "name"}]});
 
-             //Fetch the data in an unsorted order. 
+             //Fetch the data in an unsorted order.
              foodStore.fetch({onBegin: clearUnSortedList, onComplete: gotUnSortedItems, onError: fetchFailed});
            }
            //Link the click event of the button to driving the fetch.
@@ -147,7 +147,7 @@ Showing how sort attributes affect ordering
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to show sorted and unsorted lists!</div>

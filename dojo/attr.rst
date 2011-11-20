@@ -56,7 +56,7 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(domAttr){      
+  require(["dojo/dom-attr"], function(domAttr){
       // get node title
       domAttr.get(node, "title");
       // set node title
@@ -67,7 +67,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.att
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){      
+  require(["dojo"], function(dojo){
       // get node title
       dojo.attr(node, "title");
       // set node title

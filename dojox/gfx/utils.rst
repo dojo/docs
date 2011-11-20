@@ -31,7 +31,7 @@ Provided functions
 
   Rebuild the dojox.gfx.Surface object from the provided JS representation.
 
-* :ref:`dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>` 
+* :ref:`dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>`
 
   Serialize the passed surface object to SVG text.
 

@@ -21,16 +21,16 @@ We'll use the programmatic method here. First we'll need a location on-disk for 
 
   dojo.provide("dojox.widget.FileInput");
   dojo.require("dijit.form._FormWidget");
-  dojo.require("dijit._Templated"); 
+  dojo.require("dijit._Templated");
   dojo.declare("dojox.widget.FileInput",
         [dijit.form._FormWidget,dijit._Templated],
         {
         // summary: A styled input type="file"
         //
         // description: A input type="file" form widget, with a button for uploading to be styled via css,
-        //      a cancel button to clear selection, and FormWidget mixin to provide standard    
-        //      dijit.form.Form 
-        //      
+        //      a cancel button to clear selection, and FormWidget mixin to provide standard
+        //      dijit.form.Form
+        //
   });
 
 Next we'll need a template, a label for our submit button, a label for our cancel button, and the name of the input:
@@ -60,14 +60,14 @@ As we said earlier, it's preferrable to separate the template out into a differe
 .. code-block :: html
 
   <div class="dijitFileInput">
-        <input id="${id}" class="dijitFileInputReal" type="file" 
+        <input id="${id}" class="dijitFileInputReal" type="file"
                    data-dojo-attach-point="fileInput" name="${name}" />
         <div class="dijitFakeInput">
-                <input class="dijitFileInputVisible" type="text" 
+                <input class="dijitFileInputVisible" type="text"
                            data-dojo-attach-point="focusNode, inputNode" />
-                <span class="dijitFileInputText" 
+                <span class="dijitFileInputText"
                            data-dojo-attach-point="titleNode">${label}</span>
-                <span class="dijitFileInputButton" data-dojo-attach-point="cancelNode" 
+                <span class="dijitFileInputButton" data-dojo-attach-point="cancelNode"
                         data-dojo-attach-event="onclick:_onClick">
                         ${cancelText}
                 </span>
@@ -93,7 +93,7 @@ OK, let's make sure our widget starts up, and looks right. Let's make some simpl
   .dijitFileInput {
         position:relative;
         height:1.3em;
-        padding:2px;  
+        padding:2px;
   }
   .dijitFileInputReal {
         position:absolute;
@@ -104,7 +104,7 @@ OK, let's make sure our widget starts up, and looks right. Let's make some simpl
   .dijitFileInputButton,
   .dijitFileInputText {
         border:1px solid #333;
-        padding:2px 12px 2px 12px; 
+        padding:2px 12px 2px 12px;
         cursor:pointer;
   }
   .dijitFileInputButton {
@@ -154,10 +154,10 @@ So next, we need a reset button. Unfortunately because we're faking HTML out a b
         //      security reasons, we destroy it, and add a new one in it's place.
         // Disconnect the listeners so they're not orphaned, and cleanly remove the tag
         dojo.disconnect(this._listener);
-        dojo.disconnect(this._keyListener); 
+        dojo.disconnect(this._keyListener);
         this.domNode.removeChild(this.fileInput);
         // Fade our the cancel button so we no longer can press it
-        dojo.fadeOut({ node: this.cancelNode, duration:275 }).play(); 
+        dojo.fadeOut({ node: this.cancelNode, duration:275 }).play();
         // Create an identical input tag
         this.fileInput = document.createElement('input');
         this.fileInput.setAttribute("type","file");
@@ -168,8 +168,8 @@ So next, we need a reset button. Unfortunately because we're faking HTML out a b
         this.domNode.appendChild(this.fileInput);
         // Finally, connect the listeners to this new node.
         this._keyListener = dojo.connect(this.fileInput,"onkeyup",this,"_matchValue");
-        this._listener = dojo.connect(this.fileInput,"onchange",this,"_matchValue"); 
-        this.inputNode.value = ""; 
+        this._listener = dojo.connect(this.fileInput,"onchange",this,"_matchValue");
+        this.inputNode.value = "";
   }
 
 Wiring It All Together
@@ -192,12 +192,12 @@ The real file input tag in the DOM goes away our templated input gets put in it'
         <style type="text/css">
                 @import "../../../dojo/resources/dojo.css";
                 @import "../../../dijit/themes/dijit.css";
-                @import "../FileInput/FileInput.css"; 
+                @import "../FileInput/FileInput.css";
         </style>
-        <script type="text/javascript" src="../../../dojo/dojo.js" 
+        <script type="text/javascript" src="../../../dojo/dojo.js"
                    data-dojo-config="isDebug:true, parseOnLoad: true"></script>
         <script type="text/javascript">
-                dojo.require("dojox.widget.FileInput"); 
+                dojo.require("dojox.widget.FileInput");
                 dojo.require("dojo.parser");    // scan page for widgets and instantiate them
         </script>
   </head>
@@ -223,42 +223,42 @@ Because we're bigs fan of re-using code, we can steal some CSS stuff from tundra
   }
   .tundra .dijitFakeInput input {
         font-size: inherit;
-        background:#fff 
-            url("../../../dijit/themes/tundra/images/validationInputBg.png") 
+        background:#fff
+            url("../../../dijit/themes/tundra/images/validationInputBg.png")
             repeat-x top left;
         border:1px solid #9b9b9b;
         line-height: normal;
         padding: 0.2em 0.3em;
   }
-  .tundra .dijitFileInputButton, 
+  .tundra .dijitFileInputButton,
   .tundra .dijitFileInputText {
         border:1px solid #9b9b9b;
         padding:2px 12px 2px 12px; /* .3em .4em .2em .4em; */
-        background:#e9e9e9 
-            url("../../../dijit/themes/tundra/images/buttonEnabled.png") 
+        background:#e9e9e9
+            url("../../../dijit/themes/tundra/images/buttonEnabled.png")
             repeat-x top;
   }
   
   /* Soria */
   .soria .dijitProgressOverlay {
         border:1px solid #333;
-        background-color:#cad2de; 
+        background-color:#cad2de;
   }
   .soria .dijitFakeInput input {
         border:1px solid #333;
-        background:#fff 
-            url("../../../dijit/themes/soria/images/gradientInverseTopBg.png") 
+        background:#fff
+            url("../../../dijit/themes/soria/images/gradientInverseTopBg.png")
             repeat-x top left;
         line-height:normal;
-        background-position:0 -30px; 
+        background-position:0 -30px;
         padding:0.2em 0.3em;
   }
   .soria .dijitFileInputButton,
   .soria .dijitFileInputText {
         border:1px solid #333;
         padding:2px 12px 2px 12px;
-        background:#b7cdee 
-            url('../../../dijit/themes/soria/images/gradientTopBg.png') repeat-x; 
+        background:#b7cdee
+            url('../../../dijit/themes/soria/images/gradientTopBg.png') repeat-x;
   }
 
 

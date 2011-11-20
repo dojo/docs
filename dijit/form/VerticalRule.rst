@@ -8,7 +8,7 @@ dijit.form.VerticalRule
 
 :Status:
 :Version:
-:Authors: 
+:Authors:
 
 This widget is used primarily for creating Hash marks for the :ref:`dijit.form.VerticalSlider <dijit/form/Slider>` widget. The rule is currently displayed to the right of the slider, if present. The number of hash marks to be displayed is to be specified through the 'count' attribute.
 
@@ -22,7 +22,7 @@ Standalone Ruler
   .. cv:: javascript
 
     <script type="text/javascript">
-            dojo.require("dijit.form.VerticalRule");  
+            dojo.require("dijit.form.VerticalRule");
             dojo.require("dijit.form.VerticalRuleLabels");
     </script>
 

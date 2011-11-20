@@ -38,7 +38,7 @@ an alias to ``dojox.color`` and ``dojox.color.Color``:
 
 Note that these are the most common color models (other than RGB, which is implemented by dojo.Color);
 the methods should be self-explanatory.  To create a ``dojo.Color`` or ``dojox.color.Color`` instance,
-use the *from* methods, directly on ``dojox.color``; to convert an existing ``dojo.Color`` or 
+use the *from* methods, directly on ``dojox.color``; to convert an existing ``dojo.Color`` or
 ``dojox.color.Color`` object to a specific model, use the *to* methods.
 
 For more information on the Palette, please visit the :ref:`Palette <dojox/color/Palette>` page.

@@ -10,7 +10,7 @@ dojox.editor.plugins.PageBreak
 .. contents::
     :depth: 2
 
-Have you ever wanted to pull your hair out when printing an HTML document because it would page break at bad locations?  There is actually a little-known CSS style that allows **you** to set a point at which printing should page break the document, the 'page-break-after: always' style.  This feature can be important when editing documents on the web, so it's very useful in some cases to be able to insert a page break on demand.  This plugin provides such a function to the dijit.Editor.   
+Have you ever wanted to pull your hair out when printing an HTML document because it would page break at bad locations?  There is actually a little-known CSS style that allows **you** to set a point at which printing should page break the document, the 'page-break-after: always' style.  This feature can be important when editing documents on the web, so it's very useful in some cases to be able to insert a page break on demand.  This plugin provides such a function to the dijit.Editor.
 
 ========
 Features
@@ -58,7 +58,7 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 Limitations
 ===========
 
-The page break plugin only has one limitation coded into it, it will not allow page breaks to be inserted in block elements like <ul> and <ol>, because it tends to make the page view look a bit odd.  
+The page break plugin only has one limitation coded into it, it will not allow page breaks to be inserted in block elements like <ul> and <ol>, because it tends to make the page view look a bit odd.
 
 ========
 Examples
@@ -106,7 +106,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

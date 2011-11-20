@@ -64,7 +64,7 @@ NodeList Morphing
 
 An ext-dojo module exists for these functions as well. They can be included into :ref:`dojo.NodeList <dojo/NodeList>` by requiring the appropriate module:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   dojo.require("dojox.fx.ext-dojo.NodeList-style");

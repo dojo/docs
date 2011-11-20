@@ -52,7 +52,7 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/dom-prop"], function(domProp){   
+  require(["dojo/dom-prop"], function(domProp){
     // Get the property of a node
     domProp.get("nodeId", "foo");
 
@@ -65,7 +65,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.pro
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     // Get the property of a node
     dojo.prop("nodeId", "foo");
 
@@ -125,12 +125,12 @@ Set the tab index
  :linenos:
 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
-  require(["dojo/dom-prop"], function(domProp){   
+  require(["dojo/dom-prop"], function(domProp){
     domProp.set("nodeId", "tabIndex", 3);
   });
 
   // Dojo 1.7+ (AMD), loading Dojo base
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     dojo.prop("nodeId", "tabIndex", 3);
   });
 
@@ -146,7 +146,7 @@ Set multiple values at once
  :linenos:
 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
-  require(["dojo/dom-prop"], function(domProp){   
+  require(["dojo/dom-prop"], function(domProp){
     domProp.set("formId", {
       "foo": "bar",
       "tabIndex": -1,
@@ -159,7 +159,7 @@ Set multiple values at once
   });
 
   // Dojo 1.7+ (AMD), loading Dojo base
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     dojo.prop("formId", {
       "foo": "bar",
       "tabIndex": -1,
@@ -189,7 +189,7 @@ Style special case
  :linenos:
 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
-  require(["dojo/dom-prop"], function(domProp){   
+  require(["dojo/dom-prop"], function(domProp){
     domProp.set("someNode",{
       id:"bar",
       style:{
@@ -199,7 +199,7 @@ Style special case
   });
 
   // Dojo 1.7+ (AMD), loading Dojo base
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     dojo.prop("someNode",{
       id:"bar",
       style:{
@@ -231,7 +231,7 @@ Set style as an object hash of styles
   });
 
   // Dojo 1.7+ (AMD), loading Dojo base
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
      var obj = { color:"#fff", backgroundColor:"#000" };
      dojo.prop("someNode", "style", obj);
      dojo.style("someNode", obj);

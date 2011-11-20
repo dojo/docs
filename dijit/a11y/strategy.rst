@@ -42,12 +42,12 @@ This span has a style of .closeText which is defined as follows:
         position:absolute;
   }
 
-Notice that the closeText style is encapsulated within .dijitDialog so this style applies when it is cascaded within an element which has the 
+Notice that the closeText style is encapsulated within .dijitDialog so this style applies when it is cascaded within an element which has the
 .dijitDialog style applied. The span with .closeText applied is set to display:none. The dijit.css style sheet contains an additional style:
 
 .. code-block :: css
 
-  .dijit_a11y .dijitDialog .closeText { 
+  .dijit_a11y .dijitDialog .closeText {
         display:inline;
   }
 
@@ -70,24 +70,24 @@ One way of providing keyboard support in HTML is to use form and list elements w
 
 One of the keys to supporting the keyboard is to allow focus to be set to any element. The tabindex attribute can be used to include additional elements in the tab order and to set programmatic focus to them. This was a feature implemented in Internet Explorer that has been extended to Firefox and Mozilla. The following table outlines the use of the tabindex attribute:
 
-+------------------------+-----------------------------------+-------------------------------------+ 
++------------------------+-----------------------------------+-------------------------------------+
 |tabindex Attribute Value| Focusable via mouse or scripting  | Tab Navigation                      |
 |                        | via element.focus()               |                                     |
-+========================+===================================+=====================================+ 
-| not present            | Follow default behavior of element| Follows default behavior of element | 
++========================+===================================+=====================================+
+| not present            | Follow default behavior of element| Follows default behavior of element |
 |                        | element (only form controls and   |                                     |
 |                        | anchors receive focus)            |                                     |
-+------------------------+-----------------------------------+-------------------------------------+ 
++------------------------+-----------------------------------+-------------------------------------+
 | zero - tabindex="0"    | Yes	                             | In tab order relative to element's  |
 |                        |                                   | position in document                |
 |                        |                                   |                                     |
 +------------------------+-----------------------------------+-------------------------------------+
-| positive - tabindex="x"| Yes                               | tabindex value directly specifies   |            
+| positive - tabindex="x"| Yes                               | tabindex value directly specifies   |
 | (where x is a positive |                                   | where this element is positioned in |
 | integer between 1 and  |                                   | he tab order                        |
 | 32768)                 |                                   |                                     |
 | negative-tabindex="-1" | Yes                               | Not in tab order, author must focus |
-|                        |                                   | it with element.focus() as result of| 
+|                        |                                   | it with element.focus() as result of|
 |                        |                                   | a key press.                        |
 +------------------------+-----------------------------------+-------------------------------------+
 

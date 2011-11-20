@@ -52,7 +52,7 @@ When using AMD format in a fully baseless application, ``remove`` is accessed fr
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(domAttr){   
+  require(["dojo/dom-attr"], function(domAttr){
       domAttr.remove("model", "disabled");
   });
 
@@ -60,7 +60,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.rem
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
       dojo.removeAttr("model", "disabled");
   });
 

@@ -10,13 +10,13 @@ dijit.form.RadioButton
 .. contents::
     :depth: 2
 
-RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked. 
+RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked.
 
 =====
 Usage
 =====
 
-Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*. 
+Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
 
 **Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
 

@@ -33,7 +33,7 @@ dojo.io.iframe supported object properties
 -------------------------------------------
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**url**           |The URL to make the iframe request to.  This URL can refer to servers other than the one that originated the calling page.  | 
+|**url**           |The URL to make the iframe request to.  This URL can refer to servers other than the one that originated the calling page.  |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**handleAs**      |This parameter specifies how to handle the data returned from the server.  It usually takes values of 'text', 'xml', or     |
 |                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in that format.|
@@ -71,7 +71,7 @@ dojo.io.iframe supported object properties
 Additional Information
 ----------------------
 
-dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.  
+dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.
 
 **IMPORTANT:** For all values EXCEPT html and xml, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html (Or XML) mimetype, just return a normal HTML/XML document.  In other words, your services for JSON and Text formats should return the data wrapped as the following:
 

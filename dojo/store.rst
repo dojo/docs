@@ -61,7 +61,7 @@ transaction()                                     Starts a transaction and retur
 
 getChildren(object, options)                      Returns the children of an object. The options parameter may include the same properties as query options
 
-getMetadata(object)                               Returns any metadata about the object. 
+getMetadata(object)                               Returns any metadata about the object.
                                                   This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 ================================================  ======================================================================
 
@@ -89,14 +89,14 @@ Observing Result Sets
 
 When a store is wrapped with ``dojo.store.Observable``, one can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
-========================================================  =======================================================================  
+========================================================  =======================================================================
 Method                                                    Description
 ========================================================  =======================================================================
 observe(listener)                                         The listener function is called with following arguments:
                                                           listener(object, removedFrom, insertedInto);
                                                                       
-                                                          * The object parameter indicates the object that was create, modified, or deleted. 
-                                                          * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set). 
+                                                          * The object parameter indicates the object that was create, modified, or deleted.
+                                                          * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set).
                                                           * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
 
 close                                                     When close() is called on a result set, notifications will no longer be fired.

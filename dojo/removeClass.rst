@@ -41,17 +41,17 @@ When using AMD format in a fully baseless application, ``remove`` is accessed fr
 .. code-block :: javascript
 
   require(["dojo/dom-class"], function(domClass){
-      // Remove a class from some node: 
-      domClass.remove("someNode", "firstClass"); 
+      // Remove a class from some node:
+      domClass.remove("someNode", "firstClass");
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.removeClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
-      // Remove a class from some node: 
-      dojo.removeClass("someNode", "firstClass"); 
+  require(["dojo"], function(dojo){
+      // Remove a class from some node:
+      dojo.removeClass("someNode", "firstClass");
   });
 
 Dojo < 1.7
@@ -59,8 +59,8 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    // Remove a class from some node: 
-    dojo.removeClass("someNode", "firstClass"); 
+    // Remove a class from some node:
+    dojo.removeClass("someNode", "firstClass");
 
 ========
 Examples

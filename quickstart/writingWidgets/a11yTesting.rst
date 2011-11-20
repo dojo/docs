@@ -18,7 +18,7 @@ All widgets must be tested for use with the keyboard only. The most stringent wa
 
 After determining that the widget is accessible using only the keyboard, test using both the keyboard and the mouse. There is no guarantee that a user will interact only using the keyboard or only using the mouse. Make certain that both types of interaction can be used within the widget and that the focus and styles are updated appropriately.
 
-Since not all browsers support adding the tabindex to elements to make them focusable and thus keyboard accessible, it may not be possible to provide full keyboard support in all instances. 
+Since not all browsers support adding the tabindex to elements to make them focusable and thus keyboard accessible, it may not be possible to provide full keyboard support in all instances.
 
 Resources for Navigating via the keyboard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,7 +51,7 @@ Below is a picture of the diijt Tree with Inspect Objects running and the Show I
 Testing with Accessibility Probe (AccProbe)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Accessibility Probe <http://www.eclipse.org/actf/downloads/tools/accprobe/index.php>`_ is an under development Eclipse RCP-based stand-alone Java aplication that combines inspection, event-monitoring, and hierarchical viewing of accessible objects and their properties. It is currently only available for the Windows platform but does support both Microsoft Active Accessibility (MSAA) and IAccessible2-enabled applications. IAccessible2 is an extension to MSAA to support some of the more complex ARIA roles and is used in Firefox 3. The AccProbe is also more accessible than MS Inspect and is another option for ARIA and focus testing. It works in a similar manner to Inspect in that it provided focus tracking and inspection of ARIA role and state values. 
+`Accessibility Probe <http://www.eclipse.org/actf/downloads/tools/accprobe/index.php>`_ is an under development Eclipse RCP-based stand-alone Java aplication that combines inspection, event-monitoring, and hierarchical viewing of accessible objects and their properties. It is currently only available for the Windows platform but does support both Microsoft Active Accessibility (MSAA) and IAccessible2-enabled applications. IAccessible2 is an extension to MSAA to support some of the more complex ARIA roles and is used in Firefox 3. The AccProbe is also more accessible than MS Inspect and is another option for ARIA and focus testing. It works in a similar manner to Inspect in that it provided focus tracking and inspection of ARIA role and state values.
 
 Testing using a screen reader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

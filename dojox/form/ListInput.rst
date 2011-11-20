@@ -69,7 +69,7 @@ Programmatic example
                 for(var i in dijit){
                         value += i + ",";
                 }
-                new dojox.form.ListInput({ 
+                new dojox.form.ListInput({
 					name: 'dynamic',
 					value: "Apples,Oranges,Pears"
 				}, sel);

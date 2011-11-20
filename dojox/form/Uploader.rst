@@ -12,7 +12,7 @@ dojox.form.Uploader
 
 A widget that adds functionality to a standard HTML file input which allows file uploading to a server. The widget hides the actual uploader and substitutes a dijit.form.Button, so that the file input matches the rest of the user interface. If the browser supports the HTML5 file input specification, that functionality is used. If it is not supported (IE or older browsers) plugins are available to enhance the Uploader.
 
-**The dojox.form.Uploader is an improvement upon, and replaces the dojox.form.FileUploader**. The multiple problems created by Flash are avoided because it is not used in Mozilla and Webkit browsers. Support for FileUploader will cease as of 1.6, but the code will remain until 2.0 for backwards compatibility. 
+**The dojox.form.Uploader is an improvement upon, and replaces the dojox.form.FileUploader**. The multiple problems created by Flash are avoided because it is not used in Mozilla and Webkit browsers. Support for FileUploader will cease as of 1.6, but the code will remain until 2.0 for backwards compatibility.
 
 ========
 Features
@@ -133,7 +133,7 @@ The variations of the *name* attribute is necessary so that the server page know
 Other Properties
 ----------------
 
- - **flashFieldName** Is the text appended to the *name* property. This is necessary so the server can tell what type of file data it is dealing with. 
+ - **flashFieldName** Is the text appended to the *name* property. This is necessary so the server can tell what type of file data it is dealing with.
  - **multiple** Whether multiple files can or cannot be selected.
  - **url** If you don't supply an *action* in your form, supply an *url* to upload to.
  - **label** The text used in the button.
@@ -162,27 +162,27 @@ The file data is uploaded to a temp folder on the server. It's a misconception t
 
 During a Flash multi-file upload, the images are uploaded in parallel (unless deferredUploading=true), however, the server script only receives one file at a time. So if five files are uploaded, the server script will be called five times.
 
-During an HTML multi-file upload, the files are all uploaded at once, and after all five are completely uploaded to the temp folder, the server script is called just once. For traditional HTML (Form mode or IFrame plugin) each file will be referenced as numerically sequenced fields: uploadedfile0, uploadedfile1, uploadedfile2, etc. For HTML5 uploads, the server script looks for "uploadedfiles" (with an "s"). the Uploader also added square brackets to the name ("uploadedfiles[]") to match the spec. The result is the files are given to the server script as an actual array. 
+During an HTML multi-file upload, the files are all uploaded at once, and after all five are completely uploaded to the temp folder, the server script is called just once. For traditional HTML (Form mode or IFrame plugin) each file will be referenced as numerically sequenced fields: uploadedfile0, uploadedfile1, uploadedfile2, etc. For HTML5 uploads, the server script looks for "uploadedfiles" (with an "s"). the Uploader also added square brackets to the name ("uploadedfiles[]") to match the spec. The result is the files are given to the server script as an actual array.
 
 With a multipart request the POST data is the contents for the first part and the uploaded files is an array (or an object) of each additional part. Refer to your particular server documentation for how to reference the files (PHP is used as an example in the next section).
 
-The return data needs to be formatted very specifically, and there are different formats for Flash and HTML. See **Server Side Return Data** below. 
+The return data needs to be formatted very specifically, and there are different formats for Flash and HTML. See **Server Side Return Data** below.
 
 Server Side Code PHP
 --------------------
 
 Uploader comes with a working PHP file, *dojox/form/tests/UploadFile.php*, to use as a reference for how your server side code should work. UploadFile.php has two dependencies, *dojo/tests/resources/JSON.php*, which is used for converting the return data to a JSON string, and *dojox/form/tests/cLog.php* which is used to log message to a text file, placed relative to the PHP file.
 
-UploadFile.php is expecting one of four things: 
+UploadFile.php is expecting one of four things:
 
 1) A file or files from Flash (uploadedfilesFlash)
 2) A file from HTML	(uploadedfiles0)
 3) Multiple files from HTML (uploadedfiles0, uploadedfiles1, etc)
 4) A file array from HTML5 (uploadedfiles[])
 
-The PHP file is inspecting the header and looking for the parameters set in Uploader. Whatever you set these parameters to, they must match on the server. 
+The PHP file is inspecting the header and looking for the parameters set in Uploader. Whatever you set these parameters to, they must match on the server.
 
-The field name for the HTML uploader works much the same way. The only difference is if you do multi-file upload with HTML, this essentially continues to add fileInputs to the form, and in doing so, appends numbers to the fileInput field names, starting with '0'. That's why one file fieldname will look like "myFieldName" but two files will look like [ "myFieldName0", "myFieldName1" ] to the server side code. 
+The field name for the HTML uploader works much the same way. The only difference is if you do multi-file upload with HTML, this essentially continues to add fileInputs to the form, and in doing so, appends numbers to the fileInput field names, starting with '0'. That's why one file fieldname will look like "myFieldName" but two files will look like [ "myFieldName0", "myFieldName1" ] to the server side code.
 
 Server Side Return Data
 -----------------------
@@ -251,7 +251,7 @@ If IFrame plugin is used, the code on the client side gets tricky, as reading ba
  
 For non-PHP devs, this translates into a JSON string, wrapped in a textarea, returned as HTML. I know it's screwy, but that's how it works.
 
-If you are having problems getting *onComplete* to fire, look at this code first. Often the problem is the server side code is not catching the field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea when it shouldn't. 
+If you are having problems getting *onComplete* to fire, look at this code first. Often the problem is the server side code is not catching the field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea when it shouldn't.
 
 ========
 Examples

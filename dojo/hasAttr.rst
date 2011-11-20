@@ -57,7 +57,7 @@ When using AMD format in a fully baseless application, ``has`` is accessed from 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(domAttr){   
+  require(["dojo/dom-attr"], function(domAttr){
     domAttr.has("nodeId", "foo");
   });
 

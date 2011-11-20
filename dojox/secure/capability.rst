@@ -16,7 +16,7 @@ Allows you to pass in the text of a script. If it passes and it can be eval'ed, 
 
 * Nesting vars inside blocks will not declare the variable for the outer block
 
-* Named functions are not treated as declaration so they are generally not allowed unless the name is declared with a var.	
+* Named functions are not treated as declaration so they are generally not allowed unless the name is declared with a var.
 
 * Var declaration that involve multiple comma delimited variable assignments are not accepted
 

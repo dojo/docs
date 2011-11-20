@@ -15,7 +15,7 @@ Usage
 .. code-block :: javascript
   
   // dojo 1.7 (AMD)
-  require(["dojo/cookie"], function(cookie){      
+  require(["dojo/cookie"], function(cookie){
      // To set a cookie
      cookie(cookieName, cookieValue, cookieProps);
      // To get a cookie
@@ -40,7 +40,7 @@ cookieProps    Object           Poperties of the cookie (optional, can contain a
 Examples
 --------
 
-Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set. 
+Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set.
 
 *Note: cookies must be enabled for this to work ;)*
 

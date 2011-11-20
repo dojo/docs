@@ -72,7 +72,7 @@ Encoding custom entities in a text string
 
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("bEncode2"), "onClick", function(){
-           var customMap =[["\u0026","amp"]]; 
+           var customMap =[["\u0026","amp"]];
            var input = dojo.byId("input2");
            var output = dojo.byId("output2");
            output.value = dojox.html.entities.encode(input.value, customMap);

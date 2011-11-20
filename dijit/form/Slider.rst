@@ -15,7 +15,7 @@ dijit.form.Slider
 Introduction
 ============
 
-A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider** is a scale with a handle you can drag left/right or up/down to select a value. 
+A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider** is a scale with a handle you can drag left/right or up/down to select a value.
 
 =====
 Usage
@@ -137,7 +137,7 @@ And here we create a slider declaratively. Note that we set the value of the "di
     <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
         value="6" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
-        showButtons="false" style="width:400px;" name="horizontalSlider">   
+        showButtons="false" style="width:400px;" name="horizontalSlider">
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1.5em;font-size:75%;color:gray;">
         <li> </li>
@@ -168,7 +168,7 @@ Keyboard
 +----------------------------------------------+-----------------------------------------------------------+
 | **Action**                                   | **Key**                                                   |
 +----------------------------------------------+-----------------------------------------------------------+
-| Interact with the slider                     | The slider handle is in the tab order of the page.        | 
+| Interact with the slider                     | The slider handle is in the tab order of the page.        |
 |                                              | Press tab key to set focus to the slider handle.          |
 +----------------------------------------------+-----------------------------------------------------------+
 | Increase slider value by single increment    | With focus on slider handle press right or up arrow.      |

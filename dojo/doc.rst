@@ -74,7 +74,7 @@ Example usage of dojo.doc as replacement for document calls
       dojo.addOnLoad(addText);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="addTextButton" data-dojo-type="dijit.form.Button">Click me to add 'New Text!' to the page</button><br><br>
     <b>Click the button several times, then scroll down to see the appended text.</b>

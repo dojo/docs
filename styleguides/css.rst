@@ -72,7 +72,7 @@ When looking at a numberspinner you will see two buttons at the right of the num
 
 In the current code, clicking one of the buttons will change the class of the NumberSpinner domNode itself, to something like .dijitNumberSpinnerUpArrowActive.
 
-However, we plan to change this so it just sets a class on the button node itself. 
+However, we plan to change this so it just sets a class on the button node itself.
 
 ========
 See also

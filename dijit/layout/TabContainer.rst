@@ -18,7 +18,7 @@ A TabContainer is a container that has multiple panes, but shows only one pane a
 Usage
 =====
 
-You can use tabs in your own application and style them as you want, but they also fit perfectly into the dijit.layout system. 
+You can use tabs in your own application and style them as you want, but they also fit perfectly into the dijit.layout system.
 
 
 ========
@@ -58,7 +58,7 @@ Note that the tabs all have a fixed height.
         });
         tc.addChild(cp2);
   
-        tc.startup(); 
+        tc.startup();
     });
     </script>
 
@@ -194,7 +194,7 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
         tc.addChild(cp3);
 
   
-        tc.startup(); 
+        tc.startup();
     });
     </script>
 
@@ -211,14 +211,14 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
 More examples
 =============
 
-There are several more examples of basic use cases :ref:`available <dijit/layout/TabContainer-examples>` 
+There are several more examples of basic use cases :ref:`available <dijit/layout/TabContainer-examples>`
 
-Like :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
+Like :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon.
 
 Manipulating Children
 ---------------------
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   var tabs = dijit.byId("myTabContainer");
@@ -227,7 +227,7 @@ Manipulating Children
 
 A Tab doesn't get displayed unless you call ``.selectChild``
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   var tabs = dijit.byId("myTabContainer");
@@ -237,7 +237,7 @@ A Tab doesn't get displayed unless you call ``.selectChild``
 
 the ``addChild`` method accepts a position index, telling where in the order to add the new pane:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   var tabs = dijit.byId("myTabContainer");
@@ -246,7 +246,7 @@ the ``addChild`` method accepts a position index, telling where in the order to 
 
 This will add the new remote pane after the first pane (0).
 
-Closing A Tab 
+Closing A Tab
 -------------
 
 A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate whether or not the closing should take place:
@@ -262,7 +262,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
         var tabs = dijit.byId("onClose-ex");
         var closablePane = new dijit.layout.ContentPane({
             title:"Close Me",
-            closable: true, 
+            closable: true,
             onClose: function(){
                // confirm() returns true or false, so return that.
                return confirm("Do you really want to Close this?");
@@ -299,8 +299,8 @@ There are two methods of observing TabContainer *shenanigans*. The first, by usi
   :linenos:
 
   // assuming our tabContainer has id="bar"
-  dojo.subscribe("bar-selectChild", function(child){ 
-      console.log("A new child was selected:", child); 
+  dojo.subscribe("bar-selectChild", function(child){
+      console.log("A new child was selected:", child);
   });
 
   dojo.subscribe("bar-addChild", function(child){
@@ -319,7 +319,7 @@ the -selectChild subscription will not execute if the selected child is already 
   // assuming the same id="bar" TabContainer
   var tabs = dijit.byId("bar");
   
-  dojo.connect(tabs,"selectChild",function(child){ 
+  dojo.connect(tabs,"selectChild",function(child){
       console.log("called anytime selectChild is");
   });
   dojo.connect(tabs,"addChild",function(child){
@@ -327,7 +327,7 @@ the -selectChild subscription will not execute if the selected child is already 
   });
 
 
-This simply uses dojo.connect to listen to the native function calls. 
+This simply uses dojo.connect to listen to the native function calls.
 
 A common request for ``selectChild`` functionality is to know both the *new* and *old* widgets being transitioned. The easiest way to accomplish this is connect to the "private" :ref:``transition`` method of a TabContainer:
 
@@ -335,7 +335,7 @@ A common request for ``selectChild`` functionality is to know both the *new* and
   :linenos:
 
   var tabs = dijit.byId("tabs");
-  dojo.connect(tabs,"_transition", function(newPage, oldPage){ 
+  dojo.connect(tabs,"_transition", function(newPage, oldPage){
       console.log("I was showing: ", oldPage || "nothing");
       console.log("I am now showing: ", newPage);
   });
@@ -346,7 +346,7 @@ It is worth noting: If you need a function to be called *absolutely every* time 
   :linenos:
  
   dojo.declare("my.TabContainer", dijit.layout.TabContainer, {
-      _setupChild: function(child){ 
+      _setupChild: function(child){
            this.inherited(arguments);
            console.log("I've seen: ", child);
       }

@@ -64,13 +64,13 @@ Declarative example: Horizontal Pager
   .. cv:: html
 
     <!-- the datastore -->
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="pagerStore" id="pagerStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="pagerStore" id="pagerStore"
         data-dojo-props="url:'{{dataUrl}}dojox/widget/tests/_pager-data.json'"></div>
 
     <h2>Horizontal Pager</h2>
 
     <div style="padding:8px">
-        <div data-dojo-type="dojox.widget.Pager" id="dojoxMenu1" 
+        <div data-dojo-type="dojox.widget.Pager" id="dojoxMenu1"
             data-dojo-props="store:pagerStore" style="width: 410px; height: 150px"></div>
     </div>
 

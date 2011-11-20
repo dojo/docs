@@ -32,7 +32,7 @@ When using AMD format in a fully baseless application, ``add`` is accessed from 
 .. code-block :: javascript
 
   require(["dojo/dom-class"], function(domClass){
-      // Add a class to some node: 
+      // Add a class to some node:
       domClass.add("someNode", "anewClass");
   });
 
@@ -41,7 +41,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.add
 .. code-block :: javascript
 
   require(["dojo"], function(dojo){
-      // Add a class to some node: 
+      // Add a class to some node:
       dojo.addClass("someNode", "anewClass");
   });
 
@@ -50,7 +50,7 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    // Add a class to some node: 
+    // Add a class to some node:
     dojo.addClass("someNode", "anewClass");
 
 ========

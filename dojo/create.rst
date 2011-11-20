@@ -8,18 +8,18 @@ dojo.create
 .. contents::
    :depth: 2
 
-A convenient DOM creation, manipulation and placement utility shorthand. 
+A convenient DOM creation, manipulation and placement utility shorthand.
 
 
 ============
 Introduction
 ============
 
-dojo.create() is designed to simplify the frequently used sequence of DOM manipulation: 
+dojo.create() is designed to simplify the frequently used sequence of DOM manipulation:
 
-* create a node, 
-* set attributes on it, 
-* and place it in the DOM. 
+* create a node,
+* set attributes on it,
+* and place it in the DOM.
 
 It can be used with existing nodes too, if you want to assign new attributes and place it afterwards.
 
@@ -48,30 +48,30 @@ Here is the definition of arguments:
 =========  ===========  =======================================================
 Parameter  Type         Description
 =========  ===========  =======================================================
-tag        String|Node  Can be a string or a DOM node. If it is a string, it 
-                        will be treated as a node tag name, which will be used 
+tag        String|Node  Can be a string or a DOM node. If it is a string, it
+                        will be treated as a node tag name, which will be used
                         to create a new node.
-                        When creating a node the owner document of ``refNode`` 
-                        is used. If ``refNode`` is ``null`` or unspecified, 
+                        When creating a node the owner document of ``refNode``
+                        is used. If ``refNode`` is ``null`` or unspecified,
                         :ref:`dojo.doc <dojo/doc>` is used.
-attrs      Object|null  A dictionary of attributes to be set on ``node``. 
-                        This parameter is passed to :ref:`dojo.attr <dojo/attr>` 
+attrs      Object|null  A dictionary of attributes to be set on ``node``.
+                        This parameter is passed to :ref:`dojo.attr <dojo/attr>`
                         unmodified after the node is created.
-                        Can be ``null`` or undefined meaning 
-                        "don't set any attributes". You should always specify 
-                        it explicitly (as ``null``) if you want to specify 
+                        Can be ``null`` or undefined meaning
+                        "don't set any attributes". You should always specify
+                        it explicitly (as ``null``) if you want to specify
                         the rest of arguments.
-refNode    String|null  A string (interpreted as an id of a DOM node) or 
-                        a DOM node. This parameter is passed to 
-                        :ref:`dojo.place <dojo/place>` unmodified after the node is 
+refNode    String|null  A string (interpreted as an id of a DOM node) or
+                        a DOM node. This parameter is passed to
+                        :ref:`dojo.place <dojo/place>` unmodified after the node is
                         created, and attributes are set.
                         Can be omitted meaning "don't place the node".
-pos        String|null  Optional argument. Can be a number or one of the 
-                        following strings: "before", "after", "replace", "only", 
-                        "first", or "last". If omitted, "last" is assumed. 
-                        This parameter is passed to :ref:`dojo.place <dojo/place>` 
-                        unmodified after the node is created, and attributes 
-                        are set. Please see :ref:`dojo.place <dojo/place>` 
+pos        String|null  Optional argument. Can be a number or one of the
+                        following strings: "before", "after", "replace", "only",
+                        "first", or "last". If omitted, "last" is assumed.
+                        This parameter is passed to :ref:`dojo.place <dojo/place>`
+                        unmodified after the node is created, and attributes
+                        are set. Please see :ref:`dojo.place <dojo/place>`
                         for more details and examples.
 =========  ===========  =======================================================
 
@@ -94,7 +94,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.cre
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){     
+  require(["dojo"], function(dojo){
       // create a div node
       var node = dojo.create("div");
   });

@@ -6,7 +6,7 @@ dojox.widget.TitleGroup
 :since: 1.6.0
 :author: dante
 
-A container widget which delegates a connection between children :ref:`TitlePanes <dijit/TitlePane>`. Behaves similarly to an :ref:`AccordionContainer <dijit/layout/AccordionContainer>` though has a variable overall height and does not "dock" to other layout widgets, such as a :ref:`BorderContainer <dijit/layout/BorderContainer>`. 
+A container widget which delegates a connection between children :ref:`TitlePanes <dijit/TitlePane>`. Behaves similarly to an :ref:`AccordionContainer <dijit/layout/AccordionContainer>` though has a variable overall height and does not "dock" to other layout widgets, such as a :ref:`BorderContainer <dijit/layout/BorderContainer>`.
 
 Examples
 ========
@@ -17,7 +17,7 @@ A simple declarative example:
 
   .. css::
 
-     <style type="text/css"> 
+     <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
      </style>
 
@@ -36,7 +36,7 @@ A simple declarative example:
         <div dojoType="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div data-dojo-type="dijit.form.Button">click</div></div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem</p><p>lorem</p></div>
-        <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>    
+        <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>
     </div>
     <h2>Content after</h2>
 
@@ -47,7 +47,7 @@ Adding and removing children:
 
   .. css::
 
-     <style type="text/css"> 
+     <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
      </style>
 
@@ -75,9 +75,9 @@ Adding and removing children:
         <script type="dojo/method" data-dojo-event="onClick">
             dijit.registry.byClass("dijit.TitlePane").some(function(widget){
                   dijit.byId("titleGroupB").removeChild(widget);
-                  widget.destroy(); 
+                  widget.destroy();
                   return true; // only once
-            }); 
+            });
         </script>
     </div>
     <div id="titleGroupB" style="width:500px" data-dojo-type="dojox.widget.TitleGroup">

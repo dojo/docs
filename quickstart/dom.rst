@@ -15,7 +15,7 @@ DOM Utilities
 Introduction
 ============
 
-Dojo provides a host of DOM utility functions. This guide covers combined usage of :ref:`dojo.style <dojo/style>`, :ref:`dojo.create <dojo/create>`, :ref:`dojo.attr <dojo/attr>`, and a number of other base utilities for DOM convenience. 
+Dojo provides a host of DOM utility functions. This guide covers combined usage of :ref:`dojo.style <dojo/style>`, :ref:`dojo.create <dojo/create>`, :ref:`dojo.attr <dojo/attr>`, and a number of other base utilities for DOM convenience.
 
 ========================
 Locating and Using Nodes
@@ -28,7 +28,7 @@ All of these functions work by doing work on a passed DomNode reference (an elem
 
   dojo.addOnLoad(function(){
       console.log("page ready, can modify DOM anytime after this");
-  }); 
+  });
 
 Once we've ensured our code will only execute after the DOM is ready, we can move on to locating nodes to work on.
 
@@ -43,7 +43,7 @@ The fastest, and most common, way of locating an element is by it's ``id`` attri
   dojo.addOnLoad(function(){
       var n = dojo.byId("someId");
       n.innerHTML = "Hi, World";
-  }); 
+  });
 
 Here, we locate a node with id="someId", and set it's ``innerHTML`` to new content. If a node is not found, dojo.byId returns undefined, and is falsy enough to work as a conditional:
 
@@ -56,7 +56,7 @@ Here, we locate a node with id="someId", and set it's ``innerHTML`` to new conte
 CSS Selectors
 -------------
 
-It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides :ref:`dojo.query <dojo/query>` - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - :ref:`dojo.NodeList <dojo/NodeList>` - that has oodles of useful DOM manipulation functions easily available. 
+It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides :ref:`dojo.query <dojo/query>` - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - :ref:`dojo.NodeList <dojo/NodeList>` - that has oodles of useful DOM manipulation functions easily available.
 
 .. code-block :: javascript
   :linenos:
@@ -105,7 +105,7 @@ CSS selectors are a handy and powerful way to find most kinds of elements in a p
   dojo.query("table tr:nth-child(odd)");
   
   // scoped to some other node as parent
-  dojo.query("a.link", "someNode"); 
+  dojo.query("a.link", "someNode");
 
 Finding nodes via ``dojo.query`` is very helpful, though the same rules apply to either "lists of nodes" or single nodes, as found by dojo.byId.  We won't cover it here, but you can even use ``dojo.query`` to search XML documents!
 
@@ -126,11 +126,11 @@ or more quickly available as a function call:
 .. code-block :: javascript
   :linenos:
 
-  dojo.addOnLoad(function(){ 
+  dojo.addOnLoad(function(){
       dojo.addClass(dojo.body(), "tundra");
   });
 
-By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefine the meaning of the <body> element on the fly. This is useful for situations where your script might be working with multiple documents, such as the content of an iframe or a parent window. You can change the scope of a ``dojo.query`` by passing a different document as the context (second) argument: 
+By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefine the meaning of the <body> element on the fly. This is useful for situations where your script might be working with multiple documents, such as the content of an iframe or a parent window. You can change the scope of a ``dojo.query`` by passing a different document as the context (second) argument:
 
 .. code-block :: javascript
   :linenos:
@@ -166,7 +166,7 @@ They have identical length in characters, but by using ``dojo.doc`` you are able
 Manipulating Nodes
 ==================
 
-Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. Each of the DOM manipulation functions accept a String ID or a DomNode reference as the first parameter, and apply some action on that node. 
+Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. Each of the DOM manipulation functions accept a String ID or a DomNode reference as the first parameter, and apply some action on that node.
 
 Node styles
 -----------
@@ -193,11 +193,11 @@ Though for full cross browser compatibility and convenience, it is recommended y
   dojo.attr(someNode, "id", "newId");
 
   // get the id of a node reference
-  var id = dojo.attr(someNode, "id"); 
+  var id = dojo.attr(someNode, "id");
 
   // set multiple attributes at once:
   dojo.attr(someNode, {
-      id:"newId", 
+      id:"newId",
       onclick: function(e){ /* handler code */ }
   });
 
@@ -224,7 +224,7 @@ Though this isn't an ``attribute`` per se. Just as :ref:`dojo.style <dojo/style>
 Node placement
 --------------
 
-Where a node exists in the DOM is important. 
+Where a node exists in the DOM is important.
 
 ==============
 Creating Nodes

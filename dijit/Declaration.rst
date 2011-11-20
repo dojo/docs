@@ -21,7 +21,7 @@ Just as there are two ways to create a widget instances - declarative and progra
 =====
 Usage
 =====
-To declare your class declaratively, use dijit.Declaration. Uhhhh, OK, too many "declare"s in that sentence. It's easier to show than to tell. 
+To declare your class declaratively, use dijit.Declaration. Uhhhh, OK, too many "declare"s in that sentence. It's easier to show than to tell.
 
 Here's an example defining a widget called Employee, and then creating two of those Employee widgets:
 
@@ -35,7 +35,7 @@ Here's an example defining a widget called Employee, and then creating two of th
 
   .. cv :: html
 
-	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">	
+	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
 		<span>${name}</span>
 		<a href="update.php?id=${empid}">update</a>
 		<a href="delete.php?id=${empid}">delete</a>

@@ -18,7 +18,7 @@ Proper encoding
 
 The two most important aspects of internationalization are insuring that the inputs and the outputs are in the proper encoding. Thankfully, UTF-8 encoding can be used exclusively on the wire in modern web applications to make this interaction extremely simple. Once read into memory, JavaScript treats all strings as a series of double-byte characters and encoding is irrelevant. Dojo makes no attempt to implement any encoding or decoding algorithms in JavaScript; this is the responsibility of the browser.
 
-Other encodings should be used with great care. 
+Other encodings should be used with great care.
 
 
 ========

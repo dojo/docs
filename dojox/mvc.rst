@@ -31,10 +31,10 @@ Features
 * :ref:`Data binding mixin for dijits, _DataBindingMixin  <dojox/mvc/_DataBindingMixin>`
 * A number of new widgets and MVC containers, including:
 
-  * :ref:`Output- A data-bound output widget  <dojox/mvc/Output>`  
-  * :ref:`Group- An aggregation of widgets with the same parent data binding context  <dojox/mvc/Group>`  
-  * :ref:`Repeat- A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`  
-  * :ref:`Generate- A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`  
+  * :ref:`Output- A data-bound output widget  <dojox/mvc/Output>`
+  * :ref:`Group- An aggregation of widgets with the same parent data binding context  <dojox/mvc/Group>`
+  * :ref:`Repeat- A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`
+  * :ref:`Generate- A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`
 
  
 =====

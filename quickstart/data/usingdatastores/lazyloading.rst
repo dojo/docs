@@ -128,7 +128,7 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
       ]};
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="geographyStore"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel" data-dojo-props="store:geographyStore, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
@@ -136,7 +136,7 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
 
 
 
-Okay, hopefully the above example helped visually display how nested items are represented.  Nested items are no more than an attribute in a datastore item that has a value that is another data store item.  There is nothing more to it than that, ultimately.  If the above example was too confusing since the hierarchy was constructed through references ... another way to demonstrate hierarchy of items can be presented with dojo.data.ItemFileReadStore.  The ItemFileReadStore also supports a basic hierarchical format instead of item references.  
+Okay, hopefully the above example helped visually display how nested items are represented.  Nested items are no more than an attribute in a datastore item that has a value that is another data store item.  There is nothing more to it than that, ultimately.  If the above example was too confusing since the hierarchy was constructed through references ... another way to demonstrate hierarchy of items can be presented with dojo.data.ItemFileReadStore.  The ItemFileReadStore also supports a basic hierarchical format instead of item references.
 
 Example 2:  A hierarchical format without references
 ----------------------------------------------------
@@ -147,13 +147,13 @@ Example 2:  A hierarchical format without references
   { identifier: 'name',
     items: [
       { name:'Africa', type:'continent', children:[
-        { name:'Egypt', type:'country' }, 
+        { name:'Egypt', type:'country' },
         { name:'Kenya', type:'country', children:[
         { name:'Nairobi', type:'city' },
         { name:'Mombasa', type:'city' } ]
         },
         { name:'Sudan', type:'country', children:
-          { name:'Khartoum', type:'city' } 
+          { name:'Khartoum', type:'city' }
         } ]
       },
       { name:'Asia', type:'continent', children:[
@@ -185,7 +185,7 @@ Example 2:  A hierarchical format without references
       { name:'South America', type:'continent', children:[
         { name:'Brazil', type:'country', population:'186 million' },
         { name:'Argentina', type:'country', population:'40 million' } ]
-      } 
+      }
     ]
   }
 
@@ -201,18 +201,18 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
-      var storeData2 = { 
+      var storeData2 = {
         identifier: 'name',
         label: 'name',
         items: [
           { name:'Africa', type:'continent', children:[
-            { name:'Egypt', type:'country' }, 
+            { name:'Egypt', type:'country' },
             { name:'Kenya', type:'country', children:[
             { name:'Nairobi', type:'city' },
             { name:'Mombasa', type:'city' } ]
             },
             { name:'Sudan', type:'country', children:
-              { name:'Khartoum', type:'city' } 
+              { name:'Khartoum', type:'city' }
             } ]
           },
           { name:'Asia', type:'continent', children:[
@@ -244,12 +244,12 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
           { name:'South America', type:'continent', children:[
             { name:'Brazil', type:'country', population:'186 million' },
             { name:'Argentina', type:'country', population:'40 million' } ]
-          } 
+          }
         ]
       };
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
@@ -285,7 +285,7 @@ Sample code:  Detecting child items
           }else{
             console.log("Attribute: [" + attributes[j] + "] has value: [" + value + "]");
           }
-        }           
+        }
       }
     }
   }
@@ -335,13 +335,13 @@ Sample code:  Detecting child items and lazy-loading items on demand
           }else{
             console.log("Attribute: [" + attributes[j] + "] has value: [" + value + "]");
           }
-        }           
+        }
       }
     }
   }
   //Call the fetch of the toplevel continent items.
   store.fetch({query: {type: "continent"}, onComplete: gotContinents});
 
-Excellent, that looks simple too.  Something to be aware of is that not all datastores support hierarchical data formats and not all support lazy-loading.  For those stores, no attribute value should return true for *isItem()* and *isItemLoaded(item)* always returns true.  So, code that is hierarchical and lazy-load aware will still work fine with those stores.  
+Excellent, that looks simple too.  Something to be aware of is that not all datastores support hierarchical data formats and not all support lazy-loading.  For those stores, no attribute value should return true for *isItem()* and *isItemLoaded(item)* always returns true.  So, code that is hierarchical and lazy-load aware will still work fine with those stores.
 
 Are there examples of Lazy-Loading stores in dojo?  Yes, there is.  A great example can be found at: :ref:`dojox.data.FileStore <dojox/data/FileStore>` .  The FileStore is designed to expose a remote file system in a lazy-load manner.  The code of the FileStore is also a great template for starting developers who want to develop their own lazy-loading data stores.

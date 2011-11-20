@@ -93,7 +93,7 @@ Simple Demo usage of WikipediaStore
 
       function doSearch(){
         var outNode = dojo.byId("output");
-        outNode.innerHTML = "Searching...";	
+        outNode.innerHTML = "Searching...";
 
         function loadArticle(e, article){
           e.preventDefault();
@@ -117,7 +117,7 @@ Simple Demo usage of WikipediaStore
 
         var request = {
           query: {
-            action: "query", 
+            action: "query",
             text: dijit.byId("searchText").getValue()
           },
           count: dijit.byId("count").getValue(),

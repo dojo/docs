@@ -378,11 +378,11 @@ dojo.window                                             dojo/window             
 dojo.Color                                              dojo/_base/Color               Color
 dojo.cookie                                             dojo/cookie                    cookie
 dojo.data.*                                             dojo/data/*                    ...
-dojo.date.locale                                        dojo/date/locale               
-dojo.date.stamp                                         dojo/date/stamp                
-dojo.date                                               dojo/date                      
-dojo.dnd.*                                              dojo/dnd/*                     
-dojo.DeferredList                                       dojo/DeferredList              
+dojo.date.locale                                        dojo/date/locale
+dojo.date.stamp                                         dojo/date/stamp
+dojo.date                                               dojo/date
+dojo.dnd.*                                              dojo/dnd/*
+dojo.DeferredList                                       dojo/DeferredList
 dojo.fx.*                                               dojo/fx                        fx.*
 dojo.hash                                               dojo/hash                      hash
 dojo.html                                               dojo/html                      html

@@ -29,7 +29,7 @@ The ThumbnailPicker can be configured in a number of ways:
     * Data source
     * Can be horizontal or vertical
     * Enabling/disabling following hyperlinks when an image is selected
-    * Notification of load status for images 
+    * Notification of load status for images
 
 ========
 Examples
@@ -52,8 +52,8 @@ set the **numberThumbs** attribute, e.g.
 Setting the Data Source
 -----------------------
 
-To set the data source for the ThumnailPicker widget, first create one of the available data stores, such 
-as the dojo.data.ItemFileReadStore or dojox.data.FlickrRestStore. Next, create a request object, which 
+To set the data source for the ThumnailPicker widget, first create one of the available data stores, such
+as the dojo.data.ItemFileReadStore or dojox.data.FlickrRestStore. Next, create a request object, which
 optionally contains a query. e.g.
 
 .. code-block :: javascript
@@ -63,11 +63,11 @@ optionally contains a query. e.g.
   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
   <script type="text/javascript">
      dojo.addOnLoad(function() {
-     //Define the request, saying that 20 records should be fetched at a time, 
+     //Define the request, saying that 20 records should be fetched at a time,
      //and to start at record 0
      
      var request= {count:20, start:0};
-     //Tell the widget to request the "thumb" parameter, as different 
+     //Tell the widget to request the "thumb" parameter, as different
      //stores may use different parameter names
      var itemNameMap = {imageThumbAttr: "thumb"};
 
@@ -94,7 +94,7 @@ Enabling/disabling following hyperlinks
 ---------------------------------------
 
 To enable following a hyperlink when a thumbnail image is clicked, set the useHyperlink attribute to "true".
-By default it is false. When hyperlinks are enabled, by default the URL is opened is a new window. To open 
+By default it is false. When hyperlinks are enabled, by default the URL is opened is a new window. To open
 the link in the current window, set the hyperlinkTarget attribute to "this". e.g.
 
 
@@ -158,16 +158,16 @@ of settings, and uses the FlickrRestStore data store.
         //Create a new FlickrRestStore
         var flickrRestStore = new dojox.data.FlickrRestStore();
          
-        //Create a request object, containing a query with the 
+        //Create a request object, containing a query with the
         //userid, apikey and (optional) sort data.
-        //Extra query parameters 'tags' and 'tag_mode' are also 
+        //Extra query parameters 'tags' and 'tag_mode' are also
         //used to further filter the results
         var req = {query: {
                            userid: "44153025@N00",
                            apikey: "8c6803164dbc395fb7131c9d54843627",
                            sort: [ {descending: true }],
                            tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
-                           tag_mode: "any" 
+                           tag_mode: "any"
                            },
                            start: 0, //start at record 0
                            count: 20 //request 20 records each time a request is made
@@ -175,7 +175,7 @@ of settings, and uses the FlickrRestStore data store.
          
         //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
-        });          
+        });
 
         </script>
 

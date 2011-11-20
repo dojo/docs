@@ -18,7 +18,7 @@ Dojo.hitch is a neat function. It returns a function that will execute a given f
       url: "foo",
       load: this.dataLoaded
     };
-    xhr.get(args);  
+    xhr.get(args);
   });
 
 
@@ -30,7 +30,7 @@ Dojo.hitch is a neat function. It returns a function that will execute a given f
     url: "foo",
     load: this.dataLoaded
   };
-  dojo.xhrGet(args);  
+  dojo.xhrGet(args);
 
 Only to have it fail with a cryptic error like:
 dataLoaded is not a function, or errors about unresolved variables?   Why does that occur?  Well, because in asynchronous callbacks such as above, you're changing the scope of 'dataLoaded' when you assign it into an associative map.  It will no longer refer to the widget that originally provided it, but its scope will now refer to the enclosing object, the xhr arguments!  To get around this, you can use hitch to force the function to retain its original scope.  The same code done properly will look like:
@@ -44,7 +44,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
       url: "foo",
       load: lang.hitch(this, "dataLoaded")
     };
-    xhr.get(args);  
+    xhr.get(args);
   });
 
 
@@ -56,7 +56,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
     url: "foo",
     load: dojo.hitch(this, "dataLoaded")
   };
-  dojo.xhrGet(args);  
+  dojo.xhrGet(args);
 
 
 And now when the xhrGet call runs the load function, it will run in the appropriate widget scope.

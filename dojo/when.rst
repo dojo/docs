@@ -10,7 +10,7 @@ Deferred.when/dojo.when
 .. contents::
     :depth: 2
 
-dojo.when provides the ability to define a callback (and error handler) for the eventual completion of a Deferred or promise object, or any standard synchronous value. 
+dojo.when provides the ability to define a callback (and error handler) for the eventual completion of a Deferred or promise object, or any standard synchronous value.
 
 As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor).  It is aliased to ``dojo.when`` for backward-compatibility.
 

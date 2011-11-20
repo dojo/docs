@@ -43,7 +43,7 @@ dojo.cldr.supplemental
 ----------------------
 
 dojo.cldr.supplemental.getFirstDayOfWeek(locale)
-  Returns a zero-based index for first day of the week, as used by the local (Gregorian) calendar. 
+  Returns a zero-based index for first day of the week, as used by the local (Gregorian) calendar.
   e.g. Sunday (returns 0), or Monday (returns 1)
 
   =========  ======  =======================================================

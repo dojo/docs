@@ -20,9 +20,9 @@ The dojox.layout.TableContainer is a simple layout widget that displays the cont
 
 * It can be configured to use any number of columns, using the "cols" attribute.
 * It is fully stylable. A custom class can be set on it, using the "customClass" attribute, which makes it easy to style every row and cell.
-* A label can be displayed for each child widget, either above or to the left of the widget. Widgets can also be shown without any label.  
+* A label can be displayed for each child widget, either above or to the left of the widget. Widgets can also be shown without any label.
 
-  * To specify that labels should or should not be shown, set the "showLabels" attribute to true or false respectively.  
+  * To specify that labels should or should not be shown, set the "showLabels" attribute to true or false respectively.
   * To specify the label for a child widget, set that widgets' "label" or "title" attribute.
   * Label width can be set using the "labelWidth" attribute of the TableContainer.
   * The orientation of labels can be set to be either beside or above widgets can be achieved by setting the "orientation" attribute of the TableContainer to "horiz" or "vert" respectively.
@@ -128,7 +128,7 @@ Two Columns, Label Styling
       <div dojoType="dijit.form.NumberSpinner" title="Age" value="40"></div>
     </div>
 
-  Apply a custom class that colors the labels.  
+  Apply a custom class that colors the labels.
 
   .. css::
 
@@ -169,7 +169,7 @@ Two Columns, Label and Value cell Styling
       <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
     </div>
 
-  Apply a custom class that styles both the label and value cells.  
+  Apply a custom class that styles both the label and value cells.
 
   .. css::
 
@@ -217,11 +217,11 @@ Using Colspan
      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
      <div dojoType="dijit.form.CheckBox" title="Is Married"></div>
      <div dojoType="dijit.form.CheckBox" title="Has Children"></div>
-     <div dojoType="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>      
+     <div dojoType="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>
       
     </div>
 
-  Apply a custom class that styles both the label and value cells.  
+  Apply a custom class that styles both the label and value cells.
 
   .. css::
 
@@ -257,11 +257,11 @@ Programmatic example
       
 
       // Create the TableContainer, and insert it into the DOM node with id "putWidgetHere".
-      // Add the custom class "labelsAndValues" 
+      // Add the custom class "labelsAndValues"
       var programmatic = new dojox.layout.TableContainer(
       {
-        cols: 2, 
-        customClass:"labelsAndValues", 
+        cols: 2,
+        customClass:"labelsAndValues",
         "labelWidth": "150"
       }, dojo.byId("putWidgetHere"));
 
@@ -289,7 +289,7 @@ Programmatic example
 
     <div id="putWidgetHere" ></div>
 
-  Apply a custom class that styles both the label and value cells.  
+  Apply a custom class that styles both the label and value cells.
 
   .. css::
 
@@ -331,11 +331,11 @@ Setting the Label Width
       <div dojoType="dijit.form.TextBox" title="1" value="United States"></div>
       <div dojoType="dijit.form.TextBox" title="2" value="Ireland"></div>
       <div dojoType="dijit.form.TextBox" title="3" value="Italy"></div>
-      <div dojoType="dijit.form.TextBox" title="4" value="Faroe Islands"></div>     
+      <div dojoType="dijit.form.TextBox" title="4" value="Faroe Islands"></div>
       
     </div>
 
-  Apply a custom class that styles both the label and value cells.  
+  Apply a custom class that styles both the label and value cells.
 
   .. css::
 

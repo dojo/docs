@@ -7,7 +7,7 @@ dojox.grid.EnhancedGrid.plugins.Filter
 :Project owner: Evan Huang
 :Available: since V.1.6
 
-Filter plugin provides row filtering functionality for grid. 
+Filter plugin provides row filtering functionality for grid.
 
 .. contents::
 	:depth: 2
@@ -16,7 +16,7 @@ Filter plugin provides row filtering functionality for grid.
 Introduction
 ============
 
-Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid data with a set of conditions. The grid data have types (number, string, date, time, and boolean) so, accordingly, users are able to specify filters with different conditions for different data types. This plugin not only provides a default client-side implementation, it also defines a simple protocol for server-side filtering to use where the data store is too large to be handled client-side. This plugin is independent of data store, just like grid itself. It only relies on the dojo.data.api.Read interface. 
+Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid data with a set of conditions. The grid data have types (number, string, date, time, and boolean) so, accordingly, users are able to specify filters with different conditions for different data types. This plugin not only provides a default client-side implementation, it also defines a simple protocol for server-side filtering to use where the data store is too large to be handled client-side. This plugin is independent of data store, just like grid itself. It only relies on the dojo.data.api.Read interface.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -151,7 +151,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 				autoComplete: true
 			},
 			{ field: "Album", datatype:"string",
-				//Declare that we need the ComboBox for suggestions 
+				//Declare that we need the ComboBox for suggestions
 				autoComplete: true,
 				//Configure the ComboBox, so that it does not auto-complete our input
 				dataTypeArgs: {
@@ -159,7 +159,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 				}
 			},
 			{ field: "Name", datatype:"string",
-				//Declare that we do not need the following conditions for this column 
+				//Declare that we do not need the following conditions for this column
 				disabledConditions: ["contains", "notcontains"]
 			},
 			{ field: "Track", datatype:"number"},
@@ -248,8 +248,8 @@ If your grid is created declaratively:
 .. code-block :: html
 	:linenos:
 
-	<div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-	  store="mystore" structure="mystructure" 
+	<div id="grid" dojoType="dojox.grid.EnhancedGrid"
+	  store="mystore" structure="mystructure"
 	  plugins="{
 		filter: /* a Boolean value or an configuration object */{}
 	}" ></div>
@@ -275,22 +275,22 @@ All the available configuration properties are:
 =============================  ========  ===============  ================================================================================================================
 Property                       Type      Default Value    Description
 =============================  ========  ===============  ================================================================================================================
-itemsName                      String    "items"          The name of the items in the data store. 
-                                                          For example, if the data in the store are records of songs, you may set it to "songs", 
+itemsName                      String    "items"          The name of the items in the data store.
+                                                          For example, if the data in the store are records of songs, you may set it to "songs",
                                                           so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
 closeFilterbarButton           Boolean   false            Whether to show the close-filterbar button.
-ruleCount                      Number    3                The maximum rule count of a filter. Defult to 3. If set to 0 or Infinity, infinite rules are supported. 
-ruleCountToConfirmClearFilter  Number    2                If the filter rule count is larger than or equal to this value, then a confirm dialog will show when 
-                                                          clearing filter. If set to less than 1 or null, then always show the confirm dialog. If set to Infinity, 
+ruleCount                      Number    3                The maximum rule count of a filter. Defult to 3. If set to 0 or Infinity, infinite rules are supported.
+ruleCountToConfirmClearFilter  Number    2                If the filter rule count is larger than or equal to this value, then a confirm dialog will show when
+                                                          clearing filter. If set to less than 1 or null, then always show the confirm dialog. If set to Infinity,
                                                           then never show the confirm dialog. Default to 2.
 disabledConditions             Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
-isServerSide                   Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
+isServerSide                   Boolean   false            If this is true, the actual filtering work will be taken over by the server.
                                                           This is used to switch between client-side filter and server-side filter.
-isStateful                     Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined, 
+isStateful                     Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined,
                                                           and it should be remembered at serverside until it is changed.
-url                            String    ""               When both isServerSide and isStateful are true, this is a place to set the server url, 
+url                            String    ""               When both isServerSide and isStateful are true, this is a place to set the server url,
                                                           if it cannot be retrieved by store.url.
-setupFilterQuery               Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in 
+setupFilterQuery               Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in
                                                           the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
                                                           section for details.
 =============================  ========  ===============  ================================================================================================================
@@ -309,7 +309,7 @@ For example:
       {field: "Name", datatype: "string", autoComplete: true },
       {field: "Age", datatype: "number" },
       {field: "Register Date", datatype: "date" },
-      {field: "dummy", filterable: false}, //set this column to be not filterable		
+      {field: "dummy", filterable: false}, //set this column to be not filterable
       {field: "Register Time", datatype: "time", disabledConditions: ["startsWith", "notStartsWith"]}
     ]
   }];
@@ -333,20 +333,20 @@ Here is a list of all the condition names (case insensitive)
 ======================	===================================
 Condition Name			Available Data Types
 ======================	===================================
-equalTo					number, string, date, time, boolean 
-lessThan				number, date, time 
-lessThanOrEqualTo		number 
-largerThan				number, date, time 
-largerThanOrEqualTo		number 
-contains				string 
-startsWith				string 
-endsWith				string 
-notEqualTo				number, string 
-notContains				string 
-notStartsWith			string 
-notEndsWith				string 
-range					date, time 
-isEmpty				number, string, date, time, boolean 
+equalTo					number, string, date, time, boolean
+lessThan				number, date, time
+lessThanOrEqualTo		number
+largerThan				number, date, time
+largerThanOrEqualTo		number
+contains				string
+startsWith				string
+endsWith				string
+notEqualTo				number, string
+notContains				string
+notStartsWith			string
+notEndsWith				string
+range					date, time
+isEmpty				number, string, date, time, boolean
 ======================	===================================
 
 =====
@@ -360,7 +360,7 @@ Filter Bar
 
 .. image:: filterbar-1.png
 
-Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column". 
+Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column".
 
 .. image:: filterbar-definefilterbtn-1.png
 
@@ -424,11 +424,11 @@ For example: ``Column "Age", "is less than", 26``
 
 Different data types have different sets of conditions and different kinds of form widgets.
 
-The value field for Number type only accepts number. 
+The value field for Number type only accepts number.
 
 .. image:: defdialog-numbervaluebox-1.png
 
-The value field for String type can have auto-complete capability (if set autoComplete in the grid structure). 
+The value field for String type can have auto-complete capability (if set autoComplete in the grid structure).
 
 .. image:: defdialog-stringvaluebox.png
 
@@ -484,7 +484,7 @@ For example:
     if(commands.filter && commands.enable){
       //some filter is defined and valid. You can modify the request object here.
     }else{
-      //no filter is valid. 
+      //no filter is valid.
     }
   };
 
@@ -518,7 +518,7 @@ enable      Integer      Yes                true                 A command to en
 clear       Boolean      No                 true                 Only meaningful for stateful server. A command to clear the filter definition.
                                                                  When this field exists and equals to true, it means the user has cleared the filter,
                                                                  so the server should return unfiltered data in later fetches.
-                                                                 This field should not co-exist with the "filter" field. 
+                                                                 This field should not co-exist with the "filter" field.
                                                                  If they both exist, the "filter" field has higher priority
 filter      JSON String  No                 {...}                A command to set the filter definition.
                                                                  When this field exists, it means the user has defined a new filter,
@@ -526,7 +526,7 @@ filter      JSON String  No                 {...}                A command to se
                                                                  This field should not co-exist with the "clear" field. If they both exist, this field has higher priority.
 ==========  ===========  =================  ===================  ==========================================================================================================
 
-When the web page loads, the first POST that the server receives is the ``clear`` command. It ensures that there's no filter defined in the session. 
+When the web page loads, the first POST that the server receives is the ``clear`` command. It ensures that there's no filter defined in the session.
 
 Every time the user defines a filter, the server will receive a ``filter`` command. This command contains a JSON string representing the filter definition, which is covered in the next section.
 
@@ -545,7 +545,7 @@ Note that stateless servers don't need to do this, because the filter definition
 The Filter Definition
 ---------------------
 
-The Filter plugin will create a JSON object for the defined filter with the following recursive structure: 
+The Filter plugin will create a JSON object for the defined filter with the following recursive structure:
 
 .. image:: serverfilter-datastruct.png
 
@@ -583,7 +583,7 @@ The data of the "Field Name" column, whose data type is string, equals to "some 
     op: "equal",
     
     //data: Array | string | number
-    //The data of the corresponding "op". If "op" is actually an operator, this field must be an array, 
+    //The data of the corresponding "op". If "op" is actually an operator, this field must be an array,
     //which contains a list of deeper level filter expressions.
     data: [
       {
@@ -597,14 +597,14 @@ The data of the "Field Name" column, whose data type is string, equals to "some 
         op: "string",
         
         //isCol: Boolean
-        //If this field exists and is, or can be converted to, true, 
-        //then this expression represents a column in the store, 
+        //If this field exists and is, or can be converted to, true,
+        //then this expression represents a column in the store,
         //and the corresponding "data" field represents the field name of this column.
         isCol: true,
         
         //data: Array | string | number
-        //If "op" is a datatype, and the property "isCol" is true, 
-        //this "data" field represents the field name of a column in the data store, 
+        //If "op" is a datatype, and the property "isCol" is true,
+        //this "data" field represents the field name of a column in the data store,
         //so the server implementer can get the value of this field, and transform it to the specified datatype.
         data: "Field Name"
       }

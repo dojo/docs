@@ -44,7 +44,7 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
       cookie: /* a Boolean value or an configuration object */{}
@@ -107,7 +107,7 @@ setCookieEnabled(cookieName, toEnable):
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ==============================================================================================
-cookieName      String              Mandatory                   A name of a grid feature. If null or undefined, this function will apply to all supported 
+cookieName      String              Mandatory                   A name of a grid feature. If null or undefined, this function will apply to all supported
                                                                 grid features.
 toEnable        Boolean             Mandatory                   To enable cookie for a grid feature or not.
 ==============  ==================  ==========================  ==============================================================================================

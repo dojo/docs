@@ -112,7 +112,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 			var grid1 = new dojox.grid.EnhancedGrid({
 				id: 'grid1',
-				store: store1, 
+				store: store1,
 				structure: layout1,
 				rowSelector: '20px',
 				canSort: function(){return false;},
@@ -286,8 +286,8 @@ If your grid is created declaratively:
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-    store="mystore" structure="mystructure" 
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+    store="mystore" structure="mystructure"
     plugins="{
       dnd: /* a Boolean value or an argument object */{}
   }" ></div>

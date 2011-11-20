@@ -15,16 +15,16 @@ Dojo.data is a uniform data access layer that removes the concepts of database d
 
 Ultimately, the goal of dojo.data is to provide a flexible set of APIs as interfaces that datastores can be written to conform to. Stores that conform to the standard interfaces should then be able to be used in a wide variety of applications, widgets, and so on interchangeably. In essence, the API hides the specific structure of the data, be it in JSON, XML, CSV, or some other data format, and provides one way to access items and attributes of items consistently. This also allows optimizations on data access to be placed where they are most appropriate -- the client or the server -- depending on the type, number, and structure the data sets being manipulated.
 
-You can think of dojo.data as one layer above dojo.xhrGet(). Both operate asynchronously, and without refreshing the page. But, xhrGet will get almost any MIME type and return the data in a glob. It's your job to interpret it. With dojo.data, you call one set of APIs to access the data items and the attributes of the items, and it's up to the store to handle the interpretation of the native formats into a common access model. 
+You can think of dojo.data as one layer above dojo.xhrGet(). Both operate asynchronously, and without refreshing the page. But, xhrGet will get almost any MIME type and return the data in a glob. It's your job to interpret it. With dojo.data, you call one set of APIs to access the data items and the attributes of the items, and it's up to the store to handle the interpretation of the native formats into a common access model.
 
 
 =====
 Usage
 =====
 
-Basic store usage consists primarily of creating stores from which items are fetched, registering handlers to deal with the return of data from a ``fetch()`` operation, and fetching attribute values from the returned items. Advanced usage often includes pagination though large data sets, using write and update APIs to provide editing interfaces, and the creation of custom stores. 
+Basic store usage consists primarily of creating stores from which items are fetched, registering handlers to deal with the return of data from a ``fetch()`` operation, and fetching attribute values from the returned items. Advanced usage often includes pagination though large data sets, using write and update APIs to provide editing interfaces, and the creation of custom stores.
 
-* :ref:`dojo.data.api <dojo/data/api>` 
+* :ref:`dojo.data.api <dojo/data/api>`
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`

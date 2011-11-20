@@ -57,4 +57,4 @@ The README in the link explains why the directory looks empty: It is a collectio
 
 ``svn checkout http://svn.dojotoolkit.org/src/dojo/trunk dojo-only-readonly``
 
-It is worth noting: when working from Subversion, the code is **not** optimized or otherwise built. For optimum performance, download the source files from SVN, and run a build. ``FIXME: link`` 
+It is worth noting: when working from Subversion, the code is **not** optimized or otherwise built. For optimum performance, download the source files from SVN, and run a build. ``FIXME: link``

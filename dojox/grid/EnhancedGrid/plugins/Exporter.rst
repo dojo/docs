@@ -22,7 +22,7 @@ The following of this document first describes how to use the export functions o
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 600
-  :height: 550 
+  :height: 550
 
   .. javascript::
 
@@ -115,7 +115,7 @@ The following of this document first describes how to use the export functions o
 		height: 150px;
 	}
 	#gridContainer {
-		width: 100%; 
+		width: 100%;
 		height: 250px;
 	}
     </style>
@@ -154,7 +154,7 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
       exporter: true
@@ -332,7 +332,7 @@ handleCell(argObj):
 Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
-                                     { grid, isHeader, row, rowIdx, view, viewIdx, subrow,subrowIdx, 
+                                     { grid, isHeader, row, rowIdx, view, viewIdx, subrow,subrowIdx,
                                      cell, cellIdx, spCols, colOffset }
 =========  ========================  =========================================================================
 
@@ -388,8 +388,8 @@ spCols       Integer[]                 beforeContentRow             The header l
                                        beforeSubrow
                                        afterSubrow
                                        handleCell
-colOffset    Integer                   handleCell                   If the grid has a _RowSelector view or something else, this view will NOT be passed to the user in argObj. 
-                                                                    So the column index (cell.index) will appear shifted (start from 1 instead of 0). 
+colOffset    Integer                   handleCell                   If the grid has a _RowSelector view or something else, this view will NOT be passed to the user in argObj.
+                                                                    So the column index (cell.index) will appear shifted (start from 1 instead of 0).
                                                                     This colOffset is provided to remove this shift.
 ===========  ========================  ===========================  ==========================================================================================================================
 
@@ -406,7 +406,7 @@ Once you have implemented your own export writer, tell the framework about the n
 Available Export Writers
 ------------------------
 
-The following writers are currently available in the dojox/grid/enhanced/plugins/exporter package: 
+The following writers are currently available in the dojox/grid/enhanced/plugins/exporter package:
 
 ===============  ==============  =====================
 Writer Class     Format Name     Writer Argument
@@ -418,7 +418,7 @@ TableWriter      "table"         HTML table attributes
 Example
 -------
 
-Here is the structure of the implementation file of the CSVWriter, demonstrating how to write an export writer. It only implements 3 interfaces. 
+Here is the structure of the implementation file of the CSVWriter, demonstrating how to write an export writer. It only implements 3 interfaces.
 
 .. code-block :: javascript
   :linenos:
@@ -460,7 +460,7 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
     handleCell: function(/* object */arg_obj){
       // summary:
       //		Overrided from _ExportWriter
-      //Check if arg_obj.isHeader is true. We have already handled content cells in the above function, 
+      //Check if arg_obj.isHeader is true. We have already handled content cells in the above function,
       //here we only need to deal with the header cells.
       //You can get the header name by arg_obj.cell.name.
     },

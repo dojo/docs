@@ -35,7 +35,7 @@ Dojo 1.7 (AMD)
  :linenos:
 
  <script type="text/javascript">
-  require(["dojo/dom-form"], function(domForm){   
+  require(["dojo/dom-form"], function(domForm){
      var firstInputValue = domForm.fieldToObject("firstInput");
 
      //Assuming a form of:
@@ -93,7 +93,7 @@ Example 1: Using fieldToObject to get field values
       dojo.addOnLoad(convertFields);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertFields">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
@@ -102,7 +102,7 @@ Example 1: Using fieldToObject to get field values
        <select name="color" multiple>
           <option selected value="red">Red</option>
           <option value="blue">Blue</option>
-          <option selected value="green">Green</option>          
+          <option selected value="green">Green</option>
        </select>
     </form>
     <br><br>

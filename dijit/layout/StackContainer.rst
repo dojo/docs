@@ -8,7 +8,7 @@ dijit.layout.StackContainer
 .. contents::
     :depth: 2
 
-A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one). 
+A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one).
 
 
 ============
@@ -34,7 +34,7 @@ parameters:
   parameter   type             description
   ==========  ===============  ===========
   params      object           Optional.
-  srcNodeRef  DomNode|String   
+  srcNodeRef  DomNode|String
   ==========  ===============  ===========
 
 
@@ -64,10 +64,10 @@ doLayout="false" sets the size of the StackContainer to the size of his child pa
 Published topics
 ----------------
 
-StackContainer publishes topics 
+StackContainer publishes topics
 
-* [widgetId]-**addChild**, 
-* [widgetId]-**removeChild**, and 
+* [widgetId]-**addChild**,
+* [widgetId]-**removeChild**, and
 * [widgetId]-**selectChild**.
 
 

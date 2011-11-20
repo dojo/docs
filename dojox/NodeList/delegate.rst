@@ -6,7 +6,7 @@ dojox.NodeList.delegate
 .. contents::
     :depth: 2
 
-:author: Bill 
+:author: Bill
 :since: 1.6.0
 
 ========

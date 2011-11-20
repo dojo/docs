@@ -17,12 +17,12 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. cv:: html
 
-    <span data-dojo-type="dojox.data.CsvStore" 
+    <span data-dojo-type="dojox.data.CsvStore"
         data-dojo-id="store2" data-dojo-props="url:'{{dataUrl}}dojox/grid/tests/support/movies.csv'">
     </span>
 
     <div>
-        Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
+        Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row).
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
     </div>
@@ -41,7 +41,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             </tr>
             <tr>
                 <th colspan="2">Producer</th>
-            </tr> 
+            </tr>
         </thead>
     </table>
 
@@ -52,7 +52,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             var items = grid2.selection.getSelected();
             if(items.length){
                 // Iterate through the list of selected items.
-                // The current item is available in the variable 
+                // The current item is available in the variable
                 // "selectedItem" within the following function:
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {
@@ -94,5 +94,5 @@ Grid 1.2 supports a new parameter "selectionMode" which allows you to control th
   let the user select only one item at the same time
 'multiple'
   let the user selects more than one item at the same time
-'extended' (default) 
+'extended' (default)
   *not sure, what's the difference between "multiple" and "extended"*

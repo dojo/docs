@@ -9,14 +9,14 @@ dojox.gfx.utils.toJson
 .. contents::
   :depth: 2
 
-The *dojox.gfx.utils.toJson* is a helper function designed to serialize a dojox.gfx.Surface object into a JSON representation for a variety of scenarios, such as sending it across the wire to save, using it to copy a surface, and so on. The function itself is simple to use.  
+The *dojox.gfx.utils.toJson* is a helper function designed to serialize a dojox.gfx.Surface object into a JSON representation for a variety of scenarios, such as sending it across the wire to save, using it to copy a surface, and so on. The function itself is simple to use.
 
 
 =====
 Usage
 =====
 
-If you wish to use this function, then your code must do a *dojo.require("dojox.gfx.utils");* to load it.  
+If you wish to use this function, then your code must do a *dojo.require("dojox.gfx.utils");* to load it.
 
 The function signature is:
    *dojox.gfx.utils.toJson(/*dojox.gfx.Surface*/ surface);
@@ -49,7 +49,7 @@ Programmatic example
          //Create our surface.
          var node = dojo.byId("gfxObject");
          var drawing = dojox.gfx.createSurface(node, 200, 200);
-         drawing.createRect({ 
+         drawing.createRect({
            width:  100,
            height: 100,
            x: 50,
@@ -66,12 +66,12 @@ Programmatic example
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="gfxObject"></div>
     <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to JSON!</div>
     <br>
-    <br>  
+    <br>
     <b>JSON Serialization</b>
     <pre id="json">
     </pre>

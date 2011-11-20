@@ -57,8 +57,8 @@ To use this mixin in custom widgets:
     
 .. code-block :: javascript
 
-    cssStateNodes: {  
-       incrementButton: "dijitSliderIncrementButton",   
+    cssStateNodes: {
+       incrementButton: "dijitSliderIncrementButton",
        decrementButton: "dijitSliderDecrementButton",
        focusNode: "dijitSliderThumb"
     }

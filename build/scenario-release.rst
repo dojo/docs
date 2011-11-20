@@ -21,7 +21,7 @@ To make the release the same way the dojo developers do - use this command (chan
 
 .. code-block :: text
   
-  ./build.sh profile=standard version=1.3.2-dev releaseName=dojo-release-1.3.2-dev cssOptimize=comments.keepLines optimize=shrinksafe.keepLines cssImportIgnore=../dijit.css action=release 
+  ./build.sh profile=standard version=1.3.2-dev releaseName=dojo-release-1.3.2-dev cssOptimize=comments.keepLines optimize=shrinksafe.keepLines cssImportIgnore=../dijit.css action=release
 
 See util/buildscripts/build_release.sh for more information on how the dojo release is created.
 

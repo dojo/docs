@@ -30,7 +30,7 @@ Usage
 
   dojo.require("dojox.html._base");
   dojox.html.set(node, content, {
-      executeScripts: true, 
+      executeScripts: true,
       scriptHasHooks: false,
       renderStyles: true
   });
@@ -66,7 +66,7 @@ Set content with styles
                 + "dojo.NodeList, Array or other enumerable list of nodes."
                 + "</div>";
             dojox.html.set(dojo.byId("myNode1"), content, {
-                executeScripts: false, 
+                executeScripts: false,
                 scriptHasHooks: false,
                 renderStyles: true
             });

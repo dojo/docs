@@ -9,7 +9,7 @@ dojox.analytics.Urchin
 .. contents::
    :depth: 2
 
-This class is used to delay loading of the popular `Google Analytics <http://google.com/analytics>`_ Tracker, formerly known as Urchin. The synchronous nature of ``<script>`` tags causes page rendering to stall until loading of remote files has completed, and this module alleviates that. 
+This class is used to delay loading of the popular `Google Analytics <http://google.com/analytics>`_ Tracker, formerly known as Urchin. The synchronous nature of ``<script>`` tags causes page rendering to stall until loading of remote files has completed, and this module alleviates that.
 
 To use, require the Urchin module into your page, and create a new instance:
 
@@ -26,7 +26,7 @@ The most important attribute (parameter) would be the `acct` value, which should
 You can define your account number as a dojoConfig parameter ``urchin``. Simply include the key and a value however you set dojoConfig, either before ``dojo.js`` is loaded:
 
 .. code-block :: javascript
-  :linenos: 
+  :linenos:
 
   <script type="text/javascript">
      var dojoConfig = { urchin: "UA-12345-67" };
@@ -59,7 +59,7 @@ The urchin tracker allows you to add additional tracking to Ajax/long-lived page
    // later:
    tracker.trackPageView("/some-newURL");
 
-You can do this as often as you like during the lifetime of a single page view. 
+You can do this as often as you like during the lifetime of a single page view.
 
 **NOTE**: The initial page view is tracked as part of the ``GAonLoad`` event fired, so there is no need to do it manually. You will not, however, be able to call trackPageView() until after GAonLoad has fired.
 
@@ -71,14 +71,14 @@ You can do this as often as you like during the lifetime of a single page view.
        tracker.trackPageView("/some-otherURL");
    });
 
-This is provided only as a convenience, and to have a reliable way of being alerted when Google Analytics is ready. 
+This is provided only as a convenience, and to have a reliable way of being alerted when Google Analytics is ready.
 
 You can also do this as a shorthand, too. If you want to prevent the automatic tracking, and only track a custom-ajax page onload:
 
 .. code-block :: javascript
   :linenos:
 
-  new dojox.analytics.Urchin({ acct:"UA-12345-67", 
+  new dojox.analytics.Urchin({ acct:"UA-12345-67",
      GAonLoad: function(){
          this.trackPageView("/special/pageload")
      }
@@ -88,7 +88,7 @@ You can also do this as a shorthand, too. If you want to prevent the automatic t
 Optional Parameters
 -------------------
 
-In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been removed for a more robust solution. Disregard this following information if you are using Dojo 1.4 or higher. 
+In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been removed for a more robust solution. Disregard this following information if you are using Dojo 1.4 or higher.
 
 There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 420 in Dojo 1.2, and 42 in Dojo versions 1.3 and higher.
 

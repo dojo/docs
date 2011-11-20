@@ -11,7 +11,7 @@ dojox.io.scriptFrame
 .. contents::
    :depth: 2
 
-dojox.io.scriptFrame uses an iframe for dojo.io.script requests. 
+dojox.io.scriptFrame uses an iframe for dojo.io.script requests.
 
 
 ============

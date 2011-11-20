@@ -12,7 +12,7 @@ dojox.data.HtmlStore
   :depth: 2
 
 
-HtmlStore is an improved version of the older :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL. 
+HtmlStore is an improved version of the older :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL.
 
 
 ===========
@@ -100,7 +100,7 @@ List
     <li>Item 8</li>
     <li>Item 9</li>
     <li>Item 10</li>
-  </ul>  
+  </ul>
 
 **Note:** The <LI> entries are the items. Each has a single attribute 'name' which corresponds to the text content of the <LI>.
 
@@ -122,7 +122,7 @@ DIV Collection
     <div>Item 8</div>
     <div>Item 9</div>
     <div>Item 10</div>
-  </div>  
+  </div>
 
 **Note:** The <DIV> entries are the items. Each has a single attribute 'name' which corresponds to the text content of the <DIV>.
 
@@ -194,7 +194,7 @@ Connecting HtmlStore to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <table id="myData" style="display: none;">
     <thead>
@@ -233,7 +233,7 @@ Connecting HtmlStore to dijit.form.ComboBox
     </tbody>
     </table>
 
-    <b>Combo lookup of isbn</b><br> 
+    <b>Combo lookup of isbn</b><br>
     <div data-dojo-type="dojox.data.HtmlStore" data-dojo-props="dataId:'myData', trimWhitespace:true" data-dojo-id="comboStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'isbn'"></div>
 
@@ -259,7 +259,7 @@ Connecting HtmlStore to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Standard HTML table:</b><br>
     <table id="myData2">
@@ -301,11 +301,11 @@ Connecting HtmlStore to dojox.grid.DataGrid
     <br>
     <br>
 
-    <b>dojox.grid.DataGrid connected to the above table:</b><br> 
+    <b>dojox.grid.DataGrid connected to the above table:</b><br>
     <div data-dojo-type="dojox.data.HtmlStore" data-dojo-props="dataId:'myData2', trimWhitespace:true" data-dojo-id="gridStore"></div>
     <div style="width: 400px; height: 200px;">
-      <div id="grid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="grid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:gridStore,
         structure:layoutBooks,
         query:{},
@@ -338,7 +338,7 @@ Connecting HtmlStore with List to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Standard HTML Ordered List:</b><br>
     <ul id="myList2">
@@ -352,11 +352,11 @@ Connecting HtmlStore with List to dijit.form.ComboBox
       <li>Item 8</li>
       <li>Item 9</li>
       <li>Item 10</li>
-    </ul>  
+    </ul>
     <br>
     <br>
 
-    <b>dijit.form.ComboBox connected to the above list:</b><br> 
+    <b>dijit.form.ComboBox connected to the above list:</b><br>
     <div data-dojo-type="dojox.data.HtmlStore" data-dojo-props="dataId:'myList2', trimWhitespace:true" data-dojo-id="comboStore2"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore2, searchAttr:'name'"></div>
 
@@ -374,7 +374,7 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>DIV collection:</b><br>
     <div id="divList2">
@@ -388,10 +388,10 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
       <div>Item 8</div>
       <div>Item 9</div>
       <div>Item 10</div>
-    </div>  
+    </div>
     <br>
     <br>
 
-    <b>dijit.form.ComboBox connected to the above list:</b><br> 
+    <b>dijit.form.ComboBox connected to the above list:</b><br>
     <div data-dojo-type="dojox.data.HtmlStore" data-dojo-props="dataId:'divList2', trimWhitespace:true" data-dojo-id="comboStore3"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore3, searchAttr:'name'"></div>

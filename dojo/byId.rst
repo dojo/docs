@@ -8,7 +8,7 @@ dojo.byId
 .. contents::
     :depth: 2
 
-This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
+This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode.
 
 Since dojo 1.7, dojo.byId is defined in the ``dojo/dom`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
@@ -173,7 +173,7 @@ The following example lets a node by id dissapear from the screen
     <style type="text/css">
       #findMe {
         width: 200px;
-        height: 100px; 
+        height: 100px;
         background: #f3f3f3;
         border: 1px dotted #ccc;
         color: #444;

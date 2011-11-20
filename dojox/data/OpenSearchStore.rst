@@ -23,7 +23,7 @@ This store takes in the OpenSearch Descriptor and uses that to configure how a s
 Supported OpenSearch Return Formats
 -----------------------------------
 
-* ATOM 
+* ATOM
 * RSS
 * XML
 
@@ -113,7 +113,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 var content = dojo.doc.createElement("div");
                 var cDiv = dojo.doc.createElement("div");
                 var tDiv = dojo.doc.createElement("div");
-                list.appendChild(cDiv);                
+                list.appendChild(cDiv);
 
                 cDiv.appendChild(tDiv);
                 cDiv.appendChild(content);
@@ -132,13 +132,13 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
                 content.innerHTML = openSearchStore.getValue(e, "content");
                 list.appendChild(dojo.doc.createElement("br"));
-                list.appendChild(dojo.doc.createElement("br"));                
+                list.appendChild(dojo.doc.createElement("br"));
               }
             }
           }
           function err(e) {
             console.debug(e);
-          } 
+          }
           openSearchStore.fetch({query: {searchTerms: dijit.byId("searchBox").attr("value")}, onComplete: gotResults, onError: err});
         });
       }
@@ -146,7 +146,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
       dojo.addOnLoad(initSimple);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <input id="searchBox" type="text" data-dojo-type="dijit.form.TextBox" value="dojo"></input>
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>

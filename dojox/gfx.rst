@@ -24,7 +24,7 @@ As of Dojo 1.2, the following native vector graphics engine adaptations are impl
 * Silverlight (wherever it is supported by Microsoft)
 * Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
 
-Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_ is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_. 
+Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_ is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_.
 
 Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
@@ -36,7 +36,7 @@ Core Concepts
 On a conceptual level dojox.gfx has a simple declarative model.
 
 
-Every visual presentation created with Dojo GFX begins by creating a **Surface** object which will serve as the visual rectangular container for shapes.  Because Surface contains the shapes that will be drawn, it also has in common the capabilities of **Group** nodes (see below).  
+Every visual presentation created with Dojo GFX begins by creating a **Surface** object which will serve as the visual rectangular container for shapes.  Because Surface contains the shapes that will be drawn, it also has in common the capabilities of **Group** nodes (see below).
 
 **IMPORTANT:** Under the covers, Surface objects are associated with a particular rendering implementation that's in use in the current environment to perform all the graphics operations.  Some kinds of graphics renderer implementations require additional time for them to be initialized, and they may not be immediately ready after they are created.  For this reason, Surface provides an important callback registration function that must ALWAYS be used for registering all your graphics manipulation code, **whenLoaded(your callback function here)**.  When a Surface implementation is ready to allow drawing on its surface (asynchronously), it will execute the functions registered via whenLoaded().  Think of this working similar to dojo.addOnLoad(), but instead of the Document being initialized asynchronously, it's the Surface object in this case.  There are several interesting characteristics of Surface objects, including:
 
@@ -1473,7 +1473,7 @@ The following doctype has been shown to work in a majority of cases (and may be 
     xmlns:xlink="http://www.w3.org/1999/xlink">
  
   <style>
-    v\:rect, v\:roundrect, v\:line, v\:polyline, v\:curve, v\:arc, v\:oval, v\:image, v\:shape, v\:group, v\:skew, 
+    v\:rect, v\:roundrect, v\:line, v\:polyline, v\:curve, v\:arc, v\:oval, v\:image, v\:shape, v\:group, v\:skew,
     v\:stroke, v\:fill {behavior:url(#default#VML); display:inline-block }
   </style>
 

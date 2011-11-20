@@ -40,7 +40,7 @@ Sample application configuration for dojox.app.model
     "names": {
       "params":{
         "store": {"$ref":"#stores.namesStore"}
-      }	       
+      }
     }
   },
   
@@ -52,7 +52,7 @@ Sample application configuration for dojox.app.model
         "repeatmodel": {
           "params":{
             "store": {"$ref":"#stores.repeatStore"}
-          }           
+          }
         }
       },
       "template": "views/repeat.html",

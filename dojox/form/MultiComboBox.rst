@@ -13,7 +13,7 @@ dojox.form.MultiComboBox
 Introduction
 ============
 
-This widget is an experimental extension to :ref:`ComboBox <dijit/form/ComboBox>` to allow "tag" style input using a datastore using a delimeter. 
+This widget is an experimental extension to :ref:`ComboBox <dijit/form/ComboBox>` to allow "tag" style input using a datastore using a delimeter.
 
 =====
 Usage
@@ -31,7 +31,7 @@ The MultiComboBox behaves the same as a plain ComboBox. Pass it a store and sear
 	searchAttr:"tag"
     },"frogin3");
     widget.startup();
- </script>			
+ </script>
 		
 No additional CSS is required.
 

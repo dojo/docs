@@ -16,7 +16,7 @@ dojox.geo.charting.Map
 Overview
 --------
 
-A dojo widget to render map information "shapefile" data. 
+A dojo widget to render map information "shapefile" data.
 
 .. code-block :: javascript
  :linenos:
@@ -47,7 +47,7 @@ fig 1. Map (Click on map)
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_maps.html"></iframe> 
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_maps.html"></iframe>
 
 
 fig 2. Map with associated DataChart (Click on map)
@@ -71,5 +71,5 @@ fig 3. Map with Legend (Click on map)
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>   
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>
   

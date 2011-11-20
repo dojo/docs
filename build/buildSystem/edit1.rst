@@ -106,7 +106,7 @@ These are discussed in separate documents as follows:
 * For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
 ========================
-Assumptions for Examples 
+Assumptions for Examples
 ========================
 
 This document contains several examples. It assumes the source distribution of the Dojo Toolkit, version 1.7 or greater,
@@ -468,7 +468,7 @@ Trees, Dirs, and Files
 The profile properties ``trees``, ``dirs``, and ``files`` all have the same format: an array of (source,
 destination [,ignore]) pairs or triples. The source and destination are path names for ``trees`` and ``dirs`` and
 filenames for ``files``. In each case the properties say where to discover resources and where to output the
-discovered resources after they have been transformed. 
+discovered resources after they have been transformed.
 
 The optional ignore value is a regular expression that solves for resources that should be ignored. As each resource is
 discovered, the full filename (including the complete path), is tested against the regular expression; if the regular
@@ -805,7 +805,7 @@ properties are mixed. Let's look at an example; consider the following two profi
   var profile = {
       propA:"A",
       propB:"B",
-      propC:"C", 
+      propC:"C",
       packages:[{
           name:"myPackage",
           location:"../packages",
@@ -819,8 +819,8 @@ properties are mixed. Let's look at an example; consider the following two profi
 
   var profile = {
       propB:"profile-2-B",
-      propC:"C", 
-      propD:"D", 
+      propC:"C",
+      propD:"D",
       packages:[{
           name:"myPackage",
           destLocation:"./packages"
@@ -841,10 +841,10 @@ Then the following profile object would be computed:
       propA:"A",                    // from profile-1
       propB:"profile-2-B",          // overwrite form profile-2
       propC:"C",                    // overwrite from profile-2 that happens to be the same as profile-1
-      propD:"D",                    // from profile-2 
+      propD:"D",                    // from profile-2
       packages:[{
-          name:"myPackage",         // from profile-2 
-          location:"../packages",   // from profile-2 
+          name:"myPackage",         // from profile-2
+          location:"../packages",   // from profile-2
           destLocation:"./packages" // overwrite form profile-2
       }]
   }

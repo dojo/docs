@@ -89,23 +89,23 @@ Example 1: Load an ATOM Feed
           function(feed) {
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
-           xml.innerHTML = ""; 
+           xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
            var json = dojo.byId("simpleAtomJson");
-           json.innerHTML = ""; 
+           json.innerHTML = "";
            json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
           },
           function(err) {
             console.debug(err);
           }
-        );   
+        );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initSimpleAtom);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
@@ -140,7 +140,7 @@ Example 2: Update an entry in a Feed
           function(feed) {
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simplePristineAtomXml");
-           xml.innerHTML = ""; 
+           xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
            //Now get an entry for mod.
@@ -152,7 +152,7 @@ Example 2: Update an entry in a Feed
            entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
            conn.updateEntry(entry, function() {
                var xml = dojo.byId("simpleModifiedAtomXml");
-               xml.innerHTML = ""; 
+               xml.innerHTML = "";
                xml.appendChild(dojo.doc.createTextNode(feed.toString()));
              },
              function(err){
@@ -163,13 +163,13 @@ Example 2: Update an entry in a Feed
           function(err) {
             console.debug(err);
           }
-        );   
+        );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initUpdateAtom );
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div style="height: 400px; overflow: auto;">
       <b>XML of Feed (before change)</b>

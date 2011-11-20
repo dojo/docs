@@ -32,7 +32,7 @@ And include the CSS somewhere in your page:
 Examples
 --------
 
-The first example uses setContent() and show() to vary the message and display it. 
+The first example uses setContent() and show() to vary the message and display it.
 
 .. cv-compound::
 
@@ -42,7 +42,7 @@ The first example uses setContent() and show() to vary the message and display i
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
-  Javascript   
+  Javascript
 
   .. cv:: javascript
 
@@ -74,7 +74,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
   - warning
   - message
 
-- in decreasing order of severity. 
+- in decreasing order of severity.
 
 .. cv-compound::
 
@@ -84,18 +84,18 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
-  Javascript   
+  Javascript
 
   .. cv:: javascript
 
     <script>
       dojo.require("dojox.widget.Toaster");
       function surpriseMe() {
-        dojo.publish("testMessageTopic", 
+        dojo.publish("testMessageTopic",
           [
             {
-              message: "Twinkies are now being served in the vending machine!", 
-              type: "fatal", 
+              message: "Twinkies are now being served in the vending machine!",
+              type: "fatal",
               duration: 500
             }
           ]
@@ -105,14 +105,14 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. cv:: html
 
-    <div data-dojo-type="dojox.widget.Toaster" 
+    <div data-dojo-type="dojox.widget.Toaster"
          data-dojo-props="positionDirection:'br-left', duration:0, messageTopic:'testMessageTopic'"
-         id="publish_subscribe_toaster" 
+         id="publish_subscribe_toaster"
          >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
 
-This example builds a Toaster programmatically and lets you set params. 
+This example builds a Toaster programmatically and lets you set params.
 
 .. cv-compound::
 

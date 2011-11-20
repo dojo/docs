@@ -20,9 +20,9 @@ Features
 
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
-* Drop-Down select of Font names to style text with.  The font names by default are basic ones supported by all browsers.  Users can customize this list to include other font names.  
+* Drop-Down select of Font names to style text with.  The font names by default are basic ones supported by all browsers.  Users can customize this list to include other font names.
 * Drop-Down select of Font sizes (xx-small to xx large) to style text with.  The font sizes are the basic HTML named font sizes (1 through 7), that all browsers support natively through the fontSize command.
-* Drop-Down select of text container types, such as <p>, <pre>, <h1>, <h2> ... and so on.  
+* Drop-Down select of text container types, such as <p>, <pre>, <h1>, <h2> ... and so on.
 * Preview mode in the dropdowns to show what the size or style type would appear like in the document.
 * Auto-updating of view of the current style, size, and name settings as the user moves through the document to sections with different styles.
 
@@ -54,7 +54,7 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 Plugin Options
 ==============
 
-The FontChoice plugin allows certain options to control how the plugin displays state to the user.  This is primarily to enable or disable the style 'preview' in the button.  The default mode for style preview is enabled for backwards compatibility.  
+The FontChoice plugin allows certain options to control how the plugin displays state to the user.  This is primarily to enable or disable the style 'preview' in the button.  The default mode for style preview is enabled for backwards compatibility.
 
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | **option**                        | **Description**                                                     | **Required**           |

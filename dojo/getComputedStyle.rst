@@ -49,7 +49,7 @@ When using AMD format in a fully baseless application, ``getComputedStyle`` is a
 
 .. code-block :: javascript
 
-  require(["dojo/dom-style", "dojo/dom"], function(domStyle, dom){   
+  require(["dojo/dom-style", "dojo/dom"], function(domStyle, dom){
     domStyle.getComputedStyle(dom.byId("foo")).borderWidth;
 
     // Reusing the returned object, avoiding multiple lookups:
@@ -61,7 +61,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.get
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
       dojo.getComputedStyle(dojo.byId("foo")).borderWidth;
 
       // Reusing the returned object, avoiding multiple lookups:

@@ -59,7 +59,7 @@ This concept is likely one of the aspects of dojo.data that might seem confusing
 Correct access
 --------------
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   var store = new some.data.Store();
   var items;
@@ -76,7 +76,7 @@ This example might make you wonder why attributes are not accessed as shown in o
 Incorrect access
 ----------------
 
-* var value = item["foo"]; 
+* var value = item["foo"];
 * var value = item.foo;
 * var value = item.getValue("foo");
 

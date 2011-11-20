@@ -22,7 +22,7 @@ These plugins are loaded on demand, so they must be required and declared before
 * :ref:`Filter <dojox/grid/EnhancedGrid/plugins/Filter>` - Support for defining rules to filter grid content with various data types.
 * :ref:`Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>` - Exporting grid content to various formats.
 * :ref:`Printer <dojox/grid/EnhancedGrid/plugins/Printer>` - Providing convenient ways to print grid.
-* :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` - Unified extended selection support for rows, columns and cells. 
+* :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` - Unified extended selection support for rows, columns and cells.
 * :ref:`DnD <dojox/grid/EnhancedGrid/plugins/DnD>` - Drag-and-drop support for rows/columns/cells, either within grid or out of grid.
 * :ref:`Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>` - Pagination approach to work with huge data set besides the default virtual scrolling way
 * :ref:`CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>` - Merging adjacent cells within a row.

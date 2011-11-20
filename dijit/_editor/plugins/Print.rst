@@ -87,7 +87,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

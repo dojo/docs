@@ -44,7 +44,7 @@ Click on a method name to see a documentation page for it.
 
 :coords:
   Partially "deprecated", using NodeList.position is recommended in Dojo 1.4 and higher. Returns the coordinate values
-  of all the nodes in this list. 
+  of all the nodes in this list.
 
 :position:
-  Returns the coordinate values of all the nodes in this list. 
+  Returns the coordinate values of all the nodes in this list.

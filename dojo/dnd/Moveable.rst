@@ -79,7 +79,7 @@ Example
       padding: 10px;
       border: 1px solid #000;
       background: red;
-    } 
+    }
 
     #dndArea {
       height: 200px;

@@ -27,7 +27,7 @@ API Support
 Constructor Parameters
 ======================
 
-The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>` 
+The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
 ============
 Custom Types
@@ -77,7 +77,7 @@ The write API implementation conforms to the dojo.data specification for Write. 
 newItem(), deleteItem, save() and identities
 --------------------------------------------
 
-Care must be taken when defining an attribute that acts as an identifier for ItemFileWriteStore.  By defining it, you are in control of ensuring it remains unique.  This particularly matters with newItem and deleteItem.  ItemFileWriteStore uses the identifier to track changes.  This means that even if you delete an item, the identity of that item remains reserved and 'in use'.  So, if you go call newItem() and try to reuse the identifier you will get an exception.  The way to clear this issue and reuse the identifier is to commit your changes by calling save().  Save will apply all current changes and clear any pending state, including reserved identifiers. 
+Care must be taken when defining an attribute that acts as an identifier for ItemFileWriteStore.  By defining it, you are in control of ensuring it remains unique.  This particularly matters with newItem and deleteItem.  ItemFileWriteStore uses the identifier to track changes.  This means that even if you delete an item, the identity of that item remains reserved and 'in use'.  So, if you go call newItem() and try to reuse the identifier you will get an exception.  The way to clear this issue and reuse the identifier is to commit your changes by calling save().  Save will apply all current changes and clear any pending state, including reserved identifiers.
 
 The reason this does not occur when you do not specify an identifier is that the store is auto-creating them for you and it makes sure they always remain unique.  In the auto-create case, the identifier isn't even exposed as a public attribute (there is no way to get it via a getValue call, only getIdentity can do it).  So by 're-inserting an item, all you effectively do is create an entirely new item with a new identity, and since it has a new identity, there is no collision.
 
@@ -102,8 +102,8 @@ The *_saveEverything* function should be defined on your store when all you want
 .. code-block :: javascript
  :linenos:
 
-  _saveEverything: function(saveCompleteCallback /*Your callback to call when save is completed */, 
-                            saveFailedCallback /*Your callback to call if save fails*/, 
+  _saveEverything: function(saveCompleteCallback /*Your callback to call when save is completed */,
+                            saveFailedCallback /*Your callback to call if save fails*/,
                             newFileContentString /*The generated JSON data to send somewhere*/)
 
 
@@ -115,7 +115,7 @@ The *_saveCustom* function should be defined on your store when you want to cont
 .. code-block :: javascript
  :linenos:
 
-  _saveCustom: function(saveCompleteCallback /*Your callback to call when save is completed */, 
+  _saveCustom: function(saveCompleteCallback /*Your callback to call when save is completed */,
                         saveFailedCallback /*Your callback to call if save fails*/)
   
 
@@ -174,7 +174,7 @@ Add in a new country
 
   function saveDone(){
     alert("Done saving.");
-  }  
+  }
   function saveFailed(){
     alert("Save failed.");
   }
@@ -191,7 +191,7 @@ Delete a country
 
   function saveDone(){
     alert("Done saving.");
-  } 
+  }
   function saveFailed(){
     alert("Save failed.");
   }
@@ -200,7 +200,7 @@ Delete a country
       console.log("Deleted country: " + store.getLabel(item);
       store.deleteItem(items[i]);
     }
-    store.save({onComplete: saveDone, onError: saveFailed});  
+    store.save({onComplete: saveDone, onError: saveFailed});
   }
   var request = store.fetch({query: {name:"Egypt"}, queryOptions: {ignoreCase: true}, onComplete: gotNames}
 
@@ -225,18 +225,18 @@ The following is a semi-complex example of the write API in action. In this exam
       dojo.require("dijit.form.TextBox");
       dojo.require("dojox.grid.DataGrid");
 
-      var geoData = { 
+      var geoData = {
         'identifier': 'name',
         'label': 'name',
         'items': [
           { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' }, 
+            { 'name':'Egypt', 'type':'country' },
             { 'name':'Kenya', 'type':'country', children:[
               { 'name':'Nairobi', 'type':'city' },
               { 'name':'Mombasa', 'type':'city' } ]
             },
             { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' } 
+              { 'name':'Khartoum', 'type':'city' }
             } ]
           },
           { 'name':'Asia', 'type':'continent', 'children':[
@@ -268,9 +268,9 @@ The following is a semi-complex example of the write API in action. In this exam
           { 'name':'South America', 'type':'continent', children:[
             { 'name':'Brazil', 'type':'country', 'population':'186 million' },
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          } 
+          }
         ]
-      };    
+      };
 
       var layoutGeo = [
         [
@@ -281,7 +281,7 @@ The following is a semi-complex example of the write API in action. In this exam
       ];
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init2 () {
         //Function to perform a fetch on the datastore when a button is clicked
@@ -290,7 +290,7 @@ The following is a semi-complex example of the write API in action. In this exam
            //Callback for processing a returned list of items.
           function gotAll(items, request) {
             var value = spinner.getValue();
-            if ( value >= 0 ) { 
+            if ( value >= 0 ) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -315,7 +315,7 @@ The following is a semi-complex example of the write API in action. In this exam
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <b>Set the population to assign to all items</b>
@@ -327,9 +327,9 @@ The following is a semi-complex example of the write API in action. In this exam
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Update all geography items populations!</div>
     <br>
     <br>
-    <div id="grid"  
+    <div id="grid"
       style="width: 400px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="store:geoStore,
       structure:layoutGeo,
       query:{},
@@ -363,18 +363,18 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Tree");
-      var storeData2 = { 
+      var storeData2 = {
         identifier: 'name',
         label: 'name',
         items: [
           { name:'Africa', type:'continent', children:[
-            { name:'Egypt', type:'country' }, 
+            { name:'Egypt', type:'country' },
             { name:'Kenya', type:'country', children:[
             { name:'Nairobi', type:'city' },
             { name:'Mombasa', type:'city' } ]
             },
             { name:'Sudan', type:'country', children:
-              { name:'Khartoum', type:'city' } 
+              { name:'Khartoum', type:'city' }
             } ]
           },
           { name:'Asia', type:'continent', children:[
@@ -406,7 +406,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
           { name:'South America', type:'continent', children:[
             { name:'Brazil', type:'country', population:'186 million' },
             { name:'Argentina', type:'country', population:'40 million' } ]
-          } 
+          }
         ]
       };
 
@@ -428,7 +428,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
     <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
@@ -456,18 +456,18 @@ is displayed in an alert.
       dojo.require("dijit.form.TextBox");
       dojo.require("dojox.grid.DataGrid");
 
-      var geoData2 = { 
+      var geoData2 = {
         'identifier': 'name',
         'label': 'name',
         'items': [
           { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' }, 
+            { 'name':'Egypt', 'type':'country' },
             { 'name':'Kenya', 'type':'country', children:[
               { 'name':'Nairobi', 'type':'city' },
               { 'name':'Mombasa', 'type':'city' } ]
             },
             { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' } 
+              { 'name':'Khartoum', 'type':'city' }
             } ]
           },
           { 'name':'Asia', 'type':'continent', 'children':[
@@ -499,9 +499,9 @@ is displayed in an alert.
           { 'name':'South America', 'type':'continent', children:[
             { 'name':'Brazil', 'type':'country', 'population':'186 million' },
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          } 
+          }
         ]
-      };    
+      };
 
       var layoutGeo2 = [
         [
@@ -512,7 +512,7 @@ is displayed in an alert.
       ];
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init3 () {
 
@@ -559,7 +559,7 @@ is displayed in an alert.
         };
 
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
-           //  summary:  
+           //  summary:
            //    This is a custom save function for the geoStore to allow emitting only the modified items as
            //    a block of JSON text.
            var changeSet  = geoStore2._pending;
@@ -572,7 +572,7 @@ is displayed in an alert.
               //Find the modified item, it can be in one of two places to look up
               //Either by an explicit identity if it was specified, or by its index.
               if (geoStore2._itemsByIdentity) {
-                 item = geoStore2._itemsByIdentity[i]; 
+                 item = geoStore2._itemsByIdentity[i];
               } else {
                  item = geoStore2._arrayOfAllItems[i];
               }
@@ -589,7 +589,7 @@ is displayed in an alert.
            //Callback for processing a returned list of items.
           function gotAll(items, request) {
             var value = spinner2.getValue();
-            if ( value >= 0 ) { 
+            if ( value >= 0 ) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -615,7 +615,7 @@ is displayed in an alert.
       dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData2" data-dojo-id="geoStore2"></div>
     <b>Set the population to assign to all items of type city</b>
@@ -627,9 +627,9 @@ is displayed in an alert.
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div>
     <br>
     <br>
-    <div id="grid2"   
+    <div id="grid2"
       style="width: 400px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="store:geoStore2,
       structure:layoutGeo2,
       query:{},

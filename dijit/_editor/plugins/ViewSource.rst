@@ -25,7 +25,7 @@ Once required in and enabled, this plugin provides the following features to dij
 * Works well when paired with the FullScreen plugin.  This plugin is 'FullScreen' aware and will behave appropriately.
 * Built-in filters to strip out potentially dangerous input from being inserted, such as <script> tags, <iframe> tags, and comment tags, that are often used as a way to do XSS (Cross-SiteScripting hijacks).
 * When enabled, all other RTE plugins are disabled for the duration of the source view.  This is because in source view mode, the other plugins  do not apply.
-* Provides a 'readOnly' mode that, if enabled on the plugin, allows the user to see the source, but they cannot change it.  
+* Provides a 'readOnly' mode that, if enabled on the plugin, allows the user to see the source, but they cannot change it.
 
 
 =====
@@ -146,7 +146,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -154,7 +154,7 @@ Basic Usage
     </ul>
     </div>
 
-Enabling read-only view 
+Enabling read-only view
 -----------------------
 
 .. code-example::
@@ -189,7 +189,7 @@ Enabling read-only view
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -233,7 +233,7 @@ Viewing Source with PrettyPrint Plugin enabled
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -276,7 +276,7 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -323,7 +323,7 @@ This example also organizes the toolbar a bit.
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

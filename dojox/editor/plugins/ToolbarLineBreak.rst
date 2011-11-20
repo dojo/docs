@@ -53,7 +53,7 @@ The background images of the toolbar need to be able to handle line-wrapping too
 AllY Considerations
 ===================
 
-From a key nav A11Y perspective, the toolbar line break plugin works just like the ToolbarSeparator, it doesn't impact the key nav.  Left and right arrow keys will still move between the buttons fine.  
+From a key nav A11Y perspective, the toolbar line break plugin works just like the ToolbarSeparator, it doesn't impact the key nav.  Left and right arrow keys will still move between the buttons fine.
 
 ========
 Examples
@@ -97,7 +97,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

@@ -27,7 +27,7 @@ Usage
  // Load the window-related functions:
  require(["dojo/window"], function(win) {
       // Get the viewport-size of the document:
-      var vs =win.getBox();     
+      var vs =win.getBox();
       console.log('viewport size:', ' width: ', vs.w, ', height: ', vs.h, ', left: ', vs.l, ', top: ', vs.t);
  );
 
@@ -60,7 +60,7 @@ Gray out the screen
         
         function block(){
             var vs = dojo.window.getBox(),
-            div = dojo.create("div", { 
+            div = dojo.create("div", {
                 style: {
                     position: "absolute",
                     top: "0px",
@@ -78,6 +78,6 @@ Gray out the screen
         }
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button type="button" onclick="block();">gray the screen</button>

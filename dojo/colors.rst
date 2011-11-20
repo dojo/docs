@@ -3,7 +3,7 @@
 dojo.colors
 ===========
 
-A module which augments the base :ref:`dojo.Color <dojo/Color>` class with additional methods and named colors. This is not included in base ``dojo.js`` by default for size reasons. 
+A module which augments the base :ref:`dojo.Color <dojo/Color>` class with additional methods and named colors. This is not included in base ``dojo.js`` by default for size reasons.
 
 methods
 =======

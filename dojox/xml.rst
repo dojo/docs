@@ -51,7 +51,7 @@ Example 1: Generic XML DOM Parser and utilities
          for (var i = 0; i < docNode.childNodes.length; i++) {
            ap.appendChild(document.createTextNode("Element: [" + i + "] contains text: " + dojox.xml.parser.textContent(docNode.childNodes[i])));
            ap.appendChild(document.createElement("br"));
-         } 
+         }
 
          //Write out the XML text obtained from converting the DOM back.
          ap.appendChild(document.createElement("br"));
@@ -62,7 +62,7 @@ Example 1: Generic XML DOM Parser and utilities
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="xmlContent"></div>
 
@@ -92,6 +92,6 @@ Example 2: Generic XML DOM to JS Object parser
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
  
     Look in the console for debug statements showing the constructed JS DOM like structure.

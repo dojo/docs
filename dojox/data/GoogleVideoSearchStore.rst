@@ -49,7 +49,7 @@ The pattern of using the GoogleSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleVideoSearchStore();
 
   var query = {text: "dojo ajax toolkit"};
@@ -92,7 +92,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 

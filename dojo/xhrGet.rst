@@ -88,7 +88,7 @@ dojo.xhrGet supported object properties
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                               | 
+|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                               |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -118,7 +118,7 @@ dojo.xhrGet supported object properties
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**handle**        |Sometimes you want to do something regardless of whether a call completes or fails.  Thats where handle comes it, it will be|
 |                  |invoked by xhr regardless.  The first parameter passed to this callback is the response (or error) and the second parameter |
-|                  |is the IO args object, from which you can get the status code and determine success or failure.                             |                            
+|                  |is the IO args object, from which you can get the status code and determine success or failure.                             |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -136,18 +136,18 @@ For both the synchronous and asynchronous cases, the dojo.xhrGet() call will ret
 Handling Status Codes
 ---------------------
 
-There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like: 
+There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like:
 
 * 201: (Created)
-* 202: (Accepted), 
+* 202: (Accepted),
 * 203: (Non-Authoritative Information)
-* 204: (No Content).  
+* 204: (No Content).
 
-There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others dojo.xhrPut, dojo.xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?  
+There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others dojo.xhrPut, dojo.xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?
 
   **The answer is:  Yes.**
 
-A second parameter is always passed to the 'load', 'error', and 'handle' functions.  This parameter is the 'ioargs' parameter.  It contains a lot of detail about the xhr request, including a reference to the actual native xhr object.  You can access the status code off that object via: 'ioargs.xhr.status'.  Please see Examples 6, 7, and 9 for a usage example of doing that.  
+A second parameter is always passed to the 'load', 'error', and 'handle' functions.  This parameter is the 'ioargs' parameter.  It contains a lot of detail about the xhr request, including a reference to the actual native xhr object.  You can access the status code off that object via: 'ioargs.xhr.status'.  Please see Examples 6, 7, and 9 for a usage example of doing that.
 
 By making use of this status check, you can implement handling for authentication, proxy authentication, and myraid of other items you may need to react to, to make your application dynamic and user friendly.
 
@@ -188,12 +188,12 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicense);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>The Dojo License:</b>
     <div id="licenseContainer" style="height: 200px;"></div>
@@ -231,13 +231,13 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicensePreventCache);
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="licenseContainerPreventCache" style="height: 200px;"></div>
 
@@ -268,14 +268,14 @@ Example 3: dojo.xhrGet call that errors.
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
 
       }
       dojo.addOnLoad(callError);
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="errorContainer" style="height: 100px;"></div>
 
@@ -300,7 +300,7 @@ Example 4: Alternate way to pass callbacks.
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
 
         //Now add the callbacks
         deferred.addCallback(function(data) {
@@ -322,7 +322,7 @@ Example 4: Alternate way to pass callbacks.
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseAlternateCB" style="height: 200px;"></div>
 
@@ -365,12 +365,12 @@ Example 5: dojo.xhrGet call with 'content' (query params).
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicenseQueryParams);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseQueryParams" style="height: 200px;"></div>
 
@@ -400,12 +400,12 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicenseStatus);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseStatus" style="height: 100px;"></div>
 
@@ -450,12 +450,12 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicenseErrorStatus);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseErrorStatus" style="height: 100px;"></div>
 
@@ -499,12 +499,12 @@ Example 8: dojo.xhrGet call with headers
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicenseHeaders);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseHeaders" style="height: 200px;"></div>
 
@@ -530,7 +530,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
           handle: function(error, ioargs){
             var message = "";
             switch(ioargs.xhr.status){
-               case 200: 
+               case 200:
                  message = "Good request.";
                  break;
                case 404:
@@ -550,12 +550,12 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
         }
 
         //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.addOnLoad(getLicenseErrorStatusWithHandle);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="getLicenseErrorStatusWithHandle" style="height: 100px;"></div>
 

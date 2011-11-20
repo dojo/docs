@@ -10,8 +10,8 @@ dojox.lang.docs
 .. contents::
     :depth: 3
 
-**dojox.lang.docs** provides schemas on Dojo's classes based on the API 
-documentation. 
+**dojox.lang.docs** provides schemas on Dojo's classes based on the API
+documentation.
 
 
 ============

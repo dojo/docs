@@ -18,12 +18,12 @@ A dojox.gfx-based version of the :ref:`MagnifierLite widget <dojox/image/Magnifi
 Introduction
 ============
 
-The dojox.image.Magnifier widget is experimental and places an SVG "viewport" over an image and 
+The dojox.image.Magnifier widget is experimental and places an SVG "viewport" over an image and
 magnifies the image underneath. The widget is an unobtrusive way to add an unstyled overlay above
-the srcNode image element.  The overlay is a scaled version of the src image.  You might use this 
-widget to magnify a larger image which was scaled down.   
+the srcNode image element.  The overlay is a scaled version of the src image.  You might use this
+widget to magnify a larger image which was scaled down.
 
-Over-ride the _createGlass method to create your custom surface, being sure to create an img node on 
+Over-ride the _createGlass method to create your custom surface, being sure to create an img node on
 that surface.
 
       
@@ -36,7 +36,7 @@ Programmatic example
 --------------------
 The following code fragment is from
 `Dojo nightly archive <http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html>`_
-and shows how dojox.image.Magnifier can be programmatically created.  The code fragment creates two buttons, the 
+and shows how dojox.image.Magnifier can be programmatically created.  The code fragment creates two buttons, the
 first button with id="foob" creates a dojox.image.Magnifier and associates it with the image.  The second button
 destroys it.
 

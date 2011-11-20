@@ -136,7 +136,7 @@ Connecting OpmlStore to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml'" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:geoStore, searchAttr:'text'"></div>
@@ -157,7 +157,7 @@ Connecting OpmlStore to dijit.Tree
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore2"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geoModel" data-dojo-props="store:geoStore2, query:{}, rootId:'Geography', rootLabel:'Geography'"></div>
@@ -191,8 +191,8 @@ Connecting OpmlStore to dojox.grid.DataGrid
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore3"></div>
 
     <div style="width: 400px; height: 300px;">
-      <div id="grid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="grid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:geoStore3,
         structure:layoutGeo,
         query:{},

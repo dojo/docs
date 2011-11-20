@@ -19,7 +19,7 @@ For the following examples, the defined JavaScript will be used. Note that it ha
 
 .. code-block :: javascript
 
-  { identifier: 'abbr', 
+  { identifier: 'abbr',
     label: 'name',
     items: [
       { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -38,7 +38,7 @@ In the following examples:
 * Each item is a country, and each item has three attributes, name,abbr, and capital.
 * The abbr attribute is an identifier. Each country has a different abbr for unique look up.
 
-This is a simple, but powerful, way to represent data in the browser. It can also be quickly converted to a text format called `JavaScript Object Notation (JSON) <http://www.json.org>`_. The JSON format can be stored as files on your server and loaded via xhr calls. dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format. 
+This is a simple, but powerful, way to represent data in the browser. It can also be quickly converted to a text format called `JavaScript Object Notation (JSON) <http://www.json.org>`_. The JSON format can be stored as files on your server and loaded via xhr calls. dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.
 
 The following examples show how a datastore can be used to load the data shown above and how widgets that are dojo.data aware can make use of it to display it easily.
 
@@ -53,7 +53,7 @@ Connecting dijit.form.ComboBox
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData =   { identifier: 'abbr', 
+      var storeData =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -66,7 +66,7 @@ Connecting dijit.form.ComboBox
       ]}
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -83,7 +83,7 @@ Connecting dijit.Tree
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
 
-      var storeData =   { identifier: 'abbr', 
+      var storeData =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -96,7 +96,7 @@ Connecting dijit.Tree
       ]}
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" data-dojo-props="store:countryStore, query:{}, rootId:'Countries', rootLabel:'Countries'"></div>
@@ -114,7 +114,7 @@ Connecting dijit.form.FilteringSelect
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.FilteringSelect");
 
-      var storeData =   { identifier: 'abbr', 
+      var storeData =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -127,7 +127,7 @@ Connecting dijit.form.FilteringSelect
       ]}
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -151,7 +151,7 @@ Connecting dojox.grid.DataGrid
         ]
       ];
 
-      var storeData =   { identifier: 'abbr', 
+      var storeData =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -169,8 +169,8 @@ Connecting dojox.grid.DataGrid
 
     <div style="width: 400px; height: 300px;">
       <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="countryStoreForGrid" data-dojo-props="data:storeData"></div>
-      <div id="grid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="grid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:countryStoreForGrid,
         structure:'layoutCountries',
         queryOptions:{deep:true},

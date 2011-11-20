@@ -26,7 +26,7 @@ Features
   * To use, include the ellipsis.css file and dojo.require("dojox.html.ellipsis");
   * To function properly - the *parent* node of the desired ellipsis-ized node should have a defined width
   * ``NOTE:`` When using the dojoxEllipsis class within tables, the table needs to have the `table-layout: fixed` style
-  * ``NOTE:`` The dojoxEllipsis class should be placed on a block element (such as a div) and will not work on td elements 
+  * ``NOTE:`` The dojoxEllipsis class should be placed on a block element (such as a div) and will not work on td elements
 
 * ``New in 1.4`` :ref:`dojox.html.entities <dojox/html/entities>`
 

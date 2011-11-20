@@ -128,7 +128,7 @@ We assume that you are on at least OS 10.3 (Panther).
 
 You may need to install the Developer Tools package in order to get a the most up-to-date JDK (for running custom Dojo builds). It is assumed that operations will be preformed at the command line, and Project Builder/XCode configuration is not covered here. It is, however, recommended that you download the latest set of developer tools from http://connect.apple.com (free registration required).
 
-Once you have the OS X developer tools installed, download the latest 1.x Subversion package (1.3 as of this writing) from: 
+Once you have the OS X developer tools installed, download the latest 1.x Subversion package (1.3 as of this writing) from:
 http://metissian.com/projects/macosx/subversion/
 
 The downloads are an OS X installer package. Install it, at which point the instructions from the Linux section will be sufficient to get you up and running.

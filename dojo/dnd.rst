@@ -772,4 +772,4 @@ See also
 ========
 
 * :ref:`dojo.dnd.Moveable <dojo/dnd/Moveable>` Makes a DOM node moveable using the mouse.
-* :ref:`dojox.mdnd <dojox/mdnd>` Experimental coordinates based moveable drag and drop. 
+* :ref:`dojox.mdnd <dojox/mdnd>` Experimental coordinates based moveable drag and drop.

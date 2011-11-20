@@ -43,7 +43,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.emp
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){ 
+  require(["dojo"], function(dojo){
     // Empty node's children byId:
     dojo.empty("someId");
   });
@@ -111,11 +111,11 @@ Empty all nodes in a list by reference
   .. css::
 
     <style type="text/css">
-    .green { color: white; min-width: 30px; min-height: 30px; 
-        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
+    .green { color: white; min-width: 30px; min-height: 30px;
+        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px;
         float: left; background-color: green; padding: 2px }
-    .red { color: white; min-width: 30px; min-height: 30px; 
-        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
+    .red { color: white; min-width: 30px; min-height: 30px;
+        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px;
         float: left; background-color: red; padding: 2px }
     #panel { clear: both }
     </style>

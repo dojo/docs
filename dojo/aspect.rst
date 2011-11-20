@@ -34,7 +34,7 @@ The target is the object with the method. The methodName is the name of the meth
       // this is called after any dojo.xhr call
     });
     // this will execute the original dojo.xhr method and then our advising function
-    dojo.xhr("GET", {...}); 
+    dojo.xhr("GET", {...});
   });
 
 We can also load dojo/aspect with dojo.require("dojo.aspect") to make it available globally as dojo.aspect:
@@ -56,7 +56,7 @@ The advising function can return a value to replace the final return value of th
       return dojo.fromJson(response);
     });
   });
-  var parsedResponse = dojo.xhr("GET", {...}); 
+  var parsedResponse = dojo.xhr("GET", {...});
   
 The advisory function can also be called with the original arguments of the method by setting the receiveArguments parameter to true. For example:
 
@@ -90,7 +90,7 @@ The target is the object with the method. The methodName is the name of the meth
       }
     });
     // this will execute the original our advising function and then dojo.xhr
-    dojo.xhr("PUT", {...}); 
+    dojo.xhr("PUT", {...});
   });
 
 around
@@ -114,6 +114,6 @@ The target is the object with the method. The methodName is the name of the meth
         // doing something after the original call
         return deferred;
       }
-    });	
-    dojo.xhr("PUT", {...}); 
+    });
+    dojo.xhr("PUT", {...});
   });

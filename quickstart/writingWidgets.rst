@@ -82,7 +82,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
 	<script>
 		dojo.require('dijit._WidgetBase');
-		// the dojo.parser is only needed, if you want 
+		// the dojo.parser is only needed, if you want
 		// to instantiate the widget declaratively (in markup)
 		// dojo.require("dojo.parser");
 	

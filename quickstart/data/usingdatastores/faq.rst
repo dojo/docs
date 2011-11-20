@@ -24,7 +24,7 @@ Items from a datastore are supposed to be treated as opaque handles. This is by 
 All store access should go through the :ref:`dojo.data.api.Read <dojo/data/api/Read>` functions. Below is a list of the common functions and what you use them for:
 
 * **store.getAttributes(item):**  Returns an array list of all public attributes of an item. Only attributes returned in this list should ever be used as data.
-* **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item. For multi-valued attributes, you should use store.getValues(item, attribute);  
+* **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item. For multi-valued attributes, you should use store.getValues(item, attribute);
 
 
 ==============================================================================================================================
@@ -33,7 +33,7 @@ Question 3:  Okay, you say dojo.data items are opaque ... but I would like to co
 
 This is actually not difficult to do. This is done through usage of the dojo.data.api.Read specification. The code you would use to create a JSON structure from a dojo.data item is the following:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   
   function itemToJSON(store, item) {
@@ -59,13 +59,13 @@ This is actually not difficult to do. This is done through usage of the dojo.dat
                 var value = values[j];
                 //Check that the value isn't another item. If it is, process it as an item.
                 if (store.isItem(value)) {
-                  json[attributes[i]].push(dojo.fromJson(itemToJSON(store, value)));   
+                  json[attributes[i]].push(dojo.fromJson(itemToJSON(store, value)));
                 } else {
                   json[attributes[i]].push(value);
-                }    
-              } 
+                }
+              }
             } else {
-              if (store.isItem(values[0])) { 
+              if (store.isItem(values[0])) {
                  json[attributes[i]] = dojo.fromJson(itemToJSON(store, values[0]));
               } else {
                  json[attributes[i]] = values[0];
@@ -108,7 +108,7 @@ By definition, items are unique to their store instance, so you cannot generally
               if (values.length > 1) {
                 //Create a copy.
                 newItem[attributes[j]] = values.slice(0, values.length);
-              } else { 
+              } else {
                 newItem[attributes[j]] = values[0];
               }
           }
@@ -168,7 +168,7 @@ attributes on it should also be accessed through store functions, such as getVal
 If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters. See the :ref:`custom types <dojo/data/ItemFileReadStore>` documentation for more details.
 
 ==================================================================================================================================================================================================================================
-Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier. The store blows up with an error about no identifier when fetching. Why does it care? 
+Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier. The store blows up with an error about no identifier when fetching. Why does it care?
 ==================================================================================================================================================================================================================================
 
 This question is easier to understand with a bit of sample ItemFile*Store input. Consider the following:
@@ -178,8 +178,8 @@ This question is easier to understand with a bit of sample ItemFile*Store input.
   {
     "identifier": "myid",
     "label": "name",
-    "items": [ 
-        { 
+    "items": [
+        {
           "name": "foo",
           "myid": 0,
           "someObject": {
@@ -204,4 +204,4 @@ OR:
 
 OR:
 
-  * Use a custom type map to make the ItemFile*Store treat the complex object field value as a straight value and not a data store item. 
+  * Use a custom type map to make the ItemFile*Store treat the complex object field value as a straight value and not a data store item.

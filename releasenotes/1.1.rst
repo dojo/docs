@@ -43,7 +43,7 @@ For those of you that have subclassed widgets or written custom CSS, here are a 
 
     * Form input widgets (ValidationTextBox, ComboBox, etc): all of these were changed from using the <table> tag to <div> tags,
     * Tabs: dijitTabInnerDiv becomes dijitTabContent now (for changing selected tabs tab appearance)
-    * Dialog, TooltipDialog: if you subclassed one of these widgets and updated the template, you need to reapply your template changes to the new template 
+    * Dialog, TooltipDialog: if you subclassed one of these widgets and updated the template, you need to reapply your template changes to the new template
 
 Editor
 ------
@@ -55,7 +55,7 @@ Form widgets API deprecations
     * setChecked(bool) deprecated in favor of setAttribute("checked", bool). Accordingly, StackController.onSelectChild() calls setAttribute("checked", ...) rather than setChecked() (#6492).
     * CheckBox.getValue() changed to make serialization/deserialization of form widgets more consistent. getValue() returns CheckBox.value or "false" depending on checked state, and setValue(Boolean) will change the checked state (rather than Checked.value)
     * new base class called dijit.form._FormValueWidget. Most custom widget that previously extended dijit.form._FormWidget should be changed to extend dijit.form._FormValueWidget instead. (The exception is for things like CheckBox where the user doesn't input a value directly.) [11982]
-    * dijit.Form widget (see #5775 for possible upgrade issues) 
+    * dijit.Form widget (see #5775 for possible upgrade issues)
 
 Layout widgets
 --------------
@@ -112,7 +112,7 @@ See #6104
     * dijitHorizontalSliderDecrementIcon → dijitSliderDecrementIconH
     * dijitHorizontalSliderIncrementIcon → dijitSliderIncrementIconH
     * dijitVerticalSliderIncrementIcon → dijitSliderIncrementIconV
-    * dijitVerticalSliderDecrementIcon → dijitSliderDecrementIconV 
+    * dijitVerticalSliderDecrementIcon → dijitSliderDecrementIconV
 
 Core
 ====
@@ -192,7 +192,7 @@ Themes
 
     * new theme: nihilo
     * soria theme completed
-    * updates to tundra theme 
+    * updates to tundra theme
 
 Form widgets
 ------------
@@ -201,7 +201,7 @@ New widgets
 ~~~~~~~~~~~
 
     * SimpleTextArea widget - non-auto-sizing textarea widget useful inside layout containers or fixed sized screen layouts like mail.html
-    * multi-select widget (#5359) - analogous to <select multiple=true> 
+    * multi-select widget (#5359) - analogous to <select multiple=true>
 
 Features/Bug fixes
 ~~~~~~~~~~~~~~~~~~
@@ -209,7 +209,7 @@ Features/Bug fixes
     * highlighting/focus invalid fields on attempted form submit
     * separate edit and display mode for input widgets like NumberTextBox and CurrencyTextBox. For example, when editing US$ on an en-us locale machine, the $ sign and commas disappear
     * input widget formatting bugs fixed (use of table abandoned)
-    * reset of forms now supported (must use dijit.Form widget) 
+    * reset of forms now supported (must use dijit.Form widget)
 
 API updates
 ~~~~~~~~~~~
@@ -217,7 +217,7 @@ API updates
     * setAttribute() method added for all form widgets, to set attributes like disabled, readonly, tabIndex, maxlength, etc. For all widgets where the end-user sets a value (ex: by typing something in or picking a choice from a drop down), the value of the widget is still controlled/accessed via setValue()/getValue(). For widgets like Button and Checkbox (see below) you do a setAttribute("value", ...) to control the value that is submitted with the form.
     * CheckBox.getValue() changed to make serialization/deserialization of form widgets more consistent. getValue() returns CheckBox.value or "false" depending on checked state, and setValue(Boolean) will change the checked state (rather than Checked.value)
     * onFocus()/onBlur() handlers for all form widget (actually for all widgets) (see #5327)
-    * dijit.Form widget fixes (see #5775 for possible upgrade issues) 
+    * dijit.Form widget fixes (see #5775 for possible upgrade issues)
 
 Layout widgets
 --------------
@@ -234,14 +234,14 @@ Dialog, TooltipDialog
 
     * can contain TabContainer or other layout widgets (#5669, #5670). When putting layout widgets inside of a Dialog/TooltipDialog, it's important NOT to initially set the dialog style="display:none". You can set style="visibility:hidden" if you want to.
     * hitting esc on a DateTextBox won't close the whole dialog (#????)
-    * when opened focus is automatically on first field (or field w/lowest tabindex) 
+    * when opened focus is automatically on first field (or field w/lowest tabindex)
 
 Miscellaneous
 -------------
     * FF3 support
     * allow specification of tooltip positioning (above/below/before/after)
     * Bidi: All widgets should now be BiDi-compliant and mirror properly when dir=rtl is set on the document
-    * A11y - basically everything except Grid accessible 
+    * A11y - basically everything except Grid accessible
 
 Dojox
 =====
@@ -312,11 +312,11 @@ New widgets:
     * ScrollPane - pane moves automatically according to mouse position
     * DragPane - can drag contents of pane just like a PDF reader
     * Magnifier
-    * CheckedMultiSelect - like a select with multiple=true but displays checkboxes for each item 
+    * CheckedMultiSelect - like a select with multiple=true but displays checkboxes for each item
 
 Updated:
 
-    * Lightbox 
+    * Lightbox
 
 Util (buildscripts)
 ===================

@@ -18,7 +18,7 @@ This function is a helper function that wraps the :ref:`dojo.animateProperty <do
 Parameters
 ==========
 
-The *dojo.fadeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the fade out should take (in milliseconds, and an optional easing function.  
+The *dojo.fadeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the fade out should take (in milliseconds, and an optional easing function.
 
 All standard :ref:`dojo.Animation <dojo/Animation>` events and parameters apply, though *properties:{}* is explicitly set to control opacity, so should be omitted.
 
@@ -55,7 +55,7 @@ Example 1:  Fade out a dom node
       dojo.addOnLoad(basicFadeoutSetup);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton">Fade It Out!</button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
@@ -85,7 +85,7 @@ Example 2:  Fade in a dom node with a custom duration
       dojo.addOnLoad(basicFadeoutSetup2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton2">Fade It Out Slow!</button>
     <div id="basicFadeNode2" style="width: 100px; height: 100px; background-color: red;"></div>
@@ -118,7 +118,7 @@ Example 3:  Fade in a dom node with an easing function
       dojo.addOnLoad(basicFadeoutSetup3);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>

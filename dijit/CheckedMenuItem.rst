@@ -8,11 +8,11 @@ dijit.CheckedMenuItem
 
 :Status: Draft
 :Version: 1.2
-:Authors: 
+:Authors:
 
 The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time the user clicks the widget, it changes state between checked and unchecked. By default, the state of the widget is unchecked. User can optionally change the default state of the widget and also disable the widget as well. A user defined event function, onChange, is used to handle check/uncheck events.
 
-To change the default state of the menu item to “checked”, 
+To change the default state of the menu item to “checked”,
 
 .. code-block :: javascript
 
@@ -55,7 +55,7 @@ Programmatic example
 		var cItem = new dijit.CheckedMenuItem({label:"Navigation bar", onChange: toolkit});
 		pMenu.addChild(cItem);
 		pMenu.addChild(new dijit.MenuItem({
-                         label:"Status bar", 
+                         label:"Status bar",
                          onClick:function(){alert("you clicked status bar")}
                 }));
 		

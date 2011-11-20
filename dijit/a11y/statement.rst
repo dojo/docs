@@ -34,7 +34,7 @@ People familiar with accessibility and accessibility guidelines such as the W3C'
 
 - All of the dijit widgets support font resizing and work in Windows High Contrast mode to support low vision users.
 
-- Dijit utilizes the under development `W3C Accessible Rich Internet Applications <http://www.w3.org/TR/wai-aria/>`_ (ARIA) specification so that all dijit widgets are accessible using the latest versions of the `JAWS <http://www.freedomscientific.com/products/fs/jaws-product-page.asp>`_ or `Window-Eyes <http://www.gwmicro.com/Window-Eyes/>`_ screen readers with Firefox 3. 
+- Dijit utilizes the under development `W3C Accessible Rich Internet Applications <http://www.w3.org/TR/wai-aria/>`_ (ARIA) specification so that all dijit widgets are accessible using the latest versions of the `JAWS <http://www.freedomscientific.com/products/fs/jaws-product-page.asp>`_ or `Window-Eyes <http://www.gwmicro.com/Window-Eyes/>`_ screen readers with Firefox 3.
 
 Additional WCAG 2.0 and US Section 508 compliance details are provided below.
 
@@ -47,7 +47,7 @@ In many respects, dijit is ahead of the curve in supporting Accessibility. The A
 
 Even though the dijit widgets are all fully accessible, the developer is responsible for using them properly and following general accessibility guidelines to create an accessible Web application. Developers should make use of any optional widget parameters listed in the accessibility section in the documentation page for each widget. Basic accessibility guidelines such as associating text labels to all form controls via the <label> element and providing alternative text for all images must be followed to maintain accessibility of the widgets and an application.
 
-Widget sizing can also be an issue. When creating elements which require size, consider that some users may need to increase the font size. If you set the height of a dijit toolbar to 25px and a user has set the font size to largest, any text in the toolbar may be clipped. Instead of using px, set the height using ems and the toolbar size will be relative to the font size: 
+Widget sizing can also be an issue. When creating elements which require size, consider that some users may need to increase the font size. If you set the height of a dijit toolbar to 25px and a user has set the font size to largest, any text in the toolbar may be clipped. Instead of using px, set the height using ems and the toolbar size will be relative to the font size:
 <div data-dojo-type="dijit.Toolbar" data-dojo-props="region:'top'" style="height:1.25em">
 
 Also be aware of source code ordering, the BorderContainer will properly align the ContentPane regions when it renders them, no matter if the bottom region is specified before the top region in source code order. But, for best support by assistive technology, add the ContentPane regions in correct source code order, with top regions appearing first and bottom regions last. The best way to be confident of an accessible application is to test, test, test! Any developer can test basic accessibility by getting rid of your mouse and make certain you can navigate and use your application with only a keyboard. There are many resources on the Web for creating Accessible content, use them!

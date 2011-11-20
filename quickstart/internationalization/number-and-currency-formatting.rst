@@ -15,7 +15,7 @@ Cultural conventions: Date, Number and Currency
 Dates and Times
 ===============
 
-Unlike standard Javascript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`. 
+Unlike standard Javascript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`.
 
 For example, look at the following date formatted using the default locale for the user (in this case, English - United States) and also with a specific locale override of Chinese - PRC China:
 
@@ -23,7 +23,7 @@ For example, look at the following date formatted using the default locale for t
  :linenos:
 
  <script type="text/javascript">
-   // the page must specify dojoConfig.extraLocale: 'zh-cn' 
+   // the page must specify dojoConfig.extraLocale: 'zh-cn'
    // to bootstrap the environment with support for an extra locale
    dojo.require("dojo.date.locale");
 
@@ -32,7 +32,7 @@ For example, look at the following date formatted using the default locale for t
    dojo.date.locale.format(d);
    // => "10/29/06 12:30 PM"
 
-   // the second argument may contain a list of options in Object syntax, 
+   // the second argument may contain a list of options in Object syntax,
    // such as overriding the default locale
    dojo.date.locale.format(d, {locale:'zh-cn'})
    // => "06-10-29 下午12:30"
@@ -69,7 +69,7 @@ Also available under :ref:`dojo.cldr.supplemental <dojo/cldr>` are routines to p
 Numbers and currencies
 ======================
 
-The formatting and parsing of numbers is handled in much the same way. Conventions vary around the world for the decimal and thousands separator, placement of the sign, and symbols used to indicate exponential numbers or percentages. There are other exceptions, such as in India, where the thousands separator is used at the thousands place, then again after every two digits instead of three. 
+The formatting and parsing of numbers is handled in much the same way. Conventions vary around the world for the decimal and thousands separator, placement of the sign, and symbols used to indicate exponential numbers or percentages. There are other exceptions, such as in India, where the thousands separator is used at the thousands place, then again after every two digits instead of three.
 
 dojo.number
 -----------

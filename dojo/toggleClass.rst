@@ -38,15 +38,15 @@ When using AMD format in a fully baseless application, ``toggle`` is accessed fr
 .. code-block :: javascript
 
   require(["dojo/dom-class"], function(domClass){
-      domClass.toggle("someNode", "hovered"); 
+      domClass.toggle("someNode", "hovered");
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.toggleClass`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
-      dojo.toggleClass("someNode", "hovered"); 
+  require(["dojo"], function(dojo){
+      dojo.toggleClass("someNode", "hovered");
   });
 
 Dojo < 1.7
@@ -54,7 +54,7 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-    dojo.toggleClass("someNode", "hovered"); 
+    dojo.toggleClass("someNode", "hovered");
 
 ========
 Examples

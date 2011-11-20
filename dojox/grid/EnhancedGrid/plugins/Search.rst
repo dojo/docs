@@ -44,7 +44,7 @@ If your grid is created declaratively:
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
       search: /* a Boolean value or an argument object */{}
@@ -71,7 +71,7 @@ The details of this argument is shown in the following table:
 =============  ========  ===============  ==============================================================
 Property       Type      Default Value    Description
 =============  ========  ===============  ==============================================================
-cacheSize      Integer   -1               Number of rows to fetch at one time. If <= 0, will fetch all. 
+cacheSize      Integer   -1               Number of rows to fetch at one time. If <= 0, will fetch all.
 =============  ========  ===============  ==============================================================
 
 =====

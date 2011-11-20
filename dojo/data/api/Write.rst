@@ -28,9 +28,9 @@ The following list provides the requirements for the Write API that implementors
 * Datastores track all newItem, deleteItem, and setAttribute calls on items so that the store can both save the items to the persistent store in one chunk and have the ability to revert out all the current changes and return to a pristine (unmodified) data set.
 * Revert should only revert the store items on the client side back to the point the last save was called.
 * Datastores, in their Save function, account for any copying of items and generation of save format required by the back end service before it enters into the asynchronous I/O with the server. This is to avoid any contention issues with modifications that are occurring while the datastore is is waiting for the server I/O to complete.
-* The parameter to newItem is a keywordArgs object. For ease of interoperability, this parameter should be constructed as a JavaScrpt object with attribute names and values that match the conceptual structure of the attribute list the item would return. For example, if the source store is an XML backed store, a call to create a new XML Element in that store with attributes foo, bar, and bit, should look like this: 
+* The parameter to newItem is a keywordArgs object. For ease of interoperability, this parameter should be constructed as a JavaScrpt object with attribute names and values that match the conceptual structure of the attribute list the item would return. For example, if the source store is an XML backed store, a call to create a new XML Element in that store with attributes foo, bar, and bit, should look like this:
 
-  .. code-block :: javascript 
+  .. code-block :: javascript
 
     //The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
     store.newItem({foo: "fooValue", bar: "barValue", bit: "bitValue"});
@@ -56,7 +56,7 @@ Simple attribute modification and save
 
   //Set our load completed hander up...
   var onCompleteFetch = function(items, request) {
-    //Define the save callbacks to use 
+    //Define the save callbacks to use
     var onSave = function(){
       alert("Save done.");
     }
@@ -112,7 +112,7 @@ This example shows how to get all modified items before a save has been called.
 Further examples
 ----------------
 
-Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth. 
+Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth.
 
 ================
 The complete API
@@ -131,16 +131,16 @@ newItem
     //        item based on the *keywordArgs* provided.  In general, the attribute
     //        names in the keywords become the attributes in the new item and as for
     //        the attribute values in keywordArgs, they become the values of the attributes
-    //        in the new item.  In addition, for stores that support hierarchical item 
+    //        in the new item.  In addition, for stores that support hierarchical item
     //        creation, an optional second parameter is accepted that defines what item is the parent
     //        of the new item and what attribute of that item should the new item be assigned to.
     //        In general, this will assume that the attribute targetted is multi-valued and a new item
-    //        is appended onto the list of values for that attribute.  
-    //        
+    //        is appended onto the list of values for that attribute.
+    //
     //    keywordArgs:
     //        A javascript object defining the initial content of the item as a set of JavaScript 'property name: value' pairs.
     //    parentInfo:
-    //        An optional javascript object defining what item is the parent of this item (in a hierarchical store.  Not all stores do hierarchical items), 
+    //        An optional javascript object defining what item is the parent of this item (in a hierarchical store.  Not all stores do hierarchical items),
     //        and what attribute of that parent to assign the new item to.  If this is present, and the attribute specified
     //        is a multi-valued attribute, it will append this item into the array of values for that attribute.  The structure
     //        of the object is as follows:
@@ -148,10 +148,10 @@ newItem
     //            parent: someItem,
     //            attribute: "attribute-name-string"
     //        }
-    //        
+    //
     //    exceptions:
     //        Throws an exception if *keywordArgs* is a string or a number or
-    //        anything other than a simple anonymous object.  
+    //        anything other than a simple anonymous object.
     //        Throws an exception if the item in parentInfo is not an item from the store
     //        or if the attribute isn't an attribute name string.
     //    examples:
@@ -166,11 +166,11 @@ deleteItem
     //    summary:
     //        Deletes an item from the store.
     //
-    //    item: 
+    //    item:
     //        The item to delete.
     //
     //    exceptions:
-    //        Throws an exception if the argument *item* is not an item 
+    //        Throws an exception if the argument *item* is not an item
     //        (if store.isItem(item) returns false).
     //    examples:
     //        var success = store.deleteItem(kermit);
@@ -257,9 +257,9 @@ save
     //    summary:
     //        Saves to the server all the changes that have been made locally.
     //        The save operation may take some time and is generally performed
-    //        in an asynchronous fashion.  The outcome of the save action is 
+    //        in an asynchronous fashion.  The outcome of the save action is
     //        is passed into the set of supported callbacks for the save.
-    //   
+    //
     //    keywordArgs:
     //        {
     //            onComplete: function
@@ -275,7 +275,7 @@ save
     //        are generally passed to the onComplete.
     //
     //    The *onError* parameter.
-    //        function(errorData); 
+    //        function(errorData);
     //
     //        If an onError callback function is provided, the callback function
     //        will be called if there is any sort of error while attempting to
@@ -287,12 +287,12 @@ save
     //        onComplete, onError, etc) will be invoked in the context of the scope
     //        object.  In the body of the callback function, the value of the "this"
     //        keyword will be the scope object.   If no scope object is provided,
-    //        the callback functions will be called in the context of dojo.global.  
-    //        For example, onComplete.call(scope) vs. 
+    //        the callback functions will be called in the context of dojo.global.
+    //        For example, onComplete.call(scope) vs.
     //        onComplete.call(dojo.global)
     //
     //    returns:
-    //        Nothing.  Since the saves are generally asynchronous, there is 
+    //        Nothing.  Since the saves are generally asynchronous, there is
     //        no need to return anything.  All results are passed via callbacks.
     //    examples:
     //        store.save({onComplete: onSave});
@@ -319,8 +319,8 @@ isDirty
 
   isDirty: function(/* item? */ item)
     //    summary:
-    //        Given an item, isDirty() returns true if the item has been modified 
-    //        since the last save().  If isDirty() is called with no *item* argument,  
+    //        Given an item, isDirty() returns true if the item has been modified
+    //        since the last save().  If isDirty() is called with no *item* argument,
     //        then this method returns true if any item has been modified since
     //        the last save().
     //

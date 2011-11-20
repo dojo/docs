@@ -24,7 +24,7 @@ The role apis were modified in 1.2 to affect only ARIA roles and not any navigat
 The XHTML navigation roles are
 
 - banner
-- contentinfo 
+- contentinfo
 - definition
 - main
 - navigation
@@ -74,7 +74,7 @@ Returns true if elem has the specified state, false if not.
 
   dijit.getWaiState(/*Element*/ elem, /*String*/ state)
 
-Returns the value of state set on elem or the empty string if elem has no state set. 
+Returns the value of state set on elem or the empty string if elem has no state set.
 
 .. code-block :: javascript
 
@@ -86,7 +86,7 @@ Sets the specified state and value on elem.
 
   dijit.removeWaiState(/*Element*/ elem, /*String*/ state)
 
-Remove the specified state from elem. 
+Remove the specified state from elem.
 
 Examples of setting role and state
 ----------------------------------
@@ -119,7 +119,7 @@ Here is an example of setting the role in the diijt tree template. The domNode i
 
 .. code-block :: javascript
 
-  <div class="dijitTreeContainer" style="" role="tree" 
+  <div class="dijitTreeContainer" style="" role="tree"
     data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
 
 The role or state can also be specified via variables. This example shows an excerpt from the dijit button template that sets the role and state on the button element.
@@ -148,4 +148,4 @@ As discussed in the :ref:`Dijit A11y Strategy <dijit/a11y/strategy>` section, di
 
   dijit.wai.onload()
 
-This is meant to be called once before the widgets have rendered to detect high contrast mode and set the dijit-a11y className onto the body element of the page. The detection mechanism is to create a temporary div with a background image, set top and bottom borders in one color and left and right borders in another color, and move it offscreen via CSS. Add the div to the body element and check the computed style of the div. If the colors for the top and right borders are computed as the same, then high contrast mode has been set. Also, in Firefox, images off mode can be determined by examining the value of the background image. Currently images off can not be detected in IE unless high contrast mode has also been set. 
+This is meant to be called once before the widgets have rendered to detect high contrast mode and set the dijit-a11y className onto the body element of the page. The detection mechanism is to create a temporary div with a background image, set top and bottom borders in one color and left and right borders in another color, and move it offscreen via CSS. Add the div to the body element and check the computed style of the div. If the colors for the top and right borders are computed as the same, then high contrast mode has been set. Also, in Firefox, images off mode can be determined by examining the value of the background image. Currently images off can not be detected in IE unless high contrast mode has also been set.

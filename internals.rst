@@ -37,14 +37,14 @@ This is great. Now some of the tutorials such as the DnD one can be updated to w
 
 1. Structure, so:
 
-  * Q.A. in the IRC can be put up quickly and in the right place. 
-  * Articles/tutorials can find their place and be updated/corrected as they are used/reused. 
+  * Q.A. in the IRC can be put up quickly and in the right place.
+  * Articles/tutorials can find their place and be updated/corrected as they are used/reused.
   * API doc/notes can find their place.
 
 2. Dojo versions (so its clear what article is relavent to which verion of Dojo)
 
 
-Perhaps ideas about these things can start to go up and then be organised into groups naturally as they form instead of trying to predict how this will be used and forcing the content into some unnatural order. 
+Perhaps ideas about these things can start to go up and then be organised into groups naturally as they form instead of trying to predict how this will be used and forcing the content into some unnatural order.
 
 What happened to the notes from the last temp. Wiki on structure?
 

@@ -37,7 +37,7 @@ You also need to require the Lightbox module:
 
   dojo.require("dojox.image.Lightbox");
 
-This provides both Lightbox and LightboxDialog, the latter being the widget to actually *display* the image, the former being a lightweight wrapper for anchor tags, converting links into Lightboxes progressively. 
+This provides both Lightbox and LightboxDialog, the latter being the widget to actually *display* the image, the former being a lightweight wrapper for anchor tags, converting links into Lightboxes progressively.
 
 
 =====
@@ -49,29 +49,29 @@ The most basic application of a Lightbox is to convert links containing ``title`
 .. codeviewer::
   
   <style type="text/css">
-    @import "dojox/image/resources/Lightbox.css"; 
+    @import "dojox/image/resources/Lightbox.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.image.Lightbox");
   </script>
 
   <div id="lb-one">
-     <a dojoType="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a> 
-     <a dojoType="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a> 
+     <a dojoType="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a>
+     <a dojoType="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a>
   </div>
 
-You'll notice Lightbox's built in 404-handling, displaying a warning icon for images which fail to load. 
+You'll notice Lightbox's built in 404-handling, displaying a warning icon for images which fail to load.
 
 Any dojox.image.Lightbox-es on the same page share an instance of a dojox.image.LightboxDialog (in versions prior to 1.2, LightboxDialog was named _LightboxDialog. It was made public for 1.2). This allows for easy grouping. Simply add a group attribute to your Lightbox instances, and they will appear in the lightbox, and enable keyboard and icon navigation through the group:
 
 .. codeviewer::
   
   <div id="lb-one">
-     <a dojoType="dojox.image.Lightbox" group="grouped" title="foo" href="foo.png">Show Foo</a> 
-     <a dojoType="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a> 
+     <a dojoType="dojox.image.Lightbox" group="grouped" title="foo" href="foo.png">Show Foo</a>
+     <a dojoType="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a>
   </div>
 
-With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the :ref:`parser <dojo/parser>` runs. 
+With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the :ref:`parser <dojo/parser>` runs.
 
 A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' to show a the image defined by the Lightbox that triggered the event.
 
@@ -108,7 +108,7 @@ With existing Lightbox instances on a page, you can show by reusing the shared d
 
 .. code-block :: javascript
 
-  var dialog = dijit.byId("dojoxLightboxDialog"); 
+  var dialog = dijit.byId("dojoxLightboxDialog");
   if(dialog && dialog.show){
      dialog.show({ title:"Some Image", href:"foo.png" });
   }
@@ -157,7 +157,7 @@ The part :ref:``underlay`` is added to whatever id the LightboxDialog is created
 a11y
 ====
 
-Lightbox and LightboxDialog are not fully accessible, though provide basic keyboard navigation. 
+Lightbox and LightboxDialog are not fully accessible, though provide basic keyboard navigation.
 
 * Escape - close the dialog
 * Right, Up - go to the next image in the group
@@ -168,11 +168,11 @@ Lightbox and LightboxDialog are not fully accessible, though provide basic keybo
 Tips & Tricks
 =============
 
-By using a 'private' method, you can programmatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().  
+By using a 'private' method, you can programmatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().
 
 .. code-block :: javascript
 
   setInterval(function(){
-      // loop through the images  
+      // loop through the images
       dijit.byId("dojoxLightboxDialog")._nextImage();
   }, 10000);

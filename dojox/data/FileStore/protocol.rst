@@ -97,11 +97,11 @@ The return is expected to be like be:
 .. code-block :: javascript
 
   {
-    "name": "foofiles.txt", 
-    "parentDir": "some/dir8", 
-    "size": 1234, 
-    "modified": 1234567, 
-    "directory": true, 
-    "path": "some/dir8/foofiles.txt", 
+    "name": "foofiles.txt",
+    "parentDir": "some/dir8",
+    "size": 1234,
+    "modified": 1234567,
+    "directory": true,
+    "path": "some/dir8/foofiles.txt",
     "children": ["tmp1","tmp2","tmp3"]
   }

@@ -15,7 +15,7 @@ Dojo core provides an implementation of a read-only datastore, ItemFileReadStore
 
 **Points of Consideration:**
 
-1. The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree. 
+1. The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree.
    Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*. Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc. The point of a data store is to hide the internal structure and always expose the data through the same API.
 
 2. This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a step back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
@@ -71,7 +71,7 @@ Constructor Parameters
 |                |              |data objects.  Reusing an object from a previous store will cause failures.                     |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.2       |
-|                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           | 
+|                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           |
 |                |              |*clearOnClose* to force a data reload.                                                          |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | hierarchical   | No           |This boolean value controls whether or not the ItemFileReadStore will treat the data as         | 1.4       |
@@ -114,9 +114,9 @@ General Structure
 Item Structure
 --------------
 
-To ItemFileReadStore, any JavaScript object is treated as an item. This includes any value of an attribute that is also a JavaScript object. This allows the format to be extremely flexible in what sort of data it can represent. 
+To ItemFileReadStore, any JavaScript object is treated as an item. This includes any value of an attribute that is also a JavaScript object. This allows the format to be extremely flexible in what sort of data it can represent.
 
-Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values. 
+Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values.
 
 **References:**
 
@@ -130,7 +130,7 @@ The first is the the *_reference* structure. The *_reference* structure is a Jav
     "items": [
       { "name": "Bob", "spouse": {"_reference":"Sally"},  "children": [ { "_reference":"Nancy"}]},
       { "name": "Sally", "spouse": {"_reference":"Bob"},  "children": [ { "_reference":"Nancy"}]},
-      { "name": "Nancy"},           
+      { "name": "Nancy"},
     ]
   }
 
@@ -151,7 +151,7 @@ The other special structure is the custom type structure. The purpose of the cus
     ]
   }
 
-When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object. 
+When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object.
 
 =======================
 Item Structure Examples
@@ -163,7 +163,7 @@ Items with References
 .. code-block :: javascript
  :linenos:
 
-  { 
+  {
     'identifier': 'name',
     'label': 'name',
     'items': [
@@ -208,7 +208,7 @@ Items with References
       { 'name':'Brazil', 'type':'country', 'population':'186 million' },
       { 'name':'Argentina', 'type':'country', 'population':'40 million' }
     ]
-  }    
+  }
 
 Items with Hierarchy
 --------------------
@@ -216,18 +216,18 @@ Items with Hierarchy
 .. code-block :: javascript
  :linenos:
 
-  { 
+  {
     'identifier': 'name',
     'label': 'name',
     'items': [
       { 'name':'Africa', 'type':'continent', 'children':[
-        { 'name':'Egypt', 'type':'country' }, 
+        { 'name':'Egypt', 'type':'country' },
         { 'name':'Kenya', 'type':'country', 'children':[
           { 'name':'Nairobi', 'type':'city' },
           { 'name':'Mombasa', 'type':'city' } ]
         },
         { 'name':'Sudan', 'type':'country', 'children':
-          { 'name':'Khartoum', 'type':'city' } 
+          { 'name':'Khartoum', 'type':'city' }
         } ]
       },
       { 'name':'Asia', 'type':'continent', 'children':[
@@ -259,7 +259,7 @@ Items with Hierarchy
       { 'name':'South America', 'type':'continent', 'children':[
         { 'name':'Brazil', 'type':'country', 'population':'186 million' },
         { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-      } 
+      }
     ]
   }
 
@@ -270,7 +270,7 @@ Items with Custom Types
  :linenos:
 
   {
-    'identifier': 'abbr', 
+    'identifier': 'abbr',
     'label': 'name',
     'items': [
       { 'abbr':'ec', 'name':'Ecuador',           'capital':'Quito' },
@@ -280,12 +280,12 @@ Items with Custom Types
       { 'abbr':'er',
         'name':'Eritrea',
         'capital':'Asmara',
-        'independence':{'_type':'Date', '_value':"1993-05-24T00:00:00Z"} 
+        'independence':{'_type':'Date', '_value':"1993-05-24T00:00:00Z"}
       },
       { 'abbr':'ee',
         'name':'Estonia',
         'capital':'Tallinn',
-        'independence':{'_type':'Date', '_value':"1991-08-20T00:00:00Z"} 
+        'independence':{'_type':'Date', '_value':"1991-08-20T00:00:00Z"}
       },
       { 'abbr':'et',
         'name':'Ethiopia',
@@ -299,36 +299,36 @@ Custom Types
 
 As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store. The caveat is, you have to tell the store, through a typeMap object, how to deserialize the cutom type value back into its object form. This is not as difficult as it first may sound. Below is the general structure information for creating a custom type map. There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
 
-**Note:** You can mix simplified form type maps with general case type maps in the same type map object. Therefore, you can use whatever is the easiest representation required to handle the custom object construction. 
+**Note:** You can mix simplified form type maps with general case type maps in the same type map object. Therefore, you can use whatever is the easiest representation required to handle the custom object construction.
 
 **Note:** dojo.data.ItemFileReadStore implements a custom type map for JavaScript Date already. It uses the ISO-8601 serialization format for dates to keep it consistent with other date operations in dojo. If you wish to see how ItemFileReadStore defines it, refer to the source of dojo/data/ItemFileReadStore.js. The type mapping occurs in the constructor function.
 
 General Case Type Map
 ---------------------
-The general case type map handles the situation where some processing on the value of an attribute must occur before it can be converted back into its Object form. This often the case where a single value cannot be used as a constructor argument. 
+The general case type map handles the situation where some processing on the value of an attribute must occur before it can be converted back into its Object form. This often the case where a single value cannot be used as a constructor argument.
 
 **General Form Type Map**
 
 .. code-block :: javascript
  :linenos:
 
-  {                
+  {
     "type0": {
-	  "type": constructorFunction(), 
-	  "deserialize": function(value) 
+	  "type": constructorFunction(),
+	  "deserialize": function(value)
     },
     "type1": {
-	  "type": constructorFunction(), 
-	  "deserialize": function(value) 
+	  "type": constructorFunction(),
+	  "deserialize": function(value)
     },
     "type2": {
-	  "type": constructorFunction(), 
-	  "deserialize": function(value) 
+	  "type": constructorFunction(),
+	  "deserialize": function(value)
     },
     ...
     "typeN": {
-      "type": constructorFunction(), 
-      "deserialize": function(value) 
+      "type": constructorFunction(),
+      "deserialize": function(value)
     }
   }
 
@@ -350,14 +350,14 @@ Example: General Case Type Map for JavaScript Date Objects
 Simplified Form Type Map
 ------------------------
 
-The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor to convert it back into its Object form. This often the case where a single value can be used as a constructor argument. 
+The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor to convert it back into its Object form. This often the case where a single value can be used as a constructor argument.
 
 **Simplified Form Type Map**
 
 .. code-block :: javascript
  :linenos:
 
-  {                
+  {
     "type0": constructorFunction(),
     "type1": constructorFunction(),
     "type2": constructorFunction(),
@@ -386,7 +386,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var colorData = { identifier: 'name', 
+      var colorData = { identifier: 'name',
         identifier:'name',
         items: [
           { name:'DojoRed', color:{_type:'Color', _value:'red'} },
@@ -396,7 +396,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
       };
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
         var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
@@ -406,7 +406,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
           //Callback to perform an action when the data items are starting to be returned:
           function clearOldList(size, request) {
             var list = dojo.byId("list");
-            if (list) { 
+            if (list) {
               while (list.firstChild) {
                 list.removeChild(list.firstChild);
               }
@@ -440,7 +440,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
              alert("lookup failed.");
           }
              
-          //Fetch the data. 
+          //Fetch the data.
           colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
         }
 
@@ -451,7 +451,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to examine items and what the color attribute is!</div>
     <br>
@@ -468,9 +468,9 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
 .. code-block :: javascript
  :linenos:
 
-  var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId", 
+  var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId",
     items: [ {uniqueId: 1, status:"CLOSED"},
-      {uniqueId: 2,  status:"OPEN"}, 
+      {uniqueId: 2,  status:"OPEN"},
 	  {uniqueId: 3,  status:"PENDING"},
 	  {uniqueId: 4,  status:"BLOCKED"},
 	  {uniqueId: 5,  status:"CLOSED"},
@@ -486,7 +486,7 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
 		
   //Define the comparator function for status.
   store.comparatorMap = {};
-  store.comparatorMap["status"] = function(a,b) { 
+  store.comparatorMap["status"] = function(a,b) {
     var ret = 0;
     // We want to map these by what the priority of these items are, not by alphabetical.
     // So, custom comparator.
@@ -617,7 +617,7 @@ Connecting ItemFileReadStore to ComboBox
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData2 =   { identifier: 'abbr', 
+      var storeData2 =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -630,7 +630,7 @@ Connecting ItemFileReadStore to ComboBox
       ]}
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -646,18 +646,18 @@ Searching for all continents
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var geoData = { 
+      var geoData = {
         'identifier': 'name',
         'label': 'name',
         'items': [
           { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' }, 
+            { 'name':'Egypt', 'type':'country' },
             { 'name':'Kenya', 'type':'country', children:[
               { 'name':'Nairobi', 'type':'city' },
               { 'name':'Mombasa', 'type':'city' } ]
             },
             { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' } 
+              { 'name':'Khartoum', 'type':'city' }
             } ]
           },
           { 'name':'Asia', 'type':'continent', 'children':[
@@ -689,12 +689,12 @@ Searching for all continents
           { 'name':'South America', 'type':'continent', children:[
             { 'name':'Brazil', 'type':'country', 'population':'186 million' },
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          } 
+          }
         ]
-      }    
+      }
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init2 () {
         //Function to perform a fetch on the datastore when a button is clicked
@@ -703,7 +703,7 @@ Searching for all continents
           //Callback to perform an action when the data items are starting to be returned:
           function clearOldCList(size, request) {
             var list = dojo.byId("list2");
-            if (list) { 
+            if (list) {
               while (list.firstChild) {
                 list.removeChild(list.firstChild);
               }
@@ -713,7 +713,7 @@ Searching for all continents
           //Callback for processing a returned list of items.
           function gotContinents(items, request) {
             var list = dojo.byId("list2");
-            if (list) { 
+            if (list) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -739,7 +739,7 @@ Searching for all continents
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Find continents!</div>
@@ -763,11 +763,11 @@ Doing wildcard searches and option setting
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
 
-      var storeData3 = { identifier: 'name', 
+      var storeData3 = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -778,7 +778,7 @@ Doing wildcard searches and option setting
         ]};
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init3 () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -788,16 +788,16 @@ Doing wildcard searches and option setting
              //Build up the query from the input boxes.
              var name = nameBox.getValue();
              if ( name && dojo.trim(name) !== "" ) {
-               queryObj["name"] = name;       
+               queryObj["name"] = name;
              }
              var aisle = aisleBox.getValue();
              if ( aisle && dojo.trim(aisle) !== "" ) {
-               queryObj["aisle"] = aisle;       
+               queryObj["aisle"] = aisle;
              }
 
              var qNode = dojo.byId("query");
              if (qNode ) {
-               qNode.innerHTML = dojo.toJson(queryObj);   
+               qNode.innerHTML = dojo.toJson(queryObj);
              }
 
 
@@ -810,13 +810,13 @@ Doing wildcard searches and option setting
 
              var qoNode = dojo.byId("queryOptions");
              if (qoNode ) {
-               qoNode.innerHTML = dojo.toJson(queryOptionsObj);   
+               qoNode.innerHTML = dojo.toJson(queryOptionsObj);
              }
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -826,7 +826,7 @@ Doing wildcard searches and option setting
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -853,7 +853,7 @@ Doing wildcard searches and option setting
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
 
     <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
@@ -891,9 +891,9 @@ Demonstrating custom sorting
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var sortData = { identifier: "uniqueId", 
+      var sortData = { identifier: "uniqueId",
         items: [ {uniqueId: 1, status:"CLOSED"},
-          {uniqueId: 2,  status:"OPEN"}, 
+          {uniqueId: 2,  status:"OPEN"},
 	  {uniqueId: 3,  status:"PENDING"},
 	  {uniqueId: 4,  status:"BLOCKED"},
 	  {uniqueId: 5,  status:"CLOSED"},
@@ -908,12 +908,12 @@ Demonstrating custom sorting
       };
 
       //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init4 () {
         //Define the comparator function for status.
         sortStore.comparatorMap = {};
-        sortStore.comparatorMap["status"] = function(a,b) { 
+        sortStore.comparatorMap["status"] = function(a,b) {
           var ret = 0;
           // We want to map these by what the priority of these items are, not by alphabetical.
           // So, custom comparator.
@@ -933,7 +933,7 @@ Demonstrating custom sorting
           //Callback to perform an action when the data items are starting to be returned:
           function clearOldCList(size, request) {
             var list = dojo.byId("list4");
-            if (list) { 
+            if (list) {
               while (list.firstChild) {
                 list.removeChild(list.firstChild);
               }
@@ -943,7 +943,7 @@ Demonstrating custom sorting
           //Callback for processing a returned list of items.
           function gotItems(items, request) {
             var list = dojo.byId("list4");
-            if (list) { 
+            if (list) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -970,7 +970,7 @@ Demonstrating custom sorting
       dojo.addOnLoad(init4);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:sortData" data-dojo-id="sortStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button4">Custom sort!</div>
@@ -995,7 +995,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
       dojo.require("dijit.form.ComboBox");
       dojo.require("dijit.form.Button");
 
-      var storeData10 =   { identifier: 'abbr', 
+      var storeData10 =   { identifier: 'abbr',
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -1015,7 +1015,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
          dojo.connect(dijit.byId("reloadButton1"), "onClick", function() {
             reloadCount++;
             reloadableStore1.clearOnClose = true;
-            reloadableStore1.data = {identifier: 'abbr', 
+            reloadableStore1.data = {identifier: 'abbr',
               label: 'name',
               items: [
                 { abbr:'ec', name:'Ecuador RELOADED: ' + reloadCount,           capital:'Quito' },
@@ -1055,9 +1055,9 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
       //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
-            //Reset the url and call close.  Note this could be a different JSON file, but for this example, just 
+            //Reset the url and call close.  Note this could be a different JSON file, but for this example, just
             //Showing how you would set the URL.
-            reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json"; 
+            reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json";
             reloadableStore2.close();
          });
       });

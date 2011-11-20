@@ -106,7 +106,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -144,7 +144,7 @@ Customizing a save
              o.plugin = new mySavePlugin({
                url: ("url" in o.args)?o.args.url:"",
                logResults: ("logResults" in o.args)?o.args.logResults:true
-             }); 
+             });
            }
          });
          //Now we can parse the page since we defined our save plugin above.
@@ -162,7 +162,7 @@ Customizing a save
 
     <b>Enter whatever you like in the editor, then press the 'Save' button.  An alert will appear with the content before the actual save is invoked.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['mySave']">       
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['mySave']">
     <div>
     <br>
     blah blah & blah!
@@ -179,7 +179,7 @@ Customizing a save
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

@@ -41,7 +41,7 @@ When using AMD format in a fully baseless application, ``getContentBox`` and ``s
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/dom-geometry"], function(domGeom){   
+  require(["dojo/dom-geometry"], function(domGeom){
      // Get the content-box size of a node
      var contentBox = domGeom.getContentBox(domNode);
 
@@ -54,7 +54,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.con
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     // Get the content-box size of a node
     var contentBox = dojo.contentBox(domNode);
 
@@ -89,7 +89,7 @@ Examples
 Example 1: Getting the content box
 ----------------------------------
 
-This example displays the return values of dojo.contentBox on a node. 
+This example displays the return values of dojo.contentBox on a node.
 
 .. cv-compound::
 
@@ -103,7 +103,7 @@ This example displays the return values of dojo.contentBox on a node.
 
         var info = dojo.byId("boxInfo");
         while(info.firstChild){
-          info.removeChild(info.firstChild);  
+          info.removeChild(info.firstChild);
         }
         info.appendChild(document.createTextNode("Top: "+contentBox.t));
         info.appendChild(document.createElement("br"));
@@ -173,4 +173,4 @@ See also
 
 * :ref:`dojo.marginBox <dojo/marginBox>`
 * :ref:`dojo.getContentBox <dojo.getContentBox>`
-* :ref:`dojo.setContentSize <dojo.setContentSize>` 
+* :ref:`dojo.setContentSize <dojo.setContentSize>`

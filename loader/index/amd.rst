@@ -31,7 +31,7 @@ adoption of bdLoad). This exciting new standard for writing and loading modules 
 portability and interoperability. Equally important, it allows modules to be loaded asynchronously, which provides two
 key benefits versus the old synchronous API:
 
-  * Modules can be downloaded asynchronously and concurrently, thereby decreasing page load times up to 10x.  
+  * Modules can be downloaded asynchronously and concurrently, thereby decreasing page load times up to 10x.
 
   * Hacks such as ``debugAtAllCosts`` are no longer needed in order to provide informative debugging (e.g. stack traces)
     in all browsers.
@@ -100,8 +100,8 @@ Configuration data is always provided as a standard JavaScript object. When the 
 
 .. code-block :: html
 
-  <script 
-    data-dojo-config="async:true, cacheBust:new Date(), waitSeconds:5" 
+  <script
+    data-dojo-config="async:true, cacheBust:new Date(), waitSeconds:5"
     src="path/to/dojo/dojo.js">
   </script>
 
@@ -111,8 +111,8 @@ Using ``dojoConfig`` looks like this:
 
   <script>
     var dojoConfig = {
-      async:true, 
-      cacheBust:new Date(), 
+      async:true,
+      cacheBust:new Date(),
       waitSeconds:5
     };
   </script>
@@ -123,7 +123,7 @@ Using the ``require`` function looks like this:
 .. code-block :: javascript
 
   require({
-    cacheBust:new Date(), 
+    cacheBust:new Date(),
     waitSeconds:5
   });
 
@@ -321,7 +321,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 .. code-block :: javascript
 
   require(
-    ["dijit/layout/TabContainer", "bd/widgets/stateButton"], 
+    ["dijit/layout/TabContainer", "bd/widgets/stateButton"],
     function(TabContainer, stateButton) {
       // do something with TabContainer and stateButton...
     }
@@ -402,7 +402,7 @@ Could be rewritten as:
 
   // this is "myPackage/myModule/mySubmodule"
   define(
-    ["../utils", "./mySubmodule2"], 
+    ["../utils", "./mySubmodule2"],
     function (utils, submodule) {
     // do something spectacular
     }
@@ -1131,7 +1131,7 @@ The first argument sent to the listener is a loader error object that contains t
 factoryThrew
   A module factory function threw an Error.
 
-xhrFailed 
+xhrFailed
   An XHR failed to retrieve a module resource. Typically, this indicates an HTTP 404 error, and is often caused by a configuration problem with paths, aliases, packages, and/or baseUrl.
 
 multipleDefine

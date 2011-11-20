@@ -313,7 +313,7 @@ This an example of nested tabs created programatically. If there is no nested ta
 		});
 		// _Container widgets will call startup on their children already
 		tabContainer.startup();
-	});   
+	});
     </script>
 
   .. cv :: html

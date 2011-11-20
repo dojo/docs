@@ -3,7 +3,7 @@
 Using Datastores
 ================
 
-Datastores provide access to data through a standardized interface for talking to data services. The most common operations performed on data are: 
+Datastores provide access to data through a standardized interface for talking to data services. The most common operations performed on data are:
 
 * :ref:`Terminology <quickstart/data/usingdatastores/terminology>`
 

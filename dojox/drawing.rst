@@ -57,13 +57,13 @@ The files are laid out as such:
 Example
 -------
 
-After using the proper requires, the following is all that is needed to embed Drawing in your document: 
+After using the proper requires, the following is all that is needed to embed Drawing in your document:
 
 .. code-block :: html
  :linenos:
 
  <div dojoType="dojox.drawing.Drawing" id="drawing" style="width:800px; height:400px;"
-     plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{gap:100}}]">   
+     plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{gap:100}}]">
  </div>
  
  <div dojoType="dojox.drawing.Toolbar" drawingId="drawing" class="drawingToolbar vertical">
@@ -271,10 +271,10 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 .. code-block :: javascript
  :linenos:
   
- var textBlock = myDrawing.addStencil("textBlock", {data:{x:20, y:30, width:200, text:"This is editable text"}}); 
+ var textBlock = myDrawing.addStencil("textBlock", {data:{x:20, y:30, width:200, text:"This is editable text"}});
  var ellipse = myDrawing.addStencil("ellipse", {data:{cx:200, cy:200, rx:100, ry:50}});
  var arrow = myDrawing.addStencil("arrow", {data:{x1:400, y1:200, x2:500, y2:300}, arrowStart:true});
- var rect = myDrawing.addStencil("rect", {data:{x:50, y:275, width:100, height:100}}); 
+ var rect = myDrawing.addStencil("rect", {data:{x:50, y:275, width:100, height:100}});
  var text = myDrawing.addStencil("text", {data:{x:300, y:260, width:200, text:"This is just text"}});
  
 
@@ -306,7 +306,7 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 	Resizes the drawing based on the passed argument object. This occurs automatically if inside a Dijit layout widget.
 	
 **changeDefaults**
-	Changes the current style that is applied to newly drawn stencils. Pass in an object that represents one of the objects in drawing.style that will be mixed in. Not all properties are necessary. Only one object may be changed at a time. Non-objects like angleSnap cannot be changed in this manner. The following example changes the default fill to blue, the border color to yellow, and the border width to 5:  
+	Changes the current style that is applied to newly drawn stencils. Pass in an object that represents one of the objects in drawing.style that will be mixed in. Not all properties are necessary. Only one object may be changed at a time. Non-objects like angleSnap cannot be changed in this manner. The following example changes the default fill to blue, the border color to yellow, and the border width to 5:
 
 .. code-block :: javascript
  :linenos:

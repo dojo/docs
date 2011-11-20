@@ -63,7 +63,7 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
        ready(function(){
              require(["dijit/form/Button","dojo/_base/window"], function(btn,win) {
                   ready(function(){
-                        new dijit.form.Button({}).placeAt(win.body()); 
+                        new dijit.form.Button({}).placeAt(win.body());
                   });
              });
        });
@@ -78,7 +78,7 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
   dojo.addOnLoad(function(){
       dojo.require("dijit.form.Button");
       dojo.addOnLoad(function(){
-           new dijit.form.Button({}).placeAt(dojo.body()); 
+           new dijit.form.Button({}).placeAt(dojo.body());
       });
   });
 
@@ -99,7 +99,7 @@ Simply pass it a string:
     // load dojox/widget/Toaster.js:
     require(["dojo/widget/Toaster"], function(Toaster) {
         //Write your code here
-    });   
+    });
 
 .. code-block :: javascript
 
@@ -110,7 +110,7 @@ Simply pass it a string:
   // load dojox/widget/Toaster.js:
   dojo.require("dojox.widget.Toaster");
 
-Throughout Dojo, the pattern above remains consistent. However, by using :ref:`dojo.registerModulePath <dojo/registerModulePath>` in your code, you are able to redefine the meaning of parts of namespaces. 
+Throughout Dojo, the pattern above remains consistent. However, by using :ref:`dojo.registerModulePath <dojo/registerModulePath>` in your code, you are able to redefine the meaning of parts of namespaces.
 
 ========
 Examples

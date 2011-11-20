@@ -59,7 +59,7 @@ The default contentHandler is text, and requires no action:
 Available Handlers
 ------------------
 
-There are several pre-defined contentHandlers available to use. The value represents the key in the handlers map. 
+There are several pre-defined contentHandlers available to use. The value represents the key in the handlers map.
 
 * **text** (default) - Simply returns the response text
 * **json** - Converts response text into a JSON object
@@ -121,7 +121,7 @@ This example shows, how to use the pre-defined json contentHandler:
 Creating a custom handler
 -------------------------
 
-To create a custom contentHandler, simply mix a new key into the dojo.contentHandlers object defining the 'handleAs' value. The XHR object is passed to this function. For example: 
+To create a custom contentHandler, simply mix a new key into the dojo.contentHandlers object defining the 'handleAs' value. The XHR object is passed to this function. For example:
 
 [ Dojo 1.7 AMD ]
 
@@ -137,7 +137,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 
      // then later:
      xhr.post({
-        url:"foo.php", 
+        url:"foo.php",
         handleAs:"makeUpper",
         load: function(data){
            // data is a CAPS version of the original responseText
@@ -159,14 +159,14 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 
   // then later:
   dojo.xhrPost({
-      url:"foo.php", 
+      url:"foo.php",
       handleAs:"makeUpper",
       load: function(data){
           // data is a CAPS version of the original responseText
       }
   });
 
-One can create any number of content handlers, and can do about anything they choose within the provided API. For instance, the original args used to create the XHR object are stored on the object itself as `ioArgs` (eg: xhr.ioArgs) and can be used to mix custom attributes and instructions to the handler. 
+One can create any number of content handlers, and can do about anything they choose within the provided API. For instance, the original args used to create the XHR object are stored on the object itself as `ioArgs` (eg: xhr.ioArgs) and can be used to mix custom attributes and instructions to the handler.
 
 For instance, we can create a handler that will populate a node with the response text automatically:
 
@@ -177,7 +177,7 @@ For instance, we can create a handler that will populate a node with the respons
 
   require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom) {
       var ioArgs = {
-          url:"foo.html", 
+          url:"foo.html",
           handleAs:"loadNode",
           node: "someId"
       };
@@ -205,7 +205,7 @@ For instance, we can create a handler that will populate a node with the respons
 
   // to use:
   dojo.xhrGet({
-       url:"foo.html", 
+       url:"foo.html",
        handleAs:"loadNode",
        node: "someId"
   });
@@ -299,4 +299,4 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 Notes
 =====
 
-This functionality is "new" in Dojo 1.4. An alias to the "private" dojo._contentHandlers will remain in place until 2.0. Version prior to 1.4 can use the "private" alias the same way as outlined in this document. 
+This functionality is "new" in Dojo 1.4. An alias to the "private" dojo._contentHandlers will remain in place until 2.0. Version prior to 1.4 can use the "private" alias the same way as outlined in this document.

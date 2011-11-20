@@ -26,13 +26,13 @@ The result sets returned from store.query() calls from a Observable store will h
 
  resultSet.observe(listener);
 
-The listener function is called with following arguments: 
+The listener function is called with following arguments:
 
 .. code-block :: javascript
 
  listener(object, removedFrom, insertedInto);
 
-* The object parameter indicates the object that was create, modified, or deleted. 
+* The object parameter indicates the object that was create, modified, or deleted.
 * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set).
 * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set). If the store does not have a queryEngine, it may not be possible to determine the index of a newly created object, and the index will default to the store's defaultIndex property or 0 if the property is not present.
 
@@ -64,10 +64,10 @@ Examples
  });
 
  // this will trigger an addition to the result set (the observe listener will be called)
- store.put({rating: 5, id: 3}); 
+ store.put({rating: 5, id: 3});
 
  // this will *not* trigger a observe event, since the object does not match the query constraint (query was for rating = 5)
- store.put({rating: 3, id: 4}); 
+ store.put({rating: 3, id: 4});
  
  // if this object was in the result set, it will trigger a observe event
  store.remove(2);

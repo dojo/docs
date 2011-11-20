@@ -96,7 +96,7 @@ Name             Type          Default Description
 ================ ============= ======= ===========
 duration         number        8       Task duration in hours.
 percentage       number        0       Task progress in percentage, 50 for 50%.
-previousTaskId   number|string null    The id of previous task. 
+previousTaskId   number|string null    The id of previous task.
 ================ ============= ======= ===========
 
 =======

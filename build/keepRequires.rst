@@ -19,7 +19,7 @@ This is a very advanced feature, and if you think you need to use it, you should
 
 The very essence of the build system is that when it builds a layer, every Dojo (or custom) module that is in that layer's dependency list are copied into the layer file.  Similarly, every Dojo (or custom) resource that are referenced by ``dojo.require`` within the dependency list are copied into the layer file, and so on recursively, to include all necessary resources.
 
-In almost every case, this is the desired behavior.  
+In almost every case, this is the desired behavior.
 
 However, in some complex web sites built with multiple layers that have shared dependencies, you may (after careful consideration), wish to change this behavior.  For example, suppose you have:
 
@@ -31,7 +31,7 @@ However, in some complex web sites built with multiple layers that have shared d
 
 In this case, the standard build would include the dependent resources for M in both the A and B layers.  If M were very large, this could be a significant increase in the code size of layers A and B.
 
-In that case, you might wish to tell the build system *not* to include module M in the build for layer A or layer B, or both, so that it is not downloaded to some pages twice.  This is the purpose of the ``keepRequires`` option. 
+In that case, you might wish to tell the build system *not* to include module M in the build for layer A or layer B, or both, so that it is not downloaded to some pages twice.  This is the purpose of the ``keepRequires`` option.
 
 However, the penalty for doing so is that the module would be downloaded at runtime from a web page, rather than prebuilt into a layer. Most of the time, the size penalty in the layers for having a module twice is less of a performance impairment than the extra round trip to the server, so use this feature with care.
 

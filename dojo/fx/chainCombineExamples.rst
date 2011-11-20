@@ -42,17 +42,17 @@ Example 1:  Demonstration of combining three chained animations
 
             //Move the node while it's fading out and in.
             var moveAnim = dojo.fx.chain([
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
+              dojo.animateProperty({node: "basicNode1",
+                properties: {
                   marginLeft: {start: 0, end: 400, unit: "px"}
-                }, 
+                },
                 duration: 1000,
                 easing: dojo.fx.easing.backOut
               }),
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
+              dojo.animateProperty({node: "basicNode1",
+                properties: {
                   marginLeft: {start: 400, end: 0, unit: "px"}
-                }, 
+                },
                 duration: 1000,
                 easing: dojo.fx.easing.backOut
               })
@@ -60,20 +60,20 @@ Example 1:  Demonstration of combining three chained animations
 
             //Resize and change color of the node as it moves too.
             var resizeColorAnim = dojo.fx.chain([
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
+              dojo.animateProperty({node: "basicNode1",
+                properties: {
                   width: {start: 100, end: 200, unit: "px"},
                   height: {start: 100, end: 200, unit: "px"},
                   backgroundColor: {start: "red", end: "green"}
-                }, 
+                },
                 duration: 1000
               }),
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
+              dojo.animateProperty({node: "basicNode1",
+                properties: {
                   width: {start: 200, end: 100, unit: "px"},
                   height: {start: 200, end: 100, unit: "px"},
                   backgroundColor: {start: "green", end: "red"}
-                }, 
+                },
                 duration: 1000
               })
             ]);
@@ -94,7 +94,7 @@ Example 1:  Demonstration of combining three chained animations
       dojo.addOnLoad(basicCombine);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="startButton">Start the complex loop!</button>
     <button data-dojo-type="dijit.form.Button" id="endButton">End the complex loop!</button>

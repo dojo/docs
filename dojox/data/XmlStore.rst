@@ -22,7 +22,7 @@ The following dojo.data APIs are implemented by XmlStore
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
-* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`  
+* :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
   * **New for dojo 1.3!**  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
 
@@ -228,7 +228,7 @@ Searching node attributes
       dojo.require("dijit.form.CheckBox");
 
         //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init3 () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -238,19 +238,19 @@ Searching node attributes
              //Build up the query from the input boxes.
              var isbn = isbnBox.getValue();
              if ( isbn && dojo.trim(isbn) !== "" ) {
-               queryObj["isbn"] = isbn;       
+               queryObj["isbn"] = isbn;
              }
 
              var qNode = dojo.byId("query");
              if (qNode ) {
-               qNode.innerHTML = dojo.toJson(queryObj);   
+               qNode.innerHTML = dojo.toJson(queryObj);
              }
 
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -260,7 +260,7 @@ Searching node attributes
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list3");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -287,7 +287,7 @@ Searching node attributes
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
 
     <b>ISBN:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="isbnBox" value="*"></input>
@@ -318,7 +318,7 @@ Connecting XmlStore to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml'" data-dojo-id="bookStore2"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:bookStore2, searchAttr:'title'"></div>
@@ -349,7 +349,7 @@ Connecting XmlStore to dojox.grid.DataGrid
     <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml', label:'text'" data-dojo-id="bookStore3"></div>
 
     <div id="grid" style="width: 400px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="store:bookStore3,
       structure:layoutBooks,
       query:{},

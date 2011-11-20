@@ -10,7 +10,7 @@ dijit.layout.BorderContainer
 .. contents::
     :depth: 2
 
-This widget is a container partitioned into up to five regions: left (or leading), right (or trailing), top, and bottom with a mandatory center to fill in any remaining space. Each edge region may have an optional splitter user interface for manual resizing. 
+This widget is a container partitioned into up to five regions: left (or leading), right (or trailing), top, and bottom with a mandatory center to fill in any remaining space. Each edge region may have an optional splitter user interface for manual resizing.
 
 
 =====
@@ -48,8 +48,8 @@ You shouldn't need to set the height of the top/bottom panes as that can be dete
   :linenos:
 
     <style type="text/css">
-    body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; } 
-    #borderContainer { width:100%; height:100% } 
+    body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; }
+    #borderContainer { width:100%; height:100% }
     </style>
 
 Otherwise, the computed style of the BorderContainer will report 0 rather than the browser-calculated size of the viewport.
@@ -157,7 +157,7 @@ Nested Layout Widgets
 ---------------------
 
 Lets take a look at a more advanced example of using BorderContainer and other layout widgets.
-This example uses two BorderContainers to allow to, left and right content areas. 
+This example uses two BorderContainers to allow to, left and right content areas.
 Note the tabStrip attribute on the TabContainer.
 
 .. code-example::
@@ -183,8 +183,8 @@ Note the tabStrip attribute on the TabContainer.
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true, liveSplitters:false" id="borderContainerTwo">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top', splitter:false">
-        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
-      </div>	
+        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
+      </div>
       <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
           <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
           </div>
@@ -323,7 +323,7 @@ Keyboard
 Action                                         Key
 ===========================================    =================================================
 Navigate to splitters for resizable regions    tab - all resizable splitters are in the tab order
-Change the size of a vertical region           left / right arrows to decrease and increase 
+Change the size of a vertical region           left / right arrows to decrease and increase
 Change the size of a horizontal region         down / up arrows to decrease and increase
 ===========================================    =================================================
 

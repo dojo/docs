@@ -16,7 +16,7 @@ You will likely want to access multiple items from such a data source as in the 
 * Do this if there is an error
 * Do that when everything is loaded
 
-If this sounds like it might be event-driven, that's because it is.  Most I/O methods in Ajax must perform operations asynchronously, so results and errors have to be returned through events (commonly called callbacks).  Because of the asynchronous requirements of the I/O methods, the dojo.data API was designed to operate in an asynchronous manner and use events for item retrieval.  Obtaining multiple items is one of the primary operations of dojo.data that people will use and first experience the necessities of callbacks.   
+If this sounds like it might be event-driven, that's because it is.  Most I/O methods in Ajax must perform operations asynchronously, so results and errors have to be returned through events (commonly called callbacks).  Because of the asynchronous requirements of the I/O methods, the dojo.data API was designed to operate in an asynchronous manner and use events for item retrieval.  Obtaining multiple items is one of the primary operations of dojo.data that people will use and first experience the necessities of callbacks.
 
 This page demonstrates the absolute basics of obtaining multiple items in one request.  The prime method called is the  dojo.data.api.Read.fetch()
 
@@ -68,11 +68,11 @@ Loading all items through callbacks
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var storeData = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -82,7 +82,7 @@ Loading all items through callbacks
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //onClick to a function which invokes the fetch().  The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -91,7 +91,7 @@ Loading all items through callbacks
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -101,7 +101,7 @@ Loading all items through callbacks
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
-               if (list) { 
+               if (list) {
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -116,7 +116,7 @@ Loading all items through callbacks
                 alert("lookup failed.");
              }
              
-             //Fetch the data.  
+             //Fetch the data.
              foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
@@ -127,7 +127,7 @@ Loading all items through callbacks
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me for a list!</div>
@@ -155,14 +155,14 @@ The following code fragment loads all items and streams them back into the page:
 .. code-block :: javascript
 
   var pantryStore = new dojo.data.ItemFileReadStore({url: "pantry_items.json" } );
-  var body = dojo.body(); // node to put output in  
+  var body = dojo.body(); // node to put output in
   
   // Define the onComplete callback to write
   // COMPLETED to the page when the fetch has
   // finished returning items.
   var done = function(items, request){
     body.appendChild(document.createTextNode("COMPLETED"));
-  }   
+  }
   
   //Define the callback that appends a textnode into the document each time an item is returned.
   gotItem = function(item, request){
@@ -204,11 +204,11 @@ Loading all items through the onItem callback
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData2 = { identifier: 'name', 
+      var storeData2 = { identifier: 'name',
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
-          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },
           { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
           { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
@@ -218,7 +218,7 @@ Loading all items through the onItem callback
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //onClick to a function which invokes the fetch().  The fetch function queries for all items
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init2 () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -227,7 +227,7 @@ Loading all items through the onItem callback
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list2");
-               if (list) { 
+               if (list) {
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
                  }
@@ -238,7 +238,7 @@ Loading all items through the onItem callback
              function gotItem(item, request) {
                var list = dojo.byId("list2");
                if (list) {
-                 if (item) { 
+                 if (item) {
                    list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
                  }
@@ -250,7 +250,7 @@ Loading all items through the onItem callback
                 alert("lookup failed.");
              }
              
-             //Fetch the data.  
+             //Fetch the data.
              foodStore2.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
            }
 
@@ -261,7 +261,7 @@ Loading all items through the onItem callback
         dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click me for a list!</div>

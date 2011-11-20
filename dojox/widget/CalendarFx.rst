@@ -1,7 +1,7 @@
 .. _dojox/widget/CalendarFx:
 
 =======================
-dojox.widget.CalendarFx  
+dojox.widget.CalendarFx
 =======================
 
 ``TODOC``

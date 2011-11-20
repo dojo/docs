@@ -34,10 +34,10 @@ Dojo 1.7(AMD)
 		<div id="scheme"></div><br/>
 		<div id="host"></div><br/>
 		<div id="path"></div><br/>
-		<div id="authority"></div><br/>	
+		<div id="authority"></div><br/>
                 <div id="port"></div><br/>
-                <div id="user"></div><br/>	
-                <div id="pwd"></div>				
+                <div id="user"></div><br/>
+                <div id="pwd"></div>
     </body>
 
 Dojo <1.7
@@ -45,7 +45,7 @@ Dojo <1.7
 .. codeviewer::
   
   <style type="text/css">
-    @import "dojox/widget/DocTester/DocTester.css"; 
+    @import "dojox/widget/DocTester/DocTester.css";
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div data-dojo-type="dojox.widget.DocTester">

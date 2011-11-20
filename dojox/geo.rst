@@ -3,7 +3,7 @@
 dojox.geo
 =========
 
-Namespace containing Dojo geographical related modules. 
+Namespace containing Dojo geographical related modules.
 
 Currently consists of:
 
@@ -13,4 +13,4 @@ Currently consists of:
 
 * :ref:`dojox.geo.openlayers <dojox/geo/openlayers>`
 
-  A module to display advanced layered maps (from several commercial providers) overlaid by rich graphic components. 
+  A module to display advanced layered maps (from several commercial providers) overlaid by rich graphic components.

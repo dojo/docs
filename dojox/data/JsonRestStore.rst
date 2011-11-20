@@ -23,18 +23,18 @@ JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple,
 
 JsonRestStore caches objects that have been retrieved from the server locally in memory. This allows object identity to be preserved even if an object is loaded from the server multiple times (the target object will be updated rather than a new object created). Also fetching an item by identity will attempt to look in the local cache first before requesting the item from the server.
 
-JsonRestStore also store objects in a format to ease direct property access for significant performance advantages. 
+JsonRestStore also store objects in a format to ease direct property access for significant performance advantages.
 
 
 ========
 Features
 ========
 
-1. The datastore implements the following dojo.data APIs:  
+1. The datastore implements the following dojo.data APIs:
 
-   - :ref:`dojo.data.api.Read <dojo/data/api/Read>`, 
-   - :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`, 
-   - :ref:`dojo.data.api.Write <dojo/data/api/Write>`, 
+   - :ref:`dojo.data.api.Read <dojo/data/api/Read>`,
+   - :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`,
+   - :ref:`dojo.data.api.Write <dojo/data/api/Write>`,
    - :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`.
 
 2. Client/server interaction follows the HTTP specification for RESTful interaction, using standard HTTP verbs and headers to handle updates, paging, and id assignment.
@@ -105,7 +105,7 @@ Examples
 JsonRestStore + Grid
 ====================
 
-The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore can easily be used with it. The grid leverages the read capabilities to populate the grid, the write capabilities for editing data in place in the grid, and the notification capabilities of the JsonRestStore to handle UI updates when data is changed. To use a JsonRestStore as the data provider for the grid, simply set the grid’s store to the JsonRestStore instance. To edit data from the grid, we can define columns as being editable. Nothing needs to be done to received notifications. 
+The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore can easily be used with it. The grid leverages the read capabilities to populate the grid, the write capabilities for editing data in place in the grid, and the notification capabilities of the JsonRestStore to handle UI updates when data is changed. To use a JsonRestStore as the data provider for the grid, simply set the grid’s store to the JsonRestStore instance. To edit data from the grid, we can define columns as being editable. Nothing needs to be done to received notifications.
 
 .. code-block :: javascript
 

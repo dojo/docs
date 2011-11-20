@@ -44,7 +44,7 @@ Once we have setup the directory and file structure for the tutorial, we will ne
         @import "dojoroot/dijit/themes/tundra/tundra.css";
         @import "dojoroot/dojo/resources/dojo.css"
     </style>
-    <script type="text/javascript" src="dojoroot/dojo/dojo.js" 
+    <script type="text/javascript" src="dojoroot/dojo/dojo.js"
       data-dojo-config="parseOnLoad: true"></script>
   </head>
 
@@ -117,7 +117,7 @@ To get started, we first need a callback function to handle the data to be retur
   <script type="text/javascript">
        function helloCallback(data,ioArgs) {
           alert(data);
-       }       
+       }
        function helloError(data, ioArgs) {
           alert('Error when retrieving data from the server!');
        }

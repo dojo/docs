@@ -33,7 +33,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
         showLabel: true,
         checked: false,
         onChange: function(val){this.attr('label',val)},
-        label: "false" 
+        label: "false"
       }, "programmatic");
     });
     </script>
@@ -74,10 +74,10 @@ Keyboard
 +----------------------------+-----------------+
 | Navigate to a ToggleButton | Tab             |
 +----------------------------+-----------------+
-| Toggle checked state       | Spacebar        | 
+| Toggle checked state       | Spacebar        |
 +----------------------------+-----------------+
 
 Known Issues
 ------------
 
-* Running IE 8 in Windows with JAWS 10 the pressed/not pressed state of toggle buttons is not announced.  Since this works correctly in Firefox, I believe this is an IE 8 issue. 
+* Running IE 8 in Windows with JAWS 10 the pressed/not pressed state of toggle buttons is not announced.  Since this works correctly in Firefox, I believe this is an IE 8 issue.

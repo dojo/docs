@@ -48,16 +48,16 @@ To publish information to that channel:
   
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
-    connect.publish("foobar", [{ 
+    connect.publish("foobar", [{
       item:"one", another:"item", anObject:{ deeper:"data" }
     }]);
   });
   // Dojo < 1.7
-  dojo.publish("foobar", [{ 
+  dojo.publish("foobar", [{
      item:"one", another:"item", anObject:{ deeper:"data" }
   }]);
 
-When executed, the anonymous function registered in the subscription is executed passing the object. 
+When executed, the anonymous function registered in the subscription is executed passing the object.
 
 Removing a Subscription
 -----------------------
@@ -69,18 +69,18 @@ Subscribe returns a handle to later be used for disconnecting a subscription, mu
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
-    var handle = connect.subscribe("/foo/bar", function(message){ 
+    var handle = connect.subscribe("/foo/bar", function(message){
       // only runs once in this case:
       connect.unsubscribe(handle);
     });
   });
   // Dojo < 1.7
-  var handle = dojo.subscribe("/foo/bar", function(message){ 
+  var handle = dojo.subscribe("/foo/bar", function(message){
       // only runs once in this case:
       dojo.unsubscribe(handle);
   });
 
-In the above example, we're disconnecting the handle from within the subscribed function, effectively creating a "subscribe-once" pattern. After the first time something published on the ``/foo/bar`` channel, the connection is interrupted, and the function will no longer fire. 
+In the above example, we're disconnecting the handle from within the subscribed function, effectively creating a "subscribe-once" pattern. After the first time something published on the ``/foo/bar`` channel, the connection is interrupted, and the function will no longer fire.
 
 ========
 See also

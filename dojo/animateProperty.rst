@@ -19,7 +19,7 @@ Usage
 
 animateProperty, like all other dojo._Animations, use a "magic object" (or "property bag") to define the base functionality, though introduces a new identifier named ``properties:`` to define which CSS properties to animate.
 
-The syntax follows a simple pattern. The ``properties:`` key is an object hash of css properties to manipulate. The values of those keys have a number of ways of definition. 
+The syntax follows a simple pattern. The ``properties:`` key is an object hash of css properties to manipulate. The values of those keys have a number of ways of definition.
 
 Dojo 1.7(AMD)
 -------------
@@ -27,7 +27,7 @@ Dojo 1.7(AMD)
   :linenos:
 
    require(["dojo/_base/fx"],function(fx){
-     fx.animateProperty({ 
+     fx.animateProperty({
       node:"someId",
       properties: {
         width: 300
@@ -41,7 +41,7 @@ Dojo <1.7
 .. code-block :: javascript
   :linenos:
 
-  dojo.animateProperty({ 
+  dojo.animateProperty({
     node:"someId",
     properties: {
         width: 300
@@ -57,7 +57,7 @@ Dojo 1.7(AMD)
   :linenos:
 
   require(["dojo/_base/fx"],function(fx){
-    fx.animateProperty({ 
+    fx.animateProperty({
     node:"someId",
     properties: {
         width: 300,
@@ -72,7 +72,7 @@ Dojo <1.7
 .. code-block :: javascript
   :linenos:
 
-  dojo.animateProperty({ 
+  dojo.animateProperty({
     node:"someId",
     properties: {
         width: 300,
@@ -81,15 +81,15 @@ Dojo <1.7
     }
   }).play();
 
-As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to the value, and animate to to end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px". 
+As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to the value, and animate to to end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px".
 
-It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``. 
+It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``.
 
 ===================
 Advanced Properties
 ===================
 
-In addition to being able to use the above syntax to define the properties:{} object, you are able to define functions for the start: and end: members for a given property. The return value from these functions is substituted in for the value. 
+In addition to being able to use the above syntax to define the properties:{} object, you are able to define functions for the start: and end: members for a given property. The return value from these functions is substituted in for the value.
 
 A simple, though redundant, example:
 
@@ -105,7 +105,7 @@ A simple, though redundant, example:
               return dojo.marginBox("someNode").w / 2;
           },
           end:function(){
-             return 600; 
+             return 600;
           }
        }
     }
@@ -160,7 +160,7 @@ Dojo <1.7
      }
   }).play();
 
-As pointed out above, the height: function is passed a reference to the domNode being animated. This functionality is new in Dojo 1.4, as well as the addition of the node being passed to the start: and end: functions. 
+As pointed out above, the height: function is passed a reference to the domNode being animated. This functionality is new in Dojo 1.4, as well as the addition of the node being passed to the start: and end: functions.
 
 ========
 Examples
@@ -212,7 +212,7 @@ A simple animation changing both background color and text color.
 How can I change the framerate of an animation?
 -----------------------------------------------
 
-By default dojo runs its animations with 50 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower. 
+By default dojo runs its animations with 50 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower.
 To change the framerate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per second you need a rate of 200 (milliseconds between each frame)
 
 .. cv-compound::

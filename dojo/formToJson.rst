@@ -14,9 +14,9 @@ Helper function for converting a HTML form to a JSON string
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JSON string.  This function is identical to doing the operation: 
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JSON string.  This function is identical to doing the operation:
 
-*dojo.toJson(dojo.formToObject("formid"));*  
+*dojo.toJson(dojo.formToObject("formid"));*
 
 You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` documentation for more details.
 
@@ -35,7 +35,7 @@ Dojo 1.7 (AMD)
  :linenos:
 
  <script type="text/javascript">
-  require(["dojo/dom-form"], function(domForm){   
+  require(["dojo/dom-form"], function(domForm){
      var formId = "myId";
      var formJson = domForm.toJson(formId);
 
@@ -100,7 +100,7 @@ Example 1: Using formToJson to create an JSON version of a form
       dojo.addOnLoad(convertForm);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertForm" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
@@ -134,7 +134,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
       dojo.addOnLoad(convertFormDigits);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertFormDigits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>

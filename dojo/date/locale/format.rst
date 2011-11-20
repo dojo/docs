@@ -12,7 +12,7 @@ dojo.date.locale.format
 .. contents::
    :depth: 2
 
-Creates a string from a Date object using a known localized pattern. 
+Creates a string from a Date object using a known localized pattern.
 
 
 ============
@@ -28,7 +28,7 @@ Usage
 
 By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as dojoConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
 
-Various other options are available to format the date. You may choose to process only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. 
+Various other options are available to format the date. You may choose to process only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern.
 
 dojo.date.locale.format(dateObject, options)
   +------------+----------------------------------+-------------+-----------+-----------------------------------+
@@ -175,7 +175,7 @@ Render the current Date in several ways using format(). The inverse operation to
 .. codeviewer::
   
   <style type="text/css">
-    @import "dojox/widget/DocTester/DocTester.css"; 
+    @import "dojox/widget/DocTester/DocTester.css";
   </style>
   <script type="text/javascript">
     var dojoConfig = {

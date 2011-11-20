@@ -45,7 +45,7 @@ Localized Date Field
 		var layout = [
 			{name: 'Index', field: 'id'},
 			{name: 'Date', field: 'date', width: 10,
-				formatter: formatDate	//Custom format, change the format in store. 
+				formatter: formatDate	//Custom format, change the format in store.
 			}
 		];
 	</script>
@@ -58,7 +58,7 @@ Localized Date Field
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
 	#grid{
@@ -106,7 +106,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		var layout = [
 			{name: 'Index', field: 'id'},
 			{name: 'Date', field: 'date', width: 10,
-				formatter: formatDate,	//Custom format, change the format in store. 
+				formatter: formatDate,	//Custom format, change the format in store.
 				editable: true			//Editable cell, will show ISO format in a text box
 			}
 		];
@@ -120,7 +120,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
 	#grid{
@@ -173,7 +173,7 @@ Editable Localized Date Field - use DateTextBox when editing
 		var layout = [
 			{name: 'Index', field: 'id'},
 			{name: 'Date', field: 'date', width: 10,
-				formatter: formatDate,				//Custom format, change the format in store. 
+				formatter: formatDate,				//Custom format, change the format in store.
 				editable: true,						//Editable cell
 				type: dojox.grid.cells.DateTextBox,	//Use DateTextBox in editing mode
 				getValue: getDateValue,				//Translate the value of DateTextBox to something the store can understand.
@@ -190,7 +190,7 @@ Editable Localized Date Field - use DateTextBox when editing
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
 	#grid{
@@ -245,7 +245,7 @@ Editable Custom Format Date Field - use DateTextBox when editing
 		var layout = [
 			{name: 'Index', field: 'id'},
 			{name: 'Date', field: 'date', width: 10,
-				formatter: formatDate,						//Custom format, change the format in store. 
+				formatter: formatDate,						//Custom format, change the format in store.
 				editable: true,								//Editable cell
 				type: dojox.grid.cells.DateTextBox,			//Use DateTextBox in editing mode
 				getValue: getDateValue,						//Translate the value of DateTextBox to something the store can understand.
@@ -262,7 +262,7 @@ Editable Custom Format Date Field - use DateTextBox when editing
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
 	#grid{

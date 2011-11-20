@@ -10,7 +10,7 @@ The documentation below is preserved for legacy purposes:
 =================
 Old Documentation
 =================
-dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing. 
+dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing.
 
 Sooner or later, every Javascript programmer tries something like this:
 
@@ -87,7 +87,7 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
              require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane) {
                   ready(function(){
                         // dijit.Dialog and friends are ready, create one from a node with id="bar"
-                        var dialog = new dialog({ title:"Lazy Loaded" }, "bar"); 
+                        var dialog = new dialog({ title:"Lazy Loaded" }, "bar");
                   });
              });
        });
@@ -102,11 +102,11 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
     dojo.require("dijit.TitlePane");
     dojo.addOnLoad(function(){
         // dijit.Dialog and friends are ready, create one from a node with id="bar"
-        var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar"); 
+        var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar");
     });
   });
 
-If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately. 
+If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately.
 
 ========
 Examples

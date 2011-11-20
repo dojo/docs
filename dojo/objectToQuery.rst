@@ -33,7 +33,7 @@ Dojo 1.7 (AMD)
        var uri = "http://some.server.org/somecontext/";
        var query = {
          foo: ["bar", "baz"],
-         bit: "byte"     
+         bit: "byte"
        };
        //Assemble the new uri with its query string attached.
        var queryStr = ioQuery.objectToQuery(query);
@@ -55,7 +55,7 @@ Dojo < 1.7
    var uri = "http://some.server.org/somecontext/";
    var query = {
      foo: ["bar", "baz"],
-     bit: "byte"     
+     bit: "byte"
    };
 
    //Assemble the new uri with its query string attached.
@@ -99,7 +99,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
       dojo.addOnLoad(convertQuery);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="convertQuery" data-dojo-type="dijit.form.Button" type="button">Click to update the URI with a query generated from an object</button><br><br>
     <b>The URI</b><br><br>

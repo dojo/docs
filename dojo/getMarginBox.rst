@@ -6,13 +6,13 @@ dojo.getMarginBox
 .. contents::
    :depth: 2
 
-Returns an object that encodes the width, height, left and top positions of the node's margin box. 
+Returns an object that encodes the width, height, left and top positions of the node's margin box.
 
 ============
 Introduction
 ============
 
-The dojo.getMarginBox function is used to obtain an object that encodes the width, height, left and top positions of the node's margin box. 
+The dojo.getMarginBox function is used to obtain an object that encodes the width, height, left and top positions of the node's margin box.
 
 Since Dojo 1.7, ``dojo.getMarginBox`` is exposed via the ``getMarginBox`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
@@ -35,7 +35,7 @@ node
   DOMNode
 
 computedStyle
-  This parameter accepts computed styles object. If this parameter is omitted, the functions will call dojo.getComputedStyle to get one. It is a better way, calling dojo.computedStyle once, and then pass the reference to this computedStyle parameter. Wherever possible, reuse the returned object of dojo.getComputedStyle. 
+  This parameter accepts computed styles object. If this parameter is omitted, the functions will call dojo.getComputedStyle to get one. It is a better way, calling dojo.computedStyle once, and then pass the reference to this computedStyle parameter. Wherever possible, reuse the returned object of dojo.getComputedStyle.
 
 Dojo 1.7 (AMD)
 --------------
@@ -55,7 +55,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.get
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
      // Get the margin-box size of a node
      var marginBox = dojo.getMarginBox(domNode);
   });

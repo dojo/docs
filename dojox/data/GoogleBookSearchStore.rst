@@ -47,7 +47,7 @@ The pattern of using the GoogleBookSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleBookSearchStore();
 
   var query = {text: "Wheel of Time"};
@@ -90,7 +90,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 

@@ -12,7 +12,7 @@ dojo.place
 
 To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>` first.
 
-``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and take special cross-browser consideration when creating and placing the nodes. 
+``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and take special cross-browser consideration when creating and placing the nodes.
 
 Since Dojo 1.7, ``dojo.place`` is exposed via the ``place`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
@@ -34,11 +34,11 @@ The function takes up to three arguments:
     dojo.place(node, refNode, pos);
 
 node
-  Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node. 
+  Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node.
 
   Note:
 
-  - An HTML fragment can have more than one top node. 
+  - An HTML fragment can have more than one top node.
   - In the case of an invalid HTML fragment the result of instantiation is undefined.
   - When instantiating an HTML fragment the owner document of the reference node is used.
 
@@ -62,7 +62,7 @@ The naming of the positions are intentionally concise.
 
   The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
 
-  Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other familiar attributes of the element. 
+  Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other familiar attributes of the element.
 
 =====
 Usage

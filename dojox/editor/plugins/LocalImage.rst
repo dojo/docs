@@ -95,7 +95,7 @@ baseImageUrl              String             True          <empty string>       
                                                                                     The complete URL of the image file is "images/upload/test.jpg".
                                                                                     If the argument uploadable is false or not specified, this argument is ignored.
 fileMask                  String             True          "\*.jpg;\*.jpeg;\*.gif;  Specify the acceptable image type.
-                                                           \*.png;\*.bmp"           The default value is "\*.jpg;\*.jpeg;\*.gif;\*.png;\*.bmp".                       
+                                                           \*.png;\*.bmp"           The default value is "\*.jpg;\*.jpeg;\*.gif;\*.png;\*.bmp".
 ========================  =================  ============  =======================  ===================================================================================
 
 Set up the server
@@ -117,7 +117,7 @@ If you inspect the network in Firebug, it could be look like the following:
   Content-Type: image/gif
   
   GIF87a?[image file byte data here]
-  -----------------------------313223033317673-- 
+  -----------------------------313223033317673--
 
 The server side should return a piece of html code which contains the following information:
 
@@ -231,7 +231,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

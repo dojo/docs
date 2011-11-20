@@ -23,21 +23,21 @@ There are several transports/envelopes that are defined in separate modules to m
 
 * REST transport requires :ref:`dojox.rpc.Rest <dojox/rpc/Rest>`
 
-* JSON-RPC-2.0 and JSON-RPC-1.0 envelopes require :ref:`dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`  
+* JSON-RPC-2.0 and JSON-RPC-1.0 envelopes require :ref:`dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`
 
 All of the provided SMDLibrary SMD's are based on JSONP, and consequently require :ref:`dojo.io.script <dojo/io/script>`. If you define your own SMD with a local target endpoint, :ref:`dojo.io.script <dojo/io/script>` is not needed.
 
 ==================
-Starting a Service 
+Starting a Service
 ==================
 
-Service is a constructor, returning a pointer to the API defined in the SMD. 
+Service is a constructor, returning a pointer to the API defined in the SMD.
 
 .. code-block :: javascript
 
   var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
 
-The ``google.smd`` file is located in a fixed location, available from :ref:`dojo.moduleUrl <dojo/moduleUrl>` calculations. 
+The ``google.smd`` file is located in a fixed location, available from :ref:`dojo.moduleUrl <dojo/moduleUrl>` calculations.
 
 If the argument passed to ``new Service()`` is an object, it is assumed to be the direct service definition:
 
@@ -56,8 +56,8 @@ Or if it is a string, it will be treated as a URL, and the above code will be ru
 
 .. code-block :: javascript
 
-  // assuming your dojox/ is in js/ 
-  var goog = new dojox.rpc.Service("js/dojox/rpc/SMDLibrary/google.smd"); 
+  // assuming your dojox/ is in js/
+  var goog = new dojox.rpc.Service("js/dojox/rpc/SMDLibrary/google.smd");
 
 Additionally, in 1.2 you are able to take advantage of :ref:`scriptFrame <dojox/io/scriptFrame>` transport, which will divert all traffic through a hidden iframe, preventing other :ref:`io.script <dojo/io/script>` processes from being 'blocked' while they wait on response data.
 Simply provide a ``frameDoc`` attribute and passed as an optional parameter to the constructor:
@@ -73,10 +73,10 @@ Simply provide a ``frameDoc`` attribute and passed as an optional parameter to t
 An iframe will be created if one cannot be found.
 
 ===============
-Using a Service 
+Using a Service
 ===============
 
-Service, like io.script, works around Dojo's built in :ref:`Deferred <dojo/Deferred>` system, providing asynchronous communication around a familiar API. Once we've created our Service from an SMD, the methods defined in the SMD are available through the return handle provided. 
+Service, like io.script, works around Dojo's built in :ref:`Deferred <dojo/Deferred>` system, providing asynchronous communication around a familiar API. Once we've created our Service from an SMD, the methods defined in the SMD are available through the return handle provided.
 
 .. code-block :: javascript
 
@@ -90,9 +90,9 @@ Service, like io.script, works around Dojo's built in :ref:`Deferred <dojo/Defer
          // an error occured. timeout, bad data, etc.
       });
 
-This will trigger a web search for the phrase "Dojo Toolkit", and fire your callback function when complete. 
+This will trigger a web search for the phrase "Dojo Toolkit", and fire your callback function when complete.
 
-If you are unfamiliar with :ref:`Deferreds <dojo/Deferred>`, you should dig deeper. You will thank us later. 
+If you are unfamiliar with :ref:`Deferreds <dojo/Deferred>`, you should dig deeper. You will thank us later.
 
 =====================
 Creating your own SMD

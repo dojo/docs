@@ -25,7 +25,7 @@ that leverage the additional capabilities of the browser.
 
 Within Django, DTL is intended to only handle text.
 Dojo's implementation is able to handle HTML which gets parsed to DOM instructions
-in addition to text. Actually, the text and DOM portions of dojox.dtl are two separate layers. 
+in addition to text. Actually, the text and DOM portions of dojox.dtl are two separate layers.
 The DOM layer sits on top of the text layer (base). It's been implemented in such a way
 that you have little to fear when moving your code from Django to dojox.dtl.
 Your existing templates should work, and will benefit from the massive

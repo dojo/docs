@@ -63,7 +63,7 @@ Example 1:  Slide a dom node right 200 pixels.
       dojo.addOnLoad(basicSlideToSetup);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="slideLeftButton">Slide It Left!</button><button data-dojo-type="dijit.form.Button" id="slideRightButton">Slide It Right!</button>
     <br>

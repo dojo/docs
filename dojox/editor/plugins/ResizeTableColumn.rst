@@ -37,7 +37,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
   ...
   </div>
 
-Then just declare the plugin and configure it as follows. 
+Then just declare the plugin and configure it as follows.
 
 .. code-block :: html
 
@@ -116,7 +116,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

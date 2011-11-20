@@ -20,7 +20,7 @@ Have you ever wanted to format some HTML that came out of a textarea?  Or the di
 Features
 ========
 
-This package was created as a general purpose helper library for formatting HTML text markup.  It currently contains one function, 'prettyPrint', which is intended to take a fragment of HTML text (usually the innerHTML of a document body)  and format it so it is human readable.  
+This package was created as a general purpose helper library for formatting HTML text markup.  It currently contains one function, 'prettyPrint', which is intended to take a fragment of HTML text (usually the innerHTML of a document body)  and format it so it is human readable.
 
 ===========
 Usage Notes
@@ -28,7 +28,7 @@ Usage Notes
 
 * You should not pass it a complete HTML document (one that includes <html><head></head></html> tags, as the formatter makes use of the browser DOM parser to format the input.  The problem with the HTML head and such tags is that most browsers will strip them out if they're included under any subtag, even ones that are not attached to the document.  So to get the most consistent behaviors, only provide it document fragments, such as the innerHTML of a <body> tag.
 
-* The format function tries to sort attributes and styles in 'alphabetical' order.  
+* The format function tries to sort attributes and styles in 'alphabetical' order.
 
 * Browsers do not always return the same output for input.  For example in a style attribute, you may specify something like: 'background-color: #fefefe'.  On Firefox, you will get back: 'background-color: rgb(...)'  The same value just represented differently.  Again, these will all work fine when rendered in other browsers, it's just a point of note to not expect the *exact* same output.
 
@@ -124,7 +124,7 @@ Format some HTML markup
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -188,7 +188,7 @@ Format some HTML markup with three space indent
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -251,7 +251,7 @@ Format some HTML markup with three space indent and 20 character line wrap
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -315,7 +315,7 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

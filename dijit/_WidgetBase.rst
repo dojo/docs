@@ -63,7 +63,7 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
    This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!). The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
 
 - startup
-    If you need to be sure parsing and creation of any child widgets has completed, use startup. This is often used for layout widgets like BorderContainer. If the widget does JS sizing, then startup() should call resize(), which does the sizing. 
+    If you need to be sure parsing and creation of any child widgets has completed, use startup. This is often used for layout widgets like BorderContainer. If the widget does JS sizing, then startup() should call resize(), which does the sizing.
 
 - destroy
      Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Examples on how to destroy a widget:

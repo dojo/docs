@@ -11,16 +11,16 @@ dojox.widget.FisheyeLite
 .. contents::
    :depth: 2
 
-A lightweight Fisheye effect component which animates during mouse movement over the widget. 
+A lightweight Fisheye effect component which animates during mouse movement over the widget.
 
 
 ============
 Introduction
 ============
 
-This is a very small class component which adds behavior to some node. This is a "behavioral widget" in that is does little more than register events on a node, and controls the existing markup. 
+This is a very small class component which adds behavior to some node. This is a "behavioral widget" in that is does little more than register events on a node, and controls the existing markup.
 
-This widget currently works by passing key/value pairs of css properties and ratios to a properties: object declared for the instance. The default is ``fontSize:1.25``, which will cause the calculated ``font-size`` CSS property to scale to 1.25 times the original size on mouseover, and restore the font to the original place onmouseout. 
+This widget currently works by passing key/value pairs of css properties and ratios to a properties: object declared for the instance. The default is ``fontSize:1.25``, which will cause the calculated ``font-size`` CSS property to scale to 1.25 times the original size on mouseover, and restore the font to the original place onmouseout.
 
 In Dojo 1.3, passing an object as a named property allows better definition of the end values. The default behavior is still to multiply by ratio, but now one is able to specify a fixed end:, start: or unit: value to be passed directly to the animation.
 
@@ -37,7 +37,7 @@ To load this widget code:
 
 ``note:`` NO CSS is required for this widget to operate. You must style your own nodes. This effect is behavioral.
 
-Any CSS properties can be modified, by default in multipliers. Some CSS "setup" is required in order to properly utilize this widget. For instance, if a series of list-items in an unorder-list have position:absolute, left:2px in their 'natural' state, a ``properties:{ left:10 }`` parameter passed would cause the left value to be 20px when moused over. 
+Any CSS properties can be modified, by default in multipliers. Some CSS "setup" is required in order to properly utilize this widget. For instance, if a series of list-items in an unorder-list have position:absolute, left:2px in their 'natural' state, a ``properties:{ left:10 }`` parameter passed would cause the left value to be 20px when moused over.
 
 New in Dojo 1.3, you can optionally specify an object (instead of a multiplier) of values to pass directly to the animation. You are still required to style the nodes accordingly for the 'natural' state, but can specify direct end: values for a property. eg 'left':
 
@@ -97,7 +97,7 @@ Simply add a ``data-dojo-type``:
        <li data-dojo-type="dojox.widget.FisheyeLite" data-dojo-props="properties:{left:10}">hi</li>
     </ul>
 
-When instantiating, either programmatically or declaratively, the source DOM Node (with the data-dojo-type, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node. 
+When instantiating, either programmatically or declaratively, the source DOM Node (with the data-dojo-type, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node.
 
 .. code-block :: html
   :linenos:
@@ -113,7 +113,7 @@ This will cause the inner DIV to be the target of the animations when the LI is 
 Behavioral Widget
 -----------------
 
-This widget is one of the few official widgets which utilize the optional parameter to pass to .destroy(). Typically, calling .destroy() on a Widget will remove the original DOM Node from the document. By passing ``true`` (preserveDom), we are able to cleanly remove the Fisheye effect from a node, optionally restoring it later in a different form. 
+This widget is one of the few official widgets which utilize the optional parameter to pass to .destroy(). Typically, calling .destroy() on a Widget will remove the original DOM Node from the document. By passing ``true`` (preserveDom), we are able to cleanly remove the Fisheye effect from a node, optionally restoring it later in a different form.
 
 .. code-block :: html
   :linenos:

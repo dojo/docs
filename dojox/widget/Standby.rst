@@ -114,7 +114,7 @@ Basic usage
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>  
+    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -159,7 +159,7 @@ Programmatic creation
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-id="b3" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b4" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
@@ -212,7 +212,7 @@ Changing overlay color
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-id="b5" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b6" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
@@ -266,7 +266,7 @@ Changing overlay color and image
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-id="b7" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b8" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
@@ -301,7 +301,7 @@ Changing overlay color and image
     </style>
 
 
-Showing curved border cloning 
+Showing curved border cloning
 -----------------------------
 
 This example works on Firefix and Safari only.
@@ -322,7 +322,7 @@ This example works on Firefix and Safari only.
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-id="b9" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b10" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
@@ -376,7 +376,7 @@ Overlaying a dijit.form.TextBox
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-id="b11" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b12" data-dojo-type="dijit.form.Button">Hide Standby widget</button>

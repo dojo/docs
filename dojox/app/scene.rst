@@ -22,7 +22,7 @@ Sample application configuration
 .. code-block :: javascript
 
   "views": {
-    "home": { 
+    "home": {
       "type": "dojox.app.view",
       "dependencies":["dojox/mobile/ListItem","dojox/mobile/RoundRectList","dojox/mobile/RoundRectCategory","dojox/mobile/Heading"],
       "template": "views/main.html"
@@ -30,7 +30,7 @@ Sample application configuration
   
     "simple":{
       "type": "dojox.app.view",
-      "template": "views/simple.html",			
+      "template": "views/simple.html",
       "dependencies":["dojox/mobile/TextBox"],
     },
   
@@ -40,7 +40,7 @@ Sample application configuration
         "repeatmodels": {
           "params":{
             "store": {"$ref":"#stores.repeatStore"}
-          }           
+          }
         }
       },
       "template": "views/repeat.html",
@@ -54,23 +54,23 @@ Sample application configuration
     },
   
     //simple scene which loads all views and shows the default first
-    "tabscene": { 
+    "tabscene": {
       //all views in the second scene will be bound to the user model
       "type": "dojox.app.scene",
-      "template": "tabScene.html",	
+      "template": "tabScene.html",
       "defaultView": "tab1",
       "defaultTransition": "flip",
   
       //the views available to this scene
-      "views": { 
+      "views": {
         "tab1":{
-          "template": "views/tabs/tab1.html" 
+          "template": "views/tabs/tab1.html"
         },
         "tab2":{
-          "template": "views/tabs/tab2.html" 
+          "template": "views/tabs/tab2.html"
         },
         "tab3":{
-          "template": "views/tabs/tab3.html" 
+          "template": "views/tabs/tab3.html"
         }
       }
     }

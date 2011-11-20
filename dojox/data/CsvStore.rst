@@ -50,7 +50,7 @@ Constructor Params
 |                |              |identify the delimiter of fields.  Comma is not longer required, but merely the default.        |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.4       |
-|                |              |caching values loaded from a webserver.                                                         |           | 
+|                |              |caching values loaded from a webserver.                                                         |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 ============
@@ -99,7 +99,7 @@ All fields in the CsvStore are read as strings.  Therefore, they are sorted as s
   store.comparatorMap["price"] = function(a,b) {
     a = parseFloat(a);
     b = parseFload(b);
-    return (a - b); 
+    return (a - b);
   };
 		
   var sortAttributes = [{attribute: "price", descending: true}, { attribute: "article", descending: true}];
@@ -140,7 +140,7 @@ Connecting CsvStore to dijit.form.ComboBox
                             "Sally, Smith, 49\n" +
                             "Lian, Zu, 23\n" +
                             "Ichiro, Kagetsume, 23\n"+
-                            "Umeko, Tsuguri, 18\n" + 
+                            "Umeko, Tsuguri, 18\n" +
                             "Alptraum, Reisender, 25\n" +
                             "Thomas, Winthrope, 14\n";
 
@@ -149,7 +149,7 @@ Connecting CsvStore to dijit.form.ComboBox
       });
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="combo" data-dojo-type="dijit.form.ComboBox" data-dojo-props="searchAttr:'firstname'"></div>
 
@@ -173,7 +173,7 @@ Connecting CsvStore to dojox.grid.DataGrid
                             "Sally, Smith, 49\n" +
                             "Lian, Zu, 23\n" +
                             "Ichiro, Kagetsume, 23\n"+
-                            "Umeko, Tsuguri, 18\n" + 
+                            "Umeko, Tsuguri, 18\n" +
                             "Alptraum, Reisender, 25\n" +
                             "Thomas, Winthrope, 14\n";
 
@@ -193,8 +193,8 @@ Connecting CsvStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div id="grid" style="width: 350px; height: 300px;" 
-      data-dojo-type="dojox.grid.DataGrid" 
+    <div id="grid" style="width: 350px; height: 300px;"
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="query:{},
       rowsPerPage:40">
     </div>
@@ -225,7 +225,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
                             "Sally|Smith|49\n" +
                             "Lian|Zu|23\n" +
                             "Ichiro|Kagetsume|23\n"+
-                            "Umeko|Tsuguri|18\n" + 
+                            "Umeko|Tsuguri|18\n" +
                             "Alptraum|Reisender|25\n" +
                             "Thomas|Winthrope|14\n";
 
@@ -245,8 +245,8 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
 
   .. cv :: html
 
-    <div id="grid2" style="width: 350px; height: 300px;" 
-      data-dojo-type="dojox.grid.DataGrid" 
+    <div id="grid2" style="width: 350px; height: 300px;"
+      data-dojo-type="dojox.grid.DataGrid"
       data-dojo-props="query:{},
       rowsPerPage:40">
     </div>

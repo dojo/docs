@@ -56,7 +56,7 @@ Dojo 1.7 (AMD)
      // and "lib" module path refers to "/somepath/lib"
 
      // lib.foo is required from /somepath/lib/foo.js
-     dojo.require("lib.foo"); 
+     dojo.require("lib.foo");
 
      // get a dojo.URI that points to "/somepath/lib/foo/images"
      var images = dojo.moduleUrl("lib.foo.images");
@@ -91,7 +91,7 @@ Dojo < 1.7
    // and "lib" module path refers to "/somepath/lib"
 
    // lib.foo is required from /somepath/lib/foo.js
-   dojo.require("lib.foo"); 
+   dojo.require("lib.foo");
 
    // get a dojo.URI that points to "/somepath/lib/foo/images"
    var images = dojo.moduleUrl("lib.foo.images");

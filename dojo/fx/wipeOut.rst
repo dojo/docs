@@ -57,7 +57,7 @@ Example 1:  Wipe out a dom node
       dojo.addOnLoad(basicWipeinSetup);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton">Wipe It Out!</button>
     <div id="basicWipeNode" style="width: 200px; background-color: red;">
@@ -91,7 +91,7 @@ Example 2:  Wipe out a dom node with a custom duration
       dojo.addOnLoad(basicWipeinSetup1);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton1">Wipe It Out!</button>
     <div id="basicWipeNode1" style="width: 200px; background-color: red;">
@@ -128,7 +128,7 @@ Example 3:  Wipe out a dom node with an easing function
       dojo.addOnLoad(basicWipeinSetup2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton2">Wipe It Out!</button>
     <div id="basicWipeNode2" style="width: 200px; background-color: red;">

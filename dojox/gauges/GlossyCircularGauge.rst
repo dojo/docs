@@ -46,15 +46,15 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksInterval       |  "10"                                   |  The interval beetwen each majors tick                         |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |   
+| majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          | 
+| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | minorTicksColor          |  "#c4c4c4"                              |  Color of the minor tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | color                    |  "black"                                |  Color of the gauge                                            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| needleColor              |  "#c4c4c4"                              |  Color of the needle                                           | 
+| needleColor              |  "#c4c4c4"                              |  Color of the needle                                           |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | font                     |  "normal normal normal 10pt sans-serif" |  Definition of the font used to display the values on the scale|
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
@@ -62,12 +62,12 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorVisible     |  "true"                                 |  Indicates if the text displaying the current value is visible |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                  
+| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksLabelPlacement |  "inside"                               |  Indicates how label are placed relatively to the tick marks:  |
 |                          |                                         |  either "inside" or "outside". "inside" means between the ticks|
 |                          |                                         |  and the center of the gauge, and "outide" means between the   |
-|                          |                                         |  gauges's border and the tick marks                            |                           
+|                          |                                         |  gauges's border and the tick marks                            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | noChange                 |  "true"                                 |  Indicates if user can change the value of the gauge by        |
 |                          |                                         |  interacting with the needle                                   |
@@ -100,7 +100,7 @@ circular gauge (programmatic)
   
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
-        dojo.require('dojox.gauges.GlossyCircularGauge');                
+        dojo.require('dojox.gauges.GlossyCircularGauge');
         makeGauge = function(){
         	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
         		background: [255, 255, 255, 0],
@@ -141,5 +141,5 @@ An other gauge sample
              majorTicksLabelPlacement="outside"
              majorTicksColor="white"
              textIndicatorVisible="false">
-        </div>		
+        </div>
     

@@ -11,7 +11,7 @@ It's functionality has somewhat been replaced by :ref:`The AMD API <loader/amd>`
 
 However, dojo.ready() implements a priority queue, so applications can register which callbacks fire first, by setting a priority for each callback.   In this way, the :ref:`dojo/parser <dojo/parser>` is set to run before user callbacks run.    So, dojo.ready() is still useful to be used with widgets or other code that depends on other callbacks executing before it does.
 
-Note that if the DOM has already loaded, and all dependencies have been resolved, ready() functions fire immediately. 
+Note that if the DOM has already loaded, and all dependencies have been resolved, ready() functions fire immediately.
 
 Examples
 ========

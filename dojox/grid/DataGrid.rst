@@ -34,7 +34,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -56,7 +56,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -111,7 +111,7 @@ At a high level, a DataGrid can be defined either declaratively in HTML markup o
 
 The ``<table>`` tag defines that a DataGrid is being created.  The nested ``<th>`` tags define the columns on the table.
 
-*note:* the ``<thead>`` element is *required* in order for the DataGrid to read this markup as the layout. 
+*note:* the ``<thead>`` element is *required* in order for the DataGrid to read this markup as the layout.
 
 In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
 
@@ -264,13 +264,13 @@ Data for the grid comes from a data store.  The data can be specified declarativ
 .. code-block :: html
   :linenos:
 
-  <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+  <span data-dojo-type="dojo.data.ItemFileWriteStore"
      data-dojo-id="myStore" data-dojo-props="url:'/myData.json'">
   </span>
 
 Programmatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
 
-It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to &lt; to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser. 
+It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to &lt; to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser.
 
 
 Locking columns from horizontal scrolling
@@ -429,7 +429,7 @@ This example shows how to create a simple Grid programmatically.
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -451,7 +451,7 @@ This example shows how to create a simple Grid programmatically.
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -504,7 +504,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -526,7 +526,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -542,7 +542,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
    <p>
-        Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
+        Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row).
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
     </p>
@@ -557,7 +557,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             var items = grid.selection.getSelected();
             if(items.length){
                 /* Iterate through the list of selected items.
-                   The current item is available in the variable 
+                   The current item is available in the variable
                    "selectedItem" within the following function: */
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {
@@ -601,7 +601,7 @@ Grid 1.2 supports a new parameter "selectionMode" which allows you to control th
   let the user select only one item at the same time
 'multiple'
   let the user selects more than one item at the same time
-'extended' (default) 
+'extended' (default)
   *not sure, what's the difference between "multiple" and "extended"*
 
 
@@ -627,7 +627,7 @@ First, you have to set a editor for each cell, you would like to edit:
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -649,7 +649,7 @@ First, you have to set a editor for each cell, you would like to edit:
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -705,7 +705,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                 identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -727,7 +727,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -752,7 +752,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
           Add Row
           <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
               /* set the properties for the new item: */
-              var myNewItem = {id: (++i), col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888}; 
+              var myNewItem = {id: (++i), col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888};
               /* Insert the new item into the store:*/
               store.newItem(myNewItem);
           </script>
@@ -765,7 +765,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
               var items = grid.selection.getSelected();
               if(items.length){
                   /* Iterate through the list of selected items.
-                     The current item is available in the variable 
+                     The current item is available in the variable
                      "selectedItem" within the following function: */
                   dojo.forEach(items, function(selectedItem) {
                       if(selectedItem !== null) {
@@ -811,7 +811,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: true, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -833,7 +833,7 @@ The Grid offers a filter() method, to filter data from the current query (client
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -906,7 +906,7 @@ To use it, you just have to override default behavior by yours.
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: true, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: true, col3: 'Signs can be selectively', col4: 19.34}
@@ -946,7 +946,7 @@ To use it, you just have to override default behavior by yours.
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               onStyleRow: myStyleRow,
               rowSelector: '20px'},
@@ -1040,7 +1040,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
@@ -1108,7 +1108,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
@@ -1184,7 +1184,7 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
@@ -1263,7 +1263,7 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
-    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
@@ -1278,7 +1278,7 @@ Creating a grid in a node with display: none
 --------------------------------------------
 
 It is not possible to create a grid as a child of a node which is set to be not displayed (display: none).
-If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen 
+If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen
 
 Hiding the Headers of a Grid
 ----------------------------
@@ -1357,12 +1357,12 @@ Keyboard
 ==============================================    ===============================================
 Action                                            Key
 ==============================================    ===============================================
-Navigate into the grid			          The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session. 
+Navigate into the grid			          The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
 Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
 Navigate between data cells		          With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
 Sort a column					  With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
 Edit a cell				          If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
-Cancel edit mode				  When a cell is being edited, pressing escape will cancel edit mode. 
+Cancel edit mode				  When a cell is being edited, pressing escape will cancel edit mode.
 End edit mode					  When a cell is being edited, pressing enter will accept the change and end edit mode.
 Focus editable cells				  With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
 Invoke an onrowclick event	                  If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
@@ -1375,21 +1375,21 @@ Change column size (1.4)                          Set focus to a column header, 
 Known Issues
 ------------
 
-The basic DataGrid is accessible however, some advanced features are not.  
+The basic DataGrid is accessible however, some advanced features are not.
 
 Keyboard
 ~~~~~~~~
 
-* There is no keyboard mechanism to change column size in 1.3. This was added in 1.4.  
+* There is no keyboard mechanism to change column size in 1.3. This was added in 1.4.
 * Keyboard navigation does NOT skip hidden columns in 1.3. This was fixed in 1.4. Hidden colummns are now skipped when arrowing through the column headers and data.
-* There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function. 
+* There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function.
 * Tree Grids are not supported for Accessibility.
 * Developers who add additional features via scripting, such as hidden rows, are responsible for the accessibility of the added feature(s).
-* Invoking links within cells via the keyboard is not supported.  
+* Invoking links within cells via the keyboard is not supported.
 
 Screen Reader
 ~~~~~~~~~~~~~
-The DojoX DataGrid is a complicated widget created via Scripting.  It has been enabled with `WAI-ARIA <http://www.w3.org/WAI/intro/aria>`_  properties, but unfortunately the current browsers (Firefox 3.5+ and IE 8) and screen readers (JAWS 11) do not fully support all of those properties.  Thus, information about the grid readonly, row selection and column sort status are not spoken by the screen reader.  There is still additional work on the part of the screen reader for information about row and column headers to be correctly spoken as the user traverses the data cells. Better support is expected in future versions of the browsers and screen readers and the Dojox DataGrid will be updated, as necessary, to take advantage of the additional ARIA support.  
+The DojoX DataGrid is a complicated widget created via Scripting.  It has been enabled with `WAI-ARIA <http://www.w3.org/WAI/intro/aria>`_  properties, but unfortunately the current browsers (Firefox 3.5+ and IE 8) and screen readers (JAWS 11) do not fully support all of those properties.  Thus, information about the grid readonly, row selection and column sort status are not spoken by the screen reader.  There is still additional work on the part of the screen reader for information about row and column headers to be correctly spoken as the user traverses the data cells. Better support is expected in future versions of the browsers and screen readers and the Dojox DataGrid will be updated, as necessary, to take advantage of the additional ARIA support.
 
 
 ========

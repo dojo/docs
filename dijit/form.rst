@@ -32,7 +32,7 @@ Buttons
 
   A representation of a normal <button> or <input type="submit/reset/button" />
 
-* :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` 
+* :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`
 
   A button which displays a menu or some other popup when you press it
 
@@ -44,7 +44,7 @@ Buttons
 
   A cross between a Button and a Checkbox widget
 
-Input widgets 
+Input widgets
 -------------
 
 All Widgets, that are similar to <input>:
@@ -172,7 +172,7 @@ Use Dijit Form Controls All Over!
 
 Because they're easy to mix and match, novice Dojo users often combine Dijit form controls with plain ol' HTML controls.  That's not good for several reasons:
 
-* The Dijit form controls follow the Dijit Theme but plain HTML controls will not.  They will stick out like a sore thumb amongst other nicely-colored widgets.  
+* The Dijit form controls follow the Dijit Theme but plain HTML controls will not.  They will stick out like a sore thumb amongst other nicely-colored widgets.
 * dijit.form.Form and derived controls like Dialog can only deal with dijit.form widgets.
 
 Never fear.  For every HTML control, there's a Dijit equivalent that does the same thing, and obeys most of the HTML attributes.
@@ -219,13 +219,13 @@ To style any of the form controls, the first thing to do is to look at the templ
 	><span class="dijitReset dijitRight dijitInline"
 		><span class="dijitReset dijitInline dijitButtonNode"
 			><button class="dijitReset dijitStretch dijitButtonContents"
-				data-dojo-attach-point="titleNode,focusNode" 
+				data-dojo-attach-point="titleNode,focusNode"
 				name="${name}" type="${type}" value="${value}" role="button" aria-labelledby="${id}_label"
-				><span class="dijitReset dijitInline" data-dojo-attach-point="iconNode" 
-					><span class="dijitReset dijitToggleButtonIconChar">&#10003;</span 
-				></span 
-				><span class="dijitReset dijitInline dijitButtonText" 
-					id="${id}_label"  
+				><span class="dijitReset dijitInline" data-dojo-attach-point="iconNode"
+					><span class="dijitReset dijitToggleButtonIconChar">&#10003;</span
+				></span
+				><span class="dijitReset dijitInline dijitButtonText"
+					id="${id}_label"
 					data-dojo-attach-point="containerNode"
 				></span
 			></button

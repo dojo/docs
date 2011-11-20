@@ -19,7 +19,7 @@ Dojo 1.7 (AMD)
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/AdapterRegistry"], function(reg){      
+  require(["dojo/AdapterRegistry"], function(reg){
       reg.register("handleString",
         dojo.isString,
         function(str){
@@ -69,7 +69,7 @@ There is also possible to unregister adapter from registry however there are per
   :linenos:
 
   // Dojo 1.7 (AMD)
-  require(["dojo/AdapterRegistry"], function(reg){      
+  require(["dojo/AdapterRegistry"], function(reg){
       reg.unregister("handleArr");
   });
 

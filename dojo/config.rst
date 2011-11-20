@@ -94,10 +94,10 @@ In cases where lots of attributes must be set in the dojo.config object, or for 
   </body>
   </html>
 
-As of Dojo 1.6, the variable name djConfig has been deprecated in favor of dojoConfig. The old spelling will continue to work until 2.0.  
+As of Dojo 1.6, the variable name djConfig has been deprecated in favor of dojoConfig. The old spelling will continue to work until 2.0.
 Note in this example that we've explicitly set a locale for this dojo instance (i.e. US English), and also specified that alongside that the locale resources for Japanese be loaded as well.
 
-Both the data-dojo-config script attribute and the dojoConfig global have the same result - their properties are copied over into dojo.config. In the data attribute case, no dojoConfig global gets created; after bootstrap, dojo.config is the single source of truth for configuration properties. For that reason it is also typically treated as a read-only object - use one of these 2 methods for providing initial values. For brevity's sake, we'll speak of dojoConfig properties from here on. 
+Both the data-dojo-config script attribute and the dojoConfig global have the same result - their properties are copied over into dojo.config. In the data attribute case, no dojoConfig global gets created; after bootstrap, dojo.config is the single source of truth for configuration properties. For that reason it is also typically treated as a read-only object - use one of these 2 methods for providing initial values. For brevity's sake, we'll speak of dojoConfig properties from here on.
 
 3. Including dojoConfig in a Custom Build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,7 +107,7 @@ When creating a custom build it is possible to bake the dojoConfig object into t
 dojoConfig Parameters
 ---------------------
 
-So now that you know *how* to set global parameters for dojo using dojoConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `dojo.config API page <http://dojotoolkit.org/api/dojo/config>`_. 
+So now that you know *how* to set global parameters for dojo using dojoConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `dojo.config API page <http://dojotoolkit.org/api/dojo/config>`_.
 
 The parameters you specify in dojoConfig are meant to **override** the default settings and do several basic things:
 
@@ -158,13 +158,13 @@ modulePaths: {'foo': '../../bar'}
 Other Options
 -------------
 
-afterOnLoad: true 
+afterOnLoad: true
   (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. Only works with a **built** dojo.js, it does not work the dojo.js directly from source control.
 
 .. code-block :: html
 
-    <script type="text/javascript"> 
-      var dojoConfig = { afterOnLoad:true }; 
+    <script type="text/javascript">
+      var dojoConfig = { afterOnLoad:true };
       window.onload = function(){
            var d = document.getElementsByTagName("head")[0].appendChild(document.createElement('script'));
            d.src = "my/dojo.js";
@@ -183,7 +183,7 @@ defaultDuration: 200
 Configuring dojox Modules
 -------------------------
 
-There is one final way in which dojoConfig is used, and that is to set preferences or configuration options for dojo extension (i.e. dojox) modules. Since the dojoConfig object is created and available globally on every page request, if you are creating a new dojox module this may be a good location to store global resources. Since dojox modules are by their very nature new and/or experimental, you may need to consult the specific documentation or the source code for the dojox module in question to discover what parameters are available for setting and what they do. A good way to do this is to search the API and/or source code for the string "dojoConfig" which should turn up cases in which it is used. A good example of a dojox extension that uses dojoConfig is dojox.storage, which specifies options for client-side storage providers like Google Gears, and the What WG storage providers. The documentations for the storage providers indicates that you can disable a specific provider by setting an appropriate dojoConfig parameter such as: 
+There is one final way in which dojoConfig is used, and that is to set preferences or configuration options for dojo extension (i.e. dojox) modules. Since the dojoConfig object is created and available globally on every page request, if you are creating a new dojox module this may be a good location to store global resources. Since dojox modules are by their very nature new and/or experimental, you may need to consult the specific documentation or the source code for the dojox module in question to discover what parameters are available for setting and what they do. A good way to do this is to search the API and/or source code for the string "dojoConfig" which should turn up cases in which it is used. A good example of a dojox extension that uses dojoConfig is dojox.storage, which specifies options for client-side storage providers like Google Gears, and the What WG storage providers. The documentations for the storage providers indicates that you can disable a specific provider by setting an appropriate dojoConfig parameter such as:
 
 .. code-block :: javascript
   :linenos:
@@ -196,7 +196,7 @@ Using dojoConfig in your Code
 
 The ambiguity of dojoConfig is very helpful. You can provide functionality and configuration options for users through the pattern outlined by this doc.
 
-If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the dojoConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to dojoConfig (as outlined above) are moved to: `dojo.config`. This is an artifact of the scopeName changing capabilities of Dojo. 
+If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the dojoConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to dojoConfig (as outlined above) are moved to: `dojo.config`. This is an artifact of the scopeName changing capabilities of Dojo.
 
 .. code-block :: javascript
   :linenos:
@@ -214,7 +214,7 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
       thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
       constructor: function(){
          if(config.myCustomVaraible){ ... }
-      }  
+      }
     });
   });
   
@@ -223,7 +223,7 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
       thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
       constructor: function(){
          if(dojo.config.myCustomVaraible){ ... }
-      }  
+      }
   });
 
 By referencing `dojo.config.myCustomVariable` as opposed to relying on `dojoConfig.myCustomVariable` you will be able to utilize the variable safely in built versions using an alternate scopeName

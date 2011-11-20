@@ -45,7 +45,7 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html", "dojo/query"], function(dojo, query){   
+  require(["dojo/_base/html", "dojo/query"], function(dojo, query){
       // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
       dojo.setStyle("thinger", "opacity", 0.5); // == 0.5
 
@@ -75,7 +75,7 @@ It's recommended to use style.get in dojo 1.7.
 
 .. code-block :: javascript
 
-  require(["dojo/dom-style", "dojo/query"], function(style, query){   
+  require(["dojo/dom-style", "dojo/query"], function(style, query){
       // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
       style.set("thinger", "opacity", 0.5); // == 0.5
 

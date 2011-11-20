@@ -96,11 +96,11 @@ Programmatic construction of a ComboBox to browse rules
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Combo lookup of selectors (scoped to nihilo.css)</b>
-    <br> 
-    <br> 
+    <br>
+    <br>
     <div id="ruleCombo"></div>
     <br>
     <br>

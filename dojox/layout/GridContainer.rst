@@ -81,7 +81,7 @@ If you want to get notified of any event, use the following: (The event names ar
   });
 
   dojo.subscribe("/dojox/mdnd/drop", null, function(source, nodes, copy, target) {
-      // Your Code here 
+      // Your Code here
   });
 
 ========
@@ -130,7 +130,7 @@ Programmatic example
             style: {width:'100%'},
             acceptTypes: ['Portlet'],
             isOffset: true
-        }, 'placeHere'); 
+        }, 'placeHere');
         // prepare some Content for the Portlet:
         var portletContent1 = [
             dojo.create('div', {innerHTML: 'Some content within the Portlet "dynPortlet1".'})

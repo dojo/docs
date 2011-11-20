@@ -77,7 +77,7 @@ We can display a Tree on a page by creating a data store, a model, and the Tree 
 A programmatic tree
 -------------------
 
-Creating a programmatic tree is very simple: 
+Creating a programmatic tree is very simple:
 
 .. cv-compound::
 
@@ -89,7 +89,7 @@ Creating a programmatic tree is very simple:
 
       dojo.addOnLoad(function(){
         var store = new dojo.data.ItemFileReadStore({
-            url: "{{dataUrl}}/dijit/tests/_data/countries.json" 
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
         });
         
         var treeModel = new dijit.tree.ForestStoreModel({
@@ -101,7 +101,7 @@ Creating a programmatic tree is very simple:
         });
         
         new dijit.Tree({
-            model: treeModel    
+            model: treeModel
         }, "treeOne");
       });
     </script>
@@ -129,7 +129,7 @@ A markup tree
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
@@ -219,7 +219,7 @@ Sometimes you don't want that "the world" top level node to show up, especially 
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     
@@ -279,7 +279,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
 
       dojo.addOnLoad(function(){
         var store = new dojo.data.ItemFileWriteStore({
-            url: "{{dataUrl}}/dijit/tests/_data/countries.json" 
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
         });
         
         var treeModel = new dijit.tree.ForestStoreModel({
@@ -329,7 +329,7 @@ If between threshold is set to a positive integer value like 5 (which represents
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
     
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5"
       data-dojo-props="store:continentStore5, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     
@@ -379,7 +379,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
         <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
              data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
         
-        <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel" 
+        <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel"
              data-dojo-props="store:menuContinentStore, query:{type:'continent'},
              rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
             
@@ -501,4 +501,4 @@ Tree items can also be accessed by typing alphanumeric characters.  For example,
 Known Issues
 ------------
 
-Using JAWS 10 in Firefox 3 the properties of each tree item are spoken including the open/close state and the level information.  Using JAWS 10 with IE 8, the open/close state of each item is spoken but the level information is not spoken.   In both Firefox 3 and IE 8 the JAWS user should be in App mode or virtual pc cursor off mode for best performance (toggle the mode via the insert+z key).  
+Using JAWS 10 in Firefox 3 the properties of each tree item are spoken including the open/close state and the level information.  Using JAWS 10 with IE 8, the open/close state of each item is spoken but the level information is not spoken.   In both Firefox 3 and IE 8 the JAWS user should be in App mode or virtual pc cursor off mode for best performance (toggle the mode via the insert+z key).

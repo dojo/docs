@@ -11,7 +11,7 @@ dojox.atom.io.model
 .. contents::
    :depth: 2
 
-The *dojox.atom.io.model* module is a JavaScript model of an ATOM feed.  
+The *dojox.atom.io.model* module is a JavaScript model of an ATOM feed.
 
 ============
 Introduction
@@ -26,14 +26,14 @@ Classes defined in the model
 When the model file is loaded, several classes are defined that represent ATOM tags.  Please refer to the following table for the class names and a description of what they represent.  Each entry in the class name table also acts as a link to specific documentation about that class and what core functions it provides.
 
 ::ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`:
-  A generic superclass used to represent specific ATOM details that are common for many ATOM tags 
+  A generic superclass used to represent specific ATOM details that are common for many ATOM tags
 
 ::ref:`dojox.atom.io.model.Category <dojox/atom/io/model/Category>`:
   Model to represent the Category tag of an ATOM document.  Contains all Category properties and a toString function for serializing it back to XML
 
 ::ref:`dojox.atom.io.model.Content <dojox/atom/io/model/Content>`:
   Model to represent the Content style tags in an ATOM document.  This is used to represent Summary, Content, Title, and Subtitle elements in an ATOM
-  feed.  In other words, it represents any element that can contain Text, HTML, XHTML, etc as content format.  It also has a toString function used to 
+  feed.  In other words, it represents any element that can contain Text, HTML, XHTML, etc as content format.  It also has a toString function used to
   generate the corresponding XML tag
 
 ::ref:`dojox.atom.io.model.Link <dojox/atom/io/model/Link>`:
@@ -46,7 +46,7 @@ When the model file is loaded, several classes are defined that represent ATOM t
   Atom entry element. Represents an Atom entry, including storing the authors, contributors, title, content, and so on.
 
 ::ref:`dojox.atom.io.model.Feed <dojox/atom/io/model/Feed>`:
-  Atom feed element. Represents an Atom Feed, including the feed elements such as the title and author, and also represents the entry list. 
+  Atom feed element. Represents an Atom Feed, including the feed elements such as the title and author, and also represents the entry list.
 
 ::ref:`dojox.atom.io.model.Generator <dojox/atom/io/model/Generator>`:
   Atom generator element
@@ -109,7 +109,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
 
       //This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtom () {
-        var xhrArgs = { 
+        var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
            handleAs: "xml"
@@ -125,11 +125,11 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
 
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
-           xml.innerHTML = ""; 
+           xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
            var json = dojo.byId("simpleAtomJson");
-           json.innerHTML = ""; 
+           json.innerHTML = "";
            json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
         });
  
@@ -141,7 +141,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
       dojo.addOnLoad(initSimpleAtom);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
@@ -174,7 +174,7 @@ Example 2: Create a new ATOM Feed
         feed.addAuthor("John Doe", "johndoe@nowhere.org", "http://johndoeshomepage.org");
         feed.rights = "Copyright Dojo";
         feed.updated = new Date();
-        feed.published = new Date();        
+        feed.published = new Date();
         feed.setTitle("This <i>is</i> my Feed title!", "xhtml");
 
         //Create an entry
@@ -188,14 +188,14 @@ Example 2: Create a new ATOM Feed
 
         //Emit The XML form of the feed.
         var xml = dojo.byId("simpleAtomCreate");
-        xml.innerHTML = ""; 
+        xml.innerHTML = "";
         xml.appendChild(dojo.doc.createTextNode(feed.toString()));
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initSimpleCreateAtom );
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div style="height: 400px; overflow: auto;">
       <b>As XML</b>
@@ -215,7 +215,7 @@ Example 3: Modify a loaded feed
 
       //This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtomModified() {
-        var xhrArgs = { 
+        var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
            handleAs: "xml"
@@ -231,7 +231,7 @@ Example 3: Modify a loaded feed
 
            //Emit XML of the modified feed.
            var xml = dojo.byId("simpleAtomXmlPristine");
-           xml.innerHTML = ""; 
+           xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
            //Remove an entry.
@@ -241,7 +241,7 @@ Example 3: Modify a loaded feed
 
            //Emit XML of the modified feed.
            xml = dojo.byId("simpleAtomXmlModified");
-           xml.innerHTML = ""; 
+           xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
         });
  
@@ -253,7 +253,7 @@ Example 3: Modify a loaded feed
       dojo.addOnLoad(initSimpleAtomModified);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div style="height: 400px; overflow: auto;">
       <b>Pristine XML</b>

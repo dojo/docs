@@ -188,7 +188,7 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 
 			grid.placeAt('gridContainer');
 			grid.startup();
-		});	
+		});
 	</script>
 
   .. html::
@@ -297,8 +297,8 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-    store="mystore" structure="mystructure" 
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+    store="mystore" structure="mystructure"
     plugins="{
       cellMerge: /* a Boolean value or an argument object */{}
   }" ></div>
@@ -331,8 +331,8 @@ Merged cell object structure:
 Property     Type                          Optional/Mandatory     Description
 ===========  ============================  =====================  =============================================================================================================
 row          Integer|function(Integer)     Mandatory              If it's an Integer, it's the index of the row which have cells to be merged.
-                                                                  If it's a function, it's a predicate to decide which rows are to be merged. 
-                                                                  It takes an integer (the row index), and should return true or false;        
+                                                                  If it's a function, it's a predicate to decide which rows are to be merged.
+                                                                  It takes an integer (the row index), and should return true or false;
 start        Integer                       Mandatory              The column index of the left most cell that shall be merged.
 end          Integer                       Mandatory              The column index of the right most cell that shall be merged.
 major        Integer                       Optional               The column index of the cell whose content should be used as the content of the merged cell.
@@ -367,10 +367,10 @@ Here is some examples on how to use this API:
 .. code-block :: javascript
   :linenos:
 
-  //Merge cells of column 2, column 3 and column 4 on the second row, using the content of the cell on column 3 for the merged cell. 
-  var handle1 = grid.mergeCells(1, 2, 4, 3); 
+  //Merge cells of column 2, column 3 and column 4 on the second row, using the content of the cell on column 3 for the merged cell.
+  var handle1 = grid.mergeCells(1, 2, 4, 3);
 
-  //Merge cells of column 2, column 3 and column 4 on every third row, using the content of column 3 for the merged cells. 
+  //Merge cells of column 2, column 3 and column 4 on every third row, using the content of column 3 for the merged cells.
   var handle2 = grid.mergeCells(function(rowIndex){
     return !((rowIndex + 1) % 3);
   }, 2, 4);

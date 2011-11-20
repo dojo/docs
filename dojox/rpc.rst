@@ -11,7 +11,7 @@ The DojoX RPC Project is an enhanced version of :ref:`dojo.rpc <dojo/rpc>`, and 
 Demonstration
 -------------
 
-This is an example of the Google API using the pre-defined google.smd in the :ref:`SMD Library <dojox/rpc/SMDLibrary>`. Unless you are Google, the transport will be x-domain by way of :ref:`io.script <dojo/io/script>`, so be sure to include that as well. (RPC can be used locally as well, using built in XHR transports) 
+This is an example of the Google API using the pre-defined google.smd in the :ref:`SMD Library <dojox/rpc/SMDLibrary>`. Unless you are Google, the transport will be x-domain by way of :ref:`io.script <dojo/io/script>`, so be sure to include that as well. (RPC can be used locally as well, using built in XHR transports)
 
 .. cv-compound::
 
@@ -29,7 +29,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 		<option value="newsSearch">news</option>
 		<option value="bookSearch">books</option>
 		<option value="imageSearch">images</option>
-	</select> &nbsp; 
+	</select> &nbsp;
 	<button id="doit" type="submit" value="search">Search</button>
 
 	<div id="current">
@@ -40,7 +40,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 	<div id="past">
 		<h3>Old Searches:</h3>
 		<ul id="archive"></ul>
-	</div>	
+	</div>
     </div>
 
   .. cv:: javascript
@@ -52,7 +52,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
     var google, tehLoader = null;
     dojo.addOnLoad(function(){
         // define the service:
-        google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd")); 
+        google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
         // quick/easy loading indicator:
         tehLoader = dojo.hitch(dojo,"style","loader","visibility");
 
@@ -72,12 +72,12 @@ This is an example of the Google API using the pre-defined google.smd in the :re
                     // create an <li> for each data part:
                     dojo.forEach(returned.responseData.results,function(item){
                         var li = dojo.doc.createElement('li');
-                        li.innerHTML = "<a target='_new' hr"+"ef='"+ 
-                            (item.unescapedUrl || item.url) +"'>" + item.title + 
-                            "</a><br />" + "<span class='summary'>" + 
-                            (item.content || item.streetAddress || "unknown") + 
+                        li.innerHTML = "<a target='_new' hr"+"ef='"+
+                            (item.unescapedUrl || item.url) +"'>" + item.title +
+                            "</a><br />" + "<span class='summary'>" +
+                            (item.content || item.streetAddress || "unknown") +
                             "</span>"
-                        ; 
+                        ;
                         dojo.byId("top-results").appendChild(li);
                     });
                     tehLoader("hidden");

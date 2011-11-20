@@ -291,7 +291,7 @@ Transform: writeDojo
   resulting loader will not automatically consume a global ``dojoConfig``, ``djConfig``, or ``require`` loader
   configuration object.
 
-``version`` (default = *the version given by the dojo package*) 
+``version`` (default = *the version given by the dojo package*)
   * [*string*] A string with the format *major* **.** minor* **.** *patch* **.** *flag*, where major, minor, and patch
     must all be positive integers and flag can be anything. Any less significant subset may be ommitted; ommitted minor
     and patch segments default to "0"; an ommitted flag segment defaults to an empty string.

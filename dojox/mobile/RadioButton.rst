@@ -12,7 +12,7 @@ dojox.mobile.RadioButton
 .. contents::
     :depth: 2
 
-RadioButton is a very simple INPUT type="radio" widget. RadioButton widgets maintain a *checked* boolean attribute (settable/gettable) that is true when clicked, but unlike CheckBox, is false only when a different RadioButton with the same name attribute is clicked.  While checked, each of the widget's CSS class names are appended with "Checked" and injected into the CSS class list.  Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*. 
+RadioButton is a very simple INPUT type="radio" widget. RadioButton widgets maintain a *checked* boolean attribute (settable/gettable) that is true when clicked, but unlike CheckBox, is false only when a different RadioButton with the same name attribute is clicked.  While checked, each of the widget's CSS class names are appended with "Checked" and injected into the CSS class list.  Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
 
 
 ======================

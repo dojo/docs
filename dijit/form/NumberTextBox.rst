@@ -19,7 +19,7 @@ Introduction
 
 By default, the widget will discover the appropriate locale and behavior as specified by Dojo. For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when displaying numbers to the user. For German users, a period is used for the thousands separator and a comma for the decimal separator. Other locales may have different conventions.
 
-When the user edits the value, or when sending data to the server, or when retreiving the ``value`` attribute programmatically, numbers are represented simply as JavaScript numbers, formatted with a period for decimal and no thousands separators. This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior. When specifying the ``constraints`` attribute, you have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`. 
+When the user edits the value, or when sending data to the server, or when retreiving the ``value`` attribute programmatically, numbers are represented simply as JavaScript numbers, formatted with a period for decimal and no thousands separators. This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior. When specifying the ``constraints`` attribute, you have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`.
 
 To further restrict/validate user input, this widget makes additional numeric ``constraints`` properties (``min`` and ``max``) available to the developer.
 
@@ -51,7 +51,7 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
 		name= "elevation"
 		value="3000"
 		constraints="{min:-20000,max:20000,places:0}"
-		required="true" 
+		required="true"
 		invalidMessage= "Invalid elevation.">
 
 
@@ -71,7 +71,7 @@ This example creates a simple NumberTextBox programmatically.  The fractional pa
                   name: "programmatic",
                   constraints: {pattern: "0.######"}
               };
-              new dijit.form.NumberTextBox(props, "programmatic");    
+              new dijit.form.NumberTextBox(props, "programmatic");
          }
          dojo.addOnLoad(createWidget);
      </script>

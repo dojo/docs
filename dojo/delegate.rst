@@ -41,7 +41,7 @@ Parameter   Type                  Description
 ==========  ====================  ==================================================
 obj         object                The object to delegate to for properties not found
                                   directly on the return object or in props.
-props       object                An object containing properties to assign to the 
+props       object                An object containing properties to assign to the
                                   returned object.
 ==========  ====================  ==================================================
 

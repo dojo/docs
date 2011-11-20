@@ -31,7 +31,7 @@ When using AMD format in a fully baseless application, ``contains`` is accessed 
 
 .. code-block :: javascript
 
-  require(["dojo/dom-class"], function(domClass){   
+  require(["dojo/dom-class"], function(domClass){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
       if(domClass.contains("someNode","aSillyClassName")){ ... }
   });
@@ -40,7 +40,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.has
 
 .. code-block :: javascript
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
       if(dojo.hasClass("someNode","aSillyClassName")){ ... }
   });
@@ -68,7 +68,7 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
   :linenos:
 
   // Dojo 1.7+ (AMD)
-  require(["dojo/dom-class"], function(domClass){   
+  require(["dojo/dom-class"], function(domClass){
     if(domClass.contains("bam", "foo")){
       /* it does */
     }
@@ -85,7 +85,7 @@ Using :ref:`dojo.query <dojo/query>` to find a node and check if it has a class:
   :linenos:
 
   // Dojo 1.7+ (AMD)
-  require(["dojo/dom-class", "dojo/query"], function(domClass, query){   
+  require(["dojo/dom-class", "dojo/query"], function(domClass, query){
      query(".something").forEach(function(node){
        if(domClass.contains(node, "else"){
           /* it does */

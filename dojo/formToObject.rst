@@ -71,7 +71,7 @@ Create an object version of a form
       });
     </script>
 
-  .. html:: 
+  .. html::
 
     <p>The FORM</p>
     <form id="myform">
@@ -110,7 +110,7 @@ Create an object version of a form with Dijit widgets
       });
     </script>
 
-  .. html:: 
+  .. html::
 
     <p>The FORM</p>
     <form id="myform2">

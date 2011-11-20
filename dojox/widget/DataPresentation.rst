@@ -16,11 +16,11 @@ dojox.widget.DataPresentation
 Overview
 --------
 
-DataPresentation is a widget that connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store. 
+DataPresentation is a widget that connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store.
 
-The widget can then present the data in several forms: as a graphical chart, as a tabular grid, or as display panels presenting meta-data (title, creation information, etc) from the data. 
+The widget can then present the data in several forms: as a graphical chart, as a tabular grid, or as display panels presenting meta-data (title, creation information, etc) from the data.
 
-The widget can also create and manage several of these forms in one simple construction. 
+The widget can also create and manage several of these forms in one simple construction.
 
 Example 1 - Chart only
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -34,7 +34,7 @@ This example uses the following sample data, used to define the chart title, foo
 	"title"  : "Softdrink Sales (2007)",
 	"footer" : "North America only",
 	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [                            
+	"series" : [
 		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
 		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
 		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
@@ -46,7 +46,7 @@ This example uses the following sample data, used to define the chart title, foo
 		]
 	};
 
-'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart. 
+'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
 .. code-block :: javascript
  :linenos:
@@ -61,7 +61,7 @@ This example uses the following sample data, used to define the chart title, foo
 	}
 
 
-Finally, create a DataPresentation object using the above data and series objects. 
+Finally, create a DataPresentation object using the above data and series objects.
 The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 .. code-block :: javascript
@@ -111,7 +111,7 @@ fig 1.
 	"title"  : "Softdrink Sales (2007)",
 	"footer" : "North America only",
 	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [                            
+	"series" : [
 		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
 		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
 		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
@@ -152,7 +152,7 @@ fig 1.
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 650px; height: 300px;"></div>  
+    <div id="chartdiv" style="width: 650px; height: 300px;"></div>
 
   .. cv:: css
 
@@ -197,7 +197,7 @@ Example 2 - Chart and DataGrid
  <div id="chartdiv" style="width: 650px; height: 300px;"></div>
      	<div style="width:500px; height:300px;">
  <div id="griddiv"></div>
- </div>   
+ </div>
  
 
 fig 2.
@@ -217,7 +217,7 @@ fig 2.
 	"title"  : "Softdrink Sales (2007)",
 	"footer" : "North America only",
 	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [                            
+	"series" : [
 		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
 		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
 		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
@@ -262,7 +262,7 @@ fig 2.
     <div id="chartdiv" style="width: 650px; height: 300px;"></div>
     <div style="width:500px; height:300px;">
        <div id="griddiv"></div>
-    </div> 
+    </div>
 
  
 
@@ -289,7 +289,7 @@ fig 2.
 Example 3.
 ~~~~~~~~~~
 
-To see how the widget can cope with different data shapes, switch from jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete 'series' of values, gathered into an array with series titles. jsondata1 is structures as 'data points', each containing multiple sales values. 
+To see how the widget can cope with different data shapes, switch from jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete 'series' of values, gathered into an array with series titles. jsondata1 is structures as 'data points', each containing multiple sales values.
 
 .. code-block :: javascript
  :linenos:
@@ -319,7 +319,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
  :linenos:
 
  var makeseries = function(data) {
-  return [ 
+  return [
    { datapoints: "sales", field: "month", name: "Month", type: "range", chart: false },
    { datapoints: "sales", field: "lemonade", name: "Lemonade (fizzy)" },
    { datapoints: "sales", field: "dandelionandburdock", name: "Dandelion and burdock" },
@@ -368,17 +368,17 @@ To see how the widget can cope with different data shapes, switch from jsondata0
    <div id="chartdiv" style="width: 400px; height: 300px;"></div>
   </td>
 
-  <td>  
-   <div style="border: 1px solid #888888; padding: 5px; background-color: rgba(255, 255, 221, 0.8);">    
+  <td>
+   <div style="border: 1px solid #888888; padding: 5px; background-color: rgba(255, 255, 221, 0.8);">
     <div id="legenddiv" ></div>
    </div>
   </td>
 
- </tr></table>	
+ </tr></table>
 	
  <div style="width:400px; height:300px; padding-left: 100px;">
   <div id="griddiv"></div>
- </div>   
+ </div>
  
 
 fig 3.
@@ -439,7 +439,7 @@ series: Array
 
   linestyle: the stroke style for lines (if applicable) (default: "Solid")
 
-  axis: the dependant axis to which the series will be attached in the chart, which can be "primary" or "secondary" 
+  axis: the dependant axis to which the series will be attached in the chart, which can be "primary" or "secondary"
 
   grid: true if the series should be included in a data grid presentation (default: true)
 
@@ -452,12 +452,12 @@ series: Array
 		
 type: String
 ~~~~~~~~~~~~
- The type of presentation to be applied at the DOM attach point. This can be 'chart', 'legend', 'grid', 'title', 'footer'. 
+ The type of presentation to be applied at the DOM attach point. This can be 'chart', 'legend', 'grid', 'title', 'footer'.
  The default type is 'chart'.
 		
 chartType: String
 ~~~~~~~~~~~~~~~~~
- The type of chart to display. This can be 'clusteredbars', 'areas', 'stackedcolumns', 'stackedbars', 'stackedareas', 'lines', 'hybrid'. 
+ The type of chart to display. This can be 'clusteredbars', 'areas', 'stackedcolumns', 'stackedbars', 'stackedareas', 'lines', 'hybrid'.
  The default type is 'bar'.
 
 reverse: Boolean
@@ -466,16 +466,16 @@ reverse: Boolean
 
 animate: Object
 ~~~~~~~~~~~~~~~
- default = false, or override duration ... eg { duration: 1000 } sets animation to 1 second 
+ default = false, or override duration ... eg { duration: 1000 } sets animation to 1 second
 
 labelMod: Integer
 ~~~~~~~~~~~~~~~~~
- The frequency of label annotations to be included on the independent axis. 1=every label. 
+ The frequency of label annotations to be included on the independent axis. 1=every label.
  The default is 1.
 		
 legendVertical: Boolean
 ~~~~~~~~~~~~~~~~~~~~~~~
- true if the legend should be rendered vertically. 
+ true if the legend should be rendered vertically.
  The default is false (legend rendered horizontally).
 
 theme: String|Theme

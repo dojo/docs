@@ -7,7 +7,7 @@ dojox.grid.EnhancedGrid.plugins.Pagination
 :Project owner: Evan Huang
 :Available: since V.1.6
 
-Pagination plugin provides paging functionality for grid. 
+Pagination plugin provides paging functionality for grid.
 
 .. contents::
 	:depth: 2
@@ -28,7 +28,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojox.grid.enhanced.plugins.Pagination");
-        dojo.require("dojo.data.ItemFileWriteStore");        
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
 	  /*set up data store*/
@@ -36,7 +36,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -58,7 +58,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
           /*create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px',
 		plugins: {
@@ -72,7 +72,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 		                maxPageStep: 4,
                                 /*position of the pagination bar*/
 		                position: "bottom"
-			}}}, 
+			}}},
                document.createElement('div'));
 
           /*append the new grid to the div*/
@@ -127,7 +127,7 @@ If your grid is created declaratively:
 .. code-block :: html
 	:linenos:
 
-	<div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+	<div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
 	  data-dojo-props="store:mystore, structure:'mystructure',
 	  plugins:{
 		pagination: /* a Boolean value or an configuration object */{}
@@ -155,13 +155,13 @@ Below is all of pagination configuration arguments:
 Property                   Type                     Default Value    Description
 =========================  =======================  ===============  ================================================================================================================
 description                Boolean                  true             Indicates whether or not display the current position display. Default is true (display).
-sizeSwitch                 Boolean                  true             Indicates whether or not display the page length menu. Default is true (display).                                                                
+sizeSwitch                 Boolean                  true             Indicates whether or not display the page length menu. Default is true (display).
 pageStepper                Boolean                  true             Indicates whether or not display the page navigation choices. Default is true (display).
 gotoButton                 Boolean                  false            Indicates whether or not the go to page button. Default is false (not display).
-position                   String                   "bottom"         Indicates the pagination control bar's position. 
+position                   String                   "bottom"         Indicates the pagination control bar's position.
                                                                      There are two options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
                                                                      of the grid).
-pageSizes                  Array                    [10, 25, 50,     Customize the page length menu options. The element of the array should be an integer, and any other value which  
+pageSizes                  Array                    [10, 25, 50,     Customize the page length menu options. The element of the array should be an integer, and any other value which
                                                     100, Infinity]   can not be parsed to an integer will be treated as "All" option.
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
 defaultPageSize            integer                  pageSizes[0]     The default rows size per page when grid initialized.
@@ -205,10 +205,10 @@ Below is a summary of all supported keyboard operators.
 ==============================================  ===============================================================
 Key                                             Action
 ==============================================  ===============================================================
-Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation 
+Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation
                                                 choices) of the pagination bar will receive the focus.
 Tab/shift + Tab from inside of pagination bar   The focus will switch among the elements of the pagination bar.
-arrow key                                       The focus will move the specfic direction in current element 
+arrow key                                       The focus will move the specfic direction in current element
                                                 area.
 ==============================================  ===============================================================
 
@@ -221,13 +221,13 @@ All available methods of the pagination are listed below:
 ==================  =====================================  =====================  =======================================================
 Name                Parameters                             Return                 Description
 ==================  =====================================  =====================  =======================================================
-currentPage         page index: integer                    current page index     Function to handle shifting to the specific page,  
-                                                                                  and return the current page index. Only return the 
-                                                                                  current page index if an invalid parameter passed 
+currentPage         page index: integer                    current page index     Function to handle shifting to the specific page,
+                                                                                  and return the current page index. Only return the
+                                                                                  current page index if an invalid parameter passed
                                                                                   in.
-currentPageSize     page size: integer                     current page size      Function to handle setting the rows per page, and   
-                                                                                  return the current page size. If an invalid parameter 
-                                                                                  passed in, only return the current page size.    
+currentPageSize     page size: integer                     current page size      Function to handle setting the rows per page, and
+                                                                                  return the current page size. If an invalid parameter
+                                                                                  passed in, only return the current page size.
 nextPage            N/A                                    N/A                    Function to handle shifting to the next page
 prevPage            N/A                                    N/A                    Function to handle shifting to the previous page
 firstPage           N/A                                    N/A                    Jump to first page.
@@ -235,10 +235,10 @@ lastPage            N/A                                    N/A                  
 getTotalPageNum     N/A                                    The total page number  A getter to gain the total page number.
 getTotalRowCount    N/A                                    The total rows count   A getter to gain the total rows count.
 scrollToRow         rowIndex: integer                      N/A                    Override the grid.ScrollToRow().
-                                                                                  Scroll to give row automatically, if the given 
+                                                                                  Scroll to give row automatically, if the given
                                                                                   row is not in this page, will jump to the right
                                                                                   page and scroll to the row.
-showGotoPageButton  flag: boolean                          N/A                    Function to show/hide the Goto page button dynamically.                                                                                                                                                                                                                                                
+showGotoPageButton  flag: boolean                          N/A                    Function to show/hide the Goto page button dynamically.
 gotoPage            pageIdx: integer                       N/A                    Deprecated, please use *currentPage* method instead.
 changePageSize      size: integer                          N/A                    Deprecated, please use *currentPageSize* method instead.
 gotoNextPage        N/A                                    N/A                    Deprecated, please use *nextPage* method instead.

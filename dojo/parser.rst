@@ -12,7 +12,7 @@ The Dojo Parser
 
 The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` (dojoType) attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
 
-This is not limited to Dijit, or :ref:`dojo.declare <dojo/declare>`. 
+This is not limited to Dijit, or :ref:`dojo.declare <dojo/declare>`.
 
 Inside your HTML you mark nodes for the parser by setting the data-dojo-type attribute, to specify the class of the widget, and other attributes, to specify parameters to the widget.   For example:
 
@@ -322,7 +322,7 @@ And HTML node:
 
 .. code-block :: html
 
-  <div data-dojo-type="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}" 
+  <div data-dojo-type="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}"
          anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
          _privateVal="5" anotherValue="more"></div>
 
@@ -411,7 +411,7 @@ Calling instantiate in this way will return to you a list of instances that were
 
   <a href="document.html"
      data-dojo-type="my.custom.type"
-     data-dojo-props="href: 'document.html', 
+     data-dojo-props="href: 'document.html',
        title: 'Lorem ipsum',
        objectVal:{a: 1, b:'c'},
        typedArray:['a','b','c',1,2],

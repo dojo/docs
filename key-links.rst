@@ -12,7 +12,7 @@ Here's a collection of current and useful Dojo demos and tutorials to help you g
 Demos
 =====
 
-* `Dojo Demos <http://demos.dojotoolkit.org/demos/>`_ 
+* `Dojo Demos <http://demos.dojotoolkit.org/demos/>`_
 * `dojo.moj.oe <http://demos.dojotoolkit.org/demos/mojo/>`_, Peter Higgins, SitePen, Dojo Project Lead
 * `Real-time Survey Demo <http://demos.dojotoolkit.org/demos/survey/>`_, Peter Higgins, SitePen, Dojo Project Lead
 * `Dojo Feature Explorer <http://dojocampus.org/explorer/>`_, Shane O'Sullivan, Nikolai Onken, Peter Higgins

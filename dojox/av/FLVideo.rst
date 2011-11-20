@@ -26,11 +26,11 @@ dojo.av.FLVideo is a very full featured class that provides the ability to play 
 
  var myVideo = new dojox.av.FLVideo({initialVolume:.1, mediaUrl:"video/Grog.flv", autoPlay:true, isDebug:false}, "vid");
 
-FLVideo has the expected methods to control it: 
+FLVideo has the expected methods to control it:
 
-* play( newUrl? ), 
-* seek( milliseconds ), 
-* and pause(). 
+* play( newUrl? ),
+* seek( milliseconds ),
+* and pause().
 
 There is also volume() which is used as a getter/setter.
 

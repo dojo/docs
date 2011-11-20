@@ -10,7 +10,7 @@ AJAX and Dojo
 .. contents::
     :depth: 2
 
-Ajax has been a buzzword around for some time now (as far as you could call some time a lot of time ;) ) and is one of the concepts which have changed the development for the web quite drastically. 
+Ajax has been a buzzword around for some time now (as far as you could call some time a lot of time ;) ) and is one of the concepts which have changed the development for the web quite drastically.
 
 Dojo provides a solid set of battle-tested XHR wrapper functions to allow you to build Ajax interactions with confidence, use a unified API, and handle forms with ease. These APIs are built into Dojo Base, so you can use them in any page that includes dojo.js. Read on to learn how easy it is to build powerful Ajax interactions with Dojo.
 
@@ -27,7 +27,7 @@ All `XHR` functions follow the same pattern in the `property-bag` configuration 
 * timeout - a time in MS to wait before giving up the XHR call, and throwing an error to the error callback.
 * sync - a boolean to determine if the XHR call should be synchronous or asynchronous. Setting sync:true will cause the browser to stop the chain of execution until the data is returned. Defaults to ``false``.
 * form - a DOM Node of a ``<form>`` element, or a string ID of a ``<form>`` element, used to collect data to be sent along with the request. The form is passed through :ref:`dojo.formToObject <dojo/formToObject>` and is mixed into the content: attribute of the XHR call
-* content - an object to be sent along with 
+* content - an object to be sent along with
 
 Example usage:
 
@@ -37,9 +37,9 @@ Dojo 1.7 (AMD)
 .. code-block :: javascript
   :linenos:
 
-  require(["dojo/_base/xhr"], function(xhr){      
+  require(["dojo/_base/xhr"], function(xhr){
       // post some data, ignore the response:
-      xhr.post({ 
+      xhr.post({
           form: "someFormId", // read the url: from the action="" of the <form>
           timeout: 3000, // give up after 3 seconds
           content: { part:"one", another:"part" } // creates ?part=one&another=part with GET, Sent as POST data when using xhrPost
@@ -47,12 +47,12 @@ Dojo 1.7 (AMD)
 
       // get some data, convert to JSON
       xhr.get({
-          url:"data.json", 
+          url:"data.json",
           handleAs:"json",
           load: function(data){
               for(var i in data){
                  console.log("key", i, "value", data[i]);
-              }  
+              }
           }
       });
   });
@@ -64,7 +64,7 @@ Dojo < 1.7
   :linenos:
 
   // post some data, ignore the response:
-  dojo.xhrPost({ 
+  dojo.xhrPost({
       form: "someFormId", // read the url: from the action="" of the <form>
       timeout: 3000, // give up after 3 seconds
       content: { part:"one", another:"part" } // creates ?part=one&another=part with GET, Sent as POST data when using xhrPost
@@ -72,12 +72,12 @@ Dojo < 1.7
 
   // get some data, convert to JSON
   dojo.xhrGet({
-      url:"data.json", 
+      url:"data.json",
       handleAs:"json",
       load: function(data){
           for(var i in data){
              console.log("key", i, "value", data[i]);
-          }  
+          }
       }
   });
 
@@ -128,7 +128,7 @@ Dojo < 1.7
 ----------
 
 .. code-block :: javascript
- :linenos: 
+ :linenos:
 
   dojo.xhrPost({
      form:"someForm",
@@ -153,7 +153,7 @@ Dojo < 1.7
       }
   });
 
-Alternately, you can "use plain :ref:`Deferred's <dojo/Deferred>`" to register callbacks. They are slightly more difficult to work with, but the concept is the same.  
+Alternately, you can "use plain :ref:`Deferred's <dojo/Deferred>`" to register callbacks. They are slightly more difficult to work with, but the concept is the same.
 
 ===========
 dojo.xhrGet

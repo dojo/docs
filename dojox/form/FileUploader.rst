@@ -19,7 +19,7 @@ Usage
 CDN Note
 --------
 
-FileUploader does work with the Google and AOL CDNs, but because of cross domain issues, you need to run the SWF locally, and point to its location with dojoConfig.uploaderPath. 
+FileUploader does work with the Google and AOL CDNs, but because of cross domain issues, you need to run the SWF locally, and point to its location with dojoConfig.uploaderPath.
 
 Dojo Version 1.2.x
 ------------------
@@ -38,7 +38,7 @@ This version is a major upgrade from 1.3, makes CSS placement easier and fixes t
 
 http://bugs.dojotoolkit.org/ticket/9615
 
-Another bug found is uploading multiple files more than once causes onComplete to fire on every file. It should only fire after all files have uploaded. The fix for this is to use the SWF from the trunk (1.4) in the 1.3.2 release. 
+Another bug found is uploading multiple files more than once causes onComplete to fire on every file. It should only fire after all files have uploaded. The fix for this is to use the SWF from the trunk (1.4) in the 1.3.2 release.
 
 http://bugs.dojotoolkit.org/ticket/9646
 
@@ -63,13 +63,13 @@ IMPORTANT NOTES
 
 There is a serious limitation in the Flash version for Firefox and Safari in TabContainers. When a node in those browsers is hidden (or essentially repainted which can mean other style applications) the SWF is reloaded. This means that if you browse for a file but don't upload upload it, change the tab and return, the files will no longer be in the FileUploader. This problem can be seen when tabbing between Tab 1 and Tab 2 and observing the console logs and you will see the SWF reinitializes. This problem does not exist in Internet Explorer. The HTML version of the Uploader should also work fine.
 
-See form/tests/test_FileUploaderTabs.html for the workaround. It floats a div above the tab container and moves it on and off screen as the tab is toggled. 
+See form/tests/test_FileUploaderTabs.html for the workaround. It floats a div above the tab container and moves it on and off screen as the tab is toggled.
 
 While the FileUploader instantiates like a widget, it has limitations due to the fact that it has to manage a Flash plugin. Before it is built, it inspects the DOM and checks style information. Due to this process there needs to be a node to inspect, so dojo 1.4 functionality like:
 
 *var f = new dojox.form.FileUploader(props).placeAt(anything);*
 
-...will not work. There may also be problems with placing it in other widgets unless it displays right away, although as of 1.5 these problems have mostly been worked out.  
+...will not work. There may also be problems with placing it in other widgets unless it displays right away, although as of 1.5 these problems have mostly been worked out.
 
 If you need to manually manage when an initially hidden flash-based file uploader is shown and have it created properly see this ticket: http://bugs.dojotoolkit.org/ticket/10920
 
@@ -102,7 +102,7 @@ Note that if you are moving these files into Dojo 1.2 or less, you will have to 
 FileUploader Functionality 1.3.2 - 1.5
 ======================================
 
-FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. In a majority of cases, you can create your uploader like any other widget. 
+FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. In a majority of cases, you can create your uploader like any other widget.
 
 Setup
 -----
@@ -189,7 +189,7 @@ New Features
 
 Changed in 1.4: deferredUploading is now mandatory to prevent errors in Firefox and Safari. It accepts a number and the idea is you can upload more than one file in parallel, though my tests have shown it always does one at a time anyway. This change makes the upload a little slower, but now it is much more robust and can handle uploads of 500 files or more without crashing the browser.
  
-There are two new tests added to DojoX: *test_FileUpladerCSS.html* and *test_FileUpladerForm.html*. The form test will show how to implement most of the new features. The CSS test will show different methods of styling the Uploader. 
+There are two new tests added to DojoX: *test_FileUpladerCSS.html* and *test_FileUpladerForm.html*. The form test will show how to implement most of the new features. The CSS test will show different methods of styling the Uploader.
 
 http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
 
@@ -200,7 +200,7 @@ Continue with the 1.3 instructions for other information that still applies to i
 Version 1.3
 -----------
 
-Version 1.3 does **NOT** create a button - it transforms an existing button into an uploader. This can be used for toolbar buttons for example. Because of this, it only works programmatically, it does not work in markup. Use the other other DojoX FileInput files for markup solutions. 
+Version 1.3 does **NOT** create a button - it transforms an existing button into an uploader. This can be used for toolbar buttons for example. Because of this, it only works programmatically, it does not work in markup. Use the other other DojoX FileInput files for markup solutions.
 
 FileUploader will detect if the correct version of Flash Player is available, and if so, a transparent SWF is laid over the top of the original (referred to as the 'fake') button. If not available, a traditional fileInput button with opacity set to zero is laid over the fake button.
 
@@ -210,13 +210,13 @@ A basic example follows:
  :linenos:
  
  var uploader = new dojox.form.FileUploader({
-     button:dijit.byId("myFakeButton"), 
-     uploadUrl:uploadUrl, 
+     button:dijit.byId("myFakeButton"),
+     uploadUrl:uploadUrl,
  });
 
 The example has doesn't show *selectMultipleFiles*, but it defaults to true. Setting it to false restricts the user to one file selection. Multiple files are also supported in the HTML version, although only one file can be selected at a time. But after the files are selected, they will all be uploaded at once.
  
-The *uploadUrl* property is the location of the server side script. Note that this URL needs to be relative to the SWF, not to the HTML page, nor to dojo.js. It's recommended that an absolute URL is used if possible. FlashUpload will try to "normalize" relative URLs and point them to the SWF. 
+The *uploadUrl* property is the location of the server side script. Note that this URL needs to be relative to the SWF, not to the HTML page, nor to dojo.js. It's recommended that an absolute URL is used if possible. FlashUpload will try to "normalize" relative URLs and point them to the SWF.
 
 Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods:
 
@@ -230,7 +230,7 @@ Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* m
  });
  dojo.connect(uploader, "onProgress", function(dataArray){
      dojo.forEach(dataArray, function(data){
-         dojo.byId("myTextarea").value += "onProgress: ("+data.percent+"%) "+data.name+" \n";	
+         dojo.byId("myTextarea").value += "onProgress: ("+data.percent+"%) "+data.name+" \n";
      });
  });
  dojo.connect(uploader, "onComplete", function(dataArray){
@@ -241,7 +241,7 @@ Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* m
 
 Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload automatically after the selection.
 
-Note that the "dataArray" param above is always an array, even if selectMultipleFiles is set to false.  
+Note that the "dataArray" param above is always an array, even if selectMultipleFiles is set to false.
 
 Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no arguments or one argument to use as postData. The mouse event will be treated as postData and throw an error. This is fixed in the trunk but exists in 1.32.
 
@@ -272,7 +272,7 @@ The FileUploader has many advanced properties to handle most situations.
      ["All Images", 	"*.jpg;*.jpeg;*.gif;*.png"],
  ];
  var uploader = new dojox.form.FileUploader({
-     button:dijit.byId("myFakeButton"), 
+     button:dijit.byId("myFakeButton"),
      uploadUrl:uploadUrl,
      fileMask:fileMask
  });
@@ -326,14 +326,14 @@ It includes examples two post parameters, api_sig and api_key. The name for the 
 .. code-block :: text
  :linenos:
 
- POST /handler.cfm HTTP/1.1 
+ POST /handler.cfm HTTP/1.1
    Accept: text/*
-   Content-Type: multipart/form-data; 
-   boundary=----------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6 
-   User-Agent: Shockwave Flash 
-   Host: www.example.com 
-   Content-Length: 421 
-   Connection: Keep-Alive 
+   Content-Type: multipart/form-data;
+   boundary=----------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+   User-Agent: Shockwave Flash
+   Host: www.example.com
+   Content-Length: 421
+   Connection: Keep-Alive
    Cache-Control: no-cache
   
    ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
@@ -371,14 +371,14 @@ During an HTML multi-file upload, the files are all uploaded at once, and after 
 
 With a multipart request the POST data is the contents for the first part and the uploaded files is an array (or an object) of each additional part. Refer to your particular server documentation for how to reference the files (PHP is used as an example in the next section).
 
-The return data needs to be formatted very specifically, ad there are different formats for Flash and HTML. See **Server Side Return Data** below. 
+The return data needs to be formatted very specifically, ad there are different formats for Flash and HTML. See **Server Side Return Data** below.
 
 Server Side Code PHP
 --------------------
 
 FlashUploader comes with a working PHP file, *dojox/form/resources/UploadFile.php*, to use as a reference for how your server side code should work. UploadFile.php has two dependencies, *dojo/tests/resources/JSON.php*, which is used for converting the return data to a JSO string, and *dojox/form/resources/cLog.php* which is used to log message to a text file, placed relative to the PHP file.
 
-UploadFile.php is expecting one of three things: 
+UploadFile.php is expecting one of three things:
 
 1) A file or files from Flash
 2) A file from HTML
@@ -386,7 +386,7 @@ UploadFile.php is expecting one of three things:
 
 The PHP file is inspecting the header and looking for the parameters set in FileUploader: *htmlFieldName* or *flashFieldName*. Whatever you set these parameters to, they must match on the server. The current code uses "flashUploadFiles" as the default Flash field name. (The default field name in Flash is "Filedata", which is over written to show that you can do custom field names). Therefore the server must be made aware of this parameter, as it is set on line 69: *$fieldName = "flashUploadFiles";*
 
-The field name for the HTML uploader works much the same way. The only difference is if you do multi-file upload with HTML, this essentially continues to add fileInputs to the form, and in doing so, appends numbers to the fileInput field names, starting with '0'. That's why one file fieldname will look like "myFieldName" but two files will look like [ "myFieldName0", "myFieldName1" ] to the server side code. 
+The field name for the HTML uploader works much the same way. The only difference is if you do multi-file upload with HTML, this essentially continues to add fileInputs to the form, and in doing so, appends numbers to the fileInput field names, starting with '0'. That's why one file fieldname will look like "myFieldName" but two files will look like [ "myFieldName0", "myFieldName1" ] to the server side code.
 
 Server Side Return Data
 -----------------------
@@ -486,7 +486,7 @@ The original poster responds:
 
     This is not only a https issue. It's also on simple http connections. Ist a bug of adobe flash player in conjunction with the web application firewall (modsecurity). If i understand that correctly the flash player sends one "\\n\\r" instead but the http protocol requires "\\n\\r\\n\\r". For modsecutiry this is a rule break so it delivers 403 rejected.
 
-    And yes if you disable modsecurity sql injections can be done on all post vars that are later processed by the database an not escaped within the application. So another safer way - until adobe fixed this problem and all flash players are updated - is the following but may not work on all servers: 
+    And yes if you disable modsecurity sql injections can be done on all post vars that are later processed by the database an not escaped within the application. So another safer way - until adobe fixed this problem and all flash players are updated - is the following but may not work on all servers:
 
 .. code-block :: text
  :linenos:
@@ -497,8 +497,8 @@ The original poster responds:
  
 (Thanks to minobun for all the great info on this thorny issue)
  
-The other, less desirable solutions, are: 
- - Have an HTTP server to handle the uploads and use a crossdomain.xml file to handle the different protocol. 
+The other, less desirable solutions, are:
+ - Have an HTTP server to handle the uploads and use a crossdomain.xml file to handle the different protocol.
  - You may need to resort to force the HTML uploader.
  
 More references to this issue:

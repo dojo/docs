@@ -9,7 +9,7 @@ dojox.gfx.utils.toSvg
 .. contents::
   :depth: 2
 
-The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser. This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service. For example, this can be very useful for converting a DataChart to a JPEG, PNG, or even PDF via Apache Batik.   
+The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser. This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service. For example, this can be very useful for converting a DataChart to a JPEG, PNG, or even PDF via Apache Batik.
 
 
 =====
@@ -18,7 +18,7 @@ Usage
 
 This function is generally easy to use. At its most basic, you need to do the following:
 
-*dojo.require("dojox.gfx.utils");* to load it.  
+*dojo.require("dojox.gfx.utils");* to load it.
 
 The function signature is:
    var deferred = *dojox.gfx.utils.toJson(/*dojox.gfx.Surface*/ surface);
@@ -73,7 +73,7 @@ Programmatic example
          //Create our surface.
          var node = dojo.byId("gfxObject");
          var drawing = dojox.gfx.createSurface(node, 200, 200);
-         drawing.createRect({ 
+         drawing.createRect({
            width:  100,
            height: 100,
            x: 50,
@@ -83,7 +83,7 @@ Programmatic example
          dojo.connect(dijit.byId("button"), "onClick", function() {
             var def = dojox.gfx.utils.toSvg(drawing);
             def.addCallback(function(svg){
-              dojo.byId("svg").innerHTML = svg;  
+              dojo.byId("svg").innerHTML = svg;
             });
             def.addErrback(function(err){
               alert(err);
@@ -99,7 +99,7 @@ Programmatic example
     <div id="gfxObject"></div>
     <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to SVG!</div>
     <br>
-    <br>  
+    <br>
     <b>SVGSerialization</b>
     <xmp id="svg">
     </xmp>

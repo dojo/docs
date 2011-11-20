@@ -34,7 +34,7 @@ HTML markup usage sample
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojox.grid.enhanced.plugins.Menu");
-        dojo.require("dojo.data.ItemFileWriteStore");        
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
 	  /*set up data store*/
@@ -42,7 +42,7 @@ HTML markup usage sample
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -64,7 +64,7 @@ HTML markup usage sample
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px',
               plugins: {menus:{headerMenu:"headerMenu", rowMenu:"rowMenu", cellMenu:"cellMenu", selectedRegionMenu:"selectedRegionMenu"}}},
@@ -104,7 +104,7 @@ HTML markup usage sample
 			<div data-dojo-type="dijit.MenuItem">Action 2 for Selected Region</div>
 			<div data-dojo-type="dijit.MenuItem">Action 3 for Selected Region</div>
 			<div data-dojo-type="dijit.MenuItem">Action 4 for Selected Region</div>
-		</div>	
+		</div>
 	</div>
 
 
@@ -135,7 +135,7 @@ Javascript usage sample
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojox.grid.enhanced.plugins.Menu");
-        dojo.require("dojo.data.ItemFileWriteStore");        
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
 	  /*set up data store*/
@@ -143,7 +143,7 @@ Javascript usage sample
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -197,7 +197,7 @@ Javascript usage sample
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px',
               plugins : {menus: menusObject}},
@@ -305,7 +305,7 @@ Tips
 ----
 * How to get selected rows, columns or even cells when the menu is popped up?
 
-1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by: 
+1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by:
 
 .. code-block :: javascript
   :linenos:

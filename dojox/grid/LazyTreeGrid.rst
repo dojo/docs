@@ -30,7 +30,7 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
     <script type="text/javascript">
         dojo.require("dojox.grid.LazyTreeGrid");
         dojo.require("dijit.tree.ForestStoreModel");
-        dojo.require("dojo.data.ItemFileWriteStore");        
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
 	  /* set up data store */
@@ -38,13 +38,13 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
 	  label: 'name',
 	  items: [
 	    { name:'Africa', type:'continent', children:[
-	    { name:'Egypt', type:'country' }, 
+	    { name:'Egypt', type:'country' },
 	    { name:'Kenya', type:'country', children:[
 		{ name:'Nairobi', type:'city', adults: 70400, popnum: 2940911 },
 		{ name:'Mombasa', type:'city', adults: 294091, popnum: 707400 } ]
 	    },
 	    { name:'Sudan', type:'country', children:
-		{ name:'Khartoum', type:'city', adults: 480293, popnum: 1200394 } 
+		{ name:'Khartoum', type:'city', adults: 480293, popnum: 1200394 }
 	    } ]
 	    },
 	    { name:'Asia', type:'continent', children:[
@@ -92,7 +92,7 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
           /* create a new grid: */
           var grid = new dojox.grid.LazyTreeGrid({
               id: 'grid',
-              treeModel: model,              
+              treeModel: model,
               structure: layout,
               rowSelector: '20px'
 	  }, document.createElement('div'));
@@ -231,30 +231,30 @@ Parameter                             Type                                 Defau
 rowsPerPage                           Integer                              25                                        Number of rows to render at a time
 autoWidth                             Boolean                              false                                     If autoWidth is true, grid width is automatically set to fit the data
 autoHeight                            Boolean/Integer                      ""                                        Boolean: If autoHeight is true, grid height is automatically set to fit the data.
-                                                                                                                     Integer: The height will be set to show that many rows as specified; but if there are fewer 
+                                                                                                                     Integer: The height will be set to show that many rows as specified; but if there are fewer
                                                                                                                      rows than that specified number, the grid height will be automatically set to fit the data.
 defaultHeight                         String                               "15em"                                    Default height of the grid, measured in any valid css unit.
 height	                              String                               ""                                        Explicit height of the grid, measured in any valid css unit. This will be populated
                                                                                                                      (and overridden) if the height: css attribute exists on the source node
-selectionMode                         String                               "extended"                                Set the selection mode of grid's Selection (select row by click row or rowSelector). Value 
+selectionMode                         String                               "extended"                                Set the selection mode of grid's Selection (select row by click row or rowSelector). Value
                                                                                                                      must be 'single', 'multiple' or 'extended'. (assume there is no indirect selection being used)
-rowSelector                           String/Boolean                       ""                                        If set to true, will add a row selector view to this grid. If set to a CSS width, will add a 
+rowSelector                           String/Boolean                       ""                                        If set to true, will add a row selector view to this grid. If set to a CSS width, will add a
                                                                                                                      row selector of that width to this grid
 headerMenu                            dijit.Menu                           null                                      If set to a dijit.Menu, will use this as a context menu for the grid headers
 selectable                            Boolean                              false                                     Set to true if you want the user to be able to select the text within the grid
 structure                             dojox.grid.__ViewDef                 null                                      Layout definition
-query                                 Object                               null                                      The query may be optional in some data store implementations. Each different data store 
-                                                                                                                     implementation may have its own notion of what a query should look like. In general for 
-                                                                                                                     query objects that accept strings as attribute value matches, the store should also support 
-                                                                                                                     basic filtering capability, such as * (match any character) and ? (match single character). 
-                                                                                                                     An example query that is a query object would be like: { attrFoo: "value*"}. Which generally 
-                                                                                                                     means match all items where they have an attribute named attrFoo, with a value that starts 
-                                                                                                                     with 'value'. It is more like a simple filter because that only be used to compare items' 
+query                                 Object                               null                                      The query may be optional in some data store implementations. Each different data store
+                                                                                                                     implementation may have its own notion of what a query should look like. In general for
+                                                                                                                     query objects that accept strings as attribute value matches, the store should also support
+                                                                                                                     basic filtering capability, such as * (match any character) and ? (match single character).
+                                                                                                                     An example query that is a query object would be like: { attrFoo: "value*"}. Which generally
+                                                                                                                     means match all items where they have an attribute named attrFoo, with a value that starts
+                                                                                                                     with 'value'. It is more like a simple filter because that only be used to compare items'
                                                                                                                      attribute and query object attribute are equal or not.
-treeModel                             dijit.tree.ForestStoreModel          null                                      This parameter is used instead of using aggregates in dojox.grid.TreeGrid. Its mainly role 
+treeModel                             dijit.tree.ForestStoreModel          null                                      This parameter is used instead of using aggregates in dojox.grid.TreeGrid. Its mainly role
                                       /dojox.grid.LazyTreeGridStoreModel                                             in Lazy-loading-TreeGrid is to indicate the children attribute name of data item.
-colSpans                              Object                               null                                      A Json object that flexibly defines detail column spans for all levels. This is a new 
-                                                                                                                     parameter in Lazy-loading-TreeGrid                                      
+colSpans                              Object                               null                                      A Json object that flexibly defines detail column spans for all levels. This is a new
+                                                                                                                     parameter in Lazy-loading-TreeGrid
 ====================================  ===================================  ========================================  ============================================================================================
 
 TreeModel
@@ -264,7 +264,7 @@ LazyTreeGrid must have a TreeModel, the TreeModel could be the dijit.tree.Forest
 
 The dojox.grid.LazyTreeGridStoreModel is designed for lazy loading children items, it will call store.fetch() with a query object {parentId: value} and start index, count number when LazyTreeGrid ask for sub-rows and these sub-items are not be loaded. There is a attribute called "serverStore" of LazyTreeGridStoreModel, this attribute indicate whether or not the data with flatted data structure is stored in server side (the data structure SHOULD BE nested when data is stored in client side since lazy loading would not be needed in that case), default is false.
 
-When using a dijit.tree.ForestStoreModel, or using dojox.grid.LazyTreeGridStoreModel with setting parameter "serverStore" to false, the children items won't be lazy loaded but all of the root rows and sub rows would still be lazy rendered. This is more applicable to the situation small data or data stored on client side. 
+When using a dijit.tree.ForestStoreModel, or using dojox.grid.LazyTreeGridStoreModel with setting parameter "serverStore" to false, the children items won't be lazy loaded but all of the root rows and sub rows would still be lazy rendered. This is more applicable to the situation small data or data stored on client side.
 
 An example LazyTreeGridStoreModel definition would look like this:
 
@@ -278,7 +278,7 @@ An example LazyTreeGridStoreModel definition would look like this:
   });
   
   // declarative
-  <span data-dojo-type="dojox.grid.LazyTreeGridStoreModel" 
+  <span data-dojo-type="dojox.grid.LazyTreeGridStoreModel"
     data-dojo-props="store:queryReadStore, serverStore:true" >
   </span>
   
@@ -354,7 +354,7 @@ expand     itemId: string?                        N/A                    Functio
                                                                          with the given item id.
 collapse   itemId: string?                        N/A                    Function to handle collapsing the row which item maching
                                                                          with the given item id.
-refresh    keepState: boolean                     N/A                    Function to handle refresh the grid content with or 
+refresh    keepState: boolean                     N/A                    Function to handle refresh the grid content with or
                                                                          without keep the folding state.
 =========  =====================================  =====================  =======================================================
 

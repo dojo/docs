@@ -46,7 +46,7 @@ Dojo < 1.7
 .. code-block :: javascript
  :linenos:
 
-   dojo.require('dojo.Stateful'); 
+   dojo.require('dojo.Stateful');
 
    // create a new Stateful object:
    var myObj = new dojo.Stateful();
@@ -85,7 +85,7 @@ Get a property on a Stateful instance. ***new in 1.5***
 
 Get a named property on a Stateful object. The property may
 potentially be retrieved via a getter method in subclasses. In the base class
-this just retrieves the object's property. 
+this just retrieves the object's property.
 
 .. code-block :: javascript
  :linenos:
@@ -116,7 +116,7 @@ set
 
 Set a property on a Stateful instance. ***new in 1.5***
 
-Sets named properties on a stateful object and notifies any watchers of 
+Sets named properties on a stateful object and notifies any watchers of
 the property. A programmatic setter may be defined in subclasses.
 
 .. code-block :: javascript
@@ -155,7 +155,7 @@ set() may also be called with a hash of name/value pairs, ex:
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
        var myObj = new Stateful();
-       // The following is equivalent to calling 
+       // The following is equivalent to calling
        // set(foo, "Howdy") and set(bar, 3):
        myObj.set({
            foo: "Howdy",
@@ -167,7 +167,7 @@ set() may also be called with a hash of name/value pairs, ex:
 
    // create a new Stateful object:
    var myObj = new dojo.Stateful();
-   // The following is equivalent to calling 
+   // The following is equivalent to calling
    // set(foo, "Howdy") and set(bar, 3):
    myObj.set({
        foo: "Howdy",

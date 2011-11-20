@@ -35,7 +35,7 @@ Available Methods
 
 * :ref:`dojox.mvc.Output.set <dojox/mvc/Output>`
 
-Override and refresh output on value change. 
+Override and refresh output on value change.
 
 
 

@@ -95,15 +95,15 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
-    var arrSalary = [{surname: "Washington", name: "Paul", salary: 200}, 
-               {surname: "Gordon", name: "Amie", salary: 350}, 
-               {surname: "Meyer", name: "Sofie", salary: 100}, 
-               {surname: "Jaysons", name: "Josh", salary: 2500}, 
-               {surname: "Washington", name: "George", salary: 10}, 
-               {surname: "Doormat", name: "Amber", salary: 320}, 
-               {surname: "Smith", name: "Susan", salary: 3200}, 
-               {surname: "Hill", name: "Strawberry", salary: 290}, 
-               {surname: "Washington", name: "Dan", salary: 200}, 
+    var arrSalary = [{surname: "Washington", name: "Paul", salary: 200},
+               {surname: "Gordon", name: "Amie", salary: 350},
+               {surname: "Meyer", name: "Sofie", salary: 100},
+               {surname: "Jaysons", name: "Josh", salary: 2500},
+               {surname: "Washington", name: "George", salary: 10},
+               {surname: "Doormat", name: "Amber", salary: 320},
+               {surname: "Smith", name: "Susan", salary: 3200},
+               {surname: "Hill", name: "Strawberry", salary: 290},
+               {surname: "Washington", name: "Dan", salary: 200},
                {surname: "Dojo", name: "Master", salary: 205}];
 
     function raiseSalary(){

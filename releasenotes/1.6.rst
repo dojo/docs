@@ -28,11 +28,11 @@ All modules in dojo and dijit have been converted to comply with the `CommonJS <
 a *preparatory* step on the way to full AMD support in version 1.7 and beyond. Unless you are an early adopter of
 using dojo with an AMD loader, these changes should be transparent to you. For version 1.6:
 
-  * ``dojo.provide`` and ``dojo.require`` have been replaced by AMD ``define`` in all dojo and dijit modules; dojox 
+  * ``dojo.provide`` and ``dojo.require`` have been replaced by AMD ``define`` in all dojo and dijit modules; dojox
     conversions are variable.
   * a fairly complete simulation of the AMD ``define`` function has been added to the synchronous loader (this allows the
     converted dojo and dijit modules to work); otherwise, the synchronous loader remains unchanged and fully
-    supports ``dojo.provide`` and ``dojo.require``. 
+    supports ``dojo.provide`` and ``dojo.require``.
   * the dojo build system transforms the converted modules back to use ``dojo.provide`` and ``dojo.require``.
 
 Asynchronous module loading is considered experimental and is not officially supported in version 1.6. For early adopters,

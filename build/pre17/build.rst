@@ -18,7 +18,7 @@ The Dojo build system creates efficient versions of Dojo and application modules
 Introduction
 ============
 
-Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each ":ref:`dojo.require <dojo/require>`" statement results in a synchronous HTTP call to the server to retrieve a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but the module needs to be loaded before it can be used).  
+Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each ":ref:`dojo.require <dojo/require>`" statement results in a synchronous HTTP call to the server to retrieve a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but the module needs to be loaded before it can be used).
 
 Because browsers wait for each synchronous web call to finish before allowing anything else to happen, this can substantially impair performance. Large apps that have many dependencies can take a very long time to load when a build isn't used, or flash and redraw several times.
 
@@ -104,7 +104,7 @@ The Dojo build system compresses each layer with Shrinksafe, which provides a ve
 
 Minificatation takes your JavaScript code and makes it smaller by, for example:
 
-   * Removing all extra spaces and blank lines   
+   * Removing all extra spaces and blank lines
    * Removing comments
    * Making internal variable names (inside of functions, which are not visible to the caller of a function) shorter
 
@@ -117,7 +117,7 @@ What does the build system do
 The primary purpose of the build system is to create the layer files.  Overall, the build system does four things to enhance performance:
 
    1. First, it groups together modules into ''layers''
-   2. Second, it ''interns'' external non-JavaScript files, such as widget templates which are kept in a separate HTML file during development. Interning makes the file contents a string in the resulting script. 
+   2. Second, it ''interns'' external non-JavaScript files, such as widget templates which are kept in a separate HTML file during development. Interning makes the file contents a string in the resulting script.
    3. Third, it minifies the layer with ShrinkSafe. ShrinkSafe removes unneeded whitepsace and comments, and compacts variable names down to smaller ones. This file downloads and parses faster than the original.
    4. Finally, it copies all non-layered scripts to the appropriate places. While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer. If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
 
@@ -129,7 +129,7 @@ To use the build system, you must have the following:
 
     1.  **A *source code version* of Dojo.**
 
-        You can download one from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.  
+        You can download one from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.
 
         Choose any release of Dojo (usually, you will choose the most recent), and be sure to select the source code build, which has `-src` in its file name:
 
@@ -137,7 +137,7 @@ To use the build system, you must have the following:
 
         You can also obtain a source build of dojo from the `Subversion source code tree <http://svn.dojotoolkit.org/src/>`_.
 
-    2.  **A Java runtime envionment, version 1.4.2 or higher** on the machine you will use to create your custom build.  
+    2.  **A Java runtime envionment, version 1.4.2 or higher** on the machine you will use to create your custom build.
 
         This is necessary because the builder, although written in JavaScript, requires the Rhino implementation of JavaScript to run it, and Rhino is built with Java.
 
@@ -169,9 +169,9 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
     //
 	// This profile is used just to illustrate the layout of a layered build.
 	// All layers have an implicit dependency on dojo.js.
-    //	
+    //
     // Normally you should not specify a layer object for dojo.js, as it will
-    // be built by default with the right options. Custom dojo.js files are 
+    // be built by default with the right options. Custom dojo.js files are
     // possible, but not recommended for most apps.
 	
 	dependencies = {
@@ -254,7 +254,7 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
 	//		[ "acme", "/path/to/acme", "/path/to/acme/copyright.txt"]
 	//	]
 	//
-    // NOTE: 
+    // NOTE:
     //    If no copyright is specified in this optimize case, then by default,
     //    the Dojo copyright will be used.
 
@@ -274,19 +274,19 @@ A typical build command looks something like this:
 
 This illustrates the most important command line parameters to the build system:
 
-``profile`` 
-   The profile to be used for the build. ``.profile.js`` is appended automatically. The default directory is the ``<dojo root>/util/buildscripts/profiles`` directory within the Dojo source distribution, so if your build task specifies ``profile=thinger``, the system will search for ``<dojo root>/util/build/scripts/profiles/thinger.profile.js``.  However, most often you will want to reference a profile not within the source tree. To do this, you can specify a ``profileFile`` parameter which specifies a path from the current working directory (note, ``.profile.js`` is still appended to this file name!). 
+``profile``
+   The profile to be used for the build. ``.profile.js`` is appended automatically. The default directory is the ``<dojo root>/util/buildscripts/profiles`` directory within the Dojo source distribution, so if your build task specifies ``profile=thinger``, the system will search for ``<dojo root>/util/build/scripts/profiles/thinger.profile.js``.  However, most often you will want to reference a profile not within the source tree. To do this, you can specify a ``profileFile`` parameter which specifies a path from the current working directory (note, ``.profile.js`` is still appended to this file name!).
 
-``action`` 
+``action``
    The list of actions to perform. The most common one is ``release`` which does the default build magic.  The ``clean`` option removes previous build artifacts.
 
-``htmlFiles`` 
+``htmlFiles``
    A list of html files to use to auto-generate the profile and layers. The files should be comma separated.
 
-``htmlDir`` 
+``htmlDir``
    A directory of html files to use to auto-generate the profile and layers.
 
-``version`` 
+``version``
    Optional. The version number to "bake in" to the build. When you interrogate ``dojo.version``, this is the number that will be reported.
    
 ``releaseName``
@@ -406,7 +406,7 @@ A simple default `release build <build/scenario-release>`_ that creates the basi
 Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo :ref:`base build <build/scenario-base>` which only builds the Dojo core into a layer, without Dijit and the other name spaces. 
+A small Dojo :ref:`base build <build/scenario-base>` which only builds the Dojo core into a layer, without Dijit and the other name spaces.
 
 Basic Cross Domain Build
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -421,7 +421,7 @@ Same Domain
 
 A same domain build creating a layer including both Dojo and custom namespace components: :ref:`Custom module build <build/customBase>`
 
-Cross Domain 
+Cross Domain
 ~~~~~~~~~~~~
 
 A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  :ref:`Cross domain custom name space build <build/xDomain>`

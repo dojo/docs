@@ -10,7 +10,7 @@ dojox.editor.plugins.StatusBar
 .. contents::
     :depth: 2
 
-Have you ever wanted a status bar on the editor to display things like 'saving' and so on?  Have you ever wanted a resize handle on the editor that lets you resize it?  If so, then this plugin if for you. 
+Have you ever wanted a status bar on the editor to display things like 'saving' and so on?  Have you ever wanted a resize handle on the editor that lets you resize it?  If so, then this plugin if for you.
 
 ========
 Features
@@ -111,7 +111,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

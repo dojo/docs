@@ -35,7 +35,7 @@ Dependencies Object
 
 The top level object in the profile should be of the general format:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   dependencies: {
      layers: [
@@ -63,7 +63,7 @@ Each member of the top level ``layers`` array is an object similar to (in many b
 
 .. code-block :: javascript
 
-  { 
+  {
     name: "string.discard",
     resourceName: "string.discard",
     discard: false,
@@ -78,24 +78,24 @@ Each member of the top level ``layers`` array is an object similar to (in many b
 The build system will build one layer file for each member object within the top level ``layers`` array.  It interprets the members of each individual layer object as follows:
 
 name
-   The path to and file name of the file that will be built for the layer.  
+   The path to and file name of the file that will be built for the layer.
 
-   This path is actually relative to ``/util``.  Therefore, to specify a layer file that will be created  in the dijit directory, you would specify ``../dijit/layerfilename.js``. 
+   This path is actually relative to ``/util``.  Therefore, to specify a layer file that will be created  in the dijit directory, you would specify ``../dijit/layerfilename.js``.
 
 resourceName
-   Optional, String.  The name of the resource module to be provided by the layer.  If this is specified, the layer file will contain a ``dojo.provide`` statement specifying the resourceName.  
+   Optional, String.  The name of the resource module to be provided by the layer.  If this is specified, the layer file will contain a ``dojo.provide`` statement specifying the resourceName.
 
-   Note  
+   Note
      If you are using localization, your resourceName must have an entry in the ``dependencies.prefixes`` list, in order for the localization system to find your resources.
 
 discard
-   Optional.  Normally, this property is omitted.  If set to true, the layer file will be discarded after it is assembled.  You would use this in order to exclude the same resources from being built into another, subsequent layer (via the ``layerDependencies`` list for the subsequent layer) without actually creating an additional layer file in your as-built directory.  
+   Optional.  Normally, this property is omitted.  If set to true, the layer file will be discarded after it is assembled.  You would use this in order to exclude the same resources from being built into another, subsequent layer (via the ``layerDependencies`` list for the subsequent layer) without actually creating an additional layer file in your as-built directory.
 
 copyrightFile
    Optional.  Filename of a simple text file that will be prepended to build layer files.  If omitted, the default Dojo copyright notice will be used instead.
 
 dependencies
-   Optional, array of string.  A list of Dojo resources that this this layer relies on.  Normally, they are to be included in the layer.  The builder will locate and include each of the resources listed in the ``dependencies`` array, then locate and include each resource referenced within those resources with a ``dojo.require`` statement, and so on recursively until all modules required to actually implement all of the layer dependencies are built into the layer. 
+   Optional, array of string.  A list of Dojo resources that this this layer relies on.  Normally, they are to be included in the layer.  The builder will locate and include each of the resources listed in the ``dependencies`` array, then locate and include each resource referenced within those resources with a ``dojo.require`` statement, and so on recursively until all modules required to actually implement all of the layer dependencies are built into the layer.
 
    No module will be included in the layer more than once, even if it is referenced at multiple locations within the web of resources the layer uses.
  
@@ -107,7 +107,7 @@ dependencies
 
    Advanced notes
       * When the builder parses for dependencies in your source files, it is looking for the standard dojo.require('module-name') syntax via regular expression.  If you use the syntax dojo['require'] (or any other legal JavaScript construct), the builder will not recognize the dependency and will not include that resource.
-      * The advanced :ref:`keepRequires <build/keepRequires>` option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
+      * The advanced :ref:`keepRequires <build/keepRequires>` option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.
      
 layerDependencies
    Specifies other layers which are *prerequisites* for this layer; resources in the prerequisite layers are not duplicated in the current layer being built.  That is, if the builder locates a ``dojo.require`` statement in a source file, but that resource has already been placed in one of the layers specified as one of the layer dependencies, that resource will not be included in the current layer.
@@ -118,7 +118,7 @@ layerDependencies
       Layer dependency should be specified based on the prerequisite layer's name property in the profile.  this is typically something like ``'../app/layer.js'``
 
 keepRequires
-   Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
+   Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.
 
    See the :ref:`keepRequires detailed description <build/keepRequires>`.
 

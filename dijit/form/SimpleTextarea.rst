@@ -57,7 +57,7 @@ Here we'll create a SimpleTextarea widget declaratively.  In this instance, the 
 
   .. cv:: html
 
-    <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50" style="width:auto;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
+    <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50" style="width:auto;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
 
 
 =============

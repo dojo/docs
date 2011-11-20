@@ -8,7 +8,7 @@ dojox.widget.DialogSimple
 
 This is an incredibly simple widget providing a stock :ref:`dijit.Dialog <dijit/Dialog>` with features from :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` mixed in, such as executeScripts.
 
-This dialog will look identical to a plain dijit.Dialog, though will optionally execute script contents and so on. No additional functionality beyond mixing the two widgets is provide. This simple dialog extension acts as the base class for the advanced :ref:`dojox.widget.Dialog <dojox/widget/Dialog>` 
+This dialog will look identical to a plain dijit.Dialog, though will optionally execute script contents and so on. No additional functionality beyond mixing the two widgets is provide. This simple dialog extension acts as the base class for the advanced :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
 Usage:
 ======
@@ -20,7 +20,7 @@ No additional CSS is required. Remember to load the stock themeName.css file. Is
   dojo.require("dojox.widget.DialogSimple");
   dojo.ready(function(){
        var dlg = new dojox.widget.DialogSimple({ title:"Bar", executeScripts:true, href:"somefilewithscripts.html" });
-       dlg.startup(); 
+       dlg.startup();
        setTimeout(function(){
            dlg.show();
        }, 2000);

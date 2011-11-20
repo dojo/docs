@@ -11,7 +11,7 @@ dojox.io.xhrMultiPart
 .. contents::
    :depth: 2
 
-dojox.io.xhrMultiPart constructs multi-part mime XHR requests. 
+dojox.io.xhrMultiPart constructs multi-part mime XHR requests.
 
 
 ============

@@ -17,7 +17,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. cv:: html
 
-    <span data-dojo-type="dojox.data.CsvStore" 
+    <span data-dojo-type="dojox.data.CsvStore"
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
         // data-dojo-id="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
@@ -42,7 +42,7 @@ The Grid offers a filter() method, to filter data from the current query (client
             </tr>
             <tr>
                 <th colspan="2">Producer</th>
-            </tr> 
+            </tr>
         </thead>
     </table>
 

@@ -3,9 +3,9 @@
 Thank you!
 ----------
 
-This page is in place to personally thank each and every document contributor. It is a huge effort, and would never succeed with the time donated by the following individuals. 
+This page is in place to personally thank each and every document contributor. It is a huge effort, and would never succeed with the time donated by the following individuals.
 
-A big "thank you" goes to 
+A big "thank you" goes to
 
 * Andrea Chiumenti,
 * Chris Barber,
@@ -22,10 +22,10 @@ A big "thank you" goes to
 * Robertus Harmawan Johansyah,
 * Olle Jonsson,
 * Jared Jurkiewicz,
-* Bill Keese, 
+* Bill Keese,
 * Kitson P. Kelly,
 * Lesley Kelly,
-* Tobias Klipstein, 
+* Tobias Klipstein,
 * kolban,
 * Wolfram Kriesing,
 * Eugene Lazutkin,
@@ -36,19 +36,19 @@ A big "thank you" goes to
 * Chris Mitchell,
 * neonstalwart,
 * Cyan Ogilvie,
-* Nikolai Onken, 
+* Nikolai Onken,
 * Shane O'Sullivan,
-* Rom Pereira, 
+* Rom Pereira,
 * Marcus Reimann,
-* Craig Riecke, 
-* Will Riley, 
+* Craig Riecke,
+* Will Riley,
 * Alex Russell,
 * Julie Santilli,
 * Sudheera Satyanarayana,
 * Benjamin Schell,
 * David Schwarz,
-* Dylan Schiemann, 
-* Tom Trenka, 
+* Dylan Schiemann,
+* Tom Trenka,
 * Josh Trutwin,
 * Alexander Whillas,
 * Dean Williams,
@@ -57,4 +57,4 @@ A big "thank you" goes to
 
 for their great engagement to improve the documentation of our unmatched Dojo Toolkit!
 
-As this expands, more information will be available about each contributor, but for now it is just a list. 
+As this expands, more information will be available about each contributor, but for now it is just a list.

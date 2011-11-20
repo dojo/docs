@@ -142,10 +142,10 @@ Navigate to the prior widget in the tab order.    Shift+Tab
 Open the widget.                                  Enter or spacebar
 ==============================================    =================================================
 
-Note: The Esc key is ignored. 
+Note: The Esc key is ignored.
 
 
-TextBox with autoSave 
+TextBox with autoSave
 ~~~~~~~~~~~~~~~~~~~~~
 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -157,11 +157,11 @@ TextBox with autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the TextBox, saving changes..           | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the TextBox, discarding changes.        | Esc          | Cancels the edit, discarding any changes.                   |   
-+-----------------------------------------------+--------------+-------------------------------------------------------------+  
+| Close the TextBox, discarding changes.        | Esc          | Cancels the edit, discarding any changes.                   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
 
 
-Textarea with autoSave 
+Textarea with autoSave
 ~~~~~~~~~~~~~~~~~~~~~~
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
@@ -175,8 +175,8 @@ Textarea with autoSave
 |                                               |              | TextBoxes to close the textarea. The user would have to     |
 |                                               |              | use something like Tab and Shift + Tab                      |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the Textarea, discarding changes.       | Esc          | Cancels the edit, discarding any changes.                   | 
-+-----------------------------------------------+--------------+-------------------------------------------------------------+   
+| Close the Textarea, discarding changes.       | Esc          | Cancels the edit, discarding any changes.                   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
 
                                                                
 TextBox or TextArea without autoSave
@@ -187,7 +187,7 @@ TextBox or TextArea without autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the Save or Cancel button.	| Tab (twice   | Focus changes to the Save button if the data has been       |
 |                                               | for TextArea | changed, otherwise it moves to the Cancel button.           |
-|                                               | in Firefox 2)|                                                             |         
+|                                               | in Firefox 2)|                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    | The TextBox/TextArea remains open.                          |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -197,7 +197,7 @@ TextBox or TextArea without autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the Textbox/TextArea, discarding changes| Tab to cancel| Keyboard focus is on the closed InlineEditBox.              |
 |                                               | button and   |                                                             |
-|                                               | press Enter  |                                                             |    
+|                                               | press Enter  |                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 
 Notes:
@@ -213,4 +213,4 @@ On Firefox 2, the user must press the Tab key twice with focus in an textarea be
 Screen Reader
 ~~~~~~~~~~~~~
 
-The InlineEditBox is implemented as a button. Since these are intended to be used "in-line" within text there is often no label element associated with the underlying control. For this reason, developers are encouraged to add a title attribute to InlineEditBoxes. The Window-Eyes screen reader will speak the title as part of the button description. JAWS has an option to speak different attributes on an button. A JAWS user may need to use the insert-v command to modify the behavior to speak the button title when working with Dojo InlineEditBoxes.  
+The InlineEditBox is implemented as a button. Since these are intended to be used "in-line" within text there is often no label element associated with the underlying control. For this reason, developers are encouraged to add a title attribute to InlineEditBoxes. The Window-Eyes screen reader will speak the title as part of the button description. JAWS has an option to speak different attributes on an button. A JAWS user may need to use the insert-v command to modify the behavior to speak the button title when working with Dojo InlineEditBoxes.

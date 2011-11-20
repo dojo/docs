@@ -70,7 +70,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div data-dojo-type="dijit.Editor" 
+  <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'pastefromword', width: "200px", height: "200px"}]">
   </div>
 
@@ -123,7 +123,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

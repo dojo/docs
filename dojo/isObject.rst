@@ -29,7 +29,7 @@ Use this to test if a variable is an Object.
     lang.isObject(foo);
   });
   // Dojo < 1.7
-  dojo.isObject(foo) 
+  dojo.isObject(foo)
 
 Returns true if it is a JavaScript object (or an Array, a Function or null).
 
@@ -45,7 +45,7 @@ Returns true if it is a JavaScript object (or an Array, a Function or null).
   });
   // Dojo < 1.7
   // Check, if variable "foo" is an object:
-  if(dojo.isObject(foo)){ 
+  if(dojo.isObject(foo)){
       // do something...
   }
 
@@ -81,7 +81,7 @@ Test against isObject()
             // Is t an Object?
             if (dojo.isObject(t)) {
                 // dojooo: t is an object!
-                dojo.attr(resultDiv, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is an object.<br />Try another button.");
 
                 // Change the backgroundColor:
@@ -91,8 +91,8 @@ Test against isObject()
                 });
             } else {
                 // no chance, this can't be an array:
-                dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be an object with such a value " 
+                dojo.attr(resultDiv, "innerHTML",
+                    "No chance: 't' can't be an object with such a value "
                      + "('t' seems to be a " + typeof t + ").<br />"
                      + "Try another button.");
 

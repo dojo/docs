@@ -12,15 +12,15 @@ dojox.widget.Rating
 .. contents::
     :depth: 2
 
-This widget allows users to rate items. 
+This widget allows users to rate items.
 
 =====
 Usage
 =====
 
-By default it shows three stars. The star images are provided with dojox. 
+By default it shows three stars. The star images are provided with dojox.
 
-This is a form widget, which means that you can simply embed it inside a dojo form, which submits the value automatically too. 
+This is a form widget, which means that you can simply embed it inside a dojo form, which submits the value automatically too.
 But it doesn't require to be inside a form.
 
 ========
@@ -39,7 +39,7 @@ Now you are set and the rating widget should render and be useable.
   :linenos:
   
   <style type="text/css">
-    @import "dojox/form/resources/Rating.css"; 
+    @import "dojox/form/resources/Rating.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
@@ -53,13 +53,13 @@ You can **reset the number of stars to 0** by clicking on the currently selected
 Standard options
 ----------------
 
-This example shows how to use additional attributes to customize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars. 
+This example shows how to use additional attributes to customize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars.
 
 .. code-block :: html
   :linenos:
   
   <style type="text/css">
-    @import "dojox/form/resources/Rating.css"; 
+    @import "dojox/form/resources/Rating.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
@@ -77,7 +77,7 @@ The following shows what events you can connect to and how to do this using inli
   :linenos:
   
   <style type="text/css">
-    @import "dojox/form/resources/Rating.css"; 
+    @import "dojox/form/resources/Rating.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
@@ -106,7 +106,7 @@ The next example shows how you can do the same as above, just using the default 
   :linenos:
   
   <style type="text/css">
-    @import "dojox/form/resources/Rating.css"; 
+    @import "dojox/form/resources/Rating.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
@@ -135,7 +135,7 @@ Inside a dojo form
   :linenos:
   
   <style type="text/css">
-    @import "dojox/form/resources/Rating.css"; 
+    @import "dojox/form/resources/Rating.css";
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");

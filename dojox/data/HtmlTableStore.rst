@@ -111,7 +111,7 @@ Connecting HtmlTableStore to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <table id="myData" style="display: none;">
     <thead>
@@ -150,7 +150,7 @@ Connecting HtmlTableStore to dijit.form.ComboBox
     </tbody>
     </table>
 
-    <b>Combo lookup of isbn</b><br> 
+    <b>Combo lookup of isbn</b><br>
     <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:'myData'" data-dojo-id="comboStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'isbn'"></div>
 
@@ -176,7 +176,7 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Standard HTML table:</b><br>
     <table id="myData2">
@@ -218,11 +218,11 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
     <br>
     <br>
 
-    <b>dojox.grid.DataGrid connected to the above table:</b><br> 
+    <b>dojox.grid.DataGrid connected to the above table:</b><br>
     <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:'myData2'" data-dojo-id="gridStore"></div>
     <div style="width: 400px; height: 200px;">
-      <div id="grid" 
-        data-dojo-type="dojox.grid.DataGrid" 
+      <div id="grid"
+        data-dojo-type="dojox.grid.DataGrid"
         data-dojo-props="store:gridStore,
         structure:'layoutBooks',
         query:{},

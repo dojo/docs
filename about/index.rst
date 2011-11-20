@@ -12,7 +12,7 @@ About the new Docu Wiki
 
 Welcome to Dojo Toolkits new official documentation pages.
 
-The documentation is aiming to cover all dojo modules delivered within a release. 
+The documentation is aiming to cover all dojo modules delivered within a release.
 
 ===============
 Search the docs
@@ -35,8 +35,8 @@ If you are missing things or have ideas, then
 Contributing
 ============
 
-This is an open effort for anyone interested to join. 
-If you want to contribute to these pages, the :ref:`documentation howto <howto>` is a good place to start. 
+This is an open effort for anyone interested to join.
+If you want to contribute to these pages, the :ref:`documentation howto <howto>` is a good place to start.
 
 * :ref:`How to become a dojo doc ninja <howto>`
 * :ref:`Dojo hosted at DojoCampus <hosted_dojo>` - Notes on the instance of Dojo hosted at Dojo Campus

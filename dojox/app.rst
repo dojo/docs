@@ -16,14 +16,14 @@ Introduction
 ============
 dojox.app is an application frame work designed to allow simple configuration
 of nested scenes and views and to facilitate the transitioning between these
-views.  It is similar in function to the dojox.mobile.app framework, but will 
+views.  It is similar in function to the dojox.mobile.app framework, but will
 not be limited to use on mobile devices.  Applications for desktops, mobiles,
 and tablets will be configurable and buildable for easy and fast deployment.
 There are two core libraries that will need to work together to accomplish these goals
 
 dojox.app - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it’s views.
 
-dojox.mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app. 
+dojox.mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app.
 
 =============
 Overview
@@ -35,7 +35,7 @@ Application structure overview.
 Components in dojox.app
 
 :ref:`dojox.app.view <dojox/app/view>`
-- dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
+- dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
 :ref:`dojox.app.bind <dojox/app/bind>`
 - dojox.app.bind is used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
@@ -50,7 +50,7 @@ Components in dojox.app
 - dojox.app.module.env provides dojo, dijit, dojox environment.
 
 :ref:`dojox.app.module.histroy <dojox/app/module/history>`
-- dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API. 
+- dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
 
 :ref:`dojox.app.main <dojox/app/main>`
 - dojox.app.main(Application) is used to create a dojox.app application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse.
@@ -121,7 +121,7 @@ Here is the configuration instruction table.
 +-----------------------+-----------------------------------------------------------------------+
 |defaultView            |The name of the scene/view to load when the application is initialized.|
 +-----------------------+-----------------------------------------------------------------------+
-|defaultTransition      |The default type of animation for the view transition.                 |   
+|defaultTransition      |The default type of animation for the view transition.                 |
 +-----------------------+-----------------------------------------------------------------------+
 |views                  |The children views/scenes of the application or current scene.         |
 +-----------------------+-----------------------------------------------------------------------+
@@ -137,9 +137,9 @@ index.html
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
   <html>
     <head>
-      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/> 
-      <meta name="apple-mobile-web-app-capable" content="yes" /> 
-      <title>Sample App</title> 
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>Sample App</title>
       <link href="../../../mobile/themes/iphone/base.css" rel="stylesheet"></link>
       
       <script type="text/javascript" src="../../../../dojo/dojo.js"></script>
@@ -162,7 +162,7 @@ The actual configuration for the application is loaded by dojo/text module and i
   if (path.charAt(path.length)!="/"){
     path = path.split("/");
     path.pop();
-    path=path.join("/");	
+    path=path.join("/");
   }
   dojo.registerModulePath("app",path);
   require(["dojo","dojox/app/main", "dojo/text!app/config.json", "dojox/json/ref"],function(dojo,Application,config,ref){
@@ -192,7 +192,7 @@ The application configuration json data is used to declare views, models and the
       "dojox/mobile/Heading"
     ],
     
-    //stores we are using 
+    //stores we are using
     "stores": {
       "namesStore":{
         "type": "dojo.store.Memory",
@@ -217,9 +217,9 @@ The application configuration json data is used to declare views, models and the
       "names": {
         "params":{
           "store": {"$ref":"#stores.namesStore"}
-        }	       
+        }
       }
-    }, 
+    },
     
     // Modules for the app.  The are basically used as the second
     // array of mixins in a dojo.declare().  Modify the top level behavior
@@ -233,10 +233,10 @@ The application configuration json data is used to declare views, models and the
     "template": "application.html",
     
     //the name of the scene to load when the app is initialized.
-    "defaultView": "home", 
+    "defaultView": "home",
     
     //The default animation effect of transition between sub scenes and views of
-    // this application. 
+    // this application.
     "defaultTransition": "slide",
     
     //scenes are groups of views and models loaded at once
@@ -245,11 +245,11 @@ The application configuration json data is used to declare views, models and the
       //simple view without any children views or scenes
       //views can has its own dependencies which will be loaded
       //before the view is first intialized.
-      "home": { 
+      "home": {
         "type": "dojox.app.view",
         "dependencies":[
           "dojox/mobile/RoundRectList",
-          "dojox/mobile/ListItem", 
+          "dojox/mobile/ListItem",
           "dojox/mobile/EdgeToEdgeCategory"
         ],
         "template": "views/simple/home.html"
@@ -260,22 +260,22 @@ The application configuration json data is used to declare views, models and the
         //all views in the main scene will be bound to the user model
         "models": [],
         "type": "dojox.app.scene",
-        "template": "simple.html",	
+        "template": "simple.html",
         "defaultView": "main",
         "defaultTransition": "slide",
         //the views available to this scene
-        "views": { 
+        "views": {
           "main":{
             "template": "views/simple/main.html"
           },
           "second":{
-            "template": "views/simple/second.html" 
+            "template": "views/simple/second.html"
           },
           "third":{
-            "template": "views/simple/third.html" 
+            "template": "views/simple/third.html"
           }
         },
-        "dependencies":[ 
+        "dependencies":[
           "dojox/mobile/RoundRectList",
           "dojox/mobile/ListItem",
           "dojox/mobile/EdgeToEdgeCategory",
@@ -290,13 +290,13 @@ The application configuration json data is used to declare views, models and the
           "repeatmodels": {
             "params":{
               "store": {"$ref":"#stores.repeatStore"}
-            }           
+            }
           }
         },
         "template": "views/repeat.html",
         "dependencies":["dojox/mobile/TextBox"]
       }
-    }	
+    }
   }
 
 Sample render result
@@ -308,7 +308,7 @@ Comparison with dojox.mobile.app
 ================================
 
 The main difference between dojox.app and dojox.mobile.app is listed as following.
-dojox.app enables the model binding 
+dojox.app enables the model binding
 dojox.app uses scene/view structure to enable the nested scene or view which resembles the composite design pattern. It does not mean dojox.mobile.app cannot do that but it needs coding to implement that.
 dojox.app contains the layout mechanism to ensure the content at different application/scene/view level work well together
 dojox.mobile.app manage the navigation history in StageController by using a history stack. dojox.app manage the navigation history through HTML5 pushState standard and delegate it to browser enabled history management.

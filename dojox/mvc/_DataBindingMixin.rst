@@ -13,7 +13,7 @@ dojox.mvc._DataBindingMixin
 .. contents::
    :depth: 2
 
-Provides the ability for dijits or custom view components to become data binding aware.  Data binding awareness enables dijits or other view layer 
+Provides the ability for dijits or custom view components to become data binding aware.  Data binding awareness enables dijits or other view layer
 components to bind to locations within a client-side data model, which is commonly an instance of the dojox.mvc.StatefulModel class. A bind is a bi-directional update mechanism which is capable of synchronizing value changes between the bound dijit or other view component and the specified location within the data model, as well as changes to other properties such as "valid", "required", "readOnly" etc
 
 
@@ -36,7 +36,7 @@ Available Methods
 
 * :ref:`dojox.mvc._DataBindingMixin.isValid <dojox/mvc/_BindingMixin>`
 
-Returns the validity of the data binding. This function is meant to provide an API bridge to the dijit API. Validity of data-bound dijits is a function of multiple concerns: 
+Returns the validity of the data binding. This function is meant to provide an API bridge to the dijit API. Validity of data-bound dijits is a function of multiple concerns:
 
 - 'The validity of the value as ascertained by the data binding and constraints specified in the data model (usually semantic).'
 

@@ -12,7 +12,7 @@ dojo.fx.easing
 .. contents::
     :depth: 2
 
-Have you ever wanted a fade out, fade in, wipe in, and so forth to apply the effect in a non-linear way?  For example, wouldn't it be cool to have a fade in accelerate the rate at which the node appears the further along in the animation duration it is?  This is handled through the 'easing' property of the arguments passed to the animation creation functions.  
+Have you ever wanted a fade out, fade in, wipe in, and so forth to apply the effect in a non-linear way?  For example, wouldn't it be cool to have a fade in accelerate the rate at which the node appears the further along in the animation duration it is?  This is handled through the 'easing' property of the arguments passed to the animation creation functions.
 
 Instead of having to write the easing function yourself, dojo provides a collection of easing functions to use as this parameter to get a variety of effects.
 
@@ -20,7 +20,7 @@ Instead of having to write the easing function yourself, dojo provides a collect
 Easing Functions
 ================
 
-All functions follow a simple naming convention of "ease type" + "when".  If the name of the function ends in Out, the easing described appears 	towards the end of the animation. "In" means during the beginning, and InOut means both ranges of the Animation will applied, both beginning and end. 
+All functions follow a simple naming convention of "ease type" + "when".  If the name of the function ends in Out, the easing described appears 	towards the end of the animation. "In" means during the beginning, and InOut means both ranges of the Animation will applied, both beginning and end.
 
 
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
@@ -112,21 +112,21 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 |                                       |                                                                                                      |
 |                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.backIn                 | A function where the rate of change starts away from the target, but quickly accelerates towards it. | 
+| dojo.fx.easing.backIn                 | A function where the rate of change starts away from the target, but quickly accelerates towards it. |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.backOut                | A function where the end value actually goes past the end, then pops back to the end value|          |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.backInOut              | A function that applies both backIn and backOut to the animation behavior.                           |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically from the start value                           | 
+| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically from the start value                           |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically around the end value.                          | 
+| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically around the end value.                          |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.elasticInOut           | A function that elastically snaps around the value, near the beginning and end of the Animation.     |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the beginning value                               | 
+| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the beginning value                               |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the ending value                                  | 
+| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the ending value                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.bounceInOut            | A function that 'bounces' near the beginning and end of the animation                                |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
@@ -136,12 +136,12 @@ Examples
 ========
 
 
-Example: Playing with Easing  
+Example: Playing with Easing
 ----------------------------
 
 .. cv-compound ::
 
-  Select the desired easing function from the dropdown and press 'move the div'   
+  Select the desired easing function from the dropdown and press 'move the div'
 
   .. cv :: javascript
 
@@ -171,7 +171,7 @@ Example: Playing with Easing
       dojo.addOnLoad(setupMove);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
 	<select data-dojo-type="dijit.form.ComboBox" id="easingSelector">
 		<option>linear</option>

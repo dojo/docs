@@ -14,7 +14,7 @@ Basic Description
 
 DataChart is an extension to Chart2D that connects to a data store in a simple manner. Animation can be achieved by connecting to the data store and modifying the store items. The change are captured and displayed in the DataChart which connects to the store's onSet event.  Convenience methods have also been added for connecting store item labels to the chart labels.
 		
-The examples on this page use dojo.ItemFileWriteStore, since it is the most commonly used, and most standard store. The store connects to the *dojox/charting/tests/stock.json* file which contains a set of imaginary stock market prices. 
+The examples on this page use dojo.ItemFileWriteStore, since it is the most commonly used, and most standard store. The store connects to the *dojox/charting/tests/stock.json* file which contains a set of imaginary stock market prices.
 
 DataChart maintains the integrity of the current charting APIs, although some things have been added or modified in order to get the store to connect and also to get the data to scroll/animate. "displayRange" in particular is used to force the x-axis to a specific size and keep the chart from stretching or squashing to fit the data. Also, the DataChart is meant to be setup quickly. More defaults have been added so only a few simple steps are required to get up and running.
 
@@ -123,7 +123,7 @@ DojoX Charting comes with dojox.charting.widget.Legend to make it easy to add le
  
     var c = dojo.connect(chart, "onData", function(){
         dojo.disconnect(c);
-        new dojox.charting.widget.Legend({chart:chart}, "legend"); 
+        new dojox.charting.widget.Legend({chart:chart}, "legend");
     });
  });
 

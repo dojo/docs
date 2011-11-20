@@ -13,7 +13,7 @@ dojox.grid.EnhancedGrid
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, the required features must be declared before used. 
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, the required features must be declared before used.
 
 
 ================================
@@ -36,7 +36,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -58,7 +58,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
           /*create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px'},
             document.createElement('div'));
@@ -109,14 +109,14 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
   </style>
 
 
-2. Declare required feature plugins 
+2. Declare required feature plugins
 
 .. code-block :: javascript
   :linenos:
 
   <script type="text/javascript">
       dojo.require("dojox.grid.EnhancedGrid");
-      dojo.require("dojox.grid.enhanced.plugins.DnD"); 
+      dojo.require("dojox.grid.enhanced.plugins.DnD");
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
@@ -127,7 +127,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
       data-dojo-props="plugins:{dnd: true, nestedSorting: true, indirectSelection: true, ...}" ...>
   </div>
 
@@ -144,7 +144,7 @@ Following is a complete list of EnahancedGrid plugins, please refer to the separ
 * :ref:`Filter <dojox/grid/EnhancedGrid/plugins/Filter>` - Support for defining rules to filter grid content with various data types.
 * :ref:`Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>` - Exporting grid content to various formats.
 * :ref:`Printer <dojox/grid/EnhancedGrid/plugins/Printer>` - Providing convenient ways to print grid.
-* :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` - Unified extended selection support for rows, columns and cells. 
+* :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` - Unified extended selection support for rows, columns and cells.
 * :ref:`DnD <dojox/grid/EnhancedGrid/plugins/DnD>` - Drag-and-drop support for rows/columns/cells, either within grid or out of grid.
 * :ref:`Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>` - Pagination approach to work with huge data set besides the default virtual scrolling way
 * :ref:`CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>` - Merging adjacent cells within a row.

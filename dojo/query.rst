@@ -6,7 +6,7 @@ dojo.query
 .. contents::
     :depth: 2
 
-**dojo.query()** returns a list of DOM nodes based on a CSS selector. 
+**dojo.query()** returns a list of DOM nodes based on a CSS selector.
 
 **dojo/query** is the AMD module containing the query function in 1.7.
 
@@ -40,7 +40,7 @@ To select HTML elements in JavaScript, you can use the browser's native DOM API,
     console.dir(list);
   </script>
 
-Oy! That's a lot of code for what should be very simple. It's also very slow. 
+Oy! That's a lot of code for what should be very simple. It's also very slow.
 
 Better and faster: dojo.query
 -----------------------------
@@ -104,7 +104,7 @@ Simple Queries
 .. code-block :: javascript
 
   // all <h3> elements
-  dojo.query('h3')  
+  dojo.query('h3')
   // all <h3> elements which are first-child of their parent node
   dojo.query('h3:first-child')
   // a node with id="main"
@@ -209,7 +209,7 @@ Sub-selectors, using not()
   dojo.query('#main span.foo:not(span:first-child)')
   dojo.query('#main span.foo:not(:first-child)')
 
-Nth-child 
+Nth-child
 ----------
 
 .. code-block :: javascript

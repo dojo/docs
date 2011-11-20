@@ -124,11 +124,11 @@ Openers
 
 * :ref:`Overlay <dojox/mobile/Overlay>`
 
-  A component that displays a secondary view which partially occludes the original using a slide in transition effect. Useful for displaying dialogs.  
+  A component that displays a secondary view which partially occludes the original using a slide in transition effect. Useful for displaying dialogs.
 
 * :ref:`Tooltip <dojox/mobile/Tooltip>`
 
-  A 
+  A
 
 
 Form Controls
@@ -156,7 +156,7 @@ Form Controls
 
 * :ref:`Slider <dojox/mobile/Slider>`
 
-  A control that allows changing a numeric value by touching and dragging a slide handle. 
+  A control that allows changing a numeric value by touching and dragging a slide handle.
 
 * :ref:`Switch <dojox/mobile/Switch>`
 
@@ -254,7 +254,7 @@ Loading Dojo Mobile (using Dojo pre-1.7 style api's):
 
 This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
 
-.. code-block :: javascript 
+.. code-block :: javascript
      
     dojo.require("dojox.mobile"); // Load the basic mobile widget kernel and support code.
     dojo.require("dojox.mobile.parser"); // (Optional) Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
@@ -313,7 +313,7 @@ Example (using HTML5 validating declarative markup and mobile parser)
    20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
    21:       </ul>
    22:     </div>
-   23: 
+   23:
    24:     <div id="bar" data-dojo-type="dojox.mobile.View">
    25:       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
    26:       <ul data-dojo-type="dojox.mobile.RoundRectList">
@@ -352,7 +352,7 @@ Example (using older HTML (non-validating) and mobile parser)
    20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
    21:       </ul>
    22:     </div>
-   23: 
+   23:
    24:     <div id="bar" dojoType="dojox.mobile.View">
    25:       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
    26:       <ul dojoType="dojox.mobile.RoundRectList">

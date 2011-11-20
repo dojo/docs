@@ -48,7 +48,7 @@ The pattern of using the GoogleBlogSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleBlogSearchStore();
 
   var query = {text: "dojo ajax toolkit"};
@@ -92,7 +92,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 

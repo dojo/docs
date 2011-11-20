@@ -76,7 +76,7 @@ Example 1:  Toggle a DOM node (with defaults)
       dojo.addOnLoad(basicToggle);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="hideButton">Hide the node!</button>
     <button data-dojo-type="dijit.form.Button" id="showButton">Show the node!</button>
@@ -108,7 +108,7 @@ Example 2:  Toggle a DOM node with custom durations
       dojo.addOnLoad(basicToggle1);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="hideButton1">Hide the node!</button>
     <button data-dojo-type="dijit.form.Button" id="showButton1">Show the node!</button>
@@ -140,7 +140,7 @@ Example 2:  Toggle a DOM node with custom animation functions
       dojo.addOnLoad(basicToggle2);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button data-dojo-type="dijit.form.Button" id="hideButton2">Hide the node!</button>
     <button data-dojo-type="dijit.form.Button" id="showButton2">Show the node!</button>

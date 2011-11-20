@@ -53,7 +53,7 @@ Declarative example
   .. cv:: javascript
              
         <script type="text/javascript">
-	     dojo.require("dojox.image.FlickrBadge"); 
+	     dojo.require("dojox.image.FlickrBadge");
 	</script>
 
   .. cv:: html

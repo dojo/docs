@@ -32,11 +32,11 @@ Desktop
 Mobile (dojox/mobile)
 
   * iOS 4.x,5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
-  * Android 2.2, 2.3, 3.1 
-  * Blackberry 6 
+  * Android 2.2, 2.3, 3.1
+  * Blackberry 6
   * Mobile compatibility on desktop browsers: IE 8-9, Firefox 3.6-7, Safari 5.0-5.1, Chrome 13 and later
 
-  TODO: Link to page with specific vendor device models tested on 
+  TODO: Link to page with specific vendor device models tested on
 
 =========
 Dojo Base
@@ -79,7 +79,7 @@ Note that many core and dijit modules have been converted to use minimal depende
 Limitations:
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
-DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter). 
+DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter).
 
   The following table lists the default tag libraries and their corresponding tags:
 
@@ -103,7 +103,7 @@ DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation i
 
   +------------------------------+---------------------------------------------------------------------------------------------------+
   | Filter Library               | Filters                                                                                           |
-  +==============================+===================================================================================================+ 
+  +==============================+===================================================================================================+
   | dojox/dtl/filter/dates       | date, time, timesince, timeuntil                                                                  |
   +------------------------------+---------------------------------------------------------------------------------------------------+
   | dojox/dtl/filter/htmlstrings | linebreaks, linebreaksbr, removetags, striptags                                                   |
@@ -117,7 +117,7 @@ DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation i
   | dojox/dtl/filter/misc        | filesizeformat, pluralize, phone2numeric, pprint                                                  |
   +------------------------------+---------------------------------------------------------------------------------------------------+
   | dojox/dtl/filter/strings     | addslashes, capfirst, center, cut, fix_ampersands, floatformat, iriencode, linenumbers,           |
-  |                              | ljust, lower, make_list, rjust, slugify, stringformat, title, truncatewords, truncatewords_html,  | 
+  |                              | ljust, lower, make_list, rjust, slugify, stringformat, title, truncatewords, truncatewords_html,  |
   |                              | upper, urlencode, urlize, urlizetrunc, wordcount, wordwrap                                        |
   +------------------------------+---------------------------------------------------------------------------------------------------+
 
@@ -190,7 +190,7 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
            dijit.byId("textBox1").set("value","New Value!");
          </script>
        </button>
-       <div data-dojo-type="dijit.form.TextBox" id="textBox1" 
+       <div data-dojo-type="dijit.form.TextBox" id="textBox1"
             data-dojo-props="value: 'Old Value'">
          <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
            console.log("Prop '"+prop+"' was '"+oldValue+"' and is now '"+newValue+"'");
@@ -204,13 +204,13 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
 dojo/touch
 ----------
 
-This module provides an unified set of touch events - "press | move | release | cancel", which can run well across a wide range of devices(including desktops). 
+This module provides an unified set of touch events - "press | move | release | cancel", which can run well across a wide range of devices(including desktops).
 
 The rationale is very simple - "press | move | release | cancel" are mapped to:
 
  - "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
 
- - "mousedown | mousemove | mouseup | mouseleave" on desktops. 
+ - "mousedown | mousemove | mouseup | mouseleave" on desktops.
 
 So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms
 
@@ -229,7 +229,7 @@ Dijit
 
 Dijit widgets should now "just work" on supported mobile devices, with the exception of the Editor widget.  This is intended to allow web apps built for desktop browsers to continue to be functional when browsed on mobile devices.
 
-For Dialog your app must set draggable=false in order for the [x] close icon (in the Dialog's upper right hand corner) to work.   This limitation will be removed in a future release. 
+For Dialog your app must set draggable=false in order for the [x] close icon (in the Dialog's upper right hand corner) to work.   This limitation will be removed in a future release.
 
 _WidgetBase
 -----------
@@ -285,7 +285,7 @@ dijit.CalendarLite is a new widget aimed towards mobile use.   It's like Calenda
 
 ComboBox, FilteringSelect
 -------------------------
-These classes have been enhanced to accept a :ref:`dojo.store <dojo/store>` (the new store API) for the store parameter. 
+These classes have been enhanced to accept a :ref:`dojo.store <dojo/store>` (the new store API) for the store parameter.
 The old :ref:`dojo.data API <dojo/data/api/Read>` is still supported.
 
 =====
@@ -296,7 +296,7 @@ Charting
 --------
   - New zoom, pan, data indicator interactions have been committed in the action2d package. They allow users to interact with the chart using either mouse or touch gestures.
   - Various improvement to improve performances on particular on mobile devices (new enableCache parameter on most plot type to allow caching and reuse of gfx shapes)
-  - use of AMD module format 
+  - use of AMD module format
   - Bidi text support has been added through two BidiSupport classes (one for dojox.charting, one for dojox.charting.widget). This classes need  to be required by your application in order for Bidi text support to be enabled.
 
 Gauges
@@ -319,7 +319,7 @@ GeoCharting Maps
 
 Gfx
 ---
-  - Shapes are now identified via an associated unique id (Shape.getUID()). Coupled to this, the new dojox.gfx.shape.byId() function returns the shape associated with a given id.   
+  - Shapes are now identified via an associated unique id (Shape.getUID()). Coupled to this, the new dojox.gfx.shape.byId() function returns the shape associated with a given id.
   - Add input events support to canvas renderer. It is enabled by default and can be disabled by setting the dojoConfig 'canvasEvents' flag to 'false'.
   - The gfx shape targeted by a mouse event can be retrieved from the event itself by means of the 'gfxTarget' event property:
 
@@ -372,7 +372,7 @@ Next generation of Grid
 Mobile
 ------
 
-Dojo Mobile is now considered a first class Mobile library, fully supporting lightweight (baseless) AMD loading and the new Dojo Build System. A new reference guide has been written for the Dojo Mobile project, and full API docs are now available.  
+Dojo Mobile is now considered a first class Mobile library, fully supporting lightweight (baseless) AMD loading and the new Dojo Build System. A new reference guide has been written for the Dojo Mobile project, and full API docs are now available.
 
   `Dojo Mobile Reference Guide <http://livedocs.dojotoolkit.org/dojox/mobile>`_
 
@@ -425,7 +425,7 @@ Util
 Build Tool Updates
 ------------------
 
-The Build Tools have been completely reimplemented in Dojo 1.7, to take full advantage of AMD and has() and optionally Node.js and Closure Compiler, while still being fully backward compatible with the old build tools.  A complete reference guide has being prepared here with all the information: 
+The Build Tools have been completely reimplemented in Dojo 1.7, to take full advantage of AMD and has() and optionally Node.js and Closure Compiler, while still being fully backward compatible with the old build tools.  A complete reference guide has being prepared here with all the information:
 
   `Build Tool Reference Guide (1.7 Draft) <http://livedocs.dojotoolkit.org/build/buildSystem>`_
 
@@ -482,7 +482,7 @@ The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.
 Possible workarounds for a particular app are:
 
  * Convert the app to AMD and load with async:true, thereby using a standard AMD loader which script-injects everything.
- * Do a build, which converts all legacy modules to AMD modules. 
+ * Do a build, which converts all legacy modules to AMD modules.
 
 Note: to do a true conversion that takes advantage of all of the features of AMD and removes things like dojo.getObject requires more work than the build app can do mechanically.
 

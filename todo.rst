@@ -6,7 +6,7 @@ Docu Wiki ToDo
 .. contents::
    :depth: 2
 
-Starting with V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation. 
+Starting with V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation.
 
 The following pages need more love:
 
@@ -89,7 +89,7 @@ DojoX
 
   needed: full page
 
-* :ref:`dojox.gfx <dojox/gfx>` 
+* :ref:`dojox.gfx <dojox/gfx>`
 
   needed: split apart into multiple pages for each major concept, add inline gfx demos
 
@@ -169,7 +169,7 @@ DojoX
 
   needed: full page
 
-* :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>` 
+* :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>`
 
   needed: full page
 

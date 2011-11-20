@@ -125,9 +125,9 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
 
     <style type="text/css">
       body { margin: 0; padding: 0; height: auto; }
-      .fancy { 
-        font-family: Arial; padding: 10px; color: orange; 
-        font-size: 12px; font-weight: bold; 
+      .fancy {
+        font-family: Arial; padding: 10px; color: orange;
+        font-size: 12px; font-weight: bold;
       }
     </style>
 
@@ -152,8 +152,8 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
     });
     </script>
 
-All you need to do is, to define the codeblocks for the JS/HTML and CSS parts you would like to use. 
-You can leave things out, so having a simple JavaScript example could just include the .. cv:: javascript directive. 
+All you need to do is, to define the codeblocks for the JS/HTML and CSS parts you would like to use.
+You can leave things out, so having a simple JavaScript example could just include the .. cv:: javascript directive.
 Following code is the representation of the demo you saw above:
 
 .. code-block :: html
@@ -168,9 +168,9 @@ Following code is the representation of the demo you saw above:
 
       <style type="text/css">
         body { margin: 0; padding: 0; height: auto; }
-        .fancy { 
-          font-family: Arial; padding: 10px; color: orange; 
-          font-size: 12px; font-weight: bold; 
+        .fancy {
+          font-family: Arial; padding: 10px; color: orange;
+          font-size: 12px; font-weight: bold;
         }
       </style>
 
@@ -260,8 +260,8 @@ Lets look at an example using the inline style and extra parameters in use:
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerTwo" >
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:top, splitter:false">
-        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
-      </div>	
+        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
+      </div>
       <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="liveSplitters:false, design:'sidebar', region:'center'" id="mainSplit">
         <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
           <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
@@ -406,7 +406,7 @@ To attach images, use the AttachFile option you have at the bottom of each page.
 Tips and Tricks, the edge cases
 ===============================
 
-Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into subpages suffixed with ``-tricks``. 
+Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into subpages suffixed with ``-tricks``.
 So, if someone posts something interesting to know about the dijit.Dialog, and you just want to note this for other people, post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one.
 
 
@@ -430,7 +430,7 @@ should become::
 
   dijit/Tree
 
-So be aware of case-sensitivity. 
+So be aware of case-sensitivity.
 
 Url conventions outside the namespace
 -------------------------------------

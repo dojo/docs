@@ -30,7 +30,7 @@ Query (all pictures with tags animals, foxes, and cute):
 Response
 --------
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
     jsonpCallback({
      "encoding": "UTF-8",
@@ -745,7 +745,7 @@ Sample 1:  Listing nature pictures
       dojo.require("dijit.form.Button");
 
       //This function performs some basic dojo initialization.  In this case it connects the button
-      //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+      //onClick to a function which invokes the fetch().  The fetch function queries for all items
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
          //Function to perform a fetch on the datastore when a button is clicked
@@ -754,7 +754,7 @@ Sample 1:  Listing nature pictures
            //Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                while (list.firstChild) {
                  list.removeChild(list.firstChild);
                }
@@ -764,7 +764,7 @@ Sample 1:  Listing nature pictures
            //Callback for processing a returned list of items.
            function gotItems(items, request) {
              var list = dojo.byId("list");
-             if (list) { 
+             if (list) {
                var i;
                for (i = 0; i < items.length; i++) {
                  var item = items[i];
@@ -781,7 +781,7 @@ Sample 1:  Listing nature pictures
              alert("lookup failed.");
            }
              
-           //Fetch the images.  
+           //Fetch the images.
            flickrStore.fetch({query:{ tags: "nature"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
          }
          //Link the click event of the button to driving the fetch.
@@ -791,7 +791,7 @@ Sample 1:  Listing nature pictures
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div data-dojo-type="dojox.data.PicasaStore" data-dojo-id="flickrStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Find nature pictures!</div>

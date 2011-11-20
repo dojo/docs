@@ -17,7 +17,7 @@ This document provides some simple examples of using the Dojo build system, how 
 Introduction
 ============
 
-For an introduction to the build system, see :ref:`the overview <build/index>`. This page assumes you already know you want a build, but are not quite sure how to go about it. 
+For an introduction to the build system, see :ref:`the overview <build/index>`. This page assumes you already know you want a build, but are not quite sure how to go about it.
 
 Like most parts of Dojo the build system has been designed to be both powerful and flexible. There are a lot of different options available to tweak your system but, for the majority of first-time users, sticking to the defaults in this example will do you just fine.
 
@@ -65,7 +65,7 @@ Now we have a problem, because if I want to use both on the same page how does m
 
 The default location for your namespace would be alongside the 'dojo', 'dijit' and 'dojox' directories. However I put my top-level namespace ('yourCompany') in the same location as my dojo-release directory as it means I can happily delete the dojo-release and dojo-src directories whenever I want as they don't contain any of my code.
 
-Resource Name 
+Resource Name
 -------------
 
 During the build, Dojo will move all the files from 'dojo-src' to 'resourceName'. It will then create the layer, do all the smushing of JS and CSS and put all that stuff under 'resourceName' as well. So you need to change <script type="text/javascript" src="js/dojo-release/dojo/dojo.js"> to <script type="text/javascript" src="js/releaseName/dojo/layerName.js"> (you might want to include dojo.js as well, depending on if your layer contains all the bits of Dojo you need as well as all the dijits and your own code). You also want to change the location of the CSS so you grab the smushed CSS as well. (Like with JS, smushing the CSS into a single file loads more quickly because it reduces the number of HTTP requests and removes comments, which allows the CSS parser in your browser to decipher it more quickly). The build system also makes a copy of all the files, after being minimized, in your release. This means you don't have to add modules that are used infrequently to your layers - any dojo.require() calls for modules that are not loaded will be loaded via XHR instead.  Remember, Dojo locates files relative to dojo.js, and you've just changed the location of dojo.js at the beginning of this paragraph, so you need to move everything else too!

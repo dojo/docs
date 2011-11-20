@@ -28,7 +28,7 @@ The following example shows basic usage of doLater. The property "swf" represent
  :linenos:
  
  var tellSwfPlay = function(frameNumber){
-     if(dojox.timing.doLater(swf)){return;} 
+     if(dojox.timing.doLater(swf)){return;}
      swf.play( frameNumber );
  }
  
@@ -38,7 +38,7 @@ The second argument for doLater allows for context so the code can be executed f
  :linenos:
  
  swfController.play = function(frameNumber){
-     if(dojox.timing.doLater(this.swf, this)){return;} 
+     if(dojox.timing.doLater(this.swf, this)){return;}
      this.swf.play( frameNumber );
  }
  

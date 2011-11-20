@@ -504,7 +504,7 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * :ref:`dojo.replaceClass <dojo/replaceClass>`
 
-    Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass 
+    Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass
 
 * Geometry (dojo/dom-geometry)
 
@@ -526,19 +526,19 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * :ref:`dojo.getMarginBox <dojo.getMarginBox>`
 
-    Get an object that encodes the width, height, left and top positions of the node's margin box. 
+    Get an object that encodes the width, height, left and top positions of the node's margin box.
 
-  * :ref:`dojo.setMarginBox <dojo.setMarginBox>` 
+  * :ref:`dojo.setMarginBox <dojo.setMarginBox>`
 
-    Sets the size of the node's margin box and placement (left/top), irrespective of box model. 
+    Sets the size of the node's margin box and placement (left/top), irrespective of box model.
 
   * :ref:`dojo.getContentBox <dojo.getContentBox>`
 
-    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model. 
+    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model.
 
-  * :ref:`dojo.setContentSize <dojo.setContentSize>` 
+  * :ref:`dojo.setContentSize <dojo.setContentSize>`
 
-    Sets the size of the node's contents, irrespective of margins, padding, or borders. 
+    Sets the size of the node's contents, irrespective of margins, padding, or borders.
 
 * Property (dojo/dom-prop)
 
@@ -548,7 +548,7 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * :ref:`dojo.getProp <dojo/getProp>`
 
-    Gets a property on an HTML element. 
+    Gets a property on an HTML element.
 
   * :ref:`dojo.setProp <dojo/setProp>`
 

@@ -41,7 +41,7 @@ When using AMD format in a fully baseless application, ``getMarginBox`` and ``se
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo/dom-geometry"], function(domGeom){   
+  require(["dojo/dom-geometry"], function(domGeom){
     // Get the margin-box size of a node
     var marginBox = domGeom.getMarginBox(domNode);
 
@@ -54,7 +54,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.mar
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
     // Get the margin-box size of a node
     var marginBox = dojo.marginBox(domNode);
 
@@ -89,7 +89,7 @@ Examples
 Getting margin box I.
 ---------------------
 
-This example displays the return values of dojo.marginBox on a node. 
+This example displays the return values of dojo.marginBox on a node.
 
 .. cv-compound::
 
@@ -129,7 +129,7 @@ This example displays the return values of dojo.marginBox on a node.
 Getting margin box II.
 ----------------------
 
-This example displays the return values of dojo.marginBox on a nested node. 
+This example displays the return values of dojo.marginBox on a nested node.
 
 .. cv-compound::
 
@@ -213,4 +213,4 @@ See also
 
 * :ref:`dojo.contentBox <dojo/contentBox>`
 * :ref:`dojo.getMarginBox <dojo.getMarginBox>`
-* :ref:`dojo.setMarginBox <dojo.setMarginBox>` 
+* :ref:`dojo.setMarginBox <dojo.setMarginBox>`

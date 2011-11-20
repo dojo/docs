@@ -122,7 +122,7 @@ In this example we will set a new label by clicking on a button (this can be a s
 
   .. cv:: html
 
-    <button data-dojo-type="dojox.form.BusyButton" id="buttonChargeback" data-dojo-props="busyLabel:'Canceling payment...'">Cancel payment</button> 
+    <button data-dojo-type="dojox.form.BusyButton" id="buttonChargeback" data-dojo-props="busyLabel:'Canceling payment...'">Cancel payment</button>
     <button data-dojo-type="dijit.form.Button" id="buttonChangeState">Change state</button>
 
   .. cv:: css

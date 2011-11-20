@@ -24,7 +24,7 @@ Introduction
 Usage
 =====
 
-dojo.exists accepts a string as its first parameter, and the root object as its second parameter, and returns true/false. 
+dojo.exists accepts a string as its first parameter, and the root object as its second parameter, and returns true/false.
 
 .. code-block :: javascript
  :linenos:
@@ -42,7 +42,7 @@ dojo.exists accepts a string as its first parameter, and the root object as its 
    }
 
 
-The second ``root`` parameter is optional, ``dojo.exists`` will use the value of ``dojo.global`` by default (which is usually the current ``window``). You can use it to root the path in a different window object, or a particular namespace: 
+The second ``root`` parameter is optional, ``dojo.exists`` will use the value of ``dojo.global`` by default (which is usually the current ``window``). You can use it to root the path in a different window object, or a particular namespace:
 
 .. code-block :: javascript
  :linenos:
@@ -50,7 +50,7 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
  // Dojo 1.7+ (AMD)
  require(["dojo/_base/lang", "dijit/dijit"], function(lang, dijit){
    var widgetType = "form.Button";
-   var myNamespace = docs; 
+   var myNamespace = docs;
 
    if( lang.exists(widgetType, myNamespace) ){
      console.log( "There's a docs.form.Button available");
@@ -63,7 +63,7 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
    
  //Dojo < 1.7
  var widgetType = "form.Button";
- var myNamespace = docs; 
+ var myNamespace = docs;
 
  if( dojo.exists(widgetType, myNamespace) ){
    console.log( "There's a docs.form.Button available");

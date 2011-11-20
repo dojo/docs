@@ -39,7 +39,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -61,7 +61,7 @@ Please note indirect selection is completely dependent on the selection mode of 
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px',
               plugins: {indirectSelection: {headerSelector:true, width:"40px", styles:"text-align: center;"}}},
@@ -262,7 +262,7 @@ Usages
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{name:'Selection',width:'70px',styles:'text-align:right;'}}" ...></div>
     
-or 
+or
 
 .. code-block :: javascript
   :linenos:
@@ -284,4 +284,4 @@ See Also
 ========
 
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
-* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid 
+* :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid

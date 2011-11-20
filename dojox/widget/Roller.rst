@@ -3,7 +3,7 @@
 dojox.widget.Roller
 ===================
 
-The Roller is a degradabled, unobtrusive widget to convert an unordered list (``<ul>``) of styled items into a single item, and loop through the display. There are no additional CSS requirements, or any heavy dependencies. 
+The Roller is a degradabled, unobtrusive widget to convert an unordered list (``<ul>``) of styled items into a single item, and loop through the display. There are no additional CSS requirements, or any heavy dependencies.
 
 To use in your page, simply require in the needed module:
 
@@ -11,7 +11,7 @@ To use in your page, simply require in the needed module:
   
   dojo.require("dojox.widget.Roller");
 
-The module provides dojox.widget.Roller, which fades through the items, as well as dojox.widger.RollerSlide, which "slides" in the new element during the transition. 
+The module provides dojox.widget.Roller, which fades through the items, as well as dojox.widger.RollerSlide, which "slides" in the new element during the transition.
 
 Creating A Roller
 -----------------
@@ -49,18 +49,18 @@ Or, create one entirely programmatically, by passing an ``items:`` Array
    // place it in the dom:
    dojo.place(n, dojo.body(), "last");
    // make the roller:
-   var roller = new dojox.widget.Roller({ 
+   var roller = new dojox.widget.Roller({
       items:["Item 1", "Item 2","Item 3"]
    }, n);
  
-The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to meet your needs it your responsibility. 
+The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to meet your needs it your responsibility.
 
 The Roller Class supports two basic configuration options. ``delay`` is the time between rolls (in ms), and ``autoStart`` is true or false, and determines if the widget should start rolling immediately.
 
 Adding Items
 ------------
 
-Adding and removing items from a Roller is very easy. The ``items`` property is just an ordinary Array, which you can manipulate with either Dojo's Array functions, or standard JavaScript methods. 
+Adding and removing items from a Roller is very easy. The ``items`` property is just an ordinary Array, which you can manipulate with either Dojo's Array functions, or standard JavaScript methods.
 
 To add a new item to a Roller with id="myRoller":
 
@@ -73,7 +73,7 @@ You can do this as much as you like, the Roller will continue looping through th
 Controlling A Roller
 --------------------
 
-The Roller instance responds to several simple methods being called. ``.stop()`` will stop the animation in place, and ``.start()`` will start or resume the Roller. The configuration parameter ``autoStart`` (which defaults to 'true') causes ``.start()`` to be called upon instantiation. 
+The Roller instance responds to several simple methods being called. ``.stop()`` will stop the animation in place, and ``.start()`` will start or resume the Roller. The configuration parameter ``autoStart`` (which defaults to 'true') causes ``.start()`` to be called upon instantiation.
 
 The default behavior to locate items in a declarative list is to locate first-children LI items. This can be changed by modifying the ``itemSelector`` attribute, which defaults to ``"> li"``.
 
@@ -96,10 +96,10 @@ First, declare your subclass:
           /* setup your animations */
           ...
           this._setupConnects();
-      } 
+      }
   });
 
-**note:** you *must* call ``this._setupConnects()`` after having created your new animations, otherwise no looping will take place. 
+**note:** you *must* call ``this._setupConnects()`` after having created your new animations, otherwise no looping will take place.
 
 The animations can do whatever your creativity will permit. Just name the "show item" transition ``this._anim["in"]`` and the "hide item" transition ``this._anim.out``. The most simple example can be shown by copying the makeAnims function directly from dojox.widger.Roller:
 
@@ -108,7 +108,7 @@ The animations can do whatever your creativity will permit. Just name the "show 
   makeAnims: function(){
 	// summary: Animation creator function. Need to create an 'in' and 'out'
 	// 		_Animation stored in _anim Object, which the rest of the widget
-	//		will reuse. 
+	//		will reuse.
 	var n = this.domNode;
 	dojo.mixin(this, {
 		_anim: {
@@ -116,12 +116,12 @@ The animations can do whatever your creativity will permit. Just name the "show 
 			"out": dojo.fadeOut({ node:n, duration: 275 })
 		}
 	});
-	this._setupConnects();		
+	this._setupConnects();
   }
 
-Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``. 
+Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
 
-Custom Styles 
+Custom Styles
 -------------
 
 ``TODOC``

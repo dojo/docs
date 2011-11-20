@@ -1,6 +1,6 @@
 .. _dojox/grid/example_grid_styling_rows:
 
-Grid styling : Rows 
+Grid styling : Rows
 -------------------
 
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
@@ -17,7 +17,7 @@ To use it, you just have to override default behavior by yours.
 
   .. cv:: html
 
-    <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+    <span data-dojo-type="dojo.data.ItemFileWriteStore"
         data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
 
@@ -48,12 +48,12 @@ To use it, you just have to override default behavior by yours.
 	</script>
         <thead>
             <tr>
-                <th width="200px" 
+                <th width="200px"
                     field="name">Country/Continent Name</th>
-                <th width="auto" 
-                    field="type" 
-                    cellType="dojox.grid.cells.Select" 
-                    options="country,city,continent" 
+                <th width="auto"
+                    field="type"
+                    cellType="dojox.grid.cells.Select"
+                    options="country,city,continent"
                     editable="true">Type</th>
             </tr>
         </thead>

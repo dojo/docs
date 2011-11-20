@@ -35,29 +35,29 @@ Command Line Switch Reference
 ``--require`` *filename*
   Read and process a loader configuration application that must exist in the resource given by *filename*.
 
-``--package`` *path* 
+``--package`` *path*
   Read and process a package.json resource that must exist in the directory given by *path*.
 
-``--release``                
+``--release``
   Process all profiles resources, discover and transform all resources.
 
 ``-r`` *filename*
   Equivalent to --release
 
-``--check``                   
+``--check``
   Process all command line switches and dump the computed profile to the console.
 
-``--check-args``              
+``--check-args``
   Process all command line switches and dump the raw profile resources to the console (the profile resources are not
   aggregated).
 
 ``--check-discovery``
   Echo all discovered resources and exit
 
-``--help``                    
+``--help``
   Print the help message
 
-``--version``                 
+``--version``
   Print the version number of the build program
 
 Any scalar profile property can be specified on the command line. For example, ``basePath`` could be specified
@@ -322,7 +322,7 @@ Transform: writeDojo
   resulting loader will not automatically consume a global ``dojoConfig``, ``djConfig``, or ``require`` loader
   configuration object.
 
-``version`` (default = *the version given by the dojo package*) 
+``version`` (default = *the version given by the dojo package*)
   * [*string*] A string with the format *major* **.** minor* **.** *patch* **.** *flag*, where major, minor, and patch
     must all be positive integers and flag can be anything. Any less significant subset may be ommitted; ommitted minor
     and patch segments default to "0"; an ommitted flag segment defaults to an empty string.

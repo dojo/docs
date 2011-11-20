@@ -36,7 +36,7 @@ Dojo 1.7+ (AMD)
 .. code-block :: javascript
  :linenos:
 
-  require(["dojo"], function(dojo){   
+  require(["dojo"], function(dojo){
      var coords = dojo.coords(node);
   });
 
@@ -65,13 +65,13 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
         var coords = dojo.coords(node);
         var info = dojo.byId("info");
 
-        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + 
+        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t +
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
     <br>
@@ -93,13 +93,13 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
         var coords = dojo.coords(node);
         var info = dojo.byId("infoSpan");
 
-        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + 
+        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t +
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <div id="textbox" data-dojo-type="dijit.form.TextBox"></div>
     <br>

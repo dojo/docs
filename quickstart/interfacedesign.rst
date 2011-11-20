@@ -19,13 +19,13 @@ Why use Dojo/Dijit?
 ===================
 
 One of the great features of dijit is the fact that it is all ready for a11y (accessibility) and i18n (internationalization).
-Imagine you are working on a new product, your current market is the one of your country and you are not too concerned about delivering your product in several different languages. Thinking about making your product accessible for people with disabilities is way down the list of your priorities. 
+Imagine you are working on a new product, your current market is the one of your country and you are not too concerned about delivering your product in several different languages. Thinking about making your product accessible for people with disabilities is way down the list of your priorities.
 
-Now imagine your product becomes really successful, you want to expand, you want to target a bigger market. 
+Now imagine your product becomes really successful, you want to expand, you want to target a bigger market.
 Using Dojo you will see that implementing another language is not a matter of rewriting your entire code, making it accessible doesn't require highly specialized knowledge and even enabling bidi (bi-directional) is as simple as adding a few extra bytes of code.
 Last but not least, dijit comes with different awesome themes and it is very easy to create your own theme.
 
-Now if you are still doubting, let's go ahead and dive right into a simple UI we will use to retrieve the latest news from a news service provider. What will we use? 
+Now if you are still doubting, let's go ahead and dive right into a simple UI we will use to retrieve the latest news from a news service provider. What will we use?
 
 
 ===============
@@ -57,9 +57,9 @@ We'll also use a Tree widget to navigate through different news categories and w
 The interface
 =============
 
-We'll go for a simple left/top/bottom interface. 
+We'll go for a simple left/top/bottom interface.
 
-.. cv-compound:: 
+.. cv-compound::
 
   .. cv:: javascript
 
@@ -95,8 +95,8 @@ We'll go for a simple left/top/bottom interface.
           "region": "bottom",
           "style": "height: 100px;",
           "splitter": "true"
-        });  
-        rightContent.addChild(bottomContent);      
+        });
+        rightContent.addChild(bottomContent);
 
         outerBc.addChild(rightContent);
         //rightContent.startup();

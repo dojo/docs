@@ -23,8 +23,8 @@ Usage
 The function takes up to three arguments:
 
 1. A DOM node or its node id (as a string).
-2. A String class name to add, or several space-separated class names, or an array of class names. 
-3. A String class name to remove, or several space-separated class names, or an array of class names. 
+2. A String class name to add, or several space-separated class names, or an array of class names.
+3. A String class name to remove, or several space-separated class names, or an array of class names.
 
 Dojo 1.7+ (AMD)
 ---------------
@@ -65,11 +65,11 @@ The following example replace all classes with addMe :
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
-      domClass.replace("someNode", "addMe"); 
+      domClass.replace("someNode", "addMe");
   });
 
   // dojo < 1.7
-  dojo.replaceClass("someNode", "addMe"); 
+  dojo.replaceClass("someNode", "addMe");
 
 Available in `dojo.NodeList()` for multiple toggles
 ---------------------------------------------------
@@ -78,11 +78,11 @@ Available in `dojo.NodeList()` for multiple toggles
 
   // dojo 1.7+ (AMD)
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
-      query(".findMe").replaceClass("addMe", "removeMe"); 
+      query(".findMe").replaceClass("addMe", "removeMe");
   });
 
   // dojo < 1.7
-  dojo.query(".findMe").replaceClass("addMe", "removeMe"); 
+  dojo.query(".findMe").replaceClass("addMe", "removeMe");
 
 ========
 See also

@@ -82,20 +82,20 @@ Example 1: dojo.xhrPut call to send some text data
               dojo.byId("response2").innerHTML = "Message put.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'putIt' service on the 
+              //We'll 404 in the demo, but that's okay.  We don't have a 'putIt' service on the
               //docs server.
               dojo.byId("response2").innerHTML = "Message put.";
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
           //Call the asynchronous xhrPost
-          var deferred = dojo.xhrPut(xhrArgs);  
+          var deferred = dojo.xhrPut(xhrArgs);
         });
       }
       dojo.addOnLoad(sendText);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Push the button to PUT some text.</b>
     <br>

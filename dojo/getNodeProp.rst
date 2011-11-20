@@ -48,7 +48,7 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-  require(["dojo/_base/html"], function(dojo){   
+  require(["dojo/_base/html"], function(dojo){
       dojo.getNodeProp("model", name);
   });
 
@@ -56,7 +56,7 @@ It's recommend to use attr.getNodeProp in dojo 1.7.
 
 .. code-block :: javascript
 
-  require(["dojo/dom-attr"], function(attr){   
+  require(["dojo/dom-attr"], function(attr){
       attr.getNodeProp("model", name);
   });
 

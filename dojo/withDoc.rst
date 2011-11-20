@@ -14,7 +14,7 @@ dojo.withDoc provides a mechanism by which a function can have the document root
 Introduction
 ============
 
-This function provides a quick way to alter the 'document' root as seen by dojo for specific operations.  This is most notably useful when iframes are involved and you want to use a core dojo function, such as dojo.query or dojo.style against contents of that iframe.  
+This function provides a quick way to alter the 'document' root as seen by dojo for specific operations.  This is most notably useful when iframes are involved and you want to use a core dojo function, such as dojo.query or dojo.style against contents of that iframe.
 
 =====
 Usage
@@ -32,11 +32,11 @@ Dojo 1.7 (AMD)
    require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query) {
      var iframeDoc = dom.byId("someFrameId").contentWindow.document;
 
-     //Call a callback with different 'global' values and context. 
+     //Call a callback with different 'global' values and context.
      win.withDoc(iframeDoc, function() {
        var someDiv = query("someDiv");
        style.set(someDiv, "color", "red");
-     }, this)); 
+     }, this));
    });
  </script>
 
@@ -50,11 +50,11 @@ Dojo < 1.7
  <script type="text/javascript">
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
-   //Call a callback with different 'global' values and context. 
+   //Call a callback with different 'global' values and context.
    dojo.withDoc(iframeDoc, function() {
      var someDiv = dojo.query("someDiv");
      dojo.style(someDiv, "color", "red");
-   }, this)); 
+   }, this));
  </script>
 
 
@@ -89,7 +89,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
       dojo.addOnLoad(changeStyles);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <button id="changeStyles" data-dojo-type="dijit.form.Button">Change Text Color in iFrame</button>
     <br><br>

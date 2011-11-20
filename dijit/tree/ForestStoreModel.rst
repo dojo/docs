@@ -16,7 +16,7 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 	<div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
 		data-dojo-props="url:'_data/countries.json'"></div>
-	<div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+	<div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
 		data-dojo-props="store:continentStore, query:{type:'continent'},
 		rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 

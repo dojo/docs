@@ -44,16 +44,16 @@ To set the default value for a programmatic FilteringSelect, include the *value*
         dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
-    <script type="text/javascript">     
+    <script type="text/javascript">
         dojo.addOnLoad(function(){
             var stateStore = new dojo.data.ItemFileReadStore({
                 url: "{{dataUrl}}/dijit/tests/_data/states.json"
             });
             var filteringSelect = new dijit.form.FilteringSelect({
-                id: "stateSelect", 
-                name: "state", 
-                value: "KY", 
-                store: stateStore, 
+                id: "stateSelect",
+                name: "state",
+                value: "KY",
+                store: stateStore,
                 searchAttr: "name"
             }, "stateSelect");
         });
@@ -107,7 +107,7 @@ To set the default value for this example, specify the *value* attribute (the hi
 
   .. cv:: html
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"
         data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
     <input data-dojo-type="dijit.form.FilteringSelect"
@@ -134,7 +134,7 @@ In this example, the FilteringSelect has been set to display the abbreviations f
 
   .. cv:: html
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"
         data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
     <input data-dojo-type="dijit.form.FilteringSelect"
@@ -485,7 +485,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 
   .. cv:: html
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"
         data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
     <input data-dojo-type="dijit.form.FilteringSelect"

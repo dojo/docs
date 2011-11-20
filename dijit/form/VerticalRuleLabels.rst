@@ -8,7 +8,7 @@ dijit.form.VerticalRuleLabels
 
 :Status:
 :Version:
-:Authors: 
+:Authors:
 
 
 The Label widget is used for specifying labels for the :ref:`dijit.form.VerticalRule <dijit/form/VerticalRule>`. One way of specifying the labels is through a custom defined array of Strings. To get numeric labels,the minimum and maximum attributes need to be specified. The labels can also be specified directly as children of the <li> tag.

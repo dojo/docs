@@ -57,7 +57,7 @@ You also need to include the CSS for it.  For example:
   </style>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FindReplace plugin!  To display the find/replace toolbar, click the find/replace toggle button in the main toolbar.  The find/replace toolbar will then appear beneath the main toolbar.  
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FindReplace plugin!  To display the find/replace toolbar, click the find/replace toggle button in the main toolbar.  The find/replace toolbar will then appear beneath the main toolbar.
 
 ==============
 User Interface
@@ -157,7 +157,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

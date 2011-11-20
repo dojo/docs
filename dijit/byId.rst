@@ -9,14 +9,14 @@ dijit.byId
 .. contents::
    :depth: 2
 
-dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.  
+dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.
 
 
 ============
 Introduction
 ============
 
-dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the the JavaScript object instance of your widget and access functions of that widget.  
+dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the the JavaScript object instance of your widget and access functions of that widget.
 
 =====
 Usage
@@ -48,7 +48,7 @@ Example 1: Locating a widget by its ID
       function findWidget () {
         //Locate the JS object.
         var widget = dijit.byId("myTextBox");
-        if(widget){ 
+        if(widget){
           //Find my output node and write out I found my textbox and got its value.
           dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.attr("value") + "]";
         }else{
@@ -59,7 +59,7 @@ Example 1: Locating a widget by its ID
       dojo.addOnLoad(findWidget);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <input id="myTextBox" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
@@ -93,7 +93,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
       dojo.addOnLoad(findWidgetDOM);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <input id="myTextBox2" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
@@ -128,7 +128,7 @@ Example 3: Comparing dojo.byId and dijit.byId
       dojo.addOnLoad(compareDojoDijitById);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <input id="myTextBox3" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
@@ -147,7 +147,7 @@ Consider the following simple ContentPane widget which has an id property (stand
 .. code-block :: html
  :linenos:
 
- <div id="myDivId" 
+ <div id="myDivId"
       data-dojo-type="dijit.layout.ContentPane"
       data-dojo-id="myDojoId">
     Hello Everyone!

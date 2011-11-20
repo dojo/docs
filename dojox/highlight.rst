@@ -34,7 +34,7 @@ There are several pre-defined language packs. Shipped with Dojo include:
 * SQL (sql)
 * XML (xml)
 
-The rollups _all (all languages), _dynamic, _static, and _www provide layers of common groups of languages. 
+The rollups _all (all languages), _dynamic, _static, and _www provide layers of common groups of languages.
 
 There are additional definitions for Pygments-based highlighting:
 
@@ -45,7 +45,7 @@ There are additional definitions for Pygments-based highlighting:
 
 The rollups _www and _html are provided as layers, for related code inclusion.
 
-The name in parenthesis indicate that which you should dojo.require() to load the definitions. eg: 
+The name in parenthesis indicate that which you should dojo.require() to load the definitions. eg:
 
 .. code-block :: javascript
 
@@ -60,7 +60,7 @@ Highlight is entirely CSS based, so you will need the appropriate CSS file. The 
 
     <link rel="stylesheet" href="/js/dojox/highlight/resources/highlight.css" />
 
-Additionally, the Pygments CSS files are located in resources/pygments/ and are described by a theme name. Simply load in the appropriate theme you choose: 
+Additionally, the Pygments CSS files are located in resources/pygments/ and are described by a theme name. Simply load in the appropriate theme you choose:
 
 .. code-block :: html
 
@@ -91,7 +91,7 @@ After loading in the highlight engine, and putting the CSS on the page, the only
 
       <code data-dojo-type="dojox.highlight.Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
 
-Or by calling ``dojox.highlight.init(someNode)``. 
+Or by calling ``dojox.highlight.init(someNode)``.
 
 .. code-block :: javascript
 

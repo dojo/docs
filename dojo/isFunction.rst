@@ -116,7 +116,7 @@ Test against isFunction()
             // Is t a Function?
             if (dojo.isFunction(t)) {
                 // dojooo: t is a function!
-                dojo.attr(resultDiv, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is a function.<br />Try another button.");
 
                 // Change the backgroundColor:
@@ -126,8 +126,8 @@ Test against isFunction()
                 });
             } else {
                 // no chance, this can't be an array:
-                dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be a function with such a value " 
+                dojo.attr(resultDiv, "innerHTML",
+                    "No chance: 't' can't be a function with such a value "
                      + "('t' seems to be a " + typeof t + ").<br />"
                      + "Try another button.");
 

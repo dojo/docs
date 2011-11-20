@@ -115,7 +115,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
         dojo.require("dijit.Dialog");
 
         var secondDlg;
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             // create the dialog:
             secondDlg = new dijit.Dialog({
                 title: "Programmatic Dialog Creation",
@@ -140,7 +140,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 
     <style type="text/css">
         #dialogColor_underlay {
-            background-color:green; 
+            background-color:green;
         }
     </style>
 
@@ -157,7 +157,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
 
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             // create the dialog:
             var dialogColor = dijit.byId("dialogColor");
 
@@ -230,7 +230,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         dojo.require("dijit.form.DateTextBox");
         dojo.require("dijit.form.TimeTextBox");
 
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             formDlg = dijit.byId("formDialog");
             dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
         });
@@ -294,7 +294,7 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
         dojo.require("dijit.form.DateTextBox");
         dojo.require("dijit.form.TimeTextBox");
 
-        dojo.addOnLoad(function(){	
+        dojo.addOnLoad(function(){
             var formDlg = dijit.byId("formDialog2");
             dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
         });
@@ -331,7 +331,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
                 <td>
                     <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
                     <label for="radioTwo">
-                        I decline 
+                        I decline
                     </label>
                 </td>
             </tr>
@@ -482,7 +482,7 @@ For earlier Dojo versions, you can add an onshow event handler that adds the ari
   <div dojoType="dijit.Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
     <div id="intro">Text to describe dialog</div>
     <div>Additional dialog contents....</div>
-  </div> 
+  </div>
 
 Known Issues
 ------------
@@ -497,15 +497,15 @@ Known Issues
   when setting focus to an input type=file element as the first element as a dialog. For this reason, in Firefox if the first
   focusable item in a dialog is an input type=file, focus will be set onto the dialog container rather than the input element.
   For these reasons it is recommended that input type=file elements not be added as the only or first focusable item within a dialog in Firefox.
-* Even though the dialog is marked with the proper ARIA role of dialog, there are issues with screen readers. Due to these issues , it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will be opened. 
+* Even though the dialog is marked with the proper ARIA role of dialog, there are issues with screen readers. Due to these issues , it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will be opened.
 
   * JAWS 9 does not speak "dialog" when the dialog is opened in Firefox or IE 8.
   * In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
   * In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken. The issue has been fixed in JAWS 10 with Firefox 3.
-  * In IE 8 with JAWS 10 and JAWS 11 the dialog information and title is not spoken. This is due to the fact that IE 8 does not support the ARIA labelledby property that is used to assign the title to the dialog.  
+  * In IE 8 with JAWS 10 and JAWS 11 the dialog information and title is not spoken. This is due to the fact that IE 8 does not support the ARIA labelledby property that is used to assign the title to the dialog.
 * There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
   in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue has been addressed in the 1.5 release.
-* When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode: 
+* When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode:
 * Dialogs with an iframe as the contents will cause a focus trap and are not supported. This because the dialog code can not traverse within the iframe contents to find all of the focusable elements to know the first and last focusable element within the contents.
 * Dialogs with no focusable items cause problems for screen readers.  If the dialog has no focusable items, set the tabindex="0" on the container element of the text.  This will set focus to that container when the dialog is opened and will cause JAWS to speak the title of the dialog and the user will know that a dialog has been opened.
 

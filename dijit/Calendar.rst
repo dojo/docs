@@ -15,7 +15,7 @@ Navigating between months is possible with the arrow icons, and the next and pre
 
 The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
 
-Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in :ref:`dojox.date <dojox/date>`.  
+Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in :ref:`dojox.date <dojox/date>`.
 
 
 ========
@@ -137,7 +137,7 @@ With a local custom template to change the layout (does not work against CDN)
 
       dojo.addOnLoad(function(){
         //Need to declare BigCalendar here in an addOnLoad block so that it works
-        //with xdomain loading, where the dojo.require for dijit.Calendar 
+        //with xdomain loading, where the dojo.require for dijit.Calendar
         //may load asynchronously. This also means we cannot have HTML
         //markup in the body tag for BigCalendar, but instead inject it in this
         //onload handler after BigCalendar is defined.
@@ -150,8 +150,8 @@ With a local custom template to change the layout (does not work against CDN)
 
         var bigCalendar = dojo.byId("calendar5");
         bigCalendar.setAttribute("data-dojo-type", "BigCalendar");
-        dojo.parser.parse(bigCalendar.parentNode);       
-      });     
+        dojo.parser.parse(bigCalendar.parentNode);
+      });
     </script>
 
   .. html::
@@ -259,10 +259,10 @@ See Also
 
 
 =============
-Accessibility 
+Accessibility
 =============
 
-As of 1.6 full keyboard support has been implemented for the Calendar.  
+As of 1.6 full keyboard support has been implemented for the Calendar.
 
 Keyboard
 --------
@@ -283,4 +283,4 @@ Select the date                               Enter, Space
 Screen Reader Issues
 --------------------
 
-The Calendar has been implemented as a table so standard table announcements and navigation work as expected with JAWS 12. As the user arrows through the table the day number is announced.  As the user moves from column to column the weekday column headers are announced as well.  For en-us locales these are the first letters of the days of the week: S, M, T, W, T, F, S.  The month name is also included when it changes. The current year has been assigned as the label for the Calendar table and is also announced when it changes.  
+The Calendar has been implemented as a table so standard table announcements and navigation work as expected with JAWS 12. As the user arrows through the table the day number is announced.  As the user moves from column to column the weekday column headers are announced as well.  For en-us locales these are the first letters of the days of the week: S, M, T, W, T, F, S.  The month name is also included when it changes. The current year has been assigned as the label for the Calendar table and is also announced when it changes.

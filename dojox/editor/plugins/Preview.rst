@@ -51,7 +51,7 @@ You also need to include the CSS for it.  For example:
   </style>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Preview plugin!  
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Preview plugin!
 
 ======================
 Configuring CSS styles
@@ -106,7 +106,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -139,7 +139,7 @@ Applying styles to preview content
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 3px; border-color: darkgray;} table tr {border-style: outset; border-width: 3px;} table tr td {border-style: inset; border-width: 3px;}'}]">       
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 3px; border-color: darkgray;} table tr {border-style: outset; border-width: 3px;} table tr td {border-style: inset; border-width: 3px;}'}]">
     <div>
     <br>
     blah blah & blah!
@@ -156,7 +156,7 @@ Applying styles to preview content
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -190,7 +190,7 @@ Applying stylesheets to preview content
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', stylesheets: ['{{dataUrl}}dojox/editor/tests/testBodySheet.css', '{{dataUrl}}dojox/editor/tests/testContentSheet.css']}]">       
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', stylesheets: ['{{dataUrl}}dojox/editor/tests/testBodySheet.css', '{{dataUrl}}dojox/editor/tests/testContentSheet.css']}]">
     <div>
     <p>
     blah blah & blah!
@@ -207,7 +207,7 @@ Applying stylesheets to preview content
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

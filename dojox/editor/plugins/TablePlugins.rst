@@ -6,7 +6,7 @@ dojox.editor.plugins.TablePlugins
 :Author: Mike Wilcox
 
 A series of plugins that give the Editor the ability to create and edit HTML tables. The list of Table Plugins are:
- - Insert Table 
+ - Insert Table
  - Modify Table
  - Insert Table Row Before
  - Insert Table Row After
@@ -63,7 +63,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
         {name: 'dojox.editor.plugins.TablePlugins', command: 'tableContextMenu'}
       ]">
       Dojo Rocks with a fox in socks. Red socks.
-      <table width="200" border="2" align="center" 
+      <table width="200" border="2" align="center"
         cellpadding="2" cellspacing="2" bordercolor="#00FFFF" bgcolor="#FF0000" id="myTable">
         <tr>
             <td>&nbsp;</td>
@@ -73,6 +73,6 @@ Although the code for the Editor is complex, it is quite simple to implement:
             <td>&nbsp;</td>
             <td bgcolor="#00FFFF">&nbsp;</td>
         </tr>
-      </table> 
+      </table>
     </div>
     </div>

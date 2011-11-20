@@ -31,7 +31,7 @@ Basic dojo.connect
 
 This example shows, how to use dojo.connect to connect the datastores onNew function with one of your own functions:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   var store = some.NotifyWriteStore();
   var alertOnNew = function(item) {
@@ -49,7 +49,7 @@ Replacing the onNew function
 
 This example shows, how to override the onNew function of a datastore with a custom one:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   var store = some.NotifyWriteStore();
   store.onNew = function(item) {
@@ -74,10 +74,10 @@ onSet
   onSet: function(item, attribute, oldValue, newValue)
 
 summary:
-  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
+  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.
 
 description:
-  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
+  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.
   Its purpose is to provide a hook point for those who wish to monitor actions on items in the store in a simple manner. The general expected usage is to dojo.connect() to the store's implementation and be called after the store function is called.
 
 parameters:
@@ -113,7 +113,7 @@ parameters:
   parameter   type    description
   ==========  ======  ===========
   newItem     object  The item created.
-  parentInfo  object  An optional javascript object that is passed when the item created was placed in the store hierarchy as a value from another item's attribute, instead of a root level item. Note that if this function is invoked with a value for parentInfo, then onSet is not invoked stating the attribute of the parent item was modified. This is to avoid getting two notification events occurring when a new item with a parent is created. 
+  parentInfo  object  An optional javascript object that is passed when the item created was placed in the store hierarchy as a value from another item's attribute, instead of a root level item. Note that if this function is invoked with a value for parentInfo, then onSet is not invoked stating the attribute of the parent item was modified. This is to avoid getting two notification events occurring when a new item with a parent is created.
   ==========  ======  ===========
 
   The structure of the parameter parentInfo is as follows:
@@ -126,13 +126,13 @@ parameters:
       // The attribute the new item was assigned to:
       attribute: "attribute-name-string",
       // Whatever was the previous value for the attribute:
-      // In the case of single value calls, such as setValue, unsetAttribute, etc, 
-      // this value will be generally be an atomic value of some sort (string, int, etc, object). 
+      // In the case of single value calls, such as setValue, unsetAttribute, etc,
+      // this value will be generally be an atomic value of some sort (string, int, etc, object).
       // In the case of multi-valued attributes, it will be an array of all the values minues the new one.
       oldValue: something,
       // The new value of the attribute:
       // In the case of single value calls, such as setValue, this value will be
-      // generally be an atomic value of some sort (string, int, etc, object). 
+      // generally be an atomic value of some sort (string, int, etc, object).
       // In the case of multi-valued attributes, it will be an array.
       newValue: something
     }

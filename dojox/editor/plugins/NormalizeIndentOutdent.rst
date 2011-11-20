@@ -10,7 +10,7 @@ dojox.editor.plugins.NormalizeIndentOutdent
 .. contents::
     :depth: 2
 
-Have you ever wanted to pull your hair out because the the way browsers handle the native indent and outdent commands is inconsistent and in some cases downright wrong?  If so, then this plugin may help you!  This plugin attempts to control how indenting and outdenting of content is handled and do it consistently across all browsers.  It uses margin-left styling to handle indenting of block nodes, it will wrap and indent body-level text, and it will indent and outdent lists correctly.  It even attempts to fix malformed lists.   
+Have you ever wanted to pull your hair out because the the way browsers handle the native indent and outdent commands is inconsistent and in some cases downright wrong?  If so, then this plugin may help you!  This plugin attempts to control how indenting and outdenting of content is handled and do it consistently across all browsers.  It uses margin-left styling to handle indenting of block nodes, it will wrap and indent body-level text, and it will indent and outdent lists correctly.  It even attempts to fix malformed lists.
 
 This plugin is new in 1.4, and is still being worked on, so it is considered experimental.  Any feedback you can provide on issues you encounter would be appreciated.
 
@@ -23,9 +23,9 @@ Features
 This plugin cleans up the output from dijit.Editor in the following ways:
 
 * Uses margin styling for indenting instead of inconsistent behaviors like <blockquote> and the like.
-* Will wrap body-level text in indentable containts when indenting said text.  
+* Will wrap body-level text in indentable containts when indenting said text.
 * Handles multi-node selection indenting
-* Indents and outdents list elements correctly.  All known browsers (FireFox, Internet Explorer, WebKit), actually generate invalid HTML for lists when the native indent/outdent are used, so this plugin fixes that.  
+* Indents and outdents list elements correctly.  All known browsers (FireFox, Internet Explorer, WebKit), actually generate invalid HTML for lists when the native indent/outdent are used, so this plugin fixes that.
 * Makes use of the customUndo capability of editor.  This may impact performance on large documents, but is necessary as fixing the indent behavior requires DOM level manipulation, which the native undo/redo doesn't handle.
 
 =====
@@ -69,7 +69,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div data-dojo-type="dijit.Editor" 
+  <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'normalizeindentoutdent', indentBy: 3, indentUnits: 'em'}]">
   </div>
 
@@ -116,7 +116,7 @@ Basic Usage
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two
@@ -166,7 +166,7 @@ Configured indent to be ems
     </tr>
     </tbody>
     </table>
-    <ul> 
+    <ul>
     <li>item one</li>
     <li>
     item two

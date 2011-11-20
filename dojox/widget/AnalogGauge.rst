@@ -90,13 +90,13 @@ A partial circle gauge with two indicators (programmatic)
           },
           indicators: [
             new dojox.widget.gauge.AnalogArrowIndicator({
-              value:17, 
+              value:17,
               width: 3,
-              hover:'Value: 17', 
+              hover:'Value: 17',
               title: 'Value'
            }),
            new dojox.widget.gauge.AnalogLineIndicator({
-             value:6, 
+             value:6,
              color:'#D00000',
              width: 3,
              hover:'Target: 6',

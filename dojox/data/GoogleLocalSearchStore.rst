@@ -63,7 +63,7 @@ The pattern of using the GoogleLocalSearchStore is
  :linenos:
 
  <script type="text/javascript">
-  dojo.require("dojox.data.GoogleSearchStore"); 
+  dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleLocalSearchStore();
 
   var query = {text: "central park, new york"};
@@ -106,7 +106,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.data.GoogleSearchStore"); 
+    dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch() {
 
@@ -142,7 +142,7 @@ Programmatic example
 
           var mapCell = dojo.create("td", {}, row);
           var mapLink = dojo.create("a", {
-                             href: store.getValue(item, "url"),                             
+                             href: store.getValue(item, "url"),
                              target: "_blank"
                            }, mapCell );
           dojo.create("img", {

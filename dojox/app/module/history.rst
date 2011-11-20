@@ -88,8 +88,8 @@ second.html
     <a href="#tabscene,tab2">to tabscene,tab2</a><br>
   </div>
 
-Sample views are rendered as following. 'Main Scene::Second View' will transition to 'View simple/second' by  transitionOptions configuration, and 'to main,main' link will transition to 'Main Scene Views' by 'href' configuration. And 'back' button will backward to 'Main Scene Views'. 
+Sample views are rendered as following. 'Main Scene::Second View' will transition to 'View simple/second' by  transitionOptions configuration, and 'to main,main' link will transition to 'Main Scene Views' by 'href' configuration. And 'back' button will backward to 'Main Scene Views'.
 
-.. image :: /pic1.png  
+.. image :: /pic1.png
   
 .. image :: /pic2.png

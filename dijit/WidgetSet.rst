@@ -130,7 +130,7 @@ Validating all widgets in a WidgetSet
 .. code-block :: javascript
   :linenos:
 
-  var isValid = ws.every(function(widget){ 
+  var isValid = ws.every(function(widget){
     // all widgets must have a value > 0 to pass
     return widget.isValid();
   });

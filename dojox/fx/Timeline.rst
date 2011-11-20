@@ -26,11 +26,11 @@ After including dojox.fx.Timeline, the factory method *dojox.fx.animateTimeline*
     
 The objects in the *keys* array are key-value pairs of CSS properties, similar as in dojo.animateProperty. In addition to the CSS key-values, a *keys* object accepts two custom properties:
 
-* step 
-    The start, finish or percentage that this keyframe represents. Allowed parameters are:     
+* step
+    The start, finish or percentage that this keyframe represents. Allowed parameters are:
         0%-100% (as a string)
         
-        from (same as 0%, used to conform with the Webkit animation spec)     
+        from (same as 0%, used to conform with the Webkit animation spec)
         
         to (same as 100%, used to conform with the Webkit animation spec)
 

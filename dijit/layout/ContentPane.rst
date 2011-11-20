@@ -16,7 +16,7 @@ A Content Pane is the most basic layout tile. Conceptually, it's like the conten
 Usage
 =====
 
-You can use content panes by themselves, but usually you will place content panes inside of a layout container. For example, in a tabbed layout, content pane tags surround each tab of information. 
+You can use content panes by themselves, but usually you will place content panes inside of a layout container. For example, in a tabbed layout, content pane tags surround each tab of information.
 
 Href
 ----
@@ -29,7 +29,7 @@ ContentPane acts as a base class for a number of widgets (such as :ref:`Dialog <
 Loading Message
 ---------------
 
-The loading message that's displayed while content is being fetched can be changed by changing the loadingMessage attribute of the ContentPane.  The default value of the loadingMessage attribute is "<span class='dijitContentPaneLoading'>${loadingState}</span>" so, you can change the look of the message by applying css to the .dijitContentPaneLoading class. 
+The loading message that's displayed while content is being fetched can be changed by changing the loadingMessage attribute of the ContentPane.  The default value of the loadingMessage attribute is "<span class='dijitContentPaneLoading'>${loadingState}</span>" so, you can change the look of the message by applying css to the .dijitContentPaneLoading class.
  
 
 Callbacks

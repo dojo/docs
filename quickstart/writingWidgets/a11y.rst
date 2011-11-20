@@ -11,12 +11,12 @@ Creating Accessible Widgets
 Device Independence
 -------------------
 
-Device Independent behavior means more than just supporting the keyboard. Where ever possible use the most generic event handler available. For example, consider a widget where the down arrow key selects an element in the widget. The selection needs to be distinguished with a specific style. Rather than modifying the style of the element when processing the down arrow key event, focus the item from the down arrow key event handler and change the style via a focus event handler. This way, if focus is set from a means other than the keyboard such as a voice input system, the styling is properly set and does not depend solely on keyboard actions. 
+Device Independent behavior means more than just supporting the keyboard. Where ever possible use the most generic event handler available. For example, consider a widget where the down arrow key selects an element in the widget. The selection needs to be distinguished with a specific style. Rather than modifying the style of the element when processing the down arrow key event, focus the item from the down arrow key event handler and change the style via a focus event handler. This way, if focus is set from a means other than the keyboard such as a voice input system, the styling is properly set and does not depend solely on keyboard actions.
 
 Determining Keyboard Behavior
 -----------------------------
 
-When implementing keyboard navigation, the ideal solution is to mimic the behavior of the operating system. For example, the right and left arrow keys are used to expand and collapse nodes in a Windows tree control and the up and down arrow keys move between nodes in the control. Unfortunately it is not always possible to mimic the operating system or browser behavior because the widgets may not be able to capture the necessary keys. A group of industry representatives are working to create a style guide to describe the navigation and behaviors of Web widgets. When completed, this Style Guide will be provided to open source and dijit plans to implement the recommendations. Eventually, the Style Guide will attempt to normalize the differences between operating systems and provide a generalized solution for Web components 
+When implementing keyboard navigation, the ideal solution is to mimic the behavior of the operating system. For example, the right and left arrow keys are used to expand and collapse nodes in a Windows tree control and the up and down arrow keys move between nodes in the control. Unfortunately it is not always possible to mimic the operating system or browser behavior because the widgets may not be able to capture the necessary keys. A group of industry representatives are working to create a style guide to describe the navigation and behaviors of Web widgets. When completed, this Style Guide will be provided to open source and dijit plans to implement the recommendations. Eventually, the Style Guide will attempt to normalize the differences between operating systems and provide a generalized solution for Web components
 
 Within all widgets interaction with both the keyboard and the mouse is important – users may switch between using the mouse and using the keyboard at any time. A widget author can not assume only keyboard or only mouse interaction. Thus, the widget component will generally need to store information about the current item with focus. This can also be useful when the keyboard event handler is placed on an owning object in the component hierarchy rather than the actual element generating the event – for example on the table element rather than on each td element. Even though the event handler provides information on exactly what element generated the event, it is often necessary or easier to use the stored point of reference. In addition, the point of regard is often needed in order to update the style on the element losing focus before updating the new item irregardless or whether the mouse or the keyboard generated the event that results in a focus change.
 
@@ -71,7 +71,7 @@ As of October, 2008, the ARIA specifications are nearing W3C Last Call status; h
 
 Additional ARIA resources:
 
-- `Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center provides additional information about ARIA and includes examples of ARIA widgets as well as a table of roles and states supported in current versions of Firefox. 
+- `Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center provides additional information about ARIA and includes examples of ARIA widgets as well as a table of roles and states supported in current versions of Firefox.
 - Illinois Center for Information Technology Accessibility provides a set of `ARIA Examples <http://test.cita.uiuc.edu/aria/index.php>`_
 - `FREE-ARIA  <http://groups.google.com/group/free-aria>`_ is a google group "for people who want to help provide free tools and resources for the advancement of WAI-ARI".
 - `Code Talks <http://wiki.codetalks.org/wiki/index.php/Main_Page>`_ wiki for discussing ARIA and accessible Web 2.0 widgets
@@ -110,7 +110,7 @@ It may not always be practical to create items via HTML in a hierarchical fashio
 
 .. code-block :: javascript
 
-  <div role="tree"> 
+  <div role="tree">
     <div role="treeitem">Top </div>
     <div role="group">
       <div role="treeitem">1</div>
@@ -178,7 +178,7 @@ Since the table is only used for layout it is identified with a role of presenta
 
 And, as mentioned previously, Firefox 3 now puts all div elements into the accessibility hierarchy, so if the div is being used for layout purposes or has no other specific role, it should be marked with role=presentation.
 
-Assigning States as of 1.0 
+Assigning States as of 1.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In addition to identifying the role of a widget, the state of the widget must be identified and updated. The initial state can be set within the widget template or via scripting when the widget is created. As the state changes during user interaction with the widget, the state must be updated using the dijit.xxxWaiState apis:

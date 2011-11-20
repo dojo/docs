@@ -60,7 +60,7 @@ dojo.html.set()
     * feature added to use ContentPane like functionality outside of ContentPane.
 
 Dijit Enhancements
-================== 
+==================
 
 Usability/LookAndFeel enhancements
 ----------------------------------
@@ -135,7 +135,7 @@ RadioButton
 
     * Indicate focus on FF/Safari the same as IE (via a hatched box around the label).
 
-Tree 
+Tree
 ----
 
     * Fixed issues with horizontal scrolling and made each row white-space:nowrap, so that the label doesn't wrap around.
@@ -202,7 +202,7 @@ dojox.html
 
 
 New/Enhanced DojoX Widgets
-========================== 
+==========================
  
 dojox.Editor
 ------------

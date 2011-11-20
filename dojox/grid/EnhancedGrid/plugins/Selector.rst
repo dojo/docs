@@ -48,7 +48,7 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 		var len = data_list.length;
 		for(i=0; i < len ; ++i){
 			data.items.push(dojo.mixin({ 'id': i+1 }, data_list[i]));
-		}	
+		}
 
 		var layout = [{
 			defaultCell: {width: 3},
@@ -187,8 +187,8 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-    store="mystore" structure="mystructure" 
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+    store="mystore" structure="mystructure"
     plugins="{
       selector: /* a Boolean value or an configuration object */{}
   }" ></div>
@@ -233,9 +233,9 @@ Extended selection allows the following operations:
 Operation                  Use Mouse                                                                                           Use Keyboard                                                                 Result
 =========================  ==================================================================================================  ===========================================================================  ==========================================================================================
 Point Selection            Click mouse selection button with pointer on object to be selected.                                 With cursor on object to be selected, press Space or Enter.                  Deselects all other objects in this grid, selects single identified object.
-Swipe Range Selection      Press mouse selection button at the start point and hold while move the pointer to the end point;   Press Shift at the start point and hold while using cursor-movement          Deselects all other objects in this grid; 
+Swipe Range Selection      Press mouse selection button at the start point and hold while move the pointer to the end point;   Press Shift at the start point and hold while using cursor-movement          Deselects all other objects in this grid;
                            release the mouse selection button at the end point.                                                keys to move the cursor to the end point; release shift at end point.        selects all objects in order from the identified start point to the identified end point.
-Click Range Selection      Click mouse selection button at the start point;                                                    Press Space or Enter to select the start point; use cursor-movement          Deselects all other objects in this grid; 
+Click Range Selection      Click mouse selection button at the start point;                                                    Press Space or Enter to select the start point; use cursor-movement          Deselects all other objects in this grid;
                            press Shift and click the mouse selection button at the end point, then release Shift key.          keys to move the cursor to the end point;                                    selects all objects in order from the identified start point to the identified end point.
                                                                                                                                Press Shift ANDSpace/Enter at the end point.
 =========================  ==================================================================================================  ===========================================================================  ==========================================================================================
@@ -402,7 +402,7 @@ clear(type):
 
 ==============  ==================  ==============================  =================================================
 Arguments       Type                Optional/Mandatory              Description
-==============  ==================  ==============================  =================================================	
+==============  ==================  ==============================  =================================================
 type            String              Optional(default to undefined)  "row" or "col" or "cell". If omitted, clear all.
 ==============  ==================  ==============================  =================================================
 
@@ -413,7 +413,7 @@ getSelected(type, includeExceptions):
 Arguments           Type                Optional/Mandatory              Description
 ==================  ==================  ==============================  ==================================================================================
 type                String              Mandatory                       "row" or "col" or "cell"
-includeExceptions   Boolean             Optional(default to false)      Only meaningful for rows/columns. 
+includeExceptions   Boolean             Optional(default to false)      Only meaningful for rows/columns.
                                                                         If true, all selected rows/cols, even they are partly selected, are all returned.
 [return]            __SelectItem[]                                      Array of selected items.
 ==================  ==================  ==============================  ==================================================================================

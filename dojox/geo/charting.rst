@@ -32,7 +32,7 @@ Several interactor classes can be installed on the Map component, to allow navig
 
 
   - mouse interactor for usual desktop use
-  - keyboard interactor for accessibility purposes 
+  - keyboard interactor for accessibility purposes
   - touch interactor (for touch devices)
 
 
@@ -55,7 +55,7 @@ First, instantiate the Map component, and associate it with the DOM Node contain
 
  
 The setMarkerData function is used to supply a Json file containing tooltips for map elements. For instance :
-{"AK":"Alaska","AZ":"Arizona","AR":"Arkansas" 
+{"AK":"Alaska","AZ":"Arizona","AR":"Arkansas"
 Each map element is referenced in the marker json object by its unique id (defined in the json map data, and also used in the dataStore that contains charting values).
 
 Declare the markup container node for the Map component :
@@ -172,7 +172,7 @@ It can be fully configured in the markup declaration
 .. code-block :: html
  :linenos:
  
- <div id="mapWidget" data-dojo-type="dojox.geo.charting.widget.Map" 
+ <div id="mapWidget" data-dojo-type="dojox.geo.charting.widget.Map"
 	data-dojo-props="shapeData:'resources/data/US_States_intermediate.json',
 	dataStore:'csvStore', series:'resources/data/series.json', markerData:'resources/data/markers.json', showTooltips:false,
 	animateOnResize:false, colorAnimationDuration:300,
@@ -190,6 +190,6 @@ Legend, as its name supposes, displays a legend describing map color scheme.
  
  <div id="mapLegend" data-dojo-type="dojox.geo.charting.widget.Legend" data-dojo-props="map:dijit.byId('mapWidget').getInnerMap(),
 	swatchSize:10, horizontal:false">
- </div> 
+ </div>
 
 The map attribute connects this Legend Dijit to the above Map Dijit inner map.

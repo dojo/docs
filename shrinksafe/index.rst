@@ -1,6 +1,6 @@
 .. _shrinksafe/index:
 
-ShrinkSafe 
+ShrinkSafe
 ==========
 
 :Status: Draft
@@ -19,7 +19,7 @@ Getting the Code
 
 While ShrinkSafe is available as an `online service <http://shrinksafe.dojotoolkit.org/>`_ and part of the tool chain for the `Dojo Build system <build/index>`_, it is also possible to use ShrinkSafe independent of Dojo.
 
-ShrinkSafe comes bundled with the ``-src`` releases of the Dojo Toolkit in the folder ``util/shrinksafe/``. Alternately, you can download ShrinkSafe standalone from `http://download.dojotoolkit.org <http://download.dojotoolkit.org/current-stable/>`_ by selecting the ``-shrinksafe`` archive. 
+ShrinkSafe comes bundled with the ``-src`` releases of the Dojo Toolkit in the folder ``util/shrinksafe/``. Alternately, you can download ShrinkSafe standalone from `http://download.dojotoolkit.org <http://download.dojotoolkit.org/current-stable/>`_ by selecting the ``-shrinksafe`` archive.
 
 
 =====
@@ -53,7 +53,7 @@ ShrinkSafe uses the encoding settings for the JVM, which may vary depending on y
 Developer information
 =====================
 
-ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodified Rhino jar, ``js.jar``.  Note that the linkage requires the same version of Rhino used to build the shrinksafe.jar.  In versions prior to Dojo 1.3, ShrinkSafe was bundled into Rhino by way of patch, and shipped as ``custom_rhino.jar``. 
+ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodified Rhino jar, ``js.jar``.  Note that the linkage requires the same version of Rhino used to build the shrinksafe.jar.  In versions prior to Dojo 1.3, ShrinkSafe was bundled into Rhino by way of patch, and shipped as ``custom_rhino.jar``.
 
 
 ==========

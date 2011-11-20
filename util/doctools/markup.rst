@@ -1,6 +1,6 @@
 .. _util/doctools/markup:
 
-Dojo Inline Documentation 
+Dojo Inline Documentation
 =========================
 
 :Status: Draft
@@ -45,7 +45,7 @@ Although our formatting convention requires that keywords exist on a separate li
 Using Markdown
 ==========================================
 
-You can use `Markdown <http://daringfireball.net/projects/markdown/syntax>`_  in descriptions and examples. 
+You can use `Markdown <http://daringfireball.net/projects/markdown/syntax>`_  in descriptions and examples.
 
 To indicate a code block, indent the code block using a single tab. The parser considers the | (pipe) character to indicate the start of a line. You must use | followed by a tab in order to indicate a code block. In Markdown, to indicate an inline piece of code, surround the code with backticks. eg `<div>`.
 
@@ -74,7 +74,7 @@ Tags
 Tags are used to help the documentation tool group things by purpose and to provide other modifiers that the language doesn't necesarily provide (public, private, protected, etc.). Most tags are ad-hoc, which is to say you can invent your own, but several are pre-defined and used throughout Dojo code. Most UIs that show documentation understand at least public, private, protected, callback, and extension.
 Methods are assumed to be public, but are considered protected by default if they start with a _prefix. This means that the only time you'd use protected is if you don't want someone to use a function without a _prefix, and the only time you'd use private is if you don't want someone to touch your method at all.
 
-* **protected**: The method can be called or overriden by subclasses but should not be accessed (directly) by a user. For example: 
+* **protected**: The method can be called or overriden by subclasses but should not be accessed (directly) by a user. For example:
 
 	.. code-block :: javascript
 		
@@ -98,7 +98,7 @@ Methods are assumed to be public, but are considered protected by default if the
 		        ...
 		}
 
-* **multiple tags**: Multiple tags can separated by spaces: 
+* **multiple tags**: Multiple tags can separated by spaces:
 
 	.. code-block :: javascript
 	
@@ -133,7 +133,7 @@ Method-Specific Tags
 		        ...
 		}
 		
-* **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar: 
+* **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar:
 
 .. code-block :: javascript
 	
@@ -244,7 +244,7 @@ There are some modifiers you can add after the type:
 Full Parameter Summaries
 ------------------------
 
-If you want to also add a summary, you can do so in the initial comment block. If you've declared a type in the parameter definition, you do not need to redeclare it here. 
+If you want to also add a summary, you can do so in the initial comment block. If you've declared a type in the parameter definition, you do not need to redeclare it here.
 
 .. code-block :: javascript
 

@@ -16,7 +16,7 @@ dojo.hash provides methods for monitoring and updating the hash in the browser U
 Background
 ==========
 
-HTML5 defines an onhashchange event that fires when the value of the hash segment of the URL changes. 
+HTML5 defines an onhashchange event that fires when the value of the hash segment of the URL changes.
 
 http://www.w3.org/TR/html5/history.html#history-traversal
 
@@ -59,7 +59,7 @@ Whenever the hash changes, your callback will be called with the new hash value 
 Manipulating the URL
 ====================
 
-Dojo.hash() provides mechanisms for getting and setting the URL's hash value. 
+Dojo.hash() provides mechanisms for getting and setting the URL's hash value.
 
 Setter
 ------
@@ -101,7 +101,7 @@ Getter
         var hashValue = hash();
     });
 	
-    //Dojo < 1.7 
+    //Dojo < 1.7
     var hashValue = dojo.hash();
   ..
 
@@ -158,7 +158,7 @@ Examples
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
         function updateHash() {
             var obj = ioQuery.queryToObject(dojo.hash());  //get
-            obj.someNewParam = true;  
+            obj.someNewParam = true;
             hash(ioQuery.objectToQuery(obj));  //set
         }
     });
@@ -166,7 +166,7 @@ Examples
     //Dojo < 1.7
     function updateHash() {
         var obj = dojo.queryToObject(dojo.hash());  //get
-        obj.someNewParam = true;  
+        obj.someNewParam = true;
         dojo.hash(dojo.objectToQuery(obj));  //set
     }
  ..

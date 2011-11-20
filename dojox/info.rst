@@ -6,7 +6,7 @@ DojoX - Dojo Extensions and Experiments
 :Status: Contributed, Draft
 :Version: 1.0
 
-DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and :ref:`Dijit <dijit/index>`, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the :ref:`Flickr data store <dojox/data/FlickrRestStore>` and :ref:`dojox.color <dojox/color>`. 
+DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and :ref:`Dijit <dijit/index>`, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the :ref:`Flickr data store <dojox/data/FlickrRestStore>` and :ref:`dojox.color <dojox/color>`.
 
 Some caveats of using DojoX:
 ----------------------------
@@ -15,7 +15,7 @@ Some caveats of using DojoX:
 * Unlike Dojo and Dijit, DojoX modules are **not** guaranteed to be fully accessible or internationalized
 * DojoX subprojects may be moved to Dijit or Dojo Core, subject to project lead approval, the needs of the toolkit and the capacity of those teams to absorb additional code.
 * Fully mature, production level code will typically remain in DojoX.
-* Not all modules in DojoX will be documented, since they are lower priority than Base and Core.  
+* Not all modules in DojoX will be documented, since they are lower priority than Base and Core.
 
 Browse the `API documentation <http://dojotoolkit.org/api/dojox.html>`_ and `subversion repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
 
@@ -36,14 +36,14 @@ DojoX follows the same naming conventions as Dojo and Dijit, which basically con
 * Functions are mixed case, always starting with a lowercase. Eg: ``dojox.cometd.init("http://cometserver:9090/cometd");``
 * Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a Lightbox from the :ref:`dojox.image project <dojox/image>`
 * All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with :ref:`dojox.grid.DataGrid <dojox/grid>`
-* No cross-namespace pollution takes place indirectly. 
+* No cross-namespace pollution takes place indirectly.
 
-There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hypens**. By adding a hypen to the 
-module name, it is meant to be clear the module modifies something elsewhere in Dojo. 
+There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hypens**. By adding a hypen to the
+module name, it is meant to be clear the module modifies something elsewhere in Dojo.
 
 For instance, ``dojox.fx.ext-dojo.NodeList`` adds :ref:`dojox.fx <dojox/fx>` functionality into :ref:`dojo.NodeList <dojo/NodeList>`, making it available from a :ref:`dojo.query <dojo/query>` call.
 
-The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of :ref:`requiring <dojo/require>` it mixes the desired functionality in the appropriate place. 
+The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of :ref:`requiring <dojo/require>` it mixes the desired functionality in the appropriate place.
 
 Contributing to DojoX
 ---------------------
@@ -51,12 +51,12 @@ Contributing to DojoX
 Contributing new projects, or patches for existing projects are covered under the same rules as Dojo and Dijit. Code must adhere to The Dojo `Style Guidelines <developer/styleguide>`_, and be covered under a `Contributor License Agreement <http://dojotoolkit.org/cla>`_ to ensure
 it may be distributed. Accepting a new project or patch for an existing project is left to the discretion of the project "owner", or in the case of top-level project, the DojoX BDFL (currently: Adam Peller)
 
-You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we would love to evangelize your efforts! 
+You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we would love to evangelize your efforts!
 
 External Modules
 ----------------
 
-No convention currently exists for external modules in DojoX. For Dojo 2.0, the DojoX project will likely be "decoupled" and treated as entirely external through an undermined mechanism for package retrieval. 
+No convention currently exists for external modules in DojoX. For Dojo 2.0, the DojoX project will likely be "decoupled" and treated as entirely external through an undermined mechanism for package retrieval.
 
 See Also
 --------

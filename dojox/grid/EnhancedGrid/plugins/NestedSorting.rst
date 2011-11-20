@@ -34,7 +34,7 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
 		identifier: 'id',
 		items: []
 	  };
-	  var data_list = [ 
+	  var data_list = [
 		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
@@ -56,7 +56,7 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
           /* create a new grid: */
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
-              store: store,              
+              store: store,
               structure: layout,
               rowSelector: '20px',
               plugins : {nestedSorting: true}},
