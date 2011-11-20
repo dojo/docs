@@ -17,11 +17,12 @@ Dojo
 
 * :ref:`dojo.js <dojo/index>`
 
-  The base functionality of the Dojo Toolkit, provided by just including ``dojo.js``. This includes tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system that makes getting access to the rest of Dojo a snap.
+  The base functionality of the Dojo Toolkit, provided by just including ``dojo.js``. This includes tons of features like CSS-based queries,
+  event handling, animations, Ajax, class-based programming, and a package system that makes getting access to the rest of Dojo a snap.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.ready(function(){
@@ -43,7 +44,7 @@ Dojo
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="showMe" style="padding: 10px;">
         click here to see how it works
@@ -53,9 +54,9 @@ Dojo
 
   Additional stable (but optional) components for advanced animations, I/O, data, Drag and Drop and much more.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dojo.fx");
@@ -81,7 +82,7 @@ Dojo
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="showMe2" style="padding: 10px; margin-left:2px;">
          Click to Animate me with built in easing functions.
