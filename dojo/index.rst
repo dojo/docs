@@ -7,15 +7,35 @@ Dojo
 .. contents::
    :depth: 2
 
-Dojo is divided into two parts: ``dojo.js``, and the rest of Dojo Core. Typically, if a function or Class exists within the dojo namespace directly (eg: ``dojo.require()``, ``dojo.addOnLoad()``) it is provided directly by ``dojo.js``. If the function or Class exists beneath the dojo namespace (eg: ``dojo.dnd.Mover``), you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``)
+The dojo directory contains three categories of modules:
 
-These pages cover both cases, and indicate how they are provided.
+   * dojo.js - the bootstrap
+   * dojo/_base - basic functionality historically pulled in as part of dojo.js, and historically existing directly under the ``dojo`` namespace
+   * "dojo core" - more advanced functionality under a sub-namespace under dojo like ``dojo.dnd``
 
-==================
-Base Dojo: dojo.js
-==================
+Each category is described in detail below.
 
-Dojo Base is the functionality you get by just including a stock built dojo.js or dojo.xd.js in your page.
+=======
+dojo.js
+=======
+
+This file provides the bootstrap for loading other modules, in particular the ``require()`` function, previously known as ``dojo.require()``.
+
+See the `loader documentation <loader/index>`_ for details.
+
+For backwards-compatibility, when dojo.js is included without the async:false configuration flag, all the symbols in dojo/_base
+are implicitly loaded.
+
+==========
+dojo/_base
+==========
+
+The dojo/_base directory contains modules with basic functionality, such as array operations.
+Typically, if a function or class exists within the dojo namespace directly (eg: ``dojo.forEach()``) then it is defined in dojo/_base.
+
+However, note that the modules in dojo/_base are being phased out in favor of top level modules in the dojo/ directory.
+The dojo/_base files will be maintained until the 2.0 release.   See details below for replacement modules.
+ 
 
 Configuring Dojo (dojo/_base/config)
 ------------------------------------
@@ -127,9 +147,9 @@ Language Utilities (dojo/_base/lang)
 
 HTML Utility (dojo/_base/html)
 ------------------------------
-* `dojo/_base/html <dojo/_base/html>`_
+The `dojo/_base/html <dojo/_base/html>`_ module contains basic DOM & HTML handling functions for backward compatibility purpose.
 
-  **dojo/_base/html** module contains basic DOM & HTML handling functions for backward compatibility purpose.
+New code should use the dojo/dom* modules (see "Dojo core" section below for details).
 
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
@@ -209,6 +229,10 @@ Effects (dojo/_base/fx)
 Connect (dojo/_base/connect)
 ----------------------------
 
+This module provides event handling for DOM nodes, and AOP for functions.   However, it is superceded by the `dojo/on <dojo/on>`_, `dojo/aspect <dojo/aspect>`_, and `dojo/topic <dojo/topic>`_ modules, which should be used for new code.
+
+The methods defined in this module are:
+
 * `dojo.connect <dojo/connect>`_
 
   Connects events to methods
@@ -245,9 +269,8 @@ NodeList (dojo/_base/NodeList)
 
 Event (dojo/_base/event)
 ------------------------
-* `dojo/_base/event <dojo/_base/event>`_
+The `dojo/_base/event <dojo/_base/event>`_ module defines dojo DOM event API.   See the dojo/_base/connect section above.
 
-  Defines dojo DOM event API.
 
 Document Lifecycle - Unload (dojo/_base/unload)
 -----------------------------------------------
@@ -291,6 +314,8 @@ Ajax / XHR (dojo/_base/xhr)
 
 Package System (defined in dojo/_base/loader)
 ---------------------------------------------
+
+This module is defining deprecated symbols for loading.   See the `loader documentation <loader/index>`_ for details on new replacement API's.
 
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
@@ -360,6 +385,8 @@ Miscellaneous Base
 =========
 Dojo Core
 =========
+
+If the function or class exists beneath the dojo namespace (eg: ``dojo.dnd.Mover``), it is defined in "dojo core" and you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``) to use it.
 
 DOM (dojo/dom*)
 ---------------
