@@ -58,6 +58,7 @@ Here's an example of showing a context menu aligning one of the corners with the
 
      require(["dijit/place"], function(place){
          place.at(menu, {x: mouse.x, y: mouse.y}, ["TL", "BL", "TR", "BR"]);
+     })
 
 The possible values for the position parameter, which specifies the corner of the popup node, are:
 
