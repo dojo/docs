@@ -1,4 +1,4 @@
-.. _loader/index/legacy:
+.. _loader/legacy:
 
 The Dojo Loader Legacy Modes
 ============================

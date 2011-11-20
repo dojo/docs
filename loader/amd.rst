@@ -1,4 +1,4 @@
-.. _loader/index/amd:
+.. _loader/amd:
 
 The Dojo Loader
 ===============
