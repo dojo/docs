@@ -85,15 +85,15 @@ Declarative example
   The markup has to look as follows
   
   .. html::
-    :label: A dijit button
     
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi</div>
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
   
+  A simple set of css rules
+  
   .. css::
-    :label: A simple set of css rules
 
     <style type="text/css">
       html, body {
@@ -108,7 +108,7 @@ Declarative example
         height: 100%;
       }
     </style>
-
+    
 
 Using layoutPriority
 --------------------
@@ -157,8 +157,6 @@ Nested Layout Widgets
 ---------------------
 
 Lets take a look at a more advanced example of using BorderContainer and other layout widgets.
-This example uses two BorderContainers to allow to, left and right content areas.
-Note the tabStrip attribute on the TabContainer.
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -166,8 +164,9 @@ Note the tabStrip attribute on the TabContainer.
   :height: 400
   :width: 660
 
+  This example uses two BorderContainers to allow to, left and right content areas. 
+
   .. javascript::
-    :label: The dojo requires
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -176,11 +175,10 @@ Note the tabStrip attribute on the TabContainer.
       dojo.require("dijit.layout.AccordionContainer");
     </script>
 
-  The markup has to look as follows
-  
+  The markup has to look as follows: Note the tabStrip attribute on the TabContainer.
+   
   .. html::
-    :label: The markup
-
+    
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true, liveSplitters:false" id="borderContainerTwo">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top', splitter:false">
         Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
@@ -208,8 +206,9 @@ Note the tabStrip attribute on the TabContainer.
       </div><!-- end TabContainer -->
     </div><!-- end BorderContainer -->
 
+  A few simple css rules
+
   .. css::
-    :label: A few simple css rules
 
     <style type="text/css">
       html, body {
@@ -237,7 +236,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   :width: 660
 
   .. javascript::
-    :label: The dojo requires
 
     <script type="text/javascript">
         dojo.require("dijit.layout.BorderContainer");
@@ -266,7 +264,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   The markup has to look as follows
   
   .. html::
-    :label: The markup
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
@@ -294,8 +291,10 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
       </div>
     </div>
 
+  A few simple css rules
+  
   .. css::
-    :label: A few simple css rules
+     
 
     <style type="text/css">
       html, body {

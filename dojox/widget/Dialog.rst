@@ -3,8 +3,6 @@
 dojox.widget.Dialog
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Peter Higgins
 :Available: since 1.2
 
@@ -25,18 +23,16 @@ Usage
 
 You will need the CSS, as well as a Theme CSS file. For instance, tundra:
 
-.. code-block :: html
-  :linenos:
+.. html ::
 
     <link rel="stylesheet" href="dojotoolkit/dijit/themes/claro/claro.css" />
     <link rel="stylesheet" href="dojotoolkit/dojox/widget/Dialog/Dialog.css" />
 
 And to require the module in:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
-  dojo.require("dojox.widget.Dialog");
+    dojo.require("dojox.widget.Dialog");
 
 ========
 Examples
@@ -46,8 +42,7 @@ Examples
 
 Resize an existing Dialog:
 
-.. code-block :: html
-  :linenos:
+.. html ::
 
     dlg.set("dimensions", [400, 200]); // [width, height]
     dlg.layout(); //starts the resize

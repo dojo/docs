@@ -69,7 +69,7 @@ This example shows the standard calendar being created from code.  Include the C
     <div id="cal_1_report"></div>
 
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+    
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
@@ -96,7 +96,7 @@ This example shows just the daily calendar being instantiated, with no month or 
     <div id="cal_2_report"></div>
 
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+    
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
@@ -130,7 +130,7 @@ This example shows how to construct a standard Calendar declaratively.  Note the
     <div id="cal_3_report"></div>
 
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+    
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
@@ -153,7 +153,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
     <div id="cal_4_report"></div>
 
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+    
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
@@ -181,7 +181,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
     <div id="cal_5_report"></div>
 
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+    
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");

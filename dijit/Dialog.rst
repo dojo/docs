@@ -58,11 +58,11 @@ Dialog via markup
 
 The first example creates a Dialog via markup from an existing DOM node:
 
-.. cv-compound::
+.. code-example ::
 
   A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
   
-  .. cv:: html
+  .. html ::
 
     <div id="dialogOne" dojoType="dijit.Dialog" title="My Dialog Title">
         <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
@@ -79,15 +79,15 @@ The first example creates a Dialog via markup from an existing DOM node:
         </script>
     </button>
 
-  .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+  The javascript, put this wherever you want the dialog creation to happen
+  
+  .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.layout.TabContainer");
-        dojo.require("dijit.layout.ContentPane");
-    </script>
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+
 
 Note that dialog's source markup can be hidden via specifying style="display: none", to prevent it from flashing on the screen during page load.  However, hiding the dialog indirectly via a class won't work (in that the dialog will remain invisible even when it's supposed to be displayed).
 
@@ -98,36 +98,36 @@ Dialog programmatically
 
 Now lets create a dialog programmatically, and change the dialog's content dynamically
 
-.. cv-compound::
+.. code-example ::
 
   A programmatically created dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog should be created.
   
-  .. cv:: html
+  .. html ::
     
     <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
     <button id="buttonTwo" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
 
-  .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+  The javascript, put this wherever you want the dialog creation to happen
+  
+  .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
 
-        var secondDlg;
-        dojo.addOnLoad(function(){
-            // create the dialog:
-            secondDlg = new dijit.Dialog({
-                title: "Programmatic Dialog Creation",
-                style: "width: 300px"
-            });
+    var secondDlg;
+    dojo.addOnLoad(function(){
+        // create the dialog:
+        secondDlg = new dijit.Dialog({
+            title: "Programmatic Dialog Creation",
+            style: "width: 300px"
         });
-        showDialogTwo = function(){
-            // set the content of the dialog:
-            secondDlg.attr("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
-            secondDlg.show();
-        }
-    </script>
+    });
+    showDialogTwo = function(){
+        // set the content of the dialog:
+        secondDlg.attr("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
+        secondDlg.show();
+    }
+
 
 Coloring the Underlay
 ---------------------
@@ -220,8 +220,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
-  .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
+  The javascript, put this wherever you want the dialog creation to happen
+  
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
@@ -283,23 +284,22 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
-  .. cv:: javascript
-    :label: The javascript, arranges for the dialog to appear
+  The javascript, arranges for the dialog to appear
+  
+  .. js ::
+    
+    dojo.require("dijit.form.Form");
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.TextBox");
+    dojo.require("dijit.form.DateTextBox");
+    dojo.require("dijit.form.TimeTextBox");
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.Form");
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.form.TextBox");
-        dojo.require("dijit.form.DateTextBox");
-        dojo.require("dijit.form.TimeTextBox");
+    dojo.addOnLoad(function(){
+        var formDlg = dijit.byId("formDialog2");
+        dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
+    });
 
-        dojo.addOnLoad(function(){
-            var formDlg = dijit.byId("formDialog2");
-            dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
-        });
-
-    </script>
 
 Terms and Conditions Dialog
 ----------------------------------
@@ -312,11 +312,11 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
     <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <h1>Agreement Terms</h1>
-	
+    
          <div dojoType="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
                 Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
          </div>
-	
+    
         <br>
         <table>
             <tr>
@@ -340,7 +340,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     <p>
         When pressing this button the dialog will popup:
     </p>
-		
+        
     <label id="decision" style="color:#FF0000;">
         Terms and conditions have not been accepted.
     </label>
@@ -348,32 +348,32 @@ This example shows a Dialog that will ask the user to accept or decline the term
         View terms and conditions to accept
     </button>
 
+  The javascript, put this wherever you want the dialog creation to happen
+  
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.form.RadioButton");
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.RadioButton");
 
-        dojo.addOnLoad(function() {
-            formDlg = dijit.byId("formDialog");
-            dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
-        });
-			
-        var accept = function(){
-            dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
-            dojo.style("decision", "color", "#00CC00");
-            dijit.byId("formDialog").hide();
-        }
-			
-        var decline = function(){
-            dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
-            dojo.style("decision", "color", "#FF0000");
-            dijit.byId("formDialog").hide();
-        }
-			
-    </script>
+    dojo.addOnLoad(function() {
+        formDlg = dijit.byId("formDialog");
+        dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
+    });
+    
+    var accept = function(){
+        dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
+        dojo.style("decision", "color", "#00CC00");
+        dijit.byId("formDialog").hide();
+    }
+    
+    var decline = function(){
+        dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
+        dojo.style("decision", "color", "#FF0000");
+        dijit.byId("formDialog").hide();
+    }
+    
+
 
 External Dialog content using HREF attribute
 --------------------------------------------
@@ -381,8 +381,6 @@ External Dialog content using HREF attribute
 You can also load dialog content from another page by setting HREF attribute for the widget. Note that the Dialog doesn't execute script tags inline external content. However, it parses the page for widgets, so you can add functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script type="dojo/method" data-dojo-event="onClick">``). Other options for executing scripts are `iFrame <http://www.dojotoolkit.com/forum/dijit-dijit-0-9/dijit-support/loading-external-url-dijit-dialog>`_ and `dojox.layout.ContentPane <http://www.dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/javascript-ignored-when-loading-dijit-dialog-url>`_.
 
 .. cv-compound::
-
-
   :height: 500
 
   .. cv:: javascript
@@ -444,8 +442,8 @@ Keyboard
 ====================================================    =================================================
 Action                                                  Key
 ====================================================    =================================================
-Navigate to next focusable element in the dialog	tab
-Navigate to previous focusable element in the dialog	shift-tab
+Navigate to next focusable element in the dialog    tab
+Navigate to previous focusable element in the dialog    shift-tab
 Close the dialog                                        escape
 ====================================================    =================================================
 

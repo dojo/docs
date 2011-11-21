@@ -86,7 +86,7 @@ See it in action:
 .. cv-compound::
 
   .. css::
-    :label: The CSS
+    
 
     <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
@@ -134,7 +134,7 @@ See it in action:
 .. cv-compound::
 
   .. css::
-    :label: The CSS
+    
 
     <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00;}
@@ -183,7 +183,7 @@ See it in action:
 .. cv-compound::
 
   .. css::
-    :label: The CSS
+    
 
     <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00;}
@@ -232,7 +232,7 @@ See it in action:
 .. cv-compound::
 
   .. css::
-    :label: The CSS
+    
 
     <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00;}
@@ -281,7 +281,7 @@ See it in action:
 .. cv-compound::
 
   .. css::
-    :label: The CSS
+    
 
     <style type="text/css">
         .style3 { background-color: #7c7c7c; color: #ffbf00; padding: 10px }

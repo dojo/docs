@@ -14,24 +14,23 @@ dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a functi
 
 Sooner or later, every Javascript programmer tries something like this:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
-  <script>
     if(dayOfWeek == "Sunday"){
-       document.musicPrefs.other.value = "Afrobeat";
+        document.musicPrefs.other.value = "Afrobeat";
     }
-  </script>
-  <form name="musicPrefs">
-    <input type="text" name="other">
-  ...
+
+.. html ::
+
+    <form name="musicPrefs">
+        <input type="text" name="other">
+        ...
 
 It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
 
 dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. It is currently deprecated and replaced by dojo.ready function. When use dojo1.7, you should require 'dojo/ready' and use 'ready((...))' function instead. So this code:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
   //Dojo 1.7 (AMD)
   function setAfrobeat(){
@@ -44,7 +43,6 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
   });
 
 .. code-block :: javascript
-  :linenos:
 
   //Dojo < 1.7
   function setAfrobeat(){
@@ -54,57 +52,51 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
 
 conveniently replaces the one above. When the function is small, you may prefer to write it inline:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
-  //Dojo 1.7 (AMD)
-  require("dojo/ready", function(ready) {
-       ready(function(){
-           document.musicPrefs.other.value="Afrobeat";
-       });
-  });
+    //Dojo 1.7 (AMD)
+    require("dojo/ready", function(ready) {
+        ready(function(){
+            document.musicPrefs.other.value="Afrobeat";
+        });
+    });
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
-  //Dojo < 1.7
-  dojo.addOnLoad(
-    function(){
-      document.musicPrefs.other.value="Afrobeat";
-    }
-  );
+    //Dojo < 1.7
+    dojo.addOnLoad(function(){
+        document.musicPrefs.other.value="Afrobeat";
+    });
 
 This is the function literal or anonymous function construct of JavaScript. If it looks really, really wierd to you, take a peek ahead at Functions as Variables for an explanation.
 
 Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function will load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
-  //Dojo 1.7 (AMD)
-  require("dojo/ready", function(ready) {
-       ready(function(){
-             require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane) {
-                  ready(function(){
-                        // dijit.Dialog and friends are ready, create one from a node with id="bar"
-                        var dialog = new dialog({ title:"Lazy Loaded" }, "bar");
-                  });
-             });
-       });
-  });
-
-.. code-block :: javascript
-  :linenos:
-
-  //Dojo < 1.7
-  dojo.addOnLoad(function(){
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.TitlePane");
-    dojo.addOnLoad(function(){
-        // dijit.Dialog and friends are ready, create one from a node with id="bar"
-        var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar");
+    //Dojo 1.7 (AMD)
+    require("dojo/ready", function(ready) {
+        ready(function(){
+            require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane) {
+                ready(function(){
+                    // dijit.Dialog and friends are ready, create one from a node with id="bar"
+                    var dialog = new dialog({ title:"Lazy Loaded" }, "bar");
+                });
+            });
+        });
     });
-  });
+
+.. js ::
+
+    //Dojo < 1.7
+    dojo.addOnLoad(function(){
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.TitlePane");
+        dojo.addOnLoad(function(){
+            // dijit.Dialog and friends are ready, create one from a node with id="bar"
+            var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar");
+        });
+    });
 
 If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately.
 
@@ -114,36 +106,31 @@ Examples
 
 Lets dynamically include code on button press and fire an event once the code is included
 
-.. cv-compound::
+.. code-example ::
 
   The HTML markup is pretty simple, just a button to click on
 
-  .. cv:: html
-    :label: A dijit button
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="buttonOne">Click me!</button>
 
   The JavaScript code fires a dojo.require when you click the button.
 
-  .. cv:: javascript
-    :label: The javascript code
+  .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     // connect to button
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonOne"), "onclick", "loadCode");
+        dojo.connect(dojo.byId("buttonOne"), "onclick", "loadCode");
     });
 
     function loadCode(){
-      alert("About to dojo.require dijit.layout.BorderContainer.");
-      dojo.require("dijit.layout.BorderContainer");
+        alert("About to dojo.require dijit.layout.BorderContainer.");
+        dojo.require("dijit.layout.BorderContainer");
       
-      // add a dojo.addOnLoad
-      dojo.addOnLoad(function(){
-        alert("This fires after BorderContainer is included. Now it is: " + dijit.layout.BorderContainer);
-      });
+        // add a dojo.addOnLoad
+        dojo.addOnLoad(function(){
+            alert("This fires after BorderContainer is included. Now it is: " + dijit.layout.BorderContainer);
+        });
     }
-
-    </script>
