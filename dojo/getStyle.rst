@@ -14,17 +14,22 @@ Introduction
 ============
 
 ``dojo.getStyle()`` is a companion function for :ref:`dojo.style <dojo/style>`. It gets the style value uses the computed style for the node, so the value
-will be a calculated value, not just the immediate node.style value. Also when getting values, use specific style names, like "borderBottomWidth" instead of "border" since compound values like "border" are not necessarily reflected as expected. If you want to get node dimensions, use `dojo.marginBox()`, `dojo.contentBox()` or `dojo.position()`..
+will be a calculated value, not just the immediate node.style value. Also when getting values, use specific style names, like "borderBottomWidth" instead of "border" since compound values like "border" are not necessarily reflected as expected. If you want to get node dimensions, use `dojo.marginBox()`, `dojo.contentBox()` or `dojo.position()`.
 
-Since dojo 1.7, dojo.getStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of style.get in dojo/dom-style.
+Since Dojo 1.7, ``dojo.getStyle`` is exposed via the ``get`` method of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
 =====
 
 .. code-block :: javascript
- :linenos:
 
+  // Dojo 1.7+ (AMD)
+  require(["dojo/dom-style"], function(domStyle){
+    domStyle.get(node, name);
+  });
+  
+  // Dojo < 1.7
   dojo.getStyle(node, name);
 
 node
@@ -38,41 +43,46 @@ name
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``get`` is accessed from the ``dojo/dom-style`` module.
 
 .. code-block :: javascript
+  :linenos:
 
-  require(["dojo/_base/html"], function(dojo){
-      // Passing only an ID or node returns the computed style object of the node:
-      dojo.getStyle("thinger");
+  require(["dojo/dom-style"], function(domStyle){
+    // Passing only an ID or node returns the computed style object of the node:
+    domStyle.get("thinger");
 
-      // Passing a node and a style property returns the current normalized, computed value for that property:
-      dojo.getStyle("thinger", "opacity"); // 1 by default
+    // Passing a node and a style property returns the current normalized, computed value for that property:
+    domStyle.get("thinger", "opacity"); // 1 by default
   });
 
-It's recommended to use style.get in dojo 1.7.
+Alternatively, you can load dojo base in AMD style and continue using ``dojo.getStyle`` in the ``define`` or ``require`` callback:
 
 .. code-block :: javascript
+  :linenos:
 
-  require(["dojo/dom-style"], function(style){
-      // Passing only an ID or node returns the computed style object of the node:
-      style.get("thinger");
+  require(["dojo"], function(dojo){
+    // Passing only an ID or node returns the computed style object of the node:
+    dojo.getStyle("thinger");
 
-      // Passing a node and a style property returns the current normalized, computed value for that property:
-      style.get("thinger", "opacity"); // 1 by default
+    // Passing a node and a style property returns the current normalized, computed value for that property:
+    dojo.getStyle("thinger", "opacity"); // 1 by default
   });
 
 Dojo < 1.7
 ----------
 
 .. code-block :: javascript
+  :linenos:
 
-    // Passing only an ID or node returns the computed style object of the node:
-    dojo.getStyle("thinger");
+  // Passing only an ID or node returns the computed style object of the node:
+  dojo.getStyle("thinger");
 
-    // Passing a node and a style property returns the current normalized, computed value for that property:
-    dojo.getStyle("thinger", "opacity"); // 1 by default
+  // Passing a node and a style property returns the current normalized, computed value for that property:
+  dojo.getStyle("thinger", "opacity"); // 1 by default
 
 ========
 See also
