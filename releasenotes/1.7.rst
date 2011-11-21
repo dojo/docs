@@ -396,10 +396,9 @@ Dojo Mobile is now considered a first class Mobile library, fully supporting lig
 
  Limitations:
 
- - The flip transition animation does not work on Android 2.2/2.3. The rotateY/rotateZ webkit-transform do not work on Android 2.2/2.3, thus the flip animation, which uses rotateY, does not work on those devices.
- - The flip2 transition animation does not work on Android 2.2/2.3 especially when ScrollableView is used.
+ - The transition animations use the capability of the CSS 3 transition or the CSS 3 animation, and their behavior highly depends on device and browser. Thus some transition animations do not work smoothly on Android and BlackBerry devices.
  - ScrollableView often freezes on HTC Android devices, such as HTC Evo, HTC Desire, etc. The problem occurs especially when you perform another scroll operation while the screen is still scrolling. This is not a dojo-specific issue because other JavaScript toolkits have the same problem. There are no workarounds available at present.
- - Sometimes touching an html form control, such as an input field or a button, on ScrollableView on Android devices does not set focus to it. Sometimes it is successful if you try a couple of times.
+ - Sometimes touching an html form control, such as an input field or a button, placed in ScrollableView on Android devices cannot set focus to it. Sometimes it is successful if you try a couple of times.
 
 MVC
 ---
