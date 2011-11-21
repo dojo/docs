@@ -441,7 +441,7 @@ Keyboard
 ====================================================    =================================================
 Action                                                  Key
 ====================================================    =================================================
-Navigate to next focusable element in the dialog    tab
+Navigate to next focusable element in the dialog        tab
 Navigate to previous focusable element in the dialog    shift-tab
 Close the dialog                                        escape
 ====================================================    =================================================
