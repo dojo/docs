@@ -1,1 +1,0 @@
-.. _quickstart/writingWidgets/widgetsInTemplate:
