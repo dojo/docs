@@ -17,7 +17,7 @@ Sample
 ==============
 Sample application configuration for dojox.app.model
 
-.. code-block :: javascript
+.. js ::
 
   // Define stores for dojox.app data model
   "stores": {

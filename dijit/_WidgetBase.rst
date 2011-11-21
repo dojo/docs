@@ -26,7 +26,7 @@ Usage
 
 All widgets are created by calling dojo.declare(), extending from _WidgetBase:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -68,13 +68,13 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
 - destroy
      Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Examples on how to destroy a widget:
 
-  .. code-block:: javascript
+  .. js ::
     :linenos:
 
     var widget = new dijit.form.TextBox({name: "firstname"}, "inputId");
     widget.destroy();
 
-  .. code-block:: javascript
+  .. js ::
     :linenos:
 
     dijit.byId("dijitId").destroy();
@@ -91,7 +91,7 @@ this.inherited()
 
 In all cases its good practice to assume that you are overriding a method that may do something important in a class up the inheritance chain. So, call this.inherited() before or after your own code. E.g.
 
-.. code-block :: javascript
+.. js ::
 
   postCreate: function() {
      // do my stuff, then...
@@ -107,19 +107,19 @@ Perhaps the most important feature of _WidgetBase is the ability to set attribut
 
 dijit._WidgetBase has implemented the set() method to do this. For example, this call will set a DateTextBox's value to the current date:
 
-.. code-block:: javascript
+.. js ::
 
    myDateTextBox.set('value', new Date())
 
 There's also a get() method to retrieve an attribute's value.  This call will tell us if a TitlePane is opened or closed:
 
-.. code-block:: javascript
+.. js ::
 
    myTitlePane.get('open')
 
 Finally, there's a watch() method to detect when attribute values change:
 
-.. code-block:: javascript
+.. js ::
 
    myTitlePane.watch("open", function(attr, oldVal, newVal){
       console.log("pane is now " + (newVal ? "opened" : "closed"));

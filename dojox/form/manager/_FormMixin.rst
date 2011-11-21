@@ -41,7 +41,7 @@ The method takes no parameters and returns the form manager itself for easy chai
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   fm.reset();
 
@@ -56,7 +56,7 @@ The method takes no parameters and returns nothing. If it is successful, the bro
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   fm.submit();
 
@@ -67,7 +67,7 @@ This method validates all controlled and enabled form widgets by calling their `
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   if(fm.isValid()){
     // all individual form widgets were validated successfully
@@ -82,7 +82,7 @@ isForm
 
 This is the Boolean property, which is set during the initialization of the form manager widget. If it is ``true``, the root node of the widget is ``<form>``. Otherwise it is ``false``.
 
-.. code-block :: javascript
+.. js ::
 
   if(fm.isForm){
     // we are based on the actual <form> node
@@ -104,7 +104,7 @@ The method takes one parameter: the event object.
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   fm.onReset = function(){ return false; }; // never allow to reset
 
@@ -117,7 +117,7 @@ The method takes one parameter: the event object.
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   fm.onSubmit = function(){ return false; }; // never allow to submit
 

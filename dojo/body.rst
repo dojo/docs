@@ -29,7 +29,7 @@ The most important item to remember is dojo.body is a function, and needs to be 
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/window"], function(win) {
     console.log( win.body() );
@@ -38,13 +38,13 @@ The most important item to remember is dojo.body is a function, and needs to be 
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
 
   console.log( dojo.body() );
 
 This is an example, which is shorter, safer to write than:
 
-.. code-block :: javascript
+.. js ::
   
   var b = document.getElementsByTagName("body")[0];
   console.log(b);
@@ -53,7 +53,7 @@ Actually using the `<body>` element is an exercise left to the developer. There 
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   
   require(["dojo/_base/window", "dojo/dom-style", "dojo/dom-construct"], function(win, style, ctr) {
     // set the background color:
@@ -67,7 +67,7 @@ Actually using the `<body>` element is an exercise left to the developer. There 
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   
   // set the background color:
   dojo.style(dojo.body(), "backgroundColor", "green");

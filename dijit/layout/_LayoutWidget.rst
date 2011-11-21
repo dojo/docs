@@ -41,7 +41,7 @@ _setupChild()
 addChild() is *not* called for widgets that are in the original markup. For example, addChild() is not called for the ContentPanes
 in the markup below:
 
-.. code-block:: html
+.. html ::
 
      <div data-dojo-type="dijit.layout.TabContainer" id="tc">
        <div data-dojo-type="dijit.layout.ContentPane" title=...>...</div>
@@ -50,7 +50,7 @@ in the markup below:
 
 However, addChild() is called when children are added programmatically, like:
 
-.. code-block:: javascript
+.. js ::
 
     dijit.byId("tc").addChild( new dijit.layout.ContentPane() );
 

@@ -290,7 +290,7 @@ The query syntax for all stores is simple. Most only take a single object with t
 Query Example
 -------------
 
-.. code-block :: javascript
+.. js ::
  
   {
     "text" : "Find me"
@@ -301,7 +301,7 @@ Query Syntax for GoogleLocalSearchStore
 
 New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when searching, its allowed syntax is:
 
-.. code-block :: javascript
+.. js ::
  
   {
     "text" : "Find me"

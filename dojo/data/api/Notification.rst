@@ -31,7 +31,7 @@ Basic dojo.connect
 
 This example shows, how to use dojo.connect to connect the datastores onNew function with one of your own functions:
 
-.. code-block :: javascript
+.. js ::
 
   var store = some.NotifyWriteStore();
   var alertOnNew = function(item) {
@@ -49,7 +49,7 @@ Replacing the onNew function
 
 This example shows, how to override the onNew function of a datastore with a custom one:
 
-.. code-block :: javascript
+.. js ::
 
   var store = some.NotifyWriteStore();
   store.onNew = function(item) {
@@ -69,7 +69,7 @@ For convenience, the complete feature from dojo/data/api/Notification.js is defi
 onSet
 -----
 
-.. code-block :: javascript
+.. js ::
 
   onSet: function(item, attribute, oldValue, newValue)
 
@@ -96,7 +96,7 @@ returns:
 onNew
 -----
 
-.. code-block :: javascript
+.. js ::
 
   onNew: function(newItem, parentInfo)
 
@@ -118,7 +118,7 @@ parameters:
 
   The structure of the parameter parentInfo is as follows:
 
-  .. code-block :: javascript
+  .. js ::
 
     {
       // The parent item:
@@ -143,7 +143,7 @@ returns:
 onDelete
 --------
 
-.. code-block :: javascript
+.. js ::
 
   onDelete: function(deletedItem)
 

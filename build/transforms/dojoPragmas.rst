@@ -63,7 +63,7 @@ For ``includeStart`` and ``excludeStart``, *condition* is evaluated with the fol
 
 For example, assume a build is excuted with a profile defined as follows:
 
-.. code-block :: javascript
+.. js ::
 
   var profile = {
     myVariable = "myValue",
@@ -74,7 +74,7 @@ For example, assume a build is excuted with a profile defined as follows:
 A block of code could be included if and only if myVariable is "myValue". For example, in the following code fragment,
 the first block is untouched while the second block would be deleted from the built resource.
 
-.. code-block :: javascript
+.. js ::
 
  //>>includeStart("firstBlock", kwargs.myVariable=="myValue")
   console.log("block one");
@@ -92,7 +92,7 @@ Whitespace between/around the **//>>** sequence, pragma name, parenthesis, and c
 
 Tag names may be reused. They can be used to indicate the intended semantics. For example,
 
-.. code-block :: javascript
+.. js ::
 
   //>>includeStart("myBlocks", kwargs.myBlock)
   console.log("my block");

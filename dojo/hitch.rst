@@ -11,7 +11,7 @@ Dojo.hitch is a neat function. It returns a function that will execute a given f
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/xhr"], function(xhr) {
     var args = {
@@ -24,7 +24,7 @@ Dojo.hitch is a neat function. It returns a function that will execute a given f
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
 
   var args = {
     url: "foo",
@@ -37,7 +37,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
     var args = {
@@ -50,7 +50,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
 
   var args = {
     url: "foo",

@@ -26,7 +26,7 @@ Usage
 
 TODO: how to use the component/class/method
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

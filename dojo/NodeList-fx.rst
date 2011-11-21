@@ -35,7 +35,7 @@ Example
 
 The first most important thing to do is require the module into your page:
 
-.. code-block :: javascript
+.. js ::
 
   // [ Dojo 1.6 and earlier ]
   dojo.require("dojo.NodeList-fx");
@@ -71,7 +71,7 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
 
 // [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-fx");
@@ -89,7 +89,7 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/ready",

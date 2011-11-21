@@ -17,7 +17,7 @@ Hiding the Built-In File Upload Box
 -----------------------------------
 We'll use the programmatic method here. First we'll need a location on-disk for our widget. Since others have expressed interest in this widget, and we hope to contribute it to dojox, we'll place the widget in dojox/widget/FileInput.js. This means we'll be able to require() and provide() the module "dojox.widget.FileInput" as per the package system conventions. To get additional behavior we'll need to require() mixin classes, in case we don't already have them. So here's a stub for the class:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("dojox.widget.FileInput");
   dojo.require("dijit.form._FormWidget");
@@ -35,7 +35,7 @@ We'll use the programmatic method here. First we'll need a location on-disk for 
 
 Next we'll need a template, a label for our submit button, a label for our cancel button, and the name of the input:
 
-.. code-block :: javascript
+.. js ::
 
         // label: String
         //      the title text of the "Browse" button
@@ -57,7 +57,7 @@ Also note that whenever we use template variables , it's good practice to supply
 As we said earlier, it's preferrable to separate the template out into a different file. Ours will look like the following, placed in dojox/widget/FileInput/FileInput.html:
 
 
-.. code-block :: html
+.. html ::
 
   <div class="dijitFileInput">
         <input id="${id}" class="dijitFileInputReal" type="file"
@@ -80,7 +80,7 @@ There's one more thing: the base class _Widget automatically copies certain attr
 Since we don't want that functionality in this case, we should override it, by adding the following code to the widget's
 javascript:
 
-.. code-block :: javascript
+.. js ::
 
     _setIdAttr: null,
     _setNameAttr: null
@@ -88,7 +88,7 @@ javascript:
 
 OK, let's make sure our widget starts up, and looks right. Let's make some simple css rules using the class names we set in our template:
 
-.. code-block :: css
+.. css ::
 
   .dijitFileInput {
         position:relative;
@@ -124,7 +124,7 @@ data-dojo-attach-event="onclick: _onClick" connects the onclick event of this.ca
 
 We also need to implement a simple onchange listener, like the article hints, so that when our onchange is detected in on our real file input (this.fileInput), we will call this._matchValue() to steal the value from it, and populate our visible input:
 
-.. code-block :: javascript
+.. js ::
 
         startup: function(){
                 // summary: listen for changes on our real file input
@@ -147,7 +147,7 @@ The _matchValue() function simply steals the file input value, sets it to the vi
 
 So next, we need a reset button. Unfortunately because we're faking HTML out a bit, a plain old Reset button won't work. Since we aren't allowed write access to the file input, we can't just null the data. So our _onClick method actually destroys the <input type="file"> and reads it.
 
-.. code-block :: javascript
+.. js ::
 
   _onClick: function(/* Event */e){
         // summary: on click of cancel button, since we can't clear the input because of
@@ -176,13 +176,13 @@ Wiring It All Together
 ----------------------
 So now we have our widget and our basic styles. We include this widget in our page declaratively by:
 
-.. code-block :: html
+.. html ::
 
   <input type="file" name="uploadFile" data-dojo-type="dojox.widget.FileInput">
 
 The real file input tag in the DOM goes away our templated input gets put in it's place. But if JavaScript is not present, it stays a regular HTML input tag, so it degrades nicely. Here is a sample test page to work with:
 
-.. code-block :: html
+.. html ::
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -214,7 +214,7 @@ In theory, it will work inside of a tag just as the original element did.
 
 Because we're bigs fan of re-using code, we can steal some CSS stuff from tundra.css and soria.css to provide theme-specific styles, so our input nodes look like they would in with all the other dijit.form Widgets (like ComboBox, FilteringSelect, ValidationTextBox, etc):
 
-.. code-block :: css
+.. css ::
 
   /* tundra */
   .tundra .dijitProgressOverlay {

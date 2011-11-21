@@ -134,7 +134,7 @@ We are also moving in the direction of providing composable functionality by pro
 
 With this one can easily mix and match wrappers and base stores to achieve various types of functionality. A common pattern may be:
 
-.. code-block :: javascript
+.. js ::
 
   store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
 

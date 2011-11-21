@@ -56,7 +56,7 @@ Examples
 Using a dojo.store
 ------------------
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript">
         colorMemoryStore = new dojo.store.Memory({ idProperty: "name", data: [
@@ -73,7 +73,7 @@ Using a dojo.store
 Using inline OPTION tags
 ------------------------
 
-.. code-block :: html
+.. html ::
 
   <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruitDataList"' >
         <option>Apple</option>

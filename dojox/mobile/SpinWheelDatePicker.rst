@@ -20,7 +20,7 @@ Usage
 
 SpinWheelDatePicker is in a separate module file from _base.js. You need to dojo.require SpinWheelDatePicker as below.
 
-.. code-block :: javascript
+.. js ::
 
   <link href="../themes/common/SpinWheel.css" rel="stylesheet">
 
@@ -33,6 +33,6 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <div id="spin1" dojoType="dojox.mobile.SpinWheelDatePicker"></div>

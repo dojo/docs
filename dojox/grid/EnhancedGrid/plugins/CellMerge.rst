@@ -280,7 +280,7 @@ Prerequisites
 
 This CellMerge plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.grid.EnhancedGrid");
@@ -294,7 +294,7 @@ The declaration name of this plugin is ``cellMerge`` . It is declared in the ``p
 
 If your grid is created declaratively:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid"
@@ -305,7 +305,7 @@ If your grid is created declaratively:
 
 If your grid is created in JavaScript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -364,7 +364,7 @@ getMergedCellsByRow(rowIndex)
 
 Here is some examples on how to use this API:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   //Merge cells of column 2, column 3 and column 4 on the second row, using the content of the cell on column 3 for the merged cell.

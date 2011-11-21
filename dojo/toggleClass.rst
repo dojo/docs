@@ -35,7 +35,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``toggle`` is accessed from the ``dojo/dom-class`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-class"], function(domClass){
       domClass.toggle("someNode", "hovered");
@@ -43,7 +43,7 @@ When using AMD format in a fully baseless application, ``toggle`` is accessed fr
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.toggleClass`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       dojo.toggleClass("someNode", "hovered");
@@ -52,7 +52,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.tog
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.toggleClass("someNode", "hovered");
 
@@ -65,7 +65,7 @@ Simple toggle
 
 The following example adds the class "style1" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -112,7 +112,7 @@ Forcefully add a class
 
 The following example adds the class "style2" to the node "example2", no matter if there is already such a class for this node or not:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -160,7 +160,7 @@ Toggle multiple nodes
 
 toggleClass is also available for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -212,7 +212,7 @@ Technical information
 
 This function is a simple convenience wrapper for :ref:`dojo.hasClass <dojo/hasClass>`, :ref:`dojo.addClass <dojo/addClass>` and :ref:`dojo.removeClass <dojo/removeClass>`.  A simplified version would look something like this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)

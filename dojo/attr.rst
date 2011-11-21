@@ -27,7 +27,7 @@ Since Dojo 1.7, ``dojo.attr`` is exposed via the ``get`` and ``set`` methods of 
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -54,7 +54,7 @@ Dojo 1.7 (AMD)
 
 When using AMD format in a fully baseless application, ``get`` and ``set`` are accessed from the ``dojo/dom-attr`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr"], function(domAttr){
       // get node title
@@ -65,7 +65,7 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.attr`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // get node title
@@ -78,7 +78,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.att
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   // get node title
   dojo.attr(node, "title");

@@ -18,7 +18,7 @@ dojo/on API
 
 The module's value is an on function that can be directly called to add an event listener. The on function is the form:
 
-.. code-block :: javascript
+.. js ::
 
   on(target, eventType, listener);
 
@@ -30,7 +30,7 @@ The following parameters should be provided to the on function:
 
 The basic usage looks like:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/on"], function(on){
     on(document, "click", clickHandler);
@@ -38,7 +38,7 @@ The basic usage looks like:
 
 The return value from the on function is a signal handler that has a cancel() method that can be used to stop listening for the events. For example, to listen for a single click, one could do:
 
-.. code-block :: javascript
+.. js ::
 
   var signal = on(document, "click", function(){
     // cancel after first event
@@ -53,7 +53,7 @@ Use with query module
 
 The on function is also available on queried NodeList's with the NodeList on() method. For example, we could write:
 
-.. code-block :: javascript
+.. js ::
   
   // Dojo 1.7 preferred
   define(["dojo/query"], function($){
@@ -72,7 +72,7 @@ Multiple Events
 ---------------
 You can listen to multiple event types with a single call by comma-delimiting the event names. Then we can listen for multiple events (with delegation) with one call. For example, we can listen for touchend and dblclick:
 
-.. code-block :: javascript
+.. js ::
 
   on(element, "dblclick, touchend", handler);
 
@@ -80,13 +80,13 @@ Event Delegation
 ----------------
 The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targetted for event listening. The on function will then use respond to event bubbling and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
 
-.. code-block :: javascript
+.. js ::
 
   on(document, ".myClass:click", clickHandler);
 
 To listen for double clicks on the document and clicks on buttons with myClass class name, we could do:
 
-.. code-block :: javascript
+.. js ::
 
   on(document, "dblclick, button.myClass:click", clickHandler);
 
@@ -99,7 +99,7 @@ Extension Events
 
 The eventType parameter may also be an extension event. An extension event is a custom event that may be based on extended functionality. Dojo includes several extension events, including touch gestures available in dojo/gestures and mouse tracking functionality with dojo/mouse's enter and leave extension events. For example, to listen for the mouse hovering over a DOM node, we could write:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/on", "dojo/mouse"], function(on, mouse){
     on(node, mouse.enter, hoverHandler);
@@ -114,7 +114,7 @@ selector function
 
 The on.selector function can be used to apply event delegation when extension events are used (since you can't use the "<selector>:<type>" syntax with an extension event). The on.selector function is called with the CSS selector as the first argument and the event type as the second argument. For example, to listen for the mouse.enter extension event on elements with the myClass class name, we could write:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/on", "dojo/mouse"], function(on, mouse){
     on(node, on.selector(".myClass", mouse.enter), myClassHoverHandler);
@@ -134,7 +134,7 @@ The on.emit function provides a normalized mechanism for dispatching events. Thi
 
 The emit function returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which case it will return false. For example:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/on"], function(on){
     var event = on.emit(button, "click", {
@@ -153,7 +153,7 @@ pausable function
 
 The on.pausable function provides a means for pausing an event listener, while still preserving the listeners order and state. The on.pausable() function can be called just like on() (with the same arguments). The only difference is the returned signal handler will include pause() and resume() methods. The pause() method will cause the listener to not be called when the specified event takes place. The resume() method will cause the listener to be called again. For example, we could write:
 
-.. code-block :: javascript
+.. js ::
 
   var buttonHandler = on.pausable(button, "click", clickHandler);
   on(disablingButton, "click", function(){
@@ -165,7 +165,7 @@ once function
 
 The on.once function allows you to register a listener that will be called just once in response to an event. This works just like on(), but the listener will be called a single time and then it will be removed as a listener. For example:
 
-.. code-block :: javascript
+.. js ::
 
   on.once(finishedButton, "click", onFinished);
 

@@ -23,7 +23,7 @@ Since Dojo 1.7, ``dojo.removeAttr`` is exposed via the ``remove`` method of the 
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -50,7 +50,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``remove`` is accessed from the ``dojo/dom-attr`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr"], function(domAttr){
       domAttr.remove("model", "disabled");
@@ -58,7 +58,7 @@ When using AMD format in a fully baseless application, ``remove`` is accessed fr
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.removeAttr`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       dojo.removeAttr("model", "disabled");
@@ -67,7 +67,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.rem
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.removeAttr("model", "disabled");
 

@@ -26,7 +26,7 @@ Usage
 
 dojo.exists accepts a string as its first parameter, and the root object as its second parameter, and returns true/false.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -44,7 +44,7 @@ dojo.exists accepts a string as its first parameter, and the root object as its 
 
 The second ``root`` parameter is optional, ``dojo.exists`` will use the value of ``dojo.global`` by default (which is usually the current ``window``). You can use it to root the path in a different window object, or a particular namespace:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)

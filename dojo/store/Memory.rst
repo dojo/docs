@@ -23,7 +23,7 @@ The Memory store provides full read and write capabilities for in memory data. T
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  var someData = [
    {id:1, name:"One"},

@@ -42,7 +42,7 @@ To set the number of visible images, and thereby the width or height of horizont
 set the **numberThumbs** attribute, e.g.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="numberThumbs:4"> </div>
@@ -56,7 +56,7 @@ To set the data source for the ThumnailPicker widget, first create one of the av
 as the dojo.data.ItemFileReadStore or dojox.data.FlickrRestStore. Next, create a request object, which
 optionally contains a query. e.g.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
@@ -84,7 +84,7 @@ To make the ThumbnailPicker display itself vertically, set the isHorizontal attr
 horizontal, either omit the isHorizontal attribute, or set it to "true", e.g.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="isHorizontal:false"> </div>
@@ -98,7 +98,7 @@ By default it is false. When hyperlinks are enabled, by default the URL is opene
 the link in the current window, set the hyperlinkTarget attribute to "this". e.g.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useHyperlink:true, hyperlinkTarget:this"> </div>
@@ -115,7 +115,7 @@ To enable the load state notifier, set the useLoadNotifier to "true". By default
 really makes sense to use it in combination with other widgets or elements on a page. e.g.
 
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useLoadNotifier:true"> </div>
@@ -126,7 +126,7 @@ Setting size of thumbnails
 
 Setting size of thumbnails is currently possible with use of CSS style definitions:
 
-.. code-block :: css
+.. css ::
   :linenos:
 
   .thumbWrapper img {

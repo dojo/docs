@@ -130,7 +130,7 @@ Supported Data Structure
 
 For the reason of lazy loading children items, the dojox.grid.LazyTreeGrid could accept the flatted data. For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   data = {
@@ -148,7 +148,7 @@ In this case, the "children" attribute would be a flag rather than a truely valu
 
 Also, the nested data structure is available in normally case (small data or data is stored at client side). For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   data = {
@@ -173,7 +173,7 @@ Also, the nested data structure is available in normally case (small data or dat
   
 Even more, for the situations where there are many children of some items as well as there are very few children of other items, you could use the following data structure:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   data = {
@@ -268,7 +268,7 @@ When using a dijit.tree.ForestStoreModel, or using dojox.grid.LazyTreeGridStoreM
 
 An example LazyTreeGridStoreModel definition would look like this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // programmatic
@@ -287,7 +287,7 @@ Structure Definition
 
 LazyTreeGrid does not support nested structure, as well as aggregate and itemAggregates. The following example is a LazyTreeGrid defined via HTML, just like the :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   <table data-dojo-id="grid" data-dojo-type="dojox.grid.LazyTreeGrid" data-dojo-props="rowsPerPage:25
@@ -308,7 +308,7 @@ Formatting
 
 In order to the users can format content freely for cells in different levels, the LazyTreeGrid formatters receives a "level" parameter,which is 0-based. But LazyTreeGrid formatters won't be able to handle a negative value for row nubmer parameter since there is no aggregation for the LazyTreeGrid. Below is a simply example of the formatter:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var fmt = function(value, idx, level) {
@@ -324,7 +324,7 @@ Cells Merging
 
 In order to display better for different levels, user could do cells merge based on different level via "colSpans" attribute. The value of "colSpans" is a JSON object, an example colSpans definition would look like this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   colSpans = {

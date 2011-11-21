@@ -22,13 +22,13 @@ In its most basic, default form, DataChart requires no parameters, besides the n
 		
 A basic example follows:
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div id="chartNode" style="width: 600px; height: 400px;"></div>
  
  
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.require("dojox.charting.DataChart");
@@ -44,7 +44,7 @@ Different Chart Types
 
 Different chart styles is a simple matter of passing a type:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.addOnLoad(function(){
@@ -62,7 +62,7 @@ DataChart Mapping
 
 This is a (trimmed down) version of the JSON file used, as it is important to the next concepts:
  
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  { "identifier": "symbol", "idAttribute":"symbol", "label": "symbol","items": [
@@ -79,7 +79,7 @@ The property used for the first chart example is historicPrice and is an array. 
 
 However, the need of the chart may not be a series of individual item properties, it may be single item properties compared to the others. To compare the price of each item on a line chart using the comparative property:
  
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.addOnLoad(function(){
@@ -108,13 +108,13 @@ Chart Legends
 DojoX Charting comes with dojox.charting.widget.Legend to make it easy to add legends to your charts. Currently however, it isn’t designed to handle "live" data — it’s expecting that the chart knows the data as it’s created. Therefore it needs to connect it when the chart has data:
  
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div id="chartDiv" style="width: 400px; height: 250px;"></div>
  <div id="legend"></div>
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.addOnLoad(function(){
@@ -134,7 +134,7 @@ DataChart has a convenient method for applying the store item labels. The chart.
 
 *labelFunc* is actually a method that to tap into to write custom labels. DataChart also accepts a specific string which tells it to use its seriesLabels method. Simply put, it connects the item labels to the chart labels.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.addOnLoad(function(){

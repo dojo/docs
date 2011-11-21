@@ -40,7 +40,7 @@ Examples
 Simple RadioButton
 ------------------
 
-.. code-block :: html
+.. html ::
 
   <input type="radio" dojoType="dojox.mobile.RadioButton" checked="true"  name="radioGroup" value="yes" />
   <input type="radio" dojoType="dojox.mobile.RadioButton" checked="false" name="radioGroup" value="no" />
@@ -51,7 +51,7 @@ Simple RadioButton
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <input type="radio" name="group" data-dojo-type="dojox.mobile.RadioButton" data-dojo-props='
       value:"on",

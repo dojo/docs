@@ -17,7 +17,7 @@ relative ease.
 
 Each digest exposes a single function, with a private HMAC function as well, such as the following:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.require("dojox.encoding.digests.SHA1");
@@ -27,7 +27,7 @@ Each digest exposes a single function, with a private HMAC function as well, suc
 The digests in DojoX Encoding were designed to be as easy to use as possible, with some flexibility in terms of output.
 This output takes the form of a keyword arguments object, that looks like so:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var args = {

@@ -28,7 +28,7 @@ For example, to setup a function to run when a node is clicked, then remove it a
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom", "dojo/_base/connect"], function() {
@@ -42,7 +42,7 @@ For example, to setup a function to run when a node is clicked, then remove it a
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var node = dojo.byId("someButton");
@@ -57,7 +57,7 @@ A very common pattern is to store a series of return values in an array, and use
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
   require(["dojo/_base/connect", "dojo/_base/array"], function(connect, array) {
@@ -78,7 +78,7 @@ A very common pattern is to store a series of return values in an array, and use
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
   var connections = [];

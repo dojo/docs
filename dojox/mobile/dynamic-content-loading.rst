@@ -20,7 +20,7 @@ If you make a transition, a new view is created as a sibling of the current view
 
 Usage of the url property is as follows.
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.RoundRectList">
      <li dojoType="dojox.mobile.ListItem" transition="slide" url="view1.html">
@@ -38,7 +38,7 @@ Below is an example of an html fragment that represent a view. A parser (dojo.pa
 
 Example of view html fragment:
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.View">
       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
@@ -62,7 +62,7 @@ Below is an example of JSON data that represent a view. It is equivalent to the 
 
 Example of view JSON data:
 
-.. code-block :: javascript
+.. js ::
 
   {
     "dojox.mobile.View": {
@@ -89,7 +89,7 @@ ListItem Actions
 
 ListItem can have an action handler by simply adding an onclick event handler as follows. You can control a view transition programmatically in your action handler. In that case, specify moveTo="#" to disable the default view transition while having the arrow icon at the right of the list item. (If you omit the moveTo attribute here, the default view transition is disabled, but the arrow icon disappears to indicate that this item does not make view transition.)
 
-.. code-block :: html
+.. html ::
 
   <li dojoType="dojox.mobile.ListItem" moveTo="#" onclick="myAction(this)">
      Update View
@@ -102,7 +102,7 @@ Update Existing View Content and Make Transition
 
 In the action handler, you can update the transition target view, and then programmatically make a transition to it as follows. The ListItem widget that initiated the action can be accessed via dijit.byNode(li). A transition can be performed by calling the transitionTo method of the source view.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction1(li)
      var rect = dijit.byId("rect1"); // RoundRect in view1
@@ -110,7 +110,7 @@ In the action handler, you can update the transition target view, and then progr
      dijit.byNode(li).transitionTo("view1");
   }
 
-.. code-block :: html
+.. html ::
 
   <div id="view1" dojoType="dojox.mobile.View">
      <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="home">Current Status</h1>
@@ -123,7 +123,7 @@ Load Content into Existing View and Make Transition
 
 In this example, view content is loaded asynchronously, the destination view is updated with the loaded content, and then a transition is performed. ProgressIndicator is used since the loading is async.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction2(li){
      var view2 = dijit.byId("view2"); // destination view
@@ -147,7 +147,7 @@ In this example, view content is loaded asynchronously, the destination view is 
      });
   }
 
-.. code-block :: html
+.. html ::
 
   <div id="view2" dojoType="dojox.mobile.View"></div>
 
@@ -156,7 +156,7 @@ Make Transition and Load Content into Existing View
 
 This example is almost the same as the previous one, but in this example, a view transition is performed first, and then content loading is performed.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction3(li){
      var view3 = dijit.byId("view3"); // destination view
@@ -180,7 +180,7 @@ This example is almost the same as the previous one, but in this example, a view
      });
   }
 
-.. code-block :: html
+.. html ::
 
   <div id="view3" dojoType="dojox.mobile.View"></div>
 
@@ -189,7 +189,7 @@ Create a New View and Make Transition
 
 The above three examples are examples of updating an existing view. In this example, however, a view (and its content as well) is created programmatically, and then a view transition is performed.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction4(li){
      if(!dijit.byId("view4")){
@@ -232,7 +232,7 @@ Update DataList
 
 This example updates an existing RoundRectDataList via a dojo.data datastore, and then makes a transition.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction5(li){
      var list1 = dijit.byId("list1");
@@ -243,7 +243,7 @@ This example updates an existing RoundRectDataList via a dojo.data datastore, an
      dijit.byNode(li).transitionTo("view5");
   }
 
-.. code-block :: html
+.. html ::
 
   <div id="view5" dojoType="dojox.mobile.View">
      <h1 dojoType="dojox.mobile.Heading">RoundRectDataList</h1>
@@ -255,7 +255,7 @@ Partial Update Using dojox.mobile.ContentPane
 
 In this example, there is a dojox.mobile.ContentPane widget in the transition target view. dojox.mobile.ContentPane is a very simple container widget, so it can be thought as a <div> with the "href" attribute. This example updates the ContentPane with an external html fragment, and then make a transition.
 
-.. code-block :: javascript
+.. js ::
 
   function myAction6(li){
      var pane1 = dijit.byId("pane1");
@@ -270,7 +270,7 @@ In this example, there is a dojox.mobile.ContentPane widget in the transition ta
      }
   }
 
-.. code-block :: html
+.. html ::
 
   <div id="view6" dojoType="dojox.mobile.ScrollableView">
      <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="home" fixed="top">Partial Update</h1>

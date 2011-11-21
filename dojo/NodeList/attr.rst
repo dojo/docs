@@ -25,7 +25,7 @@ See :ref:`dojo.attr <dojo/attr>` for more details.
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.query(sel).attr(attr, value);

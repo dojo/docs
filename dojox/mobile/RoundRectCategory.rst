@@ -31,6 +31,6 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <h2 dojoType="dojox.mobile.RoundRectCategory">Transition Effects</h2>

@@ -17,7 +17,7 @@ Example data
 
 For the following examples, the defined JavaScript will be used. Note that it has a defined structure which is used by the dojo.data.ItemFileReadStore. Be aware that dojo.data does not require this format for every datastore; this is simply the format expected by dojo.data.ItemFileReadStore.
 
-.. code-block :: javascript
+.. js ::
 
   { identifier: 'abbr',
     label: 'name',

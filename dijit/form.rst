@@ -194,7 +194,7 @@ Mapped Form Controls
 
 Many of the form controls have a concept of "displayed value" vs. "serialized value" (aka the "real value"), which is the value passed to the server on form submit.  For example, a NumberSpinner may be declared like
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-props="value:1000">
 
@@ -212,7 +212,7 @@ Styling of Form Controls
 
 To style any of the form controls, the first thing to do is to look at the template of the form control, for example, Button.html:
 
-.. code-block:: html
+.. html ::
 
   <span class="dijit dijitReset dijitLeft dijitInline"
 	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
@@ -263,7 +263,7 @@ There are also combination classes that are applied.  For example, if a user foc
 
 Using the classes defined on the DOM node you can affect the styling of any sub-nodes within the widget.   For example:
 
-.. code-block:: css
+.. css ::
 
   .dijitButtonFocused .dijitButtonContents {
        color: red;

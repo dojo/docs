@@ -42,7 +42,7 @@ You call your code "coolio". As you are developing your code, you are using a no
 
 The interface you want to publish to others consists of just one function: coolio.actions.foo(), and it is defined inside the scripts/coolio/actions.js file:
 
-.. code-block :: javascript
+.. js ::
   
   dojo.provide("coolio.actions");
   dojo.require("dojo.dnd");
@@ -51,7 +51,7 @@ The interface you want to publish to others consists of just one function: cooli
 
 You want to use Dojo, but you do not want it to conflict with other Dojo versions on the page. In this case you can use a djConfig.scopeMap to map dojo, dijit and dojox to different names. Your test page, tests/test.html, might be set up like so:
 
-.. code-block :: html
+.. html ::
   
   <head>
   <script type="text/javascript">
@@ -98,7 +98,7 @@ The build system allows you to "burn in" the scopeMap into the built JS file, av
 
 Define a build profile like the below and save it as coolio.profile.js:
 
-.. code-block :: javascript
+.. js ::
   
   dependencies = {
         layers: [
@@ -170,7 +170,7 @@ Suppose you have your code laid out like so:
 
 To use both versions in a page, the tests/test.html file would look like
 
-.. code-block :: html
+.. html ::
   
   <head>
   <script type="text/javascript">

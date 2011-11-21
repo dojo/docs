@@ -99,7 +99,7 @@ Usage
 
 * Declare indirect selection feature plugin
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -112,7 +112,7 @@ Usage
 
 with HTML markup
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}" >
@@ -120,7 +120,7 @@ with HTML markup
 
 with JavaScript
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>
@@ -131,7 +131,7 @@ with JavaScript
 
 with HTML markup
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, selectionMode:'single'" ... >
@@ -139,7 +139,7 @@ with HTML markup
 
 with JavaScript
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>
@@ -148,7 +148,7 @@ with JavaScript
 
 * It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   //with HTML markup
@@ -204,14 +204,14 @@ Usages
 ------
 * Turn on Select All checkbox in the column header
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{headerSelector:true, ...}}" ...></div>
 
 * Listen to events when the check box/radio button is checked/unchecked
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.connect(grid.selection, 'onSelected'|'onDeselected', function(rowIndex){...})
@@ -221,7 +221,7 @@ Usages
 
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>
@@ -232,7 +232,7 @@ Usages
 
 * When in non-‘single’ selection mode, it’s also easy to select or deselect all rows by:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>
@@ -241,7 +241,7 @@ Usages
 
 * Another handy usage is to enable or disable a check box or radio button for a certain row by:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>
@@ -250,21 +250,21 @@ Usages
 
 * You can check whether a certain row is selected with the following code.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dijit.byId('grid').selection.isSelected(rowIndex) // returns true or false
 
 * It's also possible to make some styling customizations for the indirect selection column.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{name:'Selection',width:'70px',styles:'text-align:right;'}}" ...></div>
     
 or
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script>

@@ -44,7 +44,7 @@ Examples
 Declarative example
 --------------------
 
-.. code-block :: html
+.. html ::
 
 		<script type="text/javascript" >
 			function updateView() {

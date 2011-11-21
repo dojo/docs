@@ -24,7 +24,7 @@ Usage
 
 To subscribe a function to a channel:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)
@@ -40,7 +40,7 @@ To subscribe a function to a channel:
 
 To trigger that function, publish some data on the same channel:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)
@@ -52,7 +52,7 @@ To trigger that function, publish some data on the same channel:
 
 The channel name can be any string you choose:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)
@@ -73,7 +73,7 @@ Globbing
 
 Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on wildcards. This example is ``invalid``:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)
@@ -92,7 +92,7 @@ Subscribe uses :ref:`dojo.hitch <dojo/hitch>` under the covers to provide more a
 
 Consider the following object:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   var obj = {
@@ -104,7 +104,7 @@ Consider the following object:
 
 To execute an anonymous function in the scope of `obj`:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)
@@ -122,7 +122,7 @@ To execute an anonymous function in the scope of `obj`:
 
 Alternately, you can pass a named function instead of an anonymous function with scope:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)

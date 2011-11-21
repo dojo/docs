@@ -30,7 +30,7 @@ Usage
 
 To load this widget code:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.widget.FisheyeLite");
@@ -41,7 +41,7 @@ Any CSS properties can be modified, by default in multipliers. Some CSS "setup" 
 
 New in Dojo 1.3, you can optionally specify an object (instead of a multiplier) of values to pass directly to the animation. You are still required to style the nodes accordingly for the 'natural' state, but can specify direct end: values for a property. eg 'left':
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   new dojox.widget.FishseyeLite({ properties: { left: { end:100, unit:"px" } } }, "someNode");
@@ -56,7 +56,7 @@ Programmatic example
 
 The nature of this widget is typically to repeat patterns throughout a Node. Going back to the original unordered-list mentioned initially, an easy way to set the FisheyeLite on all list-items in a list:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.addOnLoad(function(){
@@ -65,14 +65,14 @@ The nature of this widget is typically to repeat patterns throughout a Node. Goi
 
 You can also instantiate a FisheyeLite as you would any standard Dijit:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var fish = new dojox.widget.FisheyeLite({ properties:{ top:5 } }, "someNode");
 
 The previous examples used a multiplier value (10 and 5, respectively). Passing an object for each property allows you to simply "animate to some point":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    var fish = new dojox.widget.FisheyeLite({
@@ -90,7 +90,7 @@ Declarative example
 
 Simply add a ``data-dojo-type``:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <ul>
@@ -99,7 +99,7 @@ Simply add a ``data-dojo-type``:
 
 When instantiating, either programmatically or declaratively, the source DOM Node (with the data-dojo-type, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node.
 
-.. code-block :: html
+.. html ::
   :linenos:
   
     <ul>
@@ -115,7 +115,7 @@ Behavioral Widget
 
 This widget is one of the few official widgets which utilize the optional parameter to pass to .destroy(). Typically, calling .destroy() on a Widget will remove the original DOM Node from the document. By passing ``true`` (preserveDom), we are able to cleanly remove the Fisheye effect from a node, optionally restoring it later in a different form.
 
-.. code-block :: html
+.. html ::
   :linenos:
 
    var fish = dijit.byId("someId");

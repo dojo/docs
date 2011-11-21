@@ -7,7 +7,7 @@ dijit.getEnclosingWidget
 
 Obtain a widget reference by determining the immediate-most parent Widget from some passed Node:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query("#bar").onclick(function(e){
        var aWidget = dijit.getEnclosingWidget(e.target); // pass a domNode

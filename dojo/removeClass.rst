@@ -38,7 +38,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``remove`` is accessed from the ``dojo/dom-class`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-class"], function(domClass){
       // Remove a class from some node:
@@ -47,7 +47,7 @@ When using AMD format in a fully baseless application, ``remove`` is accessed fr
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.removeClass`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // Remove a class from some node:
@@ -57,7 +57,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.rem
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // Remove a class from some node:
     dojo.removeClass("someNode", "firstClass");
@@ -71,7 +71,7 @@ Remove a class
 
 The following example removes the class "style1" from the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -119,7 +119,7 @@ Remove several classes as a string
 
 The following example removes two classes: "style1" and "style2" from the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -168,7 +168,7 @@ Remove several classes as an array
 
 The following example removes two classes: "style1" and "style2" from the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -217,7 +217,7 @@ Remove all classes
 
 The following example removes all classes from the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -266,7 +266,7 @@ Remove from multiple nodes
 
 ``removeClass`` is also available for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to remove classes for multiple nodes. The following example removes the class for each node in the NodeList returned from dojo.query:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/query", "dojo/NodeList-dom"], function(query){

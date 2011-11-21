@@ -17,7 +17,7 @@ dojo.store.DataStore
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  datastore = new dojo.data.ItemFileWriteStore({url:"data.json"});
 

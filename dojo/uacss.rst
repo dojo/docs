@@ -47,7 +47,7 @@ By doing a dojo.require("dojo.uacss") CSS classes will be added to your document
 
 flag.   In addition, the classes from above are repeated with -rtl appended.  For example, running on IE6 in RTL mode will produce the following classes on <html>:
 
-.. code-block :: css
+.. css ::
 
    dj_ie dj_ie7 dj_iequirks dj_borderBox
    dj_rtl dj_ie-rtl dj_ie7-rtl dj_iequirks-rtl dj_borderBox-rtl
@@ -59,14 +59,14 @@ Usage
 
 Simply require the module:
 
-.. code-block :: javascript
+.. js ::
 
   //Dojo 1.7(AMD)
   require(["dojo/uacss"],function(){
 	//write your code here
   });
   
-.. code-block :: javascript
+.. js ::
 
   //Dojo < 1.7
   dojo.require("dojo.uacss");
@@ -74,7 +74,7 @@ Simply require the module:
 And then reference the class names from CSS rules, etc:
 
 
-.. code-block :: css
+.. css ::
 
   .dj_iequirks .foo {
        zoom: 1;

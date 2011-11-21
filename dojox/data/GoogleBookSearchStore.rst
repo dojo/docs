@@ -43,7 +43,7 @@ The pattern of using the GoogleBookSearchStore is
   * **pageCount** The number of pages in the book.
   * **publishedYear** The year of publication.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

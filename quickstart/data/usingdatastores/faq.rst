@@ -33,7 +33,7 @@ Question 3:  Okay, you say dojo.data items are opaque ... but I would like to co
 
 This is actually not difficult to do. This is done through usage of the dojo.data.api.Read specification. The code you would use to create a JSON structure from a dojo.data item is the following:
 
-.. code-block :: javascript
+.. js ::
 
   
   function itemToJSON(store, item) {
@@ -85,7 +85,7 @@ Question 4:  Okay, I want to copy items from one store to another, but if I dire
 
 By definition, items are unique to their store instance, so you cannot generally pass an item from store A to store B without getting errors. What you must do is copy the data from one store to another. The technique for this is actually very similar to the technique described in question 3. You must iterate over the items attributes, build a JavaScript Object of them, then on the target store, call 'newItem' to create the copy of the item. Psuedocode for this would be like:
 
-.. code-block :: javascript
+.. js ::
 
   var origStore = some.datastore();
   var newStore = null;
@@ -131,7 +131,7 @@ Question 6:  How do I get a count of all items in a datastore?
 
 You do a fetch that queries for all items, then use the onBegin callback function. In the dojo.data.api.Read spec, the onBegin callback function's first parameter is the total size of the match, regardless of what start and count were configured to. This is so you have a way of knowing the total match outside of the returned page so that you can configure your client side display appropriately. The simplest way to get a size back, but no items would be to do something like:
 
-.. code-block :: javascript
+.. js ::
 
   function size(size, request) {
     //Do whatever with the size var.
@@ -173,7 +173,7 @@ Question 10:  In one of my items in ItemFileReadStore I defined an attribute val
 
 This question is easier to understand with a bit of sample ItemFile*Store input. Consider the following:
 
-.. code-block :: javascript
+.. js ::
 
   {
     "identifier": "myid",

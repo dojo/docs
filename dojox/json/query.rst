@@ -27,19 +27,19 @@ Usage
 
 A JSONQuery can be executed with the following call:
 
-.. code-block :: javascript
+.. js ::
 
  results = dojox.json.query(query,object);
 
 Where query is the JSONPath query to execute and object is the root object or array to query. You can also create a “compiled” evaluation function that can be reused for multiple evaluations by only passing a query string:
 
-.. code-block :: javascript
+.. js ::
 
  evaluator = dojox.json.query(query);
 
 The evaluator function can be then be performed on a query on data by calling it with the data as a parameter:
 
-.. code-block :: javascript
+.. js ::
 
  results = evaluator(object);
 
@@ -51,7 +51,7 @@ Query Syntax
 
 JSONQuery evaluations begin with the provided object, which can referenced within queries with $. From the starting object, various operators can be successively applied, each operating on the result of the last operation. You may explicitly begin your query with $, but this is implicitly auto-inserted, so it is not necessary. This allows you to start queries with operators. JSONQuery uses syntax that is similar to JavaScript (with a number of extra operators), so a simple query could be performed like:
 
-.. code-block :: javascript
+.. js ::
 
  data = {foo:"bar"};
  results = dojox.json.query("$.foo",data);
@@ -68,7 +68,7 @@ JSONQuery provides all the functionality of JSONPath, and additional query capab
 
 For example, the following JSONQuery will find the foo property of the 2nd item in the provided array (the $ is omitted):
 
-.. code-block :: javascript
+.. js ::
 
  [1].foo
 
@@ -133,13 +133,13 @@ The following operators from JSONPath are also supported:
 
 Multiple operators can be used successively to create complex queries. For example, to find all the objects from the array in the products property that have a price under 15 and then sort them by descending order of rating and show the first twenty items from the resultant list, we could query:
 
-.. code-block :: javascript
+.. js ::
 
  $.products[?price < 15][\rating][0:20]
 
 Queries can use the regular operators to form general expressions based on more complex query operations. For example, to find the difference between the lowest priced item and the highest priced item in an array:
 
-.. code-block :: javascript
+.. js ::
 
  $.store.book[\price][0].price - $.store.book[/price][0].price
 

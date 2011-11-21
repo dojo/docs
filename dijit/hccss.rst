@@ -23,14 +23,14 @@ Usage
 
 Simply require the module, and then :
 
-.. code-block :: javascript
+.. js ::
 
   require(["dijit/hccss"]);
   
 And then reference the class name from CSS rules, etc:
 
 
-.. code-block :: css
+.. css ::
 
   .myTitlePane .label {
        /* normally hide the label in preference to the icon */
@@ -49,7 +49,7 @@ Note that the dojo/domReady! dependency (if present) will resolve before the CSS
 Thus if your widget has javascript sizing code, it's not sufficient to wait for dojo/domReady!.
 Rather, the widget should be instantiated inside of a ready() call:
 
-.. code-block :: javascript
+.. js ::
 
 
   require(["dojo/ready", "dijit/hccss"], function(ready){

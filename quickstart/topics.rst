@@ -9,7 +9,7 @@ Topics are an easy way for ambiguous objects, widgets, or code to communicate wi
 
 On a very basic level, subscribe to a topic, and run an anonymous function:
 
-.. code-block :: javascript
+.. js ::
  
   dojo.subscribe("/foo/bar/baz", function(message){
       console.log(message);
@@ -17,7 +17,7 @@ On a very basic level, subscribe to a topic, and run an anonymous function:
 
 This code will not execute until something is published on that topic:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.publish("/foo/bar/baz", {
       foo:"bar", baz:"bam"
@@ -25,7 +25,7 @@ This code will not execute until something is published on that topic:
 
 The named topics can be whatever syntax you choose, it is just a string:
 
-.. code-block :: javascript
+.. js ::
  
   dojo.subscribe("my-custom-topic", function(message){
       console.log(message);

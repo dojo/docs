@@ -33,7 +33,7 @@ Here are some examples of how to create a basic OpenLayers Map component :
 
 Programmatic way of creating a Map component:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <!-- Dojo -->
@@ -53,7 +53,7 @@ Programmatic way of creating a Map component:
 
 Creating a Map using markup declaration:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <!-- Dojo -->
@@ -96,7 +96,7 @@ Here are the JavaScript API needed to access specific map provider :
 
 Some examples of how to set/change the base layer type:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   <!-- Dojo -->
@@ -150,7 +150,7 @@ The map is fit on the specified position showing the extent <extent> around the 
 
 Programmatic version:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script type="text/javascript">
@@ -179,7 +179,7 @@ Programmatic version:
 
 Markup version:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
   <script type="text/javascript">
@@ -203,7 +203,7 @@ The OpenLayers mapping component allows to position GFX shapes on the map at spe
 
 The following code shows how to display a point at the New York location. A circle is displayed as it is the default GFX shape to be displayed for a Point geometry.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
   <script type="text/javascript">
@@ -245,7 +245,7 @@ The following code shows how to display a point at the New York location. A circ
 
 You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The following example shows how to create a polyline joining some major towns of the world.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
  <script type="text/javascript">
@@ -307,7 +307,7 @@ You can also place polylines on the map. In this case, you will need to create a
 
 You can also place combination of geometries using a dojox.geo.openlayers.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script type="text/javascript">
@@ -383,7 +383,7 @@ You also might want to display a specific shape on the map. For that, you can re
 
 Example that shows a star at Paris location:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script type="text/javascript">
@@ -471,7 +471,7 @@ The styling of the GFX shapes is done through the setFill and setStroke methods 
 
 The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two followinf code are equivalent.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var f = new dojox.geo.openlayers.GeometryFeature(p);
@@ -484,7 +484,7 @@ The shape can also be configured a with the setShapeProperties method. These pro
   path : star
  });
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var f = new dojox.geo.openlayers.GeometryFeature(p);
@@ -516,7 +516,7 @@ The descriptor passed to the Widget feature is an object containing the followin
 
 Here is an example that shows a pie chart at New York location:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script type="text/javascript">

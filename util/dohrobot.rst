@@ -52,7 +52,7 @@ The doh.robot API
 
 Since there are 3 robots, you can find the latest APIs documented in util/doh/robot.js, dojo/robot.js, and dijit/robot.js. The commands all have certain semantics in common, so I will describe them here using doh.robot.typeKeys as an example:
 
-.. code-block:: javascript
+.. js ::
 
   typeKeys: function(/*String||Number*/ chars, /*Integer, optional*/ delay, /*Integer, optional*/ duration){
         // summary:
@@ -97,7 +97,7 @@ Writing doh.robot tests
 
 Here is a "hi again" test using the doh.robot that clicks in a textbox containing "hi" and adds " again":
 
-.. code-block :: javascript
+.. js ::
 
     doh.register("doh.robot",
     {
@@ -147,7 +147,7 @@ dojo.robot and dijit.robot's value-add
 
 The above test uses the basic doh.robot, and as such has two issues that could pose a problem in more sophisticated unit tests: first, it has to manually indicate that the test passed. If you either ran the test in the DOH runner, or ran the test standalone with Dojo available, you would be able to better see the results either in the runner's log or in the console at the bottom of the page. Second, it assumes that you have an absolutely positioned text element to click. For unit tests that rely on the browser's layout manager, or percent or em measurements, to lay out the page, pixel mouse movement isn't the ideal way to move the mouse. Fortunately Dojo 1.2 fills in this gap by adding a doh.robot.mouseMoveAt command:
 
-.. code-block:: javascript
+.. js ::
 
     mouseMoveAt : function(/*String||DOMNode||Function*/ node, /*Integer, optional*/ delay, /*Number, optional*/ offsetX, /*Number, optional*/ offsetY, /*Integer, optional*/ duration){
         // summary:
@@ -184,7 +184,7 @@ The above test uses the basic doh.robot, and as such has two issues that could p
 
 Where as the simple mouseMove needs to know ahead of time where to move on the page, mouseMoveAt can compute the position of elements on the fly even for elements not on the DOM or off the screen at the start of the test! So if we were to rewrite the above DOH test using dojo.robot, it would look like:
 
-.. code-block:: javascript
+.. js ::
 
   dojo.require("dojo.robot");
     
@@ -273,7 +273,7 @@ doh.robot.initRobot()
 ~~~~~~~~~~~~~~~~~~~~~
 You use initRobot() to load an application for testing. Here is the syntax:
 
-.. code-block:: javascript
+.. js ::
 
     initRobot: function(/*String*/ url){
         // summary:
@@ -301,7 +301,7 @@ Example
 Here is an example of a test that uses initRobot. The test is interacting with a completely separate page consisting of three dijit.Spinner widgets, residing here: http://archive.dojotoolkit.org/nightly/checkout/dijit/tests/form/test_Spinner.html
 Notice that there is no robot code in the page that the robot is testing. Now here is the separate test script that is automating that page:
 
-.. code-block:: html
+.. html ::
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                 "http://www.w3.org/TR/html4/strict.dtd">
@@ -436,7 +436,7 @@ waitForPageToLoad
 -----------------
 You can load an external application, so now you want to click links and open new pages within that application. Here is the syntax for waitForPageToLoad:
 
-.. code-block:: javascript
+.. js ::
 
     waitForPageToLoad: function(/*Function*/ submitActions){
         // summary:
@@ -475,7 +475,7 @@ PlantsByWebSphereAjax contains a shopping cart built on Dojo DnD. Users literall
 
 In the following sample, the robot uses initRobot to load the application. In the test, the robot acts just like a user and drags an item into the shopping cart. The robot uses waitForPageToLoad to click the checkout button, triggering a page to a login page. After the login page appears, the robot fills in its credentials. The robot again uses waitForPageToLoad to click login. The robot fills in its address and credit card information and the test concludes.
 
-.. code-block:: javascript
+.. js ::
 
         doh.robot.initRobot('/PlantsByWebSphereAjax/');
         
@@ -580,7 +580,7 @@ In the following sample, the robot uses initRobot to load the application. In th
 
 The above code uses waitForPageToLoad twice: once to click the checkout button, and once to click the login button. In each waitForPageToLoad call, you pass a function containing commands that will change the page. Let's examine the first waitForPageToLoad call more closely:
 
-.. code-block:: javascript
+.. js ::
 
         // use waitForPageToLoad to click the checkout button
         // tests will wait for the next page to load

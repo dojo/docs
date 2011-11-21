@@ -50,7 +50,7 @@ Matrix2D is the class for our 2 by 3 matrix. You can always use it to normalize 
 
 Examples:
 
-.. code-block :: javascript
+.. js ::
 
   // identity {xx: 1, xy: 0, dx: 0, yx: 0, yy: 1, dy: 0}
   var m1 = new dojox.gfx.Matrix2D();
@@ -69,7 +69,7 @@ normalize
 
 There is one more useful function: ``normalize(m)``, which returns Matrix2D_:
 
-.. code-block :: javascript
+.. js ::
 
   var m1 = normalize(2);        // => {xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}
   

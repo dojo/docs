@@ -40,7 +40,7 @@ preloadDelay  int     The delay in milliseconds after the LightboxNano is create
 
 The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon. To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
 
-.. code-block :: css
+.. css ::
  :linenos:
 
  a:hover .dojoxEnlarge {
@@ -77,7 +77,7 @@ Programmatic example
 
 Create the LightboxNano on an <img> element:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script src="/path/to/dojo.js" type="text/javascript"></script>
@@ -95,7 +95,7 @@ Create the LightboxNano on an <img> element:
 
 Create the LightboxNano on an <a> element:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script src="/path/to/dojo.js" type="text/javascript"></script>
@@ -116,7 +116,7 @@ Declarative example
 
 Standard way to declaratively create the LightboxNano
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script src="/path/to/dojo.js" type="text/javascript"></script>
@@ -131,7 +131,7 @@ Standard way to declaratively create the LightboxNano
 
 Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <script src="/path/to/dojo.js" type="text/javascript"></script>
@@ -176,7 +176,7 @@ A 1.6 workaround
 
 Dojo 1.6 introduced the use of data-dojo-type instead of dojoType, and changed the way markup attributes are passed in to the dijits being constructed.  This means that the following examples are not the same:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
@@ -189,7 +189,7 @@ Dojo 1.6 introduced the use of data-dojo-type instead of dojoType, and changed t
 
 The second, using data-dojo-type, will break because the 'href' attribute on the source node is not passed in to the LightboxNano constructor.  The 'correct' way to approach this is to duplicate the href attribute in data-dojo-props (as discussed in the 1.6 release notes).
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <a data-dojo-type="dojox.image.LightboxNano" data-dojo-props="href: '/path/to/large/image.jpg'" href="/path/to/large/image.jpg">
@@ -198,7 +198,7 @@ The second, using data-dojo-type, will break because the 'href' attribute on the
 
 This makes a dijit attribute 'href' available inside the constructor.  However, many might consider this long winded.  A solution is to declare a LightboxNanoHelper dijit, and use it instead of the LightboxNano:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.require("dojox.image.LightboxNano");

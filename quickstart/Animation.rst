@@ -18,7 +18,7 @@ Getting to know dojo.Animation
 As mentioned, dojo.Animation is the foundation class for all Dojo animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -33,7 +33,7 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
  });
 
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 	
     //Dojo < 1.7
@@ -46,7 +46,7 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
 	
 You can simplify the above code using chaining, if you don't need to keep the animation object around for later use as follows:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  //Dojo 1.7 (AMD)
@@ -54,7 +54,7 @@ You can simplify the above code using chaining, if you don't need to keep the an
 	fx.fadeOut({ node:"someId" }).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 	
     //Dojo < 1.7
@@ -62,7 +62,7 @@ You can simplify the above code using chaining, if you don't need to keep the an
 	
 All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2) use predefined animation properties on the Object parameter to specify the animation settings. The `node:` property is the most important, and points to a node in the DOM on which to apply the animation. `node` can be a String ID of a DOM node, or a direct reference to a DOM node you already have:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 	
  //Dojo 1.7 (AMD)
@@ -71,7 +71,7 @@ All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 	fx.fadeOut({ node: target }).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 		
     //Dojo < 1.7
@@ -143,7 +143,7 @@ The standard set of events that are fired during stages of an animation are:
 
 Consider this simple fade animation, and all the potential callbacks registered:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -172,7 +172,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
     }).play();
   });
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   //Dojo < 1.7
@@ -201,7 +201,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
 
 You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the instance and listen for the function calls.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -213,7 +213,7 @@ You can define these callback functions as part of the Object parameter used to 
 	animation.play(); // start it up
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 	
     //Dojo < 1.7
@@ -225,7 +225,7 @@ You can define these callback functions as part of the Object parameter used to 
 
 **new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animated so that you may more easily manipulate a node immediately before or after an animation:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -241,7 +241,7 @@ You can define these callback functions as part of the Object parameter used to 
     }).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -267,7 +267,7 @@ Fading Example
 
 To fade out a node, alter it's contents, and fade it back in:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -284,7 +284,7 @@ To fade out a node, alter it's contents, and fade it back in:
 	}).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -315,7 +315,7 @@ available within the toolkit for advanced animation control.
 
 To use these extended functions, you must include the `dojo.fx` module:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -350,7 +350,7 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 
 
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -369,7 +369,7 @@ Two convenience functions provided in the `dojo.fx` module named `combine` and `
 
 To fade out two nodes simultaneously:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -384,7 +384,7 @@ To fade out two nodes simultaneously:
  });
 
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -401,7 +401,7 @@ To fade out two nodes simultaneously:
 
 Javascript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -415,7 +415,7 @@ Javascript is rather flexible about return values and where functions are called
 	});
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -430,7 +430,7 @@ Javascript is rather flexible about return values and where functions are called
 
 The same rules apply to a combined animation as do a normal animation, though with no direct way to mix event callbacks into the combine() call, you are left using the `dojo.connect` method to attach event handlers:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -444,7 +444,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 	});
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -458,7 +458,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 
 Alternately, you can mix event handlers into your individual animations passed to dojo.fx.combine:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -474,7 +474,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 	coreFx.combine([animA, animB]).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -490,7 +490,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 
 Chain works in much the same way - though plays each animation one right after the other:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -501,7 +501,7 @@ Chain works in much the same way - though plays each animation one right after t
 	]).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7
@@ -514,7 +514,7 @@ All of the same patterns apply to chain as to other animation instances. A good 
 
 combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  //Dojo 1.7 (AMD)
@@ -532,7 +532,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
 	coreFx.combine(anims).play();
  });
 
-.. code-block :: javascript
+.. js ::
     :linenos:
 
     //Dojo < 1.7

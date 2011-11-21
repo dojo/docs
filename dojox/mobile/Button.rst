@@ -40,7 +40,7 @@ Examples
 Default Button
 --------------
 
-.. code-block :: html
+.. html ::
 
   <button dojoType="dojox.mobile.Button">Default Button</button>
 
@@ -51,7 +51,7 @@ Custom Button
 
 You can define your own style for Button and specify it with the class and style parameters.
 
-.. code-block :: html
+.. html ::
 
   <style>
   .redButton {
@@ -65,7 +65,7 @@ You can define your own style for Button and specify it with the class and style
   }
   </style>
 
-.. code-block :: html
+.. html ::
 
   <button dojoType="dojox.mobile.Button" class="redButton" style="width:120px">Custom Button</button>
 
@@ -74,7 +74,7 @@ You can define your own style for Button and specify it with the class and style
 onClick handler in HTML5 format
 -------------------------------
 
-.. code-block :: html
+.. html ::
 
   <button data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked");return true; }'></button>
 

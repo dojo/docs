@@ -22,7 +22,7 @@ Overview
 
 The function takes up to three arguments:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     // Dojo 1.7+ (AMD)
@@ -73,7 +73,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``place`` is accessed from the ``dojo/dom-construct`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-construct"], function(domConstruct){
       // place node as first child of refNode
@@ -82,7 +82,7 @@ When using AMD format in a fully baseless application, ``place`` is accessed fro
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.place`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // place node as first child of refNode
@@ -92,7 +92,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.pla
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   // place node to refNode
   dojo.place(node, refNode, "first");
@@ -307,7 +307,7 @@ Notes
 
 This placement method is useful when you know how many children the reference node has, and what they are. **Do not forget that text nodes (even empty ones) are counted as children too:**
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <p>
@@ -316,7 +316,7 @@ This placement method is useful when you know how many children the reference no
 
 In the fragment above the <p> node will have 3 children: a text node (spaces and a newline), the <span> node, and another text node (spaces and a newline). **Be careful when using markup like that!** For example the next fragment will have just one <span> node as a child:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <p><span>1</span></p>
@@ -332,7 +332,7 @@ Place using dojo.create()
 
 An alternative way to place (and create) a node is :ref:`dojo.create <dojo/create>`. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally :ref:`dojo.attr <dojo/attr>` and :ref:`dojo.place <dojo/place>` to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of :ref:`dojo.create <dojo/create>` is that by using :ref:`dojo.attr <dojo/attr>` all attributes will be applied in a browser-independent way avoiding possible differences.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // the third and fourth options are passed to dojo.place()

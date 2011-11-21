@@ -18,7 +18,7 @@ dojo/Evented API
 
 The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to on() and on.emit() with the target being the instance object. For example, we could create a class:
 
-.. code-block :: javascript
+.. js ::
   
   define(["dojo/Evented"], function(Evented){
     var MyComponent = dojo.declare([Evented], {
@@ -42,7 +42,7 @@ Event Handler Properties
 
 The Evented class stores events in a property/method slot named after the event with an "on" prefix, following the DOM0 convention. For example, listening to the "foo" event will put the listeners in the "onfoo" method. If a class has an "onMouseDown" method, this corresponds to a "MouseDown" event that you can listen to with:
 
-.. code-block :: javascript
+.. js ::
   
   component.on("MouseDown");
 

@@ -30,7 +30,7 @@ The following list provides the requirements for the Write API that implementors
 * Datastores, in their Save function, account for any copying of items and generation of save format required by the back end service before it enters into the asynchronous I/O with the server. This is to avoid any contention issues with modifications that are occurring while the datastore is is waiting for the server I/O to complete.
 * The parameter to newItem is a keywordArgs object. For ease of interoperability, this parameter should be constructed as a JavaScrpt object with attribute names and values that match the conceptual structure of the attribute list the item would return. For example, if the source store is an XML backed store, a call to create a new XML Element in that store with attributes foo, bar, and bit, should look like this:
 
-  .. code-block :: javascript
+  .. js ::
 
     //The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
     store.newItem({foo: "fooValue", bar: "barValue", bit: "bitValue"});
@@ -49,7 +49,7 @@ The following sections provide examples of the Read API in use, as described by 
 Simple attribute modification and save
 --------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   //Instantiate some write implementing store.
   var store = some.DataWriteStore();
@@ -88,7 +88,7 @@ Simple emit of all modified items
 
 This example shows how to get all modified items before a save has been called.
 
-.. code-block :: javascript
+.. js ::
 
   var store = some.DataWriteStore();
   //Set our load completed hander up...
@@ -123,7 +123,7 @@ For convenience, the complete Write Feature is defined below.
 newItem
 -------
 
-.. code-block :: javascript
+.. js ::
 
   newItem: function(/* Object? */ keywordArgs, /*Object?*/ parentInfo){
     //   summary:
@@ -160,7 +160,7 @@ newItem
 deleteItem
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   deleteItem: function(/* item */ item)
     //    summary:
@@ -178,7 +178,7 @@ deleteItem
 setValue
 --------
 
-.. code-block :: javascript
+.. js ::
 
   setValue: function(/* item */ item, /* string */ attribute, /* almost anything */ value)
     //    summary:
@@ -202,7 +202,7 @@ setValue
 setValues
 ---------
 
-.. code-block :: javascript
+.. js ::
 
   setValues: function(/* item */ item, /* string */ attribute, /* array */ values)
     //    summary:
@@ -230,7 +230,7 @@ setValues
 unsetAttribute
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   unsetAttribute: function(    /* item */ item, /* string */ attribute)
     //    summary:
@@ -251,7 +251,7 @@ unsetAttribute
 save
 ----
 
-.. code-block :: javascript
+.. js ::
 
   save: function(/* object */ keywordArgs)
     //    summary:
@@ -301,7 +301,7 @@ save
 revert
 ------
 
-.. code-block :: javascript
+.. js ::
 
   revert: function()
     //    summary:
@@ -315,7 +315,7 @@ revert
 isDirty
 -------
 
-.. code-block :: javascript
+.. js ::
 
   isDirty: function(/* item? */ item)
     //    summary:

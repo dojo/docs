@@ -23,7 +23,7 @@ The Cache store provides caching capabilities for stores. The Cache store takes 
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  restStore = new dojo.store.JsonRest(...);
  memoryStore = new dojo.store.Memory();

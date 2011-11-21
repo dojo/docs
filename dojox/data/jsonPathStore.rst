@@ -61,14 +61,14 @@ events have completed.
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({url: "/stores/store.js"});
   </script>
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -123,7 +123,7 @@ Examples
 Programmatic example
 --------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -140,7 +140,7 @@ Programmatic example
 
 Declarative example
 -------------------
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div data-dojo-id="store" data-dojo-type="dojox.data.jsonPathStore" data-dojo-props="url:'/path/to/store.js'"></div>

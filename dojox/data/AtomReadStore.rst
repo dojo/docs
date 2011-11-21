@@ -75,7 +75,7 @@ The query syntax for this store is simple. If the data source is a static url, e
 Query Example With One Parameter
 --------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   {
     user: '1234'

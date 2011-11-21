@@ -12,7 +12,7 @@ by a query specified to the ForestStoreModel constructor.
 
 Here's an example of a declarative initialization for a TreeStoreModel and for the data store that it connects to:
 
-.. code-block :: html
+.. html ::
 
 	<div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
 		data-dojo-props="url:'_data/countries.json'"></div>
@@ -37,7 +37,7 @@ ForestStoreModel has no way of knowing that the continent affects the top level 
 
 For example:
 
-.. code-block :: javascript
+.. js ::
 
 
 	var model = new dijit.tree.ForestStoreModel({
@@ -57,7 +57,7 @@ Moving items to/from the root node
 ----------------------------------
 It's also complicated because users need to define what to do when an element is dropped on to the root of the tree, or dragged from the root of the tree and dropped onto a sub-node.   You may want to, for example, change the item so that the "topLevel" attribute is set/unset.   It depends on the structure of the data store what the appropriate action is.   The developer should override onAddToRoot() and onLeaveRoot().
 
-.. code-block :: javascript
+.. js ::
 
   onAddToRoot: function(/* item */ item){
         // summary

@@ -38,7 +38,7 @@ Usage
 
 TabBar is in a separate module file from _base.js. You need to dojo.require TabBar as below.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.mobile.TabBar");
 
@@ -49,7 +49,7 @@ Examples
 Tab Bar
 -------
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.TabBar">
     <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
@@ -68,7 +68,7 @@ In this example, an aggregated icon image as below is used for each TabBarButton
 
 (tab-icons.png)
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.TabBar" iconBase="images/tab-icons.png">
     <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,0,29,29" iconPos2="29,0,29,29" selected="true">Featured</li>
@@ -85,7 +85,7 @@ Segmented Control
 
 This type of bar is typically used at the top of the screen to control visibility of multiple views.
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl">
     <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
@@ -100,7 +100,7 @@ Grouped Tab Bar
 
 TabBar forms kind of tab container whose panes are views. You may, however, want to treat the entire tab container as one view. In such cases, you can nest the view classes as shown in the following example. In this example, subview1, subview2, and subview3 are in the top level view groupview1. You can move to the hello view from subview1 or subview2, and then return to the top level view (=groupview1) instead of a specific child view (subview1, subview2, or subview3). When you return to groupview1, the currently visible view in groupview1 is shown.
 
-.. code-block :: html
+.. html ::
 
   <div id="groupview1" dojoType="dojox.mobile.View" selected="true">
       <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl" fixed="top">

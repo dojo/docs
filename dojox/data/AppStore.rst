@@ -185,7 +185,7 @@ Query Syntax
 
 The fetch method query syntax for AppStore is the same as :ref:`ItemFilereadStore <dojo/data/ItemFileReadStore>`. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
-.. code-block :: javascript
+.. js ::
 
   { title:"bar", subtitle:"bite"}
 
@@ -200,7 +200,7 @@ Match items with multi-character wildcard
 
 *Matching attribute title that has a value starting with bar*
 
-.. code-block :: javascript
+.. js ::
 
   { title:"bar*"}
 
@@ -211,7 +211,7 @@ Match items with single character wildcard
 *Matching attribute title the value of which ends with ar and starts with any character.*
 
 
-.. code-block :: javascript
+.. js ::
 
   { title:"?ar"}
 
@@ -222,7 +222,7 @@ Match items on multiple attributes
 *Matching multiple attributes with various wildcards.*
 
 
-.. code-block :: javascript
+.. js ::
 
   { title:"?ar", subtitle:"bob", category:"*it*"}
 

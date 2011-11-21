@@ -22,7 +22,7 @@ Since Dojo 1.7, ``dojo.setAttr`` is exposed via the ``set`` method of the ``dojo
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   
   // Dojo 1.7+ (AMD)
@@ -52,7 +52,7 @@ Dojo 1.7 (AMD)
 
 When using AMD format in a fully baseless application, ``set`` is accessed from the ``dojo/dom-attr`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr"], function(domAttr){
       // use setAttr() to set the tab index
@@ -65,7 +65,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setAttr`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // use setAttr() to set the tab index
@@ -79,7 +79,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // use setAttr() to set the tab index
     dojo.setAttr("nodeId", "tabIndex", 3);

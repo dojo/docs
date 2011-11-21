@@ -33,7 +33,7 @@ The various views can be combined in any combination to create a complete widget
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <style type="text/css">

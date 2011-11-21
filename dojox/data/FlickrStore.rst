@@ -23,14 +23,14 @@ Query
 
 Query (all pictures with tags animals, foxes, and cute):
 
-.. code-block :: javascript
+.. js ::
   
   http://api.flickr.com/services/feeds/photos_public.gne?tags=animals,bats,cute&format=json&tagmode=all
 
 Response
 --------
 
-.. code-block :: javascript
+.. js ::
 
   jsonFlickrFeed({
 		"title": "Photos from everyone tagged animals, foxes and cute",

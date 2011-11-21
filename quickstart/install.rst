@@ -32,7 +32,7 @@ For you traditionalists out there, you can download, install and use Dojo the ol
 
 And now you've got a working Dojo! Anything can be accomplished now based on the inclusion of ``dojo.js`` at whatever relative position on your server it exists:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <html>

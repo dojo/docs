@@ -21,7 +21,7 @@ Usage
 
 [ Dojo 1.7+ (AMD) ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/_base/lang"], function(lang) {
@@ -34,7 +34,7 @@ Usage
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var ref = function(a,b){ return a };
@@ -46,7 +46,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 
 [ Dojo 1.7+ (AMD) ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
@@ -60,7 +60,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("Thing", null, { constructor: function(){ } });
@@ -71,7 +71,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 
 A common pattern is to have a string version of a fully declared class. You can use dojo.isFunction to tell if you need to convert it to a function or not:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // some dynamic class to use:

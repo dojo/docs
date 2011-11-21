@@ -13,7 +13,7 @@ Lets take a quick look at a pseudo-code example of using partial:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
     var dataLoaded = function(someFirstParam, data, ioargs) {};
@@ -28,7 +28,7 @@ Lets take a quick look at a pseudo-code example of using partial:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
 
   var dataLoaded = function(someFirstParam, data, ioargs) {};
 
@@ -43,7 +43,7 @@ load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations 
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
     var dataLoaded = function(someFirstParam, data, ioargs) {};
@@ -58,7 +58,7 @@ load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations 
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
 
   var dataLoaded = function(someFirstParam, data, ioargs) {};
 

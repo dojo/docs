@@ -21,7 +21,7 @@ Usage
 
 Use this to test if a variable is an Object.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7 (AMD)
@@ -33,7 +33,7 @@ Use this to test if a variable is an Object.
 
 Returns true if it is a JavaScript object (or an Array, a Function or null).
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7 (AMD)

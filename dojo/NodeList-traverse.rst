@@ -28,7 +28,7 @@ Here is a simple example showing how dojo.NodeList-traverse adds a "children" me
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -41,7 +41,7 @@ Here is a simple example showing how dojo.NodeList-traverse adds a "children" me
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -68,7 +68,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -81,7 +81,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -94,7 +94,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -117,7 +117,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -130,7 +130,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -140,7 +140,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -161,7 +161,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -173,7 +173,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -186,7 +186,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -210,7 +210,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -222,7 +222,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -235,7 +235,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -258,7 +258,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -271,7 +271,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -285,7 +285,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -309,7 +309,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -322,7 +322,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -335,7 +335,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -359,7 +359,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -372,7 +372,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -385,7 +385,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -408,7 +408,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -421,7 +421,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -434,7 +434,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -460,7 +460,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -473,7 +473,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -486,7 +486,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -509,7 +509,7 @@ original dojo.NodeList.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -522,7 +522,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -532,7 +532,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -551,7 +551,7 @@ This method is provided due to a difference in the Acme query engine used by def
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -564,7 +564,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -574,7 +574,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -593,7 +593,7 @@ This method is provided due to a difference in the Acme query engine used by def
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -606,7 +606,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -616,7 +616,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -635,7 +635,7 @@ This method is provided due to a difference in the Acme query engine used by def
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -647,7 +647,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -657,7 +657,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -676,7 +676,7 @@ This method is provided due to a difference in the Acme query engine used by def
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -688,7 +688,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-traverse");
@@ -698,7 +698,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){

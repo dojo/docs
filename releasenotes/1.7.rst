@@ -46,13 +46,13 @@ AMD
 ---
 Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loading mode can be entered by setting the dojo config of "async" to true:
 
-   .. code-block :: html
+   .. html ::
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
 
 Note that in async mode many modules which were implicitly loaded before (including dojo.parser) now need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).   For example:
 
-  .. code-block :: html
+  .. html ::
 
            <script src="/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true, async: true"></script>
@@ -164,7 +164,7 @@ Parser
 ------
 The parser has been enhanced so you can specify browser native attributes just like native tags, but specify other attributes in data-dojo-props, for example:
 
-   .. code-block :: html
+   .. html ::
 
        <input data-dojo-type="dijit.form.TextBox" name="dept"
             data-dojo-props="scrollOnFocus: true"/>
@@ -173,7 +173,7 @@ The parser also supports the ability to specify dojo.on and object.watch declara
 
 An example of ``type="dojo/on"``:
 
-   .. code-block :: html
+   .. html ::
 
        <button data-dojo-type="dijit.form.Button">Click Me!
          <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
@@ -183,7 +183,7 @@ An example of ``type="dojo/on"``:
 
 An example of ``type="dojo/watch"`` (building on ``dojo/on``):
 
-   .. code-block :: html
+   .. html ::
 
        <button data-dojo-type="dijit.form.Button">Click Me!
          <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
@@ -216,7 +216,7 @@ So by using dojo/touch, we don't need to worry about appropriate native events w
 
 dojo/touch is based on :ref:`dojo/on <dojo/on>` and the following sample usage can work well across desktop and touch devices(Android 2.3/2.3 and iOS3+ for 1.7):
 
-   .. code-block :: javascript
+   .. js ::
       
       //listen to 'touchstart' on touch devices and 'mousedown' on desktops
       dojo.touch.press(node, function(e){});
@@ -247,13 +247,13 @@ Previously _setXXXAttr was a function to set a widget attribute.   It can still 
 
 For example, this will copy the widget's tabIndex attribute to this.focusNode.tabIndex
 
-   .. code-block :: javascript
+   .. js ::
 
        _setTabIndexAttr: "focusNode"
 
 And with the code below, myWidget.set("title", "hello world") will set this.titleNode.innerHTML to "hello world":
 
-   .. code-block :: javascript
+   .. js ::
 
        __setTitleAttr: { node: "titleNode", type: "innerHTML" }
 
@@ -274,7 +274,7 @@ There are a few API changes in the top level modules compared to the ones in dij
 
 Also note that the new dijit/popup module is only available through the new AMD API, ex:
 
-   .. code-block :: javascript
+   .. js ::
 
       require(["dijit/popup"], function(popup){ popup.open(...); });
 
@@ -323,7 +323,7 @@ Gfx
   - Add input events support to canvas renderer. It is enabled by default and can be disabled by setting the dojoConfig 'canvasEvents' flag to 'false'.
   - The gfx shape targeted by a mouse event can be retrieved from the event itself by means of the 'gfxTarget' event property:
 
-   .. code-block :: javascript
+   .. js ::
 
       group.connect("onmousedown", function(evt){ var s = evt.gfxTarget; ... });
 
@@ -440,7 +440,7 @@ Loader/Builder related
 ````````
 Previously you may have been loading modules or layers via script tags, for example:
 
-   .. code-block :: html
+   .. html ::
 
       <script src="/mysite/app/MyWidget.js">
 
@@ -448,7 +448,7 @@ Although this idiom will still work with the standard, built distribution, it is
 works with unbuilt versions of the toolkit (e.g. the source distribution), and will result in the program failing to
 load and give "multipleDefine" errors in the console. Instead you must load it through ``dojo.require()``:
 
-   .. code-block :: javascript
+   .. js ::
 
       dojo.require("app.MyWidget");
 
@@ -459,7 +459,7 @@ Global variables
 ````````````````
 Prior to v1.7, it was possible to define global functions within a module by writing something like this:
 
-   .. code-block :: html
+   .. html ::
 
       dojo.provide("my.module");
       function myOnClick(){ ... }
@@ -469,7 +469,7 @@ On some browsers, in some cases, ``myOnClick()`` would be defined in the global 
 Starting with v1.7, *all* modules are evaluated within a closing function which results in the definition above residing within
 the closure--not the global space. If you really want to add a function in the global space from within a module, then use ``dojo.global``:
 
-   .. code-block :: html
+   .. html ::
 
       dojo.provide("my.module");
       dojo.global.myOnClick = function(){ ... }
@@ -511,7 +511,7 @@ Dijit
 
 - If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
 
-   .. code-block :: javascript
+   .. js ::
 
 	<textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
 

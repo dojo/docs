@@ -37,7 +37,7 @@ Examples
 Declarative example 1
 ---------------------
 
-.. code-block :: html
+.. html ::
 
   <div id="sw" dojoType="dojox.mobile.Switch" value="off"></div>
 
@@ -46,7 +46,7 @@ Declarative example 1
 Declarative example 2
 ---------------------
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.Switch" value="on" leftLabel="Start" rightLabel="Stop"></div>
 
@@ -55,7 +55,7 @@ Declarative example 2
 Round Shape 1
 -------------
 
-.. code-block :: html
+.. html ::
 
   <div class="mblSwRoundShape1" dojoType="dojox.mobile.Switch"></div>
 
@@ -64,7 +64,7 @@ Round Shape 1
 Round Shape 2
 -------------
 
-.. code-block :: html
+.. html ::
 
   <div class="mblSwRoundShape2" dojoType="dojox.mobile.Switch"></div>
 
@@ -73,7 +73,7 @@ Round Shape 2
 Arc Shape 1
 -----------
 
-.. code-block :: html
+.. html ::
 
   <div class="mblSwArcShape1" dojoType="dojox.mobile.Switch"></div>
 
@@ -82,7 +82,7 @@ Arc Shape 1
 Arc Shape 2
 -----------
 
-.. code-block :: html
+.. html ::
 
   <div class="mblSwArcShape2" dojoType="dojox.mobile.Switch"></div>
 
@@ -91,7 +91,7 @@ Arc Shape 2
 Custom Color
 ------------
 
-.. code-block :: html
+.. html ::
 
   <style>
   .color1 .mblSwitchBgLeft {
@@ -115,7 +115,7 @@ Listening to onStateChanged
 
 To listen to the changes of switch states, you can connect to the onStateChanged handler, which is called every time the state has been changed. Or you may want to create a subclass of Switch and override the onStateChanged handler.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(dijit.byId("sw"), "onStateChanged", function(newState){
       alert("newState = "+newState); // newState is "on" or "off"
@@ -126,7 +126,7 @@ A setter for "value"
 
 To change the state of the switch programmatically, you can use a setter method for "value" as below.
 
-.. code-block :: javascript
+.. js ::
 
   var widget = dijit.byId("sw");
   widget.set("value", "on"); // "on" or "off" can be set

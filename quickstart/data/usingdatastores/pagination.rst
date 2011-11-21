@@ -16,7 +16,7 @@ Pagination general flow
 
 To demonstrate the paging function, we'll assume an ItemFileReadStore with the following datasource:
 
-.. code-block :: javascript
+.. js ::
 
   { identifier: 'name',
     items: [
@@ -36,7 +36,7 @@ The following example code fragment shows the general flow with Pagination:
 
 *The sample returns 2 items per page*
 
-.. code-block :: javascript
+.. js ::
 
   var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
 

@@ -73,7 +73,7 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 1. Place it inside ScrollableView
 2. Add fixed="top" for a header bar, or fixed="bottom" for a footer bar
 
-.. code-block :: html
+.. html ::
 
   <div id="view1" dojoType="dojox.mobile.ScrollableView">
     <h1 dojoType="dojox.mobile.Heading" fixed="top">View Header Bar</h1>
@@ -91,7 +91,7 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 1. Place it outside ScrollableView
 2. Add fixed="top" for a header bar, or fixed="bottom" for a footer bar
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" fixed="top">Application Header Bar</h1>
   <div id="view1" dojoType="dojox.mobile.ScrollableView">

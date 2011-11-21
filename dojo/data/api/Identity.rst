@@ -28,7 +28,7 @@ Examples
 
 For all of the examples in the following sections, assume that there is a simple ItemFileReadStore instantiation from the following data in the countries.json file:
 
-.. code-block :: javascript
+.. js ::
 
   { identifier: 'abbr',
     label: 'name',
@@ -45,7 +45,7 @@ For all of the examples in the following sections, assume that there is a simple
 Basic lookup of an item by identity
 -----------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
@@ -73,7 +73,7 @@ Basic lookup of an item by identity
 Obtaining the value of an item's identity
 -----------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
@@ -101,7 +101,7 @@ Obtaining the value of an item's identity
 Obtaining the list of attributes that comprise the identity of an item
 ----------------------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
@@ -142,7 +142,7 @@ For convenience, the following Identity API was taken directly from dojo/data/ap
 getIdentity
 -----------
 
-.. code-block :: javascript
+.. js ::
 
   getIdentity: function(/* item */ item)
     //    summary:
@@ -157,7 +157,7 @@ getIdentity
 getIdentityAttributes
 ---------------------
 
-.. code-block :: javascript
+.. js ::
 
   getIdentityAttributes: function(/* item */ item)
     //    summary:
@@ -176,7 +176,7 @@ getIdentityAttributes
 fetchItemByIdentity
 -------------------
 
-.. code-block :: javascript
+.. js ::
 
   fetchItemByIdentity: function(/* object */ keywordArgs){
     //    summary:

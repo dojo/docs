@@ -20,7 +20,7 @@ dojo.connectPublisher is an automation of this common form:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   
   require(["dojo/_base/connect"], function(connect) {
     connect.connect(myObject, "myEvent", function(){
@@ -31,7 +31,7 @@ dojo.connectPublisher is an automation of this common form:
 
 Which becomes:
 
-.. code-block :: javascript
+.. js ::
   
   require("dojo/_base/connect", function(connect) {
     connect.connectPublisher("/some/topic/name", myObject, "myEvent");
@@ -40,7 +40,7 @@ Which becomes:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   
   dojo.connect(myObject, "myEvent", function(){
        dojo.publish("/some/topic/name", arguments);
@@ -48,7 +48,7 @@ Which becomes:
 
 Which becomes:
 
-.. code-block :: javascript
+.. js ::
   
   dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
@@ -57,7 +57,7 @@ Which becomes:
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
@@ -85,7 +85,7 @@ Examples
 Programmatic example
 --------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

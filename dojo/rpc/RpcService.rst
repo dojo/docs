@@ -26,7 +26,7 @@ Dojo ships in with a :ref:`JSON RPC Service <dojo/rpc/JsonService>` and a :ref:`
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -49,7 +49,7 @@ SMD format
 
 Here is an example SMD v.1 as expected by ``dojo.rpc``.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">

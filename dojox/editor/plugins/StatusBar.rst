@@ -30,7 +30,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.StatusBar");
@@ -38,19 +38,19 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  Be sure to list it as the last plugin.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['statusbar']"></div>
 
 Or a status bar without resizer:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name:'statusbar',resizer:false}]"></div>
 
 You also need to include the CSS for it.  For example:
 
-.. code-block :: html
+.. html ::
 
   <style>
     @import "dojox/editor/plugins/resources/css/StatusBar.css";
@@ -59,7 +59,7 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the StatusBar plugin.  You can now use the status bar to display status in the following ways:
 
-.. code-block :: javascript
+.. js ::
 
   dijit.byId("someEditor").statusBar.set("value", "new Value");
 

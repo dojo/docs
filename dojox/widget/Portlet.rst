@@ -35,7 +35,7 @@ It is worth noting that this widget just implements one possible front end of a 
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <div dojoType="dojox.widget.Portlet" title="My Flickr">

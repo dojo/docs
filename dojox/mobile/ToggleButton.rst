@@ -44,7 +44,7 @@ Examples
 Simple ToggleButton
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <button dojoType="dojox.mobile.ToggleButton" checked="true">Toggle me</button>
 
@@ -54,7 +54,7 @@ Simple ToggleButton
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <button data-dojo-type="dojox.mobile.ToggleButton" data-dojo-props='
         label:"Toggle me too",

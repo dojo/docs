@@ -18,7 +18,7 @@ In any event, on to what querying is all about:
 
 Given a dataset like:
 
-.. code-block :: javascript
+.. js ::
 
   { identifier: 'name',
     items: [
@@ -36,7 +36,7 @@ Given a dataset like:
 
 There are times it would be useful to only work with a subset of those items. For example, maybe you want to locate things only found in the spices aisle. In other words, you want to find all items that match:
 
-.. code-block :: javascript
+.. js ::
   
   { aisle: "Spice" }
 
@@ -46,21 +46,21 @@ And you don't care what the other attributes are. For dojo.data.ItemFileReadStor
 
   So, for dojo.data.ItemFileReadStore, if you wanted to find all items in aisles starting with *Condiment*, the query is simply:
   
-  .. code-block :: javascript
+  .. js ::
 
     { aisle: "Condiment*" }
 
 
   For dojo.data.ItemFileReadStore, multiple attributes assume an "and" between the terms. So a query like the following one will match spices with the word pepper inside them, but not "green peppers" in the vegetable aisle:
 
-  .. code-block :: javascript
+  .. js ::
 
     { name: "*pepper*", aisle: "Spices" }
 
 
 Once we have constructed the query, we pass it to fetch() along with the other parameters as shown in the following example:
 
-.. code-block :: javascript
+.. js ::
 
   itemStore .fetch({
     query: { name: "*pepper*", aisle: "Spices" },
@@ -74,7 +74,7 @@ Case sensitivity and other modifiers
 
 That's great, but what if I don't care about case sensitivity?  Dojo.data also provides a method for augmenting the query with options through the use of the queryOptions object. By default, dojo.data only defines two options that datastores should honor. They are *ignoreCase* and *deep*, and both are boolean valued. The ignoreCase option tells the datastore to compare the attributes for matches, but do so case-insensitively. The *deep* option only applies to stores which represent hierarchical data, and it instructs the search to search all child items (as well as all root items), for a match. So, if we take the above example and say we want to just ignore case so we get 'Black Pepper' and 'white pepper' as matches, the fetch call becomes:
 
-.. code-block :: javascript
+.. js ::
 
   itemStore .fetch({
     query: { name: "*pepper*", aisle: "Spices" },

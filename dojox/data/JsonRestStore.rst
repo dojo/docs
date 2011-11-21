@@ -94,7 +94,7 @@ syncMode
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  store = new dojox.data.JsonRestStore({target:"/Table/", idAttribute:"id"});
  ... or ...
@@ -107,7 +107,7 @@ JsonRestStore + Grid
 
 The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore can easily be used with it. The grid leverages the read capabilities to populate the grid, the write capabilities for editing data in place in the grid, and the notification capabilities of the JsonRestStore to handle UI updates when data is changed. To use a JsonRestStore as the data provider for the grid, simply set the grid’s store to the JsonRestStore instance. To edit data from the grid, we can define columns as being editable. Nothing needs to be done to received notifications.
 
-.. code-block :: javascript
+.. js ::
 
  gridLayout = [
         { name: 'Address', field: 'shipToAddress', editable: true},

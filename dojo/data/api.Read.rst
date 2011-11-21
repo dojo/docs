@@ -22,7 +22,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 1: Listing the APIs supported by a datastore**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   var features = store.getFeatures();
@@ -32,7 +32,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 2: Testing if an object is a store item**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   if(store.isItem(someObject)){
@@ -43,7 +43,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 3: Listing the attributes of an item**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...//Assume that someItem is an item we got from a load.
@@ -54,7 +54,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 4: Testing an item for an attribute**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...
@@ -68,7 +68,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 5: Getting the label of an item**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...
@@ -78,7 +78,7 @@ The following examples, guidelines, and complete API documentation provide furth
 
 **Example 6: Fetching all the items from the store**
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   var gotItems = function(items, request){
@@ -94,7 +94,7 @@ Further examples of the API usage are covered in the Using Datastores section. R
 --------------------
 For convenience, the complete Read Feature is defined below.
 
-.. code-block :: javascript
+.. js ::
 
   getValue: function(/* item */ item, /* attribute-name-string */ attribute, /* value? */ defaultValue)
     //    summary:

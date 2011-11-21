@@ -33,7 +33,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 
 1. Used with dojo/on
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -48,7 +48,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 
 2. Used with dojo/touch directly
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -62,7 +62,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 
 3. Or used with the traditional dojo/connect
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">

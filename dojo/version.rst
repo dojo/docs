@@ -17,7 +17,7 @@ An object describing the current version of dojo.js
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   >>> dojo.version;
@@ -29,7 +29,7 @@ Usage
 
 The members of the `dojo.version` object are integers, and can be checked individually:
 
-.. code-block :: javascript
+.. js ::
 
   var v = dojo.version;
   if(v.major > 1){

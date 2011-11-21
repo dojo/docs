@@ -35,7 +35,7 @@ formNodeValue
 
 This method allows to get/set values of controlled form nodes. It is modeled after :ref:`dojox.form.manager._Mixin's formWidgetValue() <dojox/form/manager/_Mixin>`. It can be used two ways: with one parameter to get the value, and with two parameters to set the value:
 
-.. code-block :: javascript
+.. js ::
 
   // reading the value
   var value = fm.formNodeValue("lastName");
@@ -62,7 +62,7 @@ inspectFormNodes
 
 This method iterates over controlled elements:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, widget, value){
     var oldValue = this.formNodeValue(name);
@@ -82,7 +82,7 @@ There are three ways to use this method:
 
 2. ``state`` is an object. In this case keys of the object are form names, while corresponding values are actual values to be passed to ``inspector`` as the 3rd parameter (in this case ``defaultValue`` is not used):
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {
       firstName: "Jill",
@@ -94,7 +94,7 @@ There are three ways to use this method:
 
 3. ``state`` is ``null`` or missing. In this case the method will iterate over all controlled nodes passing ``defaultValue`` as the ``value`` parameter to ``inspector``.
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.inspectFormNodes(inspector, null, "X");
 
@@ -102,7 +102,7 @@ There are three ways to use this method:
 
 While iterating the method collects all returned values of ``inspector`` in an object keyed by corresponding widget names, and returns it as the result.
 
-.. code-block :: javascript
+.. js ::
 
   var state = {
     firstName: "Jill",
@@ -118,7 +118,7 @@ While iterating the method collects all returned values of ``inspector`` in an o
 
 ``inspector`` function is called for every inspected node in the context of the form manager. It has following signature:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, node, value){
     // ...
@@ -143,13 +143,13 @@ This method registers a form node with a form manager, and connects its observer
 
 1. Register by node id:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerNode(id);
 
 2. Register a DOM node:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerNode(node);
 
@@ -158,7 +158,7 @@ unregisterNode
 
 This method disconnects form node's observers, and removes it from internal structures of a form manager. This method is modeled on :ref:`dojox.form.manager._Mixin's unregisterWidget() <dojox/form/manager/_Mixin>`. The only way to unregister a form node is by its form name:
 
-.. code-block :: javascript
+.. js ::
 
   fm.unregisterNode(name);
 
@@ -173,13 +173,13 @@ Like with registerNode_ two signatures are recognized:
 
 1. Register by node id:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerNodeDescendants(id);
 
 2. Register by specifying a DOM node:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerNodeDescendants(node);
 
@@ -209,7 +209,7 @@ dojox.form.manager.changeEvent
 
 This is the low-level helper function, which returns an appropriate change event for a give DOM node.
 
-.. code-block :: javascript
+.. js ::
 
   var button = dojo.doc.createElement("button"),
       select = dojo.doc.createElement("select");

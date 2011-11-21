@@ -29,7 +29,7 @@ To use dojo.hash to listen for hash changes:
 
 1. Add the appropriate require statement:
 
-   .. code-block :: javascript
+   .. js ::
    
       //Dojo 1.7(AMD)
       require(["dojo/hash"], function(hash){
@@ -42,7 +42,7 @@ To use dojo.hash to listen for hash changes:
 
 2. Subscribe to /dojo/hashchange event:
 
-   .. code-block :: javascript
+   .. js ::
   
     //Dojo 1.7 (AMD)
     require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
@@ -65,7 +65,7 @@ Setter
 ------
   To update the hash value, call dojo.hash with the new hash value as the first parameter. This will create a new entry in the back history and will notify any /dojo/hashchange subscribers:
 
-  .. code-block :: javascript
+  .. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
@@ -79,7 +79,7 @@ Setter
 
   To update the hash without creating a new entry in the back history, pass true as the second (replace) param. This will update the URL to the new hash, and will replace the current history state:
 
-  .. code-block :: javascript
+  .. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
@@ -94,7 +94,7 @@ Getter
 ------
   dojo.hash() with no parameters returns the current hash value.
 
-  .. code-block :: javascript
+  .. js ::
   
     //Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
@@ -111,7 +111,7 @@ Examples
 
 1) Subscribe to the hashchange event:
 
-   .. code-block :: javascript
+   .. js ::
    
     //Dojo 1.7 (AMD)
     require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
@@ -124,7 +124,7 @@ Examples
 
 2) Set the hash using query notation:
 
-   .. code-block :: javascript
+   .. js ::
    
     //Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
@@ -152,7 +152,7 @@ Examples
 
  Initial hash: #firstParam=true&secondParam=false
 
- .. code-block :: javascript
+ .. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
@@ -175,7 +175,7 @@ Examples
 
 4) React to hashchange event (hash passed to callback as first param):
 
-   .. code-block :: javascript
+   .. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
@@ -202,7 +202,7 @@ Examples
 
  Initial hash:  #/firstSegment/secondSegment
 
- .. code-block :: javascript
+ .. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
@@ -229,7 +229,7 @@ Advanced
 Customizing the polling loop frequency
  For browsers that don't support the onhashchange event natively, a polling loops monitors the URL for changes. The default duration of this polling loop is 100 ms.  To customize this value, add "hashPollFrequency" to dojo config.
 
- .. code-block :: javascript
+ .. js ::
 
   var dojoConfig = { hashPollFrequency: 200 };
 
@@ -239,7 +239,7 @@ Encoding/Decoding
  dojo.hash does not attempt to do any encoding or decoding.  There are many cases where consumers of dojo.hash want unencoded slashes, etc, so it's up to the consumer to encode and decode where appropriate. Anything with HTML encoding (i.e. &amp;) must be encoded with encodeURIComponent before being passed into dojo.hash due to discrepancies between browsers (Firefox decodes HTML encoding automatically before setting the URL, IE does not).
 
 
- .. code-block :: javascript
+ .. js ::
 
    dojo.hash(encodeURIComponent("hash with &amp; HTML encoding"))
 
@@ -248,7 +248,7 @@ Encoding/Decoding
 XD Dojo
  If you're using cross-domain Dojo, you must specify a local copy of a blank HTML page via 'dojoBlankHtmlUrl' configuration parameter.  If you don't, dojo.hash will not work in IE 6 or IE 7.
 
- .. code-block :: javascript
+ .. js ::
 
   var dojoConfig = { dojoBlankHtmlUrl: '/blank.html' };
 

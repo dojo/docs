@@ -22,7 +22,7 @@ Usage
 =====
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

@@ -50,7 +50,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <script type="text/javascript">

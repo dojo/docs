@@ -15,7 +15,7 @@ Binding API
 
 Method signature of the bind function dojox.app.bind provides.
 
-.. code-block :: javascript
+.. js ::
 
   function(/*Array of widgets*/widgets, /*Object*/ models)
 
@@ -37,7 +37,7 @@ Sample
 
 Sample raw data for data binding
 
-.. code-block :: javascript
+.. js ::
 
   modelApp.names = [{
             "Serial" : "360324",
@@ -60,7 +60,7 @@ Sample raw data for data binding
 
 Sample application configuration for data to be bound
 
-.. code-block :: javascript
+.. js ::
 
   // Define data store for dojox.app.bind
   "stores": {
@@ -82,7 +82,7 @@ Sample application configuration for data to be bound
 
 Sample view template for data binding - simple.html
 
-.. code-block :: html
+.. html ::
 
   <div id="infoGroup" class="fieldset" dojoType="dojox.mvc.Group" ref="'names.0'">
     <div class="field-row">

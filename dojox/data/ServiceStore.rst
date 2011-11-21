@@ -28,7 +28,7 @@ Usage
 
 To create an instance of a ServiceStore, simply instantiate providing the service to be used as the source:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -41,7 +41,7 @@ To create an instance of a ServiceStore, simply instantiate providing the servic
 
 When extending this class, if you would like to create lazy objects, you can follow the example from dojox.data.tests.stores.ServiceStore:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">

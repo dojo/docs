@@ -41,7 +41,7 @@ that is identical to an absolute AMD module identifier except that dots are used
 API does not support relative module identifiers. dojo.provide's implementation is trivial, but it does include a subtle
 feature that's important to understand. Here is the v1.6- implementation of dojo.provide in its entirety:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide = function(moduleId){
     return (dojo._loadedModules[moduleId] = dojo.getObject(moduleId, true));
@@ -51,7 +51,7 @@ Notice that the loader possibly creates and always memorizes the object dojo.pro
 returned by dojo.require for a module after it has been resolved. Here are the first few lines of dojo.require (slightly
 synthesized):
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require = function(moduleId, omitModuleCheck){
     if(dojo._loadedModules[moduleId]){
@@ -66,7 +66,7 @@ like AMD define), and dojo.require retrieves a previously published value (just 
 and define). Unfortunately, this isn't how the legacy API has been used in practice. For example, here is dijit/Calendar
 from v1.5:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("dijit.Calendar");
   //
@@ -91,7 +91,7 @@ dojo.require has a few idiosyncrasies as well. Owing to the way dojo.eval is def
 works, sometimes a module's code text would be eval'd in the global scope and sometimes it would be eval'd in a function
 scope. Consider the module text:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("module.that.defines.a.global");
   var someVariable = anAwesomeCalculation();
@@ -103,7 +103,7 @@ In version 1.7+, all code that is downloaded as text and evaluated with Javascri
 scope. If you've got code like above and expect someVariable be defined in the global space, it will not work in v1.7
 (it only worked sometimes anyway--even if you didn't know it). Here's how to get the effect you want:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("module.that.defines.a.global");
   dojo.global.someVariable = anAwesomeCalculation();
@@ -113,7 +113,7 @@ then applies Javascript eval to that text. If a dojo.require application is enco
 text, then another synchronous XHR retrieves the demanded resource's text and that text is eval'd, and so on util the
 entire dependency tree is evaluated. This guarantees a particular code path. Consider the following module:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("my.module");
   doSomeStuff(1);
@@ -124,7 +124,7 @@ entire dependency tree is evaluated. This guarantees a particular code path. Con
 
 The code path guaranteed by the legacy API is exactly as it is written. In particular, the "AMD equivalent"...
 
-.. code-block :: javascript
+.. js ::
 
   define("my/module", ["my/other/module", "no/my/other/module"], function(){
     doSomeStuff(1);
@@ -139,7 +139,7 @@ The v1.6- build system rewrites module text so that it can be injected into a sc
 described above. Here's a sketch (this isn't exactly how the v1.6- build system packages modules, but it's enough to get
 the idea). Given the following legacy module:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("my.module");
   dojo.require("your.module");
@@ -147,7 +147,7 @@ the idea). Given the following legacy module:
 
 The v1.6- build system rewrites the module like this:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.loader.define(
     // [1] the provide(s) included in this module
@@ -196,7 +196,7 @@ that the condition in dojo.requireIf then references to decide whether or not to
 module. dojo.requireIf and dojo.requireAfterIf are identical--they reference the same function. The canonical use case
 is dojox.gfx in v1.6-:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("dojox.gfx");
   dojo.require("dojox.gfx.matrix");
@@ -213,7 +213,7 @@ is dojox.gfx in v1.6-:
 
 A sketch of the v1.6- built version of this module suitable for cross-domain loading looks like this:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.loadInit(function(){
     // code that sets dojox.gfx.renderer
@@ -262,7 +262,7 @@ Say a client application wants to load a private instance of dojo into the globa
 the moment that dojo magically loads dojo base into the global variable acmeUtils. Here's how the dojo/behavior module
 could be rewritten by the build system to relocate it into acmeUtils:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.loader.define(
     // [1] the dojo.provide(s) included in this module
@@ -294,7 +294,7 @@ in the configuration variable scopeMap, an array of pairs of (not-relocated-name
 non-relocated name to a relocated name. scopeMap exists in both version 1.6- and version 1.7+. In the example above,
 scopeMap would look like this:
 
-.. code-block :: javascript
+.. js ::
 
   [["dojo", "acmeUtils"]]
 
@@ -361,7 +361,7 @@ with the value given by dojo.getObject(moduleId, true), where moduleId is the mo
 after the module that contained the dojo.provide has completed executing, the loader updates the module value to that
 given by dojo.getObject(moduleId). Let's look again at the v1.5 implementation of dijit.Calendar:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("dijit.Calendar");
   //
@@ -380,7 +380,7 @@ been executed.
 
 This same algorithm is applied if a single legacy module contains multiple dojo.provide applications:
 
-.. code-block :: javascript
+.. js ::
 
    dojo.provide("myProject.Button");
    dojo.provide("myProject.CheckButton");
@@ -400,7 +400,7 @@ the `dojo.provide` applications.
 
 Right about now, you're probably asking why this matters. Here's why: you can now write...
 
-.. code-block :: javascript
+.. js ::
 
   define(
     ["myProject/Button", "myProject/CheckButton", "myProject/RadioButton"],
@@ -434,7 +434,7 @@ that dependent module value.
 The loader solves this problem by noticing within the `dojo.require` implementation that a module has a value yet the
 object associated with the module is undefined. This sounds better in code:
 
-.. code-block :: javascript
+.. js ::
 
   var result = dojoRequire(moduleName);
   if(has("config-publishRequireResult") && !dojo.exists(moduleName) && result!==undefined){
@@ -505,7 +505,7 @@ converted is termed the "reference module" in the description that follows):
    <names-mapped-to-proper-module-names> is the list of module identifiers indicated by names, computed with respect
    to the reference module; <uid> references the dojo/loadInit plugin module resource constructed in Step 2.
 
-.. code-block :: javascript
+.. js ::
 
   define([/*<names-mapped-to-proper-module-names>*/, "dojo/loadInit!/*<uid>*/"], function(/*<names>*/){
     //
@@ -523,7 +523,7 @@ in a dependency vector, the plugin module is loaded and passed the text to the r
 reports back to the loader when the work implied by the text to the right of the ! has been completed. In our case, the
 text to the right points to a module that was constructed in Step 2 the looks like this:
 
-.. code-block :: javascript
+.. js ::
 
   define(/*<uid>*/, {
     names:
@@ -580,7 +580,7 @@ nothing was cross-domain.
 This design has so much indirection and recursion, it's instructive to trace through an example to get the idea. Let's
 assume a scope map of [["dojo", "myDojo"]] and the legacy module "my.module" looks like this:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("my.module");
   dojo.require("your.module");
@@ -599,7 +599,7 @@ assume a scope map of [["dojo", "myDojo"]] and the legacy module "my.module" loo
 The conversion process would construct a loadInit module and rewrite my.module into one evaluable string that looks like
 this:
 
-.. code-block :: javascript
+.. js ::
 
   define('*loadInit_8',{
     names:["dojo",],
@@ -648,7 +648,7 @@ def function continues executing, it notes:
 
 The loadInit function then AMD requires...
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/require!your/module,my/module"], function(){
     loaded(1); //this is the loaded for the original call to dojo/loadInit!*loadInit_8

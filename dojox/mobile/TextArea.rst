@@ -42,7 +42,7 @@ Examples
 Simple TextArea
 ---------------
 
-.. code-block :: html
+.. html ::
 
   <textarea dojoType="dojox.mobile.TextArea" placeHolder="Enter comment"></textarea>
 
@@ -52,7 +52,7 @@ Simple TextArea
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <textarea data-dojo-type="dojox.mobile.TextArea" rows="5" cols="40"
         data-dojo-props='value:"some data\nline 2", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>

@@ -21,7 +21,7 @@ Since Dojo 1.7, ``dojo.getAttr`` is exposed via the ``get`` method of the ``dojo
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -48,7 +48,7 @@ Dojo 1.7 (AMD)
 
 When using AMD format in a fully baseless application, ``get`` is accessed from the ``dojo/dom-attr`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr", "dojo/dom"], function(domAttr, dom){
       // get the current value of the "foo" attribute on a node
@@ -60,7 +60,7 @@ When using AMD format in a fully baseless application, ``get`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getAttr`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // get the current value of the "foo" attribute on a node
@@ -74,7 +74,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.get
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // get the current value of the "foo" attribute on a node
     dojo.getAttr(dojo.byId("nodeId"), "foo");

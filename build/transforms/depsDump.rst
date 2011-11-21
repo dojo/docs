@@ -28,7 +28,7 @@ nested objects. The dotted Javascript property name for any property indicates t
 with slashes. The "*" property of any object indicates that module's unique identifier. The forrest of module names is
 rooted at the property ``idTree`` of the output JSON object. Consider the following example:
 
-.. code-block :: javascript
+.. js ::
 
 	idTree: {
 		dojo:{
@@ -72,7 +72,7 @@ modules and their dependencies is output.
 
 For example, the following profile will output a dot program for the the dependency graph of dojo/_base/json:
 
-.. code-block :: javascript
+.. js ::
 
 	var profile = {
 		depsDumpDotFilename:"dojo-base-json.dot",

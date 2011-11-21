@@ -19,7 +19,7 @@ Introduction
 
 Being a subclass of dijit.Dialog, you will need to include the relevant dijit-css, and the Lightbox CSS. For example:
 
-.. code-block :: html
+.. html ::
 
     <style type="text/css">
      @import "dijit/themes/tundra/tundra.css";
@@ -33,7 +33,7 @@ All the rules for Lightbox are located in ``Lightbox.css``
 
 You also need to require the Lightbox module:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.image.Lightbox");
 
@@ -75,7 +75,7 @@ With JavaScript disabled using this method, natural links well be followed, show
 
 A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' to show a the image defined by the Lightbox that triggered the event.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.addOnLoad(function(){
       // create and start the lightboxes:
@@ -98,7 +98,7 @@ The LightboxDialog
 
 While the basic Lightbox works in simple cases and progressively, you may want to simply display arbitrary images. If there are existing Lightbox'es on a page, there will likely be a MasterDialog available to use, Or you can simply create one:
 
-.. code-block :: javascript
+.. js ::
 
   var dialog = new dojox.image.LightboxDialog({});
   dialog.startup();
@@ -106,7 +106,7 @@ While the basic Lightbox works in simple cases and progressively, you may want t
 
 With existing Lightbox instances on a page, you can show by reusing the shared dialog:
 
-.. code-block :: javascript
+.. js ::
 
   var dialog = dijit.byId("dojoxLightboxDialog");
   if(dialog && dialog.show){
@@ -115,7 +115,7 @@ With existing Lightbox instances on a page, you can show by reusing the shared d
 
 Additionally, you can add groups of images to a LightboxDialog, and show them as a group:
 
-.. code-block :: javascript
+.. js ::
 
   var dialog = dijit.byId("dojoxLightboxDialog");
   if(dialog){
@@ -126,7 +126,7 @@ Additionally, you can add groups of images to a LightboxDialog, and show them as
 
 To close a dialog programmatically, simply call .hide()
 
-.. code-block :: javascript
+.. js ::
 
   dijit.byId("dojoxLightboxDialog").hide();
 
@@ -144,7 +144,7 @@ Styling The Dialog
 
 LightboxDialog extends :ref:`dijit.Dialog <dijit/Dialog>`, so the same 'rule' applies concerning the underlay. The Widget used to block the background page while the Dialog is visible receives an ``id`` based on the Dialog itself. For instance, the MasterDialog used has an id of ``dojoxLightboxDialog``, causing the underlay id to become ``dojoxLightboxDialog_underlay``. You can use plain CSS targeting that id:
 
-.. code-block :: html
+.. html ::
 
     <style type="text/css">
     #dojoxLightboxDialog_underlay { background-color:blue }
@@ -170,7 +170,7 @@ Tips & Tricks
 
 By using a 'private' method, you can programmatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().
 
-.. code-block :: javascript
+.. js ::
 
   setInterval(function(){
       // loop through the images

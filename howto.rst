@@ -103,10 +103,10 @@ Non executed code
 
 If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line indented by two spaces. If you want to display line numbers, use the "linenos" attribute.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
-  .. code-block :: javascript
+  .. js ::
     :linenos:
 
     <script type="text/javascript">alert("Your code");</script>
@@ -153,7 +153,7 @@ All you need to do is, to define the codeblocks for the JS/HTML and CSS parts yo
 You can leave things out, so having a simple JavaScript example could just include the .. js :: directive.
 Following code is the representation of the demo you saw above:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   .. code-example::
@@ -196,7 +196,7 @@ Inline/Dialog view
 
 The same CodeGlass can be instantiated inline and in a modal dialog. Just add :type: inline/dialog to determine what type you would like to use
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   .. code-example::
@@ -300,7 +300,7 @@ Lets look at an example using the inline style and extra parameters in use:
 
 The extra parameters we defined where
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   .. code-example::
@@ -331,7 +331,7 @@ Codeblock header and descriptions
 
 Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and description.
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   .. javascript ::
@@ -339,7 +339,7 @@ Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and descr
 This will result in a header in the JavaScript codeblock.
 To add a descriptive text to a codeblock you can simply add reST markup before the block definition with the same amount of spaces indented as the block directive:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   This will be the descriptive text for the JavaScript block.

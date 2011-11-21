@@ -23,7 +23,7 @@ To use dojo.back:
 
 1. Add the appropriate require statement:
 
-   .. code-block :: javascript
+   .. js ::
 
       // dojo 1.7 (AMD)
       require(["dojo/back"], function(back){
@@ -36,7 +36,7 @@ To use dojo.back:
 
 2. Register the initial state of the page by calling:
 
-   .. code-block :: javascript
+   .. js ::
 
       // dojo 1.7 (AMD)
       require(["dojo/back"], function(back){
@@ -56,7 +56,7 @@ To use dojo.back:
 
    Example of a very simple state object:
 
-   .. code-block :: javascript
+   .. js ::
 
        var state = {
            back: function() { alert("Back was clicked!"); },
@@ -66,7 +66,7 @@ To use dojo.back:
 
 3. Call dojo.back.init(); inside a script tag that is inside the <body> tag:
 
-   .. code-block :: javascript
+   .. js ::
 
        <body>
          <script type="text/javascript">
@@ -90,7 +90,7 @@ Register a state object
 
 To register a state object that represents the result of a user action, use the following call:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7 (AMD)
   require(["dojo/back"], function(back){

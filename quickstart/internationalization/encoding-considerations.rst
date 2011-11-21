@@ -27,7 +27,7 @@ META tag
 
 A user agent such as one of the current generation browsers infers the encoding of a page using the content-type header provided by a server or it may be picked up from a meta tag in the head of a document, such as the following:
 
-.. code-block :: html
+.. html ::
 
  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 

@@ -43,7 +43,7 @@ Hides the Opener content.
 Example
 =======
 
-.. code-block :: html
+.. html ::
 
   <button onclick="dijit.registry.byId('customPicker').show()">slide up</button>
   <div id="customPicker" dojoType="dojox.mobile.Opener">

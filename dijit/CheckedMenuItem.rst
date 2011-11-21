@@ -14,13 +14,13 @@ The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time
 
 To change the default state of the menu item to “checked”,
 
-.. code-block :: javascript
+.. js ::
 
     var cItem = new dijit.CheckedMenuItem({label:"ToolBar", checked:"true"});
 
 The menu item can be disabled as follows:
 
-.. code-block :: javascript
+.. js ::
 
    var cItem = new dijit.CheckedMenuItem({label:"Checked Menu Item", disable:"true"});
 

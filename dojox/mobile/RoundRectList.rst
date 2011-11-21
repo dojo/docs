@@ -51,7 +51,7 @@ Declarative example
 
 In this example, <ul> and <li> are used just because they are typically used to create a list in html. You can use <div> instead.
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.RoundRectList">
     <li dojoType="dojox.mobile.ListItem" icon="images/i-icon-3.png" rightText="Off" moveTo="bar">
@@ -73,7 +73,7 @@ In this example, an aggregated icon image as below is used for each list item ic
 
 (all-icons.png)
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.RoundRectList" iconBase="images/all-icons.png">
     <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29">
@@ -93,7 +93,7 @@ In this example, an aggregated icon image as below is used for each list item ic
 Selection mode example
 ----------------------
 
-.. code-block :: html
+.. html ::
 
   <h2 dojoType="dojox.mobile.RoundRectCategory">Single Select</h2>
   <ul dojoType="dojox.mobile.RoundRectList" select="single">

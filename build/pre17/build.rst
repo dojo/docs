@@ -33,7 +33,7 @@ A *layer* is a single, minified JavaScript file which combines all of the JavaSc
 
 You load a layer file into your web page using the normal `<script>` tags, similar to:
 
-.. code-block :: html
+.. html ::
 
   <!-- dojo.js always provides the package system and base utilities -->
   <script type="text/javascript" src="/js/src/dojo/dojo.js"></script>
@@ -48,7 +48,7 @@ JavaScript files specified in script tags download asynchronously from the web s
 
 We use ``dojo.require`` to specify modules that an app needs, but larger Dojo apps put this list of requirements into a single file that *only* includes a list of dependencies. The source version of ``mylayer.js`` might read like this:
 
-.. code-block :: javascript
+.. js ::
    
    // this file is located at:
    //
@@ -161,7 +161,7 @@ The profile should be a file named *something*\.profile\.js, and it contains a s
 
 Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js`` (many build profiles will not need all of the options and complexity that this one includes, but it shows the major features of the profile):
 
-.. code-block :: javascript
+.. js ::
    
     // this file is located at:
     //
@@ -294,7 +294,7 @@ This illustrates the most important command line parameters to the build system:
 
 Once we've run the build script, all we need to do to use our new-fangled, much-faster layer file is to change the directory we point our ``<script>`` tags at. Intead of using the source files located in ``/js/src/<modulename>``, we now look for them in ``/js/release/<modulename>``, and request our layer file(s) right after ``dojo.js`` (as layers implicitly omit dojo base):
 
-.. code-block :: html
+.. html ::
 
   <!-- dojo.js always provides the package system and base utilities -->
   <script type="text/javascript" src="/js/release/dojo/dojo.js"></script>
@@ -312,7 +312,7 @@ Auto-generated Profiles from HTML
 
 The build process can also automatically generate a profile and build layers based on your HTML file or files. This eliminates the need to manually create a profile file. To run a build based on html files, you can use the htmlFiles build parameter to list the html files to base on the build on, or use the htmlDir to base the build on a set of files. The build process will scan your html files for script tags and dojo.require calls, and generate layers based on these. The build will create layer dependencies based on modules/layers that are previously defined in the HTML, so as to avoid code redundancies. For example, if we would had an HTML file:
 
-.. code-block :: html
+.. html ::
     
   ui.html
     <html>

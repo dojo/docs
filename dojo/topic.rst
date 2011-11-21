@@ -16,7 +16,7 @@ Usage
 Using AMD style (Dojo 1.7+)
 ---------------------------
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/topic"], function(topic){
     topic.subscribe("some/topic", function(){
@@ -29,7 +29,7 @@ Using AMD style (Dojo 1.7+)
 Using dojo.require
 ------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojo.topic");
   dojo.ready(function(){
@@ -49,7 +49,7 @@ Passing arguments via publish
 
 Whereas ``dojo.publish`` required arguments to be specified within an array, ``topic.publish`` does not have this requirement; any number of arguments can be specified flatly after the initial argument which specifies the topic.  For example:
 
-.. code-block :: javascript
+.. js ::
 
   topic.publish("some/topic", "argument1", "argument2");
 

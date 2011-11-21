@@ -22,7 +22,7 @@ Examples
 HTML5 markup
 ------------
 
-.. code-block :: html
+.. html ::
 
   <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruit"' >
         <option value="Ap">Apples</option>

@@ -22,7 +22,7 @@ various color profiles (such as Adobe RGB, ColorMatch RGB, NTSC, PAL and more).
 Including the ``dojox.color`` module will add the following functions to ``dojo.color``, with
 an alias to ``dojox.color`` and ``dojox.color.Color``:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var c = dojox.color.fromCmy(c, m, y);

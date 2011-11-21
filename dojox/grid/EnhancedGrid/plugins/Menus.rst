@@ -236,7 +236,7 @@ Usage
 
 * Declare menu feature plugin
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -249,7 +249,7 @@ Usage
 
 with HTML markup
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
@@ -270,7 +270,7 @@ with HTML markup
 
 with JavaScript (using a markup menu)
     
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({id: "grid",
@@ -290,7 +290,7 @@ There will be four events fired corresponding to the appropriate menu types:
 
 The Event parameter contains rowIndex and cellIndex, so following is a quick sample shows how to get row/column index when the menu popped up:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -307,7 +307,7 @@ Tips
 
 1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   grid.selection.getSelected()
@@ -315,7 +315,7 @@ Tips
 
 2. When :ref:`Selector <Selector>` plugin if turned on, we can get the selected rows/column/cell with the following way:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   grid.plugin('selector').getSelected('row'|'col'|'cell');

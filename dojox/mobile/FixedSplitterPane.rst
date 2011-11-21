@@ -18,7 +18,7 @@ Usage
 
 :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>` has dependency on this widget. You should dojo.require :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>` rather than dojox.mobile.FixedSplitterPane.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.mobile.FixedSplitter");
 

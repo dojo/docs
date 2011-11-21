@@ -41,7 +41,7 @@ Examples
 Declarative example
 --------------------
 
-.. code-block :: html
+.. html ::
 
 		<script type="text/javascript" >
 		  var search_results_init =

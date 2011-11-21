@@ -31,7 +31,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``replace`` is accessed from the ``dojo/dom-class`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-class"], function(domClass){
       domClass.replace("someNode", "add1 add2", "remove1 remove2");
@@ -39,7 +39,7 @@ When using AMD format in a fully baseless application, ``replace`` is accessed f
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.replaceClass`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");
@@ -48,7 +48,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.rep
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");
 
@@ -61,7 +61,7 @@ Replace all classes
 
 The following example replace all classes with addMe :
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -74,7 +74,7 @@ The following example replace all classes with addMe :
 Available in `dojo.NodeList()` for multiple toggles
 ---------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/query", "dojo/NodeList-dom"], function(query){

@@ -40,7 +40,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <body style="background-color:#6D6D6D">
       <div dojoType="dojox.mobile.SwapView">

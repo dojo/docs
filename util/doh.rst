@@ -81,7 +81,7 @@ Okay, whee!  The runner.html can be told what test module to load.  So ... what 
 Example Test Module: Simple test registration
 ---------------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   //Declare out the name of the test module to make dojo's module loader happy.
   dojo.provide("my.test.module");
@@ -112,7 +112,7 @@ Example Test Module: Simple test registration
 Example Test Module: Module that loads other modules
 ----------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   //Declare out the name of the test module to make dojo's module loader happy.
   dojo.provide("my.test.module2");
@@ -144,7 +144,7 @@ What a performance fixture does is the following:
 * Once calibrated, D.O.H. will then go execute a number of trials.  A single trial is a set number of iterations of the test function.  The set number of iterations is what the calibration run determines.  The number of trials you want to run is also configurable as a 'trialIterations' option of your test fixture.
 * Once all the trial iterations are done, it calculates the basic averages and such.  All this information is stored on the D.O.H. root object 'doh' as attribute 'perfTestResults'.  In fact, you can access the perf test results for a particular function by just doing: doh.perfTestResults[groupName][functionName].    The structure of the results is an array of entries of the following structure:
 
-.. code-block :: javascript
+.. js ::
 
    {
       trial: number, //The trial number, 0 .. N trial run
@@ -230,7 +230,7 @@ Simple tests (no setup, standalone, synchronous test)
 -----------------------------------------------------
 A lot of testing involves checking a widget or JavaScript API or the like and doesn't require any initial setup or teardown to do.  These are simple to define.  You simply write it as a function object.  This object can then be registered through the doh.register() functions.
 
-.. code-block :: javascript
+.. js ::
 
   function mySimpleTest(doh){
     doh.assertTrue(true);
@@ -243,7 +243,7 @@ Simple tests (no setup, standalone, asynchronous test)
 ------------------------------------------------------
 Simple asynchronous tests are no more complicated to write than the above synchronous test.  You simply write it as a function object that returns a doh.Deferred object.  The test framework detects the return type and knows that if a doh.Deferred is returned, then D.O.H. should pause here and wait for either the test timeout to fire or the asynchronous test to invoke either the deferred callback() or errback() function to signal completion.  This object can then be registered through the doh.register() functions.  The example below implements an async test via timeout to demonstrate it.
 
-.. code-block :: javascript
+.. js ::
 
   function mySimpleAsyncTest(doh){
     var deferred = new doh.Deferred();
@@ -264,7 +264,7 @@ Test Fixture (setup, standalone, synchronous test)
 --------------------------------------------------
 Some testing will require setup and/or teardown, specific pre and post configurations that need to occur ... or the test requires a different timeout from the default (such as a long-running xhr).  The test fixture format for a test allows for this configuration.  See the following code snippit for an example of a test fixture.
 
-.. code-block :: javascript
+.. js ::
 
   {
     name: "thingerTest",
@@ -289,7 +289,7 @@ Test Fixture (setup, standalone, asynchronous test)
 ---------------------------------------------------
 Test fixtures can also do asynchronous tests.  All that has to occur for the D.O.H. framework to recognize that a test fixture is asynchronous is that the runTest method returns a doh.Deferred.  See below for a fixture that operates asynchronously.
 
-.. code-block :: javascript
+.. js ::
 
   {
     name: "thingerTest",
@@ -326,7 +326,7 @@ Performance Test Fixture (setup, standalone, synchronous test)
 
 Performance test fixtures are just like a regular test fixture, except that it has some extra options developers make use of.  Specifically, it uses 'testType' to mark it as a "perf" test, which instructs the D.O.H. runner to treat the tests as performance and use the calibrate and execute test runner.  It also allows users to define how long a performance test should run per trial (We recommend 50ms or more to avoid JS timing issues), how many trials to run, and how long to delay between each trial to give GC time to the browser.
 
-.. code-block :: javascript
+.. js ::
 
   {
     testType: "perf", //Define this as a performance test.  Used to select the runner in D.O.H.
@@ -353,7 +353,7 @@ Performance Test Fixture (setup, standalone, asynchronous test)
 
 Async performance test fixtures are just like synchronous performance test fixtures.  The only difference is that these return doh.Deferreds to tell the runner framework to treat the test as async.  Note:  Performance profiling asynchronous operations will not always provide useful infomation.  By the nature of being async means its performance profile will likely vary considerably.  The below example demonstrates an async performance fixture through the use of setTimeout.
 
-.. code-block :: javascript
+.. js ::
 
   {
     testType: "perf", //Define this as a performance test.  Used to select the runner in D.O.H.

@@ -250,7 +250,7 @@ object. Typically, a profile resource is given the file type
 ".profile.js". /util/build/examples/simple-profile1.profile.js contains a trivial example; here are the contents of that
 resource:
 
-.. code-block :: javascript
+.. js ::
 
   var profile = {
     someProperty:"someValue",
@@ -284,7 +284,7 @@ path, then the build system will automatically resolve that path with respect to
 resources resides--*not* the current working directory. For example, /util/build/examples/relative-base-path.profile.profile.js
 has contents:
 
-.. code-block :: javascript
+.. js ::
 
     var profile = {
     	basePath:"."
@@ -307,7 +307,7 @@ Profile resources are Javascript resources that are evaluated by the build syste
 JSON. They can, and often will, contain functions. For example, /util/build/examples/profile-with-code.profile.js
 has contents:
 
-.. code-block :: javascript
+.. js ::
 
     function timestamp(){
     	// this function isn't really necessary...
@@ -343,7 +343,7 @@ the dojo loader will simply ignore any configuration variable that it does not d
 allow all or part of an application's build profile to be contained within the application configuration. For example,
 /util/build/examples/dojoConfig.js has contents:
 
-.. code-block :: javascript
+.. js ::
 
     var dojoConfig = {
     	packages:[{
@@ -383,7 +383,7 @@ a the file type (if any).
 The command switch ``require`` is similar to ``dojoConfig``, but processes a configuration argument applied to the
 global AMD require function. For example, /util/build/examples/require.js has contents:
 
-.. code-block :: javascript
+.. js ::
 
     require({
     	packages:[{
@@ -531,7 +531,7 @@ Let's assume the acme directory holds an application and it is desired to write 
 application to the directory ~/dev/acme-deploy. In this case, the acme profile file at ~/dev/acme/app.profile.js
 might look like this:
 
-.. code-block :: javascript
+.. js ::
 
     var profile = {
     	// point basePath to ~/dev
@@ -562,7 +562,7 @@ server, the build system uses the profile property ``basePath`` in place of ``ba
 paths. With the exception of substituting ``basePath`` for ``baseUrl`` the build system consumes package
 configurations just like the loader. Here is the previous example expressed using this feature:
 
-.. code-block :: javascript
+.. js ::
 
     var profile = {
     	// point basePath to ~/dev
@@ -591,7 +591,7 @@ The real power of this feature is not expressing these package hierarchies in a 
 application configuration to get the hierarchies for free. For example, assume the acme application expressed its
 configuration in the resource ~/dev/acme/config.js like this:
 
-.. code-block :: javascript
+.. js ::
 
     var dojoConfig = {
 		// loader configuration...
@@ -611,7 +611,7 @@ configuration in the resource ~/dev/acme/config.js like this:
 This configuration may be used to load the application, maybe something like this in the <head> element in
 ~/dev/acme/main.html.
 
-.. code-block :: html
+.. html ::
 
     <head>
         <script src="./config.js"></script>
@@ -621,7 +621,7 @@ This configuration may be used to load the application, maybe something like thi
 
 Given this, the profile at ~/dev/acme/app.profile.js could be rewritten like this:
 
-.. code-block :: javascript
+.. js ::
 
     var profile = {
     	// point basePath to ~/dev
@@ -641,7 +641,7 @@ This idea of leveraging a loader config can be taken further. Since the dojo loa
 it does not define, you can put profile properties directly in the loader configuration. For example,
 ~/dev/acme/config.js could be written as follows:
 
-.. code-block :: javascript
+.. js ::
 
 	var dojoConfig = {
 		// loader configuration...
@@ -679,7 +679,7 @@ configuration object.
 
 For example, the previous loader configuration could be rewritten as follows:
 
-.. code-block :: javascript
+.. js ::
 
 	var dojoConfig = {
 		// loader configuration...
@@ -733,7 +733,7 @@ Second, package configurations can include the ``trees``, ``dirs``, and ``files`
 computed with respect to the package ``location`` property; relative destination paths are computed with respect to the
 package ``destLocation`` property. The tree
 
-.. code-block :: javascript
+.. js ::
 
     [".", ".", /(\/\.)|(~$)/]
 
@@ -800,7 +800,7 @@ properties are mixed. Let's look at an example; consider the following two profi
 
 *profile-1.profile.js*
 
-.. code-block :: javascript
+.. js ::
 
   var profile = {
       propA:"A",
@@ -815,7 +815,7 @@ properties are mixed. Let's look at an example; consider the following two profi
 
 *profile-2.profile.js*
 
-.. code-block :: javascript
+.. js ::
 
   var profile = {
       propB:"profile-2-B",
@@ -835,7 +835,7 @@ If the build system was instructed to consume profile-1 followed by profile-2 li
 
 Then the following profile object would be computed:
 
-.. code-block :: javascript
+.. js ::
 
   {
       propA:"A",                    // from profile-1

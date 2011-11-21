@@ -25,7 +25,7 @@ Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the ``has`` method of the ``dojo
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -55,7 +55,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``has`` is accessed from the ``dojo/dom-attr`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr"], function(domAttr){
     domAttr.has("nodeId", "foo");
@@ -63,7 +63,7 @@ When using AMD format in a fully baseless application, ``has`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.hasAttr`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
     dojo.hasAttr("nodeId", "foo");
@@ -72,7 +72,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.has
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.hasAttr("nodeId", "foo");
 

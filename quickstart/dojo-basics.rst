@@ -21,7 +21,7 @@ dojo.require
 
 This is the core of the Dojo package system, and loads functionality not provided for in the Base dojo.js. Simply pass it a string:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojo.fx"); // load dojo/fx.js
   dojo.require("dojox.widget.Toaster"); // load dojox/widget/Toaster.js
@@ -41,7 +41,7 @@ dojo.addOnLoad
 
 This registers a function to be run when the document (and all :ref:`required <dojo/require>` dependencies) are ready. Simply pass it a function:
 
-.. code-block :: javascript
+.. js ::
   
   dojo.addOnLoad(function(){
      console.log("document ready!");
@@ -49,7 +49,7 @@ This registers a function to be run when the document (and all :ref:`required <d
 
 That example passes an anonymous function. You can pass named functions as well:
 
-.. code-block :: javascript
+.. js ::
   
   var init = function(){
      console.log("document ready!");
@@ -65,7 +65,7 @@ dojo.byId
 
 This is more or less an alias to ``document.getElementById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
 
-.. code-block :: javascript
+.. js ::
 
    dojo.addOnLoad(function(){
        var node = dojo.byId("someNode");
@@ -87,7 +87,7 @@ dijit.byId
 * If you are working with a Dijit, use dijit.byId
 * If you need access to the Dijit's domNode, it is stored in the the ``.domNode`` property of the Dijit reference:
 
-.. code-block :: javascript
+.. js ::
 
   var dialog = dijit.byId("myDialog");
   // the top-level node containing the dialog is:
@@ -105,7 +105,7 @@ dojo.query
 
 ``dojo.query()`` returns a list of DOM nodes based on a CSS selector. Users of other libraries will find the syntax very familiar:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.addOnLoad(function(){
     // every element in the page with the class "blueButton" assigned
@@ -127,7 +127,7 @@ JavaScript 1.6 has a forEach loop, where you can apply a certain function to eac
 
 Foreach is syntactic sugar for a regular ol' for loop. So for example:
 
-.. code-block :: javascript
+.. js ::
 
   for(var i in queueEntries){
      console.debug(queueEntries[i]);
@@ -135,7 +135,7 @@ Foreach is syntactic sugar for a regular ol' for loop. So for example:
 
 Can be written as:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.forEach(queueEntries,
       function(oneEntry, index, array) {
@@ -148,7 +148,7 @@ We used an anonymous function here to define the operation. This function must a
 
 For this simple loop, forEach isn't anything exciting. But combined with other Dojo functions, especially :ref:`dojo.query <dojo/query>`, it becomes remarkably useful. Consider this snippet, which disables all SELECT tags on the page:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.forEach(
     dojo.query("select", document),
@@ -162,7 +162,7 @@ There's no monkeying around with DOM functions, no using tedious names or id's, 
 
 Running dojo.forEach on a dojo.query result is so common, that Dojo defines a shortcut. This snippet:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query("select").forEach(
     function(selectTag) {
@@ -173,7 +173,7 @@ Running dojo.forEach on a dojo.query result is so common, that Dojo defines a sh
 
 does the same thing. But that's not all!  *New in 1.0*, you can collapse the function down to its body, passed in as a string like so:
 
-.. code-block :: javascript
+.. js ::
 
   // >= 1.0 only.
   dojo.query("select", document).forEach("item.disabled = true;");
@@ -190,7 +190,7 @@ Events in JavaScript or Dojo based applications are essential to making applicat
 
 Below is the code in the tutorial handling events. Here we connected the event handler, ``helloPressed``, to the ``onclick`` property of the hello button element. When the button is clicked the funtion helloPressed will be called.
 
-.. code-block :: javascript
+.. js ::
 
   function helloPressed(){
    alert('You pressed the button');
@@ -203,7 +203,7 @@ Below is the code in the tutorial handling events. Here we connected the event h
 
 It is also possible to use the Dojo event model to connect simple objects. To demonstrate, lets define a simple object with a couple of methods:
 
-.. code-block :: javascript
+.. js ::
 
   var exampleObj = {
       counter: 0,
@@ -220,7 +220,7 @@ It is also possible to use the Dojo event model to connect simple objects. To de
 
 So lets say that I want ``exampleObj.bar()`` to get called whenever ``exampleObj.foo()`` is called. We can set this up the same way that we do with DOM events:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(exampleObj, "foo", exampleObj, "bar");
 

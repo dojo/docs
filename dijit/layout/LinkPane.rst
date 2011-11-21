@@ -10,13 +10,13 @@ Example:
 
 When the parser runs and sees this node, a content pane will be generated with the title "Hello", and the content will be pulled from "foo.html"
 
-.. code-block :: html
+.. html ::
   
   <a href="foo.html" data-dojo-type="dijit.layout.LinkPane">Hello</a>
 
 This can be used in other layout widgets, such as a :ref:`TabContainer <dijit/layout/TabContainer>`:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.layout.TabContainer" style="height:300px; width:500px">
       <a href="page1.html" data-dojo-type="dijit.layout.LinkPane">Tab 1</a>

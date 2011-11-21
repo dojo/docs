@@ -9,7 +9,7 @@ Prevents propagation and clobbers the default action of the passed event. The sa
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: html
+.. html ::
 
     <script type="text/javascript">
     require(["dojo/ready", "dojo/dom", "dojo/_base/connect", "dojo/_base/event"], function(ready, dom, connect, event) {
@@ -28,7 +28,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: html
+.. html ::
 
     <script type="text/javascript">
     dojo.addOnLoad(function(){

@@ -26,7 +26,7 @@ Using a Key
 When parsing a comment block, we give the parser a list of "keys" to look for. These include summary, description, and returns, but many comment blocks will also have all of the variables and parameters in the object or function added to this list of keys as well.
 Formatting: Each keyword should be on a line by itself, with a space before and a colon after. For variable names there's a type after the colon. The content associated with the keyword is indented by two tabs. For example:
 
-.. code-block :: javascript
+.. js ::
 
 	// summary:
 	//            This is the summary for the method.
@@ -76,7 +76,7 @@ Methods are assumed to be public, but are considered protected by default if the
 
 * **protected**: The method can be called or overriden by subclasses but should not be accessed (directly) by a user. For example:
 
-	.. code-block :: javascript
+	.. js ::
 		
 		postCreate: function(){
 		        // summary:
@@ -87,7 +87,7 @@ Methods are assumed to be public, but are considered protected by default if the
 
 * **private**: The method or property is not intended for use by anything other than the class itself. For example:
 
-	.. code-block :: javascript
+	.. js ::
 	
 		_attrToDom: function(/*String*/ attr, /*String*/  value){
 		        // summary:
@@ -100,7 +100,7 @@ Methods are assumed to be public, but are considered protected by default if the
 
 * **multiple tags**: Multiple tags can separated by spaces:
 
-	.. code-block :: javascript
+	.. js ::
 	
 		parse: function(/*Node*/ node){
 		        // summary:
@@ -123,7 +123,7 @@ Method-Specific Tags
 * **callback**: This method represents a location that a user can connect to (i.e. using dojo.connect) to receive notification that some event happened, such as a user clicking a button or an animation completing. For example:
 
 
-	.. code-block :: javascript
+	.. js ::
 		
 		onClick: function(){
 		        // summary:
@@ -135,7 +135,7 @@ Method-Specific Tags
 		
 * **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar:
 
-.. code-block :: javascript
+.. js ::
 	
 	isDisabledDate: function(date){
 	        // summary:
@@ -154,7 +154,7 @@ Method-Specific Tags
 General Function Information
 ============================
 
-.. code-block :: javascript
+.. js ::
 
 	Foo = function(){
 	  // summary:
@@ -175,7 +175,7 @@ Object Information
 
 Has no description of what it returns
 
-.. code-block :: javascript
+.. js ::
 
 	var mcChris = {
 	  // summary:
@@ -195,7 +195,7 @@ Function Assembler Information (declare)
 If the declaration passes a constructor, the summary and description must be filled in there. If you do not pass a constructor, the comment block can be created in the passed mixins object.
 For example:
 
-.. code-block :: javascript
+.. js ::
 
 	dojo.declare(
 	  "Steve",
@@ -224,7 +224,7 @@ Simple Types
 
 Types should (but don't have to) appear in the main parameter definition block. For example:
 
-.. code-block :: javascript
+.. js ::
 
 	function(/*String*/ foo, /*int*/  bar)...
 	
@@ -237,7 +237,7 @@ There are some modifiers you can add after the type:
 * ... means the last parameter repeats indefinitely
 * [] means an array
 
-.. code-block :: javascript
+.. js ::
 	
 	function(/*String?*/ foo, /*int...*/  bar, /*String[]?*/ baz){ }
 
@@ -246,7 +246,7 @@ Full Parameter Summaries
 
 If you want to also add a summary, you can do so in the initial comment block. If you've declared a type in the parameter definition, you do not need to redeclare it here.
 
-.. code-block :: javascript
+.. js ::
 
 	function(foo, bar){
 	  // foo: String
@@ -262,7 +262,7 @@ Variables
 
 Instance variables, prototype variables and external variables can all be defined in the same way. There are many ways that a variable might get assigned to this function, and locating them all inside of the actual function they reference is the best way to not lose track of them, or accidentally comment them multiple times.
 
-.. code-block :: javascript
+.. js ::
 
 	function Foo(){
 	  // myString: String
@@ -293,7 +293,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 
 * **deprecated**: In methods, the doc system can search for dojo.deprecated calls. But variables will need specific declarations that they are deprecated.
 
-	.. code-block :: javascript
+	.. js ::
 
 	  // label: [deprecated readonly] String
 	  //            A label thingie
@@ -301,7 +301,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 
 * **const**: A widget attribute that can be used for configuration, but can only have its value assigned during initialization. This means that changing this value on a widget instance (even with the attr method) will be a no-op.
 
-	.. code-block :: javascript
+	.. js ::
 
 		// id: [const] String
 		//            A unique, opaque ID string that can be assigned by users...
@@ -309,7 +309,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 
 * **readonly**: This property is intended to be read and cannot be specified during initialization, or changed after initialization.
 
-	.. code-block :: javascript
+	.. js ::
 
 		// domNode: [readonly] DomNode
 		//            This is our visible representation of the widget...
@@ -323,7 +323,7 @@ Variable Comments in an Object
 
 The parser takes the comments in between object values and applies the same rules as if they were in the initial comment block:
 
-.. code-block :: javascript
+.. js ::
 
 	{
 	  // key: String
@@ -339,7 +339,7 @@ Return Value
 
 Because a function can return multiple types, the types should be declared on the same line as the return statement, and the comment must be the last thing on the line. If all the return types are the same, the parser uses that return type. If they're different, the function is considered to return "mixed". For example:
 
-.. code-block :: javascript
+.. js ::
 
 	function(){
 	  if(arguments.length){
@@ -351,7 +351,7 @@ Because a function can return multiple types, the types should be declared on th
 
 Note: The return type should be on the same line as the return statement. The first example is invalid, the second is valid:
 
-.. code-block :: javascript
+.. js ::
 
 	function(){
 	  return {
@@ -378,7 +378,7 @@ There are some instances where you might want an object or function to appear in
 
 The parser simply replaces the ``/*=====`` and ``=====*/`` with whitespace at the very start, so you must be very careful about your syntax.
 
-.. code-block :: javascript
+.. js ::
 
 	dojo.mixin(wwwizard, {
 	/*=====
@@ -407,7 +407,7 @@ Documenting a kwArg
 
 A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe how to use them sometimes. One option is to provide a pseudo-object describing its behavior. So we'll create ``module/_arg.js`` and do the following:
 
-.. code-block :: javascript
+.. js ::
 
 	dojo.provide("module._arg");
 	module._arg.myFuncArgs = function(/*Object*/ kwArgs){
@@ -423,7 +423,7 @@ This describes a real object that mimics the functionality of the generic object
 
 To associate this object with the originating function, do this:
 
-.. code-block :: javascript
+.. js ::
 
 	var myFunc = function(/*module._arg.myFuncArgs*/  kwArgs){
 	  console.log(kwArgs.url);

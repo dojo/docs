@@ -25,7 +25,7 @@ See :ref:`dojo.removeAttr <dojo/removeAttr>` for more details.
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.query(sel).removeAttr(attr);

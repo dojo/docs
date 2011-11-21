@@ -47,7 +47,7 @@ Examples
 Text Only
 ---------
 
-.. code-block :: html
+.. html ::
 
   <div id="textTooltip" dojoType="dojox.mobile.Tooltip" class="mblTooltipBubble">Enter a value.<br><center>Please!</center></div>
   <button type="button" onclick="dijit.registry.byId('textTooltip').show(this, ['after','below-centered','above-centered'])">right</button>
@@ -58,7 +58,7 @@ Text Only
 Widget content
 --------------
 
-.. code-block :: html
+.. html ::
 
   <div id="customPicker" dojoType="dojox.mobile.Tooltip">
         <div id="spin1" dojoType="dojox.mobile.SpinWheelDatePicker"></div>

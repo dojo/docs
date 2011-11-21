@@ -21,7 +21,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -37,7 +37,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -64,7 +64,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/window"], function(win) {
     win.setContext(window, window.document);
@@ -76,7 +76,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.setContext(window, window.document);
   // or
@@ -95,7 +95,7 @@ Here is a simple example that counts the links in the current page as well as th
 HTML
 ~~~~
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <a href="#">I'm the only link on this page!</a>
@@ -119,7 +119,7 @@ JavaScript
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom", "dojo/query", "dojo/_base/window"], function(dom, query, win) {
@@ -142,7 +142,7 @@ JavaScript
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var countLinks = function() {

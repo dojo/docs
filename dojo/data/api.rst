@@ -59,7 +59,7 @@ This concept is likely one of the aspects of dojo.data that might seem confusing
 Correct access
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.data.Store();
   var items;

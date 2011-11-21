@@ -25,7 +25,7 @@ Be careful: Loading content with script and style blocks is often a questionable
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   dojo.require("dojox.html._base");

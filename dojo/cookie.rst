@@ -12,7 +12,7 @@ dojo.cookie
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
   
   // dojo 1.7 (AMD)
   require(["dojo/cookie"], function(cookie){

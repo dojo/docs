@@ -28,7 +28,7 @@ Retrieving a widget from the registry using a widget ID
 
 ``registry.byId`` returns the widget that corresponds to the given ID. If no such widget exists, it returns undefined.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dijit/registry"], function(registry){
@@ -40,7 +40,7 @@ Retrieving a widget from the registry using the widget’s DOM node
 
 ``registry.byNode`` returns the widget that corresponds to the given DOM node. If the DOM node does not belong to a widget, it returns undefined.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dijit/registry"], function(registry){
@@ -52,7 +52,7 @@ Finding all widgets underneath a DOM node
 
 ``registry.findWidgets`` returns an array of all non-nested widgets inside the given DOM node.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/_base/array", "dijit/registry", "dijit/form/TextBox"], function(arrayUtil, registry, TextBox){
@@ -61,7 +61,7 @@ Finding all widgets underneath a DOM node
 
 Note that ``registry.findWidgets`` will *not* descend into widgets. That is to say, if you had a DOM like this:
 
-.. code-block :: html
+.. html ::
  :linenos:
 
   <div id="root" data-dojo-type="dijit.Dialog">
@@ -82,7 +82,7 @@ Finding the nearest enclosing widget for a DOM node
 
 ``registry.getEnclosingWidget`` returns the closest widget to the given DOM node.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dijit/registry"], function(registry){
@@ -91,7 +91,7 @@ Finding the nearest enclosing widget for a DOM node
 
 Note that ``getEnclosingWidget`` will check for and return the widget corresponding to the given DOM node, if one exists. For instance, given the following DOM:
 
-.. code-block :: html
+.. html ::
  :linenos:
 
   <div data-dojo-type="dijit.form.Form">
@@ -100,7 +100,7 @@ Note that ``getEnclosingWidget`` will check for and return the widget correspond
 
 The following will return the TextBox widget, **not** the Form widget:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom", "dijit/registry"], function(dom, registry){

@@ -27,7 +27,7 @@ Here is a list of topics that you can subscribe to, with the parameters they pas
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(["dojo/_base/connect"], function(connect) {
@@ -69,7 +69,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.subscribe("/dojo/io/start", function(){

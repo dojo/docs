@@ -32,7 +32,7 @@ Using a dojo.Deferred is simple.  When you are presented with one from another f
 Pseudocode Example 1:  Creating and calling a deferred.
 -------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // Dojo 1.7+ (AMD)
@@ -50,7 +50,7 @@ Pseudocode Example 1:  Creating and calling a deferred.
 Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 -------------------------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var deferred = someAsyncFunction();

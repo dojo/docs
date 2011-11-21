@@ -23,7 +23,7 @@ This is a small implementaton of the Boodman/Crockford delegation pattern in Jav
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
    // Dojo 1.7+ (AMD)
@@ -57,7 +57,7 @@ Programmatic example
 
 [ Dojo 1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -75,7 +75,7 @@ Programmatic example
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

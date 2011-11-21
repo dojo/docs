@@ -26,7 +26,7 @@ The default contentHandler is text, and requires no action:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -43,7 +43,7 @@ The default contentHandler is text, and requires no action:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -80,7 +80,7 @@ This example shows, how to use the pre-defined json contentHandler:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/xhr"], function(xhr) {
@@ -101,7 +101,7 @@ This example shows, how to use the pre-defined json contentHandler:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.xhrGet({
@@ -125,7 +125,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
@@ -148,7 +148,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.mixin(dojo.contentHandlers, {
@@ -172,7 +172,7 @@ For instance, we can create a handler that will populate a node with the respons
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom) {
@@ -194,7 +194,7 @@ For instance, we can create a handler that will populate a node with the respons
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // you don't need to mix(), you can just set the object directly if you prefer:
@@ -220,7 +220,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
@@ -244,7 +244,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     dojo.contentHandlers.wrappedJSON = function(xhr){
@@ -271,7 +271,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     require(["dojo/_base/xhr"], function(xhr) {
@@ -285,7 +285,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     // a handler that always escapes html fragments. not exceptionally useful though:

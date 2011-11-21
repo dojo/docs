@@ -27,7 +27,7 @@ Usage
 
 The RangeSlider is used in the same fashion as most dijit Form Widgets.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

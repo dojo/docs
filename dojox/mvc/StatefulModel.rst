@@ -82,7 +82,7 @@ Usage
 
 A data model is effectively instantiated with a plain JavaScript object which specifies the initial data structure for the model.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 		 var struct = {
@@ -103,7 +103,7 @@ The simple example above shows an inline plain JavaScript object illustrating th
 
 To deal with stores providing immediate values or Promises, a factory method for model instantiation is provided. This method will either return an immediate model or a model Promise depending on the nature of the store.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 		 var model = dojox.mvc.newStatefulModel({ store: someStore });
@@ -119,7 +119,7 @@ The created data model has the following properties:
 
 * The data model internally creates a tree of dojo.Stateful objects that matches the input, which is effectively a plain JavaScript object i.e. "pure data". This tree allows dijits or other view components to bind to any node within the data model. Typically, dijits with simple values bind to leaf nodes of the datamodel, whereas containers bind to internal nodes of the datamodel. For example, a datamodel created using the object below will generate the dojo.Stateful tree as shown:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 		 var model = dojox.mvc.newStatefulModel({ data : {
@@ -153,7 +153,7 @@ Finally, requiring this class also enables all dijits to become data binding awa
 
 To illustrate, the following is the "Hello World" of such data-bound widget examples:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 		 <script>
@@ -174,7 +174,7 @@ To illustrate, the following is the "Hello World" of such data-bound widget exam
 
 or
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 		 <script>

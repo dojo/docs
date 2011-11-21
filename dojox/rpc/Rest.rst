@@ -19,7 +19,7 @@ Usage
 
 A normal GET query is done by using the service directly:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
@@ -28,7 +28,7 @@ A normal GET query is done by using the service directly:
 
 The modifying methods can be called as sub-methods of the rest service method like:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     services.myRestService.put("parameters","data to put in resource");
@@ -38,7 +38,7 @@ The modifying methods can be called as sub-methods of the rest service method li
 
 You can also use the SMD service to generate a REST service:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var services = dojox.rpc.Service({services: {myRestService: {transport: "REST",...
@@ -57,7 +57,7 @@ GET
 
 This will do a HTTP GET for the URL "/Project/4":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
@@ -69,7 +69,7 @@ PUT
 
 This will do a HTTP PUT to the URL "/Project/4" with the content of "new content":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
@@ -80,7 +80,7 @@ POST
 
 This will do a HTTP POST to the URL "/Project/4" with the content of "new content":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
@@ -91,7 +91,7 @@ DELETE
 
 This will do a HTTP DELETE to the URL "/Project" with the content of "{item: "4"}":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
@@ -103,7 +103,7 @@ Using the SMD service
 
 You can also use the SMD service to generate a REST service:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var services = dojox.rpc.Service({services: {myRestService: {transport: "REST",...

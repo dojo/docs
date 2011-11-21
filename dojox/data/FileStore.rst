@@ -77,7 +77,7 @@ Query Structure
 
 The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadStore. It is an object-based query structure where the store queries for file items using patterns defined for the attributes to be matched. For example a query object of:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -152,7 +152,7 @@ Simple programmatic usage
 
 A complete code example of querying the entire filesystem for a wildcard matched file:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var fileStore = new dojox.data.FileStore({url: "myService.php", pathAsQueryParam: true});

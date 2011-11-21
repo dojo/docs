@@ -21,7 +21,7 @@ The viewport is the part of the document that's visible on the screen. In contra
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
 
  //Dojo 1.7 (AMD)
  // Load the window-related functions:
@@ -32,7 +32,7 @@ Usage
  );
 
 
-.. code-block :: javascript
+.. js ::
 
   //Dojo < 1.7
   // Load the window-related functions:

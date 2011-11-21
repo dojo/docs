@@ -79,7 +79,7 @@ Adding A Strings Bundle
 
 So far, no localization.  Lets add a string resource.  Our Foo.js implementation should try to load and use a strings bundle
 
-.. code-block :: html
+.. html ::
 
   dojo.provide("testdijits.Foo");
   dojo.require("dijit._Widget");
@@ -139,7 +139,7 @@ This bundle will now be loaded by the requireLocalization call above, and provid
 
 To use this dijit, use a simple test file such as ``test.html``:
 
-.. code-block :: html
+.. html ::
 
   <!DOCTYPE html>
   <html><head><title>Localized build test</title>
@@ -220,7 +220,7 @@ If you add ``locale: 'fr'`` to the djConfig at this point, you'll see no differe
 
 To use your built layer, link to it after the link to dojo.js:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript" src="test/dojo/dojo.js"></script>
   <script type="text/javascript" src="test/dojo/testdijits.js"></script>
@@ -247,13 +247,13 @@ The Build Bakes Available Locales Into Your Code
 
 Going back to before we linked to the built layer ``test/dojo/testdijits.js``, when we added ``djConfig: { locale: 'fr' }``, why did the build not even look for a ``fr`` nls file?  The answer lies in what the build system does to your Foo.js implementation.  Just when you thought you'd put the following in your source testdijits/Foo.js file:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.requireLocalization("testdijits", "Foo");
 
 You'll see different code in the build output directory, test/testdijits/Foo.js:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.requireLocalization("testdijits", "Foo", null, "ROOT");
 
@@ -267,7 +267,7 @@ When you simply include a ``fr`` localized strings bundle in your source directo
 
 .. you find that the Foo.js implementation in the build output is different:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.requireLocalization("testdijits", "Foo", null, "ROOT,fr");
 

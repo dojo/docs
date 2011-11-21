@@ -41,7 +41,7 @@ Usage
 
 In the profile for your build, specify the following for your dojo layer (note the ``customBase`` property):
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  layers: [
@@ -81,7 +81,7 @@ For example, if you specify ``customBase: true``, but want a particular ``dojo/_
 module, say just the array help functions and ``dojo.Deferred``, your profile ``dojo.js`` layer would
 look like this:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
    {

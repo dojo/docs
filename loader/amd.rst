@@ -62,7 +62,7 @@ improved so that dojo.js now holds the loader and nothing else. In fact, it is n
 without any of the Dojo library. For backwards-compatibility, the loader starts up in synchronous mode by default,
 which loads the Dojo base API automatically:
 
-.. code-block :: html
+.. html ::
 
   <script src="path/to/dojo/dojo.js"></script>
   <script>
@@ -71,7 +71,7 @@ which loads the Dojo base API automatically:
 
 To put the loader in the AMD mode, set the ``async`` configuration variable to truthy:
 
-.. code-block :: html
+.. html ::
 
   <script data-dojo-config="async:1" src="path/to/dojo/dojo.js"></script>
   <script>
@@ -98,7 +98,7 @@ Configuration data is always provided as a standard JavaScript object. When the 
 ``data-dojo-config`` attribute, the opening and closing curly-brackets should be omitted from the object expression
 (just as with ``data-dojo-props``). Using ``data-dojo-config`` looks like this:
 
-.. code-block :: html
+.. html ::
 
   <script
     data-dojo-config="async:true, cacheBust:new Date(), waitSeconds:5"
@@ -107,7 +107,7 @@ Configuration data is always provided as a standard JavaScript object. When the 
 
 Using ``dojoConfig`` looks like this:
 
-.. code-block :: html
+.. html ::
 
   <script>
     var dojoConfig = {
@@ -120,7 +120,7 @@ Using ``dojoConfig`` looks like this:
 
 Using the ``require`` function looks like this:
 
-.. code-block :: javascript
+.. js ::
 
   require({
     cacheBust:new Date(),
@@ -159,7 +159,7 @@ branching and enables the build system to create platform-optimized versions of 
 
 Here's an example of adding a test, and then later using that test:
 
-.. code-block :: javascript
+.. js ::
 
   has.add("dom-addeventlistener", !!document.addEventListener);
 
@@ -171,7 +171,7 @@ Here's an example of adding a test, and then later using that test:
 
 At build time, with an appropriate build profile, this code is transformed to:
 
-.. code-block :: javascript
+.. js ::
 
   0 && has.add("dom-addeventlistener", !!document.addEventListener);
 
@@ -183,7 +183,7 @@ At build time, with an appropriate build profile, this code is transformed to:
 
 When transformed code is then passed to a minifier with dead code removal, the final output becomes:
 
-.. code-block :: javascript
+.. js ::
 
   node.addEventListener("click", handler);
 
@@ -201,7 +201,7 @@ The Dojo loader initializes the has cache with several tests (see :ref:`Default 
 tests). ``dojoConfig`` and ``data-dojo-config`` can override any of these, and any configuration object can add more
 tests by specifying a ``has`` configuration property. For example:
 
-.. code-block :: html
+.. html ::
 
   <script>
     var dojoConfig = {
@@ -215,7 +215,7 @@ tests by specifying a ``has`` configuration property. For example:
 A test can also be defined as a function, which will be executed the first time the value of the feature is requested
 via a ``has`` call:
 
-.. code-block :: html
+.. html ::
 
   <script>
     var dojoConfig = {
@@ -230,7 +230,7 @@ via a ``has`` call:
 Since has tests can be used very much like configuration variables, the loader's configuration API applies ``has.add``
 to all configuration variables it receives, prefixing the configuration variable name with "config-". For example:
 
-.. code-block :: html
+.. html ::
 
   <script data-dojo-config="tlmSiblingOfDojo:0" src="path/to/dojo/dojo.js"></script>
 
@@ -246,7 +246,7 @@ order to allow AMD modules to be accessed by legacy code.
 
 ``require`` is used to configure the loader and load AMD modules. It has the following signature:
 
-.. code-block :: javascript
+.. js ::
 
   require(
     configuration, // (optional; object) configuration object
@@ -260,7 +260,7 @@ resolved dependencies passed in as arguments.
 
 Normal use of ``require`` looks like this:
 
-.. code-block :: javascript
+.. js ::
 
   require([ "my/app", "dojo" ], function (app, dojo) {
     // do something with app and dojo...
@@ -268,7 +268,7 @@ Normal use of ``require`` looks like this:
 
 There is also an alternative ``require`` syntax. It has the following signature:
 
-.. code-block :: javascript
+.. js ::
 
   require(
     moduleId // (string) a module identifier
@@ -280,7 +280,7 @@ syntax is not recommended because it can lead to confusing dependency chains.*
 
 ``define`` is very similar to ``require`` and is used to define AMD modules. It has the following signature:
 
-.. code-block :: javascript
+.. js ::
 
   define(
     moduleId,      // (optional; string) an explicit module identifier naming the module being defined
@@ -318,7 +318,7 @@ will be ``undefined``. See :ref:`Generic Script Injection` for more information.
 The ``dependencies`` and ``callback`` parameters in the ``require`` function work exactly like the ``dependencies`` and
 ``factory`` parameters in the ``define`` function. For example:
 
-.. code-block :: javascript
+.. js ::
 
   require(
     ["dijit/layout/TabContainer", "bd/widgets/stateButton"],
@@ -329,7 +329,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 
 ...and...
 
-.. code-block :: javascript
+.. js ::
 
   define(
     ["dijit/layout/TabContainer", "bd/widgets/stateButton"],
@@ -386,7 +386,7 @@ Relative Module Identifiers
 Module identifiers in the ``dependencies`` array of a module definition can also be relative to the current module. For
 example:
 
-.. code-block :: javascript
+.. js ::
 
   // this is "myPackage/myModule/mySubmodule"
   define(
@@ -398,7 +398,7 @@ example:
 
 Could be rewritten as:
 
-.. code-block :: javascript
+.. js ::
 
   // this is "myPackage/myModule/mySubmodule"
   define(
@@ -425,7 +425,7 @@ Context-sensitive require
 Let's finish up one last detail about reference modules. Suppose we have a function that, depending on program flow,
 needs to conditionally require and execute some code. For example:
 
-.. code-block :: javascript
+.. js ::
 
   // this is "myApp/topLevelHandlers"
   define(["dojo"], function (dojo) {
@@ -442,7 +442,7 @@ function doesn't know anything about reference modules, so if we try just changi
 fail. What we need is a way to remember the reference module for later use. This is possible by specifying the module
 identifier "require" in the dependency vector:
 
-.. code-block :: javascript
+.. js ::
 
   // this is "myApp/topLevelHandlers"
   define(["dojo", "require"], function (dojo, require) {
@@ -463,7 +463,7 @@ Generic Script Injection
 
 An explicit path or URL to a script can be passed as a module identifier. In this case, the script is simply evaluated and the return value of that "module" is ``undefined``. For example:
 
-.. code-block :: javascript
+.. js ::
 
   require(["http://acmecorp.com/stuff.js"], function () {
     // etc.
@@ -485,7 +485,7 @@ module early on, and several libraries depend on the module as defined by Requir
 compatible with RequireJS's implementation, is smaller and contains more features. It is possible to simply alias Dojo's
 text module like this:
 
-.. code-block :: javascript
+.. js ::
 
   require({
     aliases:[
@@ -497,7 +497,7 @@ Now, when the module identifier "text" is demanded, the loader will normalize th
 other words, given the configuration above, all of the following statements result in exactly the same module value
 being returned:
 
-.. code-block :: javascript
+.. js ::
 
   require(["text"], function(text){ //...
   require(["dojo/text"], function(text){ //...
@@ -510,7 +510,7 @@ being instantiated - even if they normalize to the same path. This means you can
 ``paths``. For example, assuming ``baseUrl`` points to the dojo directory, you **can't** alias "text" to "dojo/text"
 like this:
 
-.. code-block :: javascript
+.. js ::
 
   require({
     paths:{
@@ -625,7 +625,7 @@ Notice how, assuming baseUrl points to the dojo tree as per the default, the top
 
 If the myApp tree were to reside at "/other/path/to/myApp", this could be achieved by providing a paths configuration like this:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     paths:{
@@ -663,7 +663,7 @@ myApp/someSubmodule
 
 In this case, myApp is not a sibling of dojo, but is still reachable from the automatically-computed baseUrl that points to script/dtk/dojo. A paths entry that gives the path for myApp relative to baseUrl will work:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     paths:{
@@ -691,7 +691,7 @@ myApp/someSubmodule
 
 This is one way to override the behavior of ``tlmSiblingOfDojo``. Another way is to set ``tlmSiblingOfDojo`` to falsy or explicitly set ``baseUrl``. Assuming the same tree of modules given above, consider this configuration:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     baseUrl:"scripts",
@@ -739,7 +739,7 @@ dojo/behavior
 
 If we make myApp a proper package, the resolution of "myApp" will change:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     baseUrl:"scripts"
@@ -773,7 +773,7 @@ Usually, you can map a module identifier anywhere. For example, maybe you are ex
 replaces dojo/cookie. In this case, you want all dojo modules to map as usual, but you want dojo/cookie to map to
 scripts/experimental/dojo/cookie. All that's needed to achieve this is add an entry into paths:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     paths:{
@@ -801,7 +801,7 @@ and "myApp/myApi/helper2". This means that the paths entry ``"myApp/myApi":"path
 helper modules as well. More often than not, this is exactly what you'll want, but if it isn't, you can simply add more
 path entries for the original helpers. Here's what that would look like:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     paths:{
@@ -822,7 +822,7 @@ If you want to use two packages with the same name at the same time, as long as 
 practices and did not use an explicit ``moduleId`` in their ``define`` calls, you can simply install the two packages to
 two different directories and then define each package with a unique name in the ``packages`` array. For example:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     baseUrl: "./",
@@ -837,7 +837,7 @@ two different directories and then define each package with a unique name in the
 
 You can then access these packages normally through ``require`` or ``define``:
 
-.. code-block :: javascript
+.. js ::
 
   define(["util1", "util2"], function(util1, util2) {
     // well that that was easy.
@@ -845,7 +845,7 @@ You can then access these packages normally through ``require`` or ``define``:
 
 It is also possible to remap packages that are required by another package. For example:
 
-.. code-block :: javascript
+.. js ::
 
   var dojoConfig = {
     packages: [{
@@ -881,7 +881,7 @@ Dojo's AMD API includes a few utility functions:
 ``require.toUrl`` converts a name that is prefixed by a module identifier to a URL by replacing the module identifier
 prefix with the path resolved by the normalization process.
 
-.. code-block :: javascript
+.. js ::
 
   require.toUrl(
     id // (string) a resource identifier that is prefixed by a module identifier
@@ -897,7 +897,7 @@ This also works with relative IDs when ``require`` is a :ref:`context-sensitive 
 ``require.toAbsMid`` converts the given module ID to an absolute module ID. This function is only useful when used in
 conjunction with a :ref:`context-sensitive require`.
 
-.. code-block :: javascript
+.. js ::
 
   require.toAbsMid(
     moduleId // (string) a module identifier
@@ -905,7 +905,7 @@ conjunction with a :ref:`context-sensitive require`.
 
 ``require.undef`` removes a module from the module namespace. ``require.undef`` is primarily useful for test frameworks that need to load and unload modules without having to reload the entire application.
 
-.. code-block :: javascript
+.. js ::
 
   require.undef(
     moduleId // (string) a module identifier
@@ -913,7 +913,7 @@ conjunction with a :ref:`context-sensitive require`.
 
 ``require.log`` is an alias to the current environment's ``console.log`` equivalent. Each passed argument is logged to a separate line.
 
-.. code-block :: javascript
+.. js ::
 
   require.log(
     // (...rest) one or more messages to log
@@ -937,7 +937,7 @@ The ``module`` module returns an object that contains the following properties:
 
 The ``exports`` module and ``module.exports`` provide an alternative method for defining a module value. Instead of returning the value explicitly by a return statement in the factory function, ``exports`` provides a JavaScript object onto which properties can be attached. For example, the following two module definitions are identical:
 
-.. code-block :: javascript
+.. js ::
 
   define([], function(){
     return {
@@ -956,7 +956,7 @@ Attaching properties to the ``exports`` object is the only way to ensure modules
 
 The ``module.exports`` object can also be replaced entirely if desired:
 
-.. code-block :: javascript
+.. js ::
 
   define(["module"], function(module){
     module.exports = dojo.declare(/*...*/);
@@ -964,7 +964,7 @@ The ``module.exports`` object can also be replaced entirely if desired:
 
 Finally, the AMD specification states that when ``define`` is provided only a factory function, the loader must act as though a dependencies array was passed with the value ``["require", "exports", "module"]``. In other words, the following two ``define`` calls are equivalent:
 
-.. code-block :: javascript
+.. js ::
 
   define(["require", "exports", "module"], function(require, exports, module) {
     // define a module
@@ -1008,7 +1008,7 @@ the desired plugin; the string to the right of "!" is passed to the plugin for p
 Like all other AMD modules, the plugin module is loaded only once; unlike normal modules, it must return an object
 containing a function named "load" with this signature:
 
-.. code-block :: javascript
+.. js ::
 
   load(
     id,        // the string to the right of the !
@@ -1018,7 +1018,7 @@ containing a function named "load" with this signature:
 
 Here is an example of loading some raw text with a "text" plugin:
 
-.. code-block :: javascript
+.. js ::
 
   // this is "myApp/myModule"
   define(["text!./templates/myModule.html"], function(template) {
@@ -1027,7 +1027,7 @@ Here is an example of loading some raw text with a "text" plugin:
 
 And a simple "text" plugin implementation:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/_base/xhr"], function(xhr) {
     return {
@@ -1044,7 +1044,7 @@ And a simple "text" plugin implementation:
 
 Unlike the value returned by regular modules, the loader does not cache the value passed by a plugin to ``callback``. A plugin can maintain its own internal cache, if desired:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo"], function(dojo) {
     var cache = {};
@@ -1080,7 +1080,7 @@ The Micro Event API
 The loader defines a micro event API that it uses to report errors, configuration changes, tracing, and idle state. The
 API consists of two functions:
 
-.. code-block :: javascript
+.. js ::
 
   require.on = function(
     eventName, // (string) the event name to connect to
@@ -1096,7 +1096,7 @@ The loader itself uses ``require.signal`` to signal its own events. Clients may 
 listener function to ``require.on``. For example, a client could connect to the "config" event to watch for
 configuration changes like this:
 
-.. code-block :: javascript
+.. js ::
 
   var handle = require.on("config", function(config, rawConfig){
         if(config.myApp.myConfigVar){
@@ -1118,7 +1118,7 @@ Error Reporting
 
 When things go wrong, the loader raises an "error" event through the micro event API. To monitor loader errors, simply connect via ``require.on`` like this:
 
-.. code-block :: javascript
+.. js ::
 
   function handleError(error){
     console.log(error.src, error.id);
@@ -1212,7 +1212,7 @@ Owing to the asynchronous nature of the loader, sometimes the best technique to 
 
 The tracing API has the following signatures:
 
-.. code-block :: javascript
+.. js ::
 
   require.trace = function(
     groupId, // (string) the tracing group identifier to which this trace message belongs
@@ -1248,7 +1248,7 @@ When ``require.trace(groupId, args)`` is called, the following process takes pla
 
 Tracing can be turned on or off for one or more trace groups by providing a configuration variable ``trace``. For example:
 
-.. code-block :: javascript
+.. js ::
 
   require({
     trace:{
@@ -1259,7 +1259,7 @@ Tracing can be turned on or off for one or more trace groups by providing a conf
 
 Alternatively, require.trace.set can be called directly; there are two forms:
 
-.. code-block :: javascript
+.. js ::
 
   require.trace.set({
     "loader-inject":1 // turn the loader-inject group on
@@ -1268,7 +1268,7 @@ Alternatively, require.trace.set can be called directly; there are two forms:
 
 ...or, equivalently...
 
-.. code-block :: javascript
+.. js ::
 
   require.trace.set("loader-inject", 1);
   require.trace.set("loader-define", 0);
@@ -1322,7 +1322,7 @@ Owing to the way ``dojo.eval`` is defined in v1.6- and the way some browsers' ``
 module's code would be evaluated in the global scope and sometimes it would be evaluated in a function scope. Consider
 the module text:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("module.that.defines.a.global");
   var someVariable = anAwesomeCalculation();
@@ -1336,7 +1336,7 @@ you've got code like the above and expect ``someVariable`` be defined in the glo
 only worked sometimes anyway, even if you didn't know it). To define global variables, assign them as properties of
 ``dojo.global``:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("module.that.defines.a.global");
   dojo.global.someVariable = anAwesomeCalculation();
@@ -1390,7 +1390,7 @@ packages (array of package configuration objects)
 packagePaths (object)
   This is a shorthand notation that can be used to specify package configuration for several packages that have the same root location. A particular package's location configuration variable is computed by concatenating the map key at which the particular package configuration object resides and the package name. The package configuration object may be specified as a string, thereby indicating the package name and default values for main and packageMap. For example:
 
-.. code-block :: javascript
+.. js ::
 
   packagePaths:{
     "path/to/some/place":[
@@ -1404,7 +1404,7 @@ packagePaths (object)
 
 Is equivalent to:
 
-.. code-block :: javascript
+.. js ::
 
   packages:[{
     name:"myPackage",
@@ -1434,7 +1434,7 @@ Default Configuration
 
 At the time this document was written, this was the default configuration for the Dojo loader. Please consult ``dojo.js`` for the latest and greatest.
 
-.. code-block :: javascript
+.. js ::
 
 	{
 		// the default configuration for a browser; this will be modified by other environments

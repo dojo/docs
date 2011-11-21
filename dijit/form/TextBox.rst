@@ -133,7 +133,7 @@ Coming with Dojo 1.5 the HTML5 placeholder parameter (also known as a "hint") ha
 
 In order to use it, submit a parameter "placeHolder" to your widget:
 
-.. code-block :: javascript
+.. js ::
 
    myTextBox = new dijit.form.TextBox({
        name: "firstname",

@@ -29,7 +29,7 @@ Here is a simple example showing how dojo.NodeList-manipulate adds an "after" me
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -40,7 +40,7 @@ Here is a simple example showing how dojo.NodeList-manipulate adds an "after" me
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -78,7 +78,7 @@ usage of this method, not the HTML that was inserted.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"></div>
@@ -86,7 +86,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -96,7 +96,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -108,7 +108,7 @@ Assume a DOM created by this markup:
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div>
@@ -116,7 +116,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -126,7 +126,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -150,7 +150,7 @@ nodes in the NodeList in one string.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"></div>
@@ -158,7 +158,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -168,7 +168,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -180,7 +180,7 @@ Assume a DOM created by this markup:
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars <span>today</span></p></div>
@@ -188,7 +188,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -198,7 +198,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query{
@@ -217,7 +217,7 @@ is returned.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <input type="text" value="foo">
@@ -229,7 +229,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -242,7 +242,7 @@ Assume a DOM created by this markup:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -267,7 +267,7 @@ this NodeList will be returned, not the appended content.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div>
@@ -277,7 +277,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -286,7 +286,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -295,7 +295,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p><span>append</span></div>
@@ -316,7 +316,7 @@ from the query.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>append</span>
@@ -327,7 +327,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -336,7 +336,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -345,7 +345,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <p>Hello Mars<span>append</span></p>
@@ -365,7 +365,7 @@ this NodeList will be returned, not the prepended content.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div>
@@ -375,7 +375,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -384,7 +384,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -393,7 +393,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><span>prepend</span><p>Hello Mars</p></div>
@@ -415,7 +415,7 @@ from the query.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>prepend</span>
@@ -426,7 +426,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -435,7 +435,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -444,7 +444,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <p><span>prepend</span>Hello Mars</p>
@@ -464,7 +464,7 @@ this NodeList will be returned, not the content.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div>
@@ -474,7 +474,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -483,7 +483,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -492,7 +492,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div><span>after</span>
@@ -514,7 +514,7 @@ from the query.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>after</span>
@@ -525,7 +525,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -534,7 +534,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -543,7 +543,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <p>Hello Mars</p><span>after</span>
@@ -563,7 +563,7 @@ will be returned, not the content.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="foo"><p>Hello Mars</p></div>
@@ -573,7 +573,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -582,7 +582,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -591,7 +591,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>before</span><div id="foo"><p>Hello Mars</p></div>
@@ -613,7 +613,7 @@ from the query.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>before</span>
@@ -624,7 +624,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -633,7 +633,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -642,7 +642,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <span>before</span><p>Hello Mars</p>
@@ -668,7 +668,7 @@ be returned, not the nodes from html.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <b>one</b>
@@ -679,7 +679,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -688,7 +688,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -697,7 +697,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div><span><b>one</b></span></div>
@@ -715,7 +715,7 @@ The nodes in the current NodeList will be returned, not the nodes from html.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -729,7 +729,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -738,7 +738,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -747,7 +747,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -773,7 +773,7 @@ be returned, not the nodes from html.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -787,7 +787,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -796,7 +796,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -805,7 +805,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -830,7 +830,7 @@ Note that the returned nodes have been removed from the DOM.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -844,7 +844,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -853,7 +853,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -862,7 +862,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -889,7 +889,7 @@ been cloned, so the returned NodeList will include the cloned nodes.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -907,7 +907,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -916,7 +916,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -925,7 +925,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -950,7 +950,7 @@ Only the DOM nodes are cloned, not any attached event handlers.
 
 Assume a DOM created by this markup:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">
@@ -964,7 +964,7 @@ Running this code:
 
 [ Dojo 1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
@@ -973,7 +973,7 @@ Running this code:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
@@ -982,7 +982,7 @@ Running this code:
 
 Results in this DOM structure:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div class="container">

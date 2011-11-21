@@ -24,7 +24,7 @@ Place.around() positions one node relative to another.
 
 Here’s an example that tries to put a popup tooltip either to the right, or as a fallback (if there is no room on the right), then on the left, of a textbox:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
      require(["dijit/place"], function(place){
@@ -53,7 +53,7 @@ Place.at() positions a node with one corner at a specified position.
 
 Here's an example of showing a context menu aligning one of the corners with the mouse position.   It picks a corner such that the menu can be displayed fully within the viewport:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
      require(["dijit/place"], function(place){

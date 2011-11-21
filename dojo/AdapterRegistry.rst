@@ -16,7 +16,7 @@ Example
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/AdapterRegistry"], function(reg){
@@ -41,7 +41,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block:: javascript
+.. js ::
   :linenos:
 
     // create a new registry
@@ -65,7 +65,7 @@ Dojo < 1.7
 
 There is also possible to unregister adapter from registry however there are performance problems on a large registry.
 
-.. code-block:: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7 (AMD)

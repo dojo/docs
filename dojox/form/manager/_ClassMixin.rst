@@ -34,7 +34,7 @@ There are three ways to use this method:
 
 1. Call it with the CSS class name and the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"], cssClass = "marker"
     var state = fm.gatherClassState(cssClass, names);
@@ -43,7 +43,7 @@ There are three ways to use this method:
 
 2. Call it with the CSS class name and a dictionary (an object). Only keys will be used, values will be ignored:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = {firstName: 1, lastName: 1}, cssClass = "marker";
     var state = fm.gatherClassState(cssClass, names);
@@ -52,7 +52,7 @@ There are three ways to use this method:
 
   This form is especially useful when we already collected values, and want to check them for a presence of a certain CSS class:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"], cssClass = "marker";
     var values = fm.gatherFormValues(names);
@@ -61,7 +61,7 @@ There are three ways to use this method:
 
 3. The second parameter is ``null``, or ``undefined``, or missing. In this case all known form elements will be inspected:
 
-  .. code-block :: javascript
+  .. js ::
 
     var cssClass = "marker";
     var state = fm.gatherClassState(cssClass);
@@ -73,7 +73,7 @@ This method works exactly like gatherClassState_ but instead of collecting the p
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   // highlight firstName, use red background for lastName,
   // place black border around all elements:
@@ -88,7 +88,7 @@ This method works exactly like addClass_ but instead of adding a class it remove
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   // undo the previous example:
   fm.removeClass("hilite", ["firstName"]).
@@ -101,7 +101,7 @@ Tips
 
 Note that the dictionary form of addClass_ and removeClass_ methods always ignores values. While there is a way to collect the presence of a class, there is no direct way to reflect it back. If you want to do that you can use :ref:`inspect() <dojox/form/manager/_Mixin>` method of :ref:`_Mixin <dojox/form/manager/_Mixin>`:
 
-.. code-block :: javascript
+.. js ::
 
   // make the inspector function
   var reflectClass = function(cssClass){

@@ -57,11 +57,11 @@ djConfig deprecated
 
 The global djConfig object used to define runtime configuration options has been **deprecated**. Use ``var dojoConfig = ...`` . `djConfig` will be unsupported in 2.0. **Additionally**, the custom attribute used when placed on the ``dojo.js`` script element has been changed to the standard HTML attribute `data-dojo-config`.  eg:
 
-    .. code-block :: html
+    .. html ::
 
         <script src="dojo/dojo.js" data-dojo-config="parseOnLoad:true"></script>
 
-    .. code-block :: javascript
+    .. js ::
 
         var dojoConfig = { parseOnLoad:true }
 
@@ -92,7 +92,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
   * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
 
-    .. code-block :: html
+    .. html ::
 
        <div data-dojo-id="bar" data-dojo-type="some.Thinger">I am exported to window.bar by reference</div>
 
@@ -100,13 +100,13 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
     * when using `data-dojo-type`, **all** widget properties **must** be stashed on a single attribute: `data-dojo-props` eg:
 
-    .. code-block :: html
+    .. html ::
 
       <div data-dojo-type="dijit.form.Button" data-dojo-props="disabled:true, onClick: someNamedFunction">Click</div>
 
     If degradation is a concern, duplicate native attributes in `data-dojo-props` and on the node reference, as widget parameters are **no longer read from the node attributes individually**. eg:
 
-    .. code-block :: html
+    .. html ::
 
        <input data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" checked="checked" type="checkbox'>
 
@@ -114,7 +114,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
     Replace all:
 
-    .. code-block :: html
+    .. html ::
 
       <form data-dojo-type="dijit.form.Form" ...>
         <script type="dojo/method" event="onSubmit" args="evt">
@@ -122,7 +122,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
     with:
 
-    .. code-block :: html
+    .. html ::
 
       <form data-dojo-type="dijit.form.Form" ...>
         <script type="dojo/method" data-dojo-event="onSubmit" data-dojo-args="evt">
@@ -130,7 +130,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
   * The `dojoAttachEvent` and `dojoAttachPoint` attributes have been **deprecated**, and will be unsupported in 2.0. Replace all `dojoAttachEvent` attributes with `data-dojo-attach-event` and all `dojoAttachPoint` attributes with `data-dojo-attach-point`. The behavior is identical.
 
-    .. code-block :: html
+    .. html ::
 
       <button data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">Cancel</button>
 
@@ -159,7 +159,7 @@ watch()
 -------
 Watch() has been implemented for widgets, to monitor changes to widget attributes.  For example:
 
-.. code-block :: javascript
+.. js ::
 
    myTitlePane.watch("open", function(attr, oldVal, newVal){
       console.log("pane is now " + (newVal ? "opened" : "closed"));
@@ -226,14 +226,14 @@ a11y
 
   For instance. Replace:
 
-  .. code-block :: html
+  .. html ::
 
       <span waiRole="treeitem" waiState="selected-false,haspopup-true"></span>
 
 
   With:
   
-  .. code-block :: html
+  .. html ::
 
       <span role="treeitem" aria-selected="false" aria-haspopup="true"></span>
 
@@ -264,7 +264,7 @@ NodeList
 --------
 New project called dojox.NodeList, currently adding a delegate() method to NodeList allowing apps to setup a single handler on a root node rather than individual handlers on sub nodes.   For example:
 
-.. code-block :: javascript
+.. js ::
 
 		dojo.query("navbar").delegate("a", "onclick", function(evt){
 		     console.log("user clicked anchor ", this.node);
@@ -355,19 +355,19 @@ Showing dialog from hyperlink
 -----------------------------
 Since dijit.Dialog.show() now returns a Deferred, and due to peculiarities in FF 3.6 (and perhaps other browsers/versions), this won't work correctly:
 
-.. code-block :: html
+.. html ::
 
    <a href="javascript: dialog.show()">show</a>
 
 Instead of showing the Dialog, it will change the browser's URL.    The workaround is to do:
 
-.. code-block :: html
+.. html ::
 
    <a href="javascript: dialog.show() && undefined">show</a>
 
 Alternately, stop using A tags with "href" as a way to execute javascript, and use onclick instead.
 
-.. code-block :: html
+.. html ::
 
    <span onclick="dialog.show()">show</a>
 

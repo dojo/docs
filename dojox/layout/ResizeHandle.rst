@@ -24,14 +24,14 @@ Usage
 
 To use the resize handle, you must include the code:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.layout.ResizeHandle");
 
 You will likely want to use the default styles as well:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <link rel="stylesheet" href="path/to/dojo/dojox/layout/resources/ResizeHandle.css" />
@@ -47,7 +47,7 @@ Programmatic example
 
 This example assumes a node with id="someNodeId" exists, is position:relative, and uses the defaults of ResizeHandle.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var handle = new dojox.layout.ResizeHandle({
@@ -59,7 +59,7 @@ Declarative example
 
 This example assumes all defaults, and attaches to a parent node.
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <div id="someNode">
@@ -69,7 +69,7 @@ This example assumes all defaults, and attaches to a parent node.
 
 The following CSS must be applied for the above example to work:
 
-.. code-block :: css
+.. css ::
   :linenos:
 
   <style type="text/css">
@@ -95,7 +95,7 @@ Resize Direction
 
 This widget can [currenty] resize in 3 directions. This is defined by the ``resizeAxis`` parameter. Defaulting to "xy", though you are able to limit movement to X and Y axis changes only by setting "x" and "y" respectively.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   new dojox.layout.ResizeHandle({ resizeAxis:"y", targetId: "foo" }).placeAt("foo");
@@ -105,7 +105,7 @@ Constraints
 
 By default, the resiable will be constrained to a minimum size of 100px x 100px, defined by the ``minWidth`` and ``minHeight`` properties. These are always used, though this will undoubtably change as this widget is extended into considering top/left changes as well.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   new dojox.layout.ResizeHandle({
@@ -116,7 +116,7 @@ By default, the resiable will be constrained to a minimum size of 100px x 100px,
 
 In Dojo 1.3 or higher, if you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   new dojox.layout.ResizeHandle({
@@ -127,7 +127,7 @@ In Dojo 1.3 or higher, if you would like to define maximum constraints, use the 
 
 By specifying a maxHeight/maxWidth at startup, a special instance object is created: ``maxSize``, with "w" and "h" properties. If you wish to dynamically adjust the constraints of the target. Some pseudo-code, illustrating a draggable object within some imaginary constraint:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var handle = dijit.byId("thatHandle");
@@ -150,7 +150,7 @@ event: onResize, property: intermediateChanges:true causes firing frequently.
 
 **New in 1.4** - User-definable topics are published before and after the resize UI is taking placing. The topics default to /dojo/resize/start and /dojo/resize/stop respectively. They can be overridden by defining *startTopci* and *endTopic* members in the constructor on a per-instance basis. The ResizeHandle instance is passed as the only argument to subscribed functions, allowing you to lookup which widget/node/whatever has been resized.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.subscribe("/dojo/resize/stop", function(inst){

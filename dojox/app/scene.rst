@@ -19,7 +19,7 @@ Sample
 ===============
 Sample application configuration
 
-.. code-block :: javascript
+.. js ::
 
   "views": {
     "home": {

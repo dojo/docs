@@ -47,7 +47,7 @@ Examples
 Simple Slider
 -------------
 
-.. code-block :: html
+.. html ::
 
   <input type="range" style="width:200px;" dojoType="dojox.mobile.Slider" value="10" max="20" />
 
@@ -57,7 +57,7 @@ Simple Slider
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <input type="range" style="height:200px;width:20px;" data-dojo-type="dojox.mobile.Slider" data-dojo-props='
         step:0,

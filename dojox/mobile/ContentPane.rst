@@ -31,7 +31,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <h2 dojoType="dojox.mobile.RoundRectCategory">Pane1</h2>
   <div id="pane1" dojoType="dojox.mobile.ContentPane"
@@ -43,7 +43,7 @@ Declarative example
 
 The content of fragment1.html is as follows:
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.RoundRect" shadow="true">
     HTML fragment example

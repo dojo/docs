@@ -15,7 +15,7 @@ Typical Use
 
 As of Dojo 1.7, with AMD loading you can now simply require dojox/mobile/compat as follows:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/mobile","dojo/mobile/compat"], function(mobile,compat){
       //Do something with dojo mobile...
@@ -23,7 +23,7 @@ As of Dojo 1.7, with AMD loading you can now simply require dojox/mobile/compat 
 
 In previous versions, typical usage would be to do conditional loading with dojo.requireIf() as follows. The code below is an alternative way to loads dojox.mobile.compat only when dojo.isWebKit is true and using the pre 1.7-style synchronous loader.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.mobile");
   dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");

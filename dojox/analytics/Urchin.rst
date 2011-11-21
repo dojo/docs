@@ -13,7 +13,7 @@ This class is used to delay loading of the popular `Google Analytics <http://goo
 
 To use, require the Urchin module into your page, and create a new instance:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.analytics.Urchin");
@@ -25,7 +25,7 @@ The most important attribute (parameter) would be the `acct` value, which should
 
 You can define your account number as a dojoConfig parameter ``urchin``. Simply include the key and a value however you set dojoConfig, either before ``dojo.js`` is loaded:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -35,14 +35,14 @@ You can define your account number as a dojoConfig parameter ``urchin``. Simply 
 
 or directly on the data-dojo-config attribute of your ``dojo.js`` script tag:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    <script src="js/dojo/dojo.js" data-dojo-config="urchin: UA-12345-67"></script>
 
 Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the :ref:`parser <dojo/parser>`), you simply need to add a tag somewhere in your page:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
      <div data-dojo-type="dojox.analytics.Urchin" data-dojo-props="acct:'UA-12345-67'"></div>
@@ -52,7 +52,7 @@ Ajax-API
 
 The urchin tracker allows you to add additional tracking to Ajax/long-lived pages with dynamic content. When you wish to send a new tracker request, call ``trackPageView`` with some identifier, and Google will track it as a separate hit:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    var tracker = new dojox.ananlytics.Urchin({ acct:"UA-12345-67" });
@@ -63,7 +63,7 @@ You can do this as often as you like during the lifetime of a single page view.
 
 **NOTE**: The initial page view is tracked as part of the ``GAonLoad`` event fired, so there is no need to do it manually. You will not, however, be able to call trackPageView() until after GAonLoad has fired.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    var tracker = new dojox.ananlytics.Urchin({ acct:"UA-12345-67" });
@@ -75,7 +75,7 @@ This is provided only as a convenience, and to have a reliable way of being aler
 
 You can also do this as a shorthand, too. If you want to prevent the automatic tracking, and only track a custom-ajax page onload:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   new dojox.analytics.Urchin({ acct:"UA-12345-67",

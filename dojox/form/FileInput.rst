@@ -19,7 +19,7 @@ Introduction
 
 There are three widgets available here. You must issue a require() call for the specific type you desire:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.form.FileInputAuto");
@@ -28,7 +28,7 @@ There are three widgets available here. You must issue a require() call for the 
 
 There is also a required CSS file. All three widgets share a single sheet of rules:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <link rel="stylesheet" href="dojo/dojox/form/resources/FileInput.css" />

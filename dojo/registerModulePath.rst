@@ -38,7 +38,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -74,7 +74,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -117,7 +117,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
 
     <script src="scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
 
@@ -141,7 +141,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
 
     <script src="scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
 
@@ -160,7 +160,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
       });
     </script>
 
-.. code-block :: css
+.. css ::
 
     <style type="text/css" media="screen">
       .red {
@@ -169,7 +169,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
       }
     </style>
 
-.. code-block :: html
+.. html ::
 
     <span data-dojo-type="my.form.Button">my.form.button</span>
 

@@ -20,7 +20,7 @@ Delegate() monitors nodes in this NodeList for [bubbled] events on nodes that ma
 This allows an app to setup a single event handler on a high level node, rather than many
 event handlers on subnodes. For example, to monitor clicks on any <a> in your navigation section:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query("#navbar").delegate("a", "onclick", function(evt){ ... } )

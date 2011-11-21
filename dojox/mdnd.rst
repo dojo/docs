@@ -29,7 +29,7 @@ Usage
 
 How to use the component:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <script type="text/javascript">

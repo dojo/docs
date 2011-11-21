@@ -13,7 +13,7 @@ Here lives several :ref:`Service-based <dojox/rpc/Service>` SMD's contributed to
 
 These SMD's are all available at a defined place/filename in the Dojo source archives. Simply point your Service at them:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojo.io.script"); // x-domain RPC
   dojo.require("dojox.rpc.Service");

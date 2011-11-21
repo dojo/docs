@@ -34,7 +34,7 @@ dojo.i18n
 
 If you need to do internationalization at client-side , use of dojo.i18n is the standard approach. Just like typical desktop dojo applications, dojox.mobile applications can also leverage dojo.i18n. From dojo-1.7, you can load nls resources with the dojo/i18n plugin as shown below. Once you get a resource bundle from dojo.i18n.getLocalization(), you can use the localized strings to replace UI labels, to show messages, or whatever. In the example below, a localized text is used to replace the button label.
 
-.. code-block :: html
+.. html ::
 
   <html>
       <head>
@@ -75,26 +75,26 @@ dojox.mobile.i18n
 The above approach, however, requires javascript code for each UI widget that has translatable strings. That could be a pain especially when the application consists of a lot of widgets and is mainly wirtten as dojo markup.
 dojox.mobile.i18n is an optional feature that simplifies internationalization in such cases. It is a thin wrapper around dojo.i18n, and has ability to replace strings, such as CDATA or attribute values, in dojo markup. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.mobile.i18n");
   var bundle = dojox.mobile.i18n.load("dojox.mobile.tests", "sample");
 
 You can embed string resource keys in your markup as shown below. Then, the keys are automatically replaced with translated text in the loaded resource bundle. That is basically what dojox.mobile.i18n does.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="L_DAY_SUNDAY">L_DAY_OF_THE_WEEK</h1>
 
 It is not mandatory, but one simple approach is to use English text as resource keys. For example, as shown below, you can write as if you are writing an ordinary English application.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Sunday">Day of the Week</h1>
 
 In fact, however, what you wrote are not English resource values, but resource keys, "Sunday" and "Day of the Week". That is, if you provide an Italian resource as follows,
 
-.. code-block :: javascript
+.. js ::
 
   define({
       "Day of the Week": "giorno della settimana",
@@ -109,7 +109,7 @@ Here, you don't need to programmatically handle the returned resource bundle arr
 
 In this example, if you prepared a resource bundle for English, it would look like this:
 
-.. code-block :: javascript
+.. js ::
 
   define({
       "Day of the Week": "Day of the Week",
@@ -120,13 +120,13 @@ But you don't have to have English resource, because when a look-up fails, key i
 
 If your resource value contains variables that have to be replaced with some given values, you need to access the resource bundle array, perform substitution, and apply the value to the widget.
 
-.. code-block :: javascript
+.. js ::
 
   define({
       "MINUTES": "%1 Minuto"
   });
 
-.. code-block :: javascript
+.. js ::
 
   dijit.byId("item1").set("label", bundle["MINUTES"].replace("%1", "30"));
 

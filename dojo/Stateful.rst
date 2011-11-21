@@ -26,7 +26,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/Stateful"], function(Stateful){
@@ -43,7 +43,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
    dojo.require('dojo.Stateful');
@@ -87,7 +87,7 @@ Get a named property on a Stateful object. The property may
 potentially be retrieved via a getter method in subclasses. In the base class
 this just retrieves the object's property.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -119,7 +119,7 @@ Set a property on a Stateful instance. ***new in 1.5***
 Sets named properties on a stateful object and notifies any watchers of
 the property. A programmatic setter may be defined in subclasses.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -147,7 +147,7 @@ the property. A programmatic setter may be defined in subclasses.
 
 set() may also be called with a hash of name/value pairs, ex:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -192,7 +192,7 @@ returns:
   An object handle for the watch. The unwatch method of this object can be used to discontinue watching this property:
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

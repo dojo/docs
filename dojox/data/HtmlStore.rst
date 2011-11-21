@@ -33,7 +33,7 @@ The following examples are HTML structures that can be easily read by HtmlStore:
 HTML table
 ----------
 
-.. code-block :: html
+.. html ::
  :linenos:
 
   <html>
@@ -86,7 +86,7 @@ HTML table
 List
 ----
 
-.. code-block :: html
+.. html ::
  :linenos:
  
   <ul id="myList">
@@ -108,7 +108,7 @@ List
 DIV Collection
 --------------
 
-.. code-block :: html
+.. html ::
  :linenos:
  
   <div id="divList">

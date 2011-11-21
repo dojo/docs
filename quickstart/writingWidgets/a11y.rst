@@ -24,13 +24,13 @@ In order to support mouse click and standard enter key and space key press to ac
 
 Here is an example of using widget connect to handle the ondijitclick event on the focusNode of the widget:
 
-.. code-block :: javascript
+.. js ::
 
   this.connect(this.focusNode, "ondijitclick", "_dijitClick");
 
 The ondijitclick event can also be specified in the template via the data-dojo-attach-event mechanism:
 
-.. code-block :: javascript
+.. js ::
 
   <span class="dijit dijitReset dijitLeft dijitInline"
 	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
@@ -88,7 +88,7 @@ Providing Hierarchical Information
 
 In order for Firefox to determine the correct parent child relationships between objects, and to communicate this via an accessibility API to assistive technologies, it is best to create components in a hierarchical fashion. For example, when creating a menubar it is best to have the components that make up the menus and menuitems of the menubar be children of the menubar. Likewise, menuitems should be children of the owning menus. This hierarchy allows Firefox to provide menu information to the assistive technologies, and for a screen reader to speak more information about the menu such as, “menu open, File, item 1 of 5” when the user opens a menu. Here is a simple pseudo code example demonstrating a hierarchical layout of elements for a menu control. This exmaple only shows the addition of role attributes and does not represent a complete menu widget. (Note: Attributes are not quoted in pseudo-code examples to help improve the readability):
 
-.. code-block :: javascript
+.. js ::
 
   <div role="menubar">
     <div role="menuitem">A</div>
@@ -108,7 +108,7 @@ In order for Firefox to determine the correct parent child relationships between
 
 It may not always be practical to create items via HTML in a hierarchical fashion. In that case the group role can help to associate the items properly. This is illustrated in the following simple pseudo code example of a tree hierarchy.
 
-.. code-block :: javascript
+.. js ::
 
   <div role="tree">
     <div role="treeitem">Top </div>
@@ -144,7 +144,7 @@ Using the Presentation Role
 
 While it is preferable to use CSS for layout, tables are still used to quickly and easily arrange elements on a page. This is especially true of existing widgets which were originally created to work in older browsers. Putting information in tables can easily confuse the hierarchy of the component. If tables must be used, they can be marked with a role of presentation to eliminate them from the hierarchy. Here is a pseudo code example where the presentation role was used on tables within a tree component:
 
- .. code-block :: javascript
+ .. js ::
 
   <div role="tree">
       <table role="presentation">
@@ -170,7 +170,7 @@ While it is preferable to use CSS for layout, tables are still used to quickly a
 
 Since the table is only used for layout it is identified with a role of presentation to remove if from the accessibility hierarchy so that information about the table is not provided to assistive technology. Other elements may need to be removed from the accessibility hierarchy as well. For example, when creating a DHTML checkbox, an image may be contained within a span element that is marked with a role of checkbox and an appropriate state of checked equals true or false. The image which represents the checkbox is contained within the span and should not contain any alt text since the role and state are managed by the surrounding span. Images are considered important elements and are normally included with the accessibility hierarchy of the browser. In order to ignore this image in the accessibility hierarchy, it is marked with a role of presentation. Here is a generic HTML representation:
 
- .. code-block :: javascript
+ .. js ::
 
   <span role="checkbox" checked="true">
     <img src="checked.gif" role="presentation">
@@ -183,7 +183,7 @@ Assigning States as of 1.0
 
 In addition to identifying the role of a widget, the state of the widget must be identified and updated. The initial state can be set within the widget template or via scripting when the widget is created. As the state changes during user interaction with the widget, the state must be updated using the dijit.xxxWaiState apis:
 
-.. code-block :: javascript
+.. js ::
 
   dijit.hasWaiState(/*Element*/ elem, /*String*/ state);
   dijit.getWaiState(/*Element*/ elem, /*String*/ state);
@@ -197,7 +197,7 @@ Generally only items which have a role can have a state value. The role may be e
 Assigning ARIA States in 0.9
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block :: javascript
+.. js ::
 
   dijit.wai.setAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
   dijit.wai.getAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);

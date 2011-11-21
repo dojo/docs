@@ -33,14 +33,14 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.SafePaste");
 
 You then need to import its CSS.  This is done by just adding a link tag to the header.  Something like:
 
-.. code-block :: html
+.. html ::
 
   <style>
     @import "dojox/editor/plugins/resources/css/SafePaste.css";
@@ -48,7 +48,7 @@ You then need to import its CSS.  This is done by just adding a link tag to the 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['safepaste']"></div>
 
@@ -72,7 +72,7 @@ The SafePaste plugin supports three options, the width and height to use for the
 
 How do I configure the options?  Glad you asked.  You do it where you declare the plugin.  See the following example, the input area is configured to be 200px wide and 200px tall, and remove all bold and italic tags.
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'safepaste', width: "200px", height: "200px", stripTags: ["b", "i"]}]">

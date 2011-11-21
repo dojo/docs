@@ -43,7 +43,7 @@ Example
 
 CSS:
 
-.. code-block :: css
+.. css ::
  :linenos:
  
  .rgt{
@@ -66,7 +66,7 @@ CSS:
 
 HTML:
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div class="rgt">
@@ -75,7 +75,7 @@ HTML:
 
 JavaScript:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.require("dojox.fx.Timeline");

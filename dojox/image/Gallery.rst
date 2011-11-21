@@ -33,7 +33,7 @@ Usage
 
 Creating a Gallery and setting a simple data source
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -52,7 +52,7 @@ Creating a Gallery and setting a simple data source
 
 Creating a Gallery with a FlickrRestStore
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -87,7 +87,7 @@ Creating a Gallery with a FlickrRestStore
 
 Setting the image width and height
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="imageHeight:400, imageWidth:600"></div
@@ -107,7 +107,7 @@ by setting the autoLoad attribute to "false".
 
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="pageSize:50, autoLoad:false" ></div>
@@ -119,7 +119,7 @@ its "Play" button. The amount of time between changing images can be configured 
 the slideshowInterval attribute to the number of seconds required.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="slideshowInterval:5"></div>

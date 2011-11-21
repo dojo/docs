@@ -21,13 +21,13 @@ after
 
 The module includes an after function that provides after advice to a method. The provided advising function will be called after the main method is called. The after function's signature is:
 
-.. code-block :: javascript
+.. js ::
 
   after(target, methodName, advisingFunction, receiveArguments);
 
 The target is the object with the method. The methodName is the name of the method to advice. The advisingFunction is the function that will be called after the original method is called. The return value from the method will be provided as the first argument to the advising function. The advising function can return a value to replace the final return value of the method call. For example:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/aspect"], function(aspect){
     aspect.after(dojo, "xhr", function(deferred){
@@ -39,7 +39,7 @@ The target is the object with the method. The methodName is the name of the meth
 
 We can also load dojo/aspect with dojo.require("dojo.aspect") to make it available globally as dojo.aspect:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojo.aspect");
   dojo.aspect.after(dojo, "xhr", function(response){
@@ -48,7 +48,7 @@ We can also load dojo/aspect with dojo.require("dojo.aspect") to make it availab
 
 The advising function can return a value to replace the final return value of the method call. For example:
 
-.. code-block :: javascript
+.. js ::
 
   aspect.after(dojo, "xhr", function(deferred){
     // returning a value replaces the return value
@@ -60,7 +60,7 @@ The advising function can return a value to replace the final return value of th
   
 The advisory function can also be called with the original arguments of the method by setting the receiveArguments parameter to true. For example:
 
-.. code-block :: javascript
+.. js ::
 
   aspect.after(dojo, "xhr", function(method, args){
     // now we have access to the original arguments
@@ -71,13 +71,13 @@ before
 
 The module also includes a before function that provides before advice to a method. The provided advising function will be called before the main method is called. The before function's signature is:
 
-.. code-block :: javascript
+.. js ::
 
   before(target, methodName, advisingFunction);
 
 The target is the object with the method. The methodName is the name of the method to advice. The advisingFunction is the function that will be called before the original method is called. The arguments used to call the method will be provided as the arguments to the advising function. The advising function can return an array to replace the arguments passed to the original method (or the next before advice). For example:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/aspect"], function(aspect){
     aspect.before(dojo, "xhr", function(method, args){
@@ -98,13 +98,13 @@ around
 
 The module finally includes an around function that provides around advice to a method. The provided advising function will be called in place of the main method, and the advising function will be passed a chaining function that can be used to continue to call execution to the next advice or original method. The around function's signature is:
 
-.. code-block :: javascript
+.. js ::
 
   around(target, methodName, advisingFactory);
 
 The target is the object with the method. The methodName is the name of the method to advice. The advisingFactory is a  function that will be called immediately with a single argument that is a function that can be called to continue the execution. The advisingFactory should return a function that will be called when the method is called. The arguments used to call the method will be provided as the arguments to the returned advising function. The advising function's return value will be returned from the method call. For example:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/aspect"], function(aspect){
     aspect.around(dojo, "xhr", function(originalXhr){

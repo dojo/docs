@@ -18,7 +18,7 @@ To use the recorder:
 
 1. In a working copy of the app you want to write a test for, add this JavaScript:
 
-   .. code-block:: javascript
+   .. js ::
 
      dojo.require("dojox.robot.recorder");
 

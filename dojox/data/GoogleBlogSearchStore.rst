@@ -44,7 +44,7 @@ The pattern of using the GoogleBlogSearchStore is
   * **author** The author of the blog post.
   * **publishedDate** The published date, in RFC-822 format
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

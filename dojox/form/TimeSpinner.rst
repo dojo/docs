@@ -29,7 +29,7 @@ Examples
 Programmatic example
 --------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -48,7 +48,7 @@ Programmatic example
 Declarative example
 -------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

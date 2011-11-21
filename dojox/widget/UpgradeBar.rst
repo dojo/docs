@@ -25,7 +25,7 @@ The only required parameter is *notifications*. This is an array of objects, and
 
 To provide the validation in markup, use _validate_ as an attribute like the two examples that follow:
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <div validate="!google.gears">
@@ -34,7 +34,7 @@ To provide the validation in markup, use _validate_ as an attribute like the two
 As you can see, these should be expressions that evaluate to true or false. UpgradeBar wraps these expressions in a try/catch to ensure no errors are thrown. If Google Gears is not installed, that expression would throw an error. This should be kept in mind when creating the UpgradeBar programmatically, because you would need to supply your own try catch.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  function(){
@@ -46,7 +46,7 @@ As you can see, these should be expressions that evaluate to true or false. Upgr
 If doing something simple like testing a browser or version, a try/catch is not necessary:
  
  
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  function(){
@@ -58,7 +58,7 @@ Examples
 
 A programmatic example:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  new dojox.widget.UpgradeBar({
@@ -82,7 +82,7 @@ A programmatic example:
  
 A markup example:
  
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div data-dojo-type="dojox.widget.UpgradeBar" id="upgradeBar" data-dojo-props="noRemindButton:'Do not Remind Me Again'">

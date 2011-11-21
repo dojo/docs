@@ -29,7 +29,7 @@ Dojo 1.7 (AMD)
 
 When using AMD format in a fully baseless application, ``destroy`` is accessed from the ``dojo/dom-construct`` module.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom-construct"], function(domConstruct){
@@ -39,7 +39,7 @@ When using AMD format in a fully baseless application, ``destroy`` is accessed f
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.destroy`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo"], function(dojo){
@@ -50,7 +50,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.des
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Destroy a node byId:

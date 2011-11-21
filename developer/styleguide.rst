@@ -418,7 +418,7 @@ CSS
 
 The CSS styling basically inherits all the rules from JavaScript, that means "key: value" looks like in JS, etc. Therefore a CSS file might look like this:
 
-.. code-block :: html
+.. html ::
 
    .className1 {
         color: red;

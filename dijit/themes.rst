@@ -13,13 +13,13 @@ Dijit Themes lend a consistent look and feel to widgets. Themes are collections 
 
 Themes must be included by the inclusion of the theme's root file from the relative position in the source tree:
 
-.. code-block :: html
+.. html ::
 
   <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
 
 and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
-.. code-block :: html
+.. html ::
 
   <html>
   <head>
@@ -121,13 +121,13 @@ CSS Directory Structure
 
 Hierarchy of the base and theme CSS files:
 
-.. code-block :: html
+.. html ::
 
   dojo/
     resources
     dojo.css   <-- Baseline CSS file for general usage; not intended for specific dijit widget styling.
 
-.. code-block :: html
+.. html ::
 
   dijit/
     themes/
@@ -138,7 +138,7 @@ Hierarchy of the base and theme CSS files:
 
 Theme-specific and widget-specific CSS:
 
-.. code-block :: html
+.. html ::
 
   dijit/
     themes/
@@ -158,7 +158,7 @@ Theme-specific and widget-specific CSS:
 
 The themeX.css file has rules like:
 
-.. code-block :: css
+.. css ::
 
   .claro .dijitButtonNode { ... }
 
@@ -170,7 +170,7 @@ Common and theme-specific images
 Common
 ------
 
-.. code-block :: html
+.. html ::
 
   dijit/
     icons/
@@ -218,7 +218,7 @@ Themes may even specify variations on an icon depending on state.  So for exampl
 
 The special icon would be triggered by a rule like:
 
-.. code-block:: css
+.. css ::
 
   .dijitDisabled .dijitEditorIcon {
 	background-image: url('images/editorIconsDisabled.png');}
@@ -231,7 +231,7 @@ Here are some best practices on when to mirror an icon to right-to-left. (info t
 Claro theme-specific
 --------------------
 
-.. code-block :: html
+.. html ::
 
   themes/
     claro/
@@ -242,7 +242,7 @@ Claro theme-specific
 
 The forms and layout widgets each have their respective /form/images and layout/images folders:
 
-.. code-block :: html
+.. html ::
 
    forms/
      images/
@@ -257,7 +257,7 @@ All images are referenced from the widget via CSS rules (via the background-imag
 Tundra theme-specific
 ---------------------
 
-.. code-block :: html
+.. html ::
 
     tundra/
       images/
@@ -273,19 +273,19 @@ Theme Setup
 
 To include a given theme on your page or application, include the `themeName.css` file: (one of `claro.css`, `tundra.css`, `nihilo.css`, or `soria.css`)
 
-.. code-block :: html
+.. html ::
 
     <link rel="stylesheet" href="dojo/dijit/themes/tundra/tundra.css" />
 
 Then add a theme class name to the parent <body> element, like:
 
-.. code-block :: html
+.. html ::
 
   <body class="tundra">
 
 `note:` The reason the Tundra theme requires a class=tundra on the "<body>" tag (or some other tag) is because the rules all list a hierarchy like ".tundra .dojoButton". This is done to prevent the `tundra` class from affecting any of your page styles. This also ensures all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
-.. code-block :: html
+.. html ::
 
   <html>
   <head>
@@ -312,7 +312,7 @@ Using multiple themes
 
 To use multiple themes such as Claro, Tundra, Nihilo and Soria, (assuming Tundra is your base theme) include the additional theme CSS files into your document, like:
 
-.. code-block :: html
+.. html ::
 
   <style type="text/css">
     @import "dojo/dijit/themes/nihilo/nihilo.css";
@@ -322,7 +322,7 @@ To use multiple themes such as Claro, Tundra, Nihilo and Soria, (assuming Tundra
 
 The themeX.css file(s) will define rules like:
 
-.. code-block :: css
+.. css ::
 
    .nihilo .dijitButton { ... }
 
@@ -330,7 +330,7 @@ so it won't conflict with other themeX.css styling.
 
 To have different sections of your document that are different themes, you just change the class of each section.   For example, to make the main document Claro theme, but then have sections that are Tundra and Soria themes, do:
 
-.. code-block :: html
+.. html ::
 
   <body class=claro>
     ...
@@ -358,7 +358,7 @@ Theming several widgets
 
 This is the base list of files needed when theming only a few widgets (such as Tree, Calendar, TimePicker (dijit.form.TimeTextBox) and dijit.form.DropDownButton (requires Menu):
 
-.. code-block :: html
+.. html ::
 
 
   dojo/
@@ -430,7 +430,7 @@ Color customization can be applied to the behavioral states of a widget. In Dojo
 
 In the Claro theme, each of these states is defined by a specific hex value that can be modified:
 
-.. code-block :: css
+.. css ::
 
   .claro .dijitAccordionInnerContainerActive {
        	  border:1px solid #769DC0;
@@ -449,7 +449,7 @@ Fonts can be customized in the following ways:
 
    * in dojo/resources/dojo.css
 
-     .. code-block :: css
+     .. css ::
 
         body {
           font: 12px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif;
@@ -458,7 +458,7 @@ Fonts can be customized in the following ways:
 
    * in theme/claro/common.css (overrides dojo.css)
 
-     .. code-block :: css
+     .. css ::
 
         .claro {
           font-family: Verdana,Arial,Helvetica,sans-serif;
@@ -492,7 +492,7 @@ Example:
 
 For the Claro theme, 11px (.688em) has been defined as the body font size in claro/common.css.
 
-.. code-block :: css
+.. css ::
 
        .claro {
 	font-family:Verdana,Arial,Helvetica,sans-serif;
@@ -504,7 +504,7 @@ So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLab
 
 
 
-.. code-block :: css
+.. css ::
 
         .claro .dijitCalendarMonthLabel {
 	color:#000000;
@@ -513,7 +513,7 @@ So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLab
 
 and
 
-.. code-block :: css
+.. css ::
 
         .claro .dijitCalendarDayLabelTemplate {
 	text-align:center;
@@ -543,7 +543,7 @@ In Dojo 1.5 CSS3 ('border-radius') is used to render corner styling; CSS3 is sup
 
 Example of CSS3 corner styling:
 
-.. code-block :: css
+.. css ::
 
    .claro .dijitTabContainerTop-tabs .dijitTabInnerDiv,
    .claro .dijitTabContainerTop-tabs .dijitTabContent {
@@ -605,7 +605,7 @@ Several widgets have inherited .lucid dijitPopup(CSS3) drop shadow treatment:
 
 (generic) .claro .dijitPopup{
 
-.. code-block :: css
+.. css ::
 
   box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
@@ -645,7 +645,7 @@ Using CSS3 -webkit-transition enables designers to define styling for animations
 
 Sample of CSS3 animation styling in .claro .dijitAccordionInnerContainer {
 
-.. code-block :: css
+.. css ::
 
 	background-color: #e6e6e7;
 	border:solid 1px #b5bcc7;
@@ -670,14 +670,14 @@ Overriding a theme
 
 You can also define a variation on a theme (much like `Handel <http://en.wikipedia.org/wiki/Variations_and_Fugue_on_a_Theme_by_Handel>`_). Let's say that you like the Tundra theme but for each tab above, you just want to change the background color of the form widgets. You would define yellowForm and blueForm to just change the background color:
 
-.. code-block :: css
+.. css ::
 
   .yellowForm .dijitButton, .yellowForm .dijitInputField { background-color: yellow; }
   .blueForm .dijitButton, .blueForm .dijitInputField { background-color: blue; }
 
 Then you would reference the override class in a similar way to the above:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.layout.TabContainer">
         <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
@@ -700,7 +700,7 @@ Writing Your Own Theme
 
 If you want to develop your own theme just make rules like
 
-.. code-block :: css
+.. css ::
 
   .myTheme .dijitButtonNode { ... }
 
@@ -719,13 +719,13 @@ Applying style directly to a widget
 
 You can apply styles to plain dom nodes in various ways:
 
-.. code-block :: html
+.. html ::
 
   <div style="margin: 30px;">...</div>
 
 or
 
-.. code-block :: html
+.. html ::
 
   <style>
      #xyz { margin: 30px; }
@@ -734,7 +734,7 @@ or
 
 or
 
-.. code-block :: html
+.. html ::
 
   <style>
    .myClass { margin: 30px; }

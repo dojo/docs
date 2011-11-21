@@ -21,7 +21,7 @@ Usage
 
 Use this to test if a variable is a built-in function.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -33,7 +33,7 @@ Use this to test if a variable is a built-in function.
 
 Returns true if it is a built-in function or some other kind of oddball that *should* report as a function but doesn't.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)

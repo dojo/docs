@@ -26,7 +26,7 @@ Usage
 
 The basic usage of dojox.json.schema validate data is:
 
-.. code-block :: javascript
+.. js ::
 
  obj = {foo:"bar"};
  schema = {properties:{foo:{type:"string"}}};

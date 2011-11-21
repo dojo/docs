@@ -20,7 +20,7 @@ Usage
 
 SpinWheel is in a separate module file from _base.js. You need to dojo.require SpinWheel as below.
 
-.. code-block :: javascript
+.. js ::
 
   <link href="../themes/common/SpinWheel.css" rel="stylesheet">
 
@@ -45,7 +45,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <div dojotype="dojox.mobile.View" selected="true">
       <h1 dojoType="dojox.mobile.Heading">Custom SpinWheel</h1>

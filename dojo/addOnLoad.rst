@@ -42,7 +42,7 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
        });
   });
 
-.. code-block :: javascript
+.. js ::
 
   //Dojo < 1.7
   function setAfrobeat(){

@@ -23,7 +23,7 @@ dojo.trim accepts the only argument: a string to be trimmed.
 
 [ Dojo 1.7+ (AMD) ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(["dojo/_base/lang"], function(lang){
@@ -40,7 +40,7 @@ dojo.trim accepts the only argument: a string to be trimmed.
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function show(str){

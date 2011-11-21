@@ -20,7 +20,7 @@ Since Dojo 1.7, ``dojo.setMarginBox`` is exposed via the ``setMarginBox`` method
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  // Dojo 1.7+ (AMD)
@@ -45,7 +45,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``setMarginBox`` is accessed from the ``dojo/dom-geometry`` module.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom-geometry"], function(domGeom){
@@ -55,7 +55,7 @@ When using AMD format in a fully baseless application, ``setMarginBox`` is acces
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setMarginBox`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo"], function(dojo){
@@ -66,7 +66,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     // Set domNode margin-box to 300px x 150px

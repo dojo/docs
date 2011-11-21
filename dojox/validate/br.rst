@@ -35,7 +35,7 @@ Basic Usage
 -----------
 Usage of this code is quite simple and painless.  The only thing you have to do is require it inot the page and the functions will be available.  For Example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dojox.validator.br");
 

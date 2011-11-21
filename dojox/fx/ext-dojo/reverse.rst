@@ -29,7 +29,7 @@ Example
 
 CSS:
 
-.. code-block :: css
+.. css ::
  :linenos:
  
  .lft{
@@ -51,7 +51,7 @@ CSS:
 
 HTML:
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <button id="btn">Reverse</button>
@@ -61,7 +61,7 @@ HTML:
 
 JavaScript:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.require("dojox.fx.ext-dojo.reverse");

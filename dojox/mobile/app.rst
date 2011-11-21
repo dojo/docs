@@ -21,7 +21,7 @@ Initialization
 First, you've to create a basic front page that will initialize information and starts the framework.
 
 
-.. code-block:: html
+.. html ::
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
   <html>
@@ -51,7 +51,7 @@ This simple examples defines an application whose main scene is "main". When cal
 
 To load an initial scene other than 'main', set the 'initialScene' value in appInfo to the name of that scene, e.g.
 
-.. code-block:: html
+.. html ::
 
   var appInfo = {
           id: "com.mycompany.myapp",

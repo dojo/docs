@@ -59,7 +59,7 @@ Example
 
 After using the proper requires, the following is all that is needed to embed Drawing in your document:
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <div dojoType="dojox.drawing.Drawing" id="drawing" style="width:800px; height:400px;"
@@ -268,7 +268,7 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 **addStencil**
 	To programmatically add a Stencil to the drawing, use the *addStencil* method with two arguments, the basic Stencil type, and a object properties, which should include either the Stencil data or Stencil points.
  
-.. code-block :: javascript
+.. js ::
  :linenos:
   
  var textBlock = myDrawing.addStencil("textBlock", {data:{x:20, y:30, width:200, text:"This is editable text"}});
@@ -281,7 +281,7 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 **removeStencil**
 	 Removes a stencil from the drawing using the stencil itself as the argument:
  
-.. code-block :: javascript
+.. js ::
  :linenos:
     
  myDrawing.removeStencil(myRect);
@@ -308,7 +308,7 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 **changeDefaults**
 	Changes the current style that is applied to newly drawn stencils. Pass in an object that represents one of the objects in drawing.style that will be mixed in. Not all properties are necessary. Only one object may be changed at a time. Non-objects like angleSnap cannot be changed in this manner. The following example changes the default fill to blue, the border color to yellow, and the border width to 5:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
   		
  myDrawing.changeDefaults({

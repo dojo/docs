@@ -27,7 +27,7 @@ Prerequisites
 
 This search plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.grid.EnhancedGrid");
@@ -41,7 +41,7 @@ The declaration name of this plugin is ``search`` . It is declared in the ``plug
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
@@ -52,7 +52,7 @@ If your grid is created declaratively:
 
 If your grid is created in JavaScript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -94,7 +94,7 @@ onSearched      function(Integer, object)   Mandatory                   This cal
 
 Here is some examples on how to use this API:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   //Search on some specific columns.

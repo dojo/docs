@@ -20,7 +20,7 @@ Since Dojo 1.7, ``dojo.getContentBox`` is exposed via the ``getContentBox`` meth
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  // Dojo 1.7+ (AMD)
@@ -42,7 +42,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``getContentBox`` is accessed from the ``dojo/dom-geometry`` module.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo/dom-geometry"], function(domGeom){
@@ -52,7 +52,7 @@ When using AMD format in a fully baseless application, ``getContentBox`` is acce
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getContentBox`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo"], function(dojo){
@@ -63,7 +63,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.get
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     // Get the content-box size of a node

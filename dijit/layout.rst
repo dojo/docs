@@ -284,7 +284,7 @@ Sizing to Viewport
 
 Sizing to browser viewport: To make the outermost layout widget size to the browser's viewport, in your page CSS you should have:
 
-.. code-block :: css
+.. css ::
   :linenos:
 
   html, body, #mainDiv {
@@ -315,7 +315,7 @@ Creation
 
 When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // create a BorderContainer as the top widget in the hierarchy
@@ -354,7 +354,7 @@ Add Children
 
 After startup() has been called you can freely add children, like for example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // add a right pane to the BorderContainer
@@ -362,7 +362,7 @@ After startup() has been called you can freely add children, like for example:
 
 or:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // add a tab to the TabContainer
@@ -377,7 +377,7 @@ Remove Children
 
 Removing children is done w/the pointer to the child widget:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // remove the first tab, and destroy it (and it's contents)
@@ -393,7 +393,7 @@ Destruction
 
 Typically you destroy a widget and all it's descendants, like this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   bc.destroyRecursive();
@@ -409,14 +409,14 @@ The resize function for widgets layout widgets serves two purposes:
 
 Usually you pass a size to the resize method, like:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    bc.resize({h: 500, w: 500});
 
 If you want to notify a widget that it's size has been changed, you omit that argument:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    bc.resize();

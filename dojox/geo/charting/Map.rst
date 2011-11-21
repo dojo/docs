@@ -18,7 +18,7 @@ Overview
 
 A dojo widget to render map information "shapefile" data.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
     
  dojo.require("dojox.geo.charting.Map");
@@ -29,7 +29,7 @@ A dojo widget to render map information "shapefile" data.
  });
  
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <h1>Simple Maps,support zoom in and zoom out.</h1>

@@ -23,7 +23,7 @@ setObject will let you set the value of child, creating the intermediate parent 
 
 Without `dojo.setObject`, we often see code like this:
 
-.. code-block:: javascript
+.. js ::
 
   // ensure that intermediate objects are available
   if(!obj["parent"]){ obj.parent = {}; }
@@ -35,7 +35,7 @@ Without `dojo.setObject`, we often see code like this:
 
 Wheras with `dojo.setObject`, we can shorten that to:
 
-.. code-block:: javascript
+.. js ::
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {

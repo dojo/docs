@@ -23,7 +23,7 @@ Examples
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(['dojo/_base/json'],function(dojo){
@@ -41,7 +41,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // a simple object

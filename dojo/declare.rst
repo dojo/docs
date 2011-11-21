@@ -55,7 +55,7 @@ Example:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(['dojo/_base/declare'], function(declare){
@@ -68,7 +68,7 @@ Example:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.Thinger", null, {
@@ -79,7 +79,7 @@ Example:
 
 Here, we've declared a simple class named ``my.Thinger``, not based on anything, and finally providing a single property named ``constructor``. The constructor function is run once for each mixed Class. In this example, we've simply mixed the passed arguments into ``this``, or our scoped reference to an instance of my.Thinger. You could then create a Thinger like so:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var thing = new my.Thinger({ count:100 });
@@ -89,7 +89,7 @@ The :ref:`dojo.mixin <dojo/mixin>` call (in the constructor) then mixes the vari
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -106,7 +106,7 @@ The :ref:`dojo.mixin <dojo/mixin>` call (in the constructor) then mixes the vari
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.Thinger", null, {
@@ -125,7 +125,7 @@ If we don't want a globally accessible class we can easily make it local (since 
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
@@ -142,7 +142,7 @@ If we don't want a globally accessible class we can easily make it local (since 
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var localThinger = dojo.declare(null, {
@@ -159,7 +159,7 @@ To show how the inheritance chain works, we will create a new class derived from
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -176,7 +176,7 @@ To show how the inheritance chain works, we will create a new class derived from
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.OtherThinger", [my.Thinger], {
@@ -195,7 +195,7 @@ Above we passed an object hash exclusively as the parameter to our Class instant
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -211,7 +211,7 @@ Above we passed an object hash exclusively as the parameter to our Class instant
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("Person", null, {
@@ -229,7 +229,7 @@ Let's add some content to a new class by giving it a name and showing what the c
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -251,7 +251,7 @@ Let's add some content to a new class by giving it a name and showing what the c
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("Person", null, {
@@ -282,7 +282,7 @@ If your class contains arrays or other objects, they should be declared in the c
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -300,7 +300,7 @@ If your class contains arrays or other objects, they should be declared in the c
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.classes.bar", my.classes.foo, {
@@ -318,7 +318,7 @@ On the other hand, if you want an object or array to be static (shared between a
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -333,7 +333,7 @@ On the other hand, if you want an object or array to be static (shared between a
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.classes.bar", my.classes.foo, {
@@ -349,7 +349,7 @@ On the other hand, if you want an object or array to be static (shared between a
 
 Why is this true for arrays and objects, but not primitives? It's because, like most OOP languages, JavaScript uses object references. For example, given:
 
-.. code-block :: javascript
+.. js ::
 
   x = { fruit: "apple" };
   y = x;
@@ -366,7 +366,7 @@ A person can only do so much, so let's create an Employee class that extends the
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -390,7 +390,7 @@ A person can only do so much, so let's create an Employee class that extends the
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("Employee", Person, {
@@ -414,7 +414,7 @@ Dojo handles all of the requirements for setting up the inheritance chain, inclu
 
 You initialize the subclass the same as the Person class with the new keyword.
 
-.. code-block :: javascript
+.. js ::
 
   var kathryn = new Employee('Kathryn', 26, 'Minnesota', 'Designer');
   var matt    = new Person('Matt', 33, 'California');
@@ -427,7 +427,7 @@ Another popular idiom is to pass an object as one of the arguments using it is a
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -453,7 +453,7 @@ Another popular idiom is to pass an object as one of the arguments using it is a
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var Person2 = dojo.declare(null, {
@@ -486,7 +486,7 @@ But you don't have to worry in the constructor. As we said above, superclass con
 
 For all other methods, you can use ``this.inherited()`` to call the superclass method of the same name.  Take for example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   someMethod: function() {
@@ -501,7 +501,7 @@ The argument is always literally ``arguments``, a special Javascript array-like 
 
 You can send custom parameters to the ancestor function.  Just place the extra arguments in array literal notation with brackets:
 
-.. code-block :: javascript
+.. js ::
 
   this.inherited(arguments, [ customArg1, customArg2 ]);
 
@@ -520,7 +520,7 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -551,7 +551,7 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("VanillaSoftServe", null, {
@@ -591,7 +591,7 @@ Given:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -608,7 +608,7 @@ Given:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    var A = dojo.declare(null);
@@ -623,7 +623,7 @@ Given:
 
 Let's explore inheritance chains. First three classes look trivial:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   A
@@ -632,7 +632,7 @@ Let's explore inheritance chains. First three classes look trivial:
 
 Next three classes look like that:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   D -> B -> A
@@ -643,7 +643,7 @@ Notice that the inheritance chains are the same as the corresponding list of bas
 
 Another useful bit of information: only the first base (the last in an inheritance chain) is a true superclass. The rest are duplicated to produce the inheritance chain we need. For example, B is not based on A, so we base a copy of it on A. What does it mean for us practically? We cannot use ``instanceof`` operator for mxins, only for base classes:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   console.log(D instanceof A); // true
@@ -653,7 +653,7 @@ How to get around it? Use :ref:`isInstanceOf()`.
 
 Now on to more complex cases:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   G -> C -> D(-> B -> A)
@@ -677,7 +677,7 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -690,7 +690,7 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null);
@@ -705,7 +705,7 @@ In same rare cases it is possible to build a linear chain, which cannot reuse th
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -724,7 +724,7 @@ In same rare cases it is possible to build a linear chain, which cannot reuse th
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // the first batch
@@ -741,7 +741,7 @@ In same rare cases it is possible to build a linear chain, which cannot reuse th
 
 Let's look at ``C`` and ``E`` inheritance chains:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   C -> B -> A
@@ -749,7 +749,7 @@ Let's look at ``C`` and ``E`` inheritance chains:
 
 As you can see in one case ``B`` follows after ``A`` and in the other case it follows ``D``. How does ``F`` look like?
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   F -> C -> B -> D -> A
@@ -775,7 +775,7 @@ There are two ways to chain methods: **after** and **before** (`AOP <http://en.w
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare', 'dojo/dom-construct'], function(declare, domConstruct){
@@ -820,7 +820,7 @@ There are two ways to chain methods: **after** and **before** (`AOP <http://en.w
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null, {
@@ -877,7 +877,7 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -900,7 +900,7 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null,
@@ -937,7 +937,7 @@ In some cases users may want to redefine how initialization works. In this case 
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -971,7 +971,7 @@ In some cases users may want to redefine how initialization works. In this case 
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null,
@@ -1027,7 +1027,7 @@ Example:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -1054,7 +1054,7 @@ Example:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null, {
@@ -1085,7 +1085,7 @@ Example:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -1155,7 +1155,7 @@ Example:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null, {
@@ -1245,7 +1245,7 @@ Examples:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
@@ -1340,7 +1340,7 @@ Examples:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null,
@@ -1447,7 +1447,7 @@ Examples:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -1483,7 +1483,7 @@ Examples:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null,
@@ -1528,7 +1528,7 @@ Examples:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/declare'], function(declare){
@@ -1555,7 +1555,7 @@ Examples:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var A = dojo.declare(null);
@@ -1587,7 +1587,7 @@ Examples:
 
 [Dojo 1.7 (AMD)]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
@@ -1630,7 +1630,7 @@ Examples:
 
 [Dojo < 1.7]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // plain vanilla constructor

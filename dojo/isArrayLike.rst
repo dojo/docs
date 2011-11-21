@@ -22,7 +22,7 @@ Usage
 Use this to test if a variable is like an Array.
 Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -34,7 +34,7 @@ Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 
 Returns true if it is like an Array.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)

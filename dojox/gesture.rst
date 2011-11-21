@@ -43,7 +43,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 
 1. Used with dojo/on
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -55,7 +55,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
   
 2. Used with dojox/gesture/tap directly
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -67,7 +67,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 
 3. Or used with the traditional dojo/connect
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -97,7 +97,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 
 1. Used with dojo/on
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -111,7 +111,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
   
 2. Used with dojox/gesture/tap directly
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -125,7 +125,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 
 3. Or used with the traditional dojo/connect
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -147,7 +147,7 @@ doubleTapTimeout    Default is 250, the timeout threshold(in milliseconds) for "
 
 The above parameters are supposed to be only changed seldomly with the following way:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -185,7 +185,7 @@ It can be used in following ways:
 
 1. Used with dojo/on
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -197,7 +197,7 @@ It can be used in following ways:
   
 2. Used with dojox/gesture/swipe directly
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -210,7 +210,7 @@ It can be used in following ways:
 
 3. Or used with the traditional dojo/connect
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -239,7 +239,7 @@ A gesture event behaves all the same as a native Event. Besides getting useful i
 
 The following sample shows how we can easily stop a gesture event from bubbling to parent node:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -270,7 +270,7 @@ It's very easy to customize a new gesture with following steps:
 
 Suppose we have a dojox/gesture/rotate which provides 3 gesture events:"rotate", "rotate.end" which can be used as:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -282,7 +282,7 @@ Suppose we have a dojox/gesture/rotate which provides 3 gesture events:"rotate",
 
 Then we can define the rotate gesture like:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">

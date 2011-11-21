@@ -24,7 +24,7 @@ Usage
 Focusing an element
 -------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus", "dojo/dom", "dojo/domReady!" ], function(focusUtil, dom){
@@ -36,7 +36,7 @@ Note that this function only accepts DOM nodes, not widget instances. The elemen
 Unfocusing an element
 ---------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus" ], function(focusUtil){
@@ -46,7 +46,7 @@ Unfocusing an element
 Determining the currently focused element
 -----------------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus" ], function(focusUtil){
@@ -56,7 +56,7 @@ Determining the currently focused element
 Watching for focus changes
 --------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus" ], function(focusUtil){
@@ -77,7 +77,7 @@ TextBox --> ContentPane --> TabContainer --> TooltipDialog --> DropDownButton.
 
 The activeStack[] parameter indicates this set of widgets, and an app can monitor changes to activeStack[] by:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus" ], function(focusUtil){
@@ -88,7 +88,7 @@ The activeStack[] parameter indicates this set of widgets, and an app can monito
 
 An app can also monitor widget-focus / widget-blur events to tell when widgets enter or leave the stack:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus" ], function(focusUtil){
@@ -105,7 +105,7 @@ Listening for focus changes in iframes
 
 If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus (``curNode`` will remain ``null``). Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element *inside* the iframe has been focused.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/focus", "dojo/dom" ], function(focusUtil, dom){

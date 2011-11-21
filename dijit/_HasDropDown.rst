@@ -23,7 +23,7 @@ Usage
 
 First, mixin dijit/_HasDropDown when you create your widget:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   define([ "dojo/_base/declare", "dijit/_HasDropDown" ],
@@ -35,7 +35,7 @@ First, mixin dijit/_HasDropDown when you create your widget:
 
 Then, either set the value of :ref:``HasDropDown.dropDown`` to an existing widget:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require([ "dijit/registry", "my/CustomDropDown", "dojo/domReady!" ], function(registry, CustomDropDown){
@@ -79,7 +79,7 @@ Dynamic & lazy-loading drop-downs
 
 By default, _HasDropDown assumes that a dijit widget has been created and assigned to :ref:``HasDropDown.dropDown`` before the widget starts up. This works well for drop-downs that always contain the same content and are available immediately, but it may reduce startup performance and it makes it impossible to create dynamically populated/asynchronous drop-downs. In order to work around these limitations, more advanced drop-down widgets can implement :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` instead:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   define([ "dojo/_base/declare", "dijit/form/Button", "dijit/_HasDropDown" ],

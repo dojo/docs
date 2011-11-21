@@ -29,7 +29,7 @@ Syntax
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.connect(view1, "onStartView", null, function(){
 	console.log("startView: view="+this);
@@ -54,7 +54,7 @@ Syntax
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.connect(view1, "onBeforeTransitionIn", null,
      function(moveTo, dir, transition, context, method){
@@ -80,7 +80,7 @@ Syntax
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.connect(view1, "onAfterTransitionIn", null,
      function(moveTo, dir, transition, context, method){
@@ -106,7 +106,7 @@ Syntax
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.connect(view1, "onBeforeTransitionOut", null,
      function(moveTo, dir, transition, context, method){
@@ -132,7 +132,7 @@ Syntax
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.connect(view1, "onAfterTransitionOut", null,
      function(moveTo, dir, transition, context, method){
@@ -160,7 +160,7 @@ Topic Subscriber
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.subscribe("/dojox/mobile/startView", function(view){
 	console.log("startView: view="+view);
@@ -186,7 +186,7 @@ Topic Subscriber
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.subscribe("/dojox/mobile/beforeTransitionIn",
       function(view, moveTo, dir, transition, context, method){
@@ -213,7 +213,7 @@ Topic Subscriber
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.subscribe("/dojox/mobile/afterTransitionIn",
       function(view, moveTo, dir, transition, context, method){
@@ -240,7 +240,7 @@ Topic Subscriber
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.subscribe("/dojox/mobile/beforeTransitionOut",
       function(view, moveTo, dir, transition, context, method){
@@ -267,7 +267,7 @@ Topic Subscriber
 
 Example
 
-  .. code-block :: javascript
+  .. js ::
 
     dojo.subscribe("/dojox/mobile/afterTransitionOut",
       function(view, moveTo, dir, transition, context, method){

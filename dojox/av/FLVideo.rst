@@ -21,7 +21,7 @@ Introduction
 
 dojo.av.FLVideo is a very full featured class that provides the ability to play FLV videos. Playlists are not currently supported, but different videos can be played with the same instance by passing a new URL in through the play() method. To initialize, pass in a few option arguments along with the video URL, and include the target node by id:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var myVideo = new dojox.av.FLVideo({initialVolume:.1, mediaUrl:"video/Grog.flv", autoPlay:true, isDebug:false}, "vid");

@@ -23,7 +23,7 @@ TODO: introduce the component/class/method
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

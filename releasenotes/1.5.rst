@@ -38,7 +38,7 @@ dojo.Deferred, dojo.when
 
 dojo.Deferred was refactored for side effect free chaining, such that you can execute code like:
 
-.. code-block :: javascript
+.. js ::
 
     var def = dojo.xhr(...);
     def.then(...);
@@ -49,13 +49,13 @@ without worrying that the first then() call will affect the value passed to the 
 
 It also allows chaining where each element in the chain does affect the value, like this:
 
-.. code-block :: javascript
+.. js ::
 
       dojo.xhr(...).then(function(val){ return dojo.toJson(val); }).then(...);
 
 Finally, dojo.when() is a method that will take either a Deferred or a plain value and execute some code when that value is ready (for a Deferred) or immediately otherwise.
 
-.. code-block :: javascript
+.. js ::
 
     // val might be a Deferred, or it could be (for example) a String
     dojo.when(val, function(val){
@@ -111,7 +111,7 @@ Claro's .dijitTreeIcon class doesn't specify a width/height.   If you are defini
 
 Also, in TabContainer, tabs without icons will be <16px tall, which will cause a height disparity if some of your tabs have icons and others don't.  You can either add a min-height rule:
 
-.. code-block :: css
+.. css ::
 
     .dijitTab .tabLabel {
 	min-height: 12px;
@@ -131,7 +131,7 @@ Dialog
 
 The dialog widget now supports an "action bar", a gray bar at the bottom of the dialog with action buttons, typically OK and cancel.  Simply create your dialog as before but separate the dialog contents from the buttons like this:
 
-.. code-block :: html
+.. html ::
 
 	<div dojoType="dijit.Dialog" id="myDialog">
 		<div class="dijitDialogPaneContentArea">
@@ -156,7 +156,7 @@ The HTML5 placeholder parameter (also known as a "hint") has been implemented fo
 
 In order to use it, submit a parameter "placeHolder" to your widget:
 
-.. code-block :: javascript
+.. js ::
 
    myTextBox = new dijit.form.TextBox({
        name: "firstname",
@@ -174,7 +174,7 @@ Bidi enhancements
 
 An app can now set text-rendering direction per-widget, via the dir attribute.  Possible settings are "ltr" (left-to-right, used by most languages) and "rtl" (for Arabic and Hebrew).   Previously all the widgets rendered in the same direction, the direction of the page. Note that this attribute can only be set at creation. For example:
 
-.. code-block :: javascript
+.. js ::
 
     new dijit.Editor({dir: "rtl"}, srcNodeRef);
     new dijit.Editor({dir: "ltr"}, srcNodeRef);
@@ -182,7 +182,7 @@ An app can now set text-rendering direction per-widget, via the dir attribute.  
 
 Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified. For example:
 
-.. code-block :: html
+.. html ::
 
 
 	<div dir="ltr">
@@ -200,7 +200,7 @@ Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr
 
 The parser can also take a flag specifying default dir and lang for inherited widgets:
 
-.. code-block :: javascript
+.. js ::
 
       dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-eg"} });
 
@@ -245,7 +245,7 @@ To use this mixin in custom widgets:
 
 1. require _CssStateMixin and mix it in to the widget:
 
-   .. code-block :: javascript
+   .. js ::
 
        dojo.require("dijit._CssStateMixin");
        ...
@@ -256,13 +256,13 @@ To use this mixin in custom widgets:
 
 2. set baseClass if not already set *(form widgets already set baseClass)*
 
-   .. code-block :: javascript
+   .. js ::
 
        baseClass: "dijitSlider",
 
 3. (If you want CSS class settings on widget subnodes, like the up/down buttons on the slider, then) set cssStateNodes attribute:
 
-   .. code-block :: javascript
+   .. js ::
 
        cssStateNodes: {
           incrementButton: "dijitSliderIncrementButton",
@@ -296,25 +296,25 @@ In order to make code clearer, Dojo Toolkit 1.5 will start to use the get()/set(
 
 Coming with this, the recommended way to set properties of Dijits changes from
 
-.. code-block :: javascript
+.. js ::
 
    widget.attr('property', 'value'); // old way and now deprecated for Dijits
 
 to
 
-.. code-block :: javascript
+.. js ::
 
    widget.set('property', 'value'); // new since 1.5
 
 The same for getting properties:
 
-.. code-block :: javascript
+.. js ::
 
    widget.attr('property'); // old way and now deprecated for Dijits
 
 changes to
 
-.. code-block :: javascript
+.. js ::
 
    widget.get('property'); // new since 1.5
 
@@ -365,7 +365,7 @@ CSS3
 ----
 New dojo.style extension to support the transform and transform-origin properties:
 
-.. code-block :: javascript
+.. js ::
 
    dojo.require("dojox.html.ext-dojo.style");
    dojo.style("myNode", "transformOrigin", "0 0");
@@ -485,13 +485,13 @@ dijit.popup
 
 Dijit.popup shouldn't be shortcutted. This will work:
 
-.. code-block :: javascript
+.. js ::
 
    dijit.popup.open({...});
 
 However, this will not:
 
-.. code-block :: javascript
+.. js ::
 
    var open = dijit.popup.open;
    open({...});
@@ -501,13 +501,13 @@ _Container.getChildren()
 ------------------------
 Code like
 
-.. code-block :: javascript
+.. js ::
 
    myWidget.getChildren().forEach(...);
 
 should be changed to
 
-.. code-block :: javascript
+.. js ::
 
    dojo.forEach(myWidget.getChildren(), ...);
 
@@ -526,13 +526,13 @@ The TextBox template was changed to be similar to ValidationTextBox, where the <
 
 For a TextBox with id=foo, to apply styling to the <input>, as before, make a rule on #foo:
 
-.. code-block :: css
+.. css ::
 
     #foo { font: ... }
 
 To apply styling to the outer node, make a rule on #widget_foo:
 
-.. code-block :: css
+.. css ::
 
     #widget_foo { margin: 2em; }
 

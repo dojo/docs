@@ -44,7 +44,7 @@ The pattern of using the GoogleNewsSearchStore is
   * **publishedDate** The date of publication, in RFC-822 format
   * **relatedStories** An optional array of objects specifying related stories.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

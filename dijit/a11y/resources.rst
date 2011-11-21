@@ -35,25 +35,25 @@ The XHTML navigation roles are
 
 These are NOT WAI roles and are thus ignored by the dijit getWaiRole and setWaiRole apis.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.hasWaiRole(/*Element*/ elem, /*String*/ role)
 
 If the role parameter is provided, returns true if elem has the specified role and false if not. For backwards compatibility with 1.1, if the role parameter is not provided, returns true if any role value exists on elem.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.getWaiRole(/*Element*/ elem)
 
 Returns any role set on elem which is NOT an XHTML Navigation role or an empty string if no role attribute has been set on elem.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.setWaiRole(/*Element*/ elem, /*String*/ role)
 
 Set the provided role on elem. If the current browser is Firefox and the version is prior to release 3,  replace any existing role(s) with "wiarole:" prepended to the role provided. In other browsers, if the element already has an existing WAI role, replace it with the role provided and maintain any existing XHTML Navigation roles.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.removeWaiRole(/*Element*/ elem, /*String*/ role)
 
@@ -64,25 +64,25 @@ State APIs in Dojo 1.2
 
 These dijit methods set the state values onto an element. In Firefox versions previous to 3 the attributes are set in the "http://www.w3.org/2005/07/aaa" namespace using the getAttritbuteNS() and setAttrbuteNS() apis. In other browsers "aria-" is added to the front of the state name and the setAttribute() and setAttribute() apis are used. The state parameter must be a valid ARIA state name and the value the appropriate value for the specified state.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.hasWaiState(/*Element*/ elem, /*String*/ state)
 
 Returns true if elem has the specified state, false if not.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.getWaiState(/*Element*/ elem, /*String*/ state)
 
 Returns the value of state set on elem or the empty string if elem has no state set.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.setWaiState(/*Element*/ elem, /*String*/ state, /*String*/ value)
 
 Sets the specified state and value on elem.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.removeWaiState(/*Element*/ elem, /*String*/ state)
 
@@ -93,20 +93,20 @@ Examples of setting role and state
 
 The following will set a role of treeitem onto a DOM node:
 
-.. code-block :: javascript
+.. js ::
 
   dijit.setWaiRole( domNode, “treeitem”);
 
 
 This example sets the state of the treeitem to expanded:
 
-.. code-block :: javascript
+.. js ::
 
   dijit.setWaiState( focusNode, “expanded”, “true”);
 
 This example removes the valuenow property from an indeterminate progress bar.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.removeWaiState(internalProgress, "valuenow");
 
@@ -117,14 +117,14 @@ The role and state can also be set via the widget template using the role or ari
 
 Here is an example of setting the role in the diijt tree template. The domNode is given the “tree” role.
 
-.. code-block :: javascript
+.. js ::
 
   <div class="dijitTreeContainer" style="" role="tree"
     data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
 
 The role or state can also be specified via variables. This example shows an excerpt from the dijit button template that sets the role and state on the button element.
 
-.. code-block :: javascript
+.. js ::
 
   <div class="dijit dijitLeft dijitInline dijitButton"
     data-dojo-attach-event="onclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse">
@@ -144,7 +144,7 @@ High Contrast Mode Detection
 
 As discussed in the :ref:`Dijit A11y Strategy <dijit/a11y/strategy>` section, dijit performs a check to determine if high contrast mode or images off mode has been set in the browser. When this mode is detected the dijit-a11y class is set onto the body element of the page. Approprite dijit-a11y classes have been defined that make appropriate text alternatives visible for any CSS background images (which are no longer visible when high contrast mode has been set) that have been used within the widgets.
 
-.. code-block :: javascript
+.. js ::
 
   dijit.wai.onload()
 

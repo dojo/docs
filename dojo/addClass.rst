@@ -29,7 +29,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``add`` is accessed from the ``dojo/dom-class`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-class"], function(domClass){
       // Add a class to some node:
@@ -38,7 +38,7 @@ When using AMD format in a fully baseless application, ``add`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.addClass`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // Add a class to some node:
@@ -48,7 +48,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.add
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // Add a class to some node:
     dojo.addClass("someNode", "anewClass");
@@ -62,7 +62,7 @@ Add a class
 
 The following example adds the class "style1" to the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -110,7 +110,7 @@ Add several classes as a string
 
 The following example adds two classes: "style1" and "style2" to the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -160,7 +160,7 @@ Add several classes as an array
 
 The following example adds two classes: "style1" and "style2" to the node "example1":
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
@@ -209,7 +209,7 @@ Add to multiple nodes
 
 ``addClass`` is also available for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to add classes for multiple nodes. The following example adds the class for each node in the NodeList returned from dojo.query:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7+ (AMD)
   require(["dojo/query", "dojo/NodeList-dom"], function(query){

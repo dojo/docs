@@ -28,7 +28,7 @@ Usage
 
 You can create a set of stores for all available CouchDB tables/databases:
 
-.. code-block :: javascript
+.. js ::
 
  myStores = dojox.data.CouchDBRestStore.getStores("http://192.168.0.68:5984/_utils/");
 

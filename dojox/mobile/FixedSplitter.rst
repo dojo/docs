@@ -20,7 +20,7 @@ Usage
 
 FixedSplitter is in a separate module file from _base.js. You need to dojo.require FixedSplitter as below. If you load FixedSplitter, FixedSplitterPane will be automatically loaded as well.
 
-.. code-block :: javascript
+.. js ::
 
   <style>
   @import "../themes/common/FixedSplitter.css";
@@ -51,7 +51,7 @@ Examples
 Declarative example1
 --------------------
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.FixedSplitter" orientation="H">
       <div dojoType="dojox.mobile.FixedSplitterPane" style="width:200px;border-right:1px solid black;background-color:yellow;">
@@ -67,7 +67,7 @@ Declarative example1
 Declarative example2
 --------------------
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.FixedSplitter" orientation="V">
       <div dojoType="dojox.mobile.FixedSplitterPane" style="background-color:cyan;height:200px;">
@@ -86,7 +86,7 @@ Declarative example2
 Programmatic example3
 ---------------------
 
-.. code-block :: javascript
+.. js ::
 
   var w = new dojox.mobile.FixedSplitter({
       orientation: "H"

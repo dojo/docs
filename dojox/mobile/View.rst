@@ -40,7 +40,7 @@ Declarative example
 
 In this example, there are two Views, "view1" and "view2", and the user can move the views back and forth.
 
-.. code-block :: html
+.. html ::
 
   <div id="view1" dojoType="dojox.mobile.View" selected="true">
     <h1 dojoType="dojox.mobile.Heading">View 1</h1>
@@ -60,7 +60,7 @@ In this example, there are two Views, "view1" and "view2", and the user can move
 Programmatic example
 --------------------
 
-.. code-block :: javascript
+.. js ::
 
   var view1 = new dojox.mobile.View({
     id: "foo",
@@ -68,7 +68,7 @@ Programmatic example
   }, "view1");
   view1.startup();
 
-.. code-block :: html
+.. html ::
 
   <body>
     <div id="view1"></div>

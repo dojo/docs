@@ -14,7 +14,7 @@ Items are, in general, returned in an indeterminate order. This isn't always wha
 
 The sort array will look something like the following example:
 
-.. code-block :: javascript
+.. js ::
 
   var sortKeys = [{attribute: "aisle", descending: true}];
 
@@ -22,7 +22,7 @@ Each sort key has an attribute, which should be an attribute in the data store i
 
 For compound sorts, you can define as many sort keys as you want. The order in the array defines which keys take priority over other keys when sorting. The following example shows this:
 
-.. code-block :: javascript
+.. js ::
 
   var sortKeys = [
     {attribute: "aisle", descending: true},

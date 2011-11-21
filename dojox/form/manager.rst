@@ -63,7 +63,7 @@ The DOM nodes of the 3rd class are not considered to be form fields automaticall
 
 Example:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div data-dojo-type="dojox.form.Manager">
@@ -101,7 +101,7 @@ When the change event is triggered each relevant observer will be called in the 
 
 Example:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div data-dojo-type="dojox.form.Manager">

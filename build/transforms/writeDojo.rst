@@ -28,7 +28,7 @@ The dojo loader is not an AMD module. The source version of the loader looks lik
 
 *dojo/dojo.js*
 
-.. code-block :: javascript
+.. js ::
 
     (function(userConfig, defaultConfig){
     
@@ -59,7 +59,7 @@ The user configuration object may be specified in the profile property ``userCon
 then it is used verbatum; otherwise, it must be a Javascript object giving a loader configuration see xxx. The object
 need not be a JSON object and may contain functions. For example,
 
-.. code-block :: javascript
+.. js ::
 
     var profile = {
         userConfig:{
@@ -208,7 +208,7 @@ Profile Knobs
   The dojo/dojo layer configuration gives the contents of the dojo layer, usually written to dojo/dojo.js. The default
   value of the dojo/dojo layer is given as follows:
 
-.. code-block :: javascript
+.. js ::
 
     {
         include:["dojo/main"],

@@ -62,7 +62,7 @@ While only the ``popup`` property is required, most pop-ups will normally need t
 
 Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens and closes pop-ups:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
     var self = this;
@@ -107,7 +107,7 @@ Pop-up widgets
 
 Any normal widget can be used as a pop-up. For example, :ref:`dijit/Calendar` is a normal widget that can be displayed inline in the page, but is used as a pop-up by the :ref:`DateTextBox <dijit/form/DateTextBox>` widget. In other words, there’s no need for a :ref:``PopupWidget`` base class for pop-up widgets. However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
 
-.. code-block :: javascript
+.. js ::
 
     onExecute: function(){
         // summary: attach point for notification about when a menu item has been executed
@@ -121,7 +121,7 @@ dijit/popup will monitor calls to these two methods and inform the parent widget
 
 Here’s an example from a pop-up widget that triggers onExecute when it’s been clicked:
 
-.. code-block :: javascript
+.. js ::
 
     onItemClick: function(/*Widget*/ item, /*Event*/ evt){
         ...

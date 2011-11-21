@@ -7,7 +7,7 @@ dojo.indexOf
 
 Returns the index of the item in the array, or -1 if false:
 
-.. code-block :: javascript
+.. js ::
   
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -25,7 +25,7 @@ Because `0` is a valid index in an array, you need to check if the return is >= 
 
 Creating a `contains` function would be trivial:
 
-.. code-block :: javascript
+.. js ::
   
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){

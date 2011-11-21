@@ -231,7 +231,7 @@ Prerequisites
 
 This filter plugin is only available for EnhancedGrid. Use the following statements in the head of your HTML file:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.grid.EnhancedGrid");
@@ -245,7 +245,7 @@ The declaration name of this plugin is ``filter`` . It is declared in the ``plug
 
 If your grid is created declaratively:
 
-.. code-block :: html
+.. html ::
 	:linenos:
 
 	<div id="grid" dojoType="dojox.grid.EnhancedGrid"
@@ -256,7 +256,7 @@ If your grid is created declaratively:
 
 If your grid is created in JavaScript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -301,7 +301,7 @@ Column Configuration
 Filter provides different conditions for different data types, but the store does not have any information of types. So users should explicitly declare the data types in the structure of grid.
 For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var structure = [{
@@ -465,7 +465,7 @@ You can do this by modifying the request object every time before store.fetch is
 
 For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -492,7 +492,7 @@ Thus the filter definition will be sent to the server along with the request.
   
 If you'd like to use a stateful server, which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed, you can set the '''isStateful''' property:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -532,7 +532,7 @@ Every time the user defines a filter, the server will receive a ``filter`` comma
 
 After recieving the filter command, the server should respond with the count of filtered rows in this format:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   200,1000
@@ -572,7 +572,7 @@ So the JSON object is nothing more than an object with 2 fields: ``op`` and ``da
 
 The data of the "Field Name" column, whose data type is string, equals to "some message".
 
-.. code-block :: javascript
+.. js ::
   
   {
     //op: String

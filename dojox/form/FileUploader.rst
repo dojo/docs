@@ -115,7 +115,7 @@ The process is to create a typical HTML button, with either a button, input, div
 
 A basic example follows:
 
-.. code-block :: css
+.. css ::
  :linenos:
 
  .uploadBtn{
@@ -144,12 +144,12 @@ A basic example follows:
  }
  
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <div id="btn" class="uploadBtn">Select Files</div>
   
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var uploader = new dojox.form.FileUploader({
@@ -163,7 +163,7 @@ A basic example follows:
 Or, using the same CSS, create it as markup:
 
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <div class="uploadBtn" data-dojo-type="dojox.form.FileUploader" data-dojo-props="hoverClass:'uploadHover', pressClas:'uploadPress',
@@ -206,7 +206,7 @@ FileUploader will detect if the correct version of Flash Player is available, an
 
 A basic example follows:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var uploader = new dojox.form.FileUploader({
@@ -220,7 +220,7 @@ The *uploadUrl* property is the location of the server side script. Note that th
 
 Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.connect(uploader, "onChange", function(dataArray){
@@ -245,7 +245,7 @@ Note that the "dataArray" param above is always an array, even if selectMultiple
 
 Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no arguments or one argument to use as postData. The mouse event will be treated as postData and throw an error. This is fixed in the trunk but exists in 1.32.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.connect(dijit.byId("myUploadButton"), "onClick", function(){
@@ -260,7 +260,7 @@ The FileUploader has many advanced properties to handle most situations.
 
 **fileMask**: An array, or an array of arrays. Restrict file selection to certain file types Empty array defaults to "All Files". NOTE: MacType is not supported, as it does not work very well. fileMask will work on a Mac, but differently than Windows.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var fileMask = ["Images", "*.jpg;*.jpeg;*.gif;*.png"]
@@ -397,7 +397,7 @@ How the data is returned from the server is not difficult, but it is very import
 
 If *flashFieldName* is found in the post data and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  $data .='file='.$file.',name='.$name.',width='.$width.',height='.$height.',type='.$type;
@@ -447,7 +447,7 @@ Note: there is an open ticket http://bugs.dojotoolkit.org/ticket/10576 - when th
 
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <?php

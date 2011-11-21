@@ -24,7 +24,7 @@ Since Dojo 1.7, ``dojo.getComputedStyle`` is exposed via the ``getComputedStyle`
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -47,7 +47,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``getComputedStyle`` is accessed from the ``dojo/dom-style`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-style", "dojo/dom"], function(domStyle, dom){
     domStyle.getComputedStyle(dom.byId("foo")).borderWidth;
@@ -59,7 +59,7 @@ When using AMD format in a fully baseless application, ``getComputedStyle`` is a
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getComputedStyle`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       dojo.getComputedStyle(dojo.byId("foo")).borderWidth;
@@ -72,7 +72,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.get
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.getComputedStyle(dojo.byId("foo")).borderWidth;
 

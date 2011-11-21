@@ -31,7 +31,7 @@ The following examples, guidelines, and complete API documentation provide furth
 Listing the APIs supported by a datastore
 -----------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   var features = store.getFeatures();
@@ -42,7 +42,7 @@ Listing the APIs supported by a datastore
 Testing if an object is a store item
 ------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   if(store.isItem(someObject)){
@@ -54,7 +54,7 @@ Testing if an object is a store item
 Listing the attributes of an item
 ---------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...//Assume that someItem is an item we got from a load.
@@ -66,7 +66,7 @@ Listing the attributes of an item
 Testing an item for an attribute
 --------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...
@@ -80,7 +80,7 @@ Testing an item for an attribute
 Getting the label of an item
 ----------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   ...
@@ -91,7 +91,7 @@ Getting the label of an item
 Fetching all the items from the store
 -------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   var store = new some.Datastore();
   var gotItems = function(items, request){
@@ -114,7 +114,7 @@ For convenience, the complete Read Feature is defined below.
 getValue
 --------
 
-.. code-block :: javascript
+.. js ::
 
   getValue: function(/* item */ item, /* attribute-name-string */ attribute, /* value? */ defaultValue)
   // example:
@@ -146,7 +146,7 @@ returns:
 getValues
 ---------
 
-.. code-block :: javascript
+.. js ::
 
   getValues: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
@@ -170,7 +170,7 @@ getValues
 getAttributes
 -------------
 
-.. code-block :: javascript
+.. js ::
 
   getAttributes: function(/* item */ item)
     //    summary:
@@ -187,7 +187,7 @@ getAttributes
 hasAttribute
 ------------
 
-.. code-block :: javascript
+.. js ::
 
   hasAttribute: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
@@ -204,7 +204,7 @@ hasAttribute
 containsValue
 -------------
 
-.. code-block :: javascript
+.. js ::
 
   containsValue: function(/* item */ item, /* attribute-name-string */ attribute, /* anything */ value)
     //    summary:
@@ -224,7 +224,7 @@ containsValue
 isItem
 ------
 
-.. code-block :: javascript
+.. js ::
 
   isItem: function(/* anything */ something)
     //    summary:
@@ -239,7 +239,7 @@ isItem
 isItemLoaded
 ------------
 
-.. code-block :: javascript
+.. js ::
 
   isItemLoaded: function(/* anything */ something)
     //    summary:
@@ -255,7 +255,7 @@ isItemLoaded
 loadItem
 --------
 
-.. code-block :: javascript
+.. js ::
 
   loadItem: function(/* object */ keywordArgs)
     //    summary:
@@ -299,7 +299,7 @@ loadItem
 fetch
 -----
 
-.. code-block :: javascript
+.. js ::
 
   fetch: function(/* Object */ keywordArgs)
     //    summary:
@@ -459,7 +459,7 @@ fetch
 getFeatures
 -----------
 
-.. code-block :: javascript
+.. js ::
 
   getFeatures: function()
     //    summary:
@@ -476,7 +476,7 @@ getFeatures
 close
 -----
 
-.. code-block :: javascript
+.. js ::
 
   close: function(/*dojo.data.api.Request || keywordArgs || null */ request)
     //    summary:
@@ -501,7 +501,7 @@ close
 getLabel
 --------
 
-.. code-block :: javascript
+.. js ::
 
   getLabel: function(/* item */ item)
     //    summary:
@@ -530,7 +530,7 @@ getLabel
 getLabelAttributes
 ------------------
 
-.. code-block :: javascript
+.. js ::
 
   getLabelAttributes: function(/* item */ item)
     //    summary:

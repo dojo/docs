@@ -81,7 +81,7 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
 
 In historical syntax:
 
-.. code-block :: javascript
+.. js ::
 
       dojo.require("dojox.charting.Chart");
       dojo.require("dojox.charting.axis2d.Default");
@@ -99,7 +99,7 @@ In historical syntax:
 In AMD syntax:
 
 
-.. code-block :: javascript
+.. js ::
 
       require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
         function(Chart, Default, Lines, ready){
@@ -134,7 +134,7 @@ title    string      null    chart title text.
 
 And here comes an example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart = new dojox.charting.Chart("test", {
@@ -160,7 +160,7 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 
 **type** is the main option, with a default value being a basic line chart.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Areas"});
@@ -202,7 +202,7 @@ Available 2D chart types include:
 
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, markers: false});
@@ -217,7 +217,7 @@ Tension allows you to add some curve to the lines on you plot. By default this o
 
 Shadows allow you to add a shadow effect, and can be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2}});
@@ -230,14 +230,14 @@ Bar, column, and candle stick graph types have some unique option to control wid
 
 All three restrictions are applied in the following order: gap, minBarSize, maxBarSize.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Bars", gap: 5, minBarSize: 3, maxBarSize: 20});
 
 In addition the bar and column graph types can benefit from gfx shapes caching when rendered in order to improve further rendering performances. To enable this option do the following:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Columns", enableCache: true});
@@ -246,14 +246,14 @@ Note that you should enable it only if you except the chart to re-render often l
 
 For any chart type that supports axes, you can also define custom names to your axes here. By default they are “x” and “y”, but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Bars", hAxis: "cool x", vAxis: "super y"});
 
 Pie charts have a separate list of parameters. Here are the parameters for the pie chart, from Pie.js:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   defaultParams: {
@@ -273,7 +273,7 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
 
 Spider chart also keeps a separate list of parameters. Here comes the parameters of spider chart.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   defaultParams: {
@@ -293,7 +293,7 @@ Spider chart also keeps a separate list of parameters. Here comes the parameters
 
 And here is an example for spider chart:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart.addPlot("default", {
@@ -316,7 +316,7 @@ And here is an example for spider chart:
 
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Grid",
@@ -327,7 +327,7 @@ One other type with unique options is the grid. This plot type will draw grid li
 
 Shadows and curve can be added to the lines, and markers on data points as follows:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Lines", markers: true,
@@ -339,7 +339,7 @@ TODO: Example Chart
 
 One last feature I’d like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart1 = new dojox.charting.Chart2D("simplechart");
@@ -359,7 +359,7 @@ Smart Label for Pie
 
 Listing labels on both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   labelWiring: "ccc"
@@ -371,7 +371,7 @@ Adding a Background Grid Plot
 
 You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let’s add a grid to the other axes in our above example.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("Grid", {type: "Grid",
@@ -385,7 +385,7 @@ You can also add a grid at your tick marks to your entire chart by adding a Grid
 
 Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("Grid", {type: "Grid",
@@ -402,7 +402,7 @@ Plots Animation
 
 When a plot is rendered an animation can be triggered. In order to enable this, an animate parameter must be passed to the plot as shown below:
 
-.. code-block :: javascript
+.. js ::
 
   chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.easing.linear} });
   
@@ -429,7 +429,7 @@ The addAxis() call on a chart has several options for defining axes. Similar to 
 
 The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are “x” and “y” by default, on your plot or your chart will not render.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
@@ -438,7 +438,7 @@ The first option is vertical, this determines if the axis is vertical or horizon
 
 Next we have the fixUpper and fixLower options, which align the ticks and have 4 available options; major, minor, micro, and none. These default to none, and when set will force the end bounds to align to the corresponding tick division. If none is chosen, the end bounds will be the highest and lowest values in your data set. Another related option is the includeZero option, which will make your lower bound be zero. If your lowest data value is negative the includeZero option has no effect.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addAxis("x", {fixUpper: "major", fixLower:"minor"});
@@ -446,7 +446,7 @@ Next we have the fixUpper and fixLower options, which align the ticks and have 4
 
 Now let’s examine the leftBottom option. This option defaults to true, and along with the vertical option determines the side of the chart the axis is placed. At the end of Part 1 we examined adding a second plot to our chart. Let’s use that sample and give the second plot its own set of axes and anchor them on the top and right using leftBottom.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart1 = new dojox.charting.Chart2D("simplechart");
@@ -464,7 +464,7 @@ Now let’s examine the leftBottom option. This option defaults to true, and alo
 
 Finally another option is the enableCache parameter. If your axis are meant to be often re-rendered (that is the case for example if you use a mouse or touch zoom action on the chart) it might be good to cache the underlying gfx objects and not re-create them. For that do:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
@@ -478,7 +478,7 @@ Multiple Axes
 
 The one thing you may have noticed is that using multiple axes changes the perspective because the second data set is now charted against a different axis. You are in luck because you have full control to adjust the axis in almost every way possible. For example, you can set min and max options.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   min: 0
@@ -502,7 +502,7 @@ Enabling and disabling tick marks
 
 You can turn on and off the tick marks at the minor and micro level, and turn labels on and off for the major and minor levels
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   majorLabels: true
@@ -515,7 +515,7 @@ Natural & Fixed Precision Axis
 
 The natural property forces all ticks to be on natural numbers, and fixed which will fix the precision on labels and can be specifid as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   natural: false
@@ -526,7 +526,7 @@ Axis Stepping
 
 Defining the step between ticks can be specified as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   majorTickStep: 4
@@ -538,7 +538,7 @@ Axis Colors and Styles
 
 The color of the axis, the color and length of your tick marks and the font and color of your labels can be specified as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addAxis("other y", {vertical: true,
@@ -559,7 +559,7 @@ Using Custom Axis Labels
 Dojo Charts provide the ability to assign custom labels to any axis. Make sure to allow sufficient space in your div for the text to display properly.
 Here is an example using abbreviated month names with a Columns plot.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addAxis("x", {
@@ -597,7 +597,7 @@ Using addSeries(), you can define the data sets that will be displayed on our ch
 
 There are only a few options to cover for the addSeries() call. First up is stroke, which covers the color and width of your line or the border of your bar and column type graphs.Along with stroke we have fill, and it determines the color of the fill area under the line in area type line graphs and determines the bar fill color for bar and column type graphs. If you are familiar with SVG or dojox.gfx, stroke and fill should be very familiar.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
@@ -605,7 +605,7 @@ There are only a few options to cover for the addSeries() call. First up is stro
 
 The other option is marker and it allows you to define custom markers using SVG path segments. Here are some of marker types as defined in the Dojo Charting source code. Note that each is just defined internally as an SVG path:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   CIRCLE:		"m-3,0 c0,-4 6,-4 6,0 m-6,0 c0,4 6,4 6,0",
@@ -622,14 +622,14 @@ TODO: Example Series Options
 
 The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for line type graphs the X axis will be integers; 1,2,3… and the data will be the Y axis. For bar type plots the data is the length of the bar and the choice between column or bar type determines the orientation. And for pie type charts the sum of the array is your whole pie. All the plot types except pie can have multiple series.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series A", [1, 2, 3, 4, 5]);
 
 For any non “stacked” line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7},
@@ -642,7 +642,7 @@ TODO: Example Coordinate Pairs
 
 With any of the stacked plot types each data set added with addSeries() is placed relative to the previous set. Here is a simple example that shows this concept. Instead of the second data set being a straight line across at 1, all the points are 1 above the point from the first data set.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series 1", [1, 2, 3, 4, 5]);
@@ -652,7 +652,7 @@ TODO: Example Stacked Data Series
 
 For pie type charts you can specify additional information: the text label for each slice, the color of the slice and even a font color that overrides the font color definable in the addPlot() call.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.addSeries("Series A", [
@@ -683,7 +683,7 @@ The “value” argument allows to supply complex values for some charts (OHLC, 
 
 Example of a function that can be used to extract values:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function trans1(store, item){
@@ -700,7 +700,7 @@ Example of a function that can be used to extract values:
 
 If a dictionary is supplied, it is used to pull and rename values. For example, we can emulate (partially, without “color”, which requires an algorithmic processing) the example above using a dictionary like that:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   {
@@ -711,7 +711,7 @@ If a dictionary is supplied, it is used to pull and rename values. For example, 
 
 The effect will be the same as the following function was applied to extract values:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function trans2(store, item){
@@ -727,7 +727,7 @@ A dictionary is enough for most transformations. You can use it to cherry-pick d
 
 If a field name is specified, it is used to pull one (numeric) value. The effect will be the same as the following function was applied to extract a value:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var field = "abc";
@@ -741,14 +741,14 @@ Changing Color Themes
 
 Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make sure to require the theme you want to use, and then set the theme on your chart as follows:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart1.setTheme(dojox.charting.themes.PlotKit.blue);
 
 *Note*: If you are using a theme that includes gradients, for the gradients to show in Safari 5.x you *must* use:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    <!DOCTYPE HTML>
@@ -768,7 +768,7 @@ The following events are supported: onclick, onmouseover, and onmouseout.
 
 Event handlers can be attached to individual plots of a chart:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   chart.connectToPlot(
@@ -1008,7 +1008,7 @@ MouseZoomAndPan supports several additional parameters:
 
 Here is an example showing how to attach a MouseZoomAndPan action to the chart and configure it:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart = new dojox.charting.Chart("test");
@@ -1045,7 +1045,7 @@ It also includes several styling additional parameters that allows to change the
 
 Here is an example showing how to attach a MouseIndicator action to the chart and configure it:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart = new dojox.charting.Chart("test");
@@ -1086,7 +1086,7 @@ TouchZoomAndPan supports several additional parameters:
 
 Here is an example showing how to attach a TouchZoomAndPan action to the chart and configure it:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart = new dojox.charting.Chart("test");
@@ -1125,7 +1125,7 @@ It also includes several styling additional parameters that allows to change the
 
 Here is an example showing how to attach a TouchIndicator action to the chart and configure it:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var chart = new dojox.charting.Chart("test");
@@ -1166,7 +1166,7 @@ All action objects implement the following methods (no parameters are expected b
 
 All actions can be constructed like this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var a = new dojox.charting.action2d.Magnify(
@@ -1189,7 +1189,7 @@ The Chart Widget
 
 One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. The example below is taken from the Dojo Chart2D widget test:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div dojoType="dojox.charting.widget.Chart2D" id="chart4"
@@ -1215,7 +1215,7 @@ Interactive Legend Widget
 -------------------------
 An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart. And series will be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true},"selectableLegend");

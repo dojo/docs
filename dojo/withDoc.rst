@@ -25,7 +25,7 @@ Use this function to replace the dojo.doc reference for a specific function call
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -44,7 +44,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

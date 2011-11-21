@@ -113,7 +113,7 @@ Declarative example
 
 In this example, no view transition is specified, but if you specify the one, moveTo="view1" for example, an arrow icon is displayed at the position of the rightIcon even if rightIcon is specified. In this case, if you want to change the arrow icon to another, you can use the arrowClass property instead of rightIcon.
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.RoundRectList">
       <li dojoType="dojox.mobile.ListItem"
@@ -135,7 +135,7 @@ Note that the JSON format cannot have duplicate keys at the same level, while th
 
 html fragment:
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.View">
       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
@@ -154,7 +154,7 @@ html fragment:
 
 JSON data:
 
-.. code-block :: javascript
+.. js ::
 
   {
     "dojox.mobile.View": {

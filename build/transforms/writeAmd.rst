@@ -85,7 +85,7 @@ modules. Member module layer text is written by providing a hash of module value
 configuration property which gives a map from absolute module identifier to a function that causes the equivalent of the
 module resource to be evaluated. For example, if the resource text for the module "x/y/z" is given as....
 
-.. code-block :: javascript
+.. js ::
 
   // some code outside the AMD define application
   console.log("hello, world; you shouldn't do this, but you can");
@@ -100,7 +100,7 @@ module resource to be evaluated. For example, if the resource text for the modul
 
 And x/y/z is a member module of a layer, then that layer will inject a loader cache configuration value as follows:
 
-.. code-block :: javascript
+.. js ::
 
   require({cache:{
     "x/y/z":function(){

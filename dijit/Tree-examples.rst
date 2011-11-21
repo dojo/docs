@@ -14,7 +14,7 @@ Initialise the Tree after onLoad Event has Fired
 
 ``New in 1.4`` The onLoad event is being introduced in Dojo release 1.4.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
     var tree = dijit.byId('myTree');

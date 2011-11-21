@@ -25,7 +25,7 @@ The function signature is:
 
 So basic usage is:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var deferred = dojox.gfx.utils.toJson(mySurface);
@@ -46,7 +46,7 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
 * Copy the dojox/gfx/resources/gfxSvgProxyFrame.html to the server that is serving your application
 * Set the dojoConfig option 'dojoxGfxSvgProxyFrameUrl' to point to the file you copied to your server, much as you would set for 'blank.html'. For example, a modified dojoConfig setting for dojo:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" data-dojo-config='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>

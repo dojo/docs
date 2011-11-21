@@ -30,7 +30,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.Blockquote");
@@ -38,14 +38,14 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['blockquote']"></div>
 
 
 You also need to include the CSS for it.  For example:
 
-.. code-block :: html
+.. html ::
 
   <style>
     @import "dojox/editor/plugins/resources/css/Blockquote.css";

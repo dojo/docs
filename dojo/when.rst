@@ -24,7 +24,7 @@ The first argument to ``dojo.when`` may be any value, the second argument is the
 Example 1:  Creating and calling a deferred (1.7+ AMD).
 -------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/Deferred"], function(Deferred){
@@ -46,7 +46,7 @@ Example 1:  Creating and calling a deferred (1.7+ AMD).
 Example 2:  Creating and calling a deferred (Dojo < 1.7 style).
 ---------------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.when(4, print); // this will print 4 immediately

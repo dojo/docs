@@ -38,7 +38,7 @@ To use this mixin in custom widgets:
 
 1. require _CssStateMixin and mix it in to the widget:
     
-.. code-block :: javascript
+.. js ::
 
     dojo.require("dijit._CssStateMixin");
     ...
@@ -49,13 +49,13 @@ To use this mixin in custom widgets:
 
 2. set baseClass if not already set *(most widgets already set baseClass)*
     
-.. code-block :: javascript
+.. js ::
 
     baseClass: "dijitSlider",
 
 3. (If you want CSS class settings on widget subnodes, like the up/down buttons on the slider, then) set cssStateNodes attribute:
     
-.. code-block :: javascript
+.. js ::
 
     cssStateNodes: {
        incrementButton: "dijitSliderIncrementButton",

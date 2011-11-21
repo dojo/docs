@@ -34,7 +34,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"];
     var state = fm.gatherEnableState(names);
@@ -43,7 +43,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object). Only keys will be used, values will be ignored:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = {firstName: 1, lastName: 1};
     var state = fm.gatherEnableState(names);
@@ -52,7 +52,7 @@ There are three ways to use this method:
 
   This form is especially useful when we already collected values, and want to collect their enable/disable state:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"];
     var values = fm.gatherFormValues(names);
@@ -61,7 +61,7 @@ There are three ways to use this method:
 
 3. The parameter is ``null``, or ``undefined``, or missing. In this case states of all known form elements will be collected:
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = fm.gatherEnableState();
 
@@ -74,7 +74,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"], defaultState = true;
     fm.enable(names, defaultState);
@@ -83,7 +83,7 @@ There are three ways to use this method:
 
   ``defaultState`` can be omitted. In this case it is assumed to be ``true``:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"];
     fm.enable(names);
@@ -92,7 +92,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object).
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {firstName: true, lastName: false};
     fm.enable(state);
@@ -101,7 +101,7 @@ There are three ways to use this method:
 
 3. The ``state`` parameter is ``null``, or ``undefined``. In this case states of all known form elements will be enabled or disabled according to the value of ``defaultState``:
 
-  .. code-block :: javascript
+  .. js ::
 
     var defaultState = true;
     fm.enable(null, defaultState);
@@ -110,7 +110,7 @@ There are three ways to use this method:
 
   ``defaultState`` can be omitted too. In this case it is assumed to be ``true``:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.enable();
 
@@ -125,7 +125,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"];
     var oldState = fm.disable(names);
@@ -134,7 +134,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object). In this case it behaves exactly like enable_.
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {firstName: true, lastName: false};
     var oldState = fm.disable(state);
@@ -143,7 +143,7 @@ There are three ways to use this method:
 
 3. The ``state`` parameter is ``null``, or ``undefined``, or missing. In this case states of all known form elements will be disabled:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.disable();
 
@@ -153,7 +153,7 @@ Usage
 
 All three methods are designed to work together:
 
-.. code-block :: javascript
+.. js ::
 
   // prepare to submit the form asynchronously
 
@@ -171,7 +171,7 @@ All three methods are designed to work together:
 
 or it can be done like that:
 
-.. code-block :: javascript
+.. js ::
 
   // prepare to submit the form asynchronously
 

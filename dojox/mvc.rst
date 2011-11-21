@@ -43,7 +43,7 @@ Usage
 
 Loading the basic dojox.mvc codebase is extremely simple.
 
-.. code-block :: javascript
+.. js ::
  
     // Load the basic MVC support, including the data binding mixin.
     dojo.require("dojox.mvc");

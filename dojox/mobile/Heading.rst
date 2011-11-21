@@ -52,7 +52,7 @@ Examples
 
 Example 1
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Settings" moveTo="settings">General</h1>
 
@@ -61,7 +61,7 @@ Example 1
 
 Example 2
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" label="World Clock">
     <div dojoType="dojox.mobile.ToolBarButton" style="padding: 0px 14px">Edit</div>
@@ -73,7 +73,7 @@ Example 2
 
 Example 3
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" label="Voice Memos">
     <div dojoType="dojox.mobile.ToolBarButton" label="Speaker"></div>
@@ -85,7 +85,7 @@ Example 3
 
 Example 4
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" label="Updates">
     <div dojoType="dojox.mobile.ToolBarButton" label="Update All" style="float:right;"></div>
@@ -96,7 +96,7 @@ Example 4
 
 Example 5
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" label="News" back="Bookmarks" moveTo="bookmarks">
     <div dojoType="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;"></div>
@@ -107,7 +107,7 @@ Example 5
 
 Example 6
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">
     <div dojoType="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue"></div>
@@ -119,7 +119,7 @@ Example 6
 
 Example 7
 ---------
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.Heading">
     <div dojoType="dojox.mobile.ToolBarButton" toggle="true">New</div>
@@ -134,7 +134,7 @@ Example 7
 
 Example 8
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">
     <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl" style="float:left;margin-left:6px;">
@@ -150,7 +150,7 @@ Example 8
 
 Example 9
 ---------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" align="center">
     <table cellpadding="0" cellspacing="0" style="width:100%;"><tr>
@@ -168,7 +168,7 @@ Example 9
 
 Example 10
 ----------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Inbox" label="1 of 10">
     <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl" style="float:right;margin-right:6px;">
@@ -182,7 +182,7 @@ Example 10
 
 Example 11
 ----------
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Top" label="Inbox(32)">
     <div dojoType="dojox.mobile.ToolBarButton" class="mblDomButtonWhiteSearch" style="float:right;"></div>

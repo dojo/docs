@@ -41,7 +41,7 @@ Custom Type Examples
 
 By default, ItemFileWriteStore has registered a custom type handler for JavaScript Date objects. It uses the general case formatting option for the value, as shown below:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -57,7 +57,7 @@ By default, ItemFileWriteStore has registered a custom type handler for JavaScri
   
 So, when Date objects are encountered, ItemFileWriteStore automatically serializes it out as a custom type of the following format:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { "_type":"Date", "value":"1993-05-24T00:00:00Z" }
@@ -99,7 +99,7 @@ Save function Extension point: _saveEverything
 
 The *_saveEverything* function should be defined on your store when all you want to do is get text content of the internal state back into a JSONable string so it can be sent serverside. Effectively think of it as a way to get a JSON string back similar to the one you used to load the store. The callbacks are the same callbacks you normally pass to the *save* function of the store.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   _saveEverything: function(saveCompleteCallback /*Your callback to call when save is completed */,
@@ -112,7 +112,7 @@ Save function Extension point: _saveCustom
 
 The *_saveCustom* function should be defined on your store when you want to control exactly how everything gets serialized back (be it in JSON, XML, or whatnot). The function signature is simple, it just takes the callbacks passed to the *save* API on the store. Your implementation should introspect through the store's information, generate the save format your service desires, then send it and call the callbacks on whether it succeeds or not. The *_saveCustom* function should be declared on the store as follows:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   _saveCustom: function(saveCompleteCallback /*Your callback to call when save is completed */,
@@ -147,7 +147,7 @@ Pseudocode Examples
 
 For these examples, we'll assume a datasource as defined by the following example data:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { identifier: 'abbr',
@@ -166,7 +166,7 @@ For these examples, we'll assume a datasource as defined by the following exampl
 Add in a new country
 --------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});
@@ -184,7 +184,7 @@ Add in a new country
 Delete a country
 ----------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});

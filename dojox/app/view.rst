@@ -14,7 +14,7 @@ Sample
 ==============
 Sample application configuration for dojox.app.view
 
-.. code-block :: javascript
+.. js ::
 
   "home": {
     "type": "dojox.app.view",
@@ -24,7 +24,7 @@ Sample application configuration for dojox.app.view
 
 dojox.app.view sample template - views/simple/home.html
 
-.. code-block :: html
+.. html ::
 
   <div style="background:#c5ccd3;width: 100%; height: 100%;"  class="view mblView">
     <div dojoType="dojox.mobile.RoundRect" shadow="true">

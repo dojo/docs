@@ -31,7 +31,7 @@ Basic Usage
 -----------
 Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript">
     dojo.require("dijit.Editor");
@@ -44,7 +44,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
 
 Then just declare the plugin and configure it as follows. Note that the location of LocalImage.css may be changed according to the actual environment.
 
-.. code-block :: html
+.. html ::
 
   <style type="text/css">
     @import "../../form/resources/FileUploader.css";
@@ -107,7 +107,7 @@ The server-side expects 'uploadedfile' field in the POST data section. The value
 
 If you inspect the network in Firebug, it could be look like the following:
 
-.. code-block :: html
+.. html ::
 
   Content-Type: multipart/form-data; boundary=---------------------------313223033317673
   Content-Length: 2457
@@ -130,7 +130,7 @@ The server side should return a piece of html code which contains the following 
 
 All the information should be wrapper within a <textarea> html control. It would look something like the following.
 
-.. code-block :: html
+.. html ::
 
   <textarea>{"file":"..\/tests\/uploads\/1079.gif","name":"1079.gif","width":400,"height":118,"type":"gif","size":2260,"additionalParams":[]}</textarea>
 

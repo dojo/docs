@@ -48,7 +48,7 @@ The pattern of using the GoogleImageSearchStore is
   * **content** A snippet of information about the image, in HTML format
   * **contentNoFormatting** A snippet of information about the image, in plain text
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

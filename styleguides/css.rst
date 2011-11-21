@@ -20,7 +20,7 @@ baseClass
 ---------
 All dijit widgets have a baseClass attribute which can be specified (overridden) as an initialization parameter.  For example,
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="baseClass:'myTabContainer'"></div>
 

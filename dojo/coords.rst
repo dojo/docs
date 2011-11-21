@@ -33,7 +33,7 @@ Usage
 Dojo 1.7+ (AMD)
 ---------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   require(["dojo"], function(dojo){
@@ -43,7 +43,7 @@ Dojo 1.7+ (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var coords = dojo.coords(node);

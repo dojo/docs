@@ -27,7 +27,7 @@ Usage
 
 You can create a set of stores for all available Persevere classes/tables:
 
-.. code-block :: javascript
+.. js ::
 
  myStores = dojox.data.PersevereStore.getStores("/",true); // do it synchronously
  ... or ...

@@ -15,7 +15,7 @@ Patching Build Scripts pre-1.7
 
 If you are using dojo-1.6 or older, before running the build batch file, you may need to manually apply the following patch to your build script in order to completely remove all the unused modules from your build. (As you can see, it is just addition of "false&&" in the while condition.) The patch disables finding the dojo base modules being used from the dependent modules with a simple pattern matching, which sometimes unexpectedly picks up unused modules. The file to be patched is util/buildscripts/jslib/buildUtil.js. (Note that this is no longer valid for dojo-1.7)
 
-.. code-block :: javascript
+.. js ::
 
   --- buildUtil.js-orig
   +++ buildUtil.js

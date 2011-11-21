@@ -75,7 +75,7 @@ dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sy
 
 **IMPORTANT:** For all values EXCEPT html and xml, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html (Or XML) mimetype, just return a normal HTML/XML document.  In other words, your services for JSON and Text formats should return the data wrapped as the following:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <html>
@@ -98,7 +98,7 @@ Examples
 Gather all parameters from a form
 ---------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -128,7 +128,7 @@ Gather all parameters from a form
 Gather all parameters from a form, over-riding some
 ----------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -172,7 +172,7 @@ Gather all parameters from a form, over-riding some
 Pass in parameters manually
 ---------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">

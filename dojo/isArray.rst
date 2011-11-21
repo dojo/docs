@@ -28,7 +28,7 @@ Usage
 
 isArray returns a Boolean you can use directly in conditionals:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -47,7 +47,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 
 [ Dojo 1.7+ (AMD) ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array) {
@@ -63,7 +63,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   if(dojo.isArray(list)) {
@@ -81,7 +81,7 @@ Caveats
 
 It is important to understand that dojo.isArray checks to see if the provided value is an instance of *the* Array constructor from the current frame. If an array is passed in from a different frame, it is not an instance of the current frame's Array and therefore dojo.isArray will properly return false. Also, the arguments variable is not considered an array. One can test for these array like entities with dojo.isArrayLike(value). If you want to dojo.isArray to work on array instances from any frame, it is possible to monkey patch it with something like:
 
-.. code-block :: javascript
+.. js ::
 
  // Dojo 1.7+ (AMD)
  require(["dojo/_base/lang"], function(lang) {

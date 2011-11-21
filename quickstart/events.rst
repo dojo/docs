@@ -47,7 +47,7 @@ Syntax
 
 dojo.connect has the following signature (acceptable types in square brackets):
 
-.. code-block :: javascript
+.. js ::
 
   handle = dojo.connect(Scope of Event [object or null], Event [string], Context of Linked Method [string or null], Linked Method [string or function], Don't Fix Flag [boolean])
 
@@ -58,7 +58,7 @@ Example Code for Reference
 
 Sometimes, it is easier to see an example first:
 
-.. code-block :: html
+.. html ::
 
      <html>
      <head>
@@ -88,14 +88,14 @@ Connecting to a DOM Event
 To connect a function to a DOM event with Dojo, you first need to get the node that you want to connect to. Here, I'll use the venerable
 :ref:`dojo.byId <dojo/byId>`.
 
-.. code-block :: javascript
+.. js ::
 
   firstLinkNode = dojo.byId("firstLink");
 
 
 Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I just need to use dojo.connect for the heavy lifting:
 
-.. code-block :: javascript
+.. js ::
 
   firstLinkConnections = [];
   firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', foo));
@@ -103,21 +103,21 @@ Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I ju
 
 In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node), the name of the function that should trigger my function's call (in this case, the "onclick" event), and the name of my function. Note that I keep a reference to the connection (called a handle) by setting firstLinkConnections[0] to the return value of ``dojo.connect``. This will allow me to disconnect the listener later, if I desire. Now, when a user clicks "Dojo," a message appears in the log Because my function is global in scope, I can pass it directly to connect. The following, however, are equivalent:
 
-.. code-block :: javascript
+.. js ::
 
   firstLinkConnections[0] = dojo.connect(firstLinkNode, 'onclick', null, foo);
 
 
 **and**
 
-.. code-block :: javascript
+.. js ::
 
   firstLinkConnections[0] = dojo.connect(firstLinkNode, 'onclick', null, "foo");
 
 
 Now, if I also want to connect someObject.bar() to #firstLink, we can do that too:
 
-.. code-block :: javascript
+.. js ::
 
   firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', someObject, "bar"));
 
@@ -125,7 +125,7 @@ Because I've used Dojo's event handling, I can connect an arbitrary number of fu
 
 To stop listening to all the registered event handlers stored in ``firstLinkConnections``, pass the values in the Array to :ref:`dojo.disconnect <dojo/disconnect>`
 
-.. code-block :: javascript
+.. js ::
 
    dojo.forEach(firstLinkConnections, dojo.disconnect);
 
@@ -151,14 +151,14 @@ Using dojo.connect on Dom Events is only the beginning or the power contained wi
 
 All of these events are also mapped into :ref:`dojo.NodeList <dojo/NodeList>` as direct methods. To register an onclick event for many nodes at once:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query(".foo").onclick(function(e){ /* handle the event */ }).onmouseenter(function(e){ /* handle event */ });
 
 *A note about the event names:* Event names now are lower case, except in special cases (e.g., some Mozilla DOM events). Dojo will add "on" to your event name if you leave it off (e.g., 'click' and 'onclick' are the same thing to dojo). This differs from **Widget Events** in the sense Dijit uses mixedCase event names, to avoid potential conflicts.
 
-.. code-block :: javascript
+.. js ::
 
   // connect to domEvent "onclick"
   var node = dojo.byId("foo");
@@ -185,7 +185,7 @@ Connecting to MouseWheel events
 One event not mentioned above, though entirely useful: onmousewheel (okay, it's two events, which is the reason for pointing this out ... )
 All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`isSomething <quickstart/browser-sniffing>` variables:
 
-.. code-block :: javascript
+.. js ::
 
   var node = dojo.byId("foobar");
   dojo.connect(node, (!dojo.isMozilla ? "onmousewheel" : "DOMMouseScroll"), function(e){
@@ -215,7 +215,7 @@ As mentioned above, non-printable character events define a keyCode.  Printable 
 
 However, you can also reference an event's charOrCode attribute for making a single switch() statement to handle both printable and non-printable keys.  For example:
 
-.. code-block :: javascript
+.. js ::
 
   var node = dojo.byId("foobar");
   dojo.connect(node, "onekeypress, function(e){
@@ -235,20 +235,20 @@ Connecting Functions to One Another
 
 Connecting functions to one another is even simpler than connecting them to DOM events; because you already have a reference to the function, you don't need to do any byId or query work. To have anotherObject.afterBaz fire after someObject.baz fires, use the following:
 
-.. code-block :: javascript
+.. js ::
 
   objectConnections = [];
   objectConnections[0] = dojo.connect(someObject, "baz", anotherObject, "afterBaz");
 
 In the above code, the first argument is the context of "baz," the second argument is the event (in this case, when baz fires), the third argument is the context of your listener function, and the fourth argument is the listener function itself. Connecting two global functions is even easier:
 
-.. code-block :: javascript
+.. js ::
 
   objectConnections[1] = dojo.connect("foo", globalGuy);
 
 Now, whenever foo is called, globalGuy will also fire. As you might expect, connecting a method to a global function, or vice versa, is logical and simple:
 
-.. code-block :: javascript
+.. js ::
 
   objectConnections[2] = dojo.connect("foo", anotherObject, "afterBaz");
   objectConnections[3] = dojo.connect(someObject, "baz", globalGuy);
@@ -258,13 +258,13 @@ Disconnecting
 
 To disconnect listeners from events, you simply pass the connection handle (the return value of ``dojo.connect`` to ``dojo.disconnect``. To disconnect globalGuy from someObject.baz, I use the following code:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.disconnect(objectConnections[3]);
 
 Or, by using :ref:`dojo.forEach <dojo/forEach>`, passing ``dojo.disconnect`` as a function reference as illustrated earlier:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.forEach(objectConnections, dojo.disconnect);
 
@@ -273,13 +273,13 @@ Gotchas with direct references to functions
 -------------------------------------------
 Note that the first connection to a function actually modifies the function, by wrapping it another function.   So that
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(foo, bar);
 
 is like saying:
 
-.. code-block :: javascript
+.. js ::
 
   var originalFoo = foo;
   foo = function(){ originalFoo(); bar(); }
@@ -287,7 +287,7 @@ is like saying:
 
 This means that you need to be careful with code that directly references (the original) function foo(), including other dojo.connect() calls.   For example, the code below *won't* work correctly:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(first, foo);
   dojo.connect(foo, bar);
@@ -296,7 +296,7 @@ Calling first() will call foo(), but not bar(), since it's calling the original 
 
 This issue doesn't exist when calling methods on object, for example:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(myFunc, object, "method");
   dojo.connect(object, method, bar);
@@ -313,7 +313,7 @@ When you connect a function to a DOM event with :ref:`dojo.connect <dojo/connect
 
 Assume that your function has been called by dojo.connect and takes an argument named ``event``, like:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connect(dojo.byId("node"), "onclick", function(event){
      // the var 'event' is available, and is the normalized object
@@ -368,7 +368,7 @@ Imagine that you run a running a conference, and there will be updates throughou
 Example Code for Reference
 --------------------------
 
-.. code-block :: javascript
+.. js ::
 
   function globalGuy(arg) { console.debug("Global Guy fired with arg " + arg); }
     var someObject = {
@@ -381,7 +381,7 @@ Subscribing and Publishing Topics
 
 To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullNames", you simply use ``dojo.subscribe``, as follows:
 
-.. code-block :: javascript
+.. js ::
 
   topics = [];
   topics[0] = dojo.subscribe("globalEvents", null, globalGuy);
@@ -389,7 +389,7 @@ To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullName
 
 Note that the following alternative form would also work:
 
-.. code-block :: javascript
+.. js ::
 
   topics = [];
   topics[0] = dojo.subscribe("globalEvents", globalGuy);
@@ -397,14 +397,14 @@ Note that the following alternative form would also work:
 
 To publish information to both of these topics, you pass ``dojo.publish`` the topic names and arrays of the arguments that you want to pass to subscribed functions, as follows
 
-.. code-block :: javascript
+.. js ::
 
   dojo.publish("globalEvents", ["data from an interesting source"]);
   dojo.publish("fullNames", ["Alex", "Russell"]);
 
 To disconnect someObject.bar from its topic, you use ``dojo.unsubscribe``, just as you would ``dojo.disconnect``:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.unsubscribe(topics[1]);
 
@@ -423,14 +423,14 @@ Overriding vs. Connecting
 
 You can connect to widget events just like connecting to DOM events, using dojo.connect:
 
-.. code-block :: javascript
+.. js ::
 
   var myWidget = new dijit.form.Button({label: ...});
   dojo.connect(myWidget, "onClick", myFunc);
 
 or in markup as:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.form.Button">
      <script type="dojo/connect" data-dojo-event="onClick">
@@ -441,7 +441,7 @@ or in markup as:
 
 However, rather than connecting (as above), it's often more convenient to specify the handler as a parameter to the widget on initialization:
 
-.. code-block :: javascript
+.. js ::
 
   var myWidget = new dijit.form.Button({
       label: "click me!",
@@ -450,13 +450,13 @@ However, rather than connecting (as above), it's often more convenient to specif
 
 or in markup:
 
-.. code-block :: html
+.. html ::
 
    <button data-dojo-type="dijit.form.Button" onClick="myFunc">Click me!</button>
 
 or in markup using the script tag:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.form.Button">
      <script type="dojo/method" data-dojo-event="onClick">
@@ -512,7 +512,7 @@ having a separate meaning in CSS.
 
 By way of example, consider a Spinner widget inside of a ContentPane inside of a TabContainer:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.layout.TabContainer">
      <div data-dojo-type="dijit.layout.ContentPane" ...>

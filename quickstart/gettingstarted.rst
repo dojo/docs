@@ -12,7 +12,7 @@ Getting started with some simple steps
 
 Getting up-and-running with Dojo couldn't be easier. Just include this line in your web page:
 
-.. code-block :: html
+.. html ::
 
     <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>
 

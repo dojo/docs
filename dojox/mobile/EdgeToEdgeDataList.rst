@@ -64,13 +64,13 @@ Declarative example
 
 In this example, no ListItem is declared under EdgeToEdgeDataList. The ListItems are generated according to the sample.json. Each item in the json object is passed as the attributes of ListItem.
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojo.data.ItemReadStore" jsId="sampleStore" url="sample.json"></div>
   <ul dojoType="dojox.mobile.EdgeToEdgeDataList" store="sampleStore">
   </ul>
 
-.. code-block :: javascript
+.. js ::
 
   // sample.json
   {

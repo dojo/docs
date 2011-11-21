@@ -154,7 +154,7 @@ The default implementation of getIconClass() shows two types of icons: folders a
 (Actually, it has separate icons for opened and closed folders, so that's three icons...)
 It tries to guess if the node is a folder or not by whether or not it has a children attribute:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
@@ -171,7 +171,7 @@ A better getIconClass() method for a Tree connected (through a model) to a :ref:
 would determine if the item was a folder or not based on whether or not the item had the "directory" attribute
 (and it was set to true):
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
@@ -183,7 +183,7 @@ If you want to have different icon types depending on the type of items in the t
 separate icons for songs, movies, and TV shows), then you really need to override the method
 to return a separate class name based on the type of item:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="dojo/method" data-dojo-event="getIconClass" data-dojo-args="item, opened">
@@ -416,7 +416,7 @@ Grid lines
 
 If you don't want to display the grid lines for a Tree then simply write CSS rules to override the theme and hide the relevant background images.  The pertinent lines from tundra are:
 
-.. code-block:: css
+.. css ::
 
   .tundra .dijitTreeNode {
     background-image : url('images/i.gif');
@@ -438,7 +438,7 @@ Hover effect
 
 Due to implementation details, on the tundra, soria, and nihilo themes the hover effect for tree nodes is done with a near-transparent image:
 
-.. code-block:: css
+.. css ::
 
   .tundra .dijitTreeNodeHover {
 	/*background-color: #f6f9fa !important;*/

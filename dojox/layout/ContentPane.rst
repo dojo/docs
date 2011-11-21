@@ -26,7 +26,7 @@ Usage
 
 TODO: how to use the component/class/method
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -58,7 +58,7 @@ See also
 * through the use of the scriptHasHooks setting, a :ref:`Deferred instance <dojo/Deferred>`, onLoadDeferred and it's addCallback , you can simulate the dojo.addOnLoad behavior from inside the loaded content.
 * An alternative is to set scriptHasHooks=true, and have content like this in your loaded content:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script>

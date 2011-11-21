@@ -17,7 +17,7 @@ Forward transition using transitionOptions
 
 trasitionOptions can be used on any dojox.mobile widgets which inherited from dojox.mobile._ItemBase. The following sample will result in transition to the 'second' view in 'main' scene of the application.
 
-.. code-block :: html
+.. html ::
 
   <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{target:"main,second",url: "#main,second"}'>
     Main Scene::Second View
@@ -40,14 +40,14 @@ Forward transition using href
 
 Besides the transitionOptions on mobile widgets, href attribute in hyperlink can also start the transition in dojox.app. Following sample will result in transition to 'main' view of 'main' scene.
 
-.. code-block :: html
+.. html ::
 
   <a href="#main,main">to main,main</a>
 
 Backward transition
 To start backward transition, all we need to do is to add a back button on the Heading widgets of dojox.mobile. The back attribute declares the back button label on the heading in the following sample.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Home">Data Binding Example</h1>
 
@@ -58,7 +58,7 @@ Sample excerpt of view template with regarding to navigation and history
 
 main.html
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.RoundRectList" iconBase="../images/i-icon-all.png">
     <h2 dojoType="dojox.mobile.EdgeToEdgeCategory">Main Scene Views</h2>
@@ -76,7 +76,7 @@ main.html
 
 second.html
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading" back="Back">View simple/second</h1>
   <div dojoType="dojox.mobile.RoundRect" shadow="true">

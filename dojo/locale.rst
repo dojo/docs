@@ -27,7 +27,7 @@ Usage
 
 A simple call of dojo.locale.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

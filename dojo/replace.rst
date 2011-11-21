@@ -30,7 +30,7 @@ If the second argument is an object, all names within braces are interpreted as 
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang"], function(lang) {
@@ -50,7 +50,7 @@ If the second argument is an object, all names within braces are interpreted as 
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var output = dojo.replace(
@@ -132,7 +132,7 @@ With array
 
 In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7 (AMD)
@@ -196,7 +196,7 @@ Let's take a look at example:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo_base/array", "dojo/_base/lang"], function(array, lang) {
@@ -227,7 +227,7 @@ Let's take a look at example:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // helper function
@@ -306,7 +306,7 @@ With custom pattern
 
 In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to ``{abc}``, but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7 (AMD)
@@ -371,7 +371,7 @@ Let's add highlighting to all substituted fields:
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang"], function(lang) {
@@ -392,7 +392,7 @@ Let's add highlighting to all substituted fields:
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function hiliteReplace(tmpl, dict){
@@ -457,7 +457,7 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang"], function(lang) {
@@ -489,7 +489,7 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function safeReplace(tmpl, dict){
@@ -578,7 +578,7 @@ In this example we are going to format numbers as fixed or exponential with opti
 
 [ Dojo 1.7 AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang"], function(lang) {
@@ -626,7 +626,7 @@ In this example we are going to format numbers as fixed or exponential with opti
 
 [ Dojo < 1.7 ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   function format(tmpl, dict, formatters){

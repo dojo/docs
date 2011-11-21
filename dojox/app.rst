@@ -64,7 +64,7 @@ An html (index.html) is needed to load dojo.js and a javascript file included in
 
 Index.html
 
-.. code-block :: html
+.. html ::
 
   <!-- load dojo.js -->
   <script type="text/javascript" src="../../../../dojo/dojo.js"></script>
@@ -73,7 +73,7 @@ Index.html
 
 multiSceneApp.js
 
-.. code-block :: javascript
+.. js ::
 
   //Get current path
   var path = window.location.pathname;
@@ -132,7 +132,7 @@ Sample
 Sample application html page:
 index.html
 
-.. code-block :: html
+.. html ::
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
   <html>
@@ -156,7 +156,7 @@ sampleApp.js
 
 The actual configuration for the application is loaded by dojo/text module and is passed into call back as the “config” variable. Then the JSON string is resolved to JSON object and is used to create the application.
 
-.. code-block :: javascript
+.. js ::
 
   var path = window.location.pathname;
   if (path.charAt(path.length)!="/"){
@@ -173,7 +173,7 @@ Sample application configuration:
 
 The application configuration json data is used to declare views, models and their relationship in the application. The application will control the views loading and views/models binding.
 
-.. code-block :: javascript
+.. js ::
 
   {
     "id": "sampleApp",

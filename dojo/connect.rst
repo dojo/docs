@@ -38,7 +38,7 @@ The return value is a handle that is needed to remove this connection with `dojo
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
   
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
@@ -65,7 +65,7 @@ Examples
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/connect"], function(connect) {
     // When obj.onchange(), do ui.update():
@@ -99,7 +99,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // When obj.onchange(), do ui.update():
     dojo.connect(obj, "onchange", ui, "update");

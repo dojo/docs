@@ -59,7 +59,7 @@ Examples
 
 In this example, get the progress indicator instance using getInstance(), add it to the current dom tree, and call the start() method to start spinning of the progress indicator. In the load() handler of dojo.xhr, call the stop() method to stop spinning and remove it from the dom tree.
 
-.. code-block :: javascript
+.. js ::
 
   function loadPage(){
     ....

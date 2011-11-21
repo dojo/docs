@@ -20,7 +20,7 @@ Usage
 
 Since dojo-1.6, you need to dojo.require IconContainer because it has been moved from _base.js to IconContainer.js.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.mobile.IconContainer");
 
@@ -66,7 +66,7 @@ Below is an example of lazy loading of icon contents. Before the dojo parser run
 
 Note that currently lazy loading is supported only in the sync mode, since lazy loading is performed synchronously using dojo.require.
 
-.. code-block :: html
+.. html ::
 
   <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
     <li dojoType="dojox.mobile.IconItem" label="Color Palette" lazy="true">
@@ -88,7 +88,7 @@ Single / Below (transition="below" single="true")
 
 In this example, icon content is shown below the icons, and only one icon content can be opened at a time.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">Icon Container (Single/Below)</h1>
   <ul dojoType="dojox.mobile.IconContainer" transition="below" single="true" iconBase="images/icon-1.png">
@@ -111,7 +111,7 @@ Single / Flip (transition="flip" single="true")
 
 In this example, icon content is shown below the icons, and multiple icon contents can be opened at a time.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">Icon Container (Single/Flip)</h1>
   <ul dojoType="dojox.mobile.IconContainer" transition="flip" single="true" iconBase="images/icon-1.png">
@@ -134,7 +134,7 @@ Multi / Below (transition="below" single="false")
 
 In this example, selecting an icon causes a flip transition to show the icon content. Only one icon content can be opened at a time.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">Icon Container (Multi/Below)</h1>
   <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
@@ -157,7 +157,7 @@ Multi / Flip (transition="flip" single="false")
 
 In this example, selecting an icon causes a flip transition to show the icon content. Multiple icon contents can be opened at a time.
 
-.. code-block :: html
+.. html ::
 
   <h1 dojoType="dojox.mobile.Heading">Icon Container (Multi/Flip)</h1>
   <ul dojoType="dojox.mobile.IconContainer" transition="flip" iconBase="images/icon-1.png">

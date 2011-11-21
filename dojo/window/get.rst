@@ -22,7 +22,7 @@ Examples
 
 Here's some code to trace up from a node to the root of the main document, passing through iframes.   Based on the code in dijit/focus.js:
 
-.. code-block :: javascript
+.. js ::
 
     //Dojo 1.7 (AMD)
     require(["dojo/window","dojo/_base/window"], function(win,baseWin) {
@@ -42,7 +42,7 @@ Here's some code to trace up from a node to the root of the main document, passi
         }
     );
 
-.. code-block :: javascript
+.. js ::
             
     //Dojo < 1.7
     while(node){

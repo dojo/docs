@@ -23,7 +23,7 @@ This function corresponds to the JavaScript 1.6 Array.map() method, with one dif
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Before dojo 1.7

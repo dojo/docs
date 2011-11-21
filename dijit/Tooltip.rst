@@ -23,7 +23,7 @@ Note that if you want your tooltip to contain a form or something that the user 
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

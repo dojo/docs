@@ -39,7 +39,7 @@ dojo.Deferred, dojo.when
 
 dojo.Deferredは副作用のない連結(chaining)を実現するためにリファクタリングされ、これにより次のようなコードを実行できるようになります。
 
-.. code-block :: javascript
+.. js ::
 
     var def = dojo.xhr(...);
     def.then(...);
@@ -50,13 +50,13 @@ dojo.Deferredは副作用のない連結(chaining)を実現するためにリフ
 
 次のようにして、チェインの各要素が値に影響を与えるような連結も可能です。
 
-.. code-block :: javascript
+.. js ::
 
       dojo.xhr(...).then(function(val){ return dojo.toJson(val); }).then(...);
 
 最後に、dojo.when()はDeferredオブジェクトまたは普通の値を取るメソッドです。Deferredオブジェクトの場合は値の準備が整った時点で、それ以外の場合は直ちに、与えられたコードを実行します。(訳注：これにより、Deferredを使った非同期処理の場合とそれ以外の同期処理の場合とで共通のコーディングスタイルを取ることができるようになります。)
 
-.. code-block :: javascript
+.. js ::
 
     // val might be a Deferred, or it could be (for example) a String
     dojo.when(val, function(val){
@@ -111,7 +111,7 @@ Claroの.dijitTreeIconクラスはwidthとheightを指定していません。�
 
 また、TabContainerにおいて、アイコンを持たないタブの高さは16px未満になるため、もしアイコンを持つタブと持たないタブが混在する場合は高さが異なってしまいます。そのような場合は次のようにmin-heightを追加するか、
 
-.. code-block :: css
+.. css ::
 
     .dijitTab .tabLabel {
 	min-height: 12px;
@@ -132,7 +132,7 @@ Dialog
 
 Dialogウィジェットは、ダイアログの下側にOKやキャンセルといったアクションボタンを配したグレーのバー「アクションバー」をサポートします。ダイアログは以前と同様にして作りますが、次のようにダイアログのコンテンツとボタンを分離して記述します。
 
-.. code-block :: html
+.. html ::
 
 	<div dojoType="dijit.Dialog" id="myDialog">
 		<div class="dijitDialogPaneContentArea">
@@ -157,7 +157,7 @@ HTML5のplaceholder属性(「ヒント」としても知られる)がTextBoxベ�
 
 次のように"placeHolder"パラメータをウィジェットに指定して使います。
 
-.. code-block :: javascript
+.. js ::
 
    myTextBox = new dijit.form.TextBox({
        name: "firstname",
@@ -175,7 +175,7 @@ Bidiの強化
 
 アプリケーションは、dir属性によりウィジェットごとにテキストの表示方向を指定できるようになりました。設定可能な値は、"ltr"(left-to-right、ほとんどの言語で使われる)または"rtl"(アラビア語とヘブライ語)です。従来はすべてのウィジェットがページに対して指定された方向と同じ方向でレンダリングされていました。ただし、この属性は次の例のようにウィジェットの作成時にのみ指定可能であることに注意してください。
 
-.. code-block :: javascript
+.. js ::
 
     new dijit.Editor({dir: "rtl"}, srcNodeRef);
     new dijit.Editor({dir: "ltr"}, srcNodeRef);
@@ -183,7 +183,7 @@ Bidiの強化
 
 また、parserが改訂され、DOMノードに対するdir=rtlまたはdir=ltrの設定が(dojoTypeの指定があるかどうかにかかわらず)認識されるようになりました。次の例のように、もしノードにdirが設定されている場合は、そのノード以下に存在するすべてのウィジェットがそのdirの設定に従って作成されます。
 
-.. code-block :: html
+.. html ::
 
 
 	<div dir="ltr">
@@ -201,7 +201,7 @@ Bidiの強化
 
 parserはデフォルトのdirやlangを指定するフラグを取ることもできます。ウィジェットは(個別に指定がない限り)その値を継承します。
 
-.. code-block :: javascript
+.. js ::
 
       dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-eg"} });
 
@@ -246,7 +246,7 @@ _CssStateMixin
 
 1. _CssStateMixinをrequireし、ウィジェットにmix-inする。
 
-   .. code-block :: javascript
+   .. js ::
 
        dojo.require("dijit._CssStateMixin");
        ...
@@ -257,13 +257,13 @@ _CssStateMixin
 
 2. baseClassが未設定であれば設定します。 *(フォームウィジェットは既にbaseClassを設定しています)*
 
-   .. code-block :: javascript
+   .. js ::
 
        baseClass: "dijitSlider",
 
 3. (もしスライダーのup/downボタンのようなウィジェットのサブノードに対してCSSクラスを設定したい場合は)cssStateNodes属性を設定します。
 
-   .. code-block :: javascript
+   .. js ::
 
        cssStateNodes: {
           incrementButton: "dijitSliderIncrementButton",
@@ -297,25 +297,25 @@ Tree
 
 これにより、Dijitのプロパティの設定の推奨される方法は、従来の次のような書き方から、
 
-.. code-block :: javascript
+.. js ::
 
    widget.attr('property', 'value'); // old way and now deprecated for Dijits
 
 次のような書き方になります。
 
-.. code-block :: javascript
+.. js ::
 
    widget.set('property', 'value'); // new since 1.5
 
 プロパティの取得も同様にして、従来の次のような書き方から、
 
-.. code-block :: javascript
+.. js ::
 
    widget.attr('property'); // old way and now deprecated for Dijits
 
 次のような書き方になります。
 
-.. code-block :: javascript
+.. js ::
 
    widget.get('property'); // new since 1.5
 
@@ -366,7 +366,7 @@ CSS3
 ----
 transformおよびtransform-originプロパティをサポートするためのdojo.styleの新しい拡張。
 
-.. code-block :: javascript
+.. js ::
 
    dojo.require("dojox.html.ext-dojo.style");
    dojo.style("myNode", "transformOrigin", "0 0");
@@ -484,13 +484,13 @@ dijit.popup
 
 Dijit.popupはショートカットしてはいけません。次のコードは動作します。
 
-.. code-block :: javascript
+.. js ::
 
    dijit.popup.open({...});
 
 しかし、次のコードは動作しません。
 
-.. code-block :: javascript
+.. js ::
 
    var open = dijit.popup.open;
    open({...});
@@ -500,13 +500,13 @@ _Container.getChildren()
 ------------------------
 次のようなコードは、
 
-.. code-block :: javascript
+.. js ::
 
    myWidget.getChildren().forEach(...);
 
 次のように書き換える必要があります。
 
-.. code-block :: javascript
+.. js ::
 
    dojo.forEach(myWidget.getChildren(), ...);
 
@@ -525,13 +525,13 @@ TextBoxテンプレートは、<input>が<div>に囲まれているValidationTex
 
 id=fooのTextBoxに対し、<input>に対してスタイルを適用したい場合は、以前のように#fooに対してルールを記述します。
 
-.. code-block :: css
+.. css ::
 
     #foo { font: ... }
 
 外側のノードに対してスタイルを適用したい場合は、#widget_fooに対してルールを記述します。
 
-.. code-block :: css
+.. css ::
 
     #widget_foo { margin: 2em; }
 

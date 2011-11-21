@@ -23,7 +23,7 @@ However, more are planned for future releases, including the following:
 All crypto implementations follow the same API; there is an encrypt and a decrypt method with an optional
 keyword arguments object passed. For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.encoding.crypto.SimpleAES");
@@ -39,7 +39,7 @@ page).
 As with :ref:`dojox.encoding.digests <dojox/encoding/digests>`, there is a common arguments object that all implementations within
 crypto should allow for.  This object takes the following form:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var args = {

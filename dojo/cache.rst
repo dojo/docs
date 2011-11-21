@@ -29,14 +29,14 @@ Usage
 
 ``dojo.cache`` is a Dojo Core module, To include the Dojo cache on your page, require the module `dojo.cache`. When use dojo 1.7, you should require ``dojo/text.js`` because the related functions used to define in ``dojo/cache.js`` have been moved.
 
-.. code-block :: javascript
+.. js ::
   
   //Dojo 1.7 (AMD)
   require("dojo/text",function(){
       //write your code here
   });
   
-.. code-block :: javascript
+.. js ::
 
   //Dojo < 1.7
   dojo.require("dojo.cache");
@@ -44,7 +44,7 @@ Usage
 
 ``dojo.cache`` takes the following arguments:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.cache(module, url, configValue);
 
@@ -85,7 +85,7 @@ Examples
 
 This is the usual, most common use of the dojo.cache call:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   //Dojo 1.7 (AMD)
@@ -93,7 +93,7 @@ This is the usual, most common use of the dojo.cache call:
     var text = dojo.cache("my.module", "template.html");
   });
   
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  //Dojo 1.7
@@ -105,7 +105,7 @@ If my/module/template.html contained the text "<div>Hello World</div>", then the
 
 An example using the sanitize: true option:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   //Dojo 1.7 (AMD)
@@ -113,7 +113,7 @@ An example using the sanitize: true option:
     var text = dojo.cache("my.module", "template.html", {sanitize: true});
   });
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  //Dojo < 1.7
@@ -125,7 +125,7 @@ If my/module/template.html contains "<html><body><h1>Hello</h1></body></html>", 
 
 Example using an object that has like the previous example, but uses an object whose toString() method represents a file path:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   //Dojo 1.7 (AMD)
@@ -133,7 +133,7 @@ Example using an object that has like the previous example, but uses an object w
     var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
   });
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  //Dojo < 1.7

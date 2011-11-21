@@ -23,7 +23,7 @@ The function signature is:
 
 So basic usage is:
 
-.. code-block :: javascript
+.. js ::
 
   var mySurface = dojox.gfx.createSurface(newNode, 200, 200);
   dojox.gfx.utils.toJson(mySurface, json);

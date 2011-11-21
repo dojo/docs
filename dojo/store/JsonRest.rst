@@ -24,7 +24,7 @@ JsonRest provides full read, write, and notification capabilities through standa
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  require(["dojo/store/JsonRest"], function(JsonRestStore){
 
@@ -85,7 +85,7 @@ When a query request is made that includes a ``sort`` option in the ``options`` 
 
 For example, given the following store and request:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new JsonRestStore({

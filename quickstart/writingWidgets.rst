@@ -67,7 +67,7 @@ This is merely creating a javascript object (of type MyFirstBehavioralWidget) as
 
 This kind of behavioral widget is useful in some cases, but it has severe limitations, namely that the widget user must supply a DOM tree.   Normally, widgets create their own DOM tree, replacing a simple <span> or <button> node with a complex DOM tree.  Note that sometimes, if the user just calls
 
-.. code-block:: javascript
+.. js ::
 
     new MyWidget({})
 
@@ -164,7 +164,7 @@ Let's start using templates by expanding on our counter example, but making it a
 
 The code to instantiate will look like this:
 
-.. code-block:: html
+.. html ::
 
   <div data-dojo-type="FancyCounter" data-dojo-props="label:'counter label'">button label</div>
 
@@ -181,7 +181,7 @@ Note that the template should have a single top level root node.
 
 Next, we modify the template above with some commands for _TemplatedMixin:
 
-.. code-block:: html
+.. html ::
 
   <div>
     <button data-dojo-attach-event='onclick: increment'>press me</button>
@@ -238,19 +238,19 @@ Declaring attributes
 --------------------
 As a widget writer, you need to declare all your widget parameters in the prototype, along with a value.  The value serves both as a default value (if no value was specified on instantiation), and also tells the parser the data type of the parameter.  In this case we are declaring a string parameter:
 
-.. code-block:: javascript
+.. js ::
 
     // label: String
     //      Button label
     label: "push me"
 
-.. code-block:: javascript
+.. js ::
 
     // duration: Integer
     //      Milliseconds to fade in/out
     duration: 100
 
-.. code-block:: javascript
+.. js ::
 
     // open: Boolean
     //      Whether pane is visible or hidden
@@ -260,7 +260,7 @@ Note that all the documentation for an attribute needs to go next
 to the attribute definition, even when you need special documentation about how set() performs for that
 widget.  For example:
 
-.. code-block:: javascript
+.. js ::
 
   // value: Date
   //     The date picked on the date picker, as a Date Object.
@@ -346,7 +346,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 
 To map a widget attribute to a DOM node attribute, you do:
 
-.. code-block :: javascript
+.. js ::
 
   _setDisabledAttr: {node: "focusNode", type: "attribute" }
 
@@ -428,7 +428,7 @@ called during startup.
 
 eg:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.declare("my.Thinger", dijit._WidgetBase, {
@@ -454,7 +454,7 @@ Containers
 
 Often a widget declared in markup will have contents, i.e. it will contain some other DOM.   For example:
 
-.. code-block:: html
+.. html ::
 
   <button data-dojo-type="dijit.form.Button">press me</button>
 
@@ -502,7 +502,7 @@ To see how to do this, let's see how dijit.form.Button does it for clicking. Not
 
 1. In your template html, on the html elements you want to have fire DOM events, add the attribute data-dojo-attach-event as follows. Here's some of the dijit Button's Button.html (with ... where I've left stuff out):
 
-.. code-block :: html
+.. html ::
 
   <div class="dijit dijitReset dijitLeft dijitInline"
     data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"

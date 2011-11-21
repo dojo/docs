@@ -15,7 +15,7 @@ Dojo comes with a bunch of useful methods to deal with arrays, a few more than y
 dojo.indexOf
 ============
 
-.. code-block :: javascript
+.. js ::
 
  
   // Dojo 1.7+ (AMD)
@@ -60,7 +60,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 dojo.lastIndexOf
 ================
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -105,7 +105,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 dojo.forEach
 ============
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -214,7 +214,7 @@ To break the forEach-Loop you should use dojo.some
 dojo.filter
 ===========
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -285,7 +285,7 @@ Say you have an array of people with a last name. You would like to filter those
 dojo.map
 ========
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -348,7 +348,7 @@ For complete documentation and more examples please check the :ref:`dojo.map doc
 dojo.some
 =========
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){
@@ -398,7 +398,7 @@ Now your bank policies only allow you to give each client one credit over 1 mill
 dojo.every
 ==========
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/array"], function(array){

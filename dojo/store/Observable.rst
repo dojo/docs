@@ -22,13 +22,13 @@ The Observable store wrapper makes it simple for UI components to monitor change
 
 The result sets returned from store.query() calls from a Observable store will have a observe method. The observe method has the following signature:
 
-.. code-block :: javascript
+.. js ::
 
  resultSet.observe(listener);
 
 The listener function is called with following arguments:
 
-.. code-block :: javascript
+.. js ::
 
  listener(object, removedFrom, insertedInto);
 
@@ -42,7 +42,7 @@ The observe() method returns an object with a cancel() method that can be called
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
  
  // create the initial Observable store
  store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
@@ -86,7 +86,7 @@ Triggering Notification Events
 
 The Observable wrapper also adds a notify() method on the store itself. The notify method can be called if an notification of a data change from an external source is needed. The signature of notify() is:
 
-.. code-block :: javascript
+.. js ::
 
  store.notify(object, existingId);
 

@@ -20,7 +20,7 @@ Usage
 
 In order to use the GridContainer, you must issue the require statement:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.require("dojox.layout.GridContainer");
@@ -39,7 +39,7 @@ By requiring the GridContainer, two new attributes are mixed into the dijit._Wid
 
 To figure out which column you widget is in, use
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dijit.byId("exampleId").column;
@@ -54,7 +54,7 @@ There might be several use-cases where you want to turn the drag & drop on or of
 
 This is very easy and can be done by calling:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dijit.byId("gridContainer").enableDnd(); // Enables DND
@@ -69,7 +69,7 @@ The GridContainer uses the dojox.mdnd package to publish drag & drop events.
 
 If you want to get notified of any event, use the following: (The event names are self explanatory)
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.subscribe("/dojox/mdnd/drag/start", null, function(source, nodes, copy, target) {

@@ -26,7 +26,7 @@ These are the animations provided by calling ``dojo.require("dojox.fx");``
 
 Additionally, dojox.fx includes the Dojo Core :ref:`animations <dojo/fx>`, and creates aliases to them in the dojox.fx namespace. For instance:
 
-.. code-block :: javascript
+.. js ::
 
   dojox.fx.fadeIn == dojo.fadeIn
   dojox.fx.chain == dojo.fx.chain
@@ -55,7 +55,7 @@ NodeList Supplements
 
 A cross-namespace module which mixes all the Core dojox.fx animations into :ref:`dojo.NodeList <dojo/NodeList>` is available with the module:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.fx.ext-dojo.NodeList");
 
@@ -63,7 +63,7 @@ This allows you to use :ref:`dojo.query <dojo/query>` to select groups of nodes 
 
 Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to :ref:`dojo.query <dojo/query>` as well:
 
-.. code-block :: javascript
+.. js ::
  
   dojo.require("dojox.fx.ext-dojo.NodeList-style");
 

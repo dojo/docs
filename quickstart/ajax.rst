@@ -34,7 +34,7 @@ Example usage:
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/xhr"], function(xhr){
@@ -60,7 +60,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // post some data, ignore the response:
@@ -96,7 +96,7 @@ There are three methods one can attach to the XHR Options object to determine wh
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang","dojo/_base/xhr"], function(lang, xhr){
@@ -127,7 +127,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   dojo.xhrPost({

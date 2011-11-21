@@ -78,7 +78,7 @@ Slider style gauge (programmatic)
 
 The HTML <div> element to display the gauge widget:
 
-.. code-block :: html
+.. html ::
   :linenos:
   
     <div id="HorizontalGauge" ></div>
@@ -86,7 +86,7 @@ The HTML <div> element to display the gauge widget:
 
 The Javascript code creating the gauge:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
     <script type="text/javascript">

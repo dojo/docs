@@ -14,14 +14,14 @@ Creating a dojo.Node is done using the same semantics as dojo.byId(), i.e. dojo.
 
 Building additional functionality on top of dojo.Node would allow simple constructs like:
 
-.. code-block :: javascript
+.. js ::
 
     dojo.Node('myId').css('display', 'none');
 
 
 Compare this with the equivalent in today's Dojo:
 
-.. code-block :: javascript
+.. js ::
 
     dojo.style("myId", 'display', 'none');
     dojo.query("#myId").style('display', 'none');

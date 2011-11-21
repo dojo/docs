@@ -10,14 +10,14 @@ interfaces with a "dijit.tree.Model", an Object matching a certain API of method
 This allows Tree to access data in various formats, such as with a data store where items
 reference their parents (ie, the relational model):
 
-.. code-block :: javascript
+.. js ::
 
  {name: 'folder1', type: 'directory'},
  {name: 'file1', type: file, parent: 'folder1'}
 
 rather than parents having a list of their children:
 
-.. code-block :: javascript
+.. js ::
 
  {name: 'folder1', type: 'directory', children: ['file1']}
 
@@ -64,7 +64,7 @@ The default implementation of mayHaveChildren() checks for existence of the chil
 overridden to operate based on the type of item, for example:
 
 
-.. code-block :: javascript
+.. js ::
 
          return myStore.getValue(item, 'type') == 'folder';
 

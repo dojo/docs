@@ -29,7 +29,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``contains`` is accessed from the ``dojo/dom-class`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-class"], function(domClass){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
@@ -38,7 +38,7 @@ When using AMD format in a fully baseless application, ``contains`` is accessed 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.hasClass`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
@@ -48,7 +48,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.has
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     // Do something if a node with id="someNode" has class="aSillyClassName" present
     if(dojo.hasClass("someNode","aSillyClassName")){ ... }
@@ -56,7 +56,7 @@ Dojo < 1.7
 
 Consider the following html:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <div id="bam" class="foo bar baz"></div>
@@ -64,7 +64,7 @@ Consider the following html:
 
 Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -81,7 +81,7 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 
 Using :ref:`dojo.query <dojo/query>` to find a node and check if it has a class:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)

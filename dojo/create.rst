@@ -33,7 +33,7 @@ Usage
 
 The function takes up to four arguments:
 
-.. code-block :: javascript
+.. js ::
 
     // Dojo 1.7+ (AMD)
     require(["dojo/dom-construct"], function(domConstruct){
@@ -83,7 +83,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``create`` is accessed from the ``dojo/dom-construct`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-construct"], function(domConstruct){
       // create a div node
@@ -92,7 +92,7 @@ When using AMD format in a fully baseless application, ``create`` is accessed fr
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.create`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // create a div node
@@ -102,7 +102,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.cre
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   // create a div node
   var node = dojo.create("div");
@@ -114,7 +114,7 @@ Examples
 
 Create a <div>:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -127,7 +127,7 @@ Create a <div>:
 
 Create a <div> with content:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -140,7 +140,7 @@ Create a <div> with content:
 
 Append a new <div> to <body> with no attributes:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -153,7 +153,7 @@ Append a new <div> to <body> with no attributes:
 
 Place a new <div> as the first child of <body> with no attributes:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -166,7 +166,7 @@ Place a new <div> as the first child of <body> with no attributes:
 
 Decorate and place an existing node:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -179,7 +179,7 @@ Decorate and place an existing node:
 
 Create an <ul>, and populate it with <li>'s. Place the list as the first child of a node whose id equals "someId":
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -200,7 +200,7 @@ Create an <ul>, and populate it with <li>'s. Place the list as the first child o
 
 Create an anchor, with an href. Place in <body>:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7+ (AMD)
@@ -220,7 +220,7 @@ Creating and/or placing with dojo.place()
 
 In some cases it is easier to create a node from an HTML fragment and place it, without applying any attributes, or specifying them as a part of the HTML fragment. If this is the case consider :ref:`dojo.place <dojo/place>`:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // duplicating the following line with dojo.place():
@@ -234,7 +234,7 @@ In some cases it is easier to create a node from an HTML fragment and place it, 
   // dojo < 1.7
   dojo.place("<a href='foo.html' title='Goto FOO!'>link</a>", dojo.body());
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // duplicating the following line with dojo.place():
@@ -253,7 +253,7 @@ Setting attributes with dojo.attr()
 
 While you can use dojo.create to set attributes on the existing node without placing it, using :ref:`dojo.attr <dojo/attr>` is recommended:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // duplicating the following line with dojo.attr():

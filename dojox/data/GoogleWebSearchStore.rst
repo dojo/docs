@@ -46,7 +46,7 @@ The pattern of using the GoogleSearchStore is
   * **cacheUrl** The URL to the copy of the document cached by Google
   * **estimatedResultCount** (aggregated per-query) estimated number of results
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

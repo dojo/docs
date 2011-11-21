@@ -23,7 +23,7 @@ The ObjectStore is very simple to use, you simply provide a object store to the 
 Examples
 ========
 
-.. code-block :: javascript
+.. js ::
 
  var objectStore = new dojo.store.JsonRest({target:"/Table/"});
 

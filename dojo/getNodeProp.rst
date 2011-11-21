@@ -27,7 +27,7 @@ Since dojo 1.7, dojo.getNodeProp has been kept in dojo/_base/html as a compatibi
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.getNodeProp(node, attr);
@@ -46,7 +46,7 @@ Examples
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/_base/html"], function(dojo){
       dojo.getNodeProp("model", name);
@@ -54,7 +54,7 @@ Dojo 1.7 (AMD)
 
 It's recommend to use attr.getNodeProp in dojo 1.7.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-attr"], function(attr){
       attr.getNodeProp("model", name);
@@ -63,7 +63,7 @@ It's recommend to use attr.getNodeProp in dojo 1.7.
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.getNodeProp("model", name);
 

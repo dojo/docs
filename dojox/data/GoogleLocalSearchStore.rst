@@ -59,7 +59,7 @@ The pattern of using the GoogleLocalSearchStore is
    * **span** lat, lng properties for the viewport span
    * **ne, sw** lat, lng properties for the viewport corners
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

@@ -17,7 +17,7 @@ Examples
 ========
 A typical usage is:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/ready", "dojo/parser", "dijit/registry", "dijit/Dialog", function(ready, parser, registry) {
@@ -32,7 +32,7 @@ A typical usage is:
 This will register some code to run before the parser does:
 
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/ready", "dojo/parser", "dijit/registry", "dijit/Dialog", function(ready, parser, registry) {

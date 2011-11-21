@@ -113,13 +113,13 @@ All shape description properties are defined using a duck-typing technique, and 
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   rect.setShape({width: 200})
 
 In the above example, all missing members will be taken from dojox.gfx.defaultRect object making it equivalent to:
 
-.. code-block :: javascript
+.. js ::
 
   rect.setShape({x: 0, y: 0, width: 200, height: 100, r: 0}).
 
@@ -129,7 +129,7 @@ All methods without an apparent return type return their object itself. It is us
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   surface.createRect({x: 100, y: 50}).setFill("red").setStroke("blue");
 
@@ -190,13 +190,13 @@ By default all shapes are created with "null" stroke meaning "no stroke is perfo
 
 Stroke can be defined by specifying a color as a string:
 
-.. code-block :: javascript
+.. js ::
 
   shape.setStroke("black")
 
 is equivalent to
 
-.. code-block :: javascript
+.. js ::
 
   shape.setStroke({color: "black"}).
 
@@ -402,19 +402,19 @@ Simple examples
 
 Stretch the X dimension by 2:
 
-.. code-block :: javascript
+.. js ::
 
   {xx: 2}
 
 Stretch the Y dimension by 0.5 (reduces by 2):
 
-.. code-block :: javascript
+.. js ::
 
   {yy: 0.5}
 
 Shift an X coordinate by 5, a Y coordinate by 10:
 
-.. code-block :: javascript
+.. js ::
 
   {dx: 5, dy: 10}
 
@@ -423,13 +423,13 @@ More complex examples
 
 Rotate everything by 30 degrees clockwise (CW) around point (0, 0):
 
-.. code-block :: javascript
+.. js ::
 
   {xx: 0.866, xy: 0.5, yx: -0.5, yy: 0.866}
 
 Rotate everything by 90 degrees CW around (0, 0), and moves things right by 100:
 
-.. code-block :: javascript
+.. js ::
 
   {xx: 0, xy: 1, yx: -1, yy: 0, dx: 100}
 
@@ -546,13 +546,13 @@ Examples
 
 Rotate everything 45 degrees CW around (0, 0) and scales everything by 2 after that:
 
-.. code-block :: javascript
+.. js ::
 
   [2, rotateg(45)]
 
 Scale all X coordinates by 2, and moves the result down by 10:
 
-.. code-block :: javascript
+.. js ::
 
   [{dy: 10}, scale(2, 1)]
 
@@ -563,32 +563,32 @@ Imagine you have a surface 500 by 500 pixels, and you want everything in it to b
 
 It is easy:
 
-.. code-block :: javascript
+.. js ::
 
   [translate(250, 250), rotateg(-30), scale(2), translate(-250, -250)]
 
 All scaling, rotating, and skewing operations work around (0, 0) point.
 Let's begin by moving the center of our picture to (0, 0):
 
-.. code-block :: javascript
+.. js ::
 
   translate(-250, -250).
 
 Now we can scale it:
 
-.. code-block :: javascript
+.. js ::
 
   scale(2)
 
 Now we can rotate it:
 
-.. code-block :: javascript
+.. js ::
 
   rotateg(-30)
 
 Now let's move our center back:
 
-.. code-block :: javascript
+.. js ::
 
   translate(250, 250)
 
@@ -645,7 +645,7 @@ normalize(m)
 
   The same effect can be achieved with creating a matrix directly:
 
-  .. code-block :: javascript
+  .. js ::
 
     new dojox.gfx.Matrix2D(m).
 
@@ -705,7 +705,7 @@ See the api documentation of dojo.connect() and dojo.disconnect() for more detai
 
 From 1.7, the gfx shape targeted by a mouse event can be retrieved from the event received in the handler via the event.gfxTarget property. For example:
 
-  .. code-block :: javascript
+  .. js ::
 
     group.connect(“onmouseclick”, function(e) { var s = e.gfxTarget; s.setFill(“red”); });
 
@@ -716,7 +716,7 @@ Shape-specific methods are used to hide the complexity of event handling for non
 
 The 1.7 release introduces a new experimental canvas renderer with input event support. It is enabled by default when the gfxRenderer is set to ‘canvas’. In case you don’t want to use this new implementation but the legacy one, set the ‘canvasEvents’ property to false in the dojo config. For example:
 
-  .. code-block :: javascript
+  .. js ::
 
     dojoConfig: { canvasEvents:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
 
@@ -928,13 +928,13 @@ Polyline
   When filling open polylines, an edge connecting the first and the last points is assumed.
   Polylines/polygons can be defined as an array of points:
 
-  .. code-block :: javascript
+  .. js ::
 
     poly.setShape([{x: 0, y: 0}, {x: 100, y: 100}]) and poly.setShape([0, 0, 100, 100])
 
   are both equivalent to
 
-  .. code-block :: javascript
+  .. js ::
 
     poly.setShape({points: [{x: 0, y: 0}, {x: 100, y: 100}]}).
 
@@ -1019,51 +1019,51 @@ All parameters can be repeated, if it makes sense.
 
 Example:
 
-  .. code-block :: javascript
+  .. js ::
 
     path.lineTo(1,1,2,2,3,3)
 
   is equivalent to
 
-  .. code-block :: javascript
+  .. js ::
 
     path.lineTo(1,1).lineTo(2,2).lineTo(3,3).
 
 A pair of coordinates can be replaced by a single coordinate object.
 
 Example:
-  .. code-block :: javascript
+  .. js ::
 
     path.curveTo({x: 0.5, y: 0}, {x: 0.5, y: 1}, 1, 1)
 
   is equivalent to
 
-  .. code-block :: javascript
+  .. js ::
 
     path.curveTo(0.5, 0, 0.5, 1, 1, 1).
 
 All arrays are unrolled.
 
 Example:
-  .. code-block :: javascript
+  .. js ::
 
     path.curveTo([0.5, 0, [0.5, 1]], [{x: 1, y: 1}])
 
   is equivalent to
 
-  .. code-block :: javascript
+  .. js ::
 
     path.curveTo(0.5, 0, 0.5, 1, 1, 1).
 
 You can specify a well-formed path string as an argument to setShape() method of the path:
 
-  .. code-block :: javascript
+  .. js ::
 
     path.setShape("m 0,0 l 100, 100 e")
 
   is equivalent to
 
-  .. code-block :: javascript
+  .. js ::
 
     path.setShape({path: "m 0,0 l 100, 100 e"})
 
@@ -1448,7 +1448,7 @@ The GFX system uses a series of underlying renderers for whichever browser loads
 
 To define specifically which renderers can be used, and their relative priority, set the 'gfxRenderer' value in dojoConfig as a comma delimited string value, e.g. to specify that only SVG, Silverlight and VML should be used, and not Canvas, use:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript" src="dojo/dojo.js" data-dojo-config="parseOnLoad:true,gfxRenderer:'svg,silverlight,vml'"></script>
 
@@ -1464,7 +1464,7 @@ Not all doctypes will work with VML because VML was invented before the doctype,
 
 The following doctype has been shown to work in a majority of cases (and may be required for IE8). The additional styles also help with display problems of some shape types.
 
-.. code-block :: html
+.. html ::
 
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"

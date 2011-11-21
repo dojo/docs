@@ -25,7 +25,7 @@ Usage
 
 Mixin dijit._TemplatedMixin when you declare your widget:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -45,7 +45,7 @@ The template is specified in the widget attribute ``templateString``, and points
 
 It can either be specified as a literal string:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -57,7 +57,7 @@ It can either be specified as a literal string:
 
 or pulled in from a file using :ref:`dojo.cache() <dojo/cache>`
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -143,7 +143,7 @@ containerNode
 
 Often a widget declared in markup will have contents, i.e. it will contain some other DOM. For example:
 
-.. code-block:: html
+.. html ::
 
   <button data-dojo-type="dijit.form.Button">press me</button>
 

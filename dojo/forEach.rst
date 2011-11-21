@@ -14,7 +14,7 @@ dojo.forEach() cannot terminate a loop (save for throwing an exception). Use doj
 
 ``forEach`` is syntactic sugar for a regular 'ol for loop:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   for(var i=0; i<queueEntries.length; i++){
@@ -23,7 +23,7 @@ dojo.forEach() cannot terminate a loop (save for throwing an exception). Use doj
 
 (From dojo 1.7 on) It can be written as:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/array"], function(array){
@@ -34,7 +34,7 @@ dojo.forEach() cannot terminate a loop (save for throwing an exception). Use doj
 
 (Before dojo 1.7) It can be written as:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.forEach(queueEntries, function(entry, i){
@@ -45,7 +45,7 @@ We use an anonymous function to define the operation. This function is always pa
 
 For this simple loop, `dojo.forEach` isn't anything exciting. But combined with other Dojo functions, especially :ref:`dojo.query() <dojo/query>`, it becomes remarkably useful. Consider this snippet, which disables all ``<select>`` tags on the page:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -70,7 +70,7 @@ How cool is that? (Answer: very!) There's no monkeying around with DOM functions
 
 Running ``dojo.forEach`` on a ``dojo.query`` result is so common, that Dojo defines a shortcut:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // Dojo 1.7+ (AMD)
@@ -87,7 +87,7 @@ Running ``dojo.forEach`` on a ``dojo.query`` result is so common, that Dojo defi
 
 does the same thing. But that's not all! New in 1.0 you can collapse the function down to its body, passed in as a string like so:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // Dojo 1.7+ (AMD)

@@ -29,7 +29,7 @@ The following step shows how to create a typical gantt chart in dojo.
 
 Step 1: Import related CSS file and required javacript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <link type="text/css" rel="stylesheet" href="{baseUrl}/dijit/themes/claro/claro.css">
@@ -42,7 +42,7 @@ Step 1: Import related CSS file and required javacript:
 
 Step 2: Declare gantt chart.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var ganttChart = new dojox.gantt.GanttChart({
@@ -55,7 +55,7 @@ Step 2: Declare gantt chart.
 
 Step 3: Add project with tasks.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var projec = new dojox.gantt.GanttProjectItem({

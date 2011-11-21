@@ -73,7 +73,7 @@ Query Syntax
 
 The fetch method query syntax for OpenSearchStore is limited to what the OpenSearch specification allows, which is a single parameter called 'searchTerms'.  The OpenSearchStore expects this parameter to be part of the query arguement of its fetch object as a name/value key set in JavaScript object.  For an example, see below:
 
-.. code-block :: javascript
+.. js ::
 
   var fetchArgs = {query: { searchTerms: "Some random terms"}, onComplete: function(items) { /* do something */});
   openSearchStore.fetch(fetchArgs);

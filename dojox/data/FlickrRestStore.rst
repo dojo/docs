@@ -58,7 +58,7 @@ Query the first three photos from a user
 
 **Response:**
 
-.. code-block :: javascript
+.. js ::
 
   jsonFlickrApi({
     "photos":{

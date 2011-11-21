@@ -32,7 +32,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.NormalizeStyle");
@@ -40,7 +40,7 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['normalizestyle']"></div>
 
@@ -63,7 +63,7 @@ The NormalizeStyle plugin supports two options that control how it formats the t
 
 How do I configure the options?  Glad you asked.  You do it where you declare the plugin.  See the following example, which configures an editor with css mode, and not ocndensing spans.
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'normalizestyle', mode: "css", condenseSpans: false}]">

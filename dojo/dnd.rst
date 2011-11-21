@@ -153,7 +153,7 @@ However, it is not recommended to access ``map`` directly. There are several uti
 
 ``forInItems()`` iterates over all DnD items in unspecified order. If you want to iterate over items in the order they are listed in the container you can use the code similar to this:
 
-.. code-block :: javascript
+.. js ::
 
   function OrderedIter(container, f, o){
     // similar to:
@@ -761,7 +761,7 @@ For High Contrast mode in Windows or when images have been turned off in the bro
 
 However, in order to detect that high contrast mode has been set on a MS Windows system, you will need to include an additional file from the dijit system on your pages which use DnD.  This file performs the check that high contrast mode has been set on a Windows system.  When high contrast mode is turned on all color references are reduced to just a foreground and background color and CSS background images are not displayed. For more information on Windows High Contrast mode see `Widgets and High Contrast Mode <http://dojotoolkit.org/community/a11yHighContrastMode>`_ . Since DnD uses background images for the icons, the character equivalents are rendered when High Contrast mode is detected.  You should include this additional file in all of your pages that use drag and drop in order to provide full accessibility.  Add the following in your page below the other dojo includes:
 
-.. code-block :: javascript
+.. js ::
 
   <script type="text/javascript" src="../../../dijit/_base/wai.js"></script>
 

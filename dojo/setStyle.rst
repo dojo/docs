@@ -21,7 +21,7 @@ Since Dojo 1.7, ``dojo.setStyle`` is exposed via the ``set`` method of the ``doj
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
 
   // Dojo 1.7+ (AMD)
   require(["dojo/dom-style"], function(domStyle){
@@ -50,7 +50,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``set`` is accessed from the ``dojo/dom-style`` module.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/dom-style", "dojo/query", "dojo/NodeList-dom"], function(domStyle, query){
@@ -83,7 +83,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setStyle`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo"], function(dojo){
@@ -117,7 +117,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value

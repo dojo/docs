@@ -13,7 +13,7 @@ dojox.rpc.Service is the foundation of most :ref:`RPC <dojox/rpc>` transportatio
 
 First, you need the code:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.rpc.Service");
 
@@ -33,7 +33,7 @@ Starting a Service
 
 Service is a constructor, returning a pointer to the API defined in the SMD.
 
-.. code-block :: javascript
+.. js ::
 
   var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
 
@@ -41,7 +41,7 @@ The ``google.smd`` file is located in a fixed location, available from :ref:`doj
 
 If the argument passed to ``new Service()`` is an object, it is assumed to be the direct service definition:
 
-.. code-block :: javascript
+.. js ::
 
   var goog = null;
   dojo.xhrGet({
@@ -54,7 +54,7 @@ If the argument passed to ``new Service()`` is an object, it is assumed to be th
 
 Or if it is a string, it will be treated as a URL, and the above code will be run for you:
 
-.. code-block :: javascript
+.. js ::
 
   // assuming your dojox/ is in js/
   var goog = new dojox.rpc.Service("js/dojox/rpc/SMDLibrary/google.smd");
@@ -62,7 +62,7 @@ Or if it is a string, it will be treated as a URL, and the above code will be ru
 Additionally, in 1.2 you are able to take advantage of :ref:`scriptFrame <dojox/io/scriptFrame>` transport, which will divert all traffic through a hidden iframe, preventing other :ref:`io.script <dojo/io/script>` processes from being 'blocked' while they wait on response data.
 Simply provide a ``frameDoc`` attribute and passed as an optional parameter to the constructor:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.io.scriptFrame");
   dojo.require("dojox.rpc.Service");
@@ -78,7 +78,7 @@ Using a Service
 
 Service, like io.script, works around Dojo's built in :ref:`Deferred <dojo/Deferred>` system, providing asynchronous communication around a familiar API. Once we've created our Service from an SMD, the methods defined in the SMD are available through the return handle provided.
 
-.. code-block :: javascript
+.. js ::
 
   var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc.SMDLibrary", "google.smd"));
   goog.webSearch({ q:"Dojo Toolkit" })

@@ -20,7 +20,7 @@ on each tick of the timer, as well as when starting or stopping it.
 The interval of each tick is settable, but the default is 1
 second--useful for driving something such as a clock.
 
-.. code-block :: javascript
+.. js ::
   
   dojo.require('dojox.timing');
   t = new dojox.timing.Timer(1000);

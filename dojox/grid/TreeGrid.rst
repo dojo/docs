@@ -54,7 +54,7 @@ Structure Definition
 
 An example 2-level TreeGrid defined via HTMl would look like this:
 
-.. code-block :: html
+.. html ::
 
   <table data-dojo-type="dojox.grid.TreeGrid">
     <thead>
@@ -76,7 +76,7 @@ An example 2-level TreeGrid defined via HTMl would look like this:
 
 The equivalent javascript structure definition would be:
 
-.. code-block :: javascript
+.. js ::
 
   var structure = [
     {
@@ -106,7 +106,7 @@ In order to support lazy loading of children, you can specify itemAggregates. Th
 
 NOTE: itemAggregates are specified for *direct children* only - for example, in a 3-level TreeGrid, you would specify:
 
-.. code-block :: html
+.. html ::
 
   <table data-dojo-type="dojox.grid.TreeGrid">
     <thead>
@@ -144,7 +144,7 @@ Formatting
 
 Sometimes it is desirable to format the aggregations differently than the actual values. In order to facilitate this, the formatter is called with the row number for actual values, and a negative value for row number indicating the level (1-based, to avoid confusion with row index) the aggregation is happening at. For example, if you were to format gcField1 (in the example above) with the following formatter:
 
-.. code-block :: javascript
+.. js ::
 
   function fmt(value, rowIdx){
     if(rowIdx >= 0){

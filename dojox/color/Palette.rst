@@ -18,7 +18,7 @@ project for themes.
 
 To create a Palette based on a set of colors, simply pass them into the constructor:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var p = new dojox.color.Palette("#f1c4d2");
@@ -28,7 +28,7 @@ To create a Palette based on a set of colors, simply pass them into the construc
 
 To access the colors in the palette, simply iterate through the ``.colors`` property:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var p = dojox.color.Palette.generate("#789abc", "splitComplimentary");
@@ -39,7 +39,7 @@ To access the colors in the palette, simply iterate through the ``.colors`` prop
 To perform a *translation* on a palette, pass a keyword arguments object to the ``transform``
 method of the palette.  The keyword arguments object takes the form of:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var args = {
@@ -58,7 +58,7 @@ The *use* keyword specifies which color model you are using for the transform.  
 The parameters beginning with **d** all specify the change to the particular attribute of the color
 model in question.  For example, to increase the hue on all colors in a palette, you'd do this:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var transformed = myPalette.transform({
@@ -72,7 +72,7 @@ of dojox.color.Palette, and leaves the original alone.
 
 In addition, all Palettes can be cloned using the ``.clone`` method:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var cloned = myPalette.clone();
@@ -81,7 +81,7 @@ If you would like to generate a palette using a specific color theory, you can d
 ``generate`` method, implemented directory on ``dojox.color.Palette``.  For example, if you want to generate
 a palette based on complimentary color theory:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var p = dojox.color.Palette.generate("#a245f9", "complimentary");

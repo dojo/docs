@@ -22,7 +22,7 @@ Since Dojo 1.7, ``dojo.setProp`` is exposed via the ``set`` method of the ``dojo
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7+ (AMD)
@@ -53,7 +53,7 @@ Dojo 1.7+ (AMD)
 
 When using AMD format in a fully baseless application, ``set`` is accessed from the ``dojo/dom-prop`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom-prop", "dojo/dom-style"], function(domProp, domStyle){
       // Set the tab index
@@ -86,7 +86,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setProp`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // Set the tab index
@@ -120,7 +120,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   // Set the tab index
   dojo.setProp("nodeId", "tabIndex", 3);

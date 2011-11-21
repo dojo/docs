@@ -29,7 +29,7 @@ Basic Usage
 -----------
 Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript">
     dojo.require("dijit.Editor");
@@ -42,7 +42,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
 
 Then just declare the plugin and configure it as follows. Note that the location of AutoSave.css may be changed according to the actual environment.
 
-.. code-block :: html
+.. html ::
 
   <style type="text/css">
     @import "../plugins/resources/css/AutoSave.css";

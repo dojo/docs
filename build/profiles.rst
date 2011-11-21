@@ -35,7 +35,7 @@ Dependencies Object
 
 The top level object in the profile should be of the general format:
 
-.. code-block :: javascript
+.. js ::
 
   dependencies: {
      layers: [
@@ -61,7 +61,7 @@ Layers
 
 Each member of the top level ``layers`` array is an object similar to (in many builds, only a few of these options will be used):
 
-.. code-block :: javascript
+.. js ::
 
   {
     name: "string.discard",
@@ -134,7 +134,7 @@ Prefixes
 
 An array of prefix descriptors, where each prefix descriptor is a length == 2 array of strings, similar to this:
 
-.. code-block :: javascript
+.. js ::
 
         prefixes: [
                 [ "dijit", "../dijit" ],
@@ -155,7 +155,7 @@ Note:  If you have a custom module namespace outside of the Dojo source distribu
 
 Note: It is entirely incorrect to include a 'dojo' prefix (i.e. "dojo", "../dojo") in the prefixes.  This will prevent anything being copied to the releaseDir and break the build.
 
-.. code-block :: javascript
+.. js ::
 
         prefixes: [
                 [ "dijit", "../dijit" ],

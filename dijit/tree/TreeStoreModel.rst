@@ -10,7 +10,7 @@ employees report directly or indirectly to the CEO.
 
 Here's an example of a declarative initialization for a TreeStoreModel and for the data store that it connects to:
 
-.. code-block :: html
+.. html ::
 
 	<div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="store"
 		data-dojo-props="url:'../tests/_data/treeTest.json'></div>
@@ -27,7 +27,7 @@ A few things to note here:
 Here's a much more complicated where we've overridden the getChildren() method because in the
 data store a child references it's parent rather than vice-versa.
 
-.. code-block :: html
+.. html ::
 
 	<div data-dojo-type="dijit.tree.TreeStoreModel" data-dojo-id="model" data-dojo-props="store:store">
 		<script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">

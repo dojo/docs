@@ -54,7 +54,7 @@ Examples
 Declarative example1
 --------------------
 
-.. code-block :: html
+.. html ::
 
 	<script>
 		var model;

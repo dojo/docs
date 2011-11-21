@@ -27,7 +27,7 @@ As a shorthand, if a function is passed (instead of an object) to a selector, it
 
 Dojo 1.7 (AMD)
 --------------
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/behavior"], function(behavior){
       behavior.add({
@@ -42,7 +42,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojo.behavior");
   dojo.behavior.add({
@@ -62,7 +62,7 @@ Behaviors with events
 
 Beyond simple application, we can bind selectors to Dom Events, and more, using an Object hash. Simply pass the selector and object with named events, and functions as handlers.
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7 (AMD)
   require(["dojo/behavior"], function(behavior){
@@ -117,7 +117,7 @@ Behaviors with topics
 
 Using Dojo's :ref:`native topic system <quickstart/topics>`, you can pass a named channel, and any node found during the apply() period will publish on that channel:
 
-.. code-block :: javascript
+.. js ::
 
   // dojo 1.7 (AMD)
   require(["dojo/behavior", "dojo/_base/connect"], function(behavior, connect){

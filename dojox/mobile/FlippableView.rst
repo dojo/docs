@@ -42,7 +42,7 @@ Declarative example
 
 In this example, there are two FlippableViews, and the user can swipe the screen to flip the views back and forth.
 
-.. code-block :: html
+.. html ::
 
   <div id="foo" dojoType="dojox.mobile.FlippableView" selected="true">
     <h2 dojoType="dojox.mobile.RoundRectCategory">Page flipping demo</h2>

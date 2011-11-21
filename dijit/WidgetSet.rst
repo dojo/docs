@@ -25,7 +25,7 @@ Usage
 Adding a widget to a WidgetSet
 ------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var ws = new WidgetSet();
@@ -34,7 +34,7 @@ Adding a widget to a WidgetSet
 Removing a widget from a WidgetSet
 ----------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   ws.remove("MyWidgetId");
@@ -42,7 +42,7 @@ Removing a widget from a WidgetSet
 Iterating over a list of widgets
 --------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   ws.forEach(function(widget, index, hash){
@@ -52,7 +52,7 @@ Iterating over a list of widgets
 Converting a WidgetSet to an array
 ----------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var widgetArray = ws.toArray();
@@ -60,7 +60,7 @@ Converting a WidgetSet to an array
 Chaining forEach and byClass calls
 ----------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   ws.forEach(function(widget){
@@ -69,7 +69,7 @@ Chaining forEach and byClass calls
 
 The functions filter, forEach, map, every and some all accept a `thisObject` in the last position. This is in line with all other Dojo array functions and allows for transparent scope manipulation:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // we are in some object, like a Widget
@@ -82,7 +82,7 @@ Filtering a list of widgets
 
 This example filters all even widgets from the list, then iterates over the remainder:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // filter out even widgets, and iterate over the remainder
@@ -95,14 +95,14 @@ This example filters all even widgets from the list, then iterates over the rema
 Inspecting how many widgets are in a WidgetSet
 ----------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   if(ws.length){
     // there is at least one widget in this WidgetSet
   }
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   if(ws.byClass("dijit.Dialog").length){
@@ -116,7 +116,7 @@ Other examples
 Retrieving all DOM nodes for a set of widgets
 ---------------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // get the actual domNode which represents the widgets in this list:
@@ -127,7 +127,7 @@ Retrieving all DOM nodes for a set of widgets
 Validating all widgets in a WidgetSet
 -------------------------------------
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var isValid = ws.every(function(widget){

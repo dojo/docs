@@ -111,7 +111,7 @@ Prerequisites
 
 The pagination plugin is only available for EnhancedGrid. Please use the following statement at first:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.grid.EnhancedGrid");
@@ -124,7 +124,7 @@ The declaration name of this plugin is ``pagination``. It is declared in the ``p
 
 If your grid is created declaratively:
 
-.. code-block :: html
+.. html ::
 	:linenos:
 
 	<div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
@@ -135,7 +135,7 @@ If your grid is created declaratively:
 
 If your grid is created programmatically:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({

@@ -30,13 +30,13 @@ REST stands for Representational State Transfer.  It basically leverages the HTT
 
 All resources are identified by the use of a URI, and there are two types of URIs used, collection URIs and element URIs.  For example, let's assume we have a server that is providing data about users.  The following URI would refer to the users:
 
-.. code-block:: html
+.. html ::
 
 	http://example.com/users/
 
 Now if we wanted to refer to just a specific user, we would add the specific resource identifier to the URI.  For example:
 
-.. code-block:: html
+.. html ::
 
 	http://example.com/users/1/
 
@@ -44,19 +44,19 @@ This would refer to the user who has an identity of ``1``.
 
 Building on the resource identification, all the Create, Read, Update and Delete (CRUD) functions are available via the use of the HTTP protocol verbs.  The main ones being ``GET``, ``POST``, ``PUT`` and ``DELETE``.  Different parts of a collection can be specified by adding another collection identifier after an element identifier in the URI.  Also, a provider could provide access to data in different ways in a fashion that is most logical.  For example, users might have a set of groups they belong to.  A provider could provide the groups the user belongs to by using the following URI:
 
-.. code-block:: html
+.. html ::
 
 	http://example.com/users/1/groups/
 
 And provide all the possible groups via the URI:
 
-.. code-block:: html
+.. html ::
 
 	http://example.com/groups/
 
 And even provide all the users that are part of a specific group:
 
-.. code-block:: html
+.. html ::
 
 	http://example.com/groups/1/users/
 
@@ -74,13 +74,13 @@ GET
 
 The HTTP verb ``GET`` is used to list or retrieve resources.  For collections, the service should return an array of items that are members of the collection.  These can be the full details, or just information on where to find the additional data about each resource.  So the following:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/users/
 
 Would retrieve something like:
 
-.. code-block:: javascript
+.. js ::
 
 	[
           {"id": 1, "userName": "jsmith", "firstName": "John", "lastName": "Smith"},
@@ -90,13 +90,13 @@ Would retrieve something like:
 
 While requesting a specific resource like:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/users/1/
 
 Would return just the object:
 
-.. code-block:: javascript
+.. js ::
 
         {"id": 1, "userName": "jsmith", "firstName": "John", "lastName": "Smith"}
 
@@ -106,7 +106,7 @@ POST
 
 The HTTP verb ``POST`` is used to create new resources.  Again, REST does not specify how the data is sent, it could be traditional form encoded data, but both the Dojo implementations of REST will ``POST`` new records, and expect the server to provide the appropriate location URI for the new resource.  The server should respond with a ``Location:`` response header like:
 
-.. code-block:: html
+.. html ::
 
 	Location: http://www.example.com/users/4/
 
@@ -140,7 +140,7 @@ The :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` defaults to assuming the id
 
 An example of programatically creating a full featured store would be:
 
-.. code-block:: javascript
+.. js ::
 
 	var userMemoryStore = new dojo.store.Memory();
 	var userJsonRestStore = new dojo.store.JsonRest({target: "/users/"});
@@ -155,7 +155,7 @@ Introduced in Dojo 1.2, the :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestS
 
 An example programmatic declaration would be:
 
-.. code-block:: javascript
+.. js ::
 
 	var userDataStore = new dojox.data.JsonRestStore({
 	  target: "/users/",
@@ -164,7 +164,7 @@ An example programmatic declaration would be:
 
 An example of declarative would be:
 
-.. code-block:: html
+.. html ::
 
 	<div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore"
 	    data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
@@ -184,7 +184,7 @@ Sorting
 
 Widgets can specify sorting and those are passed as part of the query string of the URI on the ``GET``.  The sort is specified by the `sort` attribute in either the ``store.get()`` or ``datastore.fetch()`` function.  This gets converted into a query attribute named ``sort`` with a comma separated list of attributes with a ``+`` or ``-`` indicating if the attributes should be sorted ascending or descending.  For example, the following sort value:
 
-.. code-block:: javascript
+.. js ::
 
 	{sort: [
 	  {attribute: "id"},
@@ -193,7 +193,7 @@ Widgets can specify sorting and those are passed as part of the query string of 
 
 Would translate into the following:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/users/?sort(+id,-userName)
 
@@ -204,7 +204,7 @@ Widgets can (and do) specify a ``start`` and ``count`` attributes when accessing
 
 For example, the following:
 
-.. code-block:: javascript
+.. js ::
 
 	{
 	  start: 5,
@@ -213,7 +213,7 @@ For example, the following:
 
 Would result in the following HTTP request header being sent:
 
-.. code-block:: html
+.. html ::
 
 	Range: items=5-15
 
@@ -221,7 +221,7 @@ Any server should respond by setting the ``Content-Range`` header with the value
 
 So, if a request was for a count of 10 items starting at 5, but there are only 10 items in total, the following HTTP responde header should be set:
 
-.. code-block:: html
+.. html ::
 
 	Content-Range: items 5-9/10
 
@@ -234,13 +234,13 @@ While JSON is a great way of describing arbitrary objects, it doesn't have a sta
 
 Mainly, it focuses on the attribute name ``$ref`` which provides a "pointer" to the rest of the data.  In a REST services, this is a URI.  When a client requests the data from the store, and the store doesn't have it, it will attempt to fetch the data at the supplied URI.  The typical way this is used is on collection URIs to provide references to the full resource, when you only want to provide a portion of the data up front.  For example, let's assume you want to provide information about pages of a book and you have the following collection URI:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/book/1/page/
 
 Which returns an array that provides some basic information, but not the content of the page, but a reference to the item:
 
-.. code-block:: javascript
+.. js ::
 
 	[
 	  {"id": "page/1", "chapter": "1", "$ref": "page/1"},
@@ -250,13 +250,13 @@ Which returns an array that provides some basic information, but not the content
 
 And then something tries to attempt to access an attribute of a page that isn't loaded (like ``text``) the store will attempt to do the following:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/book/1/page/1/
 
 Which could result in you returning the whole object, that would have been inefficient until the consumer needed the data:
 
-.. code-block:: javascript
+.. js ::
 
 	{
 	  "id": "1",
@@ -266,13 +266,13 @@ Which could result in you returning the whole object, that would have been ineff
 
 The other main way to use ``$ref`` in a REST environment is to specify children.  Again, speaking about a book, we could provide a reference back when a request is made to a collection or resource URI:
 
-.. code-block:: html
+.. html ::
 
 	GET http://example.com/book/1/
 
 Would return something like:
 
-.. code-block:: javascript
+.. js ::
 
 	{
 	  "id": "1",

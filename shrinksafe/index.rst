@@ -29,7 +29,7 @@ Usage
 Shrinksafe can operate on a list of file or urls, or if none are specified it will use stdin.  Output goes to stdout, which may be redirected
 to a file or process.
 
-.. code-block :: javascript
+.. js ::
 
   java -jar shrinksafe.jar bigcode.js > smallercode.js   Compresses bigcode.js to smallercode.js
 
@@ -44,7 +44,7 @@ to a file or process.
 
 ShrinkSafe uses the encoding settings for the JVM, which may vary depending on your JDK installation.  To override the encoding, use the file.encoding system property:
 
-.. code-block :: javascript
+.. js ::
 
   java -jar -Dfile.encoding=UTF8 shrinksafe.jar
 

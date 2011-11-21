@@ -18,13 +18,13 @@ dojo/json parse
 
 The module provides two functions, parse() and stringify(). The parse() function has a single required argument, the JSON string to be parsed, and an optional second argument indicating if secure parsing should always be used. The signature is:
 
-.. code-block :: javascript
+.. js ::
   
   jsonModule.parse(jsonString, secure);
 
 To parse a JSON string into a parsed value, we can use the dojo/json this:
 
-.. code-block :: javascript
+.. js ::
   
   define(["dojo/json"], function(JSON) {
     var parsed = JSON.parse(jsonString);
@@ -32,7 +32,7 @@ To parse a JSON string into a parsed value, we can use the dojo/json this:
 
 If the target platform supports native JSON parsing, dojo/json will always use the native parser (and serializer). If no native parsing is available, dojo/json will use eval() to parse the JSON. When eval() is used, the parse() function's second argument indicates if secure parsing should be used. Secure parsing will verify that the JSON is safe before evaluating it. Performing this verification is slower than directly evaluating, and secure parsing should only be used if the JSON is from an unsecure source. The second argument has no effect on browsers with native parsing, since native parsing is always secure. For example, to parse a string securely, we could write:
 
-.. code-block :: javascript
+.. js ::
   
   define(["dojo/json"], function(JSON) {
     var parsed = JSON.parse(unsecureJSONString, true);
@@ -44,14 +44,14 @@ dojo/json stringify
 
 The stringify() function takes a JavaScript value and serializes it to JSON. The signature of stringify is:
 
-.. code-block :: javascript
+.. js ::
 
   jsonModule.stringify(value);
 
 
 For example, to serialize an object we could write:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/json"], function(JSON) {
     var jsonString = JSON.stringify(object);

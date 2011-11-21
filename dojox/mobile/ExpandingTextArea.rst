@@ -43,7 +43,7 @@ Examples
 Simple ExpandingTextArea
 ------------------------
 
-.. code-block :: html
+.. html ::
 
   <textarea dojoType="dojox.mobile.ExpandingTextArea">line 1
   line 2</textarea>
@@ -54,7 +54,7 @@ Simple ExpandingTextArea
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <textarea data-dojo-type="dojox.mobile.ExpandingTextArea" cols="40"
     data-dojo-props='value:"line 1\nline 2\nline 3", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>

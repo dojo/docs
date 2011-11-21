@@ -27,7 +27,7 @@ Usage
 
 To use the PasswordValidator, you wrap 2 or 3 html input widgets with the validator:
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.form.PasswordValidator" name="pwValidate">
     <input type="password" pwType="old" />

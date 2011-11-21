@@ -16,7 +16,7 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
 
 **Example data structure for ItemFileReadStore:**
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { identifier: 'name',
@@ -141,7 +141,7 @@ Okay, hopefully the above example helped visually display how nested items are r
 Example 2:  A hierarchical format without references
 ----------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { identifier: 'name',
@@ -260,7 +260,7 @@ Okay, great!  Two examples showing examples of hierarchical structures using one
 Sample code:  Detecting child items
 -----------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
@@ -301,7 +301,7 @@ Okay, detecting if items contain child items looks simple; one function call to 
 Sample code:  Detecting child items and lazy-loading items on demand
 --------------------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});

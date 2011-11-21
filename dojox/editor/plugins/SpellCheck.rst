@@ -37,7 +37,7 @@ Basic Usage
 -----------
 Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript">
     dojo.require("dijit.Editor");
@@ -55,7 +55,7 @@ Configure the server-side php file.
 
 Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
 
-.. code-block :: html
+.. html ::
 
   <style type="text/css">
     @import "../plugins/resources/css/SpellCheck.css";
@@ -102,13 +102,13 @@ If you want to use this feature in your application, you need to understand the 
 
 SpellCheck adopts JSONP protocol and uses GET request to send the words that are to be checked. Suppose we have a plugin declaration as follows.
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
 
 The request may look like the following:
 
-.. code-block :: html
+.. html ::
 
   GET spellCheck.php?lang=EN&action=query&content=the%20is%20a%20demo%20to%20show%20how%20use%20spell%20check%20plugin%20you%20need%20php%20server%20test%20this%20please%20enable%20dojox%20editor&callback=dojo.io.script.jsonp_dojoIoScript1._jsonpCallback
 
@@ -120,7 +120,7 @@ We have three parameters in the request: content, callback and lang.
 
 What the server-side piece response should follow the format below:
 
-.. code-block :: javascript
+.. js ::
 
   callbackName(
     response:[
@@ -132,7 +132,7 @@ What the server-side piece response should follow the format below:
 
 The callbackName gets from the "callback" parameter in the request. And you should not rename "response", "text" and "suggestion" in the template to other words. The response may look like the following.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({response:[{"text":"spellcheck","suggestion":[]},{"text":"porterstemmer","suggestion":[]},{"text":"i","suggestion":[]},{"text":"errir","suggestion":["terror"]},{"text":"thi","suggestion":["hit","the","thin","this","tie"]},{"text":"wrng","suggestion":["warn","wrong"]},{"text":"txt","suggestion":["tax"]}]});
 
@@ -231,7 +231,7 @@ Because different languages may have different ways to identify a "word", SpellC
 
 If there is more than one parser, the first registered one wins. An example follows.
 
-.. code-block :: javascript
+.. js ::
 
   dojo.provide("dojox.editor.plugins._CustomizedSpellCheckParser");
   

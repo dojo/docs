@@ -29,7 +29,7 @@ the final ``staticHasFeature`` map. For example, assume the following two profil
 
 *profile-a*
 
-.. code-block :: javascript
+.. js ::
 
   profile = {
 	  staticHasFeatures:{
@@ -43,7 +43,7 @@ the final ``staticHasFeature`` map. For example, assume the following two profil
 
 *profile-b*
 
-.. code-block :: javascript
+.. js ::
 
   profile = {
 	  staticHasFeatures:{
@@ -62,7 +62,7 @@ If these two profiles were provided on the command line as follows
 
 Then the aggregate profile would have the following value for the property ``staticHasFeatures``:
 
-.. code-block :: javascript
+.. js ::
 
   staticHasFeatures:{
       featureX:1,       // only mentioned in profile-a
@@ -75,7 +75,7 @@ that property.
 
 Has feature values are used to transform two kinds of expressions:
 
-.. code-block :: javascript
+.. js ::
 
   // adding a has test
   has.add("feature-value", //other stuff
@@ -107,7 +107,7 @@ Compiler, which will eliminate the dead code, while maintaining intended semanti
 ``now`` parameter that instructs the function to execute the test immediately and return result. For example, if the has
 feature "featureX" is set to truthy in ``staticHasFeatures``, then the following code
 
-.. code-block :: javascript
+.. js ::
 
   if(has.add("featureX", function(){ /* some test */}, 1)){
       // do something
@@ -118,7 +118,7 @@ feature "featureX" is set to truthy in ``staticHasFeatures``, then the following
 Would be transformed to
 
 
-.. code-block :: javascript
+.. js ::
 
   if(true || has.add("featureX", function(){ /* some test */}, 1)){
       // do something
@@ -128,7 +128,7 @@ Would be transformed to
 
 Which would be reduced to
 
-.. code-block :: javascript
+.. js ::
 
       // do something
 
@@ -141,7 +141,7 @@ Similarly, has feature tests with know values are replaced with the constant int
 true) and ``0`` (if the static value if false). For example, for "featureX" set static true as described above, then the
 following code
 
-.. code-block :: javascript
+.. js ::
 
   if(has("featureX")){
       // do something
@@ -152,7 +152,7 @@ following code
 Would be transformed to
 
 
-.. code-block :: javascript
+.. js ::
 
 
   if(1){
@@ -163,7 +163,7 @@ Would be transformed to
 
 Which would be reduced to
 
-.. code-block :: javascript
+.. js ::
 
       // do something
 

@@ -33,7 +33,7 @@ Usage
 
 Dojo's implementation of has() is provided by the dojo/has.js module.  In order to use this module, it must be added to your module's define dependency list, for example:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   define(["dojo/has", "dojo/_base/kernel"], function(has, dojo){
@@ -43,7 +43,7 @@ Dojo's implementation of has() is provided by the dojo/has.js module.  In order 
 
 Currently, the testing convention is `has('somefeature')` returns Boolean, e.g.:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  if(has("function-bind")){
@@ -54,7 +54,7 @@ Currently, the testing convention is `has('somefeature')` returns Boolean, e.g.:
     
 In the real world, this may translate into something like:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  mylibrary.trim = has("string-trim") ? function(str){
@@ -76,7 +76,7 @@ Testing Registration
 
 Each test is self-contained. Register a test with `has.add()`:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  has.add("some-test-name", function(global, document, anElement){
@@ -90,7 +90,7 @@ Each test is self-contained. Register a test with `has.add()`:
     
 You can register and run a test immediately by passing a truthy value after the test function:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  has.add("some-other-test", function(){
@@ -99,7 +99,7 @@ You can register and run a test immediately by passing a truthy value after the 
 
 This is preferred over what would seem a much more effective version:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // this is not wrapped in a function, and should be:
@@ -113,7 +113,7 @@ Dojo 1.7 Feature Names
 
 The following feature tests are available in Dojo 1.7.  This table shows the module in which the feature test is added, and the name of the feature test.  View the source code of each module to understand exactly how the test is performed (explicit testing, inference, user agent sniff etc.)
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   dojo/_base/browser.js , config-selectorEngine
@@ -174,7 +174,7 @@ The following feature tests are available in Dojo 1.7.  This table shows the mod
 
 Note: The above list was generated automatically with the following script in the root of the src dir, and edited manually:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   grep -r --include=*.js "has.add(\"" * | awk -F"[ \t\":,]+" '{ print " ",$1,",", $3}'

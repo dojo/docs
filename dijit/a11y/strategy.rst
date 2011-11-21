@@ -21,7 +21,7 @@ For example, in the default Dojo theme called tundra, the close icon for a dialo
 
 Within the dialog template there is an additional span that contains the character ‘x’ to serve as the text alternative for the background image icon.
 
-.. code-block :: javascript
+.. js ::
 
   <div class="dijitDialog" tabindex="-1" role="dialog" aria-labelledby="${id}_title">
     <div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
@@ -35,7 +35,7 @@ Within the dialog template there is an additional span that contains the charact
 
 This span has a style of .closeText which is defined as follows:
 
-.. code-block :: css
+.. css ::
 
   .dijitDialog .closeText {
         display:none;
@@ -45,7 +45,7 @@ This span has a style of .closeText which is defined as follows:
 Notice that the closeText style is encapsulated within .dijitDialog so this style applies when it is cascaded within an element which has the
 .dijitDialog style applied. The span with .closeText applied is set to display:none. The dijit.css style sheet contains an additional style:
 
-.. code-block :: css
+.. css ::
 
   .dijit_a11y .dijitDialog .closeText {
         display:inline;

@@ -48,7 +48,7 @@ Examples
 Simple TextBox
 --------------
 
-.. code-block :: html
+.. html ::
 
   <input dojoType="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
 
@@ -58,7 +58,7 @@ Simple TextBox
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <input data-dojo-type="dojox.mobile.TextBox" style="background-color:lightgray;"
         data-dojo-props='maxLength:10, value:"some data", onChange:function(newValue){ alert("value changed to " + newValue); }' />

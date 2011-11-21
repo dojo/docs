@@ -40,7 +40,7 @@ Declarative example
 
 In this example, there are two SwapViews, and the user can swipe the screen to move the views back and forth.
 
-.. code-block :: html
+.. html ::
 
   <div id="foo" dojoType="dojox.mobile.SwapView">
     <h2 dojoType="dojox.mobile.RoundRectCategory">Page flipping demo</h2>

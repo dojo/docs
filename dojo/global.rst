@@ -25,7 +25,7 @@ In a browser environment, dojo.global is the window object. You should refer to 
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

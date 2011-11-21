@@ -29,7 +29,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <div dojoType="dojox.mobile.RoundRect" shadow="true">
     This module provides some widgets that can be used to build web-based

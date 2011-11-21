@@ -235,7 +235,7 @@ Loading Dojo Mobile (using Dojo 1.7+ preferred api's):
 This example assumes Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
 helps ensure the bare minimum code is used, and loaded as fast as possible.
 
-.. code-block :: javascript
+.. js ::
  
   require([
     "dojox/mobile/parser", 	// (Optional) This mobile app uses declarative programming with fast mobile parser
@@ -254,7 +254,7 @@ Loading Dojo Mobile (using Dojo pre-1.7 style api's):
 
 This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
 
-.. code-block :: javascript
+.. js ::
      
     dojo.require("dojox.mobile"); // Load the basic mobile widget kernel and support code.
     dojo.require("dojox.mobile.parser"); // (Optional) Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
@@ -266,7 +266,7 @@ Applying a Mobile Device Theme Using CSS
 
 Selecting the CSS to apply (iphone, android, blackberry or custom) is equally simple:
 
-.. code-block :: html
+.. html ::
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css"></link>
 

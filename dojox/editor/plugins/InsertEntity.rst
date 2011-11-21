@@ -30,7 +30,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.InsertEntity");
@@ -38,14 +38,14 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity']"></div>
 
 
 You also need to include the CSS for it.  For example:
 
-.. code-block :: html
+.. html ::
 
   <style>
     @import "dojox/editor/plugins/resources/css/InsertEntity.css";
@@ -60,7 +60,7 @@ Limitations
 
 Something to be aware of is that if you also use the :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>` plugin is that you will need to reconfigure PrettyPrint to escape more entities.  Otherwise, entity encoding will not be preserved when the value is retrieved from the editor.  This can be done as follows:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity', {name: 'prettyprint' entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]"></div>
 

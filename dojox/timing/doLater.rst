@@ -24,7 +24,7 @@ One use of doLater is controlling a Flash SWF. A SWF takes some time to load, an
 
 The following example shows basic usage of doLater. The property "swf" represents an actual SWF file, and is sent to doLater to determine if it exists. If it does not exist, doLater returns true for "yes, we will do later", so that the function can terminate. The original caller (tellSwfPlay) and its arguments (frameNumber) are held by doLater for a set interval, after which the call is made again repeatedly until the swf property returns something "truthy":
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var tellSwfPlay = function(frameNumber){
@@ -34,7 +34,7 @@ The following example shows basic usage of doLater. The property "swf" represent
  
 The second argument for doLater allows for context so the code can be executed from within objects:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  swfController.play = function(frameNumber){
@@ -46,7 +46,7 @@ The interval of doLater calls defaults to 100 milliseconds and can be changed wi
 
 The next example shows that the first argument does not have to be a property, it can be any expression that results in true or false:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  var count = 0

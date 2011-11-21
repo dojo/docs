@@ -40,7 +40,7 @@ Examples
 Simple CheckBox
 ---------------
 
-.. code-block :: html
+.. html ::
 
   <input dojoType="dojox.mobile.CheckBox" type="checkbox" />
 
@@ -50,7 +50,7 @@ Simple CheckBox
 onChange handler in HTML5 format
 --------------------------------
 
-.. code-block :: html
+.. html ::
 
   <input data-dojo-type="dojox.mobile.CheckBox" type="checkbox" data-dojo-props='
         onChange:function(checked){ alert("checked state changed to " + checked); },

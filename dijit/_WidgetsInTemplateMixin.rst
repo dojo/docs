@@ -18,7 +18,7 @@ The :ref:`_TemplatedMixin <dijit/_TemplatedMixin>` page describes how to make wi
 
 But what if we want to have a widget inside of the template, as in:
 
-.. code-block :: html
+.. html ::
 
   <div class="combinedDateTime">
      <div data-dojo-type="dijit.form.DateTextBox"></div>
@@ -34,7 +34,7 @@ data-dojo-attach-point
 
 In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, not to a DOM node. For example, with this template:
 
-.. code-block :: html
+.. html ::
 
   <div class="combinedDateTime">
      <div data-dojo-type="dijit.form.DateTextBox" data-dojo-attach-point="start"></div>
@@ -43,7 +43,7 @@ In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, no
 
 You can do this in your widget code:
 
-.. code-block :: javascript
+.. js ::
 
   this.start.attr('value', new Date());
 
@@ -53,7 +53,7 @@ data-dojo-attach-event
 
 data-dojo-attach-event also functions to attach a widget event (not a DOM event) on the sub widget to the main widget. For example, consider InlineEditBox which embeds dijit buttons into it's own template:
 
-.. code-block :: html
+.. html ::
 
   <fieldset data-dojo-attach-point="editNode" role="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
 	data-dojo-attach-event="onkeypress: _onKeyPress"

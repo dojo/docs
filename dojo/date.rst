@@ -31,7 +31,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/date"], function(date){
      var date1 = new Date(2000, 2, 1);
@@ -49,7 +49,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
     dojo.require("dojo.date");
     

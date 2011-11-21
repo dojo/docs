@@ -13,7 +13,7 @@ This project provides client-side syntax highlighting for a number of languages,
 
 To use the Highlight engine, require it into your page, along with any appropriate language packs:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.highlight");
   dojo.require("dojox.highlight.languages.javascript");
@@ -47,7 +47,7 @@ The rollups _www and _html are provided as layers, for related code inclusion.
 
 The name in parenthesis indicate that which you should dojo.require() to load the definitions. eg:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.require("dojox.highlight.languages.pygments.css"); // add CSS rules to the engine
 
@@ -56,13 +56,13 @@ Highlight Styles
 
 Highlight is entirely CSS based, so you will need the appropriate CSS file. The default system css is available in the resources/ folder by the name of highlight.css:
 
-.. code-block :: html
+.. html ::
 
     <link rel="stylesheet" href="/js/dojox/highlight/resources/highlight.css" />
 
 Additionally, the Pygments CSS files are located in resources/pygments/ and are described by a theme name. Simply load in the appropriate theme you choose:
 
-.. code-block :: html
+.. html ::
 
     <link rel="stylesheet" href="/js/dojox/highlight/resources/pygments/colorful.css" />
 
@@ -87,13 +87,13 @@ Using Highlight
 
 After loading in the highlight engine, and putting the CSS on the page, the only remaining step it to highlight the nodes. Highlight acts on ``<code>`` blocks. It can be instantiated just as any other widget in Dojo by using the data-dojo-type:
 
-.. code-block :: html
+.. html ::
 
       <code data-dojo-type="dojox.highlight.Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
 
 Or by calling ``dojox.highlight.init(someNode)``.
 
-.. code-block :: javascript
+.. js ::
 
   // attempt to highlight all <code> blocks on a page:
   dojo.query("code").forEach(dojox.highlight.init);

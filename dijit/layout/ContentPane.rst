@@ -47,7 +47,7 @@ onDownloadError(error)
 
 An example of using a callback might be as follows:
 
-.. code-block :: javascript
+.. js ::
 
   var myCp= dijit.byId("myContentPane");
   myCp.attr("onDownloadEnd", function(){

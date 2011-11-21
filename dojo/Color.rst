@@ -57,7 +57,7 @@ Creating color objects with the constructor
 
 A new color object is either created by using the constructor or any of the utility functions. Next are some examples of using the constructor with different arguments:
 
-.. code-block:: javascript
+.. js ::
 
   // Creates an empty color object for later use
   var emptyColor = new dojo.Color();
@@ -80,31 +80,31 @@ Using the colorFrom* utility functions
 
 All these expressions result in the same value, a dojo.Color object representing red with no transparency (full opacity):
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromHex("#FF0000")
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromHex("#F00")
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromArray([255, 0, 0])
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromArray([255, 0, 0, 1])
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromRgb("rgb(255, 0, 0)")
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromRgb("rgba(255, 0, 0, 1)")
 
-.. code-block:: javascript
+.. js ::
 
   dojo.colorFromString("red")
   // as mentioned above, you could also pass a hex string or an rgb(a) string
@@ -119,7 +119,7 @@ Returning specific formats with the object methods
 
 The color object also provides some methods to return the color in a desired format, toRgb(), toRgba(), toHex(), toCss() and toString().
 
-.. code-block:: javascript
+.. js ::
 
   // First create a color object, containing red
   var myColor = dojo.colorFromString("red");
@@ -139,7 +139,7 @@ Using the color object as a value
 
 The last example shows how one can use the color object directly to change the properties of an element:
 
-.. code-block:: javascript
+.. js ::
 
   var myColor = dojo.colorFromString("red");
   dojo.style("someId", "backgroundColor", myColor);

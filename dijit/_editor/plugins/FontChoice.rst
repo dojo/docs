@@ -34,7 +34,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dijit._editor.plugins.FontChoice");
@@ -42,7 +42,7 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include the control names in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['fontName', 'fontSize', 'formatBlock']"></div>
 
@@ -67,7 +67,7 @@ The FontChoice plugin allows certain options to control how the plugin displays 
 
 An example of disabling it is below:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]"></div>
 

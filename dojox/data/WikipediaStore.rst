@@ -41,7 +41,7 @@ The query syntax for this store is extremely basic.  It takes a query object tha
 Search article text
 -------------------
 
-.. code-block :: javascript
+.. js ::
 
   query: {
     action: "query",
@@ -53,7 +53,7 @@ Search article text
 Load article by title
 ---------------------
 
-.. code-block :: javascript
+.. js ::
 
   query: {
     title: "Dojo Toolkit"
@@ -63,7 +63,7 @@ Load article by title
 Search article text (paged)
 ---------------------------
 
-.. code-block :: javascript
+.. js ::
 
   query: {
     action: "query",

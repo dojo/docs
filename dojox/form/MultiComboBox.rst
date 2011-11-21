@@ -21,7 +21,7 @@ Usage
 
 The MultiComboBox behaves the same as a plain ComboBox. Pass it a store and searchAttr:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

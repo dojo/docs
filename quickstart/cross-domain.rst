@@ -39,13 +39,13 @@ Google
 ~~~~~~
 Google `hosts a cross-domain Dojo distribution <http://code.google.com/apis/ajaxlibs/documentation/#dojo>`_ and makes it available via `Google Ajax Libraries API <http://code.google.com/apis/ajaxlibs/>`_. You can use it either by direct loading:
 
-.. code-block :: html
+.. html ::
 
   <script src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js"></script>
 
 or by using Google API:
 
-.. code-block :: html
+.. html ::
 
   <script src="http://www.google.com/jsapi"></script>
   <script>
@@ -59,7 +59,7 @@ AOL
 ~~~
 AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To use it, include the following script tag in your page:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.js"></script>
 
@@ -74,7 +74,7 @@ Caveats and Gotchas
 
 **Local blank page**. You have to save a local copy of a blank HTML page to location specified via 'dojoBlankHtmlUrl' configuration parameter, e.g.:
 
-.. code-block :: html
+.. html ::
 
   <script type="text/javascript">
     var dojoConfig = {
@@ -90,7 +90,7 @@ Multiple modules (dojo.io.iframe, dijit.Editor, dojo.back) require this to prope
 Usage example
 =============
 
-.. code-block :: html
+.. html ::
 
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.2/dijit/themes/tundra/tundra.css" />
   <script src="http://www.google.com/jsapi"></script>
@@ -121,7 +121,7 @@ Using CDN with Local modules
 
 To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via dojoConfig:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
       <script type="text/javascript">

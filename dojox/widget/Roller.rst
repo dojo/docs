@@ -7,7 +7,7 @@ The Roller is a degradabled, unobtrusive widget to convert an unordered list (``
 
 To use in your page, simply require in the needed module:
 
-.. code-block :: javascript
+.. js ::
   
   dojo.require("dojox.widget.Roller");
 
@@ -18,7 +18,7 @@ Creating A Roller
 
 The most simple way of creating a Roller is by using the data-dojo-type attribute:
 
-.. code-block :: html
+.. html ::
 
     <ul data-dojo-type="dojox.widget.Roller">
         <li>Item 1</li>
@@ -28,7 +28,7 @@ The most simple way of creating a Roller is by using the data-dojo-type attribut
 
 You can of course convert an existing ``<ul>`` into a roller programmatically, most easily accomplished by using an id="" attribute:
 
-.. code-block :: html
+.. html ::
 
     <ul id="myRoller">
         <li>Item 1</li>
@@ -43,7 +43,7 @@ You can of course convert an existing ``<ul>`` into a roller programmatically, m
 
 Or, create one entirely programmatically, by passing an ``items:`` Array
 
-.. code-block :: javascript
+.. js ::
 
    var n = dojo.doc.createElement('ul');
    // place it in the dom:
@@ -64,7 +64,7 @@ Adding and removing items from a Roller is very easy. The ``items`` property is 
 
 To add a new item to a Roller with id="myRoller":
 
-.. code-block :: javascript
+.. js ::
 
    dijit.byId("myRoller").items.push("I am a NEW Item");
 
@@ -89,7 +89,7 @@ The dojox.widget.Roller acts as a baseClass for other Roller transitions. This i
 
 First, declare your subclass:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.declare("my.CustomRoller", dojox.widget.Roller, {
       makeAnims: function(){
@@ -103,7 +103,7 @@ First, declare your subclass:
 
 The animations can do whatever your creativity will permit. Just name the "show item" transition ``this._anim["in"]`` and the "hide item" transition ``this._anim.out``. The most simple example can be shown by copying the makeAnims function directly from dojox.widger.Roller:
 
-.. code-block :: javascript
+.. js ::
  
   makeAnims: function(){
 	// summary: Animation creator function. Need to create an 'in' and 'out'

@@ -19,7 +19,7 @@ Introduction
 
 JSON Referencing provides for id-based, path-based, and combined referencing. With id-based referencing, JSON objects self-identify themselves with an identity property ("id" by default). Objects can then be referred to by id. A JSON references is a JSON object with a property $ref with a value indicating the target. This is an example of id-based JSON referencing:
 
-.. code-block :: javascript
+.. js ::
 
  {
    "name":"Kris Zyp",
@@ -34,7 +34,7 @@ JSON Referencing provides for id-based, path-based, and combined referencing. Wi
 
 Path-based referencing works by specifying a JSON value by it's location within the object structure. With path-based referencing the # symbol should be used to denote the root of the current object structure and to separate. A path reference consists of dot delimited property names or array index numbers. dojox.json.ref also supports $ and *this* to reference the root. With path-based referencing, any JSON value may be referenced, not just objects. For example:
 
-.. code-block :: javascript
+.. js ::
 
  {
    "name":"Kris Zyp",
@@ -49,7 +49,7 @@ Path-based referencing works by specifying a JSON value by it's location within 
 
 Id and path-based referencing can also be combined; a path can be postpended to an id reference. The # separates the id from the path portion and the path operates on the object referred by the id. For example:
 
-.. code-block :: javascript
+.. js ::
 
  {
    "name":"Kris Zyp",
@@ -80,12 +80,12 @@ Usage
 
 The basic usage of dojox.json.ref to serialize an object is:
 
-.. code-block :: javascript
+.. js ::
 
  myJsonString = dojox.json.ref.toJson(myObject);
 
 To deserialize an object:
 
-.. code-block :: javascript
+.. js ::
 
  myObject = dojox.json.ref.fromJson(myJsonString);

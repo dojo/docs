@@ -30,7 +30,7 @@ A Dojo build will collapse these locales into flattened resource bundles, result
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

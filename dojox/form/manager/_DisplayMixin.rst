@@ -36,7 +36,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["main", "opt"];
     var state = fm.gatherDisplayState(names);
@@ -45,7 +45,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object). Only keys will be used, values will be ignored:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = {main: 1, opt: 1};
     var state = fm.gatherDisplayState(names);
@@ -54,7 +54,7 @@ There are three ways to use this method:
 
   This form is especially useful when we already collected values, and want to collect their display state:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["main", "opt"];
     var values = fm.gatherFormValues(names);
@@ -63,7 +63,7 @@ There are three ways to use this method:
 
 3. The parameter is ``null``, or ``undefined``, or missing. In this case states of all known form elements will be collected:
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = fm.gatherDisplayState();
 
@@ -76,7 +76,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["main", "opt"], defaultState = true;
     fm.show(names, defaultState);
@@ -85,7 +85,7 @@ There are three ways to use this method:
 
   ``defaultState`` can be omitted. In this case it is assumed to be ``true``:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["main", "opt"];
     fm.show(names);
@@ -94,7 +94,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object).
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {main: true, opt: false};
     fm.enable(state);
@@ -103,7 +103,7 @@ There are three ways to use this method:
 
 3. The ``state`` parameter is ``null``, or ``undefined``, or missing. In this case states of all known form elements will be shown or hidden according to the value of ``defaultState``:
 
-  .. code-block :: javascript
+  .. js ::
 
     var defaultState = true;
     fm.show(defaultState);
@@ -112,7 +112,7 @@ There are three ways to use this method:
 
   ``defaultState`` can be omitted. In this case it is assumed to be ``true``:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.show();
 
@@ -127,7 +127,7 @@ There are three ways to use this method:
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["main", "opt"];
     fm.hide(names);
@@ -136,7 +136,7 @@ There are three ways to use this method:
 
 2. Call it with a dictionary (an object). In this case it behaves exactly like show_.
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {main: true, opt: false};
     fm.hide(state);
@@ -145,7 +145,7 @@ There are three ways to use this method:
 
 3. The ``state`` parameter is ``null``, or ``undefined``, or missing. In this case states of all known attached nodes will be hidden:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.hide();
 
@@ -155,7 +155,7 @@ Usage
 
 All three methods are designed to work together:
 
-.. code-block :: javascript
+.. js ::
 
   // collect the previous state of all attached nodes
   var state = fm.gatherDisplayState();

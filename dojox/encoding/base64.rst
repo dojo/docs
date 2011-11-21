@@ -15,14 +15,14 @@ Byte arrays encoded with the base64 algorithm will always be 33% larger than the
 
 To encode an array of bytes using dojox.encoding.base64:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var str = dojox.encoding.base64.encode(myByteArray);
 
 To decode a base64-encoded string:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var bytes = dojox.encoding.base64.decode(str);

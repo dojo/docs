@@ -40,7 +40,7 @@ It is possible to define the number of seconds between image transitions when ru
 set the slideshowInterval attribute. For example, to set a three second interval between changing the displayed image,
 use the code below
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="slideshowInterval:3"> </div>
@@ -58,7 +58,7 @@ The Slideshow widget has a default title template that is used to display the ti
 For example:
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
@@ -75,7 +75,7 @@ dimensions is greater.
 
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
@@ -90,7 +90,7 @@ The Slideshow widget automatically preloads a number of images in the background
 better user experience, it uses more bandwidth, so some users may want to disable it. To do so, set the autoLoad
 parameter to "false". e.g.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="autoLoad:false">
@@ -106,7 +106,7 @@ By default, if an image is less tall than the Slideshow widget, the widget resiz
 image. In some circumstances this may be undesirable, such as when using an inflexible, fixed page
 layout. To disable this resizing behavior, set the fixedHeight attribute to "true", e.g.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
    <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="fixedHeight:true">
@@ -120,7 +120,7 @@ The Slideshow widget reads the image information from dojo.data objects. To set 
 widget, first create one of the available data stores, such as the dojo.data.ItemFileReadStore or
 dojox.data.FlickrRestStore. Next, create a request object, which optionally contains a query.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
    <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
@@ -162,7 +162,7 @@ The Slideshow publishes information about its state, that can be subscribed to u
           
 The name of the topic is retrieved by calling the getShowTopicName method on the widget
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   dojo.subscribe(
@@ -177,7 +177,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 * Loaded Image - when an image finishes loading, whether in the background, or the currently displayed image, information is published about it. The name of the topic is retrieved by calling the getLoadTopicName on the widget. A Number is published, which is the index of the image in the data store.
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   dojo.subscribe(

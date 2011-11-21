@@ -23,7 +23,7 @@ Dijit's modal Dialog Box simulates a regular GUI dialog box. The contents can be
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -38,7 +38,7 @@ Usage
 
 After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`) to your <body> tag, in order to show the Dialog with the right styles:
 
-.. code-block :: html
+.. html ::
 
  <html>
  <head>
@@ -466,7 +466,7 @@ Improved Screen Reader Support in 1.4
 
 The dialog now supports the aria-describedby property.  If you have a description of the dialog that you would like spoken by the screen reader when the dialog opens add the aria-describedby property to the dialog.   Include an element containing the text you want spoken in the dialog.  The value of the aria-describedby property is the id of the element containing the text.
 
-.. code-block :: javascript
+.. js ::
 
   <div dojoType="dijit.Dialog" title="Example Dialog" aria-describedby="intro">
     <div id="intro">Text to describe dialog</div>
@@ -475,7 +475,7 @@ The dialog now supports the aria-describedby property.  If you have a descriptio
 
 For earlier Dojo versions, you can add an onshow event handler that adds the aria-describedby property:
 
-.. code-block :: javascript
+.. js ::
 
   <div dojoType="dijit.Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
     <div id="intro">Text to describe dialog</div>
@@ -507,7 +507,7 @@ Known Issues
 * Dialogs with an iframe as the contents will cause a focus trap and are not supported. This because the dialog code can not traverse within the iframe contents to find all of the focusable elements to know the first and last focusable element within the contents.
 * Dialogs with no focusable items cause problems for screen readers.  If the dialog has no focusable items, set the tabindex="0" on the container element of the text.  This will set focus to that container when the dialog is opened and will cause JAWS to speak the title of the dialog and the user will know that a dialog has been opened.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dialogObj = new dijit.Dialog({

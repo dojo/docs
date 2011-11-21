@@ -94,7 +94,7 @@ The OAuth protocol supports three signature methods: PLAINTEXT, HMAC-SHA1, and R
 
 Once the base string is assembled (steps 1 and 2, above), a signature is then generated using the consumer token secret and, if available, the user’s token secret. A typical signature would be generated something like this:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var signature = SHA1_HMAC(consumer_secret + "&" + user_secret, baseString);
@@ -102,7 +102,7 @@ Once the base string is assembled (steps 1 and 2, above), a signature is then ge
 
 If there is no user token secret available, the key should end with the & character:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var signature = SHA1_HMAC(consumer_secret + "&", baseString);
@@ -128,7 +128,7 @@ Signing a request
 
 To sign a request using dojox.io.OAuth, simply pass the keyword arguments object you would normally pass to the Ajax method with the HTTP method and an object containing the tokens for the consumer and user, like so:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  //	the access tokens
@@ -156,7 +156,7 @@ Using dojox.io.OAuth in conjunction with Dojo Ajax methods
 
 Once you have the signed object, simply pass it to any Dojo Ajax method the same way you’d pass your original keyword arguments:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var dfd = dojo.xhrGet(args);

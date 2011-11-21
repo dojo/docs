@@ -130,14 +130,14 @@ Prerequisites
 
 This exporter plugin is only available for EnhancedGrid. So require the EnhancedGrid first:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.require("dojox.grid.EnhancedGrid");
 
 Unlike other grid plugins, you don't need to ``require`` this plugins directly. Instead, you should ``require`` the specific implementations (i.e. writers). For example, if a CSV format implementation is available, then:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
@@ -151,7 +151,7 @@ The declaration name of this plugin is ``exporter`` . It is declared in the ``pl
 
 If your grid is created declaratively:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
@@ -162,7 +162,7 @@ If your grid is created declaratively:
 
 If your grid is created in JavaScript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -208,7 +208,7 @@ writerArgs      Object              Optional(default to {})     Some arguments f
 
 For example:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   //Export the whole grid to CSV format, with separator of ":".
@@ -398,7 +398,7 @@ Register Your Own Writer
 
 Once you have implemented your own export writer, tell the framework about the name of your format. For the "CSV" case, you should write the following line in your implementation file:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojox.grid.enhanced.plugins.Exporter.registerWriter("csv", "dojox.grid.enhanced.plugins.exporter.CSVWriter");
@@ -420,7 +420,7 @@ Example
 
 Here is the structure of the implementation file of the CSVWriter, demonstrating how to write an export writer. It only implements 3 interfaces.
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   //First delcare your class.

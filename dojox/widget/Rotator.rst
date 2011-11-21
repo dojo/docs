@@ -155,7 +155,7 @@ Declarative examples
 
 Example showing how to create a minimal Rotator instance.
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <script type="text/javascript">
@@ -170,7 +170,7 @@ Example showing how to create a minimal Rotator instance.
 
 Example using the crossfade transition.
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <script type="text/javascript">
@@ -400,7 +400,7 @@ params            Object?               Various parameters associated with the e
 Example
 -------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  <div data-dojo-type="dojox.widget.Rotator" id="myRotator"></div>

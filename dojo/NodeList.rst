@@ -21,7 +21,7 @@ Introduction
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -35,7 +35,7 @@ Introduction
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var nl = dojo.query(".selectable");
@@ -50,7 +50,7 @@ You can also create NodeLists manually and since NodeLists are "just an Array" a
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/dom", "dojo/NodeList-dom"], function(query, dom){
@@ -65,7 +65,7 @@ You can also create NodeLists manually and since NodeLists are "just an Array" a
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // create an instance of a NodeList
@@ -80,7 +80,7 @@ The helper functions attached to the NodeList typically return the same instance
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -97,7 +97,7 @@ The helper functions attached to the NodeList typically return the same instance
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // get all "li" elements
@@ -120,7 +120,7 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query"], function(query){
@@ -132,7 +132,7 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query("div > h2").forEach(function(node, index, array){
@@ -146,7 +146,7 @@ For instance, :ref:`dojo.style() <dojo/style>` styles a single Node around a def
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -159,7 +159,7 @@ For instance, :ref:`dojo.style() <dojo/style>` styles a single Node around a def
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // all elements with class="hidden"
@@ -172,7 +172,7 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/NodeList"], function(query){
@@ -185,7 +185,7 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var nl = dojo.query(".foo"); // an array of nodes, NodeList
@@ -204,7 +204,7 @@ In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the :ref:`do
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/fx"], function(query, baseFx){
@@ -216,7 +216,7 @@ In Dojo 1.7, ``NodeList.on()`` is provided as a similar analogue to the :ref:`do
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query(".readyToFade").
@@ -228,7 +228,7 @@ You can pass any event you would to :ref:`dojo.connect <dojo/connect>`, and expe
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/NodeList"], function(query){
@@ -240,7 +240,7 @@ You can pass any event you would to :ref:`dojo.connect <dojo/connect>`, and expe
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    dojo.query(".readyToFade").
@@ -252,7 +252,7 @@ Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/dom-style", "dojo/_base/NodeList"], function(query, domStyle){
@@ -268,7 +268,7 @@ Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, 
    
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
    // setup some basic hovering behavior:
@@ -285,7 +285,7 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/xhr", "dojo/_base/NodeList"], function(query, xhr){
@@ -306,7 +306,7 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // make an existing form use Ajax/xhrPost
@@ -337,7 +337,7 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/_base/lang", "dojo/query", "dojo/NodeList-dom"], function(lang, query){
@@ -353,7 +353,7 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.extend(dojo.NodeList, {
@@ -376,7 +376,7 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-fx", "dojo/domReady!"], function(query){
@@ -385,7 +385,7 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojo.NodeList-fx");
@@ -419,7 +419,7 @@ Array Methods
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -432,7 +432,7 @@ Array Methods
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // we only want to style the first one
@@ -445,7 +445,7 @@ As of Dojo 1.5, .at() can also accept negative indices.
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(["dojo/query"], function(query){
@@ -454,7 +454,7 @@ As of Dojo 1.5, .at() can also accept negative indices.
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query("a").at(0, -1).onclick(fn);
@@ -463,7 +463,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/NodeList"], function(query){
@@ -478,7 +478,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
     
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.query("a")
@@ -494,7 +494,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query"], function(query){
@@ -513,7 +513,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
  
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.query("a").
@@ -533,7 +533,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query"], function(query){
@@ -548,7 +548,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var parents = dojo.query("a").
@@ -564,7 +564,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -573,7 +573,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // style all but the first and last:
@@ -584,7 +584,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-dom"], function(query){
@@ -601,7 +601,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -619,7 +619,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query"], function(query){
@@ -630,7 +630,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -642,7 +642,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/window"], function(query, baseWindow){
@@ -653,7 +653,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -666,7 +666,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/dom-style"], function(query, domStyle){
@@ -678,7 +678,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -692,7 +692,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/dom-style"], function(query, domStyle){
@@ -704,7 +704,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -717,7 +717,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/window"], function(query, baseWindow){
@@ -728,7 +728,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -740,7 +740,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/dom"], function(query, dom){
@@ -751,7 +751,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var anchors = dojo.query("a");
@@ -766,7 +766,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query"], function(query){
@@ -781,7 +781,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var hasFoo = dojo.query("a").
@@ -797,7 +797,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -809,7 +809,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo.require("dojo.NodeList-traverse"); must be added in your code to use dojo.query().children() (new in 1.4)
@@ -826,7 +826,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/NodeList-traverse"], function(query){
@@ -850,7 +850,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // a list of anchors that are only children, same as dojo.query("a:only-child")
@@ -876,7 +876,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // search for all anchor tags under several nodes:
@@ -886,7 +886,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // search for all anchor tags under several nodes:
@@ -908,7 +908,7 @@ Event Methods
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   require(["dojo/query", "dojo/_base/NodeList"], function(query){
@@ -921,7 +921,7 @@ Event Methods
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   dojo.query("a.external").connect("onclick", function(e){
@@ -934,7 +934,7 @@ As a convenience, several common events are mapped as direct function calls. For
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var fn = function(e){ console.warn(e.target); }
@@ -945,7 +945,7 @@ As a convenience, several common events are mapped as direct function calls. For
 
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   var fn = function(e){ console.warn(e.target); }
@@ -958,7 +958,7 @@ It is also possible to manipulate the scope of the callback, just as :ref:`dojo.
 
 [ V1.7+ AMD ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   require(["dojo/query", "dojo/_base/NodeList"], function(query){
@@ -968,7 +968,7 @@ It is also possible to manipulate the scope of the callback, just as :ref:`dojo.
   
 [ V1.6 and earlier ]
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // both call obj.method(e) in context of obj onclick:

@@ -27,7 +27,7 @@ Example 1 - Chart only
 
 This example uses the following sample data, used to define the chart title, footer, range names and data values.
  
-.. code-block :: javascript
+.. js ::
  :linenos:
     
  var jsondata0 = {
@@ -48,7 +48,7 @@ This example uses the following sample data, used to define the chart title, foo
 
 'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var makeseries = function(data) {
@@ -64,7 +64,7 @@ This example uses the following sample data, used to define the chart title, foo
 Finally, create a DataPresentation object using the above data and series objects.
 The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
  
  dojo.require("dojox.widget.DataPresentation");
@@ -86,7 +86,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 	});
  
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div id="legenddiv"></div>
@@ -168,7 +168,7 @@ Example 2 - Chart and DataGrid
 
  To add a DataGrid to the above chart simply add the 'gridNode' property and target it at the relevant HTML element.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.require("dojox.widget.DataPresentation");
@@ -189,7 +189,7 @@ Example 2 - Chart and DataGrid
 		});
 	});
 
-.. code-block :: html
+.. html ::
  :linenos:
  
 
@@ -291,7 +291,7 @@ Example 3.
 
 To see how the widget can cope with different data shapes, switch from jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete 'series' of values, gathered into an array with series titles. jsondata1 is structures as 'data points', each containing multiple sales values.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var jsondata1 = {
@@ -315,7 +315,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
 
 'Series' function. This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  var makeseries = function(data) {
@@ -328,7 +328,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
   ];
  }
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  dojo.require("dojox.widget.DataPresentation");
@@ -353,7 +353,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
   });
  });
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <h1>Example 3.</h1>

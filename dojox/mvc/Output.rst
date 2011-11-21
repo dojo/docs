@@ -46,7 +46,7 @@ Examples
 Declarative example1
 --------------------
 
-.. code-block :: html
+.. html ::
 
   <span dojoType="dojox.mvc.Output" ref="model.balance">
     Your balance is: ${this.value}

@@ -24,7 +24,7 @@ Usage
 
 Usage of this function is trivial.  Simply call it with a string of the id for the widget you wish to obtain the handle of.  The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -144,7 +144,7 @@ A common question new users of dojo have is what is the difference between attri
 
 Consider the following simple ContentPane widget which has an id property (standard html attribute for any tag) and a data-dojo-id attribute (dojo specific id attribute explained below):
 
-.. code-block :: html
+.. html ::
  :linenos:
 
  <div id="myDivId"
@@ -160,7 +160,7 @@ dojo.byId() is no different than the often used document.getElementById() to acc
 
 For example:
 
-.. code-block :: javascript
+.. js ::
 
  dojo.byId("myDivId").style.height = '300px';
 
@@ -171,13 +171,13 @@ dijit.byId()
 
 dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically. The same id attribute is used as a paramater, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
 
-.. code-block :: javascript
+.. js ::
 
  dijit.byId("myDivId").setContent("Hello World!");
 
 You could also change the style like we did with dojo.byId() above using the domNode property of the ContentPane (actually - domNode is defined higher up the inheritance tree so every dijit has a domNode property - very convenient!) This example also saves the results of dijit.byId() into a local variable.
 
-.. code-block :: javascript
+.. js ::
 
  myContentPane = dijit.byId("myDivId");
  myContentPane.domNode.style.height = '300px';
@@ -188,7 +188,7 @@ data-dojo-id (jsId before dojo 1.6)
 
 HTML attribute data-dojo-id saves you one more step in working with widgets by automatically creating a global javascript variable for you (the dojo parser does this). This variable contains the same object as returned by dijit.byId(). Whatever value you give to the data-dojo-id attribute becomes the name of the global variable so watch out for reserved words or having two widgets with the same data-dojo-id! Since my Content Pane has a data-dojo-id attribute value of myDojoId I could simplify the above code a little by removing the dijit.byId() and using my data-dojo-id attribute as the variable name:
 
-.. code-block :: javascript
+.. js ::
 
  myDojoId.domNode.style.height = '300px';
  myDojoId.setContent("Hello World!");

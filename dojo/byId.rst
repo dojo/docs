@@ -21,7 +21,7 @@ Dojo 1.7 (AMD)
 
 When using AMD in a fully baseless application, ``byId`` is accessed from the ``dojo/dom`` module.
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo/dom"], function(dom){
       // fetch a node by id="someNode"
@@ -30,7 +30,7 @@ When using AMD in a fully baseless application, ``byId`` is accessed from the ``
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.byId`` in the ``define`` or ``require`` callback:
 
-.. code-block :: javascript
+.. js ::
 
   require(["dojo"], function(dojo){
       // fetch a node by id="someNode"
@@ -41,7 +41,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.byI
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   // fetch a node by id="someNode"
   var node = dojo.byId("someNode");
@@ -49,7 +49,7 @@ Dojo < 1.7
 
 The node variable is just a native domNode, with properties you can manipulate. The most common, ''innerHTML'':
 
-.. code-block :: javascript
+.. js ::
   :linenos:
   
   // set some node to say "Hello World"
@@ -63,7 +63,7 @@ The node variable is just a native domNode, with properties you can manipulate. 
 
 If you pass byId a domNode reference, the same node is returned:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7 (AMD)
@@ -83,7 +83,7 @@ If you pass byId a domNode reference, the same node is returned:
 
 If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' or the null object is returned (depending on the browser), which is adequate truthiness to use conditionally:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7 (AMD)
@@ -106,7 +106,7 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
 
 Most (if not all) functions in Dojo accept either a string or DomNode as a parameter. If passed a string, the function typically calls dojo.byId(), ensuring a domNode is always the object. For instance:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   // dojo 1.7 (AMD)
@@ -126,7 +126,7 @@ The latter is preferred, as the call to dojo.byId is made in both cases. The pas
 
 JavaScript has a fun convention for conditionals inline. Imagine wanting a domNode reference, and if not present, default to some other node:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var othernode = dojo.byId("fallbackNode");

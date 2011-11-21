@@ -20,7 +20,7 @@ Usage
 
 Carousel is in a separate module file from _base.js. You need to dojo.require Carousel as below.
 
-.. code-block :: javascript
+.. js ::
 
   <link href="../themes/iphone/Carousel.css" rel="stylesheet">
 
@@ -59,7 +59,7 @@ Examples
 Declarative example
 -------------------
 
-.. code-block :: html
+.. html ::
 
   <div id="carousel1" dojoType="dojox.mobile.Carousel" height="150px" navButton="true" store="store1" numVisible="2" title="Category"></div>
 

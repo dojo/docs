@@ -99,7 +99,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 
 1. Import theme CSS
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <style type="text/css">
@@ -111,7 +111,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 
 2. Declare required feature plugins
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -124,7 +124,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 
 3. Use feature plugins:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"

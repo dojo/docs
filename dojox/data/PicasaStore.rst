@@ -23,14 +23,14 @@ Query
 
 Query (all pictures with tags animals, foxes, and cute):
 
-.. code-block :: javascript
+.. js ::
   
   http://picasaweb.google.com/data/feed/api/all?alt=jsonm&pp=1&psc=G&start-index=1&q=animals%2Cfoxes%2Ccute&max-results=5&callback=jsonpCallback
 
 Response
 --------
 
-.. code-block :: javascript
+.. js ::
 
     jsonpCallback({
      "encoding": "UTF-8",

@@ -17,7 +17,7 @@ mouse.enter
 
 The mouse.enter event is an extension event for being notified of when the mouse cursor hovers over an element. This is based on Internet Explorer's "mouseenter" event and differs "mouseover" because it does not bubble ("mouseover" and "mouseout" are widely considered to be broken because they do bubble and generate many meaningless events for everytime the mouse enters a different element within the target element). To use mouse.enter, we can listen for an event like:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/listen", "dojo/mouse"], function(listen, mouse){
     listen(node, mouse.enter, function(event){
@@ -30,7 +30,7 @@ mouse.leave
 
 The mouse.leave event is an extension event for being notified of when the mouse cursor stops hovering over an element. This is based on Internet Explorer's "mouseleave" event and again differs "mouseout" because it does not bubble. To use mouse.leave, we can listen for an event like:
 
-.. code-block :: javascript
+.. js ::
 
   listen(node, mouse.leave, function(event){
     dojo.removeClass(node, "hoverClass");

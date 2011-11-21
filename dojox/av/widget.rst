@@ -25,7 +25,7 @@ This package includes a PlayButton, VolumeButton, ProgressSlider, Status contain
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

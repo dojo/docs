@@ -27,7 +27,7 @@ Usage
 
 Mixin dijit._FocusMixin when you declare your widget, and then reference _onFocus() and _onBlur():
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">

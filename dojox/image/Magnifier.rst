@@ -40,7 +40,7 @@ and shows how dojox.image.Magnifier can be programmatically created.  The code f
 first button with id="foob" creates a dojox.image.Magnifier and associates it with the image.  The second button
 destroys it.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
 
@@ -72,7 +72,7 @@ Declarative example
 -------------------
 The code fragment creates a dojox.image.Magnifier and assoicates it with the src image.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   Scale= 2.34, 5.67, and 8.90: <br>

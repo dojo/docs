@@ -32,7 +32,7 @@ This method is analogous to :ref:`_Mixin's inspectFormWidgets() <dojox/form/mana
 
 The method can be used in two ways: with one parameter to get the value, and with two parameters to set the value:
 
-.. code-block :: javascript
+.. js ::
 
   // reading the value
   var value = fm.elementValue("lastName");
@@ -53,7 +53,7 @@ This method collects values of controlled elements in a dictionary. There are th
 
 1. Call it with the array of names (represented by strings):
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = ["firstName", "lastName"];
     var values = fm.gatherFormValues(names);
@@ -62,7 +62,7 @@ This method collects values of controlled elements in a dictionary. There are th
 
 2. Call it with a dictionary (an object). Only keys will be used, values will be ignored:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = {firstName: 1, lastName: 1};
     var values = fm.gatherFormValues(names);
@@ -71,7 +71,7 @@ This method collects values of controlled elements in a dictionary. There are th
 
   This form is especially useful when we already collected values, and want to re-read the same set of names:
 
-  .. code-block :: javascript
+  .. js ::
 
     var names = {firstName: 1, lastName: 1};
     var oldValues = fm.gatherFormValues(names);
@@ -80,7 +80,7 @@ This method collects values of controlled elements in a dictionary. There are th
 
 3. The parameter is ``null``, or ``undefined``, or missing. In this case all known values will be collected:
 
-  .. code-block :: javascript
+  .. js ::
 
     var values = fm.gatherFormValues();
 
@@ -89,7 +89,7 @@ setFormValues
 
 This method is complimentary to gatherFormValues_. It uses the same dictionary format returned by gatherFormValues_ to set multiple form elements at once. The method returns the form manager for easy chaining.
 
-.. code-block :: javascript
+.. js ::
 
   var values = {firstName: "Jane", lastName: "Smith"};
   fm.setFormValues(values);
@@ -100,7 +100,7 @@ Usage
 
 All methods are designed to work together:
 
-.. code-block :: javascript
+.. js ::
 
   var values = fm.gatherFormValues();
   values.firstName = "Jill";

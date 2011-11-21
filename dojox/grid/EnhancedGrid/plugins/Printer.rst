@@ -177,7 +177,7 @@ Prerequisites
 
 This printer plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.grid.EnhancedGrid");
@@ -192,7 +192,7 @@ The declaration name of this plugin is ``printer`` . It is declared in the ``plu
 
 If your grid is created declaratively:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
@@ -203,7 +203,7 @@ If your grid is created declaratively:
 
 If your grid is created in JavaScript:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   var grid = new dojox.grid.EnhancedGrid({
@@ -245,7 +245,7 @@ exportToHTML
 	Export to HTML string, but do NOT print. Users can use this to implement print preview.
 	When exporting multi-view grid, the proper width of each view and the height of each row won't be valid until the exported string is put into a document. So in this case, you will need to call grid.normalizePrintedGrid(doc):
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   grid.exportToHTML({

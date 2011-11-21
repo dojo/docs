@@ -24,21 +24,21 @@ Usage
 
 Only use the option if your profiling reveals that dojo.provide calls are taking a noticeable amount of time. It replaces dojo.provide("foo.bar") statements with the shortest valid programmatic equivalent:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   if(typeof foo=="undefined"){foo={};};foo.bar=foo.bar||{};
 
 Simply pass the parameter as a command line argument:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   sugr:~/dojo/util/buildscripts $ ./build.sh action=release expandProvide=true version=1.3.0 profile=standard
 
 Or mix the option into your profile:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
 	dependencies = {

@@ -31,7 +31,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
-.. code-block :: javascript
+.. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dijit._editor.plugins.NewPage");
@@ -39,7 +39,7 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['newpage']"></div>
 
@@ -52,13 +52,13 @@ Custom New Content
 
 To initialize the plugin with custom new page content, it is just a matter of passing a content parameter to the new page instantiation.  For example:
 
-.. code-block :: html
+.. html ::
 
   <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
 
 Or programmatically:
 
-.. code-block :: javascript
+.. js ::
 
    var editor = new dijit.Editor({extraPlugins: [{name: 'newpage', content: 'This is some <b>custom</b> content!'}]}
 

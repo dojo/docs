@@ -16,14 +16,14 @@ You can either set the message programmatically, or use dojo's publish/subscribe
 
 To load a Toaster, issue the call:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   dojo.require("dojox.widget.Toaster");
 
 And include the CSS somewhere in your page:
 
-.. code-block :: html
+.. html ::
   :linenos:
 
     <link rel="styleheet" href="dojox/widget/Toaster/Toaster.css" />

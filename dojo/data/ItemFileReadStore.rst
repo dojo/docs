@@ -94,7 +94,7 @@ While the data exposed from a data store is agnostic and consumable by many sour
 General Structure
 -----------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -122,7 +122,7 @@ Aside from regular, string, boolean, integer, object, etc, types that can be ass
 
 The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -142,7 +142,7 @@ So, by calling store.getValue(bobItem, "spouse"), the return will be the datasto
 The other special structure is the custom type structure. The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item. A good example of this is a JavaScript Date object. You likely do not wish it to be treated as another item, but as simply its JavaScript object. Another good example is the dojo.Color object. Again, it is unlikely you would wish this to be treated as a datastore item. So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents. The custom type format is defined below:
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -160,7 +160,7 @@ Item Structure Examples
 Items with References
 ---------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -213,7 +213,7 @@ Items with References
 Items with Hierarchy
 --------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -266,7 +266,7 @@ Items with Hierarchy
 Items with Custom Types
 -----------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -309,7 +309,7 @@ The general case type map handles the situation where some processing on the val
 
 **General Form Type Map**
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -335,7 +335,7 @@ The general case type map handles the situation where some processing on the val
 Example: General Case Type Map for JavaScript Date Objects
 ----------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -354,7 +354,7 @@ The simplified form is more compact to write and works well when the value held 
 
 **Simplified Form Type Map**
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -368,7 +368,7 @@ The simplified form is more compact to write and works well when the value held 
 Example: Simplified Form Type Map for dojo.Color Objects
 --------------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   {
@@ -465,7 +465,7 @@ Custom Sorting
 
 ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId",
@@ -520,7 +520,7 @@ Query Syntax
 
 The fetch method query syntax for ItemFileReadStore is simple and straightforward. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { foo:"bar", bit:"bite"}
@@ -529,7 +529,7 @@ Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done? 
 
 **NOTE:**  As of The dojo Toolkit 1.4, a RegularExpression object can also be passed as a query on an attribute.  This is not dojo.data.api specified, but a feature specific to ItemFileReadStore.   Do not expect other stores to implement it.  Some may, some may not.  Always refer to their documentation on their query syntax.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { foo:new RegExp("/^bar$/"), bit:/^bite$/}
@@ -543,7 +543,7 @@ Match items with multi-character wildcard
 
 *Matching attribute foo that has a value starting with bar*
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { foo:"bar*"}
@@ -555,7 +555,7 @@ Match items with single character wildcard
 *Matching attribute foo the value of which ends with ar and starts with any character.*
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { foo:"?ar"}
@@ -567,7 +567,7 @@ Match items on multiple attributes
 *Matching multiple attributes with various wildcards.*
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   { foo:"?ar", bar:"bob", bit:"*it*"}
@@ -601,7 +601,7 @@ How many items are in my store?
 
 There is no simple method call to return the number of items, and without digging into private variables (which one should never do) you have to do something like the following:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   store.fetch({ onBegin: function(total){ console.log("There are ", total, " items in this store."); } });

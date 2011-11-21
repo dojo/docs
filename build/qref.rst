@@ -331,7 +331,7 @@ Transform: writeDojo
   The dojo/dojo layer configuration gives the contents of the dojo layer, usually written to dojo/dojo.js. The default
   value of the dojo/dojo layer is given as follows:
 
-.. code-block :: javascript
+.. js ::
 
     {
         include:["dojo/main"],

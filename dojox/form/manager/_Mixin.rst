@@ -39,7 +39,7 @@ This property is useful when you want to modify/update controlled elements, but 
 
 Example:
 
-.. code-block :: javascript
+.. js ::
 
   // stop change event processing
   fm.watch = false;
@@ -63,7 +63,7 @@ formWidgetValue
 
 This method allows to get/set values of controlled form widgets. It can be used two ways: with one parameter to get the value, and with two parameters to set the value:
 
-.. code-block :: javascript
+.. js ::
 
   // reading the value
   var value = fm.formWidgetValue("lastName");
@@ -82,7 +82,7 @@ formPointValue
 
 This method is similar to formWidgetValue_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`:
 
-.. code-block :: javascript
+.. js ::
 
   // reading the value
   var value = fm.formPointValue("firstName");
@@ -103,7 +103,7 @@ inspectFormWidgets
 
 This method iterates over controlled elements:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, widget, value){
     var oldValue = this.formWidgetValue(name);
@@ -123,7 +123,7 @@ There are three ways to use this method:
 
 2. ``state`` is an object. In this case keys of the object are form names, while corresponding values are actual values to be passed to ``inspector`` as the 3rd parameter (in this case ``defaultValue`` is not used):
 
-  .. code-block :: javascript
+  .. js ::
 
     var state = {
       firstName: "Jill",
@@ -135,7 +135,7 @@ There are three ways to use this method:
 
 3. ``state`` is ``null`` or missing. In this case the method will iterate over all controlled widgets passing ``defaultValue`` as the ``value`` parameter to ``inspector``.
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.inspectFormWidgets(inspector, null, "X");
 
@@ -143,7 +143,7 @@ There are three ways to use this method:
 
 While iterating the method collects all returned values of ``inspector`` in an object keyed by corresponding widget names, and returns it as the result.
 
-.. code-block :: javascript
+.. js ::
 
   var state = {
     firstName: "Jill",
@@ -159,7 +159,7 @@ While iterating the method collects all returned values of ``inspector`` in an o
 
 ``inspector`` function is called for every inspected widget in the context of the form manager. It has following signature:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, widget, value){
     // ...
@@ -175,7 +175,7 @@ inspectAttachedPoints
 
 This method is similar to inspectFormWidgets_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`. The only difference is the inspector signature, which uses a DOM node instead of a widget:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, node, value){
     // ...
@@ -184,7 +184,7 @@ This method is similar to inspectFormWidgets_ method but works on :ref:`nodes at
 
 Everything else is the same. Example:
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name){
     return this.formPointValue(name);
@@ -198,7 +198,7 @@ inspect
 
 This is the high-level method, which has the same signature as inspectFormWidgets_ and inspectAttachedPoints_. The major difference is: it iterates over widgets **and** attached nodes **and** form nodes (for the last one you have to include :ref:`_NodeMixin <dojox/form/manager/_NodeMixin>`):
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name){
     return this.formPointValue(name);
@@ -223,19 +223,19 @@ This method registers a form widget with a form manager, and connects its observ
 
 1. Register by widget id:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidget(id);
 
 2. Register by widget's DOM node:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidget(node);
 
 3. Register a widget object:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidget(widget);
 
@@ -244,7 +244,7 @@ unregisterWidget
 
 This method disconnects widget's observers, and removes it from internal structures of a form manager. The only way to unregister a widget is by its form name:
 
-.. code-block :: javascript
+.. js ::
 
   fm.unregisterWidget(name);
 
@@ -257,19 +257,19 @@ Like with registerWidget_ widget three signatures are recognized:
 
 1. Register by widget id:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidgetDescendants(id);
 
 2. Register by widget's DOM node:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidgetDescendants(node);
 
 3. Register by specifying a widget object:
 
-  .. code-block :: javascript
+  .. js ::
 
     fm.registerWidgetDescendants(widget);
 
@@ -304,7 +304,7 @@ dojox.form.manager.actionAdapter
 
 As described above the inspector can receive a widget/node as the 2nd parameter, or an array of widgets/nodes. This adapter checks the 2nd value and applies the inspector directly, if it was called with a widget/node. If it was called with the array, the adapter will apply the inspector to all elements of the array.
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name, elem, value){
     // ...
@@ -319,7 +319,7 @@ dojox.form.manager.inspectorAdapter
 
 This is a slightly different adapter for arrays versus widgets/nodes. The difference with :ref:`dojox.form.manager.actionAdapter` is in case of arrays it applies the inspector only to the first element of the array.
 
-.. code-block :: javascript
+.. js ::
 
   var inspector = function(name){
     // ...

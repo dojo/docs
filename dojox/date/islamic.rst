@@ -25,7 +25,7 @@ Usage
 
 Code snippet below illustrates most common usage of Islamic calendar.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -68,7 +68,7 @@ Programmatic example
 
 The code snippet below illustrates conversion between two possible representations of Islamic date: String and Date object.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">
@@ -88,7 +88,7 @@ Declarative example
 Code snippet below illustrates usage of Islamic calendar in the context of graphical date picker - DateTextBox
 
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   <script type="text/javascript">

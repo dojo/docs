@@ -19,7 +19,7 @@ Usage
 
 The simplest way to use dojo.getObject is to pass a dot-separated string as shown below:
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -43,7 +43,7 @@ The simplest way to use dojo.getObject is to pass a dot-separated string as show
 
 dojo.getObject also takes an optional boolean parameter which, if `true`, will create the property if it does not exist. Any other properties along the path will also be created along the way. The default value is `false`.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)
@@ -79,7 +79,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
 
 You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is :ref:`dojo.global <dojo/global>`.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  // Dojo 1.7+ (AMD)

@@ -41,7 +41,7 @@ Instantiate Map component
 
 First, instantiate the Map component, and associate it with the DOM Node container 'USStates' declared further in the HTML markup.
 
-.. code-block :: javascript
+.. js ::
  :linenos:
     
  require(["dojox/geo/charting/Map",function(){
@@ -60,7 +60,7 @@ Each map element is referenced in the marker json object by its unique id (defin
 
 Declare the markup container node for the Map component :
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <h1>Simple Maps,support zoom in and zoom out.</h1>
@@ -74,7 +74,7 @@ The purpose of this Map component is to represent figures on a map. Hence the ne
 
 Here, we extend the previous code sample to illustrate how to connect to data :
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  require(["dojox/geo/charting/Map","dojo.data.ItemFileWriteStore",function(){
@@ -107,7 +107,7 @@ The coloring is done via the addSeries call, that reads a color sheme from a Jso
 
 Here is an example of a series object :
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  {
@@ -137,7 +137,7 @@ Interacting with the Map
 
 Here, we instantiate the appropriate interactors and connect them to the Map component. For example (extending previous code samples)  :
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  require(["dojox/geo/charting/Map",
@@ -169,7 +169,7 @@ Two Dijits are provided in this module : dojox.geo.charting.widget.Map and dojox
 the Map widget wraps an above Map component to ease its integration along other Dijits.
 It can be fully configured in the markup declaration
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div id="mapWidget" data-dojo-type="dojox.geo.charting.widget.Map"
@@ -185,7 +185,7 @@ It can be fully configured in the markup declaration
 
 Legend, as its name supposes, displays a legend describing map color scheme.
 
-.. code-block :: html
+.. html ::
  :linenos:
  
  <div id="mapLegend" data-dojo-type="dojox.geo.charting.widget.Legend" data-dojo-props="map:dijit.byId('mapWidget').getInnerMap(),

@@ -22,7 +22,7 @@ A bad solution: using the DOM API
 
 To select HTML elements in JavaScript, you can use the browser's native DOM API, but they're verbose and hard to work with...not to mention slow. For example, retrieving all nodes with the class "progressIndicator" uses this code:
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -48,7 +48,7 @@ Better and faster: dojo.query
 **dojo.query** gives us a more compact way to do it, and it's often faster, particularly as we ask for more sophisticated kinds of relationships. The following is exactly equivalent to our first example:
 
 
-.. code-block :: javascript
+.. js ::
   :linenos:
 
   <script type="text/javascript">
@@ -66,7 +66,7 @@ Users of other libraries will find the syntax very familiar:
 Dojo 1.7 (AMD)
 --------------
 
-.. code-block :: javascript
+.. js ::
 
   require("dojo/query", function(query){  // Note, query or any other variable name can be used
 
@@ -81,7 +81,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.ready(function(){
     // every element in the page with the class "blueButton" assigned
@@ -101,7 +101,7 @@ Examples
 Simple Queries
 ---------------
 
-.. code-block :: javascript
+.. js ::
 
   // all <h3> elements
   dojo.query('h3')
@@ -128,7 +128,7 @@ Simple Queries
 Immediate Child Elements
 ------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('#main > *')
   dojo.query('#main >')
@@ -139,7 +139,7 @@ Immediate Child Elements
 Queries rooted at a given element
 ----------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('> *', dojo.byId('container'))
   dojo.query('> h3', 'main')
@@ -149,7 +149,7 @@ Compound queries
 
 Combining 2 or more selectors to produce one resultset
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('.foo, .bar')
 
@@ -157,7 +157,7 @@ Combining 2 or more selectors to produce one resultset
 Multiple class attribute values
 ---------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('.foo.bar')
 
@@ -167,7 +167,7 @@ Using attribute selectors
 
 Picking out elements with particular attributes/values
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('[foo]')
   dojo.query('[foo$=\"thud\"]')
@@ -185,7 +185,7 @@ Picking out elements with particular attributes/values
 Descendant selectors
 ------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('>', 'container')
   dojo.query('> *', 'container')
@@ -194,7 +194,7 @@ Descendant selectors
 Sibling selectors
 --------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('.foo + span')
   dojo.query('.foo ~ span')
@@ -204,7 +204,7 @@ Sibling selectors
 Sub-selectors, using not()
 -------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('#main span.foo:not(span:first-child)')
   dojo.query('#main span.foo:not(:first-child)')
@@ -212,7 +212,7 @@ Sub-selectors, using not()
 Nth-child
 ----------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('#main > h3:nth-child(odd)')
   dojo.query('#main h3:nth-child(odd)')
@@ -226,7 +226,7 @@ Nth-child
 Using pseudo-selectors
 -----------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('#main2 > :checked')
   dojo.query('#main2 > input[type=checkbox]:checked')
@@ -236,7 +236,7 @@ Using pseudo-selectors
 Count of checked checkboxes in a form with id myForm
 ----------------------------------------------------
 
-.. code-block :: javascript
+.. js ::
 
   dojo.query('input:checked', 'myForm').length
 
@@ -300,7 +300,7 @@ dojo/query (1.7 only)
 
 In Dojo 1.7, a dojo/query module is also available to reference to the query functionality and choose alternate selector engines and needed levels of compliance. The basic usage of the dojo/query module is to simply use the module's value as the query function:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/query"], function(query){
     var nodeList = query(".foo.bar");
@@ -323,14 +323,14 @@ Specifying Selector Level
 
 There are a couple of ways to set the selector engine. First, we can define the selector engine as part of the dojo configuration for the whole page:
 
-.. code-block :: html
+.. html ::
 
   <script data-dojo-config="selectorEngine='css2.1'" src="dojo/dojo.js">
   </script>
 
 You can also specify the selector engine level you are dependent on for each of your module. This is done by indicating the CSS selector engine level after ! in the dojo/query module id. For example, if your module needed to do a CSS3 level query, you could write:
 
-.. code-block :: javascript
+.. js ::
 
   define(["dojo/query!css3"], function(query){
 	query(".someClass:last-child").style("color", "red");
@@ -345,14 +345,14 @@ We can also use other selector engine levels. Both Sizzle and Slick are excellen
 https://github.com/kriszyp/sizzle and https://github.com/kriszyp/slick
 Once installed, you can use the selector engine module id as specified selector engine level. We could set Sizzle as the query engine for our page:
 
-.. code-block :: html
+.. html ::
 
   <script data-dojo-config="selectorEngine='sizzle/sizzle'" src="dojo/dojo.js">
   </script>
 
 or set Slick as the engine for a particular module:
 
-.. code-block :: html
+.. html ::
 
   define(["dojo/query!slick/Source/slick"], function(query){
 	query(".someClass:custom-pseudo").style("color", "red");

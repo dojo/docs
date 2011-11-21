@@ -21,7 +21,7 @@ Usage
 
 Use this to test if a variable is a string
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   // Dojo 1.7 (AMD)

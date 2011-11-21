@@ -25,7 +25,7 @@ Defining Namespaces
 
 The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namespace to path mapping:
 
-.. code-block :: javascript
+.. js ::
 	:linenos:
 
 	location = ../mycompany
@@ -44,7 +44,7 @@ Parser Usage
 
 The parser is typically run from the command-line. It is invoked like so:
 
-.. code-block :: javascript
+.. js ::
 
 	# Runs everything in the modules directory
 	php generate.php

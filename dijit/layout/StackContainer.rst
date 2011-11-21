@@ -22,7 +22,7 @@ This container is good for wizards, slide shows, and long lists or text blocks.
 Usage
 =====
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
  <script type="text/javascript">
@@ -49,7 +49,7 @@ Retrieving the currently selected Container
 
 To retrieve the currently selected container use following attribute
 
-.. code-block :: javascript
+.. js ::
  :linenos:
 
   var selectedContainer = yourContainer.selectedChildWidget
