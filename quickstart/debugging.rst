@@ -15,19 +15,21 @@ Use Firebug or Firebug Lite
 
 We can't stress this enough. Firebug, an open source debugging extension for Firefox, is ''essential'' for JavaScript, HTML and CSS debugging. You can download it from the `Firebug web site <http://getfirebug.com>`_.
 
-Not a Firefox user? You may want to consider switching, at least for development work. One of Dojo's virtues is its hiding of cross-platform differences. So the more you rely on it, the more your code will be portable, and the less difference your development browser choice matters.
-
-Still not convinced? That's OK too. If you use Internet Explorer or Safari, you can use the Firebug Lite library, bundled with Dojo. This gives you some of the logging and command line features of Firebug. It's not a full emulation, but it's a fairly good alternative and is fully API-compatible.
+If you use Internet Explorer or Safari, you can use the Firebug Lite library, bundled with Dojo. This gives you some of the logging and command line features of Firebug. It's not a full emulation, but it's a fairly good alternative and is fully API-compatible.
 
 To use Firebug Lite, you must include the isDebug config parameter like so:
 
 .. html ::
   
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.js"
+  <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
           data-dojo-config="parseOnLoad: true, isDebug: true"></script>
 
-
 This parameter has no effect on Firefox browsers with Firebug already present. So including this parameter makes your debugging code usable in IE, Safari, and Firefox with no changes.
+
+Note that while it is possible to debug to some extent against prebuilt releases
+such as those on CDN, serious debugging will be far easier against an
+uncompressed version of Dojo's source.  You can download the source via
+one of the "-src" packages at `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.
 
 Faulty dojo.require's and the Firebug Console
 ---------------------------------------------
@@ -273,7 +275,10 @@ The right-hand side of the console tells what styles and style rules are applied
 Debugging External Classes With debugAtAllCosts
 -----------------------------------------------
 
-This section does not work as expected with dojo version 1.6 (http://bugs.dojotoolkit.org/ticket/12608). AMD loading and debugAtAllCosts will be available again in full potential probably in 1.7.
+**Note:** ``debugAtAllCosts`` does not work with Dojo version 1.6
+(http://bugs.dojotoolkit.org/ticket/12608).
+As of Dojo 1.7, ``debugAtAllCosts`` is no longer supported;
+see the :ref:`release notes <releasenotes/1.7>` for details.
 
 dojo/method and dojo/event scripts are good for short, non-reusable snippets of code. But when you start building reusable components, you'll be storing your code into Dojo-declared classes instead. The good news is the more you make this switch, the easier your debugging task will be.
 
