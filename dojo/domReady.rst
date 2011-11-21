@@ -56,13 +56,22 @@ As a more complicated example, this code will wait until the DOM has finished lo
 
 dojo/domReady! is similar to :ref:`dojo.ready <dojo/ready>` or :ref:`dojo.addOnLoad <dojo/addOnLoad>`, but more granular, because dojo/domReady! merely waits for the DOM to finish loading, without waiting for other require() or dojo.require() calls to complete.
 
-========================
-dojo/domReady! and dijit
-========================
+========
+Cautions
+========
+
+Dijit
+-----
 Note that waiting for dojo/domReady! to fire is often not sufficient when working with widgets.   Many widgets shouldn't be initialized or accessed until the following modules load and execute:
 
    * :ref:`dojo/uacss <dojo/uacss>`
    * :ref:`dijit/hccss <dijit/hccss>`
    * :ref:`dojo/parser <dojo/parser>`
 
-Thus when working with widgets you should generally put your code inside of a ready() callback.
+Thus when working with widgets you should generally put your code inside of a dojo/ready() callback.
+
+Sync loader
+-----------
+You should not use dojo/domReady! in any modules that may be loaded with the legacy synchronous loader.
+
+In other words, if your application does not specify async:false as a data-dojo-config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
