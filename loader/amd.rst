@@ -44,9 +44,9 @@ In addition to the core loader APIs, the new Dojo loader includes several other 
   * Multiple platform support: By default, the Dojo loader includes configurations for the browser, `node.js
     <http://nodejs.org>`_, and `Rhino <http://www.mozilla.org/rhino/>`_. Environment-specific configuration files are
     typically less than 100 lines of code and can be easily written to extend Dojo support to other JavaScript
-    environments (see :ref:`Non-browser Environments`).
+    environments (see `Non-browser Environments`_).
 
-  * :ref:`has.js` API: The Dojo loader implements the has.js API, and uses that API to bracket several loader features. In
+  * `has.js <http://github.com/phiggins42/has.js>`_ API: The Dojo loader implements the has.js API, and uses that API to bracket several loader features. In
     conjunction with the Dojo build system, this allows for loader code to be reduced to about 3K (minimized and
     gzipped). This makes the Dojo loader the smallest fully-compatible AMD loader currently available.
 
@@ -135,10 +135,10 @@ that if both ``dojoConfig`` and ``djConfig`` are defined, ``djConfig`` is ignore
 ``dojoConfig`` or ``djConfig`` exist *and* the ``data-dojo-config`` attribute is defined, both ``dojoConfig`` and
 ``data-dojo-config`` are consumed, with values in ``data-dojo-config`` taking precedence over those in ``dojoConfig``.
 
-The configuration object can also be used to set arbitary, application-specific configuration data. All properties of a
+The configuration object can also be used to set arbitrary, application-specific configuration data. All properties of a
 configuration object are shallow copied to ``require.rawConfig``; values that the loader recognizes are also added to
 ``require.config``. Because these are shallow copies, if you need to mix-in properties of a sub-object instead of having
-that object replaced completely, the loader includes a "config" event that is signaled via :ref:`the micro event API`
+that object replaced completely, the loader includes a "config" event that is signaled via `the micro event API`_
 whenever configuration data is received.
 
 The "config" event passes two arguments to any listeners:
