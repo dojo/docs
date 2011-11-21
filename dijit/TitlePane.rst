@@ -39,9 +39,9 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.TitlePane");
@@ -53,7 +53,7 @@ Programmatic example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="holder"></div>
 
@@ -63,15 +63,15 @@ Declarative markup
 
 Creation from markup is even easier.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.TitlePane");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="tp2" data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'I\'m a TitlePane Too'">
         Click arrow to close me.
@@ -86,15 +86,15 @@ With a set of TitlePanes the outer div doesn't have any fixed height, and you ca
 
 For example:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.TitlePane");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="border: solid black 1px;">
       <div data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'Pane #1'">

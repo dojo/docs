@@ -45,9 +45,9 @@ Examples
 A bar gauge with two indicators (programmatic)
 ----------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.BarGauge");
@@ -99,23 +99,23 @@ A bar gauge with two indicators (programmatic)
       dojo.addOnLoad(init);
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="defaultGauge"></div>
 
 A declarative example with gradient ranges
 ------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.BarGauge");
       dojo.require('dojox.widget.gauge.BarIndicator');
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dojox.widget.BarGauge"
 		id="declarativeGauge"

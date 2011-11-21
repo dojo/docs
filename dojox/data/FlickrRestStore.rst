@@ -198,9 +198,9 @@ Usage Examples
 Listing nature pictures
 -----------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.FlickrRestStore");
@@ -253,7 +253,7 @@ Listing nature pictures
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.FlickrRestStore" data-dojo-id="flickrStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Find nature pictures!</div>

@@ -65,9 +65,9 @@ Examples
 Example 1: Using dojo.withDoc alter documents in an iFrame.
 -----------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -89,7 +89,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
       dojo.addOnLoad(changeStyles);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="changeStyles" data-dojo-type="dijit.form.Button">Change Text Color in iFrame</button>
     <br><br>

@@ -44,22 +44,22 @@ Examples
 A simple file picker pulling data from a dojox.data.FileStore
 -------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.FileStore");
       dojo.require("dojox.widget.FilePicker");
     </script>
 
-  .. cv :: html
+  .. html ::
   
     <div data-dojo-type="dojox.data.FileStore" data-dojo-id="fileStore" data-dojo-props="pathAsQueryParam:true,
         url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php'"></div>
     <div data-dojo-type="dojox.widget.FilePicker" data-dojo-props="store:fileStore, query:{}" style="height:150px;width:50%"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/FilePicker/FilePicker.css";

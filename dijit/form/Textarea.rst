@@ -22,9 +22,9 @@ Programmatic example
 
 First we will create a Textarea widget programmatically. Notice how we pass the *name*, *style* and *value* parameters into the object creation.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Textarea");
@@ -37,7 +37,7 @@ First we will create a Textarea widget programmatically. Notice how we pass the 
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <textarea id="myarea"></textarea>
 
@@ -46,15 +46,15 @@ Declarative example
 
 Here we'll create a Textarea widget declaratively. In this instance, the initial *value* is the child text node of the TEXTAREA element.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Textarea");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <textarea id="textarea2" name="textarea2" data-dojo-type="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
 

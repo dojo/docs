@@ -6,9 +6,9 @@ Adding and Deleting data
 If you want to add (remove) data programmatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
  
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -16,7 +16,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojo.data.ItemFileWriteStore"
         data-dojo-id="store3"
@@ -79,7 +79,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         </script>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
 	@import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";

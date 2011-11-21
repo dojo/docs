@@ -116,9 +116,9 @@ Throughout Dojo, the pattern above remains consistent. However, by using :ref:`d
 Examples
 ========
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         // The following line will load the Dijit Widget "dijit.form.Button".
@@ -126,7 +126,7 @@ Examples
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.Button">
         Just an example button, please don't click

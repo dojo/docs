@@ -33,15 +33,15 @@ Declarative example
 
 In this example using USD, both dollars and cents are required.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.CurrencyTextBox");
 	</script>
 
-  .. cv:: html
+  .. html ::
 
         <label for="income1">U.S. Dollars</label>
 	<input type="text" name="income1" id="income1" value="54775.53"
@@ -59,9 +59,9 @@ Programmatic example
 
 In this example using euros with German formatting, the invalid message contains a custom formatted example value.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.CurrencyTextBox");
@@ -81,7 +81,7 @@ In this example using euros with German formatting, the invalid message contains
 		dojo.addOnLoad(createWidget);
 	</script>
 
-  .. cv:: html
+  .. html ::
 
 	<label for="eurde">euros (lang: de-de):</label>
 	<input id="eurde">EUR

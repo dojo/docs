@@ -70,9 +70,9 @@ Examples
 Example 1: Using queryToObject to create a JavaScript form of a query
 ---------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -91,7 +91,7 @@ Example 1: Using queryToObject to create a JavaScript form of a query
       dojo.addOnLoad(convertQuery);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="convertQuery" data-dojo-type="dijit.form.Button">Click to convert query portion of URI</button><br><br>
     <b>The URI</b><br><br>
@@ -103,9 +103,9 @@ Example 1: Using queryToObject to create a JavaScript form of a query
 Example 2: Using queryToObject to alter query strings
 -----------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -128,7 +128,7 @@ Example 2: Using queryToObject to alter query strings
       dojo.addOnLoad(alterQuery);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="alterQuery" data-dojo-type="dijit.form.Button">Click to alter the query string</button><br><br>
     <b>The URI</b><br><br>

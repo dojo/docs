@@ -26,9 +26,9 @@ As the example below shows, animations, event handling, and a wealth of other ut
 Example
 =======
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.addOnLoad(function(){
@@ -50,7 +50,7 @@ Example
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="showMe" style="padding: 10px;">
         click here to see how it works

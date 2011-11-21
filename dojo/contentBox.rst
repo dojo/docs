@@ -91,9 +91,9 @@ Example 1: Getting the content box
 
 This example displays the return values of dojo.contentBox on a node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
@@ -116,7 +116,7 @@ This example displays the return values of dojo.contentBox on a node.
       };
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getContentBox">Get content box</button>
     <div id="nodeOne" style="margin: 10px; border: 10px solid black; padding: 10px; width: 100px; height: 30px;">Hi!</div>
@@ -129,9 +129,9 @@ Example 2: Setting content box
 
 This example is showcasing the usage of dojo.contentBox as a setter, take a look at the JavaScript code to see what the code does.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
@@ -142,7 +142,7 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button id="cButton" data-dojo-type="dijit.form.Button">Click to alter the content box of 'node 2'</button>
     <br>
@@ -151,7 +151,7 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
       <div id="node2">Hi!</div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #node2 {

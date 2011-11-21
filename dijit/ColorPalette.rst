@@ -40,9 +40,9 @@ Default color palette
 
 Default color palette, created programmatically:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
@@ -54,7 +54,7 @@ Default color palette, created programmatically:
        });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span id="placeHolder">this will be replaced</span>
 
@@ -63,15 +63,15 @@ Small color palette
 
 Small color palette, created declaratively:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
       <script type="text/javascript">
         dojo.require("dijit.ColorPalette");
       </script>
 
-  .. cv:: html
+  .. html ::
 
      <div data-dojo-type="dijit.ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'3x4'"></div>
 

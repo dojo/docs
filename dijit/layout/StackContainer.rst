@@ -80,9 +80,9 @@ Programmatic example
 
 Here's an example of a progamatically created StackContainer, and associated StackController:
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
@@ -114,7 +114,7 @@ Here's an example of a progamatically created StackContainer, and associated Sta
 
   The html is very simple
 
-  .. cv:: html
+  .. html ::
 
     <div id="scontainer-prog"></div>
     <div id="scontroller-prog"></div>
@@ -125,9 +125,9 @@ Declarative example
 
 Here you will see a declaratively created StackContainer
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
@@ -135,7 +135,7 @@ Here you will see a declaratively created StackContainer
     dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button id="previous" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').back()}">&lt;</button>
     <span data-dojo-type="dijit.layout.StackController" data-dojo-props="containerId:'stackContainer'"></span>
@@ -150,7 +150,7 @@ Here you will see a declaratively created StackContainer
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #stackContainer {

@@ -13,9 +13,9 @@ Examples
 Declarative markup
 ------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
         dojo.require("dijit.ProgressBar");
@@ -30,7 +30,7 @@ Declarative markup
         }
      </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.ProgressBar" style="width:300px"
          data-dojo-id="jsProgress" id="downloadProgress" data-dojo-props="maximum:10"></div>

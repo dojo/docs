@@ -15,9 +15,9 @@ These are the line items in a Menu Widget. The display for the MenuItem consists
 A programmatically created MenuItem
 -----------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.MenuBar");
@@ -35,16 +35,16 @@ A programmatically created MenuItem
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
      <div id="wrapper"></div>
 
 
 Creation from markup is more simpler and structured.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
 	dojo.require("dijit.MenuBar");
@@ -53,7 +53,7 @@ Creation from markup is more simpler and structured.
 	dojo.require("dijit.MenuItem");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div id="menubar" data-dojo-type="dijit.MenuBar">
 	    <div data-dojo-type="dijit.PopupMenuBarItem" id="Item Menu">

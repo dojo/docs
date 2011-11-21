@@ -35,15 +35,15 @@ Declarative example
 
 This example defines a ``min`` and ``max`` constraint and an initial value.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.form.NumberTextBox");
      </script>
 
-  .. cv:: html
+  .. html ::
 
         <label for="q05">Integer between -20000 to +20000:</label>
 	<input id="q05" type="text"
@@ -60,9 +60,9 @@ Programmatic example
 
 This example creates a simple NumberTextBox programmatically.  The fractional part can be 0 to 6 digits long.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
          dojo.require("dijit.form.NumberTextBox");
@@ -76,7 +76,7 @@ This example creates a simple NumberTextBox programmatically.  The fractional pa
          dojo.addOnLoad(createWidget);
      </script>
 
-  .. cv:: html
+  .. html ::
 
          <label for="programmatic">Input any number with up to 6 fractional digits:</label>
 	 <input id="programmatic" type="text">
@@ -87,15 +87,15 @@ Formatting
 ----------
 The ``constraints`` attribute can also contain formatting information.  The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.   Try entering a simple value like "-3" and then tab away to see the effect.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.form.NumberTextBox");
      </script>
 
-  .. cv:: html
+  .. html ::
 
        <label for="zeroPadded">Fractional value:</label>
        <input id="zeroPadded" type="text"

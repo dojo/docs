@@ -63,15 +63,15 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.layout.ContentPane">
       Hi, pretty boring huh?
@@ -81,11 +81,11 @@ Declarative example
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
   
   Create a ContentPane from an existing DIV, and replace it's content:
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -97,18 +97,18 @@ Programmatic example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="targetID">
       I get replaced.
     </div>
 
 
-.. cv-compound::
+.. code-example ::
 
    Create an entirely new ContentPane from no DOM, and place in Some node byID:
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -120,7 +120,7 @@ Programmatic example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="targetIDtoo">
       A contentPane will appear here:

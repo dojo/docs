@@ -34,17 +34,17 @@ Examples
 
 The first example uses setContent() and show() to vary the message and display it.
 
-.. cv-compound::
+.. code-example ::
 
   A stylesheet is required for Toasters to render properly
 
-  .. cv:: css
+  .. css ::
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
@@ -57,7 +57,7 @@ The first example uses setContent() and show() to vary the message and display i
 
   The html is very simple
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Toaster" data-dojo-props="positionDirection:'br-left'"
          id="first_toaster">
@@ -76,17 +76,17 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
 - in decreasing order of severity.
 
-.. cv-compound::
+.. code-example ::
 
   A stylesheet is required for Toasters to render properly
 
-  .. cv:: css
+  .. css ::
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Toaster");
@@ -103,7 +103,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Toaster"
          data-dojo-props="positionDirection:'br-left', duration:0, messageTopic:'testMessageTopic'"
@@ -114,17 +114,17 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
 This example builds a Toaster programmatically and lets you set params.
 
-.. cv-compound::
+.. code-example ::
 
   A stylesheet is required for Toasters to render properly
 
-  .. cv:: css
+  .. css ::
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
@@ -151,7 +151,7 @@ This example builds a Toaster programmatically and lets you set params.
 
   The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
 
-  .. cv:: html
+  .. html ::
 
     <div id="ToasterPane"></div>
     <table style="border: 0px" border="0">

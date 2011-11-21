@@ -51,9 +51,9 @@ Examples
 Gray out the screen
 -------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
        dojo.require("dojo.window");
@@ -78,6 +78,6 @@ Gray out the screen
         }
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button type="button" onclick="block();">gray the screen</button>

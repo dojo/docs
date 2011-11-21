@@ -100,9 +100,9 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
 
 *Note that this demonstrates that the XML document is converted into a JS object structure as shown by displaying the 'feed' by converting it to JSON.  The XML form is also displayed underneath it, demonstrating toString() rebuilding the XML form for submission or whatnot.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.atom.io.model");
@@ -141,7 +141,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
       dojo.addOnLoad(initSimpleAtom);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
@@ -159,9 +159,9 @@ Example 2: Create a new ATOM Feed
 
 *Note that this demonstrates using the model to create a new Feed document with a single entry*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.atom.io.model");
@@ -195,7 +195,7 @@ Example 2: Create a new ATOM Feed
       dojo.addOnLoad(initSimpleCreateAtom );
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="height: 400px; overflow: auto;">
       <b>As XML</b>
@@ -206,9 +206,9 @@ Example 2: Create a new ATOM Feed
 Example 3: Modify a loaded feed
 -------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.atom.io.model");
@@ -253,7 +253,7 @@ Example 3: Modify a loaded feed
       dojo.addOnLoad(initSimpleAtomModified);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="height: 400px; overflow: auto;">
       <b>Pristine XML</b>

@@ -78,9 +78,9 @@ Examples
 
 This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnload`.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       // declare a function to do the unload work
@@ -92,7 +92,7 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
       dojo.addOnUnload(unLoad);
     </script>
 
-  .. cv:: html
+  .. html ::
 
     This <a href="javascript:unLoad()">link</a> has an <pre>href="javascript:unLoad()"</pre> which fires dojo.addOnUnload but won't destroy the page.
 

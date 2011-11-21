@@ -30,15 +30,15 @@ The Basic Version
 
 This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  You have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`, shared by :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` and other widgets.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
       <script type="text/javascript">
         dojo.require("dijit.form.NumberSpinner");
       </script>
 
-  .. cv:: html
+  .. html ::
 
    <input dojoType="dijit.form.NumberSpinner"
         value="1000"
@@ -54,9 +54,9 @@ Sizing the Box
 
 The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the size of the enclosing box by setting the style attribute, like most Dijit form controls can.  Here, we'll use a programmatically-created NumberSpinner:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.NumberSpinner");
@@ -71,7 +71,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
       <div id="spinnerId"></div>
 
@@ -84,9 +84,9 @@ Like regular <input> boxes, the onChange event fires only when the box loses foc
 
 If you'd like onChange to fire after every button click, set the attribute intermediateChanges, as in this example:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojo.parser");
@@ -101,7 +101,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
     ];
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <label for="temperatureCelsius">Temperature in Celsius</label>
     <div dojoType="dijit.form.NumberSpinner"

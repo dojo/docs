@@ -26,9 +26,9 @@ Programmatic example
 
 In this example, we borrow some of the toolbar buttons from the Editor.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Toolbar");
@@ -50,7 +50,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span id="toolbar"></span>
 
@@ -62,16 +62,16 @@ Declarative example
 
 Creation from markup is even easier.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Toolbar");
       dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <!-- Tags end on line afterwards to eliminate any whitespace -->
     <div id="toolbar1" data-dojo-type="dijit.Toolbar"
@@ -94,9 +94,9 @@ Drop Downs
 
 By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`dijit.form.ComboButton <dijit/form/ComboButton>` you can make a toolbar with drop downs.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Toolbar");
@@ -106,7 +106,7 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
       dojo.require("dijit.form.TextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div id="fancy" data-dojo-type="dijit.Toolbar">
 		<div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">

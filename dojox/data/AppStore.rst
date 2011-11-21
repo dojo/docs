@@ -234,9 +234,9 @@ Examples
 Example 1: Programmatic instantiation and querying of ATOM Feeds.
 -----------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.AppStore");
@@ -270,7 +270,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
       dojo.addOnLoad(initSimple);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the store and display feed titles</div>
     <br>
@@ -281,9 +281,9 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
 Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
 -----------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.AppStore");
@@ -317,7 +317,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
       dojo.addOnLoad(initSimple2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
     <br>
@@ -329,9 +329,9 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
 Example 3: Connecting AppStore to DataGrid
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.AppStore");
@@ -365,7 +365,7 @@ Example 3: Connecting AppStore to DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
     <div data-dojo-id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore, query:{}, structure:layout" style="width: 600px; height: 200px;"></div>
@@ -374,7 +374,7 @@ Example 3: Connecting AppStore to DataGrid
     <span id="list2">
     </span>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
@@ -388,9 +388,9 @@ Example 3: Connecting AppStore to DataGrid
 Example 4: Write example: Changing Title and showing in DataGrid
 ----------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -426,7 +426,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore2" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
     <div data-dojo-id="thegrid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore2, query:{}, structure:layout2" style="width: 600px; height: 200px;"></div>
@@ -434,7 +434,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
     <br>
     <button id="changeTitleButton" data-dojo-type="dijit.form.Button">Change all titles!</button>
   
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

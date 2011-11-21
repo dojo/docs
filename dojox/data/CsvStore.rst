@@ -124,9 +124,9 @@ Examples
 Connecting CsvStore to dijit.form.ComboBox
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.CsvStore");
@@ -149,7 +149,7 @@ Connecting CsvStore to dijit.form.ComboBox
       });
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="combo" data-dojo-type="dijit.form.ComboBox" data-dojo-props="searchAttr:'firstname'"></div>
 
@@ -157,9 +157,9 @@ Connecting CsvStore to dijit.form.ComboBox
 Connecting CsvStore to dojox.grid.DataGrid
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.grid.DataGrid");
@@ -191,7 +191,7 @@ Connecting CsvStore to dojox.grid.DataGrid
       });
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="grid" style="width: 350px; height: 300px;"
       data-dojo-type="dojox.grid.DataGrid"
@@ -199,7 +199,7 @@ Connecting CsvStore to dojox.grid.DataGrid
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
@@ -209,9 +209,9 @@ Connecting CsvStore to dojox.grid.DataGrid
 Connecting CsvStore to dojox.grid.DataGrid where the data used a different separator
 ------------------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.grid.DataGrid");
@@ -243,7 +243,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
       });
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="grid2" style="width: 350px; height: 300px;"
       data-dojo-type="dojox.grid.DataGrid"
@@ -251,7 +251,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

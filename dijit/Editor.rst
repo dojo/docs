@@ -56,15 +56,15 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Editor");
     </script>
 
-  .. cv:: html
+  .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])}">
         <p>This instance is created from a div directly with default toolbar and plugins</p>
@@ -91,15 +91,15 @@ Declarative example: Custom Toolbar
 -----------------------------------
 Of course the toolbar can be reordered and customized to suit your layout needs.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Editor");
     </script>
 
-  .. cv:: html
+  .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
       plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
@@ -132,9 +132,9 @@ simple string or an object (if you need to set options on a plugin).
 This example adds the text color, background color, and font selection plugins to the editor by setting extraPlugins.
 (Technically, the FontChoice plugin provides two commands, foreground-color and highlight-color.)
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Editor");
@@ -142,7 +142,7 @@ This example adds the text color, background color, and font selection plugins t
       dojo.require("dijit._editor.plugins.TextColor");
     </script>
 
-  .. cv:: html
+  .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor2"
 	data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}],
@@ -152,16 +152,16 @@ This example adds the text color, background color, and font selection plugins t
 
 This example starts from scratch, thus removing some items from the toolbar (as compared to the default), like underline, and adding other features, namely the LinkDialog:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.LinkDialog");
     </script>
 
-  .. cv:: html
+  .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor3"
 	data-dojo-props="plugins:['bold','italic','|','createLink'],
@@ -374,16 +374,16 @@ of the page.
 
 The AlwaysShowToolbar plugin prevents that.  It's used along with setting height="" parameter setting.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
     </script>
 
-  .. cv:: html
+  .. html ::
 
         <div data-dojo-type="dijit.Editor" id="editor5"
 	   data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">

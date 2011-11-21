@@ -43,10 +43,10 @@ Removing an attribute
 
 The following example removes ``disabled`` from nodes.
 
-.. cv-compound::
+.. code-example ::
   :version: local
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       function remAttr(){
@@ -54,7 +54,7 @@ The following example removes ``disabled`` from nodes.
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><input name="one" disabled="disabled" value="some text"></p>
     <p><label><input name="two" type="checkbox" disabled="disabled" checked="checked" value="two">&nbsp;a checkbox</label></p>

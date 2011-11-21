@@ -214,9 +214,9 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
 
 The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileWriteStore");
@@ -315,7 +315,7 @@ The following is a semi-complex example of the write API in action. In this exam
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <b>Set the population to assign to all items</b>
@@ -337,7 +337,7 @@ The following is a semi-complex example of the write API in action. In this exam
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
@@ -354,9 +354,9 @@ ItemFileWriteStore deletions reflected in dijit.Tree
 
 This example demonstrates how to use a function such as *deleteItem*. In this case dijit.Tree is used to show a hierarchy of items. By pressing the delete button, all items that are of type city are deleted. Since the tree is dojo.data.api.Notification aware, it catches the delete event and updates its rendering accordingly.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -428,7 +428,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
     <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
@@ -445,9 +445,9 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid (with _saveCustom)
 The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.  In addition, save() is called on the store, which in turn invokes a custom save handler.  This custom save handler generated a serialized view of the changes to send back to some location.  This view
 is displayed in an alert.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileWriteStore");
@@ -615,7 +615,7 @@ is displayed in an alert.
       dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData2" data-dojo-id="geoStore2"></div>
     <b>Set the population to assign to all items of type city</b>
@@ -637,7 +637,7 @@ is displayed in an alert.
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

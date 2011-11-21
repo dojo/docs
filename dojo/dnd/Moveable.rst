@@ -50,9 +50,9 @@ You can connect to the following events of a Moveable:
 Example
 =======
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this we only require to make the demo look fancy
@@ -63,14 +63,14 @@ Example
     }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="dndArea">
       <div id="dndOne">Hi, I am moveable when you want to.</div>
     </div>
     <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){makeMoveable('dndOne');}">Make moveable</button>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     #dndOne {

@@ -59,9 +59,9 @@ The interface
 
 We'll go for a simple left/top/bottom interface.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.BorderContainer");
@@ -104,7 +104,7 @@ We'll go for a simple left/top/bottom interface.
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="uiContainer" style="border: 1px solid #ccc"></div>
 

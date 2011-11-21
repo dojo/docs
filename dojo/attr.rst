@@ -104,9 +104,9 @@ Setting different node attributes
 
 The following example will set several attributes such as the "tabindex" and "name"
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       // load modules for widgets in HTML to parse
@@ -130,7 +130,7 @@ The following example will set several attributes such as the "tabindex" and "na
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="buttonOne" data-dojo-props="onClick:setAttributes">Set attributes</button>
     <button data-dojo-type="dijit.form.Button" id="buttonTwo" data-dojo-props="onClick:displayAttributes">Get attributes</button>
@@ -142,9 +142,9 @@ Setting events
 
 This example will demonstrate how you can set events using dojo.attr(). You should still consider using :ref:`dojo.connect <dojo/connect>` when you are dealing with events since you are getting lots more possibilities and granularity with using :ref:`dojo.connect <dojo/connect>`.  In particular you get a handle to later disconnect the event.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       // load modules for widgets in HTML to parse
@@ -162,7 +162,7 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="buttonThree" data-dojo-props="onClick:setupHandlers">Setup handlers</button>
     <div id="testNodeTwo">Hi, try the events! Click me or hover me.</div>
@@ -173,9 +173,9 @@ Setting styles
 
 The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to :ref:`dojo.style() <dojo/style>`.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       // load modules for widgets in HTML to parse
@@ -187,7 +187,7 @@ The following example will set the "style" attribute of the given dom node. When
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="buttonFour" data-dojo-props="onClick:changeStyle">Change style</button>
     <div id="testNodeThree">Hi, change my style</div>

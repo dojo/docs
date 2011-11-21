@@ -17,15 +17,15 @@ Examples
 Two buttons
 -----------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
        dojo.require("dojo.window");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button type=button id=button1 onclick="dojo.window.scrollIntoView('button2');">scroll to button 2</button>
     <div style="height: 500px; border: 1px solid black">

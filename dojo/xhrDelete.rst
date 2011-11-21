@@ -53,9 +53,9 @@ For specific examples of how to use dojo.xhrDelete, please refer to the followin
 Example 1: dojo.xhrDelete call to request a 'delete' of a URI
 -------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -86,7 +86,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
       dojo.addOnLoad(deleteUri);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Push the button to request a DELETE via xhr.</b>
     <br>

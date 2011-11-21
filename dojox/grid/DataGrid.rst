@@ -20,9 +20,9 @@ Introduction
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -69,11 +69,11 @@ Grids are familiar in the client/server development world. Basically a grid is a
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="gridDiv"></div>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -415,9 +415,9 @@ A simple Grid
 
 This example shows how to create a simple Grid programmatically.
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -464,11 +464,11 @@ This example shows how to create a simple Grid programmatically.
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="gridDiv"></div>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -489,9 +489,9 @@ Working with selections
 
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -539,7 +539,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
    <p>
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row).
@@ -580,7 +580,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </span>
     </p>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -612,9 +612,9 @@ Grid allows you to edit your data easily and send the changed values back to you
 
 First, you have to set a editor for each cell, you would like to edit:
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -662,7 +662,7 @@ First, you have to set a editor for each cell, you would like to edit:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p class="info">
         This example shows how to make columns editable. Please double click any of column 2, column 3 or column 4 to change the cell value.
@@ -671,7 +671,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
     <div id="gridDiv"></div>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -690,9 +690,9 @@ Adding and Deleting data
 If you want to add (remove) data programmatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -740,7 +740,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p>
         This example shows, how to add/remove rows
@@ -778,7 +778,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
       </span>
     </p>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -796,9 +796,9 @@ Filtering data
 
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -846,7 +846,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p class="info">
         Click on the button "Filter" to filter the current data (only rows with Column 2 = true will be visible).<br />
@@ -873,7 +873,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </span>
     </p>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -892,9 +892,9 @@ Grid styling: Rows
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
 To use it, you just have to override default behavior by yours.
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -960,11 +960,11 @@ To use it, you just have to override default behavior by yours.
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="gridDiv"></div>
 
-   .. cv:: css
+   .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
@@ -982,11 +982,11 @@ Formatting a Date Field
 
 Showing localized datetime data in grid is a very common requirement. Here's an example on how to do this using the formatter function, complete with localization.
 
-.. cv-compound::
+.. code-example ::
   :width: 400
   :height: 300
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileReadStore");
@@ -1032,11 +1032,11 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 		});
 	</script>
 
-  .. cv:: html
+  .. html ::
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -1051,11 +1051,11 @@ Editable Date Field
 Sometimes it's not enough to just show the datetime data, so here's another example on how to make the date field editable.
 Note: In editing mode, the text box will show the data in store, which is ISO format in this case; and no validation is provided.
 
-.. cv-compound::
+.. code-example ::
   :width: 400
   :height: 300
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -1100,11 +1100,11 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		});
 	</script>
 
-  .. cv:: html
+  .. html ::
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";

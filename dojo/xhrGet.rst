@@ -160,9 +160,9 @@ For specific examples of how to use dojo.xhrGet, please refer to the following. 
 Example 1: dojo.xhrGet call to fetch the dojo license.
 ------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicense() {
@@ -193,7 +193,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
       dojo.addOnLoad(getLicense);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>The Dojo License:</b>
     <div id="licenseContainer" style="height: 200px;"></div>
@@ -202,9 +202,9 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
 ------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicensePreventCache() {
@@ -237,7 +237,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="licenseContainerPreventCache" style="height: 200px;"></div>
 
@@ -245,9 +245,9 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
 Example 3: dojo.xhrGet call that errors.
 ----------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function callError() {
@@ -275,7 +275,7 @@ Example 3: dojo.xhrGet call that errors.
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="errorContainer" style="height: 100px;"></div>
 
@@ -283,9 +283,9 @@ Example 3: dojo.xhrGet call that errors.
 Example 4: Alternate way to pass callbacks.
 -------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseAlternateCB() {
@@ -322,7 +322,7 @@ Example 4: Alternate way to pass callbacks.
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseAlternateCB" style="height: 200px;"></div>
 
@@ -331,9 +331,9 @@ Example 5: dojo.xhrGet call with 'content' (query params).
 
 *Note:  You will need to use firebug or a proxy to see the query params appended to the url*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseQueryParams() {
@@ -370,16 +370,16 @@ Example 5: dojo.xhrGet call with 'content' (query params).
       dojo.addOnLoad(getLicenseQueryParams);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseQueryParams" style="height: 200px;"></div>
 
 Example 6: dojo.xhrGet call and checking the xhr 'status' code
 --------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseStatus() {
@@ -405,7 +405,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
       dojo.addOnLoad(getLicenseStatus);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseStatus" style="height: 100px;"></div>
 
@@ -413,9 +413,9 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
 -------------------------------------------------------------------------------
 *Note: This ust shows using switch in an error handler to display some message based on a particular failure.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseErrorStatus() {
@@ -455,7 +455,7 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
       dojo.addOnLoad(getLicenseErrorStatus);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseErrorStatus" style="height: 100px;"></div>
 
@@ -465,9 +465,9 @@ Example 8: dojo.xhrGet call with headers
 
 *Note:  You will need to use firebug or a proxy to see the headers set in the request*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseHeaders() {
@@ -504,7 +504,7 @@ Example 8: dojo.xhrGet call with headers
       dojo.addOnLoad(getLicenseHeaders);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseHeaders" style="height: 200px;"></div>
 
@@ -513,9 +513,9 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
 --------------------------------------------------------------------------
 *Note: This shows using switch in a generic handle function to error display some message based on a particular failure or success.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function getLicenseErrorStatusWithHandle() {
@@ -555,7 +555,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
       dojo.addOnLoad(getLicenseErrorStatusWithHandle);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="getLicenseErrorStatusWithHandle" style="height: 100px;"></div>
 

@@ -28,9 +28,9 @@ The dojox.xml.parser utility library contains numerous functions for working wit
 Example 1: Generic XML DOM Parser and utilities
 -----------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.xml.parser");
@@ -62,7 +62,7 @@ Example 1: Generic XML DOM Parser and utilities
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="xmlContent"></div>
 
@@ -75,9 +75,9 @@ The second helper class is the dojox.xml.DomParser.   This utility function will
 Example 2: Generic XML DOM to JS Object parser
 ----------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.xml.DomParser");
@@ -92,6 +92,6 @@ Example 2: Generic XML DOM to JS Object parser
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
  
     Look in the console for debug statements showing the constructed JS DOM like structure.

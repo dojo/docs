@@ -81,9 +81,9 @@ Examples
 Simple Demo usage of WikipediaStore
 -----------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -140,7 +140,7 @@ Simple Demo usage of WikipediaStore
       }
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <form action="#">
       <p>

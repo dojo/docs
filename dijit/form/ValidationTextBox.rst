@@ -56,15 +56,15 @@ Declarative example
 
 ValidationTextBox widgets usually use Regular Expression validation, as in the following example:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.ValidationTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <input type="text" name="phone" id="phone" value="someTestString"
         data-dojo-type="dijit.form.ValidationTextBox"
@@ -76,15 +76,15 @@ Using regular expressions
 
 The regular expression syntax comes directly from JavaScript. The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need to include them. This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.ValidationTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <input type="text" name="zip" value="00000"
         data-dojo-type="dijit.form.ValidationTextBox"
@@ -96,9 +96,9 @@ Generate regular expressions
 
 ValidationTextBox also supports functions that generate regular expressions. Having a generating function enables you to write much more dynamic Web applications. ValidationTextBox passes its constraints object to the generating function. The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.ValidationTextBox");
@@ -112,7 +112,7 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
        }
      </script>
 
-  .. cv:: html
+  .. html ::
 
     <input type="text" name="zip" value="00000" id="zip2"
         data-dojo-type="dijit.form.ValidationTextBox"

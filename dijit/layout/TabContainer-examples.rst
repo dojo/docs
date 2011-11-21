@@ -11,9 +11,9 @@ Tab Strip
 ---------
 This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -22,7 +22,7 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
 
   The html is very simple
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
@@ -43,9 +43,9 @@ Right Tabs
 ----------
 Tabs at the right, no strip.  Note that right tabs don't work in conjunction with doLayout=false.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -54,7 +54,7 @@ Tabs at the right, no strip.  Note that right tabs don't work in conjunction wit
 
   notice the tabPosition attribute
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
@@ -72,9 +72,9 @@ Left Tabs
 ---------
 Tabs at the left, with a strip.  Note that left tabs don't work in conjunction with doLayout=false.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -83,7 +83,7 @@ Tabs at the left, with a strip.  Note that left tabs don't work in conjunction w
 
   notice the tabPosition attribute
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
@@ -101,9 +101,9 @@ Bottom Tabs
 -----------
 Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjunction with doLayout=false.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -112,7 +112,7 @@ Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjuncti
 
   notice the tabPosition attribute
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
@@ -128,9 +128,9 @@ Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjuncti
 
 One technique to allow validation, and still use the parser would be to simply decorate the node with a dojoType attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -147,7 +147,7 @@ One technique to allow validation, and still use the parser would be to simply d
     </script>
 
 
-  .. cv :: html
+  .. html ::
 
     <div id="progtabwrapper">
     <div rel="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
@@ -168,11 +168,11 @@ Programmatic Example
 Here's an example that parses existing DOM and creates tabs,
 similar to what the parser does:
 
-.. cv-compound::
+.. code-example ::
 
   As a simple example, we'll use :ref:`dojo.query <dojo/query>` to find and create the ContentPanes used in the TabContainer
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -193,7 +193,7 @@ similar to what the parser does:
 
   The html is very simple
 
-  .. cv:: html
+  .. html ::
 
     <div id="tc1-prog" style="width: 400px; height: 100px;">
       <div class="tc1cp" title="My first tab">
@@ -211,9 +211,9 @@ Nested tabs
 -----------
 Often sites will have two levels of tabs.  This is supported by using two TabContainer widgets.   Remember that although a TabContainer's children are often ContentPanes, they can be any layout widget, including another TabContainer:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -222,7 +222,7 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
 
   The html is very simple
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
       <div dojoType="dijit.layout.TabContainer" title="Tab 1" nested="true">
@@ -255,9 +255,9 @@ Nested tabs programatically
 ---------------------------
 This an example of nested tabs created programatically. If there is no nested tab in a tab, content pane is inserted instead.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
 	dojo.require("dijit.layout.TabContainer");
@@ -316,6 +316,6 @@ This an example of nested tabs created programatically. If there is no nested ta
 	});
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id='tabContainer'> </div>

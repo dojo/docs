@@ -40,36 +40,36 @@ A dojo widget to render map information "shapefile" data.
 
 fig 1. Map (Click on map)
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 430
   :version: 1.4
 
-  .. cv:: html
+  .. html ::
 
     <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_maps.html"></iframe>
 
 
 fig 2. Map with associated DataChart (Click on map)
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 430
   :version: 1.4
 
-  .. cv:: html
+  .. html ::
 
     <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithCharting.html"></iframe>
 
 
 fig 3. Map with Legend (Click on map)
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 430
   :version: 1.4
 
-  .. cv:: html
+  .. html ::
 
     <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>
   

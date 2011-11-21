@@ -74,7 +74,7 @@ The following example adds the class "style1" to the node "example1":
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -83,7 +83,7 @@ See it in action:
         .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -99,7 +99,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add class</button>
@@ -122,7 +122,7 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
  
 
   .. css::
@@ -133,7 +133,7 @@ See it in action:
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -149,7 +149,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add classes</button>
@@ -172,7 +172,7 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
   
   .. css::
     
@@ -182,7 +182,7 @@ See it in action:
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -198,7 +198,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add classes</button>
@@ -221,7 +221,7 @@ Add to multiple nodes
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -231,7 +231,7 @@ See it in action:
         .additionalStyle3 { background-color: #491f00; color: #36d900 }
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -247,7 +247,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example3" class="additionalStyle3">
         <div>This node will be changed.</div>

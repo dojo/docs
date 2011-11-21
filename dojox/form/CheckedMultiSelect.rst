@@ -36,15 +36,15 @@ A simple CheckedMultiSelect
 
 This example shows a simple CheckedMultiSelect widget - converted from a select tag.
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.CheckedMultiSelect");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <select multiple="true" name="multiselect" dojoType="dojox.form.CheckedMultiSelect">
           <option value="TN">Tennessee</option>
@@ -54,7 +54,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
           <option value="CA">California</option>
      </select>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";
@@ -65,15 +65,15 @@ A radio-based CheckedMultiSelect
 
 By not specifying "multiple=true" in your widget, you will create a widget using radio buttons instead of check boxes.
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.CheckedMultiSelect");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <select data-dojo-id="ss1" name="ss1" data-dojo-type="dojox.form.CheckedMultiSelect">
           <option value="TN">Tennessee</option>
@@ -83,7 +83,7 @@ By not specifying "multiple=true" in your widget, you will create a widget using
           <option value="CA">California</option>
     </select>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";

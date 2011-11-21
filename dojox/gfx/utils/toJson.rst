@@ -35,9 +35,9 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.gfx");
@@ -66,7 +66,7 @@ Programmatic example
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="gfxObject"></div>
     <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to JSON!</div>

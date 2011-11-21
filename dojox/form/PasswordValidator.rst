@@ -66,15 +66,15 @@ A simple Password Validator - with no "old" password
 
 This example shows a password validator, prompting the user to enter and validate their password
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.PasswordValidator");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dojox.form.PasswordValidator" name="password">
         <label>Password: <input type="password" pwType="new" /></label><br>
@@ -86,15 +86,15 @@ A simple Password Validator - with "old" password
 
 This example shows a password validator, and prompts the for the current password as well (it has a hard-coded original password of "password")
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.PasswordValidator");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div dojoType="dojox.form.PasswordValidator" name="password">
         <script type="dojo/method" data-dojo-event="pwCheck" data-dojo-args="password">

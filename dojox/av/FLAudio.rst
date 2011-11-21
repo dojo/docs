@@ -58,11 +58,11 @@ Programmatic example
 --------------------
 
 
-.. cv-compound::
+.. code-example ::
  
   The JavaScript:
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.av.FLAudio");
@@ -76,7 +76,7 @@ Programmatic example
 
   The HTML:
 
-  .. cv:: html
+  .. html ::
     
     <button onclick="mySound.doPlay({index:0, volume:1, pan:-1})">Ola Left</button>
     <button onclick="mySound.doPlay({index:0, volume:.1})">Ola Quiet</button>

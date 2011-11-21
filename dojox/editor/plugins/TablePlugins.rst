@@ -25,11 +25,11 @@ Example
 
 Although the code for the Editor is complex, it is quite simple to implement:
 
-.. cv-compound::
+.. code-example ::
 
   The CSS
 
-  .. cv:: css
+  .. css ::
   
     <style type="text/css">
         @import "{{baseUrl}}dojox/editor/plugins/resources/editorPlugins.css";
@@ -37,7 +37,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
   It's just a matter of using the proper *requires* in the JavaScript:
 
-  .. cv:: javascript
+  .. js ::
   
     <script type="text/javascript">
     dojo.require("dijit.Editor");
@@ -46,7 +46,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
   Slightly more difficult is the HTML. The plugins are assigned within an array. Be sure to get commas correct or you will get a parse error:
 
-  .. cv:: html
+  .. html ::
   
     <div class="tundra">
     <div data-dojo-type="dijit.Editor" style="height:100px" data-dojo-props="plugins:[

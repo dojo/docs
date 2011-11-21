@@ -14,9 +14,9 @@ Dojox.fx.wipeTo lets you wipe the size of a node to a defined size.
 Wiping in a node with "display: none; position: absolute;"
 ----------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.fx");
@@ -38,7 +38,7 @@ Wiping in a node with "display: none; position: absolute;"
     }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="height: 250px;">
       <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeInOne">Wipe in</button>

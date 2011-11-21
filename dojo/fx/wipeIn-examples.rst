@@ -16,9 +16,9 @@ When you are trying to wipe in a node to a fixed height or width you have to use
  
 Note that the padding of the content which gets wiped in is set on a separate inner node. This ensures that you don't get weird x-browser behaviour.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojo.fx");
@@ -39,7 +39,7 @@ Note that the padding of the content which gets wiped in is set on a separate in
     }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="height: 110px;">
       <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeInOne">Wipe in</button>

@@ -91,9 +91,9 @@ Many examples are available in Dojo Explorer, at http://dojocampus.org/explorer/
 Example Usage of using AtomReadStore with a DataGrid
 ====================================================
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -119,7 +119,7 @@ Example Usage of using AtomReadStore with a DataGrid
       ];
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.AtomReadStore" data-dojo-id="feedStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/atom1.xml'"></div>
     <div id="feedGrid"
@@ -132,7 +132,7 @@ Example Usage of using AtomReadStore with a DataGrid
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

@@ -22,9 +22,9 @@ Example 1:  Demonstration of combining three chained animations
 
 *This animation changes position, size, opacity, and color in a single, combined, animation*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -94,7 +94,7 @@ Example 1:  Demonstration of combining three chained animations
       dojo.addOnLoad(basicCombine);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="startButton">Start the complex loop!</button>
     <button data-dojo-type="dijit.form.Button" id="endButton">End the complex loop!</button>

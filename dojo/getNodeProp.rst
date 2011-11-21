@@ -72,15 +72,15 @@ Reading current values
 
 The following example reads effective values from the ``input`` node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       function checkAttributes(){
@@ -101,7 +101,7 @@ The following example reads effective values from the ``input`` node.
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><input id="model" name="model" baz="foo"> &mdash; our model node</p>
     <p><button onclick="checkAttributes();">Check attributes</button></p>

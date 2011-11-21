@@ -54,23 +54,23 @@ A simple file picker
 
 This example shows a simple file picker text box pulling data from a dojox.data.FileStore
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.FileStore");
       dojo.require("dojox.form.FilePickerTextBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.FileStore" data-dojo-props="pathAsQueryParam:true, url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php'"
          data-dojo-id="fileStore"></div>
     <input require="true" name="fileName" type="text" data-dojo-type="dojox.form.FilePickerTextBox"
          data-dojo-props="constraints:{store:fileStore, query:{}}" />
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/FilePickerTextBox.css";

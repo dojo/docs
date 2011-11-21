@@ -52,9 +52,9 @@ Example 1:  dojo.xhrGet and form submission.
 
 dojo.xhr allows you to submit all the values of your form with minimal effort:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Form");
@@ -62,7 +62,7 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
         dojo.require("dijit.form.ValidationTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <form dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
         encType="multipart/form-data" action="" method="">

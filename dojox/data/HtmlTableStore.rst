@@ -102,16 +102,16 @@ Examples
 Connecting HtmlTableStore to dijit.form.ComboBox
 ------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlTableStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <table id="myData" style="display: none;">
     <thead>
@@ -158,9 +158,9 @@ Connecting HtmlTableStore to dijit.form.ComboBox
 Connecting HtmlTableStore to dojox.grid.DataGrid
 ------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlTableStore");
@@ -176,7 +176,7 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Standard HTML table:</b><br>
     <table id="myData2">
@@ -230,7 +230,7 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

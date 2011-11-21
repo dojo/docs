@@ -38,9 +38,9 @@ Examples
 Example 1: Locating a widget by its ID
 --------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -59,7 +59,7 @@ Example 1: Locating a widget by its ID
       dojo.addOnLoad(findWidget);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <input id="myTextBox" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
@@ -69,9 +69,9 @@ Example 1: Locating a widget by its ID
 Example 2: Locating a widget by its id and accessing its DOM node (main DOM rendering element)
 ----------------------------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -93,7 +93,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
       dojo.addOnLoad(findWidgetDOM);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <input id="myTextBox2" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
@@ -105,9 +105,9 @@ Example 3: Comparing dojo.byId and dijit.byId
 
 *This example shows how the output of each is different.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -128,7 +128,7 @@ Example 3: Comparing dojo.byId and dijit.byId
       dojo.addOnLoad(compareDojoDijitById);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <input id="myTextBox3" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>

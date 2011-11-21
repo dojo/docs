@@ -23,9 +23,9 @@ In the example below, second pane is selected when the widget is loaded.
 Programmatic example
 --------------------
  
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
 	dojo.require("dijit.layout.AccordionContainer");
@@ -50,7 +50,7 @@ Programmatic example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
      <div id="markup" style="width:300px; height: 300px"></div>
   
@@ -58,15 +58,15 @@ Programmatic example
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.AccordionContainer");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="width: 300px; height: 300px">
       <div dojoType="dijit.layout.AccordionContainer" style="height: 300px;">

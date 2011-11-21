@@ -81,9 +81,9 @@ Query Example
 Example Usage
 =============
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -120,7 +120,7 @@ Example Usage
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Input feed URL here:</b>
     <br>
@@ -141,7 +141,7 @@ Example Usage
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

@@ -87,9 +87,9 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 ---------------------------------------------------------------------
 *Note that this makes use of a pseudo-proxy to handle dealing with xhr limitations.  This proxy is not intended for commercial use, it is only used here to facilitate showing working examples.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.OpenSearchStore");
@@ -146,7 +146,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
       dojo.addOnLoad(initSimple);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <input id="searchBox" type="text" data-dojo-type="dijit.form.TextBox" value="dojo"></input>
     <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>

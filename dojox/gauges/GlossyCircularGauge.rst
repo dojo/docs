@@ -88,15 +88,15 @@ Examples
 circular gauge (programmatic)
 ---------------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
    :version: local
 
-   .. cv:: html
+   .. html ::
   
     <div id="CircularGauge" ></div>
 
-  .. cv:: javascript
+  .. js ::
   
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
@@ -118,11 +118,11 @@ circular gauge (programmatic)
 An other gauge sample
 ---------------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
    :version: local
 
-   .. cv:: html
+   .. html ::
 
           <div dojoType="dojox.gauges.GlossyCircularGauge"
              id="csGaugeMargin"

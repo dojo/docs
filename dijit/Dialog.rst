@@ -134,9 +134,9 @@ Coloring the Underlay
 
 If you wish to alter the default color for the underlay, you do so in CSS. The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a css class for:
 
-.. cv-compound::
+.. code-example ::
  
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
         #dialogColor_underlay {
@@ -151,7 +151,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
     <p>When pressing this button the dialog will popup:</p>
     <button id="button4" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
@@ -175,9 +175,9 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
 
 To simply close the dialog, click the Cancel button, which calls the hide() function on the Dialog.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.Dialog" id="formDialog" title="Form Dialog"
         execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
@@ -250,9 +250,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
 If you want to handle the onSubmit event like a traditional <form> element, you will need to employ a <form> either as a traditional HTML element or as a ''dijit.form.Form''.  This example shows a Dialog with an embedded Form which handles the onSubmit event, validation, and an xhrPost to the server.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
         <form data-dojo-type="dijit.form.Form">
@@ -306,9 +306,9 @@ Terms and Conditions Dialog
 
 This example shows a Dialog that will ask the user to accept or decline the terms and conditions.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <h1>Agreement Terms</h1>
@@ -350,7 +350,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   The javascript, put this wherever you want the dialog creation to happen
   
-  .. cv:: javascript
+  .. js ::
 
     dojo.require("dijit.form.Button");
     dojo.require("dijit.Dialog");
@@ -380,17 +380,17 @@ External Dialog content using HREF attribute
 
 You can also load dialog content from another page by setting HREF attribute for the widget. Note that the Dialog doesn't execute script tags inline external content. However, it parses the page for widgets, so you can add functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script type="dojo/method" data-dojo-event="onClick">``). Other options for executing scripts are `iFrame <http://www.dojotoolkit.com/forum/dijit-dijit-0-9/dijit-support/loading-external-url-dijit-dialog>`_ and `dojox.layout.ContentPane <http://www.dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/javascript-ignored-when-loading-dijit-dialog-url>`_.
 
-.. cv-compound::
+.. code-example ::
   :height: 500
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="external" dojoType="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
     </div>
@@ -406,16 +406,16 @@ Sizing the Dialog
 A dialog by default sizes itself according to it's content, just like a plain <div>.
 If you want a scrollbar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="sized" dojoType="dijit.Dialog" title="My scrolling dialog">
         <div style="width: 200px; height: 100px; overflow: auto;">

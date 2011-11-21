@@ -21,9 +21,9 @@ Programmatic example
 
 This example shows how to create a menu and combo button programmatically.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
           dojo.require("dijit.form.Button");
@@ -50,7 +50,7 @@ This example shows how to create a menu and combo button programmatically.
 	 });
        </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="myContainer"></div>
 
@@ -62,16 +62,16 @@ As usual you can create the ComboButton widget declaratively using the data-dojo
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Menu");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.ComboButton">
       <span>get all mail</span>

@@ -5,9 +5,9 @@ Programmatically creating a DataGrid
 
 This example shows how to create a simple Grid programmatically.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -42,11 +42,11 @@ This example shows how to create a simple Grid programmatically.
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="gridContainer4" style="width: 400px; height: 200px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";

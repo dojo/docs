@@ -38,15 +38,15 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.form.TextBox");
      </script>
 
-  .. cv:: html
+  .. html ::
 
         <input type="text" name="firstname" value="testing testing"
 		data-dojo-type="dijit.form.TextBox"
@@ -59,9 +59,9 @@ Sizing TextBoxes
 
 Sizing a text box is done through the CSS width on the text box dom node.  Typically this is done by specifying the width in ems.  Please see the following for an example:
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -73,7 +73,7 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>A default textbox:</b> <div data-dojo-type="dijit.form.TextBox"></div>
     <br>
@@ -86,7 +86,7 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
     <br>
 
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     </style>
@@ -96,9 +96,9 @@ Getting and Manipulating the Value
 
 Getting and manipulating the value is a trivial matter.  It is done through the attr() function of the widget.  Please see the following example for more detail:
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -114,14 +114,14 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>A textbox with a value:</b> <input id="value0Box" data-dojo-type="dijit.form.TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
     <br>
     <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
     <br>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     </style>

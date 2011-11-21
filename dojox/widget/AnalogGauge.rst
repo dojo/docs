@@ -48,9 +48,9 @@ Examples
 A partial circle gauge with two indicators (programmatic)
 ---------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
@@ -110,16 +110,16 @@ A partial circle gauge with two indicators (programmatic)
 
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="defaultGauge"></div>
 
 A partial circle gauge with two indicators and a set of gradient ranges
 -----------------------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       console.debug('require');
@@ -149,7 +149,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dojox.widget.AnalogGauge"
 	id="declarativeGauge"
@@ -248,9 +248,9 @@ A partial circle gauge with two indicators and a set of gradient ranges
 A half circle gauge with two indicators overlay graphic
 -------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
@@ -276,7 +276,7 @@ A half circle gauge with two indicators overlay graphic
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dojox.widget.AnalogGauge"
       id="halfCircle"
@@ -369,9 +369,9 @@ A half circle gauge with two indicators overlay graphic
 Speedometer style gauge with arc indicator and needle indicator
 ---------------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
@@ -416,7 +416,7 @@ Speedometer style gauge with arc indicator and needle indicator
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dojox.widget.AnalogGauge"
       id='speedo'

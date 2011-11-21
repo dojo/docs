@@ -41,9 +41,9 @@ Fetch by Identity
 
 This example shows how to fetch items by their identity programmatically.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -92,7 +92,7 @@ This example shows how to fetch items by their identity programmatically.
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     Pick a grocery item: <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:foodStore, searchAttr:'name'" data-dojo-id="combo"></div>

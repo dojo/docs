@@ -32,9 +32,9 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Menu");
@@ -77,7 +77,7 @@ Programmatic example
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span id="prog_menu">Right click me to get a menu</span>
 
@@ -88,16 +88,16 @@ Declarative markup
 Creation from markup is even easier.
 This example creates a context menu for the whole window.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Menu");
       dojo.require("dijit.ColorPalette");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div data-dojo-type="dijit.Menu" id="windowContextMenu" data-dojo-props="contextMenuForWindow:true" style="display: none;">
 		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
@@ -131,15 +131,15 @@ The Menu widget can also be used for left-hand-side (style) navigation menus, wh
 
 Usage to display a Menu statically is the same as context menus, except that you don't specify style="display: none" or contextMenuForWindow or any connect ids.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Menu");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div data-dojo-type="dijit.Menu" id="navMenu">
 		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',

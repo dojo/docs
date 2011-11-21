@@ -66,10 +66,10 @@ Center a DOM node over another
 
 This example shows how to center a small DOM node (with background image) over a larger DOM node (the frame) both vertically and horizontally relative to the document root.
 
-.. cv-compound ::
+.. code-example ::
   :version: 1.4-2.0
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       var lastX = 0, lastY = 0;
@@ -86,13 +86,13 @@ This example shows how to center a small DOM node (with background image) over a
       }
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <span id="span1" class="centered" style=""></span>
     <div id="div1" class="container" style=""></div>
     <button type="button" onclick="doit()" class="">Click to center the image over the frame</button>
 
-  .. cv :: css
+  .. css ::
 
     <style type="text/css">
       .container {

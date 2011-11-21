@@ -170,7 +170,7 @@ The code to instantiate will look like this:
 
 The first thing to do is to create some plain HTML to show you want the widget to look like:
 
-.. cv:: html
+.. html ::
 
   <div>
     <button>press me</button>

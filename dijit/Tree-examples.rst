@@ -35,9 +35,9 @@ Expanding and Focusing tree nodes programmatically
 ``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.attr('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
 
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
@@ -49,7 +49,7 @@ Expanding and Focusing tree nodes programmatically
         }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'"></div>
@@ -64,9 +64,9 @@ One problem with using 'path' is that you must know the full path to the node in
 
 The following example contains workaround code for this problem, as well as an example call to tree.attr('path').  If you already know the full path to the tree node you want to highlight, you can simply call tree.attr('path').
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
@@ -113,7 +113,7 @@ The following example contains workaround code for this problem, as well as an e
         }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
@@ -129,16 +129,16 @@ How can I prevent expanding of nodes when clicking on them?
 
 Simply set the ``openOnClick`` attribute to ``false``
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
@@ -165,9 +165,9 @@ In addition, _createTreeNode is overridden to allow HTML markup in the tree.
 This is a hack, in the sense that the formatting may not be perfect for large (in pixels) elements.
 But the tree will display and work properly regardless, and for simple markup, eg bold, it works great.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
@@ -206,7 +206,7 @@ But the tree will display and work properly regardless, and for simple markup, e
         dojo.addOnLoad(prepare);
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="treeOne"></div>
 
@@ -215,9 +215,9 @@ Example how to build a tree menu with links on nodes
 
 This example shows you how to use a tree to build a navigation menu.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
         <script type="text/javascript">
        dojo.require("dojo.data.ItemFileWriteStore");
@@ -254,6 +254,6 @@ This example shows you how to use a tree to build a navigation menu.
        dojo.addOnLoad(initTree);
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="navTree"></div>

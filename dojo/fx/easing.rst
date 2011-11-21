@@ -139,11 +139,11 @@ Examples
 Example: Playing with Easing
 ----------------------------
 
-.. cv-compound ::
+.. code-example ::
 
   Select the desired easing function from the dropdown and press 'move the div'
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -171,7 +171,7 @@ Example: Playing with Easing
       dojo.addOnLoad(setupMove);
     </script>
 
-  .. cv :: html
+  .. html ::
 
 	<select data-dojo-type="dijit.form.ComboBox" id="easingSelector">
 		<option>linear</option>

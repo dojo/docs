@@ -40,15 +40,15 @@ A simple DropDownSelect
 
 This example shows a simple DropDownSelect widget - converted from a select tag.
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.DropDownSelect");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <select name="select" data-dojo-type="dojox.form.DropDownSelect">
         <option value="TN">Tennessee</option>
@@ -58,7 +58,7 @@ This example shows a simple DropDownSelect widget - converted from a select tag.
         <option value="CA">California</option>
     </select>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/DropDownSelect.css";
@@ -69,15 +69,15 @@ A "styled" DropDownSelect
 
 When styling the entries of a DropDownSelect, you must use div and span tags, instead of select and option tags - as IE will strip out any HTML within the option tags.
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.form.DropDownSelect");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div name="select" value="AK" data-dojo-type="dojox.form.DropDownSelect">
         <span value="AL"><b>Alabama</b></span>
@@ -88,7 +88,7 @@ When styling the entries of a DropDownSelect, you must use div and span tags, in
         <span value="NM" disabled="disabled">New<br>&nbsp;&nbsp;Mexico</span>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/DropDownSelect.css";

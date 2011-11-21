@@ -35,15 +35,15 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
 
 **Note:** If you are using the declarative example and want to manually specify 'selected' or 'selected="selected"' on multiple <options> to have multiple selected on the initial load, you'll need to add the multiple="true" attribute to your native <select> element.  Eg. <select dojoType="dijit.form.MultiSelect" multiple="true"...
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.MultiSelect");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <select dojoType="dijit.form.MultiSelect" id="fruit" name="fruit" size="4">
       <option value="AP">Apples</option>
@@ -55,9 +55,9 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.MultiSelect");
@@ -74,7 +74,7 @@ Programmatic example
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <select id="dynamic"></select>
     <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>

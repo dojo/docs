@@ -76,9 +76,9 @@ Removing an attribute
 
 The following example will remove ``disabled`` from the ``input`` node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       function remAttr(){
@@ -86,7 +86,7 @@ The following example will remove ``disabled`` from the ``input`` node.
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><input id="model" name="model" disabled="disabled" value="some text"> &mdash; our model node</p>
     <p><button onclick="remAttr();">Remove "disabled"</button></p>

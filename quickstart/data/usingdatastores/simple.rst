@@ -45,9 +45,9 @@ The following examples show how a datastore can be used to load the data shown a
 Connecting dijit.form.ComboBox
 ------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -66,7 +66,7 @@ Connecting dijit.form.ComboBox
       ]}
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -75,9 +75,9 @@ Connecting dijit.form.ComboBox
 Connecting dijit.Tree
 ---------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -96,7 +96,7 @@ Connecting dijit.Tree
       ]}
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" data-dojo-props="store:countryStore, query:{}, rootId:'Countries', rootLabel:'Countries'"></div>
@@ -106,9 +106,9 @@ Connecting dijit.Tree
 Connecting dijit.form.FilteringSelect
 -------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -127,7 +127,7 @@ Connecting dijit.form.FilteringSelect
       ]}
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -136,9 +136,9 @@ Connecting dijit.form.FilteringSelect
 Connecting dojox.grid.DataGrid
 ------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.grid.DataGrid");
@@ -165,7 +165,7 @@ Connecting dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="width: 400px; height: 300px;">
       <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="countryStoreForGrid" data-dojo-props="data:storeData"></div>
@@ -179,7 +179,7 @@ Connecting dojox.grid.DataGrid
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

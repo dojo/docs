@@ -46,15 +46,15 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.form.DateTextBox");
      </script>
 
-  .. cv:: html
+  .. html ::
 
 	<input type="text" name="date1" id="date1" value="2005-12-30"
 		dojoType="dijit.form.DateTextBox"
@@ -70,9 +70,9 @@ Ideally, your server application will send and receive dates in the ISO standard
 
 To accept dates from the server in this format (but continue to work with dates on the client using local conventions), you can create your own widget class which overrides the postMixInProperties and serialize methods of DateTextBox. (See :ref:`Dijit <dijit/index>` for details on creating your own widgets). Here's an example:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.DateTextBox");
@@ -102,7 +102,7 @@ To accept dates from the server in this format (but continue to work with dates 
 		});
 	</script>
 
-  .. cv:: html
+  .. html ::
 
 	<label for"fromServerValue">Oracle date coming from server:</label>
 	<input id="fromServerValue" readOnly disabled value="31-DEC-2009"/><br/>
@@ -116,15 +116,15 @@ Changing Constraints on the Fly
 -------------------------------
 The DateTextBox widget obeys the ``constraints`` you give, much like :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`  Sometimes you may need to change this attribute's `min` and `max` values at runtime. To do this, you can set new ``constraints`` on the widget, but the catch is you must use JavaScript dates.  In this example, the first DateTextBox widget sets the `max` constraint of the second widget, and the second widget sets the `min` constraint of the first widget.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.DateTextBox");
 	</script>
 
-  .. cv:: html
+  .. html ::
 
 	<label for="fromDate">From:</label>
 	<input id="fromDate" type="text" name="fromDate" dojoType="dijit.form.DateTextBox" required="true"
@@ -139,9 +139,9 @@ Working with Two-Digit Years
 
 Sometimes you may want to input and display years in a format with only 2-digit years.  Note the server still needs the full 4-digit year sent on form submit so that it's not ambiguous.  There is a ``constraints`` property `fullYear` (boolean) that controls the presentation of the year as 2 digits or 4.  The catch is that this can only be set after the widget has been created.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.DateTextBox");
@@ -153,7 +153,7 @@ Sometimes you may want to input and display years in a format with only 2-digit 
 		dojo.addOnLoad(setShortYear);
 	</script>
 
-  .. cv:: html
+  .. html ::
 
 	<label for="shortYear">From:</label>
 	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" value="1999-12-31" required="true"/>

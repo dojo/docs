@@ -13,9 +13,9 @@ Demonstration
 
 This is an example of the Google API using the pre-defined google.smd in the :ref:`SMD Library <dojox/rpc/SMDLibrary>`. Unless you are Google, the transport will be x-domain by way of :ref:`io.script <dojo/io/script>`, so be sure to include that as well. (RPC can be used locally as well, using built in XHR transports)
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: html
+  .. html ::
 
     <div id="loader"></div>
     <div id="json-rpc-container">
@@ -43,7 +43,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 	</div>
     </div>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.rpc.Service");

@@ -5,16 +5,16 @@ A simple Grid
 
 This example shows how to create a simple Grid declaratively.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojox.data.CsvStore"
         data-dojo-id="store1" data-dojo-props="url:'{{dataUrl}}dojox/grid/tests/support/movies.csv'">
@@ -36,7 +36,7 @@ This example shows how to create a simple Grid declaratively.
         </thead>
     </table>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";

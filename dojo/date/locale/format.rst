@@ -119,9 +119,9 @@ Examples
 A simple example formatting a date in a number of ways
 ---------------------------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
             dojo.require( "dojo.date.locale" );
@@ -158,7 +158,7 @@ A simple example formatting a date in a number of ways
         </STYLE>
 
 
-  .. cv:: html
+  .. html ::
 
         <h3>dojo.date.locale test</h3>
         The following table shows the date: <div class="date"></div> formatted using dojo.date.locale.format

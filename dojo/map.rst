@@ -42,9 +42,9 @@ Examples
 
 This example shows you how to use dojo.map with a simple array. All values of the array will get doubled:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
@@ -70,7 +70,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
     }
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button dojoType="dijit.form.Button" onClick="mapArray()">Run dojo.map()</button>
     <div style="width: 300px; float: left; margin-top: 10px;">
@@ -88,9 +88,9 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
 This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: :ref:`dojo.clone <dojo/clone>`
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
@@ -127,7 +127,7 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
     }
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button dojoType="dijit.form.Button" onClick="raiseSalary()">Raise the salary</button>
     <div style="width: 300px; float: left; margin-top: 10px;">

@@ -73,11 +73,11 @@ What that does is create a new function that wraps dataLoaded and affixes the fi
 Basic Example
 -------------
 
-.. cv-compound::
+.. code-example ::
 
   Let's look at a quick running example:
 
-  .. cv:: javascript
+  .. js ::
     
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -92,7 +92,7 @@ Basic Example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
     
     <button data-dojo-type="dijit.form.Button" id="myButton">Click me to append in a preset value!</button>
     <div id="appendLocation"></div>

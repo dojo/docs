@@ -76,9 +76,9 @@ Examples
 Example 1: Using fieldToObject to get field values
 -------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function convertFields() {
@@ -93,7 +93,7 @@ Example 1: Using fieldToObject to get field values
       dojo.addOnLoad(convertFields);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="convertFields">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>

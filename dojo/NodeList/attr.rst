@@ -46,9 +46,9 @@ Setting different node attributes
 
 The following example will set several attributes such as the ``value`` and ``disabled``.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       function enable(){
@@ -62,7 +62,7 @@ The following example will set several attributes such as the ``value`` and ``di
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><input name="one"></p>
     <p><input name="two"></p>

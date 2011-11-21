@@ -70,9 +70,9 @@ Examples
 Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
 -------------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
      dojo.require("dojo.io.script");
@@ -102,7 +102,7 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
       dojo.addOnLoad(searchGoogle);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Google Search Results for 'dojo toolkit' (In JSON):</b>
     <div id="results" style="height: 200px;"></div>

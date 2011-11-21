@@ -16,13 +16,13 @@ Basic Example
 
 Using dojox.cometd to connect to a Bayeux-compliant server is very straightforward:
 
-.. cv-compound::
+.. code-example ::
 
   As a simple example, we'll setup a chat room; we will subscribe to a channel and log any messages received.
   When you send a message it is published on this channel. You can open a couple browsers to and send messages
   back and forth to see this in action. Just enter your name and type a message and click send.
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.TextBox"); // Those widgets are only included to make the example look nice
@@ -54,7 +54,7 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 
   The html is a just a simple form to enter you name and message to send
 
-  .. cv:: html
+  .. html ::
 
     <div id="chatroom">
     	<div style="clear: both;"><label for="sendName" style="float: left; width: 100px; padding: 3px;">Name:</label> <input id="sendName" type="text" data-dojo-type="dijit.form.TextBox"></div>
@@ -62,7 +62,7 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
     	<div id="messageLog"><strong>Messages:</strong></div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #messageLog {

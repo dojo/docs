@@ -187,9 +187,9 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
   });
 
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
   	<script type="text/javascript">
 		dojo.require("dojox.image.SlideShow");
@@ -211,7 +211,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 			
 	</script>
 
-  .. cv:: html
+  .. html ::
 
     <h2>from dojox.data.FlickrRestStore</h2>
     This SlideShow should display five photos, and not loop. It should also not
@@ -219,7 +219,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
     The time between images in a SlideShow is 1 second.  The widget should not resize to fit the image
     <div id="slideshow2" data-dojo-type="dojox.image.SlideShow" data-dojo-props="noLink:true, loop:false, autoLoad:false, slideshowInterval:1, fixedHeight:true"> </div>
 
-  .. cv:: css
+  .. css ::
 
    <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";

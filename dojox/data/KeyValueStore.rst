@@ -86,9 +86,9 @@ Examples
 List out all the attributes and values of a key/value data set
 --------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.KeyValueStore");
@@ -160,7 +160,7 @@ List out all the attributes and values of a key/value data set
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData" data-dojo-id="kvStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Show me the key/value info!</div>
@@ -175,9 +175,9 @@ List out all the attributes and values of a key/value data set
 Connecting key/value store to dojox.grid.DataGrid
 -------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.KeyValueStore");
@@ -201,7 +201,7 @@ Connecting key/value store to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
 
     <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br>
@@ -216,7 +216,7 @@ Connecting key/value store to dojox.grid.DataGrid
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
@@ -231,9 +231,9 @@ Connecting key/value store to dojox.grid.DataGrid
 Connecting key/value store to dijit.form.ComboBox
 -------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.data.KeyValueStore");
@@ -249,7 +249,7 @@ Connecting key/value store to dijit.form.ComboBox
       ];
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>dijit.form.ComboBox connected to the KeyValueStore:</b><br>
     <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData3" data-dojo-id="kvStore3"></div>

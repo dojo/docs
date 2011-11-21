@@ -30,9 +30,9 @@ Programmatic and declarative example
 
 Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'll wrap both inside a FORM to illustrate what happens on submit.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
  
     <script type="text/javascript">
       dojo.require("dijit.form.CheckBox");
@@ -46,7 +46,7 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'l
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <form id="myform">
         <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />

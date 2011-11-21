@@ -83,7 +83,7 @@ The following example removes the class "style1" from the node "example1":
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -92,7 +92,7 @@ See it in action:
         .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -108,7 +108,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1" class="style1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove class</button>
@@ -131,7 +131,7 @@ The following example removes two classes: "style1" and "style2" from the node "
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -141,7 +141,7 @@ See it in action:
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -157,7 +157,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
@@ -180,7 +180,7 @@ The following example removes two classes: "style1" and "style2" from the node "
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -190,7 +190,7 @@ See it in action:
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -206,7 +206,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
@@ -229,7 +229,7 @@ The following example removes all classes from the node "example1":
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -239,7 +239,7 @@ See it in action:
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -255,7 +255,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
     <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
@@ -278,7 +278,7 @@ Remove from multiple nodes
 
 See it in action:
 
-.. cv-compound::
+.. code-example ::
 
   .. css::
     
@@ -288,7 +288,7 @@ See it in action:
         .additionalStyle3 { background-color: #491f00; color: #36d900 }
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -304,7 +304,7 @@ See it in action:
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="example3" class="additionalStyle3">
         <div class="style3">This node will be changed.</div>

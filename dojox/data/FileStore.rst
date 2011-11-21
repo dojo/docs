@@ -173,16 +173,16 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 Attaching the FileStore to dijit.Tree declaratively
 ---------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.Tree");
       dojo.require("dojox.data.FileStore");
     </script>
 
-  .. cv :: html
+  .. html ::
   
     <div>
       <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php', pathAsQueryParam:true" data-dojo-id="dojoFiles"></div>
@@ -193,16 +193,16 @@ Attaching the FileStore to dijit.Tree declaratively
 Attaching the FileStore to dijit.form.ComboBox declaratively
 ------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojox.data.FileStore");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div>
       <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php', pathAsQueryParam:true" data-dojo-id="comboStore"></div>
@@ -212,16 +212,16 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
 Attaching the FileStore to dojox.grid.DataGrid declaratively
 ------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.FileStore");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <span data-dojo-type="dojox.data.FileStore"
       data-dojo-id="fileStore3"
@@ -246,7 +246,7 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
       </thead>
     </table>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

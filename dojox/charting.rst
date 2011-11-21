@@ -1230,9 +1230,9 @@ Stacked area chart
 
 Here is a very simple example of a stacked area chart.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.charting.Chart2D");
@@ -1251,7 +1251,7 @@ Here is a very simple example of a stacked area chart.
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="chartOne" style="width: 400px; height: 240px;"></div>
 
@@ -1260,9 +1260,9 @@ Pie chart
 
 Here is a pie chart, with slice information shown onmouseover and a legend:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.charting.Chart2D");
@@ -1297,7 +1297,7 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="chartTwo" style="width: 300px; height: 300px;"></div>
     <div id="legendTwo"></div>
@@ -1307,9 +1307,9 @@ Animated Chart
 
 Here is a clustered bar chart with a rendering animation:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.charting.Chart2D");
@@ -1333,7 +1333,7 @@ Here is a clustered bar chart with a rendering animation:
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="animChart" style="width: 300px; height: 300px;"></div>
 
@@ -1343,9 +1343,9 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 3D Chart
 --------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.charting.Chart3D");
@@ -1378,7 +1378,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="chart3d" style="width: 500px; height: 500px;"></div>
 

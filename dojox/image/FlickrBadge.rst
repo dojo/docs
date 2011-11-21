@@ -48,20 +48,20 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
              
         <script type="text/javascript">
 	     dojo.require("dojox.image.FlickrBadge");
 	</script>
 
-  .. cv:: html
+  .. html ::
 
    <div data-dojo-type="dojox.image.FlickrBadge" data-dojo-props="rows:8, cols:3, username:'dylans',
 	tags:'dojotoolkit,italy'"></div>
 
-  .. cv:: css
+  .. css ::
 
    <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";

@@ -11,9 +11,9 @@ subclassing the XmlStore to use an xml-string instead of an url to an xml-file
 by overriding the method _fetchItems its possible to turn off the xhrGet to the url.
 the next step is to use the dojox.xml.parser to read the xml string.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
 		dojo.require("dijit.Tree");
@@ -75,6 +75,6 @@ the next step is to use the dojox.xml.parser to read the xml string.
 		};
     </script>
 
-  .. cv:: html
+  .. html ::
 
      <div id="tree"></div>

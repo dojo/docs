@@ -55,9 +55,9 @@ Examples
 
 Programmatic horizontal example
 -------------------------------
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
@@ -78,12 +78,12 @@ Programmatic horizontal example
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="rangeSlider"></div>
     <p><input type="text" id="sliderValue" /></p>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
@@ -91,9 +91,9 @@ Programmatic horizontal example
 
 Programmatic vertical example with rulers
 -----------------------------------------
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
@@ -118,11 +118,11 @@ Programmatic vertical example with rulers
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="vertical"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
@@ -131,15 +131,15 @@ Programmatic vertical example with rulers
 Declarative horizontal example
 ------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="rangeSlider" data-dojo-type="dojox.form.HorizontalRangeSlider"
         data-dojo-props="value:[2,6], minimum:-10, maximum:10, intermediateChanges:true,
@@ -150,7 +150,7 @@ Declarative horizontal example
     </div>
     <p><input type="text" id="sliderValue" /></p>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);

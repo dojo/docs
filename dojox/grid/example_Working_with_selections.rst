@@ -5,9 +5,9 @@ Working with selections
 
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -15,7 +15,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojox.data.CsvStore"
         data-dojo-id="store2" data-dojo-props="url:'{{dataUrl}}dojox/grid/tests/support/movies.csv'">
@@ -74,7 +74,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         </script>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";

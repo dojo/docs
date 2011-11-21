@@ -46,9 +46,9 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
        dojo.require("dijit.form.TimeTextBox");
@@ -59,7 +59,7 @@ Programmatic example
        });
      </script>
 
-  .. cv:: html
+  .. html ::
 
      <input id="prog_val"/>
      <label for="prog_val">Drop down Time box. Click inside to display the time picker.</label>
@@ -67,15 +67,15 @@ Programmatic example
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
        dojo.require("dijit.form.TimeTextBox");
      </script>
 
-  .. cv:: html
+  .. html ::
 
      <input type="text" name="date1" id="time1" value="T15:00:00"
        dojoType="dijit.form.TimeTextBox"

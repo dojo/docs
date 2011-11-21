@@ -60,9 +60,9 @@ Programmatic example
 
 Here's a tooltip created programmatically:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; position: absolute; top: 100px; left: 10px; }
@@ -71,7 +71,7 @@ Here's a tooltip created programmatically:
     </style>
 
 
-  .. cv:: javascript
+  .. js ::
 
         <script>
            dojo.require("dijit.Tooltip");
@@ -94,7 +94,7 @@ Here's a tooltip created programmatically:
            });
         </script>
 
-  .. cv:: html
+  .. html ::
 
     <span id="bar1" class="bar1">&nbsp;</span>
     <span id="bar2" class="bar2">&nbsp;</span>
@@ -108,23 +108,23 @@ Declarative markup
 
 And here's a tooltip created from markup connected to a :ref:`dijit.form.Button <dijit/form/Button>` widget:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     .box { color: white; background-color: #ba2929; width: 200px; height: 50px; padding: 10px; }
     </style>
 
 
-  .. cv:: javascript
+  .. js ::
 
         <script>
            dojo.require("dijit.Tooltip");
            dojo.require("dijit.form.Button");
         </script>
 
-  .. cv:: html
+  .. html ::
 
         <div class="box">Example content above button</div>
         <button id="buttonId" data-dojo-type="dijit.form.Button">Longanimity</button>

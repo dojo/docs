@@ -16,9 +16,9 @@ InlineEditBox is best described as a behavior on some text on the page, such tha
 Programmatic InlineEditBox
 ==========================
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
@@ -33,7 +33,7 @@ Programmatic InlineEditBox
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="ieb">
       When you click on this div you'll be able to edit it (in plain text).
@@ -49,16 +49,16 @@ Markup
 
 Creation from markup is even easier.  Here's an example with an initial value.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
       dojo.require("dijit.form.NumberSpinner");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dijit.InlineEditBox" data-dojo-props="editor:'dijit.form.NumberSpinner', editorParams:{constraints: {places:0} }" width="70px" title="quantity">15</span>
 
@@ -69,16 +69,16 @@ Initial blank value
 If the InlineEditBox has no value it displays an icon so that the user has something to click to start the edit.
 Note also that the width argument is important so to indicate the editors width, which otherwise would be undefined.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
       dojo.require("dijit.form.NumberTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dijit.InlineEditBox" data-dojo-props="editor:'dijit.form.NumberTextBox'" title="quantity" width="70px"></span>
 
@@ -96,9 +96,9 @@ invalid HTML.
 
 To make the editor's initial size match the size the readonly text (ie, the size of the InlineEditBox before clicking it), set editorParams="{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
@@ -106,7 +106,7 @@ To make the editor's initial size match the size the readonly text (ie, the size
       dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.InlineEditBox" data-dojo-props="editor:'dijit.Editor', renderAsHtml:true, autoSave:false,
 			editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>

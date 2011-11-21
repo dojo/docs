@@ -46,9 +46,9 @@ The first most important thing to do is require the module into your page:
 
 To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: html
+  .. html ::
 
      <button id="fadebutton">Fade Them Out</button>
      <div id="fadebuttontarget">
@@ -56,7 +56,7 @@ To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
         <li class="thinger">Item Two</li>
      </div>
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
         dojo.require("dojo.NodeList-fx");

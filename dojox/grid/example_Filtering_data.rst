@@ -5,9 +5,9 @@ Filtering data
 
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
@@ -15,7 +15,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojox.data.CsvStore"
         // We use the store from the examples above.
@@ -62,7 +62,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         </script>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
 	@import "{{baseUrl}}dijit/themes/nihilo/nihilo.css";

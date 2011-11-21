@@ -92,9 +92,9 @@ Paging over items
 
 *The sample returns 2 items per page*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -186,7 +186,7 @@ Paging over items
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="back">Click me for the previous page!</div>

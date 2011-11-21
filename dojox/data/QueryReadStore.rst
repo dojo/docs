@@ -94,16 +94,16 @@ Connecting QueryReadStore to dijit.form.ComboBox
 
 **Note:** You can watch the xhr requests to the service through firebug.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.QueryReadStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Combo lookup of states through QueryReadStore</b><br>
     <div data-dojo-type="dojox.data.QueryReadStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php'" data-dojo-id="comboStore"></div>
@@ -115,16 +115,16 @@ Connecting QueryReadStore to dijit.form.FilteringSelect
 
 **Note:** You can watch the xhr requests to the service through firebug.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.QueryReadStore");
       dojo.require("dijit.form.FilteringSelect");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>FilteringSelect lookup of states through QueryReadStore</b><br>
     <div data-dojo-type="dojox.data.QueryReadStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php'" data-dojo-id="comboStore2"></div>

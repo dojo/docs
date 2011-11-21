@@ -56,11 +56,11 @@ Programmatic examples
 
 This example shows the standard calendar being created from code.  Include the Calendar.css file, define a HTML node where the calendar is to be placed, load the dojox/widget/Calendar.js file using ''dojo.require'', then instantiate the widget.
 
-.. cv-compound::
+.. code-example ::
 
   A programmatically created Calendar. First lets write up some simple HTML code because you need to define the place where your Calendar should be created.
   
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
@@ -68,7 +68,7 @@ This example shows the standard calendar being created from code.  Include the C
     <div id="cal_1"></div>
     <div id="cal_1_report"></div>
 
-  .. cv:: javascript
+  .. js ::
     
 
     <script type="text/javascript">
@@ -85,9 +85,9 @@ This example shows the standard calendar being created from code.  Include the C
 
 This example shows just the daily calendar being instantiated, with no month or year options.
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
       @import "dojox/widget/Calendar/Calendar.css";
@@ -95,7 +95,7 @@ This example shows just the daily calendar being instantiated, with no month or 
     <div id="cal_2"></div>
     <div id="cal_2_report"></div>
 
-  .. cv:: javascript
+  .. js ::
     
 
     <script type="text/javascript">
@@ -115,9 +115,9 @@ Declarative example
 
 This example shows how to construct a standard Calendar declaratively.  Note the ''<script type="dojo/connect" '' used to listen for events.  This can be used instead of calls to ''dojo.connect'' for listening to function calls and events on widgets.
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
@@ -129,7 +129,7 @@ This example shows how to construct a standard Calendar declaratively.  Note the
     </div>
     <div id="cal_3_report"></div>
 
-  .. cv:: javascript
+  .. js ::
     
 
     <script type="text/javascript">
@@ -138,9 +138,9 @@ This example shows how to construct a standard Calendar declaratively.  Note the
   
 This example shows how to construct a Calendar declaratively, which only shows the Daily view.  Note the ''<script type="dojo/connect" '' used to listen for events.  This can be used instead of calls to ''dojo.connect'' for listening to function calls and events on widgets.
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
@@ -152,7 +152,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
     </div>
     <div id="cal_4_report"></div>
 
-  .. cv:: javascript
+  .. js ::
     
 
     <script type="text/javascript">
@@ -166,9 +166,9 @@ Creating A Custom Calendar By Mixing Views
 
 As the calendar consists of a combination of views, it is possible to mix these any way you like.  The example below shows how to create a calendar that contains a Daily and Yearly view.  You must always include ''dojox.widget._CalendarBase'' and one other view, otherwise you can include whatever views you like.
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: html
+  .. html ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
@@ -180,7 +180,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
     </div>
     <div id="cal_5_report"></div>
 
-  .. cv:: javascript
+  .. js ::
     
 
     <script type="text/javascript">

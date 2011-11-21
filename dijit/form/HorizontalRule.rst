@@ -17,16 +17,16 @@ For examples of using this widget along with the HorizontalSlider refer :ref:`di
 Standalone Ruler
 ----------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
 	dojo.require("dijit.form.HorizontalRule");
 	dojo.require("dijit.form.HorizontalRuleLabels");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div style="width:2in;border-top:1px solid black;">
 	    <div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props="count:17" style="height:.4em;"></div>

@@ -20,9 +20,9 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Form");
@@ -31,7 +31,7 @@ Declarative example
         dojo.require("dijit.form.DateTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
@@ -80,9 +80,9 @@ Preparing and validating a form for XHR requests
 
 To validate a form you use the `isValid()` function. Lets take at a simple example using a declaratively created form:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Form");
@@ -101,7 +101,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
@@ -131,9 +131,9 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 
 The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behaviour to the previous example.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Form");
@@ -152,7 +152,7 @@ The `validate()` function does some extra UI related work, including highlightin
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
@@ -188,9 +188,9 @@ dijit.form.Form doesn't fully support native elements as children.  In particula
 
 It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.   Both types of values (widgets and plain <input> elements) will be submitted.   However, in that case the app has to do validation itself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Form");
@@ -198,7 +198,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
         dojo.require("dijit.form.ValidationTextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div dojoType="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">

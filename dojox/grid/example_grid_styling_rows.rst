@@ -6,16 +6,16 @@ Grid styling : Rows
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
 To use it, you just have to override default behavior by yours.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojo.data.ItemFileWriteStore"
         data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
@@ -59,7 +59,7 @@ To use it, you just have to override default behavior by yours.
         </thead>
     </table>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";

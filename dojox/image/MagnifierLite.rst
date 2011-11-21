@@ -45,16 +45,16 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
        <script type="text/javascript">
          dojo.require("dijit.form.Button");
          dojo.require("dojox.image.MagnifierLite");
        </script>
        
-  .. cv:: html
+  .. html ::
 
        <p>Programmatic: (destroy() removes this.domNode)<br></p>
 		
@@ -81,7 +81,7 @@ Declarative example
 		</button>
 		
 		          
-  .. cv:: css
+  .. css ::
 
    <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";

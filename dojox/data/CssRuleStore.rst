@@ -67,9 +67,9 @@ Examples
 Programmatic construction of a ComboBox to browse rules
 -------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.CssRuleStore");
@@ -96,7 +96,7 @@ Programmatic construction of a ComboBox to browse rules
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Combo lookup of selectors (scoped to nihilo.css)</b>
     <br>

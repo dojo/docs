@@ -217,9 +217,9 @@ Functional Usage Examples
 Searching node attributes
 -------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.XmlStore");
@@ -287,7 +287,7 @@ Searching node attributes
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html
+  .. html ::
 
 
     <b>ISBN:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="isbnBox" value="*"></input>
@@ -309,16 +309,16 @@ Searching node attributes
 Connecting XmlStore to dijit.form.ComboBox
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.XmlStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml'" data-dojo-id="bookStore2"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:bookStore2, searchAttr:'title'"></div>
@@ -327,9 +327,9 @@ Connecting XmlStore to dijit.form.ComboBox
 Connecting XmlStore to dojox.grid.DataGrid
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.grid.DataGrid");
@@ -344,7 +344,7 @@ Connecting XmlStore to dojox.grid.DataGrid
       ];
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml', label:'text'" data-dojo-id="bookStore3"></div>
 
@@ -356,7 +356,7 @@ Connecting XmlStore to dojox.grid.DataGrid
       rowsPerPage:40">
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

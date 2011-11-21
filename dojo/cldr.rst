@@ -81,9 +81,9 @@ Monetary example
 
 The following example prints out the monetary data (places and round) for EUR (Euro):
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
@@ -91,7 +91,7 @@ The following example prints out the monetary data (places and round) for EUR (E
         dojo.require("dojo.cldr.monetary");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button id="monetaryButton" data-dojo-type="dijit.form.Button" type="button">Get Monetary data for EUR (Euro)
         <script type="dojo/method" data-dojo-event="onClick">

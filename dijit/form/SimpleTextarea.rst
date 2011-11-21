@@ -21,9 +21,9 @@ Programmatic example
 
 First we will create a SimpleTextarea widget programmatically. Notice how we pass the *name*, *rows* and *cols* parameters into the object creation.  The *value* attribute can be set with the widget's attr('value', text) method.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.SimpleTextarea");
@@ -38,7 +38,7 @@ First we will create a SimpleTextarea widget programmatically. Notice how we pas
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <textarea id="myarea" />
 
@@ -47,15 +47,15 @@ Declarative example
 
 Here we'll create a SimpleTextarea widget declaratively.  In this instance, the initial *value* is the child text node of the TEXTAREA element.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.SimpleTextarea");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50" style="width:auto;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
 

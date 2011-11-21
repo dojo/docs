@@ -185,16 +185,16 @@ Examples
 Connecting HtmlStore to dijit.form.ComboBox
 -------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <table id="myData" style="display: none;">
     <thead>
@@ -241,9 +241,9 @@ Connecting HtmlStore to dijit.form.ComboBox
 Connecting HtmlStore to dojox.grid.DataGrid
 -------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlStore");
@@ -259,7 +259,7 @@ Connecting HtmlStore to dojox.grid.DataGrid
 
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Standard HTML table:</b><br>
     <table id="myData2">
@@ -313,7 +313,7 @@ Connecting HtmlStore to dojox.grid.DataGrid
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
@@ -328,9 +328,9 @@ Connecting HtmlStore to dojox.grid.DataGrid
 Connecting HtmlStore with List to dijit.form.ComboBox
 -----------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlStore");
@@ -338,7 +338,7 @@ Connecting HtmlStore with List to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Standard HTML Ordered List:</b><br>
     <ul id="myList2">
@@ -364,9 +364,9 @@ Connecting HtmlStore with List to dijit.form.ComboBox
 Connecting HtmlStore with DIV collection to dijit.form.ComboBox
 ---------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.HtmlStore");
@@ -374,7 +374,7 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>DIV collection:</b><br>
     <div id="divList2">

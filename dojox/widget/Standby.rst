@@ -141,9 +141,9 @@ Basic usage
 Programmatic creation
 ---------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -159,13 +159,13 @@ Programmatic creation
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-id="b3" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b4" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic2" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
@@ -196,9 +196,9 @@ Programmatic creation
 Changing overlay color
 ----------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -212,14 +212,14 @@ Changing overlay color
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-id="b5" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b6" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic3" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div data-dojo-id="basicStandby3" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic3', color:'red'"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
@@ -250,9 +250,9 @@ Changing overlay color
 Changing overlay color and image
 --------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -266,14 +266,14 @@ Changing overlay color and image
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-id="b7" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b8" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic4" style="width: 400px; height: 400px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div data-dojo-id="basicStandby4" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic4', color:'lightgray', image:'{{baseUrl}}dojox/widget/tests/images/busy.gif'"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
@@ -306,9 +306,9 @@ Showing curved border cloning
 
 This example works on Firefix and Safari only.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -322,14 +322,14 @@ This example works on Firefix and Safari only.
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-id="b9" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b10" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic5" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
     <div data-dojo-id="basicStandby5" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic5', color:'lightgray'"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
@@ -359,9 +359,9 @@ This example works on Firefix and Safari only.
 Overlaying a dijit.form.TextBox
 -------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -376,7 +376,7 @@ Overlaying a dijit.form.TextBox
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-id="b11" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b12" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
@@ -384,7 +384,7 @@ Overlaying a dijit.form.TextBox
     <input type="text" data-dojo-type="dijit.form.TextBox" id="dijitWidget"></input>
     <div data-dojo-id="basicStandby6" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'dijitWidget'"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";

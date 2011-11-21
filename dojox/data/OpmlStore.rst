@@ -127,16 +127,16 @@ Connecting OpmlStore to dijit.form.ComboBox
 
 *Note that dijit.form.ComboBox automatically passes the queryOption deep:true. This is because for ComboBox, hierarchy does not make sense, so searching as a flat list is preferable*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.OpmlStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml'" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:geoStore, searchAttr:'text'"></div>
@@ -148,16 +148,16 @@ Connecting OpmlStore to dijit.Tree
 *Since Opml data can be hierarchical, the Tree widget is an excellent demo for it. A similar demo can be seen with ItemFileReadStore.*
 :ref:`here <quickstart/data/usingdatastores/simple>`
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.OpmlStore");
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore2"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geoModel" data-dojo-props="store:geoStore2, query:{}, rootId:'Geography', rootLabel:'Geography'"></div>
@@ -169,9 +169,9 @@ Connecting OpmlStore to dojox.grid.DataGrid
 
 *Note here that as part of the DataGrid definition, the queryOption deep is set true. For the DataGrid, hierarchy here does not make sense*
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.grid.DataGrid");
@@ -186,7 +186,7 @@ Connecting OpmlStore to dojox.grid.DataGrid
       ];
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore3"></div>
 
@@ -201,7 +201,7 @@ Connecting OpmlStore to dojox.grid.DataGrid
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";

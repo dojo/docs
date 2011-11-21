@@ -15,14 +15,14 @@ Examples
 Example 1:  Raw, degradable UL list
 -------------------------------------------------------
   
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 300
   :width: 660
 
 	Raw, degradable UL list
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.widget.SortList");
@@ -30,7 +30,7 @@ Example 1:  Raw, degradable UL list
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html ::
     
 	<ul data-dojo-type="dojox.widget.SortList" title="SortList From Markup" data-dojo-props="sortable:false" style="width:200px; height:200px;">
 		<li>one</li>
@@ -53,21 +53,21 @@ Example 1:  Raw, degradable UL list
   
   A simple set of css rules 
   
-  .. cv:: css
+  .. css ::
 
     <link rel="stylesheet" type="text/css" href="{{ baseUrl }}dojox/widget/SortList/SortList.css">
 
 
 Example 2:  SortList using a Store
 -------------------------------------------------------
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 300
   :width: 660
 
   SortList using a Store
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
@@ -76,7 +76,7 @@ Example 2:  SortList using a Store
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html ::
     
     <div data-dojo-type="dojo.data.ItemFileReadStore"
          data-dojo-props="url:{{ dataUrl }}dijit/tests/_data/countries.json'"
@@ -86,7 +86,7 @@ Example 2:  SortList using a Store
   
   A simple set of css rules
   
-  .. cv:: css
+  .. css ::
     
 
     <link rel="stylesheet" type="text/css"

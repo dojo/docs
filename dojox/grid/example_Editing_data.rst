@@ -7,16 +7,16 @@ Grid allows you to edit your data easily and send the changed values back to you
 
 First, you have to set a editor for each cell, you would like to edit:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <span data-dojo-type="dojo.data.ItemFileWriteStore"
         data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
@@ -48,7 +48,7 @@ First, you have to set a editor for each cell, you would like to edit:
         </thead>
     </table>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
 	@import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";

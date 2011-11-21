@@ -33,9 +33,9 @@ Programmatic example using a data store
 
 To set the default value for a programmatic ComboBox, include the *value* attribute in the attribute list passed to the constructor.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.ComboBox");
@@ -49,7 +49,7 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <input id="stateSelect">
     <p><button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
@@ -59,15 +59,15 @@ Declarative markup using native select and option tags
 
 Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. For ComboBox widgets, only the OPTION's child text node is used as both the submit value and the displayed value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.ComboBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <select data-dojo-type="dijit.form.ComboBox" id="fruit" name="fruit">
       <option>Apples</option>
@@ -81,16 +81,16 @@ Declarative markup using a data store
 
 To set the default value for this example, specify the *value* attribute in the markup.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
         data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>

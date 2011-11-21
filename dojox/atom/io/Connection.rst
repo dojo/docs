@@ -73,9 +73,9 @@ Example 1: Load an ATOM Feed
 
 *Note that this demonstrates that the XML document is converted into a JS object structure as shown by displaying the 'feed' by converting it to JSON.  The XML form is also displayed underneath it, demonstrating toString() rebuilding the XML form for submission or whatnot.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.atom.io.model");
@@ -105,7 +105,7 @@ Example 1: Load an ATOM Feed
       dojo.addOnLoad(initSimpleAtom);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
@@ -124,9 +124,9 @@ Example 2: Update an entry in a Feed
 
 *Note that to see the PUT, you can use firebug.  But to see the PUT contents, you will need a debugging proxy like Charles*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.atom.io.model");
@@ -169,7 +169,7 @@ Example 2: Update an entry in a Feed
       dojo.addOnLoad(initUpdateAtom );
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="height: 400px; overflow: auto;">
       <b>XML of Feed (before change)</b>

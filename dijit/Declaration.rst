@@ -25,15 +25,15 @@ To declare your class declaratively, use dijit.Declaration. Uhhhh, OK, too many 
 
 Here's an example defining a widget called Employee, and then creating two of those Employee widgets:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script>
 		dojo.require("dijit.Declaration");
 	</script>
 
-  .. cv :: html
+  .. html ::
 
 	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
 		<span>${name}</span>

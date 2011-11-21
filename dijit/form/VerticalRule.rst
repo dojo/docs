@@ -17,16 +17,16 @@ For examples of using this widget along with the VerticalSlider refer :ref:`diji
 Standalone Ruler
 ----------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
             dojo.require("dijit.form.VerticalRule");
             dojo.require("dijit.form.VerticalRuleLabels");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="height:2in;border-left:1px solid black;">
         <div data-dojo-type="dijit.form.VerticalRule" data-dojo-props="count:17" style="width:.4em;"></div>

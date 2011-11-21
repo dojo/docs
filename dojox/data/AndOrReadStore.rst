@@ -61,9 +61,9 @@ Functional Examples
 Finding all Continents and Cities
 ---------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.data.AndOrReadStore");
@@ -162,7 +162,7 @@ Finding all Continents and Cities
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojox.data.AndOrReadStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Find continents!</div>

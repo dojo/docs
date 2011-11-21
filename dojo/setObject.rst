@@ -49,9 +49,9 @@ Wheras with `dojo.setObject`, we can shorten that to:
 Examples
 ========
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
         <script>
             dojo.require("dijit.form.Button");
@@ -61,7 +61,7 @@ Examples
             console.log("in head");
         </script>
 
-  .. cv:: html
+  .. html ::
 
         <p>Click button to insert nested value into obj</p>
         <button data-dojo-type="dijit.form.Button">

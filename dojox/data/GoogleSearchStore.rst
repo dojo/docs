@@ -320,9 +320,9 @@ The following example shows wiring Various GoogleSearchStores to dojox.data.Data
 Searching multiple Google services at once
 ------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -371,7 +371,7 @@ Searching multiple Google services at once
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Input search text:</b>
     <br>
@@ -418,7 +418,7 @@ Searching multiple Google services at once
       </div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}/dojox/grid/resources/Grid.css";

@@ -39,10 +39,10 @@ To give the user feedback about what's happening with the searches they issue, w
 
 3. We use dojo.Deferreds to issue all the requests in parallel. As soon as all 3 requests have been executed we will call our server:
 
-.. cv-compound::
+.. code-example ::
 
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.DeferredList");
@@ -95,7 +95,7 @@ To give the user feedback about what's happening with the searches they issue, w
       });
     </script>
    
-  .. cv:: html
+  .. html ::
    
     <button data-dojo-type="dijit.form.Button" id="search">Search</button>
     <div style="margin: 10px;">Status: <span id="statusSearch"></span></div>
@@ -104,7 +104,7 @@ Now when you look at the code, you will see that the total amount of setTimeout 
 
 To make the above example "live", you only need to note that calls to :ref:`dojo.xhr <dojo/xhr>` already returned `Deferred` instances, so a function like `searchAmazon` might be re-written as:
 
-.. cv:: javascript
+.. js ::
 
     function searchAmazon(query){
       return dojo.xhr("GET", {

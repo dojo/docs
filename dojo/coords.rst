@@ -55,9 +55,9 @@ Examples
 Example 1:  Look up a positioned DOM node and calculate its coordinates
 -----------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       function init() {
@@ -71,7 +71,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
     <br>
@@ -82,9 +82,9 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
 Example 2:  Look up a positioned dijit and calculate its coordinates
 --------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -99,7 +99,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div id="textbox" data-dojo-type="dijit.form.TextBox"></div>
     <br>

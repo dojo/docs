@@ -100,15 +100,15 @@ Or by calling ``dojox.highlight.init(someNode)``.
 
 Highlight can also be used via the dojox.highlight.processString function
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/highlight/resources/highlight.css"
     </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.highlight");
@@ -123,7 +123,7 @@ Highlight can also be used via the dojox.highlight.processString function
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="demoCode1">Select a from b where a = 2;</div>
     <button data-dojo-type="dijit.form.Button" id="buttonOne" onClick="highlight();">Highlight Code</button>

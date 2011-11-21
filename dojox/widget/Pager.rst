@@ -45,23 +45,23 @@ TODO: example
 Declarative example: Horizontal Pager
 -------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojox/widget/Pager/Pager.css";
     </style>
 
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.require("dojox.widget.Pager");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <!-- the datastore -->
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="pagerStore" id="pagerStore"

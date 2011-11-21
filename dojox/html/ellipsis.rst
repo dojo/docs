@@ -41,21 +41,21 @@ Examples
 Within a fixed-width div
 ------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.html.ellipsis");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="width: 100px;">
         <div class="dojoxEllipsis">Long inner text that should be truncated after 100 pixels.</div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
@@ -64,21 +64,21 @@ Within a fixed-width div
 Forcing selectability in FF
 ---------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.html.ellipsis");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div style="width: 100px;">
         <div class="dojoxEllipsis dojoxEllipsisSelectable">Long inner text that should be truncated after 100 pixels.</div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
@@ -87,15 +87,15 @@ Forcing selectability in FF
 Within a table
 --------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojox.html.ellipsis");
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <table style="width: 75%; table-layout: fixed">
         <tr>
@@ -104,7 +104,7 @@ Within a table
         </tr>
     </table>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";

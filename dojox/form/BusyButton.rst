@@ -29,9 +29,9 @@ Programmatic example
 
 The first example shows you how to create a nifty button programmatically
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
@@ -46,11 +46,11 @@ The first example shows you how to create a nifty button programmatically
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="placeHolder"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
@@ -61,19 +61,19 @@ Declarative example
 
 This example show how to use the busy button without internal timeout. Once you receive a server response from the server (than can include a timeout from the server) you can and should change the status of the button.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dojox.form.BusyButton" data-dojo-props="busyLabel:'Sending data...'">Send data</button>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
@@ -84,19 +84,19 @@ Using the built-in timeout
 
 The following example has a built-in timeout.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
     </script>
 
-  .. cv:: html
+  .. html ::
 
    <button data-dojo-type="dojox.form.BusyButton" data-dojo-props="busyLabel:'For 10 seconds', timeout:10000">Hold your breath</button>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
@@ -107,9 +107,9 @@ Set a new label
 
 In this example we will set a new label by clicking on a button (this can be a server response as well). The first state will not have a timeout, the second state will have a timeout of 2 seconds
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
@@ -120,12 +120,12 @@ In this example we will set a new label by clicking on a button (this can be a s
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dojox.form.BusyButton" id="buttonChargeback" data-dojo-props="busyLabel:'Canceling payment...'">Cancel payment</button>
     <button data-dojo-type="dijit.form.Button" id="buttonChangeState">Change state</button>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
@@ -136,9 +136,9 @@ Disabled BusyButton
 
 The last example uses a little bit of trickery to create a button which is disabled initially and enabled after the timeout. This sort of button is very hand for license agreements or times when you want to be sure the user can't submit a form (usually forcing a user to read the license agreement doesn't work, but its worth a try). The chance is high that the button already is not disabled anymore - just reload the page and scroll to this example real quick.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
@@ -150,11 +150,11 @@ The last example uses a little bit of trickery to create a button which is disab
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
    <button data-dojo-type="dojox.form.BusyButton" id="buttonLicense" data-dojo-props="isBusy:true, busyLabel:'Please read the agreement...', timeout:10000">I Agree</button>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);

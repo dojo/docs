@@ -378,9 +378,9 @@ Example: Simplified Form Type Map for dojo.Color Objects
 Functional Example: Using custom type maps with ItemFileReadStore
 -----------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -451,7 +451,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to examine items and what the color attribute is!</div>
     <br>
@@ -609,9 +609,9 @@ There is no simple method call to return the number of items, and without diggin
 Connecting ItemFileReadStore to ComboBox
 ----------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -630,7 +630,7 @@ Connecting ItemFileReadStore to ComboBox
       ]}
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
@@ -638,9 +638,9 @@ Connecting ItemFileReadStore to ComboBox
 Searching for all continents
 ----------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -739,7 +739,7 @@ Searching for all continents
       dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Find continents!</div>
@@ -753,9 +753,9 @@ Doing wildcard searches and option setting
 
 *Wildcards * and ? are supported by the dojo.data.ItemFileReadStore:*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -853,7 +853,7 @@ Doing wildcard searches and option setting
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html
+  .. html ::
 
 
     <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
@@ -883,9 +883,9 @@ Doing wildcard searches and option setting
 Demonstrating custom sorting
 ----------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -970,7 +970,7 @@ Demonstrating custom sorting
       dojo.addOnLoad(init4);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:sortData" data-dojo-id="sortStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button4">Custom sort!</div>

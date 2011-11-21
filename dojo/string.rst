@@ -24,9 +24,9 @@ pad() and rep() help construct strings.  pad() can extend a string to a certain 
 substitute() is a workhorse and the basis for dijit's templating.  It performs parameterized substitution in the form of ${name} with a variety of advanced options.  An object is provided as the hashtable to lookup when doing these substitutions. The expression in the curly braces may be a simple property, like 'name' or a dotted expression like 'data.employee.name'.  The expression may be further qualified by a colon and the name of a format function, to run the output each lookup through a property, such as mylib.formatName.   A 'this' reference may be provided for the format function, otherwise it will be scoped to the global namespace.  Lastly, an optional transform function can be run on all properties just prior to substitution, such as one to escape HTML entities.
 
 
-.. cv-compound::
+.. code-example ::
   
-  .. cv:: javascript
+  .. js ::
     
     <script type="text/javascript">
         dojo.addOnLoad(function(){
@@ -34,11 +34,11 @@ substitute() is a workhorse and the basis for dijit's templating.  It performs p
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="foo">  Hi dojo.beercamp </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #foo {

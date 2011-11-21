@@ -38,9 +38,9 @@ While that seems simple, nothing is as useful as a complete example. So, below i
 Showing how sort attributes affect ordering
 -------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -147,7 +147,7 @@ Showing how sort attributes affect ordering
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to show sorted and unsorted lists!</div>

@@ -91,9 +91,9 @@ Getting margin box I.
 
 This example displays the return values of dojo.marginBox on a node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
@@ -108,13 +108,13 @@ This example displays the return values of dojo.marginBox on a node.
       };
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getMarginBoxOne">Get margin box</button>
 
     <div id="marginNodeOne">Hi, I am a marginNode, really!</div>
     
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #marginNodeOne {
@@ -131,9 +131,9 @@ Getting margin box II.
 
 This example displays the return values of dojo.marginBox on a nested node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
@@ -148,7 +148,7 @@ This example displays the return values of dojo.marginBox on a nested node.
       };
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getMarginBoxTwo">Get margin box</button>
 
@@ -157,7 +157,7 @@ This example displays the return values of dojo.marginBox on a nested node.
       <div id="marginNodeTwo">Hi, I am a marginNode, really!</div>
     </div>
     
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #marginNodeTwo {
@@ -174,9 +174,9 @@ Setting margin box I.
 
 This example is showcasing the usage of dojo.marginBox as a setter, take a look at the JavaScript code to see what the code does.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.addOnLoad(function(){
@@ -184,14 +184,14 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div>
       Hi I am nested
       <div id="marginNodeThree">Hi, I am a marginNode, really!</div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #marginNodeThree {

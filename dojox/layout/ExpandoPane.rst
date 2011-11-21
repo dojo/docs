@@ -49,9 +49,9 @@ TODO: example
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -59,7 +59,7 @@ Declarative example
       dojo.require("dojox.layout.ExpandoPane");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
       <div data-dojo-type="dojox.layout.ExpandoPane" title="Left Expando" data-dojo-props="title: 'Left Expando', maxWidth:225, splitter:true, region:'leading'" style="width: 225px;">
@@ -68,7 +68,7 @@ Declarative example
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import url("{{ baseUrl }}dojox/layout/resources/ExpandoPane.css");

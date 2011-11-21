@@ -78,9 +78,9 @@ Examples
 Example 1: Creating a deferred and adding callbacks
 ---------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -102,7 +102,7 @@ Example 1: Creating a deferred and adding callbacks
       dojo.addOnLoad(createDeferred);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Push the button to create a deferred and set up an async callback</B>
     <br>

@@ -79,9 +79,9 @@ A programmatic tree
 
 Creating a programmatic tree is very simple:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
@@ -106,7 +106,7 @@ Creating a programmatic tree is very simple:
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="treeOne"></div>
 
@@ -116,16 +116,16 @@ Note that the childrenAttrs parameter to TreeStoreModel/ForestStoreModel is an a
 A markup tree
 -------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
@@ -206,16 +206,16 @@ Correspondingly, all trees have a root node, corresponding to the root "item" fr
 
 Sometimes you don't want that "the world" top level node to show up, especially if the Tree is inside a TitlePane/AccordionPane/etc. with the label "The World". In that case you should set showRoot=false. The item still exists in the model but it's hidden on the screen:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
@@ -267,9 +267,9 @@ In the first and last case (ie, when an item is dropped onto the tree), the drop
 In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSource"); and the dndController="dijit.tree.dndSource" parameter must be specified to the tree
 
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileWriteStore");
@@ -297,7 +297,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="treeThree"></div>
 
@@ -313,9 +313,9 @@ betweenThreshold
 ----------------
 If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.  This is useful for when a user can control the order of the children of the child nodes:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileWriteStore");
@@ -324,7 +324,7 @@ If between threshold is set to a positive integer value like 5 (which represents
       dojo.require("dijit.Tree");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
@@ -357,9 +357,9 @@ Context Menu
 
 Tree has no built-in support for context menus, but you can use the Menu widget in conjunction with the Tree
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
         <script>
             dojo.require("dijit.Menu");
@@ -369,7 +369,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
             dojo.require("dijit.Tree");
         </script>
 
-  .. cv:: html
+  .. html ::
 
 	<ul data-dojo-type="dijit.Menu" id="tree_menu" style="display: none;">
 		<li data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>

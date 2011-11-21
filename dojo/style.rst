@@ -181,9 +181,9 @@ Get the style of a DOM node
 
 Passing only an ID or node returns the computed style object of the node:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style1 { color: red; padding: 10px; border: 1px red solid; }
@@ -191,13 +191,13 @@ Passing only an ID or node returns the computed style object of the node:
          #poorboy_styles li .prop { color: blue; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="poorboy" class="style1">Don't look at me - I'm just a poor DOM node.</div>
     <ul id="poorboy_styles"></ul>
@@ -221,21 +221,21 @@ Get a single style property of a DOM node
 
 Passing a node and a style property returns the current normalized, computed value for that property:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style2 { color: blue; padding: 10px; border: 1px blue solid; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="poorboy2" class="style2">I will tell you anything...</div>
 
@@ -252,21 +252,21 @@ Set a style property
 
 Passing a node, a style property, and a value changes the current display of the node and returns the new computed value:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style3 { color: green; padding: 10px; border: 1px green solid; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="poorboy3" class="style3">I don't like this green</div>
 
@@ -284,22 +284,22 @@ Set multiple style properties at once
 
 Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style4 { color: black; padding: 10px; border: 1px black solid; }
          .nib { font-size: 4.2em; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="poorboy4" class="style4"><span class="nib">NIB</span><br/>NODE IN BLACK</div>
 
@@ -321,22 +321,22 @@ Use dojo.style() with a list of nodes
 
 dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style5 { color: black; padding: 10px; border: 1px black solid; }
          .sweet { color: #FF8C8C; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="poorboy5" class="style5">
         <p>The different faces of dojo.style():</p>

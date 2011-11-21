@@ -85,9 +85,9 @@ Examples
 Example 1: Using formToQuery to create an query string version of a form
 ------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -102,7 +102,7 @@ Example 1: Using formToQuery to create an query string version of a form
       dojo.addOnLoad(convertForm);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="convertForm" data-dojo-type="dijit.form.Button" type="button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
@@ -118,9 +118,9 @@ Example 1: Using formToQuery to create an query string version of a form
 Example 2: Using formToQuery to create a query string version of a form with dijit widgets
 ------------------------------------------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
@@ -136,7 +136,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
       dojo.addOnLoad(convertFormDijits);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button id="convertFormDijits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>

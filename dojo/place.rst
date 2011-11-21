@@ -108,9 +108,9 @@ Place "before" or "after"
 
 This two options position the node in the reference node's parent children list. "before" places the node right before the reference node, and "after" places the node right after the reference node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.addOnLoad(function(){
@@ -122,7 +122,7 @@ This two options position the node in the reference node's parent children list.
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p>
       <button id="placeBA">Place node</button>
@@ -143,7 +143,7 @@ This two options position the node in the reference node's parent children list.
       <div>after: 2nd</div>
     </p>
 
-  .. cv:: css
+  .. css ::
 
     <style>
       div.ref     { background-color: #fcc; }
@@ -157,9 +157,9 @@ Place "replace"
 
 "replace" replaces the reference node with the node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.addOnLoad(function(){
@@ -171,7 +171,7 @@ Place "replace"
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p>
       <button id="placeReplace">Place node</button>
@@ -188,7 +188,7 @@ Place "replace"
       <div>after: 2nd</div>
     </p>
 
-  .. cv:: css
+  .. css ::
 
     <style>
       div.ref     { background-color: #fcc; }
@@ -204,9 +204,9 @@ These three options position the node as a child of the reference node. "first" 
 
 If no position is specified, or position is not recognized, "last" is assumed as the default.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.addOnLoad(function(){
@@ -218,7 +218,7 @@ If no position is specified, or position is not recognized, "last" is assumed as
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p>
       <button id="placeFLO">Place node</button>
@@ -240,7 +240,7 @@ If no position is specified, or position is not recognized, "last" is assumed as
       <div>after: 2nd</div>
     </p>
 
-  .. cv:: css
+  .. css ::
 
     <style>
       div.ref     { background-color: #fcc; }
@@ -254,9 +254,9 @@ Place by numbers
 
 If ``pos`` is a number, the node will be placed as a child of the reference node with this number (counting from 0). For example, if 3 is specified, the node will be placed as the 3rd child (0, 1, 2, and 3 will be our node) assuming that the reference node has at least three existing children. If the number is more than number of children, the node will be appended to the reference node making it the last child. If the number is less than 0, the node will be placed at position 0 making it the first child of the reference node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script>
       dojo.addOnLoad(function(){
@@ -271,7 +271,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p>
       <button id="placeNumber">Place node</button>
@@ -293,7 +293,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
       <div>after: 2nd</div>
     </p>
 
-  .. cv:: css
+  .. css ::
 
     <style>
       div.ref     { background-color: #fcc; }

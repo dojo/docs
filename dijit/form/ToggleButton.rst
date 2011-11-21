@@ -22,9 +22,9 @@ Programmatic example
 
 Let's create a ToggleButton widget programmatically, initially unchecked:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -38,7 +38,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
     });
     </script>
 
-  .. cv:: html
+  .. html ::
  
     <button id="programmatic"></button>
 
@@ -47,15 +47,15 @@ Declarative example
 
 Now let's create a ToggleButton widget with HTML markup, initially checked:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
  
     <button data-dojo-type="dijit.form.ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true">
         Toggle me

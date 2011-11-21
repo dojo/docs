@@ -105,9 +105,9 @@ This section covers some basic query examples to familiarize users with the gene
 Query for all Spices  (Basic query)
 -----------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -173,7 +173,7 @@ Query for all Spices  (Basic query)
         dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click to find the spices!</div>
@@ -188,9 +188,9 @@ Query for all food in aisles starting with C
 
 *Basic query with wildcard*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -257,7 +257,7 @@ Query for all food in aisles starting with C
         dojo.addOnLoad(init2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click to find the items in an aisle starting with C!</div>
@@ -272,9 +272,9 @@ Enter your own query for name and aisle
 
 *Wildcards * and ? are supported by the dojo.data.ItemFileReadStore:*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -372,7 +372,7 @@ Enter your own query for name and aisle
         dojo.addOnLoad(init3);
     </script>
 
-  .. cv :: html
+  .. html ::
 
 
     <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>

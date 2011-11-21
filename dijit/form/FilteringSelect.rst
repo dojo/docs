@@ -35,9 +35,9 @@ Programmatic example using a data store
 
 To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.  To get the current value (the identity of the currently selected store item), get the *value* attribute.  To get the text currently displayed in the textbox (the value of the currently selected store item's attribute indicated by the FilteringSelect's ``searchAttr`` property), get the *displayedValue* attribute.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
@@ -59,7 +59,7 @@ To set the default value for a programmatic FilteringSelect, include the *value*
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <input id="stateSelect">
     <p>
@@ -74,15 +74,15 @@ Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's
 
 NOTE: if you do not specify a selected option, the browser will select the first item by default. If you want the FilteringSelect to start blank, use a different method to create it.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <select data-dojo-type="dijit.form.FilteringSelect" id="fruit" name="fruit">
         <option value="AP">Apples</option>
@@ -96,16 +96,16 @@ Declarative markup using a data store
 
 To set the default value for this example, specify the *value* attribute (the hidden text value to be submitted) in the markup.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"
@@ -123,16 +123,16 @@ By default, FilteringSelect searches on the name attribute of objects in your do
 
 In this example, the FilteringSelect has been set to display the abbreviations for states rather than their full names.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"
@@ -148,9 +148,9 @@ Codependent FilteringSelect/ComboBox widgets
 
 The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
@@ -407,7 +407,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <label for="city">City:</label>
     <input id="city">
@@ -421,9 +421,9 @@ When users open a FilteringSelect menu, by default they see the `name` attribute
 
 This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`, `Dijit`, and `Dojox`. The user can type any 1 of these 3 values. The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the autocompleted value in the textbox, as with other FilteringSelects, rather than trying to parse the rich text label.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
@@ -453,7 +453,7 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <input id="dojoBox">
 
@@ -466,9 +466,9 @@ The labelFunc attribute of FilteringSelect enables you to transform the text tha
 
 In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript. myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects built from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
@@ -483,7 +483,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 	}
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore"
         data-dojo-id="stateStore"

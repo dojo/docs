@@ -39,18 +39,18 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 350
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
        @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
        @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
@@ -70,7 +70,7 @@ Programmatic example
      });
      </script>
 
-  .. cv:: html
+  .. html ::
 
         <div id="pFloatingPane">This is the content of the pane!</div>
         <div data-dojo-type="dijit.form.Button" data-dojo-props="label:'Show me', onClick:function(){pFloatingPane.show();}"></div>
@@ -80,25 +80,25 @@ Programmatic example
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 350
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
        @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
        @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
      </script>
 
-  .. cv:: html
+  .. html ::
 
      <div data-dojo-type="dojox.layout.FloatingPane" id="dFloatingPane"
         title="A floating pane" data-dojo-props="resizable:true, dockable:true, title:'A floating pane'"

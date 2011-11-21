@@ -96,12 +96,12 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 fig 1.
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 430
   :version: 1.4
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.widget.DataPresentation");
@@ -149,12 +149,12 @@ fig 1.
 	});
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="legenddiv"></div>
     <div id="chartdiv" style="width: 650px; height: 300px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
 
@@ -202,12 +202,12 @@ Example 2 - Chart and DataGrid
 
 fig 2.
 
-.. cv-compound::
+.. code-example ::
   :type: inline
   :height: 530
   :version: 1.4
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.widget.DataPresentation");
@@ -256,7 +256,7 @@ fig 2.
 
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="legenddiv"></div>
     <div id="chartdiv" style="width: 650px; height: 300px;"></div>
@@ -266,7 +266,7 @@ fig 2.
 
  
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";

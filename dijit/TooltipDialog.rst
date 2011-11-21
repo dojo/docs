@@ -32,9 +32,9 @@ Programmatic example
 
 The first example shows how to create a TooltipDialog and DropDownButton programmatically.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
           dojo.require("dijit.form.DropDownButton");
@@ -58,15 +58,15 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 	 });
        </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="dropdownButtonContainer"></div>
 
 A TooltipDialog may be popped up from any node.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
 	<script type="text/javascript">
           dojo.require("dijit.TooltipDialog");
@@ -91,7 +91,7 @@ A TooltipDialog may be popped up from any node.
 	 });
        </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="thenode">Move the mouse over me to pop up the dialog.</div>
 
@@ -105,9 +105,9 @@ and the other for the drop-down widget that's displayed when you press the butto
 
 Here's one displaying a TooltipDialog:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.DropDownButton");
@@ -116,7 +116,7 @@ Here's one displaying a TooltipDialog:
       dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.DropDownButton">
       <span>Register</span>

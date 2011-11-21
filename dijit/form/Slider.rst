@@ -52,9 +52,9 @@ Programmatic example of a horizontal slider
 
 One way you could show the user the value of your Slider is to create a textbox that the Slider fills when the user moves the Slider. The following code fills in a simple textbox called horizontalSliderValue.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Slider");
@@ -76,7 +76,7 @@ One way you could show the user the value of your Slider is to create a textbox 
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="slider"></div>
     <p><input type="text" id="sliderValue" data-dojo-type="dijit.form.TextBox" /></p>
@@ -87,9 +87,9 @@ Programmatic example of a vertical slider
 
 The similar example but with a vertical slider and a simple rule (tick marks) created programmatically.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Slider");
@@ -114,7 +114,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
       });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="vertical"></div>
 
@@ -124,15 +124,15 @@ Declarative markup example with discrete values
 
 And here we create a slider declaratively. Note that we set the value of the "discreteValues" attribute to 11, meaning that the slider will have 11 focus points.  This example also shows the end buttons removed.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Slider");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
         value="6" minimum="-10" maximum="10" discreteValues="11"

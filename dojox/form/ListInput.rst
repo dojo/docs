@@ -35,19 +35,19 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.form.ListInput");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dojox.form.ListInput" id="fruit" data-dojo-props="name:'fruit', value:['Apples','Oranges','Pears']"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/ListInput.css";
@@ -56,9 +56,9 @@ Declarative example
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.form.ListInput");
@@ -76,12 +76,12 @@ Programmatic example
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="dynamic"></div>
     <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/ListInput.css";

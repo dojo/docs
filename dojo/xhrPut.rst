@@ -61,9 +61,9 @@ For specific examples of how to use dojo.xhrPut, please refer to the following. 
 Example 1: dojo.xhrPut call to send some text data
 --------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -95,7 +95,7 @@ Example 1: dojo.xhrPut call to send some text data
       dojo.addOnLoad(sendText);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <b>Push the button to PUT some text.</b>
     <br>

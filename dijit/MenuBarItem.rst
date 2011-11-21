@@ -15,9 +15,9 @@ These are the items in the Menubar that may be clickable but does not spawn a su
 A programmatically created MenuBarItem
 --------------------------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.MenuBar");
@@ -34,15 +34,15 @@ A programmatically created MenuBarItem
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
      <div id="wrapper"></div>
 
 Creation from markup is more simpler and structured.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.MenuBar");
@@ -50,7 +50,7 @@ Creation from markup is more simpler and structured.
     dojo.require("dijit.MenuBarItem");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div id="menubar" data-dojo-type="dijit.MenuBar">
 		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">

@@ -57,15 +57,15 @@ Examples
 Test against isObject()
 -----------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: css
+  .. css ::
 
      <style type="text/css">
          .style1 { background: #f1f1f1; padding: 10px; }
      </style>
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
@@ -106,7 +106,7 @@ Test against isObject()
         }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div style="height: 100px;">
         <button data-dojo-type="dijit.form.Button">

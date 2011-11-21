@@ -44,9 +44,9 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
 
 *Note: cookies must be enabled for this to work ;)*
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is there only to make things look fancy
@@ -61,7 +61,7 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
     };
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:setCookie">Set Cookie</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getCookie">Get Cookie</button>
 

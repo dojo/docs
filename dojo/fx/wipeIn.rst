@@ -35,9 +35,9 @@ Examples
 Example 1:  Wipe in a dom node
 ------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -56,7 +56,7 @@ Example 1:  Wipe in a dom node
       dojo.addOnLoad(basicWipeinSetup);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton">Wipe It In!</button>
     <div id="basicWipeNode" style="width: 200px; background-color: red; display: none;">
@@ -67,9 +67,9 @@ Example 1:  Wipe in a dom node
 Example 2:  Wipe in a dom node with a custom duration
 -----------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -89,7 +89,7 @@ Example 2:  Wipe in a dom node with a custom duration
       dojo.addOnLoad(basicWipeinSetup1);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton1">Wipe It In!</button>
     <div id="basicWipeNode1" style="width: 200px; background-color: red; display: none;">
@@ -101,9 +101,9 @@ Example 2:  Wipe in a dom node with a custom duration
 Example 3:  Wipe in a dom node with an easing function
 ------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -125,7 +125,7 @@ Example 3:  Wipe in a dom node with an easing function
       dojo.addOnLoad(basicWipeinSetup2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicWipeButton2">Wipe It In!</button>
     <div id="basicWipeNode2" style="width: 200px; background-color: red; display: none;">

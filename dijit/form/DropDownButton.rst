@@ -22,9 +22,9 @@ Programmatic example
 
 The first example shows how to create a menu and drop down button programmatically.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
         <script type="text/javascript">
           dojo.require("dijit.form.Button");
@@ -57,7 +57,7 @@ The first example shows how to create a menu and drop down button programmatical
 	 });
        </script>
 
-  .. cv:: html
+  .. html ::
 
     <div id="dropdownButtonContainer"></div>
 
@@ -70,9 +70,9 @@ and the other for the drop-down widget that's displayed when you press the butto
 
 Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -80,7 +80,7 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
       dojo.require("dijit.form.TextBox");
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <div data-dojo-type="dijit.form.DropDownButton">
       <span>Register</span>

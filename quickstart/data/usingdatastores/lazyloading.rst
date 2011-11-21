@@ -75,9 +75,9 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
 
 **Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -128,7 +128,7 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
       ]};
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="geographyStore"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel" data-dojo-props="store:geographyStore, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
@@ -194,9 +194,9 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
 
 **Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -249,7 +249,7 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
       };
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>

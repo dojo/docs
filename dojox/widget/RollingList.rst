@@ -55,9 +55,9 @@ Examples
 A simple rolling list pulling data from a read store
 ---------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
 
-  .. cv :: javascript
+  .. js ::
 
     <script>
     
@@ -74,14 +74,14 @@ A simple rolling list pulling data from a read store
       //});
     </script>
 
-  .. cv :: html
+  .. html ::
   
     <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore"
         data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
     <div data-dojo-type="dojox.widget.RollingList" data-dojo-id="myList" id="myList"
         data-dojo-props="store:continentStore, query:{type:'continent'}" style="height:150px;"></div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/RollingList/RollingList.css";

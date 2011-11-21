@@ -223,7 +223,7 @@ Nesting an Editor With FullScreen in BorderContainer
       dojo.require("dojo.parser");	// scan page for widgets and instantiate them
     </script>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       html, body {

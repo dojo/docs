@@ -27,9 +27,9 @@ Examples
 Programmatic example
 --------------------
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.MenuBar");
@@ -72,7 +72,7 @@ Programmatic example
         });
     </script>
 
-  .. cv:: html
+  .. html ::
 
      <div id="wrapper"></div>
 
@@ -82,9 +82,9 @@ Declarative markup
 
 Creation from markup is even easier.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.MenuBar");
@@ -94,7 +94,7 @@ Creation from markup is even easier.
       dojo.require("dijit.PopupMenuItem");
     </script>
 
-  .. cv:: html
+  .. html ::
 
 	<div data-dojo-type="dijit.MenuBar" id="navMenu">
 		<div data-dojo-type="dijit.PopupMenuBarItem">

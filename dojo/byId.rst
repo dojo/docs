@@ -145,9 +145,9 @@ Fade-out a node
 
 The following example lets a node by id dissapear from the screen
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -163,12 +163,12 @@ The following example lets a node by id dissapear from the screen
     });
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="buttonOne">Hide Me!</button> <button data-dojo-type="dijit.form.Button" id="buttonTwo">Show Me!</button>
     <div id="findMe">Hiya!</div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
       #findMe {

@@ -171,9 +171,9 @@ A simple animation
 
 A simple animation changing both background color and text color.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
@@ -192,12 +192,12 @@ A simple animation changing both background color and text color.
     }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:statusOk">Grant access</button></p>
     <div id="statusCode">Denied</div>
 
-  .. cv:: css
+  .. css ::
 
     <style type="text/css">
     #statusCode {
@@ -215,9 +215,9 @@ How can I change the framerate of an animation?
 By default dojo runs its animations with 50 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower.
 To change the framerate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per second you need a rate of 200 (milliseconds between each frame)
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
@@ -242,7 +242,7 @@ To change the framerate you use the rate attribute which defines the pause betwe
     }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateDefault">Animate (default fps)</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateSlow">Animate (1 fps)</button></p>
     <div id="animateProperty">This will be animated</div>

@@ -33,9 +33,9 @@ Examples
 Example 1:  Fade in a dom node
 ------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -56,7 +56,7 @@ Example 1:  Fade in a dom node
       dojo.addOnLoad(basicFadeinSetup);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton">Fade It In!</button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
@@ -65,9 +65,9 @@ Example 1:  Fade in a dom node
 Example 2:  Fade in a dom node with a custom duration
 -----------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -89,7 +89,7 @@ Example 2:  Fade in a dom node with a custom duration
       dojo.addOnLoad(basicFadeinSetup2);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton2">Fade It In Slow!</button>
     <div id="basicFadeNode2" style="width: 100px; height: 100px; background-color: red;"></div>
@@ -99,9 +99,9 @@ Example 2:  Fade in a dom node with a custom duration
 Example 3:  Fade in a dom node with an easing function
 ------------------------------------------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -125,7 +125,7 @@ Example 3:  Fade in a dom node with an easing function
       dojo.addOnLoad(basicFadeinSetup3);
     </script>
 
-  .. cv :: html
+  .. html ::
 
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>

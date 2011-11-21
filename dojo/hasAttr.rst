@@ -81,9 +81,9 @@ Testing for attributes
 
 The following example will check for several attributes.
 
-.. cv-compound::
+.. code-example ::
 
-  .. cv:: javascript
+  .. js ::
 
     <script type="text/javascript">
       function checkAttributes(){
@@ -104,7 +104,7 @@ The following example will check for several attributes.
       }
     </script>
 
-  .. cv:: html
+  .. html ::
 
     <p><input id="model" name="model" baz="foo"> &mdash; our model node</p>
     <p><button onclick="checkAttributes();">Check attributes</button></p>
