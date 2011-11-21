@@ -232,8 +232,7 @@ Prerequisites
 This filter plugin is only available for EnhancedGrid. Use the following statements in the head of your HTML file:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.grid.EnhancedGrid");
   dojo.require("dojox.grid.enhanced.plugins.Filter");
 
@@ -246,8 +245,7 @@ The declaration name of this plugin is ``filter`` . It is declared in the ``plug
 If your grid is created declaratively:
 
 .. html ::
-	:linenos:
-
+	
 	<div id="grid" dojoType="dojox.grid.EnhancedGrid"
 	  store="mystore" structure="mystructure"
 	  plugins="{
@@ -257,8 +255,7 @@ If your grid is created declaratively:
 If your grid is created in JavaScript:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -302,8 +299,7 @@ Filter provides different conditions for different data types, but the store doe
 For example:
 
 .. js ::
-  :linenos:
-
+  
   var structure = [{
     cells:[
       {field: "Name", datatype: "string", autoComplete: true },
@@ -466,8 +462,7 @@ You can do this by modifying the request object every time before store.fetch is
 For example:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -493,8 +488,7 @@ Thus the filter definition will be sent to the server along with the request.
 If you'd like to use a stateful server, which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed, you can set the '''isStateful''' property:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -533,8 +527,7 @@ Every time the user defines a filter, the server will receive a ``filter`` comma
 After recieving the filter command, the server should respond with the count of filtered rows in this format:
 
 .. js ::
-  :linenos:
-
+  
   200,1000
 
 The first number is the count of the filtered rows, while the second is the total count of rows in store.

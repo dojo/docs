@@ -27,8 +27,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
   require(["dojo/_base/declare", "dojo/_base/kernel"], function(declare, dojo) {
     declare('Foo', null, {
@@ -59,8 +58,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.declare('Foo', null, {
     foo: function() {

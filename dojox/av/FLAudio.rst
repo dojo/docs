@@ -24,8 +24,7 @@ After requiring dojox.av.FLAudio in your file, it is initialized programmaticall
 After initializing the class, MP3 files are added one at a time:
 
 .. js ::
- :linenos:
-
+ 
  mySound.load({url:"../tests/audio/Ola.mp3", id:'Ola'});
  mySound.load({url:"../tests/audio/Hio.mp3", id:"Hio"});
 
@@ -38,8 +37,7 @@ There are standard methods provided to control the playlist: pause(), stop(), se
 play() is the key method for controlling the playlist. As usual, an object is passed with the identifier, and if that alone is passed, the audio will play or resume. Optional parameters in the play object include: position - indicates where in the file to start in milliseconds, including 0 to start over from the beginning, volume, pan. To control multiple audio items at once, simply call them in sequence:
 
 .. js ::
- :linenos:
-
+ 
  mySound.doPlay({id:'Ola', position:0, volume:.9, pan:-1});
  mySound.doPlay({id:'Hio', position:0, volume:.8, pan:1});
 

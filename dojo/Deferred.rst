@@ -33,8 +33,7 @@ Pseudocode Example 1:  Creating and calling a deferred.
 -------------------------------------------------------
 
 .. js ::
-  :linenos:
-  
+    
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/Deferred"],function(Deferred){
     var deferred = new Deferred();
@@ -51,8 +50,7 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 -------------------------------------------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   var deferred = someAsyncFunction();
   deferred.then(function(value){
       //Do something on success.

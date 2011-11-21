@@ -45,8 +45,7 @@ The pattern of using the GoogleNewsSearchStore is
   * **relatedStories** An optional array of objects specifying related stories.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleNewsSearchStore();

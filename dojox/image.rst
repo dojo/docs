@@ -22,8 +22,7 @@ Core API
 Prior to Dojo 1.3, no "core API" was provided. Newer versions include helper functions, available by loading the dojox.image module:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.image");
 
 Preloading Images
@@ -34,8 +33,7 @@ When setting an image to a new src="" attribute, if the image has not been cache
 Just pass an array of url's to the function:
 
 .. js ::
-  :linenos:
-
+  
   // must be after dom ready:
   dojo.require("dojox.image");
   dojo.addOnLoad(function(){
@@ -45,8 +43,7 @@ Just pass an array of url's to the function:
 Alternately, you can specify a list of url's as an array to a dojoConfig parameter before dojo.js is loaded with the `preloadImages` option:
 
 .. js ::
-  :linenos:
-
+  
   var dojoConfig = {
       preloadImages:["foo.jpg", "bar.png"]
   }

@@ -24,8 +24,7 @@ All crypto implementations follow the same API; there is an encrypt and a decryp
 keyword arguments object passed. For example:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.encoding.crypto.SimpleAES");
   var ciphertext = dojox.encoding.crypto.SimpleAES.encrypt(myMessage, myPassword);
 
@@ -40,8 +39,7 @@ As with :ref:`dojox.encoding.digests <dojox/encoding/digests>`, there is a commo
 crypto should allow for.  This object takes the following form:
 
 .. js ::
-  :linenos:
-
+  
   var args = {
       outputType: dojox.encoding.crypto.outputTypes.Base64,
       cipherMode: dojox.encoding.crypto.cipherModes.CBC,

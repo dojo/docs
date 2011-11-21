@@ -45,8 +45,7 @@ The pattern of using the GoogleBlogSearchStore is
   * **publishedDate** The published date, in RFC-822 format
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleBlogSearchStore();

@@ -24,8 +24,7 @@ The syntax follows a simple pattern. The ``properties:`` key is an object hash o
 Dojo 1.7(AMD)
 -------------
 .. js ::
-  :linenos:
-
+  
    require(["dojo/_base/fx"],function(fx){
      fx.animateProperty({
       node:"someId",
@@ -39,8 +38,7 @@ Dojo 1.7(AMD)
 Dojo <1.7
 ---------
 .. js ::
-  :linenos:
-
+  
   dojo.animateProperty({
     node:"someId",
     properties: {
@@ -54,8 +52,7 @@ Dojo 1.7(AMD)
 -------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/fx"],function(fx){
     fx.animateProperty({
     node:"someId",
@@ -70,8 +67,7 @@ Dojo 1.7(AMD)
 Dojo <1.7
 ---------
 .. js ::
-  :linenos:
-
+  
   dojo.animateProperty({
     node:"someId",
     properties: {
@@ -94,8 +90,7 @@ In addition to being able to use the above syntax to define the properties:{} ob
 A simple, though redundant, example:
 
 .. code-block: javascript
-  :linenos:
-
+  
   dojo.animateProperty({
     node:"someNode",
     properties:{
@@ -117,8 +112,7 @@ A simple, though redundant, example:
 Dojo 1.7(AMD)
 -------------
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/fx"],function(fx){
     fx.animateProperty({
        node:"someNode",
@@ -141,8 +135,7 @@ Dojo 1.7(AMD)
 Dojo <1.7
 ---------
 .. js ::
-  :linenos:
-
+  
   dojo.animateProperty({
      node:"someNode",
      properties:{

@@ -32,8 +32,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   require(["dojo/dom-form"], function(domForm){
      var formId = "myId";
@@ -57,8 +56,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var formId = "myId";
    var formJson = dojo.formToJson(formId);

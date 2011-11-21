@@ -28,8 +28,7 @@ Usage
 TODO: how to use the component/class/method
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // your code
  </script>
@@ -57,8 +56,7 @@ Problems and Solutions
 The dojox.form.MonthTextBox only returns an integer value representing the selected month.  This doesn't take into account the year in which the month was selected.  You can use dojox.form.DateTextBox in conjunction with a custom popup class to enhance this situation, so that the returned value is a more useful Date object.
 
 .. html ::
- :linenos:
-
+ 
  dojo.require("dojox.form.DateTextBox");
  dojo.require("dojox.widget.Calendar");
 

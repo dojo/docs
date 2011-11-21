@@ -21,8 +21,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD)
   require(["dojo/dom-prop"], function(domProp){
     domProp.get(node, name);

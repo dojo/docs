@@ -23,8 +23,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var foo = new dijit.layout.StackContainer(params, srcNodeRef);
  </script>
@@ -50,8 +49,7 @@ Retrieving the currently selected Container
 To retrieve the currently selected container use following attribute
 
 .. js ::
- :linenos:
-
+ 
   var selectedContainer = yourContainer.selectedChildWidget
 
 *yourContainer* has to be a reference (for example: dijit.byId("myStackContainer")) to the ContainerWidget, meaning the StackContainer or any widgets inheriting from StackContainer

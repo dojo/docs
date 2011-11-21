@@ -19,8 +19,7 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
 
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
 	var animation = fx.fadeOut({ // returns a dojo._Animation
@@ -34,8 +33,7 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
 
 
 .. js ::
-    :linenos:
-	
+    	
     //Dojo < 1.7
     var animation = dojo.fadeOut({ // returns a dojo._Animation
         // this is an Object containing properties used to define the animation
@@ -47,24 +45,21 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
 You can simplify the above code using chaining, if you don't need to keep the animation object around for later use as follows:
 
 .. js ::
- :linenos:
-
+ 
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
 	fx.fadeOut({ node:"someId" }).play();
  });
 
 .. js ::
-    :linenos:
-	
+    	
     //Dojo < 1.7
     dojo.fadeOut({ node:"someId" }).play();
 	
 All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2) use predefined animation properties on the Object parameter to specify the animation settings. The `node:` property is the most important, and points to a node in the DOM on which to apply the animation. `node` can be a String ID of a DOM node, or a direct reference to a DOM node you already have:
 
 .. js ::
- :linenos:
-	
+ 	
  //Dojo 1.7 (AMD)
  require(["dojo/dom","dojo/_base/fx"], function(dom,fx) {
 	var target = dom.byId("someId").parentNode;
@@ -72,8 +67,7 @@ All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
  });
 
 .. js ::
-    :linenos:
-		
+    		
     //Dojo < 1.7
     var target = dojo.byId("someId").parentNode;
     dojo.fadeOut({ node: target }).play();
@@ -144,8 +138,7 @@ The standard set of events that are fired during stages of an animation are:
 Consider this simple fade animation, and all the potential callbacks registered:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
     fx.fadeOut({
@@ -173,8 +166,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
   });
 
 .. js ::
-  :linenos:
-
+  
   //Dojo < 1.7
   dojo.fadeOut({
 	// some node, by id to animate:
@@ -202,8 +194,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
 You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the instance and listen for the function calls.
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/_base/connect"], function(fx,connect) {
 	var animation = fx.fadeOut({ node:"someNodebyId" });
@@ -214,8 +205,7 @@ You can define these callback functions as part of the Object parameter used to 
  });
 
 .. js ::
-    :linenos:
-	
+    	
     //Dojo < 1.7
     var animation = dojo.fadeOut({ node:"someNodebyId" });
     dojo.connect(animation, "onEnd", function(){
@@ -226,8 +216,7 @@ You can define these callback functions as part of the Object parameter used to 
 **new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animated so that you may more easily manipulate a node immediately before or after an animation:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
     fx.fadeOut({
@@ -242,8 +231,7 @@ You can define these callback functions as part of the Object parameter used to 
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     dojo.fadeOut({
         node:"foo",
@@ -268,8 +256,7 @@ Fading Example
 To fade out a node, alter it's contents, and fade it back in:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/dom"], function(fx,dom) {
 	var node = dom.byId("someId");
@@ -285,8 +272,7 @@ To fade out a node, alter it's contents, and fade it back in:
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     var node = dojo.byId("someId");
     dojo.fadeOut({
@@ -316,8 +302,7 @@ available within the toolkit for advanced animation control.
 To use these extended functions, you must include the `dojo.fx` module:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"],function(fx,coreFx){
     //write your code here
@@ -351,8 +336,7 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     dojo.require("dojo.fx");
 
@@ -370,8 +354,7 @@ Two convenience functions provided in the `dojo.fx` module named `combine` and `
 To fade out two nodes simultaneously:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready) {
 	ready(function(){
@@ -385,8 +368,7 @@ To fade out two nodes simultaneously:
 
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     dojo.require("dojo.fx");
     dojo.addOnLoad(function(){
@@ -402,8 +384,7 @@ To fade out two nodes simultaneously:
 Javascript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready) {
 	ready(function(){
@@ -416,8 +397,7 @@ Javascript is rather flexible about return values and where functions are called
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     dojo.require("dojo.fx");
     dojo.addOnLoad(function(){
@@ -431,8 +411,7 @@ Javascript is rather flexible about return values and where functions are called
 The same rules apply to a combined animation as do a normal animation, though with no direct way to mix event callbacks into the combine() call, you are left using the `dojo.connect` method to attach event handlers:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/_base/connect","dojo/fx"], function(fx,connect,coreFx) {
 	var anim = coreFx.combine([
@@ -445,8 +424,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     var anim = dojo.fx.combine([
         dojo.fadeOut({ node: "id", duration:1000 }),
@@ -459,8 +437,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 Alternately, you can mix event handlers into your individual animations passed to dojo.fx.combine:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx) {
 	var animA = fx.fadeOut({
@@ -475,8 +452,7 @@ Alternately, you can mix event handlers into your individual animations passed t
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     var animA = dojo.fadeOut({
         node:"someNode",
@@ -491,8 +467,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 Chain works in much the same way - though plays each animation one right after the other:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx) {
 	coreFx.chain([
@@ -502,8 +477,7 @@ Chain works in much the same way - though plays each animation one right after t
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     dojo.fx.chain([
         dojo.fadeIn({ node: "foo" }),
@@ -515,8 +489,7 @@ All of the same patterns apply to chain as to other animation instances. A good 
 combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
 
 .. js ::
- :linenos:
- 
+  
  //Dojo 1.7 (AMD)
  require(["dojo/_base/array","dojo/_base/fx","dojo/fx"], function(array,fx,coreFx) {
 	// create the array
@@ -533,8 +506,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
  });
 
 .. js ::
-    :linenos:
-
+    
     //Dojo < 1.7
     // create the array
     var anims = [];

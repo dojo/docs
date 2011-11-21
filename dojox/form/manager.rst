@@ -64,8 +64,7 @@ The DOM nodes of the 3rd class are not considered to be form fields automaticall
 Example:
 
 .. html ::
-  :linenos:
-
+  
   <div data-dojo-type="dojox.form.Manager">
     <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01">
     <input type="text" name="e03" value="e03">
@@ -102,8 +101,7 @@ When the change event is triggered each relevant observer will be called in the 
 Example:
 
 .. html ::
-  :linenos:
-
+  
   <div data-dojo-type="dojox.form.Manager">
     <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" observer="log">
     <input type="text" name="e03" value="e03" observer="log,disabler">

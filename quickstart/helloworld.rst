@@ -33,8 +33,7 @@ Getting Started
 Once we have setup the directory and file structure for the tutorial, we will need to setup the JavaScript component of our HTML page. Have a look at the code below:
 
 .. html ::
-  :linenos:
-
+  
   <html>
   <head>
     <title>Dojo: Hello World!</title>
@@ -66,8 +65,7 @@ Ok, now for the exciting part! In this example we're going to create a Button wi
 The first step in creating the widget is telling Dojo to load the appropriate modules. In the header, add another section (hereafter referred to as section 2) below section 1 as follows:
 
 .. html ::
-  :linenos:
-
+  
     <!-- SECTION 2 -->
     <script type="text/javascript">
        // Load Dojo's code relating to the Button widget
@@ -79,8 +77,7 @@ The dojo.require line instructs Dojo to load the Button widget. If you were to o
 After making the changes, insert the following code into the body section of the HTML:
 
 .. html ::
-  :linenos:
-
+  
     <button data-dojo-type="dijit.form.Button" id="helloButton">Hello World!</button>
 
 The key attribute of this HTML element to notice is the data-dojo-type attribute. The data-dojo-type attribute is responsible for instructing Dojo on how to process the element when the page is loading. In this case we've used a button element for the button though we could have used an input element - Dojo will work with either as long as the data-dojo-type attribute is present. It is worth noting that if we did use an input element, we would have to specify the button's text by using adding a caption attribute that contained the desired text.
@@ -93,8 +90,7 @@ A button is all well and good, but what about getting it to do something when it
 The easiest way to attach an event to a button is through a script tag.  But not just any script tag ... this one has a type of dojo/method, like this:
 
 .. html ::
-  :linenos:
-
+  
     <button data-dojo-type="dijit.form.Button" id="helloButton">
         Hello World!
         <script type="dojo/method" data-dojo-event="onClick">
@@ -112,8 +108,7 @@ Having an alert pop up when we press the button is great, but what if we want to
 To get started, we first need a callback function to handle the data to be returned from the server. Insert the following code into the header:
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
        function helloCallback(data,ioArgs) {
           alert(data);
@@ -128,8 +123,7 @@ The two arguments to the functions (data, and ioArgs) are important - don't leav
 The next step is to link the click of the button to the server request. To do this, modify the following code:
 
 .. html ::
-  :linenos:
-
+  
   <script type="dojo/method" data-dojo-event="onClick">
     alert('You pressed the button');
   </script>
@@ -137,8 +131,7 @@ The next step is to link the click of the button to the server request. To do th
 To this:
 
 .. html ::
-  :linenos:
-
+  
   <script type="dojo/method" data-dojo-event="onClick">
    dojo.xhrGet({
         url: 'response.txt',
@@ -163,8 +156,7 @@ It's all well and good retrieving static data from the server, but it is hardly 
 Firstly, in the markup section of the HelloWorld html file (i.e. the body section), we need to add another element - an input element. So, change the code in this section from:
 
 .. html ::
-  :linenos:
-
+  
   <button data-dojo-type="Button" widgetId="helloButton">
     <script type="dojo/method" data-dojo-event="onClick">
     dojo.xhrGet({
@@ -178,8 +170,7 @@ Firstly, in the markup section of the HelloWorld html file (i.e. the body sectio
 to:
 
 .. html ::
-  :linenos:
-
+  
      <button data-dojo-type="dijit.form.Button" id="helloButton">
         Hello World!
         <script type="dojo/method" data-dojo-event="onClick">
@@ -198,8 +189,7 @@ Before we go any further - it is important to mention that the url property in t
 In the code above, you will notice that there is a new property that has been passed to the dojo.xhrGet function. This property - content - allows the programmer to send arbitary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as a the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):</p>
 
 .. html ::
-  :linenos:
-
+  
     content: {myName: dojo.byId('name').value }
 
 Since we've not used it before, it is also worth noting the call dojo.byId('name').value. Quite simply, this call is a shortcut for the standard document.getElementById(..) function.
@@ -212,8 +202,7 @@ Using a PHP Server
 __________________
 
 .. html ::
-  :linenos:
-
+  
   <?php
   /*
   * HelloWorldResponseGET.php
@@ -231,8 +220,7 @@ Using an ASP Server
 ___________________
 
 .. html ::
-  :linenos:
-
+  
   <%
   '
   ' HelloWorldResponseGET.asp
@@ -250,8 +238,7 @@ Using a ColdFusion Server
 _________________________
 
 .. html ::
-  :linenos:
-
+  
   <!---
   /*
   * HelloWorldResponseGET.cfm
@@ -269,8 +256,7 @@ Using a Java Server (JSP)
 _________________________
 
 .. html ::
-  :linenos:
-
+  
   <%
   /*
   ' HelloWorldResponseGET.jsp
@@ -288,8 +274,7 @@ Using a Perl Server
 ___________________
 
 .. html ::
-  :linenos:
-
+  
   #!/usr/bin/perl
   #
   #  ' HelloWorldResponseGET.pl
@@ -312,15 +297,13 @@ Using GET data is all well and good, but sometimes you want to use Dojo to impro
 First, we need to change the markup in the body of HelloWorld html from:
 
 .. html ::
-  :linenos:
-
+  
     Please enter your name: <input type="text" id="name" />
 
 to:
 
 .. html ::
-  :linenos:
-
+  
     <form id="myForm" method="POST">
       Please enter your name: <input type="text" name="name" />
     </form>
@@ -328,8 +311,7 @@ to:
 Next we need to change the dojo/method:
 
 .. html ::
-  :linenos:
-
+  
   <script type="dojo/method" data-dojo-event="onClick">
         dojo.xhrGet({
            url: 'HelloWorldResponseGET.php',
@@ -342,8 +324,7 @@ Next we need to change the dojo/method:
 to:
 
 .. html ::
-  :linenos:
-
+  
   <script type="dojo/method" data-dojo-event="onClick">
    // Don't forget to replace the value for 'url' with
    // the value of appropriate file for your server
@@ -364,8 +345,7 @@ Using a PHP Server
 __________________
 
 .. html ::
-  :linenos:
-
+  
   <?php
   /*
   * HelloWorldResponsePOST.php
@@ -383,8 +363,7 @@ Using an ASP Server
 ___________________
 
 .. html ::
-  :linenos:
-
+  
   <%
   '
   ' HelloWorldResponsePOST.asp
@@ -402,8 +381,7 @@ Using a ColdFusion Server
 _________________________
 
 .. html ::
-  :linenos:
-
+  
   <!---
   /*
   * HelloWorldResponsePOST.cfm
@@ -421,8 +399,7 @@ Using a Java Server (JSP)
 _________________________
 
 .. html ::
-  :linenos:
-
+  
   <%
   /*
   ' HelloWorldResponsePOST.jsp
@@ -440,8 +417,7 @@ Using a Perl Server
 ___________________
 
 .. html ::
-  :linenos:
-
+  
   #!/usr/bin/perl
   #
   #  ' HelloWorldResponsePOST.pl

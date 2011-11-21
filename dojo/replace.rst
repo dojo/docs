@@ -31,8 +31,7 @@ If the second argument is an object, all names within braces are interpreted as 
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang"], function(lang) {
     var output = lang.replace(
       "Hello, {name.first} {name.last} AKA {nick}!",
@@ -51,8 +50,7 @@ If the second argument is an object, all names within braces are interpreted as 
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   var output = dojo.replace(
     "Hello, {name.first} {name.last} AKA {nick}!",
     {
@@ -133,8 +131,7 @@ With array
 In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var output = lang.replace(
@@ -197,8 +194,7 @@ Let's take a look at example:
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo_base/array", "dojo/_base/lang"], function(array, lang) {
     // helper function
     function sum(a){
@@ -228,8 +224,7 @@ Let's take a look at example:
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   // helper function
   function sum(a){
     var t = 0;
@@ -307,8 +302,7 @@ With custom pattern
 In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to ``{abc}``, but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var output = lang.replace(
@@ -372,8 +366,7 @@ Let's add highlighting to all substituted fields:
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang"], function(lang) {
     function hiliteReplace(tmpl, dict){
       // add highlights first
@@ -393,8 +386,7 @@ Let's add highlighting to all substituted fields:
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   function hiliteReplace(tmpl, dict){
     // add highlights first
     var hilited = dojo.replace(tmpl, function(_, name){
@@ -458,8 +450,7 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang"], function(lang) {
     function safeReplace(tmpl, dict){
       // convert dict to a function, if needed
@@ -490,8 +481,7 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   function safeReplace(tmpl, dict){
     // convert dict to a function, if needed
     var fn = dojo.isFunction(dict) ? dict : function(_, name){
@@ -579,8 +569,7 @@ In this example we are going to format numbers as fixed or exponential with opti
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang"], function(lang) {
     function format(tmpl, dict, formatters){
       // convert dict to a function, if needed
@@ -627,8 +616,7 @@ In this example we are going to format numbers as fixed or exponential with opti
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   function format(tmpl, dict, formatters){
     // convert dict to a function, if needed
     var fn = dojo.isFunction(dict) ? dict : function(_, name){

@@ -19,8 +19,7 @@ project for themes.
 To create a Palette based on a set of colors, simply pass them into the constructor:
 
 .. js ::
-  :linenos:
-
+  
   var p = new dojox.color.Palette("#f1c4d2");
   var p = new dojox.color.Palette([ c1, c2, c3, c4, c5 ]);
   var p = new dojox.color.Palette(myColor);  // instanceof dojo.Color
@@ -29,8 +28,7 @@ To create a Palette based on a set of colors, simply pass them into the construc
 To access the colors in the palette, simply iterate through the ``.colors`` property:
 
 .. js ::
-  :linenos:
-
+  
   var p = dojox.color.Palette.generate("#789abc", "splitComplimentary");
   dojo.forEach(p.colors, function(c){
       // do something with each dojo.Color object
@@ -40,8 +38,7 @@ To perform a *translation* on a palette, pass a keyword arguments object to the 
 method of the palette.  The keyword arguments object takes the form of:
 
 .. js ::
-  :linenos:
-
+  
   var args = {
       use: "rgb" || "rgba" || "hsl" || "hsv" || "cmy" || "cmyk",
       dr, dg, db, da,
@@ -59,8 +56,7 @@ The parameters beginning with **d** all specify the change to the particular att
 model in question.  For example, to increase the hue on all colors in a palette, you'd do this:
 
 .. js ::
-  :linenos:
-
+  
   var transformed = myPalette.transform({
       use: "hsv",
       dh: 20
@@ -73,8 +69,7 @@ of dojox.color.Palette, and leaves the original alone.
 In addition, all Palettes can be cloned using the ``.clone`` method:
 
 .. js ::
-  :linenos:
-
+  
   var cloned = myPalette.clone();
 
 If you would like to generate a palette using a specific color theory, you can do so through the "static"
@@ -82,8 +77,7 @@ If you would like to generate a palette using a specific color theory, you can d
 a palette based on complimentary color theory:
 
 .. js ::
-  :linenos:
-
+  
   var p = dojox.color.Palette.generate("#a245f9", "complimentary");
 
 Available color theory models (based on the color rules at `Adobe Kuler <http://kuler.adobe.com>`_) are:

@@ -98,8 +98,7 @@ Usage
 At a high level, a DataGrid can be defined either declaratively in HTML markup or programmatically in JavaScript.  In markup, the following high level structure is defined:
 
 .. html ::
-  :linenos:
-
+  
   <table data-dojo-type="dojox.grid.DataGrid" >
     <thead>
       <tr>
@@ -139,8 +138,7 @@ formatter
 - Note: When a widget is returned from a formatter, it's important to use the following way to ensure widget.destroyed() is called when the page containing it get destroyed - this may happen when grid is scrolled away from the current view-port or when the grid instance is destroyed, otherwise significant memory increase will be observed when Grid is kept scrolling or creating/destroying. See the related `#13961 <http://bugs.dojotoolkit.org/ticket/13961>`_
 
 .. js ::
-  :linenos:
-
+  
   function formatter(){
       var w = new dijit.form.Button({...});
       w._destroyOnRemove = true;
@@ -241,8 +239,7 @@ errorMessage
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
 
 .. js ::
-  :linenos:
-
+  
   <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="escapeHTMLInData:false" ...>
 
 Editing cells
@@ -262,8 +259,7 @@ Data for the grid
 Data for the grid comes from a data store.  The data can be specified declaratively using the ``store="name"`` attribute where ``name`` is the name of a global JavaScript object that represents a DataStore.  This could previously have been created as follows:
 
 .. html ::
-  :linenos:
-
+  
   <span data-dojo-type="dojo.data.ItemFileWriteStore"
      data-dojo-id="myStore" data-dojo-props="url:'/myData.json'">
   </span>
@@ -278,8 +274,7 @@ Locking columns from horizontal scrolling
 A set of columns can be *locked* to prevent them from scrolling horizontally while allows other columns to continue to scroll.  To achieve this, the ``<colgroup>`` tags can be inserted before the ``<thead>`` tag.  For example, if a DataGrid has four columns, the following will lock the first column but allow the remaining columns the ability to scroll horizontally:
 
 .. html ::
-  :linenos:
-
+  
   <colgroup span="1" noscroll="true"></colgroup>
   <colgroup span="3"></colgroup>
 
@@ -308,8 +303,7 @@ We are used to a row in a table being a single line of data.  DataGrid provides 
 For example:
 
 .. js ::
-  :linenos:
-
+  
   <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:myTestStore" style="width: 800px; height: 300px;">
     <thead>
       <tr>
@@ -330,8 +324,7 @@ Required CSS
 Some style sheets supplied with the Dojo distribution are required:
 
 .. html ::
-  :linenos:
-
+  
   <style type="text/css">
     @import "/dojox/grid/resources/Grid.css";
     @import "/dojox/grid/resources/{{ theme }}Grid.css";
@@ -386,8 +379,7 @@ Getting a value from a row knowing the row index
 Assume that you know the row index and the name of the column whos value you wish to retrieve, you can obtain that value using the following snippet:
 
 .. js ::
-  :linenos:
-
+  
   var value = grid.store.getValue(grid.getItem(rowIndex), name);
 
 
@@ -1286,8 +1278,7 @@ Hiding the Headers of a Grid
 You can hide the columns of a Grid by using normal css:
 
 .. html ::
-  :linenos:
-
+  
   .dojoxGrid-header { display:none; }
 
 
@@ -1297,8 +1288,7 @@ Refreshing the content of a grid
 There are times when you may wish to update the content of the grid. For example, a button on the screen may cause an xhrGet to retrieve a new set of information that you want to display in the table. The following code snippet can be used to update the grid:
 
 .. js ::
-  :linenos:
-
+  
   var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
   var grid = dijit.byId("gridId");
   grid.setStore(newStore);
@@ -1310,8 +1300,7 @@ Layout multiple views by percentage
 Percentages can be used with Grid layout for view or cell width, but there is one important precondition - explicit view widths are required in percentage, 'px' or 'em' in order to make the percentages work appropriately, e.g.
 
 .. js ::
-  :linenos:
-
+  
   var layout = [
      {width: '80%',//1st view
      cells: [{name: 'Column 1', field: 'col1', width: "60%"}, {name: 'Column 2', field: 'col2', width: "40%"}]},
@@ -1328,8 +1317,7 @@ Keeping row selection across various actions e.g. sorting, filtering is a known 
 However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to make it work under some scenario, the 'keepSelection' attr can be applied to any Grid types including DataGrid, EnhancedGrid, TreeGrid or LazyTreeGrid e.g
 
 .. html ::
-  :linenos:
-
+  
   var grid = new dojox.grid.DataGrid({keepSelection: true}, div);
 
   var grid = new dojox.grid.EnhancedGrid({keepSelection: true}, div);

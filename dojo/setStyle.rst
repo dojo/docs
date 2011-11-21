@@ -51,8 +51,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``set`` is accessed from the ``dojo/dom-style`` module.
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/dom-style", "dojo/query", "dojo/NodeList-dom"], function(domStyle, query){
     // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
     domStyle.set("thinger", "opacity", 0.5); // == 0.5
@@ -84,8 +83,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setStyle`` in the ``define`` or ``require`` callback:
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo"], function(dojo){
     // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
     dojo.setStyle("thinger", "opacity", 0.5); // == 0.5
@@ -118,8 +116,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-
+  
   // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
   dojo.setStyle("thinger", "opacity", 0.5); // == 0.5
 

@@ -37,8 +37,7 @@ Each variable is only defined if the specified browser is being used. For exampl
 [ Dojo 1.7+ (AMD) ]
 
 .. js ::
-  :linenos:
-  
+    
   require(["dojo/has", "dojo/_base/sniff"], function(has){
     if(has("ie") <= 6){ // only IE6 and below
       ...
@@ -56,8 +55,7 @@ Each variable is only defined if the specified browser is being used. For exampl
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-  
+    
   if(dojo.isIE <= 6){ // only IE6 and below
     ...
   }
@@ -77,8 +75,7 @@ Example 1 - UA sniffing in Dojo 1.7 with AMD and the has API
 Here's a live sample to show how it works, when using AMD and minimal base dependencies rather than all modules that get implicitly loaded by the dojo package, so that we can show how the sniff module's return values can be mapped to has() to detect the current browser with a small amount of loaded code:
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
   require(["dojo/has", // alias has API to "has"
           "dojo/_base/array", // alias array api to "arrayUtil"
@@ -139,8 +136,7 @@ Example 2 - Pre Dojo 1.7-style UA sniffing
 This example has the same result, but loads more code because it's using the full dojo base API (which consists of many smaller modules).  Note that rather than using the augmented has() API, this approach uses the older dojo.isXXX functions available on the dojo global object.
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
   function makeFancyAnswer(who){
     if(dojo["is" + who]){

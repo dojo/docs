@@ -41,8 +41,7 @@ first button with id="foob" creates a dojox.image.Magnifier and associates it wi
 destroys it.
 
 .. js ::
- :linenos:
-
+ 
 
   <button data-dojo-type="dijit.form.Button" id="foob">Make It
   
@@ -73,8 +72,7 @@ Declarative example
 The code fragment creates a dojox.image.Magnifier and assoicates it with the src image.
 
 .. js ::
- :linenos:
-
+ 
   Scale= 2.34, 5.67, and 8.90: <br>
   <img id="testImage" dojoType="dojox.image.Magnifier" src="images/spanke.jpg"
     style="width:200px; height:130px;" scale="2.34" />

@@ -25,8 +25,7 @@ Usage
 Usage of this function is trivial.  Simply call it with a string of the id for the widget you wish to obtain the handle of.  The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var myWidget = dijit.byId("myWidget");
  </script>
@@ -145,8 +144,7 @@ A common question new users of dojo have is what is the difference between attri
 Consider the following simple ContentPane widget which has an id property (standard html attribute for any tag) and a data-dojo-id attribute (dojo specific id attribute explained below):
 
 .. html ::
- :linenos:
-
+ 
  <div id="myDivId"
       data-dojo-type="dijit.layout.ContentPane"
       data-dojo-id="myDojoId">

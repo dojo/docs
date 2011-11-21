@@ -22,8 +22,7 @@ Usage
 Use this to test if a variable is a string
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     if(lang.isString(foo)){ ...

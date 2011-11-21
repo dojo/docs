@@ -26,8 +26,7 @@ Usage
 Mixin dijit._TemplatedMixin when you declare your widget:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
        templateString: "<div>hello world</div>"
@@ -46,8 +45,7 @@ The template is specified in the widget attribute ``templateString``, and points
 It can either be specified as a literal string:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
        templateString: "<div>hello world</div>"
@@ -58,8 +56,7 @@ It can either be specified as a literal string:
 or pulled in from a file using :ref:`dojo.cache() <dojo/cache>`
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
        templateString: dojo.cache("myNameSpace", "templates/MyWidget.html"),

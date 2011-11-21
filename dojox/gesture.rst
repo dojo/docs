@@ -44,8 +44,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 1. Used with dojo/on
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         on(node, tap, function(e){});
@@ -56,8 +55,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 2. Used with dojox/gesture/tap directly
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojox/gesture/tap"], function(tap){
         tap(node, function(e){});
@@ -68,8 +66,7 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         dojo.connect(node, dojox.gesture.tap, function(e){});
   </script>
@@ -98,8 +95,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 1. Used with dojo/on
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         on(node, tap, function(e){});
@@ -112,8 +108,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 2. Used with dojox/gesture/tap directly
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojox/gesture/tap"], function(tap){
         tap(node, function(e){});
@@ -126,8 +121,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         dojo.connect(node, dojox.gesture.tap, function(e){});
         dojo.connect(node, dojox.gesture.tap.hold, function(e){});
@@ -148,8 +142,7 @@ doubleTapTimeout    Default is 250, the timeout threshold(in milliseconds) for "
 The above parameters are supposed to be only changed seldomly with the following way:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         
@@ -186,8 +179,7 @@ It can be used in following ways:
 1. Used with dojo/on
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojo/on", "dojox/gesture/swipe"], function(on, swipe){
         on(node, swipe, function(e){});
@@ -198,8 +190,7 @@ It can be used in following ways:
 2. Used with dojox/gesture/swipe directly
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojox/gesture/swipe"], function(swipe){
         swipe(node, function(e){});
@@ -211,8 +202,7 @@ It can be used in following ways:
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         dojo.connect(node, dojox.gesture.swipe, function(e){});
         dojo.connect(node, dojox.gesture.swipe.end, function(e){});
@@ -240,8 +230,7 @@ A gesture event behaves all the same as a native Event. Besides getting useful i
 The following sample shows how we can easily stop a gesture event from bubbling to parent node:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         function innerFunc(e){
           console.log("'tap' fired on innder div");
@@ -271,8 +260,7 @@ It's very easy to customize a new gesture with following steps:
 Suppose we have a dojox/gesture/rotate which provides 3 gesture events:"rotate", "rotate.end" which can be used as:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         define(["dojo/on", "dojox/gesture/rotate"], function(on, rotate){
             on(node, rotate, function(e){});
@@ -283,8 +271,7 @@ Suppose we have a dojox/gesture/rotate which provides 3 gesture events:"rotate",
 Then we can define the rotate gesture like:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         define([..., "./Base"], function(..., Base){
           var clz = declare(Base, {

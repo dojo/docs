@@ -36,8 +36,7 @@ The following example shows how the default widget works. Make it work by
 Now you are set and the rating widget should render and be useable.
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
   </style>
@@ -56,8 +55,7 @@ Standard options
 This example shows how to use additional attributes to customize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars.
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
   </style>
@@ -74,8 +72,7 @@ Events via inline script
 The following shows what events you can connect to and how to do this using inline script blocks.
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
   </style>
@@ -103,8 +100,7 @@ Events via dojo.connect()
 The next example shows how you can do the same as above, just using the default connect methods, which is the most common way and probably fits best when working in big projects and when you need a separation of markup and JavaScript source code.
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
   </style>
@@ -132,8 +128,7 @@ Inside a dojo form
 ------------------
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
   </style>
@@ -162,8 +157,7 @@ Customized stars
 ----------------
 
 .. html ::
-  :linenos:
-  
+    
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
     #myRating .dojoxRatingStar{

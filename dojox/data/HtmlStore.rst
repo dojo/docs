@@ -34,8 +34,7 @@ HTML table
 ----------
 
 .. html ::
- :linenos:
-
+ 
   <html>
   <head>
     <title>Books2.html</title>
@@ -87,8 +86,7 @@ List
 ----
 
 .. html ::
- :linenos:
- 
+  
   <ul id="myList">
     <li>Item 1</li>
     <li>Item 2</li>
@@ -109,8 +107,7 @@ DIV Collection
 --------------
 
 .. html ::
- :linenos:
- 
+  
   <div id="divList">
     <div>Item 1</div>
     <div>Item 2</div>

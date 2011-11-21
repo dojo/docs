@@ -116,8 +116,7 @@ The process is to create a typical HTML button, with either a button, input, div
 A basic example follows:
 
 .. css ::
- :linenos:
-
+ 
  .uploadBtn{
      border:1px solid #333333;
      background:url(buttonEnabled.png) #d0d0d0 repeat-x scroll 0px top;
@@ -145,13 +144,11 @@ A basic example follows:
  
 
 .. html ::
- :linenos:
-
+ 
  <div id="btn" class="uploadBtn">Select Files</div>
   
 .. js ::
- :linenos:
- 
+  
  var uploader = new dojox.form.FileUploader({
      hoverClass:"uploadHover",
      activeClass:"uploadBtn",
@@ -164,8 +161,7 @@ Or, using the same CSS, create it as markup:
 
 
 .. html ::
- :linenos:
-
+ 
  <div class="uploadBtn" data-dojo-type="dojox.form.FileUploader" data-dojo-props="hoverClass:'uploadHover', pressClas:'uploadPress',
       activeClass:'uploadBtn', disabledClass:'uploadDisable', uploadUrl:'../serverpage.php'">Select Files</div>
 
@@ -207,8 +203,7 @@ FileUploader will detect if the correct version of Flash Player is available, an
 A basic example follows:
 
 .. js ::
- :linenos:
- 
+  
  var uploader = new dojox.form.FileUploader({
      button:dijit.byId("myFakeButton"),
      uploadUrl:uploadUrl,
@@ -221,8 +216,7 @@ The *uploadUrl* property is the location of the server side script. Note that th
 Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods:
 
 .. js ::
- :linenos:
- 
+  
  dojo.connect(uploader, "onChange", function(dataArray){
      dojo.forEach(dataArray, function(data){
          dojo.byId("myTextarea").value += data.name+" "+Math.ceil(data.size*.001)+"kb \n";
@@ -246,8 +240,7 @@ Note that the "dataArray" param above is always an array, even if selectMultiple
 Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no arguments or one argument to use as postData. The mouse event will be treated as postData and throw an error. This is fixed in the trunk but exists in 1.32.
 
 .. js ::
- :linenos:
- 
+  
  dojo.connect(dijit.byId("myUploadButton"), "onClick", function(){
      uploader.upload();
  });
@@ -261,8 +254,7 @@ The FileUploader has many advanced properties to handle most situations.
 **fileMask**: An array, or an array of arrays. Restrict file selection to certain file types Empty array defaults to "All Files". NOTE: MacType is not supported, as it does not work very well. fileMask will work on a Mac, but differently than Windows.
 
 .. js ::
- :linenos:
- 
+  
  var fileMask = ["Images", "*.jpg;*.jpeg;*.gif;*.png"]
  //	or
  var fileMask = [
@@ -324,8 +316,7 @@ http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/FileReferenc
 It includes examples two post parameters, api_sig and api_key. The name for the field where the file can be found is set to "photo" (Adobe default is "FileData" and FileUploader changes this default to "flashUploadFiles").
 
 .. code-block :: text
- :linenos:
-
+ 
  POST /handler.cfm HTTP/1.1
    Accept: text/*
    Content-Type: multipart/form-data;
@@ -398,8 +389,7 @@ How the data is returned from the server is not difficult, but it is very import
 If *flashFieldName* is found in the post data and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
 
 .. html ::
- :linenos:
- 
+  
  $data .='file='.$file.',name='.$name.',width='.$width.',height='.$height.',type='.$type;
  echo($data);
  exit;
@@ -407,8 +397,7 @@ If *flashFieldName* is found in the post data and Flash is being used on the cli
 For non-PHP devs this translates to:
 
 .. code-block :: text
- :linenos:
- 
+  
  $name = name of the file, such as "PIC01.jpg"
  $file = name of the file and the path, such as "uploaded/PIC01.jpg"
  $width, $height = the dimensions (if you are working with images)
@@ -418,8 +407,7 @@ For non-PHP devs this translates to:
 The return to Flash should look like:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg"
  
 
@@ -430,15 +418,13 @@ New in 1.4, you can add an error key if one file was in error; say if it was not
 The return string with an error might look like:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
 
 You can also send back arbitrary parameters from your server-side script using this comma-delimitted format.  For example, adding variables foo and abc:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,foo=bar,abc=123"
 
 Then you can access these variables in the client-side functions using dataArray[i].additionalParams.foo and dataArray[i].additionalParams.abc.
@@ -448,8 +434,7 @@ Note: there is an open ticket http://bugs.dojotoolkit.org/ticket/10576 - when th
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
 .. html ::
- :linenos:
- 
+  
  <?php
      ....code....
  ?>
@@ -471,8 +456,7 @@ Attempting to upload to an HTTPS server can be very difficult in Firefox and Saf
  - It was brought to my attention that an .htaccess files on the server will work with the following content:
 
 .. code-block :: text
- :linenos:
- 
+  
  <IfModule mod_security.c>
    SecFilterEngine Off
    SecFilterScanPOST Off
@@ -489,8 +473,7 @@ The original poster responds:
     And yes if you disable modsecurity sql injections can be done on all post vars that are later processed by the database an not escaped within the application. So another safer way - until adobe fixed this problem and all flash players are updated - is the following but may not work on all servers:
 
 .. code-block :: text
- :linenos:
- 
+  
  <IfModule mod_security.c>
   SetEnvIfNoCase Content-Type "^multipart/form-data;" "MODSEC_NOPOSTBUFFERING=Do not buffer file uploads"
  </IfModule>

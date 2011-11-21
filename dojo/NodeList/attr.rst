@@ -26,8 +26,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  dojo.query(sel).attr(attr, value);
 
 attr

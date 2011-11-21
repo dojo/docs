@@ -24,14 +24,12 @@ Markup
 To use the FileList, simply require it and use the appropriate data-dojo-type in an element inside or outside of a form (it is not a form element so will not affect the form action). A key property to be used is *uploaderId* which is the ID of the Uploader that FileList will connect to.
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.form.Uploader");
  dojo.require("dojox.form.uploader.FileList");
  
 .. html ::
- :linenos:
- 
+  
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
 	<fieldset>
 		<legend>Form Post Test</legend>
@@ -50,8 +48,7 @@ Programmatic
 Programmatic creation is also supported. Here the *uploader* property is used instead of *uploaderId*:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.form.Uploader");
  dojo.require("dojox.form.uploader.FileList");
  

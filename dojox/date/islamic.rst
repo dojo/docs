@@ -26,8 +26,7 @@ Usage
 Code snippet below illustrates most common usage of Islamic calendar.
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     dojo.require("dojox.date.islamic");
     dojo.require("dojox.date.islamic.Date");
@@ -69,8 +68,7 @@ Programmatic example
 The code snippet below illustrates conversion between two possible representations of Islamic date: String and Date object.
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
    var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'};
 
@@ -89,8 +87,7 @@ Code snippet below illustrates usage of Islamic calendar in the context of graph
 
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     dojo.require("dojox.date.islamic");
     dojo.require("dojox.date.islamic.Date");

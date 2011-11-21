@@ -27,8 +27,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
        var myObj = new Stateful();
@@ -44,8 +43,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
    dojo.require('dojo.Stateful');
 
    // create a new Stateful object:
@@ -88,8 +86,7 @@ potentially be retrieved via a getter method in subclasses. In the base class
 this just retrieves the object's property.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
@@ -120,8 +117,7 @@ Sets named properties on a stateful object and notifies any watchers of
 the property. A programmatic setter may be defined in subclasses.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
@@ -148,8 +144,7 @@ the property. A programmatic setter may be defined in subclasses.
 set() may also be called with a hash of name/value pairs, ex:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
@@ -193,8 +188,7 @@ returns:
 
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){

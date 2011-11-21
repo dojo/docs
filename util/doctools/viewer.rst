@@ -31,8 +31,7 @@ Dojo's `API Viewer <http://dojotoolkit.org/api/>`_ is a PHP-based web applicatio
 Our viewer app is going to end up in a directory called 'api', which for the purposes of this walkthrough we'll assume is a sub-directory of the web root. That's going to get created for us (and needs to not exist yet). For now,  we'll make sure PHP is working by creating a test.php file in the web root directory, with the contents:
 
 .. code-block :: php
-  :linenos:
-    
+      
   <?php phpinfo(); ?>
 
 If you point your browser at http://localhost/test.php (or whatever hostname you are using) you should see the PHP info page. Confirm the **xsl** module is available and enabled.
@@ -44,8 +43,7 @@ Get the viewer code
 We're going to get a copy of the code behind dojotoolkit.org/api and customize that lightly to create our own API viewer. Lets start by getting an export. In your terminal/shell/cmd-prompt, move into your web root directory, and type:
 
 .. code-block :: php
-  :linenos:
-    
+      
   svn export http://svn.dojotoolkit.org/website/trunk/api api
 
 That should create the 'api' sub-directory, and fill it with a load of php files and other assets. Note, we're doing an export here, not a checkout, so its divorced from the SVN copy. That means its yours to change, but if you prefer you can use svn checkout for those parts you want to be able to update with any changes from the remote repository.

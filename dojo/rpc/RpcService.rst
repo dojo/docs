@@ -27,8 +27,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     var svc = new dojo.rpc.[ImplementingClass](args)
 
@@ -50,8 +49,7 @@ SMD format
 Here is an example SMD v.1 as expected by ``dojo.rpc``.
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     var smd = {
       serviceUrl: 'myService.do', // Adress of the RPC service end point

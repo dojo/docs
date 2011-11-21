@@ -22,8 +22,7 @@ Usage
 Use this to test if a variable is an Object.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     lang.isObject(foo);
@@ -34,8 +33,7 @@ Use this to test if a variable is an Object.
 Returns true if it is a JavaScript object (or an Array, a Function or null).
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     // Check, if variable "foo" is an object:

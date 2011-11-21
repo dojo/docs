@@ -86,8 +86,7 @@ When a query request is made that includes a ``sort`` option in the ``options`` 
 For example, given the following store and request:
 
 .. js ::
- :linenos:
-
+ 
   var store = new JsonRestStore({
     target: "/FooObject/",
     sortParam: "sortBy"

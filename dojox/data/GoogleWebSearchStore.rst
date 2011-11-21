@@ -47,8 +47,7 @@ The pattern of using the GoogleSearchStore is
   * **estimatedResultCount** (aggregated per-query) estimated number of results
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleSearchStore();

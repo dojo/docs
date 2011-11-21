@@ -22,8 +22,7 @@ Usage
 [ Dojo 1.7+ (AMD) ]
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/_base/lang"], function(lang) {
     var ref = function(a,b){ return a };
     if(lang.isFunction(ref)){
@@ -35,8 +34,7 @@ Usage
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
   var ref = function(a,b){ return a };
   if(dojo.isFunction(ref)){
     ref();
@@ -47,8 +45,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 [ Dojo 1.7+ (AMD) ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
     declare("Thing", null, { constructor: function(){ } });
     var ref = Thing;
@@ -61,8 +58,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   dojo.declare("Thing", null, { constructor: function(){ } });
   var ref = Thing;
   if(dojo.isFunction(ref)){
@@ -72,8 +68,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 A common pattern is to have a string version of a fully declared class. You can use dojo.isFunction to tell if you need to convert it to a function or not:
 
 .. js ::
-  :linenos:
-
+  
   // some dynamic class to use:
   var thing = "dijit.Dialog";
   // check it out first:

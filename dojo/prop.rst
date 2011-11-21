@@ -22,8 +22,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
- 
+  
  // Dojo 1.7+ (AMD)
  require(["dom-prop"], function(domProp){
    domProp.get(node, name);
@@ -50,8 +49,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``get`` and ``set`` are accessed from the ``dojo/dom-prop`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-prop"], function(domProp){
     // Get the property of a node
     domProp.get("nodeId", "foo");
@@ -63,8 +61,7 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.prop`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
     // Get the property of a node
     dojo.prop("nodeId", "foo");
@@ -77,8 +74,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
   // Get the property of a node
   dojo.prop("nodeId", "foo");
 
@@ -93,8 +89,7 @@ Get property on a node
 ----------------------
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop", "dojo/dom"], function(domProp, dom){
     // get the current value of the "foo" property on a node
@@ -122,8 +117,7 @@ Set the tab index
 -----------------
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop"], function(domProp){
     domProp.set("nodeId", "tabIndex", 3);
@@ -143,8 +137,7 @@ Set multiple values at once
 ---------------------------
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop"], function(domProp){
     domProp.set("formId", {
@@ -186,8 +179,7 @@ Style special case
 ------------------
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop"], function(domProp){
     domProp.set("someNode",{
@@ -221,8 +213,7 @@ Set style as an object hash of styles
 -------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop", "dojo/dom-style"], function(domProp, domStyle){
      var obj = { color:"#fff", backgroundColor:"#000" };

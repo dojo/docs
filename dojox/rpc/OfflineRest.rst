@@ -27,8 +27,7 @@ Usage
 To use OfflineRest, first load the OfflineRest module before your JsonRestStore:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.rpc.OfflineRest");
    dojo.require("dojox.data.JsonRestStore");
@@ -37,7 +36,6 @@ To use OfflineRest, first load the OfflineRest module before your JsonRestStore:
 In order to indicate that a store should have offline support, simply add that store to the set of offline stores:
 
 .. js ::
- :linenos:
-
+ 
  trailStore = new dojox.data.JsonRestStore({url:"/Trail"});
  dojox.rpc.OfflineRest.addStore(trailStore,"");

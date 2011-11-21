@@ -39,8 +39,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``getMarginBox`` and ``setMarginBox`` are accessed from the ``dojo/dom-geometry`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-geometry"], function(domGeom){
     // Get the margin-box size of a node
     var marginBox = domGeom.getMarginBox(domNode);
@@ -52,8 +51,7 @@ When using AMD format in a fully baseless application, ``getMarginBox`` and ``se
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.marginBox`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
     // Get the margin-box size of a node
     var marginBox = dojo.marginBox(domNode);
@@ -70,8 +68,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
    // Get the margin-box size of a node
    var marginBox = dojo.marginBox(domNode);
 

@@ -44,8 +44,7 @@ Each of these methods will be explained now.
 A common way to populate dojo.config is via the data-dojo-config="..." attribute of the <script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
 
 .. js ::
-  :linenos:
-
+  
   <!DOCTYPE HTML>
   <html lang="en">
   <head>
@@ -72,8 +71,7 @@ The content of the data-dojo-config="..." attribute is a comma-delimited list of
 In cases where lots of attributes must be set in the dojo.config object, or for developers who prefer not to use the data attribute, dojo.config can be populated by declaring a dojoConfig variable BEFORE the main dojo.js library is included in the document. This looks something like:
 
 .. js ::
-  :linenos:
-
+  
   <!DOCTYPE HTML>
   <html lang="en">
   <head>
@@ -186,8 +184,7 @@ Configuring dojox Modules
 There is one final way in which dojoConfig is used, and that is to set preferences or configuration options for dojo extension (i.e. dojox) modules. Since the dojoConfig object is created and available globally on every page request, if you are creating a new dojox module this may be a good location to store global resources. Since dojox modules are by their very nature new and/or experimental, you may need to consult the specific documentation or the source code for the dojox module in question to discover what parameters are available for setting and what they do. A good way to do this is to search the API and/or source code for the string "dojoConfig" which should turn up cases in which it is used. A good example of a dojox extension that uses dojoConfig is dojox.storage, which specifies options for client-side storage providers like Google Gears, and the What WG storage providers. The documentations for the storage providers indicates that you can disable a specific provider by setting an appropriate dojoConfig parameter such as:
 
 .. js ::
-  :linenos:
-
+  
   var dojoConfig = { disableWhatWGStorage: true }
 
 
@@ -199,15 +196,13 @@ The ambiguity of dojoConfig is very helpful. You can provide functionality and c
 If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the dojoConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to dojoConfig (as outlined above) are moved to: `dojo.config`. This is an artifact of the scopeName changing capabilities of Dojo.
 
 .. js ::
-  :linenos:
-
+  
   var dojoConfig = { parseOnLoad:true, myCustomVariable:true }
 
 This creates a `new` configuration parameter named ``myCustomVariable``. To use this in your application code or widgets, use the ``dojo.config`` member. For instance, a simple :ref:`dojo.declare <dojo/declare>` call:
 
 .. js ::
-  :linenos:
-
+  
   //Dojo 1.7 (AMD style)
   require(['dojo/_base/declare', 'dojo/_base/config'], function(declare, config){
     declare("my.Thinger", null, {

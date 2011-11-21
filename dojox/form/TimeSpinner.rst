@@ -30,8 +30,7 @@ Programmatic example
 --------------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
    dojo.addOnLoad(function(){
@@ -49,8 +48,7 @@ Declarative example
 -------------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
  </script>

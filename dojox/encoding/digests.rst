@@ -18,8 +18,7 @@ relative ease.
 Each digest exposes a single function, with a private HMAC function as well, such as the following:
 
 .. js ::
-  :linenos:
-  
+    
   dojo.require("dojox.encoding.digests.SHA1");
   var d = dojox.encoding.digests.SHA1(someString);
   var h = dojox.encoding.digests.SHA1._hmac(someString, someKey);
@@ -28,8 +27,7 @@ The digests in DojoX Encoding were designed to be as easy to use as possible, wi
 This output takes the form of a keyword arguments object, that looks like so:
 
 .. js ::
-  :linenos:
-
+  
   var args = {
       outputType: dojox.encoding.digests.outputTypes.Base64
   };

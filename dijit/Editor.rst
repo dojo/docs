@@ -29,8 +29,7 @@ Limitations
 * The dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
 
 .. html ::
- :linenos:
-
+ 
   <script>
     dojo.addOnLoad(function(){
       var editor = dijit.byId("myEditor");
@@ -77,8 +76,7 @@ Of course, the editor can be created programmatically in addition to declarative
 although even when created programmatically you need to specify a source DOM node to replace:
 
 .. html ::
- :linenos:
-
+ 
 	<div id="programmatic2">This div will become an auto-expanding editor.</div>
 	<button
 		id="create2"

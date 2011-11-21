@@ -28,8 +28,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(['dojo/_base/unload'],function(baseUnload){
      // declare a function to do the unload work
@@ -52,8 +51,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // declare a function to do the unload work
    var unLoad = function() {

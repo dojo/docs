@@ -26,8 +26,7 @@ The only required parameter is *notifications*. This is an array of objects, and
 To provide the validation in markup, use _validate_ as an attribute like the two examples that follow:
 
 .. html ::
- :linenos:
-
+ 
  <div validate="!google.gears">
  <div validate="dojo.isFF<3">
  
@@ -35,8 +34,7 @@ As you can see, these should be expressions that evaluate to true or false. Upgr
 
 
 .. js ::
- :linenos:
- 
+  
  function(){
      var evals = true;
      try{ evals = !google.gears; }catch(e){}
@@ -47,8 +45,7 @@ If doing something simple like testing a browser or version, a try/catch is not 
  
  
 .. js ::
- :linenos:
- 
+  
  function(){
      return dojo.isIE < Infinity;
  }
@@ -59,8 +56,7 @@ Examples
 A programmatic example:
 
 .. js ::
- :linenos:
- 
+  
  new dojox.widget.UpgradeBar({
      notifications:[
          {
@@ -83,8 +79,7 @@ A programmatic example:
 A markup example:
  
 .. html ::
- :linenos:
- 
+  
  <div data-dojo-type="dojox.widget.UpgradeBar" id="upgradeBar" data-dojo-props="noRemindButton:'Do not Remind Me Again'">
      <div validate="dojo.isIE<7">
          <span>Unrecognized device attempting to read Internet files. Recommend that you:"</span>

@@ -27,8 +27,7 @@ Usage
 Code snippet below illustrates most common usage of Hebrew calenadar.
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     dojo.require("dojox.date.hebrew");
     dojo.require("dojox.date.hebrew.Date");
@@ -72,8 +71,7 @@ Programmatic example
 The code snippet below illustrates conversion between two possible representations of Hebrew date: String and Date object.
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
    var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'};
 
@@ -92,8 +90,7 @@ Code snippet below illustrates usage of Hebrew calendar in the context of graphi
 
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
     dojo.require("dojox.date.hebrew");
     dojo.require("dojox.date.hebrew.Date");

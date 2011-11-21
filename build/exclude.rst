@@ -31,8 +31,7 @@ Syntax
 This feature is implemented by creating exclusion regions bracketed by start and end pragmas, as follows:
 
 .. js ::
-  :linenos:
-
+  
   //>>excludeStart("Tag", kwArgs.layers.length > 1)
 
   ... code within the region here
@@ -81,8 +80,7 @@ It is technically possible to nest conditional excludes.  However, this is disco
 If you do nest, the exclusion regions must be fully and properly nested.  Thus, the following would be illegal:
 
 .. js ::
-  :linenos:
-
+  
   //>>excludeStart("AAA", kwArgs.layers.length > 1)
 
   ...

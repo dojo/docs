@@ -24,8 +24,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
    // Dojo 1.7+ (AMD)
    require(["dojo/_base/lang", function(lang) {
       var myNewObject = lang.delegate(anOldObject, { myNewProperty: "value or text"});
@@ -58,8 +57,7 @@ Programmatic example
 [ Dojo 1.7+ AMD ]
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(["dojo/_base/lang", function(lang) {
      var anOldObject = { bar: "baz" };
@@ -76,8 +74,7 @@ Programmatic example
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var anOldObject = { bar: "baz" };
    var myNewObject = dojo.delegate(anOldObject, { thud: "xyzzy"});

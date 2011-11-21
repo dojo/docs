@@ -28,8 +28,7 @@ Usage
 A simple call of dojo.locale.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // Dojo 1.7 (AMD)
    require(["dojo/_base/kernel"], function(dojo) {

@@ -30,8 +30,7 @@ Usage
 How to use the component:
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
     dojo.require("dojox.mdnd.AreaManager");
     dojo.require("dojox.mdnd.DropIndicator");

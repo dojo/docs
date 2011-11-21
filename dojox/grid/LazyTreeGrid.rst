@@ -131,8 +131,7 @@ Supported Data Structure
 For the reason of lazy loading children items, the dojox.grid.LazyTreeGrid could accept the flatted data. For example:
 
 .. js ::
-  :linenos:
-
+  
   data = {
     identifier: 'id',
     label: 'name',
@@ -149,8 +148,7 @@ In this case, the "children" attribute would be a flag rather than a truely valu
 Also, the nested data structure is available in normally case (small data or data is stored at client side). For example:
 
 .. js ::
-  :linenos:
-  
+    
   data = {
     identifier: 'id',
     label: 'name',
@@ -174,8 +172,7 @@ Also, the nested data structure is available in normally case (small data or dat
 Even more, for the situations where there are many children of some items as well as there are very few children of other items, you could use the following data structure:
 
 .. js ::
-  :linenos:
-
+  
   data = {
     identifier: 'id',
     label: 'name',
@@ -269,8 +266,7 @@ When using a dijit.tree.ForestStoreModel, or using dojox.grid.LazyTreeGridStoreM
 An example LazyTreeGridStoreModel definition would look like this:
 
 .. js ::
-  :linenos:
-  
+    
   // programmatic
   var treeModel = new dojox.grid.LazyTreeGridStoreModel({
     store: queryReadStore,
@@ -288,8 +284,7 @@ Structure Definition
 LazyTreeGrid does not support nested structure, as well as aggregate and itemAggregates. The following example is a LazyTreeGrid defined via HTML, just like the :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`:
 
 .. js ::
-  :linenos:
-  
+    
   <table data-dojo-id="grid" data-dojo-type="dojox.grid.LazyTreeGrid" data-dojo-props="rowsPerPage:25
       rowSelector:'20px', treeModel:'forestStoreModel'">
     <thead>
@@ -309,8 +304,7 @@ Formatting
 In order to the users can format content freely for cells in different levels, the LazyTreeGrid formatters receives a "level" parameter,which is 0-based. But LazyTreeGrid formatters won't be able to handle a negative value for row nubmer parameter since there is no aggregation for the LazyTreeGrid. Below is a simply example of the formatter:
 
 .. js ::
-  :linenos:
-
+  
   var fmt = function(value, idx, level) {
     if(level == 0) {
       return value == "true" ? "online" : offline";
@@ -325,8 +319,7 @@ Cells Merging
 In order to display better for different levels, user could do cells merge based on different level via "colSpans" attribute. The value of "colSpans" is a JSON object, an example colSpans definition would look like this:
 
 .. js ::
-  :linenos:
-
+  
   colSpans = {
     0: [
       {start: 0, end: 1, primary: 0},

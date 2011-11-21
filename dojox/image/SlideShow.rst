@@ -41,8 +41,7 @@ set the slideshowInterval attribute. For example, to set a three second interval
 use the code below
 
 .. js ::
- :linenos:
-
+ 
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="slideshowInterval:3"> </div>
 
 
@@ -59,8 +58,7 @@ For example:
 
 
 .. js ::
- :linenos:
- 
+  
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
      data-dojo-props="titleTemplate:'My title is: @title, this is image @current out of @total'">
   </div>
@@ -76,8 +74,7 @@ dimensions is greater.
 
 
 .. js ::
- :linenos:
- 
+  
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"
      data-dojo-props="imageWidth:600, imageHeight:300">
   </div>
@@ -91,8 +88,7 @@ better user experience, it uses more bandwidth, so some users may want to disabl
 parameter to "false". e.g.
 
 .. js ::
- :linenos:
-
+ 
   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="autoLoad:false">
   </div>
 
@@ -107,8 +103,7 @@ image. In some circumstances this may be undesirable, such as when using an infl
 layout. To disable this resizing behavior, set the fixedHeight attribute to "true", e.g.
 
 .. js ::
- :linenos:
- 
+  
    <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="fixedHeight:true">
    </div>
 
@@ -121,8 +116,7 @@ widget, first create one of the available data stores, such as the dojo.data.Ite
 dojox.data.FlickrRestStore. Next, create a request object, which optionally contains a query.
 
 .. js ::
- :linenos:
- 
+  
    <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
    <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
    <script type="text/javascript">
@@ -163,8 +157,7 @@ The Slideshow publishes information about its state, that can be subscribed to u
 The name of the topic is retrieved by calling the getShowTopicName method on the widget
 
 .. js ::
- :linenos:
-
+ 
   dojo.subscribe(
      dijit.byId('slideshow1').getShowTopicName(),
      function(packet) {
@@ -178,8 +171,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
 
 .. js ::
- :linenos:
-
+ 
   dojo.subscribe(
      dijit.byId('slideshow1').getLoadTopicName(),
      function(index) {

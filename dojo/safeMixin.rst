@@ -18,8 +18,7 @@ Basic Usage
 The function is usually used with classes and instances produced by :ref:`dojo.declare <dojo/declare>`. It takes two parameters (both objects): target and source of properties. Just like :ref:`dojo.mixin <dojo/mixin>` it returns ``target``.
 
 .. js ::
-  :linenos:
-
+  
   var A = dojo.declare(null, {
     m1: function(){ /*...*/ },
     m2: function(){ /*...*/ },
@@ -72,8 +71,7 @@ Technical details
 While copying properties ``dojo.safeMixin`` (and :ref:`dojo.declare <dojo/declare>`) annotates methods. All other properties are copied unmodified. On any function it adds a single property: ``nom``, which value is a name of the function property.
 
 .. js ::
-  :linenos:
-
+  
   var x = {};
   dojo.safeMixin(x, {
     a: 1,
@@ -91,8 +89,7 @@ This way ``this.inherited()`` and ``this.getInherited()`` know what superclass m
 JavaScript treats functions as objects (not values) and uses them by reference. It means that if you add a function to two (or more) objects, it will be annotated several times leading to wrong annotations in different contexts:
 
 .. js ::
-  :linenos:
-
+  
   var fun = function(){
     this.inherited(arguments);
   };

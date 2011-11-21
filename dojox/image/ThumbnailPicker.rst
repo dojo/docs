@@ -43,8 +43,7 @@ set the **numberThumbs** attribute, e.g.
 
 
 .. js ::
- :linenos:
- 
+  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="numberThumbs:4"> </div>
 
 
@@ -57,8 +56,7 @@ as the dojo.data.ItemFileReadStore or dojox.data.FlickrRestStore. Next, create a
 optionally contains a query. e.g.
 
 .. js ::
- :linenos:
- 
+  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
   <script type="text/javascript">
@@ -85,8 +83,7 @@ horizontal, either omit the isHorizontal attribute, or set it to "true", e.g.
 
 
 .. js ::
- :linenos:
-
+ 
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="isHorizontal:false"> </div>
 
 
@@ -99,8 +96,7 @@ the link in the current window, set the hyperlinkTarget attribute to "this". e.g
 
 
 .. js ::
- :linenos:
-
+ 
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useHyperlink:true, hyperlinkTarget:this"> </div>
 
 Notification of load status for images
@@ -116,8 +112,7 @@ really makes sense to use it in combination with other widgets or elements on a 
 
 
 .. js ::
-  :linenos:
-
+  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useLoadNotifier:true"> </div>
 
 
@@ -127,8 +122,7 @@ Setting size of thumbnails
 Setting size of thumbnails is currently possible with use of CSS style definitions:
 
 .. css ::
-  :linenos:
-
+  
   .thumbWrapper img {
     height: 200px;
     max-width: 144px;

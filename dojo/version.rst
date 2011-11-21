@@ -18,8 +18,7 @@ Usage
 =====
 
 .. js ::
-  :linenos:
-
+  
   >>> dojo.version;
   0.0.0dev (15278) major=0 minor=0 patch=0 flag=dev revision=15278
   >>> dojo.version.toString();

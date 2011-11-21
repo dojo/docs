@@ -31,8 +31,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``empty`` is accessed from the ``dojo/dom-construct`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-construct"], function(domConstruct){
     // Empty node's children byId:
     domConstruct.empty("someId");
@@ -41,8 +40,7 @@ When using AMD format in a fully baseless application, ``empty`` is accessed fro
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.empty`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
     // Empty node's children byId:
     dojo.empty("someId");
@@ -52,8 +50,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
   // Empty node's children byId:
   dojo.empty("someId");
 

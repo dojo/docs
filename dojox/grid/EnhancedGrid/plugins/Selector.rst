@@ -172,8 +172,7 @@ Prerequisites
 This selector plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.grid.EnhancedGrid");
   dojo.require("dojox.grid.enhanced.plugins.Selector");
 
@@ -185,8 +184,7 @@ The declaration name of this plugin is ``selector`` . It is declared in the ``pl
 If your grid is created declaratively:
 
 .. html ::
-  :linenos:
-
+  
   <div id="grid" dojoType="dojox.grid.EnhancedGrid"
     store="mystore" structure="mystructure"
     plugins="{
@@ -196,8 +194,7 @@ If your grid is created declaratively:
 If your grid is created in JavaScript:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -292,8 +289,7 @@ endPoint     Object              The end point of selection. See description of 
 Arguments "start point" and "end point" can be one of __SelectColItem, __SelectRowItem, and __SelectCellItem, which are extended classes of __SelectItem, as the following shows:
 
 .. js ::
-  :linenos:
-  
+    
   /*===== These classes do NOT really exist, they are just concepts for illustration.
 
   dojo.declare("__SelectItem", null,{
@@ -343,8 +339,7 @@ Arguments "start point" and "end point" can be one of __SelectColItem, __SelectR
 To connect to these events, just say (for example):
 
 .. js ::
-  :linenos:
-  
+    
   var handle = dojo.connect(grid, "onEndSelect", function(type, startPoint, endPoint, selected){
     //Your code goes here.
   });

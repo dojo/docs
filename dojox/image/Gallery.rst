@@ -34,8 +34,7 @@ Usage
 Creating a Gallery and setting a simple data source
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
   //Define the attribute names used to access the items in the data store
   var itemNameMap = {imageThumbAttr: "thumb", imageLargeAttr: "large"};
@@ -53,8 +52,7 @@ Creating a Gallery and setting a simple data source
 Creating a Gallery with a FlickrRestStore
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
   //Declare a FlickrRestStore data store.  This is used to access images from the
   //Flickr (www.flickr.com) photo sharing website.
@@ -88,8 +86,7 @@ Creating a Gallery with a FlickrRestStore
 Setting the image width and height
 
 .. js ::
- :linenos:
-
+ 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="imageHeight:400, imageWidth:600"></div
 
 
@@ -108,8 +105,7 @@ by setting the autoLoad attribute to "false".
 
 
 .. js ::
- :linenos:
-
+ 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="pageSize:50, autoLoad:false" ></div>
 
 Changing the time interval in a SlideShow
@@ -120,6 +116,5 @@ the slideshowInterval attribute to the number of seconds required.
 
 
 .. js ::
- :linenos:
-
+ 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="slideshowInterval:5"></div>

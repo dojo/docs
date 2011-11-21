@@ -28,8 +28,7 @@ Prerequisites
 This cookie plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.grid.EnhancedGrid");
   dojo.require("dojox.grid.enhanced.plugins.Cookie");
 
@@ -42,8 +41,7 @@ The declaration name of this plugin is ``cookie`` . It is declared in the ``plug
 If your grid is created declaratively:
 
 .. html ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
@@ -53,8 +51,7 @@ If your grid is created declaratively:
 If your grid is created in JavaScript:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -75,8 +72,7 @@ cookieProps     dojo.__cookieProps  {}               Set the cookie properties. 
 All the persistable grid features will be stored in cookie by default. If you'd like to disable some of them, you can declare in the configuration object:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -131,8 +127,7 @@ removeCookie():
 Here is some examples on how to use the API:
 
 .. js ::
-  :linenos:
-  
+    
   //Do not persist column width
   grid.cookieEnabled("cellWidth", false);
   

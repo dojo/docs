@@ -44,8 +44,7 @@ The pattern of using the GoogleBookSearchStore is
   * **publishedYear** The year of publication.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleBookSearchStore();

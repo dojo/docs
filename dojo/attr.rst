@@ -28,8 +28,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
  require(["dojo/dom/attr"], function(domAttr){
    domAttr.get(node, attr); // get

@@ -24,8 +24,7 @@ dojo.trim accepts the only argument: a string to be trimmed.
 [ Dojo 1.7+ (AMD) ]
 
 .. js ::
-  :linenos:
-  
+    
   require(["dojo/_base/lang"], function(lang){
     function show(str){
       return "|" + lang.trim(str) + "|";
@@ -41,8 +40,7 @@ dojo.trim accepts the only argument: a string to be trimmed.
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   function show(str){
     return "|" + dojo.trim(str) + "|";
   }

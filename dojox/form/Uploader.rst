@@ -78,13 +78,11 @@ Markup
 To use the Uploader, simply require it and use the appropriate data-dojo-type in an input within a form:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.form.Uploader");
  
 .. html ::
- :linenos:
- 
+  
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
     <input name="uploadedfile" multiple="true" type="file" dojoType="dojox.form.Uploader" label="Select Some Files" id="uploader" />
     <input type="submit" label="Submit" dojoType="dijit.form.Button" />
@@ -94,14 +92,12 @@ To use the Uploader, simply require it and use the appropriate data-dojo-type in
 Plugins will self initialize, so to use one, all that is needed is to require it. The following example uses the IFrame plugin, which inherits from the HTML5 plugin. So HTML5 file inputs are used when available and the IFrame technique used elsewhere (the HTML is exactly the same as the previous example):
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.form.Uploader");
  dojo.require("dojox.form.uploader.plugins.IFrame");
  
 .. html ::
- :linenos:
- 
+  
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
     <input name="uploadedfile" multiple="true" type="file" dojoType="dojox.form.Uploader" label="Select Some Files" id="uploader" />
     <input type="submit" label="Submit" dojoType="dijit.form.Button" />
@@ -114,8 +110,7 @@ Programmatic
 Programmatic creation is also supported as shown in the following example that includes the Flash plugin:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.form.Uploader");
  dojo.require("dojox.form.uploader.plugins.Flash");
  
@@ -194,8 +189,7 @@ How the data is returned from the server is not difficult, but it is very import
 If *uploadedfilesFlash* is found in the post data and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. Flash will parse these key-value pairs into an object and pass it to javaScript. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
 
 .. html ::
- :linenos:
- 
+  
  $data .='file='.$file.',name='.$name.',width='.$width.',height='.$height.',type='.$type;
  echo($data);
  exit;
@@ -203,8 +197,7 @@ If *uploadedfilesFlash* is found in the post data and Flash is being used on the
 For non-PHP devs this translates to:
 
 .. code-block :: text
- :linenos:
- 
+  
  $name = name of the file, such as "PIC01.jpg"
  $file = name of the file and the path, such as "uploaded/PIC01.jpg"
  $width, $height = the dimensions (if you are working with images)
@@ -214,8 +207,7 @@ For non-PHP devs this translates to:
 The return to Flash should look like:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg"
  
 
@@ -226,15 +218,13 @@ You can add an error key if one file was in error; say if it was not of the corr
 The return string with an error might look like:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
 
 You can also send back arbitrary parameters from your server-side script using this comma-delimitted format.  For example, adding variables foo and abc:
 
 .. code-block :: text
- :linenos:
-
+ 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,foo=bar,abc=123"
 
 Then you can access these variables in the client-side functions using dataArray[i].additionalParams.foo and dataArray[i].additionalParams.abc.
@@ -242,8 +232,7 @@ Then you can access these variables in the client-side functions using dataArray
 If IFrame plugin is used, the code on the client side gets tricky, as reading back from an iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
 .. html ::
- :linenos:
- 
+  
  <?php
      ....code....
  ?>
@@ -260,8 +249,7 @@ Examples
 This example shows how to use Flash and IFrame plugins for both cases (browsers with and without flash).
 
 .. html ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.form.Uploader");
    dojo.require("dojox.embed.Flash");

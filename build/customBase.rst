@@ -42,8 +42,7 @@ Usage
 In the profile for your build, specify the following for your dojo layer (note the ``customBase`` property):
 
 .. js ::
- :linenos:
-
+ 
  layers: [
    {
 	name: "dojo.js",
@@ -82,8 +81,7 @@ module, say just the array help functions and ``dojo.Deferred``, your profile ``
 look like this:
 
 .. js ::
- :linenos:
-
+ 
    {
           name: "dojo.js",
           customBase: true

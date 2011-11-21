@@ -44,8 +44,7 @@ Example
 CSS:
 
 .. css ::
- :linenos:
- 
+  
  .rgt{
     width:300px;
     height:400px;
@@ -67,8 +66,7 @@ CSS:
 HTML:
 
 .. html ::
- :linenos:
- 
+  
  <div class="rgt">
     <div id="myDiv">Animate&nbsp;Me</div>
  </div>
@@ -76,8 +74,7 @@ HTML:
 JavaScript:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.fx.Timeline");
  var keys = [
     {

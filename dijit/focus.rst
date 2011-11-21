@@ -25,8 +25,7 @@ Focusing an element
 -------------------
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus", "dojo/dom", "dojo/domReady!" ], function(focusUtil, dom){
     focusUtil.focus(dom.byId("foo"));
   });
@@ -37,8 +36,7 @@ Unfocusing an element
 ---------------------
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus" ], function(focusUtil){
     focusUtil.curNode && focusUtil.curNode.blur();
   });
@@ -47,8 +45,7 @@ Determining the currently focused element
 -----------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus" ], function(focusUtil){
     var activeElement = focusUtil.curNode; // returns null if there is no focused element
   });
@@ -57,8 +54,7 @@ Watching for focus changes
 --------------------------
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus" ], function(focusUtil){
     var handle = focusUtil.watch("curNode", function(name, oldValue, newValue){
       console.log("Focused node was", oldValue, "now is", newValue);
@@ -78,8 +74,7 @@ TextBox --> ContentPane --> TabContainer --> TooltipDialog --> DropDownButton.
 The activeStack[] parameter indicates this set of widgets, and an app can monitor changes to activeStack[] by:
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus" ], function(focusUtil){
     focusUtil.watch("activeStack", function(name, oldValue, newValue){
       console.log("Focused widget + ancestors: ", newValue.join(", "));
@@ -89,8 +84,7 @@ The activeStack[] parameter indicates this set of widgets, and an app can monito
 An app can also monitor widget-focus / widget-blur events to tell when widgets enter or leave the stack:
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus" ], function(focusUtil){
     focusUtil.on("widget-focus", function(widget){
       console.log("Focused widget", widget);
@@ -106,8 +100,7 @@ Listening for focus changes in iframes
 If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus (``curNode`` will remain ``null``). Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element *inside* the iframe has been focused.
 
 .. js ::
- :linenos:
-
+ 
   require([ "dijit/focus", "dojo/dom" ], function(focusUtil, dom){
     // when elements in myIframe are focused, curNode will point to myIframe
     var handle = focusUtil.registerIframe(dom.byId("myIframe"));

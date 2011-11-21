@@ -21,8 +21,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
- 
+  
  // Dojo 1.7+ (AMD)
  require(["dojo/dom-geometry"], function(domGeom){
    domGeom.setContentSize(node, box, computedStyle);
@@ -46,8 +45,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``setContentSize`` is accessed from the ``dojo/dom-geometry`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-geometry"], function(domGeom){
      // Set domNode content-box to 300px x 150px
      domGeom.setContentSize(domNode, {w: 300, h: 400});
@@ -56,8 +54,7 @@ When using AMD format in a fully baseless application, ``setContentSize`` is acc
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.setContentSize`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
      // Set domNode content-box to 300px x 150px
      dojo.setContentSize(domNode, {w: 300, h: 400});
@@ -67,7 +64,6 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
     // Set domNode content-box to 300px x 150px
     dojo.setContentSize(domNode, {w: 300, h: 400});

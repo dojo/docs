@@ -28,8 +28,7 @@ Usage
 The RangeSlider is used in the same fashion as most dijit Form Widgets.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.form.RangeSlider");
    var rangeSlider = new dojox.form.HorizontalRangeSlider({

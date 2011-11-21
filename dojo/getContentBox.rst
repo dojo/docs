@@ -21,8 +21,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
- 
+  
  // Dojo 1.7+ (AMD)
  require(["dojo/dom-geometry"], function(domGeom){
    domGeom.getContentBox(node, computedStyle);
@@ -43,8 +42,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``getContentBox`` is accessed from the ``dojo/dom-geometry`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-geometry"], function(domGeom){
      // Get the content-box size of a node
      var contentBox = domGeom.getContentBox(domNode);
@@ -53,8 +51,7 @@ When using AMD format in a fully baseless application, ``getContentBox`` is acce
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.getContentBox`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
      // Get the content-box size of a node
      var contentBox = dojo.getContentBox(domNode);
@@ -64,7 +61,6 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
     // Get the content-box size of a node
     var contentBox = geom.getContentBox(domNode);

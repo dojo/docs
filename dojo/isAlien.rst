@@ -22,8 +22,7 @@ Usage
 Use this to test if a variable is a built-in function.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     lang.isAlien(foo)
@@ -34,8 +33,7 @@ Use this to test if a variable is a built-in function.
 Returns true if it is a built-in function or some other kind of oddball that *should* report as a function but doesn't.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     // Check, if variable "foo" is a built-in function:

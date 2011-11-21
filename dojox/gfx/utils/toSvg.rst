@@ -26,8 +26,7 @@ The function signature is:
 So basic usage is:
 
 .. js ::
-  :linenos:
-
+  
   var deferred = dojox.gfx.utils.toJson(mySurface);
   deferred.addCallback(function(svg){
      alert(svg);
@@ -47,8 +46,7 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
 * Set the dojoConfig option 'dojoxGfxSvgProxyFrameUrl' to point to the file you copied to your server, much as you would set for 'blank.html'. For example, a modified dojoConfig setting for dojo:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" data-dojo-config='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
 
 

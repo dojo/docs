@@ -53,8 +53,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``get`` and ``set`` are accessed from the ``dojo/dom-style`` module.
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/dom-style", "dojo/query", "dojo/NodeList-dom"], function(domStyle, query){
     // Passing only an ID or node returns the computed style object of the node:
     domStyle.get("thinger");
@@ -94,8 +93,7 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.style`` in the ``define`` or ``require`` callback:
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo"], function(dojo){
     // Passing only an ID or node returns the computed style object of the node:
     dojo.style("thinger");
@@ -136,8 +134,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-
+  
   // Passing only an ID or node returns the computed style object of the node:
   dojo.style("thinger");
 

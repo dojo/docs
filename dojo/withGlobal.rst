@@ -29,8 +29,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(["dojo/dom", "dojo/_base/window"], function(dom, win) {
      var ifr = dom.byId("someIframe");
@@ -50,8 +49,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var ifr = dojo.byId("someIframe");
    var newGlobal = ifr.contentWindow; // get the global scope object from the frame

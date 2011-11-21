@@ -25,8 +25,7 @@ Example 1:  Creating and calling a deferred (1.7+ AMD).
 -------------------------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/Deferred"], function(Deferred){
     
     Deferred.when(4, print); // this will print 4 immediately
@@ -47,8 +46,7 @@ Example 2:  Creating and calling a deferred (Dojo < 1.7 style).
 ---------------------------------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   dojo.when(4, print); // this will print 4 immediately
   
   var fourAsync = new dojo.Deferred();

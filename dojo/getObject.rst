@@ -20,8 +20,7 @@ Usage
 The simplest way to use dojo.getObject is to pass a dot-separated string as shown below:
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
  // define an object (outside function, in global scope to demonstrate)
  var foo = {
@@ -44,8 +43,7 @@ The simplest way to use dojo.getObject is to pass a dot-separated string as show
 dojo.getObject also takes an optional boolean parameter which, if `true`, will create the property if it does not exist. Any other properties along the path will also be created along the way. The default value is `false`.
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
  // define an object (outside function, in global scope to demonstrate)
  var foo = {
@@ -80,8 +78,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
 You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is :ref:`dojo.global <dojo/global>`.
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
  require(["dojo/_base/lang"], function(lang) {
     // define an object

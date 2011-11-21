@@ -22,8 +22,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
      require(["dojo/query"], function(query) {
         var dojoLinks = query('a');
@@ -38,8 +37,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
      var dojoLinks = dojo.query('a');
      var nativeLinks = document.getElementsByTagName('a');
@@ -96,8 +94,7 @@ HTML
 ~~~~
 
 .. html ::
-  :linenos:
-
+  
     <a href="#">I'm the only link on this page!</a>
     
     Number of links on this page:
@@ -120,8 +117,7 @@ JavaScript
 [ Dojo 1.7 AMD ]
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom", "dojo/query", "dojo/_base/window"], function(dom, query, win) {
     var countLinks = function() {
       var these = dom.byId('these_links');
@@ -143,8 +139,7 @@ JavaScript
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
   var countLinks = function() {
     var these = dojo.byId('these_links');
     var those = dojo.byId('those_links');

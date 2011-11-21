@@ -20,8 +20,7 @@ Usage
 A normal GET query is done by using the service directly:
 
 .. js ::
-  :linenos:
-
+  
     var restService = dojox.rpc.Rest("Project");
     restService("4");
 
@@ -29,8 +28,7 @@ A normal GET query is done by using the service directly:
 The modifying methods can be called as sub-methods of the rest service method like:
 
 .. js ::
-  :linenos:
-
+  
     services.myRestService.put("parameters","data to put in resource");
     services.myRestService.post("parameters","data to post to the resource");
     services.myRestService['delete']("parameters");
@@ -39,8 +37,7 @@ The modifying methods can be called as sub-methods of the rest service method li
 You can also use the SMD service to generate a REST service:
 
 .. js ::
-  :linenos:
-
+  
     var services = dojox.rpc.Service({services: {myRestService: {transport: "REST",...
     services.myRestService("parameters");
 
@@ -58,8 +55,7 @@ GET
 This will do a HTTP GET for the URL "/Project/4":
 
 .. js ::
-  :linenos:
-
+  
     var restService = dojox.rpc.Rest("Project");
     restService("4");
 
@@ -70,8 +66,7 @@ PUT
 This will do a HTTP PUT to the URL "/Project/4" with the content of "new content":
 
 .. js ::
-  :linenos:
-
+  
     var restService = dojox.rpc.Rest("Project");
     restService.put("4","new content");
 
@@ -81,8 +76,7 @@ POST
 This will do a HTTP POST to the URL "/Project/4" with the content of "new content":
 
 .. js ::
-  :linenos:
-
+  
     var restService = dojox.rpc.Rest("Project");
     restService.post("4","new content");
 
@@ -92,8 +86,7 @@ DELETE
 This will do a HTTP DELETE to the URL "/Project" with the content of "{item: "4"}":
 
 .. js ::
-  :linenos:
-
+  
     var restService = dojox.rpc.Rest("Project");
     restService['delete']({item: "4"});
 
@@ -104,8 +97,7 @@ Using the SMD service
 You can also use the SMD service to generate a REST service:
 
 .. js ::
-  :linenos:
-
+  
     var services = dojox.rpc.Service({services: {myRestService: {transport: "REST",...
     services.myRestService("parameters");
 

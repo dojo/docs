@@ -17,8 +17,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/AdapterRegistry"], function(reg){
       reg.register("handleString",
         dojo.isString,
@@ -42,8 +41,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-
+  
     // create a new registry
     var reg = new dojo.AdapterRegistry();
     reg.register("handleString",
@@ -66,8 +64,7 @@ Dojo < 1.7
 There is also possible to unregister adapter from registry however there are performance problems on a large registry.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/AdapterRegistry"], function(reg){
       reg.unregister("handleArr");

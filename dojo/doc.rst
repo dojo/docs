@@ -27,8 +27,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(["dojo/_base/window"], function(win) {
       var currentBody = win.body();  //You can also use: dojo.body() to get the current document body.
@@ -42,8 +41,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var currentBody = dojo.doc.body;  //You can also use: dojo.body() to get the current document body.
    var newText = dojo.doc.createTextNode("Some text");

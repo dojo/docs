@@ -24,8 +24,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     require(["dojo/i18n!dijit/form/nls/validate"], function(i18n) {
         console.log(i18n.invalidMessage);
@@ -36,8 +35,7 @@ Dojo < 1.7
 --------------
  
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   var validate = dojo.i18n.getLocalization("dijit.form", "validate");
   console.log(validate.invalidMessage);

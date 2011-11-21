@@ -51,8 +51,7 @@ Making an updatable-result-set data store
 To make a updatable-result-set data store from an existing data store:
 
 .. js ::
- :linenos:
-
+ 
  dojo.declare("dojox.data.MyUpdatableDataStore",
      dojox.data.MyDataStore,
      // subclass ClientFilter if available:
@@ -77,8 +76,7 @@ To use the ClientFilter with a data store which offers optional support of Clien
 The important note is that you must load ClientFilter before you dojo.require a store.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // first include ClientFilter:
    dojo.require('dojox.data.ClientFilter');

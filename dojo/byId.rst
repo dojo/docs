@@ -50,8 +50,7 @@ Dojo < 1.7
 The node variable is just a native domNode, with properties you can manipulate. The most common, ''innerHTML'':
 
 .. js ::
-  :linenos:
-  
+    
   // set some node to say "Hello World"
   // dojo 1.7 (AMD)
   require(["dojo/dom"], function(dom){
@@ -64,8 +63,7 @@ The node variable is just a native domNode, with properties you can manipulate. 
 If you pass byId a domNode reference, the same node is returned:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7 (AMD)
   require(["dojo/dom"], function(dom){
       var node = dom.byId("someNode");
@@ -84,8 +82,7 @@ If you pass byId a domNode reference, the same node is returned:
 If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' or the null object is returned (depending on the browser), which is adequate truthiness to use conditionally:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7 (AMD)
   require(["dojo/dom"], function(dom){
     var node = dom.byId("fooBar");
@@ -107,8 +104,7 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
 Most (if not all) functions in Dojo accept either a string or DomNode as a parameter. If passed a string, the function typically calls dojo.byId(), ensuring a domNode is always the object. For instance:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7 (AMD)
   require(["dojo/dom", "dojo/dom-style"], function(dom, domStyle){
     domStyle.set(dom.byId("foo"), "opacity", 0.5);
@@ -127,8 +123,7 @@ The latter is preferred, as the call to dojo.byId is made in both cases. The pas
 JavaScript has a fun convention for conditionals inline. Imagine wanting a domNode reference, and if not present, default to some other node:
 
 .. js ::
-  :linenos:
-
+  
   var othernode = dojo.byId("fallbackNode");
   var node = dojo.byId("missingNode") || othernode;
   node.innerHTML = "Which one?";

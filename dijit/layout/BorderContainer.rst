@@ -45,8 +45,7 @@ You shouldn't need to set the height of the top/bottom panes as that can be dete
 ``note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
 
 .. html ::
-  :linenos:
-
+  
     <style type="text/css">
     body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; }
     #borderContainer { width:100%; height:100% }

@@ -34,8 +34,7 @@ Example XML Input
 The store is designed so that it can read generic XML and present back nodes as dojo.data items.  The following is an example of an XML document that this store can read:
 
 .. html ::
- :linenos:
-
+ 
   <?xml version="1.0" encoding="ISO-8859-1"?>
   <books>
 	<book>
@@ -129,8 +128,7 @@ Query Syntax
 The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. For example, the following query object will locate all items that have attributes of those names that match both of those values:
 
 .. js ::
- :linenos:
-
+ 
   { foo:"bar", bit:"bite"}
 
 Note that XmlStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching.
@@ -139,15 +137,13 @@ Examples
 To find all items with attribute foo that start with bar, the query would be:
 
 .. js ::
- :linenos:
-
+ 
   { foo:"bar*"}
 
 To find all items with attribute foo the value of which ends with ar and ignoring only the first character, the query would be:
 
 .. html ::
- :linenos:
-  
+   
   { foo:"?ar"}
 
 **NOTE:** Other stores should follow the same query definition semantics for consistency.
@@ -181,8 +177,7 @@ Query for all books that start with ISBN: A9B57
 -----------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
     for (var i = 0; i < items.length; i++){
@@ -197,8 +192,7 @@ Query for all books that start with ISBN: A9B57 Case insensitively
 ------------------------------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
     for (var i = 0; i < items.length; i++){

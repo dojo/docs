@@ -20,8 +20,7 @@ Usage
 Simply pass _something_ to dojo.clone, and a new version of that _something_ will be made.
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang"], function(lang) {
     // clone an object
@@ -42,8 +41,7 @@ Simply pass _something_ to dojo.clone, and a new version of that _something_ wil
 Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is :ref:`byId <dojo/byId>`, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang", "dojo/dom", "dojo/dom-attr"], function(lang, dom, attr) {
     var node = dom.byId("someNode");
@@ -58,8 +56,7 @@ Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node 
 If you have a pointer to some node already, or want to avoid id's all together, :ref:`dojo.query <dojo/query>` may be useful:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7 (AMD)
   require(["dojo/_base/lang", "dojo/query", "dojo/dom-construct", "dojo/_base/window"], function(lang, query, ctr, win) {
     // get a reference to some node

@@ -35,8 +35,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/xhr"], function(xhr){
       // post some data, ignore the response:
       xhr.post({
@@ -61,8 +60,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-
+  
   // post some data, ignore the response:
   dojo.xhrPost({
       form: "someFormId", // read the url: from the action="" of the <form>
@@ -97,8 +95,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang","dojo/_base/xhr"], function(lang, xhr){
       xhr.post({
          form:"someForm",
@@ -128,8 +125,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
   dojo.xhrPost({
      form:"someForm",
      load: function(data, ioArgs){

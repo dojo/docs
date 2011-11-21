@@ -122,8 +122,7 @@ Using CDN with Local modules
 To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via dojoConfig:
 
 .. html ::
-  :linenos:
-
+  
       <script type="text/javascript">
           var dojoConfig={
             parseOnLoad: true,

@@ -24,8 +24,7 @@ Locating and Using Nodes
 All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by :ref:`dojo.addOnLoad <dojo/addOnLoad>`
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       console.log("page ready, can modify DOM anytime after this");
   });
@@ -38,8 +37,7 @@ Using ID's
 The fastest, and most common, way of locating an element is by it's ``id`` attribute. Dojo provides :ref:`dojo.byId <dojo/byId>` - a shorter to write, safer to use version of ``document.getElementById``:
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       var n = dojo.byId("someId");
       n.innerHTML = "Hi, World";
@@ -48,8 +46,7 @@ The fastest, and most common, way of locating an element is by it's ``id`` attri
 Here, we locate a node with id="someId", and set it's ``innerHTML`` to new content. If a node is not found, dojo.byId returns undefined, and is falsy enough to work as a conditional:
 
 .. js ::
-  :linenos:
-
+  
   var n = dojo.byId("someId");
   if(n){ /* it exists! */ }
 
@@ -59,8 +56,7 @@ CSS Selectors
 It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides :ref:`dojo.query <dojo/query>` - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - :ref:`dojo.NodeList <dojo/NodeList>` - that has oodles of useful DOM manipulation functions easily available.
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       var list = dojo.query("#someId");
   });
@@ -68,8 +64,7 @@ It is not always practical to attach id's to elements you intend to modify, whic
 In this example, we locate the same node found by ``dojo.byId`` before, but using the CSS selector to do so. The ``query()`` call returns a found list of nodes (in this case, a single element as id's are unique in the DOM). This list is a standard JavaScript Array, decorated with functions common throughout Dojo, most of which have single-node variants elsewhere in the toolkit. As we'll see, the more of the Core Dojo APIs you learn, the more powerful ``NodeList`` instances are:
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
 
       // find a node byId, change the id, and set the color red
@@ -87,8 +82,7 @@ The query method is convenient and more compact and both code snippets have iden
 CSS selectors are a handy and powerful way to find most kinds of elements in a page.
 
 .. js ::
-  :linenos:
-  
+    
   // by class
   dojo.query(".someClass");
   
@@ -115,8 +109,7 @@ The <body> element
 All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DOM Node in a document's visible content. This node is available via ``dojo.query``:
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       dojo.query("body").addClass("tundra");
   });
@@ -124,8 +117,7 @@ All DOM's should contain a <body> element. This element is a DomNode like any ot
 or more quickly available as a function call:
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       dojo.addClass(dojo.body(), "tundra");
   });
@@ -133,8 +125,7 @@ or more quickly available as a function call:
 By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefine the meaning of the <body> element on the fly. This is useful for situations where your script might be working with multiple documents, such as the content of an iframe or a parent window. You can change the scope of a ``dojo.query`` by passing a different document as the context (second) argument:
 
 .. js ::
-  :linenos:
-
+  
   dojo.addOnLoad(function(){
       var ifr = document.getElementById("anIframe");
       dojo.query("body", ifr.documentElement).addClass("tundra")
@@ -147,8 +138,7 @@ document vs. dojo.doc
 It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference the global :ref:`dojo.doc <dojo/doc>` when accessing the current document. For instance:
 
 .. js ::
-  :linenos:
-
+  
   // use
   dojo.doc.createElement("div");
   var h = dojo.doc.getElementsByTagName("head")[0];
@@ -179,16 +169,14 @@ Node attributes
 Each DomNode has a series of attributes available for setting and getting. A lot of times, you can access these properties knowing you are working with a native DomNode:
 
 .. js ::
-  :linenos:
-
+  
   var n = dojo.byId("foo");
   console.log(n.id == "foo"); // true
 
 Though for full cross browser compatibility and convenience, it is recommended you access and set attributes through :ref:`dojo.attr <dojo/attr>`. The API for dojo.attr is straightforward:
 
 .. js ::
-  :linenos:
-
+  
   // set some node to have a new id
   dojo.attr(someNode, "id", "newId");
 
@@ -204,15 +192,13 @@ Though for full cross browser compatibility and convenience, it is recommended y
 The ``style`` attribute is special. One can set an "inline style" by setting an attribute on the DomNode directly:
 
 .. html ::
-  :linenos:
-
+  
      <div style="padding:3px; color:red; height:123px">Lorem, baby!</div>
 
 Though this isn't an ``attribute`` per se. Just as :ref:`dojo.style <dojo/style>` (described above) accepts an object-hash of style properties, you can pass a style:{} pair to dojo.attr, and set styles in a dojo.attr call:
 
 .. js ::
-  :linenos:
-
+  
   dojo.attr(someNode, {
       name:"bar",
       style:{
@@ -246,8 +232,7 @@ attribute createAttribute(name)
 For example, the following fragment will create a new DOM node of for the HTML DIV tag.
 
 .. js ::
-  :linenos:
-
+  
   dojo.doc.createElement("DIV");
 
 

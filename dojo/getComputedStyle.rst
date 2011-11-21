@@ -25,8 +25,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD)
   require(["dojo/dom-style"], function(domStyle){
     domStyle.getComputedStyle(node);

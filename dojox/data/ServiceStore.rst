@@ -29,8 +29,7 @@ Usage
 To create an instance of a ServiceStore, simply instantiate providing the service to be used as the source:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     // first include ServiceStore:
     dojo.require('dojox.data.ServiceStore');
@@ -42,8 +41,7 @@ To create an instance of a ServiceStore, simply instantiate providing the servic
 When extending this class, if you would like to create lazy objects, you can follow the example from dojox.data.tests.stores.ServiceStore:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     var lazyItem = {
         _loadObject: function(callback){

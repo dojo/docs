@@ -49,8 +49,7 @@ The pattern of using the GoogleImageSearchStore is
   * **contentNoFormatting** A snippet of information about the image, in plain text
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleImageSearchStore();

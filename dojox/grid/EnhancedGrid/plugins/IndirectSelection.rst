@@ -100,8 +100,7 @@ Usage
 * Declare indirect selection feature plugin
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
@@ -113,16 +112,14 @@ Usage
 with HTML markup
     
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}" >
   </div>
 
 with JavaScript
     
 .. js ::
-  :linenos:
-
+  
   <script>
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
   </script>
@@ -132,16 +129,14 @@ with JavaScript
 with HTML markup
     
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, selectionMode:'single'" ... >
   </div>
 
 with JavaScript
     
 .. js ::
-  :linenos:
-
+  
   <script>
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: "single", ...}, dojo.byId('gridDiv'));
   </script>
@@ -149,8 +144,7 @@ with JavaScript
 * It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
 .. html ::
-  :linenos:
-
+  
   //with HTML markup
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, rowSelector:'0px'" ... />
  
@@ -205,15 +199,13 @@ Usages
 * Turn on Select All checkbox in the column header
 
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{headerSelector:true, ...}}" ...></div>
 
 * Listen to events when the check box/radio button is checked/unchecked
 
 .. js ::
-  :linenos:
-
+  
   dojo.connect(grid.selection, 'onSelected'|'onDeselected', function(rowIndex){...})
 
   //when Select All checkbox is changed
@@ -222,8 +214,7 @@ Usages
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
 .. js ::
-  :linenos:
-
+  
   <script>
       for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
          grid.rowSelectCell.toggleRow(selectedRows[i], true);
@@ -233,8 +224,7 @@ Usages
 * When in non-‘single’ selection mode, it’s also easy to select or deselect all rows by:
 
 .. js ::
-  :linenos:
-
+  
   <script>
       dijit.byId("grid").rowSelectCell.toggleAllSelection(true|false);
   </script>
@@ -242,8 +232,7 @@ Usages
 * Another handy usage is to enable or disable a check box or radio button for a certain row by:
 
 .. js ::
-  :linenos:
-
+  
   <script>
       dijit.byId('grid').rowSelectCell.setDisabled(rowIndex, true|false);
   </script>
@@ -251,22 +240,19 @@ Usages
 * You can check whether a certain row is selected with the following code.
 
 .. js ::
-  :linenos:
-
+  
   dijit.byId('grid').selection.isSelected(rowIndex) // returns true or false
 
 * It's also possible to make some styling customizations for the indirect selection column.
 
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{name:'Selection',width:'70px',styles:'text-align:right;'}}" ...></div>
     
 or
 
 .. js ::
-  :linenos:
-
+  
   <script>
     var grid = new dojox.grid.EnhancedGrid({id:"grid", plugins:{indirectSelection:{name:"Selection",width:"70px",styles:"text-align:center;"}, ...}, dojo.byId('gridDiv'));
   </script>

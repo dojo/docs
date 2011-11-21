@@ -40,8 +40,7 @@ You must specify the UTF-8 encoding in every HTML file before any non-English ch
 You must specify the encodings of all HTML files as early as possible. Ideally, this occurs on the server such that the server applies HTTP encoding headers to mark the document, otherwise this must be achieved in the browser using the meta tag. For example:
 
 .. html ::
- :linenos:
-
+ 
  <html>
      <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -53,8 +52,7 @@ You must specify the encodings of all HTML files as early as possible. Ideally, 
 This encoding declaration must appear before any non-English characters in a file; otherwise a browser might fail to read it correctly. For example, IE 6.0/7.0 cannot render the following content (encoded in UTF-8):
 
 .. html ::
- :linenos:
-
+ 
  <html>
      <head>
          <title>???</title>
@@ -66,8 +64,7 @@ This encoding declaration must appear before any non-English characters in a fil
 By default, browsers assume that all files referred by an HTML file use the same encoding as the referring HTML file. So if you have the encoding of every HTML file specified, you do not need to declare the encoding setting in each CSS or JavaScript file again, but you can override the encoding anyway when some files are not in the same encoding as the HTML file. For example,
 
 .. html ::
- :linenos:
-
+ 
  <html>
      <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -96,8 +93,7 @@ You must use UTF-8 to decode XHR request parameters.
 The dojo.xhr* functions are the most common way in Dojo to enable Ajax features -- sending an asynchronous request to the server by an XMLHttpRequest object. The typical call to one of these functions can be:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.xhrGet({
        url: "foo.jsp",
@@ -108,8 +104,7 @@ The dojo.xhr* functions are the most common way in Dojo to enable Ajax features 
 The url is where this request will be sent to. The content is the JSON object that will be sent in the request. In Dojo’s implementation, the key and value pairs in the content are encoded by the encodeURIComponent function first, and then converted to a query string like "key=value&key=value&...". The xhrPost function puts the query string into the request content, and other functions like xhrGet append the query string to the end of the url, so the previous code is equal to the following code:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.xhrGet({
        url: "foo.jsp?name=%e4%b8%80", // %e4%b8%80 are the UTF-8 bytes for \u4e00
@@ -121,8 +116,7 @@ Because the encodeURIComponent function always uses UTF-8, you must use UTF-8 at
 For example, in Tomcat, you can set the encoding of URL by the URIEncoding attribute in server.xml:
 
 .. html ::
- :linenos:
-
+ 
  <<!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
  <Connector port="8080" maxHttpHeaderSize="8192"
      maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
@@ -133,8 +127,7 @@ For example, in Tomcat, you can set the encoding of URL by the URIEncoding attri
 You can set the encoding of the request content (xhrPost) by simply calling request.setCharacterEncoding before using the request object:
 
 .. html ::
- :linenos:
-
+ 
  <%@page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
  <%request.setCharacterEncoding("utf-8");%>
  ...
@@ -148,8 +141,7 @@ You must use UTF-8 encoding when using a non-English string in a URL.
 Some browsers like IE always send URLs using the default system encoding. For example, in a Simplified Chinese Windows XP operating system, IE sends a URL encoded in GB2312. If you need to put some non-English parameters in a URL, make sure that you have encoded it first using the encodeURIComponent function. For example, in a Simplified Chinese Windows XP, if you run the following script in IE:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.xhrPost({
        url: "foo.jsp?name1=\u4e00",
@@ -165,8 +157,7 @@ You might get different results for name1 and name2 at the server side:
 The right way is to encode name1 first:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.xhrPost({
        url: "foo.jsp?name1=" + encodeURIComponent("\u4e00"),

@@ -28,8 +28,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-  
+    
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("/dojo/io/start", function(){
       //Triggered when there are no outstanding IO requests,
@@ -70,8 +69,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-  
+    
   dojo.subscribe("/dojo/io/start", function(){
     //Triggered when there are no outstanding IO requests,
     //and a new IO request is started. No arguments are passed with this topic.

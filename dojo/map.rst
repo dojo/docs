@@ -24,8 +24,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  // Before dojo 1.7
  var changedArray = dojo.map([1, 2, 3, 4], function(item){ return item+1; });
  console.log(changedArray); // logs [2, 3, 4, 5]

@@ -18,8 +18,7 @@ Examples
 A typical usage is:
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/ready", "dojo/parser", "dijit/registry", "dijit/Dialog", function(ready, parser, registry) {
        ready(function(){
              // This won't run until the DOM has loaded, the parser has run, and other modules like dijit/hccss
@@ -33,8 +32,7 @@ This will register some code to run before the parser does:
 
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/ready", "dojo/parser", "dijit/registry", "dijit/Dialog", function(ready, parser, registry) {
        ready(80, function(){
              // Runs before parser, which is priority == 90

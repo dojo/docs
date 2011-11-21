@@ -34,8 +34,7 @@ Here are some examples of how to create a basic OpenLayers Map component :
 Programmatic way of creating a Map component:
 
 .. js ::
- :linenos:
- 
+  
  <!-- Dojo -->
  <script type="text/javascript" src="path/to/dojo/dojo.js"></script>
  <!-- OpenLayers -->
@@ -54,8 +53,7 @@ Programmatic way of creating a Map component:
 Creating a Map using markup declaration:
 
 .. js ::
- :linenos:
- 
+  
  <!-- Dojo -->
  <script type="text/javascript" src="path/to/dojo/dojo.js"></script>
  <!--  OpenLayers -->
@@ -97,8 +95,7 @@ Here are the JavaScript API needed to access specific map provider :
 Some examples of how to set/change the base layer type:
 
 .. js ::
- :linenos:
- 
+  
   <!-- Dojo -->
   <script type="text/javascript" src="../../dojo_current/dojo/dojo.js"></script>
   <!-- OpenLayers -->
@@ -151,8 +148,7 @@ The map is fit on the specified position showing the extent <extent> around the 
 Programmatic version:
 
 .. js ::
- :linenos:
- 
+  
  <script type="text/javascript">
   require([ "dojox/geo/openlayers/Map"], function(){
 
@@ -180,8 +176,7 @@ Programmatic version:
 Markup version:
 
 .. js ::
- :linenos:
-  
+   
   <script type="text/javascript">
     require([ "dojo/parser", "dojox/geo/openlayers/widget/Map" ], function(){});
   </script>
@@ -204,8 +199,7 @@ The OpenLayers mapping component allows to position GFX shapes on the map at spe
 The following code shows how to display a point at the New York location. A circle is displayed as it is the default GFX shape to be displayed for a Point geometry.
 
 .. js ::
- :linenos:
-  
+   
   <script type="text/javascript">
     require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
               "dojox/geo/openlayers/GeometryFeature" ], function(){
@@ -246,8 +240,7 @@ The following code shows how to display a point at the New York location. A circ
 You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The following example shows how to create a polyline joining some major towns of the world.
 
 .. js ::
- :linenos:
-  
+   
  <script type="text/javascript">
    require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
              "dojox/geo/openlayers/GeometryFeature" ], function(){
@@ -308,8 +301,7 @@ You can also place polylines on the map. In this case, you will need to create a
 You can also place combination of geometries using a dojox.geo.openlayers.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
 
 .. js ::
- :linenos:
- 
+  
  <script type="text/javascript">
    require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
              "dojox/geo/openlayers/GeometryFeature" ], function(){
@@ -384,8 +376,7 @@ You also might want to display a specific shape on the map. For that, you can re
 Example that shows a star at Paris location:
 
 .. js ::
- :linenos:
- 
+  
  <script type="text/javascript">
   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
       "dojox/geo/openlayers/Point", "dojox/geo/openlayers/GeometryFeature" ], function(){
@@ -472,8 +463,7 @@ The styling of the GFX shapes is done through the setFill and setStroke methods 
 The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two followinf code are equivalent.
 
 .. js ::
- :linenos:
- 
+  
  var f = new dojox.geo.openlayers.GeometryFeature(p);
  // create a graphic as a group
  f.createShape = function(s){
@@ -485,8 +475,7 @@ The shape can also be configured a with the setShapeProperties method. These pro
  });
 
 .. js ::
- :linenos:
- 
+  
  var f = new dojox.geo.openlayers.GeometryFeature(p);
  // create a graphic as a group
  f.createShape = function(s){
@@ -517,8 +506,7 @@ The descriptor passed to the Widget feature is an object containing the followin
 Here is an example that shows a pie chart at New York location:
 
 .. js ::
- :linenos:
- 
+  
  <script type="text/javascript">
   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/Layer",
       "dojox/geo/openlayers/WidgetFeature", "dojox/charting/widget/Chart",

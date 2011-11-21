@@ -72,8 +72,7 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
 // [ Dojo 1.6 and earlier ]
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojo.NodeList-fx");
   dojo.ready(function(){
        dojo.query("li.evens")
@@ -90,8 +89,7 @@ The most important thing to note is `NodeList <dojo/NodeList>` animations return
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/ready",
     "dojo/query",
     "dojo/NodeList-fx"], function(ready, query, nodeListFx){

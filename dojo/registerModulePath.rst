@@ -39,8 +39,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(['dojo/_base/kernel', 'dojo/_base/loader], function(dojo){
      // Register "lib" to be a peer to Dojo's parent folder.
@@ -75,8 +74,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // Register "lib" to be a peer to Dojo's parent folder.
    // Make sure the module path does *not* end in a slash.

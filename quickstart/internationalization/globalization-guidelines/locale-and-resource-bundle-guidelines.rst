@@ -25,8 +25,7 @@ You must set dojoConfig.locale in all files to achieve server-based personalizat
 If dojoConfig.locale is undefined, Dojo will consult the browser's navigator object for the setting chosen at browser install time. Note that this is unrelated to the locale setting in the preferences dialog, which is for interaction with the server only. To provide personalization from the server to control locale settings in an application, you must set dojoConfig.locale in the page at the server side, prior to loading dojo.js. For example, here is a JSP page that sets the default locale for Dojo:
 
 .. html ::
- :linenos:
-
+ 
  ...
  <%
  String actualLocale = ResourceBundle.getBundle("my.app.test",
@@ -97,8 +96,7 @@ Using Resource Bundle
 First, you should use the dojo.registerModulePath function to define the directory where resource bundles are as a registered module. The module name needs to be used in later callings to the dojo.requireLocalization and dojo.i18n.getLocalization functions. For the previous example, you can use the following line to define the module "my.app":
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.registerModulePath("my.app", "../../my/app");
    // Note: Here, the "../../my/app" path is relative to the directory that contains "dojo.js".
@@ -118,8 +116,7 @@ If you omit the locale parameter when calling the dojo.requireLocalization funct
 For example, if you define:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript" src="../dojo/dojo.js" data-dojo-config="locale: 'zh-cn', extraLocale: ['zh-tw', 'fr']">
  </script>
 
@@ -128,8 +125,7 @@ then the following two code blocks are equal:
 Code block A:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.requireLocalization("my.app", "bar");
    
@@ -139,8 +135,7 @@ Code block A:
 Code block B:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.requireLocalization("my.app", "bar", "zh-cn"); // default locale
    dojo.requireLocalization("my.app", "bar", "zh-tw"); // extra locale

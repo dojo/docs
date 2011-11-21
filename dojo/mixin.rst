@@ -20,8 +20,7 @@ Simple Mixes
 Merge two objects (join two objects) together with dojo.mixin:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var a = { b:"c", d:"e" };
@@ -37,8 +36,7 @@ Merge two objects (join two objects) together with dojo.mixin:
 This example overwrites the "d" member from the second object, leaving the variable "a" with three members: b, d, and g. To expand on this, we can illustrate how to use mixin to overwrite defaults for some function:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang", "dojo/_base/fx"], function(lang, fx) {
     var generatedProps = { node:"someNode", onEnd:function(){ /* code */ } };
@@ -61,8 +59,7 @@ Creating new Objects
 Mixin modifies the first object in the list, mixing in second object. If you wish to make an entirely new object from the mixed results, you have a couple options. First, clone the existing object with dojo.clone, then mix:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var newObject = lang.mixin(lang.clone(a), b);
@@ -76,8 +73,7 @@ Here, the return from :ref:`dojo.clone <dojo/clone>` is a new object, then b is 
 Alternatly, you can pass an empty object as the first mix, and mix another object into it. You can then repeat this pattern as often as you'd like:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var newObject = lang.mixin({}, b);
@@ -102,8 +98,7 @@ Mixins with Classes
 A common pattern when creating class objects is to pass an object-hash of properties to the constructor. dojo.mixin provides a technique for easy over-ride of default in you own classes. Consider the follow class declaration:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
     declare("my.Thinger", null, {
@@ -125,8 +120,7 @@ A common pattern when creating class objects is to pass an object-hash of proper
 Now, any time we create a new instance of a my.Thinger, it will have a member variable "defaultValue" set to red. If we provide a new defaultValue, the constructor will immediately overwrite the existing one:
 
 .. js ::
-  :linenos:
-
+  
   var thing = new my.Thinger({ defaultValue:"blue" });
 
 =====================
@@ -136,8 +130,7 @@ Mixing into instances
 Sometimes is it useful to mix custom variables and members into instances of widgets and other objects. Mixing into an instance allows you to easily add arbitrary references or overwrite functionality after instantiation.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     var cp = new dijit.layout.ContentPane();

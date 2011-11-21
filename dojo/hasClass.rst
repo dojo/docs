@@ -57,16 +57,14 @@ Dojo < 1.7
 Consider the following html:
 
 .. html ::
-  :linenos:
-
+  
     <div id="bam" class="foo bar baz"></div>
     <div class="something else"></div>
 
 Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
     if(domClass.contains("bam", "foo")){
@@ -82,8 +80,7 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 Using :ref:`dojo.query <dojo/query>` to find a node and check if it has a class:
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/dom-class", "dojo/query"], function(domClass, query){
      query(".something").forEach(function(node){

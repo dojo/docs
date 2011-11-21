@@ -46,8 +46,7 @@ The pattern of using the GoogleSearchStore is
   * **playUrl** If present, supplies the url of the flash version of the video that can be played inline on your page. To play this video simply create and <embed> element on your page using this value as the src attribute and using application/x-shockwave-flash as the type attribute. If you want the video to play right away, make sure to append &autoPlay=true to the url
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleVideoSearchStore();

@@ -213,8 +213,7 @@ Technical information
 This function is a simple convenience wrapper for :ref:`dojo.hasClass <dojo/hasClass>`, :ref:`dojo.addClass <dojo/addClass>` and :ref:`dojo.removeClass <dojo/removeClass>`.  A simplified version would look something like this:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-class"], function(domClass){
     function toggle(node, classStr, condition){

@@ -26,8 +26,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query) {
      var iframeDoc = dom.byId("someFrameId").contentWindow.document;
@@ -45,8 +44,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 

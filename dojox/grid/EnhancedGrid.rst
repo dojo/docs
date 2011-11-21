@@ -100,8 +100,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 1. Import theme CSS
 
 .. js ::
-  :linenos:
-
+  
   <style type="text/css">
       @import "dijit/themes/claro/claro.css";
       @import "dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
@@ -112,8 +111,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 2. Declare required feature plugins
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.DnD");
@@ -125,8 +123,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 3. Use feature plugins:
 
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
       data-dojo-props="plugins:{dnd: true, nestedSorting: true, indirectSelection: true, ...}" ...>
   </div>

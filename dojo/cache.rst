@@ -86,16 +86,14 @@ Examples
 This is the usual, most common use of the dojo.cache call:
 
 .. js ::
- :linenos:
-
+ 
   //Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache("my.module", "template.html");
   });
   
 .. js ::
- :linenos:
-
+ 
  //Dojo 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache("my.module", "template.html");
@@ -106,16 +104,14 @@ If my/module/template.html contained the text "<div>Hello World</div>", then the
 An example using the sanitize: true option:
 
 .. js ::
- :linenos:
-
+ 
   //Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache("my.module", "template.html", {sanitize: true});
   });
 
 .. js ::
- :linenos:
-
+ 
  //Dojo < 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache("my.module", "template.html");
@@ -126,16 +122,14 @@ If my/module/template.html contains "<html><body><h1>Hello</h1></body></html>", 
 Example using an object that has like the previous example, but uses an object whose toString() method represents a file path:
 
 .. js ::
- :linenos:
-
+ 
   //Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
   });
 
 .. js ::
- :linenos:
-
+ 
  //Dojo < 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});

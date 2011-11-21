@@ -27,8 +27,7 @@ Usage
 All widgets are created by calling dojo.declare(), extending from _WidgetBase:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase], { ... });
  </script>
@@ -69,14 +68,12 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
      Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Examples on how to destroy a widget:
 
   .. js ::
-    :linenos:
-
+    
     var widget = new dijit.form.TextBox({name: "firstname"}, "inputId");
     widget.destroy();
 
   .. js ::
-    :linenos:
-
+    
     dijit.byId("dijitId").destroy();
 
 

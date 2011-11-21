@@ -53,8 +53,7 @@ Note that it's defining two widget parameters:
 And then it's defining a template
 
 .. html ::
- :linenos:
-
+ 
  <span>${name}</span>
  <a href="update.php?id=${empid}">update</a>
  <a href="delete.php?id=${empid}">delete</a>
@@ -74,8 +73,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 
 
 .. html ::
- :linenos:
-
+ 
  <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton'">
    XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
    <script type='dojo/method' data-dojo-event='myClickHandler'>
@@ -98,8 +96,7 @@ Often dijit.Declaration is used to define a widget as an extension of another wi
 HideButton2 extends HideButton (above) and changes the template (but keeps the onclick handler).  Here we define HideButton2 and then create two HideButton2's:
 
 .. html ::
- :linenos:
-
+ 
  <span data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
    YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
  </span>
@@ -120,8 +117,7 @@ However, you can get the same effect using <script type="dojo/method"> and calli
 An example of dojo/connect is:
 
 .. html ::
- :linenos:
-
+ 
  <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
    Just a plain ol' piece of text
    <script type="dojo/connect" data-dojo-event="dblclick">

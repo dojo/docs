@@ -19,8 +19,7 @@ Input Format
 It can take in either a Javascript array, JSON string, or URL as the data source. Data is expected to be in the following format:
 
 .. js ::
- :linenos:
-
+ 
   [
     { "key1": "value1" },
     { "key2": "value2" },
@@ -32,8 +31,7 @@ Each 'item' retrieved from this store from this store is a JS object representin
 Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... } with code like
 
 .. js ::
- :linenos:
-
+ 
   var myVar={"key1": "value1" , "key2": "value2", ... };
   var myData=[];
   for (var p in myVar) {

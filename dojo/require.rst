@@ -56,8 +56,7 @@ dojo.require works directly with :ref:`dojo.addOnLoad <dojo/addOnLoad>`. While m
 Additionally, you can re-call addOnLoad anytime you immediately call dojo.require, in order to ensure the modules and dependencies are ready. Even after page load!
 
 .. js ::
-  :linenos:
-
+  
   //Dojo 1.7 (AMD)
   require(["dojo/ready","dojo/fx"], function(ready,fx) {
        ready(function(){
@@ -71,8 +70,7 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
 
 
 .. js ::
-  :linenos:
-
+  
   //Dojo < 1.7
   dojo.require("dojo.fx");
   dojo.addOnLoad(function(){

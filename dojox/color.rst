@@ -23,8 +23,7 @@ Including the ``dojox.color`` module will add the following functions to ``dojo.
 an alias to ``dojox.color`` and ``dojox.color.Color``:
 
 .. js ::
-  :linenos:
-
+  
   var c = dojox.color.fromCmy(c, m, y);
   var c = dojox.color.fromCmyk(c, m, y, k);
   var c = dojox.color.fromHsl(h, s, l);

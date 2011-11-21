@@ -26,8 +26,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(["dojo/io-query"], function(ioQuery) {
        var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
@@ -47,8 +46,7 @@ Dojo < 1.7
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
    var query = uri.substring(uri.indexOf("?") + 1, uri.length);

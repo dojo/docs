@@ -23,8 +23,7 @@ A bad solution: using the DOM API
 To select HTML elements in JavaScript, you can use the browser's native DOM API, but they're verbose and hard to work with...not to mention slow. For example, retrieving all nodes with the class "progressIndicator" uses this code:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     // list every node with the class "progressIndicator":
     var list = [];
@@ -49,8 +48,7 @@ Better and faster: dojo.query
 
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     // list every node with the class "progressIndicator":
     console.dir( dojo.query(".progressIndicator") );

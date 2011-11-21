@@ -24,8 +24,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
   require(['dojo/_base/json'],function(dojo){
     //require on dojo/_base/json will return the actual object of dojo
     
@@ -42,8 +41,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
   // a simple object
   var obj = { a:"one", b:3, c:true };
 

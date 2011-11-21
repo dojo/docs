@@ -20,8 +20,7 @@ Unlike standard Javascript, Dojo is capable of formatting and parsing date forma
 For example, look at the following date formatted using the default locale for the user (in this case, English - United States) and also with a specific locale override of Chinese - PRC China:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // the page must specify dojoConfig.extraLocale: 'zh-cn'
    // to bootstrap the environment with support for an extra locale
@@ -41,8 +40,7 @@ For example, look at the following date formatted using the default locale for t
 Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") Dojo.date offers a variety of formatting choices, such as the option to a different format "length" -- a choice of "short", "medium", "long", or "full" -- or to print only the date or time portion of the Date object:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.date.locale.format(d, {selector:'date', formatLength:'full'});
    // => "Sunday, October 29, 2006"
@@ -54,8 +52,7 @@ Note that the positioning of month, day, and year are all different, as well as 
 Also, it is possible to reverse the process and parse String objects into Dates. For a user running in a Dutch locale like "nl-nl", the following would produce a valid Date object:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.date.locale.parse("maandag 30 oktober 2006", {formatLength: "full"});
  </script>
@@ -77,8 +74,7 @@ dojo.number
 Dojo provides the facilities to properly format and parse numbers on a localized basis using the methods in :ref:`dojo.number <dojo/number>`:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojo.number");
 
@@ -99,8 +95,7 @@ dojo.currency
 :ref:`dojo.currency <dojo/currency>` combines the functionality of dojo.number to use the appropriate syntax with knowledge of the conventions associated with a particular currency -- this includes the number of decimal places typically used with a currency, rounding conventions, and the currency symbol which itself may be rendered differently according to locale, any of these may be overridden. When calling dojo.currency APIs, be sure to specify a currency according to its 3-letter ISO-4217 symbol.
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojo.currency");
 

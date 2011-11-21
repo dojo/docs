@@ -28,8 +28,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  dojo.getNodeProp(node, attr);
 
 node

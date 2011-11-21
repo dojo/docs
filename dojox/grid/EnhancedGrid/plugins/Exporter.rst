@@ -131,15 +131,13 @@ Prerequisites
 This exporter plugin is only available for EnhancedGrid. So require the EnhancedGrid first:
 
 .. js ::
-  :linenos:
-  
+    
   dojo.require("dojox.grid.EnhancedGrid");
 
 Unlike other grid plugins, you don't need to ``require`` this plugins directly. Instead, you should ``require`` the specific implementations (i.e. writers). For example, if a CSV format implementation is available, then:
 
 .. js ::
-  :linenos:
-  
+    
   dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
 
 This statement will automatically require "dojox.grid.enhanced.plugins.Exporter".
@@ -152,8 +150,7 @@ The declaration name of this plugin is ``exporter`` . It is declared in the ``pl
 If your grid is created declaratively:
 
 .. html ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     data-dojo-props="store:mystore, structure:'mystructure',
     plugins:{
@@ -163,8 +160,7 @@ If your grid is created declaratively:
 If your grid is created in JavaScript:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -209,8 +205,7 @@ writerArgs      Object              Optional(default to {})     Some arguments f
 For example:
 
 .. js ::
-  :linenos:
-  
+    
   //Export the whole grid to CSV format, with separator of ":".
   grid.exportGrid("csv", {writerArgs: {separator:":"}}, function(str){
     // do something interesting with str
@@ -399,8 +394,7 @@ Register Your Own Writer
 Once you have implemented your own export writer, tell the framework about the name of your format. For the "CSV" case, you should write the following line in your implementation file:
 
 .. js ::
-  :linenos:
-  
+    
   dojox.grid.enhanced.plugins.Exporter.registerWriter("csv", "dojox.grid.enhanced.plugins.exporter.CSVWriter");
 
 Available Export Writers
@@ -421,8 +415,7 @@ Example
 Here is the structure of the implementation file of the CSVWriter, demonstrating how to write an export writer. It only implements 3 interfaces.
 
 .. js ::
-  :linenos:
-
+  
   //First delcare your class.
   dojo.provide("dojox.grid.enhanced.plugins.exporter.CSVWriter");
 

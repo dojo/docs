@@ -285,8 +285,7 @@ Sizing to Viewport
 Sizing to browser viewport: To make the outermost layout widget size to the browser's viewport, in your page CSS you should have:
 
 .. css ::
-  :linenos:
-
+  
   html, body, #mainDiv {
     width: 100%; height: 100%;
     border: 0; padding: 0; margin: 0;
@@ -316,8 +315,7 @@ Creation
 When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
 .. js ::
-  :linenos:
-
+  
   // create a BorderContainer as the top widget in the hierarchy
   var bc = new dijit.layout.BorderContainer({style: "height: 500px; width: 800px;"});
 
@@ -355,16 +353,14 @@ Add Children
 After startup() has been called you can freely add children, like for example:
 
 .. js ::
-  :linenos:
-
+  
   // add a right pane to the BorderContainer
   bc.addChild(new ContentPane({region: "right", content: "...", style: "width: 100px;"}));
 
 or:
 
 .. js ::
-  :linenos:
-
+  
   // add a tab to the TabContainer
   tc.addChild( new dijit.layout.ContentPane({title: "tab 3"});
 
@@ -378,8 +374,7 @@ Remove Children
 Removing children is done w/the pointer to the child widget:
 
 .. js ::
-  :linenos:
-
+  
   // remove the first tab, and destroy it (and it's contents)
   tc.removeChild(tab1);
   tab1.destroyRecursive();
@@ -394,8 +389,7 @@ Destruction
 Typically you destroy a widget and all it's descendants, like this:
 
 .. js ::
-  :linenos:
-
+  
   bc.destroyRecursive();
 
 Resizing
@@ -410,15 +404,13 @@ The resize function for widgets layout widgets serves two purposes:
 Usually you pass a size to the resize method, like:
 
 .. js ::
-  :linenos:
-
+  
    bc.resize({h: 500, w: 500});
 
 If you want to notify a widget that it's size has been changed, you omit that argument:
 
 .. js ::
-  :linenos:
-
+  
    bc.resize();
 
 ======================

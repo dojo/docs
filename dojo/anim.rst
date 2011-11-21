@@ -31,8 +31,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    require(['dojo/_base/fx'], function(fx){
      fx.anim(node, properties, duration, easing, onEnd, delay);
@@ -43,8 +42,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.anim(node, properties, duration, easing, onEnd, delay);
  </script>

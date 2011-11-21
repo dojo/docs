@@ -22,8 +22,7 @@ Usage
 The MultiComboBox behaves the same as a plain ComboBox. Pass it a store and searchAttr:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
     var memberTagStore = new dojo.data.ItemFileReadStore({ url:"countries.json" });
     var widget = new dojox.form.MultiComboBox({

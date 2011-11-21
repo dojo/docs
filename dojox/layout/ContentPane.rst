@@ -27,8 +27,7 @@ Usage
 TODO: how to use the component/class/method
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // your code
  </script>
@@ -59,8 +58,7 @@ See also
 * An alternative is to set scriptHasHooks=true, and have content like this in your loaded content:
 
 .. js ::
- :linenos:
-
+ 
  <script>
    dojo.connect(_container_,"onLoad", function() {
       /* your script */

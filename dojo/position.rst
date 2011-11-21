@@ -34,8 +34,7 @@ Dojo 1.7+ (AMD)
 When using AMD format in a fully baseless application, ``position`` is accessed from the ``dojo/dom-geometry`` module.
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo/dom-geometry"], function(domGeom){
      var obj = domGeom.position(node);
   });
@@ -43,8 +42,7 @@ When using AMD format in a fully baseless application, ``position`` is accessed 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.position`` in the ``define`` or ``require`` callback:
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
      var obj = dojo.position(node);
   });
@@ -53,8 +51,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  var obj = dojo.position(node);
 
 ========

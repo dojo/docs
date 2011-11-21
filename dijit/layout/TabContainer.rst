@@ -219,8 +219,7 @@ Manipulating Children
 ---------------------
 
 .. js ::
-  :linenos:
-
+  
   var tabs = dijit.byId("myTabContainer");
   var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
   tabs.addChild(pane);
@@ -228,8 +227,7 @@ Manipulating Children
 A Tab doesn't get displayed unless you call ``.selectChild``
 
 .. js ::
-  :linenos:
-
+  
   var tabs = dijit.byId("myTabContainer");
   var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
   tabs.addChild(pane);
@@ -238,8 +236,7 @@ A Tab doesn't get displayed unless you call ``.selectChild``
 the ``addChild`` method accepts a position index, telling where in the order to add the new pane:
 
 .. js ::
-  :linenos:
-
+  
   var tabs = dijit.byId("myTabContainer");
   var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
   tabs.addChild(pane,1);
@@ -296,8 +293,7 @@ TabContainer Events
 There are two methods of observing TabContainer *shenanigans*. The first, by using :ref:`dojo.subscribe <dojo/subscribe>`. Each TabContainer :ref:`publishes <dojo/publish>` notices based on the *id* of the Container. Several different actions are tracked this way:
 
 .. js ::
-  :linenos:
-
+  
   // assuming our tabContainer has id="bar"
   dojo.subscribe("bar-selectChild", function(child){
       console.log("A new child was selected:", child);
@@ -314,8 +310,7 @@ There are two methods of observing TabContainer *shenanigans*. The first, by usi
 the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via :ref:`dojo.connect <dojo/connect>`:
 
 .. js ::
-  :linenos:
-
+  
   // assuming the same id="bar" TabContainer
   var tabs = dijit.byId("bar");
   
@@ -332,8 +327,7 @@ This simply uses dojo.connect to listen to the native function calls.
 A common request for ``selectChild`` functionality is to know both the *new* and *old* widgets being transitioned. The easiest way to accomplish this is connect to the "private" :ref:``transition`` method of a TabContainer:
 
 .. js ::
-  :linenos:
-
+  
   var tabs = dijit.byId("tabs");
   dojo.connect(tabs,"_transition", function(newPage, oldPage){
       console.log("I was showing: ", oldPage || "nothing");
@@ -343,8 +337,7 @@ A common request for ``selectChild`` functionality is to know both the *new* and
 It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the :ref:``setupChild`` function to ensure you are notified of the children already existing in markup. This is only relevant if you are subclassing for reason:
 
 .. js ::
-  :linenos:
- 
+   
   dojo.declare("my.TabContainer", dijit.layout.TabContainer, {
       _setupChild: function(child){
            this.inherited(arguments);

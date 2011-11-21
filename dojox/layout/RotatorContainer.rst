@@ -51,8 +51,7 @@ Declarative example
 -------------------
 
 .. html ::
- :linenos:
- 
+  
  <script type="text/javascript">
    dojo.require("dojox.layout.RotatorContainer");
    dojo.require("dijit.layout.ContentPane");

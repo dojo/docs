@@ -13,8 +13,7 @@ Custom Validation
 Sometimes, you want to do your own validation, such as checking with backend if an email has been registered in database. This can be done using javascript like:
 
 .. js ::
-  :linenos:
-
+  
   dijit.byId("validationTextBoxNodeId").validator = function (value, constraints) {
 
       // Check that email has not been used yet.

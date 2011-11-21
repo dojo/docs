@@ -155,8 +155,7 @@ The default implementation of getIconClass() shows two types of icons: folders a
 It tries to guess if the node is a folder or not by whether or not it has a children attribute:
 
 .. js ::
-  :linenos:
-
+  
   	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
 		return (!item || this.model.mayHaveChildren(item)) ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf"
 	},
@@ -172,8 +171,7 @@ would determine if the item was a folder or not based on whether or not the item
 (and it was set to true):
 
 .. js ::
-  :linenos:
-
+  
   	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
 		return myStore.getValue(item, 'directory') ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf";
 	},
@@ -184,8 +182,7 @@ separate icons for songs, movies, and TV shows), then you really need to overrid
 to return a separate class name based on the type of item:
 
 .. js ::
-  :linenos:
-
+  
   <script type="dojo/method" data-dojo-event="getIconClass" data-dojo-args="item, opened">
       if(item == this.model.root) {
           return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");

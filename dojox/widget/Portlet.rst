@@ -36,8 +36,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <div dojoType="dojox.widget.Portlet" title="My Flickr">
 
    <div dojoType="dojox.widget.PortletSettings">

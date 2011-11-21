@@ -83,8 +83,7 @@ Usage
 A data model is effectively instantiated with a plain JavaScript object which specifies the initial data structure for the model.
 
 .. js ::
-  :linenos:
-
+  
 		 var struct = {
 		 		 order		 : "abc123",
 		 		 shipto		 : {
@@ -104,8 +103,7 @@ The simple example above shows an inline plain JavaScript object illustrating th
 To deal with stores providing immediate values or Promises, a factory method for model instantiation is provided. This method will either return an immediate model or a model Promise depending on the nature of the store.
 
 .. js ::
-  :linenos:
-
+  
 		 var model = dojox.mvc.newStatefulModel({ store: someStore });
 
 The created data model has the following properties:
@@ -120,8 +118,7 @@ The created data model has the following properties:
 * The data model internally creates a tree of dojo.Stateful objects that matches the input, which is effectively a plain JavaScript object i.e. "pure data". This tree allows dijits or other view components to bind to any node within the data model. Typically, dijits with simple values bind to leaf nodes of the datamodel, whereas containers bind to internal nodes of the datamodel. For example, a datamodel created using the object below will generate the dojo.Stateful tree as shown:
 
 .. js ::
-  :linenos:
-
+  
 		 var model = dojox.mvc.newStatefulModel({ data : {
 		 		 prop1		 : "foo",
 		 		 prop2		 : {
@@ -154,8 +151,7 @@ Finally, requiring this class also enables all dijits to become data binding awa
 To illustrate, the following is the "Hello World" of such data-bound widget examples:
 
 .. js ::
-  :linenos:
-
+  
 		 <script>
 		 		 dojo.require("dojox.mvc");
 		 		 dojo.require("dojo.parser");
@@ -175,8 +171,7 @@ To illustrate, the following is the "Hello World" of such data-bound widget exam
 or
 
 .. js ::
-  :linenos:
-
+  
 		 <script>
 		 		 var model;
 		 		 require(["dojox/mvc", "dojo/parser"], function(dxmvc, parser){

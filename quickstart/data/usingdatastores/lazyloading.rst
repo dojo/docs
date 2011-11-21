@@ -17,8 +17,7 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
 **Example data structure for ItemFileReadStore:**
 
 .. js ::
- :linenos:
-
+ 
   { identifier: 'name',
     label: 'name',
     items: [
@@ -142,8 +141,7 @@ Example 2:  A hierarchical format without references
 ----------------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   { identifier: 'name',
     items: [
       { name:'Africa', type:'continent', children:[
@@ -261,8 +259,7 @@ Sample code:  Detecting child items
 -----------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
   //Load completed function for walking across the attributes and child items of the
@@ -302,8 +299,7 @@ Sample code:  Detecting child items and lazy-loading items on demand
 --------------------------------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
   //Load completed function for walking across the attributes and child items of the

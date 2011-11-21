@@ -27,8 +27,7 @@ The default contentHandler is text, and requires no action:
 [ Dojo 1.7 AMD ]
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
      require(["dojo/_base/xhr"], function(xhr) {
         xhr.get({
@@ -44,8 +43,7 @@ The default contentHandler is text, and requires no action:
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
   <script type="text/javascript">
      dojo.xhrGet({
         url:"foo.txt",
@@ -81,8 +79,7 @@ This example shows, how to use the pre-defined json contentHandler:
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/xhr"], function(xhr) {
      xhr.get({
         url:"foo.json",
@@ -102,8 +99,7 @@ This example shows, how to use the pre-defined json contentHandler:
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   dojo.xhrGet({
       url:"foo.json",
       // here comes the contentHandler:
@@ -126,8 +122,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
      lang.mixin(xhr.contentHandlers, {
         "makeUpper": function(req){
@@ -149,8 +144,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   dojo.mixin(dojo.contentHandlers, {
       "makeUpper": function(xhr){
            return xhr.responseText.toUpperCase();
@@ -173,8 +167,7 @@ For instance, we can create a handler that will populate a node with the respons
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom) {
       var ioArgs = {
           url:"foo.html",
@@ -195,8 +188,7 @@ For instance, we can create a handler that will populate a node with the respons
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   // you don't need to mix(), you can just set the object directly if you prefer:
   dojo.contentHandlers.loadNode = function(xhr){
       var n = dojo.byId(xhr.ioArgs.node);
@@ -221,8 +213,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 [ Dojo 1.7 AMD ]
 
 .. js ::
- :linenos:
-
+ 
     require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
         xhr.contentHandlers.wrappedJSON = function(req){
             // like handleAs:"json", but mixes an additional bit into the response always.
@@ -245,8 +236,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
     dojo.contentHandlers.wrappedJSON = function(xhr){
         // like handleAs:"json", but mixes an additional bit into the response always.
         var json = dojo.contentHandles.json(xhr);
@@ -272,8 +262,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 [ Dojo 1.7 AMD ]
 
 .. js ::
- :linenos:
-
+ 
     require(["dojo/_base/xhr"], function(xhr) {
         // a handler that always escapes html fragments. not exceptionally useful though:
         var oldtext = xhr.contentHandlers.text;
@@ -286,8 +275,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 [ Dojo < 1.7 ]
 
 .. js ::
- :linenos:
-
+ 
     // a handler that always escapes html fragments. not exceptionally useful though:
     var oldtext = dojo.contentHandlers.text;
     dojo.contentHandles.text = function(xhr){

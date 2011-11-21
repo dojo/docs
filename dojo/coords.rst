@@ -34,8 +34,7 @@ Dojo 1.7+ (AMD)
 ---------------
 
 .. js ::
- :linenos:
-
+ 
   require(["dojo"], function(dojo){
      var coords = dojo.coords(node);
   });
@@ -44,8 +43,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  var coords = dojo.coords(node);
 
 ========

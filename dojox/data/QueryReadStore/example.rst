@@ -34,8 +34,7 @@ The directory structure should look like this when you are done:
 **Example HTML**
 
 .. html ::
- :linenos:
-
+ 
   <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

@@ -429,8 +429,7 @@ called during startup.
 eg:
 
 .. js ::
-  :linenos:
-
+  
   dojo.declare("my.Thinger", dijit._WidgetBase, {
     
        value:9,

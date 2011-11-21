@@ -26,8 +26,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
   dojo.require("dojox.html._base");
   dojox.html.set(node, content, {
       executeScripts: true,

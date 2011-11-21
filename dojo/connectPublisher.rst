@@ -86,8 +86,7 @@ Programmatic example
 --------------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // Dojo 1.7 (AMD)
    require(["dojo/_base/connect"], function(connect) {

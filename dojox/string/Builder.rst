@@ -12,8 +12,7 @@ The DojoX String Builder is a constructor designed to make working with large st
 A simple example of using the Builder:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.string.Builder");
   var sb = new dojox.string.Builder();
 
@@ -37,8 +36,7 @@ While the above example is pretty basic, it demonstrates the usage pretty well.
 Situations where using a string builder is handy are template systems and serialization systems; for instance, creating a simple table could be written so that it uses the Builder as opposed to recursively calling itself and returning/appending string fragments.  Here's an example:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.string.Builder");
   function buildRow(builder){
 	  builder.append("<tr>");
@@ -81,15 +79,13 @@ In general, the only methods used are *append* and *toString*.  *concat* and *ap
 *replace*, *remove* and *insert* all work on existing internal string buffers; *replace* functions exactly like String.replace.  *remove* will pull N characters beginning at idx:
 
 .. js ::
-  :linenos:
-
+  
   sb.remove(index, numChars);
 
 *insert* will place a string at index:
 
 .. js ::
-  :linenos:
-
+  
   sb.insert(index, "The rain in Spain falls mainly on the plain");
 
 For a reference on how the Builder was optimized, please see

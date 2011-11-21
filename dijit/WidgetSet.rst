@@ -26,8 +26,7 @@ Adding a widget to a WidgetSet
 ------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var ws = new WidgetSet();
   ws.add(new dijit.Dialog());
 
@@ -35,16 +34,14 @@ Removing a widget from a WidgetSet
 ----------------------------------
 
 .. js ::
- :linenos:
-
+ 
   ws.remove("MyWidgetId");
 
 Iterating over a list of widgets
 --------------------------------
 
 .. js ::
- :linenos:
-
+ 
   ws.forEach(function(widget, index, hash){
     // function is run for each widget available
   });
@@ -53,16 +50,14 @@ Converting a WidgetSet to an array
 ----------------------------------
 
 .. js ::
- :linenos:
-
+ 
   var widgetArray = ws.toArray();
 
 Chaining forEach and byClass calls
 ----------------------------------
 
 .. js ::
-  :linenos:
-
+  
   ws.forEach(function(widget){
     widget.containerNode.appendChild(dojo.create("div"));
   }).byClass("dijit.Dialog").forEach(function(widget){ /* only dijit.Dialog instances */ });
@@ -70,8 +65,7 @@ Chaining forEach and byClass calls
 The functions filter, forEach, map, every and some all accept a `thisObject` in the last position. This is in line with all other Dojo array functions and allows for transparent scope manipulation:
 
 .. js ::
-  :linenos:
-
+  
   // we are in some object, like a Widget
   ws.forEach(function(widget){
     this.addChild(widget); // add all children to the instance we are in
@@ -83,8 +77,7 @@ Filtering a list of widgets
 This example filters all even widgets from the list, then iterates over the remainder:
 
 .. js ::
-  :linenos:
-
+  
   // filter out even widgets, and iterate over the remainder
   ws.filter(function(widget, i){
     return i % 2 == 0;
@@ -96,15 +89,13 @@ Inspecting how many widgets are in a WidgetSet
 ----------------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   if(ws.length){
     // there is at least one widget in this WidgetSet
   }
 
 .. js ::
-  :linenos:
-
+  
   if(ws.byClass("dijit.Dialog").length){
     // there are Dialog widgets in this set
   }
@@ -117,8 +108,7 @@ Retrieving all DOM nodes for a set of widgets
 ---------------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   // get the actual domNode which represents the widgets in this list:
   var nodes = dijit.registy.map(function(widget){
     return widget.domNode;
@@ -128,8 +118,7 @@ Validating all widgets in a WidgetSet
 -------------------------------------
 
 .. js ::
-  :linenos:
-
+  
   var isValid = ws.every(function(widget){
     // all widgets must have a value > 0 to pass
     return widget.isValid();

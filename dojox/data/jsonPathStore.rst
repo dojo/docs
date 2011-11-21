@@ -62,15 +62,13 @@ Usage
 =====
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({url: "/stores/store.js"});
   </script>
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
@@ -124,8 +122,7 @@ Programmatic example
 --------------------
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
@@ -141,6 +138,5 @@ Programmatic example
 Declarative example
 -------------------
 .. js ::
-  :linenos:
-
+  
   <div data-dojo-id="store" data-dojo-type="dojox.data.jsonPathStore" data-dojo-props="url:'/path/to/store.js'"></div>

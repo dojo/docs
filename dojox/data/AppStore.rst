@@ -56,8 +56,7 @@ Input Data Format
 The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(standard)>`_ feed format.  An example of an ATOM feed is below:
 
 .. code-block :: xml
- :linenos:
-
+ 
   <?xml version='1.0' encoding='utf-8'?>
   <feed xmlns='http://www.w3.org/2005/Atom' xml:lang='en-US'>
 	<title>Example.com</title>

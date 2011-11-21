@@ -95,8 +95,7 @@ General Structure
 -----------------
 
 .. js ::
- :linenos:
-
+ 
   {
     "label": "some attribute",   //Optional attribute used to indicate which attribute on an item should act as a human-readable label for display purposes.
 
@@ -123,8 +122,7 @@ Aside from regular, string, boolean, integer, object, etc, types that can be ass
 The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
 
 .. js ::
- :linenos:
-
+ 
   {
     "identifier": "name",
     "items": [
@@ -143,8 +141,7 @@ The other special structure is the custom type structure. The purpose of the cus
 
 
 .. js ::
- :linenos:
-
+ 
   {
     "items": [
       { "name": "Bob", "birthdate": { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
@@ -161,8 +158,7 @@ Items with References
 ---------------------
 
 .. js ::
- :linenos:
-
+ 
   {
     'identifier': 'name',
     'label': 'name',
@@ -214,8 +210,7 @@ Items with Hierarchy
 --------------------
 
 .. js ::
- :linenos:
-
+ 
   {
     'identifier': 'name',
     'label': 'name',
@@ -267,8 +262,7 @@ Items with Custom Types
 -----------------------
 
 .. js ::
- :linenos:
-
+ 
   {
     'identifier': 'abbr',
     'label': 'name',
@@ -310,8 +304,7 @@ The general case type map handles the situation where some processing on the val
 **General Form Type Map**
 
 .. js ::
- :linenos:
-
+ 
   {
     "type0": {
 	  "type": constructorFunction(),
@@ -336,8 +329,7 @@ Example: General Case Type Map for JavaScript Date Objects
 ----------------------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   {
     "Date": {
       type: Date,
@@ -355,8 +347,7 @@ The simplified form is more compact to write and works well when the value held 
 **Simplified Form Type Map**
 
 .. js ::
- :linenos:
-
+ 
   {
     "type0": constructorFunction(),
     "type1": constructorFunction(),
@@ -369,8 +360,7 @@ Example: Simplified Form Type Map for dojo.Color Objects
 --------------------------------------------------------
 
 .. js ::
- :linenos:
-
+ 
   {
     "Color": dojo.Color
   }
@@ -466,8 +456,7 @@ Custom Sorting
 ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
 
 .. js ::
- :linenos:
-
+ 
   var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId",
     items: [ {uniqueId: 1, status:"CLOSED"},
       {uniqueId: 2,  status:"OPEN"},
@@ -521,8 +510,7 @@ Query Syntax
 The fetch method query syntax for ItemFileReadStore is simple and straightforward. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
 .. js ::
- :linenos:
-
+ 
   { foo:"bar", bit:"bite"}
 
 Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done?   Yes. ItemFileReadStore supports wildcard matching. Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
@@ -530,8 +518,7 @@ Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done? 
 **NOTE:**  As of The dojo Toolkit 1.4, a RegularExpression object can also be passed as a query on an attribute.  This is not dojo.data.api specified, but a feature specific to ItemFileReadStore.   Do not expect other stores to implement it.  Some may, some may not.  Always refer to their documentation on their query syntax.
 
 .. js ::
- :linenos:
-
+ 
   { foo:new RegExp("/^bar$/"), bit:/^bite$/}
 
 ==============
@@ -544,8 +531,7 @@ Match items with multi-character wildcard
 *Matching attribute foo that has a value starting with bar*
 
 .. js ::
- :linenos:
-
+ 
   { foo:"bar*"}
 
 
@@ -556,8 +542,7 @@ Match items with single character wildcard
 
 
 .. js ::
- :linenos:
-
+ 
   { foo:"?ar"}
 
 
@@ -568,8 +553,7 @@ Match items on multiple attributes
 
 
 .. js ::
- :linenos:
-
+ 
   { foo:"?ar", bar:"bob", bit:"*it*"}
 
 
@@ -602,8 +586,7 @@ How many items are in my store?
 There is no simple method call to return the number of items, and without digging into private variables (which one should never do) you have to do something like the following:
 
 .. js ::
- :linenos:
-
+ 
   store.fetch({ onBegin: function(total){ console.log("There are ", total, " items in this store."); } });
 
 Connecting ItemFileReadStore to ComboBox

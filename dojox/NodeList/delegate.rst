@@ -21,8 +21,7 @@ This allows an app to setup a single event handler on a high level node, rather 
 event handlers on subnodes. For example, to monitor clicks on any <a> in your navigation section:
 
 .. js ::
-  :linenos:
-
+  
   dojo.query("#navbar").delegate("a", "onclick", function(evt){ ... } )
 
 Since setting up many event handlers is expensive, using delegate() can increase performance.

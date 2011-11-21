@@ -17,8 +17,7 @@ Introduction
 This function creates a JavaScript object from a passed JSON string, such as one created by :ref:`dojo.toJson <dojo/toJson>` or the response data from an :ref:`Ajax <quickstart/ajax>` call with ``handleAs:"json"`` enabled.
 
 .. js ::
-  :linenos:
-
+  
   //Dojo 1.7 (AMD)
   require(['dojo/_base/xhr'],function(xhr){
     xhr.get({
@@ -47,8 +46,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
-  :linenos:
-  
+    
   require(['dojo/_base/json'],function(dojo){
     //require on dojo/_base/json will return the actual object of dojo
     var json = '{"a":"one","b":3,"c":true}';
@@ -62,8 +60,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
-  :linenos:
-
+  
   var json = '{"a":"one","b":3,"c":true}';
   var obj = dojo.fromJson(json);
   console.log(obj.a, obj.b, obj.c);

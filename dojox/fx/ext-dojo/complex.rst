@@ -20,15 +20,13 @@ The standard animation doesn't know what to do with something like rect(...). Th
 Frankly, the clip style is not very useful nor exciting. But the dojox.fx.ext-dojo.complex class will animate any property contained within parenthesis. So it can also be used with (and is actually intended for) CSS3 properties, such as transform:
 
 .. css ::
- :linenos:
- 
+  
  transform: rotate(10deg) translateX(0px)
  
 or even gradients (it would only affect the properties within the color-stops):
 
 .. css ::
- :linenos:
- 
+  
  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #ff0000),color-stop(1.0, #0000FF));
 
 To use, simply require dojox.fx.ext-dojo.complex and complex properties will be handled in all dojo.Animations.
@@ -39,8 +37,7 @@ Example
 CSS:
 
 .. css ::
- :linenos:
- 
+  
  #cnt{
     width:300px;
     height:300px;
@@ -65,8 +62,7 @@ CSS:
 HTML:
 
 .. html ::
- :linenos:
- 
+  
  <div id="cnt">
     <div id="words">
         <p>Dojo</p>
@@ -76,8 +72,7 @@ HTML:
 JavaScript:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.fx.ext-dojo.complex");
             
  dojo.addOnLoad(function(){

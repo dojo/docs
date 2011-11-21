@@ -34,8 +34,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 1. Used with dojo/on
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojo/on", "dojo/touch"], function(on, touch){
         on(node, touch.press, function(e){});
@@ -49,8 +48,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 2. Used with dojo/touch directly
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       define(["dojo/touch"], function(touch){
         touch.press(node, function(e){});
@@ -63,8 +61,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
         dojo.connect(node, dojo.touch.press, function(e){});
         dojo.connect(node, dojo.touch.move, function(e){});

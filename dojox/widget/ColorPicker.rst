@@ -26,15 +26,13 @@ Usage
 To use the ColorPicker you need to first load the CSS:
 
 .. html ::
-  :linenos:
-  
+    
     <link rel="stylesheet" href="dojox/widget/ColorPicker/ColorPicker.css" />
 
 And Require the module:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.widget.ColorPicker");
 
 

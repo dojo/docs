@@ -27,8 +27,7 @@ Usage
 dojo.exists accepts a string as its first parameter, and the root object as its second parameter, and returns true/false.
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
    require(["dojo/_base/lang"], function(lang){
      if( lang.exists("myns.widget.Foo") ){
@@ -45,8 +44,7 @@ dojo.exists accepts a string as its first parameter, and the root object as its 
 The second ``root`` parameter is optional, ``dojo.exists`` will use the value of ``dojo.global`` by default (which is usually the current ``window``). You can use it to root the path in a different window object, or a particular namespace:
 
 .. js ::
- :linenos:
-
+ 
  // Dojo 1.7+ (AMD)
  require(["dojo/_base/lang", "dijit/dijit"], function(lang, dijit){
    var widgetType = "form.Button";

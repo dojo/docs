@@ -28,8 +28,7 @@ Example 1 - Chart only
 This example uses the following sample data, used to define the chart title, footer, range names and data values.
  
 .. js ::
- :linenos:
-    
+     
  var jsondata0 = {
 	"title"  : "Softdrink Sales (2007)",
 	"footer" : "North America only",
@@ -49,8 +48,7 @@ This example uses the following sample data, used to define the chart title, foo
 'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
 .. js ::
- :linenos:
-
+ 
  var makeseries = function(data) {
 	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
        		{ datapoints: "series[0].values", namefield: "series[0].legend" },
@@ -65,8 +63,7 @@ Finally, create a DataPresentation object using the above data and series object
 The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.widget.DataPresentation");
  dojo.require("dojox.charting.themes.Distinctive");
 
@@ -87,8 +84,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
  
 
 .. html ::
- :linenos:
- 
+  
  <div id="legenddiv"></div>
  <div id="chartdiv" style="width: 650px; height: 300px;"></div>
 
@@ -169,8 +165,7 @@ Example 2 - Chart and DataGrid
  To add a DataGrid to the above chart simply add the 'gridNode' property and target it at the relevant HTML element.
 
 .. js ::
- :linenos:
-
+ 
  dojo.require("dojox.widget.DataPresentation");
  dojo.require("dojox.charting.themes.Distinctive");
  
@@ -190,8 +185,7 @@ Example 2 - Chart and DataGrid
 	});
 
 .. html ::
- :linenos:
- 
+  
 
  <div id="legenddiv"></div>
  <div id="chartdiv" style="width: 650px; height: 300px;"></div>
@@ -292,8 +286,7 @@ Example 3.
 To see how the widget can cope with different data shapes, switch from jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete 'series' of values, gathered into an array with series titles. jsondata1 is structures as 'data points', each containing multiple sales values.
 
 .. js ::
- :linenos:
-
+ 
  var jsondata1 = {
   "title"  : "Softdrink Sales (2007)",
   "footer" : "North America only",
@@ -316,8 +309,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
 'Series' function. This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
 .. js ::
- :linenos:
-
+ 
  var makeseries = function(data) {
   return [
    { datapoints: "sales", field: "month", name: "Month", type: "range", chart: false },
@@ -329,8 +321,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
  }
 
 .. js ::
- :linenos:
-
+ 
  dojo.require("dojox.widget.DataPresentation");
  dojo.require("dojox.charting.themes.Distinctive");
  
@@ -354,8 +345,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
  });
 
 .. html ::
- :linenos:
- 
+  
  <h1>Example 3.</h1>
 
  <div style="width:600px; text-align: center;">

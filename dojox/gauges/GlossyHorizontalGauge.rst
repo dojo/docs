@@ -79,16 +79,14 @@ Slider style gauge (programmatic)
 The HTML <div> element to display the gauge widget:
 
 .. html ::
-  :linenos:
-  
+    
     <div id="HorizontalGauge" ></div>
 
 
 The Javascript code creating the gauge:
 
 .. js ::
-  :linenos:
-  
+    
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyHorizontalGauge');

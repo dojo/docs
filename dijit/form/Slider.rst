@@ -23,8 +23,7 @@ Usage
 
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
   dojo.require("dijit.form.Slider");
   var slider = new dijit.form.HorizontalSlider({

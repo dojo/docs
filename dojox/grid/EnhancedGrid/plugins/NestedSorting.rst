@@ -98,8 +98,7 @@ Using the nested sorting feature is pretty simple as shown below:
 * Declare nested sorting feature plugin
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
@@ -111,16 +110,14 @@ Using the nested sorting feature is pretty simple as shown below:
 with HTML markup
     
 .. html ::
-  :linenos:
-
+  
   <div id="grid" store="store1" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{nestedSorting: true}" >
   </div>
 
 with JavaScript way
     
 .. js ::
-  :linenos:
-
+  
   <script>
       var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
   </script>
@@ -128,8 +125,7 @@ with JavaScript way
 * Set default sorting order with sortFields
    
 .. html ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
       //default sorting order
@@ -141,16 +137,14 @@ with JavaScript way
 * Set new sorting order dynamically
    
 .. html ::
-  :linenos:
-
+  
   var newSortFields = [{attribute: 'col3', descending: true},{attribute: 'col1', descending: false}];
   grid.setSortIndex(newSortFields);
 
 * Prevent column(s) from being sorted by canSort()
    
 .. html ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
       //prevent some columns from being sorted

@@ -23,14 +23,12 @@ In its most basic, default form, DataChart requires no parameters, besides the n
 A basic example follows:
 
 .. html ::
- :linenos:
- 
+  
  <div id="chartNode" style="width: 600px; height: 400px;"></div>
  
  
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.charting.DataChart");
  dojo.require("dojo.data.ItemFileWriteStore");
  
@@ -45,8 +43,7 @@ Different Chart Types
 Different chart styles is a simple matter of passing a type:
 
 .. js ::
- :linenos:
-
+ 
  dojo.addOnLoad(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         type: dojox.charting.plot2d.Columns, // <-- chart type
@@ -63,8 +60,7 @@ DataChart Mapping
 This is a (trimmed down) version of the JSON file used, as it is important to the next concepts:
  
 .. js ::
- :linenos:
- 
+  
  { "identifier": "symbol", "idAttribute":"symbol", "label": "symbol","items": [
     { "symbol":"ANDT", "historicPrice":[0.01,3.52,3.66,3.11,3.90,3.11,3.11], "price":3.52},
     { "symbol":"ATEU", "historicPrice":[6.72,6.76,6.61,6.41,6.31,6.99,7.20], "price":6.76},
@@ -80,8 +76,7 @@ The property used for the first chart example is historicPrice and is an array. 
 However, the need of the chart may not be a series of individual item properties, it may be single item properties compared to the others. To compare the price of each item on a line chart using the comparative property:
  
 .. js ::
- :linenos:
- 
+  
  dojo.addOnLoad(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         comparative:true
@@ -109,14 +104,12 @@ DojoX Charting comes with dojox.charting.widget.Legend to make it easy to add le
  
 
 .. html ::
- :linenos:
- 
+  
  <div id="chartDiv" style="width: 400px; height: 250px;"></div>
  <div id="legend"></div>
 
 .. js ::
- :linenos:
- 
+  
  dojo.addOnLoad(function(){
     chart = new dojox.charting.DataChart("chartDiv", {});
     chart.setStore(store, {symbol:"*"}, "historicPrice");
@@ -135,8 +128,7 @@ DataChart has a convenient method for applying the store item labels. The chart.
 *labelFunc* is actually a method that to tap into to write custom labels. DataChart also accepts a specific string which tells it to use its seriesLabels method. Simply put, it connects the item labels to the chart labels.
 
 .. js ::
- :linenos:
-
+ 
  dojo.addOnLoad(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         comparative:true,

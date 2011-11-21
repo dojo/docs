@@ -17,8 +17,7 @@ Dijit Basics
 You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way.
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dijit.Dialog");
   dojo.addOnLoad(function(){
     // create a "hidden" Dialog:
@@ -32,8 +31,7 @@ You can use Dijit in one of two ways: **declaratively** by using special attribu
 is identical to:
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
      dojo.require("dijit.Dialog");
   </script>
@@ -44,8 +42,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
 **note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit.registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. html ::
-  :linenos:
-
+  
   <script type="text/javascript">
      dojo.addOnLoad(function(){
          // dojo.byId("foobar") would only be a normal domNode.
@@ -61,8 +58,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
 If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other :ref:`DOM manipulation <quickstart/dom>`:
 
 .. js ::
-  :linenos:
-
+  
   var thinger = dijit.byId("foobar");
   dojo.place(thinger.domNode, dojo.body(), "last");
   // functionally equivalent to:
@@ -71,8 +67,7 @@ If you need a reference to a the actual Node used to display the widget, Dijit s
 When creating widgets programmatically, pass an id:"" parameter:
 
 .. js ::
-  :linenos:
-
+  
   var dialog = new dijit.Dialog({
      id:"myDialog",
      title:"Programmatic"
@@ -84,16 +79,14 @@ When creating widgets programmatically, pass an id:"" parameter:
 Otherwise, a unique ID will be generated for you:
 
 .. js ::
-  :linenos:
-
+  
   var dialog = new dijit.Dialog({ title:"No ID" })
   console.log(dialog.get("id"));
   
 All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference".
 
 .. js ::
-  :linenos:
-
+  
   var node = dojo.byId("makeADialog");
   var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
   dialog.show();
@@ -101,8 +94,7 @@ All Dijits follow the same programmatic convention. Create a new instance with t
 This will cause the creator to use the node with id="makeADialog", and turn it into a :ref:`Dialog <dijit/Dialog>`. You can pass a node reference directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
 
 .. js ::
-  :linenos:
-
+  
   var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
   dialog.show();
 
@@ -124,8 +116,7 @@ This basically mirrors how vanilla HTML DOM nodes work, although the syntax is a
 Specifically, to get/set attributes after initialization, you need to use the ``get()`` and ``set()`` methods:
 
 .. js ::
- :linenos:
-
+ 
   // set title
   myTitlePane.set('title', 'hello world');
 
@@ -138,8 +129,7 @@ Specifically, to get/set attributes after initialization, you need to use the ``
 Set() also supports a hash API like :ref:`dojo.attr() <dojo/attr>`, for setting multiple attributes:
 
 .. js ::
- :linenos:
-
+ 
   myInput.set({ tabIndex: 3, disabled: true, value: 'hi'});
 
 watch()
@@ -147,8 +137,7 @@ watch()
 Attributes can also be monitored for changes.   For example:
 
 .. js ::
- :linenos:
-
+ 
    myTitlePane.watch("open", function(attr, oldVal, newVal){
       console.log("pane is now " + (newVal ? "opened" : "closed"));
    });
@@ -162,8 +151,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
 * .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programmatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
 
 .. js ::
- :linenos:
-
+ 
   // hide a widget with id="myThiner"
   dojo.style(dijit.byId("myThinger").domNode, "display", "none");
 
@@ -172,8 +160,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
 * declaredClass - this is actually a relic of :ref:`dojo.declare <dojo/declare>`, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
 
 .. js ::
- :linenos:
-
+ 
   var dialog = new dijit.Dialog({ title:"foo" }, "bar");
   dialog.declaredClass == "dijit.Dialog" // true
 
@@ -184,8 +171,7 @@ Events
 The other interface for dealing with widgets is to setup event handlers.   For example:
 
 .. js ::
- :linenos:
-
+ 
   new dijit.form.Button({
        label: 'Click me!',
        onClick: function(evt){ console.log("clicked!"); }
@@ -194,8 +180,7 @@ The other interface for dealing with widgets is to setup event handlers.   For e
 Event handlers can be setup programmatically (as above), or declaratively, like:
 
 .. html ::
- :linenos:
-
+ 
   <div data-dojo-type="dijit.form.Button">
      <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
            console.log("clicked, event object is ", evt);
@@ -229,22 +214,19 @@ The simplest way to access a widget is :ref:`dijit.byId <dijit/byId>`. When the 
 With the following markup:
 
 .. html ::
-  :linenos:
- 
+   
   <div id="myDialog" data-dojo-type="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
 
 The Dialog instance would be available through the byId call to `myDialog`:
 
 .. js ::
-  :linenos:
-
+  
   dijit.byId("myDialog").show(); // show my dialog instance
 
 If the ID is unknown for some reason, the function :ref:`dijit.getEnclosingWidget <dijit/getEnclosingWidget>` can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
 
 .. js ::
-  :linenos:
-
+  
   var node = dojo.query("p.innerContent")[0]; // a domNode found by query
   var w = dijit.getEnclosingWidget(node); // find the widget this node is in
   w.show();
@@ -252,8 +234,7 @@ If the ID is unknown for some reason, the function :ref:`dijit.getEnclosingWidge
 The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``.domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
 
 .. js ::
-  :linenos:
-
+  
   var w = dijit.byId("myDialog");
   var node = w.domNode; // this is a bad example, but illustrates the relationship
   var widget = dijit.byNode(node); // now, w == widget
@@ -262,8 +243,7 @@ The last, most common method, is a lot like ``getEnclosingWidget``, though it on
 Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit/byNode>`, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
 
 .. js ::
-  :linenos:
-
+  
   dojo.connect(someNode, "onclick", function(e){
       var w = dijit.byNode(e.target);
       if(w){ w.show(); }
@@ -278,8 +258,7 @@ Behavioral widgets
 In general, widgets create their own DOM structure.  For example,
 
 .. js ::
- :linenos:
-
+ 
   var b = new dijit.form.Button({label: "press me"})
 
 will create a new widget, where b.domNode can be inserted into the document at the appropriate point.
@@ -287,8 +266,7 @@ will create a new widget, where b.domNode can be inserted into the document at t
 When instantiated declaratively,
 
 .. html ::
- :linenos:
-
+ 
    <button data-dojo-type="dijit.form.Button">press me</button>
 
 Note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
@@ -299,15 +277,13 @@ However, there's another type of widget called a "behavioral widget" that merely
 When using behavioral widgets, you need to specify a source DOM node for them to operate on.  For example:
 
 .. js ::
- :linenos:
-
+ 
    new dojox.widget.FishEyeLite({...}, "mySourceDom");
 
 This comes naturally if you are instantiating from markup.  For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
 
 .. html ::
- :linenos:
-
+ 
    <a href="..." data-dojo-type="dojoc.widget.ConfirmAnchor">
 
 Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit.

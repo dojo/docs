@@ -34,8 +34,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <style type="text/css">
    @import "dojox/widget/Calendar/Calendar.css";
  </style>

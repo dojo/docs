@@ -63,8 +63,7 @@ While only the ``popup`` property is required, most pop-ups will normally need t
 Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens and closes pop-ups:
 
 .. js ::
- :linenos:
-
+ 
     var self = this;
 
     // wrap the pop-up widget and position it offscreen so

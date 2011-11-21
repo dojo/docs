@@ -28,8 +28,7 @@ Simple Topics
 Listen to a channel named "foobar" for data:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("foobar", function(message){
@@ -44,8 +43,7 @@ Listen to a channel named "foobar" for data:
 To publish information to that channel:
 
 .. js ::
- :linenos:
-  
+   
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.publish("foobar", [{
@@ -65,8 +63,7 @@ Removing a Subscription
 Subscribe returns a handle to later be used for disconnecting a subscription, much like the relationship between :ref:`dojo.connect <dojo/connect>` and :ref:`dojo.disconnect <dojo/disconnect>`. Simply pass the handle as the only argument to :ref:`dojo.unsubscribe <dojo/unsubscribe>` to no longer receive updates:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     var handle = connect.subscribe("/foo/bar", function(message){
@@ -93,8 +90,7 @@ Additionally, the :ref:`Cometd <dojox/cometd>` client implements a variation of 
 Several :ref:`Dijit widgets <dijit/index>` use publish to alert the user (and other internal parts of their operation) about state changes. For instance, any time a new Tab is added to a :ref:`TabContainer <dijit/layout/TabContainer>`, a message is sent out on a channel based on the id of the Tabs:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     var id = "myTabs";

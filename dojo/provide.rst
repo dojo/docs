@@ -31,8 +31,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    define(['dojo/_base/kernel', 'dojo/io/script', 'dojo/_base/loader'], function(dojo, ioScript){
      dojo.provide("my.module");
@@ -47,8 +46,7 @@ Dojo < 1.7
 ----------
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.provide("my.module");
 

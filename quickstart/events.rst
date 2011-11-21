@@ -152,8 +152,7 @@ Using dojo.connect on Dom Events is only the beginning or the power contained wi
 All of these events are also mapped into :ref:`dojo.NodeList <dojo/NodeList>` as direct methods. To register an onclick event for many nodes at once:
 
 .. js ::
-  :linenos:
-
+  
   dojo.query(".foo").onclick(function(e){ /* handle the event */ }).onmouseenter(function(e){ /* handle event */ });
 
 *A note about the event names:* Event names now are lower case, except in special cases (e.g., some Mozilla DOM events). Dojo will add "on" to your event name if you leave it off (e.g., 'click' and 'onclick' are the same thing to dojo). This differs from **Widget Events** in the sense Dijit uses mixedCase event names, to avoid potential conflicts.

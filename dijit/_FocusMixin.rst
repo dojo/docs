@@ -28,8 +28,7 @@ Usage
 Mixin dijit._FocusMixin when you declare your widget, and then reference _onFocus() and _onBlur():
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin, dijit._FocusMixin], {
       templateString: "<div><input data-dojo-type="dijit.form.TextBox"><input><input></div>",

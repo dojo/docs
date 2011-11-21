@@ -26,8 +26,7 @@ Defining Namespaces
 The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namespace to path mapping:
 
 .. js ::
-	:linenos:
-
+	
 	location = ../mycompany
 
 The path is relative to the directory docscripts directory (the directory generate.php is located in). You may also use an fully qualified, absolute path to your namespace's directory.

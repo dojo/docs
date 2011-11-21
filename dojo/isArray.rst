@@ -29,8 +29,7 @@ Usage
 isArray returns a Boolean you can use directly in conditionals:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     if(lang.isArray(someVariable)) {
@@ -48,8 +47,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 [ Dojo 1.7+ (AMD) ]
 
 .. js ::
-  :linenos:
-
+  
   require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array) {
     if(lang.isArray(list)) {
       array.forEach(list, function(item, i) {
@@ -64,8 +62,7 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 [ Dojo < 1.7 ]
 
 .. js ::
-  :linenos:
-
+  
   if(dojo.isArray(list)) {
     dojo.forEach(list, function(item, i) {
         // each item in list

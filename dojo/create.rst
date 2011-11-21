@@ -115,8 +115,7 @@ Examples
 Create a <div>:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct"], function(domConstruct){
     var n = domConstruct.create("div");
@@ -128,8 +127,7 @@ Create a <div>:
 Create a <div> with content:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct"], function(domConstruct){
     var n = domConstruct.create("div", { innerHTML: "<p>hi</p>" });
@@ -141,8 +139,7 @@ Create a <div> with content:
 Append a new <div> to <body> with no attributes:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct", "dojo/_base/window"], function(domConstruct, win){
     var n = domConstruct.create("div", null, win.body());
@@ -154,8 +151,7 @@ Append a new <div> to <body> with no attributes:
 Place a new <div> as the first child of <body> with no attributes:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct", "dojo/_base/window"], function(domConstruct, win){
     var n = domConstruct.create("div", null, win.body(), "first");
@@ -167,8 +163,7 @@ Place a new <div> as the first child of <body> with no attributes:
 Decorate and place an existing node:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct", "dojo/_base/window"], function(domConstruct, win){
     domConstruct.create(node, { style: { color: "red" } }, win.body());
@@ -180,8 +175,7 @@ Decorate and place an existing node:
 Create an <ul>, and populate it with <li>'s. Place the list as the first child of a node whose id equals "someId":
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct", "dojo/_base/array"], function(domConstruct, arrayUtil){
     var ul = domConstruct.create("ul", null, "someId", "first");
@@ -201,8 +195,7 @@ Create an <ul>, and populate it with <li>'s. Place the list as the first child o
 Create an anchor, with an href. Place in <body>:
 
 .. js ::
-  :linenos:
-
+  
   // dojo 1.7+ (AMD)
   require(["dojo/dom-construct", "dojo/_base/window"], function(domConstruct, win){
     domConstruct.create("a", { href: "foo.html", title: "Goto FOO!", innerHTML: "link" }, win.body());
@@ -221,8 +214,7 @@ Creating and/or placing with dojo.place()
 In some cases it is easier to create a node from an HTML fragment and place it, without applying any attributes, or specifying them as a part of the HTML fragment. If this is the case consider :ref:`dojo.place <dojo/place>`:
 
 .. js ::
-  :linenos:
-
+  
   // duplicating the following line with dojo.place():
   // dojo.create("a", { href: "foo.html", title: "Goto FOO!", innerHTML: "link" }, dojo.body());
   
@@ -235,8 +227,7 @@ In some cases it is easier to create a node from an HTML fragment and place it, 
   dojo.place("<a href='foo.html' title='Goto FOO!'>link</a>", dojo.body());
 
 .. js ::
-  :linenos:
-
+  
   // duplicating the following line with dojo.place():
   // var n = dojo.create("div", null, dojo.body());
   
@@ -254,8 +245,7 @@ Setting attributes with dojo.attr()
 While you can use dojo.create to set attributes on the existing node without placing it, using :ref:`dojo.attr <dojo/attr>` is recommended:
 
 .. js ::
-  :linenos:
-
+  
   // duplicating the following line with dojo.attr():
   // var n = dojo.create(node, { innerHTML: "<p>hi</p>" });
   

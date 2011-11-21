@@ -269,8 +269,7 @@ Prerequisites
 This DnD plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
 .. js ::
-  :linenos:
-
+  
   dojo.require("dojox.grid.EnhancedGrid");
   dojo.require("dojox.grid.enhanced.plugins.DnD");
 
@@ -284,8 +283,7 @@ The declaration name of this plugin is ``dnd`` . It is declared in the ``plugins
 If your grid is created declaratively:
 
 .. js ::
-  :linenos:
-
+  
   <div id="grid" dojoType="dojox.grid.EnhancedGrid"
     store="mystore" structure="mystructure"
     plugins="{
@@ -295,8 +293,7 @@ If your grid is created declaratively:
 If your grid is created in JavaScript:
 
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({
     id:"grid",
     store:"mystore",
@@ -326,8 +323,7 @@ dndConfig          Object    {}               Enable/disable dnd for every dragg
 Here is an example on how to set dndConfig:
 
 .. js ::
-  :linenos:
-  
+    
   GridDnD: {
     dndConfig: {
       //Configure in a hierarchical manner.
@@ -464,8 +460,7 @@ The following example shows how to use these events to drag a grid row to a form
 The HTML is:
 
 .. html ::
-  :linenos:
-  
+    
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
     plugins="{
       dnd: {copyOnly: true}
@@ -491,8 +486,7 @@ The HTML is:
 The JavaScript code is:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
 	dojo.require("dojox.grid.enhanced.plugins.GridSource");
 	

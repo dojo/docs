@@ -95,8 +95,7 @@ Custom Mover Example
 Here is an example of a custom mover allowing to move an object with 5 pixels steps when Control key is pressed while dragging:
 
 .. js ::
- :linenos:
-
+ 
   dojo.declare("dojo.dnd.StepMover", dojo.dnd.Mover, {
     onMouseMove: function(e) {
       dojo.dnd.autoScroll(e);
@@ -114,8 +113,7 @@ Here is an example of a custom mover allowing to move an object with 5 pixels st
 Create your ''Moveable'' as:
 
 .. js ::
- :linenos:
-
+ 
   new dojo.dnd.Moveable(node, {
     mover: dojo.dnd.StepMover
   });

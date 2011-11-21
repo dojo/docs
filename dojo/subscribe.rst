@@ -25,8 +25,7 @@ Usage
 To subscribe a function to a channel:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("/foo/bar/baz", function(data){
@@ -41,8 +40,7 @@ To subscribe a function to a channel:
 To trigger that function, publish some data on the same channel:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.publish("/foo/bar/baz", [{ some:"object data" }]);
@@ -53,8 +51,7 @@ To trigger that function, publish some data on the same channel:
 The channel name can be any string you choose:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("foo-bar", function(data){ /* handle */ });
@@ -74,8 +71,7 @@ Globbing
 Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on wildcards. This example is ``invalid``:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("/foo/*", function(data){ /* handle */ });
@@ -93,8 +89,7 @@ Subscribe uses :ref:`dojo.hitch <dojo/hitch>` under the covers to provide more a
 Consider the following object:
 
 .. js ::
- :linenos:
- 
+  
   var obj = {
      member:"unpublished",
      anon: function(data){
@@ -105,8 +100,7 @@ Consider the following object:
 To execute an anonymous function in the scope of `obj`:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("/foo/bar", obj, function(data){
@@ -123,8 +117,7 @@ To execute an anonymous function in the scope of `obj`:
 Alternately, you can pass a named function instead of an anonymous function with scope:
 
 .. js ::
- :linenos:
-
+ 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     connect.subscribe("/foo/bar", obj, "anon");

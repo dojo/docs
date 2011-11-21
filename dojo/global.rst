@@ -26,8 +26,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    // connect a global "onclick" handler
    dojo.connect(dojo.global, "onclick", function(e){

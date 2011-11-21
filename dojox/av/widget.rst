@@ -26,8 +26,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojo.parser");
    dojo.require("dojox.av.FLVideo");

@@ -24,8 +24,7 @@ Usage
 =====
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dijit.Tooltip");
    new dijit.Tooltip({

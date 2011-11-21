@@ -23,8 +23,7 @@ Use this to test if a variable is like an Array.
 Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     lang.isArrayLike(foo)
@@ -35,8 +34,7 @@ Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 Returns true if it is like an Array.
 
 .. js ::
-  :linenos:
-
+  
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/lang"], function(lang) {
     // Check, if variable "foo" is like an array:

@@ -237,8 +237,7 @@ Usage
 * Declare menu feature plugin
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.Menu");
@@ -250,8 +249,7 @@ Usage
 with HTML markup
     
 .. js ::
-  :linenos:
-
+  
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
       data-dojo-props="plugins:{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}" ... >
       <div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
@@ -271,8 +269,7 @@ with HTML markup
 with JavaScript (using a markup menu)
     
 .. js ::
-  :linenos:
-
+  
   var grid = new dojox.grid.EnhancedGrid({id: "grid",
       plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
       dojo.byId('gridDiv'));
@@ -291,8 +288,7 @@ There will be four events fired corresponding to the appropriate menu types:
 The Event parameter contains rowIndex and cellIndex, so following is a quick sample shows how to get row/column index when the menu popped up:
 
 .. js ::
-  :linenos:
-
+  
   <script type="text/javascript">
       dojo.connect(grid, 'onRowContextMenu', function(e){
           var rowIndex = e.rowIndex;
@@ -308,16 +304,14 @@ Tips
 1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by:
 
 .. js ::
-  :linenos:
-
+  
   grid.selection.getSelected()
 
 
 2. When :ref:`Selector <Selector>` plugin if turned on, we can get the selected rows/column/cell with the following way:
 
 .. js ::
-  :linenos:
-
+  
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
 More details please refer to :ref:`Selector <Selector>` plugin

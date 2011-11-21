@@ -23,8 +23,7 @@ Overview
 The function takes up to three arguments:
 
 .. js ::
-  :linenos:
-
+  
     // Dojo 1.7+ (AMD)
     require(["dojo/dom-construct"], function(domConstruct){
       domConstruct.place(node, refNode, pos);
@@ -308,8 +307,7 @@ Notes
 This placement method is useful when you know how many children the reference node has, and what they are. **Do not forget that text nodes (even empty ones) are counted as children too:**
 
 .. html ::
-  :linenos:
-
+  
   <p>
     <span>1</span>
   </p>
@@ -317,8 +315,7 @@ This placement method is useful when you know how many children the reference no
 In the fragment above the <p> node will have 3 children: a text node (spaces and a newline), the <span> node, and another text node (spaces and a newline). **Be careful when using markup like that!** For example the next fragment will have just one <span> node as a child:
 
 .. html ::
-  :linenos:
-
+  
   <p><span>1</span></p>
 
 Or you can construct DOM programmatically.
@@ -333,8 +330,7 @@ Place using dojo.create()
 An alternative way to place (and create) a node is :ref:`dojo.create <dojo/create>`. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally :ref:`dojo.attr <dojo/attr>` and :ref:`dojo.place <dojo/place>` to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of :ref:`dojo.create <dojo/create>` is that by using :ref:`dojo.attr <dojo/attr>` all attributes will be applied in a browser-independent way avoiding possible differences.
 
 .. js ::
-  :linenos:
-
+  
   // the third and fourth options are passed to dojo.place()
   // create a div, and place(n, dojo.body(), "first");
   

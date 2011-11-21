@@ -40,8 +40,7 @@ dojo.i18n.getLocalization
 Use :ref:`dojo.i18n.getLocalization() <dojo/i18n/getLocalization>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
 
 .. js ::
- :linenos:
-
+ 
  <script type="text/javascript">
    //TODO: replace this example with the strings from dojo.color when translations are available
    dojo.require("dojo.i18n");

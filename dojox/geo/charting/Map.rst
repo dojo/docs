@@ -19,8 +19,7 @@ Overview
 A dojo widget to render map information "shapefile" data.
 
 .. js ::
- :linenos:
-    
+     
  dojo.require("dojox.geo.charting.Map");
 
  dojo.addOnLoad(function(){
@@ -30,8 +29,7 @@ A dojo widget to render map information "shapefile" data.
  
 
 .. html ::
- :linenos:
- 
+  
  <h1>Simple Maps,support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 

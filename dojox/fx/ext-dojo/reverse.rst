@@ -30,8 +30,7 @@ Example
 CSS:
 
 .. css ::
- :linenos:
- 
+  
  .lft{
     width:300px;
     height:300px;
@@ -52,8 +51,7 @@ CSS:
 HTML:
 
 .. html ::
- :linenos:
- 
+  
  <button id="btn">Reverse</button>
  <div class="lft">
      <div id="ball"></div>
@@ -62,8 +60,7 @@ HTML:
 JavaScript:
 
 .. js ::
- :linenos:
- 
+  
  dojo.require("dojox.fx.ext-dojo.reverse");
  dojo.addOnLoad(function(){
     var ani = dojo.animateProperty({
