@@ -11,7 +11,6 @@ dijit.Dialog
 .. contents::
     :depth: 2
 
-
 ============
 Introduction
 ============
@@ -25,15 +24,13 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
-   dojo.require("dijit.Dialog");
-   // create the dialog:
-   myDialog = new dijit.Dialog({
-       title: "My Dialog",
-       content: "test content",
-       style: "width: 300px"
-   });
- </script>
+    dojo.require("dijit.Dialog");
+    // create the dialog:
+    myDialog = new dijit.Dialog({
+        title: "My Dialog",
+        content: "test content",
+        style: "width: 300px"
+    });
 
 After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`) to your <body> tag, in order to show the Dialog with the right styles:
 

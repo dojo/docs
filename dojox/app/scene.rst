@@ -78,4 +78,4 @@ Sample application configuration
 
 Sample rendering result
 
-.. image :: /pic1.png
+.. image :: ./pic1.png

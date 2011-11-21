@@ -34,4 +34,4 @@ dojox.app.view sample template - views/simple/home.html
 
 Sample render result
 
-.. image :: /pic.png
+.. image :: ./pic.png

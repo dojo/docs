@@ -104,7 +104,7 @@ Sample view template for data binding - simple.html
 
 Sample UI rendering result with data bound
 
-.. image :: /pic1.png
+.. image :: ./pic1.png
 
 Sample Summary
 
