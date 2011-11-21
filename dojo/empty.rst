@@ -75,9 +75,10 @@ Empty a single node
 
 .. code-example::
 
+   Empty a DomNode
+   
   .. javascript::
-    :label: Empty a DomNode
-
+    
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
@@ -95,9 +96,10 @@ Empty a single node
     });
     </script>
 
+  Some DomNodes
+  
   .. html::
-    :label: Some DomNodes
-
+    
     <div id="testnode1">TestNode 1</div>
     <button id="progButtonNode" type="button"></button>
     <div id="result1"></div>
@@ -120,8 +122,9 @@ Empty all nodes in a list by reference
     #panel { clear: both }
     </style>
 
+  Empty all Nodes in a list by reference
+  
   .. javascript::
-    :label: Empty all Nodes in a list by reference
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -140,8 +143,9 @@ Empty all nodes in a list by reference
     });
     </script>
 
+  Some DomNodes
+  
   .. html::
-    :label: Some DomNodes
 
     <div class="green">greenNode</div>
     <div class="green">greenNode</div>

@@ -78,7 +78,6 @@ You can see this code in action:
 [ Dojo 1.7 AMD ]
 
 .. javascript::
-  :label: Object example
 
     <script>
       require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom) {
@@ -102,7 +101,6 @@ You can see this code in action:
 [ Dojo < 1.7 ]
 
 .. javascript::
-  :label: Object example
 
     <script>
       dojo.addOnLoad(function(){
@@ -124,7 +122,6 @@ You can see this code in action:
 Minimalistic HTML for our example.
 
 .. html::
-  :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -163,7 +160,6 @@ This code in action:
   An array can be used with dojo.replace.
 
   .. javascript::
-    :label: Object example
 
     <script>
       dojo.addOnLoad(function(){
@@ -177,7 +173,6 @@ This code in action:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -272,7 +267,6 @@ This code in action:
   A function can be used with dojo.replace.
 
   .. javascript::
-    :label: Object example
 
     <script>
       // helper function
@@ -304,7 +298,6 @@ This code in action:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -343,7 +336,6 @@ This code in action:
   A pattern can be replaced.
 
   .. javascript::
-    :label: Object example
 
     <script>
       dojo.addOnLoad(function(){
@@ -358,7 +350,6 @@ This code in action:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -429,7 +420,6 @@ Take a look at this code in action:
   Highlighting replaced fields.
 
   .. javascript::
-    :label: Object example
 
     <script>
       function hiliteReplace(tmpl, dict){
@@ -449,7 +439,6 @@ Take a look at this code in action:
   Minimalistic CSS for our example.
 
   .. css::
-    :label: Minimal CSS.
 
     <style>
       .hilite {font-weight: bold; color: green;}
@@ -458,7 +447,6 @@ Take a look at this code in action:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -540,7 +528,6 @@ You can check the result here:
   Escaping replaced fields.
 
   .. javascript::
-    :label: Object example
 
     <script>
       function safeReplace(tmpl, dict){
@@ -575,7 +562,6 @@ You can check the result here:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output"></p>
 
@@ -695,7 +681,6 @@ You can check the result here:
   Formatting replaced fields.
 
   .. javascript::
-    :label: Object example
 
     <script>
       function format(tmpl, dict, formatters){
@@ -743,7 +728,6 @@ You can check the result here:
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output1"></p>
     <p id="output2"></p>

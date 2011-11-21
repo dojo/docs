@@ -121,7 +121,6 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
   Some very simple CSS to make things look fancy
 
   .. css::
-    :label: The CSS
 
     <style type="text/css">
       body { margin: 0; padding: 0; height: auto; }
@@ -134,14 +133,12 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
   Two nodes is all we need
 
   .. html::
-    :label: Very basic HTML
 
     <p class="fancy">Hi reader, click me</p>
 
   Very simple JavaScript using Dojos query selector
 
   .. javascript::
-    :label: dojo.query in action
 
     <script type="text/javascript">
     dojo.addOnLoad(function(){
@@ -164,7 +161,6 @@ Following code is the representation of the demo you saw above:
     Some very simple CSS to make things look fancy
 
     .. css::
-      :label: The CSS
 
       <style type="text/css">
         body { margin: 0; padding: 0; height: auto; }
@@ -177,14 +173,12 @@ Following code is the representation of the demo you saw above:
     Two nodes is all we need
 
     .. html::
-      :label: Very basic HTML
 
       <p class="fancy">Hi reader, click me</p>
 
     Very simple JavaScript using Dojos query selector
 
     .. javascript::
-      :label: dojo.query in action
 
       <script type="text/javascript">
       dojo.addOnLoad(function(){
@@ -243,8 +237,9 @@ Lets look at an example using the inline style and extra parameters in use:
   :version: 1.3-2.0
   :toolbar: none
 
+  The dojo requires
+  
   .. javascript::
-    :label: The dojo requires
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -256,7 +251,6 @@ Lets look at an example using the inline style and extra parameters in use:
   The markup has to look as follows
   
   .. html::
-    :label: The markup
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerTwo" >
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:top, splitter:false">
@@ -287,8 +281,9 @@ Lets look at an example using the inline style and extra parameters in use:
       </div>
     </div>
 
+  A few simple css rules
+  
   .. css::
-    :label: A few simple css rules
 
     <style type="text/css">
       body, html {
@@ -335,13 +330,11 @@ Codeblock header and descriptions
 ---------------------------------
 
 Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and description.
-You can add a header to a block by adding the :label: block to your code as follows:
 
 .. code-block :: html
   :linenos:
 
-  .. javascript::
-    :label: And the JavaScript code
+  .. javascript ::
 
 This will result in a header in the JavaScript codeblock.
 To add a descriptive text to a codeblock you can simply add reST markup before the block definition with the same amount of spaces indented as the block directive:
@@ -354,7 +347,6 @@ To add a descriptive text to a codeblock you can simply add reST markup before t
   * Its pretty cool
 
   .. javascript::
-    :label: And the JavaScript code
 
 Keep the header and description simple though, they should only explain shortly what is happening in the codeblock.
 
@@ -382,7 +374,6 @@ An example if this in action (simply change the version and you will see what it
   This is a demo of the dynamic variables you can use in CodeGlass
     
   .. html::
-    :label: This is the HTML of the example
 
     <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
     <p>Current Dojo theme: <strong>{{ theme }}</strong></p>
@@ -448,3 +439,6 @@ h4
 
 h5
 ~~
+
+
+FIXME: this whole doc needs an accuracy pass for rstwiki (or remove it and do a better rstwiki doc howto, whichever)

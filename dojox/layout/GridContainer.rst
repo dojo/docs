@@ -95,7 +95,6 @@ Programmatic example
   :version: local
 
   .. css::
-    :label: The CSS
 
     <link rel="stylesheet" href="../../../dojox/widget/Portlet/Portlet.css">
     <link rel="stylesheet" href="../../../dojox/layout/resources/GridContainer.css">
@@ -103,14 +102,12 @@ Programmatic example
   One node as placeholder is all we need
 
   .. html::
-    :label: Very basic HTML
 
     <div id='placeHere'>&nbsp;</div>
 
   Dynamic creation of a GridContainer, with a Portal and a DropDownButton inside.
 
   .. javascript::
-    :label: The JavaScript
 
     <script type="text/javascript">
     dojo.require("dojox.layout.GridContainer");

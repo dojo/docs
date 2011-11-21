@@ -74,8 +74,9 @@ Destroy a single node
 
 .. code-example::
 
+  Destroy a DomNode
+
   .. javascript::
-    :label: Destroy a DomNode
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -94,8 +95,9 @@ Destroy a single node
     });
     </script>
 
+  Some DomNodes to destroy
+  
   .. html::
-    :label: Some DomNodes to destroy
 
     <div id="testnode1">TestNode 1</div>
     <button id="progButtonNode" type="button"></button>
@@ -114,8 +116,9 @@ Destroy all nodes in a list by reference
     .go { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
     </style>
 
+  Destroy all Nodes in a list by reference
+  
   .. javascript::
-    :label: Destroy all Nodes in a list by reference
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -134,9 +137,10 @@ Destroy all nodes in a list by reference
     });
     </script>
 
+  Some DomNodes to destroy
+  
   .. html::
-    :label: Some DomNodes to destroy
-
+    
     <div class="stay">&nbsp;</div>
     <div class="stay">&nbsp;</div>
     <div class="go">&nbsp;</div>

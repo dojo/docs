@@ -8,10 +8,6 @@ dojox.widget.SortList
 
 TODO: description
 
-
-
-
-
 ========
 Examples
 ========
@@ -35,7 +31,6 @@ Example 1:  Raw, degradable UL list
   The markup has to look as follows
   
   .. cv:: html
-    :label: SortList From Markup
     
 	<ul data-dojo-type="dojox.widget.SortList" title="SortList From Markup" data-dojo-props="sortable:false" style="width:200px; height:200px;">
 		<li>one</li>
@@ -56,11 +51,11 @@ Example 1:  Raw, degradable UL list
 	</ul>
 
   
+  A simple set of css rules 
+  
   .. cv:: css
-    :label: A simple set of css rules
 
-    <link rel="stylesheet" type="text/css"
-          href="{{ baseUrl }}dojox/widget/SortList/SortList.css">
+    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}dojox/widget/SortList/SortList.css">
 
 
 Example 2:  SortList using a Store
@@ -70,7 +65,7 @@ Example 2:  SortList using a Store
   :height: 300
   :width: 660
 
-	SortList using a Store
+  SortList using a Store
 
   .. cv:: javascript
 
@@ -82,7 +77,6 @@ Example 2:  SortList using a Store
   The markup has to look as follows
   
   .. cv:: html
-    :label: SortList  and Store From Markup
     
     <div data-dojo-type="dojo.data.ItemFileReadStore"
          data-dojo-props="url:{{ dataUrl }}dijit/tests/_data/countries.json'"
@@ -90,8 +84,10 @@ Example 2:  SortList using a Store
     <ul data-dojo-type="dojox.widget.SortList" data-dojo-props="store:stateStore" title="sortable List" style="width:200px; height:200px;"></ul>
 
   
+  A simple set of css rules
+  
   .. cv:: css
-    :label: A simple set of css rules
+    
 
     <link rel="stylesheet" type="text/css"
           href="{{ baseUrl }}dojox/widget/SortList/SortList.css">

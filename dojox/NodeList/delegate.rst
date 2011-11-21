@@ -42,8 +42,9 @@ Example
   :type: inline
   :version: 1.6
 
+  A navigation bar
+
   .. html::
-    :label: a navigation bar
 
     <div id="navbar">
         <a href="#" id="home">home</a> &nbsp;
@@ -51,10 +52,10 @@ Example
         <a href="#" id="calendar">calendar</a> &nbsp;
     </div>
 
+  dojo.delegate in action
+  
   .. javascript::
-    :label: dojo.delegate in action
 
-    <script type="text/javascript">
     dojo.require("dojox.NodeList.delegate");
     dojo.addOnLoad(function(){
       dojo.query("#navbar").delegate("a", "onclick", function(evt){
@@ -62,7 +63,6 @@ Example
           dojo.stopEvent(evt);
       });
     });
-    </script>
 
 ========
 See Also

@@ -66,7 +66,6 @@ Examples
   Examples of dojo.trim().
 
   .. javascript::
-    :label: Object example
 
     <script>
       function show(str){
@@ -84,7 +83,6 @@ Examples
   Minimalistic HTML for our example.
 
   .. html::
-    :label: Minimal HTML.
 
     <p id="output1"></p>
     <p id="output2"></p>

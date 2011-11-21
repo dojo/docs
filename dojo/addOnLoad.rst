@@ -54,7 +54,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 .. js ::
 
-    //Dojo 1.7 (AMD)
+    //Dojo 1.7+ (AMD)
     require("dojo/ready", function(ready) {
         ready(function(){
             document.musicPrefs.other.value="Afrobeat";
