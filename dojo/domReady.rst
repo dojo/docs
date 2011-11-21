@@ -11,8 +11,7 @@ dojo/domReady! is an AMD plugin that resolves when the DOM has finished loading.
 
 Sooner or later, every Javascript programmer tries something like this:
 
-.. code-block :: html
-  :linenos:
+.. html ::
 
   <script>
     if(dayOfWeek == "Sunday"){
@@ -25,20 +24,16 @@ Sooner or later, every Javascript programmer tries something like this:
 
 It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
 
-.. code-block :: javascript
-  :linenos:
+.. js :: 
 
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
   require("dojo/domReady!", setAfrobeat);
 
-.. code-block :: javascript
-
 conveniently replaces the one above. When the function is small, you may prefer to write it inline:
 
-.. code-block :: javascript
-  :linenos:
+.. js ::
 
   require("dojo/domReady!", function() {
            document.musicPrefs.other.value="Afrobeat";
@@ -46,8 +41,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 As a more complicated example, this code will wait until the DOM has finished loading and then change all anchors to be red:
 
-.. code-block :: javascript
- :linenos:
+.. js ::
 
   require(["dojo/query", "dojo/NodeList-dom", "dojo/domReady!"],
     function(query){
