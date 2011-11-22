@@ -45,6 +45,30 @@ Parser
 =====
 Dijit
 =====
+_WidgetBase
+-----------
+- attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
+
+.. code-block:: javascript
+
+	dojo.declare("MyWidget",
+		[dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin], {
+	
+		templateString:
+			"<div>" +
+				"<button data-dojo-type='dijit.form.Button'
+					data-dojo-attach-point='buttonWidget'>hi</button>" +
+				"<input data-dojo-attach-point='focusNode'>" +
+			"</div>"
+	
+		// Mapping this.label to this.buttonWidget.label
+		label: "",
+		_setLabelAttr: "buttonWidget",
+	
+		// Mapping this.value to this.focusNode DOMNode
+		value: "",
+		_setValueAttr: "focusNode",
+	});
 
 Calendar
 --------
