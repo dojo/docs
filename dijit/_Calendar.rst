@@ -1,1 +1,0 @@
-.. _dijit/_Calendar:

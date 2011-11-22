@@ -65,7 +65,7 @@ Examples
 
 Of course, if that was all you needed to do, you'd be better of just setting innerHTML directly. The value of dojo.html.set comes when things get a little less trivial:
 
-.. codeviewer::
+.. html ::
 
     //Dojo 1.7 (AMD)
     <button id="setbtn">Click to set content</button>
@@ -99,7 +99,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
     </script>
 	
 
-.. codeviewer::
+.. html ::
 
     //Dojo < 1.7
     <button id="setbtn">Click to set content</button>

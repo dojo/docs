@@ -22,7 +22,7 @@ dojo.date.stamp methods use a profile of the ISO-8601 standard to handle dates i
 Usage
 =====
 
-.. codeviewer::
+.. html ::
   
   <style type="text/css">
     @import "dojox/widget/DocTester/DocTester.css";

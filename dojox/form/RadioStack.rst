@@ -1,1 +1,0 @@
-.. _dojox/form/RadioStack:
