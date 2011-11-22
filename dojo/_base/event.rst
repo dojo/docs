@@ -12,7 +12,7 @@ dojo/_base/event
 
 **dojo._base.event** contains functions to handle DOM events.
 
-As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 See :ref:`Dojo's Event System <quickstart/events>` for information on the event system.
 

@@ -12,7 +12,7 @@ dojo.isFunction
 
 Checks if the parameter is a Function.
 
-As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
 =====

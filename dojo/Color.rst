@@ -15,7 +15,7 @@ dojo.Color
 
 **dojo._base.Color** contains functions for setting Colors.
 
-As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 The Color object provides a unified way to store colors, which holds the color in rgba form. This simplifies dealing with the different ways to define colors as everyone can use the format they are most comfortable with. Color objects can be used directly as a value to the various color attributes.
 

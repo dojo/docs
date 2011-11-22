@@ -11,7 +11,7 @@ dojo/_base/html
     :depth: 2
 
 
-The **dojo/_base/html** module defines aliases to basic DOM & HTML handling functions for backwards-compatibility.  As with all dojo/_base components, these functions are included within Dojo Base, which you get simply by loading dojo.js or dojo.xd.js (except when loading baseless with ``async: true`` in Dojo 1.7+).
+The **dojo/_base/html** module defines aliases to basic DOM & HTML handling functions for backwards-compatibility.  As with all dojo/_base components, these functions are included within Dojo Base, which you get simply by loading ``dojo.js``  (except when loading baseless with ``async: true`` in Dojo 1.7+).
 
 As of Dojo 1.7, the recommended practice going forward (with ``async: true``) is to require just the individual dependencies you need, instead of ``dojo/_base/html``.  The new locations of its functions are indicated in the list below.
 

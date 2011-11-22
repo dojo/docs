@@ -29,7 +29,7 @@ You can define your account number as a dojoConfig parameter ``urchin``. Simply 
   <script type="text/javascript">
      var dojoConfig = { urchin: "UA-12345-67" };
   </script>
-  <script src="http://o.aolcdn.com/dojo/1.5/dojo/dojo.xd.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>
 
 or directly on the data-dojo-config attribute of your ``dojo.js`` script tag:
 

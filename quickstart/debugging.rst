@@ -21,7 +21,7 @@ To use Firebug Lite, you must include the isDebug config parameter like so:
 
 .. html ::
   
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
           data-dojo-config="parseOnLoad: true, isDebug: true"></script>
 
 This parameter has no effect on Firefox browsers with Firebug already present. So including this parameter makes your debugging code usable in IE, Safari, and Firefox with no changes.
@@ -38,25 +38,24 @@ The following code has a subtle bug:
 
 .. html ::
   
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-              "http://www.w3.org/TR/html4/strict.dtd">
+  <!DOCTYPE html>
   <html>
   <head>
   <title>Fix me!</title>
       <style type="text/css">
-  	  @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
+          @import "http://ajax.googleapis.com/ajax/libs/dojo/1.7/dijit/themes/claro/claro.css";
+          @import "http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/resources/dojo.css"
       </style>
-  	<script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
-  	        data-dojo-config="parseOnLoad: true, isDebug: true"></script>
-  	<script type="text/javascript">
-  		dojo.require("dojo.parser");
-  		dojo.require("dijit.form.Textbox");
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
+          data-dojo-config="parseOnLoad: true, isDebug: true"></script>
+      <script type="text/javascript">
+          dojo.require("dojo.parser");
+          dojo.require("dijit.form.Textbox");
       </script>
   </head>
-  <body class="tundra">
-  <form>
-  What's the 411? <input type="text" size="20" name="info" data-dojo-type="dijit.form.TextBox"
+  <body class="claro">
+    <form>
+    What's the 411? <input type="text" size="20" name="info" data-dojo-type="dijit.form.TextBox"
              data-dojo-props="trim:true, propercase:true" /><br>
   </body>
   </html>
@@ -85,16 +84,16 @@ The following code has an error:
 
 .. html ::
   
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-              "http://www.w3.org/TR/html4/strict.dtd">
+  <!DOCTYPE html>
   <html>
   <head>
   <title>Fix me!</title>
       <style type="text/css">
+          /* FIXME: adjust to goog cdn url */
           @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
           @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true"></script>
       <script type="text/javascript">
           dojo.require("dojo.parser");
@@ -102,7 +101,7 @@ The following code has an error:
           var newWidth = '200px';
       </script>
   </head>
-  <body class="tundra">
+  <body class="claro">
   <div data-dojo-type="dijit.form.Button">
      Click to break!
      <script type="dojo/event" data-dojo-event="onClick">

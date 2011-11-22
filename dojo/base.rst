@@ -10,8 +10,8 @@ dojo._base is a roll-up file, and is used to create the core dojo.js after a bui
 
 .. html ::
 
-  <!-- load dojo.js from AOL CDN -->
-  <script src="http://o.aolcdn.com/dojo/1.1/dojo/dojo.xd.js"></script>
+  <!-- load dojo.js from Google CDN -->
+  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>
 
 If you are using an un-built Dojo, the inclusion of dojo.js will trigger the inclusion of dojo._base, fetching each of the files in the dojo/_base/ folder within the source tree. This produces additional XHR activity, and should be avoided in production. After building, these files are concatenated into dojo.js, providing a 26k "Base Dojo" (~77k without gzip enabled).
 
