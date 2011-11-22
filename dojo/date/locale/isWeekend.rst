@@ -11,44 +11,7 @@ dojo.date.locale.isWeekend
 .. contents::
    :depth: 2
 
-Determines if the date falls on a weekend, according to local custom.
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. js ::
- 
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
+.. api-inline :: dojo.date.locale.isWeekend
 
 ========
 See also

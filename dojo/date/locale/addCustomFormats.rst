@@ -11,44 +11,7 @@ dojo.date.locale.addCustomFormats
 .. contents::
    :depth: 2
 
-Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. js ::
- 
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
+.. api-inline :: dojo.date.locale.addCustomFormats
 
 ========
 See also
