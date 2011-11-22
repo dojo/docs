@@ -14,6 +14,8 @@ Dojo is a collection of JavaScript utilities providing solutions for a vast arra
 
 This document broken into logically related sections and attempts to document the full breadth of Dojo: `Dojo Base`_, the foundation of the Dojo Toolkit. `Dojo Core`_ being utilities built upon `Dojo Base`_. Dijit_ provides all core UI components and utilities, and DojoX_ ... building on everything else. Finally, the Utilities_ section provides extensive information about the :ref:`Dojo Build system <build/index>`, :ref:`Dojo Module Loader <loader/index>`, and a variety of other Dojo-related utilities.
 
+Additonally, a :ref:`quick-start <quickstart/index>` guide is provided covering various topics, linking to related module documentation. 
+
 =========
 Dojo Base
 =========
