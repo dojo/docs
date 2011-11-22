@@ -13,6 +13,7 @@ dojo.date.locale.getNames
 
 Used to get localized strings from dojo.cldr for day or month names.
 
+.. api-inline :: dojo.date.locale.getNames
 
 ============
 Introduction
