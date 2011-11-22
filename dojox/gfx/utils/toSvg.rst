@@ -6,8 +6,8 @@ dojox.gfx.utils.toSvg
 :Authors: Eugene Lazukin, Jared Jurkiewicz
 :Available: since V1.0
 
-.. contents::
-  :depth: 2
+.. contents ::
+    :depth: 2
 
 The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser. This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service. For example, this can be very useful for converting a DataChart to a JPEG, PNG, or even PDF via Apache Batik.
 
@@ -21,7 +21,7 @@ This function is generally easy to use. At its most basic, you need to do the fo
 *dojo.require("dojox.gfx.utils");* to load it.
 
 The function signature is:
-   var deferred = *dojox.gfx.utils.toJson(/*dojox.gfx.Surface*/ surface);
+    var deferred = *dojox.gfx.utils.toJson(/*dojox.gfx.Surface*/ surface);
 
 So basic usage is:
 
