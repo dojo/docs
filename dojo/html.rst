@@ -166,6 +166,7 @@ Background
 
 If all of this seems a little familiar to you, its because this functionality previously lived inside the :ref:`ContentPane <dijit/layout/ContentPane>` widget (since dojo's early days). The goal of ``dojo.html.set``, the :ref:``ContentSetter`` and the helper methods it employs were to make this functionality available outside of the dijit context, and promote code reuse both across the toolkit and in your code. Some of the other options you may have used in 0.4, or :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` are destined to live in a dojox counterpart to this module, and should be available by 1.2's release.
 
+.. api-inline :: dojo.html.set
 
 ========
 See also
