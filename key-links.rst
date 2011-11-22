@@ -279,3 +279,4 @@ See also
 ========
 
 * :ref:`Installation instructions & Tutorials <quickstart/index>`
+* `Dojo Toolkit Homepage <http://dojotoolkit.org>`_
