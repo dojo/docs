@@ -11,45 +11,7 @@ dojo.date.locale.getNames
 .. contents::
    :depth: 2
 
-Used to get localized strings from dojo.cldr for day or month names.
-
 .. api-inline :: dojo.date.locale.getNames
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. js ::
- 
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
 
 ========
 See also
