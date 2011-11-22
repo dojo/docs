@@ -68,4 +68,4 @@ Sync loader
 -----------
 You should not use dojo/domReady! in any modules that may be loaded with the legacy synchronous loader.
 
-In other words, if your application does not specify async:false as a data-dojo-config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
+In other words, if your application does *not* specify async:true as a data-dojo-config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
