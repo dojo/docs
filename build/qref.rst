@@ -41,8 +41,11 @@ Command Line Switch Reference
 ``--release``
   Process all profiles resources, discover and transform all resources.
 
+``--releaseDir *directory*``
+  Creates specified directory and puts build there.  Defaults to dojoRoot/release.
+
 ``-r`` *filename*
-  Equivalent to --release
+  Equivalent to --releaseDir
 
 ``--check``
   Process all command line switches and dump the computed profile to the console.
