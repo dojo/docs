@@ -121,9 +121,9 @@ A simple example formatting a date in a number of ways
 
 .. code-example ::
 
-  .. js ::
+    .. js ::
 
-	<script type="text/javascript">
+        <script type="text/javascript">
             dojo.require( "dojo.date.locale" );
             function format(date,fmt) { return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
 
@@ -152,13 +152,13 @@ A simple example formatting a date in a number of ways
             }
             dojo.addOnLoad( initDates );
         </script>
-        <STYLE TYPE="text/css">
-          th,td  { border:1px solid black; padding: .2em 1em; }
-          table { border-collapse:collapse }
-        </STYLE>
+        
+    .. css ::
 
+        th,td  { border:1px solid black; padding: .2em 1em; }
+        table { border-collapse:collapse }
 
-  .. html ::
+    .. html ::
 
         <h3>dojo.date.locale test</h3>
         The following table shows the date: <div class="date"></div> formatted using dojo.date.locale.format
@@ -172,11 +172,14 @@ Formatting dates and times using custom patterns
 
 Render the current Date in several ways using format(). The inverse operation to take the String and return a Date object is parse().
 
-.. codeviewer::
+.. code-example ::
   
-  <style type="text/css">
-    @import "dojox/widget/DocTester/DocTester.css";
-  </style>
+  .. css ::
+  
+    @import "{{dataUrl}}dojox/widget/DocTester/DocTester.css";
+  
+  .. js ::
+  
   <script type="text/javascript">
     var dojoConfig = {
         locale: 'en',

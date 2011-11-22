@@ -12,7 +12,7 @@ Documentation
 
 Considerable effort has been put into making Dojo 1.7's documentation better than ever.
 
-  `Reference Guide (1.7 Draft) <http://livedocs.dojotoolkit.org/>`_
+  `Reference Guide (1.7) <http://livedocs.dojotoolkit.org/>`_
 
   `API Docs (1.7 Draft) <http://staging.dojotoolkit.org/api/>`_
 
@@ -77,7 +77,7 @@ Note that in async mode many modules which were implicitly loaded before (includ
 Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/api's will continue through 1.8.
 
 Limitations:
-Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
+Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchronous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
 DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter).
 
@@ -127,7 +127,7 @@ Dojo 1.7 introduces support for the :ref:`has() feature detection api <dojo/has>
 
 dojo.connect
 ------------
-This has been refactored to use the new dojo/on module for event handling. See dojo/on below for more information.
+This has been refactored to use the new dojo/on module for event handling. See `dojo/on`_ below for more information.
 
 =========
 Dojo Core
@@ -197,7 +197,7 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
          </script>
        </div>
 
-**Note** there is no support for deprecated attribute ``prop`` as an attribute of the ``type="dojo/watch"`` script tag.  The parser only recognises the attribute ``data-dojo-prop``.
+**Note** there is no support for deprecated attribute ``prop`` as an attribute of the ``type="dojo/watch"`` script tag.  The parser only recognizes the attribute ``data-dojo-prop``.
 
 **Reminder:** when operating in asynchronous mode, you need to explicitly load ``dojo/parser`` in order for ``parseOnLoad: true`` to operate.  (In non-async mode, it will be required automatically with a deprecation warning.)  Technically, ``dojo/parser`` was never automatically loaded, but prior to 1.7, it would be transitively loaded in many cases, due to it being loaded by ``dijit/_Templated``, which was relied upon by many widgets.
 
@@ -374,7 +374,7 @@ Mobile
 
 Dojo Mobile is now considered a first class Mobile library, fully supporting lightweight (baseless) AMD loading and the new Dojo Build System. A new reference guide has been written for the Dojo Mobile project, and full API docs are now available.
 
-  `Dojo Mobile Reference Guide <http://livedocs.dojotoolkit.org/dojox/mobile>`_
+  :ref:`Dojo Mobile Reference Guide <dojox/mobile>`
 
  - BlackBerry OS6 theme has been added.  For the full list of supported mobile devices & OS' see above.
  - dojox.mobile.deviceTheme is a device theme loader, which detects the mobile device being used and automatically loads an appropriate theme
@@ -426,7 +426,7 @@ Build Tool Updates
 
 The Build Tools have been completely reimplemented in Dojo 1.7, to take full advantage of AMD and has() and optionally Node.js and Closure Compiler, while still being fully backward compatible with the old build tools.  A complete reference guide has being prepared here with all the information:
 
-  `Build Tool Reference Guide (1.7 Draft) <http://livedocs.dojotoolkit.org/build/buildSystem>`_
+  :ref:`Build Tool Reference Guide (1.7 Draft) <build/buildSystem>`
 
 
 =========
@@ -511,8 +511,8 @@ Dijit
 
 - If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
 
-   .. js ::
+    .. js ::
 
-	<textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
+        <textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
 
 Previously this was done automatically in general (although it was always necessary for XD builds).

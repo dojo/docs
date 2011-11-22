@@ -34,7 +34,7 @@ Limitations
 
 .. html ::
 
-  <body class="tundra">
+  <body class="claro">
     Your content here.
   <body>
 
