@@ -58,7 +58,7 @@ If these two profiles were provided on the command line as follows
 
 .. code-block :: text
 
-  ~/dev/dtk/util/buildscripts> -p profile-a -p profile-b
+  ~/dev/dtk/util/buildscripts> ./build.sh -p profile-a -p profile-b
 
 Then the aggregate profile would have the following value for the property ``staticHasFeatures``:
 
