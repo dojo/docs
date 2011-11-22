@@ -1,4 +1,4 @@
-.. _dojox/form/manager:
+.. _dojox/form/manager/index:
 
 dojox.form.manager
 ==================

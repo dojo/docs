@@ -82,7 +82,7 @@ Step 3: Add project with tasks.
   project.addTask(taskAnalysis);
 
   ganttChart.addProject(project);
-				
+
   // Initialize and Render
   ganttChart.init();
 

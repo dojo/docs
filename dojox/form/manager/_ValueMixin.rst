@@ -39,7 +39,7 @@ The method can be used in two ways: with one parameter to get the value, and wit
   // writing the value
   fm.elementValue("lastName", "Smith");
 
-The first parameter is a name of :ref:`a controlled form element <dojox/form/manager>` (a string). The optional second parameter is a value to be set. It is usually a string too.
+The first parameter is a name of :ref:`a controlled form element <dojox/form/manager/index>` (a string). The optional second parameter is a value to be set. It is usually a string too.
 
 The returned value is:
 

@@ -300,7 +300,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.form.Manager (widget) <dojox/form/Manager>`
 
-    A widget that uses :ref:`dojox.form.manager <dojox/form/manager>` to handle dynamic forms
+    A widget that uses :ref:`dojox.form.manager <dojox/form/manager/index>` to handle dynamic forms
 
   * :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 

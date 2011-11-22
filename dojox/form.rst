@@ -46,13 +46,13 @@ Available Widgets
 
   The ListInput widget allows you to create a list of elements.
 
-* :ref:`dojox.form.manager <dojox/form/manager>`
+* :ref:`dojox.form.manager <dojox/form/manager/index>`
 
   A package to manage complex event-driven dynamic forms
 
 * :ref:`dojox.form.Manager (widget) <dojox/form/Manager>`
 
-  A widget that uses :ref:`dojox.form.manager <dojox/form/manager>` to handle dynamic forms
+  A widget that uses :ref:`dojox.form.manager <dojox/form/manager/index>` to handle dynamic forms
 
 * :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 

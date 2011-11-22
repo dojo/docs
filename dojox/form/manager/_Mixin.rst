@@ -33,7 +33,7 @@ Only one property falls under this category: watch_.
 watch
 ~~~~~
 
-This is a Boolean property, which is used to control :ref:`observers <dojox/form/manager>`. When this property is ``true`` change events are processed and passed to relevant observers as usual. When it is ``false``, change events are ignored.
+This is a Boolean property, which is used to control :ref:`observers <dojox/form/manager/index>`. When this property is ``true`` change events are processed and passed to relevant observers as usual. When it is ``false``, change events are ignored.
 
 This property is useful when you want to modify/update controlled elements, but you don't want to cause observers to run.
 
@@ -70,7 +70,7 @@ This method allows to get/set values of controlled form widgets. It can be used 
   // writing the value
   fm.formWidgetValue("lastName", "Smith");
 
-The first parameter is a name of :ref:`a controlled form element <dojox/form/manager>` (a string). The optional second parameter is a value to be set. It is usually a string too.
+The first parameter is a name of :ref:`a controlled form element <dojox/form/manager/index>` (a string). The optional second parameter is a value to be set. It is usually a string too.
 
 The returned value is:
 
@@ -80,7 +80,7 @@ The returned value is:
 formPointValue
 ~~~~~~~~~~~~~~
 
-This method is similar to formWidgetValue_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`:
+This method is similar to formWidgetValue_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager/index>`:
 
 .. js ::
 
@@ -173,7 +173,7 @@ What ``inspector`` does is up to you. It can modify or just read widget values. 
 inspectAttachedPoints
 ~~~~~~~~~~~~~~~~~~~~~
 
-This method is similar to inspectFormWidgets_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager>`. The only difference is the inspector signature, which uses a DOM node instead of a widget:
+This method is similar to inspectFormWidgets_ method but works on :ref:`nodes attached to the widget itself <dojox/form/manager/index>`. The only difference is the inspector signature, which uses a DOM node instead of a widget:
 
 .. js ::
 
@@ -338,4 +338,4 @@ This function takes an object and returns an array of all keys. It is very simil
 Technical notes
 ===============
 
-_Mixin extends :ref:`dijit._Widget <dijit/_Widget>` with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the :ref:`dojox.form.manager event processing documentation <dojox/form/manager>`.
+_Mixin extends :ref:`dijit._Widget <dijit/_Widget>` with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the :ref:`dojox.form.manager event processing documentation <dojox/form/manager/index>`.

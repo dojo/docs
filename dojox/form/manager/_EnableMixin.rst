@@ -17,7 +17,7 @@ Introduction
 
 This class is the component of the form manager. It should be used together with :ref:`\_Mixin <dojox/form/manager/_Mixin>`.
 
-The mixin provides commonly used methods to enable/disable form elements. It operates only on form widgets collected by :ref:`\_Mixin <dojox/form/manager/_Mixin>` and form nodes collected by :ref:`\_NodeMixin <dojox/form/manager/_NodeMixin>` (see :ref:`controlled elements <dojox/form/manager>` for more details).
+The mixin provides commonly used methods to enable/disable form elements. It operates only on form widgets collected by :ref:`\_Mixin <dojox/form/manager/_Mixin>` and form nodes collected by :ref:`\_NodeMixin <dojox/form/manager/_NodeMixin>` (see :ref:`controlled elements <dojox/form/manager/index>` for more details).
 
 ======================
 Methods and properties

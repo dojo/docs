@@ -17,7 +17,7 @@ Introduction
 
 This class is the component of the form manager. It should be used together with :ref:`\_Mixin <dojox/form/manager/_Mixin>`.
 
-The mixin provides commonly used methods to show/hide attached nodes (see :ref:`controlled elements <dojox/form/manager>` for more details) by modifying ``display`` property of node's ``style`` using ``"none"`` value to hide the node, and ``""`` value to show it. It doesn't use any other ``display`` values.
+The mixin provides commonly used methods to show/hide attached nodes (see :ref:`controlled elements <dojox/form/manager/index>` for more details) by modifying ``display`` property of node's ``style`` using ``"none"`` value to hide the node, and ``""`` value to show it. It doesn't use any other ``display`` values.
 
 This mixin is modeled after :ref:`\_EnableMixin <dojox/form/manager/_EnableMixin>`.
 
