@@ -1,4 +1,4 @@
-.. _dojox/widget/rotator:
+.. _dojox/widget/rotator/index:
 
 dojox.widget.rotator
 ====================

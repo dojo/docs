@@ -10,7 +10,7 @@ dojox.widget.Rotator
 .. contents::
    :depth: 2
 
-A widget for rotating through child nodes using transitions.
+A widget for rotating through child nodes using :ref:`transitions <dojox/widget/rotator/index>`.
 
 ============
 Introduction
