@@ -23,7 +23,7 @@ Keyboard events
 Browser detection
 -----------------
 
-    * 'falsey' values have changed  for properties like dojo.isIE, dojo.isFF, dojo.isSafari.
+    * 'falsy' values have changed  for properties like dojo.isIE, dojo.isFF, dojo.isSafari.
     * These properties are now undefined instead of zero when the user agent is not the given browser, but continue to produce version numbers when the condition is true. This should not have any impact unless a direct comparison was made with the number zero in code. Instead, it is best to simply check the value by letting JavaScript coerce the value to a boolean, e.g. if(!dojo.isIE){...}
 
 dojo.cldr
@@ -212,7 +212,7 @@ dojox.Editor
 dojox.form.BusyButton
 ---------------------
 
-    * A new Button with progresss indicator built in, for indicating processing after you press the button.
+    * A new Button with progress indicator built in, for indicating processing after you press the button.
 
 dojox.form.FileUploader
 -----------------------
@@ -237,7 +237,7 @@ dojox.image.Badge
 
     * A new fun prototype widget of looping proportions.
     * Attach images or background images, and let loop.
-    * Coming next: dojo.data readyness.
+    * Coming next: dojo.data readiness.
 
 dojox.layout.GridContainer
 --------------------------

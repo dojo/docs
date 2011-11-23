@@ -154,7 +154,7 @@ Util
 ShrinkSafe packaging change
 ---------------------------
 
-* The code for ShrinkSafe used to be applied to the Rhino JavaScript engine as a patch to the Rhino code, and Dojo used to ship with a copy of this patched file at util/shrinksafe/custom\_rhino.jar. Now, the ShrinkSafe changes are in a separate JAR file, util/shrinksafe/shrinksafe.jar, which should be used in conjunction with an unmodified js.jar (Rhino). Along with the upgrade to a newer version of Rhino, several bugs with variable references through closures have been fixed. Also, there is a new option ööescape-unicode to use JavaScript \\unnnn escapes in the code rather than injecting encoded Unicode (non-ASCII) characters. This can help avoid encoding issues. Also, null characters are always escaped using JavaScript to avoid a bug in Internet Explorer which would prematurely end the buffer (#5027)
+* The code for ShrinkSafe used to be applied to the Rhino JavaScript engine as a patch to the Rhino code, and Dojo used to ship with a copy of this patched file at util/shrinksafe/custom\_rhino.jar. Now, the ShrinkSafe changes are in a separate JAR file, util/shrinksafe/shrinksafe.jar, which should be used in conjunction with an unmodified js.jar (Rhino). Along with the upgrade to a newer version of Rhino, several bugs with variable references through closures have been fixed. Also, there is a new option -escape-unicode to use JavaScript \\unnnn escapes in the code rather than injecting encoded Unicode (non-ASCII) characters. This can help avoid encoding issues. Also, null characters are always escaped using JavaScript to avoid a bug in Internet Explorer which would prematurely end the buffer (#5027)
 * Some command line options have changed. See the migration issues migration for details.
 
 DOH enhancements
@@ -172,7 +172,7 @@ This sections details changes you might need to make if upgrading your app from 
 dojo.addOnUnload vs. dojo.connect(dojo, "unloaded", ...); Behavioral Change
 ---------------------------------------------------------------------------
   
-* Prior to Dojo 1.3 an "unload" hander was *always* added to documents whenever dojo.js was included. This behavior caused "fast-back" caches on some browsers to throw out many pages from the back-button cache without cause, even if no application-level handlers were registered.
+* Prior to Dojo 1.3 an "unload" handler was *always* added to documents whenever dojo.js was included. This behavior caused "fast-back" caches on some browsers to throw out many pages from the back-button cache without cause, even if no application-level handlers were registered.
 * To correct this behavior, ``dojo.js`` no longer adds a page handler for unload events by default. Instead, *the first time that ``dojo.addOnUload`` or ``addOnWindwowUnload`` are called, the document handlers are registered*. This means that scripts which attach to unload handlers by calling ``dojo.connect(dojo, "unloaded", ...);`` will **NOT** have their handler called if no call to ``dojo.addOnUnload`` is made in the script.
 * As a result of this change, you are **strongly** encouraged to ensure that unload handler logic in your applications is set up via ``dojo.addOnUnload`` or ``dojo.addOnWindowUnload`` instead of via listeners to ``dojo.unloaded`` or ``dojo.windowunloaded``.
 

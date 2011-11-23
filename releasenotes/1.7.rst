@@ -74,10 +74,10 @@ Note that in async mode many modules which were implicitly loaded before (includ
              }
            </script>
 
-Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/api's will continue through 1.8.
+Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/API's will continue through 1.8.
 
 Limitations:
-Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchronous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
+Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchronous loading mode.  The community is looking at potential replacements in the 2.0 time frame:
 
 DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter).
 
@@ -346,7 +346,7 @@ A gesture implementation only needs to extend this and overwrite appropriate pha
 dojox/gesture/tap(single touch only)
 
  - Provide common tap gestures including tap, tap.hold and tap.doubletap
- - Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
+ - Customizable settings e.g. threshold for tap.hold, effective radius for a valid tap.doubletap
  
 dojox/gesture/swipe(single touch only)
 
@@ -386,11 +386,11 @@ Dojo Mobile is now considered a first class Mobile library, fully supporting lig
  - The FlippableView widget has been renamed to SwapView.
  - dojox.mobile now uses the AMD module format
  - TextBox widget moved from mobile/app/ to mobile/.
- - New Tooltip widget to popup a container for either simple text or another wiget.
+ - New Tooltip widget to popup a container for either simple text or another widget.
  - New Overlay widget to slide up form the bottom another input widget, and then slides down when done.
  - New Opener widget adds runtime screen-size detection and uses Tooltip for the larger mobile devices, and Overlay on small-screen devices.
  - New ComboBox widget (still experimental) that combines searchable text input similar to dijit.form.ComboBox.
- - New ExpandingTextarea widget grows and shrinks vertically as needed to accomodate the end-user text.
+ - New ExpandingTextarea widget grows and shrinks vertically as needed to accommodate the end-user text.
  - New Slider widget to enable users to easily adjust a value with touch/dragging gestures.
  - New HTML form input widget wrappers (Textarea, CheckBox, RadioButton) to allow simple form constructs to be used with various dijit container/dialog widgets.
 

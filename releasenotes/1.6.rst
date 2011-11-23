@@ -345,7 +345,7 @@ The claro theme no longer automatically includes its CSS reset file for page lev
 
 Popups and drop downs
 ---------------------
-For accessibility reasons the :ref:`dijit.popup <dijit/popup>` code now hides popup / dropdown widgets with style="display: none" rather than style="visiblity:hidden; top: -9999px".   (Actually that style is on a wrapper node.)   This may cause issues for popup / drop down  widgets that do layout on initialization.   In that case you should defer the layout until the first onShow() call for the widget.
+For accessibility reasons the :ref:`dijit.popup <dijit/popup>` code now hides popup / dropdown widgets with style="display: none" rather than style="visibility:hidden; top: -9999px".   (Actually that style is on a wrapper node.)   This may cause issues for popup / drop down  widgets that do layout on initialization.   In that case you should defer the layout until the first onShow() call for the widget.
 
 BorderContainer border
 ----------------------

@@ -83,7 +83,7 @@ dojo.fx (Dojo Base FX)
 * Considerable performance increase and new API's
 * made dojo._Animation public: dojo.Animation
 * onEnd, beforeBegin functions are passed the node reference used in the Animation
-* start: and end: properties, when using a function, are passed the node reference for the animtion
+* start: and end: properties, when using a function, are passed the node reference for the animation
 * each property can now be a function, returning either a value, or and object to pass as the value
 * See also :ref:`dojo.fx <dojo/fx>`
 
@@ -325,7 +325,7 @@ Dijit infrastructure changes
 dijit._Widget
 ~~~~~~~~~~~~~
 
-* widgets now support a subscribe/unsubscribe function - analagous to dojo.subscribe/unsubscribe which operates on the widget itself (and cleans itself up) in a similar way to _Widget.connect/disconnect.
+* widgets now support a subscribe/unsubscribe function - analogous to dojo.subscribe/unsubscribe which operates on the widget itself (and cleans itself up) in a similar way to _Widget.connect/disconnect.
 
 dijit._Templated
 ~~~~~~~~~~~~~~~~
@@ -396,7 +396,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * :ref:`PageBreak <dojox/editor/plugins/PageBreak>`:  A plugin that lets you insert CSS style page breaks so when printed, the document page breaks at the indicated spot.
 * :ref:`ShowBlockNodes <dojox/editor/plugins/ShowBlockNodes>`:  A plugin that lets you see in the editor what the block structure is that makes up the RTE document.
 * :ref:`Preview <dojox/editor/plugins/Preview>`:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.
-* :ref:`Save <dojox/editor/plugins/Save>`:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
+* :ref:`Save <dojox/editor/plugins/Save>`:  A plugin that simplifies adding a save toolbar action for posting editor content back to a specified url.
 * :ref:`ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
 * :ref:`InsertEntity <dojox/editor/plugins/InsertEntity>`:  An **experimental** plugin that allows you to do 'symbol' inserts from a select list of entity symbols.
 * :ref:`NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`:  An **experimental** plugin that tries to normalize indent and outdent behavior across browsers.
@@ -473,7 +473,7 @@ The new Enhanced DataGrid extends the base grid in numerous useful ways.
 dojox.grid.TreeGrid
 ~~~~~~~~~~~~~~~~~~~
 
-* dojox.grid.TreeGrid - support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure.
+* dojox.grid.TreeGrid - support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure.
 * See also :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
 (old) compat grid
@@ -567,7 +567,7 @@ dojox.widget.DataPresentation
 * The new DataPresentation widget connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store.
 * The widget can then present the data in several forms: as a graphical chart, as a tabular grid, or as display panels presenting meta-data (title, creation information, etc) from the data.
 * The widget can also create and manage several of these forms in one simple construction.
-* Animation support.  Optionally allows chart bars, columns and lines to animate into place as chart is intially being displayed.
+* Animation support.  Optionally allows chart bars, columns and lines to animate into place as chart is initially being displayed.
 * See also :ref:`dojox.widget.DataPresentation <dojox/widget/DataPresentation>`
 
 
