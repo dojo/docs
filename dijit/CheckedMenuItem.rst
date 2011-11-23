@@ -1,5 +1,6 @@
 .. _dijit/CheckedMenuItem:
 
+=====================
 dijit.CheckedMenuItem
 =====================
 

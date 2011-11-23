@@ -1,5 +1,6 @@
 .. _dijit/MenuBarItem:
 
+=================
 dijit.MenuBarItem
 =================
 
@@ -11,6 +12,9 @@ dijit.MenuBarItem
 :Authors: Bill Keese
 
 These are the items in the Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.
+
+Examples
+========
 
 A programmatically created MenuBarItem
 --------------------------------------
