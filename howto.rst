@@ -134,7 +134,7 @@ You can add a real example to the documentation by using the ".. code-example ::
 
     <p class="fancy">Hi reader, click me</p>
 
-  Very simple JavaScript using Dojos query selector
+  Very simple JavaScript using Dojo's query selector
 
   .. javascript::
 

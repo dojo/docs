@@ -5,7 +5,7 @@ Dojo Book Migration
 
 :Status: Draft
 
-The Dojo Book on dojotoolkit.org has had a lot of work poured into it, and its been widely linked to, bookmarked and indexed. We dont want to lose that. This page exists to manage the mapping of old page(s) to new page(s). Please put your name against any pages you can volunteer to migrate and/or maintain, as well as any notes you might have on the content and comments.
+The Dojo Book on dojotoolkit.org has had a lot of work poured into it, and its been widely linked to, bookmarked and indexed. We don't want to lose that. This page exists to manage the mapping of old page(s) to new page(s). Please put your name against any pages you can volunteer to migrate and/or maintain, as well as any notes you might have on the content and comments.
 
 ----
 
