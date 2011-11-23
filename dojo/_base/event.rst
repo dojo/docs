@@ -1,11 +1,8 @@
 .. _dojo/_base/event:
 
+================
 dojo/_base/event
 ================
-
-:Status: Draft
-:Version: 1.2
-:Available: since V0.3
 
 .. contents::
   :depth: 2
@@ -18,7 +15,6 @@ See :ref:`Dojo's Event System <quickstart/events>` for information on the event 
 
 dojo.stopEvent
 ==============
-
 
 Prevents propagation and clobbers the default action of the passed event. The same as calling ``event.preventDefault()`` and ``event.stopPropagation()`` on some passed event.
 
@@ -60,14 +56,7 @@ Dojo < 1.7
 dojo.fixEvent
 ==============
 
-
-TO DOC
-
-
-Migration issues
-================
-
-Since V0.9 most of the functionality from the dojo.event package has moved to dojo base so it is always available. Users of older releases will find more details within the `Dojo Porting Guide: 0.4x to 0.9.x <http://dojotoolkit.org/book/dojo-porting-guide-0-4-x-0-9/event-system>`__.
+TODOC
 
 
 See also

@@ -4,11 +4,15 @@
 dojo.Animation
 ==============
 
+.. contents ::
+    :depth: 2
+
 :available:  1.4.0 (formerly dojo._Animation)
 
 This class is a foundation class for the various built in Dojo Effects.
 
-=========
+.. api-inline :: dojo.Animation
+
 See Also:
 =========
 

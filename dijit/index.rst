@@ -1,7 +1,7 @@
 .. _dijit/index:
 
-Dijit
-=====
+Dijit Overview
+==============
 
 .. contents::
    :depth: 2

@@ -1,5 +1,6 @@
 .. _dojo/NodeList-html:
 
+==================
 dojo.NodeList-html
 ==================
 

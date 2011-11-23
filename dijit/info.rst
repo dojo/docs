@@ -1,7 +1,7 @@
 .. _dijit/info:
 
-Dijit
-=====
+Dijit Introduction
+==================
 
 :Authors: Peter Higgins, Bill Keese, Tobias Klipstein, Nikolai Onken, Craig Riecke,
 
