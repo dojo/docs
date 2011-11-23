@@ -1,16 +1,16 @@
 .. _developer/index:
 
-Dojo Developer's Notebook
-=========================
+Dojo Developer Notebook
+=======================
 
-.. contents::
+.. contents ::
     :depth: 2
 
-This section contains or links to information useful to contributors or committers to dojo:
+This section contains links to information useful to contributors or committers to Dojo:
 
 * :ref:`Style guide <developer/styleguide>`
 
-* `Contributor list <developer/contributors>`_ - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to dojo
+* :ref:`Contributor list <developer/contributors>` - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to dojo
 
 * :ref:`Rules and Responsibilities for Dojo Committers <developer/rules>`
 

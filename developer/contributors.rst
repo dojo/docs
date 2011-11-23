@@ -1,8 +1,11 @@
 .. _developer/contributors:
 
+===================
+Contributor Listing
+===================
 
-A list of individuals who have signed Dojo CLAs:
-------------------------------------------------
+Individuals who have signed Dojo CLAs
+=====================================
 
 * Aaron, Brandon
 * Acord, Gary
@@ -598,8 +601,8 @@ A list of individuals who have signed Dojo CLAs:
 * Zou, Ran
 * Zyp, Kris
 
-A list of corporations or organizations with a CLA on file:
------------------------------------------------------------
+Corporations or Organizations with a CCLA on file
+=================================================
 
 * ActiveGrid, Inc.
 * Adaptive Technology Resource Centre

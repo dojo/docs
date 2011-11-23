@@ -1,5 +1,6 @@
 .. _developer/styleguide:
 
+================
 Dojo Style Guide
 ================
 
@@ -11,14 +12,14 @@ This document follows the basic outline of the `Java Programming Conventions Gui
 Widget authors are expected to adhere to this style guide and also to the :ref:`Dojo Accessibility Design Requirements <developer/a11y-requirements>` guidelines.
 
 General
--------
+=======
 
 Any violation to this guide is allowed if it enhances readability.
 
 Guidelines in this document are informed by discussions carried out among the Dojo core developers. The most weight has been given to considerations that impact external developer interaction with Dojo code and APIs. Rules such as whitespace placement are of a much lower order importance for Dojo developers, but should be followed in the main in order to improve developer coordination.
 
 Quick Reference
----------------
+===============
 
 Table of core API naming constructs:
 
@@ -55,7 +56,7 @@ Table of constructs that are not visible in the API, and therefore carry less we
 +-----------------------+---------------------------+
 
 Naming Conventions
-------------------
+==================
  
     #. When constructing string IDs or ID prefixes in the code, do not use "dojo", "dijit"  or "dojox" in the names. Because we now allow multiple versions of dojo in a page, it is important you use _scopeName instead (dojo._scopeName, dijit._scopeName, dojox._scopeName).
 
@@ -145,7 +146,7 @@ Naming Conventions
     
 
 Specific Naming Conventions
----------------------------
+===========================
 
     #. The terms get/set SHOULD NOT used where a field is accessed, unless the variable being accessed is lexically private.
 
@@ -176,7 +177,7 @@ Specific Naming Conventions
     # Methods returning an object MAY be named after what they return, and methods returning void after what they do.
 
 Files
------
+=====
  
     #. Class or object-per-file guidelines are not yet determined
     
@@ -207,7 +208,7 @@ Files
 
 
 Variables
----------
+=========
 
     #. Variables SHOULD be initialized where they are declared and they SHOULD be declared in the smallest scope possible. A null initialization is acceptable.
     
@@ -244,7 +245,7 @@ Variables
         #. Floating point constants SHOULD ALWAYS be written with a digit before the decimal point.
         
 Layout
-------
+======
 
     #. Block statements.
     
@@ -406,15 +407,15 @@ Layout
         #. Comments SHOULD NOT be included for every single line of code.
  
 Documentation
--------------
+=============
  
 Markup Guidelines
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the :ref:`Dojo Inline Documentation <util/doctools/markup>` for information on dojo's proprietary format.
 
 CSS
-~~~
+---
 
 The CSS styling basically inherits all the rules from JavaScript, that means "key: value" looks like in JS, etc. Therefore a CSS file might look like this:
 

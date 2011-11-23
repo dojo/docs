@@ -1,5 +1,6 @@
 .. _dijit/Dialog:
 
+============
 dijit.Dialog
 ============
 
@@ -11,7 +12,6 @@ dijit.Dialog
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ Dijit's modal Dialog Box simulates a regular GUI dialog box. The contents can be
 often a form or a short paragraph. The user can close the dialog box without acting by clicking on the X button 
 in the top-right corner.
 
-=====
 Usage
 =====
 
@@ -49,7 +48,6 @@ you have to add a ``class="claro"`` attribute (or some other applicable :ref:`th
  </body>
 
 
-========
 Examples
 ========
 
@@ -311,7 +309,7 @@ handles the onSubmit event, validation, and an xhrPost to the server.
 
 
 Terms and Conditions Dialog
-----------------------------------
+---------------------------
 
 This example shows a Dialog that will ask the user to accept or decline the terms and conditions.
 
@@ -387,12 +385,12 @@ This example shows a Dialog that will ask the user to accept or decline the term
 External Dialog content using HREF attribute
 --------------------------------------------
 
-You can also load dialog content from another page by setting HREF attribute for the widget. Note that the Dialog 
-doesn't execute script tags inline external content. However, it parses the page for widgets, so you can add 
-functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script 
-type="dojo/method" data-dojo-event="onClick">``). Other options for executing scripts 
-are `iFrame <http://www.dojotoolkit.com/forum/dijit-dijit-0-9/dijit-support/loading-external-url-dijit-dialog>`_ 
-and `dojox.layout.ContentPane <http://www.dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/javascript-ignored-when-loading-dijit-dialog-url>`_.
+You can also load dialog content from another page by setting HREF attribute for the widget. Note that the
+dijit.Dialog doesn't execute script tags inline external content. However, it parses the page for widgets, 
+so you can add functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script 
+type="dojo/method" data-dojo-event="onClick">``). 
+
+The :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` provides the ``executeScripts`` functionality of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialog``
 
 .. code-example ::
   :height: 500
@@ -446,7 +444,6 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
 
 
-=============
 Accessibility
 =============
 
@@ -573,8 +570,8 @@ Known Issues
   dojo.style(dialogObj.containerNode, {
           position:'relative',
   });
-  
-========
+
+
 See also
 ========
 

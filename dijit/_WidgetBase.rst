@@ -1,5 +1,6 @@
 .. _dijit/_WidgetBase:
 
+=================
 dijit._WidgetBase
 =================
 
@@ -10,32 +11,29 @@ dijit._WidgetBase
 .. contents::
    :depth: 2
 
-
-============
 Introduction
 ============
 
-`dijit._WidgetBase <http://dojotoolkit.org/api/dijit/_WidgetBase>`_ is the base class for all widgets in dijit, and in general is the base class for all dojo based widgets. Usually widgets also extend other mixins such as `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_.
+`dijit._WidgetBase <http://dojotoolkit.org/api/dijit/_WidgetBase>`_ is the base class for all widgets in dijit, 
+and in general is the base class for all dojo based widgets. Usually widgets also extend other mixins such as 
+:ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`.
 
-Note that the underscore in the name implies not that _WidgetBase is a private class, but rather that it's a base class, rather than a widget directly usable.
+Note that the underscore in the name implies not that _WidgetBase is a private class, but rather that it's a base 
+class, rather than a widget directly usable.
 
-
-=====
 Usage
 =====
 
-All widgets are created by calling dojo.declare(), extending from _WidgetBase:
+All widgets are created by calling :ref:`dojo.declare() <dojo/declare>`, extending from _WidgetBase:
 
 .. js ::
  
  <script type="text/javascript">
-   dojo.declare("MyWidget", [dijit._WidgetBase], { ... });
+   dojo.declare("MyWidget", dijit._WidgetBase, { ... });
  </script>
 
-and then redefining a number of methods for the widget lifecycle...
+and then redefining a number of methods for the widget `lifecycle`_...
 
-
-=========
 Lifecycle
 =========
 
@@ -96,7 +94,6 @@ In all cases its good practice to assume that you are overriding a method that m
   }
 
 
-==========
 Attributes
 ==========
 
@@ -137,7 +134,6 @@ The custom setters/getters can perform any needed operation for setting/resettin
 For more details on both attributeMap and custom setters/getters, see the Writing Widgets :ref:`QuickStart <quickstart/writingWidgets>` guide.
 
 
-========
 See also
 ========
 
