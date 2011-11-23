@@ -209,7 +209,7 @@ The application configuration json data is used to declare views, models and the
     },
   
     //models and instantiation parameters for the models. Including 'type' as a property
-    // allows one to overide the class that will be used for the model.  By default it is
+    // allows one to override the class that will be used for the model.  By default it is
     // dojox/mvc/model
     // The model declared at application level will be initialized before application startup
     // The model declared at scene/view level will be initialized before scene/view loaded
@@ -244,7 +244,7 @@ The application configuration json data is used to declare views, models and the
     "views": {
       //simple view without any children views or scenes
       //views can has its own dependencies which will be loaded
-      //before the view is first intialized.
+      //before the view is first initialized.
       "home": {
         "type": "dojox.app.view",
         "dependencies":[

@@ -132,7 +132,7 @@ Other Properties
  - **multiple** Whether multiple files can or cannot be selected.
  - **url** If you don't supply an *action* in your form, supply an *url* to upload to.
  - **label** The text used in the button.
- - **tabIndex** Defauts to "0". You ay change this to change the tab order on the page.
+ - **tabIndex** Defaults to "0". You change this to change the tab order on the page.
  
 The Flash plugin has other properties specific to that file.
 
@@ -194,7 +194,7 @@ If *uploadedfilesFlash* is found in the post data and Flash is being used on the
  echo($data);
  exit;
  
-For non-PHP devs this translates to:
+For non-PHP developers this translates to:
 
 .. code-block :: text
   
@@ -221,7 +221,7 @@ The return string with an error might look like:
  
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
 
-You can also send back arbitrary parameters from your server-side script using this comma-delimitted format.  For example, adding variables foo and abc:
+You can also send back arbitrary parameters from your server-side script using this comma-delimited format.  For example, adding variables foo and abc:
 
 .. code-block :: text
  

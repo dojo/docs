@@ -83,7 +83,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
                     tehLoader("hidden");
                 })
                 .addErrback(function(err){
-                    console.warn('ooops', err);
+                    console.warn('oops', err);
                     tehLoader("hidden");
                 });
         });

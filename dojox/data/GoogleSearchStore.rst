@@ -12,7 +12,7 @@ dojox.data.GoogleSearchStore
   :depth: 3
 
 
-The GoogleSearchStore is actually a collection of stores designed to work with Google's Ajax search services. GoogleSearchStore is the base class  that all subclasses of GoogleSearchStore extend from. It provides all the basics of working with Google's search API in a dojo.data compliant implementation. The following stores are avaialble for use after dojo.require() is used to load dojox.data.GoogleSearchStore:
+The GoogleSearchStore is actually a collection of stores designed to work with Google's Ajax search services. GoogleSearchStore is the base class  that all subclasses of GoogleSearchStore extend from. It provides all the basics of working with Google's search API in a dojo.data compliant implementation. The following stores are available for use after dojo.require() is used to load dojox.data.GoogleSearchStore:
 
 * **dojox.data.GoogleSearchStore** - The basic search store that all more fine-grained searches inherit from. This store defaults to querying Google's Web-search Ajax calls.
 * **dojox.data.GoogleWebSearchStore** - A store configured to search specifically against Google's Web search Ajax calls.

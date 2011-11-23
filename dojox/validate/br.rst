@@ -33,7 +33,7 @@ Call the desired validator with the String you wish to process.  It will return 
 
 Basic Usage
 -----------
-Usage of this code is quite simple and painless.  The only thing you have to do is require it inot the page and the functions will be available.  For Example:
+Usage of this code is quite simple and painless.  The only thing you have to do is require it in the page and the functions will be available.  For Example:
 
 .. js ::
  

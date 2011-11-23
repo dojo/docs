@@ -83,7 +83,7 @@ dimensions is greater.
 Disabling the AutoLoad
 ----------------------
 
-The Slideshow widget automatically preloads a number of images in the background. While this generally provides a
+The Slideshow widget automatically pre-loads a number of images in the background. While this generally provides a
 better user experience, it uses more bandwidth, so some users may want to disable it. To do so, set the autoLoad
 parameter to "false". e.g.
 
@@ -189,7 +189,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 			
 		dojo.addOnLoad(function(){
 			
-			//INitialize the store with a FlickrRestStore
+			//Initialize the store with a FlickrRestStore
 			var flickrRestStore = new dojox.data.FlickrRestStore();
 			var req = {
 				query: {

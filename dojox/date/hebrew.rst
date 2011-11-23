@@ -24,7 +24,7 @@ The Hebrew calendar is lunisolar and thus has a number of interesting properties
 Usage
 =====
 
-Code snippet below illustrates most common usage of Hebrew calenadar.
+Code snippet below illustrates most common usage of Hebrew calendar.
 
 .. js ::
  
@@ -48,7 +48,7 @@ Code snippet below illustrates most common usage of Hebrew calenadar.
 Hebrew calendar package
 -----------------------
 
-Hebrew calenadar package comprises of following three files:
+The Hebrew calendar package is comprised of following three files:
 
     * dojox.date.hebrew.Date implements logic of Hebrew calendar and provides support for date conversion between Gregorian and Hebrew calendars
     * dojox.date.hebrew.locale includes implementation of functions responsible for conversion between two possible representations of Hebrew date: String representation and Date object. It also provides date formatting capabilities.
@@ -57,7 +57,7 @@ Hebrew calenadar package comprises of following three files:
 Hebrew calendar and DateTextBox
 -------------------------------
 
-Hebrew calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Hebrew calendar. For example, the image below illustrates DateTextBox using a Hebrew calendar with the default language set to Hebrew.
+The Hebrew calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Hebrew calendar. For example, the image below illustrates DateTextBox using a Hebrew calendar with the default language set to Hebrew.
 
 .. image:: dijit.jpg
 

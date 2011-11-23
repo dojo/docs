@@ -65,7 +65,7 @@ Declarative example
      Pane 2!
    </div>
    <div id="pane3" dojoType="dijit.layout.ContentPane" title="3" transitionDelay="10000">
-     Pane 3 with overrided transitionDelay!
+     Pane 3 with overridden transitionDelay!
    </div>
  </div>
 

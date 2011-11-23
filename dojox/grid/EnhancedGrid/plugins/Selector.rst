@@ -375,7 +375,7 @@ Arguments       Type                Optional/Mandatory              Description
 type            String              Mandatory                       "row" or "col" or "cell"
 rowIndex        Integer             Mandatory                       If type is "row" or "cell", this is the row index.
                                                                     If type if "col", this is the column index.
-colIndex        Integer             Optional(defualt to undefined)  Only valid when type is "cell"
+colIndex        Integer             Optional(default to undefined)  Only valid when type is "cell"
 [return]        Boolean                                             true if selected, false if not. If cell is covered by a selected column or row, it's selected.
 ==============  ==================  ==============================  ===============================================================================================
 
@@ -426,4 +426,4 @@ See Also
 * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

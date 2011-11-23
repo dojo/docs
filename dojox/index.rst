@@ -104,7 +104,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.data.CsvStore <dojox/data/CsvStore>`
 
-    A read interface that works with CSV formated data files
+    A read interface that works with CSV formatted data files
 
   * :ref:`dojox.data.FileStore <dojox/data/FileStore>`
 
@@ -260,7 +260,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.form.BusyButton <dojox/form/BusyButton>`
 
-    A new Button with progresss indicator built in, for indicating processing after you press the button
+    A new Button with progress indicator built in, for indicating processing after you press the button
 
   * :ref:`dojox.form.CheckedMultiSelect <dojox/form/CheckedMultiSelect>`
 
@@ -304,7 +304,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 
-    Extension to ComboBox to allow "tag" style input using a datastore using a delimeter.
+    Extension to ComboBox to allow "tag" style input using a datastore using a delimiter.
 
   * :ref:`dojox.form.PasswordValidator <dojox/form/PasswordValidator>`
 
@@ -378,11 +378,11 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`
 
-    A cirular gauge.
+    A circular gauge.
 
   * :ref:`dojox.gauges.GlossySemiCircularGauge <dojox/gauges/GlossySemiCircularGauge>`
 
-    A semi cirular gauge.
+    A semi circular gauge.
 
   * :ref:`dojox.gauges.GlossyHorizontalGauge <dojox/gauges/GlossyHorizontalGauge>`
 
@@ -394,7 +394,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.gesture <dojox/gesture>`
 
-  Provides gesture events that can run well across a wide range of deivces
+  Provides gesture events that can run well across a wide range of devices
 
 * :ref:`dojox.gfx <dojox/gfx>`
 
@@ -406,7 +406,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.grid <dojox/grid>`
 
-  Dojo Toolkits Grid Widgets
+  Dojo Toolkit's Grid Widgets
 
   * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 
@@ -418,7 +418,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-    A grid with support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+    A grid with support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
 
   * :ref:`dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`
 
@@ -609,7 +609,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.mobile <dojox/mobile>`
 
-  A collection of utilities to get native look&feel on webapps for iPhone/iPad/Android
+  A collection of utilities to get native look&feel on web apps for iPhone/iPad/Android
 
 * :ref:`dojox.mvc <dojox/mvc>`
 
@@ -711,7 +711,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.widget.FilePicker <dojox/widget/FilePicker>`
 
-    A specialized version of RollingList that handles file informatione
+    A specialized version of RollingList that handles file information
 
   * :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>`
 

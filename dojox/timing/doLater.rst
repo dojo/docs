@@ -18,7 +18,7 @@ dojox.timing.doLater checks if a parameter is ready, and if not, it will "do it 
 Introduction
 ============
 
-The idea behind doLater is when you have multiple methods all calling one object that may or may not yet be available. Instead of having duplicative if-statements in each of these methods, doLater allows for a simple timer-based callback that has a simple method signature and fits in one line of code.
+The idea behind doLater is when you have multiple methods all calling one object that may or may not yet be available. Instead of having duplicate if-statements in each of these methods, doLater allows for a simple timer-based callback that has a simple method signature and fits in one line of code.
 
 One use of doLater is controlling a Flash SWF. A SWF takes some time to load, and is most likely not ready when you first attempt communication. Other uses for doLater would be popup windows, iframes, lazy loaded scripts, or server calls. But as the examples show, it can be used to delay any call based on whatever conditional is passed to it.
 

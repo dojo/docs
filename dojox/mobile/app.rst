@@ -47,7 +47,7 @@ First, you've to create a basic front page that will initialize information and 
 
 Note that all JS inclusions are static because some browsers may fail on ``dojo.require`` (no support for sync XMLHttpRequest). The included theme stylesheet should depend on user-agent (server side work).
 
-This simple examples defines an application whose main scene is "main". When calling ``dojox.mobile.app.init()``, the framework will try to fetch the scene template and its JS initialization code. By default templates are under ``app/views/[scene]/[scene]-scene.html`` and "Assistants" (that is, JS initialization code) is under ``app/assistants/[scene]-assistant.js``. If you want to modify this, you'll have to redeclare ``dojox.mobile.app.resolveTemplate`` and ``dojox.mobile.app.resolveAssistant``.
+This simple examples defines an application whose main scene is "main". When calling ``dojox.mobile.app.init()``, the framework will try to fetch the scene template and its JS initialization code. By default templates are under ``app/views/[scene]/[scene]-scene.html`` and "Assistants" (that is, JS initialization code) is under ``app/assistants/[scene]-assistant.js``. If you want to modify this, you'll have to re-declare ``dojox.mobile.app.resolveTemplate`` and ``dojox.mobile.app.resolveAssistant``.
 
 To load an initial scene other than 'main', set the 'initialScene' value in appInfo to the name of that scene, e.g.
 

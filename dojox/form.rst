@@ -12,7 +12,7 @@ Available Widgets
 
 * :ref:`dojox.form.BusyButton <dojox/form/BusyButton>`
 
-  A new Button with progresss indicator built in, for indicating processing after you press the button
+  A new Button with progress indicator built in, for indicating processing after you press the button
 
 * :ref:`dojox.form.CheckedMultiSelect <dojox/form/CheckedMultiSelect>`
 
@@ -56,7 +56,7 @@ Available Widgets
 
 * :ref:`dojox.form.MultiComboBox <dojox/form/MultiComboBox>`
 
-  Extension to ComboBox to allow "tag" style input using a datastore using a delimeter.
+  Extension to ComboBox to allow "tag" style input using a datastore using a delimiter.
 
 * :ref:`dojox.form.PasswordValidator <dojox/form/PasswordValidator>`
 

@@ -94,7 +94,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 Run EnhancedGrid with various plugins
 =====================================
 
-EnhanedGrid can also be run with a flexible combination of various plugins, a typical usage will look like:
+EnhancedGrid can also be run with a flexible combination of various plugins, a typical usage will look like:
 
 
 1. Import theme CSS
@@ -133,7 +133,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 EnhancedGrid plugin list
 =============================
 
-Following is a complete list of EnahancedGrid plugins, please refer to the separate page for detail usages:
+Following is a complete list of EnhancedGrid plugins, please refer to the separate page for detail usages:
 
 * :ref:`Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>` - Multiple column sorting
 * :ref:`Indirect Selection <dojox/grid/EnhancedGrid/plugins/IndirectSelection>` - Selecting rows with radio button or check box

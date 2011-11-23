@@ -23,7 +23,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`  -- **STABLE**
 
-  A headless plugin that improves the output format from dijit.Editor by structuring the tag indentions and text lines in a more easily human-readable way.
+  A headless plugin that improves the output format from dijit.Editor by structuring the tag indentations and text lines in a more easily human-readable way.
   
   **This plugin is new to the Dojo Toolkit 1.4.**
 
@@ -77,7 +77,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>` -- **STABLE**
 
-  A plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  It provides the capability to find text, replace text, and replace all occurances of some text.  It also allows searching backwards from current cursor position as well as matching case.  This plugin does NOT work on Opera, as it is making use of Browser specific apis, and Opera doesn't provide a mechanism to do native find.
+  A plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  It provides the capability to find text, replace text, and replace all occurrences of some text.  It also allows searching backwards from current cursor position as well as matching case.  This plugin does NOT work on Opera, as it is making use of browser specific API's, and Opera doesn't provide a mechanism to do native find.
   
   **This plugin is updated in Dojo Toolkit 1.6.**
 
@@ -137,7 +137,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dojox.editor.plugins.SpellCheck  <dojox/editor/plugins/SpellCheck>` -- **STABLE**
 
-  A plugin that allows the user to spellcheck editor content either interactively (where unrecognized words are highlighted as they are typed) or as a batch process via a dialog that steps the user through all the content, moving from one unrecognized word to the next. The focus here is on the client-side feature. While a server-side demo is provided, it is expected that a more comprehensive server piece will be deployed.
+  A plugin that allows the user to spell check editor content either interactively (where unrecognized words are highlighted as they are typed) or as a batch process via a dialog that steps the user through all the content, moving from one unrecognized word to the next. The focus here is on the client-side feature. While a server-side demo is provided, it is expected that a more comprehensive server piece will be deployed.
   
   **This plugin is new to the Dojo Toolkit 1.6.**
 

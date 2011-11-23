@@ -44,4 +44,4 @@ At the time of writing (Dojo Toolkit 1.3 release), the following digests are ava
 * ``dojox.encoding.digests.MD5``
 * ``dojox.encoding.digests.SHA1``
 
-More digest implementations (specificially the SHA2 family of digests) are planned for a future release.
+More digest implementations (specifically the SHA2 family of digests) are planned for a future release.

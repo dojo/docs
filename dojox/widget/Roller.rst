@@ -3,7 +3,7 @@
 dojox.widget.Roller
 ===================
 
-The Roller is a degradabled, unobtrusive widget to convert an unordered list (``<ul>``) of styled items into a single item, and loop through the display. There are no additional CSS requirements, or any heavy dependencies.
+The Roller is a degradable, unobtrusive widget to convert an unordered list (``<ul>``) of styled items into a single item, and loop through the display. There are no additional CSS requirements, or any heavy dependencies.
 
 To use in your page, simply require in the needed module:
 
@@ -11,7 +11,7 @@ To use in your page, simply require in the needed module:
   
   dojo.require("dojox.widget.Roller");
 
-The module provides dojox.widget.Roller, which fades through the items, as well as dojox.widger.RollerSlide, which "slides" in the new element during the transition.
+The module provides dojox.widget.Roller, which fades through the items, as well as dojox.widget.RollerSlide, which "slides" in the new element during the transition.
 
 Creating A Roller
 -----------------

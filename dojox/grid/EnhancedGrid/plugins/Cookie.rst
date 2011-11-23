@@ -98,7 +98,7 @@ Usage
 This plugin exposes the following methods to the grid:
 
 setCookieEnabled(cookieName, toEnable):
-	If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistance of this feature.
+	If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistence of this feature.
 
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -109,7 +109,7 @@ toEnable        Boolean             Mandatory                   To enable cookie
 ==============  ==================  ==========================  ==============================================================================================
 
 getCookieEnabled(cookieName):
-	Check whether the cookie support of a paticular grid feature is enabled.
+	Check whether the cookie support of a particular grid feature is enabled.
 
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -141,4 +141,4 @@ See Also
 * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

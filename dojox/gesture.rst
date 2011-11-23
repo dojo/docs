@@ -21,7 +21,7 @@ This module provides a machinery for writing unified gesture events which can ru
 Rationale
 =========
 
-dojox/gesture has been designed with the follwing ratinales:
+dojox/gesture has been designed with the following rationales:
 
 - Device neutral - The target is to be compatible with most popular devices(single touch gestures should also work well on desktops).
 
@@ -30,7 +30,7 @@ dojox/gesture has been designed with the follwing ratinales:
 - Scalability - A modularized event processing mechanism makes it very easy to extend with more customized gestures.
 
 
-The most key thing dojox/gesture does is standardizing touch and gesture events across devices. These unified gestue events are fist divided into several internal phase events with smaller graduality - "press |  move | release | cancel" which will then be mapped to approprieate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
+The most key thing dojox/gesture does is standardizing touch and gesture events across devices. These unified gesture events are fist divided into several internal phase events with smaller granularity - "press |  move | release | cancel" which will then be mapped to appropriate native events e.g. "touchxxx" on touch devices and "mousexxx" on desktops. The native events are then monitored on the target node, and gesture events will be fired once matched during these phase events. The following picture shows more details.
 
 .. image:: gesture2.jpg
 
@@ -129,7 +129,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
   </script>
   
 
-There are also several configuralbe parameters in dojox/gesture/tap
+There are also several configurable parameters in dojox/gesture/tap
 
 ==================  ================================================================================================
 Option              Description
@@ -225,7 +225,7 @@ dy                  Delta distance on Y axis, dy < 0 means is moving up, dy > 0 
 Bubble the gesture event
 =============================
 
-A gesture event behaves all the same as a native Event. Besides getting useful informaton from the fired gesture event, we can also stop bubbling it.
+A gesture event behaves all the same as a native Event. Besides getting useful information from the fired gesture event, we can also stop bubbling it.
 
 The following sample shows how we can easily stop a gesture event from bubbling to parent node:
 
@@ -233,7 +233,7 @@ The following sample shows how we can easily stop a gesture event from bubbling 
   
   <script type="text/javascript">
         function innerFunc(e){
-          console.log("'tap' fired on innder div");
+          console.log("'tap' fired on inner div");
           dojo.stopEvent(e);
         }
         function outerFunc(e){
@@ -332,5 +332,5 @@ Future plan
 A rich set of enhancements is being planned for the further versions:
 
 - Enhance dojox.gesture core to support Multi-touch better
-- Enrich more popular gestures e.g. rotate, flicker, pintch/spread, drag, scroll etc.
-- More device support - iOS 5, Andriod 3, BlackBerry and devices(e.g. BB tablet) that support both touch and mouse events
+- Enrich more popular gestures e.g. rotate, flicker, pinch/spread, drag, scroll etc.
+- More device support - iOS 5, Android 3, BlackBerry and devices(e.g. BB tablet) that support both touch and mouse events

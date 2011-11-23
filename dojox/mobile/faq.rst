@@ -38,8 +38,8 @@ Yes. Use of dojox.mobile.parser is not limited to mobile. It has enough capabili
 Android Issues
 ==============
 
-I can't seem to run Dojo Mobile pages on Android devices when using libaries like PhoneGap, what am I doing wrong?
-------------------------------------------------------------------------------------------------------------------
+I can't seem to run Dojo Mobile pages on Android devices when using libraries like PhoneGap, what am I doing wrong?
+-------------------------------------------------------------------------------------------------------------------
 
 There is a known bug in the Android WebKit browser implementation that does not allow files starting with an underscore '_' character to be loaded from local file system (for example when using Dojo Mobile in conjunction with PhoneGap to create a native app).  The way around this problem is to create a built version of your files (you'll want to do this anyway for performance).
 

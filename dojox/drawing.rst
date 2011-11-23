@@ -206,7 +206,7 @@ Manipulating the Drawing
 			
 			y: Top point y
 			
-			width: Optional width of Text. Not required but reccommended. For auto-sizing, use TextBlock
+			width: Optional width of Text. Not required but recommended. For auto-sizing, use TextBlock
 			
 			height: Optional height of Text. If not provided, _lineHeight is used.
 			

@@ -30,5 +30,5 @@ See Also:
 =========
 
 * :ref:`dijit.Dialog <dijit/Dialog>`
-* :ref:`dojox.layout.Contentpane <dojox/layout/ContentPane>`
+* :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>`
 * :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`

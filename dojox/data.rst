@@ -47,7 +47,7 @@ Features
 
 * :ref:`dojox.data.CsvStore <dojox/data/CsvStore>`
 
-  A read interface that works with CSV formated data files
+  A read interface that works with CSV formatted data files
 
 * :ref:`dojox.data.FileStore <dojox/data/FileStore>`
 

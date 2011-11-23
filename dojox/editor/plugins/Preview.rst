@@ -18,7 +18,7 @@ Features
 
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
-* Button with icon in toolbar for ppreviewing the content outside of the editor framedocument.
+* Button with icon in toolbar for previewing the content outside of the editor framedocument.
 * The ability to define a set of CSS styles or stylesheets to apply to the content in the preview view.
 
 =====

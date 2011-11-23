@@ -56,7 +56,7 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 User Interface
 ==============
 
-AutoUrlLink plugin is a plugin for dijit.Editor, which provides the users with the ability to activative all URL Links automatically. There are three ways that triggle the activation.
+AutoUrlLink plugin is a plugin for dijit.Editor, which provides the users with the ability to activate all URL Links automatically. There are three ways that trigger the activation.
 
 * The URL is terminated by a trailing space.
 * The URL is terminated by an enter.

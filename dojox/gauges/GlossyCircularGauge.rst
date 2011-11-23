@@ -44,11 +44,11 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | value                    |  "0"                                    |  The current value.                                            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksInterval       |  "10"                                   |  The interval beetwen each majors tick                         |
+| majorTicksInterval       |  "10"                                   |  The interval between each majors tick                         |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          |
+| minorTicksInterval       |  "5"                                    |  The interval between each minor tick                          |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | minorTicksColor          |  "#c4c4c4"                              |  Color of the minor tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
@@ -66,17 +66,17 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksLabelPlacement |  "inside"                               |  Indicates how label are placed relatively to the tick marks:  |
 |                          |                                         |  either "inside" or "outside". "inside" means between the ticks|
-|                          |                                         |  and the center of the gauge, and "outide" means between the   |
-|                          |                                         |  gauges's border and the tick marks                            |
+|                          |                                         |  and the center of the gauge, and "outside" means between the  |
+|                          |                                         |  gauge's border and the tick marks                             |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | noChange                 |  "true"                                 |  Indicates if user can change the value of the gauge by        |
 |                          |                                         |  interacting with the needle                                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | title                    |  "title"                                |  The title displayed in the needle's tooltip                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| scalePrecision           |  "0"                                    |  The precision for the formating of numbers in the scale       |
+| scalePrecision           |  "0"                                    |  The precision for the formatting of numbers in the scale      |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorPrecision   |  "0"                                    |  The precision for the formating of numbers in the text        |
+| textIndicatorPrecision   |  "0"                                    |  The precision for the formatting of numbers in the text       |
 |                          |                                         |  indicator                                                     |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 

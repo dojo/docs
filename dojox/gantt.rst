@@ -27,7 +27,7 @@ Usage
 
 The following step shows how to create a typical gantt chart in dojo.
 
-Step 1: Import related CSS file and required javacript:
+Step 1: Import related CSS file and required javascript:
 
 .. js ::
   
@@ -45,7 +45,7 @@ Step 2: Declare gantt chart.
   
   var ganttChart = new dojox.gantt.GanttChart({
     readOnly: false,			//optional: determine if gantt chart is editable
-    dataFilePath: "gantt_defalut.json",	//optional: json data file path for load and save, default is "gantt_default.json"
+    dataFilePath: "gantt_default.json",	//optional: json data file path for load and save, default is "gantt_default.json"
     height: 400,			//optional: chart height in pixel, default is 400px
     width: 1200,			//optional: chart width in pixel, default is 600px
     withResource: true			//optional: display the resource chart or not
@@ -132,7 +132,7 @@ Project tree shows all the projects and their tasks, each task has a visual bar 
 Task Cascade View
 =================
 
-The task cascade view shows the task sequence and dependency between them. The "task bar" can be modified on starting time by moving horizontally, and set task duration by draging the right end of it.
+The task cascade view shows the task sequence and dependency between them. The "task bar" can be modified on starting time by moving horizontally, and set task duration by dragging the right end of it.
 
 .. image:: dragTaskBar.png
 

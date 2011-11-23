@@ -95,12 +95,12 @@ Here, we extend the previous code sample to illustrate how to connect to data :
  });
     
 
-The above call to setDataStore on the map implicitely calls setDataBindingAttribute with "product A" value (passed in parameter). This tells the Map component
+The above call to setDataStore on the map implicitly calls setDataBindingAttribute with "product A" value (passed in parameter). This tells the Map component
 what property value of dataStore items should be used to set the value on map elements (aka Feature instances).
 
 Here we look for the "product A" property of dataStore items (one item per US State in this example) to fetch the sales figures for product A, and colorize the map according to those values.
 
-The coloring is done via the addSeries call, that reads a color sheme from a Json file or object.
+The coloring is done via the addSeries call, that reads a color scheme from a Json file or object.
 
 Here is an example of a series object :
 

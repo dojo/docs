@@ -34,7 +34,7 @@ Usage
 Parameter     Type    Description
 ============  ======  ======================================================================
 href          String  URL to the large image to show in the lightbox.
-duration      int     The delay in milliseconds of the LighboxNano open and close animation.
+duration      int     The delay in milliseconds of the LightboxNano open and close animation.
 preloadDelay  int     The delay in milliseconds after the LightboxNano is created before preloading the larger image.
 ============  ======  ======================================================================
 

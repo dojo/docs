@@ -155,7 +155,7 @@ Declarative horizontal example
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
     </style>
 
-**NOTE** In delarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
+**NOTE** In declarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
 
 =============
 Accessibility

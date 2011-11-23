@@ -17,7 +17,7 @@ BusyButton is a simple widget which provides implementing more user friendly for
 Introduction
 ============
 
-When a form gets submitted by a user, many time it is recommended to disable the submit buttons to prevent double submittion.
+When a form gets submitted by a user, many time it is recommended to disable the submit buttons to prevent double submission.
 BusyButton provides a simple set of features for this purpose
 
 ========

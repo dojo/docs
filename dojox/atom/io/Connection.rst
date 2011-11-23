@@ -61,7 +61,7 @@ Functions
 | addEntry(entry, url, callback, errorCallback,                | Function to add an entry to a feed via APP (POST of a new entry)            |
 | retrieveEntry, scope)                                        |                                                                             |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
-| deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an exisiting entry |
+| deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an existing entry |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 ========
@@ -191,4 +191,4 @@ See Also
 ========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`: The backing model for the Feed used by this connection API.
-* :ref:`dojox.data.AppStore <dojox/data/AppStore>`: A datastore built ontop of this API.  Provides full APP support.
+* :ref:`dojox.data.AppStore <dojox/data/AppStore>`: A datastore built on top of this API.  Provides full APP support.

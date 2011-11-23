@@ -18,7 +18,7 @@ This is a stub help page for the new dojox.grid.LazyTreeGrid which is still in p
 Introduction
 ============
 
-The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid.TreeGrid, it is specifically designed for data store with huge nested-level rows. For the reason of the original TreeGrid can only do lazy-load on the 1st-level items, it doesn’t work well with large number of nested-level items. The Lazy-loading-TreeGrid renders each data item as an independent row no matter which level it is, and reuse the virtual scrolling model of DataGrid for paging of either top/nested level rows. This Widget inherits from dojo.grid.TreeGrid, hence all methods and properties pertaining to that Widget are also applicable.
+The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid.TreeGrid, it is specifically designed for data store with huge nested-level rows. For the reason of the original TreeGrid can only do lazy-load on the 1st-level items, it doesn't work well with large number of nested-level items. The Lazy-loading-TreeGrid renders each data item as an independent row no matter which level it is, and reuse the virtual scrolling model of DataGrid for paging of either top/nested level rows. This Widget inherits from dojo.grid.TreeGrid, hence all methods and properties pertaining to that Widget are also applicable.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -143,7 +143,7 @@ For the reason of lazy loading children items, the dojox.grid.LazyTreeGrid could
     ]}
   }
 
-In this case, the "children" attribute would be a flag rather than a truely value. (The name of "children" attribute would be specified by the TreeModel)
+In this case, the "children" attribute would be a flag rather than an actual value. (The name of "children" attribute would be specified by the TreeModel)
 
 Also, the nested data structure is available in normally case (small data or data is stored at client side). For example:
 
@@ -330,7 +330,7 @@ In order to display better for different levels, user could do cells merge based
     ]
   };
   
-The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. The level is 0-based. The value of these attributes would be a JSON object array, each element of these array would indicate the detail of column span, the start indicate the start column index of colspan, end is end column index of colspan, and the primary is index of column which content will be dispalyed (start value by default).
+The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. The level is 0-based. The value of these attributes would be a JSON object array, each element of these array would indicate the detail of column span, the start indicate the start column index of colspan, end is end column index of colspan, and the primary is index of column which content will be displayed (start value by default).
 
 ==========
 Public API
@@ -343,12 +343,12 @@ Name       Parameters                             Return                 Descrip
 =========  =====================================  =====================  =======================================================
 setModel   treeModel                              N/A                    Change the LazyTreeGrid's treeModel.
 
-expand     itemId: string?                        N/A                    Function to handle expanding the row which item maching
-                                                                         with the given item id.
-collapse   itemId: string?                        N/A                    Function to handle collapsing the row which item maching
-                                                                         with the given item id.
-refresh    keepState: boolean                     N/A                    Function to handle refresh the grid content with or
-                                                                         without keep the folding state.
+expand     itemId: string?                        N/A                    Function to handle expanding the row with item matching
+                                                                         the given item id.
+collapse   itemId: string?                        N/A                    Function to handle collapsing the row which item matching
+                                                                         the given item id.
+refresh    keepState: boolean                     N/A                    Function to refresh the grid content with or
+                                                                         without keeping the folding state.
 =========  =====================================  =====================  =======================================================
 
 ========
@@ -377,4 +377,4 @@ See Also
 
 * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+  This grid offers support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

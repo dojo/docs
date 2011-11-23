@@ -326,7 +326,7 @@ The following properties of Font are recognized:
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | variant        | "normal","small-caps"                   |Same as the CSS font-variant property.   Default: "normal"                     | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| weight         | "normal","nold","bolder","lighter",     |Same as the CSS font-weight property.   Default: "normal"                      | 1.0       |
+| weight         | "normal","bold","bolder","lighter",     |Same as the CSS font-weight property.   Default: "normal"                      | 1.0       |
 |                | 100,200,300,400,500,600,700,800,900     |                                                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | size           | css font size value                     |Same as the CSS font-size property.   Default: "10pt"                          | 1.0       |
@@ -762,7 +762,7 @@ Surface
 
   A surface supports following methods:
 
-  getDimensions()/setDimensions(widht, height)
+  getDimensions()/setDimensions(width, height)
     Accesses sizes set on the surface.
 
   createShape(shape)
@@ -1111,7 +1111,7 @@ Text
     Coordinates of a text anchor. Defaults: 0, 0.
 
   text
-    A string of characters you want to show aligned to the anchor poistion. Default: "".
+    A string of characters you want to show aligned to the anchor position. Default: "".
 
   align
     An alignment of a text in regards to the anchor position:
@@ -1404,7 +1404,7 @@ angle1
 angle2
   Defines the second rotation.
 
-Using these values the input matrix can be represented as a suporposition of "primitive" transformations: [translate(dx, dy), rotate(angle2), scale(sx, sy), rotate(angle1)].
+Using these values the input matrix can be represented as a superposition of "primitive" transformations: [translate(dx, dy), rotate(angle2), scale(sx, sy), rotate(angle1)].
 
 arc.js
 ------

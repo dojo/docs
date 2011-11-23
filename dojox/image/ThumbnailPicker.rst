@@ -51,7 +51,7 @@ set the **numberThumbs** attribute, e.g.
 Setting the Data Source
 -----------------------
 
-To set the data source for the ThumnailPicker widget, first create one of the available data stores, such
+To set the data source for the ThumbnailPicker widget, first create one of the available data stores, such
 as the dojo.data.ItemFileReadStore or dojox.data.FlickrRestStore. Next, create a request object, which
 optionally contains a query. e.g.
 

@@ -17,7 +17,7 @@ A store implementing the dojo.data.Read API for talking to OpenSearch based sear
 Introduction
 ============
 
-This store takes in the OpenSearch Descriptor and uses that to configure how a search query is issued.  It can also take the search results and present them as data store formatted items for a wide variety of return formarts for OpenSearch results.  For more information on the general concepts behind OpenSearch, please refer to `OpenSearch project <http://www.opensearch.org/Home>`_.
+This store takes in the OpenSearch Descriptor and uses that to configure how a search query is issued.  It can also take the search results and present them as data store formatted items for a wide variety of return formats for OpenSearch results.  For more information on the general concepts behind OpenSearch, please refer to `OpenSearch project <http://www.opensearch.org/Home>`_.
 
 
 Supported OpenSearch Return Formats
@@ -31,7 +31,7 @@ Supported OpenSearch Return Formats
 Limitations
 ===========
 
-* This store uses dojo.xhrGet and other xhr functions to fetch the OpenSearch descriptor and make search queries.  Therefore, the OpenSearchStore is limited by the brower 'same domain' policy for xhr requests.  Therefore, to make OpenSearch calls to providers that reside on servers other than the one that provided the HTML file that instantiated the OpenSearchStore, a proxy must be used.
+* This store uses dojo.xhrGet and other xhr functions to fetch the OpenSearch descriptor and make search queries.  Therefore, the OpenSearchStore is limited by the browser 'same domain' policy for xhr requests.  Therefore, to make OpenSearch calls to providers that reside on servers other than the one that provided the HTML file that instantiated the OpenSearchStore, a proxy must be used.
 * The OpenSearchStore does not currently support HTML return formats.  The reason for this is an open issue with dojo.query and searching by ID.  The bug the OpenSearchStore is blocked on can be found `here <http://trac.dojotoolkit.org/ticket/4425>`_.
 
 ==============
@@ -71,7 +71,7 @@ An OpenSearch search result is a simplistic data item.  It contains very few att
 Query Syntax
 ============
 
-The fetch method query syntax for OpenSearchStore is limited to what the OpenSearch specification allows, which is a single parameter called 'searchTerms'.  The OpenSearchStore expects this parameter to be part of the query arguement of its fetch object as a name/value key set in JavaScript object.  For an example, see below:
+The fetch method query syntax for OpenSearchStore is limited to what the OpenSearch specification allows, which is a single parameter called 'searchTerms'.  The OpenSearchStore expects this parameter to be part of the query argument of its fetch object as a name/value key set in JavaScript object.  For an example, see below:
 
 .. js ::
 

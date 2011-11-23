@@ -188,7 +188,7 @@ type            String              Mandatory                   A registered exp
 args            Object              Optional(default to {})     An argument to define fetchArgs and writerArgs like:
                                                                 { fetchArgs: {...}, writerArgs: {...} }
                                                                 fetchArgs is some arguments for store.fetch.
-                                                                writerArgs is some arguments for the current wirter.
+                                                                writerArgs is some arguments for the current writer.
 onExported      function(string)    Mandatory                   Call back function when export result is ready.
 ==============  ==================  ==========================  ===========================================================
 
@@ -226,7 +226,7 @@ To create your own exporter, you should use this export framework by extending a
 _ExportWriter – The Base Class
 ------------------------------
 
-This is an abstract class for all of the writers used in the Exporter plugin. It applies the strategy pattern to break the export work into several stages, and provides interfaces for all of them. Implementations might choose to override some of the functions in this class thus providing their own functionality. The Exporter will go through the grid row by row. In every row, all the Views will be reached and the header row is only handled once. The APIs exposed by this class to implementors is shown below. You can implement them by extending "dojox.grid.enhanced.plugins.exporter._ExportWriter".
+This is an abstract class for all of the writers used in the Exporter plugin. It applies the strategy pattern to break the export work into several stages, and provides interfaces for all of them. Implementations might choose to override some of the functions in this class thus providing their own functionality. The Exporter will go through the grid row by row. In every row, all the Views will be reached and the header row is only handled once. The APIs exposed by this class to implementers is shown below. You can implement them by extending "dojox.grid.enhanced.plugins.exporter._ExportWriter".
 
 beforeHeader(grid):
 	We are going to start moving through the grid. Is there anything we should do now?
@@ -368,7 +368,7 @@ rowIdx       Integer                   beforeContentRow             The index of
                                        afterSubrow
                                        handleCell
 subrow       dojox.grid.cells._base[]  beforeSubrow                 Reference to the current subrow.
-                                       afterSubrow                  A subrow describe the innter structure of a row in a view, it's an array of cells
+                                       afterSubrow                  A subrow describing the inner structure of a row in a view, it's an array of cells
                                        handleCell
 subrowIdx    Integer                   beforeSubrow                 The index of the current subrow in the subrow array: _View.structure.cells.
                                        afterSubrow
@@ -416,7 +416,7 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
 
 .. js ::
   
-  //First delcare your class.
+  //First declare your class.
   dojo.provide("dojox.grid.enhanced.plugins.exporter.CSVWriter");
 
   //Require the base class.
@@ -442,24 +442,24 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
     },
 
     beforeContentRow: function(/* object */argObj){
-      //Overrided from _ExportWriter
+      //Overridden from _ExportWriter
       //For each column,
       //	get the cell data of the current row, and format them with _formatCSVCell
-      //Join these cell data together with the separater.
+      //Join these cell data together with the separator.
       //Save the result.
       //return false, because we don't need to go into the row. Thus improves the performance.
     },
 
     handleCell: function(/* object */arg_obj){
       // summary:
-      //		Overrided from _ExportWriter
+      //		Overridden from _ExportWriter
       //Check if arg_obj.isHeader is true. We have already handled content cells in the above function,
       //here we only need to deal with the header cells.
       //You can get the header name by arg_obj.cell.name.
     },
 
     toString: function(){
-      //Overrided from _ExportWriter
+      //Overridden from _ExportWriter
       //Join all the saved result together and return.
     }
   });
@@ -471,4 +471,4 @@ See Also
 * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

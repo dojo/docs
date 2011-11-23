@@ -30,7 +30,7 @@ Features
 
 * ``New in 1.4`` :ref:`dojox.html.entities <dojox/html/entities>`
 
-  Adds support for encoding and unencoding HTML/XML entity characters in text. Also provides basic mappings of character to entity encoding for HTML and LATIN (8859-1), special characters.  For information on entities see:  `Entity Reference <http://www.w3schools.com/HTML/html_entities.asp>`_ and `Latin (8859-1) Entities <http://www.w3schools.com/tags/ref_entities.asp>`_
+  Adds support for encoding and decoding HTML/XML entity characters in text. Also provides basic mappings of character to entity encoding for HTML and LATIN (8859-1), special characters.  For information on entities see:  `Entity Reference <http://www.w3schools.com/HTML/html_entities.asp>`_ and `Latin (8859-1) Entities <http://www.w3schools.com/tags/ref_entities.asp>`_
 
   * To use dojo.require("dojox.html.entities");
   * you now have access to entity array mappings for HTML (dojox.html.entities.html) and LATIN-1 (dojox.html.entities.latin)

@@ -1,7 +1,7 @@
 .. _dojox/mobile/RoundRect:
 
-dojox.mobile.RounRect
-=====================
+dojox.mobile.RoundRect
+======================
 
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama

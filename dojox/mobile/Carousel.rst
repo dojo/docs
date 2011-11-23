@@ -40,7 +40,7 @@ Constructor Parameters
 |pageIndicator |Boolean   |true     |If true, a page indicator, a series of small dots that indicate the current page, is displayed on the title|
 |              |          |         |bar.                                                                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|navButton     |Boolean   |false    |If true, navigation buttons are displyaed on the title bar.                                                |
+|navButton     |Boolean   |false    |If true, navigation buttons are displayed on the title bar.                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |height        |String    |"300px"  |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified, the height is inherited|
 |              |          |         |from its offset parent.                                                                                    |

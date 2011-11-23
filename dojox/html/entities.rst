@@ -19,7 +19,7 @@ Features
 ========
 
 * Complete entity map for HTML.
-* Complete entiity map for LATIN-1 (8859-1)
+* Complete entity map for LATIN-1 (8859-1)
 * Simple to use encode and decode functions.
 
 =================

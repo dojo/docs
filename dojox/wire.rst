@@ -14,5 +14,5 @@ and passed to and from services.  It also provides a set of widgets
 within the dojox.wire.ml package to allow for declarative data binding
 definitions in addition to the programmatic APIs.
 
-In essense, this project is an API to provide a simplified way of doing MVC
+In essence, this project is an API to provide a simplified way of doing MVC
 patterns in the client.

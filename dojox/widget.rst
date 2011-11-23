@@ -56,7 +56,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * :ref:`dojox.widget.FilePicker <dojox/widget/FilePicker>`
 
-  A specialized version of RollingList that handles file informatione
+  A specialized version of RollingList that handles file information
 
 * :ref:`dojox.widget.FisheyeList <dojox/widget/FisheyeList>`
 

@@ -10,7 +10,7 @@ dojox.editor.plugins.InsertEntity
 .. contents::
     :depth: 2
 
-Have you ever wanted to easily insert the copyright symbol, the trademark symbol, or any of a variety of mathematical symbols into the document you're editing in the dijit.Editor?   If so, then this plugin is for you!  This plugin provides a subset of entity characters that can be inserted into your documents.  The symbols provided are primarily the non-ascii 8859 characters and a arge set of greek symbols used in mathematics.
+Have you ever wanted to easily insert the copyright symbol, the trademark symbol, or any of a variety of mathematical symbols into the document you're editing in the dijit.Editor?   If so, then this plugin is for you!  This plugin provides a subset of entity characters that can be inserted into your documents.  The symbols provided are primarily the non-ascii 8859 characters and a large set of greek symbols used in mathematics.
 
 ========
 Features

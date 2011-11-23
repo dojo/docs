@@ -18,7 +18,7 @@ A specialized version of RollingList that handles file information
 Introduction
 ============
 
-The file picker extends the rolling list to add file-specific styling (folder/file icons), as well as the concept of file system heirarchy.
+The file picker extends the rolling list to add file-specific styling (folder/file icons), as well as the concept of file system hierarchy.
 
 =====
 Usage

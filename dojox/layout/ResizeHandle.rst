@@ -88,7 +88,7 @@ This widget accepts a number of different options for choosing which node to res
 Resize Direction
 ----------------
 
-This widget can [currenty] resize in 3 directions. This is defined by the ``resizeAxis`` parameter. Defaulting to "xy", though you are able to limit movement to X and Y axis changes only by setting "x" and "y" respectively.
+This widget can [currently] resize in 3 directions. This is defined by the ``resizeAxis`` parameter. Defaulting to "xy", though you are able to limit movement to X and Y axis changes only by setting "x" and "y" respectively.
 
 .. js ::
   
@@ -97,7 +97,7 @@ This widget can [currenty] resize in 3 directions. This is defined by the ``resi
 Constraints
 -----------
 
-By default, the resiable will be constrained to a minimum size of 100px x 100px, defined by the ``minWidth`` and ``minHeight`` properties. These are always used, though this will undoubtably change as this widget is extended into considering top/left changes as well.
+By default, the resizable will be constrained to a minimum size of 100px x 100px, defined by the ``minWidth`` and ``minHeight`` properties. These are always used, though this will undoubtedly change as this widget is extended into considering top/left changes as well.
 
 .. js ::
   

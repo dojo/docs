@@ -24,7 +24,7 @@ Dojo Toolkit offers three different Grid widgets:
 
 * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure. ``New in 1.4``
+  This grid offers support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure. ``New in 1.4``
 
   .. image:: TreeGrid.png
 

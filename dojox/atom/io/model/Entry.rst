@@ -39,7 +39,7 @@ Below are all the additional functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overriden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Entry                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+

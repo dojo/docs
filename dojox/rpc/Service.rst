@@ -87,7 +87,7 @@ Service, like io.script, works around Dojo's built in :ref:`Deferred <dojo/Defer
          console.log(data.responseData.results);
       })
       .addErrback(function(data){
-         // an error occured. timeout, bad data, etc.
+         // an error occurred. timeout, bad data, etc.
       });
 
 This will trigger a web search for the phrase "Dojo Toolkit", and fire your callback function when complete.

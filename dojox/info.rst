@@ -38,7 +38,7 @@ DojoX follows the same naming conventions as Dojo and Dijit, which basically con
 * All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with :ref:`dojox.grid.DataGrid <dojox/grid>`
 * No cross-namespace pollution takes place indirectly.
 
-There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hypens**. By adding a hypen to the
+There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hyphens**. By adding a hyphen to the
 module name, it is meant to be clear the module modifies something elsewhere in Dojo.
 
 For instance, ``dojox.fx.ext-dojo.NodeList`` adds :ref:`dojox.fx <dojox/fx>` functionality into :ref:`dojo.NodeList <dojo/NodeList>`, making it available from a :ref:`dojo.query <dojo/query>` call.

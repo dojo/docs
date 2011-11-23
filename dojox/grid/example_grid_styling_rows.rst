@@ -33,9 +33,9 @@ To use it, you just have to override default behavior by yours.
 	     //The row object has 4 parameters, and you can set two others to provide your own styling
 	     //These parameters are :
 	     //	-- index : the row index
-	     //	-- selected: wether the row is selected
-	     //	-- over : wether the mouse is over this row
-	     //	-- odd : wether this row index is odd.
+	     //	-- selected: whether or not the row is selected
+	     //	-- over : whether or not the mouse is over this row
+	     //	-- odd : whether or not this row index is odd.
 	     var item = grid6.getItem(row.index);
 	     if(item){
 		var type = store3.getValue(item,"type",null);

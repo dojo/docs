@@ -19,7 +19,7 @@ Introduction
 
 dojox.data.GoogleSearchStore is a read only data store that can be used to search Google.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-GoogleSearchStore has a number of child classes, each of which implement differernt search types, e.g. Web, Books, Images etc.   The default search type is Web search, which returns the same results you would get when using google.com.  This means that dojox.data.GoogleSearchStore is functionally equivalent to it's child class dojox.data.GoogleWebSearchStore.
+GoogleSearchStore has a number of child classes, each of which implement different search types, e.g. Web, Books, Images etc.   The default search type is Web search, which returns the same results you would get when using google.com.  This means that dojox.data.GoogleSearchStore is functionally equivalent to it's child class dojox.data.GoogleWebSearchStore.
 
 
 =====

@@ -310,7 +310,7 @@ The argument object can accept the following properties:
 =================  ========  ===============  ===================================================================================================================================================
 Property           Type      Default Value    Description
 =================  ========  ===============  ===================================================================================================================================================
-copyOnly           Boolean   false            Set whether dragging from thid grid means moving or copying.
+copyOnly           Boolean   false            Set whether dragging from this grid means moving or copying.
 dndConfig          Object    {}               Enable/disable dnd for every draggable objects ("row", "col", and "cell") in every kind of circumstance (drag "within", "in" to, or "out" of grid).
                                               These draggable objects and circumstances are configured in a hierarchical manner.
                                               You can set either "row"/"col"/"cell" or "within"/"in"/"out" at the first level, and configure the other group at the second level.
@@ -536,7 +536,7 @@ Known Limitations
 =================
 
 * Multiple row layout is not supported by this DnD plugin.
-* Please be careful when dragging a numeric cell to a string cell (or visi versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
+* Please be careful when dragging a numeric cell to a string cell (or vice versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
 
 
 ========
@@ -547,4 +547,4 @@ See Also
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
 * :ref:`dojox.grid.EnhancedGrid.plugins.Selector <dojox/grid/EnhancedGrid/plugins>` - The selector plugin of enhanced grid
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

@@ -14,7 +14,7 @@ The dojox.date.relative package provides a function for parsing dates relative t
 
 Dates are formatted according to the following logic:
  * If the day portion of the date falls within the day portion of the relativeDate, then the time will be all that is displayed (i.e. "9:32 AM")
- * If the day portion of the date falls within the week preceeding the relativeDate, then the display will show day of week and time (i.e. "Mon 9:32 AM")
+ * If the day portion of the date falls within the week preceding the relativeDate, then the display will show day of week and time (i.e. "Mon 9:32 AM")
  * If the year portion of the date falls within the year portion of the relativeDate, then the display will show month and day (i.e. "Nov 1")
  * Otherwise, this function is equivalent to calling dojo.date.format with formatLength of "medium"
 

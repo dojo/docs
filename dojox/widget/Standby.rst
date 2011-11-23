@@ -304,7 +304,7 @@ Changing overlay color and image
 Showing curved border cloning
 -----------------------------
 
-This example works on Firefix and Safari only.
+This example works on Firefox and Safari only.
 
 .. code-example ::
   

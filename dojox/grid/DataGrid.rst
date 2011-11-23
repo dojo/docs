@@ -376,7 +376,7 @@ Here are some undocumented (here) components:
 
 Getting a value from a row knowing the row index
 ------------------------------------------------
-Assume that you know the row index and the name of the column whos value you wish to retrieve, you can obtain that value using the following snippet:
+Assuming that you know the row index and the name of the column whose value you wish to retrieve, you can obtain that value using the following snippet:
 
 .. js ::
   
@@ -921,9 +921,9 @@ To use it, you just have to override default behavior by yours.
 	     /* The row object has 4 parameters, and you can set two others to provide your own styling
 	        These parameters are :
 	      	-- index : the row index
-	     	-- selected: wether the row is selected
-	     	-- over : wether the mouse is over this row
-	     	-- odd : wether this row index is odd. */
+	     	-- selected: whether or not the row is selected
+	     	-- over : whether or not the mouse is over this row
+	     	-- odd : whether or not this row index is odd. */
 	     var item = grid.getItem(row.index);
 	     if(item){
 		var type = store.getValue(item, "col2", null);
@@ -1270,7 +1270,7 @@ Creating a grid in a node with display: none
 --------------------------------------------
 
 It is not possible to create a grid as a child of a node which is set to be not displayed (display: none).
-If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen
+If you need to do this though for some reason you can set the grid's visibility to "hidden" and its position off screen
 
 Hiding the Headers of a Grid
 ----------------------------
@@ -1345,18 +1345,18 @@ Keyboard
 ==============================================    ===============================================
 Action                                            Key
 ==============================================    ===============================================
-Navigate into the grid			          The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
+Navigate into the grid			                  The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
 Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
-Navigate between data cells		          With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
-Sort a column					  With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
-Edit a cell				          If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
-Cancel edit mode				  When a cell is being edited, pressing escape will cancel edit mode.
-End edit mode					  When a cell is being edited, pressing enter will accept the change and end edit mode.
-Focus editable cells				  With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
-Invoke an onrowclick event	                  If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
-Select a row				          With focus on a cell in a row, press the space bar.
-Select contiguous rows			          Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
-Select discontinuous rows		          Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection.
+Navigate between data cells		                  With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
+Sort a column					                  With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
+Edit a cell				                          If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
+Cancel edit mode				                  When a cell is being edited, pressing escape will cancel edit mode.
+End edit mode					                  When a cell is being edited, pressing enter will accept the change and end edit mode.
+Focus editable cells				              With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
+Invoke an onrowclick event	                      If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
+Select a row				                      With focus on a cell in a row, press the space bar.
+Select contiguous rows			                  Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
+Select discontinuous rows		                  Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection.
 Change column size (1.4)                          Set focus to a column header, hold shift+control and press the left or right arrow key so change the column size.
 ==============================================    ===============================================
 
@@ -1369,8 +1369,8 @@ Keyboard
 ~~~~~~~~
 
 * There is no keyboard mechanism to change column size in 1.3. This was added in 1.4.
-* Keyboard navigation does NOT skip hidden columns in 1.3. This was fixed in 1.4. Hidden colummns are now skipped when arrowing through the column headers and data.
-* There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function.
+* Keyboard navigation does NOT skip hidden columns in 1.3. This was fixed in 1.4. Hidden columns are now skipped when arrowing through the column headers and data.
+* There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanism (dialog box, context menu, etc.) to perform the same function.
 * Tree Grids are not supported for Accessibility.
 * Developers who add additional features via scripting, such as hidden rows, are responsible for the accessibility of the added feature(s).
 * Invoking links within cells via the keyboard is not supported.
@@ -1390,7 +1390,7 @@ See also
 
 * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
-  This grid offers support for collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+  This grid offers support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
 
 * :ref:`dojox.grid.LazyTreeGrid <dojox/grid/LazyTreeGrid>`
 

@@ -16,7 +16,7 @@ Pagination plugin provides paging functionality for grid.
 Introduction
 ============
 
-Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the user to navigate within the grid data by page. It provides page navigation and page length choices. The following documentation describes how to use the pagination plugin and its public API.
+Pagination is a plugin for dojox.grid.EnhancedGrid. It's designed to allow the user to navigate within the grid data by page. It provides page navigation and page length choices. The following documentation describes how to use the pagination plugin and its public API.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -205,7 +205,7 @@ Key                                             Action
 Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation
                                                 choices) of the pagination bar will receive the focus.
 Tab/shift + Tab from inside of pagination bar   The focus will switch among the elements of the pagination bar.
-arrow key                                       The focus will move the specfic direction in current element
+arrow key                                       The focus will move the specific direction in current element
                                                 area.
 ==============================================  ===============================================================
 

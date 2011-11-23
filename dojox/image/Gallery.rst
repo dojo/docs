@@ -97,9 +97,9 @@ This affects the performance. The larger the page size, the slower a request may
 there will be fewer requests. The smaller the page size, the quicker a request may be, but
 there will be more requests. It is specified by altering the pageSize attribute.
 
-By default, the Gallery will preload one page of images at a time. This gives a better user
+By default, the Gallery will pre-load one page of images at a time. This gives a better user
 experience, as the user will have to wait less time to view an image. However, it may
-download more images than the user wishes to view. The autoloading of images can be disabled
+download more images than the user wishes to view. The auto-loading of images can be disabled
 by setting the autoLoad attribute to "false".
 
 

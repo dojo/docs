@@ -33,7 +33,7 @@ Quick Start
 The following example shows how the default widget works. Make it work by
 
 
-Now you are set and the rating widget should render and be useable.
+Now you are set and the rating widget should render and be usable.
 
 .. html ::
     

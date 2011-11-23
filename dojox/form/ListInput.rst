@@ -21,10 +21,10 @@ Introduction
 
 The ListInput widget is a new way for letting user to create a list.
 
-The list is populated by an input. The datas written in the field are added to the list when : onblur, enter key pressed, or by adding a separator in the input(like comma).
+The list is populated by an input. The data written in the field is added to the list when : onblur, enter key pressed, or by adding a separator in the input(like comma).
 
-Datas can be validated by a regular expression before the adding.
-When page is submitted, you can choose to post all datas or just the valid one.
+Data can be validated by a regular expression before the adding.
+When page is submitted, you can choose to post all the data or just the valid items.
 
 The left and right arrows are used to re-edit an entry.
 

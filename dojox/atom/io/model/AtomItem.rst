@@ -28,7 +28,7 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | categories      | Houses the dojox.atom.io.model.Category objects associated with this Atom item              |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| Array                      | contributors    | Houses the idojox.atom.io.model.Person objects of the contributors                          |
+| Array                      | contributors    | Houses the dojox.atom.io.model.Person objects of the contributors                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | icon            | The URL to the icon for this item.                                                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
@@ -59,7 +59,7 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overriden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this AtomItem from a given DOMNode.                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+

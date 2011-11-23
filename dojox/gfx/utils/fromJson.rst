@@ -3,7 +3,7 @@
 dojox.gfx.utils.fromJson
 ========================
 
-:Authors: Eugene Lazukin, Jared Jurkiewicz
+:Authors: Eugene Lazutkin, Jared Jurkiewicz
 :Available: since V1.0
 
 .. contents::

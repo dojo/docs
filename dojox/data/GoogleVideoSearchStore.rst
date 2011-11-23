@@ -60,7 +60,7 @@ The pattern of using the GoogleSearchStore is
       console.log ("Title is " + store.getValue(item, "title"));
       console.log ("Url is " + store.getValue(item, "url"));
       console.log ("Duration is " + store.getValue(item, "duration"));
-      console.log ("Thubnail image Url is " + store.getValue(item, "tbUrl"));
+      console.log ("Thumbnail image Url is " + store.getValue(item, "tbUrl"));
     })
   };
 

@@ -51,9 +51,9 @@ In addition to the the standard store api, the store provides a few additional m
 
 * dump(options)
 
-  Takes a options keyword parameter accepting clone, cleanMeata, and suppressExportMeta Boolean options and an export type option that takes "raw" or "json" as the parameters.
+  Takes a options keyword parameter accepting clone, cleanMeta, and suppressExportMeta Boolean options and an export type option that takes "raw" or "json" as the parameters.
 
-Two addtional notification events are also triggered in this store, onSave() and onRevert() which will each be called after their respective
+Two additional notification events are also triggered in this store, onSave() and onRevert() which will each be called after their respective
 events have completed.
 
 
@@ -76,7 +76,7 @@ Usage
               {id: 2, type: orange}
          ],
          vegetables: [
-              {id: 3, type: "brocolli"}
+              {id: 3, type: "broccoli"}
          ]
      });
   </script>
@@ -95,7 +95,7 @@ url - string
   Load data from this url in JSON format and use the Object created from the data as the data source.
 
 indexOnLoad - Boolean
-  Parse the data object and set individual objects up as appropriate. This will add meta data and assign id's to objects that dont' have them as defined by the idAttribute option. Disabling this option will keep this parsing from happening until a query is performed at which time only the top level of an item has meta info stored. This might work in some situations, but you will almost always want to indexOnLoad or use another option which will create an index. Defaults to true.
+  Parse the data object and set individual objects up as appropriate. This will add meta data and assign id's to objects that don't have them as defined by the idAttribute option. Disabling this option will keep this parsing from happening until a query is performed at which time only the top level of an item has meta info stored. This might work in some situations, but you will almost always want to indexOnLoad or use another option which will create an index. Defaults to true.
 
 idAttribute - string
   Defaults to '_id'. The name of the attribute that holds an objects id. This can be a preexisting id provided by the server. If an ID isn't already provided when an object is fetched or added to the store, the autoIdentity system will generate an id for it and add it to the index. There are utility routines for exporting data from the store that can clean any generated IDs before exporting and leave preexisting id's in tact.
@@ -130,7 +130,7 @@ Programmatic example
               {id: 2, type: orange}
          ],
          vegetables: [
-              {id: 3, type: "brocolli"}
+              {id: 3, type: "broccoli"}
          ]
      });
   </script>

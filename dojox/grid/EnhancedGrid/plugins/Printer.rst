@@ -221,7 +221,7 @@ Usage
 When this plugin is enabled, the following methods are available in a grid widget:
 
 printGrid
-	Print desired rows in the grid (by ``fetchArgs``), using ``title`` as a title, decorating generated html by ``cssFiles``, using ``writerArgs`` (tagName:"attrbuteList" pairs) to control html tags in the generated html string.
+	Print desired rows in the grid (by ``fetchArgs``), using ``title`` as a title, decorating generated html by ``cssFiles``, using ``writerArgs`` (tagName:"attributeList" pairs) to control html tags in the generated html string.
 
 ==============  ==================  ==========================  ====================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -314,4 +314,4 @@ See Also
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
 * :ref:`dojox.grid.EnhancedGrid.plugins.Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>` - The Exporter plugin
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

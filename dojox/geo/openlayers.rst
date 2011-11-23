@@ -460,7 +460,7 @@ Example that shows a star at Paris location:
 
 The styling of the GFX shapes is done through the setFill and setStroke methods of the GeometryFeature class. These fill and stroke parameters are simply passed to the shape at display time and depend on the kind of shape displayed.
 
-The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two followinf code are equivalent.
+The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two following code segments are equivalent.
 
 .. js ::
   

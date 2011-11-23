@@ -276,7 +276,7 @@ itemsName                      String    "items"          The name of the items 
                                                           For example, if the data in the store are records of songs, you may set it to "songs",
                                                           so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
 closeFilterbarButton           Boolean   false            Whether to show the close-filterbar button.
-ruleCount                      Number    3                The maximum rule count of a filter. Defult to 3. If set to 0 or Infinity, infinite rules are supported.
+ruleCount                      Number    3                The maximum rule count of a filter. Default to 3. If set to 0 or Infinity, infinite rules are supported.
 ruleCountToConfirmClearFilter  Number    2                If the filter rule count is larger than or equal to this value, then a confirm dialog will show when
                                                           clearing filter. If set to less than 1 or null, then always show the confirm dialog. If set to Infinity,
                                                           then never show the confirm dialog. Default to 2.
@@ -284,11 +284,11 @@ disabledConditions             Object    undefined        Disable some condition
 isServerSide                   Boolean   false            If this is true, the actual filtering work will be taken over by the server.
                                                           This is used to switch between client-side filter and server-side filter.
 isStateful                     Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined,
-                                                          and it should be remembered at serverside until it is changed.
+                                                          and it should be remembered at server side until it is changed.
 url                            String    ""               When both isServerSide and isStateful are true, this is a place to set the server url,
                                                           if it cannot be retrieved by store.url.
 setupFilterQuery               Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in
-                                                          the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
+                                                          the filter definition. The signature of this function is setupFilterQuery(commands, request). See the last
                                                           section for details.
 =============================  ========  ===============  ================================================================================================================
 
@@ -321,7 +321,7 @@ autoComplete                          Boolean                              false
 disabledConditions                    String[]                             []                                        To disable some conditions for this column. For a full list of condition names, see below.
 dataTypeArgs                          Object                               {}                                        A place to put data type specific arguments.
 dataTypeArgs(for date/time type)      dojo.date.locale.__FormatOptions     {}                                        Defines how to parse the date/time data shown in the grid.
-dataTypeArgs(for boolean type)        Object                               {trueLable: "True", falseLable: "False"}  Set the label text for true value or false value.
+dataTypeArgs(for boolean type)        Object                               {trueLabel: "True", falseLabel: "False"}  Set the label text for true value or false value.
 ====================================  ===================================  ========================================  ============================================================================================
 
 Here is a list of all the condition names (case insensitive)
@@ -524,7 +524,7 @@ When the web page loads, the first POST that the server receives is the ``clear`
 
 Every time the user defines a filter, the server will receive a ``filter`` command. This command contains a JSON string representing the filter definition, which is covered in the next section.
 
-After recieving the filter command, the server should respond with the count of filtered rows in this format:
+After receiving the filter command, the server should respond with the count of filtered rows in this format:
 
 .. js ::
   
@@ -636,4 +636,4 @@ See Also
 * :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>` - The base grid
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>` - The enhanced grid supporting plugins
 * :ref:`dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>` - Overview of the plugins of enhanced grid
-* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsable rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure
+* :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>` - Grid with collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure

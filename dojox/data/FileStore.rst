@@ -104,7 +104,7 @@ Using the dojox.dataFileStore is generally simple. The store takes three possibl
 |                     |must use a proxy. **This parameter is required**                                               |                    |
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 |pathAsQueryParam     |This parameter alters the behavior of the dojo.data.api.Identity functions. By default it is   |boolean             |
-|                     |false. When it is false, any request for the information of a single file theough a            |                    |
+|                     |false. When it is false, any request for the information of a single file through a            |                    |
 |                     |fetchItemByIdentity call (and internally by loadItem), the url used is restful. This means the |                    |
 |                     |url request will look like:                                                                    |                    |
 |                     |                                                                                               |                    |

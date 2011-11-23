@@ -377,7 +377,7 @@ Example (using older HTML (non-validating) and mobile parser)
 
 * Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiates the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example.
 
-  The desktop browser compatability module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
+  The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
 
 * Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected="true" attribute is not specified for the second view.
 

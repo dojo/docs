@@ -41,7 +41,7 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overriden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this Link from a given DOMNode.                      |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+

@@ -27,7 +27,7 @@ Plugins included at this time:
 * idle - reports idle/activity
 * consoleMessages - reports console.* messages to the server
 
-Additionally, a :ref:`Google Ananlytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code.
+Additionally, a :ref:`Google Analytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code.
 
 
 =====
@@ -42,10 +42,10 @@ Usage
 	  data-dojo-config="parseOnLoad: true, sendInterval: 5000, analyticsUrl: 'http://server/path/to/dataLogger'"></script>
 
    <script language="JavaScript" type="text/javascript">
-          // include the analytics system
-          dojo.require("dojox.analytics");
+      // include the analytics system
+      dojo.require("dojox.analytics");
 
-          // this plugin returns the informatin dojo collects when it launches
+      // this plugin returns the information dojo collects when it launches
 	  dojo.require("dojox.analytics.plugins.dojo");
 
 	  // this plugin return the information the window has when it launches
@@ -85,7 +85,7 @@ Base
 
 consoleMessages
 ===============
- * consoleLogFuncs - array of console functions you want to be logged to the server.  Defaults to ["error", "warn", "info", "rlog"].  Note that you can place arbitrary names in this list, and if that function doesn't exist it will become available to your console object.  For exmaple, console.rlog("foo") will be sent to the server in this case.
+ * consoleLogFuncs - array of console functions you want to be logged to the server.  Defaults to ["error", "warn", "info", "rlog"].  Note that you can place arbitrary names in this list, and if that function doesn't exist it will become available to your console object.  For example, console.rlog("foo") will be sent to the server in this case.
 
 idle
 =====

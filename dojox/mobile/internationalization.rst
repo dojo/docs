@@ -72,7 +72,7 @@ If you need to do internationalization at client-side , use of dojo.i18n is the 
 dojox.mobile.i18n
 =================
 
-The above approach, however, requires javascript code for each UI widget that has translatable strings. That could be a pain especially when the application consists of a lot of widgets and is mainly wirtten as dojo markup.
+The above approach, however, requires javascript code for each UI widget that has translatable strings. That could be a pain especially when the application consists of a lot of widgets and is mainly written as dojo markup.
 dojox.mobile.i18n is an optional feature that simplifies internationalization in such cases. It is a thin wrapper around dojo.i18n, and has ability to replace strings, such as CDATA or attribute values, in dojo markup. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
 
 .. js ::

@@ -69,7 +69,7 @@ destroys it.
 
 Declarative example
 -------------------
-The code fragment creates a dojox.image.Magnifier and assoicates it with the src image.
+The code fragment creates a dojox.image.Magnifier and associates it with the src image.
 
 .. js ::
  

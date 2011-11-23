@@ -465,7 +465,7 @@ The one thing you may have noticed is that using multiple axes changes the persp
 
 Axis Title
 -----------
-Adding title to axis, the position, orientation and color of the axis tilte can be specified. Here are related parameter as follows.
+Adding title to axis, the position, orientation and color of the axis title can be specified. The parameters are:
 
 ================ =========== ======= ===========
 Name             Type        Default Description
@@ -491,7 +491,7 @@ You can turn on and off the tick marks at the minor and micro level, and turn la
 Natural & Fixed Precision Axis
 ------------------------------
 
-The natural property forces all ticks to be on natural numbers, and fixed which will fix the precision on labels and can be specifid as follows.
+The natural property forces all ticks to be on natural numbers, and fixed which will fix the precision on labels and can be specified as follows.
 
 .. js ::
   

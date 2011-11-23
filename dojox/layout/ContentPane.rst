@@ -11,7 +11,7 @@ dojox.layout.ContentPane
 .. contents::
    :depth: 2
 
-dojox.layout.ContenPane is an extension to dijit.layout.ContentPane providing script execution, among other things.
+dojox.layout.ContentPane is an extension to dijit.layout.ContentPane providing script execution, among other things.
 
 ============
 Introduction

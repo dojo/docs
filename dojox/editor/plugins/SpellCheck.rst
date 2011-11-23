@@ -116,7 +116,7 @@ We have three parameters in the request: content, callback and lang.
 
 * **content** - The word list to be checked. The words are divided by space char. It may look like "thi is an errir".
 * **callback** - This one is the name of callback function. For more information, please refer to JSONP specification.
-* **lang** - This parameter is specified by the user. It could be any paramenter here as long as it is declared in the plugin declaration.
+* **lang** - This parameter is specified by the user. It could be any parameter here as long as it is declared in the plugin declaration.
 
 What the server-side piece response should follow the format below:
 
@@ -262,7 +262,7 @@ If there is more than one parser, the first registered one wins. An example foll
     
     while(index < length){
      var ch;
-     // Skip the white charactor and need to treat HTML entity respectively
+     // Skip the whitespace character and need to treat HTML entity respectively
      while(index < length && !isCharExt(ch = text.charAt(index)) && ch != "&"){ index++; }
      if(ch == "&"){ // An HTML entity, skip it
       while(++index < length && (ch = text.charAt(index)) != ";" && isCharExt(ch)){}
