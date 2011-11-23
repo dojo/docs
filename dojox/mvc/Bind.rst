@@ -49,7 +49,7 @@ Parameters
 Available Methods
 =================
 
-* :ref:`dojox.mvc.BindInputs <dojox/mvc/BindInputs>`
+* dojox.mvc.BindInputs
 
 Bind the values at the sources specified in the first argument array such that a composing function in the second argument is called when any of the values changes.
 
