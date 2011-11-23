@@ -61,7 +61,7 @@ Various ``[meta]`` style tags can be added to the summary to assist in understan
                 tickets for repositories that require a post-commit ref.
 :[patch]:       Indicates a reported feature/bug has an associated patch file fixing the issue.
 :[cla]:         Used in conjunction with ``[patch]``, indicates the attached patch is covered under an Individual CLA from the user.
-:[ccla]:        Used in conjunction with ``[patch]``, indicates the attached patch is covered under a Corportate CLA
+:[ccla]:        Used in conjunction with ``[patch]``, indicates the attached patch is covered under a Corporate CLA
 :[regression]:  Used to indicate the ticket reports a regressed bit of functionality.
 
 When working in DojoX, if no Component is more accurate than the top level ``dojox``, use ``dojox`` and include a ``[meta]`` tag using the component name. Do this recursively in projects with components. eg: If a bug is against ``dojox.layout.FloatingPane``, the Component would be ``DojoX Layout`` and the meta tag would be: ``[FloatingPane]``, making the summary look something like:

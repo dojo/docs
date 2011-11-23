@@ -12,7 +12,7 @@ Authoritative documentation on Subversion is available `here <http://svnbook.red
 ===================
 Why Source Control?
 ===================
-Source control is one of those things that one rarely notices they need until it's far too late, usually when you accidentally delete part of your source tree instead of simply moving it to a different location, or when you make a set of complex changes that leave you worse off than were you started (but you can't go back). A source control system solves these problems by keeping copies of each revision of a set of files on a server, while giving you access to a local copy of those files to make changes on. Good source control systems allow multiple people to modify a single file at once, and will try to automatically merge changes between differing sets of modifications. A good source control system will also let you browse the history of a file or set of files (allowing you to "go back in time") and allow you to have acccess to your code from as many systems as you like. Subversion is one of those good source control systems.
+Source control is one of those things that one rarely notices they need until it's far too late, usually when you accidentally delete part of your source tree instead of simply moving it to a different location, or when you make a set of complex changes that leave you worse off than were you started (but you can't go back). A source control system solves these problems by keeping copies of each revision of a set of files on a server, while giving you access to a local copy of those files to make changes on. Good source control systems allow multiple people to modify a single file at once, and will try to automatically merge changes between differing sets of modifications. A good source control system will also let you browse the history of a file or set of files (allowing you to "go back in time") and allow you to have access to your code from as many systems as you like. Subversion is one of those good source control systems.
 
 ===================
 General Information
@@ -91,7 +91,7 @@ Right-click in the directory and select "SVN Checkout..." from the context menu.
      Dojo development trunk
      https://svn.dojotoolkit.org/src/view/committer/all/trunk dojotoolkit
 
-Click "ok" in the dialog box if a dialog box comes up discussing a host key. You will then be asked for your user login password at dojotoolkit.org. Provide it. You will then see a list of files being retreived from the server, and when it's finished, you will have your very own checkout!
+Click "ok" in the dialog box if a dialog box comes up discussing a host key. You will then be asked for your user login password at dojotoolkit.org. Provide it. You will then see a list of files being retrieved from the server, and when it's finished, you will have your very own checkout!
 
 Next, take a minute to update your svn config settings (see section below).
 
