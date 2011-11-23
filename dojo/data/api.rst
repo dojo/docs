@@ -1,15 +1,15 @@
 .. _dojo/data/api:
 
-dojo.data.api
+=============
+dojo.data API
 =============
 
 .. contents::
-  :depth: 3
+  :depth: 2
 
 
 Before diving directly into the APIs of dojo.data, the basic concepts behind the APIs need to be explored because some design decisions that were made might seem odd without an explanation as to why they were chosen. Therefore, read this page in its entirety before moving onto the individual APIs.
 
-========================================================
 Concept 1: Data access is broken down into separate APIs
 ========================================================
 
@@ -48,7 +48,6 @@ There are further functions that the Dojo development community would like to de
 **dojo.data.api.Derivation**
   Attributes derived from other attributes and calculated values
 
-============================================================
 Concept 2: All items are operated on through store functions
 ============================================================
 

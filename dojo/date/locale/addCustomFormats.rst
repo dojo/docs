@@ -1,5 +1,6 @@
 .. _dojo/date/locale/addCustomFormats:
 
+=================================
 dojo.date.locale.addCustomFormats
 =================================
 
@@ -11,9 +12,10 @@ dojo.date.locale.addCustomFormats
 .. contents::
    :depth: 2
 
+TODOC
+
 .. api-inline :: dojo.date.locale.addCustomFormats
 
-========
 See also
 ========
 

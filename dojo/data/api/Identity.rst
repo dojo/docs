@@ -1,14 +1,14 @@
 .. _dojo/data/api/Identity:
 
-dojo.data.api.Identity
+======================
+dojo.data Identity API
 ======================
 
 .. contents::
-  :depth: 3
+  :depth: 2
 
 The dojo.data.api.Identity interface defines the set of APIs that are implemented by a datastore if a data source provides a method by which to uniquely identify each item. This API then allows users of that datastore to request a specific item without searching for an item that matches specific attributes. Review the following examples, guidelines, and complete API documentation for further information on the Identity API.
 
-=========================
 Identity API Requirements
 =========================
 
@@ -22,7 +22,6 @@ The following list provides the requirements for the Identity API:
 * The store's getFeatures() function will return, as part of its associative map, a property with the key name of dojo.data.api.Identity. The value of the property can be anything reasonable, such as the boolean value true, the name of the attribute that represents the identity, an array of attributes, or even an object. By the mere presence of this key in the map, the store declares that it implements this API.
 * Identities should be treated as immutable. Many widgets use the identity for caching purposes, so changing its value will break those widgets.
 
-========
 Examples
 ========
 
@@ -133,7 +132,6 @@ Obtaining the list of attributes that comprise the identity of an item
   //Invoke the lookup. This is an async call as it may have to call back to a server to get data.
   itemStore.fetchItemByIdentity({identity: "sv", onItem: gotItem, onError: failed});
 
-=========================
 The Complete Identity API
 =========================
 

@@ -1,5 +1,6 @@
 .. _dojo/connectPublisher:
 
+=====================
 dojo.connectPublisher
 =====================
 
@@ -12,7 +13,6 @@ dojo.connectPublisher
 Ensure that every time an event is called, a message is published on the topic.
 
 
-============
 Introduction
 ============
 
@@ -53,7 +53,7 @@ Which becomes:
   dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
 
-=====
+
 Usage
 =====
 
@@ -78,7 +78,7 @@ event      String       The name of the event function in obj. I.e. identifies a
 =========  ===========  =============================================================================
 
 
-========
+
 Examples
 ========
 
