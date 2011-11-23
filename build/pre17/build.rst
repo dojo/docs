@@ -118,7 +118,7 @@ The primary purpose of the build system is to create the layer files.  Overall, 
 
    1. First, it groups together modules into ''layers''
    2. Second, it ''interns'' external non-JavaScript files, such as widget templates which are kept in a separate HTML file during development. Interning makes the file contents a string in the resulting script.
-   3. Third, it minifies the layer with ShrinkSafe. ShrinkSafe removes unneeded whitepsace and comments, and compacts variable names down to smaller ones. This file downloads and parses faster than the original.
+   3. Third, it minifies the layer with ShrinkSafe. ShrinkSafe removes unneeded whitespace and comments, and compacts variable names down to smaller ones. This file downloads and parses faster than the original.
    4. Finally, it copies all non-layered scripts to the appropriate places. While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer. If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
 
 =============
@@ -137,7 +137,7 @@ To use the build system, you must have the following:
 
         You can also obtain a source build of dojo from the `Subversion source code tree <http://svn.dojotoolkit.org/src/>`_.
 
-    2.  **A Java runtime envionment, version 1.4.2 or higher** on the machine you will use to create your custom build.
+    2.  **A Java runtime environment, version 1.4.2 or higher** on the machine you will use to create your custom build.
 
         This is necessary because the builder, although written in JavaScript, requires the Rhino implementation of JavaScript to run it, and Rhino is built with Java.
 
@@ -224,7 +224,7 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
 				layerDependencies: [
                     "dijit.dijit"
 				],
-                // which modules to pull in. All of the depedencies not
+                // which modules to pull in. All of the dependencies not
                 // provided by dojo.js or other items in the "layerDependencies"
                 // array are also included.
 				dependencies: [
@@ -363,7 +363,7 @@ and place your build arguments on the same line after that text. Change the ../c
 
 If you run into errors, you might want to try downloading rhino from:
 http://www.mozilla.org/rhino/download.html
-and changing the ../shrinksafe/js.jar to whereever you put rhino, e.g. ../rhino/js.jar
+and changing the ../shrinksafe/js.jar to wherever you put rhino, e.g. ../rhino/js.jar
 
 Other Advanced Topics
 ---------------------

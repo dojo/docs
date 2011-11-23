@@ -20,7 +20,7 @@ facilitate dead code removal by the Google Closure Compiler.
 Description
 ===========
 
-Profiles may contain the property ``staticHasFeatures`` a map from has feature name to booleanish. The presense of
+Profiles may contain the property ``staticHasFeatures`` a map from has feature name to booleanish. The presence of
 a has feature name in the map indicates the resulting built code should assume the particular feature is either always
 available (if truthy) or never available (if falsy). If multiple profile resources include a value for the property
 ``staticHasFeatures``, then each property value is mixed on a per-has-feature basis in the order they appear on
@@ -66,7 +66,7 @@ Then the aggregate profile would have the following value for the property ``sta
 
   staticHasFeatures:{
       featureX:1,       // only mentioned in profile-a
-	  featureY:0,       // profile-b value overrides profile-a vlaue
+	  featureY:0,       // profile-b value overrides profile-a value
 	  anotherFeature:1  // only mentioned in profile-b
   }
 

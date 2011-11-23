@@ -20,10 +20,10 @@ Description
 ===========
 
 This transform writes the possible-transformed resource text to the destination unless the resource has been tagged
-"noWrite". If the resoure has been tagged noWrite, the transform does nothing.
+"noWrite". If the resource has been tagged noWrite, the transform does nothing.
 
 Note: typically a noWrite tag is added during some other transform that contains logic that makes a decision the
-resource is not needed. If a noWrite decision can be made during descovery, then the resource should not be scheduled
+resource is not needed. If a noWrite decision can be made during discovery, then the resource should not be scheduled
 for the write transform to begin with.
 
 =============

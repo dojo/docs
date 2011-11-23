@@ -15,7 +15,7 @@ build system build script (build.sh or build.bat)
 Introduction
 ============
 
-The ``build.sh`` (unix) or ``build.bat`` (Windows) script located in the Dojo source distrubtion tree under ``\\util\buildscripts`` is used to trigger the build process.
+The ``build.sh`` (unix) or ``build.bat`` (Windows) script located in the Dojo source distribution tree under ``\\util\buildscripts`` is used to trigger the build process.
 
 **Notes**
 

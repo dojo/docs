@@ -167,7 +167,7 @@ To use this dijit, use a simple test file such as ``test.html``:
     
   The string: this is a test
 
-An important distinction to make here is that the original source of yours (slightly modified) is in the output build, *as well as* the compiled layer and nls resources.  This can be confusing for a beginner.  Focussing on the output build tree, in the ``test`` directory (because we specified ``releaseName=test`` on the build.sh command line):
+An important distinction to make here is that the original source of yours (slightly modified) is in the output build, *as well as* the compiled layer and nls resources.  This can be confusing for a beginner.  Focusing on the output build tree, in the ``test`` directory (because we specified ``releaseName=test`` on the build.sh command line):
 
 .. code-block :: text
 

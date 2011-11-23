@@ -122,7 +122,7 @@ Transform: depsScan
 
 ``platform`` (default = ``undefined``)
 
-  * [*string*] The target platform when procesing legacy ``dojo.platformRequire`` applications
+  * [*string*] The target platform when processing legacy ``dojo.platformRequire`` applications
   * [*falsy*] ``dojo.platformRequire`` ignores any platform-dependent dependencies
 
 ``internStrings`` (default = ``undefined``)
@@ -137,7 +137,7 @@ Transform: depsScan
 
 ``internSkipList`` (default = ``undefined``)
 
-  * This is a backcompat synonm for ``internStringsSkipList``
+  * This is a backcompat synonym for ``internStringsSkipList``
 
 ``scopeNames`` (default = ``["dojo", "dijit", "dojox"]``)
 
@@ -245,7 +245,7 @@ Transform: writeAmd
   * [*truthy*] Causes the transform to ensure that every AMD define application includes a module identifier argument.
 
   * [*falsy*] The transform does nothing to the module identifier argument in define applications. In particular, a
-    falsy value doe *not* cause the transform to remoave a module identifier argument that exists in the source code.
+    falsy value does *not* cause the transform to remove a module identifier argument that exists in the source code.
 
 Layer items are Javascript objects with the following properties
 
@@ -254,7 +254,7 @@ Layer items are Javascript objects with the following properties
   of the exclude module graph (see next).
 
 ``exclude`` (default = ``[]``)
-  The set of module identifiers that, together with their dependecy graphs, should be excluded from the layer after all
+  The set of module identifiers that, together with their dependency graphs, should be excluded from the layer after all
   include dependencies are computed.
 
 ``discard`` (default = ``undefined``)
@@ -268,7 +268,7 @@ Layer items are Javascript objects with the following properties
 ``copyright`` (default = "")
   If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
-  layer item. If a string that does not give an existing filename, the string it interpretted as an explicit copyright
+  layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
 
 ====================
@@ -293,8 +293,8 @@ Transform: writeDojo
 
 ``version`` (default = *the version given by the dojo package*)
   * [*string*] A string with the format *major* **.** minor* **.** *patch* **.** *flag*, where major, minor, and patch
-    must all be positive integers and flag can be anything. Any less significant subset may be ommitted; ommitted minor
-    and patch segments default to "0"; an ommitted flag segment defaults to an empty string.
+    must all be positive integers and flag can be anything. Any less significant subset may be omitted; omitted minor
+    and patch segments default to "0"; an omitted flag segment defaults to an empty string.
 
 ``dojo/dojo`` layer configuration
   The dojo/dojo layer configuration gives the contents of the dojo layer, usually written to dojo/dojo.js. The default

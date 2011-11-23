@@ -23,7 +23,7 @@ The transform outputs the dependency graph of all discovered modules (both AMD a
 resource. The format includes a map from module name to unique identifier and then uses the unique identifiers to output
 the dependency graph, thereby eliminating verbose module identifiers.
 
-The unique identifiers are continuously increasing integers, starting at zero. The map is encapsulted in a tree of
+The unique identifiers are continuously increasing integers, starting at zero. The map is encapsulated in a tree of
 nested objects. The dotted Javascript property name for any property indicates the module name by replacing the dots
 with slashes. The "*" property of any object indicates that module's unique identifier. The forrest of module names is
 rooted at the property ``idTree`` of the output JSON object. Consider the following example:
@@ -66,8 +66,8 @@ output to the filename given by the profile property ``depsDumpDotFilename``; re
 respect to the computed destBaseBase property (see xxx). If ``depsDumpDotFilename`` is missing or falsy, then the program
 is not output.
 
-The modules contained in the dot program may be limited by provided an explict set of modules in the profile property
-``dotModules``, a comman-separated list of module identifiers. When profiled, the dependency graph resulting from these
+The modules contained in the dot program may be limited by provided an explicit set of modules in the profile property
+``dotModules``, a comma-separated list of module identifiers. When profiled, the dependency graph resulting from these
 modules and their dependencies is output.
 
 For example, the following profile will output a dot program for the the dependency graph of dojo/_base/json:

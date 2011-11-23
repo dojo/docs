@@ -26,8 +26,8 @@ Dojo pragmas are expressed with the following syntax
 
 Some pragmas do not have arguments. A Dojo pragma expression must be contained on a single line.
 
-The **//>>** sequence may appear anywhere, including within a block comment, which may be desireable, as well as within
-a string or regular expression, where it is usually not intended to be interpretted as a pragma. In this latter
+The **//>>** sequence may appear anywhere, including within a block comment, which may be desirable, as well as within
+a string or regular expression, where it is usually not intended to be interpreted as a pragma. In this latter
 defective case, if the word following the **//>>** sequence is not a valid dojo pragma, a warning will be issued and the
 sequence will be ignored.
 
@@ -61,7 +61,7 @@ For ``includeStart`` and ``excludeStart``, *condition* is evaluated with the fol
 ``filename``
   holds the source filename of the resource that is being processed
 
-For example, assume a build is excuted with a profile defined as follows:
+For example, assume a build is executed with a profile defined as follows:
 
 .. js ::
 

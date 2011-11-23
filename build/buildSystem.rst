@@ -160,7 +160,7 @@ And for Windows:
   ~/dev/dtk/util/buildscripts> ./build.bat --help
 
 The shell script will prefer node.js if it is available. If you would rather use Rhino, you can use the command line
-swith ``--java`` like this:
+switch ``--java`` like this:
 
 .. code-block :: text
 
@@ -793,7 +793,7 @@ Profiles and profile properties can come from many sources:
 
 This begs the question, what happens when multiple sources try to set the same package property? The answer: generally,
 properties are mixed so that properties that come from sources specified later on the command line overwrite properties
-from sources specifed earlier. Profile properties are mixed on a per-property basis except for the properties
+from sources specified earlier. Profile properties are mixed on a per-property basis except for the properties
 ``packages``, ``paths``, ``plugins``, ``messages``, ``transforms``, and ``staticHasFeatures`` which are mixed
 differently. ``packages`` are mixed on a per-package-property basis. See xxx for details about how these other
 properties are mixed. Let's look at an example; consider the following two profiles:
@@ -863,7 +863,7 @@ assumptions, restrictions, or requirements imposed by where and how the Dojo Too
 
 Typically, the best way to organize a profile for an application is as follows:
 
-1. Install all dependend packages as per their instructions. Don't fight other package authors.
+1. Install all dependency packages as per their instructions. Don't fight other package authors.
 
 2. Organize the source code for the application into one or more packages as is appropriate for the design.
 
@@ -877,7 +877,7 @@ Typically, the best way to organize a profile for an application is as follows:
    profile to modify *some* properties in the configuration (if necessary at all) as well as to specify various profile
    properties that control the transforms.
 
-Alternatives/extentions to this general procedure include:
+Alternatives/extensions to this general procedure include:
 
 * Providing a default profile for each package the application defines.
 
@@ -983,7 +983,7 @@ below, in the order listed. The first test that passes indicates the transforms 
 5. The module ``"dojo/dojo"``
 
   * Read the resource (read)
-  * Apply dojo progras (dojoPragmas)
+  * Apply dojo pragmas (dojoPragmas)
   * Find all has.js applications (hasFindAll)
   * Trim dead code branches as given by static, build-time has feature values (hasFixup)
   * Write the processed loader module to the destination with a configuration (writeDojo)

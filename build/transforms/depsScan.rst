@@ -90,7 +90,7 @@ In summary, the transform process discovers any module dependencies through one 
 * Modules of unknown type that do not contain legacy API applications and do contain AMD API applications are scanned
   with a regular expression process to find dependencies.
 
-* Modules of unknown type that do contain legacy API applications are processed with a regular expression proceess to
+* Modules of unknown type that do contain legacy API applications are processed with a regular expression process to
   find dependencies; the process is identical to the process used by the loader when in xdomain mode.
 
 Once all dependencies are found, the transform ensures all dependencies exist in the discovered modules. Missing
@@ -102,7 +102,7 @@ Profile Knobs
 
 ``platform`` (default = ``undefined``)
 
-  * [*string*] The target platform when procesing legacy ``dojo.platformRequire`` applications
+  * [*string*] The target platform when processing legacy ``dojo.platformRequire`` applications
   * [*falsy*] ``dojo.platformRequire`` ignores any platform-dependent dependencies
 
 ``internStrings`` (default = ``undefined``)
@@ -117,7 +117,7 @@ Profile Knobs
 
 ``internSkipList`` (default = ``undefined``)
 
-  * This is a backcompat synonm for ``internStringsSkipList``
+  * This is a back-compat synonym for ``internStringsSkipList``
 
 ``scopeNames`` (default = ``["dojo", "dijit", "dojox"]``)
 

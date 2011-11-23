@@ -32,7 +32,7 @@ Simply pass the parameter as a command line argument:
 
 .. js ::
   
-  sugr:~/dojo/util/buildscripts $ ./build.sh action=release expandProvide=true version=1.3.0 profile=standard
+  ~/dojo/util/buildscripts $ ./build.sh action=release expandProvide=true version=1.3.0 profile=standard
 
 Or mix the option into your profile:
 

@@ -60,7 +60,7 @@ The modules to include in a particular layer is computed as follows:
 
 2. Plus the dependency graph implied by the AMD dependencies of the layer module. This is given by the dependency vector
    found in the define application associated with the target module, the modules found in in the dependency vectors of
-   those modules, and so on until all modules in the graph have been found (remember, though not desireable, there may
+   those modules, and so on until all modules in the graph have been found (remember, though not desirable, there may
    be cycles, so the graph is not necessarily a tree).
 
 3. Plus all modules given in the include array, along with all of those modules' dependency graphs.
@@ -72,7 +72,7 @@ member modules". Heuristically, the idea is to bundle all the modules required t
 modules in the include array, assuming all modules in the exclude array have already been loaded.
 
 If the module is not a layer, then the transformed module text is written. Any interned strings computed by the
-depsScann transform are also written. If the owning package configuration for the module includes the property
+depsScan transform are also written. If the owning package configuration for the module includes the property
 ``copywrite``, a copyright message, then the value of that property is included in the written resource.
 
 If the module is a layer and either of the layer properties ``discard`` or ``boot`` are truthy, then the transform
@@ -126,7 +126,7 @@ evaluated which results in the same effect as if the module has been script inje
 Similar to a non-layer, if the layer property ``copyright`` exists, then the value of that property is included in the
 written resource.
 
-Lastly, if the profile propery ``insertAbsMids`` is truthy, then the transform will ensure that the define application
+Lastly, if the profile property ``insertAbsMids`` is truthy, then the transform will ensure that the define application
 that defines each AMD module includes a module identifier argument. This is a backcompat feature that is used to
 construct modules that can be loaded with a script tag in the context of the dojo loader operating in a legacy
 mode. Normally, this feature should be avoided.
@@ -147,7 +147,7 @@ Profile Knobs
   * [*truthy*] Causes the transform to ensure that every AMD define application includes a module identifier argument.
 
   * [*falsy*] The transform does nothing to the module identifier argument in define applications. In particular, a
-    falsy value doe *not* cause the transform to remoave a module identifier argument that exists in the source code.
+    falsy value doe *not* cause the transform to remove a module identifier argument that exists in the source code.
 
 Layer items are Javascript objects with the following properties
 
@@ -156,7 +156,7 @@ Layer items are Javascript objects with the following properties
   of the exclude module graph (see next).
 
 ``exclude`` (default = ``[]``)
-  The set of module identifiers that, together with their dependecy graphs, should be excluded from the layer after all
+  The set of module identifiers that, together with their dependency graphs, should be excluded from the layer after all
   include dependencies are computed.
 
 ``discard`` (default = ``undefined``)
@@ -170,7 +170,7 @@ Layer items are Javascript objects with the following properties
 ``copyright`` (default = "")
   If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
-  layer item. If a string that does not give an existing filename, the string it interpretted as an explicit copyright
+  layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
 
 ===============

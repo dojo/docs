@@ -18,7 +18,7 @@ Introduction
 
 In very advanced situations, you may wish to have certain source code excluded from the built version of the file, based on some condition that is evaluated during the build itself.
 
-The Dojo build system permits special directives (known as pragmas) to be passed to the builder via comments within JavaScript source code  that it is processing,  The existing pramas allow the builder to conditionally include or exclude certain parts of the source file from the as-built version of the file.
+The Dojo build system permits special directives (known as pragmas) to be passed to the builder via comments within JavaScript source code  that it is processing,  The existing pragmas allow the builder to conditionally include or exclude certain parts of the source file from the as-built version of the file.
 
 This is somewhat analogous to the use of ``#ifdef`` pragmas within the C pre-processor.
 

@@ -165,7 +165,7 @@ Note: It is entirely incorrect to include a 'dojo' prefix (i.e. "dojo", "../dojo
                 // For Windows OS, this might be something like [ "myNamespace", "M:/myNamespace" ]
         ]
 
-This permits you to build into your distribution private namespace resources which are not within the Dojo distrubtion directory tree.
+This permits you to build into your distribution private namespace resources which are not within the Dojo distribution directory tree.
 
 
 

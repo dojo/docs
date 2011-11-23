@@ -56,7 +56,7 @@ loader factory to be deleted. This transform constructs user configuration and d
 these to along with the transformed loader factory text.
 
 The user configuration object may be specified in the profile property ``userConfig``. If ``userConfig`` is a string,
-then it is used verbatum; otherwise, it must be a Javascript object giving a loader configuration see xxx. The object
+then it is used verbatim; otherwise, it must be a Javascript object giving a loader configuration see xxx. The object
 need not be a JSON object and may contain functions. For example,
 
 .. js ::
@@ -108,7 +108,7 @@ The default configuration object, is built up from various profile properties:
 
 The resulting user configuration and default configuration objects are stringified (if necessary--the userConfiguration
 may already be a string) and added to the transformed loader factory text to express an application of the loader
-factory. This effectivly replaces the block marked by the "replaceLoaderConfig" dojo pragma arguments. The resulting
+factory. This effectively replaces the block marked by the "replaceLoaderConfig" dojo pragma arguments. The resulting
 loader factory text can then be used to write the loader resource (usually dojo.js) and prefix any bootable layers.
 
 By default, the dojo/dojo module is a layer module that includes the single module dojo/main which results in loader
@@ -167,13 +167,13 @@ as a replacement for any embedded version numbers found in the layer. The proper
   *major* **.** *minor* **.** *patch* **.** *flag*
 
 Where major, minor, and patch must all be positive integers and flag can be anything. Any less significant subset may be
-ommitted; ommitted minor and patch segments default to "0"; an ommitted flag segment defaults to an empty string.
+omitted; omitted minor and patch segments default to "0"; an omitted flag segment defaults to an empty string.
 
 If present, the dojo/dojo layer is searched for the pattern
 
   ``/major:\s*\d*,\s*minor:\s*\d*,\s*patch:\s*\d*,\s*flag:\s*".*?"\s*,/``
 
-If the pattern is found and the profile property ``version`` was provided, then property values in the resource texst
+If the pattern is found and the profile property ``version`` was provided, then property values in the resource text
 are replaced with the in the obvious manner.
 
 The transform writes the dojo/dojo resource text, after transforming as described above, the the destination
@@ -190,7 +190,7 @@ Profile Knobs
     not provided.
 
 ``userConfig`` (default = ``"this.dojoConfig || this.djConfig || this.require || {}"``)
-  * [*string*] The explit text to write for the user configuration applied to the loader factory.
+  * [*string*] The explicit text to write for the user configuration applied to the loader factory.
 
   * [*object*] The object to user for the user configuration applied to the loader factory. The object need not be a
     strict JSON object.
@@ -201,8 +201,8 @@ Profile Knobs
 
 ``version`` (default = *the version given by the dojo package*)
   * [*string*] A string with the format *major* **.** minor* **.** *patch* **.** *flag*, where major, minor, and patch
-    must all be positive integers and flag can be anything. Any less significant subset may be ommitted; ommitted minor
-    and patch segments default to "0"; an ommitted flag segment defaults to an empty string.
+    must all be positive integers and flag can be anything. Any less significant subset may be omitted; omitted minor
+    and patch segments default to "0"; an omitted flag segment defaults to an empty string.
 
 ``dojo/dojo`` layer configuration
   The dojo/dojo layer configuration gives the contents of the dojo layer, usually written to dojo/dojo.js. The default

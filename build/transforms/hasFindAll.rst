@@ -24,7 +24,7 @@ This transform scans a resource for has.js feature tests of the form
   ``has("`` *feature-name* ``")``
 
 A regular expression is used to effect the scanning. The expression ignores spaces around the parenthesis and accepts
-either single- or double-quotes. The character preceeding the "has" function name must not be in ``[\w\.]``.
+either single- or double-quotes. The character preceding the "has" function name must not be in ``[\w\.]``.
 
 As feature tests are discovered, the module in which they reside is memorized. If the profile property ``hasReport`` is
 truthy, then a map from has feature test to the list of modules that use each test is written to the build report.
