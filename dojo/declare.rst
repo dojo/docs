@@ -1393,7 +1393,7 @@ The method accepts up to two arguments:
 * Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 
-The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use :ref:`inherited()` directly for some reasons.
+The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
 
 Examples:
 
@@ -1638,7 +1638,7 @@ Additionally a prototype has a special property named ``declaredClass``, if the 
 
 Every instance created by ``dojo.declare``'d class has a special property called ``inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
 
-Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by :ref:`inherited()` and `getInherited()`_ to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
+Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
 
 ========
 See Also

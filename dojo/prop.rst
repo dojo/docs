@@ -238,4 +238,4 @@ See also
 ========
 
 * :ref:`dojo.getProp <dojo/getProp>`
-* :ref:`dojo.setProp <dojo.setProp>`
+* :ref:`dojo.setProp <dojo/setProp>`

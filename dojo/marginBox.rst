@@ -209,5 +209,5 @@ See also
 ========
 
 * :ref:`dojo.contentBox <dojo/contentBox>`
-* :ref:`dojo.getMarginBox <dojo.getMarginBox>`
-* :ref:`dojo.setMarginBox <dojo.setMarginBox>`
+* :ref:`dojo.getMarginBox <dojo/getMarginBox>`
+* :ref:`dojo.setMarginBox <dojo/setMarginBox>`

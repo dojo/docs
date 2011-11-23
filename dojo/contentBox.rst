@@ -1,5 +1,6 @@
 .. _dojo/contentBox:
 
+===============
 dojo.contentBox
 ===============
 
@@ -13,7 +14,7 @@ dojo.contentBox
 
 Getter/setter for the content-box of node.
 
-======================
+
 Introduction and Usage
 ======================
 
@@ -29,7 +30,7 @@ for a node offset from its parent 50px to the left, 200px from the top with a co
 
 Since Dojo 1.7, ``dojo.contentBox`` is exposed via the ``getContentBox`` and ``setContentSize`` methods of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
+
 Usage
 =====
 
@@ -79,7 +80,7 @@ Dojo < 1.7
    var contentBox = dojo.getContentBox(domNode);
    dojo.setContentSize(domNode, {w: 300, h: 150});
 
-========
+
 Examples
 ========
 
@@ -164,10 +165,9 @@ Comparison of various DOM node position/size methods
 :ref:`Link: Comparison of various DOM node position/size methods. <dojo/position>`
 
 
-========
 See also
 ========
 
 * :ref:`dojo.marginBox <dojo/marginBox>`
-* :ref:`dojo.getContentBox <dojo.getContentBox>`
-* :ref:`dojo.setContentSize <dojo.setContentSize>`
+* :ref:`dojo.getContentBox <dojo/getContentBox>`
+* :ref:`dojo.setContentSize <dojo/setContentSize>`

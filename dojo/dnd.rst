@@ -21,13 +21,13 @@ This package was built after we learned from mistakes made in ``dojo.dnd 0.4``:
 
 * The old package attached event handlers to all draggable items, which slowed down the browser in case of a lot of objects. The new package works with containers, which are responsible for individual items, using event delegation. It scales up much better.
 
-The old style dragging is useful in some cases, mostly because it looks intuitive for dragging single items. The new DnD accommodates it with a special sub-package :ref:`dojo.dnd.move`.
+The old style dragging is useful in some cases, mostly because it looks intuitive for dragging single items. The new DnD accommodates it with a special sub-package :ref:`dojo.dnd.move <dojo/dnd/move>`.
 
-The DnD (both :ref:`dojo.dnd` and :ref:`dojo.dnd.move` packages) is implemented as state machines, which reflect their state by adding and removing classes to relevant objects, which gives the ultimate flexibility over customizing the look-and-feel.
+The DnD (both :ref:`dojo.dnd <dojo/dnd>` and :ref:`dojo.dnd.move <dojo/dnd/move>` packages) is implemented as state machines, which reflect their state by adding and removing classes to relevant objects, which gives the ultimate flexibility over customizing the look-and-feel.
 
 Every DnD container and DnD item has a notion of type. The type is represented by a unique text string. Every container and item has an array of types assigned to them. In order to transfer (drop) items on a container they should have at least one type in common. When transferring a group of items to a container all items should have at least one type in common with the container. Otherwise the transfer is denied. If the list of types is not specified ``["text"]`` is assumed.
 
-The :ref:`dojo.dnd` supports copy and move styles of DnD out of the box.
+The :ref:`dojo.dnd <dojo/dnd>` supports copy and move styles of DnD out of the box.
 
 User interface
 --------------
@@ -591,9 +591,9 @@ The ``body`` node is updated only during active DnD operations. It can be used d
 
 Following CSS classes are used:
 
-* ``dojoDndCopy`` --- assigned to the ``body`` during the copy DnD operations (:ref:`dojo.dnd`).
-* ``dojoDndMove`` --- assigned to the ``body`` during the move DnD operations (:ref:`dojo.dnd`).
-* ``dojoMove`` --- assigned to the ``body`` when the drag is in progress (:ref:`dojo.dnd.move`).
+* ``dojoDndCopy`` --- assigned to the ``body`` during the copy DnD operations (:ref:`dojo.dnd <dojo/dnd>`).
+* ``dojoDndMove`` --- assigned to the ``body`` during the move DnD operations (:ref:`dojo.dnd <dojo/dnd>`).
+* ``dojoMove`` --- assigned to the ``body`` when the drag is in progress (:ref:`dojo.dnd.move <dojo/dnd/move>`).
 
 Source/target (dojo.dnd)
 ------------------------
