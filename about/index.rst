@@ -1,7 +1,7 @@
 .. _about/index:
 
-About the new Docu Wiki
-=======================
+About the new documentation Wiki
+================================
 
 .. contents::
    :depth: 2
@@ -10,7 +10,7 @@ About the new Docu Wiki
    :alt: Dojo Documentation
    :class: logowelcome;
 
-Welcome to Dojo Toolkits new official documentation pages.
+Welcome to Dojo Toolkit's new official documentation pages.
 
 The documentation is aiming to cover all dojo modules delivered within a release.
 
