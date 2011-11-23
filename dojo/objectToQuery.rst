@@ -16,53 +16,51 @@ Introduction
 
 This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a JavaScript object and converts it to a query string suitable to append onto a URI.  This function is useful in constructing URIs quickly and cleanly, with the proper special character encoding.  The resultant query string can be converted back to a JavaScript object by the function :ref:`dojo.queryToObject  <dojo/queryToObject>`
 
+Since Dojo 1.7, ``dojo.objectToQuery`` is exposed via the ``objectToQuery`` method of the ``dojo/io-query`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
+
 =====
 Usage
 =====
 
 Usage is simple and straightforward, you pass the object you wish converted to a query string and the function will return the query string.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. js ::
  
- <script type="text/javascript">
-   require(["dojo/io-query"], function(ioQuery) {
-       var uri = "http://some.server.org/somecontext/";
-       var query = {
-         foo: ["bar", "baz"],
-         bit: "byte"
-       };
-       //Assemble the new uri with its query string attached.
-       var queryStr = ioQuery.objectToQuery(query);
-       uri = uri + "?" + queryStr;
+  require(["dojo/io-query"], function(ioQuery) {
+    var uri = "http://some.server.org/somecontext/";
+    var query = {
+      foo: ["bar", "baz"],
+      bit: "byte"
+    };
+    //Assemble the new uri with its query string attached.
+    var queryStr = ioQuery.objectToQuery(query);
+    uri = uri + "?" + queryStr;
 
-       //The uri should look like:
-       // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
-   });
- </script>
+    //The uri should look like:
+    // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
+  });
  
 
 Dojo < 1.7
---------------
+----------
 
 .. js ::
  
- <script type="text/javascript">
-   var uri = "http://some.server.org/somecontext/";
-   var query = {
-     foo: ["bar", "baz"],
-     bit: "byte"
-   };
+  var uri = "http://some.server.org/somecontext/";
+  var query = {
+    foo: ["bar", "baz"],
+    bit: "byte"
+  };
 
-   //Assemble the new uri with its query string attached.
-   var queryStr = dojo.objectToQuery(query);
-   uri = uri + "?" + queryStr;
+  //Assemble the new uri with its query string attached.
+  var queryStr = dojo.objectToQuery(query);
+  uri = uri + "?" + queryStr;
 
-   //The uri should look like:
-   // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
- </script>
+  //The uri should look like:
+  // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
 
 
 ========

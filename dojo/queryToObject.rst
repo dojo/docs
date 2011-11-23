@@ -16,49 +16,46 @@ Introduction
 
 This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes the query portion of a URI and returns a JavaScript object of the name/value pairs.  It handles both single and multi-valued query parameters.  This function is useful in deconstructing URIs for display in page forms and the like.  It can also be used as a way to modify a query by converting to to JavaScript, making changes to parameters, then converting it back to a query string via :ref:`dojo.objectToQuery <dojo/objectToQuery>`
 
+Since Dojo 1.7, ``dojo.queryToObject`` is exposed via the ``queryToObject`` method of the ``dojo/io-query`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
+
 =====
 Usage
 =====
 
 Usage is simple and straightforward, you pass the query string of the URI as the parameter to the function and it will return it in JavaScript object form.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. js ::
  
- <script type="text/javascript">
-   require(["dojo/io-query"], function(ioQuery) {
-       var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
-       var query = uri.substring(uri.indexOf("?") + 1, uri.length);
-       var queryObject = ioQuery.queryToObject(query);
+  require(["dojo/io-query"], function(ioQuery) {
+    var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
+    var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+    var queryObject = ioQuery.queryToObject(query);
 
-       //The structure of queryObject will be:
-       // {
-       //   foo: ["bar", "bar2],
-       //   bit: "byte"
-       // }
-   });
- </script>
+    //The structure of queryObject will be:
+    // {
+    //   foo: ["bar", "bar2],
+    //   bit: "byte"
+    // }
+  });
  
 
 Dojo < 1.7
---------------
+----------
 
 .. js ::
  
- <script type="text/javascript">
-   var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
-   var query = uri.substring(uri.indexOf("?") + 1, uri.length);
-   var queryObject = dojo.queryToObject(query);
+  var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
+  var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+  var queryObject = dojo.queryToObject(query);
 
-   //The structure of queryObject will be:
-   // {
-   //   foo: ["bar", "bar2],
-   //   bit: "byte"
-   // }
- </script>
-
+  //The structure of queryObject will be:
+  // {
+  //   foo: ["bar", "bar2],
+  //   bit: "byte"
+  // }
 
 
 ========
