@@ -143,7 +143,7 @@ Move focus between widgets in the toolbar      Left and right arrow keys
 
 Known Issues
 ------------
-In hign contrast mode when a toggle button is checked an html entity charcter (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
+In high contrast mode when a toggle button is checked an html entity character (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
 
 
 ========

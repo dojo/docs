@@ -167,7 +167,7 @@ This would set a style height property.
 dijit.byId()
 ------------
 
-dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically. The same id attribute is used as a paramater, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
+dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically. The same id attribute is used as a parameter, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
 
 .. js ::
 

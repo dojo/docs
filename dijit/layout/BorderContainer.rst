@@ -20,7 +20,7 @@ Usage
 Regions
 -------
 
-Each child element must have an attribute "region" which indicates where it should be positioned (most names are self explainatory):
+Each child element must have an attribute "region" which indicates where it should be positioned (most names are self explanatory):
 
   * top
   * bottom

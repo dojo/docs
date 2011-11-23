@@ -39,7 +39,7 @@ and then redefining a number of methods for the widget lifecycle...
 Lifecycle
 =========
 
-The lifecycle of a widget decribes the phases of its creation and destruction which you can hook into. It's useful to understand exactly what happens when. Whether you are sub-classing an existing widget, using dojo/method script blocks, or passing in method overrides to the constructor, these are your entry points for making a widget do what you want it to do.
+The lifecycle of a widget describes the phases of its creation and destruction which you can hook into. It's useful to understand exactly what happens when. Whether you are sub-classing an existing widget, using dojo/method script blocks, or passing in method overrides to the constructor, these are your entry points for making a widget do what you want it to do.
 
 Widgets are classes, created with dojo.declare. All widgets inherit from dijit._WidgetBase, and most get the _Templated mixin. That provides you the following extension points (methods) you can override and provide implementation for:
 

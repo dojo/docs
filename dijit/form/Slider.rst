@@ -39,7 +39,7 @@ value           integer               Initial value of the slider (``0``)
 showButtons     boolean               Whether to show or not buttons at each end of the slider (``true``)
 minimum         integer               Minimum value of the slider (``0``)
 maximum         integer               Maximum value of the slider (``100``)
-discreteValues  integer               Number of "steps" in the slider. For exemple if ``discreteValues`` is ``3``, you'll have 3 steps: ``minimum``, ``maximum`` and a value in the middle
+discreteValues  integer               Number of "steps" in the slider. For example if ``discreteValues`` is ``3``, you'll have 3 steps: ``minimum``, ``maximum`` and a value in the middle
 ==============  ====================  =============================================================================
 
 ========

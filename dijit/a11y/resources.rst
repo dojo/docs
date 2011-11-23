@@ -51,7 +51,7 @@ Returns any role set on elem which is NOT an XHTML Navigation role or an empty s
 
   dijit.setWaiRole(/*Element*/ elem, /*String*/ role)
 
-Set the provided role on elem. If the current browser is Firefox and the version is prior to release 3,  replace any existing role(s) with "wiarole:" prepended to the role provided. In other browsers, if the element already has an existing WAI role, replace it with the role provided and maintain any existing XHTML Navigation roles.
+Set the provided role on elem. If the current browser is Firefox and the version is prior to release 3,  replace any existing role(s) with "wairole:" prepended to the role provided. In other browsers, if the element already has an existing WAI role, replace it with the role provided and maintain any existing XHTML Navigation roles.
 
 .. js ::
 

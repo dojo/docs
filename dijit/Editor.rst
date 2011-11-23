@@ -18,7 +18,7 @@ Features
 
 * Provides Rich Text (word processor-like), editing of HTML documents.
 * Extensible toolbar with a default set of icons for common actions (bold, italic, underline, indent, and so on)
-* Cross-browser support.  The RTE cababilities of browsers vary in what they provide and how they are set up.  The dijitEditor abtracts this away and provides a single wat to create a rich-text editing field in your pages.
+* Cross-browser support.  The RTE capabilities of browsers vary in what they provide and how they are set up.  The dijitEditor abstracts this away and provides a single wat to create a rich-text editing field in your pages.
 * Built-in filtering support.  The editor provides hooks to register HTML and DOM filters with the editor, to pre and post process data going in, or coming out of, the document being edited.
 * Pluggable architecture.  The editor's functionality can be extended by implementing and registering plugins with the editor.  In fact, all the base commands of editor are effectively plugins.  The plugin architecture makes it relatively easy to add new buttons and actions to the toolbar, to being 'headless', where it simply registers filters or augments existing actions.
 
@@ -348,7 +348,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |                                             |                      |for more editor space.                                                |
 |                                             |                      |**New to Dojo toolkit 1.5.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.TextColor               |foreColor             |A varient of the dijit._editor.plugins.TextColor that uses the        |
+|dojox.editor.plugins.TextColor               |foreColor             |A variant of the dijit._editor.plugins.TextColor that uses the        |
 |                                             |hiliteColor           |dojox.widget.ColorPicker as the color selector.                       |
 |                                             |                      |**New to Dojo toolkit 1.5.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+

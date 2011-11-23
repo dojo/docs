@@ -76,7 +76,7 @@ Examples
 Programmatic example
 --------------------
 
-Here's an example of a progamatically created StackContainer, and associated StackController:
+Here's an example of a programatically created StackContainer, and associated StackController:
 
 .. code-example ::
  

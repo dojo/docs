@@ -82,7 +82,7 @@ As usual you can create the button widget declaratively using the data-dojo-type
 Show only the icon
 ------------------
 
-Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons. Use the showLabel parameter to supress it from appearing under normal circumstances:
+Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons. Use the showLabel parameter to suppress it from appearing under normal circumstances:
 
 .. code-example ::
 

@@ -637,7 +637,7 @@ In Dojo 1.5, APIs and CSS3 -webkit-transition (supported and viewable in Safari 
  - AccordionContainer (ease API / fade CSS3)
  - Calendar (fade CSS3)
  - Tree (ease API / fade CSS3)
- - Tab (fase CSS3)
+ - Tab (fade CSS3)
  - Button (fade CSS3)
  - TextBox (fade CSS3) (list widgets you pick up this styling)
 

@@ -173,8 +173,8 @@ Open a context menu                           On Windows: shift-f10 or the Windo
 
                                               On Firefox on the Macintosh: ctrl-space.
 
-                                              On Safari 4 or Chrome on Mac: VO+shift+m (VO is usually control+opton).
-                                              But to use this keyboard sequence (on Safari or Chrome) the voice-over option on safari or chrome(in System Prefences / Universal Access) must be turned on.
+                                              On Safari 4 or Chrome on Mac: VO+shift+m (VO is usually control+option).
+                                              But to use this keyboard sequence (on Safari or Chrome) the voice-over option on safari or chrome(in System Preferences / Universal Access) must be turned on.
 
 Navigate menu items                           Up and down arrow keys
 Activate a menu item                          Spacebar or enter

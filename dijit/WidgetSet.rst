@@ -110,7 +110,7 @@ Retrieving all DOM nodes for a set of widgets
 .. js ::
   
   // get the actual domNode which represents the widgets in this list:
-  var nodes = dijit.registy.map(function(widget){
+  var nodes = dijit.registry.map(function(widget){
     return widget.domNode;
   });
 
