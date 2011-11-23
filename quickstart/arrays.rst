@@ -181,15 +181,15 @@ To break the forEach-Loop you should use dojo.some
 		var myArray = [0,1,2,3,4,5,6,7,8,9];
 		var count;
 		
-		//lets iterate ALL entrys of myArray
+		// let's iterate ALL entries of myArray
 		count = 0;
 		dojo.forEach(myArray, function(entry){
 			count++;
 		});
 		
-		alert("iterated "+count+" entrys (dojo.forEach)"); //will show "iterated 10 entrys"
+		alert("iterated "+count+" entries (dojo.forEach)"); //will show "iterated 10 entries"
 		
-		//lets only iterate the first 4 entrys of myArray
+		//let's only iterate the first 4 entries of myArray
 		count = 0;
 		dojo.some(myArray, function(entry){
 
@@ -201,7 +201,7 @@ To break the forEach-Loop you should use dojo.some
 			count++;
 		});
 		
-		alert("iterated "+count+" entrys (dojo.some)"); //will show "iterated 4 entrys"
+		alert("iterated "+count+" entries (dojo.some)"); //will show "iterated 4 entries"
 	}
     </script>
 
@@ -377,7 +377,7 @@ Now your bank policies only allow you to give each client one credit over 1 mill
         if (dojo.some(arrIndxSome, function(item){ return item>=1000000})) {
             result = 'yes, there are';
         } else {
-            result = 'no, there aren no such items';
+            result = 'no, there are no such items';
         }
         dojo.place(
             "<p>The answer is: " + result + "</p>",

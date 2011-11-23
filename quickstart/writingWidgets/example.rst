@@ -54,7 +54,7 @@ Next we'll need a template, a label for our submit button, a label for our cance
 
 Also note that whenever we use template variables , it's good practice to supply a default, e.g. "Browse ..." for the label. Otherwise, if your widget user omits the label attribute, the parser will complain.
 
-As we said earlier, it's preferrable to separate the template out into a different file. Ours will look like the following, placed in dojox/widget/FileInput/FileInput.html:
+As we said earlier, it's preferable to separate the template out into a different file. Ours will look like the following, placed in dojox/widget/FileInput/FileInput.html:
 
 
 .. html ::
@@ -143,7 +143,7 @@ We also need to implement a simple onchange listener, like the article hints, so
 
 You've probably also noticed we added an onkeyup connection, running the same code. This way, if we type in the input, our changes will be reflected after each key press. Fortunately for this example, we'll ignore little nitpicks like "holding backspace doesn't fire onkeyup".
 
-The _matchValue() function simply steals the file input value, sets it to the visible input value and fades in the cancel button (which we set earlier to visbility:hidden in FileInput.css).
+The _matchValue() function simply steals the file input value, sets it to the visible input value and fades in the cancel button (which we set earlier to visibility:hidden in FileInput.css).
 
 So next, we need a reset button. Unfortunately because we're faking HTML out a bit, a plain old Reset button won't work. Since we aren't allowed write access to the file input, we can't just null the data. So our _onClick method actually destroys the <input type="file"> and reads it.
 
@@ -212,7 +212,7 @@ The real file input tag in the DOM goes away our templated input gets put in it'
 
 In theory, it will work inside of a tag just as the original element did.
 
-Because we're bigs fan of re-using code, we can steal some CSS stuff from tundra.css and soria.css to provide theme-specific styles, so our input nodes look like they would in with all the other dijit.form Widgets (like ComboBox, FilteringSelect, ValidationTextBox, etc):
+Because we're big fans of re-using code, we can steal some CSS stuff from tundra.css and soria.css to provide theme-specific styles, so our input nodes look like they would in with all the other dijit.form Widgets (like ComboBox, FilteringSelect, ValidationTextBox, etc):
 
 .. css ::
 

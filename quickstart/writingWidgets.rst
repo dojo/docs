@@ -563,7 +563,7 @@ Closing words:
 
 1) Despite the name of the attribute "data-dojo-event", as in data-dojo-event="onClick", it's value is not a DOM event. Remember: onClick is just a plain old js method. (Dojo is misleading here).
 
-2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistenly. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
+2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistently. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
 
 
 =============================

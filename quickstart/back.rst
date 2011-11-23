@@ -1,7 +1,7 @@
 .. _quickstart/back:
 
-Backbuttons and Dojo
-====================
+Back buttons and Dojo
+=====================
 
 :Status: Draft
 :Version: 1.0

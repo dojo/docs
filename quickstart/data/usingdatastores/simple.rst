@@ -145,7 +145,7 @@ Connecting dojox.grid.DataGrid
       dojo.require("dojo.data.ItemFileReadStore");
       var layoutCountries = [
         [
-          { field: "abbr", name: "Abbeviation", width: 10 },
+          { field: "abbr", name: "Abbreviation", width: 10 },
           { field: "name", name: "Name", width: 10 },
           { field: "capital", name: "Capital", width: 'auto' }
         ]

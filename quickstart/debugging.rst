@@ -127,7 +127,7 @@ Why not just use alert() ? The trusty JavaScript alert() is a favorite debugging
   * alert() in a tight loop might make it impossible to stop without killing the browser process
   * You cannot easily print object contents or arrays
 
-Clearly alert's just not powerful enough. In Dojo logging, you can associate messages with severity, just like in log4j. The following code illustrates the five severity levels:
+Clearly alert is just not powerful enough. In Dojo logging, you can associate messages with severity, just like in log4j. The following code illustrates the five severity levels:
 
 .. js ::
   
@@ -269,7 +269,7 @@ So we click Inspect and point at the screen button
 .. image:: debugging5.png
    :alt: Firebug DOM inspection
 
-The right-hand side of the console tells what styles and style rules are applied to this class. Crossed-off lines are styles that have been overriden. Very nice!
+The right-hand side of the console tells what styles and style rules are applied to this class. Crossed-off lines are styles that have been overridden. Very nice!
 
 Debugging External Classes With debugAtAllCosts
 -----------------------------------------------

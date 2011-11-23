@@ -93,7 +93,7 @@ The widgets should still be usable if the font size of the page is changed. Incr
 Each browser has a different mechanism for changing font size:
 
 - Firefox 2 - select View Text Size Increase or press ctrl + or View Text Size Decrease or press ctrl -
-- Firefox 3 - select View Zoom Text Only. Firefox 3 also will zoom the entire page, including imeages, using View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
+- Firefox 3 - select View Zoom Text Only. Firefox 3 also will zoom the entire page, including images, using View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
 - IE 6 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest
 - IE 7 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest. IE 7 will also zoom the entire page using Page Zoom Zoom In or press ctrl + and Page Zoom Zoom Out or press ctrl -.
 - Safari - select View Make Text Bigger or press ctrl + or View Make Text Smaller or press ctrl -

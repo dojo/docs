@@ -103,7 +103,7 @@ By definition, items are unique to their store instance, so you cannot generally
             var newItem = {};
             var values = origStore.getValues(item, attributes[j]);
 
-            //Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into accoumt.
+            //Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into account.
             if (values) {
               if (values.length > 1) {
                 //Create a copy.
@@ -156,7 +156,7 @@ No. A store's internal data format can be whatever is most efficient for that st
 Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server. Why?
 ==============================================================================================================
 
-Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides over-ridable hook functions that users must provide in order to send data to an external service. See the :ref:`Write Section <dojo/data/ItemFileWriteStore>` of the ItemFileWriteStore docs.
+Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides an overridable hook functions that users must provide in order to send data to an external service. See the :ref:`Write Section <dojo/data/ItemFileWriteStore>` of the ItemFileWriteStore docs.
 
 =================================================================================================================================================================================
 Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object. When I access it through store.getValue(), it has been modified. Why?
@@ -190,7 +190,7 @@ This question is easier to understand with a bit of sample ItemFile*Store input.
 
 Note above that the child object nested off someValue doesn't have a *myid* attribute. Why does this cause ItemFile*Store an issue. This is effectively answered by question 9 on this page. This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.
 
-Because it is treated as a datastore item, it must have an identifier to comply with the needs of the :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` specification. Identity requires that all items be able to be uniquely looked up by an identifier. It does not state in a hierarchy of items only root items can be looked up by an identifier. Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unqiue identifiers as well so the Identity API implementation can be satisfied.
+Because it is treated as a datastore item, it must have an identifier to comply with the needs of the :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` specification. Identity requires that all items be able to be uniquely looked up by an identifier. It does not state in a hierarchy of items only root items can be looked up by an identifier. Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unique identifiers as well so the Identity API implementation can be satisfied.
 
 This is also necessary for support for widgets like dijit.Tree, when write support is required. It needs the capability of looking up an item from a store by its identifier, regardless of its position (root item or child of another item). Effectively, if an object in a datastore is identifiable as a datastore item (store.isItem(possibleItem)), and that store implements the Identity API, then that item must return a value for store.getIdentity(possibleItem). In other words, Hierarchy is irrelevant to whether or not an item has an identifier. All data store items in an Identity implementing store must return a value that can then be used to look the item back up later.
 

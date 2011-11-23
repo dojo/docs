@@ -186,9 +186,9 @@ Ay carumba!  That's a lot of functionality in a tiny 1-line package. Once you ge
 dojo.connect
 ============
 
-Events in JavaScript or Dojo based applications are essential to making applications work. Connecting an event handler (function) to an element or an object is one of the most common things you will do when developing applications using Dojo. Dojo provides a simple API for connecting events via the ``dojo.connect`` function. One important thing to note here is that events can be mapped to any property or object or element. Using this API you can wire your user interfaces together or allow for your objects to communicate. The ``dojo.connnect`` API does not require that the objects be Dojo based. In other words, you can use this API with your existing code and interfaces.
+Events in JavaScript or Dojo based applications are essential to making applications work. Connecting an event handler (function) to an element or an object is one of the most common things you will do when developing applications using Dojo. Dojo provides a simple API for connecting events via the ``dojo.connect`` function. One important thing to note here is that events can be mapped to any property or object or element. Using this API you can wire your user interfaces together or allow for your objects to communicate. The ``dojo.connect`` API does not require that the objects be Dojo based. In other words, you can use this API with your existing code and interfaces.
 
-Below is the code in the tutorial handling events. Here we connected the event handler, ``helloPressed``, to the ``onclick`` property of the hello button element. When the button is clicked the funtion helloPressed will be called.
+Below is the code in the tutorial handling events. Here we connected the event handler, ``helloPressed``, to the ``onclick`` property of the hello button element. When the button is clicked the function helloPressed will be called.
 
 .. js ::
 

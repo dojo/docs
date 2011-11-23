@@ -17,7 +17,7 @@ First you have to accept what REST is and isn't.  Then you have to understand ho
 Basics of RESTful Services
 ==========================
 
-A lot of people stumble across RESTful services and expect to find a well fleshed out standard with some hard and fast rules.  That is the first thing you have to get over when it comes to REST.  REST is a convention or pattern.  It is basically leveraging the HTTP protocol and methodology to provide hierarchal data services.  The fates of the provider and consumer are inexplicably linked.
+A lot of people stumble across RESTful services and expect to find a well fleshed out standard with some hard and fast rules.  That is the first thing you have to get over when it comes to REST.  REST is a convention or pattern.  It is basically leveraging the HTTP protocol and methodology to provide hierarchical data services.  The fates of the provider and consumer are inexplicably linked.
 
 Personal commentary, is that standards like SOAP and XML-RPC and XML, which have driven technology for the past decade, have given us this false sense that any provider can talk to any other consumer without knowing an iota about each other.  This is simply silly.  Very few people implement a provider or consumer without some level of conversation or dialogue.  The technology community has heaped and layer upon layer of structure to protect providers from consumers and in my opinion, REST gets back to basics of implementing basic CRUD functions in a simple and logical way.
 
@@ -144,7 +144,7 @@ An example of programatically creating a full featured store would be:
 
 	var userMemoryStore = new dojo.store.Memory();
 	var userJsonRestStore = new dojo.store.JsonRest({target: "/users/"});
-	var userStore = new dojo.store.Cache(userJsonRestStore, userMemeoryStore);
+	var userStore = new dojo.store.Cache(userJsonRestStore, userMemoryStore);
 
 More details can be found in their respective Dojo documentation pages.
 
@@ -219,7 +219,7 @@ Would result in the following HTTP request header being sent:
 
 Any server should respond by setting the ``Content-Range`` header with the value of the range of items being returned and a total counts of all of the items that could be returned based on the query.  Because the total possible items is returned, the downstream widgets will "know" there are more items which they can retrieve.  Also the provider should respond with the amount of items they are returning, even if more items are being requested.
 
-So, if a request was for a count of 10 items starting at 5, but there are only 10 items in total, the following HTTP responde header should be set:
+So, if a request was for a count of 10 items starting at 5, but there are only 10 items in total, the following HTTP response header should be set:
 
 .. html ::
 
@@ -292,7 +292,7 @@ As stated before, a lot of the structure of a provider's data is based on its ap
 General Structure
 -----------------
 
-However you impliment your RESTful service, you need to provide some basic functionality:
+However you implement your RESTful service, you need to provide some basic functionality:
 
  * Handle HTTP requests
  * Provide HTTP responses
@@ -304,7 +304,7 @@ Other things you might want to consider:
 
  * Support compression, since you are returning data and most browsers support it, you can save a lot of bandwidth by supporting it.
  * Support other content types other than JSON, so that other data can be retrieved from your RESTful service.
- * Provide method invokation to perform a server side service.
+ * Provide method invocation to perform a server side service.
  * Error handling and logging
 
 HTTP Response Codes

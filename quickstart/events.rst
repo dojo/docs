@@ -43,7 +43,7 @@ In this example, your siblings are functions. Your telling them to respond to ce
 
 Syntax
 ------
-:ref:`dojo.connect <dojo/connect>` takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introdction provided in :ref:`Functions Used Everywhere <quickstart/dojo-basics>`.
+:ref:`dojo.connect <dojo/connect>` takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introduction provided in :ref:`Functions Used Everywhere <quickstart/dojo-basics>`.
 
 dojo.connect has the following signature (acceptable types in square brackets):
 
@@ -357,7 +357,7 @@ Like dojo.connect(), these methods are useful because multiple pieces of code ca
 Topic Based Events
 ==================
 
-In addition to the simple event system created by :ref:`dojo.connect <dojo/connect>`, dojo offers support for anonymous publication and subscription of objects, via :ref:`dojo.publish <dojo/publish>` and :ref:`dojo.subcribe <dojo/subscribe>`. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  :ref:`dojo.publish <dojo/publish>` calls any functions that are connected to the topic via :ref:`dojo.subcribe <dojo/subscribe>`, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, :ref:`dojo.unsubcribe <dojo/unsubscribe>` will cause a previously subscribed function to no longer be called when :ref:`dojo.publish <dojo/publish>` is called in the future
+In addition to the simple event system created by :ref:`dojo.connect <dojo/connect>`, dojo offers support for anonymous publication and subscription of objects, via :ref:`dojo.publish <dojo/publish>` and :ref:`dojo.subscribe <dojo/subscribe>`. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  :ref:`dojo.publish <dojo/publish>` calls any functions that are connected to the topic via :ref:`dojo.subcribe <dojo/subscribe>`, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, :ref:`dojo.unsubscribe <dojo/unsubscribe>` will cause a previously subscribed function to no longer be called when :ref:`dojo.publish <dojo/publish>` is called in the future
 
 How does it work?
 -----------------
