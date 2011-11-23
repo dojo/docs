@@ -60,7 +60,7 @@ ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodifie
 Known bugs
 ==========
 
-* Shrinksafe removes comments containing IE's propietary conditional compilation code `ticket #2298 <http://bugs.dojotoolkit.org/ticket/2298>`_
+* Shrinksafe removes comments containing IE's proprietary conditional compilation code `ticket #2298 <http://bugs.dojotoolkit.org/ticket/2298>`_
 * Forward references are not always resolved properly.  See `ticket #3241 <http://bugs.dojotoolkit.org/ticket/3241>`_
 * ShrinkSafe appears to not handle '$super' in this code.  See `ticket #5436 <http://bugs.dojotoolkit.org/ticket/5436>`_
 
