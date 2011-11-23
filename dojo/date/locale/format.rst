@@ -3,17 +3,13 @@
 dojo.date.locale.format
 =======================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Adam Peller
 :Authors: Seth Lytle, Adam Peller, Marcus Reimann
-:Available: since V?
 
 .. contents::
    :depth: 2
 
 Creates a string from a Date object using a known localized pattern.
-
 
 ============
 Introduction

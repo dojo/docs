@@ -3,8 +3,6 @@
 dojo.NodeList
 =============
 
-:Available: since V 0.9
-
 .. contents::
     :depth: 2
 
@@ -108,7 +106,7 @@ The helper functions attached to the NodeList typically return the same instance
 Common NodeList Functions
 =========================
 
-The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeList>`_ is extensive, so lets just focus on some of the most frequently used methods.
+The `entire NodeList API <http://dojotoolkit.org/api/dojo.NodeList>`_ is extensive, so lets just focus on some of the most frequently used methods.
 
 ``forEach`` - runs a function for each element in a NodeList. If you want the option to break out of the loop, use ``every`` or ``some`` instead.
 
@@ -460,7 +458,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
       });
 
 :forEach:
-  like `dojo.forEach <dojo/forEach>`_ but with current list as the first parameter. Has the same API as `Array.forEach <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/forEach>`_ in browsers that support it. Returns the source NodeList (can be chained).
+  like :ref:`dojo.forEach <dojo/forEach>` but with current list as the first parameter. Has the same API as `Array.forEach <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/forEach>`_ in browsers that support it. Returns the source NodeList (can be chained).
 
 [ V1.7+ AMD ]
 
@@ -497,7 +495,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   dojo.query("a").forEach("console.debug(item);");
 
 :map:
-  like `dojo.map <dojo/map>`_ with the current list as the array or `Array.map <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map>`_ in browsers that support it.  Returns a new ``dojo.NodeList`` with the mapped-in elements (can be chained).
+  like :ref:`dojo.map <dojo/map>` with the current list as the array or `Array.map <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map>`_ in browsers that support it.  Returns a new ``dojo.NodeList`` with the mapped-in elements (can be chained).
 
 [ V1.7+ AMD ]
 

@@ -17,4 +17,4 @@ You will also likely want to pass the version= param or your build will have a v
 
 Assuming you have java installed, after some time your dojo build will reside in ../../release/dojo
 
-The "base" profile builds dojo without dijit or dojox.  Include ../../release/dojo/dojo.js in your application for your core dojo build.  This is similar to downloading dojo.js from the http://www.dojotoolkit.org/downloads
+The "base" profile builds dojo without dijit or dojox.  Include ../../release/dojo/dojo.js in your application for your core dojo build.  This is similar to downloading ``dojo.js`` from the http://dojotoolkit.org/download
