@@ -23,8 +23,8 @@ Features
 ========
 
 
-Functions always avalable (Dojo 'Base')
----------------------------------------
+Functions always available (Dojo 'Base')
+----------------------------------------
 
 * :ref:`dojo.animateProperty <dojo/animateProperty>` - The most basic animation function in dojo.  It allows you to animate the change of most CSS properties, as well as perform, pre and post operations as the animation executes.  Almost all the following animation functions are built using this function.
 

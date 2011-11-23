@@ -70,7 +70,7 @@ Mixin modifies the first object in the list, mixing in second object. If you wis
 
 Here, the return from :ref:`dojo.clone <dojo/clone>` is a new object, then b is mixed in.
 
-Alternatly, you can pass an empty object as the first mix, and mix another object into it. You can then repeat this pattern as often as you'd like:
+Alternately, you can pass an empty object as the first mix, and mix another object into it. You can then repeat this pattern as often as you'd like:
 
 .. js ::
   

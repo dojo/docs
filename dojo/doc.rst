@@ -15,7 +15,7 @@ Alias for the current document.  This is normally the value of window["document"
 Introduction
 ============
 
-The purpose of this class is twofold.  First, it provides a shorter reference to getting ahold of the current document.  Second, all references that make use of it can have its document scope altered temporarily by changes to the dojo.doc variable.  This is used by other fuctions :ref:`dojo.withDoc <dojo/withDoc>` and :ref:`dojo.setContext <dojo/setContext>` to change the document scope during certain operations.
+The purpose of this class is twofold.  First, it provides a shorter reference to getting ahold of the current document.  Second, all references that make use of it can have its document scope altered temporarily by changes to the dojo.doc variable.  This is used by other functions :ref:`dojo.withDoc <dojo/withDoc>` and :ref:`dojo.setContext <dojo/setContext>` to change the document scope during certain operations.
 
 =====
 Usage

@@ -116,7 +116,7 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**handle**        |Sometimes you want to do something regardless of whether a call completes or fails.  Thats where handle comes it, it will be|
+|**handle**        |Sometimes you want to do something regardless of whether a call completes or fails.  That's where handle comes it, it will be|
 |                  |invoked by xhr regardless.  The first parameter passed to this callback is the response (or error) and the second parameter |
 |                  |is the IO args object, from which you can get the status code and determine success or failure.                             |
 |                  |                                                                                                                            |
@@ -177,7 +177,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
             //Replace newlines with nice HTML tags.
             data = data.replace(/\n/g, "<br>");
 
-            //Replace tabs with spacess.
+            //Replace tabs with spaces.
             data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
 
             targetNode.innerHTML = data;

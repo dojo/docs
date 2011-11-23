@@ -194,7 +194,7 @@ Assume a DOM created by this markup:
 
 val
 --------------------
-If a value is passed, allows seting the value property of form elements in this
+If a value is passed, allows setting the value property of form elements in this
 NodeList, or properly selecting/checking the right value for radio/checkbox/select
 elements. If no value is passed, the value of the first node in this NodeList
 is returned.

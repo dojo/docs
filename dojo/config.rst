@@ -208,7 +208,7 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
     declare("my.Thinger", null, {
       thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
       constructor: function(){
-         if(config.myCustomVaraible){ ... }
+         if(config.myCustomVariable){ ... }
       }
     });
   });
@@ -217,7 +217,7 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
   dojo.declare("my.Thinger", null, {
       thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
       constructor: function(){
-         if(dojo.config.myCustomVaraible){ ... }
+         if(dojo.config.myCustomVariable){ ... }
       }
   });
 

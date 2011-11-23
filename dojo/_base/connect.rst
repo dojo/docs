@@ -44,4 +44,4 @@ Features
 
 * :ref:`dojo.connectPublisher <dojo/connectPublisher>`
 
-  Ensure that everytime an event is called, a message is published on the topic.
+  Ensure that every time an event is called, a message is published on the topic.

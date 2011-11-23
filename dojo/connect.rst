@@ -23,13 +23,13 @@ Introduction
 
 `dojo.connect` is the core event handling and delegation method in Dojo. It allows one function to "listen in" on the execution of any other, triggering the second whenever the first is called. Many listeners may be attached to a function, and source functions may be either regular function calls or DOM events.
 
-`dojo.connect` connects listeners to actions, so that after event fires, a listener is called with the same arguments passed to the orginal function.
+`dojo.connect` connects listeners to actions, so that after event fires, a listener is called with the same arguments passed to the original function.
 
 Since `dojo.connect` allows the source of events to be either a "regular" JavaScript function or a DOM event, it provides a uniform interface for listening to all the types of events that an application is likely to deal with though a single, unified interface. DOM programmers may want to think of it as "addEventListener for everything and anything".
 
-When setting up a connection, the `event` parameter must be a string that is the name of the method/event to be listened for. If `obj` is null, `dojo.global` is assumed, meaning that connections to global methods are supported but also that you may inadvertantly connect to a global by passing an incorrect object name or invalid reference.
+When setting up a connection, the `event` parameter must be a string that is the name of the method/event to be listened for. If `obj` is null, `dojo.global` is assumed, meaning that connections to global methods are supported but also that you may inadvertently connect to a global by passing an incorrect object name or invalid reference.
 
-`dojo.connect` generally is forgiving. If you pass the name of a function or method that does not yet exist on `obj`, connect will not fail, but will instead set up a stub method. Similarly, null arguments may simply be omitted such that fewer than 4 arguments may be required to set up a connection See the examples for deails.
+`dojo.connect` generally is forgiving. If you pass the name of a function or method that does not yet exist on `obj`, connect will not fail, but will instead set up a stub method. Similarly, null arguments may simply be omitted such that fewer than 4 arguments may be required to set up a connection See the examples for details.
 
 The return value is a handle that is needed to remove this connection with `dojo.disconnect`.
 

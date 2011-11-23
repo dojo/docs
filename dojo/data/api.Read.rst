@@ -6,7 +6,7 @@ dojo.data.api.Read
 The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:
 
 * Introspect any datastore to determine the APIs the datastore implements through the getFeatures() call.
-* Instrospect, On an item by item basis, what attributes each item has in a way that is agnostic to the data format.
+* Introspect, on an item by item basis, what attributes each item has in a way that is agnostic to the data format.
 * Get values of attributes in a way that is agnostic to the data format.
 * Test attributes of items to see if they contain a specific value.
 * Test any JavaScript object to see if it is an item from the store.
@@ -293,7 +293,7 @@ For convenience, the complete Read Feature is defined below.
     //        an attribute named attrFoo, with a value that starts with 'value'.
     //
     //    The *queryOptions* parameter
-    //        The queryOptions parameter is an optional parameter used to specify optiosn that may modify
+    //        The queryOptions parameter is an optional parameter used to specify options that may modify
     //        the query in some fashion, such as doing a case insensitive search, or doing a deep search
     //        where all items in a hierarchical representation of data are scanned instead of just the root
     //        items.  It currently defines two options that all datastores should attempt to honor if possible:
@@ -350,7 +350,7 @@ For convenience, the complete Read Feature is defined below.
     //    The *start* parameter.
     //        If a start parameter is specified, this is a indication to the datastore to
     //        only start returning items once the start number of items have been located and
-    //        skipped.  When this parameter is paired withh 'count', the store should be able
+    //        skipped.  When this parameter is paired with 'count', the store should be able
     //        to page across queries with millions of hits by only returning subsets of the
     //        hits for each query
     //
@@ -405,7 +405,7 @@ For convenience, the complete Read Feature is defined below.
     //    description:
     //        The close() method is intended for instructing the store to 'close' out
     //        any information associated with a particular request.  In general, this API
-    //        expects to recieve as a parameter a request object returned from a fetch.
+    //        expects to receive as a parameter a request object returned from a fetch.
     //        It will then close out anything associated with that request, such as
     //        clearing any internal datastore caches and closing any 'open' connections.
     //        For some store implementations, this call may be a no-op.
@@ -426,7 +426,7 @@ For convenience, the complete Read Feature is defined below.
     //        that provides a general/adequate description of what the item is.  In general
     //        most labels will be a specific attribute value or collection of the attribute
     //        values that combine to label the item in some manner.  For example for an item
-    //        that represents a person it may return the label as:  "firstname lastlame" where
+    //        that represents a person it may return the label as:  "firstname lastname" where
     //        the firstname and lastname are attributes on the item.  If the store is unable
     //        to determine an adequate human readable label, it should return undefined.  Users that wish
     //        to customize how a store instance labels items should replace the getLabel() function on
@@ -448,7 +448,7 @@ For convenience, the complete Read Feature is defined below.
     //        Method to inspect the item and return an array of what attributes of the item were used
     //        to generate its label, if any.  This function is to assist UI developers in knowing what
     //        attributes can be ignored out of the attributes an item has when displaying it, in cases
-    //        where the UI is using the label as an overall identifer should they wish to hide
+    //        where the UI is using the label as an overall identifier should they wish to hide
     //        redundant information.
     //
     //    item:

@@ -21,7 +21,7 @@ The has() API is useful for adding new feature tests the result of which can be 
 
 Although the signature of the has() API conforms to the has.js implementation and feature names, Dojo modules implement their own version of has() tests, as some shortcuts and inferences are already available in the toolkit.
 
-Dojo Core and Dijit modules make use of has() feature detection in 1.7.  There are still a number of dojox projects that continue to use dojo.isXXX ua sniffing.  These remaining projects will likely be converted to use has() in the 1.8 timeframe.
+Dojo Core and Dijit modules make use of has() feature detection in 1.7.  There are still a number of dojox projects that continue to use dojo.isXXX ua sniffing.  These remaining projects will likely be converted to use has() in the 1.8 time frame.
 
 Ternary has() conditional expressions can also be used during module loading for conditional loading of modules based on feature availability.  See the Dojo loader documentation for more details on this capability.
 
@@ -61,7 +61,7 @@ In the real world, this may translate into something like:
  }
 
 By using this approach, we can easily defer to browser-native versions of common functions and can also isolate non-standard codepaths. As browsers change over time (hopefully converging on standard api's), non-standard codepaths can more easily be pruned by build tools.
-Using this approach also simplifies the ability to prune browser-specific codepaths.  For example, if you're only interested in webkit environments, non-webkit feature paths can more easily be stripped out in a build, resulting in smaller more targetted code being sent to clients.
+Using this approach also simplifies the ability to prune browser-specific codepaths.  For example, if you're only interested in webkit environments, non-webkit feature paths can more easily be stripped out in a build, resulting in smaller more targeted code being sent to clients.
 
 Running `has()` is a one-time cost, deferred until needed. After first run, subsequent `has()` checks are cached and return immediately.
 
@@ -77,7 +77,7 @@ Each test is self-contained. Register a test with `has.add()`:
  
  has.add("some-test-name", function(global, document, anElement){
    // global is a reference to global scope, document is the same
-   // anElement only exists in browser enviroments, and can be used
+   // anElement only exists in browser environments, and can be used
    // as a common element from which to do DOM working.
    // ALWAYS CLEAN UP AFTER YOURSELF in a test. No leaks, thanks.
    // return a Boolean from here.

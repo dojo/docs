@@ -98,8 +98,8 @@ See Also
 ========
 - :ref:`dojo.map <dojo/map>` - The Dojo version of Array.map
 - :ref:`dojo.filter <dojo/filter>` - Helps you narrow down the items in a list
-- :ref:`dojo.some <dojo/some>` - Does any item in the list meet your critera?
-- :ref:`dojo.every <dojo/every>` - Do *all* items in the list meet your critera?
+- :ref:`dojo.some <dojo/some>` - Does any item in the list meet your criteria?
+- :ref:`dojo.every <dojo/every>` - Do *all* items in the list meet your criteria?
 - :ref:`dojo.indexOf <dojo/indexOf>` - Find something in a list easily
 - :ref:`dojo.lastIndexOf <dojo/lastIndexOf>` - Find something in the list easily, but starting from the back
 - :ref:`dojo.query <dojo/query>` - A CSS query engine that returns instances of ``dojo.NodeList``

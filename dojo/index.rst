@@ -228,7 +228,7 @@ Effects (dojo/_base/fx)
 Connect (dojo/_base/connect)
 ----------------------------
 
-This module provides event handling for DOM nodes, and AOP for functions.   However, it is superceded by the :ref:`dojo/on <dojo/on>`, :ref:`dojo/aspect <dojo/aspect>`, and :ref:`dojo/topic <dojo/topic>` modules, which should be used for new code.
+This module provides event handling for DOM nodes, and AOP for functions.   However, it is superseded by the :ref:`dojo/on <dojo/on>`, :ref:`dojo/aspect <dojo/aspect>`, and :ref:`dojo/topic <dojo/topic>` modules, which should be used for new code.
 
 The methods defined in this module are:
 
@@ -254,7 +254,7 @@ The methods defined in this module are:
 
 * :ref:`dojo.connectPublisher <dojo/connectPublisher>`
 
-  Ensure that everytime an event is called, a message is published on the topic.
+  Ensure that every time an event is called, a message is published on the topic.
 
 NodeList (dojo/_base/NodeList)
 ------------------------------
@@ -474,7 +474,7 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * :ref:`dojo.getComputedStyle <dojo/getComputedStyle>`
 
-    Return a cachable object of all computed styles for a node
+    Return a cacheable object of all computed styles for a node
 
   * :ref:`dojo.getStyle <dojo/getStyle>`
 

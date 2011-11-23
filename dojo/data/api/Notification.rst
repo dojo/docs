@@ -128,7 +128,7 @@ parameters:
       // Whatever was the previous value for the attribute:
       // In the case of single value calls, such as setValue, unsetAttribute, etc,
       // this value will be generally be an atomic value of some sort (string, int, etc, object).
-      // In the case of multi-valued attributes, it will be an array of all the values minues the new one.
+      // In the case of multi-valued attributes, it will be an array of all the values minus the new one.
       oldValue: something,
       // The new value of the attribute:
       // In the case of single value calls, such as setValue, this value will be

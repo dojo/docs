@@ -257,7 +257,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 Overwriting a handler
 ---------------------
 
-Standard AOP techniques apply. If you find yourself needing to *replace* a contentHandler but preserve the original beahvior, simply duck-punch around it:
+Standard AOP techniques apply. If you find yourself needing to *replace* a contentHandler but preserve the original behavior, simply duck-punch around it:
 
 [ Dojo 1.7 AMD ]
 
@@ -267,7 +267,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
         // a handler that always escapes html fragments. not exceptionally useful though:
         var oldtext = xhr.contentHandlers.text;
         xhr.contentHandles.text = function(req){
-            return oldtext.apply(this, arguments).reaplce("<", "&lt;");
+            return oldtext.apply(this, arguments).replace("<", "&lt;");
         };
     });
 
@@ -279,7 +279,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
     // a handler that always escapes html fragments. not exceptionally useful though:
     var oldtext = dojo.contentHandlers.text;
     dojo.contentHandles.text = function(xhr){
-        return oldtext.apply(this, arguments).reaplce("<", "&lt;");
+        return oldtext.apply(this, arguments).replace("<", "&lt;");
     };
 
 

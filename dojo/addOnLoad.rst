@@ -68,7 +68,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
         document.musicPrefs.other.value="Afrobeat";
     });
 
-This is the function literal or anonymous function construct of JavaScript. If it looks really, really wierd to you, take a peek ahead at Functions as Variables for an explanation.
+This is the function literal or anonymous function construct of JavaScript. If it looks really, really weird to you, take a peek ahead at Functions as Variables for an explanation.
 
 Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function will load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 

@@ -309,10 +309,10 @@ We can also specify alternate selector engines and compliance levels. By default
 Select Engine Levels
 ====================
 
-* css2 (or lite) - This will always use the lite engine, which delegates to the native selector engine if available for anything but very simple queries (like id lookups). When a native selector engine is not available (IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: .class, #id, tag, and star, attribute selectors, and child (>), descendent (space), and union (,) combinators. With a native selector engine, the lite engine does not support pseudo classes.
+* css2 (or lite) - This will always use the lite engine, which delegates to the native selector engine if available for anything but very simple queries (like id lookups). When a native selector engine is not available (IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: .class, #id, tag, and star, attribute selectors, and child (>), descendant (space), and union (,) combinators. With a native selector engine, the lite engine does not support pseudo classes.
 * css2.1 - This will always use the lite engine when a native selector engine is available. When a native selector engine is not available (IE7 and below), this will load acme.
 * css3 - This will always use the lite engine when a native selector engine with significant CSS3 support is available. When a CSS3 capable (supporting most features) native selector engine is not available (IE8 and below), this will load acme.
-* acme - The acme selector engine with full CSS3 features will be used. This supports certain features that are not available in any native engine (albiet rarely used).
+* acme - The acme selector engine with full CSS3 features will be used. This supports certain features that are not available in any native engine (albeit rarely used).
 
 When you are not using Dojo base (running async without a dependency on base module "dojo"), the default selector engine level is "css3". Again, if you are using Dojo base, the default is "acme".
 

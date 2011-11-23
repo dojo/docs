@@ -22,7 +22,7 @@ In order to use a Dojo module or widget, you have to load the module with dojo.r
 Dojo's package concept
 ----------------------
 
-Dojo's code is split into modules which are similar to packages in Java except that in Dojo a module can contain both constructors (like classes in Java) and simple functions. For example, the "dojo.string" module contains a number of functions, such as :ref:`dojo.string.substitute() <dojo/string>`. The ":ref:`dojo.dnd <dojo/dnd>`" module contains a number of constructors such as dojo.dnd.Container dojo.dnd.Source in additon to top-level functions and properties on the dojo.dnd object.
+Dojo's code is split into modules which are similar to packages in Java except that in Dojo a module can contain both constructors (like classes in Java) and simple functions. For example, the "dojo.string" module contains a number of functions, such as :ref:`dojo.string.substitute() <dojo/string>`. The ":ref:`dojo.dnd <dojo/dnd>`" module contains a number of constructors such as dojo.dnd.Container dojo.dnd.Source in addition to top-level functions and properties on the dojo.dnd object.
 
 Naming conventions
 ------------------

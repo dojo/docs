@@ -9,7 +9,7 @@ dojo.data Read API
 The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:
 
 * Introspect any datastore to determine the APIs the datastore implements through the getFeatures() call.
-* Instrospect, On an item by item basis, what attributes each item has in a way that is agnostic to the data format.
+* Introspect, On an item by item basis, what attributes each item has in a way that is agnostic to the data format.
 * Get values of attributes in a way that is agnostic to the data format.
 * Test attributes of items to see if they contain a specific value.
 * Test any JavaScript object to see if it is an item from the store.
@@ -486,7 +486,7 @@ close
     //    description:
     //        The close() method is intended for instructing the store to 'close' out
     //        any information associated with a particular request.  In general, this API
-    //        expects to recieve as a parameter a request object returned from a fetch.
+    //        expects to receive as a parameter a request object returned from a fetch.
     //        It will then close out anything associated with that request, such as
     //        clearing any internal datastore caches and closing any 'open' connections.
     //        For some store implementations, this call may be a no-op.

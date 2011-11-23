@@ -33,7 +33,7 @@ After the extend, any new instances of a TitlePane will have the 'randomAttribut
 Extending _Widget
 -----------------
 
-A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the :ref:`BorderContainer <dijit/layout/BorderContainer>` can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specitiy a region:
+A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the :ref:`BorderContainer <dijit/layout/BorderContainer>` can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specify a region:
 
 .. js ::
   

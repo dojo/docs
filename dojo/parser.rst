@@ -299,7 +299,7 @@ This section discusses how to write widgets that the parser can understand.
 Specifying parameters and types
 ===============================
 
-HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via data-dojo-type attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
+HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via data-dojo-type attribute) and tries to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
 
 Private members (those that begin with an underscore (_) ) are not mapped in from the source node.
 
@@ -326,7 +326,7 @@ And HTML node:
          anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
          _privateVal="5" anotherValue="more"></div>
 
-The parser would create an object and pass it paramaters of:
+The parser would create an object and pass it parameters of:
 
 .. js ::
 
@@ -378,12 +378,12 @@ In addition the markupFactory can be used to allow the widget to do something th
        return new ctor(params, srcNodeRef);
      }
 
-This also ensures that subsequent descendent classes that do not override the markupFactory are created properly.
+This also ensures that subsequent descendant classes that do not override the markupFactory are created properly.
 
 Setting the parser behavior
 ---------------------------
 
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
+``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. how to set parseOnLoad
 
 ``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node. For example:
 
@@ -415,7 +415,7 @@ Calling instantiate in this way will return to you a list of instances that were
        title: 'Lorem ipsum',
        objectVal:{a: 1, b:'c'},
        typedArray:['a','b','c',1,2],
-       unstandardAttr: 'value'"
+       customAttr: 'value'"
      title="Lorem ipsum">Lorem ipsum link</a>
 
 ``NEW in 1.7:`` Since data-dojo-props leads to duplication, there is again possible to use both data-dojo-props attribute like in 1.6 in addition to node attributes:
@@ -426,7 +426,7 @@ Calling instantiate in this way will return to you a list of instances that were
      data-dojo-type="my.custom.type"
      data-dojo-props="objectVal:{a: 1, b:'c'},
        typedArray:['a','b','c',1,2]"
-     title="Lorem ipsum" unstandardAttr="value">Lorem ipsum link</a>
+     title="Lorem ipsum" customAttr="value">Lorem ipsum link</a>
 
 ``todoc: scoping a parser call to node by stringId|domNode``
 

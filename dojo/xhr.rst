@@ -85,7 +85,7 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
                     url: "#",
 
                     // The form node, which contains the
-                    // to be transfered form elements:
+                    // to be transferred form elements:
                     form: "myForm",
 
                     // The used data format.  Text is the most basic, no processing is done on it.
@@ -121,7 +121,7 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
     <br>
     <div id="results"></div>
 
-In fact, the attribute "form:" could be set on each node, not only on form nodes. If your page contains more than one form and these forms are enclosed with a div- or span-tag, then you're able to submit all these forms, if you set "form:" to the surronding div- or span-tag.
+In fact, the attribute "form:" could be set on each node, not only on form nodes. If your page contains more than one form and these forms are enclosed with a div- or span-tag, then you're able to submit all these forms, if you set "form:" to the surrounding div- or span-tag.
 
 
 ========

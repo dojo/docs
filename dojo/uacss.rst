@@ -27,7 +27,7 @@ By doing a dojo.require("dojo.uacss") CSS classes will be added to your document
    - dj_khtml: KHTML
    - dj_safari: Safari
    - dj_chrome: Google Chrome
-   - dj_ff3: Firefox verion 3.x (including 3.5 and 3.6)
+   - dj_ff3: Firefox version 3.x (including 3.5 and 3.6)
 
 2. browser category
 

@@ -10,7 +10,7 @@ dojo.exists
 .. contents::
    :depth: 2
 
-Check if all objects in a dot-seperated string object path exist, such as ``"A.B.C"``.
+Check if all objects in a dot-separated string object path exist, such as ``"A.B.C"``.
 
 
 ============

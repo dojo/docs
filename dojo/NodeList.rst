@@ -132,7 +132,7 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
       node.innerHTML += " - found";
   });
 
-The syntax is the same as :ref:`dojo.forEach <dojo/forEach>` except that the first parameter (the array) is implicitly provided. This pattern is repeated throught the ``dojo.NodeList`` API.
+The syntax is the same as :ref:`dojo.forEach <dojo/forEach>` except that the first parameter (the array) is implicitly provided. This pattern is repeated throughout the ``dojo.NodeList`` API.
 
 For instance, :ref:`dojo.style() <dojo/style>` styles a single Node around a defined API. That API is mapped into ``NodeList``, dropping the node parameter and calling ``dojo.style`` on each node in the list:
 
@@ -370,7 +370,7 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
     dojo.query(".readyToFade").fadeIn().play();
   });
 
-The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``Animation`` object, which you have to explictly call ``.play()`` on.
+The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``Animation`` object, which you have to explicitly call ``.play()`` on.
 
 Additional Extensions
 ---------------------

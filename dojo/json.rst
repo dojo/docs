@@ -59,4 +59,4 @@ For example, to serialize an object we could write:
 
 The stringify() function takes the same arguments as the standard JSON.stringify() function. This is explained in more detail here:
 https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/JSON/stringify
-The second argument is a replacer function, and the third argument allows you to provide a spacer string for pretty formating.
+The second argument is a replacer function, and the third argument allows you to provide a spacer string for pretty formatting.

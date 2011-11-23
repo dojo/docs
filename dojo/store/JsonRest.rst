@@ -112,4 +112,4 @@ If ``sortParam`` is not set, the sort value is appended without a key-value pair
 Misc
 ====
 
-dojo/store/JsonRest does not provide all the functionality of dojox/data/JsonRestStore itself. Addtional modules and layers are used to provide schema validation, referencing, caching, and other functionality.
+dojo/store/JsonRest does not provide all the functionality of dojox/data/JsonRestStore itself. Additional modules and layers are used to provide schema validation, referencing, caching, and other functionality.

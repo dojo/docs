@@ -138,7 +138,7 @@ Examples
 Fade-out a node
 ---------------
 
-The following example lets a node by id dissapear from the screen
+The following example lets a node by id disappear from the screen
 
 .. code-example ::
 

@@ -14,7 +14,7 @@ Helper function for converting a HTML form into an URL-encoded query string.
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a query string sitable for passing on a URI.  This function is identical to doing the operation:
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a query string suitable for passing on a URI.  This function is identical to doing the operation:
 
 .. js ::
 

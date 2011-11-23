@@ -78,7 +78,7 @@ You can listen to multiple event types with a single call by comma-delimiting th
 
 Event Delegation
 ----------------
-The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targetted for event listening. The on function will then use respond to event bubbling and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
+The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targeted for event listening. The on function will then use respond to event bubbling and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
 
 .. js ::
 
@@ -92,7 +92,7 @@ To listen for double clicks on the document and clicks on buttons with myClass c
 
 Note that event delegation will only work on events that bubble. Most DOM events do bubble, but there are a few exceptions. The "mouseenter" and "mouseleave" events do not bubble, but "mouseover" and "mouseout" are the bubbling counterparts. The "focus" and "blur" events do not bubble, but dojo/on normalizes "focusin" and "focusout" as bubbling equivalents. Also, "scroll" events don't bubble.
 
-Also note that dojo/query must be loaded for event delegation to work. The dojo/query module is part of Dojo base and therefore is normally loaded unless you are doing a baseless application and dojo/query hasn't been incldued.
+Also note that dojo/query must be loaded for event delegation to work. The dojo/query module is part of Dojo base and therefore is normally loaded unless you are doing a baseless application and dojo/query hasn't been included.
 
 Extension Events
 ----------------

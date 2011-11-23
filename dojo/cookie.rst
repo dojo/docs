@@ -53,7 +53,7 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
     dojo.require("dojo.cookie");
 
     setCookie = function(){
-      dojo.cookie("favouriteDish", "Nudels", {expires: 5});
+      dojo.cookie("favouriteDish", "Noodles", {expires: 5});
     };
 
     getCookie = function(){

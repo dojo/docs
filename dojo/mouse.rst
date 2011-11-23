@@ -15,7 +15,7 @@ The dojo/mouse module provides extension events for hovering and mouse button ut
 mouse.enter
 ===========
 
-The mouse.enter event is an extension event for being notified of when the mouse cursor hovers over an element. This is based on Internet Explorer's "mouseenter" event and differs "mouseover" because it does not bubble ("mouseover" and "mouseout" are widely considered to be broken because they do bubble and generate many meaningless events for everytime the mouse enters a different element within the target element). To use mouse.enter, we can listen for an event like:
+The mouse.enter event is an extension event for being notified of when the mouse cursor hovers over an element. This is based on Internet Explorer's "mouseenter" event and differs "mouseover" because it does not bubble ("mouseover" and "mouseout" are widely considered to be broken because they do bubble and generate many meaningless events for every time the mouse enters a different element within the target element). To use mouse.enter, we can listen for an event like:
 
 .. js ::
 
