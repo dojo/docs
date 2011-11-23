@@ -13,7 +13,7 @@ Simple Buildsystem Examples
 
 This document provides some simple examples of using the Dojo build system, how to layout your directory structure and other best practices.
 
-.. warning: This is old, the download is foo.
+.. warning: This is old, the download is 1.4.1 dojo.
 
 ============
 Introduction
