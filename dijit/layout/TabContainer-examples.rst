@@ -1,24 +1,23 @@
 .. _dijit/layout/TabContainer-examples:
 
-More TabContainer Examples
-==========================
+===============================================
+dijit.layout.TabContainer - additional examples
+===============================================
 
-:Status: Draft
-:Version: 1.2
-
+.. contents ::
+    :depth: 2
 
 Tab Strip
----------
+=========
+
 This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   The html is very simple
 
@@ -40,17 +39,16 @@ The doLayout attribute currently only works for top tabs, left/bottom/right tabs
 
 
 Right Tabs
-----------
+==========
+
 Tabs at the right, no strip.  Note that right tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   notice the tabPosition attribute
 
@@ -69,17 +67,16 @@ Tabs at the right, no strip.  Note that right tabs don't work in conjunction wit
     </div>
 
 Left Tabs
----------
+=========
+
 Tabs at the left, with a strip.  Note that left tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   notice the tabPosition attribute
 
@@ -98,17 +95,16 @@ Tabs at the left, with a strip.  Note that left tabs don't work in conjunction w
     </div>
 
 Bottom Tabs
------------
+===========
+
 Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   notice the tabPosition attribute
 
@@ -132,7 +128,6 @@ One technique to allow validation, and still use the parser would be to simply d
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.require("dojo.parser");
@@ -144,8 +139,6 @@ One technique to allow validation, and still use the parser would be to simply d
         });
         dojo.parser.parse("progtabwrapper");
     });
-    </script>
-
 
   .. html ::
 
@@ -164,7 +157,8 @@ One technique to allow validation, and still use the parser would be to simply d
     </div>
 
 Programmatic Example
---------------------
+====================
+
 Here's an example that parses existing DOM and creates tabs,
 similar to what the parser does:
 
@@ -174,7 +168,6 @@ similar to what the parser does:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.addOnLoad(function(){
@@ -189,7 +182,6 @@ similar to what the parser does:
         },"tc1-prog");
         tc.startup();
     });
-    </script>
 
   The html is very simple
 
@@ -208,7 +200,8 @@ similar to what the parser does:
     </div>
 
 Nested tabs
------------
+===========
+
 Often sites will have two levels of tabs.  This is supported by using two TabContainer widgets.   Remember that although a TabContainer's children are often ContentPanes, they can be any layout widget, including another TabContainer:
 
 .. code-example ::
@@ -252,7 +245,8 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
 When you have nested tabs you should set the nested parameter to true, to make the formatting distinctive from the outer TabContainer.
 
 Nested tabs programatically
----------------------------
+===========================
+
 This an example of nested tabs created programatically. If there is no nested tab in a tab, content pane is inserted instead.
 
 .. code-example ::
@@ -260,60 +254,60 @@ This an example of nested tabs created programatically. If there is no nested ta
   .. js ::
 
     <script type="text/javascript">
-	dojo.require("dijit.layout.TabContainer");
-	dojo.require("dijit.layout.ContentPane");
-	dojo.addOnLoad(function() {
-		var tabs = [{
-			title: 'Tab 1',
-			sub: [{
-				title: 'My 1st inner',
-				content: 'Lorem ipsum dolor sit amet'
-			}, {
-				title: 'My 2nd inner',
-				content: 'Consectetur adipiscing elit'
-			}]
-		}, {
-			title: 'Tab 2',
-			sub: [{
-				title: 'My 3rd inner',
-				content: 'Vivamus orci massa rhoncus a lacinia'
-			}, {
-				title: 'My 4th inner',
-				content: 'Fusce sed orci magna, vitae aliquet quam'
-			}]
-		}, {
-			title: 'Tab 3',
-			sub: []
-		}];
-		var tabContainer = new dijit.layout.TabContainer({
-			doLayout: false
-		}, 'tabContainer');
-		dojo.forEach(tabs, function(tab) {
-			if (!tab.sub.length) {
-				var cp = new dijit.layout.ContentPane({
-					title: tab.title,
-					content: 'No sub tabs'
-				});
-				tabContainer.addChild(cp);
-				return;
-			}
-			var subTab = new dijit.layout.TabContainer({
-				title: tab.title,
-				doLayout: false,
-				nested: true
-			});
-			dojo.forEach(tab.sub, function(sub) {
-				var cp = new dijit.layout.ContentPane({
-					title: sub.title,
-					content: sub.content
-				});
-				subTab.addChild(cp);
-			});
-			tabContainer.addChild(subTab);
-		});
-		// _Container widgets will call startup on their children already
-		tabContainer.startup();
-	});
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.addOnLoad(function() {
+        var tabs = [{
+            title: 'Tab 1',
+            sub: [{
+                title: 'My 1st inner',
+                content: 'Lorem ipsum dolor sit amet'
+            }, {
+                title: 'My 2nd inner',
+                content: 'Consectetur adipiscing elit'
+            }]
+        }, {
+            title: 'Tab 2',
+            sub: [{
+                title: 'My 3rd inner',
+                content: 'Vivamus orci massa rhoncus a lacinia'
+            }, {
+                title: 'My 4th inner',
+                content: 'Fusce sed orci magna, vitae aliquet quam'
+            }]
+        }, {
+            title: 'Tab 3',
+            sub: []
+        }];
+        var tabContainer = new dijit.layout.TabContainer({
+            doLayout: false
+        }, 'tabContainer');
+        dojo.forEach(tabs, function(tab) {
+            if (!tab.sub.length) {
+                var cp = new dijit.layout.ContentPane({
+                    title: tab.title,
+                    content: 'No sub tabs'
+                });
+                tabContainer.addChild(cp);
+                return;
+            }
+            var subTab = new dijit.layout.TabContainer({
+                title: tab.title,
+                doLayout: false,
+                nested: true
+            });
+            dojo.forEach(tab.sub, function(sub) {
+                var cp = new dijit.layout.ContentPane({
+                    title: sub.title,
+                    content: sub.content
+                });
+                subTab.addChild(cp);
+            });
+            tabContainer.addChild(subTab);
+        });
+        // _Container widgets will call startup on their children already
+        tabContainer.startup();
+    });
     </script>
 
   .. html ::

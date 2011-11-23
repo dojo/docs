@@ -23,20 +23,19 @@ A programmatically created MenuBarItem
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.MenuBar");
     dojo.require("dijit.MenuBarItem");
     var pMenuBar;
     function fClickItem() {alert("Clicked on first item")};
     function fClickAnotherItem() {alert("Clicked on the second Item!")};
     dojo.addOnLoad(function(){
-    pMenuBar = new dijit.MenuBar({id:"SampleMenu"});
-    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1 ", disabled:true, onClick:fClickItem}));
-    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenubarItem#2 ", onClick:fClickAnotherItem}));
-    pMenuBar.placeAt("wrapper");
-    pMenuBar.startup();
+        pMenuBar = new dijit.MenuBar({id:"SampleMenu"});
+        pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1 ", disabled:true, onClick:fClickItem}));
+        pMenuBar.addChild(new dijit.MenuBarItem({label:"MenubarItem#2 ", onClick:fClickAnotherItem}));
+        pMenuBar.placeAt("wrapper");
+        pMenuBar.startup();
     });
-    </script>
+
 
   .. html ::
 
@@ -48,22 +47,20 @@ Creation from markup is more simpler and structured.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.MenuBar");
     dojo.require("dijit.Menu");
     dojo.require("dijit.MenuBarItem");
-    </script>
 
   .. html ::
 
-	<div id="menubar" data-dojo-type="dijit.MenuBar">
-		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">
-			Click me!
-		</div>
-		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="disabled:true">
-			Disabled item
-		</div>
-	</div>
+    <div id="menubar" data-dojo-type="dijit.MenuBar">
+        <div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">
+            Click me!
+        </div>
+        <div data-dojo-type="dijit.MenuBarItem" data-dojo-props="disabled:true">
+            Disabled item
+        </div>
+    </div>
 
 
 Accessibility
@@ -75,8 +72,8 @@ Keyboard
 ==========================================    =================================================
 Action                                        Key
 ==========================================    =================================================
-Navigate menu bar items                        		Left and right arrow keys
-Activate a menu item                       		Spacebar or enter
+Navigate menu bar items                             Left and right arrow keys
+Activate a menu item                            Spacebar or enter
 ==========================================    =================================================
 
 
