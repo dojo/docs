@@ -1,4 +1,4 @@
-.. _shrinksafe/index:
+.. _util/shrinksafe/index:
 
 ShrinkSafe
 ==========

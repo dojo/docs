@@ -13,7 +13,7 @@ The Dojo build system is used to create efficient optimized packages of JavaScri
 See also the documentation on :ref:`custom builds <quickstart/custom-builds>`, about how to make optimized builds based on which dojo modules you are using.
 
 
-:ref:`ShrinkSafe <shrinksafe/index>`
+:ref:`ShrinkSafe <util/shrinksafe/index>`
 ------------------------------------
 
 A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
