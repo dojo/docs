@@ -1,10 +1,9 @@
 .. _dojox/atom/io/model/Person:
 
+==========================
 dojox.atom.io.model.Person
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
@@ -13,7 +12,6 @@ dojox.atom.io.model.Person
 
 This object represents a person object, which is used for the author and contributor types in the Atom specification. A person object can have a name, an email address, a URI, or both.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -29,7 +27,6 @@ Public properties (and their types):
 | String                     | uri             | The URI of this person, such as a website, etc.                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -40,14 +37,14 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this Person from a given DOMNode.                    |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Person                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
+
 See Also:
 =========
 

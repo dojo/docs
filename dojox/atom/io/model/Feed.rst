@@ -1,10 +1,9 @@
 .. _dojox/atom/io/model/Feed:
 
+========================
 dojox.atom.io.model.Feed
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
@@ -13,17 +12,19 @@ dojox.atom.io.model.Feed
 
 This object represents an ATOM Feed.
 
-====================================
+
 Public properties (and their types):
 ====================================
 
-This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties 
+it inherits.
 
-==========================================
+
 Public functions (and their return types):
 ==========================================
 
-This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it 
+inherits.
 
 Below are all the additional functions implemented by this model class.
 
@@ -31,7 +32,7 @@ Below are all the additional functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Entry                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
@@ -47,7 +48,7 @@ Below are all the additional functions implemented by this model class.
 | Entry             | getEntry(String)                                     | Retrieves the dojox.atom.io.model.Entry identified by the   |
 |                   |                                                      | given ID string                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| Number 	    | removeEntry(dojox.atom.io.model.Entry)               | Removes the given entry from the feed, returning the number |
+| Number            | removeEntry(dojox.atom.io.model.Entry)               | Removes the given entry from the feed, returning the number |
 |                   |                                                      | of entries removed                                          |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | setEntries(Array arrayOfEntry)                       | Adds the entries contained in the given array into this Atom|
@@ -60,7 +61,7 @@ Below are all the additional functions implemented by this model class.
 |                   |                                                      | the feed does not include the appropriate link object       |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
+
 See Also:
 =========
 

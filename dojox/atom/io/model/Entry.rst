@@ -1,10 +1,9 @@
 .. _dojox/atom/io/model/Entry:
 
+=========================
 dojox.atom.io.model.Entry
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
@@ -13,11 +12,11 @@ dojox.atom.io.model.Entry
 
 This object represents a Entry tag in an ATOM feed, the core container object of ATOM.
 
-====================================
 Public properties (and their types):
 ====================================
 
-This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties 
+it inherits.
 
 Below are the additional properties defined by this model class:
 
@@ -27,11 +26,12 @@ Below are the additional properties defined by this model class:
 | String                     | feedUrl         | The URL of the Atom feed that owns this entry                                               |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
+
 Public functions (and their return types):
 ==========================================
 
-This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it inherits.
+This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it 
+inherits.
 
 Below are all the additional functions implemented by this model class.
 
@@ -39,7 +39,7 @@ Below are all the additional functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Entry                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
@@ -47,7 +47,7 @@ Below are all the additional functions implemented by this model class.
 |                   |                                                      | way of the Atom Publishing Protocol                         |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
+
 See Also:
 =========
 

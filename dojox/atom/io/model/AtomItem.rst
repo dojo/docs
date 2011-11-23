@@ -1,19 +1,18 @@
 .. _dojox/atom/io/model/AtomItem:
 
+============================
 dojox.atom.io.model.AtomItem
 ============================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
 .. contents::
    :depth: 2
 
-The AtomItem class is generally not used independently.  It is AtomItem class is the base class for Atom feed and entry objects, because they share some common components (title, subtitle, icon, arrays of authors, contributors, and links).
+The AtomItem class is generally not used independently.  It is AtomItem class is the base class for Atom feed and entry objects, because they 
+share some common components (title, subtitle, icon, arrays of authors, contributors, and links).
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -28,7 +27,7 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | categories      | Houses the dojox.atom.io.model.Category objects associated with this Atom item              |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| Array                      | contributors    | Houses the dojox.atom.io.model.Person objects of the contributors                          |
+| Array                      | contributors    | Houses the dojox.atom.io.model.Person objects of the contributors                           |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | icon            | The URL to the icon for this item.                                                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
@@ -49,7 +48,6 @@ Public properties (and their types):
 | Array                      | entries         | Array of dojox.atom.io.model.Entry objects for this item                                    |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -59,7 +57,7 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this AtomItem from a given DOMNode.                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
@@ -101,7 +99,6 @@ Below are all the functions implemented by this model class.
 | undefined         | destroy()                                            | Deletes all variables associated with this item             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
 See Also:
 =========
 

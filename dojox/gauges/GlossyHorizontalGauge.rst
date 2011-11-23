@@ -1,10 +1,9 @@
 .. _dojox/gauges/GlossyHorizontalGauge:
 
+==================================
 dojox.gauges.GlossyHorizontalGauge
 ==================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
 :Available: since 1.7
 
@@ -15,16 +14,12 @@ A glossy horizontal gauge with a variety of indicators, used to display numerica
 
 .. image:: GlossyHorizontalGauge.png
 
-============
 Introduction
 ============
 
 This gauge widget is based on dojox.gauges.BarGauge. It provides a way to display data on a horizontal gauge with a glossy appearance, for displaying a finite data value at a point in time.
 It is created with predefined indicators and thus is ready to use.
 
-
-
-=====
 Usage
 =====
 
@@ -65,11 +60,10 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | title                    |  "title"                                |  The title displayed in the needle's tooltip                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| scalePrecision           |  "0"                                    |  The precision for the formatting of numbers in the scale       |
+| scalePrecision           |  "0"                                    |  The precision for the formatting of numbers in the scale      |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

@@ -1,10 +1,9 @@
 .. _dojox/atom/io/model/Link:
 
+========================
 dojox.atom.io.model.Link
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
@@ -13,7 +12,6 @@ dojox.atom.io.model.Link
 
 This object represents Link elements of the Atom specification.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -31,7 +29,7 @@ Public properties (and their types):
 | String                     | type            | The type of Link                                                                            |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
+
 Public functions (and their return types):
 ==========================================
 
@@ -41,14 +39,14 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this Link from a given DOMNode.                      |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Link                   |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
+
 See Also:
 =========
 

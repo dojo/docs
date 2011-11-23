@@ -17,13 +17,17 @@ The *dojox.atom.io.Connection* module is a IO class for performing APP (ATOM Pub
 Introduction
 ============
 
-This module simplifies performing APP by handling the configuration of all the necessary xhr parameters as well as selecting the correct xhr method for performing a particular type of ATOM action, from getting a Feed (xhrGet), to publishing a new entry (xhrPut).  This class makes use of the dojox.atom.io.model class as its backing representation of the ATOM document and elements.
+This module simplifies performing APP by handling the configuration of all the necessary xhr parameters as well as selecting the correct xhr 
+method for performing a particular type of ATOM action, from getting a Feed (xhrGet), to publishing a new entry (xhrPut).  This class makes use 
+of the dojox.atom.io.model class as its backing representation of the ATOM document and elements.
 
 ===========
 Limitations
 ===========
 
-Since this module uses the core :ref:`dojo.xhr <dojo/xhr>` functions for performing server communication, it is limited by the browser same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
+Since this module uses the core :ref:`dojo.xhr <dojo/xhr>` functions for performing server communication, it is limited by the browser 
+same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using 
+the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
 
 ======================
 Constructor Parameters
@@ -61,7 +65,7 @@ Functions
 | addEntry(entry, url, callback, errorCallback,                | Function to add an entry to a feed via APP (POST of a new entry)            |
 | retrieveEntry, scope)                                        |                                                                             |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
-| deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an existing entry |
+| deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an existing entry  |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 ========

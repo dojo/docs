@@ -1,5 +1,6 @@
 .. _dojox/gantt:
 
+===========
 dojox.gantt
 ===========
 
@@ -10,7 +11,7 @@ dojox.gantt
 .. contents::
    :depth: 2
 
-============
+
 Introduction
 ============
 
@@ -21,7 +22,7 @@ GanttChart(dojox.gantt.GanttChart) is an integrated widget for project and resou
   * **Task Cascade View** - A task view with dependency, that can be modified visually.
   * **Resource View** - A read-only view shows people resource occupation.
 
-=====
+
 Usage
 =====
 
@@ -96,7 +97,7 @@ percentage       number        0       Task progress in percentage, 50 for 50%.
 previousTaskId   number|string null    The id of previous task.
 ================ ============= ======= ===========
 
-=======
+
 Toolbar
 =======
 
@@ -108,8 +109,7 @@ Enlarge Time Line: it shows a more accurate time line when it enlarged.
 
 Shrink Time Line: it shows a more general time line when it shrink.
 
-
-.. image:: shrinkTimeline.png
+.. image:: shrinkTimeLine.png
 
 Zoom in Time Zone
 
@@ -120,7 +120,6 @@ Zoom out Time Zone
 .. image:: zoomOutTimezone.png
 
 
-============
 Project Tree
 ============
 
@@ -128,7 +127,7 @@ Project tree shows all the projects and their tasks, each task has a visual bar 
 
 .. image:: taskMenu.png
 
-=================
+
 Task Cascade View
 =================
 
@@ -136,7 +135,7 @@ The task cascade view shows the task sequence and dependency between them. The "
 
 .. image:: dragTaskBar.png
 
-=============
+
 Resource View
 =============
 

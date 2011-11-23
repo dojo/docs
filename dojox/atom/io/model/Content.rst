@@ -1,10 +1,9 @@
 .. _dojox/atom/io/model/Content:
 
+===========================
 dojox.atom.io.model.Content
 ===========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :Available: since V1.3
 
@@ -13,7 +12,7 @@ dojox.atom.io.model.Content
 
 This object represents Content style elements of the Atom specification, such as title, subtitle, summary, content, etc.
 
-====================================
+
 Public properties (and their types):
 ====================================
 
@@ -37,7 +36,7 @@ Public properties (and their types):
 |                            |                 | to a string.                                                                                |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
+
 Public functions (and their return types):
 ==========================================
 
@@ -48,14 +47,14 @@ Below are all the functions implemented by this model class.
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
-|                   |                                                      | Overridden by child classes                                  |
+|                   |                                                      | Overridden by child classes                                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | buildFromDom(DOMNode)                                | Builds this Content from a given DOMNode.                   |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Content                |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
+
 See Also:
 =========
 

@@ -1,5 +1,6 @@
 .. _util/index:
 
+====
 Util
 ====
 
@@ -14,7 +15,7 @@ See also the documentation on :ref:`custom builds <quickstart/custom-builds>`, a
 
 
 :ref:`ShrinkSafe <util/shrinksafe/index>`
-------------------------------------
+-----------------------------------------
 
 A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
 
