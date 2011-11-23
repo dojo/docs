@@ -43,7 +43,7 @@ dojo.robot is an extension to the doh.robot. You load it using dojo.require("doj
 
 dijit.robot
 -----------
-dijit.robot is the final extension to the doh.robot packaged with dijit. You load it using dojo.require("dijit.robot"). It further augments the dojo.robot's mouse handling with Dijit's cross-browser automatic scrolling. If you are concerned about writing tests that involve scrolling a lot of elements into view, dijit.robot is the best way to ensure that elements are always in view for the mouse to click them.
+dijit.robot is the final extension to the doh.robot packaged with dijit. You load it using dojo.require("dijit.robot"). It further augments the dojo.robot's mouse handling with dijit's cross-browser automatic scrolling. If you are concerned about writing tests that involve scrolling a lot of elements into view, dijit.robot is the best way to ensure that elements are always in view for the mouse to click them.
 
 
 =================
@@ -82,7 +82,7 @@ delay
 -----
 Each doh.robot method takes a delay parameter. Rather than forcing you to litter your code with setTimeouts, we call setTimeout for you behind the scenes. We also do some additional thread synchronization on the Java side to ensure that your events fire in the order you called them and not the order the browser feels like evaluating the setTimeouts.
 
-As the comments show, delays are incremental. Normally, when you write setTimeouts one after another other in a sequence, you have to specify the exact time each one should execute. This is fine, but when you go back to maintain your test and decide to add new actions in between the setTimeouts, you normally have to go back and add time to each and every setTimeout. But with doh.robot's incremental model, test maintenence is easy: you can freely insert or remove commands and the doh.robot will adjust the timings for you automatically. And you don't have to worry about how long it takes a command to execute; the next doh.robot command won't happen until the current one has absolutely finished. Still, it's a good idea to give the browser's rendering system and event dispatcher enough time to catch up with the robot between commands; 500ms is a good delay to use for each command.
+As the comments show, delays are incremental. Normally, when you write setTimeouts one after another other in a sequence, you have to specify the exact time each one should execute. This is fine, but when you go back to maintain your test and decide to add new actions in between the setTimeouts, you normally have to go back and add time to each and every setTimeout. But with doh.robot's incremental model, test maintenance is easy: you can freely insert or remove commands and the doh.robot will adjust the timings for you automatically. And you don't have to worry about how long it takes a command to execute; the next doh.robot command won't happen until the current one has absolutely finished. Still, it's a good idea to give the browser's rendering system and event dispatcher enough time to catch up with the robot between commands; 500ms is a good delay to use for each command.
 
 Also, if you are making AJAX requests to a remote system, such as loading data into a Grid, keep in mind that the request might take a variable amount of time. You could just set a really long timeout, but another practice would be to dojo.connect into an event handler and continue the test from there, when you are absolutely sure that the data has arrived.
 
@@ -292,7 +292,7 @@ Functions part of Dojo, like dojo.byId(), will fetch elements from your applicat
 If you application uses Dijit widgets, the test script will use the application's Dijit registry, so dijit.byId will point to widgets in your application.
 Standard global variables, like window and document, will point to the test script's environment, not the application environment.
 You will only be able to assign variables their values once the tests execute.
-I stress the last point. initRobot returns immediately, before your application is finished loading. If you create variables outside of the scope of a test block and try to assign them values or DOM elements from your applicaiton, they will all be invalid, because the application hasn't loaded yet.
+I stress the last point. initRobot returns immediately, before your application is finished loading. If you create variables outside of the scope of a test block and try to assign them values or DOM elements from your application, they will all be invalid, because the application hasn't loaded yet.
 
 So what do you do? Declare your variable names like you normally would, but don't assign them values yet. Instead, make your first test assign the values. That way, you are guaranteed that your application's environment is available.
 
@@ -600,7 +600,7 @@ The above code uses waitForPageToLoad twice: once to click the checkout button, 
         
         // next page has loaded; continue executing tests
 
-As you can see from the the above snippet, you use a waitForPageToLoad call as the return value of a test. No, the test doesn't actually test anything, but it is a convenient pattern to halt DOH while the page is changing. You give the test a long timeout so the page has sufficent time to load the next page. This is the *maximum* wait; test execution will resume immediately when the next page loads.
+As you can see from the the above snippet, you use a waitForPageToLoad call as the return value of a test. No, the test doesn't actually test anything, but it is a convenient pattern to halt DOH while the page is changing. You give the test a long timeout so the page has sufficient time to load the next page. This is the *maximum* wait; test execution will resume immediately when the next page loads.
 
 You pass waitForPageToLoad a function containing robot commands that will do something to change the page. In this example, the robot moves the mouse to the checkout button. Then, the robot clicks the left mouse button on top of the checkout button, causing the application to submit the form and go to the login page. When the login page loads, DOH resumes test execution and executes the next test; in this case, the next test is named 'login' and so it executes. You can execute any number of tests after that, and can use waitForPageToLoad any number of times to navigate to more pages as your test requires.
 

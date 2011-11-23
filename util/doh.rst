@@ -39,7 +39,7 @@ For a quick list of the features of D.O.H. see below:
 * Modular loading of unit test files.
 * Asynchronous test support (such as testing functions that ultimately use XHR)
 * A simple browser-based graphical front end and runner file.
-* Standard Unit Test Support (assertTrue, assertFalse, assertEqual, timeouts, etcera)
+* Standard Unit Test Support (assertTrue, assertFalse, assertEqual, timeouts, etc.)
 * Performance tests with basic statistical computations.
 * Java Applet (DOH Robot), for simulating user interaction to test browser input events.
 * If present, will use the Dojo Module Loader to load test files.
@@ -150,7 +150,7 @@ What a performance fixture does is the following:
       trial: number, //The trial number, 0 .. N trial run
       testIterations: number, //The number of iterations the test function was run for the trial.
       executionTime: number, //The total execution time of the trial, in milliseconds.
-      average: number //The average time a single iteration of the test function takes.  exxecutionTime/testIterations
+      average: number //The average time a single iteration of the test function takes.  executionTime/testIterations
    }
 
 * At the end of all the performance tests, if the tests were run in a browser, D.O.H. then calculates statistical information off the run, such as standard deviation, max, min, median, and the like.  It also then plots each trial out using dojox.charting.DataChart (if available).  All this data is displayed on the 'Performance Tests Results' page.  To see this in action, take a look at the `dojox.gfx performance tests <http://archive.dojotoolkit.org/nightly/checkout/dojox/gfx/tests/performance/runTests.html>`_ in nightly.
@@ -180,7 +180,7 @@ doh.registerTest(group, testFuncOrObj);
 
 doh.registerTests(group, testFuncOrObjArr);
 -------------------------------------------
-  This function registers an array of tests as a member of the group 'group'.  The contents of the array of tests can be an array of sinple test functions or an array of 'test fixtures', or a mix of them.
+  This function registers an array of tests as a member of the group 'group'.  The contents of the array of tests can be an array of simple test functions or an array of 'test fixtures', or a mix of them.
 
 
 doh.registerTestNs(group, obj);
@@ -189,7 +189,7 @@ doh.registerTestNs(group, obj);
 
 doh.registerTestUrl(url);
 -------------------------
-  This function registers a URL as a location to load tests from.  The URL is used to populate the contents of an iframe, and usually refers to an HTML page that bootloads D.O.H. internally for running tests in a segmented iframe.  A good example showing this is the dojo/tests/fx.html.  It loads dojo, doh, and then on dojo load completion calls doh.registerTests().  The D.O.H. instance in the iframe will proxy back the results of the test run to the primary D.O.H. instance.
+  This function registers a URL as a location to load tests from.  The URL is used to populate the contents of an iframe, and usually refers to an HTML page that boot-loads D.O.H. internally for running tests in a segmented iframe.  A good example showing this is the dojo/tests/fx.html.  It loads dojo, doh, and then on dojo load completion calls doh.registerTests().  The D.O.H. instance in the iframe will proxy back the results of the test run to the primary D.O.H. instance.
 
 --------------
 Test Functions
@@ -351,7 +351,7 @@ Performance Test Fixture (setup, standalone, asynchronous test)
 
 (Dojo 1.4 and higher)
 
-Async performance test fixtures are just like synchronous performance test fixtures.  The only difference is that these return doh.Deferreds to tell the runner framework to treat the test as async.  Note:  Performance profiling asynchronous operations will not always provide useful infomation.  By the nature of being async means its performance profile will likely vary considerably.  The below example demonstrates an async performance fixture through the use of setTimeout.
+Async performance test fixtures are just like synchronous performance test fixtures.  The only difference is that these return doh.Deferreds to tell the runner framework to treat the test as async.  Note:  Performance profiling asynchronous operations will not always provide useful information.  By the nature of being async means its performance profile will likely vary considerably.  The below example demonstrates an async performance fixture through the use of setTimeout.
 
 .. js ::
 

@@ -17,7 +17,7 @@ Setup and population of the viewer app with API data
 Introduction
 ============
 
-Running the api docs extraction/generation tool (generate.php) produces either json or xml output - this is the raw data. To format and process this data into useful, browseable documentation you need a viewer application. This page steps you through the process to setup a web app like `dojotoolkit.org/api <http://dojotoolkit.org/api/>`_ and how to populate it with your docs data
+Running the api docs extraction/generation tool (generate.php) produces either json or xml output - this is the raw data. To format and process this data into useful, browsable documentation you need a viewer application. This page steps you through the process to setup a web app like `dojotoolkit.org/api <http://dojotoolkit.org/api/>`_ and how to populate it with your docs data
 
 =============
 Prerequisites
@@ -26,9 +26,9 @@ Prerequisites
 Dojo's `API Viewer <http://dojotoolkit.org/api/>`_ is a PHP-based web application, using XSLT to transform the XML output from generate.php and to create a readable and usable documentation UI. You will need:
 
 * A **web server**, with **mod_rewrite** enabled and **PHP 5** installed and configured.
-* A Subversion (**svn**) client. This walkthrough will assume a command-line svn client
+* A Subversion (**svn**) client. This walk through will assume a command-line svn client
 
-Our viewer app is going to end up in a directory called 'api', which for the purposes of this walkthrough we'll assume is a sub-directory of the web root. That's going to get created for us (and needs to not exist yet). For now,  we'll make sure PHP is working by creating a test.php file in the web root directory, with the contents:
+Our viewer app is going to end up in a directory called 'api', which for the purposes of this walk through we'll assume is a sub-directory of the web root. That's going to get created for us (and needs to not exist yet). For now,  we'll make sure PHP is working by creating a test.php file in the web root directory, with the contents:
 
 .. code-block :: php
       
@@ -67,7 +67,7 @@ to read:
 
     $basePath = "/api/"
 
-* To get permalinks working, we have to make a similar change in the .htaccess file. We'll change the RewriteBase directive to '/api'. (If your server doesnt mod_rewrite by the way, permalinks are the only casualty.)
+* To get permalinks working, we have to make a similar change in the .htaccess file. We'll change the RewriteBase directive to '/api'. (If your server doesn't mod_rewrite by the way, permalinks are the only casualty.)
 
   .. code-block :: php
 
