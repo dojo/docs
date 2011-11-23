@@ -23,7 +23,7 @@ Features
 This plugin cleans up the output from dijit.Editor in the following ways:
 
 * Uses margin styling for indenting instead of inconsistent behaviors like <blockquote> and the like.
-* Will wrap body-level text in indentable containts when indenting said text.
+* Will wrap body-level text in indentable container when indenting said text.
 * Handles multi-node selection indenting
 * Indents and outdents list elements correctly.  All known browsers (FireFox, Internet Explorer, WebKit), actually generate invalid HTML for lists when the native indent/outdent are used, so this plugin fixes that.
 * Makes use of the customUndo capability of editor.  This may impact performance on large documents, but is necessary as fixing the indent behavior requires DOM level manipulation, which the native undo/redo doesn't handle.
