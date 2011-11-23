@@ -29,8 +29,8 @@ FAQ
 
 * `Frequently asked questions <http://www.dojotoolkit.org/support/faq>`_
 
-Maling list
------------
+Mailing list
+------------
 
 * `The dojo-interest mailing list <http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest>`_
 * :ref:`More info <support/nabble>` on the mailing list and the nabble archive.

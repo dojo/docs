@@ -18,8 +18,8 @@ the mailing list is archived by Nabble and pipermail
  * current questions and posts
 
   * [[http://www.nabble.com/Dojo-f36462.html]]
-  * all new posts should go here, but it's only a few months old
-  * March 9, 2009 thru present
+  * all new posts should go here
+  * March 9, 2009 through present
 
  * there's another archive on nabble, but it only gets a subset of the posts
 
