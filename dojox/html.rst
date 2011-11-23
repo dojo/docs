@@ -1,10 +1,9 @@
 .. _dojox/html:
 
+==========
 dojox.html
 ==========
 
-:Status: Draft
-:Version: 1.0
 :Authors: Marcus Reimann
 :Developers: Bryan Forbes, Sam Foster, Mike Wilcox, Nathan Toone, Jared Jurkiewicz
 :Available: since V1.2
@@ -14,8 +13,6 @@ dojox.html
 
 **dojox.html** offers additional HTML helper functions.
 
-
-========
 Features
 ========
 
@@ -67,15 +64,8 @@ Features
   * Search document for style sheets.
   * Toggle sheets on and off (based on the W3C spec).
 
-
-========
 See also
 ========
 
-* :ref:`dojo.html <dojo/html>`
-
-  Inserting contents in HTML nodes
-
-* :ref:`dojo._base.html <dojo/_base/html>`
-
-  Basic DOM handling functions, included in Dojo Base
+* :ref:`dojo.html <dojo/html>` - Inserting contents in HTML nodes
+* :ref:`dojo._base.html <dojo/_base/html>` - Basic DOM handling functions, included in Dojo Base

@@ -35,7 +35,7 @@ DojoX follows the same naming conventions as Dojo and Dijit, which basically con
 
 * Functions are mixed case, always starting with a lowercase. Eg: ``dojox.cometd.init("http://cometserver:9090/cometd");``
 * Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a Lightbox from the :ref:`dojox.image project <dojox/image>`
-* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with :ref:`dojox.grid.DataGrid <dojox/grid>`
+* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with :ref:`dojox.grid.DataGrid <dojox/grid/DataGrid>`
 * No cross-namespace pollution takes place indirectly.
 
 There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hyphens**. By adding a hyphen to the
