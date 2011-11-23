@@ -143,7 +143,7 @@ the idea). Given the following legacy module:
 
   dojo.provide("my.module");
   dojo.require("your.module");
-  doSomethingSpectaculor();
+  doSomethingSpectacular();
 
 The v1.6- build system rewrites the module like this:
 
@@ -160,7 +160,7 @@ The v1.6- build system rewrites the module like this:
     function(){
       dojo.provide("my.module");
       dojo.require("your.module");
-      doSomethingSpectaculor();
+      doSomethingSpectacular();
     }
   );
 
@@ -329,7 +329,7 @@ The v1.7+ loader has two basic modes of operation:
 * legacy: modules are loaded synchronously just like the v1.6- loader. The loader is put in legacy mode by setting the
   configuration variable async to "sync" or "legacyAsync" or falsy; falsy has the same effect as "sync".
 
-The legacy mode has two submodes:
+The legacy mode has two sub-modes:
 
 * synchronous: none of the modules reside cross domain so that all of the modules can be retrieved with a
   synchronous XHR transaction
@@ -548,7 +548,7 @@ Next, dojo/loadInit evaluates the code given by def, passing the proper objects 
 names. This causes dojo.loadInit to execute all callbacks (if any), and all dojo.require[After]If applications to
 evaluate their conditions and possibly demand additional modules. Upon return from the evaluation, dojo/loadInit is left
 with a set of dojo.require'd module identifiers that it sniffed which indicate the modules dojo.require'd by the
-reference module. Also, dojo.provided'd sniffed module identifiers are noted to "have arrived" to prevent any attempt at
+reference module. Also, dojo.provide'd sniffed module identifiers are noted to "have arrived" to prevent any attempt at
 downloading such modules. This is particularly important when a legacy module dojo.provide's several modules.
 
 Notice what has happened, dojo/loadInit has arranged to execute all of the legacy loader API applications found in the
@@ -586,7 +586,7 @@ assume a scope map of [["dojo", "myDojo"]] and the legacy module "my.module" loo
   dojo.require("your.module");
   dojo.loadInit(function(){
 	dojo.getObject("my.module", true);
-    if(document.someMagicSomthing){
+    if(document.someMagicSomething){
       my.module.switch = 1;
     }else{
       my.module.switch = 2;

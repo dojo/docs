@@ -28,7 +28,7 @@ JavaScript resources.
 Since each individual resource implies an HTTP transaction to download that resource, bandwidth and latency constraints
 can result in sluggish loading performance. Fortunately, this problem is easy to fix. Once the program is constructed,
 the modules can be analyzed by a program and aggregated so that only few resources are actually downloaded, with each of
-those resources containing several logical modules. Typcially, this step occurs when moving from development to
+those resources containing several logical modules. Typically, this step occurs when moving from development to
 deployment.
 
 Dojo was among the first JavaScript libraries to define a module API and publish a loader and build application to solve
@@ -37,7 +37,7 @@ all of these problems. The original API included the functions ``dojo.require`` 
 
 Since early 2010, there has been a renewed interest in improving JavaScript modules systems. A single API has
 emerged: `the Asynchronous Module Definition (AMD) API <https://github.com/amdjs/amdjs-api/wiki/AMD>`_ ("AMD API"). This
-API has seen dramatic uptake over 2011 and has become the defacto standard for constructing client-side
+API has seen dramatic uptake over 2011 and has become the de facto standard for constructing client-side
 JavaScript modules. While keeping the promise of backward compatibility for the 1.x product line, Dojo fully supports
 this standard as of v1.7.0. (Note: Dojo will drop support for the legacy API in version 2.0).
 

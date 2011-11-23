@@ -25,7 +25,7 @@ The Dojo loader includes two APIs:
   * The legacy dojo API which consists of ``dojo.require()``, ``dojo.provide()``, ``dojo.requireIf()``,
     ``dojo.requireAfterIf()``, ``dojo.platformRequire()``, and ``dojo.requireLocalization()`` ("legacy loader API")
 
-The AMD API is new for Dojo 1.7. It is the same API implemented by `RequrieJS <http://requirejs.org>`_, `curl
+The AMD API is new for Dojo 1.7. It is the same API implemented by `RequireJS <http://requirejs.org>`_, `curl
 <https://github.com/unscriptable/curl>`_, and `bdLoad <http://bdframework.org/bdLoad/>`_ (the dojo implementation is an
 adoption of bdLoad). This exciting new standard for writing and loading modules dramatically improves code
 portability and interoperability. Equally important, it allows modules to be loaded asynchronously, which provides two
@@ -995,7 +995,7 @@ Plugins can be used to extend the loader to support loading resources other than
 
   * :ref:`dojo/load`: a convenience plugin for loading dependencies computed at runtime.
 
-  * :ref:`dojo/require`: downloads a legacy module without loading it. This allows the legacy codepath to be guaranteed.
+  * :ref:`dojo/require`: downloads a legacy module without loading it. This allows the legacy code path to be guaranteed.
 
   * :ref:`dojo/loadInit`: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
     dojo.require[After]If--that are associated with a module
