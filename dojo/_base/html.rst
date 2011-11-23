@@ -48,7 +48,7 @@ Features
 
   Removes an attribute from an HTML element.  Alias of ``domAttr.remove`` in ``dojo/dom-attr``.
 
-* :ref:`dojo.getPropNode <dojo/getPropNode>`
+* :ref:`dojo.getNodeProp <dojo/getNodeProp>`
 
   Returns an effective value of a property or an attribute.  Alias of ``domAttr.getNodeProp`` in ``dojo/dom-attr``.
 

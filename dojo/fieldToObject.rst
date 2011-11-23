@@ -20,7 +20,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 This function is used internally by :ref:`dojo.formToObject <dojo/formToObject>` to convert each form field to a value.
 
-Since dojo 1.7, dojo.fieldToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.fieldToObject in dojo/dom-form.
+Since Dojo 1.7, ``dojo.fieldToObject`` is exposed via the ``fieldToObject`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
 =====
 Usage
@@ -28,25 +28,23 @@ Usage
 
 Pass the form field node or the string id of a form field node.  The function will hand back a string array for multi-select fields, a string value for other fields.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. js ::
  
- <script type="text/javascript">
   require(["dojo/dom-form"], function(domForm){
-     var firstInputValue = domForm.fieldToObject("firstInput");
+    var firstInputValue = domForm.fieldToObject("firstInput");
 
-     //Assuming a form of:
-     // <form id="myform">
-     //    <input id="firstInput" type="text" name="field1" value="value1">
-     //    <input type="text" name="field2" value="value2">
-     //    <input type="button" name="someButton" value="someValue">
-     // </form>
-     //
-     //firstInputValue will be "value1"
+    //Assuming a form of:
+    // <form id="myform">
+    //    <input id="firstInput" type="text" name="field1" value="value1">
+    //    <input type="text" name="field2" value="value2">
+    //    <input type="button" name="someButton" value="someValue">
+    // </form>
+    //
+    //firstInputValue will be "value1"
   });
- </script>
 
 
 Dojo < 1.7
@@ -54,18 +52,16 @@ Dojo < 1.7
 
 .. js ::
  
- <script type="text/javascript">
-   var firstInputValue = dojo.fieldToObject("firstInput");
+  var firstInputValue = dojo.fieldToObject("firstInput");
 
-   //Assuming a form of:
-   // <form id="myform">
-   //    <input id="firstInput" type="text" name="field1" value="value1">
-   //    <input type="text" name="field2" value="value2">
-   //    <input type="button" name="someButton" value="someValue">
-   // </form>
-   //
-   //firstInputValue will be "value1"
- </script>
+  //Assuming a form of:
+  // <form id="myform">
+  //    <input id="firstInput" type="text" name="field1" value="value1">
+  //    <input type="text" name="field2" value="value2">
+  //    <input type="button" name="someButton" value="someValue">
+  // </form>
+  //
+  //firstInputValue will be "value1"
 
 ========
 Examples

@@ -20,7 +20,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` documentation for more details.
 
-Since dojo 1.7, dojo.formToJson has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toJson in dojo/dom-form.
+Since Dojo 1.7, ``dojo.formToJson`` is exposed via the ``toJson`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
 =====
 Usage
@@ -28,28 +28,26 @@ Usage
 
 Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JSON string of the name/value pairs from the form elements.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. js ::
  
- <script type="text/javascript">
   require(["dojo/dom-form"], function(domForm){
-     var formId = "myId";
-     var formJson = domForm.toJson(formId);
+    var formId = "myId";
+    var formJson = domForm.toJson(formId);
 
-     //Assuming a form of:
-     // <form id="myform">
-     //    <input type="text" name="field1" value="value1">
-     //    <input type="text" name="field2" value="value2">
-     //    <input type="button" name="someButton" value="someValue">
-     // </form>
-     //
-     //The structure of formJson will be:
-     // {"field1":"value1","field2":"value2"}
-     //Note the button was skipped.
+    //Assuming a form of:
+    // <form id="myform">
+    //    <input type="text" name="field1" value="value1">
+    //    <input type="text" name="field2" value="value2">
+    //    <input type="button" name="someButton" value="someValue">
+    // </form>
+    //
+    //The structure of formJson will be:
+    // {"field1":"value1","field2":"value2"}
+    //Note the button was skipped.
   });
- </script>
 
 
 Dojo < 1.7
@@ -57,22 +55,19 @@ Dojo < 1.7
 
 .. js ::
  
- <script type="text/javascript">
-   var formId = "myId";
-   var formJson = dojo.formToJson(formId);
+  var formId = "myId";
+  var formJson = dojo.formToJson(formId);
 
-   //Assuming a form of:
-   // <form id="myform">
-   //    <input type="text" name="field1" value="value1">
-   //    <input type="text" name="field2" value="value2">
-   //    <input type="button" name="someButton" value="someValue">
-   // </form>
-   //
-   //The structure of formJson will be:
-   // {"field1":"value1","field2":"value2"}
-   //Note the button was skipped.
- </script>
-
+  //Assuming a form of:
+  // <form id="myform">
+  //    <input type="text" name="field1" value="value1">
+  //    <input type="text" name="field2" value="value2">
+  //    <input type="button" name="someButton" value="someValue">
+  // </form>
+  //
+  //The structure of formJson will be:
+  // {"field1":"value1","field2":"value2"}
+  //Note the button was skipped.
 
 
 ========

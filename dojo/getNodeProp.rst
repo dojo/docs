@@ -21,7 +21,7 @@ It is useful when you don't care if somebody set an attribute on a node in HTML,
 
 There is no corresponding ``dojo.setNodeProp``. If you want to set a property value, use straight assignment.
 
-Since dojo 1.7, dojo.getNodeProp has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.getNodeProp in dojo/dom-attr.
+Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the ``getNodeProp`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 =====
 Usage
@@ -29,6 +29,12 @@ Usage
 
 .. js ::
  
+ // Dojo 1.7+ (AMD)
+ require(["dojo/dom-attr"], function(domAttr){
+   domAttr.getNodeProp(node, attr);
+ });
+ 
+ // Dojo < 1.7
  dojo.getNodeProp(node, attr);
 
 node
@@ -42,21 +48,15 @@ attr
 Examples
 ========
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+When using AMD format in a fully baseless application, ``getNodeProp`` is accessed from the ``dojo/dom-attr`` module.
 
 .. js ::
 
-  require(["dojo/_base/html"], function(dojo){
-      dojo.getNodeProp("model", name);
-  });
-
-It's recommend to use attr.getNodeProp in dojo 1.7.
-
-.. js ::
-
-  require(["dojo/dom-attr"], function(attr){
-      attr.getNodeProp("model", name);
+  require(["dojo/dom-attr"], function(domAttr){
+    domAttr.getNodeProp("model", name);
   });
 
 Dojo < 1.7

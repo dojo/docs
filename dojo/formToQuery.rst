@@ -16,11 +16,13 @@ Introduction
 
 This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a query string sitable for passing on a URI.  This function is identical to doing the operation:
 
-*dojo.objectToQuery(dojo.formToObject("formid"));*
+.. js ::
+
+  dojo.objectToQuery(dojo.formToObject("formid"));
 
 You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` and :ref:`dojo.objectToQuery <dojo/objectToQuery>` documentation for more details on the general behavior.
 
-Since dojo 1.7, dojo.formToQuery has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toQuery in dojo/dom-form.
+Since Dojo 1.7, ``dojo.formToQuery`` is exposed via the ``toQuery`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
 =====
 Usage
@@ -28,52 +30,46 @@ Usage
 
 Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a string of the name/value pairs in URI query string format.
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
 .. js ::
  
- <script type="text/javascript">
   require(["dojo/dom-form"], function(domForm){
-     var formId = "myId";
-     var formQuery = domForm.toQuery(formId);
+    var formId = "myId";
+    var formQuery = domForm.toQuery(formId);
 
-     //Assuming a form of:
-     // <form id="myform">
-     //    <input type="text" name="field1" value="value1">
-     //    <input type="text" name="field2" value="value2">
-     //    <input type="button" name="someButton" value="someValue">
-     // </form>
-     //
-     //The structure of formJson will be:
-     // field1=value1&field2=value2
-     //Note the button was skipped.
+    //Assuming a form of:
+    // <form id="myform">
+    //    <input type="text" name="field1" value="value1">
+    //    <input type="text" name="field2" value="value2">
+    //    <input type="button" name="someButton" value="someValue">
+    // </form>
+    //
+    //The structure of formJson will be:
+    // field1=value1&field2=value2
+    //Note the button was skipped.
   });
- </script>
 
 
 Dojo < 1.7
 ----------
 
-.. js ::
- 
+.. js :: 
 
- <script type="text/javascript">
+  var formId = "myId";
+  var formQuery = dojo.formToQuery(formId);
 
-   var formId = "myId";
-   var formQuery = dojo.formToQuery(formId);
-
-   //Assuming a form of:
-   // <form id="myform">
-   //    <input type="text" name="field1" value="value1">
-   //    <input type="text" name="field2" value="value2">
-   //    <input type="button" name="someButton" value="someValue">
-   // </form>
-   //
-   //The structure of formJson will be:
-   // field1=value1&field2=value2
-   //Note the button was skipped.
- </script>
+  //Assuming a form of:
+  // <form id="myform">
+  //    <input type="text" name="field1" value="value1">
+  //    <input type="text" name="field2" value="value2">
+  //    <input type="button" name="someButton" value="someValue">
+  // </form>
+  //
+  //The structure of formJson will be:
+  // field1=value1&field2=value2
+  //Note the button was skipped.
 
 
 ========
