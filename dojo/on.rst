@@ -169,11 +169,24 @@ The on.once function allows you to register a listener that will be called just 
 
   on.once(finishedButton, "click", onFinished);
 
+=================
+dojo/on migration
+=================
 
 Converting from dojo.connect
 ----------------------------
-dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes and event emitting objects (see the dojo/Evented page for more information). If you're connecting to a plain method, use dojo/aspect instead.  Also, note that some event emitting objects, like dijits, have their own event naming conventions and may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect for some event emitting objects like dijits.
+dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes and event emitting objects (see the :ref:`dojo/Evented <dojo/Evented>` page for more information). If you're connecting to a plain method, use dojo/aspect instead.  Also, note that some event emitting objects, like dijits, have their own event naming conventions and may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect for some event emitting objects like dijits.
 
 Transitioning to Dojo 2.0
 -------------------------
 The dojo/on module is expected to be a core module in Dojo 2.0 with the API introduced in 1.7. The dojo/on module can be used for listening to events on DOM and host objects, as well Evented objects such that your code should transition to 2.0. However, the event emitting objects in Dojo (including Dijits, Dnd, and Animation) are likely to change their events (both names and emitted event objects) in 2.0, so one should not assume that code using dojo/on to listen to Dojo objects will work unchanged in 2.0.
+
+Using the dojo/on module with pre-AMD-style Dojo api's
+------------------------------------------------------
+
+The dojo/on module can also be loaded with dojo.require("dojo.on") to make available as dojo.on. For example:
+
+.. js ::
+
+  dojo.require("dojo.on");
+  dojo.on(document, "click", clickHandler);

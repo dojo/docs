@@ -301,20 +301,20 @@ Tips
 ----
 * How to get selected rows, columns or even cells when the menu is popped up?
 
-1. Normally, when :ref:`Selector <Selector>` plugin is off, we can get selected rows by:
+1. Normally, when the :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin is off, we can get selected rows by:
 
 .. js ::
   
   grid.selection.getSelected()
 
 
-2. When :ref:`Selector <Selector>` plugin if turned on, we can get the selected rows/column/cell with the following way:
+2. When the :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin is turned on, we can get the selected rows/column/cell with the following way:
 
 .. js ::
   
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
-More details please refer to :ref:`Selector <Selector>` plugin
+More details please refer to the :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
 ========
