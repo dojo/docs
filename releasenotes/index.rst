@@ -13,7 +13,7 @@ see the Release Notes for it.
 Current Development
 ===================
 
-* :ref:`Dojo Toolkit v1.8 Release Notes <releasnotes/1.8>`
+* :ref:`Dojo Toolkit v1.8 Release Notes <releasenotes/1.8>`
 
 Current Stable
 ==============

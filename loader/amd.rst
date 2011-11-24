@@ -148,7 +148,7 @@ The "config" event passes two arguments to any listeners:
   * rawConfig: the value of ``require.rawConfig``
 
 The various configuration variables that apply to the loader are discussed in detail in their relevant sections. The
-section :ref:`Configuration Reference` includes a list of all reserved configuration variables.
+section `Configuration Reference`_ includes a list of all reserved configuration variables.
 
 ======
 has.js
@@ -254,7 +254,7 @@ order to allow AMD modules to be accessed by legacy code.
     callback       // (optional; function) function to call when dependencies are loaded
   ) -> undefined
 
-If a ``configuration`` object is provided, it is passed to the configuration API as described in :ref:`Configuration`. Next,
+If a ``configuration`` object is provided, it is passed to the configuration API as described in `Configuration`_. Next,
 the dependencies listed in ``dependencies`` (if any) are resolved. Finally, ``callback`` (if any) is executed with the
 resolved dependencies passed in as arguments.
 

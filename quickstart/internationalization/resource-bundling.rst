@@ -37,7 +37,7 @@ dojo.requireLocalization
 dojo.i18n.getLocalization
 -------------------------
 
-Use :ref:`dojo.i18n.getLocalization() <dojo/i18n/getLocalization>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
+Use :ref:`dojo.i18n.getLocalization() <dojo/i18n>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
 
 .. js ::
  
@@ -67,5 +67,5 @@ See also
 
 * :ref:`dojo.i18n <dojo/i18n>`
 * :ref:`dojo.requireLocalization <dojo/requireLocalization>`
-* :ref:`dojo.i18n.getLocalization <dojo/i18n/getLocalization>`
+* :ref:`dojo.i18n.getLocalization <dojo/i18n>`
 * :ref:`Language and Localization Settings in dojoConfig <dojo/config>`

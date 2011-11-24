@@ -372,7 +372,6 @@ dojox.data.jsonPathStore
 
 * This widget was out of sync due to the more advanced dojox.json capabilities and has been removed.
 * There is an equivalent widget which uses dojox.json ref and query in dojoc/dmachi/data called JsonStore for those who still need this capability. While they are not drop in replacements of each other, they are pretty close and it should not take a significant amount of time to convert, and the benefits gained in performance and querying flexibility are worth it.
-* See also :ref:`dojoc <dojoc/index>`
 
 dojox.date
 ----------

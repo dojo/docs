@@ -438,7 +438,7 @@ Lang
 Layout
 ------
 
-GridContainerは :ref:`MDnD` を使って書き直され、GridContainerLiteが導入されました。GridContainerの使い方は、acceptTypes属性の変更のみで、概ねこれまでと同じです。従来のacceptTypes属性は、例えば'dojox.widget.Portlet,dijit.layout.ContentPane'のようなコンマ区切りのリストを取りました。それは任意の文字列を取るように変更されました。その文字列は、子ウィジェットの'dndType'までマッチします。例：GridContainerにおいてacceptTypes="Portlet,SomeCustomWidget"、子ウィジェットにおいてdndType="Portlet" or dndType="SomeCustomWidget"
+GridContainerは `MDnD`_ を使って書き直され、GridContainerLiteが導入されました。GridContainerの使い方は、acceptTypes属性の変更のみで、概ねこれまでと同じです。従来のacceptTypes属性は、例えば'dojox.widget.Portlet,dijit.layout.ContentPane'のようなコンマ区切りのリストを取りました。それは任意の文字列を取るように変更されました。その文字列は、子ウィジェットの'dndType'までマッチします。例：GridContainerにおいてacceptTypes="Portlet,SomeCustomWidget"、子ウィジェットにおいてdndType="Portlet" or dndType="SomeCustomWidget"
 
 
 MDnD

@@ -129,7 +129,7 @@ While not currently implemented in either of the JSON REST consumers in Dojo, so
 Dojo and REST
 =============
 
-The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` and the :ref:`dojox.data.JsonRestStore <dojo/data/JsonRestStore>`.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` is possible.
+The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` and the :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` is possible.
 
 dojo.store.JsonRest
 -------------------

@@ -90,13 +90,13 @@ Stores and Data Stores
 dojo.data
 ---------
 
-* :ref:`Using Datastores <quickstart/data/usingdatastores>`
-* :ref:`Reference manual <quickstart/data>`
+* :ref:`Datastores <quickstart/data>` and :ref:`Using Datastores <quickstart/data/usingdatastores>`
+* :ref:`Reference manual <dojo/data>`
 
 dojo.store
 ----------
 
-* :ref:`Using Stores <quickstart/store>`
+* :ref:`Dojo.store <dojo/store>`
 
 Other Information
 -----------------
