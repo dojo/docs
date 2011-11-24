@@ -22,7 +22,7 @@ This document is more to do with how to arrange your source files so that the bu
 There are several pages of existing documentation that describe the background and theory to the localization process:
 
  - :ref:`Internationalization Quickstart <quickstart/internationalization/index>`
- - :ref:`getLocalization <dojo/i18n/getLocalization>`
+ - :ref:`getLocalization <dojo/i18n>`
  - :ref:`requireLocalization <dojo/requireLocalization>`
 
 Here we provide a practical walkthrough of applying localisation to actual dijits and an actual build profile.

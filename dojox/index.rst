@@ -404,7 +404,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A 3d API for dojox.gfx
 
-* :ref:`dojox.grid <dojox/grid>`
+* :ref:`dojox.grid <dojox/grid/index>`
 
   Dojo Toolkit's Grid Widgets
 

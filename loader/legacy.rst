@@ -324,7 +324,7 @@ The v1.7+ loader has two basic modes of operation:
 
 * asynchronous: modules are loaded asynchronously as per the AMD specification. The loader is put in the asynchronous
   mode by setting the configuration variable async to truthy but not "sync" or "legacyAsync". This mode was described
-  in :ref:`The AMD API <loader/amd#the-amd-api>`.
+  in :ref:`The AMD API <loader/amd>`.
 
 * legacy: modules are loaded synchronously just like the v1.6- loader. The loader is put in legacy mode by setting the
   configuration variable async to "sync" or "legacyAsync" or falsy; falsy has the same effect as "sync".

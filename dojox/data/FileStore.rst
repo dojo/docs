@@ -37,7 +37,7 @@ Features
 
 7. An example implementation of the back end service in PHP. The example is documented cleanly and is less than five hundred lines of code, making it relatively easy to dissect and understand.
 
-8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`, and as well :ref:`dojox.grid <dojox/grid>`.
+8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`, and as well :ref:`dojox.grid <dojox/grid/index>`.
 
 
 ==============

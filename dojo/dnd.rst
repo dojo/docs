@@ -287,7 +287,7 @@ Following local events are defined by Source_, which are meant to be overridden 
 Topic processors
 ~~~~~~~~~~~~~~~~
 
-Following topic listeners are defined: ``onDndSourceOver``, ``onDndStart``, ``onDndDrop``, ``onDndCancel``. These topics are published by the manager_. If you want to override topic listeners, please read :ref:`Summary of topics`.
+Following topic listeners are defined: ``onDndSourceOver``, ``onDndStart``, ``onDndDrop``, ``onDndCancel``. These topics are published by the manager_. If you want to override topic listeners, please read `Summary of topics`_.
 
 **Warning: in most cases you want to use events. Topics are low-level constructs, which are used internally.**
 

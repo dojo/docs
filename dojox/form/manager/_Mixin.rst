@@ -317,7 +317,7 @@ This adapter is useful when you want to do a uniform processing of form elements
 dojox.form.manager.inspectorAdapter
 -----------------------------------
 
-This is a slightly different adapter for arrays versus widgets/nodes. The difference with :ref:`dojox.form.manager.actionAdapter` is in case of arrays it applies the inspector only to the first element of the array.
+This is a slightly different adapter for arrays versus widgets/nodes. The difference with :ref:`dojox/form/manager/actionAdapter` is in case of arrays it applies the inspector only to the first element of the array.
 
 .. js ::
 

@@ -49,7 +49,7 @@ Features
 
 7. Integrates with the RestChannels Comet module to support server sent notifications of data changes. The data store automatically routes these updates as data notifications to widgets.
 
-8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, and as well :ref:`dojox.grid <dojox/grid>`.
+8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, and as well :ref:`dojox.grid <dojox/grid/index>`.
 
 
 =====

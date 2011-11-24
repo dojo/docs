@@ -57,7 +57,7 @@ allows for new DOM-centric capabilities.
 Markup Syntax
 =============
 
-Since Dojo implements markup just as it is in Django's implementation, the best place to visit would be :ref:`The Django Book` or the :ref:`Django Template Language Documentation`.
+Since Dojo implements markup just as it is in Django's implementation, the best place to visit would be `The Django Book <http://www.djangobook.com/en/2.0/chapter04/>`_ or the `Django Template Language Documentation <http://docs.djangoproject.com/en/1.2/topics/templates/>`_.
 
 But in case you are just itching to know what it looks like, it's made up of some simple parts: ``{% tags %}``, ``{{ variables }}``, ``{{ variables|filtered }}`` and ``{{ variables|more:"advanced"|filtering }}``. Sometimes tags have groupings of tags, sometimes they work alone.
 
@@ -205,6 +205,3 @@ Some new functions are added to allow tags to communicate with the rendering obj
 
 * ``setThis``: Sets the object on which to perform operations. Used by the ``attach``/``data-dojo-attach-point`` attribute tag, for example.
 * ``getThis``: Used by tags, gets the currently set ``this`` object.
-
-.. _The Django Book: http://www.djangobook.com/en/2.0/chapter04/
-.. _DJango Template Language Documentation: http://docs.djangoproject.com/en/1.2/topics/templates/

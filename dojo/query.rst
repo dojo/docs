@@ -15,7 +15,7 @@ dojo.query
 Introduction
 ============
 
-XHR is half of the AJAX story. Once you make a request for data and receive it via :ref:`dojo.xhr <dojo/_base/xhr>`, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
+XHR is half of the AJAX story. Once you make a request for data and receive it via :ref:`dojo.xhr <dojo/xhr>`, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
 
 A bad solution: using the DOM API
 ---------------------------------
