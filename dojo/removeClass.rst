@@ -103,7 +103,7 @@ See it in action:
             dojo.removeClass("example1", "style1");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -152,7 +152,7 @@ See it in action:
             dojo.removeClass("example1", "style1 style2");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -201,7 +201,7 @@ See it in action:
             dojo.removeClass("example1", ["style1", "style2"]);
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -250,7 +250,7 @@ See it in action:
             dojo.removeClass("example1");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -299,7 +299,7 @@ See it in action:
             dojo.query("#example3 div").removeClass("style3");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button3"), "onclick", doIt);
         });
     </script>

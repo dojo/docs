@@ -97,7 +97,7 @@ Example 1: Creating a deferred and adding callbacks
           });
         });
       }
-      dojo.addOnLoad(createDeferred);
+      dojo.ready(createDeferred);
     </script>
 
   .. html ::

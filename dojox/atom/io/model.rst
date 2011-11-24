@@ -138,7 +138,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimpleAtom);
+      dojo.ready(initSimpleAtom);
     </script>
 
   .. html ::
@@ -192,7 +192,7 @@ Example 2: Create a new ATOM Feed
         xml.appendChild(dojo.doc.createTextNode(feed.toString()));
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimpleCreateAtom );
+      dojo.ready(initSimpleCreateAtom );
     </script>
 
   .. html ::
@@ -250,7 +250,7 @@ Example 3: Modify a loaded feed
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimpleAtomModified);
+      dojo.ready(initSimpleAtomModified);
     </script>
 
   .. html ::

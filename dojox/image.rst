@@ -36,7 +36,7 @@ Just pass an array of url's to the function:
   
   // must be after dom ready:
   dojo.require("dojox.image");
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       dojox.image.preload(["pic.png", "face.jpg", "http://example.com/logo.gif"]);
   });
 

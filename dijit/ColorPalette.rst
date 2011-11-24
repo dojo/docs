@@ -46,7 +46,7 @@ Default color palette, created programmatically:
 
     <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
-       dojo.addOnLoad(function(){
+       dojo.ready(function(){
          var myPalette = new dijit.ColorPalette({
            palette: "7x10",
            onChange: function(val){ alert(val); }

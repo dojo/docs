@@ -106,7 +106,7 @@ Example 1: Load an ATOM Feed
         );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimpleAtom);
+      dojo.ready(initSimpleAtom);
     </script>
 
   .. html ::
@@ -170,7 +170,7 @@ Example 2: Update an entry in a Feed
         );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initUpdateAtom );
+      dojo.ready(initUpdateAtom );
     </script>
 
   .. html ::

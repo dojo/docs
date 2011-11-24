@@ -56,7 +56,7 @@ The nature of this widget is typically to repeat patterns throughout a Node. Goi
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       dojo.query("#myList li").instantiate(dojox.widget.FisheyeLite, { properties:{ left:10 } });
   });
 

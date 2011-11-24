@@ -31,7 +31,7 @@ The first example shows how to create a menu and drop down button programmatical
           dojo.require("dijit.Menu");
         </script>
 	<script type="text/javascript">
-          dojo.addOnLoad(function(){
+          dojo.ready(function(){
             var menu = new dijit.Menu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
                 label: "Save",

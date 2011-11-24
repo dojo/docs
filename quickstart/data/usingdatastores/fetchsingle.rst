@@ -89,7 +89,7 @@ This example shows how to fetch items by their identity programmatically.
            dojo.connect(combo, "onChange", getItemFromStore);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init);
+        dojo.ready(init);
     </script>
 
   .. html ::

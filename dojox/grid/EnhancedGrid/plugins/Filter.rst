@@ -182,7 +182,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 			dijit.byId('grid').showFilterBar(true);
 		}
 		
-		dojo.addOnLoad(function(){
+		dojo.ready(function(){
 
 			var store = new dojo.data.ItemFileWriteStore({data: data});
 

@@ -47,7 +47,7 @@ To give the user feedback about what's happening with the searches they issue, w
     <script type="text/javascript">
       dojo.require("dojo.DeferredList");
       dojo.require("dijit.form.Button");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 
         // stub search functions to simulate network delay
 

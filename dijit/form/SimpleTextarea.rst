@@ -27,7 +27,7 @@ First we will create a SimpleTextarea widget programmatically. Notice how we pas
 
     <script type="text/javascript">
       dojo.require("dijit.form.SimpleTextarea");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var textarea = new dijit.form.SimpleTextarea({
           name: "myarea",
           rows: "4",

@@ -43,7 +43,7 @@ How to use the component:
       m.registerByClass();
     };
 
-    dojo.addOnLoad(init);
+    dojo.ready(init);
   </script>
   ...
   <div style="position:absolute; top:80px; left:50px;">

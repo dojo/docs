@@ -85,7 +85,7 @@ Here's an example of a programatically created StackContainer, and associated St
     <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         var sc = new dijit.layout.StackContainer({
             style: "height: 300px; width: 400px;",
             id: "myProgStackContainer"

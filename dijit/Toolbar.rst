@@ -35,7 +35,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
       dojo.require("dijit.form.Button");
 
       var toolbar;
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 	  toolbar = new dijit.Toolbar({}, "toolbar");
 	  dojo.forEach(["Cut", "Copy", "Paste"], function(label){
 		var button = new dijit.form.Button({

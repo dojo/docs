@@ -56,7 +56,7 @@ Example
   .. javascript::
 
     dojo.require("dojox.NodeList.delegate");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       dojo.query("#navbar").delegate("a", "onclick", function(evt){
           alert("clicked " + dojo.attr(this, "id"));
           dojo.stopEvent(evt);

@@ -96,7 +96,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
 
-	dojo.addOnLoad(function(){
+	dojo.ready(function(){
 		new dijit.Calendar({
 			value: new Date(),
 			isDisabledDate: function(d){
@@ -135,8 +135,8 @@ With a local custom template to change the layout (does not work against CDN)
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
 
-      dojo.addOnLoad(function(){
-        //Need to declare BigCalendar here in an addOnLoad block so that it works
+      dojo.ready(function(){
+        //Need to declare BigCalendar here in an ready block so that it works
         //with xdomain loading, where the dojo.require for dijit.Calendar
         //may load asynchronously. This also means we cannot have HTML
         //markup in the body tag for BigCalendar, but instead inject it in this

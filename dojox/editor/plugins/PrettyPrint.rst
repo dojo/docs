@@ -107,7 +107,7 @@ Basic Usage
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
@@ -160,7 +160,7 @@ Configured indent and line length
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });

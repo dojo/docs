@@ -52,7 +52,7 @@ Example 1:  Fade out a dom node
          }
          dojo.connect(dijit.byId("basicFadeButton"), "onClick", fadeIt);
       }
-      dojo.addOnLoad(basicFadeoutSetup);
+      dojo.ready(basicFadeoutSetup);
     </script>
 
   .. html ::
@@ -82,7 +82,7 @@ Example 2:  Fade in a dom node with a custom duration
          }
          dojo.connect(dijit.byId("basicFadeButton2"), "onClick", fadeIt);
       }
-      dojo.addOnLoad(basicFadeoutSetup2);
+      dojo.ready(basicFadeoutSetup2);
     </script>
 
   .. html ::
@@ -115,7 +115,7 @@ Example 3:  Fade in a dom node with an easing function
          }
          dojo.connect(dijit.byId("basicFadeButton3"), "onClick", fadeIt);
       }
-      dojo.addOnLoad(basicFadeoutSetup3);
+      dojo.ready(basicFadeoutSetup3);
     </script>
 
   .. html ::

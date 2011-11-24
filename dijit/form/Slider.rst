@@ -59,7 +59,7 @@ One way you could show the user the value of your Slider is to create a textbox 
       dojo.require("dijit.form.Slider");
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 
         var slider = new dijit.form.HorizontalSlider({
           name: "slider",
@@ -94,7 +94,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
       dojo.require("dijit.form.Slider");
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var vertical = dojo.byId("vertical");
         var rulesNode = document.createElement('div');
         vertical.appendChild(rulesNode);

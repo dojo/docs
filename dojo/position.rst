@@ -137,7 +137,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 		}
 	}
     }
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
 	compareMethods();
     });
     </script>

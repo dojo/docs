@@ -96,7 +96,7 @@ See it in action:
             dojo.toggleClass("example1", "style1");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button1"), "onclick", toggle1);
         });
     </script>
@@ -144,7 +144,7 @@ See it in action:
             dojo.toggleClass("example2", "style2", true);
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button2"), "onclick", toggle2);
         });
     </script>
@@ -192,7 +192,7 @@ See it in action:
             dojo.query("#example3 div").toggleClass("style3");
         }
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
             dojo.connect(dojo.byId("button3"), "onclick", toggle3);
         });
     </script>

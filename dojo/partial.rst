@@ -82,7 +82,7 @@ Basic Example
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
    
-      dojo.addOnLoad(function() {
+      dojo.ready(function() {
         var myClick = function(presetValue, event) {
            var node = dojo.byId("appendLocation");
            node.appendChild(document.createTextNode(presetValue));

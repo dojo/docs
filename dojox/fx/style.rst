@@ -23,7 +23,7 @@ These API's are identical to their plain Dojo counterparts: :ref:`dojo.addClass 
  
  <script type="text/javascript">
    dojo.require("dojox.fx.style");
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
 
        // remove class="bar" from node id="foo"
        dojox.fx.removeClass("foo", "bar").play();

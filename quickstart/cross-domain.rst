@@ -70,7 +70,7 @@ See the :ref:`custom builds <quickstart/custom-builds>` page.
 
 Caveats and Gotchas
 -------------------
-**Asynchronous loading**. You **must** use dojo.addOnLoad() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.addOnLoad() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called.
+**Asynchronous loading**. You **must** use dojo.ready() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.ready() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called.
 
 **Local blank page**. You have to save a local copy of a blank HTML page to location specified via 'dojoBlankHtmlUrl' configuration parameter, e.g.:
 
@@ -103,14 +103,14 @@ Usage example
       
       function loader () {
           dojo.require ("dijit.Editor");
-          dojo.addOnLoad(callback);
+          dojo.ready(callback);
       }
 
       function callback () {
           new dijit.Editor ({}, dojo.byId("editorNode"));
       }
 
-      dojo.addOnLoad(loader);
+      dojo.ready(loader);
   </script>
 
   <div id="editorNode" class="tundra">Hello, world!</div>

@@ -16,7 +16,7 @@ To use, require the Urchin module into your page, and create a new instance:
 .. js ::
   
   dojo.require("dojox.analytics.Urchin");
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       new dojox.analytics.Urchin({ acct:"UA-12345-67" });
   });
 

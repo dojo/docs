@@ -52,7 +52,7 @@ Programmatic example
 
      <script type="text/javascript">
        dojo.require("dijit.form.TimeTextBox");
-       dojo.addOnLoad(function(){
+       dojo.ready(function(){
          new dijit.form.TimeTextBox({name:"prog_val", value:new Date(),
            constraints:{timePattern:'HH:mm:ss', clickableIncrement:'T00:15:00', visibleIncrement:'T00:15:00', visibleRange:'T01:00:00'}
          }, "prog_val");

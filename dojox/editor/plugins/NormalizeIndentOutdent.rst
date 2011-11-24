@@ -92,7 +92,7 @@ Basic Usage
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dojox.editor.plugins.NormalizeIndentOutdent");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
@@ -142,7 +142,7 @@ Configured indent to be ems
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });

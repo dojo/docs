@@ -106,7 +106,7 @@ A partial circle gauge with two indicators (programmatic)
         }, gauge);
         gauge.startup();
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
 
     </script>
 
@@ -125,7 +125,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
       console.debug('require');
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var gauge = dijit.byId('declarativeGauge');
         gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
           'id': 'target',
@@ -253,7 +253,7 @@ A half circle gauge with two indicators overlay graphic
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var gauge = dijit.byId('halfCircle');
         console.debug(gauge);
         gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
@@ -375,7 +375,7 @@ Speedometer style gauge with arc indicator and needle indicator
       dojo.require("dojox.widget.gauge.AnalogArcIndicator");
       dojo.require("dojox.widget.gauge.AnalogNeedleIndicator");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 	  var gauge = dijit.byId('speedo');
 	  // Used for a gradient arc indicator below:
 	  var fill = {

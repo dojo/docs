@@ -61,7 +61,7 @@ Programmatic horizontal example
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 
         var rangeSlider = new dojox.form.HorizontalRangeSlider({
           name: "rangeSlider",
@@ -98,7 +98,7 @@ Programmatic vertical example with rulers
       dojo.require("dojox.form.RangeSlider");
       dojo.require("dijit.form.VerticalRule");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var vertical = dojo.byId("vertical");
         var rulesNode = document.createElement("div");
         vertical.appendChild(rulesNode);

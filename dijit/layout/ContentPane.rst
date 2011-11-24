@@ -89,7 +89,7 @@ Programmatic example
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           new dijit.layout.ContentPane({
               content:"<p>Optionally set new content now</p>",
               style:"height:125px"
@@ -112,7 +112,7 @@ Programmatic example
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           new dijit.layout.ContentPane({
               content:"<p>I am initial content</p>",
               style:"height:125px"

@@ -368,7 +368,7 @@ Searching multiple Google services at once
          }
          dojo.connect(dijit.byId("searchButton"), "onClick", search);
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

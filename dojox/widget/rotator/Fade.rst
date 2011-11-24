@@ -69,7 +69,7 @@ Example using the fade transition.
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             new dojox.widget.AutoRotator(
                 {
                     transition: "dojox.widget.rotator.fade",

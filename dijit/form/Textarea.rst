@@ -28,7 +28,7 @@ First we will create a Textarea widget programmatically. Notice how we pass the 
 
     <script type="text/javascript">
       dojo.require("dijit.form.Textarea");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var textarea = new dijit.form.Textarea({
           name: "myarea",
           value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",

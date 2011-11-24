@@ -55,7 +55,7 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
          }
          dojo.connect(dijit.byId("basicButton"), "onClick", combineIt);
       }
-      dojo.addOnLoad(basicCombine);
+      dojo.ready(basicCombine);
     </script>
 
   .. html ::

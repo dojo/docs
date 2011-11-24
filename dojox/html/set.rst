@@ -56,7 +56,7 @@ Set content with styles
 
     <script type="text/javascript">
         dojo.require("dojox.html._base");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var content = "<div style='background-color: #dffadb; padding: 10px;'>"
                 +"The content."
                 + "</div>"

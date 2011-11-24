@@ -70,7 +70,7 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
         var box = dijit.byId("progBox");
         dojo.style(box.domNode, "width", "5em");
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -111,7 +111,7 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
            box1.attr("value", box0.attr("value") + " modified");
         });
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

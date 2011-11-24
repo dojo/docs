@@ -60,7 +60,7 @@ To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
 
      <script type="text/javascript">
         dojo.require("dojo.NodeList-fx");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             dojo.query("#fadebutton").onclick(function(){
                 dojo.query("#fadebuttontarget li").fadeOut().play();
             });

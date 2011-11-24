@@ -42,7 +42,7 @@ Programmatic way of creating a Map component:
  
  <script type="text/javascript">
    require([ "dojox/geo/openlayers/Map" ], function(map){
-     dojo.addOnLoad(function(){
+     dojo.ready(function(){
        map = new dojox.geo.openlayers.Map("map");
        map.fitTo([ -160, 70, 160, -70 ]);
      });
@@ -105,7 +105,7 @@ Some examples of how to set/change the base layer type:
     var map;
   
     require([ "dojox/geo/openlayers/Map", "dijit/form/CheckBox" ], function(){
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
       map = new dojox.geo.openlayers.Map("map", {
         baseLayerType : dojox.geo.openlayers.BaseLayerType.ARCGIS
       });
@@ -152,7 +152,7 @@ Programmatic version:
  <script type="text/javascript">
   require([ "dojox/geo/openlayers/Map"], function(){
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var map = new dojox.geo.openlayers.Map("map");
       // This is New York location
       var ny = {
@@ -204,7 +204,7 @@ The following code shows how to display a point at the New York location. A circ
     require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
               "dojox/geo/openlayers/GeometryFeature" ], function(){
   
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         // create a map widget.
         var map = new dojox.geo.openlayers.Map("map");
        // This is New York
@@ -279,7 +279,7 @@ You can also place polylines on the map. In this case, you will need to create a
       y : 30.06263
     } ];
   
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       // create a map widget and place it on the page.
       var map = new dojox.geo.openlayers.Map("map");
       // create a GfxLayer
@@ -339,7 +339,7 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
        y : 30.06263
      } ];
 
-     dojo.addOnLoad(function(){
+     dojo.ready(function(){
        // create a map widget and place it on the page.
        var map = new dojox.geo.openlayers.Map("map");
       // create a GfxLayer
@@ -381,7 +381,7 @@ Example that shows a star at Paris location:
   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
       "dojox/geo/openlayers/Point", "dojox/geo/openlayers/GeometryFeature" ], function(){
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
 
       // create a map widget and place it on the page.
       var map = new dojox.geo.openlayers.Map("map");
@@ -512,7 +512,7 @@ Here is an example that shows a pie chart at New York location:
       "dojox/geo/openlayers/WidgetFeature", "dojox/charting/widget/Chart",
       "dojox/charting/widget/Chart2D", "dojox/charting/plot2d/Pie",
       "dojox/charting/themes/PlotKit/blue" ], function(){
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
 
       // create a map widget and place it on the page.
       var map = new dojox.geo.openlayers.Map("map");

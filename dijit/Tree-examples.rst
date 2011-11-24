@@ -202,7 +202,7 @@ But the tree will display and work properly regardless, and for simple markup, e
             }, "treeOne" );
         }
 
-        dojo.addOnLoad(prepare);
+        dojo.ready(prepare);
     </script>
 
   .. html ::
@@ -250,7 +250,7 @@ This example shows you how to use a tree to build a navigation menu.
 		  };
        }
      
-       dojo.addOnLoad(initTree);
+       dojo.ready(initTree);
     </script>
 
   .. html ::

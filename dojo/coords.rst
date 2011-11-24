@@ -66,7 +66,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
         info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t +
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -94,7 +94,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
         info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t +
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

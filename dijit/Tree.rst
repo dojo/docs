@@ -87,7 +87,7 @@ Creating a programmatic tree is very simple:
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var store = new dojo.data.ItemFileReadStore({
             url: "{{dataUrl}}/dijit/tests/_data/countries.json"
         });
@@ -274,7 +274,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
       dojo.require("dijit.tree.dndSource");
       dojo.require("dijit.Tree");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var store = new dojo.data.ItemFileWriteStore({
             url: "{{dataUrl}}/dijit/tests/_data/countries.json"
         });

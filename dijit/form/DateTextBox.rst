@@ -76,7 +76,7 @@ To accept dates from the server in this format (but continue to work with dates 
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.DateTextBox");
-		dojo.addOnLoad(function(){
+		dojo.ready(function(){
 			dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
 				oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
 				value: "", // prevent parser from trying to convert to Date object
@@ -150,7 +150,7 @@ Sometimes you may want to input and display years in a format with only 2-digit 
 			w.constraints.fullYear = false;
 			w.attr('value', w.attr('value')); // reformat display to short year
 		}
-		dojo.addOnLoad(setShortYear);
+		dojo.ready(setShortYear);
 	</script>
 
   .. html ::

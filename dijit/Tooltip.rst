@@ -74,7 +74,7 @@ Here's a tooltip created programmatically:
 
         <script>
            dojo.require("dijit.Tooltip");
-           dojo.addOnLoad(function(){
+           dojo.ready(function(){
               // create a new Tooltip and connect it to bar1 and bar4
               new dijit.Tooltip({
                   connectId: ["bar1", "bar4"],

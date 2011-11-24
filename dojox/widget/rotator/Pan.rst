@@ -87,7 +87,7 @@ Example of a continuous pan.
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Pan");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             new dojox.widget.AutoRotator(
                 {
                     transition: "dojox.widget.rotator.pan",

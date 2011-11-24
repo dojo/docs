@@ -53,7 +53,7 @@ Example 1:  Wipe in a dom node
          }
          dojo.connect(dijit.byId("basicWipeButton"), "onClick", wipeIt);
       }
-      dojo.addOnLoad(basicWipeinSetup);
+      dojo.ready(basicWipeinSetup);
     </script>
 
   .. html ::
@@ -86,7 +86,7 @@ Example 2:  Wipe in a dom node with a custom duration
          }
          dojo.connect(dijit.byId("basicWipeButton1"), "onClick", wipeIt);
       }
-      dojo.addOnLoad(basicWipeinSetup1);
+      dojo.ready(basicWipeinSetup1);
     </script>
 
   .. html ::
@@ -122,7 +122,7 @@ Example 3:  Wipe in a dom node with an easing function
          }
          dojo.connect(dijit.byId("basicWipeButton2"), "onClick", wipeIt);
       }
-      dojo.addOnLoad(basicWipeinSetup2);
+      dojo.ready(basicWipeinSetup2);
     </script>
 
   .. html ::

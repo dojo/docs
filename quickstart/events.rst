@@ -345,13 +345,13 @@ Page Load and Unload
 
 Dojo has three functions recommended for registering code to run on page load and unload:
 
-* :ref:`dojo.addOnLoad(func) <dojo/addOnLoad>` - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
+* :ref:`dojo.ready(func) <dojo/ready>` - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
 
 * :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
 
 * :ref:`dojo.addOnUnload(func) <dojo/addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `dojo.addOnUnload(func) <dojo/addOnUnload>` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
 
-Like dojo.connect(), these methods are useful because multiple pieces of code calling :ref:`dojo.addOnLoad(func) <dojo/addOnLoad>` etc. won't overwrite each other.
+Like dojo.connect(), these methods are useful because multiple pieces of code calling :ref:`dojo.ready(func) <dojo/ready>` etc. won't overwrite each other.
 
 ==================
 Topic Based Events

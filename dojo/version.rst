@@ -51,7 +51,7 @@ The `revision` member refers to the SVN revision used to create the version. You
   .. javascript::
 
     <script type="text/javascript">
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             dojo.query(".info").attr("innerHTML", dojo.version);
         });
     </script>

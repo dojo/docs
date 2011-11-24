@@ -155,7 +155,7 @@ List out all the attributes and values of a key/value data set
            dojo.connect(button, "onClick", getAllItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init);
+        dojo.ready(init);
     </script>
 
   .. html ::

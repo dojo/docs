@@ -62,7 +62,7 @@ JavaScript:
 .. js ::
   
  dojo.require("dojox.fx.ext-dojo.reverse");
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     var ani = dojo.animateProperty({
         node:dojo.byId("ball"),
         duration:1000,

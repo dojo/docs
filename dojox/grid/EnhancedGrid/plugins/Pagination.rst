@@ -30,7 +30,7 @@ Pagination is a plugin for dojox.grid.EnhancedGrid. It's designed to allow the u
         dojo.require("dojox.grid.enhanced.plugins.Pagination");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',

@@ -87,7 +87,7 @@ Basic Usage
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.require("dojox.editor.plugins.NormalizeStyle");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
@@ -140,7 +140,7 @@ Configured css mode
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.NormalizeStyle");
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
            dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });

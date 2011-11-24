@@ -258,7 +258,7 @@ This example shows how to use Flash and IFrame plugins for both cases (browsers 
    } else {
      dojo.require("dojox.form.uploader.plugins.IFrame");
    }
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
      var u = new dojox.form.Uploader({
        label: "Select files",
        multiple: true,

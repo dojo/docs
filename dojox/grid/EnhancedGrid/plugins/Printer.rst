@@ -115,7 +115,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 			}, preview);
 		}
 		
-		dojo.addOnLoad(function(){
+		dojo.ready(function(){
 
 			var store = new dojo.data.ItemFileWriteStore({data: data});
 			

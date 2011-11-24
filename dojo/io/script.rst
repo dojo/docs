@@ -99,7 +99,7 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
         };
         dojo.io.script.get(jsonpArgs);
       }
-      dojo.addOnLoad(searchGoogle);
+      dojo.ready(searchGoogle);
     </script>
 
   .. html ::

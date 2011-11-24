@@ -59,7 +59,7 @@ Example 1: Generic XML DOM Parser and utilities
          ap.appendChild(document.createElement("br"));
          ap.appendChild(document.createElement("br"));
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -89,7 +89,7 @@ Example 2: Generic XML DOM to JS Object parser
 
          console.debug(jsdom);
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

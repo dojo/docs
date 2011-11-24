@@ -28,7 +28,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       new dijit.form.ToggleButton({
         showLabel: true,
         checked: false,

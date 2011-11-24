@@ -176,7 +176,7 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
   .. js ::
 
     <script type="text/javascript">
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeThree"), {t: 20, l: 30, h: 300, w: 300});
       });
     </script>

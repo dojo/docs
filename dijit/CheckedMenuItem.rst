@@ -49,7 +49,7 @@ Programmatic example
 	  
 	  var pMenuBar;
 	  var pToolBar;
-	  dojo.addOnLoad(function(){
+	  dojo.ready(function(){
 		
 		pMenuBar = new dijit.MenuBar({});
 		var pMenu = new dijit.Menu({});
@@ -79,7 +79,7 @@ Programmatic example
 				tools.style.display = "none";
 			}
 		};
-		dojo.addOnLoad(toolkit);
+		dojo.ready(toolkit);
 
 	</script>
 	
@@ -111,7 +111,7 @@ Declarative example
 				tools.style.display = "none";
 			}
 		};
-		dojo.addOnLoad(toolBar);
+		dojo.ready(toolBar);
 
 	</script>
 	

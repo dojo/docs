@@ -110,7 +110,7 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 
-                dojo.addOnLoad(function(){
+                dojo.ready(function(){
                     dojo.declare("FancyCounter",[dijit._WidgetBase, dijit._TemplatedMixin], {
 				// counter
 				_i: 0,
@@ -161,7 +161,7 @@ For example:
 		dojo.require("dijit._TemplatedMixin");
 		dojo.require("dojo.parser");
 
-                dojo.addOnLoad(function(){
+                dojo.ready(function(){
 		        dojo.declare("MyButton",
 			[dijit._WidgetBase, dijit._TemplatedMixin], {
 				templateString:

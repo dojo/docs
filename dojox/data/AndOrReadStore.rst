@@ -159,7 +159,7 @@ Finding all Continents and Cities
         dojo.connect(button2, "onClick", getItems );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init2);
+      dojo.ready(init2);
     </script>
 
   .. html ::

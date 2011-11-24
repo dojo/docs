@@ -33,7 +33,7 @@ Programmatic example
  
  <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
      var s = new dojox.form.TimeSpinner({
        required: true,
        smallDelta: 1,

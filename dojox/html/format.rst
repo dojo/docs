@@ -86,7 +86,7 @@ Format some HTML markup
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          //Make sure the default input is actually unformatted!
          //The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
@@ -150,7 +150,7 @@ Format some HTML markup with three space indent
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          //Make sure the default input is actually unformatted!
          //The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
@@ -213,7 +213,7 @@ Format some HTML markup with three space indent and 20 character line wrap
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          //Make sure the default input is actually unformatted!
          //The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
@@ -277,7 +277,7 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
          //Make sure the default input is actually unformatted!
          //The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");

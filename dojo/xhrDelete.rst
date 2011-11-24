@@ -83,7 +83,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
           var deferred = dojo.xhrDelete(xhrArgs);
         });
       }
-      dojo.addOnLoad(deleteUri);
+      dojo.ready(deleteUri);
     </script>
 
   .. html ::

@@ -73,7 +73,7 @@ This example shows the standard calendar being created from code.  Include the C
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             // create the dialog:
             var cal_1 = new dojox.widget.Calendar({}, dojo.byId("cal_1"));
             dojo.connect(cal_1, "onValueSelected", function(date){
@@ -100,7 +100,7 @@ This example shows just the daily calendar being instantiated, with no month or 
     <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             // create the dialog:
             var cal_2 = new dojox.widget.DailyCalendar({}, dojo.byId("cal_2"));
             dojo.connect(cal_2, "onValueSelected", function(date){

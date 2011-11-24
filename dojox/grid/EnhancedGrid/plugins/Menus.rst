@@ -36,7 +36,7 @@ HTML markup usage sample
         dojo.require("dojox.grid.enhanced.plugins.Menu");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -137,7 +137,7 @@ Javascript usage sample
         dojo.require("dojox.grid.enhanced.plugins.Menu");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',

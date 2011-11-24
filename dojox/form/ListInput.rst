@@ -62,7 +62,7 @@ Programmatic example
 
     <script type="text/javascript">
         dojo.require("dojox.form.ListInput");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
                 var sel = dojo.byId('dynamic');
                 var n = 0;
 				var value = "";

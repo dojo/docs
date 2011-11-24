@@ -56,7 +56,7 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
          }
          dojo.connect(dijit.byId("basicButton"), "onClick", chainIt);
       }
-      dojo.addOnLoad(basicChain);
+      dojo.ready(basicChain);
     </script>
 
   .. html ::

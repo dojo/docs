@@ -44,7 +44,7 @@ Different chart styles is a simple matter of passing a type:
 
 .. js ::
  
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         type: dojox.charting.plot2d.Columns, // <-- chart type
             scroll:false,
@@ -77,7 +77,7 @@ However, the need of the chart may not be a series of individual item properties
  
 .. js ::
   
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         comparative:true
     });
@@ -110,7 +110,7 @@ DojoX Charting comes with dojox.charting.widget.Legend to make it easy to add le
 
 .. js ::
   
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     chart = new dojox.charting.DataChart("chartDiv", {});
     chart.setStore(store, {symbol:"*"}, "historicPrice");
  
@@ -129,7 +129,7 @@ DataChart has a convenient method for applying the store item labels. The chart.
 
 .. js ::
  
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     chart = new dojox.charting.DataChart("chartDiv", {
         comparative:true,
         xaxis:{labelFunc:"seriesLabels"},

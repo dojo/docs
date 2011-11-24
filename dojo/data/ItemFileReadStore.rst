@@ -438,7 +438,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
         dojo.connect(button, "onClick", getItems);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -719,7 +719,7 @@ Searching for all continents
         dojo.connect(button2, "onClick", getContinents );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init2);
+      dojo.ready(init2);
     </script>
 
   .. html ::
@@ -833,7 +833,7 @@ Doing wildcard searches and option setting
            dojo.connect(button3, "onClick", search);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init3);
+        dojo.ready(init3);
     </script>
 
   .. html ::
@@ -950,7 +950,7 @@ Demonstrating custom sorting
         dojo.connect(button4, "onClick", getItems );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init4);
+      dojo.ready(init4);
     </script>
 
   .. html ::
@@ -994,7 +994,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
       var reloadCount = 0;
 
       //Now set up a linkage so that the store can be reloaded.
-      dojo.addOnLoad(function() {
+      dojo.ready(function() {
          dojo.connect(dijit.byId("reloadButton1"), "onClick", function() {
             reloadCount++;
             reloadableStore1.clearOnClose = true;
@@ -1036,7 +1036,7 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
       dojo.require("dijit.form.Button");
 
       //Now set up a linkage so that the store can be reloaded.
-      dojo.addOnLoad(function() {
+      dojo.ready(function() {
          dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
             //Reset the url and call close.  Note this could be a different JSON file, but for this example, just
             //Showing how you would set the URL.

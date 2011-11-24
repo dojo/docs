@@ -101,7 +101,7 @@ You can see this code in action:
 .. javascript::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, {name.first} {name.last} AKA {nick}!",
           {
@@ -159,7 +159,7 @@ This code in action:
   .. javascript::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, {0} {2} AKA {3}!",
           ["Robert", "X", "Cringely", "Bob"]
@@ -271,7 +271,7 @@ This code in action:
         return t;
       }
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "{count} payments averaging {avg} USD per payment.",
           dojo.hitch(
@@ -332,7 +332,7 @@ This code in action:
   .. javascript::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, %[0] %[2] AKA %[3]!",
           ["Robert", "X", "Cringely", "Bob"],
@@ -420,7 +420,7 @@ Take a look at this code in action:
         });
         return dojo.replace(hilited, dict);
       }
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output").innerHTML = hiliteReplace(
           "Hello, {0} {2} AKA {3}!",
           ["Robert", "X", "Cringely", "Bob"]
@@ -539,7 +539,7 @@ You can check the result here:
             replace(/"/g, "&quot;");
         });
       }
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         // we don't want to break the Code Glass widget here
         var bad = "{script}alert('Let\' break stuff!');{/script}";
         // let's reconstitute the original bad string
@@ -699,7 +699,7 @@ You can check the result here:
           return Number(value).toExponential(precision);
         }
       };
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output1").innerHTML = format(
           "pi = {pi}<br>pi:f = {pi:f}<br>pi:f:5 = {pi:f:5}",
           {pi: Math.PI, big: 1234567890},

@@ -93,7 +93,7 @@ Example 1: Using formToQuery to create an query string version of a form
            dojo.byId("formQueryString").innerHTML = formQuery;
         });
       }
-      dojo.addOnLoad(convertForm);
+      dojo.ready(convertForm);
     </script>
 
   .. html ::
@@ -127,7 +127,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
            dojo.byId("formQuery2").innerHTML = formQuery;
         });
       }
-      dojo.addOnLoad(convertFormDijits);
+      dojo.ready(convertFormDijits);
     </script>
 
   .. html ::

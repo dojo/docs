@@ -131,7 +131,7 @@ One technique to allow validation, and still use the parser would be to simply d
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.require("dojo.parser");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         dojo.query("div[rel]").forEach(function(n){
             var className = dojo.attr(n,"rel");
             // now set it
@@ -170,7 +170,7 @@ similar to what the parser does:
 
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         dojo.query(".tc1cp").forEach(function(n){
             new dijit.layout.ContentPane({
                 // just pass a title: attribute, this, we're stealing from the node
@@ -256,7 +256,7 @@ This an example of nested tabs created programatically. If there is no nested ta
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function() {
+    dojo.ready(function() {
         var tabs = [{
             title: 'Tab 1',
             sub: [{

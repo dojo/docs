@@ -59,7 +59,7 @@ Create an object version of a form
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formObject1 =  dojo.formToObject("myform");
 
@@ -98,7 +98,7 @@ Create an object version of a form with Dijit widgets
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.Button");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
            var formObject2 =  dojo.formToObject("myform2");
 

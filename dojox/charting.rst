@@ -23,7 +23,7 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
     dojo.require("dojox.charting.plot2d.Default");
     dojo.require("dojox.charting.themes.Wetland");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var c = new dojox.charting.Chart2D("chartOne");
       c.addPlot("default", {type: "StackedAreas", tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -76,7 +76,7 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
   	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
   	chart1.render();
       };
-      dojo.addOnLoad(makeCharts);
+      dojo.ready(makeCharts);
     </script>
 
 In historical syntax:
@@ -94,7 +94,7 @@ In historical syntax:
   	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
   	chart1.render();
       };
-      dojo.addOnLoad(makeCharts);
+      dojo.ready(makeCharts);
 
 In AMD syntax:
 
@@ -1192,7 +1192,7 @@ Here is a very simple example of a stacked area chart.
     dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.themes.Wetland");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var c = new dojox.charting.Chart2D("chartOne");
       c.addPlot("default", {type: "StackedAreas", tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -1227,7 +1227,7 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
     dojo.require("dojox.charting.themes.MiamiNice");
     dojo.require("dojox.charting.widget.Legend");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var dc = dojox.charting;
       var chartTwo = new dc.Chart2D("chartTwo");
       chartTwo.setTheme(dc.themes.MiamiNice)
@@ -1273,7 +1273,7 @@ Here is a clustered bar chart with a rendering animation:
       dojo.require("dojox.charting.themes.Tufte");
   
  
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           var animChart = new dojox.charting.Chart2D("animChart");
           animChart.setTheme(dojox.charting.themes.Tufte).
   	   addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
@@ -1305,7 +1305,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
         dojo.require("dojox.charting.Chart3D");
         dojo.require("dojox.charting.plot3d.Bars");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var m = dojox.gfx3d.matrix;
             var chart3d = new dojox.charting.Chart3D("chart3d",
                 {

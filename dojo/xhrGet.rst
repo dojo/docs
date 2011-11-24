@@ -190,7 +190,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicense);
+      dojo.ready(getLicense);
     </script>
 
   .. html ::
@@ -233,7 +233,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicensePreventCache);
+      dojo.ready(getLicensePreventCache);
 
     </script>
 
@@ -271,7 +271,7 @@ Example 3: dojo.xhrGet call that errors.
         var deferred = dojo.xhrGet(xhrArgs);
 
       }
-      dojo.addOnLoad(callError);
+      dojo.ready(callError);
 
     </script>
 
@@ -318,7 +318,7 @@ Example 4: Alternate way to pass callbacks.
         });
 
       }
-      dojo.addOnLoad(getLicenseAlternateCB);
+      dojo.ready(getLicenseAlternateCB);
 
     </script>
 
@@ -367,7 +367,7 @@ Example 5: dojo.xhrGet call with 'content' (query params).
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicenseQueryParams);
+      dojo.ready(getLicenseQueryParams);
     </script>
 
   .. html ::
@@ -402,7 +402,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicenseStatus);
+      dojo.ready(getLicenseStatus);
     </script>
 
   .. html ::
@@ -452,7 +452,7 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicenseErrorStatus);
+      dojo.ready(getLicenseErrorStatus);
     </script>
 
   .. html ::
@@ -501,7 +501,7 @@ Example 8: dojo.xhrGet call with headers
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicenseHeaders);
+      dojo.ready(getLicenseHeaders);
     </script>
 
   .. html ::
@@ -552,7 +552,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
         //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
       }
-      dojo.addOnLoad(getLicenseErrorStatusWithHandle);
+      dojo.ready(getLicenseErrorStatusWithHandle);
     </script>
 
   .. html ::

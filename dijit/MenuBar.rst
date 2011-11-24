@@ -40,7 +40,7 @@ Programmatic example
       dojo.require("dijit.PopupMenuItem");
 
       var pMenuBar;
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
             pMenuBar = new dijit.MenuBar({});
 
             var pSubMenu = new dijit.Menu({});

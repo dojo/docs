@@ -116,7 +116,7 @@ Example 1: dojo.xhrPost call to send a form
           var deferred = dojo.xhrPost(xhrArgs);
         });
       }
-      dojo.addOnLoad(sendForm);
+      dojo.ready(sendForm);
     </script>
 
   .. html::
@@ -168,7 +168,7 @@ Example 2: dojo.xhrPost call to send some text data
           var deferred = dojo.xhrPost(xhrArgs);
         });
       }
-      dojo.addOnLoad(sendText);
+      dojo.ready(sendText);
     </script>
 
   .. html::

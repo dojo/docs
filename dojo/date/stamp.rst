@@ -31,7 +31,7 @@ Usage
     dojo.require("dojox.widget.DocTester");
     dojo.require("dojo.date.stamp");
     
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var docTest = new dojox.widget.DocTester({}, "docTest");
     });
   </script>

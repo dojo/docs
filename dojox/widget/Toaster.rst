@@ -139,7 +139,7 @@ This example builds a Toaster programmatically and lets you set params.
           toaster.show();
        }
 
-       dojo.addOnLoad(function() {
+       dojo.ready(function() {
           // create a toaster
           var myToaster = new dojox.widget.Toaster({
              id: 'myToaster',

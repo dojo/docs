@@ -67,7 +67,7 @@ We'll go for a simple left/top/bottom interface.
       dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.ContentPane");
       
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
           "style": "height: 400px;"

@@ -106,7 +106,7 @@ The next example shows how you can do the same as above, just using the default 
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
-    dojo.addOnLoad(function() {
+    dojo.ready(function() {
         var widget = dijit.byId("connectRating");
         dojo.connect(widget, "onChange", function() {
             dojo.query('#defaultConnect .value')[0].innerHTML = widget.value;

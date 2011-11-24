@@ -36,7 +36,7 @@ The first example shows how to create a button programmatically.
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // Create a button programmatically:
         var button = new dijit.form.Button({
             label: "Click me!",
@@ -109,7 +109,7 @@ You can change an icon of a Button using its iconClass attribute. Following exam
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var toggled = false;
       dojo.connect(dijit.byId("toggleButton"), "onClick", function(){
         dijit.byId("toggleButton").attr("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");

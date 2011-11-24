@@ -94,6 +94,6 @@ The Javascript code creating the gauge:
         	}, dojo.byId("HorizontalGauge"));
         	glossygauge.startup();
         };
-        dojo.addOnLoad(makeGauge );
+        dojo.ready(makeGauge );
     </script>
     

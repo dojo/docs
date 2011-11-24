@@ -92,7 +92,7 @@ Example 1: dojo.xhrPut call to send some text data
           var deferred = dojo.xhrPut(xhrArgs);
         });
       }
-      dojo.addOnLoad(sendText);
+      dojo.ready(sendText);
     </script>
 
   .. html ::

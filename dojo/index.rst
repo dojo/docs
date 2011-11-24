@@ -578,13 +578,9 @@ Robot (dojo/robot & dojo/robotx)
 
 Document Lifecycle - Onload (dojo/ready)
 ----------------------------------------
-* :ref:`dojo.addOnLoad <dojo/addOnLoad>`
-
-  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
-
 * :ref:`dojo.ready <dojo/ready>`
 
-  **1.4+** Alias for :ref:`dojo.addOnLoad <dojo/addOnLoad>`
+  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
 
 AJAX I/O transports (dojo/io/\*)
 --------------------------------

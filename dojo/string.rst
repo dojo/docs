@@ -29,7 +29,7 @@ substitute() is a workhorse and the basis for dijit's templating.  It performs p
   .. js ::
     
     <script type="text/javascript">
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             console.log(dojo.string.trim(dojo.byId("foo").innerHTML));
         });
     </script>

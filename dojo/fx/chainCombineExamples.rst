@@ -91,7 +91,7 @@ Example 1:  Demonstration of combining three chained animations
          }
          dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
       }
-      dojo.addOnLoad(basicCombine);
+      dojo.ready(basicCombine);
     </script>
 
   .. html ::

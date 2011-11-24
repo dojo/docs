@@ -35,15 +35,15 @@ It may seem painful to require all modules, but Dojo rewards by:
 * Allowing you to build streamlined versions of Dojo. If you use dijit.Dialog a lot, you can build a custom version of dojo that loads dijit.Dialog quickly. ``dojo.require`` knows whether the function is already loaded, and so you don't have to change any of your code.
 
 
-==============
-dojo.addOnLoad
-==============
+==========
+dojo.ready
+==========
 
 This registers a function to be run when the document (and all :ref:`required <dojo/require>` dependencies) are ready. Simply pass it a function:
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
      console.log("document ready!");
   });
 
@@ -54,20 +54,20 @@ That example passes an anonymous function. You can pass named functions as well:
   var init = function(){
      console.log("document ready!");
   }
-  dojo.addOnLoad(init);
+  dojo.ready(init);
 
-Notice we didn't call ``dojo.addOnLoad(init());`` ... The additional () causes the named-function to execute immediately, and ``dojo.addOnLoad`` expects a function.
+Notice we didn't call ``dojo.ready(init());`` ... The additional () causes the named-function to execute immediately, and ``dojo.ready`` expects a function.
 
 
 =========
 dojo.byId
 =========
 
-This is more or less an alias to ``document.getElementById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
+This is more or less an alias to ``document.getElementById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``ready`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
 
 .. js ::
 
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
        var node = dojo.byId("someNode");
        node.innerHTML = "found me!";
    });
@@ -107,7 +107,7 @@ dojo.query
 
 .. js ::
 
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
     // every element in the page with the class "blueButton" assigned
     dojo.query(".blueButton").forEach(function(node, index, arr){
         console.debug(node.innerHTML);

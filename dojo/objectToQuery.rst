@@ -92,7 +92,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
            dojo.byId("query").innerHTML = uri;
         });
       }
-      dojo.addOnLoad(convertQuery);
+      dojo.ready(convertQuery);
     </script>
 
   .. html ::

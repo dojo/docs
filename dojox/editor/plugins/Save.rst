@@ -128,7 +128,7 @@ Customizing a save
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Save");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 
         dojo.declare("mySavePlugin", [dojox.editor.plugins.Save],{
           save: function(content){

@@ -124,7 +124,7 @@ Loading all items through callbacks
            dojo.connect(button, "onClick", getAllItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init);
+        dojo.ready(init);
     </script>
 
   .. html ::
@@ -258,7 +258,7 @@ Loading all items through the onItem callback
            dojo.connect(button2, "onClick", getStreamingItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init2);
+        dojo.ready(init2);
     </script>
 
   .. html ::

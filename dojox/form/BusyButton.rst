@@ -36,7 +36,7 @@ The first example shows you how to create a nifty button programmatically
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var button = new dojox.form.BusyButton({
                  id: "submit",
                  busyLabel: "Sending mail...",
@@ -113,7 +113,7 @@ In this example we will set a new label by clicking on a button (this can be a s
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       dojo.connect(dijit.byId("buttonChangeState"), "onClick", function(){
         dijit.byId("buttonChargeback").setLabel("Chargeback failed...", 2000);
       });
@@ -142,7 +142,7 @@ The last example uses a little bit of trickery to create a button which is disab
 
     <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       dojo.connect(dijit.byId("buttonLicense"), "_onClick", function(){
         dijit.byId("buttonLicense").setLabel("Creating account...");
         dijit.byId("buttonLicense").resetTimeout();

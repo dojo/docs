@@ -63,7 +63,7 @@ Programmatic example
          });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

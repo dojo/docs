@@ -65,7 +65,7 @@ Programmatic example
     <script type="text/javascript">
     dojo.require("dojox.av.FLAudio");
     var mySound;
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         mySound = new dojox.av.FLAudio({initialVolume:.5, autoPlay:false, isDebug:false, statusInterval:500});
         mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Ola.mp3", id:'Ola'});
         mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Hio.mp3", id:"Hio"});

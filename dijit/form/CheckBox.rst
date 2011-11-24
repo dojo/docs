@@ -36,7 +36,7 @@ Let's create a checkbox programmatically, initially unchecked:
 
     <script type="text/javascript">
     dojo.require("dijit.form.CheckBox");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var checkBox = new dijit.form.CheckBox({
         name: "checkBox",
         value: "agreed",

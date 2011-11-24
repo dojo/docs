@@ -89,7 +89,7 @@ Flash embedding with dojo is as simple as:
  <script type="text/javascript">
    dojo.require("dojo.parser");
    dojo.require("dojox.embed.Flash");
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
      var movie = new dojox.embed.Flash({
        path: '/path-to-swf/flash.swf',
        width: '100%',
@@ -172,7 +172,7 @@ Programmatic example
  
  <script type="text/javascript">
    dojo.require("dojox.embed.Flash");
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
      var movie = new dojox.embed.Flash({
        path: '/path-to-swf/flash.swf',
        width: '100%',

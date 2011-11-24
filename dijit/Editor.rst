@@ -31,7 +31,7 @@ Limitations
 .. html ::
  
   <script>
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var editor = dijit.byId("myEditor");
 
       editor .onLoadDeferred.addCallback(function(){

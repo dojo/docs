@@ -170,7 +170,7 @@ Query for all Spices  (Basic query)
            dojo.connect(button, "onClick", getSpices);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init);
+        dojo.ready(init);
     </script>
 
   .. html ::
@@ -254,7 +254,7 @@ Query for all food in aisles starting with C
            dojo.connect(button2, "onClick", getCAisle );
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init2);
+        dojo.ready(init2);
     </script>
 
   .. html ::
@@ -369,7 +369,7 @@ Enter your own query for name and aisle
            dojo.connect(button3, "onClick", search);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init3);
+        dojo.ready(init3);
     </script>
 
   .. html ::

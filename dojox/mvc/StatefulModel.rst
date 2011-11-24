@@ -156,7 +156,7 @@ To illustrate, the following is the "Hello World" of such data-bound widget exam
 		 		 dojo.require("dojox.mvc");
 		 		 dojo.require("dojo.parser");
 		 		 var model;
-		 		 dojo.addOnLoad(function(){
+		 		 dojo.ready(function(){
 		 		 		 model = dojox.mvc.newStatefulModel({ data : {
 		 		 		 		 hello : "Hello World"
 		 		 		 }});

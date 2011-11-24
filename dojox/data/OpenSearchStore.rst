@@ -143,7 +143,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimple);
+      dojo.ready(initSimple);
     </script>
 
   .. html ::

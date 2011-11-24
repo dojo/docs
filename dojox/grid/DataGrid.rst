@@ -28,7 +28,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -415,7 +415,7 @@ This example shows how to create a simple Grid programmatically.
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -490,7 +490,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         dojo.require("dojo.data.ItemFileWriteStore");
         dojo.require("dijit.form.Button");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -613,7 +613,7 @@ First, you have to set a editor for each cell, you would like to edit:
         dojo.require("dojo.data.ItemFileWriteStore");
         dojo.require("dojox.grid.cells.dijit");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -691,7 +691,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         dojo.require("dijit.form.Button");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
                 identifier: 'id',
@@ -797,7 +797,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         dojo.require("dijit.form.Button");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
@@ -892,7 +892,7 @@ To use it, you just have to override default behavior by yours.
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',

@@ -147,7 +147,7 @@ The following example lets a node by id disappear from the screen
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var node = dojo.byId("findMe");
       dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
         dojo.fadeOut({node: node, duration: 300}).play();

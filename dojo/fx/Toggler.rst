@@ -73,7 +73,7 @@ Example 1:  Toggle a DOM node (with defaults)
          dojo.connect(dijit.byId("showButton"), "onClick", toggler, "show");
          dojo.connect(dijit.byId("hideButton"), "onClick", toggler, "hide");
       }
-      dojo.addOnLoad(basicToggle);
+      dojo.ready(basicToggle);
     </script>
 
   .. html ::
@@ -105,7 +105,7 @@ Example 2:  Toggle a DOM node with custom durations
          dojo.connect(dijit.byId("showButton1"), "onClick", toggler, "show");
          dojo.connect(dijit.byId("hideButton1"), "onClick", toggler, "hide");
       }
-      dojo.addOnLoad(basicToggle1);
+      dojo.ready(basicToggle1);
     </script>
 
   .. html ::
@@ -137,7 +137,7 @@ Example 2:  Toggle a DOM node with custom animation functions
          dojo.connect(dijit.byId("showButton2"), "onClick", toggler, "show");
          dojo.connect(dijit.byId("hideButton2"), "onClick", toggler, "hide");
       }
-      dojo.addOnLoad(basicToggle2);
+      dojo.ready(basicToggle2);
     </script>
 
   .. html ::

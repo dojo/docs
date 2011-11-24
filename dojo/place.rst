@@ -112,7 +112,7 @@ This two options position the node in the reference node's parent children list.
   .. js ::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeBA"), "onclick", function(){
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refBA",
@@ -161,7 +161,7 @@ Place "replace"
   .. js ::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeReplace"), "onclick", function(){
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refReplace", "replace");
@@ -208,7 +208,7 @@ If no position is specified, or position is not recognized, "last" is assumed as
   .. js ::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeFLO"), "onclick", function(){
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refFLO",
@@ -258,7 +258,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
   .. js ::
 
     <script>
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeNumber"), "onclick", function(){
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(dojo.byId("posNumber").value));

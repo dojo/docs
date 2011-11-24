@@ -266,7 +266,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimple);
+      dojo.ready(initSimple);
     </script>
 
   .. html ::
@@ -313,7 +313,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(initSimple2);
+      dojo.ready(initSimple2);
     </script>
 
   .. html ::
@@ -360,7 +360,7 @@ Example 3: Connecting AppStore to DataGrid
       function resizeGrid() {
           grid.resize();
       }
-      dojo.addOnLoad(resizeGrid)
+      dojo.ready(resizeGrid)
 
     </script>
 
@@ -421,7 +421,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
              appStore2.fetch({onComplete: gotAllItems});
           });
       }
-      dojo.addOnLoad(initGrid)
+      dojo.ready(initGrid)
 
     </script>
 

@@ -77,7 +77,7 @@ Programmatic example
         dojo.require("dojox.widget.rotator.Controller");
         dojo.require("dojox.widget.rotator.Fade");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var myAutoRotatorInstance1 = new dojox.widget.AutoRotator(
                 {
                     transition: "dojox.widget.rotator.fade",

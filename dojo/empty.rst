@@ -79,7 +79,7 @@ Empty a single node
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // Create a button programmatically:
         var button = new dijit.form.Button({
             label: "Empty TestNode1",
@@ -126,7 +126,7 @@ Empty all nodes in a list by reference
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // Create a button programmatically:
         var button2 = new dijit.form.Button({
             label: "Empty all red nodes",

@@ -69,7 +69,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 	var dp;
 
-	dojo.addOnLoad(function() {
+	dojo.ready(function() {
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -131,7 +131,7 @@ fig 1.
 
       var dp;
 
-      dojo.addOnLoad(function() {
+      dojo.ready(function() {
 
       dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -171,7 +171,7 @@ Example 2 - Chart and DataGrid
  
   	var dp;
 
-	dojo.addOnLoad(function() {
+	dojo.ready(function() {
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -235,7 +235,7 @@ fig 2.
 
       var dp;
 
-      dojo.addOnLoad(function() {
+      dojo.ready(function() {
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -327,7 +327,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
  
  var dp;
 
- dojo.addOnLoad(function() {
+ dojo.ready(function() {
 
  dp = new dojox.widget.DataPresentation("chartdiv", {
   type: "chart",

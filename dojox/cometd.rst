@@ -31,7 +31,7 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
     dojo.require("dojo.io.script");
     dojo.require("dojox.cometd");
     dojo.require("dojox.cometd.callbackPollTransport");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
 		dojox.cometd.init("http://cometd.dojocampus.org:9000/cometd");
 		dojox.cometd.subscribe("/demo",function(message){
 			console.log("received",message);

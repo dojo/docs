@@ -94,7 +94,7 @@ JavaScript:
     }
  ];
  
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     ani = dojox.fx.animateTimeline({keys:keys, duration:2000}, "myDiv").play();
  });
  

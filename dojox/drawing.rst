@@ -262,7 +262,7 @@ Manipulating the Drawing
 DojoX Drawing contains several methods to manipulate the drawing. Most of these methods can be found in the main JavaScript file, drawing.js:
 
 **onSurfaceReady**
-	Any actions taken on the drawing should happen within this function or after it's called. This event is similar to dojo.addOnLoad; it fires when the canvas is ready.
+	Any actions taken on the drawing should happen within this function or after it's called. This event is similar to dojo.ready; it fires when the canvas is ready.
 		
 **addStencil**
 	To programmatically add a Stencil to the drawing, use the *addStencil* method with two arguments, the basic Stencil type, and a object properties, which should include either the Stencil data or Stencil points.

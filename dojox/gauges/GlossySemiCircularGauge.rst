@@ -106,5 +106,5 @@ Examples
         	}, dojo.byId("SemiCircularGauge"));
         	glossyCircular.startup();
         };
-        dojo.addOnLoad(makeGauge );
+        dojo.ready(makeGauge );
     </script>

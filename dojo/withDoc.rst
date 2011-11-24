@@ -84,7 +84,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
          });
         });
       }
-      dojo.addOnLoad(changeStyles);
+      dojo.ready(changeStyles);
     </script>
 
   .. html ::

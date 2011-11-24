@@ -37,7 +37,7 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'l
     <script type="text/javascript">
       dojo.require("dijit.form.CheckBox");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         var radioOne = new dijit.form.RadioButton({
           checked: true,
           value: "tea",

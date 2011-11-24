@@ -50,7 +50,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
     dojo.require("dojo.io.script");
 
     var google, tehLoader = null;
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // define the service:
         google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
         // quick/easy loading indicator:

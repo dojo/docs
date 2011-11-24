@@ -146,7 +146,7 @@ A simple example formatting a date in a number of ways
                     out.innerHTML += "<tr><td>" + ii + "</td><td>" + fmt + "</td><td>" + res + "</td></tr>";
                 }
             }
-            dojo.addOnLoad( initDates );
+            dojo.ready( initDates );
         </script>
         
     .. css ::
@@ -186,7 +186,7 @@ Render the current Date in several ways using format(). The inverse operation to
             dojo.require("dojox.widget.DocTester");
             dojo.require("dojo.date.locale");
     
-            dojo.addOnLoad(function(){
+            dojo.ready(function(){
                 var docTest = new dojox.widget.DocTester({}, "docTest");
             });
         </script>

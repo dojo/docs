@@ -175,7 +175,7 @@ Implications/Limitations
 
 * Not all external resources can be xdomain loaded, in particular some support files that need to be loaded from the same domain as the HTML page. See module-specific notes below.
 * **Requires** a "xdomain" build of Dojo (see below for more info on how to make a xdomain build).
-* Asynchronous loading. You MUST use dojo.addOnLoad() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.addOnLoad() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called. This technique works even for the normal Dojo loader, so this is a good practice to use even when not using an xdomain build.
+* Asynchronous loading. You MUST use dojo.ready() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.ready() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called. This technique works even for the normal Dojo loader, so this is a good practice to use even when not using an xdomain build.
 * Avoid using document.write(): Since module can load asynchronously, after the page is loaded, document.write can cause problems.
 
 Module-specific Notes
@@ -206,7 +206,7 @@ How to use xdomain builds in web pages
 * In **dojoConfig**, add **useXDomain = true**.
 * In **dojoConfig**, add a modulePaths object that maps where to find your modules.
 * **Only use dojo.require()** to load xdomain layers. Do not reference the .xd.js file for the layer file. The one exception is dojo.xd.js. If your layer does not map to a real module name, then specify a resourceName: property for that layer in your build profile. The other option is to load the built .js file (not .xd.js file) in a script tag.
-* Register a callback function to get notification of when the packages are loaded by using **dojo.addOnLoad()**.
+* Register a callback function to get notification of when the packages are loaded by using **dojo.ready()**.
 * Optional: set a wait time in milliseconds (**dojoConfig.xdWaitSeconds**) that specifies how long the resource loader should wait for a resource to load until returning an error. Since script elements do not give information about failed or long-running requests, this timeout is used to prevent infinite waiting in the browser. An exception will be thrown to indicate a load error. The default xdWaitSeconds is 15.
 
 XDomain Example

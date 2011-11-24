@@ -69,7 +69,7 @@ Example usage of dojo.doc as replacement for document calls
            dojo.doc.body.appendChild(dojo.doc.createElement("br"));
         });
       }
-      dojo.addOnLoad(addText);
+      dojo.ready(addText);
     </script>
 
   .. html ::

@@ -115,7 +115,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
     dojo.require("dijit.Dialog");
 
     var secondDlg;
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // create the dialog:
         secondDlg = new dijit.Dialog({
             title: "Programmatic Dialog Creation",
@@ -158,7 +158,7 @@ the Dialog, suffixed with :ref:``underlay``, which you can define a css class fo
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             // create the dialog:
             var dialogColor = dijit.byId("dialogColor");
 
@@ -236,7 +236,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         dojo.require("dijit.form.DateTextBox");
         dojo.require("dijit.form.TimeTextBox");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             formDlg = dijit.byId("formDialog");
             dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
         });
@@ -302,7 +302,7 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     dojo.require("dijit.form.DateTextBox");
     dojo.require("dijit.form.TimeTextBox");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         var formDlg = dijit.byId("formDialog2");
         dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
     });
@@ -363,7 +363,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     dojo.require("dijit.Dialog");
     dojo.require("dijit.form.RadioButton");
 
-    dojo.addOnLoad(function() {
+    dojo.ready(function() {
         formDlg = dijit.byId("formDialog");
         dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
     });

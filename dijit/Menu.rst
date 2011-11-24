@@ -40,7 +40,7 @@ Programmatic example
       dojo.require("dijit.Menu");
 
       var pMenu;
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
             pMenu = new dijit.Menu({
                 targetNodeIds:["prog_menu"]
             });

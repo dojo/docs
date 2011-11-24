@@ -82,7 +82,7 @@ Create the LightboxNano on an <img> element:
   <script type="text/javascript">
       dojo.require("dojox.image.LightboxNano");
     
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           new dojox.image.LightboxNano({
               href: "/path/to/large/image.jpg"
           }, "myImg");
@@ -99,7 +99,7 @@ Create the LightboxNano on an <a> element:
   <script type="text/javascript">
       dojo.require("dojox.image.LightboxNano");
     
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           new dojox.image.LightboxNano({}, "myLink");
       });
   </script>

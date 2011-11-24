@@ -23,7 +23,7 @@ Features
 
   Configuring Dojo with dojoConfig
 
-* :ref:`dojo.addOnLoad <dojo/addOnLoad>`
+* :ref:`dojo.ready <dojo/ready>`
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
 

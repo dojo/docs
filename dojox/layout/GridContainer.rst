@@ -111,7 +111,7 @@ Programmatic example
     dojo.require("dijit.form.DropDownButton");
     dojo.require("dijit.TooltipDialog");
 
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         // create a new GridContainer:
         var gridContainer = new dojox.layout.GridContainer({
             nbZones: 3,

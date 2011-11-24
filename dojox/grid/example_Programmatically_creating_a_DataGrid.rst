@@ -13,7 +13,7 @@ This example shows how to create a simple Grid programmatically.
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
  
             // our test data store for this example:
             var store4 = new dojox.data.CsvStore({ url: '{{dataUrl}}dojox/grid/tests/support/movies.csv' });

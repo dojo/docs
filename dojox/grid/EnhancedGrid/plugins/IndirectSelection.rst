@@ -33,7 +33,7 @@ Please note indirect selection is completely dependent on the selection mode of 
         dojo.require("dojo.data.ItemFileWriteStore");
         dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',

@@ -61,7 +61,7 @@ Programmatic example
 
     <script type="text/javascript">
         dojo.require("dijit.form.MultiSelect");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
                 var sel = dojo.byId('dynamic');
                 var n = 0;
                 for(var i in dijit){

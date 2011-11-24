@@ -305,7 +305,7 @@ The following is a semi-complex example of the write API in action. In this exam
         dojo.connect(button2, "onClick", updateAll);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init2);
+      dojo.ready(init2);
     </script>
 
   .. html ::
@@ -418,7 +418,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
         }
         dojo.connect(button3, "onClick", deleteCities);
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -605,7 +605,7 @@ is displayed in an alert.
         dojo.connect(button3, "onClick", geoStore2, "save");
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init3);
+      dojo.ready(init3);
     </script>
 
   .. html ::

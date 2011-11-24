@@ -74,7 +74,7 @@ You want to use Dojo, but you do not want it to conflict with other Dojo version
       //you need to reference the "dojo" name in the require call,
       //but it will be added to the "coolio" object:
       coolio.require("dojo.string");
-      coolio.addOnLoad(function(){
+      coolio.ready(function(){
           //do something with coolio.actions.foo();
           //Can call coolio.string.trim() too.
       });
@@ -203,10 +203,10 @@ To use both versions in a page, the tests/test.html file would look like
       dojo11.require("dijit._Calendar");
       dojo11.require("dojo.date.locale");
       dojo11.require("dojo.parser"); // scan page for widgets
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           //Do something with Dojo 0.4.3 in here.
       });
-      dojo11.addOnLoad(function(){
+      dojo11.ready(function(){
           //Do something with Dojo 1.1 in here.
       });
   </script>

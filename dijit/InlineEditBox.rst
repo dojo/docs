@@ -25,7 +25,7 @@ Programmatic InlineEditBox
       dojo.require("dijit.form.Textarea");
 
       var eb;
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 	  eb = new dijit.InlineEditBox({
             editor: "dijit.form.Textarea",
             autoSave: false

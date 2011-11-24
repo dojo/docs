@@ -31,7 +31,7 @@ Example
   .. js ::
 
     <script>
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             dojo.query("#showMe").onclick(function(e){
                 var node = e.target;
 

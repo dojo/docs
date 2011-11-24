@@ -90,7 +90,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
         dojo.require("dijit.form.ValidationTextBox");
         dojo.require("dijit.form.DateTextBox");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var myForm = dijit.byId("myFormTwo");
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
@@ -141,7 +141,7 @@ The `validate()` function does some extra UI related work, including highlightin
         dojo.require("dijit.form.ValidationTextBox");
         dojo.require("dijit.form.DateTextBox");
 
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var myForm = dijit.byId("myFormTwo");
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();

@@ -73,7 +73,7 @@ This example creates a simple NumberTextBox programmatically.  The fractional pa
               };
               new dijit.form.NumberTextBox(props, "programmatic");
          }
-         dojo.addOnLoad(createWidget);
+         dojo.ready(createWidget);
      </script>
 
   .. html ::

@@ -83,7 +83,7 @@ Example 1: Using queryToObject to create a JavaScript form of a query
            dojo.byId("query").innerHTML = dojo.toJson(query, true);
         });
       }
-      dojo.addOnLoad(convertQuery);
+      dojo.ready(convertQuery);
     </script>
 
   .. html ::
@@ -120,7 +120,7 @@ Example 2: Using queryToObject to alter query strings
            dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1) + dojo.objectToQuery(query);
         });
       }
-      dojo.addOnLoad(alterQuery);
+      dojo.ready(alterQuery);
     </script>
 
   .. html ::

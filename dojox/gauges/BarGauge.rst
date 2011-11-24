@@ -98,7 +98,7 @@ A bar gauge with two indicators (programmatic)
           }, gauge);
         gauge.startup();
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

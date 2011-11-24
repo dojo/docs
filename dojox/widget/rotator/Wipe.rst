@@ -71,7 +71,7 @@ Example of a different wipe direction for each pane.
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Wipe");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             new dojox.widget.AutoRotator(
                 {
                     transition: "dojox.widget.rotator.wipeLeft",

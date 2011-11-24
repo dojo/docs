@@ -383,7 +383,7 @@ This also ensures that subsequent descendant classes that do not override the ma
 Setting the parser behavior
 ---------------------------
 
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. how to set parseOnLoad
+``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes ready call after parsing. how to set parseOnLoad
 
 ``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node. For example:
 
@@ -480,7 +480,7 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
   //Dojo < 1.7
   dojo.require("dojo.parser");
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
        // do something();
        dojo.parser.parse();
   });

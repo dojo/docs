@@ -30,7 +30,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /*set up data store*/
 	  var data = {
 		identifier: 'id',

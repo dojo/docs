@@ -75,7 +75,7 @@ JavaScript:
   
  dojo.require("dojox.fx.ext-dojo.complex");
             
- dojo.addOnLoad(function(){
+ dojo.ready(function(){
     var ani = dojo.animateProperty({
         node:dojo.byId("words"),
         duration:800,

@@ -36,7 +36,7 @@ You can of course convert an existing ``<ul>`` into a roller programmatically, m
         <li>Item 3</li>
     </ul>
     <script type="text/javascript">
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             new dojox.widget.Roller({},"myRoller");
         });
     </script>

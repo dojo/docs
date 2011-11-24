@@ -60,7 +60,7 @@ optionally contains a query. e.g.
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
   <script type="text/javascript">
-     dojo.addOnLoad(function() {
+     dojo.ready(function() {
      //Define the request, saying that 20 records should be fetched at a time,
      //and to start at record 0
      
@@ -148,7 +148,7 @@ of settings, and uses the FlickrRestStore data store.
         dojo.require("dojox.image.ThumbnailPicker");
         dojo.require("dojox.data.FlickrRestStore");
 
-        dojo.addOnLoad(function() {
+        dojo.ready(function() {
         //Create a new FlickrRestStore
         var flickrRestStore = new dojox.data.FlickrRestStore();
          

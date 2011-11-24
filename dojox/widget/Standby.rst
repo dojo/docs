@@ -100,7 +100,7 @@ Basic usage
          dojo.connect(b1, "onClick", function(){basicStandby1.show();});
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html::
@@ -156,7 +156,7 @@ Programmatic creation
          dojo.connect(b3, "onClick", function(){standby.show();});
          dojo.connect(b4, "onClick", function(){standby.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -209,7 +209,7 @@ Changing overlay color
          dojo.connect(b5, "onClick", function(){basicStandby3.show();});
          dojo.connect(b6, "onClick", function(){basicStandby3.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -263,7 +263,7 @@ Changing overlay color and image
          dojo.connect(b7, "onClick", function(){basicStandby4.show();});
          dojo.connect(b8, "onClick", function(){basicStandby4.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -319,7 +319,7 @@ This example works on Firefox and Safari only.
          dojo.connect(b9, "onClick", function(){basicStandby5.show();});
          dojo.connect(b10, "onClick", function(){basicStandby5.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::
@@ -373,7 +373,7 @@ Overlaying a dijit.form.TextBox
          dojo.connect(b11, "onClick", function(){basicStandby6.show();});
          dojo.connect(b12, "onClick", function(){basicStandby6.hide();});
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

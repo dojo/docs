@@ -42,7 +42,7 @@ The first example shows how to create a TooltipDialog and DropDownButton program
           dojo.require("dijit.form.TextBox");
           dojo.require("dijit.form.Button");
 
-          dojo.addOnLoad(function(){
+          dojo.ready(function(){
             var dialog = new dijit.TooltipDialog({
                content:
                  '<label for="name">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name" name="name"><br>' +
@@ -71,7 +71,7 @@ A TooltipDialog may be popped up from any node.
 	<script type="text/javascript">
           dojo.require("dijit.TooltipDialog");
 
-          dojo.addOnLoad(function(){
+          dojo.ready(function(){
               var myTooltipDialog = new dijit.TooltipDialog({
                   id: 'myTooltipDialog',
                   style: "width: 300px;",

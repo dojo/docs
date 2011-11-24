@@ -93,7 +93,7 @@ Programmatic construction of a ComboBox to browse rules
         }
         dojo.connect(ruleCombo, "onChange", setCssText);
       }
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

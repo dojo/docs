@@ -69,7 +69,7 @@ Examples
       function show(str){
         return "|" + dojo.trim(str) + "|";
       }
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
         dojo.byId("output1").innerHTML = show("   one");
         dojo.byId("output2").innerHTML = show("two ");
         dojo.byId("output3").innerHTML = show("   three ");

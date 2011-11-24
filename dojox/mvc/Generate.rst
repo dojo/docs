@@ -52,7 +52,7 @@ Declarative example
 				var model = dojox.mvc.newStatefulModel({ data : modeldata });
 				dijit.byId("view").set("ref", model);
 			};
-		dojo.addOnLoad(updateView);
+		dojo.ready(updateView);
 	   </script>
 
 			<div id="mainContent">

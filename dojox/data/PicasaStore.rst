@@ -788,7 +788,7 @@ Sample 1:  Listing nature pictures
          dojo.connect(button, "onClick", getAllItems);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init);
+      dojo.ready(init);
     </script>
 
   .. html ::

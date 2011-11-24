@@ -278,7 +278,7 @@ Searching node attributes
            dojo.connect(button3, "onClick", search);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init3);
+        dojo.ready(init3);
     </script>
 
   .. html ::

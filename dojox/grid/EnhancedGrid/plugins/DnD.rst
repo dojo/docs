@@ -490,7 +490,7 @@ The JavaScript code is:
   <script type="text/javascript">
 	dojo.require("dojox.grid.enhanced.plugins.GridSource");
 	
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
       var formTarget = new dojox.grid.enhanced.plugins.GridSource(dojo.byId("songForm"),{
         isSource: false,
         insertNodesForGrid: false

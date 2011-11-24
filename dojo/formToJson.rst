@@ -90,7 +90,7 @@ Example 1: Using formToJson to create an JSON version of a form
            dojo.byId("formObject").innerHTML = formJson;
         });
       }
-      dojo.addOnLoad(convertForm);
+      dojo.ready(convertForm);
     </script>
 
   .. html ::
@@ -124,7 +124,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
            dojo.byId("formObject2").innerHTML = formJson;
         });
       }
-      dojo.addOnLoad(convertFormDigits);
+      dojo.ready(convertFormDigits);
     </script>
 
   .. html ::

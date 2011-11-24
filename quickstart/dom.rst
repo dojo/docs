@@ -21,11 +21,11 @@ Dojo provides a host of DOM utility functions. This guide covers combined usage 
 Locating and Using Nodes
 ========================
 
-All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by :ref:`dojo.addOnLoad <dojo/addOnLoad>`
+All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by :ref:`dojo.ready <dojo/ready>`
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       console.log("page ready, can modify DOM anytime after this");
   });
 
@@ -38,7 +38,7 @@ The fastest, and most common, way of locating an element is by it's ``id`` attri
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       var n = dojo.byId("someId");
       n.innerHTML = "Hi, World";
   });
@@ -57,7 +57,7 @@ It is not always practical to attach id's to elements you intend to modify, whic
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       var list = dojo.query("#someId");
   });
 
@@ -65,7 +65,7 @@ In this example, we locate the same node found by ``dojo.byId`` before, but usin
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
 
       // find a node byId, change the id, and set the color red
       dojo.query("#someId").attr("id","newId").style("color","red");
@@ -110,7 +110,7 @@ All DOM's should contain a <body> element. This element is a DomNode like any ot
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       dojo.query("body").addClass("tundra");
   });
 
@@ -118,7 +118,7 @@ or more quickly available as a function call:
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       dojo.addClass(dojo.body(), "tundra");
   });
 
@@ -126,7 +126,7 @@ By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefi
 
 .. js ::
   
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       var ifr = document.getElementById("anIframe");
       dojo.query("body", ifr.documentElement).addClass("tundra")
   });

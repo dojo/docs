@@ -168,7 +168,7 @@ Example: Playing with Easing
          }
          dojo.connect(dijit.byId("moveButton"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setupMove);
+      dojo.ready(setupMove);
     </script>
 
   .. html ::

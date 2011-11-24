@@ -32,7 +32,7 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
         dojo.require("dijit.tree.ForestStoreModel");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
 	  /* set up data store */
 	  	var data = { identifier: 'name',
 	  label: 'name',

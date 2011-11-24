@@ -132,7 +132,7 @@ Connecting CsvStore to dijit.form.ComboBox
       dojo.require("dojox.data.CsvStore");
       dojo.require("dijit.form.ComboBox");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           var storeData =   "firstname,lastname,age\n" +
                             "John, Doe, 21\n" +
                             "Jane, Doe, 22\n" +
@@ -165,7 +165,7 @@ Connecting CsvStore to dojox.grid.DataGrid
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
       
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           var peopleData =  "firstname,lastname,age\n" +
                             "John, Doe, 21\n" +
                             "Jane, Doe, 22\n" +
@@ -217,7 +217,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
 
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
           var peopleData2 =  "firstname|lastname|age\n" +
                             "John|Doe|21\n" +
                             "Jane|Doe|22\n" +

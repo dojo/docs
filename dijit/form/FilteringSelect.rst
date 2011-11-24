@@ -45,7 +45,7 @@ To set the default value for a programmatic FilteringSelect, include the *value*
     </script>
 
     <script type="text/javascript">
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             var stateStore = new dojo.data.ItemFileReadStore({
                 url: "{{dataUrl}}/dijit/tests/_data/states.json"
             });
@@ -155,7 +155,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
         var cityJson = {
             label: 'name',
             items: [
@@ -438,7 +438,7 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
                 ]
         };
  
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
            var dojoStore = new dojo.data.ItemFileReadStore({data:richData});
 
            var fs = new dijit.form.FilteringSelect({

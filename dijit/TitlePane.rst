@@ -47,7 +47,7 @@ Programmatic example
       dojo.require("dijit.TitlePane");
 
       var tp;
-      dojo.addOnLoad(function(){
+      dojo.ready(function(){
 	  tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
           dojo.byId("holder").appendChild(tp.domNode);
       });

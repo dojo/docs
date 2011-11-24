@@ -64,7 +64,7 @@ The following of this document first describes how to use the export functions o
 			dojo.byId("output").value = str;
 		};
 		
-		dojo.addOnLoad(function(){
+		dojo.ready(function(){
 
 			var store = new dojo.data.ItemFileWriteStore({data: data});
 			

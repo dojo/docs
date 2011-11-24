@@ -111,7 +111,7 @@ circular gauge (programmatic)
         	}, dojo.byId("CircularGauge"));
         	glossyCircular.startup();
         };
-        dojo.addOnLoad(makeGauge );
+        dojo.ready(makeGauge );
     </script>
     
     

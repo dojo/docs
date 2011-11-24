@@ -84,7 +84,7 @@ Example 1: Using fieldToObject to get field values
            dojo.byId("output").innerHTML = "Shape is: " + shape + ", Colors is an array: " + colors;
         });
       }
-      dojo.addOnLoad(convertFields);
+      dojo.ready(convertFields);
     </script>
 
   .. html ::

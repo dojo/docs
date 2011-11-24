@@ -41,7 +41,7 @@ Note that the tabs all have a fixed height.
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         var tc = new dijit.layout.TabContainer({
             style: "height: 100%; width: 100%;"
         },"tc1-prog");
@@ -169,7 +169,7 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         var tc = new dijit.layout.TabContainer({
             style: "height: 100%; width: 100%;"
         },"tc1-prog");
@@ -255,7 +255,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.addOnLoad(function(){
+    dojo.ready(function(){
         var tabs = dijit.byId("onClose-ex");
         var closablePane = new dijit.layout.ContentPane({
             title:"Close Me",

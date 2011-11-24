@@ -61,7 +61,7 @@ for the ``dojo.js`` layer, then then *none* of ``dojo._base`` gets added to
 
 You just end up with the following from ``dojo/_base/_loader``, basically, just bare utilities for browser detection:
 
-   * ``dojo.addOnLoad``
+   * ``dojo.ready``
    * ``addOnUnload``
    * ``dojo.require``
    * ``dojo.provide``

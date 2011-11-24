@@ -76,7 +76,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             new dojox.widget.Rotator(
                 {
                     transition: "dojox.widget.rotator.fade",
@@ -126,7 +126,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             // add a 3rd pane
             dojo.create("div", { className: "pane", innerHTML: "dynamically added Pane" }, "myRotator2");
             
@@ -402,7 +402,7 @@ Example
   
  <div data-dojo-type="dojox.widget.Rotator" id="myRotator"></div>
  <script type="text/javascript">
-   dojo.addOnLoad(function(){
+   dojo.ready(function(){
      dojo.subscribe("myrotator/rotator/update", function(type, rotator, params){
        console.info("The rotator just published a '", type, "' message");
      });

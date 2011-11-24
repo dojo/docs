@@ -19,7 +19,7 @@ You can use Dijit in one of two ways: **declaratively** by using special attribu
 .. js ::
   
   dojo.require("dijit.Dialog");
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
     // create a "hidden" Dialog:
     var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
     dialog.startup();
@@ -44,7 +44,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
 .. html ::
   
   <script type="text/javascript">
-     dojo.addOnLoad(function(){
+     dojo.ready(function(){
          // dojo.byId("foobar") would only be a normal domNode.
          var myDialog = dijit.byId("foobar");
         myDialog.set("content", "<p>I've been replaced!</p>");

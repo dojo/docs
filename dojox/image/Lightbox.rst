@@ -77,7 +77,7 @@ A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' 
 
 .. js ::
 
-  dojo.addOnLoad(function(){
+  dojo.ready(function(){
       // create and start the lightboxes:
       var lb = new dojox.image.Lightbox({ title:"One", group:"group2", href:"foo.png" });
       var lb2 = new dojox.image.Lightbox({ title:"Two", group:"group2", href:"bar.png" });

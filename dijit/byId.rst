@@ -55,7 +55,7 @@ Example 1: Locating a widget by its ID
           dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
         }
       }
-      dojo.addOnLoad(findWidget);
+      dojo.ready(findWidget);
     </script>
 
   .. html ::
@@ -89,7 +89,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
           dojo.byId("textNode2").innerHTML = "Could not locate my text box widget!";
         }
       }
-      dojo.addOnLoad(findWidgetDOM);
+      dojo.ready(findWidgetDOM);
     </script>
 
   .. html ::
@@ -124,7 +124,7 @@ Example 3: Comparing dojo.byId and dijit.byId
                                           "dijit.byId for dom id returned: " + dibiDOM + "<br>" +
                                           "dojo.byId for dom id returned: " + dobiDOM + "<br>";
       }
-      dojo.addOnLoad(compareDojoDijitById);
+      dojo.ready(compareDojoDijitById);
     </script>
 
   .. html ::
