@@ -17,15 +17,12 @@ Utilities
 
 Utility methods and classes used by widgets or by applications with widgets.
 
-* :ref:`dijit.a11y <dijit/a11y>` - functions about tab index
 * :ref:`dijit.focus <dijit/focus>` - keeps track of focused node and active widgets
 * :ref:`dijit.hccss <dijit/hccss>` - for detecting when IE or FF is in high contrast (aka no background images) mode
 * :ref:`dijit.place <dijit/place>` - low level code for positioning popups / drop downs
 * :ref:`dijit.popup <dijit/popup>` - high level library routines for positioning popups / drop downs
 * :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
 * :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
-
-
 
 =======
 Widgets
