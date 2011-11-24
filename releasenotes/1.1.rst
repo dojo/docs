@@ -10,6 +10,7 @@ Dojo 1.1 is backwards compatible with Dojo 1.0 but there are many new features, 
 
 Here is the list of bugs fixed in 1.1.0 and 1.1.1. Note that many of those bug reports aren't bugs in 1.0, but rather just refactoring work, enhancements, or bugs that appeared after the 1.0 release.
 
+=======
 Gotchas
 =======
 
@@ -114,6 +115,7 @@ See #6104
     * dijitVerticalSliderIncrementIcon → dijitSliderIncrementIconV
     * dijitVerticalSliderDecrementIcon → dijitSliderDecrementIconV
 
+====
 Core
 ====
 
@@ -184,6 +186,7 @@ Adobe AIR support
 
 Thanks to Adobe's financial sponsorship and the hard work of SitePen and Chris Barber, Dojo now provides strong support for AIR in addition to Dojo's existing integration with Google Gears via dojox.offline
 
+=====
 Dijit
 =====
 
@@ -243,6 +246,7 @@ Miscellaneous
     * Bidi: All widgets should now be BiDi-compliant and mirror properly when dir=rtl is set on the document
     * A11y - basically everything except Grid accessible
 
+=====
 Dojox
 =====
 
@@ -318,6 +322,7 @@ Updated:
 
     * Lightbox
 
+===================
 Util (buildscripts)
 ===================
 
@@ -333,6 +338,7 @@ Dojo 1.1 supports the following new build options:
     * There are new build options associated with multiversion support. See the Multiversion Book Page for more information.
     * Rhino builds: You can now do custom builds that target Rhino as the host environment, instead of the browser. See the example build file to see how to specify the Rhino host environment.
 
+============================================
 What browsers are supported by this release?
 ============================================
 
