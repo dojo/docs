@@ -12,6 +12,7 @@ dojo/mouse
 
 The dojo/mouse module provides extension events for hovering and mouse button utility functions. The module has three properties: enter, leave, and mouseButtons.
 
+===========
 mouse.enter
 ===========
 
@@ -25,6 +26,7 @@ The mouse.enter event is an extension event for being notified of when the mouse
     });
   });
 
+===========
 mouse.leave
 ===========
 
@@ -36,8 +38,9 @@ The mouse.leave event is an extension event for being notified of when the mouse
     dojo.removeClass(node, "hoverClass");
   });
 
+============
 mouseButtons
-==========================
+============
 
 The mouseButtons object has the following properties and methods:
 

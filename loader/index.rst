@@ -6,9 +6,6 @@ The Dojo Loader
 :Version: 1.7.0
 :Author: Rawld Gill
 
-===============
-The Dojo Loader
-===============
 
 Since program complexity tends to increase geometrically as program size increases linearly, the only hope of success when
 implementing a large program is to break it into several small programs. From the beginning, the Dojo Toolkit was

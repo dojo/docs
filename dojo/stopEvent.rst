@@ -48,7 +48,8 @@ dojo.fixEvent
 
 TO DOC
 
-See Also:
-=========
+========
+See Also
+========
 
 * :ref:`The event QuickStart <quickstart/events>`

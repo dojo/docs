@@ -10,8 +10,6 @@ The Dojo Loader Legacy Modes
 .. contents::
    :depth: 3
 
-The Dojo Loader Legacy Modes
-
 ============
 Introduction
 ============

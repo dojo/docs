@@ -11,13 +11,15 @@ Notes on how to use bug tracking
 
 At the Dojo Project we use Trac for issue tracking. These are some notes about the conventions we use when filing, closing, updating, and triaging issues (tickets).
 
+==========
 Logging In
-----------
+==========
 
 The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from the overall `Dojo Foundation <http://dojofoundation.org>`_. `Register for a Dojo Foundation account <http://my.dojofoundation.org>`_ and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://livedocs.dojotoolkit.org
 
+================
 Getting Notified
-~~~~~~~~~~~~~~~~
+================
 
 Trac maintains a separate mapping of usernames to email addresses, outside of LDAP. While unfortunate, it is very easy to remedy. Click "preferences" in the Trac header, and enter your email address into the appropriate field. If the name in the "Full Name" field is not your logged in username, make it so. When Trac sends out notification emails, it will look for usernames in the ``CC:`` field on the ticket and use the associated email address you've provided.
 
@@ -25,8 +27,9 @@ You are notified if you are the a) owner of a ticket b) filer of a ticket or c) 
 
 Alternative, you can subscribe to the ``dojo-checkins`` mailing list, and be alerted for every change. (can be noisy some days)
 
+==============
 Filing Tickets
---------------
+==============
 
 Please search for duplicates prior to filing a ticket. If no duplicate is found, start a new issue by clicking "New Ticket" in the header. Fill in the following fields:
 
@@ -53,7 +56,7 @@ Please search for duplicates prior to filing a ticket. If no duplicate is found,
 If you have a patch, you should have indicated as such in the ``summary`` field. If you did, select the `I have files to attach` checkbox before continuing on to `Create Ticket`.
 
 Using the summary for good
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Various ``[meta]`` style tags can be added to the summary to assist in understanding the scope of the ticket. Some common tags are:
 
@@ -78,8 +81,9 @@ Dijit prefers the module name be included in the summary, when in the "component
 
     [regression] TabContainer: Title Heights collapse when ...
     
+===============
 Owning a ticket
-~~~~~~~~~~~~~~~
+===============
 
 There are two states for tickets. Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``). Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``. If you have ``tbd`` tickets, they need to be examined. A cursory scan of a ticket can sometimes resolve issues very quickly.
 
@@ -97,13 +101,14 @@ Tickets assigned but not "accepted" are considered fair game. A patch submission
 
 When you "accept" a ticket for a given milestone, you are indicating you are or will be focused on that item. Unless the ticket requests further contribution, it is likely you will receive none. It is your duty to ensure all your "accepted" tickets are marked in an appropriate milestone prior to every major release.
 
+=======
 Patches
--------
+=======
 
 Patches should be attached to tickets in unified diff format, with a ``.patch`` or ``.diff`` extension.
 
 Creating
-~~~~~~~~
+--------
 
 To create a patch, use `svn diff`:
 
@@ -116,7 +121,7 @@ To create a patch, use `svn diff`:
     $ svn diff > floatingpane.patch
 
 Merging
-~~~~~~~
+-------
     
 To apply a user supplied patch (from commandline):
 
@@ -139,8 +144,9 @@ Many IDE's have SVN integration and can easily apply patches from this format.
 
 ``TODOC:`` anyone use an IDE to do this?
 
+===============
 Commit Messages
----------------
+===============
 
 All commit messages should be descriptive of the change. "Fixed it" is generally considered a bad commit message. "Fixed layout regression in FooBar" would suffice.
 

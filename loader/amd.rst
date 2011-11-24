@@ -12,8 +12,6 @@ The Dojo Loader
 .. contents::
    :depth: 2
 
-The Dojo Loader
-
 ============
 Introduction
 ============

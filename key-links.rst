@@ -1,6 +1,5 @@
 .. _key-links:
 
-=========
 Key Links
 =========
 
@@ -9,12 +8,14 @@ Key Links
 
 Here's a collection of current and useful Dojo demos and tutorials to help you get started with Dojo:
 
+===============
 Getting Started
 ===============
 
 * `SitePen Dojo QuickStart Guide <http://www.sitepen.com/blog/series/dojo-quick-start-guide/>`_, SitePen
 * `Hello Dojo <http://dojotoolkit.org/documentation/tutorials/1.6/hello_dojo>`_, SitePen and Sam Foster, mozilla, Dojo Committer
 
+=====
 Demos
 =====
 
@@ -28,6 +29,7 @@ Demos
 * `JavaScript Dojo API Docs <http://dojodocs.uxebu.com/>`_, JavaScript-based documentation viewer, by Uxebu
 * `Toura Mulberry <http://mulberry.toura.com/>`, Toura
 
+====
 Core
 ====
 
@@ -67,6 +69,7 @@ Core
 * `Using MD5 Digests to Make Long Get Requests <http://www.sitepen.com/blog/2009/02/12/using-md5-digests-to-make-long-get-requests/>`_, SitePen and Dustin Machi, Dojo Committer
 * `Demystifying Deferreds <http://www.sitepen.com/blog/2009/03/31/queued-demystifying-deferreds/>`_, SitePen and Dustin Machi, Dojo Committer
 
+=====
 Dijit
 =====
 
@@ -89,6 +92,7 @@ Dijit
 * `Extending Dojo Widgets <http://heather.koyuk.net/refractions/?p=41>`_, Heather Koyuk, Dojo User
 * `Styling Dijit Form Elements <http://www.sitepen.com/blog/2009/02/25/styling-dijit-form-elements/>`_, SitePen and Mike Wilcox, Dojo Committer
 
+=====
 DojoX
 =====
 
@@ -147,6 +151,7 @@ Data, JSON, and RPC
 * `Deterministic Client/Server Interaction <http://www.sitepen.com/blog/2009/02/27/deterministic-clientserver-interaction/>`_, Kris Zyp, SitePen, Dojo Committer
 
 
+=============
 Miscellaneous
 =============
 
@@ -179,6 +184,7 @@ Miscellaneous
 * `A Dojo Plugin Pattern <http://higginsforpresident.net/2009/03/a-dojo-plugin-pattern/>`_, Peter Higgins, Adconion, Dojo Project Lead
 
 
+=========
 Utilities
 =========
 
@@ -194,6 +200,7 @@ Utilities
 * `Patching Dojo <http://www.sitepen.com/blog/2009/02/04/patching-dojo/>`_, SitePen and Sam Foster, Dojo Committer
 
 
+====================
 Dojo Goodness Series
 ====================
 
@@ -211,6 +218,7 @@ Dojo Goodness Series
   * `GFX Foo with FX <http://www.oreillynet.com/onlamp/blog/2008/06/dojo_goodness_part_9_gfx_foo.html>`_
 
 
+===============
 Books/Magazines
 ===============
 
@@ -224,6 +232,7 @@ Books/Magazines
 * `Dojo: The JavaScript Toolkit with Industrial-Strength Mojo <http://www.flickr.com/photos/dylans/2557079588/>`_, Linux Journal, July, 2008, Matthew Russell, Zaffra, Dojo Contributor
 
 
+=====
 Tests
 =====
 
@@ -231,6 +240,7 @@ Tests
 * `Dojo Sandbox <http://dojo-sandbox.net/>`_
 
 
+=============
 Presentations
 =============
 
@@ -247,6 +257,7 @@ Presentations
 * `0 to Production with Dojo <http://www.slideshare.net/phiggins/zero-to-dojo-presentation>`_ - SpringOne America 2008 with Peter Higgins
 
 
+=====
 Blogs
 =====
 
@@ -263,6 +274,7 @@ There are many blogs exclusively or partly devoted to dojo.
 * `dojotdg.com <http://dojotdg.zaffra.com>`_ - Companion blog for "Dojo: The Definitive Guide" by author Matthew Russell
 
 
+========
 See also
 ========
 
