@@ -10,7 +10,7 @@ Browser (User Agent) Sniffing
 .. contents::
     :depth: 2
 
-You should always try to use feature detection (See general overview http://dev.opera.com/articles/view/using-capability-detection/) whenever possible to write forward-compatible code branches.  The `dojo/has <dojo/has>`_ API is designed to help in this endeavor.
+You should always try to use feature detection (See general overview `Using Capability Detection <http://dev.opera.com/articles/view/using-capability-detection/>`_) whenever possible to write forward-compatible code branches.  The `dojo/has <dojo/has>`_ API is designed to help in this endeavor.
 
 When feature detection is not an option, Dojo provides a number of ``is`` variables for browser detection, defined at runtime based that provide access to the current user agent (these are set based on parsing the current user agent string).
 
@@ -20,6 +20,7 @@ The sniff module augments the basic set of has() tests (see :ref:`dojo/has <dojo
 
 The sniff module defines the following properties / has-features:
 
+* dojo.isBrowser / has("host-browser")
 * dojo.isIE / has("ie")
 * dojo.isMozilla / has("mozilla")
 * dojo.isFF / has("ff")
