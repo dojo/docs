@@ -60,8 +60,7 @@ like :ref:`CSS-based queries <dojo/query>`, :ref:`event handling <quickstart/eve
 Dojo Core
 =========
 
-Additional stable (but optional) components for :ref:`advanced animations <dojo/fx>`, :ref:`I/O <dojo/io>`, :ref:`data 
-<dojo/data>`, :ref:`Drag and Drop <dojo/dnd>` and much more.
+Additional stable (but optional) components for :ref:`advanced animations <dojo/fx>`, :ref:`I/O <dojo/io>`, :ref:`data <dojo/data>`, :ref:`Drag and Drop <dojo/dnd>` and much more.
 
 .. code-example ::
 
