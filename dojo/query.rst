@@ -293,6 +293,7 @@ E + F	               an F element immediately preceded by an E element
 E ~ F	               an F element preceded by an E element
 ====================== ==========
 
+=====================
 dojo/query (1.7 only)
 =====================
 
@@ -306,6 +307,7 @@ In Dojo 1.7, a dojo/query module is also available to reference to the query fun
 
 We can also specify alternate selector engines and compliance levels. By default, Dojo base will use the acme selector engine, which supports a large set of CSS3 selectors. However, not all applications need all of these selectors, and most queries can be performed with the native selector engines or with a simpler engine. Dojo 1.7 includes a new lite selector engine for situations where simpler queries are sufficient. The acme selector engine is about 14KB (minified, not gzipped), whereas the lite selector engine is about 2KB, which can be a big advantage for mobile applications. There are several different levels of CSS compliance that can be selected:
 
+====================
 Select Engine Levels
 ====================
 
@@ -316,6 +318,7 @@ Select Engine Levels
 
 When you are not using Dojo base (running async without a dependency on base module "dojo"), the default selector engine level is "css3". Again, if you are using Dojo base, the default is "acme".
 
+=========================
 Specifying Selector Level
 =========================
 
@@ -336,6 +339,7 @@ You can also specify the selector engine level you are dependent on for each of 
 
 If Dojo had started with the lite engine, this will ensure that CSS3 support is available, and will load Acme on older browsers. It is recommended that you using this syntax for modules that make more complex queries. If your module is using a simpler query, than using "dojo/query" or "dojo/query!css2.1" should be used.
 
+==========================
 Alternate Selector Engines
 ==========================
 

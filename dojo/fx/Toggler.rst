@@ -1,6 +1,5 @@
 .. _dojo/fx/Toggler:
 
-===============
 dojo.fx.Toggler
 ===============
 

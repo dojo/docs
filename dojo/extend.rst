@@ -1,7 +1,7 @@
 .. _dojo/extend:
 
 dojo.extend
------------
+===========
 
 Dojo extend works much like :ref:`dojo.mixin <dojo/mixin>`, though works directly on an object's prototype. Following the same pattern as mixin, dojo.extend mixes members from the right-most object into the first object, modifying the object directly.
 
@@ -30,8 +30,9 @@ The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the no
 
 After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype).
 
+=================
 Extending _Widget
------------------
+=================
 
 A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from ``dijit._WidgetBase`` in one way or another. Some widgets, like the :ref:`BorderContainer <dijit/layout/BorderContainer>` can contain arbitrary widgets, though require a 'region' parameter on the contained widget, though rather than manually adding a "region" parameter to each declaration across Dijit, BorderContainer simply extends _WidgetBase with the member, and anyone using any widget within a BorderContainer can specify a region:
 
@@ -51,8 +52,9 @@ A potentially confusing result of the above actually provides us a lot of flexib
 
 The side-effect of this is a documentation nightmare. Now ``every`` Dijit appears to have a region variable, when in fact it is just there for the benefit of BorderContainer.
 
-Example :  dojo.extend vs dojo.mixin
--------------------------------------
+==================================
+Example: dojo.extend vs dojo.mixin
+==================================
 
 [ Dojo 1.7+ (AMD) ]
 

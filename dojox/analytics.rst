@@ -76,7 +76,7 @@ Available dojoConfig Options
 ============================
 
 Base
-====
+----
  * sendInterval - The time between posts of new data to the server. Data will be queued and then sent off when the interval has passed. Defaults to 5000 ms
  * inTransitRetry - If the interval has passed and the client already has an in progress transmission, the client will back off this amount of time. Defaults to 200ms
  * dataUrl - The url you wish to send the data logs to
@@ -84,20 +84,20 @@ Base
  * maxRequestSize - Limit the size of messages to this length.  Defaults to 2000 for IE and 4000 otherwise.  This is need to limit the size of urls in the script use case
 
 consoleMessages
-===============
+---------------
  * consoleLogFuncs - array of console functions you want to be logged to the server.  Defaults to ["error", "warn", "info", "rlog"].  Note that you can place arbitrary names in this list, and if that function doesn't exist it will become available to your console object.  For example, console.rlog("foo") will be sent to the server in this case.
 
 idle
-=====
+----
  * idleTime - Time after which the user will be considered idle. Defaults to 60000 ms.
 
 mouseOver
-=========
+---------
  * sampleDelay - Time between mouseover samples, defaults to 2500ms
  * targetProps - The even properties we want to save from a 'sample'. Defaults to id, className, localName, href, spellcheck, lang, textContent, value
 
 window
-======
+------
  * windowConnects - Defines global functions that the analytics system will connect to and log use of. Defaults to "open" and "onerror"
 
 =============================
@@ -114,7 +114,7 @@ An analytics plugin is simply a function that takes advantage of the base analyt
 
 Subsequently, the function can connect to an event or do some other function that will trigger its addData to be called.  Each "entry" in the logs will then contain ["myPlugin", passedData].
 
-
+========
 See also
 ========
 

@@ -1,7 +1,7 @@
 .. _dojo/ready:
 
 dojo.ready
-==============
+==========
 
 :Version: 1.4
 
@@ -13,6 +13,7 @@ However, dojo.ready() implements a priority queue, so applications can register 
 
 Note that if the DOM has already loaded, and all dependencies have been resolved, ready() functions fire immediately.
 
+========
 Examples
 ========
 A typical usage is:

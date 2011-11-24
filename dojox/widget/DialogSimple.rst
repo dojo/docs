@@ -10,8 +10,9 @@ This is an incredibly simple widget providing a stock :ref:`dijit.Dialog <dijit/
 
 This dialog will look identical to a plain dijit.Dialog, though will optionally execute script contents and so on. No additional functionality beyond mixing the two widgets is provided. This simple dialog extension acts as the base class for the advanced :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
-Usage:
-======
+=====
+Usage
+=====
 
 No additional CSS is required. Remember to load the stock themeName.css file. Issue a single require statement to load the module and use it:
 
@@ -26,8 +27,9 @@ No additional CSS is required. Remember to load the stock themeName.css file. Is
        }, 2000);
   });
 
-See Also:
-=========
+========
+See Also
+========
 
 * :ref:`dijit.Dialog <dijit/Dialog>`
 * :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>`

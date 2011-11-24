@@ -10,6 +10,7 @@ Cross-browser Support
 
 dojox.mobile supports not only webkit-based mobile browsers, but also non-CSS3 desktop PC browsers such as IE and (older) Firefox. A CSS3 compatibility module (dojox.mobile.compat) is provided to support non-CSS3 browsers. dojox.mobile.compat is not necessary for webkit-based browsers, hence, it does not degrade performance of mobile browsers.
 
+===========
 Typical Use
 ===========
 

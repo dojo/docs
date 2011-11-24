@@ -5,7 +5,8 @@ dojox.data Google-based Service Stores
 
 `fixme`: shaneosullivan, overview of stores and caveats. examples. All dojox.data.Google*SearchStore stubs land here.
 
-See Also:
-=========
+========
+See Also
+========
 
 * :ref:`dojo.data <dojo/data>`
