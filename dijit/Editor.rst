@@ -245,119 +245,13 @@ This is a list of the default commands (plugins) supported by the editor as buil
 Additional Editor Plugins
 =========================
 
-There are several additional editor plugins provided by dijit and are listed out on the page: :ref:`dijit._editor.plugins <dijit/_editor/plugins>`.  These plugins add very useful functionality above and beyond the basics of editor.  Please note that several of the plugins actually provide multiple capabilities.  To make full use of those plugins, you must register the editor with each capability (short name).  A quick summary of the provided function is below:
+There are several additional editor plugins provided by dijit and are listed on the page: :ref:`dijit._editor.plugins <dijit/_editor/plugins>`.
+These plugins add very useful functionality above and beyond the basics of editor, such as setting text color or printing.
+Please note that several of the plugins actually provide multiple capabilities.
 
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|**Plugin**                                   |**Short Name(s)**|**Description**                                                            |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.ToggleDir             |toggleDir        |A toolbar button for toggling the editor contents between                  |
-|<_editor/plugins/ToggleDir>`_                |                 |Right-To-Left and Left-ToRight                                             |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.TextColor             |foreColor and    |A plugin that provides two actions for altering text color in the          |
-|<_editor/plugins/TextColor>`_                |hiliteColor      |editor, the font color (foreColor) and the background color                |
-|                                             |                 |(hiliteColor).                                                             |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.FontChoice            |fontName,        |A plugin that allows users to edit certain properties of text, such as     |
-|<_editor/plugins/FontChoice>`_               |fontSize, and    |the size, the font name, and the block formatting (<p>, <pre>, etc)        |
-|                                             |formatBlock      |                                                                           |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.LinkDialog            |createLink       |A plugin that provides two actions involving links to external             |
-|<_editor/plugins/LinkDialog>`_               |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and           |
-|                                             |                 |inserting images (<img> tags).  The plugin provides basic, but             |
-|                                             |                 |decent validating Tooltip Dialog editors for working with both types       |
-|                                             |                 |of external links. See also                                                |
-|                                             |                 |:ref:`dojox.editor.plugins.LocalImage <dojox/editor/plugins/LocalImage>`   |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.FullScreen            |fullscreen       |A toolbar button plus hotkey for invoking an                               |
-|<_editor/plugins/FullScreen>`_               |                 |action that will toggle the editor's fullscreen mode, where it             |
-|                                             |                 |takes over the full viewport of the browser window object.  Note that      |
-|                                             |                 |running the editor in an iframe means the editor can only take over        |
-|                                             |                 |the iframe.                                                                |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                               |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.ViewSource            |viewsource       |A toolbar button plus hotkey for invoking an action that toggles the       |
-|<_editor/plugins/ViewSource>`_               |                 |viewport of the editor between Rich-Text and HTML view.                    |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                               |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.Print                 |print            |A toolbar button that allows you to print the contents of the editor       |
-|<_editor/plugins/Print>`_                    |                 |**New to Dojo toolkit 1.4.**                                               |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-|`dijit._editor.plugins.NewPage               |newpage          |A toolbar button that allows you clear the contents of the editor          |
-|<_editor/plugins/NewPage>`_                  |                 |to a default state, such as blank.  **New to Dojo toolkit 1.4.**           |
-+---------------------------------------------+-----------------+---------------------------------------------------------------------------+
-
-Please refer to each plugin's detail page for more information about it.
-
-DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.  These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.  Please refer to the :ref:`landing page <dojox/editor/plugins>` for more information about them.  Below is a quick description of each.
-
-
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|**Plugin**                                       |**Short Name(s)**     |**Description**                                                       |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.PrettyPrint                |prettyprint           |A headless (no button), plugin that improves the formatting of the    |
-|</dojox/editor/plugins/PrettyPrint>`_            |                      |HTML returned from editor.attr("value").                              |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.PageBreak                  |pagebreak             |A toolbar button and hotkey for inserting a 'page break' into the     |
-|</dojox/editor/plugins/PageBreak>`_              |                      |document.  When the document is printed, the printer will break to    |
-|                                                 |                      |output to new pages at those points.                                  |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.ShowBlockNodes             |showblocknodes        |A toolbar button and hotkey for showing the block html elements being |
-|</dojox/editor/plugins/ShowBlockNodes>`_         |                      |used to lay out the editor content.                                   |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.Preview                    |preview               |A toolbar button that allows you to view the content in a new window  |
-|</dojox/editor/plugins/Preview>`_                |                      |You can also have it apply custom stylesheets so that the content is  |
-|                                                 |                      |is styled differently from how it appears in the editor.              |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.Save                       |save                  |A toolbar button that allows you to post back the content of the      |
-|</dojox/editor/plugins/Save>`_                   |                      |editor to a remote service easily.  It is intended for subclassing to |
-|                                                 |                      |customize save behavior.                                              |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.ToolbarLineBreak           ||| or                 |A simple plugin for splitting the toolbar up into multiple lines.     |
-|</dojox/editor/plugins/ToolbarLineBreak>`_       |toolbarlinebreak      |Useful in controlling how the dijit.Editor toolbar wraps.             |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.NormalizeIndentOutdent     |normalizeindentoutdent|A headless plugin that tries to standardize how browsers hander       |
-|</dojox/editor/plugins/NormalizeIndentOutdent>`_ |                      |indent and outdent operations on content. This plugin is experimental.|
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.Breadcrumb                 |breadcrumb            |A plugin that adds a footer toolbar to the editor that allows you to  |
-|</dojox/editor/plugins/Breadcrumb>`_             |                      |see the node position of the cursor.  It also provides selection,     |
-|                                                 |                      |deletion, and cursor move functions.  This plugin is experimental.    |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.FindReplace                |findreplace           |A plugin that provides a find and replace togglable toolbar to the    |
-|</dojox/editor/plugins/FindReplace>`_            |                      |editor.  This plugin is experimental.                                 |
-|                                                 |                      |**New to Dojo toolkit 1.4.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.PasteFromWord              |pastefromword         |A plugin that provides paste window for content from Microsoft Word   |
-|</dojox/editor/plugins/PasteFromWord>`_          |                      |and similar formats and tries to filter out bad classnames, styles,   |
-|                                                 |                      |and so on.                                                            |
-|                                                 |                      |**New to Dojo toolkit 1.5.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.InsertAnchor               |insertanchor          |A simple plugin for inserting anchors (named hash points) in the page |
-|</dojox/editor/plugins/InsertAnchor>`_           |                      |**New to Dojo toolkit 1.5.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.LocalImage                 |LocalImage            |Allows local images to be uploaded and inserted into the document.    |
-|</dojox/editor/plugins/LocalImage>`_             |                      |**New to Dojo toolkit 1.6.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.CollapsibleToolbar         |collapsibletoolbar    |A simple plugin for allowing the collapse of the top button tooolbar  |
-|</dojox/editor/plugins/CollapsibleToolbar>`_     |                      |for more editor space.                                                |
-|                                                 |                      |**New to Dojo toolkit 1.5.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.TextColor                  |foreColor             |A variant of the dijit.editor.plugins.TextColor that uses the         |
-|</dojox/editor/plugins/TextColor>`_              |hiliteColor           |dojox.widget.ColorPicker as the color selector.                       |
-|                                                 |                      |**New to Dojo toolkit 1.5.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-|`dojox.editor.plugins.Blockquote                 |blockquote            |A plugin for marking a section as a quite by wrapping it in a         |
-|</dojox/editor/plugins/Blockquote>`_             |                      |blockquote tag.                                                       |
-|                                                 |                      |**New to Dojo toolkit 1.5.**                                          |
-+-------------------------------------------------+----------------------+----------------------------------------------------------------------+
-
+DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.
+These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.
+Please refer to the :ref:`dojox.editor.plugins <dojox/editor/plugins>` page for more information about them.
 
 =====================
 Auto-expanding editor
