@@ -1,5 +1,6 @@
 .. _dojo/query:
 
+==========
 dojo.query
 ==========
 
@@ -10,8 +11,6 @@ dojo.query
 
 **dojo/query** is the AMD module containing the query function in 1.7.
 
-
-============
 Introduction
 ============
 
@@ -55,7 +54,7 @@ Better and faster: dojo.query
   </script>
 
 
-=====
+
 Usage
 =====
 
@@ -91,7 +90,6 @@ Dojo < 1.7
 The returned object of a **dojo.query()** call is an instance of :ref:`dojo.NodeList <dojo/NodeList>`, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the **dojo.NodeList** class are supported and encouraged.
 
 
-========
 Examples
 ========
 
@@ -239,7 +237,6 @@ Count of checked checkboxes in a form with id myForm
   dojo.query('input:checked', 'myForm').length
 
 
-=======================
 Standard CSS3 Selectors
 =======================
 
@@ -293,7 +290,6 @@ E + F	               an F element immediately preceded by an E element
 E ~ F	               an F element preceded by an E element
 ====================== ==========
 
-=====================
 dojo/query (1.7 only)
 =====================
 
@@ -307,9 +303,9 @@ In Dojo 1.7, a dojo/query module is also available to reference to the query fun
 
 We can also specify alternate selector engines and compliance levels. By default, Dojo base will use the acme selector engine, which supports a large set of CSS3 selectors. However, not all applications need all of these selectors, and most queries can be performed with the native selector engines or with a simpler engine. Dojo 1.7 includes a new lite selector engine for situations where simpler queries are sufficient. The acme selector engine is about 14KB (minified, not gzipped), whereas the lite selector engine is about 2KB, which can be a big advantage for mobile applications. There are several different levels of CSS compliance that can be selected:
 
-====================
+
 Select Engine Levels
-====================
+--------------------
 
 * css2 (or lite) - This will always use the lite engine, which delegates to the native selector engine if available for anything but very simple queries (like id lookups). When a native selector engine is not available (IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: .class, #id, tag, and star, attribute selectors, and child (>), descendant (space), and union (,) combinators. With a native selector engine, the lite engine does not support pseudo classes.
 * css2.1 - This will always use the lite engine when a native selector engine is available. When a native selector engine is not available (IE7 and below), this will load acme.
@@ -318,9 +314,8 @@ Select Engine Levels
 
 When you are not using Dojo base (running async without a dependency on base module "dojo"), the default selector engine level is "css3". Again, if you are using Dojo base, the default is "acme".
 
-=========================
 Specifying Selector Level
-=========================
+-------------------------
 
 There are a couple of ways to set the selector engine. First, we can define the selector engine as part of the dojo configuration for the whole page:
 
@@ -339,9 +334,9 @@ You can also specify the selector engine level you are dependent on for each of 
 
 If Dojo had started with the lite engine, this will ensure that CSS3 support is available, and will load Acme on older browsers. It is recommended that you using this syntax for modules that make more complex queries. If your module is using a simpler query, than using "dojo/query" or "dojo/query!css2.1" should be used.
 
-==========================
+
 Alternate Selector Engines
-==========================
+--------------------------
 
 We can also use other selector engine levels. Both Sizzle and Slick are excellent selector engines that work with dojo/query. AMD/Dojo compatible versions (just wrapped with AMD) are available here:
 https://github.com/kriszyp/sizzle and https://github.com/kriszyp/slick
@@ -359,3 +354,6 @@ or set Slick as the engine for a particular module:
   define(["dojo/query!slick/Source/slick"], function(query){
 	query(".someClass:custom-pseudo").style("color", "red");
   });
+
+.. api-inline :: dojo.query
+

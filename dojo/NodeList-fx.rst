@@ -1,11 +1,8 @@
 .. _dojo/NodeList-fx:
 
+================
 dojo.NodeList-fx
 ================
-
-:Status: Draft
-:Since: 1.2
-
 
 .. contents::
    :depth: 2
@@ -13,7 +10,7 @@ dojo.NodeList-fx
 This module incorporates :ref:`dojo.fx <dojo/fx>` functionality into :ref:`dojo.query <dojo/query>` by extending the :ref:`dojo.NodeList <dojo/NodeList>` Class.
 
 API
----
+===
 
 :anim:
   Animate one or more CSS properties for all nodes in this list. The returned animation object will already be playing when it is returned. See the docs for :ref:`dojo.anim <dojo/anim>` for full details.

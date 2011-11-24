@@ -1,34 +1,35 @@
 .. _quickstart/Animation:
 
+================================
 Animations and Effects with Dojo
 ================================
-
-:Status: Draft
-:Version: 1.0
 
 .. contents::
    :depth: 2
 
-Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental additions through the module system. All Animations in Dojo revolve around a single class: dojo.Animation, which acts as the underlying control mechanism for the flexible FX API Dojo provides.
+Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental 
+additions through the module system. All Animations in Dojo revolve around a single class: dojo.Animation, which acts as 
+the underlying control mechanism for the flexible FX API Dojo provides.
 
-==============================
 Getting to know dojo.Animation
 ==============================
 
-As mentioned, dojo.Animation is the foundation class for all Dojo animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
+As mentioned, dojo.Animation is the foundation class for all Dojo animations. It provides several simple methods good for 
+controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required 
+of all animations is `play`:
 
 
 .. js ::
   
  //Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
-	var animation = fx.fadeOut({ // returns a dojo._Animation
-		// this is an Object containing properties used to define the
-		//animation
-		node:"aStringId"
-	});
-	// call play() on the returned _Animation instance:
-	animation.play();
+    var animation = fx.fadeOut({ // returns a dojo._Animation
+        // this is an Object containing properties used to define the
+        //animation
+        node:"aStringId"
+    });
+    // call play() on the returned _Animation instance:
+    animation.play();
  });
 
 
@@ -41,33 +42,36 @@ As mentioned, dojo.Animation is the foundation class for all Dojo animations. It
     });
     // call play() on the returned _Animation instance:
     animation.play();
-	
+
 You can simplify the above code using chaining, if you don't need to keep the animation object around for later use as follows:
 
 .. js ::
  
- //Dojo 1.7 (AMD)
- require(["dojo/_base/fx"], function(fx) {
-	fx.fadeOut({ node:"someId" }).play();
- });
+    //Dojo 1.7 (AMD)
+    require(["dojo/_base/fx"], function(fx) {
+        fx.fadeOut({ node:"someId" }).play();
+    });
 
 .. js ::
-    	
+    
     //Dojo < 1.7
     dojo.fadeOut({ node:"someId" }).play();
-	
-All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2) use predefined animation properties on the Object parameter to specify the animation settings. The `node:` property is the most important, and points to a node in the DOM on which to apply the animation. `node` can be a String ID of a DOM node, or a direct reference to a DOM node you already have:
+
+All animations in Dojo (with the exception of :ref:`dojo.anim <dojo/anim>`) use predefined animation properties on 
+the Object parameter to specify the animation settings. The `node:` property is the most important, and points to a node 
+in the DOM on which to apply the animation. `node` can be a String ID of a DOM node, or a direct reference to a DOM node 
+you already have:
 
 .. js ::
- 	
- //Dojo 1.7 (AMD)
- require(["dojo/dom","dojo/_base/fx"], function(dom,fx) {
-	var target = dom.byId("someId").parentNode;
-	fx.fadeOut({ node: target }).play();
- });
+
+    //Dojo 1.7 (AMD)
+    require(["dojo/dom","dojo/_base/fx"], function(dom,fx) {
+        var target = dom.byId("someId").parentNode;
+        fx.fadeOut({ node: target }).play();
+    });
 
 .. js ::
-    		
+    
     //Dojo < 1.7
     var target = dojo.byId("someId").parentNode;
     dojo.fadeOut({ node: target }).play();
@@ -139,70 +143,45 @@ Consider this simple fade animation, and all the potential callbacks registered:
 
 .. js ::
   
- //Dojo 1.7 (AMD)
- require(["dojo/_base/fx"], function(fx) {
-    fx.fadeOut({
-    // some node, by id to animate:
-    node:"someId",
+    // Dojo 1.7+ (AMD)
+    require(["dojo/_base/fx"], function(fx) {
+        fx.fadeOut({
 
-    beforeBegin: function(){
-        // executed synchronously before playing
-    },
-    onBegin: function(){
-        // executed asynchronously immediately after starting
-    },
-    onEnd: function(){
-        // executed when the animation is done
-    },
-    onPlay: function(){
-        // executed when the animation is played
-    },
-    onAnimate: function(values){
-        // fired for every step of the animation, passing
-        // a value from a dojo._Line for this animation
-    }
+            // some node, by id to animate:
+            node:"someId",
+            beforeBegin: function(){
+                // executed synchronously before playing
+            },
+            onBegin: function(){
+                // executed asynchronously immediately after starting
+            },
+            onEnd: function(){
+                // executed when the animation is done
+            },
+            onPlay: function(){
+                // executed when the animation is played
+            },        
+            onAnimate: function(values){
+                // fired for every step of the animation, passing
+                // a value from a dojo._Line for this animation
+            }
 
-    }).play();
+        }).play();
   });
 
-.. js ::
-  
-  //Dojo < 1.7
-  dojo.fadeOut({
-	// some node, by id to animate:
-	node:"someId",
-	
-	beforeBegin: function(){
-		// executed synchronously before playing
-	},
-	onBegin: function(){
-		// executed asynchronously immediately after starting
-	},
-	onEnd: function(){
-	 	// executed when the animation is done
-	},
-	onPlay: function(){
-		// executed when the animation is played
-	},
-	onAnimate: function(values){
-		// fired for every step of the animation, passing
-		// a value from a dojo._Line for this animation
-	}
-
-  }).play();
-
-You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the instance and listen for the function calls.
+You can define these callback functions as part of the Object parameter used to define the animation initially (as seen 
+above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the instance and listen for the function calls.
 
 .. js ::
   
- //Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/_base/connect"], function(fx,connect) {
-	var animation = fx.fadeOut({ node:"someNodebyId" });
-	connect.connect(animation, "onEnd", function(){
-	 	// connect externally to this animation instance's onEnd function
-	});
-	animation.play(); // start it up
- });
+    //Dojo 1.7 (AMD)
+    require(["dojo/_base/fx","dojo/_base/connect"], function(fx,connect) {
+        var animation = fx.fadeOut({ node:"someNodebyId" });
+        connect.connect(animation, "onEnd", function(){
+            // connect externally to this animation instance's onEnd function
+        });
+        animation.play(); // start it up
+    });
 
 .. js ::
     	
@@ -213,26 +192,26 @@ You can define these callback functions as part of the Object parameter used to 
     });
     animation.play(); // start it up
 
-**new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animated so that you may more easily manipulate a node immediately before or after an animation:
+The onEnd and beforeBegin events are fired passing a reference to the node being animated so that you may more easily manipulate a node immediately before or after an animation (``1.4+``):
 
 .. js ::
   
- //Dojo 1.7 (AMD)
- require(["dojo/_base/fx"], function(fx) {
-    fx.fadeOut({
-        node:"foo",
-        onEnd: function(n){
-             n.innerHTML = "";
-        },
-        beforeBegin: function(n){
-             n.innerHTML = "Bye!";
-        }
-    }).play();
- });
+    // 1.7+ (AMD)
+    require(["dojo/_base/fx"], function(fx) {
+        fx.fadeOut({
+            node:"foo",
+            onEnd: function(n){
+                n.innerHTML = "";
+            },
+            beforeBegin: function(n){
+                n.innerHTML = "Bye!";
+            }
+        }).play();
+    });
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.4+, > 1.7
     dojo.fadeOut({
         node:"foo",
         onEnd: function(n){
@@ -244,7 +223,7 @@ You can define these callback functions as part of the Object parameter used to 
     }).play();
 
 
-===============
+
 Base Animations
 ===============
 
@@ -292,7 +271,7 @@ Animating CSS Properties
 
 In addition to generic animations, Dojo provides shorthand helper functions for animating CSS properties via the :ref:`animateProperty <dojo/animateProperty>` API. An example where this specialized animation API simplifies specifying animation would be when you need to fade a background color property from red to green to indicate status changes.
 
-=================================
+
 Core Animations: Advanced helpers
 =================================
 
@@ -343,7 +322,6 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`.
 
 
-=================================
 Chaining and Combining Animations
 =================================
 
@@ -523,7 +501,6 @@ combine and chain accept an Array, and will work on a one-element array. This is
 Obviously, any logic for determining if a node should participate in an animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list.
 
 
-================
 Animation Easing
 ================
 
@@ -531,16 +508,23 @@ Have you ever wanted to perform an animated effect such as fade out, fade in, wi
 
 Instead of having to write the easing function yourself, dojo provides a collection of standard easing functions to use as this parameter to get a variety of effects.  See :ref:`Easing functions <dojo/fx/easing>` for more information on the easing function provided out of the box.
 
-============
+
 Text Effects
 ============
 
 As mentioned above, the dojox/fx module provides additional effects over and beyond these basic animation capabilities.  On of the effects in the dojox package that is especially neat is effects that can operate on text directly, which can allow you to easily do animations such as exploding all the characters in a paragraph all over your page.  Make sure to check out these additional text effects once you understand the basics.
 
-=============================
-Animation in Dojo 1.5 widgets
-=============================
+
+Animation in Dijit Widget 1.5+
+==============================
 
 Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3.
 
 See details on application of animation in specific Digits in :ref:`Themes and theming <dijit/themes>`.
+
+See Also:
+=========
+
+* :ref:`dojo.fx <dojo/fx>`_
+* :ref:`dojox.fx <dojox/fx>`_
+* :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`_
