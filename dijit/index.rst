@@ -145,6 +145,11 @@ Form Handling
 
       Allows the selection of multiple items (similar to ``<select multiple>``)
 
+    * :ref:`dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`
+
+      Base class for widgets like :ref:`dijit.form.Select <dijit/form/Select>`
+
+
   * Buttons
 
     * :ref:`dijit.form.Button <dijit/form/Button>`
@@ -163,15 +168,7 @@ Form Handling
 
       A cross between a Button and a Checkbox widget
 
-  * Other Form Widgets
-
-    * :ref:`dijit.form.CheckBox <dijit/form/CheckBox>`
-
-      Nearly the same as an HTML checkbox, but with fancy styling
-
-    * :ref:`dijit.form.Form <dijit/form/Form>`
-
-      Corresponds to a <form> itself; wraps other widgets
+  * Slider
 
     * :ref:`dijit.form.HorizontalRule <dijit/form/HorizontalRule>`
 
@@ -184,10 +181,6 @@ Form Handling
     * :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`
 
       A scale with a handle you can drag left or right to select a value.
-
-    * :ref:`dijit.form.RadioButton <dijit/form/RadioButton>`
-
-      To select one choice from a list
 
     * :ref:`dijit.form.Slider <dijit/form/Slider>`
 
@@ -204,6 +197,31 @@ Form Handling
     * :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>`
 
       A vertical scale with a handle you can drag up or down to select a value.
+
+  * Other form widgets
+
+    * :ref:`dijit.form.CheckBox <dijit/form/CheckBox>`
+
+      Nearly the same as an HTML checkbox, but with fancy styling
+
+    * :ref:`dijit.form.Form <dijit/form/Form>`
+
+      Corresponds to a <form> itself; wraps other widgets
+
+    * :ref:`dijit.form.RadioButton <dijit/form/RadioButton>`
+
+      To select one choice from a list
+
+  * Base classes and mixins
+
+    * :ref:`dijit.form._FormWidget <dijit/form/_FormWidget>`
+
+      Base class for all form widgets
+
+    * :ref:`dijit.form._FormValueWidget <dijit/form/_FormValueWidget>`
+
+      Base class for form widgets with a value
+
 
 ======
 Layout

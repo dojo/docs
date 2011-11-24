@@ -1,7 +1,7 @@
-.. _quickstart/writingWidgets/popups:
+.. _dijit/popup:
 
-Dropdowns and Pop-ups
-=====================
+dijit.popup
+===========
 
 :Version: 1.7
 :Project owner: Bill Keese

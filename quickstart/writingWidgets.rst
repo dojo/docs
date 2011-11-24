@@ -608,4 +608,4 @@ See also
 * :ref:`Declaring a widget in markup <dijit/Declaration>`
 * Widgets in templates are discussed on the :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` page
 * :ref:`Example: File Upload Dialog Box <quickstart/writingWidgets/example>`
-* :ref:`Dropdowns and Popups <quickstart/writingWidgets/popups>`
+* :ref:`Dropdowns and Popups <dijit/popup>`

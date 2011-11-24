@@ -15,7 +15,7 @@ dijit/_HasDropDown
 Introduction
 ============
 
-dijit/_HasDropDown is a dijit Widget mixin that provides drop-down menu functionality. Widgets like :ref:`dijit/form/Select <dijit/form/Select>`, :ref:`dijit/form/ComboBoxMixin <dijit/form/ComboBoxMixin>`, :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/form/_DateTimeTextBox <dijit/form/_DateTimeTextBox>` all use dijit/_HasDropDown to implement their drop-down functionality.
+dijit/_HasDropDown is a dijit Widget mixin that provides drop-down menu functionality. Widgets like :ref:`dijit/form/Select <dijit/form/Select>`, :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`, :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/form/DateTextBox <dijit/form/DateTextBox>` all use dijit/_HasDropDown to implement their drop-down functionality.
 
 =====
 Usage
@@ -42,7 +42,7 @@ Then, either set the value of :ref:``HasDropDown.dropDown`` to an existing widge
       }, "myDropDownWidget");
   });
 
-Or, override the :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see :ref:`Dynamic \& lazy-loading drop-downs`, below).
+Or, override the :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see `Dynamic & lazy-loading drop-downs`_, below).
 
 ========================
 Optional node properties
@@ -70,6 +70,10 @@ _aroundNode
 -----------
 
 When the drop-down is opened, it is positioned based on the location of ``domNode``. Attaching an element to :ref:``aroundNode`` will cause the drop-down to be positioned relative to that element instead.
+
+
+
+.. _HasDropDown.lazyload:
 
 =================================
 Dynamic & lazy-loading drop-downs
