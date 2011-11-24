@@ -301,7 +301,7 @@ scopeMap would look like this:
 Notice that a build is required to make this all work, and scopeMap is a configuration variable set up by the build
 application.
 
-As we said in :ref:`Relocating Module Namespaces`, this complexity is not needed when loading multiple instances of AMD packages. If fact, the new
+As we said in `Relocating Module Namespaces`_, this complexity is not needed when loading multiple instances of AMD packages. If fact, the new
 loader can relocate trees of modules by simply setting a configuration variable, and the trees can be built, unbuilt, or
 mixed. This feature solves many interoperability problems when mixing and matching several libraries. No other loader
 can do this and we're quite proud of this feature.
@@ -324,7 +324,7 @@ The v1.7+ loader has two basic modes of operation:
 
 * asynchronous: modules are loaded asynchronously as per the AMD specification. The loader is put in the asynchronous
   mode by setting the configuration variable async to truthy but not "sync" or "legacyAsync". This mode was described
-  in :ref:`The AMD API`.
+  in :ref:`The AMD API <loader/amd#the-amd-api>`.
 
 * legacy: modules are loaded synchronously just like the v1.6- loader. The loader is put in legacy mode by setting the
   configuration variable async to "sync" or "legacyAsync" or falsy; falsy has the same effect as "sync".

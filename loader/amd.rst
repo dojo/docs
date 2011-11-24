@@ -88,7 +88,7 @@ Configuration
 
 There are three ways to pass configuration data to the loader:
 
-  1. Before the loader is defined, via the global ``dojoConfig`` object (See also :ref:`dojo/config`)
+  1. Before the loader is defined, via the global ``dojoConfig`` object (See also :ref:`dojo/config <dojo/config>`)
 
   2. On the ``<script>`` element for the loader, via the ``data-dojo-config`` attribute
 
@@ -197,7 +197,7 @@ There are two features Dojo's implementation of has.js has that the standard has
   * the function ``has.add`` includes an optional fourth parameter, ``force``, that can be used to overwrite an existing
     test. (Normally, the first defined value is always used, like a constant.)
 
-The Dojo loader initializes the has cache with several tests (see :ref:`Default Configuration` for a list of these
+The Dojo loader initializes the has cache with several tests (see `Default Configuration`_ for a list of these
 tests). ``dojoConfig`` and ``data-dojo-config`` can override any of these, and any configuration object can add more
 tests by specifying a ``has`` configuration property. For example:
 
@@ -293,7 +293,7 @@ is ``factory``. Regardless of whether or not ``factory`` is a function, dependen
 the module is defined.
 
 If only the ``factory`` parameter is given and it is a function, special semantics are implied; these are covered in
-:ref:`CommonJS require, exports, and module`.
+`CommonJS require, exports, and module`_.
 
 **moduleId should not be provided.** This parameter is largely a historical artifact of early AMD loaders. So long as
 there is **exactly** one module defined by any particular resource, the loader will automatically derive the correct
@@ -302,7 +302,7 @@ module identifier from the one given in the dependency list that caused it to be
 "mathLib/arithmetic".
 
 It is also possible to load a script as a dependency with no ``define`` calls at all, in which case the resolved value
-will be ``undefined``. See :ref:`Generic Script Injection` for more information.
+will be ``undefined``. See `Generic Script Injection`_ for more information.
 
 ``define`` has two additional important characteristics that may not be immediately obvious:
 
@@ -351,7 +351,7 @@ Module identifiers look like file system paths (for example, "dijit/form/Button"
 absolute URLs (in browsers) or file paths (in server-side environments) in order to find and load the source code that
 defines the module.
 
-The following :ref:`Configuration` variables control how module identifiers are mapped to URLs:
+The following `Configuration`_ variables control how module identifiers are mapped to URLs:
 
   * ``baseUrl``: (string) a path to prepend to a computed path if the computed path is relative as described by the
     process below. If defined, the has feature ``config-tlmSiblingOfDojo`` is false; otherwise, it is true.
@@ -360,7 +360,7 @@ The following :ref:`Configuration` variables control how module identifiers are 
     starting from the beginning of a module identifier. *When matching paths, the most specific match wins.* For
     example, "a/b/c" is more specific than "a" or "a/b".
 
-  * ``aliases``: (object) a map from a module identifier to another module identifier.  See :ref:`Alias Modules` for more
+  * ``aliases``: (object) a map from a module identifier to another module identifier.  See `Alias Modules`_ for more
     information.
 
   * the has feature ``config-tlmSiblingOfDojo``: if truthy, then non-package top-level modules not mentioned in
@@ -377,7 +377,7 @@ The following :ref:`Configuration` variables control how module identifiers are 
       package name is given; defaults to "main". (e.g. "dojo" => "dojo/main")
 
     * ``packageMap``: (optional; object) a map that allows package names to be aliased to other locations for this
-      particular package only. See :ref:`Relocating Module Namespaces` for more information. (Note: this feature is
+      particular package only. See `Relocating Module Namespaces`_ for more information. (Note: this feature is
       currently exclusive to the Dojo loader.)
 
 Relative Module Identifiers
@@ -417,7 +417,7 @@ cannot be used to ascend to the top level in the module identifier.  So in the a
 
 It is highly recommended that relative module IDs be used by all packages to refer to their own modules, since otherwise
 it is impossible to load two different packages with the same name (or two different versions of the same package). This
-is explored further in :ref:`Relocating Module Namespaces`.
+is explored further in `Relocating Module Namespaces`_.
 
 Context-sensitive require
 -------------------------
@@ -480,7 +480,7 @@ Alias Modules
 =============
 
 It is possible to create an alias from one module to another. An example of when module aliasing might be needed is the
-common ``text`` plugin, which loads a text resource through the plugin API (see :ref:`Plugins`). RequireJS defined this
+common ``text`` plugin, which loads a text resource through the plugin API (see `Plugins`_). RequireJS defined this
 module early on, and several libraries depend on the module as defined by RequireJS. Dojo's implementation, while 100%
 compatible with RequireJS's implementation, is smaller and contains more features. It is possible to simply alias Dojo's
 text module like this:
@@ -505,7 +505,7 @@ being returned:
   define(["dojo/text"], function(text){ //...
 
 There is one particular scenario where using aliases is the optimal solution.  Two different absolute module identifiers
-as calculated after Step 6 of the :ref:`Normalizing Module Identifiers` process will always result in two different modules
+as calculated after Step 6 of the `Normalizing Module Identifiers`_ process will always result in two different modules
 being instantiated - even if they normalize to the same path. This means you can't solve this problem using
 ``paths``. For example, assuming ``baseUrl`` points to the dojo directory, you **can't** alias "text" to "dojo/text"
 like this:
@@ -892,10 +892,10 @@ point to the resource ``http://acmeCopy.com/myApp/widgets/button.js``. In such a
 ``require.toUrl("myApp/widgets/templates/button.html")`` would return
 ``http://acmeCopy.com/myApp/widgets/templates/button.html``.
 
-This also works with relative IDs when ``require`` is a :ref:`context-sensitive require`.
+This also works with relative IDs when ``require`` is a `context-sensitive require`_.
 
 ``require.toAbsMid`` converts the given module ID to an absolute module ID. This function is only useful when used in
-conjunction with a :ref:`context-sensitive require`.
+conjunction with a `context-sensitive require`_.
 
 .. js ::
 
@@ -927,7 +927,7 @@ CommonJS require, exports, and module
 
 The AMD specification defines three special module identifiers: ``require``, ``exports``, and ``module``.
 
-The ``require`` module works as described in :ref:`Context-sensitive require`.
+The ``require`` module works as described in `Context-sensitive require`_.
 
 The ``module`` module returns an object that contains the following properties:
 
@@ -1105,7 +1105,7 @@ configuration changes like this:
   });
 
 Notice that the "config" event provides both a ``config`` and a ``rawConfig`` argument; this is described in more detail
-in the :ref:`Configuration` section.
+in the `Configuration`_ section.
 
 ``require.on`` returns an opaque ``handle`` object that can be used to stop listening by calling ``handle.remove()``.
 
@@ -1240,7 +1240,7 @@ When ``require.trace(groupId, args)`` is called, the following process takes pla
 
 2. If ``trace.group[groupId]`` is falsy, then do nothing and return.
 
-3. Signal the trace event via :ref:`the micro event API` with the argument ``[groupId, args]``.
+3. Signal the trace event via `the micro event API`_ with the argument ``[groupId, args]``.
 
 4. Concatenate ``groupId`` and the string value of each item in args into a comma-separated list and apply ``require.log`` to the resulting string.
 
@@ -1385,7 +1385,7 @@ baseUrl (string)
   The base URL prepended to a module identifier when converting it to a path or URL. Defaults to the path to dojo.js in browser environments, and the current working directory in non-browser environments.
 
 packages (array of package configuration objects)
-  Defined in :ref:`Module Identifiers`. Default is shown in the :ref:`Default Configuration` section. Note: other properties provided by a package object will be copied (via the Javascript = operator) to the package configuration variable maintained by the loader at ``require.packs[<name>]``. Client applications may specify and use such additional properties as required.
+  Defined in `Module Identifiers`_. Default is shown in the `Default Configuration`_ section. Note: other properties provided by a package object will be copied (via the Javascript = operator) to the package configuration variable maintained by the loader at ``require.packs[<name>]``. Client applications may specify and use such additional properties as required.
 
 packagePaths (object)
   This is a shorthand notation that can be used to specify package configuration for several packages that have the same root location. A particular package's location configuration variable is computed by concatenating the map key at which the particular package configuration object resides and the package name. The package configuration object may be specified as a string, thereby indicating the package name and default values for main and packageMap. For example:
@@ -1415,10 +1415,10 @@ Is equivalent to:
   }]
 
 aliases (array of pairs (arrays of 2 elements))
-  Defined in :ref:`Module Identifiers`. The first element may either be a regular expression, indicating a set of module identifiers to alias, or a string, indicating a single module identifier to alias. The second element in the pair is always a string, giving the target, absolute module identifier.
+  Defined in `Module Identifiers`_. The first element may either be a regular expression, indicating a set of module identifiers to alias, or a string, indicating a single module identifier to alias. The second element in the pair is always a string, giving the target, absolute module identifier.
 
 hasCache: (map:has feature name --> (any, typically boolean or function) has feature test or value)
-  Provides a set of has feature values. Default is shown in the :ref:`Default Configuration` section.
+  Provides a set of has feature values. Default is shown in the `Default Configuration`_ section.
 
 waitSeconds (number)
   Indicates the number of seconds the loader will wait for all requested modules to arrive before signaling a timeout error. The timer is restarted after any module is requested. Defaults to 0 (wait forever).

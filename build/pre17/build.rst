@@ -10,7 +10,8 @@ Dojo Build System (Pre 1.7)
 .. contents::
    :depth: 3
 
-**Caution** This document refers to the build system available prior to version 1.7. See :ref:`The Dojo Build System <build>` for a documentation
+**Caution** This document refers to the build system available prior to version 1.7.
+See :ref:`The Dojo Build System <build/buildSystem.rst>` for a documentation
 on the current build system.
 
 The Dojo build system creates efficient versions of Dojo and application modules for deployment.
