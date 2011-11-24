@@ -262,7 +262,7 @@ or
 Known Issues
 ============
 
-* There are known compatibility issues when Indirect Selection is used together with :ref:`Selector <Selector>` plugin
+* There are known compatibility issues when Indirect Selection is used together with :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
 ========
