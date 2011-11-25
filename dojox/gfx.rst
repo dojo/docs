@@ -329,7 +329,7 @@ The following properties of Font are recognized:
 | weight         | "normal","bold","bolder","lighter",     |Same as the CSS font-weight property.   Default: "normal"                      | 1.0       |
 |                | 100,200,300,400,500,600,700,800,900     |                                                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| size           | css font size value                     |Same as the CSS font-size property.   Default: "10pt"                          | 1.0       |
+| size           | css font size value                     |A numeric CSS length constant with a unit abbreviation. Default: "10pt"        | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | family         | css font family value                   |Same as the CSS font-family property.   Default: "serif"                       | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
