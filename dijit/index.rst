@@ -1,17 +1,18 @@
 .. _dijit/index:
 
+==============
 Dijit Overview
 ==============
 
 .. contents::
    :depth: 2
 
-Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit are described in the following sections, though the aforementioned :ref:`quickstart <quickstart/index>` guides cover some basics.
+Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets 
+and functionality provided by Dijit are described in the following sections, though the aforementioned :ref:`quickstart <quickstart/index>` 
+guides cover some basics.
 
 * :ref:`About Dijit <dijit/info>`
 
-
-=========
 Utilities
 =========
 
@@ -24,13 +25,14 @@ Utility methods and classes used by widgets or by applications with widgets.
 * :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
 * :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
 
-=======
+
 Widgets
 =======
 
 * :ref:`dijit._Templated <dijit/_Templated>`
 
-  This is deprecated as of **1.7+**, :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` should be used instead and if necessary :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
+  This is deprecated as of **1.7+**, :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` should be used instead and if 
+  necessary :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
 
 * :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`
 * :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
@@ -51,7 +53,8 @@ Widgets
 * :ref:`dijit.Calendar <dijit/Calendar>`
 * :ref:`dijit.CalendarLite <dijit/CalendarLite>`
 
-  **1.7+** A lighter version of :ref:`dijit.Calendar <dijit/Calendar>`, more geared for mobile devices (e.g. does not have keyboard navigation)
+  **1.7+** A lighter version of :ref:`dijit.Calendar <dijit/Calendar>`, more geared for mobile devices (e.g. does not 
+  have keyboard navigation)
 
 * :ref:`dijit.ColorPalette <dijit/ColorPalette>`
 * :ref:`dijit.Declaration <dijit/Declaration>`
@@ -72,7 +75,6 @@ Widgets
   * :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
 
 
-=============
 Form Handling
 =============
 
@@ -220,7 +222,6 @@ Form Handling
       Base class for form widgets with a value
 
 
-======
 Layout
 ======
 
@@ -234,7 +235,7 @@ Layout
   * :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`
   * :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`
 
-=====================================
+
 Note about programmatic instantiation
 =====================================
 

@@ -1,11 +1,18 @@
 .. _dijit/getEnclosingWidget:
 
+========================
 dijit.getEnclosingWidget
 ========================
 
-``FIXME:`` just inline the api reference info here
+.. contents ::
+    :depth: 2
+    
+.. api-inline :: dijit.getEnclosingWidget
 
-Obtain a widget reference by determining the immediate-most parent Widget from some passed Node:
+Example
+=======
+
+Obtain a widget reference by determining the immediate-most parent Widget from some passed Node. It will walk up the DOM tree testing for a widget using :ref:`dijit.byNode <dijit/byNode>` until an appropriate widget is found:
 
 .. js ::
 
@@ -16,3 +23,4 @@ Obtain a widget reference by determining the immediate-most parent Widget from s
            aWidget.set("value", "clicked!!!");
        }
   });
+

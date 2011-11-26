@@ -57,6 +57,8 @@ like :ref:`CSS-based queries <dojo/query>`, :ref:`event handling <quickstart/eve
 
     <div id="showMe" style="padding: 10px;">click here to see how it works</div>
 
+Checkout the :ref:`full contents <dojo/index>` of the Dojo modules.
+
 Dojo Core
 =========
 
@@ -99,11 +101,14 @@ Additional stable (but optional) components for :ref:`advanced animations <dojo/
 Dijit
 =====
 
-Dijit is Dojo's theme-able, accessible, easy-to-customize UI Library. There are many widgets to choose from, so be 
-sure to check out the :ref:`quickstart <quickstart/index>` guide which covers the basics. Dijit requires ``dojo.js`` 
-and other `Dojo Core`_ modules.
+Dijit is Dojo's theme-able, accessible (i18n, l10n), easy-to-customize UI Library. Dijit requires `Dojo Base`_ and various `Dojo Core`_ modules to use. 
 
-* :ref:`Dijit Reference <dijit/index>`
+* :ref:`Quickstart Guides <quickstart/index>`
+* :ref:`Dijit Reference <dijit/info>`
+* :ref:`Overview of Components <dijit/index>`
+
+    * :ref:`Layouts <dijit/layout>`
+    * :ref:`Form Components <dijit/form>`
 
 DojoX
 =====

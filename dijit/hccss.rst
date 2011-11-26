@@ -1,23 +1,19 @@
 .. _dijit/hccss:
 
+===========
 dijit.hccss
-============
+===========
 
-:Status: Draft
-:Version: 1.0
-:Available: since V1.7
+:since: v1.7
 
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
 By doing a require() of "dijit/hccss", the "dijit_a11y" CSS class will be added to your document's <body> tag if the machine is in high contrast mode, and thus the browser doesn't display background images.    This is useful for Internet Explorer and Firefox running on Windows.   It doesn't apply to Chrome or Safari (on mobile, mac, or desktop), which always display background images.
 
-
-=====
 Usage
 =====
 
@@ -41,7 +37,6 @@ And then reference the class name from CSS rules, etc:
        display: block;
    }
 
-==============
 Execution Time
 ==============
 

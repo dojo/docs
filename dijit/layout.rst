@@ -15,7 +15,7 @@ An example first
 ================
 
 Before we dive into the depths of making layouts with the Dojo Toolkit lets look at an example.
-Once you have read through this page you should be able to create such an layout yourself and even start experimenting with the Dijit layout components
+Once you have read through this page you should be able to create such a layout yourself and even start experimenting with the Dijit layout components
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -371,7 +371,7 @@ Note that:
 Remove Children
 ---------------
 
-Removing children is done w/the pointer to the child widget:
+Removing children is done with the pointer to the child widget:
 
 .. js ::
   
@@ -399,7 +399,7 @@ The resize function for widgets layout widgets serves two purposes:
 
 * set the size of the widget
 * make the widget adjust the size of it's children
-* children resize recursively
+* resize children recursively
 
 Usually you pass a size to the resize method, like:
 

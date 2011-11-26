@@ -1,5 +1,6 @@
 .. _dijit/byId:
 
+==========
 dijit.byId
 ==========
 
@@ -11,14 +12,13 @@ dijit.byId
 
 dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.
 
-
-============
 Introduction
 ============
 
 dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the the JavaScript object instance of your widget and access functions of that widget.
 
-=====
+.. api-inline :: dijit.byId
+
 Usage
 =====
 
@@ -30,7 +30,6 @@ Usage of this function is trivial.  Simply call it with a string of the id for t
    var myWidget = dijit.byId("myWidget");
  </script>
 
-========
 Examples
 ========
 
@@ -134,8 +133,6 @@ Example 3: Comparing dojo.byId and dijit.byId
     <div id="textNode3" style="background-color: lightgray"></div>
 
 
-
-==========================================
 data-dojo-id, dijit.byId() and dojo.byId()
 ==========================================
 
@@ -193,8 +190,6 @@ HTML attribute data-dojo-id saves you one more step in working with widgets by a
 
 Attribute data-dojo-id is not required, it is there as a convenience.
 
-
-========
 See also
 ========
 

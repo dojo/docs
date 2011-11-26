@@ -8,7 +8,7 @@ Dijit Introduction
 .. contents::
     :depth: 2
 
-*Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML).
+*Dijit* is a widget system layered on top of Dojo. If you are new to the whole :ref:`Dojo experience <dojo/index>`, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML and CSS).
 
 ============
 Dijit Basics
@@ -37,7 +37,7 @@ is identical to:
   </script>
   <div data-dojo-type="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
 
-The declarative method requires you include the :ref:`dojo.parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
+The declarative method requires you include the :ref:`dojo.parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (aka: Dijits) to be created.
 
 **note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit.registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
@@ -47,7 +47,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
      dojo.ready(function(){
          // dojo.byId("foobar") would only be a normal domNode.
          var myDialog = dijit.byId("foobar");
-        myDialog.set("content", "<p>I've been replaced!</p>");
+         myDialog.set("content", "<p>I've been replaced!</p>");
          myDialog.show();
      });
   </script>
@@ -192,7 +192,9 @@ Event handlers can be setup programmatically (as above), or declaratively, like:
 Themes
 ======
 
-Dijit comes bundled with four themes: Claro (new in Dojo 1.5), Tundra, Soria, and Nihilo. Themes are collections of images (icons and background images) and CSS, and brings a common visual style and color scheme to all the widgets. You can override the theme by container or by widget element to add nuance and flair.
+Dijit comes bundled with four themes: Claro (Dojo 1.5+), Tundra, Soria, and Nihilo (all 1.0+). Themes are collections
+of images (icons and background images) and CSS, and brings a common visual style and color scheme to all the widgets. 
+You can override the theme by container or by widget element to add nuance and flair.
 
 To learn more about themes, see :ref:`Dijit Themes and Theming <dijit/themes>`.
 
@@ -201,15 +203,23 @@ To learn more about themes, see :ref:`Dijit Themes and Theming <dijit/themes>`.
 Dijit i18n/a11y
 ===============
 
-Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users are treated equally.
+Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures 
+as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of 
+things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes 
+no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable 
+in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users 
+are treated equally.
 
 ================
 Locating Widgets
 ================
 
-There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of its member properties) through that widget. There are three "main" ways to access a widget:
+There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: 
+collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any 
+of its member properties) through that widget. There are three "main" ways to access a widget:
 
-The simplest way to access a widget is :ref:`dijit.byId <dijit/byId>`. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the :ref:`dijit.registry <dijit/registry>`.
+The simplest way to access a widget is :ref:`dijit.byId <dijit/byId>`. When the widget is created, if the Node used to 
+create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the :ref:`dijit.registry <dijit/registry>`.
 
 With the following markup:
 
