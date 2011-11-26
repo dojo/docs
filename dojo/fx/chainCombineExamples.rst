@@ -1,9 +1,9 @@
 .. _dojo/fx/chainCombineExamples:
 
-Semi-Complex chain and combine examples
-=======================================
+========================================
+dojo.fx.chain / dojo.fx.combine Examples
+========================================
 
-:Status: Draft
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 
@@ -13,7 +13,6 @@ Semi-Complex chain and combine examples
 
 This page is a landing point for demonstrating complex animations of DOM nodes built on uses of the chain and combine functions to perform complex animations with a single call to *'play()*.
 
-========
 Examples
 ========
 
@@ -100,7 +99,6 @@ Example 1:  Demonstration of combining three chained animations
     <button data-dojo-type="dijit.form.Button" id="endButton">End the complex loop!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/html:
 
+=========
 dojo.html
 =========
 
@@ -16,14 +17,12 @@ As of version 1.2, **dojo.html** is home to a single public helper method: **doj
 
 As of version 1.3, :ref:`dojo.place() <dojo/place>` accepts HTML strings for inserting HTML, and may be a better choice for simple HTML insertion. Unless you need to use the params capabilities of **dojo.html.set**, you should use dojo.place(cont, node, "only"). dojo.place() has more robust support for injecting an HTML string into the DOM, but it only handles inserting an HTML string as DOM elements, or inserting a DOM node. dojo.place does not handle NodeList insertions or the other capabilities as defined by the params argument for dojo.html.set().
 
-=====
 Usage
 =====
 
 You can think of dojo.html.set() like the good old :ref:`ContentPane <dijit/layout/ContentPane>`, but outside of a "Pane".
 
 
-========
 Examples
 ========
 
@@ -160,7 +159,6 @@ What else comes out of the box? set takes the following optional params to confi
     This event is called if an error is caught while inserting the new content. A typical example might be if you attempt to inject a ``div`` into a ``tr`` or similar.
 
 
-==========
 Background
 ==========
 
@@ -168,7 +166,6 @@ If all of this seems a little familiar to you, its because this functionality pr
 
 .. api-inline :: dojo.html.set
 
-========
 See also
 ========
 

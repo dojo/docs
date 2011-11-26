@@ -1,5 +1,6 @@
 .. _dojo/isObject:
 
+=============
 dojo.isObject
 =============
 
@@ -16,7 +17,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 
 .. api-inline :: dojo.isObject
 
-=====
 Usage
 =====
 
@@ -49,7 +49,6 @@ Returns true if it is a JavaScript object (or an Array, a Function or null).
   }
 
 
-========
 Examples
 ========
 
@@ -165,7 +164,6 @@ Test against isObject()
     </div>
 
 
-========
 See also
 ========
 

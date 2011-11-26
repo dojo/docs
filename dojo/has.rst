@@ -1,7 +1,8 @@
 .. _dojo/has:
 
-has
-==========
+========
+dojo/has
+========
 
 :Authors: Chris Mitchell, Pete Higgins
 :Project owner: Kris Zyp
@@ -10,7 +11,6 @@ has
 .. contents::
   :depth: 2
 
-========
 About
 ========
 
@@ -27,7 +27,6 @@ Ternary has() conditional expressions can also be used during module loading for
 
 The basic tests within dojo/has module can be augmented with additional tests by any other module.  One frequently used module that extends dojo/has with additional tests is :ref:`quickstart/browser-sniffing`
 
-========
 Usage
 ========
 
@@ -67,7 +66,6 @@ Running `has()` is a one-time cost, deferred until needed. After first run, subs
 
 There are also groups working on server-side has() optimizations, to precompute the cache of tests to reduce startup times.
 
---------------------
 Testing Registration
 --------------------
 
@@ -101,7 +99,7 @@ This is preferred over what would seem a much more effective version:
     
 By forcing a function wrapper around the test logic we are able to defer execution until needed, as well as provide a normalized way for each test to have its own execution context. This way, we can remove some or all the tests we do not need in whatever upstream library should adopt _has_.
 
-======================
+
 Dojo 1.7 Feature Names
 ======================
 
@@ -172,7 +170,6 @@ Note: The above list was generated automatically with the following script in th
   grep -r --include=*.js "has.add(\"" * | awk -F"[ \t\":,]+" '{ print " ",$1,",", $3}'
 
 
-========
 See Also
 ========
 

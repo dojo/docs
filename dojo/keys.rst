@@ -1,12 +1,16 @@
 .. _dojo/keys:
 
-Key Constants
-=============
+===================
+dojo/keys Constants
+===================
+
+.. contents ::
+    :depth: 2
 
 Dojo provides normalized constants for all the available keys you can press, which is passed in an Event Object when using :ref:`dojo.connect <quickstart/events>`.
 
 Available Keys
---------------
+==============
 
 Dojo provides the following keycode constants in the namespace ``dojo.keys``. These are provided in Base Dojo (``dojo.js``):
 
@@ -72,7 +76,7 @@ Dojo provides the following keycode constants in the namespace ``dojo.keys``. Th
 * copyKey - this is a "virtual key" that is either CTRL on Windows, or the meta key (a.k.a. apple key) on Macintoshes, since cut and paste on Windows is performed using CTRL (CTRL-X, CTRL-C, and CTRL-P) whereas it's performed using META (META-X, META-C, and META-P)
 
 Key Event Modifiers
--------------------
+===================
 Any keyboard event will have the following boolean attributes:
 
 * ctrlKey

@@ -1,5 +1,6 @@
 .. _dojo/date/locale/regexp:
 
+=======================
 dojo.date.locale.regexp
 =======================
 
@@ -8,7 +9,6 @@ dojo.date.locale.regexp
 
 .. api-inline :: dojo.date.locale.regexp 
 
-========
 See also
 ========
 
