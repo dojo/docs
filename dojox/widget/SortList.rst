@@ -1,54 +1,56 @@
 .. _dojox/widget/SortList:
 
+=====================
 dojox.widget.SortList
 =====================
 
 .. contents::
     :depth: 2
 
-TODO: description
+Converts an unordered-list into a sortable scrollable pane. 
 
-========
+.. api-inline :: dojox.widget.SortList
+
 Examples
 ========
 
-Example 1:  Raw, degradable UL list
--------------------------------------------------------
+Raw, degradable UL list
+-----------------------
   
 .. code-example ::
   :type: inline
   :height: 300
   :width: 660
 
-	Raw, degradable UL list
+  Raw, degradable UL list
 
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dojox.widget.SortList");
+        dojo.require("dojox.widget.SortList");
     </script>
 
   The markup has to look as follows
   
   .. html ::
     
-	<ul data-dojo-type="dojox.widget.SortList" title="SortList From Markup" data-dojo-props="sortable:false" style="width:200px; height:200px;">
-		<li>one</li>
-		<li>two</li>
-		<li>three</li>
-		<li>four</li>
-		<li>five</li>
-		<li>six</li>
-		<li>four</li>
-		<li>five</li>
-		<li>six</li>
-		<li>four</li>
-		<li>five</li>
-		<li>six</li>
-		<li>four</li>
-		<li>five</li>
-		<li>six</li>
-	</ul>
+    <ul data-dojo-type="dojox.widget.SortList" title="SortList From Markup" data-dojo-props="sortable:false" style="width:200px; height:200px;">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
 
   
   A simple set of css rules 
@@ -58,8 +60,8 @@ Example 1:  Raw, degradable UL list
     <link rel="stylesheet" type="text/css" href="{{ baseUrl }}dojox/widget/SortList/SortList.css">
 
 
-Example 2:  SortList using a Store
--------------------------------------------------------
+SortList using a Store
+----------------------
 .. code-example ::
   :type: inline
   :height: 300
@@ -70,8 +72,8 @@ Example 2:  SortList using a Store
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dojox.widget.SortList");
+        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dojox.widget.SortList");
     </script>
 
   The markup has to look as follows
@@ -96,8 +98,7 @@ TODO: programmatic examples
 
 TODO: demos
 
-========
 See Also
 ========
 
-* `dojox.widget.SortList Test <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_SortList.html>`_
+* `dojox.widget.SortList Nightly Test <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_SortList.html>`_

@@ -1,18 +1,21 @@
 .. _dojox/widget/TitleGroup:
 
+=======================
 dojox.widget.TitleGroup
 =======================
 
 :since: 1.6.0
-:author: dante
+
+.. contents ::
+    :depth: 2
 
 A container widget which delegates a connection between children :ref:`TitlePanes <dijit/TitlePane>`. Behaves similarly to an :ref:`AccordionContainer <dijit/layout/AccordionContainer>` though has a variable overall height and does not "dock" to other layout widgets, such as a :ref:`BorderContainer <dijit/layout/BorderContainer>`.
 
-========
 Examples
 ========
 
 A simple declarative example:
+-----------------------------
 
 .. code-example::
 
@@ -42,7 +45,7 @@ A simple declarative example:
     <h2>Content after</h2>
 
 Adding and removing children:
-
+-----------------------------
 
 .. code-example::
 
@@ -89,7 +92,6 @@ Adding and removing children:
     <h2>Content after</h2>
     <div id="graveyard"></div>
 
-========
 See Also
 ========
 

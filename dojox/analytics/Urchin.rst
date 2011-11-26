@@ -1,15 +1,21 @@
 .. _dojox/analytics/Urchin:
 
+======================
 dojox.analytics.Urchin
 ======================
 
 :Author: Peter Higgins
-:Since: 1.2.0
+:Available: 1.2+
 
 .. contents::
    :depth: 2
 
+**NOTE**: Changes to the ``ga.js`` script deprecate the need and stability of this module. Use Google's own new asynchronous ``ga.js`` instead of this module. Will be removed without replacement in 2.0
+
 This class is used to delay loading of the popular `Google Analytics <http://google.com/analytics>`_ Tracker, formerly known as Urchin. The synchronous nature of ``<script>`` tags causes page rendering to stall until loading of remote files has completed, and this module alleviates that.
+
+Usage
+=====
 
 To use, require the Urchin module into your page, and create a new instance:
 
@@ -44,7 +50,7 @@ Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. As
      <div data-dojo-type="dojox.analytics.Urchin" data-dojo-props="acct:'UA-12345-67'"></div>
 
 Ajax-API
---------
+========
 
 The urchin tracker allows you to add additional tracking to Ajax/long-lived pages with dynamic content. When you wish to send a new tracker request, call ``trackPageView`` with some identifier, and Google will track it as a separate hit:
 
@@ -79,7 +85,7 @@ You can also do this as a shorthand, too. If you want to prevent the automatic t
   
 
 Optional Parameters
--------------------
+===================
 
 In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been removed for a more robust solution. Disregard this following information if you are using Dojo 1.4 or higher.
 

@@ -1,5 +1,6 @@
 .. _loader/index:
 
+===============
 The Dojo Loader
 ===============
 

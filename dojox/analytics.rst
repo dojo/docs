@@ -1,10 +1,9 @@
 .. _dojox/analytics:
 
+===============
 dojox.analytics
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Dustin Machi
 :Available: since 1.1
 
@@ -13,8 +12,6 @@ dojox.analytics
 
 Analytics is an analytic and client monitoring system. Including the base analytics system and any number of plugins enables logging of different system data back to the server.
 
-
-============
 Introduction
 ============
 
@@ -29,8 +26,6 @@ Plugins included at this time:
 
 Additionally, a :ref:`Google Analytics <dojox/analytics/Urchin>` (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code.
 
-
-=====
 Usage
 =====
 
@@ -71,7 +66,7 @@ Usage
 		
     </script>
 
-============================
+
 Available dojoConfig Options
 ============================
 
@@ -100,7 +95,7 @@ window
 ------
  * windowConnects - Defines global functions that the analytics system will connect to and log use of. Defaults to "open" and "onerror"
 
-=============================
+
 Declaring an Analytics Plugin
 =============================
 
@@ -114,9 +109,8 @@ An analytics plugin is simply a function that takes advantage of the base analyt
 
 Subsequently, the function can connect to an event or do some other function that will trigger its addData to be called.  Each "entry" in the logs will then contain ["myPlugin", passedData].
 
-========
+
 See also
 ========
 
 * http://www.sitepen.com/blog/2008/03/13/analyze-your-code-errors-interface-and-marketing-effectiveness-with-dojoxanalytics/
-* http://dojocampus.org/content/2009/09/03/profiling-with-dojoxanalytics/

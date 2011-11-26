@@ -1,5 +1,6 @@
 .. _dojox/widget:
 
+============
 dojox.widget
 ============
 
@@ -9,10 +10,9 @@ dojox.widget
 .. contents::
     :depth: 2
 
-This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and doesn't typically fall into any other classification of use, like :ref:`dojox.form <dojox/form>` or :ref:`dojox.layout <dojox/layout>`
+This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, documentation, and doesn't typically fall into any other classification of use, like :ref:`dojox.form <dojox/form>` or :ref:`dojox.layout <dojox/layout>`
 
 
-=================
 Available Widgets
 =================
 

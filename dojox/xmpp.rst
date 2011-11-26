@@ -1,57 +1,13 @@
 .. _dojox/xmpp:
 
+==========
 dojox.xmpp
 ==========
 
-:Status: Draft
-:Version: 1.0
-:Project owner: Peter Higgins
-:Available: since V?
+TODOC: !!
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+.. api-inline :: dojox.xmpp
 
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. js ::
- 
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles

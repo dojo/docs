@@ -1,9 +1,9 @@
 .. _loader/amd:
 
+===============
 The Dojo Loader
 ===============
 
-:Status: Draft
 :Author: Rawld Gill
 :Editors: Colin Snover, Kenneth G. Franqueiro
 :Project owner: Rawld Gill
@@ -12,7 +12,6 @@ The Dojo Loader
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -51,7 +50,6 @@ In addition to the core loader APIs, the new Dojo loader includes several other 
   * Configuration API: The loader includes a configuration API that may be leveraged by client applications, allowing
     program designs that have exactly one entry vector for user configuration.
 
-=======
 dojo.js
 =======
 
@@ -80,7 +78,7 @@ Note that you can only set the ``async`` flag *before* dojo.js is loaded, and th
 other library is automatically loaded** - it is entirely up to the application to decide which modules/libraries to
 load.
 
-=============
+
 Configuration
 =============
 
@@ -148,7 +146,7 @@ The "config" event passes two arguments to any listeners:
 The various configuration variables that apply to the loader are discussed in detail in their relevant sections. The
 section `Configuration Reference`_ includes a list of all reserved configuration variables.
 
-======
+
 has.js
 ======
 
@@ -234,7 +232,6 @@ to all configuration variables it receives, prefixing the configuration variable
 
 This code will result in a has test named "config-tlmSiblingOfDojo" with a value of 0.
 
-===========
 The AMD API
 ===========
 
@@ -341,7 +338,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 difference between these two calls is that the latter is expected to also provide a value of its own, whereas the former
 simply loads modules.
 
-==================
+
 Module Identifiers
 ==================
 
@@ -455,7 +452,7 @@ The ``require`` call is now executed on a local ``require`` function instead of 
 the local ``require`` to resolve module identifiers with respect to the reference module that defines it. This local
 ``require`` function is called a "context-sensitive require".
 
-========================
+
 Generic Script Injection
 ========================
 
@@ -473,7 +470,7 @@ The loader interprets any of the following as a generic script identifier:
   * a string that starts with a slash (e.g., "/acmecorp.com/stuff")
   * a string that ends in ".js"
 
-=============
+
 Alias Modules
 =============
 
@@ -522,7 +519,7 @@ instances of that module, which is probably not what you want. The only way to g
 resolve to the same module value is to either write a module definition with an explicit module ID (not recommended) or
 provide an aliases configuration.
 
-==============================
+
 Normalizing Module Identifiers
 ==============================
 
@@ -812,7 +809,7 @@ path entries for the original helpers. Here's what that would look like:
 That's pretty verbose and not very convenient, but this is also a highly unusual configuration that you'll rarely, if
 ever, need.
 
-============================
+
 Relocating Module Namespaces
 ============================
 
@@ -870,7 +867,7 @@ This design replaces the so-called "multi-version" design in dojo v1.6- and elim
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
 package. It's all a matter of simple configuration. This a very powerful feature and only dojo has it.
 
-=================
+
 Utility Functions
 =================
 
@@ -919,7 +916,7 @@ conjunction with a `context-sensitive require`_.
 
 ``require.toAbsMid`` and ``require.undef`` are Dojo-specific extensions to the AMD specification.
 
-=====================================
+
 CommonJS require, exports, and module
 =====================================
 
@@ -976,7 +973,7 @@ In the latter case, calls within the function of the form ``require("foo")`` wil
 
 All of this functionality is provided primarily for compatibility with other CommonJS modules. You should **not** use it unless you are writing modules specifically for e.g. node.js and do not want to require users to load a fully-compliant AMD loader, or in the case of ``exports``, if you need to resolve a circular dependency.
 
-=======
+
 Plugins
 =======
 
@@ -1063,7 +1060,7 @@ Unlike the value returned by regular modules, the loader does not cache the valu
     };
   });
 
-=====================
+
 Window Load Detection
 =====================
 
@@ -1071,7 +1068,7 @@ The Dojo loader connects to the ``window.onload`` event and sets ``document.read
 already set. This allows a normal AMD module to rely on ``document.readyState``, even in browsers that do not properly
 support this property.
 
-===================
+
 The Micro Event API
 ===================
 
@@ -1110,7 +1107,7 @@ in the `Configuration`_ section.
 The loader reserves the event names "error", "config", "idle", and "trace". Client applications that wish to use the
 micro event API with custom events are free to use any other event names.
 
-===============
+
 Error Reporting
 ===============
 
@@ -1143,7 +1140,7 @@ defineIe
 
 Loader errors are often impossible to recover from. If your application demands a module that does not exist, there's nothing the loader can do to fix that situation. However, this API can be used to attempt other strategies (like loading from a backup server) or to provide error messages to improve user experience.
 
-=========
+
 Debugging
 =========
 
@@ -1202,7 +1199,7 @@ modules
 
 Warning: these internal definition are exposed and discussed here to help with debugging **only**. Do **not** use them in your own code. These structures may change!
 
-=======
+
 Tracing
 =======
 
@@ -1293,7 +1290,7 @@ loader-finish-exec
 loader-define-module
   Emitted when the loader is about to process a previous ``define`` call. See loader-define, above. args[0] is the module identifier.
 
-========================
+
 Non-browser Environments
 ========================
 
@@ -1308,7 +1305,7 @@ And like this with Rhino:
 
 XXX TODOC command-line arguments, etc.
 
-==============
+
 The Legacy API
 ==============
 
@@ -1339,7 +1336,7 @@ only worked sometimes anyway, even if you didn't know it). To define global vari
   dojo.provide("module.that.defines.a.global");
   dojo.global.someVariable = anAwesomeCalculation();
 
-==================
+
 Modes of Operation
 ==================
 
@@ -1369,7 +1366,7 @@ the loader happens to be in the middle of tracing a dependency tree generated by
 any future ``dojo.require`` calls will return immediately without first executing the module. v1.6- also exhibited this
 behavior.
 
-=======================
+
 Configuration Reference
 =======================
 

@@ -1,18 +1,17 @@
 .. _dojox/widget/Standby:
 
+====================
 dojox.widget.Standby
 ====================
 
 :Project owner: Jared Jurkiewicz
-:Available: since V1.3
+:since: v1.3
 
 .. contents::
    :depth: 2
 
 Marks a widget as busy.
 
-
-============
 Introduction
 ============
 
@@ -20,8 +19,6 @@ Ever want to mark a widget as busy? Ever have a time it was taking a grid a bit 
 
 **Note:** There have been several examples of this style of widget around, including one done by Peter Higgins as an example of writing a dojo widget. None of them, though, handle all the cases this one does. It will mirror over any CSS applied curved borders in Firefox and Safari, as well as any CSS3 compliant browser, it will track position and update if the target node moves. It will also rescale itself should the target rescale as well as try to adapt for any margins applied to the target.
 
-
-=====
 Usage
 =====
 
@@ -80,7 +77,6 @@ As of the Dojo Toolkit 1.4, the Standby widget has added events that you can lis
 * **onHide** - This event is triggered when the fadeOut hide animation has completed. *New to 1.4*
 
 
-========
 Examples
 ========
 
@@ -412,7 +408,6 @@ Overlaying a dijit.form.TextBox
     </style>
 
 
-============
 Known issues
 ============
 

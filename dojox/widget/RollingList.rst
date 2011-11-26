@@ -1,20 +1,17 @@
 .. _dojox/widget/RollingList:
 
+========================
 dojox.widget.RollingList
 ========================
 
-:Status: Draft
-:Version: 1.2
 :Project owner: Nathan Toone
-:Available: since V1.3
+:since: v1.3
 
-.. contents::
-   :depth: 1
+.. contents ::
+   :depth: 2
 
 A rolling list that can be tied to a data store with children
 
-
-============
 Introduction
 ============
 
@@ -22,7 +19,6 @@ The rolling list provides a structured scrolling view into a data store and its 
 
 Since the rolling list leverages dijit.Menu, it is mostly accessible.  However, full accessibility testing has not yet been performed on this widget.
 
-=====
 Usage
 =====
 
@@ -41,21 +37,20 @@ Other options that you may find useful:
  * ``New in 1.3`` **okButtonLabel** and **cancelButtonLabel** set to a string you want the ok (or cancel) button to use.  By default, the localized "OK" and "Cancel" strings will be used.
  * ``New in 1.3`` **minPaneWidth** the minimum width (in pixels) that each pane must be.  The panes are expanded to be this width if they are any narrower than it
 
-
-==========
 Panes
-==========
+=====
 
 ``TODOC`` You can extend the rolling list by creating different panes.  All panes must extend dojox.widget._RollingListPane.
 
-========
 Examples
 ========
 
 A simple rolling list pulling data from a read store
----------------------------------------------------------
+----------------------------------------------------
 
 .. code-example ::
+
+  FIXME: ?
 
   .. js ::
 

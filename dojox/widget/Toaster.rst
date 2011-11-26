@@ -1,13 +1,15 @@
 .. _dojox/widget/Toaster:
 
+====================
 dojox.widget.Toaster
 ====================
 
-:Status: Draft
-:Version: beta
-:Authors: Peter Higgins
-:Documentation: Josh Trutwin, Peter Higgins
+.. contents ::
+    :depth: 2
 
+About
+=====
+    
 A toaster is an unobtrusive mechanism for displaying messages, and has become popular in recent years. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
 
 Toasters are preferable to alert() boxes. Alert() must always be modal, meaning all action on the page stops until the user clicks "OK". Toasters are non-modal, so the user can continue working and finish their thought before responding.
@@ -28,7 +30,7 @@ And include the CSS somewhere in your page:
 
 
 Examples
---------
+========
 
 The first example uses setContent() and show() to vary the message and display it.
 
@@ -193,7 +195,8 @@ This example builds a Toaster programmatically and lets you set params.
      </tr>
    </table>
 
-Additional Considerations:
+Additional Considerations
+=========================
 
 - Toasters defined in Dialogs
 - Creating Toaster programmatically

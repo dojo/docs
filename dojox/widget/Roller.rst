@@ -1,9 +1,16 @@
 .. _dojox/widget/Roller:
 
+===================
 dojox.widget.Roller
 ===================
 
+.. contents ::
+    :depth: 2
+
 The Roller is a degradable, unobtrusive widget to convert an unordered list (``<ul>``) of styled items into a single item, and loop through the display. There are no additional CSS requirements, or any heavy dependencies.
+
+Usage
+=====
 
 To use in your page, simply require in the needed module:
 
@@ -45,17 +52,17 @@ Or, create one entirely programmatically, by passing an ``items:`` Array
 
 .. js ::
 
-   var n = dojo.doc.createElement('ul');
-   // place it in the dom:
-   dojo.place(n, dojo.body(), "last");
+   var n = dojo.place("<ul></ul>", dojo.body(), "last");
    // make the roller:
    var roller = new dojox.widget.Roller({
       items:["Item 1", "Item 2","Item 3"]
    }, n);
  
-The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to meet your needs it your responsibility.
+The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to 
+meet your needs is your responsibility.
 
-The Roller Class supports two basic configuration options. ``delay`` is the time between rolls (in ms), and ``autoStart`` is true or false, and determines if the widget should start rolling immediately.
+The Roller Class supports two basic configuration options. ``delay`` is the time between rolls (in ms), and ``autoStart`` 
+is true or false, and determines if the widget should start rolling immediately.
 
 Adding Items
 ------------
@@ -83,7 +90,7 @@ Roller from dojo.data
 ``TODOC``
 
 Custom Transitions
-------------------
+==================
 
 The dojox.widget.Roller acts as a baseClass for other Roller transitions. This is possible because all of the transition-animation code is wrapped in a single function meant for being overridden. Simply create a subclass, overriding the ``makeAnims`` function, creating your own set of "in" and "out" transitions. The animations are stored in a "private" object: ``this._anim`` as "in" and "out".
 
@@ -106,22 +113,22 @@ The animations can do whatever your creativity will permit. Just name the "show 
 .. js ::
  
   makeAnims: function(){
-	// summary: Animation creator function. Need to create an 'in' and 'out'
-	// 		_Animation stored in _anim Object, which the rest of the widget
-	//		will reuse.
-	var n = this.domNode;
-	dojo.mixin(this, {
-		_anim: {
-			"in": dojo.fadeIn({ node:n, duration: 400 }),
-			"out": dojo.fadeOut({ node:n, duration: 275 })
-		}
-	});
-	this._setupConnects();
+    // summary: Animation creator function. Need to create an 'in' and 'out'
+    //      _Animation stored in _anim Object, which the rest of the widget
+    //      will reuse.
+    var n = this.domNode;
+    dojo.mixin(this, {
+        _anim: {
+            "in": dojo.fadeIn({ node:n, duration: 400 }),
+            "out": dojo.fadeOut({ node:n, duration: 275 })
+        }
+    });
+    this._setupConnects();
   }
 
 Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
 
 Custom Styles
--------------
+=============
 
 ``TODOC``

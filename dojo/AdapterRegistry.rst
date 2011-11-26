@@ -1,15 +1,14 @@
 .. _dojo/AdapterRegistry:
 
+====================
 dojo.AdapterRegistry
 ====================
 
-:Status: Draft
-:Version: V1.6
-:Available: since V0.3
-
+.. contents :: 
+    :depth: 2
+    
 A registry to make contextual calling/searching easier. Objects of this class keep list of arrays in the form [name, check, wrap, directReturn] that are used to determine what the contextual result of a set of checked arguments is. All check/wrap functions in this registry should be of the same arity (have the same number of arguments).
 
-=======
 Example
 =======
 
@@ -73,8 +72,5 @@ There is also possible to unregister adapter from registry however there are per
   // Dojo < 1.7
   reg.unregister("handleArr");
 
-========
-See also
-========
 
-* `API <http://dojotoolkit.org/api/dojo/AdapterRegistry>`_
+.. api-inline :: dojo.AdapterRegistry

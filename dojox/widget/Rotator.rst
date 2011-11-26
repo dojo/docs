@@ -1,18 +1,18 @@
 .. _dojox/widget/Rotator:
 
+====================
 dojox.widget.Rotator
 ====================
 
 :Authors: Chris Barber, Marcus Reimann
 :Project owner: Chris Barber
-:Available: since V1.4
+:since: v1.4
 
 .. contents::
    :depth: 2
 
 A widget for rotating through child nodes using :ref:`transitions <dojox/widget/rotator/index>`.
 
-============
 Introduction
 ============
 
@@ -20,8 +20,6 @@ A small, fast, extensible, awesome rotator that cycles, with transitions, throug
 
 The Rotator does not rely on :ref:`Dijit <dijit/index>`.  It is designed to be as lightweight as possible.  Controllers and transitions have been externalized so builds can be as optimized with only the components you want to use.
 
-
-=====
 Usage
 =====
 
@@ -41,8 +39,6 @@ If the rotator node isn't explicitly positioned, then it will automatically posi
 
 You can do some interesting things by stacking multiple rotators on top of each other, then wiring up the topics so that they all transition at the same time.
 
-
-========
 Examples
 ========
 
@@ -308,7 +304,6 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
     <button onclick="myRotatorInstance5.next();">Next</button>
 
 
-=================
 Subscribed Topics
 =================
 
@@ -372,7 +367,6 @@ Example
     <button onclick="dojo.publish('myRotator6/rotator/control', ['go', 2]);">Goto Pane 2</button>
 
 
-================
 Published Topics
 ================
 
@@ -409,13 +403,12 @@ Example
    });
  </script>
 
-=======================
+
 Waiting for Event Topic
 =======================
 
 The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` page for a code example.
 
-========
 See also
 ========
 

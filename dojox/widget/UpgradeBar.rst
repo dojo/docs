@@ -1,16 +1,15 @@
 .. _dojox/widget/UpgradeBar:
 
+=======================
 dojox.widget.UpgradeBar
-=========================
+=======================
 
-:Status: Up to date
-:Version: 1.4
 :Project owner: Mike Wilcox, Revin Guillen
 :Author: Mike Wilcox
 :Available: since 1.4
 
 Basic Description
------------------
+=================
 
 Shows the "yellow bar" at the top of the screen when the user is to be notified that they should upgrade their browser or a plugin.
 
@@ -19,7 +18,7 @@ You can insert custom validations to trigger the UpgradeBar to display. An evalu
 Markup and programmatic are supported. Markup is a little cleaner, since a majority of the parameters are the HTML snippets to be displayed. In markup, the validate code should be an expression that will evaluate to true or false. This expression is wrapped in a try/catch, so if it blows up, it is assumed to be true and trigger the bar. In programmatic, a function should be used that returns true or false. You would need to use your own try/catch in that.
 
 Notifications
--------------
+=============
 
 The only required parameter is *notifications*. This is an array of objects, and each object contains a validation expression and a message. The messages can be plain text, but HTML is recommended, so that you may provide a link to the upgrade site. If you don't provide a link, this widget may as well be named the HarassmentBar.
 
@@ -51,7 +50,7 @@ If doing something simple like testing a browser or version, a try/catch is not 
  }
  
 Examples
---------
+========
 
 A programmatic example:
 
