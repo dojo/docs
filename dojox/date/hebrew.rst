@@ -23,7 +23,7 @@ The Hebrew calendar is lunisolar and thus has a number of interesting properties
 Usage
 =====
 
-Code snippet below illustrates most common usage of Hebrew calendar.
+Code snippet below illustrates a common usage of Hebrew Date code with the Dijit Calendar widget.
 
 .. js ::
  
@@ -32,15 +32,11 @@ Code snippet below illustrates most common usage of Hebrew calendar.
     dojo.require("dojox.date.hebrew.Date");
     dojo.require("dojox.date.hebrew.locale");
   </script>
-  <html><title> Hebrew calendar </title><body>
-    <input id="hebcal"
-       name="noDOMvalue"
+  <html><title>Hebrew calendar</title><body>
+    <input name="hebcal"
        value="2009-03-10"
-       type="text"
        dojoType="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
-       lang="en"
-       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >
   </body></html>
 
