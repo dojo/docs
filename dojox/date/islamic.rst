@@ -53,7 +53,7 @@ Islamic calendar package comprises of following two files:
 Islamic calendar and DateTextBox
 --------------------------------
 
-Islamic calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Islamic calendar. For example, image below illustrates DateTextBox using Islamic calendar with default language set to Islamic.
+Islamic calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Islamic calendar. For example, image below illustrates DateTextBox using Islamic calendar with default language set to Arabic.
 
 .. image:: dijit.jpg
 
