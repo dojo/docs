@@ -13,7 +13,7 @@ Finds a Dijit instance reference by a passed node reference.
        // we found that node!
     }
 
-See Also:
+See Also
 =========
 
 * :ref:`The dijit registry <dijit/registry>`

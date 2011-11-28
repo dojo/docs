@@ -30,7 +30,7 @@ In addition to providing some color-specific functionality, the dojo.colors modu
 The module also adds a `sanitize` method to dojo.Color.prototype. This method ensures the Color object has the correct 
 attributes, and are valid.
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojo.Color <dojo/Color>`

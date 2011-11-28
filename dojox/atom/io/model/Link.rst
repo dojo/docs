@@ -12,8 +12,8 @@ dojox.atom.io.model.Link
 
 This object represents Link elements of the Atom specification.
 
-Public properties (and their types):
-====================================
+Public properties (and their types)
+===================================
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
@@ -30,8 +30,8 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 
-Public functions (and their return types):
-==========================================
+Public functions (and their return types)
+=========================================
 
 Below are all the functions implemented by this model class.
 
@@ -47,7 +47,7 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`

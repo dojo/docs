@@ -13,15 +13,15 @@ dojox.atom.io.model.Feed
 This object represents an ATOM Feed.
 
 
-Public properties (and their types):
-====================================
+Public properties (and their types)
+===================================
 
 This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of properties 
 it inherits.
 
 
-Public functions (and their return types):
-==========================================
+Public functions (and their return types)
+=========================================
 
 This function extends from :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>` so please refer to it for the list of functions it 
 inherits.
@@ -62,8 +62,8 @@ Below are all the additional functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`
 * :ref:`dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`

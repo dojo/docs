@@ -13,8 +13,8 @@ dojox.atom.io.model.Category
 This object represents the Category element of the Atom specification. Entries and feeds can each have category elements to convey information 
 about the entry or feed.
 
-Public properties (and their types):
-====================================
+Public properties (and their types)
+===================================
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
@@ -27,8 +27,8 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 
-Public functions (and their return types):
-==========================================
+Public functions (and their return types)
+=========================================
 
 Below are all the functions implemented by this model class.
 
@@ -44,7 +44,7 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`

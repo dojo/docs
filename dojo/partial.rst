@@ -99,8 +99,8 @@ Basic Example
     <div id="appendLocation"></div>
 
 
-See Also:
-=========
+See Also
+========
 
 * `Blog post <http://o.dojotoolkit.org/2008/04/09/dojo-data-notification-events-and-easy-passing-store-references-generic-event-handlers>`_ about using dojo.partial with Data Stores.
 * `API docs <http://dojotoolkit.org/api/dojo.partial>`_

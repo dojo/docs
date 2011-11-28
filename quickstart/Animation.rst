@@ -522,8 +522,8 @@ Using the latest in CSS3 along with the Dojo APIs increases the performance of a
 
 See details on application of animation in specific Digits in :ref:`Themes and theming <dijit/themes>`.
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojo.fx <dojo/fx>`_
 * :ref:`dojox.fx <dojox/fx>`_

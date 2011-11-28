@@ -13,8 +13,8 @@ dojox.atom.io.model.Content
 This object represents Content style elements of the Atom specification, such as title, subtitle, summary, content, etc.
 
 
-Public properties (and their types):
-====================================
+Public properties (and their types)
+===================================
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
@@ -37,8 +37,8 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 
-Public functions (and their return types):
-==========================================
+Public functions (and their return types)
+=========================================
 
 Below are all the functions implemented by this model class.
 
@@ -55,7 +55,7 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`

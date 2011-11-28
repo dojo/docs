@@ -13,8 +13,8 @@ This class is a foundation class for the various built in Dojo Effects.
 
 .. api-inline :: dojo.Animation
 
-See Also:
-=========
+See Also
+========
 
   * :ref:`The Animation Guide <quickstart/Animation>`
   * :ref:`dojo.fx <dojo/fx>`

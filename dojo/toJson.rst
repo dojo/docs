@@ -51,8 +51,8 @@ Dojo < 1.7
 
 TODOC: Date objects in objects
 
-See Also:
-=========
+See Also
+========
 
 * :ref:`dojo.fromJson <dojo/fromJson>`
 * :ref:`dojo.objectToQuery <dojo/objectToQuery>`
