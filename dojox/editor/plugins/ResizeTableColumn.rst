@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/ResizeTableColumn:
 
+===========================================================
 dojox.editor.plugins.ResizeTableColumn (Under Construction)
 ===========================================================
 
@@ -12,13 +13,11 @@ dojox.editor.plugins.ResizeTableColumn (Under Construction)
 
 Have you ever wanted to resize the width of the table column by dragging the edge of the table's column in the editor's document? This plug-in is for you.
 
-========
 Features
 ========
 
 Once required in and enabled, this plugin provides the users with the ability to resize the width of the table column by dragging the edge of the column in the editor.
 
-=====
 Usage
 =====
 
@@ -52,7 +51,6 @@ Then just declare the plugin and configure it as follows.
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ResizeTableColumn plugin!
 
-==============
 User Interface
 ==============
 
@@ -65,13 +63,11 @@ ResizeTableColumn plugin is a plugin for dijit.Editor, which provides the users 
 
 .. image :: ResizeTableColumn.png
 
-===========
 Limitations
 ===========
 
 None.
 
-========
 Examples
 ========
 
@@ -124,7 +120,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

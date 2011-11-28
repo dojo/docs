@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleBookSearchStore:
 
+================================
 dojox.data.GoogleBookSearchStore
 ================================
 
@@ -13,13 +14,11 @@ dojox.data.GoogleBookSearchStore
 
 dojox.data.GoogleBookSearchStore is a data store that uses Google APIs to search for books.
 
-============
 Introduction
 ============
 
 dojox.data.GoogleBookSearchStore is a read only data store that can be used to search Google.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-=====
 Usage
 =====
 
@@ -77,7 +76,6 @@ The pattern of using the GoogleBookSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -166,7 +164,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/PasteFromWord:
 
+==================================
 dojox.editor.plugins.PasteFromWord
 ==================================
 
@@ -14,7 +15,6 @@ Have you ever pasted in content from Microsoft Word or similar programs into the
 
 This plugin provides a new toolbar button that opens a dialog where you can paste in content from word processors like Word.  Filters are then applied to the content to strip out a lot of the extraneous HTML, classes and other nonsense that make the pasted content poor to work with.  The cleaned up content can then be pasted into the dijit.Editor much more safely
 
-========
 Features
 ========
 
@@ -24,7 +24,6 @@ This plugin provides the following
 * An input dialog for pasting content from Word Processors for processing before being injected into the dijit Editor.
 * It makes use of dojox.html.format to also try to clean up and normalize the HTML as much as possible.
 
-=====
 Usage
 =====
 
@@ -75,7 +74,6 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
   </div>
 
 
-========
 Examples
 ========
 
@@ -132,7 +130,6 @@ Basic Usage
     </div>
 
 
-========
 See Also
 ========
 

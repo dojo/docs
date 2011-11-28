@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/InsertEntity:
 
+=================================
 dojox.editor.plugins.InsertEntity
 =================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.InsertEntity
 
 Have you ever wanted to easily insert the copyright symbol, the trademark symbol, or any of a variety of mathematical symbols into the document you're editing in the dijit.Editor?   If so, then this plugin is for you!  This plugin provides a subset of entity characters that can be inserted into your documents.  The symbols provided are primarily the non-ascii 8859 characters and a large set of greek symbols used in mathematics.
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Keyboard hotkey: CTRL-SHIFT-S for inserting a symbol at the current location in the editor.  (Note that this is a similar keybind to those used by commercial word processors, so it will hopefully be familiar and easy to pick up.).
 * A key-navigable grid of symbols to select the one to insert.
 
-=====
 Usage
 =====
 
@@ -54,7 +53,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the InsertEntity plugin!  You can use the button or hotkey to insert entity characters as you desire.
 
-===========
 Limitations
 ===========
 
@@ -66,7 +64,6 @@ Something to be aware of is that if you also use the :ref:`dojox.editor.plugins.
 
 The above configures prettyprint to escape all the same entities that the InsertEntity plugin can insert.
 
-========
 Examples
 ========
 
@@ -122,7 +119,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

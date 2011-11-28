@@ -1,5 +1,6 @@
 .. _dojo/getComputedStyle:
 
+=====================
 dojo.getComputedStyle
 =====================
 
@@ -8,7 +9,6 @@ dojo.getComputedStyle
 
 Returns a "computed style" object.
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ Use the dojo.style() method for more consistent (pixelized) return values.
 Since Dojo 1.7, ``dojo.getComputedStyle`` is exposed via the ``getComputedStyle`` method of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 
-=====
 Usage
 =====
 
@@ -37,7 +36,6 @@ Usage
 node
   A reference to a DOM node. Does NOT support taking an ID string for speed reasons.
 
-========
 Examples
 ========
 
@@ -79,7 +77,6 @@ Dojo < 1.7
     var cs = dojo.getComputedStyle(dojo.byId("someNode"));
     var w = cs.width, h = cs.height;
 
-========
 See also
 ========
 

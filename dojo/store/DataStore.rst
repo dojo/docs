@@ -1,5 +1,6 @@
 .. _dojo/store/DataStore:
 
+====================
 dojo.store.DataStore
 ====================
 
@@ -13,7 +14,6 @@ dojo.store.DataStore
 **dojo.store.DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
-========
 Examples
 ========
 
@@ -27,7 +27,6 @@ Examples
    // use the query results returned from the server
  });
 
-==============
 Method Mapping
 ==============
 

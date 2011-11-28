@@ -1,5 +1,6 @@
 .. _dojox/timing/doLater:
 
+====================
 dojox.timing.doLater
 ====================
 
@@ -14,7 +15,6 @@ dojox.timing.doLater
 
 dojox.timing.doLater checks if a parameter is ready, and if not, it will "do it later".
 
-============
 Introduction
 ============
 

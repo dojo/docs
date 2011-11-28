@@ -1,5 +1,6 @@
 .. _dojox/mobile/RoundRectDataList:
 
+==============================
 dojox.mobile.RoundRectDataList
 ==============================
 
@@ -12,7 +13,6 @@ dojox.mobile.RoundRectDataList
 
 RoundRectDataList is an enhanced version of RoundRectList. It can generate ListItems according to the given dojo.data store.
 
-======================
 Constructor Parameters
 ======================
 
@@ -55,7 +55,6 @@ Inherited from dojox.mobile.RoundRectList:
 |stateful      |Boolean   |false    |If true, the last selected item remains highlighted.                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/partial:
 
+============
 dojo.partial
 ============
 
@@ -98,7 +99,6 @@ Basic Example
     <div id="appendLocation"></div>
 
 
-=========
 See Also:
 =========
 

@@ -1,5 +1,6 @@
 .. _dojox/form/Uploader:
 
+=======================
 dojox.form.Uploader
 =======================
 
@@ -14,7 +15,6 @@ A widget that adds functionality to a standard HTML file input which allows file
 
 **The dojox.form.Uploader is an improvement upon, and replaces the dojox.form.FileUploader**. The multiple problems created by Flash are avoided because it is not used in Mozilla and Webkit browsers. Support for FileUploader will cease as of 1.6, but the code will remain until 2.0 for backwards compatibility.
 
-========
 Features
 ========
 
@@ -36,7 +36,6 @@ The Uploader mimics the functionality of HTML5 file inputs, so some features ava
 
 File mask (restricting the selection to certain file types) is in the HTML5 spec but missing from browser functionality. It is not supported.
 
-=====
 Usage
 =====
 
@@ -68,7 +67,6 @@ The Flash plugin will use a SWF to upload in non-HTML5 browsers. All other brows
  
 These problems do not occur in IE.
 
-=====
 Setup
 =====
 
@@ -149,7 +147,6 @@ When using a plugin, the following methods will be available:
  - **upload** This method uploads the files and any data passed as an argument.
  - **submit** This method uploads the files and if a form element is passed as an argument, it is converted into a JavaScript object.
 
-===========
 Server Side
 ===========
 
@@ -242,7 +239,6 @@ For non-PHP devs, this translates into a JSON string, wrapped in a textarea, ret
 
 If you are having problems getting *onComplete* to fire, look at this code first. Often the problem is the server side code is not catching the field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea when it shouldn't.
 
-========
 Examples
 ========
 

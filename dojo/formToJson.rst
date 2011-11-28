@@ -1,5 +1,6 @@
 .. _dojo/formToJson:
 
+===============
 dojo.formToJson
 ===============
 
@@ -10,7 +11,6 @@ dojo.formToJson
 
 Helper function for converting a HTML form to a JSON string
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` documentation 
 
 Since Dojo 1.7, ``dojo.formToJson`` is exposed via the ``toJson`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -70,7 +69,6 @@ Dojo < 1.7
   //Note the button was skipped.
 
 
-========
 Examples
 ========
 
@@ -141,7 +139,6 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
     <pre id="formObject2"></pre>
 
 
-========
 See also
 ========
 

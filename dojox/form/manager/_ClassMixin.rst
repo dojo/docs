@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_ClassMixin:
 
+==============================
 dojox.form.manager._ClassMixin
 ==============================
 
@@ -11,7 +12,6 @@ dojox.form.manager._ClassMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the component of the form manager. It should be used together with
 
 The mixin provides commonly used methods to add/remove a CSS class, or detect its presence. It operates only on form nodes and attached nodes (see :ref:`controlled elements <dojox/form/manager/index>` for more classification details).
 
-======================
 Methods and properties
 ======================
 
@@ -95,7 +94,6 @@ Example:
      removeClass("redBg",  {lastName: 1}).
      removeClass("blackBorder");
 
-====
 Tips
 ====
 

@@ -1,5 +1,6 @@
 .. _developer/svn:
 
+====================================
 Getting the Code from Source Control
 ====================================
 
@@ -9,12 +10,10 @@ Authoritative documentation on Subversion is available `here <http://svnbook.red
 
 .. contents ::
 
-===================
 Why Source Control?
 ===================
 Source control is one of those things that one rarely notices they need until it's far too late, usually when you accidentally delete part of your source tree instead of simply moving it to a different location, or when you make a set of complex changes that leave you worse off than were you started (but you can't go back). A source control system solves these problems by keeping copies of each revision of a set of files on a server, while giving you access to a local copy of those files to make changes on. Good source control systems allow multiple people to modify a single file at once, and will try to automatically merge changes between differing sets of modifications. A good source control system will also let you browse the history of a file or set of files (allowing you to "go back in time") and allow you to have access to your code from as many systems as you like. Subversion is one of those good source control systems.
 
-===================
 General Information
 ===================
 Across the gamut of source control systems, there is quite a bit of confusing (and non-portable) nomenclature surrounding the common actions that you as a developer will preform with the source control system. We will use the terms here that are commonly accepted by CVS and Subversion users and administrators. So what are those terms?
@@ -28,12 +27,10 @@ Across the gamut of source control systems, there is quite a bit of confusing (a
 
 Unlike some other source control systems, Subversion manages files on your disk without interjecting itself obtrusively into your workflow. You can change large sets of files without worrying if anyone else is also modifying those files.
 
-=======================
 Browsing the repository
 =======================
 You may browser our subversion repository (http://svn.dojotoolkit.org/src/) directly using a web browser or browse using the `Bug tracker <http://bugs.dojotoolkit.org/browser>`_.
 
-===================
 Directory structure
 ===================
 The code is structured with each subproject (dojo, dijit, dojox, util) as a separate directory. Within each subproject you will find the "trunk" as well as "branches" and "tags". You may pull these subprojects separately, or use a special svn "view" which links the subprojects and checks them out with a single command.
@@ -53,12 +50,10 @@ Or, to pull a particular release, such as Dojo 1.0.2:
 
    svn co http://svn.dojotoolkit.org/src/tags/release-1.0.2 dojo102
 
-===============================
 Branches in the Dojo repository
 ===============================
 Most Dojo development takes place on the trunk. Branches may be used for development of experimental features or for code migration before being merged back into the trunk. Branches are also used to stabilize major releases.
 
-================================
 Making changes to the repository
 ================================
 Anyone may access the Dojo Subversion server. Contributors are encouraged to access code directly from the repository and submit patches using the bug tracker. To submit changes, however, you must have committer status and have already received a system account from the administrator.
@@ -70,7 +65,6 @@ To access the repository as a committer, use this URL with subversion:
     svn co --username=YOURUSERNAME
         https://svn.dojotoolkit.org/src/view/committer/all/trunk dojotoolkit
 
-=======================
 Using Development Tools
 =======================
 
@@ -153,7 +147,6 @@ The third magic string is **"!strict"** --- We lint on commit to try to detect p
 
 If you forget to include these strings, you can still manually close the ticket using trac, but make sure to add a comment, like "[12345] fixes this ticket." where 12345 is the changeset number, so that trac adds a hyperlink to the commits for the ticket properly.
 
-===================
 SVN Config Settings
 ===================
 You'll need to add a couple config settings to your SVN config file. If you are on Windows, that's located at:

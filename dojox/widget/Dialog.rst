@@ -1,5 +1,6 @@
 .. _dojox/widget/Dialog:
 
+===================
 dojox.widget.Dialog
 ===================
 
@@ -11,13 +12,11 @@ dojox.widget.Dialog
 
 This is an extension to the :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` providing additional sizing options, animations, and styling.
 
-============
 Introduction
 ============
 
 This widget's usage is nearly identical to the Dijit Dialog. show() and hide() change the display state, attr("title", "new title") will manipulate the title (if visible), and so on. The difference comes in the creation parameters set.
 
-=====
 Usage
 =====
 
@@ -34,7 +33,6 @@ And to require the module in:
 
     dojo.require("dojox.widget.Dialog");
 
-========
 Examples
 ========
 
@@ -48,13 +46,11 @@ Resize an existing Dialog:
     dlg.layout(); //starts the resize
 
 
-=====
 Notes
 =====
 
 * An API change between 1.2 and 1.3 exists: the property ``fixedSized`` in 1.2 was renamed to ``sizeToViewport`` in 1.3 for clarity
 
-========
 See also
 ========
 

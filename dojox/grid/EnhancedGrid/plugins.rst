@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins:
 
+===============================
 dojox.grid.EnhancedGrid.plugins
 ===============================
 
@@ -10,7 +11,6 @@ dojox.grid.EnhancedGrid.plugins
 EnhancedGrid provides a plugin framework, which can support a rich set of new features as plugins.
 The followings are implemented in Dojo 1.6:
 
-===========
 Plugin List
 ===========
 
@@ -29,7 +29,6 @@ These plugins are loaded on demand, so they must be required and declared before
 * :ref:`Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>` - Grid preferences persistence e.g column width|order and sorting order.
 * :ref:`Search <dojox/grid/EnhancedGrid/plugins/Search>` - Searching grid content by regular expressions or simple wildcard pattern.
 
-========
 See Also
 ========
 

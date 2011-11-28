@@ -1,5 +1,6 @@
 .. _dojox/lang/async:
 
+================
 dojox.lang.async
 ================
 

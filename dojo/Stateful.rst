@@ -1,5 +1,6 @@
 .. _dojo/Stateful:
 
+=============
 dojo.Stateful
 =============
 
@@ -13,13 +14,11 @@ dojo.Stateful
 A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
 
 
-============
 Introduction
 ============
 
 dojo.Stateful provides the ability to get and set named properties in conjunction with the ability to monitor these properties for changes. dojo.Stateful is intended to be a base class that can be extended by other components that wish to support watchable properties. This can be very useful for creating live bindings that utilize current property states and must react to any changes in properties.
 
-=====
 Usage
 =====
 
@@ -55,7 +54,6 @@ Dojo < 1.7
    // test: change obj.foo:
    myObj.set("foo","bar");
 
-=================
 Available Methods
 =================
 
@@ -72,7 +70,6 @@ Available Methods
   Watches a property for changes. ***new in 1.5***
 
 
-========
 Examples
 ========
 
@@ -213,7 +210,6 @@ returns:
  </script>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/mobile/internationalization:
 
+===========================
 Internationalization (i18n)
 ===========================
 
@@ -10,7 +11,6 @@ Internationalization (i18n)
 
 There are a couple of approaches for internationalization of your dojox.mobile applications. From the performance perspective, the server-side approach is the best choice. However, you can of course choose a client-side approach with dojo.i18n. In some situations, you may want to use an optional feature dojox.mobile.i18n.
 
-========================
 Server-side Substitution
 ========================
 
@@ -28,7 +28,6 @@ Recommended approach is to substitute localized strings on a server due to the f
 
 With that said, it is still possible to take client-side approach with dojo.i18n, although you'll have to pay a price in performance for doing so.
 
-=========
 dojo.i18n
 =========
 
@@ -68,7 +67,6 @@ If you need to do internationalization at client-side , use of dojo.i18n is the 
       </body>
   </html>
 
-=================
 dojox.mobile.i18n
 =================
 
@@ -130,7 +128,6 @@ If your resource value contains variables that have to be replaced with some giv
 
   dijit.byId("item1").set("label", bundle["MINUTES"].replace("%1", "30"));
 
-======================
 Why dojox.mobile.i18n?
 ======================
 

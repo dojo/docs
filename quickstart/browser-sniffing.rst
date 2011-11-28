@@ -1,5 +1,6 @@
 .. _quickstart/browser-sniffing:
 
+=============================
 Browser (User Agent) Sniffing
 =============================
 
@@ -69,7 +70,6 @@ Each variable is only defined if the specified browser is being used. For exampl
     ...
   }
 
-============================================================
 Example 1 - UA sniffing in Dojo 1.7 with AMD and the has API
 ============================================================
 
@@ -130,7 +130,6 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
     <dd id="isAtLeastopera9"></dd>
   </dl>
 
-==========================================
 Example 2 - Pre Dojo 1.7-style UA sniffing
 ==========================================
 
@@ -187,7 +186,6 @@ This example has the same result, but loads more code because it's using the ful
   </dl>
 
 
-========
 See also
 ========
 

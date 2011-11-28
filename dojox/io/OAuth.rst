@@ -1,5 +1,6 @@
 .. _dojox/io/OAuth:
 
+==============
 dojox.io.OAuth
 ==============
 
@@ -14,7 +15,6 @@ dojox.io.OAuth
 dojox.io.OAuth is a helper class that allows you to "sign" any kwArgs object you might use with any of the dojo Ajax methods. It was designed to be as simple to use as possible, without exposing the user to the overhead and specification of OAuth.
 
 
-============
 Introduction
 ============
 
@@ -115,7 +115,6 @@ Once the request is sent to the service, the entire process is duplicated; the s
 
 The benefits of signing a request this way are plentiful; at no time (unless the PLAINTEXT signature method is used) are any token secrets broadcast over the Internet, where a man-in-the-middle attack might be able to get at them. The user’s token secret is broadcast only once (during the initial handshake process) but at no time is the consumer application’s token secret transmitted. And because the signature is a secured digest, differing platforms with accurate SHA1 implementations can regenerate the same signature and be assured that the request was not tampered with en route.
 
-=====
 Usage
 =====
 
@@ -158,7 +157,6 @@ Once you have the signed object, simply pass it to any Dojo Ajax method the same
  var dfd = dojo.xhrGet(args);
 
 
-========
 Examples
 ========
 
@@ -168,7 +166,6 @@ Example 1
 TODO: example
 
 
-=======
 Credits
 =======
 

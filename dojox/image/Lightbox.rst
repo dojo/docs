@@ -1,5 +1,6 @@
 .. _dojox/image/Lightbox:
 
+====================
 dojox.image.Lightbox
 ====================
 
@@ -13,7 +14,6 @@ dojox.image.Lightbox
 
 The Lightbox is a nice way to show images centered on the screen. It works in a variety of ways: programmatic, from dojo.data, or inline. The Lightbox is currently labeled *experimental*, and may change to become a more consistent API.
 
-============
 Introduction
 ============
 
@@ -40,7 +40,6 @@ You also need to require the Lightbox module:
 This provides both Lightbox and LightboxDialog, the latter being the widget to actually *display* the image, the former being a lightweight wrapper for anchor tags, converting links into Lightboxes progressively.
 
 
-=====
 Usage
 =====
 
@@ -92,7 +91,6 @@ Here, the two images will be added in the same group, and the first image will b
 
 **new in 1.4** is a modal:Boolean parameter, which will allow you to enable/disable the behavior where clicking on the underlay will hide the dialog.
 
-==================
 The LightboxDialog
 ==================
 
@@ -131,14 +129,12 @@ To close a dialog programmatically, simply call .hide()
   dijit.byId("dojoxLightboxDialog").hide();
 
 
-=======================
 Lightbox from dojo.data
 =======================
 
 ``TODOC``
 
 
-==================
 Styling The Dialog
 ==================
 
@@ -153,7 +149,6 @@ LightboxDialog extends :ref:`dijit.Dialog <dijit/Dialog>`, so the same 'rule' ap
 The part :ref:``underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
 
 
-====
 a11y
 ====
 
@@ -164,7 +159,6 @@ Lightbox and LightboxDialog are not fully accessible, though provide basic keybo
 * Left, Down - go to the previous image in the group
 
 
-=============
 Tips & Tricks
 =============
 

@@ -1,5 +1,6 @@
 .. _quickstart/topics:
 
+=================
 Dojo Topic System
 =================
 

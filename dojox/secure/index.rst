@@ -1,5 +1,6 @@
 .. _dojox/secure/index:
 
+============
 dojox.secure
 ============
 
@@ -15,7 +16,6 @@ dojox.secure
 DojoX Secure is a collection of tools for security, in particular for working with
 untrusted data and code.
 
-========
 Features
 ========
 
@@ -31,7 +31,6 @@ Features
 
   Provides a DOM facade that restricts access to a specified subtree of the DOM. The DOM facade uses getters/setters and lettables to emulate the DOM API.
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/grid/LazyTreeGrid:
 
+=======================
 dojox.grid.LazyTreeGrid
 =======================
 
@@ -14,7 +15,6 @@ dojox.grid.LazyTreeGrid
 
 This is a stub help page for the new dojox.grid.LazyTreeGrid which is still in progress. The information on this page may be out-of-date due to the fact that the API for the LazyTreeGrid is still very much in flux.
 
-============
 Introduction
 ============
 
@@ -204,7 +204,6 @@ Regarding dojox.grid.LazyTreeGrid, each item would be rendered in a single row:
 
 .. image:: ltg2.jpg
 
-=====
 Usage
 =====
 
@@ -222,8 +221,7 @@ The dojox.grid.LazyTreeGrid can either be defined declaratively in HTML or progr
   
 The following parameters are supported in the dojox.grid.LazyTreeGrid:
 
-====================================  ===================================  ========================================  ============================================================================================
-Parameter                             Type                                 Default Value                             Description
+====================================  ===================================  ========================================  Parameter                             Type                                 Default Value                             Description
 ====================================  ===================================  ========================================  ============================================================================================
 rowsPerPage                           Integer                              25                                        Number of rows to render at a time
 autoWidth                             Boolean                              false                                     If autoWidth is true, grid width is automatically set to fit the data
@@ -332,14 +330,12 @@ In order to display better for different levels, user could do cells merge based
   
 The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. The level is 0-based. The value of these attributes would be a JSON object array, each element of these array would indicate the detail of column span, the start indicate the start column index of colspan, end is end column index of colspan, and the primary is index of column which content will be displayed (start value by default).
 
-==========
 Public API
 ==========
 
 Available public methods of the LazyTreeGrid are listed below:
 
-=========  =====================================  =====================  =======================================================
-Name       Parameters                             Return                 Description
+=========  =====================================  =====================  Name       Parameters                             Return                 Description
 =========  =====================================  =====================  =======================================================
 setModel   treeModel                              N/A                    Change the LazyTreeGrid's treeModel.
 
@@ -351,19 +347,16 @@ refresh    keepState: boolean                     N/A                    Functio
                                                                          without keeping the folding state.
 =========  =====================================  =====================  =======================================================
 
-========
 Examples
 ========
 
 For example of the LazyTreeGrid with a ForestStoreModel and client side data source, please see the file dojox/grid/tests/test_treegrid_lazyloading.html.
 
-=============
 Accessibility
 =============
 
 LazyTreeGrid provides the same a11y support level as :ref:`DataGrid <dojox/grid/DataGrid>` .
 
-========
 See Also
 ========
 

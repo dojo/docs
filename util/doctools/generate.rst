@@ -1,5 +1,6 @@
 .. _util/doctools/generate:
 
+============================
 Generating API Documentation
 ============================
 
@@ -13,13 +14,11 @@ Generating API Documentation
 
 Running the doctools parser to extract API documentation data
 
-============
 Introduction
 ============
 
 In :ref:`Dojo Inline Documentation <util/doctools/markup>` we detailed the markup syntax and conventions available to document your API inline in your code. These inline docs can be extracted using the doctools parser - a php-based script available in util/docscripts in your svn checkout of the Dojo Toolkit. The parser generates xml and/or json of the entirety of the configured namespaces (dojo, dijit and dojox by default).
 
-===================
 Defining Namespaces
 ===================
 
@@ -31,13 +30,11 @@ The namespaces are defined in util/docscripts/modules, using a simple properties
 
 The path is relative to the directory docscripts directory (the directory generate.php is located in). You may also use an fully qualified, absolute path to your namespace's directory.
 
-=============
 Sanity Checks
 =============
 
 For quick sanity checks of your docs you can load up util/docscripts/_browse2.php in your browser to run the parser over a single file at a time.
 
-============
 Parser Usage
 ============
 
@@ -72,7 +69,6 @@ Use the ``outfile`` argument to place the output in the directory/file of your c
 Parsing a large codebase (like dojo/dijit/dojox) may take several minutes.
 
 
-========
 See Also
 ========
 

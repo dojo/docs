@@ -1,5 +1,6 @@
 .. _dijit/form/CheckBox:
 
+===================
 dijit.form.CheckBox
 ===================
 
@@ -12,7 +13,6 @@ dijit.form.CheckBox
 
 **dijit.form.CheckBox** is nearly the same as an HTML checkbox, but with fancy styling.
 
-=====
 Usage
 =====
 
@@ -21,7 +21,6 @@ CheckBox widgets in dijit are very intuitive and easy to use. Markup constructs 
 Conceptually, native HTML checkboxes have 2 separate values; the first being the boolean checked state, and the second being the text value that is submitted with the containing FORM element if the checked state is true. To resolve this dichotomy, the *value* of a CheckBox widget is false when unchecked, but the text value when checked. Setting the *value* to true will check the box (but leave the submittable text string unchanged) while false will uncheck it. Setting the *value* to a text string will check the box and set the value to be submitted to the indicated text string.
 
 
-========
 Examples
 ========
 
@@ -68,7 +67,6 @@ Let's create a checkbox with HTML markup, initially checked:
     <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
 
 
-=============
 Accessibility
 =============
 

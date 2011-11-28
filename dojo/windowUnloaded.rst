@@ -1,5 +1,6 @@
 .. _dojo/windowUnloaded:
 
+===================
 dojo.windowUnloaded
 ===================
 
@@ -12,7 +13,6 @@ dojo.windowUnloaded
 
 Signal fired by impending window destruction. Favor using :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>` instead of this method directly.
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/lang/typed:
 
+================
 dojox.lang.typed
 ================
 
@@ -12,13 +13,11 @@ dojox.lang.typed
 
 **dojox.lang.typed** provides type checking on JavaScript classes for properties and methods.
 
-============
 Introduction
 ============
 
 **dojox.lang.typed** enforces type checking using the JSON schema structure for defining types on classes. JSON schema property and method definitions can be directly added to typed classes to enforce typing.
 
-=====
 Usage
 =====
 
@@ -73,7 +72,6 @@ You can also run dojox.lang.typed.typeCheckAllClasses() to add type checking to 
 All classes declared with dojo.declare from this point on can have schema definitions for typing purposes.
 
 
-========
 See also
 ========
 

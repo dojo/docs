@@ -1,5 +1,6 @@
 .. _quickstart/install:
 
+===============
 Installing Dojo
 ===============
 
@@ -14,13 +15,11 @@ Good news! Dojo's just a bunch of files on disk so it doesn't require any specia
 * Install the `latest release <http://download.dojotoolkit.org/current-stable>`_ on your server
 * Install directly from :ref:`source control <developer/svn>`
 
-=================
 Use Dojo from CDN
 =================
 
 This method is quick and painless! You simply load Dojo through ``<script>`` tags pointing to the AOL (or Google) CDN. You don't need to invest any of your own server disk space or resources nor will you need to install Dojo locally in many cases. Instructions are available on using Dojo from the CDN.
 
-=============================
 Use Dojo from your Own Server
 =============================
 
@@ -44,7 +43,6 @@ And now you've got a working Dojo! Anything can be accomplished now based on the
   </body>
   </html>
 
-=========================
 Getting the Nightly Build
 =========================
 

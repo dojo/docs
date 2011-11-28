@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/FontChoice:
 
+================================
 dijit._editor.plugins.FontChoice
 ================================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.FontChoice
 
 Have you ever wanted to change the font size, font face, or block type containing the text in your document?  If so, then this plugin is for you!  It provides three drop down menu items for manipulating those aspects of your document.
 
-========
 Features
 ========
 
@@ -26,7 +26,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Preview mode in the dropdowns to show what the size or style type would appear like in the document.
 * Auto-updating of view of the current style, size, and name settings as the user moves through the document to sections with different styles.
 
-=====
 Usage
 =====
 
@@ -50,7 +49,6 @@ Once it has been required in, all you have to do is include the control names in
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with all the toolbar actions provided by the FontChoice plugin.
 
-==============
 Plugin Options
 ==============
 
@@ -73,7 +71,6 @@ An example of disabling it is below:
 
 With the preview disabled, the selects show basic text only.
 
-========
 Examples
 ========
 
@@ -135,7 +132,6 @@ Basic Usage: Plain Text Previews
     </div>
 
 
-========
 See Also
 ========
 

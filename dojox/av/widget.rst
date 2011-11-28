@@ -1,5 +1,6 @@
 .. _dojox/av/widget:
 
+===============
 dojox.av.widget
 ===============
 
@@ -14,14 +15,12 @@ dojox.av.widget
 dojox.av.widget provides base player control widgets for building a media player.
 
 
-============
 Introduction
 ============
 
 This package includes a PlayButton, VolumeButton, ProgressSlider, Status container, and the Player container. These widgets were built primarily for use with dojox.av.FLVideo, but could also be used to create players of other media types, including dojox.av.FLAudio.
 
 
-=====
 Usage
 =====
 
@@ -48,7 +47,6 @@ Usage
 See the test file in the SDK for more information.
 
 
-========
 See also
 ========
 

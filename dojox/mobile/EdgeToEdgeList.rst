@@ -1,5 +1,6 @@
 .. _dojox/mobile/EdgeToEdgeList:
 
+===========================
 dojox.mobile.EdgeToEdgeList
 ===========================
 
@@ -14,7 +15,6 @@ EdgeToEdgeList is an edge-to-edge layout list, which displays all items in equal
 
 .. image:: EdgeToEdgeList.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -42,7 +42,6 @@ Constructor Parameters
 |stateful      |Boolean   |false    |If true, the last selected item remains highlighted.                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

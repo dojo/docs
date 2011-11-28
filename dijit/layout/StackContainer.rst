@@ -1,5 +1,6 @@
 .. _dijit/layout/StackContainer:
 
+===========================
 dijit.layout.StackContainer
 ===========================
 
@@ -11,14 +12,12 @@ dijit.layout.StackContainer
 A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one).
 
 
-============
 Introduction
 ============
 
 This container is good for wizards, slide shows, and long lists or text blocks.
 
 
-=====
 Usage
 =====
 
@@ -69,7 +68,6 @@ StackContainer publishes topics
 * [widgetId]-**selectChild**.
 
 
-========
 Examples
 ========
 
@@ -162,15 +160,13 @@ Here you will see a declaratively created StackContainer
     </style>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate to next tab button                   Right arrow
 Navigate to previous tab button               Left arrow

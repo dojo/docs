@@ -1,5 +1,6 @@
 .. _dojo/attr:
 
+=========
 dojo.attr
 =========
 
@@ -11,7 +12,6 @@ dojo.attr
 A getter and setter for DOM attributes, events and CSS styles
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ If an attribute was not specified for the DOM node, it will return a falsy value
 
 Since Dojo 1.7, ``dojo.attr`` is exposed via the ``get`` and ``set`` methods of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -94,7 +93,6 @@ This function can be used to associate a function with a DOM event. Please note 
 * Internally it uses :ref:`dojo.connect <dojo/connect>` to attach an event handler. See :ref:`dojo.connect <dojo/connect>` for more details on event processing.
 * Unlike :ref:`dojo.connect <dojo/connect>` no handle is returned. It means that there is no simple way to remove the event handler: use ``dojo.attr()`` to set event handlers only in simple cases. Always consider to use :ref:`dojo.connect <dojo/connect>` and :ref:`dojo.disconnect <dojo/disconnect>` instead.
 
-========
 Examples
 ========
 
@@ -191,7 +189,6 @@ The following example will set the "style" attribute of the given dom node. When
     <button data-dojo-type="dijit.form.Button" id="buttonFour" data-dojo-props="onClick:changeStyle">Change style</button>
     <div id="testNodeThree">Hi, change my style</div>
 
-========
 See also
 ========
 

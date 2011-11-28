@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/SafePaste:
 
+==================================
 dojox.editor.plugins.SafePaste
 ==================================
 
@@ -14,7 +15,6 @@ Have you ever worried about users pasting in script tags or the like into editor
 
 This plugin extends the 'PasteFromWord' plugin.  This one adds paste interception and halts native paste events.   A dialog is presented where the user must paste the content.   The content is processed and then injected into the main editor body.  The dialog is required because browser security does not allow JavaScript to access clipboard contents directly, it has to be browser-native inserted into the dialog first.  The dialog scripts out script tags, any user-requested tags, and removes all the app-specific stuff, such as classes, styles, and such from Microsoft Word.
 
-========
 Features
 ========
 
@@ -25,7 +25,6 @@ This plugin provides the following
 * It makes use of dojox.html.format to also try to clean up and normalize the HTML as much as possible.
 * If this plugin is used, the PasteFromWord plugin is not required.
 
-=====
 Usage
 =====
 
@@ -79,7 +78,6 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
   </div>
 
 
-========
 Examples
 ========
 
@@ -135,7 +133,6 @@ Basic Usage
     </div>
 
 
-========
 See Also
 ========
 

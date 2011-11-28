@@ -1,5 +1,6 @@
 .. _dojox/mobile/Overlay:
 
+====================
 dojox.mobile.Overlay
 ====================
 
@@ -14,7 +15,6 @@ dojox.mobile.Overlay
 
 Overlay is a simple widget that slides its content (specified via innerHTML) up from the bottom when shown and slides down out of view when hidden.  It is most often used on small screen devices to allow the user to select values with touch events.
 
-=========
 Interface
 =========
 
@@ -33,7 +33,6 @@ Causes the Overlay content to slide up from the bottom.
 Hides the Overlay content.
 
 
-=======
 Example
 =======
 

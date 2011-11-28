@@ -1,5 +1,6 @@
 .. _dojox/lang/index:
 
+==========
 dojox.lang
 ==========
 
@@ -14,7 +15,6 @@ dojox.lang
 JavaScript language extensions for supporting AOP, FP and other language constructs.
 
 
-========
 Features
 ========
 
@@ -51,7 +51,6 @@ Features
   Object handling utilities for changing two objects to the same type, updating properties of objects from another object and merge two objects.
 
 
-========
 See also
 ========
 

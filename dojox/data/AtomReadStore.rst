@@ -1,5 +1,6 @@
 .. _dojox/data/AtomReadStore:
 
+==========================
 dojox.data.AtomReadStore
 ==========================
 
@@ -14,13 +15,11 @@ dojox.data.AtomReadStore
 
 The AtomReadStore is a store designed to provide read-only access to `Atom XML <http://en.wikipedia.org/wiki/Atom_(standard)>`_ documents. Atom XML is a common document format for web feeds providing lists of data. It is similar in many respects to RSS, but provides much more flexibility.
 
-===========
 API Support
 ===========
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
-==================
 Constructor Params
 ==================
 
@@ -42,7 +41,6 @@ The following parameters are supported by the GoogleFeedStore implementation.
 |               |**New in Dojo 1.4.**                                                                      |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 
-===============
 Item Attributes
 ===============
 
@@ -66,7 +64,6 @@ The following attributes are available on items returned from the AtomReadStore:
 |author           |A JSON object containing one or two elements, '''name''' and '''uri'''. The former is the name of the author, the latter is the authors personal uri, or web page. E.g. '''var author = store.getValue(item, 'author'); alert("Name is " + author.name + " and homepage is " + author.uri); |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
@@ -81,13 +78,11 @@ Query Example With One Parameter
     user: '1234'
   }
 
-====================================================
 Examples in Dojo Explorer
 ====================================================
 Many examples are available in Dojo Explorer, at http://dojocampus.org/explorer/#Dojo_Data_AtomReadStore
 
 
-====================================================
 Example Usage of using AtomReadStore with a DataGrid
 ====================================================
 

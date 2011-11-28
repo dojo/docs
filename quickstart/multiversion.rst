@@ -1,5 +1,6 @@
 .. _quickstart/multiversion:
 
+====================================
 Multiple Versions of Dojo on a Page
 ====================================
 
@@ -11,7 +12,6 @@ Multiple Versions of Dojo on a Page
 
 Dojo has some special configuration and build options to allow more than one version of Dojo to be used on a web page.
 
-============
 Introduction
 ============
 

@@ -1,5 +1,6 @@
 .. _dojox/data/dom:
 
+===============
 dojox.data.dom
 ===============
 
@@ -13,14 +14,12 @@ dojox.data.dom
 
 A set of DOM manipulation functions.
 
-============
 Introduction
 ============
 
 When working with DOM objects, these additional functions can come in extremely handy.  Their relationship to each other is loose and they are basically a catch-all for functions not found elsewhere.
 
 
-=====
 Usage
 =====
 

@@ -1,5 +1,6 @@
 .. _dojo/Deferred:
 
+=============
 dojo.Deferred
 =============
 
@@ -13,7 +14,6 @@ dojo.Deferred
 dojo.Deferred manages the communication between asynchronous threads (Callbacks). dojo.Deferred encapsulates a sequence of callbacks in response to a value that may not yet be available.  All of dojo.xhr* functions make use of this class, as do many others, such as dojo.io.script.
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ The basic premise is that an asynchronous task (or even a synchronous task) can 
 
 As with all dojo classes, please see the API documentation for more detail on using dojo.Deferred.
 
-=====
 Usage
 =====
 
@@ -59,7 +58,6 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
       //Do something on failure.
   });
 
-=========
 dojo.when
 =========
 
@@ -69,7 +67,6 @@ As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base
 
 Deferred objects also have a ``promise`` property that provides a read-only view of the result of the operation. This provides a safe robust object that can be passed to other functions without worry of the Deferred being mutated or improperly resolved against expectations.
 
-========
 Examples
 ========
 
@@ -113,7 +110,6 @@ Example 1: Creating a deferred and adding callbacks
 
 
 
-========
 See Also
 ========
 

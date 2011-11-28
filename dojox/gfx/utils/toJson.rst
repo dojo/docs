@@ -1,5 +1,6 @@
 .. _dojox/gfx/utils/toJson:
 
+======================
 dojox.gfx.utils.toJson
 ======================
 
@@ -12,7 +13,6 @@ dojox.gfx.utils.toJson
 The *dojox.gfx.utils.toJson* is a helper function designed to serialize a dojox.gfx.Surface object into a JSON representation for a variety of scenarios, such as sending it across the wire to save, using it to copy a surface, and so on. The function itself is simple to use.
 
 
-=====
 Usage
 =====
 
@@ -28,7 +28,6 @@ So basic usage is:
   var json = dojox.gfx.utils.toJson(mySurface);
 
 
-========
 Examples
 ========
 
@@ -77,7 +76,6 @@ Programmatic example
     </pre>
 
 
-========
 See also
 ========
 

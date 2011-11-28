@@ -1,5 +1,6 @@
 .. _dijit/form/CurrencyTextBox:
 
+==========================
 dijit.form.CurrencyTextBox
 ==========================
 
@@ -13,7 +14,6 @@ dijit.form.CurrencyTextBox
 CurrencyTextBox widgets inherit all the attributes and behaviors of the :ref:`NumberTextBox <dijit/form/NumberTextBox>` widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
 
 
-=====
 Usage
 =====
 
@@ -24,7 +24,6 @@ Usage
 * The optional boolean ``fractional`` property of the ``constraints`` object attribute can be set to require/refuse fractional input.
 
 
-========
 Examples
 ========
 
@@ -87,7 +86,6 @@ In this example using euros with German formatting, the invalid message contains
 	<input id="eurde">EUR
         
 
-=============
 Accessibility
 =============
 

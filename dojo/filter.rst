@@ -1,9 +1,9 @@
 .. _dojo/filter:
 
+===========
 dojo.filter
 ===========
 
-================
 Usage & examples
 ================
 

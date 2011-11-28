@@ -1,5 +1,6 @@
 .. _dijit/themes:
 
+==================
 Themes and Theming
 ==================
 
@@ -37,7 +38,6 @@ and by the addition of a theme class name on a parent element. By using the ``<b
 
 It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential latency issues.
 
-================
 Available Themes
 ================
 
@@ -115,7 +115,6 @@ See `Nihilo <http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/di
 ----
 
 
-=======================
 CSS Directory Structure
 =======================
 
@@ -163,7 +162,6 @@ The themeX.css file has rules like:
   .claro .dijitButtonNode { ... }
 
 
-================================
 Common and theme-specific images
 ================================
 
@@ -267,7 +265,6 @@ Tundra theme-specific
 The icons are located in the images directory (along with background images) and are referenced from the widget via CSS rules (via the background-image property of a dummy node).
 
 
-===========
 Theme Setup
 ===========
 
@@ -306,7 +303,6 @@ It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid
 
 
 
-=====================
 Using multiple themes
 =====================
 
@@ -352,7 +348,6 @@ To have different sections of your document that are different themes, you just 
 All the widgets in the first tab will have the Tundra theme and all the widgets in the second tab will have the Soria theme, and the rest of the UI will be Claro.
 
 
-=======================
 Theming several widgets
 =======================
 
@@ -394,7 +389,6 @@ This is the base list of files needed when theming only a few widgets (such as T
       templates/ <widgets html files> <-- Some Dijit widget HTML files
 
 
-======================
 Widget CSS inheritance
 ======================
 
@@ -410,7 +404,6 @@ The following Claro widgets inherit styling from other Claro widgets:
 - dijit.Toolbar inherits and overwrites dijit.form.Button.css
 
 
-===================
 Theme customization
 ===================
 
@@ -712,7 +705,6 @@ The class names used on widgets do not change based on the theme, although they 
 
 
 
-===================================
 Applying style directly to a widget
 ===================================
 

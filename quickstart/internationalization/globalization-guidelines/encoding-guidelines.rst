@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/globalization-guidelines/encoding-guidelines:
 
+==================================
 Globalization Guidelines: Encoding
 ==================================
 
@@ -13,7 +14,6 @@ Globalization Guidelines: Encoding
 
 The following guidelines should be used to implement internationalization in encoding.
 
-==================
 The UTF-8 Encoding
 ==================
 
@@ -25,7 +25,6 @@ This is a general rule for Web application design and development. You should ma
 The rest of this guideline describes the details of setting encodings in a Web application.
 
 
-===================
 UTF-8 File Encoding
 ===================
 
@@ -76,7 +75,6 @@ By default, browsers assume that all files referred by an HTML file use the same
  </html>
 
 
-==============================
 Sending and Receiving Requests
 ==============================
 
@@ -166,7 +164,6 @@ The right way is to encode name1 first:
  </script>
 
 
-=================
 Sending Responses
 =================
 

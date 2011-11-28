@@ -1,5 +1,6 @@
 .. _dojox/data/ClientFilter:
 
+=======================
 dojox.data.ClientFilter
 =======================
 
@@ -15,14 +16,12 @@ dojox.data.ClientFilter
 An abstract data store module for adding updateable result set functionality to an existing data store class.
 
 
-============
 Introduction
 ============
 
 This is an abstract class that data stores can extend to add updateable result set functionality as well as client side querying capabilities. This enables widgets to be aware of how active results change in response to the modifications/notifications.
 
 
-=====
 Usage
 =====
 
@@ -41,7 +40,6 @@ matchesQuery(item, request)
 You can define a property on this object instance "**cacheByDefault**" to a value of true that will cause all queries to be cached by default unless the cache queryOption is explicitly set to false. This can be defined in the constructor options for ServiceStore/JsonRestStore and subtypes.
 
 
-========
 Examples
 ========
 
@@ -88,7 +86,6 @@ The important note is that you must load ClientFilter before you dojo.require a 
  </script>
 
 
-========
 See also
 ========
 

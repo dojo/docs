@@ -1,5 +1,6 @@
 .. _dojox/data/QueryReadStore/example:
 
+=========================
 dojox.data.QueryReadStore
 =========================
 

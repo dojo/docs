@@ -1,5 +1,6 @@
 .. _dojox/mobile/ToolBarButton:
 
+==========================
 dojox.mobile.ToolBarButton
 ==========================
 
@@ -14,7 +15,6 @@ ToolBarButton is a button that is placed in the Heading widget. It is a subclass
 
 .. image:: ToolbarButton.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -75,13 +75,11 @@ Parameters from this widget:
 |selected      |Boolean   |false    |If true, the button is in the selected status.                                                             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-=====
 Usage
 =====
 
 Use this widget as child widgets of the :ref:`dojox.mobile.Heading <dojox/mobile/Heading>` widget.
 
-========
 Examples
 ========
 

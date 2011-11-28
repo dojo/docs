@@ -1,5 +1,6 @@
 .. _dojox/mobile/Heading:
 
+====================
 dojox.mobile.Heading
 ====================
 
@@ -16,7 +17,6 @@ Heading can have one or more ToolBarButton widgets as its children.
 
 .. image:: Heading.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -46,7 +46,6 @@ Constructor Parameters
 |              |          |         |an icon position for each icon.                                                                            |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

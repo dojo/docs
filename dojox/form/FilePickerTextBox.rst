@@ -1,5 +1,6 @@
 .. _dojox/form/FilePickerTextBox:
 
+============================
 dojox.form.FilePickerTextBox
 ============================
 
@@ -14,14 +15,12 @@ dojox.form.FilePickerTextBox
 A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown
 
 
-============
 Introduction
 ============
 
 The file picker text box allows for easy selecting of a file from the server - and makes it embeddable into a form
 
 
-=====
 Usage
 =====
 
@@ -45,7 +44,6 @@ Additional attr value
 You can call widget.attr("pathValue") to get (or set) the value of the widget - using "string" format (ie. "/path/to/file.txt") instead of using the item. Items in the "constraints" parameter will be passed in to the file picker as creation parameters.
 
 
-========
 Examples
 ========
 

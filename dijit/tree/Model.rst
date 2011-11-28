@@ -1,5 +1,6 @@
 .. _dijit/tree/Model:
 
+================
 dijit.tree.Model
 ================
 

@@ -1,5 +1,6 @@
 .. _dojox/robot:
 
+====================
 dojox.robot.recorder
 ====================
 

@@ -1,5 +1,6 @@
 .. _dijit/TitlePane:
 
+===============
 dijit.TitlePane
 ===============
 
@@ -10,21 +11,18 @@ dijit.TitlePane
     :depth: 2
 
 
-============
 Introduction
 ============
 
 A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard. It extends :ref:`ContentPane <dijit/layout/ContentPane>` but since it isn't used inside other layout widgets it's not in the dijit.layout module.
 
 
-=====
 Usage
 =====
 
 The constructor for TitlePane takes the following possible parameters in its keyword arguments:
 
-=========  ==================================  ==================================================
-Parameter  Type                                Description
+=========  ==================================  Parameter  Type                                Description
 =========  ==================================  ==================================================
 title      String                              The title to be displayed in the pane header. The default is an empty string.
 content    DomNode | NodeList | dijit._Widget  The content (innerHTML) to be displayed in the pane.
@@ -32,7 +30,6 @@ open       Boolean                             Boolean option whether or not to 
 =========  ==================================  ==================================================
 
 
-========
 Examples
 ========
 
@@ -109,7 +106,6 @@ For example:
     </div>
 
 
-=============
 Accessibility
 =============
 
@@ -118,8 +114,7 @@ Keyboard
 
 Each title pane title is included in the tab order of the document.
 
-===================================     =====================================================
-Action                                  Key
+===================================     Action                                  Key
 ===================================     =====================================================
 toggle open/close of the title pane     enter or space key with focus on the title pane title
 Navigate into an opened title pane      tab

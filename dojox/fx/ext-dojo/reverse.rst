@@ -1,5 +1,6 @@
 .. _dojox/fx/ext-dojo/reverse:
 
+=========================
 dojox.fx.ext-dojo.reverse
 =========================
 

@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/LinkDialog:
 
+================================
 dijit._editor.plugins.LinkDialog
 ================================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.LinkDialog
 
 Have you ever wanted to insert a hyperlink into a document you are editing in the Dojo RTE (:ref:`dijit.Editor <dijit/Editor>`)?  Have you wanted to insert images as well?  If so, then this plugin provides you a basic set of dropdown dialogs to allow you to do just that.  The dialogs are not complex and are intended as example implementations so that users can implement dialogs of their own, but they still work fairly well as is.
 
-========
 Features
 ========
 
@@ -31,13 +31,11 @@ Once required in and enabled, this plugin provides the following features to dij
 * Single-clicking an image should select the image.  This makes it easy to select, then edit, an image in the page
 
 
-===========
 Limitations
 ===========
 
 * You can't create a hyperlink that has no description and just wraps an image
 
-=====
 Usage
 =====
 
@@ -62,13 +60,11 @@ Once it has been required in, all you have to do is include it in the list of ex
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with all the toolbar actions provided by the LinkDialog plugin.
 
 
-===================
 A11Y Considerations
 ===================
 
 * When using the dialog to insert images, please be sure to provide a description.  This gets put as the alt text of the image tag and is used by screen readers to read the image information to the page viewer.
 
-========
 Examples
 ========
 
@@ -104,7 +100,6 @@ Basic Usage
     </div>
 
 
-========
 See Also
 ========
 

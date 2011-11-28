@@ -1,5 +1,6 @@
 .. _dojo/when:
 
+=======================
 Deferred.when/dojo.when
 =======================
 
@@ -15,7 +16,6 @@ dojo.when provides the ability to define a callback (and error handler) for the 
 As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor).  It is aliased to ``dojo.when`` for backward-compatibility.
 
 
-=====
 Usage
 =====
 
@@ -59,7 +59,6 @@ Example 2:  Creating and calling a deferred (Dojo < 1.7 style).
     console.log(value);
   }
 
-========
 See Also
 ========
 

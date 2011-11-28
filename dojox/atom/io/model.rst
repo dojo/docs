@@ -1,5 +1,6 @@
 .. _dojox/atom/io/model:
 
+===================
 dojox.atom.io.model
 ===================
 
@@ -13,13 +14,11 @@ dojox.atom.io.model
 
 The *dojox.atom.io.model* module is a JavaScript model of an ATOM feed.
 
-============
 Introduction
 ============
 
 This module handles the parsing of the ATOM XML into a JavaScript structure that can be easily modified and then serialized out as XML.  This set of classes handles browser idiosyncrasies when parsing the XML, making it very cross-browser compatible and is far simpler to work with than using DOM apis to walk the ATOM XML document.
 
-============================
 Classes defined in the model
 ============================
 
@@ -61,7 +60,6 @@ When the model file is loaded, several classes are defined that represent ATOM t
   Atom collection element
 
 
-=================
 Utility Functions
 =================
 
@@ -85,13 +83,11 @@ There are also several utility functions defined by the model.  These functions 
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
 
 
-=====
 Usage
 =====
 
 The model is intended for creating, parsing, and working with ATOM feeds in Javascript and being able to easily serialize them out.  Generally to create a Feed you would use dojo.xhrGet() to load an XML document into a DOM, then pass that dom Object to buildFromDom() of a newly instantiated Atom Feed model class.  It will then construct all its subclasses and set its attributes correctly.  For specific usage, please refer to the examples section.
 
-========
 Examples
 ========
 
@@ -268,7 +264,6 @@ Example 3: Modify a loaded feed
 
 
 
-========
 See Also
 ========
 

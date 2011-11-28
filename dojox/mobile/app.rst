@@ -1,5 +1,6 @@
 .. _dojox/mobile/app:
 
+================
 dojox.mobile.app
 ================
 
@@ -14,7 +15,6 @@ dojox.mobile.app
 
 ``dojox.mobile.app`` provides a simple framework to develop mobile web applications. It handles view definitions and resources in a declarative fashion.
 
-==============
 Initialization
 ==============
 
@@ -60,7 +60,6 @@ To load an initial scene other than 'main', set the 'initialScene' value in appI
         };
 
 
-==============
 View resources
 ==============
 
@@ -70,13 +69,11 @@ You should use view resources instead of ``dojo.require`` to support browsers wi
 
 Assistants do not have to be specified as view resource. They're implicitly loaded with each view.
 
-======
 Scenes
 ======
 
 Scenes are simply HTML templates, they will not be parsed for widget automatically, you'll have to handle this in the scene assistant.
 
-==========
 Assistants
 ==========
 
@@ -88,7 +85,6 @@ Each view should come with an assistant, which is responsible for the JS setup o
 
 You can access to the SceneController of the assistant's scene through its field ``controller``, e.g. from any scene assistant use this.controller.
 
-===============
 SceneController
 ===============
 
@@ -99,7 +95,6 @@ SceneController provides utilities for a scene assistant, and also takes care of
  * ``showAlertDialog({title: '', text: '', buttons: [{btnClass: 'cssClass', label: ''}], defaultButtonLabel: '', onChose: function(pressedButton) {} })``: Display an alert dialog, if no buttons are provided, a simple "OK" one is created.  You can alternatively show an alert dialog from anywhere by calling dojo.publish("/dojox/mobile/app/alert", params), where the params variable is the same as that passed to showAlertDialog;
  * ``popupSubMenu({ choices: [{className: 'cssClass', label: '', value: ''}], onChoose: function(value) {}, fromNode: node})``: display a popup menu whose entries are ``choices``. ``onChoose`` with the selected value. If ``fromNode`` is null, menu will be displayed roughly on the top of the screen.
 
-===============
 StageController
 ===============
 

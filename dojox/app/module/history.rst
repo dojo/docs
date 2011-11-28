@@ -1,5 +1,6 @@
 .. _dojox/app/module/history:
 
+============================
 dojox.app.module.history
 ============================
 
@@ -9,7 +10,6 @@ dojox.app.module.history
 
 dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
 
-==========
 Usage
 ==========
 
@@ -51,7 +51,6 @@ To start backward transition, all we need to do is to add a back button on the H
 
   <h1 dojoType="dojox.mobile.Heading" back="Home">Data Binding Example</h1>
 
-=====================
 Sample
 =====================
 Sample excerpt of view template with regarding to navigation and history

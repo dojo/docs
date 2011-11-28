@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/Filter:
 
+======================================
 dojox.grid.EnhancedGrid.plugins.Filter
 ======================================
 
@@ -12,7 +13,6 @@ Filter plugin provides row filtering functionality for grid.
 .. contents::
 	:depth: 2
 
-============
 Introduction
 ============
 
@@ -222,7 +222,6 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
     </style>
 
 
-=============
 Configuration
 =============
 
@@ -269,8 +268,7 @@ As shown in the above code, you can simply set the ``filter`` property to true o
 
 All the available configuration properties are:
 
-=============================  ========  ===============  ================================================================================================================
-Property                       Type      Default Value    Description
+=============================  ========  ===============  Property                       Type      Default Value    Description
 =============================  ========  ===============  ================================================================================================================
 itemsName                      String    "items"          The name of the items in the data store.
                                                           For example, if the data in the store are records of songs, you may set it to "songs",
@@ -312,8 +310,7 @@ For example:
 
 The following properties are available for column configuration:
 
-====================================  ===================================  ========================================  ============================================================================================
-Property                              Type                                 Default Value                             Description
+====================================  ===================================  ========================================  Property                              Type                                 Default Value                             Description
 ====================================  ===================================  ========================================  ============================================================================================
 filterable                            Boolean                              true                                      To set whether this column can be filtered.
 datatype                              String                               "string"                                  The data type of this column, determining what conditions could be applied.
@@ -326,8 +323,7 @@ dataTypeArgs(for boolean type)        Object                               {true
 
 Here is a list of all the condition names (case insensitive)
 
-======================	===================================
-Condition Name			Available Data Types
+======================	Condition Name			Available Data Types
 ======================	===================================
 equalTo					number, string, date, time, boolean
 lessThan				number, date, time
@@ -345,7 +341,6 @@ range					date, time
 isEmpty				number, string, date, time, boolean
 ======================	===================================
 
-=====
 Usage
 =====
 
@@ -383,8 +378,7 @@ Actually there's a set of APIs related to filterbar:
 showFilterBar(toShow, useAnim, animArgs):
 	Show/Hide filter bar
 
-==============  ==================  ==========================  =============================================
-Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  =============================================
 toShow          Boolean				Mandatory                   To show or to hide
 useAnim         Boolean             Optional(default to true)   When showing/hiding, whether to use animation.
@@ -445,7 +439,6 @@ Filter Status Tooltip
 When a filter exists, the Filter Status Tooltip shows every rule of the current filter. If there are multiple rules, you can delete some of them by clicking the red 'X' at the right side of every rule.
 
 
-=====================================
 Introduction to Server-Side Filtering
 =====================================
 
@@ -503,8 +496,7 @@ If you'd like to use a stateful server, which means the filter definition will o
 
 Then the filter store layer will send the commands via POST before normal store fetch. There are at most 4 fields in this posted data:
 
-==========  ===========  =================  ===================  ==========================================================================================================
-Name        Data Type    Always Available   Value For Example    Description
+==========  ===========  =================  ===================  Name        Data Type    Always Available   Value For Example    Description
 ==========  ===========  =================  ===================  ==========================================================================================================
 cmdlayer    String       Yes                "filter"             The name of the current store layer. In this case, it's always "filter".
 enable      Integer      Yes                true                 A command to enable/disable the current store layer (in this case, the filter layer).
@@ -546,8 +538,7 @@ This structure represents an expression, which consists of operators and operand
 
 All available properties in this filter definition JSON are listed below:
 
-=====  ==========  =================  ==================  =====================================================================================================================================
-Name   Data Type   Always Available   Value For Example   Description
+=====  ==========  =================  ==================  Name   Data Type   Always Available   Value For Example   Description
 =====  ==========  =================  ==================  =====================================================================================================================================
 op     String      Yes                "equal"             The name of an operator or a data type. Currently supported operators are:
                                                           and | or | not | all | any | equal | less | lessEqual | larger | largerEqual | contains | startsWith | endsWith
@@ -609,8 +600,7 @@ Supported Operators
 
 Here is a summary of all supported operators used in filter definition. The "Name" of each operator is passed as the ``op`` field in the filter definition.
 
-===========  ====================================  =======================  ================================================================================
-Name         Valid Data Types                      Number of Operands       Meaning
+===========  ====================================  =======================  Name         Valid Data Types                      Number of Operands       Meaning
 ===========  ====================================  =======================  ================================================================================
 and          boolean                               2                        Logic AND
 or           boolean                               2                        Logic OR
@@ -629,7 +619,6 @@ isEmpty      string, number, date, time, boolean   1                        The 
 ===========  ====================================  =======================  ================================================================================
 
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/form/FileUploader:
 
+=======================
 dojox.form.FileUploader
 =======================
 
@@ -12,7 +13,6 @@ dojox.form.FileUploader
 
 Handles multiple file uploading to a server. DEPRECATED: dojox.form.FileUploader is no longer supported and will be removed in 2.0. Suggested that you use :ref:`dojox.form.Uploader <dojox/form/Uploader>` instead.
 
-=====
 Usage
 =====
 
@@ -57,7 +57,6 @@ Dojo Version 1.6.0
 
 dojox.form.FileUploader is now deprecated. Use :ref:`dojox.form.Uploader <dojox/form/Uploader>` instead.
 
-===============
 IMPORTANT NOTES
 ===============
 
@@ -79,7 +78,6 @@ Another limitation with using Flash is passing data back and forth. There is a p
 
 Currently the only workaround is to *don't do that*.
 
-=====================
 Updating Your Release
 =====================
 
@@ -98,7 +96,6 @@ and optionally:
 
 Note that if you are moving these files into Dojo 1.2 or less, you will have to change some of the code in the FileUploader to not use the 1.3 html method dojo.destroy() and replace it with the previous version of dojo._destroyElement()
 
-======================================
 FileUploader Functionality 1.3.2 - 1.5
 ======================================
 
@@ -299,7 +296,6 @@ Because of the complex nature of the FileUploader code (or more accurately, the 
 
 **devMode**: Changing this parameter to true will set the opacity of the HTML upload button to 100% and remove transparency from the Flash upload button. This helps to determine of the button is being positioned correctly.
 
-===========
 Server Side
 ===========
 
@@ -490,7 +486,6 @@ More references to this issue:
  - http://wiki.modxcms.com/index.php/What_is_mod_security_and_how_does_it_affect_me
  - http://www.modsecurity.org/documentation/modsecurity-apache/1.9.3/html-multipage/06-special_features.html
 
-=====
 Demos
 =====
 

@@ -1,5 +1,6 @@
 .. _dojox/widget/FisheyeList:
 
+========================
 dojox.widget.FisheyeList
 ========================
 
@@ -14,14 +15,12 @@ dojox.widget.FisheyeList
 A menu similar to the fish eye menu on the Mac OS.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -55,7 +53,6 @@ Widget Demonstration
 http://demos.dojotoolkit.org/demos/fisheye/
 
 
-========
 See also
 ========
 

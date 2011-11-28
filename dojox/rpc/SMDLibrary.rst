@@ -1,5 +1,6 @@
 .. _dojox/rpc/SMDLibrary:
 
+==========
 SMDLibrary
 ==========
 

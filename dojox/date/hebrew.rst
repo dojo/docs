@@ -1,5 +1,6 @@
 .. _dojox/date/hebrew:
 
+=================
 dojox.date.hebrew
 =================
 
@@ -14,13 +15,11 @@ dojox.date.hebrew
 
 Implements the traditional Hebrew calendar. This is the civil calendar in Israel and the liturgical calendar of the Jewish faith worldwide.
 
-============
 Introduction
 ============
 
 The Hebrew calendar is lunisolar and thus has a number of interesting properties that distinguish it from the Gregorian. Months start on the day of (an arithmetic approximation of) each new moon. Since the solar year (approximately 365.24 days) is not an even multiple of the lunar month (approximately 29.53 days) an extra "leap month" is inserted in 7 out of every 19 years. To make matters even more interesting, the start of a year can be delayed by up to three days in order to prevent certain holidays from falling on the Sabbath and to prevent certain illegal year lengths. Finally, the lengths of certain months can vary depending on the number of days in the year.
 
-=====
 Usage
 =====
 
@@ -61,7 +60,6 @@ The Hebrew calendar implemented in this package can be used in conjunction with 
 
 .. image:: hebrew.png
 
-========
 Examples
 ========
 
@@ -109,7 +107,6 @@ Code snippet below illustrates usage of Hebrew calendar in the context of graphi
   </body></html>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/fx/wipeTo:
 
+==============
 dojo.fx.wipeIn
 ==============
 

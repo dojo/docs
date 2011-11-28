@@ -1,5 +1,6 @@
 .. _dijit/form/Button:
 
+=================
 dijit.form.Button
 =================
 
@@ -11,7 +12,6 @@ dijit.form.Button
     :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ The dijit.form.Button widget is a representation of a normal <button> or <input 
 **When creating dijit Buttons declaratively from a <button> element, you *must* specify a type attribute or it will not work consistently across browsers (in IE8, the type will incorrectly default to "submit").**
 
 
-========
 Examples
 ========
 
@@ -123,15 +122,13 @@ You can change an icon of a Button using its iconClass attribute. Following exam
     <button data-dojo-type="dijit.form.Button" id="toggleButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">Click me!</button>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate to a button                          tab - all buttons are in the tab order
 Activate the button                           enter or space key
@@ -150,7 +147,6 @@ Screen Reader
 
 In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
 
-========
 See also
 ========
 

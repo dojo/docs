@@ -1,5 +1,6 @@
 .. _dojo/clone:
 
+===============
 dojo.clone
 ===============
 
@@ -13,7 +14,6 @@ dojo.clone
 
 Part of Base Dojo (dojo.js) - Clones `anything` objects and/or nodes, returning a new `anything`.
 
-=====
 Usage
 =====
 

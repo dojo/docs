@@ -1,5 +1,6 @@
 .. _dojox/data:
 
+==========
 dojox.data
 ==========
 
@@ -13,7 +14,6 @@ dojox.data
 The DojoX Data project is a container for extensions and extra example stores that implement the dojo.data APIs. It may also contain utility functions for working with specific types of data.
 
 
-========
 Features
 ========
 
@@ -154,7 +154,6 @@ Features
   A read and write interface to basic XML data
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dijit/Calendar:
 
+===============
 dijit.Calendar
 ===============
 
@@ -18,7 +19,6 @@ The Calendar widget has been supported as a standalone widget since version 1.4.
 Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in :ref:`dojox.date <dojox/date>`.
 
 
-========
 Examples
 ========
 
@@ -244,21 +244,18 @@ With a local custom template to change the layout (does not work against CDN)
       }
     </style>
 
-====
 Note
 ====
 
 dijit._Calendar was upgraded to dijit.Calendar in version 1.4. An alias is provided for backwards compatibility.
 
 
-========
 See Also
 ========
 
   * :ref:`dojox.widget.Calendar <dojox/widget/Calendar>` - An enhanced but still experimental calendar widget which has additional capabilities like year-only views and animation effects.
 
 
-=============
 Accessibility
 =============
 
@@ -267,8 +264,7 @@ As of 1.6 full keyboard support has been implemented for the Calendar.
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate between date cells                   Left, Right, Up, and down arrows
 Navigate to same day in next month            Page-down

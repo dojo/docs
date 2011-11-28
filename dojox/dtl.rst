@@ -1,5 +1,6 @@
 .. _dojox/dtl:
 
+=========
 dojox.dtl
 =========
 
@@ -15,7 +16,6 @@ once and rendered indefinitely afterward. Templates consist of simple tags
 and filters.
 
 
-========
 Overview
 ========
 
@@ -53,7 +53,6 @@ allows for new DOM-centric capabilities.
     </div>
 
 
-=============
 Markup Syntax
 =============
 
@@ -62,7 +61,6 @@ Since Dojo implements markup just as it is in Django's implementation, the best 
 But in case you are just itching to know what it looks like, it's made up of some simple parts: ``{% tags %}``, ``{{ variables }}``, ``{{ variables|filtered }}`` and ``{{ variables|more:"advanced"|filtering }}``. Sometimes tags have groupings of tags, sometimes they work alone.
 
 
-=====================
 Template Constructors
 =====================
 
@@ -75,7 +73,6 @@ We have 2 base constructors when using DTL outside of a widget: ``dojox.dtl.Temp
 Both of these constructors can take either plain text or a URL.
 
 
-==============================
 Using the Template Constructor
 ==============================
 
@@ -131,7 +128,6 @@ To use, make sure you require the ``dojox.dtl.ext-dojo.NodeList`` module, which 
     </script>
 
 
-================
 Writing a Widget
 ================
 
@@ -163,7 +159,6 @@ The template will be rendered using the widget object as its context. If you don
     </script>
 
 
-====================================
 Differences with the ``extends`` tag
 ====================================
 
@@ -192,7 +187,6 @@ The significantly better way is partly outlined in the section above on ``dojo.m
     });
 
 
-=======================================
 Differences with the ``Context`` Object
 =======================================
 

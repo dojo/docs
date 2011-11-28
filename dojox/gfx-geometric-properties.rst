@@ -1,5 +1,6 @@
 .. _dojox/gfx-geometric-properties:
 
+================
 dojox.gfx.matrix
 ================
 
@@ -11,7 +12,6 @@ dojox.gfx.matrix
 .. contents::
   :depth: 3
 
-===============================
 Coordinates and transformations
 ===============================
 
@@ -37,7 +37,6 @@ There is a shortcut for multiplication (see multiply_ for details) --- is an arr
 
 :ref:`dojox.gfx.matrix <dojox/gfx/matrix>` defines ``Matrix2D`` class, as well as numerous helpers (``Matrix2D`` is propagated to ``dojox.gfx`` namespace for convenience). Most important of them (all in ``dojox.gfx.matrix`` namespace) are listed below.
 
-==========================
 Matrix2D and normalization
 ==========================
 
@@ -80,7 +79,6 @@ There is one more useful function: ``normalize(m)``, which returns Matrix2D_:
 
 The same normalization effect can be achieved with creating a matrix directly.
 
-=========
 Constants
 =========
 
@@ -106,7 +104,6 @@ flipXY
 
 Changes the sign of all coordinates. This matrix rotates the picture by 180 degrees around ``(0, 0)`` point. Another way to say it: it mirrors all points around ``(0, 0)``.
 
-===============
 Matrix creators
 ===============
 
@@ -181,7 +178,6 @@ Signatures: ``project(a, b)``, ``project(p)``. Projects points on a line that go
 
   * on the line ``[(0, 0), (p.x, p.y)]``
 
-==================
 General operations
 ==================
 
@@ -225,7 +221,6 @@ More complex example: imagine you have a surface 500 by 500 pixels, and you want
 
 You can see that this kind of transformations follow a ``"sandwich"`` pattern, where the first and the last transformation move an immutable point to/from the origin of coordinates before performing other origin-based operations. The first operation is usually a translation to the origin, and the last is the inverse of the same translation.
 
-==================
 "Sandwich" helpers
 ==================
 

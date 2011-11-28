@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines:
 
+====================================================
 Globalization Guidelines: Locale and Resource Bundle
 ====================================================
 
@@ -11,7 +12,6 @@ Globalization Guidelines: Locale and Resource Bundle
 .. contents::
    :depth: 2
 
-======================
 Locale Setting in Dojo
 ======================
 
@@ -36,7 +36,6 @@ If dojoConfig.locale is undefined, Dojo will consult the browser's navigator obj
  ...
 
 
-=====================
 Resource Bundle Files
 =====================
 
@@ -45,8 +44,7 @@ You must always use resource bundles to store the strings displayed to users.
 
 Dojo introduces resource bundle into JavaScript. If you are familiar with Java resource bundle, you can find that Dojo resource bundle is very similar to Java resource bundle. The following table shows a summary of the differences between Java and Dojo:
 
-=================  ================================  ===================================================
-Resource bundle:   Java                              Dojo
+=================  ================================  Resource bundle:   Java                              Dojo
 =================  ================================  ===================================================
 File Format        Properties file                   JSON file
 Locale Identifier  Suffix of file name               Directory name
@@ -89,7 +87,6 @@ And in Dojo (4 directories and 6 files):
 The fallback strategy in Dojo is the same as that in Java.
 
 
-=====================
 Using Resource Bundle
 =====================
 
@@ -147,7 +144,6 @@ Code block B:
 The first method is preferred as it is less brittle.
 
 
-======
 Builds
 ======
 
@@ -159,7 +155,6 @@ You may make a build to include resource bundles in the locales that you use
 Resource bundles can either be included in a build or be used without a build. If you use resource bundles without a build, the first request for each resource bundle will generate N+1 HTTP requests when it searches the server for values, where N is the number of segments in the target locale. For example, a call of dojo.requireLocalization("my.app", "bar") in the "zh-cn" locale looks for "bar.js" first in the "zh-cn", then in "zh", and finally in the root. Without optimization, some of these requests might result in harmless HTTP 404 errors (page not found) if a variant does not need to override any definitions from its parent.
 
 
-===========
 Translation
 ===========
 

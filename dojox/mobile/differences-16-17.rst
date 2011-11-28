@@ -1,5 +1,6 @@
 .. _dojox/mobile/differences-16-17:
 
+===============================
 Differences between 1.6 and 1.7
 ===============================
 
@@ -8,7 +9,6 @@ Differences between 1.6 and 1.7
 .. contents::
     :depth: 2
 
-====================
 Differences from 1.6
 ====================
 
@@ -45,7 +45,6 @@ dojox.mobile.View
 
 selected="true" is no longer necessary if you just want to show the first view at startup. If you want to show a view other than the first one, adding selected="true" is still effective.
 
-===================
 New Features in 1.7
 ===================
 

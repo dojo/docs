@@ -1,5 +1,6 @@
 .. _dojox/widget/FilePicker:
 
+========================
 dojox.widget.FilePicker
 ========================
 
@@ -14,13 +15,11 @@ dojox.widget.FilePicker
 A specialized version of RollingList that handles file information
 
 
-============
 Introduction
 ============
 
 The file picker extends the rolling list to add file-specific styling (folder/file icons), as well as the concept of file system hierarchy.
 
-=====
 Usage
 =====
 
@@ -31,13 +30,11 @@ Creating a file picker is similar to creating a rolling list.  In addition to th
  * ``New in 1.3`` **selectDirectories** whether or not you want to allow selecting of directories
  * ``New in 1.3`` **selectFiles** whether or not you want to allow selecting of files
 
-=====================
 Additional attr value
 =====================
 
 You can call widget.attr("pathValue") to get (or set) the value of the widget - using "string" format (ie. "/path/to/file.txt") instead of using the item
 
-========
 Examples
 ========
 

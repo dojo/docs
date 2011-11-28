@@ -1,5 +1,6 @@
 .. _dojo/xhrPost:
 
+============
 dojo.xhrPost
 ============
 
@@ -9,7 +10,6 @@ dojo.xhrPost
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -17,14 +17,12 @@ The dojo.xhrPost() function is another the cornerstone function of AJAX developm
 
 The following information should get you up and going with dojo.xhrPost().  As with all dojo functions, always refer to the API docs for detailed information.
 
-===========
 Limitations
 ===========
 
 * Unable to post binary data. Consider :ref:`dojo.io.iframe <dojo/io/iframe>`
 * The limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`
 
-=====
 Usage
 =====
 
@@ -68,7 +66,6 @@ Handling Status Codes
 
 Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
-========
 Examples
 ========
 
@@ -182,7 +179,6 @@ Example 2: dojo.xhrPost call to send some text data
     <b>Result</b>
     <div id="response2"></div>
 
-========
 See also
 ========
 

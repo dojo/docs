@@ -1,5 +1,6 @@
 .. _dojox/lang/functional:
 
+=====================
 dojox.lang.functional
 =====================
 
@@ -13,7 +14,6 @@ dojox.lang.functional
 
 JavaScript library to support `FP <http://en.wikipedia.org/wiki/Functional_Programming>`_ techniques.
 
-========
 See Also
 ========
 

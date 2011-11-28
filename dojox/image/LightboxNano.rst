@@ -1,5 +1,6 @@
 .. _dojox/image/LightboxNano:
 
+========================
 dojox.image.LightboxNano
 ========================
 
@@ -11,7 +12,6 @@ dojox.image.LightboxNano
 
 A simple "nano" version of the lightbox.
 
-============
 Introduction
 ============
 
@@ -26,12 +26,10 @@ For being so small, it packs a handful of features:
 * Keyboard accessible.
 * Instantly makes your website awesome.
 
-=====
 Usage
 =====
 
-============  ======  ======================================================================
-Parameter     Type    Description
+============  ======  Parameter     Type    Description
 ============  ======  ======================================================================
 href          String  URL to the large image to show in the lightbox.
 duration      int     The delay in milliseconds of the LightboxNano open and close animation.
@@ -67,7 +65,6 @@ The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if
  }
 
 
-========
 Examples
 ========
 
@@ -141,20 +138,17 @@ Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id
 
  <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
 
-==========
 File Sizes
 ==========
 
 The LightboxNano is pretty small, but it relies on several other core Dojo components. If you do a custom Dojo build containing the LightboxNano and dojo.parser, the dojo.js is 96KB. If you enable HTTP compression on the web server, you can get that down to a nice 32KB.
 
-===========
 Limitations
 ===========
 
 * The LightboxNano does not reposition itself when the browser window is resize or scrolled.
 * In IE6, drop down select lists bleed through the LighboxNano layer. This can be fixed with an iframe shim. This was skipped to keep the size down and because we all want IE6 to just go away.
 
-===================
 Future Improvements
 ===================
 
@@ -163,7 +157,6 @@ There's always things that can be done to improve the LightboxNano. Here's a cou
 * Add support for displaying a caption.
 * Add support for dojox.embed to play Flash or Quicktime movies.
 
-================
 A 1.6 workaround
 ================
 
@@ -207,7 +200,6 @@ This makes a dijit attribute 'href' available inside the constructor.  However, 
 
 In this way, the LightboxNanoHelper knows to look on the source node 'n's attribute for href, and use it to create a LightboxNano.  This retains all the good behaviour of LightboxNano (preloading of large image etc.) without having to specify data-dojo-props and duplicate the href attribute.
 
-========
 See also
 ========
 

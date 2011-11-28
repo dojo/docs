@@ -1,5 +1,6 @@
 .. _build/expand-provide:
 
+============================
 Expanding dojo.provide calls
 ============================
 
@@ -12,13 +13,11 @@ Expanding dojo.provide calls
 
 Expands dojo.provide calls with faster calls at the expense of a larger file size in built layers.
 
-============
 Introduction
 ============
 
 The Dojo Build provides a mechanism for expanding :ref:`dojo.provide <dojo/provide>` calls within your code into faster javascript equivalents, avoiding expensive lookups through :ref:`dojo.getObject <dojo/getObject>` when it is otherwise safe to assume. This is a simple toggle on a build command line or profile called "expandProvide", and defaults to 'false'.
 
-=====
 Usage
 =====
 

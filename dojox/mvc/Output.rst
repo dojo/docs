@@ -1,5 +1,6 @@
 .. _dojox/mvc/Output:
 
+===========================
 dojox.mvc.Output
 ===========================
 
@@ -16,7 +17,6 @@ dojox.mvc.Output
 A simple widget that displays templated output, parts of which may be data-bound.
 
 
-======================
 Parameters
 ======================
 
@@ -29,7 +29,6 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
-=================
 Available Methods
 =================
 
@@ -39,7 +38,6 @@ Override and refresh output on value change.
 
 
 
-========
 Examples
 ========
 

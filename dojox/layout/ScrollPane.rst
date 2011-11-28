@@ -1,5 +1,6 @@
 .. _dojox/layout/ScrollPane:
 
+=======================
 dojox.layout.ScrollPane
 =======================
 
@@ -14,14 +15,12 @@ dojox.layout.ScrollPane
 dojox.layout.ScrollPane is an interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/store/JsonRest:
 
+========================
 dojo/store/JsonRest
 ========================
 
@@ -14,13 +15,11 @@ dojo/store/JsonRest
 **dojo/store/JsonRest** is a lightweight object store implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
-============
 Introduction
 ============
 
 JsonRest provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. This data store allows you to communicate with server side database/persistent data storage using the Dojo Data API with JavaScript and efficiently handles create, read, update, and delete (CRUD) operations. This can greatly simplify client server communication, interacting can be done simply using straightforward JavaScript instead of having to build your communication for CRUD actions.
 
-========
 Examples
 ========
 
@@ -43,7 +42,6 @@ Examples
    store.remove(3); // delete the object
  });
 
-==========================
 Implementing a REST Server
 ==========================
 
@@ -53,7 +51,6 @@ The JsonRest store follows `RFC 2616 <http://www.ietf.org/rfc/rfc2616.txt>`_ whe
 
 This URL will be used to retrieve items by identity and make modifications (PUT and DELETE). It is also recommended that a /{Table}/ URL is used to represent the entire collection of items for the store. When a query is performed, any query string is appended to the target URL to retrieve the results of the query. The JsonRest expects the results to be returned in an array (not in an object with an items property like some stores). The store will also POST to that URL to create new items.
 
-==============
 Method Mapping
 ==============
 
@@ -65,7 +62,6 @@ With the JsonRest store, store methods should intuitively map to HTTP methods:
 * put(object, options) - If object includes an identity property, or options includes an id, this will trigger a PUT request to {target}{id} with the request body being the provided object serialized as JSON. If no identity is provided, then a POST request is made to the store's target URL (no id appended) with the object as the body. If the options.incremental property is true, then a POST request is made to {target}{id} with the object as the body. You may also include an options.overwrite property. If overwrite is set to true, then an If-Match: * header is included. If overwrite is set to false, then an If-None-Match: * header is included.
 * add(object, options) - This behaves exactly like put(object, options), except that options.overwrite is set to false, indicating that a new object must be created.
 
-======
 Paging
 ======
 
@@ -77,7 +73,6 @@ On your server, you should look at the Range header in the request to know which
 
  Content-Range: items 0-24/66
 
-=======
 Sorting
 =======
 
@@ -108,7 +103,6 @@ If ``sortParam`` is not set, the sort value is appended without a key-value pair
   /FooObject/?foo=value1&sort(+foo,-bar)
 
 
-====
 Misc
 ====
 

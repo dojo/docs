@@ -1,5 +1,6 @@
 .. _dojox/collections:
 
+=================
 dojox.collections
 =================
 
@@ -16,14 +17,12 @@ It is intended for use by people who are looking for a little bit more functiona
 Included are the Iterator and DictionaryIterator classes, both of which can operate on standard arrays and objects (respectively).
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -37,7 +36,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -52,7 +50,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/getMarginBox:
 
+=================
 dojo.getMarginBox
 =================
 
@@ -8,7 +9,6 @@ dojo.getMarginBox
 
 Returns an object that encodes the width, height, left and top positions of the node's margin box.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ The dojo.getMarginBox function is used to obtain an object that encodes the widt
 
 Since Dojo 1.7, ``dojo.getMarginBox`` is exposed via the ``getMarginBox`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 

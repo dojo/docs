@@ -1,5 +1,6 @@
 .. _quickstart/writingWidgets/a11y:
 
+===========================
 Creating Accessible Widgets
 ===========================
 

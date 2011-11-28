@@ -1,5 +1,6 @@
 .. _dojo/cldr:
 
+=========
 dojo.cldr
 =========
 
@@ -13,14 +14,12 @@ dojo.cldr
 
 Contains data from the Common Locale Data Repository (CLDR) http://unicode.org/cldr with associated utility classes
 
-============
 Introduction
 ============
 
 This data contains tables with culturally sensitive information for hundreds of languages and country variants, such as translations of days of the week, months of the year, patterns for formatting dates and numbers. This is used by dojo.date, dojo.number, and dojo.currency to produce localized output. The nls/ directory as provided in the standard download of Dojo contains a subset of the available locales; a complete set is available by running the ant script in util/buildscripts/cldr.  See the section "Buildscripts" below for more information.  It is therefore usually not necessary to hand-craft localized copies of this information.  The unicode.org CLDR project is responsible for the choices made in these files and has both a bug tracker and survey application on their website.
 
 
-=====
 Usage
 =====
 
@@ -72,7 +71,6 @@ To trigger generation of a full set of locale resources, change into the directo
 NOTE: it is currently necessary to perform a one-time installation of the Saxon XSLT processor in ~/.ant/lib due to classpath issues and workarounds.  The ant task will do this for you. Also, ant version 1.6.5 is recommended. The build script does not properly resolve the XSLT catalog with newer versions of ant which makes the process take much longer. See ticket #7969
 
 
-========
 Examples
 ========
 
@@ -111,7 +109,6 @@ The following example prints out the monetary data (places and round) for EUR (E
     <div id="round"></div>
 
 
-========
 See also
 ========
 

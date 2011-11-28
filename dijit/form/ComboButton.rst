@@ -1,5 +1,6 @@
 .. _dijit/form/ComboButton:
 
+======================
 dijit.form.ComboButton
 ======================
 
@@ -12,7 +13,6 @@ dijit.form.ComboButton
 
 The dijit.form.ComboButton widget has a regular button on the left, and on the right has an arrow to show a drop down (often a menu).
 
-========
 Examples
 ========
 
@@ -82,15 +82,13 @@ and the other for the drop-down widget that's displayed when you press the butto
     </div>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-=========================================================    =================================================
-Action                                                       Key
+=========================================================    Action                                                       Key
 =========================================================    =================================================
 Navigate to a button                                         tab - all buttons are in the tab order
 Activate the button to display the drop down menu            enter or space key

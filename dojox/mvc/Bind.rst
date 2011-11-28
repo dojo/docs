@@ -1,5 +1,6 @@
 .. _dojox/mvc/Bind:
 
+=======================
 dojox.mvc.Bind
 =======================
 
@@ -14,7 +15,6 @@ dojox.mvc.Bind
    :depth: 2
 
 
-=================
 Available Methods
 =================
 
@@ -23,7 +23,6 @@ Available Methods
 Bind the specified property of the target to the specified property of the source with the supplied transformation.
 
 
-======================
 Parameters
 ======================
 
@@ -45,7 +44,6 @@ Parameters
 +------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
 
 
-=================
 Available Methods
 =================
 
@@ -54,7 +52,6 @@ Available Methods
 Bind the values at the sources specified in the first argument array such that a composing function in the second argument is called when any of the values changes.
 
 
-======================
 Parameters
 ======================
 

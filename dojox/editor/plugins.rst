@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins:
 
+====================
 dojox.editor.plugins
 ====================
 
@@ -11,7 +12,6 @@ dojox.editor.plugins
 
 The dojox.editor.plugins is a component is a holding place for additional features for the dijit.Editor that load via the dijit.Editor plugin infrastructure.  Some of the plugins are very stable while others may be considered less so.  Please refer to the dojox/editor/README for project status
 
-============
 Introduction
 ============
 
@@ -164,7 +164,6 @@ There are currently a small set of nice features that can be plugged into the di
   A plugin that extends the PasteFromWord plugin and adds basic content filtering and script tag removal to the dijit.Editor.  It opens a dialog where content from Word or similar programs can be pasted in, then filters are run against the input to remove extraneous HTML that causes the editor difficulty or may be security threats, leaving the injected content cleaner HTML.   It also supports a user specified list of tags that can should be stripped from the content before injecting it into the editor body.
 
 
-========
 See Also
 ========
 

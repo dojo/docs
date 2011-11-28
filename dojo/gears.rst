@@ -1,5 +1,6 @@
 .. _dojo/gears:
 
+==========
 dojo.gears
 ==========
 

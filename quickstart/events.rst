@@ -1,5 +1,6 @@
 .. _quickstart/events:
 
+==========================
 JavaScript events and Dojo
 ==========================
 
@@ -28,7 +29,6 @@ Dojo's event system is flexible and gives you a few options for connecting your 
 * how to enjoy event-based programming
 
 
-==================
 Simple Connections
 ==================
 
@@ -304,7 +304,6 @@ This issue doesn't exist when calling methods on object, for example:
 In this case calling myFunc() will call the new object.method(), which will then call bar().
 
 
-================
 The Event Object
 ================
 
@@ -339,7 +338,6 @@ Dojo normalizes the following methods with an event object:
 Additionally, :ref:`dojo.stopEvent(event) <dojo/stopEvent>` will prevent both default behavior any any propagation (bubbling) of an event.
 
 
-====================
 Page Load and Unload
 ====================
 
@@ -353,7 +351,6 @@ Dojo has three functions recommended for registering code to run on page load an
 
 Like dojo.connect(), these methods are useful because multiple pieces of code calling :ref:`dojo.ready(func) <dojo/ready>` etc. won't overwrite each other.
 
-==================
 Topic Based Events
 ==================
 
@@ -408,7 +405,6 @@ To disconnect someObject.bar from its topic, you use ``dojo.unsubscribe``, just 
   dojo.unsubscribe(topics[1]);
 
 
-=================
 Events with Dijit
 =================
 

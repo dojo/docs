@@ -1,5 +1,6 @@
 .. _todo:
 
+==============
 Docu Wiki ToDo
 ==============
 
@@ -11,7 +12,6 @@ Starting with V1.3 each new feature needs a proper documentation at docs.dojocam
 The following pages need more love:
 
 
-=========
 Dojo Core
 =========
 
@@ -32,7 +32,6 @@ Dojo Core
   needed: full page
 
 
-=====
 Dijit
 =====
 
@@ -41,7 +40,6 @@ Dijit
   needed: full page
 
 
-=====
 DojoX
 =====
 
@@ -178,7 +176,6 @@ DojoX
   add changes from http://trac.dojotoolkit.org/changeset/20698 (allow the line stroke style to be customized)
 
 
-==================================
 Integration with Dojo
 ==================================
 

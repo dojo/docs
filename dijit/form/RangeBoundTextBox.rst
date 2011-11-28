@@ -1,12 +1,12 @@
 .. _dijit/form/RangeBoundTextBox:
 
+============================
 dijit.form.RangeBoundTextBox
 ============================
 
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 

@@ -1,5 +1,6 @@
 .. _build/transforms/writeAmd:
 
+========================
 Build Transform writeAmd
 ========================
 
@@ -9,13 +10,11 @@ Build Transform writeAmd
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Writes a transformed AMD module to a destination location.
 
-===========
 Description
 ===========
 
@@ -131,7 +130,6 @@ that defines each AMD module includes a module identifier argument. This is a ba
 construct modules that can be loaded with a script tag in the context of the dojo loader operating in a legacy
 mode. Normally, this feature should be avoided.
 
-=============
 Profile Knobs
 =============
 
@@ -173,7 +171,6 @@ Layer items are Javascript objects with the following properties
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
 
-===============
 Source Location
 ===============
 

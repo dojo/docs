@@ -1,5 +1,6 @@
 .. _dojox/data/HtmlTableStore:
 
+=========================
 dojox.data.HtmlTableStore
 =========================
 
@@ -66,7 +67,6 @@ The following example shows an HTML table that this store can read:
 
 **Note:** The table rows in the <tbody> tag are the items. The <thead> tag is used for defining the attribute name for each column in the table row for an item.
 
-==================
 Constructor params
 ==================
 
@@ -82,19 +82,16 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 |             |required.                                                                                 |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 
-===============
 Item Attributes
 ===============
 The item attributes are defined by the <thead>  tag of the referenced table. Each column name becomes the attribute name for that column when generating the data store view of the data.
 
 
-============
 Query Syntax
 ============
 
 The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
-========
 Examples
 ========
 

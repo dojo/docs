@@ -1,5 +1,6 @@
 .. _dojo/parser:
 
+===============
 The Dojo Parser
 ===============
 
@@ -37,7 +38,6 @@ The parser also allows function parameters and connections to be done via <scrip
 Getting Started
 ---------------
 
-==================
 Loading the Parser
 ==================
 
@@ -59,7 +59,6 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 
 Also, starting in 1.7, many widgets extend `dijit._TemplatedMixin <dijit/_TemplatedMixin>` rather than `dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
 
-==================
 Running the Parser
 ==================
 
@@ -91,7 +90,6 @@ To run the parser when your page loads, add a data-dojo-config="parseOnLoad: tru
 Parser syntax
 -------------
 
-=====================
 Specifying parameters
 =====================
 
@@ -103,7 +101,6 @@ Attributes which correspond to native HTML attributes appear directly in the mar
             data-dojo-props="scrollOnFocus: true"/>
 
 
-==================
 Boolean parameters
 ==================
 
@@ -134,7 +131,6 @@ Although specifying disabled="true" will disable a widget, note that the followi
   <input data-dojo-type="dijit.form.Button" disabled=""/>
 
 
-===============
 Date parameters
 ===============
 * Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
@@ -152,7 +148,6 @@ Incidentally, this is also how dates are returned to the server when a form is s
 
   <div data-dojo-type=... when="now"></div>
 
-===================
 Function parameters
 ===================
 There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below).   To specify a function as an attribute you can either specify the name of a function:
@@ -172,7 +167,6 @@ Alternately, you can inline the text of a function:
   <div data-dojo-type=... onClick="alert('I was clicked');"></div>
 
 
-===========
 Script Tags
 ===========
 The parser allows the specification of behaviours through custom types in script blocks to extend and enhance the functionality of declarative widgets. This is done by specifying a script block that is a direct child of a node with decorate with `data-dojo-type`. There are different types of script tags supported:
@@ -295,7 +289,6 @@ Writing widgets
 
 This section discusses how to write widgets that the parser can understand.
 
-===============================
 Specifying parameters and types
 ===============================
 
@@ -354,7 +347,6 @@ If you don't want to set a default value for an attribute, you can give it an em
   * new Date("") = a date/time
 
 
-=============
 markupFactory
 =============
 

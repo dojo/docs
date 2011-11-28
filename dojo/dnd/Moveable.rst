@@ -1,5 +1,6 @@
 .. _dojo/dnd/Moveable:
 
+=================
 dojo.dnd.Moveable
 =================
 
@@ -9,13 +10,11 @@ dojo.dnd.Moveable
 .. contents::
   :depth: 3
 
-============
 Introduction
 ============
 
 Makes a DOM node moveable using the mouse.
 
-=====
 Usage
 =====
 
@@ -46,7 +45,6 @@ You can connect to the following events of a Moveable:
  * onMoving : called at the begining of any move step (before the moveable position has been updated);
  * onMoved : called at the end of any move step (after the moveable position has been updated).
 
-=======
 Example
 =======
 
@@ -88,7 +86,6 @@ Example
     }
     </style>
 
-====================
 Custom Mover Example
 ====================
 

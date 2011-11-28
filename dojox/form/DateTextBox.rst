@@ -1,5 +1,6 @@
 .. _dojox/form/DateTextBox:
 
+======================
 dojox.form.DateTextBox
 ======================
 
@@ -14,14 +15,12 @@ dojox.form.DateTextBox
 TODO: short summary of the component/class/method
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -49,7 +47,6 @@ Declarative example
 
 TODO: example
 
-======================
 Problems and Solutions
 ======================
 
@@ -66,7 +63,6 @@ The dojox.form.MonthTextBox only returns an integer value representing the selec
 
 The above DateTextBox will print e.g. "November 2011" in the text box (localised according to the current locale) and return as its 'value' attribute (dijit.byId('dtb2').get('value')) a Date object for the first day in the selected month.
 
-========
 See also
 ========
 

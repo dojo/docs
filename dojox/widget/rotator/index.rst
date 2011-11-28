@@ -1,5 +1,6 @@
 .. _dojox/widget/rotator/index:
 
+====================
 dojox.widget.rotator
 ====================
 
@@ -12,7 +13,6 @@ dojox.widget.rotator
 
 This is a collection of transitions and a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` controller.
 
-=================
 Available Widgets
 =================
 

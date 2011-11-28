@@ -1,5 +1,6 @@
 .. _dojo/store/Memory:
 
+=================
 dojo.store.Memory
 =================
 
@@ -13,13 +14,11 @@ dojo.store.Memory
 **dojo.store.Memory** is a object store wrapper for JavaScript/JSON available directly with an array. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
-============
 Introduction
 ============
 
 The Memory store provides full read and write capabilities for in memory data. The Memory store is very simple to use, just provide an array of objects. The Memory store is also a synchronous store, which also simplifies its usage. All the functions directly return results, so you don't have to use asynchronous callbacks in your code.
 
-========
 Examples
 ========
 
@@ -43,7 +42,6 @@ Examples
 
  store.remove(3); // delete the object
 
-========
 See Also
 ========
 

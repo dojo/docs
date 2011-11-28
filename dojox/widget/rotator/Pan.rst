@@ -1,5 +1,6 @@
 .. _dojox/widget/rotator/Pan:
 
+========================
 dojox.widget.rotator.Pan
 ========================
 
@@ -12,7 +13,6 @@ dojox.widget.rotator.Pan
 
 A pan and continuous pan transition for a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
 
-=====
 Usage
 =====
 
@@ -43,7 +43,6 @@ If the parameter "wrap" is set to true, it will pan to the next pane using the s
 
 A continuous pan will use the target pane's duration to pan all intermediate panes.  To use the target's pane duration for each intermediate pane, then set the "quick" parameter to "false".
 
-========
 Examples
 ========
 
@@ -172,7 +171,6 @@ Example using different pan directions for each pane.
     <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['next']);">Next</button>
 
 
-========
 See also
 ========
 

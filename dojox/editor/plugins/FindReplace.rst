@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/FindReplace:
 
+================================
 dojox.editor.plugins.FindReplace
 ================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.FindReplace
 
 Have you ever wanted to know how node you were in while editing some rich text?  Have you ever wanted to be sure the entire element was deleted, not just its content?  If so, then this plugin is for you.
 
-========
 Features
 ========
 
@@ -21,13 +21,11 @@ Once required in and enabled, this plugin provides the following features to dij
 * The ability to find text with modifiers of matching case and searching backwards from current position.
 * The ability to replace text, with a modifier to replace all occurrences in the document past the current position.
 
-===========
 Limitations
 ===========
 
 * This plugin does not work in Opera.
 
-=====
 Usage
 =====
 
@@ -59,7 +57,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FindReplace plugin!  To display the find/replace toolbar, click the find/replace toggle button in the main toolbar.  The find/replace toolbar will then appear beneath the main toolbar.
 
-==============
 User Interface
 ==============
 
@@ -106,13 +103,11 @@ Enter the text to be replaced in **Find** text field and enter the replacement t
 
 .. image :: ReplaceAll.png
 
-===================
 A11Y Considerations
 ===================
 
 All fields within the **FindReplace** toolbar can be accessed with the keyboard.
 
-========
 Examples
 ========
 
@@ -165,7 +160,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

@@ -1,7 +1,6 @@
 .. _build/customBase:
 
-build customBase
-================
+================build customBase================
 
 :Author: Scott Jenkins
 :Project owner: ?
@@ -13,7 +12,6 @@ build customBase
 Custom base is used to make an extremely small file size version of dojo.js.
 
 
-============
 Introduction
 ============
 
@@ -24,7 +22,6 @@ However, in some cases, such as creating web applications intended for use on sm
 This is a very advanced feature, and if you think you need to use it, you should think carefully first. If after careful consideration, you still want to use this feature, be very, very careful and document it thoroughly for your own understanding.
 
 
-===============================
 dojo.require for base functions
 ===============================
 
@@ -35,7 +32,6 @@ Instead, a ``dojo.require`` statement is generated for each base resource that t
 This allows you to still use the entire base API, but at the cost of additional an additional round trip to the server *at the time a function not in base is first called*.
 
 
-=====
 Usage
 =====
 
@@ -70,7 +66,6 @@ You just end up with the following from ``dojo/_base/_loader``, basically, just 
    * ``loader.js``
 
 
-============================
 Including Specific Resources
 ============================
 
@@ -92,7 +87,6 @@ look like this:
    }
 
 
-===================
 Caveats
 ===================
 
@@ -113,7 +107,6 @@ finds "indexOf" in the module, it will add in a
 have been a String method call.
 
 
-================
 Known Bugs
 ================
 

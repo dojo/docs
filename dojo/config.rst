@@ -1,5 +1,6 @@
 .. _dojo/config:
 
+===============================
 dojo.config (dojo/_base/config)
 ===============================
 
@@ -11,7 +12,6 @@ dojo.config (dojo/_base/config)
 Configuring Dojo with dojoConfig (formerly known as djConfig)
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ Dojo allows developers to override certain global settings that control how the 
 * If you rename core dojo components or place dojo resources in non-standard locations
 
 
-=====
 Usage
 =====
 
@@ -223,7 +222,6 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
 
 By referencing `dojo.config.myCustomVariable` as opposed to relying on `dojoConfig.myCustomVariable` you will be able to utilize the variable safely in built versions using an alternate scopeName
 
-===============================================
 Backwards Compatibility and Order of Precedence
 ===============================================
 

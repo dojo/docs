@@ -1,5 +1,6 @@
 .. _dojo/unsubscribe:
 
+================
 dojo.unsubscribe
 ================
 
@@ -12,7 +13,6 @@ dojo.unsubscribe
 
 Remove a topic listener.
 
-============
 Introduction
 ============
 

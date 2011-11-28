@@ -1,5 +1,6 @@
 .. _dojo/eval:
 
+=========
 dojo.eval
 =========
 
@@ -12,14 +13,12 @@ dojo.eval
 Evaluate some string of JavaScript in global context.
 
 
-============
 Introduction
 ============
 
 Evaluates the given string into window (global) scope rather than in current scope. Use this rather than ``eval``.
 
 
-=====
 Usage
 =====
 

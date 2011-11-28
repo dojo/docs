@@ -1,5 +1,6 @@
 .. _dojox/color/Palette:
 
+===================
 dojox.color.Palette
 ===================
 

@@ -1,5 +1,6 @@
 .. _dijit/typematic:
 
+===============
 dijit.typematic
 ===============
 
@@ -10,7 +11,6 @@ dijit.typematic
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ dijit/typematic is used for two purposes:
    * normalize the speed which browsers implement key-repeat (when the user holds down a key on the keyboard, such as the arrow keys)
    * implement a repeating action when the user holds down a mouse button (typically pressing an arrow icon)
 
-========
 Examples
 ========
 

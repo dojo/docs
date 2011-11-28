@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleSearchStore:
 
+============================
 dojox.data.GoogleSearchStore
 ============================
 
@@ -24,13 +25,11 @@ The GoogleSearchStore is actually a collection of stores designed to work with G
 
 **Note:**  These stores make use of Google's `AJAX search services. <http://code.google.com/apis/ajaxsearch/>`_. In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
 
-===========
 API Support
 ===========
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
-==================
 Constructor Params
 ==================
 
@@ -50,7 +49,6 @@ The following parameters are supported by all Google store implementations.
 |               |**New to Dojo 1.4**                                                                       |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 
-===============
 Item Attributes
 ===============
 
@@ -281,7 +279,6 @@ dojox.data.GoogleImageSearchStore
 |contentNoFormatting|A snippet of information about the image, in plain text.                                                             |
 +-------------------+---------------------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
@@ -310,7 +307,6 @@ New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when 
   }
 
 
-=============
 Example Usage
 =============
 

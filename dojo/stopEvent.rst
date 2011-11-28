@@ -1,5 +1,6 @@
 .. _dojo/stopEvent:
 
+==============
 dojo.stopEvent
 ==============
 
@@ -48,7 +49,6 @@ dojo.fixEvent
 
 TO DOC
 
-========
 See Also
 ========
 

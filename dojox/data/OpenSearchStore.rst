@@ -1,5 +1,6 @@
 .. _dojox/data/OpenSearchStore:
 
+==========================
 dojox.data.OpenSearchStore
 ==========================
 
@@ -13,7 +14,6 @@ dojox.data.OpenSearchStore
 
 A store implementing the dojo.data.Read API for talking to OpenSearch based search providing services.  For specific information on the concepts of dojo.data and its APIs please refer to the :ref:`API documentation <dojo/data/api>`.
 
-============
 Introduction
 ============
 
@@ -27,14 +27,12 @@ Supported OpenSearch Return Formats
 * RSS
 * XML
 
-===========
 Limitations
 ===========
 
 * This store uses dojo.xhrGet and other xhr functions to fetch the OpenSearch descriptor and make search queries.  Therefore, the OpenSearchStore is limited by the browser 'same domain' policy for xhr requests.  Therefore, to make OpenSearch calls to providers that reside on servers other than the one that provided the HTML file that instantiated the OpenSearchStore, a proxy must be used.
 * The OpenSearchStore does not currently support HTML return formats.  The reason for this is an open issue with dojo.query and searching by ID.  The bug the OpenSearchStore is blocked on can be found `here <http://trac.dojotoolkit.org/ticket/4425>`_.
 
-==============
 Supported APIs
 ==============
 
@@ -42,7 +40,6 @@ The following dojo.data APIs are implemented by OpenSearchStore:
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
-======================
 Constructor Parameters
 ======================
 
@@ -67,7 +64,6 @@ An OpenSearch search result is a simplistic data item.  It contains very few att
 | content       | The content/text returned for the search result                                                      | string               |
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
 
-============
 Query Syntax
 ============
 
@@ -79,7 +75,6 @@ The fetch method query syntax for OpenSearchStore is limited to what the OpenSea
   openSearchStore.fetch(fetchArgs);
   
 
-========
 Examples
 ========
 

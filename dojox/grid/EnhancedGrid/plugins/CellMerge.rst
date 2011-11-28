@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/CellMerge:
 
+=========================================
 dojox.grid.EnhancedGrid.plugins.CellMerge
 =========================================
 
@@ -12,7 +13,6 @@ CellMerge plugin provides functions to merge cells within a row.
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -271,7 +271,6 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 
 
 
-=============
 Configuration
 =============
 
@@ -316,16 +315,13 @@ If your grid is created in JavaScript:
 
 As shown in the above code, you can simply set the ``cellMerge`` property to true or false (disabled), or further configure it in an argument object.
 
-=========================  ========  ===============  =================================================================================================
-Property                   Type      Default Value    Description
-=========================  ========  ===============  =================================================================================================
-mergedCells                Array     []               Used to define pre-merged cells. For the structure of the objects in this array please see below.
+=========================  ========  ===============  Property                   Type      Default Value    Description
+=========================  ========  ===============  mergedCells                Array     []               Used to define pre-merged cells. For the structure of the objects in this array please see below.
 =========================  ========  ===============  =================================================================================================
 
 Merged cell object structure:
 
-===========  ============================  =====================  =============================================================================================================
-Property     Type                          Optional/Mandatory     Description
+===========  ============================  =====================  Property     Type                          Optional/Mandatory     Description
 ===========  ============================  =====================  =============================================================================================================
 row          Integer|function(Integer)     Mandatory              If it's an Integer, it's the index of the row which have cells to be merged.
                                                                   If it's a function, it's a predicate to decide which rows are to be merged.
@@ -339,7 +335,6 @@ handle                                                            If a "merged c
                                                                   can be used to unmerge the cells.
 ===========  ============================  =====================  =============================================================================================================
 
-=====
 Usage
 =====
 
@@ -383,7 +378,6 @@ And here is the effect of merged cells:
 
 .. image:: cellmerge-1.png
 
-========
 See Also
 ========
 

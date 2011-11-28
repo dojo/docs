@@ -1,5 +1,6 @@
 .. _dojo/connect:
 
+=================================
 dojo.connect (dojo/_base/connect)
 =================================
 
@@ -11,13 +12,11 @@ dojo.connect (dojo/_base/connect)
 
 dojo.connect connects events to methods, so that after the event occurs, the new connected method is called too.
 
-=================================================
 Preferred event handling mechanism is now dojo/on
 =================================================
 
 Dojo versions prior to 1.7 used the connect module for event handling.  As of Dojo 1.7, the preferred way of handling events is to use the new lightweight dojo/on module.  For compatibility reasons, the dojo.connect api's will remain fully supported through remaining 1.x releases, but will likely be removed in Dojo 2.0.  Migration from connect() to on() should be straightforward as the api signature is very similar.
 
-============
 Introduction
 ============
 
@@ -34,7 +33,6 @@ When setting up a connection, the `event` parameter must be a string that is the
 The return value is a handle that is needed to remove this connection with `dojo.disconnect`.
 
 
-=====
 Usage
 =====
 
@@ -47,8 +45,7 @@ Usage
   // Dojo < 1.7
   dojo.connect(obj, event, context, method, dontFix);
 
-=========  ===============  ==================================================
-Parameter  Type             Description
+=========  ===============  Parameter  Type             Description
 =========  ===============  ==================================================
 obj        Object|null      The source object for the event function. Defaults to dojo.global if null. If obj is a DOM node, the connection is delegated to the DOM event manager (unless dontFix is true).
 event      String           name of the event function in obj. I.e. identifies a property obj[event].
@@ -58,7 +55,6 @@ dontFix    Boolean          Optional. If obj is a DOM node, set dontFix to true 
 =========  ===============  ==================================================
 
 
-========
 Examples
 ========
 
@@ -128,7 +124,6 @@ Dojo < 1.7
     dojo.connect("globalEvent", globalHandler); // same
 
 
-========
 See also
 ========
 

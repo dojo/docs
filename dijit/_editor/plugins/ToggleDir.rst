@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/ToggleDir:
 
+===============================
 dijit._editor.plugins.ToggleDir
 ===============================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.ToggleDir
 
 Not all documents in the world are read from Left-To-Right.  There are several languages, in fact, that are read from Right-To-Left, such as Arabic, Hebrew, and so forth.   So, there are times it would be great to see what your document would look like in Right-To-Left view.  With this plugin, you can do that.
 
-========
 Features
 ========
 
@@ -24,13 +24,11 @@ Once required in and enabled, this plugin provides the following features to dij
 * Update is done on the body element of the containing iframe, so as such does not alter the page containing the editor, only the editor contents.
 * Auto-detects if the whole page is in RTL mode when editor is initialized and toggles the mode appropriately on Editor.
 
-===========
 Limitations
 ===========
 
 * The button being toggled 'on' always means RTL mode.  You cannot define button 'on' as meaning LTR.
 
-=====
 Usage
 =====
 
@@ -55,7 +53,6 @@ Once it has been required in, all you have to do is include it in the list of ex
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with all the toolbar actions provided by the ToggleDir plugin.
 
 
-========
 Examples
 ========
 
@@ -93,7 +90,6 @@ Basic Usage
     </div>
 
 
-========
 See Also
 ========
 

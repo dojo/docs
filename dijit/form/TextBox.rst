@@ -1,5 +1,6 @@
 .. _dijit/form/TextBox:
 
+==================
 dijit.form.TextBox
 ==================
 
@@ -12,7 +13,6 @@ dijit.form.TextBox
 
 TextBox is a basic <input type="text">-style form control.
 
-============
 Introduction
 ============
 
@@ -31,7 +31,6 @@ HTML control, even if you don't have to do any input scrubbing. However:
 * If text can be validated with a regular expression, use :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`.
 
 
-========
 Examples
 ========
 
@@ -143,7 +142,6 @@ In order to use it, submit a parameter "placeHolder" to your widget:
 
 
 
-=============
 Accessibility
 =============
 

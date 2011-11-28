@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/PageBreak:
 
+==============================
 dojox.editor.plugins.PageBreak
 ==============================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.PageBreak
 
 Have you ever wanted to pull your hair out when printing an HTML document because it would page break at bad locations?  There is actually a little-known CSS style that allows **you** to set a point at which printing should page break the document, the 'page-break-after: always' style.  This feature can be important when editing documents on the web, so it's very useful in some cases to be able to insert a page break on demand.  This plugin provides such a function to the dijit.Editor.
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Keyboard hotkey: CTRL-SHIFT-ENTER for inserting a page break at the current location in the editor.  (Note that this is a similar keybind to those used by commercial word processors, so it will hopefully be familiar and easy to pick up.).
 * Dynamic styling in the page to make the document appear broken into two pages at that point.  Also provides @media CSS so that the styling is not printed (via a print plugin), only that the document page breaks when encountered.
 
-=====
 Usage
 =====
 
@@ -54,13 +53,11 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PageBreak plugin!  You can use the button or hotkey to insert page breaks as you desire.
 
-===========
 Limitations
 ===========
 
 The page break plugin only has one limitation coded into it, it will not allow page breaks to be inserted in block elements like <ul> and <ol>, because it tends to make the page view look a bit odd.
 
-========
 Examples
 ========
 
@@ -114,7 +111,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

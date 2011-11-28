@@ -1,5 +1,6 @@
 .. _dojo/topic:
 
+==========
 dojo/topic
 ==========
 
@@ -9,7 +10,6 @@ dojo/topic
 
 dojo/topic provides a centralized hub for publishing and subscribing to global messages by topic (using the same hub as dojo.connect). One can subscribe to these messages by using ``topic.subscribe``, and one can publish by using ``topic.publish``.
 
-=====
 Usage
 =====
 
@@ -40,7 +40,6 @@ Using dojo.require
     dojo.topic.publish("some/topic", "one", "two");
   });
 
-=========================
 Differences from old APIs
 =========================
 

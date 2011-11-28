@@ -1,5 +1,6 @@
 .. _dojo/data/ItemFileWriteStore:
 
+============================
 dojo.data.ItemFileWriteStore
 ============================
 
@@ -14,7 +15,6 @@ dojo.data.ItemFileWriteStore
 Dojo core provides the ItemFileWriteStore store as an extension to ItemFileReadStore that adds on the dojo.data.api.Write and dojo.data.api.Notification API support to ItemFileReadStore. It was specifically created as a separate class so that if you only need read capability, you do not incur the download penalty of the write and notification API support if you won't use it. If your application needs to write to the ItemFileStore instead of just Read, then ItemFileWriteStore is the store you should instantiate. The input data format is identical to :ref:`ItemFileReadStore <dojo/data/ItemFileReadStore>`.
 
 
-===========
 API Support
 ===========
 
@@ -23,13 +23,11 @@ API Support
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 * :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
 
-======================
 Constructor Parameters
 ======================
 
 The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
-============
 Custom Types
 ============
 
@@ -60,13 +58,11 @@ So, when Date objects are encountered, ItemFileWriteStore automatically serializ
  
   { "_type":"Date", "value":"1993-05-24T00:00:00Z" }
 
-============
 Query Syntax
 ============
 
 The query syntax for ItemFileWriteStore is identical to the query syntax of ItemFileReadStore so see that :ref:`section <dojo/data/ItemFileReadStore>`  for more information.
 
-=============
 The Write API
 =============
 
@@ -131,13 +127,11 @@ As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware. 
 To put it more simply, say you have Item C which is referenced by Items A and B. If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
 
 
-====================
 The Notification API
 ====================
 
 ItemFileWriteStore supports dojo.data.api.Notification. This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions. These events are functions on the store that widgets and user code can *dojo.connect* to. This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another. For more details on Notification in general, please refer to the :ref:`Notification section <dojo/data/api/Notification>` of the dojo.data API.
 
-===================
 Pseudocode Examples
 ===================
 
@@ -198,7 +192,6 @@ Delete a country
   var request = store.fetch({query: {name:"Egypt"}, queryOptions: {ignoreCase: true}, onComplete: gotNames}
 
 
-===================
 Functional Examples
 ===================
 

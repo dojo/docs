@@ -1,5 +1,6 @@
 .. _dojox/widget/AutoRotator:
 
+========================
 dojox.widget.AutoRotator
 ========================
 
@@ -13,19 +14,16 @@ dojox.widget.AutoRotator
 A rotator that automatically transitions between child nodes.
 
 
-============
 Introduction
 ============
 
 Adds automatic rotating to the :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`. The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
 
 
-=====
 Usage
 =====
 
-===================  =======  ======================================================================
-Parameter            Type     Description
+===================  =======  Parameter            Type     Description
 ===================  =======  ======================================================================
 suspendOnHover       boolean  Pause the rotator when the mouse hovers over it. The default value is "false".
 duration             int      The time in milliseconds before transitioning to the next pane.  The default value is 4000 (4 seconds).
@@ -39,7 +37,6 @@ reverse              boolean  Causes the rotator to rotate in reverse order. The
 The AutoRotator follows the same general Guidelines as the :ref:`dojox.widget.Rotator <dojox/widget/Rotator>`.
 
 
-========
 Examples
 ========
 
@@ -218,7 +215,6 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
     </div>
 
 
-========
 See also
 ========
 

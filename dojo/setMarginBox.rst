@@ -1,5 +1,6 @@
 .. _dojo/setMarginBox:
 
+=================
 dojo.setMarginBox
 =================
 
@@ -8,7 +9,6 @@ dojo.setMarginBox
 
 Sets the size of the node's margin box and placement (left/top), irrespective of box model. Think of it as a passthrough to setBox that handles box-model vagaries for you.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ The dojo.setMarginBox function is used to set the size of the node's margin box 
 
 Since Dojo 1.7, ``dojo.setMarginBox`` is exposed via the ``setMarginBox`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 

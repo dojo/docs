@@ -1,5 +1,6 @@
 .. _dojo/queryToObject:
 
+==================
 dojo.queryToObject
 ==================
 
@@ -10,7 +11,6 @@ dojo.queryToObject
 
 Helper function for converting a URI query string to a JavaScript Object
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 Since Dojo 1.7, ``dojo.queryToObject`` is exposed via the ``queryToObject`` method of the ``dojo/io-query`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -58,7 +57,6 @@ Dojo < 1.7
   // }
 
 
-========
 Examples
 ========
 
@@ -132,7 +130,6 @@ Example 2: Using queryToObject to alter query strings
     <b>The modified query string in the URI:</b>
     <div id="alteredQuery"></div>
 
-========
 See also
 ========
 

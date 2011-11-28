@@ -1,5 +1,6 @@
 .. _dojox/gfx-visual-properties:
 
+================
 Shape properties
 ================
 
@@ -11,7 +12,6 @@ Shape properties
 .. contents::
   :depth: 3
 
-============
 Introduction
 ============
 
@@ -51,7 +51,6 @@ But the most efficient way to do that is to pass ``null`` as a property value:
 
 Newly created shapes use ``null`` for all their visual and geometric properties effectively using all default property objects.
 
-=====
 Color
 =====
 
@@ -69,7 +68,6 @@ Anywhere color is accepted following objects can be used to define it:
 
 * A valid :ref:`dojo.Color <dojo/Color>` object. Internally all other color definitions are converted to this object.
 
-===============
 Stroke property
 ===============
 
@@ -118,7 +116,6 @@ Canvas
 
 Canvas ignores the line style. All lines are drawn solid.
 
-=============
 Fill property
 =============
 
@@ -233,7 +230,6 @@ Canvas
 
 Canvas renderer doesn’t support the even-odd rule.
 
-=============
 Font property
 =============
 

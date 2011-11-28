@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/NormalizeStyle:
 
+===================================
 dojox.editor.plugins.NormalizeStyle
 ===================================
 
@@ -14,7 +15,6 @@ Have you ever encountered a situation where the editor was inconsistent about ho
 
 This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.  Calls to get the value of the editor (editor.getValue() or editor.attr("value")) will return HTML that has hopefully been processed and 'standardized'.
 
-========
 Features
 ========
 
@@ -24,7 +24,6 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 * Uses 'internal editor format' when putting content in, meaning it coverts to CSS or semantic, based on which the native RTE code works best with.
 * Very useful when paired with :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`.
 
-=====
 Usage
 =====
 
@@ -70,7 +69,6 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
   </div>
 
 
-========
 Examples
 ========
 
@@ -181,7 +179,6 @@ Configured css mode
     </textarea>
 
 
-========
 See Also
 ========
 

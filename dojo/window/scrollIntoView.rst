@@ -1,5 +1,6 @@
 .. _dojo/window/scrollIntoView:
 
+==========================
 dojo.window.scrollIntoView
 ==========================
 
@@ -10,7 +11,6 @@ dojo.window.scrollIntoView
 
 Scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.
 
-========
 Examples
 ========
 

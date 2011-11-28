@@ -1,5 +1,6 @@
 .. _dojox/mdnd:
 
+==========
 dojox.mdnd
 ==========
 
@@ -14,7 +15,6 @@ dojox.mdnd
 Experimental coordinates based moveable drag and drop. Use stable dojo.dnd for production.
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ Alternative Drag and Drop solution based on coordinates of drag element and targ
 PureSource is just a rewrite of dojo.dnd.Source to only allow drag start and no drop without testing acceptance.
 
 
-=====
 Usage
 =====
 
@@ -70,7 +69,6 @@ How to use the component:
     </div>
   </div>
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _quickstart/index:
 
+===============
 Getting started
 ===============
 
@@ -16,7 +17,6 @@ Getting started
 * :ref:`Licensing <quickstart/introduction/licensing>`
 * :ref:`Why Choose Dojo? <quickstart/introduction/whydojo>`
 
-============
 Installation
 ============
 
@@ -25,7 +25,6 @@ Installation
 * :ref:`Local installation guide <quickstart/install>`
 
 
-==================
 Base Functionality
 ==================
 
@@ -60,14 +59,12 @@ Internationalization
 
 * :ref:`Internationalization (i18n) <quickstart/internationalization/index>`
 
-==========
 Animations
 ==========
 
 * :ref:`FX / Animations <quickstart/Animation>`
 
 
-=======
 Widgets
 =======
 
@@ -83,7 +80,6 @@ Widget developers notes:
 * :ref:`Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`
 
 
-======================
 Stores and Data Stores
 ======================
 
@@ -103,28 +99,24 @@ Other Information
 
 * :ref:`Implementing RESTful Services Server-Side <quickstart/rest>`
 
-=============
 Drag and Drop
 =============
 
 * is the DnD tutorial ready for take off?
 
 
-========
 Charting
 ========
 
 * :ref:`dojox.charting <dojox/charting>`
 
 
-=========================
 Dojo Toolkit Architecture
 =========================
 
 * Todo
 
 
-=============================
 Testing, Debugging and Tuning
 =============================
 
@@ -145,7 +137,6 @@ Tuning
 * :ref:`Tuning your installation with Custom Builds <quickstart/custom-builds>`
 
 
-========
 See also
 ========
 

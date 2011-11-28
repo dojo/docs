@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/ColorTableCell:
 
+========================================================
 dojox.editor.plugins.ColorTableCell (Under Construction)
 ========================================================
 
@@ -12,13 +13,11 @@ dojox.editor.plugins.ColorTableCell (Under Construction)
 
 Have you ever wanted to pick a color for the background of the table cells in the document? This plug-in is for you.
 
-========
 Features
 ========
 
 Once required in and enabled, this plugin provides the user with the ability to set the background color of the table cells.
 
-=====
 Usage
 =====
 
@@ -57,7 +56,6 @@ Then just declare the plugin and configure it as follows.
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ColorTableCell plugin!
 
-==============
 User Interface
 ==============
 
@@ -80,19 +78,16 @@ Click **Set** button to set the color or click **Cancel** button to cancel the s
 
 .. image :: Result.png
 
-===================
 A11Y Considerations
 ===================
 
 All fields within the setting dialog can be accessed with the keyboard.
 
-===========
 Limitations
 ===========
 
 In IE, we have to press and drag the mouse to select the cell (just like what we do to select a piece of text), which is quite different from that of the other browsers.
 
-========
 Examples
 ========
 
@@ -145,7 +140,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

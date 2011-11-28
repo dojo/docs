@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/Save:
 
+=========================
 dojox.editor.plugins.Save
 =========================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.Save
 
 Have you ever wanted a simple toolbar based 'Save' action for the editor that just posts the content back to some URL?   If so, then this plugin is for you!  This plugin provides a 'save' capability, a simple toolbar action for saving the editor contents by POSTing the content to a remote URL.
 
-========
 Features
 ========
 
@@ -21,7 +21,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Button with icon in toolbar for saving the content by POSTing it back to a designated URL.
 * Designed to be simple and easily extendable.
 
-=====
 Usage
 =====
 
@@ -53,7 +52,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the basic Save plugin!  When you click the save button, the content is sent via xhrPort to the url 'myRemoteSaveService'.
 
-===========
 Limitations
 ===========
 
@@ -61,7 +59,6 @@ Limitations
 
 * When extending the plugin, you will need to assign a new custom name to it, such as 'mySave', because of how the plugin infrastructure of Editor loads the plugins.  It uses a publish/subscribe mechanism and each plugin definition needs a unique name.
 
-========
 Examples
 ========
 
@@ -187,7 +184,6 @@ Customizing a save
     </ul>
     </div>
 
-========
 See Also
 ========
 

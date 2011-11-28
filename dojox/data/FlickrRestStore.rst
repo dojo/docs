@@ -1,5 +1,6 @@
 .. _dojox/data/FlickrRestStore:
 
+==========================
 dojox.data.FlickrRestStore
 ==========================
 
@@ -18,7 +19,6 @@ The following dojo.data APIs are implemented by FlickrRestStore
  
 FlickrRestStore is built upon :ref:`FlickrStore <dojox/data/FlickrStore>`, a store which reads from Flickr's more simplistic public API. However, FlickrRestStore provides many more features:
 
-========
 Features
 ========
 
@@ -30,13 +30,11 @@ Features
 * Filter by Photo Set. By specifying a setid parameter on the query, you can retrieve photos only from a single set. Due to limitations of the Flickr API, using this parameter negates the use of the full text search.
 * Tag search. Passing a tags parameter to the request query searches by the given tags. This parameter can be either a comma separated string, or an array of strings. See the examples below.
 
-===========================
 Flickr Terms and Conditions
 ===========================
 
 Note: While this store wraps making calls to the Flickr service, as a user, you should still verify that you agree to the terms and conditions by which you are using the public Flickr photo service. Review their terms and conditions, and the API terms and conditions, `here <http://www.flickr.com/services/api/tos/>`_.
 
-=======
 API Key
 =======
 
@@ -47,7 +45,6 @@ Example
 
 Query the first three photos from a user:
 
-==================
 Flickr API Example
 ==================
 
@@ -107,7 +104,6 @@ Query the first three photos from a user
 
 FlickrRestStore's role is to process the query parameters passed to the dojo.data.api.Read API and generate the appropriate service URL. It then processes the response from the service and handles accessing the items returned from the query. It also provides simple attribute access to all the values.
 
-======================
 Constructor Parameters
 ======================
 
@@ -125,7 +121,6 @@ Constructor Parameters
 
 
 
-===============
 Item Attributes
 ===============
 
@@ -153,7 +148,6 @@ Item Attributes
 | link            |A URL linking to the Flickr page displaying the image.                                                                       |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
@@ -191,7 +185,6 @@ sort
 
 **Note:** Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters.
 
-==============
 Usage Examples
 ==============
 

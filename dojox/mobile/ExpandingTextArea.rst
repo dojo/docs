@@ -1,5 +1,6 @@
 .. _dojox/mobile/ExpandingTextArea:
 
+==============================
 dojox.mobile.ExpandingTextArea
 ==============================
 
@@ -15,7 +16,6 @@ dojox.mobile.ExpandingTextArea
 TextArea is a very simple TEXTAREA widget, but it dynamically resizes to fit the content of the text inside. It takes nearly all the parameters (name, value, etc.) that a vanilla TEXTAREA takes. The attribute rows is not supported since this widget adjusts the height.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -36,7 +36,6 @@ Constructor Parameters
 |onChange    |Function |                    |An event handler used for TEXTAREA value change notifications.                                          |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

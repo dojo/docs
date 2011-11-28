@@ -1,5 +1,6 @@
 .. _dojox/gfx/utils:
 
+===============
 dojox.gfx.utils
 ===============
 
@@ -11,7 +12,6 @@ dojox.gfx.utils
 The *dojox.gfx.utils* module is a set of utility functions for working with dojox.gfx.Surface objects.  They mainly consist of serialization functions to allow you to serialize a dojox.gfx.Surface into a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers.
 
 
-==================
 Provided functions
 ==================
 

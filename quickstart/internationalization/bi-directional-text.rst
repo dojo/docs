@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/bi-directional-text:
 
+===========================
 Bi-directional Text (Bi-Di)
 ===========================
 

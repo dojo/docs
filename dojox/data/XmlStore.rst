@@ -1,5 +1,6 @@
 .. _dojox/data/XmlStore:
 
+===================
 dojox.data.XmlStore
 ===================
 
@@ -14,7 +15,6 @@ dojox.data.XmlStore
 
 XmlStore is a store provided by Dojo that is contained in the DojoX project. XmlStore is a read and write interface to basic XML data. XML is a common data interchange format and a store that can work with fairly generic XML documents is useful. The store is designed so that you can over-ride certain functions to get specific behaviors to occur when performing reads and saves.
 
-==============
 Supported APIs
 ==============
 
@@ -27,7 +27,6 @@ The following dojo.data APIs are implemented by XmlStore
   * **New for dojo 1.3!**  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
 
 
-=================
 Example XML Input
 =================
 
@@ -70,7 +69,6 @@ The store is designed so that it can read generic XML and present back nodes as 
         ...
   </books>
     
-======================
 Constructor Parameters
 ======================
 
@@ -108,7 +106,6 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 | **(since dojo 1.4)**     |caching values loaded from a webserver.  The default is true for backwards compatibility                |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 
-=================================
 User-provided function over-rides
 =================================
 
@@ -121,7 +118,6 @@ _getPutUrl(item)
 _getDeleteUrl(item)
     Function that can be over-ridden to alter the way the store sends a DELETE item to the service. Note that this follows the REST convention in which an HTTP DELETE is used to remove a resource.
 
-============
 Query Syntax
 ============
 
@@ -148,7 +144,6 @@ To find all items with attribute foo the value of which ends with ar and ignorin
 
 **NOTE:** Other stores should follow the same query definition semantics for consistency.
 
-=============
 Query Options
 =============
 
@@ -166,7 +161,6 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 |            |root items and *all* child data items. Think of it as a recursive search.                                               |
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
-==============
 Usage Examples
 ==============
 
@@ -203,7 +197,6 @@ Query for all books that start with ISBN: A9B57 Case insensitively
   var request = store.fetch({query: {isbn:"a9b57*"}, queryOptions: {ignoreCase: true}, onComplete: gotBooks});
 
 
-=========================
 Functional Usage Examples
 =========================
 
@@ -362,7 +355,6 @@ Connecting XmlStore to dojox.grid.DataGrid
     </style>
 
 
-=============
 More examples
 =============
 

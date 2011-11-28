@@ -1,5 +1,6 @@
 .. _dojo/indexOf:
 
+============
 dojo.indexOf
 ============
 

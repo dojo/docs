@@ -1,5 +1,6 @@
 .. _quickstart/arrays:
 
+===============
 Arrays and Dojo
 ===============
 
@@ -11,7 +12,6 @@ Arrays and Dojo
 Dojo comes with a bunch of useful methods to deal with arrays, a few more than you get from your browser by default.
 
 
-============
 dojo.indexOf
 ============
 
@@ -56,7 +56,6 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
     <div id="result1"></div>
 
 
-================
 dojo.lastIndexOf
 ================
 
@@ -101,7 +100,6 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
     <div id="result2"></div>
 
 
-============
 dojo.forEach
 ============
 
@@ -210,7 +208,6 @@ To break the forEach-Loop you should use dojo.some
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){arrayLoopTest()}" type="button">Start Testloops</button>
 
 
-===========
 dojo.filter
 ===========
 
@@ -281,7 +278,6 @@ Say you have an array of people with a last name. You would like to filter those
     </ul>
     </div>
 
-========
 dojo.map
 ========
 
@@ -344,7 +340,6 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 For complete documentation and more examples please check the :ref:`dojo.map documentation <dojo/map>`
 
 
-=========
 dojo.some
 =========
 
@@ -394,7 +389,6 @@ Now your bank policies only allow you to give each client one credit over 1 mill
     <div id="result6"></div>
 
 
-==========
 dojo.every
 ==========
 

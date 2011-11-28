@@ -1,12 +1,12 @@
 .. _dijit/form/MappedTextBox:
 
+========================
 dijit.form.MappedTextBox
 ========================
 
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 

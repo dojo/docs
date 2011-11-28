@@ -1,5 +1,6 @@
 .. _dojox/form/uploader/FileList:
 
+============================
 dojox.form.uploader.FileList
 ============================
 
@@ -14,7 +15,6 @@ FileList automatically connects to an Uploader and detects when files are added,
 
 There is a required CSS file: *resources/UploaderFileList.css.*
 
-=====
 Setup
 =====
 

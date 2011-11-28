@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/DnD:
 
+===================================
 dojox.grid.EnhancedGrid.plugins.DnD
 ===================================
 
@@ -12,7 +13,6 @@ DnD plugin supports drag-and-drop of grid rows/column/cells.
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -259,7 +259,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 	}
     </style>
 
-=============
 Configuration
 =============
 
@@ -307,8 +306,7 @@ As shown in the above code, you can simply set the ``dnd`` property to true or f
 
 The argument object can accept the following properties:
 
-=================  ========  ===============  ===================================================================================================================================================
-Property           Type      Default Value    Description
+=================  ========  ===============  Property           Type      Default Value    Description
 =================  ========  ===============  ===================================================================================================================================================
 copyOnly           Boolean   false            Set whether dragging from this grid means moving or copying.
 dndConfig          Object    {}               Enable/disable dnd for every draggable objects ("row", "col", and "cell") in every kind of circumstance (drag "within", "in" to, or "out" of grid).
@@ -343,8 +341,7 @@ Here is an example on how to set dndConfig:
 
 Currently, the following situations are supported:
 
-======  ==============  =============  ==========
-DnD     within          in             out
+======  ==============  =============  DnD     within          in             out
 ======  ==============  =============  ==========
 col     supported       not supported  supported
 row     supported       supported      supported
@@ -355,7 +352,6 @@ Note:
 	1. Dragging columns into a grid is NOT supported currently.
 	2. Only cells forming a rectangle are draggable (do NOT support other shapes).
 
-=====
 Usage
 =====
 
@@ -427,8 +423,7 @@ GridSource provides the following events to handle grid related dnd:
 onDropGridColumns(grid, columnIndexes):
 	When a set of grid columns is dragged to this source.
 
-==============  ========================  ==================================
-Arguments       Type                      Description
+==============  ========================  Arguments       Type                      Description
 ==============  ========================  ==================================
 grid            dojox.grid.EnhancedGrid   The source grid.
 columnIndexes   Integer[]                 The indexes of the dragged columns
@@ -437,8 +432,7 @@ columnIndexes   Integer[]                 The indexes of the dragged columns
 onDropGridRows(grid, rowIndexes):
 	When a set of grid rows is dragged to this source.
 
-==============  ========================  ==================================
-Arguments       Type                      Description
+==============  ========================  Arguments       Type                      Description
 ==============  ========================  ==================================
 grid            dojox.grid.EnhancedGrid   The source grid.
 rowIndexes      Integer[]                 The indexes of the dragged rows
@@ -447,8 +441,7 @@ rowIndexes      Integer[]                 The indexes of the dragged rows
 onDropGridCells(grid, leftTopPoint, rightBottomPoint):
 	When a block of grid cells is dragged to this source.
 
-================  ========================  ==============================================================================
-Arguments         Type                      Description
+================  ========================  Arguments         Type                      Description
 ================  ========================  ==============================================================================
 grid              dojox.grid.EnhancedGrid   The source grid.
 leftTopPoint  	  Object(__SelectCellItem)  The left-top cell of the selected cells. (For RTL, it's the right-top cell)
@@ -515,8 +508,7 @@ Public Methods
 copyOnly(isCopyOnly):
 	Get/set function of the copyOnly property in the argument object.
 
-==============  ==================  ===============================  ==================================================================================
-Arguments       Type                Optional/Mandatory               Description
+==============  ==================  ===============================  Arguments       Type                Optional/Mandatory               Description
 ==============  ==================  ===============================  ==================================================================================
 isCopyOnly      Boolean             Optional(default to undefined)   Whether DnD is a copy operation or a move operation. If omitted, this is a getter.
 [return]        Boolean|Undefined                                    If isCopyOnly is undefined, return the copyOnly property of this plugin.
@@ -525,13 +517,10 @@ isCopyOnly      Boolean             Optional(default to undefined)   Whether DnD
 setupConfig(config):
 	Change the dndConfig property in the argument object.
 	
-==============  ==================  ===============================  ===================
-Arguments       Type                Optional/Mandatory               Description
-==============  ==================  ===============================  ===================
-config          Object              Mandatory                        Same as dndConfig.
+==============  ==================  ===============================  Arguments       Type                Optional/Mandatory               Description
+==============  ==================  ===============================  config          Object              Mandatory                        Same as dndConfig.
 ==============  ==================  ===============================  ===================
 
-=================
 Known Limitations
 =================
 
@@ -539,7 +528,6 @@ Known Limitations
 * Please be careful when dragging a numeric cell to a string cell (or vice versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
 
 
-========
 See Also
 ========
 

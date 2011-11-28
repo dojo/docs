@@ -1,7 +1,6 @@
 .. _build/buildScript:
 
-build system build script (build.sh or build.bat)
-=================================================
+=================================================build system build script (build.sh or build.bat)=================================================
 
 :Status: Draft
 :Version: 1.0
@@ -11,7 +10,6 @@ build system build script (build.sh or build.bat)
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -23,7 +21,6 @@ The ``build.sh`` (unix) or ``build.bat`` (Windows) script located in the Dojo so
   
   * Any of the following parameters can be set directly in the profile file as part of the overall `dependencies` Object
 
-=====
 Usage
 =====
 
@@ -145,7 +142,6 @@ xdDojoScopeName=dojo
 buildLayers=
   A comma-separated list of layer names to build. Using this option means that only those layers will be built. This helps if you are doing quick development and test cycles with layers. If you have problems using this option, try removing it and doing a full build with action=clean,release. This build option assumes you have done at least one full build first.
 
-========
 Examples
 ========
 

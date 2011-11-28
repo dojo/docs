@@ -1,5 +1,6 @@
 .. _dojox/mobile/ListItem:
 
+=====================
 dojox.mobile.ListItem
 =====================
 
@@ -16,7 +17,6 @@ ListItem represents an item of either RoundRectList or EdgeToEdgeList. There are
 
 .. image:: ListItem-desc.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -104,7 +104,6 @@ Parameters from this widget:
 |              |          |                   |works for backward compatibility.                                                                          |
 +--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

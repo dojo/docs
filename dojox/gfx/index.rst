@@ -1,5 +1,6 @@
 .. _dojox/gfx/index:
 
+=========
 dojox.gfx
 =========
 
@@ -13,14 +14,12 @@ dojox.gfx
 TODO: short summary of the component/class/method
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-========
 Features
 ========
 
@@ -54,7 +53,6 @@ Features
 * Considerations and Caveats
 
 
-========
 See also
 ========
 

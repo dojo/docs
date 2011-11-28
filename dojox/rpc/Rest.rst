@@ -1,5 +1,6 @@
 .. _dojox/rpc/Rest:
 
+==============
 dojox.rpc.Rest
 ==============
 
@@ -13,7 +14,6 @@ dojox.rpc.Rest
 dojox.rpc.Rest provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE.
 
 
-=====
 Usage
 =====
 
@@ -45,7 +45,6 @@ You can also use the SMD service to generate a REST service:
 Note: dojox.rpc.Rest doesn't require dojox.rpc.Service, and if you want it you must require it yourself, and you must load it prior to dojox.rpc.Rest.
 
 
-========
 Examples
 ========
 
@@ -102,7 +101,6 @@ You can also use the SMD service to generate a REST service:
     services.myRestService("parameters");
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/NodeList:
 
+=============
 dojo.NodeList
 =============
 
@@ -11,7 +12,6 @@ dojo.NodeList
 **NodeLists** are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list.
 
 
-============
 Introduction
 ============
 
@@ -102,7 +102,6 @@ The helper functions attached to the NodeList typically return the same instance
       dojo.query(e.target).style({ opacity:1 }).toggleClass("clicked");
     });
 
-=========================
 Common NodeList Functions
 =========================
 
@@ -180,7 +179,6 @@ As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most othe
      console.log(n, "has", coords[i].w, "width");
   });
 
-=====================
 Events with NodeLists
 =====================
 
@@ -307,7 +305,6 @@ This example prevents the form from submitting and instead uses Ajax to send the
 
 An event delegation API is provided in :ref:`dojox.NodeList.delegate <dojox/NodeList/delegate>`
 
-==================
 Extending NodeList
 ==================
 
@@ -344,7 +341,6 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 The import part being ``'return this'``, ensuring any following chains will work.
 
 
-===================
 NodeList extensions
 ===================
 
@@ -381,7 +377,6 @@ Additional Extensions
   * :ref:`dojox.NodeList.delegate <dojox/NodeList/delegate>` - Event delegation for dojo.NodeList
 
 
-===========
 API Details
 ===========
 

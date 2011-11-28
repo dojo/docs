@@ -1,5 +1,6 @@
 .. _dijit/form/Form:
 
+===============
 dijit.form.Form
 ===============
 
@@ -13,7 +14,6 @@ dijit.form.Form
 **dijit.form.Form** is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
 
 
-========
 Examples
 ========
 
@@ -246,7 +246,6 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
     </div>
 
 
-=============
 Accessibility
 =============
 

@@ -1,5 +1,6 @@
 .. _dijit/a11y/statement:
 
+=============================
 Dijit Accessibility Statement
 =============================
 
@@ -9,7 +10,6 @@ Dijit Accessibility Statement
    :depth: 2
 
 
-===================
 Dijit Accessibility
 ===================
 
@@ -24,7 +24,6 @@ Dojo has made a serious commitment to creating a toolkit that allows the develop
 In addition, the documentation for each dijit widget contains a section explaining any parameters specific to accessibility, the keyboard navigation of the component, and any open accessibility issues.
 
 
-=============================
 Dojo Accessibility Compliance
 =============================
 
@@ -39,7 +38,6 @@ People familiar with accessibility and accessibility guidelines such as the W3C'
 Additional WCAG 2.0 and US Section 508 compliance details are provided below.
 
 
-========================
 Accessibility Fine Print
 ========================
 
@@ -53,14 +51,12 @@ Widget sizing can also be an issue. When creating elements which require size, c
 Also be aware of source code ordering, the BorderContainer will properly align the ContentPane regions when it renders them, no matter if the bottom region is specified before the top region in source code order. But, for best support by assistive technology, add the ContentPane regions in correct source code order, with top regions appearing first and bottom regions last. The best way to be confident of an accessible application is to test, test, test! Any developer can test basic accessibility by getting rid of your mouse and make certain you can navigate and use your application with only a keyboard. There are many resources on the Web for creating Accessible content, use them!
 
 
-=========================
 Accessibility Involvement
 =========================
 
 Becky Gibson of IBM's Emerging Technology team is the accessibility lead for Dojo responsible for implementing and promoting accessibility within the Dojo community. She has been fortunate to get support for Accessibility from Dojo's leadership team as well as the `BDFL <http://en.wikipedia.org/wiki/BDFL>`_ of Dijit, Bill Keese, and other dijit developers. Grants from `IBM <http://www.ibm.com/us/>`_ and `Mozilla <http://www.mozilla.org/foundation/>`_ enabled members of the `Adaptive Technology Research Centre <http://atrc.utoronto.ca/>`_ (ATRC) at the University of Toronto to actively participate in the development of the ARIA specification and its implementation within Dojo. The dijit team is always looking to recruit new members to help with accessibility or to help developers enable accessibility in new contributions to dojo, dijit, and dojox.
 
 
-=============================
 Additional Compliance Details
 =============================
 

@@ -1,5 +1,6 @@
 .. _dojo/requireLocalization:
 
+========================
 dojo.requireLocalization
 ========================
 
@@ -12,7 +13,6 @@ dojo.requireLocalization
 Loads localized resources, according to the operating locale, or other locale if specified.
 
 
-============
 Introduction
 ============
 
@@ -26,7 +26,6 @@ Note that the root, by convention is usually US-English, so there are actually n
 
 A Dojo build will collapse these locales into flattened resource bundles, resulting in a single server hit.
 
-=====
 Usage
 =====
 
@@ -38,7 +37,6 @@ Usage
  </script>
 
 
-========
 See also
 ========
 

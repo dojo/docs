@@ -1,5 +1,6 @@
 .. _dojox/mobile/PageIndicator:
 
+==============================
 dojox.mobile.PageIndicator
 ==============================
 
@@ -16,13 +17,11 @@ PageIndicator displays a series of gray and white dots to indicate which page is
 
 The PageIndicator widget uses the dojo's pub/sub event system to communicate with the other widgets. It subscribes to the "/dojox/mobile/viewChanged" message, and refreshes the indicator status.
 
-=====
 Usage
 =====
 
 To use PageIndicator with SwapView, place it as a sibling of the SwapView widgets. Then the PageIndicator searches its parent DOM nodes for the SwapView widgets to create an indicator that reflects them.
 
-======================
 Constructor Parameters
 ======================
 
@@ -33,7 +32,6 @@ Constructor Parameters
 |              |          |         |specified, this.domNode will be the reference node.                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

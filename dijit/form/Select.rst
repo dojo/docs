@@ -1,5 +1,6 @@
 .. _dijit/form/Select:
 
+=================
 dijit.form.Select
 =================
 
@@ -15,14 +16,12 @@ dijit.form.Select
 A styleable drop down select box (similar to html select element)
 
 
-============
 Introduction
 ============
 
 HTML Select tags are problematic when it comes to styling - they are not very styleable, not to mention nearly impossible to get a consistent cross-browser widget.  This widget aims to resolve that issue.
 
 
-=====
 Usage
 =====
 
@@ -30,7 +29,6 @@ The Select widget is designed to replace existing HTML select elements with mini
 
 You can specify the maximum height of your dropdown menu by specifying "maxHeight" attribute during widget instantiation.  If the dropdown menu would be larger than that value (in pixels), then scrollbars are added to the dropdown menu.
 
-========
 Examples
 ========
 
@@ -136,7 +134,6 @@ By default, the width of the select widget will be to fit the width of the selec
 
 The above example also demonstrates using type="separator" to get dividing lines between groups of options.
 
-=============
 Accessibility
 =============
 

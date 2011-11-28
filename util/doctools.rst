@@ -1,5 +1,6 @@
 .. _util/doctools:
 
+========================
 Dojo Documentation Tools
 ========================
 
@@ -13,7 +14,6 @@ Dojo Documentation Tools
 
 Dojo uses a specially crafted, highly readable inline documentation format and distributes the PHP-based code parser used to collect the information.
 
-============
 Introduction
 ============
 

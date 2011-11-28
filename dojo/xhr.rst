@@ -1,5 +1,6 @@
 .. _dojo/xhr:
 
+==============
 dojo.xhr
 ==============
 
@@ -13,7 +14,6 @@ dojo.xhr
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ The XMLHTTP request object (XHR for short) is one of the basic building blocks f
 Dojo provides a solid set of battle-tested XHR wrapper functions to allow you to build Ajax interactions with confidence, use a unified API, and handle forms with ease. Read on to learn how easy it is to build powerful Ajax interactions with Dojo.
 
 
-========
 Features
 ========
 
@@ -39,7 +38,6 @@ Features
 * :ref:`dojo.rawXhrPut <dojo/rawXhrPut>` : Use HTTP PUT method to make an xhr call.
 
 
-========
 Examples
 ========
 
@@ -124,7 +122,6 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
 In fact, the attribute "form:" could be set on each node, not only on form nodes. If your page contains more than one form and these forms are enclosed with a div- or span-tag, then you're able to submit all these forms, if you set "form:" to the surrounding div- or span-tag.
 
 
-========
 See also
 ========
 

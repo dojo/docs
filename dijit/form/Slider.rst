@@ -1,5 +1,6 @@
 .. _dijit/form/Slider:
 
+=================
 dijit.form.Slider
 =================
 
@@ -11,13 +12,11 @@ dijit.form.Slider
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
 A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider** is a scale with a handle you can drag left/right or up/down to select a value.
 
-=====
 Usage
 =====
 
@@ -32,8 +31,7 @@ Usage
 
 Here are some of the constructor parameters:
 
-==============  ====================  =============================================================================
-Parameter       Type                       Description
+==============  ====================  Parameter       Type                       Description
 ==============  ====================  =============================================================================
 value           integer               Initial value of the slider (``0``)
 showButtons     boolean               Whether to show or not buttons at each end of the slider (``true``)
@@ -42,7 +40,6 @@ maximum         integer               Maximum value of the slider (``100``)
 discreteValues  integer               Number of "steps" in the slider. For example if ``discreteValues`` is ``3``, you'll have 3 steps: ``minimum``, ``maximum`` and a value in the middle
 ==============  ====================  =============================================================================
 
-========
 Examples
 ========
 
@@ -157,7 +154,6 @@ And here we create a slider declaratively. Note that we set the value of the "di
     </div>
 
 
-=============
 Accessibility
 =============
 

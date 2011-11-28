@@ -1,5 +1,6 @@
 .. _dojox/image/Magnifier:
 
+=====================
 dojox.image.Magnifier
 =====================
 
@@ -14,7 +15,6 @@ dojox.image.Magnifier
 A dojox.gfx-based version of the :ref:`MagnifierLite widget <dojox/image/MagnifierLite>`.
 
 
-============
 Introduction
 ============
 
@@ -28,7 +28,6 @@ that surface.
 
       
 
-========
 Examples
 ========
 
@@ -85,7 +84,6 @@ The code fragment creates a dojox.image.Magnifier and associates it with the src
 		
     
 
-========
 See also
 ========
 

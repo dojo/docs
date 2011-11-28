@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/ToolbarLineBreak:
 
+=====================================
 dojox.editor.plugins.ToolbarLineBreak
 =====================================
 
@@ -12,14 +13,12 @@ dojox.editor.plugins.ToolbarLineBreak
 
 Have you ever wanted to force the editor toolbar to line break/wrap to a new line?  I've often found myself with that wish, particularly when there are a lot of buttons/icons enabled in the toolbar.  It provides a visual way to separate the toolbar into 'sections', much like how you can use the dijit.ToolbarSeparator to put a vertical separator bar into the editor toolbar.
 
-========
 Features
 ========
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
 * A plugin that can be declared multiple times in your 'plugins' or 'extraPlugins' options of Editor that lets you wrap the toolbar at the indicated points
 
-=====
 Usage
 =====
 
@@ -42,20 +41,17 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  Every point in that definition where '||' is encountered, the plugin inserts a 'line break' into the toolbar between the indicated plugin buttons.  Note you can also use it inside the 'plugins=""' definition of editor too.
 
-===========
 Limitations
 ===========
 
 The background images of the toolbar need to be able to handle line-wrapping toolbars for the effect to look reasonable.  All the provided themes of dojo work reasonably well for a several line toolbar.
 
 
-===================
 AllY Considerations
 ===================
 
 From a key nav A11Y perspective, the toolbar line break plugin works just like the ToolbarSeparator, it doesn't impact the key nav.  Left and right arrow keys will still move between the buttons fine.
 
-========
 Examples
 ========
 
@@ -105,7 +101,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

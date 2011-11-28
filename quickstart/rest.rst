@@ -1,5 +1,6 @@
 .. _quickstart/rest:
 
+==========================================
 Implementing a RESTful Service Server-Side
 ==========================================
 :Status: Contributed
@@ -13,7 +14,6 @@ You find yourself banging your head against the wall, because you hear all the "
 
 First you have to accept what REST is and isn't.  Then you have to understand how Dojo uses REST and then finally you can consider what you need to do to implement REST on the server side.  While this tutorial will try to be generic, my current service side language of choice is PHP, so most of my server side explanations will likely be in the context of PHP.
 
-==========================
 Basics of RESTful Services
 ==========================
 
@@ -125,7 +125,6 @@ OPTIONS
 
 While not currently implemented in either of the JSON REST consumers in Dojo, some RESTful implementations use the HTTP verb ``OPTIONS`` to provide information about what verbs can be supplied for a specific URI.  This would allow a consumer to determine if a resource could be added, updated or deleted.
 
-=============
 Dojo and REST
 =============
 
@@ -283,7 +282,6 @@ Would return something like:
 
 There is a lot more you can do with referencing, but viewing the :ref:`dojox.json.ref <dojox/json/ref>` page is the best way to get a complete picture.  Just remember that your references should contain a relative URI to the appropriate information.
 
-==========================
 Server-Side Implementation
 ==========================
 
@@ -319,7 +317,6 @@ HTTP Headers Sent
 Converting between SQL and REST
 -------------------------------
 
-=====================================
 Combining It and Other Considerations
 =====================================
 

@@ -1,5 +1,6 @@
 .. _dojox/json/ref:
 
+==============
 dojox.json.ref
 ==============
 
@@ -13,7 +14,6 @@ dojox.json.ref
 **dojox.json.ref** implements JSON Referencing to provide serialization, deserialization, and indexing of complex object graphs with circular, multiple, cross-message, cross-store, and cross-site referencing.
 
 
-============
 Introduction
 ============
 
@@ -61,7 +61,6 @@ Id and path-based referencing can also be combined; a path can be postpended to 
 `This tutorial <http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/>`_ provides more in-depth overview of dojox.json.ref. dojox.json.ref is used by the JsonRestStore for reference resolution and indexing.
 
 
-========
 Features
 ========
 
@@ -74,7 +73,6 @@ Features
 4. Useful exceptions when parsing fails
 
 
-=====
 Usage
 =====
 

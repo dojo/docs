@@ -1,5 +1,6 @@
 .. _dojo/setAttr:
 
+============
 dojo.setAttr
 ============
 
@@ -9,7 +10,6 @@ dojo.setAttr
 Sets an attribute on an HTML element.
 
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ using `dojo.connect()`, meaning that event handler properties will be normalized
 
 Since Dojo 1.7, ``dojo.setAttr`` is exposed via the ``set`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -42,7 +41,6 @@ value
   the value to set for the attribute, if the name is a string.
 
 
-========
 Examples
 ========
 
@@ -87,7 +85,6 @@ Dojo < 1.7
     var obj = { color:"#fff", backgroundColor:"#000" };
     dojo.setAttr("someNode", "style", obj);
 
-========
 See also
 ========
 

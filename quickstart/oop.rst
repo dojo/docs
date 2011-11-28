@@ -1,5 +1,6 @@
 .. _quickstart/oop:
 
+=============
 OOP with Dojo
 =============
 

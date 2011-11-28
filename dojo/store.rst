@@ -1,5 +1,6 @@
 .. _dojo/store:
 
+==========
 dojo.store
 ==========
 
@@ -12,7 +13,6 @@ dojo.store
 
 Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supersede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on `HTML5/W3C's IndexedDB object store API <http://www.w3.org/TR/IndexedDB/#object-store-sync>`_. The Dojo Storage API (implemented in `dojox.storage <dojox/storage>`_)  is already a compatible subset of the the Dojo object store API.
 
-==============
 Dojo Store API
 ==============
 
@@ -22,8 +22,7 @@ Methods
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-================================================  ======================================================================
-Method                                            Description
+================================================  Method                                            Description
 ================================================  ======================================================================
 get(id)                                           Retrieves an object by its identifier, returning the object.
 
@@ -68,29 +67,25 @@ getMetadata(object)                               Returns any metadata about the
 Properties
 ----------
 
-===========  ================  ======================================================================
-Property     Type              Description
+===========  ================  Property     Type              Description
 ===========  ================  ======================================================================
 idProperty   String            Name of the property to use as the identifier
 data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
 ===========  ================  ======================================================================
 
 
-================
 Returned Objects
 ================
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, methods may also be defined on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  In particular, a store may choose to return objects that are instances of dojo.Stateful (although none of the core stores do this).
 
 
-=====================
 Observing Result Sets
 =====================
 
 When a store is wrapped with ``dojo.store.Observable``, one can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
-========================================================  =======================================================================
-Method                                                    Description
+========================================================  Method                                                    Description
 ========================================================  =======================================================================
 observe(listener)                                         The listener function is called with following arguments:
                                                           listener(object, removedFrom, insertedInto);
@@ -102,7 +97,6 @@ observe(listener)                                         The listener function 
 close                                                     When close() is called on a result set, notifications will no longer be fired.
 ========================================================  =======================================================================
 
-==============================
 Core Stores included with Dojo
 ==============================
 
@@ -167,7 +161,6 @@ We will need to include a helper mixin or wrapper to make it easy to implement t
 I believe this generally facilitates all of the Dojo Data functionality. Some of it may require some composition, but I think most of the needed things would be in place to achieve anything you could with Dojo Data. The one thing I did intentionally omit was getLabel/getLabelAttributes, as I think is clearly a UI concern. It would be easy enough to include a labelProperty property on the store, but I don't think it is necessary.
 
 
-============
 Design Goals
 ============
 
@@ -179,7 +172,6 @@ Design Goals
 
 * Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _quickstart/widgetHierarchies:
 
+================================================================
 Widget Hierarchies: isContainer, dijit._Container, and startup()
 ================================================================
 :Status: Contributed
@@ -23,7 +24,6 @@ Widgets that define the isContainer flag are meant to contain other widgets.  Th
 
 Since isContainer widgets promise to call startup() on their children, the parser (:ref:`dojo.parser <dojo/parser>`) will ***not*** call startup on those widgets.  This allows the parent widget to do processing both before and after the child widget is started.  Therefore, when adding child widgets to a parent widget, be sure to use the proper API, so that the parent knows the child exists.
 
-================
 dijit._Container
 ================
 
@@ -35,7 +35,6 @@ All of the widgets named \*\*\*Container (ex: :ref:`dijit.layout.TabContainer <d
 
 :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`, on the other hand, defines isContainer but does not extend dijit._Container (since it contains rich text rather than a simple list of widgets).
 
-================
 dijit._Contained
 ================
 

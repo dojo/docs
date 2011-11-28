@@ -1,5 +1,6 @@
 .. _dojo/fadeOut:
 
+============
 dojo.fadeOut
 ============
 
@@ -14,7 +15,6 @@ dojo.fadeOut
 
 This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to fading a node out of view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a fade-out is desired.
 
-==========
 Parameters
 ==========
 
@@ -22,13 +22,11 @@ The *dojo.fadeOut* takes an object as its parameter.  This object defines what d
 
 All standard :ref:`dojo.Animation <dojo/Animation>` events and parameters apply, though *properties:{}* is explicitly set to control opacity, so should be omitted.
 
-============
 Return value
 ============
 
 The *dojo.fadeOut* function returns an instance of :ref:`dojo.Animation <dojo/Animation>`.  To execute the fadeOut, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
-========
 Examples
 ========
 
@@ -123,7 +121,6 @@ Example 3:  Fade in a dom node with an easing function
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
 
-========
 See Also
 ========
 

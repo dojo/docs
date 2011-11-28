@@ -1,7 +1,6 @@
 .. _build/buildSystem:
 
-The Dojo Build System
-=====================
+=====================The Dojo Build System=====================
 
 :Status: Draft
 :Version: 1.7+
@@ -15,9 +14,8 @@ version 1.7 is available* :ref:`here <build/pre17/build>`.
 
 *See* :ref:`The Dojo Build System <build/index>` *for a complete list of build system documentation resources.*
 
-============
-Introduction
-============
+Command Line Switches
+=====================
 
 The Dojo build system is a general-purpose program for transforming a set of resources. It was built to solve the
 problem of transforming a set of resources that comprise an application in order to improve the performance of that
@@ -48,9 +46,8 @@ processes can be executed as well.
 This document describes using the build system for deployment optimizations. See xxx for information about writing your
 own custom transforms and configuring the build system for other uses.
 
-========
-Overview
-========
+Command Line Switches
+=====================
 
 The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
@@ -105,9 +102,8 @@ These are discussed in separate documents as follows:
 
 * For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
-========================
-Assumptions for Examples
-========================
+Command Line Switches
+=====================
 
 This document contains several examples. It assumes the source distribution of the Dojo Toolkit, version 1.7 or greater,
 is installed at ~/dev/dtk/. If you are a Windows user, "~" is shorthand for the user's home directory; substitute
@@ -118,9 +114,8 @@ Unless specifically stated otherwise, all examples assume the current working di
 ~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the the build system, both rather a convenience
 so you don't have to path to the build system executable.
 
-=========================
-Invoking the Build System
-=========================
+Command Line Switches
+=====================
 
 The build system is a Javascript program comprised of a set of AMD modules that may be executed by node.js or Rhino. The
 program is distributed with the source version of the Dojo Toolkit. The source tree resides at util/build/. Dojo can be
@@ -173,7 +168,6 @@ Although the legacy build system could be executed when /util/buildscripts/ was 
 do so required a carefully constructed profile. Indeed, many profiles provided with Dojo source distributions won't work
 unless /util/buildscripts/ is the current working directory. The current build system has no such restriction.
 
-=====================
 Command Line Switches
 =====================
 
@@ -234,7 +228,6 @@ understanding and debugging how a particular build system invocation is consumin
 This example points out that number, true, false, and null values are not stored as strings but rather are converted to
 Javascript numbers, booleans, and null.
 
-==============
 Profile Basics
 ==============
 
@@ -447,7 +440,6 @@ represents. Also notice that the property :ref:``selfFilename`` is set the the a
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
-====================
 Specifying Resources
 ====================
 
@@ -889,7 +881,6 @@ Don't be concerned about the need to download an extra resource to configure the
 the writeDojo transform allows a customized configuration to be embedded in the loader resource and the replacements
 transform allows chunks of resources, like the configuration script element, to be replaced--perhaps with nothing.
 
-=============
 Resource Tags
 =============
 
@@ -917,7 +908,6 @@ tags:
 ``miniExclude``
   The resource should not be copied to the destination if the profile property "mini" is truthy.
 
-==========
 Transforms
 ==========
 
@@ -956,7 +946,6 @@ for complete documentation.
 
 * :ref:`writeOptimized <build/transforms/writeOptimized>`: Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
 
-===================
 Applying Transforms
 ===================
 
@@ -1047,7 +1036,6 @@ below, in the order listed. The first test that passes indicates the transforms 
 
   * Copy resource from source location to destination location (copy).
 
-===========================================
 Command Line and Profile Property Reference
 ===========================================
 

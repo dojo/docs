@@ -1,5 +1,6 @@
 .. _dijit/layout/TabContainer:
 
+=========================
 dijit.layout.TabContainer
 =========================
 
@@ -14,14 +15,12 @@ dijit.layout.TabContainer
 A TabContainer is a container that has multiple panes, but shows only one pane at a time. There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button.
 
 
-=====
 Usage
 =====
 
 You can use tabs in your own application and style them as you want, but they also fit perfectly into the dijit.layout system.
 
 
-========
 Examples
 ========
 
@@ -207,7 +206,6 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
     </div>
 
 
-=============
 More examples
 =============
 
@@ -348,15 +346,13 @@ It is worth noting: If you need a function to be called *absolutely every* time 
 This is because ``addChild`` will not be called for existing panes (in markup).
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate to next tab button                   Right arrow
 Navigate to previous tab button               Left arrow

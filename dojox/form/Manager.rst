@@ -1,5 +1,6 @@
 .. _dojox/form/Manager:
 
+==================
 dojox.form.Manager
 ==================
 
@@ -11,7 +12,6 @@ dojox.form.Manager
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the widget implementing the :ref:`form manager <dojox/form/manager
 
 This is a high-level widget placed directly in ``/dojox/form/`` directory. Other form manager's components (mixins) are located in ``/dojox/form/manager/`` directory.
 
-======================
 Methods and properties
 ======================
 
@@ -40,7 +39,6 @@ startup
 
 This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
-=====
 Usage
 =====
 

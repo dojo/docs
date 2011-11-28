@@ -1,5 +1,6 @@
 .. _dojox/date/relative:
 
+===================
 dojox.date.relative
 ===================
 

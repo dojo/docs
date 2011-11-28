@@ -1,5 +1,6 @@
 .. _dojo/global:
 
+===========
 dojo.global
 ===========
 
@@ -14,14 +15,12 @@ dojo.global
 dojo.global is an alias for the global scope.
 
 
-============
 Introduction
 ============
 
 In a browser environment, dojo.global is the window object. You should refer to `dojo.global` rather than `window` so that your code will run correctly in other contexts (e.g. Rhino on a server).
 
 
-=====
 Usage
 =====
 
@@ -37,7 +36,6 @@ Usage
 Though this example is clearly targeted at a browser environment, by using `dojo.global` over the `window` object we are ensuring the code will run in any other environments with a defined host environment file (hostenv_something).
 
 
-========
 See also
 ========
 

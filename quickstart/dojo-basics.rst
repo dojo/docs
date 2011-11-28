@@ -1,5 +1,6 @@
 .. _quickstart/dojo-basics:
 
+=========================
 Functions used Everywhere
 =========================
 
@@ -15,7 +16,6 @@ Functions used Everywhere
 It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase. These are dojo-fundamentals, and should be memorized if possible.
 
 
-============
 dojo.require
 ============
 
@@ -35,7 +35,6 @@ It may seem painful to require all modules, but Dojo rewards by:
 * Allowing you to build streamlined versions of Dojo. If you use dijit.Dialog a lot, you can build a custom version of dojo that loads dijit.Dialog quickly. ``dojo.require`` knows whether the function is already loaded, and so you don't have to change any of your code.
 
 
-==========
 dojo.ready
 ==========
 
@@ -59,7 +58,6 @@ That example passes an anonymous function. You can pass named functions as well:
 Notice we didn't call ``dojo.ready(init());`` ... The additional () causes the named-function to execute immediately, and ``dojo.ready`` expects a function.
 
 
-=========
 dojo.byId
 =========
 
@@ -77,7 +75,6 @@ This is more or less an alias to ``document.getElementById``. Simply pass ``dojo
 Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: :ref:`dojo.query <dojo/query>`) to avoid conflicts.
 
 
-==========
 dijit.byId
 ==========
 
@@ -99,7 +96,6 @@ dijit.byId
 ``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by :ref:`dijit._Widget <dijit/_Widget>`, and adds in additional specific methods depending on the type of Dijit.
 
 
-==========
 dojo.query
 ==========
 
@@ -119,7 +115,6 @@ The returned object of a ``dojo.query()`` call is an instance of :ref:`dojo.Node
 Read more about :ref:`dojo.query <dojo/query>`...
 
 
-============
 dojo.forEach
 ============
 
@@ -182,7 +177,6 @@ does the same thing. But that's not all!  *New in 1.0*, you can collapse the fun
 Ay carumba!  That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about `forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
 
 
-============
 dojo.connect
 ============
 
@@ -238,7 +232,6 @@ The Dojo event system allows you to connect to DOM elements or nodes or plain Ja
 ``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the :ref:`full rundown <dojo/connect>` for more examples and use-cases.
 
 
-========
 See also
 ========
 

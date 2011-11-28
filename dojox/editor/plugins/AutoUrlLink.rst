@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/AutoUrlLink:
 
+=====================================================
 dojox.editor.plugins.AutoUrlLink (Under Construction)
 =====================================================
 
@@ -12,13 +13,11 @@ dojox.editor.plugins.AutoUrlLink (Under Construction)
 
 Have you ever wanted to turn the URL you entered in the document into a hyperlink automatically? This plug-in is for you.
 
-========
 Features
 ========
 
 Once required in and enabled, this plugin can turn a URL like string (such as http, https and ftp) into a hyperlink.
 
-=====
 Usage
 =====
 
@@ -52,7 +51,6 @@ Then just declare the plugin and configure it as follows.
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the AutoUrlLink plugin!
 
-==============
 User Interface
 ==============
 
@@ -64,13 +62,11 @@ AutoUrlLink plugin is a plugin for dijit.Editor, which provides the users with t
 
 .. image :: AutoUrlLink.png
 
-===========
 Limitations
 ===========
 
 None.
 
-========
 Examples
 ========
 
@@ -123,7 +119,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

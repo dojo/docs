@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/InsertAnchor:
 
+=================================
 dojox.editor.plugins.InsertAnchor
 =================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.InsertAnchor
 
 Have you ever wanted to insert a named location in your document (anchor), that people can link to using urls and hashes?  If so, then this plugin is for you!
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * CSS styling in the edit view that indicates where anchors are  The styles do not appear outside of the editor.
 
 
-=====
 Usage
 =====
 
@@ -54,7 +53,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the InsertAnchor plugin!  You can use the button insert and edit anchors in your page.
 
-========
 Examples
 ========
 
@@ -108,7 +106,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

@@ -12,7 +12,6 @@ dojo.window
 **dojo.window** contains functions related to the viewport.
 
 
-========
 Features
 ========
 
@@ -29,7 +28,6 @@ Features
   Scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.
 
 
-========
 See also
 ========
 

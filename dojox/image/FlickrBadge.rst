@@ -1,5 +1,6 @@
 .. _dojox/image/FlickrBadge:
 
+=======================
 dojox.image.FlickrBadge
 =======================
 
@@ -14,7 +15,6 @@ dojox.image.FlickrBadge
 An extension on :ref:`dojox.image.Badge <dojox/image/Badge>`, using Flickr as a data provider.
 
 
-============
 Introduction
 ============
 
@@ -22,14 +22,12 @@ Flickr badge displays images on a page and cycles through the images displaying 
 instances.
 
 
-=====
 Usage
 =====
 
 There are a number of configurable parameters, most of which are optional:
 
-==========    ======================================================================
-Parameter     Description
+==========    Parameter     Description
 ==========    ======================================================================
 apikey        your Flickr API key
 columns       # of columns of images to display
@@ -41,7 +39,6 @@ userid        your flickr userid (saves a lookup request)
 username      your flickr username
 ==========    ======================================================================
 
-========
 Examples
 ========
 
@@ -71,7 +68,6 @@ Declarative example
    </style>
 
 
-========
 See also
 ========
 

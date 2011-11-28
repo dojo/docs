@@ -1,5 +1,6 @@
 .. _dojox/encoding/crypto/SimpleAES:
 
+===============================
 dojox.encoding.crypto.SimpleAES
 ===============================
 

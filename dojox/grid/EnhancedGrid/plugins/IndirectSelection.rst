@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/IndirectSelection:
 
+=================================================
 dojox.grid.EnhancedGrid.plugins.IndirectSelection
 =================================================
 
@@ -10,7 +11,6 @@ dojox.grid.EnhancedGrid.plugins.IndirectSelection
 .. contents::
    :depth: 2
 
-==============
 Introduction
 ==============
 
@@ -258,14 +258,12 @@ or
   </script>
 
 
-============
 Known Issues
 ============
 
 * There are known compatibility issues when Indirect Selection is used together with :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
-========
 See Also
 ========
 

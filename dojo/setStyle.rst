@@ -1,5 +1,6 @@
 .. _dojo/setStyle:
 
+=============
 dojo.setStyle
 =============
 
@@ -9,7 +10,6 @@ dojo.setStyle
 Sets styles on a node.
 
 
-============
 Introduction
 ============
 
@@ -17,7 +17,6 @@ Introduction
 
 Since Dojo 1.7, ``dojo.setStyle`` is exposed via the ``set`` method of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -41,7 +40,6 @@ value
   If passed, sets value on the node for style, handling cross-browser concerns.  When setting a pixel value, be sure to include &quot;px&quot; in the value. For instance, top: 200px. Otherwise, in some cases, some browsers will not apply the style.
 
 
-========
 Examples
 ========
 
@@ -143,7 +141,6 @@ Dojo < 1.7
     fontSize:"13pt"
   });
 
-========
 See also
 ========
 

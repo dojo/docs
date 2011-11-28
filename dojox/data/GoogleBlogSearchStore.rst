@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleBlogSearchStore:
 
+================================
 dojox.data.GoogleBlogSearchStore
 ================================
 
@@ -13,13 +14,11 @@ dojox.data.GoogleBlogSearchStore
 
 dojox.data.GoogleBlogSearchStore is a data store that uses Google APIs to search the blogosphere.
 
-============
 Introduction
 ============
 
 dojox.data.GoogleBlogSearchStore is a read only data store that uses Google to search blog posts.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-=====
 Usage
 =====
 
@@ -79,7 +78,6 @@ The pattern of using the GoogleBlogSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -165,7 +163,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

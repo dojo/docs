@@ -1,5 +1,6 @@
 .. _dojo/toJson:
 
+===========
 dojo.toJson
 ===========
 
@@ -10,13 +11,11 @@ dojo.toJson
 
 Returns a JSON serialization of an object.
 
-============
 Introduction
 ============
 
 This function takes an object and converts it to a String serialization of that object.
 
-========
 Examples
 ========
 
@@ -52,7 +51,6 @@ Dojo < 1.7
 
 TODOC: Date objects in objects
 
-=========
 See Also:
 =========
 

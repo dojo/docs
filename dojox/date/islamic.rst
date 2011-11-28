@@ -1,5 +1,6 @@
 .. _dojox/date/islamic:
 
+==================
 dojox.date.islamic
 ==================
 
@@ -13,13 +14,11 @@ dojox.date.islamic
 
 Implements the traditional Islamic (Hijri) calendar. This is the civil calendar in Saudi Arabia and the liturgical calendar of the Islamic faith worldwide.
 
-============
 Introduction
 ============
 
 The Islamic calendar (Hijri calendar) is a purely lunar calendar. It contains 12 months that are based on the motion of the moon, and because 12 synodic months is only 12 x 29.53=354.36 days, the Islamic calendar is consistently shorter than a tropical year, and therefore it shifts with respect to the Gregorian calendar. The calendar is based on the Qur'an (Sura IX, 36-37) and its proper observance is a sacred duty for Muslims.
 
-=====
 Usage
 =====
 
@@ -58,7 +57,6 @@ Islamic calendar implemented in this package can be used in conjunction with Dat
 
 .. image:: dijit.jpg
 
-========
 Examples
 ========
 
@@ -105,7 +103,6 @@ Code snippet below illustrates usage of Islamic calendar in the context of graph
   </body></html>
 
 
-========
 See also
 ========
 

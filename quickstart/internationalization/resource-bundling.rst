@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/resource-bundling:
 
+=============================
 Translatable Resource bundles
 =============================
 
@@ -11,7 +12,6 @@ Translatable Resource bundles
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ The methods used in Dojo to substitute localized resources are intended for Dojo
 The translation task in a Dojo application is limited to anything which appears in the DOM, that is anything which is visible on the web page. It's unacceptable to hard-code an English string and have that appear to users, no matter how unlikely it is to appear. Debug or console message however, for the time being, are not localized as a matter of policy. There are no guidelines on console messages at the present time. They are generally discouraged in production code.
 
 
-==================
 Localizing Strings
 ==================
 
@@ -61,7 +60,6 @@ The root happens to have the English translation, which also acts as a fallback 
 Translation subdirectories are searched and mixed in such a way that variants can specify overrides for some or all of their parent locale. Because the search requires looking for translations under both the language as well as variants, sometimes a 404 will occur; this is normal and can be optimized at build time.
 
 
-========
 See also
 ========
 

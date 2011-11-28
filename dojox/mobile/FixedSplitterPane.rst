@@ -1,5 +1,6 @@
 .. _dojox/mobile/FixedSplitterPane:
 
+==============================
 dojox.mobile.FixedSplitterPane
 ==============================
 
@@ -12,7 +13,6 @@ dojox.mobile.FixedSplitterPane
 
 FixedSplitterPane is a pane widget that is used in a :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>`. It is a widget, but can be regarded as a simple <div> element.
 
-=====
 Usage
 =====
 
@@ -22,13 +22,11 @@ Usage
 
   dojo.require("dojox.mobile.FixedSplitter");
 
-======================
 Constructor Parameters
 ======================
 
 None.
 
-========
 Examples
 ========
 

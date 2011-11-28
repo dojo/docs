@@ -1,5 +1,6 @@
 .. _dojox/gauges/GlossyCircularGauge:
 
+================================
 dojox.gauges.GlossyCircularGauge
 ================================
 
@@ -16,7 +17,6 @@ A glossy circular gauge with a variety of indicators, used to display numerical 
 
 .. image:: GlossyCircularGauge.png
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ This gauge widget is based on dojox.gauges.AnalogGauge. It provides a way to dis
 It is created with predefined indicators and thus is ready to use.
 
 
-=====
 Usage
 =====
 
@@ -81,7 +80,6 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

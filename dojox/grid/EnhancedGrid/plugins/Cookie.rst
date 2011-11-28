@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/Cookie:
 
+======================================
 dojox.grid.EnhancedGrid.plugins.Cookie
 ======================================
 
@@ -12,13 +13,11 @@ Cookie plugin provides a convenient ways to persist grid properties like column 
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 Cookie is a plugin for dojox.grid.EnhancedGrid. It is used to persist grid properties in browser cookie.
 
-=============
 Configuration
 =============
 
@@ -63,10 +62,8 @@ If your grid is created in JavaScript:
 
 The available configuration properties are:
 
-==============  ==================  ===============  ==============================================
-Property        Type                Default Value    Description
-==============  ==================  ===============  ==============================================
-cookieProps     dojo.__cookieProps  {}               Set the cookie properties. See dojo.cookie.js
+==============  ==================  ===============  Property        Type                Default Value    Description
+==============  ==================  ===============  cookieProps     dojo.__cookieProps  {}               Set the cookie properties. See dojo.cookie.js
 ==============  ==================  ===============  ==============================================
 
 All the persistable grid features will be stored in cookie by default. If you'd like to disable some of them, you can declare in the configuration object:
@@ -91,7 +88,6 @@ The cookie names of currently supported grid features are:
 * **columnOrder**
 * **nestedSortProps**  (only available when nestedSorting plugin is used)
 
-=====
 Usage
 =====
 
@@ -100,8 +96,7 @@ This plugin exposes the following methods to the grid:
 setCookieEnabled(cookieName, toEnable):
 	If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistence of this feature.
 
-==============  ==================  ==========================  ==============================================================================================
-Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ==============================================================================================
 cookieName      String              Mandatory                   A name of a grid feature. If null or undefined, this function will apply to all supported
                                                                 grid features.
@@ -111,8 +106,7 @@ toEnable        Boolean             Mandatory                   To enable cookie
 getCookieEnabled(cookieName):
 	Check whether the cookie support of a particular grid feature is enabled.
 
-==============  ==================  ==========================  ==============================================================================================
-Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ==============================================================================================
 cookieName      String              Optional                    A name of a grid feature. If omitted, this function will apply to all supported grid features.
 [return]        Boolean                                         If cookieName is valid, return whether the cookie of this grid feature is enabled.
@@ -134,7 +128,6 @@ Here is some examples on how to use the API:
   //Check whether cookie is used in this grid
   var isEnabled = grid.cookieEnabled();
 
-========
 See Also
 ========
 

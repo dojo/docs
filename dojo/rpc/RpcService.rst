@@ -1,5 +1,6 @@
 .. _dojo/rpc/RpcService:
 
+===================
 dojo.rpc.RpcService
 ===================
 
@@ -11,7 +12,6 @@ dojo.rpc.RpcService
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ This class provide SMD v.1 parsing facilities as well as all hooks to implement 
 Dojo ships in with a :ref:`JSON RPC Service <dojo/rpc/JsonService>` and a :ref:`JSONP RPC Service <dojo/rpc/JsonpService>`.
 
 
-=====
 Usage
 =====
 
@@ -36,13 +35,10 @@ Usage
   </script>
 
 
-============== ================= =======================================
-Parameter      Type              Description
-============== ================= =======================================
-``args``       Object|String|URL If ``args`` is a String or an URL, its location is fetched and treated as JSON describing the SMD. If it is an object and contains a ``smdStr`` property, it is passed to ``eval`` to get the SMD, otherwise we assume that it is an SMD object.
+============== ================= Parameter      Type              Description
+============== ================= ``args``       Object|String|URL If ``args`` is a String or an URL, its location is fetched and treated as JSON describing the SMD. If it is an object and contains a ``smdStr`` property, it is passed to ``eval`` to get the SMD, otherwise we assume that it is an SMD object.
 ============== ================= =======================================
 
-==========
 SMD format
 ==========
 
@@ -81,13 +77,11 @@ Here is an example SMD v.1 as expected by ``dojo.rpc``.
 
 This SMD describes a single method, ``add``, with two parameters. If ``add`` is called with less than two parameters, an error is thrown. The way method name and parameters are transmitted to the end point depends on the service type
 
-===================
 Creating subclasses
 ===================
 
 TODO
 
-========
 See also
 ========
 

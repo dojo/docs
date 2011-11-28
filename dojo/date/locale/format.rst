@@ -1,5 +1,6 @@
 .. _dojo/date/locale/format:
 
+=======================
 dojo.date.locale.format
 =======================
 
@@ -11,14 +12,12 @@ dojo.date.locale.format
 
 Creates a string from a Date object using a known localized pattern.
 
-============
 Introduction
 ============
 
 By default, this method formats both date and time from dateObject. Formatting patterns are chosen appropriate to the locale. Different formatting lengths may be chosen, with “full” used by default. Custom patterns may be used or registered with translations using the dojo.date.locale.addCustomFormats method. Formatting patterns are implemented using the syntax described at unicode.org
 
 
-=====
 Usage
 =====
 
@@ -108,7 +107,6 @@ Notes:
 * the source mentions that a single quote can be added by supplying 2 of them, but this doesn't appear to work
 
 
-========
 Examples
 ========
 
@@ -222,7 +220,6 @@ Render the current Date in several ways using format(). The inverse operation to
         </div>
 
 
-========
 See also
 ========
 

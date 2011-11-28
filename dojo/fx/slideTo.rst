@@ -1,5 +1,6 @@
 .. _dojo/fx/slideTo:
 
+===============
 dojo.fx.slideTo
 ===============
 
@@ -16,7 +17,6 @@ This function is a helper function that wraps the :ref:`dojo.animateProperty <do
 
 **NOTE:** This function works best on absolutely positioned nodes.
 
-==========
 Parameters
 ==========
 
@@ -26,13 +26,11 @@ The *dojo.fx.slideTo* function takes an object as its parameter.  This object de
 :left:  The position to move the left corner for the node to, in absolute pixels.
 
 
-============
 Return value
 ============
 
 The *dojo.fx.slideTo* function returns an instance of dojo._Animation.  To execute the slideTo, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
-========
 Examples
 ========
 
@@ -73,7 +71,6 @@ Example 1:  Slide a dom node right 200 pixels.
     </div>
 
 
-========
 See Also
 ========
 

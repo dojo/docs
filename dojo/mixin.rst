@@ -1,5 +1,6 @@
 .. _dojo/mixin:
 
+==========
 dojo.mixin
 ==========
 
@@ -13,7 +14,6 @@ dojo.mixin
 dojo.mixin is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. Dojo mixin is very similar to :ref:`dojo.extend <dojo/extend>` but only works on objects, whereas extend explicitly extends an object.prototype. Merging two objects
 
 
-============
 Simple Mixes
 ============
 
@@ -52,7 +52,6 @@ This example overwrites the "d" member from the second object, leaving the varia
 This will create and play a fadeIn animation passing and onEnd function and node, using a default duration.
 
 
-====================
 Creating new Objects
 ====================
 
@@ -91,7 +90,6 @@ Alternately, you can pass an empty object as the first mix, and mix another obje
 Just remember the object instance in the first position will always be overwritten, and the right-most object will take precedence in the mix.
 
 
-===================
 Mixins with Classes
 ===================
 
@@ -123,7 +121,6 @@ Now, any time we create a new instance of a my.Thinger, it will have a member va
   
   var thing = new my.Thinger({ defaultValue:"blue" });
 
-=====================
 Mixing into instances
 =====================
 
@@ -143,7 +140,6 @@ Sometimes is it useful to mix custom variables and members into instances of wid
 
 Now, that instance of the ContentPane as a Date object attached in the _timeCreated member, which is accessible to the widget as 'this._timeCreated'.
 
-==============
 Mixing methods
 ==============
 

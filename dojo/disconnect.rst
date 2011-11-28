@@ -1,5 +1,6 @@
 .. _dojo/disconnect:
 
+===============
 dojo.disconnect
 ===============
 
@@ -12,13 +13,11 @@ dojo.disconnect
 
 Disconnects methods from linked events.
 
-============
 Introduction
 ============
 
 Dojo's :ref:`event <quickstart/events>` system provides `dojo.disconnect` to cleanly remove event listeners created by :ref:`dojo.connect <dojo/connect>`. The more events in the page that exist, the more the browser (or otherwise) has to do.
 
-=====
 Usage
 =====
 

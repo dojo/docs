@@ -1,5 +1,6 @@
 .. _dojo/hasClass:
 
+=============
 dojo.hasClass
 =============
 
@@ -13,7 +14,6 @@ Returns a boolean depending on whether or not a node has a passed class string.
 
 Since Dojo 1.7, ``dojo.hasClass`` is exposed via the ``contains`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -100,7 +100,6 @@ Using :ref:`dojo.query <dojo/query>` to find a node and check if it has a class:
 Note: You do not need to explicitly check for ``dojo.hasClass`` before adding or removing a class with :ref:`dojo.addClass <dojo/addClass>` or :ref:`dojo.removeClass <dojo/removeClass>`, they do it for you.
 
 
-========
 See also
 ========
 

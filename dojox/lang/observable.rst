@@ -1,5 +1,6 @@
 .. _dojox/lang/observable:
 
+=====================
 dojox.lang.observable
 =====================
 

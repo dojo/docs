@@ -1,5 +1,6 @@
 .. _dojo/hitch:
 
+==========
 dojo.hitch
 ==========
 

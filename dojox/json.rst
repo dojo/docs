@@ -1,5 +1,6 @@
 .. _dojox/json:
 
+==========
 dojox.json
 ==========
 
@@ -13,7 +14,6 @@ dojox.json
 DojoX JSON is set of tools for working with JSON and object data structures.
 
 
-========
 Features
 ========
 

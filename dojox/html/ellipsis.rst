@@ -1,5 +1,6 @@
 .. _dojox/html/ellipsis:
 
+===================
 dojox.html.ellipsis
 ===================
 
@@ -14,7 +15,6 @@ dojox.html.ellipsis
 **dojox.html.ellipsis** offers cross-browser support for `text-overflow: ellipsis`
 
 
-=====
 Usage
 =====
 
@@ -25,7 +25,6 @@ You can then add "dojoxEllipsis" on any node that you want to ellipsis-ize.  In 
 ``NOTE:`` When using the dojoxEllipsis class within tables, the table needs to have the `table-layout: fixed` style
 
 
-====================
 Selecting Text in FF
 ====================
 
@@ -34,7 +33,6 @@ The XUL description tag that is used to accomplish this functionality in Firefox
 ``NOTE:`` All other browsers besides Firefox will automatically handle HTML and the text will be selectable - without any performance hit.
 
 
-========
 Examples
 ========
 

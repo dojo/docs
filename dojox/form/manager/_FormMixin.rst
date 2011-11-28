@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_FormMixin:
 
+=============================
 dojox.form.manager._FormMixin
 =============================
 
@@ -11,7 +12,6 @@ dojox.form.manager._FormMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the component of the form manager. It should be used together with
 
 If the widget is based on ``<form>`` element, this mixin provides the enhanced functionality to reset and submit the form using the standard browser form submitting process. ``onreset`` and ``onsubmit`` events are processed automatically.
 
-======================
 Methods and properties
 ======================
 
@@ -131,7 +130,6 @@ startup
 
 This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
-====
 Tips
 ====
 

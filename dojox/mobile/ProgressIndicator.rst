@@ -1,5 +1,6 @@
 .. _dojox/mobile/ProgressIndicator:
 
+==============================
 dojox.mobile.ProgressIndicator
 ==============================
 
@@ -16,13 +17,11 @@ ProgressIndicator is a round spinning graphical representation that indicates th
 
 The spinning object is NOT an animated gif, but a collection of div elements. Non-CSS3 browsers do not have ability to rotate dom nodes. In that case, the indicator becomes a rectangle shape, not a round shape.
 
-=====
 Usage
 =====
 
 ProgressIndicator is not a widget. It is a singleton class. An instance of this class can be obtained by calling dojox.mobile.ProgressIndicator.getInstance(). The start() method of ProgressIndicator starts spinning, and the stop() method stops spinning. You need to explicitly add ProgressIndicator.domNode to somewhere visible. The stop() method automatically removes ProgressIndicator.domNode from the dom tree for you.
 
-======================
 Constructor Parameters
 ======================
 
@@ -34,7 +33,6 @@ Constructor Parameters
 |colors        |Array     |         |An array of indicator colors.                                                                              |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-=============
 Method Detail
 =============
 
@@ -53,7 +51,6 @@ setImage(/\*String\*/file)
 	Parameters:
 		file - a path for an indicator icon image file
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _quickstart/introduction/history:
 
+=======================
 A Brief History of Dojo
 =======================
 

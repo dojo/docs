@@ -1,5 +1,6 @@
 .. _dojo/animateProperty:
 
+====================
 dojo.animateProperty
 ====================
 
@@ -13,7 +14,6 @@ dojo.animateProperty
 dojo.animateProperty is a very useful method for animating CSS properties. An example use case is fading a background color from red to green to indicate status changes.
 
 
-=====
 Usage
 =====
 
@@ -81,7 +81,6 @@ As seen, we simply add new keys to the ``properties:`` hash. The above example i
 
 It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``.
 
-===================
 Advanced Properties
 ===================
 
@@ -155,7 +154,6 @@ Dojo <1.7
 
 As pointed out above, the height: function is passed a reference to the domNode being animated. This functionality is new in Dojo 1.4, as well as the addition of the node being passed to the start: and end: functions.
 
-========
 Examples
 ========
 

@@ -1,12 +1,12 @@
 .. _quickstart/data/usingdatastores/sorting:
 
+=======
 Sorting
 =======
 
 .. contents::
   :depth: 3
 
-=============
 Sorting Items
 =============
 
@@ -29,7 +29,6 @@ For compound sorts, you can define as many sort keys as you want. The order in t
     {attribute: "name", descending: false}
   ];
 
-========
 Examples
 ========
 

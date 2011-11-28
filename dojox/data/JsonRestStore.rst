@@ -1,5 +1,6 @@
 .. _dojox/data/JsonRestStore:
 
+========================
 dojox.data.JsonRestStore
 ========================
 
@@ -13,7 +14,6 @@ dojox.data.JsonRestStore
 **dojox.data.JsonRestStore** is a lightweight datastore implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities.
 
 
-============
 Introduction
 ============
 
@@ -26,7 +26,6 @@ JsonRestStore caches objects that have been retrieved from the server locally in
 JsonRestStore also store objects in a format to ease direct property access for significant performance advantages.
 
 
-========
 Features
 ========
 
@@ -52,7 +51,6 @@ Features
 8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, and as well :ref:`dojox.grid <dojox/grid/index>`.
 
 
-=====
 Usage
 =====
 
@@ -90,7 +88,6 @@ syncMode
   Setting this to true will set the store to using synchronous calls by default. Sync calls return their data immediately from the calling function, so callbacks are unnecessary.
 
 
-========
 Examples
 ========
 
@@ -101,7 +98,6 @@ Examples
  store = new dojox.data.JsonRestStore({service:myService, syncMode: true});
 
 
-====================
 JsonRestStore + Grid
 ====================
 
@@ -122,7 +118,6 @@ The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore c
 Now we have grid that connected to our store and when you edit data in the grid the changes are automatically sent back to the store.
 
 
-==========================
 Implementing a REST Server
 ==========================
 
@@ -141,7 +136,6 @@ The server can also assign or change properties of the object (such an id or def
 Note that in PHP, sometimes setting the Location will erroneously trigger a 302 status code which will cause JsonRestStore to fail. Per RFC 2616, the correct response to a POST that creates a new resource is to return a 201 status code with the Location header. In PHP, you must set the status code as well as the Location header if you want to avoid a 302 response.
 
 
-======
 Paging
 ======
 
@@ -154,7 +148,6 @@ On your server, you should look at the Range header in the request to know which
  Content-Range: items 0-24/66
 
 
-============
 Transactions
 ============
 
@@ -163,7 +156,6 @@ JsonRestStore provides transaction state information so that servers can impleme
 JsonRestStore also features a shared repository of transactional data between all JsonRestStore instances. Therefore, if you save a change, all the JsonRestStore data store’s unsaved data will be committed. This means that you don’t have to track which data stores have modified data, and it also means that you transactions can involve modifications across multiple data stores and corresponding server tables.
 
 
-========
 See also
 ========
 

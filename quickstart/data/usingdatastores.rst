@@ -1,5 +1,6 @@
 .. _quickstart/data/usingdatastores:
 
+================
 Using Datastores
 ================
 
@@ -40,7 +41,6 @@ Datastores provide access to data through a standardized interface for talking t
 * :ref:`FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dijit/Declaration:
 
+=================
 dijit.Declaration
 =================
 
@@ -12,13 +13,11 @@ dijit.Declaration
 
 Declares a widget from markup.
 
-============
 Introduction
 ============
 
 Just as there are two ways to create a widget instances - declarative and programmatic - so there are two ways to declare a Dijit class (i.e., a type of widget). As you might guess, the declarative way is slightly easier.
 
-=====
 Usage
 =====
 To declare your class declaratively, use dijit.Declaration. Uhhhh, OK, too many "declare"s in that sentence. It's easier to show than to tell.
@@ -129,7 +128,6 @@ Every widget declared with class simpleConnectedWidget will have the handler con
 
 Note that dojo/connect is not suitable for methods that need to return a value.
 
-=====
 Notes
 =====
 - widgetsInTemplate is automatically set to true, so any widgets you place in the template will be automatically filled in.

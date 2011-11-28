@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid:
 
+=======================
 dojox.grid.EnhancedGrid
 =======================
 
@@ -9,14 +10,12 @@ dojox.grid.EnhancedGrid
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, the required features must be declared before used.
 
 
-================================
 Run EnhancedGrid without plugins
 ================================
 
@@ -90,7 +89,6 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
         }
     </style>
 
-=====================================
 Run EnhancedGrid with various plugins
 =====================================
 
@@ -129,7 +127,6 @@ EnhancedGrid can also be run with a flexible combination of various plugins, a t
   </div>
 
 
-=============================
 EnhancedGrid plugin list
 =============================
 
@@ -148,19 +145,16 @@ Following is a complete list of EnhancedGrid plugins, please refer to the separa
 * :ref:`Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>` - Grid preferences persistence e.g column width|order and sorting order.
 * :ref:`Search <dojox/grid/EnhancedGrid/plugins/Search>` - Searching grid content by regular expressions or simple wildcard pattern.
 
-=============
 Accessibility
 =============
 
 EnhancedGrid provides the same a11y support level as :ref:`DataGrid <dojox/grid/DataGrid>` , or see the above plugin pages for more details.
 
-============
 Known Issues
 ============
 
 * See the `outstanding tickets for the EnhancedGrid <http://bugs.dojotoolkit.org/query?owner=Evan&status=accepted&status=assigned&status=new&status=reopened&type=defect&summary=~enhanced&col=id&col=summary&col=status&col=type&col=priority&col=milestone&col=component&order=priority>`_.
 
-========
 See also
 ========
 

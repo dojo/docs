@@ -1,5 +1,6 @@
 .. _dojo/date/locale/parse:
 
+======================
 dojo.date.locale.parse
 ======================
 
@@ -14,14 +15,12 @@ dojo.date.locale.parse
 Converts a properly formatted string to a primitive Date object, using locale-specific settings.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

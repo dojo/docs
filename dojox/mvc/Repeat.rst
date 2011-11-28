@@ -1,5 +1,6 @@
 .. _dojox/mvc/Repeat:
 
+=================
 dojox.mvc.Repeat
 =================
 
@@ -15,7 +16,6 @@ dojox.mvc.Repeat
 
 A repeat is bound to an intermediate dojo.Stateful node corresponding to an array in the data model. Child dijits or custom view components inside it inherit their parent data binding context from it.
 
-======================
 Parameters
 ======================
 
@@ -34,7 +34,6 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

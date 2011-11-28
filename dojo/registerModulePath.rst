@@ -1,5 +1,6 @@
 .. _dojo/registerModulePath:
 
+=======================
 dojo.registerModulePath
 =======================
 
@@ -13,7 +14,6 @@ dojo.registerModulePath
 Maps a module name to a path
 
 
-============
 Introduction
 ============
 
@@ -31,7 +31,6 @@ Note that the path given to dojo.registerModulePath is always assumed to be rela
 
 The second argument to dojo.registerModulePath, the path, should *not* end with a slash. Otherwise the calculated path could be inefficient and generate a path that has two slashes together. For paths that actually point to a file, the ending slash will generate the wrong path.
 
-=====
 Usage
 =====
 
@@ -103,7 +102,6 @@ Dojo < 1.7
    dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.5/dojo");
  </script>
 
-========
 Example
 ========
 
@@ -171,7 +169,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
     <span data-dojo-type="my.form.Button">my.form.button</span>
 
-========
 See Also
 ========
 

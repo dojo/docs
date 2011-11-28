@@ -1,5 +1,6 @@
 .. _dojox/mobile/Switch:
 
+===================
 dojox.mobile.Switch
 ===================
 
@@ -14,7 +15,6 @@ Switch is a toggle switch with a sliding knob. You can either tap or slide the k
 
 .. image:: Switch.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -30,7 +30,6 @@ Constructor Parameters
 |rightLabel    |String    |"OFF"    |The right-side label of the switch.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

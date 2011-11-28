@@ -1,5 +1,6 @@
 .. _dojox/av/FLAudio:
 
+================
 dojox.av.FLAudio
 ================
 
@@ -15,7 +16,6 @@ dojox.av.FLAudio
 dojo.av.FLAudio provides the ability of implementing MP3 sounds into your dojo applications through an embedded SWF, built in the DEFT project. This class provides the sound and programmatic control only - there is no user interface or widget.
 
 
-============
 Introduction
 ============
 
@@ -48,7 +48,6 @@ To find the status of the audio files, connect to onPlayStatus(). This provides 
 Note, this class is still experimental, and the APIs could change in future versions. There is currently no ability to include this class as markup - it may be implemented in the future if the need is there.
 
 
-========
 Examples
 ========
 
@@ -84,7 +83,6 @@ Programmatic example
     <button onclick="mySound.doPlay({id:'Ola', volume:1, pan:1})">Ola Right</button>
 
 
-========
 See also
 ========
 

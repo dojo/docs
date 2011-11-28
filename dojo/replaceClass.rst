@@ -1,5 +1,6 @@
 .. _dojo/replaceClass:
 
+=================
 dojo.replaceClass
 =================
 
@@ -8,7 +9,6 @@ dojo.replaceClass
 
 Removes a class or a list of classes from a DOM node.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ Replaces one or more classes on a node if not present. Operates more quickly tha
 
 Since Dojo 1.7, ``dojo.replaceClass`` is exposed via the ``replace`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -52,7 +51,6 @@ Dojo < 1.7
 
     dojo.replaceClass("someNode", "add1 add2", "remove1 remove2");
 
-========
 Examples
 ========
 
@@ -84,7 +82,6 @@ Available in `dojo.NodeList()` for multiple toggles
   // dojo < 1.7
   dojo.query(".findMe").replaceClass("addMe", "removeMe");
 
-========
 See also
 ========
 

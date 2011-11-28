@@ -1,5 +1,6 @@
 .. _dojo/style:
 
+==========
 dojo.style
 ==========
 
@@ -12,7 +13,6 @@ dojo.style
 A getter/setter for styles on a DOM node.
 
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ See the Tips section below for caveats on getting style information, like when u
 
 Since Dojo 1.7, ``dojo.style`` is exposed via the ``get`` and ``set`` methods of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -169,7 +168,6 @@ Dojo < 1.7
          fontSize:"13pt"
   });
 
-========
 Examples
 ========
 
@@ -359,7 +357,6 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
     </div>
 
 
-====
 Tips
 ====
 
@@ -376,7 +373,6 @@ Tips
 * For getting a node's dimensions, use :ref:`dojo.marginBox <dojo/marginBox>` or :ref:`dojo.contentBox <dojo/contentBox>`: the .width and .style properties are not accurate from getComputedStyle.
 
 
-========
 See also
 ========
 

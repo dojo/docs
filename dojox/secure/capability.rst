@@ -1,5 +1,6 @@
 .. _dojox/secure/capability:
 
+=======================
 dojox.secure.capability
 =======================
 

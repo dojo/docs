@@ -1,5 +1,6 @@
 .. _dojo/rawXhrPost:
 
+===============
 dojo.rawXhrPost
 ===============
 
@@ -11,7 +12,6 @@ dojo.rawXhrPost
 The original purpose of dojo.rawXhrPost was a method that could be used to send a raw post body to the server.  As of 1.3, this function is common with dojo.xhrPost().  So, for usage of dojo.rawXhrPost(), see :ref:`dojo.xhrPost() <dojo/xhrPost>`
 
 
-========
 See also
 ========
 

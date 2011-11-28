@@ -1,5 +1,6 @@
 .. _dojox/editor:
 
+============
 dojox.editor
 ============
 
@@ -13,13 +14,11 @@ dojox.editor
 
 The dojox.editor component is a holding place for additional features for the dijit.Editor that are useful, but not extremely commonplace.
 
-============
 Introduction
 ============
 
 The dojox.editor component is a holding place for additional features for the dijit.Editor that are useful, but not extremely commonplace.
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/cometd:
 
+============
 dojox.cometd
 ============
 

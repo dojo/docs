@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/encoding-considerations:
 
+=======================
 Encoding considerations
 =======================
 
@@ -12,7 +13,6 @@ Encoding considerations
    :depth: 2
 
 
-===============
 Proper encoding
 ===============
 
@@ -21,7 +21,6 @@ The two most important aspects of internationalization are insuring that the inp
 Other encodings should be used with great care.
 
 
-========
 META tag
 ========
 
@@ -34,7 +33,6 @@ A user agent such as one of the current generation browsers infers the encoding 
 The most common means of specifying the encoding in a page is to use the META tag. Note that the META tag only works in pages loaded directly by browsers or IFRAMEs and may not function when used in other situations, such as in a document referenced by HREF in :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`. UTF-8 is the default encoding used by XML documents exchanged by the :ref:`XMLHTTP request object <quickstart/ajax>` and also is the encoding that is used internally by Dojo APIs. We recommend using UTF-8 as the encoding for all of your applications.
 
 
-============
 Form Widgets
 ============
 

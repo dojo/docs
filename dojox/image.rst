@@ -1,5 +1,6 @@
 .. _dojox/image:
 
+===========
 dojox.image
 ===========
 
@@ -15,7 +16,6 @@ The DojoX Image project provides a number of image-related widgets as extensions
 
 Most widgets within this project are experimental.
 
-========
 Core API
 ========
 
@@ -50,7 +50,6 @@ Alternately, you can specify a list of url's as an array to a dojoConfig paramet
 
 
 
-=====================
 Additional Components
 =====================
 

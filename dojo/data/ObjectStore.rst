@@ -1,5 +1,6 @@
 .. _dojo/data/ObjectStore:
 
+========================
 dojo.data.ObjectStore
 ========================
 
@@ -13,13 +14,11 @@ dojo.data.ObjectStore
 **dojo.data.ObjectStore** is an adapter for using the new :ref:`Dojo Object Stores <dojo/store>` with Dojo Data consumers. This adapter takes an object store and implements the Dojo Data API (Read, Write, Identity, and Notification).
 
 
-============
 Introduction
 ============
 
 The ObjectStore is very simple to use, you simply provide a object store to the constructor (in the objectStore property of the first argument) and you can use this data store with any Dojo Data compliant widget or other consumer.
 
-========
 Examples
 ========
 
@@ -35,7 +34,6 @@ Examples
    ...
  });
 
-====================
 Implementation Notes
 ====================
 

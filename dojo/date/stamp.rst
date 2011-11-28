@@ -1,5 +1,6 @@
 .. _dojo/date/stamp:
 
+===============
 dojo.date.stamp
 ===============
 
@@ -10,7 +11,6 @@ dojo.date.stamp
   :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ dojo.date.stamp methods use a profile of the ISO-8601 standard to handle dates i
 
 
 
-=====
 Usage
 =====
 
@@ -47,7 +46,6 @@ Usage
   </div>
 
 
-========
 See Also
 ========
 

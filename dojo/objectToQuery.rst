@@ -1,5 +1,6 @@
 .. _dojo/objectToQuery:
 
+==================
 dojo.objectToQuery
 ==================
 
@@ -10,7 +11,6 @@ dojo.objectToQuery
 
 Helper function for converting a JavaScript object into a properly encoded query string.
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 Since Dojo 1.7, ``dojo.objectToQuery`` is exposed via the ``objectToQuery`` method of the ``dojo/io-query`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -63,7 +62,6 @@ Dojo < 1.7
   // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
 
 
-========
 Examples
 ========
 
@@ -104,7 +102,6 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
     <b>The modified URI with a query string.:</b>
     <pre id="query"></pre>
 
-========
 See also
 ========
 

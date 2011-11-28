@@ -1,5 +1,6 @@
 .. _dojox/mobile/EdgeToEdgeCategory:
 
+===============================
 dojox.mobile.EdgeToEdgeCategory
 ===============================
 
@@ -14,7 +15,6 @@ EdgeToEdgeCategory is a category header for an :ref:`edge-to-edge list <dojox/mo
 
 .. image:: EdgeToEdgeCategory.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -24,7 +24,6 @@ Constructor Parameters
 |label         |String    |""       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

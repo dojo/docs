@@ -1,5 +1,6 @@
 .. _dojo/NodeList/removeAttr:
 
+========================
 dojo.NodeList.removeAttr
 ========================
 
@@ -12,7 +13,6 @@ dojo.NodeList.removeAttr
 Removes an attribute from a list f DOM nodes.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ Introduction
 See :ref:`dojo.removeAttr <dojo/removeAttr>` for more details.
 
 
-=====
 Usage
 =====
 
@@ -33,7 +32,6 @@ attr
   the attribute property name.
 
 
-========
 Examples
 ========
 
@@ -60,7 +58,6 @@ The following example removes ``disabled`` from nodes.
     <p><button onclick="remAttr();">Remove "disabled"</button></p>
 
 
-========
 See also
 ========
 

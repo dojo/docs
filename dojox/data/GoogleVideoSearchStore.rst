@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleVideoSearchStore:
 
+=================================
 dojox.data.GoogleVideoSearchStore
 =================================
 
@@ -13,13 +14,11 @@ dojox.data.GoogleVideoSearchStore
 
 dojox.data.GoogleVideoSearchStore is a data store that can be used to search YouTube and Google Video.
 
-============
 Introduction
 ============
 
 dojox.data.GoogleVideoSearchStore is a read only data store that can be used to search YouTube and Google Video.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-=====
 Usage
 =====
 
@@ -79,7 +78,6 @@ The pattern of using the GoogleSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -159,7 +157,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

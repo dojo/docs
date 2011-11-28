@@ -1,5 +1,6 @@
 .. _dijit/form/NumberTextBox:
 
+========================
 dijit.form.NumberTextBox
 ========================
 
@@ -13,7 +14,6 @@ dijit.form.NumberTextBox
 NumberTextBox widgets are used when user input is restricted to numeric input.
 
 
-============
 Introduction
 ============
 
@@ -26,7 +26,6 @@ To further restrict/validate user input, this widget makes additional numeric ``
 **Warning**: if you use programmatic creation without direct value, be sure to cast your value to ``Number`` (``value: Number(input.value)``) otherwise you'll get strange results (unformatted values and errors depending on locales).
 
 
-========
 Examples
 ========
 
@@ -106,7 +105,6 @@ The ``constraints`` attribute can also contain formatting information.  The exam
 		required="true">
        <button>dummy button (tab to here)</button>
 
-=============
 Accessibility
 =============
 

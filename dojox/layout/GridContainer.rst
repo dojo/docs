@@ -1,5 +1,6 @@
 .. _dojox/layout/GridContainer:
 
+==========================
 dojox.layout.GridContainer
 ==========================
 
@@ -14,7 +15,6 @@ dojox.layout.GridContainer
 dojox.layout.GridContainer is an **experimental** panel-like layout mechanism, allowing Drag and Drop between regions.
 
 
-=====
 Usage
 =====
 
@@ -44,7 +44,6 @@ To figure out which column you widget is in, use
 
 If it doesn't work for you, make sure that you have the latest version from trunk, as this feature was broken in Dojo 1.5.0.
 
-============
 Toggling DnD
 ============
 
@@ -58,7 +57,6 @@ This is very easy and can be done by calling:
   // or
   dijit.byId("gridContainer").disableDnd(); // Disables DND
 
-==================================
 Getting notified about DnD-Actions
 ==================================
 
@@ -80,7 +78,6 @@ If you want to get notified of any event, use the following: (The event names ar
       // Your Code here
   });
 
-========
 Examples
 ========
 

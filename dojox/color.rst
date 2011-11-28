@@ -1,5 +1,6 @@
 .. _dojox/color:
 
+===========
 dojox.color
 ===========
 

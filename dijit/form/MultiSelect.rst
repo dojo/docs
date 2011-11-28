@@ -1,5 +1,6 @@
 .. _dijit/form/MultiSelect:
 
+======================
 dijit.form.MultiSelect
 ======================
 
@@ -13,7 +14,6 @@ dijit.form.MultiSelect
 The MultiSelect widget allows the selection of multiple items.
 
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ On FORM submit, the selected item's hidden text values of a non-disabled MultiSe
 MultiSelect widgets are not dojo.data-enabled. This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible to create the OPTION tags dynamically at runtime.
 
 
-========
 Examples
 ========
 
@@ -80,7 +79,6 @@ Programmatic example
     <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
 
 
-=============
 Accessibility
 =============
 

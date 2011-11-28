@@ -1,5 +1,6 @@
 .. _developer/styleguide:
 
+================
 Dojo Style Guide
 ================
 
@@ -10,7 +11,6 @@ This document follows the basic outline of the `Java Programming Conventions Gui
  
 Widget authors are expected to adhere to this style guide and also to the :ref:`Dojo Accessibility Design Requirements <developer/a11y-requirements>` guidelines.
 
-=======
 General
 =======
 
@@ -18,7 +18,6 @@ Any violation to this guide is allowed if it enhances readability.
 
 Guidelines in this document are informed by discussions carried out among the Dojo core developers. The most weight has been given to considerations that impact external developer interaction with Dojo code and APIs. Rules such as whitespace placement are of a much lower order importance for Dojo developers, but should be followed in the main in order to improve developer coordination.
 
-===============
 Quick Reference
 ===============
 
@@ -56,7 +55,6 @@ Table of constructs that are not visible in the API, and therefore carry less we
 | local vars            | _mixedCase, mixedCase     |
 +-----------------------+---------------------------+
 
-==================
 Naming Conventions
 ==================
  
@@ -147,7 +145,6 @@ Naming Conventions
             dojo.attr(node, "tabIndex", -1); // setter
     
 
-===========================
 Specific Naming Conventions
 ===========================
 
@@ -179,7 +176,6 @@ Specific Naming Conventions
 
     # Methods returning an object MAY be named after what they return, and methods returning void after what they do.
 
-=====
 Files
 =====
  
@@ -211,7 +207,6 @@ Files
         Note also the position of the parenthesis in the method call; positioning SHOULD be similar to the use of block notation.
 
 
-=========
 Variables
 =========
 
@@ -249,7 +244,6 @@ Variables
         
         #. Floating point constants SHOULD ALWAYS be written with a digit before the decimal point.
         
-======
 Layout
 ======
 
@@ -412,7 +406,6 @@ Layout
         
         #. Comments SHOULD NOT be included for every single line of code.
  
-=============
 Documentation
 =============
  

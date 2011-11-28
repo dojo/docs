@@ -1,5 +1,6 @@
 .. _dojox/gfx/utils/fromJson:
 
+========================
 dojox.gfx.utils.fromJson
 ========================
 
@@ -12,7 +13,6 @@ dojox.gfx.utils.fromJson
 The *dojox.gfx.utils.fromJson* is a helper function designed to take a JSON serialized dojox.gfx.Surface object and restore its contents into another dojox.gfx.Surface. The function itself is simple to use.
 
 
-=====
 Usage
 =====
 
@@ -29,7 +29,6 @@ So basic usage is:
   dojox.gfx.utils.toJson(mySurface, json);
 
 
-========
 Examples
 ========
 
@@ -78,7 +77,6 @@ Programmatic example
     </div>
 
 
-========
 See also
 ========
 

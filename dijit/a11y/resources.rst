@@ -1,5 +1,6 @@
 .. _dijit/a11y/resources:
 
+=============================
 Dijit Accessibility Resources
 =============================
 

@@ -1,5 +1,6 @@
 .. _util/doctools/viewer:
 
+===============================
 Viewing the Generated API Docs
 ===============================
 
@@ -13,13 +14,11 @@ Viewing the Generated API Docs
 
 Setup and population of the viewer app with API data
 
-============
 Introduction
 ============
 
 Running the api docs extraction/generation tool (generate.php) produces either json or xml output - this is the raw data. To format and process this data into useful, browsable documentation you need a viewer application. This page steps you through the process to setup a web app like `dojotoolkit.org/api <http://dojotoolkit.org/api/>`_ and how to populate it with your docs data
 
-=============
 Prerequisites
 =============
 
@@ -36,7 +35,6 @@ Our viewer app is going to end up in a directory called 'api', which for the pur
 
 If you point your browser at http://localhost/test.php (or whatever hostname you are using) you should see the PHP info page. Confirm the **xsl** module is available and enabled.
 
-===================
 Get the viewer code
 ===================
 
@@ -48,7 +46,6 @@ We're going to get a copy of the code behind dojotoolkit.org/api and customize t
 
 That should create the 'api' sub-directory, and fill it with a load of php files and other assets. Note, we're doing an export here, not a checkout, so its divorced from the SVN copy. That means its yours to change, but if you prefer you can use svn checkout for those parts you want to be able to update with any changes from the remote repository.
 
-====================
 Configure the Viewer
 ====================
 
@@ -78,7 +75,6 @@ to read:
 Now, you can point your browser at http://localhost/api/, (or whatever hostname you are using) and you should see a working API viewer.
 
 
-====================
 Import API Data
 ====================
 
@@ -100,7 +96,6 @@ note that this directory MUST be writable (this is the caching mechanism for the
   
 That's it! Navigate back to /api/ and you should see your code's API in the viewer.
 
-======================
 Customizing the Viewer
 ======================
 
@@ -115,7 +110,6 @@ That value is referring to a subdirectory name of the 'themes' directory. Peek i
 
 
 
-========
 See Also
 ========
 

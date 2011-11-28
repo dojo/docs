@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_Mixin:
 
+=========================
 dojox.form.manager._Mixin
 =========================
 
@@ -11,7 +12,6 @@ dojox.form.manager._Mixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the main component of the form manager, which provides the initial
 
 On startup this mixin inspects its body and registers all found form widgets, and attached nodes (by ``data-dojo-attach-point``). Additionally it provides some low-level properties and methods to handle controlled elements.
 
-======================
 Methods and properties
 ======================
 
@@ -293,7 +292,6 @@ destroy
 
 This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
-====================
 Additional functions
 ====================
 
@@ -334,7 +332,6 @@ dojox.form.manager._keys
 
 This function takes an object and returns an array of all keys. It is very similar to :ref:`dojox.lang.functional.object.keys() <dojox/lang/functional/object>`. It is defined there only to reduce the dependency on other packages.
 
-===============
 Technical notes
 ===============
 

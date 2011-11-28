@@ -1,5 +1,6 @@
 .. _dojox/index:
 
+=====
 DojoX
 =====
 

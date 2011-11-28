@@ -1,5 +1,6 @@
 .. _dojox/html/entities/encode:
 
+==========================
 dojox.html.entities.encode
 ==========================
 
@@ -16,7 +17,6 @@ A flexible function for encoding defined UTF-8 characters into an entity encodin
 This function will use the entity encodings for HTML and LATIN-1 as default encodings when called.  Users can over-ride the encoding map used by providing a new encoding map as the second parameter to the encode function.
 
 
-========
 Examples
 ========
 
@@ -95,7 +95,6 @@ Encoding custom entities in a text string
     <textarea style="width: 100%; height: 100px;" id="output2" readonly="true">
     </textarea>
 
-========
 See Also
 ========
 

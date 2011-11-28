@@ -1,5 +1,6 @@
 .. _dojox/mobile:
 
+===========
 Dojo Mobile
 ===========
 
@@ -10,7 +11,6 @@ Dojo Mobile
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ Dojo Mobile is designed to be as lightweight as possible to achieve a better use
 
 .. image:: settings-i-a.png
 
-=================
 Available Widgets
 =================
 
@@ -223,7 +222,6 @@ Spin Wheel
   A time picker component that is derived from SpinWheel.
 
 
-===============
 Getting Started
 ===============
 
@@ -384,7 +382,6 @@ Example (using older HTML (non-validating) and mobile parser)
 * Line 24 through Line 30 is the second view, which will be shown when you tap on a list item in the first view.
 
 
-==================
 Programmer's Guide
 ==================
 
@@ -394,7 +391,6 @@ Programmer's Guide
 * :ref:`Internationalization (i18n) <dojox/mobile/internationalization>`
 * :ref:`Build <dojox/mobile/build>`
 
-========
 Appendix
 ========
 

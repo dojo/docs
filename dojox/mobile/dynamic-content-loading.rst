@@ -1,5 +1,6 @@
 .. _dojox/mobile/dynamic-content-loading:
 
+=======================
 Dynamic Content Loading
 =======================
 
@@ -10,7 +11,6 @@ Dynamic Content Loading
 
 Before or after making a view transition, sometimes you may want to create a new target view content dynamically using an ajax call. There are several ways to lazy-load contents to update or create a view.
 
-===============================
 The "url" property of _ItemBase
 ===============================
 
@@ -83,7 +83,6 @@ Example of view JSON data:
     }
   }
 
-================
 ListItem Actions
 ================
 

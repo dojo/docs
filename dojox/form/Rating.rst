@@ -1,5 +1,6 @@
 .. _dojox/form/Rating:
 
+===================
 dojox.widget.Rating
 ===================
 
@@ -14,7 +15,6 @@ dojox.widget.Rating
 
 This widget allows users to rate items.
 
-=====
 Usage
 =====
 
@@ -23,7 +23,6 @@ By default it shows three stars. The star images are provided with dojox.
 This is a form widget, which means that you can simply embed it inside a dojo form, which submits the value automatically too.
 But it doesn't require to be inside a form.
 
-========
 Examples
 ========
 

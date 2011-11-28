@@ -1,5 +1,6 @@
 .. _dojox/grid/griddate:
 
+===================================
 Grid Demos - Cells with DateTextBox
 ===================================
 
@@ -8,7 +9,6 @@ Grid Demos - Cells with DateTextBox
 :Available: since V.1.6
 
 
-=============================================================
 Localized Date Field
 =============================================================
 
@@ -67,7 +67,6 @@ Localized Date Field
 	}
     </style>
 
-========================================================
 Editable Localized Date Field
 ========================================================
 
@@ -130,7 +129,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
     </style>
 
 
-===============================================================
 Editable Localized Date Field - use DateTextBox when editing
 ===============================================================
 
@@ -199,7 +197,6 @@ Editable Localized Date Field - use DateTextBox when editing
 	}
     </style>
 
-================================================================
 Editable Custom Format Date Field - use DateTextBox when editing
 ================================================================
 
@@ -271,7 +268,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 	}
     </style>
 
-========
 See Also
 ========
 

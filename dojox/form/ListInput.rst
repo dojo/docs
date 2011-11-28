@@ -1,5 +1,6 @@
 .. _dojox/form/ListInput:
 
+======================
 dojox.form.ListInput
 ======================
 
@@ -15,7 +16,6 @@ dojox.form.ListInput
 The ListInput widget allow you to create a list of element. It's like the "to" field on hotmail.
 
 
-============
 Introduction
 ============
 
@@ -28,7 +28,6 @@ When page is submitted, you can choose to post all the data or just the valid it
 
 The left and right arrows are used to re-edit an entry.
 
-========
 Examples
 ========
 
@@ -87,6 +86,5 @@ Programmatic example
       @import "{{baseUrl}}dojox/form/resources/ListInput.css";
     </style>
 
-=============
 Accessibility
 =============

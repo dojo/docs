@@ -1,5 +1,6 @@
 .. _dojox/mobile/TabBarButton:
 
+=========================
 dojox.mobile.TabBarButton
 =========================
 
@@ -14,7 +15,6 @@ TabBarButton is a button that is placed in the TabBar widget. It is a subclass o
 
 .. image:: TabBarButton.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -83,13 +83,11 @@ Parameters from this widget:
 |selected      |Boolean   |false    |If true, the button is in the selected status. The default value is false.                                 |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-=====
 Usage
 =====
 
 Use this widget as child widgets of the :ref:`dojox.mobile.TabBar <dojox/mobile/TabBar>` widget.
 
-========
 Examples
 ========
 

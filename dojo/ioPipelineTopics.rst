@@ -1,5 +1,6 @@
 .. _dojo/ioPipelineTopics:
 
+==================
 IO Pipeline Topics
 ==================
 
@@ -12,13 +13,11 @@ IO Pipeline Topics
 
 Topics that are published via :ref:`dojo.publish <dojo/publish>` that correspond to events in the Input/Output (IO) pipeline used by Dojo.
 
-============
 Introduction
 ============
 
 As of Dojo 1.4, there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. By default, the topics are turned off. To enable them, set **dojoConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*(), dojo.io.script.get() or dojo.io.iframe.send().
 
-=====
 Usage
 =====
 
@@ -103,7 +102,6 @@ Dojo < 1.7
     //finished. No arguments are passed with this topic.
   });
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/form/RangeSlider:
 
+======================
 dojox.form.RangeSlider
 ======================
 
@@ -14,14 +15,12 @@ dojox.form.RangeSlider
 
 The RangeSlider is a descendant of :ref:`dijit.form.Slider <dijit/form/Slider>` that allows a selection of a range of values.
 
-============
 Introduction
 ============
 
 The RangeSlider differs from the :ref:`dijit.form.Slider <dijit/form/Slider>` by providing two handles that allow you to select a range of values across the scale.  There is the **dojox.form.HorizontalRangeSlider** and the **dojox.form.VerticalRangeSlider** which provide a horizontal and vertical version respectively.
 
 
-=====
 Usage
 =====
 
@@ -37,8 +36,7 @@ The RangeSlider is used in the same fashion as most dijit Form Widgets.
 
 Here are some of the constructor parameters:
 
-===================  ====================  =============================================================================
-Parameter            Type                  Description
+===================  ====================  Parameter            Type                  Description
 ===================  ====================  =============================================================================
 value                array                 Initial values of the slider (``[0,100]``)
 showButtons          boolean               Whether to show or not buttons at each end of the slider (``true``)
@@ -48,7 +46,6 @@ intermediateChanges  boolean               If fractional parts between steps are
 discreteValues       integer               Number of "steps" in the slider. For example if ``discreteValues`` is ``3``, you'll have 3 steps: ``minimum``, ``maximum`` and a value in the middle
 ===================  ====================  =============================================================================
 
-========
 Examples
 ========
 
@@ -157,13 +154,11 @@ Declarative horizontal example
 
 **NOTE** In declarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
 
-=============
 Accessibility
 =============
 
 TODO: provide accessibility information
 
-========
 See also
 ========
 

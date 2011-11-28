@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleLocalSearchStore:
 
+=================================
 dojox.data.GoogleLocalSearchStore
 =================================
 
@@ -13,13 +14,11 @@ dojox.data.GoogleLocalSearchStore
 
 dojox.data.GoogleLocalSearchStore is a data store that can be used to search Google.
 
-============
 Introduction
 ============
 
 dojox.data.GoogleLocalSearchStore is a read only data store that can be used to search Google.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-=====
 Usage
 =====
 
@@ -93,7 +92,6 @@ The pattern of using the GoogleLocalSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -185,7 +183,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

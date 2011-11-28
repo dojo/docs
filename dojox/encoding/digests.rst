@@ -1,5 +1,6 @@
 .. _dojox/encoding/digests:
 
+======================
 dojox.encoding.digests
 ======================
 

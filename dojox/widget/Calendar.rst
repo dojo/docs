@@ -1,5 +1,6 @@
 .. _dojox/widget/Calendar:
 
+=====================
 dojox.widget.Calendar
 =====================
 
@@ -11,7 +12,6 @@ dojox.widget.Calendar
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -29,7 +29,6 @@ The various views can be combined in any combination to create a complete widget
  * dojox.widget.MonthlyCalendar - just the months. Available from dojox/widget/CalendarViews.js.
  * dojox.widget.YearlyCalendar - just the years. Available from dojox/widget/CalendarViews.js.
 
-=====
 Usage
 =====
 
@@ -46,7 +45,6 @@ Usage
 As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page, the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'', and a calendar can be placed on the page using the ''data-dojo-type'' attribute.
 
 
-========
 Examples
 ========
 
@@ -159,7 +157,6 @@ This example shows how to construct a Calendar declaratively, which only shows t
     </script>
 
 
-==========================================
 Creating A Custom Calendar By Mixing Views
 ==========================================
 
@@ -192,7 +189,6 @@ As the calendar consists of a combination of views, it is possible to mix these 
     </script>
 
 
-========
 See also
 ========
 

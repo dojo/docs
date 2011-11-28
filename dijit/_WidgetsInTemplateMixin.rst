@@ -1,5 +1,6 @@
 .. _dijit/_WidgetsInTemplateMixin:
 
+=============================
 dijit._WidgetsInTemplateMixin
 =============================
 
@@ -10,7 +11,6 @@ dijit._WidgetsInTemplateMixin
 .. contents::
    :depth: 2
 
-===========
 Description
 ===========
 
@@ -72,14 +72,12 @@ The :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` mixin d
 Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode. This is because the widgets declared in the template are internal objects, effectively hidden from widget users. In other words, only the developer of the widget knows that it internally contains widgets.
 
 
-===============
 Common Pitfalls
 ===============
 
 1. Don't try to make the root node itself a widget. That's not supported (that would make the top node the root of two separate widgets and we can't support that).
 
 
-========
 See also
 ========
 

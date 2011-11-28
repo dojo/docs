@@ -1,5 +1,6 @@
 .. _dojox/widget/rotator/ThumbnailController:
 
+========================================
 dojox.widget.rotator.ThumbnailController
 ========================================
 
@@ -12,7 +13,6 @@ dojox.widget.rotator.ThumbnailController
 
 A controller that manipulates a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` by displaying thumbnails for each pane.
 
-============
 Introduction
 ============
 
@@ -22,17 +22,13 @@ You may have multiple Controllers tied to a single Rotator instance.
 
 The size of the thumbnails and the style of the selected thumbnail is controlled using CSS. The Controller's DOM node may also be styled for positioning or other styled preferences.
 
-=====
 Usage
 =====
 
-==========  =======  ======================================================================
-Parameter   Type     Description
-==========  =======  ======================================================================
-rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
+==========  =======  Parameter   Type     Description
+==========  =======  rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 ==========  =======  ======================================================================
 
-========
 Examples
 ========
 
@@ -165,7 +161,6 @@ Declarative example
     <h3>Prev, Numbers, Next</h3>
     <div data-dojo-type="dojox.widget.rotator.Controller" data-dojo-props="rotator:myAutoRotatorInstance2, commands:'prev,#,next'"></div>
 
-========
 See also
 ========
 

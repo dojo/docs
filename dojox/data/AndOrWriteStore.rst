@@ -1,5 +1,6 @@
 .. _dojox/data/AndOrWriteStore:
 
+==========================
 dojox.data.AndOrWriteStore
 ==========================
 
@@ -13,7 +14,6 @@ dojox.data.AndOrWriteStore
 
 dojox.data.AndOrWriteStore is a clone of dojo.data.ItemFileWriteStore. The only significant difference is that like AndOrReadStore, AndOrWriteStore supports more complex queries. Please refer to :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>` for general information about write support and refer to :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` for the query enhancements.
 
-===========
 API Support
 ===========
 

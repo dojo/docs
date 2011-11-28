@@ -1,12 +1,12 @@
 .. _dijit/ProgressBar:
 
+=================
 dijit.ProgressBar
 =================
 
 A ProgressBar gives dynamic feedback on the progress of a long-running operation. The progress can be updated by JavaScript function calls. This method works best for long-running JavaScript operations, or a series of JavaScript XHR calls to the server.
 
 
-========
 Examples
 ========
 
@@ -38,7 +38,6 @@ Declarative markup
     <br /><input type="button" value="Go!" onclick="download();" />
 
 
-=============
 Accessibility
 =============
 

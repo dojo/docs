@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/PrettyPrint:
 
+================================
 dojox.editor.plugins.PrettyPrint
 ================================
 
@@ -14,7 +15,6 @@ Have you ever wanted to pull your hair out because the content from dijit.Editor
 
 This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.  Calls to get the value of the editor (editor.getValue() or editor.attr("value")) will return decently formatted HTML.
 
-========
 Features
 ========
 
@@ -28,7 +28,6 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 * Configurable encoding entity characters in the TEXT elements of the document.
 * All done automatically, no toolbar buttons, no extra user actions required.
 
-=====
 Usage
 =====
 
@@ -91,7 +90,6 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
   </div>
 
 
-========
 Examples
 ========
 
@@ -201,7 +199,6 @@ Configured indent and line length
     </textarea>
 
 
-========
 See Also
 ========
 

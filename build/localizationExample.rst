@@ -1,5 +1,6 @@
 .. _build/localizationExample:
 
+=======================
 Localized Build Example
 =======================
 
@@ -11,7 +12,6 @@ Localized Build Example
 
 This page attempts to describe how to include localized strings bundles in your custom build.
 
-============
 Introduction
 ============
 
@@ -27,7 +27,6 @@ There are several pages of existing documentation that describe the background a
 
 Here we provide a practical walkthrough of applying localisation to actual dijits and an actual build profile.
 
-======================================================
 Starting Point - A Simple Test Dijit And Build Profile
 ======================================================
 
@@ -73,7 +72,6 @@ The build will also produce a localized strings bundle for the "testdijits.js" l
 
 A 'real world' build will contain many dijits (testdijits.Foo, testdijits.Bar, testdijits.App etc.), each with their own strings bundle.  Our aim is to make those individual strings bundles build to a single file for efficient download to the client at runtime, rather than a single network request per file.
 
-=======================
 Adding A Strings Bundle
 =======================
 
@@ -178,7 +176,6 @@ An important distinction to make here is that the original source of yours (slig
 
 When you come to actually use your compiled layer, you'll be using the files from ``dojo/testdijits.js`` and ``dojo/nls/testdijits_*.js``, _not_ the copy of your original code, in ``testdijits/*``.
 
-==============================================
 Optimising Performance - Using the Built Layer
 ==============================================
 
@@ -241,7 +238,6 @@ Important points to note here:
   * ``test/dojo/testdijits.js`` contains the javascript implementation and inlined templates of all dijits mentioned in the profile .js file for that layer.
   * ``test/dojo/nls/testdijits_en-us.js`` contains the strings bundles for all those dijits.
 
-================================================
 The Build Bakes Available Locales Into Your Code
 ================================================
 
@@ -273,7 +269,6 @@ When you simply include a ``fr`` localized strings bundle in your source directo
 
 You don't need to change any code for this to happen.  If fact it you create a directory called ``pumpkins``, the requireLocalization call will then tell dojo that there is a ``pumpkins`` locale available.  This is how the loader knows to directly fetch ``test/testdijits/nls/fr/Foo.js`` when you specify a locale of ``fr``, and the base resource ``test/testdijits/nls/Foo.js`` when any other locale is requested.
 
-=========================
 Providing Other Languages
 =========================
 
@@ -331,7 +326,6 @@ If you visit the page with no ``locale`` specified in the djConfig, and a browse
 
 then dojo will automatically serve the page with the ``fr`` string resources, and the dijits will automatically appear correctly to the user.
 
-================
 Trees of Locales
 ================
 
@@ -377,7 +371,6 @@ The important points here are:
   - The ``fr`` bundle contains the FRENCH version of ``test``.
   - The ``fr-fr`` bundle contains both ``test`` and ``fr_fr_test``.
 
-======================
 Multiple Custom Dijits
 ======================
 

@@ -1,5 +1,6 @@
 .. _build/profileQRef:
 
+========================================================================
 Quick Reference of all Profile Properties for Optimization Build Program
 ========================================================================
 
@@ -7,7 +8,6 @@ Quick Reference of all Profile Properties for Optimization Build Program
 :Author: Rawld Gill
 
 
-==============================
 Command Line Switch Reference
 ==============================
 
@@ -43,7 +43,6 @@ specify the switch.
 written, a mistake in a profile could result in cleaning your hard drive. We'll let you do that yourself with the
 rm/rmdir commands. (We also note that deleting file trees is not the typical function of a compiler program).
 
-============================
 Discovery Profile Properties
 ============================
 
@@ -84,7 +83,6 @@ mini
   If truthy ignore all resources tagged as excludeMini; if copyTests is falsy or missing, also ignore all resources
   tagged as tests.
 
-===============
 Transform: copy
 ===============
 
@@ -92,7 +90,6 @@ Transform: copy
 
 None.
 
-===================
 Transform: depsDump
 ===================
 
@@ -114,7 +111,6 @@ Transform: depsDump
     dependency trees will be included in the output)
   * [*falsy*] all modules are included
 
-===================
 Transform: depsScan
 ===================
 
@@ -155,7 +151,6 @@ Transform: depsScan
 **Warning**: All knobs mentioned above support legacy features which are deprecated. It is strongly encouraged to convert
 legacy modules to properly-expressed AMD modules.
 
-======================
 Transform: dojoPragmas
 ======================
 
@@ -164,7 +159,6 @@ Transform: dojoPragmas
 The entire profile object is placed in the lexical variable ``kwargs`` when thea condition associated with the pragmas
 ``includeStart`` and ``excludeEnd`` is evaluated. Any property in the profile may be used to affect these conditions.
 
-=====================
 Transform: dojoReport
 =====================
 
@@ -172,7 +166,6 @@ Transform: dojoReport
 
 This section not complete; please consult source at util/build/transforms/dojoReport.js
 
-=====================
 Transform: hasFindAll
 =====================
 
@@ -183,7 +176,6 @@ Transform: hasFindAll
 
   * [*falsy*] No has location report is written.
 
-===================
 Transform: hasFixup
 ===================
 
@@ -196,7 +188,6 @@ Transform: hasFixup
     ``staticHasFeatures`` maps may be provided from multiple profile resources. If more than one ``staticHasFeatures``
     property value is provided, then they are mixed on a per-has-feature basis in the order they appear on the command line.
 
-========================
 Transform: insertSymbols
 ========================
 
@@ -204,7 +195,6 @@ Transform: insertSymbols
 
 This section not complete; please consult source at util/build/transforms/insertSymbols.js
 
-======================
 Transform: optimizeCss
 ======================
 
@@ -212,7 +202,6 @@ Transform: optimizeCss
 
 This section not complete; please consult source at util/build/transforms/optimizeCss.js
 
-===============
 Transform: read
 ===============
 
@@ -220,7 +209,6 @@ Transform: read
 
 This section not complete; please consult source at util/build/transforms/read.js
 
-================
 Transform: write
 ================
 
@@ -228,7 +216,6 @@ Transform: write
 
 None.
 
-===================
 Transform: writeAmd
 ===================
 
@@ -271,7 +258,6 @@ Layer items are Javascript objects with the following properties
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
 
-====================
 Transform: writeDojo
 ====================
 
@@ -308,7 +294,6 @@ Transform: writeDojo
         boot:true
     }
 
-=========================
 Transform: writeOptimized
 =========================
 
@@ -369,13 +354,11 @@ Transform: writeOptimized
 
   * ["all"] All console applications are stripped.
 
-=============================
 Deprecated Profile Properties
 =============================
 
 The action clean is no longer supported. Use ``rm`` on Unix/Linux/OS X or ``rmdir`` on Windows.
 
-==========================
 Removed Profile Properties
 ==========================
 

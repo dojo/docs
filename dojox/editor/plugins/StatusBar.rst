@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/StatusBar:
 
+==============================
 dojox.editor.plugins.StatusBar
 ==============================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.StatusBar
 
 Have you ever wanted a status bar on the editor to display things like 'saving' and so on?  Have you ever wanted a resize handle on the editor that lets you resize it?  If so, then this plugin if for you.
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Resize handler that allows users to resize the editor.  It can be disabled, when used inside a layout container that will handle resizing of the editor.
 
 
-=====
 Usage
 =====
 
@@ -67,7 +66,6 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 
   dojo.publish("someEditor_statusBar", ["Some message"]);
 
-========
 Examples
 ========
 
@@ -119,7 +117,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

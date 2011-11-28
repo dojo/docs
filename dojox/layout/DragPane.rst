@@ -1,5 +1,6 @@
 .. _dojox/layout/DragPane:
 
+=====================
 dojox.layout.DragPane
 =====================
 
@@ -14,14 +15,12 @@ dojox.layout.DragPane
 dojox.layout.DragPane provides drag-based scrolling for divs with overflow.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

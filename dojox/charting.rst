@@ -1,5 +1,6 @@
 .. _dojox/charting:
 
+==============
 dojox.charting
 ==============
 
@@ -40,13 +41,11 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
 
     <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
 
-============
 Introduction
 ============
 
 Dojo's Charting module provides a way to quickly and easily add great looking and functional dynamic charts and graphs to your web pages. All you need is a tiny bit of JavaScript skills and a copy of Dojo.
 
-===============
 Charting Basics
 ===============
 
@@ -102,14 +101,12 @@ As you can see from the source it is simple to create charts.
 
 As part of configuring any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
-============
 Adding Title
 ============
 
 You can add a general title to the chart, and the title can be specified on position and font styles. Here are related parameters:
 
-======== =========== ======= ===========
-Name     Type        Default Description
+======== =========== ======= Name     Type        Default Description
 ======== =========== ======= ===========
 titlePos string      top     determine adding title at the top/bottom of the chart.
 titleGap number      20      determine the spacing between title and the chart.
@@ -128,7 +125,6 @@ And here comes an example:
     titleFontColor: "orange"
   })
 
-==================
 Working with Plots
 ==================
 
@@ -386,7 +382,6 @@ Basically these are the same parameters than the ones passe to dojo.Animation. S
 See :ref:`Animated Chart <dojox/charting>` for a full example.
 
 
-================
 Configuring Axis
 ================
 
@@ -451,8 +446,7 @@ Axis Title
 -----------
 Adding title to axis, the position, orientation and color of the axis title can be specified. The parameters are:
 
-================ =========== ======= ===========
-Name             Type        Default Description
+================ =========== ======= Name             Type        Default Description
 ================ =========== ======= ===========
 title            string      null    axis title text.
 titleGap         number      15      the spacing between title and corresponding axis, measured by pixel.
@@ -536,15 +530,13 @@ Axis Label Shortening
 
 Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified by parameters as follows.
 
-================= =========== ======= ===========
-Name              Type        Default Description
+================= =========== ======= Name              Type        Default Description
 ================= =========== ======= ===========
 trailingSymbol    string      null    define the symbol replacing the omitted part of label.
 maxLabelSize      number      0       define the max length of label in pixel.
 maxLabelCharCount number      0       define the max count of characters in label.
 ================= =========== ======= ===========
 
-===============
 Data Management
 ===============
 
@@ -621,8 +613,7 @@ dojox.charting.DataSeries is used to connect to :ref:`dojo.data <dojo/data>` sto
 
 DataSeries' constructor has following parameters:
 
-====== ========================== ======= ===========
-Name   Type                       Default Description
+====== ========================== ======= Name   Type                       Default Description
 ====== ========================== ======= ===========
 store  object                     none    Data store to use. Should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
 kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo.data.api.Read.fetch() <dojo/data/api/Read>` for details.
@@ -683,7 +674,6 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
     return store.getValue(item, field);
   }
 
-=====================
 Changing Color Themes
 =====================
 
@@ -701,7 +691,6 @@ Under dojox.charting.themes, you will find a variety of predefined color themes 
 
 at the top of any HTML file the chart is displayed in.
 
-=================
 Events Management
 =================
 
@@ -780,7 +769,6 @@ TODO: please explain more. How does this work? Show an example.
 
 Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
-====================================
 Zooming, Scrolling, and Panning APIs
 ====================================
 
@@ -806,7 +794,6 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 
 Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
 
-==========================
 Actions & Animated Effects
 ==========================
 
@@ -1118,7 +1105,6 @@ The first parameter is a chart. The second parameter is the name of a plot. The 
 
 As you can see from the example above you can mixin several actions. In order to avoid unnecessary interference between actions, use your best judgment when selecting them. Try to avoid actions that modify the same visual attributes, like geometry. You can safely mix Tooltip, Highlight, and one geometric action (Magnify, MoveSlice, or Shake).
 
-=================
 Charts as Widgets
 =================
 
@@ -1159,7 +1145,6 @@ An interactive legend for all dojo charts that allows the end-user to click and 
   var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true},"selectableLegend");
 
 
-========
 Examples
 ========
 
@@ -1320,7 +1305,6 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
     <div id="chart3d" style="width: 500px; height: 500px;"></div>
 
-========
 See also
 ========
 
@@ -1333,7 +1317,6 @@ See also
 * `Zooming, Scrolling, and Panning in Dojo Charting <http://www.sitepen.com/blog/2008/05/15/zooming-scrolling-and-panning-in-dojo-charting/>`_
 * `Dojo Charting Reorganization <http://www.sitepen.com/blog/2008/05/07/dojo-charting-reorganization/>`_
 
-=======
 Credits
 =======
 

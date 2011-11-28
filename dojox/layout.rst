@@ -1,5 +1,6 @@
 .. _dojox/layout:
 
+============
 dojox.layout
 ============
 
@@ -11,7 +12,6 @@ dojox.layout
 The Layout project provides experimental and additional extensions to :ref:`Dijit Layout <dijit/layout>` Widgets.
 
 
-==============
 Layout Widgets
 ==============
 

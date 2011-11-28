@@ -1,5 +1,6 @@
 .. _dojox/mvc/Generate:
 
+===================
 dojox.mvc.Generate
 ===================
 
@@ -15,7 +16,6 @@ dojox.mvc.Generate
 
 A container that generates a view based on the data model its bound to. A generate introspects its data binding and creates a view contained in it that allows displaying the bound data. Child dijits or custom view components inside it inherit their parent data binding context from it.
 
-======================
 Parameters
 ======================
 
@@ -37,7 +37,6 @@ Parameters
 +------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

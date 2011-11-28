@@ -1,5 +1,6 @@
 .. _dijit/Tree-examples:
 
+===================
 dijit.Tree examples
 ===================
 

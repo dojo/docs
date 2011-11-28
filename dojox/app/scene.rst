@@ -1,5 +1,6 @@
 .. _dojox/app/scene:
 
+================
 dojox.app.scene
 ================
 
@@ -9,12 +10,10 @@ dojox.app.scene
 
 dojox.app.scene is used to create the layout for each child view, manage the transition between views, resize layout to fit the display area. A scene can contains one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
 
-===============
 Usage
 ===============
 If there is no child scene in the application, it is not necessary to declare the view as type 'dojox.app.scene' because dojox.app.main inherits dojox.app.scene and the application itself is a scene. For the application contains child scene, the child scene needs to be declared as 'dojox.app.scene' in the application like the 'tabscene' in the following sample.
 
-===============
 Sample
 ===============
 Sample application configuration

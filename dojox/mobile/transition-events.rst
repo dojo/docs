@@ -1,5 +1,6 @@
 .. _dojox/mobile/transition-events:
 
+==============================
 Listening to Transition Events
 ==============================
 
@@ -10,7 +11,6 @@ Listening to Transition Events
 
 There are two ways to listen to various transition events, connect and pub/sub.
 
-============================
 Connect to Transition Events
 ============================
 
@@ -139,7 +139,6 @@ Example
 	print("afterTransitionOut");
     });
 
-===========================
 Subscribe Transition Events
 ===========================
 

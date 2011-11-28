@@ -1,5 +1,6 @@
 .. _dojo/withDoc:
 
+===============
 dojo.withDoc
 ===============
 
@@ -10,13 +11,11 @@ dojo.withDoc
 
 dojo.withDoc provides a mechanism by which a function can have the document root temporarily changed for the execution of the function.  This allows document scope changes without affecting other items in the current dojo application.
 
-============
 Introduction
 ============
 
 This function provides a quick way to alter the 'document' root as seen by dojo for specific operations.  This is most notably useful when iframes are involved and you want to use a core dojo function, such as dojo.query or dojo.style against contents of that iframe.
 
-=====
 Usage
 =====
 
@@ -56,7 +55,6 @@ Dojo < 1.7
  </script>
 
 
-========
 Examples
 ========
 
@@ -96,7 +94,6 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
 
 
-========
 See also
 ========
 

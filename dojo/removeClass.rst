@@ -1,5 +1,6 @@
 .. _dojo/removeClass:
 
+================
 dojo.removeClass
 ================
 
@@ -11,7 +12,6 @@ dojo.removeClass
 
 Removes a class or a list of classes from a DOM node.
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ Follows the same pattern as most Dojo functionality by accepting a string ID of 
 Since Dojo 1.7, ``dojo.removeClass`` is exposed via the ``remove`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 
-=====
 Usage
 =====
 
@@ -62,7 +61,6 @@ Dojo < 1.7
     // Remove a class from some node:
     dojo.removeClass("someNode", "firstClass");
 
-========
 Examples
 ========
 
@@ -314,7 +312,6 @@ See it in action:
     <button id="button3" data-dojo-type="dijit.form.Button" type="button">Remove from multiple nodes</button>
 
 
-========
 See also
 ========
 

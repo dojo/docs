@@ -1,5 +1,6 @@
 .. _dojox/app:
 
+=========
 dojox.app
 =========
 
@@ -11,7 +12,6 @@ dojox.app
 Implements application framework using dojox.mvc for web application on desktop/mobile platforms.
 
 
-============
 Introduction
 ============
 dojox.app is an application frame work designed to allow simple configuration
@@ -25,7 +25,6 @@ dojox.app - A library that provides high-level application controllers, defined 
 
 dojox.mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app.
 
-=============
 Overview
 =============
 Application structure overview.
@@ -55,7 +54,6 @@ Components in dojox.app
 :ref:`dojox.app.main <dojox/app/main>`
 - dojox.app.main(Application) is used to create a dojox.app application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse.
 
-=============
 Usage
 =============
 
@@ -126,7 +124,6 @@ Here is the configuration instruction table.
 |views                  |The children views/scenes of the application or current scene.         |
 +-----------------------+-----------------------------------------------------------------------+
 
-============
 Sample
 ============
 Sample application html page:
@@ -303,7 +300,6 @@ Sample render result
 
 .. image :: ./app/pic3.png
 
-================================
 Comparison with dojox.mobile.app
 ================================
 

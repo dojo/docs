@@ -14,7 +14,6 @@ dojo.store.Observable
 **dojo.store.Observable** is an object store wrapper that adds support for notification of data changes to query result sets. The query result sets returned from a Observable store will include a observe function that can be used to monitor for changes. This store follows the new :ref:`Dojo Object Store API <dojo/store>`. The observe function provides indication of the previous and new index values of changed objects to properly update result arrays.
 
 
-============
 Introduction
 ============
 
@@ -38,7 +37,6 @@ The listener function is called with following arguments:
 
 The observe() method returns an object with a cancel() method that can be called to stop observing the given result set.
 
-========
 Examples
 ========
 

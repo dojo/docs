@@ -1,5 +1,6 @@
 .. _dojox/gfx:
 
+=========
 dojox.gfx
 =========
 
@@ -8,7 +9,6 @@ dojox.gfx
 .. contents::
   :depth: 3
 
-========
 Overview
 ========
 
@@ -133,7 +133,6 @@ Example:
 
   surface.createRect({x: 100, y: 50}).setFill("red").setStroke("blue");
 
-================================================
 Shape Properties: Colors, Strokes, Fills & Fonts
 ================================================
 
@@ -366,7 +365,6 @@ Silverlight has the following restrictions:
 
 By default all shapes are created with "null" font meaning "the default".
 
-===============================
 Coordinates and Transformations
 ===============================
 
@@ -651,7 +649,6 @@ normalize(m)
 
   By default all shapes are created with "null" matrix meaning "the identity transformation".
 
-====================
 Common Shape Methods
 ====================
 
@@ -742,7 +739,6 @@ _getRealMatrix()
   The resulting matrix can be used to transform from "shape" coordinates to "surface" coordinates and back helping to process
   mouse events, or coordinating other objects outside of the surface.
 
-===========================
 Individual graphics objects
 ===========================
 
@@ -1315,7 +1311,6 @@ The final version of the TextPath object will have the IE/VML behavior (as the g
 Silverlight and Canvas
   don't support this shape.
 
-=========
 Utilities
 =========
 
@@ -1440,7 +1435,6 @@ arcAsBezier(last, rx, ry, xRotg, large, sweep, x, y)
 Each cubic arc is represented as an array of six numeric values: [c1.x, c1.y, c2.x, c2.y, e.x, e.y],
 where c1 is the first control point, c2 is the second control point, and e is the end point. All values are absolute.
 
-==========================
 Considerations and Caveats
 ==========================
 
@@ -1456,7 +1450,6 @@ In the example above SVG will be tried first, if it fails Silverlight will be tr
 
 **It is important to note:** there isn't currently a way to include all the required renderers in a single file (such as a layer created by a custom Dojo Build). Not only would the size be prohibitive, each of the renderers re-defining the API would cause severe errors.
 
-=======
 DOCTYPE
 =======
 
@@ -1480,7 +1473,6 @@ The following doctype has been shown to work in a majority of cases (and may be 
  
 TODO: To be certain of this doctype fix, it would be good to list a few doctypes that are known to *not* work.
 
-=====
 Demos
 =====
 
@@ -1499,7 +1491,6 @@ demos/clock.html, demos/clock_black.html
 demos/creator.html, demos/inspector.html, demos/beautify.html
   Implement simple persistence mechanism using dojox.gfx.utils, and simple interaction using dojox.gfx.move.
 
-=====
 Tests
 =====
 
@@ -1567,7 +1558,6 @@ test_textpath.html
 test_transform.html
   Tests the transformation applied to groups and individual shapes.
 
-====
 TODO
 ====
 

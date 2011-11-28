@@ -1,5 +1,6 @@
 .. _build/transforms/writeDojo:
 
+=========================
 Build Transform writeDojo
 =========================
 
@@ -9,13 +10,11 @@ Build Transform writeDojo
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Writes the dojo loader and any layers that are designated as boot layers to destination locations.
 
-===========
 Description
 ===========
 
@@ -180,7 +179,6 @@ The transform writes the dojo/dojo resource text, after transforming as describe
 location. Additionally, the resource text for all bootable layers (see xxx) is written to their destination locations
 after prefixing that text with the dojo/dojo resource text.
 
-=============
 Profile Knobs
 =============
 
@@ -216,7 +214,6 @@ Profile Knobs
         boot:true
     }
 
-===============
 Source Location
 ===============
 

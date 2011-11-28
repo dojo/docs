@@ -1,5 +1,6 @@
 .. _dojox/data/QueryReadStore:
 
+==========================
 dojox.data.QueryReadStore
 ==========================
 
@@ -14,7 +15,6 @@ dojox.data.QueryReadStore
 
 QueryReadStore is very similar to :ref:`ItemFileReadStore <dojo/data/ItemFileReadStore>`. They both use JSON as their exchange format. The difference is in the way they query data. ItemFileReadStore makes one fetch from the server, and handles all sorting and filtering in the client. That's fine for hundreds of records, even thousands. But for hundreds of thousands of records or slow Internet connections, that's less feasible.
 
-==============
 Supported APIs
 ==============
 
@@ -24,7 +24,6 @@ The following dojo.data APIs are implemented by QueryReadStore
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>` -
 
 
-============
 How it works
 ============
 
@@ -69,7 +68,6 @@ Fortunately, it's easy to translate between the two and you can quickly customiz
 
 We can place this file into a folder "custom" at the same level as the dojo, dijit and dojox directories of the distribution. (See Creating Your Own Modules for a discussion and alternatives.
 
-==========================
 Server Side implementation
 ==========================
 
@@ -78,14 +76,12 @@ The server side is where all the heavy work of QueryReadStore occurs. Specifical
 Your implementation could be similar to the sample php, or it could translate your queries to run against a database via SQL. That decision is entirely up to you. Another good example store to help understand how to develop server backed datastores is :ref:`dojox.data/FileStore <dojox/data/FileStore>`
 
 
-=============================
 Example Client Implementation
 =============================
 
 For a fully functional example extension of QueryReadStore, please follow this :ref:`link <dojox/data/QueryReadStore/example>`
 
 
-===================
 Functional Examples
 ===================
 

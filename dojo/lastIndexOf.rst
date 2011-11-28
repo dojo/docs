@@ -1,5 +1,6 @@
 .. _dojo/lastIndexOf:
 
+================
 dojo.lastIndexOf
 ================
 

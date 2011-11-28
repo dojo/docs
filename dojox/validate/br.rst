@@ -1,5 +1,6 @@
 .. _dojox/validate/br:
 
+=================
 dojox.validate.br
 =================
 
@@ -14,7 +15,6 @@ dojox.validate.br
 
 The dojox.validate.br package is a package to contain helper functions for validating Brazilian specific formats, such as CNPJ and CPF numbers, numbers used to identify corporations and individuals.   Similar to the concept of the United States Social Security number for tax purposes.
 
-========
 Features
 ========
 
@@ -25,7 +25,6 @@ Once required in the following functions are available:
 * dojox.validate.br.computeCnpfDv(String) - Compute a DV number for a base CNPF number.
 * dojox.validate.br.computeCpfDv(String) - Compute a DV number for a base CPF number.
 
-=====
 Usage
 =====
 
@@ -40,7 +39,6 @@ Usage of this code is quite simple and painless.  The only thing you have to do 
     dojo.require("dojox.validator.br");
 
 
-========
 Examples
 ========
 
@@ -64,7 +62,6 @@ Basic Usage
 
     <b>Enter a CNPF like number and it will tell you if it is valid or not.</b>
 
-========
 See Also
 ========
 

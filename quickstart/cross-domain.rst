@@ -1,5 +1,6 @@
 .. _quickstart/cross-domain:
 
+=================
 Cross-Domain Dojo
 =================
 
@@ -12,7 +13,6 @@ Cross-Domain Dojo
 
 How to use Dojo's cross-domain distributions
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ Advantages
 Disadvantages
 -------------
 
-======================================
 Using a cross-domain Dojo distribution
 ======================================
 CDN or a custom build?
@@ -86,7 +85,6 @@ Multiple modules (dojo.io.iframe, dijit.Editor, dojo.back) require this to prope
 
 **dojox.flash.Info()**: It uses document.write() which will cause problems if dojox.flash is loaded via dojo.require().
 
-=============
 Usage example
 =============
 
@@ -115,7 +113,6 @@ Usage example
 
   <div id="editorNode" class="tundra">Hello, world!</div>
 
-============================
 Using CDN with Local modules
 ============================
 

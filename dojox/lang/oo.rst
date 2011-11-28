@@ -1,5 +1,6 @@
 .. _dojox/lang/oo:
 
+=============
 dojox.lang.oo
 =============
 

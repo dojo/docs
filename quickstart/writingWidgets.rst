@@ -1,5 +1,6 @@
 .. _quickstart/writingWidgets:
 
+=======================
 Writing Your Own Widget
 =======================
 :Status: Contributed
@@ -16,7 +17,6 @@ No problem! Dijit components are extensible, so you can make changes without tou
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration data-dojo-type attribute - or through dojo.declare.
 
 
-=====================
 Starting From Scratch
 =====================
 
@@ -155,7 +155,6 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.
 
 
-=================
 Templated Widgets
 =================
 OK, we've seen how to create a widget based directly on the :ref:`dijit._WidgetBase <dijit/_WidgetBase>` class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` that makes all of this easier.  _TemplatedMixin implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
@@ -226,7 +225,6 @@ So, putting that all together the source becomes:
 
     <span data-dojo-type="FancyCounter">press me</span>
 
-==========
 Attributes
 ==========
 
@@ -447,7 +445,6 @@ eg:
 
 Had the ``multiplier`` member been defined in ``postCreate``, the initial automated value setting done by attr() would fail.
 
-==========
 Containers
 ==========
 
@@ -492,7 +489,6 @@ Having said all that, now we define the widget, referencing this template via th
     <button data-dojo-type="MyButton">press me</button>
 
 
-=========================
 Creating extension points
 =========================
 Let's say you've written a widget, and when the user clicks on it, something happens. What you want is for the programmer using the widget to be able to either *change* what happens, or have something happen in addition, without having to edit your widget.
@@ -566,7 +562,6 @@ Closing words:
 2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistently. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
 
 
-=============================
 Useful self-scoping functions
 =============================
 
@@ -578,7 +573,6 @@ There are two sets of functions available to all widgets which simplify connecti
 These functions operate similar to their dojo.* counterparts - with two exceptions.  First, the target function will always be executed within the scope of the widget.  Second, these connections/subscriptions will be cleaned up during the destroy() lifecycle phase of the widget.
 
 
-=============
 Accessibility
 =============
 
@@ -587,7 +581,6 @@ These pages list how to make your widgets accessible to people with poor/no visi
 * :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
 * :ref:`Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`
 
-============================
 Alternate Templating Engines
 ============================
 
@@ -601,7 +594,6 @@ There's an alternate template syntax for widgets which lets you have conditional
   
   * `just a proposal`
 
-========
 See also
 ========
 

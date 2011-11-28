@@ -1,5 +1,6 @@
 .. _dojo/declare:
 
+=================================
 dojo.declare (dojo/_base/declare)
 =================================
 
@@ -19,14 +20,12 @@ If you prefer books, chapter 9 of `David Flanagan's JavaScript: The Definitive G
 This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using ``dojo.declare`` or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
 
-===========
 Basic Usage
 ===========
 
 ``dojo.declare`` accepts up to three arguments:
 
-==========  ====================  ==================================================
-Parameter   Type                  Description
+==========  ====================  Parameter   Type                  Description
 ==========  ====================  ==================================================
 className   String|null           The optional name of the Class to declare.
 
@@ -261,7 +260,6 @@ Note the use of anonymous functions here.  You are passing to ``dojo.declare`` a
 
 In pure JavaScript, this is handled by a prototype function named after the class - for example, ``Person.prototype``.  Dojo wires in your constructor as a part of the prototype, but then adds extra goodies like calling the superclass constructor and initializing extra properties.
 
-======================================
 Arrays and Objects as member variables
 ======================================
 
@@ -341,7 +339,6 @@ Now *x* and *y* both refer to the same object. Modifying *x.fruit* will also aff
 
 On the other hand, numbers, booleans, and strings are used as values. Any assignment updates a variable, rather than shared object.
 
-===========
 Inheritance
 ===========
 
@@ -486,7 +483,6 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 See `inherited()`_ for more details.
 
 
-====================
 Multiple inheritance
 ====================
 
@@ -559,7 +555,6 @@ This will first print "mixing in Vanilla" on the debug console because VanillaSo
 
 Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
 
-==================
 Inheritance chains
 ==================
 
@@ -634,7 +629,6 @@ As you can see the inheritance chain is the same for all three classes. Why? Bec
 
 Note that ``-> B -> A`` are folded into our superclass ``D`` and are not instantiated directly.
 
-=====================
 Technical information
 =====================
 
@@ -1640,7 +1634,6 @@ Every instance created by ``dojo.declare``'d class has a special property called
 
 Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
 
-========
 See Also
 ========
 

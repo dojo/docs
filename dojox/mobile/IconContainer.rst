@@ -1,5 +1,6 @@
 .. _dojox/mobile/IconContainer:
 
+==========================
 dojox.mobile.IconContainer
 ==========================
 
@@ -14,7 +15,6 @@ IconContainer is a container widget that holds multiple icons each of which repr
 
 .. image:: IconContainer.png
 
-=====
 Usage
 =====
 
@@ -24,7 +24,6 @@ Since dojo-1.6, you need to dojo.require IconContainer because it has been moved
 
   dojo.require("dojox.mobile.IconContainer");
 
-======================
 Constructor Parameters
 ======================
 
@@ -56,7 +55,6 @@ Constructor Parameters
 |single            |Boolean   |false           |If true, only one icon content can be opened at a time.                                                    |
 +------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
 
-============================
 Lazy Loading of the contents
 ============================
 
@@ -79,7 +77,6 @@ Note that currently lazy loading is supported only in the sync mode, since lazy 
 
 .. image:: IconContainer-lazy-17.png
 
-========
 Examples
 ========
 

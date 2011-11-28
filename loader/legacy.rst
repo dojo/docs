@@ -1,5 +1,6 @@
 .. _loader/legacy:
 
+============================
 The Dojo Loader Legacy Modes
 ============================
 
@@ -10,7 +11,6 @@ The Dojo Loader Legacy Modes
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ is customary with Dojo, support for existing v1.x APIs, including the legacy loa
 ``dojo.provide``, and the rest) is fully supported until version 2.0. This document describes the legacy API and how it
 coexists with the AMD API.
 
-==============
 The Legacy API
 ==============
 
@@ -307,7 +306,6 @@ can do this and we're quite proud of this feature.
 That concludes a fast and furious review of legacy mode. I devoted more than a chapter to this system in :ref:`my book` if
 you want a more-gentle presentation.
 
-==================
 Modes of Operation
 ==================
 

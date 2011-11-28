@@ -1,5 +1,6 @@
 .. _dijit/form/DataList:
 
+===================
 dijit.form.DataList
 ===================
 
@@ -15,7 +16,6 @@ dijit.form.DataList
 DataList is a read-only data store that processes inline OPTION tags as data items.  This store implements the new :ref:`Dojo Object Store API <dojo/store>`.  The DataList store is also a synchronous store. All the functions directly return results, so you don't have to use asynchronous callbacks in your code.
 
 
-========
 Examples
 ========
 

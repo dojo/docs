@@ -1,5 +1,6 @@
 .. _dojox/lang/utils:
 
+================
 dojox.lang.utils
 ================
 

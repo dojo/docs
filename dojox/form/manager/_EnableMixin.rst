@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_EnableMixin:
 
+===============================
 dojox.form.manager._EnableMixin
 ===============================
 
@@ -11,7 +12,6 @@ dojox.form.manager._EnableMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the component of the form manager. It should be used together with
 
 The mixin provides commonly used methods to enable/disable form elements. It operates only on form widgets collected by :ref:`\_Mixin <dojox/form/manager/_Mixin>` and form nodes collected by :ref:`\_NodeMixin <dojox/form/manager/_NodeMixin>` (see :ref:`controlled elements <dojox/form/manager/index>` for more details).
 
-======================
 Methods and properties
 ======================
 
@@ -147,7 +146,6 @@ There are three ways to use this method:
 
     fm.disable();
 
-=====
 Usage
 =====
 

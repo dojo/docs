@@ -1,5 +1,6 @@
 .. _dijit/tree/ForestStoreModel:
 
+===========================
 dijit.tree.ForestStoreModel
 ===========================
 

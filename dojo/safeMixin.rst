@@ -1,5 +1,6 @@
 .. _dojo/safeMixin:
 
+==============
 dojo.safeMixin
 ==============
 
@@ -11,7 +12,6 @@ dojo.safeMixin
 
 ``dojo.safeMixin`` is a companion function for :ref:`dojo.declare <dojo/declare>`. It has the same functionality as :ref:`dojo.mixin <dojo/mixin>`, but additionally it annotates all copied methods compatibly with :ref:`dojo.declare <dojo/declare>`. This decoration can affect how ``this.inherited()`` works in mixed-in methods.
 
-===========
 Basic Usage
 ===========
 
@@ -64,7 +64,6 @@ The function is usually used with classes and instances produced by :ref:`dojo.d
       return this.inherited("m5", arguments); // calls A.m5
   });
 
-=================
 Technical details
 =================
 

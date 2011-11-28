@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/SpellCheck:
 
+====================================================
 dojox.editor.plugins.SpellCheck (Under Construction)
 ====================================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.SpellCheck (Under Construction)
 
 Have you ever wanted to make sure that your edited content was spelled correctly? You could always have a dictionary available but, otherwise, this plug-in is for you.
 
-========
 Features
 ========
 
@@ -29,7 +29,6 @@ Once required in and enabled, this plugin provides the following features to dij
 
 * Interactive spell check which provides the same features through a context menu on unrecognized words as they are typed.
 
-=====
 Usage
 =====
 
@@ -75,8 +74,7 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  =============================================================================
-Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  =============================================================================
 name                      String             False         SpellCheck               The name of this plugin. It should always be "spellcheck".
 url                       String             False         <empty string>           The url of the speck check service.
@@ -136,7 +134,6 @@ The callbackName gets from the "callback" parameter in the request. And you shou
 
   dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({response:[{"text":"spellcheck","suggestion":[]},{"text":"porterstemmer","suggestion":[]},{"text":"i","suggestion":[]},{"text":"errir","suggestion":["terror"]},{"text":"thi","suggestion":["hit","the","thin","this","tie"]},{"text":"wrng","suggestion":["warn","wrong"]},{"text":"txt","suggestion":["tax"]}]});
 
-==============
 User Interface
 ==============
 
@@ -296,19 +293,16 @@ If there is more than one parser, the first registered one wins. An example foll
    sp.parser = new dojox.editor.plugins._SpellCheckParser();
   });
 
-===================
 A11Y Considerations
 ===================
 
 All fields within the Batch Spell Check dialog can be accessed with the keyboard.
 
-===========
 Limitations
 ===========
 
 None.
 
-========
 Examples
 ========
 
@@ -361,7 +355,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

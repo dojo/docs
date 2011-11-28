@@ -1,5 +1,6 @@
 .. _dojox/wire:
 
+==========
 dojox.wire
 ==========
 

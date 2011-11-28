@@ -1,5 +1,6 @@
 .. _dojo/json:
 
+=========
 dojo/json
 =========
 
@@ -12,7 +13,6 @@ dojo/json
 
 The dojo/json module is a JSON parsing and serialization module based on the standard EcmaScript 5's JSON object.
 
-===============
 dojo/json parse
 ===============
 
@@ -38,7 +38,6 @@ If the target platform supports native JSON parsing, dojo/json will always use t
     var parsed = JSON.parse(unsecureJSONString, true);
   });
 
-===================
 dojo/json stringify
 ===================
 

@@ -1,5 +1,6 @@
 .. _build/xDomain:
 
+============================================
 Build System:  Cross-Domain (xDomain) Builds
 ============================================
 
@@ -72,7 +73,6 @@ XDomain Example
 
 `Here is an example <http://jburke.dojotoolkit.org/demos/xdlocal/LocalAndXd.html>`_ showing how to load local modules along with an xdomain-loaded Dojo and Dijit. You can `download this example <http://jburke.dojotoolkit.org/demos/xdlocal/xdlocal.zip>`_.
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dijit/form/ComboBox:
 
+===================
 dijit.form.ComboBox
 ===================
 
@@ -12,7 +13,6 @@ dijit.form.ComboBox
 
 The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.
 
-=====
 Usage
 =====
 
@@ -24,7 +24,6 @@ ComboBox widgets are dojo.data-enabled. This means rather than embedding all the
 
 `note:` ComboBox only has a single value that matches what is displayed while :ref:`FilteringSelect <dijit/form/FilteringSelect>` incorporates a hidden value that corresponds to the displayed value.
 
-========
 Examples
 ========
 
@@ -108,7 +107,6 @@ Codependent FilteringSelect/ComboBox widgets
 :ref:`The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example. <dijit/form/FilteringSelect>`
 
 
-=============
 Accessibility
 =============
 

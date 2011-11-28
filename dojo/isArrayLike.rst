@@ -1,5 +1,6 @@
 .. _dojo/isArrayLike:
 
+================
 dojo.isArrayLike
 ================
 
@@ -15,7 +16,6 @@ Checks if the parameter is like an Array.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-=====
 Usage
 =====
 
@@ -49,7 +49,6 @@ Returns true if it is like an Array.
   }
 
 
-========
 Examples
 ========
 
@@ -164,7 +163,6 @@ Test against isArrayLike()
     </div>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/layout/TableContainer:
 
+===========================
 dojox.layout.TableContainer
 ===========================
 
@@ -12,7 +13,6 @@ dojox.layout.TableContainer
 The TableContainer is a simple layout widget that displays the contained child widgets in a Table element.
 
 
-============
 Introduction
 ============
 
@@ -29,7 +29,6 @@ The dojox.layout.TableContainer is a simple layout widget that displays the cont
 * Cell spacing can be customized by setting the "spacing" attribute.
 
 
-=====
 Usage
 =====
 
@@ -67,7 +66,6 @@ The following attributes are available on the TableContainer
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

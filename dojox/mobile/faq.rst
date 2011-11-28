@@ -1,5 +1,6 @@
 .. _dojox/mobile/faq:
 
+==========================
 Frequently Asked Questions
 ==========================
 
@@ -8,7 +9,6 @@ Frequently Asked Questions
 .. contents::
     :depth: 2
 
-===================
 dojox.mobile.parser
 ===================
 
@@ -34,7 +34,6 @@ Can I use dojox.mobile.parser for desktop dojo applications?
 
 Yes. Use of dojox.mobile.parser is not limited to mobile. It has enough capability to bootstrap simple dojo applications. This may sound strange, but dojox.mobile.parser has no dependency on dojox.mobile. (And dojox.mobile has no dependency on dojox.mobile.parser either.) So you can pick up only dojox.mobile.parser and use it for your desktop applications. Actually, this parser was originally developed for very lightweight desktop dojo applications a few years before dojox.mobile was born.
 
-==============
 Android Issues
 ==============
 
@@ -48,7 +47,6 @@ mblAlwaysHideAddressBar does not work on my Android device. What's going on?
 
 mblAlwaysHideAddressBar does not work on some Android devices when overflow:hidden style is applied to html and body tags. This overflow:hidden style is used in some test cases including test_ScrollableMixin-custom.html for desktop browsers not to show scroll bar, but you can remove it for mobile browsers so that you can hide address bar.
 
-=============
 Miscellaneous
 =============
 

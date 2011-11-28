@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_DisplayMixin:
 
+================================
 dojox.form.manager._DisplayMixin
 ================================
 
@@ -11,7 +12,6 @@ dojox.form.manager._DisplayMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ The mixin provides commonly used methods to show/hide attached nodes (see :ref:`
 
 This mixin is modeled after :ref:`\_EnableMixin <dojox/form/manager/_EnableMixin>`.
 
-======================
 Methods and properties
 ======================
 
@@ -149,7 +148,6 @@ There are three ways to use this method:
 
     fm.hide();
 
-=====
 Usage
 =====
 

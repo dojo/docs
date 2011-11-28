@@ -1,5 +1,6 @@
 .. _dojox/mobile/TextArea:
 
+=====================
 dojox.mobile.TextArea
 =====================
 
@@ -15,7 +16,6 @@ dojox.mobile.TextArea
 TextArea is a very simple TEXTAREA widget.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -35,7 +35,6 @@ Constructor Parameters
 |onChange      |Function  |              |An event handler used for TEXTAREA value change notifications.                                             |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

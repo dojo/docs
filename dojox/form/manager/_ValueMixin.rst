@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_ValueMixin:
 
+==============================
 dojox.form.manager._ValueMixin
 ==============================
 
@@ -11,7 +12,6 @@ dojox.form.manager._ValueMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class is the component of the form manager. It should be used together with
 
 The mixin provides commonly used methods to access values of individual form elements, as well as to perform group operations on their values.
 
-======================
 Methods and properties
 ======================
 
@@ -94,7 +93,6 @@ This method is complimentary to gatherFormValues_. It uses the same dictionary f
   var values = {firstName: "Jane", lastName: "Smith"};
   fm.setFormValues(values);
 
-=====
 Usage
 =====
 

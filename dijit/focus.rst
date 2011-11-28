@@ -1,5 +1,6 @@
 .. _dijit/focus:
 
+===========
 dijit/focus
 ===========
 
@@ -9,7 +10,6 @@ dijit/focus
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -17,7 +17,6 @@ dijit/focus is a utility module that is used to manage focused nodes and widgets
 
 Until Dojo 2.0, requiring dijit/focus will also create a ``dijit.focus`` function with the same semantics as ``focus.focus``.
 
-=====
 Usage
 =====
 
@@ -109,7 +108,6 @@ If you don’t register an iframe, when focus changes to elements within the ifr
     focusUtil.unregisterIframe(handle);
   });
 
-========
 See also
 ========
 

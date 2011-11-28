@@ -1,12 +1,12 @@
 .. _dojox/form:
 
+==================
 dojox.form project
 ==================
 
 The dojox.form project provides additional form-related widgets beyond :ref:`dijit.form <dijit/form>` functionality.
 
 
-=================
 Available Widgets
 =================
 

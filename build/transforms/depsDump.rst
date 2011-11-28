@@ -1,5 +1,6 @@
 .. _build/transforms/depsDump:
 
+========================
 Build Transform depsDump
 ========================
 
@@ -9,13 +10,11 @@ Build Transform depsDump
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Optionally dumps the dependency graph of all discovered modules and/or a basic GraphViz dot digraph program.
 
-===========
 Description
 ===========
 
@@ -90,7 +89,6 @@ The resulting image should look something like this:
 
 .. image :: dojo-base-json.png
 
-=============
 Profile Knobs
 =============
 
@@ -110,7 +108,6 @@ Profile Knobs
     dependency trees will be included in the output)
   * [*falsy*] all modules are included
 
-===============
 Source Location
 ===============
 

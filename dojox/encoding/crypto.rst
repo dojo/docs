@@ -1,5 +1,6 @@
 .. _dojox/encoding/crypto:
 
+=====================
 dojox.encoding.crypto
 =====================
 

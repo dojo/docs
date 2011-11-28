@@ -1,5 +1,6 @@
 .. _dijit/_Widget:
 
+=============
 dijit._Widget
 =============
 

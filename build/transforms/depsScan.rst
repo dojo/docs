@@ -1,5 +1,6 @@
 .. _build/transforms/depsScan:
 
+========================
 Build Transform depsScan
 ========================
 
@@ -9,14 +10,12 @@ Build Transform depsScan
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Scans AMD and legacy module for dependencies; automatically convert legacy modules to AMD modules (both normal code
 modules and NLS modules); interns strings for legacy modules.
 
-===========
 Description
 ===========
 
@@ -96,7 +95,6 @@ In summary, the transform process discovers any module dependencies through one 
 Once all dependencies are found, the transform ensures all dependencies exist in the discovered modules. Missing
 dependencies result in an error being logged to the console and the build report.
 
-=============
 Profile Knobs
 =============
 
@@ -135,7 +133,6 @@ Profile Knobs
 **Warning**: All knobs mentioned above support legacy features which are deprecated. It is strongly encouraged to convert
 legacy modules to properly-expressed AMD modules.
 
-===============
 Source Location
 ===============
 

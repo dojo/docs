@@ -1,5 +1,6 @@
 .. _dijit/form/TimeTextBox:
 
+======================
 dijit.form.TimeTextBox
 ======================
 
@@ -12,7 +13,6 @@ dijit.form.TimeTextBox
 
 TimeTextBox widgets are time input controls that allow either typing or choosing a time from any time-picker widget.
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ Introduction
 
 :ref:`Options defined by the dojo.date package <quickstart/numbersDates>` to alter the way times are formatted and parsed can be specified in the TimeTextBox ``constraints`` object.
 
-=====
 Usage
 =====
 
@@ -39,7 +38,6 @@ To prevent the ambiguity in specifying time formats, TimeTextBox allows only one
 However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object. The date portion of this value should be ignored.
 
 
-========
 Examples
 ========
 
@@ -84,7 +82,6 @@ Declarative example
      <label for="time1">Drop down Time box. Click inside to display the time picker.</label>
      <br>string value: <input readonly disabled id='val' value='value not changed' />
 
-=============
 Accessibility
 =============
 

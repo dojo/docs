@@ -1,5 +1,6 @@
 .. _dijit/CalendarLite:
 
+==================
 dijit.CalendarLite
 ==================
 
@@ -10,7 +11,6 @@ The CalendarLite widget is like the :ref:`dijit.Calendar <dijit/Calendar>` widge
 In particular it's missing the drop down to display the list of months, and the _CSSStateMixin needed
 for getting hover CSS effects on older versions of IE.
 
-========
 Examples
 ========
 
@@ -33,7 +33,6 @@ A plain Calendar widget with the formatted date below
     <p id="formatted"></p>
 
 
-========
 See Also
 ========
 

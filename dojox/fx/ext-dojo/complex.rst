@@ -1,5 +1,6 @@
 .. _dojox/fx/ext-dojo/complex:
 
+=========================
 dojox.fx.ext-dojo.complex
 =========================
 

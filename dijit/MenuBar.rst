@@ -1,5 +1,6 @@
 .. _dijit/MenuBar:
 
+=============
 dijit.MenuBar
 =============
 
@@ -11,7 +12,6 @@ dijit.MenuBar
 The MenuBar widget models a typical menu bar like the quintessential "File" menu on (virtually?) all programs.
 
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ PopupMenuBarItem widgets are the actual items in the menu, and like PopupMenuIte
 There's also a MenuBarItem widget if you need an entry in your MenuBar that *doesn't* have a drop down.
 
 
-========
 Examples
 ========
 
@@ -114,15 +113,13 @@ Creation from markup is even easier.
 	</div>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate into/out of a MenuBar                Tab or shift-tab
 Navigate menubar items                        Left and right arrow keys
@@ -132,7 +129,6 @@ Close a submenu                               Esc, or use right arrow to navigat
 ==========================================    =================================================
 
 
-========
 See also
 ========
 

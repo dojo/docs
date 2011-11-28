@@ -1,5 +1,6 @@
 .. _dijit/form/VerticalRuleLabels:
 
+===============================
 dijit.form.VerticalRuleLabels
 ===============================
 

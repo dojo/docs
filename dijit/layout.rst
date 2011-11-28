@@ -1,5 +1,6 @@
 .. _dijit/layout:
 
+============
 dijit.layout
 ============
 
@@ -10,7 +11,6 @@ dijit.layout
 .. contents::
     :depth: 2
 
-================
 An example first
 ================
 
@@ -58,7 +58,6 @@ Once you have read through this page you should be able to create such a layout 
       }
     </style>
 
-================
 HTML and Layouts
 ================
 
@@ -125,7 +124,6 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
 However, that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
 
-============
 Dijit Layout
 ============
 
@@ -278,7 +276,6 @@ Conceptually it looks like this:
    :alt: block diagram of container nesting
 
 
-==================
 Sizing to Viewport
 ==================
 
@@ -296,14 +293,12 @@ where mainDiv is the id of the outermost div.
 Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those. Put your padding, border, and margin on elements inside the outer layout container.
 
 
-==========
 Visibility
 ==========
 
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
 
-===================================
 Programmatic Creation and Lifecycle
 ===================================
 
@@ -413,7 +408,6 @@ If you want to notify a widget that it's size has been changed, you omit that ar
   
    bc.resize();
 
-======================
 Writing Layout Widgets
 ======================
 

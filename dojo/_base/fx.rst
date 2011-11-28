@@ -1,5 +1,6 @@
 .. _dojo/_base/fx:
 
+=============
 dojo/_base/fx
 =============
 
@@ -15,7 +16,6 @@ dojo/_base/fx
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-========
 Features
 ========
 
@@ -23,7 +23,6 @@ Features
 * :ref:`dojo.fadeIn <dojo/fadeIn>`
 * :ref:`dojo.fadeOut <dojo/fadeIn>`
 
-========
 See also
 ========
 

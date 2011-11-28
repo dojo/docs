@@ -1,12 +1,12 @@
 .. _releasenotes/1.6:
 
+======================
 Dojo 1.6 Release Notes
 ======================
 
 .. contents::
    :depth: 3
 
-===============
 Browser support
 ===============
 
@@ -17,7 +17,6 @@ The following browsers are supported. If a browser is not supported, it still ma
   * IE6, IE7, IE8 (Dojo 1.6.1+ supports IE9)
   * Opera 10.50 and later (Dojo core only)
 
-=========
 Dojo Base
 =========
 
@@ -65,7 +64,6 @@ The global djConfig object used to define runtime configuration options has been
 
         var dojoConfig = { parseOnLoad:true }
 
-=========
 Dojo Core
 =========
 
@@ -147,7 +145,6 @@ Two new methods are added to Dojo core, which can be used to improve performance
 
   * dojo._getMarginSize, a private method that returns the width and height of a node, and is a lightweight alternative to dojo.marginBox.
 
-=====
 Dijit
 =====
 
@@ -238,7 +235,6 @@ a11y
       <span role="treeitem" aria-selected="false" aria-haspopup="true"></span>
 
 
-=====
 DojoX
 =====
 
@@ -325,7 +321,6 @@ An HTML5 file input that handles multiple file selections, upload progress, and 
 
   * :ref:`Uploader  <dojox/form/Uploader>`
 
-====
 Util
 ====
 
@@ -333,7 +328,6 @@ Build
 -----
 The build now supports auto-generation of profiles from HTML files with the new htmlFiles and htmlDir build parameters.
 
-=========
 Migration
 =========
 

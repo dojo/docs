@@ -1,5 +1,6 @@
 .. _dojox/gauges/BarGauge:
 
+=====================
 dojox.gauges.BarGauge
 =====================
 
@@ -13,7 +14,6 @@ dojox.gauges.BarGauge
 
 A horizontal bar gauge with a variety of indicators, used to display numerical data.
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ The bar gauge widget provides a way to display data on a horizontal bar gauge.  
 
 The bar gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the bar gauge widget works is that it is effectively a layering indicators over a set of ranges along a horizontal axis.  Tick marks are displayed above the gauge ranges.   An optional capability of the bar gauge is that the values for each indicator can be displayed beneath the gauge (and are by default). This makes the gauge accessibility compliant.
 
-=====
 Usage
 =====
 
@@ -29,7 +28,6 @@ As demonstrated in the examples below, creating a bar gauge widget requires a fe
 
 Indicators can be handled separate of the gauge. In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself). New indicators can be created by inheriting from dojox.gauges._Indicator and overriding the appropriate functions (draw is the most important).
 
-==========
 Indicators
 ==========
 
@@ -40,7 +38,6 @@ There are several indicators provided by default for use with the Bar Gauge widg
 * TextIndicator - Draws the value of the gauge as text.
 
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/xhrGet:
 
+===========
 dojo.xhrGet
 ===========
 
@@ -9,7 +10,6 @@ dojo.xhrGet
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -17,14 +17,12 @@ The dojo.xhrGet() function is the cornerstone function of AJAX development.  Its
 
 The following information should get you up and going with dojo.xhrGet().  As with all dojo functions, always refer to the API docs for detailed information.
 
-===========
 Limitations
 ===========
 
 dojo.xhrGet (and other functions in the same line: dojo.xhrPost, dojo.xhrDelete, dojo.xhrPut), are bound by the 'same domain' security policy of the browser.  This means that they can only establish a connection back to the same server that served the HTML page.  If you wish to use this API to talk to servers other than the one that originated your page, then you will have to use a proxy on your originating server and have it forward the requests.  The only other solution to working around the same domain restriction is to use alternate IO methods, such as dojo.io.script.
 
 
-=====
 Usage
 =====
 
@@ -151,7 +149,6 @@ A second parameter is always passed to the 'load', 'error', and 'handle' functio
 
 By making use of this status check, you can implement handling for authentication, proxy authentication, and myraid of other items you may need to react to, to make your application dynamic and user friendly.
 
-========
 Examples
 ========
 
@@ -560,7 +557,6 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
     <div id="getLicenseErrorStatusWithHandle" style="height: 100px;"></div>
 
 
-========
 See also
 ========
 

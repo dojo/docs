@@ -1,5 +1,6 @@
 .. _dojox/data/KeyValueStore:
 
+========================
 dojox.data.KeyValueStore
 ========================
 
@@ -12,7 +13,6 @@ dojox.data.KeyValueStore
 
 This is a dojo.data store implementation. The KeyValueStore is a store that takes content in a format similar to those used by property files, such as Java, and many other languages were there are unique keys mapping to some value for display. Think of it as an interface for reading property style files in dojo through the dojo.data interface.
 
-============
 Input Format
 ============
 
@@ -41,7 +41,6 @@ Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... 
   }
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -60,7 +59,6 @@ The constructor for the store can take three different parameters as a way to lo
 |               |false.  **New to Dojo 1.4**                                                   |                              |
 +---------------+------------------------------------------------------------------------------+------------------------------+
 
-===============
 Item Attributes
 ===============
 
@@ -77,7 +75,6 @@ Items from the KeyValueStore have two well-defined attribute names 'key' and 'va
 |getValue(item, "key")   |The named key of the key/value pair.                                          |                              |
 +------------------------+------------------------------------------------------------------------------+------------------------------+
 
-========
 Examples
 ========
 

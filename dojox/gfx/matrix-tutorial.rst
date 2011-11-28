@@ -1,5 +1,6 @@
 .. _dojox/gfx/matrix-tutorial:
 
+===============
 Matrix tutorial
 ===============
 

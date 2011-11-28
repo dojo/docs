@@ -1,5 +1,6 @@
 .. _dojo/formToQuery:
 
+================
 dojo.formToQuery
 ================
 
@@ -10,7 +11,6 @@ dojo.formToQuery
 
 Helper function for converting a HTML form into an URL-encoded query string.
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ You can refer to the :ref:`dojo.formToObject <dojo/formToObject>` and :ref:`dojo
 
 Since Dojo 1.7, ``dojo.formToQuery`` is exposed via the ``toQuery`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -72,7 +71,6 @@ Dojo < 1.7
   //Note the button was skipped.
 
 
-========
 Examples
 ========
 
@@ -144,7 +142,6 @@ Example 2: Using formToQuery to create a query string version of a form with dij
     <pre id="formQuery2"></pre>
 
 
-========
 See also
 ========
 

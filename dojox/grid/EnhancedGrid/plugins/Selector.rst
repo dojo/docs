@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/Selector:
 
+========================================
 dojox.grid.EnhancedGrid.plugins.Selector
 ========================================
 
@@ -12,7 +13,6 @@ Selector plugin provides extended selection for columns, rows and cells.
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -162,7 +162,6 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
     </style>
 
 
-=============
 Configuration
 =============
 
@@ -208,8 +207,7 @@ As shown in the above code, you can simply set the ``selector`` property to true
 
 In the configuration object, you can further configure the selection mode for rows/columns/cells:
 
-==========  =================  ===============  ===============================================================================================
-Property    Type               Default Value    Description
+==========  =================  ===============  Property    Type               Default Value    Description
 ==========  =================  ===============  ===============================================================================================
 row         String|Boolean     "multi"          Can be "single", "multi", "disabled". If false, means "disabled". Any other value means "multi"
 col         String|Boolean     "multi"          Can be "single", "multi", "disabled". If false, means "disabled". Any other value means "multi"
@@ -217,7 +215,6 @@ cell        String|Boolean     "multi"          Can be "single", "multi", "disab
 ==========  =================  ===============  ===============================================================================================
 
 
-=====
 Usage
 =====
 
@@ -226,8 +223,7 @@ Extended Selection
 
 Extended selection allows the following operations:
 
-=========================  ==================================================================================================  ===========================================================================  ==========================================================================================
-Operation                  Use Mouse                                                                                           Use Keyboard                                                                 Result
+=========================  ==================================================================================================  ===========================================================================  Operation                  Use Mouse                                                                                           Use Keyboard                                                                 Result
 =========================  ==================================================================================================  ===========================================================================  ==========================================================================================
 Point Selection            Click mouse selection button with pointer on object to be selected.                                 With cursor on object to be selected, press Space or Enter.                  Deselects all other objects in this grid, selects single identified object.
 Swipe Range Selection      Press mouse selection button at the start point and hold while move the pointer to the end point;   Press Shift at the start point and hold while using cursor-movement          Deselects all other objects in this grid;
@@ -278,8 +274,7 @@ onEndDeselect(type, startPoint, endPoint):
 onSelectCleared(type):
 	When all the selection status are cleared.
 
-============ ==================  ===========================================================================
-Arguments    Type                Description
+============ ==================  Arguments    Type                Description
 ============ ==================  ===========================================================================
 type         String              One of "row", "col", "cell"
 startPoint   Object              The start point of selection. See description of __SelectItem for details.
@@ -353,10 +348,8 @@ This Plugin exposes the following methods to grid widget:
 setupConfig(config):
 	Set selection mode for row/col/cell.
 
-==============  ==================  ==========================  ========================================
-Arguments       Type                Optional/Mandatory          Description
-==============  ==================  ==========================  ========================================
-config          Object              Mandatory                   Same as the plugin configuration object.
+==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  config          Object              Mandatory                   Same as the plugin configuration object.
 ==============  ==================  ==========================  ========================================
 
 
@@ -369,8 +362,7 @@ select(type, rowIndex, colIndex):
 deselect(type, rowIndex, colIndex):
 	Deselect an item (a cell, a column or a row).
 
-==============  ==================  ==============================  ===============================================================================================
-Arguments       Type                Optional/Mandatory              Description
+==============  ==================  ==============================  Arguments       Type                Optional/Mandatory              Description
 ==============  ==================  ==============================  ===============================================================================================
 type            String              Mandatory                       "row" or "col" or "cell"
 rowIndex        Integer             Mandatory                       If type is "row" or "cell", this is the row index.
@@ -382,8 +374,7 @@ colIndex        Integer             Optional(default to undefined)  Only valid w
 selectRange(type, start, end):
 	Select a continuous range (a block of cells, a set of continuous columns or rows)
 
-==============  =============================  ==============================  ==============================================================================
-Arguments       Type                           Optional/Mandatory              Description
+==============  =============================  ==============================  Arguments       Type                           Optional/Mandatory              Description
 ==============  =============================  ==============================  ==============================================================================
 type            String                         Mandatory                       "row" or "col" or "cell"
 start           Integer | __SelectCellItem     Mandatory                       If type is "row" or "col", this is the index of the starting row or column.
@@ -395,17 +386,14 @@ end             Integer | __SelectCellItem     Mandatory                       I
 clear(type):
 	Clear all selections of given type.
 
-==============  ==================  ==============================  =================================================
-Arguments       Type                Optional/Mandatory              Description
-==============  ==================  ==============================  =================================================
-type            String              Optional(default to undefined)  "row" or "col" or "cell". If omitted, clear all.
+==============  ==================  ==============================  Arguments       Type                Optional/Mandatory              Description
+==============  ==================  ==============================  type            String              Optional(default to undefined)  "row" or "col" or "cell". If omitted, clear all.
 ==============  ==================  ==============================  =================================================
 
 getSelected(type, includeExceptions):
 	Get an array of selected items. (__SelectItem[])
 
-==================  ==================  ==============================  ==================================================================================
-Arguments           Type                Optional/Mandatory              Description
+==================  ==================  ==============================  Arguments           Type                Optional/Mandatory              Description
 ==================  ==================  ==============================  ==================================================================================
 type                String              Mandatory                       "row" or "col" or "cell"
 includeExceptions   Boolean             Optional(default to false)      Only meaningful for rows/columns.
@@ -413,13 +401,11 @@ includeExceptions   Boolean             Optional(default to false)      Only mea
 [return]            __SelectItem[]                                      Array of selected items.
 ==================  ==================  ==============================  ==================================================================================
 
-==========
 Miscellany
 ==========
 
 * When cell selection is disabled and row selection is enabled, clicking on a cell will select the whole row.
 
-========
 See Also
 ========
 

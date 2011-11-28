@@ -1,5 +1,6 @@
 .. _dojox/layout/FloatingPane:
 
+=========================
 dojox.layout.FloatingPane
 =========================
 
@@ -13,14 +14,12 @@ dojox.layout.FloatingPane
 
 dojox.layout.FloatingPane is an **experimental** floating window.
 
-============
 Introduction
 ============
 
 The dojox.layout.FloatingPane class provides flexible support for floating panes which can be resized, minimized/maximized and layered dynamically, similar to application windows within the web page. Unlike :ref:`dijit.Dialog <dijit/Dialog>`, FloatingPane is not modal and it is designed to allow multiple active windows. A special dock widget (dojox.layout.Dock) is used to provide the user interface for restoring minimized (docked) windows.
 
 
-=====
 Usage
 =====
 
@@ -32,7 +31,6 @@ As FloatingPane is an experimental widget, there are a few caveats to keep in mi
 * Always specify position:absolute in the style attribute, and always specify values for the 'top' and 'left' CSS attributes. Not doing so will cause FloatingPane to malfunction.
 
 
-========
 Examples
 ========
 
@@ -109,7 +107,6 @@ Declarative example
      <div data-dojo-type="dijit.form.Button" data-dojo-props="label:'Show me', onClick:function(){dijit.byId('dFloatingPane').show();}"></div>
      <!-- make campus preview div big enough: --><div style="height:280px;width:100%;"></div>
 
-===============
 Troubleshooting
 ===============
 
@@ -118,7 +115,6 @@ Troubleshooting
 * Cannot resize FloatingPane using resize handle: This happens when startup() isn't called. When creating widgets programmatically, always call the startup() method after constructing.
 * When the widget is closed via the close button, it can no longer be shown: FloatingPane destroys itself when the close button is pressed. You must create a subclass of FloatingPane to override this behavior.
 
-========
 See also
 ========
 

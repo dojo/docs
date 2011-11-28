@@ -1,5 +1,6 @@
 .. _dojo/data/ItemFileReadStore:
 
+===========================
 dojo.data.ItemFileReadStore
 ===========================
 
@@ -20,7 +21,6 @@ Dojo core provides an implementation of a read-only datastore, ItemFileReadStore
 
 2. This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a step back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
 
-==============
 Supported APIs
 ==============
 
@@ -30,7 +30,6 @@ The following dojo.data APIs are implemented by ItemFileReadStore
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -85,7 +84,6 @@ Constructor Parameters
   
 
 
-=================
 Input Data Format
 =================
 
@@ -150,7 +148,6 @@ The other special structure is the custom type structure. The purpose of the cus
 
 When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object.
 
-=======================
 Item Structure Examples
 =======================
 
@@ -287,7 +284,6 @@ Items with Custom Types
     ]
   }
 
-============
 Custom Types
 ============
 
@@ -449,7 +445,6 @@ Functional Example: Using custom type maps with ItemFileReadStore
     <span id="list">
     </span>
 
-==============
 Custom Sorting
 ==============
 
@@ -503,7 +498,6 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
   //Invoke the fetch.
   store.fetch({onComplete: completed, onError: error, sort: sortAttributes});
 
-============
 Query Syntax
 ============
 
@@ -521,7 +515,6 @@ Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done? 
  
   { foo:new RegExp("/^bar$/"), bit:/^bite$/}
 
-==============
 Query Examples
 ==============
 
@@ -557,7 +550,6 @@ Match items on multiple attributes
   { foo:"?ar", bar:"bob", bit:"*it*"}
 
 
-=============
 Query Options
 =============
 
@@ -576,7 +568,6 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
 
-==============
 Usage Examples
 ==============
 
@@ -1053,7 +1044,6 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
     <div id="reloadButton2" data-dojo-type="dijit.form.Button">Reload DataStore</div>
 
 
-========
 See Also
 ========
 

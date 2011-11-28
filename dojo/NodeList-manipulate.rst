@@ -1,5 +1,6 @@
 .. _dojo/NodeList-manipulate:
 
+========================
 dojo.NodeList-manipulate
 ========================
 
@@ -14,14 +15,12 @@ dojo.NodeList-manipulate
 Method extensions to :ref:`dojo.NodeList <dojo/NodeList>`/:ref:`dojo.query <dojo/query>` that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
 
 
-============
 Introduction
 ============
 
 Doing a dojo.require("dojo.NodeList-manipulate") (since Dojo 1.7, it's suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-manipulate"]).) will add some addition methods to :ref:`dojo.NodeList <dojo/NodeList>` (the return object from a :ref:`dojo.query <dojo/query>` call) that allow easier manipulation of HTML as it relates to the nodes in the dojo.NodeList.
 
 
-=====
 Usage
 =====
 
@@ -48,7 +47,6 @@ Here is a simple example showing how dojo.NodeList-manipulate adds an "after" me
   });
 
 
-=========================================
 Methods added by dojo.NodeList-manipulate
 =========================================
 
@@ -922,7 +920,6 @@ Results in this DOM structure:
   </div>
 
 
-========
 See also
 ========
 

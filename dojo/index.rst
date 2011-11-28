@@ -1,5 +1,6 @@
 .. _dojo/index:
 
+====
 Dojo
 ====
 
@@ -14,7 +15,6 @@ The dojo directory contains three categories of modules:
 
 Each category is described in detail below.
 
-=======
 dojo.js
 =======
 
@@ -25,7 +25,6 @@ See the :ref:`loader documentation <loader/index>` for details.
 For backwards-compatibility, when dojo.js is included without the async:false configuration flag, all the symbols in dojo/_base
 are implicitly loaded.
 
-==========
 dojo/_base
 ==========
 
@@ -381,7 +380,6 @@ Miscellaneous Base
 
   dojo/_base/sniff is introduced in dojo 1.7 as the browser detection utility.
 
-=========
 Dojo Core
 =========
 
@@ -835,7 +833,6 @@ Miscellaneous Core
 
   Loads a Dojo module, by name
 
-========
 See also
 ========
 

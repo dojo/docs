@@ -1,5 +1,6 @@
 .. _dojox/atom/io/model/Generator:
 
+=============================
 dojox.atom.io.model.Generator
 =============================
 
@@ -13,7 +14,6 @@ dojox.atom.io.model.Generator
 
 This Atom element conveys information about the package that generated this Atom feed. A generator can have a URI and a version number, in addition to the human-readable name.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -27,7 +27,6 @@ Public properties (and their types):
 | String                     | value           | The human-readable name of this generator                                                   |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -41,7 +40,6 @@ Below are all the functions implemented by this model class.
 | String            | toString()                                           | Return the XML representation of the Generator              |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
 See Also:
 =========
 

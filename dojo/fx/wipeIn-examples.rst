@@ -1,5 +1,6 @@
 .. _dojo/fx/wipeIn-examples:
 
+=======================
 dojo.fx.wipeIn examples
 =======================
 

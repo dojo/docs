@@ -1,5 +1,6 @@
 .. _dojox/encoding/base64:
 
+=====================
 dojox.encoding.base64
 =====================
 

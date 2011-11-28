@@ -1,12 +1,12 @@
 .. _releasenotes/1.5:
 
+======================
 Dojo 1.5 Release Notes
 ======================
 
 .. contents::
    :depth: 3
 
-===============
 Browser support
 ===============
 
@@ -19,7 +19,6 @@ The following browsers are supported. If a browser is not supported, it still ma
 * Opera 10.50 and later (Dojo core only)
 
 
-=========
 Dojo Core
 =========
 
@@ -86,7 +85,6 @@ See also:
 * `Stateful blog post <http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/>`_
 
 
-=====
 Dijit
 =====
 
@@ -319,7 +317,6 @@ changes to
    widget.get('property'); // new since 1.5
 
 
-=====
 DojoX
 =====
 
@@ -452,7 +449,6 @@ Mobile
 dojox.mobile is set of lightweight widgets designed specifically for mobile plans, with themes for iPhone and android.   It supports buttons, on/off switch, lists "tab container", etc
 
 
-====
 Util
 ====
 
@@ -463,7 +459,6 @@ Build System/buildscripts
 * Updated cldr scripts to use CLDR version 1.8 (see dojo.cldr)
 
 
-=========
 Migration
 =========
 
@@ -557,8 +552,7 @@ Alternately you can manually update the names as per the tables below.
 
 Spinner:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitSpinnerUpArrowHover .dijitUpArrowButton          .dijitSpinner .dijitUpArrowButtonHover
 .dijitSpinnerUpArrowActive .dijitUpArrowButton         .dijitSpinner .dijitUpArrowButtonActive
@@ -568,8 +562,7 @@ Old                                                    New                      
 
 ComboButton:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitComboButtonHover .dijitButtonContents            .dijitComboButton .dijitButtonContentsHover
 .dijitComboButtonActive .dijitButtonContents           .dijitComboButton .dijitButtonContentsActive
@@ -582,8 +575,7 @@ Other changes occurred to CSS selectors to standardize the names, as follows:
 
 Accordion:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitAccordionFocused                                 .dijitAccordionTitleFocused                          The accordion title is focused, not the pane contents
 .dijitAccordionTitle-hover                             .dijitAccordionTitleHover
@@ -594,8 +586,7 @@ In addition, the accordion layout was changed so that every pane is surrounded b
 
 TabContainer:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitTab .closeButton                                 .dijitTabCloseButton
 .dijitTab .closeButton-hover                           .dijitTabCloseButtonHover                            close button for individual tab
@@ -610,16 +601,13 @@ Old                                                    New                      
 
 Dialog:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
+====================================================== =============================================        Old                                                    New                                                  Description
+====================================================== =============================================        .dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
 ====================================================== =============================================        ===========
 
 Tree:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitTreeNodeHover                                    .dijitTreeRowHover                                   on the TreeNode.rowNode domNode
 .dijitTreeNodeSelected                                 .dijitTreeRowSelected
@@ -628,17 +616,14 @@ Old                                                    New                      
 
 TitlePane:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitTitlePaneTitle-hover                             .dijitTitlePaneTitleHover
+====================================================== =============================================        Old                                                    New                                                  Description
+====================================================== =============================================        .dijitTitlePaneTitle-hover                             .dijitTitlePaneTitleHover
 ====================================================== =============================================        ===========
 
 
 InlineEditBox:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
+====================================================== =============================================        Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitInlineEditBoxDisplayMode-hover                   .dijitInlineEditBoxDisplayModeHover
 .dijitInlineEditBoxDisplayMode-disabled                .dijitInlineEditBoxDisplayModeDisabled               equivalent to a plain <div> or <span>, clicking has no effect
@@ -646,8 +631,6 @@ Old                                                    New                      
 
 Editor:
 
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.RichTextEditable                                      .dijitEditor                                         editor's root node
+====================================================== =============================================        Old                                                    New                                                  Description
+====================================================== =============================================        .RichTextEditable                                      .dijitEditor                                         editor's root node
 ====================================================== =============================================        ===========

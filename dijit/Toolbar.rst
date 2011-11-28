@@ -1,5 +1,6 @@
 .. _dijit/Toolbar:
 
+=============
 dijit.Toolbar
 =============
 
@@ -10,14 +11,12 @@ dijit.Toolbar
     :depth: 2
 
 
-============
 Introduction
 ============
 
 Just as dijit.Menu is a container for dijit.MenuItem's, so dijit.Toolbar is a container for buttons. Any button-based Dijit component can be placed on the toolbar, including ComboButtons and DropdownButtons.
 
 
-========
 Examples
 ========
 
@@ -88,7 +87,6 @@ Creation from markup is even easier.
    </div>
 
 
-==========
 Drop Downs
 ==========
 
@@ -126,7 +124,6 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
 (The icons are no good but hopefully convey the idea.)
 
 
-=============
 Accessibility
 =============
 
@@ -135,10 +132,8 @@ Note the use of showLabel="false" above. We've specified a label but then hidden
 Keyboard
 --------
 
-===========================================    ==========================
-Action                                         Key
-===========================================    ==========================
-Move focus between widgets in the toolbar      Left and right arrow keys
+===========================================    Action                                         Key
+===========================================    Move focus between widgets in the toolbar      Left and right arrow keys
 ===========================================    ==========================
 
 Known Issues
@@ -146,7 +141,6 @@ Known Issues
 In high contrast mode when a toggle button is checked an html entity character (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
 
 
-========
 See also
 ========
 

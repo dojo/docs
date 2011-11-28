@@ -1,5 +1,6 @@
 .. _build/scenario-base:
 
+============================
 Building a Base-only dojo.js
 ============================
 

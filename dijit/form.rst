@@ -1,5 +1,6 @@
 .. _dijit/form:
 
+==========
 dijit.form
 ==========
 
@@ -19,7 +20,6 @@ The widgets can be used in a FORM tag, in a :ref:`dijit.form.Form <dijit/form/Fo
 Note not to confuse the dijit.form module with the dijit.form.Form widget.
 
 
-======================
 Available Form Widgets
 ======================
 
@@ -129,7 +129,6 @@ Miscellaneous
 There are also some notable widgets in :ref:`dojox.form <dojox/form>` and :ref:`dojox.widget <dojox/widget>` that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
 
 
-===============
 Form validation
 ===============
 
@@ -166,7 +165,6 @@ Prevent form submission
 -----------------------
 Using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form submission if any of the fields are invalid.  Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
 
-=================================
 Use Dijit Form Controls All Over!
 =================================
 
@@ -188,7 +186,6 @@ Never fear.  For every HTML control, there's a Dijit equivalent that does the sa
 .. _mapped:
 
 
-====================
 Mapped Form Controls
 ====================
 
@@ -206,7 +203,6 @@ This is handled internally by having two <input> fields in the widget:
 
 The upshot of this is that Dijit handles localization issues on the client, the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
 
-========================
 Styling of Form Controls
 ========================
 
@@ -269,7 +265,6 @@ Using the classes defined on the DOM node you can affect the styling of any sub-
        color: red;
    }
 
-========
 See also
 ========
 

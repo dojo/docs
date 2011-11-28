@@ -1,5 +1,6 @@
 .. _dojox/html/entities:
 
+===================
 dojox.html.entities
 ===================
 
@@ -14,7 +15,6 @@ dojox.html.entities
 
 **dojox.html.entities** offers basic entity mapping for HTML and LATIN-1 (8859-1) characters, as well as helper functions for encoding and decoding entities in text strings
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Features
 * Complete entity map for LATIN-1 (8859-1)
 * Simple to use encode and decode functions.
 
-=================
 Entity Map Format
 =================
 
@@ -45,14 +44,12 @@ So, for example say you want to *just* encode & characters to an entity represen
 
 Then call the encode and decode functions with that as the map to use instead of the default maps.
 
-=========
 Functions
 =========
 
 * :ref:`dojox.html.entities.encode <dojox/html/entities/encode>` - A function for encoding entity (special) characters in a text string
 * :ref:`dojox.html.entities.decode <dojox/html/entities/decode>` - A function for decoding entity (special) characters in a text string
 
-========
 See Also
 ========
 

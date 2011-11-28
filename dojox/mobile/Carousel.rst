@@ -1,5 +1,6 @@
 .. _dojox/mobile/Carousel:
 
+=====================
 dojox.mobile.Carousel
 =====================
 
@@ -14,7 +15,6 @@ The carousel widget manages a list of images that can be displayed horizontally,
 
 .. image:: Carousel.png
 
-=====
 Usage
 =====
 
@@ -26,7 +26,6 @@ Carousel is in a separate module file from _base.js. You need to dojo.require Ca
 
   dojo.require("dojox.mobile.Carousel");
 
-======================
 Constructor Parameters
 ======================
 
@@ -52,7 +51,6 @@ Constructor Parameters
 |queryOptions  |Object    |null     |A query options that can be passed to 'store' to initially filter the items.                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

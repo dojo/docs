@@ -1,5 +1,6 @@
 .. _util/doh:
 
+=============================
 D.O.H: Dojo Objective Harness
 =============================
 
@@ -9,7 +10,6 @@ D.O.H: Dojo Objective Harness
 .. contents::
   :depth: 3
 
-========
 Overview
 ========
 
@@ -63,7 +63,6 @@ D.O.H. resides in the utils project of the dojo toolkit.  Users can find it expl
     * **Robot.html**:  HTML file used to bootstrap in the DOH Robot for tests that require synthetic user input.
     * **LICENSE**: The license that governs D.O.H.
 
-==================================
 That's great, but how do I use it?
 ==================================
 Okay, that's wonderful!  It's a unit test environment that's flexible.  So ... how the heck does someone use it?  Well, lets start small.  The first thing we can do is look at using the browser runner to run a small set of unit tests in dojo.  This is done just by loading runner.html in a web browser.  What runner.html does is load runner.js and _browserRunner.js.  This defines a global object, 'doh', that has numerous test registration and assertion functions that can be used by unit tests.  Runner.html also does something else, if no module URL was provided for it to load tests from, the runner.html will automatically load the file: *dojo/tests/module.js*.  All that file does is use the dojo module loading system to load in all the test files for core dojo.  It then just executes all the currently registered tests and displays the results in the browser.
@@ -157,7 +156,6 @@ What a performance fixture does is the following:
 
 You can also look at how to write performance tests by looking at: dojox/gfx/tests/performance/\* in your extract of Dojo 1.4 or development trunk.
 
-=========
 Reference
 =========
 
@@ -385,7 +383,6 @@ Async performance test fixtures are just like synchronous performance test fixtu
 
 
 
-========
 See also
 ========
 

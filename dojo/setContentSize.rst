@@ -1,5 +1,6 @@
 .. _dojo/setContentSize:
 
+===================
 dojo.setContentSize
 ===================
 
@@ -8,7 +9,6 @@ dojo.setContentSize
 
 Sets the size of the node's contents, irrespective of margins, padding, or borders.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ The dojo.setContentSize function is used to set the size of the node's contents,
 
 Since Dojo 1.7, ``dojo.setContentSize`` is exposed via the ``setContentSize`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 

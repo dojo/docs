@@ -1,5 +1,6 @@
 .. _dijit/place:
 
+===========
 dijit.place
 ===========
 
@@ -10,13 +11,11 @@ dijit.place
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 dijit/place is used to place one DOMNode relative to another DOMNode, or specified rectangle.   It is mainly used internally by dijit, by the :ref:`dijit.popup <dijit/popup>` code and by :ref:`dijit.Menu <dijit/Menu>` for displaying context menus.
 
-======
 Around
 ======
 
@@ -44,7 +43,6 @@ The possible values for the position parameters (inside the array of the second 
 	* below: drop down goes below anchor node
 	* below-alt: drop down goes below anchor node, right sides aligned
 
-==
 At
 ==
 

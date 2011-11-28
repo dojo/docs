@@ -1,5 +1,6 @@
 .. _build/scenario-release:
 
+===========================
 Building a standard release
 ===========================
 

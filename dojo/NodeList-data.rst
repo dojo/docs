@@ -1,5 +1,6 @@
 .. _dojo/NodeList-data:
 
+==================
 dojo.NodeList-data
 ==================
 
@@ -9,7 +10,6 @@ dojo.NodeList-data
 :author: Peter Higgins
 :since: 1.6.0
 
-========
 Overview
 ========
 
@@ -31,7 +31,6 @@ Since Dojo 1.7, you need to use 'require()' to import this module:
     // your codes here
   });
 
-============
 Using data()
 ============
 
@@ -234,7 +233,6 @@ Here is a comparison:
        if(data == dat2){ alert("see?") }
   });
 
-============
 Data Removal
 ============
 
@@ -270,7 +268,6 @@ There is, however, no way to remove a list of keys. An example of how to do so w
       array.forEach(["key", "otherkey", "somekey"], remover);
   });
 
-=====================
 Memory Considerations
 =====================
 
@@ -278,7 +275,6 @@ There is no automatic node-deletion tracking going on. If you bind data to a nod
 
 You can call :ref:``gcNodeData`` at any time. It will remove items from the cache for nodes that no longer exist in the DOM. This function could be **wildly** expensive, especially on pages with a large DOM. Again, though this API is provided, it is **highly** recommended you manually manage your Data items if in a scenario leading to these potential "leaks".
 
-=========
 See Also
 =========
 

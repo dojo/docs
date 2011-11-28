@@ -1,5 +1,6 @@
 .. _dojo/prop:
 
+===============
 dojo.prop
 ===============
 
@@ -9,7 +10,6 @@ dojo.prop
 Gets or sets a property on an HTML element.
 
 
-============
 Introduction
 ============
 Handles normalized getting and setting of properties on DOM Nodes. If 2 arguments are passed, and a the second argument is a string, acts as a getter. If a third argument is passed, or if the second argument is a map of attributes, acts as a setter.
@@ -17,7 +17,6 @@ When passing functions as values, note that they will not be directly assigned t
 
 Since Dojo 1.7, ``dojo.prop`` is exposed via the ``get`` and ``set`` methods of the ``dojo/dom-prop`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -81,7 +80,6 @@ Dojo < 1.7
   // Set node property
   dojo.prop("nodeId", "tabIndex", 3);
 
-========
 Examples
 ========
 
@@ -233,7 +231,6 @@ Set style as an object hash of styles
   dojo.prop("someNode", "style", obj);
   dojo.style("someNode", obj);
 
-========
 See also
 ========
 

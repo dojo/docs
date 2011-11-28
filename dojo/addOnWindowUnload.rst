@@ -1,5 +1,6 @@
 .. _dojo/addOnWindowUnload:
 
+======================
 dojo.addOnWindowUnload
 ======================
 
@@ -13,14 +14,12 @@ dojo.addOnWindowUnload
 dojo.addOnWindowUnload registers a function to be triggered when window.onunload fires.
 
 
-============
 Introduction
 ============
 
 When a user exits the page to visit another page, the page is unloaded and a `window.onunload` event handler is fired.  During this phase of page loading, it is not recommended that you try to modify the DOM or access JavaScript properties since they may not be available.  You should consider using :ref:`dojo.addOnUnload <dojo/addOnUnload>` if you need to modify the DOM or do heavy JavaScript work since it triggers functions during the `window.onbeforeunload`.
 
 
-=====
 Usage
 =====
 

@@ -1,5 +1,6 @@
 .. _dijit/_Templated:
 
+================
 dijit._Templated
 ================
 
@@ -11,7 +12,6 @@ dijit._Templated
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -32,7 +32,6 @@ widgetsInTemplate
 Specifying the widgetsInTemplate flag to true turns on the widgets-in-template feature described by  :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`.
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/widget/DynamicTooltip:
 
+===========================
 dojox.widget.DynamicTooltip
 ===========================
 
@@ -13,14 +14,12 @@ dojox.widget.DynamicTooltip
 
 An **experimental** addition to standard :ref:`dijit.Tooltip <dijit/Tooltip>` functionality allowing remotely loaded content to appear.
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -34,7 +33,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -49,7 +47,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/io/iframe:
 
+==============
 dojo.io.iframe
 ==============
 
@@ -12,7 +13,6 @@ dojo.io.iframe
 
 dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload files).
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ The iframe IO functions are intended to handle complex IO operations that cannot
 
 It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responses back in a very specific format, please refer to the :ref:`Additional Information <dojo/io/iframe>` section.
 
-=====
 Usage
 =====
 
@@ -89,7 +88,6 @@ dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sy
 Other than the reason noted above about reliability (getting proper events indicating data retrieved), the choice of using textarea was because a textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo process it and pass it back through the callbacks specified by the user.
 
 
-========
 Examples
 ========
 
@@ -210,7 +208,6 @@ Pass in parameters manually
     });
   </script>
 
-========
 See Also
 ========
 

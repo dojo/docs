@@ -1,5 +1,6 @@
 .. _dojo/cookie:
 
+===========
 dojo.cookie
 ===========
 
@@ -8,7 +9,6 @@ dojo.cookie
 
 ``dojo.cookie`` is your one stop for handling client side cookies. Its usage is very simple and the following example should make it clear
 
-=====
 Usage
 =====
 
@@ -28,8 +28,7 @@ Usage
   // To get a cookie
   var cookieValue = dojo.cookie(cookieName);
 
-=============  ===============  ==================================================
-Parameter      Type             Description
+=============  ===============  Parameter      Type             Description
 =============  ===============  ==================================================
 cookieName     String           Name of the cookie to set/get
 cookieValue    String           Value of the cookie to set.
@@ -65,7 +64,6 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:setCookie">Set Cookie</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getCookie">Get Cookie</button>
 
-========
 See also
 ========
 

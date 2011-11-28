@@ -1,5 +1,6 @@
 .. _dojox/av/FLVideo:
 
+================
 dojox.av.FLVideo
 ================
 
@@ -15,7 +16,6 @@ dojox.av.FLVideo
 dojo.av.FLVideo provides the ability to play Flash movie files (FLVs) within the dojo environment. It Also plays the H264/M4V codec (high definition) with a little trickery: change the '.M4V' extension to '.flv'.
 
 
-============
 Introduction
 ============
 
@@ -36,14 +36,12 @@ There is also volume() which is used as a getter/setter.
 There are also a large amount of events that are triggered. These events can be viewed in the base class of dojox.av._Media. Ky events are: onLoad() for when the SWF is ready, onBuffer() which is checking if there is enough video downloaded to play, onDownloaded() for the amount of the movie downloaded, onMetaData() which contains the video properties, and onPlay(), onStart(), onEnd(), etc. See the source code or http://dojotoolkit.org/api/dojox/av/FLVideo for full details.
 
 
-========
 Examples
 ========
 
 For examples, please refer to the test file in the SDK: dojox/av/tests/testFLVideo.html
 
 
-========
 See also
 ========
 

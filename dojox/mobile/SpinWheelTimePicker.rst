@@ -1,5 +1,6 @@
 .. _dojox/mobile/SpinWheelTimePicker:
 
+================================
 dojox.mobile.SpinWheelTimePicker
 ================================
 
@@ -14,7 +15,6 @@ SpinWheelTimePicker  is a time picker widget. It is a subclass of dojox.mobile.S
 
 .. image:: SpinWheelTimePicker.png
 
-=====
 Usage
 =====
 
@@ -26,7 +26,6 @@ SpinWheelTimePicker is in a separate module file from _base.js. You need to dojo
 
   dojo.require("dojox.mobile.SpinWheelTimePicker");
 
-========
 Examples
 ========
 

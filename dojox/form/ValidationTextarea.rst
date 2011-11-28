@@ -1,5 +1,6 @@
 .. _dojox/form/ValidationTextarea:
 
+=============================
 dojox.form.ValidationTextarea
 =============================
 

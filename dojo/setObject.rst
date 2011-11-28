@@ -1,5 +1,6 @@
 .. _dojo/setObject:
 
+==============
 dojo.setObject
 ==============
 
@@ -13,7 +14,6 @@ dojo.setObject
 Set a property from a dot-separated string, such as "A.B.C".
 
 
-=====
 Usage
 =====
 
@@ -45,7 +45,6 @@ Wheras with `dojo.setObject`, we can shorten that to:
   dojo.setObject("parent.child.prop", "some value", obj);
 
 
-========
 Examples
 ========
 
@@ -85,7 +84,6 @@ Examples
         </div>
 
 
-========
 See also
 ========
 

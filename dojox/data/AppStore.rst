@@ -1,5 +1,6 @@
 .. _dojox/data/AppStore:
 
+===================
 dojox.data.AppStore
 ===================
 
@@ -13,19 +14,16 @@ dojox.data.AppStore
 
 A store implementing an Atom store with complete ATOM Publishing Protocol support. Allows reading and writing of ATOM formatted feeds.
 
-============
 Introduction
 ============
 
 The dojox.data.AppStore is an data store implementation of the ATOM Publishing Protocol (APP).  It makes use of the dojox.atom subproject for handling ATOM feeds and entries.
 
-===========
 Limitations
 ===========
 
 The AppStore makes use of dojo.xhr to get and modify feeds and entries.  Because of this, the AppStore is limited by the browser same domain policy, where xhr can only open connections back to the server that originated the page.  If you require accessing ATOM feeds from external services, you will need to make use of a proxy.
 
-==============
 Supported APIs
 ==============
 
@@ -35,7 +33,6 @@ The following dojo.data APIs are implemented by AppStore:
 * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
-======================
 Constructor Parameters
 ======================
 
@@ -49,7 +46,6 @@ Constructor Parameters
 |                |              |the browser from caching the feed url.                                                          |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
-=================
 Input Data Format
 =================
 
@@ -107,7 +103,6 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 	</entry>
   </feed>
 
-=====
 Usage
 =====
 
@@ -178,7 +173,6 @@ Complex properties are those that require more than a simple string to represent
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 
 
-============
 Query Syntax
 ============
 
@@ -190,7 +184,6 @@ The fetch method query syntax for AppStore is the same as :ref:`ItemFilereadStor
 
 Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done?   Yes. AppStore supports wildcard matching. Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
 
-==============
 Query Examples
 ==============
 
@@ -226,7 +219,6 @@ Match items on multiple attributes
   { title:"?ar", subtitle:"bob", category:"*it*"}
 
 
-========
 Examples
 ========
 
@@ -445,7 +437,6 @@ Example 4: Write example: Changing Title and showing in DataGrid
     </style>
 
 
-========
 See also
 ========
 

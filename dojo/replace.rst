@@ -1,5 +1,6 @@
 .. _dojo/replace:
 
+============
 dojo.replace
 ============
 
@@ -13,7 +14,6 @@ dojo.replace
 
 This function provides a light-weight foundation for substitution-based templating. It is a sane alternative to string concatenation technique, which is brittle and doesn't play nice with localization.
 
-===========
 Basic Usage
 ===========
 
@@ -173,7 +173,6 @@ This code in action:
 
     <p id="output"></p>
 
-==============
 Advanced Usage
 ==============
 
@@ -352,7 +351,6 @@ It is advised for the new pattern to be:
 * Global
 * It should capture one substring, usually some text inside "braces".
 
-========
 Examples
 ========
 

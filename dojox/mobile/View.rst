@@ -1,5 +1,6 @@
 .. _dojox/mobile/View:
 
+=================
 dojox.mobile.View
 =================
 
@@ -12,7 +13,6 @@ dojox.mobile.View
 
 View is a container widget that represents entire mobile device screen. One html page can have multiple Views but only one View is visible at a time.  The user can navigate through views with animated transition effects.
 
-======================
 Constructor Parameters
 ======================
 
@@ -24,14 +24,12 @@ Constructor Parameters
 |keepScrollPos |Boolean   |true     |If true, the scroll position is kept when transition occurs between views.     |
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 
-=====
 Usage
 =====
 View is a container that represents the device screen. You should place all the contents in a View. There may be one or more Views in a page. In dojo-1.6 or older, one and only one view must have the selected=true parameter so that it is displayed at startup time. In dojo-1.7, if no views have selected=true, the first view is displayed at startup time.
 
 Views can be nested to form a group of views, but view transitions should be performed between sibling views (on the same level). In an exceptional case, it is possible to move to a sibling of an ancestor. The other cases are invalid.
 
-========
 Examples
 ========
 

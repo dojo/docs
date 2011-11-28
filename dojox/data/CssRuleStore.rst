@@ -1,5 +1,6 @@
 .. _dojox/data/CssRuleStore:
 
+=======================
 dojox.data.CssRuleStore
 =======================
 
@@ -12,12 +13,10 @@ dojox.data.CssRuleStore
 
 CssRuleStore is a read interface to the CSS rules loaded in the current page. Rules can be selected based on several different filterable attributes outlined below. Which CSS rules are indexed can be determined by a context provided to the store at the time of creation. This store is useful for reading the CSS rules that are loaded and in effect on the page.
 
-===========
 API Support
 ===========
 * dojo.data.api.Read
 
-======================
 Constructor Parameters
 ======================
 
@@ -30,7 +29,6 @@ The constructor for CssRuleStore allows for one optional parameter.
 |          |which rules to index.                                                                            |             |
 +----------+-------------------------------------------------------------------------------------------------+-------------+
 
-===============
 Item Attributes
 ===============
 
@@ -54,13 +52,11 @@ Item Attributes
 |parentStyleSheetHref|The url to the parent stylesheet. May be null.                                                         |
 +--------------------+-------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
 The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
-========
 Examples
 ========
 

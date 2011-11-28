@@ -1,5 +1,6 @@
 .. _dojo/position:
 
+=============
 dojo.position
 =============
 
@@ -12,7 +13,6 @@ dojo.position
 Getter for the position and size of a DOM node.
 
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ for a node with a width of 300px and a height of 150px, with page absolute coord
 
 Since Dojo 1.7, ``dojo.position`` is exposed via the ``position`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -54,7 +53,6 @@ Dojo < 1.7
  
  var obj = dojo.position(node);
 
-========
 Examples
 ========
 
@@ -167,7 +165,6 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
     </table>
 
 
-=====
 Notes
 =====
 

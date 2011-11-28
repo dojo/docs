@@ -1,5 +1,6 @@
 .. _dojox/widget/AnalogGauge:
 
+========================
 dojox.widget.AnalogGauge
 ========================
 
@@ -14,7 +15,6 @@ dojox.widget.AnalogGauge
 A circular gauge with a variety of indicators, used to display numerical data.
 
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ The analog gauge widget provides a way to display data on a circular, or semi-ci
 
 The analog gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the analog gauge widget works is that it is effectively a layering of a background shape, a circle or semi-circle, with a series of indicators for denoting values on the gauge face. An optional capability of the analog gauge is that the values for each indicator can be displayed beneath the gauge (and are by default). This makes the gauge accessibility compliant.
 
-=====
 Usage
 =====
 
@@ -30,7 +29,6 @@ As demonstrated in the examples below, creating an analog gauge widget requires 
 
 Indicators can be handled separate of the gauge.  In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself).  New indicators can be created by inheriting from dojox.widget._Indicator and overriding the appropriate functions (draw is the most important).
 
-==========
 Indicators
 ==========
 
@@ -41,7 +39,6 @@ There are 4 indicators included as a part of the Analog Gauge widget:
 * AnalogNeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
 * AnalogArcIndicator - Draws an arc around the center of the gauge.  Can be made wider or narrower by varying the width.  Useful for making a gradient track towards the end of a gauge (see test file).
 
-========
 Examples
 ========
 

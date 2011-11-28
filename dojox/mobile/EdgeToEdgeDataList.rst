@@ -1,5 +1,6 @@
 .. _dojox/mobile/EdgeToEdgeDataList:
 
+===============================
 dojox.mobile.EdgeToEdgeDataList
 ===============================
 
@@ -12,7 +13,6 @@ dojox.mobile.EdgeToEdgeDataList
 
 EdgeToEdgeDataList is an enhanced version of EdgeToEdgeList. It can generate ListItems according to the given dojo.data store.
 
-======================
 Constructor Parameters
 ======================
 
@@ -55,7 +55,6 @@ Inherited from dojox.mobile.EdgeToEdgeList:
 |stateful      |Boolean   |false    |If true, the last selected item remains highlighted.                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

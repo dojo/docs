@@ -1,5 +1,6 @@
 .. _dojox/gfx/utils/serialize:
 
+=========================
 dojox.gfx.utils.serialize
 =========================
 
@@ -12,14 +13,12 @@ dojox.gfx.utils.serialize
 
 Serialize the passed surface object to JavaScript Object form.
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -38,7 +37,6 @@ serialize() returns following objects:
 * for a shape it returns an object with a property "shape", which contains a shape definition object.
 
 
-========
 Examples
 ========
 
@@ -48,7 +46,6 @@ Programmatic example
 TODO: example
 
 
-========
 See also
 ========
 

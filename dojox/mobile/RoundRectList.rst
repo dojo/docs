@@ -1,5 +1,6 @@
 .. _dojox/mobile/RoundRectList:
 
+==========================
 dojox.mobile.RoundRectList
 ==========================
 
@@ -14,7 +15,6 @@ RoundRectList is a rounded rectangle list, which can be used to display a group 
 
 .. image:: RoundRectList.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -42,7 +42,6 @@ Constructor Parameters
 |stateful      |Boolean   |false    |If true, the last selected item remains highlighted.                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

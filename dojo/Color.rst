@@ -1,5 +1,6 @@
 .. _dojo/Color:
 
+================
 dojo.Color
 ================
 
@@ -20,7 +21,6 @@ As with all dojo._base components, these functions are included within Dojo Base
 The Color object provides a unified way to store colors, which holds the color in rgba form. This simplifies dealing with the different ways to define colors as everyone can use the format they are most comfortable with. Color objects can be used directly as a value to the various color attributes.
 
 
-========
 Features
 ========
 
@@ -48,7 +48,6 @@ Features
 
   Parses a string for a color value. You can pass either one of the 16 named colors, hex strings such as "#23ab45" and "#28a", or rgb(a) strings such as "rgb(200,100,50)" and "rgba(200,100,50,0.5)"
 
-========
 Examples
 ========
 

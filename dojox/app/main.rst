@@ -1,5 +1,6 @@
 .. _dojox/app/main:
 
+==============
 dojox.app.main
 ==============
 

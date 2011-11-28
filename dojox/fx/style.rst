@@ -1,5 +1,6 @@
 .. _dojox/fx/style:
 
+==============
 dojox.fx.style
 ==============
 
@@ -13,7 +14,6 @@ dojox.fx.style
 
 This module provides Animated CSS class transitions for nodes, or in other words: will animate the effects of adding, removing, or toggling a class name on a node.
 
-=====
 Usage
 =====
 
@@ -55,7 +55,6 @@ The only variation here is toggleClass, whose third parameter can be used to for
 
 The returns of these functions can be applied to a :ref:`dojo.fx.combine <dojo/fx/combine>` or :ref:`chain <dojo/fx/chain>` call.
 
-=================
 NodeList Morphing
 =================
 

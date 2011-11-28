@@ -1,5 +1,6 @@
 .. _dijit/a11y/strategy:
 
+============================
 Dijit Accessibility Strategy
 ============================
 

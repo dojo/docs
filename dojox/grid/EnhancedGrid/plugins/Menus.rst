@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/Menus:
 
+=============================================
 dojox.grid.EnhancedGrid.plugins.Menu
 =============================================
 
@@ -10,7 +11,6 @@ dojox.grid.EnhancedGrid.plugins.Menu
 .. contents::
    :depth: 2
 
-==============
 Introduction
 ==============
 
@@ -317,7 +317,6 @@ Tips
 More details please refer to the :ref:`Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
-========
 See Also
 ========
 

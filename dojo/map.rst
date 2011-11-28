@@ -1,5 +1,6 @@
 .. _dojo/map:
 
+========
 dojo.map
 ========
 
@@ -12,14 +13,12 @@ dojo.map
 Applies callback to each element of given array and returns an Array with the results.
 
 
-============
 Introduction
 ============
 
 This function corresponds to the JavaScript 1.6 Array.map() method, with one difference: when run over sparse arrays, this implementation passes the "holes" in the sparse array to the callback function with a value of undefined. JavaScript 1.6's map skips the holes in the sparse array. For more details, see: https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ Usage
    console.log(changedArray); // logs [2,3,4,5]
  });
 
-========
 Examples
 ========
 

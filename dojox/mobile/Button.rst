@@ -1,5 +1,6 @@
 .. _dojox/mobile/Button:
 
+===================
 dojox.mobile.Button
 ===================
 
@@ -15,7 +16,6 @@ dojox.mobile.Button
 Button is a very simple button widget.  When pressed, it generates an onClick event and changes CSS classes temporarily to emulate a native HTML BUTTON element press-and-release.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -33,7 +33,6 @@ Constructor Parameters
 |onClick       |Function  |              |An event handler used for press notifications.                                                             |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

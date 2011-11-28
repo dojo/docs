@@ -1,5 +1,6 @@
 .. _dojox/mobile/TabBar:
 
+===================
 dojox.mobile.TabBar
 ===================
 
@@ -14,7 +15,6 @@ TabBar is a container widget that has typically multiple TabBarButtons which con
 
 .. image:: TabBar.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -32,7 +32,6 @@ Constructor Parameters
 |barType       |String    |tabBar   |"tabBar"(default) or "segmentedControl".                                                                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-=====
 Usage
 =====
 
@@ -42,7 +41,6 @@ TabBar is in a separate module file from _base.js. You need to dojo.require TabB
 
   dojo.require("dojox.mobile.TabBar");
 
-========
 Examples
 ========
 

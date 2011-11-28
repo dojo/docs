@@ -1,5 +1,6 @@
 .. _dojox/form/manager/_NodeMixin:
 
+=============================
 dojox.form.manager._NodeMixin
 =============================
 
@@ -11,7 +12,6 @@ dojox.form.manager._NodeMixin
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This class defines low-level primitives for form nodes. It is complimentary to a
 
 On startup this mixin inspects its body and registers all found form nodes (``<input>``, ``<select>``, ``<textarea>``, ``<button>``) unless they are part of some form widget.
 
-======================
 Methods and properties
 ======================
 
@@ -200,7 +199,6 @@ destroy
 
 This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see :ref:`dijit._Widget <dijit/_Widget>`.
 
-====================
 Additional functions
 ====================
 

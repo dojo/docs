@@ -1,5 +1,6 @@
 .. _build/directoryLayout:
 
+==================================
 Sample Directory Layout for Builds
 ==================================
 
@@ -14,7 +15,6 @@ Sample Directory Layout for Builds
 This document summarizes an effective layout for managing Dojo directories for the build process.
 
 
-============
 Introduction
 ============
 
@@ -28,7 +28,6 @@ This directory layout (which is used in each of the scenario examples) facilitat
  2.  No additional build files are mixed into any private namespace directory trees.
  3.  The build files (profiles and other support files) do not need to be moved into new specific directories each time a new version of Dojo is released, or a new version of a custom namespace is created.
 
-================
 Directory Layout
 ================
 

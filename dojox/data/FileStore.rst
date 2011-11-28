@@ -1,5 +1,6 @@
 .. _dojox/data/FileStore:
 
+====================
 dojox.data.FileStore
 ====================
 
@@ -16,7 +17,6 @@ The dojox.data.FileStore is a lightweight javascript implementation for accessin
 The datastore implementation and its example PHP back-end by default do not inflate the child file objects of a DataStore file item. This allows it to quickly return information about a file without having to return everything, while at the same time providing hooks that allow for the extra information to be gathered on-demand.
 
 
-========
 Features
 ========
 
@@ -40,7 +40,6 @@ Features
 8. Works directly with all current data bound widgets in dijit, including :ref:`dijit.Tree <dijit/Tree>`, :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`, and as well :ref:`dojox.grid <dojox/grid/index>`.
 
 
-==============
 Item structure
 ==============
 
@@ -71,7 +70,6 @@ All items returned by a query to the FileStore and will generally have the follo
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 
 
-===============
 Query Structure
 ===============
 
@@ -89,7 +87,6 @@ would return all files that have the name foo at the start of the name and end w
 Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.
 
 
-========
 Examples
 ========
 
@@ -256,7 +253,6 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
     </style>
 
 
-==========================
 Technical/Protocol Details
 ==========================
 

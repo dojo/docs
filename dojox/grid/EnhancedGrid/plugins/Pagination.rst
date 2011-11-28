@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/Pagination:
 
+==========================================
 dojox.grid.EnhancedGrid.plugins.Pagination
 ==========================================
 
@@ -12,7 +13,6 @@ Pagination plugin provides paging functionality for grid.
 .. contents::
 	:depth: 2
 
-============
 Introduction
 ============
 
@@ -102,7 +102,6 @@ Pagination is a plugin for dojox.grid.EnhancedGrid. It's designed to allow the u
         }
     </style>
 
-=============
 Configuration
 =============
 
@@ -148,8 +147,7 @@ As shown in the above code, you can simply set the ``pagination`` property to ``
 
 Below is all of pagination configuration arguments:
 
-=========================  =======================  ===============  ================================================================================================================
-Property                   Type                     Default Value    Description
+=========================  =======================  ===============  Property                   Type                     Default Value    Description
 =========================  =======================  ===============  ================================================================================================================
 description                Boolean                  true             Indicates whether or not display the current position display. Default is true (display).
 sizeSwitch                 Boolean                  true             Indicates whether or not display the page length menu. Default is true (display).
@@ -165,7 +163,6 @@ defaultPageSize            integer                  pageSizes[0]     The default
 defaultPage                integer                  1 (first page)   Which page will be displayed when grid initialized.
 =========================  =======================  ===============  ================================================================================================================
 
-=====
 Usage
 =====
 
@@ -199,8 +196,7 @@ Accessibility
 
 Below is a summary of all supported keyboard operators.
 
-==============================================  ===============================================================
-Key                                             Action
+==============================================  Key                                             Action
 ==============================================  ===============================================================
 Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation
                                                 choices) of the pagination bar will receive the focus.
@@ -209,14 +205,12 @@ arrow key                                       The focus will move the specific
                                                 area.
 ==============================================  ===============================================================
 
-==========
 Public API
 ==========
 
 All available methods of the pagination are listed below:
 
-==================  =====================================  =====================  =======================================================
-Name                Parameters                             Return                 Description
+==================  =====================================  =====================  Name                Parameters                             Return                 Description
 ==================  =====================================  =====================  =======================================================
 currentPage         page index: integer                    current page index     Function to handle shifting to the specific page,
                                                                                   and return the current page index. Only return the
@@ -245,7 +239,6 @@ gotoLastPage        N/A                                    N/A                  
 ==================  =====================================  =====================  =======================================================
 
 
-========
 See Also
 ========
 

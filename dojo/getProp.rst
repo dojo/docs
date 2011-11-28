@@ -1,5 +1,6 @@
 .. _dojo/getProp:
 
+=============
 dojo.getProp
 =============
 
@@ -8,7 +9,6 @@ dojo.getProp
 
 Gets a property on an HTML element.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ Handles normalized getting of properties on DOM nodes.
 
 Since Dojo 1.7, ``dojo.getProp`` is exposed via the ``get`` method of the ``dojo/dom-prop`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -37,7 +36,6 @@ name
   the name of the property to get.
 
 
-========
 Examples
 ========
 
@@ -79,7 +77,6 @@ Dojo < 1.7
     // or we can just pass the id:
     dojo.getProp("nodeId", "foo");
 
-========
 See also
 ========
 

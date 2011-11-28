@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/NewPage:
 
+=============================
 dijit._editor.plugins.NewPage
 =============================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.NewPage
 
 Have you ever wanted to be able to with the click of a button clear the editor and set it with some default content, be it an empty line of some template HTML?  If so, then this plugin is for you.  It's a simple plugin that adds 'NewPage' support to the editor toolbar.
 
-========
 Features
 ========
 
@@ -23,7 +23,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Button with icon in toolbar for clearing the current editor contents and inserting pre-defined 'new page' content.
 * Configurable 'New Page' content via the 'content' parameter of the plugin
 
-=====
 Usage
 =====
 
@@ -62,7 +61,6 @@ Or programmatically:
 
    var editor = new dijit.Editor({extraPlugins: [{name: 'newpage', content: 'This is some <b>custom</b> content!'}]}
 
-========
 Examples
 ========
 
@@ -157,7 +155,6 @@ Custom New Page Content
     </div>
 
 
-========
 See Also
 ========
 

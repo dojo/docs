@@ -1,5 +1,6 @@
 .. _dijit/form/Textarea:
 
+===================
 dijit.form.Textarea
 ===================
 
@@ -13,7 +14,6 @@ dijit.form.Textarea
 A Textarea widget is like a regular HTML TEXTAREA element, but it dynamically resizes to fit the content of the text inside. It takes nearly all the parameters (*name*, *value*, etc.) that a vanilla TEXTAREA takes. The attribute *rows* is not supported since this widget adjusts the height. It is especially useful in an :ref:`InlineEditBox <dijit/InlineEditBox>`.  Note that when declaring a Textarea in markup you should use a <textarea> node to preserve the newline formatting.
 
 
-========
 Examples
 ========
 
@@ -59,7 +59,6 @@ Here we'll create a Textarea widget declaratively. In this instance, the initial
     <textarea id="textarea2" name="textarea2" data-dojo-type="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
 
 
-=============
 Accessibility
 =============
 
@@ -69,7 +68,6 @@ Keyboard
 The Textarea widget uses native HTML TEXTAREA controls.
 
 
-=============================
 Known Issues (1.2 and before)
 =============================
 

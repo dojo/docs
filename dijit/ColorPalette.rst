@@ -1,5 +1,6 @@
 .. _dijit/ColorPalette:
 
+==================
 dijit.ColorPalette
 ==================
 
@@ -12,7 +13,6 @@ dijit.ColorPalette
 
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.  The color palette size is definable.  In addition, the color palette is accessible through screen readers as well as keyboard.  The widget also supports the 'standard' dijit function *onChange*, which signals when a new selection was made from the palette.
 
-==============================
 Widget Construction Parameters
 ==============================
 
@@ -25,13 +25,11 @@ Widget Construction Parameters
 |                                      |**optional**                                                                                 |
 +--------------------------------------+---------------------------------------------------------------------------------------------+
 
-=============
 Return Values
 =============
 
 As with all dijit widgets, the selected value can be obtained through the widget *attr("value")* function.  The return type is an instance of :ref:`dojo.Color <dojo/_base/Color>`.
 
-========
 Examples
 ========
 
@@ -76,15 +74,13 @@ Small color palette, created declaratively:
      <div data-dojo-type="dijit.ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'3x4'"></div>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-===============   ===================
-Action            Key
+===============   Action            Key
 ===============   ===================
 Navigate colors	  Arrow keys
 Pick a color      Spacebar or enter

@@ -1,5 +1,6 @@
 .. _dojox/mvc:
 
+=========
 dojox.mvc
 =========
 
@@ -12,7 +13,6 @@ dojox.mvc
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ This project is useful across form factors. For example, it may be used with dij
 
 We begin by introducing a first-class client-side data model based on dojo.Stateful and extending Dojo Form widgets with support for the Model-View-Control (MVC) pattern key to separating data from presentation in user interface design. This basic MVC pattern allows for the flexible reuse of each of the Model, View, and Control artifacts by application authors in varying configurations.
 
-========
 Features
 ========
 
@@ -37,7 +36,6 @@ Features
   * :ref:`Generate- A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`
 
  
-=====
 Usage
 =====
 
@@ -52,7 +50,6 @@ Loading the basic dojox.mvc codebase is extremely simple.
     dojo.require("dojox.mvc.Group");
 
 
-========
 Examples
 ========
 

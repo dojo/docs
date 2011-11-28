@@ -1,5 +1,6 @@
 .. _dojox/atom/io/model/Collection:
 
+==============================
 dojox.atom.io.model.Collection
 ==============================
 
@@ -13,7 +14,6 @@ dojox.atom.io.model.Collection
 
 An Atom collection describes a set of resources, accessible from a given URL that are identified by a title.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -35,7 +35,6 @@ Public properties (and their types):
 | String                     | id              | The ID string of this collection                                                            |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -49,7 +48,6 @@ Below are all the functions implemented by this model class.
 | String            | toString()                                           | Return the XML representation of the Service                |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
 See Also:
 =========
 

@@ -1,5 +1,6 @@
 .. _dojo/dnd:
 
+================
 dojo.dnd package
 ================
 
@@ -11,7 +12,6 @@ dojo.dnd package
 .. contents::
   :depth: 2
 
-============
 Introduction
 ============
 
@@ -44,7 +44,6 @@ In order to show an insertion point correctly it is possible to specify if we de
 
 See Selector_ for more details.
 
-======================
 _`dojo.dnd` principals
 ======================
 
@@ -417,7 +416,6 @@ Following CSS classes are used by the manager to style the DnD operation:
 
 No styles are assigned when there is no DnD in progress.
 
-===========================
 _`dojo.dnd.move` principals
 ===========================
 
@@ -572,13 +570,11 @@ TimedMoveable
 
 * ``timeout`` --- the time delay number in milliseconds. The node will not be moved for that number of milliseconds, but it will continue to accumulate changes in the mouse position.
 
-=======================
 Subclassing DnD classes
 =======================
 
 If you want to subclass Container_, Selector_, Source_, Moveable_, or their descendants, and you want to use the declarative markup, don't forget to implement the ``markupFactory()`` method. The reason for that is ``dojo.parser``, which instantiates the markup, expects a very particular signature from a constructor. Dojo DnD classes predate ``dojo.parser``, and have a non-conformant signature. ``dojo.parser`` is smart enough to use a special adapter function in such cases. See the source code for ``dojo.dnd.Source.markupFactory()`` (for the Container_-Selector_-Source_ chain), and ``dojo.dnd.Moveable.markupFactory()`` for details. The key point is to return the instance of your new class there. Otherwise the instance of your base class is going to be created, which is probably not what you want.
 
-======================
 Summary of CSS classes
 ======================
 
@@ -655,7 +651,6 @@ Following CSS classes are used:
 
 * ``dojoMoveItem`` --- assigned to the dragged node when the move is in progress.
 
-=================
 Summary of topics
 =================
 
@@ -676,7 +671,6 @@ Following topic events are raised by Moveable_:
 * ``/dnd/move/start`` --- published by the default implementation of Moveable_'s ``onMoveStart()`` passing a mover_ as parameter.
 * ``/dnd/move/stop`` --- published by the default implementation of Moveable_'s ``onMoveStop()`` passing a mover as parameter.
 
-===============
 Available tests
 ===============
 
@@ -701,7 +695,6 @@ All tests are located in the ``dojo/tests/dnd/`` sub-directory. They are used by
 
 The same directory contains a simple CSS file, which shows how you can style the DnD objects: `dndDefault.css <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/dndDefault.css>`_. You can see it in action in almost all tests. It can be used as a starting point for your own styling.
 
-====================================
 External tutorials and documentation
 ====================================
 
@@ -717,7 +710,6 @@ External tutorials and documentation
 `dojo.dnd 1.1 technical documentation <http://docs.google.com/Edit?tab=view&docid=d764479_20ghbr97c8>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_
   This is the technical documentation for Dojo DnD 1.1 listed here only as a historic reference. This document is based on it.
 
-====
 Tips
 ====
 
@@ -727,7 +719,6 @@ If you want to create dojo.dnd.Source with markup, and want to select that Sourc
 
 The DnD itself uses ``onmousedown``/``onmousemove``/``onmouseup`` to operate. If you want to process ``onclick``, be warned that this is the synthetic event: essentially it is ``onmousedown + onmouseup``, which occurred within some predefined time interval (usually settable on the OS level), or using other criteria. Some browsers generate ``onclick`` on every ``onmouseup``. Working with DnD you will get plenty of false ``onclick`` events. Some of them happen naturally, when user decided to drag but changed her mind clicking the mouse button generating ``onclick``. *Be extra careful when processing* ``onclick`` *on DnD sources!*
 
-=============
 Accessibility
 =============
 
@@ -767,7 +758,6 @@ However, in order to detect that high contrast mode has been set on a MS Windows
 
 Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.
 
-========
 See also
 ========
 

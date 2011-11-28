@@ -1,5 +1,6 @@
 .. _dojox/widget/rotator/Controller:
 
+===============================
 dojox.widget.rotator.Controller
 ===============================
 
@@ -12,7 +13,6 @@ dojox.widget.rotator.Controller
 
 A controller that manipulates a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
 
-============
 Introduction
 ============
 
@@ -29,12 +29,10 @@ You may specify any of these controls in any order.  You may also have multiple 
 
 The Controller's DOM node may also be styled for positioning or other styled preferences.
 
-=====
 Usage
 =====
 
-==========  =======  ======================================================================
-Parameter   Type     Description
+==========  =======  Parameter   Type     Description
 ==========  =======  ======================================================================
 rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 commands    string   A comma-separated list of commands. The default value is "prev,play/pause,info,next".
@@ -42,8 +40,7 @@ commands    string   A comma-separated list of commands. The default value is "p
 
 The "commands" parameter accepts the following commands:
 
-=============  ============================================================================
-Command Name   Description
+=============  Command Name   Description
 =============  ============================================================================
 prev           An icon button to go to the previous pane.
 next           An icon button to go to the next pane.
@@ -52,7 +49,6 @@ info           Displays the current and total panes. (ie "1 / 4")
 titles         Displays each pane's title as a tab. (ie "Home Services Contact Blog")
 =============  ============================================================================
 
-========
 Examples
 ========
 
@@ -185,7 +181,6 @@ Declarative example
     <h3>Prev, Numbers, Next</h3>
     <div data-dojo-type="dojox.widget.rotator.Controller" data-dojo-props="rotator:myAutoRotatorInstance2, commands:'prev,#,next'"></div>
 
-========
 See also
 ========
 

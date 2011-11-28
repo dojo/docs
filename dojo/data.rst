@@ -1,5 +1,6 @@
 .. _dojo/data:
 
+=========
 dojo.data
 =========
 
@@ -7,7 +8,6 @@ dojo.data
   :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ Ultimately, the goal of dojo.data is to provide a flexible set of APIs as interf
 You can think of dojo.data as one layer above dojo.xhrGet(). Both operate asynchronously, and without refreshing the page. But, xhrGet will get almost any MIME type and return the data in a glob. It's your job to interpret it. With dojo.data, you call one set of APIs to access the data items and the attributes of the items, and it's up to the store to handle the interpretation of the native formats into a common access model.
 
 
-=====
 Usage
 =====
 
@@ -33,7 +32,6 @@ Basic store usage consists primarily of creating stores from which items are fet
 * :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`
 
 
-========
 See also
 ========
 

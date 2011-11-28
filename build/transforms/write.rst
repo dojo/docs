@@ -1,5 +1,6 @@
 .. _build/transforms/write:
 
+=====================
 Build Transform write
 =====================
 
@@ -9,13 +10,11 @@ Build Transform write
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Writes a resource a destination location.
 
-===========
 Description
 ===========
 
@@ -26,13 +25,11 @@ Note: typically a noWrite tag is added during some other transform that contains
 resource is not needed. If a noWrite decision can be made during discovery, then the resource should not be scheduled
 for the write transform to begin with.
 
-=============
 Profile Knobs
 =============
 
 None.
 
-===============
 Source Location
 ===============
 

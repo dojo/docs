@@ -1,5 +1,6 @@
 .. _dojox/form/BusyButton:
 
+=====================
 dojox.form.BusyButton
 =====================
 
@@ -13,14 +14,12 @@ dojox.form.BusyButton
 
 BusyButton is a simple widget which provides implementing more user friendly form submission.
 
-============
 Introduction
 ============
 
 When a form gets submitted by a user, many time it is recommended to disable the submit buttons to prevent double submission.
 BusyButton provides a simple set of features for this purpose
 
-========
 Examples
 ========
 
@@ -161,7 +160,6 @@ The last example uses a little bit of trickery to create a button which is disab
     </style>
 
 
-==============
 Known Problems
 ==============
 

@@ -1,5 +1,6 @@
 .. _dojo/on:
 
+=======
 dojo/on
 =======
 
@@ -12,7 +13,6 @@ dojo/on
 
 The dojo/on module is a general-purpose event handler for DOM nodes and other event emitting objects, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model.
 
-===========
 dojo/on API
 ===========
 
@@ -169,7 +169,6 @@ The on.once function allows you to register a listener that will be called just 
 
   on.once(finishedButton, "click", onFinished);
 
-=================
 dojo/on migration
 =================
 

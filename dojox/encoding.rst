@@ -1,5 +1,6 @@
 .. _dojox/encoding:
 
+==============
 dojox.encoding
 ==============
 

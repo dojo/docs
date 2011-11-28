@@ -1,5 +1,6 @@
 .. _dojox/data/XmlStore-examples:
 
+=============================
 dojox.data.XmlStore examples
 =============================
 

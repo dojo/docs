@@ -1,5 +1,6 @@
 .. _build/exclude:
 
+==========================================
 Dojo build system:  conditional exclusions
 ==========================================
 
@@ -12,7 +13,6 @@ Dojo build system:  conditional exclusions
    :depth: 3
 
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ This is somewhat analogous to the use of ``#ifdef`` pragmas within the C pre-pro
 
 For example, you might wish to strip a profiling module from a release build but include it in a development build.
 
-======
 Syntax
 ======
 
@@ -55,7 +54,6 @@ where
 
 Note:  the tag for the excludeStart pragma must be equal to the tag for the excludeEnd pragma.
 
-=========
 Condition
 =========
 
@@ -65,13 +63,11 @@ This parameter is actually JavaScript code which is evaluated by the builder at 
 
 The object you most commonly will evaluate against is ``kwArgs`` which is where the builder stores its profile (it actually stores all of its parameters there, whether they originate in the profile, on the build command line, or from the builders' built in defaults).
 
-===============
 Builder Objects
 ===============
 
 TODOC:  Document builder objects of interest
 
-============================
 Nesting conditional excludes
 ============================
 
@@ -94,7 +90,6 @@ If you do nest, the exclusion regions must be fully and properly nested.  Thus, 
 
 because the named regions overlap.
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/i18n:
 
+=========
 dojo.i18n
 =========
 
@@ -13,7 +14,6 @@ Utility classes to enable loading of resources for internationalization.
 
 Used exclusively with :ref:`dojo.requireLocalization <dojo/requireLocalization>`.
 
-=====
 Usage
 =====
 
@@ -41,7 +41,6 @@ Dojo < 1.7
  </script>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _developer/bugs:
 
+================================
 Notes on how to use bug tracking
 ================================
 
@@ -11,13 +12,11 @@ Notes on how to use bug tracking
 
 At the Dojo Project we use Trac for issue tracking. These are some notes about the conventions we use when filing, closing, updating, and triaging issues (tickets).
 
-==========
 Logging In
 ==========
 
 The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from the overall `Dojo Foundation <http://dojofoundation.org>`_. `Register for a Dojo Foundation account <http://my.dojofoundation.org>`_ and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://livedocs.dojotoolkit.org
 
-================
 Getting Notified
 ================
 
@@ -27,7 +26,6 @@ You are notified if you are the a) owner of a ticket b) filer of a ticket or c) 
 
 Alternative, you can subscribe to the ``dojo-checkins`` mailing list, and be alerted for every change. (can be noisy some days)
 
-==============
 Filing Tickets
 ==============
 
@@ -81,7 +79,6 @@ Dijit prefers the module name be included in the summary, when in the "component
 
     [regression] TabContainer: Title Heights collapse when ...
     
-===============
 Owning a ticket
 ===============
 
@@ -101,7 +98,6 @@ Tickets assigned but not "accepted" are considered fair game. A patch submission
 
 When you "accept" a ticket for a given milestone, you are indicating you are or will be focused on that item. Unless the ticket requests further contribution, it is likely you will receive none. It is your duty to ensure all your "accepted" tickets are marked in an appropriate milestone prior to every major release.
 
-=======
 Patches
 =======
 
@@ -144,7 +140,6 @@ Many IDE's have SVN integration and can easily apply patches from this format.
 
 ``TODOC:`` anyone use an IDE to do this?
 
-===============
 Commit Messages
 ===============
 

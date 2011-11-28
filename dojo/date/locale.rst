@@ -1,5 +1,6 @@
 .. _dojo/date/locale:
 
+================
 dojo.date.locale
 ================
 
@@ -13,7 +14,6 @@ dojo.date.locale
 dojo.date.locale offers a library of localization methods to format and parse dates and times.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ When you want to present dates or times to the user, Javascript only knows how t
 
 Dojo comes with a powerful library to format and parse dates and times using local language and conventions, from your choice of hundreds of locales, or as you would like using custom date/time patterns.
 
-=================
 Available Methods
 =================
 
@@ -52,7 +51,6 @@ dojo.date.locale offers the following methods:
   Builds the regular needed to parse a localized date
 
 
-========
 See also
 ========
 

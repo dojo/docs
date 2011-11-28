@@ -1,5 +1,6 @@
 .. _dojo/behavior:
 
+=============
 dojo.behavior
 =============
 
@@ -15,7 +16,6 @@ dojo.behavior
 A very simple, lightweight mechanism for applying code to existing documents, based around :ref:`dojo.query <dojo/query>` for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
 
 
-=====
 Usage
 =====
 
@@ -56,7 +56,6 @@ Dojo < 1.7
 Calling ``.apply()`` applies all the added behaviors.
 
 
-=====================
 Behaviors with events
 =====================
 
@@ -111,7 +110,6 @@ Beyond simple application, we can bind selectors to Dom Events, and more, using 
 The ``found:`` function is applied to all found nodes. The ``onclick:`` identifier will bind an onclick function to all found nodes. You can use any Dom Event name, such as ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onblur``, etc.
 
 
-=====================
 Behaviors with topics
 =====================
 

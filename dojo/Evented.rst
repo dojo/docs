@@ -1,5 +1,6 @@
 .. _dojo/Evented:
 
+=======
 dojo/on
 =======
 
@@ -12,7 +13,6 @@ dojo/on
 
 The dojo/Evented module is a class that can be used as a base class or mixin for JavaScript classes that have their own events.
 
-================
 dojo/Evented API
 ================
 
@@ -36,7 +36,6 @@ The Evented class provides two methods, on(eventType, listener) and emit(eventTy
     component.startup();
   });
 
-========================
 Event Handler Properties
 ========================
 

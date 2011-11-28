@@ -1,5 +1,6 @@
 .. _dojo/fieldToObject:
 
+==================
 dojo.fieldToObject
 ==================
 
@@ -12,7 +13,6 @@ dojo.fieldToObject
 
 Helper function for converting a HTML form field to a JavaScript Object
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ This function is used internally by :ref:`dojo.formToObject <dojo/formToObject>`
 
 Since Dojo 1.7, ``dojo.fieldToObject`` is exposed via the ``fieldToObject`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -63,7 +62,6 @@ Dojo < 1.7
   //
   //firstInputValue will be "value1"
 
-========
 Examples
 ========
 
@@ -104,7 +102,6 @@ Example 1: Using fieldToObject to get field values
     <pre id="output"></pre>
 
 
-========
 See also
 ========
 

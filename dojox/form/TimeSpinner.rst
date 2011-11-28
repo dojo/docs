@@ -1,5 +1,6 @@
 .. _dojox/form/TimeSpinner:
 
+======================
 dojox.form.TimeSpinner
 ======================
 
@@ -14,7 +15,6 @@ dojox.form.TimeSpinner
 This widget is the same as dijit.form.NumberSpinner, but for the time component of a date object instead.
 
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ Introduction
  * Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
 
 
-========
 Examples
 ========
 
@@ -55,7 +54,6 @@ Declarative example
  
  <input type="text" data-dojo-type="dojox.form.TimeSpinner" value="12:45" />
 
-========
 See also
 ========
 

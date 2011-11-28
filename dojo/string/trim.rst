@@ -1,5 +1,6 @@
 .. _dojo/string/trim:
 
+================
 dojo.string.trim
 ================
 

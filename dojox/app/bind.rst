@@ -1,5 +1,6 @@
 .. _dojox/app/bind:
 
+==============
 dojox.app.bind
 ==============
 
@@ -9,7 +10,6 @@ dojox.app.bind
 
 dojox.app.bind provides a function to query dojox.mvc widgets, get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
 
-==============
 Binding API
 ==============
 
@@ -31,7 +31,6 @@ Parameters Detail
 |                      |and its associated dojo.Stateful model object|
 +----------------------+---------------------------------------------+
 
-=============
 Sample
 =============
 

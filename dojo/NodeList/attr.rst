@@ -1,5 +1,6 @@
 .. _dojo/NodeList/attr:
 
+==================
 dojo.NodeList.attr
 ==================
 
@@ -12,7 +13,6 @@ dojo.NodeList.attr
 A getter and setter for DOM attributes, events and CSS styles adapted to work with node lists.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ Introduction
 See :ref:`dojo.attr <dojo/attr>` for more details.
 
 
-=====
 Usage
 =====
 
@@ -36,7 +35,6 @@ value
   If passed, sets value on the node for an attribute, handling cross-browser concerns.
 
 
-========
 Examples
 ========
 
@@ -70,7 +68,6 @@ The following example will set several attributes such as the ``value`` and ``di
     <p><button onclick="disableAndSet();">Disable &amp; Set</button></p>
 
 
-========
 See also
 ========
 

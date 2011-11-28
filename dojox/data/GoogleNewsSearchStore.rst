@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleNewsSearchStore:
 
+================================
 dojox.data.GoogleNewsSearchStore
 ================================
 
@@ -13,13 +14,11 @@ dojox.data.GoogleNewsSearchStore
 
 dojox.data.GoogleNewsSearchStore is a data store that uses Google APIs to search news sources.
 
-============
 Introduction
 ============
 
 dojox.data.GoogleNewsSearchStore is a read only data store that can be used to search Google.  It implements the 'dojo.data.api.Read API <dojo/data/api/Read>'_, which you should refer to for general usage.
 
-=====
 Usage
 =====
 
@@ -78,7 +77,6 @@ The pattern of using the GoogleNewsSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -157,7 +155,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

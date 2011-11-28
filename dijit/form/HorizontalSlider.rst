@@ -1,5 +1,6 @@
 .. _dijit/form/HorizontalSlider:
 
+===========================
 dijit.form.HorizontalSlider
 ===========================
 

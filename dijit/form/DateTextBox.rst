@@ -1,5 +1,6 @@
 .. _dijit/form/DateTextBox:
 
+======================
 dijit.form.DateTextBox
 ======================
 
@@ -13,7 +14,6 @@ dijit.form.DateTextBox
 DateTextBox widgets are easy-to-use date entry controls that allow either typing or choosing a date from any calendar widget.
 
 
-============
 Introduction
 ============
 
@@ -39,7 +39,6 @@ ISO formatted date values sort properly as strings and are lighter-weight than J
 The DateTextBox widget uses a hidden form element with the *NAME* of the original tag to submit the ISO data; the form element provided for user interaction is an additional form element instantiated only for this purpose.  When you access the DateTextBox value attribute programmatically from the widget using JavaScript, you must use a native Javascript Date object, e.g. new Date(2007, 11, 25) The time portion of the Date object is ignored.
 
 
-========
 Examples
 ========
 
@@ -158,7 +157,6 @@ Sometimes you may want to input and display years in a format with only 2-digit 
 	<label for="shortYear">From:</label>
 	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
 
-=============
 Accessibility
 =============
 

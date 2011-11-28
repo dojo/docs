@@ -1,5 +1,6 @@
 .. _quickstart/data:
 
+===================
 Datastores and Dojo
 ===================
 
@@ -10,7 +11,6 @@ Datastores and Dojo
 .. contents::
     :depth: 2
 
-==================
 What is dojo.data?
 ==================
 

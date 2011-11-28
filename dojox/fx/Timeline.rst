@@ -1,5 +1,6 @@
 .. _dojox/fx/Timeline:
 
+=================
 dojox.fx.Timeline
 =================
 

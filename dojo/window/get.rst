@@ -1,5 +1,6 @@
 .. _dojo/window/get:
 
+==================
 dojo.window.get
 ==================
 
@@ -10,13 +11,11 @@ dojo.window.get
 
 Gets the window object associated with a document
 
-============
 Introduction
 ============
 
 Returns the window object associated with a document.
 
-========
 Examples
 ========
 

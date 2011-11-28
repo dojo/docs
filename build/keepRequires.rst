@@ -1,5 +1,6 @@
 .. _build/keepRequires:
 
+==================================
 Dojo build system:  keepRequires
 ==================================
 
@@ -11,7 +12,6 @@ Dojo build system:  keepRequires
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -37,7 +37,6 @@ However, the penalty for doing so is that the module would be downloaded at runt
 
 Note:  The builder uses a regular expression to locate ``dojo.require`` statements within the code it is building.  If you specify dojo require using the notation ``dojo["require"]("module name")``, the builder will not try to include that resource, which has the same affect as excluding it your build file via the layer's ``keepRequires`` property.  This technique is obscure and inelegant and may not be obvious later, so use it with caution.
 
-======
 Syntax
 ======
 
@@ -45,7 +44,6 @@ Syntax
 
 TODOC:  Make an example profile, but people who would use this feature shouldn't need !
 
-========
 See also
 ========
 

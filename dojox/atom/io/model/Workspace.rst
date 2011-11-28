@@ -1,5 +1,6 @@
 .. _dojox/atom/io/model/Workspace:
 
+=============================
 dojox.atom.io.model.Workspace
 =============================
 
@@ -13,7 +14,6 @@ dojox.atom.io.model.Workspace
 
 An Atom workspace element is a part of an Atom Service document, as defined by the Atom Publishing Protocol specification, and is for organization in the service document.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -25,7 +25,6 @@ Public properties (and their types):
 | Array                      | collections     | The collections housed by this workspace                                                    |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -39,7 +38,6 @@ Below are all the functions implemented by this model class.
 | String            | toString()                                           | Return the XML representation of the Service                |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
 See Also:
 =========
 

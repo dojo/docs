@@ -1,5 +1,6 @@
 .. _dojox/widget/rotator/Fade:
 
+=========================
 dojox.widget.rotator.Fade
 =========================
 
@@ -12,7 +13,6 @@ dojox.widget.rotator.Fade
 
 A fade and cross-fade transition for a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
 
-=====
 Usage
 =====
 
@@ -25,7 +25,6 @@ These functions are invoked by the rotator and may be different per pane.
 
 Each function is passed an object containing the "transitionParams" along with the rotator's current and next pane which are to be panned, then returns a dojo.Animation object describing the animated sequence.
 
-========
 Examples
 ========
 
@@ -153,7 +152,6 @@ Example using cross-fade transition.
     <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['next']);">Next</button>
 
 
-========
 See also
 ========
 

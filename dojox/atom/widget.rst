@@ -1,5 +1,6 @@
 .. _dojox/atom/widget:
 
+=================
 dojox.atom.widget
 =================
 
@@ -12,7 +13,6 @@ dojox.atom.widget
 dojox.atom.widget offers widgets for reading and editing ATOM feeds.
 
 
-========
 Features
 ========
 
@@ -29,7 +29,6 @@ Features
   An ATOM feed entry editor that allows viewing of the individual attributes of an entry
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _quickstart/ajax:
 
+=============
 AJAX and Dojo
 =============
 
@@ -16,7 +17,6 @@ Dojo provides a solid set of battle-tested XHR wrapper functions to allow you to
 
 The XMLHTTP request object (XHR for short) is one of the basic building blocks for constructing responsive Ajax-drive interactions. By allowing you to retrieve data on the user's behalf without refreshing the whole page the XHR object provides tremendous, but cross-browser XHR usage is beset by memory leaks, divergent APIs, a lack of built-in form encoding from JavaScript, and painful corner cases when de-serializing response data.
 
-===========
 XHR Options
 ===========
 
@@ -81,7 +81,6 @@ Dojo < 1.7
 
 Introduced was the load: function, which is explained in the XHR Callbacks section below.
 
-=============
 XHR Callbacks
 =============
 
@@ -151,7 +150,6 @@ Dojo < 1.7
 
 Alternately, you can "use plain :ref:`Deferred's <dojo/Deferred>`" to register callbacks. They are slightly more difficult to work with, but the concept is the same.
 
-===========
 dojo.xhrGet
 ===========
 
@@ -161,7 +159,6 @@ xhrGet will create an Ajax request using the HTTP GET method, returning some dat
 
 For complete details and examples, see the :ref:`dojo.xhrGet documentation <dojo/xhrGet>`.
 
-============
 dojo.xhrPost
 ============
 
@@ -170,7 +167,6 @@ xhrPost will create an Ajax request using the HTTP POST method and is usually us
 For complete details and examples, see the :ref:`dojo.xhrPost documentation <dojo/xhrPost>`.
 
 
-===========
 dojo.xhrPut
 ===========
 
@@ -178,7 +174,6 @@ xhrPut will create an Ajax request using the HTTP PUT method and is usually used
 
 For complete details and examples, see the :ref:`dojo.xhrPut documentation <dojo/xhrPut>`.
 
-==============
 dojo.xhrDelete
 ==============
 

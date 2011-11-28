@@ -1,5 +1,6 @@
 .. _dojox/form/FileInput:
 
+====================
 dojox.form.FileInput
 ====================
 
@@ -13,7 +14,6 @@ The FileInput class provides a foundation for a series of FileInput widgets: Fil
 
 Unless you have a clinical aversion to Flash, it is recommended you use the newer :ref:`FileUploader <dojox/form/FileUploader>` and provided in the DojoX Form project.
 
-============
 Introduction
 ============
 
@@ -37,7 +37,6 @@ The three types are described as:
 * Auto - An extension on base FileInput which will submit the file after a period of time after selection, giving the user a moment to cancel if necessary.
 * Blind - An extension on FileInputAuto which removes the input functionality, and provides only a button to trigger the file selection dialog.
 
-========
 See also
 ========
 

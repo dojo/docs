@@ -1,5 +1,6 @@
 .. _dojo/getStyle:
 
+=============
 dojo.getStyle
 =============
 
@@ -9,7 +10,6 @@ dojo.getStyle
 Accesses styles on a node.
 
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ will be a calculated value, not just the immediate node.style value. Also when g
 
 Since Dojo 1.7, ``dojo.getStyle`` is exposed via the ``get`` method of the ``dojo/dom-style`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -39,7 +38,6 @@ name
   the style property to get
 
 
-========
 Examples
 ========
 
@@ -81,7 +79,6 @@ Dojo < 1.7
   // Passing a node and a style property returns the current normalized, computed value for that property:
   dojo.getStyle("thinger", "opacity"); // 1 by default
 
-========
 See also
 ========
 

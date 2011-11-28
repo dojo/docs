@@ -1,5 +1,6 @@
 .. _dojox/secure/sandbox:
 
+====================
 dojox.secure.sandbox
 ====================
 

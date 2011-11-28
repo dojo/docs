@@ -1,5 +1,6 @@
 .. _quickstart/introduction/licensing:
 
+==============
 Dojo licensing
 ==============
 

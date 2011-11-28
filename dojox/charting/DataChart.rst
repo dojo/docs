@@ -1,5 +1,6 @@
 .. _dojox/charting/DataChart:
 
+=========================
 dojox.charting.DataChart
 =========================
 

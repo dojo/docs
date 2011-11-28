@@ -1,5 +1,6 @@
 .. _dijit/_FocusMixin:
 
+=====================
 dijit._FocusMixin
 =====================
 
@@ -11,7 +12,6 @@ dijit._FocusMixin
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ See the :ref:`dijit.focus <dijit/focus>` documentation for details on the active
 
 Note that the underscore in the name implies not that _FocusMixin is a private class, but rather that it's a mixin, rather than a widget.
 
-=====
 Usage
 =====
 

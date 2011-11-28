@@ -1,5 +1,6 @@
 .. _dojox/image/MagnifierLite:
 
+=========================
 dojox.image.MagnifierLite
 =========================
 
@@ -14,7 +15,6 @@ dojox.image.MagnifierLite
 A simple hover behavior for images, showing a zoomed version of a size image.
 
 
-============
 Introduction
 ============
 
@@ -25,20 +25,16 @@ The logic behind requiring the src image to be large is “it’s going to be do
 This is the base class for :ref:`dojox.image.Magnifier <dojox/image/Magnifier>`, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling.
 
 
-=====
 Usage
 =====
 
 TODO: how to use the component/class/method
 
-=========  ====  ===========
-Parameter  Type  Description
-=========  ====  ===========
-TODOC      ---   ---
+=========  ====  Parameter  Type  Description
+=========  ====  TODOC      ---   ---
 =========  ====  ===========
 
 
-========
 Examples
 ========
 
@@ -88,7 +84,6 @@ Declarative example
    </style>
 
 
-========
 See also
 ========
 

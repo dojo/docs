@@ -1,5 +1,6 @@
 .. _dojox/fx/ext-dojo/NodeList:
 
+==========================
 dojox.fx.ext-dojo.NodeList
 ==========================
 

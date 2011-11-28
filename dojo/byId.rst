@@ -1,5 +1,6 @@
 .. _dojo/byId:
 
+=========
 dojo.byId
 =========
 
@@ -12,7 +13,6 @@ This is a simple alias to ''document.getElementById'', which not only is shorter
 
 Since dojo 1.7, dojo.byId is defined in the ``dojo/dom`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -131,7 +131,6 @@ JavaScript has a fun convention for conditionals inline. Imagine wanting a domNo
 Above, if the node id="missingNode" is in fact missing, the logical OR will continue, and use othernode as the value of node.
 
 
-========
 Examples
 ========
 

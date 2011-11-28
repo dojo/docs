@@ -1,5 +1,6 @@
 .. _dojo/DeferredList:
 
+=================
 dojo.DeferredList
 =================
 

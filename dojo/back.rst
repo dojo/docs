@@ -1,5 +1,6 @@
 .. _dojo/back:
 
+=========
 dojo.back
 =========
 
@@ -12,7 +13,6 @@ dojo.back allows you to update the browser history, so that it's possible to use
 
 **NOTE**: There are problems with using dojo.back with semantically-named fragment identifiers ("hash values" on an URL). In most browsers it will be hard for dojo.back to know distinguish a back from a forward event in those cases. For back/forward support to work best, the fragment ID should always be a unique value (something using new Date().getTime() for example). If you want to detect hash changes using semantic fragment IDs, then consider using :ref:`dojo.hash <dojo/hash>` instead (in Dojo 1.4+).
 
-=====
 Usage
 =====
 
@@ -110,7 +110,6 @@ To change the URL in the browser's location bar, include a **changeUrl** propert
 
 This will allow users to bookmark the page.
 
-========
 Examples
 ========
 

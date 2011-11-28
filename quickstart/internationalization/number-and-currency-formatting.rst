@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/number-and-currency-formatting:
 
+===============================================
 Cultural conventions: Date, Number and Currency
 ===============================================
 
@@ -11,7 +12,6 @@ Cultural conventions: Date, Number and Currency
 .. contents::
    :depth: 2
 
-===============
 Dates and Times
 ===============
 
@@ -62,7 +62,6 @@ Special patterns may be specified may be used to provide custom formats, however
 Also available under :ref:`dojo.cldr.supplemental <dojo/cldr>` are routines to provide the first day of the week and the start and end of the weekend, according to local custom.
 
 
-======================
 Numbers and currencies
 ======================
 
@@ -117,7 +116,6 @@ dojo.currency
 Note: handling of Hindi and Arabic style numerals is planned for 1.0, but not yet implemented.
 
 
-==============
 Locale support
 ==============
 

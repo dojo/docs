@@ -1,5 +1,6 @@
 .. _dijit/layout/_LayoutWidget:
 
+===================
 dijit._LayoutWidget
 ===================
 
@@ -10,7 +11,6 @@ Typically layout widgets inherit from the dijit.layout._LayoutWidget base class.
 
 The widget is responsible for implementing some callback methods and setting some properties though:
 
-=================
 Properties to Set
 =================
 
@@ -26,7 +26,6 @@ baseClass
 Like other widgets, you should define baseClass to be the CSS class name associated with the widget, for example "dijitTabContainer".
 
 
-====================
 Methods To Implement
 ====================
 
@@ -58,7 +57,6 @@ To bridge this gap and do processing common to both initial children and added c
 _setupChild() is useful for tasks like in TabContainer where it sets up a tab label for each child.
 
 
-=========
 Lifecycle
 =========
 

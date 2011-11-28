@@ -1,5 +1,6 @@
 .. _dojo/coords:
 
+===========
 dojo.coords
 ===========
 
@@ -14,7 +15,6 @@ dojo.coords
 Getter for the complete coordinates of a dom node.
 
 
-============
 Introduction
 ============
 
@@ -26,7 +26,6 @@ for a node offset from its parent 50px to the left, 200px from the top with a ma
 
 Since dojo 1.7, ``dojo.coords`` is available in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -46,7 +45,6 @@ Dojo < 1.7
  
  var coords = dojo.coords(node);
 
-========
 Examples
 ========
 
@@ -111,7 +109,6 @@ Comparison of various DOM node position/size methods
 
 :ref:`Link: Comparison of various DOM node position/size methods. <dojo/position>`
 
-=====
 Notes
 =====
 * For dom nodes with border styles, on Internet Explorer the absolute coordinates (x and y axis), do not include the border position, so you may have to adjust for that depending on what your indented usage of the information is.

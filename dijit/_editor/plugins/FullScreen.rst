@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/FullScreen:
 
+================================
 dijit._editor.plugins.FullScreen
 ================================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.FullScreen
 
 Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this plugin's goal is to do exactly that for the dijit.Editor.  No more postage stamp sized editors!
 
-========
 Features
 ========
 
@@ -23,7 +23,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Button with icon in toolbar for toggling a dijit.Editor to take over the entire view port of its current 'window' (normally the entire browser window.)
 * HotKey enabled for CTRL-SHIFT-F11.  When this combination is pressed in the view port, the editor will toggle between full screen and normal modes.
 
-===========
 Limitations
 ===========
 
@@ -38,7 +37,6 @@ Limitations
     Your content here.
   <body>
 
-=====
 Usage
 =====
 
@@ -83,7 +81,6 @@ Example:
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[name: 'fullscreen', zIndex: 900}]"></div>
 
 
-=====================================
 Full Screen mode and LayoutContainers
 =====================================
 Layout containers put restrictions on their children content in order to force specific layout.  Such restrictions are often in the CSS definitions, and do things such as applying 'position: absolute' as a CSS property.  These styles can cause issues with the Editor and FullScreen mode.  The editor full screen plugin works around them by removing classes for amm parent dom nodes up to the body tag.  The classes are re-applied back to their nodes when full screen is toggled off.  This provides usable full screen modes in most layout containers.
@@ -95,7 +92,6 @@ For FullScreen mode on an editor in BorderContainer to work properly, the Editor
 The ideal solution to scaling out issues with LayoutContainer nested Editors is to reparent the Editor temporarily to the <body> element of your page.  This, however, will not work in some browsers, such as FireFox.  This is because FireFox forcibly reloads an IFRAME element if the iframe (or any of its parent dom nodes), moves its DOM position in the page.  At this time there are no known workarounds to that FireFox behavior, and due to such, the editor takes the the alternate approach of class manipulation explained above.  If a workaround is discovered, then the plugin and these docs will be updated to reflect the improved behavior.
 
 
-===================
 A11Y Considerations
 ===================
 
@@ -103,7 +99,6 @@ A11Y Considerations
 * When using the button (via mouse click or keyboard), focus does not move into the edit area.  This is so that users who accidentally enable the mode do not have to chift-tab out to undo the mode.  They can just press the button again.
 
 
-========
 Examples
 ========
 
@@ -266,7 +261,6 @@ Nesting an Editor With FullScreen in BorderContainer
       </div>
     </div>
 
-========
 See Also
 ========
 

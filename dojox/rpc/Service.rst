@@ -1,5 +1,6 @@
 .. _dojox/rpc/Service:
 
+=================
 dojox.rpc.Service
 =================
 
@@ -30,7 +31,6 @@ also be loaded if they are used by the SMD:
 All of the provided SMDLibrary SMD's are based on JSONP, and consequently require :ref:`dojo.io.script <dojo/io/script>`. If you 
 define your own SMD with a local target endpoint, :ref:`dojo.io.script <dojo/io/script>` is not needed.
 
-==================
 Starting a Service
 ==================
 
@@ -77,7 +77,6 @@ Simply provide a ``frameDoc`` attribute and passed as an optional parameter to t
 
 An iframe will be created if one cannot be found.
 
-===============
 Using a Service
 ===============
 
@@ -101,7 +100,6 @@ This will trigger a web search for the phrase "Dojo Toolkit", and fire your call
 
 If you are unfamiliar with :ref:`Deferreds <dojo/Deferred>`, you should dig deeper. You will thank us later.
 
-=====================
 Creating your own SMD
 =====================
 

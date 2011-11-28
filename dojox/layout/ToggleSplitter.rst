@@ -1,5 +1,6 @@
 .. _dojox/layout/ToggleSplitter:
 
+===========================
 dojox.layout.ToggleSplitter
 ===========================
 
@@ -14,14 +15,12 @@ dojox.layout.ToggleSplitter
 dojox.layout.ToggleSplitter is a custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

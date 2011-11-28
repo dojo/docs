@@ -1,5 +1,6 @@
 .. _dojox/io:
 
+========
 dojox.io
 ========
 
@@ -11,7 +12,6 @@ dojox.io
 .. contents::
     :depth: 2
 
-========
 Features
 ========
 

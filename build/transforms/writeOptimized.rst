@@ -1,5 +1,6 @@
 .. _build/transforms/writeOptimized:
 
+==============================
 Build Transform writeOptimized
 ==============================
 
@@ -9,13 +10,11 @@ Build Transform writeOptimized
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Submits transformed resource text to either Shrinksafe or the Google Closure Compiler.
 
-===========
 Description
 ===========
 
@@ -33,7 +32,6 @@ When the build application is executed in the node.js environment, multiple chil
 resources may be optimized concurrently, thereby decreasing build times. This feature is not available in the Rhino
 environment.
 
-=============
 Profile Knobs
 =============
 
@@ -93,7 +91,6 @@ Profile Knobs
 
   * ["all"] All console applications are stripped.
 
-===============
 Source Location
 ===============
 

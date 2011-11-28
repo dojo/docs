@@ -1,5 +1,6 @@
 .. _dojo/trim:
 
+=========
 dojo.trim
 =========
 
@@ -15,7 +16,6 @@ This function implements a frequently required functionality: it removes white-s
 
 Dojo's implementation was informed by `Steven Levithan's blog post <http://blog.stevenlevithan.com/archives/faster-trim-javascript>`_. We chose to implement the compact yet performant version. If your application requires even more speed, check out `dojo.string.trim <dojo/string/trim>`_, which implements the fastest version.
 
-=====
 Usage
 =====
 
@@ -51,7 +51,6 @@ dojo.trim accepts the only argument: a string to be trimmed.
   var output4 = show("\tfour\r\n");
   var output5 = show("\f\n\r\t\vF I V E\f\n\r\t\v");
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/widget/Portlet:
 
+====================
 dojox.widget.Portlet
 ====================
 
@@ -14,7 +15,6 @@ dojox.widget.Portlet
 The dojox.widget.Portlet is an enhanced version of the dijit.TitlePane widget, designed to be used in the dojox.layout.GridContainer.
 
 
-============
 Introduction
 ============
 
@@ -31,7 +31,6 @@ The settings types included are
 It is worth noting that this widget just implements one possible front end of a Portlet.  The
 `JSR-168 standard <http://jcp.org/aboutJava/communityprocess/review/jsr168>`_ for Portlets contains a lot more than this.  A full Portlet implementation requires both server side and client side code.  This widget only serves to present the Portlet on the client side.
 
-=====
 Usage
 =====
 
@@ -54,7 +53,6 @@ Usage
 
 
 
-========
 Examples
 ========
 
@@ -290,7 +288,6 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
 
 
-========
 See also
 ========
 

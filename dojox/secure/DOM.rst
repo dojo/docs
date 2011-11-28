@@ -1,5 +1,6 @@
 .. _dojox/secure/DOM:
 
+================
 dojox.secure.DOM
 ================
 :Status: Draft

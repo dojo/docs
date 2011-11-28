@@ -1,12 +1,12 @@
 .. _releasenotes/1.4:
 
+=======================
 Dojo 1.4 Release Notes
 =======================
 
 .. contents::
    :depth: 3
 
-===============
 Browser support
 ===============
 
@@ -18,7 +18,6 @@ The following browsers are supported. If a browser is not supported, it still ma
 * Latest Opera (Opera 10) (Dojo core only).
 * Keyboard now supported in all supported browsers (previously it didn't work on Safari and on Chrome)
 
-====
 Dojo
 ====
 
@@ -169,7 +168,6 @@ dojo.safeMixin
 * A companion for :ref:`dojo.declare <dojo/declare>`. It is similar to :ref:`dojo.mixin <dojo/mixin>` but decorates copied methods compatibly with :ref:`dojo.declare <dojo/declare>`.
 
 
-======
 Dijit
 ======
 
@@ -349,7 +347,6 @@ dijit.popup
 ~~~~~~~~~~~
 dijit.popup.prepare() was renamed to moveOffScreen() for clarity about what the function actually does.
  
-=====
 DojoX
 =====
 
@@ -570,7 +567,6 @@ dojox.widget.DataPresentation
 * See also :ref:`dojox.widget.DataPresentation <dojox/widget/DataPresentation>`
 
 
-====
 Util
 ====
 
@@ -587,14 +583,12 @@ Checkstyle
 * See also :ref:`util.checkstyle <util/checkstyle>`
 
 
-=========
 Bug fixes
 =========
 
 The `full list of bug fixes <http://bugs.dojotoolkit.org/query?status=closed&group=component&order=priority&milestone=1.4&resolution=fixed&col=id&col=summary&col=type&col=priority>`_ is located in the bug database.
 
 
-=========
 Upgrading
 =========
 

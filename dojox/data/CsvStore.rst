@@ -1,5 +1,6 @@
 .. _dojox/data/CsvStore:
 
+===================
 dojox.data.CsvStore
 ===================
 
@@ -29,7 +30,6 @@ The following dojo.data APIs are implemented by CsvStore
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
-==================
 Constructor Params
 ==================
 
@@ -53,13 +53,11 @@ Constructor Params
 |                |              |caching values loaded from a webserver.                                                         |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
-============
 Query Syntax
 ============
 
 The query syntax used by dojox.data.CsvStore is identical to the query syntax used by :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
-=============
 Query Options
 =============
 
@@ -75,7 +73,6 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
 
-==============
 Custom Sorting
 ==============
 
@@ -117,7 +114,6 @@ All fields in the CsvStore are read as strings.  Therefore, they are sorted as s
   store.fetch({onComplete: completed, onError: error, sort: sortAttributes});
 
 
-========
 Examples
 ========
 

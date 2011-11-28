@@ -1,5 +1,6 @@
 .. _dojox/grid/TreeGrid:
 
+===================
 dojox.grid.TreeGrid
 ===================
 
@@ -14,13 +15,11 @@ dojox.grid.TreeGrid
 This is a stub help page for the new dojox.grid.TreeGrid which is still in progress. The information on this page may be out-of-date due to the fact that the API for the TreeGrid is still very much in flux.
 
 
-============
 Introduction
 ============
 
 This Widget inherits from dojo.grid.DataGrid and hence all methods and properties pertaining to that Widget also apply here.
 
-=====
 Usage
 =====
 
@@ -48,7 +47,6 @@ The getItem function on the grid has also been extended to accept an array in or
 If you specify a treeModel, then defaultOpen will always be false, and openAtLevels will be ignored
 
 
-====================
 Structure Definition
 ====================
 
@@ -138,7 +136,6 @@ NOTE: itemAggregates are specified for *direct children* only - for example, in 
 Notice that f1cnt is the count of cField1 (at level 1) and gf1cnt and gf2sum are the count and sum of gcField1 and gcField2 (at level 2)
 
 
-==========
 Formatting
 ==========
 
@@ -160,14 +157,12 @@ Sometimes it is desirable to format the aggregations differently than the actual
 Then the aggregate row for the top-level item would read "Total (x items)", and the aggregate row at each sub-level would read "y items".
 
 
-========
 Examples
 ========
 
 For more examples, please see the files dojox/grid/tests/test_treegrid.html, dojox/grid/tests/test_treegrid_performance.html and dojox/grid/tests/test_treegrid_loading.html
 
 
-========
 See also
 ========
 

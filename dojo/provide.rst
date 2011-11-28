@@ -1,5 +1,6 @@
 .. _dojo/provide:
 
+============
 dojo.provide
 ============
 
@@ -12,14 +13,12 @@ dojo.provide
 dojo.provide is a core part of the dojo module system. It tells the loader that a specific module has been loaded.
 
 
-============
 Introduction
 ============
 
 Each javascript source file must have at least one dojo.provide() call at the top of the file, corresponding to the file name. For example, `js/dojo/foo.js` must have `dojo.provide("dojo.foo");` before any calls to `dojo.require()` are made.
 
 
-=====
 Usage
 =====
 
@@ -59,7 +58,6 @@ Dojo < 1.7
 
 Multiple dojo.provide calls can live in a file, but outside of built layer, it is normal just to see one for the module that matches the file name.
 
-========
 See also
 ========
 

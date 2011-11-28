@@ -1,5 +1,6 @@
 .. _dojox/mobile/IconItem:
 
+=====================
 dojox.mobile.IconItem
 =====================
 
@@ -14,7 +15,6 @@ IconItem represents an item that has an application component and its icon image
 
 .. image:: IconItem.png
 
-======================
 Constructor Parameters
 ======================
 
@@ -88,7 +88,6 @@ Parameters from this widget:
 
 .. image:: IconItem-close-button.png
 
-========
 Examples
 ========
 

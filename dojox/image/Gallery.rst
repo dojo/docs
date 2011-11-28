@@ -1,5 +1,6 @@
 .. _dojox/image/Gallery:
 
+===================
 dojox.image.Gallery
 ===================
 
@@ -12,7 +13,6 @@ dojox.image.Gallery
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -27,7 +27,6 @@ The Gallery works as a wrapper around two other widgets, dojox.image.ThumbnailPi
 * Links an image to a URL, so that clicking the image navigates to a specified web address. This is optional.
 
 
-=====
 Usage
 =====
 

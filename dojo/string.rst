@@ -1,5 +1,6 @@
 .. _dojo/string:
 
+=========================
 dojo.string (dojo/string)
 =========================
 
@@ -11,7 +12,6 @@ dojo.string (dojo/string)
 
 dojo.string provides some simple string manipulation utilities
 
-============
 Introduction
 ============
 

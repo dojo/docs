@@ -1,5 +1,6 @@
 .. _quickstart/introduction/whydojo:
 
+================
 Why Choose Dojo?
 ================
 

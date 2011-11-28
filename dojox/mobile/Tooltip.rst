@@ -1,5 +1,6 @@
 .. _dojox/mobile/Tooltip:
 
+====================
 dojox.mobile.Tooltip
 ====================
 
@@ -15,7 +16,6 @@ dojox.mobile.Tooltip
 Tooltip is a simple popup widget that encloses its content and displays a small arrow associating the content (specified as innerHTML) with an arbitrary DOM node.  While the widget does not impose any size restrictions on the content, small screen mobile devices may only be able to display short text messages.
 
 
-=========
 Interface
 =========
 
@@ -40,7 +40,6 @@ Displays the Tooltip content (hiding if already displayed somewhere else).
 Hides the Tooltip content.
 
 
-========
 Examples
 ========
 

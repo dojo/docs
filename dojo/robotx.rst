@@ -10,7 +10,6 @@ dojo/robotx
 
 Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
 
-========
 Features
 ========
 

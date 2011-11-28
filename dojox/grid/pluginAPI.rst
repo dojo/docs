@@ -1,5 +1,6 @@
 .. _dojox/grid/pluginAPI:
 
+=====================
 dojox Grid Plugin API
 =====================
 
@@ -11,7 +12,6 @@ dojox Grid Plugin API
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ We are working out a plugin api for the grid - this page will be updated with in
 NOTE: This document is a living document - and will change at any time. It is also intended more for dojo developers than it is for end users.
 
 
-================
 Extension points
 ================
 

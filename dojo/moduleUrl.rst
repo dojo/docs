@@ -1,5 +1,6 @@
 .. _dojo/moduleUrl:
 
+==============
 dojo.moduleUrl
 ==============
 
@@ -10,7 +11,6 @@ dojo.moduleUrl
 
 dojo.moduleUrl is used to return a dojo._Url object relative to a module.
 
-=====
 Usage
 =====
 
@@ -49,7 +49,6 @@ Dojo < 1.7
    });
  </script>
 
-========
 See also
 ========
 

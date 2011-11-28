@@ -1,5 +1,6 @@
 .. _dojox/mobile/SpinWheel:
 
+======================
 dojox.mobile.SpinWheel
 ======================
 
@@ -14,7 +15,6 @@ SpinWheel is a value picker component. It is a sectioned wheel that can be used 
 
 .. image:: SpinWheel-custom.png
 
-=====
 Usage
 =====
 
@@ -26,7 +26,6 @@ SpinWheel is in a separate module file from _base.js. You need to dojo.require S
 
   dojo.require("dojox.mobile.SpinWheel");
 
-======================
 Constructor Parameters
 ======================
 
@@ -38,7 +37,6 @@ Constructor Parameters
 |slotProps     |Array     |[]       |An array of property objects for each slot class specified in slotClasses.                                 |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

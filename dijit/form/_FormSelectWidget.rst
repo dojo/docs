@@ -1,5 +1,6 @@
 .. _dijit/form/_FormSelectWidget:
 
+============================
 dijit.form._FormSelectWidget
 ============================
 
@@ -11,13 +12,11 @@ widgets. It is used by :ref:`dijit/form/Select <dijit/form/Select>` and :ref:`do
 <dojox/form/CheckedMultiSelect>`. It extends :ref:`dijit/form/_FormValueWidget <dijit/form/_FormValueWidget>` with the
 ability to handle multiple values and retrieve options from a :ref:`dojo/data <dojo/data>` store.
 
-=====
 Usage
 =====
 
 See :ref:`dijit/form/Select <dijit/form/Select>` for usage information.
 
-========
 See also
 ========
 

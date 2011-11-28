@@ -1,5 +1,6 @@
 .. _dojo/touch:
 
+==========
 dojo.touch
 ==========
 
@@ -9,7 +10,6 @@ dojo.touch
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ The rationale is very simple - "press | move | release | cancel" are mapped to:
 So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms.
 
 
-======
 Usages
 ======
 
@@ -71,14 +70,12 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 
 
 
-==============================
 Relationship with dojo/gesture
 ==============================
 
 dojo/touch is the underneath basis for :ref:`dojox/gesture <dojox/gesture>`
 
 
-============
 Known Issues
 ============
 

@@ -1,5 +1,6 @@
 .. _dojox/gfx/utils/toSvg:
 
+=====================
 dojox.gfx.utils.toSvg
 =====================
 
@@ -12,7 +13,6 @@ dojox.gfx.utils.toSvg
 The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser. This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service. For example, this can be very useful for converting a DataChart to a JPEG, PNG, or even PDF via Apache Batik.
 
 
-=====
 Usage
 =====
 
@@ -50,7 +50,6 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
   <script type="text/javascript" src="http://some.xdomain.server/dojo.js" data-dojo-config='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
 
 
-========
 Examples
 ========
 
@@ -103,7 +102,6 @@ Programmatic example
     </xmp>
 
 
-========
 See also
 ========
 

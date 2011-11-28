@@ -1,5 +1,6 @@
 .. _dojo/fx/easing:
 
+==============
 dojo.fx.easing
 ==============
 
@@ -16,7 +17,6 @@ Have you ever wanted a fade out, fade in, wipe in, and so forth to apply the eff
 
 Instead of having to write the easing function yourself, dojo provides a collection of easing functions to use as this parameter to get a variety of effects.
 
-================
 Easing Functions
 ================
 
@@ -131,7 +131,6 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 | dojo.fx.easing.bounceInOut            | A function that 'bounces' near the beginning and end of the animation                                |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 
@@ -210,7 +209,6 @@ Example: Playing with Easing
     <div id="moveableNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 
-========
 See Also
 ========
 

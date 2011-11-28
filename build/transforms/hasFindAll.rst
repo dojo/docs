@@ -1,5 +1,6 @@
 .. _build/transforms/hasFindAll:
 
+==========================
 Build Transform hasFindAll
 ==========================
 
@@ -9,13 +10,11 @@ Build Transform hasFindAll
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Finds all has.js tests and optionally reports feature test usage as part of the build report.
 
-===========
 Description
 ===========
 
@@ -29,7 +28,6 @@ either single- or double-quotes. The character preceding the "has" function name
 As feature tests are discovered, the module in which they reside is memorized. If the profile property ``hasReport`` is
 truthy, then a map from has feature test to the list of modules that use each test is written to the build report.
 
-=============
 Profile Knobs
 =============
 
@@ -38,7 +36,6 @@ Profile Knobs
 
   * [*falsy*] No has location report is written.
 
-===============
 Source Location
 ===============
 

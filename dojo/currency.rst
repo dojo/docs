@@ -1,5 +1,6 @@
 .. _dojo/currency:
 
+=============
 dojo.currency
 =============
 
@@ -10,7 +11,6 @@ dojo.currency
   :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -18,12 +18,10 @@ dojo.currency extends dojo.number to handle formatting and printing.  Data provi
 
 By default, the Dojo Toolkit is prepared to support for a short list of major world currencies.  That list can be extended by running the scripts in util/buildscripts/cldr.  Please see the README in that directory for details.
 
-================
 format()/parse()
 ================
 
 
-========
 See Also
 ========
 

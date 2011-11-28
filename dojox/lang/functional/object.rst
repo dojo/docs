@@ -1,5 +1,6 @@
 .. _dojox/lang/functional/object:
 
+============================
 dojox.lang.functional.object
 ============================
 
@@ -13,7 +14,6 @@ dojox.lang.functional.object
 
 Functional helpers to deal with JavaScript objects.
 
-========
 See Also
 ========
 

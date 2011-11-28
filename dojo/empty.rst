@@ -1,5 +1,6 @@
 .. _dojo/empty:
 
+==========
 dojo.empty
 ==========
 
@@ -12,7 +13,6 @@ dojo.empty
 Empty the contents of a DOM element. dojo.empty deletes all children but keeps the node there.
 
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ dojo.empty safely removes all children of the node.
 
 Since Dojo 1.7, ``dojo.empty`` is exposed via the ``empty`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -56,14 +55,11 @@ Dojo < 1.7
 
 This function only works with DomNodes, and returns nothing.
 
-=========  ==============  =============================================================================
-Parameter  Type            Description
-=========  ==============  =============================================================================
-node       String|DomNode  A String ID or DomNode reference of the element to empty.
+=========  ==============  Parameter  Type            Description
+=========  ==============  node       String|DomNode  A String ID or DomNode reference of the element to empty.
 =========  ==============  =============================================================================
 
 
-========
 Examples
 ========
 
@@ -166,7 +162,6 @@ Empty all nodes in a list by reference
     </div>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/data/PersevereStore:
 
+=========================
 dojox.data.PersevereStore
 =========================
 
@@ -15,13 +16,11 @@ dojox.data.PersevereStore
 **dojox.data.PersevereStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>` for connecting to a Persevere <http://sitepen.com/labs/persevere.php> server.
 
 
-============
 Introduction
 ============
 
 PersevereStore essentially has the same functionality as JsonRestStore, but has some extra adaptations for automatic creation of stores based on Persevere's introspective table/class querying.
 
-=====
 Usage
 =====
 
@@ -38,7 +37,6 @@ You can create a set of stores for all available Persevere classes/tables:
 
 This will return a object where each property name is the name of the store, and each value is the actual store for interacting with the Persevere database.
 
-========
 See also
 ========
 

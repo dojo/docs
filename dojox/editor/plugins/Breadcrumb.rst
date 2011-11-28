@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/Breadcrumb:
 
+===============================
 dojox.editor.plugins.Breadcrumb
 ===============================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.Breadcrumb
 
 Have you ever wanted to know how node you were in while editing some rich text?  Have you ever wanted to be sure the entire element was deleted, not just its content?  If so, then this plugin is for you.
 
-========
 Features
 ========
 
@@ -22,14 +22,12 @@ Once required in and enabled, this plugin provides the following features to dij
 * Clicking the node name in the footer selects the contents of that node.
 * Each node button provides a dropdown for other operations, such as deleting the entire element, or moving the cursor to the start or end of the contents of that element.
 
-===========
 Limitations
 ===========
 
 * This plugin does not work well with the :ref:`full screen <dijit/_editor/plugins/FullScreen>` plugin.  In Full screen mode the footer toolbar is out of view.  This will be fixed in a later version of dojo.  It requires minor updated to Editor as well as the full screen and view source plugins.
 
 
-=====
 Usage
 =====
 
@@ -61,7 +59,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Breadcrumb plugin!  You can click around in the editor and see the breadcrumb update.  You can also click the buttons in the breadcrumb bar to select contents or activate the dropdown action menu.
 
-========
 Examples
 ========
 
@@ -113,7 +110,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

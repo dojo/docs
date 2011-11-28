@@ -1,5 +1,6 @@
 .. _dojox/io/xhrPlugins:
 
+===================
 dojox.io.xhrPlugins
 ===================
 
@@ -14,14 +15,12 @@ dojox.io.xhrPlugins
 dojox.io.xhrPlugins provides a registry of alternate transports that can be used to provide dojo.xhr functionality with cross-site requests.
 
 
-============
 Introduction
 ============
 
 Traditionally, XHR can only be used for same-origin requests. Alternate techniques are generally necessary for cross-site requests. dojox.io.xhrPlugins provides a means for registering server support for different transports so dojo.xhr can still be used for cross-site requests to maintain consistent call-site syntax.
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

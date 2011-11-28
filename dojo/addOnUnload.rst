@@ -1,5 +1,6 @@
 .. _dojo/addOnUnload:
 
+================
 dojo.addOnUnload
 ================
 
@@ -13,14 +14,12 @@ dojo.addOnUnload
 dojo.addOnUnload registers a function to be called when the page unloads.
 
 
-============
 Introduction
 ============
 
 Since working with the DOM or JavaScript during a `window.onunload` event is not recommended, dojo.addOnUnload is triggered during `window.onbeforeunload`.  However, you need to be careful about what work you do during `dojo.addOnUnload/window.onbeforeunload` since this event can be triggered  if the user clicks a link to download a file or a `javascript:` link.  In these cases, the `document` will not be destroyed and so any destructive operations done during a `dojo.addOnUnload` callback may be premature.  If you need to run code during `window.onunload` then you can register a function using :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>`.
 
 
-=====
 Usage
 =====
 
@@ -70,7 +69,6 @@ Dojo < 1.7
 
 
 
-========
 Examples
 ========
 
@@ -94,7 +92,6 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
 
     This <a href="javascript:unLoad()">link</a> has an <pre>href="javascript:unLoad()"</pre> which fires dojo.addOnUnload but won't destroy the page.
 
-========
 See also
 ========
 

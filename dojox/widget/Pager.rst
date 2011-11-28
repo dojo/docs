@@ -1,5 +1,6 @@
 .. _dojox/widget/Pager:
 
+==================
 dojox.widget.Pager
 ==================
 
@@ -12,14 +13,12 @@ dojox.widget.Pager
 A Pager, displaying a list of sized nodes.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -32,7 +31,6 @@ Usage
 This Widget uses dojo.data, Dojo's uniform and consistent data access layer.
 
 
-========
 Examples
 ========
 
@@ -74,7 +72,6 @@ Declarative example: Horizontal Pager
     </div>
 
 
-========
 See also
 ========
 

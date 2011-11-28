@@ -1,5 +1,6 @@
 .. _dojox/form/manager/index:
 
+==================
 dojox.form.manager
 ==================
 
@@ -11,7 +12,6 @@ dojox.form.manager
 .. contents::
    :depth: 3
 
-============
 Introduction
 ============
 
@@ -129,7 +129,6 @@ We extended the previous example with observers and included required observers 
 * Lines ##9-13 define ``disabler()`` observer. Just like ``log()`` it uses the same two parameters. It will disable the controlled widget/node when the length of its text value exceeds 5. Note that on line #11 it uses ``this``, which is the form manager object of that form.
 * Lines ##14-16 define a simple event handler ``clicked()``, which doesn't use any parameters, and prints a static text.
 
-==========
 Components
 ==========
 
@@ -171,7 +170,6 @@ This architecture provides for ultimate flexibility. All functionality is in mix
 
 Please refer to documentation of individual mixins and the widget for details of their API and implementation.
 
-===============
 Available tests
 ===============
 

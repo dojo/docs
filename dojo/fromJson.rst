@@ -1,5 +1,6 @@
 .. _dojo/fromJson:
 
+=============
 dojo.fromJson
 =============
 
@@ -10,7 +11,6 @@ dojo.fromJson
 
 Parses a JSON string to return a JavaScript object.
 
-============
 Introduction
 ============
 
@@ -38,7 +38,6 @@ This function creates a JavaScript object from a passed JSON string, such as one
     }
   });
 
-=====
 Usage
 =====
 
@@ -66,7 +65,6 @@ Dojo < 1.7
   console.log(obj.a, obj.b, obj.c);
   >>> one 3 true
 
-========
 See also
 ========
 

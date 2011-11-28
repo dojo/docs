@@ -1,5 +1,6 @@
 .. _dijit/_CssStateMixin:
 
+====================
 dijit._CssStateMixin
 ====================
 
@@ -10,7 +11,6 @@ dijit._CssStateMixin
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ _CssStateMixin serves two functions:
    - for the semantic state updating (disabled, checked, selected, etc.)
 
 
-========
 Examples
 ========
 
@@ -30,7 +29,6 @@ _CssStateMixin will, fox example, set classes dijitCheckboxHover if a checkbox i
 
 More complicated widgets also set class names on sub nodes when they are hovered/pressed/focused.   For example, the Slider widget has hover and active effects on the left/right arrows and the slider handle itself.
 
-=====
 Usage
 =====
 

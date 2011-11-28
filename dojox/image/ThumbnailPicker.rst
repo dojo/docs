@@ -1,5 +1,6 @@
 .. _dojox/image/ThumbnailPicker:
 
+===========================
 dojox.image.ThumbnailPicker
 ===========================
 
@@ -14,7 +15,6 @@ dojox.image.ThumbnailPicker
 A :ref:`dojo.data-powered <dojo/data>` ThumbnailPicker.
 
 
-============
 Introduction
 ============
 
@@ -31,7 +31,6 @@ The ThumbnailPicker can be configured in a number of ways:
     * Enabling/disabling following hyperlinks when an image is selected
     * Notification of load status for images
 
-========
 Examples
 ========
 
@@ -189,7 +188,6 @@ of settings, and uses the FlickrRestStore data store.
       <style>
 
 
-========
 See also
 ========
 

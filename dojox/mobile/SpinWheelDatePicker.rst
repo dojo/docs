@@ -1,5 +1,6 @@
 .. _dojox/mobile/SpinWheelDatePicker:
 
+================================
 dojox.mobile.SpinWheelDatePicker
 ================================
 
@@ -14,7 +15,6 @@ SpinWheelDatePicker  is a date picker widget. It is a subclass of dojox.mobile.S
 
 .. image:: SpinWheelDatePicker.png
 
-=====
 Usage
 =====
 
@@ -26,7 +26,6 @@ SpinWheelDatePicker is in a separate module file from _base.js. You need to dojo
 
   dojo.require("dojox.mobile.SpinWheelDatePicker");
 
-========
 Examples
 ========
 

@@ -1,12 +1,12 @@
 .. _quickstart/data/usingdatastores/filteringitems:
 
+===========================
 Selecting (Filtering) items
 ===========================
 
 .. contents::
   :depth: 3
 
-========
 Querying
 ========
 
@@ -68,7 +68,6 @@ Once we have constructed the query, we pass it to fetch() along with the other p
     ...
   });
 
-====================================
 Case sensitivity and other modifiers
 ====================================
 
@@ -86,7 +85,6 @@ That's great, but what if I don't care about case sensitivity?  Dojo.data also p
 So,in general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
 
 
-=====================
 Flexible store syntax
 =====================
 
@@ -96,7 +94,6 @@ Therefore, the dojo.data API defines basic guidelines and syntax stores that can
 
   **Note:** dojo.data recommends that stores generally use the dojo.data.ItemFileReadStore syntax, because it is fairly generic, works well in javascript, and can be mapped into other native syntaxes easily. Nearly all, if not all, datastores provided in the dojox.data module use the exact same syntax and will under the covers map it to the native syntaxes needed by the back-end services that provide the data store query and return (for remote data stores), and in-memory datastores, such as dojo.data.ItemFileReadStore work well with the structured JavaScript format.
 
-========
 Examples
 ========
 

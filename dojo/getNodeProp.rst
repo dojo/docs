@@ -1,5 +1,6 @@
 .. _dojo/getNodeProp:
 
+================
 dojo.getNodeProp
 ================
 
@@ -11,7 +12,6 @@ dojo.getNodeProp
 Returns a property value falling back to an attribute, if property is not available.
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ There is no corresponding ``dojo.setNodeProp``. If you want to set a property va
 
 Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the ``getNodeProp`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -44,7 +43,6 @@ attr
   the attribute property name.
 
 
-========
 Examples
 ========
 
@@ -107,7 +105,6 @@ The following example reads effective values from the ``input`` node.
     <p id="out"></p>
 
 
-========
 See also
 ========
 

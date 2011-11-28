@@ -1,5 +1,6 @@
 .. _dojo/body:
 
+=========
 dojo.body
 =========
 
@@ -13,7 +14,6 @@ dojo.body
 Returns the body element of the document.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ This is a shorthand ``method`` for accessing the `<body>` element within the doc
 
 `dojo.body` is a very simple function with one purpose:
 
-=====
 Usage
 =====
 

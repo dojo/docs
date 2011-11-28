@@ -1,5 +1,6 @@
 .. _dijit/form/NumberSpinner:
 
+========================
 dijit.form.NumberSpinner
 ========================
 
@@ -13,7 +14,6 @@ dijit.form.NumberSpinner
 The NumberSpinner is similar to :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`, but makes integer entry easier when small adjustments are required.
 
 
-=====
 Usage
 =====
 
@@ -21,7 +21,6 @@ Usage
 * Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
 
 
-========
 Examples
 ========
 
@@ -127,7 +126,6 @@ If you'd like onChange to fire after every button click, set the attribute inter
       &nbsp;&nbsp;&nbsp;
     </span>
 
-=============
 Accessibility
 =============
 

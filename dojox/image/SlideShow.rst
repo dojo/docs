@@ -1,5 +1,6 @@
 .. _dojox/image/SlideShow:
 
+=====================
 dojox.image.SlideShow
 =====================
 
@@ -11,7 +12,6 @@ dojox.image.SlideShow
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -28,7 +28,6 @@ The Slideshow widget has the following features.
     * Displays the title of each image, using a template that can be simply overridden.
 
 
-========
 Examples
 ========
 
@@ -220,7 +219,6 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
 
 
-==========
 See Also
 ==========
 For a full example of the Slideshow, see the test file at

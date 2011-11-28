@@ -1,5 +1,6 @@
 .. _dojo/subscribe:
 
+==============
 dojo.subscribe
 ==============
 
@@ -12,13 +13,11 @@ dojo.subscribe
 
 Linked a listener to a named topic.
 
-============
 Introduction
 ============
 
 Subscribe is a part of the the Dojo Topic system used to register a function listening to a named channel. The channel is sent data via :ref:`dojo.publish <dojo/publish>`.
 
-=====
 Usage
 =====
 

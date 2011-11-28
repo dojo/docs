@@ -1,5 +1,6 @@
 .. _dojox/data/OpmlStore:
 
+====================
 dojox.data.OpmlStore
 ====================
 
@@ -76,7 +77,6 @@ The following example shows an Opml data source:
 
 Each data item is one of the <outline> tags. Each attribute on the outline acts as a attribute of the data item. For children tags, they are accessed via a special 'children' attribute. So, as expected by dojo.data, everything can be easily accessed via csvStore.getValue's'(), which makes it pluggable into dojo.data aware widgets.
 
-==================
 Constructor Params
 ==================
 
@@ -96,13 +96,11 @@ Constructor Params
 |urlPreventCache | No           |Flag denoting whether or not browser caching should be avoided.  Defaults to false.             | 1.4       |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
-============
 Query Syntax
 ============
 
 The query syntax used by dojox.data.OpmlStore is identical to the query syntax used by :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
-=============
 Query Options
 =============
 
@@ -117,7 +115,6 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 | deep       |Default is *false*. By default, only root outline tags are matched. By setting to true, children tags are also scanned  |
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

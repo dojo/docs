@@ -1,5 +1,6 @@
 .. _quickstart/internationalization/globalization-guidelines/index:
 
+========================
 Globalization Guidelines
 ========================
 
@@ -11,7 +12,6 @@ Globalization Guidelines
 .. contents::
    :depth: 2
 
-========
 Overview
 ========
 
@@ -24,7 +24,6 @@ Dojo addressed the globalization features at the very beginning of its developme
 Use the following guidelines to implement internationalization.
 
 
-===========================================================================================================
 :ref:`Encoding Guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
 ===========================================================================================================
 
@@ -37,7 +36,6 @@ Use the following guidelines to implement internationalization.
 * :ref:`You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`
 
 
-===============================================================================================================================================
 :ref:`Locale and Resource Bundle Guidelines <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
 ===============================================================================================================================================
 
@@ -47,7 +45,6 @@ Use the following guidelines to implement internationalization.
 * :ref:`You may make a build to include resource bundles in the locales that you use. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`
 
 
-==============================
 String Manipulation Guidelines
 ==============================
 
@@ -63,7 +60,6 @@ String Manipulation Guidelines
 * You must check the return value of String.charAt() when the string contains surrogates.
 
 
-====================================
 Formatting and Validation Guidelines
 ====================================
 
@@ -73,7 +69,6 @@ Formatting and Validation Guidelines
 * You should not hard-code patterns and locales when formatting data.
 
 
-========================
 Dijit Widgets Guidelines
 ========================
 

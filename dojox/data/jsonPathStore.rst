@@ -1,5 +1,6 @@
 .. _dojox/data/jsonPathStore:
 
+========================
 dojox.data.jsonPathStore
 ========================
 
@@ -16,14 +17,12 @@ Note: This API was removed for the Dojo 1.4 release. http://svn.dojotoolkit.org/
 
 A local (in memory) store which can attach a dojo.data interface to each JavaScript object and uses jsonPath as the query language. It takes an arbitrary JavaScript object as its data structure and attaches to this data structure to present a dojo.data.api interface. Each JavaScript object in the store is an Item in dojo.data parlance.
 
-============
 Introduction
 ============
 
 JsonPathStore is intended to allow any Object data structure to easily be accessed and controlled by various widgets. It uses :ref:`JsonPath <dojox/JsonPath>` as a query language. It is a very lightweight server, yet it is flexible enough to allow you to define a single store maintaining several unrelated data sets in a single store. Furthermore, it implements a synchronous mode which makes manipulation of the store possible when appropriate for an application.
 
 
-==============
 Supported APIs
 ==============
 
@@ -57,7 +56,6 @@ Two additional notification events are also triggered in this store, onSave() an
 events have completed.
 
 
-=====
 Usage
 =====
 
@@ -114,7 +112,6 @@ mode: dojox.data.ASYNC_MODE || dojox.data.SYNC_MODE
   Sync calls return their data immediately from the calling function instead of calling the callback functions. Functions such as fetchItemByIdentity() and fetch() both accept a string parameter in addition to the normal keywordArgs parameter. When passed this option, SYNC_MODE will automatically be used even when the default mode of the system is ASYNC_MODE. A normal request to fetch or fetchItemByIdentity (with kwArgs object) can also include a mode property to override this setting for that one request.
 
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dijit/_HasDropDown:
 
+==================
 dijit/_HasDropDown
 ==================
 
@@ -11,13 +12,11 @@ dijit/_HasDropDown
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 dijit/_HasDropDown is a dijit Widget mixin that provides drop-down menu functionality. Widgets like :ref:`dijit/form/Select <dijit/form/Select>`, :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`, :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/form/DateTextBox <dijit/form/DateTextBox>` all use dijit/_HasDropDown to implement their drop-down functionality.
 
-=====
 Usage
 =====
 
@@ -44,7 +43,6 @@ Then, either set the value of :ref:``HasDropDown.dropDown`` to an existing widge
 
 Or, override the :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see `Dynamic & lazy-loading drop-downs`_, below).
 
-========================
 Optional node properties
 ========================
 
@@ -110,7 +108,6 @@ By default, _HasDropDown assumes that a dijit widget has been created and assign
       });
   });
 
-========
 See also
 ========
 

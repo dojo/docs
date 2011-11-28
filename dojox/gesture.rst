@@ -1,5 +1,6 @@
 .. _dojox/gesture:
 
+=============
 dojox.gesture
 =============
 
@@ -10,14 +11,12 @@ dojox.gesture
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 This module provides a machinery for writing unified gesture events which can run well across a wide range of devices(most single touch gesture events can also work well on desktops).
 
 
-=========
 Rationale
 =========
 
@@ -35,7 +34,6 @@ The most key thing dojox/gesture does is standardizing touch and gesture events 
 .. image:: gesture2.jpg
 
 
-======
 Usages
 ======
 
@@ -73,7 +71,6 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 
 
 
-==================
 dojox/gesture/Base
 ==================
 
@@ -86,7 +83,6 @@ The common parental class for all gesture implementations. It takes most routine
 3. Fire and bubble gesture events.
 
 
-=================
 dojox/gesture/tap
 =================
 
@@ -131,8 +127,7 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 
 There are also several configurable parameters in dojox/gesture/tap
 
-==================  ================================================================================================
-Option              Description
+==================  Option              Description
 ==================  ================================================================================================
 tapRadius           Default is 10, used in "tap.doubletap" to validate whether the second tap is in the valid radius
 holdThreshold       Default is 500, the minimal time(in milliseconds) to trigger a "tap.hold"
@@ -158,7 +153,6 @@ The above parameters are supposed to be only changed seldomly with the following
   
   
   
-===================
 dojox/gesture/swipe
 ===================
 
@@ -211,8 +205,7 @@ It can be used in following ways:
   
 Some swipe related information will also be provided in the fired "swipe" or "swipe.end" event:
 
-==================  ================================================================================================
-Event property      Description
+==================  Event property      Description
 ==================  ================================================================================================
 type                "swipe" or "swipe.end"
 time                An integer indicating the delta time(in milliseconds)
@@ -221,7 +214,6 @@ dy                  Delta distance on Y axis, dy < 0 means is moving up, dy > 0 
 ==================  ================================================================================================
 
 
-=============================
 Bubble the gesture event
 =============================
 
@@ -247,7 +239,6 @@ The following sample shows how we can easily stop a gesture event from bubbling 
 
   
 
-===================
 Write a new gesture
 ===================
 
@@ -303,7 +294,6 @@ Then we can define the rotate gesture like:
   </script>
 
 
-====
 Demo
 ====
 The `Touch & Gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_ shows how dijit/form/HorizontalSlider and dojo/dnd are now running well on iOS4+ with the new dojo/touch and dojox/gesture.
@@ -311,7 +301,6 @@ The `Touch & Gesture demo <http://demos.dojotoolkit.org/demos/touch/demo.html>`_
 Besides a tap gesture, the demo also shows how easy it is to write a new rotate gesture with multiple touch support.
   
 
-========================
 Supported devices in 1.7
 ========================
 
@@ -325,7 +314,6 @@ dojox/gesture is working well with:
 - iOS 3/4
 
 
-============
 Future plan
 ============
 

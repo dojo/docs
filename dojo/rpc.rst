@@ -1,5 +1,6 @@
 .. _dojo/rpc:
 
+========
 dojo.rpc
 ========
 
@@ -12,7 +13,6 @@ dojo.rpc
 dojo.rpc offers methods to communicate via Remote Procedure Calls (RPC) with Backend Servers.
 
 
-==================
 Available Services
 ==================
 
@@ -29,7 +29,6 @@ Available Services
   RPC service class
 
 
-========
 See also
 ========
 

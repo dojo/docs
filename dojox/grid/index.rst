@@ -1,5 +1,6 @@
 .. _dojox/grid/index:
 
+==========
 dojox.grid
 ==========
 
@@ -29,14 +30,12 @@ Dojo Toolkit offers three different Grid widgets:
   .. image:: TreeGrid.png
 
 
-================================
 Old (deprecated) dojox.grid.Grid
 ================================
 
 Dojo Toolkit V1.1 offered an old version of the grid as dojox.grid.Grid. This old version has changed with Dojo Toolkit V1.2 but is still available for compatible reasons. It is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (V1.1) Grid.
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/destroy:
 
+============
 dojo.destroy
 ============
 
@@ -12,7 +13,6 @@ dojo.destroy
 Destroys a DOM element. dojo.destroy deletes all children and the node itself.
 
 
-============
 Introduction
 ============
 
@@ -20,7 +20,6 @@ dojo.destroy removes a node from its parent, clobbering it and all of its childr
 
 Since Dojo 1.7, ``dojo.destroy`` is exposed via the ``destroy`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -55,14 +54,11 @@ Dojo < 1.7
 
 This function only works with DomNodes, and returns nothing.
 
-=========  ==============  =============================================================================
-Parameter  Type            Description
-=========  ==============  =============================================================================
-node       String|DomNode  A String ID or DomNode reference of the element to be destroyed.
+=========  ==============  Parameter  Type            Description
+=========  ==============  node       String|DomNode  A String ID or DomNode reference of the element to be destroyed.
 =========  ==============  =============================================================================
 
 
-========
 Examples
 ========
 
@@ -154,7 +150,6 @@ Destroy all nodes in a list by reference
     <div id="result2"></div>
 
 
-========
 See also
 ========
 

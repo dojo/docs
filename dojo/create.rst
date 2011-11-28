@@ -1,5 +1,6 @@
 .. _dojo/create:
 
+===========
 dojo.create
 ===========
 
@@ -11,7 +12,6 @@ dojo.create
 A convenient DOM creation, manipulation and placement utility shorthand.
 
 
-============
 Introduction
 ============
 
@@ -27,7 +27,6 @@ To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>`
 
 Since Dojo 1.7, ``dojo.create`` is exposed via the ``create`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -45,8 +44,7 @@ The function takes up to four arguments:
 
 Here is the definition of arguments:
 
-=========  ===========  =======================================================
-Parameter  Type         Description
+=========  ===========  Parameter  Type         Description
 =========  ===========  =======================================================
 tag        String|Node  Can be a string or a DOM node. If it is a string, it
                         will be treated as a node tag name, which will be used
@@ -108,7 +106,6 @@ Dojo < 1.7
   var node = dojo.create("div");
 
 
-========
 Examples
 ========
 
@@ -204,7 +201,6 @@ Create an anchor, with an href. Place in <body>:
   // dojo < 1.7
   dojo.create("a", { href: "foo.html", title: "Goto FOO!", innerHTML: "link" }, dojo.body());
 
-============
 Alternatives
 ============
 
@@ -257,7 +253,6 @@ While you can use dojo.create to set attributes on the existing node without pla
   // dojo < 1.7
   dojo.attr(node, "innerHTML", "<p>hi</p>");
 
-========
 See also
 ========
 

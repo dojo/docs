@@ -1,5 +1,6 @@
 .. _quickstart/data/usingdatastores/faq:
 
+=============
 dojo.data FAQ
 =============
 
@@ -8,14 +9,12 @@ dojo.data FAQ
 
 This section is intended as a point to put answers to the common questions posed by users of dojo.data.
 
-====================================================================================================================
 Question 1:  I called fetch() on a datastore and the return value from the fetch function doesn't have my data! Why?
 ====================================================================================================================
 
 Because the dojo.data API is asynchronous be definition. The return value from fetch will generally not have any data on it. It's intended as a point for stores to store an abort() function for a request and a place for stores to put internal cache details and the like. It is not intended to hand back data items. Data items are always returned through the callbacks to fetch().
  
 
-==========================================================================================================================================
 Question 2:  I introspected items from ItemFileReadStore using javascript associative map walking and it has all these '_' variables! Why?
 ==========================================================================================================================================
 
@@ -27,7 +26,6 @@ All store access should go through the :ref:`dojo.data.api.Read <dojo/data/api/R
 * **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item. For multi-valued attributes, you should use store.getValues(item, attribute);
 
 
-==============================================================================================================================
 Question 3:  Okay, you say dojo.data items are opaque ... but I would like to convert them to a JSON object. How do I do that?
 ==============================================================================================================================
 
@@ -79,7 +77,6 @@ This is actually not difficult to do. This is done through usage of the dojo.dat
   }
 
 
-===========================================================================================================================
 Question 4:  Okay, I want to copy items from one store to another, but if I directly pass items I get errors. What do I do?
 ===========================================================================================================================
 
@@ -119,13 +116,11 @@ By definition, items are unique to their store instance, so you cannot generally
   }
   origStore.fetch({query:{} , onComplete: onComplete});
 
-===============================================================================================
 Question 5:  With ItemFileReadStore and ItemFileWriteStore, how do I reload the store contents?
 ===============================================================================================
 
 Use the two constructor options added in 1.2, *clearOnClose* and *urlPreventCache*. Then when you want to reload, call close(). It will flush the internal store structures and reload everything from the server or whatnot.
 
-==============================================================
 Question 6:  How do I get a count of all items in a datastore?
 ==============================================================
 
@@ -146,19 +141,16 @@ The reason for this is that not all stores keep every item in memory in the brow
 
 The data API was designed to hide whether or not all items are in memory, or are stored on some remote service.
 
-========================================================================================
 Question 7:  Do all datastores have to use the format of data used by ItemFileReadStore?
 ========================================================================================
 
 No. A store's internal data format can be whatever is most efficient for that store to work with. For example, dojox.data.XmlStore's input data format is XML, not JSON. The API is intended to adapt over new as well as existing, data services on the web and expose data items on a common fashion, regardless of the actual backing transport format.
 
-==============================================================================================================
 Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server. Why?
 ==============================================================================================================
 
 Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides an overridable hook functions that users must provide in order to send data to an external service. See the :ref:`Write Section <dojo/data/ItemFileWriteStore>` of the ItemFileWriteStore docs.
 
-=================================================================================================================================================================================
 Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object. When I access it through store.getValue(), it has been modified. Why?
 =================================================================================================================================================================================
 
@@ -167,7 +159,6 @@ attributes on it should also be accessed through store functions, such as getVal
 
 If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters. See the :ref:`custom types <dojo/data/ItemFileReadStore>` documentation for more details.
 
-==================================================================================================================================================================================================================================
 Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier. The store blows up with an error about no identifier when fetching. Why does it care?
 ==================================================================================================================================================================================================================================
 

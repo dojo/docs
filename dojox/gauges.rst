@@ -1,5 +1,6 @@
 .. _dojox/gauges:
 
+============
 dojox.gauges
 ============
 
@@ -11,7 +12,6 @@ dojox.gauges
 
 This is a collection of gauge widgets used to display numerical data.
 
-===========
 Base gauges
 ===========
 
@@ -22,7 +22,6 @@ Base gauges
   A horizontal bar gauge with a few indicators, used to display numerical data
   
 
-========================================
 Predefined gauges with glossy appearance
 ========================================
 

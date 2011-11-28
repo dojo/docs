@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/Blockquote:
 
+===============================
 dojox.editor.plugins.Blockquote
 ===============================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.Blockquote
 
 Have you ever wanted to set apart a section of text in your document as a 'quotation' of something someone else has said?  Have you ever wanted to remove quotation indication from a section of text in your document?  If so, then this plugin is for you!
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Handles blockquoting a section from current cursor position as well as blockquoting the selected section of the document as best it can determine.
 * Updates its blockquote status based on whether or not the cursor is positioned inside a blockquoted section of the document.
 
-=====
 Usage
 =====
 
@@ -54,7 +53,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Blockqupte plugin!  You can use the button to toggle the quotation mode of the text underneath the cursor in the document, or across a selection of text in the document.
 
-========
 Examples
 ========
 
@@ -108,7 +106,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

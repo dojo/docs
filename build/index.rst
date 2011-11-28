@@ -1,5 +1,6 @@
 .. _build/index:
 
+=====================
 The Dojo Build System
 =====================
 
@@ -7,7 +8,6 @@ The Dojo Build System
 :Version: 1.7+
 :Author: Rawld Gill
 
-=====================
 The Dojo Build System
 =====================
 
@@ -33,7 +33,6 @@ All historical documentation for that system is listed at
 :ref:`Quick Reference for Optimization Build Program <build/qref>`
   A quick reference manual for all build system switches and knobs.
 
-==================================
 Deployment Optimization Transforms
 ==================================
 
@@ -88,7 +87,6 @@ for complete documentation.
 :ref:`writeOptimized <build/transforms/writeOptimized>`
   Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
 
-==========================================
 The Dojo Build System Prior to version 1.7
 ==========================================
 

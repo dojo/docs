@@ -1,5 +1,6 @@
 .. _dojox/html/format:
 
+=================
 dojox.html.format
 =================
 
@@ -16,13 +17,11 @@ Have you ever wanted to format some HTML that came out of a textarea?  Or the di
 
 **dojox.html.format** package offers additional HTML helper functions for formatting HTML text.
 
-========
 Features
 ========
 
 This package was created as a general purpose helper library for formatting HTML text markup.  It currently contains one function, 'prettyPrint', which is intended to take a fragment of HTML text (usually the innerHTML of a document body)  and format it so it is human readable.
 
-===========
 Usage Notes
 ===========
 
@@ -36,7 +35,6 @@ Usage Notes
 
 * Internet Explorer does not always keep <script> tags in certain cases.  Sometimes they are available and thus format-able, sometimes not.  I wish this were not true, but alas it is.  Internet explorer has a tendency to just delete nodes from documents if it thinks they're in the wrong spot, which then makes it impossible to serialize out in a nice format (when using the browser renderer to give you the tree structure).
 
-=========
 Functions
 =========
 
@@ -69,7 +67,6 @@ The 'prettyPrint function takes one required parameter and several optional ones
 |                                   |unclosed tags <hr>, <br>, etc, as XHTML compatible <hr />, <br /> ...|                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 
-========
 Examples
 ========
 

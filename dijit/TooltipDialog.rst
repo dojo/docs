@@ -1,5 +1,6 @@
 .. _dijit/TooltipDialog:
 
+===================
 dijit.TooltipDialog
 ===================
 
@@ -12,7 +13,6 @@ dijit.TooltipDialog
 A variant on Dialog Box is dijit.TooltipDialog.
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by
 A TooltipDialog can only be opened as a drop down from another widget, usually `dijit.form.DropDownButton`.
 
 
-========
 Examples
 ========
 
@@ -128,15 +127,13 @@ Here's one displaying a TooltipDialog:
     </div>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-============================================================    =================================================
-Action                                                          Key
+============================================================    Action                                                          Key
 ============================================================    =================================================
 Navigate to next focusable element in the tooltip dialog	tab
 Navigate to previous focusable element in the tooltip dialog	shift-tab

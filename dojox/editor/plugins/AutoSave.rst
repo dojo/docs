@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/AutoSave:
 
+====================================================
 dojox.editor.plugins.AutoSave (Under Construction)
 ====================================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.AutoSave (Under Construction)
 
 Have you ever wanted to save your editing content at intervals so that you won't lose it by accident? This plugin is for you.
 
-========
 Features
 ========
 
@@ -21,7 +21,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Save the content immediately with one click.
 * Set the save interval and save the content at intervals.
 
-=====
 Usage
 =====
 
@@ -63,8 +62,7 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  =============================================================================
-Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  =============================================================================
 name                      String             False         autosave                 The name of this plugin. It should always be "autosave".
 url                       String             False         <empty string>           The service url which the content of the editor is submitted to.
@@ -83,7 +81,6 @@ AutoSave uses POST method to pass the current content to the server-side piece. 
 
   print(htmlentities($HTTP_RAW_POST_DATA));
 
-==============
 User Interface
 ==============
 
@@ -123,19 +120,16 @@ After the text being saved automatically, a tooltip dialog will be displayed to 
 
 .. image :: IntervalSaved.png
 
-===================
 A11Y Considerations
 ===================
 
 All fields within the Auto-Save dialog can be accessed with the keyboard.
 
-===========
 Limitations
 ===========
 
 None.
 
-========
 Examples
 ========
 
@@ -188,7 +182,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

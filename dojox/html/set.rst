@@ -1,5 +1,6 @@
 .. _dojox/html/set:
 
+==============
 dojox.html.set
 ==============
 
@@ -12,7 +13,6 @@ dojox.html.set
 
 Extensions to content setting utilities in dojo.html
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ dojox.html.set and its helper dojox.html._ContentSetter extend the content-setti
 Be careful: Loading content with script and style blocks is often a questionable practice. A more secure and recommended solution is, to load just pure data with the help of the available Dojo datastores. But beside this general principle, there are also valid use cases, and times when loading content with scripts is the only option available. In such cases, dojox.html.set() can help you.
 
 
-=====
 Usage
 =====
 
@@ -34,8 +33,7 @@ Usage
       renderStyles: true
   });
 
-===========  =======================  ======================================================================
-Parameter    Type                     Description
+===========  =======================  Parameter    Type                     Description
 ===========  =======================  ======================================================================
 node         DomNode  	              The parent element that will receive the content.
 content      String|DomNode|NodeList  The content to be set on the parent element. This can be an HTML string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes.
@@ -43,7 +41,6 @@ params       Object                   Optional. Optional flags/properties to con
 ===========  =======================  ======================================================================
 
 
-========
 Examples
 ========
 
@@ -77,7 +74,6 @@ Set content with styles
     <div id="myNode1">I'm an empty node</div>
 
 
-========
 See also
 ========
 

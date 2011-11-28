@@ -1,5 +1,6 @@
 .. _dijit/form/HorizontalRuleLabels:
 
+===============================
 dijit.form.HorizontalRuleLabels
 ===============================
 

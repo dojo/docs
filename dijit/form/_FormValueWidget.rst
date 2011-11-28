@@ -1,5 +1,6 @@
 .. _dijit/form/_FormValueWidget:
 
+===========================
 dijit.form._FormValueWidget
 ===========================
 

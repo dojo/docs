@@ -1,5 +1,6 @@
 .. _quickstart/gettingstarted:
 
+======================================
 Getting started with some simple steps
 ======================================
 
@@ -22,7 +23,6 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
 
 As the example below shows, animations, event handling, and a wealth of other utilities are instantly available:
 
-=======
 Example
 =======
 
@@ -56,7 +56,6 @@ Example
         click here to see how it works
     </div>
 
-========
 See also
 ========
 

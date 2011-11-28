@@ -1,5 +1,6 @@
 .. _dojox/mobile/TextBox:
 
+====================
 dojox.mobile.TextBox
 ====================
 
@@ -15,7 +16,6 @@ dojox.mobile.TextBox
 TextBox is a very simple INPUT widget.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -41,7 +41,6 @@ Constructor Parameters
 |propercase    |Boolean   | false        |Convert text to propercase (Leading Uppercase).                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

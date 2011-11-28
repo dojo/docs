@@ -1,5 +1,6 @@
 .. _dojox/mvc/StatefulModel:
 
+=======================
 dojox.mvc.StatefulModel
 =======================
 
@@ -17,7 +18,6 @@ The first-class native JavaScript data model based on dojo.Stateful that wraps a
 
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -31,7 +31,6 @@ Constructor Parameters
 |            |         |                    | provided along with this store. Either data or store property must be provided.                        |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 
-=================
 Available Methods
 =================
 
@@ -76,7 +75,6 @@ Returns the string representation of the data currently within this data model.
 
 
 
-=====
 Usage
 =====
 

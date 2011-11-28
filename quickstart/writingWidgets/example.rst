@@ -1,5 +1,6 @@
 .. _quickstart/writingWidgets/example:
 
+==============================
 Building a widget from scratch
 ==============================
 

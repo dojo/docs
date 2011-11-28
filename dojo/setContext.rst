@@ -1,5 +1,6 @@
 .. _dojo/setContext:
 
+===============
 dojo.setContext
 ===============
 
@@ -11,7 +12,6 @@ dojo.setContext
 Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup.
 
 
-============
 Introduction
 ============
 
@@ -55,7 +55,6 @@ This is because dojo stores many of the common global variables:
 By calling "dojo.setContext" (which modifies the convenience variables above), you can easily query another frame's content.
 
 
-=====
 Usage
 =====
 
@@ -81,7 +80,6 @@ Dojo < 1.7
   dojo.setContext(myIframe.contentWindow, myIframe.contentWindow.document);
 
 
-========
 Examples
 ========
 

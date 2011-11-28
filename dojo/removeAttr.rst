@@ -1,5 +1,6 @@
 .. _dojo/removeAttr:
 
+===============
 dojo.removeAttr
 ===============
 
@@ -11,7 +12,6 @@ dojo.removeAttr
 Removes an attribute.
 
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ Introduction
 
 Since Dojo 1.7, ``dojo.removeAttr`` is exposed via the ``remove`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -40,7 +39,6 @@ attr
   the attribute property name.
 
 
-========
 Examples
 ========
 
@@ -90,7 +88,6 @@ The following example will remove ``disabled`` from the ``input`` node.
     <p><input id="model" name="model" disabled="disabled" value="some text"> &mdash; our model node</p>
     <p><button onclick="remAttr();">Remove "disabled"</button></p>
 
-========
 See also
 ========
 

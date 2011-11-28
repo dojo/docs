@@ -1,5 +1,6 @@
 .. _quickstart/dom:
 
+=============
 DOM Utilities
 =============
 
@@ -11,13 +12,11 @@ DOM Utilities
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
 Dojo provides a host of DOM utility functions. This guide covers combined usage of :ref:`dojo.style <dojo/style>`, :ref:`dojo.create <dojo/create>`, :ref:`dojo.attr <dojo/attr>`, and a number of other base utilities for DOM convenience.
 
-========================
 Locating and Using Nodes
 ========================
 
@@ -152,7 +151,6 @@ It is very common to see the special global 'document' used throughout JavaScrip
 
 They have identical length in characters, but by using ``dojo.doc`` you are able to ensure your code will execute in switched contexts, such as iframes and popups. To switch the context for code that uses ``dojo.doc``, ``dojo.body()``, and ``dojo.global`` see the documentation for :ref:`dojo.setContext <dojo/setContext>`.
 
-==================
 Manipulating Nodes
 ==================
 
@@ -212,7 +210,6 @@ Node placement
 
 Where a node exists in the DOM is important.
 
-==============
 Creating Nodes
 ==============
 
@@ -220,8 +217,7 @@ Basic Nodes
 -----------
 The DOM document contains functions for creating each of the basic DOM node types.
 
-========= ======================
-Type      Function
+========= Type      Function
 ========= ======================
 element   createElement(tagName)
 text      createTextNode(data)
@@ -256,7 +252,6 @@ In order to destroy a single node or a list of nodes, Dojo Toolkit provides the 
   * dojo._destroyElement(node);
 
 
-========
 See also
 ========
 

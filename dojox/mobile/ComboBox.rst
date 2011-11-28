@@ -1,5 +1,6 @@
 .. _dojox/mobile/ComboBox:
 
+=====================
 dojox.mobile.ComboBox
 =====================
 
@@ -21,7 +22,6 @@ On FORM submit, the displayed text value of a non-disabled ComboBox widget is su
 ComboBox widgets are dojo.store-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.store fetch them from a server-based store. The unified dojo.store architecture can get its data from various places such as databases and web services. See the new :ref:`Dojo Object Store API <dojo/store>` section for complete details.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -49,7 +49,6 @@ Constructor Parameters
 |propercase    |Boolean   | false        |Convert text to propercase (Leading Uppercase).                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

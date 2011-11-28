@@ -1,5 +1,6 @@
 .. _dijit/info:
 
+==================
 Dijit Introduction
 ==================
 
@@ -10,7 +11,6 @@ Dijit Introduction
 
 *Dijit* is a widget system layered on top of Dojo. If you are new to the whole :ref:`Dojo experience <dojo/index>`, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML and CSS).
 
-============
 Dijit Basics
 ============
 
@@ -99,7 +99,6 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
   dialog.show();
 
 
-==========
 Attributes
 ==========
 
@@ -165,7 +164,6 @@ There are several attributes common to (most) all Dijit instances. These appear 
   dialog.declaredClass == "dijit.Dialog" // true
 
 
-======
 Events
 ======
 The other interface for dealing with widgets is to setup event handlers.   For example:
@@ -188,7 +186,6 @@ Event handlers can be setup programmatically (as above), or declaratively, like:
      Click me!
   </div>
 
-======
 Themes
 ======
 
@@ -199,7 +196,6 @@ You can override the theme by container or by widget element to add nuance and f
 To learn more about themes, see :ref:`Dijit Themes and Theming <dijit/themes>`.
 
 
-===============
 Dijit i18n/a11y
 ===============
 
@@ -210,7 +206,6 @@ no assumptions about local conventions.  All widgets are keyboard accessible and
 in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users 
 are treated equally.
 
-================
 Locating Widgets
 ================
 
@@ -261,7 +256,6 @@ Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit
 
 There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit.registry <dijit/registry>`, a collection of all widgets active on a page.
 
-==================
 Behavioral widgets
 ==================
 
@@ -299,7 +293,6 @@ This comes naturally if you are instantiating from markup.  For example, a behav
 Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit.
 
 
-========
 See also
 ========
 

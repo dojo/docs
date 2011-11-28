@@ -1,5 +1,6 @@
 .. _dojo/contentHandlers:
 
+====================
 dojo.contentHandlers
 ====================
 
@@ -12,7 +13,6 @@ dojo.contentHandlers
 dojo.contentHandlers is an object containing several pre-defined "handlers" for Ajax traffic, exposed as a public API to allow your own custom handlers to be mixed in.
 
 
-=====
 Usage
 =====
 
@@ -67,7 +67,6 @@ There are several pre-defined contentHandlers available to use. The value repres
 * **json-comment-optional** - A handler which detects the presence of a filtered response and toggles between json or json-comment-filtered appropriately.
 
 
-========
 Examples
 ========
   
@@ -283,7 +282,6 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
     };
 
 
-=====
 Notes
 =====
 

@@ -1,5 +1,6 @@
 .. _dojo/xhrDelete:
 
+==============
 dojo.xhrDelete
 ==============
 
@@ -9,7 +10,6 @@ dojo.xhrDelete
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -17,13 +17,11 @@ The dojo.xhrDelete() function is is a lesser used, but still important, function
 
 The following information should get you up and going with dojo.xhrDelete().  As with all dojo functions, always refer to the API docs for detailed information.
 
-===========
 Limitations
 ===========
 
 The general limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`.  Also be aware that your server side must permit the DELETE operation for this method to work with a server.  Some servers by default disable HTTP DELETE support.  So, when using this method be sure your server allows HTTP DELETE and that your services will understand and do the appropriate action.
 
-=====
 Usage
 =====
 
@@ -44,7 +42,6 @@ Handling Status Codes
 
 Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
-========
 Examples
 ========
 
@@ -97,7 +94,6 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <b>Result</b>
     <div id="response"></div>
 
-========
 See also
 ========
 

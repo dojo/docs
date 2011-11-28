@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/TextColor:
 
+==============================
 dojox.editor.plugins.TextColor
 ==============================
 
@@ -14,7 +15,6 @@ dojox.editor.plugins.TextColor
 
 Have you wanted a better text color selection plugin that allows for colors that span the entire RGB color space instead of the selected colors provided by :ref:`the dijit TextColor Plugin <dijit/_editor/plugins/TextColor>`  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar that make use of the dojox.widget.ColorPicker instead of the dijit.ColorPalette for color selection.
 
-========
 Features
 ========
 
@@ -30,7 +30,6 @@ Once required in and enabled, this plugin provides the following features to dij
     hiliteColor - Enable the text background color plugin.
 
 
-=====
 Usage
 =====
 
@@ -61,14 +60,12 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the dojox variant of the TextColor plugin!  You can use the buttons to alter the colors of selected text.
 
-===========
 Limitations
 ===========
 
 * The dojox.widget.ColorPicker has some CSS issues when combined with certain themes on certain browsers.  For example, claro theme on Google Chrome renders a bit off.
 * The plugin is **not** A11Y (accessibility) compliant since the dojox.widget.ColorPicker is not A11Y compliant.
 
-========
 Examples
 ========
 
@@ -225,7 +222,6 @@ Basic Usage: Both foreground and background color buttons together
     </ul>
     </div>
 
-========
 See Also
 ========
 

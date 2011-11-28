@@ -1,5 +1,6 @@
 .. _dojox/grid/DataGrid:
 
+===================
 dojox.grid.DataGrid
 ===================
 
@@ -14,7 +15,6 @@ dojox.grid.DataGrid
 
 A visual grid/table much like a spreadsheet.
 
-============
 Introduction
 ============
 
@@ -91,7 +91,6 @@ A structure is an array of views and a view is an array of cells.
 This Widget inherits from dojo.grid._Grid and hence all methods and properties pertaining to that Widget also apply here.
 
 
-=====
 Usage
 =====
 
@@ -383,7 +382,6 @@ Assuming that you know the row index and the name of the column whose value you 
   var value = grid.store.getValue(grid.getItem(rowIndex), name);
 
 
-===================================================
 IMPORTANT INFORMATION about Formatting and Security
 ===================================================
 
@@ -396,7 +394,6 @@ Site developers who can guarantee that their data is safe can add a formatter fu
 
 Finally, you can use the escapeHTMLInData option - however, this is `VERY HIGHLY DISCOURAGED` as it opens your application up to XSS attacks.
 
-========
 Examples
 ========
 
@@ -1262,7 +1259,6 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
 
 
-====
 Tips
 ====
 
@@ -1335,15 +1331,13 @@ But please note:
 
 
 
-===============================
 Accessibility in 1.3 and Beyond
 ===============================
 
 Keyboard
 --------
 
-==============================================    ===============================================
-Action                                            Key
+==============================================    Action                                            Key
 ==============================================    ===============================================
 Navigate into the grid			                  The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
 Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
@@ -1380,7 +1374,6 @@ Screen Reader
 The DojoX DataGrid is a complicated widget created via Scripting.  It has been enabled with `WAI-ARIA <http://www.w3.org/WAI/intro/aria>`_  properties, but unfortunately the current browsers (Firefox 3.5+ and IE 8) and screen readers (JAWS 11) do not fully support all of those properties.  Thus, information about the grid readonly, row selection and column sort status are not spoken by the screen reader.  There is still additional work on the part of the screen reader for information about row and column headers to be correctly spoken as the user traverses the data cells. Better support is expected in future versions of the browsers and screen readers and the Dojox DataGrid will be updated, as necessary, to take advantage of the additional ARIA support.
 
 
-========
 See also
 ========
 

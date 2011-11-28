@@ -1,5 +1,6 @@
 .. _build/transforms/hasFixup:
 
+========================
 Build Transform hasFixup
 ========================
 
@@ -9,14 +10,12 @@ Build Transform hasFixup
 .. contents::
    :depth: 2
 
-=======
 Summary
 =======
 
 Transforms has.js expressions that reference static has feature values as presented in a profile into expressions that
 facilitate dead code removal by the Google Closure Compiler.
 
-===========
 Description
 ===========
 
@@ -169,7 +168,6 @@ Which would be reduced to
 
 By the Google Closure Compiler in simple mode.
 
-=============
 Profile Knobs
 =============
 
@@ -180,7 +178,6 @@ Profile Knobs
     ``staticHasFeatures`` maps may be provided from multiple profile resources. If more than one ``staticHasFeatures``
     property value is provided, then they are mixed on a per-has-feature basis in the order they appear on the command line.
 
-===============
 Source Location
 ===============
 

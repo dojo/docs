@@ -1,12 +1,12 @@
 .. _quickstart/data/usingdatastores/fetchmultiple:
 
+======================================
 **Fetching multiple items and values**
 ======================================
 
 .. contents::
   :depth: 3
 
-===========================
 Working with Multiple Items
 ===========================
 
@@ -52,7 +52,6 @@ The following example code fragment returns all items:
 
 That's great, but what is more useful is seeing a completely functional example.  In the following example, clicking a button retrieves a list of items and displays them.  Please note that this is a simple example using ItemFileReadStore, but the concepts it presents applies to all Data Stores.
 
-===================
 Functional Examples
 ===================
 
@@ -137,7 +136,6 @@ Loading all items through callbacks
     </span>
 
 
-==========================
 Working with Lots of Items
 ==========================
 
@@ -189,7 +187,6 @@ The following code fragment loads all items and streams them back into the page:
 
 Now, to demonstrate this concept in a functional example. In the following example, clicking a button retrieves a list of items and displays them.  Please note that this is a simple example using ItemFileReadStore, but the concepts it presents applies to all Data Stores.
 
-==========================
 Functional onItem Examples
 ==========================
 

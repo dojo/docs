@@ -1,5 +1,6 @@
 .. _dojo/hasAttr:
 
+============
 dojo.hasAttr
 ============
 
@@ -11,7 +12,6 @@ dojo.hasAttr
 Checks a node for the presence of an attribute.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ Since 1.4 it will return true for standard properties that can't have a correspo
 
 Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the ``has`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -45,7 +44,6 @@ result
   truthy, if the attribute is present, falsy otherwise
 
 
-========
 Examples
 ========
 
@@ -109,7 +107,6 @@ The following example will check for several attributes.
     <p><button onclick="checkAttributes();">Check attributes</button></p>
     <p id="out"></p>
 
-========
 See also
 ========
 

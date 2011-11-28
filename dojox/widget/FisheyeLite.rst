@@ -1,5 +1,6 @@
 .. _dojox/widget/FisheyeLite:
 
+========================
 dojox.widget.FisheyeLite
 ========================
 
@@ -14,7 +15,6 @@ dojox.widget.FisheyeLite
 A lightweight Fisheye effect component which animates during mouse movement over the widget.
 
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ This widget currently works by passing key/value pairs of css properties and rat
 
 In Dojo 1.3, passing an object as a named property allows better definition of the end values. The default behavior is still to multiply by ratio, but now one is able to specify a fixed end:, start: or unit: value to be passed directly to the animation.
 
-=====
 Usage
 =====
 
@@ -45,7 +44,6 @@ New in Dojo 1.3, you can optionally specify an object (instead of a multiplier) 
   new dojox.widget.FisheyeLite({ properties: { left: { end:100, unit:"px" } } }, "someNode");
 
 
-========
 Examples
 ========
 
@@ -117,7 +115,6 @@ This widget is one of the few official widgets which utilize the optional parame
    // make a new, different fisheye effect on someId:
    fish = new dojox.widget.FisheyeLite({}, "someId");
 
-========
 See also
 ========
 

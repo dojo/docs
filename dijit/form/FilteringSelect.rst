@@ -1,5 +1,6 @@
 .. _dijit/form/FilteringSelect:
 
+==========================
 dijit.form.FilteringSelect
 ==========================
 
@@ -13,7 +14,6 @@ dijit.form.FilteringSelect
 The FilteringSelect widget is a replacement for the native SELECT element.
 
 
-=====
 Usage
 =====
 
@@ -26,7 +26,6 @@ FilteringSelect widgets are dojo.data-enabled. This means rather than embedding 
 `note:` When using a DataStore with FilteringSelect, the store must implement the :ref:`Identity API <dojo/data/api/Identity>`.
 
 
-========
 Examples
 ========
 
@@ -495,7 +494,6 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
         name="state">
 
 
-=============
 Accessibility
 =============
 
@@ -522,7 +520,6 @@ JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted.
 When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.  Event the hidden previous choices / more choices options are spoken. This appears to be an issue with IE 8 and list items (which are uses to implement the option choices) and with IE 8 not honoring hidden items.
 
 
-========
 See Also
 ========
 

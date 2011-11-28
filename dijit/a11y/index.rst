@@ -1,5 +1,6 @@
 .. _dijit/a11y/index:
 
+==========================
 Dijit Accessibility (a11y)
 ==========================
 
@@ -13,7 +14,6 @@ It is important that all users can access applications built using Dojo. People 
 In addition, many countries require that Web content is accessible to all. Section 508 of the Disabilities Act requires the US Government to purchase accessible technology. Australia, Japan, Great Britain and the European Union all have accessibility regulations. Thus, it is important for the Dojo Toolkit to provide a way to build accessible applications.
 
 
-========================
 Web Accessibility Issues
 ========================
 

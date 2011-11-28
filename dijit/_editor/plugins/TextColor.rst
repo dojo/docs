@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/TextColor:
 
+===============================
 dijit._editor.plugins.TextColor
 ===============================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.TextColor
 
 Have you ever wanted to change the color of the font, or the background color of the text in the document you're editing in the dijit.Editor?  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar for changing those items.  Each make use of the dijit ColorPicker, so they are simple to use.
 
-========
 Features
 ========
 
@@ -30,7 +30,6 @@ Once required in and enabled, this plugin provides the following features to dij
     hiliteColor - Enable the text background color plugin.
 
 
-=====
 Usage
 =====
 
@@ -53,7 +52,6 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of selected text.
 
-========
 Examples
 ========
 
@@ -191,7 +189,6 @@ Basic Usage: Both foreground and background color buttons together
     </ul>
     </div>
 
-========
 See Also
 ========
 

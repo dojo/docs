@@ -1,5 +1,6 @@
 .. _dojox/json/query:
 
+================
 dojox.json.query
 ================
 
@@ -13,7 +14,6 @@ dojox.json.query
 **dojox.json.query** implements JSONQuery to provide comprehensive data querying capabilities.
 
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ JSONQuery is an extended version of JSONPath with additional features for securi
 
 JSONQuery provides safe evaluation with language agnostic expressions that prevents arbitrary code execution. It also uses intuitive result-based evaluation that allows successive query operations. Furthermore, the new JSONQuery module provides significant performance improvements, with 20-100x faster execution with the common filter operation on large arrays than the JSONPath module. JSONQuery generally supersets the functionality of JSONPath and provides syntax that matches and behaves like JavaScript where the syntax intersects for maximum ease of use.
 
-=====
 Usage
 =====
 
@@ -45,7 +44,6 @@ The evaluator function can be then be performed on a query on data by calling it
 
 In situations where a single query may be executed multiple times, doing a single parse/compilation with dojox.json.query(query) and reusing the returned evaluation function will provide better performance. It is worth noting that dojox.json.query(query,object) is functionally equivalent to dojox.json.query(query)(object).
 
-============
 Query Syntax
 ============
 
@@ -57,7 +55,6 @@ JSONQuery evaluations begin with the provided object, which can referenced withi
  results = dojox.json.query("$.foo",data);
  results -> "bar"
 
-==================
 Query Capabilities
 ==================
 
@@ -143,7 +140,6 @@ Queries can use the regular operators to form general expressions based on more 
 
  $.store.book[\price][0].price - $.store.book[/price][0].price
 
-=======
 Summary
 =======
 

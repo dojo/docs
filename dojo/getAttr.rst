@@ -1,5 +1,6 @@
 .. _dojo/getAttr:
 
+============
 dojo.getAttr
 ============
 
@@ -9,7 +10,6 @@ dojo.getAttr
 Gets an attribute on an HTML element.
 
 
-============
 Introduction
 ============
 
@@ -17,7 +17,6 @@ Introduction
 
 Since Dojo 1.7, ``dojo.getAttr`` is exposed via the ``get`` method of the ``dojo/dom-attr`` module.  An alias is kept in dojo/_base/html for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -38,7 +37,6 @@ attr
   the name of the attribute to get.
 
 
-========
 Examples
 ========
 
@@ -81,7 +79,6 @@ Dojo < 1.7
     // or we can just pass the id:
     dojo.getAttr("nodeId", "foo");
 
-========
 See also
 ========
 

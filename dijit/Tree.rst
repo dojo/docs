@@ -1,5 +1,6 @@
 .. _dijit/Tree:
 
+==========
 dijit.Tree
 ==========
 
@@ -23,7 +24,6 @@ Dojo makes easy trees easy, and hard trees possible. In particular, you can:
 * Drag and drop onto the tree, which updates the data store indirectly
 
 
-=============================
 Components Involved In A Tree
 =============================
 
@@ -68,7 +68,6 @@ Data Store --> Model --> Tree
 
 That gets more complicated when we think about drag & drop, but we'll address that later.
 
-=====================
 A Simple Tree Example
 =====================
 
@@ -142,7 +141,6 @@ A markup tree
     </div>
 
 
-=====
 Icons
 =====
 
@@ -193,7 +191,6 @@ to return a separate class name based on the type of item:
 
 
 
-=========================
 Hiding a Tree's root node
 =========================
 
@@ -226,7 +223,6 @@ Sometimes you don't want that "the world" top level node to show up, especially 
 
 Note that you can hide or show the root item regardless of whether that root item is fabricated or corresponds to a real item in the store.
 
-===============
 Updating a Tree
 ===============
 
@@ -240,13 +236,11 @@ You can't update the tree directly, but rather you need to update the model.   U
 
 This isn't supported.   The store needs to notify the tree of any changes to the data.  Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`, as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
-===================
 Lazy Loading A Tree
 ===================
 People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.  If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`, then the data will be loaded lazily.
 
 
-=============
 Drag And Drop
 =============
 
@@ -348,7 +342,6 @@ What happens when a user moves an item from one position in a tree to another?  
 
 In this way, the Tree, Model, and data store are always in sync.
 
-============
 Context Menu
 ============
 
@@ -404,7 +397,6 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 		</script>
         </div>
 
-=======
 Styling
 =======
 
@@ -451,7 +443,6 @@ You can also remove the hover effect altogether by just writing a CSS rule that 
 
 On the claro theme, the hover effect is done via a background-color (combined with a white gradient background image), so changing the hover effect just involves changing that background color.
 
-=============
 Miscellaneous
 =============
 
@@ -459,22 +450,19 @@ Persistence
 -----------
 By default, a Tree will remember which branches were opened/closed.   To use this feature you must specify an id for the Tree.   To disable the feature, set the "persist" parameter to false.
 
-=============
 More examples
 =============
 
 There are :ref:`more extensive examples <dijit/Tree-examples>` of using the tree
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-===================================  ===============
-Action	                             Key
+===================================  Action	                             Key
 ===================================  ===============
 Navigate into tree*                  Tab
 Navigate to the next sibling         Down arrow

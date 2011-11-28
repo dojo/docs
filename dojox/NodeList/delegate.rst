@@ -1,5 +1,6 @@
 .. _dojox/NodeList/delegate:
 
+=======================
 dojox.NodeList.delegate
 =======================
 
@@ -9,7 +10,6 @@ dojox.NodeList.delegate
 :author: Bill
 :since: 1.6.0
 
-========
 Overview
 ========
 
@@ -33,7 +33,6 @@ Note that delegate() will not work for events that don't bubble, like focus.
 onmouseenter/onmouseleave also don't currently work.
 
 
-=======
 Example
 =======
 
@@ -63,7 +62,6 @@ Example
       });
     });
 
-========
 See Also
 ========
 

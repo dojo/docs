@@ -1,5 +1,6 @@
 .. _dojox/widget/DialogSimple:
 
+=========================
 dojox.widget.DialogSimple
 =========================
 
@@ -10,7 +11,6 @@ This is an incredibly simple widget providing a stock :ref:`dijit.Dialog <dijit/
 
 This dialog will look identical to a plain dijit.Dialog, though will optionally execute script contents and so on. No additional functionality beyond mixing the two widgets is provided. This simple dialog extension acts as the base class for the advanced :ref:`dojox.widget.Dialog <dojox/widget/Dialog>`
 
-=====
 Usage
 =====
 
@@ -27,7 +27,6 @@ No additional CSS is required. Remember to load the stock themeName.css file. Is
        }, 2000);
   });
 
-========
 See Also
 ========
 

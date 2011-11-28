@@ -1,5 +1,6 @@
 .. _quickstart/interfacedesign:
 
+====================================
 UI Development with the Dojo Toolkit
 ====================================
 
@@ -14,7 +15,6 @@ The Dojo Toolkit comes with many amazing modules which all are trying to make yo
 This short introduction to UI Development will introduce you to the main Dojo layout and form widgets.
 
 
-===================
 Why use Dojo/Dijit?
 ===================
 
@@ -28,7 +28,6 @@ Last but not least, dijit comes with different awesome themes and it is very eas
 Now if you are still doubting, let's go ahead and dive right into a simple UI we will use to retrieve the latest news from a news service provider. What will we use?
 
 
-===============
 Our ingredients
 ===============
 
@@ -53,7 +52,6 @@ A few other helper widgets
 We'll also use a Tree widget to navigate through different news categories and we'll use a fancy set of icons (free, opensource) to make our app look like we want it to look.
 
 
-=============
 The interface
 =============
 

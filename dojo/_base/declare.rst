@@ -1,5 +1,6 @@
 .. _dojo/_base/declare:
 
+==================
 dojo._base.declare
 ==================
 
@@ -15,7 +16,6 @@ dojo._base.declare
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-========
 Features
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/grid/EnhancedGrid/plugins/NestedSorting:
 
+=============================================
 dojox.grid.EnhancedGrid.plugins.NestedSorting
 =============================================
 
@@ -10,7 +11,6 @@ dojox.grid.EnhancedGrid.plugins.NestedSorting
 .. contents::
    :depth: 2
 
-==============
 Introduction
 ==============
 
@@ -231,7 +231,6 @@ ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
 Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes appropriately. This will be addressed when newer JAWS and Firefox versions are released.
 
 
-========
 See Also
 ========
 

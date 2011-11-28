@@ -1,5 +1,6 @@
 .. _dojo/formToObject:
 
+==================
 dojo.formToObject
 ==================
 
@@ -11,7 +12,6 @@ dojo.formToObject
 Helper function for converting a HTML form to a JavaScript Object
 
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 Since Dojo 1.7, ``dojo.formToObject`` is exposed via the ``toObject`` method of the ``dojo/dom-form`` module.  An alias is kept in ``dojo/_base/xhr`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -45,7 +44,6 @@ Dojo < 1.7
 The function will hand back a JavaScript object of the name/value pairs from the form elements. The values are either strings or arrays. If a checkbox group has a single item selected, the function will return a string value; if several, an array.
 
 
-========
 Examples
 ========
 
@@ -121,7 +119,6 @@ Create an object version of a form with Dijit widgets
     <pre id="formObject2"></pre>
 
 
-========
 See also
 ========
 

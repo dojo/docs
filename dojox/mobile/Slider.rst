@@ -1,5 +1,6 @@
 .. _dojox/mobile/Slider:
 
+===================
 dojox.mobile.Slider
 ===================
 
@@ -15,7 +16,6 @@ dojox.mobile.Slider
 Slider is a simple INPUT type="range" widget (either horizontal or vertical) allowing numeric values to be selected by dragging a handle.
 
 
-======================
 Constructor Parameters
 ======================
 
@@ -40,7 +40,6 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
 
-========
 Examples
 ========
 

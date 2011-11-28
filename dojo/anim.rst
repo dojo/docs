@@ -1,5 +1,6 @@
 .. _dojo/anim:
 
+=========
 dojo.anim
 =========
 
@@ -12,7 +13,6 @@ dojo.anim
 A simpler interface to `dojo.animateProperty()`.
 
 
-============
 Introduction
 ============
 
@@ -23,7 +23,6 @@ dojo.anim returns an instance of `dojo.Animation` but begins the animation immed
 The `dojo.Animation` object returned from `dojo.anim` will be already playing when it is returned from this function, so calling play() on it again is (usually) a no-op.
 
 
-=====
 Usage
 =====
 
@@ -50,8 +49,7 @@ Dojo < 1.7
 
 Here is the definition of arguments:
 
-===========  ==============  ======================================================================
-Parameter    Type            Description
+===========  ==============  Parameter    Type            Description
 ===========  ==============  ======================================================================
 node         DOMNode|String  Can be a DOM node or the id of a node (as string) to animate CSS properties on.
 
@@ -67,7 +65,6 @@ delay        Integer         The number of milliseconds to delay beginning the a
 ===========  ==============  ======================================================================
 
 
-========
 Examples
 ========
 
@@ -82,7 +79,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

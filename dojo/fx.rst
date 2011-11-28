@@ -1,5 +1,6 @@
 .. _dojo/fx:
 
+=======
 dojo.fx
 =======
 
@@ -18,7 +19,6 @@ This page is a landing point for reference off to each function, their descripti
 
 **NOTE:** There is a great :ref:`quickstart animation guide <quickstart/Animation>` to get you up and running with basic FX animations
 
-========
 Features
 ========
 
@@ -49,7 +49,6 @@ Functions provided by the dojo.fx module
 
 Additionally, there is a collection of easing functions living in the  :ref:`dojo.fx.easing <dojo/fx/easing>` module.
 
-========
 See also
 ========
 

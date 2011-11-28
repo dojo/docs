@@ -1,5 +1,6 @@
 .. _dojo/isFunction:
 
+===============
 dojo.isFunction
 ===============
 
@@ -15,7 +16,6 @@ Checks if the parameter is a Function.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-=====
 Usage
 =====
 
@@ -80,7 +80,6 @@ A common pattern is to have a string version of a fully declared class. You can 
 One could use :ref:`dojo.isString <dojo/isString>` for a similar check.
 
 
-========
 Examples
 ========
 
@@ -195,7 +194,6 @@ Test against isFunction()
     </div>
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/place:
 
+==========
 dojo.place
 ==========
 
@@ -16,7 +17,6 @@ To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>`
 
 Since Dojo 1.7, ``dojo.place`` is exposed via the ``place`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-========
 Overview
 ========
 
@@ -63,7 +63,6 @@ The naming of the positions are intentionally concise.
 
   Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other familiar attributes of the element.
 
-=====
 Usage
 =====
 
@@ -96,7 +95,6 @@ Dojo < 1.7
   // place node to refNode
   dojo.place(node, refNode, "first");
 
-=================
 Placement options
 =================
 
@@ -320,7 +318,6 @@ In the fragment above the <p> node will have 3 children: a text node (spaces and
 
 Or you can construct DOM programmatically.
 
-============
 Alternatives
 ============
 
@@ -342,7 +339,6 @@ An alternative way to place (and create) a node is :ref:`dojo.create <dojo/creat
   // dojo < 1.7
   dojo.create("div", null, dojo.body(), "first");
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/fadeIn:
 
+===========
 dojo.fadeIn
 ===========
 
@@ -12,7 +13,6 @@ dojo.fadeIn
 
 This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to fading a node into view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a fade-in is desired.
 
-==========
 Parameters
 ==========
 
@@ -20,13 +20,11 @@ The *dojo.fadeIn* takes an object as its parameter.  This object defines what do
 
 `FIXME: just inline API signature`
 
-============
 Return value
 ============
 
 The *dojo.fadeIn* function returns an instance of dojo._Animation.  To execute the fadeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
-========
 Examples
 ========
 
@@ -130,7 +128,6 @@ Example 3:  Fade in a dom node with an easing function
     <button data-dojo-type="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
 
-========
 See Also
 ========
 

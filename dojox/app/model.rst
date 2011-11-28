@@ -1,5 +1,6 @@
 .. _dojox/app/model:
 
+================
 dojox.app.model
 ================
 
@@ -12,7 +13,6 @@ dojox.app.model creates statefulModel data objects using JSON data or dojo data 
 
 Models can be declared in the application configuration at application level or different view levels. The model declared at application level can be accessed by all scenes and views in this application. The model declared at view level can be accessed by this view or its children views.
 
-==============
 Sample
 ==============
 Sample application configuration for dojox.app.model

@@ -1,5 +1,6 @@
 .. _dijit/form/ValidationTextBox:
 
+============================
 dijit.form.ValidationTextBox
 ============================
 
@@ -10,7 +11,6 @@ dijit.form.ValidationTextBox
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -19,14 +19,12 @@ A ValidationTextBox is an <input>-like widget that checks to make sure the user'
 Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a :ref:`dijit.form.Form <dijit/form/Form>` widget.
 
 
-=====
 Usage
 =====
 
 The following attributes can be specified when you create a ValidationTextBox:
 
-===============  =============  ======================================================================
-Parameter        Type           Description
+===============  =============  Parameter        Type           Description
 ===============  =============  ======================================================================
 required                        Whether the field is required or not. false by default.
 promptMessage                   Tooltip text that appears when the text box is empty and on focus. Null by default.
@@ -47,7 +45,6 @@ displayMessage()
     Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
 
 
-========
 Examples
 ========
 
@@ -120,7 +117,6 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
     <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
 
-=============
 Accessibility
 =============
 
@@ -141,7 +137,6 @@ Sometimes the popup message supplied by invalidMessage attribute may be unnecess
 
 As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable.
 
-========
 See also
 ========
 

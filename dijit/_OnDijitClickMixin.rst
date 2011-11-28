@@ -1,5 +1,6 @@
 .. _dijit/_OnDijitClickMixin:
 
+========================
 dijit._OnDijitClickMixin
 ========================
 
@@ -11,7 +12,6 @@ dijit._OnDijitClickMixin
    :depth: 2
 
 
-============
 Introduction
 ============
 

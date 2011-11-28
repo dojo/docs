@@ -1,5 +1,6 @@
 .. _dojo/date:
 
+=========
 dojo.date
 =========
 
@@ -10,7 +11,6 @@ dojo.date
   :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -24,7 +24,6 @@ Note that in JavaScript, counting of months starts at "0" so if you want to crea
 So don't get confused by the new Date() statements in the tests, the second parameter is the month and is always one number lower than the month you actually want.
 
 
-=====
 Usage
 =====
 
@@ -64,7 +63,6 @@ Dojo < 1.7
     dojo.date.difference(date1, date2, "day");
     //output: -29
 
-========
 See Also
 ========
 

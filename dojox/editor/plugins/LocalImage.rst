@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/LocalImage:
 
+====================================================
 dojox.editor.plugins.LocalImage (Under Construction)
 ====================================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.LocalImage (Under Construction)
 
 Have you ever wanted to insert not only online images but also images on your computer? This plug-in is for you.
 
-========
 Features
 ========
 
@@ -23,7 +23,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Edit the image when it is selected.
 
 
-=====
 Usage
 =====
 
@@ -70,8 +69,7 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  ===================================================================================
-Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  ===================================================================================
 name                      String             False         localimage               The name of this plugin. It should always be "localimage".
 uploadable                Boolean            True          False                    Indicate if the plugin supports insert an image from the local file.
@@ -136,7 +134,6 @@ All the information should be wrapper within a <textarea> html control. It would
 
 For more information, please refer to http://docs.dojocampus.org/dojox/form/FileUploader .
 
-==============
 User Interface
 ==============
 
@@ -174,19 +171,16 @@ The dialog will be displayed with **Image** field and **Description** field popu
 
 .. image :: EditImage.png
 
-===================
 A11Y Considerations
 ===================
 
 All fields within the LocalImage dialog can be accessed with the keyboard.
 
-===========
 Limitations
 ===========
 
 None.
 
-========
 Examples
 ========
 
@@ -239,7 +233,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

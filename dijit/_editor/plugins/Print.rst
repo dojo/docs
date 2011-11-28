@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins/Print:
 
+===========================
 dijit._editor.plugins.Print
 ===========================
 
@@ -14,7 +15,6 @@ dijit._editor.plugins.Print
 
 Have you ever wanted to print the contents contained within the editor?  If so, then this plugin is for you.  It's a simple plugin that adds 'Print' support to the editor toolbar.
 
-========
 Features
 ========
 
@@ -22,7 +22,6 @@ Once required in and enabled, this plugin provides the following features to dij
 
 * Button with icon in toolbar for Printing the contents of the RTE only
 
-=====
 Usage
 =====
 
@@ -46,7 +45,6 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Printplugin!  You can use the button to print the editor contents when you wish.
 
-========
 Examples
 ========
 
@@ -95,7 +93,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

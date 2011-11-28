@@ -1,5 +1,6 @@
 .. _dojox/string/Builder:
 
+=====================
 dojox.string.Builder
 =====================
 

@@ -1,5 +1,6 @@
 .. _dojox/mvc/_DataBindingMixin:
 
+===========================
 dojox.mvc._DataBindingMixin
 ===========================
 
@@ -20,7 +21,6 @@ synchronizing value changes between the bound dijit or other view component and 
 well as changes to other properties such as "valid", "required", "readOnly" etc
 
 
-======================
 Parameters
 ======================
 
@@ -33,7 +33,6 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
-=================
 Available Methods
 =================
 
@@ -51,7 +50,6 @@ assess the model validity of the data binding via the this.inherited(arguments) 
 failing the test as invalid.
 
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/isAlien:
 
+============
 dojo.isAlien
 ============
 
@@ -15,7 +16,6 @@ Checks if the parameter is a built-in function.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-=====
 Usage
 =====
 
@@ -48,7 +48,6 @@ Returns true if it is a built-in function or some other kind of oddball that *sh
   }
 
 
-========
 Examples
 ========
 
@@ -162,7 +161,6 @@ Test against isAlien()
     </div>
 
 
-========
 See also
 ========
 

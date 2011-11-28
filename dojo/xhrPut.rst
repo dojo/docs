@@ -1,5 +1,6 @@
 .. _dojo/xhrPut:
 
+===========
 dojo.xhrPut
 ===========
 
@@ -9,7 +10,6 @@ dojo.xhrPut
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -17,13 +17,11 @@ The dojo.xhrPut() function is lesser used function for pushing data for a server
 
 The following information should get you up and going with dojo.xhrPut().  As with all dojo functions, always refer to the API docs for detailed information.
 
-===========
 Limitations
 ===========
 
 The limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`
 
-=====
 Usage
 =====
 
@@ -52,7 +50,6 @@ Handling Status Codes
 
 Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
-========
 Examples
 ========
 
@@ -106,7 +103,6 @@ Example 1: dojo.xhrPut call to send some text data
     <b>Result</b>
     <div id="response2"></div>
 
-========
 See also
 ========
 

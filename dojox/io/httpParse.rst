@@ -1,5 +1,6 @@
 .. _dojox/io/httpParse:
 
+==================
 dojox.io.httpParse
 ==================
 
@@ -14,14 +15,12 @@ dojox.io.httpParse
 dojox.io.httpParse is a HTTP message parser, which parses to an XHR like interface.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

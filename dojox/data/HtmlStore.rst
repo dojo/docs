@@ -1,5 +1,6 @@
 .. _dojox/data/HtmlStore:
 
+=========================
 dojox.data.HtmlStore
 =========================
 
@@ -15,7 +16,6 @@ dojox.data.HtmlStore
 HtmlStore is an improved version of the older :ref:`dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL.
 
 
-===========
 API Support
 ===========
 
@@ -23,7 +23,6 @@ API Support
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
 
-==================
 Example data input
 ==================
 
@@ -124,7 +123,6 @@ DIV Collection
 **Note:** The <DIV> entries are the items. Each has a single attribute 'name' which corresponds to the text content of the <DIV>.
 
 
-==================
 Constructor params
 ==================
 
@@ -152,7 +150,6 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 +--------------+------------------------------------------------------------------------------------------+----------------------+
 
 
-===============
 Item Attributes
 ===============
 
@@ -168,14 +165,12 @@ List:
   In a list, the list items have one value, the text content. Use the attribute Use the attribute 'name' to acquire it.
 
 
-============
 Query Syntax
 ============
 
 The query syntax is identical to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`. Please refer to it for the format of the queries.
 
 
-========
 Examples
 ========
 

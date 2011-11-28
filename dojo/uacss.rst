@@ -1,5 +1,6 @@
 .. _dojo/uacss:
 
+============
 dojo.uacss
 ============
 
@@ -10,7 +11,6 @@ dojo.uacss
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -53,7 +53,6 @@ flag.   In addition, the classes from above are repeated with -rtl appended.  Fo
    dj_rtl dj_ie-rtl dj_ie7-rtl dj_iequirks-rtl dj_borderBox-rtl
 
 
-=====
 Usage
 =====
 

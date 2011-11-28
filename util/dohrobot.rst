@@ -1,5 +1,6 @@
 .. _util/dohrobot:
 
+=========
 DOH Robot
 =========
 
@@ -9,7 +10,6 @@ DOH Robot
 
 doh.robot adds an API to the Dojo Object Harness (DOH) unit test framework that enables testers to automate their UI tests using real, cross-platform, system-level input events.   This document describes the value of doh.robot for unit and accessibility testing, and how to get started using it.
 
-===============================
 The challenge of Web UI testing
 ===============================
 
@@ -17,13 +17,11 @@ Web UI testing frameworks like Selenium and Windmill already contain browser aut
 
 But the problem with synthetic events is that browsers don't trust synthetic events enough to let them execute their default action. For example, if you create a synthetic Tab keypress (expecting the browser to shift focus to the next element in the tab order), the focus won't actually move, because the browser doesn't trust the synthetic keypress enough to allow it to execute its default action. In a worse case, if you have a widget with onmouseover and onmousedown events, you would expect that the user would not be able to trigger the onmousedown without first triggering the onmouseover. But with synthetic events, this sort of common sense fails; you can easily send a click to an element without registering mouse movement over it, never mind the onmouseout from the previous element and the *hundreds* of onmousemoves a real user would generate in between. The result is that existing Web UI frameworks fail to support the testing of common requirements of Web applications like keyboard accessibility, and can be frustrating to deal with when you have to manually dispatch synthetic mouse events that would fire automatically for a human tester.
 
-=============================
 What doh.robot can do for you
 =============================
 
 We designed the doh.robot to enhance the DOH runner's ability to drive unit tests. Like other test frameworks, doh.robot provides testers with an API that enables them to simulate user interaction. However, we took a different approach to dispatching events: instead of using synthetic events, we used the cross-browser and cross-platform Java applet technology to place real events on the native event queue, as if a real person performed the action. This means that when you use doh.robot to execute your unit tests, browsers will trust the events doh.robot creates from your commands and will handle any and all contingent events for you. So when you tell doh.robot to send a Tab keypress, you can fully expect the Tab to move focus to the next element in the Tab order, as if a real user pressed Tab. And when you tell doh.robot to click an element, you can fully expect to get the onmouseover before the onmousedown, as well as all of those hundreds of onmousemoves a real user would generate in between. When you use the DOH test runner in conjunction with doh.robot, you can easily automate and report the results of numerous accessibility and UI unit tests that would otherwise require manual, visual inspection by a real person.
 
-============
 The 3 robots
 ============
 
@@ -46,7 +44,6 @@ dijit.robot
 dijit.robot is the final extension to the doh.robot packaged with dijit. You load it using dojo.require("dijit.robot"). It further augments the dojo.robot's mouse handling with dijit's cross-browser automatic scrolling. If you are concerned about writing tests that involve scrolling a lot of elements into view, dijit.robot is the best way to ensure that elements are always in view for the mouse to click them.
 
 
-=================
 The doh.robot API
 =================
 
@@ -91,7 +88,6 @@ duration
 Several doh.robot methods also take a duration parameter. The duration tells doh.robot approximately how much time it should take to execute the command. For example, calling doh.robot.typeKeys("dij", 500, 1800) will instruct doh.robot to start typing dij after 500ms and to wait (1800 ms)/(3 chars) = 600 ms/char before each keypress. As with the delay parameter, doh.robot automatically sequences calls to account for the duration, so you don't have to add the duration into the next command's delay; doh.robot will add it in for you at runtime.
 
 
-=======================
 Writing doh.robot tests
 =======================
 
@@ -141,7 +137,6 @@ You write doh.robot tests like deferred DOH tests. DOh's deferred test model ind
 You can see what the concrete implementation of this flow looks like in the runTest function above. You store the doh.Deferred in a variable called d. Next, you write the robot commands themselves: the mouse moves to 30,30 on the screen, clicks the left mouse button, and types " again". Between each command, the robot waits 500ms. After about another second has elapsed, the test asserts that everything worked. You tell DOH a test passed in the Deferred model by calling d.callback(true). You tell DOH that something bad happened by calling d.errback and pass a new Error with the problem description. You can also do some visual formatting to indicate whether the test passed, for users running the test standalone (like you). Finally, you return the doh.Deferred object to the runTest function, signaling the DOH runner to wait for this test to finish.
 
 
-======================================
 dojo.robot and dijit.robot's value-add
 ======================================
 
@@ -218,7 +213,6 @@ Where as the simple mouseMove needs to know ahead of time where to move on the p
 
 This would cause the mouse to click the middle of the textbox before it starts typing. The dojo.robot tries to scroll the element into view using the browser's native scrollIntoView function so that no matter where the element is, even if it is presently off the screen, the dojo.robot can scroll it in and click it. But this approach still has one problem: native scrollIntoView does not work consistently across all browsers. Enter dijit.robot: dijit.robot enhances the dojo.robot with dijit's scrollIntoView algorithm, making scrollIntoView view consistent across all browsers. It's trivial to use this feature: just swap dojo.require("dojo.robot") with dojo.require("dijit.robot") and everything will start scrolling correctly automatically.
 
-====================
 dojox.robot.recorder
 ====================
 
@@ -246,7 +240,6 @@ Here are some example tests modeling common UI interactions. These tests were ge
  * http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/robot/test_dnd.html (drag and drop of elements into containers)
 
 
-================================================
 Separating Robot Test Code From Application Code
 ================================================
 

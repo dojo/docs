@@ -1,5 +1,6 @@
 .. _dijit/form/DropDownButton:
 
+=========================
 dijit.form.DropDownButton
 =========================
 
@@ -13,7 +14,6 @@ dijit.form.DropDownButton
 The dijit.form.DropDownButton widget is for a button that displays some kind of drop down, often a menu, when you press it.
 
 
-========
 Examples
 ========
 
@@ -94,15 +94,13 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 Note that DropDownButton is often used in :ref:`dijit.Toolbar <dijit/Toolbar>`.
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-=========================================================    =================================================
-Action                                                       Key
+=========================================================    Action                                                       Key
 =========================================================    =================================================
 Navigate to a button                                         tab - all buttons are in the tab order
 Activate the button to display the drop down menu            enter or space key

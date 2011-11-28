@@ -1,5 +1,6 @@
 .. _dojo/deprecated:
 
+===============
 dojo.deprecated
 ===============
 

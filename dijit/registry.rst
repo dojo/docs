@@ -1,5 +1,6 @@
 .. _dijit/registry:
 
+==============
 dijit/registry
 ==============
 
@@ -9,7 +10,6 @@ dijit/registry
 .. contents::
    :depth: 2
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.
 If you need to iterate over the entire registry, it is best to call ``registry.toArray``
 and use the standard :ref:`dojo array <quickstart/arrays>` functions.
 
-=====
 Usage
 =====
 
@@ -103,7 +102,6 @@ The following will return the TextBox widget, **not** the Form widget:
       registry.getEnclosingWidget(dom.byId("myTextField")); // returns TextBox
   });
 
-========
 See also
 ========
 

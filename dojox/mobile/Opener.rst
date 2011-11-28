@@ -1,5 +1,6 @@
 .. _dojox/mobile/Opener:
 
+===================
 dojox.mobile.Opener
 ===================
 
@@ -14,7 +15,6 @@ dojox.mobile.Opener
 
 Opener is a utility widget that behaves either as a Overlay on small screen devices or as a Tooltip otherwise.
 
-=========
 Interface
 =========
 
@@ -39,7 +39,6 @@ Causes the content to shown (popup Tooltip or sliding Overlay).
 Hides the Opener content.
 
 
-=======
 Example
 =======
 

@@ -1,9 +1,9 @@
 .. _developer/contributors:
 
+===================
 Contributor Listing
 ===================
 
-=====================================
 Individuals who have signed Dojo CLAs
 =====================================
 
@@ -601,7 +601,6 @@ Individuals who have signed Dojo CLAs
 * Zou, Ran
 * Zyp, Kris
 
-=================================================
 Corporations or Organizations with a CCLA on file
 =================================================
 

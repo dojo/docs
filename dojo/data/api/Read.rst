@@ -1,5 +1,6 @@
 .. _dojo/data/api/Read:
 
+==================
 dojo.data Read API
 ==================
 
@@ -22,7 +23,6 @@ The most fundamental API of dojo.data is the Read API. All stores will implement
 * Obtain a human-readable label of the item if possible.
 
 
-========
 Examples
 ========
 
@@ -105,7 +105,6 @@ Further examples
 Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth.
 
 
-================
 The complete API
 ================
 

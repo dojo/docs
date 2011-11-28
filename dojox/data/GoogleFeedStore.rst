@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleFeedStore:
 
+==========================
 dojox.data.GoogleFeedStore
 ==========================
 
@@ -17,13 +18,11 @@ The GoogleFeedStore is a store designed to work against Google's feed reading AJ
 
 **Note:**  These stores make use of Google's `AJAX search and feed services. <http://code.google.com/apis/ajaxsearch/>`_  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
 
-===========
 API Support
 ===========
 
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
-==================
 Constructor Params
 ==================
 
@@ -40,7 +39,6 @@ The following parameters are supported by the GoogleFeedStore implementation.
 |lang         |The language locale to use. Defaults to the browser locale.                               | string               |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 
-===============
 Item Attributes
 ===============
 
@@ -63,7 +61,6 @@ The following attributes are available on items returned from the GoogleFeedStor
 |categories       |An array of string tags for the entry                                                                                        |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
@@ -77,7 +74,6 @@ Query Example
     "url" : "http://news.google.com/nwshp?hl=en&tab=wn&output=atom"
   }
 
-=============
 Example Usage
 =============
 

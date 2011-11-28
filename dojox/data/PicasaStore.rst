@@ -1,5 +1,6 @@
 .. _dojox/data/PicasaStore:
 
+======================
 dojox.data.PicasaStore
 ======================
 
@@ -14,7 +15,6 @@ PicasaStore is one such store. The purpose of PicasaStore is to wrapper the publ
 
 The Picasa service provides its data back in a wide variety of formats (for example, ATOM, RSS, and JSON) but PicasaStore only makes use of the JSON format. The following example shows a query that PicasaStore processes and the response:
 
-=============================
 Brief intro to the Picasa API
 =============================
 
@@ -663,7 +663,6 @@ Response
     }
     );
 
-===========
 PicasaStore
 ===========
 
@@ -729,7 +728,6 @@ The fetch method query syntax for PicasaStore is simple and straightforward. It 
 
 **Note:** Unlike all the other example stores, the PicasaStore store cannot do wild-card matching of the attributes. This is because the Picasa public photo feed service cannot do it. In an ideal service implementation, the Picasa service would provide a mechanism by with to pass in wild cards as part of its query parameters. Also, the Picasa public feed API limits the number of returned photos to a maximum of 500.  The datastore limits this to a default of 20.  This can be changed by altering the maxResults attribute of the store to your desired value.  Please note that maxResults does not affect count, which is how many out of the entire (maxResults), set to return.
 
-========
 Examples
 ========
 

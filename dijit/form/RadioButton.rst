@@ -1,5 +1,6 @@
 .. _dijit/form/RadioButton:
 
+======================
 dijit.form.RadioButton
 ======================
 
@@ -12,7 +13,6 @@ dijit.form.RadioButton
 
 RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked.
 
-=====
 Usage
 =====
 
@@ -21,7 +21,6 @@ Normally, there are multiple RadioButton widgets assigned to a single group defi
 **Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
 
 
-========
 Examples
 ========
 
@@ -55,7 +54,6 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'l
     <button onclick="with(dojo.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);return false">Show form submit value</button>
 
 
-=============
 Accessibility
 =============
 

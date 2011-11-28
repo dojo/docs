@@ -1,5 +1,6 @@
 .. _dojox/layout/ResizeHandle:
 
+=========================
 dojox.layout.ResizeHandle
 =========================
 
@@ -12,13 +13,11 @@ dojox.layout.ResizeHandle
    :depth: 2
 
 
-============
 Introduction
 ============
 
 dojox.layout.ResizeHandle is a small widget to provide resizing of some attached node. It is experimental, and subject to API changes.
 
-=====
 Usage
 =====
 
@@ -36,7 +35,6 @@ You will likely want to use the default styles as well:
 
 This provides simple styling for your ResizeHandle, and a default handle icon.
 
-========
 Examples
 ========
 
@@ -74,7 +72,6 @@ The following CSS must be applied for the above example to work:
 
 position:absolute is part of the ResizeHandle.css
 
-============
 API Overview
 ============
 

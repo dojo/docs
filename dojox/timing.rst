@@ -1,5 +1,6 @@
 .. _dojox/timing:
 
+============
 dojox.timing
 ============
 
@@ -10,7 +11,6 @@ dojox.timing
 DojoX Timing is a project that deals with any kind of advanced use of timing
 constructs.
 
-==================
 dojox.timing.Timer
 ==================
 
@@ -32,7 +32,6 @@ second--useful for driving something such as a clock.
   }
   t.start();
 
-==============
 Other elements
 ==============
 

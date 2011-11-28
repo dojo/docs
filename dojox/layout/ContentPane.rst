@@ -1,5 +1,6 @@
 .. _dojox/layout/ContentPane:
 
+========================
 dojox.layout.ContentPane
 ========================
 
@@ -13,14 +14,12 @@ dojox.layout.ContentPane
 
 dojox.layout.ContentPane is an extension to dijit.layout.ContentPane providing script execution, among other things.
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -34,7 +33,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -49,7 +47,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

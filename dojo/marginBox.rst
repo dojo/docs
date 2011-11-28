@@ -1,5 +1,6 @@
 .. _dojo/marginBox:
 
+===============
 dojo.marginBox
 ===============
 
@@ -13,7 +14,6 @@ dojo.marginBox
 Getter/setter for the margin-box of node.
 
 
-============
 Introduction
 ============
 
@@ -29,7 +29,6 @@ for a node offset from its parent 50px to the left, 200px from the top with a ma
 
 Since Dojo 1.7, ``dojo.marginBox`` is exposed via the ``getMarginBox`` and ``setMarginBox`` methods of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -79,7 +78,6 @@ Dojo < 1.7
    var marginBox = dojo.getMarginBox(domNode);
    dojo.setMarginBox(domNode, {w: 300, h: 150});
 
-========
 Examples
 ========
 
@@ -204,7 +202,6 @@ Comparison of various DOM node position/size methods
 
 :ref:`Link: Comparison of various DOM node position/size methods. <dojo/position>`
 
-========
 See also
 ========
 

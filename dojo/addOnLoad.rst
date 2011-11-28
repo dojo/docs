@@ -1,5 +1,6 @@
 .. _dojo/addOnLoad:
 
+==============
 dojo.addOnLoad
 ==============
 
@@ -7,7 +8,6 @@ dojo.addOnLoad() has been deprecated in favor of the (equivalent) :ref:`dojo.rea
 
 The documentation below is preserved for legacy purposes:
 
-=================
 Old Documentation
 =================
 dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing.
@@ -100,7 +100,6 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 
 If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately.
 
-========
 Examples
 ========
 

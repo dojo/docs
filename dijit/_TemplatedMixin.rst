@@ -1,5 +1,6 @@
 .. _dijit/_TemplatedMixin:
 
+=====================
 dijit._TemplatedMixin
 =====================
 
@@ -11,7 +12,6 @@ dijit._TemplatedMixin
    :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ dijit._TemplatedMixin is a mixin for most widgets in dijit. It takes an HTML tem
 
 Note that the underscore in the name implies not that _TemplatedMixin is a private class, but rather that it's a mixin, rather than a widget.
 
-=====
 Usage
 =====
 
@@ -36,7 +35,6 @@ Mixin dijit._TemplatedMixin when you declare your widget:
 and then instead of defining buildRendering(), define a ``templateString``.
 
 
-============
 The template
 ============
 
@@ -188,7 +186,6 @@ However, this is not recommended, as (due to implementation details) it only han
 See the section on attributeMap in :ref:`Writing Widgets <quickstart/writingWidgets>` for an alternative to substitution variables.
 
 
-===============
 Common Pitfalls
 ===============
 
@@ -199,7 +196,6 @@ Common Pitfalls
 3. Avoid a trailing </div> at the end of your template
 
 
-========
 See also
 ========
 

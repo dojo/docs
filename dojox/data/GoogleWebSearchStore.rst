@@ -1,5 +1,6 @@
 .. _dojox/data/GoogleWebSearchStore:
 
+===============================
 dojox.data.GoogleWebSearchStore
 ===============================
 
@@ -13,7 +14,6 @@ dojox.data.GoogleWebSearchStore
 
 dojox.data.GoogleSearchStore is a data store that can be used to search Google.
 
-============
 Introduction
 ============
 
@@ -22,7 +22,6 @@ dojox.data.GoogleSearchStore is a read only data store that can be used to searc
 GoogleSearchStore has a number of child classes, each of which implement different search types, e.g. Web, Books, Images etc.   The default search type is Web search, which returns the same results you would get when using google.com.  This means that dojox.data.GoogleSearchStore is functionally equivalent to it's child class dojox.data.GoogleWebSearchStore.
 
 
-=====
 Usage
 =====
 
@@ -80,7 +79,6 @@ The pattern of using the GoogleSearchStore is
 
 
 
-========
 Examples
 ========
 
@@ -159,7 +157,6 @@ Programmatic example
       </tbody>
     </table>
 
-========
 See also
 ========
 

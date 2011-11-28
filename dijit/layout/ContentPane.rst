@@ -1,5 +1,6 @@
 .. _dijit/layout/ContentPane:
 
+========================
 dijit.layout.ContentPane
 ========================
 
@@ -12,7 +13,6 @@ dijit.layout.ContentPane
 
 A Content Pane is the most basic layout tile. Conceptually, it's like the content boxes in portals like MyYahoo. A content pane resembles an iframe, but contains extra design features, fits in with the current theme, and renders widgets properly.
 
-=====
 Usage
 =====
 
@@ -56,7 +56,6 @@ An example of using a callback might be as follows:
   myCp.attr("href", "myHtml.html");
 
 
-========
 Examples
 ========
 
@@ -127,7 +126,6 @@ Programmatic example
     </div>
 
 
-=============
 Accessibility
 =============
 

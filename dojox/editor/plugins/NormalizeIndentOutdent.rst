@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/NormalizeIndentOutdent:
 
+===========================================
 dojox.editor.plugins.NormalizeIndentOutdent
 ===========================================
 
@@ -16,7 +17,6 @@ This plugin is new in 1.4, and is still being worked on, so it is considered exp
 
 This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get it to handle indenting and outdenting.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.
 
-========
 Features
 ========
 
@@ -28,7 +28,6 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 * Indents and outdents list elements correctly.  All known browsers (FireFox, Internet Explorer, WebKit), actually generate invalid HTML for lists when the native indent/outdent are used, so this plugin fixes that.
 * Makes use of the customUndo capability of editor.  This may impact performance on large documents, but is necessary as fixing the indent behavior requires DOM level manipulation, which the native undo/redo doesn't handle.
 
-=====
 Usage
 =====
 
@@ -74,7 +73,6 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
   </div>
 
 
-========
 Examples
 ========
 
@@ -179,7 +177,6 @@ Configured indent to be ems
     </textarea>
 
 
-========
 See Also
 ========
 

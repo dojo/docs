@@ -1,5 +1,6 @@
 .. _dojox/mobile/ContentPane:
 
+========================
 dojox.mobile.ContentPane
 ========================
 
@@ -24,7 +25,6 @@ ContentPane is a very simple and lightweight content pane to embed an HTML fragm
 |prog          |Boolean   |true     |If true, show a progress indicator while loading an HTML fragment specified by href.                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/getObject:
 
+===============
 dojo.getObject
 ===============
 
@@ -13,7 +14,6 @@ dojo.getObject
 dojo.getObject returns the property of an object from a dot-separated string such as "A.B.C"
 
 
-=====
 Usage
 =====
 
@@ -100,7 +100,6 @@ You can also pass an object as the third parameter. This will define the context
  dojo.getObject("bar", false, foo); // returns "some value"
 
 
-========
 See also
 ========
 

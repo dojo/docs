@@ -1,5 +1,6 @@
 .. _dojo/_base/lang:
 
+===============
 dojo/_base/lang
 ===============
 
@@ -13,7 +14,6 @@ dojo/_base/lang
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-========
 Features
 ========
 
@@ -81,7 +81,6 @@ Features
 
 
 
-========
 See also
 ========
 

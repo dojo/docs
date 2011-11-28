@@ -1,5 +1,6 @@
 .. _dijit/layout/BorderContainer:
 
+============================
 dijit.layout.BorderContainer
 ============================
 
@@ -13,7 +14,6 @@ dijit.layout.BorderContainer
 This widget is a container partitioned into up to five regions: left (or leading), right (or trailing), top, and bottom with a mandatory center to fill in any remaining space. Each edge region may have an optional splitter user interface for manual resizing.
 
 
-=====
 Usage
 =====
 
@@ -60,7 +60,6 @@ BorderContainer operates in a choice of two layout modes: the design attribute m
 
 However, the layoutPriority setting for child panes overrides the design attribute on the BorderContainer.   In other words, if the top and bottom sections have a lower layoutPriority then the left and right panes then the top and bottom panes will extend the entire width of the box.
  
-========
 Examples
 ========
 
@@ -310,15 +309,13 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
       }
     </style>
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-===========================================    =================================================
-Action                                         Key
+===========================================    Action                                         Key
 ===========================================    =================================================
 Navigate to splitters for resizable regions    tab - all resizable splitters are in the tab order
 Change the size of a vertical region           left / right arrows to decrease and increase

@@ -1,5 +1,6 @@
 .. _util/shrinksafe/index:
 
+==========
 ShrinkSafe
 ==========
 
@@ -13,7 +14,6 @@ ShrinkSafe
 
 ShrinkSafe is a standalone Java-based JavaScript compressor which utilizes Rhino to parse code and safely shorten the results.  ShrinkSafe renames local references to short names prefixed with an underscore.  This saves bytes on the wire and also provides some obfuscation of the code.  It also eliminates whitespace and comments when generating the new code.  Global references and property names remain unchanged such that external references to the compressed code should be safe.
 
-================
 Getting the Code
 ================
 
@@ -22,7 +22,6 @@ While ShrinkSafe is available as an `online service <http://shrinksafe.dojotoolk
 ShrinkSafe comes bundled with the ``-src`` releases of the Dojo Toolkit in the folder ``util/shrinksafe/``. Alternately, you can download ShrinkSafe standalone from `http://download.dojotoolkit.org <http://download.dojotoolkit.org/current-stable/>`_ by selecting the ``-shrinksafe`` archive.
 
 
-=====
 Usage
 =====
 
@@ -49,14 +48,12 @@ ShrinkSafe uses the encoding settings for the JVM, which may vary depending on y
   java -jar -Dfile.encoding=UTF8 shrinksafe.jar
 
 
-=====================
 Developer information
 =====================
 
 ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodified Rhino jar, ``js.jar``.  Note that the linkage requires the same version of Rhino used to build the shrinksafe.jar.  In versions prior to Dojo 1.3, ShrinkSafe was bundled into Rhino by way of patch, and shipped as ``custom_rhino.jar``.
 
 
-==========
 Known bugs
 ==========
 
@@ -64,7 +61,6 @@ Known bugs
 * Forward references are not always resolved properly.  See `ticket #3241 <http://bugs.dojotoolkit.org/ticket/3241>`_
 * ShrinkSafe appears to not handle '$super' in this code.  See `ticket #5436 <http://bugs.dojotoolkit.org/ticket/5436>`_
 
-========
 See also
 ========
 

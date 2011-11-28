@@ -1,5 +1,6 @@
 .. _dojo/_base/NodeList:
 
+===================
 dojo._base.NodeList
 ===================
 
@@ -15,7 +16,6 @@ dojo._base.NodeList
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 
 
-========
 Features
 ========
 

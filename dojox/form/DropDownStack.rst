@@ -1,5 +1,6 @@
 .. _dojox/form/DropDownStack:
 
+========================
 dojox.form.DropDownStack
 ========================
 

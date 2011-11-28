@@ -1,5 +1,6 @@
 .. _dojox/form/CheckedMultiSelect:
 
+=============================
 dojox.form.CheckedMultiSelect
 =============================
 
@@ -13,21 +14,18 @@ dojox.form.CheckedMultiSelect
 
 A multi-select widget (similar to html select with multiple=true) that uses check boxes.
 
-============
 Introduction
 ============
 
 This widget provides a more user-friendly mechanism for multi-selects (HTML select tags with multiple=true).
 
 
-=====
 Usage
 =====
 
 The CheckedMultiSelect is designed to replace existing HTML select elements with minimal effort.  You can also create them programmatically.
 
 
-========
 Examples
 ========
 

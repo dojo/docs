@@ -1,5 +1,6 @@
 .. _dojox/atom/io/Connection:
 
+========================
 dojox.atom.io.Connection
 ========================
 
@@ -13,7 +14,6 @@ dojox.atom.io.Connection
 
 The *dojox.atom.io.Connection* module is a IO class for performing APP (ATOM Publishing Protocol) styled IO actions with a server.
 
-============
 Introduction
 ============
 
@@ -21,7 +21,6 @@ This module simplifies performing APP by handling the configuration of all the n
 method for performing a particular type of ATOM action, from getting a Feed (xhrGet), to publishing a new entry (xhrPut).  This class makes use 
 of the dojox.atom.io.model class as its backing representation of the ATOM document and elements.
 
-===========
 Limitations
 ===========
 
@@ -29,7 +28,6 @@ Since this module uses the core :ref:`dojo.xhr <dojo/xhr>` functions for perform
 same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using 
 the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
 
-======================
 Constructor Parameters
 ======================
 
@@ -44,7 +42,6 @@ Constructor Parameters
 |                |              |the browser from caching the results of the IO call.  The default is false.                     |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
-=========
 Functions
 =========
 
@@ -68,7 +65,6 @@ Functions
 | deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an existing entry  |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
 
-========
 Examples
 ========
 
@@ -190,7 +186,6 @@ Example 2: Update an entry in a Feed
 **Note:** You can see more example usage in the tests file at: dojox/atom/tests/io/module.js
 
 
-========
 See Also
 ========
 

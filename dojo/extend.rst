@@ -1,5 +1,6 @@
 .. _dojo/extend:
 
+===========
 dojo.extend
 ===========
 
@@ -30,7 +31,6 @@ The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the no
 
 After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype).
 
-=================
 Extending _Widget
 =================
 
@@ -52,7 +52,6 @@ A potentially confusing result of the above actually provides us a lot of flexib
 
 The side-effect of this is a documentation nightmare. Now ``every`` Dijit appears to have a region variable, when in fact it is just there for the benefit of BorderContainer.
 
-==================================
 Example: dojo.extend vs dojo.mixin
 ==================================
 

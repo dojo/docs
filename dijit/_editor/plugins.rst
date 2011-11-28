@@ -1,5 +1,6 @@
 .. _dijit/_editor/plugins:
 
+====================
 dijit.editor.plugins
 ====================
 
@@ -11,7 +12,6 @@ dijit.editor.plugins
 
 The dijit.editor.plugins is a component is a holding place for additional features for the dijit.Editor that load via the dijit.Editor plugin infrastructure. These plugins are generally well tested and are known to work well across browsers. Plugins with specific limitations are addressed in their own documentation
 
-============
 Introduction
 ============
 
@@ -58,7 +58,6 @@ There are currently a small set of nice features that can be plugged into the di
   **This plugin is new to the Dojo Toolkit 1.4.**
 
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/layout/RotatorContainer:
 
+=============================
 dojox.layout.RotatorContainer
 =============================
 
@@ -13,7 +14,6 @@ dojox.layout.RotatorContainer
 
 dojox.layout.RotatorContainer is an extended StackContainer that automatically crossfades between child panes and display navigation in the form of tabs or a pager.
 
-============
 Introduction
 ============
 
@@ -21,14 +21,12 @@ The RotatorContainer cycles through the child panes with a crossfade transition.
 
 This widget is on the verge of being deprecated. It has been replaced by the :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`, a lightweight version that has more features and doesn't require dijit.
 
-=====
 Usage
 =====
 
 Since the RotatorContainer is a layout widget, it's children must be a layout widget such as a :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
 
-====================  =======  ========================================================================================
-Parameter             Type     Description
+====================  =======  Parameter             Type     Description
 ====================  =======  ========================================================================================
 showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label. The default value is "true".
 transitionDelay       int      The delay in milliseconds before transitioning to the next child. The default value is 5000 (5 seconds).
@@ -43,7 +41,6 @@ cycles                int      Number of cycles before pausing.
 pagerClass            string   The declared Class of the Pager used for this widget. The default value is "dojox.layout.RotatorPager".
 ====================  =======  ========================================================================================
 
-========
 Examples
 ========
 
@@ -69,7 +66,6 @@ Declarative example
    </div>
  </div>
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dojox/mobile/ScrollableView:
 
+===========================
 dojox.mobile.ScrollableView
 ===========================
 
@@ -16,7 +17,6 @@ The animation below shows the difference of scrolling behavior between View and 
 
 .. image:: ScrollableView-anim.gif
 
-======================
 Constructor Parameters
 ======================
 
@@ -54,12 +54,10 @@ Inherited from dojox.mobile.scrollable:
 |                      |          |         |specified, the entire screen height is used.                                           |
 +----------------------+----------+---------+---------------------------------------------------------------------------------------+
 
-=====
 Usage
 =====
 Basic usage is the same as for :ref:`dojox.mobile.View <dojox/mobile/View>`. If you do not need fixed-positioned header and/or footer bars, you should use :ref:`dojox.mobile.View <dojox/mobile/View>`.
 
-========
 Examples
 ========
 

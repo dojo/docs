@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/Preview:
 
+============================
 dojox.editor.plugins.Preview
 ============================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.Preview
 
 Have you ever wanted to see how the contents of the editor would look outside the editor or styled with a different set of CSS styles.  If so, then this plugin is for you!  This plugin provides a 'preview' capability, a way to view the contents of the editor outside the editable frame and with different styles applied.
 
-========
 Features
 ========
 
@@ -21,7 +21,6 @@ Once required in and enabled, this plugin provides the following features to dij
 * Button with icon in toolbar for previewing the content outside of the editor framedocument.
 * The ability to define a set of CSS styles or stylesheets to apply to the content in the preview view.
 
-=====
 Usage
 =====
 
@@ -53,14 +52,12 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Preview plugin!
 
-======================
 Configuring CSS styles
 ======================
 
 The CSS styling is configured in the plugin instantiation.  It can take two optional parameters, *styles* and *stylesheets* to define a set of CSS styles and/or stylesheets to import into the preview when it is rendered.  Please note that to use stylesheets, you *must* pass full urls to the stylesheets, such as **http://example.com/foo.css**, for it to be able to properly load them.
 
 
-========
 Examples
 ========
 
@@ -215,7 +212,6 @@ Applying stylesheets to preview content
     </ul>
     </div>
 
-========
 See Also
 ========
 

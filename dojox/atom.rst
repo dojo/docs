@@ -1,5 +1,6 @@
 .. _dojox/atom:
 
+==========
 dojox.atom
 ==========
 
@@ -13,13 +14,11 @@ dojox.atom
 
 The *dojox.atom* project is a container project for functions and widgets that specifically deal with working with the `ATOM <http://en.wikipedia.org/wiki/Atom_(standard)>`_ data format.
 
-============
 Introduction
 ============
 
 ATOM is a syndication format that uses a defined schema of XML for providing updated lists of things.  The things can be news events, blog posts, whatever the syndication publisher wishes to publish.  It came about as an alternative (and a more extensible), competitor to the widely used `RSS <http://en.wikipedia.org/wiki/RSS_(file_format)>`_ format.  This project contains libraries and and examples of how to work with ATOM feeds using the Dojo Toolkit.
 
-======================
 Available Sub-projects
 ======================
 
@@ -32,7 +31,6 @@ Available Sub-projects
 * **widget**:  Example widgets that use the ATOM IO later and model to render and edit ATOM feeds.  These are primarily examples and may not be perfect.
 * **tests**: Tests for the various modules.
 
-=====
 Usage
 =====
 
@@ -41,7 +39,6 @@ For specific usage, please see each module's documentation page:
 * :ref:`dojox.atom.io.model <dojox/atom/io/model>`
 * :ref:`dojox.atom.io.Connection <dojox/atom/io/Connection>`
 
-========
 See Also
 ========
 

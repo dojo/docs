@@ -1,5 +1,6 @@
 .. _dojox/data/AndOrReadStore:
 
+==========================
 dojox.data.AndOrReadStore
 ==========================
 
@@ -13,7 +14,6 @@ dojox.data.AndOrReadStore
 
 dojox.data.AndOrReadStore is a clone of dojo.data.ItemFileReadStore. The only significant difference is that it supports more complex queries than the simple AND format property matching. Specifically, it can perform AND and ORing, and NOT. For general functions, data format, and information refer to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`.
 
-==============
 Supported APIs
 ==============
 
@@ -22,7 +22,6 @@ The following dojo.data APIs are implemented by AndOrReadStore
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
 
-============
 Query Syntax
 ============
 AndOrReadStore supports all the same query capability as dojo.data.ItemFileReadStore as well as several others that allow for more complicated queries. In specific, it allows for chaining of ANDs, ORs, and NOTs for attributes (along with wildcards), for a much more flexible structure.
@@ -31,7 +30,6 @@ AndOrReadStore supports all the same query capability as dojo.data.ItemFileReadS
   
   , NOT AND OR ( ) ! && ||  Note: "," included for legacy queries (translated to AND).
 
-===============
 Example queries
 ===============
 
@@ -54,7 +52,6 @@ Object-Based Query
   ...
 
 
-===================
 Functional Examples
 ===================
 

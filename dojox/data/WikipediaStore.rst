@@ -1,5 +1,6 @@
 .. _dojox/data/WikipediaStore:
 
+=========================
 dojox.data.WikipediaStore
 =========================
 
@@ -12,7 +13,6 @@ dojox.data.WikipediaStore
 
 The Wikipedia store is a datastore that extends :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>`.  Its purpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcard searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox.
 
-==============
 Supported APIs
 ==============
 
@@ -21,7 +21,6 @@ The following dojo.data APIs are implemented by XmlStore
 * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
 
 
-===============
 Item Attributes
 ===============
 
@@ -31,7 +30,6 @@ All items returned from a Wikipedia search provide the following attributes you 
 | title         |The title of the article identified that matched the search criteria                                                         |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 
-============
 Query Syntax
 ============
 
@@ -73,7 +71,6 @@ Search article text (paged)
   },
 
 
-========
 Examples
 ========
 

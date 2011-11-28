@@ -1,5 +1,6 @@
 .. _dojox/atom/io/model/Service:
 
+===========================
 dojox.atom.io.model.Service
 ===========================
 
@@ -13,7 +14,6 @@ dojox.atom.io.model.Service
 
 An Atom service document describes the services that a server implementing the Atom Publishing Protocol offers. This object represents this type of document.
 
-====================================
 Public properties (and their types):
 ====================================
 
@@ -23,7 +23,6 @@ Public properties (and their types):
 | String                     | href            | The URL to the service document                                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-==========================================
 Public functions (and their return types):
 ==========================================
 
@@ -40,7 +39,6 @@ Below are all the functions implemented by this model class.
 |                   |                                                      | given URL                                                   |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
-=========
 See Also:
 =========
 

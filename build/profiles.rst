@@ -1,5 +1,6 @@
 .. _build/profiles:
 
+==============
 build profiles
 ==============
 
@@ -13,7 +14,6 @@ build profiles
 
 The build profile is a simple JavaScript file containing an object which provides the parameters driving the build.
 
-============
 Introduction
 ============
 
@@ -23,13 +23,11 @@ The builder automatically appends ``.profile.js`` to the name of the profile spe
 
 Note:  throughout the various options described below, file system paths are often specified.  Even on Windows based hosts, use forward slashes (akin to Unix) as directory separators, instead of the Windows native backslash.
 
-==============
 Empty Profiles
 ==============
 
 If you specify an empty profile containing no ``dependencies`` object (such as the ``base.profile.js`` file shipped with the Dojo distribution), all defaults will be applied to the build.  In this case, the builder will create a single layer, ``dojo.js``, which contains only Dojo Base.  All other resources will be loaded from the distribution on demand via ``dojo.require``.
 
-===================
 Dependencies Object
 ===================
 
@@ -55,7 +53,6 @@ layers
 prefixes
   Optional.  An array of individual prefix objects, describing where relative to the source directory tree, a particular top-level module's source is found.
 
-======
 Layers
 ======
 
@@ -128,7 +125,6 @@ customBase
    See the :ref:`customBase detailed description <build/customBase>`.
 
 
-========
 Prefixes
 ========
 
@@ -169,7 +165,6 @@ This permits you to build into your distribution private namespace resources whi
 
 
 
-========
 Examples
 ========
 
@@ -184,7 +179,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

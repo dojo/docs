@@ -1,5 +1,6 @@
 .. _dojo/getContentBox:
 
+==================
 dojo.getContentBox
 ==================
 
@@ -8,7 +9,6 @@ dojo.getContentBox
 
 Returns an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model.
 
-============
 Introduction
 ============
 
@@ -16,7 +16,6 @@ The dojo.getContentBox function is used to obtain an object that encodes the wid
 
 Since Dojo 1.7, ``dojo.getContentBox`` is exposed via the ``getContentBox`` method of the ``dojo/dom-geometry`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 

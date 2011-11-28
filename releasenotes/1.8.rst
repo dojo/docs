@@ -1,5 +1,6 @@
 .. _releasenotes/1.8:
 
+======================
 Dojo 1.8 Release Notes
 ======================
 
@@ -9,7 +10,6 @@ Dojo 1.8 Release Notes
    :depth: 3
 
 
-===============
 Browser support
 ===============
 
@@ -31,18 +31,15 @@ Mobile (dojox/mobile)
 
   TODO: Link to page with specific vendor device models tested on
 
-=========
 Dojo Base
 =========
 
-=========
 Dojo Core
 =========
 
 Parser
 ------
 
-=====
 Dijit
 =====
 _WidgetBase
@@ -96,16 +93,13 @@ Tree
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
 - New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
 
-=====
 DojoX
 =====
 
 
-====
 Util
 ====
 
 
-=========
 Migration
 =========

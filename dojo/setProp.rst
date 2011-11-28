@@ -1,5 +1,6 @@
 .. _dojo/setProp:
 
+=============
 dojo.setProp
 =============
 
@@ -8,7 +9,6 @@ dojo.setProp
 
 Sets a property on an HTML element.
 
-============
 Introduction
 ============
 
@@ -18,7 +18,6 @@ When passing functions as values, note that they will not be directly assigned t
 
 Since Dojo 1.7, ``dojo.setProp`` is exposed via the ``set`` method of the ``dojo/dom-prop`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -43,7 +42,6 @@ value
 
 This API will return the DOM node.
 
-========
 Examples
 ========
 
@@ -148,7 +146,6 @@ Dojo < 1.7
   dojo.setProp("someNode", "style", obj);
   dojo.style("someNode", obj);
 
-========
 See also
 ========
 

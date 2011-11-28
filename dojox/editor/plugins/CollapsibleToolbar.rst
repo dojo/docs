@@ -1,5 +1,6 @@
 .. _dojox/editor/plugins/CollapsibleToolbar:
 
+=======================================
 dojox.editor.plugins.CollapsibleToolbar
 =======================================
 
@@ -12,7 +13,6 @@ dojox.editor.plugins.CollapsibleToolbar
 
 Have you ever wanted to collapse the editor toolbar out of the way?  This is desirable in cases where the editor occupies a small section of a page and the toolbar has wrapped, limiting the editing area.  If this is a situation your users encounter, then this plugin is for you.
 
-========
 Features
 ========
 
@@ -23,14 +23,12 @@ Once required in and enabled, this plugin provides the following features to dij
 * The button works perfectly in high-contrast mode,
 * Styles for Tundra, Nihilo, and soria themes.
 
-===========
 Limitations
 ===========
 
 * This plugin should be instantiated as the first plugin in the plugins list to ensure that it adapts the toolbar before other plugins modify it (such as FindReplace does).
 
 
-=====
 Usage
 =====
 
@@ -62,7 +60,6 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the CollapsibleToolbar plugin!  You can click the collapse icon to collapse the toolbar, and the expand icon to bring it back
 
-========
 Examples
 ========
 
@@ -114,7 +111,6 @@ Basic Usage
     </ul>
     </div>
 
-========
 See Also
 ========
 

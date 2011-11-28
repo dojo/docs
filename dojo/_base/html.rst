@@ -1,5 +1,6 @@
 .. _dojo/_base/html:
 
+===============
 dojo/_base/html
 ===============
 
@@ -16,7 +17,6 @@ The **dojo/_base/html** module defines aliases to basic DOM & HTML handling func
 As of Dojo 1.7, the recommended practice going forward (with ``async: true``) is to require just the individual dependencies you need, instead of ``dojo/_base/html``.  The new locations of its functions are indicated in the list below.
 
 
-========
 Features
 ========
 
@@ -197,7 +197,6 @@ Features
   Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter.
 
 
-========
 See also
 ========
 

@@ -1,5 +1,6 @@
 .. _dijit/Menu:
 
+==========
 dijit.Menu
 ==========
 
@@ -12,7 +13,6 @@ dijit.Menu
 A Menu widget
 
 
-============
 Introduction
 ============
 
@@ -25,7 +25,6 @@ The Menu widget is used for three types of menus:
 MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right. A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
 
-========
 Examples
 ========
 
@@ -159,15 +158,13 @@ Usage to display a Menu statically is the same as context menus, except that you
 	</div>
 
 
-=============
 Accessibility
 =============
 
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Open a context menu                           On Windows: shift-f10 or the Windows context menu key.
 
@@ -190,7 +187,6 @@ Known Issues
 When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu. This will be fixed in Firefox 3.
 
 
-====================
 Implementation Notes
 ====================
 

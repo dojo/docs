@@ -1,5 +1,6 @@
 .. _quickstart/custom-builds:
 
+====================================
 Custom Builds
 ====================================
 
@@ -14,7 +15,6 @@ Custom Builds
 How to use Dojo's custom build system to package your code for optimal runtime performance. This guide briefly covers many common usages and parameters. See the :ref:`full build documentation <build/index>` for all the details.
 
 
-============
 Introduction
 ============
 

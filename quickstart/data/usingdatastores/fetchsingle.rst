@@ -1,5 +1,6 @@
 .. _quickstart/data/usingdatastores/fetchsingle:
 
+======================
 Selecting single items
 ======================
 
@@ -25,7 +26,6 @@ For this example, we'll assume the following simple data source:
       { name: 'pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
-========
 Examples
 ========
 

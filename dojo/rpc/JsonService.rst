@@ -1,5 +1,6 @@
 .. _dojo/rpc/JsonService:
 
+====================
 dojo.rpc.JsonService
 ====================
 
@@ -14,14 +15,12 @@ dojo.rpc.JsonService
 dojo.rpc.JsonService is a generic JSON RPC service.
 
 
-============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
 
-=====
 Usage
 =====
 
@@ -35,7 +34,6 @@ TODO: how to use the component/class/method
 
 
 
-========
 Examples
 ========
 
@@ -50,7 +48,6 @@ Declarative example
 TODO: example
 
 
-========
 See also
 ========
 

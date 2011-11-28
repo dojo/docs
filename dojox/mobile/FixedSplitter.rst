@@ -1,5 +1,6 @@
 .. _dojox/mobile/FixedSplitter:
 
+==========================
 dojox.mobile.FixedSplitter
 ==========================
 
@@ -14,7 +15,6 @@ FixedSplitter is a very simple container widget that layouts its child dom nodes
 
 .. image:: FixedSplitter.png
 
-=====
 Usage
 =====
 
@@ -33,7 +33,6 @@ FixedSplitter is in a separate module file from _base.js. You need to dojo.requi
 
   dojo.require("dojox.mobile.FixedSplitter");
 
-======================
 Constructor Parameters
 ======================
 
@@ -44,7 +43,6 @@ Constructor Parameters
 |              |          |         |split vertically.                                                                                          |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-========
 Examples
 ========
 

@@ -1,5 +1,6 @@
 .. _dojo/version:
 
+============
 dojo.version
 ============
 
@@ -13,7 +14,6 @@ dojo.version
 An object describing the current version of dojo.js
 
 
-=====
 Usage
 =====
 

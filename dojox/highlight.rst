@@ -1,5 +1,6 @@
 .. _dojox/highlight:
 
+===============
 dojox.highlight
 ===============
 

@@ -1,5 +1,6 @@
 .. _dojo/fx/wipeIn:
 
+==============
 dojo.fx.wipeIn
 ==============
 
@@ -16,19 +17,16 @@ This function is a helper function that wraps the :ref:`dojo.animateProperty <do
 
 **NOTE:** The wipe end wipes from a height of 0px to the full height of the target dom node.
 
-==========
 Parameters
 ==========
 
 The *dojo.fx.wipeIn* function takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function. All standard :ref:`dojo.Animation <dojo/Animation>` parameters and events apply to this function, with no additional properties included.
 
-============
 Return value
 ============
 
 The *dojo.fx.wipeIn* function returns an instance of dojo._Animation.  To execute the wipeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as :ref:`dojo.fx.chain <dojo/fx/chain>` and :ref:`dojo.fx.combine <dojo/fx/combine>` to link it with other effects to perform complex animations.
 
-========
 Examples
 ========
 
@@ -132,7 +130,6 @@ Example 3:  Wipe in a dom node with an easing function
       <b>This is a container of random content to wipe in slowly with the expoOut easing!</b>
     </div>
 
-========
 See Also
 ========
 

@@ -1,5 +1,6 @@
 .. _developer/projects:
 
+===============
 Future Projects
 ===============
 

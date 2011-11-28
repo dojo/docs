@@ -1,5 +1,6 @@
 .. _dojo/publish:
 
+============
 dojo.publish
 ============
 
@@ -12,13 +13,11 @@ dojo.publish
 
 Publish an event to all subscribers of a `topic`. Publish is provided as part of Base Dojo (dojo.js), so no additional requires are needed.
 
-============
 Introduction
 ============
 
 `dojo.publish` is one of three topic-related functions used to publish (broadcast?) any kind of information within the application, to be received by other functions :ref:`subscribed <dojo/subscribe>` to the same channel. A channel can be any string in almost any form you like. Additionally, like other Dojo :ref:`event <quickstart/events>` functions, a :ref:`dojo.unsubscribe <dojo/unsubscribe>` function is provided to disconnect subscriptions to channels.
 
-========
 Examples
 ========
 
@@ -79,7 +78,6 @@ Subscribe returns a handle to later be used for disconnecting a subscription, mu
 
 In the above example, we're disconnecting the handle from within the subscribed function, effectively creating a "subscribe-once" pattern. After the first time something published on the ``/foo/bar`` channel, the connection is interrupted, and the function will no longer fire.
 
-========
 See also
 ========
 

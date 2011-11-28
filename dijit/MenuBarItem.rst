@@ -69,8 +69,7 @@ Accessibility
 Keyboard
 --------
 
-==========================================    =================================================
-Action                                        Key
+==========================================    Action                                        Key
 ==========================================    =================================================
 Navigate menu bar items                             Left and right arrow keys
 Activate a menu item                            Spacebar or enter

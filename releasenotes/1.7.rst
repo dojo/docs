@@ -1,12 +1,12 @@
 .. _releasenotes/1.7:
 
+======================
 Dojo 1.7 Release Notes
 ======================
 
 .. contents::
    :depth: 3
 
-=============
 Documentation
 =============
 
@@ -16,7 +16,6 @@ Considerable effort has been put into making Dojo 1.7's documentation better tha
 
   `API Docs (1.7 Draft) <http://staging.dojotoolkit.org/api/>`_
 
-===============
 Browser support
 ===============
 
@@ -38,7 +37,6 @@ Mobile (dojox/mobile)
 
   TODO: Link to page with specific vendor device models tested on
 
-=========
 Dojo Base
 =========
 
@@ -129,7 +127,6 @@ dojo.connect
 ------------
 This has been refactored to use the new dojo/on module for event handling. See `dojo/on`_ below for more information.
 
-=========
 Dojo Core
 =========
 
@@ -223,7 +220,6 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and the following sample usage c
 
 Please refer to :ref:`dojo/touch doc <dojo/touch>` for more details.
 
-=====
 Dijit
 =====
 
@@ -288,7 +284,6 @@ ComboBox, FilteringSelect
 These classes have been enhanced to accept a :ref:`dojo.store <dojo/store>` (the new store API) for the store parameter.
 The old :ref:`dojo.data API <dojo/data/api/Read>` is still supported.
 
-=====
 DojoX
 =====
 
@@ -417,7 +412,6 @@ OpenLayers Maps
   - Allow user to place georeferenced widgets on the map.
   - Use of AMD module format.
 
-====
 Util
 ====
 
@@ -429,7 +423,6 @@ The Build Tools have been completely reimplemented in Dojo 1.7, to take full adv
   :ref:`Build Tool Reference Guide (1.7 Draft) <build/buildSystem>`
 
 
-=========
 Migration
 =========
 

@@ -1,5 +1,6 @@
 .. _dijit/Tooltip:
 
+=============
 dijit.Tooltip
 =============
 
@@ -10,7 +11,6 @@ dijit.Tooltip
 .. contents::
     :depth: 2
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ Tooltip is similar to the title="" attribute in regular HTML, but is much more f
 Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the :ref:`dijit.TooltipDialog <dijit/TooltipDialog>` instead.
 
 
-=====
 Usage
 =====
 
@@ -33,8 +32,7 @@ Usage
    });
  </script>
 
-=========  =========================  =============================================================================
-Parameter  Type                       Description
+=========  =========================  Parameter  Type                       Description
 =========  =========================  =============================================================================
 connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. Note: Currently connectId can only be specified on initialization, it cannot be changed via attr('connectId', ...). Note: in 2.0 this will be renamed to connectIds for less confusion.  Note: functions addTarget and removeTarget have been added to allow dynamic registration/deregistration of connected ids.
 label      String                     Text to display in the tooltip. Specified as innerHTML when creating the widget from markup.
@@ -50,7 +48,6 @@ position   Array of Strings           This variable controls the position of too
 showDelay  Integer                    Number of milliseconds to wait after hovering over/focusing on the object, before the tooltip is displayed (default = 400).
 =========  =========================  =============================================================================
 
-========
 Examples
 ========
 
@@ -137,7 +134,6 @@ And here's a tooltip created from markup connected to a :ref:`dijit.form.Button 
         </div>
 
 
-===================
 Tooltip Positioning
 ===================
 
@@ -146,7 +142,6 @@ You can control the search path for positions via a global setting like:
 
 dijit.Tooltip.defaultPosition = ["above", "below"];
 
-=============
 Accessibility
 =============
 
@@ -159,7 +154,6 @@ When using Firefox 2 with JAWS 9, the tooltip text is spoken twice. This has bee
 
 Tooltips are not spoken in IE 8 with JAWS 10. This is because Dijit Tooltips are implemented using the ARIA alert role and IE 8 does not support that role.   A ticket (http://bugs.dojotoolkit.org/ticket/3957) has been filed to modify Dijit Tooltips to use the ARIA tooltip role since that role is now supported in Firefox 3 and IE 8
 
-========
 See also
 ========
 

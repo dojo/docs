@@ -1,5 +1,6 @@
 .. _dojox/form/PasswordValidator:
 
+============================
 dojox.form.PasswordValidator
 ============================
 
@@ -14,14 +15,12 @@ dojox.form.PasswordValidator
 A dijit._FormWidget that simplifies the "Old/New/Validate" password mechanism found on many web pages.
 
 
-============
 Introduction
 ============
 
 Many web page use a 3-input mechanism for changing/updating passwords, where the user enters in their old password, their new password, and then validates their new password.  This widget is intended as a way to simplify that process - and provide the user with feedback along the way.
 
 
-=====
 Usage
 =====
 
@@ -57,7 +56,6 @@ pwCheck Security
 The pwCheck function of this widget will be called to validate the old (current) password.  Please do not put this check in the actual javascript code (or HTML page) - as this is horribly insecure.
 
 
-========
 Examples
 ========
 

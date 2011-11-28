@@ -1,5 +1,6 @@
 .. _dojo/number:
 
+===========
 dojo.number
 ===========
 
@@ -10,7 +11,6 @@ dojo.number
   :depth: 2
 
 
-============
 Introduction
 ============
 
@@ -19,7 +19,6 @@ dojo.number contains methods for user presentation of Javascript Number objects:
 Formatting and parsing are done in a locale-sensitive manner, using culturally appropriate patterns for representing group (thousands) and decimal separators, percent signs, etc.  This module forms the basis of dojo.currency, which uses similar methods but adds support for currency symbols and alters the pattern as appropriate.
 
 
-================
 format()/parse()
 ================
 
@@ -28,7 +27,6 @@ Similar to dojo.date.locale, dojo.number uses the Unicode.org Common Locale Data
 Custom formats may be specified to override the localized convention by passing in a 'pattern', for example dojo.number.format(123, {pattern:"00000"}) gives a result of "00123".  The pattern string is constructed according to the Unicode CLDR specification, which uses a convention similar to Java's NumberFormat.  See the API docs for details.
 
 
-=======
 round()
 =======
 
@@ -38,7 +36,6 @@ IE: (0.9).toFixed(1) yields "0.0"
 All other browsers: (0.9).toFixed(1) yields "1.0"
 
 
-========
 See Also
 ========
 

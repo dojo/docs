@@ -1,5 +1,6 @@
 .. _quickstart/back:
 
+=====================
 Back buttons and Dojo
 =====================
 

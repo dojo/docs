@@ -1,5 +1,6 @@
 .. _dojo/addClass:
 
+=============
 dojo.addClass
 =============
 
@@ -13,7 +14,6 @@ Safely adds a CSS class or a set of classes to a node avoiding duplications.
 
 Since Dojo 1.7, ``dojo.addClass`` is exposed via the ``add`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
-=====
 Usage
 =====
 
@@ -53,7 +53,6 @@ Dojo < 1.7
     // Add a class to some node:
     dojo.addClass("someNode", "anewClass");
 
-========
 Examples
 ========
 
@@ -257,7 +256,6 @@ See it in action:
     <button id="button3" data-dojo-type="dijit.form.Button" type="button">Add to multiple nodes</button>
 
 
-========
 See also
 ========
 

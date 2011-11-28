@@ -11,7 +11,6 @@ dojo/io-query
 
 This module defines query string processing functions which contain objectToQuery and queryToObject.
 
-========
 Features
 ========
 

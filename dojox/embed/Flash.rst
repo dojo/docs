@@ -1,5 +1,6 @@
 .. _dojox/embed/Flash:
 
+=================
 dojox.embed.Flash
 =================
 
@@ -14,7 +15,6 @@ dojox.embed.Flash
 Base functionality to insert a flash movie into a document on the fly.
 
 
-============
 Introduction
 ============
 
@@ -78,7 +78,6 @@ However this is an old and not very user friendly method. By using codebase and 
 This method uses two object tags. First object tag is for IE, second is for other browsers.
 
 
-=====
 Usage
 =====
 
@@ -161,7 +160,6 @@ In constructor of dojox.embed.Flash there is params variable. For flash followin
 * wmode - ("transparent" | "opaque" | "window")
   
 
-========
 Examples
 ========
 
@@ -205,7 +203,6 @@ Declarative example
  </div>
 
 
-========
 See also
 ========
 

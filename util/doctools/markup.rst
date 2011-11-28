@@ -1,5 +1,6 @@
 .. _util/doctools/markup:
 
+=========================
 Dojo Inline Documentation
 =========================
 
@@ -13,13 +14,11 @@ Dojo Inline Documentation
 
 Syntax, keywords and guidelines for Dojo's inline API documentation format
 
-============
 Introduction
 ============
 
 API documentation takes the form of comment blocks, typically with one or more keywords. Function parameters may also be hinted inline and return values also indicated inline.
 
-===========
 Using a Key
 ===========
 
@@ -41,7 +40,6 @@ Formatting: Each keyword should be on a line by itself, with a space before and 
 The parser will keep reading content as part of the specified key until it sees a completely blank line, or another keyword.
 Although our formatting convention requires that keywords exist on a separate line, if any of these keywords occur at the beginning of a line, the parser will start reading the text following it and save it as part of that key's content. This means that you should be careful about what word you use to start a line. For example, "summary" shouldn't start a line unless the content that follows is the summary.
 
-==========================================
 Using Markdown
 ==========================================
 
@@ -49,7 +47,6 @@ You can use `Markdown <http://daringfireball.net/projects/markdown/syntax>`_  in
 
 To indicate a code block, indent the code block using a single tab. The parser considers the | (pipe) character to indicate the start of a line. You must use | followed by a tab in order to indicate a code block. In Markdown, to indicate an inline piece of code, surround the code with backticks. eg `<div>`.
 
-===================
 General Information
 ===================
 
@@ -67,7 +64,6 @@ These keys provide descriptions for the function or object:
 
 * **example**: A writeup of an example. Uses Markdown syntax, so use Markdown syntax to indicate code blocks from any normal text. This key  can occur multiple times.
 
-=====
 Tags
 =====
 
@@ -116,7 +112,6 @@ A Note
 The current API tools (for displaying the documentation) not only assumes that any variable beginning with a _prefix is considered private, but also assumes that any method beginning with the phrase "on" is an event handler (i.e. onFoo, onClick, onmouseover).
 
 
-====================
 Method-Specific Tags
 ====================
 
@@ -150,7 +145,6 @@ Method-Specific Tags
 	        ...
 	}
 
-============================
 General Function Information
 ============================
 
@@ -169,7 +163,6 @@ General Function Information
 	}
 
 
-==================
 Object Information
 ==================
 
@@ -188,7 +181,6 @@ Has no description of what it returns
 	  //        but, you're insured, right?
 	}
 	
-========================================
 Function Assembler Information (declare)
 ========================================
 
@@ -215,7 +207,6 @@ For example:
 	  }
 	);
 
-==========
 Parameters
 ==========
 
@@ -256,7 +247,6 @@ If you want to also add a summary, you can do so in the initial comment block. I
 	}
 
 
-=========
 Variables
 =========
 
@@ -285,7 +275,6 @@ Instance variables, prototype variables and external variables can all be define
 
 
 
-=================
 Tagging Variables
 =================
 
@@ -317,7 +306,6 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 
 
 
-==============================
 Variable Comments in an Object
 ==============================
 
@@ -333,7 +321,6 @@ The parser takes the comments in between object values and applies the same rule
 	  //        Another simple value
 	}
 
-============
 Return Value
 ============
 
@@ -365,7 +352,6 @@ Note: The return type should be on the same line as the return statement. The fi
 	}
 
 
-============================
 Documentation-Specific Code
 ============================
 
@@ -401,7 +387,6 @@ Doing this allows us to see syntax highlighting in our text editor, and we can w
 
 The trade-off is that it's harder to maintain documentation-only files. It's a good idea to only have one of these per the namespace depth you're at. eg in the same directory that the file you're documenting is. We'll see an example of its use in the next section.
 
-===================
 Documenting a kwArg
 ===================
 
@@ -432,7 +417,6 @@ To associate this object with the originating function, do this:
 
 Since we didn't do a ``dojo.require`` on module._arg, it won't get included, but the documentation parser will still provide a link to it, allowing the user to see its functionality. This pseudo object may also be included in-line using the ``/*===== =====*/`` syntax. For an example of how to do this inline, see "dojo.__FadeArgs" pseudo code in dojo/_base/fx.js, used to document ``dojo.fadeIn()`` and ``dojo.fadeOut()``
 
-==========================================
 Which Documentation-Specific Syntax To Use
 ==========================================
 
@@ -440,14 +424,12 @@ Documenting in another file reduces the chance that your code will break code pa
 
 There are many situations where you can't do this, in which case you should use the inline-comment syntax. There is also a fear that people will forget to keep documentation in sync as they add new invisible mixed in fields. If this is a serious concern, you can also use the inline comment syntax.
 
-===========================
 Validating your docs markup
 ===========================
 
 If you are a developer who has marked their code up using this syntax and want to test to make sure it is correct, you can run the doctool yourself locally. :ref:`See Generating API Documentation <util/doctools/generate>`. There is also a tool to quickly view simple parsing found in util/docscripts/_browse.php
 
 
-========
 See Also
 ========
 
