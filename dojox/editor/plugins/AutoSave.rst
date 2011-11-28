@@ -62,12 +62,12 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  =============================================================================
+Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  =============================================================================
 name                      String             False         autosave                 The name of this plugin. It should always be "autosave".
 url                       String             False         <empty string>           The service url which the content of the editor is submitted to.
-interval                  Number             True          5                        Specify the interval to perform the save action.
-                                                                                    If it is not specified, the default value is 5 (minutes).
+interval                  Number             True          5                        Specify the interval to perform the save action.                                                                                   If it is not specified, the default value is 5 (minutes).
 ========================  =================  ============  =======================  =============================================================================
 
 Set up the server

@@ -25,8 +25,10 @@ The size of the thumbnails and the style of the selected thumbnail is controlled
 Usage
 =====
 
-==========  =======  Parameter   Type     Description
-==========  =======  rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
+==========  =======  ======================================================================
+Parameter   Type     Description
+==========  =======  ======================================================================
+rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 ==========  =======  ======================================================================
 
 Examples

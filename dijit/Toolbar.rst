@@ -132,8 +132,10 @@ Note the use of showLabel="false" above. We've specified a label but then hidden
 Keyboard
 --------
 
-===========================================    Action                                         Key
-===========================================    Move focus between widgets in the toolbar      Left and right arrow keys
+===========================================    ==========================
+Action                                         Key
+===========================================    ==========================
+Move focus between widgets in the toolbar      Left and right arrow keys
 ===========================================    ==========================
 
 Known Issues

@@ -129,7 +129,8 @@ Keyboard
 
 Widget is closed (not being edited)
 
-==============================================    Action                                            Key
+==============================================    =================================================
+Action                                            Key
 ==============================================    =================================================
 Navigate to the next widget in the tab order.     Tab
 Navigate to the prior widget in the tab order.    Shift+Tab

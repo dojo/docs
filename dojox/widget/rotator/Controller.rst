@@ -32,7 +32,8 @@ The Controller's DOM node may also be styled for positioning or other styled pre
 Usage
 =====
 
-==========  =======  Parameter   Type     Description
+==========  =======  ======================================================================
+Parameter   Type     Description
 ==========  =======  ======================================================================
 rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 commands    string   A comma-separated list of commands. The default value is "prev,play/pause,info,next".
@@ -40,7 +41,8 @@ commands    string   A comma-separated list of commands. The default value is "p
 
 The "commands" parameter accepts the following commands:
 
-=============  Command Name   Description
+=============  ============================================================================
+Command Name   Description
 =============  ============================================================================
 prev           An icon button to go to the previous pane.
 next           An icon button to go to the next pane.

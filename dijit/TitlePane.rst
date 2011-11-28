@@ -22,7 +22,8 @@ Usage
 
 The constructor for TitlePane takes the following possible parameters in its keyword arguments:
 
-=========  ==================================  Parameter  Type                                Description
+=========  ==================================  ==================================================
+Parameter  Type                                Description
 =========  ==================================  ==================================================
 title      String                              The title to be displayed in the pane header. The default is an empty string.
 content    DomNode | NodeList | dijit._Widget  The content (innerHTML) to be displayed in the pane.
@@ -114,7 +115,8 @@ Keyboard
 
 Each title pane title is included in the tab order of the document.
 
-===================================     Action                                  Key
+===================================     =====================================================
+Action                                  Key
 ===================================     =====================================================
 toggle open/close of the title pane     enter or space key with focus on the title pane title
 Navigate into an opened title pane      tab

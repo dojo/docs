@@ -69,10 +69,11 @@ Accessibility
 Keyboard
 --------
 
-==========================================    Action                                        Key
 ==========================================    =================================================
-Navigate menu bar items                             Left and right arrow keys
-Activate a menu item                            Spacebar or enter
+Action                                        Key
+==========================================    =================================================
+Navigate menu bar items                       Left and right arrow keys
+Activate a menu item                          Spacebar or enter
 ==========================================    =================================================
 
 

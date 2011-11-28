@@ -45,7 +45,8 @@ Usage
   // Dojo < 1.7
   dojo.connect(obj, event, context, method, dontFix);
 
-=========  ===============  Parameter  Type             Description
+=========  ===============  ==================================================
+Parameter  Type             Description
 =========  ===============  ==================================================
 obj        Object|null      The source object for the event function. Defaults to dojo.global if null. If obj is a DOM node, the connection is delegated to the DOM event manager (unless dontFix is true).
 event      String           name of the event function in obj. I.e. identifies a property obj[event].

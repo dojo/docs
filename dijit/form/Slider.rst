@@ -31,7 +31,8 @@ Usage
 
 Here are some of the constructor parameters:
 
-==============  ====================  Parameter       Type                       Description
+==============  ====================  =============================================================================
+Parameter       Type                       Description
 ==============  ====================  =============================================================================
 value           integer               Initial value of the slider (``0``)
 showButtons     boolean               Whether to show or not buttons at each end of the slider (``true``)

@@ -221,7 +221,8 @@ The dojox.grid.LazyTreeGrid can either be defined declaratively in HTML or progr
   
 The following parameters are supported in the dojox.grid.LazyTreeGrid:
 
-====================================  ===================================  ========================================  Parameter                             Type                                 Default Value                             Description
+====================================  ===================================  ========================================  ============================================================================================
+Parameter                             Type                                 Default Value                             Description
 ====================================  ===================================  ========================================  ============================================================================================
 rowsPerPage                           Integer                              25                                        Number of rows to render at a time
 autoWidth                             Boolean                              false                                     If autoWidth is true, grid width is automatically set to fit the data
@@ -335,7 +336,8 @@ Public API
 
 Available public methods of the LazyTreeGrid are listed below:
 
-=========  =====================================  =====================  Name       Parameters                             Return                 Description
+=========  =====================================  =====================  =======================================================
+Name       Parameters                             Return                 Description
 =========  =====================================  =====================  =======================================================
 setModel   treeModel                              N/A                    Change the LazyTreeGrid's treeModel.
 

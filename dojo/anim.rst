@@ -49,7 +49,8 @@ Dojo < 1.7
 
 Here is the definition of arguments:
 
-===========  ==============  Parameter    Type            Description
+===========  ==============  ======================================================================
+Parameter    Type            Description
 ===========  ==============  ======================================================================
 node         DOMNode|String  Can be a DOM node or the id of a node (as string) to animate CSS properties on.
 

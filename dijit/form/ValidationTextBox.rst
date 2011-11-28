@@ -24,7 +24,8 @@ Usage
 
 The following attributes can be specified when you create a ValidationTextBox:
 
-===============  =============  Parameter        Type           Description
+===============  =============  ======================================================================
+Parameter        Type           Description
 ===============  =============  ======================================================================
 required                        Whether the field is required or not. false by default.
 promptMessage                   Tooltip text that appears when the text box is empty and on focus. Null by default.

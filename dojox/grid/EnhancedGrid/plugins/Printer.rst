@@ -221,15 +221,19 @@ When this plugin is enabled, the following methods are available in a grid widge
 printGrid
 	Print desired rows in the grid (by ``fetchArgs``), using ``title`` as a title, decorating generated html by ``cssFiles``, using ``writerArgs`` (tagName:"attributeList" pairs) to control html tags in the generated html string.
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
-==============  ==================  ==========================  args            Object              Optional(default to {})     Including title, cssFiles, fetchArgs and writerArgs
+==============  ==================  ==========================  ====================================================
+Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  ====================================================
+args            Object              Optional(default to {})     Including title, cssFiles, fetchArgs and writerArgs
 ==============  ==================  ==========================  ====================================================
 
 printSelected
 	Print selected rows.
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
-==============  ==================  ==========================  args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
+==============  ==================  ==========================  ====================================================
+Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  ====================================================
+args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
 ==============  ==================  ==========================  ====================================================
 
 exportToHTML
@@ -250,7 +254,8 @@ exportToHTML
     win.document.close();
   });
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  =======================================================
+Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  =======================================================
 args            Object              Optional(default to {})     Including title, cssFiles, fetchArgs and writerArgs
 onExported      function(string)    Mandatory                   Callback function, do something with the result string.
@@ -260,13 +265,16 @@ exportSelectedToHTML
 	Export selected rows to HTML string, but do NOT print. Users can use this to implement print preview.
 	You'll also probably need to call grid.normalizePrintedGrid(doc), see the above explanation.
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
-==============  ==================  ==========================  args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
+==============  ==================  ==========================  ====================================================
+Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  ====================================================
+args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
 ==============  ==================  ==========================  ====================================================
 
 The content of the args parameter for the above functions is:
 
-===========  ==========  Parameter    Type        Description
+===========  ==========  ======================================================================================================
+Parameter    Type        Description
 ===========  ==========  ======================================================================================================
 title        String      A title of the printed page can be specified. Optional.
                          If given, it's shown in an <h1> tag at the top of the page.
@@ -279,7 +287,8 @@ Customize the Style of the Printed Grid
 
 The CSS classes predefined in the generated HTML tables are also an important part of the APIs. Here's the complete list:
 
-=======================  ======================================================================================  CSS class                Meaning                                                                                 For HTML tags
+=======================  ======================================================================================  ==============
+CSS class                Meaning                                                                                 For HTML tags
 =======================  ======================================================================================  ==============
 grid_col_${col-index}    Available for every column. ${col-index} is the index of column, starting from 1.  	 <th>,<td>
 grid_row_${row-index}    Available for every row. ${row-index} is the index of row, starting from 1. 	         <tbody>

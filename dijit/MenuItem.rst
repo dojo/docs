@@ -73,10 +73,11 @@ Accessibility
 Keyboard
 --------
 
-==========================================    Action                                        Key
 ==========================================    =================================================
-Navigate menu items                             Top and Down arrow keys
-Activate a menu item                            Spacebar or enter
+Action                                        Key
+==========================================    =================================================
+Navigate menu items                           Top and Down arrow keys
+Activate a menu item                          Spacebar or enter
 ==========================================    =================================================
 
 

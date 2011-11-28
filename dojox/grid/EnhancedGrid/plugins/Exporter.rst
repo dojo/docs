@@ -179,7 +179,8 @@ When this plugin is enabled, the following 2 methods are available for a grid wi
 exportGrid(type, args, onExported):
 	Export required rows(args.fetchArgs) to a kind of format(type), using the corresponding writer with given arguments(args.writerArgs), then pass the exported text to a given function(onExported).
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  ===========================================================
+Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ===========================================================
 type            String              Mandatory                   A registered export format name.
 args            Object              Optional(default to {})     An argument to define fetchArgs and writerArgs like:
@@ -192,7 +193,8 @@ onExported      function(string)    Mandatory                   Call back functi
 exportSelected(type, writerArgs):
 	Export only the selected rows of a grid to the specified format. Returns the exported string.
 
-==============  ==================  ==========================  Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  =======================================
+Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  =======================================
 type            String              Mandatory                   A registered export format name.
 writerArgs      Object              Optional(default to {})     Some arguments for the current wirter.
@@ -226,7 +228,8 @@ This is an abstract class for all of the writers used in the Exporter plugin. It
 beforeHeader(grid):
 	We are going to start moving through the grid. Is there anything we should do now?
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  ==============================================================
+Arguments  Type                      Description
 =========  ========================  ==============================================================
 grid       dojox.grid.EnhancedGrid   The grid widget.
 [return]   Boolean                   true: go on handling the header row and then call afterHeader.
@@ -239,7 +242,8 @@ afterHeader():
 beforeContent(items):
 	We are ready to go through all the contents(items).
 	
-=========  ========================  Arguments  Type                      Description
+=========  ========================  ==============================================================
+Arguments  Type                      Description
 =========  ========================  ==============================================================
 items      Array                     All the items fetched from the store.
 [return]   Boolean                   true: go on handling the contents and then call afterContent.
@@ -252,7 +256,8 @@ afterContent():
 beforeContentRow(argObj):
 	Before handling a line of data (not a header).
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row,rowIdx, spCols }
@@ -263,7 +268,8 @@ argObj     Object                    An object with at least the following conte
 afterContentRow(argObj):
 	After handling a line of data (not header).
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row,rowIdx, spCols }
@@ -272,7 +278,8 @@ argObj     Object                    An object with at least the following conte
 beforeView(argObj):
 	Before handling a view.
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row, rowIdx, spCols }
@@ -283,7 +290,8 @@ argObj     Object                    An object with at least the following conte
 afterView(argObj):
 	After handling a view.
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                       { grid, isHeader, row, rowIdx, spCols }
@@ -292,6 +300,8 @@ argObj     Object                    An object with at least the following conte
 beforeSubrow(argObj):
 	Before handling a subrow (defined in the grid structure as "rows").
 
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row, rowIdx, view, viewIdx, subrow, subrowIdx, spCols }
@@ -302,7 +312,8 @@ argObj     Object                    An object with at least the following conte
 afterSubrow(argObj):
 	After handling a subrow (defined in the grid structure as "rows").
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row, rowIdx, view, viewIdx, subrow, subrowIdx, spCols }
@@ -311,7 +322,8 @@ argObj     Object                    An object with at least the following conte
 handleCell(argObj):
 	Handle a header cell or data cell.
 
-=========  ========================  Arguments  Type                      Description
+=========  ========================  =========================================================================
+Arguments  Type                      Description
 =========  ========================  =========================================================================
 argObj     Object                    An object with at least the following context properties available:
                                      { grid, isHeader, row, rowIdx, view, viewIdx, subrow,subrowIdx,
@@ -321,13 +333,16 @@ argObj     Object                    An object with at least the following conte
 toString():
 	Export to a string.
 	
-=========  ========================  Arguments  Type                      Description
-=========  ========================  [return]   String                    The exported result string.
+=========  ========================  ===========================
+Arguments  Type                      Description
+=========  ========================  ===========================
+[return]   String                    The exported result string.
 =========  ========================  ===========================
 
 The argument ``argObj`` represents the context of each function when they are called and may have the following properties:
 
-===========  ========================  ===========================  Name         Data Type                 When Available               Description
+===========  ========================  ===========================  ==========================================================================================================================
+Name         Data Type                 When Available               Description
 ===========  ========================  ===========================  ==========================================================================================================================
 grid         dojox.grid.EnhancedGrid   Always                       The grid widget we are now handling.
 isHeader     Boolean                   Always                       Indicating which context we're handling, header or content.
@@ -386,7 +401,8 @@ Available Export Writers
 
 The following writers are currently available in the dojox/grid/enhanced/plugins/exporter package:
 
-===============  ==============  Writer Class     Format Name     Writer Argument
+===============  ==============  =====================
+Writer Class     Format Name     Writer Argument
 ===============  ==============  =====================
 CSVWriter        "csv"           "separator"
 TableWriter      "table"         HTML table attributes

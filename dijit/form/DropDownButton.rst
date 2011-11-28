@@ -100,7 +100,8 @@ Accessibility
 Keyboard
 --------
 
-=========================================================    Action                                                       Key
+=========================================================    =================================================
+Action                                                       Key
 =========================================================    =================================================
 Navigate to a button                                         tab - all buttons are in the tab order
 Activate the button to display the drop down menu            enter or space key

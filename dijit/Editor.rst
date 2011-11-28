@@ -286,7 +286,8 @@ Accessibility (1.0 and later versions)
 Keyboard for Editor
 -------------------
 
-====================================================================    Action	                                                                Key
+====================================================================    ======================================================================
+Action	                                                                Key
 ====================================================================    ======================================================================
 Move focus to the next widget in the tab order.	                        Tab (must press tab twice in some situations - see Known Issues below)
 Move focus to the prior widget in the tab order (the editor toolbar)	Shift+Tab (must press shift-tab twice in some situations - see Known Issues below)
@@ -296,10 +297,11 @@ Move focus to the prior widget in the tab order (the editor toolbar)	Shift+Tab (
 Keyboard for Editor Toolbar
 ---------------------------
 
-====================================================================    Action	                                                                Key
+====================================================================    ======================================================================
+Action	                                                                Key
 ====================================================================    ======================================================================
 Move focus to the next enabled button in the toolbar.	                arrow right in left to right locales, arrow left in right to left locales
-Move focus to the previous widget in the toolbar	                arrow left in left to right locales; arrow right in right to left locales.
+Move focus to the previous widget in the toolbar	                    arrow left in left to right locales; arrow right in right to left locales.
 ====================================================================    ======================================================================
 
 The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated. Use the backspace or escape key to clear the current selection in the textbox associated with the drop down. When the list of choices is not activated, the arrow keys will move between toolbar buttons rather than within the combobox or select.

@@ -315,7 +315,8 @@ Accessibility
 Keyboard
 --------
 
-===========================================    Action                                         Key
+===========================================    =================================================
+Action                                         Key
 ===========================================    =================================================
 Navigate to splitters for resizable regions    tab - all resizable splitters are in the tab order
 Change the size of a vertical region           left / right arrows to decrease and increase

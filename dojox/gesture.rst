@@ -127,7 +127,8 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 
 There are also several configurable parameters in dojox/gesture/tap
 
-==================  Option              Description
+==================  ================================================================================================
+Option              Description
 ==================  ================================================================================================
 tapRadius           Default is 10, used in "tap.doubletap" to validate whether the second tap is in the valid radius
 holdThreshold       Default is 500, the minimal time(in milliseconds) to trigger a "tap.hold"
@@ -205,7 +206,8 @@ It can be used in following ways:
   
 Some swipe related information will also be provided in the fired "swipe" or "swipe.end" event:
 
-==================  Event property      Description
+==================  ================================================================================================
+Event property      Description
 ==================  ================================================================================================
 type                "swipe" or "swipe.end"
 time                An integer indicating the delta time(in milliseconds)

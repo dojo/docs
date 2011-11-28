@@ -69,7 +69,8 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  ===================================================================================
+Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  ===================================================================================
 name                      String             False         localimage               The name of this plugin. It should always be "localimage".
 uploadable                Boolean            True          False                    Indicate if the plugin supports insert an image from the local file.

@@ -26,7 +26,8 @@ Usage
 
 Since the RotatorContainer is a layout widget, it's children must be a layout widget such as a :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
 
-====================  =======  Parameter             Type     Description
+====================  =======  ========================================================================================
+Parameter             Type     Description
 ====================  =======  ========================================================================================
 showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label. The default value is "true".
 transitionDelay       int      The delay in milliseconds before transitioning to the next child. The default value is 5000 (5 seconds).

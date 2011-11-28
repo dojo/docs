@@ -217,7 +217,8 @@ Basic Nodes
 -----------
 The DOM document contains functions for creating each of the basic DOM node types.
 
-========= Type      Function
+========= ======================
+Type      Function
 ========= ======================
 element   createElement(tagName)
 text      createTextNode(data)

@@ -23,7 +23,8 @@ Adds automatic rotating to the :ref:`dojox.widget.Rotator <dojox/widget/Rotator>
 Usage
 =====
 
-===================  =======  Parameter            Type     Description
+===================  =======  ======================================================================
+Parameter            Type     Description
 ===================  =======  ======================================================================
 suspendOnHover       boolean  Pause the rotator when the mouse hovers over it. The default value is "false".
 duration             int      The time in milliseconds before transitioning to the next pane.  The default value is 4000 (4 seconds).

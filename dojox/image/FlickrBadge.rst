@@ -27,7 +27,8 @@ Usage
 
 There are a number of configurable parameters, most of which are optional:
 
-==========    Parameter     Description
+==========    ======================================================================
+Parameter     Description
 ==========    ======================================================================
 apikey        your Flickr API key
 columns       # of columns of images to display

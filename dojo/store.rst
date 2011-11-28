@@ -22,7 +22,8 @@ Methods
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-================================================  Method                                            Description
+================================================  ======================================================================
+Method                                            Description
 ================================================  ======================================================================
 get(id)                                           Retrieves an object by its identifier, returning the object.
 
@@ -67,7 +68,8 @@ getMetadata(object)                               Returns any metadata about the
 Properties
 ----------
 
-===========  ================  Property     Type              Description
+===========  ================  ======================================================================
+Property     Type              Description
 ===========  ================  ======================================================================
 idProperty   String            Name of the property to use as the identifier
 data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
@@ -85,7 +87,8 @@ Observing Result Sets
 
 When a store is wrapped with ``dojo.store.Observable``, one can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
-========================================================  Method                                                    Description
+========================================================  =======================================================================
+Method                                                    Description
 ========================================================  =======================================================================
 observe(listener)                                         The listener function is called with following arguments:
                                                           listener(object, removedFrom, insertedInto);

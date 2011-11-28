@@ -89,7 +89,8 @@ Accessibility
 Keyboard
 --------
 
-==========================================    Action                                        Key
+==========================================    =================================================
+Action                                        Key
 ==========================================    =================================================
 Navigate to next title                        Right or down arrow
 Navigate to previous title                    Left or up arrow

@@ -25,7 +25,8 @@ Basic Usage
 
 ``dojo.declare`` accepts up to three arguments:
 
-==========  ====================  Parameter   Type                  Description
+==========  ====================  ==================================================
+Parameter   Type                  Description
 ==========  ====================  ==================================================
 className   String|null           The optional name of the Class to declare.
 

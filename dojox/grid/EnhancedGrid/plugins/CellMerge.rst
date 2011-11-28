@@ -315,13 +315,16 @@ If your grid is created in JavaScript:
 
 As shown in the above code, you can simply set the ``cellMerge`` property to true or false (disabled), or further configure it in an argument object.
 
-=========================  ========  ===============  Property                   Type      Default Value    Description
-=========================  ========  ===============  mergedCells                Array     []               Used to define pre-merged cells. For the structure of the objects in this array please see below.
+=========================  ========  ===============  =================================================================================================
+Property                   Type      Default Value    Description
+=========================  ========  ===============  =================================================================================================
+mergedCells                Array     []               Used to define pre-merged cells. For the structure of the objects in this array please see below.
 =========================  ========  ===============  =================================================================================================
 
 Merged cell object structure:
 
-===========  ============================  =====================  Property     Type                          Optional/Mandatory     Description
+===========  ============================  =====================  =============================================================================================================
+Property     Type                          Optional/Mandatory     Description
 ===========  ============================  =====================  =============================================================================================================
 row          Integer|function(Integer)     Mandatory              If it's an Integer, it's the index of the row which have cells to be merged.
                                                                   If it's a function, it's a predicate to decide which rows are to be merged.

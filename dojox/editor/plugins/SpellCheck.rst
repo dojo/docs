@@ -74,7 +74,8 @@ And that's it. The editor instance you can reference by 'dijit.byId("editor")' i
 Configurable Options
 --------------------
 
-========================  =================  ============  =======================  Argument Name             Data Type          Optional      Default Value            Description
+========================  =================  ============  =======================  =============================================================================
+Argument Name             Data Type          Optional      Default Value            Description
 ========================  =================  ============  =======================  =============================================================================
 name                      String             False         SpellCheck               The name of this plugin. It should always be "spellcheck".
 url                       String             False         <empty string>           The url of the speck check service.

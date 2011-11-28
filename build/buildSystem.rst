@@ -1,6 +1,8 @@
 .. _build/buildSystem:
 
-=====================The Dojo Build System=====================
+=====================
+The Dojo Build System
+=====================
 
 :Status: Draft
 :Version: 1.7+

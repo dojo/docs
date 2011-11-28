@@ -147,7 +147,8 @@ As shown in the above code, you can simply set the ``pagination`` property to ``
 
 Below is all of pagination configuration arguments:
 
-=========================  =======================  ===============  Property                   Type                     Default Value    Description
+=========================  =======================  ===============  ================================================================================================================
+Property                   Type                     Default Value    Description
 =========================  =======================  ===============  ================================================================================================================
 description                Boolean                  true             Indicates whether or not display the current position display. Default is true (display).
 sizeSwitch                 Boolean                  true             Indicates whether or not display the page length menu. Default is true (display).
@@ -196,7 +197,8 @@ Accessibility
 
 Below is a summary of all supported keyboard operators.
 
-==============================================  Key                                             Action
+==============================================  ===============================================================
+Key                                             Action
 ==============================================  ===============================================================
 Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation
                                                 choices) of the pagination bar will receive the focus.
@@ -210,7 +212,8 @@ Public API
 
 All available methods of the pagination are listed below:
 
-==================  =====================================  =====================  Name                Parameters                             Return                 Description
+==================  =====================================  =====================  =======================================================
+Name                Parameters                             Return                 Description
 ==================  =====================================  =====================  =======================================================
 currentPage         page index: integer                    current page index     Function to handle shifting to the specific page,
                                                                                   and return the current page index. Only return the

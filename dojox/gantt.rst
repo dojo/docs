@@ -89,7 +89,8 @@ Step 3: Add project with tasks.
 
 There are several imported parameters in ``dojox.gantt.GanttTaskItem`` declaration as follows.
 
-================ ============= ======= Name             Type          Default Description
+================ ============= ======= ===========
+Name             Type          Default Description
 ================ ============= ======= ===========
 duration         number        8       Task duration in hours.
 percentage       number        0       Task progress in percentage, 50 for 50%.

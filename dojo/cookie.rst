@@ -28,12 +28,12 @@ Usage
   // To get a cookie
   var cookieValue = dojo.cookie(cookieName);
 
-=============  ===============  Parameter      Type             Description
+=============  ===============  ==================================================
+Parameter      Type             Description
 =============  ===============  ==================================================
 cookieName     String           Name of the cookie to set/get
 cookieValue    String           Value of the cookie to set.
 cookieProps    Object           Poperties of the cookie (optional, can contain any of ``expires`` (number of days, date or UTC string indicating when the cookie will expire), ``path``, ``domain`` or ``secure`` (boolean) attributes. Use ``expires: -1`` to delete a cookie.
-
 =============  ===============  ==================================================
 
 Examples

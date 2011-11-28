@@ -34,7 +34,8 @@ Usage
 
 dojo.delegate accepts two arguments:
 
-==========  ====================  Parameter   Type                  Description
+==========  ====================  ==================================================
+Parameter   Type                  Description
 ==========  ====================  ==================================================
 obj         object                The object to delegate to for properties not found
                                   directly on the return object or in props.

@@ -35,8 +35,10 @@ Usage
   </script>
 
 
-============== ================= Parameter      Type              Description
-============== ================= ``args``       Object|String|URL If ``args`` is a String or an URL, its location is fetched and treated as JSON describing the SMD. If it is an object and contains a ``smdStr`` property, it is passed to ``eval`` to get the SMD, otherwise we assume that it is an SMD object.
+============== ================= =======================================
+Parameter      Type              Description
+============== ================= =======================================
+``args``       Object|String|URL If ``args`` is a String or an URL, its location is fetched and treated as JSON describing the SMD. If it is an object and contains a ``smdStr`` property, it is passed to ``eval`` to get the SMD, otherwise we assume that it is an SMD object.
 ============== ================= =======================================
 
 SMD format

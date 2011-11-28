@@ -33,7 +33,8 @@ Usage
       renderStyles: true
   });
 
-===========  =======================  Parameter    Type                     Description
+===========  =======================  ======================================================================
+Parameter    Type                     Description
 ===========  =======================  ======================================================================
 node         DomNode  	              The parent element that will receive the content.
 content      String|DomNode|NodeList  The content to be set on the parent element. This can be an HTML string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes.

@@ -64,8 +64,10 @@ As shown in the above code, you can simply set the ``search`` argument to true o
 
 The details of this argument is shown in the following table:
 
-=============  ========  ===============  Property       Type      Default Value    Description
-=============  ========  ===============  cacheSize      Integer   -1               Number of rows to fetch at one time. If <= 0, will fetch all.
+=============  ========  ===============  ==============================================================
+Property       Type      Default Value    Description
+=============  ========  ===============  ==============================================================
+cacheSize      Integer   -1               Number of rows to fetch at one time. If <= 0, will fetch all.
 =============  ========  ===============  ==============================================================
 
 Usage
@@ -76,7 +78,8 @@ This plugin exposes one method to the grid:
 searchRow(searchArg, onSearched):
 	Search the store of the grid for a regular expression, a wildcard pattern string, or a set of them for different columns.
 
-==============  ==========================  ==========================  Arguments       Type                        Optional/Mandatory          Description
+==============  ==========================  ==========================  ========================================================================================================================
+Arguments       Type                        Optional/Mandatory          Description
 ==============  ==========================  ==========================  ========================================================================================================================
 searchArg       Object|RegExp|String        Mandatory                   If it is a regular expression or a wildcard pattern, the search will be performed for every column.
                                                                         If searchArgs is an object which consists of "store field": "regular expression" (can also be wildcard pattern) pairs,

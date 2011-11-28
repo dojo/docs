@@ -44,7 +44,8 @@ You must always use resource bundles to store the strings displayed to users.
 
 Dojo introduces resource bundle into JavaScript. If you are familiar with Java resource bundle, you can find that Dojo resource bundle is very similar to Java resource bundle. The following table shows a summary of the differences between Java and Dojo:
 
-=================  ================================  Resource bundle:   Java                              Dojo
+=================  ================================  ===================================================
+Resource bundle:   Java                              Dojo
 =================  ================================  ===================================================
 File Format        Properties file                   JSON file
 Locale Identifier  Suffix of file name               Directory name

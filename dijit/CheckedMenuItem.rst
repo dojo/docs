@@ -138,10 +138,11 @@ Accessibility
 Keyboard
 --------
 
-==========================================    Action                                        Key
 ==========================================    =================================================
-Navigate to menu item			      Up and down arrow keys
-check/uncheck menu item			      Spacebar or enter
+Action                                        Key
+==========================================    =================================================
+Navigate to menu item			              Up and down arrow keys
+check/uncheck menu item			              Spacebar or enter
 ==========================================    =================================================
 
 

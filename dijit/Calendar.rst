@@ -264,7 +264,8 @@ As of 1.6 full keyboard support has been implemented for the Calendar.
 Keyboard
 --------
 
-==========================================    Action                                        Key
+==========================================    =================================================
+Action                                        Key
 ==========================================    =================================================
 Navigate between date cells                   Left, Right, Up, and down arrows
 Navigate to same day in next month            Page-down

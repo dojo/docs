@@ -133,9 +133,10 @@ Accessibility
 Keyboard
 --------
 
-============================================================    Action                                                          Key
 ============================================================    =================================================
-Navigate to next focusable element in the tooltip dialog	tab
+Action                                                          Key
+============================================================    =================================================
+Navigate to next focusable element in the tooltip dialog	    tab
 Navigate to previous focusable element in the tooltip dialog	shift-tab
 Close the tooltip dialog                                        escape
 ============================================================    =================================================

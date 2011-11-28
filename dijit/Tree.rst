@@ -462,7 +462,8 @@ Accessibility
 Keyboard
 --------
 
-===================================  Action	                             Key
+===================================  ===============
+Action	                             Key
 ===================================  ===============
 Navigate into tree*                  Tab
 Navigate to the next sibling         Down arrow

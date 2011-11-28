@@ -44,7 +44,8 @@ The function takes up to four arguments:
 
 Here is the definition of arguments:
 
-=========  ===========  Parameter  Type         Description
+=========  ===========  =======================================================
+Parameter  Type         Description
 =========  ===========  =======================================================
 tag        String|Node  Can be a string or a DOM node. If it is a string, it
                         will be treated as a node tag name, which will be used

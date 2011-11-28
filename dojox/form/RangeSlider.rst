@@ -36,7 +36,8 @@ The RangeSlider is used in the same fashion as most dijit Form Widgets.
 
 Here are some of the constructor parameters:
 
-===================  ====================  Parameter            Type                  Description
+===================  ====================  =============================================================================
+Parameter            Type                  Description
 ===================  ====================  =============================================================================
 value                array                 Initial values of the slider (``[0,100]``)
 showButtons          boolean               Whether to show or not buttons at each end of the slider (``true``)

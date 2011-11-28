@@ -119,7 +119,8 @@ Accessibility
 Keyboard
 --------
 
-==========================================    Action                                        Key
+==========================================    =================================================
+Action                                        Key
 ==========================================    =================================================
 Navigate into/out of a MenuBar                Tab or shift-tab
 Navigate menubar items                        Left and right arrow keys

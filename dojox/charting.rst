@@ -106,7 +106,8 @@ Adding Title
 
 You can add a general title to the chart, and the title can be specified on position and font styles. Here are related parameters:
 
-======== =========== ======= Name     Type        Default Description
+======== =========== ======= ===========
+Name     Type        Default Description
 ======== =========== ======= ===========
 titlePos string      top     determine adding title at the top/bottom of the chart.
 titleGap number      20      determine the spacing between title and the chart.
@@ -446,7 +447,8 @@ Axis Title
 -----------
 Adding title to axis, the position, orientation and color of the axis title can be specified. The parameters are:
 
-================ =========== ======= Name             Type        Default Description
+================ =========== ======= ===========
+Name             Type        Default Description
 ================ =========== ======= ===========
 title            string      null    axis title text.
 titleGap         number      15      the spacing between title and corresponding axis, measured by pixel.
@@ -530,7 +532,8 @@ Axis Label Shortening
 
 Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified by parameters as follows.
 
-================= =========== ======= Name              Type        Default Description
+================= =========== ======= ===========
+Name              Type        Default Description
 ================= =========== ======= ===========
 trailingSymbol    string      null    define the symbol replacing the omitted part of label.
 maxLabelSize      number      0       define the max length of label in pixel.
@@ -613,7 +616,8 @@ dojox.charting.DataSeries is used to connect to :ref:`dojo.data <dojo/data>` sto
 
 DataSeries' constructor has following parameters:
 
-====== ========================== ======= Name   Type                       Default Description
+====== ========================== ======= ===========
+Name   Type                       Default Description
 ====== ========================== ======= ===========
 store  object                     none    Data store to use. Should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
 kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo.data.api.Read.fetch() <dojo/data/api/Read>` for details.

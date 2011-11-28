@@ -49,7 +49,8 @@ Usage
 
 Here is the definition of arguments:
 
-===========  =============  Parameter    Type           Description
+===========  =============  ======================================================================
+Parameter    Type           Description
 ===========  =============  ======================================================================
 module       String|Object  Can be a String or an Object.
 

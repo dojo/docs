@@ -23,7 +23,8 @@ The Rotator does not rely on :ref:`Dijit <dijit/index>`.  It is designed to be a
 Usage
 =====
 
-================  ======  Parameter         Type    Description
+================  ======  ======================================================================
+Parameter         Type    Description
 ================  ======  ======================================================================
 transition        String  The name of a function that is passed two panes nodes and a duration, then returns a dojo.Animation object. The default value is "dojox.widget.rotator.swap".
 transitionParams  String  Parameters for the transition. The string is read in and eval'd as an object.  If the duration is absent, the default value will be used.
@@ -317,7 +318,8 @@ This allows you to publish to this topic and control the Rotator. It will invoke
 Parameters
 ----------
 
-================  ========  Parameter         Type      Description
+================  ========  ======================================================================
+Parameter         Type      Description
 ================  ========  ======================================================================
 action            String    The name of a method of the Rotator to run such as "prev", "next", and "go". If the action is not a valid method of the Rotator or its subclass, then a warning is thrown to the console.
 args              Anything  One or more arguments to pass to the action. If the action is "go", then you may pass in the number of the pane you want to go to.
@@ -379,7 +381,8 @@ By subscribing to this topic, you can hook into various events fired by the Rota
 Parameters
 ----------
 
-================  ====================  Parameter         Type                  Description
+================  ====================  ======================================================================
+Parameter         Type                  Description
 ================  ====================  ======================================================================
 type              String                The type of notification.
 rotator           dojox.widget.Rotator  The instance of the Rotator.

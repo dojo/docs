@@ -69,7 +69,8 @@ Usage
 
 Returns a handle which can be passed to :ref:`dojo.disconnect() <dojo/disconnect>` to disable subsequent automatic publication on the topic.
 
-=========  ===========  Parameter  Type         Description
+=========  ===========  =============================================================================
+Parameter  Type         Description
 =========  ===========  =============================================================================
 topic      String       The name of the topic to publish.
 obj        Object|null  The source object for the event function. Defaults to dojo.global if null.

@@ -1,6 +1,8 @@
 .. _build/buildScript:
 
-=================================================build system build script (build.sh or build.bat)=================================================
+=================================================
+build system build script (build.sh or build.bat)
+=================================================
 
 :Status: Draft
 :Version: 1.0

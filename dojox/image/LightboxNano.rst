@@ -29,7 +29,8 @@ For being so small, it packs a handful of features:
 Usage
 =====
 
-============  ======  Parameter     Type    Description
+============  ======  ======================================================================
+Parameter     Type    Description
 ============  ======  ======================================================================
 href          String  URL to the large image to show in the lightbox.
 duration      int     The delay in milliseconds of the LightboxNano open and close animation.
