@@ -16,8 +16,8 @@ RoundRectDataList is an enhanced version of RoundRectList. It can generate ListI
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._DataListMixin:
--------------------------------------------
+Inherited from dojox.mobile._DataListMixin
+------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
@@ -29,8 +29,8 @@ Inherited from dojox.mobile._DataListMixin:
 |queryOptions  |Object    |null     |A query options that can be passed to 'store' to initially filter the items.                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile.RoundRectList:
-------------------------------------------
+Inherited from dojox.mobile.RoundRectList
+-----------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |

@@ -73,8 +73,8 @@ Widgets
 * :ref:`Themes and Theming <dijit/themes>`
 * :ref:`DojoX Widgets <dojox/widget>`
 
-Widget developers notes:
-------------------------
+Widget developers notes
+-----------------------
 * :ref:`Writing Widgets <quickstart/writingWidgets>`
 * :ref:`Widget Hierarchies <quickstart/widgetHierarchies>`
 * :ref:`Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`

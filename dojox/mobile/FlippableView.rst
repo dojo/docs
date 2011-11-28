@@ -18,8 +18,8 @@ FlippableView is a container widget that represents entire mobile device screen,
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.View:
----------------------------------
+Inherited from dojox.mobile.View
+--------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Required |Description                                                                                                |

@@ -227,8 +227,8 @@ Getting Started
 
 Loading the basic Dojo Mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
 
-Loading Dojo Mobile (using Dojo 1.7+ preferred api's):
-------------------------------------------------------
+Loading Dojo Mobile (using Dojo 1.7+ preferred api's)
+-----------------------------------------------------
 
 This example assumes Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
 helps ensure the bare minimum code is used, and loaded as fast as possible.
@@ -247,8 +247,8 @@ If you prefer to use "progressive enhancement" design techniques and not use Doj
 
 If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose note to specify the dojox/mobile/compat module.  In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
 
-Loading Dojo Mobile (using Dojo pre-1.7 style api's):
------------------------------------------------------
+Loading Dojo Mobile (using Dojo pre-1.7 style api's)
+----------------------------------------------------
 
 This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
 

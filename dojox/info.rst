@@ -9,8 +9,8 @@ DojoX - Dojo Extensions and Experiments
 
 DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and :ref:`Dijit <dijit/index>`, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the :ref:`Flickr data store <dojox/data/FlickrRestStore>` and :ref:`dojox.color <dojox/color>`.
 
-Some caveats of using DojoX:
-----------------------------
+Some caveats of using DojoX
+---------------------------
 
 * The condition and level of support of DojoX code will vary, from **experimental** through **production**.  DojoX subprojects may disappear entirely if unsuccessful or abandoned.
 * Unlike Dojo and Dijit, DojoX modules are **not** guaranteed to be fully accessible or internationalized

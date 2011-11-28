@@ -20,8 +20,8 @@ ListItem represents an item of either RoundRectList or EdgeToEdgeList. There are
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._ItemBase:
---------------------------------------
+Inherited from dojox.mobile._ItemBase
+-------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
@@ -69,8 +69,8 @@ Inherited from dojox.mobile._ItemBase:
 |label         |String    |""       |A label of the item. If the label is not specified, innerHTML is used as a label.                          |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Parameters from this widget:
-----------------------------
+Parameters from this widget
+---------------------------
 
 +--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default            |Description                                                                                                |

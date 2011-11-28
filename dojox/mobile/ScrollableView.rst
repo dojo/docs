@@ -20,8 +20,8 @@ The animation below shows the difference of scrolling behavior between View and 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.View:
----------------------------------
+Inherited from dojox.mobile.View
+--------------------------------
 
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                    |
@@ -31,8 +31,8 @@ Inherited from dojox.mobile.View:
 |keepScrollPos |Boolean   |true     |If true, the scroll position is kept when transition occurs between views.     |
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile.scrollable:
----------------------------------------
+Inherited from dojox.mobile.scrollable
+--------------------------------------
 
 +----------------------+----------+---------+---------------------------------------------------------------------------------------+
 |Parameter             |Type      |Default  |Description                                                                            |

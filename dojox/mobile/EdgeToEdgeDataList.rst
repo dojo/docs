@@ -16,8 +16,8 @@ EdgeToEdgeDataList is an enhanced version of EdgeToEdgeList. It can generate Lis
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._DataListMixin:
--------------------------------------------
+Inherited from dojox.mobile._DataListMixin
+------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
@@ -29,8 +29,8 @@ Inherited from dojox.mobile._DataListMixin:
 |queryOptions  |Object    |null     |A query options that can be passed to 'store' to initially filter the items.                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile.EdgeToEdgeList:
--------------------------------------------
+Inherited from dojox.mobile.EdgeToEdgeList
+------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |

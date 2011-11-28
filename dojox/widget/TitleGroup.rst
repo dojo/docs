@@ -14,8 +14,8 @@ A container widget which delegates a connection between children :ref:`TitlePane
 Examples
 ========
 
-A simple declarative example:
------------------------------
+A simple declarative example
+----------------------------
 
 .. code-example::
 
@@ -44,8 +44,8 @@ A simple declarative example:
     </div>
     <h2>Content after</h2>
 
-Adding and removing children:
------------------------------
+Adding and removing children
+----------------------------
 
 .. code-example::
 
