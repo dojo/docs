@@ -47,38 +47,13 @@ Dojo < 1.7
  </script>
 
 
-Here is the definition of arguments:
-
-===========  ==============  ======================================================================
-Parameter    Type            Description
-===========  ==============  ======================================================================
-node         DOMNode|String  Can be a DOM node or the id of a node (as string) to animate CSS properties on.
-
-properties   Object
-
-duration     Integer         The number of milliseconds over which the animation should run. Defaults to the global animation default duration (350ms).
-
-easing       Function        An easing function over which to calculate acceleration and deceleration of the animation through its duration. A default easing algorithm is provided, but you may plug in any you wish. A large selection of easing algorithms are available in `dojo.fx.easing`.
-
-onEnd        Function        A function to be called when the animation finishes running.
-
-delay        Integer         The number of milliseconds to delay beginning the animation by. The default is 0.
-===========  ==============  ======================================================================
-
 
 Examples
 ========
 
-Programmatic example
---------------------
-
 TODO: example
 
-Declarative example
--------------------
-
-TODO: example
-
+.. api-inline :: dojo.anim
 
 See also
 ========

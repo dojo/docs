@@ -27,55 +27,10 @@ To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>`
 
 Since Dojo 1.7, ``dojo.create`` is exposed via the ``create`` method of the ``dojo/dom-construct`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
+
 Usage
 =====
 
-The function takes up to four arguments:
-
-.. js ::
-
-    // Dojo 1.7+ (AMD)
-    require(["dojo/dom-construct"], function(domConstruct){
-      domConstruct.create(tag, attrs, refNode, pos);
-    };
-    
-    // Dojo < 1.7
-    dojo.create(tag, attrs, refNode, pos);
-
-Here is the definition of arguments:
-
-=========  ===========  =======================================================
-Parameter  Type         Description
-=========  ===========  =======================================================
-tag        String|Node  Can be a string or a DOM node. If it is a string, it
-                        will be treated as a node tag name, which will be used
-                        to create a new node.
-                        When creating a node the owner document of ``refNode``
-                        is used. If ``refNode`` is ``null`` or unspecified,
-                        :ref:`dojo.doc <dojo/doc>` is used.
-attrs      Object|null  A dictionary of attributes to be set on ``node``.
-                        This parameter is passed to :ref:`dojo.attr <dojo/attr>`
-                        unmodified after the node is created.
-                        Can be ``null`` or undefined meaning
-                        "don't set any attributes". You should always specify
-                        it explicitly (as ``null``) if you want to specify
-                        the rest of arguments.
-refNode    String|null  A string (interpreted as an id of a DOM node) or
-                        a DOM node. This parameter is passed to
-                        :ref:`dojo.place <dojo/place>` unmodified after the node is
-                        created, and attributes are set.
-                        Can be omitted meaning "don't place the node".
-pos        String|null  Optional argument. Can be a number or one of the
-                        following strings: "before", "after", "replace", "only",
-                        "first", or "last". If omitted, "last" is assumed.
-                        This parameter is passed to :ref:`dojo.place <dojo/place>`
-                        unmodified after the node is created, and attributes
-                        are set. Please see :ref:`dojo.place <dojo/place>`
-                        for more details and examples.
-=========  ===========  =======================================================
-
-
-The function returns a DOM node it created with ``tag`` or the first argument, if it was a DOM node.
 
 Dojo 1.7+ (AMD)
 ---------------
@@ -253,6 +208,8 @@ While you can use dojo.create to set attributes on the existing node without pla
 
   // dojo < 1.7
   dojo.attr(node, "innerHTML", "<p>hi</p>");
+
+.. api-inline :: dojo.create
 
 See also
 ========

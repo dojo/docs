@@ -53,37 +53,8 @@ Which becomes:
   dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
-    var foo = connect.connectPublisher(topic, obj, event);
-  });
-  // Dojo < 1.7
-  var foo = dojo.connectPublisher(topic, obj, event);
-
-
-Returns a handle which can be passed to :ref:`dojo.disconnect() <dojo/disconnect>` to disable subsequent automatic publication on the topic.
-
-=========  ===========  =============================================================================
-Parameter  Type         Description
-=========  ===========  =============================================================================
-topic      String       The name of the topic to publish.
-obj        Object|null  The source object for the event function. Defaults to dojo.global if null.
-event      String       The name of the event function in obj. I.e. identifies a property obj[event].
-=========  ===========  =============================================================================
-
-
-
-Examples
-========
-
-Programmatic example
---------------------
+Example
+=======
 
 .. js ::
  
@@ -96,6 +67,7 @@ Programmatic example
    dojo.connectPublisher("/ajax/start", dojo, "xhrGet");
  </script>
 
+.. api-inline :: dojo.connectPublisher
 
 See also
 ========

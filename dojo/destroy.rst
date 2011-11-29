@@ -54,13 +54,6 @@ Dojo < 1.7
 
 This function only works with DomNodes, and returns nothing.
 
-=========  ==============  =============================================================================
-Parameter  Type            Description
-=========  ==============  =============================================================================
-node       String|DomNode  A String ID or DomNode reference of the element to be destroyed.
-=========  ==============  =============================================================================
-
-
 Examples
 ========
 
@@ -151,6 +144,7 @@ Destroy all nodes in a list by reference
     <button id="progButtonNode2" type="button"></button>
     <div id="result2"></div>
 
+.. api-inline :: dojo.destroy
 
 See also
 ========

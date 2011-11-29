@@ -7,8 +7,6 @@ dojo.forEach
 .. contents :: 
     :depth: 2
 
-.. api-inline :: dojo.forEach
-
 About
 =====
         
@@ -99,6 +97,8 @@ does the same thing. But that's not all! New in 1.0 you can collapse the functio
   dojo.query("select").forEach("item.disabled = true;");
 
 That's a lot of functionality from a single method! Once you get used to the syntax, you'll never want to go back.
+
+.. api-inline :: dojo.forEach
 
 See Also
 ========

@@ -28,16 +28,8 @@ Usage
   // To get a cookie
   var cookieValue = dojo.cookie(cookieName);
 
-=============  ===============  ==================================================
-Parameter      Type             Description
-=============  ===============  ==================================================
-cookieName     String           Name of the cookie to set/get
-cookieValue    String           Value of the cookie to set.
-cookieProps    Object           Poperties of the cookie (optional, can contain any of ``expires`` (number of days, date or UTC string indicating when the cookie will expire), ``path``, ``domain`` or ``secure`` (boolean) attributes. Use ``expires: -1`` to delete a cookie.
-=============  ===============  ==================================================
-
-Examples
---------
+Example
+=======
 
 Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set.
 
@@ -63,6 +55,8 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
   .. html ::
 
     <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:setCookie">Set Cookie</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getCookie">Get Cookie</button>
+
+.. api-inline :: dojo.cookie
 
 See also
 ========
