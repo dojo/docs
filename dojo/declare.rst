@@ -19,37 +19,8 @@ If you prefer books, chapter 9 of `David Flanagan's JavaScript: The Definitive G
 
 This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using ``dojo.declare`` or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
-
 Basic Usage
 ===========
-
-``dojo.declare`` accepts up to three arguments:
-
-==========  ====================  ==================================================
-Parameter   Type                  Description
-==========  ====================  ==================================================
-className   String|null           The optional name of the Class to declare.
-
-                                  The className will be used as a global name for a
-                                  created constructor.
-
-                                  If you don't specify it, the class is assumed to
-                                  be anonymous (new since V1.4).
-
-                                  If you specify it, the name will be stored in the
-                                  property "declaredClass" in the created prototype.
-superclass  null|Object|Object[]  This parameter is either
-
-                                  * null (no base class),
-                                  * an object (a base class) or
-                                  * an array of objects (multiple inheritance).
-props       Object                An object whose properties are copied (mixed in)
-                                  to the created prototype after all other inheritance
-                                  has been solved.
-
-                                  You can add an instance-initialization function
-                                  by making it a property named "constructor".
-==========  ====================  ==================================================
 
 Example:
 
@@ -1634,6 +1605,8 @@ Additionally a prototype has a special property named ``declaredClass``, if the 
 Every instance created by ``dojo.declare``'d class has a special property called ``inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
 
 Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
+
+.. api-inline :: dojo.declare
 
 See Also
 ========

@@ -32,19 +32,6 @@ Usage
    // Dojo < 1.7
    var myNewObject = dojo.delegate(anOldObject, { myNewProperty: "value or text"});
 
-dojo.delegate accepts two arguments:
-
-==========  ====================  ==================================================
-Parameter   Type                  Description
-==========  ====================  ==================================================
-obj         object                The object to delegate to for properties not found
-                                  directly on the return object or in props.
-props       object                An object containing properties to assign to the
-                                  returned object.
-==========  ====================  ==================================================
-
-dojo.delegate returns an Object of anonymous type.
-
 
 Examples
 ========
@@ -82,3 +69,5 @@ Programmatic example
    anOldObject.bar = "thonk";
    myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
  </script>
+
+.. api-inline :: dojo.delegate

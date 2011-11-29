@@ -55,13 +55,6 @@ Dojo < 1.7
 
 This function only works with DomNodes, and returns nothing.
 
-=========  ==============  =============================================================================
-Parameter  Type            Description
-=========  ==============  =============================================================================
-node       String|DomNode  A String ID or DomNode reference of the element to empty.
-=========  ==============  =============================================================================
-
-
 Examples
 ========
 
@@ -163,6 +156,7 @@ Empty all nodes in a list by reference
         <div id="result2"></div>
     </div>
 
+.. api-inline :: dojo.empty
 
 See also
 ========
