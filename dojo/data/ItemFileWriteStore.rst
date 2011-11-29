@@ -632,3 +632,8 @@ is displayed in an alert.
         margin: 0;
       }
     </style>
+
+API Info
+========
+
+.. api-link :: dojo.data.ItemFileWriteStore
