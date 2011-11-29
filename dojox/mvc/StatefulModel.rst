@@ -17,7 +17,6 @@ dojox.mvc.StatefulModel
 The first-class native JavaScript data model based on dojo.Stateful that wraps any data structure(s) that may be relevant for a view, a view portion, a dijit or any custom view layer component.
 
 
-
 Constructor Parameters
 ======================
 
@@ -31,48 +30,47 @@ Constructor Parameters
 |            |         |                    | provided along with this store. Either data or store property must be provided.                        |
 +------------+---------+--------------------+--------------------------------------------------------------------------------------------------------+
 
-Available Methods
+Available Members
 =================
 
-* :ref:`StatefulModel.valid <dojox/mvc/StatefulModel>`
+* StatefulModel.valid
 
 Whether this model deems the associated data to be valid.
 
-* :ref:`StatefulModel.value <dojox/mvc/StatefulModel>`
+* StatefulModel.value
 
 The associated value (if this is a leaf node). The value of intermediate nodes in the model is not defined.
 
-* :ref:`StatefulModel.reset <dojox/mvc/StatefulModel>`
+* StatefulModel.reset()
 
 Resets this data model's values to its original state. Structural changes to the data model (such as adds or removes) are not restored.
 
-* :ref:`StatefulModel.commit <dojox/mvc/StatefulModel>`
+* StatefulModel.commit()
 
 Commits this data model:
 Saves the current state such that a subsequent reset will not undo any prior changes.
 Persists client-side changes to the data store, if a store has been supplied as a parameter or at instantiation.
 
-* :ref:`StatefulModel.toPlainObject <dojox/mvc/StatefulModel>`
+* StatefulModel.toPlainObject()
 
 Produces and returns a plain JavaScript object representation of the data
 currently within this data model.
 
-* :ref:`StatefulModel.add <dojox/mvc/StatefulModel>`
+* StatefulModel.add(name, Stateful)
 
 Adds the dojo.Stateful tree represented by the given dojox.mvc.StatefulModel at the given property name. In case of arrays, the property names are indices passed as Strings. An addition of such a dojo.Stateful node results in right-shifting any trailing sibling nodes.
 
-* :ref:`StatefulModel.remove <dojox/mvc/StatefulModel>`
+* StatefulModel.remove(name)
 
 Removes the dojo.Stateful tree at the given property name. In case of arrays, the property names are indices passed as Strings. A removal of such a dojo.Stateful node results in left-shifting any trailing sibling nodes.
 
-* :ref:`StatefulModel.valueOf <dojox/mvc/StatefulModel>`
+* StatefulModel.valueOf()
 
 Returns the value representation of the data currently within this data model
 
-* :ref:`StatefulModel.toString <dojox/mvc/StatefulModel>`
+* StatefulModel.toString()
 
 Returns the string representation of the data currently within this data model.
-
 
 
 Usage
@@ -82,19 +80,19 @@ A data model is effectively instantiated with a plain JavaScript object which sp
 
 .. js ::
   
-		 var struct = {
-		 		 order		 : "abc123",
-		 		 shipto		 : {
-		 		 		 address	 : "123 Example St, New York, NY",
-		 		 		 phone		 : "212-000-0000"
-		 		 },
-		 		 items : [
-		 		 		 { part : "x12345", num : 1 },
-		 		 		 { part : "n09876", num : 3 }
-		 		 ]
-		 };
+        var struct = {
+                order        : "abc123",
+                shipto        : {
+                        address    : "123 Example St, New York, NY",
+                        phone        : "212-000-0000"
+                },
+                items : [
+                        { part : "x12345", num : 1 },
+                        { part : "n09876", num : 3 }
+                ]
+        };
 
-		 var model = dojox.mvc.newStatefulModel({ data : struct });
+        var model = dojox.mvc.newStatefulModel({ data : struct });
 
 The simple example above shows an inline plain JavaScript object illustrating the data structure to prime the model with, however the underlying data may be made available by other means, such as from the results of a dojo.store or dojo.data query.
 
@@ -102,7 +100,7 @@ To deal with stores providing immediate values or Promises, a factory method for
 
 .. js ::
   
-		 var model = dojox.mvc.newStatefulModel({ store: someStore });
+        var model = dojox.mvc.newStatefulModel({ store: someStore });
 
 The created data model has the following properties:
 
@@ -116,25 +114,25 @@ The created data model has the following properties:
 
 .. js ::
   
-		 var model = dojox.mvc.newStatefulModel({ data : {
-		 		 prop1		 : "foo",
-		 		 prop2		 : {
-		 		 		 leaf1		 : "bar",
-		 		 		 leaf2		 : "baz"
-		 		 }
-		 }});
+    var model = dojox.mvc.newStatefulModel({ data : {
+        prop1: "foo",
+        prop2: {
+            leaf1: "bar",
+            leaf2: "baz"
+        }
+    }});
 
-		 // The created dojo.Stateful tree is illustrated below (all nodes are dojo.Stateful objects)
-		 //
-		 //		                 o  (root node)
-		 //		                / \
-		 //		  (prop1 node) o   o (prop2 node)
-		 //		                  / \
-		 //		    (leaf1 node) o   o (leaf2 node)
-		 //
-		 // The root node is accessed using the expression "model" (the var name above). The prop1
-		 // node is accessed using the expression "model.prop1", the leaf2 node is accessed using
-		 // the expression "model.prop2.leaf2" and so on.
+    // The created dojo.Stateful tree is illustrated below (all nodes are dojo.Stateful objects)
+    //
+    //                  o  (root node)
+    //                 / \
+    //   (prop1 node) o   o (prop2 node)
+    //               / \
+    // (leaf1 node) o   o (leaf2 node)
+    //
+    // The root node is accessed using the expression "model" (the var name above). The prop1
+    // node is accessed using the expression "model.prop1", the leaf2 node is accessed using
+    // the expression "model.prop2.leaf2" and so on.
 
 
 * Each of the dojo.Stateful nodes in the model may store data as well as associated "meta-data", which includes things such as whether the data is \ required or readOnly etc. This meta-data differs from that maintained by, for example, an individual dijit in that this is maintained by the datamodel and may therefore be affected by datamodel-level constraints that span multiple dijits or even additional criteria such as server-side computations.
@@ -145,43 +143,44 @@ There need not be a one-to-one association between a datamodel and a view or por
 
 Finally, requiring this class also enables all dijits to become data binding aware. The data binding is commonly specified declaratively via the "ref" property in the "data-dojo-props" attribute value.
 
-To illustrate, the following is the "Hello World" of such data-bound widget examples:
+To illustrate, the following is the "Hello World" of such data-bound widget examples.
+
+Using AMD format:
 
 .. js ::
   
-		 <script>
-		 		 dojo.require("dojox.mvc");
-		 		 dojo.require("dojo.parser");
-		 		 var model;
-		 		 dojo.ready(function(){
-		 		 		 model = dojox.mvc.newStatefulModel({ data : {
-		 		 		 		 hello : "Hello World"
-		 		 		 }});
-		 		 		 dojo.parser.parse();
-		 		 }
-		 </script>
+        <script>
+            var model;
+            require(["dojox/mvc", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(dxmvc, parser){
+                model = dojox.mvc.newStatefulModel({ data : {
+                    hello : "Hello World"
+                }});
+                parser.parse();
+            });
+        </script>
 
-		 <input id="helloInput" dojoType="dijit.form.TextBox"
-		 		 ref="model.hello">
+        <input id="helloInput" data-dojo-type="dijit.form.TextBox"
+            data-dojo-props="ref: 'model.hello'">
 
 
-or
+or, using legacy patterns e.g. ``dojo.require``:
 
 .. js ::
   
-		 <script>
-		 		 var model;
-		 		 require(["dojox/mvc", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(dxmvc, parser){
-		 		 		 model = dojox.mvc.newStatefulModel({ data : {
-		 		 		 		 hello : "Hello World"
-		 		 		 }});
-		 		 		 parser.parse();
-		 		 });
-		 </script>
+        <script>
+            dojo.require("dojox.mvc");
+            dojo.require("dojo.parser");
+            var model;
+            dojo.ready(function(){
+                model = dojox.mvc.newStatefulModel({ data : {
+                    hello : "Hello World"
+                }});
+                dojo.parser.parse();
+            }
+        </script>
 
-		 <input id="helloInput" data-dojo-type="dijit.form.TextBox"
-		 		 data-dojo-props="ref: 'model.hello'">
-
+        <input id="helloInput" dojoType="dijit.form.TextBox"
+            ref="model.hello">
 
 Such data binding awareness for dijits is added by extending the dijit._WidgetBase class to include data binding capabilities provided by dojox.mvc._DataBindingMixin, and this class declares a dependency on dojox.mvc._DataBindingMixin.
 

@@ -32,59 +32,58 @@ Examples
 ========
 
 Declarative example
---------------------
+-------------------
 
 .. html ::
 
-		<script type="text/javascript" >
-			// Initial data
-			var order = {
-				"Serial" : "360324",
-				"First" : "John",
-				"Last" : "Doe",
-				"Email" : "jdoe@example.com",
-				"ShipTo" : {
-					"Street" : "123 Valley Rd",
-					"City" : "Katonah",
-					"State" : "NY",
-					"Zip" : "10536"
-				},
-				"BillTo" : {
-					"Street" : "17 Skyline Dr",
-					"City" : "Hawthorne",
-					"State" : "NY",
-					"Zip" : "10532"
-				}
-			};
-			// The dojox.mvc.StatefulModel class creates a data model instance
-			// where each leaf within the data model is decorated with dojo.Stateful
-			// properties that widgets can bind to and watch for their changes.
-			var model = dojox.mvc.newStatefulModel({ data : order });
-		</script>
+    <script type="text/javascript" >
+        // Initial data
+        var order = {
+            "Serial" : "360324",
+            "First" : "John",
+            "Last" : "Doe",
+            "Email" : "jdoe@example.com",
+            "ShipTo" : {
+                "Street" : "123 Valley Rd",
+                "City" : "Katonah",
+                "State" : "NY",
+                "Zip" : "10536"
+            },
+            "BillTo" : {
+                "Street" : "17 Skyline Dr",
+                "City" : "Hawthorne",
+                "State" : "NY",
+                "Zip" : "10532"
+            }
+        };
+        // The dojox.mvc.StatefulModel class creates a data model instance
+        // where each leaf within the data model is decorated with dojo.Stateful
+        // properties that widgets can bind to and watch for their changes.
+        var model = dojox.mvc.newStatefulModel({ data : order });
+    </script>
 
 
-		<div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
-			<div class="row">
-				<label class="cell" for="streetInput">Street:</label>
-				<input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="cityInput">City:</label>
-				<input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="stateInput">State:</label>
-				<input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="zipInput">Zipcode:</label>
-				<input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
-			</div>
-		</div>
-		<br/>
-		Choose:
-		<button id="shipto" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){dijit.byId('addrGroup').set("ref",model.ShipTo);}">Ship To</button>
-		<button id="billto" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){dijit.byId('addrGroup').set("ref",model.BillTo);}">Bill To</button>
-		<br/>
+    <div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
+        <div class="row">
+            <label class="cell" for="streetInput">Street:</label>
+            <input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
+        </div>
+        <div class="row">
+            <label class="cell" for="cityInput">City:</label>
+            <input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
+        </div>
+        <div class="row">
+            <label class="cell" for="stateInput">State:</label>
+            <input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
+        </div>
+        <div class="row">
+            <label class="cell" for="zipInput">Zipcode:</label>
+            <input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
+        </div>
+    </div>
+    <br/>
+    Choose:
+    <button id="shipto" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){dijit.byId('addrGroup').set("ref",model.ShipTo);}">Ship To</button>
+    <button id="billto" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){dijit.byId('addrGroup').set("ref",model.BillTo);}">Bill To</button>
 
 In the above example, the TextBoxes inside the group with the id="addrGroup" will display either the ShipTo data or the BillTo data depending upon which button is pressed.

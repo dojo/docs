@@ -37,17 +37,16 @@ Available Methods
 Override and refresh output on value change.
 
 
-
 Examples
 ========
 
-Declarative example1
---------------------
+Declarative example
+-------------------
 
 .. html ::
 
-  <span dojoType="dojox.mvc.Output" ref="model.balance">
-    Your balance is: ${this.value}
-  </span>
+    <span dojoType="dojox.mvc.Output" ref="model.balance">
+        Your balance is: ${this.value}
+    </span>
 
 In the above example, the output widget being data-bound, if the  balance changes in the dojox.mvc.StatefulModel, the content within the <span> will be updated accordingly.

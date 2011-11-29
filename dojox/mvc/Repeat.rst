@@ -42,50 +42,49 @@ Declarative example
 
 .. html ::
 
-		<script type="text/javascript" >
-		  var search_results_init =
-			{
-				"Query" : "Engineers",
-				"Results" : [
-					{
-						"First"	  : "Anne",
-						"Last"	  : "Ackerman",
-						"Email"	  : "a.a@test.com"
-					},
-					{
-						"First"	  : "Ben",
-						"Last"	  : "Beckham",
-						"Email"	  : "b.b@test.com"
-					},
-					{
-						"First"	  : "John",
-						"Last"	  : "Jacklin",
-						"Email"	  : "j.j@test.com"
-					}
-				]
-			};
+    <script type="text/javascript" >
+        var search_results_init = {
+            "Query" : "Engineers",
+            "Results" : [
+                {
+                    "First": "Anne",
+                    "Last" : "Ackerman",
+                    "Email": "a.a@test.com"
+                },
+                {
+                    "First": "Ben",
+                    "Last" : "Beckham",
+                    "Email": "b.b@test.com"
+                },
+                {
+                    "First": "John",
+                    "Last" : "Jacklin",
+                    "Email": "j.j@test.com"
+                }
+            ]
+        };
 
-		   // The dojox.mvc.StatefulModel class creates a data model instance
-		   // where each leaf within the data model is decorated with dojo.Stateful
-		   // properties that widgets can bind to and watch for their changes.
-		   var searchRecords = dojox.mvc.newStatefulModel({ data : search_results_init });
-		</script>
+        // The dojox.mvc.StatefulModel class creates a data model instance
+        // where each leaf within the data model is decorated with dojo.Stateful
+        // properties that widgets can bind to and watch for their changes.
+        var searchRecords = dojox.mvc.newStatefulModel({ data : search_results_init });
+    </script>
 
 
-			<div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
-				<!--
-					The repeat container denotes a templated UI that operates over a collection
-					of data records.
-					The UI can be customized for each iteration using properties such as
-					${this.index} for the iteration index.
-				-->
-				<div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
-					<div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
-						<label class="cell" for="nameInput${this.index}">Name:</label>
-						<input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}"
-											data-dojo-props="ref: 'First'"></input>
-					</div>
-				</div>
-			</div>
+    <div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
+        <!--
+            The repeat container denotes a templated UI that operates over a collection
+            of data records.
+            The UI can be customized for each iteration using properties such as
+            ${this.index} for the iteration index.
+        -->
+        <div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
+            <div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
+                <label class="cell" for="nameInput${this.index}">Name:</label>
+                <input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}"
+                                    data-dojo-props="ref: 'First'"></input>
+            </div>
+        </div>
+    </div>
 
 In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
