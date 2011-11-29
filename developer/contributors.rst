@@ -380,6 +380,7 @@ Individuals who have signed Dojo CLAs
 * Obermann, Gerhard
 * Ogilvie, Cyan Jon
 * Oliver, Vicky
+* Ondrek, Samuel
 * Onken, Nikolai
 * Oriol, Guillaume
 * Overton, James Alexander
