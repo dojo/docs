@@ -32,7 +32,7 @@ Parameters
 Available Methods
 =================
 
-* :ref:`dojox.mvc.Output.set <dojox/mvc/Output>`
+* dojox.mvc.Output.set
 
 Override and refresh output on value change.
 

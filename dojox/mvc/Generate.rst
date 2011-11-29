@@ -56,24 +56,24 @@ Declarative example
         <h3>Model</h3>
         <div class="row">
             <textarea class="cell" data-dojo-type="dijit.form.Textarea" id="modelArea" data-dojo-props="onBlur: updateView">
-{
-    "First"  : "John",
-    "Last"   : "Doe",
-    "Email"  : "jdoe@example.com",
-    "Address": {
-        "Street" : "123 Valley Rd",
-        "City"   : "Katonah",
-        "State"  : "NY",
-        "Zip"    : "10536"
-    },
-    "Phones" : [{
-        "Areacode" : "111",
-        "Local"    : "111-1111"
-    },{
-        "Areacode" : "222",
-        "Local"    : "222-2222"
-    }]
-}
+    {
+        "First"  : "John",
+        "Last"   : "Doe",
+        "Email"  : "jdoe@example.com",
+        "Address": {
+            "Street" : "123 Valley Rd",
+            "City"   : "Katonah",
+            "State"  : "NY",
+            "Zip"    : "10536"
+        },
+        "Phones" : [{
+            "Areacode" : "111",
+            "Local"    : "111-1111"
+        },{
+            "Areacode" : "222",
+            "Local"    : "222-2222"
+        }]
+    }
             </textarea>
         </div>
         <h3>Generated View</h3>
