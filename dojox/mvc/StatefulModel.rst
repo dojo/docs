@@ -44,9 +44,9 @@ The associated value (if this is a leaf node). The value of intermediate nodes i
 
 * :ref:`StatefulModel.reset <dojox/mvc/StatefulModel>`
 
-Resets this data model values to its original state. Structural changes to the data model (such as adds or removes)are not restored.
+Resets this data model's values to its original state. Structural changes to the data model (such as adds or removes) are not restored.
 
-* :ref:`dojox.mvc.StatefulModel.commit <dojox/mvc/StatefulModel>`
+* :ref:`StatefulModel.commit <dojox/mvc/StatefulModel>`
 
 Commits this data model:
 Saves the current state such that a subsequent reset will not undo any prior changes.
@@ -105,7 +105,6 @@ To deal with stores providing immediate values or Promises, a factory method for
 		 var model = dojox.mvc.newStatefulModel({ store: someStore });
 
 The created data model has the following properties:
-..
 
 * It enables dijits or custom components in the view to "bind" to data within the model. A bind creates a bi-directional update mechanism between the bound view and the underlying data:
 
@@ -131,7 +130,7 @@ The created data model has the following properties:
 		 //		                / \
 		 //		  (prop1 node) o   o (prop2 node)
 		 //		                  / \
-		 //		    (leaf1 node)		 o   o (leaf2 node)
+		 //		    (leaf1 node) o   o (leaf2 node)
 		 //
 		 // The root node is accessed using the expression "model" (the var name above). The prop1
 		 // node is accessed using the expression "model.prop1", the leaf2 node is accessed using
@@ -172,7 +171,7 @@ or
   
 		 <script>
 		 		 var model;
-		 		 require(["dojox/mvc", "dojo/parser"], function(dxmvc, parser){
+		 		 require(["dojox/mvc", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(dxmvc, parser){
 		 		 		 model = dojox.mvc.newStatefulModel({ data : {
 		 		 		 		 hello : "Hello World"
 		 		 		 }});

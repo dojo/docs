@@ -31,9 +31,7 @@ Parameters
 |                  |             |"Row" : "row"}                   |                                                                                 |
 +------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
 |idNameMapping     |Object       |{"String" : "textbox_t"}         |The mapping of id and name to use. Set idNameMapping to override this. A count   |
-|                  |             |"String" : "generate-dijit-cell",|will be added to the id and name.                                                |
-|                  |             |"Heading" : "generate-heading",  |                                                                                 |
-|                  |             |"Row" : "row"}                   |                                                                                 |
+|                  |             |                                 |will be added to the id and name.                                                |
 +------------------+-------------+---------------------------------+---------------------------------------------------------------------------------+
 
 

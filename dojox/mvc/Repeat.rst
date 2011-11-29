@@ -17,7 +17,7 @@ dojox.mvc.Repeat
 A repeat is bound to an intermediate dojo.Stateful node corresponding to an array in the data model. Child dijits or custom view components inside it inherit their parent data binding context from it.
 
 Parameters
-======================
+==========
 
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type         |Default   |Description                                                                                             |
@@ -38,7 +38,7 @@ Examples
 ========
 
 Declarative example
---------------------
+-------------------
 
 .. html ::
 
@@ -72,6 +72,7 @@ Declarative example
 		</script>
 
 
+			<div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
 				<!--
 					The repeat container denotes a templated UI that operates over a collection
 					of data records.
@@ -85,5 +86,6 @@ Declarative example
 											data-dojo-props="ref: 'First'"></input>
 					</div>
 				</div>
+			</div>
 
 In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.

@@ -18,13 +18,13 @@ dojox.mvc.Bind
 Available Methods
 =================
 
-* :ref:`dojox.mvc.Bind <dojox/mvc/Bind>`
+* dojox.mvc.bind
 
 Bind the specified property of the target to the specified property of the source with the supplied transformation.
 
 
 Parameters
-======================
+----------
 
 +------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type     |Default       |Description                                                                                             |
@@ -44,16 +44,13 @@ Parameters
 +------------------+---------+--------------+--------------------------------------------------------------------------------------------------------+
 
 
-Available Methods
-=================
-
-* dojox.mvc.BindInputs
+* dojox.mvc.bindInputs
 
 Bind the values at the sources specified in the first argument array such that a composing function in the second argument is called when any of the values changes.
 
 
 Parameters
-======================
+----------
 
 +------------------+----------+-------------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type      |Default      |Description                                                                                             |

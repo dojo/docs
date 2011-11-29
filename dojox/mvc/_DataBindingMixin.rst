@@ -53,14 +53,14 @@ failing the test as invalid.
 Examples
 ========
 
-Declarative example1
---------------------
+Declarative example
+-------------------
 
 .. html ::
 
 	<script>
 		var model;
-		require(["dijit/StatefulModel", "dojo/parser"], function(StatefulModel, parser){
+		require(["dijit/StatefulModel", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(StatefulModel, parser){
 			model = new StatefulModel({ data : {
 				hello : "Hello World"
 			}});
