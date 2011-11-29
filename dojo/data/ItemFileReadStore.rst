@@ -1043,9 +1043,13 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore2, searchAttr:'name'"></div>
     <div id="reloadButton2" data-dojo-type="dijit.form.Button">Reload DataStore</div>
 
+API Info
+========
+
+.. api-link :: dojo.data.ItemFileReadStore
 
 See Also
 ========
 
-* `Refeshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
+* `Refreshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
 * Consider :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavour of store.
