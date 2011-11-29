@@ -4,11 +4,6 @@
 dojo.rpc.RpcService
 ===================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
-
 .. contents::
    :depth: 2
 
@@ -33,7 +28,6 @@ Usage
     var methodDeferred = svc.declaredMethod(declaredArg);
     methodDeferred.addCallback(handlerFunc);
   </script>
-
 
 ============== ================= =======================================
 Parameter      Type              Description
@@ -83,6 +77,8 @@ Creating subclasses
 ===================
 
 TODO
+
+.. api-inline :: dojo.rpc.RpcService
 
 See also
 ========
