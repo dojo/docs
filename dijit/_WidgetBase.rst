@@ -4,17 +4,13 @@
 dijit._WidgetBase
 =================
 
-:Authors: Bill Keese, Nikolai Onken, Marcus Reimann
-:Project owner: Bill Keese
-:Available: since V1.6
-
 .. contents::
    :depth: 2
 
 Introduction
 ============
 
-`dijit._WidgetBase <http://dojotoolkit.org/api/dijit/_WidgetBase>`_ is the base class for all widgets in dijit, 
+dijit._WidgetBase is the base class for all widgets in dijit,
 and in general is the base class for all dojo based widgets. Usually widgets also extend other mixins such as 
 :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`.
 
@@ -122,17 +118,11 @@ Finally, there's a watch() method to detect when attribute values change:
 The attributeMap and custom setters/getters
 -------------------------------------------
 
-get()/set() make use of:
+get()/set() make use of custom setters/getters, which can map a widget attribute to a
+DOMNode attribute, or perform any arbitrary code.
+For details, see the :ref:`Writing Widgets QuickStart <quickstart/writingWidgets>` guide.
 
-* the attributeMap
-* custom setters/getters
-
-The attributeMap specifies a mapping of widget attributes into the DOM tree for the widget. It can map a TitlePane's title to the DOM node listing the title, for example.
-
-The custom setters/getters can perform any needed operation for setting/resetting a value. They are used when attributeMap won't do the job.
-
-For more details on both attributeMap and custom setters/getters, see the Writing Widgets :ref:`QuickStart <quickstart/writingWidgets>` guide.
-
+.. api-inline :: dijit._WidgetBase
 
 See also
 ========
