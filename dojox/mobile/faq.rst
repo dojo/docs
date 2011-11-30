@@ -34,6 +34,18 @@ Can I use dojox.mobile.parser for desktop dojo applications?
 
 Yes. Use of dojox.mobile.parser is not limited to mobile. It has enough capability to bootstrap simple dojo applications. This may sound strange, but dojox.mobile.parser has no dependency on dojox.mobile. (And dojox.mobile has no dependency on dojox.mobile.parser either.) So you can pick up only dojox.mobile.parser and use it for your desktop applications. Actually, this parser was originally developed for very lightweight desktop dojo applications a few years before dojox.mobile was born.
 
+However, dojox.mobile.parser cannot be used for applications that contain ContentPane subclasses
+with nested widgets, since those nested widgets will try to be instantiated twice.   For example:
+
+.. html ::
+
+    <div data-dojo-type="dijit.Dialog">
+        ...
+        <button data-dojo-type="dijit.form.Button">OK</button>
+    </div>
+
+Also note that loading some desktop widgets may implicitly load the dojo.parser.
+
 Android Issues
 ==============
 
