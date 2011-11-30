@@ -55,7 +55,7 @@ This example shows the standard calendar being created from code.  Include the C
 
 .. code-example ::
 
-  A programmatically created Calendar. First lets write up some simple HTML code because you need to define the place where your Calendar should be created.
+  A programmatically created Calendar. First let's write up some simple HTML code because you need to define the place where your Calendar should be created.
   
   .. html ::
 

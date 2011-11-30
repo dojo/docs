@@ -103,7 +103,7 @@ If no in-flight XHR activity is found, and all dependencies have been solved, ad
 Examples
 ========
 
-Lets dynamically include code on button press and fire an event once the code is included
+Let's dynamically include code on button press and fire an event once the code is included:
 
 .. code-example ::
 

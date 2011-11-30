@@ -38,7 +38,9 @@ If you point your browser at http://localhost/test.php (or whatever hostname you
 Get the viewer code
 ===================
 
-We're going to get a copy of the code behind dojotoolkit.org/api and customize that lightly to create our own API viewer. Lets start by getting an export. In your terminal/shell/cmd-prompt, move into your web root directory, and type:
+We're going to get a copy of the code behind dojotoolkit.org/api and customize that lightly to create our own API viewer.
+Let's start by getting an export.
+In your terminal/shell/cmd-prompt, move into your web root directory, and type:
 
 .. code-block :: php
       

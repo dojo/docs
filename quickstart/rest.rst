@@ -28,7 +28,8 @@ What is a RESTful Service?
 
 REST stands for Representational State Transfer.  It basically leverages the HTTP protocol and model to provide data services.  What REST should be is follow a client/server model, be stateless, cacheable, allow for a layered model and provide a uniform interface.
 
-All resources are identified by the use of a URI, and there are two types of URIs used, collection URIs and element URIs.  For example, let's assume we have a server that is providing data about users.  The following URI would refer to the users:
+All resources are identified by the use of a URI, and there are two types of URIs used, collection URIs and element URIs.
+For example, let's assume we have a server that is providing data about users.  The following URI would refer to the users:
 
 .. html ::
 
@@ -231,7 +232,8 @@ JSON the Dojo Way
 
 While JSON is a great way of describing arbitrary objects, it doesn't have a standard for referencing.  The good news is that Dojo solves that via :ref:`dojox.json.ref <dojox/json/ref>` which provides everything you need.  It is also generally used by the rest of the framework, including the JSON REST datastores and stores.  This gives you quite a bit of flexibility in how you provide data.
 
-Mainly, it focuses on the attribute name ``$ref`` which provides a "pointer" to the rest of the data.  In a REST services, this is a URI.  When a client requests the data from the store, and the store doesn't have it, it will attempt to fetch the data at the supplied URI.  The typical way this is used is on collection URIs to provide references to the full resource, when you only want to provide a portion of the data up front.  For example, let's assume you want to provide information about pages of a book and you have the following collection URI:
+Mainly, it focuses on the attribute name ``$ref`` which provides a "pointer" to the rest of the data.  In a REST services, this is a URI.  When a client requests the data from the store, and the store doesn't have it, it will attempt to fetch the data at the supplied URI.  The typical way this is used is on collection URIs to provide references to the full resource, when you only want to provide a portion of the data up front.
+For example, let's assume you want to provide information about pages of a book and you have the following collection URI:
 
 .. html ::
 

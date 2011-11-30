@@ -195,7 +195,8 @@ Below is the code in the tutorial handling events. Here we connected the event h
      dojo.connect(button, 'onclick', 'helloPressed');
   }
 
-It is also possible to use the Dojo event model to connect simple objects. To demonstrate, lets define a simple object with a couple of methods:
+It is also possible to use the Dojo event model to connect simple objects.
+To demonstrate, let's define a simple object with a couple of methods:
 
 .. js ::
 
@@ -212,7 +213,8 @@ It is also possible to use the Dojo event model to connect simple objects. To de
   };
 
 
-So lets say that I want ``exampleObj.bar()`` to get called whenever ``exampleObj.foo()`` is called. We can set this up the same way that we do with DOM events:
+So let's say that I want ``exampleObj.bar()`` to get called whenever ``exampleObj.foo()`` is called.
+We can set this up the same way that we do with DOM events:
 
 .. js ::
 

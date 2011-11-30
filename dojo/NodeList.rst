@@ -105,7 +105,8 @@ The helper functions attached to the NodeList typically return the same instance
 Common NodeList Functions
 =========================
 
-The `entire NodeList API <http://dojotoolkit.org/api/dojo.NodeList>`_ is extensive, so lets just focus on some of the most frequently used methods.
+The `entire NodeList API <http://dojotoolkit.org/api/dojo.NodeList>`_ is extensive,
+so let's just focus on some of the most frequently used methods.
 
 ``forEach`` - runs a function for each element in a NodeList. If you want the option to break out of the loop, use ``every`` or ``some`` instead.
 

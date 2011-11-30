@@ -112,7 +112,7 @@ The following code has an error:
   </html>
 
 
-But when you look at the console, there's no apparent error. If you were programming in other languages, you might use a debugger and set a breakpoint on the "this.domNode" line. Firebug's debugger let's you do that, but not on this particular code. Scripts of type "dojo/event" and "dojo/method" are compiled and interpreted differently than "text/javascript" ones. But there are a couple of alternate debugging methods.
+But when you look at the console, there's no apparent error. If you were programming in other languages, you might use a debugger and set a breakpoint on the "this.domNode" line. Firebug's debugger lets you do that, but not on this particular code. Scripts of type "dojo/event" and "dojo/method" are compiled and interpreted differently than "text/javascript" ones. But there are a couple of alternate debugging methods.
 
 Method 1: Logging
 -----------------

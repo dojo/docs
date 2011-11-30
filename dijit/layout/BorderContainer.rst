@@ -71,7 +71,7 @@ Declarative example
   :height: 400
   :width: 660
 
-  Lets specify a simple BorderContainer with a left and center region
+  Let's specify a simple BorderContainer with a left and center region
 
   .. javascript::
 
@@ -154,7 +154,7 @@ This example uses layoutPriority to include two left panes in one BorderContaine
 Nested Layout Widgets
 ---------------------
 
-Lets take a look at a more advanced example of using BorderContainer and other layout widgets.
+Let's take a look at a more advanced example of using BorderContainer and other layout widgets:
 
 .. code-example::
   :djConfig: parseOnLoad: true

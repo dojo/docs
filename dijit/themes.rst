@@ -661,7 +661,11 @@ See more on :ref:`Animations and Effects with Dojo. <quickstart/Animation>`
 Overriding a theme
 ------------------
 
-You can also define a variation on a theme (much like `Handel <http://en.wikipedia.org/wiki/Variations_and_Fugue_on_a_Theme_by_Handel>`_). Let's say that you like the Tundra theme but for each tab above, you just want to change the background color of the form widgets. You would define yellowForm and blueForm to just change the background color:
+You can also define a variation on a theme
+(much like `Handel <http://en.wikipedia.org/wiki/Variations_and_Fugue_on_a_Theme_by_Handel>`_).
+Let's say that you like the Tundra theme but for each tab above,
+you just want to change the background color of the form widgets.
+You would define yellowForm and blueForm to just change the background color:
 
 .. css ::
 

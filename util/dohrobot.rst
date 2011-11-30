@@ -571,7 +571,9 @@ In the following sample, the robot uses initRobot to load the application. In th
         });
         doh.run();
 
-The above code uses waitForPageToLoad twice: once to click the checkout button, and once to click the login button. In each waitForPageToLoad call, you pass a function containing commands that will change the page. Let's examine the first waitForPageToLoad call more closely:
+The above code uses waitForPageToLoad twice: once to click the checkout button, and once to click the login button.
+In each waitForPageToLoad call, you pass a function containing commands that will change the page.
+Let's examine the first waitForPageToLoad call more closely:
 
 .. js ::
 

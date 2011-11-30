@@ -443,7 +443,10 @@ Take a look at this code in action:
 Escaping substitutions
 ----------------------
 
-Let's escape substituted text for HTML to prevent possible exploits. Dijit templates implement similar technique. We will borrow Dijit syntax: all names starting with ``!`` are going to be placed as is (example: ``{!abc}``), while everything else is going to be filtered.
+Let's escape substituted text for HTML to prevent possible exploits.
+Dijit templates implement similar technique.
+We will borrow Dijit syntax: all names starting with ``!`` are going to be placed as is (example: ``{!abc}``),
+while everything else is going to be filtered.
 
 [ Dojo 1.7 AMD ]
 

@@ -140,7 +140,7 @@ Note the "i" variable which returns the current position of an iteration
 
     </ul>
 
-Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query. Note that dojo.query returns the list of dom nodes as an array. This way you can easily iterate over each dom node using dojo.forEach
+Now let's use dojo.forEach with a list of dom nodes we retrieve using dojo.query. Note that dojo.query returns the list of dom nodes as an array. This way you can easily iterate over each dom node using dojo.forEach
 
 .. code-example ::
 
@@ -223,7 +223,9 @@ dojo.filter
 
 There are many cases when you have an array and want to filter it by a certain condition, ``dojo.filter`` will only keep values from ``unfilteredArray`` for which ``callback`` returns ``true``. The original array is not modified.
 
-Say you have an array of people with a last name. You would like to filter those having a certain last name. Lets take a look at anexample
+Say you have an array of people with a last name.
+You would like to filter those having a certain last name.
+Let's take a look at an example:
 
 .. code-example ::
 

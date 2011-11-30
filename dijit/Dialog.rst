@@ -95,11 +95,11 @@ remain invisible even when it's supposed to be displayed).
 Dialog programmatically
 -----------------------
 
-Now lets create a dialog programmatically, and change the dialog's content dynamically
+Now let's create a dialog programmatically, and change the dialog's content dynamically
 
 .. code-example ::
 
-  A programmatically created dialog with no content. First lets write up some simple HTML code because you need to
+  A programmatically created dialog with no content. First let's write up some simple HTML code because you need to
   define the place where your Dialog should be created.
   
   .. html ::

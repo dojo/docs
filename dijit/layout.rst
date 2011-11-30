@@ -14,7 +14,7 @@ dijit.layout
 An example first
 ================
 
-Before we dive into the depths of making layouts with the Dojo Toolkit lets look at an example.
+Before we dive into the depths of making layouts with the Dojo Toolkit, let's look at an example.
 Once you have read through this page you should be able to create such a layout yourself and even start experimenting with the Dijit layout components
 
 .. code-example::

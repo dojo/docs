@@ -106,5 +106,6 @@ We'll go for a simple left/top/bottom interface.
 
     <div id="uiContainer" style="border: 1px solid #ccc"></div>
 
-Lets fill it up with content. Out left pane will contain a Tree which will get its data right from our service provider.
-You might have asked yourself who that service provider is, we'll use Google.
+Let's fill it up with content.
+Our left pane will contain a Tree which will get its data right from our service provider.
+You might have asked yourself who that service provider is; we'll use Google.

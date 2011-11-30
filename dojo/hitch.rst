@@ -157,7 +157,7 @@ The output from firebug should be "baz bar". Any arguments provided after the fi
 Real-World Examples
 -------------------
 
-Let's say I want to stop right clicking on my page. This is a one-liner with dojo.hitch.
+Let's say I want to stop right clicking on my page. This is a one-liner with dojo.hitch:
 
 .. code-example::
   :type: inline

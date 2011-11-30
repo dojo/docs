@@ -10,11 +10,17 @@ dojo.DeferredList
 .. contents::
   :depth: 3
 
-:ref:`dojo.Deferred <dojo/Deferred>` objects make asynchronous programming as easy as can be reasonably expected. The :ref:`dojo.DeferredList <dojo/DeferredList>` class builds on the "one answer to one question" contract of :ref:`dojo.Deferred <dojo/Deferred>` to provide a "one answer to many questions" system. Lets look at some cases when you might need such a thing:
+:ref:`dojo.Deferred <dojo/Deferred>` objects make asynchronous programming as easy as can be reasonably expected.
+The :ref:`dojo.DeferredList <dojo/DeferredList>` class builds on the "one answer to one question" contract of
+:ref:`dojo.Deferred <dojo/Deferred>` to provide a "one answer to many questions" system.
+Let's look at some cases when you might need such a thing:
 
 One common task is notifying some listener when a list of resources pulled in by different services all become available. For example, a search federated across several bookstores. Hearing about the results of a single search is a good job for a :ref:`Deferred <dojo/Deferred>`, but finding out about when they've all completed takes more juggling.
 
-Lets assume we've installed several proxies for search services on our server. Once all the stores have been searched, we want to send an xhr call with search status to some logging service and provide the user an indication that we've finished up all the work we were doing on their behalf.
+Let's assume we've installed several proxies for search services on our server.
+Once all the stores have been searched,
+we want to send an xhr call with search status to some logging service
+and provide the user an indication that we've finished up all the work we were doing on their behalf.
 
 The services are located at:
 

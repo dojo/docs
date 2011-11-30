@@ -78,7 +78,8 @@ Note that it's using a <div> node instead of the obvious choice of a <form> node
 Preparing and validating a form for XHR requests
 ------------------------------------------------
 
-To validate a form you use the `isValid()` function. Lets take at a simple example using a declaratively created form:
+To validate a form you use the `isValid()` function.
+Let's take at a simple example using a declaratively created form:
 
 .. code-example ::
 

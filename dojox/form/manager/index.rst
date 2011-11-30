@@ -120,7 +120,8 @@ Example:
     </script>
   </div>
 
-We extended the previous example with observers and included required observers inline using ``dojo/method``. Let's go over new additions line by line:
+We extended the previous example with observers and included required observers inline using ``dojo/method``.
+Let's go over new additions line by line:
 
 * On line #2 we added an observer named ``log``. It will be called on every value change of the widget ``"w01"``.
 * On line #3 we added two observers named ``log`` and ``disabler``. They both will be called on every value change of the widget ``"e03"``.

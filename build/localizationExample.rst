@@ -30,7 +30,7 @@ Here we provide a practical walkthrough of applying localisation to actual dijit
 Starting Point - A Simple Test Dijit And Build Profile
 ======================================================
 
-Lets say we have a test dijit called ``testdijits.Foo``.  It is defined in ``testdijits/Foo.js``.  An example directory structure might be:
+Let's say we have a test dijit called ``testdijits.Foo``.  It is defined in ``testdijits/Foo.js``.  An example directory structure might be:
 
 .. code-block :: text
 
@@ -75,7 +75,7 @@ A 'real world' build will contain many dijits (testdijits.Foo, testdijits.Bar, t
 Adding A Strings Bundle
 =======================
 
-So far, no localization.  Lets add a string resource.  Our Foo.js implementation should try to load and use a strings bundle
+So far, no localization.  Let's add a string resource.  Our Foo.js implementation should try to load and use a strings bundle
 
 .. html ::
 
@@ -374,7 +374,7 @@ The important points here are:
 Multiple Custom Dijits
 ======================
 
-Just to demonstrate that this approach really does save on network traffic, lets add a second dijit, ``testdijits.Bar``, to our ``testdijits`` namespace, provide language resources for it, and add it to our build profile.
+Just to demonstrate that this approach really does save on network traffic, let's add a second dijit, ``testdijits.Bar``, to our ``testdijits`` namespace, provide language resources for it, and add it to our build profile.
 
   * Create the testdijits/Bar.js implementation, just like Foo but specifying ``"testdijits", "Bar"`` in the calls to ``requireLocalization`` and ``getLocalization``.
   * Create ``nls/Bar.js`` and ``nls/fr/Bar.js``

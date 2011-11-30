@@ -168,7 +168,11 @@ The "easiest" way to do this is to put an explicit reference to the template. Th
 
 Django helps us out by allowing a variable name to be used in the extends tag. What we can do with this, then, is set a variable in the context using ``dojox.moduleUrl``.
 
-If we're using the ``extends`` tag in an HTML environment, there's another factor to consider. Let's say we have a blog and there are two ways of viewing the page: a list view, and a detail view. Both of these views use a parent node that contains the page header, a menu, and a sidebar. We don't want the template system to have to redraw the DOM for their parent template, but how do we indicate that? There are two ways.
+If we're using the ``extends`` tag in an HTML environment, there's another factor to consider.
+Let's say we have a blog and there are two ways of viewing the page: a list view, and a detail view.
+Both of these views use a parent node that contains the page header, a menu, and a sidebar.
+We don't want the template system to have to redraw the DOM for their parent template, but how do we indicate that?
+There are two ways.
 
 The first is to use a string in the ``extends`` tag, outlined in the "easiest" way at the top. Putting "shared:" at the beginning of the string tells the extends tag to reuse the nodes between all other children that also want to share the parent.
 

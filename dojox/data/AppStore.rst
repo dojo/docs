@@ -240,7 +240,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
           function gotEntries(items, request) {
             if(items){
-              //Got the items, lets attach in the results (title, date updated).
+              //Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
@@ -287,7 +287,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
         dojo.connect(dijit.byId("simpleFetchButton2"), "onClick", function() {
           function gotEntries(items, request) {
             if(items){
-              //Got the items, lets attach in the results (title, date updated).
+              //Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list2");
               for(i = 0; i < items.length; i++){
                 var e = items[i];

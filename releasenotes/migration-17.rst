@@ -198,7 +198,8 @@ The secret is to run a build. Running a build over a legacy application codebase
 Running a build
 ---------------
 
-Lets take a simple module, and build it. (Again, this guide assumes you have a build plan in place and have existing code using 1.6 we want to convert)
+Let's take a simple module, and build it.
+(Again, this guide assumes you have a build plan in place and have existing code using 1.6 we want to convert)
 
 Our sample module looks like this:
 

@@ -185,7 +185,8 @@ Above we passed an object hash exclusively as the parameter to our Class instant
 
 Each of the ordered parameters are passed (as seen by the constructor's function signature) and then manually added to ``this`` by direct variable assignment.
 
-Let's add some content to a new class by giving it a name and showing what the constructor can do. Following is a Person class with a constructor and a ``moveToNewState()`` function:
+Let's add some content to a new class by giving it a name and showing what the constructor can do.
+Following is a Person class with a constructor and a ``moveToNewState()`` function:
 
 [Dojo 1.7 (AMD)]
 
@@ -314,7 +315,8 @@ On the other hand, numbers, booleans, and strings are used as values. Any assign
 Inheritance
 ===========
 
-A person can only do so much, so let's create an Employee class that extends the Person class. The second argument in the ``dojo.declare`` function is for extending classes.
+A person can only do so much, so let's create an Employee class that extends the Person class.
+The second argument in the ``dojo.declare`` function is for extending classes.
 
 [Dojo 1.7 (AMD)]
 
