@@ -52,7 +52,7 @@ Declarative example
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
-                    <label for="name">Name:
+                    <label for="name">Name:</label>
                 </td>
                 <td>
                     <input type="text" id="name" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
@@ -60,7 +60,7 @@ Declarative example
             </tr>
             <tr>
                 <td>
-                    <label for="dob">Date of birth:
+                    <label for="dob">Date of birth:</label>
                 </td>
                 <td>
                     <input type="text" id="dob" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
@@ -109,7 +109,7 @@ Let's take at a simple example using a declaratively created form:
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
-                    <label for="name">Name:
+                    <label for="name">Name:</label>
                 </td>
                 <td>
                     <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
@@ -117,7 +117,7 @@ Let's take at a simple example using a declaratively created form:
             </tr>
             <tr>
                 <td>
-                    <label for="dob">Date of birth:
+                    <label for="dob">Date of birth:</label>
                 </td>
                 <td>
                     <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
@@ -160,7 +160,7 @@ The `validate()` function does some extra UI related work, including highlightin
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
-                    <label for="name">Name:
+                    <label for="name">Name:</label>
                 </td>
                 <td>
                     <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
@@ -168,7 +168,7 @@ The `validate()` function does some extra UI related work, including highlightin
             </tr>
             <tr>
                 <td>
-                    <label for="dob">Date of birth:
+                    <label for="dob">Date of birth:</label>
                 </td>
                 <td>
                     <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
@@ -222,7 +222,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
-                    <label for="name">Name:
+                    <label for="name">Name:</label>
                 </td>
                 <td>
                     <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
@@ -230,7 +230,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
             </tr>
             <tr>
                 <td>
-                    <label for="dob">Order
+                    <label for="dob">Order:</label>
                 </td>
                 <td>
                     <input type="radio" name="order" value="Food"> Food

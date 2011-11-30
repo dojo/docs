@@ -59,8 +59,8 @@ Programmatic example
 
   .. html ::
 
+     <label for="prog_val">Drop down Time box:</label>
      <input id="prog_val"/>
-     <label for="prog_val">Drop down Time box. Click inside to display the time picker.</label>
 
 Declarative example
 -------------------
@@ -75,11 +75,11 @@ Declarative example
 
   .. html ::
 
+     <label for="time1">Drop down Time box:</label>
      <input type="text" name="date1" id="time1" value="T15:00:00"
        data-dojo-type="dijit.form.TimeTextBox"
        onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
        required="true" />
-     <label for="time1">Drop down Time box. Click inside to display the time picker.</label>
      <br>string value: <input readonly disabled id='val' value='value not changed' />
 
 Accessibility

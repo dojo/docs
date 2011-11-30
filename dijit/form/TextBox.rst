@@ -47,16 +47,18 @@ Declarative example
 
   .. html ::
 
+        <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
         <input type="text" name="firstname" value="testing testing"
 		data-dojo-type="dijit.form.TextBox"
 		data-dojo-props="trim:true, propercase:true" id="firstname">
-        <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
 
   
 Sizing TextBoxes
 ----------------
 
-Sizing a text box is done through the CSS width on the text box dom node.  Typically this is done by specifying the width in ems.  Please see the following for an example:
+Sizing a text box is done through the CSS width on the text box dom node.
+Typically this is done by specifying the width in ems.
+Please see the following for an example:
 
 .. code-example ::
 
@@ -64,24 +66,15 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
 
     <script>
       dojo.require("dijit.form.TextBox");
-
-      function init() {
-        var box = dijit.byId("progBox");
-        dojo.style(box.domNode, "width", "5em");
-      }
-      dojo.ready(init);
     </script>
 
   .. html ::
 
-    <b>A default textbox:</b> <div data-dojo-type="dijit.form.TextBox"></div>
+    <label for="dtb">A default textbox:</label> <input id="dtb" data-dojo-type="dijit.form.TextBox"/>
     <br>
-    <b>A large textbox:</b> <div style="width: 50em;" data-dojo-type="dijit.form.TextBox"></div>
+    <label for="ltb">A large textbox:</label> <input id="ltb" style="width: 50em;" data-dojo-type="dijit.form.TextBox"/>
     <br>
-    <b>A small textbox:</b> <div style="width: 10em;" data-dojo-type="dijit.form.TextBox"></div>
-    <br>
-
-    <b>A programmatically sized textbox:</b> <div id="progBox" data-dojo-type="dijit.form.TextBox"></div>
+    <label for="stb">A small textbox:</label> <input id="stb" style="width: 10em;" data-dojo-type="dijit.form.TextBox"/>
     <br>
 
 
@@ -90,34 +83,45 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
     <style type="text/css">
     </style>
 
+To programatically size a textbox you would do:
+
+.. js ::
+
+        var box = dijit.byId("progBox");
+        dojo.style(box.domNode, "width", "5em");
+
 Getting and Manipulating the Value
 ----------------------------------
 
-Getting and manipulating the value is a trivial matter.  It is done through the attr() function of the widget.  Please see the following example for more detail:
+Getting and manipulating the value is a trivial matter.
+It is done through the set() and get() functions of the widget.
+Please see the following example for more detail:
 
 .. code-example ::
+  :djConfig: parseOnLoad: false
 
   .. js ::
 
     <script>
       dojo.require("dijit.form.TextBox");
+      dojo.require("dojo.parser");
 
-      function init() {
+      dojo.ready(function(){
+        dojo.parser.parse();
         var box0 = dijit.byId("value0Box");
         var box1 = dijit.byId("value1Box");
-        box1.attr("value", box0.attr("value") + " modified");
+        box1.set("value", box0.get("value") + " modified");
         dojo.connect(box0, "onChange", function(){
-           box1.attr("value", box0.attr("value") + " modified");
+           box1.set("value", box0.get("value") + " modified");
         });
-      }
-      dojo.ready(init);
+      });
     </script>
 
   .. html ::
 
-    <b>A textbox with a value:</b> <input id="value0Box" data-dojo-type="dijit.form.TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
+    <label for="value0Box">A textbox with a value:</label> <input id="value0Box" data-dojo-type="dijit.form.TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
     <br>
-    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
+    <label for="value1Box">A textbox set with a value from the above textbox:</label> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
     <br>
 
   .. css ::

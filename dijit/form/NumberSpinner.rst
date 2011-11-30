@@ -102,7 +102,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
 
   .. html ::
 
-    <label for="temperatureCelsius">Temperature in Celsius</label>
+    <label for="temperatureCelsius">Temperature in Celsius:</label>
     <div data-dojo-type="dijit.form.NumberSpinner"
        intermediateChanges="true"
        id="temperatureCelsius"

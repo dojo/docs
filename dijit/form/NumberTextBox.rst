@@ -44,7 +44,7 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
 
   .. html ::
 
-        <label for="q05">Integer between -20000 to +20000:</label>
+    <label for="q05">Integer between -20000 to +20000:</label>
 	<input id="q05" type="text"
 		data-dojo-type="dijit.form.NumberTextBox"
 		name= "elevation"
@@ -77,7 +77,7 @@ This example creates a simple NumberTextBox programmatically.  The fractional pa
 
   .. html ::
 
-         <label for="programmatic">Input any number with up to 6 fractional digits:</label>
+     <label for="programmatic">Input any number with up to 6 fractional digits:</label>
 	 <input id="programmatic" type="text">
 
 

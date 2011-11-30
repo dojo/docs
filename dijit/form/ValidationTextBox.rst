@@ -64,10 +64,10 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 
   .. html ::
 
+    <label for="phone">Phone number, no spaces:</label>
     <input type="text" name="phone" id="phone" value="someTestString"
         data-dojo-type="dijit.form.ValidationTextBox"
         data-dojo-props="regExp:'[\\w]+', required:true, invalidMessage:'Invalid Non-Space Text.'">
-    <label for="phone">Phone number, no spaces</label>
 
 Using regular expressions
 -------------------------
@@ -84,10 +84,10 @@ The regular expression syntax comes directly from JavaScript. The start and endi
 
   .. html ::
 
+    <label for="zip">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000"
         data-dojo-type="dijit.form.ValidationTextBox"
         data-dojo-props="regExp:'\\d{5}', required:true, invalidMessage:'Invalid zip code.'">
-    <label for="zip">Also 5-Digit U.S. Zipcode only</label>
 
 Generate regular expressions
 ----------------------------
@@ -112,10 +112,10 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 
   .. html ::
 
+    <label for="zip2">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000" id="zip2"
         data-dojo-type="dijit.form.ValidationTextBox"
         data-dojo-props="regExpGen:after5, required:true, invalidMessage:'Zip codes after 5, county name before then.'">
-    <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
 
 Accessibility

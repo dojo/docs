@@ -42,7 +42,7 @@ In this example using USD, both dollars and cents are required.
 
   .. html ::
 
-        <label for="income1">U.S. Dollars</label>
+    <label for="income1">U.S. Dollars</label>
 	<input type="text" name="income1" id="income1" value="54775.53"
 		data-dojo-type="dijit.form.CurrencyTextBox"
 		data-dojo-props="required:true,

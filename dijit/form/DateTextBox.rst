@@ -55,10 +55,10 @@ Declarative example
 
   .. html ::
 
+    <label for="date1">Drop down Date box:</label>
 	<input type="text" name="date1" id="date1" value="2005-12-30"
 		data-dojo-type="dijit.form.DateTextBox"
 		required="true" />
-        <label for="date1">Drop down Date box. Click inside to display the calendar.</label>
 
 
 
