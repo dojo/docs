@@ -236,6 +236,8 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   .. javascript::
 
     <script type="text/javascript">
+        dojo.require("dijit._Widget");
+        dojo.require("dijit._Templated");
         dojo.require("dijit.layout.BorderContainer");
         dojo.require("dijit.layout.ContentPane");
         dojo.require("dijit.form.Button");
@@ -254,8 +256,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                         '</div>' +
                         '</div></div>'
             });
-            // it's now safe to allow creation of our dijit instance
-            dijit.byId('createButton').set('disabled', false);
         });
     </script>
 
@@ -265,7 +265,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
-        <div data-dojo-type="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
+        <div data-dojo-type="dijit.form.Button" id="createButton">Create Inner Dijit
           <script type="dojo/connect" data-dojo-event="onClick">
             // Create a new instance
             var newdijit = new MyDijit( {}, dojo.create('DIV'));

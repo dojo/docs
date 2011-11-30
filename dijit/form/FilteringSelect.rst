@@ -152,6 +152,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
   .. js ::
 
     <script type="text/javascript">
+        dojo.require("dijit.form.ComboBox");
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.ready(function(){
