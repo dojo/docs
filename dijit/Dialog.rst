@@ -150,21 +150,17 @@ the Dialog, suffixed with :ref:``underlay``, which you can define a css class fo
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="button4" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
+    <button id="button4" data-dojo-type="dijit.form.Button" type="button">Show me!
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+            dijit.byId("dialogColor").show();
+        </script>
+    </button>
 
   .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
-
-        dojo.ready(function(){
-            // create the dialog:
-            var dialogColor = dijit.byId("dialogColor");
-
-            // connect t the button so we display the dialog onclick:
-            dojo.connect(dijit.byId("button4"), "onClick", dialogColor, "show");
-        });
     </script>
 
 Forms and Functionality in Dialogs
@@ -223,10 +219,13 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
+    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+            dijit.byId("formDialog").show();
+        </script>
+    </button>
 
-  The javascript, put this wherever you want the dialog creation to happen
-  
+
   .. js ::
 
     <script type="text/javascript">
@@ -235,11 +234,6 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         dojo.require("dijit.form.TextBox");
         dojo.require("dijit.form.DateTextBox");
         dojo.require("dijit.form.TimeTextBox");
-
-        dojo.ready(function(){
-            formDlg = dijit.byId("formDialog");
-            dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
-        });
 
         function checkData(){
             var data = formDlg.attr('value');
@@ -289,23 +283,19 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
+    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+            dijit.byId("formDialog2").show();
+        </script>
+    </button>
 
-  The javascript, arranges for the dialog to appear
-  
+
   .. js ::
     
+    dojo.require("dijit.Dialog");
     dojo.require("dijit.form.Form");
     dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.TextBox");
-    dojo.require("dijit.form.DateTextBox");
-    dojo.require("dijit.form.TimeTextBox");
-
-    dojo.ready(function(){
-        var formDlg = dijit.byId("formDialog2");
-        dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
-    });
+    dojo.require("dijit.form.ValidationTextBox");
 
 
 Terms and Conditions Dialog
@@ -353,21 +343,18 @@ This example shows a Dialog that will ask the user to accept or decline the term
     </label>
     <button id="termsButton" data-dojo-type="dijit.form.Button" type="button">
         View terms and conditions to accept
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+            dijit.byId("formDialog").show();
+        </script>
     </button>
 
-  The javascript, put this wherever you want the dialog creation to happen
-  
+
   .. js ::
 
     dojo.require("dijit.form.Button");
     dojo.require("dijit.Dialog");
     dojo.require("dijit.form.RadioButton");
 
-    dojo.ready(function() {
-        formDlg = dijit.byId("formDialog");
-        dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
-    });
-    
     var accept = function(){
         dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
         dojo.style("decision", "color", "#00CC00");
