@@ -4,14 +4,10 @@
 The Dojo Parser
 ===============
 
-:Status: Contributed
-:Version: 1.7
-:Authors: Peter Higgins, Nathan Toone, Bill Keese, kolban
-
 .. contents::
     :depth: 3
 
-The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` (data-dojo-type) attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
+The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or :ref:`dojo.declare <dojo/declare>`.
 
@@ -36,10 +32,10 @@ The parser also allows function parameters and connections to be done via <scrip
 
 
 Getting Started
----------------
+===============
 
 Loading the Parser
-==================
+------------------
 
 To include the Dojo parser on your page, require the module `dojo.parser`:
 
@@ -55,12 +51,14 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
   //Dojo < 1.7
   dojo.require("dojo.parser");
 
-``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly :ref:`require <dojo/require>` the module than to assume it has been loaded.
+``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit).
+It is always safer to explicitly :ref:`require <dojo/require>` the module than to assume it has been loaded.
 
-Also, starting in 1.7, many widgets extend `dijit._TemplatedMixin <dijit/_TemplatedMixin>` rather than `dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
+Also, starting in 1.7, many widgets extend :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`
+rather than :ref:`dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
 
 Running the Parser
-==================
+------------------
 
 There are two ways to run the dojo.parser: manually, or before onLoad.
 
@@ -87,11 +85,13 @@ To run the parser when your page loads, add a data-dojo-config="parseOnLoad: tru
 
 
 
-Parser syntax
--------------
+Markup
+======
 
-Specifying parameters
-=====================
+This section discusses how to write markup (HTML) on your page to be interpreted by the parser.
+
+Parser parameters
+-----------------
 
 Attributes which correspond to native HTML attributes appear directly in the markup.    Custom widget parameters are put into the data-dojo-props field.   For example:
 
@@ -102,7 +102,7 @@ Attributes which correspond to native HTML attributes appear directly in the mar
 
 
 Boolean parameters
-==================
+~~~~~~~~~~~~~~~~~~
 
 Due to HTML subtleties, for boolean parameters that are false, it's best not to specify the attribute at all.   For example, to specify an enabled button (where the `disabled` property is false), simply don't specify anything for disabled:
 
@@ -132,7 +132,8 @@ Although specifying disabled="true" will disable a widget, note that the followi
 
 
 Date parameters
-===============
+~~~~~~~~~~~~~~~
+
 * Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
 
 .. html ::
@@ -149,7 +150,8 @@ Incidentally, this is also how dates are returned to the server when a form is s
   <div data-dojo-type=... when="now"></div>
 
 Function parameters
-===================
+~~~~~~~~~~~~~~~~~~~
+
 There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below).   To specify a function as an attribute you can either specify the name of a function:
 
 .. html ::
@@ -168,7 +170,8 @@ Alternately, you can inline the text of a function:
 
 
 Script Tags
-===========
+-----------
+
 The parser allows the specification of behaviours through custom types in script blocks to extend and enhance the functionality of declarative widgets. This is done by specifying a script block that is a direct child of a node with decorate with `data-dojo-type`. There are different types of script tags supported:
 
 Connecting to a Function
@@ -285,14 +288,18 @@ Note that `this` points to the widget object.
 
 
 Writing widgets
----------------
+===============
 
 This section discusses how to write widgets that the parser can understand.
 
-Specifying parameters and types
-===============================
+Specifying attributes and types
+-------------------------------
 
-HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via data-dojo-type attribute) and tries to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
+HTML treats all attributes on nodes as strings.
+However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate
+(via data-dojo-type attribute) and tries to make a "best guess" at the type of each widget attribute.
+This requires that all attributes you want to be passed in via the parser
+have a corresponding attribute in the class you are trying to instantiate.
 
 Private members (those that begin with an underscore (_) ) are not mapped in from the source node.
 
@@ -348,7 +355,7 @@ If you don't want to set a default value for an attribute, you can give it an em
 
 
 markupFactory
-=============
+-------------
 
 As listed above, the parser expects widget constructors to follow a certain format (where the first argument is a hash of attribute names/values, and the second is the srcNodeRef.
 
@@ -372,10 +379,11 @@ In addition the markupFactory can be used to allow the widget to do something th
 
 This also ensures that subsequent descendant classes that do not override the markupFactory are created properly.
 
-Setting the parser behavior
----------------------------
+Parser API notes
+================
 
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes ready call after parsing. how to set parseOnLoad
+The main API to the parser, parse(), was discussed above.
+
 
 ``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as data-dojo-type, etc.  The values in the mixin would override any values in your node. For example:
 
@@ -397,38 +405,16 @@ Calling instantiate in this way will return to you a list of instances that were
 
   dojo.parser.instantiate([dojo.byId("myDiv")], {data-dojo-type: "my.custom.type", _started: false});
 
-``NEW in 1.6:``  Dojo V1.6 started to use data-dojo-type html5 attribute instead of data-dojo-type. When using new data-dojo-type attribute other attributes must be put in data-dojo-props attribute because of performance improvement like so:
-
-.. html ::
-
-  <a href="document.html"
-     data-dojo-type="my.custom.type"
-     data-dojo-props="href: 'document.html',
-       title: 'Lorem ipsum',
-       objectVal:{a: 1, b:'c'},
-       typedArray:['a','b','c',1,2],
-       customAttr: 'value'"
-     title="Lorem ipsum">Lorem ipsum link</a>
-
-``NEW in 1.7:`` Since data-dojo-props leads to duplication, there is again possible to use both data-dojo-props attribute like in 1.6 in addition to node attributes:
-
-.. html ::
-
-  <a href="document.html"
-     data-dojo-type="my.custom.type"
-     data-dojo-props="objectVal:{a: 1, b:'c'},
-       typedArray:['a','b','c',1,2]"
-     title="Lorem ipsum" customAttr="value">Lorem ipsum link</a>
-
 ``todoc: scoping a parser call to node by stringId|domNode``
 
 
 Caveats
--------
-``todoc: re-parsing, duplicate id's``
+=======
+If you try to parse the same content twice, or parse content mentioning id's of existing widgets,
+it will cause an exception about duplicate id's.
 
 Examples
---------
+========
 
 Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert the nodes decorated with ``data-dojo-type``'s into widgets:
 
@@ -479,6 +465,6 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
   
 
 See Also
---------
+========
 
 - `Introduction to the Parser <http://dojocampus.org/content/2008/03/08/the-dojo-parser/>`_
