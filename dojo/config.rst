@@ -125,18 +125,20 @@ isDebug: true
 debugContainerId: "yourContainerId"
   If specified, when the page is rendered dojo will look for an element with the specified id and will put the Firebug Lite console window inside that element. This allows developers extra control over the display of the console window and to easily reference it in their own scripts. By default the div containing the console window does not have an id associated with it.
 
-debugAtAllCosts: true
-  This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <quickstart/debugging>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.ready. Version 1.6 has troubles with this setting. See: http://bugs.dojotoolkit.org/ticket/12608 for more information.
+debugAtAllCosts: true (Dojo < 1.7 only)
+  This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <quickstart/debugging>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.ready.
+  
+  Version 1.6 has issues with this setting; see http://bugs.dojotoolkit.org/ticket/12608 for more information.  It has been removed in 1.7; see the :ref:`release notes <releasenotes/1.7>`.
 
 Language and Localization Settings in dojoConfig
 ------------------------------------------------
 
 There is an extensive discussion of the i18n features of dojo in the :ref:`tutorial on i18n <quickstart/internationalization/index>`. Here we'll briefly cover the two dojoConfig variables that apply to these settings:
 
-locale: 'en-us'
+locale: "en-us"
   By default, dojo determines the locale of the application by pulling the locale from the browser navigator object.  However, developers can force the default locale by using the dojoConfig locale setting, often done by app servers to establish locale based on user preferences.  Dojo's locale must be established at bootstrap time and cannot be changed later.  Locales must be specified in all lowercase with dashes separating variants.
 
-extraLocale: ['ja-jp']
+extraLocale: ["ja-jp"]
   In addition to the locale, developers can specify that extra locale files also be downloaded in parallel.  The argument to the extraLocale parameter is an array of strings representing locales.
 
   The extraLocale is used only for edge cases like multi-lingual pages or for dynamically switching languages. It is generally more efficient and preferred to switch languages by reloading the page and changing the locale setting.  An example use case for extraLocale would be a language tutorial – a page in the user's native language that teaches Japanese.
@@ -146,27 +148,27 @@ Finding Resources in Non-Standard Locations
 
 On occasion, developers may choose not to locate dojo resources in the standard location (i.e. relative to the dojo/dojo.js core file). In such cases it is necessary to tell dojo where to find those resources. The dojoConfig parameters available for this are as follows:
 
-baseUrl: '/assets/mydojo/'
+baseUrl: "/assets/mydojo/"
   When using multiple versions of dojo in parallel in a given site, or if the core dojo.js file has been renamed when creating a custom build, the baseUrl parameter should be used to indicate where the dojo core is located. This may also be necessary for sites that use the <base> tag which can confuse some browsers (e.g. IE6). The value for baseUrl should be the directory that contains the dojo.js file. The value should always be defined with an ending slash (/) character.
 
-modulePaths: {'foo': '../../bar'}
-  Using this parameter is the equivalent of calling dojo.registerModulePath('foo','../../bar') and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, some informations you can find at :ref:`dojo.registerModulePath <dojo/registerModulePath>`.
+modulePaths: {"foo": "../../bar"}
+  Using this parameter is the equivalent of calling dojo.registerModulePath("foo", "../../bar") and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, see :ref:`dojo.registerModulePath <dojo/registerModulePath>`.
 
 Other Options
 -------------
 
 afterOnLoad: true
-  (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. Only works with a **built** dojo.js, it does not work the dojo.js directly from source control.
+  (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. Only works with a **built** dojo.js; does not work with dojo.js directly from source control.
 
 .. html ::
 
     <script type="text/javascript">
-      var dojoConfig = { afterOnLoad:true };
-      window.onload = function(){
-           var d = document.getElementsByTagName("head")[0].appendChild(document.createElement('script'));
-           d.src = "my/dojo.js";
-           d.type = "text/javascript";
-      }
+        var dojoConfig = { afterOnLoad:true };
+        window.onload = function(){
+            var d = document.getElementsByTagName("head")[0].appendChild(document.createElement('script'));
+            d.src = "my/dojo.js";
+            d.type = "text/javascript";
+        }
     </script>
 
 
@@ -192,7 +194,7 @@ Using dojoConfig in your Code
 
 The ambiguity of dojoConfig is very helpful. You can provide functionality and configuration options for users through the pattern outlined by this doc.
 
-If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the dojoConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to dojoConfig (as outlined above) are moved to: `dojo.config`. This is an artifact of the scopeName changing capabilities of Dojo.
+If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the dojoConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to dojoConfig (as outlined above) are moved to ``dojo.config``. This is an artifact of the scopeName changing capabilities of Dojo.
 
 .. js ::
   
@@ -202,25 +204,25 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
 
 .. js ::
   
-  //Dojo 1.7 (AMD style)
-  require(['dojo/_base/declare', 'dojo/_base/config'], function(declare, config){
-    declare("my.Thinger", null, {
-      thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
-      constructor: function(){
-         if(config.myCustomVariable){ ... }
-      }
+    // Dojo 1.7+ (AMD style)
+    require(["dojo/_base/declare", "dojo/_base/config"], function(declare, config){
+        declare("my.Thinger", null, {
+            thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
+            constructor: function(){
+                if(config.myCustomVariable){ ... }
+            }
+        });
     });
-  });
-  
-  //Dojo < 1.7
-  dojo.declare("my.Thinger", null, {
-      thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
-      constructor: function(){
-         if(dojo.config.myCustomVariable){ ... }
-      }
-  });
+    
+    //Dojo < 1.7
+    dojo.declare("my.Thinger", null, {
+        thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
+        constructor: function(){
+            if(dojo.config.myCustomVariable){ ... }
+        }
+    });
 
-By referencing `dojo.config.myCustomVariable` as opposed to relying on `dojoConfig.myCustomVariable` you will be able to utilize the variable safely in built versions using an alternate scopeName
+By referencing ``dojo.config.myCustomVariable`` as opposed to relying on ``dojoConfig.myCustomVariable`` you will be able to utilize the variable safely in built versions using an alternate scopeName.
 
 Backwards Compatibility and Order of Precedence
 ===============================================
