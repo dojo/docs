@@ -10,7 +10,11 @@ dojo.cache
 .. contents::
    :depth: 2
 
-A getter and setter method for storing the string content associated with the module and url arguments. It is a generic version of the functionality provided by dijit's templatePath method.
+A getter and setter method for storing the string content associated with the module and url arguments.
+It is a generic version of the functionality provided by dijit's templatePath method.
+
+This method's functionality has been superseded by the :ref:`dojo/text! <dojo/text>` plugin.
+The documentation below is left for legacy purposes.
 
 
 Introduction
@@ -106,4 +110,5 @@ Example using an object that has like the previous example, but uses an object w
 See Also
 ========
 
+* :ref:`dojo/text! <dojo/text>`
 * :ref:`dojo.require <dojo/require>`

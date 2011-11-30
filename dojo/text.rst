@@ -4,7 +4,8 @@
 dojo/text
 =========
 
-dojo/text is an AMD plugin that loads string data from a file. It is the replacement for ``dojo.cache`` from earlier versions of dojo.
+dojo/text is an AMD plugin that loads string data from a file.
+It is the replacement for :ref:`dojo/cache() <dojo/cache>` from earlier versions of dojo.
 
 .. js ::
  
@@ -15,3 +16,8 @@ dojo/text is an AMD plugin that loads string data from a file. It is the replace
         templateString: template
       });
   });
+
+
+See Also
+========
+* :ref:`dojo/cache() <dojo/cache>`
