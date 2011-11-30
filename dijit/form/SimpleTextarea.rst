@@ -34,7 +34,7 @@ First we will create a SimpleTextarea widget programmatically. Notice how we pas
           cols: "50",
           style: "width:auto;"
         },"myarea");
-        textarea.attr('value','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.');
+        textarea.set("value","Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
       });
     </script>
 

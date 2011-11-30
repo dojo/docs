@@ -32,7 +32,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
       new dijit.form.ToggleButton({
         showLabel: true,
         checked: false,
-        onChange: function(val){this.attr('label',val)},
+        onChange: function(val){this.set('label',val)},
         label: "false"
       }, "programmatic");
     });

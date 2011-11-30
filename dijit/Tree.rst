@@ -390,7 +390,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 				console.debug(tn.item);
                                
 				// contrived condition: if this tree node doesn't have any children, disable all of the menu items
-				menu.getChildren().forEach(function(i){ i.attr('disabled', !tn.item.children); });
+				menu.getChildren().forEach(function(i){ i.set('disabled', !tn.item.children); });
                                 
 				// IMPLEMENT CUSTOM MENU BEHAVIOR HERE
 			});

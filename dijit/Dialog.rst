@@ -124,7 +124,7 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
     });
     showDialogTwo = function(){
         // set the content of the dialog:
-        secondDlg.attr("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
+        secondDlg.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
         secondDlg.show();
     }
 
@@ -236,7 +236,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         dojo.require("dijit.form.TimeTextBox");
 
         function checkData(){
-            var data = formDlg.attr('value');
+            var data = formDlg.get('value');
             console.log(data);
             if(data.sdate > data.edate){
                 alert("Start date must be before end date");

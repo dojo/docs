@@ -40,7 +40,7 @@ Let's create a checkbox programmatically, initially unchecked:
         name: "checkBox",
         value: "agreed",
         checked: false,
-        onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + checkBox.attr('value') ); }
+        onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + checkBox.get('value') ); }
       }, "checkBox");
     });
     </script>
@@ -64,7 +64,7 @@ Let's create a checkbox with HTML markup, initially checked:
 
   .. html ::
  
-    <input id="mycheck" name="mycheck" data-dojo-type="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
+    <input id="mycheck" name="mycheck" data-dojo-type="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + dijit.byId('mycheck').get('value'))"> <label for="mycheck">I agree</label>
 
 
 Accessibility

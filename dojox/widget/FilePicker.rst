@@ -33,7 +33,7 @@ Creating a file picker is similar to creating a rolling list.  In addition to th
 Additional attr value
 =====================
 
-You can call widget.attr("pathValue") to get (or set) the value of the widget - using "string" format (ie. "/path/to/file.txt") instead of using the item
+You can call widget.get("pathValue") or widget.set("pathValue", ...) to get or set the value of the widget - using "string" format (ie. "/path/to/file.txt") instead of using the item
 
 Examples
 ========

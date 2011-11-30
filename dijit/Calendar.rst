@@ -205,7 +205,7 @@ With a local custom template to change the layout (does not work against CDN)
       }
 
       dojo.subscribe("date", function(data){
-        dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.attr('value', data.date); });
+        dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.set('value', data.date); });
       });
 
       formatDate = function(d) {

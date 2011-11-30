@@ -375,7 +375,7 @@ Notice that there is no robot code in the page that the robot is testing. Now he
                                         },
 
                                         tearDown:function(){
-                                                spin1.attr('value',1);
+                                                spin1.set('value',1);
                                         }
                                 });
                                 // ... some more tests

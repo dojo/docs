@@ -76,7 +76,7 @@ Programmatic example
   .. html ::
 
     <select id="dynamic"></select>
-    <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
+    <p><button onClick="alert(dijit.byId('dynamic').get('value'))">Get value</button></p>
 
 
 Accessibility

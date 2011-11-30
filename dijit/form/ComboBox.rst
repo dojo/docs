@@ -51,7 +51,7 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
   .. html ::
 
     <input id="stateSelect">
-    <p><button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
+    <p><button onClick="alert(dijit.byId('stateSelect').get('value'))">Get value</button></p>
 
 Declarative markup using native select and option tags
 ------------------------------------------------------

@@ -13,7 +13,7 @@ dojox.editor.plugins.NormalizeStyle
 
 Have you ever encountered a situation where the editor was inconsistent about how it handled bolding, italics, underline, etc, of a particular set of text in the editor?   Have you ever wanted to be able to force the editor to use <span> with style instead of semantic tags, or vice-versa?  If so, then this plugin may meet your needs.  It is a very experimental plugin that attempts to 'standardize' the output as either CSs-style, or semantic tag style, based on the configuration.
 
-This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.  Calls to get the value of the editor (editor.getValue() or editor.attr("value")) will return HTML that has hopefully been processed and 'standardized'.
+This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.  Calls to get the value of the editor (editor.get("value")) will return HTML that has hopefully been processed and 'standardized'.
 
 Features
 ========
@@ -87,7 +87,7 @@ Basic Usage
       dojo.require("dojox.editor.plugins.NormalizeStyle");
       dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").get("value");
          });
       });
     </script>
@@ -140,7 +140,7 @@ Configured css mode
       dojo.require("dojox.editor.plugins.NormalizeStyle");
       dojo.ready(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").get("value");
          });
       });
     </script>

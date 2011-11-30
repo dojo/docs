@@ -45,7 +45,7 @@ You can do this in your widget code:
 
 .. js ::
 
-  this.start.attr('value', new Date());
+  this.start.set('value', new Date());
 
 
 data-dojo-attach-event

@@ -147,7 +147,7 @@ Sometimes you may want to input and display years in a format with only 2-digit 
 		function setShortYear(){
 			var w = dijit.byId('shortYear');
 			w.constraints.fullYear = false;
-			w.attr('value', w.attr('value')); // reformat display to short year
+			w.set('value', w.get('value')); // reformat display to short year
 		}
 		dojo.ready(setShortYear);
 	</script>

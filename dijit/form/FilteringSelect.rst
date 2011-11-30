@@ -388,7 +388,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
             required: true,
             id: "city",
             onChange: function(city){
-                dijit.byId('state').attr('value', (dijit.byId('city').item || {state: ''}).state);
+                dijit.byId('state').set('value', (dijit.byId('city').item || {state: ''}).state);
             }
         }, "city");
 

@@ -255,7 +255,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                         '</div></div>'
             });
             // it's now safe to allow creation of our dijit instance
-            dijit.byId('createButton').attr('disabled', false);
+            dijit.byId('createButton').set('disabled', false);
         });
     </script>
 

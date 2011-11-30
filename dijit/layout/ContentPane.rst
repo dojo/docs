@@ -50,10 +50,10 @@ An example of using a callback might be as follows:
 .. js ::
 
   var myCp= dijit.byId("myContentPane");
-  myCp.attr("onDownloadEnd", function(){
+  myCp.set("onDownloadEnd", function(){
     console.log("Download complete!");
   });
-  myCp.attr("href", "myHtml.html");
+  myCp.set("href", "myHtml.html");
 
 
 Examples

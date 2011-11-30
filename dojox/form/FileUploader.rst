@@ -171,7 +171,7 @@ FileUploader no longer uses FileInput.css. It now uses FileUploader.css. See req
 New Features
 ------------
 
-* Disabled: Can be toggled with widget.attr("disable", true|false)
+* Disabled: Can be toggled with widget.set("disabled", true|false)
 * Submit: A convenience method has been added for if the uploader is in a form. Instead of submitting the form, call uploader.submit(theForm), and the Uploader will handle all of the form values and post the data.
 * Selected List: If passing the ID of a container, the Uploaders will populate it with the selected files.
 * Deleting Files: You can now delete pending files.

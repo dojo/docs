@@ -33,8 +33,8 @@ Limitations
     dojo.ready(function(){
       var editor = dijit.byId("myEditor");
 
-      editor .onLoadDeferred.addCallback(function(){
-        editor.attr("value", "<b>This is new content.</b>");
+      editor.onLoadDeferred.addCallback(function(){
+        editor.set("value", "<b>This is new content.</b>");
       });
     });
   </script>

@@ -96,7 +96,7 @@ Let's take at a simple example using a declaratively created form:
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
                 if (myForm.isValid()){
-                    alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
+                    alert("Ready to submit data: "+dojo.toJson(myForm.get("value")) );
                 }
             });
         });
@@ -125,7 +125,7 @@ Let's take at a simple example using a declaratively created form:
             </tr>
         </table>
 
-        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
+        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.get('value'))">Get Values from form!</button>
         <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
@@ -147,7 +147,7 @@ The `validate()` function does some extra UI related work, including highlightin
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
                 if (myForm.validate()){
-                    alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
+                    alert("Ready to submit data: "+dojo.toJson(myForm.get("value")) );
                 }
             });
         });
@@ -176,7 +176,7 @@ The `validate()` function does some extra UI related work, including highlightin
             </tr>
         </table>
 
-        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
+        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.get('value'))">Get Values from form!</button>
         <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
@@ -185,7 +185,7 @@ The `validate()` function does some extra UI related work, including highlightin
 Using native form elements
 --------------------------
 
-dijit.form.Form doesn't fully support native elements as children.  In particular, myForm.attr("value") will return an Object listing all the values of the contained widgets, but it won't list the values of the contained native <input> elements.
+dijit.form.Form doesn't fully support native elements as children.  In particular, myForm.get("value") will return an Object listing all the values of the contained widgets, but it won't list the values of the contained native <input> elements.
 
 It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.   Both types of values (widgets and plain <input> elements) will be submitted.   However, in that case the app has to do validation itself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
 

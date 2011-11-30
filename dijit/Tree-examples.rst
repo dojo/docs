@@ -32,7 +32,7 @@ Expanding and Focusing tree nodes programmatically
 
 ``New in 1.4``
 
-``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.attr('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
+``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.set('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
 
 
 .. code-example ::
@@ -45,7 +45,7 @@ Expanding and Focusing tree nodes programmatically
         dojo.require("dijit.form.Button");
 
         selectNode = function() {
-            mytree.attr('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
+            mytree.set('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
         }
     </script>
 
@@ -62,7 +62,7 @@ Expanding and Focusing tree nodes programmatically
 
 One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
 
-The following example contains workaround code for this problem, as well as an example call to tree.attr('path').  If you already know the full path to the tree node you want to highlight, you can simply call tree.attr('path').
+The following example contains workaround code for this problem, as well as an example call to tree.set('path').  If you already know the full path to the tree node you want to highlight, you can simply call tree.set('path').
 
 .. code-example ::
 
@@ -97,12 +97,12 @@ The following example contains workaround code for this problem, as well as an e
 
         function selectTreeNodeById(tree, lookfor) {
             console.log("See model root=", tree.model.root);
-            var buildme = new Array();
+            var buildme = [];
             var result = recursiveHunt(lookfor, tree.model, buildme, tree.model.root);
             console.log("*** FINISHED: result ", result, " buildme ", buildme);
             console.dir(result);
             if (result && result.length > 0) {
-                tree.attr('path', result);
+                tree.set('path', result);
             }
         }
 
@@ -122,7 +122,7 @@ The following example contains workaround code for this problem, as well as an e
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
       data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
+    <div data-dojo-type="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------

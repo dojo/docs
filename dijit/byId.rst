@@ -48,7 +48,7 @@ Example 1: Locating a widget by its ID
         var widget = dijit.byId("myTextBox");
         if(widget){
           //Find my output node and write out I found my textbox and got its value.
-          dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.attr("value") + "]";
+          dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "]";
         }else{
           //Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
@@ -82,7 +82,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
           var dNode = widget.domNode;
 
           //Find my output node and write out I found my textbox and got its value + what type of DOM node is its primary node.
-          dojo.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.attr("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
+          dojo.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
         }else{
           //Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode2").innerHTML = "Could not locate my text box widget!";

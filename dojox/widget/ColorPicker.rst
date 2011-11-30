@@ -110,4 +110,4 @@ A ColorPicker within a DropDownButton
 Notes
 =====
 
-``NOTE:`` as of Dojo 1.2, The ColorPicker is experimental, and doesn't implement the Dijit .attr() method for getting and setting values.
+``NOTE:`` as of Dojo 1.2, The ColorPicker is experimental, and doesn't implement the dijit.set() and get() methods for getting and setting values.
