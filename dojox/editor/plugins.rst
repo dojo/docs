@@ -147,12 +147,6 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.6.**
 
-* :ref:`dojox.editor.plugins.ColorTableCell  <dojox/editor/plugins/ColorTableCell>` -- **STABLE**
-
-  A plugin that allows the user to set the background of selected table cells.
-  
-  **This plugin is new to the Dojo Toolkit 1.6.**
-
 * :ref:`dojox.editor.plugins.ResizeTableColumn  <dojox/editor/plugins/ResizeTableColumn>` -- **STABLE**
 
   A plugin that allows the user to resize the width of table columns using drag-drop.
