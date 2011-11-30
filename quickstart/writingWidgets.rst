@@ -3,9 +3,6 @@
 =======================
 Writing Your Own Widget
 =======================
-:Status: Contributed
-:Version: 1.0
-:Authors: Bill Keese
 
 .. contents::
     :depth: 2
@@ -44,16 +41,18 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
     
 
     <script>
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("MyFirstBehavioralWidget", [dijit._WidgetBase], {
-                    // put methods, attributes, etc. here
+        require([
+            "dojo/_base/declare", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase",
+    	], function(declare, parser, ready, _WidgetBase){
+
+            declare("MyFirstBehavioralWidget", [_WidgetBase], {
+				// put methods, attributes, etc. here
+			});
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
             });
-    
-            // Call the parser manually so it runs after our widget is defined
-            dojo.parser.parse();
         });
     </script>
 
@@ -80,30 +79,30 @@ Here's a simple example of a widget that creates it's own DOM tree:
 .. code-example::
   :djConfig: parseOnLoad: false
 
-  Define the widget and instantiate programmatically
+  Define the widget and instantiate programmatically.   Note that the parser is not used, since that's only needed if the widget is instantiated through markup.
 
   .. js ::
 
     <script>
-        dojo.require('dijit._WidgetBase');
-        // the dojo.parser is only needed, if you want
+        // the parser is only needed, if you want
         // to instantiate the widget declaratively (in markup)
-        // dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("MyFirstWidget",[dijit._WidgetBase], {
+        require([
+            "dojo/_base/declare", "dojo/dom-construct", "dojo/ready", "dojo/_base/window",
+            "dijit/_WidgetBase",
+    	], function(declare, domConstruct, ready, win, _WidgetBase){
+
+            declare("MyFirstWidget", [_WidgetBase], {
                 buildRendering: function(){
                     // create the DOM for this widget
-                    this.domNode = dojo.create("button", {innerHTML: "push me"});
+                    this.domNode = domConstruct.create("button", {innerHTML: "push me"});
                 }
             });
-            // Create the widget programmatically
-            (new MyFirstWidget()).placeAt(dojo.body());
     
-            // Call the parser manually so it runs after our widget is defined
-            // (only needed if you want to instantiate the widget declaratively (in markup)):
-            // dojo.parser.parse();
-        });
+            ready(function(){
+                // Create the widget programmatically and place in DOM
+                (new MyFirstWidget()).placeAt(win.body());
+            });
+         });
     </script>
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
@@ -119,16 +118,17 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
     
 
     <script>
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dojo.parser");
-        dojo.ready(function(){
-            dojo.declare("Counter", [dijit._WidgetBase], {
+        require([
+            "dojo/_base/declare", "dojo/dom-construct", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase",
+    	], function(declare, domConstruct, parser, ready,_WidgetBase){
+            declare("Counter", [_WidgetBase], {
                 // counter
                 _i: 0,
     
                 buildRendering: function(){
                     // create the DOM for this widget
-                    this.domNode = dojo.create("button", {innerHTML: this._i});
+                    this.domNode = domConstruct.create("button", {innerHTML: this._i});
                 },
     
                 postCreate: function(){
@@ -141,8 +141,10 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
                 }
             });
 
-            // Call the parser manually so it runs after our widget is defined
-            dojo.parser.parse();
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
+            });
         });
     </script>
 
@@ -197,12 +199,12 @@ So, putting that all together the source becomes:
   .. js ::
 
     <script type="text/javascript">
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
+       require([
+            "dojo/_base/declare", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase", "dijit/_TemplatedMixin"
+    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+
+            declare("FancyCounter", [_WidgetBase, _TemplatedMixin], {
                 // counter
                 _i: 0,
     
@@ -216,8 +218,10 @@ So, putting that all together the source becomes:
                 }
             });
     
-            // Call the parser manually so it runs after the widget is defined
-            dojo.parser.parse();
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
+            });
         });
     </script>
 
@@ -263,7 +267,7 @@ widget.  For example:
   // value: Date
   //     The date picked on the date picker, as a Date Object.
   //     When setting the date on initialization (ex: new DateTextBox({value: "2008-1-1"})
-  //     or changing it (ex: attr('value', "2008-1-1")), you  can specify either a Date object or
+  //     or changing it (ex: set('value', "2008-1-1")), you can specify either a Date object or
   //     a string in ISO format
   value: new Date()
 
@@ -293,12 +297,12 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
   .. javascript::
 
     <script type="text/javascript">
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("BusinessCard", [dijit._WidgetBase, dijit._TemplatedMixin], {
+       require([
+            "dojo/_base/declare", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase", "dijit/_TemplatedMixin"
+    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+
+            declare("BusinessCard", [_WidgetBase, _TemplatedMixin], {
                 templateString:
                     "<div class='businessCard'>" +
                         "<div>Name: <span data-dojo-attach-point='nameNode'></span></div>" +
@@ -316,8 +320,10 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
                 _setPhoneAttr: { node: "phoneNode", type: "innerHTML" }
             });
     
-            // Call the parser manually so it runs after our widget is defined
-            dojo.parser.parse();
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
+            });
         });
     </script>
 
@@ -380,23 +386,25 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
   .. javascript::
 
     <script type="text/javascript">
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("HidePane",[dijit._WidgetBase], {
+       require([
+            "dojo/_base/declare", "dojo/dom-style", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase", "dijit/_TemplatedMixin"
+    	], function(declare, domStyle, parser, ready, _WidgetBase, _TemplatedMixin){
+
+            declare("HidePane", [_WidgetBase], {
                 // parameters
                 open: true,
     
                 _setOpenAttr: function(/*Boolean*/ open){
                     this._set("open", open);
-                    dojo.style(this.domNode, "display", open ? "block" : "none");
+                    domStyle.set(this.domNode, "display", open ? "block" : "none");
                 }
             });
     
-            // Call the parser manually so it runs after our widget is defined
-            dojo.parser.parse();
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
+            });
         });
     </script>
 
@@ -416,7 +424,7 @@ Note in the above example the use of this._set("open", open).    This saves the 
 Life cycle
 ----------
 The custom setters listed above, plus every attribute listed in attributeMap, is applied during
-widget creation (in addition to whenever someone calls attr('name', value)).
+widget creation (in addition to whenever someone calls set('name', value)).
 
 Note that the application happens after ``buildRendering()`` but before ``postCreate()``, so
 you need to make sure that none of that code is dependent on something that happens
@@ -428,7 +436,7 @@ eg:
 
 .. js ::
   
-  dojo.declare("my.Thinger", dijit._WidgetBase, {
+  dojo.declare("my.Thinger", _WidgetBase, {
     
        value:9,
     
@@ -443,7 +451,7 @@ eg:
     
   });
 
-Had the ``multiplier`` member been defined in ``postCreate``, the initial automated value setting done by attr() would fail.
+Had the ``multiplier`` member been defined in ``postCreate``, the initial automated value setting done by set() would fail.
 
 Containers
 ==========
@@ -461,7 +469,9 @@ The attach point where that input is copied is called containerNode.   In other 
 For widgets that mixin _TemplatedMixin, that is handled automatically, as long as the template specifies data-dojo-attach-point="containerNode".
 
 
-Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via :ref:`dojo.cache() <dojo/cache>`.
+Having said all that, now we define the widget, referencing this template via the templateString attribute.
+Note that often the template is stored in a file,
+and in that case templateString should reference the file via the :ref:`dojo.text! <dojo/text>` plugin.
 
 .. code-example::
   :djConfig: parseOnLoad: false
@@ -469,18 +479,20 @@ Having said all that, now we define the widget, referencing this template via th
   .. javascript::
 
     <script>
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-    
-        dojo.ready(function(){
-            dojo.declare("MyButton",[dijit._WidgetBase, dijit._TemplatedMixin], {
-                templateString:
-                    "<button data-dojo-attach-point='containerNode'></button>"
+        require([
+            "dojo/_base/declare", "dojo/parser", "dojo/ready",
+            "dijit/_WidgetBase", "dijit/_TemplatedMixin"
+    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+
+            declare("MyButton", [_WidgetBase, _TemplatedMixin], {
+                    templateString:
+                        "<button data-dojo-attach-point='containerNode'></button>"
             });
     
-            // Call the parser manually so it runs after our widget is defined
-            dojo.parser.parse();
+            ready(function(){
+                // Call the parser manually so it runs after our widget is defined, and page has finished loading
+                parser.parse();
+            });
         });
     </script>
 
@@ -534,7 +546,7 @@ Why? Because it is here that the programmer using the widget can add their own f
 
 Step 3 shows how the widget user can add their custom function, without having to edit the widget.
 
-3. In some html page that is using (dojo.require-ing) the dijit Button widget, the user writes this:
+3. In some html page that is using (require-ing) the dijit Button widget, the user writes this:
 
 .. html ::
 
