@@ -26,7 +26,7 @@ Usage
     var svc = new dojo.rpc.[ImplementingClass](args)
 
     var methodDeferred = svc.declaredMethod(declaredArg);
-    methodDeferred.addCallback(handlerFunc);
+    methodDeferred.then(handlerFunc);
   </script>
 
 ============== ================= =======================================

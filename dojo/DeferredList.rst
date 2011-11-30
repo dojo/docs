@@ -52,16 +52,15 @@ To give the user feedback about what's happening with the searches they issue, w
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dojo.DeferredList");
-      dojo.require("dijit.form.Button");
-      dojo.ready(function(){
+        dojo.require("dojo.DeferredList");
+        dojo.require("dijit.form.Button");
 
         // stub search functions to simulate network delay
 
         function searchAmazon(){
           var d = new dojo.Deferred();
           setTimeout(function(){
-            d.callback("We found books at amazon");
+            d.resolve("We found books at amazon");
           }, 500);
           return d;
         }
@@ -69,7 +68,7 @@ To give the user feedback about what's happening with the searches they issue, w
         function searchBol(){
           var d = new dojo.Deferred();
           setTimeout(function(){
-            d.callback("We found books at bol");
+            d.resolve("We found books at bol");
           }, 700);
           return d;
         }
@@ -77,12 +76,12 @@ To give the user feedback about what's happening with the searches they issue, w
         function searchGoogle(){
           var d = new dojo.Deferred();
           setTimeout(function(){
-            d.callback("We found books at google");
+            d.resolve("We found books at google");
           }, 200);
           return d;
         }
 
-        dojo.connect(dijit.byId("search"), "onClick", function(){
+        function search(){
           var d1 = searchAmazon(),
               d2 = searchBol(),
               d3 = searchGoogle();
@@ -93,18 +92,17 @@ To give the user feedback about what's happening with the searches they issue, w
           var dl = new dojo.DeferredList([d1, d2, d3]);
 
           // a DeferredList has much the same API as a Deferred
-          dl.addCallback(function(res){
+          dl.then(function(res){
             // "res" is an array of results
             dojo.byId("statusSearch").innerHTML = "Result: "+res[0][1]+", "+res[1][1]+", "+res[2][1];
             console.log(res);
           });
-        });
-      });
+        }
     </script>
    
   .. html ::
    
-    <button data-dojo-type="dijit.form.Button" id="search">Search</button>
+    <button data-dojo-type="dijit.form.Button" id="search" onClick="search();">Search</button>
     <div style="margin: 10px;">Status: <span id="statusSearch"></span></div>
 
 Now when you look at the code, you will see that the total amount of setTimeout milliseconds is 1400 which is 1.4 seconds. Since we used dojo.Deferred we were able to bring down the waiting time to 700 ms, which is roughly what we might expect worst-case same-domain network lag to be. Instead of having to try to serialize a group of tasks, `DeferredList` objects let you do multiple things at once and only deal with the results.

@@ -68,8 +68,8 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 
             // run the search
             var searchType = dojo.byId("searchType").value || "webSearch";
-            google[searchType]({ q: dojo.byId("test").value })
-                .addCallback(function(returned){
+            google[searchType]({ q: dojo.byId("test").value }).then(
+                function(returned){
                     // create an <li> for each data part:
                     dojo.forEach(returned.responseData.results,function(item){
                         var li = dojo.doc.createElement('li');
@@ -82,11 +82,12 @@ This is an example of the Google API using the pre-defined google.smd in the :re
                         dojo.byId("top-results").appendChild(li);
                     });
                     tehLoader("hidden");
-                })
-                .addErrback(function(err){
+                },
+                function(err){
                     console.warn('oops', err);
                     tehLoader("hidden");
-                });
+                }
+            );
         });
 
     });

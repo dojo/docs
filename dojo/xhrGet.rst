@@ -277,8 +277,8 @@ Example 3: dojo.xhrGet call that errors.
     <div id="errorContainer" style="height: 100px;"></div>
 
 
-Example 4: Alternate way to pass callbacks.
--------------------------------------------
+Example 4: Getting result from Deferred return value
+----------------------------------------------------
 
 .. code-example ::
   
@@ -300,19 +300,21 @@ Example 4: Alternate way to pass callbacks.
         var deferred = dojo.xhrGet(xhrArgs);
 
         //Now add the callbacks
-        deferred.addCallback(function(data) {
-          //Replace newlines with nice HTML tags.
-          data = data.replace(/\n/g, "<br>");
+        deferred.then(
+            function(data){
+                //Replace newlines with nice HTML tags.
+                data = data.replace(/\n/g, "<br>");
 
-          //Replace tabs with spacess.
-          data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
+                //Replace tabs with spacess.
+                data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
   
-          targetNode.innerHTML = data;
-        });
+                targetNode.innerHTML = data;
+            },
 
-        deferred.addErrback(function(error){
-          targetNode.innerHTML = "An unexpected error occurred: " + error;
-        });
+            function(error){
+                targetNode.innerHTML = "An unexpected error occurred: " + error;
+            }
+        );
 
       }
       dojo.ready(getLicenseAlternateCB);

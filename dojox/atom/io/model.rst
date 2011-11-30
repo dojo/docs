@@ -113,25 +113,27 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
  
         var deferred = dojo.xhrGet(xhrArgs);
        
-        //Okay, on success we'll process the ATOM doc and generate the JavaScript model
-        deferred.addCallback(function(xmlDoc, ioargs){
-           var feedRoot = xmlDoc.getElementsByTagName("feed");
-           var feed = new dojox.atom.io.model.Feed();
-           feed.buildFromDom(xmlDoc.documentElement);
+        deferred.then(
+            //Okay, on success we'll process the ATOM doc and generate the JavaScript model
+            function(xmlDoc, ioargs){
+                var feedRoot = xmlDoc.getElementsByTagName("feed");
+                var feed = new dojox.atom.io.model.Feed();
+                feed.buildFromDom(xmlDoc.documentElement);
 
-           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
-           var xml = dojo.byId("simpleAtomXml");
-           xml.innerHTML = "";
-           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+                //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+                var xml = dojo.byId("simpleAtomXml");
+                xml.innerHTML = "";
+                xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
-           var json = dojo.byId("simpleAtomJson");
-           json.innerHTML = "";
-           json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
-        });
+                var json = dojo.byId("simpleAtomJson");
+                json.innerHTML = "";
+                json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
+            },
  
-        deferred.addErrback(function(error){
-           console.debug(e);
-        });
+            function(error){
+                console.debug(e);
+            }
+        );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtom);
@@ -219,31 +221,33 @@ Example 3: Modify a loaded feed
  
         var deferred = dojo.xhrGet(xhrArgs);
        
-        //Okay, on success we'll process the ATOM doc and generate the JavaScript model
-        deferred.addCallback(function(xmlDoc, ioargs){
-           var feedRoot = xmlDoc.getElementsByTagName("feed");
-           var feed = new dojox.atom.io.model.Feed();
-           feed.buildFromDom(xmlDoc.documentElement);
+        deferred.then(
+           //Okay, on success we'll process the ATOM doc and generate the JavaScript model
+           function(xmlDoc, ioargs){
+               var feedRoot = xmlDoc.getElementsByTagName("feed");
+               var feed = new dojox.atom.io.model.Feed();
+               feed.buildFromDom(xmlDoc.documentElement);
 
-           //Emit XML of the modified feed.
-           var xml = dojo.byId("simpleAtomXmlPristine");
-           xml.innerHTML = "";
-           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+               //Emit XML of the modified feed.
+               var xml = dojo.byId("simpleAtomXmlPristine");
+               xml.innerHTML = "";
+               xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
-           //Remove an entry.
-           var entry = feed.getFirstEntry();
-           feed.removeEntry(entry);
-           feed.updated = new Date();
+               //Remove an entry.
+               var entry = feed.getFirstEntry();
+               feed.removeEntry(entry);
+               feed.updated = new Date();
 
-           //Emit XML of the modified feed.
-           xml = dojo.byId("simpleAtomXmlModified");
-           xml.innerHTML = "";
-           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
-        });
+               //Emit XML of the modified feed.
+               xml = dojo.byId("simpleAtomXmlModified");
+               xml.innerHTML = "";
+               xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+            },
  
-        deferred.addErrback(function(error){
-           console.debug(e);
-        });
+            function(error){
+                console.debug(e);
+            }
+        );
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtomModified);

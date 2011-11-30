@@ -52,7 +52,7 @@ Example 2:  Creating and calling a deferred (Dojo < 1.7 style).
   var fourAsync = new dojo.Deferred();
   dojo.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
   setTimeout(function(){
-    fourAsync.callback(4);
+    fourAsync.resolve(4);
   }, 1000);
   
   function print(value){

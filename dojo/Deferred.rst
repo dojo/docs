@@ -36,13 +36,13 @@ Pseudocode Example 1:  Creating and calling a deferred.
   // Dojo 1.7+ (AMD)
   require(["dojo/_base/Deferred"],function(Deferred){
     var deferred = new Deferred();
-    setTimeout(function(){deferred.callback({success: true}); }, 1000);
+    setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
     return deferred;
   });
 
   //Dojo < 1.7
   var deferred = new dojo.Deferred();
-  setTimeout(function(){deferred.callback({success: true}); }, 1000);
+  setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
   return deferred;
 
 Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
@@ -80,21 +80,17 @@ Example 1: Creating a deferred and adding callbacks
     <script>
       dojo.require("dijit.form.Button");
 
-      function createDeferred() {
-        var button = dijit.byId("deferredButton");
-        dojo.connect(button, "onClick", function(event){
+      function createDeferred(){
           //Create a deferred and set it to fire in 1 second.
           var deferred = new dojo.Deferred();
-          setTimeout(function(){deferred.callback({called: true})}, 1000);
+          setTimeout(function(){ deferred.resolve({called: true});}, 1000);
           dojo.byId("response").innerHTML = "Created a deferred.";
  
           //Add a callback that changes the displayed message after it fires.
           deferred.then(function(){
             dojo.byId("response").innerHTML = "Deferred has fired.";
           });
-        });
       }
-      dojo.ready(createDeferred);
     </script>
 
   .. html ::
@@ -102,7 +98,7 @@ Example 1: Creating a deferred and adding callbacks
     <b>Push the button to create a deferred and set up an async callback</B>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="deferredButton">Create deferred!</button>
+    <button data-dojo-type="dijit.form.Button" id="deferredButton" onClick="createDeferred();">Create deferred!</button>
     <br>
     <br>
     <b>Result</b>

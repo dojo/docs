@@ -155,14 +155,14 @@ dojo.xhrGet
 
 .. _dojo.Deferred: dojo/Deferred
 
-xhrGet will create an Ajax request using the HTTP GET method, returning some data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred_ .addCallback method.
+xhrGet will create an Ajax request using the HTTP GET method, returning some data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred.then() method.
 
 For complete details and examples, see the :ref:`dojo.xhrGet documentation <dojo/xhrGet>`.
 
 dojo.xhrPost
 ============
 
-xhrPost will create an Ajax request using the HTTP POST method and is usually used to submit data to a service.  It returns data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred_ .addCallback method.
+xhrPost will create an Ajax request using the HTTP POST method and is usually used to submit data to a service.  It returns data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred.then() method.
 
 For complete details and examples, see the :ref:`dojo.xhrPost documentation <dojo/xhrPost>`.
 
@@ -170,13 +170,13 @@ For complete details and examples, see the :ref:`dojo.xhrPost documentation <doj
 dojo.xhrPut
 ===========
 
-xhrPut will create an Ajax request using the HTTP PUT method and is usually used to submit data to a service.  It returns data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred_ .addCallback method.
+xhrPut will create an Ajax request using the HTTP PUT method and is usually used to submit data to a service.  It returns data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred.then() method.
 
 For complete details and examples, see the :ref:`dojo.xhrPut documentation <dojo/xhrPut>`.
 
 dojo.xhrDelete
 ==============
 
-xhrDelete will create an Ajax request using the HTTP DELETE method, which is commonly used to signal to a service to delete a resource at a URI. Data returned is done via the form of a callback.  The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred_ .addCallback method.
+xhrDelete will create an Ajax request using the HTTP DELETE method, which is commonly used to signal to a service to delete a resource at a URI. Data returned is done via the form of a callback.  The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred.then() method.
 
 For complete details and examples, see the :ref:`dojo.xhrDelete documentation <dojo/xhrDelete>`.

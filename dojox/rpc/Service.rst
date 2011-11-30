@@ -87,14 +87,15 @@ handle provided.
 .. js ::
 
   var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc.SMDLibrary", "google.smd"));
-  goog.webSearch({ q:"Dojo Toolkit" })
-      .addCallback(function(data){
+  goog.webSearch({ q:"Dojo Toolkit" }).then(
+      function(data){
          // in this particular RPC call, the results you seek are:
          console.log(data.responseData.results);
-      })
-      .addErrback(function(data){
+      },
+      function(err){
          // an error occurred. timeout, bad data, etc.
-      });
+      }
+  );
 
 This will trigger a web search for the phrase "Dojo Toolkit", and fire your callback function when complete.
 

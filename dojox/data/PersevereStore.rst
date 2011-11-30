@@ -30,7 +30,7 @@ You can create a set of stores for all available Persevere classes/tables:
 
  myStores = dojox.data.PersevereStore.getStores("/",true); // do it synchronously
  ... or ...
- dojox.data.PersevereStore.getStores("/").addCallback(function(results){
+ dojox.data.PersevereStore.getStores("/").then(function(results){
    // do it asynchronously
    myStores = results;
  });

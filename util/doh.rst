@@ -240,18 +240,18 @@ What the D.O.H. framework will do with this test is wrap it in  a default 'test 
 
 Simple tests (no setup, standalone, asynchronous test)
 ------------------------------------------------------
-Simple asynchronous tests are no more complicated to write than the above synchronous test.  You simply write it as a function object that returns a doh.Deferred object.  The test framework detects the return type and knows that if a doh.Deferred is returned, then D.O.H. should pause here and wait for either the test timeout to fire or the asynchronous test to invoke either the deferred callback() or errback() function to signal completion.  This object can then be registered through the doh.register() functions.  The example below implements an async test via timeout to demonstrate it.
+Simple asynchronous tests are no more complicated to write than the above synchronous test.  You simply write it as a function object that returns a doh.Deferred object.  The test framework detects the return type and knows that if a doh.Deferred is returned, then D.O.H. should pause here and wait for either the test timeout to fire or the asynchronous test to invoke either the deferred resolve() or reject() function to signal completion.  This object can then be registered through the doh.register() functions.  The example below implements an async test via timeout to demonstrate it.
 
 .. js ::
 
   function mySimpleAsyncTest(doh){
     var deferred = new doh.Deferred();
-    setTimeout(function() {
+    setTimeout(function(){
       try{
         doh.assertTrue(true);
-        deferred.callback(true);
-      } catch(e) {
-        deferred.errback(e);
+        deferred.resolve(true);
+      }catch(e){
+        deferred.reject(e);
       }
     }, 100);
     return deferred;
@@ -300,13 +300,13 @@ Test fixtures can also do asynchronous tests.  All that has to occur for the D.O
     runTest: function(){
       //Our test function to run.
       var deferred = new doh.Deferred();
-      setTimeout(function() {
+      setTimeout(function(){
         try{
           doh.assertEqual("blah", this.thingerToTest.blahProp);
           doh.assertFalse(this.thingerToTest.falseProp);
-          deferred.callback(true);
-        } catch(e) {
-          deferred.errback(e);
+          deferred.resolve(true);
+        }catch(e){
+          deferred.reject(e);
         }
       }, 100);
       return deferred;
@@ -366,11 +366,11 @@ Async performance test fixtures are just like synchronous performance test fixtu
     runTest: function(){
       //Our test function to run.
       var deferred = new doh.Deferred();
-      setTimeout(function() {
+      setTimeout(function(){
           myModule.doSomePerformanceRelatedThing();
-          deferred.callback(true);
-        } catch(e) {
-          deferred.errback(e);
+          deferred.resolve(true);
+        }catch(e){
+          deferred.reject(e);
         }
       }, 100);
       return deferred;

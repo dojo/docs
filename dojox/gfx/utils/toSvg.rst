@@ -27,13 +27,14 @@ So basic usage is:
 
 .. js ::
   
-  var deferred = dojox.gfx.utils.toJson(mySurface);
-  deferred.addCallback(function(svg){
-     alert(svg);
-  });
-  deferred.addErrback(function(error){
-     alert("Error occurred: " + error);
-  });
+  dojox.gfx.utils.toJson(mySurface).then(
+     function(svg){
+        alert(svg);
+     },
+     function(error){
+        alert("Error occurred: " + error);
+     }
+  );
 
 As the above code example demonstrates, the serialization is an async operation. This is because in browsers without native SVG support (and GFX is using VML, Silverlight, or Canvas), the rendering to SVG text occurs in a hidden iframe that has dojo loaded with the renderer forced to svg mode so that an SVG dom tree can be constructed. The iframe itself loads and works in async so the render output must be handled in an async manner for compatibility across all browsers (Firefox, Internet Explorer, etc).
 
@@ -50,11 +51,9 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
   <script type="text/javascript" src="http://some.xdomain.server/dojo.js" data-dojo-config='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
 
 
-Examples
-========
+Example
+=======
 
-Programmatic example
---------------------
 
 .. code-example ::
   
@@ -65,36 +64,38 @@ Programmatic example
       dojo.require("dojox.gfx.utils");
       dojo.require("dijit.form.Button");
    
-      function init(){
- 
+      var drawing;
+
+      dojo.ready(function(){
          //Create our surface.
          var node = dojo.byId("gfxObject");
-         var drawing = dojox.gfx.createSurface(node, 200, 200);
+         drawing = dojox.gfx.createSurface(node, 200, 200);
          drawing.createRect({
            width:  100,
            height: 100,
            x: 50,
            y: 50
          }).setFill("blue").setStroke("black");
-
-         dojo.connect(dijit.byId("button"), "onClick", function() {
-            var def = dojox.gfx.utils.toSvg(drawing);
-            def.addCallback(function(svg){
-              dojo.byId("svg").innerHTML = svg;
-            });
-            def.addErrback(function(err){
-              alert(err);
-            });
-         });
-      }
-      //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init);
+      });
+   
+	  function serialize(){
+		dojox.gfx.utils.toSvg(drawing).then(
+		    function(svg){
+		        dojo.byId("svg").innerHTML = svg;
+		    },
+		    function(err){
+		       alert(err);
+		    }
+		);
+	  }
     </script>
 
   .. html::
 
     <div id="gfxObject"></div>
-    <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to SVG!</div>
+    <div data-dojo-type="dijit.form.Button" id="button" onClick="serialize();">
+        Click me to serialize the GFX object to SVG!
+    </div>
     <br>
     <br>
     <b>SVGSerialization</b>

@@ -51,7 +51,7 @@ See also
 ========
 
 * `Executing JavaScript inside Content Panes <http://dojocampus.org/content/2008/07/30/executing-javascript-inside-content-panes/>`_
-* through the use of the scriptHasHooks setting, a :ref:`Deferred instance <dojo/Deferred>`, onLoadDeferred and it's addCallback , you can simulate the dojo.ready behavior from inside the loaded content.
+* through the use of the scriptHasHooks setting, a :ref:`Deferred instance <dojo/Deferred>`, onLoadDeferred and it's then() method, you can simulate the dojo.ready behavior from inside the loaded content.
 * An alternative is to set scriptHasHooks=true, and have content like this in your loaded content:
 
 .. js ::

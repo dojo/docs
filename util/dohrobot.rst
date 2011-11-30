@@ -110,10 +110,10 @@ Here is a "hi again" test using the doh.robot that clicks in a textbox containin
                 doh.robot.sequence(function(){
                         if(document.getElementById('textbox').value=="hi again"){
                                 document.getElementById('textbox').value += ": passed";
-                                d.callback(true);
+                                d.resolve(true);
                         }else{
                                 document.getElementById('textbox').value += ": failed";
-                                d.errback(new Error("Expected value 'hi again', got "+document.getElementById('textbox').value));
+                                d.reject(new Error("Expected value 'hi again', got "+document.getElementById('textbox').value));
                         }
                 }, 900);
                 return d;
@@ -134,7 +134,7 @@ You write doh.robot tests like deferred DOH tests. DOh's deferred test model ind
   3. Set a timeout to check whether the test passed.
   4. Return the Deferred object to runTest immediately.
 
-You can see what the concrete implementation of this flow looks like in the runTest function above. You store the doh.Deferred in a variable called d. Next, you write the robot commands themselves: the mouse moves to 30,30 on the screen, clicks the left mouse button, and types " again". Between each command, the robot waits 500ms. After about another second has elapsed, the test asserts that everything worked. You tell DOH a test passed in the Deferred model by calling d.callback(true). You tell DOH that something bad happened by calling d.errback and pass a new Error with the problem description. You can also do some visual formatting to indicate whether the test passed, for users running the test standalone (like you). Finally, you return the doh.Deferred object to the runTest function, signaling the DOH runner to wait for this test to finish.
+You can see what the concrete implementation of this flow looks like in the runTest function above. You store the doh.Deferred in a variable called d. Next, you write the robot commands themselves: the mouse moves to 30,30 on the screen, clicks the left mouse button, and types " again". Between each command, the robot waits 500ms. After about another second has elapsed, the test asserts that everything worked. You tell DOH a test passed in the Deferred model by calling d.resolve(true). You tell DOH that something bad happened by calling d.reject and pass a new Error with the problem description. You can also do some visual formatting to indicate whether the test passed, for users running the test standalone (like you). Finally, you return the doh.Deferred object to the runTest function, signaling the DOH runner to wait for this test to finish.
 
 
 dojo.robot and dijit.robot's value-add
@@ -199,10 +199,10 @@ Where as the simple mouseMove needs to know ahead of time where to move on the p
                 doh.robot.sequence(function(){
                         if(document.getElementById('textbox').value=="hi again"){
                                 document.getElementById('textbox').value += ": passed";
-                                d.callback(true);
+                                d.resolve(true);
                         }else{
                                 document.getElementById('textbox').value += ": failed";
-                                d.errback(new Error("Expected value 'hi again', got "+document.getElementById('textbox').value));
+                                d.reject(new Error("Expected value 'hi again', got "+document.getElementById('textbox').value));
                         }
                 }, 900);
                 return d;
@@ -366,9 +366,9 @@ Notice that there is no robot code in the page that the robot is testing. Now he
                                                 doh.robot.sequence(function(){
                                                         try{
                                                                 doh.is(false,spin1.isValid());
-                                                                d.callback(true);
+                                                                d.resolve(true);
                                                         }catch(e){
-                                                                d.errback(e);
+                                                                d.reject(e);
                                                         }
                                                 },500);
                                                 return d;
@@ -501,9 +501,9 @@ In the following sample, the robot uses initRobot to load the application. In th
                         // assert price==$16
                         doh.robot.sequence(function(){
                                 if(/\$16/.test(dijit.byId('ibm_widget_HtmlShoppingCart_0').cartTotalPrice.innerHTML)){
-                                        d.callback(true);
+                                        d.resolve(true);
                                 }else{
-                                        d.errback(new Error('Expected string containing $16, got '+dijit.byId('ibm_widget_HtmlShoppingCart_0').cartTotalPrice.innerHTML));
+                                        d.reject(new Error('Expected string containing $16, got '+dijit.byId('ibm_widget_HtmlShoppingCart_0').cartTotalPrice.innerHTML));
                                 }
                         }, 1000);
                         return d;
@@ -540,7 +540,7 @@ In the following sample, the robot uses initRobot to load the application. In th
                         doh.robot.keyPress(dojo.keys.TAB, 500);
                         doh.robot.typeKeys("password", 500, 5000);
                         doh.robot.sequence(function(){
-                                d.callback(true);
+                                d.resolve(true);
                         }, 1000);
                         return d;
                 }
