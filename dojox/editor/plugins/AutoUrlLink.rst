@@ -45,7 +45,7 @@ Then just declare the plugin and configure it as follows.
     dojo.require("dojox.editor.plugins.AutoUrlLink");
     ...
   </script>
-  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']>
+  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
   ...
   </div>
 
@@ -81,20 +81,12 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.AutoSave");
-    </script>
+      dojo.require("dojox.editor.plugins.AutoUrlLink");
+     </script>
 
-  .. css::
-
-    <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
-    </style>
-    
   .. html::
 
-    <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
-    <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['autosave']">
+    <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
     <div>
     <br>
     blah blah & blah!

@@ -90,18 +90,16 @@ Basic Usage
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dojox.editor.plugins.NormalizeIndentOutdent");
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("eFormat"), "onClick", function(){
+      function showContent(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
-         });
-      });
+      }
     </script>
 
   .. html::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['normaliseindentoutdent', 'viewsource', 'prettyprint']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['normalizeindentoutdent', 'viewsource', 'prettyprint']">
     blah blah & blah!
     <br>
     <table>
@@ -121,7 +119,7 @@ Basic Usage
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to see the indents applied!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showContent();">Press me to see the indents applied!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -140,11 +138,9 @@ Configured indent to be ems
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("eFormat"), "onClick", function(){
+      function showContent2(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
-         });
-      });
+      }
     </script>
 
   .. html::
@@ -171,7 +167,7 @@ Configured indent to be ems
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showContent2();">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>

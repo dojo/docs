@@ -46,13 +46,13 @@ Then just declare the plugin and configure it as follows. Note that the location
 .. html ::
 
   <style type="text/css">
-    @import "../../form/resources/FileUploader.css";
-    @import "../plugins/resources/css/LocalImagePlugin.css";
+    @import "dojox/form/resources/FileUploader.css";
+    @import "dojox/editor/plugins/resources/css/LocalImage.css";
     ...
   </style>
   <script type="text/javascript">
     dojo.require("dijit.Editor");
-    dojo.require("dojox.editor.plugins.LocalImagePlugin");
+    dojo.require("dojox.editor.plugins.LocalImage");
     ...
   </script>
   <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
@@ -196,20 +196,19 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.AutoSave");
+      dojo.require("dojox.editor.plugins.LocalImage");
     </script>
 
   .. css::
 
     <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/LocalImage.css";
+      @import "{{baseUrl}}dojox/form/resources/FileUploader.css";
     </style>
     
   .. html::
 
-    <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
-    <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['autosave']">
+    <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
     <div>
     <br>
     blah blah & blah!

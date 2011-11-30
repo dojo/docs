@@ -105,11 +105,9 @@ Basic Usage
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("eFormat"), "onClick", function(){
+      function showValue(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
-         });
-      });
+      }
     </script>
 
   .. html::
@@ -140,7 +138,7 @@ Basic Usage
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showValue();">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -158,11 +156,9 @@ Configured indent and line length
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("eFormat"), "onClick", function(){
+      function showValue2(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
-         });
-      });
+      }
     </script>
 
   .. html::
@@ -193,7 +189,7 @@ Configured indent and line length
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showValue2();">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>

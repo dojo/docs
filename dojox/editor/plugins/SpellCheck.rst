@@ -318,20 +318,18 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.FindReplace");
+      dojo.require("dojox.editor.plugins.SpellCheck");
     </script>
 
   .. css::
 
     <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/FindReplace.css";
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/SpellCheck.css";
     </style>
     
   .. html::
 
-    <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
-    <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['findreplace']">
+    <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
     <div>
     <br>
     blah blah & blah!
