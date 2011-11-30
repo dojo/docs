@@ -74,13 +74,12 @@ A TooltipDialog may be popped up from any node.
               var myTooltipDialog = new dijit.TooltipDialog({
                   id: 'myTooltipDialog',
                   style: "width: 300px;",
-                  content: "<p>I have a mouse leave event handler that will close the dialog."
+                  content: "<p>I have a mouse leave event handler that will close the dialog.",
+                  onMouseLeave: function(){
+                      dijit.popup.close(myTooltipDialog);
+                  }
               });
               
-              dojo.connect(myTooltipDialog, 'onMouseLeave', function() {
-                  dijit.popup.close(myTooltipDialog);
-              });
-
               dojo.connect(dojo.byId('thenode'), 'onmouseenter', function() {
                   dijit.popup.open({
                     popup: myTooltipDialog,

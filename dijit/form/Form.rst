@@ -17,8 +17,11 @@ dijit.form.Form
 Examples
 ========
 
-Declarative example
--------------------
+validate()
+----------
+You can use `isValid()` or `validate()` to prevent an invalid form from submitting.
+The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behaviour to the previous example.
+
 
 .. code-example ::
 
@@ -42,7 +45,7 @@ Declarative example
         <script type="dojo/method" data-dojo-event="onSubmit">
             if(this.validate()){
                 return confirm('Form is valid, press OK to submit');
-            } else {
+            }else{
                 alert('Form contains invalid data.  Please correct first');
                 return false;
             }
@@ -75,111 +78,6 @@ Declarative example
 
 Note that it's using a <div> node instead of the obvious choice of a <form> node because of some `IE issues <http://bugs.dojotoolkit.org/ticket/8424>`_
 
-Preparing and validating a form for XHR requests
-------------------------------------------------
-
-To validate a form you use the `isValid()` function.
-Let's take at a simple example using a declaratively created form:
-
-.. code-example ::
-
-  .. js ::
-
-    <script>
-        dojo.require("dijit.form.Form");
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.form.ValidationTextBox");
-        dojo.require("dijit.form.DateTextBox");
-
-        dojo.ready(function(){
-            var myForm = dijit.byId("myFormTwo");
-            dojo.connect(myForm, "onSubmit", function(e){
-                e.preventDefault();
-                if (myForm.isValid()){
-                    alert("Ready to submit data: "+dojo.toJson(myForm.get("value")) );
-                }
-            });
-        });
-    </script>
-
-  .. html ::
-
-    <div data-dojo-type="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
-    encType="multipart/form-data" action="" method="">
-        <table style="border: 1px solid #9f9f9f;" cellspacing="10">
-            <tr>
-                <td>
-                    <label for="name">Name:</label>
-                </td>
-                <td>
-                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="dob">Date of birth:</label>
-                </td>
-                <td>
-                    <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
-                </td>
-            </tr>
-        </table>
-
-        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.get('value'))">Get Values from form!</button>
-        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
-        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
-    </div>
-
-The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behaviour to the previous example.
-
-.. code-example ::
-
-  .. js ::
-
-    <script>
-        dojo.require("dijit.form.Form");
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.form.ValidationTextBox");
-        dojo.require("dijit.form.DateTextBox");
-
-        dojo.ready(function(){
-            var myForm = dijit.byId("myFormTwo");
-            dojo.connect(myForm, "onSubmit", function(e){
-                e.preventDefault();
-                if (myForm.validate()){
-                    alert("Ready to submit data: "+dojo.toJson(myForm.get("value")) );
-                }
-            });
-        });
-    </script>
-
-  .. html ::
-
-    <div data-dojo-type="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
-    encType="multipart/form-data" action="" method="">
-        <table style="border: 1px solid #9f9f9f;" cellspacing="10">
-            <tr>
-                <td>
-                    <label for="name">Name:</label>
-                </td>
-                <td>
-                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="dob">Date of birth:</label>
-                </td>
-                <td>
-                    <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
-                </td>
-            </tr>
-        </table>
-
-        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.get('value'))">Get Values from form!</button>
-        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
-        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
-    </div>
 
 
 Using native form elements

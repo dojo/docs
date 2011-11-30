@@ -10,8 +10,8 @@ dijit.Tree examples
 .. contents::
   :depth: 3
 
-Initialise the Tree after onLoad Event has Fired
-------------------------------------------------
+Detect when tree has finished loading
+-------------------------------------
 
 ``New in 1.4`` The onLoad event is being introduced in Dojo release 1.4.
 
@@ -20,7 +20,7 @@ Initialise the Tree after onLoad Event has Fired
     var tree = dijit.byId('myTree');
 
     // Connect to tree onLoad to do work once it has initialised
-    var tmph = dojo.connect(tree, 'onLoad', function() {
+    tree.onLoadDeferred.then(function(){
         console.debug("tree onLoad here!");
         dojo.disconnect(tmph);
 
