@@ -48,7 +48,7 @@ Simple Slider
 
 .. html ::
 
-  <input type="range" style="width:200px;" dojoType="dojox.mobile.Slider" value="10" max="20" />
+  <input type="range" style="width:200px;" data-dojo-type="dojox.mobile.Slider" value="10" max="20" />
 
 .. image:: SimpleMobileSlider.png
 

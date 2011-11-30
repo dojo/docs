@@ -121,7 +121,7 @@ Example Usage
     <b>Input feed URL here:</b>
     <br>
     <br>
-    <input dojoType="dijit.form.TextBox" style="width:50em;" id="urlText" value="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom"></input>
+    <input data-dojo-type="dijit.form.TextBox" style="width:50em;" id="urlText" value="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom"></input>
     <br>
     <div data-dojo-type="dijit.form.Button" id="searchButton">Search!</div>
     <div data-dojo-type="dojox.data.GoogleFeedStore" data-dojo-id="feedStore"></div>

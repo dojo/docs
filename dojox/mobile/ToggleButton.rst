@@ -45,7 +45,7 @@ Simple ToggleButton
 
 .. html ::
 
-  <button dojoType="dojox.mobile.ToggleButton" checked="true">Toggle me</button>
+  <button data-dojo-type="dojox.mobile.ToggleButton" checked="true">Toggle me</button>
 
 .. image:: SimpleMobileToggleButton.png
 

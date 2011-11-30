@@ -79,7 +79,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
       html.set(dom.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
-        +'<td><input type="text" dojoType="dijit.form.NumberTextBox" value="0"'
+        +'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
         +  ' constraints="{min:0,max:20,places:0}"'
         +  ' promptMessage= "Enter a value between 0 and +20"'
         +  ' required= "true" invalidMessage= "Wrong!" />'
@@ -114,7 +114,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
       dojo.html.set(dojo.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
-        +'<td><input type="text" dojoType="dijit.form.NumberTextBox" value="0"'
+        +'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
         +  ' constraints="{min:0,max:20,places:0}"'
         +  ' promptMessage= "Enter a value between 0 and +20"'
         +  ' required= "true" invalidMessage= "Wrong!" />'

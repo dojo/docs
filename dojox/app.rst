@@ -37,7 +37,7 @@ Components in dojox.app
 - dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
 :ref:`dojox.app.bind <dojox/app/bind>`
-- dojox.app.bind is used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
+- dojox.app.bind is used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. data-dojo-type, data-dojo-type, ref and data-dojo-props are compatible in a view.
 
 :ref:`dojox.app.model <dojox/app/model>`
 - dojox.app.model creates statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.

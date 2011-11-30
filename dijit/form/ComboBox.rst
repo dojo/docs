@@ -93,7 +93,7 @@ To set the default value for this example, specify the *value* attribute in the 
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
         data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
-    <input dojoType="dijit.form.ComboBox"
+    <input data-dojo-type="dijit.form.ComboBox"
                 value="Kentucky"
                 store="stateStore"
                 searchAttr="name"

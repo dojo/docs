@@ -32,17 +32,17 @@ Once you have read through this page you should be able to create such a layout 
 
   .. html::
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
+        <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
              <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="region:'leading'">
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
              </div>
              <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region:'center'">
-                  <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
-                  <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
-                  <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
              </div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'trailing'">Trailing pane</div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">Bottom pane</div>
@@ -143,7 +143,7 @@ You typically start off the page using a BorderContainer, like this, to split th
 
   .. html::
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%">
+        <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'leading'">Leading pane</div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">Center pane</div>
@@ -174,10 +174,10 @@ Then you start nesting containers.  For instance, on the left you might want an 
 
   .. html::
 
-        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 95%; margin: 0 auto;">
-             <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
-             <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
-             <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+        <div data-dojo-type="dijit.layout.AccordionContainer" style="width: 200px; height: 95%; margin: 0 auto;">
+             <div data-dojo-type="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+             <div data-dojo-type="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+             <div data-dojo-type="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
         </div>
 
   .. css::
@@ -203,10 +203,10 @@ And a TabContainer in the middle:
 
   .. html::
 
-        <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; margin: 20px;">
-             <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
-             <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
-             <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+        <div data-dojo-type="dijit.layout.TabContainer" style="width: 100%; height: 100%; margin: 20px;">
+             <div data-dojo-type="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+             <div data-dojo-type="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+             <div data-dojo-type="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
         </div>
 
   .. css::
@@ -234,17 +234,17 @@ Nesting those inside of the BorderContainer will look like this:
 
   .. html::
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
+        <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
              <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="region:'leading'">
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
-                  <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+                  <div data-dojo-type="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
              </div>
              <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region:'center'">
-                  <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
-                  <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
-                  <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+                  <div data-dojo-type="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
              </div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'trailing'">Trailing pane</div>
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">Bottom pane</div>

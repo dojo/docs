@@ -52,11 +52,11 @@ In this example, <ul> and <li> are used just because they are typically used to 
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.EdgeToEdgeList">
-    <li dojoType="dojox.mobile.ListItem" icon="images/i-icon-3.png" rightText="Off" moveTo="bar">
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+    <li data-dojo-type="dojox.mobile.ListItem" icon="images/i-icon-3.png" rightText="Off" moveTo="bar">
       Wi-Fi
     </li>
-    <li dojoType="dojox.mobile.ListItem" icon="images/i-icon-4.png" rightText="VPN" moveTo="bar">
+    <li data-dojo-type="dojox.mobile.ListItem" icon="images/i-icon-4.png" rightText="VPN" moveTo="bar">
       VPN
     </li>
   </ul>
@@ -74,15 +74,15 @@ In this example, an aggregated icon image as below is used for each list item ic
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.EdgeToEdgeList" iconBase="images/i-icon-all.png">
-    <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29">
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" iconBase="images/i-icon-all.png">
+    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,0,29,29">
       Airplane Mode
-      <div class="mblItemSwitch" dojoType="dojox.mobile.Switch"></div>
+      <div class="mblItemSwitch" data-dojo-type="dojox.mobile.Switch"></div>
     </li>
-    <li dojoType="dojox.mobile.ListItem" iconPos="0,29,29,29" rightText="mac" href="test_iPhone-Icon.html">
+    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,29,29,29" rightText="mac" href="test_iPhone-Icon.html">
       Wi-Fi
     </li>
-    <li dojoType="dojox.mobile.ListItem" iconPos="0,58,29,29" rightText="AcmePhone" moveTo="general">
+    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,58,29,29" rightText="AcmePhone" moveTo="general">
       Carrier
     </li>
   </ul>
@@ -94,18 +94,18 @@ Selection mode example
 
 .. html ::
 
-  <h2 dojoType="dojox.mobile.EdgeToEdgeCategory">Single Select</h2>
-  <ul dojoType="dojox.mobile.EdgeToEdgeList" select="single">
-    <li dojoType="dojox.mobile.ListItem" checked="true">Cube</li>
-    <li dojoType="dojox.mobile.ListItem">Dissolve</li>
-    <li dojoType="dojox.mobile.ListItem">Ripple</li>
+  <h2 data-dojo-type="dojox.mobile.EdgeToEdgeCategory">Single Select</h2>
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" select="single">
+    <li data-dojo-type="dojox.mobile.ListItem" checked="true">Cube</li>
+    <li data-dojo-type="dojox.mobile.ListItem">Dissolve</li>
+    <li data-dojo-type="dojox.mobile.ListItem">Ripple</li>
   </ul>
 
-  <h2 dojoType="dojox.mobile.EdgeToEdgeCategory">Multiple Select</h2>
-  <ul dojoType="dojox.mobile.EdgeToEdgeList" select="multiple">
-    <li dojoType="dojox.mobile.ListItem">Cube</li>
-    <li dojoType="dojox.mobile.ListItem">Dissolve</li>
-    <li dojoType="dojox.mobile.ListItem">Ripple</li>
+  <h2 data-dojo-type="dojox.mobile.EdgeToEdgeCategory">Multiple Select</h2>
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" select="multiple">
+    <li data-dojo-type="dojox.mobile.ListItem">Cube</li>
+    <li data-dojo-type="dojox.mobile.ListItem">Dissolve</li>
+    <li data-dojo-type="dojox.mobile.ListItem">Ripple</li>
   </ul>
 
 .. image:: EdgeToEdgeList-check.png

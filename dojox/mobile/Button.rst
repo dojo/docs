@@ -41,7 +41,7 @@ Default Button
 
 .. html ::
 
-  <button dojoType="dojox.mobile.Button">Default Button</button>
+  <button data-dojo-type="dojox.mobile.Button">Default Button</button>
 
 .. image:: DefaultMobileButton.png
 
@@ -66,7 +66,7 @@ You can define your own style for Button and specify it with the class and style
 
 .. html ::
 
-  <button dojoType="dojox.mobile.Button" class="redButton" style="width:120px">Custom Button</button>
+  <button data-dojo-type="dojox.mobile.Button" class="redButton" style="width:120px">Custom Button</button>
 
 .. image:: Button-example2.png
 

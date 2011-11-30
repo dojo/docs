@@ -44,7 +44,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
 
   .. html ::
 
-    <select multiple="true" name="multiselect" dojoType="dojox.form.CheckedMultiSelect">
+    <select multiple="true" name="multiselect" data-dojo-type="dojox.form.CheckedMultiSelect">
           <option value="TN">Tennessee</option>
           <option value="VA" selected="selected">Virginia</option>
           <option value="WA" selected="selected">Washington</option>

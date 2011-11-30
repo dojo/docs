@@ -33,19 +33,19 @@ Declarative example
 
 .. html ::
 
-  <h2 dojoType="dojox.mobile.RoundRectCategory">Pane1</h2>
-  <div id="pane1" dojoType="dojox.mobile.ContentPane"
-       content="&lt;div dojoType='dojox.mobile.RoundRect' shadow='true'&gt;Thank you!&lt;/div&gt;"></div>
+  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Pane1</h2>
+  <div id="pane1" data-dojo-type="dojox.mobile.ContentPane"
+       content="&lt;div data-dojo-type='dojox.mobile.RoundRect' shadow='true'&gt;Thank you!&lt;/div&gt;"></div>
 
-  <h2 dojoType="dojox.mobile.RoundRectCategory">Pane2</h2>
-  <div id="pane2" dojoType="dojox.mobile.ContentPane"
+  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Pane2</h2>
+  <div id="pane2" data-dojo-type="dojox.mobile.ContentPane"
        href="fragment1.html"></div>
 
 The content of fragment1.html is as follows:
 
 .. html ::
 
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
     HTML fragment example
   </div>
 

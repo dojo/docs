@@ -114,7 +114,7 @@ A declarative example with gradient ranges
 
   .. html ::
 
-    <div dojoType="dojox.widget.BarGauge"
+    <div data-dojo-type="dojox.widget.BarGauge"
 		id="declarativeGauge"
 		width="300"
 		height="55"
@@ -133,7 +133,7 @@ A declarative example with gradient ranges
 			y2: 0,
 			colors: [{offset: 0, color: '#ECECEC'}, {offset: 1, color: 'white'}]
 		}">
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			low="5"
 			high="10"
 			hover="5 - 10"
@@ -142,7 +142,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#606060'}, {offset: 1, color: '#707070'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range1"
 			low="10"
 			high="20"
@@ -152,7 +152,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#707070'}, {offset: 1, color: '#808080'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range2"
 			low="20"
 			high="30"
@@ -162,7 +162,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#808080'}, {offset: 1, color: '#909090'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range3"
 			low="30"
 			high="40"
@@ -172,7 +172,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#909090'}, {offset: 1, color: '#A0A0A0'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range4"
 			low="40"
 			high="50"
@@ -182,7 +182,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#A0A0A0'}, {offset: 1, color: '#B0B0B0'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range5"
 			low="50"
 			high="60"
@@ -192,7 +192,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#B0B0B0'}, {offset: 1, color: '#C0C0C0'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range6"
 			low="60"
 			high="70"
@@ -202,7 +202,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#C0C0C0'}, {offset: 1, color: '#C0C0C0'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.Range"
+	<div	data-dojo-type="dojox.widget.gauge.Range"
 			id="range7"
 			low="70"
 			high="75"
@@ -212,7 +212,7 @@ A declarative example with gradient ranges
 				'colors': [{offset: 0, color:'#C0C0C0'}, {offset: 1, color: '#E0E0E0'}]
 			}">
 	</div>
-	<div	dojoType="dojox.widget.gauge.BarLineIndicator"
+	<div	data-dojo-type="dojox.widget.gauge.BarLineIndicator"
 			id="target"
 			value="6"
 			color="#D00000"
@@ -220,7 +220,7 @@ A declarative example with gradient ranges
 			hover="Target: 6"
 			title="Target">
 	</div>
-	<div 	dojoType="dojox.widget.gauge.BarIndicator"
+	<div 	data-dojo-type="dojox.widget.gauge.BarIndicator"
 			id="value"
 			value="17"
 			length="135"

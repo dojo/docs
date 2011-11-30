@@ -182,23 +182,23 @@ Lets take a look at a more advanced example of using BorderContainer and other l
         Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
       </div>
       <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
-          <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
+          <div data-dojo-type="dijit.layout.AccordionPane" title="One fancy Pane">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Another one">
+          <div data-dojo-type="dijit.layout.AccordionPane" title="Another one">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Even more fancy" selected="true">
+          <div data-dojo-type="dijit.layout.AccordionPane" title="Even more fancy" selected="true">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Last, but not least">
+          <div data-dojo-type="dijit.layout.AccordionPane" title="Last, but not least">
           </div>
       </div><!-- end AccordionContainer -->
       <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region:'center', tabStrip:true">
-          <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+          <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
             Lorem ipsum and all around...
           </div>
-          <div dojoType="dijit.layout.ContentPane" title="My second tab">
+          <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
             Lorem ipsum and all around - second...
           </div>
-          <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
+          <div data-dojo-type="dijit.layout.ContentPane" title="My last tab" closable="true">
             Lorem ipsum and all around - last...
           </div>
       </div><!-- end TabContainer -->
@@ -246,11 +246,11 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                     widgetsInTemplate: true,
                     // Note: would be a call to dojo.cache() in a 'proper' dijit
                     templateString: '<div style="width: 100%; height: 100%;">' +
-                        '<div dojoType="dijit.layout.BorderContainer" design="headline" ' +
+                        '<div data-dojo-type="dijit.layout.BorderContainer" design="headline" ' +
                         '  style="width: 100%; height: 100%;" data-dojo-attach-point="outerBC">' +
-                        '<div dojoType="dijit.layout.ContentPane" region="center">MyDijit - Center content goes here.</div>' +
-                        '<div dojoType="dijit.layout.ContentPane" region="bottom">MyDijit - Bottom : ' +
-                        ' <div dojoType="dijit.form.Button">A Button</div>' +
+                        '<div data-dojo-type="dijit.layout.ContentPane" region="center">MyDijit - Center content goes here.</div>' +
+                        '<div data-dojo-type="dijit.layout.ContentPane" region="bottom">MyDijit - Bottom : ' +
+                        ' <div data-dojo-type="dijit.form.Button">A Button</div>' +
                         '</div>' +
                         '</div></div>'
             });
@@ -265,7 +265,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
-        <div dojoType="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
+        <div data-dojo-type="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
           <script type="dojo/connect" data-dojo-event="onClick">
             // Create a new instance
             var newdijit = new MyDijit( {}, dojo.create('DIV'));

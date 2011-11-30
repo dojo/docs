@@ -36,12 +36,12 @@ Usage
 
 .. js ::
  
- <div dojoType="dojox.widget.Portlet" title="My Flickr">
+ <div data-dojo-type="dojox.widget.Portlet" title="My Flickr">
 
-   <div dojoType="dojox.widget.PortletSettings">
-     <div dojoType="dojox.layout.TableContainer" cols="1">
-       <div dojoType="dijit.form.TextBox" title="Option 3"></div>
-       <div dojoType="dijit.form.TextBox" title="Option 4"></div>
+   <div data-dojo-type="dojox.widget.PortletSettings">
+     <div data-dojo-type="dojox.layout.TableContainer" cols="1">
+       <div data-dojo-type="dijit.form.TextBox" title="Option 3"></div>
+       <div data-dojo-type="dijit.form.TextBox" title="Option 4"></div>
      </div>
    </div>
 
@@ -76,8 +76,8 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   .. html::
    
-      <div dojoType="dojox.widget.Portlet" title="A Simple Portlet">
-	<div dojoType="dojox.widget.PortletSettings">
+      <div data-dojo-type="dojox.widget.Portlet" title="A Simple Portlet">
+	<div data-dojo-type="dojox.widget.PortletSettings">
           This is a simple settings widget.
           Put whatever you like in here
 	</div>
@@ -118,12 +118,12 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. html::
    
-      <div dojoType="dojox.widget.FeedPortlet" title="Todays News"
+      <div data-dojo-type="dojox.widget.FeedPortlet" title="Todays News"
 	id="todaysNews"
 	url="http://news.google.com/news?hl=en&topic=t&output=atom"
 	maxResults="5"
 	>
-	<div dojoType="dojox.widget.PortletFeedSettings"></div>
+	<div data-dojo-type="dojox.widget.PortletFeedSettings"></div>
 
 	<div>
 	This is a FeedPortlet with a single feed.
@@ -163,11 +163,11 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   .. html::
    
-      <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
+      <div data-dojo-type="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
 	id="todaysNews"
 	maxResults="5"
 	>
-	<select dojoType="dojox.widget.PortletFeedSettings">
+	<select data-dojo-type="dojox.widget.PortletFeedSettings">
           <option value="http://shaneosullivan.wordpress.com/category/dojo/feed/">Dojo Blatherings</option>
           <option value="http://www.dojotoolkit.org/aggregator/rss">Planet Dojo</option>
           <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
@@ -227,7 +227,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
   .. html::
    
-    <div dojoType="dojox.layout.GridContainer"
+    <div data-dojo-type="dojox.layout.GridContainer"
 	id="gc1"
 	acceptTypes="dojox.widget.Portlet, dojox.widget.FeedPortlet,dojox.widget.ExpandableFeedPortlet"
 	hasResizableColumns="false"
@@ -240,9 +240,9 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 	minChildWidth="200"
 	minColWidth="40">
 
-        <div dojoType="dojox.widget.Portlet" title="First Portlet">
+        <div data-dojo-type="dojox.widget.Portlet" title="First Portlet">
 
-          <div dojoType="dojox.widget.PortletSettings">
+          <div data-dojo-type="dojox.widget.PortletSettings">
             Put whatever settings you like in here
           </div>
           <div>
@@ -251,10 +251,10 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
         </div>
 
 
-        <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
+        <div data-dojo-type="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
           id="todaysNews"
           maxResults="5">
-          <select dojoType="dojox.widget.PortletFeedSettings">
+          <select data-dojo-type="dojox.widget.PortletFeedSettings">
             <option value="http://shaneosullivan.wordpress.com/category/dojo/feed/">Dojo Blatherings</option>
             <option value="http://www.dojotoolkit.org/aggregator/rss">Planet Dojo</option>
             <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
@@ -267,8 +267,8 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
         </div>
       
         
-        <div dojoType="dojox.widget.Portlet" title="Calendar Portlet">
-          <div dojoType="dojox.widget.PortletSettings">
+        <div data-dojo-type="dojox.widget.Portlet" title="Calendar Portlet">
+          <div data-dojo-type="dojox.widget.PortletSettings">
             Put whatever settings you like in here
           </div>
           <div>

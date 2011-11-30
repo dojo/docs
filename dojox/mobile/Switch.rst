@@ -38,7 +38,7 @@ Declarative example 1
 
 .. html ::
 
-  <div id="sw" dojoType="dojox.mobile.Switch" value="off"></div>
+  <div id="sw" data-dojo-type="dojox.mobile.Switch" value="off"></div>
 
 .. image:: Switch-example1.png
 
@@ -47,7 +47,7 @@ Declarative example 2
 
 .. html ::
 
-  <div dojoType="dojox.mobile.Switch" value="on" leftLabel="Start" rightLabel="Stop"></div>
+  <div data-dojo-type="dojox.mobile.Switch" value="on" leftLabel="Start" rightLabel="Stop"></div>
 
 .. image:: Switch-example2.png
 
@@ -56,7 +56,7 @@ Round Shape 1
 
 .. html ::
 
-  <div class="mblSwRoundShape1" dojoType="dojox.mobile.Switch"></div>
+  <div class="mblSwRoundShape1" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image:: Switch-RoundShape1.png
 
@@ -65,7 +65,7 @@ Round Shape 2
 
 .. html ::
 
-  <div class="mblSwRoundShape2" dojoType="dojox.mobile.Switch"></div>
+  <div class="mblSwRoundShape2" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image:: Switch-RoundShape2.png
 
@@ -74,7 +74,7 @@ Arc Shape 1
 
 .. html ::
 
-  <div class="mblSwArcShape1" dojoType="dojox.mobile.Switch"></div>
+  <div class="mblSwArcShape1" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image:: Switch-ArcShape1.png
 
@@ -83,7 +83,7 @@ Arc Shape 2
 
 .. html ::
 
-  <div class="mblSwArcShape2" dojoType="dojox.mobile.Switch"></div>
+  <div class="mblSwArcShape2" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image:: Switch-ArcShape2.png
 
@@ -105,7 +105,7 @@ Custom Color
   </style>
 
   ...
-  <div class="mblSwRoundShape1 color1" dojoType="dojox.mobile.Switch"></div>
+  <div class="mblSwRoundShape1 color1" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image:: Switch-CustomColor.png
 

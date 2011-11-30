@@ -65,8 +65,8 @@ In this example, no ListItem is declared under EdgeToEdgeDataList. The ListItems
 
 .. html ::
 
-  <div dojoType="dojo.data.ItemReadStore" jsId="sampleStore" url="sample.json"></div>
-  <ul dojoType="dojox.mobile.EdgeToEdgeDataList" store="sampleStore">
+  <div data-dojo-type="dojo.data.ItemReadStore" jsId="sampleStore" url="sample.json"></div>
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeDataList" store="sampleStore">
   </ul>
 
 .. js ::

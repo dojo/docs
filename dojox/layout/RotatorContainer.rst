@@ -55,14 +55,14 @@ Declarative example
    dojo.require("dijit.layout.ContentPane");
  </script>
  
- <div dojoType="dojox.layout.RotatorContainer" id="myRotator" showTabs="true" autoStart="true" transitionDelay="5000">
-   <div id="pane1" dojoType="dijit.layout.ContentPane" title="1">
+ <div data-dojo-type="dojox.layout.RotatorContainer" id="myRotator" showTabs="true" autoStart="true" transitionDelay="5000">
+   <div id="pane1" data-dojo-type="dijit.layout.ContentPane" title="1">
      Pane 1!
    </div>
-   <div id="pane2" dojoType="dijit.layout.ContentPane" title="2">
+   <div id="pane2" data-dojo-type="dijit.layout.ContentPane" title="2">
      Pane 2!
    </div>
-   <div id="pane3" dojoType="dijit.layout.ContentPane" title="3" transitionDelay="10000">
+   <div id="pane3" data-dojo-type="dijit.layout.ContentPane" title="3" transitionDelay="10000">
      Pane 3 with overridden transitionDelay!
    </div>
  </div>

@@ -41,7 +41,7 @@ Simple CheckBox
 
 .. html ::
 
-  <input dojoType="dojox.mobile.CheckBox" type="checkbox" />
+  <input data-dojo-type="dojox.mobile.CheckBox" type="checkbox" />
 
 .. image:: SimpleMobileCheckBox.png
 

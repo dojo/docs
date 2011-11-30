@@ -41,22 +41,22 @@ Declarative example
 .. html ::
 
   <body style="background-color:#6D6D6D">
-      <div dojoType="dojox.mobile.SwapView">
+      <div data-dojo-type="dojox.mobile.SwapView">
           <h1>My Pictures</h1>
           <img src="images/pic1.jpg">
       </div>
 
-      <div dojoType="dojox.mobile.SwapView">
+      <div data-dojo-type="dojox.mobile.SwapView">
           <h1>May 3, 2011</h1>
           <img src="images/pic2.jpg">
       </div>
 
-      <div dojoType="dojox.mobile.SwapView">
+      <div data-dojo-type="dojox.mobile.SwapView">
           <h1>May 3, 2011</h1>
           <img src="images/pic3.jpg">
       </div>
 
-      <div dojoType="dojox.mobile.PageIndicator" fixed="bottom"></div>
+      <div data-dojo-type="dojox.mobile.PageIndicator" fixed="bottom"></div>
   </body>
 
 .. image:: PageIndicator-anim.png

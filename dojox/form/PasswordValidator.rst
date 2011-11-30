@@ -28,7 +28,7 @@ To use the PasswordValidator, you wrap 2 or 3 html input widgets with the valida
 
 .. html ::
 
-  <div dojoType="dojox.form.PasswordValidator" name="pwValidate">
+  <div data-dojo-type="dojox.form.PasswordValidator" name="pwValidate">
     <input type="password" pwType="old" />
     <input type="password" pwType="new" />
     <input type="password" pwType="verify" />
@@ -74,7 +74,7 @@ This example shows a password validator, prompting the user to enter and validat
 
   .. html ::
 
-    <div dojoType="dojox.form.PasswordValidator" name="password">
+    <div data-dojo-type="dojox.form.PasswordValidator" name="password">
         <label>Password: <input type="password" pwType="new" /></label><br>
         <label>Validate: <input type="password" pwType="verify" /></label><br>
     </div>
@@ -94,7 +94,7 @@ This example shows a password validator, and prompts the for the current passwor
 
   .. html ::
 
-    <div dojoType="dojox.form.PasswordValidator" name="password">
+    <div data-dojo-type="dojox.form.PasswordValidator" name="password">
         <script type="dojo/method" data-dojo-event="pwCheck" data-dojo-args="password">
             /* NOTE: DO NOT EVER EVER EVER DO THIS - ONLY AN EXAMPLE */
             return password == "password"

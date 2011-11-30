@@ -27,7 +27,7 @@ dojox.mobile.Button
 
 * Separated from _base.js and created dojox/mobile/Button.js. This means your application needs to add dojo.require("dojox.mobile.Button") if you use the button.
 * btnClass has been changed to class. You need to specify a button class using the class attribute as follows.
-* <button dojoType="dojox.mobile.Button" class="mblBlueButton">OK</button>
+* <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton">OK</button>
 * The default button class no longer exists. You always need to explicitly specify a button class such as "mblBlueButton".
 
 dojox.mobile.FlippableView

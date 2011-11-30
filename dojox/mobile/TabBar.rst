@@ -49,10 +49,10 @@ Tab Bar
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.TabBar">
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
+  <ul data-dojo-type="dojox.mobile.TabBar">
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
   </ul>
 
 .. image:: TabBar-example1.png
@@ -68,12 +68,12 @@ In this example, an aggregated icon image as below is used for each TabBarButton
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.TabBar" iconBase="images/tab-icons.png">
-    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,0,29,29" iconPos2="29,0,29,29" selected="true">Featured</li>
-    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,29,29,29" iconPos2="29,29,29,29">Categories</li>
-    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,58,29,29" iconPos2="29,58,29,29">Top 25</li>
-    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,87,29,29" iconPos2="29,87,29,29">Search</li>
-    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,116,29,29" iconPos2="29,116,29,29">Updates</li>
+  <ul data-dojo-type="dojox.mobile.TabBar" iconBase="images/tab-icons.png">
+    <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,0,29,29" iconPos2="29,0,29,29" selected="true">Featured</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,29,29,29" iconPos2="29,29,29,29">Categories</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,58,29,29" iconPos2="29,58,29,29">Top 25</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,87,29,29" iconPos2="29,87,29,29">Search</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,116,29,29" iconPos2="29,116,29,29">Updates</li>
   </ul>
 
 .. image:: TabBar-example2.png
@@ -85,10 +85,10 @@ This type of bar is typically used at the top of the screen to control visibilit
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl">
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
-    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
+  <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl">
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
   </ul>
 
 .. image:: TabBar-example3.png
@@ -100,33 +100,33 @@ TabBar forms kind of tab container whose panes are views. You may, however, want
 
 .. html ::
 
-  <div id="groupview1" dojoType="dojox.mobile.View" selected="true">
-      <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl" fixed="top">
-	<li dojoType="dojox.mobile.TabBarButton" moveTo="subview1" selected="true">New</li>
-	<li dojoType="dojox.mobile.TabBarButton" moveTo="subview2">What's Hot</li>
-	<li dojoType="dojox.mobile.TabBarButton" moveTo="subview3">Genius</li>
+  <div id="groupview1" data-dojo-type="dojox.mobile.View" selected="true">
+      <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" fixed="top">
+	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview1" selected="true">New</li>
+	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview2">What's Hot</li>
+	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview3">Genius</li>
       </ul>
 
-      <div id="subview1" dojoType="dojox.mobile.ScrollableView" selected="true">
-	<ul dojoType="dojox.mobile.EdgeToEdgeList">
-	  <li dojoType="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+      <div id="subview1" data-dojo-type="dojox.mobile.ScrollableView" selected="true">
+	<ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+	  <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
 	</ul>
       </div>
 
-      <div id="subview2" dojoType="dojox.mobile.ScrollableView">
-	<ul dojoType="dojox.mobile.RoundRectList">
-	  <li dojoType="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+      <div id="subview2" data-dojo-type="dojox.mobile.ScrollableView">
+	<ul data-dojo-type="dojox.mobile.RoundRectList">
+	  <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
 	</ul>
       </div>
 
-      <div id="subview3" dojoType="dojox.mobile.ScrollableView">
-	<div dojoType="dojox.mobile.RoundRect" shadow="true">View3</div>
+      <div id="subview3" data-dojo-type="dojox.mobile.ScrollableView">
+	<div data-dojo-type="dojox.mobile.RoundRect" shadow="true">View3</div>
       </div>
   </div>
 
-  <div id="hello" dojoType="dojox.mobile.ScrollableView">
-      <h1 dojoType="dojox.mobile.Heading" back="Group1" moveTo="groupview1">Hello</h1>
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">Hello View</div>
+  <div id="hello" data-dojo-type="dojox.mobile.ScrollableView">
+      <h1 data-dojo-type="dojox.mobile.Heading" back="Group1" moveTo="groupview1">Hello</h1>
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">Hello View</div>
   </div>
 
 .. image:: TabBar-group-anim.gif

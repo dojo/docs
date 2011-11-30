@@ -23,14 +23,14 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
 
   .. html ::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -54,14 +54,14 @@ Tabs at the right, no strip.  Note that right tabs don't work in conjunction wit
 
   .. html ::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -82,14 +82,14 @@ Tabs at the left, with a strip.  Note that left tabs don't work in conjunction w
 
   .. html ::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -110,19 +110,19 @@ Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjuncti
 
   .. html ::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
 
-One technique to allow validation, and still use the parser would be to simply decorate the node with a dojoType attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
+One technique to allow validation, and still use the parser would be to simply decorate the node with a data-dojo-type attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
 
 .. code-example ::
 
@@ -135,7 +135,7 @@ One technique to allow validation, and still use the parser would be to simply d
         dojo.query("div[rel]").forEach(function(n){
             var className = dojo.attr(n,"rel");
             // now set it
-            dojo.attr(n, "dojoType", className);
+            dojo.attr(n, "data-dojo-type", className);
         });
         dojo.parser.parse("progtabwrapper");
     });
@@ -217,26 +217,26 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
 
   .. html ::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
-      <div dojoType="dijit.layout.TabContainer" title="Tab 1" nested="true">
-        <div dojoType="dijit.layout.ContentPane" title="My first inner tab" selected="true">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
+      <div data-dojo-type="dijit.layout.TabContainer" title="Tab 1" nested="true">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My first inner tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="My second inner tab">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My second inner tab">
           Lorem ipsum and all around - second...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="My last inner tab">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My last inner tab">
           Lorem ipsum and all around - last...
         </div>
       </div>
-      <div dojoType="dijit.layout.TabContainer" title="Tab 2" nested="true">
-        <div dojoType="dijit.layout.ContentPane" title="My first inner tab" selected="true">
+      <div data-dojo-type="dijit.layout.TabContainer" title="Tab 2" nested="true">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My first inner tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="My second inner tab">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My second inner tab">
           Lorem ipsum and all around - second...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="My last inner tab">
+        <div data-dojo-type="dijit.layout.ContentPane" title="My last inner tab">
           Lorem ipsum and all around - last...
         </div>
       </div>

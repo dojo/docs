@@ -11,7 +11,7 @@ The Dojo Parser
 .. contents::
     :depth: 3
 
-The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` (dojoType) attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
+The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into :ref:`Dijits <dijit/index>`. By `decorated` we mean use of a `data-dojo-type` (data-dojo-type) attribute. Any "Class" (or object, such as the ones created by :ref:`dojo.declare <dojo/declare>`) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or :ref:`dojo.declare <dojo/declare>`.
 
@@ -377,7 +377,7 @@ Setting the parser behavior
 
 ``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes ready call after parsing. how to set parseOnLoad
 
-``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node. For example:
+``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as data-dojo-type, etc.  The values in the mixin would override any values in your node. For example:
 
 .. html ::
 
@@ -387,7 +387,7 @@ You can manually call the parser's instantiate function (which does the "Magical
 
 .. js ::
 
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type"});
+  dojo.parser.instantiate([dojo.byId("myDiv")], {data-dojo-type: "my.custom.type"});
 
 Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
 
@@ -395,9 +395,9 @@ Calling instantiate in this way will return to you a list of instances that were
 
 .. js ::
 
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
+  dojo.parser.instantiate([dojo.byId("myDiv")], {data-dojo-type: "my.custom.type", _started: false});
 
-``NEW in 1.6:``  Dojo V1.6 started to use data-dojo-type html5 attribute instead of dojoType. When using new data-dojo-type attribute other attributes must be put in data-dojo-props attribute because of performance improvement like so:
+``NEW in 1.6:``  Dojo V1.6 started to use data-dojo-type html5 attribute instead of data-dojo-type. When using new data-dojo-type attribute other attributes must be put in data-dojo-props attribute because of performance improvement like so:
 
 .. html ::
 

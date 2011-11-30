@@ -55,8 +55,8 @@ The most basic application of a Lightbox is to convert links containing ``title`
   </script>
 
   <div id="lb-one">
-     <a dojoType="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a>
-     <a dojoType="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a>
+     <a data-dojo-type="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a>
+     <a data-dojo-type="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a>
   </div>
 
 You'll notice Lightbox's built in 404-handling, displaying a warning icon for images which fail to load.
@@ -66,8 +66,8 @@ Any dojox.image.Lightbox-es on the same page share an instance of a dojox.image.
 .. html ::
   
   <div id="lb-one">
-     <a dojoType="dojox.image.Lightbox" group="grouped" title="foo" href="foo.png">Show Foo</a>
-     <a dojoType="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a>
+     <a data-dojo-type="dojox.image.Lightbox" group="grouped" title="foo" href="foo.png">Show Foo</a>
+     <a data-dojo-type="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a>
   </div>
 
 With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the :ref:`parser <dojo/parser>` runs.

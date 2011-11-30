@@ -283,7 +283,7 @@ If your grid is created declaratively:
 
 .. js ::
   
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     store="mystore" structure="mystructure"
     plugins="{
       dnd: /* a Boolean value or an argument object */{}
@@ -459,7 +459,7 @@ The HTML is:
 
 .. html ::
     
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
     plugins="{
       dnd: {copyOnly: true}
     }"

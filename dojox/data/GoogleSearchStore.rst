@@ -380,8 +380,8 @@ Searching multiple Google services at once
     <div data-dojo-type="dojox.data.GoogleNewsSearchStore" data-dojo-id="newsStore"></div>
     <br>
     <br>
-    <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
-      <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
+      <div id="tab1" title="GoogleWebSearchStore" data-dojo-type="dijit.layout.ContentPane">
         <div id="webGrid"
           style="width: 750px; height: 300px;"
           data-dojo-type="dojox.grid.DataGrid"
@@ -391,7 +391,7 @@ Searching multiple Google services at once
           rowsPerPage:40">
         </div>
       </div>
-      <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
+      <div id="tab2" title="GoogleImageSearchStore" data-dojo-type="dijit.layout.ContentPane">
         <div style="width: 750px; height: 300px;">
           <div id="imageGrid"
             data-dojo-type="dojox.grid.DataGrid"
@@ -402,7 +402,7 @@ Searching multiple Google services at once
           </div>
         </div>
       </div>
-      <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
+      <div id="tab3" title="GoogleNewsSearchStore" data-dojo-type="dijit.layout.ContentPane">
         <div id="newsGrid"
           style="width: 750px; height: 300px;"
           data-dojo-type="dojox.grid.DataGrid"

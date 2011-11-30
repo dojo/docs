@@ -179,7 +179,7 @@ or, using legacy patterns e.g. ``dojo.require``:
         }
     </script>
 
-    <input id="helloInput" dojoType="dijit.form.TextBox"
+    <input id="helloInput" data-dojo-type="dijit.form.TextBox"
         ref="model.hello">
 
 Such data binding awareness for dijits is added by extending the dijit._WidgetBase class to include data binding capabilities provided by dojox.mvc._DataBindingMixin, and this class declares a dependency on dojox.mvc._DataBindingMixin.

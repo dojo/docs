@@ -35,7 +35,7 @@ Code snippet below illustrates a common usage of Hebrew Date code with the Dijit
   <html><title>Hebrew calendar</title><body>
     <input name="hebcal"
        value="2009-03-10"
-       dojoType="dijit.form.DateTextBox"
+       data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
     >
   </body></html>
@@ -93,7 +93,7 @@ Code snippet below illustrates usage of Hebrew calendar in the context of graphi
   <html><title> Hebrew calendar </title><body>
     <input name="hebcal"
        value="2009-03-10"
-       dojoType="dijit.form.DateTextBox"
+       data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >

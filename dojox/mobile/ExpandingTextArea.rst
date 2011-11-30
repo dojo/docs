@@ -44,7 +44,7 @@ Simple ExpandingTextArea
 
 .. html ::
 
-  <textarea dojoType="dojox.mobile.ExpandingTextArea">line 1
+  <textarea data-dojo-type="dojox.mobile.ExpandingTextArea">line 1
   line 2</textarea>
 
 .. image:: SimpleMobileExpandingTextArea.png

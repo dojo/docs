@@ -36,7 +36,7 @@ Code snippet below illustrates most common usage of Islamic calendar.
        name="noDOMvalue"
        value="2009-03-10"
        type="text"
-       dojoType="dijit.form.DateTextBox"
+       data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.islamic"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >
@@ -96,7 +96,7 @@ Code snippet below illustrates usage of Islamic calendar in the context of graph
        name="noDOMvalue"
        value="2009-03-10"
        type="text"
-       dojoType="dijit.form.DateTextBox"
+       data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.islamic"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >

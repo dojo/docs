@@ -184,7 +184,7 @@ If your grid is created declaratively:
 
 .. html ::
   
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
     store="mystore" structure="mystructure"
     plugins="{
       selector: /* a Boolean value or an configuration object */{}

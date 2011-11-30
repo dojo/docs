@@ -51,7 +51,7 @@ destroys it.
     </script>
   </button>
 
-  <button dojoType="dijit.form.Button" id="foobd" disabled="disabled">Destroy It
+  <button data-dojo-type="dijit.form.Button" id="foobd" disabled="disabled">Destroy It
     <script type="dojo/method" data-dojo-event="onClick">
 	this.setAttribute("disabled",true);
 	dijit.byId("foobar").destroy();
@@ -73,13 +73,13 @@ The code fragment creates a dojox.image.Magnifier and associates it with the src
 .. js ::
  
   Scale= 2.34, 5.67, and 8.90: <br>
-  <img id="testImage" dojoType="dojox.image.Magnifier" src="images/spanke.jpg"
+  <img id="testImage" data-dojo-type="dojox.image.Magnifier" src="images/spanke.jpg"
     style="width:200px; height:130px;" scale="2.34" />
     
-  <img id="testImage4" dojoType="dojox.image.Magnifier" src="images/spanke.jpg"
+  <img id="testImage4" data-dojo-type="dojox.image.Magnifier" src="images/spanke.jpg"
     style="width:200px; height:130px;" scale="5.67" />
 
-  <img id="testImage5" dojoType="dojox.image.Magnifier" src="images/spanke.jpg"
+  <img id="testImage5" data-dojo-type="dojox.image.Magnifier" src="images/spanke.jpg"
     style="width:200px; height:130px;" scale="8.90" />
 		
     

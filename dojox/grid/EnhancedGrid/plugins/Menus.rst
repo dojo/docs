@@ -81,25 +81,25 @@ HTML markup usage sample
   .. html::
 
 	<div id="gridDiv">
-		<div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+		<div data-dojo-type="dijit.Menu" id="headerMenu" style="display: none;">
 			<div data-dojo-type="dijit.MenuItem">Header Menu Item 1</div>
 			<div data-dojo-type="dijit.MenuItem">Header Menu Item 2</div>
 			<div data-dojo-type="dijit.MenuItem">Header Menu Item 3</div>
 			<div data-dojo-type="dijit.MenuItem">Header Menu Item 4</div>
 		</div>
-		<div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+		<div data-dojo-type="dijit.Menu" id="rowMenu"  style="display: none;">
 			<div data-dojo-type="dijit.MenuItem">Row Menu Item 1</div>
 			<div data-dojo-type="dijit.MenuItem">Row Menu Item 2</div>
 			<div data-dojo-type="dijit.MenuItem">Row Menu Item 3</div>
 			<div data-dojo-type="dijit.MenuItem">Row Menu Item 4</div>
 		</div>
-		<div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+		<div data-dojo-type="dijit.Menu" id="cellMenu"  style="display: none;">
 			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 1</div>
 			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 2</div>
 			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 3</div>
 			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 4</div>
 		</div>
-		<div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+		<div data-dojo-type="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
 			<div data-dojo-type="dijit.MenuItem">Action 1 for Selected Region</div>
 			<div data-dojo-type="dijit.MenuItem">Action 2 for Selected Region</div>
 			<div data-dojo-type="dijit.MenuItem">Action 3 for Selected Region</div>
@@ -252,16 +252,16 @@ with HTML markup
   
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid"
       data-dojo-props="plugins:{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}" ... >
-      <div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+      <div data-dojo-type="dijit.Menu" id="headerMenu" style="display: none;">
           <div data-dojo-type="dijit.MenuItem">Header Menu Item 1</div>
       </div>
-      <div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+      <div data-dojo-type="dijit.Menu" id="rowMenu" style="display: none;">
           <div data-dojo-type="dijit.MenuItem">Row Menu Item 1</div>
       </div>
-      <div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+      <div data-dojo-type="dijit.Menu" id="cellMenu" style="display: none;">
           <div data-dojo-type="dijit.MenuItem">Cell Menu Item 1</div>
       </div>
-      <div dojoType="dijit.Menu" id="selectedRegionMenu" style="display: none;">
+      <div data-dojo-type="dijit.Menu" id="selectedRegionMenu" style="display: none;">
           <div data-dojo-type="dijit.MenuItem">Action 1 for Selected Region</div>
       </div>
   </div>

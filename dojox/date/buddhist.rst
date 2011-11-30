@@ -31,7 +31,7 @@ Code snippet below illustrates a common usage of Buddhist Date code with the Dij
   <html><title>Thai Solar calendar</title><body>
     <input name="thaical"
        value="2009-03-10"
-       dojoType="dijit.form.DateTextBox"
+       data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.buddhist"
     >
   </body></html>

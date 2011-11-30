@@ -343,18 +343,18 @@ Example (using older HTML (non-validating) and mobile parser)
    13:     </script>
    14:   </head>
    15:   <body>
-   16:     <div id="foo" dojoType="dojox.mobile.View">
-   17:       <h1 dojoType="dojox.mobile.Heading">View 1</h1>
-   18:       <ul dojoType="dojox.mobile.RoundRectList">
-   19:         <li dojoType="dojox.mobile.ListItem" moveTo="bar" label="Hello"
+   16:     <div id="foo" data-dojo-type="dojox.mobile.View">
+   17:       <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
+   18:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+   19:         <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
    20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
    21:       </ul>
    22:     </div>
    23:
-   24:     <div id="bar" dojoType="dojox.mobile.View">
-   25:       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
-   26:       <ul dojoType="dojox.mobile.RoundRectList">
-   27:         <li dojoType="dojox.mobile.ListItem" label="World"
+   24:     <div id="bar" data-dojo-type="dojox.mobile.View">
+   25:       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
+   26:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+   27:         <li data-dojo-type="dojox.mobile.ListItem" label="World"
    28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
    29:       </ul>
    30:     </div>

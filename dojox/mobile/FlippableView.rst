@@ -42,16 +42,16 @@ In this example, there are two FlippableViews, and the user can swipe the screen
 
 .. html ::
 
-  <div id="foo" dojoType="dojox.mobile.FlippableView" selected="true">
-    <h2 dojoType="dojox.mobile.RoundRectCategory">Page flipping demo</h2>
-    <div dojoType="dojox.mobile.RoundRect">
+  <div id="foo" data-dojo-type="dojox.mobile.FlippableView" selected="true">
+    <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Page flipping demo</h2>
+    <div data-dojo-type="dojox.mobile.RoundRect">
       Swipe the screen left or right to flip between the views.
     </div>
   </div>
 
-  <div id="bar" dojoType="dojox.mobile.FlippableView">
-    <h1 dojoType="dojox.mobile.Heading">View 2</h1>
-    <div dojoType="dojox.mobile.RoundRect">
+  <div id="bar" data-dojo-type="dojox.mobile.FlippableView">
+    <h1 data-dojo-type="dojox.mobile.Heading">View 2</h1>
+    <div data-dojo-type="dojox.mobile.RoundRect">
       View 2
     </div>
   </div>

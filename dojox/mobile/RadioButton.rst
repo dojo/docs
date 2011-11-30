@@ -41,8 +41,8 @@ Simple RadioButton
 
 .. html ::
 
-  <input type="radio" dojoType="dojox.mobile.RadioButton" checked="true"  name="radioGroup" value="yes" />
-  <input type="radio" dojoType="dojox.mobile.RadioButton" checked="false" name="radioGroup" value="no" />
+  <input type="radio" data-dojo-type="dojox.mobile.RadioButton" checked="true"  name="radioGroup" value="yes" />
+  <input type="radio" data-dojo-type="dojox.mobile.RadioButton" checked="false" name="radioGroup" value="no" />
 
 .. image:: SimpleMobileRadioButton.png
 

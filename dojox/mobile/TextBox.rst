@@ -49,7 +49,7 @@ Simple TextBox
 
 .. html ::
 
-  <input dojoType="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
+  <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
 
 .. image:: SimpleMobileTextBox.png
 

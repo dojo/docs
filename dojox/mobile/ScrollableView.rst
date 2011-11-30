@@ -73,10 +73,10 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 
 .. html ::
 
-  <div id="view1" dojoType="dojox.mobile.ScrollableView">
-    <h1 dojoType="dojox.mobile.Heading" fixed="top">View Header Bar</h1>
+  <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
+    <h1 data-dojo-type="dojox.mobile.Heading" fixed="top">View Header Bar</h1>
     ....
-    <h1 dojoType="dojox.mobile.Heading" fixed="bottom">View Footer Bar</h1>
+    <h1 data-dojo-type="dojox.mobile.Heading" fixed="bottom">View Footer Bar</h1>
   </div>
 
 Application header/footer bar example
@@ -91,11 +91,11 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading" fixed="top">Application Header Bar</h1>
-  <div id="view1" dojoType="dojox.mobile.ScrollableView">
+  <h1 data-dojo-type="dojox.mobile.Heading" fixed="top">Application Header Bar</h1>
+  <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
       ....
   </div>
-  <div id="view2" dojoType="dojox.mobile.ScrollableView">
+  <div id="view2" data-dojo-type="dojox.mobile.ScrollableView">
       ....
   </div>
-  <h1 dojoType="dojox.mobile.Heading" fixed="bottom">Application Footer Bar</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" fixed="bottom">Application Footer Bar</h1>

@@ -34,4 +34,4 @@ Declarative example
 
 .. html ::
 
-  <div id="spin1" dojoType="dojox.mobile.SpinWheelDatePicker"></div>
+  <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>

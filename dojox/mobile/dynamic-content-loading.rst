@@ -22,11 +22,11 @@ Usage of the url property is as follows.
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.RoundRectList">
-     <li dojoType="dojox.mobile.ListItem" transition="slide" url="view1.html">
+  <ul data-dojo-type="dojox.mobile.RoundRectList">
+     <li data-dojo-type="dojox.mobile.ListItem" transition="slide" url="view1.html">
 	 External View #1 (sync)
      </li>
-     <li dojoType="dojox.mobile.ListItem" transition="flip" url="view2.json" sync="false">
+     <li data-dojo-type="dojox.mobile.ListItem" transition="flip" url="view2.json" sync="false">
 	 External View #2 (async)
      </li>
   </ul>
@@ -40,16 +40,16 @@ Example of view html fragment:
 
 .. html ::
 
-  <div dojoType="dojox.mobile.View">
-      <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-	  <li dojoType="dojox.mobile.ListItem">
+  <div data-dojo-type="dojox.mobile.View">
+      <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      Jack Coleman
 	  </li>
-	  <li dojoType="dojox.mobile.ListItem">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      James Evans
 	  </li>
-	  <li dojoType="dojox.mobile.ListItem">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      Jason Griffin
 	  </li>
       </ul>
@@ -90,7 +90,7 @@ ListItem can have an action handler by simply adding an onclick event handler as
 
 .. html ::
 
-  <li dojoType="dojox.mobile.ListItem" moveTo="#" onclick="myAction(this)">
+  <li data-dojo-type="dojox.mobile.ListItem" moveTo="#" onclick="myAction(this)">
      Update View
   </li>
 
@@ -111,10 +111,10 @@ In the action handler, you can update the transition target view, and then progr
 
 .. html ::
 
-  <div id="view1" dojoType="dojox.mobile.View">
-     <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="home">Current Status</h1>
-     <h2 dojoType="dojox.mobile.RoundRectCategory">Local Time</h2>
-     <div id="rect1" dojoType="dojox.mobile.RoundRect" shadow="true"></div>
+  <div id="view1" data-dojo-type="dojox.mobile.View">
+     <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="home">Current Status</h1>
+     <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Local Time</h2>
+     <div id="rect1" data-dojo-type="dojox.mobile.RoundRect" shadow="true"></div>
   </div>
 
 Load Content into Existing View and Make Transition
@@ -148,7 +148,7 @@ In this example, view content is loaded asynchronously, the destination view is 
 
 .. html ::
 
-  <div id="view2" dojoType="dojox.mobile.View"></div>
+  <div id="view2" data-dojo-type="dojox.mobile.View"></div>
 
 Make Transition and Load Content into Existing View
 ---------------------------------------------------
@@ -181,7 +181,7 @@ This example is almost the same as the previous one, but in this example, a view
 
 .. html ::
 
-  <div id="view3" dojoType="dojox.mobile.View"></div>
+  <div id="view3" data-dojo-type="dojox.mobile.View"></div>
 
 Create a New View and Make Transition
 -------------------------------------
@@ -244,9 +244,9 @@ This example updates an existing RoundRectDataList via a dojo.data datastore, an
 
 .. html ::
 
-  <div id="view5" dojoType="dojox.mobile.View">
-     <h1 dojoType="dojox.mobile.Heading">RoundRectDataList</h1>
-     <ul id="list1" dojoType="dojox.mobile.RoundRectDataList"></ul>
+  <div id="view5" data-dojo-type="dojox.mobile.View">
+     <h1 data-dojo-type="dojox.mobile.Heading">RoundRectDataList</h1>
+     <ul id="list1" data-dojo-type="dojox.mobile.RoundRectDataList"></ul>
   </div>
 
 Partial Update Using dojox.mobile.ContentPane
@@ -271,12 +271,12 @@ In this example, there is a dojox.mobile.ContentPane widget in the transition ta
 
 .. html ::
 
-  <div id="view6" dojoType="dojox.mobile.ScrollableView">
-     <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="home" fixed="top">Partial Update</h1>
-     <h2 dojoType="dojox.mobile.RoundRectCategory">Dynamic Content</h2>
-     <div id="pane1" dojoType="dojox.mobile.ContentPane"></div>
-     <ul dojoType="dojox.mobile.RoundRectList">
-	 <li dojoType="dojox.mobile.ListItem" moveTo="home" transitionDir="-1">
+  <div id="view6" data-dojo-type="dojox.mobile.ScrollableView">
+     <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="home" fixed="top">Partial Update</h1>
+     <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Dynamic Content</h2>
+     <div id="pane1" data-dojo-type="dojox.mobile.ContentPane"></div>
+     <ul data-dojo-type="dojox.mobile.RoundRectList">
+	 <li data-dojo-type="dojox.mobile.ListItem" moveTo="home" transitionDir="-1">
 	     Home
 	 </li>
      </ul>

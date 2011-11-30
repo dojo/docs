@@ -65,7 +65,7 @@ Creating a Map using markup declaration:
 
  </head>
  <body class="tundra">
- <div id="map" dojoType="dojox.geo.openlayers.widget.Map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
+ <div id="map" data-dojo-type="dojox.geo.openlayers.widget.Map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
  </body>
 
 Changing the base layer type
@@ -123,8 +123,8 @@ Some examples of how to set/change the base layer type:
   </head>
   <body class="tundra">
 
-    <input type="radio" dojoType="dijit.form.RadioButton" id="osm" name="layertype" value="OSM" onClick="layerType('osm')" />
-    <input type="radio" checked dojoType="dijit.form.RadioButton" id="arcgis" name="layertype" value="ArcGIS" onClick="layerType('arcgis')" />
+    <input type="radio" data-dojo-type="dijit.form.RadioButton" id="osm" name="layertype" value="OSM" onClick="layerType('osm')" />
+    <input type="radio" checked data-dojo-type="dijit.form.RadioButton" id="arcgis" name="layertype" value="ArcGIS" onClick="layerType('arcgis')" />
 
     <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
 
@@ -184,7 +184,7 @@ Markup version:
   </head>
   <body class="tundra">
   
-    <div id="map" dojoType="dojox.geo.openlayers.widget.Map"
+    <div id="map" data-dojo-type="dojox.geo.openlayers.widget.Map"
                   initialLocation="{position : [ -74.00597, 40.71427 ], extent : 0.1 }"
                   style="background-color: #b5d0d0; width: 100%; height: 100%;">
     </div>
@@ -495,7 +495,7 @@ The OpenLayers Map component allows to position dijit widgets on the map. To do 
 The descriptor passed to the Widget feature is an object containing the following fields:
 
  - createWidget: Function for widget creation. Must return a `dijit._Widget`.
- - dojoType: The class of a widget to create;
+ - data-dojo-type: The class of a widget to create;
  - dijitId: The digitId of an existing widget.
  - widget: An already created widget.
  - width: The width of the widget.

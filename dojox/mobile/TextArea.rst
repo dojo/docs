@@ -43,7 +43,7 @@ Simple TextArea
 
 .. html ::
 
-  <textarea dojoType="dojox.mobile.TextArea" placeHolder="Enter comment"></textarea>
+  <textarea data-dojo-type="dojox.mobile.TextArea" placeHolder="Enter comment"></textarea>
 
 .. image:: SimpleMobileTextArea.png
 

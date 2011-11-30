@@ -60,18 +60,18 @@ Lazy Loading of the contents
 
 Each icon content may consist of one or more dojo widgets. Loading of all the necessary dojo modules of all the icon contents at startup could slow down the startup time of the application. To improve the startup time performance, you can specify the lazy="true" parameter to IconItems. Then IconContainer loads dojo modules that are necessary for the icon content dynamically only when it is opened for the first time.
 
-Below is an example of lazy loading of icon contents. Before the dojo parser runs, the dojoType attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit.ColorPalette and dijit.ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open icons.
+Below is an example of lazy loading of icon contents. Before the dojo parser runs, the data-dojo-type attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit.ColorPalette and dijit.ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open icons.
 
 Note that currently lazy loading is supported only in the sync mode, since lazy loading is performed synchronously using dojo.require.
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Color Palette" lazy="true">
-      <div dojoType='dijit.ColorPalette'></div>
+  <ul data-dojo-type="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Color Palette" lazy="true">
+      <div data-dojo-type='dijit.ColorPalette'></div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Progress Bar" lazy="true">
-      <div dojoType='dijit.ProgressBar'></div>
+    <li data-dojo-type="dojox.mobile.IconItem" label="Progress Bar" lazy="true">
+      <div data-dojo-type='dijit.ProgressBar'></div>
     </li>
   </ul>
 
@@ -87,15 +87,15 @@ In this example, icon content is shown below the icons, and only one icon conten
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading">Icon Container (Single/Below)</h1>
-  <ul dojoType="dojox.mobile.IconContainer" transition="below" single="true" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Icon 1">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Single/Below)</h1>
+  <ul data-dojo-type="dojox.mobile.IconContainer" transition="below" single="true" iconBase="images/icon-1.png">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #1
       </div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Icon 2">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #2
       </div>
     </li>
@@ -110,15 +110,15 @@ In this example, icon content is shown below the icons, and multiple icon conten
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading">Icon Container (Single/Flip)</h1>
-  <ul dojoType="dojox.mobile.IconContainer" transition="flip" single="true" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Icon 1">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Single/Flip)</h1>
+  <ul data-dojo-type="dojox.mobile.IconContainer" transition="flip" single="true" iconBase="images/icon-1.png">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #1
       </div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Icon 2">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #2
       </div>
     </li>
@@ -133,15 +133,15 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading">Icon Container (Multi/Below)</h1>
-  <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Icon 1">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Multi/Below)</h1>
+  <ul data-dojo-type="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #1
       </div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Icon 2">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #2
       </div>
     </li>
@@ -156,15 +156,15 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading">Icon Container (Multi/Flip)</h1>
-  <ul dojoType="dojox.mobile.IconContainer" transition="flip" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Icon 1">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Multi/Flip)</h1>
+  <ul data-dojo-type="dojox.mobile.IconContainer" transition="flip" iconBase="images/icon-1.png">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #1
       </div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Icon 2">
-      <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
+      <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
 	App #2
       </div>
     </li>

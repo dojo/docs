@@ -37,10 +37,10 @@ A simple declarative example
 
     <h2>Content before</h2>
     <div id="titleGroupA" data-dojo-type="dojox.widget.TitleGroup">
-        <div dojoType="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
-        <div dojoType="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div data-dojo-type="dijit.form.Button">click</div></div>
-        <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem</p><p>lorem</p></div>
-        <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>
+        <div data-dojo-type="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
+        <div data-dojo-type="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div data-dojo-type="dijit.form.Button">click</div></div>
+        <div data-dojo-type="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem</p><p>lorem</p></div>
+        <div data-dojo-type="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>
     </div>
     <h2>Content after</h2>
 
@@ -85,7 +85,7 @@ Adding and removing children
         </script>
     </div>
     <div id="titleGroupB" style="width:500px" data-dojo-type="dojox.widget.TitleGroup">
-        <div dojoType="dijit.TitlePane" open="true" title="Pane 1">
+        <div data-dojo-type="dijit.TitlePane" open="true" title="Pane 1">
             Pane 1
         </div>
     </div>

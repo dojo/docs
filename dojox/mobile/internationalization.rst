@@ -61,8 +61,8 @@ If you need to do internationalization at client-side , use of dojo.i18n is the 
 	  </script>
       </head>
       <body>
-	  <div id="settings" dojoType="dojox.mobile.View">
-	      <button id="btn1" class="mblBlueButton" dojoType="dojox.mobile.Button">Sunday</button>
+	  <div id="settings" data-dojo-type="dojox.mobile.View">
+	      <button id="btn1" class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Sunday</button>
 	  </div>
       </body>
   </html>
@@ -82,13 +82,13 @@ You can embed string resource keys in your markup as shown below. Then, the keys
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading" back="L_DAY_SUNDAY">L_DAY_OF_THE_WEEK</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" back="L_DAY_SUNDAY">L_DAY_OF_THE_WEEK</h1>
 
 It is not mandatory, but one simple approach is to use English text as resource keys. For example, as shown below, you can write as if you are writing an ordinary English application.
 
 .. html ::
 
-  <h1 dojoType="dojox.mobile.Heading" back="Sunday">Day of the Week</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" back="Sunday">Day of the Week</h1>
 
 In fact, however, what you wrote are not English resource values, but resource keys, "Sunday" and "Day of the Week". That is, if you provide an Italian resource as follows,
 

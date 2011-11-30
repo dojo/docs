@@ -151,7 +151,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 
   .. html ::
 
-    <div dojoType="dojox.gauges.AnalogGauge"
+    <div data-dojo-type="dojox.gauges.AnalogGauge"
 	id="declarativeGauge"
 	width="350"
 	height="275"
@@ -163,7 +163,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 	useRangeStyles="0"
 	hideValues="true"
 	majorTicks="{length: 5, offset: 135, interval: 5}">
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="0"
 	high="10"
 	hover="0 - 10"
@@ -172,7 +172,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         id="range1"
         low="10"
         high="20"
@@ -182,7 +182,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
 	}">
       </div>
-      <div  dojoType="dojox.gauges.Range"
+      <div  data-dojo-type="dojox.gauges.Range"
         id="range2"
         low="20"
         high="30"
@@ -192,7 +192,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         id="range3"
         low="30"
         high="40"
@@ -202,7 +202,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
          id="range4"
          low="40"
          high="50"
@@ -212,7 +212,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         id="range5"
         low="50"
         high="60"
@@ -222,7 +222,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         id="range6"
         low="60"
         high="70"
@@ -232,7 +232,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         id="range7"
         low="70"
         high="80"
@@ -278,7 +278,7 @@ A half circle gauge with two indicators overlay graphic
 
   .. html ::
 
-    <div dojoType="dojox.gauges.AnalogGauge"
+    <div data-dojo-type="dojox.gauges.AnalogGauge"
       id="halfCircle"
       width="350"
       height="225"
@@ -291,7 +291,7 @@ A half circle gauge with two indicators overlay graphic
       hideValues="true"
       majorTicks="{length: 5, offset: 125, interval: 5}"
       image="{url:'{{dataUrl}}dojox/gauges/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="0"
 	high="10"
 	hover="0 - 10"
@@ -300,7 +300,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="10"
         high="20"
         hover="10 - 20"
@@ -309,7 +309,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
 	}">
       </div>
-      <div  dojoType="dojox.gauges.Range"
+      <div  data-dojo-type="dojox.gauges.Range"
         low="20"
         high="30"
         hover="20 - 30"
@@ -318,7 +318,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="30"
         high="40"
         hover="30 - 40"
@@ -327,7 +327,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
          low="40"
          high="50"
          hover="40 - 50"
@@ -336,7 +336,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="50"
         high="60"
         hover="50 - 60"
@@ -345,7 +345,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="60"
         high="70"
         hover="60 - 70"
@@ -354,7 +354,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
 	}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="70"
         high="75"
         hover="70 - 75"
@@ -418,7 +418,7 @@ Speedometer style gauge with arc indicator and needle indicator
 
   .. html ::
 
-    <div dojoType="dojox.gauges.AnalogGauge"
+    <div data-dojo-type="dojox.gauges.AnalogGauge"
       id='speedo'
       width="450"
       height="300"
@@ -432,12 +432,12 @@ Speedometer style gauge with arc indicator and needle indicator
       color: "white"
       majorTicks="{length: 10, offset: 105, interval: 10, color: 'gray'}"
       minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="0"
 	high="100"
         color="{'color': 'black'}">
       </div>
-      <div dojoType="dojox.gauges.Range"
+      <div data-dojo-type="dojox.gauges.Range"
         low="100"
 	high="200"
         color="{'color': 'black'}">

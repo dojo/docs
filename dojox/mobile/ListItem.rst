@@ -114,8 +114,8 @@ In this example, no view transition is specified, but if you specify the one, mo
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.RoundRectList">
-      <li dojoType="dojox.mobile.ListItem"
+  <ul data-dojo-type="dojox.mobile.RoundRectList">
+      <li data-dojo-type="dojox.mobile.ListItem"
 	  icon="mblDomButtonRedCircleMinus"
 	  label="Label"
 	  rightText="rightText"
@@ -136,16 +136,16 @@ html fragment:
 
 .. html ::
 
-  <div dojoType="dojox.mobile.View">
-      <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-	  <li dojoType="dojox.mobile.ListItem">
+  <div data-dojo-type="dojox.mobile.View">
+      <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      Jack Coleman
 	  </li>
-	  <li dojoType="dojox.mobile.ListItem">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      James Evans
 	  </li>
-	  <li dojoType="dojox.mobile.ListItem">
+	  <li data-dojo-type="dojox.mobile.ListItem">
 	      Jason Griffin
 	  </li>
       </ul>

@@ -62,11 +62,11 @@ After using the proper requires, the following is all that is needed to embed Dr
 
 .. html ::
  
- <div dojoType="dojox.drawing.Drawing" id="drawing" style="width:800px; height:400px;"
+ <div data-dojo-type="dojox.drawing.Drawing" id="drawing" style="width:800px; height:400px;"
      plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{gap:100}}]">
  </div>
  
- <div dojoType="dojox.drawing.Toolbar" drawingId="drawing" class="drawingToolbar vertical">
+ <div data-dojo-type="dojox.drawing.Toolbar" drawingId="drawing" class="drawingToolbar vertical">
      <div tool="dojox.drawing.tools.Line" selected="false">Line</div>
      <div tool="dojox.drawing.tools.Rect" selected="false">Rect</div>
      <div tool="dojox.drawing.tools.Ellipse" selected="false">Ellipse</div>

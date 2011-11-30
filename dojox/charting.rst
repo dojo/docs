@@ -1121,7 +1121,7 @@ One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. Th
 
 .. html ::
   
-  <div dojoType="dojox.charting.widget.Chart2D" id="chart4"
+  <div data-dojo-type="dojox.charting.widget.Chart2D" id="chart4"
       theme="dojox.charting.themes.PlotKit.green"
       style="width: 300px; height: 300px;">
     <div class="plot" name="default" type="Pie" radius="100"

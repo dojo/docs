@@ -57,7 +57,7 @@ Declarative example
        <p>Programmatic: (destroy() removes this.domNode)<br></p>
 		
        <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185"
-                 dojoType="dojox.image.MagnifierLite"
+                 data-dojo-type="dojox.image.MagnifierLite"
                       src="http://www.zelda-infinite.com/games/zelda1/overworld.png" />
 
                 <button data-dojo-type="dijit.form.Button" id="foob">
@@ -69,7 +69,7 @@ Declarative example
 			</script>
 		</button>
 
-		<button dojoType="dijit.form.Button" id="foobd" disabled="disabled">
+		<button data-dojo-type="dijit.form.Button" id="foobd" disabled="disabled">
 			Destroy It
 			<script type="dojo/method" data-dojo-event="onClick">
 				dijit.byId("foob").setAttribute("disabled",false);

@@ -32,4 +32,4 @@ Declarative example
 
 .. html ::
 
-  <h2 dojoType="dojox.mobile.RoundRectCategory">Transition Effects</h2>
+  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Transition Effects</h2>

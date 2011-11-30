@@ -76,7 +76,7 @@ Parameters from this widget
 |              |          |                       |the icon is opened by the user, the required modules are loaded and dojo widgets are instantiated.         |
 |              |          |                       |This option works only in the sync loader mode.                                                            |
 +--------------+----------+-----------------------+-----------------------------------------------------------------------------------------------------------+
-|requires      |String    |""                     |Comma-separated required module names to be loaded. All the modules specified with dojoType and their      |
+|requires      |String    |""                     |Comma-separated required module names to be loaded. All the modules specified with data-dojo-type and their|
 |              |          |                       |depending modules are automatically loaded by the IconItem. If you need other extra modules to be loaded,  |
 |              |          |                       |use this parameter. If lazy is true, the specified required modules are loaded when the user opens the icon|
 |              |          |                       |for the first time. This option works only in the sync loader mode.                                        |

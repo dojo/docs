@@ -33,7 +33,7 @@ Declarative example
 
   .. html ::
 
-    <div dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
+    <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" data-dojo-event="onReset">
             return confirm('Press OK to reset widget values');
@@ -55,7 +55,7 @@ Declarative example
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" id="name" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" id="name" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -63,14 +63,14 @@ Declarative example
                     <label for="dob">Date of birth:
                 </td>
                 <td>
-                    <input type="text" id="dob" name="dob" dojoType="dijit.form.DateTextBox"/>
+                    <input type="text" id="dob" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
                 </td>
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
-        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit.form.Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
+        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
+        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
 
 Note that it's using a <div> node instead of the obvious choice of a <form> node because of some `IE issues <http://bugs.dojotoolkit.org/ticket/8424>`_
@@ -103,7 +103,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 
   .. html ::
 
-    <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
+    <div data-dojo-type="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -111,7 +111,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -119,14 +119,14 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
                     <label for="dob">Date of birth:
                 </td>
                 <td>
-                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
+                    <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
                 </td>
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
-        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
+        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
+        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
 
 The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behaviour to the previous example.
@@ -154,7 +154,7 @@ The `validate()` function does some extra UI related work, including highlightin
 
   .. html ::
 
-    <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
+    <div data-dojo-type="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -162,7 +162,7 @@ The `validate()` function does some extra UI related work, including highlightin
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -170,14 +170,14 @@ The `validate()` function does some extra UI related work, including highlightin
                     <label for="dob">Date of birth:
                 </td>
                 <td>
-                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
+                    <input type="text" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
                 </td>
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
-        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
+        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
+        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
 
 
@@ -200,7 +200,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
 
   .. html ::
 
-    <div dojoType="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
+    <div data-dojo-type="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" data-dojo-event="validate">
            return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
@@ -224,7 +224,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -238,11 +238,11 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="alert('Form is ' + (myFormThree.validate()?'':'not ') + 'valid');return false">
+        <button data-dojo-type="dijit.form.Button" onClick="alert('Form is ' + (myFormThree.validate()?'':'not ') + 'valid');return false">
             Validate form
         </button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
-        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
+        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
     </div>
 
 

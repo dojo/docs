@@ -110,9 +110,9 @@ Create an object version of a form with Dijit widgets
 
     <p>The FORM</p>
     <form id="myform2">
-       <p><input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1"><br>
-       <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2"><br>
-       <input id="mycheck" dojoType="dijit.form.CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label></p>
+       <p><input type="text" data-dojo-type="dijit.form.TextBox" name="field1" value="value1"><br>
+       <input type="text" data-dojo-type="dijit.form.TextBox" name="field2" value="value2"><br>
+       <input id="mycheck" data-dojo-type="dijit.form.CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label></p>
     </form>
     <p><button id="convertFormDigits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button></p>
     <p>The form as an object:</p>

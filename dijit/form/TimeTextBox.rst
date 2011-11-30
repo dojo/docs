@@ -76,7 +76,7 @@ Declarative example
   .. html ::
 
      <input type="text" name="date1" id="time1" value="T15:00:00"
-       dojoType="dijit.form.TimeTextBox"
+       data-dojo-type="dijit.form.TimeTextBox"
        onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
        required="true" />
      <label for="time1">Drop down Time box. Click inside to display the time picker.</label>

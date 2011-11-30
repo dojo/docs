@@ -138,10 +138,10 @@ Here you will see a declaratively created StackContainer
     <button id="next" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').forward()}">&gt;</button>
   
     <div data-dojo-type="dijit.layout.StackContainer" id="stackContainer">
-      <div dojoType="dijit.layout.ContentPane" title="Questions">
+      <div data-dojo-type="dijit.layout.ContentPane" title="Questions">
       Please answer following questions
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="Answers">
+      <div data-dojo-type="dijit.layout.ContentPane" title="Answers">
       Here is what you should have answered :P
       </div>
     </div>

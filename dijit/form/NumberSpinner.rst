@@ -39,7 +39,7 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
 
   .. html ::
 
-   <input dojoType="dijit.form.NumberSpinner"
+   <input data-dojo-type="dijit.form.NumberSpinner"
         value="1000"
         smallDelta="10"
         constraints="{min:9,max:1550,places:0}"
@@ -103,7 +103,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
   .. html ::
 
     <label for="temperatureCelsius">Temperature in Celsius</label>
-    <div dojoType="dijit.form.NumberSpinner"
+    <div data-dojo-type="dijit.form.NumberSpinner"
        intermediateChanges="true"
        id="temperatureCelsius"
        constraints="{min:0,max:40}"

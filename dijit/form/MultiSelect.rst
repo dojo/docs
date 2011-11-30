@@ -32,7 +32,7 @@ Declarative example
 
 MultiSelect widgets always use a native SELECT tag and have child OPTION tags to describe selection choices, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. The OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
-**Note:** If you are using the declarative example and want to manually specify 'selected' or 'selected="selected"' on multiple <options> to have multiple selected on the initial load, you'll need to add the multiple="true" attribute to your native <select> element.  Eg. <select dojoType="dijit.form.MultiSelect" multiple="true"...
+**Note:** If you are using the declarative example and want to manually specify 'selected' or 'selected="selected"' on multiple <options> to have multiple selected on the initial load, you'll need to add the multiple="true" attribute to your native <select> element.  Eg. <select data-dojo-type="dijit.form.MultiSelect" multiple="true"...
 
 .. code-example ::
 
@@ -44,7 +44,7 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
 
   .. html ::
 
-    <select dojoType="dijit.form.MultiSelect" id="fruit" name="fruit" size="4">
+    <select data-dojo-type="dijit.form.MultiSelect" id="fruit" name="fruit" size="4">
       <option value="AP">Apples</option>
       <option value="OR">Oranges</option>
       <option value="PE" selected>Pears</option>

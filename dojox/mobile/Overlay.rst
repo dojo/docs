@@ -39,11 +39,11 @@ Example
 .. html ::
 
   <button onclick="dijit.registry.byId('customPicker').show()">slide up</button>
-  <div id="customPicker" dojoType="dojox.mobile.Overlay">
-        <h1 dojoType="dojox.mobile.Heading" label="Custom Picker">
-                <div dojoType="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;" onClick="dijit.registry.byId('customPicker').hide()"></div>
+  <div id="customPicker" data-dojo-type="dojox.mobile.Overlay">
+        <h1 data-dojo-type="dojox.mobile.Heading" label="Custom Picker">
+                <div data-dojo-type="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;" onClick="dijit.registry.byId('customPicker').hide()"></div>
         </h1>
-        <div id="spin1" dojoType="dojox.mobile.SpinWheelDatePicker"></div>
+        <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>
   </div>
 
 .. image:: SimpleMobileOverlay.png

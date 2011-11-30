@@ -119,7 +119,7 @@ Standard way to declaratively create the LightboxNano
      dojo.require("dojo.parser");
  </script>
  
- <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
+ <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
      <img src="/path/to/small/image.jpg">
  </a>
 
@@ -133,7 +133,7 @@ Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id
      dojo.require("dojo.parser");
  </script>
  
- <a dojoType="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
+ <a data-dojo-type="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
      <img src="/path/to/small/image.jpg">
  </a>
 
@@ -163,11 +163,11 @@ A 1.6 workaround
 
 *This problem will most likely go away in 1.7, which I am told will mix source node attributes and data-dojo-props attributes and thus negate the discussion here.*
 
-Dojo 1.6 introduced the use of data-dojo-type instead of dojoType, and changed the way markup attributes are passed in to the dijits being constructed.  This means that the following examples are not the same:
+Dojo 1.6 introduced the use of data-dojo-type instead of data-dojo-type, and changed the way markup attributes are passed in to the dijits being constructed.  This means that the following examples are not the same:
 
 .. js ::
   
- <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
+ <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
      <img src="/path/to/small/image.jpg">
  </a>
  

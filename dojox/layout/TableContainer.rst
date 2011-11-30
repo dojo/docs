@@ -91,10 +91,10 @@ Simple Example, one column and no styling
   .. html::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:1" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="First Name:" value="Michael"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:" value="Collins"></div>
-      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-      <div dojoType="dijit.form.NumberSpinner" title="Age" value="25"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Michael"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="Collins"></div>
+      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="25"></div>
     </div>
 
 Two Columns, Label Styling
@@ -120,10 +120,10 @@ Two Columns, Label Styling
   .. html::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'justLabels'" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:" value="De Valera"></div>
-      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-      <div dojoType="dijit.form.NumberSpinner" title="Age" value="40"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="De Valera"></div>
+      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="40"></div>
     </div>
 
   Apply a custom class that colors the labels.
@@ -161,10 +161,10 @@ Two Columns, Label and Value cell Styling
   .. html::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues'" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:" value="Pearse"></div>
-      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-      <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="Pearse"></div>
+      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="30"></div>
     </div>
 
   Apply a custom class that styles both the label and value cells.
@@ -208,14 +208,14 @@ Using Colspan
   .. html::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:4, customClass:'labelsAndValues'" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
-      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
+      <div data-dojo-type="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
+      <textarea data-dojo-type="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
       </textarea>
-     <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-     <div dojoType="dijit.form.CheckBox" title="Is Married"></div>
-     <div dojoType="dijit.form.CheckBox" title="Has Children"></div>
-     <div dojoType="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>
+     <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
+     <div data-dojo-type="dijit.form.CheckBox" title="Is Married"></div>
+     <div data-dojo-type="dijit.form.CheckBox" title="Has Children"></div>
+     <div data-dojo-type="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>
       
     </div>
 
@@ -326,10 +326,10 @@ Setting the Label Width
   .. html::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues', labelWidth:10" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="1" value="United States"></div>
-      <div dojoType="dijit.form.TextBox" title="2" value="Ireland"></div>
-      <div dojoType="dijit.form.TextBox" title="3" value="Italy"></div>
-      <div dojoType="dijit.form.TextBox" title="4" value="Faroe Islands"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="1" value="United States"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="2" value="Ireland"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="3" value="Italy"></div>
+      <div data-dojo-type="dijit.form.TextBox" title="4" value="Faroe Islands"></div>
       
     </div>
 

@@ -51,11 +51,11 @@ Declarative example1
 
 .. html ::
 
-  <div dojoType="dojox.mobile.FixedSplitter" orientation="H">
-      <div dojoType="dojox.mobile.FixedSplitterPane" style="width:200px;border-right:1px solid black;background-color:yellow;">
+  <div data-dojo-type="dojox.mobile.FixedSplitter" orientation="H">
+      <div data-dojo-type="dojox.mobile.FixedSplitterPane" style="width:200px;border-right:1px solid black;background-color:yellow;">
           pane #1 (width=200px)
       </div>
-      <div dojoType="dojox.mobile.FixedSplitterPane" style="background-color:pink;">
+      <div data-dojo-type="dojox.mobile.FixedSplitterPane" style="background-color:pink;">
           pane #2
       </div>
   </div>
@@ -67,14 +67,14 @@ Declarative example2
 
 .. html ::
 
-  <div dojoType="dojox.mobile.FixedSplitter" orientation="V">
-      <div dojoType="dojox.mobile.FixedSplitterPane" style="background-color:cyan;height:200px;">
+  <div data-dojo-type="dojox.mobile.FixedSplitter" orientation="V">
+      <div data-dojo-type="dojox.mobile.FixedSplitterPane" style="background-color:cyan;height:200px;">
           pane #1 (height=200px)
       </div>
-      <div dojoType="dojox.mobile.FixedSplitterPane" style="background-color:yellow;height:100px;border-bottom:1px solid black">
+      <div data-dojo-type="dojox.mobile.FixedSplitterPane" style="background-color:yellow;height:100px;border-bottom:1px solid black">
           pane #2 (height=100px)
       </div>
-      <div dojoType="dojox.mobile.FixedSplitterPane" style="background-color:pink;">
+      <div data-dojo-type="dojox.mobile.FixedSplitterPane" style="background-color:pink;">
           pane #3
       </div>
   </div>

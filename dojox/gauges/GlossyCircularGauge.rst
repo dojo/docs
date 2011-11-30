@@ -122,7 +122,7 @@ An other gauge sample
 
    .. html ::
 
-          <div dojoType="dojox.gauges.GlossyCircularGauge"
+          <div data-dojo-type="dojox.gauges.GlossyCircularGauge"
              id="csGaugeMargin"
              value="0"
              width="170"

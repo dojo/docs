@@ -56,7 +56,7 @@ Declarative example
   .. html ::
 
 	<input type="text" name="date1" id="date1" value="2005-12-30"
-		dojoType="dijit.form.DateTextBox"
+		data-dojo-type="dijit.form.DateTextBox"
 		required="true" />
         <label for="date1">Drop down Date box. Click inside to display the calendar.</label>
 
@@ -126,10 +126,10 @@ The DateTextBox widget obeys the ``constraints`` you give, much like :ref:`dijit
   .. html ::
 
 	<label for="fromDate">From:</label>
-	<input id="fromDate" type="text" name="fromDate" dojoType="dijit.form.DateTextBox" required="true"
+	<input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit.form.DateTextBox" required="true"
 		onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
 	<label for="toDate">To:</label>
-	<input id="toDate" type="text" name="toDate" dojoType="dijit.form.DateTextBox" required="true"
+	<input id="toDate" type="text" name="toDate" data-dojo-type="dijit.form.DateTextBox" required="true"
 		onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
 
 
@@ -155,7 +155,7 @@ Sometimes you may want to input and display years in a format with only 2-digit 
   .. html ::
 
 	<label for="shortYear">From:</label>
-	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
+	<input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
 
 Accessibility
 =============

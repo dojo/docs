@@ -82,8 +82,8 @@ To use the Uploader, simply require it and use the appropriate data-dojo-type in
 .. html ::
   
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
-    <input name="uploadedfile" multiple="true" type="file" dojoType="dojox.form.Uploader" label="Select Some Files" id="uploader" />
-    <input type="submit" label="Submit" dojoType="dijit.form.Button" />
+    <input name="uploadedfile" multiple="true" type="file" data-dojo-type="dojox.form.Uploader" label="Select Some Files" id="uploader" />
+    <input type="submit" label="Submit" data-dojo-type="dijit.form.Button" />
  </form>
  
 
@@ -97,8 +97,8 @@ Plugins will self initialize, so to use one, all that is needed is to require it
 .. html ::
   
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
-    <input name="uploadedfile" multiple="true" type="file" dojoType="dojox.form.Uploader" label="Select Some Files" id="uploader" />
-    <input type="submit" label="Submit" dojoType="dijit.form.Button" />
+    <input name="uploadedfile" multiple="true" type="file" data-dojo-type="dojox.form.Uploader" label="Select Some Files" id="uploader" />
+    <input type="submit" label="Submit" data-dojo-type="dijit.form.Button" />
  </form>
  
  

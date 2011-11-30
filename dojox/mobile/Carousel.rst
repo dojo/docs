@@ -59,6 +59,6 @@ Declarative example
 
 .. html ::
 
-  <div id="carousel1" dojoType="dojox.mobile.Carousel" height="150px" navButton="true" store="store1" numVisible="2" title="Category"></div>
+  <div id="carousel1" data-dojo-type="dojox.mobile.Carousel" height="150px" navButton="true" store="store1" numVisible="2" title="Category"></div>
 
 .. image:: Carousel-desc.png

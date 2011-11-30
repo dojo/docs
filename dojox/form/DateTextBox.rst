@@ -57,7 +57,7 @@ The dojox.form.MonthTextBox only returns an integer value representing the selec
  dojo.require("dojox.form.DateTextBox");
  dojo.require("dojox.widget.Calendar");
 
- <span id="dtb2" dojoType="dojox.form.DateTextBox"
+ <span id="dtb2" data-dojo-type="dojox.form.DateTextBox"
    popupClass="dojox.widget.MonthAndYearlyCalendar"
    constraints="{datePattern: 'MMMM yyyy'}"></span>
 

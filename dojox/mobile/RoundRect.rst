@@ -30,7 +30,7 @@ Declarative example
 
 .. html ::
 
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
     This module provides some widgets that can be used to build web-based
     applications for mobile devices such as iPhone or Android.
   </div>

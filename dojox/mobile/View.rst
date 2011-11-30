@@ -40,17 +40,17 @@ In this example, there are two Views, "view1" and "view2", and the user can move
 
 .. html ::
 
-  <div id="view1" dojoType="dojox.mobile.View" selected="true">
-    <h1 dojoType="dojox.mobile.Heading">View 1</h1>
-    <ul dojoType="dojox.mobile.RoundRectList">
-      <li dojoType="dojox.mobile.ListItem" icon="images/i-icon-1.png" moveTo="view2" transition="slide">
+  <div id="view1" data-dojo-type="dojox.mobile.View" selected="true">
+    <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
+    <ul data-dojo-type="dojox.mobile.RoundRectList">
+      <li data-dojo-type="dojox.mobile.ListItem" icon="images/i-icon-1.png" moveTo="view2" transition="slide">
 	Go To View 2
       </li>
     </ul>
   </div>
 
-  <div id="view2" dojoType="dojox.mobile.View">
-    <h1 dojoType="dojox.mobile.Heading" back="View 1" moveTo="view1">View 2</h1>
+  <div id="view2" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" back="View 1" moveTo="view1">View 2</h1>
   </div>
 
 .. image:: View-anim.gif

@@ -33,12 +33,12 @@ To use the FileList, simply require it and use the appropriate data-dojo-type in
  <form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
 	<fieldset>
 		<legend>Form Post Test</legend>
-		<input class="browseButton" name="uploadedfile" multiple="true" type="file" force="iframe" dojoType="dojox.form.Uploader" label="Select Some Files" id="uploader">
+		<input class="browseButton" name="uploadedfile" multiple="true" type="file" force="iframe" data-dojo-type="dojox.form.Uploader" label="Select Some Files" id="uploader">
 		<input type="text" name="album" value="Summer Vacation" />
 		<input type="text" name="year" value="2011" />
-		<input type="button" id="remBtn" label="Clear" dojoType="dijit.form.Button" />
-		<input type="submit" label="Submit" dojoType="dijit.form.Button" />
-		<div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploader"></div>
+		<input type="button" id="remBtn" label="Clear" data-dojo-type="dijit.form.Button" />
+		<input type="submit" label="Submit" data-dojo-type="dijit.form.Button" />
+		<div id="files" data-dojo-type="dojox.form.uploader.FileList" uploaderId="uploader"></div>
 	</fieldset>
  </form>
   

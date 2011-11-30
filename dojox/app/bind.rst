@@ -8,7 +8,7 @@ dojox.app.bind
 :Version: 1.0
 :Available: since V1.7
 
-dojox.app.bind provides a function to query dojox.mvc widgets, get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
+dojox.app.bind provides a function to query dojox.mvc widgets, get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. data-dojo-type, data-dojo-type, ref and data-dojo-props are compatible in a view.
 
 Binding API
 ==============
@@ -83,20 +83,20 @@ Sample view template for data binding - simple.html
 
 .. html ::
 
-  <div id="infoGroup" class="fieldset" dojoType="dojox.mvc.Group" ref="'names.0'">
+  <div id="infoGroup" class="fieldset" data-dojo-type="dojox.mvc.Group" ref="'names.0'">
     <div class="field-row">
       <span>Order #</span>
-      <input type=text id="lastnameInput" dojoType="dojox.mobile.TextBox"
+      <input type=text id="lastnameInput" data-dojo-type="dojox.mobile.TextBox"
              placeholder="Order #" ref="'rel:Serial'"></input>
     </div>
     <div class="field-row">
       <span>Last</span>
-      <input type=text id="serialInput" dojoType="dojox.mobile.TextBox"
+      <input type=text id="serialInput" data-dojo-type="dojox.mobile.TextBox"
              placeholder="Last" ref="'rel:Last'"></input>
     </div>
     <div class="field-row">
       <span>Email</span>
-      <input type=text id="emailInput1" dojoType="dojox.mobile.TextBox"
+      <input type=text id="emailInput1" data-dojo-type="dojox.mobile.TextBox"
              placeholder="Last" ref="'rel:Email'"></input>
     </div>
   </div>
