@@ -199,68 +199,6 @@ Setting the zIndex
     </ul>
     </div>
 
-Nesting an Editor With FullScreen in BorderContainer
-----------------------------------------------------
-
-**Note:** The Demo Viewer runs in an iframe, so it can only maximize to the size of the demo viewer.
-
-.. code-example::
-  :djConfig: parseOnLoad: true
-  :version: 1.4
-
-  .. javascript::
-
-    <script>
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FullScreen");
-      dojo.require("dijit.layout.BorderContainer");
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dojo.parser");	// scan page for widgets and instantiate them
-    </script>
-
-  .. css ::
-
-    <style type="text/css">
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
-    </style>
-
-  .. html::
-
-    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true,liveSplitters:true" style="width: 100%; height: 100%;">
-      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'top'" style="height: 100px;"><b>This example demonstrates how to embed an editor in a BorderContainer and still use the FullScreen plugin</b></div>
-      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">
-        <br>
-        <div data-dojo-type="dijit.Editor" height="250px"id="input" data-dojo-props="extraPlugins:['fullscreen']">
-          <div>
-          <br>
-          blah blah & blah!
-          <br>
-          </div>
-          <br>
-          <table>
-          <tbody>
-          <tr>
-          <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-          <td style="border-style:solid; border-width: 2px; border-color: gray;">
-          Two cell
-          </td>
-          </tr>
-          </tbody>
-          </table>
-          <ul>
-          <li>item one</li>
-          <li>
-          item two
-          </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
 See Also
 ========
 
