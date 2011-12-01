@@ -115,6 +115,7 @@ Individuals who have signed Dojo CLAs
 * Davis, Conor
 * Davis, David Wayne
 * Davor, HRG
+* DeJarnett, Philip
 * Della-Franca, Sean
 * Demay, Vincent
 * Dierendonck, Gergoire
