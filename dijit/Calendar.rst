@@ -121,7 +121,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
       }
     </style>
 
-With a local custom template to change the layout (does not work against CDN)
+Custom styling
 
 
 .. code-example::
@@ -132,31 +132,13 @@ With a local custom template to change the layout (does not work against CDN)
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
-
-      dojo.ready(function(){
-        //Need to declare BigCalendar here in an ready block so that it works
-        //with xdomain loading, where the dojo.require for dijit.Calendar
-        //may load asynchronously. This also means we cannot have HTML
-        //markup in the body tag for BigCalendar, but instead inject it in this
-        //onload handler after BigCalendar is defined.
-        dojo.declare("BigCalendar", dijit.Calendar, {
-          
-          getClassForDate: function(date){
-           if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
-          }
-        });
-
-        var bigCalendar = dojo.byId("calendar5");
-        bigCalendar.setAttribute("data-dojo-type", "BigCalendar");
-        dojo.parser.parse(bigCalendar.parentNode);
-      });
     </script>
+  
 
   .. html::
 
-    <input id="calendar5" dayWidth="abbr" value="2008-03-13">
+    <input id="calendar5" data-dojo-type="dijit.Calendar" dayWidth="abbr" value="2008-03-13">
     
   .. css::
 
@@ -166,10 +148,6 @@ With a local custom template to change the layout (does not work against CDN)
 		#calendar5 .dijitCalendarDayLabel { font-weight: bold }
 		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
 		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
-		.blue { color: blue }
-                .{{ theme }} table.dijitCalendarContainer {
-                  margin: 25px auto;
-                }
 	</style>
         
 
