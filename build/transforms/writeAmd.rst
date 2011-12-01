@@ -43,7 +43,7 @@ the following properties:
 
 ``discard``
   Optional. If present, should be truthy to indicate the layer is a synthetic layer used only to compute another layer's
-  contents.
+  contents. Deprecated as of 1.7; use ``exclude`` to explicitly exclude modules from layers instead.
 
 ``boot``
   Optional. If present, should be truthy to indicate the layer should be written with the dojo loader to form a kind of

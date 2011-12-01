@@ -422,6 +422,13 @@ The Build Tools have been completely reimplemented in Dojo 1.7, to take full adv
 
   :ref:`Build Tool Reference Guide (1.7 Draft) <build/buildSystem>`
 
+As part of this reimplementation, two important changes have been made:
+
+1. Due to increased flexibility in the new loader, the "clean" action is now a no-op in order to avoid any
+   unintentional file deletion. Cleaning the destination directory before a build must now be done manually.
+2. The ``discard`` option has been replaced with an ``exclude`` option. Instead of creating a layer with the
+   ``discard`` flag, use ``exclude`` on your existing layers to explicitly exclude modules from them. See
+   :ref:`the writeAmd documentation <build/transforms/writeAmd>` for details on these options.
 
 Migration
 =========
