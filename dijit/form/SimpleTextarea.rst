@@ -33,8 +33,8 @@ First we will create a SimpleTextarea widget programmatically. Notice how we pas
           rows: "4",
           cols: "50",
           style: "width:auto;"
-        },"myarea");
-        textarea.set("value","Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
+        }, "myarea");
+        textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
       });
     </script>
 

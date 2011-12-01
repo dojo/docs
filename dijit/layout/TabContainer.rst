@@ -43,7 +43,7 @@ Note that the tabs all have a fixed height.
     dojo.ready(function(){
         var tc = new dijit.layout.TabContainer({
             style: "height: 100%; width: 100%;"
-        },"tc1-prog");
+        }, "tc1-prog");
   
         var cp1 = new dijit.layout.ContentPane({
              title: "Food",
@@ -171,7 +171,7 @@ Normally, TabContainer will show the first Tab. But it's also possible to automa
     dojo.ready(function(){
         var tc = new dijit.layout.TabContainer({
             style: "height: 100%; width: 100%;"
-        },"tc1-prog");
+        }, "tc1-prog");
   
         var cp1 = new dijit.layout.ContentPane({
              title: "First Tab",
@@ -237,7 +237,7 @@ the ``addChild`` method accepts a position index, telling where in the order to 
   
   var tabs = dijit.byId("myTabContainer");
   var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
-  tabs.addChild(pane,1);
+  tabs.addChild(pane, 1);
 
 This will add the new remote pane after the first pane (0).
 
@@ -303,7 +303,7 @@ To monitor when children are added/deleted, use dojo/aspect or dojo.connect:
   // assuming the same id="bar" TabContainer
   var tabs = dijit.byId("bar");
   
-  dojo.connect(tabs,"addChild",function(child){
+  dojo.connect(tabs, "addChild", function(child){
       console.log("just added: ", child);
   });
 

@@ -97,7 +97,8 @@ Tabs at the left, with a strip.  Note that left tabs don't work in conjunction w
 Bottom Tabs
 ===========
 
-Tabs at the bottom,with a strip.   Note that bottom tabs don't work in conjunction with doLayout=false.
+Tabs at the bottom, with a strip.
+Note that bottom tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
@@ -133,7 +134,7 @@ One technique to allow validation, and still use the parser would be to simply d
     dojo.require("dojo.parser");
     dojo.ready(function(){
         dojo.query("div[rel]").forEach(function(n){
-            var className = dojo.attr(n,"rel");
+            var className = dojo.attr(n, "rel");
             // now set it
             dojo.attr(n, "data-dojo-type", className);
         });
@@ -174,12 +175,12 @@ similar to what the parser does:
         dojo.query(".tc1cp").forEach(function(n){
             new dijit.layout.ContentPane({
                 // just pass a title: attribute, this, we're stealing from the node
-                title: dojo.attr(n,"title")
+                title: dojo.attr(n, "title")
             }, n);
         });
         var tc = new dijit.layout.TabContainer({
             style: dojo.attr("tc1-prog", "style")
-        },"tc1-prog");
+        }, "tc1-prog");
         tc.startup();
     });
 

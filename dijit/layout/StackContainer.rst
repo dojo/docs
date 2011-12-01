@@ -87,7 +87,7 @@ Here's an example of a programatically created StackContainer, and associated St
         var sc = new dijit.layout.StackContainer({
             style: "height: 300px; width: 400px;",
             id: "myProgStackContainer"
-        },"scontainer-prog");
+        }, "scontainer-prog");
   
         var cp1 = new dijit.layout.ContentPane({
              title: "page 1",

@@ -100,8 +100,8 @@ Javascript declaration, with a restriction of +/- one week from the current date
 		new dijit.Calendar({
 			value: new Date(),
 			isDisabledDate: function(d){
-				var d = new Date(d); d.setHours(0,0,0,0);
-				var today = new Date(); today.setHours(0,0,0,0);
+				var d = new Date(d); d.setHours(0, 0, 0, 0);
+				var today = new Date(); today.setHours(0, 0, 0, 0);
 				return Math.abs(dojo.date.difference(d, today, "week")) > 0;
 			}
 		}, "mycal");

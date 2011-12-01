@@ -102,7 +102,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
     <div data-dojo-type="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" data-dojo-event="validate">
-           return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
+           return dojo.query('INPUT[name=order]', 'myFormThree').filter(function(n){return n.checked;}).length > 0 &&
            dijit.form.Form.prototype.validate.apply(this, arguments);
         </script>
         <script type="dojo/method" data-dojo-event="onSubmit">
