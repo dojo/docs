@@ -52,7 +52,7 @@ For this simple loop, `dojo.forEach` isn't anything exciting. But combined with 
   require(["dojo/_base/array", "dojo/query"], function(array, query){
     array.forEach(
       query("select"),
-      function(selectTag) {
+      function(selectTag){
         selectTag.disabled = true;
       }
     );
@@ -61,7 +61,7 @@ For this simple loop, `dojo.forEach` isn't anything exciting. But combined with 
   // Dojo < 1.7
   dojo.forEach(
     dojo.query("select"),
-    function(selectTag) {
+    function(selectTag){
       selectTag.disabled = true;
     }
   );

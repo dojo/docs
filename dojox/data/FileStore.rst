@@ -152,9 +152,9 @@ A complete code example of querying the entire filesystem for a wildcard matched
  
   var fileStore = new dojox.data.FileStore({url: "myService.php", pathAsQueryParam: true});
     function searchDone(items, request){
-      if (items) {
+      if(items){
         var i;
-        for (i = 0; i < items.length; i++) {
+        for(i = 0; i < items.length; i++){
           console.log("Found file: " + fileStore.getValue(items[i], "name") + " in directory: " + fileStore.getValue(items[i], "parentDir"));
         }
       }

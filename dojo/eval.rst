@@ -28,9 +28,9 @@ Dojo 1.7 (AMD)
 .. js ::
  
   <script type="text/javascript">
-  require(["dojo/_base/declare", "dojo/_base/kernel"], function(declare, dojo) {
+  require(["dojo/_base/declare", "dojo/_base/kernel"], function(declare, dojo){
     declare('Foo', null, {
-      foo: function() {
+      foo: function(){
         eval('var fooBar = "bar"');
       }
     });
@@ -41,7 +41,7 @@ Dojo 1.7 (AMD)
     console.info(fooBar);
 
     declare('Bar', null, {
-      bar: function() {
+      bar: function(){
         dojo.eval('var barBaz = "baz"');
       }
     });
@@ -60,7 +60,7 @@ Dojo < 1.7
  
  <script type="text/javascript">
   dojo.declare('Foo', null, {
-    foo: function() {
+    foo: function(){
       eval('var fooBar = "bar"');
     }
   });
@@ -72,7 +72,7 @@ Dojo < 1.7
 
 
   dojo.declare('Bar', null, {
-    bar: function() {
+    bar: function(){
       dojo.eval('var barBaz = "baz"');
     }
   });

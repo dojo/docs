@@ -16,8 +16,8 @@ Let's take a quick look at a pseudo-code example of using partial:
 
 .. js ::
 
-  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
-    var dataLoaded = function(someFirstParam, data, ioargs) {};
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr){
+    var dataLoaded = function(someFirstParam, data, ioargs){};
 
     var args = {
       url: "foo",
@@ -31,7 +31,7 @@ Let's take a quick look at a pseudo-code example of using partial:
 
 .. js ::
 
-  var dataLoaded = function(someFirstParam, data, ioargs) {};
+  var dataLoaded = function(someFirstParam, data, ioargs){};
 
   var args = {
     url: "foo",
@@ -46,8 +46,8 @@ load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations 
 
 .. js ::
 
-  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
-    var dataLoaded = function(someFirstParam, data, ioargs) {};
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr){
+    var dataLoaded = function(someFirstParam, data, ioargs){};
 
     var args = {
       url: "foo",
@@ -61,7 +61,7 @@ load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations 
 
 .. js ::
 
-  var dataLoaded = function(someFirstParam, data, ioargs) {};
+  var dataLoaded = function(someFirstParam, data, ioargs){};
 
   var args = {
     url: "foo",
@@ -83,8 +83,8 @@ Basic Example
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
    
-      dojo.ready(function() {
-        var myClick = function(presetValue, event) {
+      dojo.ready(function(){
+        var myClick = function(presetValue, event){
            var node = dojo.byId("appendLocation");
            node.appendChild(document.createTextNode(presetValue));
            node.appendChild(document.createElement("br"));

@@ -24,7 +24,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 .. js ::
   
   <script type="text/javascript">
-     require(["dojo/query"], function(query) {
+     require(["dojo/query"], function(query){
         var dojoLinks = query('a');
         var nativeLinks = document.getElementsByTagName('a');
 
@@ -63,7 +63,7 @@ Dojo 1.7 (AMD)
 
 .. js ::
 
-  require(["dojo/_base/window"], function(win) {
+  require(["dojo/_base/window"], function(win){
     win.setContext(window, window.document);
     // or
     win.setContext(myIframe.contentWindow, myIframe.contentWindow.document);
@@ -116,8 +116,8 @@ JavaScript
 
 .. js ::
  
-  require(["dojo/dom", "dojo/query", "dojo/_base/window"], function(dom, query, win) {
-    var countLinks = function() {
+  require(["dojo/dom", "dojo/query", "dojo/_base/window"], function(dom, query, win){
+    var countLinks = function(){
       var these = dom.byId('these_links');
       var those = dom.byId('those_links');
       var iframe = dom.byId('iframe').contentWindow;
@@ -138,7 +138,7 @@ JavaScript
 
 .. js ::
  
-  var countLinks = function() {
+  var countLinks = function(){
     var these = dojo.byId('these_links');
     var those = dojo.byId('those_links');
     var iframe = dojo.byId('iframe').contentWindow;

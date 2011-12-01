@@ -372,7 +372,7 @@ In addition the markupFactory can be used to allow the widget to do something th
 
 .. js ::
 
-     markupFactory: function(params, srcNodeRef, ctor) {
+     markupFactory: function(params, srcNodeRef, ctor){
        ...
        return new ctor(params, srcNodeRef);
      }

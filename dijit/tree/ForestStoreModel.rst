@@ -60,7 +60,7 @@ It's also complicated because users need to define what to do when an element is
 
 .. js ::
 
-  onAddToRoot: function(/* item */ item){
+  onAddToRoot: function(/*item*/ item){
         // summary
         //            Called when item added to root of tree; user must override
         //            to modify the item so that it matches the query for top level items
@@ -68,7 +68,7 @@ It's also complicated because users need to define what to do when an element is
         //      |     store.setValue(item, "root", true);
         console.log(this, ": item ", item, " added to root");
   },
-  onLeaveRoot: function(/* item */ item){
+  onLeaveRoot: function(/*item*/ item){
         // summary
         //            Called when item removed from root of tree; user must override
         //            to modify the item so it doesn't match the query for top level items

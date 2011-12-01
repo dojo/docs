@@ -65,15 +65,15 @@ Sometimes, it is easier to see an example first:
        <title>Dojo Events are Great</title>
        <script src="dojo/dojo.js" type="text/javascript"></script>
        <script type="text/javascript">
-          function foo() { console.debug("A click upon your houses!"); }
-          function globalGuy() { console.debug("Global Guy fired!"); }
+          function foo(){ console.debug("A click upon your houses!"); }
+          function globalGuy(){ console.debug("Global Guy fired!"); }
           var someObject = {
-             bar: function() { console.debug("Bar fired!"); return 7; },
-             baz: function() { console.debug("Baz fired!"); return 14; }
+             bar: function(){ console.debug("Bar fired!"); return 7; },
+             baz: function(){ console.debug("Baz fired!"); return 14; }
           }
 
           var anotherObject = {
-              afterBaz: function () { console.debug("afterBaz fired!"); }
+              afterBaz: function(){ console.debug("afterBaz fired!"); }
           }
        </script>
      </head>
@@ -366,9 +366,9 @@ Example Code for Reference
 
 .. js ::
 
-  function globalGuy(arg) { console.debug("Global Guy fired with arg " + arg); }
+  function globalGuy(arg){ console.debug("Global Guy fired with arg " + arg); }
     var someObject = {
-      bar: function(first, second) { console.debug("Bar fired with first of "+first+" and second of "+second); return 7; },
+      bar: function(first, second){ console.debug("Bar fired with first of "+first+" and second of "+second); return 7; },
     }
   }
 

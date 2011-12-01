@@ -242,7 +242,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         dojo.require("dijit.layout.ContentPane");
         dojo.require("dijit.form.Button");
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.declare("MyDijit",
                 [dijit._Widget, dijit._Templated], {
                     widgetsInTemplate: true,

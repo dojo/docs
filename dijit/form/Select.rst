@@ -68,7 +68,7 @@ This example shows how you can set up the same select as the previous example, b
     <script>
       dojo.require("dijit.form.Select");
         
-      dojo.ready(function() {
+      dojo.ready(function(){
         new dijit.form.Select({
           name: 'select2',
           options: [

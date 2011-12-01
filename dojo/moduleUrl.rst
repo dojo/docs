@@ -20,7 +20,7 @@ Dojo 1.7 (AMD)
 .. js ::
  
  <script type="text/javascript">
-   require(["dojo/_base/kernel", "dojo/_base/xhr", "dojo/dom"], function(dojo, xhr, dom) {
+   require(["dojo/_base/kernel", "dojo/_base/xhr", "dojo/dom"], function(dojo, xhr, dom){
       // points to $dojoroot/dijit/form/tests/TestFile.html
       var url = dojo.moduleUrl("dijit.form", "tests/TestFile.html");
       xhr.get({

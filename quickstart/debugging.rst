@@ -316,7 +316,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
   "dojobook.online-book.debugging.BuggyWidget",
   [dijit._Widget],
   {
-     postCreate: function() {
+     postCreate: function(){
         dojo.nonExistentMethod();
      }
   });

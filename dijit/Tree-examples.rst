@@ -44,7 +44,7 @@ Expanding and Focusing tree nodes programmatically
         dojo.require("dijit.Tree");
         dojo.require("dijit.form.Button");
 
-        selectNode = function() {
+        selectNode = function(){
             mytree.set('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
         }
     </script>
@@ -73,40 +73,40 @@ The following example contains workaround code for this problem, as well as an e
         dojo.require("dijit.Tree");
         dojo.require("dijit.form.Button");
 
-        function recursiveHunt(lookfor, model, buildme, item) {
+        function recursiveHunt(lookfor, model, buildme, item){
             console.log(">> recursiveHunt, item ", item, " looking for ", lookfor);
             var id = model.getIdentity(item);
             buildme.push(id);
-            if (id == lookfor) {
+            if(id == lookfor){
                 // Return the buildme array, indicating a match was found
                 console.log("++ FOUND item ", item, " buildme now = ", buildme);
                 return buildme;
             }
-            for (var idx in item.children) {
+            for(var idx in item.children){
                 // start a new branch of buildme, starting with what we have so far
                 var buildmebranch = buildme.slice(0);
                 console.log("Branching into ", model.store.getValue(item.children[idx], 'name'), ", buildmebranch=", buildmebranch);
                 var r = recursiveHunt(lookfor, model, buildmebranch, item.children[idx]);
                 // If a match was found in that recurse, return it.
                 //  This unwinds the recursion on completion.
-                if (r) { return r; }
+                if(r){ return r; }
             }
             // Return undefined, indicating no match was found
             return undefined;
         }
 
-        function selectTreeNodeById(tree, lookfor) {
+        function selectTreeNodeById(tree, lookfor){
             console.log("See model root=", tree.model.root);
             var buildme = [];
             var result = recursiveHunt(lookfor, tree.model, buildme, tree.model.root);
             console.log("*** FINISHED: result ", result, " buildme ", buildme);
             console.dir(result);
-            if (result && result.length > 0) {
+            if(result && result.length > 0){
                 tree.set('path', result);
             }
         }
 
-        selectNode = function() {
+        selectNode = function(){
 
             selectTreeNodeById(mytree2, 'Mexico City');
 
@@ -187,7 +187,7 @@ But the tree will display and work properly regardless, and for simple markup, e
             ]
         } ];
 
-        function prepare() {
+        function prepare(){
             var store = new dojo.data.ItemFileReadStore({
                 data: { identifier: 'id', label : 'label', items: rawdata }
             });
@@ -223,7 +223,7 @@ This example shows you how to use a tree to build a navigation menu.
        dojo.require("dojo.data.ItemFileWriteStore");
        dojo.require( "dijit.Tree" );
 
-       function initTree() {
+       function initTree(){
           var treeStore = new dojo.data.ItemFileWriteStore({ data:
              {
                 identifier: 'id',
@@ -245,7 +245,7 @@ This example shows you how to use a tree to build a navigation menu.
 
           var navTree = new dijit.Tree({model: treeModel, showRoot: false }, "navTree")
 		  
-		  navTree.onClick = function (item) {
+		  navTree.onClick = function(item){
 			  /* load the url from datastore */
 			  location.href = item.url;
 		  };

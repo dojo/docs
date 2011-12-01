@@ -36,7 +36,7 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
-  require("dojo/ready", function(ready) {
+  require("dojo/ready", function(ready){
        ready(function(){
            setAfrobeat();
        });
@@ -55,7 +55,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 .. js ::
 
     // Dojo 1.7+ (AMD)
-    require("dojo/ready", function(ready) {
+    require("dojo/ready", function(ready){
         ready(function(){
             document.musicPrefs.other.value="Afrobeat";
         });
@@ -75,9 +75,9 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 .. js ::
 
     // Dojo 1.7 (AMD)
-    require("dojo/ready", function(ready) {
+    require("dojo/ready", function(ready){
         ready(function(){
-            require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane) {
+            require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane){
                 ready(function(){
                     // dijit.Dialog and friends are ready, create one from a node with id="bar"
                     var dialog = new dialog({ title:"Lazy Loaded" }, "bar");

@@ -434,19 +434,19 @@ Example that shows a star at Paris location:
       var precision = 2;
       var TPI = Math.PI * 2;
       var di = TPI / b;
-      if (!start)
+      if(!start)
         start = Math.PI;
       var s = null;
       var end = start + TPI;
-      for ( var i = start; i < end; i += di) {
+      for( var i = start; i < end; i += di){
         var c1 = Math.cos(i);
         var s1 = Math.sin(i);
         var i2 = i + di / 2;
         var c2 = Math.cos(i2);
         var s2 = Math.sin(i2);
-        if (s == null) {
+        if(s == null){
           s = "M" + (s1 * r1).toFixed(precision) + "," + (c1 * r1).toFixed(precision) + " ";
-        } else {
+        }else{
           s += "L" + (s1 * r1).toFixed(precision) + "," + (c1 * r1).toFixed(precision) + " ";
         }
         s += "L" + (s2 * r2).toFixed(precision) + "," + (c2 * r2).toFixed(precision) + " ";

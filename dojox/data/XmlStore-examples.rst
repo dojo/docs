@@ -22,7 +22,7 @@ the next step is to use the dojox.xml.parser to read the xml string.
 		dojo.require("dojox.data.XmlStore");
 		dojo.require("dojox.xml.parser");
 
-		dojo.ready(function() {
+		dojo.ready(function(){
 			hookXmlStore();
 
 			var myxml = '<?xml version="1.0" encoding="utf-8"?><root><node><description>Node 1 Description</description><node><heading>1</heading><description>Node 2 Description</description><node><heading>1.1.a</heading><description>Node 3 Description</description></node><node><heading>1.1.b</heading><description>Node 4 Description</description></node></node></node></root>';
@@ -45,7 +45,7 @@ the next step is to use the dojox.xml.parser to read the xml string.
 		});
 
 
-		hookXmlStore = function() {
+		hookXmlStore = function(){
 
 			dojo.declare("my.data.XmlStringStore", [dojox.data.XmlStore], {
 				constructor: function(args){
@@ -54,10 +54,10 @@ the next step is to use the dojox.xml.parser to read the xml string.
 					this.xmlstring = args.xmlstring;
 					this.url = "dummy.xml";
 				},
-				_fetchItems: function(request, fetchHandler, errorHandler) {
+				_fetchItems: function(request, fetchHandler, errorHandler){
 					var url = this._getFetchUrl(request);
 
-					if (!url) {
+					if(!url){
 						errorHandler(new Error("No URL specified."));
 						return;
 					}
@@ -65,9 +65,9 @@ the next step is to use the dojox.xml.parser to read the xml string.
 					var data = dojox.xml.parser.parse(this.xmlstring);
 					var items = this._getItems(data, localRequest);
 
-					if (items && items.length > 0) {
+					if(items && items.length > 0){
 						fetchHandler(items, request);
-					} else {
+					}else{
 						fetchHandler([], request);
 					}
 				}

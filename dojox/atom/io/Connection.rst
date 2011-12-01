@@ -82,11 +82,11 @@ Example 1: Load an ATOM Feed
       dojo.require("dojox.atom.io.Connection");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initSimpleAtom () {
+      function initSimpleAtom(){
         var conn = new dojox.atom.io.Connection();
 
         conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
-          function(feed) {
+          function(feed){
            // Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
            xml.innerHTML = "";
@@ -96,7 +96,7 @@ Example 1: Load an ATOM Feed
            json.innerHTML = "";
            json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
           },
-          function(err) {
+          function(err){
             console.debug(err);
           }
         );
@@ -133,11 +133,11 @@ Example 2: Update an entry in a Feed
       dojo.require("dojox.atom.io.Connection");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initUpdateAtom () {
+      function initUpdateAtom(){
         var conn = new dojox.atom.io.Connection();
 
         conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
-          function(feed) {
+          function(feed){
            // Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simplePristineAtomXml");
            xml.innerHTML = "";
@@ -150,7 +150,7 @@ Example 2: Update an entry in a Feed
            entry.setEditHref("{{dataUrl}}dojox/atom/tests/io/app.php");
            entry.updated = new Date();
            entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
-           conn.updateEntry(entry, function() {
+           conn.updateEntry(entry, function(){
                var xml = dojo.byId("simpleModifiedAtomXml");
                xml.innerHTML = "";
                xml.appendChild(dojo.doc.createTextNode(feed.toString()));
@@ -160,7 +160,7 @@ Example 2: Update an entry in a Feed
              }
            );
           },
-          function(err) {
+          function(err){
             console.debug(err);
           }
         );

@@ -28,30 +28,30 @@ Dojo 1.7 (AMD)
 
 .. js ::
     
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.subscribe("/dojo/io/start", function(){
       // Triggered when there are no outstanding IO requests,
       // and a new IO request is started. No arguments are passed with this topic.
     });
 
-    connect.subscribe("/dojo/io/send", function(/*dojo.Deferred*/dfd){
+    connect.subscribe("/dojo/io/send", function(/*dojo.Deferred*/ dfd){
       // Triggered whenever a new IO request is started.
       // It passes the dojo.Deferred for the request.
     });
 
-    connect.subscribe("/dojo/io/load", function(/*dojo.Deferred*/dfd, /*Object*/response){
+    connect.subscribe("/dojo/io/load", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has loaded
       // successfully. It passes the response and the
       // dojo.Deferred for the request.
     });
 
-    connect.subscribe("/dojo/io/error", function(/*dojo.Deferred*/dfd, /*Object*/response){
+    connect.subscribe("/dojo/io/error", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has errored.
       // It passes the error and the dojo.Deferred
       // for the request with the topic.
     });
 
-    connect.subscribe("/dojo/io/done", function(/*dojo.Deferred*/dfd, /*Object*/response){
+    connect.subscribe("/dojo/io/done", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has completed,
       // either by loading or by erroring. It passes the error and
       // the dojo.Deferred for the request with the topic.
@@ -74,24 +74,24 @@ Dojo < 1.7
     // and a new IO request is started. No arguments are passed with this topic.
   });
 
-  dojo.subscribe("/dojo/io/send", function(/*dojo.Deferred*/dfd){
+  dojo.subscribe("/dojo/io/send", function(/*dojo.Deferred*/ dfd){
     // Triggered whenever a new IO request is started.
     // It passes the dojo.Deferred for the request.
   });
 
-  dojo.subscribe("/dojo/io/load", function(/*dojo.Deferred*/dfd, /*Object*/response){
+  dojo.subscribe("/dojo/io/load", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
     // Triggered whenever an IO request has loaded
     // successfully. It passes the response and the
     // dojo.Deferred for the request.
   });
 
-  dojo.subscribe("/dojo/io/error", function(/*dojo.Deferred*/dfd, /*Object*/response){
+  dojo.subscribe("/dojo/io/error", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
     // Triggered whenever an IO request has errored.
     // It passes the error and the dojo.Deferred
     // for the request with the topic.
   });
 
-  dojo.subscribe("/dojo/io/done", function(/*dojo.Deferred*/dfd, /*Object*/response){
+  dojo.subscribe("/dojo/io/done", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
     // Triggered whenever an IO request has completed,
     // either by loading or by erroring. It passes the error and
     // the dojo.Deferred for the request with the topic.

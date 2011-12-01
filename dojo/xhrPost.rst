@@ -85,10 +85,10 @@ Example 1: dojo.xhrPost call to send a form
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
 
-      function sendForm() {
+      function sendForm(){
         var form = dojo.byId("myform");
         
-        dojo.connect(form, "onsubmit", function(event) {
+        dojo.connect(form, "onsubmit", function(event){
           // Stop the submit event since we want to control form submission.
           dojo.stopEvent(event);
           
@@ -141,7 +141,7 @@ Example 2: dojo.xhrPost call to send some text data
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
 
-      function sendText() {
+      function sendText(){
         var button = dijit.byId("submitButton2");
 
         dojo.connect(button, "onClick", function(event){

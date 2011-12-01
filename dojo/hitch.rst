@@ -14,7 +14,7 @@ Dojo.hitch is a neat function. It returns a function that will execute a given f
 
 .. js ::
 
-  require(["dojo/_base/xhr"], function(xhr) {
+  require(["dojo/_base/xhr"], function(xhr){
     var args = {
       url: "foo",
       load: this.dataLoaded
@@ -40,7 +40,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
 
 .. js ::
 
-  require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
+  require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang){
     var args = {
       url: "foo",
       load: lang.hitch(this, "dataLoaded")
@@ -78,7 +78,7 @@ Let's look at a quick example:
       var myObj = {
         foo: "bar"
       };
-      var func = dojo.hitch(myObj, function() {
+      var func = dojo.hitch(myObj, function(){
         console.log(this.foo);
       });
       func();
@@ -100,7 +100,7 @@ Let's say I want to call a method in a given scope. I could do:
     <script type="text/javascript">
       var myObj = {
         foo: "bar",
-        method: function(someArg) {
+        method: function(someArg){
           console.log(this.foo);
         }
       };
@@ -119,7 +119,7 @@ But that is too much typing. If there's a method that you want to use that's alr
     <script type="text/javascript">
       var myObj = {
         foo: "bar",
-        method: function(someArg) {
+        method: function(someArg){
           console.log(this.foo);
         }
       };
@@ -143,7 +143,7 @@ You can also provide arguments to the function you're calling. Here's an example
     <script type="text/javascript">
       var myObj = {
         foo: "bar",
-        method: function(someArg) {
+        method: function(someArg){
           console.log(someArg+" "+this.foo);
         }
       };
@@ -180,7 +180,7 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
     <script type="text/javascript">
       var myObj = {
         foo: "bar",
-        method: function(someArg) {
+        method: function(someArg){
           console.log(this.foo+" "+data);
         }
       };
@@ -201,7 +201,7 @@ The above example won't work. If we want to access this.foo, we need to have 'me
     <script type="text/javascript">
       var myObj = {
         foo: "bar",
-        method: function(data) {
+        method: function(data){
           console.log(this.foo+" "+data);
         }
       };

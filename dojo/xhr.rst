@@ -93,7 +93,7 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
                     timeout: 5000,
 
                     // Event handler on successful call:
-                    load: function(response, ioArgs) {
+                    load: function(response, ioArgs){
                         // do something
                         // ...
                         dojo.byId("results").innerHTML = "Form submitted successfully.";

@@ -31,7 +31,7 @@ Dojo 1.7 (AMD)
  <script type="text/javascript">
    require(['dojo/_base/unload'], function(baseUnload){
      // declare a function to do the unload work
-     var unLoad = function() {
+     var unLoad = function(){
        // do some unload stuff
        alert("unloading...");
      }
@@ -42,7 +42,7 @@ Dojo 1.7 (AMD)
      baseUnload.addOnUnload(window, "unLoad");
   
      // pass an object and an anonymous function
-     baseUnload.addOnUnload(window, function() {alert("we're out of here!");});
+     baseUnload.addOnUnload(window, function(){ alert("we're out of here!"); });
    });
  </script>
    
@@ -53,7 +53,7 @@ Dojo < 1.7
  
  <script type="text/javascript">
    // declare a function to do the unload work
-   var unLoad = function() {
+   var unLoad = function(){
      // do some unload stuff
      alert("unloading...");
    }
@@ -64,7 +64,7 @@ Dojo < 1.7
    dojo.addOnUnload(window, "unLoad");
 
    // pass an object and an anonymous function
-   dojo.addOnUnload(window, function() {alert("we're out of here!");});
+   dojo.addOnUnload(window, function(){ alert("we're out of here!"); });
  </script>
 
 
@@ -80,7 +80,7 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
 
     <script type="text/javascript">
       // declare a function to do the unload work
-      var unLoad = function() {
+      var unLoad = function(){
         // do some unload stuff
         alert("unloading...");
       }

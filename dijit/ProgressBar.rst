@@ -22,7 +22,7 @@ Declarative markup
         dojo.require("dojo.parser");
         
  	var i=0;
-        function download() {
+        function download(){
 			jsProgress.update({maximum: 10, progress: ++i});
 			if(i < 10){
 				setTimeout(download, 100 + Math.floor(Math.random() * 100));

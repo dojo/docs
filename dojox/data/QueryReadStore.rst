@@ -59,7 +59,7 @@ Fortunately, it's easy to translate between the two and you can quickly customiz
   dojo.require("dojox.data.QueryReadStore");
 
   dojo.declare("custom.ComboBoxReadStore", dojox.data.QueryReadStore, {
-    fetch:function(request) {
+    fetch:function(request){
       request.serverQuery = {q:request.query.name};
       // Call superclasses' fetch
       return this.inherited("fetch", arguments);

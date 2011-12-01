@@ -24,7 +24,7 @@ Usage
 
  // Dojo 1.7 (AMD)
  // Load the window-related functions:
- require(["dojo/window"], function(win) {
+ require(["dojo/window"], function(win){
       // Get the viewport-size of the document:
       var vs =win.getBox();
       console.log('viewport size:', ' width: ', vs.w, ', height: ', vs.h, ', left: ', vs.l, ', top: ', vs.t);

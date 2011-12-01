@@ -30,14 +30,14 @@ isArray returns a Boolean you can use directly in conditionals:
 .. js ::
  
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
-    if(lang.isArray(someVariable)) {
+  require(["dojo/_base/lang"], function(lang){
+    if(lang.isArray(someVariable)){
       // do something
     }
   });
 
   // Dojo < 1.7
-  if(dojo.isArray(someVariable)) {
+  if(dojo.isArray(someVariable)){
     // do something
   }
 
@@ -47,12 +47,12 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 
 .. js ::
   
-  require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array) {
-    if(lang.isArray(list)) {
-      array.forEach(list, function(item, i) {
+  require(["dojo/_base/lang", "dojo/_base/array"], function(lang, array){
+    if(lang.isArray(list)){
+      array.forEach(list, function(item, i){
         // each item in list
       });
-    } else {
+    }else{
       // something went wrong? we wanted an array here
     }
   });
@@ -62,11 +62,11 @@ Anything that is an Array can be iterated over by using :ref:`dojo.forEach <dojo
 
 .. js ::
   
-  if(dojo.isArray(list)) {
-    dojo.forEach(list, function(item, i) {
+  if(dojo.isArray(list)){
+    dojo.forEach(list, function(item, i){
         // each item in list
     });
-  } else {
+  }else{
     // something went wrong? we wanted an array here
   }
 
@@ -79,7 +79,7 @@ It is important to understand that dojo.isArray checks to see if the provided va
 .. js ::
 
  // Dojo 1.7+ (AMD)
- require(["dojo/_base/lang"], function(lang) {
+ require(["dojo/_base/lang"], function(lang){
    lang.isArray = function(it){
      return it && Object.prototype.toString.call(it)=="[object Array]";
    });
@@ -114,13 +114,13 @@ Test against isArray()
         // test variable t:
         var t;
 
-        function testIt() {
+        function testIt(){
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
 
             // Here comes the test:
             // Is t an Array?
-            if (dojo.isArray(t)) {
+            if(dojo.isArray(t)){
                 // dojooo: t is an array!
                 dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is an array.<br />Try another button.");
@@ -130,7 +130,7 @@ Test against isArray()
                     "backgroundColor": "#a4e672",
                     "color": "black"
                 });
-            } else {
+            }else{
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML",
                     "No chance: 't' can't be an array with such a value "

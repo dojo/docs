@@ -704,7 +704,7 @@ From 1.7, the gfx shape targeted by a mouse event can be retrieved from the even
 
   .. js ::
 
-    group.connect(“onmouseclick”, function(e) { var s = e.gfxTarget; s.setFill(“red”); });
+    group.connect(“onmouseclick”, function(e){ var s = e.gfxTarget; s.setFill(“red”); });
 
 Implementation notes
 ~~~~~~~~~~~~~~~~~~~~

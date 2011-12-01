@@ -304,8 +304,8 @@ In order to the users can format content freely for cells in different levels, t
 
 .. js ::
   
-  var fmt = function(value, idx, level) {
-    if(level == 0) {
+  var fmt = function(value, idx, level){
+    if(level == 0){
       return value == "true" ? "online" : offline";
     }else{
       return"online";

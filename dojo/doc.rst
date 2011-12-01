@@ -28,7 +28,7 @@ Dojo 1.7 (AMD)
 .. js ::
  
  <script type="text/javascript">
-   require(["dojo/_base/window"], function(win) {
+   require(["dojo/_base/window"], function(win){
       var currentBody = win.body();  // You can also use: dojo.body() to get the current document body.
       var newText = win.doc.createTextNode("Some text");
       currentBody.appendChild(newText);
@@ -60,7 +60,7 @@ Example usage of dojo.doc as replacement for document calls
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
-      function addText() {
+      function addText(){
         dojo.connect(dijit.byId("addTextButton"), "onClick", function(){
            var newText = dojo.doc.createTextNode("New Text!");
            dojo.doc.body.appendChild(newText);

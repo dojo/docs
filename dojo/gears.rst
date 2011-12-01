@@ -14,7 +14,7 @@ Dojo 1.7 (AMD)
 
   .. javascript::
 
-	require(["dojo/gears","dojo/ready"], function(gears,ready) {
+	require(["dojo/gears","dojo/ready"], function(gears,ready){
 		ready(function(){
 			if(gears.available){
 				// safe to assume google.gears.factory is a gears factory

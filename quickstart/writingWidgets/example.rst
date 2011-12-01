@@ -150,7 +150,7 @@ So next, we need a reset button. Unfortunately because we're faking HTML out a b
 
 .. js ::
 
-  _onClick: function(/* Event */e){
+  _onClick: function(/*Event*/ e){
         // summary: on click of cancel button, since we can't clear the input because of
         //      security reasons, we destroy it, and add a new one in it's place.
         // Disconnect the listeners so they're not orphaned, and cleanly remove the tag
@@ -217,7 +217,7 @@ Because we're big fans of re-using code, we can steal some CSS stuff from tundra
 
 .. css ::
 
-  /* tundra */
+  /*tundra*/
   .tundra .dijitProgressOverlay {
         border:1px solid #84a3d1;
         background-color:#cad2de;
@@ -240,7 +240,7 @@ Because we're big fans of re-using code, we can steal some CSS stuff from tundra
             repeat-x top;
   }
   
-  /* Soria */
+  /*Soria*/
   .soria .dijitProgressOverlay {
         border:1px solid #333;
         background-color:#cad2de;

@@ -431,16 +431,16 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
     // Separator is the only argument.
     _separator: ',',
 
-    constructor: function(/* object? */writerArgs){
+    constructor: function(/* object? */ writerArgs){
       // Handle arguments (separator in this case), and do some initialization here.
     },
 
-    _formatCSVCell: function(/* string */cellValue){
+    _formatCSVCell: function(/*string*/ cellValue){
       // Format cell value to follow CSV standard.
       // See: http://en.wikipedia.org/wiki/Comma-separated_values
     },
 
-    beforeContentRow: function(/* object */argObj){
+    beforeContentRow: function(/*object*/ argObj){
       // Overridden from _ExportWriter
       // For each column,
       //	get the cell data of the current row, and format them with _formatCSVCell
@@ -449,7 +449,7 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
       // return false, because we don't need to go into the row. Thus improves the performance.
     },
 
-    handleCell: function(/* object */arg_obj){
+    handleCell: function(/*object*/ arg_obj){
       // summary:
       //		Overridden from _ExportWriter
       // Check if arg_obj.isHeader is true. We have already handled content cells in the above function,

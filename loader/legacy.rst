@@ -129,7 +129,7 @@ The code path guaranteed by the legacy API is exactly as it is written. In parti
     doSomeStuff(3);
   });
 
-...is not equivalent at all since it will cause both */my/other/* modules to be resolved (executed) before any of the
+...is not equivalent at all since it will cause both */ my/other/* modules to be resolved (executed) before any of the
 doSomeStuff applications.
 
 The v1.6- build system rewrites module text so that it can be injected into a script element yet honor the code path
@@ -527,7 +527,7 @@ text to the right points to a module that was constructed in Step 2 the looks li
       // particular instance of dojo referenced by the reference module
 
     def:
-	  function(/* names as described above */) {
+	  function(/* names as described above */){
         // aggregated loadInit applications concatenated with the aggregated other applications
 	  }
   });

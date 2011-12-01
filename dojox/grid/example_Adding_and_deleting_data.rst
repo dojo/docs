@@ -69,8 +69,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                 // Iterate through the list of selected items.
                 // The current item is available in the variable
                 // "selectedItem" within the following function:
-                dojo.forEach(items, function(selectedItem) {
-                    if(selectedItem !== null) {
+                dojo.forEach(items, function(selectedItem){
+                    if(selectedItem !== null){
                         // Delete the item from the data store:
                         store3.deleteItem(selectedItem);
                     } // end if

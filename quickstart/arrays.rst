@@ -39,7 +39,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 
     var arrIndxOf = ["foo", "hoo", "zoo"];
 
-    var testIndxOf = function() {
+    var testIndxOf = function(){
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
             "<p>The index of the word 'zoo' within the array is " + position + "</p>",
@@ -83,7 +83,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
     var arrLastIndxOf = ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"];
 
-    var testLastIndxOf = function() {
+    var testLastIndxOf = function(){
         var position = dojo.lastIndexOf(arrLastIndxOf , "zoo");
         dojo.place(
             "<p>The last index of the word 'zoo' within the array is " + position + "</p>",
@@ -175,7 +175,7 @@ To break the forEach-Loop you should use dojo.some
     <script type="text/javascript">
 	dojo.require("dijit.form.Button");
 
-	function arrayLoopTest() {
+	function arrayLoopTest(){
 		var myArray = [0,1,2,3,4,5,6,7,8,9];
 		var count;
 		
@@ -370,10 +370,10 @@ Now your bank policies only allow you to give each client one credit over 1 mill
 
     var arrIndxSome = [200000, 500000, 350000, 1000000, 75, 3];
 
-    var testIndxSome = function() {
-        if (dojo.some(arrIndxSome, function(item){ return item>=1000000})) {
+    var testIndxSome = function(){
+        if(dojo.some(arrIndxSome, function(item){ return item>=1000000})){
             result = 'yes, there are';
-        } else {
+        }else{
             result = 'no, there are no such items';
         }
         dojo.place(
@@ -419,10 +419,10 @@ An example:
 
     var arrIndxEvery = [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}];
 
-    var testIndxSome = function() {
-        if (dojo.every(arrIndxEvery , function(item){ return item.income>=3000})) {
+    var testIndxSome = function(){
+        if(dojo.every(arrIndxEvery , function(item){ return item.income>=3000})){
             result = 'yes, he is allowed';
-        } else {
+        }else{
             result = 'no, unfortunately not';
         }
         dojo.place(

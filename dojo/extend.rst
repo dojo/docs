@@ -11,7 +11,7 @@ We can use dojo.extend to extend functionality into existing classes. Consider t
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang", "dijit/TitlePane"], function(lang, TitlePane) {
+  require(["dojo/_base/lang", "dijit/TitlePane"], function(lang, TitlePane){
     lang.extend(TitlePane, {
       randomAttribute:"value"
     });
@@ -39,7 +39,7 @@ A potentially confusing result of the above actually provides us a lot of flexib
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang", "dijit/_WidgetBase"], function(lang, _WidgetBase) {
+  require(["dojo/_base/lang", "dijit/_WidgetBase"], function(lang, _WidgetBase){
     lang.extend(_WidgetBase, {
       region:"center"
     });
@@ -59,9 +59,9 @@ Example: dojo.extend vs dojo.mixin
 
 .. js ::
   
-    require(["dojo/_base/lang", "dojo/json"], function(lang, json) {
+    require(["dojo/_base/lang", "dojo/json"], function(lang, json){
         // define a class
-        var myClass = function() {
+        var myClass = function(){
             this.defaultProp = "default value";
         };
         myClass.prototype = {};
@@ -83,7 +83,7 @@ Example: dojo.extend vs dojo.mixin
 .. js ::
   
     // define a class
-    var myClass = function() {
+    var myClass = function(){
         this.defaultProp = "default value";
     };
     myClass.prototype = {};

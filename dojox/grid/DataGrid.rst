@@ -354,7 +354,7 @@ sort
 sortInfo
   A numerical value indicating what column should be sorted in the grid.  e.g. "1" would mean "first column, ascending order.  "-2" would mean "second column, descending order".  Note that this replaces the alternative approach of providing queryOptions to the store's fetch() invocation.  Defined on dojox.grid._Grid.
 canSort
-  canSort is called by the grid to determine if each column should be sortable.  It takes a single integer argument representing the column index, which is positive for ascending order and negative for descending order, and should return true if that column should be sortable in that direction, and false if not.  For example, to only allow the second column to be sortable, in either direction: "function canSort(col) { return Math.abs(col) === 2; }"
+  canSort is called by the grid to determine if each column should be sortable.  It takes a single integer argument representing the column index, which is positive for ascending order and negative for descending order, and should return true if that column should be sortable in that direction, and false if not.  For example, to only allow the second column to be sortable, in either direction: "function canSort(col){ return Math.abs(col) === 2; }"
 getSortProps
   TBD
 removeSelectedRows
@@ -548,12 +548,12 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                 /* Iterate through the list of selected items.
                    The current item is available in the variable
                    "selectedItem" within the following function: */
-                dojo.forEach(items, function(selectedItem) {
-                    if(selectedItem !== null) {
+                dojo.forEach(items, function(selectedItem){
+                    if(selectedItem !== null){
                         /* Iterate through the list of attributes of each item.
                            The current attribute is available in the variable
                            "attribute" within the following function: */
-                        dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute) {
+                        dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
                             /* Get the value of the current attribute:*/
                             var value = grid.store.getValues(selectedItem, attribute);
                             /* Now, you can do something with this attribute/value pair.
@@ -756,8 +756,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                   /* Iterate through the list of selected items.
                      The current item is available in the variable
                      "selectedItem" within the following function: */
-                  dojo.forEach(items, function(selectedItem) {
-                      if(selectedItem !== null) {
+                  dojo.forEach(items, function(selectedItem){
+                      if(selectedItem !== null){
                           /* Delete the item from the data store: */
                           store.deleteItem(selectedItem);
                       } /* end if */

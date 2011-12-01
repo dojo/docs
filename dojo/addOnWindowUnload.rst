@@ -31,7 +31,7 @@ Dojo 1.7 (AMD)
  <script type="text/javascript">
    require(['dojo/_base/unload'],function(baseUnload){
      // declare a function to do the unload work
-     var unLoad = function() {
+     var unLoad = function(){
        // do some unload stuff
        alert("unloading...");
      }
@@ -42,7 +42,7 @@ Dojo 1.7 (AMD)
      baseUnload.addOnWindowUnload(window, "unLoad");
 
      // pass an object and an anonymous function
-     baseUnload.addOnWindowUnload(window, function() {alert("we're out of here!");});
+     baseUnload.addOnWindowUnload(window, function(){ alert("we're out of here!"); });
    });
  </script>
 
@@ -53,7 +53,7 @@ Dojo < 1.7
  
  <script type="text/javascript">
    // declare a function to do the unload work
-   var unLoad = function() {
+   var unLoad = function(){
      // do some unload stuff
      alert("unloading...");
    }
@@ -64,5 +64,5 @@ Dojo < 1.7
    dojo.addOnWindowUnload(window, "unLoad");
 
    // pass an object and an anonymous function
-   dojo.addOnWindowUnload(window, function() {alert("we're out of here!");});
+   dojo.addOnWindowUnload(window, function(){ alert("we're out of here!"); });
  </script>

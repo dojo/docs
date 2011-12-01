@@ -150,12 +150,12 @@ Example: Playing with Easing
       dojo.require("dojo.fx.easing");
       function setupMove(){
          // Function linked to the button to trigger the fade.
-         function moveIt() {
+         function moveIt(){
 			// Set initial state and get the easing from the dropdown
             dojo.style("moveableNode", "marginLeft", "0px");
 			var easing = dijit.byId("easingSelector").attr("value");
 			var ef = dojo.fx.easing[easing];
-			if (ef) {
+			if(ef){
 				var moveArgs = {
 				  node: "moveableNode",
 				  properties: { marginLeft: {start: 0, end: 400, unit: "px"} },

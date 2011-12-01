@@ -27,11 +27,11 @@ Dojo 1.7 (AMD)
 .. js ::
  
  <script type="text/javascript">
-   require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query) {
+   require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query){
      var iframeDoc = dom.byId("someFrameId").contentWindow.document;
 
      // Call a callback with different 'global' values and context.
-     win.withDoc(iframeDoc, function() {
+     win.withDoc(iframeDoc, function(){
        var someDiv = query("someDiv");
        style.set(someDiv, "color", "red");
      }, this));
@@ -48,7 +48,7 @@ Dojo < 1.7
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
    // Call a callback with different 'global' values and context.
-   dojo.withDoc(iframeDoc, function() {
+   dojo.withDoc(iframeDoc, function(){
      var someDiv = dojo.query("someDiv");
      dojo.style(someDiv, "color", "red");
    }, this));
@@ -68,15 +68,15 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
     <script>
       dojo.require("dijit.form.Button");
 
-      function changeStyles() {
+      function changeStyles(){
         var button = dijit.byId("changeStyles");
-        dojo.connect(button, "onClick", function() {
+        dojo.connect(button, "onClick", function(){
          
          // Apply styles to the document contained by the iframe
          var frameDoc = dojo.byId("simpleFrame").contentWindow.document;
-         dojo.withDoc(frameDoc, function() {
+         dojo.withDoc(frameDoc, function(){
            var tds= dojo.query("td");
-           dojo.forEach(tds, function(cell) {
+           dojo.forEach(tds, function(cell){
              dojo.style(cell, "color", "red");
            }, this);
          });

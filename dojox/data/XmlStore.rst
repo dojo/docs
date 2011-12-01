@@ -174,7 +174,7 @@ Query for all books that start with ISBN: A9B57
  
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
-    for (var i = 0; i < items.length; i++){
+    for(var i = 0; i < items.length; i++){
       var item = items[i];
       console.log("Located book: " + store.getValue(item, "title");
     }
@@ -189,7 +189,7 @@ Query for all books that start with ISBN: A9B57 Case insensitively
  
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
-    for (var i = 0; i < items.length; i++){
+    for(var i = 0; i < items.length; i++){
       var item = items[i];
       console.log("Located book: " + store.getValue(item, "title");
     }
@@ -217,39 +217,39 @@ Searching node attributes
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init3 () {
+        function init3(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function search() {
+           function search(){
              var queryObj = {};
 
              // Build up the query from the input boxes.
              var isbn = isbnBox.getValue();
-             if ( isbn && dojo.trim(isbn) !== "" ) {
+             if( isbn && dojo.trim(isbn) !== "" ){
                queryObj["isbn"] = isbn;
              }
 
              var qNode = dojo.byId("query");
-             if (qNode ) {
+             if(qNode ){
                qNode.innerHTML = dojo.toJson(queryObj);
              }
 
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list3");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list3");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode("ISBN: " + bookStore.getValue(item, "isbn") + " TITLE:" + bookStore.getValue(item, "title")));
                    list.appendChild(document.createElement("br"));
@@ -258,7 +258,7 @@ Searching node attributes
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
                 alert(error);
              }
@@ -324,9 +324,9 @@ Connecting XmlStore to dojox.grid.DataGrid
 
       var layoutBooks = [
         [
-          { field: "isbn", name: "ISBN", width: 10, formatter: function(item) { return item.toString(); } },
-          { field: "author", name: "Author", width: 10, formatter: function(item) { return item.toString(); } },
-          { field: "title", name: "Title", width: 'auto', formatter: function(item) { return item.toString(); } }
+          { field: "isbn", name: "ISBN", width: 10, formatter: function(item){ return item.toString(); } },
+          { field: "author", name: "Author", width: 10, formatter: function(item){ return item.toString(); } },
+          { field: "title", name: "Title", width: 'auto', formatter: function(item){ return item.toString(); } }
         ]
       ];
     </script>

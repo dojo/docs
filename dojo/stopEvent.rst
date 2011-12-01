@@ -13,8 +13,8 @@ Dojo 1.7 (AMD)
 .. html ::
 
     <script type="text/javascript">
-    require(["dojo/ready", "dojo/dom", "dojo/_base/connect", "dojo/_base/event"], function(ready, dom, connect, event) {
-        ready(function() {
+    require(["dojo/ready", "dojo/dom", "dojo/_base/connect", "dojo/_base/event"], function(ready, dom, connect, event){
+        ready(function(){
             var node = dom.byId("delete");
             connect.connect(node, "onclick", function(e){
                 event.stop(e); // prevents default link execution

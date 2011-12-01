@@ -25,8 +25,8 @@ A programmatically created MenuItem
         dojo.require("dijit.MenuBar");
         dojo.require("dijit.MenuItem");
         var pMenuBar;
-        function fClickOne() {alert("You clicked on Menu Item #1")};
-        function fClickTwo() {alert("You clicked on Menu Item #2")};
+        function fClickOne(){alert("You clicked on Menu Item #1")};
+        function fClickTwo(){alert("You clicked on Menu Item #2")};
         dojo.ready(function(){
             ExampleMenu = new dijit.Menu({id:"SampleM"});
             ExampleMenu.addChild(new dijit.MenuItem({label:"Always Visible Menu", disabled:true}));

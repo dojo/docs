@@ -55,7 +55,7 @@ Programmatic example
            y: 50
          }).setFill("blue").setStroke("black");
 
-         dojo.connect(dijit.byId("button"), "onClick", function() {
+         dojo.connect(dijit.byId("button"), "onClick", function(){
             var json = dojox.gfx.utils.toJson(drawing);
             // Try to make it pretty-print
             dojo.byId("json").innerHTML = dojo.toJson(dojo.fromJson(json), true);

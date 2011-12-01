@@ -99,13 +99,13 @@ Usage example
           dojoBlankHtmlUrl = '/blank.html'
       };
       
-      function loader () {
+      function loader(){
           dojo.require ("dijit.Editor");
           dojo.ready(callback);
       }
 
-      function callback () {
-          new dijit.Editor ({}, dojo.byId("editorNode"));
+      function callback(){
+          new dijit.Editor({}, dojo.byId("editorNode"));
       }
 
       dojo.ready(loader);

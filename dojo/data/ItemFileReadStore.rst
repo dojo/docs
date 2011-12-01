@@ -384,26 +384,26 @@ Functional Example: Using custom type maps with ItemFileReadStore
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init () {
+      function init(){
         var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
      
         // Function to perform a fetch on the datastore when a button is clicked
-        function getItems () {
+        function getItems(){
           // Callback to perform an action when the data items are starting to be returned:
-          function clearOldList(size, request) {
+          function clearOldList(size, request){
             var list = dojo.byId("list");
-            if (list) {
-              while (list.firstChild) {
+            if(list){
+              while(list.firstChild){
                 list.removeChild(list.firstChild);
               }
             }
           }
    
           // Callback for processing a single returned item.
-          function gotItem(item, request) {
+          function gotItem(item, request){
             var list = dojo.byId("list");
-            if (list) {
-              if (item) {
+            if(list){
+              if(item){
                 var bold = document.createElement("b");
                 bold.appendChild(document.createTextNode("Item Name: "));
                 list.appendChild(bold);
@@ -421,7 +421,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
              console.log(error);
              alert("lookup failed.");
           }
@@ -470,15 +470,15 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
 		
   // Define the comparator function for status.
   store.comparatorMap = {};
-  store.comparatorMap["status"] = function(a,b) {
+  store.comparatorMap["status"] = function(a,b){
     var ret = 0;
     // We want to map these by what the priority of these items are, not by alphabetical.
     // So, custom comparator.
     var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
-    if (enumMap[a] > enumMap[b]) {
+    if(enumMap[a] > enumMap[b]){
       ret = 1;
     }
-    if (enumMap[a] < enumMap[b]) {
+    if(enumMap[a] < enumMap[b]){
       ret = -1;
     }
     return ret;
@@ -670,26 +670,26 @@ Searching for all continents
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2 () {
+      function init2(){
         // Function to perform a fetch on the datastore when a button is clicked
-        function getContinents () {
+        function getContinents(){
 
           // Callback to perform an action when the data items are starting to be returned:
-          function clearOldCList(size, request) {
+          function clearOldCList(size, request){
             var list = dojo.byId("list2");
-            if (list) {
-              while (list.firstChild) {
+            if(list){
+              while(list.firstChild){
                 list.removeChild(list.firstChild);
               }
             }
           }
   
           // Callback for processing a returned list of items.
-          function gotContinents(items, request) {
+          function gotContinents(items, request){
             var list = dojo.byId("list2");
-            if (list) {
+            if(list){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 list.appendChild(document.createTextNode(geoStore.getValue(item, "name")));
                 list.appendChild(document.createElement("br"));
@@ -698,7 +698,7 @@ Searching for all continents
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }
@@ -754,23 +754,23 @@ Doing wildcard searches and option setting
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init3 () {
+        function init3(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function search() {
+           function search(){
              var queryObj = {};
 
              // Build up the query from the input boxes.
              var name = nameBox.getValue();
-             if ( name && dojo.trim(name) !== "" ) {
+             if( name && dojo.trim(name) !== "" ){
                queryObj["name"] = name;
              }
              var aisle = aisleBox.getValue();
-             if ( aisle && dojo.trim(aisle) !== "" ) {
+             if( aisle && dojo.trim(aisle) !== "" ){
                queryObj["aisle"] = aisle;
              }
 
              var qNode = dojo.byId("query");
-             if (qNode ) {
+             if(qNode ){
                qNode.innerHTML = dojo.toJson(queryObj);
              }
 
@@ -778,31 +778,31 @@ Doing wildcard searches and option setting
              // Build up query options, if any.
              var queryOptionsObj = {};
 
-             if ( checkBox.getValue()) {
+             if( checkBox.getValue()){
                queryOptionsObj["ignoreCase"] = true;
              }
 
              var qoNode = dojo.byId("queryOptions");
-             if (qoNode ) {
+             if(qoNode ){
                qoNode.innerHTML = dojo.toJson(queryOptionsObj);
              }
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list3");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list3");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode(foodStore3.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
@@ -811,7 +811,7 @@ Doing wildcard searches and option setting
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
                 alert(error);
              }
@@ -884,42 +884,42 @@ Demonstrating custom sorting
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init4 () {
+      function init4(){
         // Define the comparator function for status.
         sortStore.comparatorMap = {};
-        sortStore.comparatorMap["status"] = function(a,b) {
+        sortStore.comparatorMap["status"] = function(a,b){
           var ret = 0;
           // We want to map these by what the priority of these items are, not by alphabetical.
           // So, custom comparator.
           var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
-          if (enumMap[a] > enumMap[b]) {
+          if(enumMap[a] > enumMap[b]){
             ret = 1;
           }
-          if (enumMap[a] < enumMap[b]) {
+          if(enumMap[a] < enumMap[b]){
             ret = -1;
           }
           return ret;
         };
 		
         // Function to perform a fetch on the datastore when a button is clicked
-        function getItems () {
+        function getItems(){
 
           // Callback to perform an action when the data items are starting to be returned:
-          function clearOldCList(size, request) {
+          function clearOldCList(size, request){
             var list = dojo.byId("list4");
-            if (list) {
-              while (list.firstChild) {
+            if(list){
+              while(list.firstChild){
                 list.removeChild(list.firstChild);
               }
             }
           }
   
           // Callback for processing a returned list of items.
-          function gotItems(items, request) {
+          function gotItems(items, request){
             var list = dojo.byId("list4");
-            if (list) {
+            if(list){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 list.appendChild(document.createTextNode("Item ID: [" + sortStore.getValue(items[i], "uniqueId") + "] with status: [" + sortStore.getValue(items[i], "status") + "]"));
                 list.appendChild(document.createElement("br"));
@@ -928,7 +928,7 @@ Demonstrating custom sorting
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }
@@ -985,8 +985,8 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
       var reloadCount = 0;
 
       // Now set up a linkage so that the store can be reloaded.
-      dojo.ready(function() {
-         dojo.connect(dijit.byId("reloadButton1"), "onClick", function() {
+      dojo.ready(function(){
+         dojo.connect(dijit.byId("reloadButton1"), "onClick", function(){
             reloadCount++;
             reloadableStore1.clearOnClose = true;
             reloadableStore1.data = {identifier: 'abbr',
@@ -1027,8 +1027,8 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
       dojo.require("dijit.form.Button");
 
       // Now set up a linkage so that the store can be reloaded.
-      dojo.ready(function() {
-         dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
+      dojo.ready(function(){
+         dojo.connect(dijit.byId("reloadButton2"), "onClick", function(){
             // Reset the url and call close.  Note this could be a different JSON file, but for this example, just
             // Showing how you would set the URL.
             reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json";

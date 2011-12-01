@@ -42,7 +42,7 @@ Example 1:  Wipe in a dom node
       dojo.require("dojo.fx");
       function basicWipeinSetup(){
          // Function linked to the button to trigger the wipe.
-         function wipeIt() {
+         function wipeIt(){
             dojo.style("basicWipeNode", "display", "none");
             var wipeArgs = {
               node: "basicWipeNode"
@@ -74,7 +74,7 @@ Example 2:  Wipe in a dom node with a custom duration
       dojo.require("dojo.fx");
       function basicWipeinSetup1(){
          // Function linked to the button to trigger the wipe.
-         function wipeIt() {
+         function wipeIt(){
             dojo.style("basicWipeNode1", "display", "none");
             var wipeArgs = {
               node: "basicWipeNode1",
@@ -109,7 +109,7 @@ Example 3:  Wipe in a dom node with an easing function
       dojo.require("dojo.fx.easing");
       function basicWipeinSetup2(){
          // Function linked to the button to trigger the wipe.
-         function wipeIt() {
+         function wipeIt(){
             dojo.style("basicWipeNode2", "display", "none");
             var wipeArgs = {
               node: "basicWipeNode2",

@@ -104,7 +104,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initSimpleAtom () {
+      function initSimpleAtom(){
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
@@ -165,7 +165,7 @@ Example 2: Create a new ATOM Feed
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the main work for this example
-      function initSimpleCreateAtom () {
+      function initSimpleCreateAtom(){
         // Create a feed with some basic attributes set.
         var feed = new dojox.atom.io.model.Feed();
         feed.id = "This_Is_A_New_Feed_0";
@@ -212,7 +212,7 @@ Example 3: Modify a loaded feed
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initSimpleAtomModified() {
+      function initSimpleAtomModified(){
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,

@@ -22,7 +22,7 @@ Simply pass _something_ to dojo.clone, and a new version of that _something_ wil
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     // clone an object
     var obj = { a:"b", c:"d" };
     var thing = lang.clone(obj);
@@ -43,7 +43,7 @@ Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node 
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang", "dojo/dom", "dojo/dom-attr"], function(lang, dom, attr) {
+  require(["dojo/_base/lang", "dojo/dom", "dojo/dom-attr"], function(lang, dom, attr){
     var node = dom.byId("someNode");
     var newnode = lang.clone(node);
     attr.set(newnode, "id", "someNewId");
@@ -58,7 +58,7 @@ If you have a pointer to some node already, or want to avoid id's all together, 
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang", "dojo/query", "dojo/dom-construct", "dojo/_base/window"], function(lang, query, ctr, win) {
+  require(["dojo/_base/lang", "dojo/query", "dojo/dom-construct", "dojo/_base/window"], function(lang, query, ctr, win){
     // get a reference to some node
     var n = query(".someNode")[0];
 

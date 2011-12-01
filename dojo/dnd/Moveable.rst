@@ -94,12 +94,12 @@ Here is an example of a custom mover allowing to move an object with 5 pixels st
 .. js ::
  
   dojo.declare("dojo.dnd.StepMover", dojo.dnd.Mover, {
-    onMouseMove: function(e) {
+    onMouseMove: function(e){
       dojo.dnd.autoScroll(e);
       var m = this.marginBox;
-      if(e.ctrlKey) {
+      if(e.ctrlKey){
         this.host.onMove(this, {l: parseInt((m.l + e.pageX) / 5) * 5, t: parseInt((m.t + e.pageY) / 5) * 5});
-      } else {
+      }else{
         this.host.onMove(this, {l: m.l + e.pageX, t: m.t + e.pageY});
       }
       dojo.stopEvent(e);

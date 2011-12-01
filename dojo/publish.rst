@@ -29,7 +29,7 @@ Listen to a channel named "foobar" for data:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.subscribe("foobar", function(message){
       console.log("I got: ", message);
     });
@@ -44,7 +44,7 @@ To publish information to that channel:
 .. js ::
    
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.publish("foobar", [{
       item:"one", another:"item", anObject:{ deeper:"data" }
     }]);
@@ -64,7 +64,7 @@ Subscribe returns a handle to later be used for disconnecting a subscription, mu
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     var handle = connect.subscribe("/foo/bar", function(message){
       // only runs once in this case:
       connect.unsubscribe(handle);
@@ -90,7 +90,7 @@ Several :ref:`Dijit widgets <dijit/index>` use publish to alert the user (and ot
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     var id = "myTabs";
     connect.subscribe(id + "-addChild", function(child){
       // child is the new pane being added to the tabs with id="myTabs"

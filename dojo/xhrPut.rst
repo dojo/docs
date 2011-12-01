@@ -65,7 +65,7 @@ Example 1: dojo.xhrPut call to send some text data
     <script>
       dojo.require("dijit.form.Button");
 
-      function sendText() {
+      function sendText(){
         var button = dijit.byId("submitButton2");
 
         dojo.connect(button, "onClick", function(event){

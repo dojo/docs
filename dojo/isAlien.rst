@@ -24,7 +24,7 @@ Use this to test if a variable is a built-in function.
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     lang.isAlien(foo)
   });
   // Dojo < 1.7
@@ -35,7 +35,7 @@ Returns true if it is a built-in function or some other kind of oddball that *sh
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     // Check, if variable "foo" is a built-in function:
     if(lang.isAlien(foo)){
       // do something...
@@ -70,13 +70,13 @@ Test against isAlien()
         // test variable t:
         var t;
 
-        function testIt() {
+        function testIt(){
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
 
             // Here comes the test:
             // Is t an built-in function?
-            if (dojo.isAlien(t)) {
+            if(dojo.isAlien(t)){
                 // dojooo: t is a built-in function!
                 dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is a built-in function.<br />Try another button.");
@@ -86,7 +86,7 @@ Test against isAlien()
                     "backgroundColor": "#a4e672",
                     "color": "black"
                 });
-            } else {
+            }else{
                 // no chance, this can't be a built-in function:
                 dojo.attr(resultDiv, "innerHTML",
                     "No chance: 't' can't be a built-in function with such a value "

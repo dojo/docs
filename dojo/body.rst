@@ -30,7 +30,7 @@ The most important item to remember is dojo.body is a function, and needs to be 
 
 .. js ::
 
-  require(["dojo/_base/window"], function(win) {
+  require(["dojo/_base/window"], function(win){
     console.log( win.body() );
   });
 
@@ -54,7 +54,7 @@ Actually using the `<body>` element is an exercise left to the developer. There 
 
 .. js ::
   
-  require(["dojo/_base/window", "dojo/dom-style", "dojo/dom-construct"], function(win, style, ctr) {
+  require(["dojo/_base/window", "dojo/dom-style", "dojo/dom-construct"], function(win, style, ctr){
     // set the background color:
     style.set(win.body(), "backgroundColor", "green");
     // place a node with id="foo" as the last-child of body:

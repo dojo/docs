@@ -35,7 +35,7 @@ Example 1: Generic XML DOM Parser and utilities
     <script>
       dojo.require("dojox.xml.parser");
 
-      function init() {
+      function init(){
          // Parse text and generate an XML DOM
          var xml = "<tnode><node>Some Text</node><node>Some Other Text</node></tnode>";
          var dom = dojox.xml.parser.parse(xml);
@@ -48,7 +48,7 @@ Example 1: Generic XML DOM Parser and utilities
          ap.appendChild(document.createElement("br"));
 
          // Write text content into the display.
-         for (var i = 0; i < docNode.childNodes.length; i++) {
+         for(var i = 0; i < docNode.childNodes.length; i++){
            ap.appendChild(document.createTextNode("Element: [" + i + "] contains text: " + dojox.xml.parser.textContent(docNode.childNodes[i])));
            ap.appendChild(document.createElement("br"));
          }
@@ -81,7 +81,7 @@ Example 2: Generic XML DOM to JS Object parser
     <script>
       dojo.require("dojox.xml.DomParser");
 
-      function init() {
+      function init(){
          // Parse text and generate an JS DOM
          var xml = "<tnode><node>Some Text</node><node>Some Other Text</node></tnode>";
          var jsdom = dojox.xml.DomParser.parse(xml);

@@ -79,13 +79,13 @@ To accept dates from the server in this format (but continue to work with dates 
 			dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
 				oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
 				value: "", // prevent parser from trying to convert to Date object
-				postMixInProperties: function() { // change value string to Date object
+				postMixInProperties: function(){ // change value string to Date object
 					this.inherited(arguments);
 					// convert value to Date object
 					this.value = dojo.date.locale.parse(this.value, this.oracleFormat);
 				},
 				// To write back to the server in Oracle format, override the serialize method:
-				serialize: function(dateObject, options) {
+				serialize: function(dateObject, options){
 					return dojo.date.locale.format(dateObject, this.oracleFormat).toUpperCase();
 				}
 			});

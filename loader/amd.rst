@@ -216,7 +216,7 @@ via a ``has`` call:
   <script>
     var dojoConfig = {
       has: {
-        "myApp-someFeature":function() {
+        "myApp-someFeature":function(){
           return !!document.addEventListener;
         }
       }
@@ -257,7 +257,7 @@ Normal use of ``require`` looks like this:
 
 .. js ::
 
-  require([ "my/app", "dojo" ], function (app, dojo) {
+  require([ "my/app", "dojo" ], function(app, dojo){
     // do something with app and dojo...
   });
 
@@ -317,7 +317,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 
   require(
     ["dijit/layout/TabContainer", "bd/widgets/stateButton"],
-    function(TabContainer, stateButton) {
+    function(TabContainer, stateButton){
       // do something with TabContainer and stateButton...
     }
   );
@@ -328,7 +328,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 
   define(
     ["dijit/layout/TabContainer", "bd/widgets/stateButton"],
-    function(TabContainer, stateButton) {
+    function(TabContainer, stateButton){
       // do something with TabContainer and stateButton...
       return definedValue;
     }
@@ -386,7 +386,7 @@ example:
   // this is "myPackage/myModule/mySubmodule"
   define(
     ["myPackage/utils", "myPackage/myModule/mySubmodule2"],
-    function (utils, submodule) {
+    function(utils, submodule){
       // do something spectacular
     }
   );
@@ -398,7 +398,7 @@ Could be rewritten as:
   // this is "myPackage/myModule/mySubmodule"
   define(
     ["../utils", "./mySubmodule2"],
-    function (utils, submodule) {
+    function(utils, submodule){
     // do something spectacular
     }
   );
@@ -423,9 +423,9 @@ needs to conditionally require and execute some code. For example:
 .. js ::
 
   // this is "myApp/topLevelHandlers"
-  define(["dojo"], function (dojo) {
-    dojo.connect(dojo.byId("debugButton"), "click", function () {
-      require(["myApp/perspectives/debug"], function (perspective) {
+  define(["dojo"], function(dojo){
+    dojo.connect(dojo.byId("debugButton"), "click", function(){
+      require(["myApp/perspectives/debug"], function(perspective){
         perspective.open();
       });
     });
@@ -440,9 +440,9 @@ identifier "require" in the dependency vector:
 .. js ::
 
   // this is "myApp/topLevelHandlers"
-  define(["dojo", "require"], function (dojo, require) {
-    dojo.connect(dojo.byId("debugButton"), "click", function () {
-      require(["./perspectives/debug"], function (perspective) {
+  define(["dojo", "require"], function(dojo, require){
+    dojo.connect(dojo.byId("debugButton"), "click", function(){
+      require(["./perspectives/debug"], function(perspective){
         perspective.open();
       });
     });
@@ -460,7 +460,7 @@ An explicit path or URL to a script can be passed as a module identifier. In thi
 
 .. js ::
 
-  require(["http://acmecorp.com/stuff.js"], function () {
+  require(["http://acmecorp.com/stuff.js"], function(){
     // etc.
   });
 
@@ -834,7 +834,7 @@ You can then access these packages normally through ``require`` or ``define``:
 
 .. js ::
 
-  define(["util1", "util2"], function(util1, util2) {
+  define(["util1", "util2"], function(util1, util2){
     // well that that was easy.
   });
 
@@ -961,11 +961,11 @@ Finally, the AMD specification states that when ``define`` is provided only a fa
 
 .. js ::
 
-  define(["require", "exports", "module"], function(require, exports, module) {
+  define(["require", "exports", "module"], function(require, exports, module){
     // define a module
   });
 
-  define(function(require, exports, module) {
+  define(function(require, exports, module){
     // define a module
   });
 
@@ -1016,7 +1016,7 @@ Here is an example of loading some raw text with a "text" plugin:
 .. js ::
 
   // this is "myApp/myModule"
-  define(["text!./templates/myModule.html"], function(template) {
+  define(["text!./templates/myModule.html"], function(template){
     // template is a string loaded from the resource implied by myApp/templates/myModule.html
   });
 
@@ -1024,12 +1024,12 @@ And a simple "text" plugin implementation:
 
 .. js ::
 
-  define(["dojo/_base/xhr"], function(xhr) {
+  define(["dojo/_base/xhr"], function(xhr){
     return {
-      load: function(id, require, callback) {
+      load: function(id, require, callback){
         xhr.get({
           url: require.toUrl(id),
-          load: function(text) {
+          load: function(text){
             callback(text);
           }
         });
@@ -1041,17 +1041,17 @@ Unlike the value returned by regular modules, the loader does not cache the valu
 
 .. js ::
 
-  define(["dojo"], function(dojo) {
+  define(["dojo"], function(dojo){
     var cache = {};
     return {
-      load: function(id, require, callback) {
+      load: function(id, require, callback){
         var url = require.toUrl(id);
-        if (url in cache){
+        if(url in cache){
           callback(cache[url]);
-        } else {
+        }else{
           dojo.xhrGet({
             url: url,
-            load: function (text) {
+            load: function(text){
               callback(cache[url] = text);
             }
           });

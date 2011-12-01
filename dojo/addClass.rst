@@ -88,12 +88,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function add1() {
+        function add1(){
             // add the class "style1" to the node "example1":
             dojo.addClass("example1", "style1");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", add1);
         });
     </script>
@@ -138,12 +138,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function add1() {
+        function add1(){
             // add classes "style1" and "style2" to the node "example1":
             dojo.addClass("example1", "style1 style2");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", add1);
         });
     </script>
@@ -187,12 +187,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function add1() {
+        function add1(){
             // add classes "style1" and "style2" to the node "example1":
             dojo.addClass("example1", ["style1", "style2"]);
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", add1);
         });
     </script>
@@ -236,12 +236,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function add3() {
+        function add3(){
             // add the class "style3" to each <div> node:
             dojo.query("#example3 div").addClass("style3");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button3"), "onclick", add3);
         });
     </script>

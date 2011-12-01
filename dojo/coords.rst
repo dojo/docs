@@ -56,7 +56,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
   .. js ::
 
     <script>
-      function init() {
+      function init(){
         var node = dojo.byId("box");
         var coords = dojo.coords(node);
         var info = dojo.byId("info");
@@ -84,7 +84,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
 
     <script>
       dojo.require("dijit.form.TextBox");
-      function init() {
+      function init(){
         var node = dijit.byId("textbox").domNode;
         var coords = dojo.coords(node);
         var info = dojo.byId("infoSpan");

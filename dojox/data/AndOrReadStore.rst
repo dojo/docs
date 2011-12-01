@@ -116,26 +116,26 @@ Finding all Continents and Cities
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2 () {
+      function init2(){
         // Function to perform a fetch on the datastore when a button is clicked
-        function getItems() {
+        function getItems(){
 
           // Callback to perform an action when the data items are starting to be returned:
-          function clearOldCList(size, request) {
+          function clearOldCList(size, request){
             var list = dojo.byId("list2");
-            if (list) {
-              while (list.firstChild) {
+            if(list){
+              while(list.firstChild){
                 list.removeChild(list.firstChild);
               }
             }
           }
   
           // Callback for processing a returned list of items.
-          function gotItems(items, request) {
+          function gotItems(items, request){
             var list = dojo.byId("list2");
-            if (list) {
+            if(list){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 list.appendChild(document.createTextNode(geoStore.getValue(item, "name")));
                 list.appendChild(document.createElement("br"));
@@ -144,7 +144,7 @@ Finding all Continents and Cities
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }

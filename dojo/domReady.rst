@@ -35,7 +35,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 .. js ::
 
-  require("dojo/domReady!", function() {
+  require("dojo/domReady!", function(){
            document.musicPrefs.other.value="Afrobeat";
   });
 

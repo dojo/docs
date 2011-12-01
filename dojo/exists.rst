@@ -51,9 +51,9 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
 
    if( lang.exists(widgetType, myNamespace) ){
      console.log( "There's a docs.form.Button available");
-   } else if( lang.exists(widgetType, dijit) ){
+   }else if( lang.exists(widgetType, dijit) ){
      console.log( "Dijits form.Button class is available");
-   } else {
+   }else{
      console.log( "No form.Button classes are available");
    }
  });
@@ -64,9 +64,9 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
 
  if( dojo.exists(widgetType, myNamespace) ){
    console.log( "There's a docs.form.Button available");
- } else if( dojo.exists(widgetType, dijit) ){
+ }else if( dojo.exists(widgetType, dijit) ){
    console.log( "Dijits form.Button class is available");
- } else {
+ }else{
    console.log( "No form.Button classes are available");
  }
 

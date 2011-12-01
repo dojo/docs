@@ -58,7 +58,7 @@ Programmatic construction of a ComboBox to browse rules
       dojo.require("dojox.data.CssClassStore");
       dojo.require("dijit.form.ComboBox");
 
-      function init() {
+      function init(){
         var classStore = new dojox.data.CssClassStore({'context': ['dijit/themes/nihilo/nihilo.css']});
         var classCombo = new dijit.form.ComboBox({'store': classStore, 'searchAttr': 'classSans'}, dojo.byId('classCombo'));
       }

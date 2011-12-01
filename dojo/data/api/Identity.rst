@@ -48,12 +48,12 @@ Basic lookup of an item by identity
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
-  function failed(error) {
+  function failed(error){
     // Do something with the provided error.
   }
 
-  function gotItem(item) {
-    if (itemStore.isItem(item)){
+  function gotItem(item){
+    if(itemStore.isItem(item)){
       if(!(itemStore.getValue(item,"name") === "El Salvador")){
         failed(new Error("The item loaded does not have the attribute value for attribute [name] expected."));
       }else{
@@ -80,7 +80,7 @@ Obtaining the value of an item's identity
     // Do something with the provided error.
   }
 
-  function onComplete(items, request) {
+  function onComplete(items, request){
     if(items.length === 1){
       var identifier = itemStore.getIdentity(items[0]);
       if(identifier !== null && identifier === "er"){
@@ -104,12 +104,12 @@ Obtaining the list of attributes that comprise the identity of an item
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
-  function failed(error) {
+  function failed(error){
     // Do something with the provided error.
   }
 
-  function gotItem(item) {
-    if (itemStore.isItem(item)){
+  function gotItem(item){
+    if(itemStore.isItem(item)){
       if(!(itemStore .getValue(item,"name") === "El Salvador")){
         failed(new Error("The item loaded does not have the attribute value for attribute [name] expected."));
       }else{

@@ -190,7 +190,7 @@ This makes a dijit attribute 'href' available inside the constructor.  However, 
  dojo.require("dojox.image.LightboxNano");
  
  dojo.declare("mydijits.LightboxNanoHelper", null, {
-   constructor: function(/*Object?*/p, /*DomNode?*/n) {
+   constructor: function(/*Object?*/ p, /*DomNode?*/ n){
      new dojox.image.LightboxNano({ href: n.href }, n);
    }
  });

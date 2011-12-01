@@ -44,10 +44,10 @@ By default, ItemFileWriteStore has registered a custom type handler for JavaScri
   {
     "Date": {
       type: Date,
-      deserialize: function (value) {
+      deserialize: function(value){
         return dojo.date.stamp.fromISOString(value);
       },
-      serialize: function(obj) {
+      serialize: function(obj){
         return dojo.date.stamp.toISOString(obj, {zulu:true});
       }
     }
@@ -183,7 +183,7 @@ Delete a country
     alert("Save failed.");
   }
   var gotNames= function(items, request){
-    for (var i = 0; i < items.length; i++){
+    for(var i = 0; i < items.length; i++){
       console.log("Deleted country: " + store.getLabel(item);
       store.deleteItem(items[i]);
     }
@@ -269,16 +269,16 @@ The following is a semi-complex example of the write API in action. In this exam
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2 () {
+      function init2(){
         // Function to perform a fetch on the datastore when a button is clicked
-        function updateAll() {
+        function updateAll(){
 
            // Callback for processing a returned list of items.
-          function gotAll(items, request) {
+          function gotAll(items, request){
             var value = spinner.getValue();
-            if ( value >= 0 ) {
+            if( value >= 0 ){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 geoStore.setValue(item, "population", value);
               }
@@ -286,7 +286,7 @@ The following is a semi-complex example of the write API in action. In this exam
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }
@@ -396,12 +396,12 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
         ]
       };
 
-      function init() {
-        function deleteCities() {
-          function gotCities(items, request) {
-            if (items ) {
+      function init(){
+        function deleteCities(){
+          function gotCities(items, request){
+            if(items ){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 geographyStore2.deleteItem(item);
               }
@@ -500,40 +500,40 @@ is displayed in an alert.
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init3 () {
+      function init3(){
 
-        var itemToJS = function(store, item) {
+        var itemToJS = function(store, item){
           // summary: Function to convert an item into a simple JS object.
           // store:
           //    The datastore the item came from.
           // item:
           //    The item in question.
           var js = {};
-          if (item && store) {
+          if(item && store){
             // Determine the attributes we need to process.
             var attributes = store.getAttributes(item);
-            if (attributes && attributes.length > 0) {
+            if(attributes && attributes.length > 0){
               var i;
-              for (i = 0; i < attributes.length; i++) {
+              for(i = 0; i < attributes.length; i++){
                 var values = store.getValues(item, attributes[i]);
-                if (values) {
+                if(values){
                   // Handle multivalued and single-valued attributes.
-                  if (values.length > 1 ) {
+                  if(values.length > 1 ){
                     var j;
                     js[attributes[i]] = [];
-                    for (j = 0; j < values.length; j++ ) {
+                    for(j = 0; j < values.length; j++ ){
                       var value = values[j];
                       // Check that the value isn't another item. If it is, process it as an item.
-                      if (store.isItem(value)) {
+                      if(store.isItem(value)){
                         js[attributes[i]].push(itemToJS(store, value));
-                      } else {
+                      }else{
                         js[attributes[i]].push(value);
                       }
                     }
-                  } else {
-                    if (store.isItem(values[0])) {
+                  }else{
+                    if(store.isItem(values[0])){
                       js[attributes[i]] = itemToJS(store, values[0]);
-                    } else {
+                    }else{
                       js[attributes[i]] = values[0];
                     }
                   }
@@ -544,22 +544,22 @@ is displayed in an alert.
           return js;
         };
 
-        geoStore2._saveCustom = function(saveComplete, saveFailed) {
+        geoStore2._saveCustom = function(saveComplete, saveFailed){
            //  summary:
            //    This is a custom save function for the geoStore to allow emitting only the modified items as
            //    a block of JSON text.
            var changeSet  = geoStore2._pending;
            var changes = {};
            changes.modified = [];
-           for (var i in changeSet._modifiedItems) {
+           for(var i in changeSet._modifiedItems){
               // Use the identity to look up the current version of the item from the store's array
               // Can't use the object IN the modified items array because it is the saved state before modification.
               var item = null;
               // Find the modified item, it can be in one of two places to look up
               // Either by an explicit identity if it was specified, or by its index.
-              if (geoStore2._itemsByIdentity) {
+              if(geoStore2._itemsByIdentity){
                  item = geoStore2._itemsByIdentity[i];
-              } else {
+              }else{
                  item = geoStore2._arrayOfAllItems[i];
               }
               changes.modified.push(itemToJS(geoStore2, item));
@@ -570,14 +570,14 @@ is displayed in an alert.
 
 
         // Function to perform a fetch on the datastore when a button is clicked
-        function updateAll() {
+        function updateAll(){
 
            // Callback for processing a returned list of items.
-          function gotAll(items, request) {
+          function gotAll(items, request){
             var value = spinner2.getValue();
-            if ( value >= 0 ) {
+            if( value >= 0 ){
               var i;
-              for (i = 0; i < items.length; i++) {
+              for(i = 0; i < items.length; i++){
                 var item = items[i];
                 geoStore2.setValue(item, "population", value);
               }
@@ -585,7 +585,7 @@ is displayed in an alert.
           }
             
           // Callback for if the lookup fails.
-          function fetchFailed(error, request) {
+          function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }

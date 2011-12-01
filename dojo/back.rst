@@ -59,8 +59,8 @@ To use dojo.back:
    .. js ::
 
        var state = {
-           back: function() { alert("Back was clicked!"); },
-           forward: function() { alert("Forward was clicked!"); }
+           back: function(){ alert("Back was clicked!"); },
+           forward: function(){ alert("Forward was clicked!"); }
        };
    ..
 

@@ -259,15 +259,15 @@ handles the onSubmit event, validation, and an xhrPost to the server.
         <form data-dojo-type="dijit.form.Form">
             <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
                 dojo.stopEvent(e); // prevent the default submit
-                if (!this.isValid()) { window.alert('Please fix fields'); return; }
+                if(!this.isValid()){ window.alert('Please fix fields'); return; }
 
                 window.alert("Would submit here via xhr");
                 // dojo.xhrPost( {
                 //      url: 'foo.com/handler',
                 //      content: { field: 'go here' },
                 //      handleAs: 'json'
-                //      load: function(data) { .. },
-                //      error: function(data) { .. }
+                //      load: function(data){ .. },
+                //      error: function(data){ .. }
                 //  });
             </script>
             <div class="dijitDialogPaneContentArea">

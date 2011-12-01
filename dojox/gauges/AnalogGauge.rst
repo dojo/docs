@@ -57,7 +57,7 @@ A partial circle gauge with two indicators (programmatic)
       dojo.require("dojox.gauges.AnalogArrowIndicator");
 
 
-      function init() {
+      function init(){
         var gauge;
         var ranges1 = [ {low:5, high:10, hover:'5 - 10'},
           {low:10, high:20, hover:'10 - 20'},

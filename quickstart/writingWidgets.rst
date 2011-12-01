@@ -523,10 +523,10 @@ In Button.js you'll find:
 
 .. js ::
 
-  _onButtonClick: function( /*Event*/ e) {
+  _onButtonClick: function( /*Event*/ e){
     ... // Trust me, _onClick calls this._onClick
   },
-  _onClick: function( /*Event*/ e) {
+  _onClick: function( /*Event*/ e){
     ...
     return this.onClick(e);
   },

@@ -111,10 +111,10 @@ To get started, we first need a callback function to handle the data to be retur
 .. html ::
   
   <script type="text/javascript">
-       function helloCallback(data,ioArgs) {
+       function helloCallback(data,ioArgs){
           alert(data);
        }
-       function helloError(data, ioArgs) {
+       function helloError(data, ioArgs){
           alert('Error when retrieving data from the server!');
        }
   </script>

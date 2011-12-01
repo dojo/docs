@@ -24,10 +24,10 @@ second--useful for driving something such as a clock.
   
   dojo.require('dojox.timing');
   t = new dojox.timing.Timer(1000);
-  t.onTick = function() {
+  t.onTick = function(){
    console.info("One second elapsed");
   }
-  t.onStart = function() {
+  t.onStart = function(){
    console.info("Starting timer");
   }
   t.start();

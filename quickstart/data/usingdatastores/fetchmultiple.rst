@@ -83,26 +83,26 @@ Loading all items through callbacks
         // This function performs some basic dojo initialization.  In this case it connects the button
         // onClick to a function which invokes the fetch().  The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        function init(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getAllItems () {
+           function getAllItems(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
@@ -111,7 +111,7 @@ Loading all items through callbacks
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
              }
              
@@ -217,25 +217,25 @@ Loading all items through the onItem callback
         // This function performs some basic dojo initialization.  In this case it connects the button
         // onClick to a function which invokes the fetch().  The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init2 () {
+        function init2(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getStreamingItems () {
+           function getStreamingItems(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list2");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a single returned item.
-             function gotItem(item, request) {
+             function gotItem(item, request){
                var list = dojo.byId("list2");
-               if (list) {
-                 if (item) {
+               if(list){
+                 if(item){
                    list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
                  }
@@ -243,7 +243,7 @@ Loading all items through the onItem callback
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
              }
              

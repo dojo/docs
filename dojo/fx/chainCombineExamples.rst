@@ -31,7 +31,7 @@ Example 1:  Demonstration of combining three chained animations
       dojo.require("dojo.fx.easing");
       function basicCombine(){
          // Function linked to the button to trigger the effects.
-         function combineIt() {
+         function combineIt(){
 
             // Fade the node out, then in
             var displayAnim = dojo.fx.chain([

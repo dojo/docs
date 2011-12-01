@@ -24,7 +24,7 @@ Use this to test if a variable is a string
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     if(lang.isString(foo)){ ...
   });
   // Dojo < 1.7
@@ -53,13 +53,13 @@ Test against isString()
         // test variable t:
         var t;
 
-        function testIt() {
+        function testIt(){
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
 
             // Here comes the test:
             // Is t an Array?
-            if (dojo.isString(t)) {
+            if(dojo.isString(t)){
                 // dojooo: t is a string!
                 dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is a string.<br />Try another button.");
@@ -69,7 +69,7 @@ Test against isString()
                     "backgroundColor": "#a4e672",
                     "color": "black"
                 });
-            } else {
+            }else{
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML",
                     "No chance: 't' can't be a string with such a value "

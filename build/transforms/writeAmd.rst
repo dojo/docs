@@ -89,7 +89,7 @@ module resource to be evaluated. For example, if the resource text for the modul
   // some code outside the AMD define application
   console.log("hello, world; you shouldn't do this, but you can");
   
-  define([/* x/y/x dependencies */], function(/* dependency lexical variables */) {
+  define([/* x/y/x dependencies */], function(/* dependency lexical variables */){
     console.log("in x/y/z's factory");
   });
   
@@ -106,7 +106,7 @@ And x/y/z is a member module of a layer, then that layer will inject a loader ca
       // some code outside the AMD define application
       console.log("hello, world; you shouldn't do this, but you can");
       
-      define([/* x/y/x dependencies */], function(/* dependency lexical variables */) {
+      define([/* x/y/x dependencies */], function(/* dependency lexical variables */){
         console.log("in x/y/z's factory");
       });
       

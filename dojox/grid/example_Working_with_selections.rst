@@ -54,12 +54,12 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                 // Iterate through the list of selected items.
                 // The current item is available in the variable
                 // "selectedItem" within the following function:
-                dojo.forEach(items, function(selectedItem) {
-                    if(selectedItem !== null) {
+                dojo.forEach(items, function(selectedItem){
+                    if(selectedItem !== null){
                         // Iterate through the list of attributes of each item.
                         // The current attribute is available in the variable
                         // "attribute" within the following function:
-                        dojo.forEach(grid2.store.getAttributes(selectedItem), function(attribute) {
+                        dojo.forEach(grid2.store.getAttributes(selectedItem), function(attribute){
                             // Get the value of the current attribute:
                             var value = grid2.store.getValues(selectedItem, attribute);
                             // Now, you can do something with this attribute/value pair.

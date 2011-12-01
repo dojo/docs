@@ -16,7 +16,7 @@ This function simply throws a warning message, alerting developers a method or p
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/kernel"], function(dojo) {
+  require(["dojo/_base/kernel"], function(dojo){
     dojo.deprecated("dijit.layout.SplitContainer","User dijit.layout.BorderContainer instead","2.0");
   });
   // Dojo < 1.7

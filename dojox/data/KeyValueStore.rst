@@ -34,7 +34,7 @@ Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... 
  
   var myVar={"key1": "value1" , "key2": "value2", ... };
   var myData=[];
-  for (var p in myVar) {
+  for(var p in myVar){
     var t={};
     t[p]=myVar[p];
     myData.push(t);
@@ -100,26 +100,26 @@ List out all the attributes and values of a key/value data set
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        function init(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getAllItems () {
+           function getAllItems(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearList(size, request) {
+             function clearList(size, request){
                var list = dojo.byId("list");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
 
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    var field = document.createElement("b");
                    field.appendChild(document.createTextNode("Key: "));
@@ -141,7 +141,7 @@ List out all the attributes and values of a key/value data set
              }
 
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
              }
              

@@ -270,7 +270,7 @@ Sample code:  Detecting child items
 
       // Cycle over all the attributes.
       var attributes = store.getAttributes(item);
-      for (var j = 0; j < attributes.length; j++){
+      for(var j = 0; j < attributes.length; j++){
         // Assume all attributes are multi-valued and loop over the values ...
         var values = store.getValues(item, attributes[j]);
         for(var k = 0; k < values.length; k++){
@@ -309,7 +309,7 @@ Sample code:  Detecting child items and lazy-loading items on demand
 
       // Cycle over all the attributes.
       var attributes = store.getAttributes(item);
-      for (var j = 0; j < attributes.length; j++){
+      for(var j = 0; j < attributes.length; j++){
         // Assume all attributes are multi-valued and loop over the values ...
         var values = store.getValues(item, attributes[j]);
         for(var k = 0; k < values.length; k++){

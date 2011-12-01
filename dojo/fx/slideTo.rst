@@ -46,7 +46,7 @@ Example 1:  Slide a dom node right 200 pixels.
       dojo.require("dojo.fx");
       function basicSlideToSetup(){
          // Function linked to the button to trigger the slide.
-         function slideIt(amt) {
+         function slideIt(amt){
             var slideArgs = {
               node: "basicNode",
               top: (dojo.marginBox("basicNode").t).toString(),

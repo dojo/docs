@@ -57,7 +57,7 @@ The following example code fragment shows the general flow with Pagination:
 
   // Define a function will be connected to a 'previous' button.
   var onPrevious = function(){
-    if (request.start > 0){
+    if(request.start > 0){
       request.start -= pageSize;
         store.fetch(request);
     }
@@ -69,7 +69,7 @@ The following example code fragment shows the general flow with Pagination:
 
   // Define how we handle the items when we get it
   var itemsLoaded = function(items, request){
-    if (items.length < pageSize){
+    if(items.length < pageSize){
       // We have found all the items and are at the end of our set.
       outOfItems = true;
     }else{
@@ -115,7 +115,7 @@ Paging over items
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes *fetch()*es. The fetch function queries for only a subset
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        function init(){
 
            // These are some lage controls used to know when to disable forward/previous buttons.
            var totalItems = 0;   // How many total items should we expect.
@@ -124,10 +124,10 @@ Paging over items
            currentCount = 2;     // Current size of the page.
 
            // Callback to perform an action when the data items are starting to be returned:
-           function clearOldList(size, request) {
+           function clearOldList(size, request){
              var list = dojo.byId("list");
-             if (list) {
-               while (list.firstChild) {
+             if(list){
+               while(list.firstChild){
                  list.removeChild(list.firstChild);
                }
              }
@@ -136,14 +136,14 @@ Paging over items
            }
   
            // Callback for processing a returned list of items.
-           function gotItems(items, request) {
+           function gotItems(items, request){
              // Save off the current page info being displayed.
              currentStart = request.start;
              currentCount = request.count;
              var list = dojo.byId("list");
-             if (list) {
+             if(list){
                var i;
-               for (i = 0; i < items.length; i++) {
+               for(i = 0; i < items.length; i++){
                  var item = items[i];
                  list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
                  list.appendChild(document.createElement("br"));
@@ -152,23 +152,23 @@ Paging over items
            }
             
            // Callback for if the lookup fails.
-           function fetchFailed(error, request) {
+           function fetchFailed(error, request){
              alert("lookup failed.");
            }
            
            // Button event to page forward.
-           function nextPage() {
+           function nextPage(){
              // If we haven't hit the end of the pages yet, allow for requesting another.
-             if ((currentStart + currentCount) < totalItems ) {
+             if((currentStart + currentCount) < totalItems ){
                request.start += currentCount;
                request = foodStore.fetch(request);
              }
            }
 
            // Button event to page back;
-           function previousPage() {
+           function previousPage(){
              // If we haven't hit the beginning of the pages yet, allow for another shift backwards.
-             if (currentStart > 0) {
+             if(currentStart > 0){
                request.start -= currentCount;
                request = foodStore.fetch(request);
              }

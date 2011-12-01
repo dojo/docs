@@ -83,7 +83,7 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
           "dojo/dom", // alias DOM api to "dom"
           "dojo/_base/sniff", // load browser-related has feature tests
           "dojo/domReady!"], // wait until DOM is loaded
-       function (has, arrayUtil, dom){
+       function(has, arrayUtil, dom){
 
     function makeFancyAnswer(who){
       if(has(who)){
@@ -93,12 +93,12 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
       }
     }
 
-    function makeAtLeastAnswer(who, version) {
+    function makeAtLeastAnswer(who, version){
       var answer = (has(who) >= version) ? "Yes" : "No";
       dom.byId("isAtLeast" + who + version).innerHTML = answer;
     }
 
-    arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n) {
+    arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n){
       dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
     });
     makeAtLeastAnswer("ie", 7);
@@ -146,14 +146,14 @@ This example has the same result, but loads more code because it's using the ful
     }
   }
 
-  function makeAtLeastAnswer(who, version) {
+  function makeAtLeastAnswer(who, version){
     var answer = (dojo["is" + who] >= version) ? "Yes" : "No";
     dojo.byId("isAtLeast" + who + version).innerHTML = answer;
   }
 
   dojo.addOnLoad(function(){
     dojo.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],
-                 function(n) {
+                 function(n){
                    dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
                  });
     makeAtLeastAnswer("IE", 7);

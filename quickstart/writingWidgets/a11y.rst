@@ -200,9 +200,9 @@ Assigning ARIA States in 0.9
 
 .. js ::
 
-  dijit.wai.setAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
-  dijit.wai.getAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
-  dijit.wai.RemoveAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
+  dijit.wai.setAttr(/*DomNode*/ node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/ nalue);
+  dijit.wai.getAttr(/*DomNode*/ node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/ nalue);
+  dijit.wai.RemoveAttr(/*DomNode*/ node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/ value);
 
 The ns value passed into these functions is either “waiState” or “waiRole”. The dijit.wai functions above are wrappers to the DOM apis to set, get and remove attributes. In browsers where namespaces are supported the setAttributeNS, getAttributeNS, and removeAttributeNS, apis are called. In other browsers the setAttribute, getAttribute and removeAttribute apis are called and the namespace is simulated. The namespace information is stored in the dijit.wai class.
 

@@ -17,7 +17,7 @@ Method signature of the bind function dojox.app.bind provides.
 
 .. js ::
 
-  function(/*Array of widgets*/widgets, /*Object*/ models)
+  function(/*Array of widgets*/ widgets, /*Object*/ models)
 
 Parameters Detail
 

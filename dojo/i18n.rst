@@ -25,7 +25,7 @@ Dojo 1.7 (AMD)
 .. js ::
  
  <script type="text/javascript">
-    require(["dojo/i18n!dijit/form/nls/validate"], function(i18n) {
+    require(["dojo/i18n!dijit/form/nls/validate"], function(i18n){
         console.log(i18n.invalidMessage);
     });
  </script>

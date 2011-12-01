@@ -59,7 +59,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
 
     <script type="text/javascript">
       dojo.require("dijit.form.NumberSpinner");
-      dojo.ready(function() {
+      dojo.ready(function(){
         var mySpinner = new dijit.form.NumberSpinner({
           value: 1000,
           smallDelta: 10,
@@ -114,7 +114,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
         // attributes are sorted downwards, so the first return element
         // will be the lowest
         var self=this;  // So widget is referencable in function
-        var tempColor = dojo.filter(cutoffPoints, function(temp) {
+        var tempColor = dojo.filter(cutoffPoints, function(temp){
           return self.getValue() > temp.over;
         })[0].color;
 

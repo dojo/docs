@@ -71,7 +71,7 @@ The fetch method query syntax for OpenSearchStore is limited to what the OpenSea
 
 .. js ::
 
-  var fetchArgs = {query: { searchTerms: "Some random terms"}, onComplete: function(items) { /* do something */});
+  var fetchArgs = {query: { searchTerms: "Some random terms"}, onComplete: function(items){ /* do something */});
   openSearchStore.fetch(fetchArgs);
   
 
@@ -92,11 +92,11 @@ Example 1: Programmatic instantiation and querying through OpenSearch
       dojo.require("dijit.form.TextBox");
 
       // This function performs some basic dojo initialization and will do the fetch calling for this example
-      function initSimple () {
+      function initSimple(){
         var openSearchStore = new dojox.data.OpenSearchStore({url:"{{dataUrl}}dojox/data/demos/openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"});
 
-        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
-          function gotResults(items, request) {
+        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function(){
+          function gotResults(items, request){
             if(items){
               // Got the items, let's attach in the search results.
               var list = dojo.byId("list");
@@ -131,7 +131,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
               }
             }
           }
-          function err(e) {
+          function err(e){
             console.debug(e);
           }
           openSearchStore.fetch({query: {searchTerms: dijit.byId("searchBox").attr("value")}, onComplete: gotResults, onError: err});

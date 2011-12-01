@@ -66,15 +66,15 @@ If you want to get notified of any event, use the following: (The event names ar
 
 .. js ::
   
-  dojo.subscribe("/dojox/mdnd/drag/start", null, function(source, nodes, copy, target) {
+  dojo.subscribe("/dojox/mdnd/drag/start", null, function(source, nodes, copy, target){
       // Your Code here
   });
 
-  dojo.subscribe("/dojox/mdnd/drag/cancel", null, function(source, nodes, copy, target) {
+  dojo.subscribe("/dojox/mdnd/drag/cancel", null, function(source, nodes, copy, target){
       // Your Code here
   });
 
-  dojo.subscribe("/dojox/mdnd/drop", null, function(source, nodes, copy, target) {
+  dojo.subscribe("/dojox/mdnd/drop", null, function(source, nodes, copy, target){
       // Your Code here
   });
 

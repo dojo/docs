@@ -47,7 +47,7 @@ This example shows, how to use dojo.connect to connect the datastores onNew func
 .. js ::
 
   var store = some.NotifyWriteStore();
-  var alertOnNew = function(item) {
+  var alertOnNew = function(item){
     var label = store.getLabel(item);
     alert("New item was created: [" + label + "]");
   };
@@ -65,7 +65,7 @@ This example shows, how to override the onNew function of a datastore with a cus
 .. js ::
 
   var store = some.NotifyWriteStore();
-  store.onNew = function(item) {
+  store.onNew = function(item){
     var label = this.getLabel(item);
     alert("New item was created: [" + label + "]");
   };

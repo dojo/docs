@@ -61,35 +61,35 @@ Showing how sort attributes affect ordering
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        function init(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getAllItems () {
+           function getAllItems(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearSortedList(size, request) {
+             function clearSortedList(size, request){
                var list = dojo.byId("sortedList");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
 
-             function clearUnSortedList(size, request) {
+             function clearUnSortedList(size, request){
                var list = dojo.byId("unSortedList");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
 
              // Callback for processing a returned list of items.
-             function gotSortedItems(items, request) {
+             function gotSortedItems(items, request){
                var list = dojo.byId("sortedList");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    var field = document.createElement("b");
                    field.appendChild(document.createTextNode("Aisle: "));
@@ -107,11 +107,11 @@ Showing how sort attributes affect ordering
              }
 
              // Callback for processing a returned list of unsorted items.
-             function gotUnSortedItems(items, request) {
+             function gotUnSortedItems(items, request){
                var list = dojo.byId("unSortedList");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    var field = document.createElement("b");
                    field.appendChild(document.createTextNode("Aisle: "));
@@ -129,7 +129,7 @@ Showing how sort attributes affect ordering
              }
 
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
              }
              

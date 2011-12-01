@@ -58,9 +58,9 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/ready","dojo/fx"], function(ready,fx) {
+  require(["dojo/ready","dojo/fx"], function(ready,fx){
        ready(function(){
-             require(["dijit/form/Button","dojo/_base/window"], function(btn,win) {
+             require(["dijit/form/Button","dojo/_base/window"], function(btn,win){
                   ready(function(){
                         new dijit.form.Button({}).placeAt(win.body());
                   });
@@ -89,12 +89,12 @@ Simply pass it a string:
     
     // Dojo 1.7 (AMD)
     // load dojo/fx.js:
-    require(["dojo/fx"], function(fx) {
+    require(["dojo/fx"], function(fx){
         // Write your code here
     });
     
     // load dojox/widget/Toaster.js:
-    require(["dojo/widget/Toaster"], function(Toaster) {
+    require(["dojo/widget/Toaster"], function(Toaster){
         // Write your code here
     });
 

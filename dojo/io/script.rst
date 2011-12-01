@@ -73,7 +73,7 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
     <script>
      dojo.require("dojo.io.script");
 
-      function searchGoogle() {
+      function searchGoogle(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("results");
 

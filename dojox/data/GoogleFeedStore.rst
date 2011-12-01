@@ -89,7 +89,7 @@ Example Usage
       dojo.require("dojox.data.GoogleFeedStore");
       dojo.require("dojox.grid.DataGrid");
 
-      function hrefFormatter(value) {
+      function hrefFormatter(value){
         value = unescape(value);
         return "<a href=\"" + value + "\" target=\"_blank\">Link</a>";
       };
@@ -102,11 +102,11 @@ Example Usage
         ]
       ];
 
-      function init() {
-         function search() {
+      function init(){
+         function search(){
             var text = dijit.byId("urlText").getValue();
             text = dojo.trim(text);
-            if (text !== "" ) {
+            if(text !== "" ){
               var query = { url: text };
               dijit.byId("feedGrid").setQuery(query);
             }

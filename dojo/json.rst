@@ -26,7 +26,7 @@ To parse a JSON string into a parsed value, we can use the dojo/json this:
 
 .. js ::
   
-  define(["dojo/json"], function(JSON) {
+  define(["dojo/json"], function(JSON){
     var parsed = JSON.parse(jsonString);
   });
 
@@ -34,7 +34,7 @@ If the target platform supports native JSON parsing, dojo/json will always use t
 
 .. js ::
   
-  define(["dojo/json"], function(JSON) {
+  define(["dojo/json"], function(JSON){
     var parsed = JSON.parse(unsecureJSONString, true);
   });
 
@@ -52,7 +52,7 @@ For example, to serialize an object we could write:
 
 .. js ::
 
-  define(["dojo/json"], function(JSON) {
+  define(["dojo/json"], function(JSON){
     var jsonString = JSON.stringify(object);
   });
 

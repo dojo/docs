@@ -473,7 +473,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
-	myLabelFunc = function (item, store){
+	myLabelFunc = function(item, store){
 		var label=store.getValue(item, 'name');
 		// DEMO: uncomment to chop off a character
 		// label=label.substr(0, label.length-1);

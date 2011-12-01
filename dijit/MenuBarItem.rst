@@ -26,8 +26,8 @@ A programmatically created MenuBarItem
     dojo.require("dijit.MenuBar");
     dojo.require("dijit.MenuBarItem");
     var pMenuBar;
-    function fClickItem() {alert("Clicked on first item")};
-    function fClickAnotherItem() {alert("Clicked on the second Item!")};
+    function fClickItem(){alert("Clicked on first item")};
+    function fClickAnotherItem(){alert("Clicked on the second Item!")};
     dojo.ready(function(){
         pMenuBar = new dijit.MenuBar({id:"SampleMenu"});
         pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1 ", disabled:true, onClick:fClickItem}));

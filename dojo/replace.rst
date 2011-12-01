@@ -32,7 +32,7 @@ If the second argument is an object, all names within braces are interpreted as 
 
 .. js ::
   
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var output = lang.replace(
       "Hello, {name.first} {name.last} AKA {nick}!",
       {
@@ -78,7 +78,7 @@ You can see this code in action:
 .. javascript::
 
     <script>
-      require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom) {
+      require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom){
         ready(function(){
           dom.byId("output").innerHTML = lang.replace(
             "Hello, {name.first} {name.last} AKA {nick}!",
@@ -133,7 +133,7 @@ In most cases you may prefer an array notation effectively simulating the venera
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var output = lang.replace(
       "Hello, {0} {2} AKA {3}!",
       ["Robert", "X", "Cringely", "Bob"]
@@ -194,7 +194,7 @@ Let's take a look at example:
 
 .. js ::
   
-  require(["dojo_base/array", "dojo/_base/lang"], function(array, lang) {
+  require(["dojo_base/array", "dojo/_base/lang"], function(array, lang){
     // helper function
     function sum(a){
       var t = 0;
@@ -303,7 +303,7 @@ In some cases you may want to use different braces, e.g., because your interpola
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var output = lang.replace(
       "Hello, %[0] %[2] AKA %[3]!",
       ["Robert", "X", "Cringely", "Bob"],
@@ -365,7 +365,7 @@ Let's add highlighting to all substituted fields:
 
 .. js ::
   
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     function hiliteReplace(tmpl, dict){
       // add highlights first
       var hilited = lang.replace(tmpl, function(_, name){
@@ -452,7 +452,7 @@ while everything else is going to be filtered.
 
 .. js ::
   
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     function safeReplace(tmpl, dict){
       // convert dict to a function, if needed
       var fn = lang.isFunction(dict) ? dict : function(_, name){
@@ -571,7 +571,7 @@ In this example we are going to format numbers as fixed or exponential with opti
 
 .. js ::
   
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     function format(tmpl, dict, formatters){
       // convert dict to a function, if needed
       var fn = lang.isFunction(dict) ? dict : function(_, name){

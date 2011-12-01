@@ -51,7 +51,7 @@ The pattern of using the GoogleBlogSearchStore is
 
   var query = {text: "dojo ajax toolkit"};
 
-  var callbackFunction = function(items /* Array */) {
+  var callbackFunction = function(/*Array*/ items){
     
     console.log("Successfully retrieved " + items.length + " items for the query '" + query.text + "'");
     dojo.forEach(items, function(item){
@@ -63,7 +63,7 @@ The pattern of using the GoogleBlogSearchStore is
     })
   };
 
-  var onErrorFunction = function() {
+  var onErrorFunction = function(){
     console.log("An error occurred getting Google Blog Search data");
   }
 
@@ -91,13 +91,13 @@ Programmatic example
     <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore");
 
-    function doSearch() {
+    function doSearch(){
 
       var store = new dojox.data.GoogleBlogSearchStore();
 
       var query = {text: dojo.byId("searchInput").value};
 
-      var callbackFunction = function(items /* Array */) {
+      var callbackFunction = function(/*Array*/ items){
 
         var table = dojo.byId("resultTable");
         var tableBody = table.tBodies[0];
@@ -129,7 +129,7 @@ Programmatic example
         })
       };
 
-      var onErrorFunction = function() {
+      var onErrorFunction = function(){
         console.log("An error occurred getting Google Search data");
       }
 

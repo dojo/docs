@@ -249,9 +249,9 @@ This example shows how to use Flash and IFrame plugins for both cases (browsers 
  <script type="text/javascript">
    dojo.require("dojox.form.Uploader");
    dojo.require("dojox.embed.Flash");
-   if(dojox.embed.Flash.available) {
+   if(dojox.embed.Flash.available){
      dojo.require("dojox.form.uploader.plugins.Flash");
-   } else {
+   }else{
      dojo.require("dojox.form.uploader.plugins.IFrame");
    }
    dojo.ready(function(){

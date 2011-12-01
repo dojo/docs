@@ -56,7 +56,7 @@ Programmatic example
 
      var pFloatingPane;
 
-     dojo.ready(function() {
+     dojo.ready(function(){
        pFloatingPane = new dojox.layout.FloatingPane({
           title: "A floating pane",
           resizable: true, dockable: true,

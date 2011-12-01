@@ -42,7 +42,7 @@ Example 1:  Fade in a dom node
          dojo.style("basicFadeNode", "opacity", "0");
 
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode", "opacity", "0");
             var fadeArgs = {
               node: "basicFadeNode"
@@ -74,7 +74,7 @@ Example 2:  Fade in a dom node with a custom duration
          dojo.style("basicFadeNode2", "opacity", "0");
 
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode2", "opacity", "0");
             var fadeArgs = {
               node: "basicFadeNode2",
@@ -109,7 +109,7 @@ Example 3:  Fade in a dom node with an easing function
          dojo.style("basicFadeNode3", "opacity", "0");
 
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode3", "opacity", "0");
             var fadeArgs = {
               node: "basicFadeNode3",

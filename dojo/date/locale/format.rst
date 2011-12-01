@@ -119,9 +119,9 @@ A simple example formatting a date in a number of ways
 
         <script type="text/javascript">
             dojo.require( "dojo.date.locale" );
-            function format(date,fmt) { return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
+            function format(date,fmt){ return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
 
-            var initDates = function() {
+            var initDates = function(){
                 var date = new Date(2009,9,26,13,37,43,777);
                 var fmto = "EEEE, MMMM d yyyy GGG, h:m:s.SSS a z (ZZZZ)";
                 var fmt2 = "EEEE, MMMM d yyyy GGG, 'day' D, 'week' w, 'quarter' q, h:m:s.SSS a z 'ie hour' H -- ZZZZ";
@@ -138,7 +138,7 @@ A simple example formatting a date in a number of ways
                     "extra stuff": "MMM d, yyyy -- 39:45, ____+1"
                 };
                 var out = dojo.query( ".output" )[0];
-                for (var ii in fmts) {
+                for(var ii in fmts){
                     var fmt = fmts[ii];
                     var res = format( date, fmt );
                     out.innerHTML += "<tr><td>" + ii + "</td><td>" + fmt + "</td><td>" + res + "</td></tr>";

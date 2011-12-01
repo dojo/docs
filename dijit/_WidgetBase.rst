@@ -84,7 +84,7 @@ In all cases its good practice to assume that you are overriding a method that m
 
 .. js ::
 
-  postCreate: function() {
+  postCreate: function(){
      // do my stuff, then...
      this.inherited(arguments);
   }

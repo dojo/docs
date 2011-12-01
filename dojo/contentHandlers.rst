@@ -29,7 +29,7 @@ The default contentHandler is text, and requires no action:
 .. js ::
  
  <script type="text/javascript">
-     require(["dojo/_base/xhr"], function(xhr) {
+     require(["dojo/_base/xhr"], function(xhr){
         xhr.get({
            url:"foo.txt",
            load: function(data){
@@ -79,7 +79,7 @@ This example shows, how to use the pre-defined json contentHandler:
 
 .. js ::
   
-  require(["dojo/_base/xhr"], function(xhr) {
+  require(["dojo/_base/xhr"], function(xhr){
      xhr.get({
         url:"foo.json",
         // here comes the contentHandler:
@@ -122,7 +122,7 @@ To create a custom contentHandler, simply mix a new key into the dojo.contentHan
 
 .. js ::
   
-  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr) {
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr){
      lang.mixin(xhr.contentHandlers, {
         "makeUpper": function(req){
            return req.responseText.toUpperCase();
@@ -167,7 +167,7 @@ For instance, we can create a handler that will populate a node with the respons
 
 .. js ::
   
-  require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom) {
+  require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom){
       var ioArgs = {
           url:"foo.html",
           handleAs:"loadNode",
@@ -213,7 +213,7 @@ The other contentHandlers are all functions. If you like, you can define a new h
 
 .. js ::
  
-    require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang) {
+    require(["dojo/_base/xhr", "dojo/_base/lang"], function(xhr, lang){
         xhr.contentHandlers.wrappedJSON = function(req){
             // like handleAs:"json", but mixes an additional bit into the response always.
             var json = xhr.contentHandles.json(req);
@@ -262,7 +262,7 @@ Standard AOP techniques apply. If you find yourself needing to *replace* a conte
 
 .. js ::
  
-    require(["dojo/_base/xhr"], function(xhr) {
+    require(["dojo/_base/xhr"], function(xhr){
         // a handler that always escapes html fragments. not exceptionally useful though:
         var oldtext = xhr.contentHandlers.text;
         xhr.contentHandles.text = function(req){

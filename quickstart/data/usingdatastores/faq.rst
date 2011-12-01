@@ -34,38 +34,38 @@ This is actually not difficult to do. This is done through usage of the dojo.dat
 .. js ::
 
   
-  function itemToJSON(store, item) {
+  function itemToJSON(store, item){
     // summary: Function to convert an item into a JSON format.
     // store:
     //    The datastore the item came from.
     // item:
     //    The item in question.
     var json = {};
-    if (item && store) {
+    if(item && store){
       // Determine the attributes we need to process.
       var attributes = store.getAttributes(item);
-      if (attributes && attributes.length > 0) {
+      if(attributes && attributes.length > 0){
         var i;
-        for (i = 0; i < attributes.length; i++) {
+        for(i = 0; i < attributes.length; i++){
           var values = store.getValues(item, attributes[i]);
-          if (values) {
+          if(values){
             // Handle multivalued and single-valued attributes.
-            if (values.length > 1 ) {
+            if(values.length > 1 ){
               var j;
               json[attributes[i]] = [];
-              for (j = 0; j < values.length; j++ ) {
+              for(j = 0; j < values.length; j++ ){
                 var value = values[j];
                 // Check that the value isn't another item. If it is, process it as an item.
-                if (store.isItem(value)) {
+                if(store.isItem(value)){
                   json[attributes[i]].push(dojo.fromJson(itemToJSON(store, value)));
-                } else {
+                }else{
                   json[attributes[i]].push(value);
                 }
               }
-            } else {
-              if (store.isItem(values[0])) {
+            }else{
+              if(store.isItem(values[0])){
                  json[attributes[i]] = dojo.fromJson(itemToJSON(store, values[0]));
-              } else {
+              }else{
                  json[attributes[i]] = values[0];
               }
             }
@@ -87,25 +87,25 @@ By definition, items are unique to their store instance, so you cannot generally
   var origStore = some.datastore();
   var newStore = null;
 
-  function onComplete(items, request) {
+  function onComplete(items, request){
     newStore = some.datastore();
-    if (items && items.length > 0) {
+    if(items && items.length > 0){
       var i;
-      for (i = 0; i < items.length; i++) {
+      for(i = 0; i < items.length; i++){
         var item = items[i];
         var attributes = origStore.getAttributes(item);
-        if (attributes && attributes.length > 0) {
+        if(attributes && attributes.length > 0){
           var j;
-          for (j = 0; j < attributes.length; j++) {
+          for(j = 0; j < attributes.length; j++){
             var newItem = {};
             var values = origStore.getValues(item, attributes[j]);
 
             // Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into account.
-            if (values) {
-              if (values.length > 1) {
+            if(values){
+              if(values.length > 1){
                 // Create a copy.
                 newItem[attributes[j]] = values.slice(0, values.length);
-              } else {
+              }else{
                 newItem[attributes[j]] = values[0];
               }
           }
@@ -128,7 +128,7 @@ You do a fetch that queries for all items, then use the onBegin callback functio
 
 .. js ::
 
-  function size(size, request) {
+  function size(size, request){
     // Do whatever with the size var.
   }
 

@@ -26,7 +26,7 @@ The simplest way to use dojo.getObject is to pass a dot-separated string as show
  var foo = {
    bar: "some value"
  };
- require(["dojo/_base/lang"], function(lang) {
+ require(["dojo/_base/lang"], function(lang){
    // get the "foo.bar" property
    lang.getObject("foo.bar");  // returns "some value"
  });
@@ -49,7 +49,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
  var foo = {
    bar: "some value"
  };
- require(["dojo/_base/lang"], function(lang) {
+ require(["dojo/_base/lang"], function(lang){
     // get the "foo.baz" property, create it if it doesn't exist
     lang.getObject("foo.baz", true); // returns foo.baz - an empty object {}
     /*
@@ -80,7 +80,7 @@ You can also pass an object as the third parameter. This will define the context
 .. js ::
  
  // Dojo 1.7+ (AMD)
- require(["dojo/_base/lang"], function(lang) {
+ require(["dojo/_base/lang"], function(lang){
     // define an object
     var foo = {
        bar: "some value"

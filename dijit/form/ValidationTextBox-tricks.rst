@@ -15,12 +15,12 @@ database. This can be done using javascript like:
 
 .. js ::
   
-  dijit.byId("validationTextBoxNodeId").validator = function (value, constraints) {
+  dijit.byId("validationTextBoxNodeId").validator = function(value, constraints){
 
       // Check that email has not been used yet.
       if(some-checks){
           return true;
-      } else {
+      }else{
           return false;
       }
   }

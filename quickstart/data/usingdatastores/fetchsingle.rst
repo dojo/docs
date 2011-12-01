@@ -67,16 +67,16 @@ This example shows how to fetch items by their identity programmatically.
         // function uses the value selected in the combobox to do a lookup on the datastore for an item with the
         // identifier that matches the combobox value. If it gets one, the price and aisle are updated, if it
         // does not locate one, the then the values are set to N/A and 0.00.
-        function init () {
+        function init(){
            // Function to perform a lookup on the datastore on each change event of the combo box.
-           function getItemFromStore () {
-              function updatePrice(item, request) {
+           function getItemFromStore(){
+              function updatePrice(item, request){
                  var lNode = dojo.byId("aisleNode");
                  var pNode = dojo.byId("priceNode");
-                 if (!item) {
+                 if(!item){
                      lNode.innerHTML = "N/A.";
                      pNode.innerHTML = "0.00";
-                 } else {
+                 }else{
                      lNode.innerHTML = foodStore.getValue(item, "aisle");
                      pNode.innerHTML = foodStore.getValue(item, "price");
                  }

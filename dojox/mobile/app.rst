@@ -92,8 +92,8 @@ SceneController provides utilities for a scene assistant, and also takes care of
 
  * ``parse((optional)node)``: Parses the current scene for widgets. As all scenes reside in the same DOM, you cannot call ``dojo.parser.parse()`` directly or you may instantiate widgets twice;
  * ``query(selector, (optional)node)``: calls ``dojo.query`` ensuring that results will belongs to the controller's scene if no ``node`` is provided;
- * ``showAlertDialog({title: '', text: '', buttons: [{btnClass: 'cssClass', label: ''}], defaultButtonLabel: '', onChose: function(pressedButton) {} })``: Display an alert dialog, if no buttons are provided, a simple "OK" one is created.  You can alternatively show an alert dialog from anywhere by calling dojo.publish("/dojox/mobile/app/alert", params), where the params variable is the same as that passed to showAlertDialog;
- * ``popupSubMenu({ choices: [{className: 'cssClass', label: '', value: ''}], onChoose: function(value) {}, fromNode: node})``: display a popup menu whose entries are ``choices``. ``onChoose`` with the selected value. If ``fromNode`` is null, menu will be displayed roughly on the top of the screen.
+ * ``showAlertDialog({title: '', text: '', buttons: [{btnClass: 'cssClass', label: ''}], defaultButtonLabel: '', onChose: function(pressedButton){} })``: Display an alert dialog, if no buttons are provided, a simple "OK" one is created.  You can alternatively show an alert dialog from anywhere by calling dojo.publish("/dojox/mobile/app/alert", params), where the params variable is the same as that passed to showAlertDialog;
+ * ``popupSubMenu({ choices: [{className: 'cssClass', label: '', value: ''}], onChoose: function(value){}, fromNode: node})``: display a popup menu whose entries are ``choices``. ``onChoose`` with the selected value. If ``fromNode`` is null, menu will be displayed roughly on the top of the screen.
 
 StageController
 ===============

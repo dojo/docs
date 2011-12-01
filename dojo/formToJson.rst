@@ -80,7 +80,7 @@ Example 1: Using formToJson to create an JSON version of a form
   .. js ::
 
     <script>
-      function convertForm() {
+      function convertForm(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formJson = dojo.formToJson("myform");
 
@@ -114,7 +114,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
     <script>
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.Button");
-      function convertFormDigits() {
+      function convertFormDigits(){
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
            var formJson=  dojo.formToJson("myform2");
 

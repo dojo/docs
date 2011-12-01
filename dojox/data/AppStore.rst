@@ -234,11 +234,11 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
       dojo.require("dijit.form.Button");
 
       // This function performs some basic dojo initialization and will do the fetch calling for this example
-      function initSimple () {
+      function initSimple(){
         var appStore = new dojox.data.AppStore({url:"{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"});
 
-        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
-          function gotEntries(items, request) {
+        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function(){
+          function gotEntries(items, request){
             if(items){
               // Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list");
@@ -281,11 +281,11 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
       dojo.require("dijit.form.Button");
 
       // This function performs some basic dojo initialization and will do the fetch calling for this example
-      function initSimple2 () {
+      function initSimple2(){
         var appStore = new dojox.data.AppStore({url:"{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"});
 
-        dojo.connect(dijit.byId("simpleFetchButton2"), "onClick", function() {
-          function gotEntries(items, request) {
+        dojo.connect(dijit.byId("simpleFetchButton2"), "onClick", function(){
+          function gotEntries(items, request){
             if(items){
               // Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list2");
@@ -331,10 +331,10 @@ Example 3: Connecting AppStore to DataGrid
       var layout = [
         [
           { field: "title", name: "Title", width: 15 },
-          { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>";}},
+          { field: "link", name: "Link", width: 5, formatter: function(value){ return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>";}},
           { field: "author", name: "Author", width: '10', formatter: function(value){
               var ret = "";
-              if(value.name) {ret = value.name;}
+              if(value.name){ ret = value.name; }
               if(value.email){
                 if(value.name){
                   ret += " (" + value.email +")";
@@ -349,7 +349,7 @@ Example 3: Connecting AppStore to DataGrid
         ]
       ];
 
-      function resizeGrid() {
+      function resizeGrid(){
           grid.resize();
       }
       dojo.ready(resizeGrid)
@@ -391,12 +391,12 @@ Example 4: Write example: Changing Title and showing in DataGrid
       var layout2 = [
         [
           { field: "title", name: "Title", width: 15 },
-          { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
+          { field: "link", name: "Link", width: 5, formatter: function(value){ return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
           { field: "updated", name: "Last Modified", width: 'auto' }
         ]
       ];
 
-      function initGrid() {
+      function initGrid(){
           thegrid.resize();
           dojo.connect(dijit.byId("changeTitleButton"), "onClick", function(){
              function gotAllItems(items, request){

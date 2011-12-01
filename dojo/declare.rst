@@ -30,7 +30,7 @@ Example:
     
   require(['dojo/_base/declare'], function(declare){
     declare("my.Thinger", null, {
-      constructor: function(/* Object */args){
+      constructor: function(/*Object*/ args){
         declare.safeMixin(this, args);
       }
     });
@@ -41,7 +41,7 @@ Example:
 .. js ::
   
   dojo.declare("my.Thinger", null, {
-    constructor: function(/* Object */args){
+    constructor: function(/*Object*/ args){
       dojo.safeMixin(this, args);
     }
   });
@@ -248,7 +248,7 @@ If your class contains arrays or other objects, they should be declared in the c
       numItem : 5, // one per bar
       strItem : "string", // one per bar
 
-      constructor: function() {
+      constructor: function(){
         this.someData = [ ]; // better, each bar has its own array
         this.expensiveResource = new expensiveResource(); // one per bar
       }
@@ -264,7 +264,7 @@ If your class contains arrays or other objects, they should be declared in the c
     numItem : 5, // one per bar
     strItem : "string", // one per bar
 
-    constructor: function() {
+    constructor: function(){
       this.someData = [ ]; // better, each bar has its own array
       this.expensiveResource = new expensiveResource(); // one per bar
     }
@@ -278,7 +278,7 @@ On the other hand, if you want an object or array to be static (shared between a
   
   require(['dojo/_base/declare'], function(declare){
     declare("my.classes.bar", my.classes.foo, {
-      constructor: function() {
+      constructor: function(){
         console.debug("this is bar object # " + this.statics.counter++);
       },
 
@@ -291,7 +291,7 @@ On the other hand, if you want an object or array to be static (shared between a
 .. js ::
   
   dojo.declare("my.classes.bar", my.classes.foo, {
-    constructor: function() {
+    constructor: function(){
       dojo.debug("this is bar object # " + this.statics.counter++);
     },
 
@@ -438,7 +438,7 @@ For all other methods, you can use ``this.inherited()`` to call the superclass m
 
 .. js ::
   
-  someMethod: function() {
+  someMethod: function(){
     // call base class someMethod
     this.inherited(arguments);
     // now do something else
@@ -472,11 +472,11 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
   
   require(['dojo/_base/declare'], function(declare){
     declare("VanillaSoftServe", null, {
-      constructor: function() { console.debug ("mixing in Vanilla"); }
+      constructor: function(){ console.debug ("mixing in Vanilla"); }
     });
 
     declare("MandMs", null, {
-      constructor: function() { console.debug("mixing in MandM's"); },
+      constructor: function(){ console.debug("mixing in MandM's"); },
       kind: "plain"
     });
 
@@ -485,7 +485,7 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
     });
 
     declare("Blizzard", [VanillaSoftServe, MandMs, CookieDough], {
-        constructor: function() {
+        constructor: function(){
              console.debug("A blizzard with " +
                  this.kind + " M and Ms and " +
                  this.chunkSize +" chunks of cookie dough."
@@ -501,11 +501,11 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
 .. js ::
   
   dojo.declare("VanillaSoftServe", null, {
-    constructor: function() { console.debug ("mixing in Vanilla"); }
+    constructor: function(){ console.debug ("mixing in Vanilla"); }
   });
 
   dojo.declare("MandMs", null, {
-    constructor: function() { console.debug("mixing in MandM's"); },
+    constructor: function(){ console.debug("mixing in MandM's"); },
     kind: "plain"
   });
 
@@ -514,7 +514,7 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
   });
 
   dojo.declare("Blizzard", [VanillaSoftServe, MandMs, CookieDough], {
-        constructor: function() {
+        constructor: function(){
              console.debug("A blizzard with " +
                  this.kind + " M and Ms and " +
                  this.chunkSize +" chunks of cookie dough."

@@ -22,7 +22,7 @@ dojo.connectPublisher is an automation of this common form:
 
 .. js ::
   
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.connect(myObject, "myEvent", function(){
       connect.publish("/some/topic/name", arguments);
     });
@@ -33,7 +33,7 @@ Which becomes:
 
 .. js ::
   
-  require("dojo/_base/connect", function(connect) {
+  require("dojo/_base/connect", function(connect){
     connect.connectPublisher("/some/topic/name", myObject, "myEvent");
   });
 
@@ -60,7 +60,7 @@ Example
  
  <script type="text/javascript">
    // Dojo 1.7 (AMD)
-   require(["dojo/_base/connect"], function(connect) {
+   require(["dojo/_base/connect"], function(connect){
       connect.connectPublisher("/ajax/start", dojo, "xhrGet");
    });
    // Dojo < 1.7

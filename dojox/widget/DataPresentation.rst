@@ -49,7 +49,7 @@ This example uses the following sample data, used to define the chart title, foo
 
 .. js ::
  
- var makeseries = function(data) {
+ var makeseries = function(data){
 	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
        		{ datapoints: "series[0].values", namefield: "series[0].legend" },
        		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
@@ -69,7 +69,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 	var dp;
 
-	dojo.ready(function() {
+	dojo.ready(function(){
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -119,7 +119,7 @@ fig 1.
 		]
 	};
 
-      var makeseries = function(data) {
+      var makeseries = function(data){
 	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
        		{ datapoints: "series[0].values", namefield: "series[0].legend" },
        		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
@@ -131,7 +131,7 @@ fig 1.
 
       var dp;
 
-      dojo.ready(function() {
+      dojo.ready(function(){
 
       dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -171,7 +171,7 @@ Example 2 - Chart and DataGrid
  
   	var dp;
 
-	dojo.ready(function() {
+	dojo.ready(function(){
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -223,7 +223,7 @@ fig 2.
 		]
 	};
 
-      var makeseries = function(data) {
+      var makeseries = function(data){
 	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
        		{ datapoints: "series[0].values", namefield: "series[0].legend" },
        		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
@@ -235,7 +235,7 @@ fig 2.
 
       var dp;
 
-      dojo.ready(function() {
+      dojo.ready(function(){
 
 	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
@@ -310,7 +310,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
 
 .. js ::
  
- var makeseries = function(data) {
+ var makeseries = function(data){
   return [
    { datapoints: "sales", field: "month", name: "Month", type: "range", chart: false },
    { datapoints: "sales", field: "lemonade", name: "Lemonade (fizzy)" },
@@ -327,7 +327,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
  
  var dp;
 
- dojo.ready(function() {
+ dojo.ready(function(){
 
  dp = new dojox.widget.DataPresentation("chartdiv", {
   type: "chart",

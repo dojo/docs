@@ -22,7 +22,7 @@ Merge two objects (join two objects) together with dojo.mixin:
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var a = { b:"c", d:"e" };
     lang.mixin(a, { d:"f", g:"h" });
     console.log(a); // b:c, d:f, g:h
@@ -38,14 +38,14 @@ This example overwrites the "d" member from the second object, leaving the varia
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang", "dojo/_base/fx"], function(lang, fx) {
-    var generatedProps = { node:"someNode", onEnd:function(){ /* code */ } };
+  require(["dojo/_base/lang", "dojo/_base/fx"], function(lang, fx){
+    var generatedProps = { node:"someNode", onEnd:function(){ /*code*/ } };
     var defaultProps = { duration:1000 };
     fx.fadeIn(lang.mixin(generatedProps, defaultProps)).play();
   });
 
   // Dojo < 1.7
-  var generatedProps = { node:"someNode", onEnd:function(){ /* code */ } };
+  var generatedProps = { node:"someNode", onEnd:function(){ /*code*/ } };
   var defaultProps = { duration:1000 };
   dojo.fadeIn(dojo.mixin(generatedProps, defaultProps)).play();
 
@@ -60,7 +60,7 @@ Mixin modifies the first object in the list, mixing in second object. If you wis
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var newObject = lang.mixin(lang.clone(a), b);
   });
 
@@ -74,7 +74,7 @@ Alternately, you can pass an empty object as the first mix, and mix another obje
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var newObject = lang.mixin({}, b);
     lang.mixin(newObject, c);
     lang.mixin(newObject, lang.mixin(e, f));
@@ -98,7 +98,7 @@ A common pattern when creating class objects is to pass an object-hash of proper
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
+  require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare){
     declare("my.Thinger", null, {
       defaultValue: "red",
       constructor: function(args){
@@ -129,7 +129,7 @@ Sometimes is it useful to mix custom variables and members into instances of wid
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var cp = new dijit.layout.ContentPane();
     lang.mixin(cp, { _timeCreated: new Date() });
   });

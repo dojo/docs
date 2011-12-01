@@ -127,26 +127,26 @@ Query for all Spices  (Basic query)
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        function init(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getSpices () {
+           function getSpices(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
@@ -155,7 +155,7 @@ Query for all Spices  (Basic query)
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
              }
              
@@ -210,26 +210,26 @@ Query for all food in aisles starting with C
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init2 () {
+        function init2(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function getCAisle () {
+           function getCAisle(){
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list2");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list2");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
@@ -238,7 +238,7 @@ Query for all food in aisles starting with C
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
                 alert(error);
              }
@@ -296,23 +296,23 @@ Enter your own query for name and aisle
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init3 () {
+        function init3(){
            // Function to perform a fetch on the datastore when a button is clicked
-           function search() {
+           function search(){
              var queryObj = {};
 
              // Build up the query from the input boxes.
              var name = nameBox.getValue();
-             if ( name && dojo.trim(name) !== "" ) {
+             if( name && dojo.trim(name) !== "" ){
                queryObj["name"] = name;
              }
              var aisle = aisleBox.getValue();
-             if ( aisle && dojo.trim(aisle) !== "" ) {
+             if( aisle && dojo.trim(aisle) !== "" ){
                queryObj["aisle"] = aisle;
              }
 
              var qNode = dojo.byId("query");
-             if (qNode ) {
+             if(qNode ){
                qNode.innerHTML = dojo.toJson(queryObj);
              }
 
@@ -320,31 +320,31 @@ Enter your own query for name and aisle
              // Build up query options, if any.
              var queryOptionsObj = {};
 
-             if ( checkBox.getValue()) {
+             if( checkBox.getValue()){
                queryOptionsObj["ignoreCase"] = true;
              }
 
              var qoNode = dojo.byId("queryOptions");
-             if (qoNode ) {
+             if(qoNode ){
                qoNode.innerHTML = dojo.toJson(queryOptionsObj);
              }
 
              // Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
+             function clearOldList(size, request){
                var list = dojo.byId("list3");
-               if (list) {
-                 while (list.firstChild) {
+               if(list){
+                 while(list.firstChild){
                    list.removeChild(list.firstChild);
                  }
                }
              }
   
              // Callback for processing a returned list of items.
-             function gotItems(items, request) {
+             function gotItems(items, request){
                var list = dojo.byId("list3");
-               if (list) {
+               if(list){
                  var i;
-                 for (i = 0; i < items.length; i++) {
+                 for(i = 0; i < items.length; i++){
                    var item = items[i];
                    list.appendChild(document.createTextNode(foodStore3.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
@@ -353,7 +353,7 @@ Enter your own query for name and aisle
              }
             
              // Callback for if the lookup fails.
-             function fetchFailed(error, request) {
+             function fetchFailed(error, request){
                 alert("lookup failed.");
                 alert(error);
              }

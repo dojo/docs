@@ -23,7 +23,7 @@ Usage
 
 .. js ::
  
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     var ref = function(a,b){ return a };
     if(lang.isFunction(ref)){
       ref();
@@ -46,7 +46,7 @@ This also works with classes created by :ref:`dojo.declare <dojo/declare>`
 
 .. js ::
   
-  require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare) {
+  require(["dojo/_base/lang", "dojo/_base/declare"], function(lang, declare){
     declare("Thing", null, { constructor: function(){ } });
     var ref = Thing;
     if(lang.isFunction(ref)){
@@ -102,13 +102,13 @@ Test against isFunction()
         // test variable t:
         var t;
 
-        function testIt() {
+        function testIt(){
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
 
             // Here comes the test:
             // Is t a Function?
-            if (dojo.isFunction(t)) {
+            if(dojo.isFunction(t)){
                 // dojooo: t is a function!
                 dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is a function.<br />Try another button.");
@@ -118,7 +118,7 @@ Test against isFunction()
                     "backgroundColor": "#a4e672",
                     "color": "black"
                 });
-            } else {
+            }else{
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML",
                     "No chance: 't' can't be a function with such a value "

@@ -119,7 +119,7 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
    <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
    <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
    <script type="text/javascript">
-      dojo.ready(function() {
+      dojo.ready(function(){
          // Define the request, saying that 20 records should be fetched at a time,
          // and to start at record 0
       var request= {count:20, start:0};
@@ -159,7 +159,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
  
   dojo.subscribe(
      dijit.byId('slideshow1').getShowTopicName(),
-     function(packet) {
+     function(packet){
      alert("Got index: " + packet.index
            + ", url: " + packet.url
            + ", and title: " + packet.title);
@@ -173,7 +173,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
  
   dojo.subscribe(
      dijit.byId('slideshow1').getLoadTopicName(),
-     function(index) {
+     function(index){
         alert("Got index: " +index);
   });
 

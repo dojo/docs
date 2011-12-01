@@ -256,7 +256,7 @@ This an example of nested tabs created programatically. If there is no nested ta
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function() {
+    dojo.ready(function(){
         var tabs = [{
             title: 'Tab 1',
             sub: [{
@@ -282,8 +282,8 @@ This an example of nested tabs created programatically. If there is no nested ta
         var tabContainer = new dijit.layout.TabContainer({
             doLayout: false
         }, 'tabContainer');
-        dojo.forEach(tabs, function(tab) {
-            if (!tab.sub.length) {
+        dojo.forEach(tabs, function(tab){
+            if(!tab.sub.length){
                 var cp = new dijit.layout.ContentPane({
                     title: tab.title,
                     content: 'No sub tabs'
@@ -296,7 +296,7 @@ This an example of nested tabs created programatically. If there is no nested ta
                 doLayout: false,
                 nested: true
             });
-            dojo.forEach(tab.sub, function(sub) {
+            dojo.forEach(tab.sub, function(sub){
                 var cp = new dijit.layout.ContentPane({
                     title: sub.title,
                     content: sub.content

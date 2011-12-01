@@ -44,7 +44,7 @@ stop()
 ------
 	Stop the ProgressIndicator spinning.
 
-setImage(/\*String\*/file)
+setImage(/\*String\*/ file)
 --------------------------
 	Set an indicator icon image file (typically animated GIF). If null is specified, restores the default spinner.
 

@@ -69,23 +69,23 @@ Simple attribute modification and save
   var store = some.DataWriteStore();
 
   // Set our load completed handler up...
-  var onCompleteFetch = function(items, request) {
+  var onCompleteFetch = function(items, request){
     // Define the save callbacks to use
     var onSave = function(){
       alert("Save done.");
     }
-    var onSaveError = function(error) {
+    var onSaveError = function(error){
       alert("Error occurred: " + error)
     }
 
     // Process the items and update attribute 'foo'
-    for (var i = 0; i < items.length; i++){
+    for(var i = 0; i < items.length; i++){
       var item = items[i];
       store.setValue(item, "foo", ("bar" + 1));
     }
     
     // If the store has modified items (it should), call save with the handlers above.
-    if (store.isDirty()){
+    if(store.isDirty()){
       store.save({onComplete: onSave, onError: onSaveError});
     }
   }
@@ -106,11 +106,11 @@ This example shows how to get all modified items before a save has been called.
 
   var store = some.DataWriteStore();
   // Set our load completed hander up...
-  var onCompleteFetch = function(items, request) {
+  var onCompleteFetch = function(items, request){
     // Process the items test for modification
-    for (int i = 0; i < items.length(); i++){
+    for(int i = 0; i < items.length(); i++){
       var item = items[i];
-      if (store.isDirty(item){
+      if(store.isDirty(item){
         alert("Item with label: " + store.getLabel(item) + " is dirty.");
       }
     }

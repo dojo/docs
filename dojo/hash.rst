@@ -45,7 +45,7 @@ To use dojo.hash to listen for hash changes:
    .. js ::
   
     // Dojo 1.7 (AMD)
-    require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
+    require(["dojo/_base/connect","dojo/hash"], function(connect,hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
@@ -68,7 +68,7 @@ Setter
   .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash"], function(hash) {
+    require(["dojo/hash"], function(hash){
         hash("someHashValue");
     });
 	
@@ -82,7 +82,7 @@ Setter
   .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash"], function(hash) {
+    require(["dojo/hash"], function(hash){
         hash("someHashValue",true);
     });
 	
@@ -97,7 +97,7 @@ Getter
   .. js ::
   
     // Dojo 1.7 (AMD)
-    require(["dojo/hash"], function(hash) {
+    require(["dojo/hash"], function(hash){
         var hashValue = hash();
     });
 	
@@ -114,7 +114,7 @@ Examples
    .. js ::
    
     // Dojo 1.7 (AMD)
-    require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
+    require(["dojo/_base/connect","dojo/hash"], function(connect,hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
@@ -127,7 +127,7 @@ Examples
    .. js ::
    
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
         var obj = {
             firstParam: true,
             secondParam: false
@@ -136,7 +136,7 @@ Examples
     });
 	
     // Dojo < 1.7
-    function() {
+    function(){
         var obj = {
             firstParam: true,
             secondParam: false
@@ -155,8 +155,8 @@ Examples
  .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
-        function updateHash() {
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
+        function updateHash(){
             var obj = ioQuery.queryToObject(dojo.hash());  // get
             obj.someNewParam = true;
             hash(ioQuery.objectToQuery(obj));  // set
@@ -164,7 +164,7 @@ Examples
     });
     
     // Dojo < 1.7
-    function updateHash() {
+    function updateHash(){
         var obj = dojo.queryToObject(dojo.hash());  // get
         obj.someNewParam = true;
         dojo.hash(dojo.objectToQuery(obj));  // set
@@ -178,21 +178,21 @@ Examples
    .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
-        function callback(hash) {
+    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
+        function callback(hash){
             // hashchange event!
             var obj = ioQuery.queryToObject(hash);
-            if (obj.firstParam) {
+            if(obj.firstParam){
                 // do something
             }
         }
     });
     
     // Dojo < 1.7
-    function callback(hash) {
+    function callback(hash){
         // hashchange event!
         var obj = dojo.queryToObject(hash);
-        if (obj.firstParam) {
+        if(obj.firstParam){
             // do something
         }
     }
@@ -205,8 +205,8 @@ Examples
  .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash"], function(hash) {
-        function updateHash() {
+    require(["dojo/hash"], function(hash){
+        function updateHash(){
             var obj = hash().split("/");
             obj.push("trailingSegment");
             hash(obj.join("/"));
@@ -214,7 +214,7 @@ Examples
     });
     
     // Dojo < 1.7
-    function updateHash() {
+    function updateHash(){
         var obj = dojo.hash().split("/");
         obj.push("trailingSegment");
         dojo.hash(obj.join("/"));

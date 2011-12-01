@@ -47,7 +47,7 @@ The interface you want to publish to others consists of just one function: cooli
   dojo.provide("coolio.actions");
   dojo.require("dojo.dnd");
   dojo.require("dijit.ProgressBar");
-  coolio.actions.foo = function() { /* Does something that uses dojo.dnd and dijit.ProgressBar */ }
+  coolio.actions.foo = function(){ /* Does something that uses dojo.dnd and dijit.ProgressBar */ }
 
 You want to use Dojo, but you do not want it to conflict with other Dojo versions on the page. In this case you can use a djConfig.scopeMap to map dojo, dijit and dojox to different names. Your test page, tests/test.html, might be set up like so:
 

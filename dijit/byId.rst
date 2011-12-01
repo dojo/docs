@@ -43,7 +43,7 @@ Example 1: Locating a widget by its ID
     <script>
       dojo.require("dijit.form.TextBox");
 
-      function findWidget () {
+      function findWidget(){
         // Locate the JS object.
         var widget = dijit.byId("myTextBox");
         if(widget){
@@ -74,7 +74,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
     <script>
       dojo.require("dijit.form.TextBox");
 
-      function findWidgetDOM () {
+      function findWidgetDOM(){
         // Locate the JS object.
         var widget = dijit.byId("myTextBox2");
         if(widget){
@@ -110,7 +110,7 @@ Example 3: Comparing dojo.byId and dijit.byId
     <script>
       dojo.require("dijit.form.TextBox");
 
-      function compareDojoDijitById() {
+      function compareDojoDijitById(){
         // Locate the JS object.
         var dibiWidget = dijit.byId("myTextBox3");
         var dobiWidget = dojo.byId("myTextBox3");

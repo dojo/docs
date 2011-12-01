@@ -127,7 +127,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
         // Now that the path is set, load my new button class
         require(['my/form/Button'], function(){
           // Parse the declarative markup
-          ready(function() {
+          ready(function(){
             parser.parse();
           });
         });
@@ -151,7 +151,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
         
       // Parse the declarative markup
       dojo.require('dojo.parser');
-      dojo.addOnLoad(function() {
+      dojo.addOnLoad(function(){
         dojo.parser.parse();
       });
     </script>

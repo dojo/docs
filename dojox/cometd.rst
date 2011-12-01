@@ -41,7 +41,7 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 				appendChild(document.createTextNode(message.data.from + ": " + message.data.text));
 		});
 		dojo.connect(dojo.byId("send"),"onclick",function(){
-			if (!dojo.byId("sendName").value.length || !dojo.byId("sendText").value.length) {
+			if(!dojo.byId("sendName").value.length || !dojo.byId("sendText").value.length){
                                 alert("Please enter some text");
                                 return;
                         }

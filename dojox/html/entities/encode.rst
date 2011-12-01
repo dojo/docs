@@ -33,7 +33,7 @@ Encoding HTML and LATIN-1 entities in a text string
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
-      dojo.ready(function() {
+      dojo.ready(function(){
          dojo.connect(dijit.byId("bEncode"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
@@ -70,7 +70,7 @@ Encoding custom entities in a text string
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
-      dojo.ready(function() {
+      dojo.ready(function(){
          dojo.connect(dijit.byId("bEncode2"), "onClick", function(){
            var customMap =[["\u0026","amp"]];
            var input = dojo.byId("input2");

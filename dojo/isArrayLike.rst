@@ -25,7 +25,7 @@ Similar to :ref:`dojo.isArray() <dojo/isArray>` but more permissive.
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     lang.isArrayLike(foo)
   });
   // Dojo < 1.7
@@ -36,9 +36,9 @@ Returns true if it is like an Array.
 .. js ::
   
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     // Check, if variable "foo" is like an array:
-    if(lang.isArrayLike(foo)) {
+    if(lang.isArrayLike(foo)){
       // do something...
     }
   });
@@ -71,13 +71,13 @@ Test against isArrayLike()
         // test variable t:
         var t;
 
-        function testIt() {
+        function testIt(){
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
 
             // Here comes the test:
             // Is t like an Array?
-            if (dojo.isArrayLike(t)) {
+            if(dojo.isArrayLike(t)){
                 // dojooo: t is like an array!
                 dojo.attr(resultDiv, "innerHTML",
                     "Yes, good choice: 't' is like an array.<br />Try another button.");
@@ -87,7 +87,7 @@ Test against isArrayLike()
                     "backgroundColor": "#a4e672",
                     "color": "black"
                 });
-            } else {
+            }else{
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML",
                     "No chance: 't' can't be like an array with such a value "

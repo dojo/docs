@@ -110,7 +110,7 @@ Gather all parameters from a form
         handleAs: "json",
 
         // Callback on successful call:
-        load: function(response, ioArgs) {
+        load: function(response, ioArgs){
             // do something
             // ...
                     
@@ -145,7 +145,7 @@ Gather all parameters from a form, over-riding some
         handleAs: "json",
 
         // Callback on successful call:
-        load: function(response, ioArgs) {
+        load: function(response, ioArgs){
             // do something
             // ...
                     
@@ -190,7 +190,7 @@ Pass in parameters manually
         handleAs: "json",
 
         // Callback on successful call:
-        load: function(response, ioArgs) {
+        load: function(response, ioArgs){
             // do something
             // ...
                     

@@ -25,7 +25,7 @@ Usage
 .. js ::
  
    // Dojo 1.7+ (AMD)
-   require(["dojo/_base/lang", function(lang) {
+   require(["dojo/_base/lang", function(lang){
       var myNewObject = lang.delegate(anOldObject, { myNewProperty: "value or text"});
    });
 
@@ -44,7 +44,7 @@ Programmatic example
 .. js ::
  
  <script type="text/javascript">
-   require(["dojo/_base/lang", function(lang) {
+   require(["dojo/_base/lang", function(lang){
      var anOldObject = { bar: "baz" };
      var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
      myNewObject.bar == "baz"; // delegated to anOldObject

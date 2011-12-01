@@ -162,7 +162,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
   .. js ::
 
     <script>
-      function getLicense() {
+      function getLicense(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainer");
         
@@ -204,7 +204,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
   .. js ::
 
     <script>
-      function getLicensePreventCache() {
+      function getLicensePreventCache(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainerPreventCache");
         
@@ -247,7 +247,7 @@ Example 3: dojo.xhrGet call that errors.
   .. js ::
 
     <script>
-      function callError() {
+      function callError(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("errorContainer");
         
@@ -285,7 +285,7 @@ Example 4: Getting result from Deferred return value
   .. js ::
 
     <script>
-      function getLicenseAlternateCB() {
+      function getLicenseAlternateCB(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseAlternateCB");
         
@@ -335,7 +335,7 @@ Example 5: dojo.xhrGet call with 'content' (query params).
   .. js ::
 
     <script>
-      function getLicenseQueryParams() {
+      function getLicenseQueryParams(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseQueryParams");
         
@@ -381,7 +381,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
   .. js ::
 
     <script>
-      function getLicenseStatus() {
+      function getLicenseStatus(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseStatus");
         
@@ -417,7 +417,7 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
   .. js ::
 
     <script>
-      function getLicenseErrorStatus() {
+      function getLicenseErrorStatus(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatus");
         
@@ -469,7 +469,7 @@ Example 8: dojo.xhrGet call with headers
   .. js ::
 
     <script>
-      function getLicenseHeaders() {
+      function getLicenseHeaders(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseHeaders");
         
@@ -517,7 +517,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
   .. js ::
 
     <script>
-      function getLicenseErrorStatusWithHandle() {
+      function getLicenseErrorStatusWithHandle(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatusWithHandle");
         

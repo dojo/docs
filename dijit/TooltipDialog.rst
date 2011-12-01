@@ -80,7 +80,7 @@ A TooltipDialog may be popped up from any node.
                   }
               });
               
-              dojo.connect(dojo.byId('thenode'), 'onmouseenter', function() {
+              dojo.connect(dojo.byId('thenode'), 'onmouseenter', function(){
                   dijit.popup.open({
                     popup: myTooltipDialog,
                     around: dojo.byId('thenode')

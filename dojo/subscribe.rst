@@ -26,7 +26,7 @@ To subscribe a function to a channel:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.subscribe("/foo/bar/baz", function(data){
       console.log("i got", data);
     });
@@ -41,7 +41,7 @@ To trigger that function, publish some data on the same channel:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.publish("/foo/bar/baz", [{ some:"object data" }]);
   });
   // Dojo < 1.7
@@ -52,15 +52,15 @@ The channel name can be any string you choose:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
-    connect.subscribe("foo-bar", function(data){ /* handle */ });
-    connect.subscribe("bar", function(data){ /* handle */ });
-    connect.subscribe("/foo/bar", function(data){ /* handle */ });
+  require(["dojo/_base/connect"], function(connect){
+    connect.subscribe("foo-bar", function(data){ /*handle*/ });
+    connect.subscribe("bar", function(data){ /*handle*/ });
+    connect.subscribe("/foo/bar", function(data){ /*handle*/ });
   });
   // Dojo < 1.7
-  dojo.subscribe("foo-bar", function(data){ /* handle */ });
-  dojo.subscribe("bar", function(data){ /* handle */ });
-  dojo.subscribe("/foo/bar", function(data){ /* handle */ });
+  dojo.subscribe("foo-bar", function(data){ /*handle*/ });
+  dojo.subscribe("bar", function(data){ /*handle*/ });
+  dojo.subscribe("/foo/bar", function(data){ /*handle*/ });
 
 Each are unique channels.
 
@@ -72,11 +72,11 @@ Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on w
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
-    connect.subscribe("/foo/*", function(data){ /* handle */ });
+  require(["dojo/_base/connect"], function(connect){
+    connect.subscribe("/foo/*", function(data){ /*handle*/ });
   });
   // Dojo < 1.7
-  dojo.subscribe("/foo/*", function(data){ /* handle */ });
+  dojo.subscribe("/foo/*", function(data){ /*handle*/ });
 
 While this works when using :ref:`cometd <dojox/cometd>`'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported.
 
@@ -101,7 +101,7 @@ To execute an anonymous function in the scope of `obj`:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.subscribe("/foo/bar", obj, function(data){
       // here 'this' refers to the obj instance
       this.member = "published";
@@ -118,7 +118,7 @@ Alternately, you can pass a named function instead of an anonymous function with
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.subscribe("/foo/bar", obj, "anon");
   });
   // Dojo < 1.7

@@ -57,7 +57,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <script>
       dojo.require("dijit.form.Button");
 
-      function deleteUri() {
+      function deleteUri(){
         var button = dijit.byId("deleteButton");
 
         dojo.connect(button, "onClick", function(event){

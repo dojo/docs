@@ -96,12 +96,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function doIt() {
+        function doIt(){
             // remove the class "style1" from the node "example1":
             dojo.removeClass("example1", "style1");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -145,12 +145,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function doIt() {
+        function doIt(){
             // remove classes "style1" and "style2" from the node "example1":
             dojo.removeClass("example1", "style1 style2");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -194,12 +194,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function doIt() {
+        function doIt(){
             // remove classes "style1" and "style2" from the node "example1":
             dojo.removeClass("example1", ["style1", "style2"]);
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -243,12 +243,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function doIt() {
+        function doIt(){
             // remove all classes from the node "example1":
             dojo.removeClass("example1");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
     </script>
@@ -292,12 +292,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function doIt() {
+        function doIt(){
             // remove the class "style3" from each <div> node:
             dojo.query("#example3 div").removeClass("style3");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button3"), "onclick", doIt);
         });
     </script>

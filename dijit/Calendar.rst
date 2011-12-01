@@ -186,7 +186,7 @@ Custom styling
         dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.set('value', data.date); });
       });
 
-      formatDate = function(d) {
+      formatDate = function(d){
         var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
 	dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
           formatLength: 'long',

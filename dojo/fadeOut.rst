@@ -41,7 +41,7 @@ Example 1:  Fade out a dom node
       dojo.require("dijit.form.Button");
       function basicFadeoutSetup(){
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode"
@@ -70,7 +70,7 @@ Example 2:  Fade in a dom node with a custom duration
       dojo.require("dijit.form.Button");
       function basicFadeoutSetup2(){
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode2", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode2",
@@ -102,7 +102,7 @@ Example 3:  Fade in a dom node with an easing function
       dojo.require("dojo.fx.easing");
       function basicFadeoutSetup3(){
          // Function linked to the button to trigger the fade.
-         function fadeIt() {
+         function fadeIt(){
             dojo.style("basicFadeNode3", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode3",

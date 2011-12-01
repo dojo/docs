@@ -328,7 +328,7 @@ Searching multiple Google services at once
       dojo.require("dojox.data.GoogleSearchStore");
       dojo.require("dojox.grid.DataGrid");
 
-      function hrefFormatter(value) {
+      function hrefFormatter(value){
         value = unescape(value);
         return "<a href=\"" + value + "\" target=\"_blank\">Link</a>";
       };
@@ -341,21 +341,21 @@ Searching multiple Google services at once
         ]
       ];
 
-      function init() {
+      function init(){
          // Link button to search, where search text is drawn from the input box.
  
          // Had to resize the grids on selection of tabs, otherwise they wouldn't always display.
-         function resizeGrids() {
+         function resizeGrids(){
            dijit.byId("webGrid").resize();
            dijit.byId("newsGrid").resize();
            dijit.byId("imageGrid").resize();
          }
          dojo.connect(dijit.byId("tabSearch"), "selectChild", resizeGrids);
 
-         function search() {
+         function search(){
             var text = dijit.byId("searchText").getValue();
             text = dojo.trim(text);
-            if (text !== "" ) {
+            if(text !== "" ){
               var query = { text: text };
               dijit.byId("webGrid").setQuery(query);
               dijit.byId("newsGrid").setQuery(query);

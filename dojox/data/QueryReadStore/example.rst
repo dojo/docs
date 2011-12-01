@@ -55,7 +55,7 @@ The directory structure should look like this when you are done:
                 "ComboBoxReadStore",
                 dojox.data.QueryReadStore,
                 {
-                    fetch:function(request) {
+                    fetch:function(request){
                         request.serverQuery = {q:request.query.name};
                         return this.inherited("fetch", arguments);
                     }

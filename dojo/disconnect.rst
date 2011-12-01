@@ -29,7 +29,7 @@ For example, to setup a function to run when a node is clicked, then remove it a
 
 .. js ::
  
-  require(["dojo/dom", "dojo/_base/connect"], function() {
+  require(["dojo/dom", "dojo/_base/connect"], function(){
     var node = dom.byId("someButton");
     var handle = connect.connect(node, "onclick", function(e){
         alert("you won't see me again!");
@@ -56,7 +56,7 @@ A very common pattern is to store a series of return values in an array, and use
 
 .. js ::
    
-  require(["dojo/_base/connect", "dojo/_base/array"], function(connect, array) {
+  require(["dojo/_base/connect", "dojo/_base/array"], function(connect, array){
     var connections = [];
     connections.push(
       connect.connect(node,"onmouseenter",function(){ /* smart mouseover code */ })

@@ -26,8 +26,8 @@ Without `dojo.setObject`, we often see code like this:
 .. js ::
 
   // ensure that intermediate objects are available
-  if(!obj["parent"]){ obj.parent = {}; }
-  if(!obj.parent["child"]){ obj.parent.child= {}; }
+  if(!obj["parent"]){ obj.parent ={}; }
+  if(!obj.parent["child"]){ obj.parent.child={}; }
   
   // now we can safely set the property
   obj.parent.child.prop = "some value";
@@ -38,7 +38,7 @@ Wheras with `dojo.setObject`, we can shorten that to:
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/lang"], function(lang) {
+  require(["dojo/_base/lang"], function(lang){
     lang.setObject("parent.child.prop", "some value", obj);
   });
   // Dojo < 1.7

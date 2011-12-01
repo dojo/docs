@@ -98,10 +98,10 @@ Example Usage of using AtomReadStore with a DataGrid
       dojo.require("dojox.data.AtomReadStore");
       dojo.require("dojox.grid.DataGrid");
 
-      function hrefFormatter(value) {
+      function hrefFormatter(value){
         return "<a href=\"" + value["href"] + "\" target=\"_blank\">Link</a>";
       };
-			function textFormatter(value) {
+			function textFormatter(value){
 				return value["text"];
 			}
 

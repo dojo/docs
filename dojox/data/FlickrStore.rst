@@ -144,26 +144,26 @@ Sample 1:  Listing nature pictures
       // This function performs some basic dojo initialization.  In this case it connects the button
       // onClick to a function which invokes the fetch().  The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init () {
+      function init(){
          // Function to perform a fetch on the datastore when a button is clicked
-         function getAllItems () {
+         function getAllItems(){
 
            // Callback to perform an action when the data items are starting to be returned:
-           function clearOldList(size, request) {
+           function clearOldList(size, request){
              var list = dojo.byId("list");
-             if (list) {
-               while (list.firstChild) {
+             if(list){
+               while(list.firstChild){
                  list.removeChild(list.firstChild);
                }
              }
            }
   
            // Callback for processing a returned list of items.
-           function gotItems(items, request) {
+           function gotItems(items, request){
              var list = dojo.byId("list");
-             if (list) {
+             if(list){
                var i;
-               for (i = 0; i < items.length; i++) {
+               for(i = 0; i < items.length; i++){
                  var item = items[i];
                  var image = document.createElement("img");
                  list.appendChild(image);
@@ -174,7 +174,7 @@ Sample 1:  Listing nature pictures
            }
           
            // Callback for if the lookup fails.
-           function fetchFailed(error, request) {
+           function fetchFailed(error, request){
              alert("lookup failed.");
            }
              

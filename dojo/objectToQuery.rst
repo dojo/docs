@@ -28,7 +28,7 @@ Dojo 1.7+ (AMD)
 
 .. js ::
  
-  require(["dojo/io-query"], function(ioQuery) {
+  require(["dojo/io-query"], function(ioQuery){
     var uri = "http://some.server.org/somecontext/";
     var query = {
       foo: ["bar", "baz"],
@@ -74,7 +74,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
 
     <script>
       dojo.require("dijit.form.Button");
-      function convertQuery() {
+      function convertQuery(){
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context";
            var query = {

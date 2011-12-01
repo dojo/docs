@@ -133,7 +133,7 @@ Can be written as:
 .. js ::
 
   dojo.forEach(queueEntries,
-      function(oneEntry, index, array) {
+      function(oneEntry, index, array){
           console.debug(oneEntry + " at index " + index);
       }
   );
@@ -147,7 +147,7 @@ For this simple loop, forEach isn't anything exciting. But combined with other D
 
   dojo.forEach(
     dojo.query("select", document),
-    function(selectTag) {
+    function(selectTag){
         selectTag.disabled = true;
     }
   );
@@ -160,7 +160,7 @@ Running dojo.forEach on a dojo.query result is so common, that Dojo defines a sh
 .. js ::
 
   dojo.query("select").forEach(
-    function(selectTag) {
+    function(selectTag){
         selectTag.disabled = true;
     }
   );

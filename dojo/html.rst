@@ -30,7 +30,7 @@ Examples
    
     // Dojo 1.7 (AMD)
     <script type="text/javascript">
-    require(["dojo/html","dojo/ready"], function(html,ready) {
+    require(["dojo/html","dojo/ready"], function(html,ready){
         ready(function(){
             // the first argument is a node reference
             console.log("loaded");
@@ -50,7 +50,7 @@ Examples
     // Dojo < 1.7
     <script type="text/javascript">
     dojo.require("dojo.html");
-    dojo.addOnLoad(function() {
+    dojo.addOnLoad(function(){
       // the first argument is a node reference
       console.log("loaded");
       dojo.html.set(dojo.byId("mycontent"), "loaded!");
@@ -74,8 +74,8 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-    require(["dojo/html","dojo/dom","dojo/_base/connect","dijit.form.NumberTextBox"], function(html,dom,connect,numberTextBox) {
-    var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function() {
+    require(["dojo/html","dojo/dom","dojo/_base/connect","dijit.form.NumberTextBox"], function(html,dom,connect,numberTextBox){
+    var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
 
       html.set(dom.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
@@ -86,7 +86,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
         +'</td>'
         +'</tr>', {
           parseContent: true,
-          onBegin: function() {
+          onBegin: function(){
               this.inherited("onBegin", arguments);
           }
       });
@@ -110,7 +110,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
     <script type="text/javascript">
     dojo.require("dojo.html");
 
-    var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function() {
+    var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function(){
 
       dojo.html.set(dojo.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
@@ -121,7 +121,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
         +'</td>'
         +'</tr>', {
           parseContent: true,
-          onBegin: function() {
+          onBegin: function(){
             dojo.require('dijit.form.NumberTextBox');
             this.inherited("onBegin", arguments);
           }

@@ -39,7 +39,7 @@ Usage
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     connect.connect(obj, event, context, method, dontFix);
   });
   // Dojo < 1.7
@@ -54,7 +54,7 @@ Dojo 1.7 (AMD)
 
 .. js ::
 
-  require(["dojo/_base/connect"], function(connect) {
+  require(["dojo/_base/connect"], function(connect){
     // When obj.onchange(), do ui.update():
     connect.connect(obj, "onchange", ui, "update");
     connect.connect(obj, "onchange", ui, ui.update); // same

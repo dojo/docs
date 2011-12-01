@@ -75,7 +75,7 @@ multiSceneApp.js
 
   //Get current path
   var path = window.location.pathname;
-  if (path.charAt(path.length)!="/"){
+  if(path.charAt(path.length)!="/"){
     path = path.split("/");
     path.pop();
     path=path.join("/");
@@ -156,7 +156,7 @@ The actual configuration for the application is loaded by dojo/text module and i
 .. js ::
 
   var path = window.location.pathname;
-  if (path.charAt(path.length)!="/"){
+  if(path.charAt(path.length)!="/"){
     path = path.split("/");
     path.pop();
     path=path.join("/");

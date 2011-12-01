@@ -71,18 +71,18 @@ Programmatic construction of a ComboBox to browse rules
       dojo.require("dojox.data.CssRuleStore");
       dojo.require("dijit.form.ComboBox");
 
-      function init() {
+      function init(){
         var ruleStore = new dojox.data.CssRuleStore({'context': ['dijit/themes/nihilo/nihilo.css']});
         var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleCombo'));
 
-        function setCssText() {
+        function setCssText(){
            var item = ruleCombo.item;
            var text = dojo.byId("textLoc");
-           if (text) {
+           if(text){
              while(text.firstChild){
                text.removeChild(text.firstChild);
              }
-             if (item) {
+             if(item){
                 text.innerHTML = ruleStore.getValue(item, "cssText");
              }
            }else {console.log("foo!")}

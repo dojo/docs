@@ -28,7 +28,7 @@ Dojo 1.7+ (AMD)
 
 .. js ::
  
-  require(["dojo/io-query"], function(ioQuery) {
+  require(["dojo/io-query"], function(ioQuery){
     var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
     var query = uri.substring(uri.indexOf("?") + 1, uri.length);
     var queryObject = ioQuery.queryToObject(query);
@@ -69,7 +69,7 @@ Example 1: Using queryToObject to create a JavaScript form of a query
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
-      function convertQuery() {
+      function convertQuery(){
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 
@@ -102,7 +102,7 @@ Example 2: Using queryToObject to alter query strings
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
-      function alterQuery() {
+      function alterQuery(){
         dojo.connect(dijit.byId("alterQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 

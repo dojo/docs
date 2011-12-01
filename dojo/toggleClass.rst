@@ -89,12 +89,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function toggle1() {
+        function toggle1(){
             // add or remove the class "style1" to/from the node "example1":
             dojo.toggleClass("example1", "style1");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", toggle1);
         });
     </script>
@@ -137,12 +137,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function toggle2() {
+        function toggle2(){
             // add or remove the class "style2" to/from the node "example2":
             dojo.toggleClass("example2", "style2", true);
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button2"), "onclick", toggle2);
         });
     </script>
@@ -185,12 +185,12 @@ See it in action:
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
-        function toggle3() {
+        function toggle3(){
             // add or remove the class "style3" to/from each <div> node:
             dojo.query("#example3 div").toggleClass("style3");
         }
 
-        dojo.ready(function() {
+        dojo.ready(function(){
             dojo.connect(dojo.byId("button3"), "onclick", toggle3);
         });
     </script>
