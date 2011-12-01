@@ -13,6 +13,7 @@ dijit.form.DropDownButton
 
 The dijit.form.DropDownButton widget is for a button that displays some kind of drop down, often a menu, when you press it.
 
+.. api-inline :: dijit.form.DropDownButton
 
 Examples
 ========
