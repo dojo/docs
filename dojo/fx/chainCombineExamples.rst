@@ -30,16 +30,16 @@ Example 1:  Demonstration of combining three chained animations
       dojo.require("dojo.fx");
       dojo.require("dojo.fx.easing");
       function basicCombine(){
-         //Function linked to the button to trigger the effects.
+         // Function linked to the button to trigger the effects.
          function combineIt() {
 
-            //Fade the node out, then in
+            // Fade the node out, then in
             var displayAnim = dojo.fx.chain([
               dojo.fadeOut({node: "basicNode1", duration: 1000}),
               dojo.fadeIn({node: "basicNode1", duration: 1000})
             ]);
 
-            //Move the node while it's fading out and in.
+            // Move the node while it's fading out and in.
             var moveAnim = dojo.fx.chain([
               dojo.animateProperty({node: "basicNode1",
                 properties: {
@@ -57,7 +57,7 @@ Example 1:  Demonstration of combining three chained animations
               })
             ]);
 
-            //Resize and change color of the node as it moves too.
+            // Resize and change color of the node as it moves too.
             var resizeColorAnim = dojo.fx.chain([
               dojo.animateProperty({node: "basicNode1",
                 properties: {
@@ -78,14 +78,14 @@ Example 1:  Demonstration of combining three chained animations
             ]);
 
 
-            //Combine the three sets of animations into one that runs in parallel.
+            // Combine the three sets of animations into one that runs in parallel.
             var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeColorAnim]);
 
-            //Set it so that every time it ends, it runs again. (And connect the stop action to it!)
+            // Set it so that every time it ends, it runs again. (And connect the stop action to it!)
             var handle = dojo.connect(combinedAnim, "onEnd", function(){combineIt();});
             dojo.connect(dijit.byId("endButton"), "onClick", function(){dojo.disconnect(handle);});
 
-            //Run it!
+            // Run it!
             combinedAnim.play();
          }
          dojo.connect(dijit.byId("startButton"), "onClick", combineIt);

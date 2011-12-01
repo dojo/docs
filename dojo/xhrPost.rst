@@ -89,13 +89,13 @@ Example 1: dojo.xhrPost call to send a form
         var form = dojo.byId("myform");
         
         dojo.connect(form, "onsubmit", function(event) {
-          //Stop the submit event since we want to control form submission.
+          // Stop the submit event since we want to control form submission.
           dojo.stopEvent(event);
           
-          //The parameters to pass to xhrPost, the form, how to handle it, and the callbacks.
-          //Note that there isn't a url passed.  xhrPost will extract the url to call from the form's
+          // The parameters to pass to xhrPost, the form, how to handle it, and the callbacks.
+          // Note that there isn't a url passed.  xhrPost will extract the url to call from the form's
           //'action' attribute.  You could also leave off the action attribute and set the url of the xhrPost object
-          //either should work.
+          // either should work.
           var xhrArgs = {
             form: dojo.byId("myform"),
             handleAs: "text",
@@ -103,12 +103,12 @@ Example 1: dojo.xhrPost call to send a form
               dojo.byId("response").innerHTML = "Form posted.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
-              //docs server.
+              // We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
+              // docs server.
               dojo.byId("response").innerHTML = "Form posted.";
             }
           }
-          //Call the asynchronous xhrPost
+          // Call the asynchronous xhrPost
           dojo.byId("response").innerHTML = "Form being sent..."
           var deferred = dojo.xhrPost(xhrArgs);
         });
@@ -145,8 +145,8 @@ Example 2: dojo.xhrPost call to send some text data
         var button = dijit.byId("submitButton2");
 
         dojo.connect(button, "onClick", function(event){
-          //The parameters to pass to xhrPost, the message, and the url to send it to
-          //Also, how to handle the return and callbacks.
+          // The parameters to pass to xhrPost, the message, and the url to send it to
+          // Also, how to handle the return and callbacks.
           var xhrArgs = {
             url: "postIt",
             postData: "Some random text",
@@ -155,13 +155,13 @@ Example 2: dojo.xhrPost call to send some text data
               dojo.byId("response2").innerHTML = "Message posted.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
-              //docs server.
+              // We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
+              // docs server.
               dojo.byId("response2").innerHTML = "Message posted.";
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
-          //Call the asynchronous xhrPost
+          // Call the asynchronous xhrPost
           var deferred = dojo.xhrPost(xhrArgs);
         });
       }

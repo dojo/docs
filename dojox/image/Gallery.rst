@@ -35,11 +35,11 @@ Creating a Gallery and setting a simple data source
 .. js ::
  
   <script type="text/javascript">
-  //Define the attribute names used to access the items in the data store
+  // Define the attribute names used to access the items in the data store
   var itemNameMap = {imageThumbAttr: "thumb", imageLargeAttr: "large"};
 
-  //Define the request, with no query, and a count of 20, so 20 items will be
-  //requested with each request
+  // Define the request, with no query, and a count of 20, so 20 items will be
+  // requested with each request
   var request = {query: {}, count: 20};
   dijit.byId('gallery1').setDataStore(imageItemStore, request, itemNameMap);
   </script>
@@ -53,26 +53,26 @@ Creating a Gallery with a FlickrRestStore
 .. js ::
  
   <script type="text/javascript">
-  //Declare a FlickrRestStore data store.  This is used to access images from the
-  //Flickr (www.flickr.com) photo sharing website.
+  // Declare a FlickrRestStore data store.  This is used to access images from the
+  // Flickr (www.flickr.com) photo sharing website.
   var flickrRestStore = new dojox.data.FlickrRestStore();
 
-  //Define the request, with a count of 20, so 20 items will be requested with
-  //each request. The query specifies information used to access Flickr,
-  //including a user ID (optional) and API key (required).
-  //You can also specify a sort order, tags to search for, and the matching
-  //mode for the tags, which can be "any" or "all", which equate to boolean "or"
-  //and a boolean "and" respectively
+  // Define the request, with a count of 20, so 20 items will be requested with
+  // each request. The query specifies information used to access Flickr,
+  // including a user ID (optional) and API key (required).
+  // You can also specify a sort order, tags to search for, and the matching
+  // mode for the tags, which can be "any" or "all", which equate to boolean "or"
+  // and a boolean "and" respectively
   var request = {
         query: {
-            userid: "44153025@N00",//The Flickr user id to use
-            apikey: "8c6803164dbc395fb7131c9d54843627",//An API key is required.
+            userid: "44153025@N00", // The Flickr user id to use
+            apikey: "8c6803164dbc395fb7131c9d54843627", // An API key is required.
             sort: [{
-                    descending: true //Use descending sort order, ascending is default.
+                    descending: true // Use descending sort order, ascending is default.
                 }
 		],
                 tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
-		tag_mode: "any" //Match any of the tags
+		tag_mode: "any" // Match any of the tags
          },
          count: 20
   };

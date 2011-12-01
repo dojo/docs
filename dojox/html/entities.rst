@@ -31,7 +31,7 @@ Users can use their own entity maps with the encode and decode functions, which 
 
   [
      ["<UTF-8 character", "Entity encoding minus & and  ;"]
-     ... //Any number of other mappings
+     ... // Any number of other mappings
   ];
 
 So, for example say you want to *just* encode & characters to an entity representation.  You would define the map as follows:

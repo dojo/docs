@@ -245,11 +245,11 @@ exportToHTML
   grid.exportToHTML({
     ...
   }, function(str){
-    //Preview the printed grid in a separate window.
+    // Preview the printed grid in a separate window.
     var win = window.open();
     win.document.open();
     win.document.write(str);
-	//Normalize the printed grid, so the width and height of each view and row are correct.
+	// Normalize the printed grid, so the width and height of each view and row are correct.
     grid.normalizePrintedGrid(win.document);
     win.document.close();
   });

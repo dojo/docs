@@ -60,7 +60,7 @@ Example: dojo.extend vs dojo.mixin
 .. js ::
   
     require(["dojo/_base/lang", "dojo/json"], function(lang, json) {
-        //define a class
+        // define a class
         var myClass = function() {
             this.defaultProp = "default value";
         };
@@ -82,7 +82,7 @@ Example: dojo.extend vs dojo.mixin
 
 .. js ::
   
-    //define a class
+    // define a class
     var myClass = function() {
         this.defaultProp = "default value";
     };

@@ -41,7 +41,7 @@ Use :ref:`dojo.i18n.getLocalization() <dojo/i18n>` to get a reference to the obj
 .. js ::
  
  <script type="text/javascript">
-   //TODO: replace this example with the strings from dojo.color when translations are available
+   // TODO: replace this example with the strings from dojo.color when translations are available
    dojo.require("dojo.i18n");
    dojo.requireLocalization("dijit.form", "validate");
    var validate = dojo.i18n.getLocalization("dijit.form", "validate");

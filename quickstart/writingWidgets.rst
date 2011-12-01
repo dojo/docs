@@ -524,7 +524,7 @@ In Button.js you'll find:
 .. js ::
 
   _onButtonClick: function( /*Event*/ e) {
-    ...// Trust me, _onClick calls this._onClick
+    ... // Trust me, _onClick calls this._onClick
   },
   _onClick: function( /*Event*/ e) {
     ...

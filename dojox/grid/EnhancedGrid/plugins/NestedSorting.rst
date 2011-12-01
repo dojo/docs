@@ -128,7 +128,7 @@ with JavaScript way
   
   var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
-      //default sorting order
+      // default sorting order
       sortFields: [{attribute: 'col4', descending: false},{attribute: 'col7', descending: true}],
       plugins: {nestedSorting: true}
   }, div);
@@ -147,8 +147,8 @@ with JavaScript way
   
   var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
-      //prevent some columns from being sorted
-      //column index 0 and column with field 'col6' are disabled for being sorted
+      // prevent some columns from being sorted
+      // column index 0 and column with field 'col6' are disabled for being sorted
       canSort: function(colIndex, field){
           return colIndex != 0 && field != 'col6';
       },

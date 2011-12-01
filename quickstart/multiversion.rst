@@ -70,13 +70,13 @@ You want to use Dojo, but you do not want it to conflict with other Dojo version
   <script type="text/javascript">
       coolio.require("coolio.actions");
      
-      //Notice if you want to include some dojo functionality,
-      //you need to reference the "dojo" name in the require call,
-      //but it will be added to the "coolio" object:
+      // Notice if you want to include some dojo functionality,
+      // you need to reference the "dojo" name in the require call,
+      // but it will be added to the "coolio" object:
       coolio.require("dojo.string");
       coolio.ready(function(){
-          //do something with coolio.actions.foo();
-          //Can call coolio.string.trim() too.
+          // do something with coolio.actions.foo();
+          // Can call coolio.string.trim() too.
       });
   </script>
   </head>
@@ -112,9 +112,9 @@ Define a build profile like the below and save it as coolio.profile.js:
         prefixes: [
                 [ "dijit", "../dijit" ],
                 [ "dojox", "../dojox" ]
-                //The mapping below assumes you placed "coolio"
-                //as a sibling to the dojo directory. If not, adjust
-                //the path accordingly.
+                // The mapping below assumes you placed "coolio"
+                // as a sibling to the dojo directory. If not, adjust
+                // the path accordingly.
                 [ "coolio", "../coolio" ]
         ]
   }
@@ -186,7 +186,7 @@ To use both versions in a page, the tests/test.html file would look like
   </script>
   <script type="text/javascript" src="../scripts/dojo110/dojo/dojo.js"></script>
   <script type="text/javascript">
-  //Notice that djConfig is being redefined here.
+  // Notice that djConfig is being redefined here.
   djConfig = {
       isDebug: true,
       baseRelativePath: "../scripts/dojo043/"
@@ -195,19 +195,19 @@ To use both versions in a page, the tests/test.html file would look like
   <script type="text/javascript" src="../scripts/dojo043/dojo.js"></script>
   <script type="text/javascript">
       dojo.require("dojo.widget.DropdownDatePicker");
-      //Notice the require strings use "dojo" and "dijit"
-      //instead of "dojo11" and "dijit11". However, the objects
-      //will be used on the page by their "dojo11" and "dijit11"
-        //names. For instance, you do a dojo11.require("dojo.string");,
-      //but in this page you would call dojo11.string.trim().
+      // Notice the require strings use "dojo" and "dijit"
+      // instead of "dojo11" and "dijit11". However, the objects
+      // will be used on the page by their "dojo11" and "dijit11"
+        // names. For instance, you do a dojo11.require("dojo.string");,
+      // but in this page you would call dojo11.string.trim().
       dojo11.require("dijit._Calendar");
       dojo11.require("dojo.date.locale");
       dojo11.require("dojo.parser"); // scan page for widgets
       dojo.ready(function(){
-          //Do something with Dojo 0.4.3 in here.
+          // Do something with Dojo 0.4.3 in here.
       });
       dojo11.ready(function(){
-          //Do something with Dojo 1.1 in here.
+          // Do something with Dojo 1.1 in here.
       });
   </script>
   </head>

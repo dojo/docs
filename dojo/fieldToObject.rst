@@ -35,14 +35,14 @@ Dojo 1.7+ (AMD)
   require(["dojo/dom-form"], function(domForm){
     var firstInputValue = domForm.fieldToObject("firstInput");
 
-    //Assuming a form of:
+    // Assuming a form of:
     // <form id="myform">
     //    <input id="firstInput" type="text" name="field1" value="value1">
     //    <input type="text" name="field2" value="value2">
     //    <input type="button" name="someButton" value="someValue">
     // </form>
     //
-    //firstInputValue will be "value1"
+    // firstInputValue will be "value1"
   });
 
 
@@ -53,14 +53,14 @@ Dojo < 1.7
  
   var firstInputValue = dojo.fieldToObject("firstInput");
 
-  //Assuming a form of:
+  // Assuming a form of:
   // <form id="myform">
   //    <input id="firstInput" type="text" name="field1" value="value1">
   //    <input type="text" name="field2" value="value2">
   //    <input type="button" name="someButton" value="someValue">
   // </form>
   //
-  //firstInputValue will be "value1"
+  // firstInputValue will be "value1"
 
 Examples
 ========
@@ -78,7 +78,7 @@ Example 1: Using fieldToObject to get field values
            var shape = dojo.fieldToObject("shape");
            var colors = dojo.fieldToObject(dojo.byId("myform").color);
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("output").innerHTML = "Shape is: " + shape + ", Colors is an array: " + colors;
         });
       }

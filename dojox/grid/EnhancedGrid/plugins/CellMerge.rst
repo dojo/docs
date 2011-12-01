@@ -361,18 +361,18 @@ Here is some examples on how to use this API:
 
 .. js ::
   
-  //Merge cells of column 2, column 3 and column 4 on the second row, using the content of the cell on column 3 for the merged cell.
+  // Merge cells of column 2, column 3 and column 4 on the second row, using the content of the cell on column 3 for the merged cell.
   var handle1 = grid.mergeCells(1, 2, 4, 3);
 
-  //Merge cells of column 2, column 3 and column 4 on every third row, using the content of column 3 for the merged cells.
+  // Merge cells of column 2, column 3 and column 4 on every third row, using the content of column 3 for the merged cells.
   var handle2 = grid.mergeCells(function(rowIndex){
     return !((rowIndex + 1) % 3);
   }, 2, 4);
 
-  //Unmerge some merged cells
+  // Unmerge some merged cells
   grid.unmergeCells(handle1);
 
-  //Unmerge all merged cells.
+  // Unmerge all merged cells.
   dojo.forEach(grid.getMergedCells(), function(item){
     grid.unmergeCells(item.handle);
   });

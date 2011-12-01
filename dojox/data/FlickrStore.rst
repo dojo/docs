@@ -141,14 +141,14 @@ Sample 1:  Listing nature pictures
       dojo.require("dojox.data.FlickrStore");
       dojo.require("dijit.form.Button");
 
-      //This function performs some basic dojo initialization.  In this case it connects the button
-      //onClick to a function which invokes the fetch().  The fetch function queries for all items
-      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      // This function performs some basic dojo initialization.  In this case it connects the button
+      // onClick to a function which invokes the fetch().  The fetch function queries for all items
+      // and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
-         //Function to perform a fetch on the datastore when a button is clicked
+         // Function to perform a fetch on the datastore when a button is clicked
          function getAllItems () {
 
-           //Callback to perform an action when the data items are starting to be returned:
+           // Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
              var list = dojo.byId("list");
              if (list) {
@@ -158,7 +158,7 @@ Sample 1:  Listing nature pictures
              }
            }
   
-           //Callback for processing a returned list of items.
+           // Callback for processing a returned list of items.
            function gotItems(items, request) {
              var list = dojo.byId("list");
              if (list) {
@@ -173,18 +173,18 @@ Sample 1:  Listing nature pictures
              }
            }
           
-           //Callback for if the lookup fails.
+           // Callback for if the lookup fails.
            function fetchFailed(error, request) {
              alert("lookup failed.");
            }
              
-           //Fetch the images.
+           // Fetch the images.
            flickrStore.fetch({query:{ tags: "nature"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
          }
-         //Link the click event of the button to driving the fetch.
+         // Link the click event of the button to driving the fetch.
          dojo.connect(button, "onClick", getAllItems);
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init);
     </script>
 

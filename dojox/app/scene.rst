@@ -52,15 +52,15 @@ Sample application configuration
       "dependencies":["dojox/mobile/TextBox", "dojox/mobile/TextArea", "dojox/mvc/Generate"],
     },
   
-    //simple scene which loads all views and shows the default first
+    // simple scene which loads all views and shows the default first
     "tabscene": {
-      //all views in the second scene will be bound to the user model
+      // all views in the second scene will be bound to the user model
       "type": "dojox.app.scene",
       "template": "tabScene.html",
       "defaultView": "tab1",
       "defaultTransition": "flip",
   
-      //the views available to this scene
+      // the views available to this scene
       "views": {
         "tab1":{
           "template": "views/tabs/tab1.html"

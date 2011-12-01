@@ -60,12 +60,12 @@ optionally contains a query. e.g.
   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
   <script type="text/javascript">
      dojo.ready(function() {
-     //Define the request, saying that 20 records should be fetched at a time,
-     //and to start at record 0
+     // Define the request, saying that 20 records should be fetched at a time,
+     // and to start at record 0
      
      var request= {count:20, start:0};
-     //Tell the widget to request the "thumb" parameter, as different
-     //stores may use different parameter names
+     // Tell the widget to request the "thumb" parameter, as different
+     // stores may use different parameter names
      var itemNameMap = {imageThumbAttr: "thumb"};
 
      dijit.byId('picker1').setDataStore(imageItemStore, request, itemNameMap);
@@ -148,13 +148,13 @@ of settings, and uses the FlickrRestStore data store.
         dojo.require("dojox.data.FlickrRestStore");
 
         dojo.ready(function() {
-        //Create a new FlickrRestStore
+        // Create a new FlickrRestStore
         var flickrRestStore = new dojox.data.FlickrRestStore();
          
-        //Create a request object, containing a query with the
-        //userid, apikey and (optional) sort data.
-        //Extra query parameters 'tags' and 'tag_mode' are also
-        //used to further filter the results
+        // Create a request object, containing a query with the
+        // userid, apikey and (optional) sort data.
+        // Extra query parameters 'tags' and 'tag_mode' are also
+        // used to further filter the results
         var req = {query: {
                            userid: "44153025@N00",
                            apikey: "8c6803164dbc395fb7131c9d54843627",
@@ -162,11 +162,11 @@ of settings, and uses the FlickrRestStore data store.
                            tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
                            tag_mode: "any"
                            },
-                           start: 0, //start at record 0
-                           count: 20 //request 20 records each time a request is made
+                           start: 0, // start at record 0
+                           count: 20 // request 20 records each time a request is made
                            };
          
-        //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
+        // Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
         });
 

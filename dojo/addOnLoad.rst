@@ -32,7 +32,7 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
 
 .. js ::
 
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
@@ -44,7 +44,7 @@ dojo.addOnLoad(...) defers script execution until all the HTML and modules are l
 
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
@@ -54,7 +54,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 .. js ::
 
-    //Dojo 1.7+ (AMD)
+    // Dojo 1.7+ (AMD)
     require("dojo/ready", function(ready) {
         ready(function(){
             document.musicPrefs.other.value="Afrobeat";
@@ -63,7 +63,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 .. js ::
 
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.addOnLoad(function(){
         document.musicPrefs.other.value="Afrobeat";
     });
@@ -74,7 +74,7 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 
 .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require("dojo/ready", function(ready) {
         ready(function(){
             require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane) {
@@ -88,7 +88,7 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 
 .. js ::
 
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.addOnLoad(function(){
         dojo.require("dijit.Dialog");
         dojo.require("dijit.TitlePane");

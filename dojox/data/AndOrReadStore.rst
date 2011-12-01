@@ -113,14 +113,14 @@ Finding all Continents and Cities
         ]
       };
 
-      //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items
-      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      // This function performs some basic dojo initialization. In this case it connects the button
+      // onClick to a function which invokes the fetch(). The fetch function queries for all items
+      // and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init2 () {
-        //Function to perform a fetch on the datastore when a button is clicked
+        // Function to perform a fetch on the datastore when a button is clicked
         function getItems() {
 
-          //Callback to perform an action when the data items are starting to be returned:
+          // Callback to perform an action when the data items are starting to be returned:
           function clearOldCList(size, request) {
             var list = dojo.byId("list2");
             if (list) {
@@ -130,7 +130,7 @@ Finding all Continents and Cities
             }
           }
   
-          //Callback for processing a returned list of items.
+          // Callback for processing a returned list of items.
           function gotItems(items, request) {
             var list = dojo.byId("list2");
             if (list) {
@@ -143,19 +143,19 @@ Finding all Continents and Cities
             }
           }
             
-          //Callback for if the lookup fails.
+          // Callback for if the lookup fails.
           function fetchFailed(error, request) {
             alert("lookup failed.");
             alert(error);
           }
              
-          //Fetch the data.
+          // Fetch the data.
           geoStore.fetch({query: { complexQuery: "type:\"continent\" OR type:\"city\""}, onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}});
         }
-        //Link the click event of the button to driving the fetch.
+        // Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getItems );
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init2);
     </script>
 

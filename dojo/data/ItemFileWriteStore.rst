@@ -266,14 +266,14 @@ The following is a semi-complex example of the write API in action. In this exam
         ]
       ];
 
-      //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items
-      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      // This function performs some basic dojo initialization. In this case it connects the button
+      // onClick to a function which invokes the fetch(). The fetch function queries for all items
+      // and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init2 () {
-        //Function to perform a fetch on the datastore when a button is clicked
+        // Function to perform a fetch on the datastore when a button is clicked
         function updateAll() {
 
-           //Callback for processing a returned list of items.
+           // Callback for processing a returned list of items.
           function gotAll(items, request) {
             var value = spinner.getValue();
             if ( value >= 0 ) {
@@ -285,19 +285,19 @@ The following is a semi-complex example of the write API in action. In this exam
             }
           }
             
-          //Callback for if the lookup fails.
+          // Callback for if the lookup fails.
           function fetchFailed(error, request) {
             alert("lookup failed.");
             alert(error);
           }
              
-          //Fetch the data.
+          // Fetch the data.
           geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
-        //Link the click event of the button to driving the fetch.
+        // Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", updateAll);
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init2);
     </script>
 
@@ -497,9 +497,9 @@ is displayed in an alert.
         ]
       ];
 
-      //This function performs some basic dojo initialization. In this case it connects the button
-      //onClick to a function which invokes the fetch(). The fetch function queries for all items
-      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      // This function performs some basic dojo initialization. In this case it connects the button
+      // onClick to a function which invokes the fetch(). The fetch function queries for all items
+      // and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init3 () {
 
         var itemToJS = function(store, item) {
@@ -510,20 +510,20 @@ is displayed in an alert.
           //    The item in question.
           var js = {};
           if (item && store) {
-            //Determine the attributes we need to process.
+            // Determine the attributes we need to process.
             var attributes = store.getAttributes(item);
             if (attributes && attributes.length > 0) {
               var i;
               for (i = 0; i < attributes.length; i++) {
                 var values = store.getValues(item, attributes[i]);
                 if (values) {
-                  //Handle multivalued and single-valued attributes.
+                  // Handle multivalued and single-valued attributes.
                   if (values.length > 1 ) {
                     var j;
                     js[attributes[i]] = [];
                     for (j = 0; j < values.length; j++ ) {
                       var value = values[j];
-                      //Check that the value isn't another item. If it is, process it as an item.
+                      // Check that the value isn't another item. If it is, process it as an item.
                       if (store.isItem(value)) {
                         js[attributes[i]].push(itemToJS(store, value));
                       } else {
@@ -552,11 +552,11 @@ is displayed in an alert.
            var changes = {};
            changes.modified = [];
            for (var i in changeSet._modifiedItems) {
-              //Use the identity to look up the current version of the item from the store's array
-              //Can't use the object IN the modified items array because it is the saved state before modification.
+              // Use the identity to look up the current version of the item from the store's array
+              // Can't use the object IN the modified items array because it is the saved state before modification.
               var item = null;
-              //Find the modified item, it can be in one of two places to look up
-              //Either by an explicit identity if it was specified, or by its index.
+              // Find the modified item, it can be in one of two places to look up
+              // Either by an explicit identity if it was specified, or by its index.
               if (geoStore2._itemsByIdentity) {
                  item = geoStore2._itemsByIdentity[i];
               } else {
@@ -569,10 +569,10 @@ is displayed in an alert.
         };
 
 
-        //Function to perform a fetch on the datastore when a button is clicked
+        // Function to perform a fetch on the datastore when a button is clicked
         function updateAll() {
 
-           //Callback for processing a returned list of items.
+           // Callback for processing a returned list of items.
           function gotAll(items, request) {
             var value = spinner2.getValue();
             if ( value >= 0 ) {
@@ -584,20 +584,20 @@ is displayed in an alert.
             }
           }
             
-          //Callback for if the lookup fails.
+          // Callback for if the lookup fails.
           function fetchFailed(error, request) {
             alert("lookup failed.");
             alert(error);
           }
              
-          //Fetch the data.
+          // Fetch the data.
           geoStore2.fetch({query: {type:"city"}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
-        //Link the click event of the button to driving the fetch.
+        // Link the click event of the button to driving the fetch.
         dojo.connect(button3, "onClick", updateAll);
         dojo.connect(button3, "onClick", geoStore2, "save");
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init3);
     </script>
 

@@ -84,8 +84,8 @@ Format some HTML markup
       dojo.require("dojox.html.format");
 
       dojo.ready(function(){
-         //Make sure the default input is actually unformatted!
-         //The code viewer is actually formatting the textarea, doh.
+         // Make sure the default input is actually unformatted!
+         // The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
          var i;
          for(i=0; i < lines.length; i++){
@@ -148,8 +148,8 @@ Format some HTML markup with three space indent
       dojo.require("dojox.html.format");
 
       dojo.ready(function(){
-         //Make sure the default input is actually unformatted!
-         //The code viewer is actually formatting the textarea, doh.
+         // Make sure the default input is actually unformatted!
+         // The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
          var i;
          for(i=0; i < lines.length; i++){
@@ -211,8 +211,8 @@ Format some HTML markup with three space indent and 20 character line wrap
       dojo.require("dojox.html.format");
 
       dojo.ready(function(){
-         //Make sure the default input is actually unformatted!
-         //The code viewer is actually formatting the textarea, doh.
+         // Make sure the default input is actually unformatted!
+         // The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
          var i;
          for(i=0; i < lines.length; i++){
@@ -275,8 +275,8 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
       dojo.require("dojox.html.format");
 
       dojo.ready(function(){
-         //Make sure the default input is actually unformatted!
-         //The code viewer is actually formatting the textarea, doh.
+         // Make sure the default input is actually unformatted!
+         // The code viewer is actually formatting the textarea, doh.
          var lines = dojo.byId("input").value.split("\n");
          var i;
          for(i=0; i < lines.length; i++){

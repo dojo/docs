@@ -69,8 +69,8 @@ Example 1: dojo.xhrPut call to send some text data
         var button = dijit.byId("submitButton2");
 
         dojo.connect(button, "onClick", function(event){
-          //The parameters to pass to xhrPut, the message, and the url to send it to
-          //Also, how to handle the return and callbacks.
+          // The parameters to pass to xhrPut, the message, and the url to send it to
+          // Also, how to handle the return and callbacks.
           var xhrArgs = {
             url: "putIt",
             putData: "Some random text",
@@ -79,13 +79,13 @@ Example 1: dojo.xhrPut call to send some text data
               dojo.byId("response2").innerHTML = "Message put.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'putIt' service on the
-              //docs server.
+              // We'll 404 in the demo, but that's okay.  We don't have a 'putIt' service on the
+              // docs server.
               dojo.byId("response2").innerHTML = "Message put.";
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
-          //Call the asynchronous xhrPost
+          // Call the asynchronous xhrPost
           var deferred = dojo.xhrPut(xhrArgs);
         });
       }

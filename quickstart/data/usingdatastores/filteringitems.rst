@@ -124,14 +124,14 @@ Query for all Spices  (Basic query)
           { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
         ]};
 
-        //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function getSpices () {
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list");
                if (list) {
@@ -141,7 +141,7 @@ Query for all Spices  (Basic query)
                }
              }
   
-             //Callback for processing a returned list of items.
+             // Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
                if (list) {
@@ -154,19 +154,19 @@ Query for all Spices  (Basic query)
                }
              }
             
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
              }
              
-             //Fetch the data.
+             // Fetch the data.
              foodStore.fetch({query: { aisle: "Spices"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button, "onClick", getSpices);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
     </script>
 
@@ -207,14 +207,14 @@ Query for all food in aisles starting with C
           { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
         ]};
 
-        //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init2 () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function getCAisle () {
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list2");
                if (list) {
@@ -224,7 +224,7 @@ Query for all food in aisles starting with C
                }
              }
   
-             //Callback for processing a returned list of items.
+             // Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list2");
                if (list) {
@@ -237,20 +237,20 @@ Query for all food in aisles starting with C
                }
              }
             
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
                 alert(error);
              }
              
-             //Fetch the data.
+             // Fetch the data.
              foodStore2.fetch({query: { aisle: "C*"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button2, "onClick", getCAisle );
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init2);
     </script>
 
@@ -293,15 +293,15 @@ Enter your own query for name and aisle
           { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
         ]};
 
-        //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init3 () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function search() {
              var queryObj = {};
 
-             //Build up the query from the input boxes.
+             // Build up the query from the input boxes.
              var name = nameBox.getValue();
              if ( name && dojo.trim(name) !== "" ) {
                queryObj["name"] = name;
@@ -317,7 +317,7 @@ Enter your own query for name and aisle
              }
 
 
-             //Build up query options, if any.
+             // Build up query options, if any.
              var queryOptionsObj = {};
 
              if ( checkBox.getValue()) {
@@ -329,7 +329,7 @@ Enter your own query for name and aisle
                qoNode.innerHTML = dojo.toJson(queryOptionsObj);
              }
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list3");
                if (list) {
@@ -339,7 +339,7 @@ Enter your own query for name and aisle
                }
              }
   
-             //Callback for processing a returned list of items.
+             // Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list3");
                if (list) {
@@ -352,20 +352,20 @@ Enter your own query for name and aisle
                }
              }
             
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
                 alert(error);
              }
              
-             //Fetch the data.
+             // Fetch the data.
              foodStore3.fetch({query: queryObj, queryOptions: queryOptionsObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button3, "onClick", search);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init3);
     </script>
 

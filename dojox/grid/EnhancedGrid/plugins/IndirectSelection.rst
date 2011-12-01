@@ -145,10 +145,10 @@ with JavaScript
 
 .. html ::
   
-  //with HTML markup
+  // with HTML markup
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, rowSelector:'0px'" ... />
  
-  //with Javascript
+  // with Javascript
   <script>
     var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, rowSelector: "0px", ...}, dojo.byId('gridDiv'));
   </script>
@@ -208,7 +208,7 @@ Usages
   
   dojo.connect(grid.selection, 'onSelected'|'onDeselected', function(rowIndex){...})
 
-  //when Select All checkbox is changed
+  // when Select All checkbox is changed
   dojo.connect(grid.rowSelectCell, 'toggleAllSelection', function(newValue){...})
 
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.

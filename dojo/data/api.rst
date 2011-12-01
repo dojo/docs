@@ -62,8 +62,8 @@ Correct access
 
   var store = new some.data.Store();
   var items;
-  ... //Assume in this time items is now an array populated by a call to store.fetch();
-  //To iterate over the items and print out the value of a 'foo' attribute, you would do the following:
+  ... // Assume in this time items is now an array populated by a call to store.fetch();
+  // To iterate over the items and print out the value of a 'foo' attribute, you would do the following:
   for (var i = 0; i < items.length; i++){
       var item = items[i];
       console.log("For attribute 'foo' value was: [" + store.getValue(item, "foo") + "]");

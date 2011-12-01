@@ -119,11 +119,11 @@ The ``testdijits/nls/Foo.js`` file should contain:
 .. code-block :: text
 
   define({ root:
-  //begin v1.x content
+  // begin v1.x content
   ({
   	test: 'this is a test'
   })
-  //end v1.x content
+  // end v1.x content
   })
 
 Now run the build again.  You will find that the 'this is a test' string gets included in _every_ layer nls file test/dojo/nls/testdijits* .. testdijits_ar.js, testdijits_en.js, and so on.  The files that previously had a single dojo.provide call now look like:
@@ -287,11 +287,11 @@ From here it's simple to add another strings resource, along with the single ``t
 .. code-block :: text
 
   define({ root:
-  //begin v1.x content
+  // begin v1.x content
   ({
   	test: 'FRENCH this is a test FRENCH'
   })
-  //end v1.x content
+  // end v1.x content
   })
 
 The custom build would then contain the same files as before, but the ``fr`` file contains the localized string:

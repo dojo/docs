@@ -339,7 +339,7 @@ To connect to these events, just say (for example):
 .. js ::
     
   var handle = dojo.connect(grid, "onEndSelect", function(type, startPoint, endPoint, selected){
-    //Your code goes here.
+    // Your code goes here.
   });
 
 

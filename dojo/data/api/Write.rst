@@ -46,7 +46,7 @@ The following list provides the requirements for the Write API that implementers
 
   .. js ::
 
-    //The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
+    // The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
     store.newItem({foo: "fooValue", bar: "barValue", bit: "bitValue"});
 
 * Items returned from store.newItem() are valid items. In other words, store.isItem(item) returns true.
@@ -65,12 +65,12 @@ Simple attribute modification and save
 
 .. js ::
 
-  //Instantiate some write implementing store.
+  // Instantiate some write implementing store.
   var store = some.DataWriteStore();
 
-  //Set our load completed handler up...
+  // Set our load completed handler up...
   var onCompleteFetch = function(items, request) {
-    //Define the save callbacks to use
+    // Define the save callbacks to use
     var onSave = function(){
       alert("Save done.");
     }
@@ -89,7 +89,7 @@ Simple attribute modification and save
       store.save({onComplete: onSave, onError: onSaveError});
     }
   }
-  //Define a fetch error handler, just in case.
+  // Define a fetch error handler, just in case.
   var onFetchError = function(error, request){
     alert("Fetch failed.  " + error);
   }
@@ -105,7 +105,7 @@ This example shows how to get all modified items before a save has been called.
 .. js ::
 
   var store = some.DataWriteStore();
-  //Set our load completed hander up...
+  // Set our load completed hander up...
   var onCompleteFetch = function(items, request) {
     // Process the items test for modification
     for (int i = 0; i < items.length(); i++){
@@ -115,7 +115,7 @@ This example shows how to get all modified items before a save has been called.
       }
     }
   }
-  //Define a fetch error handler, just in case.
+  // Define a fetch error handler, just in case.
   var onFetchError = function(error, request){
     alert("Fetch failed.  " + error);
   }

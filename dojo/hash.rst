@@ -31,12 +31,12 @@ To use dojo.hash to listen for hash changes:
 
    .. js ::
    
-      //Dojo 1.7(AMD)
+      // Dojo 1.7(AMD)
       require(["dojo/hash"], function(hash){
-         //Write your code here
+         // Write your code here
       });
 
-      //Dojo < 1.7
+      // Dojo < 1.7
       dojo.require("dojo.hash");
    ..
 
@@ -44,12 +44,12 @@ To use dojo.hash to listen for hash changes:
 
    .. js ::
   
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.subscribe("/dojo/hashchange", context, callback);
    ..
 
@@ -67,12 +67,12 @@ Setter
 
   .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
         hash("someHashValue");
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.hash("someHashValue");
   ..
 
@@ -81,12 +81,12 @@ Setter
 
   .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
         hash("someHashValue",true);
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.hash("someHashValue",true);
   ..
 
@@ -96,12 +96,12 @@ Getter
 
   .. js ::
   
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
         var hashValue = hash();
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     var hashValue = dojo.hash();
   ..
 
@@ -113,12 +113,12 @@ Examples
 
    .. js ::
    
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/_base/connect","dojo/hash"], function(connect,hash) {
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.subscribe("/dojo/hashchange", context, callback);
    ..
 
@@ -126,7 +126,7 @@ Examples
 
    .. js ::
    
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
         var obj = {
             firstParam: true,
@@ -135,7 +135,7 @@ Examples
         hash(ioQuery.objectToQuery(obj));
     });
 	
-    //Dojo < 1.7
+    // Dojo < 1.7
     function() {
         var obj = {
             firstParam: true,
@@ -154,20 +154,20 @@ Examples
 
  .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
         function updateHash() {
-            var obj = ioQuery.queryToObject(dojo.hash());  //get
+            var obj = ioQuery.queryToObject(dojo.hash());  // get
             obj.someNewParam = true;
-            hash(ioQuery.objectToQuery(obj));  //set
+            hash(ioQuery.objectToQuery(obj));  // set
         }
     });
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     function updateHash() {
-        var obj = dojo.queryToObject(dojo.hash());  //get
+        var obj = dojo.queryToObject(dojo.hash());  // get
         obj.someNewParam = true;
-        dojo.hash(dojo.objectToQuery(obj));  //set
+        dojo.hash(dojo.objectToQuery(obj));  // set
     }
  ..
 
@@ -177,10 +177,10 @@ Examples
 
    .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash","dojo/io-query"], function(hash,ioQuery) {
         function callback(hash) {
-            //hashchange event!
+            // hashchange event!
             var obj = ioQuery.queryToObject(hash);
             if (obj.firstParam) {
                 // do something
@@ -188,9 +188,9 @@ Examples
         }
     });
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     function callback(hash) {
-        //hashchange event!
+        // hashchange event!
         var obj = dojo.queryToObject(hash);
         if (obj.firstParam) {
             // do something
@@ -204,7 +204,7 @@ Examples
 
  .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash) {
         function updateHash() {
             var obj = hash().split("/");
@@ -213,7 +213,7 @@ Examples
         }
     });
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     function updateHash() {
         var obj = dojo.hash().split("/");
         obj.push("trailingSegment");

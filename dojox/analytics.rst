@@ -58,10 +58,10 @@ Usage
 	  // and storing this data
 	  dojo.require("dojox.analytics.plugins.mouseOver");
 
-	  //tracks mouse clicks on the page
+	  // tracks mouse clicks on the page
 	  dojo.require("dojox.analytics.plugins.mouseClick");
 
-	  //tracks when the user has gone idle
+	  // tracks when the user has gone idle
 	  dojo.require("dojox.analytics.plugins.idle");
 		
     </script>

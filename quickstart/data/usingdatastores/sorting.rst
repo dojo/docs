@@ -58,14 +58,14 @@ Showing how sort attributes affect ordering
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes the fetch(). The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearSortedList(size, request) {
                var list = dojo.byId("sortedList");
                if (list) {
@@ -84,7 +84,7 @@ Showing how sort attributes affect ordering
                }
              }
 
-             //Callback for processing a returned list of items.
+             // Callback for processing a returned list of items.
              function gotSortedItems(items, request) {
                var list = dojo.byId("sortedList");
                if (list) {
@@ -106,7 +106,7 @@ Showing how sort attributes affect ordering
                }
              }
 
-             //Callback for processing a returned list of unsorted items.
+             // Callback for processing a returned list of unsorted items.
              function gotUnSortedItems(items, request) {
                var list = dojo.byId("unSortedList");
                if (list) {
@@ -128,21 +128,21 @@ Showing how sort attributes affect ordering
                }
              }
 
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
              }
              
-             //Fetch the data in a sorted order.
+             // Fetch the data in a sorted order.
              foodStore.fetch({onBegin: clearSortedList, onComplete: gotSortedItems, onError: fetchFailed, sort: [{ attribute: "aisle"},{attribute: "name"}]});
 
-             //Fetch the data in an unsorted order.
+             // Fetch the data in an unsorted order.
              foodStore.fetch({onBegin: clearUnSortedList, onComplete: gotUnSortedItems, onError: fetchFailed});
            }
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button, "onClick", getAllItems);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
     </script>
 

@@ -36,16 +36,16 @@ Dojo 1.7+ (AMD)
     var formId = "myId";
     var formJson = domForm.toJson(formId);
 
-    //Assuming a form of:
+    // Assuming a form of:
     // <form id="myform">
     //    <input type="text" name="field1" value="value1">
     //    <input type="text" name="field2" value="value2">
     //    <input type="button" name="someButton" value="someValue">
     // </form>
     //
-    //The structure of formJson will be:
+    // The structure of formJson will be:
     // {"field1":"value1","field2":"value2"}
-    //Note the button was skipped.
+    // Note the button was skipped.
   });
 
 
@@ -57,16 +57,16 @@ Dojo < 1.7
   var formId = "myId";
   var formJson = dojo.formToJson(formId);
 
-  //Assuming a form of:
+  // Assuming a form of:
   // <form id="myform">
   //    <input type="text" name="field1" value="value1">
   //    <input type="text" name="field2" value="value2">
   //    <input type="button" name="someButton" value="someValue">
   // </form>
   //
-  //The structure of formJson will be:
+  // The structure of formJson will be:
   // {"field1":"value1","field2":"value2"}
-  //Note the button was skipped.
+  // Note the button was skipped.
 
 
 Examples
@@ -84,7 +84,7 @@ Example 1: Using formToJson to create an JSON version of a form
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formJson = dojo.formToJson("myform");
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("formObject").innerHTML = formJson;
         });
       }
@@ -118,7 +118,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
            var formJson=  dojo.formToJson("myform2");
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("formObject2").innerHTML = formJson;
         });
       }

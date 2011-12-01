@@ -97,7 +97,7 @@ We'll go for a simple left/top/bottom interface.
         rightContent.addChild(bottomContent);
 
         outerBc.addChild(rightContent);
-        //rightContent.startup();
+        // rightContent.startup();
         outerBc.startup();
       });
     </script>

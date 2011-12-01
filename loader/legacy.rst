@@ -647,7 +647,7 @@ The loadInit function then AMD requires...
 .. js ::
 
   require(["dojo/require!your/module,my/module"], function(){
-    loaded(1); //this is the loaded for the original call to dojo/loadInit!*loadInit_8
+    loaded(1); // this is the loaded for the original call to dojo/loadInit!*loadInit_8
   });
 
 When dojo/require signals it has completed its work, the modules your/module and my/module--and the entire

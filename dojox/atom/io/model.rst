@@ -103,7 +103,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
     <script>
       dojo.require("dojox.atom.io.model");
 
-      //This function performs some basic dojo initialization and will do the load calling for this example
+      // This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtom () {
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
@@ -114,13 +114,13 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         var deferred = dojo.xhrGet(xhrArgs);
        
         deferred.then(
-            //Okay, on success we'll process the ATOM doc and generate the JavaScript model
+            // Okay, on success we'll process the ATOM doc and generate the JavaScript model
             function(xmlDoc, ioargs){
                 var feedRoot = xmlDoc.getElementsByTagName("feed");
                 var feed = new dojox.atom.io.model.Feed();
                 feed.buildFromDom(xmlDoc.documentElement);
 
-                //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+                // Emit both the XML (As reconstructed from the Feed object and as a JSON form.
                 var xml = dojo.byId("simpleAtomXml");
                 xml.innerHTML = "";
                 xml.appendChild(dojo.doc.createTextNode(feed.toString()));
@@ -135,7 +135,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
             }
         );
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtom);
     </script>
 
@@ -164,9 +164,9 @@ Example 2: Create a new ATOM Feed
     <script>
       dojo.require("dojox.atom.io.model");
 
-      //This function performs some basic dojo initialization and will do the main work for this example
+      // This function performs some basic dojo initialization and will do the main work for this example
       function initSimpleCreateAtom () {
-        //Create a feed with some basic attributes set.
+        // Create a feed with some basic attributes set.
         var feed = new dojox.atom.io.model.Feed();
         feed.id = "This_Is_A_New_Feed_0";
         feed.addAuthor("John Doe", "johndoe@nowhere.org", "http://johndoeshomepage.org");
@@ -175,21 +175,21 @@ Example 2: Create a new ATOM Feed
         feed.published = new Date();
         feed.setTitle("This <i>is</i> my Feed title!", "xhtml");
 
-        //Create an entry
+        // Create an entry
         var entry = feed.createEntry();
         entry.addAuthor("Jane Doe", "janedoe@nowhere.org", "http://johndoeshomepage.org");
         entry.setTitle("This <i>is</i> my entry title!", "xhtml");
         entry.id="entry_1";
 
-        //Add the feed entry to the current feed.
+        // Add the feed entry to the current feed.
         feed.addEntry(entry);
 
-        //Emit The XML form of the feed.
+        // Emit The XML form of the feed.
         var xml = dojo.byId("simpleAtomCreate");
         xml.innerHTML = "";
         xml.appendChild(dojo.doc.createTextNode(feed.toString()));
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleCreateAtom );
     </script>
 
@@ -211,7 +211,7 @@ Example 3: Modify a loaded feed
     <script>
       dojo.require("dojox.atom.io.model");
 
-      //This function performs some basic dojo initialization and will do the load calling for this example
+      // This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtomModified() {
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
@@ -222,23 +222,23 @@ Example 3: Modify a loaded feed
         var deferred = dojo.xhrGet(xhrArgs);
        
         deferred.then(
-           //Okay, on success we'll process the ATOM doc and generate the JavaScript model
+           // Okay, on success we'll process the ATOM doc and generate the JavaScript model
            function(xmlDoc, ioargs){
                var feedRoot = xmlDoc.getElementsByTagName("feed");
                var feed = new dojox.atom.io.model.Feed();
                feed.buildFromDom(xmlDoc.documentElement);
 
-               //Emit XML of the modified feed.
+               // Emit XML of the modified feed.
                var xml = dojo.byId("simpleAtomXmlPristine");
                xml.innerHTML = "";
                xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
-               //Remove an entry.
+               // Remove an entry.
                var entry = feed.getFirstEntry();
                feed.removeEntry(entry);
                feed.updated = new Date();
 
-               //Emit XML of the modified feed.
+               // Emit XML of the modified feed.
                xml = dojo.byId("simpleAtomXmlModified");
                xml.innerHTML = "";
                xml.appendChild(dojo.doc.createTextNode(feed.toString()));
@@ -249,7 +249,7 @@ Example 3: Modify a loaded feed
             }
         );
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtomModified);
     </script>
 

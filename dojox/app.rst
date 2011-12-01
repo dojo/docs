@@ -193,7 +193,7 @@ The application configuration json data is used to declare views, models and the
     "stores": {
       "namesStore":{
         "type": "dojo.store.Memory",
-        "params": {//parameters used to initialize the data store
+        "params": { //parameters used to initialize the data store
           "data": "modelApp.names"
         }
       },

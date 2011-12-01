@@ -42,20 +42,20 @@ This is actually not difficult to do. This is done through usage of the dojo.dat
     //    The item in question.
     var json = {};
     if (item && store) {
-      //Determine the attributes we need to process.
+      // Determine the attributes we need to process.
       var attributes = store.getAttributes(item);
       if (attributes && attributes.length > 0) {
         var i;
         for (i = 0; i < attributes.length; i++) {
           var values = store.getValues(item, attributes[i]);
           if (values) {
-            //Handle multivalued and single-valued attributes.
+            // Handle multivalued and single-valued attributes.
             if (values.length > 1 ) {
               var j;
               json[attributes[i]] = [];
               for (j = 0; j < values.length; j++ ) {
                 var value = values[j];
-                //Check that the value isn't another item. If it is, process it as an item.
+                // Check that the value isn't another item. If it is, process it as an item.
                 if (store.isItem(value)) {
                   json[attributes[i]].push(dojo.fromJson(itemToJSON(store, value)));
                 } else {
@@ -100,10 +100,10 @@ By definition, items are unique to their store instance, so you cannot generally
             var newItem = {};
             var values = origStore.getValues(item, attributes[j]);
 
-            //Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into account.
+            // Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into account.
             if (values) {
               if (values.length > 1) {
-                //Create a copy.
+                // Create a copy.
                 newItem[attributes[j]] = values.slice(0, values.length);
               } else {
                 newItem[attributes[j]] = values[0];
@@ -129,7 +129,7 @@ You do a fetch that queries for all items, then use the onBegin callback functio
 .. js ::
 
   function size(size, request) {
-    //Do whatever with the size var.
+    // Do whatever with the size var.
   }
 
   store.fetch({query: {}, onBegin: size, start: 0, count: 0});

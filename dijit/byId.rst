@@ -44,13 +44,13 @@ Example 1: Locating a widget by its ID
       dojo.require("dijit.form.TextBox");
 
       function findWidget () {
-        //Locate the JS object.
+        // Locate the JS object.
         var widget = dijit.byId("myTextBox");
         if(widget){
-          //Find my output node and write out I found my textbox and got its value.
+          // Find my output node and write out I found my textbox and got its value.
           dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "]";
         }else{
-          //Find my output node and write out I couldn't find the widget.
+          // Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
         }
       }
@@ -75,16 +75,16 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
       dojo.require("dijit.form.TextBox");
 
       function findWidgetDOM () {
-        //Locate the JS object.
+        // Locate the JS object.
         var widget = dijit.byId("myTextBox2");
         if(widget){
-          //Get its DOM node:
+          // Get its DOM node:
           var dNode = widget.domNode;
 
-          //Find my output node and write out I found my textbox and got its value + what type of DOM node is its primary node.
+          // Find my output node and write out I found my textbox and got its value + what type of DOM node is its primary node.
           dojo.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
         }else{
-          //Find my output node and write out I couldn't find the widget.
+          // Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode2").innerHTML = "Could not locate my text box widget!";
         }
       }
@@ -111,7 +111,7 @@ Example 3: Comparing dojo.byId and dijit.byId
       dojo.require("dijit.form.TextBox");
 
       function compareDojoDijitById() {
-        //Locate the JS object.
+        // Locate the JS object.
         var dibiWidget = dijit.byId("myTextBox3");
         var dobiWidget = dojo.byId("myTextBox3");
         var dibiDOM = dijit.byId("textNode3");

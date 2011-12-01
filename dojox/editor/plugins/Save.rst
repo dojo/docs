@@ -144,7 +144,7 @@ Customizing a save
              });
            }
          });
-         //Now we can parse the page since we defined our save plugin above.
+         // Now we can parse the page since we defined our save plugin above.
          dojo.parser.parse();
         });
     </script>

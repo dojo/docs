@@ -34,14 +34,14 @@ Usage
 
 .. js ::
   
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/text",function(){
-      //write your code here
+      // write your code here
   });
   
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   dojo.require("dojo.cache");
   
 
@@ -58,14 +58,14 @@ This is the usual, most common use of the dojo.cache call:
 
 .. js ::
  
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache("my.module", "template.html");
   });
   
 .. js ::
  
- //Dojo 1.7
+ // Dojo 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache("my.module", "template.html");
  
@@ -76,14 +76,14 @@ An example using the sanitize: true option:
 
 .. js ::
  
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache("my.module", "template.html", {sanitize: true});
   });
 
 .. js ::
  
- //Dojo < 1.7
+ // Dojo < 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache("my.module", "template.html");
 
@@ -94,14 +94,14 @@ Example using an object that has like the previous example, but uses an object w
 
 .. js ::
  
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/text",function(){
     var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
   });
 
 .. js ::
  
- //Dojo < 1.7
+ // Dojo < 1.7
  dojo.require("dojo.cache");
  var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
 

@@ -74,10 +74,10 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
      dojo.require("dojo.io.script");
 
       function searchGoogle() {
-        //Look up the node we'll stick the text under.
+        // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("results");
 
-        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var jsonpArgs = {
           url: "http://ajax.googleapis.com/ajax/services/search/web",
           callbackParamName: "callback",
@@ -86,7 +86,7 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
             q: "dojo toolkit"
           },
           load: function(data){
-            //Set the data from the search into the viewbox in nicely formatted JSON
+            // Set the data from the search into the viewbox in nicely formatted JSON
             targetNode.innerHTML = "<pre>" + dojo.toJson(data, true) + "</pre>";
           },
           error: function(error){

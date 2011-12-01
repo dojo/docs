@@ -81,13 +81,13 @@ Example 1: Load an ATOM Feed
       dojo.require("dojox.atom.io.model");
       dojo.require("dojox.atom.io.Connection");
 
-      //This function performs some basic dojo initialization and will do the load calling for this example
+      // This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtom () {
         var conn = new dojox.atom.io.Connection();
 
         conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
           function(feed) {
-           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+           // Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
            xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
@@ -101,7 +101,7 @@ Example 1: Load an ATOM Feed
           }
         );
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtom);
     </script>
 
@@ -132,21 +132,21 @@ Example 2: Update an entry in a Feed
       dojo.require("dojox.atom.io.model");
       dojo.require("dojox.atom.io.Connection");
 
-      //This function performs some basic dojo initialization and will do the load calling for this example
+      // This function performs some basic dojo initialization and will do the load calling for this example
       function initUpdateAtom () {
         var conn = new dojox.atom.io.Connection();
 
         conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
           function(feed) {
-           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+           // Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simplePristineAtomXml");
            xml.innerHTML = "";
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
 
-           //Now get an entry for mod.
+           // Now get an entry for mod.
            var entry = feed.getFirstEntry();
 
-           //Make this updateable by pointing it to the app test pho script so it can properly post.
+           // Make this updateable by pointing it to the app test pho script so it can properly post.
            entry.setEditHref("{{dataUrl}}dojox/atom/tests/io/app.php");
            entry.updated = new Date();
            entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
@@ -165,7 +165,7 @@ Example 2: Update an entry in a Feed
           }
         );
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initUpdateAtom );
     </script>
 

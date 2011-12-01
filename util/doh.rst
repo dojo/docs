@@ -83,7 +83,7 @@ Example Test Module: Simple test registration
 
 .. js ::
 
-  //Declare out the name of the test module to make dojo's module loader happy.
+  // Declare out the name of the test module to make dojo's module loader happy.
   dojo.provide("my.test.module");
 
   doh.register("MyTests", [
@@ -114,10 +114,10 @@ Example Test Module: Module that loads other modules
 
 .. js ::
 
-  //Declare out the name of the test module to make dojo's module loader happy.
+  // Declare out the name of the test module to make dojo's module loader happy.
   dojo.provide("my.test.module2");
 
-  //Require in the separate files that implement and register all the tests.
+  // Require in the separate files that implement and register all the tests.
   dojo.require("my.test.widget.Foo0");
   dojo.require("my.test.widget.Foo1");
   dojo.require("my.test.widget.Foo2");
@@ -147,10 +147,10 @@ What a performance fixture does is the following:
 .. js ::
 
    {
-      trial: number, //The trial number, 0 .. N trial run
-      testIterations: number, //The number of iterations the test function was run for the trial.
-      executionTime: number, //The total execution time of the trial, in milliseconds.
-      average: number //The average time a single iteration of the test function takes.  executionTime/testIterations
+      trial: number, // The trial number, 0 .. N trial run
+      testIterations: number, // The number of iterations the test function was run for the trial.
+      executionTime: number, // The total execution time of the trial, in milliseconds.
+      average: number // The average time a single iteration of the test function takes.  executionTime/testIterations
    }
 
 * At the end of all the performance tests, if the tests were run in a browser, D.O.H. then calculates statistical information off the run, such as standard deviation, max, min, median, and the like.  It also then plots each trial out using dojox.charting.DataChart (if available).  All this data is displayed on the 'Performance Tests Results' page.  To see this in action, take a look at the `dojox.gfx performance tests <http://archive.dojotoolkit.org/nightly/checkout/dojox/gfx/tests/performance/runTests.html>`_ in nightly.
@@ -268,20 +268,20 @@ Some testing will require setup and/or teardown, specific pre and post configura
   {
     name: "thingerTest",
     setUp: function(){
-      //Setup to do before runTest.
+      // Setup to do before runTest.
       this.thingerToTest = new Thinger();
       this.thingerToTest.doStuffToInit();
     },
     runTest: function(){
-      //Our test function to run.
+      // Our test function to run.
       doh.assertEqual("blah", this.thingerToTest.blahProp);
       doh.assertFalse(this.thingerToTest.falseProp);
       // ...
     },
     tearDown: function(){
-      //cleanup to do after runTest.
+      // cleanup to do after runTest.
     },
-    timeout: 3000 //3 second timeout.
+    timeout: 3000 // 3 second timeout.
   }
 
 Test Fixture (setup, standalone, asynchronous test)
@@ -293,12 +293,12 @@ Test fixtures can also do asynchronous tests.  All that has to occur for the D.O
   {
     name: "thingerTest",
     setUp: function(){
-      //Setup to do before runTest.
+      // Setup to do before runTest.
       this.thingerToTest = new Thinger();
       this.thingerToTest.doStuffToInit();
     },
     runTest: function(){
-      //Our test function to run.
+      // Our test function to run.
       var deferred = new doh.Deferred();
       setTimeout(function(){
         try{
@@ -312,9 +312,9 @@ Test fixtures can also do asynchronous tests.  All that has to occur for the D.O
       return deferred;
     },
     tearDown: function(){
-      //cleanup to do after runTest.
+      // cleanup to do after runTest.
     },
-    timeout: 3000 //3 second timeout.
+    timeout: 3000 // 3 second timeout.
   }
 
 
@@ -328,20 +328,20 @@ Performance test fixtures are just like a regular test fixture, except that it h
 .. js ::
 
   {
-    testType: "perf", //Define this as a performance test.  Used to select the runner in D.O.H.
-    trialDuration: 100, //Define that a trial (test run) of the performance test should run minimally for 100ms (however many runs of the function this means.  It is calibrated).
-    trialIterations: 100, //Run 100 trials of the test function.
-    trialDelay: 100, //Wait 100MS between each trial to allow for GC, etc.
+    testType: "perf", // Define this as a performance test.  Used to select the runner in D.O.H.
+    trialDuration: 100, // Define that a trial (test run) of the performance test should run minimally for 100ms (however many runs of the function this means.  It is calibrated).
+    trialIterations: 100, // Run 100 trials of the test function.
+    trialDelay: 100, // Wait 100MS between each trial to allow for GC, etc.
     name: "thingerPerformanceTest",
     setUp: function(){
-      //Setup to do before the trial runs of runTest.
+      // Setup to do before the trial runs of runTest.
     },
     runTest: function(){
-      //Our test function to do performance profiling.
+      // Our test function to do performance profiling.
       myModule.doSomePerformanceRelatedThing();
     },
     tearDown: function(){
-      //cleanup to do after all the trials.
+      // cleanup to do after all the trials.
     }
   }
 
@@ -355,16 +355,16 @@ Async performance test fixtures are just like synchronous performance test fixtu
 .. js ::
 
   {
-    testType: "perf", //Define this as a performance test.  Used to select the runner in D.O.H.
-    trialDuration: 100, //Define that a trial (test run) of the performance test should run minimally for 100ms (however many runs of the function this means.  It is calibrated).
-    trialIterations: 100, //Run 100 trials of the test function.
-    trialDelay: 100, //Wait 100MS between each trial to allow for GC, etc.
+    testType: "perf", // Define this as a performance test.  Used to select the runner in D.O.H.
+    trialDuration: 100, // Define that a trial (test run) of the performance test should run minimally for 100ms (however many runs of the function this means.  It is calibrated).
+    trialIterations: 100, // Run 100 trials of the test function.
+    trialDelay: 100, // Wait 100MS between each trial to allow for GC, etc.
     name: "thingerAsyncPerfTest",
     setUp: function(){
-      //Setup to do before runTest.
+      // Setup to do before runTest.
     },
     runTest: function(){
-      //Our test function to run.
+      // Our test function to run.
       var deferred = new doh.Deferred();
       setTimeout(function(){
           myModule.doSomePerformanceRelatedThing();
@@ -377,7 +377,7 @@ Async performance test fixtures are just like synchronous performance test fixtu
     },
     tearDown: function(){
     },
-    timeout: 3000 //3 second timeout.
+    timeout: 3000 // 3 second timeout.
   }
 
 

@@ -120,16 +120,16 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
    <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
    <script type="text/javascript">
       dojo.ready(function() {
-         //Define the request, saying that 20 records should be fetched at a time,
-         //and to start at record 0
+         // Define the request, saying that 20 records should be fetched at a time,
+         // and to start at record 0
       var request= {count:20, start:0};
 
-      //Tell the widget to request the "large" parameter, as different
-      //stores may use different parameter names
+      // Tell the widget to request the "large" parameter, as different
+      // stores may use different parameter names
       var itemNameMap = {imageLargeAttr: "large"};
 
-      //Call the setDataStore function, passing it the data store, the request object,
-      //and the name map.
+      // Call the setDataStore function, passing it the data store, the request object,
+      // and the name map.
       dijit.byId('slideshow1').setDataStore(imageItemStore, request, itemNameMap);
    });
 
@@ -188,7 +188,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 			
 		dojo.ready(function(){
 			
-			//Initialize the store with a FlickrRestStore
+			// Initialize the store with a FlickrRestStore
 			var flickrRestStore = new dojox.data.FlickrRestStore();
 			var req = {
 				query: {

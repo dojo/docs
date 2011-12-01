@@ -78,7 +78,7 @@ All the persistable grid features will be stored in cookie by default. If you'd 
     structure:"mystructure",
     plugins:{
       cookie: {
-        cellWidth: false  //Do not persist column width.
+        cellWidth: false  // Do not persist column width.
       }
     }
   });
@@ -126,10 +126,10 @@ Here is some examples on how to use the API:
 
 .. js ::
     
-  //Do not persist column width
+  // Do not persist column width
   grid.cookieEnabled("cellWidth", false);
   
-  //Check whether cookie is used in this grid
+  // Check whether cookie is used in this grid
   var isEnabled = grid.cookieEnabled();
 
 See Also

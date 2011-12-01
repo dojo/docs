@@ -233,14 +233,14 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
       dojo.require("dojox.data.AppStore");
       dojo.require("dijit.form.Button");
 
-      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      // This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple () {
         var appStore = new dojox.data.AppStore({url:"{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"});
 
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
           function gotEntries(items, request) {
             if(items){
-              //Got the items, let's attach in the results (title, date updated).
+              // Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
@@ -257,7 +257,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
           appStore.fetch({onComplete: gotEntries});
         });
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple);
     </script>
 
@@ -280,14 +280,14 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
       dojo.require("dojox.data.AppStore");
       dojo.require("dijit.form.Button");
 
-      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      // This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple2 () {
         var appStore = new dojox.data.AppStore({url:"{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"});
 
         dojo.connect(dijit.byId("simpleFetchButton2"), "onClick", function() {
           function gotEntries(items, request) {
             if(items){
-              //Got the items, let's attach in the results (title, date updated).
+              // Got the items, let's attach in the results (title, date updated).
               var list = dojo.byId("list2");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
@@ -304,7 +304,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
           appStore.fetch({query: {title: "*Editable*"}, onComplete: gotEntries});
         });
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple2);
     </script>
 
@@ -402,11 +402,11 @@ Example 4: Write example: Changing Title and showing in DataGrid
              function gotAllItems(items, request){
                if(items){
                  var i;
-                 //Change all the titles.
+                 // Change all the titles.
                  for(i = 0; i < items.length; i++){
                    appStore2.setValue(items[i], "title", "This is new title #" + i);
                  }
-                 //Requery to reload grid.  This is needed as this store does not currently implement the notification API.
+                 // Requery to reload grid.  This is needed as this store does not currently implement the notification API.
                  thegrid.setQuery({});
                }
              }

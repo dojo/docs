@@ -38,16 +38,16 @@ Dojo 1.7+ (AMD)
     var formId = "myId";
     var formQuery = domForm.toQuery(formId);
 
-    //Assuming a form of:
+    // Assuming a form of:
     // <form id="myform">
     //    <input type="text" name="field1" value="value1">
     //    <input type="text" name="field2" value="value2">
     //    <input type="button" name="someButton" value="someValue">
     // </form>
     //
-    //The structure of formJson will be:
+    // The structure of formJson will be:
     // field1=value1&field2=value2
-    //Note the button was skipped.
+    // Note the button was skipped.
   });
 
 
@@ -59,16 +59,16 @@ Dojo < 1.7
   var formId = "myId";
   var formQuery = dojo.formToQuery(formId);
 
-  //Assuming a form of:
+  // Assuming a form of:
   // <form id="myform">
   //    <input type="text" name="field1" value="value1">
   //    <input type="text" name="field2" value="value2">
   //    <input type="button" name="someButton" value="someValue">
   // </form>
   //
-  //The structure of formJson will be:
+  // The structure of formJson will be:
   // field1=value1&field2=value2
-  //Note the button was skipped.
+  // Note the button was skipped.
 
 
 Examples
@@ -87,7 +87,7 @@ Example 1: Using formToQuery to create an query string version of a form
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formQuery = dojo.formToQuery("myform");
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("formQueryString").innerHTML = formQuery;
         });
       }
@@ -121,7 +121,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
         dojo.connect(dijit.byId("convertFormDijits"), "onClick", function(){
            var formQuery=  dojo.formToQuery("myform2");
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("formQuery2").innerHTML = formQuery;
         });
       }

@@ -52,7 +52,7 @@ This example shows, how to use dojo.connect to connect the datastores onNew func
     alert("New item was created: [" + label + "]");
   };
   dojo.connect(store, "onNew", alertOnNew);
-  //An alert should be thrown when this completes
+  // An alert should be thrown when this completes
 
   var newItem = store.newItem({foo:"bar"});
 
@@ -69,7 +69,7 @@ This example shows, how to override the onNew function of a datastore with a cus
     var label = this.getLabel(item);
     alert("New item was created: [" + label + "]");
   };
-  //An alert should be thrown when this completes
+  // An alert should be thrown when this completes
   var newItem = store.newItem({foo:"bar"});
 
 

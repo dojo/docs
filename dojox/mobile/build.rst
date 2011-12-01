@@ -25,4 +25,4 @@ If you are using dojo-1.6 or older, before running the build batch file, you may
   -  while((matches = buildUtil.baseMappingRegExp.exec(tempContents))){
   +  while(false&&(matches = buildUtil.baseMappingRegExp.exec(tempContents))){
 	 var baseResource = buildUtil.baseMappings[matches[1]];
-	 //Make sure we do not add the dependency to its source resource.
+	 // Make sure we do not add the dependency to its source resource.

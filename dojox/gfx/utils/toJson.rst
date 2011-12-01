@@ -45,7 +45,7 @@ Programmatic example
    
       function init(){
  
-         //Create our surface.
+         // Create our surface.
          var node = dojo.byId("gfxObject");
          var drawing = dojox.gfx.createSurface(node, 200, 200);
          drawing.createRect({
@@ -57,11 +57,11 @@ Programmatic example
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
             var json = dojox.gfx.utils.toJson(drawing);
-            //Try to make it pretty-print
+            // Try to make it pretty-print
             dojo.byId("json").innerHTML = dojo.toJson(dojo.fromJson(json), true);
          });
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init);
     </script>
 

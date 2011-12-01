@@ -43,7 +43,7 @@ Resize an existing Dialog:
 .. html ::
 
     dlg.set("dimensions", [400, 200]); // [width, height]
-    dlg.layout(); //starts the resize
+    dlg.layout(); // starts the resize
 
 
 Notes

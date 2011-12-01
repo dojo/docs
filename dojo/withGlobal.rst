@@ -34,7 +34,7 @@ Dojo 1.7 (AMD)
      var ifr = dom.byId("someIframe");
      var newGlobal = ifr.contentWindow; // get the global scope object from the frame
      
-     //Call a callback with different 'global' values and context.
+     // Call a callback with different 'global' values and context.
      win.withGlobal(newGlobal,  function() {
        console.log("The current dojo.global is: ", win.global);
        console.log("The current dojo.doc is: ", win.doc);
@@ -53,7 +53,7 @@ Dojo < 1.7
    var ifr = dojo.byId("someIframe");
    var newGlobal = ifr.contentWindow; // get the global scope object from the frame
 
-   //Call a callback with different 'global' values and context.
+   // Call a callback with different 'global' values and context.
    dojo.withGlobal(newGlobal,  function() {
      console.log("The current dojo.global is: ", dojo.global);
      console.log("The current dojo.doc is: ", dojo.doc);

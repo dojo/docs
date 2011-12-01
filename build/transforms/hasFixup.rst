@@ -77,7 +77,7 @@ Has feature values are used to transform two kinds of expressions:
 .. js ::
 
   // adding a has test
-  has.add("feature-value", //other stuff
+  has.add("feature-value", // other stuff
 
   // resolving a has feature value
   has("feature-value")

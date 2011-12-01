@@ -204,15 +204,15 @@ For example:
 
 .. js ::
     
-  //Export the whole grid to CSV format, with separator of ":".
+  // Export the whole grid to CSV format, with separator of ":".
   grid.exportGrid("csv", {writerArgs: {separator:":"}}, function(str){
     // do something interesting with str
   });
-  //Export the first 10 rows to CSV format.
+  // Export the first 10 rows to CSV format.
   grid.exportGrid("csv", {fetchArgs: {start: 0, count: 10}}, function(str){
     // do something interesting with str
   });
-  //Only export the selected rows to CSV format.
+  // Only export the selected rows to CSV format.
   var str = grid.exportSelected("csv", {separator:":"});
 
 Create Export Writer -- A Framework for Grid Export
@@ -415,51 +415,51 @@ Here is the structure of the implementation file of the CSVWriter, demonstrating
 
 .. js ::
   
-  //First declare your class.
+  // First declare your class.
   dojo.provide("dojox.grid.enhanced.plugins.exporter.CSVWriter");
 
-  //Require the base class.
+  // Require the base class.
   dojo.require("dojox.grid.enhanced.plugins.exporter._ExportWriter");
 
-  //Register the CSV format name.
+  // Register the CSV format name.
   dojox.grid.enhanced.plugins.Exporter.registerWriter("csv",
     "dojox.grid.enhanced.plugins.exporter.CSVWriter");
 
-  //Extend from the base class.
+  // Extend from the base class.
   dojo.declare("dojox.grid.enhanced.plugins.exporter.CSVWriter",
   dojox.grid.enhanced.plugins.exporter._ExportWriter,{
-    //Separator is the only argument.
+    // Separator is the only argument.
     _separator: ',',
 
     constructor: function(/* object? */writerArgs){
-      //Handle arguments (separator in this case), and do some initialization here.
+      // Handle arguments (separator in this case), and do some initialization here.
     },
 
     _formatCSVCell: function(/* string */cellValue){
-      //Format cell value to follow CSV standard.
-      //See: http://en.wikipedia.org/wiki/Comma-separated_values
+      // Format cell value to follow CSV standard.
+      // See: http://en.wikipedia.org/wiki/Comma-separated_values
     },
 
     beforeContentRow: function(/* object */argObj){
-      //Overridden from _ExportWriter
-      //For each column,
+      // Overridden from _ExportWriter
+      // For each column,
       //	get the cell data of the current row, and format them with _formatCSVCell
-      //Join these cell data together with the separator.
-      //Save the result.
-      //return false, because we don't need to go into the row. Thus improves the performance.
+      // Join these cell data together with the separator.
+      // Save the result.
+      // return false, because we don't need to go into the row. Thus improves the performance.
     },
 
     handleCell: function(/* object */arg_obj){
       // summary:
       //		Overridden from _ExportWriter
-      //Check if arg_obj.isHeader is true. We have already handled content cells in the above function,
-      //here we only need to deal with the header cells.
-      //You can get the header name by arg_obj.cell.name.
+      // Check if arg_obj.isHeader is true. We have already handled content cells in the above function,
+      // here we only need to deal with the header cells.
+      // You can get the header name by arg_obj.cell.name.
     },
 
     toString: function(){
-      //Overridden from _ExportWriter
-      //Join all the saved result together and return.
+      // Overridden from _ExportWriter
+      // Join all the saved result together and return.
     }
   });
 

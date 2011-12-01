@@ -30,8 +30,8 @@ To use it, you just have to override default behavior by yours.
         rowSelector:'20px'"
         style="width: 400px; height: 200px;">
         <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
-	     //The row object has 4 parameters, and you can set two others to provide your own styling
-	     //These parameters are :
+	     // The row object has 4 parameters, and you can set two others to provide your own styling
+	     // These parameters are :
 	     //	-- index : the row index
 	     //	-- selected: whether or not the row is selected
 	     //	-- over : whether or not the mouse is over this row

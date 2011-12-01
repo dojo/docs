@@ -57,7 +57,7 @@ Listing the attributes of an item
 .. js ::
 
   var store = new some.Datastore();
-  ...//Assume that someItem is an item we got from a load.
+  ... // Assume that someItem is an item we got from a load.
   var attributes = store.getAttributes(someItem);
   for(var i = 0; i < attributes.length; i++){
     console.log("Item has attribute: " + attributes[i]);
@@ -70,7 +70,7 @@ Testing an item for an attribute
 
   var store = new some.Datastore();
   ...
-  //Assume that someItem is an item we got from a load.
+  // Assume that someItem is an item we got from a load.
   if(store.hasAttribute(someItem, "foo")){
     console.log("item has attribute foo.");
   }else{
@@ -84,7 +84,7 @@ Getting the label of an item
 
   var store = new some.Datastore();
   ...
-  //Assume that someItem is an item we got from a load.
+  // Assume that someItem is an item we got from a load.
   var label = store.getLabel(someItem);
   console.log("item has label: " + label);
 

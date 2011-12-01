@@ -45,9 +45,9 @@ First, instantiate the Map component, and associate it with the DOM Node contain
      
  require(["dojox/geo/charting/Map",function(){
 	dojo.ready(function(){
-		//create new map
+		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		//add outside map marker file
+		// add outside map marker file
 		map.setMarkerData("../resources/markers/USStates.json");
 	});
  });
@@ -76,12 +76,12 @@ Here, we extend the previous code sample to illustrate how to connect to data :
  
  require(["dojox/geo/charting/Map","dojo.data.ItemFileWriteStore",function(){
 	dojo.ready(function(){
-		//create new map
+		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		//add outside map marker file
+		// add outside map marker file
 		map.setMarkerData("../resources/markers/USStates.json");
 				
-		//instantiate a dataStore
+		// instantiate a dataStore
 		var dataStore = new dojo.data.ItemFileWriteStore({
 			url: "datastore/dataStore.json"
 		});
@@ -139,9 +139,9 @@ Here, we instantiate the appropriate interactors and connect them to the Map com
 	  "dojox.geo.charting.MouseInteractionSupport",
 	  "dojox.geo.charting.KeyboardInteractionSupport",function(){
 	dojo.ready(function(){
-		//create new map
+		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		//add outside map marker file
+		// add outside map marker file
 		map.setMarkerData("../resources/markers/USStates.json");
 				
 		// install mouse navigation

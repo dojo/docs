@@ -38,10 +38,10 @@ Example 1:  Fade in a dom node
     <script>
       dojo.require("dijit.form.Button");
       function basicFadeinSetup(){
-         //Style the dom node to opacity 0;
+         // Style the dom node to opacity 0;
          dojo.style("basicFadeNode", "opacity", "0");
 
-         //Function linked to the button to trigger the fade.
+         // Function linked to the button to trigger the fade.
          function fadeIt() {
             dojo.style("basicFadeNode", "opacity", "0");
             var fadeArgs = {
@@ -70,10 +70,10 @@ Example 2:  Fade in a dom node with a custom duration
     <script>
       dojo.require("dijit.form.Button");
       function basicFadeinSetup2(){
-         //Style the dom node to opacity 0;
+         // Style the dom node to opacity 0;
          dojo.style("basicFadeNode2", "opacity", "0");
 
-         //Function linked to the button to trigger the fade.
+         // Function linked to the button to trigger the fade.
          function fadeIt() {
             dojo.style("basicFadeNode2", "opacity", "0");
             var fadeArgs = {
@@ -105,10 +105,10 @@ Example 3:  Fade in a dom node with an easing function
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx.easing");
       function basicFadeinSetup3(){
-         //Style the dom node to opacity 0;
+         // Style the dom node to opacity 0;
          dojo.style("basicFadeNode3", "opacity", "0");
 
-         //Function linked to the button to trigger the fade.
+         // Function linked to the button to trigger the fade.
          function fadeIt() {
             dojo.style("basicFadeNode3", "opacity", "0");
             var fadeArgs = {

@@ -325,17 +325,17 @@ Here is an example on how to set dndConfig:
     
   GridDnD: {
     dndConfig: {
-      //Configure in a hierarchical manner.
+      // Configure in a hierarchical manner.
       row: {
-        out: false, //This rule has lower priority, it'll be overwritten.
+        out: false, // This rule has lower priority, it'll be overwritten.
         within: false
       },
-      //Both orders are correct.
+      // Both orders are correct.
       out: {
-        row: true, //This rule has higher priority, it'll be valid.
+        row: true, // This rule has higher priority, it'll be valid.
         cell: false
       },
-      //Set a whole group of situations
+      // Set a whole group of situations
       in: false
     }
   }

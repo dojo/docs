@@ -29,7 +29,7 @@ Dojo 1.7 (AMD)
  
  <script type="text/javascript">
    require(["dojo/_base/window"], function(win) {
-      var currentBody = win.body();  //You can also use: dojo.body() to get the current document body.
+      var currentBody = win.body();  // You can also use: dojo.body() to get the current document body.
       var newText = win.doc.createTextNode("Some text");
       currentBody.appendChild(newText);
    });
@@ -42,7 +42,7 @@ Dojo < 1.7
 .. js ::
  
  <script type="text/javascript">
-   var currentBody = dojo.doc.body;  //You can also use: dojo.body() to get the current document body.
+   var currentBody = dojo.doc.body;  // You can also use: dojo.body() to get the current document body.
    var newText = dojo.doc.createTextNode("Some text");
    currentBody.appendChild(newText);
  </script>

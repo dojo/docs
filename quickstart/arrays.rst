@@ -185,9 +185,9 @@ To break the forEach-Loop you should use dojo.some
 			count++;
 		});
 		
-		alert("iterated "+count+" entries (dojo.forEach)"); //will show "iterated 10 entries"
+		alert("iterated "+count+" entries (dojo.forEach)"); // will show "iterated 10 entries"
 		
-		//let's only iterate the first 4 entries of myArray
+		// let's only iterate the first 4 entries of myArray
 		count = 0;
 		dojo.some(myArray, function(entry){
 
@@ -199,7 +199,7 @@ To break the forEach-Loop you should use dojo.some
 			count++;
 		});
 		
-		alert("iterated "+count+" entries (dojo.some)"); //will show "iterated 4 entries"
+		alert("iterated "+count+" entries (dojo.some)"); // will show "iterated 4 entries"
 	}
     </script>
 

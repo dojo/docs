@@ -41,14 +41,14 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 
 .. js ::
 
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/parser",function(parser){
-       //write your code here
+       // write your code here
   });
   
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   dojo.require("dojo.parser");
 
 ``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit).
@@ -66,14 +66,14 @@ To execute the parser manually, simply call the function ``parse``:
 
 .. js ::
 
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require("dojo/parser",function(parser){
        parser.parse();
   });
 
 .. js ::
   
-  //Dojo < 1.7
+  // Dojo < 1.7
   dojo.parser.parse();
 
 To run the parser when your page loads, add a data-dojo-config="parseOnLoad: true" to your dojo script tag:
@@ -420,7 +420,7 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
 
 .. js ::
 
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require(["dojo/_base/xhr","dojo/parser","dojo/dom"], function(xhr,parser,dom){
 	  xhr.get({
 		url: "widgets.html",
@@ -433,7 +433,7 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
   
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   dojo.xhrGet({
     url: "widgets.html",
     load: function(data){
@@ -446,7 +446,7 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 .. js ::
 
-  //Dojo 1.7 (AMD)
+  // Dojo 1.7 (AMD)
   require(["dojo/parser","dojo/ready"],function(parser,ready){
        ready(function(){
           // do something();
@@ -456,7 +456,7 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   dojo.require("dojo.parser");
   dojo.ready(function(){
        // do something();

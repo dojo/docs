@@ -45,7 +45,7 @@ Example 1:  Slide a dom node right 200 pixels.
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicSlideToSetup(){
-         //Function linked to the button to trigger the slide.
+         // Function linked to the button to trigger the slide.
          function slideIt(amt) {
             var slideArgs = {
               node: "basicNode",

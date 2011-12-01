@@ -40,7 +40,7 @@ Pseudocode Example 1:  Creating and calling a deferred.
     return deferred;
   });
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   var deferred = new dojo.Deferred();
   setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
   return deferred;
@@ -52,10 +52,10 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
   
   var deferred = someAsyncFunction();
   deferred.then(function(value){
-      //Do something on success.
+      // Do something on success.
     },
     function(error){
-      //Do something on failure.
+      // Do something on failure.
   });
 
 dojo.when
@@ -81,12 +81,12 @@ Example 1: Creating a deferred and adding callbacks
       dojo.require("dijit.form.Button");
 
       function createDeferred(){
-          //Create a deferred and set it to fire in 1 second.
+          // Create a deferred and set it to fire in 1 second.
           var deferred = new dojo.Deferred();
           setTimeout(function(){ deferred.resolve({called: true});}, 1000);
           dojo.byId("response").innerHTML = "Created a deferred.";
  
-          //Add a callback that changes the displayed message after it fires.
+          // Add a callback that changes the displayed message after it fires.
           deferred.then(function(){
             dojo.byId("response").innerHTML = "Deferred has fired.";
           });

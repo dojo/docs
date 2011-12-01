@@ -28,7 +28,7 @@ Examples
 
 .. js ::
    
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     <script type="text/javascript">
     require(["dojo/html","dojo/ready"], function(html,ready) {
         ready(function(){
@@ -47,7 +47,7 @@ Examples
 
 .. js ::
 
-    //Dojo < 1.7
+    // Dojo < 1.7
     <script type="text/javascript">
     dojo.require("dojo.html");
     dojo.addOnLoad(function() {
@@ -66,7 +66,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 .. html ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     <button id="setbtn">Click to set content</button>
     <table id="mytable">
       <tr><td>Nothing here yet</td></tr>
@@ -100,7 +100,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 .. html ::
 
-    //Dojo < 1.7
+    // Dojo < 1.7
     <button id="setbtn">Click to set content</button>
     <table id="mytable">
       <tr><td>Nothing here yet</td></tr>

@@ -58,7 +58,7 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
    }
  });
    
- //Dojo < 1.7
+ // Dojo < 1.7
  var widgetType = "form.Button";
  var myNamespace = docs;
 

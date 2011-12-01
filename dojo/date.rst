@@ -35,14 +35,14 @@ Dojo 1.7 (AMD)
   require(["dojo/date"], function(date){
      var date1 = new Date(2000, 2, 1);
      date1.toUTCString(); // note that even toUTCString output is implementation-dependent
-     //output: "Wed, 01 Mar 2000 05:00:00 GMT"
+     // output: "Wed, 01 Mar 2000 05:00:00 GMT"
 
      var date2 = date.add(date1, "month", -1);
      date2.toUTCString();
-     //output: "Tue, 01 Feb 2000 05:00:00 GMT"
+     // output: "Tue, 01 Feb 2000 05:00:00 GMT"
 
      date.difference(date1, date2, "day");
-     //output: -29
+     // output: -29
   });
 
 Dojo < 1.7
@@ -54,14 +54,14 @@ Dojo < 1.7
     
     var date1 = new Date(2000, 2, 1);
     date1.toUTCString(); // note that even toUTCString output is implementation-dependent
-    //output: "Wed, 01 Mar 2000 05:00:00 GMT"
+    // output: "Wed, 01 Mar 2000 05:00:00 GMT"
 
     var date2 = dojo.date.add(date1, "month", -1);
     date2.toUTCString();
-    //output: "Tue, 01 Feb 2000 05:00:00 GMT"
+    // output: "Tue, 01 Feb 2000 05:00:00 GMT"
 
     dojo.date.difference(date1, date2, "day");
-    //output: -29
+    // output: -29
 
 See Also
 ========

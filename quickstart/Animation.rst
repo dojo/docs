@@ -21,11 +21,11 @@ of all animations is `play`:
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx"], function(fx) {
     var animation = fx.fadeOut({ // returns a dojo._Animation
         // this is an Object containing properties used to define the
-        //animation
+        // animation
         node:"aStringId"
     });
     // call play() on the returned _Animation instance:
@@ -35,7 +35,7 @@ of all animations is `play`:
 
 .. js ::
     	
-    //Dojo < 1.7
+    // Dojo < 1.7
     var animation = dojo.fadeOut({ // returns a dojo._Animation
         // this is an Object containing properties used to define the animation
         node:"aStringId"
@@ -47,14 +47,14 @@ You can simplify the above code using chaining, if you don't need to keep the an
 
 .. js ::
  
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/_base/fx"], function(fx) {
         fx.fadeOut({ node:"someId" }).play();
     });
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.fadeOut({ node:"someId" }).play();
 
 All animations in Dojo (with the exception of :ref:`dojo.anim <dojo/anim>`) use predefined animation properties on 
@@ -64,7 +64,7 @@ you already have:
 
 .. js ::
 
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/dom","dojo/_base/fx"], function(dom,fx) {
         var target = dom.byId("someId").parentNode;
         fx.fadeOut({ node: target }).play();
@@ -72,7 +72,7 @@ you already have:
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     var target = dojo.byId("someId").parentNode;
     dojo.fadeOut({ node: target }).play();
 
@@ -174,7 +174,7 @@ above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the inst
 
 .. js ::
   
-    //Dojo 1.7 (AMD)
+    // Dojo 1.7 (AMD)
     require(["dojo/_base/fx","dojo/_base/connect"], function(fx,connect) {
         var animation = fx.fadeOut({ node:"someNodebyId" });
         connect.connect(animation, "onEnd", function(){
@@ -185,7 +185,7 @@ above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the inst
 
 .. js ::
     	
-    //Dojo < 1.7
+    // Dojo < 1.7
     var animation = dojo.fadeOut({ node:"someNodebyId" });
     dojo.connect(animation, "onEnd", function(){
         // connect externally to this animation instance's onEnd function
@@ -236,7 +236,7 @@ To fade out a node, alter it's contents, and fade it back in:
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/dom"], function(fx,dom) {
 	var node = dom.byId("someId");
 	fx.fadeOut({
@@ -252,7 +252,7 @@ To fade out a node, alter it's contents, and fade it back in:
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     var node = dojo.byId("someId");
     dojo.fadeOut({
         node: node,
@@ -282,9 +282,9 @@ To use these extended functions, you must include the `dojo.fx` module:
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"],function(fx,coreFx){
-    //write your code here
+    // write your code here
  });
  
 The animation methods used to declared in `dojo.fx` namespace should be called separately in dojo 1.7.
@@ -316,7 +316,7 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.require("dojo.fx");
 
 The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`.
@@ -333,7 +333,7 @@ To fade out two nodes simultaneously:
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready) {
 	ready(function(){
 		// create two animations
@@ -347,7 +347,7 @@ To fade out two nodes simultaneously:
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.require("dojo.fx");
     dojo.addOnLoad(function(){
         // create two animations
@@ -363,7 +363,7 @@ Javascript is rather flexible about return values and where functions are called
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready) {
 	ready(function(){
 		// create and play two fade animations at the same moment
@@ -376,7 +376,7 @@ Javascript is rather flexible about return values and where functions are called
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.require("dojo.fx");
     dojo.addOnLoad(function(){
         // create and play two fade animations at the same moment
@@ -390,7 +390,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/_base/connect","dojo/fx"], function(fx,connect,coreFx) {
 	var anim = coreFx.combine([
 		fx.fadeOut({ node: "id", duration:1000 }),
@@ -403,7 +403,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     var anim = dojo.fx.combine([
         dojo.fadeOut({ node: "id", duration:1000 }),
         dojo.fadeIn({ node: "otherId", duration:2000 })
@@ -416,7 +416,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx) {
 	var animA = fx.fadeOut({
 		node:"someNode",
@@ -431,7 +431,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     var animA = dojo.fadeOut({
         node:"someNode",
         duration: 500,
@@ -446,7 +446,7 @@ Chain works in much the same way - though plays each animation one right after t
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx) {
 	coreFx.chain([
 		fx.fadeIn({ node: "foo" }),
@@ -456,7 +456,7 @@ Chain works in much the same way - though plays each animation one right after t
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     dojo.fx.chain([
         dojo.fadeIn({ node: "foo" }),
         dojo.fadeIn({ node: "bar" })
@@ -468,7 +468,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
 
 .. js ::
   
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  require(["dojo/_base/array","dojo/_base/fx","dojo/fx"], function(array,fx,coreFx) {
 	// create the array
 	var anims = [];
@@ -485,7 +485,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
 
 .. js ::
     
-    //Dojo < 1.7
+    // Dojo < 1.7
     // create the array
     var anims = [];
     // simulated condition, an array of id's:

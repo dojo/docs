@@ -215,7 +215,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and the following sample usage c
 
    .. js ::
       
-      //listen to 'touchstart' on touch devices and 'mousedown' on desktops
+      // listen to 'touchstart' on touch devices and 'mousedown' on desktops
       dojo.touch.press(node, function(e){});
 
 Please refer to :ref:`dojo/touch doc <dojo/touch>` for more details.

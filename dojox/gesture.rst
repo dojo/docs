@@ -142,10 +142,10 @@ The above parameters are supposed to be only changed seldomly with the following
   <script type="text/javascript">
         define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         
-            //create a new one with a different holdThreshold parameter
+            // create a new one with a different holdThreshold parameter
             var myTap = new dojox.gesture.tap.Tap({holdThreshold: 300});
             
-            //use it
+            // use it
             on(node, myTap, function(e){});
             on(node, myTap.hold, function(e){});
             on(node, myTap.doubletap, function(e){});

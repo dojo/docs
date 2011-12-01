@@ -261,17 +261,17 @@ Sample code:  Detecting child items
  
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
-  //Load completed function for walking across the attributes and child items of the
-  //located items.
+  // Load completed function for walking across the attributes and child items of the
+  // located items.
   var gotContinents = function(items, request){
-    //Cycle over all the matches.
+    // Cycle over all the matches.
     for(var i = 0; i < items.length; i++){
       var item = items[i];
 
-      //Cycle over all the attributes.
+      // Cycle over all the attributes.
       var attributes = store.getAttributes(item);
       for (var j = 0; j < attributes.length; j++){
-        //Assume all attributes are multi-valued and loop over the values ...
+        // Assume all attributes are multi-valued and loop over the values ...
         var values = store.getValues(item, attributes[j]);
         for(var k = 0; k < values.length; k++){
           var value = values[k];
@@ -285,7 +285,7 @@ Sample code:  Detecting child items
       }
     }
   }
-  //Call the fetch of the toplevel continent items.
+  // Call the fetch of the toplevel continent items.
   store.fetch({query: {type: "continent"}, onComplete: gotContinents});
 
 Lazy-Loading
@@ -300,27 +300,27 @@ Sample code:  Detecting child items and lazy-loading items on demand
  
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
-  //Load completed function for walking across the attributes and child items of the
-  //located items.
+  // Load completed function for walking across the attributes and child items of the
+  // located items.
   var gotContinents = function(items, request){
-    //Cycle over all the matches.
+    // Cycle over all the matches.
     for(var i = 0; i < items.length; i++){
       var item = items[i];
 
-      //Cycle over all the attributes.
+      // Cycle over all the attributes.
       var attributes = store.getAttributes(item);
       for (var j = 0; j < attributes.length; j++){
-        //Assume all attributes are multi-valued and loop over the values ...
+        // Assume all attributes are multi-valued and loop over the values ...
         var values = store.getValues(item, attributes[j]);
         for(var k = 0; k < values.length; k++){
           var value = values[k];
                 
           if(store.isItem(value)){
-            //Test to see if the items data is fully loaded or needs to be demand-loaded in (the item in question is just a stub).
+            // Test to see if the items data is fully loaded or needs to be demand-loaded in (the item in question is just a stub).
             if(store.isItemLoaded(value)){
               console.log("Located a child item with label: [" + store.getLabel(value) + "]");
             }else{
-              //Asynchronously load in the child item using the stub data to get the real data.
+              // Asynchronously load in the child item using the stub data to get the real data.
               var lazyLoadComplete = function(item){
                 console.log("Lazy-Load of item complete.  Located child item with label: [" + store.getLabel(item) + "]");
               }
@@ -333,7 +333,7 @@ Sample code:  Detecting child items and lazy-loading items on demand
       }
     }
   }
-  //Call the fetch of the toplevel continent items.
+  // Call the fetch of the toplevel continent items.
   store.fetch({query: {type: "continent"}, onComplete: gotContinents});
 
 Excellent, that looks simple too.  Something to be aware of is that not all datastores support hierarchical data formats and not all support lazy-loading.  For those stores, no attribute value should return true for *isItem()* and *isItemLoaded(item)* always returns true.  So, code that is hierarchical and lazy-load aware will still work fine with those stores.

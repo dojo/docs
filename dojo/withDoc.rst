@@ -30,7 +30,7 @@ Dojo 1.7 (AMD)
    require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query) {
      var iframeDoc = dom.byId("someFrameId").contentWindow.document;
 
-     //Call a callback with different 'global' values and context.
+     // Call a callback with different 'global' values and context.
      win.withDoc(iframeDoc, function() {
        var someDiv = query("someDiv");
        style.set(someDiv, "color", "red");
@@ -47,7 +47,7 @@ Dojo < 1.7
  <script type="text/javascript">
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
-   //Call a callback with different 'global' values and context.
+   // Call a callback with different 'global' values and context.
    dojo.withDoc(iframeDoc, function() {
      var someDiv = dojo.query("someDiv");
      dojo.style(someDiv, "color", "red");
@@ -72,7 +72,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
         var button = dijit.byId("changeStyles");
         dojo.connect(button, "onClick", function() {
          
-         //Apply styles to the document contained by the iframe
+         // Apply styles to the document contained by the iframe
          var frameDoc = dojo.byId("simpleFrame").contentWindow.document;
          dojo.withDoc(frameDoc, function() {
            var tds= dojo.query("td");

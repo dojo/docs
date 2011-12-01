@@ -67,7 +67,7 @@ Example
       var drawing;
 
       dojo.ready(function(){
-         //Create our surface.
+         // Create our surface.
          var node = dojo.byId("gfxObject");
          drawing = dojox.gfx.createSurface(node, 200, 200);
          drawing.createRect({

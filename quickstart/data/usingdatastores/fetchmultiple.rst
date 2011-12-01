@@ -32,7 +32,7 @@ The following example code fragment returns all items:
 .. js ::
 
   var pantryStore = new dojo.data.ItemFileReadStore({ url: "pantry_items.json" });
-  //Define a callback that fires when all the items are returned.
+  // Define a callback that fires when all the items are returned.
   var gotList = function(items, request){
     var itemsList = "";
     dojo.forEach(items, function(i){
@@ -43,7 +43,7 @@ The following example code fragment returns all items:
   var gotError = function(error, request){
     alert("The request to the store failed. " +  error);
   }
-  //Invoke the search
+  // Invoke the search
   pantryStore.fetch({
     onComplete: gotList,
     onError: gotError
@@ -80,14 +80,14 @@ Loading all items through callbacks
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization.  In this case it connects the button
+        // onClick to a function which invokes the fetch().  The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list");
                if (list) {
@@ -97,7 +97,7 @@ Loading all items through callbacks
                }
              }
   
-             //Callback for processing a returned list of items.
+             // Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
                if (list) {
@@ -110,19 +110,19 @@ Loading all items through callbacks
                }
              }
             
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
              }
              
-             //Fetch the data.
+             // Fetch the data.
              foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button, "onClick", getAllItems);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
     </script>
 
@@ -162,7 +162,7 @@ The following code fragment loads all items and streams them back into the page:
     body.appendChild(document.createTextNode("COMPLETED"));
   }
   
-  //Define the callback that appends a textnode into the document each time an item is returned.
+  // Define the callback that appends a textnode into the document each time an item is returned.
   gotItem = function(item, request){
     body.appendChild(
       document.createTextNode(
@@ -172,12 +172,12 @@ The following code fragment loads all items and streams them back into the page:
     body.appendChild(document.createElement("br"));
   }
   
-  //Define a simple error handler.
+  // Define a simple error handler.
   var gotError = function(error, request){
     console.debug("The request to the store failed. " +  error);
   }
   
-  //Invoke the search
+  // Invoke the search
   pantryStore.fetch({
     onComplete: done,
     onItem: gotItem,
@@ -214,14 +214,14 @@ Loading all items through the onItem callback
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization.  In this case it connects the button
+        // onClick to a function which invokes the fetch().  The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init2 () {
-           //Function to perform a fetch on the datastore when a button is clicked
+           // Function to perform a fetch on the datastore when a button is clicked
            function getStreamingItems () {
 
-             //Callback to perform an action when the data items are starting to be returned:
+             // Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list2");
                if (list) {
@@ -231,7 +231,7 @@ Loading all items through the onItem callback
                }
              }
   
-             //Callback for processing a single returned item.
+             // Callback for processing a single returned item.
              function gotItem(item, request) {
                var list = dojo.byId("list2");
                if (list) {
@@ -242,19 +242,19 @@ Loading all items through the onItem callback
                }
              }
             
-             //Callback for if the lookup fails.
+             // Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
              }
              
-             //Fetch the data.
+             // Fetch the data.
              foodStore2.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
            }
 
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(button2, "onClick", getStreamingItems);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init2);
     </script>
 

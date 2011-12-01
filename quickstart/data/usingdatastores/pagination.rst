@@ -44,7 +44,7 @@ The following example code fragment shows the general flow with Pagination:
   var request = null;
   var outOfItems = false;
 
-  //Define a function that will be connected to a 'next' button
+  // Define a function that will be connected to a 'next' button
   var onNext = function(){
     if(!outOfItems){
     request.start += pageSize;
@@ -52,10 +52,10 @@ The following example code fragment shows the general flow with Pagination:
     }
   };
     
-  //Connect this function to the onClick event of the 'next' button
-  //Done through dojo.connect() generally.
+  // Connect this function to the onClick event of the 'next' button
+  // Done through dojo.connect() generally.
 
-  //Define a function will be connected to a 'previous' button.
+  // Define a function will be connected to a 'previous' button.
   var onPrevious = function(){
     if (request.start > 0){
       request.start -= pageSize;
@@ -64,22 +64,22 @@ The following example code fragment shows the general flow with Pagination:
   };
 
 
-  //Connect this function to the onClick event of the 'previous' button
-  //Done through dojo.connect() generally.
+  // Connect this function to the onClick event of the 'previous' button
+  // Done through dojo.connect() generally.
 
-  //Define how we handle the items when we get it
+  // Define how we handle the items when we get it
   var itemsLoaded = function(items, request){
     if (items.length < pageSize){
-      //We have found all the items and are at the end of our set.
+      // We have found all the items and are at the end of our set.
       outOfItems = true;
     }else{
       outOfItems = false;
     }
-    //Display the items in a table through the use of store.getValue() on the items and attributes desired.
+    // Display the items in a table through the use of store.getValue() on the items and attributes desired.
     ...
   }
 
-  //Do the initial request. Without a query, it should just select all items. The start and count limit the number returned.
+  // Do the initial request. Without a query, it should just select all items. The start and count limit the number returned.
   request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
 
 
@@ -112,18 +112,18 @@ Paging over items
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization. In this case it connects the button
-        //onClick to a function which invokes *fetch()*es. The fetch function queries for only a subset
-        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes *fetch()*es. The fetch function queries for only a subset
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
 
-           //These are some lage controls used to know when to disable forward/previous buttons.
-           var totalItems = 0;   //How many total items should we expect.
-           var request = null;   //Our request object we're using to hold the positions and the callbacks.
-           var currentStart = 0; //Current index into the pages.
-           currentCount = 2;     //Current size of the page.
+           // These are some lage controls used to know when to disable forward/previous buttons.
+           var totalItems = 0;   // How many total items should we expect.
+           var request = null;   // Our request object we're using to hold the positions and the callbacks.
+           var currentStart = 0; // Current index into the pages.
+           currentCount = 2;     // Current size of the page.
 
-           //Callback to perform an action when the data items are starting to be returned:
+           // Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
              var list = dojo.byId("list");
              if (list) {
@@ -131,13 +131,13 @@ Paging over items
                  list.removeChild(list.firstChild);
                }
              }
-             //Save off the total size. We need it to determine when to ignore the buttons.
+             // Save off the total size. We need it to determine when to ignore the buttons.
              totalItems = size;
            }
   
-           //Callback for processing a returned list of items.
+           // Callback for processing a returned list of items.
            function gotItems(items, request) {
-             //Save off the current page info being displayed.
+             // Save off the current page info being displayed.
              currentStart = request.start;
              currentCount = request.count;
              var list = dojo.byId("list");
@@ -151,37 +151,37 @@ Paging over items
              }
            }
             
-           //Callback for if the lookup fails.
+           // Callback for if the lookup fails.
            function fetchFailed(error, request) {
              alert("lookup failed.");
            }
            
-           //Button event to page forward.
+           // Button event to page forward.
            function nextPage() {
-             //If we haven't hit the end of the pages yet, allow for requesting another.
+             // If we haven't hit the end of the pages yet, allow for requesting another.
              if ((currentStart + currentCount) < totalItems ) {
                request.start += currentCount;
                request = foodStore.fetch(request);
              }
            }
 
-           //Button event to page back;
+           // Button event to page back;
            function previousPage() {
-             //If we haven't hit the beginning of the pages yet, allow for another shift backwards.
+             // If we haven't hit the beginning of the pages yet, allow for another shift backwards.
              if (currentStart > 0) {
                request.start -= currentCount;
                request = foodStore.fetch(request);
              }
            }
 
-           //Fetch the data.
+           // Fetch the data.
            request = foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed, start: currentStart, count: currentCount });
 
-           //Link the click event of the button to driving the fetch.
+           // Link the click event of the button to driving the fetch.
            dojo.connect(forward, "onClick", nextPage);
            dojo.connect(back, "onClick", previousPage);
         }
-        //Set the init function to run when dojo loading and page parsing has completed.
+        // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
     </script>
 

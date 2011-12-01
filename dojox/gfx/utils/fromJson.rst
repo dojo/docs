@@ -46,7 +46,7 @@ Programmatic example
    
       function init(){
  
-         //Create our surface.
+         // Create our surface.
          var drawing = dojox.gfx.createSurface(dojo.byId("gfxObject"), 200, 200);
          var copy = dojox.gfx.createSurface(dojo.byId("gfxObject2"), 200, 200);
          drawing.createRect({
@@ -61,7 +61,7 @@ Programmatic example
             dojox.gfx.utils.fromJson(copy, json);
          });
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init);
     </script>
 

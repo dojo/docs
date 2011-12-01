@@ -30,13 +30,13 @@
 		var url = document.location.href;
 		var hashIndex = url.indexOf("#");
 		
-		//Extract fragment identifier
+		// Extract fragment identifier
 		if(hashIndex != -1){
 			frag = url.substring(hashIndex + 1, url.length);
 			url = url.substring(0, hashIndex);
 		}
 
-		//Extract querystring
+		// Extract querystring
 		var parts = url.split("?");
 		if(parts.length == 2){
 			query = parts[1];
@@ -57,10 +57,10 @@
 		}
 
 		if(hasParentDojo){
-			//Set the page title so IE history shows up with a somewhat correct name.
+			// Set the page title so IE history shows up with a somewhat correct name.
 			document.title = window.parent.document.title;
 			
-			//Notify parent that we are loaded.
+			// Notify parent that we are loaded.
 			var pdj = window.parent.dojo;
 			if(pdj["back"]){
 				pdj.back._iframeLoaded(null, window.location);

@@ -40,7 +40,7 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
          dojo.style("basicNode1", "opacity", "0");
          dojo.style("basicNode2", "height", "0px");
 
-         //Function linked to the button to trigger the fade.
+         // Function linked to the button to trigger the fade.
          function chainIt() {
             dojo.style("basicNode1", "opacity", "0");
             dojo.style("basicNode2", "height", "0px");

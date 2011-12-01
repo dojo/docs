@@ -34,11 +34,11 @@ Dojo 1.7+ (AMD)
       foo: ["bar", "baz"],
       bit: "byte"
     };
-    //Assemble the new uri with its query string attached.
+    // Assemble the new uri with its query string attached.
     var queryStr = ioQuery.objectToQuery(query);
     uri = uri + "?" + queryStr;
 
-    //The uri should look like:
+    // The uri should look like:
     // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
   });
  
@@ -54,11 +54,11 @@ Dojo < 1.7
     bit: "byte"
   };
 
-  //Assemble the new uri with its query string attached.
+  // Assemble the new uri with its query string attached.
   var queryStr = dojo.objectToQuery(query);
   uri = uri + "?" + queryStr;
 
-  //The uri should look like:
+  // The uri should look like:
   // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
 
 
@@ -82,11 +82,11 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
               bit: "byte"
            };
 
-           //Assemble the new URI.
+           // Assemble the new URI.
            var queryStr = dojo.objectToQuery(query);
            uri = uri + "?" + queryStr;
 
-           //Attach it into the dom
+           // Attach it into the dom
            dojo.byId("query").innerHTML = uri;
         });
       }

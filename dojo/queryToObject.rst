@@ -33,7 +33,7 @@ Dojo 1.7+ (AMD)
     var query = uri.substring(uri.indexOf("?") + 1, uri.length);
     var queryObject = ioQuery.queryToObject(query);
 
-    //The structure of queryObject will be:
+    // The structure of queryObject will be:
     // {
     //   foo: ["bar", "bar2],
     //   bit: "byte"
@@ -50,7 +50,7 @@ Dojo < 1.7
   var query = uri.substring(uri.indexOf("?") + 1, uri.length);
   var queryObject = dojo.queryToObject(query);
 
-  //The structure of queryObject will be:
+  // The structure of queryObject will be:
   // {
   //   foo: ["bar", "bar2],
   //   bit: "byte"
@@ -73,11 +73,11 @@ Example 1: Using queryToObject to create a JavaScript form of a query
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 
-           //Isolate the query portion of the URI and convert it.
+           // Isolate the query portion of the URI and convert it.
            var query = uri.substring(uri.indexOf("?") + 1, uri.length);
            query = dojo.queryToObject(query);
 
-           //Attach it into the don as pretty-printed text.
+           // Attach it into the don as pretty-printed text.
            dojo.byId("query").innerHTML = dojo.toJson(query, true);
         });
       }
@@ -106,15 +106,15 @@ Example 2: Using queryToObject to alter query strings
         dojo.connect(dijit.byId("alterQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 
-           //Isolate the query portion of the URI and convert it.
+           // Isolate the query portion of the URI and convert it.
            var query = uri.substring(uri.indexOf("?") + 1, uri.length);
            query = dojo.queryToObject(query);
 
-           //let's make some changes.
+           // let's make some changes.
            query.foo = "alteredFoo";
            query.newParam = "I'm new!";
 
-           //Write the new URI out.
+           // Write the new URI out.
            dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1) + dojo.objectToQuery(query);
         });
       }

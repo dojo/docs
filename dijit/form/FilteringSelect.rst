@@ -476,7 +476,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 	myLabelFunc = function (item, store){
 		var label=store.getValue(item, 'name');
 		// DEMO: uncomment to chop off a character
-		//label=label.substr(0, label.length-1);
+		// label=label.substr(0, label.length-1);
 		// DEMO: uncomment to set to lower case
 		label = label.toLowerCase();
 		return label;

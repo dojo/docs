@@ -147,37 +147,37 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 			{ field: "id", datatype:"number"},
 			{ field: "Genre", datatype:"string"},
 			{ field: "Artist", datatype:"string",
-				//Declare that we need the ComboBox for suggestions (autoComplete by default)
+				// Declare that we need the ComboBox for suggestions (autoComplete by default)
 				autoComplete: true
 			},
 			{ field: "Album", datatype:"string",
-				//Declare that we need the ComboBox for suggestions
+				// Declare that we need the ComboBox for suggestions
 				autoComplete: true,
-				//Configure the ComboBox, so that it does not auto-complete our input
+				// Configure the ComboBox, so that it does not auto-complete our input
 				dataTypeArgs: {
 					autoComplete: false
 				}
 			},
 			{ field: "Name", datatype:"string",
-				//Declare that we do not need the following conditions for this column
+				// Declare that we do not need the following conditions for this column
 				disabledConditions: ["contains", "notcontains"]
 			},
 			{ field: "Track", datatype:"number"},
 			{ field: "Download Date", datatype:"date",
-				//Declare how the data in store should be parsed to a Date object.
+				// Declare how the data in store should be parsed to a Date object.
 				dataTypeArgs: {
 					datePattern: "yyyy/M/d"
 				}
 			},
 			{ field: "Last Played", datatype:"time",
-				//Declare how the data in store should be parsed to a Date object.
+				// Declare how the data in store should be parsed to a Date object.
 				dataTypeArgs: {
 					timePattern: "HH:mm:ss"
 				}
 			}
 		];
 
-		//In case you've close the filter bar, here's a way to bring it up.
+		// In case you've close the filter bar, here's a way to bring it up.
 		function showFilterBar(){
 			dijit.byId('grid').showFilterBar(true);
 		}
@@ -192,11 +192,11 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 				structure: layout,
 				plugins: {
 					filter: {
-						//Show the closeFilterbarButton at the filter bar
+						// Show the closeFilterbarButton at the filter bar
 						closeFilterbarButton: true,
-						//Set the maximum rule count to 5
+						// Set the maximum rule count to 5
 						ruleCount: 5,
-						//Set the name of the items
+						// Set the name of the items
 						itemsName: "songs"
 					}
 				}
@@ -304,7 +304,7 @@ For example:
       {field: "Name", datatype: "string", autoComplete: true },
       {field: "Age", datatype: "number" },
       {field: "Register Date", datatype: "date" },
-      {field: "dummy", filterable: false}, //set this column to be not filterable
+      {field: "dummy", filterable: false}, // set this column to be not filterable
       {field: "Register Time", datatype: "time", disabledConditions: ["startsWith", "notStartsWith"]}
     ]
   }];
@@ -472,11 +472,11 @@ For example:
     }
   });
   var setupFilter = function(commands, request){
-    //the commands object here is the same as the POSTed commands object for stateful server, see below.
+    // the commands object here is the same as the POSTed commands object for stateful server, see below.
     if(commands.filter && commands.enable){
-      //some filter is defined and valid. You can modify the request object here.
+      // some filter is defined and valid. You can modify the request object here.
     }else{
-      //no filter is valid.
+      // no filter is valid.
     }
   };
 
@@ -565,37 +565,37 @@ The data of the "Field Name" column, whose data type is string, equals to "some 
 .. js ::
   
   {
-    //op: String
-    //The name of an operator or a data type. Currently supported operators are:
+    // op: String
+    // The name of an operator or a data type. Currently supported operators are:
     //  and | or | not | all | any | equal | less | lessEqual | larger | largerEqual | contains | startsWith | endsWith
-    //Currently supported datatypes are:
+    // Currently supported datatypes are:
     //  string | number | date | time
     op: "equal",
     
-    //data: Array | string | number
-    //The data of the corresponding "op". If "op" is actually an operator, this field must be an array,
-    //which contains a list of deeper level filter expressions.
+    // data: Array | string | number
+    // The data of the corresponding "op". If "op" is actually an operator, this field must be an array,
+    // which contains a list of deeper level filter expressions.
     data: [
       {
         op: "string",
         
-        //data: Array | string | number
-        //If "op" is a datatype, and there is no "isCol" field, this "data" field is a value of this type.
+        // data: Array | string | number
+        // If "op" is a datatype, and there is no "isCol" field, this "data" field is a value of this type.
         data: "some message"
       },
       {
         op: "string",
         
-        //isCol: Boolean
-        //If this field exists and is, or can be converted to, true,
-        //then this expression represents a column in the store,
-        //and the corresponding "data" field represents the field name of this column.
+        // isCol: Boolean
+        // If this field exists and is, or can be converted to, true,
+        // then this expression represents a column in the store,
+        // and the corresponding "data" field represents the field name of this column.
         isCol: true,
         
-        //data: Array | string | number
-        //If "op" is a datatype, and the property "isCol" is true,
-        //this "data" field represents the field name of a column in the data store,
-        //so the server implementer can get the value of this field, and transform it to the specified datatype.
+        // data: Array | string | number
+        // If "op" is a datatype, and the property "isCol" is true,
+        // this "data" field represents the field name of a column in the data store,
+        // so the server implementer can get the value of this field, and transform it to the specified datatype.
         data: "Field Name"
       }
     ]

@@ -91,7 +91,7 @@ Here is some examples on how to use this API:
 
 .. js ::
     
-  //Search on some specific columns.
+  // Search on some specific columns.
   grid.searchRow({
     "Name":    /^[Jj]ohn/,
     "School":    "Ari*",
@@ -100,7 +100,7 @@ Here is some examples on how to use this API:
     /* Do something interesting here... */
   });
 
-  //Search the whole grid.
+  // Search the whole grid.
   grid.searchRow(/^[Jj]ohn/, function(rowIndex, item){
     /* Do something interesting here... */
   });

@@ -91,20 +91,20 @@ Example 1: Programmatic instantiation and querying through OpenSearch
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
 
-      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      // This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple () {
         var openSearchStore = new dojox.data.OpenSearchStore({url:"{{dataUrl}}dojox/data/demos/openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"});
 
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
           function gotResults(items, request) {
             if(items){
-              //Got the items, let's attach in the search results.
+              // Got the items, let's attach in the search results.
               var list = dojo.byId("list");
               list.innerHTML = "";
               for(i = 0; i < items.length; i++){
                 var e = items[i];
 
-                //Build some divs to contain and style the contents a bit...
+                // Build some divs to contain and style the contents a bit...
                 var content = dojo.doc.createElement("div");
                 var cDiv = dojo.doc.createElement("div");
                 var tDiv = dojo.doc.createElement("div");
@@ -113,13 +113,13 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 cDiv.appendChild(tDiv);
                 cDiv.appendChild(content);
 
-                //Put a border around the content container.
+                // Put a border around the content container.
                 dojo.style(cDiv, "borderStyle", "solid");
                 dojo.style(cDiv, "borderWidth", "1px");
                 dojo.style(cDiv, "borderColor", "darkgreen");
                 dojo.style(cDiv, "width", "100%");
                 
-                //Style a 'title bar'.
+                // Style a 'title bar'.
                 dojo.style(tDiv, "backgroundColor", "darkgreen");
                 dojo.style(tDiv, "color", "white");
                 dojo.style(tDiv, "width", "100%");
@@ -137,7 +137,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
           openSearchStore.fetch({query: {searchTerms: dijit.byId("searchBox").attr("value")}, onComplete: gotResults, onError: err});
         });
       }
-      //Set the init function to run when dojo loading and page parsing has completed.
+      // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple);
     </script>
 

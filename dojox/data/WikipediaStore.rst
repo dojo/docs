@@ -100,9 +100,9 @@ Simple Demo usage of WikipediaStore
             title: article
             },
             onItem: function(item, req){
-              //We're loading all the content into an iFrame.  This is for two reasons:
-              //One is security.  No rogue script in the content will affect anything outside of the iframe
-              //Second is that it keeps docs.dojocampus.org CSS from altering the default view of the data.
+              // We're loading all the content into an iFrame.  This is for two reasons:
+              // One is security.  No rogue script in the content will affect anything outside of the iframe
+              // Second is that it keeps docs.dojocampus.org CSS from altering the default view of the data.
               var title = store.getValue(item, "title");
               var text = store.getValue(item, "text")["*"];
               var wikiOut = dojo.byId("wikipediaContent");

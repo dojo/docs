@@ -71,7 +71,7 @@ If you pass byId a domNode reference, the same node is returned:
       console.log(node == other);
   });
 
-  //dojo < 1.7
+  // dojo < 1.7
   var node = dojo.byId("someNode");
   var other = dojo.byId(node);
   console.log(node == other);
@@ -93,7 +93,7 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
     }
   });
 
-  //dojo < 1.7
+  // dojo < 1.7
   var node = dojo.byId("fooBar");
   if(node){
     node.innerHTML = "I was found!";
@@ -113,7 +113,7 @@ Most (if not all) functions in Dojo accept either a string or DomNode as a param
   });
   
 
-  //dojo < 1.7
+  // dojo < 1.7
   dojo.style(dojo.byId("foo"), "opacity", 0.5);
   // is identical to:
   dojo.style("foo", "opacity", 0.5);

@@ -22,7 +22,7 @@ Usage
 
 .. js ::
 
- //Dojo 1.7 (AMD)
+ // Dojo 1.7 (AMD)
  // Load the window-related functions:
  require(["dojo/window"], function(win) {
       // Get the viewport-size of the document:
@@ -33,7 +33,7 @@ Usage
 
 .. js ::
 
-  //Dojo < 1.7
+  // Dojo < 1.7
   // Load the window-related functions:
   dojo.require("dojo.window");
 
