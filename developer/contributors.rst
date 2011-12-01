@@ -54,7 +54,7 @@ Individuals who have signed Dojo CLAs
 * Bhatia, Naresh
 * Bing, Dong
 * Bittinger, Nathan
-* Bodzak,Lee
+* Bodzak, Lee
 * Bolter, David
 * Bond-Caran, Jonathan
 * Bond, Edward
@@ -635,7 +635,7 @@ Corporations or Organizations with a CCLA on file
 * GCGF
 * Global Media Systems
 * GreenPlum
-* IBM:Adam Peller, Becky Gibson, David Boloker, William Keese, Christopher Mitchell, Douglas Hays, Jared Jurkiewicz,William Higgins,Richard Backhouse
+* IBM: Adam Peller, Becky Gibson, David Boloker, William Keese, Christopher Mitchell, Douglas Hays, Jared Jurkiewicz, William Higgins, Richard Backhouse
 * Indico Group
 * Laszlo Systems, Inc.
 * Leorent, GmbH: Michael Rasmussen
