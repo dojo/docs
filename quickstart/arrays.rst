@@ -176,7 +176,7 @@ To break the forEach-Loop you should use dojo.some
 	dojo.require("dijit.form.Button");
 
 	function arrayLoopTest(){
-		var myArray = [0,1,2,3,4,5,6,7,8,9];
+		var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 		var count;
 		
 		// let's iterate ALL entries of myArray

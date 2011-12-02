@@ -98,7 +98,7 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
       dom.byId("isAtLeast" + who + version).innerHTML = answer;
     }
 
-    arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n){
+    arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"], function(n){
       dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
     });
     makeAtLeastAnswer("ie", 7);

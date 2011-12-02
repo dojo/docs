@@ -101,7 +101,15 @@ Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I ju
   firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', foo));
 
 
-In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node), the name of the function that should trigger my function's call (in this case, the "onclick" event), and the name of my function. Note that I keep a reference to the connection (called a handle) by setting firstLinkConnections[0] to the return value of ``dojo.connect``. This will allow me to disconnect the listener later, if I desire. Now, when a user clicks "Dojo," a message appears in the log Because my function is global in scope, I can pass it directly to connect. The following, however, are equivalent:
+In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node),
+the name of the function that should trigger my function's call (in this case, the "onclick" event),
+and the name of my function.
+Note that I keep a reference to the connection (called a handle) by setting firstLinkConnections[0] to the return value
+of ``dojo.connect``.
+This will allow me to disconnect the listener later, if I desire.
+Now, when a user clicks "Dojo", a message appears in the log.
+Because my function is global in scope, I can pass it directly to connect.
+The following, however, are equivalent:
 
 .. js ::
 
@@ -239,7 +247,7 @@ Connecting functions to one another is even simpler than connecting them to DOM 
   objectConnections = [];
   objectConnections[0] = dojo.connect(someObject, "baz", anotherObject, "afterBaz");
 
-In the above code, the first argument is the context of "baz," the second argument is the event (in this case, when baz fires), the third argument is the context of your listener function, and the fourth argument is the listener function itself. Connecting two global functions is even easier:
+In the above code, the first argument is the context of "baz", the second argument is the event (in this case, when baz fires), the third argument is the context of your listener function, and the fourth argument is the listener function itself. Connecting two global functions is even easier:
 
 .. js ::
 

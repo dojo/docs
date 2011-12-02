@@ -67,7 +67,7 @@ In this example, we locate the same node found by ``dojo.byId`` before, but usin
   dojo.ready(function(){
 
       // find a node byId, change the id, and set the color red
-      dojo.query("#someId").attr("id","newId").style("color","red");
+      dojo.query("#someId").attr("id", "newId").style("color", "red");
 
       // find a node byId, change the id, and set the color red
       var n = dojo.byId("someId");

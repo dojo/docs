@@ -193,7 +193,7 @@ Where as the simple mouseMove needs to know ahead of time where to move on the p
         },
         runTest:function(){
                 var d=new doh.Deferred();
-                doh.robot.mouseMoveAt(document.getElementById('textbox'),500);
+                doh.robot.mouseMoveAt(document.getElementById('textbox'), 500);
                 doh.robot.mouseClick({left:true}, 500);
                 doh.robot.typeKeys(" again", 500, 2500);
                 doh.robot.sequence(function(){
@@ -337,8 +337,8 @@ Notice that there is no robot code in the page that the robot is testing. Now he
                                         },
                                         runTest: function(){
                                                 // assert onChange not fired
-                                                doh.is("not fired yet!",dojo.byId('oc1').value);
-                                                doh.is(1,spin1.smallDelta);
+                                                doh.is("not fired yet!", dojo.byId('oc1').value);
+                                                doh.is(1, spin1.smallDelta);
                                                 var s=": 900\n"
                                                 +"integerspinner1: 900\n"
                                                 +": not fired yet!\n"
@@ -357,25 +357,25 @@ Notice that there is no robot code in the page that the robot is testing. Now he
                                         runTest: function(){
                                                 // assert invalid works
                                                 var d=new doh.Deferred();
-                                                doh.robot.mouseMoveAt(spin1.focusNode,500);
-                                                doh.robot.mouseClick({left:true},500);
+                                                doh.robot.mouseMoveAt(spin1.focusNode, 500);
+                                                doh.robot.mouseClick({left:true}, 500);
                                                 doh.robot.sequence(function(){
                                                         spin1.focusNode.value="";
-                                                },500);
-                                                doh.robot.typeKeys("0.5",500,300);
+                                                }, 500);
+                                                doh.robot.typeKeys("0.5", 500, 300);
                                                 doh.robot.sequence(function(){
                                                         try{
-                                                                doh.is(false,spin1.isValid());
+                                                                doh.is(false, spin1.isValid());
                                                                 d.resolve(true);
                                                         }catch(e){
                                                                 d.reject(e);
                                                         }
-                                                },500);
+                                                }, 500);
                                                 return d;
                                         },
 
                                         tearDown:function(){
-                                                spin1.set('value',1);
+                                                spin1.set('value', 1);
                                         }
                                 });
                                 // ... some more tests

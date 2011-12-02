@@ -65,7 +65,7 @@ you already have:
 .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/dom","dojo/_base/fx"], function(dom,fx){
+    require(["dojo/dom", "dojo/_base/fx"], function(dom, fx){
         var target = dom.byId("someId").parentNode;
         fx.fadeOut({ node: target }).play();
     });
@@ -175,7 +175,7 @@ above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the inst
 .. js ::
   
     // Dojo 1.7 (AMD)
-    require(["dojo/_base/fx","dojo/_base/connect"], function(fx,connect){
+    require(["dojo/_base/fx", "dojo/_base/connect"], function(fx, connect){
         var animation = fx.fadeOut({ node:"someNodebyId" });
         connect.connect(animation, "onEnd", function(){
             // connect externally to this animation instance's onEnd function
@@ -237,7 +237,7 @@ To fade out a node, alter it's contents, and fade it back in:
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/dom"], function(fx,dom){
+ require(["dojo/_base/fx", "dojo/dom"], function(fx, dom){
 	var node = dom.byId("someId");
 	fx.fadeOut({
 		node: node,
@@ -283,7 +283,7 @@ To use these extended functions, you must include the `dojo.fx` module:
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/fx"],function(fx,coreFx){
+ require(["dojo/_base/fx", "dojo/fx"], function(fx, coreFx){
     // write your code here
  });
  
@@ -292,22 +292,22 @@ The animation methods used to declared in `dojo.fx` namespace should be called s
 +-------------------------------+--------------------------------------------------------------------------------------------+
 +**Method**                     |**Usage**                                                                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| fadeIn                        |require(["**dojo/_base/fx**"],function(fx){                                                 |
+| fadeIn                        |require(["**dojo/_base/fx**"], function(fx){                                                |
 |                               |fx.fadeIn("SomeNode");});                                                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| fadeOut                       |require(["**dojo/_base/fx**"],function(fx){                                                 |
+| fadeOut                       |require(["**dojo/_base/fx**"], function(fx){                                                |
 |                               |fx.fadeIn("SomeNode");});                                                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| combine                       |require(["**dojo/fx**"],function(coreFx){                                                   |
-|                               |coreFx.combine("anim1","anim2").play();});                                                  |
+| combine                       |require(["**dojo/fx**"], function(coreFx){                                                  |
+|                               |coreFx.combine("anim1", "anim2").play();});                                                 |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| wipeIn                        |require(["**dojo/fx**"],function(coreFx){                                                   |
+| wipeIn                        |require(["**dojo/fx**"], function(coreFx){                                                  |
 |                               |coreFx.wipeIn(node:"someId").play();});                                                     |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| wipeOut                       |require(["**dojo/fx**"],function(coreFx){                                                   |
+| wipeOut                       |require(["**dojo/fx**"], function(coreFx){                                                  |
 |                               |coreFx.wipeOut(node:"someId").play();});                                                    |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| slideTo                       |require(["**dojo/fx**"],function(coreFx){                                                   |
+| slideTo                       |require(["**dojo/fx**"], function(coreFx){                                                  |
 |                               |coreFx.slideTo({node: node, left:"40", top:"50", units:"px"}).play();});                    |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 
@@ -334,7 +334,7 @@ To fade out two nodes simultaneously:
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready){
+ require(["dojo/_base/fx", "dojo/fx", "dojo/ready"], function(fx, coreFx, ready){
 	ready(function(){
 		// create two animations
 		var anim1 = fx.fadeOut({ node: "someId" });
@@ -364,7 +364,7 @@ Javascript is rather flexible about return values and where functions are called
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/fx","dojo/ready"], function(fx,coreFx,ready){
+ require(["dojo/_base/fx", "dojo/fx", "dojo/ready"], function(fx, coreFx, ready){
 	ready(function(){
 		// create and play two fade animations at the same moment
 		coreFx.combine([
@@ -391,7 +391,7 @@ The same rules apply to a combined animation as do a normal animation, though wi
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/_base/connect","dojo/fx"], function(fx,connect,coreFx){
+ require(["dojo/_base/fx", "dojo/_base/connect", "dojo/fx"], function(fx, connect, coreFx){
 	var anim = coreFx.combine([
 		fx.fadeOut({ node: "id", duration:1000 }),
 		fx.fadeIn({ node: "otherId", duration:2000 })
@@ -417,7 +417,7 @@ Alternately, you can mix event handlers into your individual animations passed t
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx){
+ require(["dojo/_base/fx", "dojo/fx"], function(fx, coreFx){
 	var animA = fx.fadeOut({
 		node:"someNode",
 		duration: 500,
@@ -447,7 +447,7 @@ Chain works in much the same way - though plays each animation one right after t
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/fx","dojo/fx"], function(fx,coreFx){
+ require(["dojo/_base/fx", "dojo/fx"], function(fx, coreFx){
 	coreFx.chain([
 		fx.fadeIn({ node: "foo" }),
 		fx.fadeIn({ node: "bar" })
@@ -469,7 +469,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
 .. js ::
   
  // Dojo 1.7 (AMD)
- require(["dojo/_base/array","dojo/_base/fx","dojo/fx"], function(array,fx,coreFx){
+ require(["dojo/_base/array", "dojo/_base/fx", "dojo/fx"], function(array, fx, coreFx){
 	// create the array
 	var anims = [];
 	// simulated condition, an array of id's:

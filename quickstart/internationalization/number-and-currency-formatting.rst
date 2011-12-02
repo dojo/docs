@@ -26,7 +26,7 @@ For example, look at the following date formatted using the default locale for t
    // to bootstrap the environment with support for an extra locale
    dojo.require("dojo.date.locale");
 
-   var d = new Date(2006,9,29,12,30);
+   var d = new Date(2006, 9, 29, 12, 30);
    // to format a date, simply pass the date to the format function
    dojo.date.locale.format(d);
    // => "10/29/06 12:30 PM"

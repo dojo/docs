@@ -30,7 +30,7 @@ Desktop
 
 Mobile (dojox/mobile)
 
-  * iOS 4.x,5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
+  * iOS 4.x, 5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2, 2.3, 3.1
   * Blackberry 6
   * Mobile compatibility on desktop browsers: IE 8-9, Firefox 3.6-7, Safari 5.0-5.1, Chrome 13 and later
@@ -184,7 +184,7 @@ An example of ``type="dojo/watch"`` (building on ``dojo/on``):
 
        <button data-dojo-type="dijit.form.Button">Click Me!
          <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
-           dijit.byId("textBox1").set("value","New Value!");
+           dijit.byId("textBox1").set("value", "New Value!");
          </script>
        </button>
        <div data-dojo-type="dijit.form.TextBox" id="textBox1"

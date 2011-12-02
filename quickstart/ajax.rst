@@ -95,7 +95,7 @@ Dojo 1.7 (AMD)
 
 .. js ::
   
-  require(["dojo/_base/lang","dojo/_base/xhr"], function(lang, xhr){
+  require(["dojo/_base/lang", "dojo/_base/xhr"], function(lang, xhr){
       xhr.post({
          form:"someForm",
          load: function(data, ioArgs){

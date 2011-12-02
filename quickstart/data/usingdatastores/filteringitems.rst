@@ -82,7 +82,7 @@ That's great, but what if I don't care about case sensitivity?  Dojo.data also p
     ...
   });
 
-So,in general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
+So, in general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
 
 
 Flexible store syntax

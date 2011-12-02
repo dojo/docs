@@ -24,7 +24,7 @@ We'll use the programmatic method here. First we'll need a location on-disk for 
   dojo.require("dijit.form._FormWidget");
   dojo.require("dijit._Templated");
   dojo.declare("dojox.widget.FileInput",
-        [dijit.form._FormWidget,dijit._Templated],
+        [dijit.form._FormWidget, dijit._Templated],
         {
         // summary: A styled input type="file"
         //
@@ -50,7 +50,7 @@ Next we'll need a template, a label for our submit button, a label for our cance
         //      ugh, this should be pulled from this.domNode
         name: "uploadFile",
   
-        templatePath: dojo.moduleUrl("dojox.widget","FileInput/FileInput.html"),
+        templatePath: dojo.moduleUrl("dojox.widget", "FileInput/FileInput.html"),
 
 
 Also note that whenever we use template variables , it's good practice to supply a default, e.g. "Browse ..." for the label. Otherwise, if your widget user omits the label attribute, the parser will complain.
@@ -128,13 +128,15 @@ We also need to implement a simple onchange listener, like the article hints, so
 .. js ::
 
         startup: function(){
-                // summary: listen for changes on our real file input
-                this.inherited("startup",arguments);
-                this._listener = dojo.connect(this.fileInput,"onchange",this,"_matchValue");
-                this._keyListener = dojo.connect(this.fileInput,"onkeyup",this,"_matchValue");
+                // summary:
+                //     Listen for changes on our real file input
+                this.inherited(arguments);
+                this._listener = dojo.connect(this.fileInput, "onchange", this, "_matchValue");
+                this._keyListener = dojo.connect(this.fileInput, "onkeyup", this, "_matchValue");
         },
         _matchValue: function(){
-                // summary: set the content of the upper input based on the semi-hidden file input
+                // summary:
+                //     Set the content of the upper input based on the semi-hidden file input
                 this.inputNode.value = this.fileInput.value;
                 if(this.inputNode.value){
                         this.cancelNode.style.visibility = "visible";
@@ -161,15 +163,15 @@ So next, we need a reset button. Unfortunately because we're faking HTML out a b
         dojo.fadeOut({ node: this.cancelNode, duration:275 }).play();
         // Create an identical input tag
         this.fileInput = document.createElement('input');
-        this.fileInput.setAttribute("type","file");
-        this.fileInput.setAttribute("id",this.id);
-        this.fileInput.setAttribute("name",this.name);
-        dojo.addClass(this.fileInput,"dijitFileInputReal");
+        this.fileInput.setAttribute("type", "file");
+        this.fileInput.setAttribute("id", this.id);
+        this.fileInput.setAttribute("name", this.name);
+        dojo.addClass(this.fileInput, "dijitFileInputReal");
         // this.domNode is the root DOM node of the widget
         this.domNode.appendChild(this.fileInput);
         // Finally, connect the listeners to this new node.
-        this._keyListener = dojo.connect(this.fileInput,"onkeyup",this,"_matchValue");
-        this._listener = dojo.connect(this.fileInput,"onchange",this,"_matchValue");
+        this._keyListener = dojo.connect(this.fileInput, "onkeyup", this, "_matchValue");
+        this._listener = dojo.connect(this.fileInput, "onchange", this, "_matchValue");
         this.inputNode.value = "";
   }
 

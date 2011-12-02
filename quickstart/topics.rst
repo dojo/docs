@@ -32,6 +32,6 @@ The named topics can be whatever syntax you choose, it is just a string:
       console.log(message);
   });
   // publish can be an Array or Object
-  dojo.publish("my-custom-topic", ["a","b","c","d"]);
+  dojo.publish("my-custom-topic", ["a", "b", "c", "d"]);
 
 Topics are used in other places in the Dojo Toolkit. The :ref:`TabContainer <dijit/layout/TabContainer>` uses pub/sub to communicate between buttons and panes internally, and allows you to subscribe for notification, and :ref:`dojox.cometd <dojox/cometd>` uses topics to communicate across clients, for instance.
