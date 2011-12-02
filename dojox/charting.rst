@@ -276,10 +276,10 @@ And here is an example for spider chart:
     precision:		 0,
     spiderType:	 	 "polygon"
   });
-  chart.addSeries("China", {data: {"GDP": 2,"area": 6,"population": 2000,"inflation": 15,"growth": 12}}, { fill: "blue" });
-  chart.addSeries("USA", {data: {"GDP": 3,"area": 20,"population": 1500,"inflation": 10,"growth": 3}}, { fill: "green" });
+  chart.addSeries("China", {data: {"GDP": 2, "area": 6, "population": 2000, "inflation": 15, "growth": 12}}, { fill: "blue" });
+  chart.addSeries("USA", {data: {"GDP": 3, "area": 20, "population": 1500, "inflation": 10, "growth": 3}}, { fill: "green" });
   ...
-  chart.addSeries("Canada", {data: {"GDP": 1,"area": 18,"population": 300,"inflation": 3,"growth": 15}}, { fill: "purple" });
+  chart.addSeries("Canada", {data: {"GDP": 1, "area": 18, "population": 300, "inflation": 3, "growth": 15}}, { fill: "purple" });
   chart.render();
 		
   var legend = new dc.widget.SelectableLegend({chart: chart, horizontal: true}, "legend");
@@ -1146,7 +1146,7 @@ An interactive legend for all dojo charts that allows the end-user to click and 
 
 .. js ::
   
-  var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true},"selectableLegend");
+  var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true}, "selectableLegend");
 
 
 Examples
@@ -1290,15 +1290,15 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
             );
 
             var bars3d_a = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "yellow"});
-            bars3d_a.setData([1,2,3,2,1,2,3,4,5]);
+            bars3d_a.setData([1, 2, 3, 2, 1, 2, 3, 4, 5]);
             chart3d.addPlot(bars3d_a);
 
             var bars3d_b = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "red"});
-            bars3d_b.setData([2,3,4,3,2,3,4,5,5]);
+            bars3d_b.setData([2, 3, 4, 3, 2, 3, 4, 5, 5]);
             chart3d.addPlot(bars3d_b);
 
             var bars3d_c = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "blue"});
-            bars3d_c.setData([3,4,5,4,3,4,5,5,5]);
+            bars3d_c.setData([3, 4, 5, 4, 3, 4, 5, 5, 5]);
             chart3d.addPlot(bars3d_c);
 
             chart3d.generate().render();

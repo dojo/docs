@@ -44,7 +44,7 @@ You can of course convert an existing ``<ul>`` into a roller programmatically, m
     </ul>
     <script type="text/javascript">
         dojo.ready(function(){
-            new dojox.widget.Roller({},"myRoller");
+            new dojox.widget.Roller({}, "myRoller");
         });
     </script>
 
@@ -55,7 +55,7 @@ Or, create one entirely programmatically, by passing an ``items:`` Array
    var n = dojo.place("<ul></ul>", dojo.body(), "last");
    // make the roller:
    var roller = new dojox.widget.Roller({
-      items:["Item 1", "Item 2","Item 3"]
+      items:["Item 1", "Item 2", "Item 3"]
    }, n);
  
 The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to 

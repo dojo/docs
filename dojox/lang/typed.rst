@@ -55,8 +55,8 @@ Property types and method signatures for classes follows the JSON Schema (http:/
  typedInstance = new TypedClass(true); // this will run without error
  typedInstance.aString = 44; // this will throw a TypeError, only strings can be assigned to this property
  typedInstance.aString = "hi"; // this will run without error
- typedInstance.add("hi",33); // this will throw a TypeError, both parameters must be numbers
- typedInstance.add(33,22); // this will run without error
+ typedInstance.add("hi", 33); // this will throw a TypeError, both parameters must be numbers
+ typedInstance.add(33, 22); // this will run without error
 
 Note, that property type checking is not available on Internet Explorer. This intent of the type checking module is to use it for development purposes, and remove it for production use. Like Firebug this is for development, and can be useful with partial browser support.
 

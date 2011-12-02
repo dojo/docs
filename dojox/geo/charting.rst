@@ -28,7 +28,7 @@ The data series (i.e. the color scheme for different value ranges)  is also a Js
 
 Two Dijits components are provided, one acting a a widget wrapper for the Map component, the other as a legend explaining map colors.
 
-Several interactor classes can be installed on the Map component, to allow navigation - mainly zoom,pan and select - on different hardware configurations :
+Several interactor classes can be installed on the Map component, to allow navigation - mainly zoom, pan and select - on different hardware configurations :
 
 
   - mouse interactor for usual desktop use
@@ -43,7 +43,7 @@ First, instantiate the Map component, and associate it with the DOM Node contain
 
 .. js ::
      
- require(["dojox/geo/charting/Map",function(){
+ require(["dojox/geo/charting/Map", function(){
 	dojo.ready(function(){
 		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
@@ -54,14 +54,14 @@ First, instantiate the Map component, and associate it with the DOM Node contain
 
  
 The setMarkerData function is used to supply a Json file containing tooltips for map elements. For instance :
-{"AK":"Alaska","AZ":"Arizona","AR":"Arkansas"
+{"AK":"Alaska","AZ":"Arizona","AR":"Arkansas"}
 Each map element is referenced in the marker json object by its unique id (defined in the json map data, and also used in the dataStore that contains charting values).
 
 Declare the markup container node for the Map component :
 
 .. html ::
   
- <h1>Simple Maps,support zoom in and zoom out.</h1>
+ <h1>Simple Maps, support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
 
@@ -74,7 +74,7 @@ Here, we extend the previous code sample to illustrate how to connect to data :
 
 .. js ::
  
- require(["dojox/geo/charting/Map","dojo.data.ItemFileWriteStore",function(){
+ require(["dojox/geo/charting/Map", "dojo.data.ItemFileWriteStore", function(){
 	dojo.ready(function(){
 		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
@@ -137,7 +137,7 @@ Here, we instantiate the appropriate interactors and connect them to the Map com
  
  require(["dojox/geo/charting/Map",
 	  "dojox.geo.charting.MouseInteractionSupport",
-	  "dojox.geo.charting.KeyboardInteractionSupport",function(){
+	  "dojox.geo.charting.KeyboardInteractionSupport", function(){
 	dojo.ready(function(){
 		// create new map
 		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
@@ -146,7 +146,7 @@ Here, we instantiate the appropriate interactors and connect them to the Map com
 				
 		// install mouse navigation
 		var mouseInteraction =
-			new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
+			new dojox.geo.charting.MouseInteractionSupport(map, {enablePan:true, enableZoom:true});
 		mouseInteraction.connect();
 		// install keyboard navigation
 		var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});

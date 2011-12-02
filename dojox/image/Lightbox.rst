@@ -84,7 +84,7 @@ A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' 
       lb2.startup();
       setTimeout(function(){
          lb.show();
-      },2000);
+      }, 2000);
   });
 
 Here, the two images will be added in the same group, and the first image will be visible. Should you call lb2.show(), the same group of images would be displayed, though starting with the second.

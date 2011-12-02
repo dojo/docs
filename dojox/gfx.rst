@@ -965,10 +965,10 @@ Path
 
   Path supports following methods for building path segments programmatically:
 
-  moveTo(x,y)
+  moveTo(x, y)
     Starts new segment abandoning the previous segment, if any. It takes a coordinate as a parameter.
 
-  lineTo(x,y)
+  lineTo(x, y)
     Draws a straight line from the last point to the argument (coordinate).
 
   hLineTo(x)
@@ -977,22 +977,22 @@ Path
   vLineTo(y)
     Draws a straight vertical line from the last point using the argument (a number) as Y position.
 
-  curveTo(x1,y1,x2,y2,x,y)
+  curveTo(x1, y1, x2, y2, x, y)
     Draws a cubic Bézier curve from the last point using arguments (two control points, and a final coordinate).
 
-  smoothCurveTo(x2,y2,x,y)
+  smoothCurveTo(x2, y2, x, y)
     Draws a cubic Bézier curve from the last point using arguments. The difference between this method and curveTo()
     is that it accepts only one control point, which serves as the second control point. The first control is assumed
     to be a reflection of the second control point of the previous curve command.
 
-  qCurveTo(x1,y1,x,y)
+  qCurveTo(x1, y1, x, y)
     Draws a quadratic Bézier curve from the last point using arguments (a control point, and a final point).
 
-  qSmoothCurveTo(x,y)
+  qSmoothCurveTo(x, y)
     Draws a quadratic Bézier curve from the last point using arguments. The difference between this method and qCurveTo()
     is that it uses the reflected control point of the previous curve command.
 
-  arcTo(rx,ry,x_axis_rotation,large_arc_flag,sweep_flag,x,y)
+  arcTo(rx, ry, x_axis_rotation, large_arc_flag, sweep_flag, x, y)
     Draws an elliptic arc from the last point using arguments (please see the above link for details).
 
   closePath()
@@ -1017,13 +1017,13 @@ Example:
 
   .. js ::
 
-    path.lineTo(1,1,2,2,3,3)
+    path.lineTo(1, 1, 2, 2, 3, 3)
 
   is equivalent to
 
   .. js ::
 
-    path.lineTo(1,1).lineTo(2,2).lineTo(3,3).
+    path.lineTo(1, 1).lineTo(2, 2).lineTo(3, 3).
 
 A pair of coordinates can be replaced by a single coordinate object.
 

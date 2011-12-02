@@ -28,7 +28,7 @@ A JSONQuery can be executed with the following call:
 
 .. js ::
 
- results = dojox.json.query(query,object);
+ results = dojox.json.query(query, object);
 
 Where query is the JSONPath query to execute and object is the root object or array to query. You can also create a “compiled” evaluation function that can be reused for multiple evaluations by only passing a query string:
 
@@ -42,7 +42,7 @@ The evaluator function can be then be performed on a query on data by calling it
 
  results = evaluator(object);
 
-In situations where a single query may be executed multiple times, doing a single parse/compilation with dojox.json.query(query) and reusing the returned evaluation function will provide better performance. It is worth noting that dojox.json.query(query,object) is functionally equivalent to dojox.json.query(query)(object).
+In situations where a single query may be executed multiple times, doing a single parse/compilation with dojox.json.query(query) and reusing the returned evaluation function will provide better performance. It is worth noting that dojox.json.query(query, object) is functionally equivalent to dojox.json.query(query)(object).
 
 Query Syntax
 ============
@@ -52,7 +52,7 @@ JSONQuery evaluations begin with the provided object, which can referenced withi
 .. js ::
 
  data = {foo:"bar"};
- results = dojox.json.query("$.foo",data);
+ results = dojox.json.query("$.foo", data);
  results -> "bar"
 
 Query Capabilities
@@ -103,12 +103,12 @@ The following operators are new in JSONQuery:
     * $1, $2, $3... - This can be used to reference additional parameters passed to the query call. For example:
 
       results = dojox.json.query("[?firstName=$1&amp;lastName=$2]",
-      					myData,"John","Doe");
+      					myData, "John", "Doe");
 
       or it can be applied to the evaluator function:
 
       evaluator = dojox.json.query("[?firstName=$1&amp;lastName=$2]");
-      results = evaluator(myData,"John","Doe");
+      results = evaluator(myData, "John", "Doe");
 
 The following operators from JSONPath are also supported:
 

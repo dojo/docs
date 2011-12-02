@@ -18,7 +18,7 @@ Sample application configuration for dojox.app.view
 
   "home": {
     "type": "dojox.app.view",
-    "dependencies":["dojox/mobile/RoundRectList","dojox/mobile/ListItem"],
+    "dependencies":["dojox/mobile/RoundRectList", "dojox/mobile/ListItem"],
     "template": "views/simple/home.html"
   }
 

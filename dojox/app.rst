@@ -81,9 +81,9 @@ multiSceneApp.js
     path=path.join("/");
   }
   //register current application module path
-  dojo.registerModulePath("app",path);
+  dojo.registerModulePath("app", path);
   //load configuration json file
-  require(["dojo/_base/html","dojox/app/main", "dojo/text!app/config.json"],function(dojo,Application,config){
+  require(["dojo/_base/html", "dojox/app/main", "dojo/text!app/config.json"], function(dojo, Application, config){
     //startup the application
     app = Application(eval("(" + config + ")"));
   });
@@ -161,8 +161,8 @@ The actual configuration for the application is loaded by dojo/text module and i
     path.pop();
     path=path.join("/");
   }
-  dojo.registerModulePath("app",path);
-  require(["dojo","dojox/app/main", "dojo/text!app/config.json", "dojox/json/ref"],function(dojo,Application,config,ref){
+  dojo.registerModulePath("app", path);
+  require(["dojo", "dojox/app/main", "dojo/text!app/config.json", "dojox/json/ref"], function(dojo, Application, config, ref){
     app = Application(dojox.json.ref.fromJson(config));
   });
 

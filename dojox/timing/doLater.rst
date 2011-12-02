@@ -50,6 +50,6 @@ The next example shows that the first argument does not have to be a property, i
  setTimeout(function(){
      if(dojox.timing.doLater(++count>=10)){return;}
      console.log("incremented count:", count);
- },0);
+ }, 0);
  
 In this case, doLater executes ten times before the expression results in true. Anything that works in an if statement will evaluate properly. The previous example also shows that anonymous functions work perfectly well.

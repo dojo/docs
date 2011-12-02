@@ -23,7 +23,7 @@ Sample application configuration
   "views": {
     "home": {
       "type": "dojox.app.view",
-      "dependencies":["dojox/mobile/ListItem","dojox/mobile/RoundRectList","dojox/mobile/RoundRectCategory","dojox/mobile/Heading"],
+      "dependencies":["dojox/mobile/ListItem", "dojox/mobile/RoundRectList", "dojox/mobile/RoundRectCategory", "dojox/mobile/Heading"],
       "template": "views/main.html"
     },
   

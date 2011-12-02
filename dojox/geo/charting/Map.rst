@@ -30,7 +30,7 @@ A dojo widget to render map information "shapefile" data.
 
 .. html ::
   
- <h1>Simple Maps,support zoom in and zoom out.</h1>
+ <h1>Simple Maps, support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
 

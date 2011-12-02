@@ -45,15 +45,15 @@ destroys it.
   <button data-dojo-type="dijit.form.Button" id="foob">Make It
   
     <script type="dojo/method" data-dojo-event="onClick">
-       this.setAttribute("disabled",true);
-       dijit.byId("foobd").setAttribute("disabled",false);
-       new dojox.image.Magnifier({ scale:4.2, glassSize:200 },"foobar");
+       this.setAttribute("disabled", true);
+       dijit.byId("foobd").setAttribute("disabled", false);
+       new dojox.image.Magnifier({ scale:4.2, glassSize:200 }, "foobar");
     </script>
   </button>
 
   <button data-dojo-type="dijit.form.Button" id="foobd" disabled="disabled">Destroy It
     <script type="dojo/method" data-dojo-event="onClick">
-	this.setAttribute("disabled",true);
+	this.setAttribute("disabled", true);
 	dijit.byId("foobar").destroy();
 	console.log('layout changed:');
 	dijit.byId("after1")._adjustScale();

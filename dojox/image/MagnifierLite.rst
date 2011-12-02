@@ -63,17 +63,17 @@ Declarative example
                 <button data-dojo-type="dijit.form.Button" id="foob">
 			Make It
 			<script type="dojo/method" data-dojo-event="onClick">
-				this.setAttribute("disabled",true);
-				dijit.byId("foobd").setAttribute("disabled",false);
-				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar");
+				this.setAttribute("disabled", true);
+				dijit.byId("foobd").setAttribute("disabled", false);
+				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 }, "foobar");
 			</script>
 		</button>
 
 		<button data-dojo-type="dijit.form.Button" id="foobd" disabled="disabled">
 			Destroy It
 			<script type="dojo/method" data-dojo-event="onClick">
-				dijit.byId("foob").setAttribute("disabled",false);
-				this.setAttribute("disabled",true);
+				dijit.byId("foob").setAttribute("disabled", false);
+				this.setAttribute("disabled", true);
 				dijit.byId("foobar").destroy(true);
 			</script>
 		</button>

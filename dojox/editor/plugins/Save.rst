@@ -134,7 +134,7 @@ Customizing a save
           }
         });
 
-        dojo.subscribe(dijit._scopeName + ".Editor.getPlugin",null,function(o){
+        dojo.subscribe(dijit._scopeName + ".Editor.getPlugin", null, function(o){
           if(o.plugin){ return; }
           var name = o.args.name.toLowerCase();
           if(name ===  "mysave"){

@@ -73,7 +73,7 @@ The code snippet below illustrates conversion between two possible representatio
    var dateHeb = dojox.date.hebrew.locale.parse("י"ד אדר שני תשס"ט", options);
 
    // formats Hebrew date object and serialize it into a string
-   var dateHebString = dojox.date.hebrew.locale.format(dateHeb,options);
+   var dateHebString = dojox.date.hebrew.locale.format(dateHeb, options);
   </script>
 
 

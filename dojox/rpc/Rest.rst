@@ -29,8 +29,8 @@ The modifying methods can be called as sub-methods of the rest service method li
 
 .. js ::
   
-    services.myRestService.put("parameters","data to put in resource");
-    services.myRestService.post("parameters","data to post to the resource");
+    services.myRestService.put("parameters", "data to put in resource");
+    services.myRestService.post("parameters", "data to post to the resource");
     services.myRestService['delete']("parameters");
 
 
@@ -67,7 +67,7 @@ This will do a HTTP PUT to the URL "/Project/4" with the content of "new content
 .. js ::
   
     var restService = dojox.rpc.Rest("Project");
-    restService.put("4","new content");
+    restService.put("4", "new content");
 
 POST
 ----
@@ -77,7 +77,7 @@ This will do a HTTP POST to the URL "/Project/4" with the content of "new conten
 .. js ::
   
     var restService = dojox.rpc.Rest("Project");
-    restService.post("4","new content");
+    restService.post("4", "new content");
 
 DELETE
 ------

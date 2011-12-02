@@ -52,7 +52,7 @@ Programmatic example
     <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
         dojo.ready(function(){
-            var c = new dojox.widget.ColorPicker({},"picker1");
+            var c = new dojox.widget.ColorPicker({}, "picker1");
         });
     </script>
 

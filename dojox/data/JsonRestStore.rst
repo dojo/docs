@@ -64,11 +64,11 @@ service
 
   The function should be directly callable with a single parameter of an object id to be loaded. The function should also have the following methods:
 
-  * **put(id,value)**
+  * **put(id, value)**
 
     puts the value at the given id
 
-  * **post(id,value)**
+  * **post(id, value)**
 
     posts (appends) the value at the given id
 

@@ -38,7 +38,7 @@ To use it, you just have to override default behavior by yours.
 	     //	-- odd : whether or not this row index is odd.
 	     var item = grid6.getItem(row.index);
 	     if(item){
-		var type = store3.getValue(item,"type",null);
+		var type = store3.getValue(item, "type", null);
 		if(type == "continent"){
 		    row.customStyles += "color:red;";
 	        }

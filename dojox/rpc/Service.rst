@@ -38,7 +38,7 @@ Service is a constructor, returning a pointer to the API defined in the SMD.
 
 .. js ::
 
-  var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
+  var goog = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc", "SMDLibrary/google.smd"));
 
 The ``google.smd`` file is located in a fixed location, available from :ref:`dojo.moduleUrl <dojo/moduleUrl>` calculations.
 

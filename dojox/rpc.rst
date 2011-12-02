@@ -53,16 +53,16 @@ This is an example of the Google API using the pre-defined google.smd in the :re
     var google, tehLoader = null;
     dojo.ready(function(){
         // define the service:
-        google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd"));
+        google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc", "SMDLibrary/google.smd"));
         // quick/easy loading indicator:
-        tehLoader = dojo.hitch(dojo,"style","loader","visibility");
+        tehLoader = dojo.hitch(dojo, "style", "loader", "visibility");
 
         dojo.query("#doit").onclick(function(e){
 
             tehLoader("visible");
             
             // move old results into the 'archive'
-            dojo.query("li","top-results").forEach(function(item){
+            dojo.query("li", "top-results").forEach(function(item){
                 dojo.byId("archive").appendChild(item);
             });
 
@@ -71,7 +71,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
             google[searchType]({ q: dojo.byId("test").value }).then(
                 function(returned){
                     // create an <li> for each data part:
-                    dojo.forEach(returned.responseData.results,function(item){
+                    dojo.forEach(returned.responseData.results, function(item){
                         var li = dojo.doc.createElement('li');
                         li.innerHTML = "<a target='_new' hr"+"ef='"+
                             (item.unescapedUrl || item.url) +"'>" + item.title +

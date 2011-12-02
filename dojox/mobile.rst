@@ -239,7 +239,7 @@ helps ensure the bare minimum code is used, and loaded as fast as possible.
     "dojox/mobile/parser", 	// (Optional) This mobile app uses declarative programming with fast mobile parser
     "dojox/mobile",		// (Required) This is a mobile app.
     "dojox/mobile/compat" 	// (Optional) This mobile app supports running on desktop browsers
-  ],function(parser,mobile,compat){ Optional module aliases that can then be referenced inside callback block
+  ], function(parser, mobile, compat){ Optional module aliases that can then be referenced inside callback block
     // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
   );
 

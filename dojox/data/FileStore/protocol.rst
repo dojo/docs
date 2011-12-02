@@ -103,5 +103,5 @@ The return is expected to be like be:
     "modified": 1234567,
     "directory": true,
     "path": "some/dir8/foofiles.txt",
-    "children": ["tmp1","tmp2","tmp3"]
+    "children": ["tmp1", "tmp2", "tmp3"]
   }

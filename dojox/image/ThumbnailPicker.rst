@@ -155,16 +155,17 @@ of settings, and uses the FlickrRestStore data store.
         // userid, apikey and (optional) sort data.
         // Extra query parameters 'tags' and 'tag_mode' are also
         // used to further filter the results
-        var req = {query: {
-                           userid: "44153025@N00",
-                           apikey: "8c6803164dbc395fb7131c9d54843627",
-                           sort: [ {descending: true }],
-                           tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
-                           tag_mode: "any"
-                           },
-                           start: 0, // start at record 0
-                           count: 20 // request 20 records each time a request is made
-                           };
+        var req = {
+		   query: {
+			   userid: "44153025@N00",
+			   apikey: "8c6803164dbc395fb7131c9d54843627",
+			   sort: [ {descending: true }],
+			   tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
+			   tag_mode: "any"
+		   },
+		   start: 0, // start at record 0
+		   count: 20 // request 20 records each time a request is made
+        };
          
         // Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);

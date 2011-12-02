@@ -57,7 +57,7 @@ A cross-namespace module which mixes all the `base dojox.fx animations`_ into :r
 .. js ::
 
     // Dojo 1.7+
-    require(["dojo/query","dojox/fx/ext-dojo/NodeList"], function(query){ 
+    require(["dojo/query", "dojox/fx/ext-dojo/NodeList"], function(query){
         // ...
     })
 

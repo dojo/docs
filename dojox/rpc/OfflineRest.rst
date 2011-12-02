@@ -37,4 +37,4 @@ In order to indicate that a store should have offline support, simply add that s
 .. js ::
  
  trailStore = new dojox.data.JsonRestStore({url:"/Trail"});
- dojox.rpc.OfflineRest.addStore(trailStore,"");
+ dojox.rpc.OfflineRest.addStore(trailStore, "");

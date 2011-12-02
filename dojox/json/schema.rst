@@ -29,7 +29,7 @@ The basic usage of dojox.json.schema validate data is:
 
  obj = {foo:"bar"};
  schema = {properties:{foo:{type:"string"}}};
- results = dojox.json.schema.validate(obj,schema);
+ results = dojox.json.schema.validate(obj, schema);
  if(results.valid){
    // indicates that the instance is valid by the schema
  }

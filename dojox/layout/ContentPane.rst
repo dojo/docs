@@ -57,7 +57,7 @@ See also
 .. js ::
  
  <script>
-   dojo.connect(_container_,"onLoad", function(){
+   dojo.connect(_container_, "onLoad", function(){
       /* your script */
    });
  </script>"

@@ -31,7 +31,7 @@ The RangeSlider is used in the same fashion as most dijit Form Widgets.
  <script type="text/javascript">
    dojo.require("dojox.form.RangeSlider");
    var rangeSlider = new dojox.form.HorizontalRangeSlider({
-   },"myRangeSlider");
+   }, "myRangeSlider");
  </script>
 
 Here are some of the constructor parameters:
