@@ -25,7 +25,7 @@ Dojo 1.7(AMD)
 -------------
 .. js ::
   
-   require(["dojo/_base/fx"],function(fx){
+   require(["dojo/_base/fx"], function(fx){
      fx.animateProperty({
       node:"someId",
       properties: {
@@ -53,7 +53,7 @@ Dojo 1.7(AMD)
 
 .. js ::
   
-  require(["dojo/_base/fx"],function(fx){
+  require(["dojo/_base/fx"], function(fx){
     fx.animateProperty({
     node:"someId",
     properties: {
@@ -112,7 +112,7 @@ Dojo 1.7(AMD)
 -------------
 .. js ::
   
-  require(["dojo/_base/fx"],function(fx){
+  require(["dojo/_base/fx"], function(fx){
     fx.animateProperty({
        node:"someNode",
        properties:{

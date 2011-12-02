@@ -18,7 +18,7 @@ Dojo 1.7(AMD)
 .. html ::
   
    <script type="text/javascript">
-        require(["dojo/_base/url","dojo/dom","dojo/ready"],function(url,dom,ready){
+        require(["dojo/_base/url", "dojo/dom", "dojo/ready"], function(url, dom, ready){
             ready(function(){
                 dom.byId("scheme").innerHTML =(new url("http://localhost:8080/home/")).scheme  //  'http'
                 dom.byId("host").innerHTML =     (new url("http://localhost:8080/home/")).host // 'localhost'

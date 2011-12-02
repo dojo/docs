@@ -119,7 +119,7 @@ A simple example formatting a date in a number of ways
 
         <script type="text/javascript">
             dojo.require( "dojo.date.locale" );
-            function format(date,fmt){ return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
+            function format(date, fmt){ return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
 
             var initDates = function(){
                 var date = new Date(2009,9,26,13,37,43,777);

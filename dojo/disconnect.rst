@@ -59,13 +59,13 @@ A very common pattern is to store a series of return values in an array, and use
   require(["dojo/_base/connect", "dojo/_base/array"], function(connect, array){
     var connections = [];
     connections.push(
-      connect.connect(node,"onmouseenter",function(){ /* smart mouseover code */ })
+      connect.connect(node, "onmouseenter", function(){ /* smart mouseover code */ })
     )
     connection.push(
-      connect.connect(node, "onmouseleave",function(){ /* smart mouseout code */ })
+      connect.connect(node, "onmouseleave", function(){ /* smart mouseout code */ })
     )
 
-    connect.connect(node,"onclick", function(){
+    connect.connect(node, "onclick", function(){
       // disable the other mouse events:
       array.forEach(connections, connect.disconnect);
     });
@@ -78,13 +78,13 @@ A very common pattern is to store a series of return values in an array, and use
    
   var connections = [];
   connections.push(
-    dojo.connect(node,"onmouseenter",function(){ /* smart mouseover code */ })
+    dojo.connect(node, "onmouseenter", function(){ /* smart mouseover code */ })
   )
   connection.push(
-    dojo.connect(node, "onmouseleave",function(){ /* smart mouseout code */ })
+    dojo.connect(node, "onmouseleave", function(){ /* smart mouseout code */ })
   )
 
-  dojo.connect(node,"onclick", function(){
+  dojo.connect(node, "onclick", function(){
     // disable the other mouse events:
     dojo.forEach(connections, dojo.disconnect);
   });

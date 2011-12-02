@@ -72,14 +72,14 @@ When using AMD format in a fully baseless application, ``get`` and ``set`` are a
 
     // When the CSS style property is hyphenated, the JavaScript property is camelCased.
     // font-size becomes fontSize, and so on.
-    domStyle.set("thinger",{
+    domStyle.set("thinger", {
             fontSize:"14pt",
             letterSpacing:"1.2em"
     });
 
     // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
     // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-    query(".someClassName").style("visibility","hidden");
+    query(".someClassName").style("visibility", "hidden");
 
     // or
 
@@ -112,14 +112,14 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.sty
 
     // When the CSS style property is hyphenated, the JavaScript property is camelCased.
     // font-size becomes fontSize, and so on.
-    dojo.style("thinger",{
+    dojo.style("thinger", {
             fontSize:"14pt",
             letterSpacing:"1.2em"
     });
 
     // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
     // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-    dojo.query(".someClassName").style("visibility","hidden");
+    dojo.query(".someClassName").style("visibility", "hidden");
 
     // or
 
@@ -152,14 +152,14 @@ Dojo < 1.7
 
   // When the CSS style property is hyphenated, the JavaScript property is camelCased.
   // font-size becomes fontSize, and so on.
-  dojo.style("thinger",{
+  dojo.style("thinger", {
           fontSize:"14pt",
           letterSpacing:"1.2em"
   });
 
   // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
   // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-  dojo.query(".someClassName").style("visibility","hidden");
+  dojo.query(".someClassName").style("visibility", "hidden");
 
   // or
 
@@ -364,7 +364,7 @@ Tips
 
   for example: "font-size" becomes "fontSize", and so on
 
-* You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c");
+* You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b", "c");
 
 * dojo.style uses getComputedStyle to get the style value, so the value will be a calculated value, not just the immediate node.style value.
 

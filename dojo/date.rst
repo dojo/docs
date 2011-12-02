@@ -19,7 +19,7 @@ dojo.date contains methods for manipulating Javascript Date objects.  The dojo.d
 
 Note that in JavaScript, counting of months starts at "0" so if you want to create following date: August 23rd 2034 you will have to do::
 
-  var myDate = new Date(2034,7,23);
+  var myDate = new Date(2034, 7, 23);
 
 So don't get confused by the new Date() statements in the tests, the second parameter is the month and is always one number lower than the month you actually want.
 

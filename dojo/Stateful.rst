@@ -35,7 +35,7 @@ Dojo 1.7 (AMD)
            console.log("foo changed to " + myObj.get("foo"));
        });
        // test: change obj.foo:
-       myObj.set("foo","bar");
+       myObj.set("foo", "bar");
   });
 
 Dojo < 1.7
@@ -52,7 +52,7 @@ Dojo < 1.7
        console.log("foo changed to " + myObj.get("foo"));
    });
    // test: change obj.foo:
-   myObj.set("foo","bar");
+   myObj.set("foo", "bar");
 
 Available Methods
 =================

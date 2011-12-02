@@ -63,14 +63,14 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
 
     // When the CSS style property is hyphenated, the JavaScript property is camelCased.
     // font-size becomes fontSize, and so on.
-    domStyle.set("thinger",{
+    domStyle.set("thinger", {
       fontSize:"14pt",
       letterSpacing:"1.2em"
     });
 
     // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
     // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-    query(".someClassName").style("visibility","hidden");
+    query(".someClassName").style("visibility", "hidden");
     // or
     query("#baz > div").style({
       opacity:0.75,
@@ -95,14 +95,14 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
 
     // When the CSS style property is hyphenated, the JavaScript property is camelCased.
     // font-size becomes fontSize, and so on.
-    dojo.setStyle("thinger",{
+    dojo.setStyle("thinger", {
       fontSize:"14pt",
       letterSpacing:"1.2em"
     });
 
     // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
     // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-    dojo.query(".someClassName").style("visibility","hidden");
+    dojo.query(".someClassName").style("visibility", "hidden");
     // or
     dojo.query("#baz > div").style({
       opacity:0.75,
@@ -127,14 +127,14 @@ Dojo < 1.7
 
   // When the CSS style property is hyphenated, the JavaScript property is camelCased.
   // font-size becomes fontSize, and so on.
-  dojo.setStyle("thinger",{
+  dojo.setStyle("thinger", {
     fontSize:"14pt",
     letterSpacing:"1.2em"
   });
 
   // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter,
   // calling dojo.style() on every element of the list. See: dojo.query() and dojo.NodeList
-  dojo.query(".someClassName").style("visibility","hidden");
+  dojo.query(".someClassName").style("visibility", "hidden");
   // or
   dojo.query("#baz > div").style({
     opacity:0.75,

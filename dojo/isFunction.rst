@@ -24,7 +24,7 @@ Usage
 .. js ::
  
   require(["dojo/_base/lang"], function(lang){
-    var ref = function(a,b){ return a };
+    var ref = function(a, b){ return a };
     if(lang.isFunction(ref)){
       ref();
     }
@@ -35,7 +35,7 @@ Usage
 
 .. js ::
  
-  var ref = function(a,b){ return a };
+  var ref = function(a, b){ return a };
   if(dojo.isFunction(ref)){
     ref();
   }

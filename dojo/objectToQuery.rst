@@ -78,7 +78,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context";
            var query = {
-              foo: ["bar","bar2"],
+              foo: ["bar", "bar2"],
               bit: "byte"
            };
 

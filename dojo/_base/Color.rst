@@ -58,7 +58,7 @@ A new color object is either created by using the constructor or any of the util
 
 .. js ::
 
-  define(["dojo/_base/Color"],function(Color){ // AMD allows us to use the color functions under the alias name "Color"
+  define(["dojo/_base/Color"], function(Color){ // AMD allows us to use the color functions under the alias name "Color"
 
     // Creates an empty color object for later use
     var emptyColor = new Color();
@@ -70,8 +70,8 @@ A new color object is either created by using the constructor or any of the util
     var hexColor = new Color("#cdefa0");
   
     // One can also pass arrays containing 3 or 4 values
-    var a3Color = new Color([123,123,234]);
-    var a4Color = new Color([123,123,234,0.6]);
+    var a3Color = new Color([123, 123, 234]);
+    var a4Color = new Color([123, 123, 234, 0.6]);
   
     // Finally, objects with r,g,b and a values work as well
     var objColor = new Color({r:23,g:45,b:67,a:0.7});

@@ -28,7 +28,7 @@ Simply pass _something_ to dojo.clone, and a new version of that _something_ wil
     var thing = lang.clone(obj);
 
     // clone an array
-    var newarray = lang.clone(["a","b","c"]);
+    var newarray = lang.clone(["a", "b", "c"]);
   });
   // Dojo < 1.7
   // clone an object
@@ -36,7 +36,7 @@ Simply pass _something_ to dojo.clone, and a new version of that _something_ wil
   var thing = dojo.clone(obj);
 
   // clone an array
-  var newarray = dojo.clone(["a","b","c"]);
+  var newarray = dojo.clone(["a", "b", "c"]);
   
 Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is :ref:`byId <dojo/byId>`, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
 

@@ -68,7 +68,7 @@ When using AMD format in a fully baseless application, ``set`` is accessed from 
       });
 
       // Style is a special case: Only set with an object hash of styles
-      domProp.set("someNode",{
+      domProp.set("someNode", {
           id:"bar",
           style:{
               width:"200px", height:"100px", color:"#000"
@@ -101,7 +101,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.set
       });
 
       // Style is a special case: Only set with an object hash of styles
-      dojo.setProp("someNode",{
+      dojo.setProp("someNode", {
           id:"bar",
           style:{
               width:"200px", height:"100px", color:"#000"
@@ -134,7 +134,7 @@ Dojo < 1.7
   });
 
   // Style is a special case: Only set with an object hash of styles
-  dojo.setProp("someNode",{
+  dojo.setProp("someNode", {
       id:"bar",
       style:{
           width:"200px", height:"100px", color:"#000"

@@ -37,7 +37,7 @@ With the DataStore store, store methods should intuitively map to DataStore API 
 +-----------------------+----------------------------------------------------------------------------------+
 |get(id)                |This will do a `datastore.fetchItemByIdentity({identity: id})`.                   |
 +-----------------------+----------------------------------------------------------------------------------+
-|query(query, options)  |This will do a `datastore.fetch({query: query},options)`.                         |
+|query(query, options)  |This will do a `datastore.fetch({query: query}, options)`.                        |
 +-----------------------+----------------------------------------------------------------------------------+
 |remove(id)             |This will first do a `datastore.fetchItemByIdentity({identity: id})` followed     |
 |                       |by a `datastore.deleteItem(item)`.                                                |

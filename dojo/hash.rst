@@ -45,7 +45,7 @@ To use dojo.hash to listen for hash changes:
    .. js ::
   
     // Dojo 1.7 (AMD)
-    require(["dojo/_base/connect","dojo/hash"], function(connect,hash){
+    require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
@@ -83,11 +83,11 @@ Setter
 
     // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash){
-        hash("someHashValue",true);
+        hash("someHashValue", true);
     });
 	
     // Dojo < 1.7
-    dojo.hash("someHashValue",true);
+    dojo.hash("someHashValue", true);
   ..
 
 Getter
@@ -114,7 +114,7 @@ Examples
    .. js ::
    
     // Dojo 1.7 (AMD)
-    require(["dojo/_base/connect","dojo/hash"], function(connect,hash){
+    require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
 	
@@ -127,7 +127,7 @@ Examples
    .. js ::
    
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
+    require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         var obj = {
             firstParam: true,
             secondParam: false
@@ -155,7 +155,7 @@ Examples
  .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
+    require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function updateHash(){
             var obj = ioQuery.queryToObject(dojo.hash());  // get
             obj.someNewParam = true;
@@ -178,7 +178,7 @@ Examples
    .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dojo/hash","dojo/io-query"], function(hash,ioQuery){
+    require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function callback(hash){
             // hashchange event!
             var obj = ioQuery.queryToObject(hash);

@@ -19,4 +19,4 @@ Features
 
 * `doh.robot.waitForPageToLoad`
 
-  Notifies DOH that the doh.robot is about to make a page change in the application it is driving,returning a doh.Deferred object the user should return in their runTest function as part of a DOH test.
+  Notifies DOH that the doh.robot is about to make a page change in the application it is driving, returning a doh.Deferred object the user should return in their runTest function as part of a DOH test.

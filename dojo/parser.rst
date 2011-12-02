@@ -42,7 +42,7 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require("dojo/parser",function(parser){
+  require("dojo/parser", function(parser){
        // write your code here
   });
   
@@ -67,7 +67,7 @@ To execute the parser manually, simply call the function ``parse``:
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require("dojo/parser",function(parser){
+  require("dojo/parser", function(parser){
        parser.parse();
   });
 
@@ -323,7 +323,7 @@ And HTML node:
 .. html ::
 
   <div data-dojo-type="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}"
-         anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
+         anotherObject="namedObj" arrayVal="a, b, c, 1, 2" typedArray="['a', 'b', 'c', 1, 2]"
          _privateVal="5" anotherValue="more"></div>
 
 The parser would create an object and pass it parameters of:
@@ -336,7 +336,7 @@ The parser would create an object and pass it parameters of:
     when: dojo.date.stamp.fromISOString("2008-1-1"); // Typed to a date
     objectVal: {a: 1, b:'c'},                   // Typed to an object
     anotherObject: dojo.getObject("namedObj"),  // For strings, try getting the object via dojo.getObject
-    arrayVal: ["a","b","c","1","2"],            // When typing to an array, all entries are strings
+    arrayVal: ["a", "b", "c", "1", "2"],            // When typing to an array, all entries are strings
     typedArray: ["a", "b", "c", 1, 2]           // To get a "typed" array, treat it like an object instead
   }
 
@@ -421,7 +421,7 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require(["dojo/_base/xhr","dojo/parser","dojo/dom"], function(xhr,parser,dom){
+  require(["dojo/_base/xhr", "dojo/parser", "dojo/dom"], function(xhr, parser, dom){
 	  xhr.get({
 		url: "widgets.html",
 		load: function(data){
@@ -447,7 +447,7 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 .. js ::
 
   // Dojo 1.7 (AMD)
-  require(["dojo/parser","dojo/ready"],function(parser,ready){
+  require(["dojo/parser", "dojo/ready"], function(parser, ready){
        ready(function(){
           // do something();
           parser.parse();

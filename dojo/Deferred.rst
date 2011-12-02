@@ -34,7 +34,7 @@ Pseudocode Example 1:  Creating and calling a deferred.
 .. js ::
     
   // Dojo 1.7+ (AMD)
-  require(["dojo/_base/Deferred"],function(Deferred){
+  require(["dojo/_base/Deferred"], function(Deferred){
     var deferred = new Deferred();
     setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
     return deferred;

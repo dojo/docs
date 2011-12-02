@@ -33,7 +33,7 @@ When using AMD format in a fully baseless application, ``contains`` is accessed 
 
   require(["dojo/dom-class"], function(domClass){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
-      if(domClass.contains("someNode","aSillyClassName")){ ... }
+      if(domClass.contains("someNode", "aSillyClassName")){ ... }
   });
 
 Alternatively, you can load dojo base in AMD style and continue using ``dojo.hasClass`` in the ``define`` or ``require`` callback:
@@ -42,7 +42,7 @@ Alternatively, you can load dojo base in AMD style and continue using ``dojo.has
 
   require(["dojo"], function(dojo){
       // Do something if a node with id="someNode" has class="aSillyClassName" present
-      if(dojo.hasClass("someNode","aSillyClassName")){ ... }
+      if(dojo.hasClass("someNode", "aSillyClassName")){ ... }
   });
 
 Dojo < 1.7
@@ -51,7 +51,7 @@ Dojo < 1.7
 .. js ::
 
     // Do something if a node with id="someNode" has class="aSillyClassName" present
-    if(dojo.hasClass("someNode","aSillyClassName")){ ... }
+    if(dojo.hasClass("someNode", "aSillyClassName")){ ... }
 
 
 Consider the following html:

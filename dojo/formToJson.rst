@@ -44,7 +44,7 @@ Dojo 1.7+ (AMD)
     // </form>
     //
     // The structure of formJson will be:
-    // {"field1":"value1","field2":"value2"}
+    // {"field1":"value1", "field2":"value2"}
     // Note the button was skipped.
   });
 
@@ -65,7 +65,7 @@ Dojo < 1.7
   // </form>
   //
   // The structure of formJson will be:
-  // {"field1":"value1","field2":"value2"}
+  // {"field1":"value1", "field2":"value2"}
   // Note the button was skipped.
 
 

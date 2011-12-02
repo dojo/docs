@@ -180,7 +180,7 @@ Style special case
  
   // Dojo 1.7+ (AMD), granular dependencies (recommended)
   require(["dojo/dom-prop"], function(domProp){
-    domProp.set("someNode",{
+    domProp.set("someNode", {
       id:"bar",
       style:{
         width:"200px", height:"100px", color:"#000"
@@ -190,7 +190,7 @@ Style special case
 
   // Dojo 1.7+ (AMD), loading Dojo base
   require(["dojo"], function(dojo){
-    dojo.prop("someNode",{
+    dojo.prop("someNode", {
       id:"bar",
       style:{
         width:"200px", height:"100px", color:"#000"
@@ -199,7 +199,7 @@ Style special case
   });
 
   // Dojo < 1.7
-  dojo.prop("someNode",{
+  dojo.prop("someNode", {
     id:"bar",
     style:{
       width:"200px", height:"100px", color:"#000"

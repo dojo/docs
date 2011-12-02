@@ -77,7 +77,7 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
     // Dojo 1.7 (AMD)
     require("dojo/ready", function(ready){
         ready(function(){
-            require(["dijit/Dialog","dijit/TitlePane"], function(dialog,pane){
+            require(["dijit/Dialog", "dijit/TitlePane"], function(dialog, pane){
                 ready(function(){
                     // dijit.Dialog and friends are ready, create one from a node with id="bar"
                     var dialog = new dialog({ title:"Lazy Loaded" }, "bar");

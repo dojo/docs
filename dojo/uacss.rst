@@ -61,7 +61,7 @@ Simply require the module:
 .. js ::
 
   // Dojo 1.7(AMD)
-  require(["dojo/uacss"],function(){
+  require(["dojo/uacss"], function(){
 	// write your code here
   });
   

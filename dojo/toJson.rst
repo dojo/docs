@@ -24,7 +24,7 @@ Dojo 1.7 (AMD)
 
 .. js ::
  
-  require(['dojo/_base/json'],function(dojo){
+  require(['dojo/_base/json'], function(dojo){
     // require on dojo/_base/json will return the actual object of dojo
     
     // a simple object
@@ -34,7 +34,7 @@ Dojo 1.7 (AMD)
     var data = dojo.toJson(obj);
     console.log(data, typeof data);
   });
-  >>> {"a":"one","b":3,"c":true} string
+  >>> {"a":"one", "b":3, "c":true} string
 
 Dojo < 1.7
 ----------
@@ -47,7 +47,7 @@ Dojo < 1.7
   // convert it to a string:
   var data = dojo.toJson(obj);
   console.log(data, typeof data);
-  >>> {"a":"one","b":3,"c":true} string
+  >>> {"a":"one", "b":3, "c":true} string
 
 TODOC: Date objects in objects
 

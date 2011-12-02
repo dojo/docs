@@ -30,7 +30,7 @@ Examples
    
     // Dojo 1.7 (AMD)
     <script type="text/javascript">
-    require(["dojo/html","dojo/ready"], function(html,ready){
+    require(["dojo/html", "dojo/ready"], function(html, ready){
         ready(function(){
             // the first argument is a node reference
             console.log("loaded");
@@ -74,7 +74,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-    require(["dojo/html","dojo/dom","dojo/_base/connect","dijit.form.NumberTextBox"], function(html,dom,connect,numberTextBox){
+    require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect, numberTextBox){
     var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
 
       html.set(dom.byId("mytable"), '<tr>'
@@ -115,7 +115,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
       dojo.html.set(dojo.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
         +'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
-        +  ' constraints="{min:0,max:20,places:0}"'
+        +  ' constraints="{min:0, max:20, places:0}"'
         +  ' promptMessage= "Enter a value between 0 and +20"'
         +  ' required= "true" invalidMessage= "Wrong!" />'
         +'</td>'

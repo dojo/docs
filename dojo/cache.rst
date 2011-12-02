@@ -35,7 +35,7 @@ Usage
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require("dojo/text",function(){
+  require("dojo/text", function(){
       // write your code here
   });
   
@@ -59,7 +59,7 @@ This is the usual, most common use of the dojo.cache call:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require("dojo/text",function(){
+  require("dojo/text", function(){
     var text = dojo.cache("my.module", "template.html");
   });
   
@@ -77,7 +77,7 @@ An example using the sanitize: true option:
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require("dojo/text",function(){
+  require("dojo/text", function(){
     var text = dojo.cache("my.module", "template.html", {sanitize: true});
   });
 
@@ -95,7 +95,7 @@ Example using an object that has like the previous example, but uses an object w
 .. js ::
  
   // Dojo 1.7 (AMD)
-  require("dojo/text",function(){
+  require("dojo/text", function(){
     var text = dojo.cache(new dojo._Url("my/module/template.html"), {sanitize: true});
   });
 

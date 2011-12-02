@@ -470,7 +470,7 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
 		
   // Define the comparator function for status.
   store.comparatorMap = {};
-  store.comparatorMap["status"] = function(a,b){
+  store.comparatorMap["status"] = function(a, b){
     var ret = 0;
     // We want to map these by what the priority of these items are, not by alphabetical.
     // So, custom comparator.
@@ -887,7 +887,7 @@ Demonstrating custom sorting
       function init4(){
         // Define the comparator function for status.
         sortStore.comparatorMap = {};
-        sortStore.comparatorMap["status"] = function(a,b){
+        sortStore.comparatorMap["status"] = function(a, b){
           var ret = 0;
           // We want to map these by what the priority of these items are, not by alphabetical.
           // So, custom comparator.

@@ -29,7 +29,7 @@ Dojo 1.7 (AMD)
 .. js ::
  
  <script type="text/javascript">
-   require(['dojo/_base/unload'],function(baseUnload){
+   require(['dojo/_base/unload'], function(baseUnload){
      // declare a function to do the unload work
      var unLoad = function(){
        // do some unload stuff

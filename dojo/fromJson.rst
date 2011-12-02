@@ -19,7 +19,7 @@ This function creates a JavaScript object from a passed JSON string, such as one
 .. js ::
   
   // Dojo 1.7 (AMD)
-  require(['dojo/_base/xhr'],function(xhr){
+  require(['dojo/_base/xhr'], function(xhr){
     xhr.get({
       url:"foo.php", handleAs:"json",
       load: function(data){
@@ -46,9 +46,9 @@ Dojo 1.7 (AMD)
 
 .. js ::
     
-  require(['dojo/_base/json'],function(dojo){
+  require(['dojo/_base/json'], function(dojo){
     // require on dojo/_base/json will return the actual object of dojo
-    var json = '{"a":"one","b":3,"c":true}';
+    var json = '{"a":"one", "b":3, "c":true}';
     var obj = dojo.fromJson(json);
     console.log(obj.a, obj.b, obj.c);
   });
@@ -60,7 +60,7 @@ Dojo < 1.7
 
 .. js ::
   
-  var json = '{"a":"one","b":3,"c":true}';
+  var json = '{"a":"one", "b":3, "c":true}';
   var obj = dojo.fromJson(json);
   console.log(obj.a, obj.b, obj.c);
   >>> one 3 true

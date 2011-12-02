@@ -27,7 +27,7 @@ Introduction
       console.log( nl.length );
 
       // hide each element (using style method added by NodeList-dom module)
-      nl.style("display","none");
+      nl.style("display", "none");
   });
 
 [ V1.6 and earlier ]
@@ -39,7 +39,7 @@ Introduction
   console.log( nl.length );
 
   // hide each element
-  nl.style("display","none");
+  nl.style("display", "none");
 
 
 You can also create NodeLists manually and since NodeLists are "just an Array" all of the Array methods you already know Just Work (TM):

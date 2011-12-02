@@ -229,7 +229,7 @@ Following is a Person class with a constructor and a ``moveToNewState()`` functi
   console.log(folk.currentResidence);
 
 
-Note the use of anonymous functions here.  You are passing to ``dojo.declare`` an associative array of anonymous functions.  "That's not an anonymous function," you might say, "their names are constructor and moveToNewState!"  Strictly speaking, no they aren't.  They are anonymous functions with the *keys* ``constructor`` and ``moveToNewState``.
+Note the use of anonymous functions here.  You are passing to ``dojo.declare`` an associative array of anonymous functions.  "That's not an anonymous function", you might say, "their names are constructor and moveToNewState!"  Strictly speaking, no they aren't.  They are anonymous functions with the *keys* ``constructor`` and ``moveToNewState``.
 
 In pure JavaScript, this is handled by a prototype function named after the class - for example, ``Person.prototype``.  Dojo wires in your constructor as a part of the prototype, but then adds extra goodies like calling the superclass constructor and initializing extra properties.
 
@@ -1169,7 +1169,7 @@ Examples:
 
 .. js ::
   
-  require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
+  require(['dojo/_base/lang', 'dojo/_base/declare'], function(lang, declare){
     var A = declare(null,
       m1: function(){
         // ...
@@ -1505,7 +1505,7 @@ Examples:
 
 .. js ::
   
-  require(['dojo/_base/lang','dojo/_base/declare'], function(lang,declare){
+  require(['dojo/_base/lang', 'dojo/_base/declare'], function(lang, declare){
     // plain vanilla constructor
     var A = function(){
       this.a = 42;
