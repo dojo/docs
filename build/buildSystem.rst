@@ -16,8 +16,8 @@ version 1.7 is available* :ref:`here <build/pre17/build>`.
 
 *See* :ref:`The Dojo Build System <build/index>` *for a complete list of build system documentation resources.*
 
-Command Line Switches
-=====================
+Introduction
+============
 
 The Dojo build system is a general-purpose program for transforming a set of resources. It was built to solve the
 problem of transforming a set of resources that comprise an application in order to improve the performance of that
@@ -48,8 +48,8 @@ processes can be executed as well.
 This document describes using the build system for deployment optimizations. See xxx for information about writing your
 own custom transforms and configuring the build system for other uses.
 
-Command Line Switches
-=====================
+Overview
+========
 
 The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
@@ -104,8 +104,8 @@ These are discussed in separate documents as follows:
 
 * For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
-Command Line Switches
-=====================
+Assumptions for Examples
+========================
 
 This document contains several examples. It assumes the source distribution of the Dojo Toolkit, version 1.7 or greater,
 is installed at ~/dev/dtk/. If you are a Windows user, "~" is shorthand for the user's home directory; substitute
@@ -116,8 +116,8 @@ Unless specifically stated otherwise, all examples assume the current working di
 ~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the build system, both rather a convenience
 so you don't have to path to the build system executable.
 
-Command Line Switches
-=====================
+Invoking the Build System
+=========================
 
 The build system is a Javascript program comprised of a set of AMD modules that may be executed by node.js or Rhino. The
 program is distributed with the source version of the Dojo Toolkit. The source tree resides at util/build/. Dojo can be
