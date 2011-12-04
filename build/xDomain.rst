@@ -32,7 +32,7 @@ Implications/Limitations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Not all external resources can be xdomain loaded, in particular some support files that need to be loaded from the same domain as the HTML page. See module-specific notes below.
-* **Requires** a "xdomain" build of Dojo (see below for more info on how to make a xdomain build).
+* **Requires** an "xdomain" build of Dojo (see below for more info on how to make an xdomain build).
 * Asynchronous loading. You MUST use dojo.ready() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.ready() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called. This technique works even for the normal Dojo loader, so this is a good practice to use even when not using an xdomain build.
 * Avoid using document.write(): Since module can load asynchronously, after the page is loaded, document.write can cause problems.
 

@@ -253,7 +253,7 @@ Layer items are Javascript objects with the following properties
   transform to write the layer along with the dojo loader to form a boot layer.
 
 ``copyright`` (default = "")
-  If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
+  If a string that gives an existing filename, the contents of the named file is used as copyright text for the
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.

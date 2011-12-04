@@ -115,7 +115,7 @@ log=0
   Sets the logging verbosity. See jslib/logger.js for possible integer values.
 
 profileFile=
-  A file path to the the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile".
+  A file path to the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile".
 
 xdDojoPath=
   If the loader=xdomain build option is used, then the value of this option will be used to call dojo.registerModulePath() for dojo, dijit and dojox. The xdDojoPath should be the directory that contains the dojo, dijit and dojox directories, and it should NOT end in a slash. For instance: 'http://some.domain.com/path/to/dojo090'.

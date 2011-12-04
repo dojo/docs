@@ -68,10 +68,10 @@ as follows:
 
   ~/dev/dtk/util/buildscripts> ./build.sh --profile myApp --basePath /www/deploy/myApp --release
 
-*note*: although **action=** *switch* defined by the v1.6- system may be used, that syntax is deprecated and you should just
+*Note*: although **action=** *switch* defined by the v1.6- system may be used, that syntax is deprecated and you should just
 specify the switch.
 
-*note*: the clean action has been removed. Since the system is now extremely flexible is describing where output is
+*Note*: the clean action has been removed. Since the system is now extremely flexible is describing where output is
 written, a mistake in a profile could result in cleaning your hard drive. We'll let you do that yourself with the
 rm/rmdir commands. (We also note that deleting file trees is not the typical function of a compiler program).
 
@@ -285,7 +285,7 @@ Layer items are Javascript objects with the following properties
   transform to write the layer along with the dojo loader to form a boot layer.
 
 ``copyright`` (default = "")
-  If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
+  If a string that gives an existing filename, the contents of the named file is used as copyright text for the
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.

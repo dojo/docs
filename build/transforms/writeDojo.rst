@@ -175,7 +175,7 @@ If present, the dojo/dojo layer is searched for the pattern
 If the pattern is found and the profile property ``version`` was provided, then property values in the resource text
 are replaced with the in the obvious manner.
 
-The transform writes the dojo/dojo resource text, after transforming as described above, the the destination
+The transform writes the dojo/dojo resource text, after transforming as described above, the destination
 location. Additionally, the resource text for all bootable layers (see xxx) is written to their destination locations
 after prefixing that text with the dojo/dojo resource text.
 

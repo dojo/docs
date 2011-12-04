@@ -25,7 +25,7 @@ There are several pages of existing documentation that describe the background a
  - :ref:`getLocalization <dojo/i18n>`
  - :ref:`requireLocalization <dojo/requireLocalization>`
 
-Here we provide a practical walkthrough of applying localisation to actual dijits and an actual build profile.
+Here we provide a practical walkthrough of applying localization to actual dijits and an actual build profile.
 
 Starting Point - A Simple Test Dijit And Build Profile
 ======================================================
@@ -176,7 +176,7 @@ An important distinction to make here is that the original source of yours (slig
 
 When you come to actually use your compiled layer, you'll be using the files from ``dojo/testdijits.js`` and ``dojo/nls/testdijits_*.js``, _not_ the copy of your original code, in ``testdijits/*``.
 
-Optimising Performance - Using the Built Layer
+Optimizing Performance - Using the Built Layer
 ==============================================
 
 In the test.html file above, we only linked to the dojo.js file.  Thus, the dojo.require("testdijits.Foo") had to fetch all dijit files over the network.  We aren't actually using our built layer at all.  The Net panel in the debugger shows many individual requests:
@@ -329,7 +329,7 @@ then dojo will automatically serve the page with the ``fr`` string resources, an
 Trees of Locales
 ================
 
-Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The :ref:`requireLocalization <dojo/requireLocalization>` page mentions that the bundles for each locale is merged to provide a single javascript object.  An example would be useful at this point.
+Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The :ref:`requireLocalization <dojo/requireLocalization>` page mentions that the bundles for each locale are merged to provide a single javascript object.  An example would be useful at this point.
 
 If we provide the following:
 

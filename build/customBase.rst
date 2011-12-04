@@ -17,7 +17,8 @@ Custom base is used to make an extremely small file size version of dojo.js.
 Introduction
 ============
 
-Normally, when the builder system creates ``dojo.js`` it includes the entire base set of Dojo APIs (almost everything that can be accessed directly in the ``dojo`` namespace).  This provides a robust and usable core functionality in a file that is approximately 76.7 KB uncompressed and 26.5K gzipped as of Dojo 1.2.3.
+Normally, when the builder system creates ``dojo.js`` it includes the entire base set of Dojo APIs (almost everything that can be accessed directly in the ``dojo`` namespace).
+This provides robust and usable core functionality in a file that is approximately 76.7 KB uncompressed and 26.5K gzipped as of Dojo 1.2.3.
 
 However, in some cases, such as creating web applications intended for use on smart phones, you may desire to create an even smaller ``dojo.js``.  Using ``customBase`` you can achieve minimal Dojo versions as small as approximately 6k (including the stubs described below).
 

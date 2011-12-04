@@ -1,7 +1,7 @@
 .. _build/profiles:
 
 ==============
-build profiles
+Build profiles
 ==============
 
 :Status: Draft
@@ -92,7 +92,7 @@ copyrightFile
    Optional.  Filename of a simple text file that will be prepended to build layer files.  If omitted, the default Dojo copyright notice will be used instead.
 
 dependencies
-   Optional, array of string.  A list of Dojo resources that this this layer relies on.  Normally, they are to be included in the layer.  The builder will locate and include each of the resources listed in the ``dependencies`` array, then locate and include each resource referenced within those resources with a ``dojo.require`` statement, and so on recursively until all modules required to actually implement all of the layer dependencies are built into the layer.
+   Optional, array of string.  A list of Dojo resources that this layer relies on.  Normally, they are to be included in the layer.  The builder will locate and include each of the resources listed in the ``dependencies`` array, then locate and include each resource referenced within those resources with a ``dojo.require`` statement, and so on recursively until all modules required to actually implement all of the layer dependencies are built into the layer.
 
    No module will be included in the layer more than once, even if it is referenced at multiple locations within the web of resources the layer uses.
  

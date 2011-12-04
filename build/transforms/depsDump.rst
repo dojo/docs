@@ -69,7 +69,7 @@ The modules contained in the dot program may be limited by provided an explicit 
 ``dotModules``, a comma-separated list of module identifiers. When profiled, the dependency graph resulting from these
 modules and their dependencies is output.
 
-For example, the following profile will output a dot program for the the dependency graph of dojo/_base/json:
+For example, the following profile will output a dot program for the dependency graph of dojo/_base/json:
 
 .. js ::
 

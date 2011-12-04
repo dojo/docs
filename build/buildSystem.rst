@@ -37,12 +37,12 @@ program results in a serial chain of downloads (for example, module A requires m
 this until module A is evaluated). Using these techniques to optimize non-trivial applications often results in
 improving load times by a factor of 10 or more.
 
-These kind of optimization are termed "deployment optimizations", and the build system includes a rich set of such
+These kind of optimizations are termed "deployment optimizations", and the build system includes a rich set of such
 optimizations that may be applied to an application prior to deployment. However, the build system is not limited to
-these kind of transforms. At its core, the build system is an engine for applying an ordered, synchronized, configurable
+these kinds of transforms. At its core, the build system is an engine for applying an ordered, synchronized, configurable
 set of transforms to a configurable input set. Examples of other usages include document generators, style checkers,
 code formatters, lint checkers, and many more. In some ways it is like a make program, except the external processes
-that typical make programs execute can be implemented within its the pluggable transform infrastructure. Of course external
+that typical make programs execute can be implemented within its pluggable transform infrastructure. Of course external
 processes can be executed as well.
 
 This document describes using the build system for deployment optimizations. See xxx for information about writing your
@@ -113,7 +113,7 @@ whatever directory is convenient for you. For all users, there is nothing specia
 indicate the root that holds the Dojo Toolkit source distribution.
 
 Unless specifically stated otherwise, all examples assume the current working directory is
-~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the the build system, both rather a convenience
+~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the build system, both rather a convenience
 so you don't have to path to the build system executable.
 
 Command Line Switches
@@ -334,7 +334,7 @@ Configuration Resources
 
 The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig`` as
 if it was an ordinary profile. The next section describes how the build system consumes configurations. Also note that
-the dojo loader will simply ignore any configuration variable that it does not define. These two feature combine to
+the dojo loader will simply ignore any configuration variable that it does not define. These two features combine to
 allow all or part of an application's build profile to be contained within the application configuration. For example,
 /util/build/examples/dojoConfig.js has contents:
 
@@ -373,7 +373,7 @@ When exercised with the ``check-args`` switch, you should see something like thi
 
 Notice that basePath, as automatically provided by the build system, when combined with the package locations, give the
 correct locations of the dojo and dijit packages. Also take note that you must provide the complete filename, including
-a the file type (if any).
+the file type (if any).
 
 The command switch ``require`` is similar to ``dojoConfig``, but processes a configuration argument applied to the
 global AMD require function. For example, /util/build/examples/require.js has contents:
@@ -438,7 +438,7 @@ As each package.json resource is processed, a profile object is manufactured wit
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
-represents. Also notice that the property :ref:``selfFilename`` is set the the absolute path at which the package.Json file
+represents. Also notice that the property :ref:``selfFilename`` is set the absolute path at which the package.Json file
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
@@ -579,7 +579,7 @@ configurations just like the loader. Here is the previous example expressed usin
     }
 
 The destination location of each package may be given explicitly in the optional, per-package ``destLocation``
-property. If it is missing, then it defaults to the package name, a child of the the release directory.
+property. If it is missing, then it defaults to the package name, a child of the release directory.
 
 The real power of this feature is not expressing these package hierarchies in a profile, but rather using the
 application configuration to get the hierarchies for free. For example, assume the acme application expressed its
@@ -719,7 +719,7 @@ can specify different values for all package config object properties as follows
 * ``main`` may be changed by giving a value for ``destMain``
 * ``packageMap`` may be changed by giving a value for ``destPackageMap``
 
-If ``destName`` is not provided, then is defaults to ``name``. The same applies for the other properties. ``location``,
+If ``destName`` is not provided, then it defaults to ``name``. The same applies for the other properties. ``location``,
 if relative, is computed with respect to ``basePath``; relative ``destLocation`` is computed with respect to the
 computed destBasePath.
 

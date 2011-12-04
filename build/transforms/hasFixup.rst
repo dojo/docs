@@ -104,7 +104,7 @@ as
 The resulting code can then be processed by a subsequent transform, for example optimization by the Google Closure
 Compiler, which will eliminate the dead code, while maintaining intended semantics (recall that has.add includes a
 ``now`` parameter that instructs the function to execute the test immediately and return result. For example, if the has
-feature "featureX" is set to truthy in ``staticHasFeatures``, then the following code
+feature "featureX" is set to truthy in ``staticHasFeatures``, then the following code:
 
 .. js ::
 
@@ -114,7 +114,7 @@ feature "featureX" is set to truthy in ``staticHasFeatures``, then the following
       // don't do something
   }
 
-Would be transformed to
+would be transformed to:
 
 
 .. js ::
@@ -125,13 +125,13 @@ Would be transformed to
       // don't do something
   }
 
-Which would be reduced to
+which would be reduced to:
 
 .. js ::
 
       // do something
 
-By the Google Closure Compiler in simple mode.
+by the Google Closure Compiler in simple mode.
 
 This design eliminates the need to determine the boundaries of the has.add argument list--a task that is impossible to
 accomplish correctly without a proper parser.

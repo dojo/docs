@@ -13,7 +13,7 @@ Build Transform write
 Summary
 =======
 
-Writes a resource a destination location.
+Writes a resource to a destination location.
 
 Description
 ===========

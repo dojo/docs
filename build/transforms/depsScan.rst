@@ -21,7 +21,7 @@ Description
 
 Modules tagged with "amd" or containing the dojo pragma "//>> pure-amd" are evaluated in the global scope with global
 define() and global require() replaced with thunk functions execute a no-op. This allows the transform to gain access to
-the the dependency vector and absolute module identifier, if any, without using regular expressions. Well-constructed
+the dependency vector and absolute module identifier, if any, without using regular expressions. Well-constructed
 AMD modules should not depend on or manipulate the environment unless and until their factory functions are
 applied. Therefore, it is safe to execute these kinds of modules in the build environment.
 

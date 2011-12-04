@@ -8,12 +8,12 @@ The Dojo Build System
 :Version: 1.7+
 :Author: Rawld Gill
 
-The Dojo Build System
-=====================
+Introduction
+============
 
 The Dojo build system is a general-purpose program for transforming a set of resources. It was built to solve the
 problem of transforming a set of resources that comprise an application in order to improve the performance of that
-application. These kind of optimization are termed "deployment optimizations", and the build system includes a rich set
+application. These kind of optimizations are termed "deployment optimizations", and the build system includes a rich set
 of such optimizations.
 
 However, the build system is not limited to these kind of transforms. At its core, the build system is an engine for

@@ -53,12 +53,12 @@ the following properties:
   Optional. If present, gives a copywrite message to include when the layer is written. Either a string or a filename
   of a resource containing the copyright text can be provided.
 
-The modules to include in a particular layer is computed as follows:
+The modules to include in a particular layer are computed as follows:
 
 1. The layer module itself.
 
 2. Plus the dependency graph implied by the AMD dependencies of the layer module. This is given by the dependency vector
-   found in the define application associated with the target module, the modules found in in the dependency vectors of
+   found in the define application associated with the target module, the modules found in the dependency vectors of
    those modules, and so on until all modules in the graph have been found (remember, though not desirable, there may
    be cycles, so the graph is not necessarily a tree).
 
@@ -118,7 +118,7 @@ And x/y/z is a member module of a layer, then that layer will inject a loader ca
     // other member modules as required
   }});
 
-This causes the module to be available to the loader upon demand, but the contents of the module's resource is *not*
+This causes the module to be available to the loader upon demand, but the contents of the module's resource are *not*
 evaluated unless and until the module is actually demanded by the run-time execution path. At that point the function is
 evaluated which results in the same effect as if the module has been script injected.
 
@@ -166,7 +166,7 @@ Layer items are Javascript objects with the following properties
   transform to write the layer along with the dojo loader to form a boot layer.
 
 ``copyright`` (default = "")
-  If a string that gives an existing filename, the the contents of the named file is used as copyright text for the
+  If a string that gives an existing filename, the contents of the named file is used as copyright text for the
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
