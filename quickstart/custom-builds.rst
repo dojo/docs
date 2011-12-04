@@ -114,7 +114,7 @@ profile
   The name of the profile to use for the build. It must be the first part of the profile file name in the profiles/ directory. For instance, to use base.profile.js, specify profile=base. Default: base
 
 profileFile
-  A file path to the the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile" Default: ""
+  A file path to the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile" Default: ""
 
 action
   The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".

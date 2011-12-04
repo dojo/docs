@@ -117,7 +117,7 @@ Aside from regular, string, boolean, integer, object, etc, types that can be ass
 
 **References:**
 
-The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
+The first is the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
 
 .. js ::
  
@@ -1052,4 +1052,4 @@ See Also
 ========
 
 * `Refreshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
-* Consider :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavour of store.
+* Consider :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavor of store.

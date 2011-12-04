@@ -15,7 +15,7 @@ dijit.byId is a function for looking up a specific widget by its assigned name (
 Introduction
 ============
 
-dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the the JavaScript object instance of your widget and access functions of that widget.
+dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the JavaScript object instance of your widget and access functions of that widget.
 
 .. api-inline :: dijit.byId
 

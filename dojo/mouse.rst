@@ -42,9 +42,9 @@ mouseButtons
 
 The mouseButtons object has the following properties and methods:
 
-* LEFT - The number corresponding to the "button" property value on the event when the the left mouse button is clicked.
-* MIDDLE - The number corresponding to the "button" property value on the event when the the middle mouse button is clicked.
-* RIGHT - The number corresponding to the "button" property value on the event when the the right mouse button is clicked.
+* LEFT - The number corresponding to the "button" property value on the event when the left mouse button is clicked.
+* MIDDLE - The number corresponding to the "button" property value on the event when the middle mouse button is clicked.
+* RIGHT - The number corresponding to the "button" property value on the event when the right mouse button is clicked.
 * isLeft(event) - Indicates if the left mouse button was used in the provided event.
 * isMiddle(event) - Indicates if the middle mouse button was used in the provided event.
 * isRight(event) - Indicates if the right mouse button was used in the provided event.

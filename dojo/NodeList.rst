@@ -345,7 +345,7 @@ The import part being ``'return this'``, ensuring any following chains will work
 NodeList extensions
 ===================
 
-To keep the Base size to a minimum, some NodeList functionality is provided by external modules. For instance, dojo.NodeList-fx add all the required FX/Animation code to NodeList, dojox.fx.ext-dojo.NodeList provides the animation functionality from dojox.fx, and dojo.NodeList-html adds advanced HTML manipulation functions. The hyphen in the filename is meant to indicate the module being loaded modifies an existing Class, as you won't be able to call hyphenated functions directly. Simply require in the the necessary code:
+To keep the Base size to a minimum, some NodeList functionality is provided by external modules. For instance, dojo.NodeList-fx add all the required FX/Animation code to NodeList, dojox.fx.ext-dojo.NodeList provides the animation functionality from dojox.fx, and dojo.NodeList-html adds advanced HTML manipulation functions. The hyphen in the filename is meant to indicate the module being loaded modifies an existing Class, as you won't be able to call hyphenated functions directly. Simply require in the necessary code:
 
 [ V1.7+ AMD ]
 

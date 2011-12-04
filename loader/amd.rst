@@ -835,7 +835,7 @@ You can then access these packages normally through ``require`` or ``define``:
 .. js ::
 
   define(["util1", "util2"], function(util1, util2){
-    // well that that was easy.
+    // well that was easy.
   });
 
 It is also possible to remap packages that are required by another package. For example:

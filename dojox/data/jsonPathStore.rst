@@ -38,7 +38,7 @@ Supported APIs
 Additional methods
 ------------------
 
-In addition to the the standard store api, the store provides a few additional methods of note:
+In addition to the standard store api, the store provides a few additional methods of note:
 
 * setData(data)
 

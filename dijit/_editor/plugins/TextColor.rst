@@ -25,7 +25,7 @@ Once required in and enabled, this plugin provides the following features to dij
 * Use of dijit.ColorPicker for easy color selection.
 * The plugins are registrable in the editor via the following commands:
 
-    foreColor - Enable the the text color plugin.
+    foreColor - Enable the text color plugin.
 
     hiliteColor - Enable the text background color plugin.
 

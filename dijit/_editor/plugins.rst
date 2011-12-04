@@ -27,11 +27,11 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dijit._editor.plugins.FontChoice <dijit/_editor/plugins/FontChoice>`  -- **STABLE**
 
-  A plugin that enables a a 'Font choice' editor for the dijit.Editor. This provides the commands 'fontName', 'fontSize', and 'formatBlock' editor commands to alter font, size, and other formatting options of selected text.
+  A plugin that enables a 'Font choice' editor for the dijit.Editor. This provides the commands 'fontName', 'fontSize', and 'formatBlock' editor commands to alter font, size, and other formatting options of selected text.
 
 * :ref:`dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor>`  -- **STABLE**
 
-  A plugin that enables a a 'Font color' editor for the dijit.Editor. This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
+  A plugin that enables a 'Font color' editor for the dijit.Editor. This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
 
 * :ref:`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`  -- **STABLE**
 

@@ -22,7 +22,7 @@ Once required in and enabled, this plugin provides the following features to dij
 
 * Button with icon in toolbar for inserting a hyperlink.
 * Button with icon in toolbar for inserting an image
-* auto-population of input fields when the a hyperlink or image is selected in the document and the appropriate button in the toolbar is pressed.
+* auto-population of input fields when a hyperlink or image is selected in the document and the appropriate button in the toolbar is pressed.
 * URL input is validated.  The preferred input are full urls, such as http://example.com/somepage.html, but it will 'permit' local urls so long as they are prefixed accordingly, such as /mydir/myfile.html or ./mydir/myfile.html.   The same validation is done for both image inserts and hyperlink inserts.
 * Description text for hyperlinks is validated.  It cannot be empty.
 * Descriptions (alt text) for images is optional, but highly recommended for accessibility reasons.

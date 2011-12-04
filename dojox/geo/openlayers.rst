@@ -133,7 +133,7 @@ Some examples of how to set/change the base layer type:
 Specifying the displayed part of the map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can define the initial location and extent of map that is displayed by using the the fitTo method of the map. This method can take several type of arguments such as extent to be displayed or the initial location.
+You can define the initial location and extent of map that is displayed by using the fitTo method of the map. This method can take several type of arguments such as extent to be displayed or the initial location.
 You can also define the initial location as markup attribute if you use the markup widget version of the map component.
 Initial location ca be in the form of :
 

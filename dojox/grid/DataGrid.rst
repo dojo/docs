@@ -582,7 +582,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </style>
 
 
-Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behaviour of the selection functionality:
+Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behavior of the selection functionality:
 
 'none'
   deactivates the selection functionality

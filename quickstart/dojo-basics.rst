@@ -82,7 +82,7 @@ dijit.byId
 
 * If you are using just a normal domNode, use dojo.byId
 * If you are working with a Dijit, use dijit.byId
-* If you need access to the Dijit's domNode, it is stored in the the ``.domNode`` property of the Dijit reference:
+* If you need access to the Dijit's domNode, it is stored in the ``.domNode`` property of the Dijit reference:
 
 .. js ::
 

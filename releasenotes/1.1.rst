@@ -124,7 +124,7 @@ Dojo 1.1 can co-exist with other versions of Dojo. You can even rename Dojo to c
 
 Loading Dojo after page load
 ----------------------------
-Dojo 1.1 can can be loaded after page load (after the window.onload event fires) by setting djConfig.afterOnLoad to true. Use in conjunction with djConfig.require, to load dojo along with the modules you needed dojo.required after dojo loads. See the The test page for an example.
+Dojo 1.1 can can be loaded after page load (after the window.onload event fires) by setting djConfig.afterOnLoad to true. Use in conjunction with djConfig.require, to load dojo along with the modules you needed dojo.required after dojo loads. See the test page for an example.
 
 Expanded XMLHttpRequest method
 ------------------------------

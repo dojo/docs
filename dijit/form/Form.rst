@@ -20,7 +20,7 @@ Examples
 validate()
 ----------
 You can use `isValid()` or `validate()` to prevent an invalid form from submitting.
-The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behaviour to the previous example.
+The `validate()` function does some extra UI related work, including highlighting invalid dijits in the form, and scrolling the first invalid dijit into view.  Try opening this example and immediately clicking Submit, and compare the behavior to the previous example.
 
 
 .. code-example ::

@@ -11,7 +11,7 @@ dijit.WidgetSet
 .. contents::
    :depth: 2
 
-A dijit.WidgetSet is a collection of Dijit widgets. It can be used for bulk operation and control of groups of widgets. In Dojo 1.7, including dijit.WidgetSet will add Array-like functions to the main :ref:`dijit/registry` object as well for backwards-compatibility; this behaviour will be removed in Dojo 2.0.
+A dijit.WidgetSet is a collection of Dijit widgets. It can be used for bulk operation and control of groups of widgets. In Dojo 1.7, including dijit.WidgetSet will add Array-like functions to the main :ref:`dijit/registry` object as well for backwards-compatibility; this behavior will be removed in Dojo 2.0.
 
 Introduction
 ============

@@ -26,7 +26,7 @@ The charting data to supply must be available as a dataStore object implementing
 
 The data series (i.e. the color scheme for different value ranges)  is also a Json object of Json file described below.
 
-Two Dijits components are provided, one acting a a widget wrapper for the Map component, the other as a legend explaining map colors.
+Two Dijits components are provided, one acting as a widget wrapper for the Map component, the other as a legend explaining map colors.
 
 Several interactor classes can be installed on the Map component, to allow navigation - mainly zoom, pan and select - on different hardware configurations :
 

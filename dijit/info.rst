@@ -55,7 +55,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
      <p>I am some content</p>
   </div>
 
-If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other :ref:`DOM manipulation <quickstart/dom>`:
+If you need a reference to the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other :ref:`DOM manipulation <quickstart/dom>`:
 
 .. js ::
   

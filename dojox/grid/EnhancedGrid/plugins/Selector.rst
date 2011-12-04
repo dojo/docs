@@ -265,7 +265,7 @@ onStartSelect(type, startPoint):
 	When some of the grid contents are starting to be selected. A typical time point is when the user presses down the mouse selection button.
 
 onEndSelect(type, startPoint, endPoint):
-	When the selection completes. A typical time point is when the user releases the the mouse selection button.
+	When the selection completes. A typical time point is when the user releases the mouse selection button.
 
 onStartDeselect(type, startPoint):
 	When the user start to deselect some grid contents. i.e. removing some parts of the current selection.

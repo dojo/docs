@@ -72,7 +72,7 @@ Any dojox.image.Lightbox-es on the same page share an instance of a dojox.image.
 
 With JavaScript disabled using this method, natural links well be followed, showing the Image directly. This will also occur if the user clicks on the link before the :ref:`parser <dojo/parser>` runs.
 
-A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' to show a the image defined by the Lightbox that triggered the event.
+A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' to show the image defined by the Lightbox that triggered the event.
 
 .. js ::
 

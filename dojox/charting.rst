@@ -958,7 +958,7 @@ Here is an example showing how to attach a MouseZoomAndPan action to the chart a
 MouseIndicator
 --------------
 
-This action display a data indicator on the the chart when dragging the mouse over the chart.
+This action display a data indicator on the chart when dragging the mouse over the chart.
 
 MouseIndicator supports several additional parameters:
 
@@ -1034,7 +1034,7 @@ Here is an example showing how to attach a TouchZoomAndPan action to the chart a
 TouchIndicator
 --------------
 
-This action display a data indicator on the the chart when touching the chart. If there is a single touch point the data indicator displays the value of the data point closest to the touch point. If there are two touch points the data indicator display the data variation between the two touch points.
+This action display a data indicator on the chart when touching the chart. If there is a single touch point the data indicator displays the value of the data point closest to the touch point. If there are two touch points the data indicator display the data variation between the two touch points.
 
 TouchIndicator supports several additional parameters:
 

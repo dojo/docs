@@ -67,7 +67,7 @@ The PrettyPrint plugin supports three options that control how it formats the te
 |                                   |multiple lines.                                                      |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | entityMap                         |An array of entity character mappings to encode special characters to| NO                     |
-|                                   |If not provided, then it uses the the following encodings for        |                        |
+|                                   |If not provided, then it uses the following encodings for            |                        |
 |                                   |entities: HTML (dojox.html.entities.html), and the following extras  |                        |
 |                                   |pound, cent, yen, ellipsis, copyright, registered trademark, section |                        |
 |                                   |and euro.  Those are the most common ones used in HTML documents.    |                        |

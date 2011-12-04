@@ -22,7 +22,9 @@ Each javascript source file must have at least one dojo.provide() call at the to
 Usage
 =====
 
-dojo.provide is an integral part of Dojo's module system and its loader. dojo.provide() tells the loader that the a module has been provided for the given name. It also creates a JavaScript object for the name.
+dojo.provide is an integral part of Dojo's module system and its loader.
+dojo.provide() tells the loader that the module has been provided for the given name.
+It also creates a JavaScript object for the name.
 
 This code example is for a my/module.js file. Note the convention of placing the dojo.provide call before dojo.require calls.
 

@@ -11,7 +11,7 @@ dojox.editor.plugins.NormalizeIndentOutdent
 .. contents::
     :depth: 2
 
-Have you ever wanted to pull your hair out because the the way browsers handle the native indent and outdent commands is inconsistent and in some cases downright wrong?  If so, then this plugin may help you!  This plugin attempts to control how indenting and outdenting of content is handled and do it consistently across all browsers.  It uses margin-left styling to handle indenting of block nodes, it will wrap and indent body-level text, and it will indent and outdent lists correctly.  It even attempts to fix malformed lists.
+Have you ever wanted to pull your hair out because the way browsers handle the native indent and outdent commands is inconsistent and in some cases downright wrong?  If so, then this plugin may help you!  This plugin attempts to control how indenting and outdenting of content is handled and do it consistently across all browsers.  It uses margin-left styling to handle indenting of block nodes, it will wrap and indent body-level text, and it will indent and outdent lists correctly.  It even attempts to fix malformed lists.
 
 This plugin is new in 1.4, and is still being worked on, so it is considered experimental.  Any feedback you can provide on issues you encounter would be appreciated.
 
