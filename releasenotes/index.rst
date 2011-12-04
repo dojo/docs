@@ -10,18 +10,18 @@ Release Notes Dojo Toolkit
 The Release Notes are specific to each version of the Dojo Toolkit. Please select your version from the list below to 
 see the Release Notes for it.
 
-Current Development
-===================
-
-* :ref:`Dojo Toolkit v1.8 Release Notes <releasenotes/1.8>`
-
 Current Stable
 ==============
 
 * :ref:`Dojo Toolkit v1.7 Release Notes <releasenotes/1.7>`
 
-Older versions
-==============
+Current Development
+===================
+
+* :ref:`Dojo Toolkit v1.8 Release Notes <releasenotes/1.8>`
+
+Archive
+=======
 
 * :ref:`Dojo Toolkit v1.6 Release Notes <releasenotes/1.6>`
 * :ref:`Dojo Toolkit v1.5 Release Notes <releasenotes/1.5>` (:ref:`Japanese <releasenotes/1.5_ja>`)
