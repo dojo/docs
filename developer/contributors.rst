@@ -253,7 +253,7 @@ Individuals who have signed Dojo CLAs
 * Jones, Russell
 * Jonsson, Olle
 * Joshi, Neil
-* Julien, Mathevet
+* Julien, Mathevet (moogle)
 * Jurkiewicz, Jared
 * Kaihol, Antti
 * Kang, Huynh
