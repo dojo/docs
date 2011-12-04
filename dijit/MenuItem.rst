@@ -42,7 +42,7 @@ A programmatically created MenuItem
      <div id="wrapper"></div>
 
 
-Creation from markup is more simpler and structured.
+Creation from markup is simpler and more structured.
 
 .. code-example ::
 
