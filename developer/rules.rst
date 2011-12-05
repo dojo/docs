@@ -1,10 +1,10 @@
 .. _developer/rules:
 
 ===============================================
-So You've Been Offered A Spot As A Committer...
+So You've Been Offered a Spot as a Committer...
 ===============================================
 
-committer community licensing
+Committer Community Licensing
 =============================
 First, congratulations! Being offered a spot as a committer is a sign that we (the Dojo team) think highly of your contributions, value your insights, and believe that you have made significant efforts to improve the toolkit and community. Offers to join the project a committer aren't extended lightly, and we hope you'll take the decision to accept seriously. Before you say "yes", there are some things you should know.
 

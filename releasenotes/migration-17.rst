@@ -1,8 +1,8 @@
 .. _releasenotes/migration17:
 
-========================================
-Hints about Migrating from 1.x to to 1.7
-========================================
+=====================================
+Hints about Migrating from 1.x to 1.7
+=====================================
 
 .. contents ::
     :depth: 2

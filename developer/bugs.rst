@@ -46,7 +46,7 @@ Please search for duplicates prior to filing a ticket. If no duplicate is found,
 :type:          One of Defect, Enhancement, Task. If it's broken and needs fixed, Defect. If it's a "nice to have" functionality, Enhancement.
                 Everything else (such as writing this document) is a Task.
 :milestone:     Non-committers should leave this as ``tbd``, or "To be determined". This milestone indicates to the committers a particular bug
-                has not be addressed and needs to. A target version will be set unless the ticket is closed as invalid/wontfix.
+                has not been addressed and needs to. A target version will be set unless the ticket is closed as invalid/wontfix.
 :version:       Selects which version this bug appears in. Typically, all reports must come against a release version or trunk. If against a
                 released version, a test to verify it is not still broken in trunk is needed.
 :keywords:      Useful tags to help in searching. Eg: dojox, layout, FloatingPane.

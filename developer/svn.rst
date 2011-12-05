@@ -16,13 +16,13 @@ Source control is one of those things that one rarely notices they need until it
 
 General Information
 ===================
-Across the gamut of source control systems, there is quite a bit of confusing (and non-portable) nomenclature surrounding the common actions that you as a developer will preform with the source control system. We will use the terms here that are commonly accepted by CVS and Subversion users and administrators. So what are those terms?
+Across the gamut of source control systems, there is quite a bit of confusing (and non-portable) nomenclature surrounding the common actions that you as a developer will perform with the source control system. We will use the terms here that are commonly accepted by CVS and Subversion users and administrators. So what are those terms?
 
   * **Checkout**: a "checkout" is a local working copy of a "repository". This is the set of files that you will be working with when making modifications to Dojo.
   * **Repository**: the logical grouping of project-related files on the server. A subversion server may host multiple repositories, but it is quite likely that your changes will be constrained to a single repository.
   * **Checkin**: transmitting a set of changes from your local checkout to the server. Your changes will then be available to everyone else who has a checkout of that repository when they update their view.
   * **Head**: (also called the "main line") the most up-to-date version of the source control tree. Most of your checkins will be to the "head" of the tree, although in some more complex situations, you may be checking in to a "branch".
-  * **Branch**: A clone of the source control repository from some point in time which contains a set of changes which are not shared with the "head" or main line. Branches are one way for a developer to work on a particular feature (usually a large feature) and have intermediate changes versioned without having to worry about whether or not his or her changes will break someone else's code. Changes can then be "merged" back back to the main line when the developer thinks they are stable.
+  * **Branch**: A clone of the source control repository from some point in time which contains a set of changes which are not shared with the "head" or main line. Branches are one way for a developer to work on a particular feature (usually a large feature) and have intermediate changes versioned without having to worry about whether or not his or her changes will break someone else's code. Changes can then be "merged" back to the main line when the developer thinks they are stable.
   * **Merge**: merging is the process of taking several versions of a single file and turning them into one authoritative version. Merging in is often an automated process with Subversion, but you may at times be called upon to merge a set of files manually (when the server cannot automatically take care of it).
 
 Unlike some other source control systems, Subversion manages files on your disk without interjecting itself obtrusively into your workflow. You can change large sets of files without worrying if anyone else is also modifying those files.
@@ -120,12 +120,12 @@ Setup for OS X
 --------------
 We assume that you are on at least OS 10.3 (Panther).
 
-You may need to install the Developer Tools package in order to get the most up-to-date JDK (for running custom Dojo builds). It is assumed that operations will be preformed at the command line, and Project Builder/XCode configuration is not covered here. It is, however, recommended that you download the latest set of developer tools from http://connect.apple.com (free registration required).
+You may need to install the Developer Tools package in order to get the most up-to-date JDK (for running custom Dojo builds). It is assumed that operations will be performed at the command line, and Project Builder/XCode configuration is not covered here. It is, however, recommended that you download the latest set of developer tools from http://connect.apple.com (free registration required).
 
 Once you have the OS X developer tools installed, download the latest 1.x Subversion package (1.3 as of this writing) from:
 http://metissian.com/projects/macosx/subversion/
 
-The downloads are an OS X installer package. Install it, at which point the instructions from the Linux section will be sufficient to get you up and running.
+The download is an OS X installer package. Install it, at which point the instructions from the Linux section will be sufficient to get you up and running.
 
 Next, take a minute to update your svn config settings.
 
