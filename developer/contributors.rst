@@ -134,6 +134,7 @@ Individuals who have signed Dojo CLAs
 * Dvoryansky, Leonid
 * Dwelle, Tim
 * Eagan, Sean
+* Easterbrook, Zachary
 * Edmondson, Paul
 * Eernisse, Matthew
 * Elliot, Thomas
@@ -619,6 +620,7 @@ Corporations or Organizations with a CCLA on file
 * Claritum, Ltd
 * Clipperz SRl
 * Cogini Hong Kong Limited
+* Core Technology
 * Coyote Point System, Inc.  Sachin Maheshwari, Sergey Katsev
 * Curam Software
 * DFKI GmbH
