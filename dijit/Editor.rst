@@ -11,21 +11,21 @@ dijit.Editor
 .. contents::
     :depth: 2
 
-Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to look and work like a word processor. The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
+Dijit's Rich Text editor, dijit.Editor, is a text box on steroids. Designed to look and work like a word processor. The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
 
 Features
 ========
 
 * Provides Rich Text (word processor-like), editing of HTML documents.
 * Extensible toolbar with a default set of icons for common actions (bold, italic, underline, indent, and so on)
-* Cross-browser support.  The RTE capabilities of browsers vary in what they provide and how they are set up.  The dijitEditor abstracts this away and provides a single wat to create a rich-text editing field in your pages.
+* Cross-browser support.  The RTE capabilities of browsers vary in what they provide and how they are set up.  The dijit.Editor abstracts this away and provides a single way to create a rich-text editing field in your pages.
 * Built-in filtering support.  The editor provides hooks to register HTML and DOM filters with the editor, to pre and post process data going in, or coming out of, the document being edited.
 * Pluggable architecture.  The editor's functionality can be extended by implementing and registering plugins with the editor.  In fact, all the base commands of editor are effectively plugins.  The plugin architecture makes it relatively easy to add new buttons and actions to the toolbar, to being 'headless', where it simply registers filters or augments existing actions.
 
 Limitations
 ===========
 
-* The dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
+* Dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
 
 .. html ::
  
@@ -232,7 +232,7 @@ This is a list of the default commands (plugins) supported by the editor as buil
 | createLink                   |Create a hyperlink.  Works best when using the                                                       |
 |                              |`dijit._editor.plugins.LinkDialog <dijit/_editor/plugins/LinkDialog>` plugin.                        |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
-| unlink                       |Unlink the current hyperlink undet the cursor/selected text.                                         |
+| unlink                       |Unlink the current hyperlink under the cursor/selected text.                                         |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 | delete                       |Delete the currently selected text.                                                                  |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
@@ -244,7 +244,7 @@ There are several additional editor plugins provided by dijit and are listed on 
 These plugins add very useful functionality above and beyond the basics of editor, such as setting text color or printing.
 Please note that several of the plugins actually provide multiple capabilities.
 
-DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.
+DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of dijit.Editor.
 These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.
 Please refer to the :ref:`dojox.editor.plugins <dojox/editor/plugins>` page for more information about them.
 
@@ -300,8 +300,8 @@ Keyboard for Editor Toolbar
 ====================================================================    ======================================================================
 Action	                                                                Key
 ====================================================================    ======================================================================
-Move focus to the next enabled button in the toolbar.	                arrow right in left to right locales, arrow left in right to left locales
-Move focus to the previous widget in the toolbar	                    arrow left in left to right locales; arrow right in right to left locales.
+Move focus to the next enabled button in the toolbar.	                Arrow right in left to right locales, arrow left in right to left locales
+Move focus to the previous widget in the toolbar	                    Arrow left in left to right locales; arrow right in right to left locales.
 ====================================================================    ======================================================================
 
 The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated. Use the backspace or escape key to clear the current selection in the textbox associated with the drop down. When the list of choices is not activated, the arrow keys will move between toolbar buttons rather than within the combobox or select.

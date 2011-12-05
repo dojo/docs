@@ -13,7 +13,7 @@ dijit._editor.plugins.LinkDialog
 .. contents::
     :depth: 2
 
-Have you ever wanted to insert a hyperlink into a document you are editing in the Dojo RTE (:ref:`dijit.Editor <dijit/Editor>`)?  Have you wanted to insert images as well?  If so, then this plugin provides you a basic set of dropdown dialogs to allow you to do just that.  The dialogs are not complex and are intended as example implementations so that users can implement dialogs of their own, but they still work fairly well as is.
+Have you ever wanted to insert a hyperlink into a document you are editing in :ref:`dijit.Editor <dijit/Editor>`?  Have you wanted to insert images as well?  If so, then this plugin provides you a basic set of dropdown dialogs to allow you to do just that.  The dialogs are not complex and are intended as example implementations so that users can implement dialogs of their own, but they still work fairly well as is.
 
 Features
 ========
@@ -22,10 +22,10 @@ Once required in and enabled, this plugin provides the following features to dij
 
 * Button with icon in toolbar for inserting a hyperlink.
 * Button with icon in toolbar for inserting an image
-* auto-population of input fields when a hyperlink or image is selected in the document and the appropriate button in the toolbar is pressed.
+* Auto-population of input fields when a hyperlink or image is selected in the document and the appropriate button in the toolbar is pressed.
 * URL input is validated.  The preferred input are full urls, such as http://example.com/somepage.html, but it will 'permit' local urls so long as they are prefixed accordingly, such as /mydir/myfile.html or ./mydir/myfile.html.   The same validation is done for both image inserts and hyperlink inserts.
 * Description text for hyperlinks is validated.  It cannot be empty.
-* Descriptions (alt text) for images is optional, but highly recommended for accessibility reasons.
+* Descriptions (alt text) for images are optional, but highly recommended for accessibility reasons.
 * Double-Clicking on a link should activate the Link Properties dialog dropdown on the button.
 * Double-Clicking on an image should activate the Image Properties dialog dropdown on the button.
 * Single-clicking an image should select the image.  This makes it easy to select, then edit, an image in the page

@@ -10,12 +10,14 @@ dijit.editor.plugins
 .. contents::
    :depth: 2
 
-The dijit.editor.plugins is a component is a holding place for additional features for the dijit.Editor that load via the dijit.Editor plugin infrastructure. These plugins are generally well tested and are known to work well across browsers. Plugins with specific limitations are addressed in their own documentation
+Dijit.Editor.plugins component is a holding place for additional features for dijit.Editor that load via dijit.Editor plugin infrastructure.
+These plugins are generally well tested and are known to work well across browsers.
+Limitation of specific plugins are addressed in their own documentation.
 
 Introduction
 ============
 
-There are currently a small set of nice features that can be plugged into the dijit.Editor that are contained within this package. Please refer to the following list for additional details:
+There are currently a small set of nice features that can be plugged into dijit.Editor that are contained within this package. Please refer to the following list for additional details:
 
 * :ref:`dijit._editor.plugins.ToggleDir <dijit/_editor/plugins/ToggleDir>`  -- **EXPERIMENTAL**
 
@@ -27,33 +29,33 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dijit._editor.plugins.FontChoice <dijit/_editor/plugins/FontChoice>`  -- **STABLE**
 
-  A plugin that enables a 'Font choice' editor for the dijit.Editor. This provides the commands 'fontName', 'fontSize', and 'formatBlock' editor commands to alter font, size, and other formatting options of selected text.
+  A plugin that enables a 'Font choice' editor for dijit.Editor. This provides the commands 'fontName', 'fontSize', and 'formatBlock' editor commands to alter font, size, and other formatting options of selected text.
 
 * :ref:`dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor>`  -- **STABLE**
 
-  A plugin that enables a 'Font color' editor for the dijit.Editor. This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
+  A plugin that enables a 'Font color' editor for dijit.Editor. This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
 
 * :ref:`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`  -- **STABLE**
 
-  A plugin that enables a 'FullScreen' option for the dijit.Editor. This provides a button plus hotkey command for putting the editor in 'Full Screen' mode, where it will fill the entire viewport of the window containing it.
+  A plugin that enables a 'FullScreen' option for dijit.Editor. This provides a button plus hotkey command for putting the editor in 'Full Screen' mode, where it will fill the entire viewport of the window containing it.
 
   **This plugin is new to the Dojo Toolkit 1.4.**
 
 * :ref:`dijit._editor.plugins.ViewSource <dijit/_editor/plugins/ViewSource>`  -- **STABLE**
 
-  A plugin that enables a 'ViewSource' mode for the dijit.Editor. This provides a button plus hotkey command for putting the editor in 'Source' mode, where the content HTML can be directly edited.
+  A plugin that enables a 'ViewSource' mode for dijit.Editor. This provides a button plus hotkey command for putting the editor in 'Source' mode, where the content HTML can be directly edited.
 
   **This plugin is new to the Dojo Toolkit 1.4.**
 
 * :ref:`dijit._editor.plugins.Print <dijit/_editor/plugins/Print>`  -- **STABLE**
 
-  A simple plugin that enables a 'Print' command for the dijit.Editor. This provides a button for printing the contents of the editor.
+  A simple plugin that enables a 'Print' command for dijit.Editor. This provides a button for printing the contents of the editor.
 
   **This plugin is new to the Dojo Toolkit 1.4.**
 
 * :ref:`dijit._editor.plugins.NewPage <dijit/_editor/plugins/NewPage>`  -- **STABLE**
 
-  A simple plugin that enables a 'New Page' command for the dijit.Editor. This provides a button for resetting the contents of the editor to some default value.
+  A simple plugin that enables a 'New Page' command for dijit.Editor. This provides a button for resetting the contents of the editor to some default value.
 
   **This plugin is new to the Dojo Toolkit 1.4.**
 
