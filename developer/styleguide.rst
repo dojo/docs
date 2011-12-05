@@ -30,13 +30,13 @@ Table of core API naming constructs:
 +---------------------+------------------------------+-----------------------------------+
 | class               | CamelCase                    |                                   |
 +---------------------+------------------------------+-----------------------------------+
-| public method       | mixedCase                    | whether class or instance         |
+| public method       | mixedCase                    | both class and instance           |
 |                     |                              | method. lower_case() is           |
 |                     |                              | acceptable only if the particular |
 |                     |                              | function is mimicking another     |
 |                     |                              | API.                              |
 +---------------------+------------------------------+-----------------------------------+
-| public var          | mixesCase                    |                                   |
+| public var          | mixedCase                    |                                   |
 +---------------------+------------------------------+-----------------------------------+
 | constant            | CamelCase or UPPER_CASE      |                                   |
 +---------------------+------------------------------+-----------------------------------+
@@ -148,7 +148,7 @@ Naming Conventions
 Specific Naming Conventions
 ===========================
 
-    #. The terms get/set SHOULD NOT used where a field is accessed, unless the variable being accessed is lexically private.
+    #. The terms get/set SHOULD NOT be used where a field is accessed, unless the variable being accessed is lexically private.
 
     #. The ``is`` prefix SHOULD be used for boolean variables and methods. Alternatives include ``has`` ``can`` and ``should``
 

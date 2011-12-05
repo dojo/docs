@@ -49,7 +49,7 @@ If color is removed, the difference between the active and non-active tabs can s
 
 .. image:: soriatabcontainergrey.png
 
-The following two images show another example using the dojo menu in the tundra theme. A blue background is applied to to the menu item with focus.
+The following two images show another example using the dojo menu in the tundra theme. A blue background is applied to the menu item with focus.
 
 .. image:: tundramenu.png
 
@@ -78,7 +78,7 @@ WCAG 2.0 has some specific requirements about the contrast ratio of text and ima
 Perceivable without color or images
 -----------------------------------
 
-This requirement is intended to target low vision users who may have special display settings to help with a specific visual impairment. It can often get confused with the requirement that "Identification and interaction with visual elements does not rely on color alone" which must be met for the default display mode seen by the majority of users. Low Vision users often use a display setting referred to as High Contrast Mode. In Windows, this setting removes all colors and background images from Web pages. See `Widgets and High Contast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ for a more complete description.
+This requirement is intended to target low vision users who may have special display settings to help with a specific visual impairment. It can often get confused with the requirement that "Identification and interaction with visual elements does not rely on color alone" which must be met for the default display mode seen by the majority of users. Low Vision users often use a display setting referred to as High Contrast Mode. In Windows, this setting removes all colors and background images from Web pages. See `Widgets and High Contrast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ for a more complete description.
 
 In Windows High Contrast mode any action or function that is differentiated by color or via a CSS background image is no longer visible. Using a background color to distinguish the active tab within a tab container which meets the first requirement does not meet this requirement since there is no longer any color differentiation for the user to comprehend. An additional means of identifying the active tab, such as a different outline around the tab or underlining the tab title must be provided for this mode. Icons and visual elements created via CSS background images are no longer visible and a real <img> element or text equivalent must be provided.
 
@@ -129,7 +129,7 @@ In addition to high contrast mode, the UI must also be usable if images are turn
 How to Test
 ~~~~~~~~~~~
 
-In order to completely test this requirement you will need to use Windows and turn on high contrast mode. The `Widgets and High Contast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ post has instructions for enabling high contrast mode. With high contrast mode turned on verify that all of the visual elements of the component can be seen and identified. Perform all actions associated with the component such as selection, focus, and activation and verify that all are visually identifiable. Note that browser provided focus indication is sufficient - you don't need to add additional styles to enhance focus.
+In order to completely test this requirement you will need to use Windows and turn on high contrast mode. The `Widgets and High Contrast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ post has instructions for enabling high contrast mode. With high contrast mode turned on verify that all of the visual elements of the component can be seen and identified. Perform all actions associated with the component such as selection, focus, and activation and verify that all are visually identifiable. Note that browser provided focus indication is sufficient - you don't need to add additional styles to enhance focus.
 
 In High Contrast mode <img> elements will still be displayed. To confirm that text alternatives have been provided for <img> elements turn display of images off in the browser. Verify that an appropriate text alternative is provided for any images which are essential to the UI.
 
@@ -141,7 +141,7 @@ This requirement comes from the WCAG 2.0 guideline Text Alternatives: `Provide t
 Visible at various font sizes
 -----------------------------
 
-Some users set their browser to use larger font sizes. All of the Dojo components should render and work properly at larger and smaller font sizes. In order for the user's font size preference to work, Dojo should use relative font sizes with em and % units, and avoid fixed font sizes such as 12px or 10pt. Items such as the size of the color palette square or checkbox and radio button may be defined using fixed sizes since they do not need to change in response to larger font sizes. While fixed sizes can be used for margins and padding, note that the margin or padding will no longer change in relation to the font size which may affect the overall visual look and feel. In addition, larger or smaller fonts may cause line wrapping within components so keep that in mind when implementing specific layouts and placement. Make certain that any parameters to widgets that are used to specify height and width can accept and respond to relative sizes.
+Some users set their browser to use larger font sizes. All of the Dojo components should render and work properly at larger and smaller font sizes. In order for the user's font size preference to work, Dojo should use relative font sizes with em and % units, and avoid fixed font sizes such as 12px or 10pt. Items such as the size of the color palette square or checkbox and radio button may be defined using fixed sizes since they do not need to change in response to larger font sizes. While fixed sizes can be used for margins and padding, note that the margin or padding will no longer change in relation to the font size, which may affect the overall visual look and feel. In addition, larger or smaller fonts may cause line wrapping within components so keep that in mind when implementing specific layouts and placement. Make certain that any parameters to widgets that are used to specify height and width can accept and respond to relative sizes.
 
 How to Test
 ~~~~~~~~~~~
@@ -167,7 +167,7 @@ Not all users want or are able to use a mouse for navigation so a keyboard mecha
 How to Test
 ~~~~~~~~~~~
 
-Break free from your mouse! Any developer can test using just the keyboard. You may have to learn a few basic keystrokes for general navigation within your browser. There are some references for general keyboard usage in the :ref:`Testing Widgets For Accessibility <quickstart/writingWidgets/a11yTesting>` section. Make certain that all functionality of the component can be accessed via the keyboard. The keyboard usage of all existing dijit widgets are documented on the book page for each widget in Part 2: Dijit.
+Break free from your mouse! Any developer can test using just the keyboard. You may have to learn a few basic keystrokes for general navigation within your browser. There are some references for general keyboard usage in the :ref:`Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>` section. Make certain that all functionality of the component can be accessed via the keyboard. The keyboard usage of all existing dijit widgets are documented on the book page for each widget in Part 2: Dijit.
 
 More Details
 ~~~~~~~~~~~~
@@ -188,7 +188,7 @@ Since ARIA is still new, assistance from a developer familiar with ARIA and assi
 How to Test
 ~~~~~~~~~~~
 
-The ARIA specification is currently only implemented on Windows in Firefox 2 and works with the Window-Eyes and JAWS screen readers. Firefox 3 will support ARIA on Windows and Linux. ARIA support is being added to IE 8, Opera 9.5 and a post 3.0 version of Safari. The Testing Widgets for Accessibility section has information on how to test ARIA. Anyone can perform basic ARIA testing using the MS Inspect or ACCProbe tools. For complete testing screen reeder skills are required. If a developer requires assistance creating or verifying ARIA implementation, create a Dojo Trac ticket with the component set to a11y - review. Please try to do as much ARIA implementation and testing as possible on your own and don't just throw the work at an accessibility person. Engage accessibility help before the widget is complete so accessibility can be included in the design process.
+The ARIA specification is currently only implemented on Windows in Firefox 2 and works with the Window-Eyes and JAWS screen readers. Firefox 3 will support ARIA on Windows and Linux. ARIA support is being added to IE 8, Opera 9.5 and a post 3.0 version of Safari. The Testing Widgets for Accessibility section has information on how to test ARIA. Anyone can perform basic ARIA testing using the MS Inspect or ACCProbe tools. For complete testing screen reader skills are required. If a developer requires assistance creating or verifying ARIA implementation, create a Dojo Trac ticket with the component set to a11y - review. Please try to do as much ARIA implementation and testing as possible on your own and don't just throw the work at an accessibility person. Engage accessibility help before the widget is complete so accessibility can be included in the design process.
 
 More Details
 ~~~~~~~~~~~~
