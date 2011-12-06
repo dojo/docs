@@ -6,7 +6,10 @@ So You've Been Offered a Spot as a Committer...
 
 Committer Community Licensing
 =============================
-First, congratulations! Being offered a spot as a committer is a sign that we (the Dojo team) think highly of your contributions, value your insights, and believe that you have made significant efforts to improve the toolkit and community. Offers to join the project a committer aren't extended lightly, and we hope you'll take the decision to accept seriously. Before you say "yes", there are some things you should know.
+First, congratulations!
+Being offered a spot as a committer is a sign that we (the Dojo team) think highly of your contributions, value your insights, and believe that you have made significant efforts to improve the toolkit and community.
+Offers to join the project a committer aren't extended lightly, and we hope you'll take the decision to accept seriously.
+Before you say "yes", there are some things you should know.
 
 Process
 =======
@@ -20,9 +23,17 @@ Community
 =========
 **Voting**: As a committer on Dojo you will have a vote in both project-level and Foundation-level issues. Every project at the Dojo Foundation is potentially run differently, but most have some sort of "Benevolent Dictator For Live" or "Project Lead" who sets the agenda. Dojo as a project is organized in this style, but most decision making is made by consensus. That said, voting is part of the Dojo culture and your participation as a committer is required.
 
-Any committer can start a vote on matters relating to Dojo (the project) or the Foundation as a whole at any time. Only committers on Dojo itself may vote in project-level issues. Project-level votes are carried out on the `dojo-contributors mailing list <http://mail.dojotoolkit.org/mailman/listinfo/dojo-contributors/>`_ via "+1" and "-1" messages. The same format is used for Foundation-level issues but those votes are held on the `foundation list <http://mail.dojotoolkit.org/mailman/listinfo/foundation>`_ and in those votes committers on ALL Foundation projects get an equivalent vote. Votes are kicked off with announcement emails (`like this one <http://mail.dojotoolkit.org/pipermail/foundation/2008-April/000068.html>`_) containing "[VOTE]" in the subject line. Vote announcement mails should contain the proposal, the terms of the voting, the timeframe for voting, and any other relevant information to the matter at hand.
+Any committer can start a vote on matters relating to Dojo (the project) or the Foundation as a whole at any time.
+Only committers on Dojo itself may vote in project-level issues.
+Project-level votes are carried out on the `dojo-contributors mailing list <http://mail.dojotoolkit.org/mailman/listinfo/dojo-contributors/>`_ via "+1" and "-1" messages. The same format is used for Foundation-level issues but those votes are held on the `foundation list <http://mail.dojotoolkit.org/mailman/listinfo/foundation>`_ and in those votes committers on ALL Foundation projects get an equivalent vote. Votes are kicked off with announcement emails (`like this one <http://mail.dojotoolkit.org/pipermail/foundation/2008-April/000068.html>`_) containing "[VOTE]" in the subject line. Vote announcement mails should contain the proposal, the terms of the voting, the timeframe for voting, and any other relevant information to the matter at hand.
 
-Votes may be started by any committer on any matter at any time. This may sound like it leads to chaos, but in practice neither Foundation or project-level votes are required on a regular basis. The reason for this is that voting is not a good way to solve problems. It's a good way to perhaps get people on the record in some way regarding an issue, but the act of starting a vote rarely has any influence on what people think about that issue. If votes are highly contentious, it probably means that the person starting the vote hasn't done the background work to convince others that their idea or proposal is good. Indeed, Apache's experience tells us that projects which vote frequently or which vote to settle relatively minor issues tend to become dysfunctional very quickly. As a committer your power to start votes gives you a powerful way to influence the direction of the project and the Foundation, but remember to use that power only when necessary.
+Votes may be started by any committer on any matter at any time.
+This may sound like it leads to chaos, but in practice neither Foundation or project-level votes are required on a regular basis.
+The reason for this is that voting is not a good way to solve problems.
+It's a good way to perhaps get people on the record in some way regarding an issue, but the act of starting a vote rarely has any influence on what people think about that issue.
+If votes are highly contentious, it probably means that the person starting the vote hasn't done the background work to convince others that their idea or proposal is good.
+Indeed, Apache's experience tells us that projects which vote frequently or which vote to settle relatively minor issues tend to become dysfunctional very quickly.
+As a committer your power to start votes gives you a powerful way to influence the direction of the project and the Foundation, but remember to use that power only when necessary.
 
 **Meetings**: As you know by now, `weekly team meetings <http://bugs.dojotoolkit.org/wiki/ProjectMeeting>`_ are held nearly every week. Your participation in these meetings, while not strictly mandatory, is greatly appreciated. Indeed, the weekly meetings are one of the few times when most of the project contributors are available all at the same time and therefore provide a much-needed chance to discuss issues and catch up with others whose work you may be relying on or whose advice you need. The meetings also provide a vital forum for getting hard issues aired and discussed, and so we encourage you to attend and participate if it is at all possible.
 
@@ -38,4 +49,7 @@ Systems
 
 Ready?
 ======
-If, after reading and considering all of this, you still want to accept a spot as a committer on Dojo, we'd be honored to have you join us. Don't hesitate to ask questions or get clarifications on anything in this document before or after you make your decision, and don't feel rushed. Whichever way you chose, we want to keep working with you in the future to make Dojo better. Thanks for your hard work so far and congratulations on your accomplishments to-date.
+If, after reading and considering all of this, you still want to accept a spot as a committer on Dojo, we'd be honored to have you join us.
+Don't hesitate to ask questions or get clarifications on anything in this document before or after you make your decision, and don't feel rushed.
+Whichever way you chose, we want to keep working with you in the future to make Dojo better.
+Thanks for your hard work so far and congratulations on your accomplishments to-date.

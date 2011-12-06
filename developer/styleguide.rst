@@ -16,7 +16,9 @@ General
 
 Any violation to this guide is allowed if it enhances readability.
 
-Guidelines in this document are informed by discussions carried out among the Dojo core developers. The most weight has been given to considerations that impact external developer interaction with Dojo code and APIs. Rules such as whitespace placement are of a much lower order importance for Dojo developers, but should be followed in the main in order to improve developer coordination.
+Guidelines in this document are informed by discussions carried out among the Dojo core developers.
+The most weight has been given to considerations that impact external developer interaction with Dojo code and APIs.
+Rules such as whitespace placement are of a much lower order importance for Dojo developers, but should be followed in the main in order to improve developer coordination.
 
 Quick Reference
 ===============
@@ -412,12 +414,14 @@ Documentation
 Markup Guidelines
 -----------------
 
-Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the :ref:`Dojo Inline Documentation <util/doctools/markup>` for information on dojo's proprietary format.
+Dojo's API documentation is written inline in the code, similar to JavaDoc.
+See the :ref:`Dojo Inline Documentation <util/doctools/markup>` for information on dojo's proprietary format.
 
 CSS
 ---
 
-The CSS styling basically inherits all the rules from JavaScript, that means "key: value" looks like in JS, etc. Therefore a CSS file might look like this:
+The CSS styling basically inherits all the rules from JavaScript, that means "key: value" looks like in JS, etc.
+Therefore a CSS file might look like this:
 
 .. html ::
 

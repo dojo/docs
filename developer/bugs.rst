@@ -10,7 +10,8 @@ Notes on how to use bug tracking
 
 .. contents ::
 
-At the Dojo Project we use Trac for issue tracking. These are some notes about the conventions we use when filing, closing, updating, and triaging issues (tickets).
+At the Dojo Project we use Trac for issue tracking.
+These are some notes about the conventions we use when filing, closing, updating, and triaging issues (tickets).
 
 Logging In
 ==========
@@ -20,7 +21,11 @@ The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from 
 Getting Notified
 ================
 
-Trac maintains a separate mapping of usernames to email addresses, outside of LDAP. While unfortunate, it is very easy to remedy. Click "preferences" in the Trac header, and enter your email address into the appropriate field. If the name in the "Full Name" field is not your logged in username, make it so. When Trac sends out notification emails, it will look for usernames in the ``CC:`` field on the ticket and use the associated email address you've provided.
+Trac maintains a separate mapping of usernames to email addresses, outside of LDAP.
+While unfortunate, it is very easy to remedy.
+Click "preferences" in the Trac header, and enter your email address into the appropriate field.
+If the name in the "Full Name" field is not your logged in username, make it so.
+When Trac sends out notification emails, it will look for usernames in the ``CC:`` field on the ticket and use the associated email address you've provided.
 
 You are notified if you are the a) owner of a ticket b) filer of a ticket or c) listed as a CSV item in the ``CC:`` filed on a ticket.
 
@@ -29,7 +34,9 @@ Alternative, you can subscribe to the ``dojo-checkins`` mailing list, and be ale
 Filing Tickets
 ==============
 
-Please search for duplicates prior to filing a ticket. If no duplicate is found, start a new issue by clicking "New Ticket" in the header. Fill in the following fields:
+Please search for duplicates prior to filing a ticket.
+If no duplicate is found, start a new issue by clicking "New Ticket" in the header.
+Fill in the following fields:
 
 :summary:       Some short text describing the issue. Be concise and accurate. Sensational summaries like "The sky has fallen, dojo.io.script..."
                 are often overlooked.
@@ -51,12 +58,14 @@ Please search for duplicates prior to filing a ticket. If no duplicate is found,
                 released version, a test to verify it is not still broken in trunk is needed.
 :keywords:      Useful tags to help in searching. Eg: dojox, layout, FloatingPane.
 
-If you have a patch, you should have indicated as such in the ``summary`` field. If you did, select the `I have files to attach` checkbox before continuing on to `Create Ticket`.
+If you have a patch, you should have indicated as such in the ``summary`` field.
+If you did, select the `I have files to attach` checkbox before continuing on to `Create Ticket`.
 
 Using the summary for good
 --------------------------
 
-Various ``[meta]`` style tags can be added to the summary to assist in understanding the scope of the ticket. Some common tags are:
+Various ``[meta]`` style tags can be added to the summary to assist in understanding the scope of the ticket.
+Some common tags are:
 
 :[meta]:        A generic ticket to track all of a type of commit. eg: "[meta] Expand inline documentation" to prevent needing to file individual
                 tickets for repositories that require a post-commit ref.
@@ -65,7 +74,9 @@ Various ``[meta]`` style tags can be added to the summary to assist in understan
 :[ccla]:        Used in conjunction with ``[patch]``, indicates the attached patch is covered under a Corporate CLA
 :[regression]:  Used to indicate the ticket reports a regressed bit of functionality.
 
-When working in DojoX, if no Component is more accurate than the top level ``dojox``, use ``dojox`` and include a ``[meta]`` tag using the component name. Do this recursively in projects with components. eg: If a bug is against ``dojox.layout.FloatingPane``, the Component would be ``DojoX Layout`` and the meta tag would be: ``[FloatingPane]``, making the summary look something like:
+When working in DojoX, if no Component is more accurate than the top level ``dojox``, use ``dojox`` and include a ``[meta]`` tag using the component name.
+Do this recursively in projects with components.
+eg: If a bug is against ``dojox.layout.FloatingPane``, the Component would be ``DojoX Layout`` and the meta tag would be: ``[FloatingPane]``, making the summary look something like:
 
 .. code-block :: bash
 
@@ -82,21 +93,35 @@ Dijit prefers the module name be included in the summary, when in the "component
 Owning a ticket
 ===============
 
-There are two states for tickets. Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``). Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``. If you have ``tbd`` tickets, they need to be examined. A cursory scan of a ticket can sometimes resolve issues very quickly.
+There are two states for tickets.
+Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``).
+Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``.
+If you have ``tbd`` tickets, they need to be examined.
+A cursory scan of a ticket can sometimes resolve issues very quickly.
 
-If the ticket indicates a bug, a working test case is required. Live links are discouraged, as they typically rot. Standalone html pages including the minimal steps to reproduce the issue should be attached. Leave in the ``tbd`` state, but request a followup from the user.
+If the ticket indicates a bug, a working test case is required.
+Live links are discouraged, as they typically rot.
+Standalone html pages including the minimal steps to reproduce the issue should be attached.
+Leave in the ``tbd`` state, but request a followup from the user.
 
-If the ticket is a feature request, use your discretion. If the feature is reasonable and you are willing to create a patch (or the user has supplied a patch and documentation for said feature), mark the milestone to the next major version and close upon committing. New features **do not** go into branch releases, as they are reserved for critical bugs only.
+If the ticket is a feature request, use your discretion.
+If the feature is reasonable and you are willing to create a patch (or the user has supplied a patch and documentation for said feature), mark the milestone to the next major version and close upon committing.
+New features **do not** go into branch releases, as they are reserved for critical bugs only.
 
 If the ticket is a feature request and is beyond the scope of the current version goals, requires further discussion or design, mark the ticket in whatever version you plan to complete the task, or the more generic ``future`` milestone.
 
 ``future`` means: "I like this idea but [for this reason] it can't happen now." Patches are **always** welcome, and greatly increase the likelihood of a request being filled.
 
-There should be **absolutely no** tickets in the ``tbd`` state when a major release is cut. This ensures we've **at least** inspected every incoming ticket to determine the severity of the report.
+There should be **absolutely no** tickets in the ``tbd`` state when a major release is cut.
+This ensures we've **at least** inspected every incoming ticket to determine the severity of the report.
 
-Tickets assigned but not "accepted" are considered fair game. A patch submission can come from anywhere. A Component owner "owns" the tickets, but can simply reassign should another developer want to work on said ticket.
+Tickets assigned but not "accepted" are considered fair game.
+A patch submission can come from anywhere.
+A Component owner "owns" the tickets, but can simply reassign should another developer want to work on said ticket.
 
-When you "accept" a ticket for a given milestone, you are indicating you are or will be focused on that item. Unless the ticket requests further contribution, it is likely you will receive none. It is your duty to ensure all your "accepted" tickets are marked in an appropriate milestone prior to every major release.
+When you "accept" a ticket for a given milestone, you are indicating you are or will be focused on that item.
+Unless the ticket requests further contribution, it is likely you will receive none.
+It is your duty to ensure all your "accepted" tickets are marked in an appropriate milestone prior to every major release.
 
 Patches
 =======
@@ -127,7 +152,9 @@ To apply a user supplied patch (from commandline):
     At revision [xxxx]
     $ patch < floatingpane.patch
 
-Using the ``-pN`` command line argument allows you to strip paths from the original diff. For example, the above structure would require you strip two levels of the patch. This needs to align based on where you apply the patch from in the tree versus from where the user was when creating the patch.
+Using the ``-pN`` command line argument allows you to strip paths from the original diff.
+For example, the above structure would require you strip two levels of the patch.
+This needs to align based on where you apply the patch from in the tree versus from where the user was when creating the patch.
 
 .. code-block :: bash
 
@@ -145,7 +172,8 @@ Commit Messages
 
 All commit messages should be descriptive of the change. "Fixed it" is generally considered a bad commit message. "Fixed layout regression in FooBar" would suffice.
 
-The ``dojo``, ``dijit``, and ``util`` repositories require tickets to reference. When you commit with a ``refs`` keyword, the commit message will be put in a comment on the ticket with a link to the changeset.
+The ``dojo``, ``dijit``, and ``util`` repositories require tickets to reference.
+When you commit with a ``refs`` keyword, the commit message will be put in a comment on the ticket with a link to the changeset.
 
 .. code-block :: bash
 
@@ -157,9 +185,12 @@ To use a commit message to close a ticket, use the ``fixes`` keyword:
 
     $ svn commit -m "fixes #12345 - thanks for all the fish UserWhoSubmittedThePatch"
     
-This will mark the ticket as ``closed`` linking the changeset to the ticket as ``refs`` would. Do **not** close a ticket in a ``tbd`` milestone.
+This will mark the ticket as ``closed`` linking the changeset to the ticket as ``refs`` would.
+Do **not** close a ticket in a ``tbd`` milestone.
 
-A form of JSLint is being run as a pre-commit hook. Your commit will be denied if this linting fails. You can override this by including ``!strict`` in your commit message.
+A form of JSLint is being run as a pre-commit hook.
+Your commit will be denied if this linting fails.
+You can override this by including ``!strict`` in your commit message.
 
 .. code-block :: bash
 
