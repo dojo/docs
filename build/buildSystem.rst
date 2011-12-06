@@ -567,13 +567,13 @@ configurations just like the loader. Here is the previous example expressed usin
  
 		// now a typical loader packages configuration
 		packages:[{
-			name:dojo,
+			name:"dojo",
 			location:"./dtk/dojo"
 		},{
-			name:dijit,
+			name:"dijit",
 			location:"./dtk/dijit"
 		},{
-			name:acme,
+			name:"acme",
 			location:"./acme/lib"
 		}],
     }
