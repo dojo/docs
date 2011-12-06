@@ -27,7 +27,8 @@ Examples
 
 _CssStateMixin will, fox example, set classes dijitCheckboxHover if a checkbox is hovered, or dijitCheckboxChecked if the widget is checked.   It will also set dijitCheckboxDisabled (if the widget is disabled).
 
-More complicated widgets also set class names on sub nodes when they are hovered/pressed/focused.   For example, the Slider widget has hover and active effects on the left/right arrows and the slider handle itself.
+More complicated widgets also set class names on sub nodes when they are hovered/pressed/focused.
+For example, the Slider widget has hover and active effects on the left/right arrows and the slider handle itself.
 
 Usage
 =====

@@ -12,7 +12,10 @@ dijit.layout.AccordionContainer
 .. contents::
     :depth: 2
 
-Like :ref:`StackContainer <dijit/layout/StackContainer>` and :ref:`TabContainer <dijit/layout/TabContainer>`, an **AccordionContainer** holds a set of panes whose titles are all visible, but only one pane's content is visible at a time. Clicking on a pane title slides the currently-displayed one away, similar to a garage door. Users can explicitly select the pane that is to be made visible when the widget is loaded. If it is not specified, then the first pane is taken by default.
+Like :ref:`StackContainer <dijit/layout/StackContainer>` and :ref:`TabContainer <dijit/layout/TabContainer>`, an **AccordionContainer** holds a set of panes whose titles are all visible, but only one pane's content is visible at a time.
+Clicking on a pane title slides the currently-displayed one away, similar to a garage door.
+Users can explicitly select the pane that is to be made visible when the widget is loaded.
+If it is not specified, then the first pane is taken by default.
 
 
 Examples

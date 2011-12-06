@@ -17,9 +17,16 @@ NumberTextBox widgets are used when user input is restricted to numeric input.
 Introduction
 ============
 
-By default, the widget will discover the appropriate locale and behavior as specified by Dojo. For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when displaying numbers to the user. For German users, a period is used for the thousands separator and a comma for the decimal separator. Other locales may have different conventions.
+By default, the widget will discover the appropriate locale and behavior as specified by Dojo.
+For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when displaying numbers to the user.
+For German users, a period is used for the thousands separator and a comma for the decimal separator.
+Other locales may have different conventions.
 
-When the user edits the value, or when sending data to the server, or when retrieving the ``value`` attribute programmatically, numbers are represented simply as JavaScript numbers, formatted with a period for decimal and no thousands separators. This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior. When specifying the ``constraints`` attribute, you have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`.
+When the user edits the value, or when sending data to the server,
+or when retrieving the ``value`` attribute programmatically,
+numbers are represented simply as JavaScript numbers, formatted with a period for decimal and no thousands separators.
+This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior.
+When specifying the ``constraints`` attribute, you have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`.
 
 To further restrict/validate user input, this widget makes additional numeric ``constraints`` properties (``min`` and ``max``) available to the developer.
 
@@ -57,7 +64,8 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
 Programmatic example
 --------------------
 
-This example creates a simple NumberTextBox programmatically.  The fractional part can be 0 to 6 digits long.
+This example creates a simple NumberTextBox programmatically.
+The fractional part can be 0 to 6 digits long.
 
 .. code-example ::
 
@@ -84,7 +92,9 @@ This example creates a simple NumberTextBox programmatically.  The fractional pa
 
 Formatting
 ----------
-The ``constraints`` attribute can also contain formatting information.  The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.   Try entering a simple value like "-3" and then tab away to see the effect.
+The ``constraints`` attribute can also contain formatting information.
+The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.
+Try entering a simple value like "-3" and then tab away to see the effect.
 
 .. code-example ::
 

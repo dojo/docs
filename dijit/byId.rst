@@ -22,7 +22,9 @@ dijit.byId and dojo.byId are often confused, particularly by first time users.  
 Usage
 =====
 
-Usage of this function is trivial.  Simply call it with a string of the id for the widget you wish to obtain the handle of.  The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
+Usage of this function is trivial.
+Simply call it with a string of the id for the widget you wish to obtain the handle of.
+The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
 
 .. js ::
  
@@ -181,7 +183,8 @@ You could also change the style like we did with dojo.byId() above using the dom
 data-dojo-id (jsId before dojo 1.6)
 -----------------------------------
 
-HTML attribute data-dojo-id saves you one more step in working with widgets by automatically creating a global javascript variable for you (the dojo parser does this). This variable contains the same object as returned by dijit.byId(). Whatever value you give to the data-dojo-id attribute becomes the name of the global variable so watch out for reserved words or having two widgets with the same data-dojo-id! Since my Content Pane has a data-dojo-id attribute value of myDojoId I could simplify the above code a little by removing the dijit.byId() and using my data-dojo-id attribute as the variable name:
+HTML attribute data-dojo-id saves you one more step in working with widgets by automatically creating a global javascript variable for you (the dojo parser does this).
+This variable contains the same object as returned by dijit.byId(). Whatever value you give to the data-dojo-id attribute becomes the name of the global variable so watch out for reserved words or having two widgets with the same data-dojo-id! Since my Content Pane has a data-dojo-id attribute value of myDojoId I could simplify the above code a little by removing the dijit.byId() and using my data-dojo-id attribute as the variable name:
 
 .. js ::
 

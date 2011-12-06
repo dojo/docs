@@ -127,7 +127,9 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
 Accessibility
 =============
 
-Note the use of showLabel="false" above. We've specified a label but then hidden it. This is important for accessibility reasons, so that users that can't see the icon still know what the button does.
+Note the use of showLabel="false" above.
+We've specified a label but then hidden it.
+This is important for accessibility reasons, so that users that can't see the icon still know what the button does.
 
 Keyboard
 --------
@@ -140,7 +142,10 @@ Move focus between widgets in the toolbar      Left and right arrow keys
 
 Known Issues
 ------------
-In high contrast mode when a toggle button is checked an html entity character (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
+In high contrast mode when a toggle button is checked an html entity character (✓) is displayed
+since the CSS background image icon for the checked state is no longer visible.
+When the toggle button is part of a toolbar the checkmark character does not display properly in IE6.
+In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
 
 
 See also

@@ -10,7 +10,8 @@ dijit.layout.TabContainer - additional examples
 Tab Strip
 =========
 
-This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
+This is a plain TabContainer with three tabs, fixed height and a tab strip.
+The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
 
 .. code-example ::
 
@@ -35,13 +36,16 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
       </div>
     </div>
 
-The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it. You can set a tab strip on every tab type though. Following a few examples with left/bottom/right tabs using tabStrip here and there.
+The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it.
+You can set a tab strip on every tab type though.
+Following a few examples with left/bottom/right tabs using tabStrip here and there.
 
 
 Right Tabs
 ==========
 
-Tabs at the right, no strip.  Note that right tabs don't work in conjunction with doLayout=false.
+Tabs at the right, no strip.
+Note that right tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
@@ -69,7 +73,8 @@ Tabs at the right, no strip.  Note that right tabs don't work in conjunction wit
 Left Tabs
 =========
 
-Tabs at the left, with a strip.  Note that left tabs don't work in conjunction with doLayout=false.
+Tabs at the left, with a strip.
+Note that left tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
@@ -123,7 +128,8 @@ Note that bottom tabs don't work in conjunction with doLayout=false.
       </div>
     </div>
 
-One technique to allow validation, and still use the parser would be to simply decorate the node with a data-dojo-type attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
+One technique to allow validation, and still use the parser would be to simply decorate the node with a data-dojo-type attribute (after onLoad) and parse the parent node.
+For ease, we'll store the class name for our inner widgets in a rel="" attribute.
 
 .. code-example ::
 
@@ -203,7 +209,9 @@ similar to what the parser does:
 Nested tabs
 ===========
 
-Often sites will have two levels of tabs.  This is supported by using two TabContainer widgets.   Remember that although a TabContainer's children are often ContentPanes, they can be any layout widget, including another TabContainer:
+Often sites will have two levels of tabs.
+This is supported by using two TabContainer widgets.
+Remember that although a TabContainer's children are often ContentPanes, they can be any layout widget, including another TabContainer:
 
 .. code-example ::
 
@@ -248,7 +256,8 @@ When you have nested tabs you should set the nested parameter to true, to make t
 Nested tabs programatically
 ===========================
 
-This an example of nested tabs created programatically. If there is no nested tab in a tab, content pane is inserted instead.
+This an example of nested tabs created programatically.
+If there is no nested tab in a tab, content pane is inserted instead.
 
 .. code-example ::
 

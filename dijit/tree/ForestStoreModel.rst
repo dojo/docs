@@ -29,12 +29,14 @@ A few things to note here:
 
 Monitoring changes to items
 ---------------------------
-Note that ForestStoreModel is inherently complex because it's difficult to tell when the children of the top level (fake) item have changed.  For example:
+Note that ForestStoreModel is inherently complex because it's difficult to tell when the children of the top level (fake) item have changed.
+For example:
 
   * a new continent is added to the data store
   * a new country is added to the data store
 
-ForestStoreModel has no way of knowing that the continent affects the top level node but the country doesn't.   The user needs to define the onNewItem() method, or otherwise ForestStoreModel will take the pessimistic inefficient approach.
+ForestStoreModel has no way of knowing that the continent affects the top level node but the country doesn't.
+The user needs to define the onNewItem() method, or otherwise ForestStoreModel will take the pessimistic inefficient approach.
 
 For example:
 
@@ -56,7 +58,10 @@ For example:
 
 Moving items to/from the root node
 ----------------------------------
-It's also complicated because users need to define what to do when an element is dropped on to the root of the tree, or dragged from the root of the tree and dropped onto a sub-node.   You may want to, for example, change the item so that the "topLevel" attribute is set/unset.   It depends on the structure of the data store what the appropriate action is.   The developer should override onAddToRoot() and onLeaveRoot().
+It's also complicated because users need to define what to do when an element is dropped on to the root of the tree, or dragged from the root of the tree and dropped onto a sub-node.
+You may want to, for example, change the item so that the "topLevel" attribute is set/unset.
+It depends on the structure of the data store what the appropriate action is.
+The developer should override onAddToRoot() and onLeaveRoot().
 
 .. js ::
 

@@ -7,9 +7,10 @@ Dijit Overview
 .. contents::
    :depth: 2
 
-Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets 
-and functionality provided by Dijit are described in the following sections, though the aforementioned :ref:`quickstart <quickstart/index>` 
-guides cover some basics.
+Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``.
+Dijit requires Dojo Core.
+Each of the widgets and functionality provided by Dijit are described in the following sections,
+though the aforementioned :ref:`quickstart <quickstart/index>` guides cover some basics.
 
 * :ref:`About Dijit <dijit/info>`
 
@@ -239,7 +240,10 @@ Layout
 Note about programmatic instantiation
 =====================================
 
-For most of the dijit widgets, you can provide a ``refNode`` which is a placeholder to position your node. Beware that any attribute set on it (form action, input value, `etc`.) won't be taken into account. If you want to degrade nicely and have a non-JS compatible version of your site and avoid duplicating attributes on controls and on instantiation, you should use ``dojo.parser``:
+For most of the dijit widgets, you can provide a ``refNode`` which is a placeholder to position your node.
+Beware that any attribute set on it (form action, input value, `etc`.) won't be taken into account.
+If you want to degrade nicely and have a non-JS compatible version of your site and avoid duplicating attributes
+on controls and on instantiation, you should use ``dojo.parser``:
 
 .. js ::
 

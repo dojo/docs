@@ -11,7 +11,14 @@ Dijit Accessibility Resources
 
 Functions for dealing with accessibility are found in dijit._base.wai.js. The name of the file is derived from the `W3C Web Accessibility Initiative <http://www.w3.org/WAI/>`_ which is hosting the `ARIA <http://www.w3.org/WAI/PF/aria/>`_ specification. The dijit wai APIs are used to manipulate ARIA roles and properties. In addition, the onload function to detect high contrast mode is part of dijit.wai.
 
-The dijit wai module is provided to normalize setting the roles and states. The ARIA properties are designed to be used with XHTML via namespaces Since a content-type of application/xhtml+xml is required to fully support namespaces an alternate solution is needed for the most commonly supported content-type of text/html. In Firefox 2, the roles are set by prefixing the role value with "wairole". In other browsers, no prefix is required. In Firefox 2, states can be manipulated using the DOM namespace apis: getAttributeNS, setAttributeNS, and removeAttributeNS. In other browsers, the generic attribute apis, getAttribute, setAttribute, removeAttribute, are used and the property name is prefixed by "aria-" such as "aria-expanded". The dijit methods for manipulating roles and properties perform the browser detection and make the correct calls. The developer needs to provide only the role or property name and value.
+The dijit wai module is provided to normalize setting the roles and states.
+The ARIA properties are designed to be used with XHTML via namespaces Since a content-type of application/xhtml+xml is required to fully support namespaces an alternate solution is needed for the most commonly supported content-type of text/html.
+In Firefox 2, the roles are set by prefixing the role value with "wairole".
+In other browsers, no prefix is required.
+In Firefox 2, states can be manipulated using the DOM namespace apis: getAttributeNS, setAttributeNS, and removeAttributeNS.
+In other browsers, the generic attribute apis, getAttribute, setAttribute, removeAttribute, are used and the property name is prefixed by "aria-" such as "aria-expanded".
+The dijit methods for manipulating roles and properties perform the browser detection and make the correct calls.
+The developer needs to provide only the role or property name and value.
 
 In addition to ARIA roles, a set of navigation roles from the `XHTML Role Attribute Module <http://www.w3.org/TR/2007/WD-xhtml-role-20071004/>`_ are also supported. An element may have a navigation role in addition to an ARIA role. The dijit methods for interacting with roles, only affect ARIA roles, any navigation roles are not modified.
 
@@ -40,7 +47,8 @@ These are NOT WAI roles and are thus ignored by the dijit getWaiRole and setWaiR
 
   dijit.hasWaiRole(/*Element*/ elem, /*String*/ role)
 
-If the role parameter is provided, returns true if elem has the specified role and false if not. For backwards compatibility with 1.1, if the role parameter is not provided, returns true if any role value exists on elem.
+If the role parameter is provided, returns true if elem has the specified role and false if not.
+For backwards compatibility with 1.1, if the role parameter is not provided, returns true if any role value exists on elem.
 
 .. js ::
 
@@ -52,18 +60,22 @@ Returns any role set on elem which is NOT an XHTML Navigation role or an empty s
 
   dijit.setWaiRole(/*Element*/ elem, /*String*/ role)
 
-Set the provided role on elem. If the current browser is Firefox and the version is prior to release 3,  replace any existing role(s) with "wairole:" prepended to the role provided. In other browsers, if the element already has an existing WAI role, replace it with the role provided and maintain any existing XHTML Navigation roles.
+Set the provided role on elem.
+If the current browser is Firefox and the version is prior to release 3,  replace any existing role(s) with "wairole:" prepended to the role provided.
+In other browsers, if the element already has an existing WAI role, replace it with the role provided and maintain any existing XHTML Navigation roles.
 
 .. js ::
 
   dijit.removeWaiRole(/*Element*/ elem, /*String*/ role)
 
-Remove the specified role from elem. For backwards compatibility with 1.1, if no role parameter is provided, remove the entire role attribute from elem.
+Remove the specified role from elem.
+For backwards compatibility with 1.1, if no role parameter is provided, remove the entire role attribute from elem.
 
 State APIs in Dojo 1.2
 ----------------------
 
-These dijit methods set the state values onto an element. In Firefox versions previous to 3 the attributes are set in the "http://www.w3.org/2005/07/aaa" namespace using the getAttritbuteNS() and setAttrbuteNS() apis. In other browsers "aria-" is added to the front of the state name and the setAttribute() and setAttribute() apis are used. The state parameter must be a valid ARIA state name and the value the appropriate value for the specified state.
+These dijit methods set the state values onto an element.
+In Firefox versions previous to 3 the attributes are set in the "http://www.w3.org/2005/07/aaa" namespace using the getAttritbuteNS() and setAttrbuteNS() apis. In other browsers "aria-" is added to the front of the state name and the setAttribute() and setAttribute() apis are used. The state parameter must be a valid ARIA state name and the value the appropriate value for the specified state.
 
 .. js ::
 
@@ -114,16 +126,19 @@ This example removes the valuenow property from an indeterminate progress bar.
 Setting Role and State in the Widget Template
 ---------------------------------------------
 
-The role and state can also be set via the widget template using the role or aria-* prefix. Setting the role in the template is the same as setting it via scripting – the dijit.setWaiRole() method will be called during widget instantiation. Simply add the role=”actualrole” or aria-state=”value” parameters into the template markup for the element. The element will be passed as the nodeObj into the dijit.setWaiRole() and dijit.setWaiState() methods. The state is specified as a state name in attribute (aria-stateName) and state value. This mechanism is useful when templates are used to create the objects requiring a role value and when the state is known at creation time.
+The role and state can also be set via the widget template using the role or aria-* prefix.
+Setting the role in the template is the same as setting it via scripting – the dijit.setWaiRole() method will be called during widget instantiation. Simply add the role=”actualrole” or aria-state=”value” parameters into the template markup for the element. The element will be passed as the nodeObj into the dijit.setWaiRole() and dijit.setWaiState() methods. The state is specified as a state name in attribute (aria-stateName) and state value. This mechanism is useful when templates are used to create the objects requiring a role value and when the state is known at creation time.
 
-Here is an example of setting the role in the diijt tree template. The domNode is given the “tree” role.
+Here is an example of setting the role in the diijt tree template.
+The domNode is given the “tree” role.
 
 .. js ::
 
   <div class="dijitTreeContainer" style="" role="tree"
     data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
 
-The role or state can also be specified via variables. This example shows an excerpt from the dijit button template that sets the role and state on the button element.
+The role or state can also be specified via variables.
+This example shows an excerpt from the dijit button template that sets the role and state on the button element.
 
 .. js ::
 
@@ -143,10 +158,17 @@ The role or state can also be specified via variables. This example shows an exc
 High Contrast Mode Detection
 ----------------------------
 
-As discussed in the :ref:`Dijit A11y Strategy <dijit/a11y/strategy>` section, dijit performs a check to determine if high contrast mode or images off mode has been set in the browser. When this mode is detected the dijit-a11y class is set onto the body element of the page. Appropriate dijit-a11y classes have been defined that make appropriate text alternatives visible for any CSS background images (which are no longer visible when high contrast mode has been set) that have been used within the widgets.
+As discussed in the :ref:`Dijit A11y Strategy <dijit/a11y/strategy>` section, dijit performs a check to determine if high contrast mode or images off mode has been set in the browser.
+When this mode is detected the dijit-a11y class is set onto the body element of the page.
+Appropriate dijit-a11y classes have been defined that make appropriate text alternatives visible for any CSS background images (which are no longer visible when high contrast mode has been set) that have been used within the widgets.
 
 .. js ::
 
   dijit.wai.onload()
 
-This is meant to be called once before the widgets have rendered to detect high contrast mode and set the dijit-a11y className onto the body element of the page. The detection mechanism is to create a temporary div with a background image, set top and bottom borders in one color and left and right borders in another color, and move it off screen via CSS. Add the div to the body element and check the computed style of the div. If the colors for the top and right borders are computed as the same, then high contrast mode has been set. Also, in Firefox, images off mode can be determined by examining the value of the background image. Currently images off can not be detected in IE unless high contrast mode has also been set.
+This is meant to be called once before the widgets have rendered to detect high contrast mode and set the dijit-a11y className onto the body element of the page.
+The detection mechanism is to create a temporary div with a background image, set top and bottom borders in one color and left and right borders in another color, and move it off screen via CSS.
+Add the div to the body element and check the computed style of the div.
+If the colors for the top and right borders are computed as the same, then high contrast mode has been set.
+Also, in Firefox, images off mode can be determined by examining the value of the background image.
+Currently images off can not be detected in IE unless high contrast mode has also been set.

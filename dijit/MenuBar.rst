@@ -15,7 +15,8 @@ The MenuBar widget models a typical menu bar like the quintessential "File" menu
 Introduction
 ============
 
-PopupMenuBarItem widgets are the actual items in the menu, and like PopupMenuItem it displays a submenu or other widget below it. A PopupMenuBarItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
+PopupMenuBarItem widgets are the actual items in the menu, and like PopupMenuItem it displays a submenu or other widget below it.
+A PopupMenuBarItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
 There's also a MenuBarItem widget if you need an entry in your MenuBar that *doesn't* have a drop down.
 

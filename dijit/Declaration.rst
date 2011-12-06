@@ -92,7 +92,8 @@ Extending Other Widgets
 -----------------------
 Often dijit.Declaration is used to define a widget as an extension of another widget, changing the behavior.
 
-HideButton2 extends HideButton (above) and changes the template (but keeps the onclick handler).  Here we define HideButton2 and then create two HideButton2's:
+HideButton2 extends HideButton (above) and changes the template (but keeps the onclick handler).
+Here we define HideButton2 and then create two HideButton2's:
 
 .. html ::
  
@@ -103,13 +104,16 @@ HideButton2 extends HideButton (above) and changes the template (but keeps the o
  <button data-dojo-type="HideButton2">Hide me extended #2</button>
 
 
-The mixins attribute tells which classes you widget will be based on. You can include more than one class here - each separated by commas. The first class is not technically a mixin - it's the parent class of this new widget.
+The mixins attribute tells which classes you widget will be based on.
+You can include more than one class here - each separated by commas.
+The first class is not technically a mixin - it's the parent class of this new widget.
 
 
 dojo/connect
 ------------
 
-As an alternate to <script type="dojo/method">, you can use <script type="dojo/connect">. The latter will additional code rather than overriding an already defined method.
+As an alternate to <script type="dojo/method">, you can use <script type="dojo/connect">.
+The latter will additional code rather than overriding an already defined method.
 
 However, you can get the same effect using <script type="dojo/method"> and calling this.inherited(arguments).
 

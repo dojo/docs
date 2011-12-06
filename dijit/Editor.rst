@@ -114,7 +114,8 @@ Most plugins have an associated toolbar button(s), such as the FontChoice plugin
 but some plugins (like AlwaysShowToolbar) just affect the Editor's behavior without changing the toolbar.
 
 The "plugins" parameter controls which plugins are available, and also controls which builtin editor commands
-are available.  It can also be used to re-arrange the default ordering of the buttons.
+are available.
+It can also be used to re-arrange the default ordering of the buttons.
 
 The basic plugins which are enabled by default are:
 undo, redo, cut, copy, paste, bold, italic, underline, strikethrough, insertOrderedList, insertUnorderedList, indent, outdent, justifyLeft, justifyRight, justifyCenter, justifyFull, dijit._editor.plugins.EnterKeyHandling
@@ -168,7 +169,8 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 Builtin Commands
 ================
 
-This is a list of the default commands (plugins) supported by the editor as built-in capabilities.  They can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
+This is a list of the default commands (plugins) supported by the editor as built-in capabilities.
+They can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
 
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 |**Command/Plugin**            |**Description**                                                                                      |
@@ -259,7 +261,8 @@ Editor also has a mode like dijit.form.Textarea where the more a user types, the
 However, that's a bit tricky because if implemented naively the toolbar would eventually scroll off the top
 of the page.
 
-The AlwaysShowToolbar plugin prevents that.  It's used along with setting height="" parameter setting.
+The AlwaysShowToolbar plugin prevents that.
+It's used along with setting height="" parameter setting.
 
 .. code-example ::
 
@@ -304,12 +307,16 @@ Move focus to the next enabled button in the toolbar.	                Arrow righ
 Move focus to the previous widget in the toolbar	                    Arrow left in left to right locales; arrow right in right to left locales.
 ====================================================================    ======================================================================
 
-The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated. Use the backspace or escape key to clear the current selection in the textbox associated with the drop down. When the list of choices is not activated, the arrow keys will move between toolbar buttons rather than within the combobox or select.
+The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated.
+Use the backspace or escape key to clear the current selection in the textbox associated with the drop down.
+When the list of choices is not activated, the arrow keys will move between toolbar buttons rather than within the combobox or select.
 
 Screen Reader Issues
 --------------------
 
-In order for the screen reader to announce a label for the editor, the developer must include a label element that is associated with the editor using the for attribute.   When the editor is created, Dojo will create a title element for the HTML document within the editor that contains the label text.  The screen reader will announce that title when the editor component gets focus.
+In order for the screen reader to announce a label for the editor, the developer must include a label element that is associated with the editor using the for attribute.
+When the editor is created, Dojo will create a title element for the HTML document within the editor that contains the label text.
+The screen reader will announce that title when the editor component gets focus.
 
 Known Issues
 ------------

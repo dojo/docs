@@ -14,7 +14,10 @@ dijit.TitlePane
 Introduction
 ============
 
-A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard. It extends :ref:`ContentPane <dijit/layout/ContentPane>` but since it isn't used inside other layout widgets it's not in the dijit.layout module.
+A TitlePane is a pane that can be opened or collapsed, with a title on top.
+The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard.
+It extends :ref:`ContentPane <dijit/layout/ContentPane>`
+but since it isn't used inside other layout widgets it's not in the dijit.layout module.
 
 
 Usage
@@ -125,4 +128,7 @@ Navigate into an opened title pane      tab
 Screen Reader Information
 -------------------------
 
-The title pane container will have an ARIA labelledby property which points to the id of the title pane title. The title pane title has the ARIA role of button and property of haspopup=true to indicate that it controls the display of the pane. The role of button is used to indicate to the user that an action will occur when the button is activated. The tilte pane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.
+The title pane container will have an ARIA labelledby property which points to the id of the title pane title.
+The title pane title has the ARIA role of button and property of haspopup=true to indicate that it controls the display of the pane.
+The role of button is used to indicate to the user that an action will occur when the button is activated.
+The tilte pane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.

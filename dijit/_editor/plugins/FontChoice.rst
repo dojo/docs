@@ -13,7 +13,9 @@ dijit._editor.plugins.FontChoice
 .. contents::
     :depth: 2
 
-Have you ever wanted to change the font size, font face, or block type containing the text in your document?  If so, then this plugin is for you!  It provides three drop down menu items for manipulating those aspects of your document.
+Have you ever wanted to change the font size, font face, or block type containing the text in your document?
+If so, then this plugin is for you!
+It provides three drop down menu items for manipulating those aspects of your document.
 
 Features
 ========
@@ -31,7 +33,9 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+The first thing you need to do is require into the page you're using the editor.
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
 .. js ::
  
@@ -39,7 +43,8 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
     dojo.require("dijit._editor.plugins.FontChoice");
 
 
-Once it has been required in, all you have to do is include the control names in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+Once it has been required in, all you have to do is include the control names in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
+For example:
 
 .. html ::
 
@@ -47,12 +52,15 @@ Once it has been required in, all you have to do is include the control names in
 
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with all the toolbar actions provided by the FontChoice plugin.
+And that's it.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with all the toolbar actions provided by the FontChoice plugin.
 
 Plugin Options
 ==============
 
-The FontChoice plugin allows certain options to control how the plugin displays state to the user.  This is primarily to enable or disable the style 'preview' in the button.  The default mode for style preview is enabled for backwards compatibility.
+The FontChoice plugin allows certain options to control how the plugin displays state to the user.
+This is primarily to enable or disable the style 'preview' in the button.
+The default mode for style preview is enabled for backwards compatibility.
 
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | **option**                        | **Description**                                                     | **Required**           |

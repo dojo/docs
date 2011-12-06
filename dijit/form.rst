@@ -144,7 +144,8 @@ Color change
 ------------
 The input-type form widgets (including ComboBox and FilteringSelect, but excluding Textarea) turn yellow and display an icon when the value is invalid, or a required field is blank.
 
-In general the color change is deferred until the field is blurred. I.e. the field won't turn yellow while the user is typing because the value they have is incomplete. However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
+In general the color change is deferred until the field is blurred.
+I.e. the field won't turn yellow while the user is typing because the value they have is incomplete. However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
 
 For number fields, the field will also turn yellow instantly if the user has entered a value that is out of range (like 1000 for a field with max=999), assuming that the value can't be made in range by typing more characters (ex: "1" in a field with a min of 1000).
 
@@ -168,12 +169,14 @@ Using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form s
 Use Dijit Form Controls All Over!
 =================================
 
-Because they're easy to mix and match, novice Dojo users often combine Dijit form controls with plain ol' HTML controls.  That's not good for several reasons:
+Because they're easy to mix and match, novice Dojo users often combine Dijit form controls with plain ol' HTML controls.
+That's not good for several reasons:
 
 * The Dijit form controls follow the Dijit Theme but plain HTML controls will not.  They will stick out like a sore thumb amongst other nicely-colored widgets.
 * dijit.form.Form and derived controls like Dialog can only deal with dijit.form widgets.
 
-Never fear.  For every HTML control, there's a Dijit equivalent that does the same thing, and obeys most of the HTML attributes.
+Never fear.
+For every HTML control, there's a Dijit equivalent that does the same thing, and obeys most of the HTML attributes.
 
 * <input type="text"> becomes data-dojo-type="dijit.form.TextBox", data-dojo-type="dijit.form.ValidationTextBox", data-dojo-type="dijit.form.NumberTextBox", etc.
 * <input type="checkbox"> becomes data-dojo-type="dijit.form.Checkbox"
@@ -231,7 +234,11 @@ To style any of the form controls, the first thing to do is to look at the templ
 
 And then to look in firebug to see it in action.
 
-The template, however, does not tell the whole story.  Each form widget (and many other widgets too) have something called a "baseClass", which is applied to the root node of the widget.   In Button's case, the baseClass is called "dijitButton".  Also, depending on the *state* of the widget, additional classes are applied to the widget's DOM node.  The additional classes are a combination of baseClass and various keywords:
+The template, however, does not tell the whole story.
+Each form widget (and many other widgets too) have something called a "baseClass", which is applied to the root node of the widget.
+In Button's case, the baseClass is called "dijitButton".
+Also, depending on the *state* of the widget, additional classes are applied to the widget's DOM node.
+The additional classes are a combination of baseClass and various keywords:
 
   * Focused
   * Active  (when pressing the button)
@@ -250,14 +257,16 @@ When the user hovers over it, the classes will become:
   * dijitButton
   * dijitButtonHover
 
-There are also combination classes that are applied.  For example, if a user focuses and hovers over a button, the classes become:
+There are also combination classes that are applied.
+For example, if a user focuses and hovers over a button, the classes become:
 
   * dijitButton
   * dijitButtonHover
   * dijitButtonFocused
   * dijitButtonFocusedHover
 
-Using the classes defined on the DOM node you can affect the styling of any sub-nodes within the widget.   For example:
+Using the classes defined on the DOM node you can affect the styling of any sub-nodes within the widget.
+For example:
 
 .. css ::
 

@@ -33,7 +33,9 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+The first thing you need to do is require into the page you're using the editor.
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
 .. js ::
  
@@ -41,19 +43,22 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
     dojo.require("dijit._editor.plugins.ViewSource");
 
 
-Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
+For example:
 
 .. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['viewsource']"></div>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ViewSource plugin!  You can use the button or hotkey to toggle between source and RTE views.
+And that's it.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ViewSource plugin!  You can use the button or hotkey to toggle between source and RTE views.
 
 Configurable Options
 --------------------
 
-The ViewSource plugin has several configurable options to tailor it for your usage.  Please see the following table:
+The ViewSource plugin has several configurable options to tailor it for your usage.
+Please see the following table:
 
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
 | **Option**                | **Description**                                                                                           |

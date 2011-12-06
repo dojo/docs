@@ -13,7 +13,9 @@ dijit._editor.plugins.FullScreen
 .. contents::
     :depth: 2
 
-Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this plugin's goal is to do exactly that for dijit.Editor.  No more postage stamp sized editors!
+Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?
+Doesn't that make it nearly impossible to edit the document effectively?
+It's time to put an end to such behaviors and this plugin's goal is to do exactly that for dijit.Editor.  No more postage stamp sized editors!
 
 Features
 ========
@@ -52,7 +54,8 @@ This is done in the same spot all your dojo.require calls are made, usually a he
     dojo.require("dijit._editor.plugins.FullScreen");
 
 
-Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
+For example:
 
 .. html ::
 
@@ -60,12 +63,14 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FullScreen plugin!  You can use the button or hotkey command to toggle the editor mode.
+And that's it.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FullScreen plugin!  You can use the button or hotkey command to toggle the editor mode.
 
 Configurable Attributes
 -----------------------
 
-The Full Screen plugin has a few configurable attributes on it that let you affect its current behavior a bit.  The options are listed below:
+The Full Screen plugin has a few configurable attributes on it that let you affect its current behavior a bit.
+The options are listed below:
 
 +---------------------------+---------------------------------------------------------------------------------------------------------+
 | **Option**                | **Description**                                                                                         |
@@ -85,13 +90,26 @@ Example:
 
 Full Screen mode and LayoutContainers
 =====================================
-Layout containers put restrictions on their children content in order to force specific layout.  Such restrictions are often in the CSS definitions, and do things such as applying 'position: absolute' as a CSS property.  These styles can cause issues with the Editor and FullScreen mode.  The editor full screen plugin works around them by removing classes for amm parent dom nodes up to the body tag.  The classes are re-applied back to their nodes when full screen is toggled off.  This provides usable full screen modes in most layout containers.
+Layout containers put restrictions on their children content in order to force specific layout.
+Such restrictions are often in the CSS definitions, and do things such as applying 'position: absolute' as a CSS property.
+These styles can cause issues with the Editor and FullScreen mode.
+The editor full screen plugin works around them by removing classes for amm parent dom nodes up to the body tag.
+The classes are re-applied back to their nodes when full screen is toggled off.
+This provides usable full screen modes in most layout containers.
 
 **FullScreen mode and BorderContainer:**
-For FullScreen mode on an editor in BorderContainer to work properly, the Editor **must** be contained within a content pane.  The Editor cannot be a direct child of BorderContainer.  This is because BorderContainer directly alters DOM styles such as top and left of its direct children and if it were to apply those style changes to Editor, it would undue the settings that enable the Editor to take up the entire viewport.  The editor and its plugins cannot prevent this.  So when using an instance of the Editor with FullScreen support be sure to nest it inside a ContentPane to avoid problems.
+For FullScreen mode on an editor in BorderContainer to work properly, the Editor **must** be contained within a content pane.
+The Editor cannot be a direct child of BorderContainer.
+This is because BorderContainer directly alters DOM styles such as top and left of its direct children and if it were to apply those style changes to Editor, it would undue the settings that enable the Editor to take up the entire viewport.
+The editor and its plugins cannot prevent this.
+So when using an instance of the Editor with FullScreen support be sure to nest it inside a ContentPane to avoid problems.
 
 **Extra information on Layout Containers and FullScreen:**
-The ideal solution to scaling out issues with LayoutContainer nested Editors is to reparent the Editor temporarily to the <body> element of your page.  This, however, will not work in some browsers, such as FireFox.  This is because FireFox forcibly reloads an IFRAME element if the iframe (or any of its parent dom nodes), moves its DOM position in the page.  At this time there are no known workarounds to that FireFox behavior, and due to such, the editor takes the alternate approach of class manipulation explained above.  If a workaround is discovered, then the plugin and these docs will be updated to reflect the improved behavior.
+The ideal solution to scaling out issues with LayoutContainer nested Editors is to reparent the Editor temporarily to the <body> element of your page.
+This, however, will not work in some browsers, such as FireFox.
+This is because FireFox forcibly reloads an IFRAME element if the iframe (or any of its parent dom nodes), moves its DOM position in the page.
+At this time there are no known workarounds to that FireFox behavior, and due to such, the editor takes the alternate approach of class manipulation explained above.
+If a workaround is discovered, then the plugin and these docs will be updated to reflect the improved behavior.
 
 
 A11Y Considerations

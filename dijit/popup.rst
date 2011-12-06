@@ -14,7 +14,8 @@ dijit.popup
 Introduction
 ============
 
-dijit/popup is the main mechanism within dijit that enables the creation of pop-ups like dropdowns and tooltips. It is used by every widget that creates a pop-up around another element.
+dijit/popup is the main mechanism within dijit that enables the creation of pop-ups like dropdowns and tooltips.
+It is used by every widget that creates a pop-up around another element.
 
 Parent widgets
 ==============
@@ -97,12 +98,16 @@ Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens
 
 As you can see, there are three essential calls here, ``popup.moveOffScreen``, ``popup.open``, and ``popup.close``. ``popup.moveOffScreen`` wraps the widget in a container, appends it to the ``<body>``, then moves it off-screen so that any measurement ``dropDown.startup`` needs to do is possible. Once that’s done, it opens the pop-up by calling ``popup.open``. Finally, the ``onExecute`` and ``onCancel`` callbacks both call ``popup.close``, passing in the correct pop-up widget to close.
 
-It’s important to note here that the parent widget is responsible for both opening *and closing* the pop-up. This architecture was used so that the parent widget is always aware of whether or not its child pop-up is open, and so that it can easily perform any necessary clean-up or other relevant activity once its pop-up has closed.
+It’s important to note here that the parent widget is responsible for both opening *and closing* the pop-up.
+This architecture was used so that the parent widget is always aware of whether or not its child pop-up is open, and so that it can easily perform any necessary clean-up or other relevant activity once its pop-up has closed.
 
 Pop-up widgets
 ==============
 
-Any normal widget can be used as a pop-up. For example, :ref:`dijit/Calendar` is a normal widget that can be displayed inline in the page, but is used as a pop-up by the :ref:`DateTextBox <dijit/form/DateTextBox>` widget. In other words, there’s no need for a :ref:``PopupWidget`` base class for pop-up widgets. However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
+Any normal widget can be used as a pop-up.
+For example, :ref:`dijit/Calendar` is a normal widget that can be displayed inline in the page, but is used as a pop-up by the :ref:`DateTextBox <dijit/form/DateTextBox>` widget.
+In other words, there’s no need for a :ref:``PopupWidget`` base class for pop-up widgets.
+However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
 
 .. js ::
 
@@ -151,12 +156,17 @@ If the user clicks a blank section of the screen in order to close the pop-up in
 Stacks
 ======
 
-Pop-ups can open other pop-ups. This ability is leveraged heavily by :ref:`dijit/Menu`. To facilitate this, dijit/popup keeps track of the entire stack of open pop-ups. In the case when a hierarchy of pop-ups all need to be closed at once, calling ``popup.close`` on the top-most pop-up will close all child pop-ups. This means that parent widgets do not need to maintain their own stack of pop-ups in order to ensure that they can clean up properly after themselves.
+Pop-ups can open other pop-ups.
+This ability is leveraged heavily by :ref:`dijit/Menu`.
+To facilitate this, dijit/popup keeps track of the entire stack of open pop-ups.
+In the case when a hierarchy of pop-ups all need to be closed at once, calling ``popup.close`` on the top-most pop-up will close all child pop-ups.
+This means that parent widgets do not need to maintain their own stack of pop-ups in order to ensure that they can clean up properly after themselves.
 
 Keyboard handling
 =================
 
-dijit/popup automatically listens for key presses on the ESC key as a way to cancel the highest pop-up and return to the parent node (which may itself be a pop-up). When the ESC key is pressed, the ``onCancel`` callback passed in the call to ``popup.open`` is called. dijit/popup also listens for the TAB key, and if it sees it, the entire stack of pop-ups is cancelled (in the case of menus, where one pop-up has opened another and so forth).
+dijit/popup automatically listens for key presses on the ESC key as a way to cancel the highest pop-up and return to the parent node (which may itself be a pop-up).
+When the ESC key is pressed, the ``onCancel`` callback passed in the call to ``popup.open`` is called. dijit/popup also listens for the TAB key, and if it sees it, the entire stack of pop-ups is cancelled (in the case of menus, where one pop-up has opened another and so forth).
 
 Note that in neither of these cases does the dijit/popup code directly close any pop-ups—it just calls the ``onCancel`` callback defined in the call to ``popup.open``. That callback then is responsible for calling ``popup.close(popupWidget)``.
 
@@ -165,6 +175,9 @@ Popup DOM node positioning
 
 ``popup.moveOffScreen`` should be called on any nodes that will be used as pop-ups. Its main function, besides hiding the node, is to attach it as a direct child of ``<body>``. The reason this is done is to ensure the node doesn’t get cut off if it is inside a ``<div>`` with a short height. (For example, given a button inside a :ref:`dijit/layout/TabContainer`, the pop-up might want to overflow past the bottom of the TabContainer.)
 
-Note that this design decision makes TAB key handling particularly difficult, and it’s not handled perfectly: if a user hits the TAB key while on a sub-menu of a :ref:`dijit/MenuBar`, or any drop down from a :ref:`dijit/form/DropDownButton`, they probably expect the focus to go to the next element after the MenuBar/DropDownButton. However, since the drop-down has actually been repositioned as the last element in ``<body>``, just letting the browser handle the TAB key won't do what the user expects.
+Note that this design decision makes TAB key handling particularly difficult, and it’s not handled perfectly: if a user hits the TAB key while on a sub-menu of a :ref:`dijit/MenuBar`, or any drop down from a :ref:`dijit/form/DropDownButton`, they probably expect the focus to go to the next element after the MenuBar/DropDownButton.
+However, since the drop-down has actually been repositioned as the last element in ``<body>``, just letting the browser handle the TAB key won't do what the user expects.
 
-As a compromise, the TAB key (while focus is on a pop-up) will re-focus on the DropDownButton/MenuBarItem that spawned the top pop-up. This is handled by the code that calls ``popup.open``, in the return handler for ``onCancel``. See :ref:`dijit/form/DropDownButton` for an example.
+As a compromise, the TAB key (while focus is on a pop-up) will re-focus on the DropDownButton/MenuBarItem that spawned the top pop-up.
+This is handled by the code that calls ``popup.open``, in the return handler for ``onCancel``.
+See :ref:`dijit/form/DropDownButton` for an example.

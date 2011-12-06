@@ -27,7 +27,10 @@ Examples
 The Basic Version
 -----------------
 
-This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  You have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`, shared by :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` and other widgets.
+This number spinner starts at 1000, and holds a number from 9 to 1550.
+Each up or down button click adjusts the number by 10.
+Note here the constraints attribute.
+You have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`, shared by :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` and other widgets.
 
 .. code-example ::
 
@@ -51,7 +54,9 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
 Sizing the Box
 --------------
 
-The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the size of the enclosing box by setting the style attribute, like most Dijit form controls can.  Here, we'll use a programmatically-created NumberSpinner:
+The default NumberSpinner looks a bit large for numbers 9-1550.
+You can set the size of the enclosing box by setting the style attribute, like most Dijit form controls can.
+Here, we'll use a programmatically-created NumberSpinner:
 
 .. code-example ::
 
@@ -79,7 +84,8 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
 Change Events
 -------------
 
-Like regular <input> boxes, the onChange event fires only when the box loses focus.  Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.
+Like regular <input> boxes, the onChange event fires only when the box loses focus.
+Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.
 
 If you'd like onChange to fire after every button click, set the attribute intermediateChanges, as in this example:
 

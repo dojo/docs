@@ -17,8 +17,10 @@ Introduction
 ============
 
 dijit.form.TextBox has rudimentary text-scrubbing functions that trim or proper-casify text, but
-it does not validate the entered text. Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
-HTML control, even if you don't have to do any input scrubbing. However:
+it does not validate the entered text.
+Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
+HTML control, even if you don't have to do any input scrubbing.
+However:
 
 * If the input is a number, use :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>` or :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>`.
   These boxes ensure only digits, decimal points and group separators (specific to the locale) are entered.

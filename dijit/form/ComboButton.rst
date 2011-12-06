@@ -107,13 +107,18 @@ Known Issues
 High Contrast Mode
 ~~~~~~~~~~~~~~~~~~
 
-All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false. The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
+All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false.
+The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
 
 Screen Reader
 ~~~~~~~~~~~~~
 
 In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
 
-All Combo Buttons should include a optionsTitle parameter to identify the function of the drop down button. The optionsTitle parameter is used by the screen reader to speak the information about the drop down portion of the button. Note that the Window-Eyes screen reader will speak "question" and then the optionsTitle text when the drop down portion of the Combo button receives focus. The "question" is spoken because Window-Eyes does not recognize the html entity character that is used to provide the visual drop down arrow in the button.
+All Combo Buttons should include a optionsTitle parameter to identify the function of the drop down button.
+The optionsTitle parameter is used by the screen reader to speak the information about the drop down portion of the button.
+Note that the Window-Eyes screen reader will speak "question" and then the optionsTitle text when the drop down portion of the Combo button receives focus.
+The "question" is spoken because Window-Eyes does not recognize the html entity character that is used to provide the visual drop down arrow in the button.
 
-Even though the combo buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2. In Firefox 3 the dropdown and combo buttons will be announced as "menu button".
+Even though the combo buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2.
+In Firefox 3 the dropdown and combo buttons will be announced as "menu button".

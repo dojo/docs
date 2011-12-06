@@ -14,7 +14,8 @@ Dijit Introduction
 Dijit Basics
 ============
 
-You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way.
+You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit).
+You have the same options either way.
 
 .. js ::
   
@@ -83,7 +84,8 @@ Otherwise, a unique ID will be generated for you:
   var dialog = new dijit.Dialog({ title:"No ID" })
   console.log(dialog.get("id"));
   
-All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference".
+All Dijits follow the same programmatic convention.
+Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference".
 
 .. js ::
   
@@ -91,7 +93,9 @@ All Dijits follow the same programmatic convention. Create a new instance with t
   var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
   dialog.show();
 
-This will cause the creator to use the node with id="makeADialog", and turn it into a :ref:`Dialog <dijit/Dialog>`. You can pass a node reference directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
+This will cause the creator to use the node with id="makeADialog", and turn it into a :ref:`Dialog <dijit/Dialog>`.
+You can pass a node reference directly (as seen above), or simply pass a string id.
+Either way, the reference passes through dojo.byId:
 
 .. js ::
   
@@ -102,14 +106,16 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
 Attributes
 ==========
 
-Widgets have attributes much like DOM nodes.  The attributes are one of the two main interfaces to programmatically
+Widgets have attributes much like DOM nodes.
+The attributes are one of the two main interfaces to programmatically
 interact with the widget.   (The other interface is through event handlers like onClick().)
 
 set() and get()
 ---------------
 In general attributes can be both set at initialization
-and modified after the widget is created, although some attributes, like "id" and "type", which are marked [const], can only be set
-at initialization.   Other attributes, like "focused", which are marked [readonly], can only be read.
+and modified after the widget is created, although some attributes, like "id" and "type", which are marked [const],
+can only be set at initialization.
+Other attributes, like "focused", which are marked [readonly], can only be read.
 
 This basically mirrors how vanilla HTML DOM nodes work, although the syntax is a bit different.
 Specifically, to get/set attributes after initialization, you need to use the ``get()`` and ``set()`` methods:
@@ -133,7 +139,8 @@ Set() also supports a hash API like :ref:`dojo.attr() <dojo/attr>`, for setting 
 
 watch()
 -------
-Attributes can also be monitored for changes.   For example:
+Attributes can also be monitored for changes.
+For example:
 
 .. js ::
  
@@ -145,7 +152,9 @@ Attributes can also be monitored for changes.   For example:
 Common Attributes of Dijits
 ---------------------------
 
-There are several attributes common to (most) all Dijit instances. These appear as members to a widget instance, and can be accessed once you have a reference to the widget by one of the methods mentioned above.  Some of the more popular are:
+There are several attributes common to (most) all Dijit instances.
+These appear as members to a widget instance, and can be accessed once you have a reference to the widget by one of the methods mentioned above.
+Some of the more popular are:
 
 * .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programmatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
 
@@ -166,7 +175,8 @@ There are several attributes common to (most) all Dijit instances. These appear 
 
 Events
 ======
-The other interface for dealing with widgets is to setup event handlers.   For example:
+The other interface for dealing with widgets is to setup event handlers.
+For example:
 
 .. js ::
  
@@ -200,18 +210,25 @@ Dijit i18n/a11y
 ===============
 
 Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures 
-as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of 
-things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes 
-no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable 
-in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users 
+as well as those with different abilities.
+Language translations, bi-directional text, and cultural representation of
+things like numbers and dates are all encapsulated within the widgets.
+Server interactions are done in a way that makes
+no assumptions about local conventions.
+All widgets are keyboard accessible and using the standard Dijit theme, usable
+in high-contrast mode as well as by screen readers.
+These features are baked in so that, as much as possible, all users
 are treated equally.
 
 Locating Widgets
 ================
 
-There are many ways to locate a widget in a page, and access a reference to that widget. Widget's are Objects:
-collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any 
-of its member properties) through that widget. There are three "main" ways to access a widget:
+There are many ways to locate a widget in a page, and access a reference to that widget.
+Widget's are Objects:
+collections of attributes and DomNode references.
+Once you have a reference to a widget, you can use that object (or any
+of its member properties) through that widget.
+There are three "main" ways to access a widget:
 
 The simplest way to access a widget is :ref:`dijit.byId <dijit/byId>`. When the widget is created, if the Node used to 
 create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the :ref:`dijit.registry <dijit/registry>`.
@@ -259,7 +276,8 @@ There are other ways of accessing and manipulating widgets, mostly involving the
 Behavioral widgets
 ==================
 
-In general, widgets create their own DOM structure.  For example,
+In general, widgets create their own DOM structure.
+For example,
 
 .. js ::
  
@@ -278,13 +296,15 @@ The new DOM automatically replaces the old button node.
 
 However, there's another type of widget called a "behavioral widget" that merely modifies the original node (called the ``srcNodeRef``).
 
-When using behavioral widgets, you need to specify a source DOM node for them to operate on.  For example:
+When using behavioral widgets, you need to specify a source DOM node for them to operate on.
+For example:
 
 .. js ::
  
    new dojox.widget.FishEyeLite({...}, "mySourceDom");
 
-This comes naturally if you are instantiating from markup.  For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
+This comes naturally if you are instantiating from markup.
+For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
 
 .. html ::
  

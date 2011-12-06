@@ -83,9 +83,12 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
       </div>
     </div>
 
-The two inner (green) divs are each large enough to hold their text ("Part 1" and "Part 2"), and the outer is in turn big enough to hold the two inner divs. And if outer is bigger than the browser's viewport, the browser window displays a scrollbar. The web page you're reading now uses that layout, and unless your monitor is 3 feet tall (in which case, we envy you!) you see the scrollbar on the right.
+The two inner (green) divs are each large enough to hold their text ("Part 1" and "Part 2"), and the outer is in turn big enough to hold the two inner divs.
+And if outer is bigger than the browser's viewport, the browser window displays a scrollbar.
+The web page you're reading now uses that layout, and unless your monitor is 3 feet tall (in which case, we envy you!) you see the scrollbar on the right.
 
-But for some web pages, you want them to work with the opposite pattern, where you start with a given size, typically the browser viewport, and then partition it into smaller sections. This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
+But for some web pages, you want them to work with the opposite pattern, where you start with a given size, typically the browser viewport, and then partition it into smaller sections.
+This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
 
 
 .. image:: maildemo.png
@@ -127,7 +130,8 @@ However, that technique has it's limits... it doesn't allow things like tabs or 
 Dijit Layout
 ============
 
-Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that. Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
+Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that.
+Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
 
 You typically start off the page using a BorderContainer, like this, to split the screen into sections:
 
@@ -161,7 +165,8 @@ You typically start off the page using a BorderContainer, like this, to split th
       }
     </style>
 
-Then you start nesting containers.  For instance, on the left you might want an AccordionContainer:
+Then you start nesting containers.
+For instance, on the left you might want an AccordionContainer:
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -266,7 +271,8 @@ There are three types of elements in that example:
 2. StackContainers: containers that display one child at a time
 3. Leafs: leaf nodes containing content
 
-The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
+The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself.
+They all do basically the same thing, but look different.
 
 The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
 
@@ -290,13 +296,16 @@ Sizing to browser viewport: To make the outermost layout widget size to the brow
 
 where mainDiv is the id of the outermost div.
 
-Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those. Put your padding, border, and margin on elements inside the outer layout container.
+Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those.
+Put your padding, border, and margin on elements inside the outer layout container.
 
 
 Visibility
 ==========
 
-Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
+Restrictions about visibility: none of the layout widgets work if they are inside a hidden element.
+This is very important and a mistake many people make.
+Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
 
 Programmatic Creation and Lifecycle

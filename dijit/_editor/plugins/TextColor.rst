@@ -35,7 +35,9 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+The first thing you need to do is require into the page you're using the editor.
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
 .. js ::
  
@@ -43,14 +45,16 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
     dojo.require("dijit.editor._plugins.TextColor");
 
 
-Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
+For example:
 
 .. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']"></div>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of selected text.
+And that's it.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of selected text.
 
 Examples
 ========

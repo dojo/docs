@@ -13,7 +13,8 @@ dijit/focus
 Introduction
 ============
 
-dijit/focus is a utility module that is used to manage focused nodes and widgets on a page. It can be used to track changes to the currently focused node/widget, register and unregister handlers for detecting focus changes in windows and inline frames, and programmatically focus nodes.
+dijit/focus is a utility module that is used to manage focused nodes and widgets on a page.
+It can be used to track changes to the currently focused node/widget, register and unregister handlers for detecting focus changes in windows and inline frames, and programmatically focus nodes.
 
 Until Dojo 2.0, requiring dijit/focus will also create a ``dijit.focus`` function with the same semantics as ``focus.focus``.
 
@@ -29,7 +30,8 @@ Focusing an element
     focusUtil.focus(dom.byId("foo"));
   });
 
-Note that this function only accepts DOM nodes, not widget instances. The element to focus must also be focusable (a form element, or another element with a ``tabindex`` attribute).
+Note that this function only accepts DOM nodes, not widget instances.
+The element to focus must also be focusable (a form element, or another element with a ``tabindex`` attribute).
 
 Unfocusing an element
 ---------------------
@@ -96,7 +98,8 @@ An app can also monitor widget-focus / widget-blur events to tell when widgets e
 Listening for focus changes in iframes
 --------------------------------------
 
-If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus (``curNode`` will remain ``null``). Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element *inside* the iframe has been focused.
+If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus (``curNode`` will remain ``null``).
+Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element *inside* the iframe has been focused.
 
 .. js ::
  

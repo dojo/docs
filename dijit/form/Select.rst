@@ -19,15 +19,18 @@ A styleable drop down select box (similar to html select element)
 Introduction
 ============
 
-HTML Select tags are problematic when it comes to styling - they are not very styleable, not to mention nearly impossible to get a consistent cross-browser widget.  This widget aims to resolve that issue.
+HTML Select tags are problematic when it comes to styling - they are not very styleable, not to mention nearly impossible to get a consistent cross-browser widget.
+This widget aims to resolve that issue.
 
 
 Usage
 =====
 
-The Select widget is designed to replace existing HTML select elements with minimal effort.  You can also create them programmatically.
+The Select widget is designed to replace existing HTML select elements with minimal effort.
+You can also create them programmatically.
 
-You can specify the maximum height of your dropdown menu by specifying "maxHeight" attribute during widget instantiation.  If the dropdown menu would be larger than that value (in pixels), then scrollbars are added to the dropdown menu.
+You can specify the maximum height of your dropdown menu by specifying "maxHeight" attribute during widget instantiation.
+If the dropdown menu would be larger than that value (in pixels), then scrollbars are added to the dropdown menu.
 
 Examples
 ========
@@ -110,7 +113,8 @@ When styling the entries of a Select widget, you must use div and span tags, ins
 Setting Width
 -------------
 
-By default, the width of the select widget will be to fit the width of the selected item.  However, you can specify a width on the select to force a fixed width.
+By default, the width of the select widget will be to fit the width of the selected item.
+However, you can specify a width on the select to force a fixed width.
 
 .. code-example::
 
@@ -152,4 +156,5 @@ Keyboard
 | Close the menu of options without selection          | Esc           |
 +------------------------------------------------------+---------------+
 
-If the menu is open, pressing the Tab key will close the menu only.  It will not focus the next element unless you press the Tab key a second time.
+If the menu is open, pressing the Tab key will close the menu only.
+It will not focus the next element unless you press the Tab key a second time.

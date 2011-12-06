@@ -11,7 +11,11 @@ dijit.form.ToggleButton
 .. contents::
     :depth: 2
 
-ToggleButton widgets are a cross between :ref:`Button <dijit/form/Button>` and :ref:`Checkbox <dijit/form/CheckBox>` widgets. They are created like Button widgets, but like CheckBox widgets, they maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action. Unlike CheckBox widgets however, ToggleButton widgets do not submit any value on FORM submit. They are used solely for client-side processing where the user can toggle between 2 states before performing some additional action. The CSS class "dijitToggleButtonChecked" is appended to the widget's outermost DOM node when the *checked* attribute is true to allow for custom styling.
+ToggleButton widgets are a cross between :ref:`Button <dijit/form/Button>` and :ref:`Checkbox <dijit/form/CheckBox>` widgets.
+They are created like Button widgets, but like CheckBox widgets, they maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.
+Unlike CheckBox widgets however, ToggleButton widgets do not submit any value on FORM submit.
+They are used solely for client-side processing where the user can toggle between 2 states before performing some additional action.
+The CSS class "dijitToggleButtonChecked" is appended to the widget's outermost DOM node when the *checked* attribute is true to allow for custom styling.
 
 
 Examples

@@ -13,7 +13,9 @@ dijit/registry
 Introduction
 ============
 
-dijit/registry stores a collection of all the dijit widgets within a page. It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID). It contains functions formerly found on the root ``dijit`` object for looking up widgets, such as ``dijit.byId`` and ``dijit.byNode``.
+dijit/registry stores a collection of all the dijit widgets within a page.
+It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID).
+It contains functions formerly found on the root ``dijit`` object for looking up widgets, such as ``dijit.byId`` and ``dijit.byNode``.
 
 In Dojo 1.6 and earlier, the registry is an instance of :ref:`dijit/WidgetSet`. Starting in Dojo 1.7, it is its own object.
 
@@ -28,7 +30,8 @@ Usage
 Retrieving a widget from the registry using a widget ID
 -------------------------------------------------------
 
-``registry.byId`` returns the widget that corresponds to the given ID. If no such widget exists, it returns undefined.
+``registry.byId`` returns the widget that corresponds to the given ID.
+If no such widget exists, it returns undefined.
 
 .. js ::
  
@@ -39,7 +42,8 @@ Retrieving a widget from the registry using a widget ID
 Retrieving a widget from the registry using the widget’s DOM node
 -----------------------------------------------------------------
 
-``registry.byNode`` returns the widget that corresponds to the given DOM node. If the DOM node does not belong to a widget, it returns undefined.
+``registry.byNode`` returns the widget that corresponds to the given DOM node.
+If the DOM node does not belong to a widget, it returns undefined.
 
 .. js ::
  
@@ -86,7 +90,8 @@ Finding the nearest enclosing widget for a DOM node
       var parentWidget = registry.getEnclosingWidget(domNode);
   });
 
-Note that ``getEnclosingWidget`` will check for and return the widget corresponding to the given DOM node, if one exists. For instance, given the following DOM:
+Note that ``getEnclosingWidget`` will check for and return the widget corresponding to the given DOM node, if one exists.
+For instance, given the following DOM:
 
 .. html ::
  

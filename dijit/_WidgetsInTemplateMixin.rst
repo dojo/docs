@@ -32,7 +32,8 @@ Note that :ref:`dijit.Declaration <dijit/Declaration>`-based widget classes auto
 data-dojo-attach-point
 ----------------------
 
-In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, not to a DOM node. For example, with this template:
+In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, not to a DOM node.
+For example, with this template:
 
 .. html ::
 
@@ -51,7 +52,8 @@ You can do this in your widget code:
 data-dojo-attach-event
 ----------------------
 
-data-dojo-attach-event also functions to attach a widget event (not a DOM event) on the sub widget to the main widget. For example, consider InlineEditBox which embeds dijit buttons into it's own template:
+data-dojo-attach-event also functions to attach a widget event (not a DOM event) on the sub widget to the main widget.
+For example, consider InlineEditBox which embeds dijit buttons into it's own template:
 
 .. html ::
 
@@ -69,7 +71,9 @@ The onClick event on the dijit.form.Button will call InlineEditBox.save().
 
 The :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` mixin does not support adding layout widgets as children. In particular there are issues with startup() and resize() calls to the children.
 
-Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode. This is because the widgets declared in the template are internal objects, effectively hidden from widget users. In other words, only the developer of the widget knows that it internally contains widgets.
+Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.
+This is because the widgets declared in the template are internal objects, effectively hidden from widget users.
+In other words, only the developer of the widget knows that it internally contains widgets.
 
 
 Common Pitfalls

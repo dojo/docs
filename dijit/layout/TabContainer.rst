@@ -12,7 +12,8 @@ dijit.layout.TabContainer
 .. contents::
     :depth: 2
 
-A TabContainer is a container that has multiple panes, but shows only one pane at a time. There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button.
+A TabContainer is a container that has multiple panes, but shows only one pane at a time.
+There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button.
 
 
 Usage
@@ -111,7 +112,8 @@ Here are some markup examples:
 A TabContainer with flexible height
 -----------------------------------
 
-This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
+This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute.
+The second tab is closable.
 
 .. code-example::
   :type: dialog
@@ -157,7 +159,9 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
 Selecting another Tab
 ---------------------
 
-Normally, TabContainer will show the first Tab. But it's also possible to automatically open another Tab with giving one of the ContentPanes the argument selected: true (if programmatically created) or the attribute selected="true" (if declaratively created).
+Normally, TabContainer will show the first Tab.
+But it's also possible to automatically open another Tab with giving one of the ContentPanes the argument selected:
+true (if programmatically created) or the attribute selected="true" (if declaratively created).
 
 .. code-example::
   :type: dialog
@@ -309,7 +313,8 @@ To monitor when children are added/deleted, use dojo/aspect or dojo.connect:
 
 
 
-It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the :ref:``setupChild`` function to ensure you are notified of the children already existing in markup. This is only relevant if you are subclassing for reason:
+It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the :ref:``setupChild`` function to ensure you are notified of the children already existing in markup.
+This is only relevant if you are subclassing for reason:
 
 .. js ::
    

@@ -39,7 +39,8 @@ parameters:
 Set the current pane
 --------------------
 
-StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController. StackController
+StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController.
+StackController
 is a controller not in the MVC send of the word, but like a TV remote control... it's sets which page the StackController is tuned to.
 
 Retrieving the currently selected Container

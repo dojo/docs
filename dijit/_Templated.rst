@@ -21,7 +21,8 @@ dijit._Templated has been superseded by :ref:`dijit._TemplatedMixin <dijit/_Temp
 waiRole and waiState
 --------------------
 
-These attributes were support for accessibility, to define the role of DOM nodes such as "tree". See :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>` for more information.
+These attributes were support for accessibility, to define the role of DOM nodes such as "tree".
+See :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>` for more information.
 
 However, due to browser advancements widgets can now just specify roles (ex: role="grid") and aria states (ex: aria-pressed="true") directly.
 

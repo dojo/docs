@@ -17,9 +17,12 @@ The FilteringSelect widget is a replacement for the native SELECT element.
 Usage
 =====
 
-Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed in the INPUT box and the hidden text value to be submitted to the server on FORM submit. Unlike SELECT, the user can also freely type text and partially matched values will be shown in a pop-up menu below the INPUT text box. Unlike a :ref:`ComboBox <dijit/form/ComboBox>` widget, unmatched user text will be flagged as an error.
+Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed in the INPUT box and the hidden text value to be submitted to the server on FORM submit.
+Unlike SELECT, the user can also freely type text and partially matched values will be shown in a pop-up menu below the INPUT text box.
+Unlike a :ref:`ComboBox <dijit/form/ComboBox>` widget, unmatched user text will be flagged as an error.
 
-On FORM submit, the hidden text value associated with the displayed value of a non-disabled FilteringSelect widget is submitted using a hidden native INPUT text box if the *name* attribute was specified at widget creation time. Invalid input will result in a blank submitted text value.
+On FORM submit, the hidden text value associated with the displayed value of a non-disabled FilteringSelect widget is submitted using a hidden native INPUT text box if the *name* attribute was specified at widget creation time.
+Invalid input will result in a blank submitted text value.
 
 FilteringSelect widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the :ref:`dojo.data <dojo/data>` section for complete details.
 
@@ -32,7 +35,9 @@ Examples
 Programmatic example using a data store
 ---------------------------------------
 
-To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.  To get the current value (the identity of the currently selected store item), get the *value* attribute.  To get the text currently displayed in the textbox (the value of the currently selected store item's attribute indicated by the FilteringSelect's ``searchAttr`` property), get the *displayedValue* attribute.
+To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.
+To get the current value (the identity of the currently selected store item), get the *value* attribute.
+To get the text currently displayed in the textbox (the value of the currently selected store item's attribute indicated by the FilteringSelect's ``searchAttr`` property), get the *displayedValue* attribute.
 
 .. code-example ::
 
@@ -71,7 +76,8 @@ Declarative markup using native select and option tags
 
 Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. For FilteringSelect widgets, the OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
-NOTE: if you do not specify a selected option, the browser will select the first item by default. If you want the FilteringSelect to start blank, use a different method to create it.
+NOTE: if you do not specify a selected option, the browser will select the first item by default.
+If you want the FilteringSelect to start blank, use a different method to create it.
 
 .. code-example ::
 
@@ -417,9 +423,12 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
 Displaying rich text menu labels with labelAttr and labelType
 -------------------------------------------------------------
 
-When users open a FilteringSelect menu, by default they see the `name` attribute of each item in the menu. You can enrich the menu's content by supplying a different label.
+When users open a FilteringSelect menu, by default they see the `name` attribute of each item in the menu.
+You can enrich the menu's content by supplying a different label.
 
-This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`, `Dijit`, and `Dojox`. The user can type any 1 of these 3 values. The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the autocompleted value in the textbox, as with other FilteringSelects, rather than trying to parse the rich text label.
+This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`, `Dijit`, and `Dojox`.
+The user can type any 1 of these 3 values.
+The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the autocompleted value in the textbox, as with other FilteringSelects, rather than trying to parse the rich text label.
 
 .. code-example ::
 
@@ -462,9 +471,11 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
 Transforming the displayed value using labelFunc
 ------------------------------------------------
 
-The labelFunc attribute of FilteringSelect enables you to transform the text that appears in the textbox after the user selects a value from the menu or types in a value manually. labelFunc takes two arguments: a dojo.data item representing the option the user selected and the store the item came from; hence, myLabelFunc will not fire for invalid text. labelFunc is expected to return the text you want to display.
+The labelFunc attribute of FilteringSelect enables you to transform the text that appears in the textbox after the user selects a value from the menu or types in a value manually.
+labelFunc takes two arguments: a dojo.data item representing the option the user selected and the store the item came from; hence, myLabelFunc will not fire for invalid text. labelFunc is expected to return the text you want to display.
 
-In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript. myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects built from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
+In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript.
+myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects built from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
 
 .. code-example ::
 
@@ -516,9 +527,12 @@ Keyboard
 Known Issues
 ------------
 
-JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted. In Dojo 1.1 the FilteringSelect was updated so that JAWS 9 will speak "editable combo" when the FilteringSelect gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a FilteringSelect containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9 and JAWS 10.
+JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted.
+In Dojo 1.1 the FilteringSelect was updated so that JAWS 9 will speak "editable combo" when the FilteringSelect gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a FilteringSelect containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9 and JAWS 10.
 
-When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.  Event the hidden previous choices / more choices options are spoken. This appears to be an issue with IE 8 and list items (which are uses to implement the option choices) and with IE 8 not honoring hidden items.
+When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.
+Event the hidden previous choices / more choices options are spoken.
+This appears to be an issue with IE 8 and list items (which are uses to implement the option choices) and with IE 8 not honoring hidden items.
 
 
 See Also

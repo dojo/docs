@@ -22,7 +22,9 @@ The Menu widget is used for three types of menus:
   * drop down menu from :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit.MenuBar <dijit/MenuBar>` widgets.
   * statically positioned menu on the screen, typically a left-hand-side navigation menu
 
-MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right. A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
+MenuItem widgets are the actual items in the menu.
+The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right.
+A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
 
 Examples
@@ -121,12 +123,14 @@ This example creates a context menu for the whole window.
 
         <span> Click anywhere on the page to see this menu.</span>
 
-Note that popup menus should be hidden via specifying style="display: none".  Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
+Note that popup menus should be hidden via specifying style="display: none".
+Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
 
 Navigation Menus
 ----------------
 
-The Menu widget can also be used for left-hand-side (style) navigation menus, which are functionally equivalent to MenuBar's, but appear vertically (just like a popup menu).   In this case may want to modify the CSS so that the entire left hand column is one color, rather than just the Menu itself.
+The Menu widget can also be used for left-hand-side (style) navigation menus, which are functionally equivalent to MenuBar's, but appear vertically (just like a popup menu).
+In this case may want to modify the CSS so that the entire left hand column is one color, rather than just the Menu itself.
 
 Usage to display a Menu statically is the same as context menus, except that you don't specify style="display: none" or contextMenuForWindow or any connect ids.
 
@@ -185,7 +189,8 @@ Close a context menu and all open submenus    Tab
 Known Issues
 ------------
 
-When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu. This will be fixed in Firefox 3.
+When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu.
+This will be fixed in Firefox 3.
 
 
 Implementation Notes
@@ -195,12 +200,22 @@ Focus
 -----
 Context menus are focused as soon as they are opened, and focus follows the mouse (or the keyboard arrow keys)
 
-For a static Menu/MenuBar, focus is deferred until user clicks it, or tabs into it.   Once user clicks on a Menu/MenuBar, it focuses on it, and then (as with a context menu) any mouse movement or keyboard movement (via arrow keys) will change focus.
+For a static Menu/MenuBar, focus is deferred until user clicks it, or tabs into it.
+Once user clicks on a Menu/MenuBar, it focuses on it, and then (as with a context menu)
+any mouse movement or keyboard movement (via arrow keys) will change focus.
 
 CSS Classes
 -----------
-There are separate CSS classes for indicating that a MenuItem is mouse hovered (dijitMenuItemHover), and to indicate which MenuItem is selected/active (dijitMenuItemSelected).   In tundra/nihilo/soria they look exactly the same, although that could be customized by a user, including removing the hover effect altogether.
+There are separate CSS classes for indicating that a MenuItem is mouse hovered (dijitMenuItemHover),
+and to indicate which MenuItem is selected/active (dijitMenuItemSelected).
+In tundra/nihilo/soria they look exactly the same, although that could be customized by a user,
+including removing the hover effect altogether.
 
 "Selected/active" is in the sense of the selected tab, and is controlled by the mouse or keyboard.  Implementation-wise, it means that either the MenuItem has focus, or focus is on a submenu of that MenuItem.
 
-The Menu/MenuBar domNode has a dijitMenuPassive/dijitMenuActive class so that CSS rules for hover can be customized based on whether or not the menu has focus.   Once the menu gets focus the dijitMenuHover effect is disabled in favor of the dijitMenuSelected effect, so that the dijitMenuHover effect won't linger on "File" if user moved the mouse over "File" but then used the keyboard arrows to move to the "Edit" MenuBarItem.  (This is a setting in tundra/nihilo/soria and can be changed if desired.)
+The Menu/MenuBar domNode has a dijitMenuPassive/dijitMenuActive class so that CSS rules for hover can be customized
+based on whether or not the menu has focus.
+Once the menu gets focus the dijitMenuHover effect is disabled in favor of the dijitMenuSelected effect,
+so that the dijitMenuHover effect won't linger on "File" if user moved the mouse over "File" but then used the keyboard
+arrows to move to the "Edit" MenuBarItem.
+(This is a setting in tundra/nihilo/soria and can be changed if desired.)

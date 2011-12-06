@@ -10,9 +10,14 @@ dijit.Calendar
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the :ref:`DateTextBox <dijit/form/DateTextBox>` which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the dojoConfig.locale setting of your page, using navigator.language by default.
+The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.
+It is typically used as part of the :ref:`DateTextBox <dijit/form/DateTextBox>` which includes a text box and uses the Calendar as a drop-down.
+Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.
+The locale will be chosen based on the dojoConfig.locale setting of your page, using navigator.language by default.
 
-Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  Starting with version 1.4, the month name is a drop-down control for selecting a different month.
+Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.
+Holding the mouse down on these controls will repeat the action.
+Starting with version 1.4, the month name is a drop-down control for selecting a different month.
 
 The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
 
@@ -258,4 +263,9 @@ Select the date                               Enter, Space
 Screen Reader Issues
 --------------------
 
-The Calendar has been implemented as a table so standard table announcements and navigation work as expected with JAWS 12. As the user arrows through the table the day number is announced.  As the user moves from column to column the weekday column headers are announced as well.  For en-us locales these are the first letters of the days of the week: S, M, T, W, T, F, S.  The month name is also included when it changes. The current year has been assigned as the label for the Calendar table and is also announced when it changes.
+The Calendar has been implemented as a table so standard table announcements and navigation work as expected with JAWS 12.
+As the user arrows through the table the day number is announced.
+As the user moves from column to column the weekday column headers are announced as well.
+For en-us locales these are the first letters of the days of the week: S, M, T, W, T, F, S.
+The month name is also included when it changes.
+The current year has been assigned as the label for the Calendar table and is also announced when it changes.

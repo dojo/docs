@@ -10,7 +10,8 @@ dijit.InlineEditBox
 .. contents::
     :depth: 3
 
-InlineEditBox is best described as a behavior on some text on the page, such that clicking that text brings up an editor, and when the text is saved, the screen is reverted to it's original state (but with the new text). The editor is created on-demand, so as to not slow down page load.
+InlineEditBox is best described as a behavior on some text on the page, such that clicking that text brings up an editor, and when the text is saved, the screen is reverted to it's original state (but with the new text).
+The editor is created on-demand, so as to not slow down page load.
 
 
 Programmatic InlineEditBox
@@ -46,7 +47,8 @@ Otherwise, the return key will end the edit, which is not appropriate for a mult
 Markup
 ======
 
-Creation from markup is even easier.  Here's an example with an initial value.
+Creation from markup is even easier.
+Here's an example with an initial value.
 
 .. code-example ::
 
@@ -85,10 +87,13 @@ Rich Text Editor
 ================
 
 To have an InlineEditBox with the Editor, you should use the renderAsHTML=true flag, because the editor's value is HTML rather
-than plain text.   This rule applies to any widget whose value is HTML rather than plain text.
+than plain text.
+This rule applies to any widget whose value is HTML rather than plain text.
 
-Also note that you must use a <div> tag for the InlineEditBox when it embeds an editor, not a <p> or <span>.   This avoids
-problems with nested <p> tags, since the Editor's value can contain <p> tags.   IE has errors with nested <p> tags since they are
+Also note that you must use a <div> tag for the InlineEditBox when it embeds an editor, not a <p> or <span>.
+This avoids
+problems with nested <p> tags, since the Editor's value can contain <p> tags.
+IE has errors with nested <p> tags since they are
 invalid HTML.
 
 To make the editor's initial size match the size the readonly text (ie, the size of the InlineEditBox before clicking it), set editorParams="{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"
@@ -121,8 +126,14 @@ Accessibility
 General Behavior
 ----------------
 
-When InlineEditBoxes are "closed" they appear as text but are tab stops in the keyboard focus ring and have an accessible role of button. They can have autoSave or non-autoSave behavior. When an non-autoSave InlineEditBox is open it has associated Save and Cancel buttons. An autoSave InlineEditBox does not have these buttons and they act like miniature forms or dialogs, i.e pressing the Esc key will close the widget and pressing the Enter key will close the widget, saving and displaying the text.
-Note that since InlineEditBoxes may be used on the page without a traditional label element, the developer should add a title attribute in order to provide a description that is available to screen reader users. The title will also be displayed by the browser when the user places the mouse over the element.
+When InlineEditBoxes are "closed" they appear as text but are tab stops in the keyboard focus ring and have an accessible role of button.
+They can have autoSave or non-autoSave behavior.
+When an non-autoSave InlineEditBox is open it has associated Save and Cancel buttons.
+An autoSave InlineEditBox does not have these buttons and they act like miniature forms or dialogs,
+i.e pressing the Esc key will close the widget and pressing the Enter key will close the widget, saving and displaying the text.
+Note that since InlineEditBoxes may be used on the page without a traditional label element,
+the developer should add a title attribute in order to provide a description that is available to screen reader users.
+The title will also be displayed by the browser when the user places the mouse over the element.
 
 Keyboard
 --------
@@ -203,9 +214,20 @@ Notes:
 Known Issues
 ------------
 
-On Firefox 2, the user must press the Tab key twice with focus in an textarea before keyboard focus moves to the next widget. This is a permanent restriction on Firefox 2. This is because the Dojo text area is implemented using the Firefox editor component in an iframe. This editor component implements usage of the tab key within the editor to indent text and shift-tab to outdent text. There is no keyboard mechanism in Firefox to move focus out of the editor. So, the dijit editor traps the tab key in the editor and sets focus to the editor iframe. From there pressing tab again will move to the next focusable item after the editor.
+On Firefox 2, the user must press the Tab key twice with focus in an textarea before keyboard focus moves to the next widget.
+This is a permanent restriction on Firefox 2.
+This is because the Dojo text area is implemented using the Firefox editor component in an iframe.
+This editor component implements usage of the tab key within the editor to indent text and shift-tab to outdent text.
+There is no keyboard mechanism in Firefox to move focus out of the editor.
+So, the dijit editor traps the tab key in the editor and sets focus to the editor iframe.
+From there pressing tab again will move to the next focusable item after the editor.
 
 Screen Reader
 ~~~~~~~~~~~~~
 
-The InlineEditBox is implemented as a button. Since these are intended to be used "in-line" within text there is often no label element associated with the underlying control. For this reason, developers are encouraged to add a title attribute to InlineEditBoxes. The Window-Eyes screen reader will speak the title as part of the button description. JAWS has an option to speak different attributes on an button. A JAWS user may need to use the insert-v command to modify the behavior to speak the button title when working with Dojo InlineEditBoxes.
+The InlineEditBox is implemented as a button.
+Since these are intended to be used "in-line" within text there is often no label element associated with the underlying control.
+For this reason, developers are encouraged to add a title attribute to InlineEditBoxes.
+The Window-Eyes screen reader will speak the title as part of the button description.
+JAWS has an option to speak different attributes on an button.
+A JAWS user may need to use the insert-v command to modify the behavior to speak the button title when working with Dojo InlineEditBoxes.

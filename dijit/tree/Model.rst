@@ -87,6 +87,6 @@ of a node, that ordering information needs to be persisted somehow to the data s
 onChildrenChange()
 ------------------
 onChildrenChange() just notifies the tree about changes to a node's children, which is generally simple,
-but similar to above it needs to have special handling for top-level nodes in the data store.   For example,
-if someone inserted a new country in the countries database listed above, the model would somehow need to realize
-that the data had changed, and notify the Tree that "world" had a new child.
+but similar to above it needs to have special handling for top-level nodes in the data store.
+For example, if someone inserted a new country in the countries database listed above,
+the model would somehow need to realize that the data had changed, and notify the Tree that "world" had a new child.

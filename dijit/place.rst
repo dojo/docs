@@ -14,7 +14,9 @@ dijit.place
 Introduction
 ============
 
-dijit/place is used to place one DOMNode relative to another DOMNode, or specified rectangle.   It is mainly used internally by dijit, by the :ref:`dijit.popup <dijit/popup>` code and by :ref:`dijit.Menu <dijit/Menu>` for displaying context menus.
+dijit/place is used to place one DOMNode relative to another DOMNode, or specified rectangle.
+It is mainly used internally by dijit,
+by the :ref:`dijit.popup <dijit/popup>` code and by :ref:`dijit.Menu <dijit/Menu>` for displaying context menus.
 
 Around
 ======
@@ -48,7 +50,8 @@ At
 
 Place.at() positions a node with one corner at a specified position.
 
-Here's an example of showing a context menu aligning one of the corners with the mouse position.   It picks a corner such that the menu can be displayed fully within the viewport:
+Here's an example of showing a context menu aligning one of the corners with the mouse position.
+It picks a corner such that the menu can be displayed fully within the viewport:
 
 .. js ::
  

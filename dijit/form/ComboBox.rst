@@ -16,7 +16,9 @@ The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.
 Usage
 =====
 
-Like a SELECT combo-box, you provide a list of acceptable values. But like an INPUT text field, the user can also type whatever they want. As the user types, partially matched values will be shown in a pop-up menu below the INPUT text box.
+Like a SELECT combo-box, you provide a list of acceptable values.
+But like an INPUT text field, the user can also type whatever they want.
+As the user types, partially matched values will be shown in a pop-up menu below the INPUT text box.
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
 
@@ -128,6 +130,9 @@ Keyboard
 Known Issues
 ------------
 
-JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted. In Dojo 1.1 the Combobox was updated so that JAWS 9 will speak "editable combo" when the Combobox gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a ComboBox containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9 or JAWS 10.
+JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted.
+In Dojo 1.1 the Combobox was updated so that JAWS 9 will speak "editable combo" when the Combobox gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a ComboBox containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9 or JAWS 10.
 
-When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.  Event the hidden previous choices / more choices options are spoken. This appears to be an issue with IE 8 and list items (which are used to implement the option choices) and with IE 8 not honoring hidden items.
+When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.
+Event the hidden previous choices / more choices options are spoken.
+This appears to be an issue with IE 8 and list items (which are used to implement the option choices) and with IE 8 not honoring hidden items.

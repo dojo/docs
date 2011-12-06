@@ -32,12 +32,16 @@ Methods To Implement
 layout()
 --------
 
-When the widget is started or resized, layout() is called. layout()'s job is to arrange the contents of the widget according to it's [new] size. For example, BorderContainer will set the size of the center pane to whatever space is left over after placing the top, bottom, left and right panes. layout() can (and should) reference this._contentBox to get the size available for laying out it's children.
+When the widget is started or resized, layout() is called.
+layout()'s job is to arrange the contents of the widget according to it's [new] size.
+For example, BorderContainer will set the size of the center pane to whatever space is left over after placing the top, bottom, left and right panes.
+layout() can (and should) reference this._contentBox to get the size available for laying out it's children.
 
 _setupChild()
 -------------
 
-addChild() is *not* called for widgets that are in the original markup. For example, addChild() is not called for the ContentPanes
+addChild() is *not* called for widgets that are in the original markup.
+For example, addChild() is not called for the ContentPanes
 in the markup below:
 
 .. html ::
@@ -64,7 +68,8 @@ The lifecycle of layout widgets is particularly complex because they
   * do sizing in javascript
   * are hierarchical: there's a relationship between parent and children widgets.
 
-At the time that postCreate() etc is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done. Thus, some/most setup has to occur in startup().
+At the time that postCreate() etc is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done.
+Thus, some/most setup has to occur in startup().
 
 *Lifecycle:*
 
@@ -86,7 +91,8 @@ Children can be added to a layout widget before or after it's been started (via 
 Thus, addChild() and removeChild() must work before or after the widget has been started.
 They can reference the this._started field to detect this state.
 
-The distinction is important. Consider SplitContainer's lifecycle:
+The distinction is important.
+Consider SplitContainer's lifecycle:
 
   1. initial children may be specified in markup
   2. or if programmatic creation, addChild() is called for each (initial child)

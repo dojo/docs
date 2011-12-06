@@ -15,7 +15,10 @@ dijit/_HasDropDown
 Introduction
 ============
 
-dijit/_HasDropDown is a dijit widget mixin that provides drop-down menu functionality. Widgets like :ref:`dijit/form/Select <dijit/form/Select>`, :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`, :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/form/DateTextBox <dijit/form/DateTextBox>` all use dijit/_HasDropDown to implement their drop-down functionality.
+dijit/_HasDropDown is a dijit widget mixin that provides drop-down menu functionality.
+Widgets like :ref:`dijit/form/Select <dijit/form/Select>`, :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`,
+:ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/form/DateTextBox <dijit/form/DateTextBox>`
+all use dijit/_HasDropDown to implement their drop-down functionality.
 
 Usage
 =====
@@ -52,22 +55,28 @@ Optional node properties
 _buttonNode
 -----------
 
-By default, dijit/_HasDropDown will use either ``focusNode`` or ``domNode`` as the element to click to display the drop-down. If you want to use a specific element to click to display the drop-down instead, attach that element to :ref:``buttonNode``.
+By default, dijit/_HasDropDown will use either ``focusNode`` or ``domNode`` as the element to click to display the drop-down.
+If you want to use a specific element to click to display the drop-down instead, attach that element to :ref:``buttonNode``.
 
 _arrowWrapperNode
 -----------------
 
-When a dijit/_HasDropDown is instantiated, a CSS class ``dijit(Up|Down|Right|Left)ArrowButton`` is added to specify which direction the pop-up appears by default relative to the widget. By default, these classes are set on :ref:``buttonNode``. Attaching an element to :ref:``arrowWrapperNode`` will cause these classes to be applied to that element instead.
+When a dijit/_HasDropDown is instantiated, a CSS class ``dijit(Up|Down|Right|Left)ArrowButton`` is added to specify which direction the pop-up appears by default relative to the widget.
+By default, these classes are set on :ref:``buttonNode``.
+Attaching an element to :ref:``arrowWrapperNode`` will cause these classes to be applied to that element instead.
 
 _popupStateNode
 ---------------
 
-When a drop-down is opened, a CSS class ``dijitHasDropDownOpen`` and a ``popupActive`` attribute are added to indicate that the drop-down is open. By default, these changes apply to ``focusNode``, or :ref:``buttonNode`` if there is no ``focusNode``. Attaching an element to :ref:``popupStateNode`` will cause these changes to occur on that element instead.
+When a drop-down is opened, a CSS class ``dijitHasDropDownOpen`` and a ``popupActive`` attribute are added to indicate that the drop-down is open.
+By default, these changes apply to ``focusNode``, or :ref:``buttonNode`` if there is no ``focusNode``.
+Attaching an element to :ref:``popupStateNode`` will cause these changes to occur on that element instead.
 
 _aroundNode
 -----------
 
-When the drop-down is opened, it is positioned based on the location of ``domNode``. Attaching an element to :ref:``aroundNode`` will cause the drop-down to be positioned relative to that element instead.
+When the drop-down is opened, it is positioned based on the location of ``domNode``.
+Attaching an element to :ref:``aroundNode`` will cause the drop-down to be positioned relative to that element instead.
 
 
 

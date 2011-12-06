@@ -35,7 +35,8 @@ To prevent the ambiguity in specifying time formats, TimeTextBox allows only one
 * T00:00:30 means 30 seconds after midnight
 * T17:30:00 means 5:30 PM
 
-However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object. The date portion of this value should be ignored.
+However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object.
+The date portion of this value should be ignored.
 
 
 Examples
@@ -87,4 +88,6 @@ Accessibility
 
 See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
 
-The time picker popup associated with the TimeTextBox is not yet fully accessible.  However, the TimeTextBox will still meet accessibility requirements as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.  These messages are implemented in a format that is accessible to all users.
+The time picker popup associated with the TimeTextBox is not yet fully accessible.
+However, the TimeTextBox will still meet accessibility requirements as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.
+These messages are implemented in a format that is accessible to all users.

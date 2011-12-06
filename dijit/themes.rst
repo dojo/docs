@@ -10,7 +10,11 @@ Themes and Theming
   :depth: 2
 
 
-Dijit Themes lend a consistent look and feel to widgets. Themes are collections of images (icons and background images) and CSS files that bring a common visual style (font, color, texture, layout, animation, etc) to all the widgets.  Dijit comes bundled with four themes which can be used as is, modified, and users can write their own themes too. Both global theming (such as at a container level) and widget-specific theming is doable.
+Dijit Themes lend a consistent look and feel to widgets.
+Themes are collections of images (icons and background images) and CSS files
+that bring a common visual style (font, color, texture, layout, animation, etc) to all the widgets.
+Dijit comes bundled with four themes which can be used as is, modified, and users can write their own themes too.
+Both global theming (such as at a container level) and widget-specific theming is doable.
 
 Themes must be included by the inclusion of the theme's root file from the relative position in the source tree:
 
@@ -18,7 +22,8 @@ Themes must be included by the inclusion of the theme's root file from the relat
 
   <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
 
-and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+and by the addition of a theme class name on a parent element.
+By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. html ::
 
@@ -175,7 +180,8 @@ Common
       CSS
       images/
 
-All common icon images are located in dijit/icons/images and their respective CSS files are located in dijit/icons/. These are 16px X 16px icons in the commonIconsObjAct*.png sprites containing action and object type images which can be used in the following widgets: accordionContainer, menu, tab, titlepane, tree and all button widgets. Note: an RTL version of these common icons is being assessed.
+All common icon images are located in dijit/icons/images and their respective CSS files are located in dijit/icons/.
+These are 16px X 16px icons in the commonIconsObjAct*.png sprites containing action and object type images which can be used in the following widgets: accordionContainer, menu, tab, titlepane, tree and all button widgets. Note: an RTL version of these common icons is being assessed.
 
 The editor icons are also located in this same directory; these images are in the editorIcons*.png sprite files.
 
@@ -186,7 +192,8 @@ Icons
 Many widgets take a parameter called iconClass to specify an icon.
 The idea is that the theme defines a CSS class loading the icon as a background-image.
 
-For efficiency in loading icons, themes tend to put multiple icons into one image file called a 'sprite'.  For example,
+For efficiency in loading icons, themes tend to put multiple icons into one image file called a 'sprite'.
+For example,
 the Cut button with class "dijitEditorIconCut" has the following definition in editorIcons.css found in dijit/icons/ :
 
 .. code-block ::  css
@@ -212,7 +219,8 @@ The CSS class(es) "dijitEditorIcon dijitEditorIconCut" indicate the Cut icon.
 
 The Cut icon starts 54 px from the right edge, and measures 18px by 18px. 108 equals 6 * 18, so it's the 4th image from the left in the sprite. You can define your own buttons by setting up CSS selectors using code similar to the previous code, and wiring up the iconClass.
 
-Themes may even specify variations on an icon depending on state.  So for example, there can be a faded, or black and white Cut icon for when the Cut function is disabled.
+Themes may even specify variations on an icon depending on state.
+So for example, there can be a faded, or black and white Cut icon for when the Cut function is disabled.
 
 The special icon would be triggered by a rule like:
 
@@ -324,7 +332,8 @@ The themeX.css file(s) will define rules like:
 
 so it won't conflict with other themeX.css styling.
 
-To have different sections of your document that are different themes, you just change the class of each section.   For example, to make the main document Claro theme, but then have sections that are Tundra and Soria themes, do:
+To have different sections of your document that are different themes, you just change the class of each section.
+For example, to make the main document Claro theme, but then have sections that are Tundra and Soria themes, do:
 
 .. html ::
 
@@ -412,7 +421,9 @@ The following visual style elements are the most common aspects of customizing a
 Color
 -----
 
-Color customization can be applied to the behavioral states of a widget. In Dojo 1.5, six behavioral state class names have been defined in the widgets to support a better user experiences, with hover, active and selected behavioral states as the most pervasively applied:
+Color customization can be applied to the behavioral states of a widget.
+In Dojo 1.5, six behavioral state class names have been defined in the widgets to support a better user experiences,
+with hover, active and selected behavioral states as the most pervasively applied:
 
 1. Normal
 2. Hover
@@ -474,7 +485,10 @@ Fonts can be customized in the following ways:
 
    * Absolute: not recommended
 
-Dojo's font size defaults to the browser which is 16px. To define your theme font size, start with 16px, choose your default font size, define that in your theme/common.css body font size and then define all other sizes based off of that. A good tool to reference is the `PX to EM converter <http://www.pxtoem.com/>`_
+Dojo's font size defaults to the browser which is 16px.
+To define your theme font size, start with 16px, choose your default font size,
+define that in your theme/common.css body font size and then define all other sizes based off of that.
+A good tool to reference is the `PX to EM converter <http://www.pxtoem.com/>`_
 
 
 Example:
@@ -618,7 +632,9 @@ Animation
 
 Animation is another styling element that can be customized depending on the audience, task, widget and performance requirements and expectations.
 
-There are various kinds of transitions: fade, ease, wipe, glow, zoom, fisheye, etc. Animated effects serve as an added visual cue to in context information.  As well they can provide visual delight without rendering effects that are too 'eye candy' or gratuitous, at least within rich internet applications.
+There are various kinds of transitions: fade, ease, wipe, glow, zoom, fisheye, etc.
+Animated effects serve as an added visual cue to in context information.
+As well they can provide visual delight without rendering effects that are too 'eye candy' or gratuitous, at least within rich internet applications.
 
 Animation is generated using several of the following technologies: Dojo APIs, CSS3 and animated GIF files.
 
@@ -705,7 +721,9 @@ and include them into your page.
 
 The dijit.form.Checkbox widget displays the checkbox image using an <img> tag.   However, it grabs the image location from the CSS.
 
-The class names used on widgets do not change based on the theme, although they will change based on the state of the widget.  For example, an input field will have class="dojoInputField", but a disabled input field will have class= "dojoInputField dojoInputFieldDisabled"
+The class names used on widgets do not change based on the theme, although they will change based on the state of the widget.
+For example, an input field will have class="dojoInputField",
+but a disabled input field will have class= "dojoInputField dojoInputFieldDisabled"
 
 
 
@@ -737,4 +755,6 @@ or
   </style>
   <div class="myClass">...</div>
 
-The first two techniques should work for widgets also. However, the third technique is not likely to work, because some of style rules like ".tundra .dijitButton", will take precedence.
+The first two techniques should work for widgets also.
+However, the third technique is not likely to work,
+because some of style rules like ".tundra .dijitButton", will take precedence.

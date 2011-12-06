@@ -16,7 +16,8 @@ RadioButton widgets capture binary user-choices unlike buttons which normally pe
 Usage
 =====
 
-Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
+Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute.
+Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
 
 **Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
 
@@ -27,7 +28,8 @@ Examples
 Programmatic and declarative example
 ------------------------------------
 
-Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'll wrap both inside a FORM to illustrate what happens on submit.
+Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.
+We'll wrap both inside a FORM to illustrate what happens on submit.
 
 .. code-example ::
 
@@ -73,4 +75,6 @@ Keyboard
 **Note:**
 Using the TAB key to focus a radio group will only focus the selected RadioButton in a group.
 
-Radio buttons are implemented using the standard input type=checkbox and type=radio elements respectively. CSS is used to overlay the unique theme over the actual input elements. Thus, the keyboard behavior of checkboxes and radio buttons mimics the behavior in the browser.
+Radio buttons are implemented using the standard input type=checkbox and type=radio elements respectively.
+CSS is used to overlay the unique theme over the actual input elements.
+Thus, the keyboard behavior of checkboxes and radio buttons mimics the behavior in the browser.

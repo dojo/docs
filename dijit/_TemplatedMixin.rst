@@ -72,7 +72,8 @@ data-dojo-attach-point
 ----------------------
 (before dojo 1.6 a.k.a. dojoAttachPoint)
 
-In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly. In this case the widget will need to access the <span> with the count in order to change the value.
+In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly.
+In this case the widget will need to access the <span> with the count in order to change the value.
 
 You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js. But if she does, then if two or more widget instances are created, they'll all have the same ids!  Obviously code will blow up then.
 
@@ -181,7 +182,8 @@ Substitution variables
 
 A template can also reference substitution variables like ${title}. ${title} references the title attribute of the widget.
 
-However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation. In other words, myWidget.set('title', 'My new title') won't work if you use substitution variables.
+However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation.
+In other words, myWidget.set('title', 'My new title') won't work if you use substitution variables.
 
 See the section on attributeMap in :ref:`Writing Widgets <quickstart/writingWidgets>` for an alternative to substitution variables.
 

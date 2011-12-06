@@ -11,7 +11,11 @@ dijit.CheckedMenuItem
 :Version: 1.2
 :Authors:
 
-The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time the user clicks the widget, it changes state between checked and unchecked. By default, the state of the widget is unchecked. User can optionally change the default state of the widget and also disable the widget as well. A user defined event function, onChange, is used to handle check/uncheck events.
+The CheckedMenuItem is a checkbox-like menu item for toggling on/off.
+Every time the user clicks the widget, it changes state between checked and unchecked.
+By default, the state of the widget is unchecked.
+User can optionally change the default state of the widget and also disable the widget as well.
+A user defined event function, onChange, is used to handle check/uncheck events.
 
 To change the default state of the menu item to “checked”,
 
@@ -25,7 +29,8 @@ The menu item can be disabled as follows:
 
    var cItem = new dijit.CheckedMenuItem({label:"Checked Menu Item", disable:"true"});
 
-This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. The examples below illustrate the usage of the widget.
+This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required.
+The examples below illustrate the usage of the widget.
 
 
 Examples

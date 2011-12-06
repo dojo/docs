@@ -11,9 +11,12 @@ dijit.Tree
 .. contents::
     :depth: 2
 
-The trees we see in User Interfaces help sort out long, hierarchical lists. A file system is the classic example, with Windows using it in Explorer. The Dijit tree widget is like that.
+The trees we see in User Interfaces help sort out long, hierarchical lists.
+A file system is the classic example, with Windows using it in Explorer.
+The Dijit tree widget is like that.
 
-Dojo makes easy trees easy, and hard trees possible. In particular, you can:
+Dojo makes easy trees easy, and hard trees possible.
+In particular, you can:
 
 * Connect your tree to any dojo.data store implementing the Identity API,  with or without a single root item, and with various ways to express parent/child relationships
 * Nest items to an arbitrary depth ... each branch is independently expandable
@@ -31,28 +34,42 @@ To understand how to use a Tree, you need to be aware of three components that f
 
 Tree
 ----
-The Tree widget itself is merely a view of the data.   It's in charge of displaying the data and handling user events only.
+The Tree widget itself is merely a view of the data.
+It's in charge of displaying the data and handling user events only.
 
-The Tree is a black-box in the sense that the developer generally won't be dealing with individual nodes of the Tree.   Rather, there are just onClick() etc. notifications, which refer to the *item* that was clicked.   Item is usually an item in the dojo.data store that the tree is connected to.
+The Tree is a black-box in the sense that the developer generally won't be dealing with individual nodes of the Tree.
+Rather, there are just onClick() etc.
+notifications, which refer to the *item* that was clicked.
+Item is usually an item in the dojo.data store that the tree is connected to.
 
 Note also that a Tree has an idea of a currently selected item, such as the currently opened folder in a mail program.
 
 Model
 -----
-The real power comes in the :ref:`tree model <dijit/tree/Model>`, which represents the hierarchical data that the tree will display.   Tree can interface to any class implementing the model API, but typically either the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>` are used, both of which themselves interface with the powerful dojo.data API.
+The real power comes in the :ref:`tree model <dijit/tree/Model>`, which represents the hierarchical data that the tree will display.
+Tree can interface to any class implementing the model API,
+but typically either the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>` are used,
+both of which themselves interface with the powerful dojo.data API.
 
-It's important to note that the tree is merely a '''view''' onto the model.  The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.  It's also in charge of handle drop operations, when someone drags and drops an item onto the tree.
+It's important to note that the tree is merely a '''view''' onto the model.
+The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.
+It's also in charge of handle drop operations, when someone drags and drops an item onto the tree.
 
 To put it another way, you cannot "delete data from the tree" or "insert data into the tree" directly, but rather you must update the model.
 
-Note also that each item in your Tree needs a different identifier (the value of the identifier has to be unique). It's the same concept as a primary key in a database.
+Note also that each item in your Tree needs a different identifier (the value of the identifier has to be unique).
+It's the same concept as a primary key in a database.
 
 
 Data Stores
 -----------
 Although not required, usually the model interfaces with a dojo.data store.
 
-There can be many different types of stores, such as stores that work from XML vs. stores that work from JSON, stores that execute on the client vs. stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.  All the stores, though, have the same API, so they can be connected to with either :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`, depending on whether there is a single or multiple top level item in the store.
+There can be many different types of stores, such as stores that work from XML vs.
+stores that work from JSON, stores that execute on the client vs.
+stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.
+All the stores, though, have the same API, so they can be connected to with either :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`,
+depending on whether there is a single or multiple top level item in the store.
 
 One might wonder why Tree doesn't interface directly with a dojo.data store.   There are a number of reasons:
 
@@ -194,11 +211,16 @@ to return a separate class name based on the type of item:
 Hiding a Tree's root node
 =========================
 
-There's always a single root item for a Tree, returned by the model's getRoot() method.  It might be a real item from the store (such as a tree of employees, with the CEO as the root), or it if there's no single root item in the store (like if the store lists continents but the top item, "the world", is implied, the model is responsible for fabricating such a root item (from the perspective of the tree).
+There's always a single root item for a Tree, returned by the model's getRoot() method.
+It might be a real item from the store (such as a tree of employees, with the CEO as the root),
+or it if there's no single root item in the store (like if the store lists continents but the top item, "the world", is implied, the model is responsible for fabricating such a root item (from the perspective of the tree).
 
 Correspondingly, all trees have a root node, corresponding to the root "item" from the model.
 
-Sometimes you don't want that "the world" top level node to show up, especially if the Tree is inside a TitlePane/AccordionPane/etc. with the label "The World". In that case you should set showRoot=false. The item still exists in the model but it's hidden on the screen:
+Sometimes you don't want that "the world" top level node to show up,
+especially if the Tree is inside a TitlePane/AccordionPane/etc. with the label "The World".
+In that case you should set showRoot=false.
+The item still exists in the model but it's hidden on the screen:
 
 .. code-example ::
 
@@ -230,15 +252,22 @@ People often ask:
 
   * how do I update a tree (adding or deleting items)?
 
-You can't update the tree directly, but rather you need to update the model.   Usually the model is connected to a data store and in that case you need to update the data store.  Thus, you need to use a data store that allows updates (through it's official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
+You can't update the tree directly, but rather you need to update the model.
+Usually the model is connected to a data store and in that case you need to update the data store.
+Thus, you need to use a data store that allows updates (through it's official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
 
   * how do I refresh a Tree from the store?
 
-This isn't supported.   The store needs to notify the tree of any changes to the data.  Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`, as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
+This isn't supported.
+The store needs to notify the tree of any changes to the data.
+Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`,
+as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
 Lazy Loading A Tree
 ===================
-People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.  If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`, then the data will be loaded lazily.
+People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.
+If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`,
+then the data will be loaded lazily.
 
 
 Drag And Drop
@@ -250,7 +279,8 @@ Tree's support drag and drop, meaning that a user can:
   * drag an item from the tree
   * move items within the tree
 
-In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model, which in turn sends it to the data store (updating the underlying data).   Thus:
+In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model, which in turn sends it to the data store (updating the underlying data).
+Thus:
 
   * the model must implement the pasteItem() method
   * the store must implement the :ref:`dojo.data.api.Write <dojo/data/api/Write>` interface
@@ -298,11 +328,13 @@ You can also specify custom checkAcceptance() and checkItemAcceptance() to accep
 Further examples
 ----------------
 
-If you are interested in further examples, please make sure you have glanced at the unit tests. For the 1.5 release, you can find a good example here: http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/tests/tree/test_Tree_DnD.html
+If you are interested in further examples, please make sure you have glanced at the unit tests.
+For the 1.5 release, you can find a good example here: http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/tests/tree/test_Tree_DnD.html
 
 betweenThreshold
 ----------------
-If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.  This is useful for when a user can control the order of the children of the child nodes:
+If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.
+This is useful for when a user can control the order of the children of the child nodes:
 
 .. code-example ::
 
@@ -332,7 +364,8 @@ If between threshold is set to a positive integer value like 5 (which represents
 
 Behind the scenes
 -----------------
-What happens when a user moves an item from one position in a tree to another?   It's actually quite complicated...
+What happens when a user moves an item from one position in a tree to another?
+It's actually quite complicated...
 
 1. The Tree widget does not change it's display at all.  Rather, it notifies the model of the paste operation.
 2. The model updates the store.
@@ -403,7 +436,9 @@ Styling
 Grid lines
 ----------
 
-If you don't want to display the grid lines for a Tree then simply write CSS rules to override the theme and hide the relevant background images.  The pertinent lines from tundra are:
+If you don't want to display the grid lines for a Tree then simply write CSS rules
+to override the theme and hide the relevant background images.
+The pertinent lines from tundra are:
 
 .. css ::
 
@@ -448,7 +483,9 @@ Miscellaneous
 
 Persistence
 -----------
-By default, a Tree will remember which branches were opened/closed.   To use this feature you must specify an id for the Tree.   To disable the feature, set the "persist" parameter to false.
+By default, a Tree will remember which branches were opened/closed.
+To use this feature you must specify an id for the Tree.
+To disable the feature, set the "persist" parameter to false.
 
 More examples
 =============
@@ -482,9 +519,15 @@ Navigate to last visible tree node   End
 
 Keyboard searching
 ------------------
-Tree items can also be accessed by typing alphanumeric characters.  For example, typing "A" will navigate from the currently focused node to the next node that begins with the letter A (case insensitive).   Typing "Al" will navigate to the next node that starts with "Al".  Only the nodes that are visible are searched, not nodes that are hidden inside a closed node.   The nodes are searched in the order that they appear on the screen, from the focused node downwards and then looping back up to the top of the tree.
+Tree items can also be accessed by typing alphanumeric characters.
+For example, typing "A" will navigate from the currently focused node to the next node that begins with the letter A (case insensitive).
+Typing "Al" will navigate to the next node that starts with "Al".
+Only the nodes that are visible are searched, not nodes that are hidden inside a closed node.
+The nodes are searched in the order that they appear on the screen, from the focused node downwards and then looping back up to the top of the tree.
 
 Known Issues
 ------------
 
-Using JAWS 10 in Firefox 3 the properties of each tree item are spoken including the open/close state and the level information.  Using JAWS 10 with IE 8, the open/close state of each item is spoken but the level information is not spoken.   In both Firefox 3 and IE 8 the JAWS user should be in App mode or virtual pc cursor off mode for best performance (toggle the mode via the insert+z key).
+Using JAWS 10 in Firefox 3 the properties of each tree item are spoken including the open/close state and the level information.
+Using JAWS 10 with IE 8, the open/close state of each item is spoken but the level information is not spoken.
+In both Firefox 3 and IE 8 the JAWS user should be in App mode or virtual pc cursor off mode for best performance (toggle the mode via the insert+z key).

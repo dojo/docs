@@ -81,7 +81,8 @@ As usual, you can create the Button widget declaratively using the data-dojo-typ
 Show only the icon
 ------------------
 
-Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons. Use the showLabel parameter to suppress it from appearing under normal circumstances:
+Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons.
+Use the showLabel parameter to suppress it from appearing under normal circumstances:
 
 .. code-example ::
 
@@ -99,7 +100,8 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
 Change the icon
 ---------------
 
-You can change an icon of a Button using its iconClass attribute. Following example toggles the icon if the button:
+You can change an icon of a Button using its iconClass attribute.
+Following example toggles the icon if the button:
 
 .. code-example ::
 
@@ -141,7 +143,8 @@ Known Issues
 High Contrast Mode
 ~~~~~~~~~~~~~~~~~~
 
-All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false. The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
+All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false.
+The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
 
 Screen Reader
 ~~~~~~~~~~~~~

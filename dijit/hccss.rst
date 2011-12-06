@@ -12,7 +12,10 @@ dijit.hccss
 Introduction
 ============
 
-By doing a require() of "dijit/hccss", the "dijit_a11y" CSS class will be added to your document's <body> tag if the machine is in high contrast mode, and thus the browser doesn't display background images.    This is useful for Internet Explorer and Firefox running on Windows.   It doesn't apply to Chrome or Safari (on mobile, mac, or desktop), which always display background images.
+By doing a require() of "dijit/hccss", the "dijit_a11y" CSS class will be added to your document's <body> tag
+if the machine is in high contrast mode, and thus the browser doesn't display background images.
+This is useful for Internet Explorer and Firefox running on Windows.
+It doesn't apply to Chrome or Safari (on mobile, mac, or desktop), which always display background images.
 
 Usage
 =====
