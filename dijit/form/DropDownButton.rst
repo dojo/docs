@@ -65,7 +65,7 @@ The first example shows how to create a menu and drop down button programmatical
 Declarative example
 -------------------
 
-As usual you can create the DropDown button widget declaratively using the data-dojo-type attribute.
+As usual, you can create the DropDown button widget declaratively using the data-dojo-type attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 

@@ -12,7 +12,8 @@ dijit.getEnclosingWidget
 Example
 =======
 
-Obtain a widget reference by determining the immediate-most parent Widget from some passed Node. It will walk up the DOM tree testing for a widget using :ref:`dijit.byNode <dijit/byNode>` until an appropriate widget is found:
+Obtain a widget reference by determining the immediate-most parent widget from some passed Node.
+It will walk up the DOM tree testing for a widget using :ref:`dijit.byNode <dijit/byNode>` until an appropriate widget is found:
 
 .. js ::
 

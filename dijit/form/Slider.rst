@@ -47,7 +47,9 @@ Examples
 Programmatic example of a horizontal slider
 -------------------------------------------
 
-One way you could show the user the value of your Slider is to create a textbox that the Slider fills when the user moves the Slider. The following code fills in a simple textbox called horizontalSliderValue.
+One way you could show the user the value of your slider is to create a textbox that the slider fills
+when the user moves the slider.
+The following code fills in a simple textbox called sliderValue.
 
 .. code-example ::
 
@@ -179,7 +181,7 @@ Keyboard
 +----------------------------------------------+-----------------------------------------------------------+
 | Set slider to minimum value                  | With focus on slider handle press Home.                   |
 +----------------------------------------------+-----------------------------------------------------------+
-| Set slider to mmaximum value                 | With focus on slider handle press End.                    |
+| Set slider to maximum value                  | With focus on slider handle press End.                    |
 +----------------------------------------------+-----------------------------------------------------------+
 
 Known Issues

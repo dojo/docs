@@ -280,7 +280,7 @@ Then add a theme class name to the parent <body> element, like:
 
   <body class="tundra">
 
-`note:` The reason the Tundra theme requires a class=tundra on the "<body>" tag (or some other tag) is because the rules all list a hierarchy like ".tundra .dojoButton". This is done to prevent the `tundra` class from affecting any of your page styles. This also ensures all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+`Note:` The reason the Tundra theme requires a class=tundra on the "<body>" tag (or some other tag) is because the rules all list a hierarchy like ".tundra .dojoButton". This is done to prevent the `tundra` class from affecting any of your page styles. This also ensures all widgets in the page have the same CSS rules (some widgets like :ref:`Dialog <dijit/Dialog>` intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. html ::
 

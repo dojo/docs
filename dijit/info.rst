@@ -209,7 +209,7 @@ are treated equally.
 Locating Widgets
 ================
 
-There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: 
+There are many ways to locate a widget in a page, and access a reference to that widget. Widget's are Objects:
 collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any 
 of its member properties) through that widget. There are three "main" ways to access a widget:
 

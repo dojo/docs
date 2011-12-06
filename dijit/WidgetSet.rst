@@ -65,7 +65,7 @@ The functions filter, forEach, map, every and some all accept a `thisObject` in 
 
 .. js ::
   
-  // we are in some object, like a Widget
+  // we are in some object, like a widget
   ws.forEach(function(widget){
     this.addChild(widget); // add all children to the instance we are in
   }, this);

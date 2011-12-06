@@ -7,7 +7,7 @@ dijit.form._FormSelectWidget
 .. contents :: 
     :depth: 2
 
-dijit/form/_FormSelectWidget is a dijit Widget mixin that adds functionality for working with HTML <select>-like 
+dijit/form/_FormSelectWidget is a dijit widget mixin that adds functionality for working with HTML <select>-like
 widgets. It is used by :ref:`dijit/form/Select <dijit/form/Select>` and :ref:`dojox/form/CheckedMultiSelect 
 <dojox/form/CheckedMultiSelect>`. It extends :ref:`dijit/form/_FormValueWidget <dijit/form/_FormValueWidget>` with the
 ability to handle multiple values and retrieve options from a :ref:`dojo/data <dojo/data>` store.

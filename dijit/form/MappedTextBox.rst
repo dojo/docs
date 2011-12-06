@@ -24,11 +24,12 @@ For example, a NumberSpinner may be declared like
   <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-props="value:1000">
 
 (note the "value" keyword). But when it's displayed in America it looks like "1,000" (with the comma).
-And if they user types in "1,234,567", it gets sent back to the server as "123456789".
+And if the user types in "1,234,567", it gets sent back to the server as "123456789".
 
 This is handled internally by having two <input> fields in the widget:
 
 .. image:: ../MappedTextBox.gif
 
 The upshot of this is that Dijit handles localization issues on the client,
-the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
+so the server doesn't have to worry about it
+(except of course for translating the boilerplate text on the page, like the label for the above control).

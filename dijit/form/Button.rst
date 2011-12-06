@@ -57,7 +57,7 @@ The first example shows how to create a button programmatically.
 Declarative example
 -------------------
 
-As usual you can create the button widget declaratively using the data-dojo-type attribute
+As usual, you can create the Button widget declaratively using the data-dojo-type attribute:
 
 .. code-example ::
 
