@@ -104,5 +104,5 @@ If you are unfamiliar with :ref:`Deferreds <dojo/Deferred>`, you should dig deep
 Creating your own SMD
 =====================
 
-Please see http://groups.google.com/group/json-schema/web/service-mapping-description-proposal for a definition of the SMD format 
+Please see :ref:`the SMD specification <dojox/rpc/smd>` for a definition of the SMD format 
 and how to define your own.
