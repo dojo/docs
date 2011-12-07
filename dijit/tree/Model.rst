@@ -4,7 +4,8 @@
 dijit.tree.Model
 ================
 
-A :ref:`dijit.Tree <dijit/Tree>` presents a view onto some hierarchical data.  The "TreeModel" represents the actual data.
+A :ref:`dijit.Tree <dijit/Tree>` presents a view onto some hierarchical data.
+The "TreeModel" represents the actual data.
 
 Usually, the data ultimately comes from a data store, but the Tree
 interfaces with a "dijit.tree.Model", an Object matching a certain API of methods the tree needs.
@@ -76,9 +77,12 @@ pasteItem() is called when something is dropped onto the Tree, and it's job is t
 That sounds fairly simple, but it becomes complex when [you are using :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>` and]
 the node being dropped will become a top level item in the data store.
 
-For example, imagine that your data store contains all the countries in the world, and you are using :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>` to fabricate a top-level Tree node called "World" that parents the countries.   If the user
-drops a new country under "World", it needs to be added to the data store with some kind of flag indicating that it's a top-level
-node, and that code has to be custom written.
+For example, imagine that your data store contains all the countries in the world,
+and you are using :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>` to fabricate a top-level Tree node
+called "World" that parents the countries.
+If the user drops a new country under "World",
+it needs to be added to the data store with some kind of flag indicating that it's a top-level node,
+and that code has to be custom written.
 
 Similarly, if the data store has child elements point to their parents, rather than vice-versa, and the user reorders the children
 of a node, that ordering information needs to be persisted somehow to the data store.

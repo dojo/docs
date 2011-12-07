@@ -13,7 +13,10 @@ dijit._editor.plugins.LinkDialog
 .. contents::
     :depth: 2
 
-Have you ever wanted to insert a hyperlink into a document you are editing in :ref:`dijit.Editor <dijit/Editor>`?  Have you wanted to insert images as well?  If so, then this plugin provides you a basic set of dropdown dialogs to allow you to do just that.  The dialogs are not complex and are intended as example implementations so that users can implement dialogs of their own, but they still work fairly well as is.
+Have you ever wanted to insert a hyperlink into a document you are editing in :ref:`dijit.Editor <dijit/Editor>`?
+Have you wanted to insert images as well?
+If so, then this plugin provides you a basic set of dropdown dialogs to allow you to do just that.
+The dialogs are not complex and are intended as example implementations so that users can implement dialogs of their own, but they still work fairly well as is.
 
 Features
 ========
@@ -43,7 +46,8 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.
 The first thing you need to do is require into the page you're using the editor.
-This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.
+For example:
 
 .. js ::
  

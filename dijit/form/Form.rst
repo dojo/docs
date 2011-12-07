@@ -84,9 +84,15 @@ Note that it's using a <div> node instead of the obvious choice of a <form> node
 Using native form elements
 --------------------------
 
-dijit.form.Form doesn't fully support native elements as children.  In particular, myForm.get("value") will return an Object listing all the values of the contained widgets, but it won't list the values of the contained native <input> elements.
+dijit.form.Form doesn't fully support native elements as children.
+In particular, myForm.get("value") will return an Object listing all the values of the contained widgets,
+but it won't list the values of the contained native <input> elements.
 
-It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.   Both types of values (widgets and plain <input> elements) will be submitted.   However, in that case the app has to do validation itself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
+It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.
+Both types of values (widgets and plain <input> elements) will be submitted.
+However, in that case the app has to do validation itself.
+The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget
+AND when you have selected 1 of the native HTML radio buttons.
 
 .. code-example ::
 

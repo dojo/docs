@@ -13,7 +13,11 @@ dijit._editor.plugins.TextColor
 .. contents::
     :depth: 2
 
-Have you ever wanted to change the color of the font, or the background color of the text in the document you're editing in dijit.Editor?  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar for changing those items.  Each makes use of the dijit ColorPicker, so they are simple to use.
+Have you ever wanted to change the color of the font,
+or the background color of the text in the document you're editing in dijit.Editor?
+If so, then this plugin is for you.
+The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar for changing those items.
+Each makes use of the dijit ColorPicker, so they are simple to use.
 
 Features
 ========
@@ -37,7 +41,8 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.
 The first thing you need to do is require into the page you're using the editor.
-This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.
+For example:
 
 .. js ::
  
@@ -54,7 +59,8 @@ For example:
 
 
 And that's it.
-The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of selected text.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!
+You can use the buttons to alter the colors of selected text.
 
 Examples
 ========

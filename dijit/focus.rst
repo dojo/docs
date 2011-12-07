@@ -66,7 +66,10 @@ Note that two changes will occur when element focus changes: the first change wi
 
 Tracking active widgets
 -----------------------
-At any point in time there is a set of (for lack of a better word) "active" or "focused" widgets, meaning the currently focused widget and that widget's ancestors.   "Ancestor" can mean either DOM ancestor (ex: TextBox --> Form), or a logical parent-child relationship (ex: TooltipDialog --> DropDownButton).
+At any point in time there is a set of (for lack of a better word) "active" or "focused" widgets,
+meaning the currently focused widget and that widget's ancestors.
+"Ancestor" can mean either DOM ancestor (ex: TextBox --> Form), or a logical parent-child relationship
+(ex: TooltipDialog --> DropDownButton).
 
 
 For example, if focus is on a TextBox inside a TabContainer inside a TooltipDialog triggered by a DropDownButton, the stack would be

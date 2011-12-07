@@ -134,7 +134,9 @@ Please see the following example for more detail:
 Using the placeholder parameter
 -------------------------------
 
-Coming with Dojo 1.5 the HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets. Placeholder is gray example or hint text that the widget displays inside the input area of empty form fields, such as "John Doe" or "Your Name". The text disappears when the user focuses the field.
+Coming with Dojo 1.5 the HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets.
+Placeholder is gray example or hint text that the widget displays inside the input area of empty form fields, such as "John Doe" or "Your Name".
+The text disappears when the user focuses the field.
 
 In order to use it, submit a parameter "placeHolder" to your widget:
 

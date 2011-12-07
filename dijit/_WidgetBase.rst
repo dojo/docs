@@ -37,7 +37,9 @@ The lifecycle of a widget describes the phases of its creation and destruction w
 It's useful to understand exactly what happens when.
 Whether you are sub-classing an existing widget, using dojo/method script blocks, or passing in method overrides to the constructor, these are your entry points for making a widget do what you want it to do.
 
-Widgets are classes, created with dojo.declare. All widgets inherit from dijit._WidgetBase, and most get the _Templated mixin. That provides you the following extension points (methods) you can override and provide implementation for:
+Widgets are classes, created with dojo.declare.
+All widgets inherit from dijit._WidgetBase, and most get the _Templated mixin.
+That provides you the following extension points (methods) you can override and provide implementation for:
 
 - constructor
      Your constructor method will be called before the parameters are mixed into the widget, and can be used to initialize arrays, etc.
@@ -83,7 +85,8 @@ this.inherited()
 ----------------
 
 In all cases its good practice to assume that you are overriding a method that may do something important in a class up the inheritance chain.
-So, call this.inherited() before or after your own code. E.g.
+So, call this.inherited() before or after your own code.
+E.g.
 
 .. js ::
 
@@ -98,7 +101,8 @@ Attributes
 
 Perhaps the most important feature of _WidgetBase is the ability to set attributes at widget initialization, or to change their values later on in the widget's lifecycle.
 
-dijit._WidgetBase has implemented the set() method to do this. For example, this call will set a DateTextBox's value to the current date:
+dijit._WidgetBase has implemented the set() method to do this.
+For example, this call will set a DateTextBox's value to the current date:
 
 .. js ::
 

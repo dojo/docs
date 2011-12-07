@@ -59,7 +59,8 @@ Notice that the closeText style is encapsulated within .dijitDialog so this styl
         display:inline;
   }
 
-When high-contrast mode is detected the .dijit_a11y class is applied to the body element of the page and now the span with class .closeText is made visible via the display:inline directive. In high-contrast mode, the background image of the close icon is no longer visible but the character ‘x’ is displayed.
+When high-contrast mode is detected the .dijit_a11y class is applied to the body element of the page and now the span with class .closeText is made visible via the display:inline directive.
+In high-contrast mode, the background image of the close icon is no longer visible but the character ‘x’ is displayed.
 
 .. image:: dialog_hc.jpg
 
@@ -67,7 +68,9 @@ In some cases, an HTML entity character such as, &#x25BC; - the Unicode black do
 This character is used to provide the down arrow character to indicate a popup is available.
 This provides some issues for screen readers that may not correctly speak the HTML entity character, but the ARIA describedby and labelledby attributes are used to provide the correct text description for the character when necessary.
 
-The high contrast detection code is in dijit._base.wai.js in the onload function. This function is run before the widgets are created to detect if a Windows system running Internet Explorer or Firefox is in high contrast mode. This function can also detect if images are turned off in Firefox when running via http (images are not turned off in Firefox when running from the file system even if Tools Options Content Load images automatically has been unchecked).
+The high contrast detection code is in dijit._base.wai.js in the onload function.
+This function is run before the widgets are created to detect if a Windows system running Internet Explorer or Firefox is in high contrast mode.
+This function can also detect if images are turned off in Firefox when running via http (images are not turned off in Firefox when running from the file system even if Tools Options Content Load images automatically has been unchecked).
 
 The high contrast detection code uses scripting to create an element, set specified style attributes on the element and append it to the body element.
 The styles assigned are two different border colors to the top and side borders, a background image, and absolute positioning to render it off screen.
@@ -114,12 +117,19 @@ The following table outlines the use of the tabindex attribute:
 |                        |                                   | a key press.                        |
 +------------------------+-----------------------------------+-------------------------------------+
 
-Adding a tabindex of -1 to an element allows the element to receive focus via JavaScript using the element.focus() method. This is used to allow arrow key navigation to elements. Each element that can be navigated to via arrow keys must have a tabindex of -1 to allow it to receive focus. A keydown event handler can determine the next object to receive focus and call that element’s focus() method. In addition, the style of the element may need to be updated in order to show the focus as browser’s are inconsistent in displaying focus for items that receive focus programmatically.
+Adding a tabindex of -1 to an element allows the element to receive focus via JavaScript using the element.focus() method.
+This is used to allow arrow key navigation to elements.
+Each element that can be navigated to via arrow keys must have a tabindex of -1 to allow it to receive focus.
+A keydown event handler can determine the next object to receive focus and call that element’s focus() method.
+In addition, the style of the element may need to be updated in order to show the focus as browser’s are inconsistent in displaying focus for items that receive focus programmatically.
 
 In order to assist with key event handling, an onkey event has been added to Dojo to normalize key events.
 The appropriate key event, either onkeydown or onkeypress, will be used depending upon the browser.
 The key codes have been normalized as well.
-See dojo.event.browser class in dojo.event.browser.js. In addition, there is a special onDijitClick event implemented in the dijit system to provide support for a mouse click, Enter key press or Spacebar key press to invoke an action. By subscribing to the onDijitClick dijit event, the provided handler will be called when a click, enter key or space key is received allowing the developer to easily support both mouse and keyboard. This event is utilized by the core dijit widget set and is available to developers building custom widgets.
+See dojo.event.browser class in dojo.event.browser.js.
+In addition, there is a special onDijitClick event implemented in the dijit system to provide support for a mouse click, Enter key press or Spacebar key press to invoke an action.
+By subscribing to the onDijitClick dijit event, the provided handler will be called when a click, enter key or space key is received allowing the developer to easily support both mouse and keyboard.
+This event is utilized by the core dijit widget set and is available to developers building custom widgets.
 
 Implement ARIA Specification
 ----------------------------

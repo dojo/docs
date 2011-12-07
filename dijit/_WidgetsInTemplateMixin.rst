@@ -69,7 +69,8 @@ For example, consider InlineEditBox which embeds dijit buttons into it's own tem
 The onClick event on the dijit.form.Button will call InlineEditBox.save().
 
 
-The :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` mixin does not support adding layout widgets as children. In particular there are issues with startup() and resize() calls to the children.
+The :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>` mixin does not support adding layout widgets as children.
+In particular there are issues with startup() and resize() calls to the children.
 
 Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.
 This is because the widgets declared in the template are internal objects, effectively hidden from widget users.

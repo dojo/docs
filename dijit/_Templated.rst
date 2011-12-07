@@ -15,7 +15,10 @@ dijit._Templated
 Introduction
 ============
 
-dijit._Templated has been superseded by :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` and :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`.   Please see those pages for details.   dijit._Templated will be removed in the 2.0 release.
+dijit._Templated has been superseded by :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`
+and :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`.
+Please see those pages for details.
+dijit._Templated will be removed in the 2.0 release.
 
 
 waiRole and waiState

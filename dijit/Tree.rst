@@ -71,7 +71,8 @@ stores that pass through to the server, stores that load data as it's needed or 
 All the stores, though, have the same API, so they can be connected to with either :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`,
 depending on whether there is a single or multiple top level item in the store.
 
-One might wonder why Tree doesn't interface directly with a dojo.data store.   There are a number of reasons:
+One might wonder why Tree doesn't interface directly with a dojo.data store.
+There are a number of reasons:
 
   * The parent-child relationship of items in the store might not be expressed by a children attribute on the parent item.  For relational databases it's the other way around, where the child points to the parent.  The dijit.tree.Model code specifies how to trace parent-child relationships for a given data store.
   * The interface of dojo.data to load children is rather cumbersome... must call _loadItem() on each item in the children[] array, which means that any item in the store needs to know the list of id's of it's children at any time.  It's more efficient to not require that, and to lookup children only when they are needed (when the user clicks the expando icon to open the node).
@@ -323,7 +324,9 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
     <div id="treeThree"></div>
 
 
-You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.   (The former function operates at the Tree level, and the latter operates per Tree node, allowing things like rejecting dropping items onto leaf nodes.)
+You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.
+(The former function operates at the Tree level, and the latter operates per Tree node,
+allowing things like rejecting dropping items onto leaf nodes.)
 
 Further examples
 ----------------

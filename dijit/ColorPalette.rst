@@ -11,7 +11,10 @@ dijit.ColorPalette
 .. contents::
     :depth: 2
 
-dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.  The color palette size is definable.  In addition, the color palette is accessible through screen readers as well as keyboard.  The widget also supports the 'standard' dijit function *onChange*, which signals when a new selection was made from the palette.
+dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
+The color palette size is definable.
+In addition, the color palette is accessible through screen readers as well as keyboard.
+The widget also supports the 'standard' dijit function *onChange*, which signals when a new selection was made from the palette.
 
 Widget Construction Parameters
 ==============================

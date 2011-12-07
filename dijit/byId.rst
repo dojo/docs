@@ -10,12 +10,14 @@ dijit.byId
 .. contents::
    :depth: 2
 
-dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.
+dijit.byId is a function for looking up a specific widget by its assigned name (id).
+This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.
 
 Introduction
 ============
 
-dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the JavaScript object instance of your widget and access functions of that widget.
+dijit.byId and dojo.byId are often confused, particularly by first time users.
+This function should be used when you wish to obtain a direct handle the JavaScript object instance of your widget and access functions of that widget.
 
 .. api-inline :: dijit.byId
 
@@ -166,7 +168,10 @@ This would set a style height property.
 dijit.byId()
 ------------
 
-dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically. The same id attribute is used as a parameter, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
+dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically.
+The same id attribute is used as a parameter, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit.
+This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class).
+For Example, we can set the content of the ContentPane via setContent().
 
 .. js ::
 
@@ -184,7 +189,9 @@ data-dojo-id (jsId before dojo 1.6)
 -----------------------------------
 
 HTML attribute data-dojo-id saves you one more step in working with widgets by automatically creating a global javascript variable for you (the dojo parser does this).
-This variable contains the same object as returned by dijit.byId(). Whatever value you give to the data-dojo-id attribute becomes the name of the global variable so watch out for reserved words or having two widgets with the same data-dojo-id! Since my Content Pane has a data-dojo-id attribute value of myDojoId I could simplify the above code a little by removing the dijit.byId() and using my data-dojo-id attribute as the variable name:
+This variable contains the same object as returned by dijit.byId().
+Whatever value you give to the data-dojo-id attribute becomes the name of the global variable so watch out for reserved words or having two widgets with the same data-dojo-id!
+Since my Content Pane has a data-dojo-id attribute value of myDojoId I could simplify the above code a little by removing the dijit.byId() and using my data-dojo-id attribute as the variable name:
 
 .. js ::
 

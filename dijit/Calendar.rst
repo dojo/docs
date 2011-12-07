@@ -19,7 +19,9 @@ Navigating between months is possible with the arrow icons, and the next and pre
 Holding the mouse down on these controls will repeat the action.
 Starting with version 1.4, the month name is a drop-down control for selecting a different month.
 
-The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
+The Calendar widget has been supported as a standalone widget since version 1.4.
+Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets,
+the implementation was private and began with an underscore character: dijit._Calendar.
 
 Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in :ref:`dojox.date <dojox/date>`.
 
@@ -230,7 +232,8 @@ Custom styling
 Note
 ====
 
-dijit._Calendar was upgraded to dijit.Calendar in version 1.4. An alias is provided for backwards compatibility.
+dijit._Calendar was upgraded to dijit.Calendar in version 1.4.
+An alias is provided for backwards compatibility.
 
 
 See Also

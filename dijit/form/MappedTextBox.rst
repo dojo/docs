@@ -14,7 +14,7 @@ A dijit.form.ValidationTextBox subclass which provides a base class for widgets 
 a visible formatted display value, and a serializable
 value in a hidden input field which is actually sent to the server.
 
-Many of the form controls have a concept of "displayed value" vs. "serialized value" (aka the "real value"),
+Many of the form controls have a concept of "displayed value" vs. "serialized value" (a.k.a. the "real value"),
 which is the value passed to the server on form submit.
 
 For example, a NumberSpinner may be declared like

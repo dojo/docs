@@ -17,7 +17,8 @@ Limitation of specific plugins are addressed in their own documentation.
 Introduction
 ============
 
-There are currently a small set of nice features that can be plugged into dijit.Editor that are contained within this package. Please refer to the following list for additional details:
+There are currently a small set of nice features that can be plugged into dijit.Editor that are contained within this package.
+Please refer to the following list for additional details:
 
 * :ref:`dijit._editor.plugins.ToggleDir <dijit/_editor/plugins/ToggleDir>`  -- **EXPERIMENTAL**
 

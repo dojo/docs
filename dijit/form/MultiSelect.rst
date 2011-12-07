@@ -17,13 +17,19 @@ The MultiSelect widget allows the selection of multiple items.
 Introduction
 ============
 
-The MultiSelect widget is an exact replacement for the native SELECT element and was created to provide a thin widget wrapper that was necessary to interact with the Form widget, and to provide the ability to select multiple items which is not available in the FilteringSelect widget.
-Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed and the hidden text value to be submitted with a FORM.
+The MultiSelect widget is an exact replacement for the native SELECT element and was created to provide a thin widget
+wrapper that was necessary to interact with the Form widget, and to provide the ability to select multiple items
+which is not available in the FilteringSelect widget.
+Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed and the hidden text value
+to be submitted with a FORM.
 Unlike FilteringSelect, the user cannot freely type text.
 
-On FORM submit, the selected item's hidden text values of a non-disabled MultiSelect widget are submitted using a native SELECT element if the *name* attribute was specified at widget creation time.
+On FORM submit, the selected item's hidden text values of a non-disabled MultiSelect widget are submitted
+using a native SELECT element if the *name* attribute was specified at widget creation time.
 
-MultiSelect widgets are not dojo.data-enabled. This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible to create the OPTION tags dynamically at runtime.
+MultiSelect widgets are not dojo.data-enabled.
+This means that the data must be embedded as OPTION tags, children of the parent SELECT element.
+However, it is possible to create the OPTION tags dynamically at runtime.
 
 
 Examples
@@ -32,9 +38,15 @@ Examples
 Declarative example
 -------------------
 
-MultiSelect widgets always use a native SELECT tag and have child OPTION tags to describe selection choices, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. The OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
+MultiSelect widgets always use a native SELECT tag and have child OPTION tags to describe selection choices, e.g.
+the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value.
+The OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value.
+To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
-**Note:** If you are using the declarative example and want to manually specify 'selected' or 'selected="selected"' on multiple <options> to have multiple selected on the initial load, you'll need to add the multiple="true" attribute to your native <select> element.  Eg. <select data-dojo-type="dijit.form.MultiSelect" multiple="true"...
+**Note:** If you are using the declarative example and want to manually specify 'selected' or 'selected="selected"'
+on multiple <options> to have multiple selected on the initial load, you'll need to add the multiple="true" attribute
+to your native <select> element.
+Eg. <select data-dojo-type="dijit.form.MultiSelect" multiple="true"...
 
 .. code-example ::
 

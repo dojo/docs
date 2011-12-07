@@ -7,7 +7,8 @@ dijit._LayoutWidget
 .. contents::
     :depth: 2
 
-Typically layout widgets inherit from the dijit.layout._LayoutWidget base class. This implements addChild(), removeChild(), startup(), and resize().
+Typically layout widgets inherit from the dijit.layout._LayoutWidget base class.
+This implements addChild(), removeChild(), startup(), and resize().
 
 The widget is responsible for implementing some callback methods and setting some properties though:
 

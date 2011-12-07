@@ -34,9 +34,9 @@ Usage
 
 After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the 
 DOM, so it can overlay the entire webpage.
-With this move no other elements parent the Dialog.domNode. Therefore
-you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`) to your
-<body> tag, in order to show the Dialog with the right styles:
+With this move no other elements parent the Dialog.domNode.
+Therefore you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`)
+to your <body> tag, in order to show the Dialog with the right styles:
 
 .. html ::
 
@@ -252,7 +252,8 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     </script>
 
 If you want to handle the onSubmit event like a traditional <form> element, you will need to employ a <form> either as 
-a traditional HTML element or as a ''dijit.form.Form''.  This example shows a Dialog with an embedded Form which 
+a traditional HTML element or as a ''dijit.form.Form''.
+This example shows a Dialog with an embedded Form which
 handles the onSubmit event, validation, and an xhrPost to the server.
 
 .. code-example ::
@@ -377,11 +378,13 @@ External Dialog content using HREF attribute
 --------------------------------------------
 
 You can also load dialog content from another page by setting HREF attribute for the widget.
-Note that the dijit.Dialog doesn't execute script tags inline external content. However, it parses the page for widgets,
+Note that the dijit.Dialog doesn't execute script tags inline external content.
+However, it parses the page for widgets,
 so you can add functionality to widgets by connecting into widget extension points using declarative markup
 (DojoML; e.g. ``<script type="dojo/method" data-dojo-event="onClick">``).
 
-The :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` provides the ``executeScripts`` functionality of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialog``
+The :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` provides the ``executeScripts`` functionality
+of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialog``.
 
 .. code-example ::
   :height: 500
@@ -462,7 +465,7 @@ If the dialog does not contain a focusable item,
 focus will be set to the dialog container element when the dialog is opened.
 The same focus behavior has been implemented for tooltip dialog
 
-When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. 
+When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog.
 When focus reaches the last focusable element in the dialog,
 pressing tab will cycle focus back to the first focusable item.
 Pressing shift-tab will move focus backwards through focusable elements within the dialog.
@@ -480,8 +483,8 @@ on the container of the tooltip dialog.
 In future versions of the dialog and tooltip dialog widgets, focus will go to
 the first item in the dialog or tooltip dialog.
 
-When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. 
-When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title. 
+When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog.
+When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title.
 Pressing shift-tab will move focus backwards through focusable elements within the dialog until the dialog title is 
 reached.
 If focus has previous cycled forward through all of the elements, pressing shift-tab with focus on the dialog

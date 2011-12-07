@@ -13,9 +13,11 @@ dijit._editor.plugins.FullScreen
 .. contents::
     :depth: 2
 
-Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?
+Have you ever been on a website where you were able to edit some document to post, for example a blog site,
+and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?
 Doesn't that make it nearly impossible to edit the document effectively?
-It's time to put an end to such behaviors and this plugin's goal is to do exactly that for dijit.Editor.  No more postage stamp sized editors!
+It's time to put an end to such behaviors and this plugin's goal is to do exactly that for dijit.Editor.
+No more postage stamp sized editors!
 
 Features
 ========
@@ -46,7 +48,8 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.
 The first thing you need to do is to require it into the page that's using the editor.
-This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.
+For example:
 
 .. js ::
  
@@ -64,7 +67,8 @@ For example:
 
 
 And that's it.
-The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FullScreen plugin!  You can use the button or hotkey command to toggle the editor mode.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FullScreen plugin!
+You can use the button or hotkey command to toggle the editor mode.
 
 Configurable Attributes
 -----------------------

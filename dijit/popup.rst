@@ -25,7 +25,9 @@ When creating a pop-up, there are usually two widgets involved:
 * The parent widget, which controls opening and closing of the pop-up
 * The pop-up widget itself
 
-Opening a pop-up from a parent widget involves calling ``popup.open`` with a kwArgs object that provides information about the pop-up and its related parent widget. The available properties for this object are:
+Opening a pop-up from a parent widget involves calling ``popup.open`` with a kwArgs object
+that provides information about the pop-up and its related parent widget.
+The available properties for this object are:
 
 parent (Widget)
   The widget that is displaying the pop-up.
@@ -96,7 +98,11 @@ Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens
     domAttr.set(this._popupStateNode, "popupActive", "true");
     domClass.add(this._popupStateNode, "dijitHasDropDownOpen");
 
-As you can see, there are three essential calls here, ``popup.moveOffScreen``, ``popup.open``, and ``popup.close``. ``popup.moveOffScreen`` wraps the widget in a container, appends it to the ``<body>``, then moves it off-screen so that any measurement ``dropDown.startup`` needs to do is possible. Once that’s done, it opens the pop-up by calling ``popup.open``. Finally, the ``onExecute`` and ``onCancel`` callbacks both call ``popup.close``, passing in the correct pop-up widget to close.
+As you can see, there are three essential calls here, ``popup.moveOffScreen``, ``popup.open``, and ``popup.close``.
+``popup.moveOffScreen`` wraps the widget in a container, appends it to the ``<body>``,
+then moves it off-screen so that any measurement ``dropDown.startup`` needs to do is possible.
+Once that’s done, it opens the pop-up by calling ``popup.open``.
+Finally, the ``onExecute`` and ``onCancel`` callbacks both call ``popup.close``, passing in the correct pop-up widget to close.
 
 It’s important to note here that the parent widget is responsible for both opening *and closing* the pop-up.
 This architecture was used so that the parent widget is always aware of whether or not its child pop-up is open, and so that it can easily perform any necessary clean-up or other relevant activity once its pop-up has closed.
@@ -165,10 +171,15 @@ This means that parent widgets do not need to maintain their own stack of pop-up
 Keyboard handling
 =================
 
-dijit/popup automatically listens for key presses on the ESC key as a way to cancel the highest pop-up and return to the parent node (which may itself be a pop-up).
-When the ESC key is pressed, the ``onCancel`` callback passed in the call to ``popup.open`` is called. dijit/popup also listens for the TAB key, and if it sees it, the entire stack of pop-ups is cancelled (in the case of menus, where one pop-up has opened another and so forth).
+dijit/popup automatically listens for key presses on the ESC key as a way to cancel the highest pop-up
+and return to the parent node (which may itself be a pop-up).
+When the ESC key is pressed, the ``onCancel`` callback passed in the call to ``popup.open`` is called.
+dijit/popup also listens for the TAB key, and if it sees it, the entire stack of pop-ups is cancelled
+(in the case of menus, where one pop-up has opened another and so forth).
 
-Note that in neither of these cases does the dijit/popup code directly close any pop-ups—it just calls the ``onCancel`` callback defined in the call to ``popup.open``. That callback then is responsible for calling ``popup.close(popupWidget)``.
+Note that in neither of these cases does the dijit/popup code directly close any pop-ups.
+It just calls the ``onCancel`` callback defined in the call to ``popup.open``.
+That callback then is responsible for calling ``popup.close(popupWidget)``.
 
 Popup DOM node positioning
 ==========================

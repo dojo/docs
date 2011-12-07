@@ -13,7 +13,9 @@ dijit.form
 .. contents::
     :depth: 2
 
-The dijit.form package contains "form widgets". What's a form widget? It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
+The dijit.form package contains "form widgets".
+What's a form widget?
+It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
 
 The widgets can be used in a FORM tag, in a :ref:`dijit.form.Form <dijit/form/Form>` widget, or outside of a form.
 
@@ -145,7 +147,10 @@ Color change
 The input-type form widgets (including ComboBox and FilteringSelect, but excluding Textarea) turn yellow and display an icon when the value is invalid, or a required field is blank.
 
 In general the color change is deferred until the field is blurred.
-I.e. the field won't turn yellow while the user is typing because the value they have is incomplete. However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
+I.e.
+the field won't turn yellow while the user is typing because the value they have is incomplete.
+However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters).
+This change should provide good feedback to users.
 
 For number fields, the field will also turn yellow instantly if the user has entered a value that is out of range (like 1000 for a field with max=999), assuming that the value can't be made in range by typing more characters (ex: "1" in a field with a min of 1000).
 
@@ -164,7 +169,8 @@ The validation tooltips are only displayed while the field is focused (and after
 
 Prevent form submission
 -----------------------
-Using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form submission if any of the fields are invalid.  Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
+Using the :ref:`dijit.form.Form <dijit/form/Form>` widget you can prevent form submission if any of the fields are invalid.
+Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
 
 Use Dijit Form Controls All Over!
 =================================
@@ -192,7 +198,9 @@ For every HTML control, there's a Dijit equivalent that does the same thing, and
 Mapped Form Controls
 ====================
 
-Many of the form controls have a concept of "displayed value" vs. "serialized value" (aka the "real value"), which is the value passed to the server on form submit.  For example, a NumberSpinner may be declared like
+Many of the form controls have a concept of "displayed value" vs. "serialized value" (aka the "real value"),
+which is the value passed to the server on form submit.
+For example, a NumberSpinner may be declared like:
 
 .. html ::
 

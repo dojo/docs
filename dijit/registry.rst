@@ -17,7 +17,8 @@ dijit/registry stores a collection of all the dijit widgets within a page.
 It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID).
 It contains functions formerly found on the root ``dijit`` object for looking up widgets, such as ``dijit.byId`` and ``dijit.byNode``.
 
-In Dojo 1.6 and earlier, the registry is an instance of :ref:`dijit/WidgetSet`. Starting in Dojo 1.7, it is its own object.
+In Dojo 1.6 and earlier, the registry is an instance of :ref:`dijit/WidgetSet`.
+Starting in Dojo 1.7, it is its own object.
 
 Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some).
 Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0).
@@ -62,7 +63,8 @@ Finding all widgets underneath a DOM node
       var formWidgets = registry.findWidgets(formNode);
   });
 
-Note that ``registry.findWidgets`` will *not* descend into widgets. That is to say, if you had a DOM like this:
+Note that ``registry.findWidgets`` will *not* descend into widgets.
+That is to say, if you had a DOM like this:
 
 .. html ::
  

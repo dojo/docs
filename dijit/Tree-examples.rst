@@ -62,7 +62,8 @@ Expanding and Focusing tree nodes programmatically
 
 One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
 
-The following example contains workaround code for this problem, as well as an example call to tree.set('path').  If you already know the full path to the tree node you want to highlight, you can simply call tree.set('path').
+The following example contains workaround code for this problem, as well as an example call to tree.set('path').
+If you already know the full path to the tree node you want to highlight, you can simply call tree.set('path').
 
 .. code-example ::
 

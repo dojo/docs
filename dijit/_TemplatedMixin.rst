@@ -15,9 +15,12 @@ dijit._TemplatedMixin
 Introduction
 ============
 
-dijit._TemplatedMixin is a mixin for most widgets in dijit. It takes an HTML template, and creates the widget's DOM tree according to that template. In other words, it implements buildRendering() for you.
+dijit._TemplatedMixin is a mixin for most widgets in dijit.
+It takes an HTML template, and creates the widget's DOM tree according to that template.
+In other words, it implements buildRendering() for you.
 
-Note that the underscore in the name implies not that _TemplatedMixin is a private class, but rather that it's a mixin, rather than a widget.
+Note that the underscore in the name implies not that _TemplatedMixin is a private class,
+but rather that it's a mixin, rather than a widget.
 
 Usage
 =====
@@ -38,7 +41,8 @@ and then instead of defining buildRendering(), define a ``templateString``.
 The template
 ============
 
-The template is specified in the widget attribute ``templateString``, and points to some HTML w/a `single root node`, with special attributes on the tags, plus possibly substitution variables, etc.
+The template is specified in the widget attribute ``templateString``, and points to some HTML w/a `single root node`,
+with special attributes on the tags, plus possibly substitution variables, etc.
 
 It can either be specified as a literal string:
 
@@ -75,7 +79,9 @@ data-dojo-attach-point
 In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly.
 In this case the widget will need to access the <span> with the count in order to change the value.
 
-You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js. But if she does, then if two or more widget instances are created, they'll all have the same ids!  Obviously code will blow up then.
+You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js.
+But if she does, then if two or more widget instances are created, they'll all have the same ids!
+Obviously code will blow up then.
 
 Instead, you the widget author do the following:
 
@@ -137,7 +143,9 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 containerNode
 -------------
 
-Often a widget declared in markup will have contents, i.e. it will contain some other DOM. For example:
+Often a widget declared in markup will have contents, i.e.
+it will contain some other DOM.
+For example:
 
 .. html ::
 
@@ -180,7 +188,8 @@ For example:
 Substitution variables
 ----------------------
 
-A template can also reference substitution variables like ${title}. ${title} references the title attribute of the widget.
+A template can also reference substitution variables like ${title}.
+${title} references the title attribute of the widget.
 
 However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation.
 In other words, myWidget.set('title', 'My new title') won't work if you use substitution variables.

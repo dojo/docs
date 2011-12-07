@@ -31,7 +31,8 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.
 The first thing you need to do is require into the page you're using the editor.
-This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+This is done in the same spot all your dojo.require calls are made, usually a head script tag.
+For example:
 
 .. js ::
  
@@ -49,7 +50,8 @@ For example:
 
 
 And that's it.
-The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Print plugin!  You can use the button to print the editor contents when you wish.
+The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Print plugin!
+You can use the button to print the editor contents when you wish.
 
 Examples
 ========

@@ -22,7 +22,10 @@ As the user types, partially matched values will be shown in a pop-up menu below
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
 
-ComboBox widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the :ref:`dojo.data <dojo/data>` section for complete details.
+ComboBox widgets are dojo.data-enabled.
+This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store.
+The unified dojo.data architecture can get its data from various places such as databases and web services.
+See the :ref:`dojo.data <dojo/data>` section for complete details.
 
 `Note:` ComboBox only has a single value that matches what is displayed while :ref:`FilteringSelect <dijit/form/FilteringSelect>` incorporates a hidden value that corresponds to the displayed value.
 
@@ -58,7 +61,10 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
 Declarative markup using native select and option tags
 ------------------------------------------------------
 
-Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. For ComboBox widgets, only the OPTION's child text node is used as both the submit value and the displayed value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
+Native SELECT combo-boxes always have value/description pairs, e.g.
+the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value.
+For ComboBox widgets, only the OPTION's child text node is used as both the submit value and the displayed value.
+To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
 .. code-example ::
 
@@ -131,7 +137,13 @@ Known Issues
 ------------
 
 JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted.
-In Dojo 1.1 the Combobox was updated so that JAWS 9 will speak "editable combo" when the Combobox gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a ComboBox containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9 or JAWS 10.
+In Dojo 1.1 the Combobox was updated so that JAWS 9 will speak "editable combo" when the Combobox gets focus.
+However, there are some issues reading the highlighted choice.
+Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox.
+For example, if you are working with a ComboBox containing the US state names and you type in an "I" to filter the list of states.
+If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portion selected.
+JAWS 9 will speak, "owa" rather than "Iowa".
+This is not an issue with Firefox 3 and JAWS 9 or JAWS 10.
 
 When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spoken as you arrow down through the items - the currently focused item is spoken last.
 Event the hidden previous choices / more choices options are spoken.

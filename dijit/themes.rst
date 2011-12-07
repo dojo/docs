@@ -56,7 +56,8 @@ The four available themes in Dijit are Claro, Tundra, Nihilo and Soria.
 Claro
 -----
 
-A new theme for Dijit and the dojox.Grid is called Claro (nee Lucid).  The Claro theme has several aims:
+A new theme for Dijit and the dojox.Grid is called Claro (nee Lucid).
+The Claro theme has several aims:
 
    - to deliver a modern and engaging visual style for rich internet applications using the Dojo Dijit library, with the visual enhancements of transparent gradient background images, drop shadows, and appropriate CSS animation (on webkit and mozilla);
    - to deliver the 'fit and finish' professional quality with consistent padding, font treatment and alignment; and fix missing expected behavioral states (hover, active and selected) in widgets;
@@ -80,7 +81,8 @@ See `Claro <http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dij
 
 **BluePrints**
 
-See Claro blueprints for a visualization of the CSS styling mapped in each widget. (To be added for Dojo 1.5 release)
+See Claro blueprints for a visualization of the CSS styling mapped in each widget.
+(To be added for Dojo 1.5 release)
 
 
 ----
@@ -181,7 +183,8 @@ Common
       images/
 
 All common icon images are located in dijit/icons/images and their respective CSS files are located in dijit/icons/.
-These are 16px X 16px icons in the commonIconsObjAct*.png sprites containing action and object type images which can be used in the following widgets: accordionContainer, menu, tab, titlepane, tree and all button widgets. Note: an RTL version of these common icons is being assessed.
+These are 16px X 16px icons in the commonIconsObjAct*.png sprites containing action and object type images which can be used in the following widgets: accordionContainer, menu, tab, titlepane, tree and all button widgets.
+Note: an RTL version of these common icons is being assessed.
 
 The editor icons are also located in this same directory; these images are in the editorIcons*.png sprite files.
 
@@ -217,7 +220,9 @@ Example of a selector for an icon:
 
 The CSS class(es) "dijitEditorIcon dijitEditorIconCut" indicate the Cut icon.
 
-The Cut icon starts 54 px from the right edge, and measures 18px by 18px. 108 equals 6 * 18, so it's the 4th image from the left in the sprite. You can define your own buttons by setting up CSS selectors using code similar to the previous code, and wiring up the iconClass.
+The Cut icon starts 54 px from the right edge, and measures 18px by 18px.
+108 equals 6 * 18, so it's the 4th image from the left in the sprite.
+You can define your own buttons by setting up CSS selectors using code similar to the previous code, and wiring up the iconClass.
 
 Themes may even specify variations on an icon depending on state.
 So for example, there can be a faded, or black and white Cut icon for when the Cut function is disabled.
@@ -229,9 +234,11 @@ The special icon would be triggered by a rule like:
   .dijitDisabled .dijitEditorIcon {
 	background-image: url('images/editorIconsDisabled.png');}
 
-Icons need to be rendered to support both left-to-right (ltr) and right-to-left (rtl) directions to be BiDi globalization compliant; therefore, two sets of files is required - widgtXIcons.png (ltr) and widgetXIcons_rtl.png.
+Icons need to be rendered to support both left-to-right (ltr) and right-to-left (rtl) directions to be BiDi globalization compliant;
+therefore, two sets of files is required - widgtXIcons.png (ltr) and widgetXIcons_rtl.png.
 
-Here are some best practices on when to mirror an icon to right-to-left. (info to come.)
+Here are some best practices on when to mirror an icon to right-to-left.
+(info to come.)
 
 
 Claro theme-specific
@@ -507,7 +514,8 @@ For the Claro theme, 11px (.688em) has been defined as the body font size in cla
 	color:#131313;
        }
 
-So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLabel style elements are relative to the claro default body font size. (i.e. MonthLabel= 12px, DayLabel= 10px)
+So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLabel style elements
+are relative to the claro default body font size. (i.e. MonthLabel= 12px, DayLabel= 10px)
 
 
 
@@ -534,7 +542,8 @@ Note: There is some unique font styling applied across all themes within specifi
 Layout
 ------
 
-Layout is the process of arranging the various visual components of a user interface (e.g., menus, panes, tabs, text fields, icons, etc.) to enhance usability, clarity, legibility and aesthetics. Layout encompasses spacing, positioning, grouping, emphasis, and alignment.
+Layout is the process of arranging the various visual components of a user interface (e.g., menus, panes, tabs, text fields, icons, etc.) to enhance usability, clarity, legibility and aesthetics.
+Layout encompasses spacing, positioning, grouping, emphasis, and alignment.
 
 The example below illustrates the before and after implementation of the best practice for alignment.
 
@@ -672,7 +681,7 @@ In Dojo 1.5, the loadingAnimation.gif is used in the following widgets: dijit.Tr
 
 See animation in action in the `Claro <http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/themes/themeTester.html?theme=claro>`_ theme rendered in the themeTester.html page.
 
-See more on :ref:`Animations and Effects with Dojo. <quickstart/Animation>`
+See more on :ref:`Animations and Effects with Dojo. <quickstart/Animation>`.
 
 Overriding a theme
 ------------------
@@ -719,7 +728,8 @@ If you want to develop your own theme just make rules like
 
 and include them into your page.
 
-The dijit.form.Checkbox widget displays the checkbox image using an <img> tag.   However, it grabs the image location from the CSS.
+The dijit.form.Checkbox widget displays the checkbox image using an <img> tag.
+However, it grabs the image location from the CSS.
 
 The class names used on widgets do not change based on the theme, although they will change based on the state of the widget.
 For example, an input field will have class="dojoInputField",

@@ -124,7 +124,8 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
           </tr>
         </table>
 
-However, that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
+However, that technique has it's limits...
+it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
 
 Dijit Layout
@@ -274,7 +275,8 @@ There are three types of elements in that example:
 The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself.
 They all do basically the same thing, but look different.
 
-The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
+The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar.
+An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
 
 Conceptually it looks like this:
 
@@ -305,7 +307,8 @@ Visibility
 
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element.
 This is very important and a mistake many people make.
-Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
+Dialog, etc.
+are created using visibility:hidden rather than display:none to avoid this problem.
 
 
 Programmatic Creation and Lifecycle
@@ -316,7 +319,9 @@ This section discusses programmatic creation, destruction, etc.
 Creation
 --------
 
-When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
+When creating widgets programmatically, you create the parent first, then add the children, and grandchildren...
+and finally call startup().
+Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
 .. js ::
   

@@ -11,9 +11,14 @@ dijit.form.SimpleTextarea
 .. contents::
     :depth: 2
 
-A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide a thin widget wrapper that was necessary to interact with the :ref:`Form <dijit/form/Form>` widget, and to provide the ability to specify *rows* and *cols* attributes which are not available in the :ref:`Textarea <dijit/form/Textarea>` widget.
+A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide
+a thin widget wrapper that was necessary to interact with the :ref:`Form <dijit/form/Form>` widget,
+and to provide the ability to specify *rows* and *cols* attributes
+which are not available in the :ref:`Textarea <dijit/form/Textarea>` widget.
 Unlike the :ref:`Textarea <dijit/form/Textarea>` widget, the height of this widget does not adjust to its content.
-It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native TEXTAREA element.  Note that when declaring a SimpleTextarea in markup you should use a <textarea> node to preserve the newline formatting.  When specifying the *cols* attribute, you must also specify *style="width:auto;"* in order for the parameter to take effect.
+It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native TEXTAREA element.
+Note that when declaring a SimpleTextarea in markup you should use a <textarea> node to preserve the newline formatting.
+When specifying the *cols* attribute, you must also specify *style="width:auto;"* in order for the parameter to take effect.
 
 Examples
 ========

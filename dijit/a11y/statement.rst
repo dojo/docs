@@ -14,7 +14,10 @@ Dijit Accessibility
 ===================
 
 Dojo has made a serious commitment to creating a toolkit that allows the development of accessible Web applications for all users, regardless of physical abilities.
-The core widget set of Dojo, dijit, is fully accessible since the 1.0 release, making Dojo the only fully accessible open source toolkit for Web 2.0 development. This means that users who require keyboard only navigation, need accommodations for low vision or who use an assistive technology, can interact with the dijit widgets. If you are new to accessibility, please refer to the :ref:`Web Accessibility Issues <dijit/a11y/index>` page for more general information about accessibility. Developers wanting further information about the implementation of accessibility within dijit and/or how to create and test accessible widgets should refer to the following accessibility information:
+The core widget set of Dojo, dijit, is fully accessible since the 1.0 release, making Dojo the only fully accessible open source toolkit for Web 2.0 development.
+This means that users who require keyboard only navigation, need accommodations for low vision or who use an assistive technology, can interact with the dijit widgets.
+If you are new to accessibility, please refer to the :ref:`Web Accessibility Issues <dijit/a11y/index>` page for more general information about accessibility.
+Developers wanting further information about the implementation of accessibility within dijit and/or how to create and test accessible widgets should refer to the following accessibility information:
 
 * :ref:`Dijit Accessibility Strategy <dijit/a11y/strategy>`
 * :ref:`Dojo Accessibility Resources <dijit/a11y/resources>`
@@ -28,7 +31,8 @@ In addition, the documentation for each dijit widget contains a section explaini
 Dojo Accessibility Compliance
 =============================
 
-People familiar with accessibility and accessibility guidelines such as the W3C's `Web Content Accessibility Guidelines <http://www.w3.org/WAI/GL/>`_, and the `US Section 508 <http://section508.gov/>`_ requirements, are often interested in a compliance statement for Dojo. While Dojo does not make an explicit claim of compliance to W3C WCAG 2.0 Level A or to US Section 508, every attempt has been made to meet those guidelines and to make the 1.0 and future versions of the core widget set, dijit, accessible to keyboard, low vision and assistive technology users.
+People familiar with accessibility and accessibility guidelines such as the W3C's `Web Content Accessibility Guidelines <http://www.w3.org/WAI/GL/>`_, and the `US Section 508 <http://section508.gov/>`_ requirements, are often interested in a compliance statement for Dojo.
+While Dojo does not make an explicit claim of compliance to W3C WCAG 2.0 Level A or to US Section 508, every attempt has been made to meet those guidelines and to make the 1.0 and future versions of the core widget set, dijit, accessible to keyboard, low vision and assistive technology users.
 
 - Keyboard support has been added to all of the dijit widgets and is supported in Firefox 2 & 3 on Mac and Windows as well as IE 6 & 7 on Windows (Safari and Opera do not yet support full keyboard navigation of scripted content). Note that for keyboard support in Firefox on the Mac a System Properties keyboard setting must be changed from the default. Open System Properties and select Keyboard & Mouse, then select the Keyboard Shortcuts tab. At the bottom of the panel under Full Keyboard Access: make certain that All Controls is checked.
 
@@ -49,7 +53,8 @@ Currently only Firefox has implemented ARIA within the browser in order to provi
 Opera, Safari and IE8 browser developers are currently working to include ARIA support.
 While the current versions of the JAWS and Window-Eyes screen readers support the basics of ARIA, there is additional work for them to support the advanced features of the specification.
 That work is currently in progress.
-One of the toolkits had to be first and dijit's usage of ARIA has helped to provide valuable feedback to the specification developers and test cases for the screen reader vendors. As support for ARIA continues dijit will incorporate accessibility for regions of the page updated via Ajax as well as for drag and drop.
+One of the toolkits had to be first and dijit's usage of ARIA has helped to provide valuable feedback to the specification developers and test cases for the screen reader vendors.
+As support for ARIA continues dijit will incorporate accessibility for regions of the page updated via Ajax as well as for drag and drop.
 
 Even though the dijit widgets are all fully accessible, the developer is responsible for using them properly and following general accessibility guidelines to create an accessible Web application.
 Developers should make use of any optional widget parameters listed in the accessibility section in the documentation page for each widget.
@@ -72,7 +77,9 @@ Accessibility Involvement
 =========================
 
 Becky Gibson of IBM's Emerging Technology team is the accessibility lead for Dojo responsible for implementing and promoting accessibility within the Dojo community.
-She has been fortunate to get support for Accessibility from Dojo's leadership team as well as the `BDFL <http://en.wikipedia.org/wiki/BDFL>`_ of Dijit, Bill Keese, and other dijit developers. Grants from `IBM <http://www.ibm.com/us/>`_ and `Mozilla <http://www.mozilla.org/foundation/>`_ enabled members of the `Adaptive Technology Research Centre <http://atrc.utoronto.ca/>`_ (ATRC) at the University of Toronto to actively participate in the development of the ARIA specification and its implementation within Dojo. The dijit team is always looking to recruit new members to help with accessibility or to help developers enable accessibility in new contributions to dojo, dijit, and dojox.
+She has been fortunate to get support for Accessibility from Dojo's leadership team as well as the `BDFL <http://en.wikipedia.org/wiki/BDFL>`_ of Dijit, Bill Keese, and other dijit developers.
+Grants from `IBM <http://www.ibm.com/us/>`_ and `Mozilla <http://www.mozilla.org/foundation/>`_ enabled members of the `Adaptive Technology Research Centre <http://atrc.utoronto.ca/>`_ (ATRC) at the University of Toronto to actively participate in the development of the ARIA specification and its implementation within Dojo.
+The dijit team is always looking to recruit new members to help with accessibility or to help developers enable accessibility in new contributions to dojo, dijit, and dojox.
 
 
 Additional Compliance Details

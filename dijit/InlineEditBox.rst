@@ -117,7 +117,9 @@ Notes on i18n
 =============
 
 Note that the web server is responsible for the initial formatting of the data.
-For example, if you are display a large number, it would be formatted as 123,456,789.55 in the United States but as 123.456.789,00 in some European countries.   InlineEditBox expects the number to be formatted in the page's locale and will fail if it can't parse it according to that locale.
+For example, if you are display a large number, it would be formatted as 123,456,789.55 in the United States
+but as 123.456.789,00 in some European countries.
+InlineEditBox expects the number to be formatted in the page's locale and will fail if it can't parse it according to that locale.
 
 
 Accessibility

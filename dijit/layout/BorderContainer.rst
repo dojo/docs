@@ -29,10 +29,11 @@ Each child element must have an attribute "region" which indicates where it shou
   * right
   * left
   * center
-  * leading: used have flexible layout in left-to-right/right-to-left environments. In ltr, it will be equivalent to left, in rtl equivalent to right
+  * leading: used have flexible layout in left-to-right/right-to-left environments.In ltr, it will be equivalent to left, in rtl equivalent to right
   * trailing: opposite of 'leading': right in ltr, left in rtl
 
-There can be multiple widgets for each region, in which case their order (i.e. closeness to the edge of the BorderContainer) is controlled by their relative layoutPriority settings.
+There can be multiple widgets for each region, in which case their order (i.e.
+closeness to the edge of the BorderContainer) is controlled by their relative layoutPriority settings.
 
 There must always be one region marked 'center'.
 

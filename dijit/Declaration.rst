@@ -16,11 +16,14 @@ Declares a widget from markup.
 Introduction
 ============
 
-Just as there are two ways to create a widget instances - declarative and programmatic - so there are two ways to declare a Dijit class (i.e., a type of widget). As you might guess, the declarative way is slightly easier.
+Just as there are two ways to create a widget instances - declarative and programmatic - so there are two ways to declare a Dijit class (i.e., a type of widget).
+As you might guess, the declarative way is slightly easier.
 
 Usage
 =====
-To declare your class declaratively, use dijit.Declaration. Uhhhh, OK, too many "declare"s in that sentence. It's easier to show than to tell.
+To declare your class declaratively, use dijit.Declaration.
+Uhhhh, OK, too many "declare"s in that sentence.
+It's easier to show than to tell.
 
 Here's an example defining a widget called Employee, and then creating two of those Employee widgets:
 

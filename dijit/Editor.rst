@@ -11,7 +11,8 @@ dijit.Editor
 .. contents::
     :depth: 2
 
-Dijit's Rich Text editor, dijit.Editor, is a text box on steroids. Designed to look and work like a word processor. The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
+Dijit's Rich Text editor, dijit.Editor, is a text box on steroids, designed to look and work like a word processor.
+The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
 
 Features
 ========
