@@ -86,7 +86,12 @@ Attaching an element to :ref:``aroundNode`` will cause the drop-down to be posit
 Dynamic & lazy-loading drop-downs
 =================================
 
-By default, _HasDropDown assumes that a dijit widget has been created and assigned to :ref:``HasDropDown.dropDown`` before the widget starts up. This works well for drop-downs that always contain the same content and are available immediately, but it may reduce startup performance and it makes it impossible to create dynamically populated/asynchronous drop-downs. In order to work around these limitations, more advanced drop-down widgets can implement :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` instead:
+By default, _HasDropDown assumes that a dijit widget has been created and assigned to :ref:``HasDropDown.dropDown``
+before the widget starts up.
+This works well for drop-downs that always contain the same content and are available immediately,
+but it may reduce startup performance and it makes it impossible to create dynamically populated/asynchronous drop-downs.
+In order to work around these limitations, more advanced drop-down widgets can implement
+:ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` instead:
 
 .. js ::
  
@@ -100,18 +105,18 @@ By default, _HasDropDown assumes that a dijit widget has been created and assign
               return (!!dropDown && (!dropDown.href || dropDown.isLoaded));
           },
       
-          loadDropDown: function(){
+          loadDropDown: function(callback){
               // Loads our dropdown
               var dropDown = this.dropDown;
               if(!dropDown){ return; }
               if(!this.isLoaded()){
                   var handler = dropDown.on("load", this, function(){
                       handler.remove();
-                      this.openDropDown();
+                      callback();
                   });
                   dropDown.refresh();
               }else{
-                  this.openDropDown();
+                  callback();
               }
           }
       });
