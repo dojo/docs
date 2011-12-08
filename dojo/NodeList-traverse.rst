@@ -216,7 +216,7 @@ Assume a DOM created by this markup:
   dojo.query(".text").parents();
 
   // This code returns the one div with class "container" in a dojo.NodeList:
-  dojo.query(".text").parents(".first");
+  dojo.query(".text").parents(".container");
 
 [ Dojo 1.7 AMD ]
 
@@ -227,7 +227,7 @@ Assume a DOM created by this markup:
     query(".text").parents();
 
     // This code returns the one div with class "container" in a dojo.NodeList:
-    query(".text").parents(".first");
+    query(".text").parents(".container");
   });
 
 siblings
