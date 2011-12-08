@@ -30,7 +30,7 @@ To access the colors in the palette, simply iterate through the ``.colors`` prop
 
 .. js ::
   
-  var p = dojox.color.Palette.generate("#789abc", "splitComplimentary");
+  var p = dojox.color.Palette.generate("#789abc", "splitComplementary");
   dojo.forEach(p.colors, function(c){
       // do something with each dojo.Color object
   });
@@ -79,15 +79,15 @@ a palette based on complimentary color theory:
 
 .. js ::
   
-  var p = dojox.color.Palette.generate("#a245f9", "complimentary");
+  var p = dojox.color.Palette.generate("#a245f9", "complementary");
 
 Available color theory models (based on the color rules at `Adobe Kuler <http://kuler.adobe.com>`_) are:
 
 * ``analogous``
 * ``monochromatic``
 * ``triadic``
-* ``complimentary``
-* ``splitComplimentary``
+* ``complementary``
+* ``splitComplementary``
 * ``compound``
 * ``shades``
  
