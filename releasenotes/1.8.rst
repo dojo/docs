@@ -103,3 +103,34 @@ Util
 
 Migration
 =========
+
+Dijit
+-----
+- Constructor parameters: Execution of custom setters during widget construction has slightly changed.
+  This may affect custom widgets that adjust widget parameters in postMixInProperties().
+
+  As before, during initialization, _setXyzAttr(val) is called for each attribute xyz passed to the constructor
+  where the attribute has a corresponding _setXyzAttr() function or string.
+  The change is that the value passed is the value specified to the constructor, rather than this.xyz.
+  In other words, given a widget like
+
+  .. js ::
+
+    declare("MyWidget", {
+         this.xyz: "",
+         postMixInProperties: function(){
+             this.xyz = "dog";
+         },
+         _setXyzAttr(val){
+            ...
+         }
+    }
+
+  and then calling the constructor with a custom value:
+
+  .. js ::
+
+    new MyWidget({xyz: "cat"})
+
+  Then _setXyzAttr("cat") will be called, rather than _setXyzAttr("dog") like before.
+ 
