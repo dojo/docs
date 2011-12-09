@@ -151,7 +151,7 @@ This API is planned to replace the existing dojo.connect API in Dojo 2.0. The ar
 
 dojo/query
 ----------
-This new module provides access to the DOM querying functionality (like dojo.query). This module can also be loaded with alternate selector engines like Sizzle, Slick, or the new Dojo lite query selector engine or with minimum CSS compliance levels for auto selector engine selection. In asynchronous mode (see new Dojo config settings), dojo/query will load the lite engine to use native browser querySelectAll, and only load the full acme selector engine if needed. dojo/query works with the new has() branching functionality to make it easy to create browser specific builds with the minimal selector engine needed for the browser.
+This new module provides access to the DOM querying functionality (like dojo.query). This module can also be loaded with alternate selector engines like Sizzle, Slick, or the new Dojo lite query selector engine or with minimum CSS compliance levels for auto selector engine selection. In asynchronous mode (see new Dojo config settings), when ``dojo/main`` is not loaded, ``dojo/query`` will load the lite engine to use native browser querySelectAll, and only load the full acme selector engine if needed. dojo/query works with the new has() branching functionality to make it easy to create browser specific builds with the minimal selector engine needed for the browser.
 
 dojo/data/ObjectStore
 ---------------------
