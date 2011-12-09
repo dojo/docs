@@ -314,6 +314,10 @@ Select Engine Levels
 
 When you are not using Dojo base (running async without a dependency on base module "dojo"), the default selector engine level is "css3". Again, if you are using Dojo base, the default is "acme".
 
+The summarize, the two alternate selector engines included with Dojo have the following features (which can be selected explicitly or by the module's CSS level needs):
+* acme - Designed to have full CSS3 support.
+* lite - Basic CSS2 level queries, consisting of elemental selectors: .class, #id, tag, and star, attribute selectors, and child (>), descendant (space), and union (,) combinators. With a native selector engine, the lite engine does not support pseudo classes.
+
 Specifying Selector Level
 -------------------------
 
