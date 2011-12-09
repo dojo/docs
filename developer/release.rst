@@ -1,8 +1,8 @@
 .. _developer/release:
 
-=========================
-Performing a Dojo release
-=========================
+==============================
+Cutting a Dojo Release/RC/Beta
+==============================
 
 Let’s make some magic together.
 
@@ -23,14 +23,14 @@ Let’s make some magic together.
    ``revision`` is the revision of the version to tag as the release. If unspecified, the head revision will be used.
 4. Press a key to start the build
 5. Press "Enter" when asked whether you want to do any manual packaging
-6. Ignore the failed ``cd`` at the end of the build
-7. Use the provided command to copy the release (which is two directories up) to download.dojotoolkit.org
-8. Log in to download.dojotoolkit.org and unpack the archive
-9. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
-10. Update the tags on the GitHub repos.
-11. Add new version and milestone numbers to Trac.
-12. Bulk move all open tickets to the next release number in Trac.
-13. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
+6. Move the release to /srv/www/vhosts/download.dojotoolkit.org
+   (if you built it locally, then copy it to <username>.dojotoolkit.org first, using the command suggested by the
+   build script)
+7. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
+8. Update the tags on the GitHub repos.
+9. Add new version and milestone numbers to Trac.
+10. Bulk move all open tickets to the next release number in Trac.
+11. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
 
     ``ANT_HOME=/home/peller/ant-1.7.1/ ./cdnBuild.sh <version>``, where:
 
@@ -41,9 +41,9 @@ Let’s make some magic together.
     You will also need to comment out the <property name="locales"/> node in ``util/buildscripts/cldr/build.xml``.
 
     **READ THE CDNBUILD.TXT INSTRUCTIONS OR YOU MIGHT BUILD THE WRONG VERSION**.
-14. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
+12. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
     will take forever and ever.
-15. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
+13. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
     something.
-16. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
-17. Celebrate!
+14. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
+15. Celebrate!

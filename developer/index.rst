@@ -21,4 +21,4 @@ This section contains links to information useful to contributors or committers 
 
 * :ref:`Projects <developer/projects>` - roadmap and planned future projects
 
-* :ref:`Performing a Dojo release <developer/release>`
+* :ref:`Cutting a Dojo Release/RC/Beta <developer/release>`
