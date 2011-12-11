@@ -133,7 +133,7 @@ Immediate Child Elements
 
 
 Queries rooted at a given element
-----------------------------------
+---------------------------------
 
 .. js ::
 
@@ -141,7 +141,7 @@ Queries rooted at a given element
   dojo.query('> h3', 'main')
 
 Compound queries
----------------------
+----------------
 
 Combining 2 or more selectors to produce one resultset
 
@@ -151,7 +151,7 @@ Combining 2 or more selectors to produce one resultset
 
 
 Multiple class attribute values
----------------------------------
+-------------------------------
 
 .. js ::
 
@@ -179,7 +179,7 @@ Picking out elements with particular attributes/values
 
 
 Descendant selectors
-------------------------
+--------------------
 
 .. js ::
 
@@ -188,7 +188,7 @@ Descendant selectors
   dojo.query('> [qux]', 'container')
 
 Sibling selectors
---------------------
+-----------------
 
 .. js ::
 
@@ -198,7 +198,7 @@ Sibling selectors
   dojo.query('#foo ~')
 
 Sub-selectors, using not()
--------------------------------
+--------------------------
 
 .. js ::
 
@@ -206,7 +206,7 @@ Sub-selectors, using not()
   dojo.query('#main span.foo:not(:first-child)')
 
 Nth-child
-----------
+---------
 
 .. js ::
 
@@ -220,7 +220,7 @@ Nth-child
 
 
 Using pseudo-selectors
------------------------
+----------------------
 
 .. js ::
 
@@ -293,7 +293,9 @@ E ~ F	               an F element preceded by an E element
 dojo/query (1.7 only)
 =====================
 
-In Dojo 1.7, a dojo/query module is also available to reference to the query functionality and choose alternate selector engines and needed levels of compliance. The basic usage of the dojo/query module is to simply use the module's value as the query function:
+In Dojo 1.7, a ``dojo/query`` module is also available to reference to the query functionality and choose alternate selector engines and needed levels of compliance.
+
+The basic usage of the ``dojo/query`` module is to simply use the module's value as the query function:
 
 .. js ::
 
@@ -301,11 +303,13 @@ In Dojo 1.7, a dojo/query module is also available to reference to the query fun
     var nodeList = query(".foo.bar");
   });
 
-We can also specify alternate selector engines and compliance levels. By default, Dojo base will use the acme selector engine, which supports a large set of CSS3 selectors. However, not all applications need all of these selectors, and most queries can be performed with the native selector engines or with a simpler engine. Dojo 1.7 includes a new lite selector engine for situations where simpler queries are sufficient. The acme selector engine is about 14KB (minified, not gzipped), whereas the lite selector engine is about 2KB, which can be a big advantage for mobile applications. There are several different levels of CSS compliance that can be selected:
+We can also specify alternate selector engines and compliance levels. By default, Dojo base will use the acme selector engine, which supports a large set of CSS3 selectors. However, not all applications need all of these selectors, and most queries can be performed with the native selector engines or with a simpler engine. Dojo 1.7 includes a new lite selector engine for situations where simpler queries are sufficient. The acme selector engine is about 14KB (minified, not gzipped), whereas the lite selector engine is about 2KB, which can be a big advantage for mobile applications.
 
 
-Select Engine Levels
---------------------
+Selector Engine Levels
+----------------------
+
+There are several different levels of CSS compliance that can be selected:
 
 * css2 (or lite) - This will always use the lite engine, which delegates to the native selector engine if available for anything but very simple queries (like id lookups). When a native selector engine is not available (IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: .class, #id, tag, and star, attribute selectors, and child (>), descendant (space), and union (,) combinators. With a native selector engine, the lite engine does not support pseudo classes.
 * css2.1 - This will always use the lite engine when a native selector engine is available. When a native selector engine is not available (IE7 and below), this will load acme.
@@ -329,7 +333,7 @@ There are a couple of ways to set the selector engine. First, we can define the 
   <script data-dojo-config="selectorEngine='css2.1'" src="dojo/dojo.js">
   </script>
 
-You can also specify the selector engine level you are dependent on for each of your module. This is done by indicating the CSS selector engine level after ! in the dojo/query module id. For example, if your module needed to do a CSS3 level query, you could write:
+You can also specify the selector engine level you are dependent on for each of your modules. This is done by indicating the CSS selector engine level after ! in the dojo/query module id. For example, if your module needed to do a CSS3 level query, you could write:
 
 .. js ::
 
@@ -337,14 +341,14 @@ You can also specify the selector engine level you are dependent on for each of 
 	query(".someClass:last-child").style("color", "red");
   });
 
-If Dojo had started with the lite engine, this will ensure that CSS3 support is available, and will load Acme on older browsers. It is recommended that you using this syntax for modules that make more complex queries. If your module is using a simpler query, than using "dojo/query" or "dojo/query!css2.1" should be used.
+If Dojo had started with the lite engine, this will ensure that CSS3 support is available, and will load Acme on older browsers. It is recommended that you use this syntax for modules that make more complex queries. If your module is using a simpler query, then ``"dojo/query"`` or ``"dojo/query!css2.1"`` should be used.
 
 
 Alternate Selector Engines
 --------------------------
 
 We can also use other selector engine levels. Both Sizzle and Slick are excellent selector engines that work with dojo/query. AMD/Dojo compatible versions (just wrapped with AMD) are available here:
-https://github.com/kriszyp/sizzle and https://github.com/kriszyp/slick
+https://github.com/kriszyp/sizzle and https://github.com/kriszyp/slick.
 Once installed, you can use the selector engine module id as specified selector engine level. We could set Sizzle as the query engine for our page:
 
 .. html ::
