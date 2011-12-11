@@ -475,6 +475,16 @@ the closure--not the global space. If you really want to add a function in the g
       dojo.provide("my.module");
       dojo.global.myOnClick = function(){ ... }
 
+Custom Builds and selectorEngine
+````````````````````````````````
+
+Note that the acme query engine is no longer automatically built into ``dojo.js`` by default, which will typically
+result in an extra network request for ``dojo/selector/acme.js`` when ``dojo/query`` or Dojo base is loaded.
+To include acme in ``dojo.js``, specify ``selectorEngine: "acme"`` in the build profile or ``selectorEngine=acme``
+on the command line.  You can see an example of this in ``standard.profile.js`` in Dojo 1.7.1.
+
+For more information on selector engines, see the :ref:`dojo/query documentation <dojo/query>`.
+
 debugAtAllCosts
 ```````````````
 The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.

@@ -360,5 +360,25 @@ or set Slick as the engine for a particular module:
 	query(".someClass:custom-pseudo").style("color", "red");
   });
 
+Note for cross-domain legacy API usage
+``````````````````````````````````````
+
+This use-case should be quite rare, but presents a wrinkle worth noting.
+
+When loading dojo.js cross-domain and electing to use an alternate selector engine not included in
+``dojo.js`` itself, legacy APIs will not immediately work, since Dojo base does not finish loading
+until the selector engine is pulled in asynchronously.  In this case, it will be necessary to use
+``require``.  In a pinch, legacy code can simply be wrapped like so:
+
+.. js ::
+
+    require(["dojo"], function(dojo){
+        dojo.require(/* ... */);
+        // etc...
+    });
+
+Again, this issue *only* affects use of legacy APIs when a selector engine is used which is not
+baked into ``dojo.js``.
+  
 .. api-inline :: dojo.query
 
