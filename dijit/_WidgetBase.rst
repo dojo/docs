@@ -42,29 +42,47 @@ All widgets inherit from dijit._WidgetBase, and most get the _Templated mixin.
 That provides you the following extension points (methods) you can override and provide implementation for:
 
 - constructor
-     Your constructor method will be called before the parameters are mixed into the widget, and can be used to initialize arrays, etc.
+     Your constructor method will be called before the parameters are mixed into the widget,
+     and can be used to initialize arrays, etc.
 
 - parameters are mixed into the widget instance
-     This is when attributes in the markup (ex: <button iconClass=...>) are mixed in or, if you are instantiating directly, the properties object you passed into the constructor (ex: new dijit.form.Button({label: "hi"})). This step itself is not overridable, but you can play with the result in...
+     This is when attributes in the markup (ex: <button iconClass=...>) are mixed in or,
+     if you are instantiating directly, the properties object you passed into the constructor
+     (ex: new dijit.form.Button({label: "hi"})).
+     This step itself is not overridable, but you can play with the result in...
 
 - postMixInProperties
-     If you provide a postMixInProperties method for your widget, it will be invoked before rendering occurs, and before any dom nodes are created. If you need to add or change the instance's properties before the widget is rendered - this is the place to do it.
+     If you provide a postMixInProperties method for your widget, it will be invoked before rendering occurs,
+     and before any dom nodes are created.
+     If you need to add or change the instance's properties before the widget is rendered - this is the place to do it.
 
 - buildRendering
-     :ref:`dijit._Templated <dijit/_Templated>` provides an implementation of buildRendering that most times will do what you need. The template is fetched/read, nodes created and events hooked up during buildRendering. The end result is assigned to this.domNode. If you don't mixin :ref:`dijit._Templated <dijit/_Templated>` (and most OOTB dijits do) and want to handle rendering yourself (e.g. to really streamline a simple widget, or even use a different templating system) this is where you'd do it.
+     :ref:`dijit._Templated <dijit/_Templated>` provides an implementation of buildRendering
+     that most times will do what you need.
+     The template is fetched/read, nodes created and events hooked up during buildRendering.
+     The end result is assigned to this.domNode.
+     If you don't mixin :ref:`dijit._Templated <dijit/_Templated>` (and most OOTB dijits do)
+     and want to handle rendering yourself
+     (e.g. to really streamline a simple widget, or even use a different templating system) this is where you'd do it.
 
 - setters are called
-     Setters are called for all attributes with custom setters (see :ref:`attributes <quickstart/writingWidgets>`)
+     Setters are called for all attributes with custom setters
+     (see the "Attributes" section in :ref:`Writing Your Own Widget <quickstart/writingWidgets>`)
      and that were either specified as constructor parameters or have non-null non-blank non-zero default values.
 
 - postCreate
-   This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!). The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
+   This is typically the workhorse of a custom widget. The widget has been rendered
+   (but note that child widgets in the containerNode have not!).
+   The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
 
 - startup
-    If you need to be sure parsing and creation of any child widgets has completed, use startup. This is often used for layout widgets like BorderContainer. If the widget does JS sizing, then startup() should call resize(), which does the sizing.
+    If you need to be sure parsing and creation of any child widgets has completed, use startup.
+    This is often used for layout widgets like BorderContainer.
+    If the widget does JS sizing, then startup() should call resize(), which does the sizing.
 
 - destroy
-     Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Examples on how to destroy a widget:
+     Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you.
+     Examples on how to destroy a widget:
 
   .. js ::
     
@@ -80,12 +98,15 @@ Other methods
 -------------
 
 - resize
-    All widgets that do JS sizing should have a method called resize(), that lays out the widget. Resize() should be called from startup() and will also be called by parent widgets like :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
+    All widgets that do JS sizing should have a method called resize(), that lays out the widget.
+    Resize() should be called from startup() and will also be called by parent widgets like
+    :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
 
 this.inherited()
 ----------------
 
-In all cases its good practice to assume that you are overriding a method that may do something important in a class up the inheritance chain.
+In all cases its good practice to assume that you are overriding a method
+that may do something important in a class up the inheritance chain.
 So, call this.inherited() before or after your own code.
 E.g.
 
