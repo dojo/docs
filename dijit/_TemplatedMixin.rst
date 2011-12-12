@@ -194,7 +194,8 @@ ${title} references the title attribute of the widget.
 However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation.
 In other words, myWidget.set('title', 'My new title') won't work if you use substitution variables.
 
-See the section on attributeMap in :ref:`Writing Widgets <quickstart/writingWidgets>` for an alternative to substitution variables.
+See the section on "Mapping widget attributes to DOMNode attributes" in
+:ref:`Writing Widgets <quickstart/writingWidgets>` for an alternative to substitution variables.
 
 
 Common Pitfalls
