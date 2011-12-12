@@ -29,7 +29,7 @@ Non-Gregorian calendar use is possible using the datePackage attribute and exper
 Examples
 ========
 
-A plain Calendar widget with the formatted date below
+A plain Calendar widget with the formatted date below:
 
 .. code-example::
   :type: inline
@@ -59,7 +59,7 @@ A plain Calendar widget with the formatted date below
       }
     </style>
 
-With an initial selection and weekends disabled
+With an initial selection and weekends disabled:
 
 .. code-example::
   :height: 320
@@ -90,7 +90,7 @@ With an initial selection and weekends disabled
       }
     </style>
 
-Javascript declaration, with a restriction of +/- one week from the current date
+Javascript declaration, with a restriction of +/- one week from the current date:
 
 .. code-example::
   :height: 320
@@ -128,7 +128,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
       }
     </style>
 
-Custom styling
+Custom styling:
 
 
 .. code-example::
@@ -158,7 +158,7 @@ Custom styling
 	</style>
         
 
-[1.4+] Non-Gregorian calendars
+[1.4+] Non-Gregorian calendars:
 
 .. code-example::
   :height: 340

@@ -33,7 +33,7 @@ However, due to browser advancements widgets can now just specify roles (ex: rol
 widgetsInTemplate
 -----------------
 
-Specifying the widgetsInTemplate flag to true turns on the widgets-in-template feature described by  :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`.
+Setting the widgetsInTemplate flag to true turns on the widgets-in-template feature described by  :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`.
 
 
 See also

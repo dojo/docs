@@ -15,9 +15,12 @@ dijit._OnDijitClickMixin
 Introduction
 ============
 
-`dijit._OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>`_ is a useful mixin for widgets that need to be accesible, that require nodes to be "clicked" via the keyboard in addition to via the mouse (or a touch event).
+`dijit._OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>`_ is a useful mixin
+for widgets that need to be accessible, that require nodes to be "clicked" via the keyboard
+in addition to via the mouse(or a touch event).
 
-For example, in the code below the user can tab to the <span> node and press either ENTER or SPACE key, and it will have the same effect as clicking the span with the mouse:
+For example, in the code below the user can tab to the <span> node and press either the ENTER or SPACE key,
+and it will have the same effect as clicking the span with the mouse:
 
 .. code-example::
   :djConfig: parseOnLoad: false

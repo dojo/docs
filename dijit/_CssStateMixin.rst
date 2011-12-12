@@ -19,13 +19,13 @@ _CssStateMixin is a mixin for widgets that set CSS classes on their nodes depend
 _CssStateMixin serves two functions:
 
    - workaround IE6/7 issues where :hover and :active don't work on certain nodes
-   - for the semantic state updating (disabled, checked, selected, etc.)
+   - semantic state updating (disabled, checked, selected, etc.)
 
 
 Examples
 ========
 
-_CssStateMixin will, fox example, set classes dijitCheckboxHover if a checkbox is hovered, or dijitCheckboxChecked if the widget is checked.   It will also set dijitCheckboxDisabled (if the widget is disabled).
+_CssStateMixin will, for example, set classes dijitCheckboxHover if a checkbox is hovered, or dijitCheckboxChecked if the widget is checked.   It will also set dijitCheckboxDisabled (if the widget is disabled).
 
 More complicated widgets also set class names on sub nodes when they are hovered/pressed/focused.
 For example, the Slider widget has hover and active effects on the left/right arrows and the slider handle itself.
@@ -43,7 +43,7 @@ To use this mixin in custom widgets:
     ...
     dojo.declare(myWidget, [ ..., dijit._CssStateMixin], ...
 
-*Note that most dijits already inherit _CssStateMixin, so they should skip this step*
+*Note that most dijits already extend _CssStateMixin, so they should skip this step.*
 
 
 2. set baseClass if not already set *(most widgets already set baseClass)*
@@ -52,7 +52,7 @@ To use this mixin in custom widgets:
 
     baseClass: "dijitSlider",
 
-3. (If you want CSS class settings on widget subnodes, like the up/down buttons on the slider, then) set cssStateNodes attribute:
+3. (if you want CSS class settings on widget subnodes, like the up/down buttons on the slider, then) set cssStateNodes attribute:
     
 .. js ::
 

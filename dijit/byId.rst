@@ -140,9 +140,11 @@ Example 3: Comparing dojo.byId and dijit.byId
 data-dojo-id, dijit.byId() and dojo.byId()
 ==========================================
 
-A common question new users of dojo have is what is the difference between attribute data-dojo-id (known as jsId before dojo 1.6), dijit.byId() and dojo.byId().
+A common question new users of dojo have is what is the difference between attribute data-dojo-id
+(known as jsId before dojo 1.6), dijit.byId() and dojo.byId().
 
-Consider the following simple ContentPane widget which has an id property (standard html attribute for any tag) and a data-dojo-id attribute (dojo specific id attribute explained below):
+Consider the following simple ContentPane widget which has an id property (standard HTML attribute for any tag)
+and a data-dojo-id attribute (dojo specific id attribute explained below):
 
 .. html ::
  
@@ -155,7 +157,8 @@ Consider the following simple ContentPane widget which has an id property (stand
 dojo.byId()
 -----------
 
-dojo.byId() is no different than the often used document.getElementById() to access the DOM node for the div tag - simply pass in the tag’s id attribute value.
+dojo.byId() is no different than the often used document.getElementById() to access the DOM node for the div tag:
+simply pass in the tag’s id attribute value.
 
 For example:
 
@@ -168,16 +171,21 @@ This would set a style height property.
 dijit.byId()
 ------------
 
-dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically.
-The same id attribute is used as a parameter, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit.
-This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class).
-For Example, we can set the content of the ContentPane via setContent().
+dijit.byId() is a little different.
+First off, it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically.
+The same id attribute is used as a parameter, but what is returned in this case is an object that was created
+by the dojo widget system when the markup is parsed and transformed into a dijit.
+This allows you to change dojo-specific attributes for the widget or call methods defined in the class
+the dijit corresponds to (in this case, we can call methods of the ContentPane class).
+For example, we can set the content of the ContentPane via setContent().
 
 .. js ::
 
  dijit.byId("myDivId").setContent("Hello World!");
 
-You could also change the style like we did with dojo.byId() above using the domNode property of the ContentPane (actually - domNode is defined higher up the inheritance tree so every dijit has a domNode property - very convenient!) This example also saves the results of dijit.byId() into a local variable.
+You could also change the style like we did with dojo.byId() above using the domNode property of the ContentPane.
+(Actually, domNode is defined higher up the inheritance tree so every dijit has a domNode property.  Very convenient!)
+This example also saves the results of dijit.byId() into a local variable.
 
 .. js ::
 
