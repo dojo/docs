@@ -26,7 +26,7 @@ Simply require the module, and then :
 
   require(["dijit/hccss"]);
   
-And then reference the class name from CSS rules, etc:
+And then reference the class name from CSS rules, etc.:
 
 
 .. css ::

@@ -85,7 +85,7 @@ Please see the following for an example:
     <style type="text/css">
     </style>
 
-To programatically size a textbox you would do:
+To programmatically size a textbox you would do:
 
 .. js ::
 

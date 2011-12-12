@@ -20,7 +20,7 @@ The tabstrip is especially useful when the TabContainer is child of a BorderCont
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
 
-  The html is very simple
+  The HTML is very simple
 
   .. html ::
 
@@ -38,7 +38,7 @@ The tabstrip is especially useful when the TabContainer is child of a BorderCont
 
 The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it.
 You can set a tab strip on every tab type though.
-Following a few examples with left/bottom/right tabs using tabStrip here and there.
+The following examples show left/bottom/right tabs, some using tabstrips.
 
 
 Right Tabs
@@ -190,7 +190,7 @@ similar to what the parser does:
         tc.startup();
     });
 
-  The html is very simple
+  The HTML is very simple
 
   .. html ::
 
@@ -222,7 +222,7 @@ Remember that although a TabContainer's children are often ContentPanes, they ca
     dojo.require("dijit.layout.ContentPane");
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html ::
 
@@ -253,10 +253,10 @@ Remember that although a TabContainer's children are often ContentPanes, they ca
 
 When you have nested tabs you should set the nested parameter to true, to make the formatting distinctive from the outer TabContainer.
 
-Nested tabs programatically
-===========================
+Programmatic Nested tabs
+========================
 
-This an example of nested tabs created programatically.
+This an example of nested tabs created programmatically.
 If there is no nested tab in a tab, content pane is inserted instead.
 
 .. code-example ::

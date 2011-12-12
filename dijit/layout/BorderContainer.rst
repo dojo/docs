@@ -29,7 +29,8 @@ Each child element must have an attribute "region" which indicates where it shou
   * right
   * left
   * center
-  * leading: used have flexible layout in left-to-right/right-to-left environments.In ltr, it will be equivalent to left, in rtl equivalent to right
+  * leading: used have flexible layout in left-to-right/right-to-left environments.
+    In ltr, it will be equivalent to left, in rtl equivalent to right.
   * trailing: opposite of 'leading': right in ltr, left in rtl
 
 There can be multiple widgets for each region, in which case their order (i.e.
@@ -48,7 +49,7 @@ Besides setting the size of the BorderContainer itself, you generally need to se
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
 
-``note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
+``Note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
 
 .. html ::
   
@@ -98,7 +99,7 @@ Declarative example
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
   
-  A simple set of css rules
+  A simple set of CSS rules
   
   .. css::
 
@@ -213,7 +214,7 @@ Let's take a look at a more advanced example of using BorderContainer and other 
       </div><!-- end TabContainer -->
     </div><!-- end BorderContainer -->
 
-  A few simple css rules
+  A few simple CSS rules
 
   .. css::
 
@@ -235,7 +236,8 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 BorderContainer Inside A Dijit Template
 ---------------------------------------
 
-You can use a BorderContainer inside your own dijit template with a bit of care to call startup() on your dijit after it has been added to the DOM, so that its contained BorderContainer can lay itself out.
+You can use a BorderContainer inside your own dijit template with a bit of care to call startup() on your dijit
+after it has been added to the DOM, so that its contained BorderContainer can lay itself out.
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -334,4 +336,4 @@ Change the size of a horizontal region         down / up arrows to decrease and 
 
 Note: The children of BorderContainer must be created in the source code in their natural tab order.
 Header regions should be first and footer regions last.
-In Left to right locales, left regions before center and right ones.
+In Left to right locales, left regions should be before center and right ones.

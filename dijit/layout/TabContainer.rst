@@ -62,7 +62,7 @@ Note that the tabs all have a fixed height.
     });
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html::
 
@@ -90,7 +90,7 @@ Here are some markup examples:
     dojo.require("dijit.layout.ContentPane");
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html::
 
@@ -127,7 +127,7 @@ The second tab is closable.
     dojo.require("dijit.layout.ContentPane");
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html::
     
@@ -201,7 +201,7 @@ true (if programmatically created) or the attribute selected="true" (if declarat
     });
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html::
 
@@ -313,8 +313,10 @@ To monitor when children are added/deleted, use dojo/aspect or dojo.connect:
 
 
 
-It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the :ref:``setupChild`` function to ensure you are notified of the children already existing in markup.
-This is only relevant if you are subclassing for reason:
+It is worth noting: if you need a function to be called *absolutely every* time a child is added to a TabContainer
+(or StackContainer), you need to listen to the :ref:``setupChild`` function
+to ensure you are notified of the children already existing in markup.
+This is only relevant if you are subclassing, for example:
 
 .. js ::
    

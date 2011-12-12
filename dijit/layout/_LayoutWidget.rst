@@ -34,9 +34,9 @@ layout()
 --------
 
 When the widget is started or resized, layout() is called.
-layout()'s job is to arrange the contents of the widget according to it's [new] size.
+layout()'s job is to arrange the contents of the widget according to its [new] size.
 For example, BorderContainer will set the size of the center pane to whatever space is left over after placing the top, bottom, left and right panes.
-layout() can (and should) reference this._contentBox to get the size available for laying out it's children.
+layout() can (and should) reference this._contentBox to get the size available for laying out its children.
 
 _setupChild()
 -------------
@@ -69,7 +69,7 @@ The lifecycle of layout widgets is particularly complex because they
   * do sizing in javascript
   * are hierarchical: there's a relationship between parent and children widgets.
 
-At the time that postCreate() etc is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done.
+At the time that postCreate() etc. is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done.
 Thus, some/most setup has to occur in startup().
 
 *Lifecycle:*
@@ -81,14 +81,14 @@ Thus, some/most setup has to occur in startup().
   5. widget's children are initialized
   6. widget.domNode into the document's DOM tree (by the user)
   7. user calls startup()
-  8. layout() is called (widget should position it's children correctly, and do other initialization that depends on calls to marginBox() etc here)
+  8. layout() is called (widget should position its children correctly, and do other initialization that depends on calls to marginBox() etc. here)
 
 See also the lifecycle of a standard widget in :ref:`dijit._Widget <dijit/_Widget>`.
 
 addChild()
 ----------
 
-Children can be added to a layout widget before or after it's been started (via the startup() call on it, or an ancestor in it's hierarchy).
+Children can be added to a layout widget before or after its been started (via the startup() call on it, or an ancestor in its hierarchy).
 Thus, addChild() and removeChild() must work before or after the widget has been started.
 They can reference the this._started field to detect this state.
 
@@ -100,7 +100,7 @@ Consider SplitContainer's lifecycle:
   3. up to this point no sizing processing has been done
   4. SplitContainer domNode is added to the document
   5. startup() is called
-  6. SplitContainer sizes all it's children, to fit in the available space.
+  6. SplitContainer sizes all its children, to fit in the available space.
 
 Note that split container only did sizing once, thus avoiding an n^2 computation that would occur if it processed the initial children one by one, recalculating sizes each time.
 

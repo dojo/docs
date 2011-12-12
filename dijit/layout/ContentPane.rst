@@ -36,7 +36,8 @@ Loading Message
 ---------------
 
 The loading message that's displayed while content is being fetched can be changed by changing the loadingMessage attribute of the ContentPane.
-The default value of the loadingMessage attribute is "<span class='dijitContentPaneLoading'>${loadingState}</span>" so, you can change the look of the message by applying css to the .dijitContentPaneLoading class.
+The default value of the loadingMessage attribute is "<span class='dijitContentPaneLoading'>${loadingState}</span>",
+so you can change the look of the message by applying CSS to the .dijitContentPaneLoading class.
  
 
 Callbacks
@@ -113,7 +114,7 @@ Programmatic example
 
 .. code-example ::
 
-   Create an entirely new ContentPane from no DOM, and place in Some node byID:
+   Create an entirely new ContentPane from no DOM, and place inside another node (specified by id):
 
   .. js ::
 
@@ -123,13 +124,13 @@ Programmatic example
           new dijit.layout.ContentPane({
               content:"<p>I am initial content</p>",
               style:"height:125px"
-          }).placeAt("targetIDtoo");
+          }).placeAt("targetID2");
       });
     </script>
 
   .. html ::
 
-    <div id="targetIDtoo">
+    <div id="targetID2">
       A contentPane will appear here:
     </div>
 

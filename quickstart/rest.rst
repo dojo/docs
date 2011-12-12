@@ -138,7 +138,7 @@ Introduced in Dojo 1.6, the dojo.store.JsonRest is a good an efficient implement
 
 The :ref:`dojo.store.JsonRest <dojo/store/JsonRest>` defaults to assuming the identifier property of each element is ``id``, therefore if your provider returns an elements identifier in that field, most developers simply need to specify the target URI for the collection.
 
-An example of programatically creating a full featured store would be:
+An example of programmatically creating a full featured store would be:
 
 .. js ::
 

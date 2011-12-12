@@ -12,7 +12,7 @@ Themes and Theming
 
 Dijit Themes lend a consistent look and feel to widgets.
 Themes are collections of images (icons and background images) and CSS files
-that bring a common visual style (font, color, texture, layout, animation, etc) to all the widgets.
+that bring a common visual style (font, color, texture, layout, animation, etc.) to all the widgets.
 Dijit comes bundled with four themes which can be used as is, modified, and users can write their own themes too.
 Both global theming (such as at a container level) and widget-specific theming is doable.
 
@@ -584,9 +584,9 @@ Typical images in themes are icons, background images, and accent graphics.
 
 Dojo 1.5 supports:
 
-  - 8–bit and 24-bit PNG and GIFs(exception for loading animation)
-  - ‘Sprite’image (contains all images for one widget) e.g. dijit.Editor. Sprite images can be vertical or horizontal sprites help improve overall Dojo performance, however there is no header in the sprite file to label the list of images in the sprite file.
-  - Specific ‘/images’folders (forms/images, layout/images; etc)
+  - 8–bit and 24-bit PNG and GIFs (exception for loading animation)
+  - ‘Sprite’ image (contains all images for one widget) e.g. dijit.Editor. Sprite images can be vertical or horizontal sprites help improve overall Dojo performance, however there is no header in the sprite file to label the list of images in the sprite file.
+  - Specific ‘/images’folders (forms/images, layout/images, etc.)
 
 See *Common and theme-specific images* above.
 
@@ -670,7 +670,7 @@ Sample of CSS3 animation styling in .claro .dijitAccordionInnerContainer {
 	margin-bottom:1px;
 	-webkit-transition-property:background-color,border;  /* "property" describes what styling you want to animate */
  	-webkit-transition-duration:.3s; /* "duration" describes the timing of your animation */
-	-webkit-transition-timing-function:linear;  /* "timing-function" allow an animation to change speed over its duration (ease-in, ease-out, etc) */
+	-webkit-transition-timing-function:linear;  /* "timing-function" allow an animation to change speed over its duration (ease-in, ease-out, etc.) */
         }
 
 

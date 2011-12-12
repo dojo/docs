@@ -7,12 +7,14 @@ dijit.layout.LinkPane
 .. contents ::
     :depth: 2
 
-A simple widget which acts similarly to a :ref:`ContentPane <dijit/layout/ContentPane>` with the subtle difference being the innerHTML of the widget is used as the title, and works exclusively with remote html (by way of a href="" attribute)
+A simple widget which acts similarly to a :ref:`ContentPane <dijit/layout/ContentPane>` with the subtle difference being
+the innerHTML of the widget is used as the title, and works exclusively with remote HTML (by way of a href="" attribute).
 
 Example
 =======
 
-When the parser runs and sees this node, a content pane will be generated with the title "Hello", and the content will be pulled from "foo.html"
+When the parser runs and sees this node, a content pane will be generated with the title "Hello",
+and the content will be pulled from "foo.html"
 
 .. html ::
   

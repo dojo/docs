@@ -40,8 +40,8 @@ Set the current pane
 --------------------
 
 StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController.
-StackController is a controller not in the MVC send of the word, but like a TV remote control...
-it's sets which page the StackController is tuned to.
+StackController is a controller not in the MVC send of the word, but like a TV remote control:
+it sets which page the StackController is tuned to.
 
 Retrieving the currently selected Container
 -------------------------------------------
@@ -75,7 +75,7 @@ Examples
 Programmatic example
 --------------------
 
-Here's an example of a programatically created StackContainer, and associated StackController:
+Here's an example of a programmatically created StackContainer, and associated StackController:
 
 .. code-example ::
  
@@ -109,7 +109,7 @@ Here's an example of a programatically created StackContainer, and associated St
     });
     </script>
 
-  The html is very simple
+  The HTML is very simple
 
   .. html ::
 
