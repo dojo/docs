@@ -23,18 +23,18 @@ The following browsers have been tested and are supported in this release. If a 
 
 Desktop
 
-       Firefox 3.6-8
-       Safari 5.0-5.1
-       Chrome 13-15
-       IE 6-9
-       Opera 10.50-11.50
+ * Firefox 3.6-8
+ * Safari 5.0-5.1
+ * Chrome 13-15
+ * IE 6-9
+ * Opera 10.50-11.50
 
 Mobile (dojox/mobile)
 
-       iOS 4.x, 5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
-       Android 2.2, 2.3, 3.1
-       Blackberry 6
-       Mobile compatibility on desktop browsers: IE 8-9, Firefox 3.6-7, Safari 5.0-5.1, Chrome 13-15
+ * iOS 4.x, 5.0 (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
+ * Android 2.2, 2.3, 3.1
+ * Blackberry 6
+ * Mobile compatibility on desktop browsers: IE 8-9, Firefox 3.6-7, Safari 5.0-5.1, Chrome 13-15
 
   TODO: Link to page with specific vendor device models tested on
 
