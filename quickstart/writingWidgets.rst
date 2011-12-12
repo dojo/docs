@@ -375,10 +375,12 @@ Custom setters/getters
 ----------------------
 
 When you have an attribute where setting/getting it is more complicated than an object like above can
-handle, you need to write custom getters/setters methods for it.   Like above, the naming convention (for an attribute named foo) is _setFooAttr() and
-_getFooAttr(). set() and get() will automatically detect and call these custom setters.
+handle, you need to write custom getters/setters methods for it.   Like above, the naming convention
+(for an attribute named foo) is _setFooAttr() and _getFooAttr().
+Set() and get() will automatically detect and call these custom setters.
 
-Here's an example of a behavioral widget (it uses the DOM node from the supplied markup) that has an "open" attribute that controls whether the widget is hidden or shown:
+Here's an example of a behavioral widget (it uses the DOM node from the supplied markup)
+that has an "open" attribute that controls whether the widget is hidden or shown:
 
 .. code-example::
   :djConfig: parseOnLoad: false
@@ -423,8 +425,11 @@ Note in the above example the use of this._set("open", open).    This saves the 
 
 Life cycle
 ----------
-The custom setters listed above, plus every attribute listed in attributeMap, is applied during
-widget creation (in addition to whenever someone calls set('name', value)).
+The custom setters specified above (both functions and mappings to DOMNodes) are applied
+at widget creation time for every attribute either specified to the widget constructor,
+or with a non-null non-blank non-zero default value.
+
+In addition the custom setters are called whenever someone calls set('name', value)).
 
 Note that the application happens after ``buildRendering()`` but before ``postCreate()``, so
 you need to make sure that none of that code is dependent on something that happens

@@ -54,7 +54,8 @@ That provides you the following extension points (methods) you can override and 
      :ref:`dijit._Templated <dijit/_Templated>` provides an implementation of buildRendering that most times will do what you need. The template is fetched/read, nodes created and events hooked up during buildRendering. The end result is assigned to this.domNode. If you don't mixin :ref:`dijit._Templated <dijit/_Templated>` (and most OOTB dijits do) and want to handle rendering yourself (e.g. to really streamline a simple widget, or even use a different templating system) this is where you'd do it.
 
 - setters are called
-     All attributes listed in attributeMap are applied to the DOM, and attributes for which there are custom setters (see :ref:`attributes <quickstart/writingWidgets>`, those custom setters are called
+     Setters are called for all attributes with custom setters (see :ref:`attributes <quickstart/writingWidgets>`)
+     and that were either specified as constructor parameters or have non-null non-blank non-zero default values.
 
 - postCreate
    This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!). The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
@@ -99,7 +100,8 @@ E.g.
 Attributes
 ==========
 
-Perhaps the most important feature of _WidgetBase is the ability to set attributes at widget initialization, or to change their values later on in the widget's lifecycle.
+Perhaps the most important feature of _WidgetBase is the ability to set attributes at widget initialization,
+or to change their values later on in the widget's lifecycle.
 
 dijit._WidgetBase has implemented the set() method to do this.
 For example, this call will set a DateTextBox's value to the current date:
@@ -123,8 +125,8 @@ Finally, there's a watch() method to detect when attribute values change:
       console.log("pane is now " + (newVal ? "opened" : "closed"));
    })
 
-The attributeMap and custom setters/getters
--------------------------------------------
+Custom setters/getters
+----------------------
 
 get()/set() make use of custom setters/getters, which can map a widget attribute to a
 DOMNode attribute, or perform any arbitrary code.
