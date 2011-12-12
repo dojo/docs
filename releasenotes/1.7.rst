@@ -49,36 +49,38 @@ Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loadin
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
 
-Note that in async mode many modules which were implicitly loaded before (including dojo.parser) now need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).   For example:
+Note that in async mode many modules which were implicitly loaded before now need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (including ``dojo/parser`` when using ``parseOnLoad``).   For example:
 
   .. html ::
 
            <script src="/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true, async: true"></script>
-     
+    
           <script>
              require([
-                 "dojo/_base/html",   // needed for dojo.byId
-                 "dojo/parser",       // needed for parseOnLoad to run
-                 "dijit/_base/manager",  // needed for dijit.byId
+                 "dojo/dom",   // needed for dojo.byId
+                 "dijit/registry",  // needed for dijit.byId
+                 "dojo/parser",     // needed for parseOnLoad to run
                  ...
-             ], function(html, parser, manager){
+             ], function(dom, registry, parser){
                   // callback when above modules finish loading
+                 function update(){
+                     var viewNode = dom.byId("view1");
+                     var view1 = registry.byId("view1");
+                     view1.domNode.innerHTML = "...";
+                 }
              });
     
-             function update(){
-                 var viewNode = dojo.byId("view1");
-                 var view1 = dijit.byId("view1");
-                 view1.domNode.innerHTML = "...";
-             }
            </script>
 
-Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/API's will continue through 1.8.
+Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/APIs will continue through 1.8.
 
-Limitations:
+Limitations
+```````````
+
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchronous loading mode.  The community is looking at potential replacements in the 2.0 time frame:
 
-DTL (dojox.dtl - Django Templating): While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter).
+**DTL (dojox.dtl - Django Templating):** While the dojox.dtl engine implementation is written with the assumption of a synchronous loader, the module has been updated so that it is compatible with the amd loader async mode, provided all tags and filters libraries are explicitly required. This restriction applies to both user-defined libraries and the dojox.dtl default ones defined (in dojox/dtl/tag and dojox/dtl/filter).
 
   The following table lists the default tag libraries and their corresponding tags:
 
