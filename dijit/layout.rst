@@ -61,7 +61,7 @@ Once you have read through this page you should be able to create such a layout 
 HTML and Layouts
 ================
 
-Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
+Typically HTML has bottom-up sizing, where a container is as big as its contents, so that given
 
 .. code-example::
 
@@ -124,8 +124,8 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
           </tr>
         </table>
 
-However, that technique has it's limits...
-it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
+However, that technique has its limits:
+it doesn't allow for things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
 
 Dijit Layout
@@ -268,7 +268,7 @@ Nesting those inside of the BorderContainer will look like this:
 
 There are three types of elements in that example:
 
-1. BorderContainer: displays all it's children at once in top/bottom/left/right/center positions
+1. BorderContainer: displays all its children at once in top/bottom/left/right/center positions
 2. StackContainers: containers that display one child at a time
 3. Leafs: leaf nodes containing content
 
@@ -298,17 +298,9 @@ Sizing to browser viewport: To make the outermost layout widget size to the brow
 
 where mainDiv is the id of the outermost div.
 
-Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those.
+Note that height=width=100% means different things depending on the browser when you have padding or border,
+so when using those tags it's best not to have either of those.
 Put your padding, border, and margin on elements inside the outer layout container.
-
-
-Visibility
-==========
-
-Restrictions about visibility: none of the layout widgets work if they are inside a hidden element.
-This is very important and a mistake many people make.
-Dialog, etc.
-are created using visibility:hidden rather than display:none to avoid this problem.
 
 
 Programmatic Creation and Lifecycle
@@ -353,8 +345,11 @@ Note that:
 
 * startup() is called once on the top most widget only
 * (when possible) call startup last, after children have been added
-* before startup() is called the top widget's node (BorderContainer in this example) must be attached to the document somewhere, so that node can size itself correctly
-* top node in the hierarchy  (BorderContainer in this example) has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
+* before startup() is called the top widget's node (BorderContainer in this example) must be attached
+  to the document somewhere, so that node can size itself correctly
+* the top node in the hierarchy (BorderContainer in this example) has a specified size;
+  other nodes typically don't have a size (except for nodes on the edges of BorderContainer)
+  because their size is determined by the parent.
 
 Add Children
 ------------
@@ -375,7 +370,8 @@ or:
 
 Note that:
 
-* you don't need to call startup() on the new children; it's called automatically when you add them to a hierarchy which has already been started.
+* You don't need to call startup() on the new children; it's called automatically when you add them
+  to a hierarchy which has already been started.
 
 Remove Children
 ---------------
@@ -384,7 +380,7 @@ Removing children is done with the pointer to the child widget:
 
 .. js ::
   
-  // remove the first tab, and destroy it (and it's contents)
+  // remove the first tab, and destroy it (and its contents)
   tc.removeChild(tab1);
   tab1.destroyRecursive();
 
@@ -395,7 +391,7 @@ Note that:
 Destruction
 -----------
 
-Typically you destroy a widget and all it's descendants, like this:
+Typically you destroy a widget and all its descendants like this:
 
 .. js ::
   
@@ -407,7 +403,7 @@ Resizing
 The resize function for widgets layout widgets serves two purposes:
 
 * set the size of the widget
-* make the widget adjust the size of it's children
+* make the widget adjust the size of its children
 * resize children recursively
 
 Usually you pass a size to the resize method, like:
@@ -416,7 +412,7 @@ Usually you pass a size to the resize method, like:
   
    bc.resize({h: 500, w: 500});
 
-If you want to notify a widget that it's size has been changed, you omit that argument:
+If you want to notify a widget that its size has been changed, you omit that argument:
 
 .. js ::
   
