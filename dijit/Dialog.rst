@@ -169,7 +169,7 @@ Forms and Functionality in Dialogs
 ----------------------------------
 
 This example shows a Dialog containing form data.
-You can get the form data as a javascript object by calling attr('value') on the dialog.
+You can get the form data as a javascript object by calling get('value') on the dialog.
 
 To prevent the user from dismissing the dialog if there are errors in the form, add an onClick handler to your submit
 button.

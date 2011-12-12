@@ -15,7 +15,7 @@ This is an extension to the :ref:`dojox.widget.DialogSimple <dojox/widget/Dialog
 Introduction
 ============
 
-This widget's usage is nearly identical to the Dijit Dialog. show() and hide() change the display state, attr("title", "new title") will manipulate the title (if visible), and so on. The difference comes in the creation parameters set.
+This widget's usage is nearly identical to the Dijit Dialog. show() and hide() change the display state, set("title", "new title") will manipulate the title (if visible), and so on. The difference comes in the creation parameters set.
 
 Usage
 =====

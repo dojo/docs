@@ -44,7 +44,7 @@ Since javascript sizing doesn't work until a widget has been made visible, child
  * yes: on startup(), skip layout operations.    instead wait for resize() call.
  * no: startup() must do sizing
 
-This is important because it means that the appropriate interfaces (addChild(), attr("content", ...)) must be used so that the parent knows about the child.   If the child DOM is added directly to the parent's DOM, the parent won't know about it, and it won't call resize()
+This is important because it means that the appropriate interfaces (addChild(), set("content", ...)) must be used so that the parent knows about the child.   If the child DOM is added directly to the parent's DOM, the parent won't know about it, and it won't call resize()
 
 dijit.layout._LayoutWidget
 ==========================
