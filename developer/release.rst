@@ -1,29 +1,16 @@
 .. _developer/release:
 
-=========================
-Creating a new DTK branch
-=========================
-
-1. Run ``mk_branch.sh <version> <revision>``, where:
-
-   ``version`` is the new branch number, e.g. 1.7
-   ``revision`` is the revision of the version to branch from
-
-2. Check out the new branch and update ``build_release.sh`` to point to the release branch, not trunk.
-3. Have a beer.
-
-
-==============================
-Cutting a Dojo Release/RC/Beta
-==============================
+==============
+How to release
+==============
 
 Let’s make some magic together.
 
-.. |br| raw:: html
-
-   <br>
-
 .. contents ::
+
+
+Creating a Dojo Release/RC/Beta
+===============================
 
 1. Log into your shell account at <username>.dojotoolkit.org
 2. Check out a copy of the appropriate branch
@@ -60,3 +47,14 @@ Let’s make some magic together.
     something.
 14. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
 15. Celebrate!
+
+Creating a new DTK branch (for new major versions)
+==================================================
+
+1. Run ``mk_branch.sh <version> <revision>``, where:
+
+   ``version`` is the new branch number, e.g. 1.7
+   ``revision`` is the revision of the version to branch from
+
+2. Check out the new branch and update ``build_release.sh`` to point to the release branch, not trunk.
+3. Have a beer.
