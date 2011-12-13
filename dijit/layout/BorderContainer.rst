@@ -257,7 +257,7 @@ after it has been added to the DOM, so that its contained BorderContainer can la
             dojo.declare("MyDijit",
                 [dijit._Widget, dijit._Templated], {
                     widgetsInTemplate: true,
-                    // Note: would be a call to dojo.cache() in a 'proper' dijit
+                    // Note: string would come from dojo/text! plugin in a 'proper' dijit
                     templateString: '<div style="width: 100%; height: 100%;">' +
                         '<div data-dojo-type="dijit.layout.BorderContainer" design="headline" ' +
                         '  style="width: 100%; height: 100%;" data-dojo-attach-point="outerBC">' +
