@@ -15,11 +15,11 @@ dijit.form
 
 The dijit.form package contains "form widgets".
 What's a form widget?
-It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
+It roughly means a widget that appears inside a form, but technically we think of it as "anything that has a value".
 
 The widgets can be used in a FORM tag, in a :ref:`dijit.form.Form <dijit/form/Form>` widget, or outside of a form.
 
-Note not to confuse the dijit.form module with the dijit.form.Form widget.
+Note not to confuse the dijit.form module with the :ref:`dijit.form.Form <dijit/form/Form>` widget.
 
 
 Available Form Widgets
@@ -49,7 +49,7 @@ Buttons
 Input widgets
 -------------
 
-All Widgets, that are similar to <input>:
+All widgets that are similar to an <input>:
 
 * :ref:`dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`
 
@@ -212,12 +212,14 @@ This is handled internally by having two <input> fields in the widget:
 
 .. image:: MappedTextBox.gif
 
-The upshot of this is that Dijit handles localization issues on the client, the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
+The upshot of this is that Dijit handles localization issues on the client;the server doesn't have to worry about it
+(except of course for translating the boilerplate text on the page, like the label for the above control).
 
 Styling of Form Controls
 ========================
 
-To style any of the form controls, the first thing to do is to look at the template of the form control, for example, Button.html:
+To style any of the form controls, the first thing to do is to look at the template of the form control,
+for example, Button.html:
 
 .. html ::
 
@@ -240,10 +242,11 @@ To style any of the form controls, the first thing to do is to look at the templ
 	></span
   ></span>
 
-And then to look in firebug to see it in action.
+And then look in firebug to see it in action.
 
 The template, however, does not tell the whole story.
-Each form widget (and many other widgets too) have something called a "baseClass", which is applied to the root node of the widget.
+Each form widget (and many other widgets too) have something called a "baseClass",
+which is applied to the root node of the widget.
 In Button's case, the baseClass is called "dijitButton".
 Also, depending on the *state* of the widget, additional classes are applied to the widget's DOM node.
 The additional classes are a combination of baseClass and various keywords:

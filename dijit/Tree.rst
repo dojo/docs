@@ -15,7 +15,7 @@ The trees we see in User Interfaces help sort out long, hierarchical lists.
 A file system is the classic example, with Windows using it in Explorer.
 The Dijit tree widget is like that.
 
-Dojo makes easy trees easy, and hard trees possible.
+Dojo makes simple trees easy, and complicated trees possible.
 In particular, you can:
 
 * Connect your tree to any dojo.data store implementing the Identity API,  with or without a single root item, and with various ways to express parent/child relationships
@@ -27,7 +27,7 @@ In particular, you can:
 * Drag and drop onto the tree, which updates the data store indirectly
 
 
-Components Involved In A Tree
+Components Involved In a Tree
 =============================
 
 To understand how to use a Tree, you need to be aware of three components that feed each other:
@@ -75,7 +75,7 @@ One might wonder why Tree doesn't interface directly with a dojo.data store.
 There are a number of reasons:
 
   * The parent-child relationship of items in the store might not be expressed by a children attribute on the parent item.  For relational databases it's the other way around, where the child points to the parent.  The dijit.tree.Model code specifies how to trace parent-child relationships for a given data store.
-  * The interface of dojo.data to load children is rather cumbersome... must call _loadItem() on each item in the children[] array, which means that any item in the store needs to know the list of id's of it's children at any time.  It's more efficient to not require that, and to lookup children only when they are needed (when the user clicks the expando icon to open the node).
+  * The interface of dojo.data to load children is rather cumbersome... must call _loadItem() on each item in the children[] array, which means that any item in the store needs to know the list of id's of its children at any time.  It's more efficient to not require that, and to lookup children only when they are needed (when the user clicks the expando icon to open the node).
   * Sometimes developers might use a custom model that doesn't connect to a data store at all.
 
 Relationship
@@ -251,27 +251,27 @@ Updating a Tree
 
 People often ask:
 
-  * how do I update a tree (adding or deleting items)?
+  * How do I update a tree (adding or deleting items)?
 
 You can't update the tree directly, but rather you need to update the model.
 Usually the model is connected to a data store and in that case you need to update the data store.
-Thus, you need to use a data store that allows updates (through it's official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
+Thus, you need to use a data store that allows updates (through its official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
 
-  * how do I refresh a Tree from the store?
+  * How do I refresh a Tree from the store?
 
 This isn't supported.
 The store needs to notify the tree of any changes to the data.
 Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`,
 as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
-Lazy Loading A Tree
+Lazy Loading a Tree
 ===================
 People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.
 If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`,
 then the data will be loaded lazily.
 
 
-Drag And Drop
+Drag and Drop
 =============
 
 Tree's support drag and drop, meaning that a user can:
@@ -328,11 +328,11 @@ You can also specify custom checkAcceptance() and checkItemAcceptance() to accep
 (The former function operates at the Tree level, and the latter operates per Tree node,
 allowing things like rejecting dropping items onto leaf nodes.)
 
-Further examples
+Further Examples
 ----------------
 
 If you are interested in further examples, please make sure you have glanced at the unit tests.
-For the 1.5 release, you can find a good example here: http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/tests/tree/test_Tree_DnD.html
+You can find a good example here: http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/tests/tree/test_Tree_DnD.html
 
 betweenThreshold
 ----------------
@@ -365,16 +365,16 @@ This is useful for when a user can control the order of the children of the chil
     </div>
 
 
-Behind the scenes
+Behind the Scenes
 -----------------
 What happens when a user moves an item from one position in a tree to another?
 It's actually quite complicated...
 
-1. The Tree widget does not change it's display at all.  Rather, it notifies the model of the paste operation.
+1. The Tree widget does not change its display at all.  Rather, it notifies the model of the paste operation.
 2. The model updates the store.
 3. The store notifies the model that the data has been changed.
 4. The model notifies the tree of the change (presumably the children list of nodeA is one shorter, and the children list of nodeB has a new entry)
-5. The Tree updates it's display.
+5. The Tree updates its display.
 
 In this way, the Tree, Model, and data store are always in sync.
 

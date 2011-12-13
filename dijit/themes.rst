@@ -235,7 +235,7 @@ The second class ``dijitEditorIconCut`` is specific to the Cut icon:
 The Cut icon starts 54 px from the right edge, and measures 18px by 18px.
 108 equals 6 * 18, so it's the 4th image from the left in the sprite.
 
-You can define your own icson by setting up CSS selectors using code similar to above,
+You can define your own icons by setting up CSS selectors using code similar to above,
 and wiring up the iconClass.
 
 Icon Variation By State
@@ -699,16 +699,18 @@ Dojo supports:
 
 See `Common and theme-specific images`_ above.
 
-**Customizing images**
+Customizing images
+~~~~~~~~~~~~~~~~~~
 
-You can customizing any of the following ways:
+You can customize images in any of the following ways:
   - color bit
   - individual image vs combined image set (sprite)
   - no background image
   - modify existing or create new image
 
 
-**Customizing background images**
+Customizing background images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - dijit.titlePane–transparent white image (using PNG technology)
 
@@ -762,25 +764,28 @@ Animated effects serve as an added visual cue to in context information.
 They can also provide visual delight without rendering effects that are too 'eye candy' or gratuitous,
 at least within rich internet applications.
 
-Animation is generated using several of the following technologies: Dojo APIs, CSS3 and animated GIF files.
+Animation is generated using the following technologies:
+  - Dojo Animation API (dojo.fx)
+  - CSS3
+  - animated GIF files
 
 
-Using Dojo APIs and CSS3
-~~~~~~~~~~~~~~~~~~~~~~~~
+Javascript and CSS3 Animations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-APIs and CSS3 -webkit-transition (supported and viewable in Safari & Chrome) have been applied
-for effective visual cueing to a change of state and some aesthetic appeal, to the following Dijit widgets:
+dojo.fx and CSS3 -webkit-transition (supported and viewable in Safari & Chrome) animations have been applied
+to the following Dijit widgets:
 
- - AccordionContainer (ease API / fade CSS3)
+ - AccordionContainer (wipe in/out API / fade CSS3)
  - Calendar (fade CSS3)
- - Tree (ease API / fade CSS3)
+ - TitlePane (wipe in/out API)
+ - Tree (wipe in/out API / fade CSS3)
  - Tab (fade CSS3)
  - Button (fade CSS3)
- - TextBox (fade CSS3) (list widgets you pick up this styling)
+ - TextBox (fade CSS3)
 
-Using CSS3 -webkit-transition enables designers to define styling for animations.
-
-Sample of CSS3 animation styling in accordion:
+The CSS3 -webkit-transition settings enable designers to tune the animations as part of a customized theme.
+Sample of CSS3 animation styling in AccordionContainer:
 
 .. css ::
 
@@ -799,7 +804,7 @@ Animated GIFs
 
 The loadingAnimation.gif is used in the following widgets:
   - dijit.Tree
-  - dijit.layout.ContentPane (and subclasses, used when loading from href)
+  - dijit.layout.ContentPane and subclasses, used when loading from href
   - dojox.Grid
 
 

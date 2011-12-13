@@ -13,13 +13,13 @@ dijit.Tree examples
 Detect when tree has finished loading
 -------------------------------------
 
-``New in 1.4`` The onLoad event is being introduced in Dojo release 1.4.
+Use the onLoadDeferred to detect when the Tree has finished loading
 
 .. js ::
   
     var tree = dijit.byId('myTree');
 
-    // Connect to tree onLoad to do work once it has initialised
+    // Connect to tree onLoad to do work once it has initialized
     tree.onLoadDeferred.then(function(){
         console.debug("tree onLoad here!");
         dojo.disconnect(tmph);
@@ -29,8 +29,6 @@ Detect when tree has finished loading
 
 Expanding and Focusing tree nodes programmatically
 --------------------------------------------------
-
-``New in 1.4``
 
 ``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.set('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
 
@@ -60,7 +58,7 @@ Expanding and Focusing tree nodes programmatically
       data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
 
-One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
+One problem with using 'path' is that you must know the full path to the node in your data you are trying to select.
 
 The following example contains workaround code for this problem, as well as an example call to tree.set('path').
 If you already know the full path to the tree node you want to highlight, you can simply call tree.set('path').

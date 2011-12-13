@@ -59,8 +59,8 @@ The first example creates a Dialog via markup from an existing DOM node:
 
 .. code-example ::
 
-  A dialog created via markup. First let's write up some simple HTML code because you need to define the 
-  place where your Dialog sdhould be created.
+  First let's write up some simple HTML code because you need to define the
+  place where your Dialog should be created.
   
   .. html ::
 
@@ -135,7 +135,7 @@ Coloring the Underlay
 ---------------------
 
 If you wish to alter the default color for the underlay, you do so in CSS.
-The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a css class for:
+The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a CSS class for:
 
 .. code-example ::
  
@@ -409,7 +409,7 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 Sizing the Dialog
 -----------------
 
-A dialog by default sizes itself according to it's content, just like a plain <div>.
+A dialog by default sizes itself according to its content, just like a plain <div>.
 If you want a scrollbar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
 
 .. code-example ::
@@ -500,11 +500,9 @@ Improved Screen Reader Support in 1.4
 
 The dialog now supports the aria-describedby property.
 If you have a description of the dialog that you would like
-spoken by the screen reader when the dialog opens add the aria-describedby property to the dialog.
-Include an
-element containing the text you want spoken in the dialog.
-The value of the aria-describedby property is the id of
-the element containing the text.
+spoken by the screen reader when the dialog opens, add the aria-describedby property to the dialog.
+Include an element containing the text you want spoken in the dialog.
+The value of the aria-describedby property is the id of the element containing the text.
 
 .. js ::
 
