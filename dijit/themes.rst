@@ -358,6 +358,80 @@ Customizing a Theme
 
 You can customize the look of your app by overriding a theme, customizing a theme, or creating your own theme.
 
+Customizing Claro
+-----------------
+The Claro CSS files are generated from `less <http://lesscss.org/>`_ files.
+Most of the important settings for Claro are contained in the file dijit/themes/claro/variables.less, which is
+referenced during compilation.
+Thus, by modifying variables.less and rebuilding the CSS files, you could make your own variation on Claro.
+
+
+The beginning of variables.less looks like:
+
+.. code-block :: less
+
+    @primary-color: #cfe5fa;													// Base color for entire theme
+    @secondary-color: #efefef;												// Base color for bar-backgrounds
+    @text-color: #000;													// Text color for enabled widgets
+    @disabled-color: #d3d3d3;												// Base for disabled backgrounds and borders
+    @error-color: #d46464;
+
+    @container-background-color:#fff;										// Backgrounds for various content areas such as TitlePane, ContentPane and Inputs
+
+    @minor-selected-color: spin(saturate(darken(@primary-color, 6), 19), 0);						// Color for various arrows and buttons
+    @base-border-color: spin(desaturate(darken(@primary-color, 29), 44), -1);		// Augmented and used directly by variables to create border colors for various widgets
+    @unfocused-clickable-color: spin(saturate(lighten(@primary-color, 5), 10), 0);				// Background color for enabled buttons, text inputs
+    @border-color: spin(desaturate(darken(@primary-color, 15), 67), 8);						// Border color for (enabled, unhovered) TextBox, Slider, Accordion, BorderContainer, TabContainer
+    @minor-border-color: @disabled-color;									// Color of borders inside widgets: horizontal line in Calendar between weeks, around color swatches in ColorPalette, above Dialog action bar
+    @popup-border-color: @base-border-color;								// Border for Dialog, Menu, Tooltip.   Must also update tooltip.png (the arrow image file) to match
+
+
+
+To compile all the less files into CSS files, on mac or other UNIX boxes do:
+
+.. code-block :: shell
+
+  $ cd dijit/themes/claro
+  $ node compile.js
+
+This requires Node.js.   If you don't have it, then
+
+1. Download a built copy from https://github.com/ajaxorg/node-builds.
+   Alternately, go to http://nodejs.org/#download   (./configure, make, make install).
+
+2. Edit .bash_profile etc. to add node to your path
+
+.. code-block :: shell
+
+	export PATH=$PATH:/opt/less/bin
+
+
+On a PC, do:
+
+.. code-block :: shell
+
+	C:\> cd C:\myworkspace\dijit\themes\claro
+	C:\> node compile.js
+
+
+To setup Node.js on a PC:
+
+1. Install node:
+    a) Go to https://github.com/ajaxorg/node-builds, press download button, and select "download zip"
+    b) unzip the file into C:\
+
+2. Add node environment variables:
+    a) open Control Panel --> click System icon --> select Advanced tab --> click Environment variables button
+    b) press "edit" on path
+    c) depending on what directory you unzipped to and the exact filenames, you will add something like
+
+	;C:\ajaxorg-node-builds-0fcee7d\win32
+
+
+
+See http://lesscss.org/ and https://github.com/cloudhead/less.js/ for more information.
+
+
 Writing Your Own Theme
 ----------------------
 
@@ -444,6 +518,7 @@ or
 The first two techniques should work for widgets also.
 However, the third technique is not likely to work,
 because some of the theme selectors like ".tundra .dijitButton" will take precedence.
+
 
 
 Elements Of a Theme
