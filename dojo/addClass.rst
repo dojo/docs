@@ -5,7 +5,7 @@ dojo.addClass
 =============
 
 :Project owner: Eugene Lazutkin
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
    :depth: 2

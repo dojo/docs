@@ -7,7 +7,7 @@ Bi-directional Text (Bi-Di)
 :Status: Draft
 :Version: 1.0
 :Authorsr: Adam Peller
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

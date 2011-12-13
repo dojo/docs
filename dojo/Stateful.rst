@@ -6,7 +6,7 @@ dojo.Stateful
 
 :Authors: Kris Zyp, Marcus Reimann
 :Project owner: Kris Zyp
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
    :depth: 2

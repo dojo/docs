@@ -7,7 +7,7 @@ Build System:  Cross-Domain (xDomain) Builds
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

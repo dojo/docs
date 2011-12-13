@@ -8,7 +8,7 @@ dojox.mobile.FlippableView
 :Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
-:Available: since V1.6
+:since: V1.6
 
 .. contents::
     :depth: 2

@@ -5,7 +5,7 @@ dojo.style
 ==========
 
 :Authors: James Burke, Peter Higgins, Eugene Lazutkin, Marcus Reimann
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
    :depth: 2

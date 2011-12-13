@@ -6,7 +6,7 @@ build customBase
 
 :Author: Scott Jenkins
 :Project owner: ?
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

@@ -5,7 +5,7 @@ dojo.cache
 ==========
 
 :Project owner: James Burke
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

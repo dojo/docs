@@ -4,7 +4,7 @@
 dojo.create
 ===========
 
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

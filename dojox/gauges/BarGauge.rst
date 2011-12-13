@@ -7,7 +7,7 @@ dojox.gauges.BarGauge
 :Status: Draft
 :Version: 1.2
 :Project owner:
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

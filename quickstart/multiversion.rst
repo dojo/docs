@@ -5,7 +5,7 @@ Multiple Versions of Dojo on a Page
 ====================================
 
 :Authors: James Burke
-:Available: since V1.1
+:since: V1.1
 
 .. contents::
    :depth: 3

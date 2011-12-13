@@ -4,7 +4,7 @@
 dojo.NodeList.removeAttr
 ========================
 
-:Available: since V1.4
+:since: V1.4
 :Removed: in V1.7
 
 .. contents::

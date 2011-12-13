@@ -7,7 +7,7 @@ dojox.embed.Flash
 :Status: Draft
 :Version: 1.6
 :Project owner: ?--
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

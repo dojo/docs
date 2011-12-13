@@ -7,7 +7,7 @@ build system build script (build.sh or build.bat)
 :Status: Draft
 :Version: 1.0
 :Project owner: Scott Jenkins
-:Available: since 1.0
+:since: 1.0
 
 .. contents::
    :depth: 2

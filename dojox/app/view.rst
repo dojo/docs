@@ -6,7 +6,7 @@ dojox.app.view
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.7
+:since: V1.7
 
 dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 

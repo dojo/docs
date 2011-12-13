@@ -5,7 +5,7 @@ dojox.layout.TableContainer
 ===========================
 
 :Project owner: Shane O'Sullivan
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

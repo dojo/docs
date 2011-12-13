@@ -8,7 +8,7 @@ dojox.html.entities
 :Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewicz
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
     :depth: 2

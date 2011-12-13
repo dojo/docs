@@ -8,7 +8,7 @@ dojox.mobile.app
 :Version: 1.0
 :Authors: Sébastien Le Ray
 :Developers: multiple developers
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

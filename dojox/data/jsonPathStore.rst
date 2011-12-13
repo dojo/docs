@@ -8,7 +8,7 @@ dojox.data.jsonPathStore
 :Version: 1.2
 :Authors: Dustin Machi
 :Developers: Dustin Machi
-:Available: V1.0 to 1.3, Removed in 1.4
+:since: V1.0 to 1.3, Removed in 1.4
 
 .. contents::
    :depth: 2

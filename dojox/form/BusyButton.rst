@@ -7,7 +7,7 @@ dojox.form.BusyButton
 :Status: Draft
 :Version: Beta
 :Project owner: Nikolai Onken
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

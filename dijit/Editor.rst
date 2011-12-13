@@ -6,7 +6,7 @@ dijit.Editor
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 :Developers: Liu Cougar, Bill Keese, Douglas Hays, Becky Gibson, Jared Jurkiewicz
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

@@ -4,7 +4,7 @@
 dojo/NodeList-dom
 =================
 
-:Available: since V 1.7
+:since: V 1.7
 
 This module contains extension to dojo/NodeList to provide capability of manipulating DOM nodes.
 

@@ -5,7 +5,7 @@ dijit.editor.plugins
 ====================
 
 :Project owner: Bill Keese
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
    :depth: 2

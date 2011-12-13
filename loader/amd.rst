@@ -7,7 +7,7 @@ The Dojo Loader
 :Author: Rawld Gill
 :Editors: Colin Snover, Kenneth G. Franqueiro
 :Project owner: Rawld Gill
-:Available: 1.7.0
+:since: 1.7.0
 
 .. contents::
    :depth: 2

@@ -6,7 +6,7 @@ dojo.hash
 
 :Status: Draft
 :Version: 1.4
-:Available: 1.4
+:since: 1.4
 
 .. contents::
     :depth: 3

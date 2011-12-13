@@ -7,7 +7,7 @@ dojox.widget.AnalogGauge
 :Status: Draft
 :Version: 1.2
 :Project owner: Benjamin Schell
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

@@ -7,7 +7,7 @@ Dojo build system:  keepRequires
 :Status: Draft
 :Version: 1.0
 :Project owner: Scott Jenkins
-:Available: 1.3
+:since: 1.3
 
 .. contents::
    :depth: 3

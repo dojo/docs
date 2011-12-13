@@ -6,7 +6,7 @@ dojo.place
 
 :Status: Draft
 :Version: 1.0
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 3

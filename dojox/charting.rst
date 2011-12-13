@@ -7,7 +7,7 @@ dojox.charting
 :Status: Draft
 :Version: 1.0
 :Project owner: Eugene Lazutkin, Tom Trenka
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

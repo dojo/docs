@@ -5,7 +5,7 @@ dojox.editor.plugins
 ====================
 
 :Project owner: Mike Wilcox, Jared Jurkiewicz
-:Available: since V1.1
+:since: V1.1
 
 .. contents::
    :depth: 2

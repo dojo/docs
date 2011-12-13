@@ -7,7 +7,7 @@ dojox.editor
 :Status: Draft
 :Version: 1.0
 :Project owner: Mike Wilcox, Jared Jurkiewicz
-:Available: since V1.1
+:since: V1.1
 
 .. contents::
    :depth: 2

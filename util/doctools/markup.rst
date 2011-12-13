@@ -7,7 +7,7 @@ Dojo Inline Documentation
 :Status: Draft
 :Version: 1.0
 :Project owner: Neil Roberts
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

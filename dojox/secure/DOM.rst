@@ -7,7 +7,7 @@ dojox.secure.DOM
 :Version: 1.0
 :Authors: Kris Zyp
 :Developers: Kris Zyp
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

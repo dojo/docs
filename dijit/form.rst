@@ -8,7 +8,7 @@ dijit.form
 :Version: 1.0
 :Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: multiple developers
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

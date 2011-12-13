@@ -6,7 +6,7 @@ dijit._CssStateMixin
 
 :Authors: Bill Keese
 :Project owner: Bill Keese
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

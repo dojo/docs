@@ -6,7 +6,7 @@ dijit.form.RadioButton
 
 :Authors: Becky Gibson, Doug Hays, Nikolai Onken
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

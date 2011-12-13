@@ -6,7 +6,7 @@ dojo/_base/fx
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

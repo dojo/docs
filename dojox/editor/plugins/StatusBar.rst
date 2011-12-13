@@ -6,7 +6,7 @@ dojox.editor.plugins.StatusBar
 
 :Authors: Jared Jurkiewicz
 :Project owner: Jared Jurkiewicz
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

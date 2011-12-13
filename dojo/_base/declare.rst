@@ -6,7 +6,7 @@ dojo._base.declare
 
 :Status: Draft
 :Version: 1.2
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

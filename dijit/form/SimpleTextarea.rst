@@ -6,7 +6,7 @@ dijit.form.SimpleTextarea
 
 :Authors: Doug Hays, Bill Keese, Nikolai Onken
 :Developers: Doug Hays, Bill Keese
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

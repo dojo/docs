@@ -8,7 +8,7 @@ dijit._editor.plugins.FullScreen
 :Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewiczs
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
     :depth: 2

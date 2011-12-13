@@ -8,7 +8,7 @@ dojox.mvc.StatefulModel
 :Version: 0.1
 :Authors: Rahul Akolkar, Ed Chatelain
 :Developers: Rahul Akolkar, Ed Chatelain
-:Available: since V1.7
+:since: V1.7
 
 
 .. contents::

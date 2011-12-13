@@ -6,7 +6,7 @@ dijit.form.TimeTextBox
 
 :Authors: Doug Hays, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

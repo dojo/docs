@@ -4,7 +4,7 @@
 dojo.removeAttr
 ===============
 
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

@@ -6,7 +6,7 @@ dojo/store/JsonRest
 
 :Authors: Kris Zyp, Colin Snover
 :Project owner: Kris Zyp
-:Available: since V1.6
+:since: V1.6
 :Version: 1.7
 
 .. contents::

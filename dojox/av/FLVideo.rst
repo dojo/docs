@@ -8,7 +8,7 @@ dojox.av.FLVideo
 :Version: 1.0
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 2

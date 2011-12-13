@@ -6,7 +6,7 @@ dijit.form.FilteringSelect
 
 :Authors: Doug Hays, Nikolai Onken
 :Developers: Doug Hays, Bill Keese
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

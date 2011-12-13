@@ -6,7 +6,7 @@ dojox.gfx.utils.serialize
 
 :Authors: ?--
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

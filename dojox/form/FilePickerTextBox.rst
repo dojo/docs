@@ -7,7 +7,7 @@ dojox.form.FilePickerTextBox
 :Status: Draft
 :Version: 1.2
 :Project owner: Nathan Toone
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

@@ -5,7 +5,7 @@ dijit.Dialog
 ============
 
 :Status: Contributed
-:Available: since V0.1.0
+:since: V0.1.0
 :Version: V1.6
 :jsDoc: http://dojotoolkit.org/api/dijit.Dialog
 

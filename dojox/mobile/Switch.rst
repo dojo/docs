@@ -6,7 +6,7 @@ dojox.mobile.Switch
 
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

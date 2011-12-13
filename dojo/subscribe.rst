@@ -6,7 +6,7 @@ dojo.subscribe
 
 :Status: Draft
 :Version: 1.0
-:Available: since 0.9
+:since: 0.9
 
 .. contents::
    :depth: 2

@@ -4,7 +4,7 @@
 dojo.fromJson
 =============
 
-:Available: since v0.9
+:since: v0.9
 
 .. contents::
    :depth: 2

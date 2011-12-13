@@ -6,7 +6,7 @@ dijit.layout.BorderContainer
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
-:Available: since V.2
+:since: V.2
 
 .. contents::
     :depth: 2

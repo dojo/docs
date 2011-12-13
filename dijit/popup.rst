@@ -6,7 +6,7 @@ dijit.popup
 
 :Version: 1.7
 :Project owner: Bill Keese
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

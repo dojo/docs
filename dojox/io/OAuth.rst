@@ -7,7 +7,7 @@ dojox.io.OAuth
 :Status: Draft
 :Version: 1.0
 :Project owner: Tom Trenka
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

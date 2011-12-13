@@ -7,7 +7,7 @@ dojox.fx.style
 :Status: Draft
 :Version: 1.4
 :Project owner: Peter Higgins
-:Available: since v1.2
+:since: v1.2
 
 .. contents::
    :depth: 2

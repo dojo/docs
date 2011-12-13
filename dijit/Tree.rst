@@ -6,7 +6,7 @@ dijit.Tree
 
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: Bill Keese
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

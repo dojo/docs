@@ -4,7 +4,7 @@
 dojo.setContext
 ===============
 
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

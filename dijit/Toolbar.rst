@@ -5,7 +5,7 @@ dijit.Toolbar
 =============
 
 :Project owner: Bill Keese
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

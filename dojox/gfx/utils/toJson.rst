@@ -5,7 +5,7 @@ dojox.gfx.utils.toJson
 ======================
 
 :Authors: Eugene Lazutkin, Jared Jurkiewicz
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
   :depth: 2

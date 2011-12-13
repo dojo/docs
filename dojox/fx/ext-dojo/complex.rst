@@ -9,7 +9,7 @@ dojox.fx.ext-dojo.complex
 :Version: 1.5
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.5
+:since: 1.5
 
 Basic Description
 -----------------

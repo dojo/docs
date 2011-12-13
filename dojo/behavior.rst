@@ -8,7 +8,7 @@ dojo.behavior
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

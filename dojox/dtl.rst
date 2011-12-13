@@ -6,7 +6,7 @@ dojox.dtl
 
 :Authors: Neil Roberts
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

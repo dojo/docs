@@ -5,7 +5,7 @@ dojox.widget.Dialog
 ===================
 
 :Project owner: Peter Higgins
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 2

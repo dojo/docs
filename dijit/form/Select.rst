@@ -8,7 +8,7 @@ dijit.form.Select
 :Version: 1.4
 :Project owner: Nathan Toone
 :Authors: Nathan Toone, Doug Hays
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

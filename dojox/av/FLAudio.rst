@@ -8,7 +8,7 @@ dojox.av.FLAudio
 :Version: 1.0
 :Project owner: Mike Wilcox, Tom Trenka
 :Author: Mike Wilcox
-:Available: since 1.3
+:since: 1.3
 
 .. contents::
    :depth: 2

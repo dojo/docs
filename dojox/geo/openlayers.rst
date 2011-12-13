@@ -8,7 +8,7 @@ dojox.geo.openlayers
 :Version: Experimental
 :Project owner: Chris Mitchell
 :Author: Marc Durocher
-:Available: since V.1.7
+:since: V.1.7
 
 .. contents::
    :depth: 3

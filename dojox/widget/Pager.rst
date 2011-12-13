@@ -5,7 +5,7 @@ dojox.widget.Pager
 ==================
 
 :Project owner: Peter Higgins
-:Available: since V1.1.1
+:since: V1.1.1
 
 .. contents::
    :depth: 2

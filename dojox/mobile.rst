@@ -6,7 +6,7 @@ Dojo Mobile
 
 :Authors: Yoshiroh Kamiyama, Doug Hays, Chris Mitchell
 :Developers: Yoshiroh Kamiyama, Doug Hays
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

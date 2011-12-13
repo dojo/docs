@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.Pagination
 
 :Authors: Wang Qiang
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 Pagination plugin provides paging functionality for grid.
 

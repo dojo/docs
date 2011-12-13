@@ -6,7 +6,7 @@ dojo.fieldToObject
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

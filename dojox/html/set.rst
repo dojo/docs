@@ -6,7 +6,7 @@ dojox.html.set
 
 :Authors: Sam Foster, Bill Keese, Frederic, Marcus Reimann
 :Project owner: ?
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

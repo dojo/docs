@@ -6,7 +6,7 @@ Expanding dojo.provide calls
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

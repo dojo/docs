@@ -6,7 +6,7 @@ dijit.form.Slider
 
 :Authors: Becky Gibson, Doug Hays, Nikolai Onken
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 
 .. contents::

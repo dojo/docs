@@ -4,7 +4,7 @@
 dojo.byId
 =========
 
-:Available: since V0.3
+:since: V0.3
 
 .. contents::
     :depth: 2

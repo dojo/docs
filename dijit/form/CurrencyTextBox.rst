@@ -6,7 +6,7 @@ dijit.form.CurrencyTextBox
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
 :Developers: Doug Hays, Bill Keese
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

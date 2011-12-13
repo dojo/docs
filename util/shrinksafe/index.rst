@@ -7,7 +7,7 @@ ShrinkSafe
 :Status: Draft
 :Version: 2.0
 :Project owner: Alex Russell
-:Available: since V0.4
+:since: V0.4
 
 .. contents::
    :depth: 2

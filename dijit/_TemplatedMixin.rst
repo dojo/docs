@@ -6,7 +6,7 @@ dijit._TemplatedMixin
 
 :Authors: Peter Higgins, Bill Keese, Nikolai Onken
 :Project owner: Bill Keese
-:Available: since V1.7
+:since: V1.7
 
 .. contents::
    :depth: 2

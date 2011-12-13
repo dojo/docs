@@ -4,7 +4,7 @@
 dojo._base.window
 =================
 
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

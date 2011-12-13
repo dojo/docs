@@ -5,7 +5,7 @@ dojo.anim
 =========
 
 :Project owner: ?--
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

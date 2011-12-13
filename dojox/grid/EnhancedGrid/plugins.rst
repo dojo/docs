@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 EnhancedGrid provides a plugin framework, which can support a rich set of new features as plugins.
 The followings are implemented in Dojo 1.6:

@@ -5,7 +5,7 @@ dojox.gesture
 =============
 
 :Project owner: Evan Huang
-:Available: since V.1.7
+:since: V.1.7
 :Status: Experimental (API subject to changes)
 
 .. contents::

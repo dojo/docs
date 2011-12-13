@@ -8,7 +8,7 @@ dojox.widget.DataPresentation
 :Version: Experimental
 :Project owner: Dean Williams
 :Author: Dave Clark
-:Available: since V.1.4
+:since: V.1.4
 
 .. contents::
    :depth: 2

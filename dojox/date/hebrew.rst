@@ -8,7 +8,7 @@ dojox.date.hebrew
 :Version: 1.0
 :Project owner: Tomer Mahlin
 :Contributors: Helena Halperin, Moshe Wajnberg
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

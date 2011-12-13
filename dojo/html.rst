@@ -8,7 +8,7 @@ dojo.html
 :Version: 1.0
 :Authors: Sam Foster, Nikolai Onken, Marcus Reimann
 :Developers: Sam Foster, Alex Russell, Dylan Schiemann
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
     :depth: 2

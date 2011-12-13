@@ -5,7 +5,7 @@ dojox.analytics.Urchin
 ======================
 
 :Author: Peter Higgins
-:Available: 1.2+
+:since: 1.2+
 
 .. contents::
    :depth: 2

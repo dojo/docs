@@ -6,7 +6,7 @@ Grid Demos - Cells with DateTextBox
 
 :Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
-:Available: since V.1.6
+:since: V.1.6
 
 
 Localized Date Field

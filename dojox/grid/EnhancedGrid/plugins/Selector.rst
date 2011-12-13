@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.Selector
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 Selector plugin provides extended selection for columns, rows and cells.
 

@@ -6,7 +6,7 @@ dojox.lang.typed
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
     :depth: 3

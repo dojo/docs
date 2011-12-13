@@ -6,7 +6,7 @@ Deferred.when/dojo.when
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

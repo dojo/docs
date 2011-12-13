@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.Exporter
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 Exporter plugin provides functions to export the grid data into a given format.
 

@@ -6,7 +6,7 @@ dojo.store.util.SimpleQueryEngine
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: since V1.6
+:since: V1.6
 
 .. contents ::
   :depth: 2

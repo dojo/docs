@@ -7,7 +7,7 @@ dojo.contentBox
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since 1.0
+:since: 1.0
 
 .. contents::
    :depth: 2

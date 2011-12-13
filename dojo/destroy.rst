@@ -5,7 +5,7 @@ dojo.destroy
 ============
 
 :Project owner: Peter Higgins
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

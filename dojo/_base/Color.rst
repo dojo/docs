@@ -8,7 +8,7 @@ dojo._base.Color
 :Version: 1.0
 :Authors: Marcus Reimann, Bill Keese, JJ Kress
 :Developers: Eugene Lazutkin, Adam Peller, Alex Russell
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2
