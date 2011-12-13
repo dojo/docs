@@ -29,13 +29,13 @@ It doesn't work because the "other" control is not defined yet. You can move the
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
-  require("dojo/domReady!", setAfrobeat);
+  require(["dojo/domReady!"], setAfrobeat);
 
 conveniently replaces the one above. When the function is small, you may prefer to write it inline:
 
 .. js ::
 
-  require("dojo/domReady!", function(){
+  require(["dojo/domReady!"], function(){
            document.musicPrefs.other.value="Afrobeat";
   });
 
