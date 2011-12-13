@@ -1,5 +1,18 @@
 .. _developer/release:
 
+=========================
+Creating a new DTK branch
+=========================
+
+1. Run ``mk_branch.sh <version> <revision>``, where:
+
+   ``version`` is the new branch number, e.g. 1.7
+   ``revision`` is the revision of the version to branch from
+
+2. Check out the new branch and update ``build_release.sh`` to point to the release branch, not trunk.
+3. Have a beer.
+
+
 ==============================
 Cutting a Dojo Release/RC/Beta
 ==============================
