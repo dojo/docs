@@ -68,14 +68,15 @@ and the other for the drop-down widget that's displayed when you press the butto
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
-      dojo.require("dijit.Menu");
+      dojo.require("dijit.DropDownMenu");
+      dojo.require("dijit.MenuItem");
     </script>
 
   .. html ::
 
     <div data-dojo-type="dijit.form.ComboButton">
       <span>get all mail</span>
-      <div data-dojo-type="dijit.Menu">
+      <div data-dojo-type="dijit.DropDownMenu">
         <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('hi!')}">Yahoo</div>
         <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('ho!')}">Google</div>
       </div>

@@ -14,7 +14,7 @@ dijit.Toolbar
 Introduction
 ============
 
-Just as dijit.Menu is a container for dijit.MenuItem's, so dijit.Toolbar is a container for buttons.
+Just as dijit.DropDownMenu is a container for dijit.MenuItem's, so dijit.Toolbar is a container for buttons.
 Any button-based Dijit component can be placed on the toolbar, including ComboButtons and DropdownButtons.
 
 

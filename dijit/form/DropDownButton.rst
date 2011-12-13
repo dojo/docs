@@ -11,9 +11,9 @@ dijit.form.DropDownButton
 .. contents::
     :depth: 2
 
-The dijit.form.DropDownButton widget is for a button that displays some kind of drop down, often a menu, when you press it.
+The dijit.form.DropDownButton widget is for a button that displays some kind of drop down,
+often a menu, when you press it.
 
-.. api-inline :: dijit.form.DropDownButton
 
 Examples
 ========
@@ -27,13 +27,14 @@ The first example shows how to create a menu and drop down button programmatical
 
   .. js ::
 
-        <script type="text/javascript">
-          dojo.require("dijit.form.Button");
-          dojo.require("dijit.Menu");
-        </script>
 	<script type="text/javascript">
-          dojo.ready(function(){
-            var menu = new dijit.Menu({ style: "display: none;"});
+	     dojo.require("dijit.form.Button");
+	     dojo.require("dijit.DropDownMenu");
+	     dojo.require("dijit.MenuItem");
+	</script>
+	<script type="text/javascript">
+         dojo.ready(function(){
+            var menu = new dijit.DropDownMenu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
                 label: "Save",
                 iconClass:"dijitEditorIcon dijitEditorIconSave",
@@ -55,8 +56,8 @@ The first example shows how to create a menu and drop down button programmatical
                 id: "progButton"
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
-	 });
-       </script>
+	     });
+    </script>
 
   .. html ::
 
@@ -79,6 +80,7 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Dialog");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.TooltipDialog");
     </script>
 
   .. html ::
@@ -127,3 +129,6 @@ In order to identify the button description to the screen reader, all buttons sh
 
 Even though the dropdown buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2.
 In Firefox 3 the dropdown and combo buttons are announced as "menu button".
+
+
+.. api-inline :: dijit.form.DropDownButton

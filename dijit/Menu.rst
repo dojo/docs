@@ -10,22 +10,16 @@ dijit.Menu
 .. contents::
     :depth: 2
 
-A Menu widget
-
-
 Introduction
 ============
 
-The Menu widget is used for three types of menus:
+The Menu widget is used for context menus, otherwise known as a right-click or popup menus.
 
-  * context menu, typically otherwise known as a right-click or popup menu
-  * drop down menu from :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit.MenuBar <dijit/MenuBar>` widgets.
-  * statically positioned menu on the screen, typically a left-hand-side navigation menu
+Previously Menu was also used for drop-down menus, but that functionality has been split off to the
+:ref:`dijit.DropDownMenu <dijit/form/DropDownMenu>` widget.
 
-MenuItem widgets are the actual items in the menu.
-The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right.
-A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
-
+Since Menu extends :ref:`dijit.DropDownMenu <dijit/form/DropDownMenu>`, consult that page for general
+documentation about the children of Menu, etc.
 
 Examples
 ========
@@ -121,46 +115,10 @@ This example creates a context menu for the whole window.
 		</div>
 	</div>
 
-        <span> Click anywhere on the page to see this menu.</span>
+    <span> Click anywhere on the page to see this menu.</span>
 
 Note that popup menus should be hidden via specifying style="display: none".
 Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
-
-Navigation Menus
-----------------
-
-The Menu widget can also be used for left-hand-side (style) navigation menus, which are functionally equivalent to MenuBar's, but appear vertically (just like a popup menu).
-In this case may want to modify the CSS so that the entire left hand column is one color, rather than just the Menu itself.
-
-Usage to display a Menu statically is the same as context menus, except that you don't specify style="display: none" or contextMenuForWindow or any connect ids.
-
-.. code-example ::
-
-  .. js ::
-
-    <script type="text/javascript">
-      dojo.require("dijit.Menu");
-    </script>
-
-  .. html ::
-
-	<div data-dojo-type="dijit.Menu" id="navMenu">
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
-			onClick:function(){alert('drama!')}">Drama</div>
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
-			onClick:function(){alert('comedy!')}">Comedy</div>
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
-			onClick:function(){alert('romance!')}">Romance</div>
-		<div data-dojo-type="dijit.MenuSeparator"></div>
-		<div data-dojo-type="dijit.PopupMenuItem">
-			<span>Action</span>
-			<div data-dojo-type="dijit.Menu" id="submenu2">
-				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('diehard!')}">Diehard</div>
-				<div data-dojo-type="dijit.MenuItem" onclick="alert('indiana!')">Indiana Jones</div>
-			</div>
-		</div>
-	</div>
-
 
 Accessibility
 =============
@@ -186,13 +144,6 @@ Close a context menu and all open submenus    Tab
 ==========================================    =================================================
 
 
-Known Issues
-------------
-
-When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu.
-This will be fixed in Firefox 3.
-
-
 Implementation Notes
 ====================
 
@@ -200,9 +151,6 @@ Focus
 -----
 Context menus are focused as soon as they are opened, and focus follows the mouse (or the keyboard arrow keys)
 
-For a static Menu/MenuBar, focus is deferred until user clicks it, or tabs into it.
-Once user clicks on a Menu/MenuBar, it focuses on it, and then (as with a context menu)
-any mouse movement or keyboard movement (via arrow keys) will change focus.
 
 CSS Classes
 -----------

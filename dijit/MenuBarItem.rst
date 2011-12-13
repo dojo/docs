@@ -46,7 +46,7 @@ Creation from markup is simpler and more structured.
   .. js ::
 
     dojo.require("dijit.MenuBar");
-    dojo.require("dijit.Menu");
+    dojo.require("dijit.DropDownMenu");
     dojo.require("dijit.MenuBarItem");
 
   .. html ::
