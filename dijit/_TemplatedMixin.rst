@@ -55,17 +55,23 @@ It can either be specified as a literal string:
  </script>
 
 
-or pulled in from a file using :ref:`dojo.cache() <dojo/cache>`
+or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
 
 .. js ::
  
  <script type="text/javascript">
-   dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
-       templateString: dojo.cache("myNameSpace", "templates/MyWidget.html"),
-   });
+    require([
+        "dojo/declare",
+        "dijit/_WidgetBase", "dijit._TemplatedMixin", "dojo/text!myNameSpace/templates/MyWidget.html"
+    ], function(declare, _WidgetBase, _TemplatedMixin, template){
+        declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
+            templateString: template,
+        });
+    });
  </script>
 
-When using a built or released Dijit tree, the build will ``internStrings``, converting the dojo.cache() call into a literal string, avoiding a network request when users load the widget.
+When using a built or released Dijit tree, the build will ``internStrings``, converting the dojo/text! call
+into a literal string, avoiding a network request when users load the widget.
 
 The tags in the template can have these special attributes, in addition to typical attributes like class:
 
