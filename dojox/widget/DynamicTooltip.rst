@@ -7,7 +7,7 @@ dojox.widget.DynamicTooltip
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

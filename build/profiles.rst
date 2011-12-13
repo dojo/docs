@@ -7,7 +7,7 @@ Build profiles
 :Status: Draft
 :Version: 1.0
 :Project owner: (docs) Scott Jenkins
-:Available: 1.0
+:since: 1.0
 
 .. contents::
    :depth: 3

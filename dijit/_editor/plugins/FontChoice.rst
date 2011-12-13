@@ -8,7 +8,7 @@ dijit._editor.plugins.FontChoice
 :Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Bill Keese, Jared Jurkiewicz
-:Available: since V1.1
+:since: V1.1
 
 .. contents::
     :depth: 2

@@ -6,7 +6,7 @@ dojox.mobile.ScrollableView
 
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
-:Available: since V1.6
+:since: V1.6
 
 .. contents::
     :depth: 2

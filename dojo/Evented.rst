@@ -6,7 +6,7 @@ dojo/on
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: 1.7.0
+:since: 1.7.0
 
 .. contents::
   :depth: 2

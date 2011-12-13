@@ -7,7 +7,7 @@ dojox.embed
 :Status: Draft
 :Version: 1.0
 :Author: Tom Trenka, Mike Wilcox, Chris Barber, Alex Russell
-:Available: 1.2+
+:since: 1.2+
 
 The DojoX Embed project is aimed at enabling the use of various plug-ins within the browser
 (such as Flash, Quicktime, and Java applets) in a way that is consistent with the Dojo API

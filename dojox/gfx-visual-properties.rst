@@ -7,7 +7,7 @@ Shape properties
 :Status: Draft
 :Version: 1.3
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
-:Available: since 0.4
+:since: 0.4
 
 .. contents::
   :depth: 3

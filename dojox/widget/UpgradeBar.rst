@@ -6,7 +6,7 @@ dojox.widget.UpgradeBar
 
 :Project owner: Mike Wilcox, Revin Guillen
 :Author: Mike Wilcox
-:Available: since 1.4
+:since: 1.4
 
 Basic Description
 =================

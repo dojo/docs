@@ -6,7 +6,7 @@ dojox.app
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.7
+:since: V1.7
 
 
 Implements application framework using dojox.mvc for web application on desktop/mobile platforms.

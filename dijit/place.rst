@@ -6,7 +6,7 @@ dijit.place
 
 :Version: 1.7
 :Project owner: Bill Keese
-:Available: since V1.7
+:since: V1.7
 
 .. contents::
    :depth: 2

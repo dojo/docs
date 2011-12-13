@@ -6,7 +6,7 @@ dojox.editor.plugins.Breadcrumb
 
 :Authors: Jared Jurkiewicz
 :Project owner: Jared Jurkiewicz
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
     :depth: 2

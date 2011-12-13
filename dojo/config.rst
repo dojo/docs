@@ -4,7 +4,7 @@
 dojo.config (dojo/_base/config)
 ===============================
 
-:Available: since V0.4
+:since: V0.4
 
 .. contents::
    :depth: 2

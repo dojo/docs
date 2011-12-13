@@ -5,7 +5,7 @@ dojo.requireLocalization
 ========================
 
 :Project owner: Adam Peller
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
    :depth: 2

@@ -7,7 +7,7 @@ dojox.atom.io.model.Generator
 :Status: Draft
 :Version: 1.0
 :Project owner: Benjamin Schell
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

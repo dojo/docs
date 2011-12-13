@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.DnD
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 DnD plugin supports drag-and-drop of grid rows/column/cells.
 

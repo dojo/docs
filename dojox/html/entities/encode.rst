@@ -7,7 +7,7 @@ dojox.html.entities.encode
 :Status: Contributed, Draft
 :Version: 1.4
 :Author: Jared Jurkiewicz
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
   :depth: 2

@@ -5,7 +5,7 @@ dojox.form.MultiComboBox
 ========================
 
 :Status: Draft
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 2

@@ -7,7 +7,7 @@ dojox.form.CheckedMultiSelect
 :Status: Draft
 :Version: 1.2
 :Project owner: Nathan Toone
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

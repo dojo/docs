@@ -7,7 +7,7 @@ dojox.gauges.GlossySemiCircularGauge
 :Status: Draft
 :Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
-:Available: since V1.7
+:since: V1.7
 
 .. contents::
    :depth: 2

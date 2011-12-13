@@ -6,7 +6,7 @@ dojox.widget.rotator.ThumbnailController
 
 :Authors: Chris Barber
 :Project owner: Chris Barber
-:Available: since V1.4.1
+:since: V1.4.1
 
 .. contents::
    :depth: 2

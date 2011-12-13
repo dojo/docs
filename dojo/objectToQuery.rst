@@ -4,7 +4,7 @@
 dojo.objectToQuery
 ==================
 
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
    :depth: 2

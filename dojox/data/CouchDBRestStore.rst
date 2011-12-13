@@ -8,7 +8,7 @@ dojox.data.CouchDBRestStore
 :Version: 1.0
 :Project owner: Kris Zyp
 :Authors: Kris Zyp, Marcus Reimann
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
     :depth: 3

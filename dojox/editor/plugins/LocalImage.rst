@@ -6,7 +6,7 @@ dojox.editor.plugins.LocalImage (Under Construction)
 
 :Authors: He Gu Yi
 :Project owner: Jared Jurkiewicz
-:Available: since V1.6
+:since: V1.6
 
 .. contents::
     :depth: 2

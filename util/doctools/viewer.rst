@@ -7,7 +7,7 @@ Viewing the Generated API Docs
 :Status: Draft
 :Version: 1.0
 :Project owner: Tom Trenka, Sam Foster
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

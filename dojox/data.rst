@@ -6,7 +6,7 @@ dojox.data
 
 :Project owners: Frank Fortson, Russell Jones, Jared Jurkiewicz, Wolfram Kriesing, Dustin Machi, Shane O'Sullivan, Benjamin Schell, Kurt Stutsman, Kris Zyp
 :Authors: Wolfram Kriesing, Nikolia Onken, Marcus Reimann
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
    :depth: 2

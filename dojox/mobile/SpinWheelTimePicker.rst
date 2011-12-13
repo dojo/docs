@@ -6,7 +6,7 @@ dojox.mobile.SpinWheelTimePicker
 
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
-:Available: since V1.7
+:since: V1.7
 
 .. contents::
     :depth: 2

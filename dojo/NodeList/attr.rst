@@ -4,7 +4,7 @@
 dojo.NodeList.attr
 ==================
 
-:Available: since V1.2
+:since: V1.2
 :Removed: in V1.7
 
 .. contents::

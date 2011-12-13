@@ -7,7 +7,7 @@ dojox.data.HtmlStore
 :Status: Contributed, Draft
 :Version: 1.0
 :Project owner: Jared Jurkiewicz
-:Available: since V1.1
+:since: V1.1
 
 .. contents::
   :depth: 2

@@ -6,7 +6,7 @@ dojox.app.model
 
 :Status: Draft
 :Version: 1.0
-:Available: since V1.7
+:since: V1.7
 
 
 dojox.app.model creates statefulModel data objects using JSON data or dojo data store. The data model can be bound to a dojox.mvc widget by dojox.app.bind.

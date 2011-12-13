@@ -8,7 +8,7 @@ dojox.date.buddhist
 :Version: 1.0
 :Project owner: 
 :Contributors: Aphichit Hanbanchong and Nattapong Sirilappanich
-:Available: since V1.4
+:since: V1.4
 
 .. contents ::
   :depth: 2

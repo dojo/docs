@@ -5,7 +5,7 @@ dijit.TooltipDialog
 ===================
 
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

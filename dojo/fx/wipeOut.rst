@@ -8,7 +8,7 @@ dojo.fx.wipeOut
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

@@ -7,7 +7,7 @@ dojox.io.xhrPlugins
 :Status: Draft
 :Version: 1.0
 :Project owner: Kris Zyp
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
    :depth: 2

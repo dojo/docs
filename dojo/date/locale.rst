@@ -6,7 +6,7 @@ dojo.date.locale
 
 :Version: 1.2
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
   :depth: 3

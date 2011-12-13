@@ -6,7 +6,7 @@ dojo.windowUnloaded
 
 :Status: Draft
 :Version: 1.2.3
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

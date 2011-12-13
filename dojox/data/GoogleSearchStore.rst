@@ -7,7 +7,7 @@ dojox.data.GoogleSearchStore
 :Status: Contributed, Draft
 :Version: 1.4
 :Author: Shane O'Sullivan
-:Available: since V1.2
+:since: V1.2
 
 .. contents::
   :depth: 3

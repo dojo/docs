@@ -6,7 +6,7 @@ dojox.gfx
 
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 :Project owner: Eugene Lazutkin
-:Available: since 1.0
+:since: 1.0
 
 .. contents::
    :depth: 2

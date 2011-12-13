@@ -6,7 +6,7 @@ dojo.disconnect
 
 :Status: Draft
 :Version: 1.0
-:Available: 0.9
+:since: 0.9
 
 .. contents::
    :depth: 2

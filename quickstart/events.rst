@@ -5,7 +5,7 @@ JavaScript events and Dojo
 ==========================
 
 :Authors: Matt Bowen, Peter Higgins, Bill Keese, Nikolai Onken
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

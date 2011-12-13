@@ -6,7 +6,7 @@ dojox.form.uploader.FileList
 
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.6
+:since: 1.6
 
 .. contents::
   :depth: 3

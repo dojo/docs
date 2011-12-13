@@ -7,7 +7,7 @@ Encoding considerations
 :Status: Draft
 :Version: 1.0
 :Authors: Adam Peller
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

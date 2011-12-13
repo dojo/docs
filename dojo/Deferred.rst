@@ -6,7 +6,7 @@ dojo.Deferred
 
 :Status: Draft
 :Version: 1.2
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

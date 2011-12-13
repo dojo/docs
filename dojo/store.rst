@@ -6,7 +6,7 @@ dojo.store
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: 1.6.0
+:since: 1.6.0
 
 .. contents::
   :depth: 2

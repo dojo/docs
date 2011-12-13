@@ -6,7 +6,7 @@ dojox.widget.rotator.Fade
 
 :Authors: Chris Barber
 :Project owner: Chris Barber
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

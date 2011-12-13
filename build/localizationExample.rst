@@ -5,7 +5,7 @@ Localized Build Example
 =======================
 
 :Authors: Nick Fenwick
-:Available: since as long as I can remember
+:since: as long as I can remember
 
 .. contents::
    :depth: 3

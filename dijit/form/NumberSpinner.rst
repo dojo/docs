@@ -6,7 +6,7 @@ dijit.form.NumberSpinner
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Craig Riecke
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

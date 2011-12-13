@@ -7,7 +7,7 @@ dojox.lang
 :Status: In-process
 :Version: 1.0
 :Project owner: Eugene Lazutkin, Kris Zyp
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 2

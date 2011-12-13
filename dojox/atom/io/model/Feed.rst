@@ -5,7 +5,7 @@ dojox.atom.io.model.Feed
 ========================
 
 :Project owner: Benjamin Schell
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

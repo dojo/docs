@@ -6,7 +6,7 @@ dijit.form.MultiSelect
 
 :Authors: Doug Hays, Steve Peart
 :Developers: Doug Hays, Peter Higgins, Bill Keese, Nathan Toone
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

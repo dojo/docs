@@ -8,7 +8,7 @@ dojox.charting.DataChart
 :Version: 1.3
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.3
+:since: 1.3
 
 Basic Description
 -----------------

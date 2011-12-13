@@ -6,7 +6,7 @@ dijit.layout
 
 :Authors: Bill Keese, Nikolai Onken
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

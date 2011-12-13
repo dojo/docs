@@ -8,7 +8,7 @@ Functions used Everywhere
 :Version: 1.0
 :Authors: Carla, Peter Higgins, Shane O'Sullivan, Marcus Reimann, Craig Riecke, Alex Russell
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

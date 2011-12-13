@@ -6,7 +6,7 @@ dijit.form.ToggleButton
 
 :Authors: Doug Hays
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

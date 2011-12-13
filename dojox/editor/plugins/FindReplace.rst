@@ -6,7 +6,7 @@ dojox.editor.plugins.FindReplace
 
 :Authors: Jared Jurkiewicz, He Gu Yi
 :Project owner: Jared Jurkiewicz
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
     :depth: 2

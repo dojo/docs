@@ -8,7 +8,7 @@ dojox.geo.charting.Map
 :Version: Experimental
 :Project owner: Dean Williams
 :Author: Qi Ruan
-:Available: since V.1.5
+:since: V.1.5
 
 .. contents::
    :depth: 2

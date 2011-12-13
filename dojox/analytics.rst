@@ -5,7 +5,7 @@ dojox.analytics
 ===============
 
 :Project owner: Dustin Machi
-:Available: since 1.1
+:since: 1.1
 
 .. contents::
    :depth: 2

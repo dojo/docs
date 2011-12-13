@@ -6,7 +6,7 @@ dojox.editor.plugins.PrettyPrint
 
 :Project owner: Jared Jurkiewicz
 :Authors: Jared Jurkiewicz
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
     :depth: 2

@@ -8,7 +8,7 @@ dojox.grid.LazyTreeGrid
 :Version: 1.0
 :Authors: Wang Qiang
 :Project owner: Evan Huang
-:Available: since V1.6
+:since: V1.6
 
 .. contents::
    :depth: 2

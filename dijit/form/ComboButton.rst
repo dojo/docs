@@ -6,7 +6,7 @@ dijit.form.ComboButton
 
 :Authors: Becky Gibson, Bill Keese
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

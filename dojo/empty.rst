@@ -5,7 +5,7 @@ dojo.empty
 ==========
 
 :Project owner: Peter Higgins
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
    :depth: 2

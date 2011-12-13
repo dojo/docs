@@ -6,7 +6,7 @@ dijit/_HasDropDown
 
 :Author: Colin Snover
 :Project owner: Bill Keese
-:Available: since 1.4
+:since: 1.4
 :Version: 1.7
 
 .. contents::

@@ -6,7 +6,7 @@ dojo.store.Observable
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: since V1.6
+:since: V1.6
 
 .. contents::
     :depth: 3

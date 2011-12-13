@@ -8,7 +8,7 @@ dojox.Drawing
 :Version: 1.4
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.4
+:since: 1.4
 
 Basic Description
 -----------------

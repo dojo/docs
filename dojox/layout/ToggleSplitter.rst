@@ -7,7 +7,7 @@ dojox.layout.ToggleSplitter
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

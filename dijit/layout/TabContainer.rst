@@ -6,7 +6,7 @@ dijit.layout.TabContainer
 
 :Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
-:Available: since V?
+:since: V?
 :jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.layout.TabContainer
 
 .. contents::

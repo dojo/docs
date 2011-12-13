@@ -7,7 +7,7 @@ dojox.color
 :Status: Draft
 :Version: 1.0
 :Project owner: Tom Trenka, Cal Henderson
-:Available: 1.0+
+:since: 1.0+
 
 The DojoX Color project both adds functionality to dojo.color and includes a pair of modules for
 generating color palettes (``dojox.color.Palette``) as well as advanced colorspace functions

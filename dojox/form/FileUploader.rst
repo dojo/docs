@@ -6,7 +6,7 @@ dojox.form.FileUploader
 
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
-:Available: since 1.1
+:since: 1.1
 
 .. contents::
   :depth: 3

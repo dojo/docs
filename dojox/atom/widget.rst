@@ -5,7 +5,7 @@ dojox.atom.widget
 =================
 
 :Project owner: Jared Jurkiewicz, Benjamin Schell
-:Available: since V1.3
+:since: V1.3
 
 .. contents::
    :depth: 2

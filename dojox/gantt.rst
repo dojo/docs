@@ -4,7 +4,7 @@
 dojox.gantt
 ===========
 
-:Available: since V1.6
+:since: V1.6
 
 ``dojox.gantt`` gives the capability of project management.
 

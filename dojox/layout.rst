@@ -7,7 +7,7 @@ dojox.layout
 :Status: Draft
 :Version: 1.0
 :Project owner: Adam Peller, Fredrik Johansson, Peter Higgins, Juff Cunat, Chris Barber, Shane O'Sullivan
-:Available: since V?
+:since: V?
 
 The Layout project provides experimental and additional extensions to :ref:`Dijit Layout <dijit/layout>` Widgets.
 

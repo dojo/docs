@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.NestedSorting
 
 :Authors: Evan Huang
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 .. contents::
    :depth: 2

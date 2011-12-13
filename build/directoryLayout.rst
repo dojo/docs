@@ -7,7 +7,7 @@ Sample Directory Layout for Builds
 :Status: Draft
 :Version: 1.0
 :Project owner: (docs) Scott A Jenkins
-:Available: since 1.0
+:since: 1.0
 
 .. contents::
    :depth: 2

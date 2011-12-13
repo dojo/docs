@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.Filter
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 Filter plugin provides row filtering functionality for grid.
 

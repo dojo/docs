@@ -5,7 +5,7 @@ dojo.contentHandlers
 ====================
 
 :Project owner: Peter Higgins
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

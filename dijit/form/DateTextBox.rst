@@ -6,7 +6,7 @@ dijit.form.DateTextBox
 
 :Authors: Becky Gibson, Doug Hays, Craig Riecke, Adam Peller
 :Developers: Doug Hays, Bill Keese
-:Available: since V0.9
+:since: V0.9
 
 .. contents::
     :depth: 2

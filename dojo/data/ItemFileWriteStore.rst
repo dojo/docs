@@ -7,7 +7,7 @@ dojo.data.ItemFileWriteStore
 :Status: Contributed, Draft
 :Version: 1.2
 :Author: Jared Jurkiewicz
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
   :depth: 2

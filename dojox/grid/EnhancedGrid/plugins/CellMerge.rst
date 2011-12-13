@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.CellMerge
 
 :Authors: Oliver Zhu
 :Project owner: Evan Huang
-:Available: since V.1.6
+:since: V.1.6
 
 CellMerge plugin provides functions to merge cells within a row.
 

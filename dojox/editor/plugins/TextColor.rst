@@ -8,7 +8,7 @@ dojox.editor.plugins.TextColor
 :Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewicz
-:Available: since V1.5
+:since: V1.5
 
 .. contents::
     :depth: 2

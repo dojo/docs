@@ -6,7 +6,7 @@ dijit.form.ValidationTextBox
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
 :Project owners: Doug Hays, Bill Keese
-:Available: since V1.0
+:since: V1.0
 
 .. contents::
     :depth: 2

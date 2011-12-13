@@ -7,7 +7,7 @@ dojox.date.islamic
 :Status: Draft
 :Version: 1.0
 :Contributor: Hossam Katory
-:Available: since V1.4
+:since: V1.4
 
 .. contents::
    :depth: 2

@@ -8,7 +8,7 @@ dojo._base.connect
 :Version: 1.0
 :Authors: Marcus Reimann
 :Developers: ?-
-:Available: since V?
+:since: V?
 
 .. contents::
     :depth: 2

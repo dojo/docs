@@ -7,7 +7,7 @@ dojox.color.Palette
 :Status: Draft
 :Version: 1.0
 :Author: Tom Trenka
-:Available: Dojo Toolkit 1.1+
+:since: Dojo Toolkit 1.1+
 
 The Palette is a constructor that allows to create a 5-color palette either from a
 single base color and a color theory, or a set of passed colors.  In addition to

@@ -7,7 +7,7 @@ dojox.av
 :Status: Draft
 :Version: 1.0
 :Project owner: Mike Wilcox, Tom Trenka
-:Available: since 1.2
+:since: 1.2
 
 .. contents::
    :depth: 2

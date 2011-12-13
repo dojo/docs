@@ -8,7 +8,7 @@ dojox.form.RangeSlider
 :Version: 1.0
 :Authors: ?--
 :Project owner: ?--
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2

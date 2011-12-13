@@ -7,7 +7,7 @@ dojox.math
 :Status: Draft
 :Version: 1.0
 :Project owner: Tom Trenka
-:Available: since V?
+:since: V?
 
 .. contents::
    :depth: 2
