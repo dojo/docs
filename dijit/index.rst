@@ -12,10 +12,20 @@ Dijit requires Dojo Core.
 Each of the widgets and functionality provided by Dijit are described in the following sections,
 though the aforementioned :ref:`quickstart <quickstart/index>` guides cover some basics.
 
+General Information
+===================
 * :ref:`About Dijit <dijit/info>`
+* :ref:`Themes and Theming <dijit/themes>`
+* :ref:`a11y  <dijit/a11y/index>`
+	* :ref:`a11y Strategy <dijit/a11y/strategy>`
+	* :ref:`a11y Resources <dijit/a11y/resources>`
+	* :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
+	* :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
+	* :ref:`a11y Requirements <developer/a11y-requirements>`
+	* :ref:`a11y Statement <dijit/a11y/statement>`
 
-Utilities
-=========
+Utility Classes
+===============
 
 Utility methods and classes used by widgets or by applications with widgets.
 
@@ -26,31 +36,37 @@ Utility methods and classes used by widgets or by applications with widgets.
 * :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
 * :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
 
-
-Widgets
-=======
-
-* :ref:`dijit._Templated <dijit/_Templated>`
-
-  This is deprecated as of **1.7+**, :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` should be used instead and if 
-  necessary :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
-
-* :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`
+Infrastructure Widgets
+======================
+* :ref:`dijit._WidgetBase <dijit/_WidgetBase>` (and also deprecated :ref:`dijit._Widget <dijit/_Widget>`)
+* :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` (and also deprecated :ref:`dijit._Templated <dijit/_Templated>`)
 * :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
-* :ref:`dijit._Widget <dijit/_Widget>`
-
-  * :ref:`a11y  <dijit/a11y/index>`
-
-    * :ref:`a11y Strategy <dijit/a11y/strategy>`
-    * :ref:`a11y Resources <dijit/a11y/resources>`
-    * :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
-    * :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
-    * :ref:`a11y Requirements <developer/a11y-requirements>`
-    * :ref:`a11y Statement <dijit/a11y/statement>`
-
-  * :ref:`Themes and Theming <dijit/themes>`
-
 * :ref:`dijit._CssStateMixin <dijit/_CssStateMixin>`
+* :ref:`dijit._FocusMixin <dijit/_FocusMixin>`
+* :ref:`dijit._HasDropDown <dijit/_HasDropDown>`
+* :ref:`dijit._OnDijitClickMixin <dijit/_OnDijitClickMixin>`
+
+Menu Widgets
+============
+These are the main Menu widgets:
+
+* :ref:`dijit.DropDownMenu <dijit/DropDownMenu>`
+* :ref:`dijit.Menu <dijit/Menu>`
+* :ref:`dijit.MenuBar <dijit/MenuBar>`
+
+There are also supporting widgets such as :ref:`dijit.MenuItem <dijit/MenuItem>` which are discussed
+on the pages above.
+
+Tree Widgets
+============
+* :ref:`dijit.Tree <dijit/Tree>`
+
+  * :ref:`Model <dijit/tree/Model>`
+  * :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>`
+  * :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
+
+Miscellaneous Widgets
+=====================
 * :ref:`dijit.Calendar <dijit/Calendar>`
 * :ref:`dijit.CalendarLite <dijit/CalendarLite>`
 
@@ -62,18 +78,11 @@ Widgets
 * :ref:`dijit.Dialog <dijit/Dialog>`
 * :ref:`dijit.Editor <dijit/Editor>`
 * :ref:`dijit.InlineEditBox <dijit/InlineEditBox>`
-* :ref:`dijit.Menu <dijit/Menu>`
-* :ref:`dijit.MenuBar <dijit/MenuBar>`
 * :ref:`dijit.ProgressBar <dijit/ProgressBar>`
 * :ref:`dijit.TitlePane <dijit/TitlePane>`
 * :ref:`dijit.Toolbar <dijit/Toolbar>`
 * :ref:`dijit.Tooltip <dijit/Tooltip>`
 * :ref:`dijit.TooltipDialog <dijit/TooltipDialog>`
-* :ref:`dijit.Tree <dijit/Tree>`
-
-  * :ref:`Model <dijit/tree/Model>`
-  * :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>`
-  * :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
 
 
 Form Handling
