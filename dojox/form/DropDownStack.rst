@@ -4,8 +4,6 @@
 dojox.form.DropDownStack
 ========================
 
-:Status: Draft
-:Version: 1.2
 :Project owner: Nathan Toone
 :since: V1.2
 

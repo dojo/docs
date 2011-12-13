@@ -4,8 +4,6 @@
 dojox.uuid
 ==========
 
-:Status: Draft
-:Version: beta
 :Authors: Brian Douglas Skinner
 
 DojoX UUID is the port of the original Dojo 0.4.x UUID classes.  The UUID

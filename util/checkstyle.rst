@@ -4,8 +4,6 @@
 util.checkstyle
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Shane O'Sullivan
 :since: V1.4
 

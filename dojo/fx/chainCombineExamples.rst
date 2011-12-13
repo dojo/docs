@@ -4,7 +4,6 @@
 dojo.fx.chain / dojo.fx.combine Examples
 ========================================
 
-:Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 
 

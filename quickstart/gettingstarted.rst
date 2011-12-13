@@ -4,8 +4,6 @@
 Getting started with some simple steps
 ======================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Alex Russell
 
 .. contents::

@@ -4,8 +4,6 @@
 dojox.grid.TreeGrid
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Nathan Toone
 :since: V1.4
 

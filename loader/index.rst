@@ -4,7 +4,6 @@
 The Dojo Loader
 ===============
 
-:Version: 1.7.0
 :Author: Rawld Gill
 
 

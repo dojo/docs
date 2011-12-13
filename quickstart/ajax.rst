@@ -4,8 +4,6 @@
 AJAX and Dojo
 =============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Nikolai Onken, Craig Riecke
 
 .. contents::

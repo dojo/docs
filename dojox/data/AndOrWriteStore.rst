@@ -4,8 +4,6 @@
 dojox.data.AndOrWriteStore
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Author: Frank Fortson
 :Since: 1.2
 

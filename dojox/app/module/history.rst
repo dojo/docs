@@ -4,8 +4,6 @@
 dojox.app.module.history
 ============================
 
-:Status: Draft
-:Version: 1.0
 :since: V1.7
 
 dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.

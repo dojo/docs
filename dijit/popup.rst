@@ -4,7 +4,6 @@
 dijit.popup
 ===========
 
-:Version: 1.7
 :Project owner: Bill Keese
 :since: V?
 

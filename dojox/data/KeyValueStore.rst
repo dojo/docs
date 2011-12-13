@@ -4,8 +4,6 @@
 dojox.data.KeyValueStore
 ========================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :since: V1.1
 
 .. contents::

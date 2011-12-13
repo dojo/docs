@@ -4,8 +4,6 @@
 dojox.encoding.digests
 ======================
 
-:Status: Draft
-:Version: 1.0+
 :Author: Tom Trenka
 
 .. contents::

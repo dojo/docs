@@ -4,8 +4,6 @@
 ShrinkSafe
 ==========
 
-:Status: Draft
-:Version: 2.0
 :Project owner: Alex Russell
 :since: V0.4
 

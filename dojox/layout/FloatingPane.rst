@@ -4,8 +4,6 @@
 dojox.layout.FloatingPane
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Peter Higgins
 :since: V?
 

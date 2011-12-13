@@ -4,8 +4,6 @@
 dojox.mobile.app
 ================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Sébastien Le Ray
 :Developers: multiple developers
 :since: V1.5

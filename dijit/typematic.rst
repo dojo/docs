@@ -4,7 +4,6 @@
 dijit.typematic
 ===============
 
-:Version: 1.7
 :Project owner: Doug Hays
 :since: V1.7
 

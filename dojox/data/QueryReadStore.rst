@@ -4,8 +4,6 @@
 dojox.data.QueryReadStore
 ==========================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Wolfram Kriesing
 :since: V1.0
 

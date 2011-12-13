@@ -4,8 +4,6 @@
 dojox.encoding.base64
 =====================
 
-:Status: Draft
-:Version: Dojo Toolkit 1.0+
 :Author: Tom Trenka
 
 The base64 encoder is a simple mechanism to translate strings encoded using the base 64 specification

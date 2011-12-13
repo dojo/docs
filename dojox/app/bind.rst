@@ -4,8 +4,6 @@
 dojox.app.bind
 ==============
 
-:Status: Draft
-:Version: 1.0
 :since: V1.7
 
 dojox.app.bind provides a function to query dojox.mvc widgets, get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. data-dojo-type, data-dojo-type, ref and data-dojo-props are compatible in a view.

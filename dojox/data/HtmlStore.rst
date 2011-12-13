@@ -4,8 +4,6 @@
 dojox.data.HtmlStore
 =========================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Project owner: Jared Jurkiewicz
 :since: V1.1
 

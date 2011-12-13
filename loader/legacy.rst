@@ -4,8 +4,6 @@
 The Dojo Loader Legacy Modes
 ============================
 
-:Status: Draft
-:Version: 1.7.0
 :Author: Rawld Gill
 
 .. contents::

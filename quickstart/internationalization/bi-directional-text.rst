@@ -4,9 +4,7 @@
 Bi-directional Text (Bi-Di)
 ===========================
 
-:Status: Draft
-:Version: 1.0
-:Authorsr: Adam Peller
+:Authors: Adam Peller
 :since: V?
 
 .. contents::

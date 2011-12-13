@@ -4,8 +4,6 @@
 dojox.fx.Timeline
 =================
 
-:Status: Up to date
-:Version: 1.5
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :since: 1.5

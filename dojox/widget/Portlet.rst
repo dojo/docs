@@ -4,8 +4,6 @@
 dojox.widget.Portlet
 ====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Shane O'Sullivan
 :since: 1.3.2
 

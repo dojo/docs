@@ -4,8 +4,6 @@
 dojox.form.RangeSlider
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: ?--
 :Project owner: ?--
 :since: V?

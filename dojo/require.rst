@@ -4,8 +4,6 @@
 dojo.require
 ============
 
-:Status: Draft
-:Version: 1.0
 :since: V?
 
 .. contents::

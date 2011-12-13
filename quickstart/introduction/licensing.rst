@@ -4,8 +4,6 @@
 Dojo licensing
 ==============
 
-:Status: Draft
-:Version: 1.2
 
 **You may use Dojo in commercial software without obtaining a separate license or incurring other obligations.**
 

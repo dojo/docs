@@ -4,8 +4,6 @@
 dijit._editor.plugins.TextColor
 ===============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Bill Keese, Jared Jurkiewicz
 :since: V1.1

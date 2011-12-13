@@ -4,8 +4,6 @@
 dojox.data.jsonPathStore
 ========================
 
-:Status: Contributed, Draft
-:Version: 1.2
 :Authors: Dustin Machi
 :Developers: Dustin Machi
 :since: V1.0 to 1.3, Removed in 1.4

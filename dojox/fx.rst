@@ -4,7 +4,6 @@
 dojox.fx
 ========
 
-:Version: experimental
 :Authors: Peter Higgins, Jonathan Bond-Caron, Shane O'Sullivan, Bryan Forbes
 
 .. contents::

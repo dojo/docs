@@ -4,8 +4,6 @@
 dojox.presentation
 ==================
 
-:Status: Draft
-:Version: beta
 :Authors: Pete Higgins
 
 This is the presentation base class. It provides a mechanism for various

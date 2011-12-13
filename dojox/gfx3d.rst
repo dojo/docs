@@ -4,8 +4,6 @@
 dojox.gfx3d
 ===========
 
-:Status: In-process
-:Version: 1.0
 :Project owner: Eugene Lazutkin
 :Author: Kun Xi, Eugene Lazutkin
 :since: 1.1

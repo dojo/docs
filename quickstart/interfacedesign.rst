@@ -4,8 +4,6 @@
 UI Development with the Dojo Toolkit
 ====================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Nikolai Onken
 
 .. contents::

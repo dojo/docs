@@ -4,8 +4,6 @@
 Globalization Guidelines: Encoding
 ==================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: ?--
 :since: V?
 

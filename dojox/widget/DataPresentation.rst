@@ -4,8 +4,6 @@
 dojox.widget.DataPresentation
 =============================
 
-:Status: Draft
-:Version: Experimental
 :Project owner: Dean Williams
 :Author: Dave Clark
 :since: V.1.4

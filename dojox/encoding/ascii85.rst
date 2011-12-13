@@ -4,8 +4,6 @@
 dojox.encoding.ascii85
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V?
 

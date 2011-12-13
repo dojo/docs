@@ -4,8 +4,6 @@
 dojo.date.locale.addCustomFormats
 =================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V?
 

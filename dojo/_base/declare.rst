@@ -4,8 +4,6 @@
 dojo._base.declare
 ==================
 
-:Status: Draft
-:Version: 1.2
 :since: V?
 
 .. contents::

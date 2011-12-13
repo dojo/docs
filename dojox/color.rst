@@ -4,8 +4,6 @@
 dojox.color
 ===========
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Tom Trenka, Cal Henderson
 :since: 1.0+
 

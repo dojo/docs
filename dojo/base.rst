@@ -4,8 +4,6 @@
 dojo._base
 ==========
 
-:Status: Contributed, Draft
-:Version: 1.0
 
 dojo._base is a roll-up file, and is used to create the core dojo.js after a build. You should never directly dojo.require("dojo._base") as all the functionality is provided by simply including dojo.js on a page.
 

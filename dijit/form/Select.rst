@@ -4,8 +4,6 @@
 dijit.form.Select
 =================
 
-:Status: Draft
-:Version: 1.4
 :Project owner: Nathan Toone
 :Authors: Nathan Toone, Doug Hays
 :since: V1.4

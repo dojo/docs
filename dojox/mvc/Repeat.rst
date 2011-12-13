@@ -4,8 +4,6 @@
 dojox.mvc.Repeat
 =================
 
-:Status: Draft
-:Version: 0.1
 :Authors: Rahul Akolkar, Ed Chatelain
 :Developers: Rahul Akolkar, Ed Chatelain
 :since: V1.7

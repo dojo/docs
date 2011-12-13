@@ -4,8 +4,6 @@
 dojox.widget.AnalogGauge
 ========================
 
-:Status: Draft
-:Version: 1.2
 :Project owner: Benjamin Schell
 :since: V1.3
 

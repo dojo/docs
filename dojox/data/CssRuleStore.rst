@@ -4,8 +4,6 @@
 dojox.data.CssRuleStore
 =======================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :since: V1.2
 
 .. contents::

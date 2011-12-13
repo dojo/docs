@@ -4,8 +4,6 @@
 dojox.form.BusyButton
 =====================
 
-:Status: Draft
-:Version: Beta
 :Project owner: Nikolai Onken
 :since: V?
 

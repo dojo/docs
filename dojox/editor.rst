@@ -4,8 +4,6 @@
 dojox.editor
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Mike Wilcox, Jared Jurkiewicz
 :since: V1.1
 

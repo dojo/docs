@@ -4,8 +4,6 @@
 dojo.coords
 ===========
 
-:Status: Draft
-:Version: 1.0
 :since: 1.0
 :Deprecated: since 1.4
 

@@ -4,8 +4,6 @@
 dijit.form.DataList
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Doug Hays
 :Developers: Doug Hays
 :since: V1.7

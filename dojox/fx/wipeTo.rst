@@ -7,8 +7,6 @@ dojo.fx.wipeIn
 .. contents::
     :depth: 3
 
-:Status: Draft
-:Version: 1.2
 
 Dojox.fx.wipeTo lets you wipe the size of a node to a defined size.
 

@@ -7,8 +7,6 @@ dijit.MenuBarItem
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.3
 :Authors: Bill Keese
 
 This is an item in a Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.

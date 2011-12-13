@@ -4,8 +4,6 @@
 dojox.layout.ExpandoPane
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: ?--
 :Project owner: ?--
 :since: V?

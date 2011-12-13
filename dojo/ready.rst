@@ -4,7 +4,6 @@
 dojo.ready
 ==========
 
-:Version: 1.4
 
 dojo.ready() registers a function to run when the Dom is ready *and* all outstanding require() and dojo.require() calls have resolved.
 

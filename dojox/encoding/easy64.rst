@@ -4,8 +4,6 @@
 dojox.encoding.easy64
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V?
 

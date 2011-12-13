@@ -4,7 +4,6 @@
 Quick Reference for Optimization Build Program
 ==============================================
 
-:Version: 1.7
 :Author: Rawld Gill
 
 Reference Documentation

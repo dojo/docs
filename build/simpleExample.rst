@@ -4,8 +4,6 @@
 Simple Buildsystem Examples
 ===========================
 
-:Status: Draft
-:Version: 1.4
 :Project owner: James Burke
 :since: 1.0
 

@@ -4,8 +4,6 @@
 dojox.robot.recorder
 ====================
 
-:Status: Contributed
-:Version: 1.2
 :Author: haysmark
 
 .. contents::

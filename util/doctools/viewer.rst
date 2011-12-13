@@ -4,8 +4,6 @@
 Viewing the Generated API Docs
 ===============================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Tom Trenka, Sam Foster
 :since: V1.4
 

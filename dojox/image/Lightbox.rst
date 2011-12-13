@@ -4,8 +4,6 @@
 dojox.image.Lightbox
 ====================
 
-:Status: Draft
-:Version: 1.4
 :Project owner: Peter Higgins
 :since: V1.1
 

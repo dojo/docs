@@ -4,8 +4,6 @@
 dojox.widget.DynamicTooltip
 ===========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V1.4
 

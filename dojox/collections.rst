@@ -4,8 +4,6 @@
 dojox.collections
 =================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Tom Trenka
 :since: V?
 

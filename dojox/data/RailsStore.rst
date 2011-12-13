@@ -4,8 +4,6 @@
 dojox.data.RailsStore
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Kris Zyp, Travis Tilley
 :since: 1.3
 

@@ -4,8 +4,6 @@
 dojo.number
 ===========
 
-:Status: Draft
-:Version: 1.2
 
 .. contents::
   :depth: 2

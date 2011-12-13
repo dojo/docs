@@ -4,8 +4,6 @@
 dojox.av.widget
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Mike Wilcox
 :since: 1.2
 

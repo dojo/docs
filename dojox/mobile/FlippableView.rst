@@ -4,8 +4,6 @@
 dojox.mobile.FlippableView
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :since: V1.6

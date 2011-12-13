@@ -4,8 +4,6 @@
 dojox.io
 ========
 
-:Status: Draft
-:Version: 1.0
 :Developers: Bryan Forbes, Kris Zyp, James Burke, Tom Trenka
 :since: V?
 

@@ -4,8 +4,6 @@
 The Dojo Build System
 =====================
 
-:Status: Draft
-:Version: 1.7+
 :Author: Rawld Gill
 
 .. contents::

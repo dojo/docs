@@ -4,8 +4,6 @@
 dojox.string.Builder
 =====================
 
-:Status: Draft
-:Version: Dojo Toolkit 1.0+
 :Author: Tom Trenka
 
 The DojoX String Builder is a constructor designed to make working with large strings, particularly in the context of recursive functions, much more efficient and performant.  The basic idea (borrowed primarily from the .NET Framework and heavily optimized) is that you can pass around a single Builder object (since objects are passed by reference and not by value) to various functions, and have each function *append* string fragments to the Builder; when you are finished, you can simply add the Builder to an existing string or explicitly call the toString method.

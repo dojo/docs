@@ -4,8 +4,6 @@
 dojox.image
 ===========
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Peter Higgins
 :since: V1.2
 

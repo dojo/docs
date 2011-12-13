@@ -4,8 +4,6 @@
 dojox.geo.openlayers
 ====================
 
-:Status: Draft
-:Version: Experimental
 :Project owner: Chris Mitchell
 :Author: Marc Durocher
 :since: V.1.7

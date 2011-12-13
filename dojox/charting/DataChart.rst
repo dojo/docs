@@ -4,8 +4,6 @@
 dojox.charting.DataChart
 =========================
 
-:Status: alpha
-:Version: 1.3
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :since: 1.3

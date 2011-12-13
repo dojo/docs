@@ -4,8 +4,6 @@
 dojox.layout.DragPane
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V?
 

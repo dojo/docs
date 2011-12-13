@@ -4,8 +4,6 @@
 dojox.wire
 ==========
 
-:Status: Draft
-:Version: beta
 :Authors: Jared Jurkiewicz
 
 The DojoX Wire project is a set of functions that build a generic data binding

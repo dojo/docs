@@ -4,8 +4,6 @@
 dojo._Url
 =============
 
-:Status: Contributed, Draft
-:Version: 1.2
 
 FIXME
 

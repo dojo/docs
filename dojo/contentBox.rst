@@ -4,8 +4,6 @@
 dojo.contentBox
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: 1.0
 

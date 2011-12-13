@@ -4,8 +4,6 @@
 dojox.widget.Rating
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Wolfram Kriesing
 :Developers: Wolfram Kriesing
 :since: V1.2

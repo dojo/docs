@@ -7,8 +7,6 @@ dijit.CheckedMenuItem
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.2
 :Authors:
 
 The CheckedMenuItem is a checkbox-like menu item for toggling on/off.

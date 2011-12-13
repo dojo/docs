@@ -4,8 +4,6 @@
 dojo._base.json
 ===============
 
-:Status: Draft
-:Version: 1.0
 :since: V?
 
 .. contents::

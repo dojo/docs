@@ -4,8 +4,6 @@
 dojo.windowUnloaded
 ===================
 
-:Status: Draft
-:Version: 1.2.3
 :since: V?
 
 .. contents::

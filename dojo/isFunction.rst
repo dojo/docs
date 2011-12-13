@@ -4,8 +4,6 @@
 dojo.isFunction
 ===============
 
-:Status: Draft
-:Version: 1.0
 :since: V0.9
 
 .. contents::

@@ -4,8 +4,6 @@
 Cultural conventions: Date, Number and Currency
 ===============================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Adam Peller
 :since: V?
 

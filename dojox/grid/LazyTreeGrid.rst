@@ -4,8 +4,6 @@
 dojox.grid.LazyTreeGrid
 =======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Wang Qiang
 :Project owner: Evan Huang
 :since: V1.6

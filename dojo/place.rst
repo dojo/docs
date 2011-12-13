@@ -4,8 +4,6 @@
 dojo.place
 ==========
 
-:Status: Draft
-:Version: 1.0
 :since: 1.2
 
 .. contents::

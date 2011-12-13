@@ -4,8 +4,6 @@
 Globalization Guidelines: Locale and Resource Bundle
 ====================================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: ?--
 :since: V?
 
