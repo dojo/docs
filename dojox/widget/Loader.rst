@@ -4,8 +4,6 @@
 dojox.widget.Loader
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: 0.9
 

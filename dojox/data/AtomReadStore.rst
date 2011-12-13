@@ -4,8 +4,6 @@
 dojox.data.AtomReadStore
 ==========================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Shane O'Sullivan
 :since: V1.2
 

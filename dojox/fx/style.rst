@@ -4,8 +4,6 @@
 dojox.fx.style
 ==============
 
-:Status: Draft
-:Version: 1.4
 :Project owner: Peter Higgins
 :since: v1.2
 

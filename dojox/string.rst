@@ -4,8 +4,6 @@
 dojox.string
 ============
 
-:Status: Draft
-:Version: beta
 :Authors: Ben Lowery, Tom Trenka, Neil Roberts
 
 The DojoX String utilities project is a placeholder for miscellaneous string

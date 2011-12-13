@@ -4,7 +4,6 @@
 Quick Reference of all Profile Properties for Optimization Build Program
 ========================================================================
 
-:Version: 1.7
 :Author: Rawld Gill
 
 

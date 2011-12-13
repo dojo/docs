@@ -4,8 +4,6 @@
 Build profiles
 ==============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: (docs) Scott Jenkins
 :since: 1.0
 

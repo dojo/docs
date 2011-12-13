@@ -4,8 +4,6 @@
 dojox.widget.FisheyeLite
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Peter Higgins
 :since: 1.1
 

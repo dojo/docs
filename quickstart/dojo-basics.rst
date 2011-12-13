@@ -4,8 +4,6 @@
 Functions used Everywhere
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Carla, Peter Higgins, Shane O'Sullivan, Marcus Reimann, Craig Riecke, Alex Russell
 :Developers: ?-
 :since: V?

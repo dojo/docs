@@ -4,8 +4,6 @@
 dojo.animateProperty
 ====================
 
-:Status: Draft
-:Version: 1.2
 :since: V?
 
 .. contents::

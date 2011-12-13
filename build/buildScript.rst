@@ -4,8 +4,6 @@
 build system build script (build.sh or build.bat)
 =================================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Scott Jenkins
 :since: 1.0
 

@@ -4,8 +4,6 @@
 Dojo build system:  keepRequires
 ==================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Scott Jenkins
 :since: 1.3
 

@@ -4,8 +4,6 @@
 dojo.hash
 =========
 
-:Status: Draft
-:Version: 1.4
 :since: 1.4
 
 .. contents::

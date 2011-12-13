@@ -4,8 +4,6 @@
 Cross-Domain Dojo
 =================
 
-:Status: Draft
-:Version: 1.0
 :Author: Victor Danilchenko
 
 .. contents::

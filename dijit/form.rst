@@ -4,8 +4,6 @@
 dijit.form
 ==========
 
-:Status: Draft
-:Version: 1.0
 :Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: multiple developers
 :since: V0.9

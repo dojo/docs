@@ -4,8 +4,6 @@
 dojox.rpc
 =========
 
-:Status: Contributed, Draft
-:Version: 1.0
 
 The DojoX RPC Project is an enhanced version of :ref:`dojo.rpc <dojo/rpc>`, and will replace it in 2.0. RPC, or remote procedure call, is a system for communicating with a backend using a variety of flexible transports, all wrapped around a single class called a :ref:`Service <dojox/rpc/Service>`
 

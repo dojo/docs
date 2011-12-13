@@ -4,8 +4,6 @@
 dojox.encoding.crypto.SimpleAES
 ===============================
 
-:Status: Draft
-:Version: Dojo Toolkit 1.3+
 :Author: Tom Trenka, Brad Neuberg
 
 Unlike other crypto implementations within DojoX Encoding, the SimpleAES implementation is hard-coded using

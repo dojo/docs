@@ -4,8 +4,6 @@
 dojo.behavior
 =============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken
 :Developers: ?-
 :since: V?

@@ -4,8 +4,6 @@
 dojox.form.ListInput
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Benjamin Santalucia
 :Developers: Benjamin Santalucia
 :since: 1.4

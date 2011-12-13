@@ -4,8 +4,6 @@
 dojox.data.GoogleBlogSearchStore
 ================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 

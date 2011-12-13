@@ -4,8 +4,6 @@
 dojox.gfx.matrix
 ================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 :since: 0.4
 

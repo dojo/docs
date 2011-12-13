@@ -4,8 +4,6 @@
 dijit._editor.plugins.ViewSource
 ================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewicz
 :since: V1.4

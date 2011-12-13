@@ -6,8 +6,6 @@ dojox.data.HtmlTableStore
 
 **NOTE:**   This store is deprecated. Please use :ref:`dojox.data.HtmlStore <dojox/data/HtmlStore>`.
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Jared Jurkiewicz
 :since: V1.0
 

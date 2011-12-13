@@ -4,8 +4,6 @@
 dojox.mobile.Button
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama, Jared Jurkiewicz, Doug Hays
 :Developers: Yoshiroh Kamiyama, Doug Hays
 :since: V1.5

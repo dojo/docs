@@ -4,8 +4,6 @@
 dojo.Deferred
 =============
 
-:Status: Draft
-:Version: 1.2
 :since: V0.9
 
 .. contents::

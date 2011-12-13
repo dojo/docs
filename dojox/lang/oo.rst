@@ -4,8 +4,6 @@
 dojox.lang.oo
 =============
 
-:Status: In-process
-:Version: 1.0
 :Project owner: Eugene Lazutkin
 :since: 1.4
 

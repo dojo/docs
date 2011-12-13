@@ -4,8 +4,6 @@
 dojox.color.Palette
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Author: Tom Trenka
 :since: Dojo Toolkit 1.1+
 

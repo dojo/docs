@@ -4,8 +4,6 @@
 dojox.date.hebrew
 =================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Tomer Mahlin
 :Contributors: Helena Halperin, Moshe Wajnberg
 :since: V1.4

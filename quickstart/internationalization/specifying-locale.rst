@@ -4,8 +4,6 @@
 Specifying a Locale
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Adam Peller
 :since: V?
 

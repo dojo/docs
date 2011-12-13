@@ -4,8 +4,6 @@
 dojox Grid Plugin API
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Nathan Toone, Bryan Forbes
 :since: V1.4
 

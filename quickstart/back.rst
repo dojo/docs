@@ -4,8 +4,6 @@
 Back buttons and Dojo
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Bill Keese, Nikolai Onken
 
 .. contents::

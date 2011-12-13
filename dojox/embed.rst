@@ -4,8 +4,6 @@
 dojox.embed
 ===========
 
-:Status: Draft
-:Version: 1.0
 :Author: Tom Trenka, Mike Wilcox, Chris Barber, Alex Russell
 :since: 1.2+
 

@@ -4,8 +4,6 @@
 Browser (User Agent) Sniffing
 =============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Peter Higgins, Ben Lowery
 
 .. contents::

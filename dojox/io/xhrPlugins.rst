@@ -4,8 +4,6 @@
 dojox.io.xhrPlugins
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Kris Zyp
 :since: V1.2
 

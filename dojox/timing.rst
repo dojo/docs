@@ -4,8 +4,6 @@
 dojox.timing
 ============
 
-:Status: Draft
-:Version: beta
 :Authors: Tom Trenka, Wolfram Kriesing, Jonathan Bond-Caron, Pete Higgins
 
 DojoX Timing is a project that deals with any kind of advanced use of timing

@@ -4,8 +4,6 @@
 dojox.date.islamic
 ==================
 
-:Status: Draft
-:Version: 1.0
 :Contributor: Hossam Katory
 :since: V1.4
 

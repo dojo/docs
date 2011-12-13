@@ -4,8 +4,6 @@
 dojo._base.loader
 =================
 
-:Status: Draft
-:Version: 1.0
 :since: V0.9
 
 .. contents::

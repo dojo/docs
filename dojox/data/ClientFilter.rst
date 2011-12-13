@@ -4,8 +4,6 @@
 dojox.data.ClientFilter
 =======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Marcus Reimann, Kris Zyp
 :Developers: Kris Zyp
 :since: V1.2

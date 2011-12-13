@@ -4,8 +4,6 @@
 dojox.gauges.GlossyCircularGauge
 ================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
 :since: 1.7
 

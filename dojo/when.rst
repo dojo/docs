@@ -4,8 +4,6 @@
 Deferred.when/dojo.when
 =======================
 
-:Status: Draft
-:Version: 1.0
 :since: V1.5
 
 .. contents::

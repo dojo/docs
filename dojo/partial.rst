@@ -4,8 +4,6 @@
 dojo.partial
 ============
 
-:Status: Draft
-:Version: 1.2
 
 
 Have you ever wanted to control arguments being passed into a function?  For example, have you ever had the need to set the first parameter of a function to a defined value and allow the others to still vary?  Well, dojo provides a way to do that!  Partial is a cousin to 'hitch' in that it's a function that returns a function.  What it does is allow you to fix the first N parameters of a function call to some specific value.  This can be very powerful, especially when you want to pass in object references or the like into notification functions of DataStores.

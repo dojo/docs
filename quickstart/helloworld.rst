@@ -4,8 +4,6 @@
 Hello, World!
 =============
 
-:Status: Draft
-:Version: 1.2
 :Author: JChimene
 
 .. contents::

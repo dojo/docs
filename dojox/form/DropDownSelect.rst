@@ -4,8 +4,6 @@
 dojox.form.DropDownSelect
 =========================
 
-:Status: Draft
-:Version: 1.7
 :Project owner: Nathan Toone
 :since: V1.2
 

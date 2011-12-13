@@ -3,8 +3,6 @@
 ================
 dojox.secure.DOM
 ================
-:Status: Draft
-:Version: 1.0
 :Authors: Kris Zyp
 :Developers: Kris Zyp
 :since: V1.2

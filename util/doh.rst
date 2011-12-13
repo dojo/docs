@@ -4,7 +4,6 @@
 D.O.H.: Dojo Objective Harness
 ==============================
 
-:Status: Draft
 :Authors: Alex Russell, Pete Higgins, Dustin Machi, Jared Jurkiewicz
 
 .. contents::

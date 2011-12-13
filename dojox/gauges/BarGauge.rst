@@ -4,8 +4,6 @@
 dojox.gauges.BarGauge
 =====================
 
-:Status: Draft
-:Version: 1.2
 :Project owner:
 :since: V?
 

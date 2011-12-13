@@ -4,8 +4,6 @@
 dijit.WidgetSet
 ===============
 
-:Status: Draft
-:Version: 1.7
 :since: V1.7
 
 .. contents::

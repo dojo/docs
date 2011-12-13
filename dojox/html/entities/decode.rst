@@ -4,8 +4,6 @@
 dojox.html.entities.decode
 ==========================
 
-:Status: Contributed, Draft
-:Version: 1.4
 :Author: Jared Jurkiewicz
 :since: V1.4
 

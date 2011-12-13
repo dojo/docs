@@ -4,8 +4,6 @@
 dojo.data.ItemFileWriteStore
 ============================
 
-:Status: Contributed, Draft
-:Version: 1.2
 :Author: Jared Jurkiewicz
 :since: V1.0
 

@@ -4,8 +4,6 @@
 Parsing, Formatting, and Validating: Dates and Numbers
 ======================================================
 
-:Status: Draft
-:Version: 1.0
 :Author: CraigRiecke, AdamPeller
 
 These widgets augment the functionality of the ``<INPUT type="text">`` tag.

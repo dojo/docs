@@ -4,8 +4,6 @@
 dojox.editor.plugins.TextColor
 ==============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewicz
 :since: V1.5

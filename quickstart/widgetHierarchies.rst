@@ -3,8 +3,6 @@
 ================================================================
 Widget Hierarchies: isContainer, dijit._Container, and startup()
 ================================================================
-:Status: Contributed
-:Version: 0.1
 :Authors: Bill Keese
 
 .. contents::

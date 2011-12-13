@@ -6,7 +6,6 @@ dojox.gesture
 
 :Project owner: Evan Huang
 :since: V.1.7
-:Status: Experimental (API subject to changes)
 
 .. contents::
    :depth: 2

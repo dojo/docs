@@ -4,8 +4,6 @@
 dojox.layout.RotatorContainer
 =============================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Chris Barber
 :since: V1.2
 

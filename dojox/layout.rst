@@ -4,8 +4,6 @@
 dojox.layout
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Adam Peller, Fredrik Johansson, Peter Higgins, Juff Cunat, Chris Barber, Shane O'Sullivan
 :since: V?
 

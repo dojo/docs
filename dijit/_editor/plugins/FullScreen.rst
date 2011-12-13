@@ -4,8 +4,6 @@
 dijit._editor.plugins.FullScreen
 ================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Jared Jurkiewiczs
 :since: V1.4

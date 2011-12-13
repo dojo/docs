@@ -4,8 +4,6 @@
 dojox.encoding
 ==============
 
-:Status: Draft
-:Version: experimental
 :Authors: Eugene Lazutkin, Tom Trenka
 
 The DojoX Encoding project is a repository for various types of encoding algorithms,

@@ -4,8 +4,6 @@
 dojox.geo.charting
 ==================
 
-:Status: Draft
-:Version: Experimental
 :Project owner: Dean Williams
 :Author: Qi Ruan, Erwan Aullas
 :since: V.1.5

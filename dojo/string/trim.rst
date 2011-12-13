@@ -4,8 +4,6 @@
 dojo.string.trim
 ================
 
-:Status: Final
-:Version: 1.4
 :since: V1.2
 :Author: Eugene Lazutkin
 

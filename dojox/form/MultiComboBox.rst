@@ -4,7 +4,6 @@
 dojox.form.MultiComboBox
 ========================
 
-:Status: Draft
 :since: 1.2
 
 .. contents::

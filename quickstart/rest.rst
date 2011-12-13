@@ -3,8 +3,6 @@
 ==========================================
 Implementing a RESTful Service Server-Side
 ==========================================
-:Status: Contributed
-:Version: 1.6+
 :Authors: Kitson Kelly
 
 .. contents::

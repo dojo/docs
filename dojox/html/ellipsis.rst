@@ -4,8 +4,6 @@
 dojox.html.ellipsis
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Nathan Toone
 :since: V1.4
 

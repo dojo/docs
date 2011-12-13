@@ -4,8 +4,6 @@
 dojo.map
 ========
 
-:Status: Draft
-:Version: 1.2
 
 .. contents::
    :depth: 3

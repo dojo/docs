@@ -4,8 +4,6 @@
 dojox.Drawing
 =============
 
-:Status: Up to date
-:Version: 1.4
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :since: 1.4

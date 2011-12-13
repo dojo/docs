@@ -4,8 +4,6 @@
 dojox.embed.Flash
 =================
 
-:Status: Draft
-:Version: 1.6
 :Project owner: ?--
 :since: V1.2
 

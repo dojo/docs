@@ -3,8 +3,6 @@
 ===========================================================================
 Layout Widget Hierarchies: isLayoutContainer and dijit.layout._LayoutWidget
 ===========================================================================
-:Status: Contributed
-:Version: 0.2
 :Authors: Bill Keese
 
 .. contents::

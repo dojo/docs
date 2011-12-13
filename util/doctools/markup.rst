@@ -4,8 +4,6 @@
 Dojo Inline Documentation
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Neil Roberts
 :since: V1.3
 

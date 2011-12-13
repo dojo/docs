@@ -4,8 +4,6 @@
 dojo.hitch
 ==========
 
-:Status: Draft
-:Version: 1.2
 
 
 Dojo.hitch is a neat function. It returns a function that will execute a given function in a given scope.  This function allows you to control how a function executes, particularly in asynchronous operations.  How many times have you done something like:

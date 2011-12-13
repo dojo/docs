@@ -4,8 +4,6 @@
 dojox.data.AppStore
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Benjamin Schell
 :since: V1.3
 

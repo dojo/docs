@@ -4,8 +4,6 @@
 dojo.uacss
 ============
 
-:Status: Draft
-:Version: 1.0
 :since: V1.4
 
 .. contents::

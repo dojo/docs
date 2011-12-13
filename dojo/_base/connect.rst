@@ -4,8 +4,6 @@
 dojo._base.connect
 ==================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Marcus Reimann
 :Developers: ?-
 :since: V?

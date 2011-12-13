@@ -4,8 +4,6 @@
 dojox.form.manager._ClassMixin
 ==============================
 
-:Status: Draft
-:Version: 1.3 (trunk)
 :Project owner: Eugene Lazutkin
 :since: 1.3
 

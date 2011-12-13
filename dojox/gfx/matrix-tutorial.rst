@@ -4,7 +4,6 @@
 Matrix tutorial
 ===============
 
-:Status: Draft
 :Project owner: Eugene Lazutkin
 
 Linear transformations are very important part of any graphics library. We deal

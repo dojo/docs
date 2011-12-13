@@ -4,8 +4,6 @@
 dojox.data.XmlStore
 ===================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Jared Jurkiewicz
 :since: V1.0
  

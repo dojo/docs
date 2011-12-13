@@ -4,8 +4,6 @@
 dojox.mdnd
 ==========
 
-:Status: Draft
-:Version: 1.1
 :Project owner: Erwan Morvillez, Jean-Jacques Patard, Jeff Cunat
 :since: V1.1
 

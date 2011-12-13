@@ -4,8 +4,6 @@
 dojox.xml
 =========
 
-:Status: Draft
-:Version: beta
 :Authors: Tom Trenka, Jared Jurkiewicz
 
 .. contents::

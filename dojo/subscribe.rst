@@ -4,8 +4,6 @@
 dojo.subscribe
 ==============
 
-:Status: Draft
-:Version: 1.0
 :since: 0.9
 
 .. contents::

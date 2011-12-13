@@ -4,8 +4,6 @@
 dojox.data.dom
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :since: V?
 

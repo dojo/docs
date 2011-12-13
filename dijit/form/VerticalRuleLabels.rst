@@ -7,8 +7,6 @@ dijit.form.VerticalRuleLabels
 .. contents::
     :depth: 3
 
-:Status:
-:Version:
 :Authors:
 
 

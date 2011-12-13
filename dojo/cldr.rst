@@ -4,8 +4,6 @@
 dojo.cldr
 =========
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Adam Peller
 :since: 1.0?
 

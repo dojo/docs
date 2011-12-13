@@ -4,8 +4,6 @@
 dojox.app
 =========
 
-:Status: Draft
-:Version: 1.0
 :since: V1.7
 
 

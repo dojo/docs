@@ -7,8 +7,6 @@ dijit.form.HorizontalRuleLabels
 .. contents::
     :depth: 3
 
-:Status:
-:Version:
 :Authors:
 
 

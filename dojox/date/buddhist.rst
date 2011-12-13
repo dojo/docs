@@ -4,8 +4,6 @@
 dojox.date.buddhist
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: 
 :Contributors: Aphichit Hanbanchong and Nattapong Sirilappanich
 :since: V1.4

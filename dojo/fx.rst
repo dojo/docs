@@ -4,8 +4,6 @@
 dojo.fx
 =======
 
-:Status: Draft
-:Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :since: V1.0

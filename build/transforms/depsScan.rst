@@ -4,7 +4,6 @@
 Build Transform depsScan
 ========================
 
-:Version: 1.7
 :Author: Rawld Gill
 
 .. contents::

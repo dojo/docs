@@ -4,8 +4,6 @@
 Expanding dojo.provide calls
 ============================
 
-:Status: Draft
-:Version: 1.0
 :since: V1.3
 
 .. contents::

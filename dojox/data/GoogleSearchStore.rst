@@ -4,8 +4,6 @@
 dojox.data.GoogleSearchStore
 ============================
 
-:Status: Contributed, Draft
-:Version: 1.4
 :Author: Shane O'Sullivan
 :since: V1.2
 

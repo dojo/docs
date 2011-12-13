@@ -4,8 +4,6 @@
 Custom Builds
 ====================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: James Burke
 :since: 1.0
 

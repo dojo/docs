@@ -4,8 +4,6 @@
 dojo.replace
 ============
 
-:Status: Final
-:Version: 1.4
 :since: 1.4
 :Author: Eugene Lazutkin
 

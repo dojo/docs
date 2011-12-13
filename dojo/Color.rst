@@ -4,8 +4,6 @@
 dojo.Color
 ================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Marcus Reimann, Bill Keese, JJ Kress
 :Developers: Eugene Lazutkin, Adam Peller, Alex Russell
 :since: v1.0.0

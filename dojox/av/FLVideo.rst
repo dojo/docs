@@ -4,8 +4,6 @@
 dojox.av.FLVideo
 ================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :since: 1.2

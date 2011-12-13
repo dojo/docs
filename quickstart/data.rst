@@ -4,8 +4,6 @@
 Datastores and Dojo
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz, Nikolai Onken, Craig Riecke
 
 .. contents::

@@ -4,8 +4,6 @@
 Sample Directory Layout for Builds
 ==================================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: (docs) Scott A Jenkins
 :since: 1.0
 
