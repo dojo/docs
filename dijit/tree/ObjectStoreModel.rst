@@ -9,9 +9,11 @@ dijit.tree.ObjectStoreModel
 .. contents::
   :depth: 2
 
+Introduction
+============
 The ObjectStoreModel implements a :ref:`dijit.tree.Model <dijit/tree/Model>`
-to connect a :ref:`dojo.store <dojo/store>`
-to a :ref:`dijit.Tree <dijit/Tree>`.
+to connect a :ref:`dijit.Tree <dijit/Tree>`
+to a :ref:`dojo.store <dojo/store>`.
 
 The dojo.store must implement it's own getChildren() method.
 
@@ -22,6 +24,9 @@ To support drag and drop, besides implementing getChildren()
 and Observable, the store must support the parent option to put().
 And in order to have child elements ordered according to how the user dropped them,
 put() must support the before option.
+
+Example
+=======
 
 .. code-example ::
 
@@ -71,6 +76,7 @@ put() must support the before option.
                             { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
                     ]
                 });
+    
                 // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
                 store.getChildren = function(object){
                     // Add a getChildren() method to store for the data model where
@@ -101,3 +107,8 @@ put() must support the before option.
             });
         });
 
+See Also
+========
+* `Connecting a Store to a Tree <http://dojotoolkit.org/documentation/tutorials/1.6/store_driven_tree/>`_ -
+  instructions for connecting a :ref:`dijit.Tree <dijit/Tree>` directly to a :ref:`dojo.store <dojo/store>`,
+  without an intermediate :ref:`dijit.tree.Model <dijit/tree/Model>` object.
