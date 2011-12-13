@@ -64,7 +64,8 @@ Chaining forEach and byClass calls
     widget.containerNode.appendChild(dojo.create("div"));
   }).byClass("dijit.Dialog").forEach(function(widget){ /* only dijit.Dialog instances */ });
 
-The functions filter, forEach, map, every and some all accept a `thisObject` in the last position.
+The functions ``filter()``, ``forEach()``, ``map()``, ``every()`` and ``some()``
+all accept a `thisObject` in the last position.
 This is in line with all other Dojo array functions and allows for transparent scope manipulation:
 
 .. js ::

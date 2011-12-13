@@ -20,7 +20,7 @@ It doesn't apply to Chrome or Safari (on mobile, mac, or desktop), which always 
 Usage
 =====
 
-Simply require the module, and then :
+Simply require the module:
 
 .. js ::
 

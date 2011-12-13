@@ -11,7 +11,7 @@ dijit.MenuBarItem
 :Version: 1.3
 :Authors: Bill Keese
 
-These are the items in the Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.
+This is an item in a Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.
 
 Examples
 ========

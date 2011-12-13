@@ -86,7 +86,8 @@ Otherwise, a unique ID will be generated for you:
   console.log(dialog.get("id"));
   
 All Dijits follow the same programmatic convention.
-Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference".
+Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions
+(in this case, title:"No ID"), and supply an optional "source node reference".
 
 .. js ::
   
@@ -157,16 +158,25 @@ There are several attributes common to (most) all Dijit instances.
 These appear as members to a widget instance, and can be accessed once you have a reference to the widget by one of the methods mentioned above.
 Some of the more popular are:
 
-* .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programmatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
+* domNode - The top-level node in the widget. All widgets have a DOM Node attached to them,
+  either through the srcNodeRef passed during instantiation, or a one created by the widget framework
+  when declaring one programmatically.
+  This is a `real` DOM Node, and is common in all Dijits.
+  If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
 
 .. js ::
  
   // hide a widget with id="myThiner"
   dojo.style(dijit.byId("myThinger").domNode, "display", "none");
 
-* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a :ref:`dijit.Dialog <dijit/Dialog>` only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .set() to set and load content, this is the node that will be targeted for that content.
+* containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed
+  within the widget, the containerNode member is a reference to the node where the content was moved to.
+  For example with a :ref:`dijit.Dialog <dijit/Dialog>` only the surrounding domNode is used to create the widget,
+  and any contents of that node are set inside the template's `containerNode`.
+  When using set() to set and load content, this is the node that will be targeted for that content.
 
-* declaredClass - this is actually a relic of :ref:`dojo.declare <dojo/declare>`, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
+* declaredClass - this is actually a relic of :ref:`dojo.declare <dojo/declare>`, which is how widgets are defined.
+  The declaredClass is a string equal to the fully qualified name of the widget class.
 
 .. js ::
  
@@ -202,7 +212,7 @@ Themes
 
 Dijit comes bundled with four themes: Claro (Dojo 1.5+), Tundra, Soria, and Nihilo (all 1.0+).
 Themes are collections of images (icons and background images) and CSS,
-and brings a common visual style and color scheme to all the widgets.
+and bring a common visual style and color scheme to all the widgets.
 You can override the theme by container or by widget element to add nuance and flair.
 
 To learn more about themes, see :ref:`Dijit Themes and Theming <dijit/themes>`.
@@ -226,8 +236,7 @@ Locating Widgets
 ================
 
 There are many ways to locate a widget in a page, and access a reference to that widget.
-Widget's are Objects:
-collections of attributes and DomNode references.
+Widgets are Objects: collections of attributes and DomNode references.
 Once you have a reference to a widget, you can use that object (or any
 of its member properties) through that widget.
 There are three "main" ways to access a widget:
@@ -257,7 +266,7 @@ Again using the above markup, if we pass a reference to the ``p`` element inside
   var w = dijit.getEnclosingWidget(node); // find the widget this node is in
   w.show();
 
-The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``.domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
+The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
 
 .. js ::
   

@@ -125,7 +125,7 @@ Form Handling
 
     * :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
 
-      A class for textbox widgets with the ability to validate content of various types and provide user feedback.
+      A class for textbox widgets with the ability to validate various types of content and to provide user feedback.
 
   * Select Type Widgets
 
@@ -181,10 +181,6 @@ Form Handling
     * :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`
 
       A scale with a handle you can drag left or right to select a value.
-
-    * :ref:`dijit.form.Slider <dijit/form/Slider>`
-
-      **DEPRECATED** A scale with a handle you can drag up/down or left/right to select a value.  Require :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>` and :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>` explicitly.
 
     * :ref:`dijit.form.VerticalRule <dijit/form/VerticalRule>`
 

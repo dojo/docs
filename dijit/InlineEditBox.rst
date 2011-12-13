@@ -130,7 +130,7 @@ General Behavior
 
 When InlineEditBoxes are "closed" they appear as text but are tab stops in the keyboard focus ring and have an accessible role of button.
 They can have autoSave or non-autoSave behavior.
-When an non-autoSave InlineEditBox is open it has associated Save and Cancel buttons.
+When a non-autoSave InlineEditBox is open it has associated Save and Cancel buttons.
 An autoSave InlineEditBox does not have these buttons and they act like miniature forms or dialogs,
 i.e pressing the Esc key will close the widget and pressing the Enter key will close the widget, saving and displaying the text.
 Note that since InlineEditBoxes may be used on the page without a traditional label element,

@@ -131,4 +131,4 @@ Screen Reader Information
 The title pane container will have an ARIA labelledby property which points to the id of the title pane title.
 The title pane title has the ARIA role of button and property of haspopup=true to indicate that it controls the display of the pane.
 The role of button is used to indicate to the user that an action will occur when the button is activated.
-The tilte pane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.
+The TitlePane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.
