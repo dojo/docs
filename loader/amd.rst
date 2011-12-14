@@ -865,7 +865,7 @@ references to the "dojox" package in "util2" are redirected to "dojox2".
 
 This design replaces the so-called "multi-version" design in dojo v1.6- and eliminates the need for contexts as
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
-package. It's all a matter of simple configuration. This a very powerful feature and only dojo has it.
+package. It's all a matter of simple configuration. This is a very powerful feature and only dojo has it.
 
 
 Utility Functions
@@ -1197,7 +1197,7 @@ modules
 
   * ``def`` holds the factory
 
-Warning: these internal definition are exposed and discussed here to help with debugging **only**. Do **not** use them in your own code. These structures may change!
+Warning: these internal definitions are exposed and discussed here to help with debugging **only**. Do **not** use them in your own code. These structures may change!
 
 
 Tracing
