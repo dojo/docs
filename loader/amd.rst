@@ -1247,7 +1247,7 @@ Tracing can be turned on or off for one or more trace groups by providing a conf
 
   require({
     trace:{
-      "loader-inject":1 // turn the loader-inject group on
+      "loader-inject":1, // turn the loader-inject group on
       "loader-define":0 // turn the loader-define group off
     }
   });
@@ -1257,7 +1257,7 @@ Alternatively, require.trace.set can be called directly; there are two forms:
 .. js ::
 
   require.trace.set({
-    "loader-inject":1 // turn the loader-inject group on
+    "loader-inject":1, // turn the loader-inject group on
     "loader-define":0 // turn the loader-define group off
   });
 
