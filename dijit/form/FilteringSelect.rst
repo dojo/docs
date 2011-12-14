@@ -37,7 +37,7 @@ See the :ref:`dojo.data <dojo/data>` section for complete details.
 Examples
 ========
 
-Programmatic example using a data store
+Programmatic example using a dojo.store
 ---------------------------------------
 
 To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.
@@ -48,32 +48,43 @@ To get the text currently displayed in the textbox (the value of the currently s
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
-    </script>
-
-    <script type="text/javascript">
-        dojo.ready(function(){
-            var stateStore = new dojo.data.ItemFileReadStore({
-                url: "{{dataUrl}}/dijit/tests/_data/states.json"
+        require([
+            "dojo/ready", "dojo/store/Memory", "dijit/form/FilteringSelect"
+        ], function(ready, Memory, FilteringSelect){
+            var stateStore = new Memory({
+                data: [
+                    {name:"Alabama", id:"AL"},
+                    {name:"Alaska", id:"AK"},
+                    {name:"American Samoa", id:"AS"},
+                    {name:"Arizona", id:"AZ"},
+                    {name:"Arkansas", id:"AR"},
+                    {name:"Armed Forces Europe", id:"AE"},
+                    {name:"Armed Forces Pacific", id:"AP"},
+                    {name:"Armed Forces the Americas", id:"AA"},
+                    {name:"California", id:"CA"},
+                    {name:"Colorado", id:"CO"},
+                    {name:"Connecticut", id:"CT"},
+                    {name:"Delaware", id:"DE"}
+                ]
             });
-            var filteringSelect = new dijit.form.FilteringSelect({
-                id: "stateSelect",
-                name: "state",
-                value: "KY",
-                store: stateStore,
-                searchAttr: "name"
-            }, "stateSelect");
+
+            ready(function(){
+                var filteringSelect = new FilteringSelect({
+                    id: "stateSelect",
+                    name: "state",
+                    value: "CA",
+                    store: stateStore,
+                    searchAttr: "name"
+                }, "stateSelect");
+            });
         });
-    </script>
 
   .. html ::
 
     <input id="stateSelect">
     <p>
-        <button onClick="alert(dijit.byId('stateSelect').get('value'))">Get value</button>
-        <button onClick="alert(dijit.byId('stateSelect').get('displayedValue'))">Get displayed value</button>
+        <button onclick="alert(dijit.byId('stateSelect').get('value'))">Get value</button>
+        <button onclick="alert(dijit.byId('stateSelect').get('displayedValue'))">Get displayed value</button>
     </p>
 
 Declarative markup using native select and option tags
@@ -104,7 +115,7 @@ If you want the FilteringSelect to start blank, use a different method to create
     </select>
 
 
-Declarative markup using a data store
+Declarative markup using a dojo.store
 -------------------------------------
 
 To set the default value for this example, specify the *value* attribute (the hidden text value to be submitted) in the markup.
@@ -115,16 +126,16 @@ To set the default value for this example, specify the *value* attribute (the hi
 
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dojo.store.Memory");
     </script>
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore"
+    <div data-dojo-type="dojo.store.Memory"
         data-dojo-id="stateStore"
-        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
+        data-dojo-props="data: [{id: 'y', name: 'yes'}, {id: 'n', name: 'no'}]"></div>
     <input data-dojo-type="dijit.form.FilteringSelect"
-        value="KY"
+        value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
         id="stateInput">
@@ -136,292 +147,372 @@ By default, FilteringSelect searches on the name attribute of objects in your do
 But what if you want to search on a different attribute?
 searchAttr enables you to do just that.
 
-In this example, the FilteringSelect has been set to display the abbreviations for states rather than their full names.
+In this example, the FilteringSelect has been set to display the ids for states rather than their full names.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
-    </script>
+        require([
+            "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dijit/form/FilteringSelect"
+        ], function(ready, win, Memory, FilteringSelect){
+            var stateStore = new Memory({
+                data: [
+                    {name:"Alabama", id:"AL"},
+                    {name:"Alaska", id:"AK"},
+                    {name:"American Samoa", id:"AS"},
+                    {name:"Arizona", id:"AZ"},
+                    {name:"Arkansas", id:"AR"},
+                    {name:"Armed Forces Europe", id:"AE"},
+                    {name:"Armed Forces Pacific", id:"AP"},
+                    {name:"Armed Forces the Americas", id:"AA"},
+                    {name:"California", id:"CA"},
+                    {name:"Colorado", id:"CO"},
+                    {name:"Connecticut", id:"CT"},
+                    {name:"Delaware", id:"DE"}
+                ]
+            });
 
-  .. html ::
-
-    <div data-dojo-type="dojo.data.ItemFileReadStore"
-        data-dojo-id="stateStore"
-        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
-    <input data-dojo-type="dijit.form.FilteringSelect"
-        data-dojo-props="store:stateStore, searchAttr:'abbreviation'"
-        value="KY"
-        id="fs"
-        name="abbreviatedstate">
+            ready(function(){
+                var filteringSelect = new FilteringSelect({
+                    id: "stateSelect",
+                    name: "state",
+                    value: "CA",
+                    store: stateStore,
+                    searchAttr: "id"
+                }, "stateSelect");
+                filteringSelect.placeAt(win.body());
+            });
+        });
 
 Codependent FilteringSelect/ComboBox widgets
 --------------------------------------------
 
-The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example.
+The city ComboBox sets the state FilteringSelect value,
+and the state FilteringSelect filters the city ComboBox choices in this example.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.ComboBox");
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
-        dojo.ready(function(){
-        var cityJson = {
-            label: 'name',
-            items: [
-            { name:'Albany', state:'NY' },
-            { name:'Albuquerque', state:'NM' },
-            { name:'Alexandria', state:'VA' },
-            { name:'Amarillo', state:'TX' },
-            { name:'Amherst', state:'MA' },
-            { name:'Anaheim', state:'CA' },
-            { name:'Anchorage', state:'AK' },
-            { name:'Ann Arbor', state:'MI' },
-            { name:'Annapolis', state:'MD' },
-            { name:'Ashland', state:'OR' },
-            { name:'Aspen', state:'CO' },
-            { name:'Athens', state:'GA' },
-            { name:'Atlanta', state:'GA' },
-            { name:'Auburn', state:'AL' },
-            { name:'Augusta', state:'GA' },
-            { name:'Austin', state:'TX' },
-            { name:'Baltimore', state:'MD' },
-            { name:'Bangor', state:'ME' },
-            { name:'Baton Rouge', state:'LA' },
-            { name:'Bethlehem', state:'PA' },
-            { name:'Beverly Hills', state:'CA' },
-            { name:'Billings', state:'MT' },
-            { name:'Biloxi', state:'MS' },
-            { name:'Birmingham', state:'AL' },
-            { name:'Bloomington', state:'IN' },
-            { name:'Boca Raton', state:'FL' },
-            { name:'Boise', state:'ID' },
-            { name:'Boston', state:'MA' },
-            { name:'Boulder', state:'CO' },
-            { name:'Branson', state:'MO' },
-            { name:'Buffalo', state:'NY' },
-            { name:'Burbank', state:'CA' },
-            { name:'Burlington', state:'VT' },
-            { name:'Butte', state:'MT' },
-            { name:'Cambridge', state:'MA' },
-            { name:'Carmel', state:'CA' },
-            { name:'Cedar Rapids', state:'IA' },
-            { name:'Champaign-Urbana', state:'IL' },
-            { name:'Chapel Hill', state:'NC' },
-            { name:'Charleston', state:'SC' },
-            { name:'Charleston', state:'WV' },
-            { name:'Charlotte', state:'NC' },
-            { name:'Chattanooga', state:'TN' },
-            { name:'Chicago', state:'IL' },
-            { name:'Cincinnati', state:'OH' },
-            { name:'Clearwater Beach', state:'FL' },
-            { name:'Cleveland', state:'OH' },
-            { name:'Cody', state:'WY' },
-            { name:'College Station', state:'TX' },
-            { name:'Colorado Springs', state:'CO' },
-            { name:'Columbia', state:'SC' },
-            { name:'Columbus', state:'GA' },
-            { name:'Columbus', state:'OH' },
-            { name:'Concord', state:'NH' },
-            { name:'Corpus Christi', state:'TX' },
-            { name:'Dallas', state:'TX' },
-            { name:'Dayton', state:'OH' },
-            { name:'Daytona Beach', state:'FL' },
-            { name:'Denver', state:'CO' },
-            { name:'Des Moines', state:'IA' },
-            { name:'Destin', state:'FL' },
-            { name:'Detroit', state:'MI' },
-            { name:'Dover', state:'DE' },
-            { name:'Duluth', state:'MN' },
-            { name:'Durham', state:'NC' },
-            { name:'El Paso', state:'TX' },
-            { name:'Erie', state:'PA' },
-            { name:'Eugene', state:'OR' },
-            { name:'Evansville', state:'IN' },
-            { name:'Fairbanks', state:'AK' },
-            { name:'Fargo', state:'ND' },
-            { name:'Fayetteville', state:'NC' },
-            { name:'Flagstaff', state:'AZ' },
-            { name:'Fort Lauderdale', state:'FL' },
-            { name:'Fort Wayne', state:'IN' },
-            { name:'Fresno', state:'CA' },
-            { name:'Ft. Worth', state:'TX' },
-            { name:'Galveston', state:'TX' },
-            { name:'Gatlinburg', state:'TN' },
-            { name:'Grand Forks', state:'ND' },
-            { name:'Greensboro', state:'NC' },
-            { name:'Greenville', state:'SC' },
-            { name:'Gulf Shores', state:'AL' },
-            { name:'Hanover', state:'NH' },
-            { name:'Harrisburg', state:'PA' },
-            { name:'Hartford', state:'CT' },
-            { name:'Hershey', state:'PA' },
-            { name:'Hollywood', state:'CA' },
-            { name:'Hot Springs', state:'AR' },
-            { name:'Houston', state:'TX' },
-            { name:'Huntsville', state:'AL' },
-            { name:'Indianapolis', state:'IN' },
-            { name:'Iowa City', state:'IA' },
-            { name:'Ithaca', state:'NY' },
-            { name:'Jackson', state:'MS' },
-            { name:'Jacksonville', state:'FL' },
-            { name:'Juneau', state:'AK' },
-            { name:'Kalamazoo', state:'MI' },
-            { name:'Kansas City', state:'KS' },
-            { name:'Kansas City', state:'MO' },
-            { name:'Kennebunkport', state:'ME' },
-            { name:'Key West', state:'FL' },
-            { name:'Knoxville', state:'TN' },
-            { name:'Kodiak', state:'AK' },
-            { name:'Laguna Beach', state:'CA' },
-            { name:'Lansing', state:'MI' },
-            { name:'Las Cruces', state:'NM' },
-            { name:'Las Vegas', state:'NV' },
-            { name:'Lexington', state:'KY' },
-            { name:'Lincoln', state:'NE' },
-            { name:'Little Rock', state:'AR' },
-            { name:'Los Alamos', state:'NM' },
-            { name:'Los Angeles', state:'CA' },
-            { name:'Louisville', state:'KY' },
-            { name:'Lynchburg', state:'VA' },
-            { name:'Macon', state:'GA' },
-            { name:'Madison', state:'WI' },
-            { name:'Manchester', state:'NH' },
-            { name:'Mankato', state:'MN' },
-            { name:'Memphis', state:'TN' },
-            { name:'Miami', state:'FL' },
-            { name:'Milwaukee', state:'WI' },
-            { name:'Minneapolis', state:'MN' },
-            { name:'Mobile', state:'AL' },
-            { name:'Moline', state:'IL' },
-            { name:'Monterey', state:'CA' },
-            { name:'Montgomery', state:'AL' },
-            { name:'Montpelier', state:'VT' },
-            { name:'Morgantown', state:'WV' },
-            { name:'Myrtle Beach', state:'SC' },
-            { name:'Naples', state:'FL' },
-            { name:'Nashville', state:'TN' },
-            { name:'New Haven', state:'CT' },
-            { name:'New Orleans', state:'LA' },
-            { name:'New York City', state:'NY' },
-            { name:'Newark', state:'NJ' },
-            { name:'Newport Beach', state:'CA' },
-            { name:'Niagara Falls', state:'NY' },
-            { name:'Norfolk', state:'VA' },
-            { name:'Oakland', state:'CA' },
-            { name:'Ogden', state:'UT' },
-            { name:'Oklahoma City', state:'OK' },
-            { name:'Olympia', state:'WA' },
-            { name:'Omaha', state:'NE' },
-            { name:'Orlando', state:'FL' },
-            { name:'Palm Beach', state:'FL' },
-            { name:'Palm Springs', state:'CA' },
-            { name:'Palo Alto', state:'CA' },
-            { name:'Panama City Beach', state:'FL' },
-            { name:'Pasadena', state:'CA' },
-            { name:'Pensacola', state:'FL' },
-            { name:'Peoria', state:'IL' },
-            { name:'Philadelphia', state:'PA' },
-            { name:'Phoenix', state:'AZ' },
-            { name:'Pierre', state:'SD' },
-            { name:'Pigeon Forge', state:'TN' },
-            { name:'Pittsburgh', state:'PA' },
-            { name:'Pocatello', state:'ID' },
-            { name:'Portland', state:'ME' },
-            { name:'Portland', state:'OR' },
-            { name:'Portsouth', state:'NH' },
-            { name:'Princeton', state:'NJ' },
-            { name:'Providence', state:'RI' },
-            { name:'Raleigh', state:'NC' },
-            { name:'Redondo Beach', state:'CA' },
-            { name:'Reno', state:'NV' },
-            { name:'Richmond', state:'VA' },
-            { name:'Rochester', state:'MN' },
-            { name:'Rochester', state:'NY' },
-            { name:'Rockford', state:'IL' },
-            { name:'Sacramento', state:'CA' },
-            { name:'Salem', state:'OR' },
-            { name:'Salt Lake City', state:'UT' },
-            { name:'San Antonio', state:'TX' },
-            { name:'San Diego', state:'CA' },
-            { name:'San Francisco', state:'CA' },
-            { name:'San Jose', state:'CA' },
-            { name:'Santa Barbara', state:'CA' },
-            { name:'Santa Cruz', state:'CA' },
-            { name:'Santa Fe', state:'NM' },
-            { name:'Santa Monica', state:'CA' },
-            { name:'Sarasota', state:'FL' },
-            { name:'Savannah', state:'GA' },
-            { name:'Scottsdale', state:'AZ' },
-            { name:'Scranton', state:'PA' },
-            { name:'Seattle', state:'WA' },
-            { name:'Shreveport', state:'LA' },
-            { name:'Sioux Falls', state:'SD' },
-            { name:'South Bend', state:'IN' },
-            { name:'Spokane', state:'WA' },
-            { name:'Springfield', state:'MA' },
-            { name:'St. Louis', state:'MO' },
-            { name:'St. Paul', state:'MN' },
-            { name:'St. Petersburg', state:'FL' },
-            { name:'State College', state:'PA' },
-            { name:'Sun Valley', state:'ID' },
-            { name:'Syracuse', state:'NY' },
-            { name:'Tacoma', state:'WA' },
-            { name:'Tallahassee', state:'FL' },
-            { name:'Tampa', state:'FL' },
-            { name:'Telluride', state:'CO' },
-            { name:'Tempe', state:'AZ' },
-            { name:'Terre Haute', state:'IN' },
-            { name:'Toledo', state:'OH' },
-            { name:'Topeka', state:'KS' },
-            { name:'Traverse City', state:'MI' },
-            { name:'Trenton', state:'NJ' },
-            { name:'Tucson', state:'AZ' },
-            { name:'Tulsa', state:'OK' },
-            { name:'Vail', state:'CO' },
-            { name:'Virginia Beach', state:'VA' },
-            { name:'Washington', state:'DC' },
-            { name:'Wheeling', state:'WV' },
-            { name:'Wichita', state:'KS' },
-            { name:'Williamsburg', state:'VA' },
-            { name:'Wilmington', state:'DE' },
-            { name:'Winston-Salem', state:'NC' },
-            { name:'Worcester', state:'MA' },
-            { name:'Yellowstone', state:'WY' },
-            { name:'York', state:'PA' }
-        ]};
+    var states = [
+        {name:"Alabama", state:"AL"},
+        {name:"Alaska", state:"AK"},
+        {name:"American Samoa", state:"AS"},
+        {name:"Arizona", state:"AZ"},
+        {name:"Arkansas", state:"AR"},
+        {name:"Armed Forces Europe", state:"AE"},
+        {name:"Armed Forces Pacific", state:"AP"},
+        {name:"Armed Forces the Americas", state:"AA"},
+        {name:"California", state:"CA"},
+        {name:"Colorado", state:"CO"},
+        {name:"Connecticut", state:"CT"},
+        {name:"Delaware", state:"DE"},
+        {name:"District of Columbia", state:"DC"},
+        {name:"Federated States of Micronesia", state:"FM"},
+        {name:"Florida", state:"FL"},
+        {name:"Georgia", state:"GA"},
+        {name:"Guam", state:"GU"},
+        {name:"Hawaii", state:"HI"},
+        {name:"Idaho", state:"ID"},
+        {name:"Illinois", state:"IL"},
+        {name:"Indiana", state:"IN"},
+        {name:"Iowa", state:"IA"},
+        {name:"Kansas", state:"KS"},
+        {name:"Kentucky", state:"KY"},
+        {name:"Louisiana", state:"LA"},
+        {name:"Maine", state:"ME"},
+        {name:"Marshall Islands", state:"MH"},
+        {name:"Maryland", state:"MD"},
+        {name:"Massachusetts", state:"MA"},
+        {name:"Michigan", state:"MI"},
+        {name:"Minnesota", state:"MN"},
+        {name:"Mississippi", state:"MS"},
+        {name:"Missouri", state:"MO"},
+        {name:"Montana", state:"MT"},
+        {name:"Nebraska", state:"NE"},
+        {name:"Nevada", state:"NV"},
+        {name:"New Hampshire", state:"NH"},
+        {name:"New Jersey", state:"NJ"},
+        {name:"New Mexico", state:"NM"},
+        {name:"New York", state:"NY"},
+        {name:"North Carolina", state:"NC"},
+        {name:"North Dakota", state:"ND"},
+        {name:"Northern Mariana Islands", state:"MP"},
+        {name:"Ohio", state:"OH"},
+        {name:"Oklahoma", state:"OK"},
+        {name:"Oregon", state:"OR"},
+        {name:"Pennsylvania", state:"PA"},
+        {name:"Puerto Rico", state:"PR"},
+        {name:"Rhode Island", state:"RI"},
+        {name:"South Carolina", state:"SC"},
+        {name:"South Dakota", state:"SD"},
+        {name:"Tennessee", state:"TN"},
+        {name:"Texas", state:"TX"},
+        {name:"Utah", state:"UT"},
+        {name:"Vermont", state:"VT"},
+        {name: "Virgin Islands, U.S.",state:"VI"},
+        {name:"Virginia", state:"VA"},
+        {name:"Washington", state:"WA"},
+        {name:"West Virginia", state:"WV"},
+        {name:"Wisconsin", state:"WI"},
+        {name:"Wyoming", state:"WY"}
+    ];
 
-        new dijit.form.ComboBox(
-        {   store: new dojo.data.ItemFileReadStore({ data: cityJson }),
-            autoComplete: true,
-            query: {state: "*"},
-            style: "width: 150px;",
-            required: true,
-            id: "city",
-            onChange: function(city){
-                dijit.byId('state').set('value', (dijit.byId('city').item || {state: ''}).state);
-            }
-        }, "city");
+    var cities =  [
+        { name:"Albany", state:"NY" },
+        { name:"Albuquerque", state:"NM" },
+        { name:"Alexandria", state:"VA" },
+        { name:"Amarillo", state:"TX" },
+        { name:"Amherst", state:"MA" },
+        { name:"Anaheim", state:"CA" },
+        { name:"Anchorage", state:"AK" },
+        { name:"Ann Arbor", state:"MI" },
+        { name:"Annapolis", state:"MD" },
+        { name:"Ashland", state:"OR" },
+        { name:"Aspen", state:"CO" },
+        { name:"Athens", state:"GA" },
+        { name:"Atlanta", state:"GA" },
+        { name:"Auburn", state:"AL" },
+        { name:"Augusta", state:"GA" },
+        { name:"Austin", state:"TX" },
+        { name:"Baltimore", state:"MD" },
+        { name:"Bangor", state:"ME" },
+        { name:"Baton Rouge", state:"LA" },
+        { name:"Bethlehem", state:"PA" },
+        { name:"Beverly Hills", state:"CA" },
+        { name:"Billings", state:"MT" },
+        { name:"Biloxi", state:"MS" },
+        { name:"Birmingham", state:"AL" },
+        { name:"Bloomington", state:"IN" },
+        { name:"Boca Raton", state:"FL" },
+        { name:"Boise", state:"ID" },
+        { name:"Boston", state:"MA" },
+        { name:"Boulder", state:"CO" },
+        { name:"Branson", state:"MO" },
+        { name:"Buffalo", state:"NY" },
+        { name:"Burbank", state:"CA" },
+        { name:"Burlington", state:"VT" },
+        { name:"Butte", state:"MT" },
+        { name:"Cambridge", state:"MA" },
+        { name:"Carmel", state:"CA" },
+        { name:"Cedar Rapids", state:"IA" },
+        { name:"Champaign-Urbana", state:"IL" },
+        { name:"Chapel Hill", state:"NC" },
+        { name:"Charleston", state:"SC" },
+        { name:"Charleston", state:"WV" },
+        { name:"Charlotte", state:"NC" },
+        { name:"Chattanooga", state:"TN" },
+        { name:"Chicago", state:"IL" },
+        { name:"Cincinnati", state:"OH" },
+        { name:"Clearwater Beach", state:"FL" },
+        { name:"Cleveland", state:"OH" },
+        { name:"Cody", state:"WY" },
+        { name:"College Station", state:"TX" },
+        { name:"Colorado Springs", state:"CO" },
+        { name:"Columbia", state:"SC" },
+        { name:"Columbus", state:"GA" },
+        { name:"Columbus", state:"OH" },
+        { name:"Concord", state:"NH" },
+        { name:"Corpus Christi", state:"TX" },
+        { name:"Dallas", state:"TX" },
+        { name:"Dayton", state:"OH" },
+        { name:"Daytona Beach", state:"FL" },
+        { name:"Denver", state:"CO" },
+        { name:"Des Moines", state:"IA" },
+        { name:"Destin", state:"FL" },
+        { name:"Detroit", state:"MI" },
+        { name:"Dover", state:"DE" },
+        { name:"Duluth", state:"MN" },
+        { name:"Durham", state:"NC" },
+        { name:"El Paso", state:"TX" },
+        { name:"Erie", state:"PA" },
+        { name:"Eugene", state:"OR" },
+        { name:"Evansville", state:"IN" },
+        { name:"Fairbanks", state:"AK" },
+        { name:"Fargo", state:"ND" },
+        { name:"Fayetteville", state:"NC" },
+        { name:"Flagstaff", state:"AZ" },
+        { name:"Fort Lauderdale", state:"FL" },
+        { name:"Fort Wayne", state:"IN" },
+        { name:"Fresno", state:"CA" },
+        { name:"Ft. Worth", state:"TX" },
+        { name:"Galveston", state:"TX" },
+        { name:"Gatlinburg", state:"TN" },
+        { name:"Grand Forks", state:"ND" },
+        { name:"Greensboro", state:"NC" },
+        { name:"Greenville", state:"SC" },
+        { name:"Gulf Shores", state:"AL" },
+        { name:"Hanover", state:"NH" },
+        { name:"Harrisburg", state:"PA" },
+        { name:"Hartford", state:"CT" },
+        { name:"Hershey", state:"PA" },
+        { name:"Hollywood", state:"CA" },
+        { name:"Hot Springs", state:"AR" },
+        { name:"Houston", state:"TX" },
+        { name:"Huntsville", state:"AL" },
+        { name:"Indianapolis", state:"IN" },
+        { name:"Iowa City", state:"IA" },
+        { name:"Ithaca", state:"NY" },
+        { name:"Jackson", state:"MS" },
+        { name:"Jacksonville", state:"FL" },
+        { name:"Juneau", state:"AK" },
+        { name:"Kalamazoo", state:"MI" },
+        { name:"Kansas City", state:"KS" },
+        { name:"Kansas City", state:"MO" },
+        { name:"Kennebunkport", state:"ME" },
+        { name:"Key West", state:"FL" },
+        { name:"Knoxville", state:"TN" },
+        { name:"Kodiak", state:"AK" },
+        { name:"Laguna Beach", state:"CA" },
+        { name:"Lansing", state:"MI" },
+        { name:"Las Cruces", state:"NM" },
+        { name:"Las Vegas", state:"NV" },
+        { name:"Lexington", state:"KY" },
+        { name:"Lincoln", state:"NE" },
+        { name:"Little Rock", state:"AR" },
+        { name:"Los Alamos", state:"NM" },
+        { name:"Los Angeles", state:"CA" },
+        { name:"Louisville", state:"KY" },
+        { name:"Lynchburg", state:"VA" },
+        { name:"Macon", state:"GA" },
+        { name:"Madison", state:"WI" },
+        { name:"Manchester", state:"NH" },
+        { name:"Mankato", state:"MN" },
+        { name:"Memphis", state:"TN" },
+        { name:"Miami", state:"FL" },
+        { name:"Milwaukee", state:"WI" },
+        { name:"Minneapolis", state:"MN" },
+        { name:"Mobile", state:"AL" },
+        { name:"Moline", state:"IL" },
+        { name:"Monterey", state:"CA" },
+        { name:"Montgomery", state:"AL" },
+        { name:"Montpelier", state:"VT" },
+        { name:"Morgantown", state:"WV" },
+        { name:"Myrtle Beach", state:"SC" },
+        { name:"Naples", state:"FL" },
+        { name:"Nashville", state:"TN" },
+        { name:"New Haven", state:"CT" },
+        { name:"New Orleans", state:"LA" },
+        { name:"New York City", state:"NY" },
+        { name:"Newark", state:"NJ" },
+        { name:"Newport Beach", state:"CA" },
+        { name:"Niagara Falls", state:"NY" },
+        { name:"Norfolk", state:"VA" },
+        { name:"Oakland", state:"CA" },
+        { name:"Ogden", state:"UT" },
+        { name:"Oklahoma City", state:"OK" },
+        { name:"Olympia", state:"WA" },
+        { name:"Omaha", state:"NE" },
+        { name:"Orlando", state:"FL" },
+        { name:"Palm Beach", state:"FL" },
+        { name:"Palm Springs", state:"CA" },
+        { name:"Palo Alto", state:"CA" },
+        { name:"Panama City Beach", state:"FL" },
+        { name:"Pasadena", state:"CA" },
+        { name:"Pensacola", state:"FL" },
+        { name:"Peoria", state:"IL" },
+        { name:"Philadelphia", state:"PA" },
+        { name:"Phoenix", state:"AZ" },
+        { name:"Pierre", state:"SD" },
+        { name:"Pigeon Forge", state:"TN" },
+        { name:"Pittsburgh", state:"PA" },
+        { name:"Pocatello", state:"ID" },
+        { name:"Portland", state:"ME" },
+        { name:"Portland", state:"OR" },
+        { name:"Portsouth", state:"NH" },
+        { name:"Princeton", state:"NJ" },
+        { name:"Providence", state:"RI" },
+        { name:"Raleigh", state:"NC" },
+        { name:"Redondo Beach", state:"CA" },
+        { name:"Reno", state:"NV" },
+        { name:"Richmond", state:"VA" },
+        { name:"Rochester", state:"MN" },
+        { name:"Rochester", state:"NY" },
+        { name:"Rockford", state:"IL" },
+        { name:"Sacramento", state:"CA" },
+        { name:"Salem", state:"OR" },
+        { name:"Salt Lake City", state:"UT" },
+        { name:"San Antonio", state:"TX" },
+        { name:"San Diego", state:"CA" },
+        { name:"San Francisco", state:"CA" },
+        { name:"San Jose", state:"CA" },
+        { name:"Santa Barbara", state:"CA" },
+        { name:"Santa Cruz", state:"CA" },
+        { name:"Santa Fe", state:"NM" },
+        { name:"Santa Monica", state:"CA" },
+        { name:"Sarasota", state:"FL" },
+        { name:"Savannah", state:"GA" },
+        { name:"Scottsdale", state:"AZ" },
+        { name:"Scranton", state:"PA" },
+        { name:"Seattle", state:"WA" },
+        { name:"Shreveport", state:"LA" },
+        { name:"Sioux Falls", state:"SD" },
+        { name:"South Bend", state:"IN" },
+        { name:"Spokane", state:"WA" },
+        { name:"Springfield", state:"MA" },
+        { name:"St. Louis", state:"MO" },
+        { name:"St. Paul", state:"MN" },
+        { name:"St. Petersburg", state:"FL" },
+        { name:"State College", state:"PA" },
+        { name:"Sun Valley", state:"ID" },
+        { name:"Syracuse", state:"NY" },
+        { name:"Tacoma", state:"WA" },
+        { name:"Tallahassee", state:"FL" },
+        { name:"Tampa", state:"FL" },
+        { name:"Telluride", state:"CO" },
+        { name:"Tempe", state:"AZ" },
+        { name:"Terre Haute", state:"IN" },
+        { name:"Toledo", state:"OH" },
+        { name:"Topeka", state:"KS" },
+        { name:"Traverse City", state:"MI" },
+        { name:"Trenton", state:"NJ" },
+        { name:"Tucson", state:"AZ" },
+        { name:"Tulsa", state:"OK" },
+        { name:"Vail", state:"CO" },
+        { name:"Virginia Beach", state:"VA" },
+        { name:"Washington", state:"DC" },
+        { name:"Wheeling", state:"WV" },
+        { name:"Wichita", state:"KS" },
+        { name:"Williamsburg", state:"VA" },
+        { name:"Wilmington", state:"DE" },
+        { name:"Winston-Salem", state:"NC" },
+        { name:"Worcester", state:"MA" },
+        { name:"Yellowstone", state:"WY" },
+        { name:"York", state:"PA" }
+    ];
 
-        new dijit.form.FilteringSelect(
-        {   store: new dojo.data.ItemFileReadStore(
-                { url: '{{dataUrl}}/dijit/tests/_data/states.json' }
-            ),
-            autoComplete: true,
-            style: "width: 150px;",
-            id: "state",
-            onChange: function(state){
-                dijit.byId('city').query.state = state || "*";
-            }
-        }, "state");
+    require([
+        "dojo/ready", "dojo/store/Memory",
+        "dijit/form/ComboBox", "dijit/form/FilteringSelect"
+    ], function(ready, Memory, ComboBox, FilteringSelect){
+
+        ready(function(){
+            new dijit.form.ComboBox({
+                id: "city",
+                store: new Memory({ data: cities }),
+                autoComplete: true,
+                query: {state: /.*/},
+                style: "width: 150px;",
+                required: true,
+                searchAttr: "name",
+                onChange: function(city){
+                    console.log("combobox onchange ", city, this.item);
+                    dijit.byId('state').set('value', this.item ? this.item.state : null);
+                }
+            }, "city");
+
+            new dijit.form.FilteringSelect({
+                id: "state",
+                store: new Memory({ data: states }),
+                autoComplete: true,
+                style: "width: 150px;",
+                onChange: function(state){
+                    dijit.byId('city').query.state = state || /.*/;
+                }
+            }, "state");
         });
-    </script>
+    });
 
   .. html ::
 
@@ -446,78 +537,32 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
-        var richData={
-                identifier:"name",
-                label:"label",
-                items:[
-                        {name:"Dojo core", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
-                        {name:"Dijit", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"},
-                        {name:"Dojox", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
-                ]
-        };
- 
-        dojo.ready(function(){
-           var dojoStore = new dojo.data.ItemFileReadStore({data:richData});
+    require([
+        "dojo/ready", "dojo/dom", "dojo/store/Memory", "dijit/form/FilteringSelect"
+    ], function(ready, dom, Memory, FilteringSelect){
+        var dojoStore = new Memory({data: [
+            {id: 1, name:"we", label:"<i>we</i> <img src='http://placekitten.com/50/70' />"},
+            {id: 2, name:"are", label:"<u>are</u> <img src='http://placekitten.com/50/60' />"},
+            {id: 3, name:"kittens", label:"<b>kittens</b> <img src='http://placekitten.com/50/50' />"}
+        ]});
 
-           var fs = new dijit.form.FilteringSelect({
+        ready(function(){
+           var fs = new FilteringSelect({
                  id: "dojoBox",
-                 value: "Dojo core",
+                 value: 3,
                  store: dojoStore,
                  searchAttr: "name",
-                 name: "dojo",
+                 name: "xyz",
                  labelAttr: "label",
                  labelType: "html"
-           }, dojo.byId("dojoBox"));
+           }, dom.byId("dojoBox"));
         });
-    </script>
+    });
 
   .. html ::
 
     <input id="dojoBox">
 
-
-
-Transforming the displayed value using labelFunc
-------------------------------------------------
-
-The labelFunc attribute of FilteringSelect enables you to transform the text that appears in the textbox after the user selects a value from the menu or types in a value manually.
-labelFunc takes two arguments: a dojo.data item representing the option the user selected and the store the item came from; hence, myLabelFunc will not fire for invalid text.
-labelFunc is expected to return the text you want to display.
-
-In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript.
-myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects built from OPTION tags automatically generate a store).
-myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
-
-.. code-example ::
-
-  .. js ::
-
-    <script type="text/javascript">
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.data.ItemFileReadStore");
-        myLabelFunc = function(item, store){
-            var label=store.getValue(item, 'name');
-            // DEMO: uncomment to chop off a character
-            // label=label.substr(0, label.length-1);
-            // DEMO: uncomment to set to lower case
-            label = label.toLowerCase();
-            return label;
-        }
-    </script>
-
-  .. html ::
-
-    <div data-dojo-type="dojo.data.ItemFileReadStore"
-        data-dojo-id="stateStore"
-        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
-    <input data-dojo-type="dijit.form.FilteringSelect"
-        data-dojo-props="store:stateStore, labelFunc:myLabelFunc, searchAttr:'name'"
-        id="fs"
-        value="KY"
-        name="state">
 
 
 Accessibility
