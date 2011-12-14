@@ -23,12 +23,12 @@ Declarative markup
         dojo.require("dijit.ProgressBar");
         dojo.require("dojo.parser");
         
- 	var i=0;
+        var i=0;
         function download(){
-			jsProgress.update({maximum: 10, progress: ++i});
-			if(i < 10){
-				setTimeout(download, 100 + Math.floor(Math.random() * 100));
-			}
+            jsProgress.update({maximum: 10, progress: ++i});
+            if(i < 10){
+                setTimeout(download, 100 + Math.floor(Math.random() * 100));
+            }
         }
      </script>
 

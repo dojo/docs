@@ -78,20 +78,20 @@ Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens
 
     // make the pop-up appear around aroundNode
     popup.open({
-    	parent: this,
-    	popup: dropDown,
-    	around: aroundNode,
-    	orient: this.dropDownPosition,
-    	onExecute: function(){
-    		popup.close(dropDown);
-    	},
-    	onCancel: function(){
-    		popup.close(dropDown);
-    	},
-    	onClose: function(){
-    		domAttr.set(self._popupStateNode, "popupActive", false);
-    		domClass.remove(self._popupStateNode, "dijitHasDropDownOpen");
-    	}
+        parent: this,
+        popup: dropDown,
+        around: aroundNode,
+        orient: this.dropDownPosition,
+        onExecute: function(){
+            popup.close(dropDown);
+        },
+        onCancel: function(){
+            popup.close(dropDown);
+        },
+        onClose: function(){
+            domAttr.set(self._popupStateNode, "popupActive", false);
+            domClass.remove(self._popupStateNode, "dijitHasDropDownOpen");
+        }
     });
 
     domAttr.set(this._popupStateNode, "popupActive", "true");

@@ -498,14 +498,14 @@ myLabelFunc returns an all lowercase string that then displays in the FilteringS
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
-	myLabelFunc = function(item, store){
-		var label=store.getValue(item, 'name');
-		// DEMO: uncomment to chop off a character
-		// label=label.substr(0, label.length-1);
-		// DEMO: uncomment to set to lower case
-		label = label.toLowerCase();
-		return label;
-	}
+        myLabelFunc = function(item, store){
+            var label=store.getValue(item, 'name');
+            // DEMO: uncomment to chop off a character
+            // label=label.substr(0, label.length-1);
+            // DEMO: uncomment to set to lower case
+            label = label.toLowerCase();
+            return label;
+        }
     </script>
 
   .. html ::

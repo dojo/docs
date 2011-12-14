@@ -248,7 +248,7 @@ The state-specific icon would be triggered by a selector like:
 .. css ::
 
   .dijitDisabled .dijitEditorIcon {
-	background-image: url('images/editorIconsDisabled.png');
+    background-image: url('images/editorIconsDisabled.png');
   }
 
 Some icons must have separate left-to-right (ltr) and right-to-left (rtl) versions to be BiDi globalization compliant;
@@ -288,8 +288,8 @@ Tundra theme-specific
 
     tundra/
       images/
-         checkbox.gif	<--- all the checkbox and radio button images
-         fader.gif	<--- background image referenced by tundra.css
+         checkbox.gif <--- all the checkbox and radio button images
+         fader.gif    <--- background image referenced by tundra.css
 
 The icons are located in the images directory (along with background images)
 and are referenced from the widget via CSS rules (via the background-image property of a dummy node).
@@ -370,20 +370,20 @@ The beginning of variables.less looks like:
 
 .. code-block :: less
 
-    @primary-color: #cfe5fa;													// Base color for entire theme
-    @secondary-color: #efefef;												// Base color for bar-backgrounds
-    @text-color: #000;													// Text color for enabled widgets
-    @disabled-color: #d3d3d3;												// Base for disabled backgrounds and borders
+    @primary-color: #cfe5fa;                                                    // Base color for entire theme
+    @secondary-color: #efefef;                                                // Base color for bar-backgrounds
+    @text-color: #000;                                                    // Text color for enabled widgets
+    @disabled-color: #d3d3d3;                                                // Base for disabled backgrounds and borders
     @error-color: #d46464;
 
-    @container-background-color:#fff;										// Backgrounds for various content areas such as TitlePane, ContentPane and Inputs
+    @container-background-color:#fff;                                        // Backgrounds for various content areas such as TitlePane, ContentPane and Inputs
 
-    @minor-selected-color: spin(saturate(darken(@primary-color, 6), 19), 0);						// Color for various arrows and buttons
-    @base-border-color: spin(desaturate(darken(@primary-color, 29), 44), -1);		// Augmented and used directly by variables to create border colors for various widgets
-    @unfocused-clickable-color: spin(saturate(lighten(@primary-color, 5), 10), 0);				// Background color for enabled buttons, text inputs
-    @border-color: spin(desaturate(darken(@primary-color, 15), 67), 8);						// Border color for (enabled, unhovered) TextBox, Slider, Accordion, BorderContainer, TabContainer
-    @minor-border-color: @disabled-color;									// Color of borders inside widgets: horizontal line in Calendar between weeks, around color swatches in ColorPalette, above Dialog action bar
-    @popup-border-color: @base-border-color;								// Border for Dialog, Menu, Tooltip.   Must also update tooltip.png (the arrow image file) to match
+    @minor-selected-color: spin(saturate(darken(@primary-color, 6), 19), 0);                        // Color for various arrows and buttons
+    @base-border-color: spin(desaturate(darken(@primary-color, 29), 44), -1);        // Augmented and used directly by variables to create border colors for various widgets
+    @unfocused-clickable-color: spin(saturate(lighten(@primary-color, 5), 10), 0);                // Background color for enabled buttons, text inputs
+    @border-color: spin(desaturate(darken(@primary-color, 15), 67), 8);                        // Border color for (enabled, unhovered) TextBox, Slider, Accordion, BorderContainer, TabContainer
+    @minor-border-color: @disabled-color;                                    // Color of borders inside widgets: horizontal line in Calendar between weeks, around color swatches in ColorPalette, above Dialog action bar
+    @popup-border-color: @base-border-color;                                // Border for Dialog, Menu, Tooltip.   Must also update tooltip.png (the arrow image file) to match
 
 
 
@@ -403,15 +403,15 @@ This requires Node.js.   If you don't have it, then
 
 .. code-block :: shell
 
-	export PATH=$PATH:/opt/less/bin
+    export PATH=$PATH:/opt/less/bin
 
 
 On a PC, do:
 
 .. code-block :: shell
 
-	C:\> cd C:\myworkspace\dijit\themes\claro
-	C:\> node compile.js
+    C:\> cd C:\myworkspace\dijit\themes\claro
+    C:\> node compile.js
 
 
 To setup Node.js on a PC:
@@ -425,7 +425,7 @@ To setup Node.js on a PC:
     b) press "edit" on path
     c) depending on what directory you unzipped to and the exact filenames, you will add something like
 
-	;C:\ajaxorg-node-builds-0fcee7d\win32
+    ;C:\ajaxorg-node-builds-0fcee7d\win32
 
 
 
@@ -547,7 +547,7 @@ In the Claro theme, each of these states is defined by a specific hex value that
 
   .claro .dijitAccordionInnerContainerActive {
       border:1px solid #769DC0;
-	  background-color:#7dbefa;
+      background-color:#7dbefa;
   }
 
 
@@ -611,9 +611,9 @@ For the Claro theme, 11px (.688em) has been defined as the body font size in cla
 .. css ::
 
     .claro {
-	    font-family:Verdana,Arial,Helvetica,sans-serif;
-	    font-size: .688em;
-	    color:#131313;
+        font-family:Verdana,Arial,Helvetica,sans-serif;
+        font-size: .688em;
+        color:#131313;
     }
 
 So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLabel style elements
@@ -624,8 +624,8 @@ are relative to the claro default body font size. (i.e. MonthLabel= 12px, DayLab
 .. css ::
 
     .claro .dijitCalendarMonthLabel {
-	    color:#000000;
-	    font-size: 1.091em;
+        color:#000000;
+        font-size: 1.091em;
     }
 
 and
@@ -633,8 +633,8 @@ and
 .. css ::
 
     .claro .dijitCalendarDayLabelTemplate {
-	    text-align:center;
-	    font-size:0.909em;
+        text-align:center;
+        font-size:0.909em;
     }
 
 
@@ -668,10 +668,10 @@ Example of CSS3 corner styling:
 
    .claro .dijitTabContainerTop-tabs .dijitTabInnerDiv,
    .claro .dijitTabContainerTop-tabs .dijitTabContent {
-	   border-radius: 2px 2px 0px 0px;
-	   -moz-border-radius: 2px 2px 0px 0px;
-	   -webkit-border-top-left-radius:2px;
-	   -webkit-border-top-right-radius:2px;
+       border-radius: 2px 2px 0px 0px;
+       -moz-border-radius: 2px 2px 0px 0px;
+       -webkit-border-top-left-radius:2px;
+       -webkit-border-top-right-radius:2px;
    }
 
 

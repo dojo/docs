@@ -17,12 +17,12 @@ General Information
 * :ref:`About Dijit <dijit/info>`
 * :ref:`Themes and Theming <dijit/themes>`
 * :ref:`a11y  <dijit/a11y/index>`
-	* :ref:`a11y Strategy <dijit/a11y/strategy>`
-	* :ref:`a11y Resources <dijit/a11y/resources>`
-	* :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
-	* :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
-	* :ref:`a11y Requirements <developer/a11y-requirements>`
-	* :ref:`a11y Statement <dijit/a11y/statement>`
+    * :ref:`a11y Strategy <dijit/a11y/strategy>`
+    * :ref:`a11y Resources <dijit/a11y/resources>`
+    * :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
+    * :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
+    * :ref:`a11y Requirements <developer/a11y-requirements>`
+    * :ref:`a11y Statement <dijit/a11y/statement>`
 
 Utility Classes
 ===============

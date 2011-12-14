@@ -31,24 +31,22 @@ and it will have the same effect as clicking the span with the mouse:
   .. javascript::
 
     <script>
-		dojo.require("dijit._WidgetBase");
-		dojo.require("dijit._TemplatedMixin");
-		dojo.require("dijit._OnDijitClickMixin");
-		dojo.require("dojo.parser");
+        dojo.require("dijit._WidgetBase");
+        dojo.require("dijit._TemplatedMixin");
+        dojo.require("dijit._OnDijitClickMixin");
+        dojo.require("dojo.parser");
 
-                dojo.ready(function(){
-		        var MyButton = dojo.declare(
-			[dijit._WidgetBase, dijit._TemplatedMixin, dijit._OnDijitClickMixin], {
-				templateString: "<span tabIndex=0 data-dojo-attach-event='ondijitclick: onClick'>click me</span>",
-                                onClick: function(evt){
-                                        alert("Awesome!!");
-                                }
-			});
-			new MyButton({}, dojo.byId("myButton"));
-
-                });
+        dojo.ready(function(){
+            var MyButton = dojo.declare([dijit._WidgetBase, dijit._TemplatedMixin, dijit._OnDijitClickMixin], {
+                templateString: "<span tabIndex=0 data-dojo-attach-event='ondijitclick: onClick'>click me</span>",
+                onClick: function(evt){
+                        alert("Awesome!!");
+                }
+            });
+            new MyButton({}, dojo.byId("myButton"));
+        });
     </script>
 
   .. html::
 
-	<div id="myButton">this will be replaced by the widget</div>
+    <div id="myButton">this will be replaced by the widget</div>

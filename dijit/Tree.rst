@@ -172,9 +172,9 @@ It tries to guess if the node is a folder or not by whether or not it has a chil
 
 .. js ::
   
-  	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
-		return (!item || this.model.mayHaveChildren(item)) ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf"
-	},
+    getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+        return (!item || this.model.mayHaveChildren(item)) ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf"
+    },
 
 Note that the !item check refers to the root node in the tree,
 which may not have any associated item when using the old version of the Tree API,
@@ -188,9 +188,9 @@ would determine if the item was a folder or not based on whether or not the item
 
 .. js ::
   
-  	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
-		return myStore.getValue(item, 'directory') ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf";
-	},
+    getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+        return myStore.getValue(item, 'directory') ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf";
+    },
 
 
 If you want to have different icon types depending on the type of items in the tree (for example,
@@ -397,10 +397,10 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 
   .. html ::
 
-	<ul data-dojo-type="dijit.Menu" id="tree_menu" style="display: none;">
-		<li data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
-		<li data-dojo-type="dijit.MenuItem">Item #2</li>
-	</ul>
+    <ul data-dojo-type="dijit.Menu" id="tree_menu" style="display: none;">
+        <li data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
+        <li data-dojo-type="dijit.MenuItem">Item #2</li>
+    </ul>
         
         <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
              data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
@@ -409,28 +409,28 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
              data-dojo-props="store:menuContinentStore, query:{type:'continent'},
              rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
             
-	<div data-dojo-type="dijit.Tree" id="menuTree"
+    <div data-dojo-type="dijit.Tree" id="menuTree"
              data-dojo-props="model:menuContinentModel, showRoot:false, openOnClick:true">
                  
-		<script type="dojo/connect">
-			var menu = dijit.byId("tree_menu");
-			// when we right-click anywhere on the tree, make sure we open the menu
-			menu.bindDomNode(this.domNode);
+        <script type="dojo/connect">
+            var menu = dijit.byId("tree_menu");
+            // when we right-click anywhere on the tree, make sure we open the menu
+            menu.bindDomNode(this.domNode);
                         
-			dojo.connect(menu, "_openMyself", this, function(e){
-				// get a hold of, and log out, the tree node that was the source of this open event
-				var tn = dijit.getEnclosingWidget(e.target);
-				console.debug(tn);
+            dojo.connect(menu, "_openMyself", this, function(e){
+                // get a hold of, and log out, the tree node that was the source of this open event
+                var tn = dijit.getEnclosingWidget(e.target);
+                console.debug(tn);
                                 
-				// now inspect the data store item that backs the tree node:
-				console.debug(tn.item);
+                // now inspect the data store item that backs the tree node:
+                console.debug(tn.item);
                                
-				// contrived condition: if this tree node doesn't have any children, disable all of the menu items
-				menu.getChildren().forEach(function(i){ i.set('disabled', !tn.item.children); });
+                // contrived condition: if this tree node doesn't have any children, disable all of the menu items
+                menu.getChildren().forEach(function(i){ i.set('disabled', !tn.item.children); });
                                 
-				// IMPLEMENT CUSTOM MENU BEHAVIOR HERE
-			});
-		</script>
+                // IMPLEMENT CUSTOM MENU BEHAVIOR HERE
+            });
+        </script>
         </div>
 
 Styling
@@ -468,11 +468,11 @@ Due to implementation details, on the tundra, soria, and nihilo themes the hover
 .. css ::
 
   .tundra .dijitTreeNodeHover {
-	/*background-color: #f6f9fa !important;*/
-	/* using a transparent png so that we can still see grid lines, which are (unfortunately) behind the dijitRowNode that we are hovering over */
-	background-image: url(images/treeHover.png);
-	background-repeat: repeat;
-	background-color: none !important;
+      /*background-color: #f6f9fa !important;*/
+      /* using a transparent png so that we can still see grid lines, which are (unfortunately) behind the dijitRowNode that we are hovering over */
+      background-image: url(images/treeHover.png);
+      background-repeat: repeat;
+      background-color: none !important;
   }
 
 So in order to change the hover effect you would need to create a new image (with for example 95% transparency), and write a CSS rule to override the one above.
@@ -503,7 +503,7 @@ Keyboard
 --------
 
 ===================================  ===============
-Action	                             Key
+Action                               Key
 ===================================  ===============
 Navigate into tree*                  Tab
 Navigate to the next sibling         Down arrow

@@ -31,20 +31,20 @@ Here's an example defining a widget called Employee, and then creating two of th
 
   .. js ::
 
-	<script>
-		dojo.require("dijit.Declaration");
-	</script>
+    <script>
+        dojo.require("dijit.Declaration");
+    </script>
 
   .. html ::
 
-	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
-		<span>${name}</span>
-		<a href="update.php?id=${empid}">update</a>
-		<a href="delete.php?id=${empid}">delete</a>
-	</div>
-	<div data-dojo-type="Employee" data-dojo-props="empid:100, name:'Alan Allen'"></div>
-	<div data-dojo-type="Employee" data-dojo-props="empid:101, name:'Bob Brown'"></div>
-	<div data-dojo-type="Employee" data-dojo-props="empid:102, name:'Cathy Cameron'"></div>
+    <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
+        <span>${name}</span>
+        <a href="update.php?id=${empid}">update</a>
+        <a href="delete.php?id=${empid}">delete</a>
+    </div>
+    <div data-dojo-type="Employee" data-dojo-props="empid:100, name:'Alan Allen'"></div>
+    <div data-dojo-type="Employee" data-dojo-props="empid:101, name:'Bob Brown'"></div>
+    <div data-dojo-type="Employee" data-dojo-props="empid:102, name:'Cathy Cameron'"></div>
 
 
 Note that it's defining two widget parameters:

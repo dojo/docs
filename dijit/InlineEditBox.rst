@@ -22,16 +22,16 @@ Programmatic InlineEditBox
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dijit.InlineEditBox");
-      dojo.require("dijit.form.Textarea");
+        dojo.require("dijit.InlineEditBox");
+        dojo.require("dijit.form.Textarea");
 
-      var eb;
-      dojo.ready(function(){
-	  eb = new dijit.InlineEditBox({
-            editor: "dijit.form.Textarea",
-            autoSave: false
-          }, "ieb");
-      });
+        var eb;
+        dojo.ready(function(){
+            eb = new dijit.InlineEditBox({
+                editor: "dijit.form.Textarea",
+                autoSave: false
+            }, "ieb");
+        });
     </script>
 
   .. html ::
@@ -111,7 +111,7 @@ To make the editor's initial size match the size the readonly text (ie, the size
   .. html ::
 
     <div data-dojo-type="dijit.InlineEditBox" data-dojo-props="editor:'dijit.Editor', renderAsHtml:true, autoSave:false,
-			editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
+            editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
 
 Notes on i18n
 =============
@@ -159,11 +159,11 @@ TextBox with autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Navigate to the next widget in the tab order.	| Tab          | The data is saved and the widget closes.                    |
+| Navigate to the next widget in the tab order. | Tab          | The data is saved and the widget closes.                    |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the TextBox, saving changes..           | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
+| Close the TextBox, saving changes..           | Enter        | Keyboard focus is on the closed InlineEditBox.              |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the TextBox, discarding changes.        | Esc          | Cancels the edit, discarding any changes.                   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -174,12 +174,12 @@ Textarea with autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Navigate to the next widget in the tab order.	| Tab (twice   | The data is saved and the widget closes.                    |
+| Navigate to the next widget in the tab order. | Tab (twice   | The data is saved and the widget closes.                    |
 |                                               | in Firefox 2)|                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Enter a newline into the text.                | Enter	       | There is no equivalent to the Enter key behavior of         |
+| Enter a newline into the text.                | Enter        | There is no equivalent to the Enter key behavior of         |
 |                                               |              | TextBoxes to close the textarea. The user would have to     |
 |                                               |              | use something like Tab and Shift + Tab                      |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -193,7 +193,7 @@ TextBox or TextArea without autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Navigate to the Save or Cancel button.	| Tab (twice   | Focus changes to the Save button if the data has been       |
+| Navigate to the Save or Cancel button.        | Tab (twice   | Focus changes to the Save button if the data has been       |
 |                                               | for TextArea | changed, otherwise it moves to the Cancel button.           |
 |                                               | in Firefox 2)|                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+

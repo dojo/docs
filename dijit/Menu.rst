@@ -94,28 +94,28 @@ This example creates a context menu for the whole window.
 
   .. html ::
 
-	<div data-dojo-type="dijit.Menu" id="windowContextMenu" data-dojo-props="contextMenuForWindow:true" style="display: none;">
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
-			onClick:function(){alert('not actually cutting anything, just a test!')}">Cut</div>
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
-			onClick:function(){alert('not actually copying anything, just a test!')}">Copy</div>
-		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
-			onClick:function(){alert('not actually pasting anything, just a test!')}">Paste</div>
-		<div data-dojo-type="dijit.MenuSeparator"></div>
-		<div data-dojo-type="dijit.PopupMenuItem">
-			<span>Enabled Submenu</span>
-			<div data-dojo-type="dijit.Menu" id="submenu1">
-				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 1!')}">Submenu Item One</div>
-				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 2!')}">Submenu Item Two</div>
-			</div>
-		</div>
-		<div data-dojo-type="dijit.PopupMenuItem">
-			<span>Popup of something other than a menu</span>
-			<div data-dojo-type="dijit.ColorPalette"></div>
-		</div>
-	</div>
+    <div data-dojo-type="dijit.Menu" id="windowContextMenu" data-dojo-props="contextMenuForWindow:true" style="display: none;">
+        <div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
+            onClick:function(){alert('not actually cutting anything, just a test!')}">Cut</div>
+        <div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+            onClick:function(){alert('not actually copying anything, just a test!')}">Copy</div>
+        <div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+            onClick:function(){alert('not actually pasting anything, just a test!')}">Paste</div>
+        <div data-dojo-type="dijit.MenuSeparator"></div>
+        <div data-dojo-type="dijit.PopupMenuItem">
+            <span>Enabled Submenu</span>
+            <div data-dojo-type="dijit.Menu" id="submenu1">
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 1!')}">Submenu Item One</div>
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 2!')}">Submenu Item Two</div>
+            </div>
+        </div>
+        <div data-dojo-type="dijit.PopupMenuItem">
+            <span>Popup of something other than a menu</span>
+            <div data-dojo-type="dijit.ColorPalette"></div>
+        </div>
+    </div>
 
-    <span> Click anywhere on the page to see this menu.</span>
+    <span>Right click anywhere on this page to see a menu</span>
 
 Note that popup menus should be hidden via specifying style="display: none".
 Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).

@@ -241,11 +241,11 @@ This example shows you how to use a tree to build a navigation menu.
           });
 
           var navTree = new dijit.Tree({model: treeModel, showRoot: false }, "navTree")
-		  
-		  navTree.onClick = function(item){
-			  /* load the url from datastore */
-			  location.href = item.url;
-		  };
+
+          navTree.onClick = function(item){
+              /* load the url from datastore */
+              location.href = item.url;
+          };
        }
      
        dojo.ready(initTree);

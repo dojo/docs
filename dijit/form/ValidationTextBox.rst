@@ -109,13 +109,13 @@ The following code demonstrates a dynamic ValidationTextBox that only accepts a 
       dojo.require("dijit.form.ValidationTextBox");
       var after5 = function(constraints){
           var date=new Date();
-	  if(date.getHours() >= 17){
+          if(date.getHours() >= 17){
               return "\\d{5}";
           }else{
-		  return "\\D+";
-         }
-       }
-     </script>
+              return "\\D+";
+          }
+      }
+    </script>
 
   .. html ::
 

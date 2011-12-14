@@ -104,7 +104,7 @@ The following table outlines the use of the tabindex attribute:
 |                        | element (only form controls and   |                                     |
 |                        | anchors receive focus)            |                                     |
 +------------------------+-----------------------------------+-------------------------------------+
-| zero - tabindex="0"    | Yes	                             | In tab order relative to element's  |
+| zero - tabindex="0"    | Yes                               | In tab order relative to element's  |
 |                        |                                   | position in document                |
 |                        |                                   |                                     |
 +------------------------+-----------------------------------+-------------------------------------+
