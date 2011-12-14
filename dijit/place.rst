@@ -35,14 +35,14 @@ Note that the third argument should normally be true, unless the page is in RTL 
 
 The possible values for the position parameters (inside the array of the second argument) are:
 
-	* before: places drop down to the left of the anchor node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
-	* after: places drop down to the right of the anchor node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
-	* above-centered: drop down is centered above anchor node
-	* above: drop down goes above anchor node, left sides aligned
-	* above-alt: drop down goes above anchor node, right sides aligned
-	* below-centered: drop down is centered above anchor node
-	* below: drop down goes below anchor node
-	* below-alt: drop down goes below anchor node, right sides aligned
+* before: places drop down to the left of the anchor node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
+* after: places drop down to the right of the anchor node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
+* above-centered: drop down is centered above anchor node
+* above: drop down goes above anchor node, left sides aligned
+* above-alt: drop down goes above anchor node, right sides aligned
+* below-centered: drop down is centered above anchor node
+* below: drop down goes below anchor node
+* below-alt: drop down goes below anchor node, right sides aligned
 
 At
 ==
@@ -60,7 +60,7 @@ It picks a corner such that the menu can be displayed fully within the viewport:
 
 The possible values for the position parameter, which specifies the corner of the popup node, are:
 
-	* "BL" - bottom left
-	* "BR" - bottom right
-	* "TL" - top left
-	* "TR" - top right
+* "BL" - bottom left
+* "BR" - bottom right
+* "TL" - top left
+* "TR" - top right

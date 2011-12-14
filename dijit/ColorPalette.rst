@@ -87,7 +87,7 @@ Keyboard
 ===============   ===================
 Action            Key
 ===============   ===================
-Navigate colors	  Arrow keys
+Navigate colors   Arrow keys
 Pick a color      Spacebar or enter
 ===============   ===================
 

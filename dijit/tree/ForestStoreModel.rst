@@ -15,11 +15,11 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. html ::
 
-	<div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-		data-dojo-props="url:'_data/countries.json'"></div>
-	<div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-		data-dojo-props="store:continentStore, query:{type:'continent'},
-		rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+        data-dojo-props="url:'_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
+        data-dojo-props="store:continentStore, query:{type:'continent'},
+        rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
 
 A few things to note here:
@@ -43,17 +43,17 @@ For example:
 .. js ::
 
 
-	var model = new dijit.tree.ForestStoreModel({
-		store: continentStore,
-		query: {type: 'continent'},
-		rootLabel: "The World",
-		onNewItem: function(item, parentInfo){
-			if(this.store.getValue(item, 'type') == 'continent'){
-				this._requeryTop();
-			}
-			this.inherited(arguments);
-		}
-	});
+    var model = new dijit.tree.ForestStoreModel({
+        store: continentStore,
+        query: {type: 'continent'},
+        rootLabel: "The World",
+        onNewItem: function(item, parentInfo){
+            if(this.store.getValue(item, 'type') == 'continent'){
+                this._requeryTop();
+            }
+            this.inherited(arguments);
+        }
+    });
 
 
 Moving items to/from the root node

@@ -116,33 +116,33 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
   .. javascript::
 
-	<script type="text/javascript">
-		dojo.require("dijit._WidgetBase");
-		dojo.require("dijit._TemplatedMixin");
-		dojo.require("dojo.parser");
+    <script type="text/javascript">
+        dojo.require("dijit._WidgetBase");
+        dojo.require("dijit._TemplatedMixin");
+        dojo.require("dojo.parser");
 
-                dojo.ready(function(){
-                    dojo.declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
-				// counter
-				_i: 0,
+        dojo.ready(function(){
+            dojo.declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
+                // counter
+                _i: 0,
 
-				templateString:
-					"<div>" +
-						"<button data-dojo-attach-event='onclick: increment'>press me</button>" +
-						"&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
-					"</div>",
+                templateString:
+                    "<div>" +
+                        "<button data-dojo-attach-event='onclick: increment'>press me</button>" +
+                        "&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
+                    "</div>",
 
-				 increment: function(evt){
-				 	this.counter.innerHTML = ++this._i;
-				 }
-		    });
-                    dojo.parser.parse();
-                });
-        </script>
+                 increment: function(evt){
+                     this.counter.innerHTML = ++this._i;
+                 }
+            });
+            dojo.parser.parse();
+        });
+    </script>
 
   .. html::
 
-	<span data-dojo-type="FancyCounter">press me</span>
+    <span data-dojo-type="FancyCounter">press me</span>
 
 
 
@@ -170,26 +170,25 @@ For example:
   .. javascript::
 
     <script>
-		dojo.require("dijit._WidgetBase");
-		dojo.require("dijit._TemplatedMixin");
-		dojo.require("dojo.parser");
+        dojo.require("dijit._WidgetBase");
+        dojo.require("dijit._TemplatedMixin");
+        dojo.require("dojo.parser");
 
-                dojo.ready(function(){
-		        dojo.declare("MyButton",
-			[dijit._WidgetBase, dijit._TemplatedMixin], {
-				templateString:
-				    "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
-                                onClick: function(evt){
-                                        alert("Awesome!!");
-                                }
-			});
-                        dojo.parser.parse();
-                });
+        dojo.ready(function(){
+            dojo.declare("MyButton", [dijit._WidgetBase, dijit._TemplatedMixin], {
+                templateString:
+                    "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
+                onClick: function(evt){
+                        alert("Awesome!!");
+                }
+            });
+            dojo.parser.parse();
+        });
     </script>
 
   .. html::
 
-	<button data-dojo-type="MyButton">press me</button>
+    <button data-dojo-type="MyButton">press me</button>
 
 Substitution variables
 ----------------------

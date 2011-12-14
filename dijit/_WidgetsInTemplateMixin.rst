@@ -58,12 +58,18 @@ For example, consider InlineEditBox which embeds dijit buttons into it's own tem
 .. html ::
 
   <fieldset data-dojo-attach-point="editNode" role="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
-	data-dojo-attach-event="onkeypress: _onKeyPress"
-	><div data-dojo-attach-point="editorPlaceholder"></div
-	><span data-dojo-attach-point="buttonContainer"
-		><button class='saveButton' data-dojo-attach-point="saveButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">${buttonSave}</button
-		><button class='cancelButton' data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">${buttonCancel}</button
-	></span
+    data-dojo-attach-event="onkeypress: _onKeyPress"
+    ><div data-dojo-attach-point="editorPlaceholder"></div
+    ><span data-dojo-attach-point="buttonContainer"
+        ><button class='saveButton' data-dojo-attach-point="saveButton"
+                data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">
+            ${buttonSave}
+        </button
+        ><button class='cancelButton' data-dojo-attach-point="cancelButton"
+                data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">
+            ${buttonCancel}
+        </button
+    ></span
   ></fieldset>
 
 The onClick event on the dijit.form.Button will call InlineEditBox.save().

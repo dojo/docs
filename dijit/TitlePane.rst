@@ -49,8 +49,8 @@ Programmatic example
 
       var tp;
       dojo.ready(function(){
-	  tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
-          dojo.byId("holder").appendChild(tp.domNode);
+        tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
+            dojo.byId("holder").appendChild(tp.domNode);
       });
     </script>
 

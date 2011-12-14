@@ -27,12 +27,12 @@ The first example shows how to create a menu and drop down button programmatical
 
   .. js ::
 
-	<script type="text/javascript">
-	     dojo.require("dijit.form.Button");
-	     dojo.require("dijit.DropDownMenu");
-	     dojo.require("dijit.MenuItem");
-	</script>
-	<script type="text/javascript">
+    <script type="text/javascript">
+         dojo.require("dijit.form.Button");
+         dojo.require("dijit.DropDownMenu");
+         dojo.require("dijit.MenuItem");
+    </script>
+    <script type="text/javascript">
          dojo.ready(function(){
             var menu = new dijit.DropDownMenu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
@@ -56,7 +56,7 @@ The first example shows how to create a menu and drop down button programmatical
                 id: "progButton"
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
-	     });
+         });
     </script>
 
   .. html ::

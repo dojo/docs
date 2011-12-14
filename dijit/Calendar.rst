@@ -100,19 +100,19 @@ Javascript declaration, with a restriction of +/- one week from the current date
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit.Calendar");
+        dojo.require("dijit.dijit"); // loads the optimized dijit layer
+        dojo.require("dijit.Calendar");
 
-	dojo.ready(function(){
-		new dijit.Calendar({
-			value: new Date(),
-			isDisabledDate: function(d){
-				var d = new Date(d); d.setHours(0, 0, 0, 0);
-				var today = new Date(); today.setHours(0, 0, 0, 0);
-				return Math.abs(dojo.date.difference(d, today, "week")) > 0;
-			}
-		}, "mycal");
-	});
+        dojo.ready(function(){
+            new dijit.Calendar({
+                value: new Date(),
+                isDisabledDate: function(d){
+                    var d = new Date(d); d.setHours(0, 0, 0, 0);
+                    var today = new Date(); today.setHours(0, 0, 0, 0);
+                    return Math.abs(dojo.date.difference(d, today, "week")) > 0;
+                }
+            }, "mycal");
+        });
     </script>
 
   .. html::
@@ -149,13 +149,13 @@ Custom styling:
     
   .. css::
 
-	<style>
-		#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
-		#calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
-		#calendar5 .dijitCalendarDayLabel { font-weight: bold }
-		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
-		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
-	</style>
+    <style>
+        #calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
+        #calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
+        #calendar5 .dijitCalendarDayLabel { font-weight: bold }
+        #calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
+        #calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
+    </style>
         
 
 [1.4+] Non-Gregorian calendars:
@@ -195,7 +195,7 @@ Custom styling:
 
       formatDate = function(d){
         var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
-	dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
+    dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
           formatLength: 'long',
           selector: 'date'
         });

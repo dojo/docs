@@ -25,10 +25,10 @@ This example shows how to create a menu and combo button programmatically.
 
   .. js ::
 
-	<script type="text/javascript">
-          dojo.require("dijit.form.Button");
-          dojo.require("dijit.Menu");
-          dojo.ready(function(){
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Menu");
+        dojo.ready(function(){
             var menu = new dijit.Menu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
                 label: "Yahoo",
@@ -46,9 +46,9 @@ This example shows how to create a menu and combo button programmatically.
                 label: "get all mail",
                 dropDown: menu
             });
-             dojo.byId("myContainer").appendChild(button.domNode);
-	 });
-       </script>
+            dojo.byId("myContainer").appendChild(button.domNode);
+        });
+    </script>
 
   .. html ::
 
@@ -67,19 +67,19 @@ and the other for the drop-down widget that's displayed when you press the butto
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.DropDownMenu");
-      dojo.require("dijit.MenuItem");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.DropDownMenu");
+        dojo.require("dijit.MenuItem");
     </script>
 
   .. html ::
 
     <div data-dojo-type="dijit.form.ComboButton">
-      <span>get all mail</span>
-      <div data-dojo-type="dijit.DropDownMenu">
-        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('hi!')}">Yahoo</div>
-        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('ho!')}">Google</div>
-      </div>
+        <span>get all mail</span>
+        <div data-dojo-type="dijit.DropDownMenu">
+            <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('hi!')}">Yahoo</div>
+            <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('ho!')}">Google</div>
+        </div>
     </div>
 
 

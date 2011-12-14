@@ -73,9 +73,9 @@ Declarative example
   .. html ::
 
     <label for="date1">Drop down Date box:</label>
-	<input type="text" name="date1" id="date1" value="2005-12-30"
-		data-dojo-type="dijit.form.DateTextBox"
-		required="true" />
+    <input type="text" name="date1" id="date1" value="2005-12-30"
+        data-dojo-type="dijit.form.DateTextBox"
+        required="true" />
 
 
 
@@ -97,42 +97,42 @@ Here's an example:
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dijit.form.DateTextBox");
-		dojo.ready(function(){
-			dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
-				oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
-				value: "", // prevent parser from trying to convert to Date object
-				postMixInProperties: function(){ // change value string to Date object
-					this.inherited(arguments);
-					// convert value to Date object
-					this.value = dojo.date.locale.parse(this.value, this.oracleFormat);
-				},
-				// To write back to the server in Oracle format, override the serialize method:
-				serialize: function(dateObject, options){
-					return dojo.date.locale.format(dateObject, this.oracleFormat).toUpperCase();
-				}
-			});
-			function showServerValue(){
-				dojo.byId('toServerValue').value=document.getElementsByName('oracle')[0].value;
-			}
-			new OracleDateTextBox({
-				value: "31-DEC-2009",
-				name: "oracle",
-				onChange: function(v){ setTimeout(showServerValue, 0)}
-			}, "oracle");
-			showServerValue();
-		});
-	</script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.DateTextBox");
+        dojo.ready(function(){
+            dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
+                oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
+                value: "", // prevent parser from trying to convert to Date object
+                postMixInProperties: function(){ // change value string to Date object
+                    this.inherited(arguments);
+                    // convert value to Date object
+                    this.value = dojo.date.locale.parse(this.value, this.oracleFormat);
+                },
+                // To write back to the server in Oracle format, override the serialize method:
+                serialize: function(dateObject, options){
+                    return dojo.date.locale.format(dateObject, this.oracleFormat).toUpperCase();
+                }
+            });
+            function showServerValue(){
+                dojo.byId('toServerValue').value=document.getElementsByName('oracle')[0].value;
+            }
+            new OracleDateTextBox({
+                value: "31-DEC-2009",
+                name: "oracle",
+                onChange: function(v){ setTimeout(showServerValue, 0)}
+            }, "oracle");
+            showServerValue();
+        });
+    </script>
 
   .. html ::
 
-	<label for"fromServerValue">Oracle date coming from server:</label>
-	<input id="fromServerValue" readOnly disabled value="31-DEC-2009"/><br/>
-	<label for="oracle">Client date:</label>
-	<input id="oracle" /><br/>
-	<label for"toServerValue">Oracle date going back to server:</label>
-	<input id="toServerValue" readOnly disabled/>
+    <label for"fromServerValue">Oracle date coming from server:</label>
+    <input id="fromServerValue" readOnly disabled value="31-DEC-2009"/><br/>
+    <label for="oracle">Client date:</label>
+    <input id="oracle" /><br/>
+    <label for"toServerValue">Oracle date going back to server:</label>
+    <input id="toServerValue" readOnly disabled/>
 
 
 Changing Constraints on the Fly
@@ -147,18 +147,18 @@ and the second widget sets the `min` constraint of the first widget.
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dijit.form.DateTextBox");
-	</script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.DateTextBox");
+    </script>
 
   .. html ::
 
-	<label for="fromDate">From:</label>
-	<input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit.form.DateTextBox" required="true"
-		onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
-	<label for="toDate">To:</label>
-	<input id="toDate" type="text" name="toDate" data-dojo-type="dijit.form.DateTextBox" required="true"
-		onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
+    <label for="fromDate">From:</label>
+    <input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit.form.DateTextBox" required="true"
+        onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
+    <label for="toDate">To:</label>
+    <input id="toDate" type="text" name="toDate" data-dojo-type="dijit.form.DateTextBox" required="true"
+        onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
 
 
 Working with Two-Digit Years
@@ -173,20 +173,20 @@ The catch is that this can only be set after the widget has been created.
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dijit.form.DateTextBox");
-		function setShortYear(){
-			var w = dijit.byId('shortYear');
-			w.constraints.fullYear = false;
-			w.set('value', w.get('value')); // reformat display to short year
-		}
-		dojo.ready(setShortYear);
-	</script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.DateTextBox");
+        function setShortYear(){
+            var w = dijit.byId('shortYear');
+            w.constraints.fullYear = false;
+            w.set('value', w.get('value')); // reformat display to short year
+        }
+        dojo.ready(setShortYear);
+    </script>
 
   .. html ::
 
-	<label for="shortYear">From:</label>
-	<input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
+    <label for="shortYear">From:</label>
+    <input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
 
 Accessibility
 =============

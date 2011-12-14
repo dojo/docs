@@ -13,11 +13,11 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. html ::
 
-	<div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="store"
-		data-dojo-props="url:'../tests/_data/treeTest.json'></div>
-	<div data-dojo-type="dijit.tree.TreeStoreModel" data-dojo-id="model"
-		data-dojo-props="childrenAttrs:'kids',
-		store:store, query:{id:'root'}"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="store"
+        data-dojo-props="url:'../tests/_data/treeTest.json'></div>
+    <div data-dojo-type="dijit.tree.TreeStoreModel" data-dojo-id="model"
+        data-dojo-props="childrenAttrs:'kids',
+        store:store, query:{id:'root'}"></div>
 
 A few things to note here:
 
@@ -30,12 +30,12 @@ data store a child references it's parent rather than vice-versa.
 
 .. html ::
 
-	<div data-dojo-type="dijit.tree.TreeStoreModel" data-dojo-id="model" data-dojo-props="store:store">
-		<script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">
-			return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
-		</script>
-		<script type="dojo/method" data-dojo-event="mayHaveChildren" data-dojo-args="item">
-			var type = store.getValue(item, "type");
-			return (type == "continent" || type == "country");
-		</script>
-	</div>
+    <div data-dojo-type="dijit.tree.TreeStoreModel" data-dojo-id="model" data-dojo-props="store:store">
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">
+            return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
+        </script>
+        <script type="dojo/method" data-dojo-event="mayHaveChildren" data-dojo-args="item">
+            var type = store.getValue(item, "type");
+            return (type == "continent" || type == "country");
+        </script>
+    </div>

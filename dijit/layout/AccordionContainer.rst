@@ -31,26 +31,26 @@ Programmatic example
   .. js ::
 
     <script type="text/javascript">
-	dojo.require("dijit.layout.AccordionContainer");
-	dojo.require("dijit.layout.ContentPane");
+        dojo.require("dijit.layout.AccordionContainer");
+        dojo.require("dijit.layout.ContentPane");
 
-	dojo.ready(function(){
-	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
+        dojo.ready(function(){
+          var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
 
-	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This is a content pane",
-				content:"Hi!"
-	  }));
-	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This is as well",
-				content:"Hi how are you?"
+          aContainer.addChild(new dijit.layout.ContentPane({
+                    title:"This is a content pane",
+                    content:"Hi!"
           }));
-	  aContainer.addChild(new dijit.layout.ContentPane({
-				title:"This too",
-				content:"Hello im fine.. thnx"
-	  }));
-	  aContainer.startup();
-      });
+          aContainer.addChild(new dijit.layout.ContentPane({
+                    title:"This is as well",
+                    content:"Hi how are you?"
+              }));
+          aContainer.addChild(new dijit.layout.ContentPane({
+                    title:"This too",
+                    content:"Hello im fine.. thnx"
+          }));
+          aContainer.startup();
+        });
     </script>
 
   .. html ::

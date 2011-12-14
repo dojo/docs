@@ -51,8 +51,8 @@ Declarative example
 
         <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
         <input type="text" name="firstname" value="testing testing"
-		data-dojo-type="dijit.form.TextBox"
-		data-dojo-props="trim:true, propercase:true" id="firstname">
+            data-dojo-type="dijit.form.TextBox"
+            data-dojo-props="trim:true, propercase:true" id="firstname">
 
   
 Sizing TextBoxes

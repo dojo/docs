@@ -31,23 +31,23 @@ In this example, we borrow some of the toolbar buttons from the Editor.
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dijit.Toolbar");
-      dojo.require("dijit.form.Button");
+        dojo.require("dijit.Toolbar");
+        dojo.require("dijit.form.Button");
 
-      var toolbar;
-      dojo.ready(function(){
-	  toolbar = new dijit.Toolbar({}, "toolbar");
-	  dojo.forEach(["Cut", "Copy", "Paste"], function(label){
-		var button = new dijit.form.Button({
-                        // note: should always specify a label, for accessibility reasons.
-                        // Just set showLabel=false if you don't want it to be displayed normally
-                        label: label,
-                        showLabel: false,
-                        iconClass: "dijitEditorIcon dijitEditorIcon"+label
+        var toolbar;
+        dojo.ready(function(){
+            toolbar = new dijit.Toolbar({}, "toolbar");
+            dojo.forEach(["Cut", "Copy", "Paste"], function(label){
+                var button = new dijit.form.Button({
+                    // note: should always specify a label, for accessibility reasons.
+                    // Just set showLabel=false if you don't want it to be displayed normally
+                    label: label,
+                    showLabel: false,
+                    iconClass: "dijitEditorIcon dijitEditorIcon"+label
                 });
                 toolbar.addChild(button);
-          });
-      });
+            });
+        });
     </script>
 
   .. html ::
@@ -107,19 +107,19 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
 
   .. html ::
 
-	<div id="fancy" data-dojo-type="dijit.Toolbar">
-		<div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
-			<span>Color</span>
-			<div data-dojo-type="dijit.ColorPalette"></div>
-		</div>
-		<div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
-			<span>Dialog</span>
-			<div data-dojo-type="dijit.TooltipDialog">
-				<label for="first">First name:</label> <input data-dojo-type="dijit.form.TextBox" name="first" id="first"/>
-                                <br/>
-				<label for="last">Last name:</label> <input data-dojo-type="dijit.form.TextBox" name="last" id="last"/>
-			</div>
-		</div>
+    <div id="fancy" data-dojo-type="dijit.Toolbar">
+        <div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
+            <span>Color</span>
+            <div data-dojo-type="dijit.ColorPalette"></div>
+        </div>
+        <div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
+            <span>Dialog</span>
+            <div data-dojo-type="dijit.TooltipDialog">
+                <label for="first">First name:</label> <input data-dojo-type="dijit.form.TextBox" name="first" id="first"/>
+                <br/>
+                <label for="last">Last name:</label> <input data-dojo-type="dijit.form.TextBox" name="last" id="last"/>
+            </div>
+        </div>
         </div>
 
 (The icons are no good but hopefully convey the idea.)

@@ -36,20 +36,20 @@ In this example using USD, both dollars and cents are required.
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dijit.form.CurrencyTextBox");
-	</script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.CurrencyTextBox");
+    </script>
 
   .. html ::
 
     <label for="income1">U.S. Dollars</label>
-	<input type="text" name="income1" id="income1" value="54775.53"
-		data-dojo-type="dijit.form.CurrencyTextBox"
-		data-dojo-props="required:true,
-		constraints:{fractional:true},
-		currency:'USD',
+    <input type="text" name="income1" id="income1" value="54775.53"
+        data-dojo-type="dijit.form.CurrencyTextBox"
+        data-dojo-props="required:true,
+        constraints:{fractional:true},
+        currency:'USD',
                 value:'54775.53',
-		invalidMessage:'Invalid amount. Cents are required.'">
+        invalidMessage:'Invalid amount. Cents are required.'">
 
 
 
@@ -62,28 +62,28 @@ In this example using euros with German formatting, the invalid message contains
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dijit.form.CurrencyTextBox");
-		dojo.require("dojo.currency");
-		dojo.requireLocalization("dojo.cldr", "currency", 'de-de');
-		dojo.requireLocalization("dojo.cldr", "number", 'de-de');
-		function createWidget(){
-			var example = dojo.currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
-			var props = {
-				value: 54775.53,
-				lang: 'de-de',
-				currency: "EUR",
-				invalidMessage: "Invalid amount.  Example: " + example
-			};
-			new dijit.form.CurrencyTextBox(props, "eurde");
-		}
-		dojo.ready(createWidget);
-	</script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.CurrencyTextBox");
+        dojo.require("dojo.currency");
+        dojo.requireLocalization("dojo.cldr", "currency", 'de-de');
+        dojo.requireLocalization("dojo.cldr", "number", 'de-de');
+        function createWidget(){
+            var example = dojo.currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+            var props = {
+                value: 54775.53,
+                lang: 'de-de',
+                currency: "EUR",
+                invalidMessage: "Invalid amount.  Example: " + example
+            };
+            new dijit.form.CurrencyTextBox(props, "eurde");
+        }
+        dojo.ready(createWidget);
+    </script>
 
   .. html ::
 
-	<label for="eurde">euros (lang: de-de):</label>
-	<input id="eurde">EUR
+    <label for="eurde">euros (lang: de-de):</label>
+    <input id="eurde">EUR
         
 
 Accessibility

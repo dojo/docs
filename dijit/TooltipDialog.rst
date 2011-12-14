@@ -35,18 +35,18 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
   .. js ::
 
-	<script type="text/javascript">
-          dojo.require("dijit.form.DropDownButton");
-          dojo.require("dijit.TooltipDialog");
-          dojo.require("dijit.form.TextBox");
-          dojo.require("dijit.form.Button");
+    <script type="text/javascript">
+        dojo.require("dijit.form.DropDownButton");
+        dojo.require("dijit.TooltipDialog");
+        dojo.require("dijit.form.TextBox");
+        dojo.require("dijit.form.Button");
 
-          dojo.ready(function(){
+        dojo.ready(function(){
             var dialog = new dijit.TooltipDialog({
-               content:
-                 '<label for="name">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name" name="name"><br>' +
-                 '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
-                 '<button data-dojo-type="dijit.form.Button" type="submit">Save</button>'
+                content:
+                    '<label for="name">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name" name="name"><br>' +
+                    '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
+                    '<button data-dojo-type="dijit.form.Button" type="submit">Save</button>'
             });
  
             var button = new dijit.form.DropDownButton({
@@ -54,8 +54,8 @@ The first example shows how to create a TooltipDialog and DropDownButton program
                 dropDown: dialog
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
-	 });
-       </script>
+        });
+    </script>
 
   .. html ::
 
@@ -67,27 +67,27 @@ A TooltipDialog may be popped up from any node.
 
   .. js ::
 
-	<script type="text/javascript">
-          dojo.require("dijit.TooltipDialog");
+    <script type="text/javascript">
+        dojo.require("dijit.TooltipDialog");
 
-          dojo.ready(function(){
-              var myTooltipDialog = new dijit.TooltipDialog({
-                  id: 'myTooltipDialog',
-                  style: "width: 300px;",
-                  content: "<p>I have a mouse leave event handler that will close the dialog.",
-                  onMouseLeave: function(){
-                      dijit.popup.close(myTooltipDialog);
-                  }
-              });
+        dojo.ready(function(){
+            var myTooltipDialog = new dijit.TooltipDialog({
+                id: 'myTooltipDialog',
+                style: "width: 300px;",
+                content: "<p>I have a mouse leave event handler that will close the dialog.",
+                onMouseLeave: function(){
+                    dijit.popup.close(myTooltipDialog);
+                }
+            });
               
-              dojo.connect(dojo.byId('thenode'), 'onmouseenter', function(){
-                  dijit.popup.open({
+            dojo.connect(dojo.byId('thenode'), 'onmouseenter', function(){
+                dijit.popup.open({
                     popup: myTooltipDialog,
                     around: dojo.byId('thenode')
-                  });
-              });
-	 });
-       </script>
+                });
+            });
+        });
+    </script>
 
   .. html ::
 
@@ -135,8 +135,8 @@ Keyboard
 ============================================================    =================================================
 Action                                                          Key
 ============================================================    =================================================
-Navigate to next focusable element in the tooltip dialog	    tab
-Navigate to previous focusable element in the tooltip dialog	shift-tab
+Navigate to next focusable element in the tooltip dialog        tab
+Navigate to previous focusable element in the tooltip dialog    shift-tab
 Close the tooltip dialog                                        escape
 ============================================================    =================================================
 

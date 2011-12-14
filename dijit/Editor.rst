@@ -74,14 +74,28 @@ Programmatic example
 Of course, the editor can be created programmatically in addition to declaratively,
 although even when created programmatically you need to specify a source DOM node to replace:
 
-.. html ::
+.. code-example ::
+
+  .. js ::
+
+    <script type="text/javascript">
+        dojo.require("dijit.Editor");
+        dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+        function create(){
+            new dijit.Editor({
+                height: '',
+                extraPlugins: [dijit._editor.plugins.AlwaysShowToolbar]
+            }, dojo.byId('programmatic2'));
+            dojo.query('#create2').orphan();
+        }
+    </script>
+
+  .. html ::
  
-	<div id="programmatic2">This div will become an auto-expanding editor.</div>
-	<button
-		id="create2"
-		onclick="new dijit.Editor({height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}, dojo.byId('programmatic2')); dojo.query('#create2').orphan();">
-	create expanding editor
-	</button>
+    <div id="programmatic2">This div will become an auto-expanding editor.</div>
+    <button id="create2" onclick="create();">
+        create expanding editor
+    </button>
 
 
 Declarative example: Custom Toolbar
@@ -142,7 +156,7 @@ This example adds the text color, background color, and font selection plugins t
   .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor2"
-	data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}],
+    data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}],
         onChange:function(){console.log('editor2 onChange handler: ' + arguments[0])}">
         <p>This instance is created with additional toolbar/ plugins</p>
       </div>
@@ -161,7 +175,7 @@ This example starts from scratch, thus removing some items from the toolbar (as 
   .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor3"
-	data-dojo-props="plugins:['bold','italic','|','createLink'],
+    data-dojo-props="plugins:['bold','italic','|','createLink'],
         onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
         <p>This instance is created with customized toolbar/ plugins</p>
       </div>
@@ -277,11 +291,11 @@ It's used along with setting height="" parameter setting.
   .. html ::
 
         <div data-dojo-type="dijit.Editor" id="editor5"
-	   data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
-			<p>
-				This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
-			</p>
-	</div>
+       data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
+            <p>
+                This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
+            </p>
+    </div>
 
 
 Accessibility (1.0 and later versions)
@@ -291,10 +305,10 @@ Keyboard for Editor
 -------------------
 
 ====================================================================    ======================================================================
-Action	                                                                Key
+Action                                                                    Key
 ====================================================================    ======================================================================
-Move focus to the next widget in the tab order.	                        Tab (must press tab twice in some situations - see Known Issues below)
-Move focus to the prior widget in the tab order (the editor toolbar)	Shift+Tab (must press shift-tab twice in some situations - see Known Issues below)
+Move focus to the next widget in the tab order.                            Tab (must press tab twice in some situations - see Known Issues below)
+Move focus to the prior widget in the tab order (the editor toolbar)    Shift+Tab (must press shift-tab twice in some situations - see Known Issues below)
 ====================================================================    ======================================================================
 
 
@@ -302,10 +316,10 @@ Keyboard for Editor Toolbar
 ---------------------------
 
 ====================================================================    ======================================================================
-Action	                                                                Key
+Action                                                                    Key
 ====================================================================    ======================================================================
-Move focus to the next enabled button in the toolbar.	                Arrow right in left to right locales, arrow left in right to left locales
-Move focus to the previous widget in the toolbar	                    Arrow left in left to right locales; arrow right in right to left locales.
+Move focus to the next enabled button in the toolbar.                    Arrow right in left to right locales, arrow left in right to left locales
+Move focus to the previous widget in the toolbar                        Arrow left in left to right locales; arrow right in right to left locales.
 ====================================================================    ======================================================================
 
 The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated.
