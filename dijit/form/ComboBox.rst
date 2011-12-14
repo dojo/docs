@@ -16,42 +16,67 @@ The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.
 Usage
 =====
 
-Like a SELECT combo-box, you provide a list of acceptable values.
-But like an INPUT text field, the user can also type whatever they want.
+Like a SELECT combo-box, you provide a list of values.
+However, this is merely a list of suggestions.
+Like an INPUT text field, the user can type whatever text they want, regardless of whether or not it's in the drop down
+menu.
 As the user types, partially matched values will be shown in a pop-up menu below the INPUT text box.
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
 
-ComboBox widgets are dojo.data-enabled.
-This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store.
-The unified dojo.data architecture can get its data from various places such as databases and web services.
-See the :ref:`dojo.data <dojo/data>` section for complete details.
+ComboBox widgets are :ref:`dojo.store <dojo/store>`-enabled.
+This means rather than embedding all the OPTION tags within the page,
+you can have dojo.store fetch them from a server-based store.
+The unified dojo.store architecture can get its data from various places such as databases and web services.
+See the :ref:`dojo.store <dojo/store>` section for complete details.
 
-`Note:` ComboBox only has a single value that matches what is displayed while :ref:`FilteringSelect <dijit/form/FilteringSelect>` incorporates a hidden value that corresponds to the displayed value.
+`Note:` ComboBox only has a single value that matches what is displayed
+while :ref:`FilteringSelect <dijit/form/FilteringSelect>`
+incorporates a hidden value that corresponds to the displayed value.
 
 Examples
 ========
 
-Programmatic example using a data store
+Programmatic example using a dojo.store
 ---------------------------------------
 
-To set the default value for a programmatic ComboBox, include the *value* attribute in the attribute list passed to the constructor.
+To set the default value for a programmatic ComboBox,
+include the *value* attribute in the attribute list passed to the constructor.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dijit.form.ComboBox");
-      dojo.require("dojo.data.ItemFileReadStore");
-    </script>
+        require([
+            "dojo/ready", "dojo/store/Memory", "dijit/form/ComboBox"
+        ], function(ready, Memory, ComboBox){
+            var stateStore = new Memory({
+                data: [
+                    {name:"Alabama", id:"AL"},
+                    {name:"Alaska", id:"AK"},
+                    {name:"American Samoa", id:"AS"},
+                    {name:"Arizona", id:"AZ"},
+                    {name:"Arkansas", id:"AR"},
+                    {name:"Armed Forces Europe", id:"AE"},
+                    {name:"Armed Forces Pacific", id:"AP"},
+                    {name:"Armed Forces the Americas", id:"AA"},
+                    {name:"California", id:"CA"},
+                    {name:"Colorado", id:"CO"},
+                    {name:"Connecticut", id:"CT"},
+                    {name:"Delaware", id:"DE"}
+                ]
+            });
 
-     <script type="text/javascript">
-      dojo.ready(function(){
-        var stateStore = new dojo.data.ItemFileReadStore({url: "{{dataUrl}}/dijit/tests/_data/states.json"});
-        var filteringSelect = new dijit.form.ComboBox({id: "stateSelect", name: "state", value: "Kentucky", store: stateStore, searchAttr: "name"}, "stateSelect");
-      });
-    </script>
+            ready(function(){
+                var comboBox = new ComboBox({
+                    id: "stateSelect",
+                    name: "state",
+                    value: "California",
+                    store: stateStore,
+                    searchAttr: "name"
+                }, "stateSelect");
+            });
+        });
 
   .. html ::
 
@@ -83,7 +108,7 @@ To set the default value when using OPTION tags, specify the *selected* attribut
     </select>
 
 
-Declarative markup using a data store
+Declarative markup using a dojo.store
 -------------------------------------
 
 To set the default value for this example, specify the *value* attribute in the markup.
@@ -93,26 +118,28 @@ To set the default value for this example, specify the *value* attribute in the 
   .. js ::
 
     <script type="text/javascript">
-      dojo.require("dijit.form.ComboBox");
-      dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.store.Memory");
     </script>
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
-        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
-    <input data-dojo-type="dijit.form.ComboBox"
-                value="Kentucky"
-                store="stateStore"
-                searchAttr="name"
-                name="state"
-                id="stateInput">
+    <div data-dojo-type="dojo.store.Memory"
+        data-dojo-id="stateStore"
+        data-dojo-props="data: [{id: 'y', name: 'yes'}, {id: 'n', name: 'no'}]"></div>
+    <input data-dojo-type="dijit.form.FilteringSelect"
+        value="y"
+        data-dojo-props="store:stateStore, searchAttr:'name'"
+        name="state"
+        id="stateInput">
 
 
 Codependent FilteringSelect/ComboBox widgets
 --------------------------------------------
 
-:ref:`The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example. <dijit/form/FilteringSelect>`
+See an example where the city ComboBox sets the state FilteringSelect value,
+and the state FilteringSelect filters the city ComboBox choices, on the
+:ref:`dijit.form.FilteringSelect <dijit/form/FilteringSelect>` page.
 
 
 Accessibility
