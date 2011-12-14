@@ -31,7 +31,7 @@ loader. Most of the legacy implementation resides in dojo/_kernel/loader. What l
 bleeds into the AMD loader in dojo.js is carefully has-bracketed so it can be stripped in builds of applications that
 don't need it.
 
-The functions dojo.require and dojo.provide define the core of the legacy API. Each of these take a module identifier
+The functions dojo.require and dojo.provide define the core of the legacy API. Each of these takes a module identifier
 that is identical to an absolute AMD module identifier except that dots are used instead of forward slashes; the legacy
 API does not support relative module identifiers. dojo.provide's implementation is trivial, but it does include a subtle
 feature that's important to understand. Here is the v1.6- implementation of dojo.provide in its entirety:
@@ -448,7 +448,7 @@ I completely buy into it's utility. If you're doing development, you're going to
 the Dojo Toolkit and work off a local environment; ergo, no cross domain problems. Once you're ready to deploy, do a
 build which results in converting the application to a 100% AMD-compliant set of modules that can be loaded
 asynchronously. Then you can and use one of the CDNs to load the dojo and dijit libraries leaving just your application
-code for your own server. Everything is loaded asynchronously via script injection so there's no cross-domain XHR
+code for your own server. Everything is loaded asynchronously via script injection so there are no cross-domain XHR
 limitations.
 
 But, if you have a use case that you just can't do without (or are curious), take a deep breath, here we go.
