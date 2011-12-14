@@ -24,7 +24,11 @@ rather than parents having a list of their children:
  {name: 'folder1', type: 'directory', children: ['file1']}
 
 
-There are two model implementations included with Tree:
+Dijit includes a model implementation that interfaces to the new :ref:`dojo.store <dojo/store>` API:
+
+  * :ref:`dijit.tree.ObjectStoreModel <dijit/tree/ObjectStoreModel>`: interface to a dojo.store.
+
+It also includes two legacy models for interfacing to the deprecated :ref:`dojo.data <dojo/data>`:
 
   * :ref:`dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>`: interface to a data store with a single item that represents the root of the tree.  For example, a data store of employees where the root is the CEO of the company.
   * :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`: interface to a data store with multiple top level items.  For example, a data store of places (countries, states, cities).  If the data store doesn't have a single root item ("world" in this example) then ForestStoreModel is the interface for it.
