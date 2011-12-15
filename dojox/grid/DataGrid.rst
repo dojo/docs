@@ -146,7 +146,7 @@ formatter
 get
   A JavaScript function that is called which returns the value to be shown in the cell.  The function is passed two parameters.  The first is the row index in the DataGrid.  The second is the DataStore record/item.  Given these two parameters, the function is expected to know what to return.  It should *not* be a dijit Widget as that is not parsed.  Care should be taken that the ``item`` parameter is not null.  Tests have shown that the function may be called more often than it should be and this is highlighted with an ``item = null``.
 hidden
-  This boolean property can be used to hide a column in the table.  If its value is ``true`` the column is hidden.  If ``false`` the column is displayed.
+  This boolean property can be used to hide a column in the table.  If its value is ``true`` the column is hidden.  If ``false`` the column is displayed. You can toggle column visibility using ``grid.layout.setColumnVisibility(/* int */columnIndex, /* bool */ visible)``
 
 The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
 
