@@ -102,7 +102,7 @@ Example
                 model = new ObjectStoreModel({store: store, query: {id: 'world'}});
                 tree = new Tree({
                     model: model,
-                    dndController: dijit.tree.dndSource
+                    dndController: dndSource
                 }).placeAt(dojo.body());
             });
         });

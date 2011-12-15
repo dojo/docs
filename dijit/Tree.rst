@@ -100,63 +100,120 @@ Creating a programmatic tree is very simple:
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
+        require([
+            "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree"
+        ], function(ready, win, Memory, ObjectStoreModel, Tree){
 
-      dojo.ready(function(){
-        var store = new dojo.data.ItemFileReadStore({
-            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
+            // Create test store.
+            var store = new Memory({
+                data: [
+                    { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                    { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                            timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                        { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                        { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                            { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                            { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                        { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                            { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                    { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                        { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                        { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                        { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                        { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                    { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                    { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                        { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                        { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                        { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                        { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                    { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                    { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+                ]
+            });
+
+            // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
+            store.getChildren = function(object){
+                // Add a getChildren() method to store for the data model where
+                // children objects point to their parent (aka relational model)
+                return this.query({parent: this.getIdentity(object)});
+            };
+
+            // Create the model
+            var model = new ObjectStoreModel({store: store, query: {id: 'world'}});
+
+            // Create the Tree.   Note that all widget creation should be inside a dojo.ready().
+            ready(function(){
+                var tree = new Tree({
+                    model: model
+                });
+                tree.placeAt(win.body());
+            });
         });
-        
-        var treeModel = new dijit.tree.ForestStoreModel({
-            store: store,
-            query: {"type": "continent"},
-            rootId: "root",
-            rootLabel: "Continents",
-            childrenAttrs: ["children"]
-        });
-        
-        new dijit.Tree({
-            model: treeModel
-        }, "treeOne");
-      });
-    </script>
-
-  .. html ::
-
-    <div id="treeOne"></div>
-
-Note that the childrenAttrs parameter to TreeStoreModel/ForestStoreModel is an array since it can list multiple attributes in the store.
 
 
 A markup tree
 -------------
 
+Here's an example of creating a Tree in markup.
+It's not wrapping the store in Observable(), so that store updates won't be reflected into the tree.
+(Wrapping the store in Observable is not easy to do through markup.
+If you need the functionality, we suggest creating the store in javascript, or create your own custom store.
+In any case, the dijit.tree.Model and dijit.Tree themselves can still be created in markup.)
+
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
-    </script>
+        dojo.require("dojo.store.Memory");
+        dojo.require("dijit.tree.ObjectStoreModel");
+        dojo.require("dijit.Tree");
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-
-    <div data-dojo-type="dijit.Tree" id="mytree"
-      data-dojo-props="model:continentModel, openOnClick:true">
-      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
-        alert("Execute of node " + continentStore.getLabel(item)
-            +", population=" + continentStore.getValue(item, "population"));
-      </script>
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+        <!-- Create store with inlined data.
+            For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
+        <script type="dojo/method">
+             this.setData([
+                { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                        timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                    { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                    { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                        { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                        { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                    { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                        { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                    { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                    { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                    { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                    { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                    { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                    { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                    { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                    { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+            ]);
+        </script>
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+             // Supply a getChildren() method to store for the data model where
+             // children objects point to their parent (aka relational model)
+             return this.query({parent: this.getIdentity(object)});
+        </script>
     </div>
+
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit.Tree" id="mytree" data-dojo-props="model: myModel"></div>
 
 
 Icons
@@ -214,11 +271,12 @@ Hiding a Tree's root node
 
 There's always a single root item for a Tree, returned by the model's getRoot() method.
 It might be a real item from the store (such as a tree of employees, with the CEO as the root),
-or it if there's no single root item in the store (like if the store lists continents but the top item, "the world", is implied, the model is responsible for fabricating such a root item (from the perspective of the tree).
+or it if there's no single root item in the store (like if the store lists continents but the top item,
+"the world", is implied, the model is responsible for fabricating such a root item (from the perspective of the tree).
 
 Correspondingly, all trees have a root node, corresponding to the root "item" from the model.
 
-Sometimes you don't want that "the world" top level node to show up,
+Sometimes you don't want that "the world" top level node to be displayed,
 especially if the Tree is inside a TitlePane/AccordionPane/etc. with the label "The World".
 In that case you should set showRoot=false.
 The item still exists in the model but it's hidden on the screen:
@@ -227,47 +285,158 @@ The item still exists in the model but it's hidden on the screen:
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
-    </script>
+    dojo.require("dojo.store.Memory");
+    dojo.require("dijit.tree.ObjectStoreModel");
+    dojo.require("dijit.Tree");
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-    
-    <div data-dojo-type="dijit.Tree" id="mytree2"
-      data-dojo-props="model:continentModel, showRoot:false">
+    <!-- Create store with inlined data.
+        For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+        <script type="dojo/method">
+             this.setData([
+                { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                        timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                    { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                    { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                        { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                        { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                    { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                        { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                    { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                    { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                    { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                    { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                    { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                    { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                    { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                    { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+            ]);
+        </script>
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+             // Supply a getChildren() method to store for the data model where
+             // children objects point to their parent (aka relational model)
+             return this.query({parent: this.getIdentity(object)});
+        </script>
     </div>
 
-Note that you can hide or show the root item regardless of whether that root item is fabricated or corresponds to a real item in the store.
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit.Tree" id="mytree"
+            data-dojo-props="model: myModel, showRoot: false"></div>
+
+
+Note that you can hide or show the root item regardless of whether that root item is fabricated
+(see :ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`)
+or corresponds to a real item in the store.
 
 Updating a Tree
 ===============
 
 People often ask:
 
-  * How do I update a tree (adding or deleting items)?
+How do I update a tree (adding or deleting items)?
+--------------------------------------------------
 
 You can't update the tree directly, but rather you need to update the model.
 Usually the model is connected to a data store and in that case you need to update the data store.
-Thus, you need to use a data store that allows updates (through its official API), like :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
+Thus, you need to use a data store that allows updates (through its official API),
+like :ref:`dojo.store.Memory <dojo/store/Memory>`.
 
-  * How do I refresh a Tree from the store?
+When using :ref:`dijit.tree.ObjectStoreModel <dijit/tree/ObjectStoreModel>`, the store needs to be wrapped
+in a `dojo.store.Observable <dojo/store/Observable>`, as below:
+
+.. code-example ::
+
+  .. js ::
+
+        require([
+            "dojo/store/Memory", "dojo/store/Observable",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree"
+        ], function(Memory, Observable, ObjectStoreModel, Tree){
+            // Create test store.
+            myStore = new Memory({
+                data: [
+                    { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                    { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                            timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                        { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                        { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                            { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                            { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                        { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                            { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                    { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                        { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                        { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                        { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                        { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                    { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                    { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                        { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                        { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                        { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                        { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                    { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                    { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+                ]
+            });
+
+            // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
+            myStore.getChildren = function(object){
+                // Add a getChildren() method to store for the data model where
+                // children objects point to their parent (aka relational model)
+                return this.query({parent: this.getIdentity(object)});
+            };
+
+            // Wrap the store in Observable so that updates to the store are reflected to the Tree
+            myStore = new Observable(myStore);
+        });
+
+  .. html ::
+
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit.Tree" id="mytree" data-dojo-props="model: myModel"></div>
+
+    <!-- Buttons to show data store update -->
+    <button onclick="myStore.add({id: 'US', name:'United States', type:'country', parent: 'NA'});">
+        Add U.S. as child of North America
+    </button>
+    <button onclick="myStore.remove('EU');">
+        Remove Europe
+    </button>
+
+
+How do I refresh a Tree from the store?
+---------------------------------------
 
 This isn't supported.
 The store needs to notify the tree of any changes to the data.
-Currently this is really only supported (out of the box) by :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`,
-as setting up a client-server dojo.data source where the server notifies the client whenever the data has changed is quite complicated, and beyond the scope of dojo, which is a client-only solution.
+Currently this is really only supported (out of the box) by a :ref:`dojo.store <dojo/store>`
+wrapped in a `dojo.store.Observable <dojo/store/Observable>`, or by
+:ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
+
+Setting up a client-server dojo.data source where the server notifies the client whenever the data has changed
+is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
 Lazy Loading a Tree
 ===================
 People often ask how to lazy-load a tree, but this question is really unrelated to the Tree itself.
-If you use a data store that is lazy loading, such as :ref:`dojox.data.QueryReadStore <dojox/data/QueryReadStore>` or :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`,
+If you use a data store that is lazy loading, such as :ref:`dojo.store.JsonRest <dojo/store/JsonRest>`
 then the data will be loaded lazily.
 
 
@@ -280,49 +449,94 @@ Tree's support drag and drop, meaning that a user can:
   * drag an item from the tree
   * move items within the tree
 
-In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model, which in turn sends it to the data store (updating the underlying data).
+In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model,
+which in turn sends it to the data store (updating the underlying data).
 Thus:
 
   * the model must implement the pasteItem() method
-  * the store must implement the :ref:`dojo.data.api.Write <dojo/data/api/Write>` interface
+  * the store must implement put(), and Observable.
 
-In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSource"); and the dndController="dijit.tree.dndSource" parameter must be specified to the tree
-
+In addition, to enable DnD on the Tree you must require "dijit.tree.dndSource"
+and the dndController="dijit.tree.dndSource" parameter must be specified to the tree.
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.tree.ForestStoreModel");
-      dojo.require("dijit.tree.dndSource");
-      dojo.require("dijit.Tree");
+        require([
+            "dojo/aspect", "dojo/ready", "dojo/store/Memory", "dojo/store/Observable",
+            "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
+        ], function(aspect, ready, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
-      dojo.ready(function(){
-        var store = new dojo.data.ItemFileWriteStore({
-            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
+            ready(function(){
+                // Create test store.
+                store = new Memory({
+                    data: [
+                        { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                        { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                                timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                            { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                            { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                                { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                                { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                            { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                                { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                        { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                            { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                            { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                            { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                            { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                        { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                            { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
+                        { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                            { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                            { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                            { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                            { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                        { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                            { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
+                                    parent: 'NA' },
+                                { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
+                                { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
+                            { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
+                                { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
+                                { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
+                            { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
+                        { id: 'SA', name:'South America', type:'continent', parent: 'world' },
+                            { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
+                            { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
+                    ]
+                });
+
+                // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
+                store.getChildren = function(object){
+                    // Add a getChildren() method to store for the data model where
+                    // children objects point to their parent (aka relational model)
+                    return this.query({parent: this.getIdentity(object)});
+                };
+                aspect.around(store, "put", function(originalPut){
+                    // To support DnD, the store must support put(child, {parent: parent}).
+                    // Since our store is relational, that just amounts to setting child.parent
+                    // to the parent's id.
+                    return function(obj, options){
+                        if(options && options.parent){
+                            obj.parent = options.parent.id;
+                        }
+                        return originalPut.call(store, obj, options);
+                    }
+                });
+
+                // Wrap the store in Observable so that updates to the store are reflected to the Tree
+                store = new Observable(store);
+
+                // Create the model and tree
+                model = new ObjectStoreModel({store: store, query: {id: 'world'}});
+                tree = new Tree({
+                    model: model,
+                    dndController: dndSource
+                }).placeAt(dojo.body());
+            });
         });
-        
-        var treeModel = new dijit.tree.ForestStoreModel({
-            store: store,
-            query: {"type": "continent"},
-            rootId: "root",
-            rootLabel: "Continents",
-            childrenAttrs: ["children"]
-        });
-        
-        new dijit.Tree({
-            model: treeModel,
-            dndController: "dijit.tree.dndSource"
-        }, "treeThree");
-      });
-    </script>
-
-  .. html ::
-
-    <div id="treeThree"></div>
-
 
 You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.
 (The former function operates at the Tree level, and the latter operates per Tree node,
@@ -332,37 +546,98 @@ Further Examples
 ----------------
 
 If you are interested in further examples, please make sure you have glanced at the unit tests.
-You can find a good example here: http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/tests/tree/test_Tree_DnD.html
+You can find a good example in
+`test_Tree_Dnd.html <http://download.dojotoolkit.org/release-1.7.1/dojo-release-1.7.1/dijit/tests/tree/test_Tree_DnD.html>`_.
 
 betweenThreshold
 ----------------
-If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.
+If between threshold is set to a positive integer value like 5 (which represents 5 pixels),
+then dragging within 5px of the top or bottom of a tree node,
+is interpreted as trying to make the drag source the previous or next sibling of the drop target
+rather than the child of the drop target.
 This is useful for when a user can control the order of the children of the child nodes:
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.tree.ForestStoreModel");
-      dojo.require("dijit.tree.dndSource");
-      dojo.require("dijit.Tree");
-    </script>
+        require([
+            "dojo/aspect", "dojo/ready", "dojo/store/Memory", "dojo/store/Observable",
+            "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
+        ], function(aspect, ready, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
-  .. html ::
+            ready(function(){
+                // Create test store.
+                store = new Memory({
+                    data: [
+                        { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                        { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                                timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                            { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                            { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                                { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                                { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                            { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                                { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                        { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                            { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                            { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                            { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                            { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                        { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                            { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
+                        { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                            { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                            { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                            { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                            { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                        { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                            { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
+                                    parent: 'NA' },
+                                { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
+                                { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
+                            { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
+                                { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
+                                { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
+                            { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
+                        { id: 'SA', name:'South America', type:'continent', parent: 'world' },
+                            { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
+                            { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
+                    ]
+                });
 
-    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
-      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5"
-      data-dojo-props="store:continentStore5, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-    
-    <div data-dojo-type="dijit.Tree" id="mytree5"
-      data-dojo-props="dndController:'dijit.tree.dndSource', betweenThreshold:5, showRoot:false,
-      model:continentModel5, openOnClick:true">
-    </div>
+                // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
+                store.getChildren = function(object){
+                    // Add a getChildren() method to store for the data model where
+                    // children objects point to their parent (aka relational model)
+                    return this.query({parent: this.getIdentity(object)});
+                };
+                aspect.around(store, "put", function(originalPut){
+                    // To support DnD, the store must support put(child, {parent: parent}).
+                    // Since our store is relational, that just amounts to setting child.parent
+                    // to the parent's id.
+                    return function(obj, options){
+                        if(options && options.parent){
+                            obj.parent = options.parent.id;
+                        }
+                        return originalPut.call(store, obj, options);
+                    }
+                });
+
+                // Wrap the store in Observable so that updates to the store are reflected to the Tree
+                store = new Observable(store);
+
+                // Create the model and tree
+                model = new ObjectStoreModel({store: store, query: {id: 'world'}});
+                tree = new Tree({
+                    model: model,
+                    dndController: dndSource,
+                    betweenThreshold: 5,
+                    showRootNode: false
+                }).placeAt(dojo.body());
+            });
+        });
+
 
 
 Behind the Scenes
@@ -390,8 +665,8 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
         <script>
             dojo.require("dijit.Menu");
             dojo.require("dijit.MenuItem");
-            dojo.require("dijit.tree.ForestStoreModel");
-            dojo.require("dojo.data.ItemFileReadStore");
+            dojo.require("dijit.tree.ObjectStoreModel");
+            dojo.require("dojo.store.Memory");
             dojo.require("dijit.Tree");
         </script>
 
@@ -402,15 +677,49 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
         <li data-dojo-type="dijit.MenuItem">Item #2</li>
     </ul>
         
-        <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
-             data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-        
-        <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel"
-             data-dojo-props="store:menuContinentStore, query:{type:'continent'},
-             rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-            
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+        <!-- Create store with inlined data.
+            For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
+        <script type="dojo/method">
+             this.setData([
+                { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                        timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                    { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                    { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                        { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                        { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                    { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                        { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                    { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                    { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                    { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                    { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                    { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                    { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                    { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                    { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+            ]);
+        </script>
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+             // Supply a getChildren() method to store for the data model where
+             // children objects point to their parent (aka relational model)
+             return this.query({parent: this.getIdentity(object)});
+        </script>
+    </div>
+
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
+
+    <!-- Create the tree, and connect to the menu -->
     <div data-dojo-type="dijit.Tree" id="menuTree"
-             data-dojo-props="model:menuContinentModel, showRoot:false, openOnClick:true">
+             data-dojo-props="model: myModel, showRoot: false, openOnClick: true">
                  
         <script type="dojo/connect">
             var menu = dijit.byId("tree_menu");
@@ -425,13 +734,15 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
                 // now inspect the data store item that backs the tree node:
                 console.debug(tn.item);
                                
-                // contrived condition: if this tree node doesn't have any children, disable all of the menu items
-                menu.getChildren().forEach(function(i){ i.set('disabled', !tn.item.children); });
+                // contrived condition: disable all menu items on countries
+                dojo.forEach(menu.getChildren(), function(child){
+                    child.set('disabled', tn.item.type == "country");
+                });
                                 
                 // IMPLEMENT CUSTOM MENU BEHAVIOR HERE
             });
         </script>
-        </div>
+    </div>
 
 Styling
 =======
@@ -493,7 +804,7 @@ To disable the feature, set the "persist" parameter to false.
 More examples
 =============
 
-There are :ref:`more extensive examples <dijit/Tree-examples>` of using the tree
+There are :ref:`more extensive examples <dijit/Tree-examples>` of using the tree.
 
 
 Accessibility

@@ -6,10 +6,10 @@ dijit.Tree examples
 
 
 .. contents::
-  :depth: 3
+  :depth: 2
 
 Detect when tree has finished loading
--------------------------------------
+=====================================
 
 Use the onLoadDeferred to detect when the Tree has finished loading
 
@@ -26,9 +26,10 @@ Use the onLoadDeferred to detect when the Tree has finished loading
     });
 
 Expanding and Focusing tree nodes programmatically
---------------------------------------------------
+==================================================
 
-``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.set('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
+``dijit.Tree`` has a 'path' attribute, which can be set with the usual ``tree.set('path', thePath)`` syntax.
+It serves two purposes: to expand the tree up to the specified node, and to select that node.
 
 
 .. code-example ::
@@ -122,7 +123,7 @@ If you already know the full path to the tree node you want to highlight, you ca
     <div data-dojo-type="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
------------------------------------------------------------
+===========================================================
 
 Simply set the ``openOnClick`` attribute to ``false``
 
@@ -153,14 +154,12 @@ Simply set the ``openOnClick`` attribute to ``false``
 
 
 
-Example using Local Data and Markup
------------------------------------------------------------
+Rich Text Labels
+================
 
-Most of the examples have used the same url:json source of the data for the store.
-This example uses local data from a javascript object as the raw data.
-In addition, _createTreeNode is overridden to allow HTML markup in the tree.
+In this example, ``_createTreeNode()`` is overridden to allow HTML markup in the tree.
 This is a hack, in the sense that the formatting may not be perfect for large (in pixels) elements.
-But the tree will display and work properly regardless, and for simple markup, eg bold, it works great.
+But the tree will display and work properly regardless, and for simple markup, ex: bold, it works great.
 
 .. code-example ::
 
@@ -208,7 +207,7 @@ But the tree will display and work properly regardless, and for simple markup, e
     <div id="treeOne"></div>
 
 Example how to build a tree menu with links on nodes
------------------------------------------------------------
+====================================================
 
 This example shows you how to use a tree to build a navigation menu.
 

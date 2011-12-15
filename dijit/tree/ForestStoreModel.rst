@@ -28,7 +28,7 @@ A few things to note here:
   * There's a single fake root item created with the label "The World".  The Tree will display that root item unless showRoot=false is specified.  (However, even if Tree doesn't display it, it still exists.)
 
 Monitoring changes to items
----------------------------
+===========================
 Note that ForestStoreModel is inherently complex because it's difficult to tell when the children of the top level (fake) item have changed.
 For example:
 
@@ -57,7 +57,7 @@ For example:
 
 
 Moving items to/from the root node
-----------------------------------
+==================================
 It's also complicated because users need to define what to do when an element is dropped on to the root of the tree, or dragged from the root of the tree and dropped onto a sub-node.
 You may want to, for example, change the item so that the "topLevel" attribute is set/unset.
 It depends on the structure of the data store what the appropriate action is.
@@ -81,3 +81,73 @@ The developer should override onAddToRoot() and onLeaveRoot().
         //      |    store.unsetAttribute(item, "root");
         console.log(this, ": item ", item, " removed from root");
   }
+
+Examples
+========
+
+A programmatic tree
+-------------------
+
+Creating a programmatic tree is very simple:
+
+.. code-example ::
+
+  .. js ::
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+
+      dojo.ready(function(){
+        var store = new dojo.data.ItemFileReadStore({
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
+        });
+
+        var treeModel = new dijit.tree.ForestStoreModel({
+            store: store,
+            query: {"type": "continent"},
+            rootId: "root",
+            rootLabel: "Continents",
+            childrenAttrs: ["children"]
+        });
+
+        new dijit.Tree({
+            model: treeModel
+        }, "treeOne");
+      });
+    </script>
+
+  .. html ::
+
+    <div id="treeOne"></div>
+
+Note that the childrenAttrs parameter to TreeStoreModel/ForestStoreModel is an array since it can list multiple attributes in the store.
+
+
+A markup tree
+-------------
+
+.. code-example ::
+
+  .. js ::
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+    </script>
+
+  .. html ::
+
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
+      data-dojo-props="store:continentStore, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
+
+    <div data-dojo-type="dijit.Tree" id="mytree"
+      data-dojo-props="model:continentModel, openOnClick:true">
+      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
+        alert("Execute of node " + continentStore.getLabel(item)
+            +", population=" + continentStore.getValue(item, "population"));
+      </script>
+    </div>
