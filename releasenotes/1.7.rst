@@ -487,6 +487,14 @@ on the command line.  You can see an example of this in ``standard.profile.js`` 
 
 For more information on selector engines, see the :ref:`dojo/query documentation <dojo/query>`.
 
+Cross-domain Usage with Local Legacy Modules
+````````````````````````````````````````````
+
+Dojo 1.7 currently has a limitation where it is unable to properly load local modules which use the legacy
+``dojo.require`` syntax alongside ``dojo.js`` from another domain.  Currently the only workarounds are to update
+the local modules to use AMD syntax, or download the Dojo Toolkit and run all modules from the same host.
+See `defect #14459 <http://bugs.dojotoolkit.org/ticket/14459>`_.
+
 debugAtAllCosts
 ```````````````
 The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.
