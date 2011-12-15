@@ -98,7 +98,7 @@ Usage example
       };
       
       function loader(){
-          dojo.require ("dijit.Editor");
+          dojo.require("dijit.Editor");
           dojo.ready(callback);
       }
 
@@ -114,28 +114,75 @@ Usage example
 Using CDN with Local modules
 ============================
 
-To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via dojoConfig:
+Dojo 1.7+
+---------
+
+To use Dojo 1.7 or later from a CDN in conjunction with a local custom namespace, you can register your local namespace
+in the ``packages`` array via ``dojoConfig``:
+
+.. html ::
+
+    <script type="text/javascript">
+        var dojoConfig = {
+            async: true,
+            packages: [
+                {
+                    name: "my",
+                    location: "/absolute/path/to/local/modules"
+                }
+            ]
+        };
+    </script>
+    
+    <!-- Bootstrap Dojo From Google's CDN -->
+    <script
+        type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js">
+    </script>
+
+    <script type="text/javascript">
+        require(["my/FooModule"], function(FooModule){
+            // ...
+        });
+    </script>
+
+In this case, the file ``FooModule.js`` would be located at ``/absolute/path/to/local/modules/FooModule.js``,
+absolute to the domain root.
+
+Note that unlike with Dojo 1.6 and earlier (see below), the package location needs to specify an absolute path.
+If necessary, it is possible to determine the path of the current web page via JavaScript; for example,
+``location.pathname.replace(/\/[^/]+$/, "")`` will work for most cases.
+
+**Note:** Dojo 1.7 currently has a limitation where it is unable to properly load local modules which use the legacy
+``dojo.require`` syntax alongside ``dojo.js`` from another domain.  Currently the only workarounds are to update
+the local modules to use AMD syntax, or download the Dojo Toolkit and run all modules from the same host.
+
+Dojo <= 1.6
+-----------
+
+To use Dojo 1.6 or earlier from a CDN in conjunction with a local custom namespace, you must register the module path
+via ``dojoConfig``:
 
 .. html ::
   
-      <script type="text/javascript">
-          var dojoConfig={
-            parseOnLoad: true,
-            isDebug: true,
+    <script type="text/javascript">
+        var dojoConfig = {
             baseUrl: "./",
-            modulePaths: { my: "relative/path/to/local/dijits" }
-          };
-      </script>
-      
-      <!-- Bootstrap Dojo From AOL's CDN-->
-      <script
-          type="text/javascript"
-          src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js">
-      </script>
+            modulePaths: { my: "relative/path/to/local/modules" }
+        };
+    </script>
+    
+    <!-- Bootstrap Dojo From Google's CDN -->
+    <script
+        type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js">
+    </script>
 
-      <script type="text/javascript">
-          dojo.require("my.FooWidget");
-      </script>
+    <script type="text/javascript">
+        dojo.require("my.FooModule");
+        // ...
+    </script>
 
 
-the file FooWidget.js would live in the path "relative/path/to/local/dijits/my/FooWidget.js"
+In this case, the file ``FooModule.js`` would be located at ``relative/path/to/local/modules/my/FooModule.js``,
+relative to the web page.
