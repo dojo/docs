@@ -477,8 +477,11 @@ the closure--not the global space. If you really want to add a function in the g
       dojo.provide("my.module");
       dojo.global.myOnClick = function(){ ... }
 
-Custom Builds and selectorEngine
+Considerations for Custom Builds
 ````````````````````````````````
+
+selectorEngine
+''''''''''''''
 
 Note that the acme query engine is no longer automatically built into ``dojo.js`` by default, which will typically
 result in an extra network request for ``dojo/selector/acme.js`` when ``dojo/query`` or Dojo base is loaded.
@@ -486,6 +489,17 @@ To include acme in ``dojo.js``, specify ``selectorEngine: "acme"`` in the build 
 on the command line.  You can see an example of this in ``standard.profile.js`` in Dojo 1.7.1.
 
 For more information on selector engines, see the :ref:`dojo/query documentation <dojo/query>`.
+
+dijit/_base
+'''''''''''
+
+Previously, ``dijit/_base`` was automatically pulled in as a dependency of ``dijit/_Widget``.  As of 1.7, it is now
+conditionally pulled in only if the legacy loader is in use, for backwards-compatibility.  However, due to this
+change, the builder no longer sees ``dijit/_base`` as a dependency of ``dijit/_Widget``, and does not pull it in as
+a result.
+
+This may lead to additional network requests observed in applications with custom layers affected by this change.
+To resolve this, add ``"dijit._base"`` as an explicit dependency of the layer.
 
 Cross-domain Usage with Local Legacy Modules
 ````````````````````````````````````````````
