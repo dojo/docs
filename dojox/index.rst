@@ -662,6 +662,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A set of objects to perform advanced time-based tasks, including a basic Timer
 
+* :ref:`dojox.treemap <dojox/treemap>`
+
+  A treemap widget to display data as a set of colored, potentially nested, rectangular cells from a dojo.store
+
 * :ref:`dojox.uuid <dojox/uuid>`
 
   Universally Unique Identifier (UUID) implementations, including an implementation of UUID 2
