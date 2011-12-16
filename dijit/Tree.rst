@@ -105,8 +105,8 @@ Creating a programmatic tree is very simple:
             "dijit/tree/ObjectStoreModel", "dijit/Tree"
         ], function(ready, win, Memory, ObjectStoreModel, Tree){
 
-            // Create test store.
-            var store = new Memory({
+            // Create test store, adding the getChildren() method required by ObjectStoreModel
+            var myStore = new Memory({
                 data: [
                     { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
                     { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
@@ -130,23 +130,22 @@ Creating a programmatic tree is very simple:
                         { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
                     { id: 'NA', name:'North America', type:'continent', parent: 'world' },
                     { id: 'SA', name:'South America', type:'continent', parent: 'world' }
-                ]
+                ],
+                getChildren: function(object){
+                    return this.query({parent: object.id});
+                }
             });
 
-            // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
-            store.getChildren = function(object){
-                // Add a getChildren() method to store for the data model where
-                // children objects point to their parent (aka relational model)
-                return this.query({parent: this.getIdentity(object)});
-            };
-
             // Create the model
-            var model = new ObjectStoreModel({store: store, query: {id: 'world'}});
+            var myModel = new ObjectStoreModel({
+                store: myStore,
+                query: {id: 'world'}
+            });
 
             // Create the Tree.   Note that all widget creation should be inside a dojo.ready().
             ready(function(){
                 var tree = new Tree({
-                    model: model
+                    model: myModel
                 });
                 tree.placeAt(win.body());
             });
@@ -172,7 +171,7 @@ In any case, the dijit.tree.Model and dijit.Tree themselves can still be created
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -204,16 +203,16 @@ In any case, the dijit.tree.Model and dijit.Tree themselves can still be created
         <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
              // Supply a getChildren() method to store for the data model where
              // children objects point to their parent (aka relational model)
-             return this.query({parent: this.getIdentity(object)});
+             return this.query({parent: object.id});
         </script>
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
     <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
-      data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
+      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="mytree" data-dojo-props="model: myModel"></div>
+    <div data-dojo-type="dijit.Tree" id="myTree" data-dojo-props="model: myModel"></div>
 
 
 Icons
@@ -323,7 +322,7 @@ The item still exists in the model but it's hidden on the screen:
         <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
              // Supply a getChildren() method to store for the data model where
              // children objects point to their parent (aka relational model)
-             return this.query({parent: this.getIdentity(object)});
+             return this.query({parent: object.id});
         </script>
     </div>
 
@@ -332,7 +331,7 @@ The item still exists in the model but it's hidden on the screen:
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="mytree"
+    <div data-dojo-type="dijit.Tree" id="myTree"
             data-dojo-props="model: myModel, showRoot: false"></div>
 
 
@@ -364,7 +363,7 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
             "dojo/store/Memory", "dojo/store/Observable",
             "dijit/tree/ObjectStoreModel", "dijit/Tree"
         ], function(Memory, Observable, ObjectStoreModel, Tree){
-            // Create test store.
+            // Create test store, adding a getChildren() method needed by the model
             myStore = new Memory({
                 data: [
                     { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
@@ -389,15 +388,13 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
                         { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
                     { id: 'NA', name:'North America', type:'continent', parent: 'world' },
                     { id: 'SA', name:'South America', type:'continent', parent: 'world' }
-                ]
+                ],
+                getChildren: function(object){
+                    // Add a getChildren() method to store for the data model where
+                    // children objects point to their parent (aka relational model)
+                    return this.query({parent: object.id});
+                }
             });
-
-            // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
-            myStore.getChildren = function(object){
-                // Add a getChildren() method to store for the data model where
-                // children objects point to their parent (aka relational model)
-                return this.query({parent: this.getIdentity(object)});
-            };
 
             // Wrap the store in Observable so that updates to the store are reflected to the Tree
             myStore = new Observable(myStore);
@@ -410,7 +407,7 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="mytree" data-dojo-props="model: myModel"></div>
+    <div data-dojo-type="dijit.Tree" id="myTree" data-dojo-props="model: myModel"></div>
 
     <!-- Buttons to show data store update -->
     <button onclick="myStore.add({id: 'US', name:'United States', type:'country', parent: 'NA'});">
@@ -456,85 +453,88 @@ Thus:
   * the model must implement the pasteItem() method
   * the store must implement put(), and Observable.
 
-In addition, to enable DnD on the Tree you must require "dijit.tree.dndSource"
-and the dndController="dijit.tree.dndSource" parameter must be specified to the tree.
+In addition, to enable DnD on the Tree you must require ``dijit/tree/dndSource``
+and set the Tree's dndController to ``dijit.tree.dndSource``.
 
 .. code-example ::
 
   .. js ::
 
-        require([
-            "dojo/aspect", "dojo/ready", "dojo/store/Memory", "dojo/store/Observable",
-            "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
-        ], function(aspect, ready, Memory, Observable, Tree, ObjectStoreModel, dndSource){
+    require([
+        "dojo/aspect", "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
+        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
+    ], function(aspect, ready, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
-            ready(function(){
-                // Create test store.
-                store = new Memory({
-                    data: [
-                        { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
-                        { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
-                                timezone: '-1 UTC to +4 UTC', parent: 'world'},
-                            { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
-                            { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
-                                { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
-                                { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
-                            { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
-                                { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
-                        { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
-                            { id: 'CN', name:'China', type:'country', parent: 'AS' },
-                            { id: 'IN', name:'India', type:'country', parent: 'AS' },
-                            { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
-                            { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
-                        { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
-                            { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
-                        { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
-                            { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
-                            { id: 'FR', name:'France', type:'country', parent: 'EU' },
-                            { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
-                            { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
-                        { id: 'NA', name:'North America', type:'continent', parent: 'world' },
-                            { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
-                                    parent: 'NA' },
-                                { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
-                                { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
-                            { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
-                                { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
-                                { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
-                            { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
-                        { id: 'SA', name:'South America', type:'continent', parent: 'world' },
-                            { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
-                            { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
-                    ]
-                });
-
-                // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
-                store.getChildren = function(object){
-                    // Add a getChildren() method to store for the data model where
-                    // children objects point to their parent (aka relational model)
-                    return this.query({parent: this.getIdentity(object)});
-                };
-                aspect.around(store, "put", function(originalPut){
-                    // To support DnD, the store must support put(child, {parent: parent}).
-                    // Since our store is relational, that just amounts to setting child.parent
-                    // to the parent's id.
-                    return function(obj, options){
-                        if(options && options.parent){
-                            obj.parent = options.parent.id;
-                        }
-                        return originalPut.call(store, obj, options);
+            // Create test store, adding the getChildren() method required by ObjectStoreModel,
+            // and making put(child, {parent: parent}) work
+            var memoryStore = new Memory({
+                data: [
+                    { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                    { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                            timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                        { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                        { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                            { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                            { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                        { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                            { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                    { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                        { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                        { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                        { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                        { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                    { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                        { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
+                    { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                        { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                        { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                        { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                        { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                    { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                        { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
+                                parent: 'NA' },
+                            { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
+                            { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
+                        { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
+                            { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
+                            { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
+                        { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
+                    { id: 'SA', name:'South America', type:'continent', parent: 'world' },
+                        { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
+                        { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
+                ],
+                getChildren: function(object){
+                    return this.query({parent: object.id});
+                }
+            });
+            aspect.around(memoryStore, "put", function(originalPut){
+                // To support DnD, the store must support put(child, {parent: parent}).
+                // Since memory store doesn't, we hack it.
+                // Since our store is relational, that just amounts to setting child.parent
+                // to the parent's id.
+                return function(obj, options){
+                    if(options && options.parent){
+                        obj.parent = options.parent.id;
                     }
-                });
+                    return originalPut.call(memoryStore, obj, options);
+                }
+            });
 
-                // Wrap the store in Observable so that updates to the store are reflected to the Tree
-                store = new Observable(store);
+            // Wrap the store in Observable so that updates to the store are reflected to the Tree
+            var observableStore = new Observable(memoryStore);
 
-                // Create the model and tree
-                model = new ObjectStoreModel({store: store, query: {id: 'world'}});
-                tree = new Tree({
-                    model: model,
+            // Create the model
+            var myModel = new ObjectStoreModel({
+                store: observableStore,
+                query: {id: 'world'}
+            });
+
+            // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
+            ready(function(){
+                new Tree({
+                    model: myModel,
                     dndController: dndSource
-                }).placeAt(dojo.body());
+                }).placeAt(win.body());
             });
         });
 
@@ -561,83 +561,84 @@ This is useful for when a user can control the order of the children of the chil
 
   .. js ::
 
-        require([
-            "dojo/aspect", "dojo/ready", "dojo/store/Memory", "dojo/store/Observable",
-            "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
-        ], function(aspect, ready, Memory, Observable, Tree, ObjectStoreModel, dndSource){
+    require([
+        "dojo/aspect", "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
+        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
+    ], function(aspect, ready, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
-            ready(function(){
-                // Create test store.
-                store = new Memory({
-                    data: [
-                        { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
-                        { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
-                                timezone: '-1 UTC to +4 UTC', parent: 'world'},
-                            { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
-                            { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
-                                { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
-                                { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
-                            { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
-                                { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
-                        { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
-                            { id: 'CN', name:'China', type:'country', parent: 'AS' },
-                            { id: 'IN', name:'India', type:'country', parent: 'AS' },
-                            { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
-                            { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
-                        { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
-                            { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
-                        { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
-                            { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
-                            { id: 'FR', name:'France', type:'country', parent: 'EU' },
-                            { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
-                            { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
-                        { id: 'NA', name:'North America', type:'continent', parent: 'world' },
-                            { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
-                                    parent: 'NA' },
-                                { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
-                                { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
-                            { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
-                                { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
-                                { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
-                            { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
-                        { id: 'SA', name:'South America', type:'continent', parent: 'world' },
-                            { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
-                            { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
-                    ]
-                });
-
-                // Since dojo.store.Memory doesn't have various store methods we need, we have to add them manually
-                store.getChildren = function(object){
-                    // Add a getChildren() method to store for the data model where
-                    // children objects point to their parent (aka relational model)
-                    return this.query({parent: this.getIdentity(object)});
-                };
-                aspect.around(store, "put", function(originalPut){
-                    // To support DnD, the store must support put(child, {parent: parent}).
-                    // Since our store is relational, that just amounts to setting child.parent
-                    // to the parent's id.
-                    return function(obj, options){
-                        if(options && options.parent){
-                            obj.parent = options.parent.id;
-                        }
-                        return originalPut.call(store, obj, options);
+            // Create test store, adding the getChildren() method required by ObjectStoreModel,
+            // and making put(child, {parent: parent}) work
+            var memoryStore = new Memory({
+                data: [
+                    { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                    { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                            timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                        { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                        { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                            { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                            { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                        { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                            { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                    { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                        { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                        { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                        { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                        { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                    { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                        { id: 'AU', name:'Australia', type:'country', population:'21 million', parent: 'OC'},
+                    { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                        { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                        { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                        { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                        { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                    { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                        { id: 'MX', name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km',
+                                parent: 'NA' },
+                            { id: 'Mexico City', name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC', parent: 'MX'},
+                            { id: 'Guadalajara', name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC', parent: 'MX' },
+                        { id: 'CA', name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', parent: 'NA' },
+                            { id: 'Ottawa', name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC', parent: 'CA'},
+                            { id: 'Toronto', name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC', parent: 'CA' },
+                        { id: 'US', name:'United States of America', type:'country', parent: 'NA' },
+                    { id: 'SA', name:'South America', type:'continent', parent: 'world' },
+                        { id: 'BR', name:'Brazil', type:'country', population:'186 million', parent: 'SA' },
+                        { id: 'AR', name:'Argentina', type:'country', population:'40 million', parent: 'SA' }
+                ],
+                getChildren: function(object){
+                    return this.query({parent: object.id});
+                }
+            });
+            aspect.around(memoryStore, "put", function(originalPut){
+                // To support DnD, the store must support put(child, {parent: parent}).
+                // Since memory store doesn't, we hack it.
+                // Since our store is relational, that just amounts to setting child.parent
+                // to the parent's id.
+                return function(obj, options){
+                    if(options && options.parent){
+                        obj.parent = options.parent.id;
                     }
-                });
+                    return originalPut.call(memoryStore, obj, options);
+                }
+            });
 
-                // Wrap the store in Observable so that updates to the store are reflected to the Tree
-                store = new Observable(store);
+            // Wrap the store in Observable so that updates to the store are reflected to the Tree
+            var observableStore = new Observable(memoryStore);
 
-                // Create the model and tree
-                model = new ObjectStoreModel({store: store, query: {id: 'world'}});
-                tree = new Tree({
-                    model: model,
+            // Create the model
+            var myModel = new ObjectStoreModel({
+                store: observableStore,
+                query: {id: 'world'}
+            });
+
+            // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
+            ready(function(){
+                new Tree({
+                    model: myModel,
                     dndController: dndSource,
-                    betweenThreshold: 5,
-                    showRootNode: false
-                }).placeAt(dojo.body());
+                    betweenThreshold: 5
+                }).placeAt(win.body());
             });
         });
-
 
 
 Behind the Scenes
@@ -677,7 +678,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
         <li data-dojo-type="dijit.MenuItem">Item #2</li>
     </ul>
         
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -709,13 +710,13 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
         <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
              // Supply a getChildren() method to store for the data model where
              // children objects point to their parent (aka relational model)
-             return this.query({parent: this.getIdentity(object)});
+             return this.query({parent: object.id});
         </script>
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
     <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
-      data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
+      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree, and connect to the menu -->
     <div data-dojo-type="dijit.Tree" id="menuTree"
