@@ -587,9 +587,11 @@ Grid 1.2 supports a new parameter "selectionMode" which allows you to control th
 'single'
   let the user select only one item at the same time
 'multiple'
-  let the user selects more than one item at the same time
+  let the user selects more than one item at the same time. First click selects an item, second deselects it
 'extended' (default)
-  *not sure, what's the difference between "multiple" and "extended"*
+  single click selects only the clicked item (deselecting any selected), Ctrl+click adds to selection, Shift+click add a range (behavior similar to select with ``multiple`` attribute set to ``multiple``)
+
+Note that if you override ``onCellClick`` for whatever reason, selection won't work anymore, you should start your custom handler with ``this.inherited("onCellClick", arguments);`` to avoid issues.
 
 
 Editing data
