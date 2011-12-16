@@ -4,7 +4,7 @@
 dojox.charting
 ==============
 
-:Project owner: Eugene Lazutkin, Tom Trenka
+:Project owners: Eugene Lazutkin, Tom Trenka, Christophe Jolif
 :since: V?
 
 .. contents::
@@ -522,6 +522,8 @@ Here is an example using abbreviated month names with a Columns plot.
   		{value: 9, text: "Sep"}, {value: 10, text: "Oct"},
   		{value: 11, text: "Nov"}, {value: 12, text: "Dec"}]
   	});
+
+Note that the labels object must be sorted by increasing value.
 
 TODO: Month Labels Example
 
