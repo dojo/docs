@@ -25,132 +25,153 @@ Use the onLoadDeferred to detect when the Tree has finished loading
         // do work here
     });
 
-Expanding and Focusing tree nodes programmatically
-==================================================
+Expanding and selecting tree nodes programmatically
+===================================================
 
-``dijit.Tree`` has a 'path' attribute, which can be set with the usual ``tree.set('path', thePath)`` syntax.
-It serves two purposes: to expand the tree up to the specified node, and to select that node.
+There are a number of flags and methods for expanding/collapsing the tree and for selecting certain nodes.
 
+If the ``autoExpand`` flag is passed to the constructor, the Tree is initially shown with all nodes expanded.
+
+You can then call ``collapseAll()`` and ``expandAll()`` to collapse and expand the Tree, respectively.
+
+Also, ``dijit.Tree`` has a ``paths`` attribute, which can be set with the usual
+``tree.set('paths', [path1, path2])`` syntax, where each path is an array of item id's,
+starting with the root node and going down to the leaf.
+It serves two purposes: to expand the Tree to the specified nodes, and to select those nodes.
+
+Combining those all together into an example:
 
 .. code-example ::
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dojo.store.Memory");
+        dojo.require("dijit.tree.ObjectStoreModel");
         dojo.require("dijit.Tree");
-        dojo.require("dijit.form.Button");
-
-        selectNode = function(){
-            mytree.set('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
-        }
-    </script>
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
-      data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
-
-One problem with using 'path' is that you must know the full path to the node in your data you are trying to select.
-
-The following example contains workaround code for this problem, as well as an example call to tree.set('path').
-If you already know the full path to the tree node you want to highlight, you can simply call tree.set('path').
-
-.. code-example ::
-
-  .. js ::
-
-    <script type="text/javascript">
-        dojo.require("dojo.data.ItemFileReadStore");
-        dojo.require("dijit.Tree");
-        dojo.require("dijit.form.Button");
-
-        function recursiveHunt(lookfor, model, buildme, item){
-            console.log(">> recursiveHunt, item ", item, " looking for ", lookfor);
-            var id = model.getIdentity(item);
-            buildme.push(id);
-            if(id == lookfor){
-                // Return the buildme array, indicating a match was found
-                console.log("++ FOUND item ", item, " buildme now = ", buildme);
-                return buildme;
-            }
-            for(var idx in item.children){
-                // start a new branch of buildme, starting with what we have so far
-                var buildmebranch = buildme.slice(0);
-                console.log("Branching into ", model.store.getValue(item.children[idx], 'name'), ", buildmebranch=", buildmebranch);
-                var r = recursiveHunt(lookfor, model, buildmebranch, item.children[idx]);
-                // If a match was found in that recurse, return it.
-                //  This unwinds the recursion on completion.
-                if(r){ return r; }
-            }
-            // Return undefined, indicating no match was found
-            return undefined;
-        }
-
-        function selectTreeNodeById(tree, lookfor){
-            console.log("See model root=", tree.model.root);
-            var buildme = [];
-            var result = recursiveHunt(lookfor, tree.model, buildme, tree.model.root);
-            console.log("*** FINISHED: result ", result, " buildme ", buildme);
-            console.dir(result);
-            if(result && result.length > 0){
-                tree.set('path', result);
-            }
-        }
-
-        selectNode = function(){
-
-            selectTreeNodeById(mytree2, 'Mexico City');
-
-        }
-    </script>
-
-  .. html ::
-
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore,query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
-      data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
-    <div data-dojo-type="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
-
-How can I prevent expanding of nodes when clicking on them?
-===========================================================
-
-Simply set the ``openOnClick`` attribute to ``false``
-
-.. code-example ::
-
-  .. js ::
-
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
-    </script>
-
-  .. html ::
-
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
-
-    <div data-dojo-type="dijit.Tree" id="mytree"
-      data-dojo-props="model:continentModel, openOnClick:false">
-      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
-        alert("Execute of node " + continentStore.getLabel(item)
-            +", population=" + continentStore.getValue(item, "population"));
-      </script>
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+        <!-- Create store with inlined data.
+            For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
+        <script type="dojo/method">
+             this.setData([
+                { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                        timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                    { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                    { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                        { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                        { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                    { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                        { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                    { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                    { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                    { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                    { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                    { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                    { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                    { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                    { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+            ]);
+        </script>
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+             // Supply a getChildren() method to store for the data model where
+             // children objects point to their parent (aka relational model)
+             return this.query({parent: this.getIdentity(object)});
+        </script>
     </div>
+
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
+
+    <!-- buttons to test Tree features -->
+    <button onclick="mytree.collapseAll();">
+        Collapse all
+    </button>
+    <button onclick="mytree.expandAll();">
+        Expand all
+    </button>
+    <button onclick="mytree.set('paths', [ ['world', 'AF', 'KE', 'Nairobi'], ['world', 'SA'] ] );">
+        Select Nairobi, South America
+    </button>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
+            data-dojo-props="model: myModel, autoExpand: true"></div>
+
+
+One complication with using 'paths' is that you must know the full path to the node in your data you are trying to select.
+(And by the way, there may be more than one path to a node, if your Tree has nodes with multiple parents.)
+
+The solution to that problem will depend greatly on your data layout, and the query capabilities of your store.
+
+
+Making nodes expand by clicking on the label
+============================================
+
+Nodes always expand/collapse by clicking on the [+] icon, but to make a node expand when clicking on the label,
+simply set the ``openOnClick`` attribute to ``true``
+
+.. code-example ::
+
+  .. js ::
+
+        dojo.require("dojo.store.Memory");
+        dojo.require("dijit.tree.ObjectStoreModel");
+        dojo.require("dijit.Tree");
+
+  .. html ::
+
+    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+        <!-- Create store with inlined data.
+            For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
+        <script type="dojo/method">
+             this.setData([
+                { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
+                { id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                        timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                    { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                    { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+                        { id: 'Nairobi', name:'Nairobi', type:'city', parent: 'KE' },
+                        { id: 'Mombasa', name:'Mombasa', type:'city', parent: 'KE' },
+                    { id: 'SD', name:'Sudan', type:'country', parent: 'AF' },
+                        { id: 'Khartoum', name:'Khartoum', type:'city', parent: 'SD' },
+                { id: 'AS', name:'Asia', type:'continent', parent: 'world' },
+                    { id: 'CN', name:'China', type:'country', parent: 'AS' },
+                    { id: 'IN', name:'India', type:'country', parent: 'AS' },
+                    { id: 'RU', name:'Russia', type:'country', parent: 'AS' },
+                    { id: 'MN', name:'Mongolia', type:'country', parent: 'AS' },
+                { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'EU', name:'Europe', type:'continent', parent: 'world' },
+                    { id: 'DE', name:'Germany', type:'country', parent: 'EU' },
+                    { id: 'FR', name:'France', type:'country', parent: 'EU' },
+                    { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                    { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+                { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+                { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+            ]);
+        </script>
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+             // Supply a getChildren() method to store for the data model where
+             // children objects point to their parent (aka relational model)
+             return this.query({parent: object.id});
+        </script>
+    </div>
+
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+      data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit.Tree" id="mytree"
+        data-dojo-props="model: myModel, openOnClick: true"></div>
 
 
 
@@ -165,49 +186,50 @@ But the tree will display and work properly regardless, and for simple markup, e
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojo.data.ItemFileReadStore");
-        dojo.require( "dijit.Tree" );
+        require([
+            "dojo/_base/declare", "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree"
+        ], function(declare, ready, win, Memory, ObjectStoreModel, Tree){
 
-        var rawdata = [ {
-            label: 'Something <b>important</b>',
-            id: '1',
-            children:  [ { label: 'Life', id: '1.1' }, { label: 'Liberty', id: '1.2' } ]
-        }, {
-            label: 'Some links (note: the link is <b>not</b> clickable)',
-            id: '2',
-            children: [
-                { id: '2.1', label: '<a href="http://dojotoolkit.org">Dojo Toolkit</a>' },
-                { id: '2.2', label: '<img src="http://dojofoundation.org/media/img/dojo.logo.png" alt="greatest ever" height="32px" />' },
-                { id: '2.3', label: '<a href="http://blog.nqzero.com">my blog</a>' }
-            ]
-        } ];
-
-        function prepare(){
-            var store = new dojo.data.ItemFileReadStore({
-                data: { identifier: 'id', label : 'label', items: rawdata }
-            });
-            var treeModel = new dijit.tree.ForestStoreModel({ store: store });
-            var treeControl = new dijit.Tree({
-                model: treeModel,
-                showRoot: false,
-                _createTreeNode: function(/*Object*/ args){
-                    var tnode = new dijit._TreeNode(args);
-                    tnode.labelNode.innerHTML = args.label;
-                    return tnode;
+            // Create test store, adding getChildren() method needed by ObjectStoreModel
+            var store = new Memory({
+                data: [
+                    { id: 0, label: "root"},
+                       {id: 1, label: "<i>hello</i>", parent: 0},
+                       {id: 2, label: "<b>world</b>", parent: 0},
+                ],
+                getChildren: function(object){
+                    return this.query({parent: object.id});
                 }
-            }, "treeOne" );
-        }
+            });
 
-        dojo.ready(prepare);
-    </script>
+            // Create the model
+            var model = new ObjectStoreModel({
+                store: store,
+                query: {id: 0},
+                labelAttr: "label"
+            });
 
-  .. html ::
+            // Custom TreeNode class (based on dijit.TreeNode) that allows rich text labels
+            var MyTreeNode = declare(Tree._TreeNode, {
+                _setLabelAttr: {node: "labelNode", type: "innerHTML"}
+            });
 
-    <div id="treeOne"></div>
+            // Create the Tree.   Note that all widget creation should be inside a dojo.ready().
+            ready(function(){
+                var tree = new Tree({
+                    model: model,
+                    _createTreeNode: function(args){
+                       return new MyTreeNode(args);
+                    }
+                });
+                tree.placeAt(win.body());
+            });
+        });
 
-Example how to build a tree menu with links on nodes
-====================================================
+
+Tree menu with links on nodes
+=============================
 
 This example shows you how to use a tree to build a navigation menu.
 
@@ -215,41 +237,38 @@ This example shows you how to use a tree to build a navigation menu.
 
   .. js ::
 
-        <script type="text/javascript">
-       dojo.require("dojo.data.ItemFileWriteStore");
-       dojo.require( "dijit.Tree" );
+        require([
+            "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree"
+        ], function(ready, win, Memory, ObjectStoreModel, Tree){
 
-       function initTree(){
-          var treeStore = new dojo.data.ItemFileWriteStore({ data:
-             {
-                identifier: 'id',
-                label: 'name',
-                items: [
-                   { id: 1, name: 'Dijit Tree API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree', root: true,
-                      children:[{_reference: 2}, {_reference: 3}, {_reference: 4}] },
-                   { id: 2, name: 'Dijit Tree.model API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree.model' },
-                   { id: 3, name: 'Dijit Tree.ForestStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.ForestStoreModel' },
-                   { id: 4, name: 'Dijit Tree.TreeStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.TreeStoreModel' },
-                ]
-             }
-          });
-        
-          var treeModel = new dijit.tree.ForestStoreModel({
-             store: treeStore,
-             query: { 'root': true }
-          });
+            // Create test store, adding the getChildren() method required by ObjectStoreModel
+            var myStore = new Memory({
+                data: [
+                   { id: 1, name: 'Dijit Tree API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree', root: true },
+                   { id: 2, name: 'Dijit Tree.model API', url: 'http://dojotoolkit.org/api/1.6/dijit.Tree.model', parent: 1 },
+                   { id: 3, name: 'Dijit Tree.ForestStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.ForestStoreModel', parent: 1 },
+                   { id: 4, name: 'Dijit Tree.TreeStoreModel API', url: 'http://dojotoolkit.org/api/1.6/dijit.tree.TreeStoreModel', parent: 1 },
+                ],
+                getChildren: function(object){
+                    return this.query({parent: object.id});
+                }
+            });
 
-          var navTree = new dijit.Tree({model: treeModel, showRoot: false }, "navTree")
+            // Create the model
+            var myModel = new ObjectStoreModel({
+                store: myStore,
+                query: {root: true}
+            });
 
-          navTree.onClick = function(item){
-              /* load the url from datastore */
-              location.href = item.url;
-          };
-       }
-     
-       dojo.ready(initTree);
-    </script>
-
-  .. html ::
-
-    <div id="navTree"></div>
+            // Create the Tree, specifying an onClick method
+            ready(function(){
+                (new Tree({
+                    model: myModel,
+                    onClick: function(item){
+                        // Get the URL from the item, and navigate to it
+                        location.href = item.url;
+                    }
+                })).placeAt(win.body());
+            });
+       });
