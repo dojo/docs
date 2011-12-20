@@ -68,7 +68,7 @@ Naming Conventions
 
     #. Constants SHOULD be placed within a single object created as a holder for constants,  emulating an Enum; the enum SHOULD be named appropriately, and members SHOULD be  named using either CamelCase or UPPER_CASE capitalization:
 
-        .. javascript::
+        .. js ::
 
             var NodeTypes = {
                 Element: 1,
@@ -87,7 +87,7 @@ Naming Conventions
 
     #. Private class variables MAY be written using _mixedCase (with preceding underscore):
         
-        .. javascript::
+        .. js ::
         
             var MyClass = function(){
                 var _buffer;
@@ -96,7 +96,7 @@ Naming Conventions
             
     #. Variables that are intended to be private, but are not closure bound, SHOULD be prepended with a ``\_`` (underscore) char:
     
-        .. javascript::
+        .. js ::
         
             this._somePrivateVariable = statement;
        
@@ -116,32 +116,32 @@ Naming Conventions
 
     #. Public names SHOULD be as clear as necessary and SHOULD avoid unclear shortenings and contractions:
     
-        .. javascript::
+        .. js ::
         
             MouseEventHandler // not MseEvtHdlr
 
     #. Note that, again, any context that can be determined by module membership SHOULD be used when determining if a variable name is clear. For example, a class that represents a mouse event handler:
         
-        .. javascript::
+        .. js ::
             
             dojo.event.mouse.Handler; // NOT dojo.events.mouse.MouseEventhandler
         
     #. Classes/constructors MAY be named based on their inheritance pattern, with the base class to the right of the name:
         
-        .. javascript::
+        .. js ::
         
             UiEventHandler
             MouseEventHandler
         
     #. The base class CAN be dropped from a name if it is obviously implicit in the name:
 
-        .. javascript::
+        .. js ::
         
             MouseEventHandler; // as opposed to MouseUIEventHandler
         
     #. Functions that act as both getters and setters depending on the number of arguments  are named after nouns.  The 'get' and 'set' are implied.   For example:
 
-        .. javascript::
+        .. js ::
             
             dojo.attr(node, "tabIndex"); // getter
             dojo.attr(node, "tabIndex", -1); // setter
@@ -191,7 +191,7 @@ Files
 
     #. The incompleteness of a split line MUST be made obvious
     
-        .. javascript::
+        .. js ::
         
             var someExpression = Expression1
                 + Expression2
@@ -253,7 +253,7 @@ Layout
     
         #. Block layout SHOULD BE as illustrated below:
         
-            .. javascript::
+            .. js ::
             
                 while(!isDone){
                     doSomething();
@@ -262,7 +262,7 @@ Layout
                 
         #. ``if`` statements SHOULD have the following form:
         
-            .. javascript::
+            .. js ::
             
                 if(someCondition){
                     statements;
@@ -274,7 +274,7 @@ Layout
 
         #. ``for`` statements SHOULD have the following form:
         
-            .. javascript::
+            .. js ::
             
                 for(init; condition; update){
                     statements;
@@ -282,7 +282,7 @@ Layout
                 
         #. ``while`` statements SHOULD have the following form:
         
-            .. javascript::
+            .. js ::
             
                 while(!isDone){
                     doSomething();
@@ -291,7 +291,7 @@ Layout
                 
         #. ``do...while`` statements SHOULD have the following form:
         
-            .. javascript::
+            .. js ::
             
                 do{
                     statements;
@@ -299,7 +299,7 @@ Layout
          
          #. ``switch`` statements SHOULD have the following form:
          
-            .. javascript::
+            .. js ::
             
                 switch(condition){
                     case "ABC":
@@ -315,7 +315,7 @@ Layout
                 
         #. ``try...catch...finally`` statements SHOULD have the following form:
         
-            .. javascript::
+            .. js ::
             
                 try{
                     statements;
@@ -327,7 +327,7 @@ Layout
                 
         #. A single statement if-else, while or for MUST NOT be written without brackets, but CAN be written on the same line:
         
-            .. javascript::
+            .. js ::
             
                 if(condition){ statement; }
                 else{ statement; }
@@ -382,7 +382,7 @@ Layout
 
         #. Function calls and method calls SHOULD NOT be followed by a space.
         
-            .. javascript::
+            .. js ::
             
                 doSomething(someParameter); // not doSomething (someParameter);
         

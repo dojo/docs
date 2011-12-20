@@ -69,7 +69,7 @@ Basic example, input-output sync:
   :version: local
   :toolbar: versions, themes
 
-  .. javascript::
+  .. js ::
 
     <script>
         // Load the parser, we'll use the declarative data binding syntax (ref).

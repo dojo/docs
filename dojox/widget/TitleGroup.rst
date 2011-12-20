@@ -25,7 +25,7 @@ A simple declarative example
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
      </style>
 
-  .. javascript::
+  .. js ::
 
     <script>
         dojo.require("dojox.widget.TitleGroup");
@@ -55,7 +55,7 @@ Adding and removing children
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
      </style>
 
-  .. javascript::
+  .. js ::
 
     <script>
         dojo.require("dojox.widget.TitleGroup");

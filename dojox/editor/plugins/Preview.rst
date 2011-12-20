@@ -68,7 +68,7 @@ Basic Usage
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -118,7 +118,7 @@ Applying styles to preview content
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -169,7 +169,7 @@ Applying stylesheets to preview content
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");

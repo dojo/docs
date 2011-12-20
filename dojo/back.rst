@@ -128,7 +128,7 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
         <script type="text/javascript">
             dojo.require("dojo.back");

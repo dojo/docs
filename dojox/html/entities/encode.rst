@@ -25,7 +25,7 @@ Encoding HTML and LATIN-1 entities in a text string
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -62,7 +62,7 @@ Encoding custom entities in a text string
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");

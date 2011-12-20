@@ -36,7 +36,7 @@ allows for new DOM-centric capabilities.
 .. code-example::
   :version: 1.3.2-2.0
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.dtl.Inline");
@@ -96,7 +96,7 @@ This works exactly the same as rendering a template in Django.
 .. code-example::
   :version: 1.3.2-2.0
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.dtl");
@@ -119,7 +119,7 @@ To use, make sure you require the ``dojox.dtl.ext-dojo.NodeList`` module, which 
 .. code-example::
   :version: 1.3.2-2.0
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.dtl.ext-dojo.NodeList");
@@ -144,7 +144,7 @@ The template will be rendered using the widget object as its context. If you don
 .. code-example::
   :version: 1.3.2-2.0
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.dtl._Templated");
@@ -181,7 +181,7 @@ The significantly better way is partly outlined in the section above on ``dojo.m
 .. code-example::
   :version: 1.3.2-2.0
 
-  .. javascript::
+  .. js ::
 
     new dojox.dtl.Context({
       parent: {

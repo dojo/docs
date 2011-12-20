@@ -30,7 +30,7 @@ or clicks the plus icon next to the textbox
   :width: 660
 
 
-  .. javascript::
+  .. js ::
 
      <script>
          require(["dojo/dom", "dojo/keys", "dijit/typematic"], function(dom, keys, typematic){

@@ -99,7 +99,7 @@ Programmatic example
 
   Dynamic creation of a GridContainer, with a Portal and a DropDownButton inside.
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.layout.GridContainer");

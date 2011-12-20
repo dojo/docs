@@ -70,7 +70,7 @@ Basic Usage: foreColor (Text Color)
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");
@@ -115,7 +115,7 @@ Basic Usage: hiliteColor (Text Background Color)
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");
@@ -160,7 +160,7 @@ Basic Usage: Both foreground and background color buttons together
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");

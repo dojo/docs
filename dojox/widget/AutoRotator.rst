@@ -76,7 +76,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -142,7 +142,7 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -190,7 +190,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");

@@ -68,7 +68,7 @@ Basic Usage
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");

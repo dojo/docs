@@ -119,7 +119,7 @@ Basic Usage
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");
@@ -162,7 +162,7 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");
@@ -208,7 +208,7 @@ This example also organizes the toolbar a bit.
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");

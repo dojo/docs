@@ -64,7 +64,7 @@ Destroy a single node
 
   Destroy a DomNode
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -106,7 +106,7 @@ Destroy all nodes in a list by reference
 
   Destroy all Nodes in a list by reference
   
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");

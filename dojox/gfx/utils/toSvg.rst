@@ -57,7 +57,7 @@ Example
 
 .. code-example ::
   
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dojox.gfx");

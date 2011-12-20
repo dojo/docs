@@ -24,7 +24,7 @@ The following of this document first describes how to use the export functions o
   :width: 600
   :height: 550
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");

@@ -73,7 +73,7 @@ You can see this code in action:
 
 [ Dojo 1.7 AMD ]
 
-.. javascript::
+.. js ::
 
     <script>
       require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom){
@@ -96,7 +96,7 @@ You can see this code in action:
 
 [ Dojo < 1.7 ]
 
-.. javascript::
+.. js ::
 
     <script>
       dojo.ready(function(){
@@ -154,7 +154,7 @@ This code in action:
 
   An array can be used with dojo.replace.
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.ready(function(){
@@ -258,7 +258,7 @@ This code in action:
 
   A function can be used with dojo.replace.
 
-  .. javascript::
+  .. js ::
 
     <script>
       // helper function
@@ -326,7 +326,7 @@ This code in action:
 
   A pattern can be replaced.
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.ready(function(){
@@ -407,7 +407,7 @@ Take a look at this code in action:
 
   Highlighting replaced fields.
 
-  .. javascript::
+  .. js ::
 
     <script>
       function hiliteReplace(tmpl, dict){
@@ -516,7 +516,7 @@ You can check the result here:
 
   Escaping replaced fields.
 
-  .. javascript::
+  .. js ::
 
     <script>
       function safeReplace(tmpl, dict){
@@ -667,7 +667,7 @@ You can check the result here:
 
   Formatting replaced fields.
 
-  .. javascript::
+  .. js ::
 
     <script>
       function format(tmpl, dict, formatters){

@@ -65,7 +65,7 @@ Empty a single node
 
    Empty a DomNode
    
-  .. javascript::
+  .. js ::
     
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
@@ -112,7 +112,7 @@ Empty all nodes in a list by reference
 
   Empty all Nodes in a list by reference
   
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.form.Button");

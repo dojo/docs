@@ -28,7 +28,7 @@ and it will have the same effect as clicking the span with the mouse:
   :height: 250
   :toolbar: versions, dir
 
-  .. javascript::
+  .. js ::
 
     <script>
         dojo.require("dijit._WidgetBase");

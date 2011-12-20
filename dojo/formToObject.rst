@@ -52,7 +52,7 @@ Create an object version of a form
 
 .. code-example::
   
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -89,7 +89,7 @@ Create an object version of a form with Dijit widgets
 
 .. code-example::
   
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.TextBox");

@@ -65,7 +65,7 @@ Example of a different wipe direction for each pane.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -133,7 +133,7 @@ Example of a different wipe direction for each pane.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");

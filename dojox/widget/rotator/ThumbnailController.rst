@@ -68,7 +68,7 @@ Programmatic example
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -141,7 +141,7 @@ Declarative example
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");

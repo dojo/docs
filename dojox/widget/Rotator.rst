@@ -67,7 +67,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
@@ -117,7 +117,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
@@ -200,7 +200,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
@@ -241,7 +241,7 @@ Example of using different transitions per pane.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
@@ -285,7 +285,7 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
@@ -348,7 +348,7 @@ Example
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");

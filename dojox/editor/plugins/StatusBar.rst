@@ -75,7 +75,7 @@ Basic Usage
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");

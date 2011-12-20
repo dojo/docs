@@ -85,7 +85,7 @@ Basic usage
 
 .. code-example ::
   
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dojox.widget.Standby");

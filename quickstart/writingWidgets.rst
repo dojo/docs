@@ -294,7 +294,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 .. code-example::
   :djConfig: parseOnLoad: false
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
        require([
@@ -385,7 +385,7 @@ that has an "open" attribute that controls whether the widget is hidden or shown
 .. code-example::
   :djConfig: parseOnLoad: false
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
        require([
@@ -481,7 +481,7 @@ and in that case templateString should reference the file via the :ref:`dojo.tex
 .. code-example::
   :djConfig: parseOnLoad: false
 
-  .. javascript::
+  .. js ::
 
     <script>
         require([

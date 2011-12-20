@@ -15,7 +15,7 @@ Localized Date Field
 .. code-example::
   :toolbar: themes, versions, dir
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileReadStore");
@@ -75,7 +75,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 .. code-example::
   :toolbar: themes, versions, dir
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -135,7 +135,7 @@ Editable Localized Date Field - use DateTextBox when editing
 .. code-example::
   :toolbar: themes, versions, dir
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -203,7 +203,7 @@ Editable Custom Format Date Field - use DateTextBox when editing
 .. code-example::
   :toolbar: themes, versions, dir
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");

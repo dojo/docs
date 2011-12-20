@@ -76,7 +76,7 @@ Simple Example, one column and no styling
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");
@@ -105,7 +105,7 @@ Two Columns, Label Styling
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");
@@ -146,7 +146,7 @@ Two Columns, Label and Value cell Styling
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");
@@ -193,7 +193,7 @@ Using Colspan
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");
@@ -246,7 +246,7 @@ Programmatic example
   Load the required JavaScript files. These include the TableContainer itself, and the dijit.TextBox widget that it contains.
   A TableContainer widget is created programmatically, and four text box widgets are added to it.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");
@@ -313,7 +313,7 @@ Setting the Label Width
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
-  .. javascript::
+  .. js ::
   
     <script type="text/javascript">
       dojo.require("dijit.dijit");

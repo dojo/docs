@@ -78,7 +78,7 @@ Example 1: dojo.xhrPost call to send a form
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -136,7 +136,7 @@ Example 2: dojo.xhrPost call to send some text data
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");

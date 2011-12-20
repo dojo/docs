@@ -1112,7 +1112,7 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
   :width: 400
   :height: 300
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -1188,7 +1188,7 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
   :width: 400
   :height: 300
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");

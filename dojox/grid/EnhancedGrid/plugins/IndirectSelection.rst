@@ -26,7 +26,7 @@ Please note indirect selection is completely dependent on the selection mode of 
   :width: 550
   :height: 330
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");

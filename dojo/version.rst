@@ -46,7 +46,7 @@ The `revision` member refers to the SVN revision used to create the version. You
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.ready(function(){

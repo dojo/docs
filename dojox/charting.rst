@@ -14,7 +14,7 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.charting.Chart2D");
@@ -61,7 +61,7 @@ In historical syntax:
 
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dojox.charting.Chart");

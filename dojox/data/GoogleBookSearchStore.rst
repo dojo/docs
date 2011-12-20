@@ -82,7 +82,7 @@ Programmatic example
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore");
