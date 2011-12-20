@@ -41,32 +41,26 @@ Based on dojo/on and dojo/touch, all the gestures are provided as object events(
 1. Used with dojo/on
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         on(node, tap, function(e){});
       }
-  </script>
   
   
 2. Used with dojox/gesture/tap directly
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojox/gesture/tap"], function(tap){
         tap(node, function(e){});
       }
-  </script>
   
 
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  
-  <script type="text/javascript">
+
         dojo.connect(node, dojox.gesture.tap, function(e){});
-  </script>
 
 
 
@@ -90,38 +84,32 @@ Provide common tap related gesture events including "tap", "tap.hold" and "tap.d
 1. Used with dojo/on
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
         on(node, tap, function(e){});
         on(node, tap.hold, function(e){});
         on(node, tap.doubletap, function(e){});
       }
-  </script>
   
   
 2. Used with dojox/gesture/tap directly
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojox/gesture/tap"], function(tap){
         tap(node, function(e){});
         tap.hold(node, function(e){});
         tap.doubletap(node, function(e){});
       }
-  </script>
   
 
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  
-  <script type="text/javascript">
+
         dojo.connect(node, dojox.gesture.tap, function(e){});
         dojo.connect(node, dojox.gesture.tap.hold, function(e){});
         dojo.connect(node, dojox.gesture.tap.doubletap, function(e){});
-  </script>
   
 
 There are also several configurable parameters in dojox/gesture/tap
@@ -137,19 +125,17 @@ doubleTapTimeout    Default is 250, the timeout threshold(in milliseconds) for "
 The above parameters are supposed to be only changed seldomly with the following way:
 
 .. js ::
-  
-  <script type="text/javascript">
+
         define(["dojo/on", "dojox/gesture/tap"], function(on, tap){
-        
+
             // create a new one with a different holdThreshold parameter
             var myTap = new dojox.gesture.tap.Tap({holdThreshold: 300});
-            
+
             // use it
             on(node, myTap, function(e){});
             on(node, myTap.hold, function(e){});
             on(node, myTap.doubletap, function(e){});
         }
-  </script>
   
   
   
@@ -173,34 +159,28 @@ It can be used in following ways:
 1. Used with dojo/on
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojo/on", "dojox/gesture/swipe"], function(on, swipe){
         on(node, swipe, function(e){});
         on(node, swipe.end, function(e){});
       }
-  </script>
   
 2. Used with dojox/gesture/swipe directly
 
 .. js ::
-  
-  <script type="text/javascript">
+
       define(["dojox/gesture/swipe"], function(swipe){
         swipe(node, function(e){});
         swipe.end(node, function(e){});
       }
-  </script>
   
 
 3. Or used with the traditional dojo/connect
 
 .. js ::
-  
-  <script type="text/javascript">
+
         dojo.connect(node, dojox.gesture.swipe, function(e){});
         dojo.connect(node, dojox.gesture.swipe.end, function(e){});
-  </script>
   
   
 Some swipe related information will also be provided in the fired "swipe" or "swipe.end" event:
@@ -223,8 +203,7 @@ A gesture event behaves all the same as a native Event. Besides getting useful i
 The following sample shows how we can easily stop a gesture event from bubbling to parent node:
 
 .. js ::
-  
-  <script type="text/javascript">
+
         function innerFunc(e){
           console.log("'tap' fired on inner div");
           dojo.stopEvent(e);
@@ -235,7 +214,6 @@ The following sample shows how we can easily stop a gesture event from bubbling 
         }
         on(inner, tap, innerFunc);
         on(outer, tap, outerFunc);
-  </script>
  
 
   
@@ -252,25 +230,22 @@ It's very easy to customize a new gesture with following steps:
 Suppose we have a dojox/gesture/rotate which provides 3 gesture events:"rotate", "rotate.end" which can be used as:
 
 .. js ::
-  
-  <script type="text/javascript">
+
         define(["dojo/on", "dojox/gesture/rotate"], function(on, rotate){
             on(node, rotate, function(e){});
             on(node, rotate.end, function(e){});
         }
-  </script>
 
 Then we can define the rotate gesture like:
 
 .. js ::
-  
-  <script type="text/javascript">
+
         define([..., "./Base"], function(..., Base){
           var clz = declare(Base, {
             defaultEvent: "rotate",
-            
+
             subEvents: ["end"],
-            
+
             press: function(data, e){
               // record the initial coords
             },
@@ -292,7 +267,6 @@ Then we can define the rotate gesture like:
 
           return dojox.gesture.rotate;
         });
-  </script>
 
 
 Demo

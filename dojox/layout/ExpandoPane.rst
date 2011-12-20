@@ -27,10 +27,8 @@ The ExpandoPane is used in a similar way to the way a dijit :ref:`ContentPane <d
 You should ensure that you include the ExpandoPane CSS in your application in order to have the pane render properly:
 
 .. css ::
- 
- <style type="text/css">
+
    @import url("dojox/layout/resources/ExpandoPane.css");
- </style>
 
 
 Examples

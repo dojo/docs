@@ -28,7 +28,6 @@ Programmatic example
 
 .. js ::
  
- <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
    dojo.ready(function(){
      var s = new dojox.form.TimeSpinner({
@@ -37,20 +36,21 @@ Programmatic example
        largeDelta: 30
      }, "timespinner");
    });
- </script>
- 
- <input type="text" id="spinner" />
+
+.. html ::
+
+   <input type="text" id="spinner" />
 
 Declarative example
 -------------------
 
 .. js ::
  
- <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
- </script>
- 
- <input type="text" data-dojo-type="dojox.form.TimeSpinner" value="12:45" />
+
+.. html ::
+
+   <input type="text" data-dojo-type="dojox.form.TimeSpinner" value="12:45" />
 
 See also
 ========

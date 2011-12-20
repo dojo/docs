@@ -26,20 +26,17 @@ Usage
 To create an instance of a ServiceStore, simply instantiate providing the service to be used as the source:
 
 .. js ::
-  
-  <script type="text/javascript">
+
     // first include ServiceStore:
     dojo.require('dojox.data.ServiceStore');
 
     myService = new dojox.rpc.Service(mySMD);
     myServiceStore = new dojox.data.ServiceStore({service:myService});
-  </script>
 
 When extending this class, if you would like to create lazy objects, you can follow the example from dojox.data.tests.stores.ServiceStore:
 
 .. js ::
-  
-  <script type="text/javascript">
+
     var lazyItem = {
         _loadObject: function(callback){
             this.name="loaded";
@@ -47,7 +44,6 @@ When extending this class, if you would like to create lazy objects, you can fol
             callback(this);
         }
     };
-  </script>
 
 dojox.data.ServiceStore should be instantiated with a single argument that is an object that can have any of these properties:
 

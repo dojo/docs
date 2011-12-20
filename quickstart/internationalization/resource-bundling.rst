@@ -37,14 +37,12 @@ dojo.i18n.getLocalization
 Use :ref:`dojo.i18n.getLocalization() <dojo/i18n>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
 
 .. js ::
- 
- <script type="text/javascript">
+
    // TODO: replace this example with the strings from dojo.color when translations are available
    dojo.require("dojo.i18n");
    dojo.requireLocalization("dijit.form", "validate");
    var validate = dojo.i18n.getLocalization("dijit.form", "validate");
    console.log(validate.invalidMessage);
- </script>
 
 
 For an English-speaking user, the example above will display the value for invalidMessage from dijit/form/validate.js:

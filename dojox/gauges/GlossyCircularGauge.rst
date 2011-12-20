@@ -93,8 +93,7 @@ circular gauge (programmatic)
     <div id="CircularGauge" ></div>
 
   .. js ::
-  
-    <script type="text/javascript">
+
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyCircularGauge');
         makeGauge = function(){
@@ -108,7 +107,6 @@ circular gauge (programmatic)
         	glossyCircular.startup();
         };
         dojo.ready(makeGauge );
-    </script>
     
     
 An other gauge sample

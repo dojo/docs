@@ -58,14 +58,11 @@ Usage
 =====
 
 .. js ::
-  
-  <script type="text/javascript">
+
     var store = new dojox.data.jsonPathStore({url: "/stores/store.js"});
-  </script>
 
 .. js ::
   
-  <script type="text/javascript">
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
               {id: 1, type: apple},
@@ -75,7 +72,6 @@ Usage
               {id: 3, type: "broccoli"}
          ]
      });
-  </script>
 
 
 Constructor Parameters
@@ -117,8 +113,7 @@ Programmatic example
 --------------------
 
 .. js ::
-  
-  <script type="text/javascript">
+
     var store = new dojox.data.jsonPathStore({data: {
          fruits: [
               {id: 1, type: apple},
@@ -128,7 +123,6 @@ Programmatic example
               {id: 3, type: "broccoli"}
          ]
      });
-  </script>
 
 Declarative example
 -------------------

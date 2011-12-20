@@ -92,11 +92,9 @@ Using Resource Bundle
 First, you should use the dojo.registerModulePath function to define the directory where resource bundles are as a registered module. The module name needs to be used in later callings to the dojo.requireLocalization and dojo.i18n.getLocalization functions. For the previous example, you can use the following line to define the module "my.app":
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.registerModulePath("my.app", "../../my/app");
    // Note: Here, the "../../my/app" path is relative to the directory that contains "dojo.js".
- </script>
 
 Then you can use the dojo.requireLocalization function to load resource bundles from files. After a resource bundle is loaded, the dojo.i18n.getLocalization function returns a copy of the bundle object.
 
@@ -121,24 +119,20 @@ then the following two code blocks are equal:
 Code block A:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.requireLocalization("my.app", "bar");
-   
+
    var bar = dojo.i18n.getLocalization("my.app", "bar");
- </script>
 
 Code block B:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.requireLocalization("my.app", "bar", "zh-cn"); // default locale
    dojo.requireLocalization("my.app", "bar", "zh-tw"); // extra locale
    dojo.requireLocalization("my.app", "bar", "fr");    // extra locale
-   
+
    var bar = dojo.i18n.getLocalization("my.app", "bar", "zh-cn"); // default locale
- </script>
 
 The first method is preferred as it is less brittle.
 

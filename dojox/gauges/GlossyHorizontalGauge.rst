@@ -80,8 +80,7 @@ The HTML <div> element to display the gauge widget:
 The Javascript code creating the gauge:
 
 .. js ::
-    
-    <script type="text/javascript">
+
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyHorizontalGauge');
         makeGauge = function(){
@@ -95,5 +94,4 @@ The Javascript code creating the gauge:
         	glossygauge.startup();
         };
         dojo.ready(makeGauge );
-    </script>
     
