@@ -19,17 +19,19 @@ Usage
 
 Code snippet below illustrates a common usage of Buddhist Date code with the Dijit Calendar widget.
 
-.. js ::
+.. html ::
  
+  <head>
   <script type="text/javascript">
     dojo.require("dojox.date.buddhist");
     dojo.require("dojox.date.buddhist.Date");
     dojo.require("dojox.date.buddhist.locale");
   </script>
-  <html><title>Thai Solar calendar</title><body>
+  <title>Thai Solar calendar</title>
+  </head>
+  <body>
     <input name="thaical"
        value="2009-03-10"
        data-dojo-type="dijit.form.DateTextBox"
-       datePackage = "dojox.date.buddhist"
-    >
-  </body></html>
+       datePackage = "dojox.date.buddhist">
+  </body>

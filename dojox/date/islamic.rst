@@ -22,23 +22,25 @@ Usage
 
 Code snippet below illustrates most common usage of Islamic calendar.
 
-.. js ::
+.. html ::
  
-  <script type="text/javascript">
-    dojo.require("dojox.date.islamic");
-    dojo.require("dojox.date.islamic.Date");
-    dojo.require("dojox.date islamic.locale");
-  </script>
-  <html><title> Islamic calendar </title><body>
-    <input id="Hijcal"
-       name="noDOMvalue"
-       value="2009-03-10"
-       type="text"
-       data-dojo-type="dijit.form.DateTextBox"
-       datePackage = "dojox.date.islamic"
-       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
-    >
-  </body></html>
+  <head>
+	  <script type="text/javascript">
+		dojo.require("dojox.date.islamic");
+		dojo.require("dojox.date.islamic.Date");
+		dojo.require("dojox.date islamic.locale");
+	  </script>
+	  <title> Islamic calendar </title>
+  </head>
+  <body>
+	<input id="Hijcal"
+	   name="noDOMvalue"
+	   value="2009-03-10"
+	   type="text"
+	   data-dojo-type="dijit.form.DateTextBox"
+	   datePackage = "dojox.date.islamic"
+	   constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}">
+  </body>
 
 Islamic calendar package
 ------------------------
@@ -64,8 +66,7 @@ Programmatic example
 The code snippet below illustrates conversion between two possible representations of Islamic date: String and Date object.
 
 .. js ::
- 
-  <script type="text/javascript">
+
    var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'};
 
    // converts string representation of Islamic date to Date object
@@ -73,7 +74,6 @@ The code snippet below illustrates conversion between two possible representatio
 
    // formats Islamic date object and serialize it into a string
    var dateHijString = dojox.date.islamic.locale.format(dateHij, options);
-  </script>
 
 
 Declarative example
@@ -82,23 +82,25 @@ Declarative example
 Code snippet below illustrates usage of Islamic calendar in the context of graphical date picker - DateTextBox
 
 
-.. js ::
+.. html ::
  
-  <script type="text/javascript">
-    dojo.require("dojox.date.islamic");
-    dojo.require("dojox.date.islamic.Date");
-    dojo.require("dojox.date.islamic.locale");
-  </script>
-  <html><title> Islamic calendar </title><body>
+  <head>
+	  <script type="text/javascript">
+		dojo.require("dojox.date.islamic");
+		dojo.require("dojox.date.islamic.Date");
+		dojo.require("dojox.date.islamic.locale");
+	  </script>
+	  <title> Islamic calendar </title>
+  </head>
+  <body>
     <input id="hijcal"
        name="noDOMvalue"
        value="2009-03-10"
        type="text"
        data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.islamic"
-       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
-    >
-  </body></html>
+       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}">
+  </body>
 
 
 See also
