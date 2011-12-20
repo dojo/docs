@@ -7,7 +7,7 @@ dojox.image.ThumbnailPicker
 :Project owner: ?--
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A :ref:`dojo.data-powered <dojo/data>` ThumbnailPicker.

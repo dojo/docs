@@ -8,7 +8,7 @@ dojox.timing.doLater
 :Author: Mike Wilcox
 :since: 1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.timing.doLater checks if a parameter is ready, and if not, it will "do it later".

@@ -7,7 +7,7 @@ dijit.DropDownMenu
 :Authors: Bill Keese
 :jsDoc: http://dojotoolkit.org/api/dijit.DropDownMenu
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

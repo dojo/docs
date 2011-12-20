@@ -7,7 +7,7 @@ dojox.atom.io.model.AtomItem
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The AtomItem class is generally not used independently.  It is AtomItem class is the base class for Atom feed and entry objects, because they 

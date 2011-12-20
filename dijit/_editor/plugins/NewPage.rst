@@ -8,7 +8,7 @@ dijit._editor.plugins.NewPage
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to be able to with the click of a button clear the editor and set it with some default content, be it an empty line of some template HTML?
@@ -87,7 +87,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text then press the New Page button.  The editor content will then clear.</b>
     <br>
@@ -132,7 +132,7 @@ Custom New Page Content
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
     <br>

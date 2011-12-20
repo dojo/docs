@@ -6,7 +6,7 @@ AJAX and Dojo
 
 :Authors: Nikolai Onken, Craig Riecke
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Ajax has been a buzzword around for some time now (as far as you could call some time a lot of time ;) ) and is one of the concepts which have changed the development for the web quite drastically.

@@ -7,7 +7,7 @@ dojox.html.entities.encode
 :Author: Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 A flexible function for encoding defined UTF-8 characters into an entity encoding representation.  This function is particularly useful when working with text that is to be inserted as text content in HTML/XML markup.  Certain characters cannot be used directly in text (for example: < and >) as they mean special things to the parser.  So entity encodings are required so that the parser doesn't interpret them as meta data and yet they still display correctly.
@@ -40,7 +40,7 @@ Encoding HTML and LATIN-1 entities in a text string
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -78,7 +78,7 @@ Encoding custom entities in a text string
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

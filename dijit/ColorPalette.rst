@@ -8,7 +8,7 @@ dijit.ColorPalette
 :Developers: Declan Fahey, Bill Keese, Adam Peller, Becky Gibson, Pete Higgins
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.

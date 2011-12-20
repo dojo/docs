@@ -7,12 +7,12 @@ dojox.gauges.GlossySemiCircularGauge
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A glossy semi circular gauge, used to display numerical data.
 
-.. image:: GlossySemiCircularGauge.png
+.. image :: GlossySemiCircularGauge.png
 
 Introduction
 ============
@@ -83,7 +83,7 @@ Examples
 
 .. code-example::
 
-  .. html::
+  .. html ::
 
     <div id="SemiCircularGauge" ></div>
 

@@ -7,7 +7,7 @@ dojox.image.LightboxNano
 :Project owner: Chris Barber
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A simple "nano" version of the lightbox.

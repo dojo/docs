@@ -6,7 +6,7 @@ Build Transform writeDojo
 
 :Author: Rawld Gill
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Summary

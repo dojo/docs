@@ -7,7 +7,7 @@ dojo.provide
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.provide is a core part of the dojo module system. It tells the loader that a specific module has been loaded.

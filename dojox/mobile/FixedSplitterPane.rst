@@ -8,7 +8,7 @@ dojox.mobile.FixedSplitterPane
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 FixedSplitterPane is a pane widget that is used in a :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>`. It is a widget, but can be regarded as a simple <div> element.

@@ -8,7 +8,7 @@ dojox.lang.docs
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.lang.docs** provides schemas on Dojo's classes based on the API

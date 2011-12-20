@@ -8,7 +8,7 @@ dojox.editor.plugins.PrettyPrint
 :Authors: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to pull your hair out because the content from dijit.Editor was formatted so badly it looked like the output from some crazed demonic minion bent on causing insanity?   Well, I know I sure have, and thus was born the PrettyPrint plugin for the dijit.Editor.  What this plugin does is take the output that comes from dijit.Editor.get("value"), and reformats it with reasonably indented structure, cleaned up line wrapping, and other general structural cleanup to make it much more human-readable.
@@ -110,7 +110,7 @@ Basic Usage
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -161,7 +161,7 @@ Configured indent and line length
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

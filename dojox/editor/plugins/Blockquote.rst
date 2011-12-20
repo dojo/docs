@@ -8,7 +8,7 @@ dojox.editor.plugins.Blockquote
 :Project owner: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to set apart a section of text in your document as a 'quotation' of something someone else has said?  Have you ever wanted to remove quotation indication from a section of text in your document?  If so, then this plugin is for you!
@@ -71,13 +71,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.Blockquote");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Blockquote.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>

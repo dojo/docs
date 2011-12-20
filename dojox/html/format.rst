@@ -8,7 +8,7 @@ dojox.html.format
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to format some HTML that came out of a textarea?  Or the dijit.Editor?  Or any other markup editor, for that matter, so it can be easily read by people?  If so, then this package is for you!
@@ -98,7 +98,7 @@ Format some HTML markup
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -162,7 +162,7 @@ Format some HTML markup with three space indent
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -225,7 +225,7 @@ Format some HTML markup with three space indent and 20 character line wrap
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -289,7 +289,7 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

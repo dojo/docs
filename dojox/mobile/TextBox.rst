@@ -8,7 +8,7 @@ dojox.mobile.TextBox
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 TextBox is a very simple INPUT widget.
@@ -49,7 +49,7 @@ Simple TextBox
 
   <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
 
-.. image:: SimpleMobileTextBox.png
+.. image :: SimpleMobileTextBox.png
 
 
 onChange handler in HTML5 format
@@ -60,4 +60,4 @@ onChange handler in HTML5 format
   <input data-dojo-type="dojox.mobile.TextBox" style="background-color:lightgray;"
         data-dojo-props='maxLength:10, value:"some data", onChange:function(newValue){ alert("value changed to " + newValue); }' />
 
-.. image:: HTML5MobileTextBox.png
+.. image :: HTML5MobileTextBox.png

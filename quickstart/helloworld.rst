@@ -6,7 +6,7 @@ Hello, World!
 
 :Author: JChimene
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The purpose of this tutorial is to provide a starting point for users who are new to Dojo. Whilst every effort is made to introduce as much as possible about Dojo, it is impossible to include more of the detailed information since to do so would be counterproductive and confusing to new users. For more information on the concepts introduced here, please see the links to other resources at the end of this document (Finding More Resources).
@@ -23,7 +23,7 @@ Setting Up Dojo
 
 First, you should create a directory on the web server.  We'll call ours HelloWorldTutorial.  Then create a directory called dojoroot underneath it.  Finally, use your favorite unzipping tool to unzip Dojo into /HelloWorldTutorial/dojoroot.  It'll look like this when you're done:
 
-.. image:: debugging9.png
+.. image :: debugging9.png
    :alt: server directory structure
 
 Getting Started

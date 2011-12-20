@@ -7,7 +7,7 @@ dojo.NodeList.attr
 :since: V1.2
 :Removed: in V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A getter and setter for DOM attributes, events and CSS styles adapted to work with node lists.

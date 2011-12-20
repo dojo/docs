@@ -6,7 +6,7 @@ UI Development with the Dojo Toolkit
 
 :Authors: Nikolai Onken
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The Dojo Toolkit comes with many amazing modules which all are trying to make your life as a developer many times easier.

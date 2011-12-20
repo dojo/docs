@@ -8,7 +8,7 @@ dojox.editor.plugins.Breadcrumb
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to know how node you were in while editing some rich text?  Have you ever wanted to be sure the entire element was deleted, not just its content?  If so, then this plugin is for you.
@@ -76,13 +76,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.Breadcrumb");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Breadcrumb.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <br>
     <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['breadcrumb']">

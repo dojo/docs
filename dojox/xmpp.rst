@@ -6,7 +6,7 @@ dojox.xmpp
 
 TODOC: !!
 
-.. contents::
+.. contents ::
    :depth: 2
 
 .. api-inline :: dojox.xmpp

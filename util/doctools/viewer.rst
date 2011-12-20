@@ -7,7 +7,7 @@ Viewing the Generated API Docs
 :Project owner: Tom Trenka, Sam Foster
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Setup and population of the viewer app with API data

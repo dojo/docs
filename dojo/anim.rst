@@ -7,7 +7,7 @@ dojo.anim
 :Project owner: ?--
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A simpler interface to `dojo.animateProperty()`.

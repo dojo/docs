@@ -8,7 +8,7 @@ dojox.editor.plugins.CollapsibleToolbar
 :Project owner: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to collapse the editor toolbar out of the way?  This is desirable in cases where the editor occupies a small section of a page and the toolbar has wrapped, limiting the editing area.  If this is a situation your users encounter, then this plugin is for you.
@@ -77,13 +77,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.CollapsibleToolbar");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/CollapsibleToolbar.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <br>
     <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['collapsibletoolbar']">

@@ -8,7 +8,7 @@ dojox.rpc.Rest
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.rpc.Rest provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE.

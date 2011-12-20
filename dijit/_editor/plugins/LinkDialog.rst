@@ -8,7 +8,7 @@ dijit._editor.plugins.LinkDialog
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to insert a hyperlink into a document you are editing in :ref:`dijit.Editor <dijit/Editor>`?
@@ -89,7 +89,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Select any of the links or images below and click the appropriate button to change their properties.  Or, click where on the page you want to insert an image or a link, then click the appropriate button and create the image or link.</b>
     <br>

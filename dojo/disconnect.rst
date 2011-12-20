@@ -6,7 +6,7 @@ dojo.disconnect
 
 :since: 0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Disconnects methods from linked events.

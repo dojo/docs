@@ -8,7 +8,7 @@ dojox.grid.EnhancedGrid.plugins.IndirectSelection
 :Project owner: Evan Huang
 :since: V.1.6
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -75,11 +75,11 @@ Please note indirect selection is completely dependent on the selection mode of 
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="gridDiv"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
@@ -160,7 +160,7 @@ Scenario
 * Indirect selection by radio buttons
 
 
-.. image:: indirect1-1.png
+.. image :: indirect1-1.png
 
 * Indirect selection by check boxes
 
@@ -168,7 +168,7 @@ Besides selecting or deselecting rows by clicking on check boxes, the SHIFT key 
 
 * An additional selection technique is to swipe through check boxes (mouse down on the first, drag through the adjacent check boxes and then release on the last).
 
-.. image:: indirect2.png
+.. image :: indirect2.png
 
 Accessibility
 -------------

@@ -4,7 +4,7 @@
 dojo.replaceClass
 =================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Removes a class or a list of classes from a DOM node.

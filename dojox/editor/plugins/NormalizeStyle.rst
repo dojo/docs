@@ -8,7 +8,7 @@ dojox.editor.plugins.NormalizeStyle
 :Authors: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever encountered a situation where the editor was inconsistent about how it handled bolding, italics, underline, etc, of a particular set of text in the editor?   Have you ever wanted to be able to force the editor to use <span> with style instead of semantic tags, or vice-versa?  If so, then this plugin may meet your needs.  It is a very experimental plugin that attempts to 'standardize' the output as either CSs-style, or semantic tag style, based on the configuration.
@@ -90,7 +90,7 @@ Basic Usage
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -141,7 +141,7 @@ Configured css mode
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

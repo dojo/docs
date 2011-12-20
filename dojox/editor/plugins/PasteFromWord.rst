@@ -8,7 +8,7 @@ dojox.editor.plugins.PasteFromWord
 :Authors: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever pasted in content from Microsoft Word or similar programs into the dijit.Editor and found that it tended to paste in really unpleasant HTML as well as a lot of bogus and bad tags?  Is so, then this plugin is intended for you
@@ -91,16 +91,16 @@ Basic Usage
       dojo.require("dojox.editor.plugins.PasteFromWord");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/PasteFromWord.css";
     </style>
     
-  .. html::
+  .. html ::
 
 
-  .. html::
+  .. html ::
 
     <b>Clear the editor, click paste from word, then paste in content you want!</b>
     <br>

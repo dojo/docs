@@ -8,12 +8,12 @@ dojox.mobile.RoundRectCategory
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 RoundRectCategory is a category header for a rounded rectangle list.
 
-.. image:: RoundRectCategory.png
+.. image :: RoundRectCategory.png
 
 Constructor Parameters
 ======================

@@ -7,7 +7,7 @@ dojox.html.entities.decode
 :Author: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
   :depth: 2
 
 A flexible function for decoding entity encoded characters back to their UTF-8 representation.  This function is particularly useful when working with text that is to be inserted as text content in HTML/XML markup.  Certain characters cannot be used directly in text (for example: < and >) as they mean special things to the parser.  So entity encodings are required so that the parser doesn't interpret them as meta data and yet they still display correctly.  This function can decode those entities back to the real character.
@@ -40,7 +40,7 @@ Decoding HTML and LATIN-1 entities in a text string
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -83,7 +83,7 @@ Decoding custom entities in a text string
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

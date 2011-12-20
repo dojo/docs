@@ -8,7 +8,7 @@ dojo._base.Color
 :Developers: Eugene Lazutkin, Adam Peller, Alex Russell
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

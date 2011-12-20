@@ -8,12 +8,12 @@ dojox.mobile.EdgeToEdgeList
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 EdgeToEdgeList is an edge-to-edge layout list, which displays all items in equally sized rows. Each item must be dojox.mobile.ListItem.
 
-.. image:: EdgeToEdgeList.png
+.. image :: EdgeToEdgeList.png
 
 Constructor Parameters
 ======================
@@ -61,14 +61,14 @@ In this example, <ul> and <li> are used just because they are typically used to 
     </li>
   </ul>
 
-.. image:: EdgeToEdgeList-example1.png
+.. image :: EdgeToEdgeList-example1.png
 
 CSS sprite example
 ------------------
 
 In this example, an aggregated icon image as below is used for each list item icon. This way the number of requests to the server can be reduced and thus the performance could be improved.
 
-.. image:: all-icons.png
+.. image :: all-icons.png
 
 (all-icons.png)
 
@@ -87,7 +87,7 @@ In this example, an aggregated icon image as below is used for each list item ic
     </li>
   </ul>
 
-.. image:: EdgeToEdgeList-example2.png
+.. image :: EdgeToEdgeList-example2.png
 
 Selection mode example
 ----------------------
@@ -108,4 +108,4 @@ Selection mode example
     <li data-dojo-type="dojox.mobile.ListItem">Ripple</li>
   </ul>
 
-.. image:: EdgeToEdgeList-check.png
+.. image :: EdgeToEdgeList-check.png

@@ -8,7 +8,7 @@ dojox.editor.plugins.TextColor
 :Developers: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you wanted a better text color selection plugin that allows for colors that span the entire RGB color space instead of the selected colors provided by :ref:`the dijit TextColor Plugin <dijit/_editor/plugins/TextColor>`  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar that make use of the dojox.widget.ColorPicker instead of the dijit.ColorPalette for color selection.
@@ -81,13 +81,13 @@ Basic Usage: foreColor (Text Color)
       dojo.require("dojox.editor.plugins.TextColor");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the TextColor button to select a new color for it.</b>
     <br>
@@ -131,15 +131,15 @@ Basic Usage: hiliteColor (Text Background Color)
       dojo.require("dojox.editor.plugins.TextColor");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
     </style>
     
-  .. html::
+  .. html ::
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the Text Background Color button to select a new background color for it.</b>
     <br>
@@ -183,15 +183,15 @@ Basic Usage: Both foreground and background color buttons together
       dojo.require("dojox.editor.plugins.TextColor");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
     </style>
     
-  .. html::
+  .. html ::
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then change its colors via the text color and text background color buttons.</b>
     <br>

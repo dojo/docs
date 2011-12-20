@@ -6,7 +6,7 @@ dojo.xhrPost
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 
@@ -116,7 +116,7 @@ Example 1: dojo.xhrPost call to send a form
       dojo.ready(sendForm);
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Simple Form:</b>
     <br>
@@ -168,7 +168,7 @@ Example 2: dojo.xhrPost call to send some text data
       dojo.ready(sendText);
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Push the button to POST some text.</b>
     <br>

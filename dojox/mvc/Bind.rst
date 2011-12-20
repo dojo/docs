@@ -9,7 +9,7 @@ dojox.mvc.Bind
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

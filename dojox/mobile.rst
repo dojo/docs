@@ -8,7 +8,7 @@ Dojo Mobile
 :Developers: Yoshiroh Kamiyama, Doug Hays
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction
@@ -19,7 +19,7 @@ Furthermore, as a separate file, a compatibility module, dojox/mobile/compat, is
 
 Dojo Mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It has only a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo and dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo.parser, but has enough capability to bootstrap your application.
 
-.. image:: settings-i-a.png
+.. image :: settings-i-a.png
 
 Available Widgets
 =================
@@ -280,13 +280,13 @@ Typical Use
 Typical usage is to create one or more views in a page, and create a round rectangle list, an edge-to-edge list, an icon container, etc. in the views. You can specify an animated transition between the views.
 The following example shows how to create views and make a transition between them.
 
-.. image:: hello-example.png
+.. image :: hello-example.png
 
 ..
 
 Example (using HTML5 validating declarative markup and mobile parser)
 
-.. html::
+.. html ::
 
    01:<!DOCTYPE HTML>
    02: <html>
@@ -325,7 +325,7 @@ Example (using HTML5 validating declarative markup and mobile parser)
 
 Example (using older HTML (non-validating) and mobile parser)
 
-.. html::
+.. html ::
 
    01: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
    02: <html>

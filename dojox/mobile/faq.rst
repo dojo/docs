@@ -6,7 +6,7 @@ Frequently Asked Questions
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojox.mobile.parser

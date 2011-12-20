@@ -6,7 +6,7 @@ A11y Requirements
 
 :Author: Becky Gibson
 
-.. contents::
+.. contents ::
    :depth: 2
 
 
@@ -54,20 +54,20 @@ The first tab is active and has a darker blue background color.
 The non-active tabs are displayed in the lighter blue.
 Since there is a difference in contrast, the use of the background color is acceptable.
 
-.. image:: soriatabcontainer.png
+.. image :: soriatabcontainer.png
 
 If color is removed, the difference between the active and non-active tabs can still be distinguished as demonstrated in the image below.
 
-.. image:: soriatabcontainergrey.png
+.. image :: soriatabcontainergrey.png
 
 The following two images show another example using the dojo menu in the tundra theme.
 A blue background is applied to the menu item with focus.
 
-.. image:: tundramenu.png
+.. image :: tundramenu.png
 
 This background is still apparent when color (but not contrast) is removed.
 
-.. image:: tundramenugrey.png
+.. image :: tundramenugrey.png
 
 How to Test
 ~~~~~~~~~~~
@@ -116,41 +116,41 @@ Examples in the Dojo widgets include:
 
 **a dotted border on the tab title of the active tab container**
 
-.. image:: tab.png
+.. image :: tab.png
 
 standard display
 
-.. image:: tabHC.png
+.. image :: tabHC.png
 
 high contrast (yellow on black)
 
 **a wide border to represent the progress within a progress bar**
 
-.. image:: progress.png
+.. image :: progress.png
 
 standard display
 
-.. image:: progressHC.png
+.. image :: progressHC.png
 
 high contrast (white on black)
 
 **an overline on the selected date in the calendar**
 
-.. image:: calendar.png
+.. image :: calendar.png
 
 standard display
 
-.. image:: calendarHC.png
+.. image :: calendarHC.png
 
 high contrast (yellow on black)
 
 **text alternatives for the editor toolbar buttons**
 
-.. image:: toolbar.png
+.. image :: toolbar.png
 
 standard display
 
-.. image:: toolbarHC.png
+.. image :: toolbarHC.png
 
 high contrast (black on white)
 

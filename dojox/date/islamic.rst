@@ -7,7 +7,7 @@ dojox.date.islamic
 :Contributor: Hossam Katory
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Implements the traditional Islamic (Hijri) calendar. This is the civil calendar in Saudi Arabia and the liturgical calendar of the Islamic faith worldwide.
@@ -53,7 +53,7 @@ Islamic calendar and DateTextBox
 
 Islamic calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Islamic calendar. For example, image below illustrates DateTextBox using Islamic calendar with default language set to Arabic.
 
-.. image:: dijit.jpg
+.. image :: dijit.jpg
 
 Examples
 ========

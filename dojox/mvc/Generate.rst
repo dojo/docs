@@ -9,7 +9,7 @@ dojox.mvc.Generate
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A container that generates a view based on the data model its bound to. A generate introspects its data binding and creates a view contained in it that allows displaying the bound data. Child dijits or custom view components inside it inherit their parent data binding context from it.

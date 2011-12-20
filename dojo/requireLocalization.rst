@@ -7,7 +7,7 @@ dojo.requireLocalization
 :Project owner: Adam Peller
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Loads localized resources, according to the operating locale, or other locale if specified.

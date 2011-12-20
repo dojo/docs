@@ -7,7 +7,7 @@ dojox.image.Magnifier
 :Project owner: ?--
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A dojox.gfx-based version of the :ref:`MagnifierLite widget <dojox/image/MagnifierLite>`.

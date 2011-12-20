@@ -7,7 +7,7 @@ dojox.widget.FisheyeList
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A menu similar to the fish eye menu on the Mac OS.

@@ -8,7 +8,7 @@ dojox.mobile.RoundRectDataList
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 RoundRectDataList is an enhanced version of RoundRectList. It can generate ListItems according to the given dojo.data store.
@@ -78,4 +78,4 @@ In this example, no ListItem is declared under RoundRectDataList. The ListItems 
 	 { "label": "VPN", "icon": "images/i-icon-4.png", "rightText": "VPN", "moveTo": "bar" }
   }
 
-.. image:: RoundRectList-example1.png
+.. image :: RoundRectList-example1.png

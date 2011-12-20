@@ -4,7 +4,7 @@
 dijit.CalendarLite
 ==================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The CalendarLite widget is like the :ref:`dijit.Calendar <dijit/Calendar>` widget, but streamlined for size.
@@ -27,7 +27,7 @@ A plain Calendar widget with the formatted date below
       dojo.require("dijit.CalendarLite");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.CalendarLite" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
     <p id="formatted"></p>

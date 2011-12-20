@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.CellMerge
 
 CellMerge plugin provides functions to merge cells within a row.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -191,7 +191,7 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridContainer"></div>
 	<br />
@@ -254,7 +254,7 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 		</table>
 	</div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
@@ -379,7 +379,7 @@ Here is some examples on how to use this API:
 
 And here is the effect of merged cells:
 
-.. image:: cellmerge-1.png
+.. image :: cellmerge-1.png
 
 See Also
 ========

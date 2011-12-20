@@ -7,7 +7,7 @@ dojox.analytics.Urchin
 :Author: Peter Higgins
 :since: 1.2+
 
-.. contents::
+.. contents ::
    :depth: 2
 
 **NOTE**: Changes to the ``ga.js`` script deprecate the need and stability of this module. Use Google's own new asynchronous ``ga.js`` instead of this module. Will be removed without replacement in 2.0

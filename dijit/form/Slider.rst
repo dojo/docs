@@ -9,7 +9,7 @@ dijit.form.Slider
 :since: V?
 
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

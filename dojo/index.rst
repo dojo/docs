@@ -4,7 +4,7 @@
 Dojo
 ====
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The dojo directory contains three categories of modules:

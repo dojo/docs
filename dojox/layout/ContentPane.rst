@@ -7,7 +7,7 @@ dojox.layout.ContentPane
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.ContentPane is an extension to dijit.layout.ContentPane providing script execution, among other things.

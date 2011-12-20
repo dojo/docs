@@ -8,7 +8,7 @@ dojox.mobile.ExpandingTextArea
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 TextArea is a very simple TEXTAREA widget, but it dynamically resizes to fit the content of the text inside. It takes nearly all the parameters (name, value, etc.) that a vanilla TEXTAREA takes. The attribute rows is not supported since this widget adjusts the height.
@@ -45,7 +45,7 @@ Simple ExpandingTextArea
   <textarea data-dojo-type="dojox.mobile.ExpandingTextArea">line 1
   line 2</textarea>
 
-.. image:: SimpleMobileExpandingTextArea.png
+.. image :: SimpleMobileExpandingTextArea.png
 
 
 onChange handler in HTML5 format
@@ -56,4 +56,4 @@ onChange handler in HTML5 format
   <textarea data-dojo-type="dojox.mobile.ExpandingTextArea" cols="40"
     data-dojo-props='value:"line 1\nline 2\nline 3", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>
 
-.. image:: HTML5MobileExpandingTextArea.png
+.. image :: HTML5MobileExpandingTextArea.png

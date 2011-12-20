@@ -6,7 +6,7 @@ dojo.subscribe
 
 :since: 0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Linked a listener to a named topic.

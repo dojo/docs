@@ -8,7 +8,7 @@ dijit.form.RadioButton
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked.

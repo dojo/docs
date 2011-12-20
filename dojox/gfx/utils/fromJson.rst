@@ -7,7 +7,7 @@ dojox.gfx.utils.fromJson
 :Authors: Eugene Lazutkin, Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The *dojox.gfx.utils.fromJson* is a helper function designed to take a JSON serialized dojox.gfx.Surface object and restore its contents into another dojox.gfx.Surface. The function itself is simple to use.

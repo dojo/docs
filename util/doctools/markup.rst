@@ -7,7 +7,7 @@ Dojo Inline Documentation
 :Project owner: Neil Roberts
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Syntax, keywords and guidelines for Dojo's inline API documentation format

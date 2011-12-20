@@ -6,7 +6,7 @@ dojo/_base/fx
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.fx** contains the basic animation functions, which are available with Dojo Base (included in dojo.js).

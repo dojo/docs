@@ -8,7 +8,7 @@ dojo.html
 :Developers: Sam Foster, Alex Russell, Dylan Schiemann
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 2
  
 As of version 1.2, **dojo.html** is home to a single public helper method: **dojo.html.set()**. It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.

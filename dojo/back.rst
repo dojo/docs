@@ -6,7 +6,7 @@ dojo.back
 
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojo.back allows you to update the browser history, so that it's possible to use the Back- and Forward-buttons of a Browser without leaving the web application.
@@ -180,7 +180,7 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
             });
         </script>
 
-  .. html::
+  .. html ::
 
         <div style="padding-bottom: 20px; width: 100%; border-bottom: 1px solid gray">
             <h3>dojo.back test</h3>

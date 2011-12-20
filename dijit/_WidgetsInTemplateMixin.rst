@@ -8,7 +8,7 @@ dijit._WidgetsInTemplateMixin
 :Project owner: Bill Keese
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Description

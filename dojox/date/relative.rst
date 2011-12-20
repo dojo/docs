@@ -6,7 +6,7 @@ dojox.date.relative
 
 :Owner: Nathan Toone
 
-.. contents::
+.. contents ::
   :depth: 3
 
 The dojox.date.relative package provides a function for parsing dates relative to a second date, and only displaying the most significant portion.  This is very helpful in a situation where space is at a premium, and there are a wide range of dates that could be displayed.  By default all dates are relative to the current time - but this can be changed via an option.

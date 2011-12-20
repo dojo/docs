@@ -8,12 +8,12 @@ dojox.mobile.FixedSplitter
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 FixedSplitter is a very simple container widget that layouts its child dom nodes side by side either horizontally or vertically. An example usage of this widget would be to realize the split view on iPad. There is no visual splitter between the children, and there is no function to resize the child panes with drag-and-drop. If you need a visual splitter, you can specify a border of a child dom node with CSS. A child of the widget should be FixedSplitterPane.
 
-.. image:: FixedSplitter.png
+.. image :: FixedSplitter.png
 
 Usage
 =====
@@ -60,7 +60,7 @@ Declarative example1
       </div>
   </div>
 
-.. image:: FixedSplitter-example1.png
+.. image :: FixedSplitter-example1.png
 
 Declarative example2
 --------------------
@@ -79,7 +79,7 @@ Declarative example2
       </div>
   </div>
 
-.. image:: FixedSplitter-example2.png
+.. image :: FixedSplitter-example2.png
 
 Programmatic example3
 ---------------------
@@ -104,4 +104,4 @@ Programmatic example3
   p1.domNode.style.backgroundColor = "pink";
   w.addChild(p1);
 
-.. image:: FixedSplitter-example3.png
+.. image :: FixedSplitter-example3.png

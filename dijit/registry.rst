@@ -7,7 +7,7 @@ dijit/registry
 :Author: Colin Snover
 :since: 1.7.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

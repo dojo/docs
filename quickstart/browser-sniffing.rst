@@ -6,7 +6,7 @@ Browser (User Agent) Sniffing
 
 :Authors: Peter Higgins, Ben Lowery
 
-.. contents::
+.. contents ::
     :depth: 2
 
 You should always try to use feature detection (See general overview `Using Capability Detection <http://dev.opera.com/articles/view/using-capability-detection/>`_) whenever possible to write forward-compatible code branches.  The `dojo/has <dojo/has>`_ API is designed to help in this endeavor.

@@ -8,7 +8,7 @@ dojo.fx.slideTo
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to sliding a node from its current position to a new position on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a slide of a node is desired.

@@ -7,7 +7,7 @@ dojox.atom.io.model.Link
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents Link elements of the Atom specification.

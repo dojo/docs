@@ -7,7 +7,7 @@ dojo.style
 :Authors: James Burke, Peter Higgins, Eugene Lazutkin, Marcus Reimann
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A getter/setter for styles on a DOM node.

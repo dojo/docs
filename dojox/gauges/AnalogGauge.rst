@@ -7,7 +7,7 @@ dojox.gauges.AnalogGauge
 :Project owner:
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A circular gauge with a variety of indicators, used to display numerical data.

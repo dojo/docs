@@ -5,8 +5,8 @@ dijit.Tree examples
 ===================
 
 
-.. contents::
-  :depth: 3
+.. contents ::
+  :depth: 2
 
 Detect when tree has finished loading
 -------------------------------------

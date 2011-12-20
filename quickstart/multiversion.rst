@@ -7,7 +7,7 @@ Multiple Versions of Dojo on a Page
 :Authors: James Burke
 :since: V1.1
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Dojo has some special configuration and build options to allow more than one version of Dojo to be used on a web page.

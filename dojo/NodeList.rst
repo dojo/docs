@@ -4,7 +4,7 @@
 dojo.NodeList
 =============
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **[Note]** Since 1.7, dojo.NodeList is defined in dojo/query.js.

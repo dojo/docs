@@ -8,7 +8,7 @@ dojox.gfx
 :Project owner: Eugene Lazutkin
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 TODO: short summary of the component/class/method

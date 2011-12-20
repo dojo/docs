@@ -7,7 +7,7 @@ dojox.atom.io.model.Collection
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An Atom collection describes a set of resources, accessible from a given URL that are identified by a title.

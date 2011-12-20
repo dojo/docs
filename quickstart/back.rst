@@ -6,7 +6,7 @@ Back buttons and Dojo
 
 :Authors: Bill Keese, Nikolai Onken
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dynamic web applications that use things like XMLHTTPRequest and DOM updates instead of page refreshes do not update the browser history, and they do not change the URL of the page. That means if the user clicks the Back button, they will likely jump all the way out of the web application, losing any state that they were in. It is also hard to allow a user to bookmark the web application at a certain state.

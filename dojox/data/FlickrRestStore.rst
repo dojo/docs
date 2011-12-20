@@ -4,7 +4,7 @@
 dojox.data.FlickrRestStore
 ==========================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 FlickrRestStore is an implementation of the dojo.data API provides access to the Flickr photo sharing site's REST API. Many advanced features are available, including tag search, sorting on numerous attributes, full text search, support for simultaneous clients, result caching and more.

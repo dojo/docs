@@ -8,7 +8,7 @@ dojox.secure
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 DojoX Secure is a collection of tools for security, in particular for working with

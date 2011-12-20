@@ -7,7 +7,7 @@ Build profiles
 :Project owner: (docs) Scott Jenkins
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 3
 
 The build profile is a simple JavaScript file containing an object which provides the parameters driving the build.

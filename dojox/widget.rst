@@ -7,7 +7,7 @@ dojox.widget
 :Authors: Chris Barber, Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin, Benjamin Schell, Shane O'Sullivan
 :Developers: Shane O'Sullivan, Chris Barber, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller, Benjamin Schell
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, documentation, and doesn't typically fall into any other classification of use, like :ref:`dojox.form <dojox/form>` or :ref:`dojox.layout <dojox/layout>`

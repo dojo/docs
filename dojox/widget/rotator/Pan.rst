@@ -8,7 +8,7 @@ dojox.widget.rotator.Pan
 :Project owner: Chris Barber
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A pan and continuous pan transition for a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
@@ -53,7 +53,7 @@ Example of a continuous pan.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -104,7 +104,7 @@ Example of a continuous pan.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myAutoRotator1" class="rotator"></div>
 
@@ -122,7 +122,7 @@ Example using different pan directions for each pane.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -156,7 +156,7 @@ Example using different pan directions for each pane.
         dojo.require("dojox.widget.rotator.Pan");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.panLeft', duration:2500">
         <div class="pane pane0">Pane 0<br/>Panning down to Pane 1</div>

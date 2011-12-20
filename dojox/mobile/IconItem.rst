@@ -8,12 +8,12 @@ dojox.mobile.IconItem
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 IconItem represents an item that has an application component and its icon image. You can tap the icon to open the corresponding application component. You can also use the icon to move to a different view by specifying either of the moveTo, href or url parameters.
 
-.. image:: IconItem.png
+.. image :: IconItem.png
 
 Constructor Parameters
 ======================
@@ -86,7 +86,7 @@ Parameters from this widget
 |closeBtnClass |String    |"mblDomButtonBlueMinus"|A class name of a DOM button to be used as a close button.                                                 |
 +--------------+----------+-----------------------+-----------------------------------------------------------------------------------------------------------+
 
-.. image:: IconItem-close-button.png
+.. image :: IconItem-close-button.png
 
 Examples
 ========

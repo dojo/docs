@@ -7,7 +7,7 @@ dojo.date.locale.addCustomFormats
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 TODOC

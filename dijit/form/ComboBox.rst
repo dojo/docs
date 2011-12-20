@@ -8,7 +8,7 @@ dijit.form.ComboBox
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.

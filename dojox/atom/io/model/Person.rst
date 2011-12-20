@@ -7,7 +7,7 @@ dojox.atom.io.model.Person
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents a person object, which is used for the author and contributor types in the Atom specification. A person object can have a name, an email address, a URI, or both.

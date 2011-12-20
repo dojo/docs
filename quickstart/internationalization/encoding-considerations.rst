@@ -7,7 +7,7 @@ Encoding considerations
 :Authors: Adam Peller
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

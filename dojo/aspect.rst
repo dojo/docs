@@ -8,7 +8,7 @@ dojo/aspect
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The dojo/aspect module provides aspect oriented programming facilities to attach additional functionality to existing methods. The dojo/aspect module returns three functions.  Note: If you are connecting to DOM Events rather than regular JS objects and functions, use dojo/on rather than dojo/aspect.

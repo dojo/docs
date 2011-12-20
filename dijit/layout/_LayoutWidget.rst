@@ -4,7 +4,7 @@
 dijit._LayoutWidget
 ===================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Typically layout widgets inherit from the dijit.layout._LayoutWidget base class.

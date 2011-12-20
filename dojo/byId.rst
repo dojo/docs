@@ -6,7 +6,7 @@ dojo.byId
 
 :since: V0.3
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode.

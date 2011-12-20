@@ -8,7 +8,7 @@ dojox.widget.rotator.ThumbnailController
 :Project owner: Chris Barber
 :since: V1.4.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A controller that manipulates a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>` by displaying thumbnails for each pane.
@@ -40,7 +40,7 @@ Programmatic example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -99,7 +99,7 @@ Programmatic example
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myAutoRotator1" class="rotator"></div>
     <div id="myRotatorController"></div>
@@ -114,7 +114,7 @@ Declarative example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -149,7 +149,7 @@ Declarative example
         dojo.require("dojox.widget.rotator.Fade");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.crossFade', duration:2500">
         <div class="pane pane0">Pane 0</div>

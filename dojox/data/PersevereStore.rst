@@ -8,7 +8,7 @@ dojox.data.PersevereStore
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.data.PersevereStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>` for connecting to a Persevere <http://sitepen.com/labs/persevere.php> server.

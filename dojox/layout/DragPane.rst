@@ -7,7 +7,7 @@ dojox.layout.DragPane
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.DragPane provides drag-based scrolling for divs with overflow.

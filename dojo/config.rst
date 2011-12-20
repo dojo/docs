@@ -6,7 +6,7 @@ dojo.config (dojo/_base/config)
 
 :since: V0.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Configuring Dojo with dojoConfig (formerly known as djConfig)

@@ -8,7 +8,7 @@ dijit.form.Select
 :Authors: Nathan Toone, Doug Hays
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A styleable drop down select box (similar to html select element)
@@ -46,7 +46,7 @@ This example shows a simple Select widget - converted from a select tag.
         dojo.require("dijit.form.Select");
     </script>
 
-  .. html::
+  .. html ::
 
     <select name="select1" data-dojo-type="dijit.form.Select">
         <option value="TN">Tennessee</option>
@@ -97,7 +97,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
           dojo.require("dijit.form.Select");
     </script>
 
-  .. html::
+  .. html ::
 
     <div name="select3" value="AK" data-dojo-type="dijit.form.Select">
         <span value="AL"><b>Alabama</b></span>
@@ -122,7 +122,7 @@ However, you can specify a width on the select to force a fixed width.
           dojo.require("dijit.form.Select");
     </script>
 
-  .. html::
+  .. html ::
 
     <select data-dojo-id="s3" name="s3" id="s3" style="width: 150px;" data-dojo-type="dijit.form.Select">
         <option value="AL">Alabama</option>

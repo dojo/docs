@@ -8,7 +8,7 @@ dojox.data
 :Authors: Wolfram Kriesing, Nikolia Onken, Marcus Reimann
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The DojoX Data project is a container for extensions and extra example stores that implement the dojo.data APIs. It may also contain utility functions for working with specific types of data.

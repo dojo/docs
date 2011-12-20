@@ -6,7 +6,7 @@ dojo.marginBox
 
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Getter/setter for the margin-box of node.

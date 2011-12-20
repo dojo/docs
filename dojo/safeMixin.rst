@@ -7,7 +7,7 @@ dojo.safeMixin
 :Author: Eugene Lazutkin
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 ``dojo.safeMixin`` is a companion function for :ref:`dojo.declare <dojo/declare>`. It has the same functionality as :ref:`dojo.mixin <dojo/mixin>`, but additionally it annotates all copied methods compatibly with :ref:`dojo.declare <dojo/declare>`. This decoration can affect how ``this.inherited()`` works in mixed-in methods.

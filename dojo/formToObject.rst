@@ -6,7 +6,7 @@ dojo.formToObject
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a HTML form to a JavaScript Object
@@ -67,7 +67,7 @@ Create an object version of a form
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <p>The FORM</p>
     <form id="myform">
@@ -106,7 +106,7 @@ Create an object version of a form with Dijit widgets
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <p>The FORM</p>
     <form id="myform2">

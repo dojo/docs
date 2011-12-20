@@ -6,7 +6,7 @@ dojo.setObject
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Set a property from a dot-separated string, such as "A.B.C".

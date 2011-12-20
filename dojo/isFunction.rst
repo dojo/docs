@@ -6,7 +6,7 @@ dojo.isFunction
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Checks if the parameter is a Function.

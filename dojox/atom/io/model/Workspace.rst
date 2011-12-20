@@ -7,7 +7,7 @@ dojox.atom.io.model.Workspace
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An Atom workspace element is a part of an Atom Service document, as defined by the Atom Publishing Protocol specification, and is for organization in the service document.

@@ -8,12 +8,12 @@ dojox.mobile.RoundRectList
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 RoundRectList is a rounded rectangle list, which can be used to display a group of items. Each item must be dojox.mobile.ListItem.
 
-.. image:: RoundRectList.png
+.. image :: RoundRectList.png
 
 Constructor Parameters
 ======================
@@ -61,14 +61,14 @@ In this example, <ul> and <li> are used just because they are typically used to 
     </li>
   </ul>
 
-.. image:: RoundRectList-example1.png
+.. image :: RoundRectList-example1.png
 
 CSS sprite example
 ------------------
 
 In this example, an aggregated icon image as below is used for each list item icon. This way the number of requests to the server can be reduced and thus the performance could be improved.
 
-.. image:: all-icons.png
+.. image :: all-icons.png
 
 (all-icons.png)
 
@@ -87,7 +87,7 @@ In this example, an aggregated icon image as below is used for each list item ic
     </li>
   </ul>
 
-.. image:: RoundRectList-example2.png
+.. image :: RoundRectList-example2.png
 
 Selection mode example
 ----------------------
@@ -108,4 +108,4 @@ Selection mode example
     <li data-dojo-type="dojox.mobile.ListItem">Ripple</li>
   </ul>
 
-.. image:: RoundRectList-check.png
+.. image :: RoundRectList-check.png

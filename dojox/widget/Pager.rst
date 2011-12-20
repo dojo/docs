@@ -7,7 +7,7 @@ dojox.widget.Pager
 :Project owner: Peter Higgins
 :since: V1.1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A Pager, displaying a list of sized nodes.

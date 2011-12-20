@@ -7,7 +7,7 @@ dojox.image.MagnifierLite
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A simple hover behavior for images, showing a zoomed version of a size image.

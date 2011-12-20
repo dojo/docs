@@ -8,7 +8,7 @@ dojox.av.FLVideo
 :Author: Mike Wilcox
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.av.FLVideo provides the ability to play Flash movie files (FLVs) within the dojo environment. It Also plays the H264/M4V codec (high definition) with a little trickery: change the '.M4V' extension to '.flv'.

@@ -6,7 +6,7 @@ dojox.gfx
 
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Overview

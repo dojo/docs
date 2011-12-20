@@ -6,7 +6,7 @@ dojo.attr
 
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A getter and setter for DOM attributes, events and CSS styles

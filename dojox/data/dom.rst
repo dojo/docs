@@ -7,7 +7,7 @@ dojox.data.dom
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A set of DOM manipulation functions.

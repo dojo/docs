@@ -4,7 +4,7 @@
 Themes and Theming
 ==================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Introduction
@@ -84,7 +84,7 @@ Claro is accessibility and globalization compliant.
 
 IE7 sample:
 
-.. image:: claro.png
+.. image :: claro.png
    :alt: claro screen shot
 
 
@@ -95,7 +95,7 @@ See `Claro <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dij
 Tundra
 ------
 
-.. image:: tundra.png
+.. image :: tundra.png
    :alt: tundra screen shot
 
 See `Tundra <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=tundra>`_ rendered in the themeTester.html page.
@@ -107,7 +107,7 @@ Tundra is accessibility and globalization compliant.
 Soria
 -----
 
-.. image:: soria.png
+.. image :: soria.png
    :alt: soria screen shot
 
 See `Soria <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=soria>`_ rendered in the themeTester.html page.
@@ -117,7 +117,7 @@ See `Soria <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dij
 Nihilo
 ------
 
-.. image:: nihilo.png
+.. image :: nihilo.png
    :alt: nihilo screen shot
 
 See `Nihilo <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=nihilo>`_ rendered in the themeTester.html page.
@@ -602,7 +602,7 @@ A good tool to reference is the `PX to EM converter <http://www.pxtoem.com/>`_
 
 Example:
 
-.. image:: pxtoemfinal.png
+.. image :: pxtoemfinal.png
     :alt: px to em sample
 
 
@@ -650,7 +650,7 @@ Layout encompasses spacing, positioning, grouping, emphasis, and alignment.
 
 The example below illustrates the before and after implementation of the best practice for alignment.
 
-.. image:: Padding_comparison_final.png
+.. image :: Padding_comparison_final.png
 
 
 Corner styling
@@ -680,7 +680,7 @@ Example of CSS3 corner styling:
 
 Examples of corner style output renderings:
 
-.. image:: rounded_corners.png
+.. image :: rounded_corners.png
 
 
 Images
@@ -714,11 +714,11 @@ Customizing background images
 
 - dijit.titlePane–transparent white image (using PNG technology)
 
-.. image:: title_pane.png
+.. image :: title_pane.png
 
 - dijit.tabContainer–colored highlight image
 
-.. image:: tabs.png
+.. image :: tabs.png
 
 
 Drop Shadows

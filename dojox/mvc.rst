@@ -8,7 +8,7 @@ dojox.mvc
 :Developers: Rahul Akolkar, Ed Chatelain
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction
@@ -91,14 +91,14 @@ Basic example, input-output sync:
         }});
     </script>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .row { width: 500px; display: inline-block; margin: 5px; }
         .cell { width: 20%;  display:inline-block; }
     </style>
 
-  .. html::
+  .. html ::
 
     <div id="main">
         <div class="row">

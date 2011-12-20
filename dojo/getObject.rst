@@ -6,7 +6,7 @@ dojo.getObject
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.getObject returns the property of an object from a dot-separated string such as "A.B.C"

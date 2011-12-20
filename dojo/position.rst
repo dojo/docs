@@ -7,7 +7,7 @@ dojo.position
 :Project owner: Doug Hays
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Getter for the position and size of a DOM node.

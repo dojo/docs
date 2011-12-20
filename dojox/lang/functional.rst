@@ -7,7 +7,7 @@ dojox.lang.functional
 :Project owner: Eugene Lazutkin
 :since: 1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 JavaScript library to support `FP <http://en.wikipedia.org/wiki/Functional_Programming>`_ techniques.

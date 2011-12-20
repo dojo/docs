@@ -5,7 +5,7 @@ dojo.dnd.Moveable
 =================
 
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Introduction

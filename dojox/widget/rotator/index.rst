@@ -8,7 +8,7 @@ dojox.widget.rotator
 :Project owner: Chris Barber
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a collection of transitions and a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` controller.

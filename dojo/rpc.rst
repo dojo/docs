@@ -7,7 +7,7 @@ dojo.rpc
 :Project owner: ?--
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.rpc offers methods to communicate via Remote Procedure Calls (RPC) with Backend Servers.

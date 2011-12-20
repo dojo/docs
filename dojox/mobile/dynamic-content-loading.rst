@@ -6,7 +6,7 @@ Dynamic Content Loading
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Before or after making a view transition, sometimes you may want to create a new target view content dynamically using an ajax call. There are several ways to lazy-load contents to update or create a view.

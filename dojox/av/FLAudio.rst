@@ -8,7 +8,7 @@ dojox.av.FLAudio
 :Author: Mike Wilcox
 :since: 1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.av.FLAudio provides the ability of implementing MP3 sounds into your dojo applications through an embedded SWF, built in the DEFT project. This class provides the sound and programmatic control only - there is no user interface or widget.

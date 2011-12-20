@@ -8,7 +8,7 @@ dijit._editor.plugins.FontChoice
 :Developers: Bill Keese, Jared Jurkiewicz
 :since: V1.1
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to change the font size, font face, or block type containing the text in your document?
@@ -96,7 +96,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Select any of the text below and experiment with the font options</b>
     <br>
@@ -125,7 +125,7 @@ Basic Usage: Plain Text Previews
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Select any of the text below and experiment with the font options</b>
     <br>

@@ -6,7 +6,7 @@ dojo.rawXhrPost
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The original purpose of dojo.rawXhrPost was a method that could be used to send a raw post body to the server.  As of 1.3, this function is common with dojo.xhrPost().  So, for usage of dojo.rawXhrPost(), see :ref:`dojo.xhrPost() <dojo/xhrPost>`

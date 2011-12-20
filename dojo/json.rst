@@ -8,7 +8,7 @@ dojo/json
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The dojo/json module is a JSON parsing and serialization module based on the standard EcmaScript 5's JSON object.

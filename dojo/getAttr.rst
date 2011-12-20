@@ -4,7 +4,7 @@
 dojo.getAttr
 ============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Gets an attribute on an HTML element.

@@ -7,7 +7,7 @@ Dojo build system:  conditional exclusions
 :Project owner: Scott Jenkins
 :since: 1.0?
 
-.. contents::
+.. contents ::
    :depth: 3
 
 

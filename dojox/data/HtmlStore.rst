@@ -7,7 +7,7 @@ dojox.data.HtmlStore
 :Project owner: Jared Jurkiewicz
 :since: V1.1
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

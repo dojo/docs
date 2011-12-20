@@ -6,7 +6,7 @@ dojo.animateProperty
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojo.animateProperty is a very useful method for animating CSS properties. An example use case is fading a background color from red to green to indicate status changes.

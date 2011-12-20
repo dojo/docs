@@ -9,7 +9,7 @@ dojox.mvc.Output
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A simple widget that displays templated output, parts of which may be data-bound.

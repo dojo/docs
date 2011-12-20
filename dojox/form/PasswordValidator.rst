@@ -7,7 +7,7 @@ dojox.form.PasswordValidator
 :Project owner: Nathan Toone
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A dijit._FormWidget that simplifies the "Old/New/Validate" password mechanism found on many web pages.

@@ -8,7 +8,7 @@ dojox.form.RangeSlider
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The RangeSlider is a descendant of :ref:`dijit.form.Slider <dijit/form/Slider>` that allows a selection of a range of values.

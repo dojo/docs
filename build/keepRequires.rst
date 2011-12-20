@@ -7,7 +7,7 @@ Dojo build system:  keepRequires
 :Project owner: Scott Jenkins
 :since: 1.3
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Introduction

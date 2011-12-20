@@ -6,7 +6,7 @@ dijit/focus
 
 :Author: Colin Snover, Bill Keese
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

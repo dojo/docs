@@ -7,7 +7,7 @@ dojox.data.QueryReadStore
 :Author: Wolfram Kriesing
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

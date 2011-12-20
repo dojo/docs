@@ -4,7 +4,7 @@
 dijit.PopupMenuBarItem
 ======================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 :Authors: Bill Keese

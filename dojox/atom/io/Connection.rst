@@ -7,7 +7,7 @@ dojox.atom.io.Connection
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The *dojox.atom.io.Connection* module is a IO class for performing APP (ATOM Publishing Protocol) styled IO actions with a server.

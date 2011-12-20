@@ -8,7 +8,7 @@ dojox.editor.plugins.SpellCheck (Under Construction)
 :Project owner: Jared Jurkiewicz
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to make sure that your edited content was spelled correctly? You could always have a dictionary available but, otherwise, this plug-in is for you.
@@ -143,7 +143,7 @@ Batch Spell Check
 
 Click the **Batch Spell Check** button to open the dialog. SpellCheck will highlight all the unrecognized words and the first unrecognized word will be selected and shown in the **Not found** text field.
 
-.. image:: BatchSpellCheck.png
+.. image :: BatchSpellCheck.png
 
 Skip
 ----
@@ -153,21 +153,21 @@ There are two ways to ignore the word in the **Not found** text field and move t
 * Click the **Skip** button.
 * Or type **Enter** in the **Not found** text field.
 
-.. image:: Skip.png
+.. image :: Skip.png
 
 Skip All
 --------
 
 **Skip All** to ignore the word displayed in the **Not found** text field and all similarly spelled words. All the similarly spelled words will be considered recognized as long as the editor is not destroyed.
 
-.. image:: SkipAll.png
+.. image :: SkipAll.png
 
 Add to dictionary
 -----------------
 
 Click **Add to dictionary** to add this word into the dictionary. The dictionary is on the server side, which is wordlist.txt in the demo application provided by Dojo SDK. This word will be regarded as a correct one from then on.
 
-.. image:: AddToDictionary.png
+.. image :: AddToDictionary.png
 
 Replace
 -------
@@ -179,11 +179,11 @@ Take either one of the following two actions to address an unrecognized word dis
 
 Then you can type **Enter** in the **Not found** text field or click **Replace** to replace the unrecognized one with the new one and move to the next unrecognized word.
 
-.. image:: Replace.png
+.. image :: Replace.png
 
 Note that when the content of the **Not found** text field is changed, its label will be changed to **Replace with**.
 
-.. image:: ReplaceWith.png
+.. image :: ReplaceWith.png
 
 Replace All
 -----------
@@ -200,14 +200,14 @@ Cancel
 
 Click **Cancel** to stop the replacement.
 
-.. image:: Cancel.png
+.. image :: Cancel.png
 
 Interactive Spell Check
 -----------------------
 
 The interactive mode is on by setting the argument **interactive: true** when declaring the plugin. It will perform the check as the user types.
 
-.. image:: InteractiveSpellCheck.png
+.. image :: InteractiveSpellCheck.png
 
 Right click on the unrecognized word and the context menu will be displayed. You can take one of the following actions.
 
@@ -216,7 +216,7 @@ Right click on the unrecognized word and the context menu will be displayed. You
 * Click **Skip all** like this to skip all the word like this.
 * Click **Add to dictionary** to add this word into the dictionary.
 
-.. image:: Menu.png
+.. image :: Menu.png
 
 Customize the language preference
 ---------------------------------
@@ -321,13 +321,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.SpellCheck");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/SpellCheck.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
     <div>

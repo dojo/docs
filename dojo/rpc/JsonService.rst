@@ -7,7 +7,7 @@ dojo.rpc.JsonService
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.rpc.JsonService is a generic JSON RPC service.

@@ -7,7 +7,7 @@ dojox.lang
 :Project owner: Eugene Lazutkin, Kris Zyp
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 JavaScript language extensions for supporting AOP, FP and other language constructs.

@@ -8,7 +8,7 @@ dojox.json
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 DojoX JSON is set of tools for working with JSON and object data structures.

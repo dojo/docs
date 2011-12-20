@@ -8,7 +8,7 @@ dojox.form.uploader.FileList
 :Author: Mike Wilcox
 :since: 1.6
 
-.. contents::
+.. contents ::
   :depth: 3
 
 FileList automatically connects to an Uploader and detects when files are added, removed, or uploaded. The fields are added or removed from the list, and a progress bar shows during the upload. It is a simple widget that provides a list of the files currently selected by dojox.form.Uploader. It is a very simple widget, and not beautifully styled. It is mainly for test cases, but could very easily be used, extended, modified, or copied.

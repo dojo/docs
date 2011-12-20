@@ -8,7 +8,7 @@ dijit.layout
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 An example first
@@ -30,7 +30,7 @@ Once you have read through this page you should be able to create such a layout 
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. html::
+  .. html ::
 
         <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
@@ -48,7 +48,7 @@ Once you have read through this page you should be able to create such a layout 
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">Bottom pane</div>
         </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -65,14 +65,14 @@ Typically HTML has bottom-up sizing, where a container is as big as its contents
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
      <style type="text/css">
         .inner, .outer { margin: 5px; border: 1px solid blue; }
         .inner { border: 1px solid green; }
      </style>
 
-  .. html::
+  .. html ::
 
     <div class="outer">
       <div  class="inner">
@@ -91,7 +91,7 @@ But for some web pages, you want them to work with the opposite pattern, where y
 This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
 
 
-.. image:: maildemo.png
+.. image :: maildemo.png
    :alt: mail demo screen shot
 
 Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
@@ -100,7 +100,7 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
       <style type="css/text">
         .top, .bottom { height: 100px; }
@@ -108,7 +108,7 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
         .leading, .trailing { width: 200px; }
       </style>
 
-  .. html::
+  .. html ::
 
         <table>
           <tr>
@@ -146,7 +146,7 @@ You typically start off the page using a BorderContainer, like this, to split th
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. html::
+  .. html ::
 
         <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
@@ -156,7 +156,7 @@ You typically start off the page using a BorderContainer, like this, to split th
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">Bottom pane</div>
         </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -178,7 +178,7 @@ For instance, on the left you might want an AccordionContainer:
      dojo.require("dijit.layout.AccordionContainer");
      </script>
 
-  .. html::
+  .. html ::
 
         <div data-dojo-type="dijit.layout.AccordionContainer" style="width: 200px; height: 95%; margin: 0 auto;">
              <div data-dojo-type="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
@@ -186,7 +186,7 @@ For instance, on the left you might want an AccordionContainer:
              <div data-dojo-type="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
         </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -207,7 +207,7 @@ And a TabContainer in the middle:
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. html::
+  .. html ::
 
         <div data-dojo-type="dijit.layout.TabContainer" style="width: 100%; height: 100%; margin: 20px;">
              <div data-dojo-type="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
@@ -215,7 +215,7 @@ And a TabContainer in the middle:
              <div data-dojo-type="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
         </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -238,7 +238,7 @@ Nesting those inside of the BorderContainer will look like this:
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. html::
+  .. html ::
 
         <div data-dojo-type="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">Top pane</div>
@@ -256,7 +256,7 @@ Nesting those inside of the BorderContainer will look like this:
              <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">Bottom pane</div>
         </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -280,7 +280,7 @@ An important consideration is whether or not the widget's size is adjustable (li
 
 Conceptually it looks like this:
 
-.. image:: layoutBlock.png
+.. image :: layoutBlock.png
    :alt: block diagram of container nesting
 
 

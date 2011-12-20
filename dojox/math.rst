@@ -7,7 +7,7 @@ dojox.math
 :Project owner: Tom Trenka
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 TODO: short summary of the component/class/method

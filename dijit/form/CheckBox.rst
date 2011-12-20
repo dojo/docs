@@ -8,7 +8,7 @@ dijit.form.CheckBox
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dijit.form.CheckBox** is nearly the same as an HTML checkbox, but with fancy styling.

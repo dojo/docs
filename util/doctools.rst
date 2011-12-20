@@ -7,7 +7,7 @@ Dojo Documentation Tools
 :Project owner: Neil Roberts
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Dojo uses a specially crafted, highly readable inline documentation format and distributes the PHP-based code parser used to collect the information.

@@ -4,7 +4,7 @@
 dijit.MenuSeparator
 ===================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a child of a  :ref:`dijit.DropDownMenu <dijit/DropDownMenu>` or

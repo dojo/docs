@@ -6,7 +6,7 @@ Dijit Accessibility Resources
 
 :Author: Becky Gibson
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Functions for dealing with accessibility are found in dijit._base.wai.js.

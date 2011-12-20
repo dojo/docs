@@ -7,7 +7,7 @@ dijit.TitlePane
 :Authors: Bill Keese, Marcus Reimann
 :Project owner: Bill Keese
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

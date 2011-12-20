@@ -7,7 +7,7 @@ dojox.data.RailsStore
 :Project owner: Kris Zyp, Travis Tilley
 :since: 1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 RailsStore extends the JsonRestStore to interact properly with Ruby on Rail's REST interface.

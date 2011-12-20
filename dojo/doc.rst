@@ -6,7 +6,7 @@ dojo.doc
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Alias for the current document.  This is normally the value of window["document"];

@@ -7,7 +7,7 @@ dojox.atom.io.model.Generator
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This Atom element conveys information about the package that generated this Atom feed. A generator can have a URI and a version number, in addition to the human-readable name.

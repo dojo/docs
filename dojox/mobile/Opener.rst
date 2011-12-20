@@ -8,7 +8,7 @@ dojox.mobile.Opener
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Opener is a utility widget that behaves either as a Overlay on small screen devices or as a Tooltip otherwise.
@@ -53,9 +53,9 @@ Example
 Small screen Overlay
 --------------------
 
-.. image:: MobileOpenerOverlay.png
+.. image :: MobileOpenerOverlay.png
 
 Large screen Tooltip
 --------------------
 
-.. image:: MobileOpenerTooltip.png
+.. image :: MobileOpenerTooltip.png

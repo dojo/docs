@@ -8,7 +8,7 @@ dojox.json.query
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.json.query** implements JSONQuery to provide comprehensive data querying capabilities.

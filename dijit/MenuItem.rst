@@ -4,7 +4,7 @@
 dijit.MenuItem
 ==============
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a line item in a Menu widget.

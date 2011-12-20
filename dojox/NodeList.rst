@@ -4,7 +4,7 @@
 dojox.NodeList
 ==============
 
-.. contents::
+.. contents ::
     :depth: 2
 
 :author: bill

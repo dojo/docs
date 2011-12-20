@@ -8,7 +8,7 @@ dojox.editor.plugins.StatusBar
 :Project owner: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted a status bar on the editor to display things like 'saving' and so on?  Have you ever wanted a resize handle on the editor that lets you resize it?  If so, then this plugin if for you.
@@ -82,13 +82,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.StatusBar");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/StatusBar.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>

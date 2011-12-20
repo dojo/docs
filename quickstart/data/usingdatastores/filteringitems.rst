@@ -4,7 +4,7 @@
 Selecting (Filtering) items
 ===========================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Querying

@@ -7,13 +7,13 @@ dojox.gauges.GlossyCircularGauge
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
 :since: 1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A glossy circular gauge with a variety of indicators, used to display numerical data.
 
 
-.. image:: GlossyCircularGauge.png
+.. image :: GlossyCircularGauge.png
 
 Introduction
 ============

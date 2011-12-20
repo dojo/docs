@@ -8,7 +8,7 @@ dojox.data.jsonPathStore
 :Developers: Dustin Machi
 :since: V1.0 to 1.3, Removed in 1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Note: This API was removed for the Dojo 1.4 release. http://svn.dojotoolkit.org/dojoc/dmachi/data/ contains a JsonStore that is the most suitable replacement for this in Dojo 1.4 and 1.5.

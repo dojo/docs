@@ -7,7 +7,7 @@ dojo.contentBox
 :Project owner: ?--
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Getter/setter for the content-box of node.

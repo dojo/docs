@@ -6,7 +6,7 @@ dojo._base.declare
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.declare** contains functions to define classes.

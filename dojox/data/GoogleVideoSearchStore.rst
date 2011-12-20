@@ -7,7 +7,7 @@ dojox.data.GoogleVideoSearchStore
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.data.GoogleVideoSearchStore is a data store that can be used to search YouTube and Google Video.
@@ -137,7 +137,7 @@ Programmatic example
     }
     </script>
 
-  .. html::
+  .. html ::
 
     <div>
       <span>Enter Search Text</span>

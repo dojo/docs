@@ -6,7 +6,7 @@ Installing Dojo
 
 :Authors: Peter Higgins, Nikolai Onken
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Good news! Dojo's just a bunch of files on disk so it doesn't require any special setup. There are three main ways to get Dojo:

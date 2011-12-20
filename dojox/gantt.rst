@@ -8,7 +8,7 @@ dojox.gantt
 
 ``dojox.gantt`` gives the capability of project management.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 
@@ -105,19 +105,19 @@ Gantt chart toolbar provides some handy controls like zooming time line time zon
 
 Enlarge Time Line: it shows a more accurate time line when it enlarged.
 
-.. image:: enlargeTimeLine.png
+.. image :: enlargeTimeLine.png
 
 Shrink Time Line: it shows a more general time line when it shrink.
 
-.. image:: shrinkTimeLine.png
+.. image :: shrinkTimeLine.png
 
 Zoom in Time Zone
 
-.. image:: zoomInTimezone.png
+.. image :: zoomInTimezone.png
 
 Zoom out Time Zone
 
-.. image:: zoomOutTimezone.png
+.. image :: zoomOutTimezone.png
 
 
 Project Tree
@@ -125,7 +125,7 @@ Project Tree
 
 Project tree shows all the projects and their tasks, each task has a visual bar in task cascade view in the same row. It shows the task menu when task item is hovered. The menu lists many functionality of task.
 
-.. image:: taskMenu.png
+.. image :: taskMenu.png
 
 
 Task Cascade View
@@ -133,7 +133,7 @@ Task Cascade View
 
 The task cascade view shows the task sequence and dependency between them. The "task bar" can be modified on starting time by moving horizontally, and set task duration by dragging the right end of it.
 
-.. image:: dragTaskBar.png
+.. image :: dragTaskBar.png
 
 
 Resource View
@@ -141,5 +141,5 @@ Resource View
 
 Resource view shows the people resource occupation and the what task the resource occupied to. The following image indicates the Jack's resource occupation, the lighter blue bar shows the resource occupation on relevant task.
 
-.. image:: resourceView.png
+.. image :: resourceView.png
  

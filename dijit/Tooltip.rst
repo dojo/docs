@@ -8,7 +8,7 @@ dijit.Tooltip
 :Project owner: Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

@@ -6,7 +6,7 @@ dojo.fieldToObject
 
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a HTML form field to a JavaScript Object

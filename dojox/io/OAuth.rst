@@ -7,7 +7,7 @@ dojox.io.OAuth
 :Project owner: Tom Trenka
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.OAuth is a helper class that allows you to "sign" any kwArgs object you might use with any of the dojo Ajax methods. It was designed to be as simple to use as possible, without exposing the user to the overhead and specification of OAuth.

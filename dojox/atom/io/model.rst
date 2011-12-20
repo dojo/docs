@@ -7,7 +7,7 @@ dojox.atom.io.model
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The *dojox.atom.io.model* module is a JavaScript model of an ATOM feed.

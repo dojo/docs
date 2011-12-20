@@ -8,7 +8,7 @@ dojox.geo.charting
 :Author: Qi Ruan, Erwan Aullas
 :since: V.1.5
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Overview

@@ -6,7 +6,7 @@ dojo.publish
 
 :since: 0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Publish an event to all subscribers of a `topic`. Publish is provided as part of Base Dojo (dojo.js), so no additional requires are needed.

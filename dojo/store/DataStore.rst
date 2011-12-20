@@ -8,7 +8,7 @@ dojo.store.DataStore
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo.store.DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new :ref:`Dojo Object Store API <dojo/store>`.

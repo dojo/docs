@@ -8,7 +8,7 @@ dojox.gfx.utils.serialize
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Serialize the passed surface object to JavaScript Object form.

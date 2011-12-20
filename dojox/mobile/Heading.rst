@@ -8,14 +8,14 @@ dojox.mobile.Heading
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Heading is a widget that represents a navigation bar, which usually appears at the top of an application. It usually displays the title of the current view and can contain a navigational control.
 If you use it with :ref:`dojox.mobile.ScrollableView <dojox/mobile/ScrollableView>`, it can also be used as a fixed header bar or a fixed footer bar. In such cases, specify the fixed="top" attribute to be a fixed header bar or the fixed="bottom" attribute to be a fixed footer bar.
 Heading can have one or more ToolBarButton widgets as its children.
 
-.. image:: Heading.png
+.. image :: Heading.png
 
 Constructor Parameters
 ======================
@@ -55,7 +55,7 @@ Example 1
 
   <h1 data-dojo-type="dojox.mobile.Heading" back="Settings" moveTo="settings">General</h1>
 
-.. image:: Heading-general.png
+.. image :: Heading-general.png
 
 
 Example 2
@@ -67,7 +67,7 @@ Example 2
     <div data-dojo-type="dojox.mobile.ToolBarButton" class="mblDomButtonWhitePlus" style="float:right;"></div>
   </h1>
 
-.. image:: Heading-world.png
+.. image :: Heading-world.png
 
 
 Example 3
@@ -79,7 +79,7 @@ Example 3
     <div data-dojo-type="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;"></div>
   </h1>
 
-.. image:: Heading-voice.png
+.. image :: Heading-voice.png
 
 
 Example 4
@@ -90,7 +90,7 @@ Example 4
     <div data-dojo-type="dojox.mobile.ToolBarButton" label="Update All" style="float:right;"></div>
   </h1>
 
-.. image:: Heading-update.png
+.. image :: Heading-update.png
 
 
 Example 5
@@ -101,7 +101,7 @@ Example 5
     <div data-dojo-type="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;"></div>
   </h1>
 
-.. image:: Heading-news.png
+.. image :: Heading-news.png
 
 
 Example 6
@@ -113,7 +113,7 @@ Example 6
     <div data-dojo-type="dojox.mobile.ToolBarButton" label="New Folder" style="float:right;"></div>
   </h1>
 
-.. image:: Heading-done.png
+.. image :: Heading-done.png
 
 
 Example 7
@@ -128,7 +128,7 @@ Example 7
     <div data-dojo-type="dojox.mobile.ToolBarButton" class="mblDomButtonWhitePlus" moveTo="view3" style="float:right;"></div>
   </div>
 
-.. image:: Heading-toggle.png
+.. image :: Heading-toggle.png
 
 
 Example 8
@@ -144,7 +144,7 @@ Example 8
     <div data-dojo-type="dojox.mobile.ToolBarButton" class="mblDomButtonWhiteSearch" style="float:right;"></div>
   </h1>
 
-.. image:: Heading-catalog.png
+.. image :: Heading-catalog.png
 
 
 Example 9
@@ -162,7 +162,7 @@ Example 9
     </tr></table>
   </h1>
 
-.. image:: Heading-search.png
+.. image :: Heading-search.png
 
 
 Example 10
@@ -176,7 +176,7 @@ Example 10
     </ul>
   </h1>
 
-.. image:: Heading-inbox.png
+.. image :: Heading-inbox.png
 
 
 Example 11
@@ -189,4 +189,4 @@ Example 11
     <div data-dojo-type="dojox.mobile.ToolBarButton" class="mblDomButtonWhiteDownArrow" style="float:right;"></div>
   </h1>
 
-.. image:: Heading-top.png
+.. image :: Heading-top.png

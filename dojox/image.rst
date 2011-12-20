@@ -7,7 +7,7 @@ dojox.image
 :Project owner: Peter Higgins
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The DojoX Image project provides a number of image-related widgets as extensions to Dijit, such as a Lightbox, SlideShow, FlickrBadge, among others. The goal is to provide a common way of handling images, though some Image project widgets are designed for edge-cases, like the Magnifier.

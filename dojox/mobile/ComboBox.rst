@@ -8,7 +8,7 @@ dojox.mobile.ComboBox
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ComboBox is a hybrid between a SELECT HTML element and an INPUT text box.
@@ -64,7 +64,7 @@ Using a dojo.store
   </script>
   <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='store:colorMemoryStore, value:"Blue"'>
 
-.. image:: ComboBoxStore2.png
+.. image :: ComboBoxStore2.png
 
 
 Using inline OPTION tags
@@ -79,6 +79,6 @@ Using inline OPTION tags
   </select>
   <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
 
-.. image:: ComboBoxDataList.png
+.. image :: ComboBoxDataList.png
 
 The DataList widget must be defined prior to the ComboBox widget since it defines the currently selected value for the ComboBox.

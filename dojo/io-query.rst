@@ -6,7 +6,7 @@ dojo/io-query
 
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This module defines query string processing functions which contain objectToQuery and queryToObject.

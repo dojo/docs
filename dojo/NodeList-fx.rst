@@ -4,7 +4,7 @@
 dojo.NodeList-fx
 ================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This module incorporates :ref:`dojo.fx <dojo/fx>` functionality into :ref:`dojo.query <dojo/query>` by extending the :ref:`dojo.NodeList <dojo/NodeList>` Class.

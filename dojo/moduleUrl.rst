@@ -6,7 +6,7 @@ dojo.moduleUrl
 
 :since: v0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.moduleUrl is used to return a dojo._Url object relative to a module.

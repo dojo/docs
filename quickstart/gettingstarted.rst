@@ -6,7 +6,7 @@ Getting started with some simple steps
 
 :Authors: Alex Russell
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Getting up-and-running with Dojo couldn't be easier. Just include this line in your web page:

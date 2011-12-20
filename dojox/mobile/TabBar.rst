@@ -8,12 +8,12 @@ dojox.mobile.TabBar
 :Developers: Yoshiroh Kamiyama
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 2
 
 TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. It can be used as a tab container. There was dojox.mobile.TabContainer in dojo-1.5, but it is obsolete. In dojo-1.6 or later, use TabBar instead of TabContainer.
 
-.. image:: TabBar.png
+.. image :: TabBar.png
 
 Constructor Parameters
 ======================
@@ -55,14 +55,14 @@ Tab Bar
     <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
   </ul>
 
-.. image:: TabBar-example1.png
+.. image :: TabBar-example1.png
 
 Tab Bar (CSS Sprite)
 --------------------
 
 In this example, an aggregated icon image as below is used for each TabBarButton icon. This way the number of requests to the server can be reduced and thus the performance could be improved.
 
-.. image:: tab-icons.png
+.. image :: tab-icons.png
 
 (tab-icons.png)
 
@@ -76,7 +76,7 @@ In this example, an aggregated icon image as below is used for each TabBarButton
     <li data-dojo-type="dojox.mobile.TabBarButton" iconPos1="0,116,29,29" iconPos2="29,116,29,29">Updates</li>
   </ul>
 
-.. image:: TabBar-example2.png
+.. image :: TabBar-example2.png
 
 Segmented Control
 -----------------
@@ -91,7 +91,7 @@ This type of bar is typically used at the top of the screen to control visibilit
     <li data-dojo-type="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
   </ul>
 
-.. image:: TabBar-example3.png
+.. image :: TabBar-example3.png
 
 Grouped Tab Bar
 ---------------
@@ -129,4 +129,4 @@ TabBar forms kind of tab container whose panes are views. You may, however, want
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">Hello View</div>
   </div>
 
-.. image:: TabBar-group-anim.gif
+.. image :: TabBar-group-anim.gif

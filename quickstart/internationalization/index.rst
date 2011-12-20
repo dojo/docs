@@ -7,7 +7,7 @@ Internationalization (i18n)
 :Authors: Adam Peller
 :since: V0.9?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Internationalization, or *i18n*, is the process of making an application flexible to work in different languages and respect different conventions and customs. An identifier called a *locale* represents a language code with an optional list of variants, which may include geographic or other information. Based on the locale, different data and logic may be applied when rendering text or dealing with numbers or dates. This section will cover the basic concepts of internationalization and show how these features are implemented in Dojo.

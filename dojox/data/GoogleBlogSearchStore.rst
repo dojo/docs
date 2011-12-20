@@ -7,7 +7,7 @@ dojox.data.GoogleBlogSearchStore
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.data.GoogleBlogSearchStore is a data store that uses Google APIs to search the blogosphere.
@@ -143,7 +143,7 @@ Programmatic example
     }
     </script>
 
-  .. html::
+  .. html ::
 
     <div>
       <span>Enter Search Text</span>

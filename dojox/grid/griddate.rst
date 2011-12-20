@@ -50,11 +50,11 @@ Localized Date Field
 		];
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:store, structure:'layout'"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -111,11 +111,11 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		];
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:store, structure:'layout'"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -180,11 +180,11 @@ Editable Localized Date Field - use DateTextBox when editing
 		];
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:store, structure:'layout'"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -251,11 +251,11 @@ Editable Custom Format Date Field - use DateTextBox when editing
 		];
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:store, structure:'layout'"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";

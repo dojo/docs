@@ -8,7 +8,7 @@ dojox.form.ListInput
 :Developers: Benjamin Santalucia
 :since: 1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The ListInput widget allow you to create a list of element. It's like the "to" field on hotmail.

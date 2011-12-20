@@ -6,7 +6,7 @@ dojo._base.loader
 
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.loader** is a bootstrap module which contains all of the package loading methods.

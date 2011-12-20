@@ -8,7 +8,7 @@ dojox.widget.rotator.Slide
 :Project owner: Chris Barber
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A slide transition for a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
@@ -37,7 +37,7 @@ Example of a different slide direction for each pane.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -88,7 +88,7 @@ Example of a different slide direction for each pane.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myAutoRotator1" class="rotator"></div>
 
@@ -106,7 +106,7 @@ Example of a different slide direction for each pane.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -140,7 +140,7 @@ Example of a different slide direction for each pane.
         dojo.require("dojox.widget.rotator.Slide");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.slideLeft', duration:2500">
         <div class="pane pane0">Pane 0<br/>Pane 1 will slide in from the top</div>

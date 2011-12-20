@@ -7,7 +7,7 @@ dojox.data.GoogleNewsSearchStore
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.data.GoogleNewsSearchStore is a data store that uses Google APIs to search news sources.
@@ -135,7 +135,7 @@ Programmatic example
     }
     </script>
 
-  .. html::
+  .. html ::
 
     <div>
       <span>Enter Search Text</span>

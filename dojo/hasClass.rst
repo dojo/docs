@@ -7,7 +7,7 @@ dojo.hasClass
 :Project owner: Eugene Lazutkin
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Returns a boolean depending on whether or not a node has a passed class string.

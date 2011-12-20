@@ -6,7 +6,7 @@ IO Pipeline Topics
 
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Topics that are published via :ref:`dojo.publish <dojo/publish>` that correspond to events in the Input/Output (IO) pipeline used by Dojo.

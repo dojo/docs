@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Pagination
 
 Pagination plugin provides paging functionality for grid.
 
-.. contents::
+.. contents ::
 	:depth: 2
 
 Introduction
@@ -83,11 +83,11 @@ Pagination is a plugin for dojox.grid.EnhancedGrid. It's designed to allow the u
         });
     </script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridDiv"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
@@ -174,23 +174,23 @@ The pagination bar has one main element and three optional elements: *paging nav
 
 The following image is an overview of pagination's UI.
 
-.. image:: pagination_ui_overview.bmp
+.. image :: pagination_ui_overview.bmp
 
 The *page navigation choices* is the main element of the pagination. The *paging navigation choices* including two main parts: 1) the relative (first, previous, next, last) and specific page choices and 2) the go to page button.
 
-.. image:: pagination_pagestep.bmp
+.. image :: pagination_pagestep.bmp
 
 The go to page button is an optional element. A go to page dialog will show when the *Go to page* button was fired. The grid will go to the specified page after the user enters a vaild page number and clicks the "go" button or presses ENTER. This process can be canceled by clicking the "Cancel" button or pressing ESC.
 
-.. image:: pagination_gotopage.jpg
+.. image :: pagination_gotopage.jpg
 
 The *current position display* includes information like total number of items and item range of current page. The current position display can be omitted by setting ``showDescription`` to ``false``. Also, the user can specify the string to use to display the type of item.
 
-.. image:: pagination_currentposition.jpg
+.. image :: pagination_currentposition.jpg
 
 The user can change the number of items displayed on each page by clicking the *page length choice*. It can be omitted by setting ``showSizeSwitch`` to ``false``. The page length menu choices can be specified through the ``pageSizeArr`` parameter.
 
-.. image:: pagination_pagingsize.jpg
+.. image :: pagination_pagingsize.jpg
 
 Accessibility
 -------------

@@ -4,7 +4,7 @@
 dojo.cookie
 ===========
 
-.. contents::
+.. contents ::
   :depth: 3
 
 ``dojo.cookie`` is your one stop for handling client side cookies. Its usage is very simple and the following example should make it clear

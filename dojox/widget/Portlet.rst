@@ -7,7 +7,7 @@ dojox.widget.Portlet
 :Project owner: Shane O'Sullivan
 :since: 1.3.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The dojox.widget.Portlet is an enhanced version of the dijit.TitlePane widget, designed to be used in the dojox.layout.GridContainer.
@@ -72,7 +72,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
       dojo.require("dojox.widget.Portlet");
     </script>
 
-  .. html::
+  .. html ::
    
       <div data-dojo-type="dojox.widget.Portlet" title="A Simple Portlet">
 	<div data-dojo-type="dojox.widget.PortletSettings">
@@ -87,7 +87,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 	</div>
     </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
@@ -114,7 +114,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
       dojo.require("dojox.widget.FeedPortlet");
     </script>
 
-  .. html::
+  .. html ::
    
       <div data-dojo-type="dojox.widget.FeedPortlet" title="Todays News"
 	id="todaysNews"
@@ -131,7 +131,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 	</div>
       </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
@@ -159,7 +159,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
       dojo.require("dojox.widget.FeedPortlet");
     </script>
 
-  .. html::
+  .. html ::
    
       <div data-dojo-type="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
 	id="todaysNews"
@@ -178,7 +178,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 	</div>
       </div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
@@ -206,7 +206,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
   Include the CSS for the Portlet, the GridContainer, and the Calendar widgets.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css";
@@ -223,7 +223,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
   This example includes three Portlets in a GridContainer.  The GridContainer lays out the widgets in a grid enables dragging them around.
   The GridContainer in this example has two columns, set using the 'nbZones' attribute.  This example also shows the Calendar Portlet containing another Dojo widget, the dojox.widget.Calendar.
 
-  .. html::
+  .. html ::
    
     <div data-dojo-type="dojox.layout.GridContainer"
 	id="gc1"

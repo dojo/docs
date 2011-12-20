@@ -4,7 +4,7 @@
 dojox.data.FlickrStore
 ======================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Dojo has several examples of browser in-memory stores, such as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`, :ref:`dojox.data.CsvStore <dojox/data/CsvStore>`, and :ref:`dojox.data.OpmlStore <dojox/data/OpmlStore>`. While these stores are useful and great examples of how data stores can be used to wrapper accessing data, they are not the only way data is served and processed. In many cases, data stores can wrapper external services. It is those services that perform the querying and filtering of data, and then provide only that as a subset back to the data store for presentation as items.

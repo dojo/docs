@@ -6,7 +6,7 @@ dojo._base.json
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.json** contains functions to deal with JSON data.

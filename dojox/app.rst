@@ -27,7 +27,7 @@ Overview
 =============
 Application structure overview.
 
-.. image:: ./app/Diagram1.png
+.. image :: ./app/Diagram1.png
 
 Components in dojox.app
 
@@ -307,10 +307,10 @@ dojox.app uses scene/view structure to enable the nested scene or view which res
 dojox.app contains the layout mechanism to ensure the content at different application/scene/view level work well together
 dojox.mobile.app manage the navigation history in StageController by using a history stack. dojox.app manage the navigation history through HTML5 pushState standard and delegate it to browser enabled history management.
 
-.. image:: ./app/Diagram3.png
+.. image :: ./app/Diagram3.png
 
-.. image:: ./app/Diagram1.png
+.. image :: ./app/Diagram1.png
 
 Here is the sequence diagram to reflect the difference in the navigation management.
 
-.. image:: ./app/Diagram5.png
+.. image :: ./app/Diagram5.png

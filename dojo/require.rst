@@ -6,7 +6,7 @@ dojo.require
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Loads a Dojo module, by name.

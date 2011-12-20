@@ -4,7 +4,7 @@
 Sorting
 =======
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Sorting Items

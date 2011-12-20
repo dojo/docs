@@ -7,7 +7,7 @@ dojo.fx.chain / dojo.fx.combine Examples
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This page is a landing point for demonstrating complex animations of DOM nodes built on uses of the chain and combine functions to perform complex animations with a single call to *'play()*.

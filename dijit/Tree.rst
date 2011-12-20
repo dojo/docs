@@ -8,7 +8,7 @@ dijit.Tree
 :Developers: Bill Keese
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The trees we see in User Interfaces help sort out long, hierarchical lists.

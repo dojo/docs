@@ -6,7 +6,7 @@ dojo.io.script
 
 :since: V0.9
 
-.. contents::
+.. contents ::
   :depth: 2
 
 Introduction

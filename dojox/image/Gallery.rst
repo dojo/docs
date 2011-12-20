@@ -7,7 +7,7 @@ dojox.image.Gallery
 :Project owner: ?--
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

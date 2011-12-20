@@ -7,7 +7,7 @@ dojox.widget.Standby
 :Project owner: Jared Jurkiewicz
 :since: v1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Marks a widget as busy.
@@ -99,14 +99,14 @@ Basic usage
       dojo.ready(init);
     </script>
 
-  .. html::
+  .. html ::
 
     <button data-dojo-id="b1" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b2" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div data-dojo-id="basicStandby1" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic'"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";

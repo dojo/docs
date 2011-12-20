@@ -8,7 +8,7 @@ dojox.json.schema
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.json.schema** implements `JSON Schema <http://json-schema.org>`_ to provide data validation against JSON Schemas.

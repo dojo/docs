@@ -8,7 +8,7 @@ dijit.form.Textarea
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A Textarea widget is like a regular HTML TEXTAREA element, but it dynamically resizes to fit the content of the text inside.

@@ -4,7 +4,7 @@
 Writing Your Own Widget
 =======================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 It's hard for you to leave well-enough alone. We give you widgets, and now you want to change them. Or you want to make your own.
@@ -327,7 +327,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
         });
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
         .businessCard {
@@ -342,7 +342,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
         }
     </style>
 
-  .. html::
+  .. html ::
 
     <span data-dojo-type="BusinessCard" data-dojo-props="name:'John Smith', phone:'(800) 555-1212'"></span>
     <span data-dojo-type="BusinessCard" data-dojo-props="name:'Jack Bauer', nameClass:'specialEmployeeName', phone:'(800) CALL-CTU'"></span>
@@ -410,7 +410,7 @@ that has an "open" attribute that controls whether the widget is hidden or shown
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <span data-dojo-type="HidePane" data-dojo-props="open:false" data-dojo-id="pane">This pane is initially hidden</span>
     <button onclick="pane.set('open', true);">show</button>
@@ -501,7 +501,7 @@ and in that case templateString should reference the file via the :ref:`dojo.tex
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <button data-dojo-type="MyButton">press me</button>
 

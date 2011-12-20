@@ -4,7 +4,7 @@
 dijit.form.HorizontalRuleLabels
 ===============================
 
-.. contents::
+.. contents ::
     :depth: 3
 
 :Authors:

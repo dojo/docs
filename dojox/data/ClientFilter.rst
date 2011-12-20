@@ -8,7 +8,7 @@ dojox.data.ClientFilter
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An abstract data store module for adding updateable result set functionality to an existing data store class.

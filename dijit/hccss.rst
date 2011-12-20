@@ -6,7 +6,7 @@ dijit.hccss
 
 :since: v1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

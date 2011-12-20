@@ -8,7 +8,7 @@ dojox.widget.AutoRotator
 :Project owner: Chris Barber
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A rotator that automatically transitions between child nodes.
@@ -48,7 +48,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -100,7 +100,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myAutoRotator1" class="rotator"></div>
 
@@ -115,7 +115,7 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -149,7 +149,7 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
         dojo.require("dojox.widget.rotator.Fade");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" data-dojo-props="transition:'dojox.widget.rotator.crossFade', duration:2500, random:true, cycles:4" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2">
         <div class="pane pane0">Pane 0</div>
@@ -162,7 +162,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -197,7 +197,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
         dojo.require("dojox.widget.rotator.Fade");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" data-dojo-props="duration:2000, transition:'dojox.widget.rotator.crossFade'" class="rotator" id="myAutoRotator3" data-dojo-id="myAutoRotatorInstance3">
         <div class="pane pane0">

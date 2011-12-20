@@ -7,7 +7,7 @@ dojox.fx.style
 :Project owner: Peter Higgins
 :since: v1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This module provides Animated CSS class transitions for nodes, or in other words: will animate the effects of adding, removing, or toggling a class name on a node.

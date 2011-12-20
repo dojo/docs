@@ -9,7 +9,7 @@ dojox.mvc.Group
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A simple model-bound container widget with single-node binding to a data model. A group is usually bound to an intermediate dojo.Stateful node in the data model. Child dijits or custom view components inside a group inherit their parent data binding context from it.

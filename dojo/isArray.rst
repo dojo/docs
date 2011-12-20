@@ -6,7 +6,7 @@ dojo.isArray
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Checks if the passed parameter is an Array.

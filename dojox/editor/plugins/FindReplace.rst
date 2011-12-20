@@ -8,7 +8,7 @@ dojox.editor.plugins.FindReplace
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to know how node you were in while editing some rich text?  Have you ever wanted to be sure the entire element was deleted, not just its content?  If so, then this plugin is for you.
@@ -125,13 +125,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.FindReplace");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/FindReplace.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
     <br>

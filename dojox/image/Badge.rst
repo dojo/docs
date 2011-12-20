@@ -7,7 +7,7 @@ dojox.image.Badge
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Attach images or background images, and let them loop

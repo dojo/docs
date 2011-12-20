@@ -7,7 +7,7 @@ JavaScript events and Dojo
 :Authors: Matt Bowen, Peter Higgins, Bill Keese, Nikolai Onken
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dojo's event system offers a refreshing alternative to the normal JavaScript events. With Dojo, you connect functions to one another, creating a link that calls one function when another fires.

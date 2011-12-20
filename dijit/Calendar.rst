@@ -7,7 +7,7 @@ dijit.Calendar
 :Authors: Adam Peller
 :Project owner: Adam Peller
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.
@@ -43,12 +43,12 @@ A plain Calendar widget with the formatted date below:
       dojo.require("dijit.Calendar");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
     <p id="formatted"></p>
     
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
@@ -73,11 +73,11 @@ With an initial selection and weekends disabled:
       dojo.require("dijit.Calendar");
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="mycal" data-dojo-type="dijit.Calendar" value="2009-08-07" data-dojo-props="isDisabledDate:dojo.date.locale.isWeekend"></div>
     
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .{{ theme }} .dijitCalendarDisabledDate {
@@ -115,11 +115,11 @@ Javascript declaration, with a restriction of +/- one week from the current date
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="mycal"></div>
     
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
@@ -143,11 +143,11 @@ Custom styling:
     </script>
   
 
-  .. html::
+  .. html ::
 
     <input id="calendar5" data-dojo-type="dijit.Calendar" dayWidth="abbr" value="2008-03-13">
     
-  .. css::
+  .. css ::
 
     <style>
         #calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
@@ -202,7 +202,7 @@ Custom styling:
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <table class="container">
       <tr>

@@ -4,7 +4,7 @@
 dojo.date.locale.regexp
 =======================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 .. api-inline :: dojo.date.locale.regexp 

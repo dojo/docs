@@ -7,7 +7,7 @@ dojox.io
 :Developers: Bryan Forbes, Kris Zyp, James Burke, Tom Trenka
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Features

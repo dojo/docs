@@ -6,7 +6,7 @@ dojo.formToJson
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a HTML form to a JSON string

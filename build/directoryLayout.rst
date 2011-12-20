@@ -7,7 +7,7 @@ Sample Directory Layout for Builds
 :Project owner: (docs) Scott A Jenkins
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This document summarizes an effective layout for managing Dojo directories for the build process.

@@ -7,7 +7,7 @@ dojox.atom.widget
 :Project owner: Jared Jurkiewicz, Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.atom.widget offers widgets for reading and editing ATOM feeds.

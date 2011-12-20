@@ -19,7 +19,7 @@ A simple declarative example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
      <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
@@ -33,7 +33,7 @@ A simple declarative example
         dojo.require("dijit.form.Button");
     </script>
 
-  .. html::
+  .. html ::
 
     <h2>Content before</h2>
     <div id="titleGroupA" data-dojo-type="dojox.widget.TitleGroup">
@@ -49,7 +49,7 @@ Adding and removing children
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
      <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
@@ -63,7 +63,7 @@ Adding and removing children
         dojo.require("dijit.form.Button");
     </script>
 
-  .. html::
+  .. html ::
 
     <h2>Content before</h2>
     <div data-dojo-type="dijit.form.Button">

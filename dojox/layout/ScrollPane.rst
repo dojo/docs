@@ -7,7 +7,7 @@ dojox.layout.ScrollPane
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.ScrollPane is an interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal.

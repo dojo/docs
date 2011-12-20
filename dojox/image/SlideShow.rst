@@ -7,7 +7,7 @@ dojox.image.SlideShow
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

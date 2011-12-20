@@ -8,7 +8,7 @@ dojox.editor.plugins.Preview
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to see how the contents of the editor would look outside the editor or styled with a different set of CSS styles.  If so, then this plugin is for you!  This plugin provides a 'preview' capability, a way to view the contents of the editor outside the editable frame and with different styles applied.
@@ -76,13 +76,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.Preview");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
@@ -126,13 +126,13 @@ Applying styles to preview content
       dojo.require("dojox.editor.plugins.Preview");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
@@ -177,13 +177,13 @@ Applying stylesheets to preview content
       dojo.require("dojox.editor.plugins.Preview");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>

@@ -7,7 +7,7 @@ dojox.io.windowName
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.windowName offers Cross-domain transport using window.name.

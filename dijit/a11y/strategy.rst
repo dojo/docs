@@ -6,7 +6,7 @@ Dijit Accessibility Strategy
 
 :Author: Becky Gibson
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Support High Contrast /Images Off
@@ -25,7 +25,7 @@ This is NOT a style sheet to provide a set of high-contrast mode colors and styl
 
 For example, in the default Dojo theme called tundra, the close icon for a dialog box is represented using a CSS background image of an x within a shaded circle which is displayed in the upper right hand corner of the dialog box.
 
-.. image:: dialog.jpg
+.. image :: dialog.jpg
 
 Within the dialog template there is an additional span that contains the character ‘x’ to serve as the text alternative for the background image icon.
 
@@ -62,7 +62,7 @@ Notice that the closeText style is encapsulated within .dijitDialog so this styl
 When high-contrast mode is detected the .dijit_a11y class is applied to the body element of the page and now the span with class .closeText is made visible via the display:inline directive.
 In high-contrast mode, the background image of the close icon is no longer visible but the character ‘x’ is displayed.
 
-.. image:: dialog_hc.jpg
+.. image :: dialog_hc.jpg
 
 In some cases, an HTML entity character such as, &#x25BC; - the Unicode black down pointing triangle (▼) is used as the text alternative.
 This character is used to provide the down arrow character to indicate a popup is available.

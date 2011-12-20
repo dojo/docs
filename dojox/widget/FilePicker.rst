@@ -7,7 +7,7 @@ dojox.widget.FilePicker
 :Project owner: Nathan Toone
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 1
 
 A specialized version of RollingList that handles file information

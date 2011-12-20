@@ -8,7 +8,7 @@ dojo.behavior
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A very simple, lightweight mechanism for applying code to existing documents, based around :ref:`dojo.query <dojo/query>` for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();

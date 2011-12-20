@@ -7,7 +7,7 @@ dojox.atom
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The *dojox.atom* project is a container project for functions and widgets that specifically deal with working with the `ATOM <http://en.wikipedia.org/wiki/Atom_(standard)>`_ data format.

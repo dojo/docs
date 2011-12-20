@@ -8,12 +8,12 @@ dojox.mobile.EdgeToEdgeCategory
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 EdgeToEdgeCategory is a category header for an :ref:`edge-to-edge list <dojox/mobile/EdgeToEdgeList>`.
 
-.. image:: EdgeToEdgeCategory.png
+.. image :: EdgeToEdgeCategory.png
 
 Constructor Parameters
 ======================

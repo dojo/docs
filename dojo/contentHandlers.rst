@@ -7,7 +7,7 @@ dojo.contentHandlers
 :Project owner: Peter Higgins
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.contentHandlers is an object containing several pre-defined "handlers" for Ajax traffic, exposed as a public API to allow your own custom handlers to be mixed in.

@@ -6,7 +6,7 @@ dojox.xml
 
 :Authors: Tom Trenka, Jared Jurkiewicz
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

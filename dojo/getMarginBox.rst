@@ -4,7 +4,7 @@
 dojo.getMarginBox
 =================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Returns an object that encodes the width, height, left and top positions of the node's margin box.

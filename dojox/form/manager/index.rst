@@ -7,7 +7,7 @@ dojox.form.manager
 :Project owner: Eugene Lazutkin
 :since: 1.3
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Introduction

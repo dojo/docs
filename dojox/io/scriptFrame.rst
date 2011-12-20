@@ -7,7 +7,7 @@ dojox.io.scriptFrame
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.scriptFrame uses an iframe for dojo.io.script requests.

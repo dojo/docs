@@ -7,7 +7,7 @@ dojox.image.FlickrBadge
 :Project owner: ?--
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An extension on :ref:`dojox.image.Badge <dojox/image/Badge>`, using Flickr as a data provider.

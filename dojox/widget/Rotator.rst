@@ -8,7 +8,7 @@ dojox.widget.Rotator
 :Project owner: Chris Barber
 :since: v1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A widget for rotating through child nodes using :ref:`transitions <dojox/widget/rotator/index>`.
@@ -49,7 +49,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
  
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -87,7 +87,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myRotator1" class="rotator"></div>
 
@@ -99,7 +99,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -135,7 +135,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myRotator2" class="rotator">
         <div class="pane">Pane 0</div>
@@ -182,7 +182,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -207,7 +207,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
         dojo.require("dojox.widget.rotator.Fade");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator3" data-dojo-id="myRotatorInstance3" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
         <div class="pane">Pane 0</div>
@@ -223,7 +223,7 @@ Example of using different transitions per pane.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -251,7 +251,7 @@ Example of using different transitions per pane.
         dojo.require("dojox.widget.rotator.Wipe");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator4" data-dojo-id="myRotatorInstance4" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
         <div class="pane">Pane 0</div>
@@ -267,7 +267,7 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -292,7 +292,7 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
         dojo.require("dojox.widget.rotator.Pan");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" data-dojo-props="transition:'dojox.widget.rotator.pan', transitionParams:'continuous:true,quick:true,duration:500'">
         <div class="pane">Pane 0</div>
@@ -330,7 +330,7 @@ Example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -354,7 +354,7 @@ Example
         dojo.require("dojox.widget.Rotator");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator6">
         <div class="pane">Pane 0</div>

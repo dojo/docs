@@ -7,7 +7,7 @@ dojo.touch
 :Project owner: Evan Huang
 :since: V.1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

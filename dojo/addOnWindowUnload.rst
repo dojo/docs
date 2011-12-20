@@ -6,7 +6,7 @@ dojo.addOnWindowUnload
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.addOnWindowUnload registers a function to be triggered when window.onunload fires.

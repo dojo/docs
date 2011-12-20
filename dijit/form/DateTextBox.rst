@@ -8,7 +8,7 @@ dijit.form.DateTextBox
 :Developers: Doug Hays, Bill Keese
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 DateTextBox widgets are easy-to-use date entry controls that allow either typing or choosing a date from any calendar widget.

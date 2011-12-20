@@ -7,7 +7,7 @@ dojo.clone
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Part of Base Dojo (dojo.js) - Clones `anything` objects and/or nodes, returning a new `anything`.

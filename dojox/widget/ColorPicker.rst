@@ -7,7 +7,7 @@ dojox.widget.ColorPicker
 :Project owner: Nathan Toone
 :since: V1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A Photoshop-like HSV ColorPicker widget.
@@ -41,7 +41,7 @@ Programmatic example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
@@ -54,7 +54,7 @@ Programmatic example
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="picker1"></div>
 
@@ -64,7 +64,7 @@ Declarative example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
@@ -74,7 +74,7 @@ Declarative example
         dojo.require("dojox.widget.ColorPicker");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.ColorPicker" id="picker2"></div>
 
@@ -84,7 +84,7 @@ A ColorPicker within a DropDownButton
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
@@ -95,7 +95,7 @@ A ColorPicker within a DropDownButton
         dojo.require("dijit.form.DropDownButton");
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.form.DropDownButton">
         <span>

@@ -8,7 +8,7 @@ dojo.data.ObjectStore
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo.data.ObjectStore** is an adapter for using the new :ref:`Dojo Object Stores <dojo/store>` with Dojo Data consumers. This adapter takes an object store and implements the Dojo Data API (Read, Write, Identity, and Notification).

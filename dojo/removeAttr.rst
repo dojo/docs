@@ -6,7 +6,7 @@ dojo.removeAttr
 
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Removes an attribute.

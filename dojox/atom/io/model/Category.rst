@@ -7,7 +7,7 @@ dojox.atom.io.model.Category
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents the Category element of the Atom specification. Entries and feeds can each have category elements to convey information 

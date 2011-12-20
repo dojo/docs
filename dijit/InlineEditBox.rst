@@ -7,7 +7,7 @@ dijit.InlineEditBox
 :Project owner: Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 3
 
 InlineEditBox is best described as a behavior on some text on the page, such that clicking that text brings up an editor, and when the text is saved, the screen is reverted to it's original state (but with the new text).

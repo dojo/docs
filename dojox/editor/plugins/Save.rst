@@ -8,7 +8,7 @@ dojox.editor.plugins.Save
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted a simple toolbar based 'Save' action for the editor that just posts the content back to some URL?   If so, then this plugin is for you!  This plugin provides a 'save' capability, a simple toolbar action for saving the editor contents by POSTing the content to a remote URL.
@@ -76,13 +76,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.Save");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Save.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter whatever you like in the editor, then press the 'Save' button.  The console will emit a message about no post-back URL, since there is no service assigned to the demo.</b>
     <br>
@@ -149,13 +149,13 @@ Customizing a save
         });
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Save.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter whatever you like in the editor, then press the 'Save' button.  An alert will appear with the content before the actual save is invoked.</b>
     <br>

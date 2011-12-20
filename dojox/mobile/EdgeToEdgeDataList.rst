@@ -8,7 +8,7 @@ dojox.mobile.EdgeToEdgeDataList
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 EdgeToEdgeDataList is an enhanced version of EdgeToEdgeList. It can generate ListItems according to the given dojo.data store.
@@ -78,4 +78,4 @@ In this example, no ListItem is declared under EdgeToEdgeDataList. The ListItems
 	 { "label": "VPN", "icon": "images/i-icon-4.png", "rightText": "VPN", "moveTo": "bar" }
   }
 
-.. image:: EdgeToEdgeList-example1.png
+.. image :: EdgeToEdgeList-example1.png

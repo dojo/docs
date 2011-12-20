@@ -6,7 +6,7 @@ Dijit Accessibility (a11y)
 
 :Author: Becky Gibson
 
-.. contents::
+.. contents ::
    :depth: 2
 
 It is important that all users can access applications built using Dojo.

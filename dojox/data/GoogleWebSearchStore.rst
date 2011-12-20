@@ -7,7 +7,7 @@ dojox.data.GoogleWebSearchStore
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.data.GoogleSearchStore is a data store that can be used to search Google.
@@ -137,7 +137,7 @@ Programmatic example
     }
     </script>
 
-  .. html::
+  .. html ::
 
     <div>
       <span>Enter Search Text</span>

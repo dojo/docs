@@ -8,7 +8,7 @@ dojox.editor.plugins.InsertAnchor
 :Project owner: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to insert a named location in your document (anchor), that people can link to using urls and hashes?  If so, then this plugin is for you!
@@ -71,13 +71,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.InsertAnchor");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>

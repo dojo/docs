@@ -8,7 +8,7 @@ dojox.data.ServiceStore
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 ServiceStore is an adapter for web services to implement the Dojo Data API, providing simple Dojo Data access for web services.

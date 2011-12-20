@@ -6,7 +6,7 @@ dojox.data.FileStore: Technical/Protocol Details
 
 :Author: Jared Jurkiewicz
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.

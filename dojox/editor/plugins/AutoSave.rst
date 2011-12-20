@@ -8,7 +8,7 @@ dojox.editor.plugins.AutoSave (Under Construction)
 :Project owner: Jared Jurkiewicz
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to save your editing content at intervals so that you won't lose it by accident? This plugin is for you.
@@ -147,13 +147,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.AutoSave");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>

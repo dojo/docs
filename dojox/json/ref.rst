@@ -8,7 +8,7 @@ dojox.json.ref
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.json.ref** implements JSON Referencing to provide serialization, deserialization, and indexing of complex object graphs with circular, multiple, cross-message, cross-store, and cross-site referencing.

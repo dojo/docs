@@ -4,7 +4,7 @@
 dojo.setAttr
 ============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Sets an attribute on an HTML element.

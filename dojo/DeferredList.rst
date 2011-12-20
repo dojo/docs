@@ -5,7 +5,7 @@ dojo.DeferredList
 =================
 
 
-.. contents::
+.. contents ::
   :depth: 3
 
 :ref:`dojo.Deferred <dojo/Deferred>` objects make asynchronous programming as easy as can be reasonably expected.

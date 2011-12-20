@@ -8,7 +8,7 @@ dojox.mobile.RoundRect
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 RoundRect is a simple round rectangle container for any HTML and/or widgets. You can achieve the same appearance by just applying the -webkit-border-radius style to a div tag. However, if you use RoundRect, you can get a round rectangle even on non-CSS3 browsers such as (older) IE.
@@ -35,4 +35,4 @@ Declarative example
     applications for mobile devices such as iPhone or Android.
   </div>
 
-.. image:: RoundRect.png
+.. image :: RoundRect.png
