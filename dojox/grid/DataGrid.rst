@@ -22,34 +22,33 @@ Grids are familiar in the client/server development world. Basically a grid is a
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+        
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
@@ -64,14 +63,13 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
     <div id="gridDiv"></div>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -318,16 +316,14 @@ Required CSS
 ------------
 Some style sheets supplied with the Dojo distribution are required:
 
-.. html ::
+.. css ::
   
-  <style type="text/css">
     @import "/dojox/grid/resources/Grid.css";
     @import "/dojox/grid/resources/{{ theme }}Grid.css";
 
     .dojoxGrid table {
       margin: 0;
     }
-  </style>
 
 
 DataGrid object functions
@@ -404,34 +400,33 @@ This example shows how to create a simple Grid programmatically.
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+        
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
@@ -446,14 +441,13 @@ This example shows how to create a simple Grid programmatically.
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
     <div id="gridDiv"></div>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -476,35 +470,34 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dijit.form.Button");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.form.Button");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+        
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
@@ -519,51 +512,50 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
-   <p>
-        Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row).
-        After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
-        selected rows.
-    </p>
+       <p>
+            Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row).
+            After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
+            selected rows.
+       </p>
 
-    <div id="gridDiv"></div>
+       <div id="gridDiv"></div>
 
-    <p>
-    <span data-dojo-type="dijit.form.Button">
-        get all Selected Items
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            /* Get all selected items from the Grid: */
-            var items = grid.selection.getSelected();
-            if(items.length){
-                /* Iterate through the list of selected items.
-                   The current item is available in the variable
-                   "selectedItem" within the following function: */
-                dojo.forEach(items, function(selectedItem){
-                    if(selectedItem !== null){
-                        /* Iterate through the list of attributes of each item.
-                           The current attribute is available in the variable
-                           "attribute" within the following function: */
-                        dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
-                            /* Get the value of the current attribute:*/
-                            var value = grid.store.getValues(selectedItem, attribute);
-                            /* Now, you can do something with this attribute/value pair.
-                               Our short example shows the attribute together
-                               with the value in an alert box, but we are sure, that
-                               you'll find a more ambitious usage in your own code:*/
-                            alert('attribute: ' + attribute + ', value: ' + value);
+       <p>
+            <span data-dojo-type="dijit.form.Button">
+                get all Selected Items
+                <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+                    /* Get all selected items from the Grid: */
+                    var items = grid.selection.getSelected();
+                    if(items.length){
+                        /* Iterate through the list of selected items.
+                           The current item is available in the variable
+                           "selectedItem" within the following function: */
+                        dojo.forEach(items, function(selectedItem){
+                            if(selectedItem !== null){
+                                /* Iterate through the list of attributes of each item.
+                                   The current attribute is available in the variable
+                                   "attribute" within the following function: */
+                                dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
+                                    /* Get the value of the current attribute:*/
+                                    var value = grid.store.getValues(selectedItem, attribute);
+                                    /* Now, you can do something with this attribute/value pair.
+                                       Our short example shows the attribute together
+                                       with the value in an alert box, but we are sure, that
+                                       you'll find a more ambitious usage in your own code:*/
+                                    alert('attribute: ' + attribute + ', value: ' + value);
+                                }); /* end forEach */
+                            } /* end if */
                         }); /* end forEach */
                     } /* end if */
-                }); /* end forEach */
-            } /* end if */
-        </script>
-    </span>
-    </p>
+                </script>
+            </span>
+        </p>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -599,35 +591,34 @@ First, you have to set a editor for each cell, you would like to edit:
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dojox.grid.cells.dijit");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.cells.dijit");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px', editable: true, type: dojox.grid.cells.CheckBox,styles: 'text-align: center;'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px', editable: true},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px', editable: true}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px', editable: true, type: dojox.grid.cells.CheckBox,styles: 'text-align: center;'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px', editable: true},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px', editable: true}
+          ]];
 
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
@@ -642,8 +633,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
@@ -654,7 +644,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
     <div id="gridDiv"></div>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -675,35 +665,34 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dijit.form.Button");
-        dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-                identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 5;
-	  for(i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+                    identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 5;
+          for(i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          store = new dojo.data.ItemFileWriteStore({data: data});
+
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
@@ -718,8 +707,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
@@ -759,7 +747,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
       </span>
     </p>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -779,35 +767,34 @@ The Grid offers a filter() method, to filter data from the current query (client
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dijit.form.Button");
-        dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: true, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: true, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '100px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           /*create a new grid:*/
           grid = new dojox.grid.DataGrid({
@@ -822,8 +809,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
@@ -852,7 +838,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </span>
     </p>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -873,51 +859,50 @@ To use it, you just have to override default behavior by yours.
  
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: true, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: true, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id', 'width': '150px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
-	  ]];
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: true, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: true, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+
+          /*set up layout*/
+          var layout = [[
+            {'name': 'Column 1', 'field': 'id', 'width': '150px'},
+            {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+            {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+          ]];
 
           function myStyleRow(row){
-	     /* The row object has 4 parameters, and you can set two others to provide your own styling
-	        These parameters are :
-	      	-- index : the row index
-	     	-- selected: whether or not the row is selected
-	     	-- over : whether or not the mouse is over this row
-	     	-- odd : whether or not this row index is odd. */
-	     var item = grid.getItem(row.index);
-	     if(item){
-		var type = store.getValue(item, "col2", null);
-		if(!!type){
-		    row.customStyles += "color:blue;";
-	        }
-	     }
-	     grid.focus.styleRow(row);
-	     grid.edit.styleRow(row);
+             /* The row object has 4 parameters, and you can set two others to provide your own styling
+                These parameters are :
+                  -- index : the row index
+                 -- selected: whether or not the row is selected
+                 -- over : whether or not the mouse is over this row
+                 -- odd : whether or not this row index is odd. */
+             var item = grid.getItem(row.index);
+             if(item){
+                var type = store.getValue(item, "col2", null);
+                if(!!type){
+                    row.customStyles += "color:blue;";
+                }
+             }
+             grid.focus.styleRow(row);
+             grid.edit.styleRow(row);
           }
 
           /*create a new grid:*/
@@ -934,14 +919,13 @@ To use it, you just have to override default behavior by yours.
 
           /*Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
     <div id="gridDiv"></div>
 
-   .. css ::
+  .. css ::
 
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -963,49 +947,47 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dojo.data.ItemFileReadStore");
-		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojo.date.stamp");
-		dojo.require("dojo.date.locale");
-		
-		dojo.ready(function(){
-			function formatDate(datum){
-				/* Format the value in store, so as to be displayed.*/
-				var d = dojo.date.stamp.fromISOString(datum);
-				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
-			}
-			
-			var layout = [
-				{name: 'Index', field: 'id'},
-				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate	/*Custom format, change the format in store. */
-				}
-			];
-		
-			var store = new dojo.data.ItemFileReadStore({
-				data: {
-					identifier: "id",
-					items: [
-						{id: 1, date: '2010-01-01'},
-						{id: 2, date: '2011-03-04'},
-						{id: 3, date: '2011-03-08'},
-						{id: 4, date: '2007-02-14'},
-						{id: 5, date: '2008-12-26'}
-					]
-				}
-			});
-			var grid = new dojox.grid.DataGrid({
-				id: 'grid',
-				store: store,
-				structure: layout,
-				autoWidth: true,
-				autoHeight: true
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
-	</script>
+        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojo.date.stamp");
+        dojo.require("dojo.date.locale");
+        
+        dojo.ready(function(){
+            function formatDate(datum){
+                /* Format the value in store, so as to be displayed.*/
+                var d = dojo.date.stamp.fromISOString(datum);
+                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+            }
+            
+            var layout = [
+                {name: 'Index', field: 'id'},
+                {name: 'Date', field: 'date', width: 10,
+                    formatter: formatDate    /*Custom format, change the format in store. */
+                }
+            ];
+        
+            var store = new dojo.data.ItemFileReadStore({
+                data: {
+                    identifier: "id",
+                    items: [
+                        {id: 1, date: '2010-01-01'},
+                        {id: 2, date: '2011-03-04'},
+                        {id: 3, date: '2011-03-08'},
+                        {id: 4, date: '2007-02-14'},
+                        {id: 5, date: '2008-12-26'}
+                    ]
+                }
+            });
+            var grid = new dojox.grid.DataGrid({
+                id: 'grid',
+                store: store,
+                structure: layout,
+                autoWidth: true,
+                autoHeight: true
+            });
+            grid.placeAt('gridContainer');
+            grid.startup();
+        });
 
   .. html ::
 
@@ -1030,48 +1012,46 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dojo.data.ItemFileWriteStore");
-		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojo.date.stamp");
-		dojo.require("dojo.date.locale");
-		
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojo.date.stamp");
+        dojo.require("dojo.date.locale");
 
-		dojo.ready(function(){
-			function formatDate(datum){
-				/* Format the value in store, so as to be displayed.*/
-				var d = dojo.date.stamp.fromISOString(datum);
-				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
-			}
-			
-			var layout = [
-				{name: 'Index', field: 'id'},
-				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,	/*Custom format, change the format in store. */
-					editable: true	/*Editable cell, will show ISO format in a text box*/
-				}
-			];
-			var store = new dojo.data.ItemFileWriteStore({
-				data: {
-					identifier: "id",
-					items: [
-						{id: 1, date: '2010-01-01'},
-						{id: 2, date: '2011-03-04'},
-						{id: 3, date: '2011-03-08'},
-						{id: 4, date: '2007-02-14'},
-						{id: 5, date: '2008-12-26'}
-					]
-				}
-			});
-			var grid = new dojox.grid.DataGrid({
-				id: 'grid',
-				store: store,
-				structure: layout
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
-	</script>
+
+        dojo.ready(function(){
+            function formatDate(datum){
+                /* Format the value in store, so as to be displayed.*/
+                var d = dojo.date.stamp.fromISOString(datum);
+                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+            }
+            
+            var layout = [
+                {name: 'Index', field: 'id'},
+                {name: 'Date', field: 'date', width: 10,
+                    formatter: formatDate,    /*Custom format, change the format in store. */
+                    editable: true    /*Editable cell, will show ISO format in a text box*/
+                }
+            ];
+            var store = new dojo.data.ItemFileWriteStore({
+                data: {
+                    identifier: "id",
+                    items: [
+                        {id: 1, date: '2010-01-01'},
+                        {id: 2, date: '2011-03-04'},
+                        {id: 3, date: '2011-03-08'},
+                        {id: 4, date: '2007-02-14'},
+                        {id: 5, date: '2008-12-26'}
+                    ]
+                }
+            });
+            var grid = new dojox.grid.DataGrid({
+                id: 'grid',
+                store: store,
+                structure: layout
+            });
+            grid.placeAt('gridContainer');
+            grid.startup();
+        });
 
   .. html ::
 
@@ -1096,56 +1076,54 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dojo.data.ItemFileWriteStore");
-		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.grid.cells.dijit");
-		dojo.require("dojo.date.stamp");
-		dojo.require("dojo.date.locale");
-		
-		dojo.ready(function(){
-			function formatDate(datum){
-				/*Format the value in store, so as to be displayed.*/
-				var d = dojo.date.stamp.fromISOString(datum);
-				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
-			}
-		
-			function getDateValue(){
-				/*Override the default getValue function for dojox.grid.cells.DateTextBox*/
-				return dojo.date.stamp.toISOString(this.widget.get('value'));
-			}
-		
-			var layout = [
-				{name: 'Index', field: 'id'},
-				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,	/*Custom format, change the format in store. */
-					editable: true,		/*Editable cell*/
-					type: dojox.grid.cells.DateTextBox, /*Use DateTextBox in editing mode*/
-					getValue: getDateValue,	/*Translate the value of DateTextBox to something the store can understand.*/
-					constraint: {formatLength: 'long'} /*Format the date value shown in DateTextBox*/
-				}
-			];
-			var store = new dojo.data.ItemFileWriteStore({
-				data: {
-					identifier: "id",
-					items: [
-						{id: 1, date: '2010-01-01'},
-						{id: 2, date: '2011-03-04'},
-						{id: 3, date: '2011-03-08'},
-						{id: 4, date: '2007-02-14'},
-						{id: 5, date: '2008-12-26'}
-					]
-				}
-			});
-			var grid = new dojox.grid.DataGrid({
-				id: 'grid',
-				store: store,
-				structure: layout
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
-	</script>
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.grid.cells.dijit");
+        dojo.require("dojo.date.stamp");
+        dojo.require("dojo.date.locale");
+        
+        dojo.ready(function(){
+            function formatDate(datum){
+                /*Format the value in store, so as to be displayed.*/
+                var d = dojo.date.stamp.fromISOString(datum);
+                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+            }
+        
+            function getDateValue(){
+                /*Override the default getValue function for dojox.grid.cells.DateTextBox*/
+                return dojo.date.stamp.toISOString(this.widget.get('value'));
+            }
+        
+            var layout = [
+                {name: 'Index', field: 'id'},
+                {name: 'Date', field: 'date', width: 10,
+                    formatter: formatDate,    /*Custom format, change the format in store. */
+                    editable: true,        /*Editable cell*/
+                    type: dojox.grid.cells.DateTextBox, /*Use DateTextBox in editing mode*/
+                    getValue: getDateValue,    /*Translate the value of DateTextBox to something the store can understand.*/
+                    constraint: {formatLength: 'long'} /*Format the date value shown in DateTextBox*/
+                }
+            ];
+            var store = new dojo.data.ItemFileWriteStore({
+                data: {
+                    identifier: "id",
+                    items: [
+                        {id: 1, date: '2010-01-01'},
+                        {id: 2, date: '2011-03-04'},
+                        {id: 3, date: '2011-03-08'},
+                        {id: 4, date: '2007-02-14'},
+                        {id: 5, date: '2008-12-26'}
+                    ]
+                }
+            });
+            var grid = new dojox.grid.DataGrid({
+                id: 'grid',
+                store: store,
+                structure: layout
+            });
+            grid.placeAt('gridContainer');
+            grid.startup();
+        });
 
   .. html ::
 
@@ -1170,59 +1148,57 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
   .. js ::
 
-	<script type="text/javascript">
-		dojo.require("dojo.data.ItemFileWriteStore");
-		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.grid.cells.dijit");
-		dojo.require("dojo.date.locale");
-		
-		dojo.ready(function(){
-			var storePattern = 'yyyy/MM/dd';
-			var displayPattern = 'yyyy, MMMM, d';
-		
-			function formatDate(datum){
-				/*Format the value in store, so as to be displayed.*/
-				var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
-				return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
-			}
-		
-			function getDateValue(){
-				/*Override the default getValue function for dojox.grid.cells.DateTextBox*/
-				return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
-			}
-		
-			var layout = [
-				{name: 'Index', field: 'id'},
-				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,	/*Custom format, change the format in store. */
-					editable: true,		/*Editable cell*/
-					type: dojox.grid.cells.DateTextBox,/*Use DateTextBox in editing mode*/
-					getValue: getDateValue,	/*Translate the value of DateTextBox to something the store can understand.*/
-					constraint: {datePattern: displayPattern}/*Format the date value shown in DateTextBox*/
-				}
-			];
-			var store = new dojo.data.ItemFileWriteStore({
-				data: {
-					identifier: "id",
-					items: [
-						/*Not ISO format in store*/
-						{id: 1, date: '2010/01/01'},
-						{id: 2, date: '2011/03/04'},
-						{id: 3, date: '2011/03/08'},
-						{id: 4, date: '2007/02/14'},
-						{id: 5, date: '2008/12/26'}
-					]
-				}
-			});
-			var grid = new dojox.grid.DataGrid({
-				id: 'grid',
-				store: store,
-				structure: layout
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
-	</script>
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.grid.cells.dijit");
+        dojo.require("dojo.date.locale");
+        
+        dojo.ready(function(){
+            var storePattern = 'yyyy/MM/dd';
+            var displayPattern = 'yyyy, MMMM, d';
+        
+            function formatDate(datum){
+                /*Format the value in store, so as to be displayed.*/
+                var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
+                return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
+            }
+        
+            function getDateValue(){
+                /*Override the default getValue function for dojox.grid.cells.DateTextBox*/
+                return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
+            }
+        
+            var layout = [
+                {name: 'Index', field: 'id'},
+                {name: 'Date', field: 'date', width: 10,
+                    formatter: formatDate,    /*Custom format, change the format in store. */
+                    editable: true,        /*Editable cell*/
+                    type: dojox.grid.cells.DateTextBox,/*Use DateTextBox in editing mode*/
+                    getValue: getDateValue,    /*Translate the value of DateTextBox to something the store can understand.*/
+                    constraint: {datePattern: displayPattern}/*Format the date value shown in DateTextBox*/
+                }
+            ];
+            var store = new dojo.data.ItemFileWriteStore({
+                data: {
+                    identifier: "id",
+                    items: [
+                        /*Not ISO format in store*/
+                        {id: 1, date: '2010/01/01'},
+                        {id: 2, date: '2011/03/04'},
+                        {id: 3, date: '2011/03/08'},
+                        {id: 4, date: '2007/02/14'},
+                        {id: 5, date: '2008/12/26'}
+                    ]
+                }
+            });
+            var grid = new dojox.grid.DataGrid({
+                id: 'grid',
+                store: store,
+                structure: layout
+            });
+            grid.placeAt('gridContainer');
+            grid.startup();
+        });
 
   .. html ::
 
@@ -1318,18 +1294,18 @@ Keyboard
 ==============================================    ===============================================
 Action                                            Key
 ==============================================    ===============================================
-Navigate into the grid			                  The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
-Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
-Navigate between data cells		                  With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
-Sort a column					                  With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
-Edit a cell				                          If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
-Cancel edit mode				                  When a cell is being edited, pressing escape will cancel edit mode.
-End edit mode					                  When a cell is being edited, pressing enter will accept the change and end edit mode.
-Focus editable cells				              With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
-Invoke an onrowclick event	                      If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
-Select a row				                      With focus on a cell in a row, press the space bar.
-Select contiguous rows			                  Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
-Select discontinuous rows		                  Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection.
+Navigate into the grid                            The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session.
+Navigate between column headers                   With focus on a column header, use the left and right arrow keys to move between column headers.
+Navigate between data cells                       With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
+Sort a column                                     With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
+Edit a cell                                       If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
+Cancel edit mode                                  When a cell is being edited, pressing escape will cancel edit mode.
+End edit mode                                     When a cell is being edited, pressing enter will accept the change and end edit mode.
+Focus editable cells                              With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
+Invoke an onrowclick event                        If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
+Select a row                                      With focus on a cell in a row, press the space bar.
+Select contiguous rows                            Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
+Select discontinuous rows                         Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection.
 Change column size (1.4)                          Set focus to a column header, hold shift+control and press the left or right arrow key so change the column size.
 ==============================================    ===============================================
 
