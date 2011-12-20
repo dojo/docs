@@ -7,7 +7,7 @@ dojox.widget.Dialog
 :Project owner: Peter Higgins
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This is an extension to the :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` providing additional sizing options, animations, and styling.

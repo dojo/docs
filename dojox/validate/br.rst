@@ -8,7 +8,7 @@ dojox.validate.br
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The dojox.validate.br package is a package to contain helper functions for validating Brazilian specific formats, such as CNPJ and CPF numbers, numbers used to identify corporations and individuals.   Similar to the concept of the United States Social Security number for tax purposes.
@@ -56,7 +56,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter a CNPF like number and it will tell you if it is valid or not.</b>
 

@@ -8,7 +8,7 @@ dojox.mobile.View
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 View is a container widget that represents entire mobile device screen. One html page can have multiple Views but only one View is visible at a time.  The user can navigate through views with animated transition effects.
@@ -53,7 +53,7 @@ In this example, there are two Views, "view1" and "view2", and the user can move
     <h1 data-dojo-type="dojox.mobile.Heading" back="View 1" moveTo="view1">View 2</h1>
   </div>
 
-.. image:: View-anim.gif
+.. image :: View-anim.gif
 
 Programmatic example
 --------------------

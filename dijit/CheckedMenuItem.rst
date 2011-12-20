@@ -4,7 +4,7 @@
 dijit.CheckedMenuItem
 =====================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The CheckedMenuItem is a checkbox-like menu item for toggling on/off.

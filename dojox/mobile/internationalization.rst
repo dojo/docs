@@ -6,7 +6,7 @@ Internationalization (i18n)
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 There are a couple of approaches for internationalization of your dojox.mobile applications. From the performance perspective, the server-side approach is the best choice. However, you can of course choose a client-side approach with dojo.i18n. In some situations, you may want to use an optional feature dojox.mobile.i18n.
@@ -101,7 +101,7 @@ In fact, however, what you wrote are not English resource values, but resource k
 
 and set your browser's locale to Italian, then you will get the following result.
 
-.. image:: Heading-italian.png
+.. image :: Heading-italian.png
 
 Here, you don't need to programmatically handle the returned resource bundle array. dojox.mobile widgets automatically replace the resource keys to their corresponding resource values.
 

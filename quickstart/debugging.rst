@@ -4,7 +4,7 @@
 Debugging Tutorial
 ==================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dojo is very lean and speedy, and uses some very clever tricks to save memory and time. The downside: Dojo does not contain much error trapping, which would bloat and slow down the code. If your code is not behaving, some of the resulting errors can look mighty puzzling at first.
@@ -66,12 +66,12 @@ Without Firebug, this code may pop up an unhelpful dialog box (IE) or display no
 
 With Firebug the error is easier to spot. First, there's an indicator at the bottom right hand corner.
 
-.. image:: debugging1a.png
+.. image :: debugging1a.png
    :alt: Debugging with Firebug
 
 You click on the "1 Error" message and the Firebug console pops up:
 
-.. image:: debugging2.png
+.. image :: debugging2.png
    :alt: Firebug console
 
 Looking back at your code, you notice the capitalization on "Textbox" in the dojo.require is wrong. That's a common mistake, but easily fixed. It's also common to forget the dojo.require, or to misspell the class in the data-dojo-type attribute. In each case, Firebug will set you straight.
@@ -141,12 +141,12 @@ Clearly alert is just not powerful enough. In Dojo logging, you can associate me
 
 In the Firebug console, the messages will appear like this:
 
-.. image:: firebug_logging.png
+.. image :: firebug_logging.png
    :alt: Firebug logging
 
 In IE, they will appear like this:
 
-.. image:: firebug_ie_capture.png
+.. image :: firebug_ie_capture.png
    :alt: Firebug logging
 
 Another useful method, console.dir() dumps variable contents to the screen. While console.log works fine for strings and integers, console.dir prints more complex variables - objects, arrays, arrays of objects, or whatever. For example:
@@ -161,7 +161,7 @@ Another useful method, console.dir() dumps variable contents to the screen. Whil
 
 produces:
 
-.. image:: firebug_logging2.png
+.. image :: firebug_logging2.png
    :alt: Firebug logging
 
 So in our example above, we write:
@@ -199,7 +199,7 @@ That's a side effect of running dojo/event code. The breakpoints don't seem corr
 
 But just click the Console tab and now you can examine variables or execute just about any JavaScript you want. In this case, we look at the dojo.newWidth property, which has nothing in it. But "dojo" does and we examine it by console.dir(dojo). Basically all the logging features of method 1 are available to type here.
 
-.. image:: debugging3.png
+.. image :: debugging3.png
    :alt: Firebug console
 
 To Follow The dojo.require Trail, Use Dojo Locally
@@ -251,7 +251,7 @@ You can find out for sure by using a local copy of Dojo. CDN Dojo is very quiet 
 
 Yields the following on the console
 
-.. image:: debugging4.png
+.. image :: debugging4.png
    :alt: Firebug http requests
 
 You see every Dojo Core and Dijit Component loaded. Sure enough, dojo.colors is not in the list, so we add a dojo.require statement
@@ -267,7 +267,7 @@ Unfortunately, that doesn't fix the problem either. When styling errors occur, i
 
 So we click Inspect and point at the screen button
 
-.. image:: debugging5.png
+.. image :: debugging5.png
    :alt: Firebug DOM inspection
 
 The right-hand side of the console tells what styles and style rules are applied to this class. Crossed-off lines are styles that have been overridden. Very nice!
@@ -324,7 +324,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
 
 Running this code, you will see an error appear, but it's nowhere near the right location:
 
-.. image:: debugging6.png
+.. image :: debugging6.png
    :alt: Debugging without debugAtAllCosts
 
 But by simply setting the debugAtAllCosts flag to true:
@@ -337,7 +337,7 @@ But by simply setting the debugAtAllCosts flag to true:
 
 the displayed error location will now be correct:
 
-.. image:: debugging7.png
+.. image :: debugging7.png
    :alt: Debugging with debugAtAllCosts
 
 '''Important!''' you should always remove debugAtAllCosts from production code. It slows down the client unnecessarily. Rather than manually inserting and removing them, I like to delegate that job to a server side language like PHP:

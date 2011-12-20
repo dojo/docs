@@ -8,7 +8,7 @@ dojox.editor.plugins.LocalImage (Under Construction)
 :Project owner: Jared Jurkiewicz
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to insert not only online images but also images on your computer? This plug-in is for you.
@@ -199,14 +199,14 @@ Basic Usage
       dojo.require("dojox.editor.plugins.LocalImage");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/LocalImage.css";
       @import "{{baseUrl}}dojox/form/resources/FileUploader.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
     <div>

@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Exporter
 
 Exporter plugin provides functions to export the grid data into a given format.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -92,7 +92,7 @@ The following of this document first describes how to use the export functions o
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridContainer"></div>
 	<br />
@@ -101,7 +101,7 @@ The following of this document first describes how to use the export functions o
 	<br />
 	<textarea id="output"></textarea>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";

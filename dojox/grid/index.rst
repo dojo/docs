@@ -4,7 +4,7 @@
 dojox.grid
 ==========
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
@@ -15,19 +15,19 @@ Dojo Toolkit offers three different Grid widgets:
 
   A visual grid/table much like a spreadsheet.
 
-  .. image:: DataGrid.png
+  .. image :: DataGrid.png
 
 * :ref:`dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`
 
   An enhanced version of the base grid, which extends it in numerous useful ways. ``New in 1.4``
 
-  .. image:: EnhancedGrid.png
+  .. image :: EnhancedGrid.png
 
 * :ref:`dojox.grid.TreeGrid <dojox/grid/TreeGrid>`
 
   This grid offers support for collapsible rows and model-based (:ref:`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`) structure. ``New in 1.4``
 
-  .. image:: TreeGrid.png
+  .. image :: TreeGrid.png
 
 
 Old (deprecated) dojox.grid.Grid

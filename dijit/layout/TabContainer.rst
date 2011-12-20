@@ -9,7 +9,7 @@ dijit.layout.TabContainer
 :since: V?
 :jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.layout.TabContainer
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A TabContainer is a container that has multiple panes, but shows only one pane at a time.
@@ -64,7 +64,7 @@ Note that the tabs all have a fixed height.
 
   The HTML is very simple
 
-  .. html::
+  .. html ::
 
     <div style="width: 350px; height: 290px">
         <div id="tc1-prog"></div>
@@ -92,7 +92,7 @@ Here are some markup examples:
 
   The HTML is very simple
 
-  .. html::
+  .. html ::
 
     <div style="width: 350px; height: 300px">
         <div data-dojo-type="dijit.layout.TabContainer" style="width: 100%; height: 100%;">
@@ -129,7 +129,7 @@ The second tab is closable.
 
   The HTML is very simple
 
-  .. html::
+  .. html ::
     
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
     <div style="height: 105px;">
@@ -203,7 +203,7 @@ true (if programmatically created) or the attribute selected="true" (if declarat
 
   The HTML is very simple
 
-  .. html::
+  .. html ::
 
     <div style="width: 350px; height: 300px">
         <div id="tc1-prog"></div>
@@ -273,7 +273,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 
   You can, of course, attach the onClose function directly on a pane as well:
 
-  .. html::
+  .. html ::
     
     <div style="height: 100px;">
 

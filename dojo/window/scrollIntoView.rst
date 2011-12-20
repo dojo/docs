@@ -6,7 +6,7 @@ dojo.window.scrollIntoView
 
 :since: V1.5
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.

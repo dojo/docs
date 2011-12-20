@@ -7,7 +7,7 @@ dojo.withGlobal
 :Project owner: ?
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.withGlobal provides a mechanism by which a function can have its dojo.global and dojo.doc scope temporarily changed. This allows complete scope changes without affecting other items in the current dojo applications.

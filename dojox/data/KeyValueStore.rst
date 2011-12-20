@@ -6,7 +6,7 @@ dojox.data.KeyValueStore
 
 :since: V1.1
 
-.. contents::
+.. contents ::
     :depth: 3
 
 This is a dojo.data store implementation. The KeyValueStore is a store that takes content in a format similar to those used by property files, such as Java, and many other languages were there are unique keys mapping to some value for display. Think of it as an interface for reading property style files in dojo through the dojo.data interface.

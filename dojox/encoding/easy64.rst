@@ -7,7 +7,7 @@ dojox.encoding.easy64
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 TODO: short summary of the component/class/method

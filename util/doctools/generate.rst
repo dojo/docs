@@ -7,7 +7,7 @@ Generating API Documentation
 :Project owner: Neil Roberts
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Running the doctools parser to extract API documentation data

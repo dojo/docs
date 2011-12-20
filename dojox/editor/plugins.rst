@@ -7,7 +7,7 @@ dojox.editor.plugins
 :Project owner: Mike Wilcox, Jared Jurkiewicz
 :since: V1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The dojox.editor.plugins is a component is a holding place for additional features for the dijit.Editor that load via the dijit.Editor plugin infrastructure.  Some of the plugins are very stable while others may be considered less so.  Please refer to the dojox/editor/README for project status

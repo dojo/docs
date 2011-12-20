@@ -8,7 +8,7 @@ dojox.widget.rotator.Controller
 :Project owner: Chris Barber
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A controller that manipulates a :ref:`dojox.widget.Rotator <dojox/widget/Rotator>` or :ref:`dojox.widget.AutoRotator <dojox/widget/AutoRotator>`.
@@ -61,7 +61,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -120,7 +120,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myAutoRotator1" class="rotator"></div>
     <div id="myRotatorController"></div>
@@ -134,7 +134,7 @@ Declarative example
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .rotator{
@@ -169,7 +169,7 @@ Declarative example
         dojo.require("dojox.widget.rotator.Fade");
     </script>
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.crossFade', duration:2500">
         <div class="pane pane0">Pane 0</div>

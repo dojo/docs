@@ -7,7 +7,7 @@ dojo.date.locale.parse
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Converts a properly formatted string to a primitive Date object, using locale-specific settings.

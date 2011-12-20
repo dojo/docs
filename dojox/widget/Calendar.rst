@@ -7,7 +7,7 @@ dojox.widget.Calendar
 :Project owner: Shane O'Sullivan
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

@@ -8,7 +8,7 @@ dojox.widget.DataPresentation
 :Author: Dave Clark
 :since: V.1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Overview
@@ -371,7 +371,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
 
 fig 3.
 
-.. image:: dp_example_3a.png
+.. image :: dp_example_3a.png
 
 
 Properties

@@ -8,7 +8,7 @@ dijit._OnDijitClickMixin
 :Project owner: Bill Keese
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 
@@ -47,6 +47,6 @@ and it will have the same effect as clicking the span with the mouse:
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myButton">this will be replaced by the widget</div>

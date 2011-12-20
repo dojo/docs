@@ -7,7 +7,7 @@ dojox.image.Lightbox
 :Project owner: Peter Higgins
 :since: V1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The Lightbox is a nice way to show images centered on the screen. It works in a variety of ways: programmatic, from dojo.data, or inline. The Lightbox is currently labeled *experimental*, and may change to become a more consistent API.

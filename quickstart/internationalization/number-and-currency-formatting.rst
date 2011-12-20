@@ -7,7 +7,7 @@ Cultural conventions: Date, Number and Currency
 :Authors: Adam Peller
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Dates and Times

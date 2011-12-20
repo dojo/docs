@@ -7,7 +7,7 @@ dojo.dnd package
 :since: 0.9
 :Author: Eugene Lazutkin
 
-.. contents::
+.. contents ::
   :depth: 2
 
 Introduction
@@ -725,19 +725,19 @@ Low Vision
 
 In the current nightly build as of April 17, 2009, and for the 1.4 release the drag and drop icons have been updated to better support low vision and to not rely on color alone to distinguish between the copy/no copy and move/no move operations.
 
-.. image:: dndCopy.png
+.. image :: dndCopy.png
 
 If the copy operation can be performed the DnD icon is a green background with a plus.
 
-.. image:: dndNoCopy.png
+.. image :: dndNoCopy.png
 
 If the copy operation can not be performed, the DnD icon is a red background with an x.
 
-.. image:: dndMove.png
+.. image :: dndMove.png
 
 If the move operation can be performed the DnD icon is a green background with an arrow.
 
-.. image:: dndNoMove.png
+.. image :: dndNoMove.png
 
 If the move operation can not be performed the DnD icon is a red background with a dash.
 

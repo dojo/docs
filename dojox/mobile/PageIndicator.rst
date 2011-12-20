@@ -8,12 +8,12 @@ dojox.mobile.PageIndicator
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with :ref:`dojox.mobile.SwapView <dojox/mobile/SwapView>`. It is also internally used in :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`.
 
-.. image:: PageIndicator.png
+.. image :: PageIndicator.png
 
 The PageIndicator widget uses the dojo's pub/sub event system to communicate with the other widgets. It subscribes to the "/dojox/mobile/viewChanged" message, and refreshes the indicator status.
 
@@ -59,4 +59,4 @@ Declarative example
       <div data-dojo-type="dojox.mobile.PageIndicator" fixed="bottom"></div>
   </body>
 
-.. image:: PageIndicator-anim.png
+.. image :: PageIndicator-anim.png

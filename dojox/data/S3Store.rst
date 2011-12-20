@@ -8,7 +8,7 @@ dojox.data.S3Store
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.data.S3Store** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>` for connecting to Amazon S3 service <http://aws.amazon.com/s3/>.

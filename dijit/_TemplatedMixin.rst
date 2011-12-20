@@ -8,7 +8,7 @@ dijit._TemplatedMixin
 :Project owner: Bill Keese
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 
@@ -140,7 +140,7 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <span data-dojo-type="FancyCounter">press me</span>
 
@@ -186,7 +186,7 @@ For example:
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <button data-dojo-type="MyButton">press me</button>
 

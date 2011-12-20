@@ -7,7 +7,7 @@ dojo.string.trim
 :since: V1.2
 :Author: Eugene Lazutkin
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This function implements a frequently required functionality: it removes white-spaces from both ends of a string. This functionality is part of ECMAScript 5 standard and implemented by some browsers. In this case dojo.string.trim delegates to the native implementation. More information can be found here: `String.trim() at MDC <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim>`_.

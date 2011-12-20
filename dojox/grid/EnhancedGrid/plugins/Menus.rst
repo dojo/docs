@@ -8,7 +8,7 @@ dojox.grid.EnhancedGrid.plugins.Menu
 :Project owner: Evan Huang
 :since: V.1.6
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -78,7 +78,7 @@ HTML markup usage sample
         });
     </script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridDiv">
 		<div data-dojo-type="dijit.Menu" id="headerMenu" style="display: none;">
@@ -108,7 +108,7 @@ HTML markup usage sample
 	</div>
 
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
@@ -211,12 +211,12 @@ Javascript usage sample
         });
     </script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridDiv"></div>
 
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";

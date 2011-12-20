@@ -7,7 +7,7 @@ dojo.global
 :Project owner: ?--
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.global is an alias for the global scope.

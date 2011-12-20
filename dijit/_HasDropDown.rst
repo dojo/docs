@@ -8,7 +8,7 @@ dijit/_HasDropDown
 :Project owner: Bill Keese
 :since: 1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -48,7 +48,7 @@ Or, override the :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoad
 Optional node properties
 ========================
 
-.. note::
+.. note ::
    All of these properties can only be set *before* :ref:``Widget.buildRendering`` is called.
 
 _buttonNode

@@ -8,7 +8,7 @@ dojo.store.Observable
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo.store.Observable** is an object store wrapper that adds support for notification of data changes to query result sets. The query result sets returned from a Observable store will include a observe function that can be used to monitor for changes. This store follows the new :ref:`Dojo Object Store API <dojo/store>`. The observe function provides indication of the previous and new index values of changed objects to properly update result arrays.

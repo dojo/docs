@@ -8,7 +8,7 @@ dijit.form.NumberSpinner
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The NumberSpinner is similar to :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`, but makes integer entry easier when small adjustments are required.

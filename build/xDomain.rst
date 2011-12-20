@@ -7,7 +7,7 @@ Build System:  Cross-Domain (xDomain) Builds
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 `Content copied (pending modification) from main quickstart page:`

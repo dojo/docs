@@ -8,12 +8,12 @@ dojox.mobile.SpinWheelDatePicker
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 SpinWheelDatePicker  is a date picker widget. It is a subclass of dojox.mobile.SpinWheel. It has the year, month, and day slots.
 
-.. image:: SpinWheelDatePicker.png
+.. image :: SpinWheelDatePicker.png
 
 Usage
 =====

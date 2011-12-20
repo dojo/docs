@@ -6,7 +6,7 @@ dojo.isObject
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Checks if the parameter is an Object.

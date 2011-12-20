@@ -6,7 +6,7 @@ dojo._base.Deferred
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.Deferred** contains a function to manage communication between asynchronous threads (Callbacks).

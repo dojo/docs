@@ -8,7 +8,7 @@ dijit.layout.ContentPane
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A Content Pane is the most basic layout tile.

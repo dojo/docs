@@ -4,7 +4,7 @@
 dojo.getStyle
 =============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Accesses styles on a node.

@@ -7,7 +7,7 @@ dojox.collections
 :Project owner: Tom Trenka
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 It is intended for use by people who are looking for a little bit more functionality out of common collections, like ArrayLists or Dictionaries.

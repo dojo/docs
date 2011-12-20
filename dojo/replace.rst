@@ -7,7 +7,7 @@ dojo.replace
 :since: 1.4
 :Author: Eugene Lazutkin
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This function provides a light-weight foundation for substitution-based templating. It is a sane alternative to string concatenation technique, which is brittle and doesn't play nice with localization.
@@ -117,7 +117,7 @@ You can see this code in action:
 
 Minimalistic HTML for our example.
 
-.. html::
+.. html ::
 
     <p id="output"></p>
 
@@ -167,7 +167,7 @@ This code in action:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output"></p>
 
@@ -289,7 +289,7 @@ This code in action:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output"></p>
 
@@ -340,7 +340,7 @@ This code in action:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output"></p>
 
@@ -426,7 +426,7 @@ Take a look at this code in action:
 
   Minimalistic CSS for our example.
 
-  .. css::
+  .. css ::
 
     <style>
       .hilite {font-weight: bold; color: green;}
@@ -434,7 +434,7 @@ Take a look at this code in action:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output"></p>
 
@@ -550,7 +550,7 @@ You can check the result here:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output"></p>
 
@@ -714,7 +714,7 @@ You can check the result here:
 
   Minimalistic HTML for our example.
 
-  .. html::
+  .. html ::
 
     <p id="output1"></p>
     <p id="output2"></p>

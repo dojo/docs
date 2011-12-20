@@ -4,7 +4,7 @@
 **Fetching multiple items and values**
 ======================================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Working with Multiple Items

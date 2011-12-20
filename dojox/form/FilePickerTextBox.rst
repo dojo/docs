@@ -7,7 +7,7 @@ dojox.form.FilePickerTextBox
 :Project owner: Nathan Toone
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown

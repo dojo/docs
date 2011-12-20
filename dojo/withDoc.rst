@@ -6,7 +6,7 @@ dojo.withDoc
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.withDoc provides a mechanism by which a function can have the document root temporarily changed for the execution of the function.  This allows document scope changes without affecting other items in the current dojo application.

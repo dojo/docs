@@ -6,7 +6,7 @@ dojo._base.NodeList
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.NodeList** contains syntactic sugar for chaining, common iteration operations, animation, and node manipulation.

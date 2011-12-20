@@ -7,7 +7,7 @@ dojo.removeClass
 :Project owner: Eugene Lazutkin
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Removes a class or a list of classes from a DOM node.
@@ -83,7 +83,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -131,7 +131,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -180,7 +180,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -229,7 +229,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -278,7 +278,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">

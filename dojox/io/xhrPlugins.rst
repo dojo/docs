@@ -7,7 +7,7 @@ dojox.io.xhrPlugins
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.xhrPlugins provides a registry of alternate transports that can be used to provide dojo.xhr functionality with cross-site requests.

@@ -8,7 +8,7 @@ dojox.widget.Rating
 :Developers: Wolfram Kriesing
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This widget allows users to rate items.

@@ -7,7 +7,7 @@ dojox.layout.TableContainer
 :Project owner: Shane O'Sullivan
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The TableContainer is a simple layout widget that displays the contained child widgets in a Table element.
@@ -88,7 +88,7 @@ Simple Example, one column and no styling
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:1" id="tc1">
       <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Michael"></div>
@@ -117,7 +117,7 @@ Two Columns, Label Styling
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label cells.
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'justLabels'" id="tc1">
       <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
@@ -128,7 +128,7 @@ Two Columns, Label Styling
 
   Apply a custom class that colors the labels.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .justLabels-labelCell {
@@ -158,7 +158,7 @@ Two Columns, Label and Value cell Styling
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues'" id="tc1">
       <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
@@ -169,7 +169,7 @@ Two Columns, Label and Value cell Styling
 
   Apply a custom class that styles both the label and value cells.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .labelsAndValues-labelCell {
@@ -205,7 +205,7 @@ Using Colspan
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note that the first three widgets are given a 'colspan' attribute, which makes them take up multiple columns. To accommodate these extra columns, the TableContainer is given the attribute cols='4'. This is useful when you have a widget that requires more room. Since the CheckBox widgets along the bottom have no 'colspan' attribute, they each occupy a single column
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:4, customClass:'labelsAndValues'" id="tc1">
       <div data-dojo-type="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
@@ -221,7 +221,7 @@ Using Colspan
 
   Apply a custom class that styles both the label and value cells.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .labelsAndValues-labelCell {
@@ -283,13 +283,13 @@ Programmatic example
 
   No HTML is required here, as it is a purely programmatic example
 
-  .. html::
+  .. html ::
 
     <div id="putWidgetHere" ></div>
 
   Apply a custom class that styles both the label and value cells.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .labelsAndValues-labelCell {
@@ -323,7 +323,7 @@ Setting the Label Width
 
   Declare the required HTML. Note the 'labelWidth' attribute on the TableContainer, which specifies the width of the labels in pixels.
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues', labelWidth:10" id="tc1">
       <div data-dojo-type="dijit.form.TextBox" title="1" value="United States"></div>
@@ -335,7 +335,7 @@ Setting the Label Width
 
   Apply a custom class that styles both the label and value cells.
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       .labelsAndValues-labelCell {

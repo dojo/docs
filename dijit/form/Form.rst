@@ -8,7 +8,7 @@ dijit.form.Form
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dijit.form.Form** is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.

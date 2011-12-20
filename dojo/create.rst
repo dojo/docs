@@ -6,7 +6,7 @@ dojo.create
 
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A convenient DOM creation, manipulation and placement utility shorthand.

@@ -8,7 +8,7 @@ dojox.data.JsonRestStore
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.data.JsonRestStore** is a lightweight datastore implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities.

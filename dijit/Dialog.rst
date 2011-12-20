@@ -7,7 +7,7 @@ dijit.Dialog
 :since: V0.1.0
 :jsDoc: http://dojotoolkit.org/api/dijit.Dialog
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

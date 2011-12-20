@@ -8,7 +8,7 @@ dojox.mobile.Button
 :Developers: Yoshiroh Kamiyama, Doug Hays
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Button is a very simple button widget.  When pressed, it generates an onClick event and changes CSS classes temporarily to emulate a native HTML BUTTON element press-and-release.
@@ -41,7 +41,7 @@ Default Button
 
   <button data-dojo-type="dojox.mobile.Button">Default Button</button>
 
-.. image:: DefaultMobileButton.png
+.. image :: DefaultMobileButton.png
 
 Custom Button
 -------------
@@ -66,7 +66,7 @@ You can define your own style for Button and specify it with the class and style
 
   <button data-dojo-type="dojox.mobile.Button" class="redButton" style="width:120px">Custom Button</button>
 
-.. image:: Button-example2.png
+.. image :: Button-example2.png
 
 onClick handler in HTML5 format
 -------------------------------
@@ -75,4 +75,4 @@ onClick handler in HTML5 format
 
   <button data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked");return true; }'></button>
 
-.. image:: HTML5MobileButton.png
+.. image :: HTML5MobileButton.png

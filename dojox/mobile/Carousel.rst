@@ -8,12 +8,12 @@ dojox.mobile.Carousel
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The carousel widget manages a list of images that can be displayed horizontally, and allows the user to scroll through the list and select a single item.
 
-.. image:: Carousel.png
+.. image :: Carousel.png
 
 Usage
 =====
@@ -61,4 +61,4 @@ Declarative example
 
   <div id="carousel1" data-dojo-type="dojox.mobile.Carousel" height="150px" navButton="true" store="store1" numVisible="2" title="Category"></div>
 
-.. image:: Carousel-desc.png
+.. image :: Carousel-desc.png

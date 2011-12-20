@@ -6,7 +6,7 @@ dojo.xhr
 
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo.xhr** offers AJAX I/O transports and utility methods.

@@ -7,7 +7,7 @@ dojox.data.AtomReadStore
 :Author: Shane O'Sullivan
 :since: V1.2
 
-.. contents::
+.. contents ::
   :depth: 3
 
 

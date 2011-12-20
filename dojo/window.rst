@@ -6,7 +6,7 @@ dojo.window
 
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo.window** contains functions related to the viewport.

@@ -4,7 +4,7 @@
 dojo.setMarginBox
 =================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Sets the size of the node's margin box and placement (left/top), irrespective of box model. Think of it as a passthrough to setBox that handles box-model vagaries for you.

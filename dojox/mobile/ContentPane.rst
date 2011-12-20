@@ -8,7 +8,7 @@ dojox.mobile.ContentPane
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ContentPane is a very simple and lightweight content pane to embed an HTML fragment. It can basically be regarded as a <div> element, but has ability to embed an HTML fragment and run the parser. The onLoad() handler is called when parsing is done and the content is ready.
@@ -49,4 +49,4 @@ The content of fragment1.html is as follows:
     HTML fragment example
   </div>
 
-.. image:: ContentPane.png
+.. image :: ContentPane.png

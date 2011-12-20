@@ -8,12 +8,12 @@ dojox.mobile.SpinWheel
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 SpinWheel is a value picker component. It is a sectioned wheel that can be used to pick up some values from the wheel slots by spinning them.
 
-.. image:: SpinWheel-custom.png
+.. image :: SpinWheel-custom.png
 
 Usage
 =====

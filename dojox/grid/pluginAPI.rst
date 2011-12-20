@@ -7,7 +7,7 @@ dojox Grid Plugin API
 :Project owner: Nathan Toone, Bryan Forbes
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

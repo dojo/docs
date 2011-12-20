@@ -4,7 +4,7 @@
 dojox.widget.SortList
 =====================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Converts an unordered-list into a sortable scrollable pane. 

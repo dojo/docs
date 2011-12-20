@@ -6,7 +6,7 @@ dojo/_base/html
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

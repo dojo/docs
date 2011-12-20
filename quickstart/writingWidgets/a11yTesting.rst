@@ -7,7 +7,7 @@ Testing Widgets for Accessibility
 :Author: Becky Gibson
 
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Currently the Windows operating system provides the most resources and functionality for testing for accessibility in more than one browser. Also, the majority of assistive technologies run under the Windows operating system. Test with both Firefox and Internet Explorer on at least the Windows operating system to assure at least a minimal level of accessibility.
@@ -47,7 +47,7 @@ Run Inspect Objects and test the widget for focus and role and state information
 
 Below is a picture of the diijt Tree with Inspect Objects running and the Show Information Tooltip and Turn On Highlight Focus options set. With focus on an expanded tree item the MS Inspect focus rectangle and role and state information is displayed within the tooltip. The role is “outline item” and the state is “focused, expanded, focusable”. This verifies that the role of treeitem (interpreted as outline item by MS Inspect) has been properly set in the dijit tree item code. The state information verifies that the element is focused and the expanded state is set. With focus on an collapsed tree item node the state would display, “focused, collapsed, focusable”, since the expanded property is set to false. Note that when the state of an element changes, focus must be removed from the element and then returned in order for Inspect Objects to update the information. Or, rather than change focus use the Inspect Objects Action Refresh command to update the information about the currently focused object.
 
-.. image:: treeInspect.jpg
+.. image :: treeInspect.jpg
 
 Testing with Accessibility Probe (AccProbe)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,7 +67,7 @@ When testing fully keyboard accessible Dojo widgets the screen readers must be i
 
 If the role and state information have been applied correctly the screen reader will hear information about the role and stated of widget elements as well as information about child objects. The image below is a simple tree control with three main nodes with titles Node1 , Node 2, and Node 3. Node 1 has no children. Node 2 is expanded and has two child nodes titled Node 2.1 and Node 2.2. Node 3 has children but is not expanded. Here is a brief example of what is spoken by Window-Eyes with focus on the Node 2 tree item within the tree control displayed in the image below, “Node 2 expanded two items, 2 of 3.”
 
-.. image:: treenode.jpg
+.. image :: treenode.jpg
 
 Test for Low Vision Support
 ---------------------------

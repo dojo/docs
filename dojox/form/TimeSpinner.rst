@@ -7,7 +7,7 @@ dojox.form.TimeSpinner
 :Project owner: ?--
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This widget is the same as dijit.form.NumberSpinner, but for the time component of a date object instead.

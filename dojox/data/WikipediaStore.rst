@@ -6,7 +6,7 @@ dojox.data.WikipediaStore
 
 :since: V1.2
  
-.. contents::
+.. contents ::
   :depth: 3
 
 The Wikipedia store is a datastore that extends :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>`.  Its purpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcard searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox.

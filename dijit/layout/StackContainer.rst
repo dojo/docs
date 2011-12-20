@@ -6,7 +6,7 @@ dijit.layout.StackContainer
 
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one).

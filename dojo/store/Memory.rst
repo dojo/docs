@@ -8,7 +8,7 @@ dojo.store.Memory
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo.store.Memory** is a object store wrapper for JavaScript/JSON available directly with an array. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.

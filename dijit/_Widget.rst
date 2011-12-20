@@ -4,7 +4,7 @@
 dijit._Widget
 =============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

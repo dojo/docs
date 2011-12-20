@@ -7,7 +7,7 @@ Specifying a Locale
 :Authors: Adam Peller
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 What is a Locale?

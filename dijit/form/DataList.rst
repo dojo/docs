@@ -8,7 +8,7 @@ dijit.form.DataList
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 DataList is a read-only data store that processes inline OPTION tags as data items.
@@ -37,4 +37,4 @@ HTML5 markup
         alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
   </script>
 
-.. image:: DataList.png
+.. image :: DataList.png

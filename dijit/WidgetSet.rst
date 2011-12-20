@@ -6,7 +6,7 @@ dijit.WidgetSet
 
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A dijit.WidgetSet is a collection of Dijit widgets.

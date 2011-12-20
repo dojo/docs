@@ -4,7 +4,7 @@
 dojo.query
 ==========
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo.query()** returns a list of DOM nodes based on a CSS selector.

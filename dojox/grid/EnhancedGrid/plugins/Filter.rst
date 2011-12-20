@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Filter
 
 Filter plugin provides row filtering functionality for grid.
 
-.. contents::
+.. contents ::
 	:depth: 2
 
 Introduction
@@ -206,12 +206,12 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
     <div id="gridContainer" style="width: 100%; height: 400px;"></div>
 	<button onclick='showFilterBar()'>Show Filter Bar</button>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
@@ -352,27 +352,27 @@ The UI of this plugin consists of 3 components: a filter bar within the grid, a 
 Filter Bar
 ----------
 
-.. image:: filterbar-1.png
+.. image :: filterbar-1.png
 
 Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column".
 
-.. image:: filterbar-definefilterbtn-1.png
+.. image :: filterbar-definefilterbtn-1.png
 
 Clicking directly on the filter bar will also show the Filter Definition Dialog, but setting the value of the "Column" field to the column that the mouse is over.
 
-.. image:: filterbar-somecolumn-1.png
+.. image :: filterbar-somecolumn-1.png
 
 Hovering over the filterbar for 300 msec will trigger the Filter Status Tooltip.
 
-.. image:: filterbar-showtooltip-1.png
+.. image :: filterbar-showtooltip-1.png
 
 When there's a filter defined, the clear filter button will be shown, and the status tip will look like this:
 
-.. image:: filterbar-clearbtn-1.png
+.. image :: filterbar-clearbtn-1.png
 
 If ``closeFilterbarButton`` is true, there will be a close-filterbar button at the right end of the filter bar.
 
-.. image:: filterbar-closebtn-1.png
+.. image :: filterbar-closebtn-1.png
 
 When the filter bar is hidden, there is a function to bring it out: ``showFilterBar``
 
@@ -399,7 +399,7 @@ isFilterBarShown():
 Filter Definition Dialog
 ------------------------
 
-.. image:: defdialog.png
+.. image :: defdialog.png
 
 The Filter Definition Dialog is designed to define filter conditions with either of the following structures:
 
@@ -407,7 +407,7 @@ The Filter Definition Dialog is designed to define filter conditions with either
 
 2. [rule 1 for column A] or [rule 2 for column B] or [rule 3 for column C]
 
-.. image:: defdialog-rulerelation.png
+.. image :: defdialog-rulerelation.png
 
 Use the "Add Rule" button to add a rule. If there are already 3 rules, this button will be disabled.
 Every rule is regarded as a simple sentence with the following structure:
@@ -420,25 +420,25 @@ Different data types have different sets of conditions and different kinds of fo
 
 The value field for Number type only accepts number.
 
-.. image:: defdialog-numbervaluebox-1.png
+.. image :: defdialog-numbervaluebox-1.png
 
 The value field for String type can have auto-complete capability (if set autoComplete in the grid structure).
 
-.. image:: defdialog-stringvaluebox.png
+.. image :: defdialog-stringvaluebox.png
 
 DateTextBox and TimeTextBox are used for Date and Time types, respectively.
 
-.. image:: defdialog-timevaluebox.png
+.. image :: defdialog-timevaluebox.png
 
 And the ``range`` condition for ``date`` and ``time`` types represents a closed range.
 
-.. image:: defdialog-rangevaluebox.png
+.. image :: defdialog-rangevaluebox.png
 
 
 Filter Status Tooltip
 ---------------------
 
-.. image:: statustooltip-multirule.png
+.. image :: statustooltip-multirule.png
 
 When a filter exists, the Filter Status Tooltip shows every rule of the current filter. If there are multiple rules, you can delete some of them by clicking the red 'X' at the right side of every rule.
 
@@ -537,7 +537,7 @@ The Filter Definition
 
 The Filter plugin will create a JSON object for the defined filter with the following recursive structure:
 
-.. image:: serverfilter-datastruct.png
+.. image :: serverfilter-datastruct.png
 
 This structure represents an expression, which consists of operators and operands (data). The operands can further contain expressions, that is, deeper level of operators and operands.
 

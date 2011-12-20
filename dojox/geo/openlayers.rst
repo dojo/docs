@@ -8,7 +8,7 @@ dojox.geo.openlayers
 :Author: Marc Durocher
 :since: V.1.7
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Overview

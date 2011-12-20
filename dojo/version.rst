@@ -6,7 +6,7 @@ dojo.version
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An object describing the current version of dojo.js
@@ -54,6 +54,6 @@ The `revision` member refers to the SVN revision used to create the version. You
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div class="info"></div>

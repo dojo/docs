@@ -8,7 +8,7 @@ dijit._editor.plugins.ToggleDir
 :Developers: Bill Keese, Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Not all documents in the world are read from Left-To-Right.
@@ -77,7 +77,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Toggle the RTL button and see the content swap back and forth</b>
     <br>

@@ -8,7 +8,7 @@ Functions used Everywhere
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase. These are dojo-fundamentals, and should be memorized if possible.

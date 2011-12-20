@@ -8,7 +8,7 @@ dijit._editor.plugins.TextColor
 :Developers: Bill Keese, Jared Jurkiewicz
 :since: V1.1
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to change the color of the font,
@@ -78,7 +78,7 @@ Basic Usage: foreColor (Text Color)
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the TextColor button to select a new color for it.</b>
     <br>
@@ -123,7 +123,7 @@ Basic Usage: hiliteColor (Text Background Color)
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the Text Background Color button to select a new background color for it.</b>
     <br>
@@ -168,7 +168,7 @@ Basic Usage: Both foreground and background color buttons together
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text and select it, or select existing text, then change its colors via the text color and text background color buttons.</b>
     <br>

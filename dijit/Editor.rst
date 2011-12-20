@@ -8,7 +8,7 @@ dijit.Editor
 :Developers: Liu Cougar, Bill Keese, Douglas Hays, Becky Gibson, Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dijit's Rich Text editor, dijit.Editor, is a text box on steroids, designed to look and work like a word processor.

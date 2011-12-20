@@ -6,7 +6,7 @@ dojox.encoding.digests
 
 :Author: Tom Trenka
 
-.. contents::
+.. contents ::
   :depth: 2
 
 DojoX Encoding includes a set of *hashing* algorithms, also known as digests, to aid with common hashing tasks

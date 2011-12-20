@@ -8,7 +8,7 @@ dojox.lang.typed
 :Project owner: Kris Zyp
 :since: V1.3
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.lang.typed** provides type checking on JavaScript classes for properties and methods.

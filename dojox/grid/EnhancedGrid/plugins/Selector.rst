@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Selector
 
 Selector plugin provides extended selection for columns, rows and cells.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -107,7 +107,7 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridContainer"></div>
 	<table class="cfgtable" border="1">
@@ -141,7 +141,7 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 		</tbody>
 	</table>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
@@ -243,17 +243,17 @@ Here's some demos for selecting operations:
 
 Swipe range selection using mouse:
 
-.. image:: selector-row-swiperangemouse-1.gif
+.. image :: selector-row-swiperangemouse-1.gif
 
-.. image:: selector-cell-swiperangemouse-1.gif
+.. image :: selector-cell-swiperangemouse-1.gif
 
 Extend selection using keyboard:
 
-.. image:: selector-col-swiperangekey-1.gif
+.. image :: selector-col-swiperangekey-1.gif
 
 Hole CTRL to modify current selection:
 
-.. image:: selector-cell-deselectrangemouse-1.gif
+.. image :: selector-cell-deselectrangemouse-1.gif
 
 
 Events

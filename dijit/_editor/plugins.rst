@@ -7,7 +7,7 @@ dijit.editor.plugins
 :Project owner: Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Dijit.Editor.plugins component is a holding place for additional features for dijit.Editor that load via dijit.Editor plugin infrastructure.

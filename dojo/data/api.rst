@@ -4,7 +4,7 @@
 dojo.data API
 =============
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

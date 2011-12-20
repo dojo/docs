@@ -6,7 +6,7 @@ Dojo 1.8 Release Notes
 
 (documentation in progress)
 
-.. contents::
+.. contents ::
    :depth: 3
 
 

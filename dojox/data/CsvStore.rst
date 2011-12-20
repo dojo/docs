@@ -7,7 +7,7 @@ dojox.data.CsvStore
 :Author: Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 CsvStore is a simple read-only store provided by Dojo and contained in the DojoX project. CsvStore is a read interface that works with `CSV <http://en.wikipedia.org/wiki/Comma-separated_values>`_ formatted data files. The CSV file format is commonly known to folks who work regularly with spread sheet data. Like ItemFileReadStore, CsvStore reads the contents from an http endpoint or a JavaScript Data object that contains CSV formatted data. The following is an example of a CSV data source:

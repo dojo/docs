@@ -8,12 +8,12 @@ dojox.mobile.ProgressIndicator
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ProgressIndicator is a round spinning graphical representation that indicates the current task is on-going.
 
-.. image:: ProgressIndicator.png
+.. image :: ProgressIndicator.png
 
 The spinning object is NOT an animated gif, but a collection of div elements. Non-CSS3 browsers do not have ability to rotate dom nodes. In that case, the indicator becomes a rectangle shape, not a round shape.
 

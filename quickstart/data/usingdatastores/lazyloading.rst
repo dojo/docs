@@ -4,7 +4,7 @@
 Hierarchical data and access through dojo.data
 ==============================================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Hierarchical data

@@ -7,7 +7,7 @@ dojo.NodeList.removeAttr
 :since: V1.4
 :Removed: in V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Removes an attribute from a list f DOM nodes.

@@ -7,7 +7,7 @@ dojox.atom.io.model.Entry
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents a Entry tag in an ATOM feed, the core container object of ATOM.

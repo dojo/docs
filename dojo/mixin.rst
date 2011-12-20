@@ -6,7 +6,7 @@ dojo.mixin
 
 :since: 0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.mixin is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. Dojo mixin is very similar to :ref:`dojo.extend <dojo/extend>` but only works on objects, whereas extend explicitly extends an object.prototype. Merging two objects

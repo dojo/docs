@@ -8,7 +8,7 @@ dojox.secure.sandbox
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Creates a secure sandbox from which scripts and HTML can be loaded that will only be able to access the provided element and it's descendants, the rest of the DOM and JS environment will not be accessible to the sandboxed scripts and HTML.

@@ -7,7 +7,7 @@ Dojo Build System (Pre 1.7)
 :Authors: James Burke, Peter Higgins, Scott Jenkins, Alex Russell, Josh Trutwin, Kris Zyp
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 3
 
 **Caution** This document refers to the build system available prior to version 1.7.

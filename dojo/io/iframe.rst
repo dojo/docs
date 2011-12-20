@@ -6,7 +6,7 @@ dojo.io.iframe
 
 :since: V0.9
 
-.. contents::
+.. contents ::
   :depth: 2
 
 dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload files).

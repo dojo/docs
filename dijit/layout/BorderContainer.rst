@@ -8,7 +8,7 @@ dijit.layout.BorderContainer
 :Developers: ?-
 :since: V.2
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This widget is a container partitioned into up to five regions:
@@ -92,7 +92,7 @@ Declarative example
 
   The markup has to look as follows
   
-  .. html::
+  .. html ::
     
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi</div>
@@ -101,7 +101,7 @@ Declarative example
   
   A simple set of CSS rules
   
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -136,7 +136,7 @@ This example uses layoutPriority to include two left panes in one BorderContaine
       dojo.require("dijit.layout.BorderContainer");
     </script>
   
-  .. html::
+  .. html ::
     
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="layoutPriorityBorderContainer">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:1" style="width: 100px;">Left #1</div>
@@ -144,7 +144,7 @@ This example uses layoutPriority to include two left panes in one BorderContaine
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
   
-  .. css::
+  .. css ::
  
     <style type="text/css">
       html, body {
@@ -185,7 +185,7 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   The markup has to look as follows: Note the tabStrip attribute on the TabContainer.
    
-  .. html::
+  .. html ::
     
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true, liveSplitters:false" id="borderContainerTwo">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top', splitter:false">
@@ -216,7 +216,7 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   A few simple CSS rules
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
       html, body {
@@ -272,7 +272,7 @@ after it has been added to the DOM, so that its contained BorderContainer can la
 
   The markup has to look as follows
   
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
       <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
@@ -302,7 +302,7 @@ after it has been added to the DOM, so that its contained BorderContainer can la
 
   A few simple css rules
   
-  .. css::
+  .. css ::
      
 
     <style type="text/css">

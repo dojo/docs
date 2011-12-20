@@ -8,7 +8,7 @@ dijit.form.TextBox
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 TextBox is a basic <input type="text">-style form control.

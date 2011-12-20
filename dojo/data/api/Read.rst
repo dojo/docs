@@ -4,7 +4,7 @@
 dojo.data Read API
 ==================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:

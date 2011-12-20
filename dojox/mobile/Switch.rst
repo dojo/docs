@@ -8,12 +8,12 @@ dojox.mobile.Switch
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Switch is a toggle switch with a sliding knob. You can either tap or slide the knob to toggle the switch. The onStateChanged handler is called when the switch is manipulated.
 
-.. image:: Switch.png
+.. image :: Switch.png
 
 Constructor Parameters
 ======================
@@ -40,7 +40,7 @@ Declarative example 1
 
   <div id="sw" data-dojo-type="dojox.mobile.Switch" value="off"></div>
 
-.. image:: Switch-example1.png
+.. image :: Switch-example1.png
 
 Declarative example 2
 ---------------------
@@ -49,7 +49,7 @@ Declarative example 2
 
   <div data-dojo-type="dojox.mobile.Switch" value="on" leftLabel="Start" rightLabel="Stop"></div>
 
-.. image:: Switch-example2.png
+.. image :: Switch-example2.png
 
 Round Shape 1
 -------------
@@ -58,7 +58,7 @@ Round Shape 1
 
   <div class="mblSwRoundShape1" data-dojo-type="dojox.mobile.Switch"></div>
 
-.. image:: Switch-RoundShape1.png
+.. image :: Switch-RoundShape1.png
 
 Round Shape 2
 -------------
@@ -67,7 +67,7 @@ Round Shape 2
 
   <div class="mblSwRoundShape2" data-dojo-type="dojox.mobile.Switch"></div>
 
-.. image:: Switch-RoundShape2.png
+.. image :: Switch-RoundShape2.png
 
 Arc Shape 1
 -----------
@@ -76,7 +76,7 @@ Arc Shape 1
 
   <div class="mblSwArcShape1" data-dojo-type="dojox.mobile.Switch"></div>
 
-.. image:: Switch-ArcShape1.png
+.. image :: Switch-ArcShape1.png
 
 Arc Shape 2
 -----------
@@ -85,7 +85,7 @@ Arc Shape 2
 
   <div class="mblSwArcShape2" data-dojo-type="dojox.mobile.Switch"></div>
 
-.. image:: Switch-ArcShape2.png
+.. image :: Switch-ArcShape2.png
 
 Custom Color
 ------------
@@ -107,7 +107,7 @@ Custom Color
   ...
   <div class="mblSwRoundShape1 color1" data-dojo-type="dojox.mobile.Switch"></div>
 
-.. image:: Switch-CustomColor.png
+.. image :: Switch-CustomColor.png
 
 Listening to onStateChanged
 ---------------------------

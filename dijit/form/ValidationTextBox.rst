@@ -8,7 +8,7 @@ dijit.form.ValidationTextBox
 :Project owners: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

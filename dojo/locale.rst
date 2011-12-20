@@ -7,7 +7,7 @@ dojo.locale
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A string containing the current locale as defined by Dojo.

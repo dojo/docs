@@ -8,7 +8,7 @@ dijit._editor.plugins.FullScreen
 :Developers: Jared Jurkiewiczs
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever been on a website where you were able to edit some document to post, for example a blog site,
@@ -142,7 +142,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
     <br>
@@ -190,7 +190,7 @@ Setting the zIndex
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b style="position: absolute; top: 0px; left: 0px; z-index: 700;">Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode.  Without the zIndex setting, this div would overlay the editor.</b>
     <br>

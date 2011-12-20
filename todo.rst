@@ -4,7 +4,7 @@
 Docu Wiki ToDo
 ==============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Starting with V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation.

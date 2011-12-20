@@ -8,7 +8,7 @@ dojox.editor.plugins.AutoUrlLink (Under Construction)
 :Project owner: Jared Jurkiewicz
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to turn the URL you entered in the document into a hyperlink automatically? This plug-in is for you.
@@ -84,7 +84,7 @@ Basic Usage
       dojo.require("dojox.editor.plugins.AutoUrlLink");
      </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
     <div>

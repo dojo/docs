@@ -4,7 +4,7 @@
 dojo.NodeList-data
 ==================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 :author: Peter Higgins

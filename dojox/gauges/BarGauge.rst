@@ -7,7 +7,7 @@ dojox.gauges.BarGauge
 :Project owner:
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A horizontal bar gauge with a variety of indicators, used to display numerical data.

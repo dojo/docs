@@ -8,7 +8,7 @@ dojox.editor.plugins.NormalizeIndentOutdent
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to pull your hair out because the way browsers handle the native indent and outdent commands is inconsistent and in some cases downright wrong?  If so, then this plugin may help you!  This plugin attempts to control how indenting and outdenting of content is handled and do it consistently across all browsers.  It uses margin-left styling to handle indenting of block nodes, it will wrap and indent body-level text, and it will indent and outdent lists correctly.  It even attempts to fix malformed lists.
@@ -95,7 +95,7 @@ Basic Usage
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
@@ -143,7 +143,7 @@ Configured indent to be ems
       }
     </script>
 
-  .. html::
+  .. html ::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>

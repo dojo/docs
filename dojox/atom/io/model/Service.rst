@@ -7,7 +7,7 @@ dojox.atom.io.model.Service
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An Atom service document describes the services that a server implementing the Atom Publishing Protocol offers. This object represents this type of document.

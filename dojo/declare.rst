@@ -6,7 +6,7 @@ dojo.declare (dojo/_base/declare)
 
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation see works of `Douglas Crockford <http://javascript.crockford.com/>`_:

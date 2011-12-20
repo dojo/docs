@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.DnD
 
 DnD plugin supports drag-and-drop of grid rows/column/cells.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -151,7 +151,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
 	<div class="myblock">
 		<h3>Grid 1</h3>
@@ -230,7 +230,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		</table>
 	</div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
@@ -371,15 +371,15 @@ If enabled, selected rows/columns/cells can be dragged within grid.
 
 Dragging Columns
 
-.. image:: dnd-within-cols-1.gif
+.. image :: dnd-within-cols-1.gif
 
 Dragging Rows
 
-.. image:: dnd-within-rows-1.gif
+.. image :: dnd-within-rows-1.gif
 
 Dragging Cells
 
-.. image:: dnd-within-cells-1.gif
+.. image :: dnd-within-cells-1.gif
 
 
 
@@ -391,27 +391,27 @@ Note: Dragging columns across grids is not supported.
 
 Moving rows across grids
 
-.. image:: dnd-togrid-rows-1.gif
+.. image :: dnd-togrid-rows-1.gif
 
 Copy rows across grids
 
-.. image:: dnd-togrid-rows-copy-1.gif
+.. image :: dnd-togrid-rows-copy-1.gif
 
 Moving cells across grids
 
-.. image:: dnd-togrid-cells-1.gif
+.. image :: dnd-togrid-cells-1.gif
 
 Copy cells across grids
 
-.. image:: dnd-togrid-cells-copy-1.gif
+.. image :: dnd-togrid-cells-copy-1.gif
 
 If selected cells do not form a rectangle, they can not be dragged:
 
-.. image:: dnd-cannotdndshape-1.png
+.. image :: dnd-cannotdndshape-1.png
 
 Because the grid lazy loads store data, and extended selection is supported, it is possible to select rows or cells that are not loaded to the client side yet. If this situation occurs, it's not allowed to "drop" these unloaded objects to another grid:
 
-.. image:: dnd-unloadedrows-1.gif
+.. image :: dnd-unloadedrows-1.gif
 
 DnD from Grid to Other Widgets
 ------------------------------
@@ -505,7 +505,7 @@ The JavaScript code is:
 
 And here is the effect:
 
-.. image:: dnd-tootherwidget-1.gif
+.. image :: dnd-tootherwidget-1.gif
 
 Public Methods
 --------------

@@ -6,7 +6,7 @@ dojo.windowUnloaded
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Signal fired by impending window destruction. Favor using :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>` instead of this method directly.

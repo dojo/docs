@@ -4,7 +4,7 @@
 dojo.setProp
 =============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Sets a property on an HTML element.

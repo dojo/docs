@@ -7,7 +7,7 @@ dojox.form.FileInput
 :Project owner: Peter Higgins
 :Since: 1.3.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The FileInput class provides a foundation for a series of FileInput widgets: FileInput, FileInputAuto and FileInputBlind.

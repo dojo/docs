@@ -7,7 +7,7 @@ DOM Utilities
 :Project owner: Peter Higgins
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

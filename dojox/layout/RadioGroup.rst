@@ -7,7 +7,7 @@ dojox.layout.RadioGroup
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.RadioGroup is a variety of :ref:`StackContainer <dijit/layout/StackContainer>` enhancements providing animated transitions.

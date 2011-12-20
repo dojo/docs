@@ -8,7 +8,7 @@ dojo.store.Cache
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo.store.Cache** is a object store wrapper for caching data from one store in another store. This store follows the :ref:`Dojo Object Store API <dojo/store>`.

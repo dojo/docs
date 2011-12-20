@@ -8,12 +8,12 @@ dojox.mobile.SpinWheelTimePicker
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 SpinWheelTimePicker  is a time picker widget. It is a subclass of dojox.mobile.SpinWheel. It has the hour and minute slots.
 
-.. image:: SpinWheelTimePicker.png
+.. image :: SpinWheelTimePicker.png
 
 Usage
 =====

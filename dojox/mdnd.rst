@@ -7,7 +7,7 @@ dojox.mdnd
 :Project owner: Erwan Morvillez, Jean-Jacques Patard, Jeff Cunat
 :since: V1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Experimental coordinates based moveable drag and drop. Use stable dojo.dnd for production.

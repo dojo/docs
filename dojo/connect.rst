@@ -7,7 +7,7 @@ dojo.connect (dojo/_base/connect)
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.connect connects events to methods, so that after the event occurs, the new connected method is called too.

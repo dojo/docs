@@ -4,7 +4,7 @@
 dojo.getComputedStyle
 =====================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Returns a "computed style" object.

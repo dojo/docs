@@ -8,7 +8,7 @@ dojox.data.CouchDBRestStore
 :Authors: Kris Zyp, Marcus Reimann
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojox.data.CouchDBRestStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>`_ for connecting to the open source document-oriented database `Apache CouchDB <http://couchdb.apache.org/>`_.

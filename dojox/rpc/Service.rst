@@ -6,7 +6,7 @@ dojox.rpc.Service
 
 :Authors: Kris Zyp, Dustin Machi
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojox.rpc.Service is the foundation of most :ref:`RPC <dojox/rpc>` transportation. To use a Service, you need an SMD. Defining the 

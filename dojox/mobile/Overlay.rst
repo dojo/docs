@@ -8,7 +8,7 @@ dojox.mobile.Overlay
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Overlay is a simple widget that slides its content (specified via innerHTML) up from the bottom when shown and slides down out of view when hidden.  It is most often used on small screen devices to allow the user to select values with touch events.
@@ -44,4 +44,4 @@ Example
         <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>
   </div>
 
-.. image:: SimpleMobileOverlay.png
+.. image :: SimpleMobileOverlay.png

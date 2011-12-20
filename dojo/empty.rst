@@ -7,7 +7,7 @@ dojo.empty
 :Project owner: Peter Higgins
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Empty the contents of a DOM element. dojo.empty deletes all children but keeps the node there.
@@ -86,7 +86,7 @@ Empty a single node
 
   Some DomNodes
   
-  .. html::
+  .. html ::
     
     <div id="testnode1">TestNode 1</div>
     <button id="progButtonNode" type="button"></button>
@@ -98,7 +98,7 @@ Empty all nodes in a list by reference
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     .green { color: white; min-width: 30px; min-height: 30px;
@@ -133,7 +133,7 @@ Empty all nodes in a list by reference
 
   Some DomNodes
   
-  .. html::
+  .. html ::
 
     <div class="green">greenNode</div>
     <div class="green">greenNode</div>

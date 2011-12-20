@@ -8,7 +8,7 @@ build customBase
 :Project owner: ?
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Custom base is used to make an extremely small file size version of dojo.js.

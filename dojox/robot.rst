@@ -6,7 +6,7 @@ dojox.robot.recorder
 
 :Author: haysmark
 
-.. contents::
+.. contents ::
   :depth: 3
 
 dojox.robot.recorder is a recording module for use with the doh.robot Web UI testing framework. It has no APIs and is not a widget.

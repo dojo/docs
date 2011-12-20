@@ -7,7 +7,7 @@ Simple Buildsystem Examples
 :Project owner: James Burke
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This document provides some simple examples of using the Dojo build system, how to layout your directory structure and other best practices.

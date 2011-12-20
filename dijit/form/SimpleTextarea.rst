@@ -8,7 +8,7 @@ dijit.form.SimpleTextarea
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide

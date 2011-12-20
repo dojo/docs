@@ -7,7 +7,7 @@ Globalization Guidelines: Locale and Resource Bundle
 :Authors: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Locale Setting in Dojo

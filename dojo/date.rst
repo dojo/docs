@@ -5,7 +5,7 @@ dojo.date
 =========
 
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

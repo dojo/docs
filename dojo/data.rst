@@ -4,7 +4,7 @@
 dojo.data
 =========
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

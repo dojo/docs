@@ -6,7 +6,7 @@ dojo.objectToQuery
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a JavaScript object into a properly encoded query string.

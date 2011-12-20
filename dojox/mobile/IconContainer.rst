@@ -8,12 +8,12 @@ dojox.mobile.IconContainer
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 IconContainer is a container widget that holds multiple icons each of which represents application component.
 
-.. image:: IconContainer.png
+.. image :: IconContainer.png
 
 Usage
 =====
@@ -75,7 +75,7 @@ Note that currently lazy loading is supported only in the sync mode, since lazy 
     </li>
   </ul>
 
-.. image:: IconContainer-lazy-17.png
+.. image :: IconContainer-lazy-17.png
 
 Examples
 ========
@@ -101,7 +101,7 @@ In this example, icon content is shown below the icons, and only one icon conten
     </li>
   </ul>
 
-.. image:: Icon-SingleBelow-anim.gif
+.. image :: Icon-SingleBelow-anim.gif
 
 Single / Flip (transition="flip" single="true")
 -----------------------------------------------
@@ -124,7 +124,7 @@ In this example, icon content is shown below the icons, and multiple icon conten
     </li>
   </ul>
 
-.. image:: Icon-SingleFlip-anim.gif
+.. image :: Icon-SingleFlip-anim.gif
 
 Multi / Below (transition="below" single="false")
 -------------------------------------------------
@@ -147,7 +147,7 @@ In this example, selecting an icon causes a flip transition to show the icon con
     </li>
   </ul>
 
-.. image:: Icon-MultiBelow-anim.gif
+.. image :: Icon-MultiBelow-anim.gif
 
 Multi / Flip (transition="flip" single="false")
 -----------------------------------------------
@@ -170,4 +170,4 @@ In this example, selecting an icon causes a flip transition to show the icon con
     </li>
   </ul>
 
-.. image:: Icon-MultiFlip-anim.gif
+.. image :: Icon-MultiFlip-anim.gif

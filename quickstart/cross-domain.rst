@@ -6,7 +6,7 @@ Cross-Domain Dojo
 
 :Author: Victor Danilchenko
 
-.. contents::
+.. contents ::
    :depth: 4
 
 How to use Dojo's cross-domain distributions

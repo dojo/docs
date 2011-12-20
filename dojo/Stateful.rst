@@ -8,7 +8,7 @@ dojo.Stateful
 :Project owner: Kris Zyp
 :since: V1.5
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.

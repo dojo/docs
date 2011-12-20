@@ -4,7 +4,7 @@
 Dojo Style Guide
 ================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This document follows the basic outline of the `Java Programming Conventions Guide <http://geosoft.no/javastyle.html>`_.

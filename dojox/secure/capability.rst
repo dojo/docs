@@ -8,7 +8,7 @@ dojox.secure.capability
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Allows you to pass in the text of a script. If it passes and it can be eval'ed, it should be safe. Note that this does not do full syntax checking, it relies on eval to reject invalid scripts. There are also known false rejections:

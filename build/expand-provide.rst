@@ -6,7 +6,7 @@ Expanding dojo.provide calls
 
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Expands dojo.provide calls with faster calls at the expense of a larger file size in built layers.

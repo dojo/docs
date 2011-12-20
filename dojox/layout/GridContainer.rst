@@ -8,7 +8,7 @@ dojox.layout.GridContainer
 :Project owner: Shane O'Sullivan
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.GridContainer is an **experimental** panel-like layout mechanism, allowing Drag and Drop between regions.
@@ -86,14 +86,14 @@ Programmatic example
 .. code-example::
   :version: local
 
-  .. css::
+  .. css ::
 
     <link rel="stylesheet" href="../../../dojox/widget/Portlet/Portlet.css">
     <link rel="stylesheet" href="../../../dojox/layout/resources/GridContainer.css">
 
   One node as placeholder is all we need
 
-  .. html::
+  .. html ::
 
     <div id='placeHere'>&nbsp;</div>
 

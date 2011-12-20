@@ -8,7 +8,7 @@ dojox.mobile.Tooltip
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Tooltip is a simple popup widget that encloses its content and displays a small arrow associating the content (specified as innerHTML) with an arbitrary DOM node.  While the widget does not impose any size restrictions on the content, small screen mobile devices may only be able to display short text messages.
@@ -49,7 +49,7 @@ Text Only
   <div id="textTooltip" data-dojo-type="dojox.mobile.Tooltip" class="mblTooltipBubble">Enter a value.<br><center>Please!</center></div>
   <button type="button" onclick="dijit.registry.byId('textTooltip').show(this, ['after','below-centered','above-centered'])">right</button>
 
-.. image:: SimpleMobileTooltip.png
+.. image :: SimpleMobileTooltip.png
 
 
 Widget content
@@ -62,4 +62,4 @@ Widget content
   </div>
   <button type="button" onclick="dijit.registry.byId('customPicker').show(this, ['above-centered','after','before'])">above</button>
 
-.. image:: ComplexMobileTooltip.png
+.. image :: ComplexMobileTooltip.png

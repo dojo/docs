@@ -6,7 +6,7 @@ dojo.formToQuery
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a HTML form into an URL-encoded query string.

@@ -4,7 +4,7 @@
 dojox.NodeList.delegate
 =======================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 :author: Bill
@@ -42,7 +42,7 @@ Example
 
   A navigation bar
 
-  .. html::
+  .. html ::
 
     <div id="navbar">
         <a href="#" id="home">home</a> &nbsp;

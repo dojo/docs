@@ -9,7 +9,7 @@ The Dojo Loader
 :Project owner: Rawld Gill
 :since: 1.7.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

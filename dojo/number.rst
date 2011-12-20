@@ -5,7 +5,7 @@ dojo.number
 ===========
 
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

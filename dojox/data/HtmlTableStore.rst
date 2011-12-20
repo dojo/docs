@@ -9,7 +9,7 @@ dojox.data.HtmlTableStore
 :Author: Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 3
 
 

@@ -9,7 +9,7 @@ dijit.layout.AccordionContainer
 :since: V?
 :jsDoc: http://dojotoolkit.org/api/dijit.layout.AccordionContainer
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Like :ref:`StackContainer <dijit/layout/StackContainer>` and :ref:`TabContainer <dijit/layout/TabContainer>`, an **AccordionContainer** holds a set of panes whose titles are all visible, but only one pane's content is visible at a time.

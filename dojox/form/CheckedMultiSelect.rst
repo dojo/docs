@@ -7,7 +7,7 @@ dojox.form.CheckedMultiSelect
 :Project owner: Nathan Toone
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A multi-select widget (similar to html select with multiple=true) that uses check boxes.

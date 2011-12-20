@@ -8,7 +8,7 @@ dijit.form.FilteringSelect
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The FilteringSelect widget is a replacement for the native SELECT element.

@@ -4,7 +4,7 @@
 dojo.fx.wipeIn
 ==============
 
-.. contents::
+.. contents ::
     :depth: 3
 
 

@@ -6,7 +6,7 @@ dojo.setContext
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup.

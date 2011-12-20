@@ -8,7 +8,7 @@ dojox.mobile.Slider
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Slider is a simple INPUT type="range" widget (either horizontal or vertical) allowing numeric values to be selected by dragging a handle.
@@ -48,7 +48,7 @@ Simple Slider
 
   <input type="range" style="width:200px;" data-dojo-type="dojox.mobile.Slider" value="10" max="20" />
 
-.. image:: SimpleMobileSlider.png
+.. image :: SimpleMobileSlider.png
 
 
 onChange handler in HTML5 format
@@ -61,4 +61,4 @@ onChange handler in HTML5 format
         orientation:"V",
         onChange:function(newValue){ alert("value changed to " + newValue); }' />
 
-.. image:: HTML5MobileSlider.png
+.. image :: HTML5MobileSlider.png

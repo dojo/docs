@@ -4,7 +4,7 @@
 Animations and Effects with Dojo
 ================================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental 

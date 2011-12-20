@@ -8,7 +8,7 @@ dojo/on
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The dojo/on module is a general-purpose event handler for DOM nodes and other event emitting objects, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model.

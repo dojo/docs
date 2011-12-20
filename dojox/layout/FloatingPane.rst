@@ -7,7 +7,7 @@ dojox.layout.FloatingPane
 :Project owner: Peter Higgins
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.FloatingPane is an **experimental** floating window.

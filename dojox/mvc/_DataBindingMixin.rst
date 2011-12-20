@@ -9,7 +9,7 @@ dojox.mvc._DataBindingMixin
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Provides the ability for dijits or custom view components to become data binding aware.  Data binding awareness enables Dijits 

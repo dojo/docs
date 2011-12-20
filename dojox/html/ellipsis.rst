@@ -7,7 +7,7 @@ dojox.html.ellipsis
 :Authors: Nathan Toone
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojox.html.ellipsis** offers cross-browser support for `text-overflow: ellipsis`

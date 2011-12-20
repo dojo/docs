@@ -8,7 +8,7 @@ dojox.editor.plugins.PageBreak
 :Project owner: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to pull your hair out when printing an HTML document because it would page break at bad locations?  There is actually a little-known CSS style that allows **you** to set a point at which printing should page break the document, the 'page-break-after: always' style.  This feature can be important when editing documents on the web, so it's very useful in some cases to be able to insert a page break on demand.  This plugin provides such a function to the dijit.Editor.
@@ -76,13 +76,13 @@ Basic Usage
       dojo.require("dojox.editor.plugins.PageBreak");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/PageBreak.css";
     </style>
     
-  .. html::
+  .. html ::
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
     <br>

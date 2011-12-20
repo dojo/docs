@@ -6,7 +6,7 @@ Datastores and Dojo
 
 :Authors: Jared Jurkiewicz, Nikolai Onken, Craig Riecke
 
-.. contents::
+.. contents ::
     :depth: 2
 
 What is dojo.data?

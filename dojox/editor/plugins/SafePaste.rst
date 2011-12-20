@@ -8,7 +8,7 @@ dojox.editor.plugins.SafePaste
 :Authors: Jared Jurkiewicz
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever worried about users pasting in script tags or the like into editor content without any sanitation?  Have you ever wanted to strip specific tag names from a paste? Is so, then this plugin is intended for you.
@@ -94,16 +94,16 @@ Basic Usage
       dojo.require("dojox.editor.plugins.SafePaste");
     </script>
 
-  .. css::
+  .. css ::
 
     <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/safepaste.css";
     </style>
     
-  .. html::
+  .. html ::
 
 
-  .. html::
+  .. html ::
 
     <b>Clear the editor, click paste from word, then paste in content you want!</b>
     <br>

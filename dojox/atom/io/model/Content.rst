@@ -7,7 +7,7 @@ dojox.atom.io.model.Content
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents Content style elements of the Atom specification, such as title, subtitle, summary, content, etc.

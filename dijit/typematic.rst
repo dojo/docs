@@ -7,7 +7,7 @@ dijit.typematic
 :Project owner: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -44,6 +44,6 @@ or clicks the plus icon next to the textbox
          });
      </script>
 
-  .. html::
+  .. html ::
 
     <input id="textbox" value="1"><span id="icon">+</span>

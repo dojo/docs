@@ -7,7 +7,7 @@ dojox.io.xhrMultiPart
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.xhrMultiPart constructs multi-part mime XHR requests.

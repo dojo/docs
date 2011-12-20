@@ -6,7 +6,7 @@ dojo.deprecated
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This function simply throws a warning message, alerting developers a method or package has been removed, replace, or otherwise has has been changed, and they are using a "older" version of the method.

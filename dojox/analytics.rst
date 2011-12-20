@@ -7,7 +7,7 @@ dojox.analytics
 :Project owner: Dustin Machi
 :since: 1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Analytics is an analytic and client monitoring system. Including the base analytics system and any number of plugins enables logging of different system data back to the server.

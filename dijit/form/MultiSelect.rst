@@ -8,7 +8,7 @@ dijit.form.MultiSelect
 :Developers: Doug Hays, Peter Higgins, Bill Keese, Nathan Toone
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The MultiSelect widget allows the selection of multiple items.

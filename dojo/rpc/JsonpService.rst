@@ -7,7 +7,7 @@ dojo.rpc.JsonpService
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.rpc.JsonpService is a generic JSONP service.

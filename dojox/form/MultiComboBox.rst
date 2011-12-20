@@ -6,7 +6,7 @@ dojox.form.MultiComboBox
 
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

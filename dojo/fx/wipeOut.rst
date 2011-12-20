@@ -8,7 +8,7 @@ dojo.fx.wipeOut
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This function is a helper function that wraps the :ref:`dojo.animateProperty <dojo/animateProperty>` function to provide an easy interface to wiping a node out of view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a wipe-out is desired.

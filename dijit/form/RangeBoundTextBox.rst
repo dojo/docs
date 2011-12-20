@@ -4,7 +4,7 @@
 dijit.form.RangeBoundTextBox
 ============================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

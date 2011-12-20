@@ -7,7 +7,7 @@ dojox.io.xhrWindowNamePlugin
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.xhrWindowNamePlugin is a window.name plugin for XHR adapter registry.

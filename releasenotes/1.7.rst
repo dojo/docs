@@ -4,7 +4,7 @@
 Dojo 1.7 Release Notes
 ======================
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Documentation

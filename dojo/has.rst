@@ -8,7 +8,7 @@ dojo/has
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 About

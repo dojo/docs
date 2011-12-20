@@ -8,7 +8,7 @@ dojox.date.hebrew
 :Contributors: Helena Halperin, Moshe Wajnberg
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Implements the traditional Hebrew calendar. This is the civil calendar in Israel and the liturgical calendar of the Jewish faith worldwide.
@@ -52,7 +52,7 @@ Hebrew calendar and DateTextBox
 
 The Hebrew calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Hebrew calendar. For example, the image below illustrates DateTextBox using a Hebrew calendar with the default language set to Hebrew.
 
-.. image:: hebrew.png
+.. image :: hebrew.png
 
 Examples
 ========

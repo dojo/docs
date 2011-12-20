@@ -4,7 +4,7 @@
 dijit.form.VerticalRule
 =======================
 
-.. contents::
+.. contents ::
     :depth: 3
 
 This widget is used primarily for creating Hash marks for the :ref:`dijit.form.VerticalSlider <dijit/form/Slider>` widget.

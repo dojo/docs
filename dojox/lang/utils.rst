@@ -7,7 +7,7 @@ dojox.lang.utils
 :Project owner: Eugene Lazutkin
 :since: 1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Useful utilities to support different programming techniques.

@@ -7,7 +7,7 @@ Translatable Resource bundles
 :Authors: Adam Peller
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

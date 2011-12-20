@@ -6,7 +6,7 @@ Dijit Accessibility Statement
 
 :Author: Becky Gibson
 
-.. contents::
+.. contents ::
    :depth: 2
 
 

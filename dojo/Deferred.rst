@@ -6,7 +6,7 @@ dojo.Deferred
 
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojo.Deferred manages the communication between asynchronous threads (Callbacks). dojo.Deferred encapsulates a sequence of callbacks in response to a value that may not yet be available.  All of dojo.xhr* functions make use of this class, as do many others, such as dojo.io.script.

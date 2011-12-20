@@ -6,7 +6,7 @@ dojo._base.window
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.window** contains functions for dealing with the document-wide DOM and context related stuff.

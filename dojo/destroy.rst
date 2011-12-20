@@ -7,7 +7,7 @@ dojo.destroy
 :Project owner: Peter Higgins
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Destroys a DOM element. dojo.destroy deletes all children and the node itself.
@@ -85,7 +85,7 @@ Destroy a single node
 
   Some DomNodes to destroy
   
-  .. html::
+  .. html ::
 
     <div id="testnode1">TestNode 1</div>
     <button id="progButtonNode" type="button"></button>
@@ -97,7 +97,7 @@ Destroy all nodes in a list by reference
 
 .. code-example::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     .stay { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
@@ -127,7 +127,7 @@ Destroy all nodes in a list by reference
 
   Some DomNodes to destroy
   
-  .. html::
+  .. html ::
     
     <div class="stay">&nbsp;</div>
     <div class="stay">&nbsp;</div>

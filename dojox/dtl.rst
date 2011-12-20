@@ -8,7 +8,7 @@ dojox.dtl
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The Django Template Language (DTL) uses a system of templates that can be compiled
@@ -42,7 +42,7 @@ allows for new DOM-centric capabilities.
       dojo.require("dojox.dtl.Inline");
     </script>
 
-  .. html::
+  .. html ::
  
     <div data-dojo-type="dojox.dtl.Inline" id="inline" data-dojo-props="context:{items: ['apple', 'banana', 'orange']}">
       <ul>

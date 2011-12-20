@@ -6,7 +6,7 @@ dojox.fx
 
 :Authors: Peter Higgins, Jonathan Bond-Caron, Shane O'Sullivan, Bryan Forbes
 
-.. contents::
+.. contents ::
     :depth: 2
 
 dojox.fx provides a class of animation effects to use, and other animation and Effects additions to :ref:`Dojo FX <dojo/fx>`.

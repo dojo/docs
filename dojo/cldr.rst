@@ -7,7 +7,7 @@ dojo.cldr
 :Project owner: Adam Peller
 :since: 1.0?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Contains data from the Common Locale Data Repository (CLDR) http://unicode.org/cldr with associated utility classes

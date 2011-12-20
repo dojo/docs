@@ -7,7 +7,7 @@ Custom Builds
 :Project owner: James Burke
 :since: 1.0
 
-.. contents::
+.. contents ::
    :depth: 4
 
 How to use Dojo's custom build system to package your code for optimal runtime performance. This guide briefly covers many common usages and parameters. See the :ref:`full build documentation <build/index>` for all the details.

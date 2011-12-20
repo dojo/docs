@@ -8,7 +8,7 @@ dijit.form.NumberTextBox
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 NumberTextBox widgets are used when user input is restricted to numeric input.

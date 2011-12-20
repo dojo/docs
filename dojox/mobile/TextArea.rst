@@ -8,7 +8,7 @@ dojox.mobile.TextArea
 :Developers: Doug Hays
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 TextArea is a very simple TEXTAREA widget.
@@ -43,7 +43,7 @@ Simple TextArea
 
   <textarea data-dojo-type="dojox.mobile.TextArea" placeHolder="Enter comment"></textarea>
 
-.. image:: SimpleMobileTextArea.png
+.. image :: SimpleMobileTextArea.png
 
 
 onChange handler in HTML5 format
@@ -54,4 +54,4 @@ onChange handler in HTML5 format
   <textarea data-dojo-type="dojox.mobile.TextArea" rows="5" cols="40"
         data-dojo-props='value:"some data\nline 2", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>
 
-.. image:: HTML5MobileTextArea.png
+.. image :: HTML5MobileTextArea.png

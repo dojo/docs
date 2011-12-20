@@ -7,7 +7,7 @@ Localized Build Example
 :Authors: Nick Fenwick
 :since: as long as I can remember
 
-.. contents::
+.. contents ::
    :depth: 3
 
 This page attempts to describe how to include localized strings bundles in your custom build.

@@ -4,7 +4,7 @@
 dojo.getProp
 =============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Gets a property on an HTML element.

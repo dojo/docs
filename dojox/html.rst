@@ -8,7 +8,7 @@ dojox.html
 :Developers: Bryan Forbes, Sam Foster, Mike Wilcox, Nathan Toone, Jared Jurkiewicz
 :since: V1.2
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojox.html** offers additional HTML helper functions.

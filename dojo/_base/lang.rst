@@ -6,7 +6,7 @@ dojo/_base/lang
 
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojo._base.lang** contains functions for supporting Polymorphism.

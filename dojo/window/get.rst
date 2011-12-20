@@ -6,7 +6,7 @@ dojo.window.get
 
 :since: V1.5
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Gets the window object associated with a document

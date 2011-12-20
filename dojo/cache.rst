@@ -7,7 +7,7 @@ dojo.cache
 :Project owner: James Burke
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A getter and setter method for storing the string content associated with the module and url arguments.

@@ -4,7 +4,7 @@
 DOH Robot
 =========
 
-.. contents::
+.. contents ::
     :depth: 2
 
 doh.robot adds an API to the Dojo Object Harness (DOH) unit test framework that enables testers to automate their UI tests using real, cross-platform, system-level input events.   This document describes the value of doh.robot for unit and accessibility testing, and how to get started using it.

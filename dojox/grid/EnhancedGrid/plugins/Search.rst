@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Search
 
 Search plugin provides a method to search the grid data by regular expressions or wildcard patterns.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

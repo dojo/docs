@@ -8,7 +8,7 @@ dojo.fx
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to nicely fade out or fade in a block of text, slide or wipe a DOM node into position, or even chain together numerous animations to provide a nice, dynamically changing page for your users?  Well, that is exactly what the dojo.fx module is for.  This module provides several commonly used animation effects.  These FX functions all build upon the basic FX support in :ref:`dojo base <dojo/_base/fx>`.  There are also less commonly used FX functions available in dojox under the :ref:`dojox.fx <dojox/fx>` package.

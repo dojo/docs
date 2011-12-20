@@ -5,7 +5,7 @@ dojo.string (dojo/string)
 =========================
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.string provides some simple string manipulation utilities

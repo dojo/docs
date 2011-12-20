@@ -6,7 +6,7 @@ dojo.isAlien
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Checks if the parameter is a built-in function.

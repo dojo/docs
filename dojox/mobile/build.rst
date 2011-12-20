@@ -6,7 +6,7 @@ Build
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dojo Mobile was designed to have as few dependencies on the dojo and dijit base modules as possible in order to reduce the total download code size for better start-up time performance. However, by default, all the dojo base modules and the dijit base modules are baked into the built file (dojo.js) by the dojo build tool regardless of whether they are actually used or not. So, to take advantage of Dojo Mobile's minimum-dependency approach, you need to specify appropriate build options and dependency information when you build your application. There are sample build profile files and a batch file available for that purpose. The sample profiles are in the dojo/util/buildscripts/profiles/ directory, and the batch file is in the dojox/mobile/build/ directory.

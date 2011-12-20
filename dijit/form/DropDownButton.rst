@@ -8,7 +8,7 @@ dijit.form.DropDownButton
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The dijit.form.DropDownButton widget is for a button that displays some kind of drop down,

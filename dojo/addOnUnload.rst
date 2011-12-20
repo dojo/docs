@@ -6,7 +6,7 @@ dojo.addOnUnload
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojo.addOnUnload registers a function to be called when the page unloads.

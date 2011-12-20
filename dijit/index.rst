@@ -4,7 +4,7 @@
 Dijit Overview
 ==============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``.

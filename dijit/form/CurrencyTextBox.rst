@@ -8,7 +8,7 @@ dijit.form.CurrencyTextBox
 :Developers: Doug Hays, Bill Keese
 :since: V1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 CurrencyTextBox widgets inherit all the attributes and behaviors of the :ref:`NumberTextBox <dijit/form/NumberTextBox>` widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.

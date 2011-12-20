@@ -8,7 +8,7 @@ dojox.mobile.SpinWheelSlot
 :Developers: Yoshiroh Kamiyama
 :since: V1.7
 
-.. contents::
+.. contents ::
     :depth: 2
 
 SpinWheelSlot is a slot that is placed in the SpinWheel widget.

@@ -6,7 +6,7 @@ dojo._base.query
 
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

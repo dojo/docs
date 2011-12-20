@@ -7,7 +7,7 @@ dojo.i18n
 :Project owner: Adam Peller
 :since: V1.0
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Utility classes to enable loading of resources for internationalization.

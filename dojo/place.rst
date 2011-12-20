@@ -6,7 +6,7 @@ dojo.place
 
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 3
 
 To see this utility in context, read the :ref:`DOM Quick Start <quickstart/dom>` first.

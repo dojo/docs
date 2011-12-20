@@ -6,7 +6,7 @@ Differences between 1.6 and 1.7
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Differences from 1.6

@@ -7,7 +7,7 @@ dojox.av.widget
 :Project owner: Mike Wilcox
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.av.widget provides base player control widgets for building a media player.

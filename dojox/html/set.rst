@@ -8,7 +8,7 @@ dojox.html.set
 :Project owner: ?
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Extensions to content setting utilities in dojo.html
@@ -70,7 +70,7 @@ Set content with styles
         });
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="myNode1">I'm an empty node</div>
 

@@ -6,7 +6,7 @@ dijit.MenuBar
 
 :Author: Bill Keese
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The MenuBar widget models a typical menu bar like the quintessential "File" menu on (virtually?) all programs.

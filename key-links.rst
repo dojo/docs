@@ -4,7 +4,7 @@
 Key Links
 =========
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Here's a collection of current and useful Dojo demos and tutorials to help you get started with Dojo:

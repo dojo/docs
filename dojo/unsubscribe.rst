@@ -6,7 +6,7 @@ dojo.unsubscribe
 
 :since: 0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Remove a topic listener.

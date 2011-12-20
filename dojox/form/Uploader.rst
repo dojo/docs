@@ -8,7 +8,7 @@ dojox.form.Uploader
 :Author: Mike Wilcox
 :since: 1.6
 
-.. contents::
+.. contents ::
   :depth: 3
 
 A widget that adds functionality to a standard HTML file input which allows file uploading to a server. The widget hides the actual uploader and substitutes a dijit.form.Button, so that the file input matches the rest of the user interface. If the browser supports the HTML5 file input specification, that functionality is used. If it is not supported (IE or older browsers) plugins are available to enhance the Uploader.

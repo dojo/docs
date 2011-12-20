@@ -7,7 +7,7 @@ dojox.layout.RotatorContainer
 :Project owner: Chris Barber
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.RotatorContainer is an extended StackContainer that automatically crossfades between child panes and display navigation in the form of tabs or a pager.

@@ -7,7 +7,7 @@ dojox.widget.FisheyeLite
 :Project owner: Peter Higgins
 :since: 1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A lightweight Fisheye effect component which animates during mouse movement over the widget.

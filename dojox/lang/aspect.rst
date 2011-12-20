@@ -7,7 +7,7 @@ dojox.lang.aspect
 :Project owner: Eugene Lazutkin
 :since: 1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 JavaScript library to support `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ techniques.

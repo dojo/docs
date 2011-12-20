@@ -7,7 +7,7 @@ dojox.form.BusyButton
 :Project owner: Nikolai Onken
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 BusyButton is a simple widget which provides implementing more user friendly form submission.

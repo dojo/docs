@@ -7,7 +7,7 @@ dojox.data.AndOrReadStore
 :Author: Frank Fortson
 :Since: 1.2
 
-.. contents::
+.. contents ::
   :depth: 3
 
 dojox.data.AndOrReadStore is a clone of dojo.data.ItemFileReadStore. The only significant difference is that it supports more complex queries than the simple AND format property matching. Specifically, it can perform AND and ORing, and NOT. For general functions, data format, and information refer to :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`.

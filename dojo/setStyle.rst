@@ -4,7 +4,7 @@
 dojo.setStyle
 =============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Sets styles on a node.

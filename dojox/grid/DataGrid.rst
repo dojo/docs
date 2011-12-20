@@ -8,7 +8,7 @@ dojox.grid.DataGrid
 :since: V1.2
 :jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dojox.grid.DataGrid
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A visual grid/table much like a spreadsheet.
@@ -1165,11 +1165,11 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -1244,11 +1244,11 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";

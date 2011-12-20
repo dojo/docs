@@ -6,7 +6,7 @@ dijit.tree.ObjectStoreModel
 
 :since: V1.8
 
-.. contents::
+.. contents ::
   :depth: 2
 
 Introduction

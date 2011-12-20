@@ -7,7 +7,7 @@ dojox.widget.BarGauge
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A horizontal bar gauge with a variety of indicators, used to display numerical data.

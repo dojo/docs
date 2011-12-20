@@ -4,7 +4,7 @@
 dojo.data FAQ
 =============
 
-.. contents::
+.. contents ::
   :depth: 3
 
 This section is intended as a point to put answers to the common questions posed by users of dojo.data.

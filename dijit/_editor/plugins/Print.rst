@@ -8,7 +8,7 @@ dijit._editor.plugins.Print
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Have you ever wanted to print the contents contained within the editor?
@@ -70,7 +70,7 @@ Basic Usage
     </script>
 
     
-  .. html::
+  .. html ::
 
     <b>Enter some text then press the print button.  The browser print dialog should open and allow you to print the editor content</b>
     <br>

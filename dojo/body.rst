@@ -6,7 +6,7 @@ dojo.body
 
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Returns the body element of the document.

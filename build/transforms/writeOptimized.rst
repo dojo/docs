@@ -6,7 +6,7 @@ Build Transform writeOptimized
 
 :Author: Rawld Gill
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Summary

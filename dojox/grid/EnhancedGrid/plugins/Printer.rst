@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Printer
 
 Printer plugin provides some convenient methods to print the grid data.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction
@@ -143,7 +143,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 		});
 	</script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridContainer"></div>
 	<button onclick="printAll()">Print All</button>
@@ -153,7 +153,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 	<button onclick="previewSelected()">Preview Selected</button>
 	<button onclick="previewCustomized()">Preview First 10 Rows</button>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";

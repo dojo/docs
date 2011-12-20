@@ -4,7 +4,7 @@
 dojox.data.XmlStore examples
 =============================
 
-.. contents::
+.. contents ::
     :depth: 3
 
 subclassing the XmlStore to use an xml-string instead of an url to an xml-file

@@ -8,7 +8,7 @@ dojox.grid.LazyTreeGrid
 :Project owner: Evan Huang
 :since: V1.6
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This is a stub help page for the new dojox.grid.LazyTreeGrid which is still in progress. The information on this page may be out-of-date due to the fact that the API for the LazyTreeGrid is still very much in flux.
@@ -103,11 +103,11 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
         });
     </script>
 
-  .. html::
+  .. html ::
 
 	<div id="gridDiv"></div>
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
@@ -194,13 +194,13 @@ The Mechanism of Rendering
 
 For dojox.grid.TreeGrid, the root item and all of its children/sub-children would be rendered in a single row:
 
-.. image:: ltg1.jpg
+.. image :: ltg1.jpg
 
 This might case performance issue when there are huge children item, because all of them will be rendered at a single time.
 
 Regarding dojox.grid.LazyTreeGrid, each item would be rendered in a single row:
 
-.. image:: ltg2.jpg
+.. image :: ltg2.jpg
 
 Usage
 =====

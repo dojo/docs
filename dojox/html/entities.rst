@@ -8,7 +8,7 @@ dojox.html.entities
 :Developers: Jared Jurkiewicz
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 **dojox.html.entities** offers basic entity mapping for HTML and LATIN-1 (8859-1) characters, as well as helper functions for encoding and decoding entities in text strings

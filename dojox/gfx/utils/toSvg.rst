@@ -90,7 +90,7 @@ Example
 	  }
     </script>
 
-  .. html::
+  .. html ::
 
     <div id="gfxObject"></div>
     <div data-dojo-type="dijit.form.Button" id="button" onClick="serialize();">

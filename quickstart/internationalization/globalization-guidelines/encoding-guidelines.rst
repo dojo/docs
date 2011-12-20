@@ -7,7 +7,7 @@ Globalization Guidelines: Encoding
 :Authors: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 The following guidelines should be used to implement internationalization in encoding.

@@ -7,12 +7,12 @@ dojox.gauges.GlossyHorizontalGauge
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
 :since: 1.7
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A glossy horizontal gauge with a variety of indicators, used to display numerical data.
 
-.. image:: GlossyHorizontalGauge.png
+.. image :: GlossyHorizontalGauge.png
 
 Introduction
 ============

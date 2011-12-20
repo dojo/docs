@@ -4,7 +4,7 @@
 dojo.setContentSize
 ===================
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Sets the size of the node's contents, irrespective of margins, padding, or borders.

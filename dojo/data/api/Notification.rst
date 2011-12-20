@@ -4,7 +4,7 @@
 dojo.data Notification API
 ==========================
 
-.. contents::
+.. contents ::
   :depth: 3
 
 When working with data and items, sometimes it is useful to be notified when items are created, deleted, or modified within 

@@ -4,7 +4,7 @@
 dojox.data.QueryReadStore
 =========================
 
-.. contents::
+.. contents ::
   :depth: 2
 
 This page is out-dated/unfinished.

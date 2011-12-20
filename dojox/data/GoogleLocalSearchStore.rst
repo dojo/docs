@@ -7,7 +7,7 @@ dojox.data.GoogleLocalSearchStore
 :Project owner: Shane O'Sullivan
 :since: 1.2?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.data.GoogleLocalSearchStore is a data store that can be used to search Google.
@@ -163,7 +163,7 @@ Programmatic example
     }
     </script>
 
-  .. html::
+  .. html ::
 
     <div>
       <span>Enter Search Text</span>

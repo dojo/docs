@@ -4,7 +4,7 @@
 Terminology
 ===========
 
-.. contents::
+.. contents ::
   :depth: 3
 
 The following words and phrases are used within the dojo.data quickstart and store documentation.  Where possible, these terms have been related to their equivalent database concept.  Before reading the rest of the quickstart, it is highly recommended that you familiarize yourself with the following terms.

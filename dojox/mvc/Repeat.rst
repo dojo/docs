@@ -9,7 +9,7 @@ dojox.mvc.Repeat
 :since: V1.7
 
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A repeat is bound to an intermediate dojo.Stateful node corresponding to an array in the data model. Child dijits or custom view components inside it inherit their parent data binding context from it.

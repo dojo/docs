@@ -7,7 +7,7 @@ dojox.gauges
 :Authors: Philippe Toussaint
 :Developers: Emmanuel Tissandier, Philippe Toussaint
 
-.. contents::
+.. contents ::
     :depth: 2
 
 This is a collection of gauge widgets used to display numerical data.

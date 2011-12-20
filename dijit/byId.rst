@@ -7,7 +7,7 @@ dijit.byId
 :Project owner: Bill Keese
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dijit.byId is a function for looking up a specific widget by its assigned name (id).

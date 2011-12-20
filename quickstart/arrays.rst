@@ -6,7 +6,7 @@ Arrays and Dojo
 
 :Authors: Nikolai Onken, Marcus Reimann, Josh Trutwin
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Dojo comes with a bunch of useful methods to deal with arrays, a few more than you get from your browser by default.

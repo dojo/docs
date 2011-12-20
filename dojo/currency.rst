@@ -5,7 +5,7 @@ dojo.currency
 =============
 
 
-.. contents::
+.. contents ::
   :depth: 2
 
 

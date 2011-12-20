@@ -6,7 +6,7 @@ dojo.hash
 
 :since: 1.4
 
-.. contents::
+.. contents ::
     :depth: 3
 
 dojo.hash provides methods for monitoring and updating the hash in the browser URL as well as back/forward support and bookmarkability for dynamic web applications.

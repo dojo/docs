@@ -6,7 +6,7 @@ dojo.queryToObject
 
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Helper function for converting a URI query string to a JavaScript Object

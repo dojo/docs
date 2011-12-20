@@ -7,7 +7,7 @@ Bi-directional Text (Bi-Di)
 :Authors: Adam Peller
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Some languages, mostly middle-eastern in origin, have text flow from the right to the left (e.g. Hebrew and Arabic) This affects not just the characters in a sentence, but the entire flow of the user interface. The web browser generally takes care of this "mirroring" for us, provided the DIR attribute is set to "rtl" for right-to-left text direction. Note that text direction and locale are orthogonal concepts as defined by the `HTML spec <http://www.w3.org/TR/html401/struct/dirlang.html>`_.

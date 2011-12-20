@@ -10,7 +10,7 @@ dojox.grid.EnhancedGrid.plugins.Cookie
 
 Cookie plugin provides a convenient ways to persist grid properties like column width, sorting order, etc, so the grid will look same when the page is reloaded, or when the grid is re-created with the same id.
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

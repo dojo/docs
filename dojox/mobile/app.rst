@@ -8,7 +8,7 @@ dojox.mobile.app
 :Developers: multiple developers
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ``dojox.mobile.app`` provides a simple framework to develop mobile web applications. It handles view definitions and resources in a declarative fashion.

@@ -8,7 +8,7 @@ dojo._base.connect
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 

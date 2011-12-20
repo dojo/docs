@@ -7,7 +7,7 @@ dojo.date.locale
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
   :depth: 3
 
 dojo.date.locale offers a library of localization methods to format and parse dates and times.

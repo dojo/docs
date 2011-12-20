@@ -4,7 +4,7 @@
 dojo.prop
 ===============
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Gets or sets a property on an HTML element.

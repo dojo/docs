@@ -4,7 +4,7 @@
 Dojo 1.1 release notes
 ======================
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Dojo 1.1 is backwards compatible with Dojo 1.0 but there are many new features, plus some changes/deprecations worth noting. See the links below for details.

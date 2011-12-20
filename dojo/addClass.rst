@@ -7,7 +7,7 @@ dojo.addClass
 :Project owner: Eugene Lazutkin
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Safely adds a CSS class or a set of classes to a node avoiding duplications.
@@ -75,7 +75,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -124,7 +124,7 @@ See it in action:
 .. code-example ::
  
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -173,7 +173,7 @@ See it in action:
 
 .. code-example ::
   
-  .. css::
+  .. css ::
     
 
     <style type="text/css">
@@ -222,7 +222,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
     
 
     <style type="text/css">

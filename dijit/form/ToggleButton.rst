@@ -8,7 +8,7 @@ dijit.form.ToggleButton
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ToggleButton widgets are a cross between :ref:`Button <dijit/form/Button>` and :ref:`Checkbox <dijit/form/CheckBox>` widgets.

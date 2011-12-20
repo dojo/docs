@@ -6,7 +6,7 @@ dojo.uacss
 
 :since: V1.4
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

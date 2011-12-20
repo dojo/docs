@@ -8,7 +8,7 @@ dojox.layout.ExpandoPane
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.layout.ExpandoPane is a self-collapsing widget for use in a :ref:`BorderContainer <dijit/layout/BorderContainer>`.

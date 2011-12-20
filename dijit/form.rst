@@ -8,7 +8,7 @@ dijit.form
 :Developers: multiple developers
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The dijit.form package contains "form widgets".
@@ -208,7 +208,7 @@ For example, a NumberSpinner may be declared like:
 
 This is handled internally by having two <input> fields in the widget:
 
-.. image:: MappedTextBox.gif
+.. image :: MappedTextBox.gif
 
 The upshot of this is that Dijit handles localization issues on the client;the server doesn't have to worry about it
 (except of course for translating the boilerplate text on the page, like the label for the above control).

@@ -7,7 +7,7 @@ dojo.connectPublisher
 :Project owner: Alex Russell
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Ensure that every time an event is called, a message is published on the topic.

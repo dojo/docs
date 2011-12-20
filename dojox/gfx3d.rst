@@ -8,7 +8,7 @@ dojox.gfx3d
 :Author: Kun Xi, Eugene Lazutkin
 :since: 1.1
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Simple 3D graphics library built on top of :ref:`dojox.gfx <dojox/gfx>`.

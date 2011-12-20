@@ -6,7 +6,7 @@ dojo.hasAttr
 
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Checks a node for the presence of an attribute.

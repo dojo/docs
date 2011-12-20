@@ -4,7 +4,7 @@
 dijit.form.MappedTextBox
 ========================
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction
@@ -28,7 +28,7 @@ And if the user types in "1,234,567", it gets sent back to the server as "123456
 
 This is handled internally by having two <input> fields in the widget:
 
-.. image:: ../MappedTextBox.gif
+.. image :: ../MappedTextBox.gif
 
 The upshot of this is that Dijit handles localization issues on the client,
 so the server doesn't have to worry about it

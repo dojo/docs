@@ -4,7 +4,7 @@
 dojo/_base/event
 ================
 
-.. contents::
+.. contents ::
   :depth: 2
 
 **dojo._base.event** contains functions to handle DOM events.

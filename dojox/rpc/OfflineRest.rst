@@ -8,7 +8,7 @@ dojox.rpc.OfflineRest
 :Project owner: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.rpc.OfflineRest provides automatic offline capabilities to the JsonRest/JsonRestStore modules.

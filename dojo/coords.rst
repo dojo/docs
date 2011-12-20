@@ -7,7 +7,7 @@ dojo.coords
 :since: 1.0
 :Deprecated: since 1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Getter for the complete coordinates of a dom node.

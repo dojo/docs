@@ -8,7 +8,7 @@ dojo/mouse
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The dojo/mouse module provides extension events for hovering and mouse button utility functions. The module has three properties: enter, leave, and mouseButtons.

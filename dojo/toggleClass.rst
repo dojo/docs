@@ -7,7 +7,7 @@ dojo.toggleClass
 :Project owner: Eugene Lazutkin
 :since: V0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Simply toggles (adds or removes) a CSS class.
@@ -77,7 +77,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
@@ -124,7 +124,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .style2 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
@@ -172,7 +172,7 @@ See it in action:
 
 .. code-example ::
 
-  .. css::
+  .. css ::
 
     <style type="text/css">
         .style3 { background-color: #7c7c7c; color: #ffbf00; padding: 10px }

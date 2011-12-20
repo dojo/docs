@@ -7,7 +7,7 @@ dojo.eval
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Evaluate some string of JavaScript in global context.

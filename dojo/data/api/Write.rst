@@ -4,7 +4,7 @@
 dojo.data Write API
 ===================
 
-.. contents::
+.. contents ::
   :depth: 2
 
 Some datastores provide the ability to create new items and save those items back to a service, in addition to simply 

@@ -6,7 +6,7 @@ The Dojo Loader Legacy Modes
 
 :Author: Rawld Gill
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Introduction

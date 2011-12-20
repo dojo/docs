@@ -7,7 +7,7 @@ dojox.embed.Flash
 :Project owner: ?--
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Base functionality to insert a flash movie into a document on the fly.

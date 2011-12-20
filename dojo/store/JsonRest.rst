@@ -8,7 +8,7 @@ dojo/store/JsonRest
 :Project owner: Kris Zyp
 :since: V1.6
 
-.. contents::
+.. contents ::
     :depth: 3
 
 **dojo/store/JsonRest** is a lightweight object store implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.

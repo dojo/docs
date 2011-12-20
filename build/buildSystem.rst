@@ -6,7 +6,7 @@ The Dojo Build System
 
 :Author: Rawld Gill
 
-.. contents::
+.. contents ::
    :depth: 2
 
 *This document describes the Dojo build system as of v1.7. Historical documentation describing the build system prior

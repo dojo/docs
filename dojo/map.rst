@@ -5,7 +5,7 @@ dojo.map
 ========
 
 
-.. contents::
+.. contents ::
    :depth: 3
 
 Applies callback to each element of given array and returns an Array with the results.

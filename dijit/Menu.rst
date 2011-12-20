@@ -7,7 +7,7 @@ dijit.Menu
 :Authors: Bill Keese
 :jsDoc: http://dojotoolkit.org/api/dijit.Menu
 
-.. contents::
+.. contents ::
     :depth: 2
 
 Introduction

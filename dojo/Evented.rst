@@ -8,7 +8,7 @@ dojo/on
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 The dojo/Evented module is a class that can be used as a base class or mixin for JavaScript classes that have their own events.

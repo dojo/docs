@@ -7,7 +7,7 @@ dojox.atom.io.model.Feed
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 This object represents an ATOM Feed.

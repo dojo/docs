@@ -7,7 +7,7 @@ dojox.widget.DynamicTooltip
 :Project owner: ?--
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 An **experimental** addition to standard :ref:`dijit.Tooltip <dijit/Tooltip>` functionality allowing remotely loaded content to appear.

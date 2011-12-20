@@ -7,7 +7,7 @@ dojox.widget.AnalogGauge
 :Project owner: Benjamin Schell
 :since: V1.3
 
-.. contents::
+.. contents ::
    :depth: 2
 
 A circular gauge with a variety of indicators, used to display numerical data.

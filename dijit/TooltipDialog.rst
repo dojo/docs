@@ -7,7 +7,7 @@ dijit.TooltipDialog
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
 :since: V0.9
 
-.. contents::
+.. contents ::
     :depth: 2
 
 A variant on Dialog Box is dijit.TooltipDialog.

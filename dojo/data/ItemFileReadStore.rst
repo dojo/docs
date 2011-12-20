@@ -7,7 +7,7 @@ dojo.data.ItemFileReadStore
 :Author: Jared Jurkiewicz
 :since: V1.0
 
-.. contents::
+.. contents ::
   :depth: 2
 
 Dojo core provides an implementation of a read-only datastore, ItemFileReadStore. This store reads the JSON structured contents from an http endpoint (service or URL), or from an in-memory JavaScript object, and stores all the items in-memory for simple and quick access. ItemFileReadStore is designed to allow for flexibility in how it represents item hierarchy, references, and custom data types. It also provides options for which an attribute can act as the unique identifier (for dojo.data.api.Identity), and which attribute can be used as a general label for an item. This store has an expectation that data is provided to in a specific though very flexible, format. All of the examples on this page demonstrate the general format expected.
@@ -1003,7 +1003,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData10" data-dojo-id="reloadableStore1"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore1, searchAttr:'name'"></div>
@@ -1035,7 +1035,7 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
       });
     </script>
 
-  .. html::
+  .. html ::
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'{{dataUrl}}/dojox/data/tests/stores/countries.json', urlPreventCache:true, clearOnClose:true" data-dojo-id="reloadableStore2"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore2, searchAttr:'name'"></div>

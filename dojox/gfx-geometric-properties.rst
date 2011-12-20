@@ -7,7 +7,7 @@ dojox.gfx.matrix
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 :since: 0.4
 
-.. contents::
+.. contents ::
   :depth: 3
 
 Coordinates and transformations

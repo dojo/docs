@@ -8,7 +8,7 @@ dijit.form.ComboButton
 :Developers: ?-
 :since: V?
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The dijit.form.ComboButton widget has a regular button on the left, and on the right has an arrow to show a drop down (often a menu).

@@ -8,7 +8,7 @@ dojo.fx.chain
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :since: v1.0
 
-.. contents::
+.. contents ::
     :depth: 2
 
 The *dojo.fx.chain()* is a helper function that can take a list of dojo._Animation objects and combine them so that their effects run sequentially.  With this function animations that affect multiple nodes can be generated and executed with a single call.

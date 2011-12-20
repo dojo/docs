@@ -6,7 +6,7 @@ dojo.fromJson
 
 :since: v0.9
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Parses a JSON string to return a JavaScript object.

@@ -7,7 +7,7 @@ dojo.NodeList-manipulate
 :Project owner: James Burke
 :since: 1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Method extensions to :ref:`dojo.NodeList <dojo/NodeList>`/:ref:`dojo.query <dojo/query>` that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.

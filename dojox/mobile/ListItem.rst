@@ -8,14 +8,14 @@ dojox.mobile.ListItem
 :Developers: Yoshiroh Kamiyama
 :since: V1.5
 
-.. contents::
+.. contents ::
     :depth: 2
 
 ListItem represents an item of either RoundRectList or EdgeToEdgeList. There are three ways to move to a different view, moveTo, href, and url. You can choose only one of them.
 
-.. image:: ListItem.png
+.. image :: ListItem.png
 
-.. image:: ListItem-desc.png
+.. image :: ListItem-desc.png
 
 Constructor Parameters
 ======================
@@ -123,7 +123,7 @@ In this example, no view transition is specified, but if you specify the one, mo
 	  rightIcon="mblDomButtonBlueCircleArrow"></li>
   </ul>
 
-.. image:: ListItem-desc.png
+.. image :: ListItem-desc.png
 
 View content examples
 ---------------------

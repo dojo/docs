@@ -7,7 +7,7 @@ dojox.grid.EnhancedGrid
 :Project owner: Evan Huang
 :since: V.1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Introduction

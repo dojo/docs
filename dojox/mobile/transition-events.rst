@@ -6,7 +6,7 @@ Listening to Transition Events
 
 :Authors: Yoshiroh Kamiyama
 
-.. contents::
+.. contents ::
     :depth: 2
 
 There are two ways to listen to various transition events, connect and pub/sub.

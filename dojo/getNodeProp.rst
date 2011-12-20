@@ -6,7 +6,7 @@ dojo.getNodeProp
 
 :since: V1.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Returns a property value falling back to an attribute, if property is not available.

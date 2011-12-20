@@ -7,7 +7,7 @@ ShrinkSafe
 :Project owner: Alex Russell
 :since: V0.4
 
-.. contents::
+.. contents ::
    :depth: 2
 
 ShrinkSafe is a standalone Java-based JavaScript compressor which utilizes Rhino to parse code and safely shorten the results.  ShrinkSafe renames local references to short names prefixed with an underscore.  This saves bytes on the wire and also provides some obfuscation of the code.  It also eliminates whitespace and comments when generating the new code.  Global references and property names remain unchanged such that external references to the compressed code should be safe.

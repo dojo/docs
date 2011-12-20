@@ -7,7 +7,7 @@ dojox.secure.DOM
 :Developers: Kris Zyp
 :since: V1.2
 
-.. contents::
+.. contents ::
    :depth: 2
 
 Creates a facade for securely accessing the DOM.

@@ -7,7 +7,7 @@ dojox.io.httpParse
 :Project owner: ?--
 :since: V?
 
-.. contents::
+.. contents ::
    :depth: 2
 
 dojox.io.httpParse is a HTTP message parser, which parses to an XHR like interface.
