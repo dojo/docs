@@ -57,8 +57,16 @@ The first example creates a Dialog via markup from an existing DOM node:
 
 .. code-example ::
 
-  First let's write up some simple HTML code because you need to define the
-  place where your Dialog should be created.
+  Require the modules we are using:
+
+  .. js ::
+
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+
+  Some simple HTML code you need to define the place where your Dialog should be created.
   
   .. html ::
 
@@ -77,15 +85,6 @@ The first example creates a Dialog via markup from an existing DOM node:
         </script>
     </button>
 
-  The javascript, put this wherever you want the dialog creation to happen
-  
-  .. js ::
-
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-
 
 Note that dialog's source markup can be hidden via specifying style="display: none", to prevent it from flashing on
 the screen during page load.
@@ -99,16 +98,8 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
 
 .. code-example ::
 
-  A programmatically created dialog with no content. First let's write up some simple HTML code because you need to
-  define the place where your Dialog should be created.
-  
-  .. html ::
-    
-    <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
-    <button id="buttonTwo" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
+  A programmatically created dialog with no content, with content added dynamically.
 
-  The javascript, put this wherever you want the dialog creation to happen
-  
   .. js ::
 
     dojo.require("dijit.form.Button");
@@ -128,6 +119,12 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
         secondDlg.show();
     }
 
+  .. html ::
+    
+    <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
+    <button id="buttonTwo" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
+
+
 
 Coloring the Underlay
 ---------------------
@@ -136,14 +133,26 @@ If you wish to alter the default color for the underlay, you do so in CSS.
 The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a CSS class for:
 
 .. code-example ::
- 
-  .. html ::
 
-    <style type="text/css">
+  Require the modules we are using:
+
+  .. js ::
+
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+
+  And some CSS rules:
+
+  .. css ::
+
         #dialogColor_underlay {
             background-color:green;
         }
-    </style>
+
+
+  And the markup to create the Dialog:
+
+  .. html ::
 
     <div id="dialogColor" title="Colorful" data-dojo-type="dijit.Dialog">
          My background color is Green
@@ -156,12 +165,6 @@ The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``
         </script>
     </button>
 
-  .. js ::
-
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-    </script>
 
 Forms and Functionality in Dialogs
 ----------------------------------
@@ -179,6 +182,25 @@ included via href attribute.
 To simply close the dialog, click the Cancel button, which calls the hide() function on the Dialog.
 
 .. code-example ::
+
+  .. js ::
+
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.form.TextBox");
+        dojo.require("dijit.form.DateTextBox");
+        dojo.require("dijit.form.TimeTextBox");
+
+        function checkData(){
+            var data = formDlg.get('value');
+            console.log(data);
+            if(data.sdate > data.edate){
+                alert("Start date must be before end date");
+                return false;
+            }else{
+                return true;
+            }
+        }
 
   .. html ::
 
@@ -228,33 +250,19 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     </button>
 
 
-  .. js ::
-
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.form.TextBox");
-        dojo.require("dijit.form.DateTextBox");
-        dojo.require("dijit.form.TimeTextBox");
-
-        function checkData(){
-            var data = formDlg.get('value');
-            console.log(data);
-            if(data.sdate > data.edate){
-                alert("Start date must be before end date");
-                return false;
-            }else{
-                return true;
-            }
-        }
-    </script>
-
 If you want to handle the onSubmit event like a traditional <form> element, you will need to employ a <form> either as 
 a traditional HTML element or as a ''dijit.form.Form''.
 This example shows a Dialog with an embedded Form which
 handles the onSubmit event, validation, and an xhrPost to the server.
 
 .. code-example ::
+
+  .. js ::
+
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.Form");
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.form.ValidationTextBox");
 
   .. html ::
 
@@ -293,13 +301,6 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     </button>
 
 
-  .. js ::
-    
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.Form");
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.form.ValidationTextBox");
-
 
 Terms and Conditions Dialog
 ---------------------------
@@ -307,6 +308,24 @@ Terms and Conditions Dialog
 This example shows a Dialog that will ask the user to accept or decline the terms and conditions.
 
 .. code-example ::
+
+  .. js ::
+
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.RadioButton");
+
+    var accept = function(){
+        dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
+        dojo.style("decision", "color", "#00CC00");
+        dijit.byId("formDialog").hide();
+    }
+
+    var decline = function(){
+        dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
+        dojo.style("decision", "color", "#FF0000");
+        dijit.byId("formDialog").hide();
+    }
 
   .. html ::
 
@@ -352,24 +371,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     </button>
 
 
-  .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.RadioButton");
-
-    var accept = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
-        dojo.style("decision", "color", "#00CC00");
-        dijit.byId("formDialog").hide();
-    }
-    
-    var decline = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
-        dojo.style("decision", "color", "#FF0000");
-        dijit.byId("formDialog").hide();
-    }
-    
 
 
 External Dialog content using HREF attribute
@@ -389,10 +391,8 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
-    </script>
 
   .. html ::
 
@@ -414,10 +414,8 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Dialog");
-    </script>
 
   .. html ::
 
