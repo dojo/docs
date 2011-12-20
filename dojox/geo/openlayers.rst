@@ -25,46 +25,36 @@ Instantiate an OpenLayers Map component
 
 You can either instantiate a OpenLayers Map component in a programmatic way or using a markup definition. In both cases, you will need to import the OpenLayers library. This library is available at the openlayers.org site and you can include it in your page with the following script tag :
 
- - <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+.. html ::
+
+    <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
 
 Here are some examples of how to create a basic OpenLayers Map component :
 
 Programmatic way of creating a Map component:
 
 .. js ::
-  
- <!-- Dojo -->
- <script type="text/javascript" src="path/to/dojo/dojo.js"></script>
- <!-- OpenLayers -->
- <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
- 
- <script type="text/javascript">
-   require([ "dojox/geo/openlayers/Map" ], function(map){
-     dojo.ready(function(){
-       map = new dojox.geo.openlayers.Map("map");
-       map.fitTo([ -160, 70, 160, -70 ]);
-     });
-   });
-  </script>
-  <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
+
+       require(["dojo/ready", "dojox/geo/openlayers/Map" ], function(ready, Map){
+         ready(function(){
+           map = new Map("map");
+           map.fitTo([ -160, 70, 160, -70 ]);
+         });
+       });
+
+.. html ::
+
+      <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
 
 Creating a Map using markup declaration:
 
 .. js ::
-  
- <!-- Dojo -->
- <script type="text/javascript" src="path/to/dojo/dojo.js"></script>
- <!--  OpenLayers -->
- <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
 
- <script type="text/javascript">
-   require(["dojox/geo/openlayers/Layer", "dojox/geo/openlayers/widget/Map", "dojo/parser" ], function(map){});
- </script>
+       require(["dojox/geo/openlayers/Layer", "dojox/geo/openlayers/widget/Map", "dojo/parser" ], function(map){});
 
- </head>
- <body class="tundra">
- <div id="map" data-dojo-type="dojox.geo.openlayers.widget.Map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
- </body>
+.. html ::
+
+      <div id="map" data-dojo-type="dojox.geo.openlayers.widget.Map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
 
 Changing the base layer type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,57 +66,62 @@ Available base layer types are :
 
   - dojox.geo.openlayers.BaseLayerType.OSM:           The Open Street Map base layer type selector.
   - dojox.geo.openlayers.BaseLayerType.WMS:           The Web Map Server base layer type selector.
-  - dojox.geo.openlayers.BaseLayerType.GOOGLE: 	  The Google base layer type selector.
+  - dojox.geo.openlayers.BaseLayerType.GOOGLE:        The Google base layer type selector.
   - dojox.geo.openlayers.BaseLayerType.VIRTUAL_EARTH: The Virtual Earth base layer type selector.
   - dojox.geo.openlayers.BaseLayerType.BING :         Same as Virtual Earth
-  - dojox.geo.openlayers.BaseLayerType.YAHOO: 	  The Yahoo Maps base layer type selector.
+  - dojox.geo.openlayers.BaseLayerType.YAHOO:         The Yahoo Maps base layer type selector.
   - dojox.geo.openlayers.BaseLayerType.ARCGIS:        The ESRI ARCGis base layer selector.
 
 Note that if you attempt to access a mapping provider like Google Maps or Yahoo Maps, you will have to include the specific mapping provider API in your application.
 
 Here are the JavaScript API needed to access specific map provider :
 
- - Google API : <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
- - Microsoft Virtual Hearth: <script src='http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3'></script>
- - Yahoo Maps: <script src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers"></script>
+ - Google API:
+
+   .. html ::
+
+        <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+
+ - Microsoft Virtual Hearth:
+
+   .. html ::
+
+         <script src='http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3'></script>
+
+ - Yahoo Maps:
+
+   .. html ::
+
+         <script src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers"></script>
 
 Some examples of how to set/change the base layer type:
 
 .. js ::
-  
-  <!-- Dojo -->
-  <script type="text/javascript" src="../../dojo_current/dojo/dojo.js"></script>
-  <!-- OpenLayers -->
-  <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
 
-  <script type="text/javascript">
-    var map;
-  
-    require([ "dojox/geo/openlayers/Map", "dijit/form/CheckBox" ], function(){
-      dojo.ready(function(){
-      map = new dojox.geo.openlayers.Map("map", {
-        baseLayerType : dojox.geo.openlayers.BaseLayerType.ARCGIS
-      });
-      map.fitTo([ -160, 70, 160, -70 ]);
-      });
-    });
+        var map;
 
-    function layerType(id){
-      var i = dojo.byId(id);
-      var v = i.value;
-      map.setBaseLayerType(v);
-    }
-  </script>
+        require(["dojo/ready", "dojo/dom", "dojox/geo/openlayers/Map", "dijit/form/RadioButton"],
+                function(ready, dom, Map, RadioButton){
+          ready(function(){
+              map = new Map("map", {
+                baseLayerType : dojox.geo.openlayers.BaseLayerType.ARCGIS
+              });
+              map.fitTo([ -160, 70, 160, -70 ]);
+          });
+        });
 
-  </head>
-  <body class="tundra">
+        function layerType(id){
+          var i = dom.byId(id);
+          var v = i.value;
+          map.setBaseLayerType(v);
+        }
 
-    <input type="radio" data-dojo-type="dijit.form.RadioButton" id="osm" name="layertype" value="OSM" onClick="layerType('osm')" />
-    <input type="radio" checked data-dojo-type="dijit.form.RadioButton" id="arcgis" name="layertype" value="ArcGIS" onClick="layerType('arcgis')" />
+.. html ::
 
-    <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
+      <input type="radio" data-dojo-type="dijit.form.RadioButton" id="osm" name="layertype" value="OSM" onClick="layerType('osm')" />
+      <input type="radio" checked data-dojo-type="dijit.form.RadioButton" id="arcgis" name="layertype" value="ArcGIS" onClick="layerType('arcgis')" />
 
-  </body>
+      <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
 
 Specifying the displayed part of the map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,11 +130,15 @@ You can define the initial location and extent of map that is displayed by using
 You can also define the initial location as markup attribute if you use the markup widget version of the map component.
 Initial location ca be in the form of :
 
- -  { bounds : [ulx, uly, lrx, lry] }
+.. js ::
+
+    { bounds : [ulx, uly, lrx, lry] }
 
 The map is fit on the specified bounds expressed as decimal degrees latitude and longitude. The bounds are defined with their upper left and lower right corners coordinates.
 
- - { position : [longitude, latitude], extent : degrees }
+.. js ::
+
+    { position : [longitude, latitude], extent : degrees }
 
 The map is fit on the specified position showing the extent <extent> around the specified center position.
 
@@ -147,11 +146,10 @@ Programmatic version:
 
 .. js ::
   
- <script type="text/javascript">
-  require([ "dojox/geo/openlayers/Map"], function(){
+  require(["dojo/ready", "dojox/geo/openlayers/Map"], function(ready, Map){
 
-    dojo.ready(function(){
-      var map = new dojox.geo.openlayers.Map("map");
+    ready(function(){
+      var map = new Map("map");
       // This is New York location
       var ny = {
         latitude : 40.71427,
@@ -164,29 +162,23 @@ Programmatic version:
       });
     });
   });
-  </script>
-  
-  </head>
-  <body class="tundra">
+
+.. html ::
+
     <div id="map" style="background-color: #b5d0d0; width: 100%; height: 100%;"></div>
-  </body>
 
 Markup version:
 
 .. js ::
    
-  <script type="text/javascript">
-    require([ "dojo/parser", "dojox/geo/openlayers/widget/Map" ], function(){});
-  </script>
+    require(["dojo/parser", "dojox/geo/openlayers/widget/Map" ], function(){});
 
-  </head>
-  <body class="tundra">
-  
+.. html ::
+
     <div id="map" data-dojo-type="dojox.geo.openlayers.widget.Map"
                   initialLocation="{position : [ -74.00597, 40.71427 ], extent : 0.1 }"
                   style="background-color: #b5d0d0; width: 100%; height: 100%;">
     </div>
-  </body>
 
 
 Positioning shapes on the map
@@ -198,24 +190,24 @@ The following code shows how to display a point at the New York location. A circ
 
 .. js ::
    
-  <script type="text/javascript">
-    require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
-              "dojox/geo/openlayers/GeometryFeature" ], function(){
+    require(["dojo/ready", "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+              "dojox/geo/openlayers/GeometryFeature", "dojox/geo/openlayers/Point" ],
+         function(ready, Map, Gfxlayer, GeometryFeature, Point){
   
-      dojo.ready(function(){
+      ready(function(){
         // create a map widget.
-        var map = new dojox.geo.openlayers.Map("map");
+        var map = new Map("map");
        // This is New York
         var ny = {
           latitude : 40.71427,
           longitude : -74.00597
         };
         // create a GfxLayer
-        var layer = new dojox.geo.openlayers.GfxLayer();
+        var layer = new GfxLayer();
         // create a Point geometry at New York location
-        var p = new dojox.geo.openlayers.Point({x:ny.longitude, y:ny.latitude});
+        var p = new Point({x:ny.longitude, y:ny.latitude});
         // create a GeometryFeature
-        var f = new dojox.geo.openlayers.GeometryFeature(p);
+        var f = new GeometryFeature(p);
         // set the shape properties, fill and stroke
         f.setFill([ 0, 128, 128 ]);
         f.setStroke([ 0, 0, 0 ]);
@@ -233,76 +225,76 @@ The following code shows how to display a point at the New York location. A circ
         });
       });
     });
-   </script>
 
 You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The following example shows how to create a polyline joining some major towns of the world.
 
 .. js ::
    
- <script type="text/javascript">
-   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
-             "dojox/geo/openlayers/GeometryFeature" ], function(){
+    require(["dojo/ready", "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+             "dojox/geo/openlayers/GeometryFeature", "dojox/geo/openlayers/LineString"],
+             function(ready, Map, GfxLayer, GeometryFeature, LineString){
 
-   var towns = [ {
-      name : 'Sydney',
-      x : 151.20732,
-      y : -33.86785
-   }, {
-      name : 'Shanghai',
-      x : 121.45806,
-      y : 31.22222
-    }, {
-      name : 'Moscow',
-      x : 37.61556,
-      y : 55.75222
-    }, {
-      name : 'London',
-      x : -0.12574,
-      y : 51.50853
-    }, {
-      name : 'Toronto',
-      x : -79.4163,
-      y : 43.70011
-    }, {
-      name : 'Buenos Aires',
-      x : -58.37723,
-      y : -34.61315
-    }, {
-      name : 'Kinshasa',
-      x : 15.32146,
-      y : -4.32459
-    }, {
-      name : 'Cairo',
-      x : 31.24967,
-      y : 30.06263
-    } ];
-  
-    dojo.ready(function(){
-      // create a map widget and place it on the page.
-      var map = new dojox.geo.openlayers.Map("map");
-      // create a GfxLayer
-      var layer = new dojox.geo.openlayers.GfxLayer();
-      // towns objects already have a x and y field.
-      var pts = new dojox.geo.openlayers.LineString(towns);
-      // create a GeometryFeature
-      var f = new dojox.geo.openlayers.GeometryFeature(pts);
-      // set the shape stroke property
-      f.setStroke([ 0, 0, 0 ]);
-      // add the feature to the layer
-      layer.addFeature(f);
-      // add layer to the map
-      map.addLayer(layer);
+       var towns = [ {
+          name : 'Sydney',
+          x : 151.20732,
+          y : -33.86785
+       }, {
+          name : 'Shanghai',
+          x : 121.45806,
+          y : 31.22222
+       }, {
+          name : 'Moscow',
+          x : 37.61556,
+          y : 55.75222
+       }, {
+          name : 'London',
+          x : -0.12574,
+          y : 51.50853
+       }, {
+          name : 'Toronto',
+          x : -79.4163,
+          y : 43.70011
+       }, {
+          name : 'Buenos Aires',
+          x : -58.37723,
+          y : -34.61315
+       }, {
+          name : 'Kinshasa',
+          x : 15.32146,
+          y : -4.32459
+       }, {
+          name : 'Cairo',
+          x : 31.24967,
+          y : 30.06263
+       } ];
+
+       ready(function(){
+            // create a map widget and place it on the page.
+            var map = new Map("map");
+            // create a GfxLayer
+            var layer = new GfxLayer();
+            // towns objects already have a x and y field.
+            var pts = new LineString(towns);
+            // create a GeometryFeature
+            var f = new GeometryFeature(pts);
+            // set the shape stroke property
+            f.setStroke([ 0, 0, 0 ]);
+            // add the feature to the layer
+            layer.addFeature(f);
+            // add layer to the map
+            map.addLayer(layer);
+       });
     });
-  });
- </script>
 
 You can also place combination of geometries using a dojox.geo.openlayers.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
 
 .. js ::
   
- <script type="text/javascript">
-   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
-             "dojox/geo/openlayers/GeometryFeature" ], function(){
+   require(["dojo/_base/array", "dojo/ready",
+                "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+             "dojox/geo/openlayers/GeometryFeature", "dojox/geo/openlayers/Collection",
+             "dojox/geo/openlayers/Linestring", "dojox/geo/openlayers/Point"],
+         function(array, ready, Map, GfxLayer, GeometryFeature, Collection, LineString, Point){
      var towns = [ {
        name : 'Sydney',
        x : 151.20732,
@@ -337,24 +329,24 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
        y : 30.06263
      } ];
 
-     dojo.ready(function(){
+     ready(function(){
        // create a map widget and place it on the page.
-       var map = new dojox.geo.openlayers.Map("map");
+       var map = new Map("map");
       // create a GfxLayer
-      var layer = new dojox.geo.openlayers.GfxLayer();
+      var layer = new GfxLayer();
       // The array of geometries
       var a = [];
       // towns objects already have a x and y field.
-      var pts = new dojox.geo.openlayers.LineString(towns);
+      var pts = new LineString(towns);
       a.push(pts);
       // make a point for each line.
-      dojo.forEach(towns, function(t){
-        var p = new dojox.geo.openlayers.Point(t);
+      array.forEach(towns, function(t){
+        var p = new Point(t);
         a.push(p);
      });
-     var col = new dojox.geo.openlayers.Collection(a);
+     var col = new Collection(a);
      // create a GeometryFeature
-     var f = new dojox.geo.openlayers.GeometryFeature(col);
+     var f = new GeometryFeature(col);
      // set the shape properties, fill and stroke
      f.setStroke([ 0, 0, 0 ]);
      f.setShapeProperties({
@@ -367,7 +359,6 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
      // fit to New York with 0.1 degrees extent
    });
  });
- </script>
 
 You also might want to display a specific shape on the map. For that, you can redefine the `createShape` function of the GeometryFeature and create the shape you want. This methods takes the dojox.gfx.Surface as parameter that can be used to create the shape.
 
@@ -375,14 +366,14 @@ Example that shows a star at Paris location:
 
 .. js ::
   
- <script type="text/javascript">
-  require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
-      "dojox/geo/openlayers/Point", "dojox/geo/openlayers/GeometryFeature" ], function(){
+  require(["dojo/ready", "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+      "dojox/geo/openlayers/Point", "dojox/geo/openlayers/GeometryFeature"],
+      function(ready, Map, GfxLayer, Point, GeometryFeature){
 
-    dojo.ready(function(){
+    ready(function(){
 
       // create a map widget and place it on the page.
-      var map = new dojox.geo.openlayers.Map("map");
+      var map = new Map("map");
 
       // This Paris
 
@@ -391,14 +382,14 @@ Example that shows a star at Paris location:
         longitude : 2.333333
       };
       // create a GfxLayer
-      var layer = new dojox.geo.openlayers.GfxLayer();
+      var layer = new GfxLayer();
       // create a OpenLayers Point geometry at New York location
-      var p = new dojox.geo.openlayers.Point({
+      var p = new Point({
         x : paris.longitude,
         y : paris.latitude
       });
       // create a GeometryFeature
-      var f = new dojox.geo.openlayers.GeometryFeature(p);
+      var f = new GeometryFeature(p);
       // create a star graphic
       f.createShape = myCreateShape;
       f.setStroke([ 0, 0, 0 ]);
@@ -453,8 +444,7 @@ Example that shows a star at Paris location:
       return s;
     }
   });
- </script>
- 
+
 
 The styling of the GFX shapes is done through the setFill and setStroke methods of the GeometryFeature class. These fill and stroke parameters are simply passed to the shape at display time and depend on the kind of shape displayed.
 
@@ -505,15 +495,16 @@ Here is an example that shows a pie chart at New York location:
 
 .. js ::
   
- <script type="text/javascript">
-  require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/Layer",
+  require([ "dojo/ready", "dojo/dom-construct", "dojo/_base/window",
+      "dojox/geo/openlayers/Map", "dojox/geo/openlayers/Layer",
       "dojox/geo/openlayers/WidgetFeature", "dojox/charting/widget/Chart",
       "dojox/charting/widget/Chart2D", "dojox/charting/plot2d/Pie",
-      "dojox/charting/themes/PlotKit/blue" ], function(){
-    dojo.ready(function(){
+      "dojox/charting/themes/PlotKit/blue" ],
+              function(ready, win, domConstruct, Map, Layer, WidgetFeature, Chart, Chart2D, Pie, blue){
+    ready(function(){
 
       // create a map widget and place it on the page.
-      var map = new dojox.geo.openlayers.Map("map");
+      var map = new Map("map");
       
       // This is New York
       var ny = {
@@ -521,8 +512,8 @@ Here is an example that shows a pie chart at New York location:
         longitude : -74.00597
       };
 
-      var div = dojo.create("div", {}, dojo.body());
-      var chart = new dojox.charting.widget.Chart({
+      var div = domConstruct.create("div", {}, win.body());
+      var chart = new Chart({
         margins : {
           l : 0,
           r : 0,
@@ -541,20 +532,20 @@ Here is an example that shows a pie chart at New York location:
 
       var ser = [ 2, 8, 12, 3 ];
       c.addSeries("Series", ser);
-      c.setTheme(dojox.charting.themes.PlotKit.blue);
+      c.setTheme(blue);
       c.render();
       c.theme.plotarea.fill = undefined;
 
-      descr = {
+      var descr = {
         longitude : ny.longitude,
         latitude : ny.latitude,
         widget : chart,
         width : 120,
         height : 120
       };
-      feature = new dojox.geo.openlayers.WidgetFeature(descr);
+      feature = new WidgetFeature(descr);
 
-      layer = new dojox.geo.openlayers.Layer();
+      layer = new Layer();
       layer.addFeature(feature);
       map.addLayer(layer);
       // fit to New York with 0.1 degrees extent
@@ -564,4 +555,3 @@ Here is an example that shows a pie chart at New York location:
       });
     });
   });
- </script>
