@@ -23,20 +23,22 @@ Usage
 
 Code snippet below illustrates a common usage of Hebrew Date code with the Dijit Calendar widget.
 
-.. js ::
+.. html ::
  
-  <script type="text/javascript">
-    dojo.require("dojox.date.hebrew");
-    dojo.require("dojox.date.hebrew.Date");
-    dojo.require("dojox.date.hebrew.locale");
-  </script>
-  <html><title>Hebrew calendar</title><body>
-    <input name="hebcal"
-       value="2009-03-10"
-       data-dojo-type="dijit.form.DateTextBox"
-       datePackage = "dojox.date.hebrew"
-    >
-  </body></html>
+  <head>
+	  <script type="text/javascript">
+		dojo.require("dojox.date.hebrew");
+		dojo.require("dojox.date.hebrew.Date");
+		dojo.require("dojox.date.hebrew.locale");
+	  </script>
+	  <title>Hebrew calendar</title>
+  </head>
+  <body>
+		<input name="hebcal"
+		   value="2009-03-10"
+		   data-dojo-type="dijit.form.DateTextBox"
+		   datePackage = "dojox.date.hebrew">
+  </body>
 
 Hebrew calendar package
 -----------------------
@@ -63,8 +65,7 @@ Programmatic example
 The code snippet below illustrates conversion between two possible representations of Hebrew date: String and Date object.
 
 .. js ::
- 
-  <script type="text/javascript">
+
    var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'};
 
    // converts string representation of Hebrew date to Date object
@@ -72,7 +73,6 @@ The code snippet below illustrates conversion between two possible representatio
 
    // formats Hebrew date object and serialize it into a string
    var dateHebString = dojox.date.hebrew.locale.format(dateHeb, options);
-  </script>
 
 
 Declarative example
@@ -81,21 +81,23 @@ Declarative example
 Code snippet below illustrates usage of Hebrew calendar in the context of graphical date picker - DateTextBox
 
 
-.. js ::
+.. html ::
  
+  <head>
   <script type="text/javascript">
     dojo.require("dojox.date.hebrew");
     dojo.require("dojox.date.hebrew.Date");
     dojo.require("dojox.date.hebrew.locale");
   </script>
-  <html><title> Hebrew calendar </title><body>
+  <title> Hebrew calendar </title>
+  </head>
+  <body>
     <input name="hebcal"
        value="2009-03-10"
        data-dojo-type="dijit.form.DateTextBox"
        datePackage = "dojox.date.hebrew"
-       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
-    >
-  </body></html>
+       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}">
+  </body>
 
 
 See also
