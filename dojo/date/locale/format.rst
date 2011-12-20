@@ -172,20 +172,19 @@ Render the current Date in several ways using format(). The inverse operation to
   
     .. js ::
   
-        <script type="text/javascript">
             var dojoConfig = {
                 locale: 'en',
                 extraLocale: ['es', 'zh']
             };
-        </script>
-        <script type="text/javascript">
             dojo.require("dojox.widget.DocTester");
             dojo.require("dojo.date.locale");
     
             dojo.ready(function(){
                 var docTest = new dojox.widget.DocTester({}, "docTest");
             });
-        </script>
+
+    .. html ::
+
         <div id="docTest">
             >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "es"}); // locale must match an identifier included in dojoConfig bootstrap, and is normally not specified here (used here for demonstration purposes)
             "23/03/07 06:06"

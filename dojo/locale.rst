@@ -25,15 +25,13 @@ Usage
 A simple call of dojo.locale.
 
 .. js ::
- 
- <script type="text/javascript">
+
    // Dojo 1.7 (AMD)
    require(["dojo/_base/kernel"], function(dojo){
       var currentLocale = dojo.locale;
    });
    // Dojo < 1.7
    var currentLocale = dojo.locale;
- </script>
 
 
 See also

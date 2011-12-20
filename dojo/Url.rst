@@ -13,9 +13,8 @@ Basics
 -------
 Dojo 1.7(AMD)
 -------------
-.. html ::
+.. js ::
   
-   <script type="text/javascript">
         require(["dojo/_base/url", "dojo/dom", "dojo/ready"], function(url, dom, ready){
             ready(function(){
                 dom.byId("scheme").innerHTML =(new url("http://localhost:8080/home/")).scheme  //  'http'
@@ -28,7 +27,9 @@ Dojo 1.7(AMD)
             });
         
         });
-    </script>
+
+.. html ::
+
     <body class="tundra">
         <div id="scheme"></div><br/>
         <div id="host"></div><br/>

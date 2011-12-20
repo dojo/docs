@@ -77,10 +77,9 @@ Basic Example
   Let's look at a quick running example:
 
   .. js ::
-    
-    <script type="text/javascript">
+
       dojo.require("dijit.form.Button");
-   
+
       dojo.ready(function(){
         var myClick = function(presetValue, event){
            var node = dojo.byId("appendLocation");
@@ -89,7 +88,6 @@ Basic Example
         }
         dojo.connect(dijit.byId("myButton"), "onClick", dojo.partial(myClick , "This is preset text!"));
       });
-    </script>
 
   .. html ::
     

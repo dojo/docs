@@ -21,13 +21,11 @@ Usage
 =====
 
 .. js ::
- 
-  <script type="text/javascript">
+
     var svc = new dojo.rpc.[ImplementingClass](args)
 
     var methodDeferred = svc.declaredMethod(declaredArg);
     methodDeferred.then(handlerFunc);
-  </script>
 
 ============== ================= =======================================
 Parameter      Type              Description
@@ -41,8 +39,7 @@ SMD format
 Here is an example SMD v.1 as expected by ``dojo.rpc``.
 
 .. js ::
- 
-  <script type="text/javascript">
+
     var smd = {
       serviceUrl: 'myService.do', // Adress of the RPC service end point
       timeout: 1000, // Only used if an object is passed to the constructor (!)
@@ -68,7 +65,6 @@ Here is an example SMD v.1 as expected by ``dojo.rpc``.
          ]
       ]
     };
-  </script>
 
 
 This SMD describes a single method, ``add``, with two parameters. If ``add`` is called with less than two parameters, an error is thrown. The way method name and parameters are transmitted to the end point depends on the service type

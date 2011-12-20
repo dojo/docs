@@ -75,7 +75,6 @@ Example 1: Creating a deferred and adding callbacks
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
 
       function createDeferred(){
@@ -89,7 +88,6 @@ Example 1: Creating a deferred and adding callbacks
             dojo.byId("response").innerHTML = "Deferred has fired.";
           });
       }
-    </script>
 
   .. html ::
 

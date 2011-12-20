@@ -42,7 +42,7 @@ Each of these methods will be explained now.
 
 A common way to populate dojo.config is via the data-dojo-config="..." attribute of the <script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
 
-.. js ::
+.. html ::
   
   <!DOCTYPE html>
   <html lang="en">
@@ -69,7 +69,7 @@ The content of the data-dojo-config="..." attribute is a comma-delimited list of
 
 In cases where lots of attributes must be set in the dojo.config object, or for developers who prefer not to use the data attribute, dojo.config can be populated by declaring a dojoConfig variable BEFORE the main dojo.js library is included in the document. This looks something like:
 
-.. js ::
+.. html ::
   
   <!DOCTYPE HTML>
   <html lang="en">
@@ -160,16 +160,14 @@ Other Options
 afterOnLoad: true
   (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. Only works with a **built** dojo.js; does not work with dojo.js directly from source control.
 
-.. html ::
+.. js ::
 
-    <script type="text/javascript">
         var dojoConfig = { afterOnLoad:true };
         window.onload = function(){
             var d = document.getElementsByTagName("head")[0].appendChild(document.createElement('script'));
             d.src = "my/dojo.js";
             d.type = "text/javascript";
         }
-    </script>
 
 
 skipIeDomLoaded: false

@@ -66,7 +66,7 @@ To use dojo.back:
 
 3. Call dojo.back.init(); inside a script tag that is inside the <body> tag:
 
-   .. js ::
+   .. html ::
 
        <body>
          <script type="text/javascript">
@@ -130,7 +130,6 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
 
   .. js ::
 
-        <script type="text/javascript">
             dojo.require("dojo.back");
             
             ApplicationState = function(stateData, outputDivId, backForwardOutputDivId, bookmarkValue){
@@ -178,7 +177,6 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
                 appState.showStateData( "initial state" );
                 dojo.back.setInitialState(appState);
             });
-        </script>
 
   .. html ::
 

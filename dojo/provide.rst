@@ -32,8 +32,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- 
- <script type="text/javascript">
+
    define(['dojo/_base/kernel', 'dojo/io/script', 'dojo/_base/loader'], function(dojo, ioScript){
      dojo.provide("my.module");
 
@@ -41,14 +40,12 @@ Dojo 1.7 (AMD)
      // so properties can be assigned to it:
      my.module.name = "my module";
    });
- </script>
 
 Dojo < 1.7
 ----------
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.provide("my.module");
 
    dojo.require("dojo.io.script");
@@ -56,7 +53,6 @@ Dojo < 1.7
    // dojo.provide made sure that my.module was created as a JavaScript object,
    // so properties can be assigned to it:
    my.module.name = "my module";
- </script>
 
 Multiple dojo.provide calls can live in a file, but outside of built layer, it is normal just to see one for the module that matches the file name.
 

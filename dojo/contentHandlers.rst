@@ -28,7 +28,6 @@ The default contentHandler is text, and requires no action:
 
 .. js ::
  
- <script type="text/javascript">
      require(["dojo/_base/xhr"], function(xhr){
         xhr.get({
            url:"foo.txt",
@@ -37,21 +36,18 @@ The default contentHandler is text, and requires no action:
            }
         });
      });
- </script>
 
 
 [ Dojo < 1.7 ]
 
 .. js ::
  
-  <script type="text/javascript">
      dojo.xhrGet({
         url:"foo.txt",
         load: function(data){
            // this uses the default dojo.contentHandlers.text. It simply returns plaintext.
         }
      });
-  </script>
 
 
 Available Handlers

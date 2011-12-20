@@ -42,8 +42,7 @@ Programmatic example
 [ Dojo 1.7+ AMD ]
 
 .. js ::
- 
- <script type="text/javascript">
+
    require(["dojo/_base/lang", function(lang){
      var anOldObject = { bar: "baz" };
      var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
@@ -53,14 +52,12 @@ Programmatic example
      anOldObject.bar = "thonk";
      myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
    });
- </script>
 
 
 [ Dojo < 1.7 ]
 
 .. js ::
- 
- <script type="text/javascript">
+
    var anOldObject = { bar: "baz" };
    var myNewObject = dojo.delegate(anOldObject, { thud: "xyzzy"});
    myNewObject.bar == "baz"; // delegated to anOldObject
@@ -68,6 +65,5 @@ Programmatic example
    myNewObject.thud == "xyzzy"; // mixed in from props
    anOldObject.bar = "thonk";
    myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
- </script>
 
 .. api-inline :: dojo.delegate
