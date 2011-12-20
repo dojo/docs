@@ -28,7 +28,6 @@ Mixin dijit._FocusMixin when you declare your widget, and then reference _onFocu
 
 .. js ::
  
- <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin, dijit._FocusMixin], {
       templateString: "<div><input data-dojo-type="dijit.form.TextBox"><input><input></div>",
       _onFocus: function(){
@@ -40,4 +39,3 @@ Mixin dijit._FocusMixin when you declare your widget, and then reference _onFocu
           this.inherited(arguments);
       }
    });
- </script>

@@ -29,11 +29,9 @@ Mixin dijit._TemplatedMixin when you declare your widget:
 
 .. js ::
  
- <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
        templateString: "<div>hello world</div>"
    });
- </script>
 
 and then instead of defining buildRendering(), define a ``templateString``.
 
@@ -48,18 +46,15 @@ It can either be specified as a literal string:
 
 .. js ::
  
- <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
        templateString: "<div>hello world</div>"
    });
- </script>
 
 
 or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
 
 .. js ::
  
- <script type="text/javascript">
     require([
         "dojo/declare",
         "dijit/_WidgetBase", "dijit._TemplatedMixin", "dojo/text!myNameSpace/templates/MyWidget.html"
@@ -68,7 +63,6 @@ or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
             templateString: template,
         });
     });
- </script>
 
 When using a built or released Dijit tree, the build will ``internStrings``, converting the dojo/text! call
 into a literal string, avoiding a network request when users load the widget.

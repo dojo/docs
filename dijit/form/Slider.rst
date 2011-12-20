@@ -23,11 +23,9 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
   dojo.require("dijit.form.Slider");
   var slider = new dijit.form.HorizontalSlider({
   }, "mySlider");
- </script>
 
 Here are some of the constructor parameters:
 

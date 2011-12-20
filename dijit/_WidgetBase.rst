@@ -24,9 +24,7 @@ All widgets are created by calling :ref:`dojo.declare() <dojo/declare>`, extendi
 
 .. js ::
  
- <script type="text/javascript">
    dojo.declare("MyWidget", dijit._WidgetBase, { ... });
- </script>
 
 and then redefining a number of methods for the widget `lifecycle`_...
 

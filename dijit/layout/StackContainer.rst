@@ -23,9 +23,7 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
    var foo = new dijit.layout.StackContainer(params, srcNodeRef);
- </script>
 
 parameters:
   ==========  ===============  ===========
@@ -81,7 +79,6 @@ Here's an example of a programmatically created StackContainer, and associated S
  
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.ready(function(){
@@ -107,7 +104,6 @@ Here's an example of a programmatically created StackContainer, and associated S
         sc.startup();
         controller.startup();
     });
-    </script>
 
   The HTML is very simple
 

@@ -35,7 +35,6 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.DropDownButton");
         dojo.require("dijit.TooltipDialog");
         dojo.require("dijit.form.TextBox");
@@ -55,7 +54,6 @@ The first example shows how to create a TooltipDialog and DropDownButton program
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
         });
-    </script>
 
   .. html ::
 

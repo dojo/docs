@@ -38,7 +38,6 @@ Note that the tabs all have a fixed height.
  
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.ready(function(){
@@ -60,9 +59,8 @@ Note that the tabs all have a fixed height.
   
         tc.startup();
     });
-    </script>
 
-  The HTML is very simple
+  The HTML is very simple:
 
   .. html ::
 
@@ -165,7 +163,6 @@ true (if programmatically created) or the attribute selected="true" (if declarat
  
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.ready(function(){
@@ -195,9 +192,8 @@ true (if programmatically created) or the attribute selected="true" (if declarat
   
         tc.startup();
     });
-    </script>
 
-  The HTML is very simple
+  The HTML is very simple:
 
   .. html ::
 

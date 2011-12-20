@@ -35,7 +35,6 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
 
   .. js ::
  
-    <script type="text/javascript">
       dojo.require("dijit.form.CheckBox");
 
       dojo.ready(function(){
@@ -45,7 +44,6 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
           name: "drink",
         }, "radioOne");
       });
-    </script>
 
   .. html ::
 
