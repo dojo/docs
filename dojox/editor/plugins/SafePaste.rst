@@ -30,20 +30,20 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+First import its CSS.  This is done by just adding a link tag to the header.  Something like:
+
+.. css ::
+
+    @import "dojox/editor/plugins/resources/css/SafePaste.css";
+
+Then require it into the page where you're using the editor:
 
 .. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.SafePaste");
 
-You then need to import its CSS.  This is done by just adding a link tag to the header.  Something like:
-
-.. html ::
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/SafePaste.css";
-  </style>
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins you want to load into the editor.  For example:
 

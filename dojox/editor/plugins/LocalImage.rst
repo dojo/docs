@@ -28,35 +28,29 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
 
-.. html ::
+First load the CSS. Note that the location of LocalImage.css may be changed according to the actual environment.
 
-  <script type="text/javascript">
-    dojo.require("dijit.Editor");
-    ...
-  </script>
-  ...
-  <div data-dojo-type="dijit.Editor" id="editor1">
-  ...
-  </div>
+.. css ::
 
-Then just declare the plugin and configure it as follows. Note that the location of LocalImage.css may be changed according to the actual environment.
-
-.. html ::
-
-  <style type="text/css">
     @import "dojox/form/resources/FileUploader.css";
     @import "dojox/editor/plugins/resources/css/LocalImage.css";
-    ...
-  </style>
-  <script type="text/javascript">
+
+Then load the plugin and Editor:
+
+.. js ::
+
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.LocalImage");
-    ...
-  </script>
-  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
-  ...
+
+
+Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+
+.. html ::
+
+  <div data-dojo-type="dijit.Editor" id="editor1"
+  		data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
+  	...
   </div>
 
 If you are running the demo in Dojo SDK, configure the server-side php files as follows.

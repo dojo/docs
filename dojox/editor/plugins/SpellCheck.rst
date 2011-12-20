@@ -34,38 +34,32 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
-
-.. html ::
-
-  <script type="text/javascript">
-    dojo.require("dijit.Editor");
-    ...
-  </script>
-  ...
-  <div data-dojo-type="dijit.Editor" id="editor1">
-  ...
-  </div>
-
-Configure the server-side php file.
+First, configure the server-side php file.
 
 * Rename **dojox/editor/tests/spellCheck.php.disabled** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words.
 * Rename **dojox/editor/tests/PorterStemmer.php.disabled** to **dojox/editor/tests/PorterStemmer**.
 
-Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
+Then in your HTML code, first load the CSS.
+Note that the location of SpellCheck.css may be changed according to the actual environment.
+
+.. css ::
+
+    @import "../plugins/resources/css/SpellCheck.css";
+
+
+Then load the Editor and the plugin:
+
+.. js ::
+
+    dojo.require("dijit.Editor");
+    dojo.require("dojox.editor.plugins.SpellCheck");
+
+Finally, declare the Editor to use it:
 
 .. html ::
 
-  <style type="text/css">
-    @import "../plugins/resources/css/SpellCheck.css";
-    ...
-  </style>
-  <script type="text/javascript">
-    dojo.require("dijit.Editor");
-    dojo.require("dojox.editor.plugins.SpellCheck");
-    ...
-  </script>
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+  <div data-dojo-type="dijit.Editor" id="editor"
+  	data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
   ...
   </div>
 

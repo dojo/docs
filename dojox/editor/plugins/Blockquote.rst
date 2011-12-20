@@ -27,7 +27,15 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+
+First include the CSS for it.  For example:
+
+.. css ::
+
+    @import "dojox/editor/plugins/resources/css/Blockquote.css";
+
+Then require it into the page where you're using the editor:
 
 .. js ::
  
@@ -40,15 +48,6 @@ Once it has been required in, all you have to do is include it in the list of ex
 .. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['blockquote']"></div>
-
-
-You also need to include the CSS for it.  For example:
-
-.. html ::
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/Blockquote.css";
-  </style>
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Blockqupte plugin!  You can use the button to toggle the quotation mode of the text underneath the cursor in the document, or across a selection of text in the document.
