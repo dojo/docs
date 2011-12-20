@@ -30,17 +30,21 @@ The various views can be combined in any combination to create a complete widget
 Usage
 =====
 
-.. js ::
+.. css ::
  
- <style type="text/css">
    @import "dojox/widget/Calendar/Calendar.css";
- </style>
- <script type="text/javascript">
+
+.. js ::
+
    dojo.require("dojox.widget.Calendar");
- </script>
+
+.. html ::
+
  <div data-dojo-type="dojox.widget.Calendar"></div>
 
-As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page, the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'', and a calendar can be placed on the page using the ''data-dojo-type'' attribute.
+As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page,
+the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'',
+and a calendar can be placed on the page using the ''data-dojo-type'' attribute.
 
 
 Examples
@@ -55,18 +59,12 @@ This example shows the standard calendar being created from code.  Include the C
 
   A programmatically created Calendar. First let's write up some simple HTML code because you need to define the place where your Calendar should be created.
   
-  .. html ::
+  .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
-    </style>
-    <div id="cal_1"></div>
-    <div id="cal_1_report"></div>
 
   .. js ::
-    
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
         dojo.ready(function(){
@@ -76,24 +74,23 @@ This example shows the standard calendar being created from code.  Include the C
               dojo.byId("cal_1_report").innerHTML = date;
             });
         });
-    </script>
+
+  .. html ::
+
+    <div id="cal_1"></div>
+    <div id="cal_1_report"></div>
+
 
 This example shows just the daily calendar being instantiated, with no month or year options.
 
 .. code-example ::
   
-  .. html ::
+  .. css ::
 
-    <style type="text/css">
-      @import "dojox/widget/Calendar/Calendar.css";
-    </style>
-    <div id="cal_2"></div>
-    <div id="cal_2_report"></div>
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
 
   .. js ::
-    
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Calendar");
 
         dojo.ready(function(){
@@ -103,7 +100,12 @@ This example shows just the daily calendar being instantiated, with no month or 
               dojo.byId("cal_2_report").innerHTML = date;
             });
         });
-    </script>
+
+  .. html ::
+
+    <div id="cal_2"></div>
+    <div id="cal_2_report"></div>
+
 
 Declarative example
 -------------------
@@ -112,11 +114,16 @@ This example shows how to construct a standard Calendar declaratively.  Note the
 
 .. code-example ::
   
+  .. css ::
+
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
+
+  .. js ::
+
+        dojo.require("dojox.widget.Calendar");
+
   .. html ::
 
-    <style type="text/css">
-      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
-    </style>
     <div id="cal_3" data-dojo-type="dojox.widget.Calendar">
       <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_3_report").innerHTML = date;
@@ -124,35 +131,27 @@ This example shows how to construct a standard Calendar declaratively.  Note the
     </div>
     <div id="cal_3_report"></div>
 
-  .. js ::
-    
 
-    <script type="text/javascript">
-        dojo.require("dojox.widget.Calendar");
-    </script>
-  
 This example shows how to construct a Calendar declaratively, which only shows the Daily view.  Note the ''<script type="dojo/connect" '' used to listen for events.  This can be used instead of calls to ''dojo.connect'' for listening to function calls and events on widgets.
 
 .. code-example ::
-  
+
+  .. css ::
+
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
+
+  .. js ::
+
+        dojo.require("dojox.widget.Calendar");
+
   .. html ::
 
-    <style type="text/css">
-      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
-    </style>
     <div id="cal_4" data-dojo-type="dojox.widget.DailyCalendar">
       <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_4_report").innerHTML = date;
       </script>
     </div>
     <div id="cal_4_report"></div>
-
-  .. js ::
-    
-
-    <script type="text/javascript">
-        dojo.require("dojox.widget.Calendar");
-    </script>
 
 
 Creating A Custom Calendar By Mixing Views
@@ -162,29 +161,28 @@ As the calendar consists of a combination of views, it is possible to mix these 
 
 .. code-example ::
   
+  .. css ::
+
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
+
+  .. js ::
+
+        dojo.require("dojox.widget.Calendar");
+        dojo.require("dojox.widget.CalendarViews");
+
+        dojo.declare("dojox.widget.CustomDayAndYearCalendar",
+		  [dojox.widget._CalendarBase,
+		   dojox.widget._CalendarDay,
+		   dojox.widget._CalendarYear], {});
+
   .. html ::
 
-    <style type="text/css">
-      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
-    </style>
     <div id="cal_5" data-dojo-type="dojox.widget.CustomDayAndYearCalendar">
       <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_5_report").innerHTML = date;
       </script>
     </div>
     <div id="cal_5_report"></div>
-
-  .. js ::
-    
-
-    <script type="text/javascript">
-        dojo.require("dojox.widget.Calendar");
-
-        dojo.declare("dojox.widget.CustomDayAndYearCalendar",
-	  [dojox.widget._CalendarBase,
-	   dojox.widget._CalendarDay,
-	   dojox.widget._CalendarYear], {});
-    </script>
 
 
 See also
