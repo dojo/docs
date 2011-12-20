@@ -25,7 +25,6 @@ This example shows how to create a menu and combo button programmatically.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.Menu");
         dojo.ready(function(){
@@ -46,13 +45,8 @@ This example shows how to create a menu and combo button programmatically.
                 label: "get all mail",
                 dropDown: menu
             });
-            dojo.byId("myContainer").appendChild(button.domNode);
+            button.placeAt(dojo.body());
         });
-    </script>
-
-  .. html ::
-
-    <div id="myContainer"></div>
 
 
 Declarative example
@@ -64,13 +58,11 @@ and the other for the drop-down widget that's displayed when you press the butto
 
 .. code-example ::
 
-  .. js ::
+  ..js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
         dojo.require("dijit.DropDownMenu");
         dojo.require("dijit.MenuItem");
-    </script>
 
   .. html ::
 
