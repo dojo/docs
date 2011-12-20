@@ -34,7 +34,15 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+
+First include the CSS for it:
+
+.. css ::
+
+    @import "dojox/editor/plugins/resources/css/CollapsibleToolbar.css";
+
+Then require it into the page where you're using the editor:
 
 .. js ::
  
@@ -48,14 +56,6 @@ Once it has been required in, all you have to do is include it in the list of ex
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['collapsibletoolbar']"></div>
 
-
-You also need to include the CSS for it.  For example:
-
-.. html ::
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/CollapsibleToolbar.css";
-  </style>
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the CollapsibleToolbar plugin!  You can click the collapse icon to collapse the toolbar, and the expand icon to bring it back

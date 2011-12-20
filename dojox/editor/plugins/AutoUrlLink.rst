@@ -23,31 +23,21 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is simple and painless. The first thing you need to do is require the editor into the page. This is done in the same spot all your dojo.require called are made, usually a head script tag. For example:
+Usage of this plugin is simple and painless.
+The first thing you need to do is require the editor and into the page.
 
-.. html ::
+.. js ::
 
-  <script type="text/javascript">
-    dojo.require("dijit.Editor");
-    ...
-  </script>
-  ...
-  <div data-dojo-type="dijit.Editor" id="editor1">
-  ...
-  </div>
-
-Then just declare the plugin and configure it as follows.
-
-.. html ::
-
-  <script type="text/javascript">
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.AutoUrlLink");
-    ...
-  </script>
-  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
-  ...
-  </div>
+
+Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
+
+.. html ::
+
+	<div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
+	  ...
+  	</div>
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the AutoUrlLink plugin!
 

@@ -33,20 +33,20 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+
+First include the CSS for it:
+
+.. css ::
+
+    @import "dojox/editor/plugins/resources/css/TextColor.css";
+
+Then require it into the page where you're using the editor:
 
 .. js ::
  
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.TextColor");
-
-You also need to include the CSS for it.  For example:
-
-.. html ::
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/TextColor.css";
-  </style>
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:

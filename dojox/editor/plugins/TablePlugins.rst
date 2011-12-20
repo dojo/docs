@@ -43,20 +43,16 @@ Although the code for the Editor is complex, it is quite simple to implement:
   The CSS
 
   .. css ::
-  
-    <style type="text/css">
+
         @import "{{baseUrl}}dojox/editor/plugins/resources/editorPlugins.css";
-    </style>
 
   It's just a matter of using the proper *requires* in the JavaScript:
 
   .. js ::
-  
-    <script type="text/javascript">
+
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.TablePlugins");
     dojo.require("dojox.editor.plugins.ResizeTableColumn");
-    </script>
 
   Slightly more difficult is the HTML. The plugins are assigned within an array. Be sure to get commas correct or you will get a parse error:
 

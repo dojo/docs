@@ -27,7 +27,15 @@ Usage
 
 Basic Usage
 -----------
-Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
+Usage of this plugin is quite simple and painless.
+
+First include the CSS for it:
+
+.. css ::
+
+    @import "dojox/editor/plugins/resources/css/StatusBar.css";
+
+Then require it into the page where you're using the editor:
 
 .. js ::
  
@@ -47,16 +55,10 @@ Or a status bar without resizer:
 
   <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name:'statusbar',resizer:false}]"></div>
 
-You also need to include the CSS for it.  For example:
-
-.. html ::
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/StatusBar.css";
-  </style>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the StatusBar plugin.  You can now use the status bar to display status in the following ways:
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the StatusBar plugin.
+You can now use the status bar to display status in the following ways:
 
 .. js ::
 
