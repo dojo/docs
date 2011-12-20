@@ -97,26 +97,22 @@ EnhancedGrid can also be run with a flexible combination of various plugins, a t
 
 1. Import theme CSS
 
-.. js ::
+.. css ::
   
-  <style type="text/css">
       @import "dijit/themes/claro/claro.css";
       @import "dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
       ...
-  </style>
 
 
 2. Declare required feature plugins
 
 .. js ::
-  
-  <script type="text/javascript">
+
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.DnD");
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
-  </script>
 
 3. Use feature plugins:
 

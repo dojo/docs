@@ -24,7 +24,6 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
    dojo.require("dojo.parser");
    dojo.require("dojox.av.FLVideo");
    dojo.require("dojox.av.widget.Player");
@@ -32,7 +31,8 @@ Usage
    dojo.require("dojox.av.widget.VolumeButton");
    dojo.require("dojox.av.widget.ProgressSlider");
    dojo.require("dojox.av.widget.Status");
- </script>
+
+.. html ::
 
  <div data-dojo-type="dojox.av.widget.Player" data-dojo-props="playerWidth:'100%'">
     <div data-dojo-type="dojox.av.FLVideo" data-dojo-props="controlType:'video', initialVolume:0.1, mediaUrl:'video/Grog.flv', autoPlay:true, isDebug:false"></div>

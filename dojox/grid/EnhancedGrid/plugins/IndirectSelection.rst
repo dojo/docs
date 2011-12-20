@@ -100,12 +100,10 @@ Usage
 * Declare indirect selection feature plugin
 
 .. js ::
-  
-  <script type="text/javascript">
+
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
-  </script>
 
 * Use indirect selection feature with check boxes
 
@@ -119,10 +117,8 @@ with HTML markup
 with JavaScript
     
 .. js ::
-  
-  <script>
+
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
-  </script>
 
 * Use indirect selection feature with radio buttons
 
@@ -136,10 +132,8 @@ with HTML markup
 with JavaScript
     
 .. js ::
-  
-  <script>
+
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: "single", ...}, dojo.byId('gridDiv'));
-  </script>
 
 * It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
@@ -214,28 +208,22 @@ Usages
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
 .. js ::
-  
-  <script>
+
       for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
          grid.rowSelectCell.toggleRow(selectedRows[i], true);
       }
-  </script>
 
 * When in non-‘single’ selection mode, it’s also easy to select or deselect all rows by:
 
 .. js ::
-  
-  <script>
+
       dijit.byId("grid").rowSelectCell.toggleAllSelection(true|false);
-  </script>
 
 * Another handy usage is to enable or disable a check box or radio button for a certain row by:
 
 .. js ::
-  
-  <script>
+
       dijit.byId('grid').rowSelectCell.setDisabled(rowIndex, true|false);
-  </script>
 
 * You can check whether a certain row is selected with the following code.
 
@@ -252,10 +240,8 @@ Usages
 or
 
 .. js ::
-  
-  <script>
+
     var grid = new dojox.grid.EnhancedGrid({id:"grid", plugins:{indirectSelection:{name:"Selection",width:"70px",styles:"text-align:center;"}, ...}, dojo.byId('gridDiv'));
-  </script>
 
 
 Known Issues

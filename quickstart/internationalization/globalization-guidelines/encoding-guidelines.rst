@@ -89,23 +89,19 @@ You must use UTF-8 to decode XHR request parameters.
 The dojo.xhr* functions are the most common way in Dojo to enable Ajax features -- sending an asynchronous request to the server by an XMLHttpRequest object. The typical call to one of these functions can be:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.xhrGet({
        url: "foo.jsp",
        content: {"name": "\u4e00"} // \u4e00 ("?") is the Chinese character for "one"
    });
- </script>
 
 The url is where this request will be sent to. The content is the JSON object that will be sent in the request. In Dojo’s implementation, the key and value pairs in the content are encoded by the encodeURIComponent function first, and then converted to a query string like "key=value&key=value&...". The xhrPost function puts the query string into the request content, and other functions like xhrGet append the query string to the end of the url, so the previous code is equal to the following code:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.xhrGet({
        url: "foo.jsp?name=%e4%b8%80", // %e4%b8%80 are the UTF-8 bytes for \u4e00
    });
- </script>
 
 Because the encodeURIComponent function always uses UTF-8, you must use UTF-8 at the server side to decode the request parameters both in the URL (xhrGet) and in the request content (xhrPost).
 
@@ -137,13 +133,11 @@ You must use UTF-8 encoding when using a non-English string in a URL.
 Some browsers like IE always send URLs using the default system encoding. For example, in a Simplified Chinese Windows XP operating system, IE sends a URL encoded in GB2312. If you need to put some non-English parameters in a URL, make sure that you have encoded it first using the encodeURIComponent function. For example, in a Simplified Chinese Windows XP, if you run the following script in IE:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.xhrPost({
        url: "foo.jsp?name1=\u4e00",
        content: {"name2": "\u4e00"}
    });
- </script>
 
 You might get different results for name1 and name2 at the server side:
 
@@ -153,13 +147,11 @@ You might get different results for name1 and name2 at the server side:
 The right way is to encode name1 first:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.xhrPost({
        url: "foo.jsp?name1=" + encodeURIComponent("\u4e00"),
        content: {"name2": "\u4e00"}
    });
- </script>
 
 
 Sending Responses

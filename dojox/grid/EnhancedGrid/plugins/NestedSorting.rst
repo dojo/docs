@@ -98,12 +98,10 @@ Using the nested sorting feature is pretty simple as shown below:
 * Declare nested sorting feature plugin
 
 .. js ::
-  
-  <script type="text/javascript">
+
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
       ...
-  </script>
 
 * Use nested sorting feature
 
@@ -117,10 +115,8 @@ with HTML markup
 with JavaScript way
     
 .. js ::
-  
-  <script>
+
       var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
-  </script>
 
 * Set default sorting order with sortFields
    

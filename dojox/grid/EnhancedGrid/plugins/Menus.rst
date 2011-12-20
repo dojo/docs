@@ -237,12 +237,10 @@ Usage
 * Declare menu feature plugin
 
 .. js ::
-  
-  <script type="text/javascript">
+
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       ...
-  </script>
 
 * Use menu feature
 
@@ -288,13 +286,11 @@ There will be four events fired corresponding to the appropriate menu types:
 The Event parameter contains rowIndex and cellIndex, so following is a quick sample shows how to get row/column index when the menu popped up:
 
 .. js ::
-  
-  <script type="text/javascript">
+
       dojo.connect(grid, 'onRowContextMenu', function(e){
           var rowIndex = e.rowIndex;
           var colIndex = e.cellIndex;
       });
-  </script>
 
 
 Tips

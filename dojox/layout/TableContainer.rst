@@ -77,14 +77,12 @@ Simple Example, one column and no styling
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.NumberSpinner");
-    </script>
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
 
@@ -106,14 +104,12 @@ Two Columns, Label Styling
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.NumberSpinner");
-    </script>
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label cells.
 
@@ -145,14 +141,12 @@ Two Columns, Label and Value cell Styling
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.NumberSpinner");
-    </script>
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
 
@@ -190,14 +184,12 @@ Using Colspan
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.Textarea");
-    </script>
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note that the first three widgets are given a 'colspan' attribute, which makes them take up multiple columns. To accommodate these extra columns, the TableContainer is given the attribute cols='4'. This is useful when you have a widget that requires more room. Since the CheckBox widgets along the bottom have no 'colspan' attribute, they each occupy a single column
 
@@ -241,12 +233,11 @@ Programmatic example
   A TableContainer widget is created programmatically, and four text box widgets are added to it.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
-      
+
 
       // Create the TableContainer, and insert it into the DOM node with id "putWidgetHere".
       // Add the custom class "labelsAndValues"
@@ -273,7 +264,6 @@ Programmatic example
       // the child widgets in the correct place.
       programmatic.startup();
 
-    </script>
 
   No HTML is required here, as it is a purely programmatic example
 
@@ -306,12 +296,10 @@ Setting the Label Width
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
   .. js ::
-  
-    <script type="text/javascript">
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
-    </script>
 
   Declare the required HTML. Note the 'labelWidth' attribute on the TableContainer, which specifies the width of the labels in pixels.
 

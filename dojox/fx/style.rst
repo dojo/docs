@@ -18,8 +18,7 @@ Usage
 These API's are identical to their plain Dojo counterparts: :ref:`dojo.addClass <dojo/addClass>`, :ref:`dojo.removeClass <dojo/removeClass>`, :ref:`dojo.toggleClass <dojo/toggleClass>`, though they return an instance of a dojo.Animation, and require you to call .play()
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.require("dojox.fx.style");
    dojo.ready(function(){
 
@@ -33,7 +32,6 @@ These API's are identical to their plain Dojo counterparts: :ref:`dojo.addClass 
        dojox.fx.toggleClass("bamm", "bar").play();
 
    });
- </script>
 
 Additionally, you can pass in an animation "magic arg", defining additional properties for the animation (such as duration: easing: rate: ... ). This is passed as the third parameter to removeClass and addClass:
 

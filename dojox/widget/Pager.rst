@@ -23,10 +23,8 @@ Usage
 =====
 
 .. js ::
- 
- <script type="text/javascript">
+
    // your code
- </script>
 
 This Widget uses dojo.data, Dojo's uniform and consistent data access layer.
 

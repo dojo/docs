@@ -30,7 +30,7 @@ The most important attribute (parameter) would be the `acct` value, which should
 
 You can define your account number as a dojoConfig parameter ``urchin``. Simply include the key and a value however you set dojoConfig, either before ``dojo.js`` is loaded:
 
-.. js ::
+.. html ::
   
   <script type="text/javascript">
      var dojoConfig = { urchin: "UA-12345-67" };

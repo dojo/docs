@@ -26,11 +26,9 @@ Usage
 To use OfflineRest, first load the OfflineRest module before your JsonRestStore:
 
 .. js ::
- 
- <script type="text/javascript">
+
    dojo.require("dojox.rpc.OfflineRest");
    dojo.require("dojox.data.JsonRestStore");
- </script>
 
 In order to indicate that a store should have offline support, simply add that store to the set of offline stores:
 

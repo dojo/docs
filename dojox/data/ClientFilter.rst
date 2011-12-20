@@ -72,8 +72,7 @@ To use the ClientFilter with a data store which offers optional support of Clien
 The important note is that you must load ClientFilter before you dojo.require a store.
 
 .. js ::
- 
- <script type="text/javascript">
+
    // first include ClientFilter:
    dojo.require('dojox.data.ClientFilter');
    // now include the data store:
@@ -81,7 +80,6 @@ The important note is that you must load ClientFilter before you dojo.require a 
 
    // ... later:
    // set queryOptions:{cache:true} in the request:
- </script>
 
 
 See also
