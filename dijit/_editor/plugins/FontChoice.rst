@@ -88,7 +88,7 @@ Basic Usage
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");
@@ -117,7 +117,7 @@ Basic Usage: Plain Text Previews
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");

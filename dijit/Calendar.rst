@@ -36,7 +36,7 @@ A plain Calendar widget with the formatted date below:
   :height: 350
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -66,7 +66,7 @@ With an initial selection and weekends disabled:
   :type: inline
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -97,7 +97,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
   :type: inline
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -136,7 +136,7 @@ Custom styling:
   :type: inline
   :version: 1.5
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.Calendar");
@@ -165,7 +165,7 @@ Custom styling:
   :type: inline
   :version: 1.5
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer

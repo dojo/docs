@@ -29,7 +29,7 @@ HTML markup usage sample
   :width: 550
   :height: 330
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
@@ -130,7 +130,7 @@ Javascript usage sample
   :width: 550
   :height: 330
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");

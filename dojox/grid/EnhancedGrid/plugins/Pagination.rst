@@ -23,7 +23,7 @@ Pagination is a plugin for dojox.grid.EnhancedGrid. It's designed to allow the u
   :width: 550
   :height: 350
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");

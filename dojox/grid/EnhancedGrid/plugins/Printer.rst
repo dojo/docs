@@ -23,7 +23,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
   :width: 400
   :height: 400
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");

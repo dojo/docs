@@ -60,7 +60,7 @@ Examples
 
   Examples of dojo.trim().
 
-  .. javascript::
+  .. js ::
 
     <script>
       function show(str){

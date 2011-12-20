@@ -70,7 +70,7 @@ Let's look at a quick example:
 .. code-example::
   :type: inline
  
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {
@@ -93,7 +93,7 @@ Let's say I want to call a method in a given scope. I could do:
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {
@@ -112,7 +112,7 @@ But that is too much typing. If there's a method that you want to use that's alr
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {
@@ -136,7 +136,7 @@ You can also provide arguments to the function you're calling. Here's an example
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {
@@ -161,7 +161,7 @@ Let's say I want to stop right clicking on my page. This is a one-liner with doj
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       document.onconextmenu = dojo.hitch(dojo, "stopEvent");
@@ -173,7 +173,7 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {
@@ -194,7 +194,7 @@ The above example won't work. If we want to access this.foo, we need to have 'me
   :type: inline
   :toolbar: none
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       var myObj = {

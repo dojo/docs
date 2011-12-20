@@ -45,7 +45,7 @@ Programmatic example
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
@@ -68,7 +68,7 @@ Declarative example
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
@@ -88,7 +88,7 @@ A ColorPicker within a DropDownButton
 
     <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");

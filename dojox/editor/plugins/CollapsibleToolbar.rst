@@ -70,7 +70,7 @@ Basic Usage
   :djConfig: parseOnLoad: true
   :version: 1.5
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.Editor");

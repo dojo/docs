@@ -81,7 +81,7 @@ Example of a continuous pan.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -149,7 +149,7 @@ Example using different pan directions for each pane.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");

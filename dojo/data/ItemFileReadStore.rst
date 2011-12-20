@@ -960,7 +960,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
   :djConfig: parseOnLoad: true
   :version: 1.4
   
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -1017,7 +1017,7 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");

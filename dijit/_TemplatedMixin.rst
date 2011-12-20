@@ -114,7 +114,7 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
   :height: 250
   :toolbar: versions, dir
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit._WidgetBase");
@@ -167,7 +167,7 @@ For example:
   :height: 250
   :toolbar: versions, dir
 
-  .. javascript::
+  .. js ::
 
     <script>
         dojo.require("dijit._WidgetBase");

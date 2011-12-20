@@ -64,7 +64,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   Load the Portlet JavaScript.
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
 
@@ -105,7 +105,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   Load the Portlet JavaScript.
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
 
@@ -150,7 +150,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   Load the Portlet JavaScript.
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
 
@@ -193,7 +193,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
   Load the Portlet and GridContainer JavaScript.
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
 

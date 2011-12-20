@@ -40,7 +40,7 @@ This example shows a simple Select widget - converted from a select tag.
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script>
         dojo.require("dijit.form.Select");
@@ -64,7 +64,7 @@ This example shows how you can set up the same select as the previous example, b
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Select");
@@ -91,7 +91,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script>
           dojo.require("dijit.form.Select");
@@ -116,7 +116,7 @@ However, you can specify a width on the select to force a fixed width.
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
           dojo.require("dijit.form.Select");

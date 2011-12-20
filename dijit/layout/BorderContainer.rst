@@ -83,7 +83,7 @@ Declarative example
 
   Let's specify a simple BorderContainer with a left and center region
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -129,7 +129,7 @@ This example uses layoutPriority to include two left panes in one BorderContaine
   :width: 660
   :version: 1.6
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -174,7 +174,7 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   This example uses two BorderContainers to allow to, left and right content areas. 
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -244,7 +244,7 @@ after it has been added to the DOM, so that its contained BorderContainer can la
   :height: 400
   :width: 660
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dijit._Widget");

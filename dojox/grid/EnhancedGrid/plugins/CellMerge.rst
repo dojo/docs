@@ -23,7 +23,7 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
   :width: 600
   :height: 500
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");

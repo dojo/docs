@@ -36,7 +36,7 @@ Note that the tabs all have a fixed height.
   :toolbar: versions, themes, dir
   :width: 400
  
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -83,7 +83,7 @@ Here are some markup examples:
 
   This is a plain TabContainer with three tabs and fixed height. The third tab is closable
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -120,7 +120,7 @@ The second tab is closable.
   :toolbar: versions, themes, dir
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -167,7 +167,7 @@ true (if programmatically created) or the attribute selected="true" (if declarat
   :type: dialog
   :toolbar: versions, themes, dir
  
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -252,7 +252,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");

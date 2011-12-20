@@ -75,7 +75,7 @@ Format some HTML markup
   :djConfig: parseOnLoad: true
   :version: 1.6-2.0
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -139,7 +139,7 @@ Format some HTML markup with three space indent
   :djConfig: parseOnLoad: true
   :version: 1.6-2.0
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -202,7 +202,7 @@ Format some HTML markup with three space indent and 20 character line wrap
   :djConfig: parseOnLoad: true
   :version: 1.6-2.0
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -266,7 +266,7 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");

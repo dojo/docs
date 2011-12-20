@@ -21,7 +21,7 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
   :width: 550
   :height: 330
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");

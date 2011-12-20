@@ -52,7 +52,7 @@ Example
 
   dojo.delegate in action
   
-  .. javascript::
+  .. js ::
 
     dojo.require("dojox.NodeList.delegate");
     dojo.ready(function(){

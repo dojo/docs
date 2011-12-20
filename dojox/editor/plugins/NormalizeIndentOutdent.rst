@@ -82,7 +82,7 @@ Basic Usage
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -132,7 +132,7 @@ Configured indent to be ems
   :djConfig: parseOnLoad: true
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script>
       dojo.require("dijit.form.Button");

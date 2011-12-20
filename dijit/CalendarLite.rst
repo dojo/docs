@@ -21,7 +21,7 @@ A plain Calendar widget with the formatted date below
   :height: 350
   :version: 1.4
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
       dojo.require("dijit.CalendarLite");

@@ -21,7 +21,7 @@ Once you have read through this page you should be able to create such a layout 
   :djConfig: parseOnLoad: true
   :type: inline
 
-  .. javascript::
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
@@ -139,7 +139,7 @@ You typically start off the page using a BorderContainer, like this, to split th
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
@@ -172,7 +172,7 @@ For instance, on the left you might want an AccordionContainer:
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.AccordionContainer");
@@ -200,7 +200,7 @@ And a TabContainer in the middle:
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.TabContainer");
@@ -229,7 +229,7 @@ Nesting those inside of the BorderContainer will look like this:
 .. code-example::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. js ::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");

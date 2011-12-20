@@ -50,7 +50,7 @@ Set content with styles
 
 .. code-example::
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.html._base");

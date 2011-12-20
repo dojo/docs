@@ -87,7 +87,7 @@ Examples
 
     <div id="SemiCircularGauge" ></div>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require('dijit.form.Button');

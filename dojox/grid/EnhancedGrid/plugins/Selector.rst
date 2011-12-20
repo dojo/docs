@@ -23,7 +23,7 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
   :width: 640
   :height: 610
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");

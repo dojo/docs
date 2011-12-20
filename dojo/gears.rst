@@ -12,7 +12,7 @@ Example
 Dojo 1.7 (AMD)
 --------------
 
-  .. javascript::
+  .. js ::
 
 	require(["dojo/gears", "dojo/ready"], function(gears, ready){
 		ready(function(){
@@ -25,7 +25,7 @@ Dojo 1.7 (AMD)
 Dojo < 1.7
 ----------
 
-  .. javascript::
+  .. js ::
 
     dojo.require("dojo.gears");
     dojo.ready(function(){

@@ -23,7 +23,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
   :width: 650
   :height: 600
 
-  .. javascript::
+  .. js ::
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");

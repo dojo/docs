@@ -63,7 +63,7 @@ Example using the fade transition.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
@@ -130,7 +130,7 @@ Example using cross-fade transition.
         }
     </style>
 
-  .. javascript::
+  .. js ::
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
