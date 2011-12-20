@@ -76,11 +76,6 @@ Please see the following for an example:
     <br>
 
 
-  .. css ::
-
-    <style type="text/css">
-    </style>
-
 To programmatically size a textbox you would do:
 
 .. js ::
@@ -119,11 +114,6 @@ Please see the following example for more detail:
     <br>
     <label for="value1Box">A textbox set with a value from the above textbox:</label> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
     <br>
-
-  .. css ::
-
-    <style type="text/css">
-    </style>
 
 Using the placeholder parameter
 -------------------------------

@@ -25,13 +25,11 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
    dojo.require("dijit.Tooltip");
    new dijit.Tooltip({
       connectId: ["exampleNode"],
       label: "the text for the tooltip"
    });
- </script>
 
 =========  =========================  =============================================================================
 Parameter  Type                       Description

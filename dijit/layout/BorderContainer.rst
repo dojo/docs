@@ -49,14 +49,13 @@ Besides setting the size of the BorderContainer itself, you generally need to se
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
 
-``Note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
+``Note:`` In order to set the overall size of a BorderContainer to the full size of the viewport,
+the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
 
-.. html ::
+.. css ::
   
-    <style type="text/css">
     body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; }
     #borderContainer { width:100%; height:100% }
-    </style>
 
 Otherwise, the computed style of the BorderContainer will report 0 rather than the browser-calculated size of the viewport.
 
@@ -83,22 +82,6 @@ Declarative example
 
   Let's specify a simple BorderContainer with a left and center region
 
-  .. js ::
-
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dijit.layout.BorderContainer");
-
-  The markup has to look as follows
-  
-  .. html ::
-    
-    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
-      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi</div>
-      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
-    </div>
-  
-  A simple set of CSS rules
-  
   .. css ::
 
       html, body {
@@ -112,7 +95,19 @@ Declarative example
         width: 100%;
         height: 100%;
       }
+
+  .. js ::
+
+      dojo.require("dijit.layout.ContentPane");
+      dojo.require("dijit.layout.BorderContainer");
+
+  .. html ::
     
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi</div>
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
+    </div>
+
 
 Using layoutPriority
 --------------------
@@ -140,7 +135,6 @@ This example uses layoutPriority to include two left panes in one BorderContaine
   
   .. css ::
  
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
@@ -152,7 +146,6 @@ This example uses layoutPriority to include two left panes in one BorderContaine
         width: 100%;
         height: 100%;
       }
-    </style>
 
 
 Nested Layout Widgets
@@ -234,6 +227,23 @@ after it has been added to the DOM, so that its contained BorderContainer can la
   :height: 400
   :width: 660
 
+  A few simple css rules
+
+  .. css ::
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      #borderContainerThree {
+        width: 100%;
+        height: 100%;
+        overflow:hidden;
+        border: none;
+      }
+
   .. js ::
 
         dojo.require("dijit._Widget");
@@ -258,7 +268,7 @@ after it has been added to the DOM, so that its contained BorderContainer can la
             });
         });
 
-  The markup has to look as follows
+  The markup has to look as follows:
   
   .. html ::
 
@@ -287,26 +297,6 @@ after it has been added to the DOM, so that its contained BorderContainer can la
         <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
       </div>
     </div>
-
-  A few simple css rules
-  
-  .. css ::
-     
-
-    <style type="text/css">
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
-
-      #borderContainerThree {
-        width: 100%;
-        height: 100%;
-        overflow:hidden;
-        border: none;
-      }
-    </style>
 
 Accessibility
 =============

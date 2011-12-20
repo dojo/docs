@@ -30,7 +30,6 @@ The first example shows how to create a menu and drop down button programmatical
          dojo.require("dijit.form.Button");
          dojo.require("dijit.DropDownMenu");
          dojo.require("dijit.MenuItem");
-    <script type="text/javascript">
          dojo.ready(function(){
             var menu = new dijit.DropDownMenu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
@@ -55,7 +54,6 @@ The first example shows how to create a menu and drop down button programmatical
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
          });
-    </script>
 
   .. html ::
 

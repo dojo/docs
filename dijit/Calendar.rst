@@ -203,14 +203,6 @@ Custom styling:
       </tr>
     </table>
 
-  .. css:
-
-    <style type="text/css">
-      .{{ theme }} table.dijitCalendarContainer {
-        margin: 25px auto;
-      }
-    </style>
-
 Note
 ====
 

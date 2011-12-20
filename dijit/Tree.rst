@@ -253,7 +253,7 @@ If you want to have different icon types depending on the type of items in the t
 separate icons for songs, movies, and TV shows), then you really need to override the method
 to return a separate class name based on the type of item:
 
-.. js ::
+.. html ::
   
   <script type="dojo/method" data-dojo-event="getIconClass" data-dojo-args="item, opened">
       if(item == this.model.root){
