@@ -107,7 +107,6 @@ This two options position the node in the reference node's parent children list.
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeBA"), "onclick", function(){
@@ -115,7 +114,6 @@ This two options position the node in the reference node's parent children list.
             dojo.byId("posBA").value); // before/after
         });
       });
-    </script>
 
   .. html ::
 
@@ -140,12 +138,10 @@ This two options position the node in the reference node's parent children list.
 
   .. css ::
 
-    <style>
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 3em; }
-    </style>
 
 Place "replace"
 ---------------
@@ -156,7 +152,6 @@ Place "replace"
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeReplace"), "onclick", function(){
@@ -164,7 +159,6 @@ Place "replace"
           dojo.attr("placeReplace", "disabled", "disabled");
         });
       });
-    </script>
 
   .. html ::
 
@@ -185,12 +179,10 @@ Place "replace"
 
   .. css ::
 
-    <style>
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 3em; }
-    </style>
 
 Place as "first", "last", or "only"
 -----------------------------------
@@ -203,7 +195,6 @@ If no position is specified, or position is not recognized, "last" is assumed as
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeFLO"), "onclick", function(){
@@ -211,7 +202,6 @@ If no position is specified, or position is not recognized, "last" is assumed as
             dojo.byId("posFLO").value); // first/last/only
         });
       });
-    </script>
 
   .. html ::
 
@@ -237,12 +227,10 @@ If no position is specified, or position is not recognized, "last" is assumed as
 
   .. css ::
 
-    <style>
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 3em; }
-    </style>
 
 Place by numbers
 ----------------
@@ -253,7 +241,6 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeNumber"), "onclick", function(){
@@ -264,7 +251,6 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
           dojo.place("<div class='child'>the reference node's child #" + i + "</div>", "refNumber");
         }
       });
-    </script>
 
   .. html ::
 
@@ -290,12 +276,10 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
 
   .. css ::
 
-    <style>
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 3em; }
-    </style>
 
 Notes
 ~~~~~

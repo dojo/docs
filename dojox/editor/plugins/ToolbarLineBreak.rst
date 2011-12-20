@@ -64,13 +64,11 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FontChoice");
       dojo.require("dijit._editor.plugins.TextColor");
       dojo.require("dojox.editor.plugins.ToolbarLineBreak");
-    </script>
 
   .. html ::
 

@@ -72,10 +72,8 @@ Basic Usage: foreColor (Text Color)
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.TextColor");
-    </script>
 
     
   .. html ::
@@ -117,10 +115,8 @@ Basic Usage: hiliteColor (Text Background Color)
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.TextColor");
-    </script>
 
     
   .. html ::
@@ -162,10 +158,8 @@ Basic Usage: Both foreground and background color buttons together
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.TextColor");
-    </script>
 
     
   .. html ::

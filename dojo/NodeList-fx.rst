@@ -55,14 +55,12 @@ To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
 
   .. js ::
 
-     <script type="text/javascript">
         dojo.require("dojo.NodeList-fx");
         dojo.ready(function(){
             dojo.query("#fadebutton").onclick(function(){
                 dojo.query("#fadebuttontarget li").fadeOut().play();
             });
         });
-     </script>
 
 The most important thing to note is `NodeList <dojo/NodeList>` animations return an instance of a :ref:`dojo.Animation <dojo/Animation>`, the foundation for all Dojo FX. This prevents further chaining, as you have to explicitly call ``.play()`` on the returned animation. **New** Dojo 1.4 introduced a way to allow continued chaining with the caveat you cannot obtain a reference to the animations after they have begun. Simply pass the *auto* parameter.
 

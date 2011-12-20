@@ -159,7 +159,6 @@ Example 2: Create a new ATOM Feed
   
   .. js ::
 
-    <script>
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the main work for this example
@@ -189,7 +188,6 @@ Example 2: Create a new ATOM Feed
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleCreateAtom );
-    </script>
 
   .. html ::
 

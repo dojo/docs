@@ -19,7 +19,6 @@ Note that the padding of the content which gets wiped in is set on a separate in
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojo.fx");
     dojo.require("dijit.form.Button");
 
@@ -36,7 +35,6 @@ Note that the padding of the content which gets wiped in is set on a separate in
         duration: 300
       }).play();
     }
-    </script>
 
   .. html ::
 

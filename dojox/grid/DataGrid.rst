@@ -73,7 +73,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -81,7 +80,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
             width: 43em;
             height: 20em;
         }
-    </style>
 
 
 A structure is an array of views and a view is an array of cells.
@@ -457,7 +455,6 @@ This example shows how to create a simple Grid programmatically.
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -465,7 +462,6 @@ This example shows how to create a simple Grid programmatically.
             width: 43em;
             height: 20em;
         }
-    </style>
 
 Note the grid.startup() command after constructing the DataGrid.  Earlier development
 versions of DataGrid didn't require this but as of 1.2.0b1, you must call
@@ -569,7 +565,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -577,7 +572,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             width: 43em;
             height: 15em;
         }
-    </style>
 
 
 Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behavior of the selection functionality:
@@ -662,7 +656,6 @@ First, you have to set a editor for each cell, you would like to edit:
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -670,7 +663,6 @@ First, you have to set a editor for each cell, you would like to edit:
             width: 43em;
             height: 20em;
         }
-    </style>
 
 
 Adding and Deleting data
@@ -769,7 +761,6 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -777,7 +768,6 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
             width: 43em;
             height: 15em;
         }
-    </style>
 
 
 Filtering data
@@ -864,7 +854,6 @@ The Grid offers a filter() method, to filter data from the current query (client
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -872,7 +861,6 @@ The Grid offers a filter() method, to filter data from the current query (client
             width: 43em;
             height: 15em;
         }
-    </style>
 
 
 Grid styling: Rows
@@ -955,7 +943,6 @@ To use it, you just have to override default behavior by yours.
 
    .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         /*Grid need a explicit width/height by default*/
@@ -963,7 +950,6 @@ To use it, you just have to override default behavior by yours.
             width: 43em;
             height: 20em;
         }
-    </style>
 
 
 Formatting a Date Field
@@ -1027,11 +1013,9 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
-    </style>
 
 
 Editable Date Field
@@ -1095,11 +1079,9 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
-    </style>
 
 
 Using a dijit widget to edit a Date Field
@@ -1171,11 +1153,9 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
-    </style>
 
 
 Using a dijit widget to edit a Date Field - with custom patterns
@@ -1250,11 +1230,9 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
-    </style>
 
 
 

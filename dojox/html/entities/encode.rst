@@ -27,7 +27,6 @@ Encoding HTML and LATIN-1 entities in a text string
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
@@ -38,7 +37,6 @@ Encoding HTML and LATIN-1 entities in a text string
            output.value = dojox.html.entities.encode(input.value);
          });
       });
-    </script>
 
   .. html ::
 
@@ -64,7 +62,6 @@ Encoding custom entities in a text string
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
@@ -76,7 +73,6 @@ Encoding custom entities in a text string
            output.value = dojox.html.entities.encode(input.value, customMap);
          });
       });
-    </script>
 
   .. html ::
 

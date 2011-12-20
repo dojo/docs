@@ -38,8 +38,6 @@ substitute() is a workhorse and the basis for dijit's templating.  It performs p
 
   .. css ::
 
-    <style type="text/css">
       #foo {
           color: red;
       }
-    </style>

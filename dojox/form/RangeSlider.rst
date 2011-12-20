@@ -54,7 +54,6 @@ Programmatic horizontal example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
 
       dojo.ready(function(){
@@ -71,7 +70,6 @@ Programmatic horizontal example
           }
         }, "rangeSlider");
       });
-    </script>
 
   .. html ::
 
@@ -80,9 +78,7 @@ Programmatic horizontal example
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
-    </style>
 
 Programmatic vertical example with rulers
 -----------------------------------------
@@ -90,7 +86,6 @@ Programmatic vertical example with rulers
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
       dojo.require("dijit.form.VerticalRule");
 
@@ -111,7 +106,6 @@ Programmatic vertical example with rulers
           style: "height:300px;"
         }, vertical);
       });
-    </script>
 
   .. html ::
 
@@ -119,9 +113,7 @@ Programmatic vertical example with rulers
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
-    </style>
 
 Declarative horizontal example
 ------------------------------
@@ -130,9 +122,7 @@ Declarative horizontal example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
-    </script>
 
   .. html ::
 
@@ -147,9 +137,7 @@ Declarative horizontal example
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
-    </style>
 
 **NOTE** In declarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
 

@@ -30,7 +30,6 @@ In this example, we borrow some of the toolbar buttons from the Editor.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.Toolbar");
         dojo.require("dijit.form.Button");
 
@@ -48,7 +47,6 @@ In this example, we borrow some of the toolbar buttons from the Editor.
                 toolbar.addChild(button);
             });
         });
-    </script>
 
   .. html ::
 
@@ -66,10 +64,8 @@ Creation from markup is even easier.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Toolbar");
       dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -97,13 +93,11 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Toolbar");
       dojo.require("dijit.form.DropDownButton");
       dojo.require("dijit.ColorPalette");
       dojo.require("dijit.TooltipDialog");
       dojo.require("dijit.form.TextBox");
-    </script>
 
   .. html ::
 

@@ -52,7 +52,6 @@ Programmatic construction of a ComboBox to browse rules
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.CssClassStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -61,7 +60,6 @@ Programmatic construction of a ComboBox to browse rules
         var classCombo = new dijit.form.ComboBox({'store': classStore, 'searchAttr': 'classSans'}, dojo.byId('classCombo'));
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 

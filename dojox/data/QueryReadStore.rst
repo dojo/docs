@@ -92,10 +92,8 @@ Connecting QueryReadStore to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.QueryReadStore");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -113,10 +111,8 @@ Connecting QueryReadStore to dijit.form.FilteringSelect
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.QueryReadStore");
       dojo.require("dijit.form.FilteringSelect");
-    </script>
 
   .. html ::
 

@@ -66,9 +66,7 @@ This example shows a password validator, prompting the user to enter and validat
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.PasswordValidator");
-    </script>
 
   .. html ::
 
@@ -86,9 +84,7 @@ This example shows a password validator, and prompts the for the current passwor
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.PasswordValidator");
-    </script>
 
   .. html ::
 

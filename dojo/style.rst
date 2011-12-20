@@ -180,17 +180,13 @@ Passing only an ID or node returns the computed style object of the node:
 
   .. css ::
 
-     <style type="text/css">
          .style1 { color: red; padding: 10px; border: 1px red solid; }
          #poorboy_styles li { display:inline; }
          #poorboy_styles li .prop { color: blue; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -220,15 +216,11 @@ Passing a node and a style property returns the current normalized, computed val
 
   .. css ::
 
-     <style type="text/css">
          .style2 { color: blue; padding: 10px; border: 1px blue solid; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -251,15 +243,11 @@ Passing a node, a style property, and a value changes the current display of the
 
   .. css ::
 
-     <style type="text/css">
          .style3 { color: green; padding: 10px; border: 1px green solid; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -283,16 +271,12 @@ Passing a node, an object-style style property sets each of the values in turn a
 
   .. css ::
 
-     <style type="text/css">
          .style4 { color: black; padding: 10px; border: 1px black solid; }
          .nib { font-size: 4.2em; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -320,16 +304,12 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
 
   .. css ::
 
-     <style type="text/css">
          .style5 { color: black; padding: 10px; border: 1px black solid; }
          .sweet { color: #FF8C8C; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

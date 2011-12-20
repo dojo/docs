@@ -83,10 +83,8 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.LinkDialog");
-    </script>
 
     
   .. html ::

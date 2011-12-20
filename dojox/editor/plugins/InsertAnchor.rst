@@ -65,17 +65,13 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.InsertAnchor");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
-    </style>
     
   .. html ::
 

@@ -55,7 +55,6 @@ Example of a continuous pan.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -79,11 +78,9 @@ Example of a continuous pan.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Pan");
         dojo.ready(function(){
@@ -102,7 +99,6 @@ Example of a continuous pan.
                 dojo.byId("myAutoRotator1")
             );
         });
-    </script>
 
   .. html ::
 
@@ -124,7 +120,6 @@ Example using different pan directions for each pane.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -147,14 +142,11 @@ Example using different pan directions for each pane.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Pan");
-    </script>
   
   .. html ::
 

@@ -31,7 +31,6 @@ Notice how we pass the *name*, *style* and *value* parameters into the object cr
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Textarea");
       dojo.ready(function(){
         var textarea = new dijit.form.Textarea({
@@ -40,7 +39,6 @@ Notice how we pass the *name*, *style* and *value* parameters into the object cr
           style: "width:200px;"
         }, "myarea");
       });
-    </script>
 
   .. html ::
 
@@ -56,9 +54,7 @@ In this instance, the initial *value* is the child text node of the TEXTAREA ele
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Textarea");
-    </script>
 
   .. html ::
 

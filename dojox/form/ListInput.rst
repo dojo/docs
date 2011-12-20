@@ -36,9 +36,7 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.form.ListInput");
-    </script>
 
   .. html ::
 
@@ -46,9 +44,7 @@ Declarative example
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/ListInput.css";
-    </style>
 
 Programmatic example
 --------------------
@@ -80,9 +76,7 @@ Programmatic example
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/ListInput.css";
-    </style>
 
 Accessibility
 =============

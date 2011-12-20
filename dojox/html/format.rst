@@ -77,7 +77,6 @@ Format some HTML markup
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
@@ -96,7 +95,6 @@ Format some HTML markup
            output.value = dojox.html.format.prettyPrint(input.value);
          });
       });
-    </script>
 
   .. html ::
 
@@ -141,7 +139,6 @@ Format some HTML markup with three space indent
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
@@ -160,7 +157,6 @@ Format some HTML markup with three space indent
            output.value = dojox.html.format.prettyPrint(input.value, 3);
          });
       });
-    </script>
 
   .. html ::
 
@@ -204,7 +200,6 @@ Format some HTML markup with three space indent and 20 character line wrap
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
@@ -223,7 +218,6 @@ Format some HTML markup with three space indent and 20 character line wrap
            output.value = dojox.html.format.prettyPrint(input.value, 3, 20);
          });
       });
-    </script>
 
   .. html ::
 
@@ -268,7 +262,6 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
@@ -287,7 +280,6 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
            output.value = dojox.html.format.prettyPrint(input.value, 3, 20, null, true);
          });
       });
-    </script>
 
   .. html ::
 

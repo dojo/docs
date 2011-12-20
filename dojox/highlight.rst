@@ -103,13 +103,10 @@ Highlight can also be used via the dojox.highlight.processString function
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/highlight/resources/highlight.css"
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.highlight");
       dojo.require("dojox.highlight.languages.sql");
       function highlight(){
@@ -120,7 +117,6 @@ Highlight can also be used via the dojox.highlight.processString function
         // putting the highlighted code in a html element so you can see
         dojo.attr('demoCode1', {innerHTML: code});
       }
-    </script>
 
   .. html ::
 

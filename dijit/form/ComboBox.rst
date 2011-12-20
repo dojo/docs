@@ -95,9 +95,7 @@ To set the default value when using OPTION tags, specify the *selected* attribut
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -117,10 +115,8 @@ To set the default value for this example, specify the *value* attribute in the 
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.store.Memory");
-    </script>
 
   .. html ::
 

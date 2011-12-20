@@ -79,7 +79,6 @@ Example Usage
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.layout.TabContainer");
@@ -112,7 +111,6 @@ Example Usage
          dojo.connect(dijit.byId("searchButton"), "onClick", search);
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -137,14 +135,12 @@ Example Usage
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 The following example shows wiring the GoogleFeedStore to dojox.data.DataGrid.

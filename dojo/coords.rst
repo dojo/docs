@@ -53,7 +53,6 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
   
   .. js ::
 
-    <script>
       function init(){
         var node = dojo.byId("box");
         var coords = dojo.coords(node);
@@ -63,7 +62,6 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -80,7 +78,6 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
       function init(){
         var node = dijit.byId("textbox").domNode;
@@ -91,7 +88,6 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 

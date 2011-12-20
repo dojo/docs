@@ -63,11 +63,9 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.Print");
-    </script>
 
     
   .. html ::

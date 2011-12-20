@@ -54,7 +54,6 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
 
       function deleteUri(){
@@ -81,7 +80,6 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
         });
       }
       dojo.ready(deleteUri);
-    </script>
 
   .. html ::
 

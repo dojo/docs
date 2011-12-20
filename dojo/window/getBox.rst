@@ -53,9 +53,8 @@ Gray out the screen
   
   .. js ::
 
-    <script>
        dojo.require("dojo.window");
-        
+
         function block(){
             var vs = dojo.window.getBox(),
             div = dojo.create("div", {
@@ -69,12 +68,11 @@ Gray out the screen
                     opacity: 0.1
                 }
             }, dojo.body());
-            
+
             setTimeout(function(){
                 dojo.destroy(div);
            }, 500);
         }
-    </script>
 
   .. html ::
 

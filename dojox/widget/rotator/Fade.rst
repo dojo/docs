@@ -37,7 +37,6 @@ Example using the fade transition.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -61,11 +60,9 @@ Example using the fade transition.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
         dojo.ready(function(){
@@ -83,7 +80,6 @@ Example using the fade transition.
                 dojo.byId("myAutoRotator1")
             );
         });
-    </script>
 
   .. html ::
 
@@ -105,7 +101,6 @@ Example using cross-fade transition.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -128,14 +123,11 @@ Example using cross-fade transition.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
-    </script>
   
   .. html ::
 

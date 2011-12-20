@@ -17,7 +17,6 @@ Wiping in a node with "display: none; position: absolute;"
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.fx");
     dojo.require("dijit.form.Button");
 
@@ -35,7 +34,6 @@ Wiping in a node with "display: none; position: absolute;"
         duration: 300
       }).play();
     }
-    </script>
 
   .. html ::
 

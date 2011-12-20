@@ -28,12 +28,10 @@ Try opening this example and immediately clicking Submit, and compare the behavi
 
   .. js ::
 
-    <script>
         dojo.require("dijit.form.Form");
         dojo.require("dijit.form.Button");
         dojo.require("dijit.form.ValidationTextBox");
         dojo.require("dijit.form.DateTextBox");
-    </script>
 
   .. html ::
 
@@ -98,11 +96,9 @@ AND when you have selected 1 of the native HTML radio buttons.
 
   .. js ::
 
-    <script>
         dojo.require("dijit.form.Form");
         dojo.require("dijit.form.Button");
         dojo.require("dijit.form.ValidationTextBox");
-    </script>
 
   .. html ::
 

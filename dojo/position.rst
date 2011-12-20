@@ -66,7 +66,6 @@ This example shows how to center a small DOM node (with background image) over a
 
   .. js ::
 
-    <script>
       var lastX = 0, lastY = 0;
       function doit(){
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
@@ -79,7 +78,6 @@ This example shows how to center a small DOM node (with background image) over a
             top: lastY + "px"
         });
       }
-    </script>
 
   .. html ::
 
@@ -89,7 +87,6 @@ This example shows how to center a small DOM node (with background image) over a
 
   .. css ::
 
-    <style type="text/css">
       .container {
           background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=frame.png) no-repeat;
           width: 237px;
@@ -105,7 +102,6 @@ This example shows how to center a small DOM node (with background image) over a
           top: 0;
           border: 1px solid white;
       }
-    </style>
 
 
 ----------------------------------------------------

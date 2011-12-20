@@ -44,7 +44,6 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.rpc.Service");
     dojo.require("dojo.io.script");
 
@@ -58,7 +57,7 @@ This is an example of the Google API using the pre-defined google.smd in the :re
         dojo.query("#doit").onclick(function(e){
 
             tehLoader("visible");
-            
+
             // move old results into the 'archive'
             dojo.query("li", "top-results").forEach(function(item){
                 dojo.byId("archive").appendChild(item);
@@ -89,4 +88,3 @@ This is an example of the Google API using the pre-defined google.smd in the :re
         });
 
     });
-    </script>

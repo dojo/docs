@@ -30,7 +30,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.layout.AccordionContainer");
         dojo.require("dijit.layout.ContentPane");
 
@@ -51,7 +50,6 @@ Programmatic example
           }));
           aContainer.startup();
         });
-    </script>
 
   .. html ::
 
@@ -65,9 +63,7 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.AccordionContainer");
-    </script>
 
   .. html ::
 

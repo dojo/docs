@@ -76,7 +76,6 @@ Example 2: Generic XML DOM to JS Object parser
   
   .. js ::
 
-    <script>
       dojo.require("dojox.xml.DomParser");
 
       function init(){
@@ -87,7 +86,6 @@ Example 2: Generic XML DOM to JS Object parser
          console.debug(jsdom);
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
  

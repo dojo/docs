@@ -100,7 +100,6 @@ Empty all nodes in a list by reference
 
   .. css ::
 
-    <style type="text/css">
     .green { color: white; min-width: 30px; min-height: 30px;
         border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px;
         float: left; background-color: green; padding: 2px }
@@ -108,13 +107,11 @@ Empty all nodes in a list by reference
         border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px;
         float: left; background-color: red; padding: 2px }
     #panel { clear: both }
-    </style>
 
   Empty all Nodes in a list by reference
   
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -129,7 +126,6 @@ Empty all nodes in a list by reference
         }, "progButtonNode2");
 
     });
-    </script>
 
   Some DomNodes
   

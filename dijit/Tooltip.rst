@@ -62,16 +62,13 @@ Here's a tooltip created programmatically:
 
   .. css ::
 
-    <style type="text/css">
     .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; position: absolute; top: 100px; left: 10px; }
     .bar2 { background-color: #ffd4a0; width: 17px; height: 45px; position: absolute; top: 129px; left: 40px; }
     .bar3 { background-color: #fff79e; width: 17px; height: 30px; position: absolute; top: 144px; left: 70px; }
-    </style>
 
 
   .. js ::
 
-        <script>
            dojo.require("dijit.Tooltip");
            dojo.ready(function(){
               // create a new Tooltip and connect it to bar1 and bar4
@@ -90,7 +87,6 @@ Here's a tooltip created programmatically:
                   label: "value <b>30</b>"
               });
            });
-        </script>
 
   .. html ::
 
@@ -110,17 +106,13 @@ And here's a tooltip created from markup connected to a :ref:`dijit.form.Button 
 
   .. css ::
 
-    <style type="text/css">
     .box { color: white; background-color: #ba2929; width: 200px; height: 50px; padding: 10px; }
-    </style>
 
 
   .. js ::
 
-        <script>
            dojo.require("dijit.Tooltip");
            dojo.require("dijit.form.Button");
-        </script>
 
   .. html ::
 

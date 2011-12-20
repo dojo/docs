@@ -202,7 +202,6 @@ The following is a semi-complex example of the write API in action. In this exam
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.NumberSpinner");
@@ -282,13 +281,13 @@ The following is a semi-complex example of the write API in action. In this exam
               }
             }
           }
-            
+
           // Callback for if the lookup fails.
           function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }
-             
+
           // Fetch the data.
           geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
@@ -297,7 +296,6 @@ The following is a semi-complex example of the write API in action. In this exam
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init2);
-    </script>
 
   .. html ::
 
@@ -323,14 +321,12 @@ The following is a semi-complex example of the write API in action. In this exam
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 ItemFileWriteStore deletions reflected in dijit.Tree
@@ -342,7 +338,6 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
@@ -410,7 +405,6 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
         dojo.connect(button3, "onClick", deleteCities);
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -433,7 +427,6 @@ is displayed in an alert.
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.NumberSpinner");
@@ -581,13 +574,13 @@ is displayed in an alert.
               }
             }
           }
-            
+
           // Callback for if the lookup fails.
           function fetchFailed(error, request){
             alert("lookup failed.");
             alert(error);
           }
-             
+
           // Fetch the data.
           geoStore2.fetch({query: {type:"city"}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
@@ -597,7 +590,6 @@ is displayed in an alert.
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init3);
-    </script>
 
   .. html ::
 
@@ -623,13 +615,11 @@ is displayed in an alert.
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 API Info
 ========

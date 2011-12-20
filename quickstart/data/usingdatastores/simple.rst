@@ -49,7 +49,6 @@ Connecting dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -64,7 +63,6 @@ Connecting dijit.form.ComboBox
           { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
       ]}
-    </script>
 
   .. html ::
 
@@ -79,7 +77,6 @@ Connecting dijit.Tree
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
 
@@ -94,7 +91,6 @@ Connecting dijit.Tree
           { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
       ]}
-    </script>
 
   .. html ::
 
@@ -110,7 +106,6 @@ Connecting dijit.form.FilteringSelect
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.FilteringSelect");
 
@@ -125,7 +120,6 @@ Connecting dijit.form.FilteringSelect
           { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
       ]}
-    </script>
 
   .. html ::
 
@@ -140,7 +134,6 @@ Connecting dojox.grid.DataGrid
 
   .. js ::
 
-    <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojo.data.ItemFileReadStore");
       var layoutCountries = [
@@ -163,7 +156,6 @@ Connecting dojox.grid.DataGrid
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
       ]}
 
-    </script>
 
   .. html ::
 
@@ -181,11 +173,9 @@ Connecting dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>

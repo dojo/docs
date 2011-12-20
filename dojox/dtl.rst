@@ -38,9 +38,7 @@ allows for new DOM-centric capabilities.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.dtl.Inline");
-    </script>
 
   .. html ::
  
@@ -98,7 +96,6 @@ This works exactly the same as rendering a template in Django.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.dtl");
       dojo.require("dojox.dtl.Context");
 
@@ -107,7 +104,6 @@ This works exactly the same as rendering a template in Django.
         place: "World"
       });
       console.debug(template.render(context)); // Hello World!
-    </script>
 
 Use ``dojo.query``
 ------------------
@@ -121,11 +117,9 @@ To use, make sure you require the ``dojox.dtl.ext-dojo.NodeList`` module, which 
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.dtl.ext-dojo.NodeList");
 
       dojo.query(".fruit").dtl("Fruit is: {{ fruit }}", { fruit: "apple" });
-    </script>
 
 
 Writing a Widget
@@ -146,7 +140,6 @@ The template will be rendered using the widget object as its context. If you don
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.dtl._Templated");
 
       dojo.declare("demo", [dojox.dtl._Widget, dojox.dtl._Templated] {
@@ -156,7 +149,6 @@ The template will be rendered using the widget object as its context. If you don
           this.render();
         }
       });
-    </script>
 
 
 Differences with the ``extends`` tag

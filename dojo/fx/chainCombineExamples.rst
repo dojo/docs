@@ -24,7 +24,6 @@ Example 1:  Demonstration of combining three chained animations
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       dojo.require("dojo.fx.easing");
@@ -90,7 +89,6 @@ Example 1:  Demonstration of combining three chained animations
          dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
       }
       dojo.ready(basicCombine);
-    </script>
 
   .. html ::
 

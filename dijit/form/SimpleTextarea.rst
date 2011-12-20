@@ -34,7 +34,6 @@ The *value* attribute can be set with the widget's set('value', text) method.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.SimpleTextarea");
       dojo.ready(function(){
         var textarea = new dijit.form.SimpleTextarea({
@@ -45,7 +44,6 @@ The *value* attribute can be set with the widget's set('value', text) method.
         }, "myarea");
         textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
       });
-    </script>
 
   .. html ::
 
@@ -61,9 +59,7 @@ In this instance, the initial *value* is the child text node of the TEXTAREA ele
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.SimpleTextarea");
-    </script>
 
   .. html ::
 

@@ -46,7 +46,6 @@ Default color palette, created programmatically:
 
   .. js ::
 
-    <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
        dojo.ready(function(){
          var myPalette = new dijit.ColorPalette({
@@ -54,7 +53,6 @@ Default color palette, created programmatically:
            onChange: function(val){ alert(val); }
          }, "placeHolder" );
        });
-    </script>
 
   .. html ::
 
@@ -69,9 +67,7 @@ Small color palette, created declaratively:
 
   .. js ::
 
-      <script type="text/javascript">
         dojo.require("dijit.ColorPalette");
-      </script>
 
   .. html ::
 

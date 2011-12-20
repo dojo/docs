@@ -75,7 +75,6 @@ You can see this code in action:
 
 .. js ::
 
-    <script>
       require(["dojo/_base/lang", "dojo/ready", "dojo/dom"], function(lang, ready, dom){
         ready(function(){
           dom.byId("output").innerHTML = lang.replace(
@@ -91,14 +90,12 @@ You can see this code in action:
           );
         });
       });
-    </script>
 
 
 [ Dojo < 1.7 ]
 
 .. js ::
 
-    <script>
       dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, {name.first} {name.last} AKA {nick}!",
@@ -112,7 +109,6 @@ You can see this code in action:
           }
         );
       });
-    </script>
 
 
 Minimalistic HTML for our example.
@@ -156,14 +152,12 @@ This code in action:
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, {0} {2} AKA {3}!",
           ["Robert", "X", "Cringely", "Bob"]
         );
       });
-    </script>
 
   Minimalistic HTML for our example.
 
@@ -260,7 +254,6 @@ This code in action:
 
   .. js ::
 
-    <script>
       // helper function
       function sum(a){
         var t = 0;
@@ -285,7 +278,6 @@ This code in action:
           )
         );
       });
-    </script>
 
   Minimalistic HTML for our example.
 
@@ -328,7 +320,6 @@ This code in action:
 
   .. js ::
 
-    <script>
       dojo.ready(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, %[0] %[2] AKA %[3]!",
@@ -336,7 +327,6 @@ This code in action:
           /\%\[([^\]]+)\]/g
         );
       });
-    </script>
 
   Minimalistic HTML for our example.
 
@@ -409,7 +399,6 @@ Take a look at this code in action:
 
   .. js ::
 
-    <script>
       function hiliteReplace(tmpl, dict){
         var hilited = dojo.replace(tmpl, function(_, name){
           return "<span class='hilite'>{" + name + "}</span>";
@@ -422,15 +411,12 @@ Take a look at this code in action:
           ["Robert", "X", "Cringely", "Bob"]
         );
       });
-    </script>
 
   Minimalistic CSS for our example.
 
   .. css ::
 
-    <style>
       .hilite {font-weight: bold; color: green;}
-    </style>
 
   Minimalistic HTML for our example.
 
@@ -518,7 +504,6 @@ You can check the result here:
 
   .. js ::
 
-    <script>
       function safeReplace(tmpl, dict){
         // convert dict to a function, if needed
         var fn  = dojo.isFunction(dict) ? dict : function(_, name){
@@ -546,7 +531,6 @@ You can check the result here:
         // now the replacement
         dojo.byId("output").innerHTML = safeReplace("<div>{0}</div", [bad]);
       });
-    </script>
 
   Minimalistic HTML for our example.
 
@@ -669,7 +653,6 @@ You can check the result here:
 
   .. js ::
 
-    <script>
       function format(tmpl, dict, formatters){
         // convert dict to a function, if needed
         var fn = dojo.isFunction(dict) ? dict : function(_, name){
@@ -710,7 +693,6 @@ You can check the result here:
           customFormatters
         );
       });
-    </script>
 
   Minimalistic HTML for our example.
 

@@ -1191,7 +1191,6 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.plot2d.Pie");
     dojo.require("dojox.charting.action2d.Highlight");
@@ -1222,7 +1221,6 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
       chartTwo.render();
       var legendTwo = new dojox.charting.widget.Legend({chart: chartTwo}, "legendTwo");
     });
-    </script>
 
   .. html ::
 
@@ -1274,7 +1272,6 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.charting.Chart3D");
         dojo.require("dojox.charting.plot3d.Bars");
 
@@ -1303,7 +1300,6 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
             chart3d.generate().render();
         });
-    </script>
 
   .. html ::
 

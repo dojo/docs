@@ -102,9 +102,7 @@ If you want the FilteringSelect to start blank, use a different method to create
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
-    </script>
 
   .. html ::
 
@@ -124,10 +122,8 @@ To set the default value for this example, specify the *value* attribute (the hi
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.store.Memory");
-    </script>
 
   .. html ::
 

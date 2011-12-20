@@ -31,7 +31,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.MenuBar");
       dojo.require("dijit.PopupMenuBarItem");
       dojo.require("dijit.Menu");
@@ -68,7 +67,6 @@ Programmatic example
              pMenuBar.placeAt("wrapper");
              pMenuBar.startup();
         });
-    </script>
 
   .. html ::
 
@@ -84,12 +82,10 @@ Creation from markup is even easier.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.MenuBar");
       dojo.require("dijit.PopupMenuBarItem");
       dojo.require("dijit.DropDownMenu");
       dojo.require("dijit.MenuItem");
-    </script>
 
   .. html ::
 

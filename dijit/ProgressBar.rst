@@ -19,10 +19,9 @@ Declarative markup
 
   .. js ::
 
-     <script type="text/javascript">
         dojo.require("dijit.ProgressBar");
         dojo.require("dojo.parser");
-        
+
         var i=0;
         function download(){
             jsProgress.update({maximum: 10, progress: ++i});
@@ -30,7 +29,6 @@ Declarative markup
                 setTimeout(download, 100 + Math.floor(Math.random() * 100));
             }
         }
-     </script>
 
   .. html ::
 

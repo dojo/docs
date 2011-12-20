@@ -36,9 +36,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.CheckedMultiSelect");
-    </script>
 
   .. html ::
 
@@ -52,9 +50,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";
-    </style>
 
 A radio-based CheckedMultiSelect
 --------------------------------
@@ -65,9 +61,7 @@ By not specifying "multiple=true" in your widget, you will create a widget using
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.CheckedMultiSelect");
-    </script>
 
   .. html ::
 
@@ -81,6 +75,4 @@ By not specifying "multiple=true" in your widget, you will create a widget using
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";
-    </style>

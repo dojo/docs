@@ -67,7 +67,6 @@ A TooltipDialog may be popped up from any node.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.TooltipDialog");
 
         dojo.ready(function(){
@@ -79,7 +78,7 @@ A TooltipDialog may be popped up from any node.
                     dijit.popup.close(myTooltipDialog);
                 }
             });
-              
+
             dojo.connect(dojo.byId('thenode'), 'onmouseenter', function(){
                 dijit.popup.open({
                     popup: myTooltipDialog,
@@ -87,7 +86,6 @@ A TooltipDialog may be popped up from any node.
                 });
             });
         });
-    </script>
 
   .. html ::
 
@@ -107,12 +105,10 @@ Here's one displaying a TooltipDialog:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.DropDownButton");
       dojo.require("dijit.TooltipDialog");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

@@ -227,7 +227,6 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.AppStore");
       dojo.require("dijit.form.Button");
 
@@ -257,7 +256,6 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple);
-    </script>
 
   .. html ::
 
@@ -274,7 +272,6 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.AppStore");
       dojo.require("dijit.form.Button");
 
@@ -304,7 +301,6 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple2);
-    </script>
 
   .. html ::
 
@@ -322,7 +318,6 @@ Example 3: Connecting AppStore to DataGrid
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.AppStore");
       dojo.require("dojox.grid.DataGrid");
 
@@ -352,7 +347,6 @@ Example 3: Connecting AppStore to DataGrid
       }
       dojo.ready(resizeGrid)
 
-    </script>
 
   .. html ::
 
@@ -365,14 +359,12 @@ Example 3: Connecting AppStore to DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 Example 4: Write example: Changing Title and showing in DataGrid
 ----------------------------------------------------------------
@@ -381,7 +373,6 @@ Example 4: Write example: Changing Title and showing in DataGrid
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojox.data.AppStore");
       dojo.require("dojox.grid.DataGrid");
@@ -413,7 +404,6 @@ Example 4: Write example: Changing Title and showing in DataGrid
       }
       dojo.ready(initGrid)
 
-    </script>
 
   .. html ::
 
@@ -425,14 +415,12 @@ Example 4: Write example: Changing Title and showing in DataGrid
   
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 See also

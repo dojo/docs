@@ -58,7 +58,6 @@ Example 1:  Toggle a DOM node (with defaults)
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicToggle(){
@@ -69,7 +68,6 @@ Example 1:  Toggle a DOM node (with defaults)
          dojo.connect(dijit.byId("hideButton"), "onClick", toggler, "hide");
       }
       dojo.ready(basicToggle);
-    </script>
 
   .. html ::
 
@@ -88,7 +86,6 @@ Example 2:  Toggle a DOM node with custom durations
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicToggle1(){
@@ -101,7 +98,6 @@ Example 2:  Toggle a DOM node with custom durations
          dojo.connect(dijit.byId("hideButton1"), "onClick", toggler, "hide");
       }
       dojo.ready(basicToggle1);
-    </script>
 
   .. html ::
 
@@ -120,7 +116,6 @@ Example 2:  Toggle a DOM node with custom animation functions
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicToggle2(){
@@ -133,7 +128,6 @@ Example 2:  Toggle a DOM node with custom animation functions
          dojo.connect(dijit.byId("hideButton2"), "onClick", toggler, "hide");
       }
       dojo.ready(basicToggle2);
-    </script>
 
   .. html ::
 

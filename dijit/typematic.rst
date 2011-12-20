@@ -32,7 +32,6 @@ or clicks the plus icon next to the textbox
 
   .. js ::
 
-     <script>
          require(["dojo/dom", "dojo/keys", "dijit/typematic"], function(dom, keys, typematic){
              var textbox = dom.byId("textbox"), icon = dom.byId("icon");
              typematic.addKeyListener(textbox, {charOrCode: keys.DOWN_ARROW}, null, function(){
@@ -42,7 +41,6 @@ or clicks the plus icon next to the textbox
                   textbox.value = textbox.value - -1;    // + 1 causes string concat
              }, 500, 100, 10);
          });
-     </script>
 
   .. html ::
 

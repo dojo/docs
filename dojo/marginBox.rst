@@ -88,7 +88,6 @@ This example displays the return values of dojo.marginBox on a node.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
       getMarginBoxOne = function(){
@@ -99,7 +98,6 @@ This example displays the return values of dojo.marginBox on a node.
         console.log("Width: "+marginBox.w);
         console.log("Height: "+marginBox.h);
       };
-    </script>
 
   .. html ::
 
@@ -109,7 +107,6 @@ This example displays the return values of dojo.marginBox on a node.
     
   .. css ::
 
-    <style type="text/css">
       #marginNodeOne {
         width: 200px;
         height: 200px;
@@ -117,7 +114,6 @@ This example displays the return values of dojo.marginBox on a node.
         margin: 10px;
         border: 1px solid #ccc;
       }
-    </style>
 
 Getting margin box II.
 ----------------------
@@ -128,7 +124,6 @@ This example displays the return values of dojo.marginBox on a nested node.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
       getMarginBoxTwo = function(){
@@ -139,7 +134,6 @@ This example displays the return values of dojo.marginBox on a nested node.
         console.log("Width: "+marginBox.w);
         console.log("Height: "+marginBox.h);
       };
-    </script>
 
   .. html ::
 
@@ -152,7 +146,6 @@ This example displays the return values of dojo.marginBox on a nested node.
     
   .. css ::
 
-    <style type="text/css">
       #marginNodeTwo {
         width: 300px;
         height: 200px;
@@ -160,7 +153,6 @@ This example displays the return values of dojo.marginBox on a nested node.
         margin: 10px;
         border: 1px solid #ccc;
       }
-    </style>
 
 Setting margin box I.
 ---------------------
@@ -171,11 +163,9 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.ready(function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeThree"), {t: 20, l: 30, h: 300, w: 300});
       });
-    </script>
 
   .. html ::
 
@@ -186,13 +176,11 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
 
   .. css ::
 
-    <style type="text/css">
       #marginNodeThree {
         padding: 10px;
         margin: 10px;
         border: 1px solid #ccc;
       }
-    </style>
 
 
 Comparison of various DOM node position/size methods

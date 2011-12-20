@@ -76,19 +76,15 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dojox.editor.plugins.InsertEntity");
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.require("dojox.html.entities");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertEntity.css";
-    </style>
     
   .. html ::
 

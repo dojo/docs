@@ -21,7 +21,6 @@ Programmatic InlineEditBox
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.InlineEditBox");
         dojo.require("dijit.form.Textarea");
 
@@ -32,7 +31,6 @@ Programmatic InlineEditBox
                 autoSave: false
             }, "ieb");
         });
-    </script>
 
   .. html ::
 
@@ -54,10 +52,8 @@ Here's an example with an initial value.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
       dojo.require("dijit.form.NumberSpinner");
-    </script>
 
   .. html ::
 
@@ -73,10 +69,8 @@ Note also that the width argument is important so to indicate the editors width,
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
       dojo.require("dijit.form.NumberTextBox");
-    </script>
 
   .. html ::
 
@@ -102,11 +96,9 @@ To make the editor's initial size match the size the readonly text (ie, the size
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.InlineEditBox");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
-    </script>
 
   .. html ::
 

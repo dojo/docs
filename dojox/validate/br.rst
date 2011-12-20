@@ -49,11 +49,9 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dojox.validate.br");
-    </script>
 
     
   .. html ::

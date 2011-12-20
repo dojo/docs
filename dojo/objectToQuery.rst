@@ -72,7 +72,6 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       function convertQuery(){
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
@@ -91,7 +90,6 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
         });
       }
       dojo.ready(convertQuery);
-    </script>
 
   .. html ::
 

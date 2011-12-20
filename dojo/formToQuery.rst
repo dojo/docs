@@ -81,7 +81,6 @@ Example 1: Using formToQuery to create an query string version of a form
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       function convertForm(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
@@ -92,7 +91,6 @@ Example 1: Using formToQuery to create an query string version of a form
         });
       }
       dojo.ready(convertForm);
-    </script>
 
   .. html ::
 
@@ -114,7 +112,6 @@ Example 2: Using formToQuery to create a query string version of a form with dij
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.Button");
       function convertFormDijits(){
@@ -126,7 +123,6 @@ Example 2: Using formToQuery to create a query string version of a form with dij
         });
       }
       dojo.ready(convertFormDijits);
-    </script>
 
   .. html ::
 

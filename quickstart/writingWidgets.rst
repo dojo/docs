@@ -83,7 +83,6 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
   .. js ::
 
-    <script>
         // the parser is only needed, if you want
         // to instantiate the widget declaratively (in markup)
         require([
@@ -97,13 +96,12 @@ Here's a simple example of a widget that creates it's own DOM tree:
                     this.domNode = domConstruct.create("button", {innerHTML: "push me"});
                 }
             });
-    
+
             ready(function(){
                 // Create the widget programmatically and place in DOM
                 (new MyFirstWidget()).placeAt(win.body());
             });
          });
-    </script>
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
@@ -198,7 +196,6 @@ So, putting that all together the source becomes:
 
   .. js ::
 
-    <script type="text/javascript">
        require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
@@ -207,23 +204,22 @@ So, putting that all together the source becomes:
             declare("FancyCounter", [_WidgetBase, _TemplatedMixin], {
                 // counter
                 _i: 0,
-    
+
                 templateString: "<div>" +
                     "<button data-dojo-attach-event='onclick: increment'>press me</button>" +
                     "&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
                     "</div>",
-    
+
                 increment: function(){
                     this.counter.innerHTML = ++this._i;
                 }
             });
-    
+
             ready(function(){
                 // Call the parser manually so it runs after our widget is defined, and page has finished loading
                 parser.parse();
             });
         });
-    </script>
 
   .. html ::
 
@@ -296,7 +292,6 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 
   .. js ::
 
-    <script type="text/javascript">
        require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
@@ -308,7 +303,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
                         "<div>Name: <span data-dojo-attach-point='nameNode'></span></div>" +
                         "<div>Phone #: <span data-dojo-attach-point='phoneNode'></span></div>" +
                     "</div>",
-    
+
                 // Attributes
                 name: "unknown",
                 _setNameAttr: { node: "nameNode", type: "innerHTML" },
@@ -319,17 +314,15 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
                 phone: "unknown",
                 _setPhoneAttr: { node: "phoneNode", type: "innerHTML" }
             });
-    
+
             ready(function(){
                 // Call the parser manually so it runs after our widget is defined, and page has finished loading
                 parser.parse();
             });
         });
-    </script>
 
   .. css ::
 
-    <style>
         .businessCard {
             border: 3px inset gray;
             margin: 1em;
@@ -340,7 +333,6 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
         .specialEmployeeName {
             color: red;
         }
-    </style>
 
   .. html ::
 
@@ -387,7 +379,6 @@ that has an "open" attribute that controls whether the widget is hidden or shown
 
   .. js ::
 
-    <script type="text/javascript">
        require([
             "dojo/_base/declare", "dojo/dom-style", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
@@ -396,19 +387,18 @@ that has an "open" attribute that controls whether the widget is hidden or shown
             declare("HidePane", [_WidgetBase], {
                 // parameters
                 open: true,
-    
+
                 _setOpenAttr: function(/*Boolean*/ open){
                     this._set("open", open);
                     domStyle.set(this.domNode, "display", open ? "block" : "none");
                 }
             });
-    
+
             ready(function(){
                 // Call the parser manually so it runs after our widget is defined, and page has finished loading
                 parser.parse();
             });
         });
-    </script>
 
   .. html ::
 
@@ -483,7 +473,6 @@ and in that case templateString should reference the file via the :ref:`dojo.tex
 
   .. js ::
 
-    <script>
         require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
@@ -493,13 +482,12 @@ and in that case templateString should reference the file via the :ref:`dojo.tex
                     templateString:
                         "<button data-dojo-attach-point='containerNode'></button>"
             });
-    
+
             ready(function(){
                 // Call the parser manually so it runs after our widget is defined, and page has finished loading
                 parser.parse();
             });
         });
-    </script>
 
   .. html ::
 

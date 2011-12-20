@@ -179,10 +179,8 @@ Connecting HtmlStore to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -235,7 +233,6 @@ Connecting HtmlStore to dojox.grid.DataGrid
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
 
@@ -247,7 +244,6 @@ Connecting HtmlStore to dojox.grid.DataGrid
         ]
       ];
 
-    </script>
 
   .. html ::
 
@@ -305,14 +301,12 @@ Connecting HtmlStore to dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 Connecting HtmlStore with List to dijit.form.ComboBox
@@ -322,11 +316,9 @@ Connecting HtmlStore with List to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -358,11 +350,9 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 

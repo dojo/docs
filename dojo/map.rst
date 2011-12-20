@@ -41,7 +41,6 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arrValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -63,7 +62,6 @@ This example shows you how to use dojo.map with a simple array. All values of th
         dojo.byId("arrValues-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 
@@ -87,7 +85,6 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arrSalary = [{surname: "Washington", name: "Paul", salary: 200},
@@ -120,7 +117,6 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
         dojo.byId("unFilteredSalary-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 

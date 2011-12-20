@@ -101,14 +101,12 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
       function showValue(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
       }
-    </script>
 
   .. html ::
 
@@ -152,14 +150,12 @@ Configured indent and line length
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
       function showValue2(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
       }
-    </script>
 
   .. html ::
 

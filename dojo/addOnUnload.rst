@@ -76,7 +76,6 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
 
   .. js ::
 
-    <script type="text/javascript">
       // declare a function to do the unload work
       var unLoad = function(){
         // do some unload stuff
@@ -84,7 +83,6 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
       }
       // pass a function pointer
       dojo.addOnUnload(unLoad);
-    </script>
 
   .. html ::
 

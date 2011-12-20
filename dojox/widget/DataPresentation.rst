@@ -150,9 +150,7 @@ fig 1.
 
   .. css ::
 
-    <style type="text/css">
 
-    </style>
 
 
 		
@@ -260,7 +258,6 @@ fig 2.
 
   .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
@@ -273,7 +270,6 @@ fig 2.
             height: 100%;
             margin: 0;
         }
-    </style>
 
 
 

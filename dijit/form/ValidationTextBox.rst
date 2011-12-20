@@ -60,9 +60,7 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.ValidationTextBox");
-    </script>
 
   .. html ::
 
@@ -82,9 +80,7 @@ This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.ValidationTextBox");
-    </script>
 
   .. html ::
 
@@ -105,7 +101,6 @@ The following code demonstrates a dynamic ValidationTextBox that only accepts a 
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.ValidationTextBox");
       var after5 = function(constraints){
           var date=new Date();
@@ -115,7 +110,6 @@ The following code demonstrates a dynamic ValidationTextBox that only accepts a 
               return "\\D+";
           }
       }
-    </script>
 
   .. html ::
 

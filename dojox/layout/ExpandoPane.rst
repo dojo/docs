@@ -48,11 +48,9 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.require("dijit.layout.BorderContainer");
       dojo.require("dojox.layout.ExpandoPane");
-    </script>
 
   .. html ::
 
@@ -65,7 +63,6 @@ Declarative example
 
   .. css ::
 
-    <style type="text/css">
       @import url("{{ baseUrl }}dojox/layout/resources/ExpandoPane.css");
 
       html, body {
@@ -78,7 +75,6 @@ Declarative example
         width: 100%;
         height: 100%;
       }
-    </style>
 
 
 

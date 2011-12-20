@@ -56,10 +56,8 @@ This example shows a simple file picker text box pulling data from a dojox.data.
 
   .. js ::
 
-    <script>
       dojo.require("dojox.data.FileStore");
       dojo.require("dojox.form.FilePickerTextBox");
-    </script>
 
   .. html ::
 
@@ -70,6 +68,4 @@ This example shows a simple file picker text box pulling data from a dojox.data.
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/FilePickerTextBox.css";
-    </style>

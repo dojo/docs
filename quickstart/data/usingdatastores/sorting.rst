@@ -41,7 +41,6 @@ Showing how sort attributes affect ordering
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -132,7 +131,7 @@ Showing how sort attributes affect ordering
              function fetchFailed(error, request){
                 alert("lookup failed.");
              }
-             
+
              // Fetch the data in a sorted order.
              foodStore.fetch({onBegin: clearSortedList, onComplete: gotSortedItems, onError: fetchFailed, sort: [{ attribute: "aisle"},{attribute: "name"}]});
 
@@ -144,7 +143,6 @@ Showing how sort attributes affect ordering
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
-    </script>
 
   .. html ::
 

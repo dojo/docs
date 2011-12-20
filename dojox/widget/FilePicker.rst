@@ -43,10 +43,8 @@ A simple file picker pulling data from a dojox.data.FileStore
 
   .. js ::
 
-    <script>
       dojo.require("dojox.data.FileStore");
       dojo.require("dojox.widget.FilePicker");
-    </script>
 
   .. html ::
   
@@ -56,6 +54,4 @@ A simple file picker pulling data from a dojox.data.FileStore
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/FilePicker/FilePicker.css";
-    </style>

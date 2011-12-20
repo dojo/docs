@@ -58,7 +58,6 @@ Example usage of dojo.doc as replacement for document calls
   
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button");
       function addText(){
         dojo.connect(dijit.byId("addTextButton"), "onClick", function(){
@@ -68,7 +67,6 @@ Example usage of dojo.doc as replacement for document calls
         });
       }
       dojo.ready(addText);
-    </script>
 
   .. html ::
 

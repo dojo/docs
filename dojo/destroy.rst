@@ -66,7 +66,6 @@ Destroy a single node
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -81,7 +80,6 @@ Destroy a single node
         }, "progButtonNode");
 
     });
-    </script>
 
   Some DomNodes to destroy
   
@@ -99,16 +97,13 @@ Destroy all nodes in a list by reference
 
   .. css ::
 
-    <style type="text/css">
     .stay { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
     .go { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
-    </style>
 
   Destroy all Nodes in a list by reference
   
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -123,7 +118,6 @@ Destroy all nodes in a list by reference
         }, "progButtonNode2");
 
     });
-    </script>
 
   Some DomNodes to destroy
   

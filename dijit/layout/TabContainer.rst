@@ -85,10 +85,8 @@ Here are some markup examples:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   The HTML is very simple
 
@@ -122,10 +120,8 @@ The second tab is closable.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   The HTML is very simple
 
@@ -254,7 +250,6 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.ready(function(){
@@ -269,7 +264,6 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
         });
         tabs.addChild(closablePane);
     });
-    </script>
 
   You can, of course, attach the onClose function directly on a pane as well:
 

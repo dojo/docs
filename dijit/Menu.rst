@@ -31,7 +31,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Menu");
 
       var pMenu;
@@ -70,7 +69,6 @@ Programmatic example
 
             pMenu.startup();
         });
-    </script>
 
   .. html ::
 
@@ -87,10 +85,8 @@ This example creates a context menu for the whole window.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Menu");
       dojo.require("dijit.ColorPalette");
-    </script>
 
   .. html ::
 

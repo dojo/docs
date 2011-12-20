@@ -59,12 +59,10 @@ Declarative example
 
   .. css ::
 
-   <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";
-    
+
     img.thing { width:50px; height:50px; }
 
-   </style>
 
 
 See also

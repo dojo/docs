@@ -80,11 +80,9 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.NewPage");
-    </script>
 
     
   .. html ::
@@ -125,11 +123,9 @@ Custom New Page Content
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.NewPage");
-    </script>
 
     
   .. html ::

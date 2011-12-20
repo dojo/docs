@@ -13,11 +13,9 @@ The following example prints out the monetary data (places and round) for EUR (E
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
         // load monetary data:
         dojo.require("dojo.cldr.monetary");
-    </script>
 
   .. html ::
 

@@ -161,11 +161,10 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
   
   .. js ::
 
-    <script>
       function getLicense(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainer");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE",
@@ -188,7 +187,6 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicense);
-    </script>
 
   .. html ::
 
@@ -203,11 +201,10 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
   
   .. js ::
 
-    <script>
       function getLicensePreventCache(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainerPreventCache");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE",
@@ -232,7 +229,6 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
       }
       dojo.ready(getLicensePreventCache);
 
-    </script>
 
   .. html ::
 
@@ -246,11 +242,10 @@ Example 3: dojo.xhrGet call that errors.
   
   .. js ::
 
-    <script>
       function callError(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("errorContainer");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/NoSuchFile",
@@ -270,7 +265,6 @@ Example 3: dojo.xhrGet call that errors.
       }
       dojo.ready(callError);
 
-    </script>
 
   .. html ::
 
@@ -334,11 +328,10 @@ Example 5: dojo.xhrGet call with 'content' (query params).
   
   .. js ::
 
-    <script>
       function getLicenseQueryParams(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseQueryParams");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE",
@@ -367,7 +360,6 @@ Example 5: dojo.xhrGet call with 'content' (query params).
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicenseQueryParams);
-    </script>
 
   .. html ::
 
@@ -380,11 +372,10 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
   
   .. js ::
 
-    <script>
       function getLicenseStatus(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseStatus");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE",
@@ -402,7 +393,6 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicenseStatus);
-    </script>
 
   .. html ::
 
@@ -416,11 +406,10 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
   
   .. js ::
 
-    <script>
       function getLicenseErrorStatus(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatus");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE_NOT_THERE",
@@ -452,7 +441,6 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicenseErrorStatus);
-    </script>
 
   .. html ::
 
@@ -468,11 +456,10 @@ Example 8: dojo.xhrGet call with headers
   
   .. js ::
 
-    <script>
       function getLicenseHeaders(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseHeaders");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE",
@@ -501,7 +488,6 @@ Example 8: dojo.xhrGet call with headers
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicenseHeaders);
-    </script>
 
   .. html ::
 
@@ -516,11 +502,10 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
   
   .. js ::
 
-    <script>
       function getLicenseErrorStatusWithHandle(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatusWithHandle");
-        
+
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "{{dataUrl}}dojo/LICENSE_NOT_THERE",
@@ -552,7 +537,6 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
         var deferred = dojo.xhrGet(xhrArgs);
       }
       dojo.ready(getLicenseErrorStatusWithHandle);
-    </script>
 
   .. html ::
 

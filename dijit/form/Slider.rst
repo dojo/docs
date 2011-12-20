@@ -55,7 +55,6 @@ The following code fills in a simple textbox called sliderValue.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Slider");
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
@@ -73,7 +72,6 @@ The following code fills in a simple textbox called sliderValue.
           }
         }, "slider");
       });
-    </script>
 
   .. html ::
 
@@ -90,7 +88,6 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Slider");
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
@@ -111,7 +108,6 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
           style: "height:300px;"
         }, vertical);
       });
-    </script>
 
   .. html ::
 
@@ -129,9 +125,7 @@ This example also shows the end buttons removed.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Slider");
-    </script>
 
   .. html ::
 

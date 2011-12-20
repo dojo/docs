@@ -36,9 +36,7 @@ In this example using USD, both dollars and cents are required.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.CurrencyTextBox");
-    </script>
 
   .. html ::
 
@@ -62,7 +60,6 @@ In this example using euros with German formatting, the invalid message contains
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.CurrencyTextBox");
         dojo.require("dojo.currency");
         dojo.requireLocalization("dojo.cldr", "currency", 'de-de');
@@ -78,7 +75,6 @@ In this example using euros with German formatting, the invalid message contains
             new dijit.form.CurrencyTextBox(props, "eurde");
         }
         dojo.ready(createWidget);
-    </script>
 
   .. html ::
 

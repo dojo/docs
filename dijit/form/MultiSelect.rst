@@ -52,9 +52,7 @@ Eg. <select data-dojo-type="dijit.form.MultiSelect" multiple="true"...
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.MultiSelect");
-    </script>
 
   .. html ::
 
@@ -72,7 +70,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.MultiSelect");
         dojo.ready(function(){
                 var sel = dojo.byId('dynamic');
@@ -85,7 +82,6 @@ Programmatic example
                 }
                 new dijit.form.MultiSelect({ name: 'dynamic' }, sel);
         });
-    </script>
 
   .. html ::
 

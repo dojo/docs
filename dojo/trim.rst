@@ -62,7 +62,6 @@ Examples
 
   .. js ::
 
-    <script>
       function show(str){
         return "|" + dojo.trim(str) + "|";
       }
@@ -73,7 +72,6 @@ Examples
         dojo.byId("output4").innerHTML = show("\tfour\r\n");
         dojo.byId("output5").innerHTML = show("\f\n\r\t\vF I V E\f\n\r\t\v");
       });
-    </script>
 
   Minimalistic HTML for our example.
 

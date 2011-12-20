@@ -68,7 +68,6 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
 
   .. js ::
 
-    <script>
      dojo.require("dojo.io.script");
 
       function searchGoogle(){
@@ -94,7 +93,6 @@ Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
         dojo.io.script.get(jsonpArgs);
       }
       dojo.ready(searchGoogle);
-    </script>
 
   .. html ::
 

@@ -23,12 +23,10 @@ Once you have read through this page you should be able to create such a layout 
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
      dojo.require("dijit.layout.TabContainer");
      dojo.require("dijit.layout.AccordionContainer");
      dojo.require("dijit.layout.ContentPane");
-     </script>
 
   .. html ::
 
@@ -50,13 +48,11 @@ Once you have read through this page you should be able to create such a layout 
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
         margin: 0;
       }
-    </style>
 
 HTML and Layouts
 ================
@@ -67,10 +63,8 @@ Typically HTML has bottom-up sizing, where a container is as big as its contents
 
   .. css ::
 
-     <style type="text/css">
         .inner, .outer { margin: 5px; border: 1px solid blue; }
         .inner { border: 1px solid green; }
-     </style>
 
   .. html ::
 
@@ -102,11 +96,9 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
 
   .. css ::
 
-      <style type="css/text">
         .top, .bottom { height: 100px; }
         .center { height: 200px; width: 300px; }
         .leading, .trailing { width: 200px; }
-      </style>
 
   .. html ::
 
@@ -141,10 +133,8 @@ You typically start off the page using a BorderContainer, like this, to split th
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
      dojo.require("dijit.layout.ContentPane");
-     </script>
 
   .. html ::
 
@@ -158,13 +148,11 @@ You typically start off the page using a BorderContainer, like this, to split th
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
         margin: 0;
       }
-    </style>
 
 Then you start nesting containers.
 For instance, on the left you might want an AccordionContainer:
@@ -174,9 +162,7 @@ For instance, on the left you might want an AccordionContainer:
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.layout.AccordionContainer");
-     </script>
 
   .. html ::
 
@@ -188,12 +174,10 @@ For instance, on the left you might want an AccordionContainer:
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
       }
-    </style>
 
 And a TabContainer in the middle:
 
@@ -202,10 +186,8 @@ And a TabContainer in the middle:
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.layout.TabContainer");
      dojo.require("dijit.layout.ContentPane");
-     </script>
 
   .. html ::
 
@@ -217,12 +199,10 @@ And a TabContainer in the middle:
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
       }
-    </style>
 
 Nesting those inside of the BorderContainer will look like this:
 
@@ -231,12 +211,10 @@ Nesting those inside of the BorderContainer will look like this:
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
      dojo.require("dijit.layout.TabContainer");
      dojo.require("dijit.layout.AccordionContainer");
      dojo.require("dijit.layout.ContentPane");
-     </script>
 
   .. html ::
 
@@ -258,13 +236,11 @@ Nesting those inside of the BorderContainer will look like this:
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
         margin: 0;
       }
-    </style>
 
 There are three types of elements in that example:
 

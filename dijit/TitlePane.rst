@@ -44,7 +44,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.TitlePane");
 
       var tp;
@@ -52,7 +51,6 @@ Programmatic example
         tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
             dojo.byId("holder").appendChild(tp.domNode);
       });
-    </script>
 
   .. html ::
 
@@ -68,9 +66,7 @@ Creation from markup is even easier.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.TitlePane");
-    </script>
 
   .. html ::
 
@@ -91,9 +87,7 @@ For example:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.TitlePane");
-    </script>
 
   .. html ::
 

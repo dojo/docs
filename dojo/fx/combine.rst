@@ -35,7 +35,6 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicCombine(){
@@ -54,7 +53,6 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
          dojo.connect(dijit.byId("basicButton"), "onClick", combineIt);
       }
       dojo.ready(basicCombine);
-    </script>
 
   .. html ::
 

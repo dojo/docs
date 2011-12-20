@@ -210,9 +210,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
   .. css ::
 
-   <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";
-   </style>
 
 
 

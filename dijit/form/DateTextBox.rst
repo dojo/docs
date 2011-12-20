@@ -66,9 +66,7 @@ Declarative example
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.form.DateTextBox");
-     </script>
 
   .. html ::
 
@@ -97,7 +95,6 @@ Here's an example:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.DateTextBox");
         dojo.ready(function(){
             dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
@@ -123,7 +120,6 @@ Here's an example:
             }, "oracle");
             showServerValue();
         });
-    </script>
 
   .. html ::
 
@@ -147,9 +143,7 @@ and the second widget sets the `min` constraint of the first widget.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.DateTextBox");
-    </script>
 
   .. html ::
 
@@ -173,7 +167,6 @@ The catch is that this can only be set after the widget has been created.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.DateTextBox");
         function setShortYear(){
             var w = dijit.byId('shortYear');
@@ -181,7 +174,6 @@ The catch is that this can only be set after the widget has been created.
             w.set('value', w.get('value')); // reformat display to short year
         }
         dojo.ready(setShortYear);
-    </script>
 
   .. html ::
 

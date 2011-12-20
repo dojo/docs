@@ -39,9 +39,7 @@ This example shows a simple DropDownSelect widget - converted from a select tag.
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.DropDownSelect");
-    </script>
 
   .. html ::
 
@@ -55,9 +53,7 @@ This example shows a simple DropDownSelect widget - converted from a select tag.
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/DropDownSelect.css";
-    </style>
 
 A "styled" DropDownSelect
 -------------------------
@@ -68,9 +64,7 @@ When styling the entries of a DropDownSelect, you must use div and span tags, in
 
   .. js ::
 
-    <script>
       dojo.require("dojox.form.DropDownSelect");
-    </script>
 
   .. html ::
 
@@ -85,7 +79,5 @@ When styling the entries of a DropDownSelect, you must use div and span tags, in
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/form/resources/DropDownSelect.css";
       .ark { text-decoration: underline; }
-    </style>

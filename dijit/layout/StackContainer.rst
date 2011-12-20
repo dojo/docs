@@ -126,11 +126,9 @@ Here you will see a declaratively created StackContainer
   
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -149,16 +147,14 @@ Here you will see a declaratively created StackContainer
 
   .. css ::
 
-    <style type="text/css">
       #stackContainer {
           border: 1px solid #ccc;
           margin-top: 10px;
       }
-      
+
       #stackContainer div {
           padding: 5px;
       }
-    </style>
 
 
 Accessibility

@@ -75,9 +75,7 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
-    </script>
 
   .. html ::
 
@@ -95,7 +93,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.ready(function(){
           new dijit.layout.ContentPane({
@@ -103,7 +100,6 @@ Programmatic example
               style:"height:125px"
           }, "targetID");
       });
-    </script>
 
   .. html ::
 
@@ -118,7 +114,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.ready(function(){
           new dijit.layout.ContentPane({
@@ -126,7 +121,6 @@ Programmatic example
               style:"height:125px"
           }).placeAt("targetID2");
       });
-    </script>
 
   .. html ::
 

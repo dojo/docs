@@ -49,7 +49,6 @@ To give the user feedback about what's happening with the searches they issue, w
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.DeferredList");
         dojo.require("dijit.form.Button");
 
@@ -96,7 +95,6 @@ To give the user feedback about what's happening with the searches they issue, w
             console.log(res);
           });
         }
-    </script>
    
   .. html ::
    

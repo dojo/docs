@@ -143,7 +143,6 @@ The following example lets a node by id disappear from the screen
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -155,7 +154,6 @@ The following example lets a node by id disappear from the screen
         dojo.fadeIn({node: node, duration: 300}).play();
       })
     });
-    </script>
 
   .. html ::
 
@@ -164,7 +162,6 @@ The following example lets a node by id disappear from the screen
 
   .. css ::
 
-    <style type="text/css">
       #findMe {
         width: 200px;
         height: 100px;
@@ -174,7 +171,6 @@ The following example lets a node by id disappear from the screen
         padding: 10px;
         margin: 10px;
       }
-    </style>
 
 See Also
 --------

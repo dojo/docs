@@ -121,10 +121,8 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.ViewSource");
-    </script>
 
   .. html ::
 
@@ -164,11 +162,9 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-    </script>
 
   .. html ::
 
@@ -210,12 +206,10 @@ This example also organizes the toolbar a bit.
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dijit._editor.plugins.FullScreen");
       dojo.require("dojox.editor.plugins.PrettyPrint");
-    </script>
 
   .. html ::
 

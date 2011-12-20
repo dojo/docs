@@ -45,9 +45,7 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.form.NumberTextBox");
-     </script>
 
   .. html ::
 
@@ -71,7 +69,6 @@ The fractional part can be 0 to 6 digits long.
 
   .. js ::
 
-     <script type="text/javascript">
          dojo.require("dijit.form.NumberTextBox");
          function createWidget(){
               var props = {
@@ -81,7 +78,6 @@ The fractional part can be 0 to 6 digits long.
               new dijit.form.NumberTextBox(props, "programmatic");
          }
          dojo.ready(createWidget);
-     </script>
 
   .. html ::
 
@@ -100,9 +96,7 @@ Try entering a simple value like "-3" and then tab away to see the effect.
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.form.NumberTextBox");
-     </script>
 
   .. html ::
 
