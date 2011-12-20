@@ -28,9 +28,8 @@ Limitations
 
 * Dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
 
-.. html ::
+.. js ::
  
-  <script>
     dojo.ready(function(){
       var editor = dijit.byId("myEditor");
 
@@ -38,7 +37,8 @@ Limitations
         editor.set("value", "<b>This is new content.</b>");
       });
     });
-  </script>
+
+.. html ::
 
   <div data-dojo-type="dijit.Editor" id="myEditor">
     <p>This is the initial content.</p>
@@ -58,9 +58,7 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Editor");
-    </script>
 
   .. html ::
 
@@ -78,7 +76,6 @@ although even when created programmatically you need to specify a source DOM nod
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.Editor");
         dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
         function create(){
@@ -88,7 +85,6 @@ although even when created programmatically you need to specify a source DOM nod
             }, dojo.byId('programmatic2'));
             dojo.query('#create2').orphan();
         }
-    </script>
 
   .. html ::
  
@@ -106,9 +102,7 @@ Of course the toolbar can be reordered and customized to suit your layout needs.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Editor");
-    </script>
 
   .. html ::
 
@@ -147,11 +141,9 @@ This example adds the text color, background color, and font selection plugins t
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FontChoice");  // 'fontName','fontSize','formatBlock'
       dojo.require("dijit._editor.plugins.TextColor");
-    </script>
 
   .. html ::
 
@@ -167,16 +159,14 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.LinkDialog");
-    </script>
 
   .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor3"
-    data-dojo-props="plugins:['bold','italic','|','createLink'],
-        onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
+    		data-dojo-props="plugins:['bold','italic','|','createLink'],
+        	onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
         <p>This instance is created with customized toolbar/ plugins</p>
       </div>
 
@@ -283,15 +273,13 @@ It's used along with setting height="" parameter setting.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
-    </script>
 
   .. html ::
 
         <div data-dojo-type="dijit.Editor" id="editor5"
-       data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
+       			data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
             <p>
                 This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
             </p>
