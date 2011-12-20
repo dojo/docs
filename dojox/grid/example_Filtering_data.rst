@@ -9,11 +9,9 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

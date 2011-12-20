@@ -21,17 +21,13 @@ A simple declarative example
 
   .. css ::
 
-     <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
-     </style>
 
   .. js ::
 
-    <script>
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -51,17 +47,13 @@ Adding and removing children
 
   .. css ::
 
-     <style type="text/css">
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
-     </style>
 
   .. js ::
 
-    <script>
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

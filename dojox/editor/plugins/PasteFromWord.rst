@@ -86,16 +86,12 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PasteFromWord");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/PasteFromWord.css";
-    </style>
     
   .. html ::
 

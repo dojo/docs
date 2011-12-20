@@ -94,7 +94,6 @@ Creating a programmatic tree is very simple:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
 
@@ -115,7 +114,6 @@ Creating a programmatic tree is very simple:
             model: treeModel
         }, "treeOne");
       });
-    </script>
 
   .. html ::
 
@@ -131,10 +129,8 @@ A markup tree
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
-    </script>
 
   .. html ::
 

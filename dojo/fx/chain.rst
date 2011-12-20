@@ -33,7 +33,6 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicChain(){
@@ -53,7 +52,6 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
          dojo.connect(dijit.byId("basicButton"), "onClick", chainIt);
       }
       dojo.ready(basicChain);
-    </script>
 
   .. html ::
 

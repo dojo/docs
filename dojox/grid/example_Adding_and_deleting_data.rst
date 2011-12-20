@@ -10,11 +10,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

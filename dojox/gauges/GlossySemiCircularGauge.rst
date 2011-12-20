@@ -89,7 +89,6 @@ Examples
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossySemiCircularGauge');
         makeGauge = function(){
@@ -103,4 +102,3 @@ Examples
         	glossyCircular.startup();
         };
         dojo.ready(makeGauge );
-    </script>

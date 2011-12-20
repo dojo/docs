@@ -47,12 +47,10 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
         dojo.ready(function(){
             var c = new dojox.widget.ColorPicker({}, "picker1");
         });
-    </script>
 
   .. html ::
 
@@ -70,9 +68,7 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
-    </script>
 
   .. html ::
 
@@ -90,10 +86,8 @@ A ColorPicker within a DropDownButton
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.ColorPicker");
         dojo.require("dijit.form.DropDownButton");
-    </script>
 
   .. html ::
 

@@ -38,10 +38,8 @@ A plain Calendar widget with the formatted date below:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
-    </script>
 
   .. html ::
 
@@ -50,14 +48,12 @@ A plain Calendar widget with the formatted date below:
     
   .. css ::
 
-    <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
       #formatted {
         text-align: center;
       }
-    </style>
 
 With an initial selection and weekends disabled:
 
@@ -68,10 +64,8 @@ With an initial selection and weekends disabled:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
-    </script>
 
   .. html ::
 
@@ -79,7 +73,6 @@ With an initial selection and weekends disabled:
     
   .. css ::
 
-    <style type="text/css">
       .{{ theme }} .dijitCalendarDisabledDate {
         background-color:#333 !important;
         text-decoration:none !important;
@@ -88,7 +81,6 @@ With an initial selection and weekends disabled:
       .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
-    </style>
 
 Javascript declaration, with a restriction of +/- one week from the current date:
 
@@ -99,7 +91,6 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.dijit"); // loads the optimized dijit layer
         dojo.require("dijit.Calendar");
 
@@ -113,7 +104,6 @@ Javascript declaration, with a restriction of +/- one week from the current date
                 }
             }, "mycal");
         });
-    </script>
 
   .. html ::
 
@@ -121,12 +111,10 @@ Javascript declaration, with a restriction of +/- one week from the current date
     
   .. css ::
 
-    <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
         width: 200px;
       }
-    </style>
 
 Custom styling:
 
@@ -138,9 +126,7 @@ Custom styling:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.Calendar");
-    </script>
   
 
   .. html ::
@@ -149,13 +135,11 @@ Custom styling:
     
   .. css ::
 
-    <style>
         #calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
         #calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
         #calendar5 .dijitCalendarDayLabel { font-weight: bold }
         #calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
         #calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
-    </style>
         
 
 [1.4+] Non-Gregorian calendars:
@@ -167,7 +151,6 @@ Custom styling:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
 
@@ -200,7 +183,6 @@ Custom styling:
           selector: 'date'
         });
       }
-    </script>
 
   .. html ::
 

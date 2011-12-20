@@ -33,7 +33,6 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 
   .. js ::
 
-    <script type="text/javascript">
     // this Button is just to make the demo look nicer:
     dojo.require("dijit.form.Button");
 
@@ -47,7 +46,6 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
             "after"
         );
     }
-    </script>
 
   .. html ::
 
@@ -77,7 +75,6 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
   .. js ::
 
-    <script type="text/javascript">
     // this Button is just to make the demo look nicer:
     dojo.require("dijit.form.Button");
 
@@ -91,7 +88,6 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
             "after"
         );
     }
-    </script>
 
   .. html ::
 
@@ -120,7 +116,6 @@ Note the "i" variable which returns the current position of an iteration
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arrFruit = ["apples", "kiwis", "pineapples"];
@@ -131,7 +126,6 @@ Note the "i" variable which returns the current position of an iteration
         dojo.byId("forEach-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 
@@ -146,7 +140,6 @@ Now let's use dojo.forEach with a list of dom nodes we retrieve using dojo.query
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arr = ["apples", "kiwis", "pineapples"];
@@ -157,7 +150,6 @@ Now let's use dojo.forEach with a list of dom nodes we retrieve using dojo.query
         dojo.byId("forEachQuery-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 
@@ -231,7 +223,6 @@ Let's take a look at an example:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arr = [{surname: "Washington", name: "Paul"},
@@ -262,7 +253,6 @@ Let's take a look at an example:
         dojo.byId("unFiltered-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 
@@ -299,7 +289,6 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arrSalary = [200, 300, 1500, 5, 4500];
@@ -321,7 +310,6 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
         dojo.byId("unFilteredSalary-items").appendChild(li);
       });
     }
-    </script>
 
   .. html ::
 
@@ -364,7 +352,6 @@ Now your bank policies only allow you to give each client one credit over 1 mill
 
   .. js ::
 
-    <script type="text/javascript">
     // this Button is just to make the demo look nicer:
     dojo.require("dijit.form.Button");
 
@@ -382,7 +369,6 @@ Now your bank policies only allow you to give each client one credit over 1 mill
             "after"
         );
     }
-    </script>
 
   .. html ::
 
@@ -413,7 +399,6 @@ An example:
 
   .. js ::
 
-    <script type="text/javascript">
     // this Button is just to make the demo look nicer:
     dojo.require("dijit.form.Button");
 
@@ -431,7 +416,6 @@ An example:
             "after"
         );
     }
-    </script>
 
   .. html ::
 

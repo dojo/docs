@@ -79,10 +79,8 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.AutoUrlLink");
-     </script>
 
   .. html ::
 

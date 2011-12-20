@@ -9,11 +9,9 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -76,14 +74,12 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. css ::
 
-    <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";
         @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
         }
-    </style>
 
 
 Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behavior of the selection functionality:

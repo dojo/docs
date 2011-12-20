@@ -87,7 +87,6 @@ Basic usage
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
@@ -97,7 +96,6 @@ Basic usage
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -108,9 +106,7 @@ Basic usage
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -141,7 +137,6 @@ Programmatic creation
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
@@ -153,7 +148,6 @@ Programmatic creation
          dojo.connect(b4, "onClick", function(){standby.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -163,9 +157,7 @@ Programmatic creation
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -196,7 +188,6 @@ Changing overlay color
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
@@ -206,7 +197,6 @@ Changing overlay color
          dojo.connect(b6, "onClick", function(){basicStandby3.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -217,9 +207,7 @@ Changing overlay color
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -250,7 +238,6 @@ Changing overlay color and image
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
@@ -260,7 +247,6 @@ Changing overlay color and image
          dojo.connect(b8, "onClick", function(){basicStandby4.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -271,9 +257,7 @@ Changing overlay color and image
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -306,7 +290,6 @@ This example works on Firefox and Safari only.
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
@@ -316,7 +299,6 @@ This example works on Firefox and Safari only.
          dojo.connect(b10, "onClick", function(){basicStandby5.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -327,9 +309,7 @@ This example works on Firefox and Safari only.
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>
@@ -359,7 +339,6 @@ Overlaying a dijit.form.TextBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
@@ -370,7 +349,6 @@ Overlaying a dijit.form.TextBox
          dojo.connect(b12, "onClick", function(){basicStandby6.hide();});
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -382,9 +360,7 @@ Overlaying a dijit.form.TextBox
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-    </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
     <style>

@@ -51,7 +51,6 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -65,11 +64,9 @@ Example showing how the Rotator can create the pane DOM nodes for you.
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
         dojo.ready(function(){
@@ -85,7 +82,6 @@ Example showing how the Rotator can create the pane DOM nodes for you.
                 dojo.byId("myRotator1")
             );
         });
-    </script>
 
   .. html ::
 
@@ -101,7 +97,6 @@ Example showing how the Rotator will use DOM nodes that already exist.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -115,17 +110,15 @@ Example showing how the Rotator will use DOM nodes that already exist.
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
         dojo.ready(function(){
             // add a 3rd pane
             dojo.create("div", { className: "pane", innerHTML: "dynamically added Pane" }, "myRotator2");
-            
+
             new dojox.widget.Rotator(
                 {
                     transition: "dojox.widget.rotator.fade"
@@ -133,7 +126,6 @@ Example showing how the Rotator will use DOM nodes that already exist.
                 dojo.byId("myRotator2")
             );
         });
-    </script>
 
   .. html ::
 
@@ -184,7 +176,6 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -198,14 +189,11 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
-    </script>
 
   .. html ::
 
@@ -225,7 +213,6 @@ Example of using different transitions per pane.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -239,17 +226,14 @@ Example of using different transitions per pane.
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Fade");
         dojo.require("dojox.widget.rotator.Pan");
         dojo.require("dojox.widget.rotator.Slide");
         dojo.require("dojox.widget.rotator.Wipe");
-    </script>
   
   .. html ::
 
@@ -269,7 +253,6 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -283,14 +266,11 @@ Example of using passing in transition parameters. In this case, the :ref:`Pan <
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
         dojo.require("dojox.widget.rotator.Pan");
-    </script>
 
   .. html ::
 
@@ -332,7 +312,6 @@ Example
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -346,13 +325,10 @@ Example
             height:100px;
             overflow:hidden;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.Rotator");
-    </script>
 
   .. html ::
 

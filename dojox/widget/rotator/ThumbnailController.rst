@@ -42,7 +42,6 @@ Programmatic example
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -66,11 +65,9 @@ Programmatic example
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Controller");
         dojo.require("dojox.widget.rotator.Fade");
@@ -97,7 +94,6 @@ Programmatic example
                 dojo.byId("myRotatorController")
             );
         });
-    </script>
 
   .. html ::
 
@@ -116,7 +112,6 @@ Declarative example
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -139,15 +134,12 @@ Declarative example
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Controller");
         dojo.require("dojox.widget.rotator.Fade");
-    </script>
   
   .. html ::
 

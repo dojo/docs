@@ -585,7 +585,6 @@ Connecting ItemFileReadStore to ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -600,7 +599,6 @@ Connecting ItemFileReadStore to ComboBox
           { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
       ]}
-    </script>
 
   .. html ::
 
@@ -962,7 +960,6 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
       dojo.require("dijit.form.Button");
@@ -1001,7 +998,6 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
             reloadableStore1.close();
          });
       });
-    </script>
 
   .. html ::
 
@@ -1019,7 +1015,6 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
       dojo.require("dijit.form.Button");
@@ -1033,7 +1028,6 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
             reloadableStore2.close();
          });
       });
-    </script>
 
   .. html ::
 

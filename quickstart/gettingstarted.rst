@@ -28,7 +28,6 @@ Example
 
   .. js ::
 
-    <script>
         dojo.ready(function(){
             dojo.query("#showMe").onclick(function(e){
                 var node = e.target;
@@ -46,7 +45,6 @@ Example
                 });
             });
         });
-    </script>
 
   .. html ::
 

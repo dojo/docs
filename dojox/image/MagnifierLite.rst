@@ -45,10 +45,8 @@ Declarative example
 
   .. js ::
 
-       <script type="text/javascript">
          dojo.require("dijit.form.Button");
          dojo.require("dojox.image.MagnifierLite");
-       </script>
        
   .. html ::
 
@@ -79,9 +77,7 @@ Declarative example
 		          
   .. css ::
 
-   <style>
     @import "{{baseUrl}}dojox/image/resources/image.css";
-   </style>
 
 
 See also

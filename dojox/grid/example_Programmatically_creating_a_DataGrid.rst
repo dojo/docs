@@ -48,14 +48,12 @@ This example shows how to create a simple Grid programmatically.
 
   .. css ::
 
-    <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";
         @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
         }
-    </style>
 
 Note the grid.startup() command after constructing the DataGrid.  Earlier development
 versions of DataGrid didn't require this but as of 1.2.0b1, you must call

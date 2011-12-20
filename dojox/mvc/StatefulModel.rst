@@ -147,7 +147,6 @@ Using AMD format:
 
 .. js ::
 
-    <script>
         var model;
         require(["dojox/mvc", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(dxmvc, parser){
             model = dojox.mvc.newStatefulModel({ data : {
@@ -155,7 +154,6 @@ Using AMD format:
             }});
             parser.parse();
         });
-    </script>
 
     <input id="helloInput" data-dojo-type="dijit.form.TextBox"
         data-dojo-props="ref: 'model.hello'">
@@ -165,7 +163,6 @@ or, using legacy patterns e.g. ``dojo.require``:
 
 .. js ::
 
-    <script>
         dojo.require("dojox.mvc");
         dojo.require("dojo.parser");
         var model;
@@ -175,7 +172,6 @@ or, using legacy patterns e.g. ``dojo.require``:
             }});
             dojo.parser.parse();
         }
-    </script>
 
     <input id="helloInput" data-dojo-type="dijit.form.TextBox"
         ref="model.hello">

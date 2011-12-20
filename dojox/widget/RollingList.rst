@@ -54,20 +54,18 @@ A simple rolling list pulling data from a read store
 
   .. js ::
 
-    <script>
-    
+
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dojox.widget.RollingList");
       // alert("stall");
       // dojo.ready(function(){
-          
+
       //    dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
       //        getLabel: function(item){
       //            return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
        //       }
       //    });
       //});
-    </script>
 
   .. html ::
   
@@ -78,6 +76,4 @@ A simple rolling list pulling data from a read store
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/widget/RollingList/RollingList.css";
-    </style>

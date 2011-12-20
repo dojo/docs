@@ -75,7 +75,6 @@ Example 1: Load an ATOM Feed
   
   .. js ::
 
-    <script>
       dojo.require("dojox.atom.io.model");
       dojo.require("dojox.atom.io.Connection");
 
@@ -101,7 +100,6 @@ Example 1: Load an ATOM Feed
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimpleAtom);
-    </script>
 
   .. html ::
 
@@ -126,7 +124,6 @@ Example 2: Update an entry in a Feed
   
   .. js ::
 
-    <script>
       dojo.require("dojox.atom.io.model");
       dojo.require("dojox.atom.io.Connection");
 
@@ -165,7 +162,6 @@ Example 2: Update an entry in a Feed
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initUpdateAtom );
-    </script>
 
   .. html ::
 

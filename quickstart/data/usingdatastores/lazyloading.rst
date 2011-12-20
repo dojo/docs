@@ -77,7 +77,6 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
       var storeData = { identifier: 'name',
@@ -124,7 +123,6 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
           { name:'Brazil', type:'country', population:'186 million' },
           { name:'Argentina', type:'country', population:'40 million' }
       ]};
-    </script>
 
   .. html ::
 
@@ -195,7 +193,6 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
       var storeData2 = {
@@ -244,7 +241,6 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
           }
         ]
       };
-    </script>
 
   .. html ::
 

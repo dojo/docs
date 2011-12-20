@@ -71,16 +71,12 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Save");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Save.css";
-    </style>
     
   .. html ::
 
@@ -120,7 +116,6 @@ Customizing a save
 
   .. js ::
 
-    <script>
       dojo.require("dojo.parser");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Save");
@@ -147,13 +142,10 @@ Customizing a save
          // Now we can parse the page since we defined our save plugin above.
          dojo.parser.parse();
         });
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Save.css";
-    </style>
     
   .. html ::
 

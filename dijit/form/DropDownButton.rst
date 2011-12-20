@@ -27,11 +27,9 @@ The first example shows how to create a menu and drop down button programmatical
 
   .. js ::
 
-    <script type="text/javascript">
          dojo.require("dijit.form.Button");
          dojo.require("dijit.DropDownMenu");
          dojo.require("dijit.MenuItem");
-    </script>
     <script type="text/javascript">
          dojo.ready(function(){
             var menu = new dijit.DropDownMenu({ style: "display: none;"});
@@ -76,12 +74,10 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Dialog");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.TooltipDialog");
-    </script>
 
   .. html ::
 

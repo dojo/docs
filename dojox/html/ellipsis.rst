@@ -41,9 +41,7 @@ Within a fixed-width div
 
   .. js ::
 
-    <script>
       dojo.require("dojox.html.ellipsis");
-    </script>
 
   .. html ::
 
@@ -53,9 +51,7 @@ Within a fixed-width div
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
-    </style>
 
 Forcing selectability in FF
 ---------------------------
@@ -64,9 +60,7 @@ Forcing selectability in FF
 
   .. js ::
 
-    <script>
       dojo.require("dojox.html.ellipsis");
-    </script>
 
   .. html ::
 
@@ -76,9 +70,7 @@ Forcing selectability in FF
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
-    </style>
 
 Within a table
 --------------
@@ -87,9 +79,7 @@ Within a table
 
   .. js ::
 
-    <script>
       dojo.require("dojox.html.ellipsis");
-    </script>
 
   .. html ::
 
@@ -102,6 +92,4 @@ Within a table
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
-    </style>

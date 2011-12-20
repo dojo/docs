@@ -46,14 +46,12 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. js ::
 
-    <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
 
        function surpriseMe(){
           dijit.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
           dijit.byId('first_toaster').show();
        }
-    </script>
 
   The html is very simple
 
@@ -88,7 +86,6 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.Toaster");
       function surpriseMe(){
         dojo.publish("testMessageTopic",
@@ -101,7 +98,6 @@ The next example does the same thing, but uses the publish/subscribe model.  The
           ]
         );
       }
-    </script>
 
   .. html ::
 
@@ -126,7 +122,6 @@ This example builds a Toaster programmatically and lets you set params.
 
   .. js ::
 
-    <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
 
        function showMyToaster(){
@@ -147,7 +142,6 @@ This example builds a Toaster programmatically and lets you set params.
              id: 'myToaster',
           }, dojo.byId('ToasterPane'));
        });
-    </script>
 
   The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
 

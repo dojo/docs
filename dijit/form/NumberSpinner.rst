@@ -36,9 +36,7 @@ You have all the options available in the :ref:`Dojo constraint language <quicks
 
   .. js ::
 
-      <script type="text/javascript">
         dojo.require("dijit.form.NumberSpinner");
-      </script>
 
   .. html ::
 
@@ -62,7 +60,6 @@ Here, we'll use a programmatically-created NumberSpinner:
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.NumberSpinner");
       dojo.ready(function(){
         var mySpinner = new dijit.form.NumberSpinner({
@@ -73,7 +70,6 @@ Here, we'll use a programmatically-created NumberSpinner:
           style: "width:100px"
         }, "spinnerId" );
       });
-    </script>
 
   .. html ::
 
@@ -93,7 +89,6 @@ If you'd like onChange to fire after every button click, set the attribute inter
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojo.parser");
     dojo.require("dijit.form.NumberSpinner");
 
@@ -104,7 +99,6 @@ If you'd like onChange to fire after every button click, set the attribute inter
         { over:15, color:"lightblue"},
         { over:-1, color:"darkblue"}
     ];
-    </script>
 
   .. html ::
 

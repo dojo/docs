@@ -80,18 +80,17 @@ Example 1: dojo.xhrPost call to send a form
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
 
       function sendForm(){
         var form = dojo.byId("myform");
-        
+
         dojo.connect(form, "onsubmit", function(event){
           // Stop the submit event since we want to control form submission.
           dojo.stopEvent(event);
-          
+
           // The parameters to pass to xhrPost, the form, how to handle it, and the callbacks.
           // Note that there isn't a url passed.  xhrPost will extract the url to call from the form's
           //'action' attribute.  You could also leave off the action attribute and set the url of the xhrPost object
@@ -114,7 +113,6 @@ Example 1: dojo.xhrPost call to send a form
         });
       }
       dojo.ready(sendForm);
-    </script>
 
   .. html ::
 
@@ -138,7 +136,6 @@ Example 2: dojo.xhrPost call to send some text data
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button");
 
       function sendText(){
@@ -166,7 +163,6 @@ Example 2: dojo.xhrPost call to send some text data
         });
       }
       dojo.ready(sendText);
-    </script>
 
   .. html ::
 

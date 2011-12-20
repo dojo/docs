@@ -71,7 +71,6 @@ Basic example, input-output sync:
 
   .. js ::
 
-    <script>
         // Load the parser, we'll use the declarative data binding syntax (ref).
         dojo.require("dojo.parser");
 
@@ -89,14 +88,11 @@ Basic example, input-output sync:
             "Last"  : "Doe",
             "Email" : "jdoe@example.com"
         }});
-    </script>
 
   .. css ::
 
-    <style type="text/css">
         .row { width: 500px; display: inline-block; margin: 5px; }
         .cell { width: 20%;  display:inline-block; }
-    </style>
 
   .. html ::
 

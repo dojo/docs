@@ -30,7 +30,6 @@ and it will have the same effect as clicking the span with the mouse:
 
   .. js ::
 
-    <script>
         dojo.require("dijit._WidgetBase");
         dojo.require("dijit._TemplatedMixin");
         dojo.require("dijit._OnDijitClickMixin");
@@ -45,7 +44,6 @@ and it will have the same effect as clicking the span with the mouse:
             });
             new MyButton({}, dojo.byId("myButton"));
         });
-    </script>
 
   .. html ::
 

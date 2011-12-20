@@ -59,10 +59,9 @@ We'll go for a simple left/top/bottom interface.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.ContentPane");
-      
+
       dojo.ready(function(){
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
@@ -75,7 +74,7 @@ We'll go for a simple left/top/bottom interface.
           "splitter": "true"
         });
         outerBc.addChild(leftSidebar);
-        
+
         var rightContent = new dijit.layout.BorderContainer({
           "id": "uiContent",
           "region": "center"
@@ -98,7 +97,6 @@ We'll go for a simple left/top/bottom interface.
         // rightContent.startup();
         outerBc.startup();
       });
-    </script>
 
   .. html ::
 

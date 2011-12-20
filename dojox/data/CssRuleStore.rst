@@ -65,7 +65,6 @@ Programmatic construction of a ComboBox to browse rules
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.CssRuleStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -88,7 +87,6 @@ Programmatic construction of a ComboBox to browse rules
         dojo.connect(ruleCombo, "onChange", setCssText);
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 

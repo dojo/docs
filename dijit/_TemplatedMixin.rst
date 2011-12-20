@@ -116,7 +116,6 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit._WidgetBase");
         dojo.require("dijit._TemplatedMixin");
         dojo.require("dojo.parser");
@@ -138,7 +137,6 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
             });
             dojo.parser.parse();
         });
-    </script>
 
   .. html ::
 
@@ -169,7 +167,6 @@ For example:
 
   .. js ::
 
-    <script>
         dojo.require("dijit._WidgetBase");
         dojo.require("dijit._TemplatedMixin");
         dojo.require("dojo.parser");
@@ -184,7 +181,6 @@ For example:
             });
             dojo.parser.parse();
         });
-    </script>
 
   .. html ::
 

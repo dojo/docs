@@ -33,7 +33,6 @@ The first example shows how to create a button programmatically.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -47,7 +46,6 @@ The first example shows how to create a button programmatically.
         }, "progButtonNode");
 
     });
-    </script>
 
   .. html ::
 
@@ -64,9 +62,7 @@ As usual, you can create the Button widget declaratively using the data-dojo-typ
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -89,9 +85,7 @@ Use the showLabel parameter to suppress it from appearing under normal circumsta
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 
@@ -108,7 +102,6 @@ Following example toggles the icon if the button:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
     var toggled = false;
@@ -116,7 +109,6 @@ Following example toggles the icon if the button:
         dijit.byId("toggleButton").set("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");
         toggled = !toggled;
     }
-    </script>
 
   .. html ::
 

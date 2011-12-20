@@ -84,7 +84,6 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
@@ -93,7 +92,6 @@ Basic Usage
       function showContent(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
       }
-    </script>
 
   .. html ::
 
@@ -134,14 +132,12 @@ Configured indent to be ems
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.PrettyPrint");
       function showContent2(){
            dojo.byId("output").innerHTML = dijit.byId("input").get("value");
       }
-    </script>
 
   .. html ::
 

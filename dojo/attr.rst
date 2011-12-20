@@ -105,11 +105,10 @@ The following example will set several attributes such as the "tabindex" and "na
 
   .. js ::
 
-    <script type="text/javascript">
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");
-      
+
       setAttributes = function(){
           dojo.attr('testNode', {
                     tabIndex: 1,
@@ -125,7 +124,6 @@ The following example will set several attributes such as the "tabindex" and "na
              "innerHTML: "+dojo.attr("testNode", "innerHTML")+"\n"
           );
       }
-    </script>
 
   .. html ::
 
@@ -143,11 +141,10 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
 
   .. js ::
 
-    <script type="text/javascript">
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");
-      
+
       function setupHandlers(){
           dojo.attr("testNodeTwo", "onmouseover", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse is over");
@@ -157,7 +154,6 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
             dojo.attr("consoleOne", "innerHTML", "The mouse was clicked");
           });
       }
-    </script>
 
   .. html ::
 
@@ -174,15 +170,13 @@ The following example will set the "style" attribute of the given dom node. When
 
   .. js ::
 
-    <script type="text/javascript">
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");
-      
+
       changeStyle = function(){
           dojo.attr("testNodeThree", "style", {padding: "5px", border: "1px solid #ccc", background: "#eee"});
       }
-    </script>
 
   .. html ::
 

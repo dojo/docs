@@ -21,9 +21,7 @@ Two buttons
 
   .. js ::
 
-    <script>
        dojo.require("dojo.window");
-    </script>
 
   .. html ::
 

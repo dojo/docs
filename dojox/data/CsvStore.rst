@@ -124,7 +124,6 @@ Connecting CsvStore to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.CsvStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -143,7 +142,6 @@ Connecting CsvStore to dijit.form.ComboBox
           var personStore = new dojox.data.CsvStore({data: storeData});
           dijit.byId("combo").store = personStore;
       });
-    </script>
 
   .. html ::
 
@@ -157,10 +155,9 @@ Connecting CsvStore to dojox.grid.DataGrid
 
   .. js ::
 
-    <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
-      
+
       dojo.ready(function(){
           var peopleData =  "firstname,lastname,age\n" +
                             "John, Doe, 21\n" +
@@ -185,7 +182,6 @@ Connecting CsvStore to dojox.grid.DataGrid
           dijit.byId("grid").setStructure(layoutPeople);
           dijit.byId("grid").setStore(personStoreForGrid, {});
       });
-    </script>
 
   .. html ::
 
@@ -197,10 +193,8 @@ Connecting CsvStore to dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/tundraGrid.css";
-    </style>
 
 Connecting CsvStore to dojox.grid.DataGrid where the data used a different separator
 ------------------------------------------------------------------------------------
@@ -209,7 +203,6 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
 
   .. js ::
 
-    <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
 
@@ -237,7 +230,6 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
           dijit.byId("grid2").setStructure(layoutPeople2);
           dijit.byId("grid2").setStore(personStoreForGrid2, {});
       });
-    </script>
 
   .. html ::
 
@@ -249,7 +241,5 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}/dojox/grid/resources/tundraGrid.css";
-    </style>

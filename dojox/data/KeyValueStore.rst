@@ -83,7 +83,6 @@ List out all the attributes and values of a key/value data set
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.KeyValueStore");
       dojo.require("dijit.form.Button");
 
@@ -142,7 +141,7 @@ List out all the attributes and values of a key/value data set
              function fetchFailed(error, request){
                 alert("lookup failed.");
              }
-             
+
              // Fetch the data in a sorted order.
              kvStore.fetch({onBegin: clearList, onComplete: gotItems, onError: fetchFailed});
            }
@@ -151,7 +150,6 @@ List out all the attributes and values of a key/value data set
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -172,7 +170,6 @@ Connecting key/value store to dojox.grid.DataGrid
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.KeyValueStore");
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
@@ -192,7 +189,6 @@ Connecting key/value store to dojox.grid.DataGrid
         ]
       ];
 
-    </script>
 
   .. html ::
 
@@ -211,14 +207,12 @@ Connecting key/value store to dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 Connecting key/value store to dijit.form.ComboBox
@@ -228,7 +222,6 @@ Connecting key/value store to dijit.form.ComboBox
   
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.data.KeyValueStore");
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
@@ -240,7 +233,6 @@ Connecting key/value store to dijit.form.ComboBox
         { 'key4' : 'value4' },
         { 'key5' : 'value5' }
       ];
-    </script>
 
   .. html ::
 

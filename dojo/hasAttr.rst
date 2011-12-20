@@ -82,7 +82,6 @@ The following example will check for several attributes.
 
   .. js ::
 
-    <script type="text/javascript">
       function checkAttributes(){
         showAttribute("id");
         showAttribute("type");
@@ -99,7 +98,6 @@ The following example will check for several attributes.
         wrapper.innerHTML = "<input type='checkbox' disabled='disabled' " +
           (result ? "checked='checked'" : "") + "> has " + name;
       }
-    </script>
 
   .. html ::
 

@@ -45,7 +45,6 @@ This example shows how to fetch items by their identity programmatically.
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
@@ -90,7 +89,6 @@ This example shows how to fetch items by their identity programmatically.
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
-    </script>
 
   .. html ::
 

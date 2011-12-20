@@ -66,11 +66,9 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   .. js ::
 
-    <script type="text/javascript">
 
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
-    </script>
 
   .. html ::
    
@@ -89,9 +87,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   .. css ::
 
-    <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
-    </style>
 
 Basic Feed Portlet
 ------------------
@@ -107,12 +103,10 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. js ::
 
-    <script type="text/javascript">
 
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
       dojo.require("dojox.widget.FeedPortlet");
-    </script>
 
   .. html ::
    
@@ -133,9 +127,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. css ::
 
-    <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
-    </style>
 
 
 Expandable Feed Portlet With Multiple URLs
@@ -152,12 +144,10 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   .. js ::
 
-    <script type="text/javascript">
 
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
       dojo.require("dojox.widget.FeedPortlet");
-    </script>
 
   .. html ::
    
@@ -180,9 +170,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   .. css ::
 
-    <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
-    </style>
 
 Portlets In A Grid Container
 ----------------------------
@@ -195,20 +183,17 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
   .. js ::
 
-    <script type="text/javascript">
 
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
       dojo.require("dojox.widget.FeedPortlet");
       dojo.require("dojox.layout.GridContainer");
       dojo.require("dojox.widget.Calendar");
-    </script>
 
   Include the CSS for the Portlet, the GridContainer, and the Calendar widgets.
 
   .. css ::
 
-    <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css";
       @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css";
       @import "{{ baseUrl }}dojox/widget/Calendar/Calendar.css";
@@ -218,7 +203,6 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
         cursor:default;
         margin-bottom:5px;
       }
-    </style>
 
   This example includes three Portlets in a GridContainer.  The GridContainer lays out the widgets in a grid enables dragging them around.
   The GridContainer in this example has two columns, set using the 'nbZones' attribute.  This example also shows the Calendar Portlet containing another Dojo widget, the dojox.widget.Calendar.

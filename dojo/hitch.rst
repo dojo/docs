@@ -72,7 +72,6 @@ Let's look at a quick example:
  
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar"
       };
@@ -80,7 +79,6 @@ Let's look at a quick example:
         console.log(this.foo);
       });
       func();
-    </script>
 
 When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
 
@@ -95,7 +93,6 @@ Let's say I want to call a method in a given scope. I could do:
 
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar",
         method: function(someArg){
@@ -104,7 +101,6 @@ Let's say I want to call a method in a given scope. I could do:
       };
       var func = dojo.hitch(myObj, myObj.method);
       func();
-    </script>
 
 But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
 
@@ -114,7 +110,6 @@ But that is too much typing. If there's a method that you want to use that's alr
 
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar",
         method: function(someArg){
@@ -123,7 +118,6 @@ But that is too much typing. If there's a method that you want to use that's alr
       };
       var func = dojo.hitch(myObj, "method");
       func();
-    </script>
 
 Firebug should output "bar".
 
@@ -138,7 +132,6 @@ You can also provide arguments to the function you're calling. Here's an example
 
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar",
         method: function(someArg){
@@ -147,7 +140,6 @@ You can also provide arguments to the function you're calling. Here's an example
       };
       var func = dojo.hitch(myObj, "method", "baz");
       func();
-    </script>
 
 The output from firebug should be "baz bar". Any arguments provided after the first two will be passed to the function.
 
@@ -163,9 +155,7 @@ Let's say I want to stop right clicking on my page. This is a one-liner with doj
 
   .. js ::
 
-    <script type="text/javascript">
       document.onconextmenu = dojo.hitch(dojo, "stopEvent");
-    </script>
 
 Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's in an object, I can't use 'this' anymore in that function.
 
@@ -175,7 +165,6 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
 
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar",
         method: function(someArg){
@@ -186,7 +175,6 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
         url: "/something.php",
         load: myObj.method
       });
-    </script>
 
 The above example won't work. If we want to access this.foo, we need to have 'method' called inside of 'myObj'. Giving myObj.method to dojo.xhrGet only passes the function. You can use dojo.hitch to get around this:
 
@@ -196,7 +184,6 @@ The above example won't work. If we want to access this.foo, we need to have 'me
 
   .. js ::
 
-    <script type="text/javascript">
       var myObj = {
         foo: "bar",
         method: function(data){
@@ -207,4 +194,3 @@ The above example won't work. If we want to access this.foo, we need to have 'me
         url: "/something.php",
         load: dojo.hitch(myObj, "method")
       });
-    </script>

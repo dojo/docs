@@ -30,7 +30,6 @@ The first example shows you how to create a nifty button programmatically
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
 
     dojo.ready(function(){
@@ -41,7 +40,6 @@ The first example shows you how to create a nifty button programmatically
                  timeout: 5000
       }, "placeHolder");
     });
-    </script>
 
   .. html ::
 
@@ -49,9 +47,7 @@ The first example shows you how to create a nifty button programmatically
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
-    </style>
 
 Declarative example
 -------------------
@@ -62,9 +58,7 @@ This example show how to use the busy button without internal timeout. Once you 
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
-    </script>
 
   .. html ::
 
@@ -72,9 +66,7 @@ This example show how to use the busy button without internal timeout. Once you 
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
-    </style>
 
 Using the built-in timeout
 --------------------------
@@ -85,9 +77,7 @@ The following example has a built-in timeout.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
-    </script>
 
   .. html ::
 
@@ -95,9 +85,7 @@ The following example has a built-in timeout.
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
-    </style>
 
 Set a new label
 ---------------
@@ -108,14 +96,12 @@ In this example we will set a new label by clicking on a button (this can be a s
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
     dojo.ready(function(){
       dojo.connect(dijit.byId("buttonChangeState"), "onClick", function(){
         dijit.byId("buttonChargeback").setLabel("Chargeback failed...", 2000);
       });
     });
-    </script>
 
   .. html ::
 
@@ -124,9 +110,7 @@ In this example we will set a new label by clicking on a button (this can be a s
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
-    </style>
 
 Disabled BusyButton
 -------------------
@@ -137,7 +121,6 @@ The last example uses a little bit of trickery to create a button which is disab
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.form.BusyButton");
     dojo.ready(function(){
       dojo.connect(dijit.byId("buttonLicense"), "_onClick", function(){
@@ -145,7 +128,6 @@ The last example uses a little bit of trickery to create a button which is disab
         dijit.byId("buttonLicense").resetTimeout();
       });
     });
-    </script>
 
   .. html ::
 
@@ -153,9 +135,7 @@ The last example uses a little bit of trickery to create a button which is disab
 
   .. css ::
 
-    <style type="text/css">
       @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
-    </style>
 
 
 Known Problems

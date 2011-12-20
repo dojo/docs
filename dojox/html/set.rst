@@ -52,7 +52,6 @@ Set content with styles
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.html._base");
         dojo.ready(function(){
             var content = "<div style='background-color: #dffadb; padding: 10px;'>"
@@ -68,7 +67,6 @@ Set content with styles
                 renderStyles: true
             });
         });
-    </script>
 
   .. html ::
 

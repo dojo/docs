@@ -30,7 +30,6 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button");
     dojo.ready(function(){
       new dijit.form.ToggleButton({
@@ -40,7 +39,6 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
         label: "false"
       }, "programmatic");
     });
-    </script>
 
   .. html ::
  
@@ -55,9 +53,7 @@ Now let's create a ToggleButton widget with HTML markup, initially checked:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
  

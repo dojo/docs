@@ -63,12 +63,10 @@ except that you don't specify style="display: none" or contextMenuForWindow or a
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.DropDownMenu");
       dojo.require("dijit.MenuItem");
       dojo.require("dijit.MenuSeparator");
       dojo.require("dijit.PopupMenuItem");
-    </script>
 
   .. html ::
 

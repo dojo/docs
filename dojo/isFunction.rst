@@ -88,13 +88,10 @@ Test against isFunction()
 
   .. css ::
 
-     <style type="text/css">
          .style1 { background: #f1f1f1; padding: 10px; }
-     </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.Button");
 
         // test variable t:
@@ -130,7 +127,6 @@ Test against isFunction()
                 });
             }
         }
-    </script>
 
   .. html ::
 

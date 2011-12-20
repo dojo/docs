@@ -39,7 +39,6 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is there only to make things look fancy
     dojo.require("dojo.cookie");
 
@@ -50,7 +49,6 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
     getCookie = function(){
       alert("The value of the cookie is: "+dojo.cookie("favouriteDish"));
     };
-    </script>
 
   .. html ::
 

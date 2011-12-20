@@ -114,11 +114,9 @@ Examples
 
   .. js ::
 
-    <script type="text/javascript">
         // The following line will load the Dijit Widget "dijit.form.Button".
         // Without this line you will get a "dijit.form.Button not defined" error.
         dojo.require("dijit.form.Button");
-    </script>
 
   .. html ::
 

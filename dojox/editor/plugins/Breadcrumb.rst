@@ -71,16 +71,12 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Breadcrumb");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Breadcrumb.css";
-    </style>
     
   .. html ::
 

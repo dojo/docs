@@ -113,15 +113,14 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 .. js ::
 
-    <script src="scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript" charset="utf-8">
       require(['dojo/_base/kernel', 'dojo/ready', 'dojo/parser', 'dojo/_base/loader'], function(dojo, ready, parser){
-        
+
         // Paths default to dojo.baseUrl ("scripts/dojotoolkit/dojo/"),
         // so we point any module beginning with "my" to the path "scripts/my"
         dojo.registerModulePath('my', '../../my');
-        
+
         // Now that the path is set, load my new button class
         require(['my/form/Button'], function(){
           // Parse the declarative markup
@@ -130,38 +129,33 @@ Note: The custom button is simply an extension of "dijit.form.Button".
           });
         });
       });
-    </script>
 
 
 [Dojo < 1.7]
 
 .. js ::
 
-    <script src="scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript" charset="utf-8">
       // Paths default to dojo.baseUrl ("scripts/dojotoolkit/dojo/"),
       // so we point any module beginning with "my" to the path "scripts/my"
       dojo.registerModulePath('my', '../../my');
-        
+
       // Now that the path is set, load my new button class
       dojo.require('my.form.Button');
-        
+
       // Parse the declarative markup
       dojo.require('dojo.parser');
       dojo.addOnLoad(function(){
         dojo.parser.parse();
       });
-    </script>
 
 .. css ::
 
-    <style type="text/css" media="screen">
       .red {
         color: red;
         background: black;
       }
-    </style>
 
 .. html ::
 

@@ -43,9 +43,7 @@ Declarative example
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dijit.form.TextBox");
-     </script>
 
   .. html ::
 
@@ -66,9 +64,7 @@ Please see the following for an example:
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
-    </script>
 
   .. html ::
 
@@ -104,7 +100,6 @@ Please see the following example for more detail:
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
       dojo.require("dojo.parser");
 
@@ -117,7 +112,6 @@ Please see the following example for more detail:
            box1.set("value", box0.get("value") + " modified");
         });
       });
-    </script>
 
   .. html ::
 

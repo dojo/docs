@@ -90,10 +90,8 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FontChoice");
-    </script>
 
     
   .. html ::
@@ -119,10 +117,8 @@ Basic Usage: Plain Text Previews
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FontChoice");
-    </script>
 
     
   .. html ::

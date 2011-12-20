@@ -10,10 +10,8 @@ To use it, you just have to override default behavior by yours.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
-    </script>
 
   .. html ::
 
@@ -61,11 +59,9 @@ To use it, you just have to override default behavior by yours.
 
   .. css ::
 
-    <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
         }
-    </style>

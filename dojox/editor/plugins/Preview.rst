@@ -70,17 +70,13 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Preview");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
-    </style>
     
   .. html ::
 
@@ -120,17 +116,13 @@ Applying styles to preview content
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Preview");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
-    </style>
     
   .. html ::
 
@@ -171,17 +163,13 @@ Applying stylesheets to preview content
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Preview");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
-    </style>
     
   .. html ::
 

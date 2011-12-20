@@ -59,7 +59,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.av.FLAudio");
     var mySound;
     dojo.ready(function(){
@@ -67,7 +66,6 @@ Programmatic example
         mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Ola.mp3", id:'Ola'});
         mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Hio.mp3", id:"Hio"});
     });
-    </script>
 
   The HTML:
 

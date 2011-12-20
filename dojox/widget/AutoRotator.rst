@@ -50,7 +50,6 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -74,11 +73,9 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
         dojo.ready(function(){
@@ -98,7 +95,6 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
                 dojo.byId("myAutoRotator1")
             );
         });
-    </script>
 
   .. html ::
 
@@ -117,7 +113,6 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -140,14 +135,11 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
-    </script>
   
   .. html ::
 
@@ -164,7 +156,6 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -188,14 +179,11 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Fade");
-    </script>
   
   .. html ::
 

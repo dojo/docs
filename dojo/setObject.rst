@@ -50,13 +50,11 @@ Examples
 
   .. js ::
 
-        <script>
             dojo.require("dijit.form.Button");
 
             // This object is initially empty, and we'll use setObject to populate it
             var obj = {};
             console.log("in head");
-        </script>
 
   .. html ::
 

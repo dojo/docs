@@ -37,7 +37,6 @@ Let's create a checkbox programmatically, initially unchecked:
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.CheckBox");
     dojo.ready(function(){
       var checkBox = new dijit.form.CheckBox({
@@ -47,7 +46,6 @@ Let's create a checkbox programmatically, initially unchecked:
         onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + checkBox.get('value') ); }
       }, "checkBox");
     });
-    </script>
 
   .. html ::
  
@@ -62,9 +60,7 @@ Let's create a checkbox with HTML markup, initially checked:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit.form.CheckBox");
-    </script>
 
   .. html ::
  

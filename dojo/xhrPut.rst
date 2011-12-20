@@ -62,7 +62,6 @@ Example 1: dojo.xhrPut call to send some text data
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
 
       function sendText(){
@@ -90,7 +89,6 @@ Example 1: dojo.xhrPut call to send some text data
         });
       }
       dojo.ready(sendText);
-    </script>
 
   .. html ::
 

@@ -39,7 +39,6 @@ Example of a different wipe direction for each pane.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -63,11 +62,9 @@ Example of a different wipe direction for each pane.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Wipe");
         dojo.ready(function(){
@@ -86,7 +83,6 @@ Example of a different wipe direction for each pane.
                 dojo.byId("myAutoRotator1")
             );
         });
-    </script>
 
   .. html ::
 
@@ -108,7 +104,6 @@ Example of a different wipe direction for each pane.
 
   .. css ::
 
-    <style type="text/css">
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
@@ -131,14 +126,11 @@ Example of a different wipe direction for each pane.
         .pane2{
             background-color:#ffa0a0;
         }
-    </style>
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
         dojo.require("dojox.widget.rotator.Wipe");
-    </script>
   
   .. html ::
 

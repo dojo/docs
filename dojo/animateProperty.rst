@@ -164,9 +164,8 @@ A simple animation changing both background color and text color.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
-    
+
     statusOk = function(){
       dojo.animateProperty({
         node: dojo.byId("statusCode"), duration: 500,
@@ -179,7 +178,6 @@ A simple animation changing both background color and text color.
         }
       }).play();
     }
-    </script>
 
   .. html ::
 
@@ -188,7 +186,6 @@ A simple animation changing both background color and text color.
 
   .. css ::
 
-    <style type="text/css">
     #statusCode {
       padding: 5px;
       border: 1px solid #000;
@@ -196,7 +193,6 @@ A simple animation changing both background color and text color.
       text-align: center;
       width: 100px;
     }
-    </style>
 
 How can I change the framerate of an animation?
 -----------------------------------------------
@@ -208,9 +204,8 @@ To change the framerate you use the rate attribute which defines the pause betwe
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
-    
+
     animateSlow = function(){
       dojo.animateProperty({
         node: dojo.byId("animateProperty"), duration: 10000,
@@ -229,7 +224,6 @@ To change the framerate you use the rate attribute which defines the pause betwe
         }
       }).play();
     }
-    </script>
 
   .. html ::
 

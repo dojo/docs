@@ -70,7 +70,6 @@ Example 1: Using fieldToObject to get field values
   
   .. js ::
 
-    <script>
       function convertFields(){
         dojo.connect(dojo.byId("convertFields"), "onclick", function(){
            var shape = dojo.fieldToObject("shape");
@@ -81,7 +80,6 @@ Example 1: Using fieldToObject to get field values
         });
       }
       dojo.ready(convertFields);
-    </script>
 
   .. html ::
 

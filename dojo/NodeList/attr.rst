@@ -47,7 +47,6 @@ The following example will set several attributes such as the ``value`` and ``di
 
   .. js ::
 
-    <script type="text/javascript">
       function enable(){
         dojo.query("input").attr("disabled", false);
       }
@@ -57,7 +56,6 @@ The following example will set several attributes such as the ``value`` and ``di
           value:    "cool, eh?"
         });
       }
-    </script>
 
   .. html ::
 

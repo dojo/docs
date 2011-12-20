@@ -45,11 +45,9 @@ The following example removes ``disabled`` from nodes.
 
   .. js ::
 
-    <script type="text/javascript">
       function remAttr(){
         dojo.query("input").removeAttr("disabled");
       }
-    </script>
 
   .. html ::
 

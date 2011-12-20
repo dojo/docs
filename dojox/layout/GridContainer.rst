@@ -101,7 +101,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.layout.GridContainer");
     dojo.require("dojox.widget.Portlet");
     dojo.require("dijit.form.DropDownButton");
@@ -149,7 +148,6 @@ Programmatic example
         // startup GridContainer:
         gridContainer.startup();
     });
-    </script>
 
 
 

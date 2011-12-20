@@ -170,10 +170,8 @@ Attaching the FileStore to dijit.Tree declaratively
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Tree");
       dojo.require("dojox.data.FileStore");
-    </script>
 
   .. html ::
   
@@ -190,10 +188,8 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojox.data.FileStore");
-    </script>
 
   .. html ::
 
@@ -209,10 +205,8 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.FileStore");
-    </script>
 
   .. html ::
 
@@ -241,14 +235,12 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 Technical/Protocol Details

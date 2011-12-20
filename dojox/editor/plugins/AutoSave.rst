@@ -142,16 +142,12 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.AutoSave");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
-    </style>
     
   .. html ::
 

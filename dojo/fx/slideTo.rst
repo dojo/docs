@@ -39,7 +39,6 @@ Example 1:  Slide a dom node right 200 pixels.
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicSlideToSetup(){
@@ -57,7 +56,6 @@ Example 1:  Slide a dom node right 200 pixels.
          dojo.connect(dijit.byId("slideLeftButton"), "onClick", dojo.partial(slideIt, -200));
       }
       dojo.ready(basicSlideToSetup);
-    </script>
 
   .. html ::
 

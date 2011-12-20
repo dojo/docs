@@ -194,17 +194,13 @@ Basic Usage
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.LocalImage");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/LocalImage.css";
       @import "{{baseUrl}}dojox/form/resources/FileUploader.css";
-    </style>
     
   .. html ::
 

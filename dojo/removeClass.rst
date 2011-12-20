@@ -92,7 +92,6 @@ See it in action:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
@@ -104,7 +103,6 @@ See it in action:
         dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
-    </script>
 
   .. html ::
 
@@ -141,7 +139,6 @@ See it in action:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
@@ -153,7 +150,6 @@ See it in action:
         dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
-    </script>
 
   .. html ::
 
@@ -190,7 +186,6 @@ See it in action:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
@@ -202,7 +197,6 @@ See it in action:
         dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
-    </script>
 
   .. html ::
 
@@ -239,7 +233,6 @@ See it in action:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
@@ -251,7 +244,6 @@ See it in action:
         dojo.ready(function(){
             dojo.connect(dojo.byId("button1"), "onclick", doIt);
         });
-    </script>
 
   .. html ::
 
@@ -288,7 +280,6 @@ See it in action:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Button");
 
@@ -300,7 +291,6 @@ See it in action:
         dojo.ready(function(){
             dojo.connect(dojo.byId("button3"), "onclick", doIt);
         });
-    </script>
 
   .. html ::
 

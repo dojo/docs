@@ -31,9 +31,7 @@ Here's an example defining a widget called Employee, and then creating two of th
 
   .. js ::
 
-    <script>
         dojo.require("dijit.Declaration");
-    </script>
 
   .. html ::
 

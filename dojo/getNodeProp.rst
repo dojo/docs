@@ -73,13 +73,10 @@ The following example reads effective values from the ``input`` node.
 
   .. css ::
 
-     <style type="text/css">
-         
-     </style>
+
 
   .. js ::
 
-    <script type="text/javascript">
       function checkAttributes(){
         showAttribute("id");
         showAttribute("type");
@@ -96,7 +93,6 @@ The following example reads effective values from the ``input`` node.
         dojo.place(wrapper, "out");
         wrapper.innerHTML = name + " is '" + result + "'";
       }
-    </script>
 
   .. html ::
 

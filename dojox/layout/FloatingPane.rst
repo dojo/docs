@@ -41,14 +41,11 @@ Programmatic example
 
   .. css ::
 
-     <style type="text/css">
        @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
        @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
-     </style>
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
 
@@ -64,7 +61,6 @@ Programmatic example
 
        pFloatingPane.startup();
      });
-     </script>
 
   .. html ::
 
@@ -82,17 +78,13 @@ Declarative example
 
   .. css ::
 
-     <style type="text/css">
        @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
        @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
-     </style>
 
   .. js ::
 
-     <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
-     </script>
 
   .. html ::
 

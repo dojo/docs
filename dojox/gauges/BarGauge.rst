@@ -46,7 +46,6 @@ A bar gauge with two indicators (programmatic)
 
   .. js ::
 
-    <script>
       dojo.require("dojox.gauges.BarGauge");
 
       function init(){
@@ -94,7 +93,6 @@ A bar gauge with two indicators (programmatic)
         gauge.startup();
       }
       dojo.ready(init);
-    </script>
 
   .. html ::
 
@@ -107,10 +105,8 @@ A declarative example with gradient ranges
 
   .. js ::
 
-    <script>
       dojo.require("dojox.gauges.BarGauge");
       dojo.require('dojox.gauges.BarIndicator');
-    </script>
 
   .. html ::
 

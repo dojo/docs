@@ -125,10 +125,8 @@ Connecting OpmlStore to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.OpmlStore");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -146,10 +144,8 @@ Connecting OpmlStore to dijit.Tree
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.OpmlStore");
       dojo.require("dijit.Tree");
-    </script>
 
   .. html ::
 
@@ -167,7 +163,6 @@ Connecting OpmlStore to dojox.grid.DataGrid
 
   .. js ::
 
-    <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.OpmlStore");
 
@@ -178,7 +173,6 @@ Connecting OpmlStore to dojox.grid.DataGrid
           { field: "population", name: "Population", width: 'auto' }
         ]
       ];
-    </script>
 
   .. html ::
 
@@ -197,11 +191,9 @@ Connecting OpmlStore to dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>

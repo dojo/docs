@@ -217,10 +217,8 @@ Remember that although a TabContainer's children are often ContentPanes, they ca
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
-    </script>
 
   The HTML is very simple
 
@@ -263,7 +261,6 @@ If there is no nested tab in a tab, content pane is inserted instead.
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.ready(function(){
@@ -318,7 +315,6 @@ If there is no nested tab in a tab, content pane is inserted instead.
         // _Container widgets will call startup on their children already
         tabContainer.startup();
     });
-    </script>
 
   .. html ::
 

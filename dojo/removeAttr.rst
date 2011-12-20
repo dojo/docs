@@ -77,11 +77,9 @@ The following example will remove ``disabled`` from the ``input`` node.
 
   .. js ::
 
-    <script type="text/javascript">
       function remAttr(){
         dojo.removeAttr("model", "disabled");
       }
-    </script>
 
   .. html ::
 

@@ -130,12 +130,10 @@ Two Columns, Label Styling
 
   .. css ::
 
-    <style type="text/css">
       .justLabels-labelCell {
         background-color: lightgrey;
         padding-left: 5px;
       }
-    </style>
 
 
 Two Columns, Label and Value cell Styling
@@ -171,7 +169,6 @@ Two Columns, Label and Value cell Styling
 
   .. css ::
 
-    <style type="text/css">
       .labelsAndValues-labelCell {
 
         background-color: lightgrey;
@@ -183,7 +180,6 @@ Two Columns, Label and Value cell Styling
         padding-left: 20px;
         background-color: lightblue;
       }
-    </style>
 
 Using Colspan
 -------------
@@ -223,7 +219,6 @@ Using Colspan
 
   .. css ::
 
-    <style type="text/css">
       .labelsAndValues-labelCell {
 
         background-color: lightgrey;
@@ -235,7 +230,6 @@ Using Colspan
         padding-left: 20px;
         background-color: lightblue;
       }
-    </style>
 
 Programmatic example
 --------------------
@@ -291,7 +285,6 @@ Programmatic example
 
   .. css ::
 
-    <style type="text/css">
       .labelsAndValues-labelCell {
 
         background-color: lightgrey;
@@ -303,7 +296,6 @@ Programmatic example
         padding-left: 20px;
         background-color: lightblue;
       }
-    </style>
 
 Setting the Label Width
 -----------------------
@@ -337,7 +329,6 @@ Setting the Label Width
 
   .. css ::
 
-    <style type="text/css">
       .labelsAndValues-labelCell {
 
         background-color: lightgrey;
@@ -349,4 +340,3 @@ Setting the Label Width
         padding-left: 20px;
         background-color: lightblue;
       }
-    </style>

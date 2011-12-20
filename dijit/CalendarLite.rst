@@ -23,9 +23,7 @@ A plain Calendar widget with the formatted date below
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.CalendarLite");
-    </script>
 
   .. html ::
 

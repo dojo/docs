@@ -91,7 +91,6 @@ This example displays the return values of dojo.contentBox on a node.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
       getContentBox = function(){
@@ -110,7 +109,6 @@ This example displays the return values of dojo.contentBox on a node.
         info.appendChild(document.createTextNode("Height: "+contentBox.h));
         info.appendChild(document.createElement("br"));
       };
-    </script>
 
   .. html ::
 
@@ -129,14 +127,12 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
       dojo.ready(function(){
         dojo.connect(dijit.byId("cButton"), "onClick", function(){
           var contentBox = dojo.marginBox(dojo.byId("node2"), {t: 20, l: 30, h: 300, w: 300});
         });
       });
-    </script>
 
   .. html ::
 
@@ -149,13 +145,11 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 
   .. css ::
 
-    <style type="text/css">
       #node2 {
         padding: 10px;
         margin: 10px;
         border: 1px solid #ccc;
       }
-    </style>
 
 Comparison of various DOM node position/size methods
 ----------------------------------------------------

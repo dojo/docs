@@ -46,17 +46,13 @@ Declarative example: Horizontal Pager
 
   .. css ::
 
-    <style type="text/css">
         @import "{{baseUrl}}dojox/widget/Pager/Pager.css";
-    </style>
 
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.require("dojox.widget.Pager");
-    </script>
 
   .. html ::
 

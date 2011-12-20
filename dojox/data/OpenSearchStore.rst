@@ -84,7 +84,6 @@ Example 1: Programmatic instantiation and querying through OpenSearch
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.OpenSearchStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
@@ -116,7 +115,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 dojo.style(cDiv, "borderWidth", "1px");
                 dojo.style(cDiv, "borderColor", "darkgreen");
                 dojo.style(cDiv, "width", "100%");
-                
+
                 // Style a 'title bar'.
                 dojo.style(tDiv, "backgroundColor", "darkgreen");
                 dojo.style(tDiv, "color", "white");
@@ -137,7 +136,6 @@ Example 1: Programmatic instantiation and querying through OpenSearch
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(initSimple);
-    </script>
 
   .. html ::
 

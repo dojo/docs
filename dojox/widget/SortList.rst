@@ -26,9 +26,7 @@ Raw, degradable UL list
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.widget.SortList");
-    </script>
 
   The markup has to look as follows
   
@@ -71,10 +69,8 @@ SortList using a Store
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.require("dojox.widget.SortList");
-    </script>
 
   The markup has to look as follows
   

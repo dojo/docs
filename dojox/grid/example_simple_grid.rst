@@ -9,10 +9,8 @@ This example shows how to create a simple Grid declaratively.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
-    </script>
 
   .. html ::
 
@@ -38,11 +36,9 @@ This example shows how to create a simple Grid declaratively.
 
   .. css ::
 
-    <style type="text/css">
         @import "{{baseUrl}}dojox/grid/resources/Grid.css";
         @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
         }
-    </style>

@@ -54,7 +54,6 @@ Create an object version of a form
   
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.Button");
 
       dojo.ready(function(){
@@ -65,7 +64,6 @@ Create an object version of a form
            dojo.byId("formObject").innerHTML = dojo.toJson(formObject1, true);
         });
       });
-    </script>
 
   .. html ::
 
@@ -91,7 +89,6 @@ Create an object version of a form with Dijit widgets
   
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.Button");
@@ -104,7 +101,6 @@ Create an object version of a form with Dijit widgets
            dojo.byId("formObject2").innerHTML = dojo.toJson(formObject2, true);
         });
       });
-    </script>
 
   .. html ::
 

@@ -11,10 +11,8 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
-    </script>
 
   .. html ::
 

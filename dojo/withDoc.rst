@@ -65,13 +65,12 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
 
       function changeStyles(){
         var button = dijit.byId("changeStyles");
         dojo.connect(button, "onClick", function(){
-         
+
          // Apply styles to the document contained by the iframe
          var frameDoc = dojo.byId("simpleFrame").contentWindow.document;
          dojo.withDoc(frameDoc, function(){
@@ -83,7 +82,6 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
         });
       }
       dojo.ready(changeStyles);
-    </script>
 
   .. html ::
 

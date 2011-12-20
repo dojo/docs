@@ -76,16 +76,12 @@ Basic Usage: foreColor (Text Color)
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.TextColor");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
-    </style>
     
   .. html ::
 
@@ -126,16 +122,12 @@ Basic Usage: hiliteColor (Text Background Color)
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.TextColor");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
-    </style>
     
   .. html ::
     
@@ -178,16 +170,12 @@ Basic Usage: Both foreground and background color buttons together
 
   .. js ::
 
-    <script>
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.TextColor");
-    </script>
 
   .. css ::
 
-    <style>
       @import "{{baseUrl}}dojox/editor/plugins/resources/css/InsertAnchor.css";
-    </style>
     
   .. html ::
     

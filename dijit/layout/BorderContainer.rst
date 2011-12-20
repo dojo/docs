@@ -85,10 +85,8 @@ Declarative example
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.require("dijit.layout.BorderContainer");
-    </script>
 
   The markup has to look as follows
   
@@ -103,7 +101,6 @@ Declarative example
   
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
@@ -115,7 +112,6 @@ Declarative example
         width: 100%;
         height: 100%;
       }
-    </style>
     
 
 Using layoutPriority
@@ -131,10 +127,8 @@ This example uses layoutPriority to include two left panes in one BorderContaine
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.require("dijit.layout.BorderContainer");
-    </script>
   
   .. html ::
     
@@ -176,12 +170,10 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.TabContainer");
       dojo.require("dijit.layout.AccordionContainer");
-    </script>
 
   The markup has to look as follows: Note the tabStrip attribute on the TabContainer.
    
@@ -218,7 +210,6 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   .. css ::
 
-    <style type="text/css">
       html, body {
         width: 100%;
         height: 100%;
@@ -230,7 +221,6 @@ Let's take a look at a more advanced example of using BorderContainer and other 
         width: 100%;
         height: 100%;
       }
-    </style>
 
 
 BorderContainer Inside A Dijit Template
@@ -246,7 +236,6 @@ after it has been added to the DOM, so that its contained BorderContainer can la
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dijit._Widget");
         dojo.require("dijit._Templated");
         dojo.require("dijit.layout.BorderContainer");
@@ -268,7 +257,6 @@ after it has been added to the DOM, so that its contained BorderContainer can la
                         '</div></div>'
             });
         });
-    </script>
 
   The markup has to look as follows
   

@@ -117,7 +117,6 @@ A simple example formatting a date in a number of ways
 
     .. js ::
 
-        <script type="text/javascript">
             dojo.require( "dojo.date.locale" );
             function format(date, fmt){ return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
 
@@ -145,7 +144,6 @@ A simple example formatting a date in a number of ways
                 }
             }
             dojo.ready( initDates );
-        </script>
         
     .. css ::
 

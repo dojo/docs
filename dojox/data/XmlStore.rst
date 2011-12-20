@@ -298,10 +298,8 @@ Connecting XmlStore to dijit.form.ComboBox
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.XmlStore");
       dojo.require("dijit.form.ComboBox");
-    </script>
 
   .. html ::
 
@@ -316,7 +314,6 @@ Connecting XmlStore to dojox.grid.DataGrid
 
   .. js ::
 
-    <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.XmlStore");
 
@@ -327,7 +324,6 @@ Connecting XmlStore to dojox.grid.DataGrid
           { field: "title", name: "Title", width: 'auto', formatter: function(item){ return item.toString(); } }
         ]
       ];
-    </script>
 
   .. html ::
 
@@ -343,14 +339,12 @@ Connecting XmlStore to dojox.grid.DataGrid
 
   .. css ::
 
-    <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
       }
-    </style>
 
 
 More examples

@@ -50,7 +50,6 @@ A partial circle gauge with two indicators (programmatic)
 
   .. js ::
 
-    <script>
       dojo.require("dojox.gauges.AnalogGauge");
       dojo.require("dojox.gauges.AnalogArrowIndicator");
 
@@ -106,7 +105,6 @@ A partial circle gauge with two indicators (programmatic)
       }
       dojo.ready(init);
 
-    </script>
 
   .. html ::
 
@@ -119,7 +117,6 @@ A partial circle gauge with two indicators and a set of gradient ranges
 
   .. js ::
 
-    <script>
       console.debug('require');
       dojo.require("dojox.gauges.AnalogGauge");
       console.debug('require2');
@@ -145,7 +142,6 @@ A partial circle gauge with two indicators and a set of gradient ranges
           'title': 'Value'
         }));
       });
-    </script>
 
   .. html ::
 
@@ -250,7 +246,6 @@ A half circle gauge with two indicators overlay graphic
 
   .. js ::
 
-    <script>
       dojo.require("dojox.gauges.AnalogGauge");
       dojo.require("dojox.gauges.AnalogArrowIndicator");
 
@@ -272,7 +267,6 @@ A half circle gauge with two indicators overlay graphic
           'title': 'Value'
         }));
       });
-    </script>
 
   .. html ::
 

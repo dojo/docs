@@ -663,13 +663,11 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 
   .. js ::
 
-        <script>
             dojo.require("dijit.Menu");
             dojo.require("dijit.MenuItem");
             dojo.require("dijit.tree.ObjectStoreModel");
             dojo.require("dojo.store.Memory");
             dojo.require("dijit.Tree");
-        </script>
 
   .. html ::
 
