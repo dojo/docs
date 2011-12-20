@@ -420,7 +420,7 @@ Individuals who have signed Dojo CLAs
 * Reicke, Craig
 * Reimann, Marcus
 * Remeika, Bob
-* Repta, Martin
+* Repta, Martin (martinerko)
 * Rhode, Devin
 * Rhodes, Aaron
 * Rice, Torrey
