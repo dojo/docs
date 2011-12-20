@@ -25,8 +25,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- 
- <script type="text/javascript">
+
    require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query){
      var iframeDoc = dom.byId("someFrameId").contentWindow.document;
 
@@ -36,15 +35,13 @@ Dojo 1.7 (AMD)
        style.set(someDiv, "color", "red");
      }, this));
    });
- </script>
 
 
 Dojo < 1.7
 ----------
 
 .. js ::
- 
- <script type="text/javascript">
+
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
    // Call a callback with different 'global' values and context.
@@ -52,7 +49,6 @@ Dojo < 1.7
      var someDiv = dojo.query("someDiv");
      dojo.style(someDiv, "color", "red");
    }, this));
- </script>
 
 
 Examples

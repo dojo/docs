@@ -22,8 +22,7 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
 [ Dojo 1.7 AMD ]
 
 .. js ::
-  
-  <script type="text/javascript">
+
      require(["dojo/query"], function(query){
         var dojoLinks = query('a');
         var nativeLinks = document.getElementsByTagName('a');
@@ -31,20 +30,17 @@ For example, :ref:`dojo.query <dojo/query>` references the "window" global varia
         // Returns true, as they're searching the same window.document
         console.log(dojoLinks.length === nativeLinks.length);
      });
-  </script>
 
 
 [ Dojo < 1.7 ]
 
 .. js ::
-  
-  <script type="text/javascript">
+
      var dojoLinks = dojo.query('a');
      var nativeLinks = document.getElementsByTagName('a');
 
      // Returns true, as they're searching the same window.document
      console.log(dojoLinks.length === nativeLinks.length);
-  </script>
 
 This is because dojo stores many of the common global variables:
 

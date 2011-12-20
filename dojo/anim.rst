@@ -31,20 +31,16 @@ Dojo 1.7 (AMD)
 
 .. js ::
  
- <script type="text/javascript">
    require(['dojo/_base/fx'], function(fx){
      fx.anim(node, properties, duration, easing, onEnd, delay);
    });
- </script>
 
 Dojo < 1.7
 ----------
 
 .. js ::
  
- <script type="text/javascript">
    dojo.anim(node, properties, duration, easing, onEnd, delay);
- </script>
 
 
 

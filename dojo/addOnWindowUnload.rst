@@ -26,7 +26,6 @@ Dojo 1.7 (AMD)
 
 .. js ::
  
- <script type="text/javascript">
    require(['dojo/_base/unload'], function(baseUnload){
      // declare a function to do the unload work
      var unLoad = function(){
@@ -42,14 +41,12 @@ Dojo 1.7 (AMD)
      // pass an object and an anonymous function
      baseUnload.addOnWindowUnload(window, function(){ alert("we're out of here!"); });
    });
- </script>
 
 Dojo < 1.7
 ----------
 
 .. js ::
  
- <script type="text/javascript">
    // declare a function to do the unload work
    var unLoad = function(){
      // do some unload stuff
@@ -63,4 +60,3 @@ Dojo < 1.7
 
    // pass an object and an anonymous function
    dojo.addOnWindowUnload(window, function(){ alert("we're out of here!"); });
- </script>

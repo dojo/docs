@@ -94,8 +94,7 @@ Gather all parameters from a form
 ---------------------------------
 
 .. js ::
-  
-  <script type="text/javascript">
+
     dojo.require("dojo.io.iframe");
 
     // gather all parameters from a form:
@@ -111,20 +110,18 @@ Gather all parameters from a form
         load: function(response, ioArgs){
             // do something
             // ...
-                    
+
             // return the response for succeeding callbacks
             return response;
         }
     });
-  </script>
 
 
 Gather all parameters from a form, over-riding some
 ----------------------------------------------------
 
 .. js ::
-  
-  <script type="text/javascript">
+
     dojo.require("dojo.io.iframe");
 
     // gather all parameters from a form:
@@ -146,7 +143,7 @@ Gather all parameters from a form, over-riding some
         load: function(response, ioArgs){
             // do something
             // ...
-                    
+
             // return the response for succeeding callbacks
             return response;
         },
@@ -154,20 +151,18 @@ Gather all parameters from a form, over-riding some
         // Callback on errors:
         error: function(response, ioArgs){
             debug.dir(response);
-                    
+
             // return the response for succeeding callbacks
             return response;
         }
     });
-  </script>
 
 
 Pass in parameters manually
 ---------------------------
 
 .. js ::
-  
-  <script type="text/javascript">
+
     dojo.require("dojo.io.iframe");
 
     // pass in all of the parameters manually:
@@ -191,7 +186,7 @@ Pass in parameters manually
         load: function(response, ioArgs){
             // do something
             // ...
-                    
+
             // return the response for succeeding callbacks
             return response;
         },
@@ -199,12 +194,11 @@ Pass in parameters manually
         // Callback on errors:
         error: function(response, ioArgs){
             debug.dir(response);
-                    
+
             // return the response for succeeding callbacks
             return response;
         }
     });
-  </script>
 
 See Also
 ========

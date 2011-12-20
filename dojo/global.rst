@@ -23,13 +23,11 @@ Usage
 =====
 
 .. js ::
- 
- <script type="text/javascript">
+
    // connect a global "onclick" handler
    dojo.connect(dojo.global, "onclick", function(e){
        console.log("clicked: ", e.target);
    });
- </script>
 
 Though this example is clearly targeted at a browser environment, by using `dojo.global` over the `window` object we are ensuring the code will run in any other environments with a defined host environment file (hostenv_something).
 

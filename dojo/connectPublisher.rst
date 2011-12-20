@@ -56,16 +56,19 @@ Which becomes:
 Example
 =======
 
+Dojo 1.7 (AMD)
+--------------
 .. js ::
  
- <script type="text/javascript">
-   // Dojo 1.7 (AMD)
    require(["dojo/_base/connect"], function(connect){
       connect.connectPublisher("/ajax/start", dojo, "xhrGet");
    });
-   // Dojo < 1.7
+
+Dojo < 1.7
+----------
+.. js ::
+
    dojo.connectPublisher("/ajax/start", dojo, "xhrGet");
- </script>
 
 .. api-inline :: dojo.connectPublisher
 

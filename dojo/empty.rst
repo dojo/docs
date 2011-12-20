@@ -66,8 +66,7 @@ Empty a single node
    Empty a DomNode
    
   .. js ::
-    
-    <script type="text/javascript">
+
     dojo.require("dijit.form.Button");
 
     dojo.ready(function(){
@@ -82,7 +81,6 @@ Empty a single node
         }, "progButtonNode");
 
     });
-    </script>
 
   Some DomNodes
   

@@ -77,10 +77,7 @@ See it in action:
 
   .. css ::
     
-
-    <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
-    </style>
 
   .. js ::
 
@@ -124,11 +121,8 @@ See it in action:
 
   .. css ::
     
-
-    <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00;}
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
-    </style>
 
   .. js ::
 
@@ -171,11 +165,8 @@ See it in action:
   
   .. css ::
     
-
-    <style type="text/css">
         .style1 { background-color: #7c7c7c; color: #ffbf00;}
         .style2 { border: 1px solid #ffbf00; padding: 20px;}
-    </style>
 
   .. js ::
 
@@ -218,11 +209,8 @@ See it in action:
 
   .. css ::
     
-
-    <style type="text/css">
         .style3 { background-color: #7c7c7c; color: #ffbf00; padding: 10px }
         .additionalStyle3 { background-color: #491f00; color: #36d900 }
-    </style>
 
   .. js ::
 

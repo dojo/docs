@@ -366,7 +366,6 @@ Functional Example: Using custom type maps with ItemFileReadStore
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -384,7 +383,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init(){
         var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
-     
+
         // Function to perform a fetch on the datastore when a button is clicked
         function getItems(){
           // Callback to perform an action when the data items are starting to be returned:
@@ -396,7 +395,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
               }
             }
           }
-   
+
           // Callback for processing a single returned item.
           function gotItem(item, request){
             var list = dojo.byId("list");
@@ -417,13 +416,13 @@ Functional Example: Using custom type maps with ItemFileReadStore
               }
             }
           }
-            
+
           // Callback for if the lookup fails.
           function fetchFailed(error, request){
              console.log(error);
              alert("lookup failed.");
           }
-             
+
           // Fetch the data.
           colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
         }
@@ -433,7 +432,6 @@ Functional Example: Using custom type maps with ItemFileReadStore
       }
       // Set the init function to run when dojo loading and page parsing has completed.
       dojo.ready(init);
-    </script>
 
   .. html ::
 

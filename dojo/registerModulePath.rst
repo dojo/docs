@@ -36,8 +36,7 @@ Dojo 1.7 (AMD)
 --------------
 
 .. js ::
- 
- <script type="text/javascript">
+
    require(['dojo/_base/kernel', 'dojo/_base/loader], function(dojo){
      // Register "lib" to be a peer to Dojo's parent folder.
      // Make sure the module path does *not* end in a slash.
@@ -56,7 +55,7 @@ Dojo 1.7 (AMD)
 
      // get a dojo.URI that points to "/somepath/lib/foo/images"
      var images = dojo.moduleUrl("lib.foo.images");
-   
+
      // module paths can be overridden, e.g.
      dojo.registerModulePath("lib.css", "../../css");
      // module "lib" is unchanged except that "lib.css"
@@ -65,14 +64,12 @@ Dojo 1.7 (AMD)
      // we can set an absolute path by prefixing it with "/" or "http:"
      dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.5/dojo");
    });
- </script>
 
 Dojo < 1.7
 ----------
 
 .. js ::
- 
- <script type="text/javascript">
+
    // Register "lib" to be a peer to Dojo's parent folder.
    // Make sure the module path does *not* end in a slash.
    dojo.registerModulePath("lib", "../../lib");
@@ -90,7 +87,7 @@ Dojo < 1.7
 
    // get a dojo.URI that points to "/somepath/lib/foo/images"
    var images = dojo.moduleUrl("lib.foo.images");
-   
+
    // module paths can be overridden, e.g.
    dojo.registerModulePath("lib.css", "../../css");
    // module "lib" is unchanged except that "lib.css"
@@ -98,7 +95,6 @@ Dojo < 1.7
 
    // we can set an absolute path by prefixing it with "/" or "http:"
    dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.5/dojo");
- </script>
 
 Example
 ========

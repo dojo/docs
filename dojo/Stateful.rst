@@ -84,7 +84,6 @@ this just retrieves the object's property.
 
 .. js ::
  
- <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object with foo = 3:
@@ -103,7 +102,6 @@ this just retrieves the object's property.
    myObj.get('foo');  // returns 3
    // alternative syntax:
    myObj.foo;         // returns 3
- </script>
 
 set
 ---
@@ -115,7 +113,6 @@ the property. A programmatic setter may be defined in subclasses.
 
 .. js ::
  
- <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
@@ -136,13 +133,11 @@ the property. A programmatic setter may be defined in subclasses.
        // this will be called on the set below
    }
    myObj.set(foo, 5);
- </script>
 
 set() may also be called with a hash of name/value pairs, ex:
 
 .. js ::
  
- <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
@@ -165,7 +160,6 @@ set() may also be called with a hash of name/value pairs, ex:
        foo: "Howdy",
        bar: 3
    })
- </script>
 
 watch
 -----
@@ -186,7 +180,6 @@ returns:
 
 .. js ::
  
- <script type="text/javascript">
     // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
@@ -207,7 +200,6 @@ returns:
    // ...
    // discontinue watching this property:
    watchHandle.unwatch(); // callback won't be called now
- </script>
 
 
 See also
