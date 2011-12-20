@@ -30,9 +30,7 @@ The return value will either be the JavaScript object instance that represents t
 
 .. js ::
  
- <script type="text/javascript">
    var myWidget = dijit.byId("myWidget");
- </script>
 
 Examples
 ========
@@ -44,10 +42,9 @@ Example 1: Locating a widget by its ID
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
 
-      function findWidget(){
+      dojo.ready(function(){
         // Locate the JS object.
         var widget = dijit.byId("myTextBox");
         if(widget){
@@ -57,9 +54,7 @@ Example 1: Locating a widget by its ID
           // Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
         }
-      }
-      dojo.ready(findWidget);
-    </script>
+      });
 
   .. html ::
 
@@ -75,10 +70,9 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
 
-      function findWidgetDOM(){
+      dojo.ready(function(){
         // Locate the JS object.
         var widget = dijit.byId("myTextBox2");
         if(widget){
@@ -91,9 +85,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
           // Find my output node and write out I couldn't find the widget.
           dojo.byId("textNode2").innerHTML = "Could not locate my text box widget!";
         }
-      }
-      dojo.ready(findWidgetDOM);
-    </script>
+      });
 
   .. html ::
 
@@ -111,10 +103,9 @@ Example 3: Comparing dojo.byId and dijit.byId
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.TextBox");
 
-      function compareDojoDijitById(){
+      dojo.ready(function(){
         // Locate the JS object.
         var dibiWidget = dijit.byId("myTextBox3");
         var dobiWidget = dojo.byId("myTextBox3");
@@ -126,9 +117,7 @@ Example 3: Comparing dojo.byId and dijit.byId
                                           "dojo.byId for widget id returned: " + dobiWidget + "<br>" +
                                           "dijit.byId for dom id returned: " + dibiDOM + "<br>" +
                                           "dojo.byId for dom id returned: " + dobiDOM + "<br>";
-      }
-      dojo.ready(compareDojoDijitById);
-    </script>
+      });
 
   .. html ::
 
