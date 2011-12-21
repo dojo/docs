@@ -71,23 +71,29 @@ Basic example, input-output sync:
 
   .. js ::
 
-        // Load the parser, we'll use the declarative data binding syntax (ref).
-        dojo.require("dojo.parser");
+		var model; 
+		require([
+			'dojo/parser',
+			'dojo/ready',
+			'dojox/mvc',
+			'dijit/form/TextBox',
+			'dijit/form/Button',
+			'dojox/mvc/Group',
+			'dojox/mvc/Output'
+			], function(parser, ready, mvc){
 
-        // Load the dijits we need.
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.form.TextBox");
+			// Initial data
 
-        // Load the basic MVC support, Output and Group .
-        dojo.require("dojox.mvc");
-        dojo.require("dojox.mvc.Group");
-        dojo.require("dojox.mvc.Output");
-
-        var model = dojox.mvc.newStatefulModel({ data : {
-            "First" : "John",
-            "Last"  : "Doe",
-            "Email" : "jdoe@example.com"
-        }});
+			var data : {
+				"First" : "John",
+				"Last"  : "Doe",
+				"Email" : "jdoe@example.com"
+			};
+				// The dojox.mvc.StatefulModel class creates a data model instance
+				// where each leaf within the data model is decorated with dojo.Stateful
+				// properties that widgets can bind to and watch for their changes.
+				model = mvc.newStatefulModel({ data : data});
+			});
 
   .. css ::
 
