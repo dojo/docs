@@ -73,9 +73,10 @@ In this example, no ListItem is declared under EdgeToEdgeDataList. The ListItems
 
   // sample.json
   {
-     "items":
+     "items": [
 	 { "label": "Wi-Fi", "icon": "images/i-icon-3.png", "rightText": "Off", "moveTo": "bar" },
 	 { "label": "VPN", "icon": "images/i-icon-4.png", "rightText": "VPN", "moveTo": "bar" }
+     ]
   }
 
 .. image :: EdgeToEdgeList-example1.png
