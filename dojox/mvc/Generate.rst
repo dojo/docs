@@ -59,11 +59,6 @@ Declarative example
         }
         dojo.ready(updateView);
 
-  .. css ::
-
-        .row { width: 500px; display: inline-block; margin: 5px; }
-        .cell { width: 20%;  display:inline-block; }
-
   .. html ::
 
     <div id="mainContent">
