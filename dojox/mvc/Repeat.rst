@@ -38,38 +38,59 @@ Examples
 Declarative example
 -------------------
 
-.. code-example ::
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: local
+  :toolbar: versions, themes
 
   .. js ::
 
-        var search_results_init = {
-            "Query" : "Engineers",
-            "Results" : [
-                {
-                    "First": "Anne",
-                    "Last" : "Ackerman",
-                    "Email": "a.a@test.com"
-                },
-                {
-                    "First": "Ben",
-                    "Last" : "Beckham",
-                    "Email": "b.b@test.com"
-                },
-                {
-                    "First": "John",
-                    "Last" : "Jacklin",
-                    "Email": "j.j@test.com"
-                }
-            ]
-        };
+		var searchRecords; 
+		require([
+			'dojo/parser',
+			'dojo/ready',
+			'dojox/mvc',
+			'dijit/form/TextBox',
+			'dijit/form/Button',
+			'dojox/mvc/Group',
+			'dojox/mvc/Repeat',
+			'dojox/mvc/Output'
+			], function(parser, ready, mvc){
 
-        // The dojox.mvc.StatefulModel class creates a data model instance
-        // where each leaf within the data model is decorated with dojo.Stateful
-        // properties that widgets can bind to and watch for their changes.
-        var searchRecords = dojox.mvc.newStatefulModel({ data : search_results_init });
+			// Initial data
+			var search_results_init = {
+  			   "Query" : "Engineers",
+  			      "Results" : [
+                                {
+                                  "First": "Anne",
+                                  "Last" : "Ackerman",
+                                  "Email": "a.a@test.com"
+                                },
+                                {
+                                  "First": "Ben",
+                                  "Last" : "Beckham",
+                                  "Email": "b.b@test.com"
+                                },
+                                {
+                                  "First": "John",
+                                  "Last" : "Jacklin",
+                                  "Email": "j.j@test.com"
+                                }]
+                        };
+				// The dojox.mvc.StatefulModel class creates a data model instance
+				// where each leaf within the data model is decorated with dojo.Stateful
+				// properties that widgets can bind to and watch for their changes.
+				searchRecords  = mvc.newStatefulModel({ data : search_results_init});
+			});
+
+  .. css ::
+
+        .row { width: 500px; display: inline-block; margin: 5px; }
+        .cell { width: 20%;  display:inline-block; }
 
   .. html ::
 
+    <div id="main">
     <div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
         <!--
             The repeat container denotes a templated UI that operates over a collection
@@ -85,5 +106,5 @@ Declarative example
             </div>
         </div>
     </div>
-
-In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
+        <p>In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
+    </div>
