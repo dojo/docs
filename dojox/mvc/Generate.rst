@@ -56,7 +56,10 @@ Declarative example
         function updateView(){
             var modeldata = dojo.fromJson(dijit.byId("modelArea").value);
             var model = new dojox.mvc.StatefulModel({ data : modeldata });
-            dijit.byId("view").set("ref", model);
+            var widget = dijit.byId("view");
+            if(widget){
+               widget.set("ref", model);
+            }
         }
         dojo.ready(updateView);
 
