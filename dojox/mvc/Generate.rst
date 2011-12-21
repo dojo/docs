@@ -39,10 +39,12 @@ Examples
 Declarative example
 --------------------
 
-.. code-example ::
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: local
+  :toolbar: versions, themes
 
   .. js ::
-
         dojo.require("dijit.form.Textarea");
         dojo.require("dojox.mvc.StatefulModel");
         dojo.require("dojox.mvc.Generate");
@@ -53,6 +55,11 @@ Declarative example
             dijit.byId("view").set("ref", model);
         }
         dojo.ready(updateView);
+
+  .. css ::
+
+        .row { width: 500px; display: inline-block; margin: 5px; }
+        .cell { width: 20%;  display:inline-block; }
 
   .. html ::
 
