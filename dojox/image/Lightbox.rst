@@ -17,12 +17,15 @@ Introduction
 
 Being a subclass of dijit.Dialog, you will need to include the relevant dijit-css, and the Lightbox CSS. For example:
 
-.. html ::
+.. css ::
 
-    <style type="text/css">
      @import "dijit/themes/tundra/tundra.css";
      @import "dojox/image/resources/Lightbox.css";
-    </style>
+
+And then put the theme class on <body>:
+
+.. html ::
+
     <body class="tundra">
         ...
     </body>
@@ -43,14 +46,15 @@ Usage
 
 The most basic application of a Lightbox is to convert links containing ``title`` and ``href`` attributes into a widget, preserving the Dom structure and adding basic click-handling to the links. The Link content can be anything: text, images, etc, so the styling is up to you:
 
-.. html ::
+.. css ::
   
-  <style type="text/css">
     @import "dojox/image/resources/Lightbox.css";
-  </style>
-  <script type="text/javascript">
+
+.. js ::
+
     dojo.require("dojox.image.Lightbox");
-  </script>
+
+.. html ::
 
   <div id="lb-one">
      <a data-dojo-type="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a>
@@ -138,11 +142,9 @@ Styling The Dialog
 
 LightboxDialog extends :ref:`dijit.Dialog <dijit/Dialog>`, so the same 'rule' applies concerning the underlay. The Widget used to block the background page while the Dialog is visible receives an ``id`` based on the Dialog itself. For instance, the MasterDialog used has an id of ``dojoxLightboxDialog``, causing the underlay id to become ``dojoxLightboxDialog_underlay``. You can use plain CSS targeting that id:
 
-.. html ::
+.. css ::
 
-    <style type="text/css">
     #dojoxLightboxDialog_underlay { background-color:blue }
-    </style>
 
 The part :ref:``underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
 

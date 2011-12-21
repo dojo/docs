@@ -31,10 +31,8 @@ Usage
 
 .. js ::
  
- <script type="text/javascript">
   dojo.require("dojo.i18n");
   dojo.requireLocalization("dijit.form", "validate");
- </script>
 
 
 See also

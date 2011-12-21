@@ -20,16 +20,16 @@ Usage
 
 FixedSplitter is in a separate module file from _base.js. You need to dojo.require FixedSplitter as below. If you load FixedSplitter, FixedSplitterPane will be automatically loaded as well.
 
-.. js ::
+.. css ::
 
-  <style>
   @import "../themes/common/FixedSplitter.css";
   html, body{
       height: 100%;
       overflow: hidden;
       position: relative;
   }
-  </style>
+
+.. js ::
 
   dojo.require("dojox.mobile.FixedSplitter");
 

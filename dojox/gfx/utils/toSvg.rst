@@ -59,7 +59,6 @@ Example
   
   .. js ::
 
-    <script>
       dojo.require("dojox.gfx");
       dojo.require("dojox.gfx.utils");
       dojo.require("dijit.form.Button");
@@ -88,7 +87,6 @@ Example
 		    }
 		);
 	  }
-    </script>
 
   .. html ::
 

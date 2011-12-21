@@ -48,9 +48,8 @@ Custom Button
 
 You can define your own style for Button and specify it with the class and style parameters.
 
-.. html ::
+.. css ::
 
-  <style>
   .redButton {
     border-color: #cc3333;
     background-image: url(images/red-button-bg.png);
@@ -60,7 +59,6 @@ You can define your own style for Button and specify it with the class and style
     background-image: url(images/red-button-sel-bg.png);
     background: -webkit-gradient(linear, left top, left bottom, from(#AF333C), to(#880E17), color-stop(0.5, #952B33), color-stop(0.5, #870F18));
   }
-  </style>
 
 .. html ::
 

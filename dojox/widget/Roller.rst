@@ -35,6 +35,12 @@ The most simple way of creating a Roller is by using the data-dojo-type attribut
 
 You can of course convert an existing ``<ul>`` into a roller programmatically, most easily accomplished by using an id="" attribute:
 
+.. js ::
+
+        dojo.ready(function(){
+            new dojox.widget.Roller({}, "myRoller");
+        });
+
 .. html ::
 
     <ul id="myRoller">
@@ -42,11 +48,7 @@ You can of course convert an existing ``<ul>`` into a roller programmatically, m
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
-    <script type="text/javascript">
-        dojo.ready(function(){
-            new dojox.widget.Roller({}, "myRoller");
-        });
-    </script>
+
 
 Or, create one entirely programmatically, by passing an ``items:`` Array
 
@@ -126,7 +128,7 @@ The animations can do whatever your creativity will permit. Just name the "show 
     this._setupConnects();
   }
 
-Remeber to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
+Remember to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
 
 Custom Styles
 =============

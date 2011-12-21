@@ -359,7 +359,6 @@ Speedometer style gauge with arc indicator and needle indicator
 
   .. js ::
 
-    <script>
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArcIndicator");
       dojo.require("dojox.widget.gauge.AnalogNeedleIndicator");
@@ -400,7 +399,6 @@ Speedometer style gauge with arc indicator and needle indicator
             'hover': 'Needle: 100'
           }));
       });
-    </script>
 
   .. html ::
 

@@ -43,7 +43,6 @@ The pattern of using the GoogleNewsSearchStore is
 
 .. js ::
  
- <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleNewsSearchStore();
 
@@ -71,8 +70,6 @@ The pattern of using the GoogleNewsSearchStore is
     onComplete: callbackFunction,
     onError: onErrorFunction
   });
- </script>
-
 
 
 Examples
@@ -85,7 +82,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch(){
@@ -133,7 +129,6 @@ Programmatic example
       console.log("called fetch with query", query);
 
     }
-    </script>
 
   .. html ::
 

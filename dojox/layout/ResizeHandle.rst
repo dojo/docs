@@ -63,10 +63,8 @@ The following CSS must be applied for the above example to work:
 
 .. css ::
   
-  <style type="text/css">
   #someNode { position:relative; }
   #someNodeHandle { bottom:4px; right:4px; }
-  </style>
 
 position:absolute is part of the ResizeHandle.css
 

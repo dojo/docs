@@ -206,7 +206,6 @@ Searching node attributes
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.XmlStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
@@ -215,7 +214,8 @@ Searching node attributes
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init3(){
+        // Set the init function to run when dojo loading and page parsing has completed.
+        dojo.ready(function(){
            // Function to perform a fetch on the datastore when a button is clicked
            function search(){
              var queryObj = {};
@@ -267,10 +267,7 @@ Searching node attributes
            }
            // Link the click event of the button to driving the fetch.
            dojo.connect(button3, "onClick", search);
-        }
-        // Set the init function to run when dojo loading and page parsing has completed.
-        dojo.ready(init3);
-    </script>
+        });
 
   .. html ::
 

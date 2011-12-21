@@ -143,32 +143,36 @@ Declarative examples
 
 Example showing how to create a minimal Rotator instance.
 
-.. html ::
+.. code-example ::
+
+  .. js ::
  
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
- </script>
- 
- <div data-dojo-type="dojox.widget.Rotator">
-   <div>Pane 0</div>
-   <div>Pane 1</div>
-   <div>Pane 2</div>
- </div>
+      dojo.require("dojox.widget.Rotator");
+
+  .. html ::
+
+     <div data-dojo-type="dojox.widget.Rotator">
+       <div>Pane 0</div>
+       <div>Pane 1</div>
+       <div>Pane 2</div>
+     </div>
 
 Example using the crossfade transition.
 
-.. html ::
-  
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.Fade");
- </script>
- 
- <div data-dojo-type="dojox.widget.Rotator" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
-   <div>Pane 0</div>
-   <div>Pane 1</div>
-   <div>Pane 2</div>
- </div>
+.. code-example ::
+
+  .. js ::
+
+      dojo.require("dojox.widget.Rotator");
+      dojo.require("dojox.widget.rotator.Fade");
+
+  .. html ::
+
+     <div data-dojo-type="dojox.widget.Rotator" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
+       <div>Pane 0</div>
+       <div>Pane 1</div>
+       <div>Pane 2</div>
+     </div>
 
 Example of controlling a Rotator by referencing its instance. We define a data-dojo-id so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
 
@@ -209,7 +213,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 
 Example of using different transitions per pane.
 
-.. code-example::
+.. code-example ::
 
   .. css ::
 
@@ -368,16 +372,17 @@ params            Object?               Various parameters associated with the e
 Example
 -------
 
-.. js ::
+.. html ::
   
  <div data-dojo-type="dojox.widget.Rotator" id="myRotator"></div>
- <script type="text/javascript">
+
+.. js ::
+
    dojo.ready(function(){
      dojo.subscribe("myrotator/rotator/update", function(type, rotator, params){
        console.info("The rotator just published a '", type, "' message");
      });
    });
- </script>
 
 
 Waiting for Event Topic

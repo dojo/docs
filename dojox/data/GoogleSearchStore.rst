@@ -318,7 +318,6 @@ Searching multiple Google services at once
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.layout.TabContainer");
@@ -339,7 +338,7 @@ Searching multiple Google services at once
         ]
       ];
 
-      function init(){
+      dojo.ready(function(){
          // Link button to search, where search text is drawn from the input box.
  
          // Had to resize the grids on selection of tabs, otherwise they wouldn't always display.
@@ -361,9 +360,7 @@ Searching multiple Google services at once
             }
          }
          dojo.connect(dijit.byId("searchButton"), "onClick", search);
-      }
-      dojo.ready(init);
-    </script>
+      });
 
   .. html ::
 

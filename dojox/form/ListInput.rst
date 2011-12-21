@@ -53,7 +53,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.form.ListInput");
         dojo.ready(function(){
                 var sel = dojo.byId('dynamic');
@@ -67,7 +66,6 @@ Programmatic example
 					value: "Apples,Oranges,Pears"
 				}, sel);
         });
-    </script>
 
   .. html ::
 

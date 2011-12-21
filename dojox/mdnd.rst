@@ -26,23 +26,21 @@ Usage
 
 How to use the component:
 
-.. html ::
+.. js ::
   
-  <script type="text/javascript">
     dojo.require("dojox.mdnd.AreaManager");
     dojo.require("dojox.mdnd.DropIndicator");
     dojo.require("dojox.mdnd.dropMode.DefaultDropMode");
 
-    var init = function(){
+    dojo.ready(function(){
       var m = dojox.mdnd.areaManager();
       m.areaClass = "dndArea";
       m.dragHandleClass = "dragHandle";
       m.registerByClass();
-    };
+    });
 
-    dojo.ready(init);
-  </script>
-  ...
+.. html ::
+
   <div style="position:absolute; top:80px; left:50px;">
     <h2>Accepts Type1 items</h2>
     <div class="dndArea container" accept="type1">

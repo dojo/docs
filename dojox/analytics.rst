@@ -31,7 +31,7 @@ Usage
 
   Usage of the core analytics system is simple.  At its base it is simply a logger for pushing data off to the server without interfering with the normal operation of the page.  There are a number of dojoConfig options that will affect the overall behavior of the core system, and others that apply only to specific analytics plugins.  After a normal dojo.js include with the appropriate dojoConfig settings, all that needs to be done is to require the analytics module and any of the plugins you wish to use.  In practice, it is better to create a custom base build of dojo that includes the analytics component and any modules you want to use for your pages.  This will minimally increase the size of your dojo.js (Only a few K depending on which/how many modules you enable), but will be available immediately and can easily be added/removed from your overall code base by simply using dojo.js or AnalyticsDojo.js at your leisure.
 
-.. js ::
+.. html ::
   
    <script type="text/javascript" src="dojotoolkit/dojo/dojo.js"
 	  data-dojo-config="parseOnLoad: true, sendInterval: 5000, analyticsUrl: 'http://server/path/to/dataLogger'"></script>

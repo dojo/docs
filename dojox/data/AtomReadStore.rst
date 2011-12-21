@@ -88,7 +88,6 @@ Example Usage of using AtomReadStore with a DataGrid
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.layout.TabContainer");
@@ -110,7 +109,6 @@ Example Usage of using AtomReadStore with a DataGrid
           { field: "summary", name: "Summary", width: 'auto' , formatter: textFormatter}
         ]
       ];
-    </script>
 
   .. html ::
 

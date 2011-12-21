@@ -95,7 +95,6 @@ Paging over items
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -183,7 +182,6 @@ Paging over items
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
-    </script>
 
   .. html ::
 

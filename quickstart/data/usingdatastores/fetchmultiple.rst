@@ -63,7 +63,6 @@ Loading all items through callbacks
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -124,7 +123,6 @@ Loading all items through callbacks
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init);
-    </script>
 
   .. html ::
 

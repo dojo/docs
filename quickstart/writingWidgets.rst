@@ -39,8 +39,6 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
 
   .. js ::
     
-
-    <script>
         require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase",
@@ -54,7 +52,6 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
                 parser.parse();
             });
         });
-    </script>
 
   Instantiate the widget in markup
  

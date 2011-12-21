@@ -24,17 +24,17 @@ You can think of dojo.html.set() like the good old :ref:`ContentPane <dijit/layo
 Examples
 ========
 
-.. js ::
+.. html ::
    
     // Dojo 1.7 (AMD)
     <script type="text/javascript">
-    require(["dojo/html", "dojo/ready"], function(html, ready){
-        ready(function(){
-            // the first argument is a node reference
-            console.log("loaded");
-            html.set(dojo.byId("mycontent"), "loaded!");
-        });
-    });
+		require(["dojo/html", "dojo/ready"], function(html, ready){
+			ready(function(){
+				// the first argument is a node reference
+				console.log("loaded");
+				html.set(dojo.byId("mycontent"), "loaded!");
+			});
+		});
     </script>
 
     <div id="mycontent">
@@ -43,16 +43,16 @@ Examples
 
 
 
-.. js ::
+.. html ::
 
     // Dojo < 1.7
     <script type="text/javascript">
-    dojo.require("dojo.html");
-    dojo.addOnLoad(function(){
-      // the first argument is a node reference
-      console.log("loaded");
-      dojo.html.set(dojo.byId("mycontent"), "loaded!");
-    })
+		dojo.require("dojo.html");
+		dojo.addOnLoad(function(){
+		  // the first argument is a node reference
+		  console.log("loaded");
+		  dojo.html.set(dojo.byId("mycontent"), "loaded!");
+		});
     </script>
 
     <div id="mycontent">
@@ -72,27 +72,27 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-    require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect, numberTextBox){
-    var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
+		require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect, numberTextBox){
+			var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
 
-      html.set(dom.byId("mytable"), '<tr>'
-        +'<td><label>How much?</label></td>'
-        +'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
-        +  ' constraints="{min:0,max:20,places:0}"'
-        +  ' promptMessage= "Enter a value between 0 and +20"'
-        +  ' required= "true" invalidMessage= "Wrong!" />'
-        +'</td>'
-        +'</tr>', {
-          parseContent: true,
-          onBegin: function(){
-              this.inherited("onBegin", arguments);
-          }
-      });
-      connect.disconnect(sethandle);
-      sethandle = null;
-      dom.byId("setbtn").innerHTML = "Done";
-    })
-    });
+			  html.set(dom.byId("mytable"), '<tr>'
+				+'<td><label>How much?</label></td>'
+				+'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
+				+  ' constraints="{min:0,max:20,places:0}"'
+				+  ' promptMessage= "Enter a value between 0 and +20"'
+				+  ' required= "true" invalidMessage= "Wrong!" />'
+				+'</td>'
+				+'</tr>', {
+				  parseContent: true,
+				  onBegin: function(){
+					  this.inherited("onBegin", arguments);
+				  }
+			  });
+			  connect.disconnect(sethandle);
+			  sethandle = null;
+			  dom.byId("setbtn").innerHTML = "Done";
+			});
+		});
     </script>
 	
 
@@ -106,28 +106,28 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-    dojo.require("dojo.html");
+		dojo.require("dojo.html");
 
-    var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function(){
+		var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function(){
 
-      dojo.html.set(dojo.byId("mytable"), '<tr>'
-        +'<td><label>How much?</label></td>'
-        +'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
-        +  ' constraints="{min:0, max:20, places:0}"'
-        +  ' promptMessage= "Enter a value between 0 and +20"'
-        +  ' required= "true" invalidMessage= "Wrong!" />'
-        +'</td>'
-        +'</tr>', {
-          parseContent: true,
-          onBegin: function(){
-            dojo.require('dijit.form.NumberTextBox');
-            this.inherited("onBegin", arguments);
-          }
-      });
-      dojo.disconnect(sethandle);
-      sethandle = null;
-      dojo.byId("setbtn").innerHTML = "Done";
-    })
+		  dojo.html.set(dojo.byId("mytable"), '<tr>'
+			+'<td><label>How much?</label></td>'
+			+'<td><input type="text" data-dojo-type="dijit.form.NumberTextBox" value="0"'
+			+  ' constraints="{min:0, max:20, places:0}"'
+			+  ' promptMessage= "Enter a value between 0 and +20"'
+			+  ' required= "true" invalidMessage= "Wrong!" />'
+			+'</td>'
+			+'</tr>', {
+			  parseContent: true,
+			  onBegin: function(){
+				dojo.require('dijit.form.NumberTextBox');
+				this.inherited("onBegin", arguments);
+			  }
+		  });
+		  dojo.disconnect(sethandle);
+		  sethandle = null;
+		  dojo.byId("setbtn").innerHTML = "Done";
+		});
     </script>
 
 We're getting a lot done here. First, note that we're setting content on a table. Some browsers get very unhappy when you try and set ``innerHTML`` on tables (and other elements) - ``dojo.html.set`` handles all that for you. Also, note that the content includes a widget, and we've added a 3rd parameter to our ``set()`` call - an object with some configuration for this set operation. ``parseContent: true`` tells ``set`` that when the content has been slopped in there, it should run the parser over the element.

@@ -81,9 +81,8 @@ Usage
 
 Flash embedding with dojo is as simple as:
 
-.. html ::
+.. js ::
  
- <script type="text/javascript">
    dojo.require("dojo.parser");
    dojo.require("dojox.embed.Flash");
    dojo.ready(function(){
@@ -95,7 +94,8 @@ Flash embedding with dojo is as simple as:
        vars: {customFlashVariable: 'value'}
      }, "flashContainer");
    });
- </script>
+
+.. html ::
 
  <div id="flashContainer">
    <h1>Alternative flash content</h1>
@@ -164,9 +164,8 @@ Examples
 Programmatic example
 --------------------
 
-.. html ::
+.. js ::
  
- <script type="text/javascript">
    dojo.require("dojox.embed.Flash");
    dojo.ready(function(){
      var movie = new dojox.embed.Flash({
@@ -177,7 +176,8 @@ Programmatic example
        vars: {customFlashVariable: 'value'}
      }, "flashContainer");
    });
- </script>
+
+.. html ::
 
  <div id="flashContainer">
    <h1>Alternative flash content</h1>
@@ -188,12 +188,12 @@ Programmatic example
 Declarative example
 -------------------
 
-.. html ::
+.. js ::
  
- <script type="text/javascript">
    dojo.require("dojo.parser");
    dojo.require("dojox.embed.Flash");
- </script>
+
+.. html ::
 
  <div data-dojo-type="dojox.embed.Flash" data-dojo-props="path:'/path-to-swf/flash.swf', width:'100%', height:300">
    <h1>Alternative flash content</h1>

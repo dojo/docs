@@ -752,7 +752,7 @@ However, in order to detect that high contrast mode has been set on a MS Windows
 
 .. js ::
 
-  <script type="text/javascript" src="../../../dijit/_base/wai.js"></script>
+  require(["dijit/_base/hccss.js"]);
 
 Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.
 

@@ -34,39 +34,33 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
 
 .. js ::
   
-  <script type="text/javascript">
       define(["dojo/on", "dojo/touch"], function(on, touch){
         on(node, touch.press, function(e){});
         on(node, touch.move, function(e){});
         on(node, touch.release, function(e){});
         on(node, touch.cancel, function(e){});
       }
-  </style>
 
 
 2. Used with dojo/touch directly
 
 .. js ::
   
-  <script type="text/javascript">
       define(["dojo/touch"], function(touch){
         touch.press(node, function(e){});
         touch.move(node, function(e){});
         touch.release(node, function(e){});
         touch.cancel(node, function(e){});
       }
-  </style>
 
 3. Or used with the traditional dojo/connect
 
 .. js ::
   
-  <script type="text/javascript">
         dojo.connect(node, dojo.touch.press, function(e){});
         dojo.connect(node, dojo.touch.move, function(e){});
         dojo.connect(node, dojo.touch.release, function(e){});
         dojo.connect(node, dojo.touch.cancel, function(e){});
-  </style>
 
 
 

@@ -58,7 +58,6 @@ The pattern of using the GoogleLocalSearchStore is
 
 .. js ::
  
- <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleLocalSearchStore();
 
@@ -86,8 +85,6 @@ The pattern of using the GoogleLocalSearchStore is
     onComplete: callbackFunction,
     onError: onErrorFunction
   });
- </script>
-
 
 
 Examples
@@ -100,7 +97,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch(){
@@ -161,7 +157,6 @@ Programmatic example
       console.log("called fetch with query", query);
 
     }
-    </script>
 
   .. html ::
 

@@ -52,10 +52,8 @@ See also
 
 .. js ::
  
- <script>
    dojo.connect(_container_, "onLoad", function(){
       /* your script */
    });
- </script>"
 
 This will connect your local function to the onLoad callback of the enclosing ContentPane.

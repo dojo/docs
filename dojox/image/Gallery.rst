@@ -32,7 +32,6 @@ Creating a Gallery and setting a simple data source
 
 .. js ::
  
-  <script type="text/javascript">
   // Define the attribute names used to access the items in the data store
   var itemNameMap = {imageThumbAttr: "thumb", imageLargeAttr: "large"};
 
@@ -40,7 +39,8 @@ Creating a Gallery and setting a simple data source
   // requested with each request
   var request = {query: {}, count: 20};
   dijit.byId('gallery1').setDataStore(imageItemStore, request, itemNameMap);
-  </script>
+
+.. html ::
 
   <div id="gallery1" data-dojo-type="dojox.image.Gallery"></div>
   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>

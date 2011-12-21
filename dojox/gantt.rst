@@ -30,7 +30,7 @@ The following step shows how to create a typical gantt chart in dojo.
 
 Step 1: Import related CSS file and required javascript:
 
-.. js ::
+.. html ::
   
   <link type="text/css" rel="stylesheet" href="{baseUrl}/dijit/themes/claro/claro.css">
   <link type="text/css" rel="stylesheet" href="{baseUrl}/dojox/gantt/resources/gantt.css">

@@ -73,115 +73,120 @@ Example 1 - UA sniffing in Dojo 1.7 with AMD and the has API
 
 Here's a live sample to show how it works, when using AMD and minimal base dependencies rather than all modules that get implicitly loaded by the dojo package, so that we can show how the sniff module's return values can be mapped to has() to detect the current browser with a small amount of loaded code:
 
-.. html ::
+.. code-example ::
+
+  .. js ::
   
-  <script type="text/javascript">
-  require(["dojo/has", // alias has API to "has"
-          "dojo/_base/array", // alias array api to "arrayUtil"
-          "dojo/dom", // alias DOM api to "dom"
-          "dojo/_base/sniff", // load browser-related has feature tests
-          "dojo/domReady!"], // wait until DOM is loaded
-       function(has, arrayUtil, dom){
+      require(["dojo/has", // alias has API to "has"
+              "dojo/_base/array", // alias array api to "arrayUtil"
+              "dojo/dom", // alias DOM api to "dom"
+              "dojo/_base/sniff", // load browser-related has feature tests
+              "dojo/domReady!"], // wait until DOM is loaded
+           function(has, arrayUtil, dom){
 
-    function makeFancyAnswer(who){
-      if(has(who)){
-        return "Yes, it's version " + has(who);
-      }else{
-        return "No";
-      }
-    }
+        function makeFancyAnswer(who){
+          if(has(who)){
+            return "Yes, it's version " + has(who);
+          }else{
+            return "No";
+          }
+        }
 
-    function makeAtLeastAnswer(who, version){
-      var answer = (has(who) >= version) ? "Yes" : "No";
-      dom.byId("isAtLeast" + who + version).innerHTML = answer;
-    }
+        function makeAtLeastAnswer(who, version){
+          var answer = (has(who) >= version) ? "Yes" : "No";
+          dom.byId("isAtLeast" + who + version).innerHTML = answer;
+        }
 
-    arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"], function(n){
-      dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
-    });
-    makeAtLeastAnswer("ie", 7);
-    makeAtLeastAnswer("ff", 3);
-    makeAtLeastAnswer("opera", 9);
+        arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"], function(n){
+          dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
+        });
+        makeAtLeastAnswer("ie", 7);
+        makeAtLeastAnswer("ff", 3);
+        makeAtLeastAnswer("opera", 9);
 
-  });
-  </script>
-  <dl>
-    <dt>Is this Internet Explorer?</dt>
-    <dd id="answerIsie"></dd>
-    <dt>Is this Firefox?</dt>
-    <dd id="answerIsff"></dd>
-    <dt>Is this Mozilla?</dt>
-    <dd id="answerIsmozilla"></dd>
-    <dt>Is this Opera?</dt>
-    <dd id="answerIsopera"></dd>
-    <dt>Is this WebKit? (Dojo 1.3)</dt>
-    <dd id="answerIswebkit"></dd>
-    <dt>Is this Chrome? (Dojo 1.3)</dt>
-    <dd id="answerIschrome"></dd>
-  </dl>
-  <dl>
-    <dt>Is this at least IE 7?</dt>
-    <dd id="isAtLeastie7"></dd>
-    <dt>Is this at least Firefox 3?</dt>
-    <dd id="isAtLeastff3"></dd>
-    <dt>Is this at least Opera 9?</dt>
-    <dd id="isAtLeastopera9"></dd>
-  </dl>
+      });
+
+  .. html ::
+
+      <dl>
+        <dt>Is this Internet Explorer?</dt>
+        <dd id="answerIsie"></dd>
+        <dt>Is this Firefox?</dt>
+        <dd id="answerIsff"></dd>
+        <dt>Is this Mozilla?</dt>
+        <dd id="answerIsmozilla"></dd>
+        <dt>Is this Opera?</dt>
+        <dd id="answerIsopera"></dd>
+        <dt>Is this WebKit? (Dojo 1.3)</dt>
+        <dd id="answerIswebkit"></dd>
+        <dt>Is this Chrome? (Dojo 1.3)</dt>
+        <dd id="answerIschrome"></dd>
+      </dl>
+      <dl>
+        <dt>Is this at least IE 7?</dt>
+        <dd id="isAtLeastie7"></dd>
+        <dt>Is this at least Firefox 3?</dt>
+        <dd id="isAtLeastff3"></dd>
+        <dt>Is this at least Opera 9?</dt>
+        <dd id="isAtLeastopera9"></dd>
+      </dl>
 
 Example 2 - Pre Dojo 1.7-style UA sniffing
 ==========================================
 
 This example has the same result, but loads more code because it's using the full dojo base API (which consists of many smaller modules).  Note that rather than using the augmented has() API, this approach uses the older dojo.isXXX functions available on the dojo global object.
 
-.. html ::
+.. code-example ::
+
+  .. js ::
   
-  <script type="text/javascript">
-  function makeFancyAnswer(who){
-    if(dojo["is" + who]){
-      return "Yes, it's version " + dojo["is" + who];
-    }else{
-      return "No";
-    }
-  }
+      function makeFancyAnswer(who){
+        if(dojo["is" + who]){
+          return "Yes, it's version " + dojo["is" + who];
+        }else{
+          return "No";
+        }
+      }
 
-  function makeAtLeastAnswer(who, version){
-    var answer = (dojo["is" + who] >= version) ? "Yes" : "No";
-    dojo.byId("isAtLeast" + who + version).innerHTML = answer;
-  }
+      function makeAtLeastAnswer(who, version){
+        var answer = (dojo["is" + who] >= version) ? "Yes" : "No";
+        dojo.byId("isAtLeast" + who + version).innerHTML = answer;
+      }
 
-  dojo.addOnLoad(function(){
-    dojo.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],
-                 function(n){
-                   dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
-                 });
-    makeAtLeastAnswer("IE", 7);
-    makeAtLeastAnswer("FF", 3);
-    makeAtLeastAnswer("Opera", 9);
-    
-  });
-  </script>
-  <dl>
-    <dt>Is this Internet Explorer?</dt>
-    <dd id="answerIsIE"></dd>
-    <dt>Is this Firefox?</dt>
-    <dd id="answerIsFF"></dd>
-    <dt>Is this Mozilla?</dt>
-    <dd id="answerIsMozilla"></dd>
-    <dt>Is this Opera?</dt>
-    <dd id="answerIsOpera"></dd>
-    <dt>Is this WebKit? (Dojo 1.3)</dt>
-    <dd id="answerIsWebKit"></dd>
-    <dt>Is this Chrome? (Dojo 1.3)</dt>
-    <dd id="answerIsChrome"></dd>
-  </dl>
-  <dl>
-    <dt>Is this at least IE 7?</dt>
-    <dd id="isAtLeastIE7"></dd>
-    <dt>Is this at least Firefox 3?</dt>
-    <dd id="isAtLeastFF3"></dd>
-    <dt>Is this at least Opera 9?</dt>
-    <dd id="isAtLeastOpera9"></dd>
-  </dl>
+      dojo.addOnLoad(function(){
+            dojo.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],
+                         function(n){
+                           dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
+                         });
+            makeAtLeastAnswer("IE", 7);
+            makeAtLeastAnswer("FF", 3);
+            makeAtLeastAnswer("Opera", 9);
+      });
+
+  .. html ::
+
+      <dl>
+        <dt>Is this Internet Explorer?</dt>
+        <dd id="answerIsIE"></dd>
+        <dt>Is this Firefox?</dt>
+        <dd id="answerIsFF"></dd>
+        <dt>Is this Mozilla?</dt>
+        <dd id="answerIsMozilla"></dd>
+        <dt>Is this Opera?</dt>
+        <dd id="answerIsOpera"></dd>
+        <dt>Is this WebKit? (Dojo 1.3)</dt>
+        <dd id="answerIsWebKit"></dd>
+        <dt>Is this Chrome? (Dojo 1.3)</dt>
+        <dd id="answerIsChrome"></dd>
+      </dl>
+      <dl>
+        <dt>Is this at least IE 7?</dt>
+        <dd id="isAtLeastIE7"></dd>
+        <dt>Is this at least Firefox 3?</dt>
+        <dd id="isAtLeastFF3"></dd>
+        <dt>Is this at least Opera 9?</dt>
+        <dd id="isAtLeastOpera9"></dd>
+      </dl>
 
 
 See also

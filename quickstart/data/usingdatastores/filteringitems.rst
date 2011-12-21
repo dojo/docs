@@ -189,7 +189,6 @@ Query for all food in aisles starting with C
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -252,7 +251,6 @@ Query for all food in aisles starting with C
         }
         // Set the init function to run when dojo loading and page parsing has completed.
         dojo.ready(init2);
-    </script>
 
   .. html ::
 
