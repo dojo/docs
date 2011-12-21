@@ -54,9 +54,10 @@ Examples
 Declarative example
 -------------------
 
-.. html ::
+.. code-example ::
 
-    <script>
+  .. js ::
+
         var model;
         require(["dijit/StatefulModel", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(StatefulModel, parser){
             model = new StatefulModel({ data : {
@@ -64,13 +65,15 @@ Declarative example
             }});
             parser.parse();
         });
-    </script>
 
-    <input id="hello1" data-dojo-type="dijit.form.TextBox"
-        data-dojo-props="ref: model.hello"></input>
 
-    <input id="hello2" data-dojo-type="dijit.form.TextBox"
-        data-dojo-props="ref: model.hello"></input>
+  .. html ::
+
+		<input id="hello1" data-dojo-type="dijit.form.TextBox"
+			data-dojo-props="ref: model.hello"></input>
+
+		<input id="hello2" data-dojo-type="dijit.form.TextBox"
+			data-dojo-props="ref: model.hello"></input>
 
 In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "hello2" respectively) are bound to the same 
 reference location in the data model i.e. "hello" via the "ref" expression "model.hello". Both will have an initial value of "Hello 
