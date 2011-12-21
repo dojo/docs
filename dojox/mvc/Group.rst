@@ -105,5 +105,5 @@ Declarative example
         Choose:
         <button id="shipto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.ShipTo);">Ship To</button>
         <button id="billto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.BillTo);">Bill To</button>
-<p>In the above example, the TextBoxes inside the group with the id="addrGroup" will display either the ShipTo data or the BillTo data depending upon which button is pressed.
+        <p>In the above example, the TextBoxes inside the group with the id="addrGroup" will display either the ShipTo data or the BillTo data depending upon which button is pressed.
     </div>
