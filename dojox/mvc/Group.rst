@@ -32,9 +32,13 @@ Examples
 Declarative example
 -------------------
 
-.. code-example ::
-  :djConfig: parseOnLoad: true  :version: local  :toolbar: versions, themes
-  .. js ::
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: local
+  :toolbar: versions, themes
+
+  .. js ::
+
         // Load the parser, we'll use the declarative data binding syntax (ref).        dojo.require("dojo.parser");
         // Load the dijits we need.        dojo.require("dijit.form.Button");        dojo.require("dijit.form.TextBox");
         // Load the basic MVC support, Output and Group .        dojo.require("dojox.mvc");        dojo.require("dojox.mvc.Group");        dojo.require("dojox.mvc.Output");
