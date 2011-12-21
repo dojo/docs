@@ -62,7 +62,5 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. css ::
 
-    <style type="text/css">
 	@import "{{baseUrl}}dijit/themes/nihilo/nihilo.css";
 	@import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
-    </style>

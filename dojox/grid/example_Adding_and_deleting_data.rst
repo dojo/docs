@@ -79,7 +79,5 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. css ::
 
-    <style type="text/css">
 	@import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";
 	@import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";
-    </style>

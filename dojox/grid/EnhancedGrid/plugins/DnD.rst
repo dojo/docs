@@ -25,7 +25,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dijit.form.CheckBox");
 		dojo.require("dojox.grid.EnhancedGrid");
@@ -149,7 +148,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				cb.checked = false;
 			});
 		});
-	</script>
 
   .. html ::
 
@@ -232,7 +230,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
@@ -257,7 +254,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		width: 300px;
 		height: 300px;
 	}
-    </style>
 
 Configuration
 =============
@@ -485,7 +481,6 @@ The JavaScript code is:
 
 .. js ::
   
-  <script type="text/javascript">
 	dojo.require("dojox.grid.enhanced.plugins.GridSource");
 	
     dojo.ready(function(){
@@ -501,7 +496,6 @@ The JavaScript code is:
         dojo.attr(dojo.byId("inputAlbum"), "value", s.getValue(grid.getItem(row), "Album"));
       });
     });
-  </script>
 
 And here is the effect:
 

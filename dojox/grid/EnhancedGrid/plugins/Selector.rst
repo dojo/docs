@@ -25,7 +25,6 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.Selector");
@@ -105,7 +104,6 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 			grid.placeAt('gridContainer');
 			grid.startup();
 		});
-	</script>
 
   .. html ::
 
@@ -143,7 +141,6 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
@@ -159,7 +156,6 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 		width: 600px;
 		height: 400px;
 	}
-    </style>
 
 
 Configuration
