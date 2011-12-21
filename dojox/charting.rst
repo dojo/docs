@@ -501,11 +501,15 @@ The color of the axis, the color and length of your tick marks and the font and 
 
 TODO: Axis Properties Example
 
-Using Custom Axis Labels
-------------------------
+Axis Labels
+-----------
 
-Dojo Charts provide the ability to assign custom labels to any axis. Make sure to allow sufficient space in your div for the text to display properly.
-Here is an example using abbreviated month names with a Columns plot.
+By default the labels of an axis are computed from the raw data value and formatted using dojo/number when available
+(i.e explicitly imported in your application) or using Date.toFixed otherwise.
+
+However one can provide his own labels instead. There are two means for achieving this. When you use lengthy custom labels please make sure to allow sufficient space in your div for the text to display properly.
+
+This code excerpt shows how to use the axis labels property to display abbreviated month names:
 
 .. js ::
   
@@ -519,6 +523,20 @@ Here is an example using abbreviated month names with a Columns plot.
       });
 
 Note that the labels object must be sorted by increasing value.
+
+Another possibility is to provide a labeling function that will be used to compute the labels. 
+
+In the following code the labeling function is used to add a unit after the expected label:
+
+.. js :: 
+
+  var myLabelFunc = function(text, value, precision){
+     return text+" my unit";
+  };
+  chart1.addAxis("x", { labelFunc: myLabelFunc });
+
+The first parameter of the labelling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
+
 
 TODO: Month Labels Example
 
