@@ -38,9 +38,10 @@ Examples
 Declarative example
 -------------------
 
-.. html ::
+.. code-example ::
 
-    <script type="text/javascript" >
+  .. js ::
+
         var search_results_init = {
             "Query" : "Engineers",
             "Results" : [
@@ -66,8 +67,8 @@ Declarative example
         // where each leaf within the data model is decorated with dojo.Stateful
         // properties that widgets can bind to and watch for their changes.
         var searchRecords = dojox.mvc.newStatefulModel({ data : search_results_init });
-    </script>
 
+  .. html ::
 
     <div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
         <!--
