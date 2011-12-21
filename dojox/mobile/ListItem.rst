@@ -116,11 +116,12 @@ In this example, no view transition is specified, but if you specify the one, mo
 
   <ul data-dojo-type="dojox.mobile.RoundRectList">
       <li data-dojo-type="dojox.mobile.ListItem"
-	  icon="mblDomButtonRedCircleMinus"
-	  label="Label"
-	  rightText="rightText"
-	  rightIcon2="mblDomButtonSilverCircleDownArrow"
-	  rightIcon="mblDomButtonBlueCircleArrow"></li>
+          icon="mblDomButtonRedCircleMinus"
+          label="Label"
+          rightText="rightText"
+          rightIcon2="mblDomButtonSilverCircleDownArrow"
+          rightIcon="mblDomButtonBlueCircleArrow">
+      </li>
   </ul>
 
 .. image :: ListItem-desc.png
@@ -139,15 +140,15 @@ html fragment:
   <div data-dojo-type="dojox.mobile.View">
       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
       <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      Jack Coleman
-	  </li>
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      James Evans
-	  </li>
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      Jason Griffin
-	  </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          Jack Coleman
+      </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          James Evans
+      </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          Jason Griffin
+      </li>
       </ul>
   </div>
 
@@ -158,18 +159,18 @@ JSON data:
   {
     "dojox.mobile.View": {
       "dojox.mobile.Heading": {
-	"@back": "Home",
-	"@moveTo": "foo",
-	"@label": "view1.json"
+        "@back": "Home",
+        "@moveTo": "foo",
+        "@label": "view1.json"
       },
       "dojox.mobile.EdgeToEdgeList": {
-	"dojox.mobile.ListItem": [{
-	  "@label": "Jack Coleman"
-	}, {
-	  "@label": "James Evans"
-	}, {
-	  "@label": "Jason Griffin"
-	}]
+        "dojox.mobile.ListItem": [{
+          "@label": "Jack Coleman"
+        }, {
+          "@label": "James Evans"
+        }, {
+          "@label": "Jason Griffin"
+        }]
       }
     }
   }

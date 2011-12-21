@@ -146,95 +146,95 @@ A partial circle gauge with two indicators and a set of gradient ranges
   .. html ::
 
     <div data-dojo-type="dojox.gauges.AnalogGauge"
-	id="declarativeGauge"
-	width="350"
-	height="275"
-	cx="175"
-	cy="175"
-	radius="135"
-	startAngle="-120"
-	endAngle="120"
-	useRangeStyles="0"
-	hideValues="true"
-	majorTicks="{length: 5, offset: 135, interval: 5}">
+        id="declarativeGauge"
+        width="350"
+        height="275"
+        cx="175"
+        cy="175"
+        radius="135"
+        startAngle="-120"
+        endAngle="120"
+        useRangeStyles="0"
+        hideValues="true"
+        majorTicks="{length: 5, offset: 135, interval: 5}">
       <div data-dojo-type="dojox.gauges.Range"
         low="0"
-	high="10"
-	hover="0 - 10"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
-	}">
+        high="10"
+        hover="0 - 10"
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         id="range1"
         low="10"
         high="20"
         hover="10 - 20"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
+        }">
       </div>
       <div  data-dojo-type="dojox.gauges.Range"
         id="range2"
         low="20"
         high="30"
         hover="20 - 30"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         id="range3"
         low="30"
         high="40"
         hover="30 - 40"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
-         id="range4"
-         low="40"
-         high="50"
-         hover="40 - 50"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
-	}">
+        id="range4"
+        low="40"
+        high="50"
+        hover="40 - 50"
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         id="range5"
         low="50"
         high="60"
         hover="50 - 60"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         id="range6"
         low="60"
         high="70"
         hover="60 - 70"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         id="range7"
         low="70"
         high="80"
         hover="70 - 80"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
+        }">
       </div>
     </div>
 
@@ -285,75 +285,75 @@ A half circle gauge with two indicators overlay graphic
       image="{url:'{{dataUrl}}dojox/gauges/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
       <div data-dojo-type="dojox.gauges.Range"
         low="0"
-	high="10"
-	hover="0 - 10"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
-	}">
+        high="10"
+        hover="0 - 10"
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="10"
         high="20"
         hover="10 - 20"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
+        }">
       </div>
       <div  data-dojo-type="dojox.gauges.Range"
         low="20"
         high="30"
         hover="20 - 30"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="30"
         high="40"
         hover="30 - 40"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
-         low="40"
-         high="50"
-         hover="40 - 50"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
-	}">
+        low="40"
+        high="50"
+        hover="40 - 50"
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="50"
         high="60"
         hover="50 - 60"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="60"
         high="70"
         hover="60 - 70"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
+        }">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="70"
         high="75"
         hover="70 - 75"
-	color="{
-		'type': 'linear',
-		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
-	}">
+        color="{
+            'type': 'linear',
+            'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
+        }">
       </div>
     </div>
 
@@ -370,32 +370,32 @@ Speedometer style gauge with arc indicator and needle indicator
       dojo.require("dojox.gauges.AnalogNeedleIndicator");
 
       dojo.ready(function(){
-	  var gauge = dijit.byId('speedo');
-	  // Used for a gradient arc indicator below:
-	  var fill = {
-	    'type': 'linear',
-	    'x1': 50,
-	    'y1': 50,
-	    'x2': 350,
-	    'y2': 350,
-	    'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
-	  };
-	  gauge.addIndicator(new dojox.gauges.AnalogArcIndicator({
-	    'value': 200,
-	    'width': 20,
-	    'offset': 150,
-	    'color': fill,
-	    'noChange': true,
-	    'hideValues': true
-	  }));
-	  gauge.addIndicator(new dojox.gauges.AnalogArcIndicator({
-	    'value': 80,
-	    'width': 10,
-	    'offset': 150,
-	    'color': 'blue',
-	    'title': 'Arc',
-	    'hover': 'Arc: 80'
-	  }));
+          var gauge = dijit.byId('speedo');
+          // Used for a gradient arc indicator below:
+          var fill = {
+            'type': 'linear',
+            'x1': 50,
+            'y1': 50,
+            'x2': 350,
+            'y2': 350,
+            'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
+          };
+          gauge.addIndicator(new dojox.gauges.AnalogArcIndicator({
+            'value': 200,
+            'width': 20,
+            'offset': 150,
+            'color': fill,
+            'noChange': true,
+            'hideValues': true
+          }));
+          gauge.addIndicator(new dojox.gauges.AnalogArcIndicator({
+            'value': 80,
+            'width': 10,
+            'offset': 150,
+            'color': 'blue',
+            'title': 'Arc',
+            'hover': 'Arc: 80'
+          }));
           gauge.addIndicator(new dojox.gauges.AnalogNeedleIndicator({
             'value': 100,
             'width': 8,
@@ -424,12 +424,12 @@ Speedometer style gauge with arc indicator and needle indicator
       minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
       <div data-dojo-type="dojox.gauges.Range"
         low="0"
-	high="100"
+        high="100"
         color="{'color': 'black'}">
       </div>
       <div data-dojo-type="dojox.gauges.Range"
         low="100"
-	high="200"
+        high="200"
         color="{'color': 'black'}">
       </div>
     </div>

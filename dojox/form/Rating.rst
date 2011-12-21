@@ -83,19 +83,19 @@ The following shows what events you can connect to and how to do this using inli
 
   .. html ::
 
-	  <p id="inlineEvents">
-		<span data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10">
-		  <script type="dojo/event" data-dojo-event="onChange">
-			dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
-		  </script>
-		  <script type="dojo/event" data-dojo-event="onMouseOver" data-dojo-args="evt,value">
-			dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
-		  </script>
-		</span>
-		<br /><br />
-		The value is: <b><span class="value">0</span></b><br />
-		The mouse is over: <b><span class="hoverValue">0</span></b>
-	  </p>
+      <p id="inlineEvents">
+        <span data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10">
+          <script type="dojo/event" data-dojo-event="onChange">
+            dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
+          </script>
+          <script type="dojo/event" data-dojo-event="onMouseOver" data-dojo-args="evt,value">
+            dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
+          </script>
+        </span>
+        <br /><br />
+        The value is: <b><span class="value">0</span></b><br />
+        The mouse is over: <b><span class="hoverValue">0</span></b>
+      </p>
 
 
 Events via dojo.connect()
@@ -125,12 +125,12 @@ The next example shows how you can do the same as above, just using the default 
 
   .. html ::
 
-	  <p id="defaultConnect">
-		<span id="connectRating" data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10"></span>
-		<br /><br />
-		The value is: <b><span class="value">0</span></b><br />
-		The mouse is over: <b><span class="hoverValue">0</span></b>
-	  </p>
+      <p id="defaultConnect">
+        <span id="connectRating" data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10"></span>
+        <br /><br />
+        The value is: <b><span class="value">0</span></b><br />
+        The mouse is over: <b><span class="hoverValue">0</span></b>
+      </p>
 
 
 Inside a dojo form
@@ -152,18 +152,18 @@ Inside a dojo form
 
   .. html ::
 
-	  <form data-dojo-type="dijit.form.Form">
-		<select data-dojo-type="dijit.form.FilteringSelect">
-		  <option>Does</option>
-		  <option>this</option>
-		  <option>work?</option>
-		</select>
+      <form data-dojo-type="dijit.form.Form">
+        <select data-dojo-type="dijit.form.FilteringSelect">
+          <option>Does</option>
+          <option>this</option>
+          <option>work?</option>
+        </select>
 
-		<br /><br />
-		<div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:5,value:1"></div>
-		<br /><br />
-		<button data-dojo-type="dijit.form.Button">Click me</button>
-	  </form>
+        <br /><br />
+        <div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:5,value:1"></div>
+        <br /><br />
+        <button data-dojo-type="dijit.form.Button">Click me</button>
+      </form>
 
 
 
@@ -185,7 +185,7 @@ Customized stars
       height:16px;
       padding:0.5em;
     }
-		
+
     #myRating .dojoxRatingStarChecked {
       background-image:url({{baseUrl}}dijit/themes/tundra/images/dndNoMove.png);
     }
@@ -199,6 +199,6 @@ Customized stars
 
   .. html ::
 
-	  <div id="myRating">
-		<div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:6,value:2"></div>
-	  </div>
+      <div id="myRating">
+        <div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:6,value:2"></div>
+      </div>

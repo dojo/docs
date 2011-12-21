@@ -28,25 +28,25 @@ rooted at the property ``idTree`` of the output JSON object. Consider the follow
 
 .. js ::
 
-	idTree: {
-		dojo:{
-			"*":0
-			_base:{
-				array:{
-					"*":1
-				},
-				lang:{
-					"*":2
-				},
-				// etc.
-			},
-			// etc.
-		},
-		dijit:{
-			"*":487,
-			// etc.
-		}
-	}
+    idTree: {
+        dojo:{
+            "*":0
+            _base:{
+                array:{
+                    "*":1
+                },
+                lang:{
+                    "*":2
+                },
+                // etc.
+            },
+            // etc.
+        },
+        dijit:{
+            "*":487,
+            // etc.
+        }
+    }
 
 The partial ``idTree`` value given above contains a forest with the ``dojo`` and ``dijit`` trees. The modules dojo,
 dojo/_base/array, dojo/_base/lang, and dijit have the identifiers 0, 1, 2, and 487 respectively.
@@ -72,10 +72,10 @@ For example, the following profile will output a dot program for the dependency 
 
 .. js ::
 
-	var profile = {
-		depsDumpDotFilename:"dojo-base-json.dot",
-		dotModules:"dojo/_base/json"
-	}
+    var profile = {
+        depsDumpDotFilename:"dojo-base-json.dot",
+        dotModules:"dojo/_base/json"
+    }
 
 This could then be used to generate a PNG of the graph as follows (assuming Graphvis is installed).
 

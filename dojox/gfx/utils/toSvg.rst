@@ -77,16 +77,16 @@ Example
          }).setFill("blue").setStroke("black");
       });
    
-	  function serialize(){
-		dojox.gfx.utils.toSvg(drawing).then(
-		    function(svg){
-		        dojo.byId("svg").innerHTML = svg;
-		    },
-		    function(err){
-		       alert(err);
-		    }
-		);
-	  }
+      function serialize(){
+        dojox.gfx.utils.toSvg(drawing).then(
+            function(svg){
+                dojo.byId("svg").innerHTML = svg;
+            },
+            function(err){
+               alert(err);
+            }
+        );
+      }
 
   .. html ::
 

@@ -73,8 +73,8 @@ In this example, in the util/buildscripts/profiles directory, you will create a 
     ],
 
     prefixes: [
-	[ "dijit", "../dijit" ],
-	[ "dojox", "../dojox" ],
+        [ "dijit", "../dijit" ],
+        [ "dojox", "../dojox" ],
         [ "explosive", "../../explosive" ]
     ]
 

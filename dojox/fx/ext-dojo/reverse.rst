@@ -18,11 +18,11 @@ To use, simply require dojox.fx.ext-dojo.reverse and a reverse() method will be 
 The reverse method has two optional arguments:
 
 * keepPaused
-	By default, calling reverse() will play the animation if it was paused. Pass in true to keep it paused (will have no effect if reverse is called while animation is playing).
+    By default, calling reverse() will play the animation if it was paused. Pass in true to keep it paused (will have no effect if reverse is called while animation is playing).
 
 * reverseEase
-	A function to use for the reverse easing. This allows for the possibility of custom eases that are not in the dojo.fx library.
-	
+    A function to use for the reverse easing. This allows for the possibility of custom eases that are not in the dojo.fx library.
+
 Example
 -------
 

@@ -97,14 +97,14 @@ circular gauge (programmatic)
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyCircularGauge');
         makeGauge = function(){
-        	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
-        		background: [255, 255, 255, 0],
-        		title: 'Value',
-        		id: "glossyGauge",
-        		width: 300,
-        		height: 300
-        	}, dojo.byId("CircularGauge"));
-        	glossyCircular.startup();
+            var glossyCircular = new dojox.gauges.GlossyCircularGauge({
+                background: [255, 255, 255, 0],
+                title: 'Value',
+                id: "glossyGauge",
+                width: 300,
+                height: 300
+            }, dojo.byId("CircularGauge"));
+            glossyCircular.startup();
         };
         dojo.ready(makeGauge );
     

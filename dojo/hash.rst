@@ -46,7 +46,7 @@ To use dojo.hash to listen for hash changes:
     require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
-	
+
     // Dojo < 1.7
     dojo.subscribe("/dojo/hashchange", context, callback);
    ..
@@ -69,7 +69,7 @@ Setter
     require(["dojo/hash"], function(hash){
         hash("someHashValue");
     });
-	
+
     // Dojo < 1.7
     dojo.hash("someHashValue");
   ..
@@ -83,7 +83,7 @@ Setter
     require(["dojo/hash"], function(hash){
         hash("someHashValue", true);
     });
-	
+
     // Dojo < 1.7
     dojo.hash("someHashValue", true);
   ..
@@ -98,7 +98,7 @@ Getter
     require(["dojo/hash"], function(hash){
         var hashValue = hash();
     });
-	
+
     // Dojo < 1.7
     var hashValue = dojo.hash();
   ..
@@ -115,7 +115,7 @@ Examples
     require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
-	
+
     // Dojo < 1.7
     dojo.subscribe("/dojo/hashchange", context, callback);
    ..
@@ -132,7 +132,7 @@ Examples
         }
         hash(ioQuery.objectToQuery(obj));
     });
-	
+
     // Dojo < 1.7
     function(){
         var obj = {

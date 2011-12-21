@@ -20,11 +20,11 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  |mblTextArea   |Default CSS class name used to render the TEXTAREA.                                                        |
+|baseClass     |String    |mblTextArea   |Default CSS class name used to render the TEXTAREA.                                                        |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
+|class         |String    |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|value         |String 	  |              |Initial value of the editable text.  If omitted, then the TEXTAREA's innerHTML is used.                    |
+|value         |String    |              |Initial value of the editable text.  If omitted, then the TEXTAREA's innerHTML is used.                    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |maxLength     |Number    |              |Maximum number of characters that can be entered in the TEXTAREA (requires browser support).               |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+

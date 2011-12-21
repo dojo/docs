@@ -18,7 +18,7 @@ Instead of having to write the easing function yourself, dojo provides a collect
 Easing Functions
 ================
 
-All functions follow a simple naming convention of "ease type" + "when".  If the name of the function ends in Out, the easing described appears 	towards the end of the animation. "In" means during the beginning, and InOut means both ranges of the Animation will applied, both beginning and end.
+All functions follow a simple naming convention of "ease type" + "when".  If the name of the function ends in Out, the easing described appears towards the end of the animation. "In" means during the beginning, and InOut means both ranges of the Animation will applied, both beginning and end.
 
 
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
@@ -148,58 +148,58 @@ Example: Playing with Easing
       dojo.ready(function(){
          // Function linked to the button to trigger the fade.
          function moveIt(){
-			// Set initial state and get the easing from the dropdown
+            // Set initial state and get the easing from the dropdown
             dojo.style("moveableNode", "marginLeft", "0px");
-			var easing = dijit.byId("easingSelector").attr("value");
-			var ef = dojo.fx.easing[easing];
-			if(ef){
-				var moveArgs = {
-				  node: "moveableNode",
-				  properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
-				  easing: ef,
-				  duration: 5000
-				};
-				dojo.animateProperty(moveArgs).play();
-			}
+            var easing = dijit.byId("easingSelector").attr("value");
+            var ef = dojo.fx.easing[easing];
+            if(ef){
+                var moveArgs = {
+                  node: "moveableNode",
+                  properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
+                  easing: ef,
+                  duration: 5000
+                };
+                dojo.animateProperty(moveArgs).play();
+            }
          }
          dojo.connect(dijit.byId("moveButton"), "onClick", moveIt);
       });
 
   .. html ::
 
-	<select data-dojo-type="dijit.form.ComboBox" id="easingSelector">
-		<option>linear</option>
-		<option>quadIn</option>
-		<option>quadOut</option>
-		<option>quadInOut</option>
-		<option>cubicIn</option>
-		<option>cubicOut</option>
-		<option>cubicInOut</option>
-		<option>quartIn</option>
-		<option>quartOut</option>
-		<option>quartInOut</option>
-		<option>quintIn</option>
-		<option>quintOut</option>
-		<option>quintInOut</option>
-		<option>sineIn</option>
-		<option>sineOut</option>
-		<option>sineInOut</option>
-		<option>expoIn</option>
-		<option>expoOut</option>
-		<option>expoInOut</option>
-		<option>circIn</option>
-		<option>circOut</option>
-		<option>circInOut</option>
-		<option>backIn</option>
-		<option>backOut</option>
-		<option>backInOut</option>
-		<option>elasticIn</option>
-		<option>elasticOut</option>
-		<option>elasticInOut</option>
-		<option>bounceIn</option>
-		<option>bounceOut</option>
-		<option>bounceInOut</option>
-	</select>
+    <select data-dojo-type="dijit.form.ComboBox" id="easingSelector">
+        <option>linear</option>
+        <option>quadIn</option>
+        <option>quadOut</option>
+        <option>quadInOut</option>
+        <option>cubicIn</option>
+        <option>cubicOut</option>
+        <option>cubicInOut</option>
+        <option>quartIn</option>
+        <option>quartOut</option>
+        <option>quartInOut</option>
+        <option>quintIn</option>
+        <option>quintOut</option>
+        <option>quintInOut</option>
+        <option>sineIn</option>
+        <option>sineOut</option>
+        <option>sineInOut</option>
+        <option>expoIn</option>
+        <option>expoOut</option>
+        <option>expoInOut</option>
+        <option>circIn</option>
+        <option>circOut</option>
+        <option>circInOut</option>
+        <option>backIn</option>
+        <option>backOut</option>
+        <option>backInOut</option>
+        <option>elasticIn</option>
+        <option>elasticOut</option>
+        <option>elasticInOut</option>
+        <option>bounceIn</option>
+        <option>bounceOut</option>
+        <option>bounceInOut</option>
+    </select>
     <button data-dojo-type="dijit.form.Button" id="moveButton">Move the div!</button>
     <div id="moveableNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 

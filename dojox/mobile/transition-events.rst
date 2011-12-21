@@ -32,7 +32,7 @@ Example
   .. js ::
 
     dojo.connect(view1, "onStartView", null, function(){
-	console.log("startView: view="+this);
+    console.log("startView: view="+this);
     });
 
 onBeforeTransitionIn
@@ -58,7 +58,7 @@ Example
 
     dojo.connect(view1, "onBeforeTransitionIn", null,
      function(moveTo, dir, transition, context, method){
-	print("onBeforeTransitionIn");
+         print("onBeforeTransitionIn");
     });
 
 onAfterTransitionIn
@@ -84,7 +84,7 @@ Example
 
     dojo.connect(view1, "onAfterTransitionIn", null,
      function(moveTo, dir, transition, context, method){
-	print("afterTransitionIn");
+        print("afterTransitionIn");
     });
 
 onBeforeTransitionOut
@@ -110,7 +110,7 @@ Example
 
     dojo.connect(view1, "onBeforeTransitionOut", null,
      function(moveTo, dir, transition, context, method){
-	print("onBeforeTransitionOut");
+        print("onBeforeTransitionOut");
     });
 
 onAfterTransitionOut
@@ -136,7 +136,7 @@ Example
 
     dojo.connect(view1, "onAfterTransitionOut", null,
      function(moveTo, dir, transition, context, method){
-	print("afterTransitionOut");
+        print("afterTransitionOut");
     });
 
 Subscribe Transition Events
@@ -162,7 +162,7 @@ Example
   .. js ::
 
     dojo.subscribe("/dojox/mobile/startView", function(view){
-	console.log("startView: view="+view);
+        console.log("startView: view="+view);
     });
 
 /dojox/mobile/beforeTransitionIn
@@ -189,7 +189,7 @@ Example
 
     dojo.subscribe("/dojox/mobile/beforeTransitionIn",
       function(view, moveTo, dir, transition, context, method){
-	print("onBeforeTransitionIn");
+        print("onBeforeTransitionIn");
     });
 
 /dojox/mobile/afterTransitionIn
@@ -216,7 +216,7 @@ Example
 
     dojo.subscribe("/dojox/mobile/afterTransitionIn",
       function(view, moveTo, dir, transition, context, method){
-	print("afterTransitionIn");
+        print("afterTransitionIn");
     });
 
 /dojox/mobile/beforeTransitionOut
@@ -243,7 +243,7 @@ Example
 
     dojo.subscribe("/dojox/mobile/beforeTransitionOut",
       function(view, moveTo, dir, transition, context, method){
-	print("onBeforeTransitionOut");
+         print("onBeforeTransitionOut");
     });
 
 /dojox/mobile/afterTransitionOut
@@ -270,5 +270,5 @@ Example
 
     dojo.subscribe("/dojox/mobile/afterTransitionOut",
       function(view, moveTo, dir, transition, context, method){
-	print("afterTransitionOut");
+         print("afterTransitionOut");
     });

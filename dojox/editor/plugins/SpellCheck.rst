@@ -59,7 +59,7 @@ Finally, declare the Editor to use it:
 .. html ::
 
   <div data-dojo-type="dijit.Editor" id="editor"
-  	data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+      data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
   ...
   </div>
 

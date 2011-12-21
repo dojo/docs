@@ -25,21 +25,21 @@ Code snippet below illustrates most common usage of Islamic calendar.
 .. html ::
  
   <head>
-	  <script type="text/javascript">
-		dojo.require("dojox.date.islamic");
-		dojo.require("dojox.date.islamic.Date");
-		dojo.require("dojox.date islamic.locale");
-	  </script>
-	  <title> Islamic calendar </title>
+      <script type="text/javascript">
+        dojo.require("dojox.date.islamic");
+        dojo.require("dojox.date.islamic.Date");
+        dojo.require("dojox.date islamic.locale");
+      </script>
+      <title> Islamic calendar </title>
   </head>
   <body>
-	<input id="Hijcal"
-	   name="noDOMvalue"
-	   value="2009-03-10"
-	   type="text"
-	   data-dojo-type="dijit.form.DateTextBox"
-	   datePackage = "dojox.date.islamic"
-	   constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}">
+    <input id="Hijcal"
+       name="noDOMvalue"
+       value="2009-03-10"
+       type="text"
+       data-dojo-type="dijit.form.DateTextBox"
+       datePackage = "dojox.date.islamic"
+       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}">
   </body>
 
 Islamic calendar package
@@ -85,12 +85,12 @@ Code snippet below illustrates usage of Islamic calendar in the context of graph
 .. html ::
  
   <head>
-	  <script type="text/javascript">
-		dojo.require("dojox.date.islamic");
-		dojo.require("dojox.date.islamic.Date");
-		dojo.require("dojox.date.islamic.locale");
-	  </script>
-	  <title> Islamic calendar </title>
+      <script type="text/javascript">
+        dojo.require("dojox.date.islamic");
+        dojo.require("dojox.date.islamic.Date");
+        dojo.require("dojox.date.islamic.locale");
+      </script>
+      <title> Islamic calendar </title>
   </head>
   <body>
     <input id="hijcal"

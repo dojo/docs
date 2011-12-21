@@ -68,9 +68,9 @@ Creating a Gallery with a FlickrRestStore
             sort: [{
                     descending: true // Use descending sort order, ascending is default.
                 }
-		    ],
+            ],
             tags: ["superhorse", "redbones", "beachvolleyball", "dublin", "croatia"],
-		    tag_mode: "any" // Match any of the tags
+            tag_mode: "any" // Match any of the tags
          },
          count: 20
   };

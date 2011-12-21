@@ -217,12 +217,12 @@ understanding and debugging how a particular build system invocation is consumin
     ~/dev/dtk/util/buildscripts:./build.sh --v1 someValue --v2 123 --true true --false false --null null --check-args
     running under node.js
     {
-    		false:false,
-    		null:null,
-    		profiles:[],
-    		true:true,
-    		v1:"someValue",
-    		v2:123
+        false:false,
+        null:null,
+        profiles:[],
+        true:true,
+        v1:"someValue",
+        v2:123
     }
 
 This example points out that number, true, false, and null values are not stored as strings but rather are converted to
@@ -259,10 +259,10 @@ If we invoke the build system with the ``profile`` switch indicating that profil
   running under node.js
   processing profile resource /home/rcgill/dev/dtk/util/build/examples/simple1.profile.js
   {profiles:[{
-					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
-  					 someOtherProperty:"someOtherValue",
-					 someProperty:"someValue"
-  				}]}
+     basePath:"/home/rcgill/dev/dtk/util/build/examples",
+       someOtherProperty:"someOtherValue",
+     someProperty:"someValue"
+  }]}
 
 Notice the build system automatically appends the ".profile.js" suffix to the profile argument if that argument does not
 contain a file type. When a profile argument is given with no file type, *and* the profile argument contains no path
@@ -280,7 +280,7 @@ has contents:
 .. js ::
 
     var profile = {
-    	basePath:"."
+        basePath:"."
     };
 
 Which causes the following ``basePath`` initialization:
@@ -303,16 +303,16 @@ has contents:
 .. js ::
 
     function timestamp(){
-    	// this function isn't really necessary...
-    	// just using it to show you can call a function to get a profile property value
-    	var d = new Date();
-    	return d.getFullYear() + '-' + (d.getMonth()+1) + "-" + d.getDate() + "-" +
-    		d.getHours() + ':' + d.getMinutes() + ":" + d.getSeconds();
+        // this function isn't really necessary...
+        // just using it to show you can call a function to get a profile property value
+        var d = new Date();
+        return d.getFullYear() + '-' + (d.getMonth()+1) + "-" + d.getDate() + "-" +
+            d.getHours() + ':' + d.getMinutes() + ":" + d.getSeconds();
     }
     
     var profile = {
-    	basePath:".",
-    	buildTimestamp:timestamp()
+        basePath:".",
+        buildTimestamp:timestamp()
     };
 
 When exercised with the ``check-args`` switch, you should see something like this:
@@ -323,9 +323,9 @@ When exercised with the ``check-args`` switch, you should see something like thi
     running under node.js
     processing profile resource /home/rcgill/dev/dtk/util/build/examples/profile-with-code.profile.js
     {profiles:[{
-    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
-    					 buildTimestamp:"2011-9-29-21:34:2"
-    				}]}
+         basePath:"/home/rcgill/dev/dtk/util/build/examples",
+         buildTimestamp:"2011-9-29-21:34:2"
+    }]}
 
 Configuration Resources
 ------------------------
@@ -339,13 +339,13 @@ allow all or part of an application's build profile to be contained within the a
 .. js ::
 
     var dojoConfig = {
-    	packages:[{
-    		name:"dojo",
-    		location:"../../../dojo"
-    	},{
-    		name:"dijit",
-    		location:"../../../dijit"
-    	}]
+        packages:[{
+            name:"dojo",
+            location:"../../../dojo"
+        },{
+            name:"dijit",
+            location:"../../../dijit"
+        }]
     };
 
 When exercised with the ``check-args`` switch, you should see something like this:
@@ -356,18 +356,18 @@ When exercised with the ``check-args`` switch, you should see something like thi
     running under node.js
     processing dojoConfig resource /home/rcgill/dev/dtk/util/build/examples/dojoConfig.js
     {profiles:[{
-    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
-    					 packages:[
-    					 		{
-    					 				location:"../../../dojo",
-    					 				name:"dojo"
-    					 		},
-    					 		{
-    					 				location:"../../../dijit",
-    					 				name:"dijit"
-    					 		}
-    					 ]
-    				}]}
+         basePath:"/home/rcgill/dev/dtk/util/build/examples",
+         packages:[
+                 {
+                         location:"../../../dojo",
+                         name:"dojo"
+                 },
+                 {
+                         location:"../../../dijit",
+                         name:"dijit"
+                 }
+         ]
+    }]}
 
 Notice that basePath, as automatically provided by the build system, when combined with the package locations, give the
 correct locations of the dojo and dijit packages. Also take note that you must provide the complete filename, including
@@ -379,13 +379,13 @@ global AMD require function. For example, /util/build/examples/require.js has co
 .. js ::
 
     require({
-    	packages:[{
-    		name:"dojo",
-    		location:"../../../dojo"
-    	},{
-    		name:"dijit",
-    		location:"../../../dijit"
-    	}]
+        packages:[{
+            name:"dojo",
+            location:"../../../dojo"
+        },{
+            name:"dijit",
+            location:"../../../dijit"
+        }]
     });
 
 When exercised with the ``check-args`` switch, you should see something like this:
@@ -396,18 +396,18 @@ When exercised with the ``check-args`` switch, you should see something like thi
     running under node.js
     processing require resource /home/rcgill/dev/dtk/util/build/examples/require.js
     {profiles:[{
-    					 basePath:"/home/rcgill/dev/dtk/util/build/examples",
-    					 packages:[
-    					 		{
-    					 				location:"../../../dojo",
-    					 				name:"dojo"
-    					 		},
-    					 		{
-    					 				location:"../../../dijit",
-    					 				name:"dijit"
-    					 		}
-    					 ]
-    				}]}
+         basePath:"/home/rcgill/dev/dtk/util/build/examples",
+         packages:[
+             {
+                     location:"../../../dojo",
+                     name:"dojo"
+             },
+             {
+                     location:"../../../dijit",
+                     name:"dijit"
+             }
+         ]
+    }]}
 
 As usual, if absent or relative, basePath is automatically computed. Just like ``dojoConfig``, you must provide the
 complete filename.
@@ -426,13 +426,13 @@ As each package.json resource is processed, a profile object is manufactured wit
 .. code-block :: text
 
     {
-    	basePath:
-    	packages:[{
-    		name:packageJson.progName || packageJson.name,
-    		packageJson:{
-    			__selfFilename:<path at which the package.Json file resides>
-    			<remaining packageJson properties>
-    	}]
+        basePath:
+        packages:[{
+            name:packageJson.progName || packageJson.name,
+            packageJson:{
+                __selfFilename:<path at which the package.Json file resides>
+                <remaining packageJson properties>
+        }]
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
@@ -526,11 +526,11 @@ might look like this:
 .. js ::
 
     var profile = {
-    	// point basePath to ~/dev
-    	basePath:"..",
+        // point basePath to ~/dev
+        basePath:"..",
     
-    	releaseDir:"./acme-deploy",
-    	trees:[
+        releaseDir:"./acme-deploy",
+        trees:[
             ["./dtk/dojo", "./lib/dojo"]
             ["./dtk/dijit", "./lib/dijit"]
             ["./acme/lib", "./lib/acme"]
@@ -557,23 +557,23 @@ configurations just like the loader. Here is the previous example expressed usin
 .. js ::
 
     var profile = {
-    	// point basePath to ~/dev
-    	basePath:"..",
+        // point basePath to ~/dev
+        basePath:"..",
 
-		// point releaseDir to ~/dev/acme-deploy
-    	releaseDir:"./acme-deploy"
+        // point releaseDir to ~/dev/acme-deploy
+        releaseDir:"./acme-deploy"
  
-		// now a typical loader packages configuration
-		packages:[{
-			name:"dojo",
-			location:"./dtk/dojo"
-		},{
-			name:"dijit",
-			location:"./dtk/dijit"
-		},{
-			name:"acme",
-			location:"./acme/lib"
-		}],
+        // now a typical loader packages configuration
+        packages:[{
+            name:"dojo",
+            location:"./dtk/dojo"
+        },{
+            name:"dijit",
+            location:"./dtk/dijit"
+        },{
+            name:"acme",
+            location:"./acme/lib"
+        }],
     }
 
 The destination location of each package may be given explicitly in the optional, per-package ``destLocation``
@@ -586,19 +586,19 @@ configuration in the resource ~/dev/acme/config.js like this:
 .. js ::
 
     var dojoConfig = {
-		// loader configuration...
-		packages:[{
-			name:dojo,
-			location:"./dtk/dojo"
-		},{
-			name:dijit,
-			location:"./dtk/dijit"
-		},{
-			name:acme,
-			location:"./acme/lib"
-		}],
-		deps:["main"]
-	}
+        // loader configuration...
+        packages:[{
+            name:dojo,
+            location:"./dtk/dojo"
+        },{
+            name:dijit,
+            location:"./dtk/dijit"
+        },{
+            name:acme,
+            location:"./acme/lib"
+        }],
+        deps:["main"]
+    }
 
 This configuration may be used to load the application, maybe something like this in the <head> element in
 ~/dev/acme/main.html.
@@ -607,8 +607,8 @@ This configuration may be used to load the application, maybe something like thi
 
     <head>
         <script src="./config.js"></script>
-    	<script src="../dtk/dojo/dojo.js"></script>
-    	<!-- other stuff...maybe -->
+        <script src="../dtk/dojo/dojo.js"></script>
+        <!-- other stuff...maybe -->
     </head>
 
 Given this, the profile at ~/dev/acme/app.profile.js could be rewritten like this:
@@ -616,9 +616,9 @@ Given this, the profile at ~/dev/acme/app.profile.js could be rewritten like thi
 .. js ::
 
     var profile = {
-    	// point basePath to ~/dev
-    	basePath:"..",
-    	releaseDir:"./acme-deploy",
+        // point basePath to ~/dev
+        basePath:"..",
+        releaseDir:"./acme-deploy",
     }
 
 Finally, both the config.js and profile must be provided to the build system to get the desired effect
@@ -635,28 +635,28 @@ it does not define, you can put profile properties directly in the loader config
 
 .. js ::
 
-	var dojoConfig = {
-		// loader configuration...
-		packages:[{
-			name:dojo,
-			location:"./dtk/dojo"
-		},{
-			name:dijit,
-			location:"./dtk/dijit"
-		},{
-			name:acme,
-			location:"./acme/lib"
-		}],
-		deps:["main"],
+    var dojoConfig = {
+        // loader configuration...
+        packages:[{
+            name:dojo,
+            location:"./dtk/dojo"
+        },{
+            name:dijit,
+            location:"./dtk/dijit"
+        },{
+            name:acme,
+            location:"./acme/lib"
+        }],
+        deps:["main"],
 
-		// now for some profile properties...
+        // now for some profile properties...
 
-		// point basePath to ~/dev
-		basePath:"..",
+        // point basePath to ~/dev
+        basePath:"..",
 
-		// point releaseDir to ~/dev/acme-deploy
-		releaseDir:"./acme-deploy"
-	}
+        // point releaseDir to ~/dev/acme-deploy
+        releaseDir:"./acme-deploy"
+    }
 
 This eliminates the need for the profile resource completely.
 
@@ -673,29 +673,29 @@ For example, the previous loader configuration could be rewritten as follows:
 
 .. js ::
 
-	var dojoConfig = {
-		// loader configuration...
-		packages:[{
-			name:dojo,
-			location:"./dtk/dojo"
-		},{
-			name:dijit,
-			location:"./dtk/dijit"
-		},{
-			name:acme,
-			location:"./acme/lib"
-		}],
-		deps:["main"],
+    var dojoConfig = {
+        // loader configuration...
+        packages:[{
+            name:dojo,
+            location:"./dtk/dojo"
+        },{
+            name:dijit,
+            location:"./dtk/dijit"
+        },{
+            name:acme,
+            location:"./acme/lib"
+        }],
+        deps:["main"],
 
-		// now for some profile properties...
-		build:{
-			// point basePath to ~/dev
-    			basePath:"..",
+        // now for some profile properties...
+        build:{
+            // point basePath to ~/dev
+                basePath:"..",
 
-			// point releaseDir to ~/dev/acme-deploy
-			releaseDir:"./acme-deploy"
-		}
-	}
+            // point releaseDir to ~/dev/acme-deploy
+            releaseDir:"./acme-deploy"
+        }
+    }
 
 And used to execute a build like this:
 

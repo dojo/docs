@@ -48,12 +48,12 @@ Declarative example
 
   .. js ::
              
-	     dojo.require("dojox.image.FlickrBadge");
+     dojo.require("dojox.image.FlickrBadge");
 
   .. html ::
 
-   <div data-dojo-type="dojox.image.FlickrBadge" data-dojo-props="rows:8, cols:3, username:'dylans',
-	tags:'dojotoolkit,italy'"></div>
+     <div data-dojo-type="dojox.image.FlickrBadge" data-dojo-props="rows:8, cols:3, username:'dylans',
+        tags:'dojotoolkit,italy'"></div>
 
   .. css ::
 

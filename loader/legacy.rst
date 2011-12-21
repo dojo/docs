@@ -151,7 +151,7 @@ The v1.6- build system rewrites the module like this:
     // [2] the require(s) included in this module
     ["your.module"],
 
-	// [3] the module's code
+    // [3] the module's code
     function(){
       dojo.provide("my.module");
       dojo.require("your.module");
@@ -197,7 +197,7 @@ is dojox.gfx in v1.6-:
   dojo.require("dojox.gfx.matrix");
   dojo.require("dojox.gfx._base");
   dojo.loadInit(function(){
-  	// code that sets dojox.gfx.renderer
+      // code that sets dojox.gfx.renderer
   });
   
   // include a renderer conditionally
@@ -269,7 +269,7 @@ could be rewritten by the build system to relocate it into acmeUtils:
     // [3] the module's code
     function(dojo){
       // the dojo/behavior module, completely unedited
-	  dojo.behavior = new function(){
+      dojo.behavior = new function(){
         //...
       };
     }
@@ -525,9 +525,9 @@ text to the right points to a module that was constructed in Step 2 the looks li
       // particular instance of dojo referenced by the reference module
 
     def:
-	  function(/* names as described above */){
+      function(/* names as described above */){
         // aggregated loadInit applications concatenated with the aggregated other applications
-	  }
+      }
   });
 
 When the dojo/loadInit is given an identifier (the text to the right of the !), it retrieves (via AMD require) that
@@ -579,7 +579,7 @@ assume a scope map of [["dojo", "myDojo"]] and the legacy module "my.module" loo
   dojo.provide("my.module");
   dojo.require("your.module");
   dojo.loadInit(function(){
-	dojo.getObject("my.module", true);
+    dojo.getObject("my.module", true);
     if(document.someMagicSomething){
       my.module.switch = 1;
     }else{
@@ -617,7 +617,7 @@ this:
     dojo.provide("my.module");
     dojo.require("your.module");
     0 && dojo.loadInit(function(){
-  	dojo.getObject("my.module", true);
+      dojo.getObject("my.module", true);
       if(document.someMagicSomthing){
         my.module.switch = 1;
       }else{

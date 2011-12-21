@@ -55,16 +55,16 @@ Programmatic example
 
         dojo.require("dojox.form.ListInput");
         dojo.ready(function(){
-                var sel = dojo.byId('dynamic');
-                var n = 0;
-				var value = "";
-                for(var i in dijit){
-                        value += i + ",";
-                }
-                new dojox.form.ListInput({
-					name: 'dynamic',
-					value: "Apples,Oranges,Pears"
-				}, sel);
+            var sel = dojo.byId('dynamic');
+            var n = 0;
+            var value = "";
+            for(var i in dijit){
+                    value += i + ",";
+            }
+            new dojox.form.ListInput({
+                name: 'dynamic',
+                value: "Apples,Oranges,Pears"
+            }, sel);
         });
 
   .. html ::

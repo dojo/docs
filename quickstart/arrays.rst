@@ -164,34 +164,34 @@ To break the forEach-Loop you should use dojo.some
 
   .. js ::
 
- 	dojo.require("dijit.form.Button");
+    dojo.require("dijit.form.Button");
 
-	function arrayLoopTest(){
-		var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-		var count;
-		
-		// let's iterate ALL entries of myArray
-		count = 0;
-		dojo.forEach(myArray, function(entry){
-			count++;
-		});
-		
-		alert("iterated "+count+" entries (dojo.forEach)"); // will show "iterated 10 entries"
-		
-		// let's only iterate the first 4 entries of myArray
-		count = 0;
-		dojo.some(myArray, function(entry){
+    function arrayLoopTest(){
+        var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var count;
 
-			if(count >= 4)
-			{
-				return false;
-			}
-			
-			count++;
-		});
-		
-		alert("iterated "+count+" entries (dojo.some)"); // will show "iterated 4 entries"
-	}
+        // let's iterate ALL entries of myArray
+        count = 0;
+        dojo.forEach(myArray, function(entry){
+            count++;
+        });
+
+        alert("iterated "+count+" entries (dojo.forEach)"); // will show "iterated 10 entries"
+
+        // let's only iterate the first 4 entries of myArray
+        count = 0;
+        dojo.some(myArray, function(entry){
+
+            if(count >= 4)
+            {
+                return false;
+            }
+
+            count++;
+        });
+
+        alert("iterated "+count+" entries (dojo.some)"); // will show "iterated 4 entries"
+    }
 
   .. html ::
 

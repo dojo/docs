@@ -51,11 +51,11 @@ destroys it.
 
   <button data-dojo-type="dijit.form.Button" id="foobd" disabled="disabled">Destroy It
     <script type="dojo/method" data-dojo-event="onClick">
-	this.setAttribute("disabled", true);
-	dijit.byId("foobar").destroy();
-	console.log('layout changed:');
-	dijit.byId("after1")._adjustScale();
-	dijit.byId("after2")._adjustScale();
+        this.setAttribute("disabled", true);
+        dijit.byId("foobar").destroy();
+        console.log('layout changed:');
+        dijit.byId("after1")._adjustScale();
+        dijit.byId("after2")._adjustScale();
     </script>
   </button>
 
@@ -79,7 +79,7 @@ The code fragment creates a dojox.image.Magnifier and associates it with the src
 
   <img id="testImage5" data-dojo-type="dojox.image.Magnifier" src="images/spanke.jpg"
     style="width:200px; height:130px;" scale="8.90" />
-		
+
     
 
 See also

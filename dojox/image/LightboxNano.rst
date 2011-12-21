@@ -92,17 +92,17 @@ Create the LightboxNano on an <a> element:
 
 .. js ::
 
-	  dojo.require("dojox.image.LightboxNano");
+      dojo.require("dojox.image.LightboxNano");
 
-	  dojo.ready(function(){
-		  new dojox.image.LightboxNano({}, "myLink");
-	  });
+      dojo.ready(function(){
+          new dojox.image.LightboxNano({}, "myLink");
+      });
 
 .. html ::
 
-	  <a id="myLink" href="/path/to/large/image.jpg">
-		  <img src="/path/to/small/image.jpg">
-	  </a>
+      <a id="myLink" href="/path/to/large/image.jpg">
+          <img src="/path/to/small/image.jpg">
+      </a>
 
 Declarative example
 -------------------
@@ -111,29 +111,29 @@ Standard way to declaratively create the LightboxNano
 
 .. js ::
 
-	 dojo.require("dojox.image.LightboxNano");
-	 dojo.require("dojo.parser");
+     dojo.require("dojox.image.LightboxNano");
+     dojo.require("dojo.parser");
 
 .. html ::
 
-	 <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
-		 <img src="/path/to/small/image.jpg">
-	 </a>
+     <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
+         <img src="/path/to/small/image.jpg">
+     </a>
 
 Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
 .. js ::
 
-	 dojo.require("dojox.image.LightboxNano");
-	 dojo.require("dojo.parser");
+     dojo.require("dojox.image.LightboxNano");
+     dojo.require("dojo.parser");
 
 .. html ::
 
-	 <a data-dojo-type="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
-		 <img src="/path/to/small/image.jpg">
-	 </a>
+     <a data-dojo-type="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
+         <img src="/path/to/small/image.jpg">
+     </a>
 
-	 <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
+     <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
 
 File Sizes
 ==========

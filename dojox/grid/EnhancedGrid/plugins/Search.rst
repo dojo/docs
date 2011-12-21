@@ -76,7 +76,7 @@ Usage
 This plugin exposes one method to the grid:
 
 searchRow(searchArg, onSearched):
-	Search the store of the grid for a regular expression, a wildcard pattern string, or a set of them for different columns.
+    Search the store of the grid for a regular expression, a wildcard pattern string, or a set of them for different columns.
 
 ==============  ==========================  ==========================  ========================================================================================================================
 Arguments       Type                        Optional/Mandatory          Description

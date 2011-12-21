@@ -40,8 +40,8 @@ Example 1:  Wipe out a dom node
       dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
-			dojo.style("basicWipeNode", "height", "");
-			dojo.style("basicWipeNode", "display", "block");
+            dojo.style("basicWipeNode", "height", "");
+            dojo.style("basicWipeNode", "display", "block");
             var wipeArgs = {
               node: "basicWipeNode"
             };
@@ -70,8 +70,8 @@ Example 2:  Wipe out a dom node with a custom duration
       dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
-			 dojo.style("basicWipeNode1", "height", "");
-			 dojo.style("basicWipeNode1", "display", "block");
+             dojo.style("basicWipeNode1", "height", "");
+             dojo.style("basicWipeNode1", "display", "block");
             var wipeArgs = {
               node: "basicWipeNode1",
               duration: 5000
@@ -103,8 +103,8 @@ Example 3:  Wipe out a dom node with an easing function
       dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
-			 dojo.style("basicWipeNode2", "height", "");
-			 dojo.style("basicWipeNode2", "display", "block");
+             dojo.style("basicWipeNode2", "height", "");
+             dojo.style("basicWipeNode2", "display", "block");
             var wipeArgs = {
               node: "basicWipeNode2",
               duration: 5000,

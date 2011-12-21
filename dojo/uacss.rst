@@ -60,7 +60,7 @@ Simply require the module:
 
   // Dojo 1.7(AMD)
   require(["dojo/uacss"], function(){
-	// write your code here
+      // write your code here
   });
   
 .. js ::

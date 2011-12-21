@@ -25,119 +25,119 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 
   .. js ::
 
-		dojo.require("dojo.data.ItemFileWriteStore");
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.Selector");
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.Selector");
 
-		var data = {
-			identifier: 'id',
-			label: 'id',
-			items: []
-		};
-		var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-		var data_list = [];
-		var i, row, j;
-		for(i = 0; i < 100; ++i){
-			row = {};
-			for(j = 0; j < cols.length; ++j){
-				row[cols[j]] = (i + 1) + cols[j];
-			}
-			data_list.push(row);
-		}
-		var len = data_list.length;
-		for(i=0; i < len ; ++i){
-			data.items.push(dojo.mixin({ 'id': i+1 }, data_list[i]));
-		}
+        var data = {
+            identifier: 'id',
+            label: 'id',
+            items: []
+        };
+        var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        var data_list = [];
+        var i, row, j;
+        for(i = 0; i < 100; ++i){
+            row = {};
+            for(j = 0; j < cols.length; ++j){
+                row[cols[j]] = (i + 1) + cols[j];
+            }
+            data_list.push(row);
+        }
+        var len = data_list.length;
+        for(i=0; i < len ; ++i){
+            data.items.push(dojo.mixin({ 'id': i+1 }, data_list[i]));
+        }
 
-		var layout = [{
-			defaultCell: {width: 3},
-			rows: [
-				{field: "A"},
-				{field: "B"},
-				{field: "C"},
-				{field: "D"},
-				{field: "E"},
-				{field: "F"},
-				{field: "G", hidden: true},
-				{field: "H", hidden: true},
-				{field: "I", hidden: true},
-				{field: "J"},
-				{field: "K"},
-				{field: "L"},
-				{field: "M"},
-				{field: "N"},
-				{field: "O"},
-				{field: "P"},
-				{field: "Q"},
-				{field: "R"},
-				{field: "S"},
-				{field: "T"},
-				{field: "U"},
-				{field: "V"},
-				{field: "W"},
-				{field: "X"},
-				{field: "Y"},
-				{field: "Z"}
-			]
-		}];
-		function setSelectConfig(type, mode, selected){
-			if(selected){
-				var config = {};
-				config[type] = mode;
-				dijit.byId('grid').setupSelectorConfig(config);
-			}
-		};
+        var layout = [{
+            defaultCell: {width: 3},
+            rows: [
+                {field: "A"},
+                {field: "B"},
+                {field: "C"},
+                {field: "D"},
+                {field: "E"},
+                {field: "F"},
+                {field: "G", hidden: true},
+                {field: "H", hidden: true},
+                {field: "I", hidden: true},
+                {field: "J"},
+                {field: "K"},
+                {field: "L"},
+                {field: "M"},
+                {field: "N"},
+                {field: "O"},
+                {field: "P"},
+                {field: "Q"},
+                {field: "R"},
+                {field: "S"},
+                {field: "T"},
+                {field: "U"},
+                {field: "V"},
+                {field: "W"},
+                {field: "X"},
+                {field: "Y"},
+                {field: "Z"}
+            ]
+        }];
+        function setSelectConfig(type, mode, selected){
+            if(selected){
+                var config = {};
+                config[type] = mode;
+                dijit.byId('grid').setupSelectorConfig(config);
+            }
+        };
 
-		dojo.ready(function(){
-			var store = new dojo.data.ItemFileWriteStore({data: data});
+        dojo.ready(function(){
+            var store = new dojo.data.ItemFileWriteStore({data: data});
 
-			var grid = new dojox.grid.EnhancedGrid({
-				id: "grid",
-				store: store,
-				structure: layout,
-				rowSelector: "20px",
-				canSort: function(){return false;},
-				plugins: {
-					selector: true
-				}
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
+            var grid = new dojox.grid.EnhancedGrid({
+                id: "grid",
+                store: store,
+                structure: layout,
+                rowSelector: "20px",
+                canSort: function(){return false;},
+                plugins: {
+                    selector: true
+                }
+            });
+            grid.placeAt('gridContainer');
+            grid.startup();
+        });
 
   .. html ::
 
-	<div id="gridContainer"></div>
-	<table class="cfgtable" border="1">
-		<thead>
-			<tr>
-				<th>Select</th>
-				<th>Disabled</th>
-				<th>Single</th>
-				<th>Multi</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Row</td>
-				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'disabled', this.checked)"/></td>
-				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'single', this.checked)"/></td>
-				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'multi', this.checked)" checked="checked"/></td>
-			</tr>
-			<tr>
-				<td>Column</td>
-				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'disabled', this.checked)"/></td>
-				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'single', this.checked)"/></td>
-				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'multi', this.checked)" checked="checked"/></td>
-			</tr>
-			<tr>
-				<td>Cell</td>
-				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'disabled', this.checked)"/></td>
-				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'single', this.checked)"/></td>
-				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'multi', this.checked)" checked="checked"/></td>
-			</tr>
-		</tbody>
-	</table>
+    <div id="gridContainer"></div>
+    <table class="cfgtable" border="1">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Disabled</th>
+                <th>Single</th>
+                <th>Multi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row</td>
+                <td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'disabled', this.checked)"/></td>
+                <td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'single', this.checked)"/></td>
+                <td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'multi', this.checked)" checked="checked"/></td>
+            </tr>
+            <tr>
+                <td>Column</td>
+                <td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'disabled', this.checked)"/></td>
+                <td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'single', this.checked)"/></td>
+                <td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'multi', this.checked)" checked="checked"/></td>
+            </tr>
+            <tr>
+                <td>Cell</td>
+                <td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'disabled', this.checked)"/></td>
+                <td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'single', this.checked)"/></td>
+                <td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'multi', this.checked)" checked="checked"/></td>
+            </tr>
+        </tbody>
+    </table>
 
   .. css ::
 
@@ -146,16 +146,16 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
-	
-	.cfgtable th,
-	.cfgtable td{
-		font-weight: bolder;
-		padding: 3px;
-	}
-	#gridContainer {
-		width: 600px;
-		height: 400px;
-	}
+
+    .cfgtable th,
+    .cfgtable td{
+        font-weight: bolder;
+        padding: 3px;
+    }
+    #gridContainer {
+        width: 600px;
+        height: 400px;
+    }
 
 
 Configuration
@@ -258,19 +258,19 @@ Events
 This plugin provides several events to the grid, as the following table shows:
 
 onStartSelect(type, startPoint):
-	When some of the grid contents are starting to be selected. A typical time point is when the user presses down the mouse selection button.
+    When some of the grid contents are starting to be selected. A typical time point is when the user presses down the mouse selection button.
 
 onEndSelect(type, startPoint, endPoint):
-	When the selection completes. A typical time point is when the user releases the mouse selection button.
+    When the selection completes. A typical time point is when the user releases the mouse selection button.
 
 onStartDeselect(type, startPoint):
-	When the user start to deselect some grid contents. i.e. removing some parts of the current selection.
+    When the user start to deselect some grid contents. i.e. removing some parts of the current selection.
 
 onEndDeselect(type, startPoint, endPoint):
-	When the user completes the deselection.
+    When the user completes the deselection.
 
 onSelectCleared(type):
-	When all the selection status are cleared.
+    When all the selection status are cleared.
 
 ============ ==================  ===========================================================================
 Arguments    Type                Description
@@ -288,42 +288,42 @@ Arguments "start point" and "end point" can be one of __SelectColItem, __SelectR
 
   dojo.declare("__SelectItem", null,{
     // summary:
-    //		An abstract representation of an item.
+    //        An abstract representation of an item.
   });
   dojo.declare("__SelectCellItem", __SelectItem,{
     // summary:
-    //		An abstract representation of a cell.
+    //        An abstract representation of a cell.
 
     // row: Integer
-    //		Row index of this cell
+    //        Row index of this cell
     row: 0,
 
     // col: Integer
-    //		Column index of this cell
+    //        Column index of this cell
     col: 0
   });
   dojo.declare("__SelectRowItem", __SelectItem,{
     // summary:
-    //		An abstract representation of a row.
+    //        An abstract representation of a row.
 
     // row: Integer
-    //		Row index of this row
+    //        Row index of this row
     row: 0,
 
     // except: Integer[]
-    //		An array of column indexes of all the unselected cells in this row.
+    //        An array of column indexes of all the unselected cells in this row.
     except: []
   });
   dojo.declare("__SelectColItem", __SelectItem,{
     // summary:
-    //		An abstract representation of a column.
+    //        An abstract representation of a column.
 
     // col: Integer
-    //		Column index of this column
+    //        Column index of this column
     col: 0,
 
     // except: Integer[]
-    //		An array of row indexes of all the unselected cells in this column.
+    //        An array of row indexes of all the unselected cells in this column.
     except: []
   });
   
@@ -345,7 +345,7 @@ Public Methods
 This Plugin exposes the following methods to grid widget:
 
 setupConfig(config):
-	Set selection mode for row/col/cell.
+    Set selection mode for row/col/cell.
 
 ==============  ==================  ==========================  ========================================
 Arguments       Type                Optional/Mandatory          Description
@@ -355,13 +355,13 @@ config          Object              Mandatory                   Same as the plug
 
 
 isSelected(type, rowIndex, colIndex):
-	Check whether an item (a cell, a column or a row) is selected.
+    Check whether an item (a cell, a column or a row) is selected.
 
 select(type, rowIndex, colIndex):
-	Select an item (a cell, a column or a row).
+    Select an item (a cell, a column or a row).
 
 deselect(type, rowIndex, colIndex):
-	Deselect an item (a cell, a column or a row).
+    Deselect an item (a cell, a column or a row).
 
 ==============  ==================  ==============================  ===============================================================================================
 Arguments       Type                Optional/Mandatory              Description
@@ -374,7 +374,7 @@ colIndex        Integer             Optional(default to undefined)  Only valid w
 ==============  ==================  ==============================  ===============================================================================================
 
 selectRange(type, start, end):
-	Select a continuous range (a block of cells, a set of continuous columns or rows)
+    Select a continuous range (a block of cells, a set of continuous columns or rows)
 
 ==============  =============================  ==============================  ==============================================================================
 Arguments       Type                           Optional/Mandatory              Description
@@ -387,7 +387,7 @@ end             Integer | __SelectCellItem     Mandatory                       I
 ==============  =============================  ==============================  ==============================================================================
 
 clear(type):
-	Clear all selections of given type.
+    Clear all selections of given type.
 
 ==============  ==================  ==============================  =================================================
 Arguments       Type                Optional/Mandatory              Description
@@ -396,7 +396,7 @@ type            String              Optional(default to undefined)  "row" or "co
 ==============  ==================  ==============================  =================================================
 
 getSelected(type, includeExceptions):
-	Get an array of selected items. (__SelectItem[])
+    Get an array of selected items. (__SelectItem[])
 
 ==================  ==================  ==============================  ==================================================================================
 Arguments           Type                Optional/Mandatory              Description

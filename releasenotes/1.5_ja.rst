@@ -111,7 +111,7 @@ Claroの.dijitTreeIconクラスはwidthとheightを指定していません。�
 .. css ::
 
     .dijitTab .tabLabel {
-	min-height: 12px;
+        min-height: 12px;
     }
 
 あるいは、アイコンを持たないタブに、サイズが1x16のブランクアイコンを指定します。
@@ -131,17 +131,17 @@ Dialogウィジェットは、ダイアログの下側にOKやキャンセルと
 
 .. html ::
 
-	<div dojoType="dijit.Dialog" id="myDialog">
-		<div class="dijitDialogPaneContentArea">
-			...
-		</div>
+    <div dojoType="dijit.Dialog" id="myDialog">
+        <div class="dijitDialogPaneContentArea">
+            ...
+        </div>
 
-		<div class="dijitDialogPaneActionBar">
-			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
-			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
-					id="cancel">Cancel</button>
-		</div>
-	</div>
+        <div class="dijitDialogPaneActionBar">
+            <button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
+            <button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
+                    id="cancel">Cancel</button>
+        </div>
+    </div>
 
 
 入力ウィジェット
@@ -183,16 +183,16 @@ Bidiの強化
 .. html ::
 
 
-	<div dir="ltr">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-	</div>
-	<div dir="rtl">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-	</div>
+    <div dir="ltr">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+    </div>
+    <div dir="rtl">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+    </div>
 
 
 

@@ -33,29 +33,29 @@ Please note indirect selection is completely dependent on the selection mode of 
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
     
       dojo.ready(function(){
-		  /*set up data store*/
-		  var data = {
-			identifier: 'id',
-			items: []
-		  };
-		  var data_list = [
-			{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-			{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-			{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-		  ];
-		  var rows = 60;
-		  for(var i=0, l=data_list.length; i<rows; i++){
-			data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-		  }
-		  var store = new dojo.data.ItemFileWriteStore({data: data});
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
 
-		  /*set up layout*/
-		  var layout = [[
-			{name: 'Column 1', field: 'id'},
-			{name: 'Column 2', field: 'col2'},
-			{name: 'Column 3', field: 'col3', width: "230px"},
-			{name: 'Column 4', field: 'col4'}
-		  ]];
+          /*set up layout*/
+          var layout = [[
+            {name: 'Column 1', field: 'id'},
+            {name: 'Column 2', field: 'col2'},
+            {name: 'Column 3', field: 'col3', width: "230px"},
+            {name: 'Column 4', field: 'col4'}
+          ]];
 
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
@@ -79,16 +79,16 @@ Please note indirect selection is completely dependent on the selection mode of 
 
   .. css ::
 
-	@import "{{baseUrl}}dojo/resources/dojo.css";
-	@import "{{baseUrl}}dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-	/*Grid need a explicit width/height by default*/
-	#grid {
-		width: 43em;
-		height: 20em;
-	}
+    /*Grid need a explicit width/height by default*/
+    #grid {
+        width: 43em;
+        height: 20em;
+    }
 
 Usage
 -----
@@ -173,8 +173,8 @@ Keyboard Support
 +===========================+================================================================================+
 | UP/Down arrow keys        | Navigate keyboard focus across cells that contain radio buttons or check boxes |
 +---------------------------+--------------------------------------------------------------------------------+
-| SPACE key	            | -	Radio button - select a row                                                  |
-|                           | -	Check box - select or de-select a row.                                       |
+| SPACE key                 | - Radio button - select a row                                                  |
+|                           | - Check box - select or de-select a row.                                       |
 +---------------------------+--------------------------------------------------------------------------------+
 | SHIFT + Click             | Select or de-select a range of rows                                            |
 | SHIFT + SPACE key         |                                                                                |

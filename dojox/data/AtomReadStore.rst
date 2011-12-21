@@ -97,10 +97,10 @@ Example Usage of using AtomReadStore with a DataGrid
 
       function hrefFormatter(value){
         return "<a href=\"" + value["href"] + "\" target=\"_blank\">Link</a>";
-      };
-			function textFormatter(value){
-				return value["text"];
-			}
+      }
+      function textFormatter(value){
+            return value["text"];
+      }
 
       var layoutResults = [
         [

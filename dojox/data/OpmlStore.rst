@@ -58,7 +58,7 @@ The following example shows an Opml data source:
       <outline text="North America" type="continent">
         <outline text="Mexico" type="country" population="108 million" area="1,972,550 sq km">
           <outline text="Mexico City" type="city" population="19 million" timezone="-6 UTC"/>
-	  <outline text="Guadalajara" type="city" population="4 million" timezone="-6 UTC"/>
+      <outline text="Guadalajara" type="city" population="4 million" timezone="-6 UTC"/>
         </outline>
         <outline text="Canada" type="country" population="33 million" area="9,984,670 sq km">
           <outline text="Ottawa" type="city" population="0.9 million" timezone="-5 UTC"/>

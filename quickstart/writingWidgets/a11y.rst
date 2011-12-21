@@ -34,7 +34,7 @@ The ondijitclick event can also be specified in the template via the data-dojo-a
 .. js ::
 
   <span class="dijit dijitReset dijitLeft dijitInline"
-	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
+    data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
 
 Trapping Key Events
 -------------------

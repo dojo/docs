@@ -48,5 +48,5 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-	@import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";
-	@import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";
+    @import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";
+    @import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";

@@ -112,7 +112,7 @@ Also, in TabContainer, tabs without icons will be <16px tall, which will cause a
 .. css ::
 
     .dijitTab .tabLabel {
-	min-height: 12px;
+        min-height: 12px;
     }
 
 or alternately specify a 1x16 blank icon for all of your "non-icon" tabs.
@@ -131,17 +131,17 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 
 .. html ::
 
-	<div dojoType="dijit.Dialog" id="myDialog">
-		<div class="dijitDialogPaneContentArea">
-			...
-		</div>
+    <div dojoType="dijit.Dialog" id="myDialog">
+        <div class="dijitDialogPaneContentArea">
+            ...
+        </div>
 
-		<div class="dijitDialogPaneActionBar">
-			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
-			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
-					id="cancel">Cancel</button>
-		</div>
-	</div>
+        <div class="dijitDialogPaneActionBar">
+            <button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
+            <button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
+                    id="cancel">Cancel</button>
+        </div>
+    </div>
 
 
 Input Widgets
@@ -183,16 +183,16 @@ Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr
 .. html ::
 
 
-	<div dir="ltr">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-	</div>
-	<div dir="rtl">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-		<input dojoType="dijit.TextBox">
-	</div>
+    <div dir="ltr">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+    </div>
+    <div dir="rtl">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+        <input dojoType="dijit.TextBox">
+    </div>
 
 
 

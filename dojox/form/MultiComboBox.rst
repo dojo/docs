@@ -23,8 +23,8 @@ The MultiComboBox behaves the same as a plain ComboBox. Pass it a store and sear
  
     var memberTagStore = new dojo.data.ItemFileReadStore({ url:"countries.json" });
     var widget = new dojox.form.MultiComboBox({
-	   store:memberTagStore,
-	   searchAttr:"tag"
+       store:memberTagStore,
+       searchAttr:"tag"
     }, "frogin3");
     widget.startup();
 

@@ -45,12 +45,12 @@ Step 2: Declare gantt chart.
 .. js ::
   
   var ganttChart = new dojox.gantt.GanttChart({
-    readOnly: false,			// optional: determine if gantt chart is editable
-    dataFilePath: "gantt_default.json",	// optional: json data file path for load and save, default is "gantt_default.json"
-    height: 400,			// optional: chart height in pixel, default is 400px
-    width: 1200,			// optional: chart width in pixel, default is 600px
-    withResource: true			// optional: display the resource chart or not
-  }, "gantt"); 				//"gantt" is the node container id of gantt chart widget
+    readOnly: false,        // optional: determine if gantt chart is editable
+    dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
+    height: 400,            // optional: chart height in pixel, default is 400px
+    width: 1200,            // optional: chart width in pixel, default is 600px
+    withResource: true      // optional: display the resource chart or not
+  }, "gantt");              //"gantt" is the node container id of gantt chart widget
 
 Step 3: Add project with tasks.
 

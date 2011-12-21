@@ -44,9 +44,9 @@ In the profile for your build, specify the following for your dojo layer (note t
  
  layers: [
    {
-	name: "dojo.js",
-	customBase: true,
-	dependencies: [
+        name: "dojo.js",
+        customBase: true,
+        dependencies: [
         ]
    },
 

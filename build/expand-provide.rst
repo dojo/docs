@@ -35,14 +35,14 @@ Or mix the option into your profile:
 
 .. js ::
   
-	dependencies = {
-		// expand dojo.provide calls
-		expandProvide: true,
+    dependencies = {
+        // expand dojo.provide calls
+        expandProvide: true,
 
-		// rest of profile:
-		layers: [{ /* ... */ }],
-		prefixes: [
-			[ "dijit", "../dijit" ],
-			[ "dojox", "../dojox" ]
-		]
-	}
+        // rest of profile:
+        layers: [{ /* ... */ }],
+        prefixes: [
+            [ "dijit", "../dijit" ],
+            [ "dojox", "../dojox" ]
+        ]
+    }

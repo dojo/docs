@@ -6,7 +6,7 @@ Implementing a RESTful Service Server-Side
 :Authors: Kitson Kelly
 
 .. contents ::
-	:depth: 3
+    :depth: 3
 
 You find yourself banging your head against the wall, because you hear all the "cool kids" are using REST and you see there is quite an extensive implementation of RESTful clients in dojo, and your boss says "I want some of that".  Well, hopefully this tutorial can help you out.
 
@@ -31,13 +31,13 @@ For example, let's assume we have a server that is providing data about users.  
 
 .. html ::
 
-	http://example.com/users/
+    http://example.com/users/
 
 Now if we wanted to refer to just a specific user, we would add the specific resource identifier to the URI.  For example:
 
 .. html ::
 
-	http://example.com/users/1/
+    http://example.com/users/1/
 
 This would refer to the user who has an identity of ``1``.
 
@@ -45,19 +45,19 @@ Building on the resource identification, all the Create, Read, Update and Delete
 
 .. html ::
 
-	http://example.com/users/1/groups/
+    http://example.com/users/1/groups/
 
 And provide all the possible groups via the URI:
 
 .. html ::
 
-	http://example.com/groups/
+    http://example.com/groups/
 
 And even provide all the users that are part of a specific group:
 
 .. html ::
 
-	http://example.com/groups/1/users/
+    http://example.com/groups/1/users/
 
 REST provides a fair amount of flexibility up to the provider to determine what and how they provide.
 
@@ -75,23 +75,23 @@ The HTTP verb ``GET`` is used to list or retrieve resources.  For collections, t
 
 .. html ::
 
-	GET http://example.com/users/
+    GET http://example.com/users/
 
 Would retrieve something like:
 
 .. js ::
 
-	[
+    [
           {"id": 1, "userName": "jsmith", "firstName": "John", "lastName": "Smith"},
           {"id": 2, "userName": "jdoe", "firstName": "Jane", "lastName": "Doe"},
           {"id": 3, "userName": "bill", "firstName": "Bill", "lastName": "Keese"}
-        ]
+    ]
 
 While requesting a specific resource like:
 
 .. html ::
 
-	GET http://example.com/users/1/
+    GET http://example.com/users/1/
 
 Would return just the object:
 
@@ -107,7 +107,7 @@ The HTTP verb ``POST`` is used to create new resources.  Again, REST does not sp
 
 .. html ::
 
-	Location: http://www.example.com/users/4/
+    Location: http://www.example.com/users/4/
 
 PUT
 ~~~
@@ -140,9 +140,9 @@ An example of programmatically creating a full featured store would be:
 
 .. js ::
 
-	var userMemoryStore = new dojo.store.Memory();
-	var userJsonRestStore = new dojo.store.JsonRest({target: "/users/"});
-	var userStore = new dojo.store.Cache(userJsonRestStore, userMemoryStore);
+    var userMemoryStore = new dojo.store.Memory();
+    var userJsonRestStore = new dojo.store.JsonRest({target: "/users/"});
+    var userStore = new dojo.store.Cache(userJsonRestStore, userMemoryStore);
 
 More details can be found in their respective Dojo documentation pages.
 
@@ -155,17 +155,17 @@ An example programmatic declaration would be:
 
 .. js ::
 
-	var userDataStore = new dojox.data.JsonRestStore({
-	  target: "/users/",
-	  idAttribute: "id"
-	});
+    var userDataStore = new dojox.data.JsonRestStore({
+      target: "/users/",
+      idAttribute: "id"
+    });
 
 An example of declarative would be:
 
 .. html ::
 
-	<div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore"
-	    data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
+    <div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore"
+        data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
 
 *Note* it is necessary to use ``data-dojo-id`` with non-Widget (dijit) declarative objects, like DataStores in order to make available a JavaScript variable that can be passed to other declarative objects.  Also it should be noted that these objects do not get destroyed if their containing widget is destroyed and the variable is declared in a global scope.
 
@@ -184,16 +184,16 @@ Widgets can specify sorting and those are passed as part of the query string of 
 
 .. js ::
 
-	{sort: [
-	  {attribute: "id"},
-	  {attribute: "userName", descending: true}
-	]}
+    {sort: [
+      {attribute: "id"},
+      {attribute: "userName", descending: true}
+    ]}
 
 Would translate into the following:
 
 .. html ::
 
-	GET http://example.com/users/?sort(+id,-userName)
+    GET http://example.com/users/?sort(+id,-userName)
 
 Ranges
 ~~~~~~
@@ -204,16 +204,16 @@ For example, the following:
 
 .. js ::
 
-	{
-	  start: 5,
-	  count: 10
-	}
+    {
+      start: 5,
+      count: 10
+    }
 
 Would result in the following HTTP request header being sent:
 
 .. html ::
 
-	Range: items=5-15
+    Range: items=5-15
 
 Any server should respond by setting the ``Content-Range`` header with the value of the range of items being returned and a total counts of all of the items that could be returned based on the query.  Because the total possible items is returned, the downstream widgets will "know" there are more items which they can retrieve.  Also the provider should respond with the amount of items they are returning, even if more items are being requested.
 
@@ -221,7 +221,7 @@ So, if a request was for a count of 10 items starting at 5, but there are only 1
 
 .. html ::
 
-	Content-Range: items 5-9/10
+    Content-Range: items 5-9/10
 
 `Note` ``start`` is 0 based, so starting at ``5`` means the 6th item.
 
@@ -235,50 +235,50 @@ For example, let's assume you want to provide information about pages of a book 
 
 .. html ::
 
-	GET http://example.com/book/1/page/
+    GET http://example.com/book/1/page/
 
 Which returns an array that provides some basic information, but not the content of the page, but a reference to the item:
 
 .. js ::
 
-	[
-	  {"id": "page/1", "chapter": "1", "$ref": "page/1"},
-	  {"id": "page/2", "chapter": "1", "$ref": "page/2"},
-	  {"id": "page/3", "chapter": "1", "$ref": "page/3"}
-	]
+    [
+      {"id": "page/1", "chapter": "1", "$ref": "page/1"},
+      {"id": "page/2", "chapter": "1", "$ref": "page/2"},
+      {"id": "page/3", "chapter": "1", "$ref": "page/3"}
+    ]
 
 And then something tries to attempt to access an attribute of a page that isn't loaded (like ``text``) the store will attempt to do the following:
 
 .. html ::
 
-	GET http://example.com/book/1/page/1/
+    GET http://example.com/book/1/page/1/
 
 Which could result in you returning the whole object, that would have been inefficient until the consumer needed the data:
 
 .. js ::
 
-	{
-	  "id": "1",
-	  "chapter": "1",
-	  "text": "..."
-	}
+    {
+      "id": "1",
+      "chapter": "1",
+      "text": "..."
+    }
 
 The other main way to use ``$ref`` in a REST environment is to specify children.  Again, speaking about a book, we could provide a reference back when a request is made to a collection or resource URI:
 
 .. html ::
 
-	GET http://example.com/book/1/
+    GET http://example.com/book/1/
 
 Would return something like:
 
 .. js ::
 
-	{
-	  "id": "1",
-	  "title": "My Little Book of Dojo",
-	  "author": "Kitson Kelly",
-	  "children": {"$ref":"1/page"}
-	}
+    {
+      "id": "1",
+      "title": "My Little Book of Dojo",
+      "author": "Kitson Kelly",
+      "children": {"$ref":"1/page"}
+    }
 
 There is a lot more you can do with referencing, but viewing the :ref:`dojox.json.ref <dojox/json/ref>` page is the best way to get a complete picture.  Just remember that your references should contain a relative URI to the appropriate information.
 

@@ -301,16 +301,16 @@ The general case type map handles the situation where some processing on the val
  
   {
     "type0": {
-	  "type": constructorFunction(),
-	  "deserialize": function(value)
+      "type": constructorFunction(),
+      "deserialize": function(value)
     },
     "type1": {
-	  "type": constructorFunction(),
-	  "deserialize": function(value)
+      "type": constructorFunction(),
+      "deserialize": function(value)
     },
     "type2": {
-	  "type": constructorFunction(),
-	  "deserialize": function(value)
+      "type": constructorFunction(),
+      "deserialize": function(value)
     },
     ...
     "typeN": {
@@ -450,19 +450,19 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
   var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId",
     items: [ {uniqueId: 1, status:"CLOSED"},
       {uniqueId: 2,  status:"OPEN"},
-	  {uniqueId: 3,  status:"PENDING"},
-	  {uniqueId: 4,  status:"BLOCKED"},
-	  {uniqueId: 5,  status:"CLOSED"},
-	  {uniqueId: 6,  status:"OPEN"},
-	  {uniqueId: 7,  status:"PENDING"},
-	  {uniqueId: 8,  status:"PENDING"},
-	  {uniqueId: 10, status:"BLOCKED"},
-	  {uniqueId: 12, status:"BLOCKED"},
-	  {uniqueId: 11, status:"OPEN"},
-	  {uniqueId: 9,  status:"CLOSED"}
-	]
+      {uniqueId: 3,  status:"PENDING"},
+      {uniqueId: 4,  status:"BLOCKED"},
+      {uniqueId: 5,  status:"CLOSED"},
+      {uniqueId: 6,  status:"OPEN"},
+      {uniqueId: 7,  status:"PENDING"},
+      {uniqueId: 8,  status:"PENDING"},
+      {uniqueId: 10, status:"BLOCKED"},
+      {uniqueId: 12, status:"BLOCKED"},
+      {uniqueId: 11, status:"OPEN"},
+      {uniqueId: 9,  status:"CLOSED"}
+    ]
   }});
-		
+
   // Define the comparator function for status.
   store.comparatorMap = {};
   store.comparatorMap["status"] = function(a, b){
@@ -478,7 +478,7 @@ ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement i
     }
     return ret;
   };
-		
+
   var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
   function completed(items, findResult){
     for(var i = 0; i < items.length; i++){
@@ -856,17 +856,17 @@ Demonstrating custom sorting
         items: [
           {uniqueId: 1, status:"CLOSED"},
           {uniqueId: 2,  status:"OPEN"},
-		  {uniqueId: 3,  status:"PENDING"},
-		  {uniqueId: 4,  status:"BLOCKED"},
-		  {uniqueId: 5,  status:"CLOSED"},
-		  {uniqueId: 6,  status:"OPEN"},
-		  {uniqueId: 7,  status:"PENDING"},
-		  {uniqueId: 8,  status:"PENDING"},
-		  {uniqueId: 10, status:"BLOCKED"},
-		  {uniqueId: 12, status:"BLOCKED"},
-		  {uniqueId: 11, status:"OPEN"},
-		  {uniqueId: 9,  status:"CLOSED"}
-		]
+          {uniqueId: 3,  status:"PENDING"},
+          {uniqueId: 4,  status:"BLOCKED"},
+          {uniqueId: 5,  status:"CLOSED"},
+          {uniqueId: 6,  status:"OPEN"},
+          {uniqueId: 7,  status:"PENDING"},
+          {uniqueId: 8,  status:"PENDING"},
+          {uniqueId: 10, status:"BLOCKED"},
+          {uniqueId: 12, status:"BLOCKED"},
+          {uniqueId: 11, status:"OPEN"},
+          {uniqueId: 9,  status:"CLOSED"}
+        ]
       };
 
       // This function performs some basic dojo initialization. In this case it connects the button
@@ -889,7 +889,7 @@ Demonstrating custom sorting
           }
           return ret;
         };
-		
+
         // Function to perform a fetch on the datastore when a button is clicked
         function getItems(){
 

@@ -23,9 +23,9 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|back          |String 	  |""       |A label for the navigational control to return to the previous View.                                       |
+|back          |String    |""       |A label for the navigational control to return to the previous View.                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|href 	       |String    |""       |A URL to open when the navigational control is pressed.                                                    |
+|href          |String    |""       |A URL to open when the navigational control is pressed.                                                    |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
 |              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module is loaded by the user application, the view     |
@@ -38,7 +38,7 @@ Constructor Parameters
 |              |          |         |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut". If "none" is specified, transition occurs   |
 |              |          |         |immediately without animation.                                                                             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label 	       |String    |""       |A title text of the heading. If the label is not specified, the innerHTML of the node is used as a label.  |
+|label         |String    |""       |A title text of the heading. If the label is not specified, the innerHTML of the node is used as a label.  |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |iconBase      |String    |""       |The default icon path for child items. If a child item does not have its own icon parameter specified,     |
 |              |          |         |this value is used as its icon path. This parameter is especially useful when all or most of the icons are |

@@ -30,11 +30,11 @@ the final ``staticHasFeature`` map. For example, assume the following two profil
 .. js ::
 
   profile = {
-	  staticHasFeatures:{
-		  featureX:1,
-		  featureY:1,
-		  featureZ:0
-	  }
+      staticHasFeatures:{
+          featureX:1,
+          featureY:1,
+          featureZ:0
+      }
       // other profile properties, if any
   };
 
@@ -44,12 +44,12 @@ the final ``staticHasFeature`` map. For example, assume the following two profil
 .. js ::
 
   profile = {
-	  staticHasFeatures:{
-		  featureY:0,
-		  featureZ:-1,
-		  anotherFeature:1
-	}
-	// other profile properties, if any
+      staticHasFeatures:{
+          featureY:0,
+          featureZ:-1,
+          anotherFeature:1
+    }
+    // other profile properties, if any
   };
 
 If these two profiles were provided on the command line as follows
@@ -64,8 +64,8 @@ Then the aggregate profile would have the following value for the property ``sta
 
   staticHasFeatures:{
       featureX:1,       // only mentioned in profile-a
-	  featureY:0,       // profile-b value overrides profile-a value
-	  anotherFeature:1  // only mentioned in profile-b
+      featureY:0,       // profile-b value overrides profile-a value
+      anotherFeature:1  // only mentioned in profile-b
   }
 
 Notice that "featureZ" was removed because the profile-b which was mixed after profile-a contains the value of -1 for

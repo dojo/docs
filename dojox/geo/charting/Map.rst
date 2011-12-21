@@ -21,8 +21,8 @@ A dojo widget to render map information "shapefile" data.
  dojo.require("dojox.geo.charting.Map");
 
  dojo.ready(function(){
-	var USStates = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-	USStates.setMarkerData("../resources/markers/USStates.json");
+    var USStates = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+    USStates.setMarkerData("../resources/markers/USStates.json");
  });
  
 

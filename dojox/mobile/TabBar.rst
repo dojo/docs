@@ -102,25 +102,25 @@ TabBar forms kind of tab container whose panes are views. You may, however, want
 
   <div id="groupview1" data-dojo-type="dojox.mobile.View" selected="true">
       <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" fixed="top">
-	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview1" selected="true">New</li>
-	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview2">What's Hot</li>
-	<li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview3">Genius</li>
+        <li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview1" selected="true">New</li>
+        <li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview2">What's Hot</li>
+        <li data-dojo-type="dojox.mobile.TabBarButton" moveTo="subview3">Genius</li>
       </ul>
 
       <div id="subview1" data-dojo-type="dojox.mobile.ScrollableView" selected="true">
-	<ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-	  <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
-	</ul>
+        <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+          <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+        </ul>
       </div>
 
       <div id="subview2" data-dojo-type="dojox.mobile.ScrollableView">
-	<ul data-dojo-type="dojox.mobile.RoundRectList">
-	  <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
-	</ul>
+        <ul data-dojo-type="dojox.mobile.RoundRectList">
+          <li data-dojo-type="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+        </ul>
       </div>
 
       <div id="subview3" data-dojo-type="dojox.mobile.ScrollableView">
-	<div data-dojo-type="dojox.mobile.RoundRect" shadow="true">View3</div>
+        <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">View3</div>
       </div>
   </div>
 

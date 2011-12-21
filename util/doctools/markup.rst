@@ -25,15 +25,15 @@ Formatting: Each keyword should be on a line by itself, with a space before and 
 
 .. js ::
 
-	// summary:
-	//            This is the summary for the method.
-	//            It's indented by two tabs.
-	// foo: Integer
-	//            First argument to this function
-	// bar: String
-	//            Second argument to this function
-	// returns:
-	//            A calculated value.
+    // summary:
+    //            This is the summary for the method.
+    //            It's indented by two tabs.
+    // foo: Integer
+    //            First argument to this function
+    // bar: String
+    //            Second argument to this function
+    // returns:
+    //            A calculated value.
 
 The parser will keep reading content as part of the specified key until it sees a completely blank line, or another keyword.
 Although our formatting convention requires that keywords exist on a separate line, if any of these keywords occur at the beginning of a line, the parser will start reading the text following it and save it as part of that key's content. This means that you should be careful about what word you use to start a line. For example, "summary" shouldn't start a line unless the content that follows is the summary.
@@ -70,39 +70,39 @@ Methods are assumed to be public, but are considered protected by default if the
 
 * **protected**: The method can be called or overridden by subclasses but should not be accessed (directly) by a user. For example:
 
-	.. js ::
-		
-		postCreate: function(){
-		        // summary:
-		        //            Called after a widget's dom has been setup
-		        // tags:
-		        //            protected
-		},
+    .. js ::
+
+        postCreate: function(){
+                // summary:
+                //            Called after a widget's dom has been setup
+                // tags:
+                //            protected
+        },
 
 * **private**: The method or property is not intended for use by anything other than the class itself. For example:
 
-	.. js ::
-	
-		_attrToDom: function(/*String*/ attr, /*String*/  value){
-		        // summary:
-		        //            Reflect a widget attribute (title, tabIndex, duration etc.) to
-		        //            the widget DOM, as specified in attributeMap.
-		        // tags:
-		        //            private
-		        ...
-		}
+    .. js ::
+
+        _attrToDom: function(/*String*/ attr, /*String*/  value){
+                // summary:
+                //            Reflect a widget attribute (title, tabIndex, duration etc.) to
+                //            the widget DOM, as specified in attributeMap.
+                // tags:
+                //            private
+                ...
+        }
 
 * **multiple tags**: Multiple tags can separated by spaces:
 
-	.. js ::
-	
-		parse: function(/*Node*/ node){
-		        // summary:
-		        //            Parse things.
-		        // tags:
-		        //            protected extension
-		        ...
-		}
+    .. js ::
+
+        parse: function(/*Node*/ node){
+                // summary:
+                //            Parse things.
+                // tags:
+                //            protected extension
+                ...
+        }
 
 A Note
 ------
@@ -116,49 +116,49 @@ Method-Specific Tags
 * **callback**: This method represents a location that a user can connect to (i.e. using dojo.connect) to receive notification that some event happened, such as a user clicking a button or an animation completing. For example:
 
 
-	.. js ::
-		
-		onClick: function(){
-		        // summary:
-		        //            Called when the user clicks the widget
-		        // tags:
-		        //            callback
-		        ...
-		}
-		
+    .. js ::
+
+        onClick: function(){
+            // summary:
+            //            Called when the user clicks the widget
+            // tags:
+            //            callback
+            ...
+        }
+
 * **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar:
 
 .. js ::
-	
-	isDisabledDate: function(date){
-	        // summary:
-	        //            Return true if the specified date should be disabled (i.e. grayed
-	        //            out and unclickable)
-	        // description:
-	        //            Override this method to define special days to gray out, such as
-	        //            weekends or (for an airline) black-out days when discount fares
-	        //            aren't available.
-	        // tags:
-	        //            extension
-	        ...
-	}
+
+    isDisabledDate: function(date){
+        // summary:
+        //            Return true if the specified date should be disabled (i.e. grayed
+        //            out and unclickable)
+        // description:
+        //            Override this method to define special days to gray out, such as
+        //            weekends or (for an airline) black-out days when discount fares
+        //            aren't available.
+        // tags:
+        //            extension
+        ...
+    }
 
 General Function Information
 ============================
 
 .. js ::
 
-	Foo = function(){
-	  // summary:
-	  //        Soon we will have enough treasure to rule all of New Jersey.
-	  // description:
-	  //        Or we could just get a new roommate. Look, you go find him. He
-	  //        don't yell at you.  All I ever try to do is make him smile and sing
-	  //        around him and dance around him and he just lays into me. He told
-	  //        me to get in the freezer 'cause there was a carnival in there.
-	  // returns:
-	  //        Look, a Bananarama tape!
-	}
+    Foo = function(){
+      // summary:
+      //        Soon we will have enough treasure to rule all of New Jersey.
+      // description:
+      //        Or we could just get a new roommate. Look, you go find him. He
+      //        don't yell at you.  All I ever try to do is make him smile and sing
+      //        around him and dance around him and he just lays into me. He told
+      //        me to get in the freezer 'cause there was a carnival in there.
+      // returns:
+      //        Look, a Bananarama tape!
+    }
 
 
 Object Information
@@ -168,17 +168,17 @@ Has no description of what it returns
 
 .. js ::
 
-	var mcChris = {
-	  // summary:
-	  //        Dingle, engage the rainbow machine!
-	  // description:
-	  //        Tell you what, I wish I was--oh my g--that beam,
-	  //        coming up like that, the speed, you might wanna adjust that.
-	  //        It really did a number on my back, there. I mean, and I don't
-	  //        wanna say whiplash, just yet, cause that's a little too far,
-	  //        but, you're insured, right?
-	}
-	
+    var mcChris = {
+      // summary:
+      //        Dingle, engage the rainbow machine!
+      // description:
+      //        Tell you what, I wish I was--oh my g--that beam,
+      //        coming up like that, the speed, you might wanna adjust that.
+      //        It really did a number on my back, there. I mean, and I don't
+      //        wanna say whiplash, just yet, cause that's a little too far,
+      //        but, you're insured, right?
+    }
+
 Function Assembler Information (declare)
 ========================================
 
@@ -187,23 +187,23 @@ For example:
 
 .. js ::
 
-	dojo.declare(
-	  "Steve",
-	  null,
-	  {
-	    // summary:
-	    //    Phew, this sure is relaxing, Frylock.
-	    // description:
-	    //    Thousands of years ago, before the dawn of
-	    //    man as we knew him, there was Sir Santa of Claus: an
-	    //    ape-like creature making crude and pointless toys out
-	    //    of dino-bones, hurling them at chimp-like creatures with
-	    //    crinkled hands regardless of how they behaved the
-	    //    previous year.
-	    // returns:
-	    //    Unless Carl pays tribute to the Elfin Elders in space.
-	  }
-	);
+    dojo.declare(
+      "Steve",
+      null,
+      {
+        // summary:
+        //    Phew, this sure is relaxing, Frylock.
+        // description:
+        //    Thousands of years ago, before the dawn of
+        //    man as we knew him, there was Sir Santa of Claus: an
+        //    ape-like creature making crude and pointless toys out
+        //    of dino-bones, hurling them at chimp-like creatures with
+        //    crinkled hands regardless of how they behaved the
+        //    previous year.
+        // returns:
+        //    Unless Carl pays tribute to the Elfin Elders in space.
+      }
+    );
 
 Parameters
 ==========
@@ -215,8 +215,8 @@ Types should (but don't have to) appear in the main parameter definition block. 
 
 .. js ::
 
-	function(/*String*/ foo, /*int*/  bar)...
-	
+    function(/*String*/ foo, /*int*/  bar)...
+
 Type Modifiers
 --------------
 
@@ -227,8 +227,8 @@ There are some modifiers you can add after the type:
 * [] means an array
 
 .. js ::
-	
-	function(/*String?*/ foo, /*int...*/  bar, /*String[]?*/ baz){ }
+
+    function(/*String?*/ foo, /*int...*/  bar, /*String[]?*/ baz){ }
 
 Full Parameter Summaries
 ------------------------
@@ -237,12 +237,12 @@ If you want to also add a summary, you can do so in the initial comment block. I
 
 .. js ::
 
-	function(foo, bar){
-	  // foo: String
-	  //        used for being the first parameter
-	  // bar: int
-	  //        used for being the second parameter
-	}
+    function(foo, bar){
+        // foo: String
+        //        used for being the first parameter
+        // bar: int
+        //        used for being the second parameter
+    }
 
 
 Variables
@@ -252,24 +252,24 @@ Instance variables, prototype variables and external variables can all be define
 
 .. js ::
 
-	function Foo(){
-	  // myString: String
-	  // times: int
-	  //        How many times to print myString
-	  // separator: String
-	  //        What to print out in between myString*
-	  this.myString = "placeholder text";
-	  this.times = 5;
-	}
-	Foo.prototype.setString = function(myString){
-	  this.myString = myString;
-	}
-	Foo.prototype.toString = function(){
-	  for(int i = 0; i < this.times; i++){
-	    console.log(this.myString, foo.separator);
-	  }
-	}
-	Foo.separator = "=====";
+    function Foo(){
+        // myString: String
+        // times: int
+        //        How many times to print myString
+        // separator: String
+        //        What to print out in between myString*
+        this.myString = "placeholder text";
+        this.times = 5;
+    }
+    Foo.prototype.setString = function(myString){
+        this.myString = myString;
+    }
+    Foo.prototype.toString = function(){
+        for(int i = 0; i < this.times; i++){
+            console.log(this.myString, foo.separator);
+        }
+    }
+    Foo.separator = "=====";
 
 
 
@@ -280,27 +280,27 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 
 * **deprecated**: In methods, the doc system can search for dojo.deprecated calls. But variables will need specific declarations that they are deprecated.
 
-	.. js ::
+    .. js ::
 
-	  // label: [deprecated readonly] String
-	  //            A label thingie
-	  label: ""
+      // label: [deprecated readonly] String
+      //        A label thingie
+      label: ""
 
 * **const**: A widget attribute that can be used for configuration, but can only have its value assigned during initialization. This means that changing this value on a widget instance (even with the attr method) will be a no-op.
 
-	.. js ::
+    .. js ::
 
-		// id: [const] String
-		//            A unique, opaque ID string that can be assigned by users...
-		id: ""
+        // id: [const] String
+        //        A unique, opaque ID string that can be assigned by users...
+        id: ""
 
 * **readonly**: This property is intended to be read and cannot be specified during initialization, or changed after initialization.
 
-	.. js ::
+    .. js ::
 
-		// domNode: [readonly] DomNode
-		//            This is our visible representation of the widget...
-		domNode: null
+        // domNode: [readonly] DomNode
+        //        This is our visible representation of the widget...
+        domNode: null
 
 
 
@@ -311,13 +311,13 @@ The parser takes the comments in between object values and applies the same rule
 
 .. js ::
 
-	{
-	  // key: String
-	  //        A simple value
-	  key: "value",
-	  // key2: String
-	  //        Another simple value
-	}
+    {
+      // key: String
+      //        A simple value
+      key: "value",
+      // key2: String
+      //        Another simple value
+    }
 
 Return Value
 ============
@@ -326,28 +326,28 @@ Because a function can return multiple types, the types should be declared on th
 
 .. js ::
 
-	function(){
-	  if(arguments.length){
-	    return "You passed argument(s)"; // String
-	  }else{
-	    return false; // Boolean
-	  }
-	}
+    function(){
+      if(arguments.length){
+        return "You passed argument(s)"; // String
+      }else{
+        return false; // Boolean
+      }
+    }
 
 Note: The return type should be on the same line as the return statement. The first example is invalid, the second is valid:
 
 .. js ::
 
-	function(){
-	  return {
-	    foo: "bar" // return Object
-	  }
-	}
-	function(){
-	  return { // return Object
-	    foo: "bar"
-	  }
-	}
+    function(){
+      return {
+        foo: "bar" // return Object
+      }
+    }
+    function(){
+      return { // return Object
+        foo: "bar"
+      }
+    }
 
 
 Documentation-Specific Code
@@ -364,19 +364,19 @@ The parser simply replaces the ``/*=====`` and ``=====*/`` with whitespace at th
 
 .. js ::
 
-	dojo.mixin(wwwizard, {
-	/*=====
-	  // url: String
-	  //        The location of the file
-	  url: "",
-	  // mimeType: String
-	  //        text/html, text/xml, etc
-	  mimeType: "",
-	=====*/
-	  // somethingElse: Boolean
-	  //        Put something else here
-	  somethingElse: "eskimo"
-	});
+    dojo.mixin(wwwizard, {
+    /*=====
+      // url: String
+      //        The location of the file
+      url: "",
+      // mimeType: String
+      //        text/html, text/xml, etc
+      mimeType: "",
+    =====*/
+      // somethingElse: Boolean
+      //        Put something else here
+      somethingElse: "eskimo"
+    });
 
 Code in a Separate File
 -----------------------
@@ -392,15 +392,15 @@ A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe h
 
 .. js ::
 
-	dojo.provide("module._arg");
-	module._arg.myFuncArgs = function(/*Object*/ kwArgs){
-	  // url: String
-	  //        Location of the thing to use
-	  // mimeType: String
-	  //        Mimetype to return data as
-	        this.url = kwArgs.url;
-	        this.mimeType = kwArgs.mimeType;
-	}
+    dojo.provide("module._arg");
+    module._arg.myFuncArgs = function(/*Object*/ kwArgs){
+        // url: String
+        //        Location of the thing to use
+        // mimeType: String
+        //        Mimetype to return data as
+        this.url = kwArgs.url;
+        this.mimeType = kwArgs.mimeType;
+    }
 
 This describes a real object that mimics the functionality of the generic object you would normally pass, but also provides documentation of what fields it has and what they do.
 
@@ -408,10 +408,10 @@ To associate this object with the originating function, do this:
 
 .. js ::
 
-	var myFunc = function(/*module._arg.myFuncArgs*/  kwArgs){
-	  console.log(kwArgs.url);
-	  console.log(kwArgs.mimeType);
-	}
+    var myFunc = function(/*module._arg.myFuncArgs*/  kwArgs){
+        console.log(kwArgs.url);
+        console.log(kwArgs.mimeType);
+    }
 
 Since we didn't do a ``dojo.require`` on module._arg, it won't get included, but the documentation parser will still provide a link to it, allowing the user to see its functionality. This pseudo object may also be included in-line using the ``/*===== =====*/`` syntax. For an example of how to do this inline, see "dojo.__FadeArgs" pseudo code in dojo/_base/fx.js, used to document ``dojo.fadeIn()`` and ``dojo.fadeOut()``
 

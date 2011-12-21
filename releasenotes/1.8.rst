@@ -46,32 +46,32 @@ _WidgetBase
 -----------
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
 
-.. code-block:: javascript
+.. js ::
 
-	dojo.declare("MyWidget",
-		[dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin], {
-	
-		templateString:
-			"<div>" +
-				"<button data-dojo-type='dijit.form.Button'
-					data-dojo-attach-point='buttonWidget'>hi</button>" +
-				"<input data-dojo-attach-point='focusNode'>" +
-			"</div>"
-	
-		// Mapping this.label to this.buttonWidget.label
-		label: "",
-		_setLabelAttr: "buttonWidget",
-	
-		// Mapping this.value to this.focusNode DOMNode
-		value: "",
-		_setValueAttr: "focusNode",
-	});
+    dojo.declare("MyWidget",
+        [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin], {
+
+        templateString:
+            "<div>" +
+                "<button data-dojo-type='dijit.form.Button'
+                    data-dojo-attach-point='buttonWidget'>hi</button>" +
+                "<input data-dojo-attach-point='focusNode'>" +
+            "</div>"
+
+        // Mapping this.label to this.buttonWidget.label
+        label: "",
+        _setLabelAttr: "buttonWidget",
+
+        // Mapping this.value to this.focusNode DOMNode
+        value: "",
+        _setValueAttr: "focusNode",
+    });
 
 Calendar
 --------
 - Can now accept a String for the value parameter (either as an argument to the constructor, or to set("value", ...).
 
-.. code-block:: javascript
+.. js ::
 
     new dijit.Calendar({value: "2011-12-25"});
 

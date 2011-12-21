@@ -96,7 +96,7 @@ Usage
 This plugin exposes the following methods to the grid:
 
 setCookieEnabled(cookieName, toEnable):
-	If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistence of this feature.
+    If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistence of this feature.
 
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -107,7 +107,7 @@ toEnable        Boolean             Mandatory                   To enable cookie
 ==============  ==================  ==========================  ==============================================================================================
 
 getCookieEnabled(cookieName):
-	Check whether the cookie support of a particular grid feature is enabled.
+    Check whether the cookie support of a particular grid feature is enabled.
 
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -119,7 +119,7 @@ cookieName      String              Optional                    A name of a grid
 
 
 removeCookie():
-	Clear the grid cookie.
+    Clear the grid cookie.
 
 
 Here is some examples on how to use the API:

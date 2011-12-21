@@ -89,7 +89,7 @@ All fields in the CsvStore are read as strings.  Therefore, they are sorted as s
   csvData += "1022,10.36\n";
 
   var store = new dojox.data.CsvStore({identifier: "article", data: csvData});
-		
+
   // Define the comparator function for price, we want to numerically, instead of
   // string based sorting (As all fields in a CsvStore are parsed as strings).
   store.comparatorMap = {};
@@ -98,7 +98,7 @@ All fields in the CsvStore are read as strings.  Therefore, they are sorted as s
     b = parseFload(b);
     return (a - b);
   };
-		
+
   var sortAttributes = [{attribute: "price", descending: true}, { attribute: "article", descending: true}];
   function completed(items, findResult){
     for(var i = 0; i < items.length; i++){

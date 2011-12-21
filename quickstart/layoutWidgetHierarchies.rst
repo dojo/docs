@@ -6,7 +6,7 @@ Layout Widget Hierarchies: isLayoutContainer and dijit.layout._LayoutWidget
 :Authors: Bill Keese
 
 .. contents ::
-	:depth: 2
+    :depth: 2
 
 Often developers will build a hierarchy of layout related widgets.  For example, a :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>` will contain a few :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`'s, each of which has multiple :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`'s, each of which contains some other widgets like :ref:`dijit.form.TextBox <dijit/form/TextBox>` and :ref:`dijit.form.Button <dijit/form/Button>`.
 

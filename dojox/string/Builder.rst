@@ -38,23 +38,23 @@ Situations where using a string builder is handy are template systems and serial
   
   dojo.require("dojox.string.Builder");
   function buildRow(builder){
-	  builder.append("<tr>");
-	  for(var i=0; i<6; i++){
-		  buildCell(builder);
-	  }
-	  builder.append("</tr>");
+      builder.append("<tr>");
+      for(var i=0; i<6; i++){
+          buildCell(builder);
+      }
+      builder.append("</tr>");
   }
 
   function buildCell(builder){
-	  builder.append("<td>", "This is some content", "</td>");
+      builder.append("<td>", "This is some content", "</td>");
   }
 
   function buildTable(builder){
       builder.append("<table>");
-	  for(var i=0; i<6; i++){
-		  buildRow(builder);
-	  }
-	  builder.append("</table>");
+      for(var i=0; i<6; i++){
+          buildRow(builder);
+      }
+      builder.append("</table>");
   }
 
   var sb = new dojox.string.Builder();

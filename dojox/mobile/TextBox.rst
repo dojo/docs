@@ -20,9 +20,9 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  | mblTextBox   |Default CSS class name used to render the textbox.                                                         |
+|baseClass     |String    | mblTextBox   |Default CSS class name used to render the textbox.                                                         |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
+|class         |String    |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |maxLength     |Number    | (no limit)   |Maximum number of characters that can be entered in the INPUT box.                                         |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+

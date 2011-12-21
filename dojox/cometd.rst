@@ -30,23 +30,23 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
     dojo.require("dojox.cometd");
     dojo.require("dojox.cometd.callbackPollTransport");
     dojo.ready(function(){
-		dojox.cometd.init("http://cometd.dojocampus.org:9000/cometd");
-		dojox.cometd.subscribe("/demo", function(message){
-			console.log("received", message);
-			dojo.byId("messageLog").
-				appendChild(document.createElement("div")).
-				appendChild(document.createTextNode(message.data.from + ": " + message.data.text));
-		});
-		dojo.connect(dojo.byId("send"), "onclick", function(){
-			if(!dojo.byId("sendName").value.length || !dojo.byId("sendText").value.length){
+        dojox.cometd.init("http://cometd.dojocampus.org:9000/cometd");
+        dojox.cometd.subscribe("/demo", function(message){
+            console.log("received", message);
+            dojo.byId("messageLog").
+                appendChild(document.createElement("div")).
+                appendChild(document.createTextNode(message.data.from + ": " + message.data.text));
+        });
+        dojo.connect(dojo.byId("send"), "onclick", function(){
+            if(!dojo.byId("sendName").value.length || !dojo.byId("sendText").value.length){
                                 alert("Please enter some text");
                                 return;
                         }
                         dojox.cometd.publish("/demo", {
-			     from: dojo.byId("sendName").value,
-			     text: dojo.byId("sendText").value
-			});
-		});
+                 from: dojo.byId("sendName").value,
+                 text: dojo.byId("sendText").value
+            });
+        });
     });
 
   The html is a just a simple form to enter you name and message to send
@@ -54,9 +54,9 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
   .. html ::
 
     <div id="chatroom">
-    	<div style="clear: both;"><label for="sendName" style="float: left; width: 100px; padding: 3px;">Name:</label> <input id="sendName" type="text" data-dojo-type="dijit.form.TextBox"></div>
-    	<div style="clear: both;"><label for="sendText" style="float: left; width: 100px; padding: 3px;">Message:</label> <input id="sendText" type="text" data-dojo-type="dijit.form.TextBox"><button id="send" data-dojo-type="dijit.form.Button">Send Message</button></div>
-    	<div id="messageLog"><strong>Messages:</strong></div>
+        <div style="clear: both;"><label for="sendName" style="float: left; width: 100px; padding: 3px;">Name:</label> <input id="sendName" type="text" data-dojo-type="dijit.form.TextBox"></div>
+        <div style="clear: both;"><label for="sendText" style="float: left; width: 100px; padding: 3px;">Message:</label> <input id="sendText" type="text" data-dojo-type="dijit.form.TextBox"><button id="send" data-dojo-type="dijit.form.Button">Send Message</button></div>
+        <div id="messageLog"><strong>Messages:</strong></div>
     </div>
 
   .. css ::
