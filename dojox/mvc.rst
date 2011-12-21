@@ -82,17 +82,14 @@ Basic example, input-output sync:
 			'dojox/mvc/Output'
 			], function(parser, ready, mvc){
 
-			// Initial data
-
-			var data : {
-				"First" : "John",
-				"Last"  : "Doe",
-				"Email" : "jdoe@example.com"
-			};
 				// The dojox.mvc.StatefulModel class creates a data model instance
 				// where each leaf within the data model is decorated with dojo.Stateful
 				// properties that widgets can bind to and watch for their changes.
-				model = mvc.newStatefulModel({ data : data});
+				model = mvc.newStatefulModel({ data : {
+				            "First" : "John",
+				            "Last"  : "Doe",
+				            "Email" : "jdoe@example.com"
+				        }});
 			});
 
   .. css ::
