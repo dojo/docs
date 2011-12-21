@@ -51,11 +51,29 @@ Declarative example
         dojo.require("dojox.mvc.Group");
         dojo.require("dojox.mvc.Output");
 
-        var model = dojox.mvc.newStatefulModel({ data : {
+        // Initial data
+        var order = {
+            "Serial" : "360324",
             "First" : "John",
-            "Last"  : "Doe",
-            "Email" : "jdoe@example.com"
-        }});
+            "Last" : "Doe",
+            "Email" : "jdoe@example.com",
+            "ShipTo" : {
+                "Street" : "123 Valley Rd",
+                "City" : "Katonah",
+                "State" : "NY",
+                "Zip" : "10536"
+            },
+            "BillTo" : {
+                "Street" : "17 Skyline Dr",
+                "City" : "Hawthorne",
+                "State" : "NY",
+                "Zip" : "10532"
+            }
+        };
+        // The dojox.mvc.StatefulModel class creates a data model instance
+        // where each leaf within the data model is decorated with dojo.Stateful
+        // properties that widgets can bind to and watch for their changes.
+        var model = new dojox.mvc.StatefulModel({ data : order });
 
   .. css ::
 
@@ -65,32 +83,26 @@ Declarative example
   .. html ::
 
     <div id="main">
-        <div class="row">
-            <label class="cell" for="firstnameInput">First:</label>
-            <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.First"></input>
-            <!-- Content in output below will always be in sync with value of textbox above -->
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
-                (first name is: ${this.value})
-            </span>
-        </div>
-        <div class="row">
-            <label class="cell" for="lastnameInput">Last:</label>
-            <input class="cell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.Last"></input>
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Last">
-                (last name is: ${this.value})
-            </span>
-        </div>
-        <div class="row">
-            <label class="cell" for="emailInput">Email:</label>
-            <input class="cell" id="emailInput" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.Email"></input>
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Email">
-                (email is: ${this.value})
-            </span>
+        <div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
+            <div class="row">
+                <label class="cell" for="streetInput">Street:</label>
+                <input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="cityInput">City:</label>
+                <input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="stateInput">State:</label>
+                <input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="zipInput">Zipcode:</label>
+                <input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
+            </div>
         </div>
         <br/>
-        Model:
-        <button id="reset" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){model.reset();}">Reset</button>
+        Choose:
+        <button id="shipto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.ShipTo);">Ship To</button>
+        <button id="billto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.BillTo);">Bill To</button>
     </div>
