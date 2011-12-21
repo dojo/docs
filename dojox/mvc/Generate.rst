@@ -93,4 +93,4 @@ Declarative example
         <div id="view" data-dojo-type="dojox.mvc.Generate" data-dojo-props="idNameMapping:{'String' : 'view_t'}"></div>
     </div>
 
-In the above example, the Generate will create a view with a label and TextBox for each of the fields listed in the textarea, and any updates to the textarea will be cause the view to be updated.
+In the above example, the Generate will create a view with a label and TextBox for each of the fields listed in the textarea, and any updates to the textarea will be cause the view to be updated when you tab out of the text area.
