@@ -39,16 +39,22 @@ Examples
 Declarative example
 --------------------
 
-.. html ::
+.. code-example ::
 
-    <script type="text/javascript" >
+  .. js ::
+
+		dojo.require("dijit.form.Textarea");
+		dojo.require("dojox.mvc.StatefulModel");
+		dojo.require("dojox.mvc.Generate");
+
         function updateView(){
             var modeldata = dojo.fromJson(dijit.byId("modelArea").value);
-            var model = dojox.mvc.newStatefulModel({ data : modeldata });
+            var model = new dojox.mvc.StatefulModel({ data : modeldata });
             dijit.byId("view").set("ref", model);
-        };
+        }
         dojo.ready(updateView);
-    </script>
+
+  .. html ::
 
     <div id="mainContent">
         <h3>Model</h3>
