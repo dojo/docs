@@ -16,7 +16,6 @@ the next step is to use the dojox.xml.parser to read the xml string.
 
   .. js ::
 
-    <script type="text/javascript">
 		dojo.require("dijit.Tree");
 		dojo.require("dijit.tree.TreeStoreModel");
 		dojo.require("dojox.data.XmlStore");
@@ -74,7 +73,7 @@ the next step is to use the dojox.xml.parser to read the xml string.
 			});
 
 		};
-    </script>
+
 
   .. html ::
 

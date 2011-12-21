@@ -113,10 +113,7 @@ widget, first create one of the available data stores, such as the dojo.data.Ite
 dojox.data.FlickrRestStore. Next, create a request object, which optionally contains a query.
 
 .. js ::
-  
-   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
-   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
-   <script type="text/javascript">
+
       dojo.ready(function(){
          // Define the request, saying that 20 records should be fetched at a time,
          // and to start at record 0
@@ -131,7 +128,10 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
       dijit.byId('slideshow1').setDataStore(imageItemStore, request, itemNameMap);
    });
 
-   </script>
+.. html ::
+
+   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
+   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
 
 
 Subscribing to Slideshow Events

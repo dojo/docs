@@ -98,11 +98,11 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
   
   .. js ::
 
-    <script>
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initSimpleAtom(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
@@ -132,10 +132,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
                 console.debug(e);
             }
         );
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(initSimpleAtom);
-    </script>
+      });
 
   .. html ::
 
@@ -204,11 +201,11 @@ Example 3: Modify a loaded feed
   
   .. js ::
 
-    <script>
       dojo.require("dojox.atom.io.model");
 
       // This function performs some basic dojo initialization and will do the load calling for this example
-      function initSimpleAtomModified(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         var xhrArgs = {
            url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
@@ -244,10 +241,7 @@ Example 3: Modify a loaded feed
                 console.debug(e);
             }
         );
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(initSimpleAtomModified);
-    </script>
+      });
 
   .. html ::
 

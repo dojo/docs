@@ -48,9 +48,7 @@ Declarative example
 
   .. js ::
              
-        <script type="text/javascript">
 	     dojo.require("dojox.image.FlickrBadge");
-	</script>
 
   .. html ::
 

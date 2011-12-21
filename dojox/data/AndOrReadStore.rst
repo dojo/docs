@@ -60,7 +60,6 @@ Finding all Continents and Cities
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.AndOrReadStore");
       dojo.require("dijit.form.Button");
 
@@ -114,7 +113,8 @@ Finding all Continents and Cities
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         // Function to perform a fetch on the datastore when a button is clicked
         function getItems(){
 
@@ -152,10 +152,7 @@ Finding all Continents and Cities
         }
         // Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getItems );
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init2);
-    </script>
+      });
 
   .. html ::
 

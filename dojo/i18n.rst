@@ -33,10 +33,8 @@ Dojo < 1.7
  
 .. js ::
  
- <script type="text/javascript">
   var validate = dojo.i18n.getLocalization("dijit.form", "validate");
   console.log(validate.invalidMessage);
- </script>
 
 
 See also

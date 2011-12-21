@@ -21,15 +21,13 @@ The MultiComboBox behaves the same as a plain ComboBox. Pass it a store and sear
 
 .. js ::
  
- <script type="text/javascript">
     var memberTagStore = new dojo.data.ItemFileReadStore({ url:"countries.json" });
     var widget = new dojox.form.MultiComboBox({
 	   store:memberTagStore,
 	   searchAttr:"tag"
     }, "frogin3");
     widget.startup();
- </script>
-		
+
 No additional CSS is required.
 
 A `delimiter` variable can be set to indicate which key triggers a new value. It defaults to "," (comma) but can be any character.

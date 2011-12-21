@@ -27,7 +27,6 @@ Dojo 1.7 (AMD)
 
 .. js ::
  
-  <script type="text/javascript">
   require(["dojo/_base/declare", "dojo/_base/kernel"], function(declare, dojo){
     declare('Foo', null, {
       foo: function(){
@@ -50,7 +49,6 @@ Dojo 1.7 (AMD)
     // Show "baz" !
     console.info(barBaz);
   });
-  </script>
 
 
 Dojo < 1.7
@@ -58,7 +56,6 @@ Dojo < 1.7
 
 .. js ::
  
- <script type="text/javascript">
   dojo.declare('Foo', null, {
     foo: function(){
       eval('var fooBar = "bar"');
@@ -70,7 +67,6 @@ Dojo < 1.7
   // This will generate a "ReferenceError fooBar is not defined"
   console.info(fooBar);
 
-
   dojo.declare('Bar', null, {
     bar: function(){
       dojo.eval('var barBaz = "baz"');
@@ -80,4 +76,3 @@ Dojo < 1.7
   bar.bar();
   // Show "baz" !
   console.info(barBaz);
- </script>

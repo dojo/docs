@@ -381,7 +381,8 @@ Functional Example: Using custom type maps with ItemFileReadStore
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
 
         // Function to perform a fetch on the datastore when a button is clicked
@@ -429,9 +430,7 @@ Functional Example: Using custom type maps with ItemFileReadStore
 
         // Link the click event of the button to driving the fetch.
         dojo.connect(button, "onClick", getItems);
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init);
+      });
 
   .. html ::
 
@@ -610,7 +609,6 @@ Searching for all continents
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
@@ -664,7 +662,8 @@ Searching for all continents
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         // Function to perform a fetch on the datastore when a button is clicked
         function getContinents(){
 
@@ -702,10 +701,7 @@ Searching for all continents
         }
         // Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getContinents );
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init2);
-    </script>
+      });
 
   .. html ::
 
@@ -725,7 +721,6 @@ Doing wildcard searches and option setting
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
@@ -748,7 +743,8 @@ Doing wildcard searches and option setting
         // This function performs some basic dojo initialization. In this case it connects the button
         // onClick to a function which invokes the fetch(). The fetch function queries for all items
         // and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init3(){
+        // Set the init function to run when dojo loading and page parsing has completed.
+        dojo.ready(function(){
            // Function to perform a fetch on the datastore when a button is clicked
            function search(){
              var queryObj = {};
@@ -816,10 +812,7 @@ Doing wildcard searches and option setting
            }
            // Link the click event of the button to driving the fetch.
            dojo.connect(button3, "onClick", search);
-        }
-        // Set the init function to run when dojo loading and page parsing has completed.
-        dojo.ready(init3);
-    </script>
+        });
 
   .. html ::
 
@@ -855,30 +848,32 @@ Demonstrating custom sorting
   
   .. js ::
 
-    <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var sortData = { identifier: "uniqueId",
-        items: [ {uniqueId: 1, status:"CLOSED"},
+      var sortData = {
+        identifier: "uniqueId",
+        items: [
+          {uniqueId: 1, status:"CLOSED"},
           {uniqueId: 2,  status:"OPEN"},
-	  {uniqueId: 3,  status:"PENDING"},
-	  {uniqueId: 4,  status:"BLOCKED"},
-	  {uniqueId: 5,  status:"CLOSED"},
-	  {uniqueId: 6,  status:"OPEN"},
-	  {uniqueId: 7,  status:"PENDING"},
-	  {uniqueId: 8,  status:"PENDING"},
-	  {uniqueId: 10, status:"BLOCKED"},
-	  {uniqueId: 12, status:"BLOCKED"},
-	  {uniqueId: 11, status:"OPEN"},
-	  {uniqueId: 9,  status:"CLOSED"}
-	]
+		  {uniqueId: 3,  status:"PENDING"},
+		  {uniqueId: 4,  status:"BLOCKED"},
+		  {uniqueId: 5,  status:"CLOSED"},
+		  {uniqueId: 6,  status:"OPEN"},
+		  {uniqueId: 7,  status:"PENDING"},
+		  {uniqueId: 8,  status:"PENDING"},
+		  {uniqueId: 10, status:"BLOCKED"},
+		  {uniqueId: 12, status:"BLOCKED"},
+		  {uniqueId: 11, status:"OPEN"},
+		  {uniqueId: 9,  status:"CLOSED"}
+		]
       };
 
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init4(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
         // Define the comparator function for status.
         sortStore.comparatorMap = {};
         sortStore.comparatorMap["status"] = function(a, b){
@@ -933,10 +928,7 @@ Demonstrating custom sorting
         }
         // Link the click event of the button to driving the fetch.
         dojo.connect(button4, "onClick", getItems );
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init4);
-    </script>
+      });
 
   .. html ::
 

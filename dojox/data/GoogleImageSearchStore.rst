@@ -47,7 +47,6 @@ The pattern of using the GoogleImageSearchStore is
 
 .. js ::
  
- <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore");
   var store = new dojox.data.GoogleImageSearchStore();
 
@@ -74,7 +73,6 @@ The pattern of using the GoogleImageSearchStore is
     onComplete: callbackFunction,
     onError: onErrorFunction
   });
- </script>
 
 
 
@@ -88,7 +86,6 @@ Programmatic example
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore");
 
     function doSearch(){
@@ -139,7 +136,6 @@ Programmatic example
       console.log("called fetch with query", query);
 
     }
-    </script>
 
   .. html ::
 

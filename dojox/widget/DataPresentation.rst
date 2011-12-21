@@ -28,33 +28,33 @@ This example uses the following sample data, used to define the chart title, foo
 .. js ::
      
  var jsondata0 = {
-	"title"  : "Softdrink Sales (2007)",
-	"footer" : "North America only",
-	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [
-		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
-		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
-		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
-		{ "legend" : "Ginger ale", 	"values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
-		{ "legend" : "Creme soda", 	"values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
-		{ "legend" : "Orangeade", 	"values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
-		{ "legend" : "Diet lemonade", 	"values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
-		{ "legend" : "Shandy", 		"values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
-		]
-	};
+    "title"  : "Softdrink Sales (2007)",
+    "footer" : "North America only",
+    "range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+    "series" : [
+        { "legend" : "Cola",         "values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
+        { "legend" : "Lemonade",     "values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
+        { "legend" : "Dandelion",    "values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
+        { "legend" : "Ginger ale",     "values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
+        { "legend" : "Creme soda",     "values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
+        { "legend" : "Orangeade",     "values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
+        { "legend" : "Diet lemonade",     "values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
+        { "legend" : "Shandy",         "values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
+        ]
+    };
 
 'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
 .. js ::
  
  var makeseries = function(data){
-	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
-       		{ datapoints: "series[0].values", namefield: "series[0].legend" },
-       		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
-		{ datapoints: "series[2].values", namefield: "series[2].legend" },
-       		{ datapoints: "series[3].values", namefield: "series[3].legend" }
-      		];
-	}
+    return[ { datapoints: "range", name: "Month", type: "range", chart: false },
+               { datapoints: "series[0].values", namefield: "series[0].legend" },
+               { datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
+        { datapoints: "series[2].values", namefield: "series[2].legend" },
+               { datapoints: "series[3].values", namefield: "series[3].legend" }
+              ];
+    }
 
 
 Finally, create a DataPresentation object using the above data and series objects.
@@ -65,20 +65,20 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
  dojo.require("dojox.widget.DataPresentation");
  dojo.require("dojox.charting.themes.Distinctive");
 
-	var dp;
+    var dp;
 
-	dojo.ready(function(){
+    dojo.ready(function(){
 
-	dp = new dojox.widget.DataPresentation("chartdiv", {
-		type: "chart",
-		chartType: "ClusteredColumns",
-		data: jsondata0,
-		series: makeseries(jsondata0),
-        	legendNode: "legenddiv",
+    dp = new dojox.widget.DataPresentation("chartdiv", {
+        type: "chart",
+        chartType: "ClusteredColumns",
+        data: jsondata0,
+        series: makeseries(jsondata0),
+            legendNode: "legenddiv",
                 animate: true,
-        	theme: "dojox.charting.themes.Distinctive"
-		});
-	});
+            theme: "dojox.charting.themes.Distinctive"
+        });
+    });
  
 
 .. html ::
@@ -97,51 +97,49 @@ fig 1.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.widget.DataPresentation");
       dojo.require("dojox.charting.themes.Distinctive");
 
       var jsondata0 = {
-	"title"  : "Softdrink Sales (2007)",
-	"footer" : "North America only",
-	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [
-		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
-		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
-		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
-		{ "legend" : "Ginger ale", 	"values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
-		{ "legend" : "Creme soda", 	"values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
-		{ "legend" : "Orangeade", 	"values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
-		{ "legend" : "Diet lemonade", 	"values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
-		{ "legend" : "Shandy", 		"values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
-		]
-	};
+        "title"  : "Softdrink Sales (2007)",
+        "footer" : "North America only",
+        "range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+        "series" : [
+            { "legend" : "Cola",         "values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
+            { "legend" : "Lemonade",     "values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
+            { "legend" : "Dandelion",    "values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
+            { "legend" : "Ginger ale",     "values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
+            { "legend" : "Creme soda",     "values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
+            { "legend" : "Orangeade",     "values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
+            { "legend" : "Diet lemonade",     "values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
+            { "legend" : "Shandy",         "values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
+            ]
+        };
 
       var makeseries = function(data){
-	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
-       		{ datapoints: "series[0].values", namefield: "series[0].legend" },
-       		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
-		{ datapoints: "series[2].values", namefield: "series[2].legend" },
-       		{ datapoints: "series[3].values", namefield: "series[3].legend" }
-      		];
-	}
+        return[ { datapoints: "range", name: "Month", type: "range", chart: false },
+                { datapoints: "series[0].values", namefield: "series[0].legend" },
+                { datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
+            { datapoints: "series[2].values", namefield: "series[2].legend" },
+                { datapoints: "series[3].values", namefield: "series[3].legend" }
+                ];
+      }
 
 
       var dp;
 
       dojo.ready(function(){
 
-      dp = new dojox.widget.DataPresentation("chartdiv", {
-		type: "chart",
-		chartType: "ClusteredColumns",
-		data: jsondata0,
-		series: makeseries(jsondata0),
-        	legendNode: "legenddiv",
-                animate: true,
-        	theme: "dojox.charting.themes.Distinctive"
-		});
-	});
-    </script>
+          dp = new dojox.widget.DataPresentation("chartdiv", {
+            type: "chart",
+            chartType: "ClusteredColumns",
+            data: jsondata0,
+            series: makeseries(jsondata0),
+            legendNode: "legenddiv",
+            animate: true,
+            theme: "dojox.charting.themes.Distinctive"
+          });
+    });
 
   .. html ::
 
@@ -153,41 +151,43 @@ fig 1.
 
 
 
-		
+        
 
 Example 2 - Chart and DataGrid
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- To add a DataGrid to the above chart simply add the 'gridNode' property and target it at the relevant HTML element.
+To add a DataGrid to the above chart simply add the 'gridNode' property and target it at the relevant HTML element.
 
-.. js ::
+.. code-example ::
+
+  .. js ::
  
- dojo.require("dojox.widget.DataPresentation");
- dojo.require("dojox.charting.themes.Distinctive");
- 
-  	var dp;
+    dojo.require("dojox.widget.DataPresentation");
+    dojo.require("dojox.charting.themes.Distinctive");
 
-	dojo.ready(function(){
+    var dp;
 
-	dp = new dojox.widget.DataPresentation("chartdiv", {
-		type: "chart",
-		chartType: "StackedColumns",
-		data: jsondata0,
-		series: makeseries(jsondata0),
-       		legendNode: "legenddiv",
-	        gridNode: "griddiv",
-       		theme: "dojox.charting.themes.Distinctive"
-		});
-	});
+    dojo.ready(function(){
 
-.. html ::
+        dp = new dojox.widget.DataPresentation("chartdiv", {
+            type: "chart",
+            chartType: "StackedColumns",
+            data: jsondata0,
+            series: makeseries(jsondata0),
+                   legendNode: "legenddiv",
+                gridNode: "griddiv",
+                   theme: "dojox.charting.themes.Distinctive"
+        });
+    });
+
+  .. html ::
   
 
- <div id="legenddiv"></div>
- <div id="chartdiv" style="width: 650px; height: 300px;"></div>
-     	<div style="width:500px; height:300px;">
- <div id="griddiv"></div>
- </div>
+    <div id="legenddiv"></div>
+    <div id="chartdiv" style="width: 650px; height: 300px;"></div>
+         <div style="width:500px; height:300px;">
+    <div id="griddiv"></div>
+    </div>
  
 
 fig 2.
@@ -199,52 +199,49 @@ fig 2.
 
   .. js ::
 
-    <script type="text/javascript">
       dojo.require("dojox.widget.DataPresentation");
       dojo.require("dojox.charting.themes.Distinctive");
 
       var jsondata0 = {
-	"title"  : "Softdrink Sales (2007)",
-	"footer" : "North America only",
-	"range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-	"series" : [
-		{ "legend" : "Cola", 		"values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
-		{ "legend" : "Lemonade", 	"values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
-		{ "legend" : "Dandelion",	"values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
-		{ "legend" : "Ginger ale", 	"values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
-		{ "legend" : "Creme soda", 	"values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
-		{ "legend" : "Orangeade", 	"values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
-		{ "legend" : "Diet lemonade", 	"values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
-		{ "legend" : "Shandy", 		"values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
-		]
-	};
+        "title"  : "Softdrink Sales (2007)",
+        "footer" : "North America only",
+        "range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+        "series" : [
+            { "legend" : "Cola",         "values" : [  35, 37,  44, 41, 43,  57,  62,  69,  74,  86, 101, 124 ] },
+            { "legend" : "Lemonade",     "values" : [ 122, 99, 111, 98, 82,  77,  76,  67,  72,  75,  66,  67 ] },
+            { "legend" : "Dandelion",    "values" : [  99, 98,  98, 99, 97, 102, 100,  99, 102,  97,  95,  98 ] },
+            { "legend" : "Ginger ale",     "values" : [  54, 59,  76, 84, 98, 110, 126, 121, 115, 109, 104,  99 ] },
+            { "legend" : "Creme soda",     "values" : [  44, 58,  44, 36, 48,  54,  34,  38,  24,  56,  48,  34 ] },
+            { "legend" : "Orangeade",     "values" : [  45, 25,  45, 31, 42,  33,  49,  34,  46,  25,  44,  37 ] },
+            { "legend" : "Diet lemonade",     "values" : [  34, 17,  38, 13, 33,  14,  22,  39,  26,  17,  35,  21 ] },
+            { "legend" : "Shandy",         "values" : [  14, 23,  16, 32, 12,  24,  18,  25,  13,  33,  15,  25 ] }
+            ]
+      };
 
       var makeseries = function(data){
-	return[ { datapoints: "range", name: "Month", type: "range", chart: false },
-       		{ datapoints: "series[0].values", namefield: "series[0].legend" },
-       		{ datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
-		{ datapoints: "series[2].values", namefield: "series[2].legend" },
-       		{ datapoints: "series[3].values", namefield: "series[3].legend" }
-      		];
-	}
+        return[ { datapoints: "range", name: "Month", type: "range", chart: false },
+                { datapoints: "series[0].values", namefield: "series[0].legend" },
+                { datapoints: "series[1].values", name: "Lemonade (fizzy)"      },
+                { datapoints: "series[2].values", namefield: "series[2].legend" },
+               { datapoints: "series[3].values", namefield: "series[3].legend" }
+              ];
+      };
 
 
       var dp;
 
       dojo.ready(function(){
 
-	dp = new dojox.widget.DataPresentation("chartdiv", {
-		type: "chart",
-		chartType: "StackedColumns",
-		data: jsondata0,
-		series: makeseries(jsondata0),
-       		legendNode: "legenddiv",
-	        gridNode: "griddiv",
-       		theme: "dojox.charting.themes.Distinctive"
-		});
-	});
-
-    </script>
+        dp = new dojox.widget.DataPresentation("chartdiv", {
+            type: "chart",
+            chartType: "StackedColumns",
+            data: jsondata0,
+            series: makeseries(jsondata0),
+                   legendNode: "legenddiv",
+                gridNode: "griddiv",
+                   theme: "dojox.charting.themes.Distinctive"
+        });
+      });
 
   .. html ::
 
@@ -323,19 +320,19 @@ To see how the widget can cope with different data shapes, switch from jsondata0
 
  dojo.ready(function(){
 
- dp = new dojox.widget.DataPresentation("chartdiv", {
-  type: "chart",
-  chartType: "StackedBars",
-  data: jsondata1,
-  refreshInterval: 3000,
-  series: makeseries(jsondata1),
-  legendNode: "legenddiv",
-  legendVertical: true,
-  gridNode: "griddiv",
-  titleNode: "title",
-  footerNode: "footer",
-  theme: "dojox.charting.themes.Distinctive"
-  });
+     dp = new dojox.widget.DataPresentation("chartdiv", {
+          type: "chart",
+          chartType: "StackedBars",
+          data: jsondata1,
+          refreshInterval: 3000,
+          series: makeseries(jsondata1),
+          legendNode: "legenddiv",
+          legendVertical: true,
+          gridNode: "griddiv",
+          titleNode: "title",
+          footerNode: "footer",
+          theme: "dojox.charting.themes.Distinctive"
+     });
  });
 
 .. html ::
@@ -359,7 +356,7 @@ To see how the widget can cope with different data shapes, switch from jsondata0
   </td>
 
  </tr></table>
-	
+    
  <div style="width:400px; height:300px; padding-left: 100px;">
   <div id="griddiv"></div>
  </div>
@@ -380,15 +377,15 @@ store: Object
 query: String
 ~~~~~~~~~~~~~
  Query to apply to the Dojo data store used to supply data to be presented.
-		
+        
 queryOptions: String
 ~~~~~~~~~~~~~~~~~~~~
  Query options to apply to the Dojo data store used to supply data to be presented.
-		
+        
 data: Object
 ~~~~~~~~~~~~
  Data to be presented. If supplied on construction this property will override any value supplied for the 'store' property.
-		
+        
 url: String
 ~~~~~~~~~~~
  URL to fetch data from in JSON format. If supplied on construction this property will override any values supplied for the 'store' and/or 'data' properties.
@@ -396,11 +393,11 @@ url: String
 urlError: function
 ~~~~~~~~~~~~~~~~~~
  A function to be called if an error is encountered when fetching data from the supplied URL. This function will be supplied with two parameters exactly as the error function supplied to the dojo.xhrGet function. This function may be called multiple times if a refresh interval has been supplied.
-		
+        
 refreshInterval: Number
 ~~~~~~~~~~~~~~~~~~~~~~~
  The time interval in milliseconds after which the data supplied via the 'data' property or fetched from a URL via the 'url' property should be regularly refreshed. This property is ignored if neither the 'data' nor 'url' property has been supplied. If the refresh interval is zero, no regular refresh is done.
-		
+        
 refreshIntervalPending:
 ~~~~~~~~~~~~~~~~~~~~~~~
  The JavaScript set interval currently in progress, if any
@@ -428,17 +425,17 @@ series: Array
   grid: true if the series should be included in a data grid presentation (default: true)
 
   gridformatter: an optional formatter to use for this series in the data grid
-		
- a call-back function may alternatively be supplied. The function takes a single parameter, which will be the data (from the 'data' field or      loaded from the value in the 'url' field), and should return the array of objects describing the data series to be included in the data 	      presentation. This enables the series structures to be built dynamically after data load, and rebuilt if necessary on data refresh. The call-back       function will be called each time new data is set, loaded or refreshed. A call-back function cannot be used if the data is supplied directly 	      from a Dojo data store.
+        
+ a call-back function may alternatively be supplied. The function takes a single parameter, which will be the data (from the 'data' field or      loaded from the value in the 'url' field), and should return the array of objects describing the data series to be included in the data           presentation. This enables the series structures to be built dynamically after data load, and rebuilt if necessary on data refresh. The call-back       function will be called each time new data is set, loaded or refreshed. A call-back function cannot be used if the data is supplied directly           from a Dojo data store.
 
 
 
-		
+        
 type: String
 ~~~~~~~~~~~~
  The type of presentation to be applied at the DOM attach point. This can be 'chart', 'legend', 'grid', 'title', 'footer'.
  The default type is 'chart'.
-		
+        
 chartType: String
 ~~~~~~~~~~~~~~~~~
  The type of chart to display. This can be 'clusteredbars', 'areas', 'stackedcolumns', 'stackedbars', 'stackedareas', 'lines', 'hybrid'.
@@ -456,7 +453,7 @@ labelMod: Integer
 ~~~~~~~~~~~~~~~~~
  The frequency of label annotations to be included on the independent axis. 1=every label.
  The default is 1.
-		
+        
 legendVertical: Boolean
 ~~~~~~~~~~~~~~~~~~~~~~~
  true if the legend should be rendered vertically.
@@ -465,35 +462,35 @@ legendVertical: Boolean
 theme: String|Theme
 ~~~~~~~~~~~~~~~~~~~
  A theme to use for the chart, or the name of a theme.
-		
+        
 chartNode: String|DomNode
 ~~~~~~~~~~~~~~~~~~~~~~~~~
  An optional DOM node or the id of a DOM node to receive a chart presentation of the data. Supply only when a chart is required and the type is not 'chart'; when the type is 'chart' this property will be set to the widget attach point.
-		
+        
 legendNode: String|DomNode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  An optional DOM node or the id of a DOM node to receive a chart legend for the data. Supply only when a legend is required and the type is not legend'; when the type is 'legend' this property will be set to the widget attach point.
-		
+        
 gridNode: String|DomNode
 ~~~~~~~~~~~~~~~~~~~~~~~~
  An optional DOM node or the id of a DOM node to receive a grid presentation of the data. Supply only when a grid is required and the type is not 'grid'; when the type is 'grid' this property will be set to the widget attach point.
-		
+        
 titleNode: String|DomNode
 ~~~~~~~~~~~~~~~~~~~~~~~~~
- An optional DOM node or the id of a DOM node to receive a title for the data. Supply only when a title is 		      required and the type is not 'title'; when the type is 'title' this property will be set to the widget attach point.
-		
+ An optional DOM node or the id of a DOM node to receive a title for the data. Supply only when a title is               required and the type is not 'title'; when the type is 'title' this property will be set to the widget attach point.
+        
 footerNode: String|DomNode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  An optional DOM node or the id of a DOM node to receive a footer presentation of the data. Supply only when a footer is required and the type is not 'footer'; when the type is 'footer' this property will be set to the widget attach point.
-		
+        
 chartWidget: Object
 ~~~~~~~~~~~~~~~~~~~
  The chart widget, if any
-		
+        
 legendWidget: Object
 ~~~~~~~~~~~~~~~~~~~~
  The legend widget, if any
-		
+        
 gridWidget: Object
 ~~~~~~~~~~~~~~~~~~
  The grid widget, if any

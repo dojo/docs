@@ -38,12 +38,12 @@ Programmatic example
   
   .. js ::
 
-    <script>
       dojo.require("dojox.gfx");
       dojo.require("dojox.gfx.utils");
       dojo.require("dijit.form.Button");
    
-      function init(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
  
          // Create our surface.
          var node = dojo.byId("gfxObject");
@@ -60,10 +60,7 @@ Programmatic example
             // Try to make it pretty-print
             dojo.byId("json").innerHTML = dojo.toJson(dojo.fromJson(json), true);
          });
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init);
-    </script>
+      });
 
   .. html ::
 

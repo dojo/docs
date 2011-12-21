@@ -142,11 +142,10 @@ Example: Playing with Easing
 
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.fx.easing");
-      function setupMove(){
+      dojo.ready(function(){
          // Function linked to the button to trigger the fade.
          function moveIt(){
 			// Set initial state and get the easing from the dropdown
@@ -164,9 +163,7 @@ Example: Playing with Easing
 			}
          }
          dojo.connect(dijit.byId("moveButton"), "onClick", moveIt);
-      }
-      dojo.ready(setupMove);
-    </script>
+      });
 
   .. html ::
 

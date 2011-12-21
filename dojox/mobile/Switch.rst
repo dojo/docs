@@ -90,9 +90,8 @@ Arc Shape 2
 Custom Color
 ------------
 
-.. html ::
+.. css ::
 
-  <style>
   .color1 .mblSwitchBgLeft {
       background: -webkit-gradient(linear, left top, left bottom, from(#28B159), to(#75FBAC), color-stop(0.5, #3FEB84), color-stop(0.5, #4CEE8E));
   }
@@ -102,9 +101,9 @@ Custom Color
   .color1 .mblSwitchKnob {
       background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#FAFAFA), color-stop(0.5, #BBBBBB), color-stop(0.5, #CACACA));
   }
-  </style>
 
-  ...
+.. html ::
+
   <div class="mblSwRoundShape1 color1" data-dojo-type="dojox.mobile.Switch"></div>
 
 .. image :: Switch-CustomColor.png

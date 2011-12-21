@@ -161,7 +161,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
   
   .. js ::
 
-      function getLicense(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainer");
 
@@ -185,8 +185,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicense);
+      });
 
   .. html ::
 
@@ -201,7 +200,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
   
   .. js ::
 
-      function getLicensePreventCache(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainerPreventCache");
 
@@ -226,8 +225,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicensePreventCache);
+      });
 
 
   .. html ::
@@ -242,7 +240,7 @@ Example 3: dojo.xhrGet call that errors.
   
   .. js ::
 
-      function callError(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("errorContainer");
 
@@ -262,8 +260,7 @@ Example 3: dojo.xhrGet call that errors.
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
 
-      }
-      dojo.ready(callError);
+      });
 
 
   .. html ::
@@ -278,8 +275,7 @@ Example 4: Getting result from Deferred return value
   
   .. js ::
 
-    <script>
-      function getLicenseAlternateCB(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseAlternateCB");
         
@@ -310,10 +306,7 @@ Example 4: Getting result from Deferred return value
             }
         );
 
-      }
-      dojo.ready(getLicenseAlternateCB);
-
-    </script>
+      });
 
   .. html ::
 
@@ -328,7 +321,7 @@ Example 5: dojo.xhrGet call with 'content' (query params).
   
   .. js ::
 
-      function getLicenseQueryParams(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseQueryParams");
 
@@ -358,8 +351,7 @@ Example 5: dojo.xhrGet call with 'content' (query params).
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicenseQueryParams);
+      });
 
   .. html ::
 
@@ -372,7 +364,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
   
   .. js ::
 
-      function getLicenseStatus(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseStatus");
 
@@ -391,8 +383,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicenseStatus);
+      });
 
   .. html ::
 
@@ -400,13 +391,13 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
 
 Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
 -------------------------------------------------------------------------------
-*Note: This ust shows using switch in an error handler to display some message based on a particular failure.*
+*Note: This just shows using switch in an error handler to display some message based on a particular failure.*
 
 .. code-example ::
   
   .. js ::
 
-      function getLicenseErrorStatus(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatus");
 
@@ -439,8 +430,7 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicenseErrorStatus);
+      });
 
   .. html ::
 
@@ -456,7 +446,7 @@ Example 8: dojo.xhrGet call with headers
   
   .. js ::
 
-      function getLicenseHeaders(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseHeaders");
 
@@ -486,8 +476,7 @@ Example 8: dojo.xhrGet call with headers
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicenseHeaders);
+      });
 
   .. html ::
 
@@ -502,7 +491,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
   
   .. js ::
 
-      function getLicenseErrorStatusWithHandle(){
+      dojo.ready(function(){
         // Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseErrorStatusWithHandle");
 
@@ -535,8 +524,7 @@ Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
 
         // Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);
-      }
-      dojo.ready(getLicenseErrorStatusWithHandle);
+      });
 
   .. html ::
 

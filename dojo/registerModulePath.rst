@@ -109,8 +109,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 .. js ::
 
-
-    <script type="text/javascript" charset="utf-8">
       require(['dojo/_base/kernel', 'dojo/ready', 'dojo/parser', 'dojo/_base/loader'], function(dojo, ready, parser){
 
         // Paths default to dojo.baseUrl ("scripts/dojotoolkit/dojo/"),
@@ -131,8 +129,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 .. js ::
 
-
-    <script type="text/javascript" charset="utf-8">
       // Paths default to dojo.baseUrl ("scripts/dojotoolkit/dojo/"),
       // so we point any module beginning with "my" to the path "scripts/my"
       dojo.registerModulePath('my', '../../my');

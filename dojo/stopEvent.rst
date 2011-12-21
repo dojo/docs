@@ -10,9 +10,8 @@ Prevents propagation and clobbers the default action of the passed event. The sa
 Dojo 1.7 (AMD)
 --------------
 
-.. html ::
+.. js ::
 
-    <script type="text/javascript">
     require(["dojo/ready", "dojo/dom", "dojo/_base/connect", "dojo/_base/event"], function(ready, dom, connect, event){
         ready(function(){
             var node = dom.byId("delete");
@@ -22,16 +21,17 @@ Dojo 1.7 (AMD)
             });
         });
     });
-    </script>
+
+.. html ::
+
     <a href="/delete" id="delete">Delete</a>
 
 
 Dojo < 1.7
 ----------
 
-.. html ::
+.. js ::
 
-    <script type="text/javascript">
     dojo.addOnLoad(function(){
         var node = dojo.byId("delete");
         dojo.connect(node, "onclick", function(e){
@@ -39,7 +39,9 @@ Dojo < 1.7
             // some code custom execution
         });
     });
-    </script>
+
+.. html ::
+
     <a href="/delete" id="delete">Delete</a>
 
 

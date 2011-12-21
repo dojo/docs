@@ -35,10 +35,9 @@ Example 1:  Wipe out a dom node
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
-      function basicWipeinSetup(){
+      dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
 			dojo.style("basicWipeNode", "height", "");
@@ -49,9 +48,7 @@ Example 1:  Wipe out a dom node
             dojo.fx.wipeOut(wipeArgs).play();
          }
          dojo.connect(dijit.byId("basicWipeButton"), "onClick", wipeIt);
-      }
-      dojo.ready(basicWipeinSetup);
-    </script>
+      });
 
   .. html ::
 
@@ -68,10 +65,9 @@ Example 2:  Wipe out a dom node with a custom duration
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
-      function basicWipeinSetup1(){
+      dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
 			 dojo.style("basicWipeNode1", "height", "");
@@ -83,9 +79,7 @@ Example 2:  Wipe out a dom node with a custom duration
             dojo.fx.wipeOut(wipeArgs).play();
          }
          dojo.connect(dijit.byId("basicWipeButton1"), "onClick", wipeIt);
-      }
-      dojo.ready(basicWipeinSetup1);
-    </script>
+      });
 
   .. html ::
 
@@ -103,11 +97,10 @@ Example 3:  Wipe out a dom node with an easing function
   
   .. js ::
 
-    <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       dojo.require("dojo.fx.easing");
-      function basicWipeinSetup2(){
+      dojo.ready(function(){
          // Function linked to the button to trigger the wipe.
          function wipeIt(){
 			 dojo.style("basicWipeNode2", "height", "");
@@ -120,8 +113,7 @@ Example 3:  Wipe out a dom node with an easing function
             dojo.fx.wipeOut(wipeArgs).play();
          }
          dojo.connect(dijit.byId("basicWipeButton2"), "onClick", wipeIt);
-      }
-      dojo.ready(basicWipeinSetup2);
+      });
     </script>
 
   .. html ::

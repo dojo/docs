@@ -23,7 +23,6 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 
   .. js ::
 
-    <script type="text/javascript">
     dojo.require("dijit.form.TextBox"); // Those widgets are only included to make the example look nice
     dojo.require("dijit.form.Button"); // Those widgets are only included to make the example look nice
 
@@ -49,7 +48,6 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 			});
 		});
     });
-    </script>
 
   The html is a just a simple form to enter you name and message to send
 

@@ -53,16 +53,22 @@ Examples
 Using a dojo.store
 ------------------
 
-.. html ::
+.. code-example ::
 
-  <script type="text/javascript">
+  .. js ::
+
+		dojo.require("dojo.store.Memory");
+		dojo.require("dojox.mobile.ComboBox");
+
         colorMemoryStore = new dojo.store.Memory({ idProperty: "name", data: [
                 { name: "Red" },
                 { name: "Blue" },
                 { name: "Yellow" }
         ]});
-  </script>
-  <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='store:colorMemoryStore, value:"Blue"'>
+
+  .. html ::
+
+      <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='store:colorMemoryStore, value:"Blue"'>
 
 .. image :: ComboBoxStore2.png
 
@@ -70,14 +76,21 @@ Using a dojo.store
 Using inline OPTION tags
 ------------------------
 
-.. html ::
+.. code-example ::
 
-  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruitDataList"' >
-        <option>Apple</option>
-        <option selected>Banana</option>
-        <option>Orange</option>
-  </select>
-  <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
+  .. js ::
+
+     dojo.require("dijit.form.DataList");
+     dojo.require("dojox.mobile.ComboBox");
+
+  .. html ::
+
+	  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruitDataList"' >
+			<option>Apple</option>
+			<option selected>Banana</option>
+			<option>Orange</option>
+	  </select>
+	  <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
 
 .. image :: ComboBoxDataList.png
 

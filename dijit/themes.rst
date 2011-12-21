@@ -821,13 +821,11 @@ Using multiple themes
 To use multiple themes on the same page, assuming Tundra is your base theme,
 include the additional theme CSS files into your document, like:
 
-.. html ::
+.. css ::
 
-  <style type="text/css">
     @import "dojo/dijit/themes/nihilo/nihilo.css";
     @import "dojo/dijit/themes/claro/claro.css";
     @import "dojo/dojo/resources/dojo.css"
-  </style>
 
 Each themeX.css file(s) will define rules like:
 

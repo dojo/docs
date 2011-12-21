@@ -54,22 +54,22 @@ optionally contains a query. e.g.
 
 .. js ::
   
-  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
-  <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
-  <script type="text/javascript">
-     dojo.ready(function(){
-     // Define the request, saying that 20 records should be fetched at a time,
-     // and to start at record 0
-     
-     var request= {count:20, start:0};
-     // Tell the widget to request the "thumb" parameter, as different
-     // stores may use different parameter names
-     var itemNameMap = {imageThumbAttr: "thumb"};
+    dojo.ready(function(){
+        // Define the request, saying that 20 records should be fetched at a time,
+        // and to start at record 0
+        
+        var request= {count:20, start:0};
+        // Tell the widget to request the "thumb" parameter, as different
+        // stores may use different parameter names
+        var itemNameMap = {imageThumbAttr: "thumb"};
+        
+        dijit.byId('picker1').setDataStore(imageItemStore, request, itemNameMap);
+    });
 
-     dijit.byId('picker1').setDataStore(imageItemStore, request, itemNameMap);
-   });
+.. html ::
 
-  </script>
+    <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
+    <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
 
 
 Using a Vertical Layout
@@ -79,7 +79,7 @@ To make the ThumbnailPicker display itself vertically, set the isHorizontal attr
 horizontal, either omit the isHorizontal attribute, or set it to "true", e.g.
 
 
-.. js ::
+.. html ::
  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="isHorizontal:false"> </div>
 
@@ -92,7 +92,7 @@ By default it is false. When hyperlinks are enabled, by default the URL is opene
 the link in the current window, set the hyperlinkTarget attribute to "this". e.g.
 
 
-.. js ::
+.. html ::
  
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useHyperlink:true, hyperlinkTarget:this"> </div>
 
@@ -108,7 +108,7 @@ To enable the load state notifier, set the useLoadNotifier to "true". By default
 really makes sense to use it in combination with other widgets or elements on a page. e.g.
 
 
-.. js ::
+.. html ::
   
   <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useLoadNotifier:true"> </div>
 
@@ -140,36 +140,34 @@ of settings, and uses the FlickrRestStore data store.
 
   .. js ::
 
-        <script type="text/javascript">
         dojo.require("dojo.parser");
         dojo.require("dojox.image.ThumbnailPicker");
         dojo.require("dojox.data.FlickrRestStore");
 
         dojo.ready(function(){
-        // Create a new FlickrRestStore
-        var flickrRestStore = new dojox.data.FlickrRestStore();
-         
-        // Create a request object, containing a query with the
-        // userid, apikey and (optional) sort data.
-        // Extra query parameters 'tags' and 'tag_mode' are also
-        // used to further filter the results
-        var req = {
-		   query: {
-			   userid: "44153025@N00",
-			   apikey: "8c6803164dbc395fb7131c9d54843627",
-			   sort: [ {descending: true }],
-			   tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
-			   tag_mode: "any"
-		   },
-		   start: 0, // start at record 0
-		   count: 20 // request 20 records each time a request is made
-        };
-         
-        // Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
-        dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
+            // Create a new FlickrRestStore
+            var flickrRestStore = new dojox.data.FlickrRestStore();
+
+            // Create a request object, containing a query with the
+            // userid, apikey and (optional) sort data.
+            // Extra query parameters 'tags' and 'tag_mode' are also
+            // used to further filter the results
+            var req = {
+               query: {
+                   userid: "44153025@N00",
+                   apikey: "8c6803164dbc395fb7131c9d54843627",
+                   sort: [ {descending: true }],
+                   tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
+                   tag_mode: "any"
+               },
+               start: 0, // start at record 0
+               count: 20 // request 20 records each time a request is made
+            };
+
+            // Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
+            dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
         });
 
-        </script>
 
   .. html ::
 
@@ -182,9 +180,7 @@ of settings, and uses the FlickrRestStore data store.
 
   .. css ::
 
-      <style type="text/css">
-         @import "{{ baseUrl }}dojox/image/resources/image.css";
-      <style>
+       @import "{{ baseUrl }}dojox/image/resources/image.css";
 
 
 See also

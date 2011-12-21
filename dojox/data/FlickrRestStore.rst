@@ -195,14 +195,14 @@ Listing nature pictures
   
   .. js ::
 
-    <script>
       dojo.require("dojox.data.FlickrRestStore");
       dojo.require("dijit.form.Button");
 
       // This function performs some basic dojo initialization. In this case it connects the button
       // onClick to a function which invokes the fetch(). The fetch function queries for all items
       // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init(){
+      // Set the init function to run when dojo loading and page parsing has completed.
+      dojo.ready(function(){
          // Function to perform a fetch on the datastore when a button is clicked
          function getAllItems(){
 
@@ -241,10 +241,7 @@ Listing nature pictures
          }
          // Link the click event of the button to driving the fetch.
          dojo.connect(button, "onClick", getAllItems);
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init);
-    </script>
+      });
 
   .. html ::
 

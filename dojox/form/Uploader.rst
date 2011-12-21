@@ -244,9 +244,8 @@ Examples
 
 This example shows how to use Flash and IFrame plugins for both cases (browsers with and without flash).
 
-.. html ::
+.. js ::
  
- <script type="text/javascript">
    dojo.require("dojox.form.Uploader");
    dojo.require("dojox.embed.Flash");
    if(dojox.embed.Flash.available){
@@ -261,6 +260,7 @@ This example shows how to use Flash and IFrame plugins for both cases (browsers 
        uploadOnSelect: true,
        url: "UploadFile.php",
      }, "uploader");
- </script>
+
+.. html ::
 
  <div id="uploader"></div>
