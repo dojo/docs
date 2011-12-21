@@ -49,6 +49,7 @@ Declarative example
         // Load the parser, we'll use the declarative data binding syntax (ref).
         dojo.require("dojo.parser");
         dojo.require("dijit.form.Textarea");
+        dojo.require("dojox.mvc");
         dojo.require("dojox.mvc.StatefulModel");
         dojo.require("dojox.mvc.Generate");
 
