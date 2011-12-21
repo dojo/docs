@@ -98,7 +98,7 @@ Declarative example
             The UI can be customized for each iteration using properties such as
             ${this.index} for the iteration index.
         -->
-        <div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'results'">
+        <div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'Results'">
             <div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
                 <label class="cell" for="nameInput${this.index}">Name:</label>
                 <input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}"
