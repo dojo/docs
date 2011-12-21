@@ -31,35 +31,34 @@ HTML markup usage sample
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.Menu");
-        dojo.require("dojo.data.ItemFileWriteStore");
-    
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{name: 'Column 1', field: 'id'},
-		{name: 'Column 2', field: 'col2'},
-		{name: 'Column 3', field: 'col3', width: "230px"},
-		{name: 'Column 4', field: 'col4'}
-	  ]];
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.Menu");
+      dojo.require("dojo.data.ItemFileWriteStore");
+
+      dojo.ready(function(){
+          /*set up data store*/
+          var data = {
+            identifier: 'id',
+            items: []
+          };
+          var data_list = [
+            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+          ];
+          var rows = 60;
+          for(var i=0, l=data_list.length; i<rows; i++){
+            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          }
+          var store = new dojo.data.ItemFileWriteStore({data: data});
+        
+          /*set up layout*/
+          var layout = [[
+            {name: 'Column 1', field: 'id'},
+            {name: 'Column 2', field: 'col2'},
+            {name: 'Column 3', field: 'col3', width: "230px"},
+            {name: 'Column 4', field: 'col4'}
+          ]];
 
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
@@ -75,53 +74,50 @@ HTML markup usage sample
 
           /* Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
-	<div id="gridDiv">
-		<div data-dojo-type="dijit.Menu" id="headerMenu" style="display: none;">
-			<div data-dojo-type="dijit.MenuItem">Header Menu Item 1</div>
-			<div data-dojo-type="dijit.MenuItem">Header Menu Item 2</div>
-			<div data-dojo-type="dijit.MenuItem">Header Menu Item 3</div>
-			<div data-dojo-type="dijit.MenuItem">Header Menu Item 4</div>
-		</div>
-		<div data-dojo-type="dijit.Menu" id="rowMenu"  style="display: none;">
-			<div data-dojo-type="dijit.MenuItem">Row Menu Item 1</div>
-			<div data-dojo-type="dijit.MenuItem">Row Menu Item 2</div>
-			<div data-dojo-type="dijit.MenuItem">Row Menu Item 3</div>
-			<div data-dojo-type="dijit.MenuItem">Row Menu Item 4</div>
-		</div>
-		<div data-dojo-type="dijit.Menu" id="cellMenu"  style="display: none;">
-			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 1</div>
-			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 2</div>
-			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 3</div>
-			<div data-dojo-type="dijit.MenuItem">Cell Menu Item 4</div>
-		</div>
-		<div data-dojo-type="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
-			<div data-dojo-type="dijit.MenuItem">Action 1 for Selected Region</div>
-			<div data-dojo-type="dijit.MenuItem">Action 2 for Selected Region</div>
-			<div data-dojo-type="dijit.MenuItem">Action 3 for Selected Region</div>
-			<div data-dojo-type="dijit.MenuItem">Action 4 for Selected Region</div>
-		</div>
-	</div>
+    <div id="gridDiv">
+        <div data-dojo-type="dijit.Menu" id="headerMenu" style="display: none;">
+            <div data-dojo-type="dijit.MenuItem">Header Menu Item 1</div>
+            <div data-dojo-type="dijit.MenuItem">Header Menu Item 2</div>
+            <div data-dojo-type="dijit.MenuItem">Header Menu Item 3</div>
+            <div data-dojo-type="dijit.MenuItem">Header Menu Item 4</div>
+        </div>
+        <div data-dojo-type="dijit.Menu" id="rowMenu"  style="display: none;">
+            <div data-dojo-type="dijit.MenuItem">Row Menu Item 1</div>
+            <div data-dojo-type="dijit.MenuItem">Row Menu Item 2</div>
+            <div data-dojo-type="dijit.MenuItem">Row Menu Item 3</div>
+            <div data-dojo-type="dijit.MenuItem">Row Menu Item 4</div>
+        </div>
+        <div data-dojo-type="dijit.Menu" id="cellMenu"  style="display: none;">
+            <div data-dojo-type="dijit.MenuItem">Cell Menu Item 1</div>
+            <div data-dojo-type="dijit.MenuItem">Cell Menu Item 2</div>
+            <div data-dojo-type="dijit.MenuItem">Cell Menu Item 3</div>
+            <div data-dojo-type="dijit.MenuItem">Cell Menu Item 4</div>
+        </div>
+        <div data-dojo-type="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+            <div data-dojo-type="dijit.MenuItem">Action 1 for Selected Region</div>
+            <div data-dojo-type="dijit.MenuItem">Action 2 for Selected Region</div>
+            <div data-dojo-type="dijit.MenuItem">Action 3 for Selected Region</div>
+            <div data-dojo-type="dijit.MenuItem">Action 4 for Selected Region</div>
+        </div>
+    </div>
 
 
   .. css ::
 
-    <style type="text/css">
-        @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 43em;
-            height: 20em;
-        }
-    </style>
+    /*Grid need a explicit width/height by default*/
+    #grid {
+        width: 43em;
+        height: 20em;
+    }
 
 Javascript usage sample
 
@@ -132,104 +128,100 @@ Javascript usage sample
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.Menu");
-        dojo.require("dojo.data.ItemFileWriteStore");
+       dojo.require("dojox.grid.EnhancedGrid");
+       dojo.require("dojox.grid.enhanced.plugins.Menu");
+       dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{name: 'Column 1', field: 'id'},
-		{name: 'Column 2', field: 'col2'},
-		{name: 'Column 3', field: 'col3', width: "230px"},
-		{name: 'Column 4', field: 'col4'}
-	  ]];
+       dojo.ready(function(){
+           /*set up data store*/
+           var data = {
+             identifier: 'id',
+             items: []
+           };
+           var data_list = [
+             { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+             { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+           ];
+           var rows = 60;
+           for(var i=0, l=data_list.length; i<rows; i++){
+             data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+           }
+           var store = new dojo.data.ItemFileWriteStore({data: data});
+        
+           /*set up layout*/
+           var layout = [[
+             {name: 'Column 1', field: 'id'},
+             {name: 'Column 2', field: 'col2'},
+             {name: 'Column 3', field: 'col3', width: "230px"},
+             {name: 'Column 4', field: 'col4'}
+           ]];
 
-	   /*programmatic menus*/
-		var menusObject = {
-			headerMenu: new dijit.Menu(),
-			rowMenu: new dijit.Menu(),
-			cellMenu: new dijit.Menu(),
-			selectedRegionMenu: new dijit.Menu()
-		};
-		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 1"}));
-		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 2"}));
-		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 3"}));
-		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 4"}));
-		menusObject.headerMenu.startup();
-		
-		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 1"}));
-		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 2"}));
-		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 3"}));
-		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 4"}));
-		menusObject.rowMenu.startup();
-		
-		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 1"}));
-		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 2"}));
-		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 3"}));
-		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 4"}));
-		menusObject.cellMenu.startup();
-		
-		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 1 for Selected Region"}));
-		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 2 for Selected Region"}));
-		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 3 for Selected Region"}));
-		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 4 for Selected Region"}));
-		menusObject.selectedRegionMenu.startup();
+           /*programmatic menus*/
+            var menusObject = {
+                headerMenu: new dijit.Menu(),
+                rowMenu: new dijit.Menu(),
+                cellMenu: new dijit.Menu(),
+                selectedRegionMenu: new dijit.Menu()
+            };
+            menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 1"}));
+            menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 2"}));
+            menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 3"}));
+            menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 4"}));
+            menusObject.headerMenu.startup();
+            
+            menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 1"}));
+            menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 2"}));
+            menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 3"}));
+            menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 4"}));
+            menusObject.rowMenu.startup();
+            
+            menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 1"}));
+            menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 2"}));
+            menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 3"}));
+            menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 4"}));
+            menusObject.cellMenu.startup();
+            
+            menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 1 for Selected Region"}));
+            menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 2 for Selected Region"}));
+            menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 3 for Selected Region"}));
+            menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 4 for Selected Region"}));
+            menusObject.selectedRegionMenu.startup();
 
 
-          /* create a new grid:*/
-          var grid = new dojox.grid.EnhancedGrid({
-              id: 'grid',
-              store: store,
-              structure: layout,
-              rowSelector: '20px',
-              plugins : {menus: menusObject}},
+            /* create a new grid:*/
+            var grid = new dojox.grid.EnhancedGrid({
+                  id: 'grid',
+                  store: store,
+                  structure: layout,
+                  rowSelector: '20px',
+                  plugins : {menus: menusObject}},
             document.createElement('div'));
-
-          /* append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          /* Call startup() to render the grid*/
-          grid.startup();
-        });
-    </script>
+    
+            /* append the new grid to the div*/
+            dojo.byId("gridDiv").appendChild(grid.domNode);
+    
+            /* Call startup() to render the grid*/
+            grid.startup();
+       });
 
   .. html ::
 
-	<div id="gridDiv"></div>
+    <div id="gridDiv"></div>
 
 
   .. css ::
 
-    <style type="text/css">
-        @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 43em;
-            height: 20em;
-        }
-    </style>
+    /*Grid need a explicit width/height by default*/
+    #grid {
+        width: 43em;
+        height: 20em;
+    }
 
 Usage
 -----

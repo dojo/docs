@@ -17,7 +17,6 @@ Localized Date Field
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileReadStore");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.date.stamp");
@@ -48,7 +47,6 @@ Localized Date Field
 				formatter: formatDate	// Custom format, change the format in store.
 			}
 		];
-	</script>
 
   .. html ::
 
@@ -56,7 +54,6 @@ Localized Date Field
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
@@ -65,7 +62,6 @@ Localized Date Field
 		width: 100%;
 		height: 100%;
 	}
-    </style>
 
 Editable Localized Date Field
 ========================================================
@@ -77,7 +73,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.date.stamp");
@@ -109,7 +104,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 				editable: true			// Editable cell, will show ISO format in a text box
 			}
 		];
-	</script>
 
   .. html ::
 
@@ -117,7 +111,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
@@ -126,7 +119,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		width: 100%;
 		height: 100%;
 	}
-    </style>
 
 
 Editable Localized Date Field - use DateTextBox when editing
@@ -137,7 +129,6 @@ Editable Localized Date Field - use DateTextBox when editing
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.cells.dijit");
@@ -178,7 +169,6 @@ Editable Localized Date Field - use DateTextBox when editing
 				constraint: {formatLength: 'long'}	// Format the date value shown in DateTextBox
 			}
 		];
-	</script>
 
   .. html ::
 
@@ -186,7 +176,6 @@ Editable Localized Date Field - use DateTextBox when editing
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
@@ -195,7 +184,6 @@ Editable Localized Date Field - use DateTextBox when editing
 		width: 100%;
 		height: 100%;
 	}
-    </style>
 
 Editable Custom Format Date Field - use DateTextBox when editing
 ================================================================
@@ -205,7 +193,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.cells.dijit");
@@ -249,7 +236,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 				constraint: {datePattern: displayPattern}	// Format the date value shown in DateTextBox
 			}
 		];
-	</script>
 
   .. html ::
 
@@ -257,7 +243,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
@@ -266,7 +251,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 		width: 100%;
 		height: 100%;
 	}
-    </style>
 
 See Also
 ========

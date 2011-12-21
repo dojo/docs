@@ -28,35 +28,34 @@ Please note indirect selection is completely dependent on the selection mode of 
 
   .. js ::
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
     
-        dojo.ready(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{name: 'Column 1', field: 'id'},
-		{name: 'Column 2', field: 'col2'},
-		{name: 'Column 3', field: 'col3', width: "230px"},
-		{name: 'Column 4', field: 'col4'}
-	  ]];
+      dojo.ready(function(){
+		  /*set up data store*/
+		  var data = {
+			identifier: 'id',
+			items: []
+		  };
+		  var data_list = [
+			{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+			{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+			{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+		  ];
+		  var rows = 60;
+		  for(var i=0, l=data_list.length; i<rows; i++){
+			data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+		  }
+		  var store = new dojo.data.ItemFileWriteStore({data: data});
+
+		  /*set up layout*/
+		  var layout = [[
+			{name: 'Column 1', field: 'id'},
+			{name: 'Column 2', field: 'col2'},
+			{name: 'Column 3', field: 'col3', width: "230px"},
+			{name: 'Column 4', field: 'col4'}
+		  ]];
 
           /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
@@ -72,8 +71,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 
           /* Call startup() to render the grid*/
           grid.startup();
-        });
-    </script>
+      });
 
   .. html ::
 
@@ -81,18 +79,16 @@ Please note indirect selection is completely dependent on the selection mode of 
 
   .. css ::
 
-    <style type="text/css">
-        @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+	@import "{{baseUrl}}dojo/resources/dojo.css";
+	@import "{{baseUrl}}dijit/themes/claro/claro.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 43em;
-            height: 20em;
-        }
-    </style>
+	/*Grid need a explicit width/height by default*/
+	#grid {
+		width: 43em;
+		height: 20em;
+	}
 
 Usage
 -----
@@ -129,7 +125,7 @@ with HTML markup
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, selectionMode:'single'" ... >
   </div>
 
-with JavaScript
+with JavaScript:
     
 .. js ::
 
@@ -137,15 +133,17 @@ with JavaScript
 
 * It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
+With HTML markup:
+
 .. html ::
   
-  // with HTML markup
   <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, rowSelector:'0px'" ... />
- 
-  // with Javascript
-  <script>
+
+With JavaScript:
+
+.. js ::
+
     var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, rowSelector: "0px", ...}, dojo.byId('gridDiv'));
-  </script>
 
 
 Scenario

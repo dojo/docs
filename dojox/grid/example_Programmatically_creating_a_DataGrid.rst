@@ -9,7 +9,6 @@ This example shows how to create a simple Grid programmatically.
 
   .. js ::
 
-    <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
 
@@ -40,7 +39,6 @@ This example shows how to create a simple Grid programmatically.
             // Call startup, in order to render the grid:
             grid4.startup();
         });
-    </script>
 
   .. html ::
 

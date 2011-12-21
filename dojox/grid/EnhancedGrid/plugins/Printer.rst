@@ -25,7 +25,6 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.enhanced.plugins.Printer");
@@ -141,7 +140,6 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 			grid.placeAt('gridContainer');
 			grid.startup();
 		});
-	</script>
 
   .. html ::
 
@@ -155,7 +153,6 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
@@ -166,7 +163,6 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 		width: 100%;
 		height: 250px;
 	}
-    </style>
 
 Configuration
 =============

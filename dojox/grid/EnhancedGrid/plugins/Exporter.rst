@@ -26,7 +26,6 @@ The following of this document first describes how to use the export functions o
 
   .. js ::
 
-	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
@@ -90,7 +89,6 @@ The following of this document first describes how to use the export functions o
 			grid.placeAt('gridContainer');
 			grid.startup();
 		});
-	</script>
 
   .. html ::
 
@@ -103,7 +101,6 @@ The following of this document first describes how to use the export functions o
 
   .. css ::
 
-    <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
@@ -118,7 +115,6 @@ The following of this document first describes how to use the export functions o
 		width: 100%;
 		height: 250px;
 	}
-    </style>
 
 
 Configuration
