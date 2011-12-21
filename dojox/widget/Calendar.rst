@@ -171,9 +171,9 @@ As the calendar consists of a combination of views, it is possible to mix these 
         dojo.require("dojox.widget.CalendarViews");
 
         dojo.declare("dojox.widget.CustomDayAndYearCalendar",
-		  [dojox.widget._CalendarBase,
-		   dojox.widget._CalendarDay,
-		   dojox.widget._CalendarYear], {});
+          [dojox.widget._CalendarBase,
+           dojox.widget._CalendarDay,
+           dojox.widget._CalendarYear], {});
 
   .. html ::
 

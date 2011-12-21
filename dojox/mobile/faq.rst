@@ -64,5 +64,5 @@ Miscellaneous
 
 Why does <body> in many of tests html files have style="visibility:hidden;"?
 ----------------------------------------------------------------------------
-	
+
 It is to prevent raw HTML rendering result from being shown before dojo's rendering finishes. The visibility will be restored by the initialization code in dojox.mobile.common.

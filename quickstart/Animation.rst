@@ -34,7 +34,7 @@ of all animations is `play`:
 
 
 .. js ::
-    	
+
     // Dojo < 1.7
     var animation = dojo.fadeOut({ // returns a dojo._Animation
         // this is an Object containing properties used to define the animation
@@ -184,7 +184,7 @@ above) or use :ref:`dojo.connect <dojo/connect>` to connect directly to the inst
     });
 
 .. js ::
-    	
+
     // Dojo < 1.7
     var animation = dojo.fadeOut({ node:"someNodebyId" });
     dojo.connect(animation, "onEnd", function(){
@@ -238,16 +238,16 @@ To fade out a node, alter it's contents, and fade it back in:
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/dom"], function(fx, dom){
-	var node = dom.byId("someId");
-	fx.fadeOut({
-		node: node,
-		onEnd: function(){
-			node.innerHTML = "<p>Like magic!</p>"
-			dojo.fadeIn({
-				node: node
-			}).play()
-		}
-	}).play();
+    var node = dom.byId("someId");
+    fx.fadeOut({
+        node: node,
+        onEnd: function(){
+            node.innerHTML = "<p>Like magic!</p>"
+            dojo.fadeIn({
+                node: node
+            }).play()
+        }
+    }).play();
  });
 
 .. js ::
@@ -335,13 +335,13 @@ To fade out two nodes simultaneously:
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/fx", "dojo/ready"], function(fx, coreFx, ready){
-	ready(function(){
-		// create two animations
-		var anim1 = fx.fadeOut({ node: "someId" });
-		var anim2 = fx.fadeOut({ node: "someOtherId" });
-		// and play them at the same moment
-		coreFx.combine([anim1, anim2]).play();
-	});
+    ready(function(){
+        // create two animations
+        var anim1 = fx.fadeOut({ node: "someId" });
+        var anim2 = fx.fadeOut({ node: "someOtherId" });
+        // and play them at the same moment
+        coreFx.combine([anim1, anim2]).play();
+    });
  });
 
 
@@ -365,13 +365,13 @@ Javascript is rather flexible about return values and where functions are called
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/fx", "dojo/ready"], function(fx, coreFx, ready){
-	ready(function(){
-		// create and play two fade animations at the same moment
-		coreFx.combine([
-			fx.fadeOut({ node: "someId" }),
-			fx.fadeOut({ node: "someOtherId" })
-		]).play();
-	});
+    ready(function(){
+        // create and play two fade animations at the same moment
+        coreFx.combine([
+            fx.fadeOut({ node: "someId" }),
+            fx.fadeOut({ node: "someOtherId" })
+        ]).play();
+    });
  });
 
 .. js ::
@@ -392,13 +392,13 @@ The same rules apply to a combined animation as do a normal animation, though wi
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/_base/connect", "dojo/fx"], function(fx, connect, coreFx){
-	var anim = coreFx.combine([
-		fx.fadeOut({ node: "id", duration:1000 }),
-		fx.fadeIn({ node: "otherId", duration:2000 })
-	]);
-	connect.connect(anim, "onEnd", function(){
-		// fired after the full 2000ms
-	});
+    var anim = coreFx.combine([
+        fx.fadeOut({ node: "id", duration:1000 }),
+        fx.fadeIn({ node: "otherId", duration:2000 })
+    ]);
+    connect.connect(anim, "onEnd", function(){
+        // fired after the full 2000ms
+    });
  });
 
 .. js ::
@@ -418,15 +418,15 @@ Alternately, you can mix event handlers into your individual animations passed t
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/fx"], function(fx, coreFx){
-	var animA = fx.fadeOut({
-		node:"someNode",
-		duration: 500,
-		onEnd: function(){
-			// fired after 500ms
-		}
-	});
-	var animB = fx.fadeIn({ node:"otherNode" });
-	coreFx.combine([animA, animB]).play();
+    var animA = fx.fadeOut({
+        node:"someNode",
+        duration: 500,
+        onEnd: function(){
+            // fired after 500ms
+        }
+    });
+    var animB = fx.fadeIn({ node:"otherNode" });
+    coreFx.combine([animA, animB]).play();
  });
 
 .. js ::
@@ -448,10 +448,10 @@ Chain works in much the same way - though plays each animation one right after t
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/fx", "dojo/fx"], function(fx, coreFx){
-	coreFx.chain([
-		fx.fadeIn({ node: "foo" }),
-		fx.fadeIn({ node: "bar" })
-	]).play();
+    coreFx.chain([
+        fx.fadeIn({ node: "foo" }),
+        fx.fadeIn({ node: "bar" })
+    ]).play();
  });
 
 .. js ::
@@ -470,17 +470,17 @@ combine and chain accept an Array, and will work on a one-element array. This is
   
  // Dojo 1.7 (AMD)
  require(["dojo/_base/array", "dojo/_base/fx", "dojo/fx"], function(array, fx, coreFx){
-	// create the array
-	var anims = [];
-	// simulated condition, an array of id's:
-	array.forEach(["one", "two", "three"], function(id){
-		if(id !== "two"){
-			// only animate id="one" and id="three"
-			anims.push(fx.fadeOut({ node: id }));
-		}
-	});
-	// combine and play any available animations waiting
-	coreFx.combine(anims).play();
+    // create the array
+    var anims = [];
+    // simulated condition, an array of id's:
+    array.forEach(["one", "two", "three"], function(id){
+        if(id !== "two"){
+            // only animate id="one" and id="three"
+            anims.push(fx.fadeOut({ node: id }));
+        }
+    });
+    // combine and play any available animations waiting
+    coreFx.combine(anims).play();
  });
 
 .. js ::

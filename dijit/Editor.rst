@@ -165,8 +165,8 @@ This example starts from scratch, thus removing some items from the toolbar (as 
   .. html ::
 
       <div data-dojo-type="dijit.Editor" id="editor3"
-    		data-dojo-props="plugins:['bold','italic','|','createLink'],
-        	onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
+            data-dojo-props="plugins:['bold','italic','|','createLink'],
+            onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
         <p>This instance is created with customized toolbar/ plugins</p>
       </div>
 
@@ -279,7 +279,7 @@ It's used along with setting height="" parameter setting.
   .. html ::
 
         <div data-dojo-type="dijit.Editor" id="editor5"
-       			data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
+                   data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
             <p>
                 This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
             </p>

@@ -18,28 +18,28 @@ This is an example of the Google API using the pre-defined google.smd in the :re
 
     <div id="loader"></div>
     <div id="json-rpc-container">
-	<h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
-	<input id="test" name="test" type="text" size="30" value="The Dojo Toolkit"/><br>
-	<select id="searchType">
-		<option value="webSearch">web</option>
-		<option value="localSearch">local</option>
-		<option value="videoSearch">videos</option>
-		<option value="blogSearch">blog</option>
-		<option value="newsSearch">news</option>
-		<option value="bookSearch">books</option>
-		<option value="imageSearch">images</option>
-	</select> &nbsp;
-	<button id="doit" type="submit" value="search">Search</button>
+        <h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
+        <input id="test" name="test" type="text" size="30" value="The Dojo Toolkit"/><br>
+        <select id="searchType">
+            <option value="webSearch">web</option>
+            <option value="localSearch">local</option>
+            <option value="videoSearch">videos</option>
+            <option value="blogSearch">blog</option>
+            <option value="newsSearch">news</option>
+            <option value="bookSearch">books</option>
+            <option value="imageSearch">images</option>
+        </select> &nbsp;
+        <button id="doit" type="submit" value="search">Search</button>
 
-	<div id="current">
-		<h3>Results:</h3>
-		<ul id="top-results"></ul>
-	</div>
+        <div id="current">
+            <h3>Results:</h3>
+            <ul id="top-results"></ul>
+        </div>
 
-	<div id="past">
-		<h3>Old Searches:</h3>
-		<ul id="archive"></ul>
-	</div>
+        <div id="past">
+            <h3>Old Searches:</h3>
+            <ul id="archive"></ul>
+        </div>
     </div>
 
   .. js ::

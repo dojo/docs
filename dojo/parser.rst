@@ -80,8 +80,8 @@ To run the parser when your page loads, add a data-dojo-config="parseOnLoad: tru
 
 .. html ::
 
-		<script type="text/javascript" src="dojo/dojo.js"
-			data-dojo-config="parseOnLoad: true"></script>
+    <script type="text/javascript" src="dojo/dojo.js"
+        data-dojo-config="parseOnLoad: true"></script>
 
 
 
@@ -422,13 +422,13 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
 
   // Dojo 1.7 (AMD)
   require(["dojo/_base/xhr", "dojo/parser", "dojo/dom"], function(xhr, parser, dom){
-	  xhr.get({
-		url: "widgets.html",
-		load: function(data){
-			dom.byId("container").innerHTML = data;
-			parser.parse("container");
-		}
-	  });
+      xhr.get({
+        url: "widgets.html",
+        load: function(data){
+            dom.byId("container").innerHTML = data;
+            parser.parse("container");
+        }
+      });
   });
   
 .. js ::

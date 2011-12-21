@@ -20,9 +20,9 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  |mblRadioButton|Default CSS class name used to render the INPUT checkbox.                                                  |
+|baseClass     |String    |mblRadioButton|Default CSS class name used to render the INPUT checkbox.                                                  |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
+|class         |String    |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |checked       |Boolean   |false         |Read-only boolean that returns the current state of the widget.                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+

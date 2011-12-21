@@ -106,12 +106,12 @@ The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore c
 .. js ::
 
  gridLayout = [
-        { name: 'Address', field: 'shipToAddress', editable: true},
-	{ name: 'Name', field: 'name'},
-	{ name: 'Id', field: 'id'}];
+    { name: 'Address', field: 'shipToAddress', editable: true},
+    { name: 'Name', field: 'name'},
+    { name: 'Id', field: 'id'}];
  var grid = new dojox.grid.DataGrid({
-	store: poStore,
-	structure: gridLayout
+    store: poStore,
+    structure: gridLayout
  }, dojo.byId("gridElement"));
  grid.startup();
 

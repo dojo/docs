@@ -38,18 +38,18 @@ Method Detail
 
 start()
 -------
-	Starts the ProgressIndicator spinning.
+    Starts the ProgressIndicator spinning.
 
 stop()
 ------
-	Stop the ProgressIndicator spinning.
+    Stop the ProgressIndicator spinning.
 
 setImage(/\*String\*/ file)
 ---------------------------
-	Set an indicator icon image file (typically animated GIF). If null is specified, restores the default spinner.
+    Set an indicator icon image file (typically animated GIF). If null is specified, restores the default spinner.
 
-	Parameters:
-		file - a path for an indicator icon image file
+    Parameters:
+        file - a path for an indicator icon image file
 
 Examples
 ========
@@ -68,9 +68,9 @@ In this example, get the progress indicator instance using getInstance(), add it
       url: url,
       handleAs: "text",
       load: function(response, ioArgs){
-	prog.stop(); // stop the progress indicator
-	container.innerHTML = response;
-	dojox.mobile.parser.parse(container);
+        prog.stop(); // stop the progress indicator
+        container.innerHTML = response;
+        dojox.mobile.parser.parse(container);
       }
     });
   }

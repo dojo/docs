@@ -72,17 +72,17 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   .. html ::
    
-      <div data-dojo-type="dojox.widget.Portlet" title="A Simple Portlet">
-	<div data-dojo-type="dojox.widget.PortletSettings">
-          This is a simple settings widget.
-          Put whatever you like in here
-	</div>
+    <div data-dojo-type="dojox.widget.Portlet" title="A Simple Portlet">
+        <div data-dojo-type="dojox.widget.PortletSettings">
+              This is a simple settings widget.
+              Put whatever you like in here
+        </div>
 
-	<div style="height: 100px;">
-	  The contents of the portlet go in here.
-          Try clicking the settings icon in the title bar to see the settings.
-            
-	</div>
+        <div style="height: 100px;">
+          The contents of the portlet go in here.
+              Try clicking the settings icon in the title bar to see the settings.
+
+        </div>
     </div>
 
   .. css ::
@@ -110,20 +110,20 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. html ::
    
-      <div data-dojo-type="dojox.widget.FeedPortlet" title="Todays News"
-	id="todaysNews"
-	url="http://news.google.com/news?hl=en&topic=t&output=atom"
-	maxResults="5"
-	>
-	<div data-dojo-type="dojox.widget.PortletFeedSettings"></div>
+     <div data-dojo-type="dojox.widget.FeedPortlet" title="Todays News"
+        id="todaysNews"
+        url="http://news.google.com/news?hl=en&topic=t&output=atom"
+        maxResults="5"
+        >
+        <div data-dojo-type="dojox.widget.PortletFeedSettings"></div>
 
-	<div>
-	This is a FeedPortlet with a single feed.
-	Click the settings icon in the title bar to enter a
-	different feed to load.  Hovering over a news item shows a summary
-	of it in a tooltip.
-	</div>
-      </div>
+        <div>
+        This is a FeedPortlet with a single feed.
+        Click the settings icon in the title bar to enter a
+        different feed to load.  Hovering over a news item shows a summary
+        of it in a tooltip.
+        </div>
+     </div>
 
   .. css ::
 
@@ -152,20 +152,20 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
   .. html ::
    
       <div data-dojo-type="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
-	id="todaysNews"
-	maxResults="5"
-	>
-	<select data-dojo-type="dojox.widget.PortletFeedSettings">
+        id="todaysNews"
+        maxResults="5"
+        >
+        <select data-dojo-type="dojox.widget.PortletFeedSettings">
           <option value="http://shaneosullivan.wordpress.com/category/dojo/feed/">Dojo Blatherings</option>
           <option value="http://www.dojotoolkit.org/aggregator/rss">Planet Dojo</option>
           <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
         </select>
 
-	<div>
-	This is a FeedPortlet with a multiple feeds.
-	Click the settings icon in the title bar to choose a
-	different feed to load.
-	</div>
+        <div>
+            This is a FeedPortlet with a multiple feeds.
+            Click the settings icon in the title bar to choose a
+            different feed to load.
+        </div>
       </div>
 
   .. css ::
@@ -210,17 +210,17 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
   .. html ::
    
     <div data-dojo-type="dojox.layout.GridContainer"
-	id="gc1"
-	acceptTypes="dojox.widget.Portlet, dojox.widget.FeedPortlet,dojox.widget.ExpandableFeedPortlet"
-	hasResizableColumns="false"
-	opacity="0.3"
-	nbZones="2"
-	allowAutoScroll="true"
-	withHandles="true"
-	handleClasses="dijitTitlePaneTitle"
-	region="center"
-	minChildWidth="200"
-	minColWidth="40">
+        id="gc1"
+        acceptTypes="dojox.widget.Portlet, dojox.widget.FeedPortlet,dojox.widget.ExpandableFeedPortlet"
+        hasResizableColumns="false"
+        opacity="0.3"
+        nbZones="2"
+        allowAutoScroll="true"
+        withHandles="true"
+        handleClasses="dijitTitlePaneTitle"
+        region="center"
+        minChildWidth="200"
+        minColWidth="40">
 
         <div data-dojo-type="dojox.widget.Portlet" title="First Portlet">
 
@@ -242,9 +242,9 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
             <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
           </select>
 
-	  <div>
-	    This is a FeedPortlet with a multiple feeds.
-            Click the settings icon in the title bar to choose different feed to load.
+          <div>
+            This is a FeedPortlet with a multiple feeds.
+                Click the settings icon in the title bar to choose different feed to load.
           </div>
         </div>
       

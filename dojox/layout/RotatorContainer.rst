@@ -50,22 +50,22 @@ Declarative example
 
  .. js ::
   
-	   dojo.require("dojox.layout.RotatorContainer");
-	   dojo.require("dijit.layout.ContentPane");
+       dojo.require("dojox.layout.RotatorContainer");
+       dojo.require("dijit.layout.ContentPane");
 
  .. html ::
 
-	 <div data-dojo-type="dojox.layout.RotatorContainer" id="myRotator" showTabs="true" autoStart="true" transitionDelay="5000">
-	   <div id="pane1" data-dojo-type="dijit.layout.ContentPane" title="1">
-		 Pane 1!
-	   </div>
-	   <div id="pane2" data-dojo-type="dijit.layout.ContentPane" title="2">
-		 Pane 2!
-	   </div>
-	   <div id="pane3" data-dojo-type="dijit.layout.ContentPane" title="3" transitionDelay="10000">
-		 Pane 3 with overridden transitionDelay!
-	   </div>
-	 </div>
+     <div data-dojo-type="dojox.layout.RotatorContainer" id="myRotator" showTabs="true" autoStart="true" transitionDelay="5000">
+       <div id="pane1" data-dojo-type="dijit.layout.ContentPane" title="1">
+         Pane 1!
+       </div>
+       <div id="pane2" data-dojo-type="dijit.layout.ContentPane" title="2">
+         Pane 2!
+       </div>
+       <div id="pane3" data-dojo-type="dijit.layout.ContentPane" title="3" transitionDelay="10000">
+         Pane 3 with overridden transitionDelay!
+       </div>
+     </div>
 
 See also
 ========

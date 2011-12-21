@@ -28,22 +28,22 @@ To use it, you just have to override default behavior by yours.
         rowSelector:'20px'"
         style="width: 400px; height: 200px;">
         <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
-	     // The row object has 4 parameters, and you can set two others to provide your own styling
-	     // These parameters are :
-	     //	-- index : the row index
-	     //	-- selected: whether or not the row is selected
-	     //	-- over : whether or not the mouse is over this row
-	     //	-- odd : whether or not this row index is odd.
-	     var item = grid6.getItem(row.index);
-	     if(item){
-		var type = store3.getValue(item, "type", null);
-		if(type == "continent"){
-		    row.customStyles += "color:red;";
-	        }
-	     }
-	     grid6.focus.styleRow(row);
-	     grid6.edit.styleRow(row);
-	</script>
+         // The row object has 4 parameters, and you can set two others to provide your own styling
+         // These parameters are :
+         //    -- index : the row index
+         //    -- selected: whether or not the row is selected
+         //    -- over : whether or not the mouse is over this row
+         //    -- odd : whether or not this row index is odd.
+         var item = grid6.getItem(row.index);
+         if(item){
+        var type = store3.getValue(item, "type", null);
+        if(type == "continent"){
+            row.customStyles += "color:red;";
+            }
+         }
+         grid6.focus.styleRow(row);
+         grid6.edit.styleRow(row);
+    </script>
         <thead>
             <tr>
                 <th width="200px"

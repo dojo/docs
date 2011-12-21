@@ -43,9 +43,9 @@ Declarative example
 
   .. js ::
 
-		dojo.require("dijit.form.Textarea");
-		dojo.require("dojox.mvc.StatefulModel");
-		dojo.require("dojox.mvc.Generate");
+        dojo.require("dijit.form.Textarea");
+        dojo.require("dojox.mvc.StatefulModel");
+        dojo.require("dojox.mvc.Generate");
 
         function updateView(){
             var modeldata = dojo.fromJson(dijit.byId("modelArea").value);

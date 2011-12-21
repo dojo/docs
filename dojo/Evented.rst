@@ -23,7 +23,7 @@ The Evented class provides two methods, on(eventType, listener) and emit(eventTy
   define(["dojo/Evented"], function(Evented){
     var MyComponent = dojo.declare([Evented], {
       startup: function(){
-  	  // once we are done with startup, fire the "ready" event
+        // once we are done with startup, fire the "ready" event
         this.emit("ready", {});
       }
     });

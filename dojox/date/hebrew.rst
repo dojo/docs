@@ -26,18 +26,18 @@ Code snippet below illustrates a common usage of Hebrew Date code with the Dijit
 .. html ::
  
   <head>
-	  <script type="text/javascript">
-		dojo.require("dojox.date.hebrew");
-		dojo.require("dojox.date.hebrew.Date");
-		dojo.require("dojox.date.hebrew.locale");
-	  </script>
-	  <title>Hebrew calendar</title>
+      <script type="text/javascript">
+        dojo.require("dojox.date.hebrew");
+        dojo.require("dojox.date.hebrew.Date");
+        dojo.require("dojox.date.hebrew.locale");
+      </script>
+      <title>Hebrew calendar</title>
   </head>
   <body>
-		<input name="hebcal"
-		   value="2009-03-10"
-		   data-dojo-type="dijit.form.DateTextBox"
-		   datePackage = "dojox.date.hebrew">
+        <input name="hebcal"
+           value="2009-03-10"
+           data-dojo-type="dijit.form.DateTextBox"
+           datePackage = "dojox.date.hebrew">
   </body>
 
 Hebrew calendar package

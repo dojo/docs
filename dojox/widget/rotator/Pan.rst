@@ -39,7 +39,7 @@ If the parameter "continuous" is set to true, it will return an animation chain 
 
 If an easing is specified, it will be applied to each pan transition.  For example, if you are panning from pane 1 to pane 5 and you set the easing to "dojo.fx.easing.elasticInOut", then it will "wobble" 5 times, once for each pan transition.
 
-If the parameter "wrap" is set to true, it will pan to the next pane using the shortest distance in the array of panes. For example, if there are 6 	panes, then panning from 5 to 1 will pan forward (left) from pane 5 to 6 and 6 to 1.  If the distance is the same either going forward or backwards, then it will always pan forward (left).
+If the parameter "wrap" is set to true, it will pan to the next pane using the shortest distance in the array of panes. For example, if there are 6 panes, then panning from 5 to 1 will pan forward (left) from pane 5 to 6 and 6 to 1.  If the distance is the same either going forward or backwards, then it will always pan forward (left).
 
 A continuous pan will use the target pane's duration to pan all intermediate panes.  To use the target's pane duration for each intermediate pane, then set the "quick" parameter to "false".
 

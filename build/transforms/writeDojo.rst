@@ -35,17 +35,17 @@ The dojo loader is not an AMD module. The source version of the loader looks lik
     })
     //>>excludeStart("replaceLoaderConfig", kwArgs.replaceLoaderConfig);
     (
-    	// userConfig
-    	(function(){
-    		// make sure we're looking at global dojoConfig etc.
-    		return this.dojoConfig || this.djConfig || this.require || {};
-    	})(),
+        // userConfig
+        (function(){
+            // make sure we're looking at global dojoConfig etc.
+            return this.dojoConfig || this.djConfig || this.require || {};
+        })(),
     
-    	// defaultConfig
-    	{
-    		// the default configuration as provided by the source version of dojo goes here
-			// see dojo/dojo.js for details
-    	}
+        // defaultConfig
+        {
+            // the default configuration as provided by the source version of dojo goes here
+            // see dojo/dojo.js for details
+        }
     );
     //>>excludeEnd("replaceLoaderConfig")
 
@@ -63,10 +63,10 @@ need not be a JSON object and may contain functions. For example,
         userConfig:{
             hasCache:{
                 someFeature:function(global, doc, element){
-    				// the has feature test for someFeature
-    		    }
-    		}
-    	}
+                    // the has feature test for someFeature
+                }
+            }
+        }
     };
 
 If no value if given for ``userConfig``, then it defaults to the string ``"this.dojoConfig || this.djConfig ||
@@ -112,47 +112,47 @@ loader factory text can then be used to write the loader resource (usually dojo.
 By default, the dojo/dojo module is a layer module that includes the single module dojo/main which results in loader
 so-called "dojo base". At the time of writing, dojo/main includes the following modules:
 
-	dojo/main
-	dojo/_base/kernel
-	dojo/has
-	dojo/_base/config
-	dojo/_base/sniff
-	dojo/_base/lang
-	dojo/_base/array
-	dojo/ready
-	dojo/domReady
-	dojo/_base/declare
-	dojo/_base/Deferred
-	dojo/_base/json
-	dojo/json
-	dojo/_base/Color
-	dojo/_base/browser
-	dojo/_base/connect
-	dojo/on
-	dojo/topic
-	dojo/Evented
-	dojo/aspect
-	dojo/_base/event
-	dojo/dom-geometry
-	dojo/_base/window
-	dojo/dom
-	dojo/dom-style
-	dojo/mouse
-	dojo/keys
-	dojo/_base/unload
-	dojo/_base/html
-	dojo/dom-attr
-	dojo/dom-prop
-	dojo/dom-construct
-	dojo/dom-class
-	dojo/_base/NodeList
-	dojo/query
-	dojo/selector/_loader
-	dojo/NodeList-dom
-	dojo/_base/xhr
-	dojo/io-query
-	dojo/dom-form
-	dojo/_base/fx
+    dojo/main
+    dojo/_base/kernel
+    dojo/has
+    dojo/_base/config
+    dojo/_base/sniff
+    dojo/_base/lang
+    dojo/_base/array
+    dojo/ready
+    dojo/domReady
+    dojo/_base/declare
+    dojo/_base/Deferred
+    dojo/_base/json
+    dojo/json
+    dojo/_base/Color
+    dojo/_base/browser
+    dojo/_base/connect
+    dojo/on
+    dojo/topic
+    dojo/Evented
+    dojo/aspect
+    dojo/_base/event
+    dojo/dom-geometry
+    dojo/_base/window
+    dojo/dom
+    dojo/dom-style
+    dojo/mouse
+    dojo/keys
+    dojo/_base/unload
+    dojo/_base/html
+    dojo/dom-attr
+    dojo/dom-prop
+    dojo/dom-construct
+    dojo/dom-class
+    dojo/_base/NodeList
+    dojo/query
+    dojo/selector/_loader
+    dojo/NodeList-dom
+    dojo/_base/xhr
+    dojo/io-query
+    dojo/dom-form
+    dojo/_base/fx
 
 This default may be overridden by providing an explicit dojo/dojo layer configuration (see xxx writeAmd). Historically,
 this technique has been termed building a "custom base". However, as of v1.7, specifying the contents of the dojo/dojo

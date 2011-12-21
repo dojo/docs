@@ -42,11 +42,11 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
         require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase",
-    	], function(declare, parser, ready, _WidgetBase){
+        ], function(declare, parser, ready, _WidgetBase){
 
             declare("MyFirstBehavioralWidget", [_WidgetBase], {
-				// put methods, attributes, etc. here
-			});
+                // put methods, attributes, etc. here
+            });
             ready(function(){
                 // Call the parser manually so it runs after our widget is defined, and page has finished loading
                 parser.parse();
@@ -85,7 +85,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
         require([
             "dojo/_base/declare", "dojo/dom-construct", "dojo/ready", "dojo/_base/window",
             "dijit/_WidgetBase",
-    	], function(declare, domConstruct, ready, win, _WidgetBase){
+        ], function(declare, domConstruct, ready, win, _WidgetBase){
 
             declare("MyFirstWidget", [_WidgetBase], {
                 buildRendering: function(){
@@ -116,7 +116,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
         require([
             "dojo/_base/declare", "dojo/dom-construct", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase",
-    	], function(declare, domConstruct, parser, ready,_WidgetBase){
+        ], function(declare, domConstruct, parser, ready,_WidgetBase){
             declare("Counter", [_WidgetBase], {
                 // counter
                 _i: 0,
@@ -196,7 +196,7 @@ So, putting that all together the source becomes:
        require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
-    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+        ], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
 
             declare("FancyCounter", [_WidgetBase, _TemplatedMixin], {
                 // counter
@@ -292,7 +292,7 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
        require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
-    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+        ], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
 
             declare("BusinessCard", [_WidgetBase, _TemplatedMixin], {
                 templateString:
@@ -379,7 +379,7 @@ that has an "open" attribute that controls whether the widget is hidden or shown
        require([
             "dojo/_base/declare", "dojo/dom-style", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
-    	], function(declare, domStyle, parser, ready, _WidgetBase, _TemplatedMixin){
+        ], function(declare, domStyle, parser, ready, _WidgetBase, _TemplatedMixin){
 
             declare("HidePane", [_WidgetBase], {
                 // parameters
@@ -473,7 +473,7 @@ and in that case templateString should reference the file via the :ref:`dojo.tex
         require([
             "dojo/_base/declare", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase", "dijit/_TemplatedMixin"
-    	], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
+        ], function(declare, parser, ready, _WidgetBase, _TemplatedMixin){
 
             declare("MyButton", [_WidgetBase, _TemplatedMixin], {
                     templateString:

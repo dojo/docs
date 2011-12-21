@@ -37,33 +37,33 @@ If you need to do internationalization at client-side , use of dojo.i18n is the 
 
   <html>
       <head>
-	  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-	  <meta name="apple-mobile-web-app-capable" content="yes" />
-	  <link href="../themes/iphone/iphone.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <link href="../themes/iphone/iphone.css" rel="stylesheet">
 
-	  <script src="../../../dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+      <script src="../../../dojo/dojo.js" djConfig="parseOnLoad: true"></script>
 
-	  <script language="JavaScript" type="text/javascript">
-	      require([
-		  "dojo/ready",
-		  "dojox/mobile/parser",
-		  "dojox/mobile",
-		  "dojox/mobile/compat",
-		  "dojox/mobile/Button",
-		  "dojo/i18n", // dojo.i18n.getLocalization
-		  "dojo/i18n!dojox/mobile/tests/nls/sample"
-	      ], function(ready){
-		  ready(function(){
-		      var messages = dojo.i18n.getLocalization("dojox.mobile.tests", "sample");
-		      dijit.byId("btn1").set("label", messages["Sunday"]);
-		  });
-	      });
-	  </script>
+      <script language="JavaScript" type="text/javascript">
+          require([
+              "dojo/ready",
+              "dojox/mobile/parser",
+              "dojox/mobile",
+              "dojox/mobile/compat",
+              "dojox/mobile/Button",
+              "dojo/i18n", // dojo.i18n.getLocalization
+              "dojo/i18n!dojox/mobile/tests/nls/sample"
+              ], function(ready){
+              ready(function(){
+                  var messages = dojo.i18n.getLocalization("dojox.mobile.tests", "sample");
+                  dijit.byId("btn1").set("label", messages["Sunday"]);
+              });
+          });
+      </script>
       </head>
       <body>
-	  <div id="settings" data-dojo-type="dojox.mobile.View">
-	      <button id="btn1" class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Sunday</button>
-	  </div>
+      <div id="settings" data-dojo-type="dojox.mobile.View">
+          <button id="btn1" class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Sunday</button>
+      </div>
       </body>
   </html>
 

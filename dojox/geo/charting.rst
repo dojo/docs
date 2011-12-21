@@ -42,12 +42,12 @@ First, instantiate the Map component, and associate it with the DOM Node contain
 .. js ::
      
  require(["dojox/geo/charting/Map", function(){
-	dojo.ready(function(){
-		// create new map
-		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		// add outside map marker file
-		map.setMarkerData("../resources/markers/USStates.json");
-	});
+    dojo.ready(function(){
+        // create new map
+        var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+        // add outside map marker file
+        map.setMarkerData("../resources/markers/USStates.json");
+    });
  });
 
  
@@ -73,23 +73,23 @@ Here, we extend the previous code sample to illustrate how to connect to data :
 .. js ::
  
  require(["dojox/geo/charting/Map", "dojo.data.ItemFileWriteStore", function(){
-	dojo.ready(function(){
-		// create new map
-		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		// add outside map marker file
-		map.setMarkerData("../resources/markers/USStates.json");
-				
-		// instantiate a dataStore
-		var dataStore = new dojo.data.ItemFileWriteStore({
-			url: "datastore/dataStore.json"
-		});
-								
-		// set it on the map
-		map.setDataStore(dataStore, "product A");
+    dojo.ready(function(){
+        // create new map
+        var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+        // add outside map marker file
+        map.setMarkerData("../resources/markers/USStates.json");
 
-		// associate with series (i.e. color scheme)
-		map.addSeries("../resources/data/series.json");
-	});
+        // instantiate a dataStore
+        var dataStore = new dojo.data.ItemFileWriteStore({
+            url: "datastore/dataStore.json"
+        });
+
+        // set it on the map
+        map.setDataStore(dataStore, "product A");
+
+        // associate with series (i.e. color scheme)
+        map.addSeries("../resources/data/series.json");
+    });
  });
     
 
@@ -105,24 +105,24 @@ Here is an example of a series object :
 .. js ::
  
  {
-	"series": [{
-		name: "Low sales state(0~$3.0M)",
-		min: "0.0",
-		max: "3.0",
-		color: "#FFCE52"
-	},
-	{
-		name: "Normal sales state($3.0M~$6.0M)",
-		min: "3.0",
-		max: "6.0",
-		color: "#63A584"
-	},
-	{
-		name: "High sales state($6.0M~$10.0M)",
-		min: "6.0",
-		max: "9.0",
-		color: "#CE6342"
-	}]
+    "series": [{
+        name: "Low sales state(0~$3.0M)",
+        min: "0.0",
+        max: "3.0",
+        color: "#FFCE52"
+    },
+    {
+        name: "Normal sales state($3.0M~$6.0M)",
+        min: "3.0",
+        max: "6.0",
+        color: "#63A584"
+    },
+    {
+        name: "High sales state($6.0M~$10.0M)",
+        min: "6.0",
+        max: "9.0",
+        color: "#CE6342"
+    }]
  }
 
 
@@ -134,22 +134,22 @@ Here, we instantiate the appropriate interactors and connect them to the Map com
 .. js ::
  
  require(["dojox/geo/charting/Map",
-	  "dojox.geo.charting.MouseInteractionSupport",
-	  "dojox.geo.charting.KeyboardInteractionSupport", function(){
-	dojo.ready(function(){
-		// create new map
-		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-		// add outside map marker file
-		map.setMarkerData("../resources/markers/USStates.json");
-				
-		// install mouse navigation
-		var mouseInteraction =
-			new dojox.geo.charting.MouseInteractionSupport(map, {enablePan:true, enableZoom:true});
-		mouseInteraction.connect();
-		// install keyboard navigation
-		var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});
-        	keyboardInteraction.connect();
-	});
+      "dojox.geo.charting.MouseInteractionSupport",
+      "dojox.geo.charting.KeyboardInteractionSupport", function(){
+    dojo.ready(function(){
+        // create new map
+        var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+        // add outside map marker file
+        map.setMarkerData("../resources/markers/USStates.json");
+
+        // install mouse navigation
+        var mouseInteraction =
+            new dojox.geo.charting.MouseInteractionSupport(map, {enablePan:true, enableZoom:true});
+        mouseInteraction.connect();
+        // install keyboard navigation
+        var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});
+            keyboardInteraction.connect();
+    });
  });
 
 The interactors can be configured via the object passed as second parameter. Please refer to API documentation for further details.
@@ -165,14 +165,14 @@ It can be fully configured in the markup declaration
 .. html ::
   
  <div id="mapWidget" data-dojo-type="dojox.geo.charting.widget.Map"
-	data-dojo-props="shapeData:'resources/data/US_States_intermediate.json',
-	dataStore:'csvStore', series:'resources/data/series.json', markerData:'resources/data/markers.json', showTooltips:false,
-	animateOnResize:false, colorAnimationDuration:300,
-	adjustMapCenterOnResize:true, adjustMapScaleOnResize:true, dataBindingAttribute:2009,
-	dataBindingValueFunction:getPopulationForYear, enableMouseSupport:true,
-	enableMousePan:true, enableMouseZoom:true,
-	onFeatureClick:'onFeatureClick', enableFeatureZoom:false, enableTouchSupport:true"
-	style="height: 100%; width: 100%;">
+    data-dojo-props="shapeData:'resources/data/US_States_intermediate.json',
+    dataStore:'csvStore', series:'resources/data/series.json', markerData:'resources/data/markers.json', showTooltips:false,
+    animateOnResize:false, colorAnimationDuration:300,
+    adjustMapCenterOnResize:true, adjustMapScaleOnResize:true, dataBindingAttribute:2009,
+    dataBindingValueFunction:getPopulationForYear, enableMouseSupport:true,
+    enableMousePan:true, enableMouseZoom:true,
+    onFeatureClick:'onFeatureClick', enableFeatureZoom:false, enableTouchSupport:true"
+    style="height: 100%; width: 100%;">
  </div>
 
 Legend, as its name supposes, displays a legend describing map color scheme.
@@ -180,7 +180,7 @@ Legend, as its name supposes, displays a legend describing map color scheme.
 .. html ::
   
  <div id="mapLegend" data-dojo-type="dojox.geo.charting.widget.Legend" data-dojo-props="map:dijit.byId('mapWidget').getInnerMap(),
-	swatchSize:10, horizontal:false">
+    swatchSize:10, horizontal:false">
  </div>
 
 The map attribute connects this Legend Dijit to the above Map Dijit inner map.

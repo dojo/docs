@@ -36,10 +36,10 @@ Declarative example
 
     .. js ::
 
-    	dojo.require("dijit.form.TextBox");
-    	dojo.require("dijit.form.Button");
-    	dojo.require("dojox.mvc.StatefulModel");
-    	dojo.require("dojox.mvc.Group");
+        dojo.require("dijit.form.TextBox");
+        dojo.require("dijit.form.Button");
+        dojo.require("dojox.mvc.StatefulModel");
+        dojo.require("dojox.mvc.Group");
 
         // Initial data
         var order = {
@@ -68,27 +68,27 @@ Declarative example
     .. html ::
 
 
-		<div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
-			<div class="row">
-				<label class="cell" for="streetInput">Street:</label>
-				<input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="cityInput">City:</label>
-				<input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="stateInput">State:</label>
-				<input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
-			</div>
-			<div class="row">
-				<label class="cell" for="zipInput">Zipcode:</label>
-				<input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
-			</div>
-		</div>
-		<br/>
-		Choose:
-		<button id="shipto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.ShipTo);">Ship To</button>
-		<button id="billto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.BillTo);">Bill To</button>
+        <div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
+            <div class="row">
+                <label class="cell" for="streetInput">Street:</label>
+                <input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="cityInput">City:</label>
+                <input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="stateInput">State:</label>
+                <input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
+            </div>
+            <div class="row">
+                <label class="cell" for="zipInput">Zipcode:</label>
+                <input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
+            </div>
+        </div>
+        <br/>
+        Choose:
+        <button id="shipto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.ShipTo);">Ship To</button>
+        <button id="billto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.BillTo);">Bill To</button>
 
 In the above example, the TextBoxes inside the group with the id="addrGroup" will display either the ShipTo data or the BillTo data depending upon which button is pressed.

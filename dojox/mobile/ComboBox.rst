@@ -26,9 +26,9 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  | mblComboBox  |Default CSS class name used to render the ComboBox INPUT node.                                             |
+|baseClass     |String    | mblComboBox  |Default CSS class name used to render the ComboBox INPUT node.                                             |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
+|class         |String    |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |store         |dojo.store|              |dojo.store to use for acceptable values.                                                                   |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -57,8 +57,8 @@ Using a dojo.store
 
   .. js ::
 
-		dojo.require("dojo.store.Memory");
-		dojo.require("dojox.mobile.ComboBox");
+        dojo.require("dojo.store.Memory");
+        dojo.require("dojox.mobile.ComboBox");
 
         colorMemoryStore = new dojo.store.Memory({ idProperty: "name", data: [
                 { name: "Red" },
@@ -85,12 +85,12 @@ Using inline OPTION tags
 
   .. html ::
 
-	  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruitDataList"' >
-			<option>Apple</option>
-			<option selected>Banana</option>
-			<option>Orange</option>
-	  </select>
-	  <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
+      <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruitDataList"' >
+            <option>Apple</option>
+            <option selected>Banana</option>
+            <option>Orange</option>
+      </select>
+      <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='list:"fruitDataList"'>
 
 .. image :: ComboBoxDataList.png
 

@@ -92,13 +92,13 @@ Examples
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossySemiCircularGauge');
         makeGauge = function(){
-        	var glossyCircular = new dojox.gauges.GlossySemiCircularGauge({
-        		background: [255, 255, 255, 0],
-        		title: 'Value',
-        		id: "glossyGauge",
-        		width: 300,
-        		height: 300
-        	}, dojo.byId("SemiCircularGauge"));
-        	glossyCircular.startup();
+            var glossyCircular = new dojox.gauges.GlossySemiCircularGauge({
+                background: [255, 255, 255, 0],
+                title: 'Value',
+                id: "glossyGauge",
+                width: 300,
+                height: 300
+            }, dojo.byId("SemiCircularGauge"));
+            glossyCircular.startup();
         };
         dojo.ready(makeGauge );

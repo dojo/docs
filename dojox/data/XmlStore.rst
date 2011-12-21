@@ -34,36 +34,36 @@ The store is designed so that it can read generic XML and present back nodes as 
  
   <?xml version="1.0" encoding="ISO-8859-1"?>
   <books>
-	<book>
-		<isbn>1</isbn>
-		<title>Title of 1</title>
-		<author>Author of 1</author>
-	</book>
-	<book>
-		<isbn>2</isbn>
-		<title>Title of 2</title>
-		<author>Author of 2</author>
-	</book>
-	<book>
-		<isbn>3</isbn>
-		<title>Title of 3</title>
-		<author>Author of 3</author>
-	</book>
-	<book>
-		<isbn>4</isbn>
-		<title>Title of 4</title>
-		<author>Author of 4</author>
-	</book>
-	<book>
-		<isbn>5</isbn>
-		<title>Title of 5</title>
-		<author>Author of 5</author>
-	</book>
-	<book>
-		<isbn>6</isbn>
-		<title>Title of 6</title>
-		<author>Author of 6</author>
-	</book>
+    <book>
+        <isbn>1</isbn>
+        <title>Title of 1</title>
+        <author>Author of 1</author>
+    </book>
+    <book>
+        <isbn>2</isbn>
+        <title>Title of 2</title>
+        <author>Author of 2</author>
+    </book>
+    <book>
+        <isbn>3</isbn>
+        <title>Title of 3</title>
+        <author>Author of 3</author>
+    </book>
+    <book>
+        <isbn>4</isbn>
+        <title>Title of 4</title>
+        <author>Author of 4</author>
+    </book>
+    <book>
+        <isbn>5</isbn>
+        <title>Title of 5</title>
+        <author>Author of 5</author>
+    </book>
+    <book>
+        <isbn>6</isbn>
+        <title>Title of 6</title>
+        <author>Author of 6</author>
+    </book>
         ...
   </books>
     

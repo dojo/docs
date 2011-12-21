@@ -23,7 +23,7 @@ Features
  - The tabIndex attribute is supported.
  - An additional widget, dojox.form.uploader.FileList is provided to show the selection set and visualize the upload progress.
  - :ref:`dojox.form.uploader.FileList <dojox/form/uploader/FileList>`
-	
+
 Important Note
 --------------
 
@@ -168,7 +168,7 @@ Uploader comes with a working PHP file, *dojox/form/tests/UploadFile.php*, to us
 UploadFile.php is expecting one of four things:
 
 1) A file or files from Flash (uploadedfilesFlash)
-2) A file from HTML	(uploadedfiles0)
+2) A file from HTML    (uploadedfiles0)
 3) Multiple files from HTML (uploadedfiles0, uploadedfiles1, etc)
 4) A file array from HTML5 (uploadedfiles[])
 

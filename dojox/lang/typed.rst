@@ -28,27 +28,27 @@ Property types and method signatures for classes follows the JSON Schema (http:/
  dojo.require("dojox.lang.typed");
  
  TypedClass = dojox.lang.typed(
- 	dojo.declare("TypedClass", null, {
- 		constructor: function(makeDefaults){
- 			if(makeDefaults){
- 				this.aString = "start";
- 			}
- 		},
- 		add: function(a, b){
- 			return a + b;
- 		}
- 	}));
+     dojo.declare("TypedClass", null, {
+         constructor: function(makeDefaults){
+             if(makeDefaults){
+                 this.aString = "start";
+             }
+         },
+         add: function(a, b){
+             return a + b;
+         }
+     }));
  TypedClass.properties = {
- 	aString:String, // this is the same aString:{type:"string"}
+     aString:String, // this is the same aString:{type:"string"}
  };
  TypedClass.methods = {
- 	add: {
- 		parameters:[
- 			Number,
- 			Number
- 		],
- 		returns: {type:"number", description: "The sum"}
- 	}
+     add: {
+         parameters:[
+             Number,
+             Number
+         ],
+         returns: {type:"number", description: "The sum"}
+     }
  }
 
  typedInstance = new TypedClass(); // this will throw a TypeError, since there is no value for the aString property.
@@ -66,8 +66,8 @@ You can also run dojox.lang.typed.typeCheckAllClasses() to add type checking to 
 
  dojox.lang.typed.typeCheckAllClasses();
  dojo.declare("TypedClass", null, {
- 	constructor: function(makeDefaults){
- 		...
+     constructor: function(makeDefaults){
+         ...
 
 All classes declared with dojo.declare from this point on can have schema definitions for typing purposes.
 

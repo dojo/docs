@@ -91,12 +91,12 @@ In this example, icon content is shown below the icons, and only one icon conten
   <ul data-dojo-type="dojox.mobile.IconContainer" transition="below" single="true" iconBase="images/icon-1.png">
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #1
+         App #1
       </div>
     </li>
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #2
+         App #2
       </div>
     </li>
   </ul>
@@ -114,12 +114,12 @@ In this example, icon content is shown below the icons, and multiple icon conten
   <ul data-dojo-type="dojox.mobile.IconContainer" transition="flip" single="true" iconBase="images/icon-1.png">
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #1
+        App #1
       </div>
     </li>
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #2
+        App #2
       </div>
     </li>
   </ul>
@@ -137,12 +137,12 @@ In this example, selecting an icon causes a flip transition to show the icon con
   <ul data-dojo-type="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #1
+        App #1
       </div>
     </li>
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #2
+        App #2
       </div>
     </li>
   </ul>
@@ -160,12 +160,12 @@ In this example, selecting an icon causes a flip transition to show the icon con
   <ul data-dojo-type="dojox.mobile.IconContainer" transition="flip" iconBase="images/icon-1.png">
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 1">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #1
+        App #1
       </div>
     </li>
     <li data-dojo-type="dojox.mobile.IconItem" label="Icon 2">
       <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
-	App #2
+        App #2
       </div>
     </li>
   </ul>

@@ -129,7 +129,7 @@ Simple Demo usage of WikipediaStore
             node.innerHTML = store.getValue(item, "title");
             outNode.appendChild(node);
           }
-	    };
+        };
 
         store.fetch(request);
       }

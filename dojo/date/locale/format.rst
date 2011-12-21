@@ -78,7 +78,7 @@ dojo.date.locale.format(dateObject, options)
   Pattern                 Meaning               Thu Mar 26 2009 13:37:43.777 (EST)      Notes
   ======================  ====================  ======================================  ======
   G                       era                   AD
-  " 	                  "                     Anno Domini                             GGGG
+  "                       "                     Anno Domini                             GGGG
   y                       year                  2009                                    yyy
   qQ                      quarter               1
   M                       month                 March                                   MMMM

@@ -44,7 +44,7 @@ In this example, there are two Views, "view1" and "view2", and the user can move
     <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
     <ul data-dojo-type="dojox.mobile.RoundRectList">
       <li data-dojo-type="dojox.mobile.ListItem" icon="images/i-icon-1.png" moveTo="view2" transition="slide">
-	Go To View 2
+        Go To View 2
       </li>
     </ul>
   </div>

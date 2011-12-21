@@ -262,9 +262,9 @@ New project called dojox.NodeList, currently adding a delegate() method to NodeL
 
 .. js ::
 
-		dojo.query("navbar").delegate("a", "onclick", function(evt){
-		     console.log("user clicked anchor ", this.node);
-		});
+        dojo.query("navbar").delegate("a", "onclick", function(evt){
+             console.log("user clicked anchor ", this.node);
+        });
 
 
 TitleGroup

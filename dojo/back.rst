@@ -138,7 +138,7 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
                 this.backForwardOutputDivId = backForwardOutputDivId;
                 this.changeUrl = bookmarkValue || false;
             }
-	
+
             dojo.extend(ApplicationState, {
                 back: function(){ this.showStateData( "we got here going back" ); },
                 forward: function(){ this.showStateData( "we got here going forward" ); },

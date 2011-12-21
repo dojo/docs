@@ -64,7 +64,7 @@ Each member of the top level ``layers`` array is an object similar to (in many b
     discard: false,
     copyrightFile: "myCopyright.txt",
     dependencies: [
-	// List of resources this layer depends on
+        // List of resources this layer depends on
        'dijit.form.Button',
        'dojox.data.Grid'
     ]

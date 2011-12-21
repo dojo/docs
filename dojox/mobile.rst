@@ -236,9 +236,9 @@ helps ensure the bare minimum code is used, and loaded as fast as possible.
 .. js ::
  
   require([
-    "dojox/mobile/parser", 	// (Optional) This mobile app uses declarative programming with fast mobile parser
-    "dojox/mobile",		// (Required) This is a mobile app.
-    "dojox/mobile/compat" 	// (Optional) This mobile app supports running on desktop browsers
+    "dojox/mobile/parser", // (Optional) This mobile app uses declarative programming with fast mobile parser
+    "dojox/mobile",        // (Required) This is a mobile app.
+    "dojox/mobile/compat"  // (Optional) This mobile app supports running on desktop browsers
   ], function(parser, mobile, compat){ Optional module aliases that can then be referenced inside callback block
     // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
   );
@@ -298,8 +298,8 @@ Example (using HTML5 validating declarative markup and mobile parser)
         <script src="dojo/dojo.js" djConfig="async:1,parseOnLoad: true"></script>
         <script>
           require([
-            "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
-            "dojox/mobile",		// This is a mobile app.
+            "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
+            "dojox/mobile",        // This is a mobile app.
           ]); // Skip module alias and function block because we're not doing anything special...
         </script>
       </head>
@@ -308,7 +308,7 @@ Example (using HTML5 validating declarative markup and mobile parser)
           <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
           <ul data-dojo-type="dojox.mobile.RoundRectList">
             <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-    	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+                 icon="dojox/mobile/tests/images/i-icon-1.png"></li>
           </ul>
         </div>
    
@@ -316,7 +316,7 @@ Example (using HTML5 validating declarative markup and mobile parser)
           <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
           <ul data-dojo-type="dojox.mobile.RoundRectList">
             <li data-dojo-type="dojox.mobile.ListItem" label="World"
-    	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+                 icon="dojox/mobile/tests/images/i-icon-2.png"></li>
           </ul>
         </div>
       </body>
@@ -337,8 +337,8 @@ Example using older (non-validating) HTML and mobile parser:
         <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
         <script>
           require([
-            "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
-            "dojox/mobile",		// This is a mobile app.
+            "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
+            "dojox/mobile",        // This is a mobile app.
           ]); // Skip module alias and function block because we're not doing anything special...
         </script>
       </head>
@@ -347,7 +347,7 @@ Example using older (non-validating) HTML and mobile parser:
           <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
           <ul data-dojo-type="dojox.mobile.RoundRectList">
             <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-    	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+                icon="dojox/mobile/tests/images/i-icon-1.png"></li>
           </ul>
         </div>
    
@@ -355,7 +355,7 @@ Example using older (non-validating) HTML and mobile parser:
           <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
           <ul data-dojo-type="dojox.mobile.RoundRectList">
             <li data-dojo-type="dojox.mobile.ListItem" label="World"
-    	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+                icon="dojox/mobile/tests/images/i-icon-2.png"></li>
           </ul>
         </div>
       </body>

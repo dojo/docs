@@ -45,21 +45,21 @@ A custom build profile might look like this:
 .. code-block :: text
 
   dependencies = {
-  	layers: [
-  		{
-  			name: "testdijits.js",
-  			resourceName: "testdijits", /* This is what is dojo.provide()'d by the layer */
-  			dependencies: [
-  				"testdijits.Foo"
-  			]
-  		}
-  	],
+      layers: [
+          {
+              name: "testdijits.js",
+              resourceName: "testdijits", /* This is what is dojo.provide()'d by the layer */
+              dependencies: [
+                  "testdijits.Foo"
+              ]
+          }
+      ],
   
-  	prefixes: [
-  		[ "dijit", "../dijit" ],
-  		[ "dojox", "../dojox" ],
-  		[ "testdijits", "../../testdijits"]
-  	]
+      prefixes: [
+          [ "dijit", "../dijit" ],
+          [ "dojox", "../dojox" ],
+          [ "testdijits", "../../testdijits"]
+      ]
   };
 
 Remember that the build process first copies all directories mentioned in ``prefixes`` to the build output directory, and then resolves all relative paths relative to that subtree; it does not resolve paths relative to your original source directories.  The build will find Foo.js by looking up its namespace "testdijits" in the prefixes section, and resolve the "../../testdijits" path relative to the directory containing dojo.js.  Run the build with a command like:
@@ -84,19 +84,19 @@ So far, no localization.  Let's add a string resource.  Our Foo.js implementatio
   dojo.require("dijit._Templated");
   
   dojo.declare("testdijits.Foo", [ dijit._Widget, dijit._Templated ], {
-  	
-  	// Our template contains a localised string from the messages bundle
-  	templateString: "<div><p>The string: ${messages.test}</div>",
-  	
-  	// On creation, pull in the correct strings bundle
-  	postMixInProperties: function(){
-  		this.inherited(arguments);
-  		console.log("Foo calling requireLocalization..");
-  		dojo.requireLocalization("testdijits", "Foo");
-  		console.log("Foo calling getLocalization for lang ", this.lang);
-  		this.messages = dojo.i18n.getLocalization("testdijits", "Foo", this.lang);
-  		console.log("TEST LOCALIZATION: ", this.messages);
-  	}
+
+      // Our template contains a localised string from the messages bundle
+      templateString: "<div><p>The string: ${messages.test}</div>",
+
+      // On creation, pull in the correct strings bundle
+      postMixInProperties: function(){
+          this.inherited(arguments);
+          console.log("Foo calling requireLocalization..");
+          dojo.requireLocalization("testdijits", "Foo");
+          console.log("Foo calling getLocalization for lang ", this.lang);
+          this.messages = dojo.i18n.getLocalization("testdijits", "Foo", this.lang);
+          console.log("TEST LOCALIZATION: ", this.messages);
+      }
   })
 
 So the template contains a template variable usage, ${messages.test}.  Before the template is processed, the widget lifecycle dictates that ``postMixInProperties`` is called, which our implementation uses to prepare and make available a ``this.messages`` variable.  This is simply a variable on our dijit instance.  When the template is then processed in ``buildRendering`` later in the lifecycle, the ${messages.test} reference is resolved from ``this.messages.test``.
@@ -121,7 +121,7 @@ The ``testdijits/nls/Foo.js`` file should contain:
   define({ root:
   // begin v1.x content
   ({
-  	test: 'this is a test'
+      test: 'this is a test'
   })
   // end v1.x content
   })
@@ -142,13 +142,13 @@ To use this dijit, use a simple test file such as ``test.html``:
   <!DOCTYPE html>
   <html><head><title>Localized build test</title>
   <script type="text/javascript">
-  	var djConfig = {
-  		parseOnLoad: true
-  	};
+      var djConfig = {
+          parseOnLoad: true
+      };
   </script>
   <script type="text/javascript" src="test/dojo/dojo.js"></script>
   <script type="text/javascript">
-  	dojo.require("testdijits.Foo");
+      dojo.require("testdijits.Foo");
   </script>
   </head>
   <body>
@@ -222,7 +222,7 @@ To use your built layer, link to it after the link to dojo.js:
   <script type="text/javascript" src="test/dojo/dojo.js"></script>
   <script type="text/javascript" src="test/dojo/testdijits.js"></script>
   <script type="text/javascript">
-  	dojo.require("testdijits.Foo");
+      dojo.require("testdijits.Foo");
   </script>
 
 Suddenly, the load performance is very different.  The Net panel now shows:
@@ -289,7 +289,7 @@ From here it's simple to add another strings resource, along with the single ``t
   define({ root:
   // begin v1.x content
   ({
-  	test: 'FRENCH this is a test FRENCH'
+      test: 'FRENCH this is a test FRENCH'
   })
   // end v1.x content
   })

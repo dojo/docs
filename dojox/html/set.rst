@@ -36,7 +36,7 @@ Usage
 ===========  =======================  ======================================================================
 Parameter    Type                     Description
 ===========  =======================  ======================================================================
-node         DomNode  	              The parent element that will receive the content.
+node         DomNode                  The parent element that will receive the content.
 content      String|DomNode|NodeList  The content to be set on the parent element. This can be an HTML string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes.
 params       Object                   Optional. Optional flags/properties to configure the content-setting. See dojo.html._ContentSetter
 ===========  =======================  ======================================================================

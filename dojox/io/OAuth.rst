@@ -125,19 +125,19 @@ To sign a request using dojox.io.OAuth, simply pass the keyword arguments object
 
 .. js ::
  
- //	the access tokens
+ // the access tokens
  var access = {
-	consumer: {
-		key: "4958gj86hj6g99",
-		secret: "Zp4eJkFMRLiT"
-	},
-	user: {
-		key: "bzb8aexfpvz56m4da82gksvf",
-		secret: "dpf43f3p2l4k3l03"
-	},
-	sig_method: "HMAC-SHA1"
+    consumer: {
+        key: "4958gj86hj6g99",
+        secret: "Zp4eJkFMRLiT"
+    },
+    user: {
+        key: "bzb8aexfpvz56m4da82gksvf",
+        secret: "dpf43f3p2l4k3l03"
+    },
+    sig_method: "HMAC-SHA1"
  };
- //	our request will be made with the HTTP GET verb
+ // our request will be made with the HTTP GET verb
  var args = dojox.io.OAuth.sign("GET", kwArgs, access);
 
 

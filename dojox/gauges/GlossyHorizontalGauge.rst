@@ -84,14 +84,14 @@ The Javascript code creating the gauge:
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyHorizontalGauge');
         makeGauge = function(){
-        	var glossygauge = new dojox.gauges.GlossyHorizontalGauge({
-        		background: [255, 255, 255, 0],
-        		title: 'Value',
-        		id: "glossyGauge",
-        		width: 300,
-        		height: 300
-        	}, dojo.byId("HorizontalGauge"));
-        	glossygauge.startup();
+            var glossygauge = new dojox.gauges.GlossyHorizontalGauge({
+                background: [255, 255, 255, 0],
+                title: 'Value',
+                id: "glossyGauge",
+                width: 300,
+                height: 300
+            }, dojo.byId("HorizontalGauge"));
+            glossygauge.startup();
         };
         dojo.ready(makeGauge );
     

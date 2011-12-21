@@ -253,12 +253,12 @@ The FileUploader has many advanced properties to handle most situations.
 .. js ::
   
  var fileMask = ["Images", "*.jpg;*.jpeg;*.gif;*.png"]
- //	or
+ // or
  var fileMask = [
-     ["Jpeg File", 	"*.jpg;*.jpeg"],
-     ["GIF File", 	"*.gif"],
-     ["PNG File", 	"*.png"],
-     ["All Images", 	"*.jpg;*.jpeg;*.gif;*.png"],
+     ["Jpeg File",  "*.jpg;*.jpeg"],
+     ["GIF File",   "*.gif"],
+     ["PNG File",   "*.png"],
+     ["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
  ];
  var uploader = new dojox.form.FileUploader({
      button:dijit.byId("myFakeButton"),

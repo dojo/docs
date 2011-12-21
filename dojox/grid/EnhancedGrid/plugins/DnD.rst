@@ -25,208 +25,208 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
   .. js ::
 
-		dojo.require("dojo.data.ItemFileWriteStore");
-		dojo.require("dijit.form.CheckBox");
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.DnD");
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dijit.form.CheckBox");
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.DnD");
 
-		var data = {
-			identifier: 'id',
-			label: 'id',
-			items: []
-		};
-		var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-		var data_list = [];
-		var i, row, j;
-		for(i = 0; i < 100; ++i){
-			row = {};
-			for(j = 0; j < cols.length; ++j){
-				row[cols[j]] = (i + 1) + cols[j];
-			}
-			data_list.push(row);
-		}
-		var len = data_list.length;
-		for(i = 0; i < len ; ++i){
-			data.items.push(dojo.mixin({ 'id': i + 1 }, data_list[i]));
-		}
-		var data1 = dojo.clone(data);
-		
-		var layout1 = [{
-			defaultCell: {width: 3},
-			rows: [
-				{field: "A"},
-				{field: "B"},
-				{field: "C"},
-				{field: "D"},
-				{field: "E"},
-				{field: "F"},
-				{field: "G"},
-				{field: "H"},
-				{field: "I"},
-				{field: "J"},
-				{field: "K"},
-				{field: "L"},
-				{field: "M"}
-			]
-		}];
+        var data = {
+            identifier: 'id',
+            label: 'id',
+            items: []
+        };
+        var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        var data_list = [];
+        var i, row, j;
+        for(i = 0; i < 100; ++i){
+            row = {};
+            for(j = 0; j < cols.length; ++j){
+                row[cols[j]] = (i + 1) + cols[j];
+            }
+            data_list.push(row);
+        }
+        var len = data_list.length;
+        for(i = 0; i < len ; ++i){
+            data.items.push(dojo.mixin({ 'id': i + 1 }, data_list[i]));
+        }
+        var data1 = dojo.clone(data);
 
-		var layout2 = [{
-			defaultCell: {width: 3},
-			rows: [
-				{field: "N"},
-				{field: "O"},
-				{field: "P"},
-				{field: "Q"},
-				{field: "R"},
-				{field: "S"},
-				{field: "T"},
-				{field: "U"},
-				{field: "V"},
-				{field: "W"},
-				{field: "X"},
-				{field: "Y"},
-				{field: "Z"}
-			]
-		}];
+        var layout1 = [{
+            defaultCell: {width: 3},
+            rows: [
+                {field: "A"},
+                {field: "B"},
+                {field: "C"},
+                {field: "D"},
+                {field: "E"},
+                {field: "F"},
+                {field: "G"},
+                {field: "H"},
+                {field: "I"},
+                {field: "J"},
+                {field: "K"},
+                {field: "L"},
+                {field: "M"}
+            ]
+        }];
 
-		function setIdentifierForNewItem(item, store, index){
-			var attrs = store.getIdentityAttributes(item);
-			for(var i = attrs.length - 1; i >= 0; --i){
-				item[attrs[i]] = index + (new Date()).getTime();
-			}
-			return item;
-		}
-		function setDnDConfig(gridId, type, mode, selected){
-			var config = {};
-			config[type] = {};
-			config[type][mode] = selected;
-			dijit.byId(gridId).setupDnDConfig(config);
-		}
-		function setCopyOnly(gridId, selected){
-			dijit.byId(gridId).dndCopyOnly(selected);
-		}
-		dojo.ready(function(){
-			var store1 = new dojo.data.ItemFileWriteStore({data: data});
-			var store2 = new dojo.data.ItemFileWriteStore({data: data1});
+        var layout2 = [{
+            defaultCell: {width: 3},
+            rows: [
+                {field: "N"},
+                {field: "O"},
+                {field: "P"},
+                {field: "Q"},
+                {field: "R"},
+                {field: "S"},
+                {field: "T"},
+                {field: "U"},
+                {field: "V"},
+                {field: "W"},
+                {field: "X"},
+                {field: "Y"},
+                {field: "Z"}
+            ]
+        }];
 
-			var grid1 = new dojox.grid.EnhancedGrid({
-				id: 'grid1',
-				store: store1,
-				structure: layout1,
-				rowSelector: '20px',
-				canSort: function(){return false;},
-				plugins: {
-					dnd: {
-						setIdentifierForNewItem: setIdentifierForNewItem,
-						dndConfig: {}
-					}
-				}
-			});
-			grid1.placeAt('gridContainer1');
-			grid1.startup();
+        function setIdentifierForNewItem(item, store, index){
+            var attrs = store.getIdentityAttributes(item);
+            for(var i = attrs.length - 1; i >= 0; --i){
+                item[attrs[i]] = index + (new Date()).getTime();
+            }
+            return item;
+        }
+        function setDnDConfig(gridId, type, mode, selected){
+            var config = {};
+            config[type] = {};
+            config[type][mode] = selected;
+            dijit.byId(gridId).setupDnDConfig(config);
+        }
+        function setCopyOnly(gridId, selected){
+            dijit.byId(gridId).dndCopyOnly(selected);
+        }
+        dojo.ready(function(){
+            var store1 = new dojo.data.ItemFileWriteStore({data: data});
+            var store2 = new dojo.data.ItemFileWriteStore({data: data1});
 
-			var grid2 = new dojox.grid.EnhancedGrid({
-				id: 'grid2',
-				store: store2,
-				structure: layout2,
-				rowSelector: '20px',
-				canSort: function(){return false;},
-				plugins: {
-					dnd: {
-						setIdentifierForNewItem: setIdentifierForNewItem,
-						dndConfig: {}
-					}
-				}
-			});
-			grid2.placeAt('gridContainer2');
-			grid2.startup();
+            var grid1 = new dojox.grid.EnhancedGrid({
+                id: 'grid1',
+                store: store1,
+                structure: layout1,
+                rowSelector: '20px',
+                canSort: function(){return false;},
+                plugins: {
+                    dnd: {
+                        setIdentifierForNewItem: setIdentifierForNewItem,
+                        dndConfig: {}
+                    }
+                }
+            });
+            grid1.placeAt('gridContainer1');
+            grid1.startup();
 
-			dojo.query("input.cfgbox").forEach(function(cb){
-				cb.checked = true;
-			});
-			dojo.query("input.copyonlyCBox").forEach(function(cb){
-				cb.checked = false;
-			});
-		});
+            var grid2 = new dojox.grid.EnhancedGrid({
+                id: 'grid2',
+                store: store2,
+                structure: layout2,
+                rowSelector: '20px',
+                canSort: function(){return false;},
+                plugins: {
+                    dnd: {
+                        setIdentifierForNewItem: setIdentifierForNewItem,
+                        dndConfig: {}
+                    }
+                }
+            });
+            grid2.placeAt('gridContainer2');
+            grid2.startup();
+
+            dojo.query("input.cfgbox").forEach(function(cb){
+                cb.checked = true;
+            });
+            dojo.query("input.copyonlyCBox").forEach(function(cb){
+                cb.checked = false;
+            });
+        });
 
   .. html ::
 
-	<div class="myblock">
-		<h3>Grid 1</h3>
-		<div id="gridContainer1"></div>
-	</div>
-	<div class="myblock">
-		<h3>Grid 2</h3>
-		<div id="gridContainer2"></div>
-	</div>
-	<div class="myblock">
-		<h3>Grid 1 Configuration</h3>
-		<label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid1', this.checked)" />
-		<table class="cfgtable" border="1">
-			<thead>
-				<tr>
-					<th>Drag</th>
-					<th>Within</th>
-					<th>In</th>
-					<th>Out</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Rows</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'within', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'in', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'out', this.checked)"/></td>
-				</tr>
-				<tr>
-					<td>Columns</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'within', this.checked)"/></td>
-					<td>Not implemented</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'out', this.checked)"/></td>
-				</tr>
-				<tr>
-					<td>Cells</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'within', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'in', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'out', this.checked)"/></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="myblock">
-		<h3>Grid 2 Configuration</h3>
-		<label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid2', this.checked)" />
-		<table class="cfgtable" border="1">
-			<thead>
-				<tr>
-					<th>Drag</th>
-					<th>Within</th>
-					<th>In</th>
-					<th>Out</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Rows</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'within', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'in', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'out', this.checked)"/></td>
-				</tr>
-				<tr>
-					<td>Columns</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'within', this.checked)"/></td>
-					<td>Not implemented</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'out', this.checked)"/></td>
-				</tr>
-				<tr>
-					<td>Cells</td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'within', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'in', this.checked)"/></td>
-					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'out', this.checked)"/></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+    <div class="myblock">
+        <h3>Grid 1</h3>
+        <div id="gridContainer1"></div>
+    </div>
+    <div class="myblock">
+        <h3>Grid 2</h3>
+        <div id="gridContainer2"></div>
+    </div>
+    <div class="myblock">
+        <h3>Grid 1 Configuration</h3>
+        <label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid1', this.checked)" />
+        <table class="cfgtable" border="1">
+            <thead>
+                <tr>
+                    <th>Drag</th>
+                    <th>Within</th>
+                    <th>In</th>
+                    <th>Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rows</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'within', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'in', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'out', this.checked)"/></td>
+                </tr>
+                <tr>
+                    <td>Columns</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'within', this.checked)"/></td>
+                    <td>Not implemented</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'out', this.checked)"/></td>
+                </tr>
+                <tr>
+                    <td>Cells</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'within', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'in', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'out', this.checked)"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="myblock">
+        <h3>Grid 2 Configuration</h3>
+        <label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid2', this.checked)" />
+        <table class="cfgtable" border="1">
+            <thead>
+                <tr>
+                    <th>Drag</th>
+                    <th>Within</th>
+                    <th>In</th>
+                    <th>Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rows</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'within', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'in', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'out', this.checked)"/></td>
+                </tr>
+                <tr>
+                    <td>Columns</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'within', this.checked)"/></td>
+                    <td>Not implemented</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'out', this.checked)"/></td>
+                </tr>
+                <tr>
+                    <td>Cells</td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'within', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'in', this.checked)"/></td>
+                    <td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'out', this.checked)"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
   .. css ::
 
@@ -236,24 +236,24 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-	.myblock{
-		float: left;
-		margin: 5px;
-		margin-top: 0;
-	}
-	.cfgtable th,
-	.cfgtable td{
-		font-weight: bolder;
-		padding: 3px;
-	}
-	h3{
-		margin: 0;
-	}
-	#gridContainer1, #gridContainer2{
-		margin-bottom: 0px;
-		width: 300px;
-		height: 300px;
-	}
+    .myblock{
+        float: left;
+        margin: 5px;
+        margin-top: 0;
+    }
+    .cfgtable th,
+    .cfgtable td{
+        font-weight: bolder;
+        padding: 3px;
+    }
+    h3{
+        margin: 0;
+    }
+    #gridContainer1, #gridContainer2{
+        margin-bottom: 0px;
+        width: 300px;
+        height: 300px;
+    }
 
 Configuration
 =============
@@ -347,8 +347,8 @@ cell    supported       supported      supported
 ======  ==============  =============  ==========
 
 Note:
-	1. Dragging columns into a grid is NOT supported currently.
-	2. Only cells forming a rectangle are draggable (do NOT support other shapes).
+    1. Dragging columns into a grid is NOT supported currently.
+    2. Only cells forming a rectangle are draggable (do NOT support other shapes).
 
 Usage
 =====
@@ -419,7 +419,7 @@ GridSource extends dojo.dnd.Source. Its "accept" property can support "grid/cols
 GridSource provides the following events to handle grid related dnd:
 
 onDropGridColumns(grid, columnIndexes):
-	When a set of grid columns is dragged to this source.
+    When a set of grid columns is dragged to this source.
 
 ==============  ========================  ==================================
 Arguments       Type                      Description
@@ -429,7 +429,7 @@ columnIndexes   Integer[]                 The indexes of the dragged columns
 ==============  ========================  ==================================
 
 onDropGridRows(grid, rowIndexes):
-	When a set of grid rows is dragged to this source.
+    When a set of grid rows is dragged to this source.
 
 ==============  ========================  ==================================
 Arguments       Type                      Description
@@ -439,13 +439,13 @@ rowIndexes      Integer[]                 The indexes of the dragged rows
 ==============  ========================  ==================================
 
 onDropGridCells(grid, leftTopPoint, rightBottomPoint):
-	When a block of grid cells is dragged to this source.
+    When a block of grid cells is dragged to this source.
 
 ================  ========================  ==============================================================================
 Arguments         Type                      Description
 ================  ========================  ==============================================================================
 grid              dojox.grid.EnhancedGrid   The source grid.
-leftTopPoint  	  Object(__SelectCellItem)  The left-top cell of the selected cells. (For RTL, it's the right-top cell)
+leftTopPoint      Object(__SelectCellItem)  The left-top cell of the selected cells. (For RTL, it's the right-top cell)
 rightBottomPoint  Object(__SelectCellItem)  The right-bottom cell of the selected cells. (For RTL, it's the left-top cell)
 ================  ========================  ==============================================================================
 
@@ -481,8 +481,8 @@ The JavaScript code is:
 
 .. js ::
   
-	dojo.require("dojox.grid.enhanced.plugins.GridSource");
-	
+    dojo.require("dojox.grid.enhanced.plugins.GridSource");
+
     dojo.ready(function(){
       var formTarget = new dojox.grid.enhanced.plugins.GridSource(dojo.byId("songForm"),{
         isSource: false,
@@ -505,7 +505,7 @@ Public Methods
 --------------
 
 copyOnly(isCopyOnly):
-	Get/set function of the copyOnly property in the argument object.
+    Get/set function of the copyOnly property in the argument object.
 
 ==============  ==================  ===============================  ==================================================================================
 Arguments       Type                Optional/Mandatory               Description
@@ -515,8 +515,8 @@ isCopyOnly      Boolean             Optional(default to undefined)   Whether DnD
 ==============  ==================  ===============================  ==================================================================================
 
 setupConfig(config):
-	Change the dndConfig property in the argument object.
-	
+    Change the dndConfig property in the argument object.
+
 ==============  ==================  ===============================  ===================
 Arguments       Type                Optional/Mandatory               Description
 ==============  ==================  ===============================  ===================

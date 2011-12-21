@@ -180,25 +180,25 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
   .. js ::
 
-  	<script type="text/javascript">
-		dojo.require("dojox.image.SlideShow");
-		dojo.require("dojox.data.FlickrRestStore");
-			
-		dojo.ready(function(){
-			
-			// Initialize the store with a FlickrRestStore
-			var flickrRestStore = new dojox.data.FlickrRestStore();
-			var req = {
-				query: {
-					userid: "44153025@N00",
-					apikey: "8c6803164dbc395fb7131c9d54843627"
-				},
-				count: 20
-			};
-			dijit.byId('slideshow2').setDataStore(flickrRestStore, req);
-		});
-			
-	</script>
+      <script type="text/javascript">
+        dojo.require("dojox.image.SlideShow");
+        dojo.require("dojox.data.FlickrRestStore");
+
+        dojo.ready(function(){
+
+            // Initialize the store with a FlickrRestStore
+            var flickrRestStore = new dojox.data.FlickrRestStore();
+            var req = {
+                query: {
+                    userid: "44153025@N00",
+                    apikey: "8c6803164dbc395fb7131c9d54843627"
+                },
+                count: 20
+            };
+            dijit.byId('slideshow2').setDataStore(flickrRestStore, req);
+        });
+
+    </script>
 
   .. html ::
 

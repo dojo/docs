@@ -85,8 +85,8 @@ The target is the object with the method. The methodName is the name of the meth
       if(method == "PUT"){
         // if the method is PUT, change it to a POST and put the method in the parameter string
         args.url += "?x-method=PUT";
-	// return the new args
-	return ["POST", args];
+        // return the new args
+        return ["POST", args];
       }
     });
     // this will execute the original our advising function and then dojo.xhr

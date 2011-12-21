@@ -69,11 +69,11 @@ Declarative example
 
   .. html ::
 
-		<input id="hello1" data-dojo-type="dijit.form.TextBox"
-			data-dojo-props="ref: model.hello"></input>
+        <input id="hello1" data-dojo-type="dijit.form.TextBox"
+            data-dojo-props="ref: model.hello"></input>
 
-		<input id="hello2" data-dojo-type="dijit.form.TextBox"
-			data-dojo-props="ref: model.hello"></input>
+        <input id="hello2" data-dojo-type="dijit.form.TextBox"
+            data-dojo-props="ref: model.hello"></input>
 
 In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "hello2" respectively) are bound to the same 
 reference location in the data model i.e. "hello" via the "ref" expression "model.hello". Both will have an initial value of "Hello 

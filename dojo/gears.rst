@@ -14,13 +14,13 @@ Dojo 1.7 (AMD)
 
   .. js ::
 
-	require(["dojo/gears", "dojo/ready"], function(gears, ready){
-		ready(function(){
-			if(gears.available){
-				// safe to assume google.gears.factory is a gears factory
-			}
-		});
-	});
+    require(["dojo/gears", "dojo/ready"], function(gears, ready){
+        ready(function(){
+            if(gears.available){
+                // safe to assume google.gears.factory is a gears factory
+            }
+        });
+    });
 
 Dojo < 1.7
 ----------

@@ -73,9 +73,10 @@ In this example, no ListItem is declared under RoundRectDataList. The ListItems 
 
   // sample.json
   {
-     "items":
-	 { "label": "Wi-Fi", "icon": "images/i-icon-3.png", "rightText": "Off", "moveTo": "bar" },
-	 { "label": "VPN", "icon": "images/i-icon-4.png", "rightText": "VPN", "moveTo": "bar" }
+     "items": [
+         { "label": "Wi-Fi", "icon": "images/i-icon-3.png", "rightText": "Off", "moveTo": "bar" },
+         { "label": "VPN", "icon": "images/i-icon-4.png", "rightText": "VPN", "moveTo": "bar" }
+     ]
   }
 
 .. image :: RoundRectList-example1.png

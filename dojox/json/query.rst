@@ -103,7 +103,7 @@ The following operators are new in JSONQuery:
     * $1, $2, $3... - This can be used to reference additional parameters passed to the query call. For example:
 
       results = dojox.json.query("[?firstName=$1&amp;lastName=$2]",
-      					myData, "John", "Doe");
+                          myData, "John", "Doe");
 
       or it can be applied to the evaluator function:
 

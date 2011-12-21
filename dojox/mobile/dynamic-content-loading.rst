@@ -24,10 +24,10 @@ Usage of the url property is as follows.
 
   <ul data-dojo-type="dojox.mobile.RoundRectList">
      <li data-dojo-type="dojox.mobile.ListItem" transition="slide" url="view1.html">
-	 External View #1 (sync)
+        External View #1 (sync)
      </li>
      <li data-dojo-type="dojox.mobile.ListItem" transition="flip" url="view2.json" sync="false">
-	 External View #2 (async)
+        External View #2 (async)
      </li>
   </ul>
 
@@ -43,15 +43,15 @@ Example of view html fragment:
   <div data-dojo-type="dojox.mobile.View">
       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">view1.html</h1>
       <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      Jack Coleman
-	  </li>
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      James Evans
-	  </li>
-	  <li data-dojo-type="dojox.mobile.ListItem">
-	      Jason Griffin
-	  </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          Jack Coleman
+      </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          James Evans
+      </li>
+      <li data-dojo-type="dojox.mobile.ListItem">
+          Jason Griffin
+      </li>
       </ul>
   </div>
 
@@ -67,18 +67,18 @@ Example of view JSON data:
   {
     "dojox.mobile.View": {
       "dojox.mobile.Heading": {
-	"@back": "Home",
-	"@moveTo": "foo",
-	"@label": "view1.json"
+        "@back": "Home",
+        "@moveTo": "foo",
+        "@label": "view1.json"
       },
       "dojox.mobile.EdgeToEdgeList": {
-	"dojox.mobile.ListItem": [{
-	  "@label": "Jack Coleman"
-	}, {
-	  "@label": "James Evans"
-	}, {
-	  "@label": "Jason Griffin"
-	}]
+        "dojox.mobile.ListItem": [{
+          "@label": "Jack Coleman"
+        }, {
+          "@label": "James Evans"
+        }, {
+          "@label": "Jason Griffin"
+        }]
       }
     }
   }
@@ -134,15 +134,15 @@ In this example, view content is loaded asynchronously, the destination view is 
 
      var url = "http://..."; // or var url = listItem.url;
      dojo.xhrGet({
-	 url: url,
-	 handleAs: "text",
-	 load: function(response, ioArgs){
-	     var container = view2.containerNode;
-	     container.innerHTML = response;
-	     dojo.parser.parse(container);
-	     prog.stop();
-	     listItem.transitionTo("view2");
-	 }
+         url: url,
+         handleAs: "text",
+         load: function(response, ioArgs){
+             var container = view2.containerNode;
+             container.innerHTML = response;
+             dojo.parser.parse(container);
+             prog.stop();
+             listItem.transitionTo("view2");
+         }
      });
   }
 
@@ -168,14 +168,14 @@ This example is almost the same as the previous one, but in this example, a view
 
      var url = "http://..."; // or var url = listItem.url;
      dojo.xhrGet({
-	 url: url,
-	 handleAs: "text",
-	 load: function(response, ioArgs){
-	     var container = view3.containerNode;
-	     container.innerHTML = response;
-	     dojo.parser.parse(container);
-	     prog.stop();
-	 }
+         url: url,
+         handleAs: "text",
+         load: function(response, ioArgs){
+             var container = view3.containerNode;
+             container.innerHTML = response;
+             dojo.parser.parse(container);
+             prog.stop();
+         }
      });
   }
 
@@ -192,36 +192,36 @@ The above three examples are examples of updating an existing view. In this exam
 
   function myAction4(li){
      if(!dijit.byId("view4")){
-	 var view4 = new dojox.mobile.View({
-	     id: "view4",
-	     selected: true
-	 }, dojo.create("DIV", null, dojo.body()));
-	 view4.startup();
+     var view4 = new dojox.mobile.View({
+         id: "view4",
+         selected: true
+     }, dojo.create("DIV", null, dojo.body()));
+     view4.startup();
 
-	 var heading1 = new dojox.mobile.Heading({
-	     label: "Dynamic View",
-	     back: "Home",
-	     moveTo: "home"
-	 });
-	 view4.addChild(heading1);
+     var heading1 = new dojox.mobile.Heading({
+         label: "Dynamic View",
+         back: "Home",
+         moveTo: "home"
+     });
+     view4.addChild(heading1);
 
-	 var categ1 = new dojox.mobile.RoundRectCategory({
-	     label: "Documents"
-	 });
-	 view4.addChild(categ1);
+     var categ1 = new dojox.mobile.RoundRectCategory({
+         label: "Documents"
+     });
+     view4.addChild(categ1);
 
-	 var list1 = new dojox.mobile.RoundRectList();
-	 view4.addChild(list1);
+     var list1 = new dojox.mobile.RoundRectList();
+     view4.addChild(list1);
 
-	 var counter = 4;
-	 for(var i = 1; i <= 3; i++){
-	     var item1 = new dojox.mobile.ListItem({
-		 icon: "images/i-icon-"+i+".png",
-		 label: "Document 000"+counter
-	     });
-	     list1.addChild(item1);
-	     counter++;
-	 }
+     var counter = 4;
+     for(var i = 1; i <= 3; i++){
+         var item1 = new dojox.mobile.ListItem({
+         icon: "images/i-icon-"+i+".png",
+         label: "Document 000"+counter
+         });
+         list1.addChild(item1);
+         counter++;
+     }
      }
      dijit.byNode(li).transitionTo("view4");
   }
@@ -236,8 +236,8 @@ This example updates an existing RoundRectDataList via a dojo.data datastore, an
   function myAction5(li){
      var list1 = dijit.byId("list1");
      if(!list1.store){
-	 var store1 = new dojo.data.ItemFileReadStore({url: ".../data.json"});
-	 list1.setStore(store1, {label: '*e'}); // items whose label ends with 'e'
+         var store1 = new dojo.data.ItemFileReadStore({url: ".../data.json"});
+         list1.setStore(store1, {label: '*e'}); // items whose label ends with 'e'
      }
      dijit.byNode(li).transitionTo("view5");
   }
@@ -259,13 +259,13 @@ In this example, there is a dojox.mobile.ContentPane widget in the transition ta
   function myAction6(li){
      var pane1 = dijit.byId("pane1");
      if(!pane1.domNode.innerHTML){ // nothing has been loaded yet
-	 dojo.connect(pane1, "onLoad", null, function(){
-	     // onLoad fires when the content is ready
-	     dijit.byNode(li).transitionTo("view6");
-	 });
-	 pane1.set("href", "fragment1.html");
+         dojo.connect(pane1, "onLoad", null, function(){
+             // onLoad fires when the content is ready
+             dijit.byNode(li).transitionTo("view6");
+         });
+         pane1.set("href", "fragment1.html");
      }else{
-	 dijit.byNode(li).transitionTo("view6");
+         dijit.byNode(li).transitionTo("view6");
      }
   }
 
@@ -276,8 +276,8 @@ In this example, there is a dojox.mobile.ContentPane widget in the transition ta
      <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Dynamic Content</h2>
      <div id="pane1" data-dojo-type="dojox.mobile.ContentPane"></div>
      <ul data-dojo-type="dojox.mobile.RoundRectList">
-	 <li data-dojo-type="dojox.mobile.ListItem" moveTo="home" transitionDir="-1">
-	     Home
-	 </li>
+         <li data-dojo-type="dojox.mobile.ListItem" moveTo="home" transitionDir="-1">
+             Home
+         </li>
      </ul>
   </div>
