@@ -89,21 +89,21 @@ dojo.currency
 
    require(["dojo.currency"], function(localeCurrency){
 
-   // in the United States
-   localeCurrency.format(1234.567, {currency: "USD"});
-   // => "$1,234.57"
-   localeCurrency.format(1234.567, {currency: "EUR"});
-   // => "€1,234.57"
+     // in the United States
+     localeCurrency.format(1234.567, {currency: "USD"});
+     // => "$1,234.57"
+     localeCurrency.format(1234.567, {currency: "EUR"});
+     // => "€1,234.57"
 
-   // a French-speaking Swiss user would see
-   localeCurrency.format(-1234.567, {currency: "EUR"});
-   // => "-1 234,57 €"
+     // a French-speaking Swiss user would see
+     localeCurrency.format(-1234.567, {currency: "EUR"});
+     // => "-1 234,57 €"
 
-   // while a German-speaking Swiss user would see
-   localeCurrency.format(-1234.567, {currency: "EUR"});
-   // => "-€ 1,234.57"
+     // while a German-speaking Swiss user would see
+     localeCurrency.format(-1234.567, {currency: "EUR"});
+     // => "-€ 1,234.57"
 
-Note: handling of Hindi and Arabic style numerals is planned for 1.0, but not yet implemented.
+Note: handling of Hindi and Arabic style numerals is not yet implemented.
 
 
 Locale support
