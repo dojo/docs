@@ -27,10 +27,10 @@ With the introduction of AMD-style loading in Dojo 1.7, localized content is loa
 
 .. js ::
 
-require(["dojo/i18n!myApp/nls/myResources", function(resources) {
-  dojo.byId("myDiv");
-  myDiv.innerText = resources.greeting;
-});
+    require(["dojo/i18n!myApp/nls/myResources", function(resources) {
+      dojo.byId("myDiv");
+      myDiv.innerText = resources.greeting;
+    });
 
 where the localized content is simply an Object with properties, defined according to a special convention that gives a default set of strings as well as references to various translations. The resource at the path myApp/nls/myResources.js might look something like this:
 
