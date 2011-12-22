@@ -315,22 +315,24 @@ There are a few key, important HTTP response codes that you should consider impl
 200 OK
 ''''''
 
-This should be returned for a GET or another successful request where there isn't an obvious other verb, but there is some content to return.  If there is no content to return, then 204 No Content should be used instead.
+This should be returned for a ``GET`` or another successful request where there isn't an obvious other verb, but there is some content to return.  If there is no content to return, then ``204 No Content`` should be used instead.
 
 201 Created
 '''''''''''
 
-This should be returned for a POST which has successfully created a new resource.  You can return content with this as well, but it should represent the created resource, potentially with a the unique key added to the structure.
+This should be returned for a ``POST`` which has successfully created a new resource.  You can return content with this as well, but it should represent the created resource, potentially with a the unique key added to the structure.
+
+This could be coupled with setting the ``Location:`` header on the respond with the permanent URI for the resource.
 
 202 Accepted
 ''''''''''''
 
-This could be returned when a request changes something on the server, like a PUT that updates a record.
+This could be returned when a request changes something on the server, like a ``PUT`` that updates a record.
 
 204 No Content
 ''''''''''''''
 
-This should be used whenever there is no content to send back, but the request was successful.  This is often the proper response for a successful DELETE, since the record no longer exists, so there is no data to return.  You shouldn't confuse this with an empty result set.  If a GET does not return any records, it is more appropriate to return a 200 and an empty array as the content:
+This should be used whenever there is no content to send back, but the request was successful.  This is often the proper response for a successful ``DELETE``, since the record no longer exists, so there is no data to return.  You shouldn't confuse this with an empty result set.  If a ``GET`` does not return any records, it is more appropriate to return a ``200 Ok`` and an empty array as the content:
 
 .. js ::
 
@@ -340,10 +342,12 @@ This should be used whenever there is no content to send back, but the request w
 400 Bad Request
 '''''''''''''''
 
+This response code could be used for situations where the consumer has made a request which your service cannot understand.  This could indicate a malformed URI in this services particular context, for example.
+
 404 Not Found
 '''''''''''''
 
-This should be returned when a specific resource URI is not found.  This should not be used for an empty collection.  In this case an empty array should be returned.
+This should be returned when a specific resource URI is not found.  This should not be used for an empty collection.  In this case an empty array should be returned, with a ``200 OK`` response code.
 
 405 Method Not Allowed
 ''''''''''''''''''''''
@@ -358,16 +362,28 @@ This could be used to indicate that a particular verb is not applicable for this
 409 Conflict
 ''''''''''''
 
+This could be used to indicate that a ``POST`` or ``PUT`` cannot be completed due to a conflict of resources.  This could indicate to the consumer that they need to change something with the request in order to properly ``POST`` or ``PUT`` a resource.
+
 500 Internal Server Error
 '''''''''''''''''''''''''
+
+This should be used in a situation where the requested URI cannot be responded to and there is no other more specific response code.  It could be used as the "default" response code until the request is processed and is replaced by a more appropriate response.
 
 501 Not Implemented
 '''''''''''''''''''
 
-This can be returned in cases where you don't have a particular verb implemented, although this is more a convention than a requirement.  500 is sufficient, but it might help in debugging of a consumer to know that what they are asking for is specifically not implemented, versus simply being a server error.
+This can be returned in cases where you don't have a particular verb implemented, although this is more a convention than a requirement.  ``500 Internal Server Error`` is sufficient, but it might help in debugging of a consumer to know that what they are asking for is specifically not implemented, versus simply being a server error.
 
 HTTP Headers Received
 ~~~~~~~~~~~~~~~~~~~~~
+
+There are some headers that your service is expected to handle.  If you don't handle these headers properly than you can end up with unexpected results in the dojo consuming stores and any widgets that rely upon them.
+
+Range
+'''''
+
+This header will specify a range of results to return for a particular request.  See `Ranges`_ above for detailed information on how this should be handled.
+
 
 HTTP Headers Sent
 ~~~~~~~~~~~~~~~~~
