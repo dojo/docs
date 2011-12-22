@@ -5,7 +5,7 @@ Bi-directional Text (Bi-Di)
 ===========================
 
 :Authors: Adam Peller
-:since: V?
+:since: 1.1
 
 .. contents ::
    :depth: 2
