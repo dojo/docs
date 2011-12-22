@@ -5,7 +5,7 @@ Translatable Resource bundles
 =============================
 
 :Authors: Adam Peller
-:since: 1.7
+:since: 1.0
 
 .. contents ::
    :depth: 2
