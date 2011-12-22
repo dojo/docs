@@ -388,6 +388,23 @@ This header will specify a range of results to return for a particular request. 
 HTTP Headers Sent
 ~~~~~~~~~~~~~~~~~
 
+Depending on the request and how your service has filled it, there are different HTTP response headers that you may need to set.
+
+Content-Range
+'''''''''''''
+
+If you received a `Range:` request header, you should set the `Content-Range:` response header.  See `Ranges`_ above for detailed on how this should be handled.
+
+Content-Type
+''''''''''''
+
+If you are returning content, you should be setting the ``Content-Type`` on the response.  Typically this will be ``application/json``.
+
+Location
+''''''''
+
+You can specify the ``Location:`` header to let the consumer know the "real" location of the requested URI.  Typically this is used when the consumer POSTs a new resource, which now has a specific resource URI.  See `POST`_ above for further details.
+
 Converting between SQL and REST
 -------------------------------
 
