@@ -393,7 +393,7 @@ Depending on the request and how your service has filled it, there are different
 Content-Range
 '''''''''''''
 
-If you received a `Range:` request header, you should set the `Content-Range:` response header.  See `Ranges`_ above for detailed on how this should be handled.
+If you received a ``Range:`` request header, you should set the ``Content-Range:`` response header.  See `Ranges`_ above for detailed on how this should be handled.
 
 Content-Type
 ''''''''''''
