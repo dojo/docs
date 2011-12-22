@@ -53,7 +53,7 @@ Here, English is provided as the default language, the fallback if no other tran
       greeting: "Hallo, Welt!"
     });
 
-The Dojo loader uses the conventions defined by the dojo/i18n! plugin to find the resource that is the best match for the user's locale, mixing in variants with main languages and the 'root' resources such that the fallback will be used if a more specific string is not found.  Therefore, multiple network requests may be involved to fetch a resource.  Continuing with the example, a variant may be provided for Austrian German at myApp/nls/de-at/myResources.js:
+Continuing with the example, a variant may be provided for Austrian German at myApp/nls/de-at/myResources.js:
 
 .. js ::
 
@@ -61,7 +61,7 @@ The Dojo loader uses the conventions defined by the dojo/i18n! plugin to find th
       greeting: "Grüß Gott!"
     });
 
-Dojo's builder optimizes this search by collecting or flattening all of the resources by locale, as well as concatenating multiple resource bundles used by the application, just as it does for Javascript code modules.
+The Dojo loader uses the conventions defined by the dojo/i18n! plugin to find the resource that is the best match for the user's locale, mixing in variants with main languages and the 'root' resources such that the fallback will be used if a more specific string is not found.  Therefore, multiple network requests may be involved to fetch a resource.   Many more translations may be provided by simply appending a boolean flag to the root resource and creating the corresponding module in the appropriate subdirectory.  Dojo's builder optimizes this search by collecting or flattening all of the resources by locale, as well as concatenating multiple resource bundles used by the application, just as it does for Javascript code modules.  With or without the builder, the data is structured in such a way that only the translation for the particular locale in use is sent to the client.
 
 See `dojo.i18n <dojo/i18n>` for more information.
 
