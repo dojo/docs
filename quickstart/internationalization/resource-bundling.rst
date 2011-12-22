@@ -63,13 +63,9 @@ Continuing with the example, a variant may be provided for Austrian German at my
 
 Many more translations may be provided by simply appending a boolean flag to the root resource and creating the corresponding module in the appropriate subdirectory.  The Dojo loader uses the conventions defined by the dojo/i18n! plugin to find the resource that is the best match for the user's locale, mixing in variants with main languages and the 'root' resources such that the fallback will be used if a more specific string is not found.  Therefore, multiple network requests may be involved to fetch a resource.   Dojo's builder optimizes this search by collecting or flattening all of the resources by locale, as well as concatenating multiple resource bundles used by the application, just as it does for Javascript code modules.  With or without the builder, the data is structured in such a way that only the translation for the particular locale in use is sent to the client.
 
-See `dojo.i18n <dojo/i18n>` for more information.
-
 
 See also
 ========
 
 * :ref:`dojo.i18n <dojo/i18n>`
-* :ref:`dojo.requireLocalization <dojo/requireLocalization>`
-* :ref:`dojo.i18n.getLocalization <dojo/i18n>`
 * :ref:`Language and Localization Settings in dojoConfig <dojo/config>`
