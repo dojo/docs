@@ -534,6 +534,9 @@ clone(m)
 multiplyPoint(m, a, b), multiplyPoint(m, p)
   Apply a transformation to a coordinate.
 
+multiplyRectangle(m, rect)
+  Applies a matrix to a rectangle and returns the smallest rectangle enclosing the 4 transformed points.
+
 multiply(m1, m2, ...)
   Multiply all parameters to create a single matrix.
   This function is extremely useful and there is a shortcut for it:
