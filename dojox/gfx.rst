@@ -4,7 +4,7 @@
 dojox.gfx
 =========
 
-:Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
+:Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell, Patrick Ruzand
 
 .. contents ::
   :depth: 3
@@ -786,6 +786,9 @@ Surface
 
   clear()
     Removes all shapes from a surface returning the surface itself.
+
+  getBoundingBox()
+    Returns the content bounding box.
 
   connect() and disconnect()
     See the discussion of these methods in the Event processing section above.
