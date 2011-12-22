@@ -17,33 +17,3 @@ Dojo functions, including Dijit, only support a single text direction per docume
 Bi-Di issues are largely related to widgets, and are therefore addressed mostly within the Dijit project. To support right-to-left users, some extra CSS is required. At the present time, these rules reside in a separate stylesheet and must be explicitly loaded to provide Bi-Di support. (e.g. themes/tundra/tundra_rtl.css, which imports themes/tundra/tundra.css for you)
 
 As of the 1.1 release, all Dijits, except for deprecated widgets, are Bi-Di capable. DojoX BiDi support varies.
-
-As of the 1.0 release, the following widgets have limited Bi-Di support using the Tundra theme:
-
-* dijit.ColorPalette
-* dijit.Declaration
-* dijit.Dialog
-* dijit.Menu
-* dijit.ProgressBar
-* dijit.TitlePane
-* dijit.ToolBar
-* dijit.Tooltip
-* dijit.Tree
-* dijit.form.Button
-* dijit.form.CheckBox
-* dijit.form.ComboBox
-* dijit.form.CurrencyTextBox
-* dijit.form.DateTextBox
-* dijit.form.FilteringSelect
-* dijit.form.Form
-* dijit.form.InlineEditBox
-* dijit.form.NumberSpinner
-* dijit.form.NumberTextBox
-* dijit.form.Textarea
-* dijit.form.TextBox
-* dijit.form.TimeTextBox
-* dijit.form.ValidationTextBox
-* dijit.layout.ContentPane
-* dijit.layout.LinkPane
-* dijit.layout.StackContainer
-* dijit.layout.AccordionContainer
