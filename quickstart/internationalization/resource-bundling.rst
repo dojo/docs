@@ -36,21 +36,21 @@ where the localized content is simply an Object with properties, defined accordi
 
 .. js ::
 
-define({
-  root: {
-    greeting: "Hello, world!"
-  }
+    define({
+      root: {
+        greeting: "Hello, world!"
+      }
 
-  de: true
-});
+      de: true
+    });
 
 Here, English is provided as the default language, the fallback if no other translation is available.  For German speaking users, on a page specifying 'de' as the locale or some de- variant, the property 'de: true' indicates that there is a translation available in a peer subdirectory called de, for a path of myApp/nls/de/myResources.js:
 
 .. js ::
 
-define({
-  greeting: "Hallo, Welt!"
-});
+    define({
+      greeting: "Hallo, Welt!"
+    });
 
 See `dojo.i18n <dojo/i18n>` for more information.
 
