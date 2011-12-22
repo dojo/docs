@@ -25,37 +25,34 @@ Localizing Strings
 
 With the introduction of AMD-style loading in Dojo 1.7, localized content is loaded much like Javascript modules, using the dojo/i18n! plugin as follows:
 
-dojo.requireLocalization() / dojo.i18n.getLocalization()
-  these methods leverage :ref:`Dojo's package concept <dojo/require>` to load localized resources. Each translated resource is implemented as a file containing a Javascript Object (see JSON notation) where each property may be a string or any other Javascript type. Resources are located within the directory structure beneath a specially named "nls" directory (short for native language support). Each translation is made available in a subdirectory named by locale.
+.. js ::
 
-dojo.requireLocalization
-------------------------
+require(["dojo/i18n!myApp/nls/myResources", function(resources) {
+  dojo.byId("myDiv");
+  myDiv.innerText = resources.greeting;
+});
 
-:ref:`dojo.requireLocalization() <dojo/requireLocalization>` is used to declare usage of these resources and load them in the same way that dojo.requires() pulls in Javascript packages, but using the translation appropriate to the caller. The location of the bundle is specified using two arguments: the first is the directory structure containing the nls directory; the second is the name of the file in that directory containing the localized resources. The locale used is discovered at runtime from the browser, or specified by an override in :ref:`dojoConfig <dojo/config>`. If :ref:`dojoConfig.extraLocale <dojo/config>` is set, the localizations in that list will be loaded also.
-
-dojo.i18n.getLocalization
--------------------------
-
-Use :ref:`dojo.i18n.getLocalization() <dojo/i18n>` to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
+where the localized content is simply an Object with properties, defined according to a special convention that gives a default set of strings as well as references to various translations. The resource at the path myApp/nls/myResources.js might look something like this:
 
 .. js ::
 
-   // TODO: replace this example with the strings from dojo.color when translations are available
-   dojo.require("dojo.i18n");
-   dojo.requireLocalization("dijit.form", "validate");
-   var validate = dojo.i18n.getLocalization("dijit.form", "validate");
-   console.log(validate.invalidMessage);
+define({
+  root: {
+    greeting: "Hello, world!"
+  }
 
+  de: true
+});
 
-For an English-speaking user, the example above will display the value for invalidMessage from dijit/form/validate.js:
+Here, English is provided as the default language, the fallback if no other translation is available.  For German speaking users, on a page specifying 'de' as the locale or some de- variant, the property 'de: true' indicates that there is a translation available in a peer subdirectory called de, for a path of myApp/nls/de/myResources.js:
 
-"* The value entered is not valid."
+.. js ::
 
-The root happens to have the English translation, which also acts as a fallback for any unsupported locales (English was an arbitrary choice, but the one commonly used in Dojo). Therefore, no translations were found in the en or en-us directories as they would have been redundant. Meanwhile, a Japanese user in the ja-jp locale will see the value in dijit/form/nls/ja, which is the best match for that locale:
+define({
+  greeting: "Hallo, Welt!"
+});
 
-"* 入力したデータに該当するものがありません。"
-
-Translation subdirectories are searched and mixed in such a way that variants can specify overrides for some or all of their parent locale. Because the search requires looking for translations under both the language as well as variants, sometimes a 404 will occur; this is normal and can be optimized at build time.
+See `dojo.i18n <dojo/i18n>` for more information.
 
 
 See also
