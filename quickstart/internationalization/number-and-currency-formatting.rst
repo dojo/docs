@@ -19,7 +19,7 @@ For example, look at the following date formatted using the default locale for t
 
 .. js ::
 
-   require(["dojo.date.locale"], function(localeDate){
+   require(["dojo/date/locale"], function(localeDate){
 
      var d = new Date(2006, 9, 29, 12, 30);
      // To format a date, simply pass the date to the format function.  A default format appropriate for
@@ -68,7 +68,7 @@ Dojo provides the facilities to properly format and parse numbers on a localized
 
 .. js ::
 
-   require(["dojo.number"], function(localeNumber){
+   require(["dojo/number"], function(localeNumber){
 
      // in the United States
      localeNumber.format(1234567.89);
@@ -87,7 +87,7 @@ dojo.currency
 
 .. js ::
 
-   require(["dojo.currency"], function(localeCurrency){
+   require(["dojo/currency"], function(localeCurrency){
 
      // in the United States
      localeCurrency.format(1234.567, {currency: "USD"});
