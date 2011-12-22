@@ -19,35 +19,37 @@ For example, look at the following date formatted using the default locale for t
 
 .. js ::
 
-   // the page must specify dojoConfig.extraLocale: 'zh-cn'
-   // to bootstrap the environment with support for an extra locale
-   dojo.require("dojo.date.locale");
+   require(["dojo/date/locale"], function(localeDate){
 
-   var d = new Date(2006, 9, 29, 12, 30);
-   // to format a date, simply pass the date to the format function
-   dojo.date.locale.format(d);
-   // => "10/29/06 12:30 PM"
+     var d = new Date(2006, 9, 29, 12, 30);
+     // To format a date, simply pass the date to the format function.  A default format appropriate for
+     // your locale will be chosen.
+     localeDate.format(d);
+     // => "10/29/06 12:30 PM"
 
-   // the second argument may contain a list of options in Object syntax,
-   // such as overriding the default locale
-   dojo.date.locale.format(d, {locale:'zh-cn'})
-   // => "06-10-29 下午12:30"
+     // The second argument may contain a list of options in Object syntax,
+     // such as overriding the default locale
+     // Note: the page must specify dojoConfig.extraLocale: 'zh-cn'
+     // to bootstrap the environment with support for a locale which is not the user's default
+     localeDate.format(d, {locale:'zh-cn'})
+     // => "06-10-29 下午12:30"
+   });
 
 Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") Dojo.date offers a variety of formatting choices, such as the option to a different format "length" -- a choice of "short", "medium", "long", or "full" -- or to print only the date or time portion of the Date object:
 
 .. js ::
 
-   dojo.date.locale.format(d, {selector:'date', formatLength:'full'});
+   localeDate.format(d, {selector:'date', formatLength:'full'});
    // => "Sunday, October 29, 2006"
 
-   dojo.date.locale.format(d, {selector:'time', formatLength:'long', locale:'zh-cn'});
+   localeDate.format(d, {selector:'time', formatLength:'long', locale:'zh-cn'});
    // => "下午12时30分00秒"
 
 Also, it is possible to reverse the process and parse String objects into Dates. For a user running in a Dutch locale like "nl-nl", the following would produce a valid Date object:
 
 .. js ::
 
-   dojo.date.locale.parse("maandag 30 oktober 2006", {formatLength: "full"});
+   localeDate.parse("maandag 30 oktober 2006", {formatLength: "full"});
 
 Special patterns may be specified may be used to provide custom formats, however using such a pattern overrides the locale-specific behavior and may result in an application that is not properly localized. The patterns used follow the specification and are similar to those used by the Java dateformat class (e.g. MMddyyyy).
 
@@ -66,15 +68,15 @@ Dojo provides the facilities to properly format and parse numbers on a localized
 
 .. js ::
 
-   dojo.require("dojo.number");
+   require(["dojo/number"], function(localeNumber){
 
-   // in the United States
-   dojo.number.format(1234567.89);
-   // => "1,234,567.89"
+     // in the United States
+     localeNumber.format(1234567.89);
+     // => "1,234,567.89"
 
-   // in France
-   dojo.number.format(1234567.89);
-   // => "1 234 567,89"
+     // in France
+     localeNumber.format(1234567.89);
+     // => "1 234 567,89"
 
 Other options may be specified to limit output to a certain number of decimal places or use rounding. And again, custom formats may be specified, overriding the local customs.
 
@@ -85,23 +87,23 @@ dojo.currency
 
 .. js ::
 
-   dojo.require("dojo.currency");
+   require(["dojo/currency"], function(localeCurrency){
 
-   // in the United States
-   dojo.currency.format(1234.567, {currency: "USD"});
-   // => "$1,234.57"
-   dojo.currency.format(1234.567, {currency: "EUR"});
-   // => "€1,234.57"
+     // in the United States
+     localeCurrency.format(1234.567, {currency: "USD"});
+     // => "$1,234.57"
+     localeCurrency.format(1234.567, {currency: "EUR"});
+     // => "€1,234.57"
 
-   // a French-speaking Swiss user would see
-   dojo.currency.format(-1234.567, {currency: "EUR"});
-   // => "-1 234,57 €"
+     // a French-speaking Swiss user would see
+     localeCurrency.format(-1234.567, {currency: "EUR"});
+     // => "-1 234,57 €"
 
-   // while a German-speaking Swiss user would see
-   dojo.currency.format(-1234.567, {currency: "EUR"});
-   // => "-€ 1,234.57"
+     // while a German-speaking Swiss user would see
+     localeCurrency.format(-1234.567, {currency: "EUR"});
+     // => "-€ 1,234.57"
 
-Note: handling of Hindi and Arabic style numerals is planned for 1.0, but not yet implemented.
+Note: handling of Hindi and Arabic style numerals is not yet implemented.
 
 
 Locale support
