@@ -810,6 +810,9 @@ Group
   It is planned to implement setting a (default) visual parameters to group's children including fill, stroke, and font properties.
   A group combines features of a shape and a surface. It shares following methods with a shape:
 
+  getBoundingBox()
+    Returns the Group children bounding box
+
   getTransform()/setTransform(matrix)
     Accesses a transformation matrix applied to a group.
 
