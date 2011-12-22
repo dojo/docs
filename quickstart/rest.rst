@@ -305,8 +305,66 @@ Other things you might want to consider:
  * Provide method invocation to perform a server side service.
  * Error handling and logging
 
+The following sections deal with the main areas that your service should provide in order to interface properly with a consumer.
+
 HTTP Response Codes
 ~~~~~~~~~~~~~~~~~~~
+
+There are a few key, important HTTP response codes that you should consider implementing in your service.  If you implement the response codes appropriately you will get the right behaviour out of the consumers.  While not exhaustive, the following sections describe the main response codes you should consider using.  Generally speaking, you should try your best to use a breadth of response codes, because at the very least it provides information to a consumer who maybe trying to debug why something isn't working.  Even if you are the only developer, detailed response codes can be very beneficial in understanding what is going on.
+
+200 OK
+''''''
+
+This should be returned for a GET or another successful request where there isn't an obvious other verb, but there is some content to return.  If there is no content to return, then 204 No Content should be used instead.
+
+201 Created
+'''''''''''
+
+This should be returned for a POST which has successfully created a new resource.  You can return content with this as well, but it should represent the created resource, potentially with a the unique key added to the structure.
+
+202 Accepted
+''''''''''''
+
+This could be returned when a request changes something on the server, like a PUT that updates a record.
+
+204 No Content
+''''''''''''''
+
+This should be used whenever there is no content to send back, but the request was successful.  This is often the proper response for a successful DELETE, since the record no longer exists, so there is no data to return.  You shouldn't confuse this with an empty result set.  If a GET does not return any records, it is more appropriate to return a 200 and an empty array as the content:
+
+.. js ::
+
+    []
+
+
+400 Bad Request
+'''''''''''''''
+
+404 Not Found
+'''''''''''''
+
+This should be returned when a specific resource URI is not found.  This should not be used for an empty collection.  In this case an empty array should be returned.
+
+405 Method Not Allowed
+''''''''''''''''''''''
+
+This could be used to indicate that a particular verb is not applicable for this service.
+
+406 Not Acceptable
+''''''''''''''''''
+
+This could be used to indicate that a particular verb is not applicable for this service.
+
+409 Conflict
+''''''''''''
+
+500 Internal Server Error
+'''''''''''''''''''''''''
+
+501 Not Implemented
+'''''''''''''''''''
+
+This can be returned in cases where you don't have a particular verb implemented, although this is more a convention than a requirement.  500 is sufficient, but it might help in debugging of a consumer to know that what they are asking for is specifically not implemented, versus simply being a server error.
 
 HTTP Headers Received
 ~~~~~~~~~~~~~~~~~~~~~
