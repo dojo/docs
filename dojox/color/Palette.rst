@@ -88,4 +88,50 @@ Available color theory models (based on the color rules at `Adobe Kuler <http://
 * ``splitComplementary``
 * ``compound``
 * ``shades``
- 
+
+Example
+========
+
+Color palettes based on color theory models
+-------------------------------------------
+
+Create palettes based on a color theory by looping through all available models programmatically:
+
+.. code-example ::
+
+  .. js ::
+
+        require([
+          "dojo/_base/array",
+          "dojo/dom-construct",
+          "dojox/color/Palette"
+        ], function(array, domConstruct, Palette){
+          var tbl = domConstruct.create('table', {
+            style: { borderSpacing: '0 3px' }
+          }, 'palette');
+	  for (palette in Palette.generators) {
+            var tr = domConstruct.create('tr', null, tbl);
+            var p = Palette.generate("#A62F00", palette);
+            domConstruct.create('td', {
+              innerHTML: palette,
+              style: {
+                verticalAlign: 'middle',
+                paddingRight: '4px'
+              }
+            }, tr);
+            array.forEach(p.colors, function(color) {
+              domConstruct.create('td', {
+                style: {
+                  height: '24px',
+                  width: '18px',
+                  border: '1px solid black',
+                  backgroundColor: color.toHex()
+                }
+              }, tr);
+            });
+          }
+        });
+
+  .. html ::
+
+    <div id="palette"></div>
