@@ -46,12 +46,11 @@ Default color palette, created programmatically:
 
   .. js ::
 
-       dojo.require("dijit.ColorPalette");
-       dojo.ready(function(){
-         var myPalette = new dijit.ColorPalette({
+       require(["dijit/ColorPalette"], function(ColorPalette){
+         var myPalette = new ColorPalette({
            palette: "7x10",
            onChange: function(val){ alert(val); }
-         }, "placeHolder" );
+         }, "placeHolder");
        });
 
   .. html ::
