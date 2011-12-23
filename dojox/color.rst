@@ -35,7 +35,7 @@ an alias to ``dojox.color`` and ``dojox.color.Color``:
   var hsv = myColor.toHsv();
 
 Note that these are the most common color models (other than RGB, which is implemented by dojo.Color);
-the methods should be self-explanatory.  To create a ``dojo.Color`` or ``dojox.color.Color`` instance,
+the methods should be self-explanatory except that Lightness (l) and Value (v) expect values from 0-100 and not 0-1.  To create a ``dojo.Color`` or ``dojox.color.Color`` instance,
 use the *from* methods, directly on ``dojox.color``; to convert an existing ``dojo.Color`` or
 ``dojox.color.Color`` object to a specific model, use the *to* methods.
 
