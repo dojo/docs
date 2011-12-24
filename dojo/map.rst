@@ -46,7 +46,8 @@ This example shows you how to use dojo.map with a simple array. All values of th
      "dojo/dom", 
      "dojo/dom-construct",
      "dijit/registry",
-     "dijit/form/Button" // the button is only used to make the demo look nicer
+     "dijit/form/Button", // the button is only used to make the demo look nicer
+     "dojo/parser",
    ], function(array, dom, domConstruct, registry, Button){
 
      var button = registry.byId('button').on('click', mapArray);
@@ -95,7 +96,8 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
       "dojo/dom",
       "dojo/dom-construct",
       "dijit/registry",
-      "dijit/form/Button" // the button is only used to make the demo look nicer
+      "dijit/form/Button", // the button is only used to make the demo look nicer
+      "dojo/parser",
     ], function(array, lang, dom, domConstruct, registry, Button){
 
 	var button = registry.byId('button').on('click', raiseSalary);
