@@ -47,10 +47,13 @@ This example shows you how to use dojo.map with a simple array. All values of th
      "dojo/dom-construct",
      "dijit/registry",
      "dijit/form/Button", // the button is only used to make the demo look nicer
+     "dojo/ready",
      "dojo/parser",
-   ], function(array, dom, domConstruct, registry, Button){
+   ], function(array, dom, domConstruct, registry, Button, ready){
 
-     var button = registry.byId('button').on('click', mapArray);
+     ready(function(){
+       registry.byId('button').on('click', mapArray);
+     });
      var arrValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];     
 
      function mapArray(){
@@ -100,40 +103,43 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
       "dojo/parser",
     ], function(array, lang, dom, domConstruct, registry, Button){
 
-	var button = registry.byId('button').on('click', raiseSalary);
-        var arrSalary = [
-          {surname: "Washington", name: "Paul", salary: 200},
-	  {surname: "Gordon", name: "Amie", salary: 350},
-	  {surname: "Meyer", name: "Sofie", salary: 100},
-	  {surname: "Jaysons", name: "Josh", salary: 2500},
-	  {surname: "Washington", name: "George", salary: 10},
-	  {surname: "Doormat", name: "Amber", salary: 320},
-	  {surname: "Smith", name: "Susan", salary: 3200},
-	  {surname: "Hill", name: "Strawberry", salary: 290},
-	  {surname: "Washington", name: "Dan", salary: 200},
-	  {surname: "Dojo", name: "Master", salary: 205}
-        ];
+      ready(function(){
+        registry.byId('button').on('click', raiseSalary);
+      });
 
-	function raiseSalary(){
-	  var raisedSalaries = array.map(arrSalary, function(item){
-	    var newItem = lang.clone(item);
-	    newItem.salary += (newItem.salary/100)*10;
-	    return newItem;
-	  });
+      var arrSalary = [
+        {surname: "Washington", name: "Paul", salary: 200},
+        {surname: "Gordon", name: "Amie", salary: 350},
+        {surname: "Meyer", name: "Sofie", salary: 100},
+        {surname: "Jaysons", name: "Josh", salary: 2500},
+        {surname: "Washington", name: "George", salary: 10},
+        {surname: "Doormat", name: "Amber", salary: 320},
+        {surname: "Smith", name: "Susan", salary: 3200},
+        {surname: "Hill", name: "Strawberry", salary: 290},
+        {surname: "Washington", name: "Dan", salary: 200},
+        {surname: "Dojo", name: "Master", salary: 205}
+      ];
 
-          array.forEach(raisedSalaries, function(item, i){
-            var li = domConstruct.create("li");
-            li.innerHTML = i+1+". "+item.surname+", "+item.name+". New salary: "+item.salary;
-            dom.byId("filteredSalary-items").appendChild(li);
-          });
+      function raiseSalary(){
+        var raisedSalaries = array.map(arrSalary, function(item){
+          var newItem = lang.clone(item);
+          newItem.salary += (newItem.salary/100)*10;
+          return newItem;
+        });
 
-          array.forEach(arrSalary, function(item, i){
-            var li = domConstruct.create("li");
-            li.innerHTML = i+1+". "+item.surname+", "+item.name+". Old salary: "+item.salary;
-            dom.byId("unFilteredSalary-items").appendChild(li);
-          });
-        }
-     });
+        array.forEach(raisedSalaries, function(item, i){
+          var li = domConstruct.create("li");
+          li.innerHTML = i+1+". "+item.surname+", "+item.name+". New salary: "+item.salary;
+          dom.byId("filteredSalary-items").appendChild(li);
+        });
+
+        array.forEach(arrSalary, function(item, i){
+          var li = domConstruct.create("li");
+          li.innerHTML = i+1+". "+item.surname+", "+item.name+". Old salary: "+item.salary;
+          dom.byId("unFilteredSalary-items").appendChild(li);
+        });
+      }
+    });
 
   .. html ::
 
