@@ -72,10 +72,11 @@ Declarative example
 -------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
+    require(["dojo/parser", "dijit/layout/ContentPane"]);
 
   .. html ::
 
@@ -93,13 +94,14 @@ Programmatic example
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
-      dojo.ready(function(){
-          new dijit.layout.ContentPane({
-              content:"<p>Optionally set new content now</p>",
-              style:"height:125px"
-          }, "targetID");
+    require(["dojo/ready", "dijit/layout/ContentPane"], function(ready, ContentPane){
+      ready(function(){
+        new ContentPane({
+          content:"<p>Optionally set new content now</p>",
+          style:"height:125px"
+        }, "targetID");
       });
+    });
 
   .. html ::
 
@@ -114,20 +116,20 @@ Programmatic example
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
-      dojo.ready(function(){
-          new dijit.layout.ContentPane({
-              content:"<p>I am initial content</p>",
-              style:"height:125px"
-          }).placeAt("targetID2");
+    require(["dojo/ready", "dijit/layout/ContentPane"], function(ready, ContentPane){
+      ready(function(){
+        new ContentPane({
+          content:"<p>I am initial content</p>",
+          style:"height:125px"
+        }).placeAt("targetID2");
       });
+    });
 
   .. html ::
 
     <div id="targetID2">
       A contentPane will appear here:
     </div>
-
 
 Accessibility
 =============
