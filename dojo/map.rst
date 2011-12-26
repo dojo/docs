@@ -38,6 +38,7 @@ Examples
 This example shows you how to use dojo.map with a simple array. All values of the array will get doubled:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
@@ -90,6 +91,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
 This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: :ref:`dojo.clone <dojo/clone>`
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
