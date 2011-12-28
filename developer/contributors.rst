@@ -190,6 +190,7 @@ Individuals who have signed Dojo CLAs
 * Gorman, Mitch
 * Gornick, Joseph Richard
 * Grainger, Brendan
+* Grandrath, Martin
 * Green, Amit
 * Greenberg, Jeffrey
 * Grimm, Steven
