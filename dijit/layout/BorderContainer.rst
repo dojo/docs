@@ -49,15 +49,15 @@ Besides setting the size of the BorderContainer itself, you generally need to se
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
 
-``Note:`` In order to set the overall size of a BorderContainer to the full size of the viewport,
-the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
+``Note:`` In order to set the overall size of a BorderContainer to the full size of the viewport; to allow BorderContainer to automatically size to a percentage during initial layout; and / or to resize itself (and its children) automatically when the window resizes, both the `<html>` and `<body>` elements need an explicit size set as well as a size on the BorderContainer itself:
 
 .. css ::
   
     body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; }
     #borderContainer { width:100%; height:100% }
 
-Otherwise, the computed style of the BorderContainer will report 0 rather than the browser-calculated size of the viewport.
+Otherwise, the computed dimensional styles of the BorderContainer will report 0 rather than the browser-calculated size of the viewport. This is due to the counter-intuitive fact that the parent `<html>` and `<body>` elements have default width and height style values of 0 despite visibly filling the viewport as implemented by browsers.
+
 
 Layout modes
 ------------
