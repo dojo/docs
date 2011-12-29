@@ -169,6 +169,188 @@ The on.once function allows you to register a listener that will be called just 
 
   on.once(finishedButton, "click", onFinished);
 
+
+Example
+=======
+
+Event delegation
+----------------
+
+Using event delegation on a html table to highlight rows and columns.
+
+.. code-example ::
+
+  .. js ::
+
+    require([
+      'dojo/on',
+      'dojo/dom',
+      'dojo/dom-class',
+      'dojo/dom-attr',
+      'dojo/query'  // note that dojo/query must be loaded for event delegation to work
+    ], function(on, dom, domClass, domAttr) {
+  
+      var highlighter = {
+  
+        setCol: function(cellIdx, classStr, tbl) {
+          var i = 0, len = tbl.rows.length;
+          for (i; i < len; i++) {
+            var cell = tbl.rows[i].cells[cellIdx];
+            if (cell && !domAttr.has(cell, 'colspan')) {  // provided index might not be available and skip header cells with colspan
+              domClass.toggle(cell, classStr)
+            }
+          }
+        },
+  
+        highlightCol: function(cssQuery, classStr) {
+          var self = this;
+          on(dom.byId('tbl'), 'td:mouseover, td:mouseout', function(evt) {
+            self.setCol(this.cellIndex, classStr, evt.currentTarget);
+          });
+        },
+  
+        highlightRow: function(cssQuery, classStr) {
+          // note: this could also just set trough css with pseudoclass hover
+          on(dom.byId('tbl'), 'tr:mouseover, tr:mouseout', function() {
+            domClass.toggle(this, classStr);
+          });
+        },
+  
+        highlightBoth: function(cssQuery, classStrRow, classStrCol){
+          var self = this;
+          on(dom.byId('tbl'), 'td:mouseover, td:mouseout', function(evt) {
+            var tbl = evt.currentTarget;
+            var tr = evt.target.parentNode;
+            var td = evt.target;
+            self.setCol(td.cellIndex, classStrCol, tbl);
+            domClass.toggle(tr, classStrRow);
+          });
+        }
+      };
+  
+      highlighter.highlightBoth('#tbl', 'tdHover', 'trHover');
+  
+    });
+
+  .. css ::
+
+    #tbl {border-collapse: collapse;}
+    #tbl td, #tbl th {
+      border-color: #AAAAAA;
+      border-style: solid;
+      border-width: 0 1px;
+      padding: 3px 9px;
+    }
+
+    #tbl th { text-align: center; }
+    #tbl td, .tbl th { text-align: right; }
+    #tbl td:first-child { text-align: left; }
+
+    .tdHover {
+      background-color: #005197;
+      color: #ffffff;
+    }
+    .trHover {
+      background-color: #E98900;
+      color: #ffffff;
+    }
+
+  .. html ::
+
+    <table id="tbl">
+    <tbody>
+    <tr>
+    <th></th>
+    <th colspan="12">Main</th>
+    </tr>
+    <tr>
+    <th></th>
+    <th colspan="2">Sub 1</th>
+    <th colspan="2">Sub 2</th>
+    <th colspan="2">Sub 3</th>
+    <th colspan="2">Sub 4</th>
+    <th colspan="2">Sub 5</th>
+    <th colspan="2">Sub 6</th>
+    </tr>
+    <tr>
+    <th>Categories</th>
+    <th>Unit</th>
+    <th>± %</th>
+    <th>Unit</th>
+    <th>± %</th>
+    <th>Unit</th>
+    <th>± %</th>
+    <th>Unit</th>
+    <th>± %</th>
+    <th>Unit</th>
+    <th>± %</th>
+    <th>Unit</th>
+    <th>± %</th>
+    </tr>
+    <tr>
+    <td>Category 1</td>
+    <td>473</td>
+    <td>15</td>
+    <td>686</td>
+    <td>540</td>
+    <td>141</td>
+    <td>101</td>
+    <td>1935</td>
+    <td>745</td>
+    <td>43</td>
+    <td>161</td>
+    <td>515</td>
+    <td>52</td>
+    </tr>
+    <tr>
+    <td>Category 2</td>
+    <td>20</td>
+    <td>161</td>
+    <td>127</td>
+    <td>13</td>
+    <td>201</td>
+    <td>14</td>
+    <td>278</td>
+    <td>31</td>
+    <td>921</td>
+    <td>519</td>
+    <td>103</td>
+    <td>608</td>
+    </tr>
+    <tr>
+    <td>Category 3</td>
+    <td>18</td>
+    <td>80</td>
+    <td>10</td>
+    <td>99</td>
+    <td>5</td>
+    <td>71</td>
+    <td>3</td>
+    <td>70</td>
+    <td>1</td>
+    <td>105</td>
+    <td>10</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Catogory 4</td>
+    <td>378</td>
+    <td>9</td>
+    <td>943</td>
+    <td>11</td>
+    <td>1747</td>
+    <td>94</td>
+    <td>236</td>
+    <td>19</td>
+    <td>3265</td>
+    <td>95</td>
+    <td>6788</td>
+    <td>4</td>
+    </tr>
+    </tbody>
+    </table>
+
+
 dojo/on migration
 =================
 
