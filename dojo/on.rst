@@ -184,11 +184,10 @@ Using event delegation on a html table to highlight rows and columns.
 
     require([
       'dojo/on',
-      'dojo/dom',
       'dojo/dom-class',
       'dojo/dom-attr',
       'dojo/query'  // note that dojo/query must be loaded for event delegation to work
-    ], function(on, dom, domClass, domAttr) {
+    ], function(on, domClass, domAttr) {
   
       var highlighter = {
   
@@ -204,21 +203,21 @@ Using event delegation on a html table to highlight rows and columns.
   
         highlightCol: function(cssQuery, classStr) {
           var self = this;
-          on(dom.byId('tbl'), 'td:mouseover, td:mouseout', function(evt) {
+          query(cssQuery).on('td:mouseover, td:mouseout', function(evt) {
             self.setCol(this.cellIndex, classStr, evt.currentTarget);
           });
         },
   
         highlightRow: function(cssQuery, classStr) {
-          // note: this could also just set trough css with pseudoclass hover
-          on(dom.byId('tbl'), 'tr:mouseover, tr:mouseout', function() {
+          // note: this could also just be set through css with pseudoclass hover
+          query(cssQuery).on('tr:mouseover, tr:mouseout', function() {
             domClass.toggle(this, classStr);
           });
         },
   
         highlightBoth: function(cssQuery, classStrRow, classStrCol){
           var self = this;
-          on(dom.byId('tbl'), 'td:mouseover, td:mouseout', function(evt) {
+          query(cssQuery).on('td:mouseover, td:mouseout', function(evt) {
             var tbl = evt.currentTarget;
             var tr = evt.target.parentNode;
             var td = evt.target;
