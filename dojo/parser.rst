@@ -84,6 +84,28 @@ To run the parser when your page loads, add a data-dojo-config="parseOnLoad: tru
         data-dojo-config="parseOnLoad: true"></script>
 
 
+Return Results
+~~~~~~~~~~~~~~
+
+The ``parser.parse()`` returns a hash of the instantiated objects, which can be used to do further actions with.  For example calling ``startup()`` on each widget:
+
+.. js ::
+  
+  // Dojo 1.7+ (AMD)
+  require(["dojo/parser","dojo/_base/array"], function(parser,array){
+       var widgets = parser.parse();
+       array.forEach(widgets, function(w){
+            w.start();
+       }
+  }
+
+.. js ::
+  
+  // Dojo < 1.7
+  var widgets = dojo.parser.parse();
+  dojo.forEach(widgets, function(w){
+       w.start();
+  }
 
 Markup
 ======
