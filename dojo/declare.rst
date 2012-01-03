@@ -17,6 +17,8 @@ Basic Usage
 Basic example
 -------------
 
+Define a class, "my/Person".
+
 [Dojo 1.7 (AMD)]
 
 .. js ::
@@ -53,6 +55,8 @@ Basic example
 
 Using dojo.mixin in constructor
 -------------------------------
+
+Define a class, "my/Person", using an object for mixing in arguments instead of an argument list.
 
 [Dojo 1.7 (AMD)]
 
@@ -120,6 +124,8 @@ If your class contains arrays or other objects, they should be declared in the c
 Instance objects
 ----------------
 
+Define a class, "my/Demo.js", with instance objects.
+
 [Dojo 1.7 (AMD)]
 
 .. js ::
@@ -158,6 +164,8 @@ Instance objects
 Static objects
 --------------
 
+Define a class, "my/Demo.js", with "static" properties.
+
 [Dojo 1.7 (AMD)]
 
 .. js ::
@@ -193,6 +201,8 @@ The first argument to the ``declare`` function is used for extending classes by 
 
 Single inheritance
 ------------------
+
+Define a "my/Employee" class that extends the "my/Person" class from the first example.
 
 [Dojo 1.7 (AMD)]
 
@@ -271,6 +281,7 @@ Superclass constructors are *always* called automatically, and *always* before t
   // in my/Boss.js
   define(['dojo/_base/declare', 'my/Employee'], function(declare, Employee){
     return declare(Employee, {
+      // override the askForRaise function from the Employee class
       askForRaise: function(){
         return this.inherited(arguments) * 20; // boss multiplier!
       }
@@ -290,6 +301,7 @@ Superclass constructors are *always* called automatically, and *always* before t
 .. js ::
 
   dojo.declare("my.Boss", my.Employee, {
+    // override the askForRaise function from the Employee class
     askForRaise: function(){
       return this.inherited(arguments) * 20; // boss multiplier!
     }
@@ -311,11 +323,11 @@ See `inherited()`_ for more details.
 Multiple inheritance
 --------------------
 
-Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance* using `C3 superclass linearization <http://en.wikipedia.org/wiki/C3_linearization>`_. This algorithm is what Python and some other languages use for its implementation of multiple inheritance. You can learn more details in `The Python 2.3 Method Resolution Order <http://www.python.org/download/releases/2.3/mro/>`_.
+Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance* using `C3 superclass linearization <http://en.wikipedia.org/wiki/C3_linearization>`_. This algorithm is what Python and some other languages use for its implementation of multiple inheritance. You can learn more details in the `Python 2.3 Method Resolution Order documentation <http://www.python.org/download/releases/2.3/mro/>`_.
 
 In static languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). In Dojo, you can use the mixed-in properties directly.
 
-Suppose, for example, you have a class called ``VanillaSoftServe``, and mixins ``OreoMixin`` and ``CookieDoughMixin``.  Here's how to make a ``Blizzard``:
+Define a "my/Blizzard" class using the base class "VanillaSoftServe" and mixins "OreoMixin" and "CookieDoughMixin":
 
 [Dojo 1.7 (AMD)]
 
