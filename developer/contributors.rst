@@ -157,7 +157,7 @@ Individuals who have signed Dojo CLAs
 * Forbes, Bryan
 * Forrester, Ron
 * Fortson, Frank
-* Foster, Sam
+* Foster, Sam (sfoster)
 * Foulds, Ian
 * Fox, Pat
 * France Telecom
@@ -179,7 +179,7 @@ Individuals who have signed Dojo CLAs
 * Giammarchi, Andrea
 * Gielczynski, Miriam
 * Gilbert, Alain
-* Gill, Rawld
+* Gill, Rawld (rcgill)
 * Girard, Wade
 * Glebovskiy, Alexander
 * Goessner, Stefan
@@ -195,7 +195,7 @@ Individuals who have signed Dojo CLAs
 * Greenberg, Jeffrey
 * Grimm, Steven
 * Groth, Ryan
-* Guillen, Revin
+* Guillen, Revin (revin)
 * Gupta, Aman
 * Gwyn, Philip
 * Hakansson, Finn
@@ -203,7 +203,7 @@ Individuals who have signed Dojo CLAs
 * Hamilton, Gabe
 * Hampton, Shawn
 * Hanbanchong, Aphichit
-* Hann, John M.
+* Hann, John M. (unscriptable)
 * Harris, Jeffrey
 * Harrison, Matthew
 * Harter, Laurie
@@ -220,7 +220,7 @@ Individuals who have signed Dojo CLAs
 * Herrmann, Doug
 * Hershberger, Matthew
 * Hiester, Christopher
-* Higgins, Peter
+* Higgins, Peter (phiggins)
 * Hitt, Jason
 * Hixon, Alexander
 * Hjelte, Henrik
