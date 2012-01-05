@@ -273,7 +273,7 @@ Individuals who have signed Dojo CLAs
 * Klubnik, Justin
 * Knapp, Matthew
 * Koberg, Robert S.
-* Kokot, Peter
+* Kokot, Peter (maastermedia)
 * Kolba, Nicholas
 * Komarneni, Vamsikrishna
 * Koonce, Grayson
