@@ -28,6 +28,8 @@ Dojo Treemap supports squarified algorithms for two-dimensional treemaps, and is
  * Get an event when clicking and hovering over treemap items.
  * Navigate within a treemap with visual effects on drill down.
 
+.. image :: treemap.png
+
 Creating a treemap widget
 =========================
 
