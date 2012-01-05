@@ -89,3 +89,8 @@ The Observable wrapper also adds a notify() method on the store itself. The noti
  store.notify(object, existingId);
 
 If the object parameter is omitted, it indicates a deletion. If the existingId parameter is omitted, it indicates a new object. If both parameters are included, it in indicates an updated object.
+
+Multiple Notification Suppression
+---------------------------------
+
+It should be noted that when a put(), add(), or remove() method call is made, there will only be a single notification event, even if these methods or the notification event handlers make further nested put(), add(), or remove() method calls. It is assumed that stores could have more complex implementations of put and add (or notification listeners) that perform various calls to each other, and there should be a single notification for the action.
