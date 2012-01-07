@@ -115,6 +115,18 @@ Also note that dojo/query must be loaded for event delegation to work.
 The dojo/query module is part of Dojo base and therefore is normally loaded
 unless you are doing a baseless application and dojo/query hasn't been included.
 
+Sometimes an event may occur on a sub-node beneath the node matching the selector.
+For example, you may have a table where you want to monitor which <tr> row was clicked,
+but the actual click events occur on the <td> nodes, or nodes with the <td>'s.
+
+In this case you can get the node that matched the selector via ``this``:
+
+.. js ::
+
+  on(myTable, "tr:click", function(evt){
+      console.log("Clicked on node ", evt.target, " in table row ", this);
+  });
+
 Extension Events
 ----------------
 
