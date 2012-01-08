@@ -71,7 +71,7 @@ modules in the include array, assuming all modules in the exclude array have alr
 
 If the module is not a layer, then the transformed module text is written. Any interned strings computed by the
 depsScan transform are also written. If the owning package configuration for the module includes the property
-``copywrite``, a copyright message, then the value of that property is included in the written resource.
+``copyright``, a copyright message, then the value of that property is included in the written resource.
 
 If the module is a layer and either of the layer properties ``discard`` or ``boot`` are truthy, then the transform
 computes and memorizes the contents of the module resource but does not write it. If the layer property ``boot`` is
