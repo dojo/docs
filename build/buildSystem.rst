@@ -507,20 +507,20 @@ the package.json and profile files indicated below--these are a good source of e
                 /doh
                     package.json
                     doh.profile.js
-        /acme
+        /myapp
             main.html
             config.js
             app.profile.js
             /lib
                 package.json
-        /acme-deploy
+        /myapp-deploy
             /lib
                 /dojo
                 /dijit
-                /acme
+                /myapp
 
-Let's assume the acme directory holds an application and it is desired to write the built resource hierarchy for the
-application to the directory ~/dev/acme-deploy. In this case, the acme profile file at ~/dev/acme/app.profile.js
+Let's assume the myapp directory holds an application and it is desired to write the built resource hierarchy for the
+application to the directory ~/dev/myapp-deploy. In this case, the myapp profile file at ~/dev/myapp/app.profile.js
 might look like this:
 
 .. js ::
@@ -529,11 +529,11 @@ might look like this:
         // point basePath to ~/dev
         basePath:"..",
     
-        releaseDir:"./acme-deploy",
+        releaseDir:"./myapp-deploy",
         trees:[
             ["./dtk/dojo", "./lib/dojo"]
             ["./dtk/dijit", "./lib/dijit"]
-            ["./acme/lib", "./lib/acme"]
+            ["./myapp/lib", "./lib/myapp"]
     }
 
 Caution: this is not the best way to express this profile; in a moment we'll see how package configurations should be
@@ -560,8 +560,8 @@ configurations just like the loader. Here is the previous example expressed usin
         // point basePath to ~/dev
         basePath:"..",
 
-        // point releaseDir to ~/dev/acme-deploy
-        releaseDir:"./acme-deploy"
+        // point releaseDir to ~/dev/myapp-deploy
+        releaseDir:"./myapp-deploy"
  
         // now a typical loader packages configuration
         packages:[{
@@ -571,8 +571,8 @@ configurations just like the loader. Here is the previous example expressed usin
             name:"dijit",
             location:"./dtk/dijit"
         },{
-            name:"acme",
-            location:"./acme/lib"
+            name:"myapp",
+            location:"./myapp/lib"
         }],
     }
 
@@ -580,8 +580,8 @@ The destination location of each package may be given explicitly in the optional
 property. If it is missing, then it defaults to the package name, a child of the release directory.
 
 The real power of this feature is not expressing these package hierarchies in a profile, but rather using the
-application configuration to get the hierarchies for free. For example, assume the acme application expressed its
-configuration in the resource ~/dev/acme/config.js like this:
+application configuration to get the hierarchies for free. For example, assume the myapp application expressed its
+configuration in the resource ~/dev/myapp/config.js like this:
 
 .. js ::
 
@@ -594,14 +594,14 @@ configuration in the resource ~/dev/acme/config.js like this:
             name:dijit,
             location:"./dtk/dijit"
         },{
-            name:acme,
-            location:"./acme/lib"
+            name:myapp,
+            location:"./myapp/lib"
         }],
         deps:["main"]
     }
 
 This configuration may be used to load the application, maybe something like this in the <head> element in
-~/dev/acme/main.html.
+~/dev/myapp/main.html.
 
 .. html ::
 
@@ -611,27 +611,27 @@ This configuration may be used to load the application, maybe something like thi
         <!-- other stuff...maybe -->
     </head>
 
-Given this, the profile at ~/dev/acme/app.profile.js could be rewritten like this:
+Given this, the profile at ~/dev/myapp/app.profile.js could be rewritten like this:
 
 .. js ::
 
     var profile = {
         // point basePath to ~/dev
         basePath:"..",
-        releaseDir:"./acme-deploy",
+        releaseDir:"./myapp-deploy",
     }
 
 Finally, both the config.js and profile must be provided to the build system to get the desired effect
 
 .. code-block :: text
 
-    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --profile ../../acme/app --release
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../myapp/config.js --profile ../../myapp/app --release
 
 (Call this example "config and profile" it is equivalent to the example "config with embedded profile" described below.)
 
 This idea of leveraging a loader config can be taken further. Since the dojo loader will simply ignore properties that
 it does not define, you can put profile properties directly in the loader configuration. For example,
-~/dev/acme/config.js could be written as follows:
+~/dev/myapp/config.js could be written as follows:
 
 .. js ::
 
@@ -644,8 +644,8 @@ it does not define, you can put profile properties directly in the loader config
             name:dijit,
             location:"./dtk/dijit"
         },{
-            name:acme,
-            location:"./acme/lib"
+            name:myapp,
+            location:"./myapp/lib"
         }],
         deps:["main"],
 
@@ -654,8 +654,8 @@ it does not define, you can put profile properties directly in the loader config
         // point basePath to ~/dev
         basePath:"..",
 
-        // point releaseDir to ~/dev/acme-deploy
-        releaseDir:"./acme-deploy"
+        // point releaseDir to ~/dev/myapp-deploy
+        releaseDir:"./myapp-deploy"
     }
 
 This eliminates the need for the profile resource completely.
@@ -682,8 +682,8 @@ For example, the previous loader configuration could be rewritten as follows:
             name:dijit,
             location:"./dtk/dijit"
         },{
-            name:acme,
-            location:"./acme/lib"
+            name:myapp,
+            location:"./myapp/lib"
         }],
         deps:["main"],
 
@@ -692,8 +692,8 @@ For example, the previous loader configuration could be rewritten as follows:
             // point basePath to ~/dev
                 basePath:"..",
 
-            // point releaseDir to ~/dev/acme-deploy
-            releaseDir:"./acme-deploy"
+            // point releaseDir to ~/dev/myapp-deploy
+            releaseDir:"./myapp-deploy"
         }
     }
 
@@ -701,7 +701,7 @@ And used to execute a build like this:
 
 .. code-block :: text
 
-    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../acme/config.js --release
+    ~/dev/dtk/util/buildscripts:./build.sh --dojoConfig ../../myapp/config.js --release
 
 (Call this example "config with embedded profile"; it is equivalent to the example "config and profile" described above.)
 
@@ -747,7 +747,7 @@ package config, it will consume the following properties of that object:
 
 Relative paths are computed with respect to the path at which the package.json resource resides.
 
-Given this design, you could build the acme example *without* mentioning the dojo or dijit packages in the profile,
+Given this design, you could build the myapp example *without* mentioning the dojo or dijit packages in the profile,
 instead supplying the command line argument ``--package ../../dojo,../../dijit``. In practice, this technique is
 typically used to execute the default profile of a package. Fore example, the default profile for dojo can be build like
 this:
@@ -760,7 +760,7 @@ This is possible because of the dojo package.json resource contains the property
 default profile for the package. As usual, it should be a relative filename and is computed with respect to the path at
 which the package.json resource resides.
 
-The design of the ``dojo.profile`` property is quite handy. For example, the authors of the acme program may not be
+The design of the ``dojo.profile`` property is quite handy. For example, the authors of the myapp program may not be
 experts on how best to build dojo or dijit. The idea of a default profile as indicated by the ``dojo.profile`` property
 solves this problem even when the package.json resource is not mentioned explicitly. Here's how it works.
 
