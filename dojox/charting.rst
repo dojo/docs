@@ -1,4 +1,4 @@
-﻿.. _dojox/charting:
+.. _dojox/charting:
 
 ==============
 dojox.charting
@@ -212,7 +212,7 @@ In addition the bar and column graph types can benefit from gfx shapes caching w
 
 Note that you should enable it only if you except the chart to re-render often like for example when you intend to zoom it in or out in order to not penalize first rendering for nothing.
 
-For any chart type that supports axes, you can also define custom names to your axes here. By default they are “x” and “y”, but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
+For any chart type that supports axes, you can also define custom names to your axes here. By default they are "x" and "y", but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
 .. js ::
   
@@ -299,7 +299,7 @@ The resulting chart looks like this:
 
 TODO: Example Chart
 
-One last feature I’d like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
+One last feature I'd like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
 
 .. js ::
   
@@ -329,7 +329,7 @@ Listing labels on both sides of the pie, it keeps labels from overlapping with e
 Adding a Background Grid Plot
 -----------------------------
 
-You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let’s add a grid to the other axes in our above example.
+You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let's add a grid to the other axes in our above example.
 
 .. js ::
   
@@ -382,9 +382,9 @@ Configuring Axis
 Specifying Axes
 ---------------
 
-The addAxis() call on a chart has several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use “x” and “y” as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don’t have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let’s look at all the addPlot() options that make this and more possible.
+The addAxis() call on a chart has several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use "x" and "y" as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don't have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let's look at all the addPlot() options that make this and more possible.
 
-The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are “x” and “y” by default, on your plot or your chart will not render.
+The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are "x" and "y" by default, on your plot or your chart will not render.
 
 .. js ::
   
@@ -399,7 +399,7 @@ Next we have the fixUpper and fixLower options, which align the ticks and have 4
   chart1.addAxis("x", {fixUpper: "major", fixLower:"minor"});
   chart1.addAxis("y", {vertical: true, fixUpper: "major", includeZero: true});
 
-Now let’s examine the leftBottom option. This option defaults to true, and along with the vertical option determines the side of the chart the axis is placed. At the end of Part 1 we examined adding a second plot to our chart. Let’s use that sample and give the second plot its own set of axes and anchor them on the top and right using leftBottom.
+Now let's examine the leftBottom option. This option defaults to true, and along with the vertical option determines the side of the chart the axis is placed. At the end of Part 1 we examined adding a second plot to our chart. Let's use that sample and give the second plot its own set of axes and anchor them on the top and right using leftBottom.
 
 .. js ::
   
@@ -564,7 +564,7 @@ Data Management
 Connecting Charts to Data and Specifying a Data Series
 ------------------------------------------------------
 
-Using addSeries(), you can define the data sets that will be displayed on our chart. addSeries() accepts three parameters, a name, a data array and an options array. There is also an updateSeries() call that takes a name and data array for when you want to refresh your data. Let’s run through the options available in the addSeries() call, then look at the data array.
+Using addSeries(), you can define the data sets that will be displayed on our chart. addSeries() accepts three parameters, a name, a data array and an options array. There is also an updateSeries() call that takes a name and data array for when you want to refresh your data. Let's run through the options available in the addSeries() call, then look at the data array.
 
 There are only a few options to cover for the addSeries() call. First up is stroke, which covers the color and width of your line or the border of your bar and column type graphs.Along with stroke we have fill, and it determines the color of the fill area under the line in area type line graphs and determines the bar fill color for bar and column type graphs. If you are familiar with SVG or dojox.gfx, stroke and fill should be very familiar.
 
@@ -595,7 +595,7 @@ The data array, is just an array of data. All plot types can accept a one dimens
   
   chart1.addSeries("Series A", [1, 2, 3, 4, 5]);
 
-For any non “stacked” line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
+For any non "stacked" line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
 
 .. js ::
   
@@ -639,12 +639,12 @@ Name   Type                       Default Description
 ====== ========================== ======= ===========
 store  object                     none    Data store to use. Should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
 kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo.data.api.Read.fetch() <dojo/data/api/Read>` for details.
-value  object | function | string “value” Function, which takes a store, and an object handle, and produces an output possibly inspecting the store's item. Or a dictionary object, which tells what names to extract from an object and how to map them to an output. Or a field name to be used as a numeric output.
+value  object | function | string "value" Function, which takes a store, and an object handle, and produces an output possibly inspecting the store's item. Or a dictionary object, which tells what names to extract from an object and how to map them to an output. Or a field name to be used as a numeric output.
 ====== ========================== ======= ===========
 
 DataSeries doesn't define any user-facing methods.
 
-The “value” argument allows to supply complex values for some charts (OHLC, candle stick), and additional values for customization purposes (text labels, tooltips, and so on).
+The "value" argument allows to supply complex values for some charts (OHLC, candle stick), and additional values for customization purposes (text labels, tooltips, and so on).
 
 Example of a function that can be used to extract values:
 
@@ -662,7 +662,7 @@ Example of a function that can be used to extract values:
     return o;
   }
 
-If a dictionary is supplied, it is used to pull and rename values. For example, we can emulate (partially, without “color”, which requires an algorithmic processing) the example above using a dictionary like that:
+If a dictionary is supplied, it is used to pull and rename values. For example, we can emulate (partially, without "color", which requires an algorithmic processing) the example above using a dictionary like that:
 
 .. js ::
   
@@ -738,23 +738,23 @@ The event handler receives one argument. While it tries to unify information for
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| type           | “onclick”, “onmouseover”, “onmouseout”  |differentiate between different types of events.                               | 1.0       |
+| type           | "onclick", "onmouseover", "onmouseout"  |differentiate between different types of events.                               | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | element        | "marker","bar","column","circle","slice"|Indicates what kind of element has sent the event.                             | 1.0       |
 |                |                                         |Can be used to define highlighting or animation strategies.                    |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| x              | number                                  |The “x” value of the point. Can be derived from the index (depends on a chart).| 1.0       |
+| x              | number                                  |The "x" value of the point. Can be derived from the index (depends on a chart).| 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| y              | number                                  |The “y” value of the point. Can be derived from the index (depends on a chart).| 1.0       |
+| y              | number                                  |The "y" value of the point. Can be derived from the index (depends on a chart).| 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | index          | number                                  |The index of a data point that caused the event.                               | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | run            | object                                  |The data run object that represents a data series.                             | 1.0       |
 |                |                                         |Example: o.run.data[o.index]                                                   |           |
 |                |                                         |returns the original data point value for the event                            |           |
-|                |                                         |(o is an event handler’s argument).                                            |           |
+|                |                                         |(o is an event handler's argument).                                            |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| plot           | object                                  |The plot object that hosts the event’s data point.                             | 1.0       |
+| plot           | object                                  |The plot object that hosts the event's data point.                             | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | hAxis          | object                                  |The axis object that is used as a horizontal axis by the plot.                 | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
@@ -770,15 +770,15 @@ The event handler receives one argument. While it tries to unify information for
 | shadow         | object                                  |The gfx shape object that represents a shadow (cosmetic shape).                | 1.0       |
 |                |                                         |Can be null or undefined.                                                      |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| cx             | number                                  |The “x” component of the visual center of a shape in pixels.                   | 1.0       |
-|                |                                         |Supplied only for “marker”, “circle”, and “slice” elements.                    |           |
+| cx             | number                                  |The "x" component of the visual center of a shape in pixels.                   | 1.0       |
+|                |                                         |Supplied only for "marker", "circle", and "slice" elements.                    |           |
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| cy             | number                                  |The “y” component of the visual center of a shape in pixels.                   | 1.0       |
-|                |                                         |Supplied only for “marker”, “circle”, and “slice” elements.                    |           |
+| cy             | number                                  |The "y" component of the visual center of a shape in pixels.                   | 1.0       |
+|                |                                         |Supplied only for "marker", "circle", and "slice" elements.                    |           |
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| cr             | number                                  |The radius in pixels of a “circle”, or a “slice” element.                      | 1.0       |
+| cr             | number                                  |The radius in pixels of a "circle", or a "slice" element.                      | 1.0       |
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
@@ -803,7 +803,7 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 |                                   |**scale** must be >= 1.                                                                                        |
 |                                   |**offset** should be >= 0.                                                                                     |
 |                                   |For example if I have an array of 10 numeric values, and I want to show them ##3-8,                            |
-|                                   |chart.setWindow(”x”, 3, 2) will do the trick.                                                                  |
+|                                   |chart.setWindow("x", 3, 2) will do the trick.                                                                  |
 |                                   |This call affects only plots attached to the named axis, other plots are unaffected.                           |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 | setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              |
@@ -814,7 +814,7 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 |                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
+Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis' boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
 
 Actions & Animated Effects
 ==========================
@@ -851,7 +851,7 @@ Highlight supports one additional parameter:
 |           |                                   |                                  | element.                                                          |
 +-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
 
-The parameter can be any valid value for a color, e.g., “red”, “#FF0000″, “#F00″, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
+The parameter can be any valid value for a color, e.g., "red", "#FF0000″, "#F00″, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
 
 If the parameter is a function, it receives a charting event object (see the previous article for details), and should return a valid color.
 
@@ -929,7 +929,7 @@ Tooltip supports the following keyword parameters:
 |text      |Function    |The default text function    |The function to produce a Tooltip text.                                        |
 +----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 
-The default text function checks if a data point is an object, and uses an optional “Tooltip” member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
+The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
 The picture below demonstrates Tooltip, and Highlight actions.
 
@@ -1150,13 +1150,13 @@ One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. Th
     <div class="action" type="MoveSlice" shift="2"></div>
   </div>
 
-Yes, it is that simple! just define a <div> with the class “action” and supply the type. If you want to specify a plot’s name, use the “plot” parameter: plot=”Plot1″. By default it will connect to the plot named “default”. If you want to change default keyword parameters, just add them to the <div>, e.g., duration=”500″.
+Yes, it is that simple! just define a <div> with the class "action" and supply the type. If you want to specify a plot's name, use the "plot" parameter: plot="Plot1″. By default it will connect to the plot named "default". If you want to change default keyword parameters, just add them to the <div>, e.g., duration="500″.
 
 The Chart Legend Widget
 -----------------------
-You can add a legend widget to your charts using dojox.charting.widget.Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the “legend” parameter of a series. It reverts to the “name” parameter if legend is not specified.
+You can add a legend widget to your charts using dojox.charting.widget.Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the "legend" parameter of a series. It reverts to the "name" parameter if legend is not specified.
 
-For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: “legend”, “text”, and the numeric value.
+For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: "legend", "text", and the numeric value.
 
 Interactive Legend Widget
 -------------------------
@@ -1324,8 +1324,8 @@ See also
 
 * `Dive into Dojo Charting <http://www.sitepen.com/blog/2010/07/13/dive-into-dojo-charting/>`_
 * `Dive into Dojo Chart Theming <http://www.sitepen.com/blog/2010/07/26/dojo-chart-theming/>`_
-* `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_
-* `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_
+* `A Beginner's Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_
+* `A Beginner's Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_
 * `Dojo Charting: Widgets, Tooltips, and Legend <http://www.sitepen.com/blog/2008/06/12/dojo-charting-widgets-tooltips-and-legend/>`_
 * `Dojo Charting: Event Support Has Landed! <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_
 * `Zooming, Scrolling, and Panning in Dojo Charting <http://www.sitepen.com/blog/2008/05/15/zooming-scrolling-and-panning-in-dojo-charting/>`_
@@ -1336,6 +1336,6 @@ Credits
 
 Much of the information in the above article originally appeared first in the following articles, and excerpts have been used with permission from Sitepen.
 
-* `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_ by Doug McMaster
-* `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_ by Doug McMaster
+* `A Beginner's Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_ by Doug McMaster
+* `A Beginner's Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_ by Doug McMaster
 * `Dojo Charting: Event Support Has Landed! <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_ by Eugene Latzukin
