@@ -40,6 +40,25 @@ Dojo Core
 Parser
 ------
 
+The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup (`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_).  Developers should use the MID in their code to ensure future compatibility with baseless modules.  Just as before, the parser will not load a module that is not already loaded, therefore they need to be required prior to invoking the parser.
+
+An example:
+
+.. js ::
+
+    require(["dojo/parser","dijit/form/Button","dijit/layout/ContentPane"],
+      function(parser) {
+        parser.parse();
+      }
+    );
+
+.. html ::
+
+    <div data-dojo-type="dijit/layout/ContentPane">
+      <button data-dojo-type="dijit/form/Button">Click Me!</button>
+    </div>
+
+
 Dijit
 =====
 _WidgetBase

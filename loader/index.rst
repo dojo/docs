@@ -41,7 +41,7 @@ this standard as of v1.7.0. (Note: Dojo will drop support for the legacy API in 
 In version 1.7.0, the Dojo loader and build system have been completely rewritten to support **both** the AMD API and
 full legacy backward compatibility. Several new supporting APIs have also been constructed, including the AMD plugin,
 has.js, dojo configuration, dojo loader micro-events, error reporting, and tracing APIs. Lastly, most of the dojo and
-dijit trees as well as large parts of the dojox tree have have been converted to use the AMD API.
+dijit trees as well as large parts of the dojox tree have been converted to use the AMD API.
 
 The tutorials and reference manuals listed below describe all of this machinery.
 

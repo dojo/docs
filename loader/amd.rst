@@ -979,20 +979,20 @@ Plugins
 
 Plugins can be used to extend the loader to support loading resources other than AMD modules (for example, templates or i18n bundles). Dojo v1.7 includes several plugins of its own:
 
-  * :ref:`dojo/domReady`: defers execution of the module's factory function until the DOM is ready.
+  * :ref:`dojo/domReady <dojo/domReady>`: defers execution of the module's factory function until the DOM is ready.
 
-  * :ref:`dojo/text`: loads text resources; it is a superset of RequireJS's text plugin, and subsumes ``dojo.cache``.
+  * :ref:`dojo/text <dojo/text>`: loads text resources; it is a superset of RequireJS's text plugin, and subsumes ``dojo.cache``.
 
-  * :ref:`dojo/i18n`: loads i18n bundles either in legacy or AMD format. It includes the v1.6- i18n API and is a superset of
+  * :ref:`dojo/i18n <dojo/i18n>`: loads i18n bundles either in legacy or AMD format. It includes the v1.6- i18n API and is a superset of
     RequireJS's i18n plugin.
 
-  * :ref:`dojo/has`: allows has.js expressions to be used to conditionally load modules.
+  * :ref:`dojo/has <dojo/has>`: allows has.js expressions to be used to conditionally load modules.
 
-  * :ref:`dojo/load`: a convenience plugin for loading dependencies computed at runtime.
+  * :ref:`dojo/load <dojo/load>`: a convenience plugin for loading dependencies computed at runtime.
 
-  * :ref:`dojo/require`: downloads a legacy module without loading it. This allows the legacy code path to be guaranteed.
+  * :ref:`dojo/require <dojo/require>`: downloads a legacy module without loading it. This allows the legacy code path to be guaranteed.
 
-  * :ref:`dojo/loadInit`: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
+  * :ref:`dojo/loadInit <dojo/loadInit>`: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
     dojo.require[After]If--that are associated with a module
 
 

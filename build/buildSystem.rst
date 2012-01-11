@@ -743,7 +743,7 @@ package config, it will consume the following properties of that object:
 * ``directories.lib``, indicating the packages ``location`` property value.
 * ``main``, indicating the package's ``main`` property value
 * ``version``, indicating the package's version
-* ``dojo.profile``, indicating the default profile associated with the package
+* ``dojoBuild``, indicating the default profile associated with the package
 
 Relative paths are computed with respect to the path at which the package.json resource resides.
 
@@ -756,17 +756,17 @@ this:
 
     ~/dev/dtk/util/buildscripts:./build.sh --package .../../dojo
 
-This is possible because of the dojo package.json resource contains the property dojo.profile which indicates the
+This is possible because of the dojo package.json resource contains the property dojoBuild which indicates the
 default profile for the package. As usual, it should be a relative filename and is computed with respect to the path at
 which the package.json resource resides.
 
-The design of the ``dojo.profile`` property is quite handy. For example, the authors of the acme program may not be
-experts on how best to build dojo or dijit. The idea of a default profile as indicated by the ``dojo.profile`` property
+The design of the ``dojoBuild`` property is quite handy. For example, the authors of the acme program may not be
+experts on how best to build dojo or dijit. The idea of a default profile as indicated by the ``dojoBuild`` property
 solves this problem even when the package.json resource is not mentioned explicitly. Here's how it works.
 
 When the build system is given a profile that contains a set of packages, it automatically attempts to find and consume
 each package's package.json resource. The system looks for the file "package.json" in the directory given by the package
-configuration ``location`` property. If a package.json resource is found and that resource contains a ``dojo.profile``
+configuration ``location`` property. If a package.json resource is found and that resource contains a ``dojoBuild``
 property, then the build system automatically consumes that default profile for that package. The build system will use
 any properties in the default profile that are not explicitly mentioned a profile provided at the command line; this
 allows an easy way to selectively override profile property values found in the default profile for a particular

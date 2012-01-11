@@ -78,14 +78,15 @@ That provides you the following extension points (methods) you can override and 
     This is often used for layout widgets like BorderContainer.
     If the widget does JS sizing, then startup() should call resize(), which does the sizing.
 
-- destroy
-     Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you.
+- uninitialize
+     Implement uninitialize if you have special tear-down work to do (the superclasses will take care of most of the widget cleanup for you). While it may be tempting to override the destroy method directly, the uninitialize method is there explicitly as a stub for this very purpose.
+ 
      Examples on how to destroy a widget:
 
   .. js ::
     
     var widget = new dijit.form.TextBox({name: "firstname"}, "inputId");
-    widget.destroy();
+    widget.destroy(); // uninitialize will automatically be called for you
 
   .. js ::
     

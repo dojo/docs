@@ -36,13 +36,13 @@ The basic usage looks like:
     on(document, "click", clickHandler);
   });
 
-The return value from the on function is a signal handler that has a cancel() method that can be used to stop listening for the events. For example, to listen for a single click, one could do:
+The return value from the on function is a signal handler that has a remove() method that can be used to stop listening for the events. For example, to listen for a single click, one could do:
 
 .. js ::
 
   var signal = on(document, "click", function(){
-    // cancel after first event
-    signal.cancel();
+    // remove listener after first event
+    signal.remove();
     // now perform any other action
   });
 
@@ -119,6 +119,8 @@ The on.selector function can be used to apply event delegation when extension ev
   define(["dojo/on", "dojo/mouse"], function(on, mouse){
     on(node, on.selector(".myClass", mouse.enter), myClassHoverHandler);
   });
+
+The on.selector function can also be used with custom selector functions, by providing a function instead of a selector string as the first argument. The function will be called each time the indicated event takes place, and provide the event's target as the single argument. If the selector function has a corresponding node that matches for the event target, it can return that node. If the selector does not match, it should return a falsy value.
 
 emit function
 -----------------
@@ -355,7 +357,7 @@ dojo/on migration
 
 Converting from dojo.connect
 ----------------------------
-dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes and event emitting objects (see the :ref:`dojo/Evented <dojo/Evented>` page for more information). If you're connecting to a plain method, use dojo/aspect instead.  Also, note that some event emitting objects, like dijits, have their own event naming conventions and may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect for some event emitting objects like dijits.
+dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes and event emitting objects (see the :ref:`dojo/Evented <dojo/Evented>` page for more information). If you're connecting to a plain method, use :ref:`dojo/aspect <dojo/aspect>` instead.  Also, note that some event emitting objects, like dijits, have their own event naming conventions and may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect for some event emitting objects like dijits.
 
 Transitioning to Dojo 2.0
 -------------------------

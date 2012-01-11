@@ -15,7 +15,7 @@ Inside your HTML you mark nodes for the parser by setting the data-dojo-type att
 
 .. html ::
 
-  <input data-dojo-type="dijit.form.TextBox" name="nm" value="hello world">
+  <input data-dojo-type="dijit/form/TextBox" name="nm" value="hello world">
 
 
 The parser can scan the entire DOM for ``data-dojo-type`` attributes, and create new instances from nodes like this.
@@ -41,7 +41,7 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 
 .. js ::
 
-  // Dojo 1.7 (AMD)
+  // Dojo 1.7+ (AMD)
   require("dojo/parser", function(parser){
        // write your code here
   });
@@ -119,9 +119,17 @@ Attributes which correspond to native HTML attributes appear directly in the mar
 
 .. html ::
 
+       <!-- Dojo 1.8+ -->
+       <input data-dojo-type="dijit/form/TextBox" name="dept"
+            data-dojo-props="scrollOnFocus: true"/>
+
+.. html ::
+
+       <!-- Dojo < 1.8 -->
        <input data-dojo-type="dijit.form.TextBox" name="dept"
             data-dojo-props="scrollOnFocus: true"/>
 
+**Note** as of Dojo 1.8, the parser accepts the Module ID (MID) for the `data-dojo-type` attribute.
 
 Boolean parameters
 ~~~~~~~~~~~~~~~~~~
@@ -130,27 +138,27 @@ Due to HTML subtleties, for boolean parameters that are false, it's best not to 
 
 .. html ::
 
-  <input data-dojo-type="dijit.form.Button">
+  <input data-dojo-type="dijit/form/Button">
 
 Further, in standard HTML (as opposed to XHTML), the special parameters `checked` and `disabled` and `selected` should be specified as single keywords without a value:
 
 .. html ::
 
-  <input data-dojo-type="dijit.form.Button" disabled>
-  <input data-dojo-type="dijit.form.CheckBox" checked>
+  <input data-dojo-type="dijit/form/Button" disabled>
+  <input data-dojo-type="dijit/form/CheckBox" checked>
 
 In XHTML they should be specified in the official format of repeating the attribute name as the value:
 
 .. html ::
 
-  <input data-dojo-type="dijit.form.Button" disabled="disabled"/>
-  <input data-dojo-type="dijit.form.CheckBox" checked="checked"/>
+  <input data-dojo-type="dijit/form/Button" disabled="disabled"/>
+  <input data-dojo-type="dijit/form/CheckBox" checked="checked"/>
 
 Although specifying disabled="true" will disable a widget, note that the following syntax should not be used as it's unreliable whether it evaluates to true or false:
 
 .. html ::
 
-  <input data-dojo-type="dijit.form.Button" disabled=""/>
+  <input data-dojo-type="dijit/form/Button" disabled=""/>
 
 
 Date parameters
@@ -242,7 +250,7 @@ To execute code on instantiation, use the same format but don't specify an event
 Execute Code on Change of Property
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**New in 1.7** To execute code when a value changes for a property for objects that support ``object.watch()`` the ``type="dojo/watch"`` can be used:
+To execute code when a value changes for a property for objects that support ``object.watch()`` the ``type="dojo/watch"`` can be used:
 
 .. html ::
 
@@ -260,7 +268,7 @@ The ``.watch()`` function always passes three arguments when it is called, repre
 Execute Code when an Event Occurs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**New in 1.7** While similar to ``dojo.connect()``, the ``type="dojo/on"`` can be used to specify ``on`` behaviour:
+While similar to ``dojo.connect()``, the ``type="dojo/on"`` can be used to specify ``on`` behaviour:
 
 .. html ::
 
@@ -288,7 +296,7 @@ For functions that take (named) parameters, specify them in an `data-dojo-args` 
 
 .. html ::
 
-    <div data-dojo-type="dijit.tree.TreeStoreModel" store="store">
+    <div data-dojo-type="dijit/tree/TreeStoreModel" store="store">
         <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">
             return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
         </script>
@@ -407,7 +415,7 @@ Parser API notes
 The main API to the parser, parse(), was discussed above.
 
 
-``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as data-dojo-type, etc.  The values in the mixin would override any values in your node. For example:
+Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as data-dojo-type, etc.  The values in the mixin would override any values in your node. For example:
 
 .. html ::
 
@@ -421,7 +429,7 @@ You can manually call the parser's instantiate function (which does the "Magical
 
 Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
 
-``NEW in 1.4:``  You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
+You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
 
 .. js ::
 
