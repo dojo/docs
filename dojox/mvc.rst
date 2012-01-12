@@ -62,7 +62,7 @@ dojox.mvc can also be loaded using the legacy ``dojo.require`` API:
 Examples
 ========
 
-Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field.  The "Reset" button will reset the model back to it's original values.  The other buttons show how to programmatically set things in the model to have the update reflected in the widget, and how to programmatically update the widget and have it update the model.
+Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.  The "Reset" button will reset the model back to it's original values.  The other buttons show how to programmatically set things in the model to have the update reflected in the widget, and how to programmatically update the widget and have it update the model.
 
 .. code-example::
   :djConfig: parseOnLoad: true
