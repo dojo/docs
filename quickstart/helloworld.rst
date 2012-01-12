@@ -16,7 +16,7 @@ Requirements
 
 Obviously, you need Dojo first!  You can get the latest stable build from `dojotoolkit.org <http://download.dojotoolkit.org>`_.  Next you need a web server.  Whether it's hosted offsite or onsite, on Linux or Windows or Mac ... matters naught.  The Dojo JavaScript library is simply pulled from your web server to the browser as needed.  However, the AJAX examples in this document require a server-side scripting language like PHP or ASP.
 
-The Dojo and Dijit code, which runs on the client browser, is certified to run on IE, Firefox, Opera and Safari.
+The Dojo and Dijit code, which runs on the client browser, is certified to run on IE, Firefox, Safari, Opera, Chrome, iOS, Android and Blackberry.
 
 Setting Up Dojo
 ---------------
