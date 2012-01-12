@@ -68,14 +68,14 @@ Declarative example
   .. html ::
 
     <div style="width: 300px; height: 300px">
-      <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 300px;">
-        <div data-dojo-type="dijit/layout/ContentPane" title="Heeh, this is a content pane">
+      <div data-dojo-type="dijit.layout.AccordionContainer" style="height: 300px;">
+        <div data-dojo-type="dijit.layout.ContentPane" title="Heeh, this is a content pane">
         Hi!
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="This is as well" selected="true">
+        <div data-dojo-type="dijit.layout.ContentPane" title="This is as well" selected="true">
         Hi how are you?
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="This too">
+        <div data-dojo-type="dijit.layout.ContentPane" title="This too">
         Hi how are you? .....Great, thx
         </div>
       </div>
