@@ -101,8 +101,8 @@ Basic example, input-output sync:
 
     <div id="main">
         <div class="row">
-            <label class="cell" for="firstnameInput">First:</label>
-            <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox"
+            <label class="cell" for="firstnameId">First:</label>
+            <input class="cell" id="firstnameId" data-dojo-type="dijit.form.TextBox"
                    data-dojo-props="ref: model.First"></input>
             <!-- Content in output below will always be in sync with value of textbox above -->
             <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
@@ -127,5 +127,10 @@ Basic example, input-output sync:
         </div>
         <br/>
         Model:
-        <button id="reset" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){model.reset();}">Reset</button>
+        <button id="reset" type="button" data-dojo-type="dijit.form.Button" 
+                data-dojo-props="onClick: function(){model.reset();}">Reset</button>
+	<button id="fromModel" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
+        	function(){model.First.set('value','Updated in Model');}">Update First from Model</button>
+	<button id="fromWidget" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
+                function(){dijit.byId('firstId').set('value','Updated Widget');}">Update First from Widget</button>
     </div>
