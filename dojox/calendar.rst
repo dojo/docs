@@ -1,4 +1,3 @@
-
 .. _dojox/calendar:
 
 ==============
@@ -240,6 +239,8 @@ For example, we can use this feature to change the color of a renderer depending
       dateInterval: "day",
       style: "position:relative;width:500px;height:500px"
   }, "someId");
+
+.. image :: cssClassFunc.png
 
 For further customization, custom renderers can be created. See dedicated section of advanced configuration.
 
