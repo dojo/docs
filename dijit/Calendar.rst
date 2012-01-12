@@ -43,7 +43,7 @@ A plain Calendar widget with the formatted date below:
 
   .. html ::
 
-    <div data-dojo-type="dijit.Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
+    <div data-dojo-type="dijit/Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
     <p id="formatted"></p>
     
   .. css ::
@@ -69,7 +69,7 @@ With an initial selection and weekends disabled:
 
   .. html ::
 
-    <div id="mycal" data-dojo-type="dijit.Calendar" value="2009-08-07" data-dojo-props="isDisabledDate:dojo.date.locale.isWeekend"></div>
+    <div id="mycal" data-dojo-type="dijit/Calendar" value="2009-08-07" data-dojo-props="isDisabledDate:dojo.date.locale.isWeekend"></div>
     
   .. css ::
 
@@ -131,7 +131,7 @@ Custom styling:
 
   .. html ::
 
-    <input id="calendar5" data-dojo-type="dijit.Calendar" dayWidth="abbr" value="2008-03-13">
+    <input id="calendar5" data-dojo-type="dijit/Calendar" dayWidth="abbr" value="2008-03-13">
     
   .. css ::
 
@@ -189,15 +189,15 @@ Custom styling:
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
+          <div id="hebrew" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="hebrewFormatted"></div>
         </td>
         <td>
-          <div id="islamic" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:dojox.date.islamic, onValueSelected:publishDate, onChange:formatDate"></div>
+          <div id="islamic" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.islamic, onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="islamicFormatted"></div>
         </td>
         <td>
-          <div id="gregorian" data-dojo-type="dijit.Calendar" data-dojo-props="onValueSelected:publishDate, onChange:formatDate"></div>
+          <div id="gregorian" data-dojo-type="dijit/Calendar" data-dojo-props="onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="gregorianFormatted"></div>
         </td>
       </tr>

@@ -74,7 +74,7 @@ The following code fills in a simple textbox called sliderValue.
   .. html ::
 
     <div id="slider"></div>
-    <p><input type="text" id="sliderValue" data-dojo-type="dijit.form.TextBox" /></p>
+    <p><input type="text" id="sliderValue" data-dojo-type="dijit/form/TextBox" /></p>
 
 
 Programmatic example of a vertical slider
@@ -127,11 +127,11 @@ This example also shows the end buttons removed.
 
   .. html ::
 
-    <div id="horizontalSlider" data-dojo-type="dijit.form.HorizontalSlider"
+    <div id="horizontalSlider" data-dojo-type="dijit/form/HorizontalSlider"
         value="6" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
         showButtons="false" style="width:400px;" name="horizontalSlider">
-      <ol data-dojo-type="dijit.form.HorizontalRuleLabels" container="topDecoration"
+      <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="topDecoration"
           style="height:1.5em;font-size:75%;color:gray;">
         <li> </li>
         <li>20%</li>
@@ -140,9 +140,9 @@ This example also shows the end buttons removed.
         <li>80%</li>
         <li> </li>
       </ol>
-      <div data-dojo-type="dijit.form.HorizontalRule" container="bottomDecoration"
+      <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration"
         count=11 style="height:5px;"></div>
-      <ol data-dojo-type="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+      <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration"
           style="height:1em;font-size:75%;color:gray;">
         <li>0%</li>
         <li>50%</li>

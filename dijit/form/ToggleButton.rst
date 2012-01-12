@@ -57,7 +57,7 @@ Now let's create a ToggleButton widget with HTML markup, initially checked:
 
   .. html ::
  
-    <button data-dojo-type="dijit.form.ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true">
+    <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true">
         Toggle me
     </button>
 

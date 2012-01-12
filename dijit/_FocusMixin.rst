@@ -29,9 +29,9 @@ Mixin dijit._FocusMixin when you declare your widget, and then reference _onFocu
 .. js ::
  
    dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin, dijit._FocusMixin], {
-      templateString: "<div><input data-dojo-type="dijit.form.TextBox"><input><input></div>",
+      templateString: '<div><input data-dojo-type="dijit/form/TextBox"><input><input></div>',
       _onFocus: function(){
-          console.log("On of my descendant widgets / nodes got focus");
+          console.log("One of my descendant widgets / nodes got focus");
           this.inherited(arguments);
       },
       _onBlur: function(){

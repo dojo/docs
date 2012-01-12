@@ -51,7 +51,7 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
 
     <label for="q05">Integer between -20000 to +20000:</label>
     <input id="q05" type="text"
-        data-dojo-type="dijit.form.NumberTextBox"
+        data-dojo-type="dijit/form/NumberTextBox"
         name= "elevation"
         value="3000"
         constraints="{min:-20000,max:20000,places:0}"
@@ -102,7 +102,7 @@ Try entering a simple value like "-3" and then tab away to see the effect.
 
        <label for="zeroPadded">Fractional value:</label>
        <input id="zeroPadded" type="text"
-            data-dojo-type="dijit.form.NumberTextBox"
+            data-dojo-type="dijit/form/NumberTextBox"
             name= "decimal"
             value="0"
             constraints="{pattern: '+0.000;-0.000'}"

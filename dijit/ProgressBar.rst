@@ -32,7 +32,7 @@ Declarative markup
 
   .. html ::
 
-    <div data-dojo-type="dijit.ProgressBar" style="width:300px"
+    <div data-dojo-type="dijit/ProgressBar" style="width:300px"
          data-dojo-id="jsProgress" id="downloadProgress" data-dojo-props="maximum:10"></div>
     
     <br /><input type="button" value="Go!" onclick="download();" />

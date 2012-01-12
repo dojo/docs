@@ -31,11 +31,11 @@ Standalone Ruler
   .. html ::
 
     <div style="width:2in;border-top:1px solid black;">
-        <div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props="count:17" style="height:.4em;"></div>
-        <div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props="count:9" style="height:.4em;"></div>
-        <div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props="count:5" style="height:.4em;"></div>
-            <div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props="count:3" style="height:.4em;"></div>
-        <ol data-dojo-type="dijit.form.HorizontalRuleLabels" data-dojo-props="labelStyle:'font-style:monospace;font-size:.7em;margin:-1em 0px 0px -.35em;'">
+        <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props="count:17" style="height:.4em;"></div>
+        <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props="count:9" style="height:.4em;"></div>
+        <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props="count:5" style="height:.4em;"></div>
+            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props="count:3" style="height:.4em;"></div>
+        <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props="labelStyle:'font-style:monospace;font-size:.7em;margin:-1em 0px 0px -.35em;'">
                <li>0</li>
            <li>1</li>
            <li>2</li>

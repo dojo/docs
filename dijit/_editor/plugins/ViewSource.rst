@@ -49,7 +49,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['viewsource']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['viewsource']"></div>
 
 
 And that's it.
@@ -128,7 +128,7 @@ Basic Usage
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['viewsource']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['viewsource']">
     <div>
       <br>
       blah blah & blah!
@@ -170,7 +170,7 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'viewsource',readOnly: true}, 'prettyprint']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'viewsource',readOnly: true}, 'prettyprint']">
     <div>
       <br>
       blah blah & blah!
@@ -215,7 +215,7 @@ This example also organizes the toolbar a bit.
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
     <div>
       <br>
       blah blah & blah!

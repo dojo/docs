@@ -24,14 +24,14 @@ The tabstrip is especially useful when the TabContainer is child of a BorderCont
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
-      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -58,14 +58,14 @@ Note that right tabs don't work in conjunction with doLayout=false.
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
-      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -87,14 +87,14 @@ Note that left tabs don't work in conjunction with doLayout=false.
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
-      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -116,14 +116,14 @@ Note that bottom tabs don't work in conjunction with doLayout=false.
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
-      <div data-dojo-type="dijit.layout.ContentPane" title="My first tab" selected="true">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My second tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div data-dojo-type="dijit.layout.ContentPane" title="My last tab">
+      <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
@@ -224,26 +224,26 @@ Remember that although a TabContainer's children are often ContentPanes, they ca
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
-      <div data-dojo-type="dijit.layout.TabContainer" title="Tab 1" nested="true">
-        <div data-dojo-type="dijit.layout.ContentPane" title="My first inner tab" selected="true">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 400px; height: 100px;">
+      <div data-dojo-type="dijit/layout/TabContainer" title="Tab 1" nested="true">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My first inner tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div data-dojo-type="dijit.layout.ContentPane" title="My second inner tab">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My second inner tab">
           Lorem ipsum and all around - second...
         </div>
-        <div data-dojo-type="dijit.layout.ContentPane" title="My last inner tab">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My last inner tab">
           Lorem ipsum and all around - last...
         </div>
       </div>
-      <div data-dojo-type="dijit.layout.TabContainer" title="Tab 2" nested="true">
-        <div data-dojo-type="dijit.layout.ContentPane" title="My first inner tab" selected="true">
+      <div data-dojo-type="dijit/layout/TabContainer" title="Tab 2" nested="true">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My first inner tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div data-dojo-type="dijit.layout.ContentPane" title="My second inner tab">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My second inner tab">
           Lorem ipsum and all around - second...
         </div>
-        <div data-dojo-type="dijit.layout.ContentPane" title="My last inner tab">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My last inner tab">
           Lorem ipsum and all around - last...
         </div>
       </div>

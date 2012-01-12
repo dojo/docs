@@ -70,7 +70,7 @@ Small color palette, created declaratively:
 
   .. html ::
 
-     <div data-dojo-type="dijit.ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'3x4'"></div>
+     <div data-dojo-type="dijit/ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'3x4'"></div>
 
 
 Accessibility

@@ -43,9 +43,9 @@ The first example shows how to create a TooltipDialog and DropDownButton program
         dojo.ready(function(){
             var dialog = new dijit.TooltipDialog({
                 content:
-                    '<label for="name">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name" name="name"><br>' +
-                    '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
-                    '<button data-dojo-type="dijit.form.Button" type="submit">Save</button>'
+                    '<label for="name">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name" name="name"><br>' +
+                    '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby" name="hobby"><br>' +
+                    '<button data-dojo-type="dijit/form/Button" type="submit">Save</button>'
             });
  
             var button = new dijit.form.DropDownButton({
@@ -110,12 +110,12 @@ Here's one displaying a TooltipDialog:
 
   .. html ::
 
-    <div data-dojo-type="dijit.form.DropDownButton">
+    <div data-dojo-type="dijit/form/DropDownButton">
       <span>Register</span>
-      <div data-dojo-type="dijit.TooltipDialog">
-         <label for="name2">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name2" name="name2"><br>
-         <label for="hobby2">Hobby:</label> <input data-dojo-type="dijit.form.TextBox" id="hobby2" name="hobby2"><br>
-         <button data-dojo-type="dijit.form.Button" type="submit">Save</button>
+      <div data-dojo-type="dijit/TooltipDialog">
+         <label for="name2">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name2" name="name2"><br>
+         <label for="hobby2">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby2" name="hobby2"><br>
+         <button data-dojo-type="dijit/form/Button" type="submit">Save</button>
       </div>
     </div>
 

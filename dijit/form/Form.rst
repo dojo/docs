@@ -35,7 +35,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
 
   .. html ::
 
-    <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm"
+    <div data-dojo-type="dijit/form/Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" data-dojo-event="onReset">
             return confirm('Press OK to reset widget values');
@@ -57,7 +57,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
                     <label for="name">Name:</label>
                 </td>
                 <td>
-                    <input type="text" id="name" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
+                    <input type="text" id="name" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -65,14 +65,14 @@ Try opening this example and immediately clicking Submit, and compare the behavi
                     <label for="dob">Date of birth:</label>
                 </td>
                 <td>
-                    <input type="text" id="dob" name="dob" data-dojo-type="dijit.form.DateTextBox"/>
+                    <input type="text" id="dob" name="dob" data-dojo-type="dijit/form/DateTextBox"/>
                 </td>
             </tr>
         </table>
 
-        <button data-dojo-type="dijit.form.Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
-        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
-        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit/form/Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
+        <button data-dojo-type="dijit/form/Button" type="submit" name="submitButton" value="Submit">Submit</button>
+        <button data-dojo-type="dijit/form/Button" type="reset">Reset</button>
     </div>
 
 Note that it's using a <div> node instead of the obvious choice of a <form> node because of some `IE issues <http://bugs.dojotoolkit.org/ticket/8424>`_
@@ -102,7 +102,7 @@ AND when you have selected 1 of the native HTML radio buttons.
 
   .. html ::
 
-    <div data-dojo-type="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
+    <div data-dojo-type="dijit/form/Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" data-dojo-event="validate">
            return dojo.query('INPUT[name=order]', 'myFormThree').filter(function(n){return n.checked;}).length > 0 &&
@@ -126,7 +126,7 @@ AND when you have selected 1 of the native HTML radio buttons.
                     <label for="name">Name:</label>
                 </td>
                 <td>
-                    <input type="text" name="name" required="true" data-dojo-type="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -140,11 +140,11 @@ AND when you have selected 1 of the native HTML radio buttons.
             </tr>
         </table>
 
-        <button data-dojo-type="dijit.form.Button" onClick="alert('Form is ' + (myFormThree.validate()?'':'not ') + 'valid');return false">
+        <button data-dojo-type="dijit/form/Button" onClick="alert('Form is ' + (myFormThree.validate()?'':'not ') + 'valid');return false">
             Validate form
         </button>
-        <button data-dojo-type="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
-        <button data-dojo-type="dijit.form.Button" type="reset">Reset</button>
+        <button data-dojo-type="dijit/form/Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
+        <button data-dojo-type="dijit/form/Button" type="reset">Reset</button>
     </div>
 
 

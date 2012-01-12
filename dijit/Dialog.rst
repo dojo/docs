@@ -70,15 +70,15 @@ The first example creates a Dialog via markup from an existing DOM node:
   
   .. html ::
 
-    <div id="dialogOne" data-dojo-type="dijit.Dialog" title="My Dialog Title">
-        <div data-dojo-type="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
-            <div data-dojo-type="dijit.layout.ContentPane" title="foo">Content of Tab "foo"</div>
-            <div data-dojo-type="dijit.layout.ContentPane" title="boo">Hi, I'm Tab "boo"</div>
+    <div id="dialogOne" data-dojo-type="dijit/Dialog" title="My Dialog Title">
+        <div data-dojo-type="dijit/layout/TabContainer" style="width: 200px; height: 300px;">
+            <div data-dojo-type="dijit/layout/ContentPane" title="foo">Content of Tab "foo"</div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="boo">Hi, I'm Tab "boo"</div>
         </div>
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonOne" data-dojo-type="dijit.form.Button" type="button">Show me!
+    <button id="buttonOne" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Show the Dialog:
             dijit.byId("dialogOne").show();
@@ -122,7 +122,7 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
   .. html ::
     
     <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
-    <button id="buttonTwo" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
+    <button id="buttonTwo" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
 
 
 
@@ -154,12 +154,12 @@ The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``
 
   .. html ::
 
-    <div id="dialogColor" title="Colorful" data-dojo-type="dijit.Dialog">
+    <div id="dialogColor" title="Colorful" data-dojo-type="dijit/Dialog">
          My background color is Green
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="button4" data-dojo-type="dijit.form.Button" type="button">Show me!
+    <button id="button4" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             dijit.byId("dialogColor").show();
         </script>
@@ -204,38 +204,38 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. html ::
 
-    <div data-dojo-type="dijit.Dialog" id="formDialog" title="Form Dialog"
+    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Form Dialog"
         execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="name" id="name"></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <td><label for="loc">Location: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="loc" id="loc"></td>
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
-                <td><input data-dojo-type="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
+                <td><input data-dojo-type="dijit/form/TimeTextBox" type="text" name="time" id="time"></td>
             </tr>
             <tr>
                 <td><label for="desc">Description: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <button data-dojo-type="dijit.form.Button" type="submit"
+                    <button data-dojo-type="dijit/form/Button" type="submit"
                         data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
-                    <button data-dojo-type="dijit.form.Button" type="button"
+                    <button data-dojo-type="dijit/form/Button" type="button"
                         data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
                 </td>
             </tr>
@@ -243,7 +243,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!
+    <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             dijit.byId("formDialog").show();
         </script>
@@ -266,8 +266,8 @@ handles the onSubmit event, validation, and an xhrPost to the server.
 
   .. html ::
 
-    <div data-dojo-type="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
-        <form data-dojo-type="dijit.form.Form">
+    <div data-dojo-type="dijit/Dialog" id="formDialog2" title="Form Dialog" style="display: none">
+        <form data-dojo-type="dijit/form/Form">
             <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
                 dojo.stopEvent(e); // prevent the default submit
                 if(!this.isValid()){ window.alert('Please fix fields'); return; }
@@ -283,18 +283,18 @@ handles the onSubmit event, validation, and an xhrPost to the server.
             </script>
             <div class="dijitDialogPaneContentArea">
 
-                <label for='foo'>Foo:</label><div data-dojo-type="dijit.form.ValidationTextBox" data-dojo-props="required:true"></div>
+                <label for='foo'>Foo:</label><div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true"></div>
             </div>
             <div class="dijitDialogPaneActionBar">
-                    <button data-dojo-type="dijit.form.Button" type="submit">OK</button>
-                    <button data-dojo-type="dijit.form.Button" type="button"
+                    <button data-dojo-type="dijit/form/Button" type="submit">OK</button>
+                    <button data-dojo-type="dijit/form/Button" type="button"
                         data-dojo-props="onClick:function(){dijit.byId('formDialog2').hide();}">Cancel</button>
             </div>
          </form>
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!
+    <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             dijit.byId("formDialog2").show();
         </script>
@@ -329,10 +329,10 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   .. html ::
 
-    <div data-dojo-type="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <h1>Agreement Terms</h1>
     
-         <div data-dojo-type="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
+         <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
                 Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
          </div>
     
@@ -340,7 +340,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
         <table>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept"/>
                     <label for="radioOne">
                         I accept the terms of this agreement
                     </label>
@@ -348,7 +348,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
             </tr>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
                     <label for="radioTwo">
                         I decline
                     </label>
@@ -363,7 +363,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     <label id="decision" style="color:#FF0000;">
         Terms and conditions have not been accepted.
     </label>
-    <button id="termsButton" data-dojo-type="dijit.form.Button" type="button">
+    <button id="termsButton" data-dojo-type="dijit/form/Button" type="button">
         View terms and conditions to accept
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             dijit.byId("formDialog").show();
@@ -396,11 +396,11 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 
   .. html ::
 
-    <div id="external" data-dojo-type="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
+    <div id="external" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('external').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('external').show();}" type="button">Show me!</button>
 
 
 
@@ -419,7 +419,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
 
   .. html ::
 
-    <div id="sized" data-dojo-type="dijit.Dialog" title="My scrolling dialog">
+    <div id="sized" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
         <div style="width: 200px; height: 100px; overflow: auto;">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
@@ -431,7 +431,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     </div>
 
     <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
 
 
 Accessibility
@@ -502,7 +502,7 @@ The value of the aria-describedby property is the id of the element containing t
 
 .. js ::
 
-  <div data-dojo-type="dijit.Dialog" title="Example Dialog" aria-describedby="intro">
+  <div data-dojo-type="dijit/Dialog" title="Example Dialog" aria-describedby="intro">
     <div id="intro">Text to describe dialog</div>
     <div>Additional dialog contents....</div>
   </div>
@@ -511,7 +511,7 @@ For earlier Dojo versions, you can add an onshow event handler that adds the ari
 
 .. js ::
 
-  <div data-dojo-type="dijit.Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
+  <div data-dojo-type="dijit/Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
     <div id="intro">Text to describe dialog</div>
     <div>Additional dialog contents....</div>
   </div>

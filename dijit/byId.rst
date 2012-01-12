@@ -58,7 +58,7 @@ Example 1: Locating a widget by its ID
 
   .. html ::
 
-    <input id="myTextBox" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox" data-dojo-type="dijit/form/TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode" style="background-color: lightgray"></div>
 
@@ -89,7 +89,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
 
   .. html ::
 
-    <input id="myTextBox2" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox2" data-dojo-type="dijit/form/TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode2" style="background-color: lightgray"></div>
 
@@ -121,7 +121,7 @@ Example 3: Comparing dojo.byId and dijit.byId
 
   .. html ::
 
-    <input id="myTextBox3" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox3" data-dojo-type="dijit/form/TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode3" style="background-color: lightgray"></div>
 
@@ -138,7 +138,7 @@ and a data-dojo-id attribute (dojo specific id attribute explained below):
 .. html ::
  
  <div id="myDivId"
-      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-type="dijit/layout/ContentPane"
       data-dojo-id="myDojoId">
     Hello Everyone!
  </div>

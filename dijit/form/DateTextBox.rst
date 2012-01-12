@@ -72,7 +72,7 @@ Declarative example
 
     <label for="date1">Drop down Date box:</label>
     <input type="text" name="date1" id="date1" value="2005-12-30"
-        data-dojo-type="dijit.form.DateTextBox"
+        data-dojo-type="dijit/form/DateTextBox"
         required="true" />
 
 
@@ -148,10 +148,10 @@ and the second widget sets the `min` constraint of the first widget.
   .. html ::
 
     <label for="fromDate">From:</label>
-    <input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit.form.DateTextBox" required="true"
+    <input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit/form/DateTextBox" required="true"
         onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
     <label for="toDate">To:</label>
-    <input id="toDate" type="text" name="toDate" data-dojo-type="dijit.form.DateTextBox" required="true"
+    <input id="toDate" type="text" name="toDate" data-dojo-type="dijit/form/DateTextBox" required="true"
         onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
 
 
@@ -178,7 +178,7 @@ The catch is that this can only be set after the widget has been created.
   .. html ::
 
     <label for="shortYear">From:</label>
-    <input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit.form.DateTextBox" value="1999-12-31" required="true"/>
+    <input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit/form/DateTextBox" value="1999-12-31" required="true"/>
 
 Accessibility
 =============

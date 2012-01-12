@@ -27,7 +27,7 @@ A plain Calendar widget with the formatted date below
 
   .. html ::
 
-    <div data-dojo-type="dijit.CalendarLite" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
+    <div data-dojo-type="dijit/CalendarLite" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
     <p id="formatted"></p>
 
 

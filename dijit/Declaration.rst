@@ -35,7 +35,7 @@ Here's an example defining a widget called Employee, and then creating two of th
 
   .. html ::
 
-    <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
+    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
         <span>${name}</span>
         <a href="update.php?id=${empid}">update</a>
         <a href="delete.php?id=${empid}">delete</a>
@@ -74,7 +74,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 
 .. html ::
  
- <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton'">
+ <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
    XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
    <script type='dojo/method' data-dojo-event='myClickHandler'>
      this.domNode.style.display="none";
@@ -98,7 +98,7 @@ Here we define HideButton2 and then create two HideButton2's:
 
 .. html ::
  
- <span data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
+ <span data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
    YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
  </span>
  <button data-dojo-type="HideButton2">Hide me extended</button>
@@ -122,7 +122,7 @@ An example of dojo/connect is:
 
 .. html ::
  
- <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
+ <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
    Just a plain ol' piece of text
    <script type="dojo/connect" data-dojo-event="dblclick">
      console.debug("Ouch!  I've been double-clicked");

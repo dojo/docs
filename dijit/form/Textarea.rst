@@ -58,7 +58,7 @@ In this instance, the initial *value* is the child text node of the TEXTAREA ele
 
   .. html ::
 
-    <textarea id="textarea2" name="textarea2" data-dojo-type="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
+    <textarea id="textarea2" name="textarea2" data-dojo-type="dijit/form/Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
 
 
 Accessibility

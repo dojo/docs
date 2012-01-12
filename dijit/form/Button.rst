@@ -66,7 +66,7 @@ As usual, you can create the Button widget declaratively using the data-dojo-typ
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" type="button">Click me too!
+    <button data-dojo-type="dijit/form/Button" type="button">Click me too!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Do something:
             dojo.byId("result2").innerHTML += "Thank you! ";
@@ -89,7 +89,7 @@ Use the showLabel parameter to suppress it from appearing under normal circumsta
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel: false" type="button">cut</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel: false" type="button">cut</button>
 
 
 Change the icon
@@ -112,7 +112,7 @@ Following example toggles the icon if the button:
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="toggleButton" onClick="toggle();" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
+    <button data-dojo-type="dijit/form/Button" id="toggleButton" onClick="toggle();" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
         Click me!
     </button>
 

@@ -49,7 +49,7 @@ Declarative example
 
         <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
         <input type="text" name="firstname" value="testing testing"
-            data-dojo-type="dijit.form.TextBox"
+            data-dojo-type="dijit/form/TextBox"
             data-dojo-props="trim:true, propercase:true" id="firstname">
 
   
@@ -68,11 +68,11 @@ Please see the following for an example:
 
   .. html ::
 
-    <label for="dtb">A default textbox:</label> <input id="dtb" data-dojo-type="dijit.form.TextBox"/>
+    <label for="dtb">A default textbox:</label> <input id="dtb" data-dojo-type="dijit/form/TextBox"/>
     <br>
-    <label for="ltb">A large textbox:</label> <input id="ltb" style="width: 50em;" data-dojo-type="dijit.form.TextBox"/>
+    <label for="ltb">A large textbox:</label> <input id="ltb" style="width: 50em;" data-dojo-type="dijit/form/TextBox"/>
     <br>
-    <label for="stb">A small textbox:</label> <input id="stb" style="width: 10em;" data-dojo-type="dijit.form.TextBox"/>
+    <label for="stb">A small textbox:</label> <input id="stb" style="width: 10em;" data-dojo-type="dijit/form/TextBox"/>
     <br>
 
 
@@ -110,9 +110,9 @@ Please see the following example for more detail:
 
   .. html ::
 
-    <label for="value0Box">A textbox with a value:</label> <input id="value0Box" data-dojo-type="dijit.form.TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
+    <label for="value0Box">A textbox with a value:</label> <input id="value0Box" data-dojo-type="dijit/form/TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
     <br>
-    <label for="value1Box">A textbox set with a value from the above textbox:</label> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
+    <label for="value1Box">A textbox set with a value from the above textbox:</label> <input id="value1Box" data-dojo-type="dijit/form/TextBox"></input>
     <br>
 
 Using the placeholder parameter

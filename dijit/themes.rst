@@ -208,7 +208,7 @@ For example the CSS clases ``dijitEditorIcon`` and ``dijitEditorIconCut`` indica
 
 .. html ::
 
-   <button data-dojo-type="dijit.form.Button"
+   <button data-dojo-type="dijit/form/Button"
        data-dojo-props="iconClass: 'dijitEditorIcon dijitEditorIconCut">
 
 
@@ -470,15 +470,15 @@ You can also override a theme but only in certain sections of a page, for exampl
 
 .. html ::
 
-  <div data-dojo-type="dijit.layout.TabContainer">
-        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
-                <input data-dojo-type="dijit.form.TextBox">
-                <button data-dojo-type="dijit.form.Button">Yellow Button</button>
+  <div data-dojo-type="dijit/layout/TabContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
+                <input data-dojo-type="dijit/form/TextBox">
+                <button data-dojo-type="dijit/form/Button">Yellow Button</button>
                 ...
         </div>
-        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab2'" class="blueForm">
-                <input data-dojo-type="dijit.form.TextBox">
-                <button data-dojo-type="dijit.form.Button">Blue Button</button>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab2'" class="blueForm">
+                <input data-dojo-type="dijit/form/TextBox">
+                <button data-dojo-type="dijit/form/Button">Blue Button</button>
                 ...
         </div>
   </div>
@@ -842,15 +842,15 @@ For example, to make the main document Claro theme, but then have sections that 
 
   <body class=claro>
     ...
-        <div data-dojo-type="dijit.layout.TabContainer">
-                <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab1'" class="tundra">
-                        <input data-dojo-type="dijit.form.TextBox">
-                        <button data-dojo-type="dijit.form.Button">Tundra Button</button>
+        <div data-dojo-type="dijit/layout/TabContainer">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab1'" class="tundra">
+                        <input data-dojo-type="dijit/form/TextBox">
+                        <button data-dojo-type="dijit/form/Button">Tundra Button</button>
                         ...
                 </div>
-                <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab2'" class="soria">
-                        <input data-dojo-type="dijit.form.TextBox">
-                        <button data-dojo-type="dijit.form.Button">Soria Button</button>
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab2'" class="soria">
+                        <input data-dojo-type="dijit/form/TextBox">
+                        <button data-dojo-type="dijit/form/Button">Soria Button</button>
                         ...
                 </div>
         </div>

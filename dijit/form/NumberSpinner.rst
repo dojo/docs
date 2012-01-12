@@ -40,7 +40,7 @@ You have all the options available in the :ref:`Dojo constraint language <quicks
 
   .. html ::
 
-   <input data-dojo-type="dijit.form.NumberSpinner"
+   <input data-dojo-type="dijit/form/NumberSpinner"
         value="1000"
         smallDelta="10"
         constraints="{min:9,max:1550,places:0}"
@@ -103,7 +103,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
   .. html ::
 
     <label for="temperatureCelsius">Temperature in Celsius:</label>
-    <div data-dojo-type="dijit.form.NumberSpinner"
+    <div data-dojo-type="dijit/form/NumberSpinner"
        intermediateChanges="true"
        id="temperatureCelsius"
        constraints="{min:0,max:40}"

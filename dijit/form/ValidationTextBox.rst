@@ -66,7 +66,7 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 
     <label for="phone">Phone number, no spaces:</label>
     <input type="text" name="phone" id="phone" value="someTestString"
-        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-type="dijit/form/ValidationTextBox"
         data-dojo-props="regExp:'[\\w]+', required:true, invalidMessage:'Invalid Non-Space Text.'">
 
 Using regular expressions
@@ -86,7 +86,7 @@ This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
     <label for="zip">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000"
-        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-type="dijit/form/ValidationTextBox"
         data-dojo-props="regExp:'\\d{5}', required:true, invalidMessage:'Invalid zip code.'">
 
 Generate regular expressions
@@ -115,7 +115,7 @@ The following code demonstrates a dynamic ValidationTextBox that only accepts a 
 
     <label for="zip2">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000" id="zip2"
-        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-type="dijit/form/ValidationTextBox"
         data-dojo-props="regExpGen:after5, required:true, invalidMessage:'Zip codes after 5, county name before then.'">
 
 

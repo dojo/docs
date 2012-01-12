@@ -44,7 +44,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['newpage']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['newpage']"></div>
 
 
 
@@ -60,7 +60,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+  <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
 
 Or programmatically:
 
@@ -89,7 +89,7 @@ Basic Usage
 
     <b>Enter some text then press the New Page button.  The editor content will then clear.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['newpage']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['newpage']">
     <div>
     <br>
     blah blah & blah!
@@ -132,7 +132,7 @@ Custom New Page Content
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
     <div>
     <br>
     blah blah & blah!

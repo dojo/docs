@@ -51,11 +51,11 @@ Creation from markup is simpler and more structured.
 
   .. html ::
 
-    <div id="menubar" data-dojo-type="dijit.MenuBar">
-        <div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">
+    <div id="menubar" data-dojo-type="dijit/MenuBar">
+        <div data-dojo-type="dijit/MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">
             Click me!
         </div>
-        <div data-dojo-type="dijit.MenuBarItem" data-dojo-props="disabled:true">
+        <div data-dojo-type="dijit/MenuBarItem" data-dojo-props="disabled:true">
             Disabled item
         </div>
     </div>

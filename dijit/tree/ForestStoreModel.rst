@@ -15,9 +15,9 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-id="continentStore"
         data-dojo-props="url:'_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
+    <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="continentModel"
         data-dojo-props="store:continentStore, query:{type:'continent'},
         rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
@@ -134,13 +134,13 @@ A markup tree
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel"
+    <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="continentModel"
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
-    <div data-dojo-type="dijit.Tree" id="mytree"
+    <div data-dojo-type="dijit/Tree" id="mytree"
       data-dojo-props="model:continentModel, openOnClick:true">
       <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)

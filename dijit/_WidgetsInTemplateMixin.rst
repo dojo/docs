@@ -21,8 +21,8 @@ But what if we want to have a widget inside of the template, as in:
 .. html ::
 
   <div class="combinedDateTime">
-     <div data-dojo-type="dijit.form.DateTextBox"></div>
-     <div data-dojo-type="dijit.form.TimeTextBox"></div>
+     <div data-dojo-type="dijit/form/DateTextBox"></div>
+     <div data-dojo-type="dijit/form/TimeTextBox"></div>
   </div>
 
 When using this template in a directly extended widget class, you will need to mixin :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`  in addition to :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`.
@@ -38,8 +38,8 @@ For example, with this template:
 .. html ::
 
   <div class="combinedDateTime">
-     <div data-dojo-type="dijit.form.DateTextBox" data-dojo-attach-point="start"></div>
-     <div data-dojo-type="dijit.form.TimeTextBox" data-dojo-attach-point="end"></div>
+     <div data-dojo-type="dijit/form/DateTextBox" data-dojo-attach-point="start"></div>
+     <div data-dojo-type="dijit/form/TimeTextBox" data-dojo-attach-point="end"></div>
   </div>
 
 You can do this in your widget code:
@@ -62,11 +62,11 @@ For example, consider InlineEditBox which embeds dijit buttons into it's own tem
     ><div data-dojo-attach-point="editorPlaceholder"></div
     ><span data-dojo-attach-point="buttonContainer"
         ><button class='saveButton' data-dojo-attach-point="saveButton"
-                data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">
+                data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick:save" disabled="true">
             ${buttonSave}
         </button
         ><button class='cancelButton' data-dojo-attach-point="cancelButton"
-                data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">
+                data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick:cancel">
             ${buttonCancel}
         </button
     ></span

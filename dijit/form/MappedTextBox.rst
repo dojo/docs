@@ -21,7 +21,7 @@ For example, a NumberSpinner may be declared like
 
 .. html ::
 
-  <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-props="value:1000">
+  <div data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="value:1000">
 
 (note the "value" keyword). But when it's displayed in America it looks like "1,000" (with the comma).
 And if the user types in "1,234,567", it gets sent back to the server as "123456789".

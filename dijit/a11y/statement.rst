@@ -64,7 +64,7 @@ Widget sizing can also be an issue.
 When creating elements which require size, consider that some users may need to increase the font size.
 If you set the height of a dijit toolbar to 25px and a user has set the font size to largest, any text in the toolbar may be clipped.
 Instead of using px, set the height using ems and the toolbar size will be relative to the font size:
-<div data-dojo-type="dijit.Toolbar" data-dojo-props="region:'top'" style="height:1.25em">
+<div data-dojo-type="dijit/Toolbar" data-dojo-props="region:'top'" style="height:1.25em">
 
 Also be aware of source code ordering, the BorderContainer will properly align the ContentPane regions when it renders them, no matter if the bottom region is specified before the top region in source code order.
 But, for best support by assistive technology, add the ContentPane regions in correct source code order, with top regions appearing first and bottom regions last.

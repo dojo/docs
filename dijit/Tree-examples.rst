@@ -51,7 +51,7 @@ Combining those all together into an example:
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+    <div data-dojo-type="dojo/store/Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -88,7 +88,7 @@ Combining those all together into an example:
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- buttons to test Tree features -->
@@ -103,7 +103,7 @@ Combining those all together into an example:
     </button>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
+    <div data-dojo-type="dijit/Tree" data-dojo-id="mytree"
             data-dojo-props="model: myModel, autoExpand: true"></div>
 
 
@@ -129,7 +129,7 @@ simply set the ``openOnClick`` attribute to ``true``
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="memoryStore">
+    <div data-dojo-type="dojo/store/Memory" data-dojo-id="memoryStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -166,11 +166,11 @@ simply set the ``openOnClick`` attribute to ``true``
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: memoryStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="mytree"
+    <div data-dojo-type="dijit/Tree" id="mytree"
         data-dojo-props="model: myModel, openOnClick: true"></div>
 
 

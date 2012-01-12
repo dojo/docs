@@ -79,12 +79,12 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 
   .. html ::
 
-    <div data-dojo-type="dijit.form.DropDownButton">
+    <div data-dojo-type="dijit/form/DropDownButton">
       <span>Register</span>
-      <div data-dojo-type="dijit.TooltipDialog">
-         <label for="name">Name:</label> <input data-dojo-type="dijit.form.TextBox" id="name" name="name"><br>
-         <label for="hobby">Hobby:</label> <input data-dojo-type="dijit.form.TextBox" id="hobby" name="hobby"><br>
-         <button data-dojo-type="dijit.form.Button" type="submit">Save</button>
+      <div data-dojo-type="dijit/TooltipDialog">
+         <label for="name">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name" name="name"><br>
+         <label for="hobby">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby" name="hobby"><br>
+         <button data-dojo-type="dijit/form/Button" type="submit">Save</button>
       </div>
     </div>
 

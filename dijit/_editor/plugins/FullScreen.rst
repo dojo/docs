@@ -60,7 +60,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['fullscreen']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['fullscreen']"></div>
 
 
 
@@ -87,7 +87,7 @@ Example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[name: 'fullscreen', zIndex: 900}]"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:[name: 'fullscreen', zIndex: 900}]"></div>
 
 
 Full Screen mode and LayoutContainers
@@ -144,7 +144,7 @@ Basic Usage
 
     <b>Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['fullscreen']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['fullscreen']">
     <div>
     <br>
     blah blah & blah!
@@ -192,7 +192,7 @@ Setting the zIndex
     <br>
     <br>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'fullscreen', zIndex: 900}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'fullscreen', zIndex: 900}]">
     <div>
     <br>
     blah blah & blah!

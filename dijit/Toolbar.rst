@@ -70,16 +70,16 @@ Creation from markup is even easier.
   .. html ::
 
     <!-- Tags end on line afterwards to eliminate any whitespace -->
-    <div id="toolbar1" data-dojo-type="dijit.Toolbar"
-        ><div data-dojo-type="dijit.form.Button" id="toolbar1.cut"
+    <div id="toolbar1" data-dojo-type="dijit/Toolbar"
+        ><div data-dojo-type="dijit/form/Button" id="toolbar1.cut"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel:false">Cut</div
-        ><div data-dojo-type="dijit.form.Button" id="toolbar1.copy"
+        ><div data-dojo-type="dijit/form/Button" id="toolbar1.copy"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy', showLabel:false">Copy</div
-        ><div data-dojo-type="dijit.form.Button" id="toolbar1.paste"
+        ><div data-dojo-type="dijit/form/Button" id="toolbar1.paste"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste', showLabel:false">Paste</div
         ><!-- The following adds a line between toolbar sections
-            --><span data-dojo-type="dijit.ToolbarSeparator"></span
-         ><div data-dojo-type="dijit.form.ToggleButton" id="toolbar1.bold"
+            --><span data-dojo-type="dijit/ToolbarSeparator"></span
+         ><div data-dojo-type="dijit/form/ToggleButton" id="toolbar1.bold"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">Bold</div>
    </div>
 
@@ -101,17 +101,17 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
 
   .. html ::
 
-    <div id="fancy" data-dojo-type="dijit.Toolbar">
-        <div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
+    <div id="fancy" data-dojo-type="dijit/Toolbar">
+        <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
             <span>Color</span>
-            <div data-dojo-type="dijit.ColorPalette"></div>
+            <div data-dojo-type="dijit/ColorPalette"></div>
         </div>
-        <div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
+        <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
             <span>Dialog</span>
-            <div data-dojo-type="dijit.TooltipDialog">
-                <label for="first">First name:</label> <input data-dojo-type="dijit.form.TextBox" name="first" id="first"/>
+            <div data-dojo-type="dijit/TooltipDialog">
+                <label for="first">First name:</label> <input data-dojo-type="dijit/form/TextBox" name="first" id="first"/>
                 <br/>
-                <label for="last">Last name:</label> <input data-dojo-type="dijit.form.TextBox" name="last" id="last"/>
+                <label for="last">Last name:</label> <input data-dojo-type="dijit/form/TextBox" name="last" id="last"/>
             </div>
         </div>
         </div>

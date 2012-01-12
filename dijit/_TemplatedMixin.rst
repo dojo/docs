@@ -147,7 +147,7 @@ For example:
 
 .. html ::
 
-  <button data-dojo-type="dijit.form.Button">press me</button>
+  <button data-dojo-type="dijit/form/Button">press me</button>
 
 If the template defines data-dojo-attach-point="containerNode", the children from the srcNodeRef will be copied to this node.
 

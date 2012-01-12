@@ -53,7 +53,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']"></div>
 
 
 And that's it.
@@ -80,7 +80,7 @@ Basic Usage: foreColor (Text Color)
 
     <b>Enter some text and select it, or select existing text, then push the TextColor button to select a new color for it.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor']">
     <div>
     <br>
     blah blah & blah!
@@ -123,7 +123,7 @@ Basic Usage: hiliteColor (Text Background Color)
 
     <b>Enter some text and select it, or select existing text, then push the Text Background Color button to select a new background color for it.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['hiliteColor']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['hiliteColor']">
     <div>
     <br>
     blah blah & blah!
@@ -166,7 +166,7 @@ Basic Usage: Both foreground and background color buttons together
 
     <b>Enter some text and select it, or select existing text, then change its colors via the text color and text background color buttons.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']">
     <div>
     <br>
     blah blah & blah!

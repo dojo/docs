@@ -43,7 +43,7 @@ For example:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['print']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['print']"></div>
 
 
 
@@ -72,7 +72,7 @@ Basic Usage
 
     <b>Enter some text then press the print button.  The browser print dialog should open and allow you to print the editor content</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['print']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['print']">
     <div>
     <br>
     blah blah & blah!

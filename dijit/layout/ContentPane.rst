@@ -80,7 +80,7 @@ Declarative example
 
   .. html ::
 
-    <div data-dojo-type="dijit.layout.ContentPane">
+    <div data-dojo-type="dijit/layout/ContentPane">
       Hi, pretty boring huh?
     </div>
 

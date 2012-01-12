@@ -68,13 +68,13 @@ That is to say, if you had a DOM like this:
 
 .. html ::
  
-  <div id="root" data-dojo-type="dijit.Dialog">
-      <form data-dojo-type="dijit.form.Form">
-          <input data-dojo-type="dijit.form.TextBox">
+  <div id="root" data-dojo-type="dijit/Dialog">
+      <form data-dojo-type="dijit/form/Form">
+          <input data-dojo-type="dijit/form/TextBox">
       </form>
       <div>
-          <form data-dojo-type="dijit.form.Form">
-              <input data-dojo-type="dijit.form.TextBox">
+          <form data-dojo-type="dijit/form/Form">
+              <input data-dojo-type="dijit/form/TextBox">
           </form>
       </div>
   </div>
@@ -97,8 +97,8 @@ For instance, given the following DOM:
 
 .. html ::
  
-  <div data-dojo-type="dijit.form.Form">
-      <input id="myTextField" data-dojo-type="dijit.form.TextBox">
+  <div data-dojo-type="dijit/form/Form">
+      <input id="myTextField" data-dojo-type="dijit/form/TextBox">
   </div>
 
 The following will return the TextBox widget, **not** the Form widget:

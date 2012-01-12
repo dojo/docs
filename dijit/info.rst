@@ -36,7 +36,7 @@ is identical to:
   <script type="text/javascript">
      dojo.require("dijit.Dialog");
   </script>
-  <div data-dojo-type="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
+  <div data-dojo-type="dijit/Dialog" title="Hello Dijit!" id="someId"></div>
 
 The declarative method requires you include the :ref:`dojo.parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (aka: Dijits) to be created.
 
@@ -52,7 +52,7 @@ The declarative method requires you include the :ref:`dojo.parser <dojo/parser>`
          myDialog.show();
      });
   </script>
-  <div data-dojo-type="dijit.Dialog" id="foobar" title="Foo!">
+  <div data-dojo-type="dijit/Dialog" id="foobar" title="Foo!">
      <p>I am some content</p>
   </div>
 
@@ -200,7 +200,7 @@ Event handlers can be setup programmatically (as above), or declaratively, like:
 
 .. html ::
  
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
      <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
            console.log("clicked, event object is ", evt);
      </script>
@@ -249,7 +249,7 @@ With the following markup:
 
 .. html ::
    
-  <div id="myDialog" data-dojo-type="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
+  <div id="myDialog" data-dojo-type="dijit/Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
 
 The Dialog instance would be available through the byId call to `myDialog`:
 
@@ -303,7 +303,7 @@ When instantiated declaratively,
 
 .. html ::
  
-   <button data-dojo-type="dijit.form.Button">press me</button>
+   <button data-dojo-type="dijit/form/Button">press me</button>
 
 Note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
 The new DOM automatically replaces the old button node.

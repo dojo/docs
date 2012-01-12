@@ -106,7 +106,7 @@ If you want the FilteringSelect to start blank, use a different method to create
 
   .. html ::
 
-    <select data-dojo-type="dijit.form.FilteringSelect" id="fruit" name="fruit">
+    <select data-dojo-type="dijit/form/FilteringSelect" id="fruit" name="fruit">
         <option value="AP">Apples</option>
         <option value="OR" selected>Oranges</option>
         <option value="PE" >Pears</option>
@@ -127,10 +127,10 @@ To set the default value for this example, specify the *value* attribute (the hi
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory"
+    <div data-dojo-type="dojo/store/Memory"
         data-dojo-id="stateStore"
         data-dojo-props="data: [{id: 'y', name: 'yes'}, {id: 'n', name: 'no'}]"></div>
-    <input data-dojo-type="dijit.form.FilteringSelect"
+    <input data-dojo-type="dijit/form/FilteringSelect"
         value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"

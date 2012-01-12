@@ -25,7 +25,7 @@ HTML5 markup
 
 .. html ::
 
-  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruit"' >
+  <select data-dojo-type="dijit/form/DataList" data-dojo-props='id:"fruit"' >
         <option value="Ap">Apples</option>
         <option value="Ba">Bananas</option>
         <option value="Bl">Blueberries</option>

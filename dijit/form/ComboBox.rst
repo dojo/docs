@@ -99,7 +99,7 @@ To set the default value when using OPTION tags, specify the *selected* attribut
 
   .. html ::
 
-    <select data-dojo-type="dijit.form.ComboBox" id="fruit" name="fruit">
+    <select data-dojo-type="dijit/form/ComboBox" id="fruit" name="fruit">
       <option>Apples</option>
       <option selected>Oranges</option>
       <option>Pears</option>
@@ -120,10 +120,10 @@ To set the default value for this example, specify the *value* attribute in the 
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory"
+    <div data-dojo-type="dojo/store/Memory"
         data-dojo-id="stateStore"
         data-dojo-props="data: [{id: 'y', name: 'yes'}, {id: 'n', name: 'no'}]"></div>
-    <input data-dojo-type="dijit.form.FilteringSelect"
+    <input data-dojo-type="dijit/form/FilteringSelect"
         value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"

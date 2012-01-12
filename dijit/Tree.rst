@@ -171,7 +171,7 @@ In any case, the dijit.tree.Model and dijit.Tree themselves can still be created
 
   .. html ::
 
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+    <div data-dojo-type="dojo/store/Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -208,11 +208,11 @@ In any case, the dijit.tree.Model and dijit.Tree themselves can still be created
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="myTree" data-dojo-props="model: myModel"></div>
+    <div data-dojo-type="dijit/Tree" id="myTree" data-dojo-props="model: myModel"></div>
 
 
 Icons
@@ -292,7 +292,7 @@ The item still exists in the model but it's hidden on the screen:
 
     <!-- Create store with inlined data.
         For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+    <div data-dojo-type="dojo/store/Memory" data-dojo-id="myStore">
         <script type="dojo/method">
              this.setData([
                 { id: 'world', name:'The earth', type:'planet', population: '6 billion'},
@@ -327,11 +327,11 @@ The item still exists in the model but it's hidden on the screen:
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="myTree"
+    <div data-dojo-type="dijit/Tree" id="myTree"
             data-dojo-props="model: myModel, showRoot: false"></div>
 
 
@@ -403,11 +403,11 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
   .. html ::
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
-    <div data-dojo-type="dijit.Tree" id="myTree" data-dojo-props="model: myModel"></div>
+    <div data-dojo-type="dijit/Tree" id="myTree" data-dojo-props="model: myModel"></div>
 
     <!-- Buttons to show data store update -->
     <button onclick="myStore.add({id: 'US', name:'United States', type:'country', parent: 'NA'});">
@@ -671,12 +671,12 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 
   .. html ::
 
-    <ul data-dojo-type="dijit.Menu" id="tree_menu" style="display: none;">
-        <li data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
-        <li data-dojo-type="dijit.MenuItem">Item #2</li>
+    <ul data-dojo-type="dijit/Menu" id="tree_menu" style="display: none;">
+        <li data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
+        <li data-dojo-type="dijit/MenuItem">Item #2</li>
     </ul>
         
-    <div data-dojo-type="dojo.store.Memory" data-dojo-id="myStore">
+    <div data-dojo-type="dojo/store/Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
         <script type="dojo/method">
@@ -713,11 +713,11 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
     </div>
 
     <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit.tree.ObjectStoreModel" data-dojo-id="myModel"
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree, and connect to the menu -->
-    <div data-dojo-type="dijit.Tree" id="menuTree"
+    <div data-dojo-type="dijit/Tree" id="menuTree"
              data-dojo-props="model: myModel, showRoot: false, openOnClick: true">
                  
         <script type="dojo/connect">
