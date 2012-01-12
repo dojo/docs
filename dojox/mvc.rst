@@ -62,7 +62,7 @@ dojox.mvc can also be loaded using the legacy ``dojo.require`` API:
 Examples
 ========
 
-Basic example, input-output sync:
+Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field.  The "Reset" button will reset the model back to it's original values.  The other buttons show how to programmatically set things in the model to have the update reflected in the widget, and how to programmatically update the widget and have it update the model.
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -101,8 +101,8 @@ Basic example, input-output sync:
 
     <div id="main">
         <div class="row">
-            <label class="cell" for="firstnameId">First:</label>
-            <input class="cell" id="firstnameId" data-dojo-type="dijit.form.TextBox"
+            <label class="cell" for="firstId">First:</label>
+            <input class="cell" id="firstId" data-dojo-type="dijit.form.TextBox"
                    data-dojo-props="ref: model.First"></input>
             <!-- Content in output below will always be in sync with value of textbox above -->
             <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
