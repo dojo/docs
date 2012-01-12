@@ -452,7 +452,7 @@ Often a widget declared in markup will have contents, i.e. it will contain some 
 
 .. html ::
 
-  <button data-dojo-type="dijit.form.Button">press me</button>
+  <button data-dojo-type="dijit/form/Button">press me</button>
 
 In the common case of non-behavioral widgets (that create a new DOM tree to replace the <button> node in the above example), the widgets need to copy the DOM tree inside of the <button> declaration to the widget's new DOM tree.
 
@@ -540,13 +540,13 @@ Step 3 shows how the widget user can add their custom function, without having t
 
 .. html ::
 
-  <button data-dojo-type="dijit.form.Button" onClick="alert('Woohoo! I'm using the extension point "onClick"!!');">press me</button>
+  <button data-dojo-type="dijit/form/Button" onClick="alert('Woohoo! I'm using the extension point "onClick"!!');">press me</button>
 
 or alternately this:
 
 .. html ::
 
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
     <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
       alert('Woohoo! I'm using the extension point "onClick"!!');
     </script>

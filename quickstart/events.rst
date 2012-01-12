@@ -435,7 +435,7 @@ or in markup as:
 
 .. html ::
 
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
      <script type="dojo/connect" data-dojo-event="onClick">
         ...
      </script>
@@ -455,13 +455,13 @@ or in markup:
 
 .. html ::
 
-   <button data-dojo-type="dijit.form.Button" onClick="myFunc">Click me!</button>
+   <button data-dojo-type="dijit/form/Button" onClick="myFunc">Click me!</button>
 
 or in markup using the script tag:
 
 .. html ::
 
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
      <script type="dojo/method" data-dojo-event="onClick">
         ...
      </script>
@@ -517,9 +517,9 @@ By way of example, consider a Spinner widget inside of a ContentPane inside of a
 
 .. html ::
 
-  <div data-dojo-type="dijit.layout.TabContainer">
-     <div data-dojo-type="dijit.layout.ContentPane" ...>
-        <input data-dojo-type="dijit.form.NumberSpinner" ...>
+  <div data-dojo-type="dijit/layout/TabContainer">
+     <div data-dojo-type="dijit/layout/ContentPane" ...>
+        <input data-dojo-type="dijit/form/NumberSpinner" ...>
      </div>
   </div>
 

@@ -77,7 +77,7 @@ After making the changes, insert the following code into the body section of the
 
 .. html ::
   
-    <button data-dojo-type="dijit.form.Button" id="helloButton">Hello World!</button>
+    <button data-dojo-type="dijit/form/Button" id="helloButton">Hello World!</button>
 
 The key attribute of this HTML element to notice is the data-dojo-type attribute. The data-dojo-type attribute is responsible for instructing Dojo on how to process the element when the page is loading. In this case we've used a button element for the button though we could have used an input element - Dojo will work with either as long as the data-dojo-type attribute is present. It is worth noting that if we did use an input element, we would have to specify the button's text by using adding a caption attribute that contained the desired text.
 
@@ -90,7 +90,7 @@ The easiest way to attach an event to a button is through a script tag.  But not
 
 .. html ::
   
-    <button data-dojo-type="dijit.form.Button" id="helloButton">
+    <button data-dojo-type="dijit/form/Button" id="helloButton">
         Hello World!
         <script type="dojo/method" data-dojo-event="onClick">
            alert('You pressed the button');
@@ -170,7 +170,7 @@ to:
 
 .. html ::
   
-     <button data-dojo-type="dijit.form.Button" id="helloButton">
+     <button data-dojo-type="dijit/form/Button" id="helloButton">
         Hello World!
         <script type="dojo/method" data-dojo-event="onClick">
         dojo.xhrGet({

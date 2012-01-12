@@ -50,7 +50,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
   .. html ::
 
     <div>The content of our test array is ["foo", "hoo", "zoo"].</div>
-    <button id="refButton1" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxOf" type="button">Show the index of the word 'zoo' within the array.</button>
+    <button id="refButton1" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:testIndxOf" type="button">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
 
 
@@ -92,7 +92,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
   .. html ::
 
     <div>The content of our test array is ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"].</div>
-    <button id="refButton2" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testLastIndxOf" type="button">Show the last index of the word 'zoo' within the array.</button>
+    <button id="refButton2" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:testLastIndxOf" type="button">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
 
 
@@ -129,7 +129,7 @@ Note the "i" variable which returns the current position of an iteration
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:populateData" type="button">Populate data</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:populateData" type="button">Populate data</button>
     <ul id="forEach-items">
 
     </ul>
@@ -153,7 +153,7 @@ Now let's use dojo.forEach with a list of dom nodes we retrieve using dojo.query
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:populateQueryData" type="button">Populate data</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:populateQueryData" type="button">Populate data</button>
     <ul id="forEachQuery-items">
 
     </ul>
@@ -195,7 +195,7 @@ To break the forEach-Loop you should use dojo.some
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){arrayLoopTest()}" type="button">Start Testloops</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){arrayLoopTest()}" type="button">Start Testloops</button>
 
 
 dojo.filter
@@ -254,7 +254,7 @@ Let's take a look at an example:
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:filterArray" type="button">Filter array</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:filterArray" type="button">Filter array</button>
     <div style="width: 300px; float: left;">
     Filtered items<br />(only people with "Washington" as surname)
     <ul id="filtered-items">
@@ -311,7 +311,7 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:raiseSalary" type="button">Raise the salary</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:raiseSalary" type="button">Raise the salary</button>
     <div style="width: 300px; float: left;">
     Peoples salaries after raise:
     <ul id="filteredSalary-items">
@@ -371,7 +371,7 @@ Now your bank policies only allow you to give each client one credit over 1 mill
   .. html ::
 
     <div>The content of our test array is [200000, 500000, 350000, 1000000, 75, 3].</div>
-    <button id="refButton6" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxSome" type="button">Are there some items >=1000000 within the array?</button>
+    <button id="refButton6" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:testIndxSome" type="button">Are there some items >=1000000 within the array?</button>
     <div id="result6"></div>
 
 
@@ -418,7 +418,7 @@ An example:
   .. html ::
 
     <div>The content of our test array is [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}].</div>
-    <button id="refButton7" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxSome" type="button">Is the client allowed to get the credit?</button>
+    <button id="refButton7" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:testIndxSome" type="button">Is the client allowed to get the credit?</button>
     <div id="result7"></div>
 
 As you may have guessed, due to the short-circuiting nature of ``dojo.some`` and ``dojo.every``, they can be cleverly employed as more efficient alternatives to ``forEach`` in cases where there is potential to break out of the loop early and save processing.

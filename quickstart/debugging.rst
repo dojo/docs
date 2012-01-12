@@ -56,7 +56,7 @@ The following code has a subtle bug:
   </head>
   <body class="claro">
     <form>
-    What's the 411? <input type="text" size="20" name="info" data-dojo-type="dijit.form.TextBox"
+    What's the 411? <input type="text" size="20" name="info" data-dojo-type="dijit/form/TextBox"
              data-dojo-props="trim:true, propercase:true" /><br>
   </body>
   </html>
@@ -103,7 +103,7 @@ The following code has an error:
       </script>
   </head>
   <body class="claro">
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
      Click to break!
      <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.width = dojo.newWidth;
@@ -226,7 +226,7 @@ Since that code is now running, we try a minor variant which sets the button to 
       </script>
   </head>
   <body class="tundra">
-  <div data-dojo-type="dijit.form.Button">
+  <div data-dojo-type="dijit/form/Button">
      Click to break!
      <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.backgroundColor = dojo.Color.named.aliceblue;

@@ -146,8 +146,8 @@ Showing how sort attributes affect ordering
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to show sorted and unsorted lists!</div>
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button">Click me to show sorted and unsorted lists!</div>
     <br>
     <br>
     <b>Sorted List (Sorted by Aisle first and Name second):</b>

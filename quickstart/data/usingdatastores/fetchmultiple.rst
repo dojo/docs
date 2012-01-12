@@ -126,8 +126,8 @@ Loading all items through callbacks
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me for a list!</div>
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button">Click me for a list!</div>
     <br>
     <br>
     <span id="list">
@@ -258,8 +258,8 @@ Loading all items through the onItem callback
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click me for a list!</div>
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button2">Click me for a list!</div>
     <br>
     <br>
     <span id="list2">

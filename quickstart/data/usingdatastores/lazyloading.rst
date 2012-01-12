@@ -126,9 +126,9 @@ Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="geographyStore"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel" data-dojo-props="store:geographyStore, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
-    <div data-dojo-type="dijit.Tree" data-dojo-props="model:geographyModel"></div>
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="geographyStore"></div>
+    <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="geographyModel" data-dojo-props="store:geographyStore, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
+    <div data-dojo-type="dijit/Tree" data-dojo-props="model:geographyModel"></div>
 
 
 
@@ -244,9 +244,9 @@ Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
 
   .. html ::
 
-    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
-    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
-    <div data-dojo-type="dijit.Tree" data-dojo-props="model:geographyModel2"></div>
+    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
+    <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
+    <div data-dojo-type="dijit/Tree" data-dojo-props="model:geographyModel2"></div>
 
 Okay, great!  Two examples showing examples of hierarchical structures using one datastore, dojo.data.ItemFileReadStore.  But, it doesn't immediately answer how you use the dojo.data APIs to walk this.  How you do it is simple, it just uses isItem() to detect if an attribute value is also considered a data item by the store.   So ... code that would walk over an item and identify sub items would look like:
 
