@@ -72,7 +72,7 @@ _WidgetBase
 
         templateString:
             "<div>" +
-                "<button data-dojo-type='dijit.form.Button'
+                "<button data-dojo-type='dijit/form/Button'
                     data-dojo-attach-point='buttonWidget'>hi</button>" +
                 "<input data-dojo-attach-point='focusNode'>" +
             "</div>"
