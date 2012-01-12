@@ -99,7 +99,7 @@ The sample view template for data binding could look like:
 
 The result would look like:
 
-.. image :: /pic1.png
+.. image :: ./pic1.png
 
 Sample Summary
 ~~~~~~~~~~~~~

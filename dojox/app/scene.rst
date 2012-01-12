@@ -74,6 +74,6 @@ A sample application, including scene configuration, could look like:
     }
   }
 
-Sample rendering result
+The result would look like:
 
-.. image :: /pic1.png
+.. image :: ./pic1.png

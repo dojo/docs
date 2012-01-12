@@ -33,4 +33,4 @@ A sample ``dojox.app.view`` template could look like:
 
 The result of this configuration would look like:
 
-.. image :: /pic.png
+.. image :: ./pic.png
