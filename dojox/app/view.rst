@@ -7,31 +7,30 @@ dojox.app.view
 :Version: 1.0
 :Available: since V1.7
 
-dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
+``dojox.app.view`` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
-==============
-Sample
-==============
-Sample application configuration for dojox.app.view
+Sample View Configuration
+-----------
+A sample application configuration for ``dojox.app.view`` could look like:
 
 .. code-block :: javascript
 
   "home": {
     "type": "dojox.app.view",
-    "dependencies":["dojox/mobile/RoundRectList","dojox/mobile/ListItem"],
+    "dependencies":["dojox/mobile/RoundRectList", "dojox/mobile/ListItem"],
     "template": "views/simple/home.html"
   }
 
-dojox.app.view sample template - views/simple/home.html
+A sample ``dojox.app.view`` template could look like:
 
 .. code-block :: html
 
-  <div style="background:#c5ccd3;width: 100%; height: 100%;"  class="view mblView">
-    <div dojoType="dojox.mobile.RoundRect" shadow="true">
-      This is the content of the home scene. Hello World.
-    </div>
-  </div>
+  &lt;div style="background:#c5ccd3;width: 100%; height: 100%;" class="view mblView"&gt;
+  &lt;div dojoType="dojox.mobile.RoundRect" shadow="true"&gt;
+    This is the content of the home scene. Hello World.
+  &lt;/div&gt;
+&lt;/div&gt;
 
-Sample render result
+The result of this configuration would look like:
 
 .. image :: /pic.png
