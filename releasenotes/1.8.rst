@@ -61,6 +61,18 @@ An example:
 
 Dijit
 =====
+Performance Improvements
+------------------------
+There have been a few performance improvements to dijit:
+
+- All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images.
+  This reduces the number of files downloaded, speeding up page load.
+- _CssStateMixin now creates listeners at the document level, rather than separate listeners
+  for each widget.   This will speed up page instantiation time, especially on a page with many small widgets
+  like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
+- Similar event handling changes were made to Menu, putting the event handlers on the Menu rather than each
+  individual MenuItem
+
 _WidgetBase
 -----------
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
