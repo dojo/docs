@@ -45,7 +45,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-    <div data-dojo-type="dijit.Editor" id="editor1"
+    <div data-dojo-type="dijit/Editor" id="editor1"
         data-dojo-props="extraPlugins:[{name:'autosave', url:'dummySave.php', interval:5}]">
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the AutoSave plugin!
@@ -144,7 +144,7 @@ Basic Usage
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250" id="input" data-dojo-props="extraPlugins:['autosave']">
+    <div data-dojo-type="dijit/Editor" height="250" id="input" data-dojo-props="extraPlugins:['autosave']">
     <div>
     <br>
     blah blah & blah!

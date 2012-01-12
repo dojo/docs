@@ -47,13 +47,13 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['statusbar']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['statusbar']"></div>
 
 Or a status bar without resizer:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name:'statusbar',resizer:false}]"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:[{name:'statusbar',resizer:false}]"></div>
 
 
 
@@ -90,7 +90,7 @@ Basic Usage
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['statusbar']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['statusbar']">
     <div>
     <br>
     blah blah & blah!

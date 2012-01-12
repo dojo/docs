@@ -58,7 +58,7 @@ Finally, declare the Editor to use it:
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor"
+  <div data-dojo-type="dijit/Editor" id="editor"
       data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
   ...
   </div>
@@ -97,7 +97,7 @@ SpellCheck adopts JSONP protocol and uses GET request to send the words that are
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
 
 The request may look like the following:
 
@@ -319,7 +319,7 @@ Basic Usage
     
   .. html ::
 
-    <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+    <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
     <div>
     <br>
     blah blah & blah!

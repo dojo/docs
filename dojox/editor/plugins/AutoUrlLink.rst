@@ -35,7 +35,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-    <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
+    <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
       ...
     </div>
 
@@ -74,7 +74,7 @@ Basic Usage
 
   .. html ::
 
-    <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
+    <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="extraPlugins:['autourllink']">
     <div>
     <br>
     blah blah & blah!

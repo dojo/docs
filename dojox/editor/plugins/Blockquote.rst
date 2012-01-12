@@ -47,7 +47,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['blockquote']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['blockquote']"></div>
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Blockqupte plugin!  You can use the button to toggle the quotation mode of the text underneath the cursor in the document, or across a selection of text in the document.
@@ -76,7 +76,7 @@ Basic Usage
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['blockquote']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['blockquote']">
     <div>
     <br>
     blah blah & blah!

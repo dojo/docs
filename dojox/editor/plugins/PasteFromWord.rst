@@ -49,7 +49,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['pastefromword']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['pastefromword']"></div>
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PasteFromWord plugin!
 
@@ -70,7 +70,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor"
+  <div data-dojo-type="dijit/Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'pastefromword', width: "200px", height: "200px"}]">
   </div>
 
@@ -101,7 +101,7 @@ Basic Usage
 
     <b>Clear the editor, click paste from word, then paste in content you want!</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['pastefromword']">
+    <div data-dojo-type="dijit/Editor" height="100px" id="input" data-dojo-props="extraPlugins:['pastefromword']">
     <div>
     <br>
     blah blah & blah!

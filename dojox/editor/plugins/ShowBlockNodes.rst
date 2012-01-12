@@ -47,7 +47,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['showblocknodes']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['showblocknodes']"></div>
 
 
 
@@ -77,7 +77,7 @@ Basic Usage
 
     <b>Toggle the show block nodes button or use CTRL-SHIFT-F9, to show and hide block nodes in the page.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['showblocknodes']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['showblocknodes']">
     <div>
     <br>
     blah blah & blah!

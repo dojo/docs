@@ -47,7 +47,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['preview']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['preview']"></div>
 
 
 
@@ -83,7 +83,7 @@ Basic Usage
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['preview']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['preview']">
     <div>
     <br>
     blah blah & blah!
@@ -129,7 +129,7 @@ Applying styles to preview content
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 3px; border-color: darkgray;} table tr {border-style: outset; border-width: 3px;} table tr td {border-style: inset; border-width: 3px;}'}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 3px; border-color: darkgray;} table tr {border-style: outset; border-width: 3px;} table tr td {border-style: inset; border-width: 3px;}'}]">
     <div>
     <br>
     blah blah & blah!
@@ -176,7 +176,7 @@ Applying stylesheets to preview content
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', stylesheets: ['{{dataUrl}}dojox/editor/tests/testBodySheet.css', '{{dataUrl}}dojox/editor/tests/testContentSheet.css']}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'preview', stylesheets: ['{{dataUrl}}dojox/editor/tests/testBodySheet.css', '{{dataUrl}}dojox/editor/tests/testContentSheet.css']}]">
     <div>
     <p>
     blah blah & blah!

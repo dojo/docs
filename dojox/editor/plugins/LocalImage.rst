@@ -48,7 +48,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor1"
+  <div data-dojo-type="dijit/Editor" id="editor1"
           data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
       ...
   </div>
@@ -198,7 +198,7 @@ Basic Usage
     
   .. html ::
 
-    <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
+    <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
     <div>
     <br>
     blah blah & blah!

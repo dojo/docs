@@ -53,7 +53,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['breadcrumb']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['breadcrumb']"></div>
 
 
 
@@ -81,7 +81,7 @@ Basic Usage
   .. html ::
 
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['breadcrumb']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['breadcrumb']">
     <div>
     <br>
     blah blah & blah!

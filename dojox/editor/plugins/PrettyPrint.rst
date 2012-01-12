@@ -45,7 +45,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['prettyprint']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['prettyprint']"></div>
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PrettyPrint plugin!
 
@@ -85,7 +85,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor"
+  <div data-dojo-type="dijit/Editor"
        id="editor" data-dojo-props="extraPlugins:[{name: 'prettyprint', indentBy: 3, lineLength: 80, entityMap: [['<', 'lt'],['>', 'gt']], xhtml: true}]">
   </div>
 
@@ -112,7 +112,7 @@ Basic Usage
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['prettyprint']">
+    <div data-dojo-type="dijit/Editor" height="100px" id="input" data-dojo-props="extraPlugins:['prettyprint']">
     <div>
     <br>
     blah blah & blah!
@@ -136,7 +136,7 @@ Basic Usage
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showValue();">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit/form/Button" onClick="showValue();">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -161,7 +161,7 @@ Configured indent and line length
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'prettyprint', indentBy: 3, lineLength: 20}]">
+    <div data-dojo-type="dijit/Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'prettyprint', indentBy: 3, lineLength: 20}]">
     <div>
     <br>
     blah blah & blah!  This is a line longer than <b>twenty</b> characters, so it should wrap!
@@ -185,7 +185,7 @@ Configured indent and line length
     </li>
     </ul>
     </div>
-    <button id="eFormat" data-dojo-type="dijit.form.Button" onClick="showValue2();">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit/form/Button" onClick="showValue2();">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>

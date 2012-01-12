@@ -54,7 +54,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['collapsibletoolbar']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['collapsibletoolbar']"></div>
 
 
 
@@ -82,7 +82,7 @@ Basic Usage
   .. html ::
 
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['collapsibletoolbar']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['collapsibletoolbar']">
     <div>
     <br>
     blah blah & blah!

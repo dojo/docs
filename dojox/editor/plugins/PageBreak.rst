@@ -49,7 +49,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. html ::
 
-  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['pageBreak']"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['pageBreak']"></div>
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PageBreak plugin!  You can use the button or hotkey to insert page breaks as you desire.
@@ -83,7 +83,7 @@ Basic Usage
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['pagebreak']">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['pagebreak']">
     <div>
     <br>
     blah blah & blah!
