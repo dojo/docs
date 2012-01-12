@@ -43,7 +43,7 @@ You load a layer file into your web page using the normal `<script>` tags, simil
   <script type="text/javascript" src="/js/src/dijit/dijit.js"></script>
   
   <!-- include the rest of the modules we need -->
-  <script type="text/javascript" src="/js/src/acme/mylayer.js"></script>
+  <script type="text/javascript" src="/js/src/myapp/mylayer.js"></script>
 
 JavaScript files specified in script tags download asynchronously from the web server, but in modern browsers execution order is guaranteed, so more than one download can be in progress at once, making pages load faster. Since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
 
@@ -53,7 +53,7 @@ We use ``dojo.require`` to specify modules that an app needs, but larger Dojo ap
    
    // this file is located at:
    //
-   //   <server_root>/js/src/acme/mylayer.js
+   //   <server_root>/js/src/myapp/mylayer.js
    
     // This is a layer file. It's like any other Dojo module, except that we
     // don't put any code other than require/provide statements in it. When we
@@ -61,7 +61,7 @@ We use ``dojo.require`` to specify modules that an app needs, but larger Dojo ap
     // the modules listed below, as well as their dependencies, all in the
     // right order:
     
-    dojo.provide("acme.mylayer");
+    dojo.provide("myapp.mylayer");
     
     // some basics
     dojo.require("dojo.parser");
@@ -81,9 +81,9 @@ We use ``dojo.require`` to specify modules that an app needs, but larger Dojo ap
     dojo.require("dojox.dtl._Templated");
     
     // finally, some app-specific modules
-    dojo.require("acme.base");
-    dojo.require("acme.controllers");
-    dojo.require("acme.CustomDataStore");
+    dojo.require("myapp.base");
+    dojo.require("myapp.controllers");
+    dojo.require("myapp.CustomDataStore");
 
 Since ``dojo.require`` checks if the module has already been downloaded, a module will not be downloaded again if it was included in a layer on the page.
 
@@ -182,8 +182,8 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
                 // saved as an actual layer output. The important property
                 // is the "discard" property. If set to true, then the layer
                 // will not be a saved layer in the release directory.
-                name: "acme.discard",
-                resourceName: "acme.discard",
+                name: "myapp.discard",
+                resourceName: "myapp.discard",
                 discard: true,
                 // Path to the copyright file must be relative to
                 // the util/buildscripts directory, or an absolute path.
@@ -214,9 +214,9 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
             },
             {
                 // where to put the output relative to the Dojo root in a build
-                name: "../acme/mylayer.js"
+                name: "../myapp/mylayer.js"
                 // what to name it (redundant w/ or example layer)
-                resourceName: "acme.mylayer",
+                resourceName: "myapp.mylayer",
                 // what other layers to assume will have already been loaded
                 // specifying modules here prevents them from being included in
                 // this layer's output file
@@ -227,9 +227,9 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
                 // provided by dojo.js or other items in the "layerDependencies"
                 // array are also included.
                 dependencies: [
-                    // our acme.mylayer specifies all the stuff our app will
+                    // our myapp.mylayer specifies all the stuff our app will
                     // need, so we don't need to list them all out here.
-                    "acme.mylayer"
+                    "myapp.mylayer"
                 ]
             }
         ],
@@ -240,7 +240,7 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
             // are, at a minimum, copied to the build directory.
             [ "dijit", "../dijit" ],
             [ "dojox", "../dojox" ],
-            [ "acme", "../acme" ]
+            [ "myapp", "../myapp" ]
         ]
     }
 
@@ -250,7 +250,7 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
     // file tha contains the copyright info as the third array item in the
     // prefixes array. For instance:
     //    prefixes: [
-    //        [ "acme", "/path/to/acme", "/path/to/acme/copyright.txt"]
+    //        [ "myapp", "/path/to/myapp", "/path/to/myapp/copyright.txt"]
     //    ]
     //
     // NOTE:
@@ -301,7 +301,7 @@ Once we've run the build script, all we need to do to use our new-fangled, much-
   <script type="text/javascript" src="/js/release/dijit/dijit.js"></script>
   
   <!-- include the rest of the modules we need -->
-  <script type="text/javascript" src="/js/release/acme/mylayer.js"></script>
+  <script type="text/javascript" src="/js/release/myapp/mylayer.js"></script>
 
 
 Auto-generated Profiles from HTML
@@ -319,7 +319,7 @@ The build process can also automatically generate a profile and build layers bas
         </script>
         <script type="text/javascript">
             dojo.require("dijit.dijit");
-            dojo.require("acme.ui");
+            dojo.require("myapp.ui");
         </script>
       ...
 
@@ -329,9 +329,9 @@ We could a build:
   
   build htmlFiles=ui.html profile=ui action=release
 
-The build process will then generate a profile with two layers, one for dijit/dijit and one for acme/ui. The acme/ui layer will have a layer dependency defined so that the modules in dijit/dijit are not loaded twice. In this case, because a profile was specified, the generated profile will be written to buildscripts/profile/ui.profile.js (and the build process will continue). This file could be edited/tweaked to later do a manual build process (without HTML-based generation) in the future. If a profile (or profileFile) is not specified, the build process will generate the layers without writing the profile to disk (it will just be generated in memory).
+The build process will then generate a profile with two layers, one for dijit/dijit and one for myapp/ui. The myapp/ui layer will have a layer dependency defined so that the modules in dijit/dijit are not loaded twice. In this case, because a profile was specified, the generated profile will be written to buildscripts/profile/ui.profile.js (and the build process will continue). This file could be edited/tweaked to later do a manual build process (without HTML-based generation) in the future. If a profile (or profileFile) is not specified, the build process will generate the layers without writing the profile to disk (it will just be generated in memory).
 
-One can control the layers that are generated by which dojo.require (or script tags) are used in the HTML. In this case, we generated two layers because we had to dojo.require calls, but we could generate a single acme/ui layer (that included all dependencies) if we only did a single dojo.require call (dojo.require("acme.ui")).
+One can control the layers that are generated by which dojo.require (or script tags) are used in the HTML. In this case, we generated two layers because we had to dojo.require calls, but we could generate a single myapp/ui layer (that included all dependencies) if we only did a single dojo.require call (dojo.require("myapp.ui")).
 
 The HTML-based automated build process is (currently) limited to single rooted directory structures for namespaces, it does not take support namespaces that are registered through dojo.registerModulePath.
 

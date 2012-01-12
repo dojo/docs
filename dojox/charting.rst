@@ -537,18 +537,13 @@ In the following code the labeling function is used to add a unit after the expe
 
 The first parameter of the labelling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
 
-Note that by default the axis make sure to drop superfluous labels to avoid them to overlap. However computing this might be costly and if you know that the labels are short enough to not overlap you can disabled this mechanism by setting the dropLabels property to false on the axis:
-
-.. js ::
-
-  chart1.addAxis("x", { dropLabels: false });
 
 TODO: Month Labels Example
 
 Axis Label Shortening
 ---------------------
 
-If dropLabels is set to false axis labels might overlap. In this case label shortening rules can be specified by parameters as follows.
+Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified by parameters as follows.
 
 ================= =========== ======= ===========
 Name              Type        Default Description
