@@ -240,7 +240,7 @@ For example, we can use this feature to change the color of a renderer depending
       style: "position:relative;width:500px;height:500px"
   }, "someId");
 
-.. image :: cssClassFunc.png
+.. image :: calendar/cssClassFunc.png
 
 For further customization, custom renderers can be created. See dedicated section of advanced configuration.
 
@@ -260,6 +260,8 @@ See Advanced configuration to change this behavior.
 
 Columns View
 ============
+
+.. image :: calendar/columnView.png
 
 The columns view is displaying one column per day.
 
@@ -296,6 +298,8 @@ Note: The ColumnView can be replaced by the SimpleColumnView widget which is a c
 Matrix View
 ===========
 
+.. image :: calendar/matrixView.png
+
 The matrix view is displaying a matrix in which each day is a cell. Time is flowing horizontally.
 
 This view is accessible through the matrixView property of  the calendar widget.
@@ -312,7 +316,6 @@ The main properties of the columns view are:
 Properties with an (*) are computed by the calendar widget.
 
 See Advanced configuration Matrix View Properties  section for more advanced properties like layout properties and renderers.
-
 
 To specify constructor parameters of the column view, set the matrixViewProps property as show in the following example:
 
@@ -331,7 +334,12 @@ The matrix view allows to expand a row to see more events.
 
 By default the calendar is using this feature when an expand renderer is clicked or when an row header cell is clicked.
 
+.. image :: calendar/expandRenderer.png
+
 In the following image the first row is expanded:
+
+.. image :: calendar/matrixViewExpanded.png
+
 
 ============
 Interactions
@@ -420,6 +428,8 @@ In editing mode:
 Navigation buttons
 ==================
 
+.. image :: calendar/buttonBar.png
+
 By default the calendar template defines 7 buttons to navigate in time.
 
 ========== ======
@@ -490,12 +500,21 @@ Advanced configuration
 Class diagram
 =============
 
+.. image :: calendar/MainCalendarDiagram.png
+
 ======================== ===========
 Class                    Description
 ======================== ===========
 ViewBase                 The base class of calendar views.
 CalendarBase             The base calendar class that is managing a set of calendar views and exposes time range definition properties.
 Calendar                 The desktop specific calendar that defines a column view and a matrix view with keyboard and mouse interactions enabled and default renderers
+======================== ===========
+
+
+
+======================== ===========
+Class                    Description
+======================== ===========
 MobileCalendar           The mobile specific calendar that defines a column view and a matrix view with touch interactions enabled and specific default renderers.
 MatrixView               The view that display days as a matrix of days.
 SimpleColumnView         The view that displays each day as a column.
@@ -686,7 +705,11 @@ Note that the label renderers cannot overlap visually.
 To specify the overlap, set the percentOverlap property. A 0 value means no overlap, 50 means an overlapping of the half of renderer size.
 
 The following images show two overlapping events that are displayed by vertical renderer.
-The first one shows  a percentOverlap of 70%, the second on a percentOverlap of 0%.
+The first one shows a percentOverlap of 70%, the second on a percentOverlap of 0%.
+
+.. image :: calendar/overlap70.png
+
+.. image :: calendar/overlap0.png
 
 Layout priority
 ---------------
@@ -827,6 +850,10 @@ The matrix view has several layout properties.
 The roundToDay property (default true), indicates that horizontal renderers that represent events whose start or end time is not the start or end of a day should fill the cells that they are overlapping.
 
 The two following images show the same event that starts at 8 am and finishes at the end of the next day. This first one shows the result when the roundToDay property is true and the next one is this property is false.
+
+.. image :: calendar/roundToDayTrue.png
+
+.. image :: calendar/roundToDayFalse.png
 
 This property can also be set to false, if all the events are displayed using horizontal renderers (see itemToRendererKindFunc property).
 
