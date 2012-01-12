@@ -160,9 +160,9 @@ The date property defines the reference date.
 The dateInterval property defines the interval (day, week, month) and dateIntervalSteps the number of intervals.
 
 So, depending of these dateInterval values, if ‘n’ is the dateIntervalSteps value, the time range will be:
-  * “day”: n days from the reference date,
-  * “week”, n week from the first day of week that contains the reference date,
-  * “month” n months from the first day of the month that contains the reference date.
+  * **“day”** - n days from the reference date,
+  * **“week”** - n week from the first day of week that contains the reference date,
+  * **“month”** - n months from the first day of the month that contains the reference date.
 
 The following example shows how to display 2 weeks, whose first week contains the 1st of January 2012.
 
@@ -276,12 +276,12 @@ See Advanced configuration section to see how to change this behavior.
 This view is accessible through the columnView property of  the calendar widget.
 
 The main properties of the columns view are:
-  * startDate: The date of the first column,  
-  * columnCount: The number of column to display,
-  * minHours: The first hour displayed by the main sheet,
-  * maxHours: The last hour displayed (excluded),
-  * hourSize: The desired size in pixels of one hour,
-  * timeSlotDuration: The duration of minutes of the time slot (must be a divisor of 60),
+  * **startDate** - The date of the first column,  
+  * **columnCount** - The number of column to display,
+  * **minHours** - The first hour displayed by the main sheet,
+  * **maxHours** - The last hour displayed (excluded),
+  * **hourSize** - The desired size in pixels of one hour,
+  * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
 
 Properties with an (*) are computed by the calendar widget.
 
@@ -307,13 +307,13 @@ The matrix view is displaying a matrix in which each day is a cell. Time is flow
 This view is accessible through the matrixView property of  the calendar widget.
 
 The main properties of the columns view are:
-  * startDate: The date of the first cell,
-  * rowCount: The number of rows to display,
-  * columnCount: The number of columns to display,
-  * refStartTime: (optional) Start time of the time range of interest,
-  * refEndTime: (optional) end time of the time range of interest,
-  * expandDuration: Duration in milliseconds of the row expand animation,
-  * expandEasing: Easing of the row expand animation
+  * **startDate** - The date of the first cell,
+  * **rowCount** - The number of rows to display,
+  * **columnCount** - The number of columns to display,
+  * **refStartTime** - (optional) Start time of the time range of interest,
+  * **refEndTime** - (optional) end time of the time range of interest,
+  * **expandDuration** - Duration in milliseconds of the row expand animation,
+  * **expandEasing** - Easing of the row expand animation
 
 Properties with an (*) are computed by the calendar widget.
 
@@ -354,9 +354,9 @@ Properties
 ----------
 
 The selectionMode property controls the selection, this property can take the following values:
-  * “none”: no selection is possible.
-  * “single”: only one item can be selected at most.
-  * “multiple: zero or several items can be selected.
+  * **“none”** - no selection is possible.
+  * **“single”** - only one item can be selected at most.
+  * **“multiple** - zero or several items can be selected.
 
 The selectedItems property contains the list of selected items from the data store.
 
@@ -752,10 +752,10 @@ The time slot duration can defined defined by setting the timeSlotDuration prope
 
 The scroll position can be retrieved or set using the startTimeOfDay property. The value is an objet containing the following properties:
 
-  * hours: The hours part of the time of day,
-  * minutes: the minutes part of the time of day,
-  * duration (setter): the scroll animation duration to scroll from the minHours to the maxHours. The actual duration is computed according to the distance to scroll in order to scroll always at the same speed.
-  * easer (setter): if duration is greater than 0, the easing function to use to animate the scroll.
+  * **hours** - The hours part of the time of day,
+  * **minutes** - the minutes part of the time of day,
+  * **duration** (setter) - the scroll animation duration to scroll from the minHours to the maxHours. The actual duration is computed according to the distance to scroll in order to scroll always at the same speed.
+  * **easer** (setter) - if duration is greater than 0, the easing function to use to animate the scroll.
 
 For example to programmatically scroll the view to 9 am using an animation, use the following code:
 
@@ -915,8 +915,8 @@ The renderer must extend the dojox.calendar._RendererMixin class.
 
 The main property is of course the item property. The item is an object that contains:
 
-  * item: the store item.
-  * range: the part of the event displayed by this renderer. Sometimes several renderers are needed to display one event,
+  * **item** - the store item.
+  * **range** - the part of the event displayed by this renderer. Sometimes several renderers are needed to display one event,
   * other layout properties.
 
 The owner property contains a reference to the view that is using this renderer.
