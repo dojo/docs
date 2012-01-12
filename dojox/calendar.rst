@@ -285,7 +285,7 @@ The main properties of the columns view are:
 
 Properties with an (*) are computed by the calendar widget.
 
-See Advanced configuration Column View Properties section for more advanced properties like layout properties and renderers.
+See Advanced configuration for more advanced properties like layout properties and renderers.
 
 To specify constructor parameters of the column view, set the columnViewProps property as show in the following example:
 
@@ -317,7 +317,7 @@ The main properties of the columns view are:
 
 Properties with an (*) are computed by the calendar widget.
 
-See Advanced configuration Matrix View Properties  section for more advanced properties like layout properties and renderers.
+See advanced configuration dedicated section for more advanced properties like layout properties and renderers.
 
 To specify constructor parameters of the column view, set the matrixViewProps property as show in the following example:
 
@@ -392,7 +392,7 @@ The calendar widget allows to move and resize an event.
 
 Only one event can be edited at a time. 
 
-Note: for more information on item editing behavior and events, see [Advanced configuration> Event editing].
+Note: for more information on item editing behavior and events, See dedicated section of advanced configuration.
 
 Using the mouse
 ---------------
