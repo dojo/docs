@@ -4,6 +4,8 @@
 dojox.calendar
 ==============
 
+.. image :: calendar/columnView.png
+
 dojox.calendar allows to display events in time and edit them.
 
 .. contents ::
@@ -502,6 +504,7 @@ Class diagram
 
 .. image :: calendar/MainCalendarDiagram.png
 
+
 ======================== ===========
 Class                    Description
 ======================== ===========
@@ -509,6 +512,10 @@ ViewBase                 The base class of calendar views.
 CalendarBase             The base calendar class that is managing a set of calendar views and exposes time range definition properties.
 Calendar                 The desktop specific calendar that defines a column view and a matrix view with keyboard and mouse interactions enabled and default renderers
 ======================== ===========
+
+
+
+.. image :: calendar/ViewCalendarDiagram.png
 
 
 
