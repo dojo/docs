@@ -96,13 +96,14 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
         .row { width: 500px; display: inline-block; margin: 5px; }
         .cell { width: 20%;  display:inline-block; }
+        .textcell { width: 30%;  display:inline-block; }   
 
   .. html ::
 
     <div id="main">
         <div class="row">
             <label class="cell" for="firstId">First:</label>
-            <input class="cell" id="firstId" data-dojo-type="dijit.form.TextBox"
+            <input class="textcell" id="firstId" data-dojo-type="dijit.form.TextBox"
                    data-dojo-props="ref: model.First"></input>
             <!-- Content in output below will always be in sync with value of textbox above -->
             <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
@@ -111,7 +112,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
         </div>
         <div class="row">
             <label class="cell" for="lastnameInput">Last:</label>
-            <input class="cell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
+            <input class="textcell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
                    data-dojo-props="ref: model.Last"></input>
             <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Last">
                 (last name is: ${this.value})
@@ -119,7 +120,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
         </div>
         <div class="row">
             <label class="cell" for="emailInput">Email:</label>
-            <input class="cell" id="emailInput" data-dojo-type="dijit.form.TextBox"
+            <input class="textcell" id="emailInput" data-dojo-type="dijit.form.TextBox"
                    data-dojo-props="ref: model.Email"></input>
             <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Email">
                 (email is: ${this.value})
