@@ -101,7 +101,7 @@ Test against isObject()
   .. html ::
 
     <div style="height: 100px;">
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             t = 1000;
             <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
@@ -111,7 +111,7 @@ Test against isObject()
                 testIt();
             </script>
         </button>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             t = "text";
             <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
@@ -121,7 +121,7 @@ Test against isObject()
                 testIt();
             </script>
         </button>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             t = [1, 2, 3];
             <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
@@ -131,7 +131,7 @@ Test against isObject()
                 testIt();
             </script>
         </button>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             t = { "property": 'value' };
             <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
@@ -141,7 +141,7 @@ Test against isObject()
                 testIt();
             </script>
         </button>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             t = function(a, b){ return a };
             <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:

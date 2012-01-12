@@ -86,7 +86,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <b>Push the button to request a DELETE via xhr.</b>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="deleteButton">Call DELETE!</button>
+    <button data-dojo-type="dijit/form/Button" id="deleteButton">Call DELETE!</button>
     <br>
     <br>
     <b>Result</b>

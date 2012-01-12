@@ -84,7 +84,7 @@ Example 1: Using queryToObject to create a JavaScript form of a query
 
   .. html ::
 
-    <button id="convertQuery" data-dojo-type="dijit.form.Button">Click to convert query portion of URI</button><br><br>
+    <button id="convertQuery" data-dojo-type="dijit/form/Button">Click to convert query portion of URI</button><br><br>
     <b>The URI</b><br><br>
     http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
     <br><br>
@@ -119,7 +119,7 @@ Example 2: Using queryToObject to alter query strings
 
   .. html ::
 
-    <button id="alterQuery" data-dojo-type="dijit.form.Button">Click to alter the query string</button><br><br>
+    <button id="alterQuery" data-dojo-type="dijit/form/Button">Click to alter the query string</button><br><br>
     <b>The URI</b><br><br>
     http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
     <br><br>

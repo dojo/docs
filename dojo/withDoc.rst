@@ -81,7 +81,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
   .. html ::
 
-    <button id="changeStyles" data-dojo-type="dijit.form.Button">Change Text Color in iFrame</button>
+    <button id="changeStyles" data-dojo-type="dijit/form/Button">Change Text Color in iFrame</button>
     <br><br>
     <iframe id="simpleFrame" name="simpleFrame" src="{{dataUrl}}dojox/data/tests/stores/books.html" style="width: 500px; height: 500px;">
     </iframe>

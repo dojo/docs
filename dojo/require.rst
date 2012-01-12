@@ -120,7 +120,7 @@ Examples
 
   .. html ::
 
-    <div data-dojo-type="dijit.form.Button">
+    <div data-dojo-type="dijit/form/Button">
         Just an example button, please don't click
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             alert("I said, please don't click!");

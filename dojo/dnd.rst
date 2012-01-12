@@ -230,7 +230,7 @@ Following CSS classes are used by the selector object in addition to classes ass
 Source
 ------
 
-The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo.dnd.Source"``.
+The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo/dnd/Source"``.
 
 The default implementation of the source is built on top of Selector_, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source_ inherits all Selector_'s (and Container_'s) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
 
@@ -308,12 +308,12 @@ Following CSS classes are used by the source object in addition to classes assig
 Target
 ------
 
-Essentially it is Source_ wrapped in with ``isSource`` set to ``false``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo.dnd.Target"``.
+Essentially it is Source_ wrapped in with ``isSource`` set to ``false``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo/dnd/Target"``.
 
 AutoSource
 ----------
 
-Essentially it is Source_ wrapped in with ``autoSync`` set to ``true``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo.dnd.AutoSource"``.
+Essentially it is Source_ wrapped in with ``autoSync`` set to ``true``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo/dnd/AutoSource"``.
 
 Avatar
 ------
@@ -422,7 +422,7 @@ The DnD move consists of two principal classes and several specific implementati
 Moveable
 --------
 
-Moveable is the main class, which is used to give the "moveable" property to a DOM node. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo.dnd.Moveable"``.
+Moveable is the main class, which is used to give the "moveable" property to a DOM node. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``data-dojo-type="dojo/dnd/Moveable"``.
 
 Constructor
 ~~~~~~~~~~~
@@ -713,7 +713,7 @@ Tips
 
 In order to limit the maximum number of items in a DnD source, you can override the checkAcceptance() method on your source, and return ``false``, when you reached your limit.
 
-If you want to create dojo.dnd.Source with markup, and want to select that Source for operations like insertNodes(), you will need to manually supply that Source with a data-dojo-id. E.g.: <div data-dojo-type="dojo.dnd.Source" id="test" data-dojo-id="test"> Then you reference it in your code like: test.insertNodes(); Without that, there is no way to use the methods of the Source if you are creating it with markup.
+If you want to create dojo.dnd.Source with markup, and want to select that Source for operations like insertNodes(), you will need to manually supply that Source with a data-dojo-id. E.g.: <div data-dojo-type="dojo/dnd/Source" id="test" data-dojo-id="test"> Then you reference it in your code like: test.insertNodes(); Without that, there is no way to use the methods of the Source if you are creating it with markup.
 
 The DnD itself uses ``onmousedown``/``onmousemove``/``onmouseup`` to operate. If you want to process ``onclick``, be warned that this is the synthetic event: essentially it is ``onmousedown + onmouseup``, which occurred within some predefined time interval (usually settable on the OS level), or using other criteria. Some browsers generate ``onclick`` on every ``onmouseup``. Working with DnD you will get plenty of false ``onclick`` events. Some of them happen naturally, when user decided to drag but changed her mind clicking the mouse button generating ``onclick``. *Be extra careful when processing* ``onclick`` *on DnD sources!*
 

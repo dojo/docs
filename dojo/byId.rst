@@ -157,7 +157,7 @@ The following example lets a node by id disappear from the screen
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="buttonOne">Hide Me!</button> <button data-dojo-type="dijit.form.Button" id="buttonTwo">Show Me!</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonOne">Hide Me!</button> <button data-dojo-type="dijit/form/Button" id="buttonTwo">Show Me!</button>
     <div id="findMe">Hiya!</div>
 
   .. css ::

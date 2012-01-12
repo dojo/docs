@@ -78,7 +78,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="button">Run dojo.map()</button>
+    <button data-dojo-type="dijit/form/Button" id="button">Run dojo.map()</button>
     <div style="width: 300px; float: left; margin-top: 10px;">
       Values before running dojo.map()
       <ul id="arrValues-items"></ul>
@@ -145,7 +145,7 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="button">Raise the salary</button>
+    <button data-dojo-type="dijit/form/Button" id="button">Raise the salary</button>
     <div style="width: 300px; float: left; margin-top: 10px;">
       Peoples salaries after raise:
       <ul id="filteredSalary-items"></ul>

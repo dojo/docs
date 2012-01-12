@@ -91,7 +91,7 @@ Example 1: Using formToJson to create an JSON version of a form
 
   .. html ::
 
-    <button id="convertForm" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertForm" data-dojo-type="dijit/form/Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
        <input type="text" name="field1" value="value1">
@@ -123,12 +123,12 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
 
   .. html ::
 
-    <button id="convertFormDigits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertFormDigits" data-dojo-type="dijit/form/Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform2">
-       <input type="text" data-dojo-type="dijit.form.TextBox" name="field1" value="value1">
-       <input type="text" data-dojo-type="dijit.form.TextBox" name="field2" value="value2">
-       <button data-dojo-type="dijit.form.Button" name="someButton" value="someValue">someValue</button>
+       <input type="text" data-dojo-type="dijit/form/TextBox" name="field1" value="value1">
+       <input type="text" data-dojo-type="dijit/form/TextBox" name="field2" value="value2">
+       <button data-dojo-type="dijit/form/Button" name="someButton" value="someValue">someValue</button>
     </form>
     <br><br>
     <b>The form as JSON:</b>

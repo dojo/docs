@@ -167,7 +167,7 @@ Example: Playing with Easing
 
   .. html ::
 
-    <select data-dojo-type="dijit.form.ComboBox" id="easingSelector">
+    <select data-dojo-type="dijit/form/ComboBox" id="easingSelector">
         <option>linear</option>
         <option>quadIn</option>
         <option>quadOut</option>
@@ -200,7 +200,7 @@ Example: Playing with Easing
         <option>bounceOut</option>
         <option>bounceInOut</option>
     </select>
-    <button data-dojo-type="dijit.form.Button" id="moveButton">Move the div!</button>
+    <button data-dojo-type="dijit/form/Button" id="moveButton">Move the div!</button>
     <div id="moveableNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 

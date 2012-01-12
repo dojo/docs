@@ -56,7 +56,7 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="basicButton">Fade and Wipe in Nodes!!</button>
+    <button data-dojo-type="dijit/form/Button" id="basicButton">Fade and Wipe in Nodes!!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>
     <br>
     <div id="basicNode2" style="width: 100px; background-color: green; display: none;">

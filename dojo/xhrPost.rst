@@ -120,9 +120,9 @@ Example 1: dojo.xhrPost call to send a form
     <br>
     <blockquote>
       <form action="postIt" id="myform">
-        Text: <input type="text" data-dojo-type="dijit.form.TextBox" name="formInput" value="Some text"></input><br><br>
-        Checkbox: <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="checkboxInput"></input><br><br>
-        <button type="submit" data-dojo-type="dijit.form.Button" id="submitButton">Send it!</button>
+        Text: <input type="text" data-dojo-type="dijit/form/TextBox" name="formInput" value="Some text"></input><br><br>
+        Checkbox: <input type="checkbox" data-dojo-type="dijit/form/CheckBox" name="checkboxInput"></input><br><br>
+        <button type="submit" data-dojo-type="dijit/form/Button" id="submitButton">Send it!</button>
       </form>
     </blockquote>
     <br>
@@ -169,7 +169,7 @@ Example 2: dojo.xhrPost call to send some text data
     <b>Push the button to POST some text.</b>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="submitButton2">Send it!</button>
+    <button data-dojo-type="dijit/form/Button" id="submitButton2">Send it!</button>
     <br>
     <br>
     <b>Result</b>

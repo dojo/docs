@@ -59,7 +59,7 @@ Example 1:  Slide a dom node right 200 pixels.
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="slideLeftButton">Slide It Left!</button><button data-dojo-type="dijit.form.Button" id="slideRightButton">Slide It Right!</button>
+    <button data-dojo-type="dijit/form/Button" id="slideLeftButton">Slide It Left!</button><button data-dojo-type="dijit/form/Button" id="slideRightButton">Slide It Right!</button>
     <br>
     <br>
     <div style="width: 100%; height: 120px;">

@@ -27,7 +27,7 @@ The way the :ref:`dojo.parser <dojo/parser>` works, a custom attribute on the no
 
 .. html ::
     
-     <div data-dojo-type="dijit.TitlePane" data-dojo-props="randomAttribute:'newValue'"></div>
+     <div data-dojo-type="dijit/TitlePane" data-dojo-props="randomAttribute:'newValue'"></div>
 
 After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype).
 

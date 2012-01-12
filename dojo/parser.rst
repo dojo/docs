@@ -126,7 +126,7 @@ Attributes which correspond to native HTML attributes appear directly in the mar
 .. html ::
 
        <!-- Dojo < 1.8 -->
-       <input data-dojo-type="dijit.form.TextBox" name="dept"
+       <input data-dojo-type="dijit/form/TextBox" name="dept"
             data-dojo-props="scrollOnFocus: true"/>
 
 **Note** as of Dojo 1.8, the parser accepts the Module ID (MID) for the `data-dojo-type` attribute.

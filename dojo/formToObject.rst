@@ -77,7 +77,7 @@ Create an object version of a form
        radio_group.bam: <input id="f6_radio2" type="radio" name="radio_group" value="bam" checked><br>
        radio_group.baf: <input id="f6_radio3" type="radio" name="radio_group" value="baf"></p>
     </form>
-    <p><button id="convertForm" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button></p>
+    <p><button id="convertForm" data-dojo-type="dijit/form/Button">Click to convert the form to an object</button></p>
     <p>The form as an object:</p>
     <pre id="formObject"></pre>
 
@@ -106,11 +106,11 @@ Create an object version of a form with Dijit widgets
 
     <p>The FORM</p>
     <form id="myform2">
-       <p><input type="text" data-dojo-type="dijit.form.TextBox" name="field1" value="value1"><br>
-       <input type="text" data-dojo-type="dijit.form.TextBox" name="field2" value="value2"><br>
-       <input id="mycheck" data-dojo-type="dijit.form.CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label></p>
+       <p><input type="text" data-dojo-type="dijit/form/TextBox" name="field1" value="value1"><br>
+       <input type="text" data-dojo-type="dijit/form/TextBox" name="field2" value="value2"><br>
+       <input id="mycheck" data-dojo-type="dijit/form/CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label></p>
     </form>
-    <p><button id="convertFormDigits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button></p>
+    <p><button id="convertFormDigits" data-dojo-type="dijit/form/Button">Click to convert the form to an object</button></p>
     <p>The form as an object:</p>
     <pre id="formObject2"></pre>
 

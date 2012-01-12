@@ -62,7 +62,7 @@ Example
     <div id="dndArea">
       <div id="dndOne">Hi, I am moveable when you want to.</div>
     </div>
-    <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){makeMoveable('dndOne');}">Make moveable</button>
+    <p><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){makeMoveable('dndOne');}">Make moveable</button>
 
   .. css ::
 

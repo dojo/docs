@@ -95,7 +95,7 @@ Example 1: dojo.xhrPut call to send some text data
     <b>Push the button to PUT some text.</b>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="submitButton2">Send it!</button>
+    <button data-dojo-type="dijit/form/Button" id="submitButton2">Send it!</button>
     <br>
     <br>
     <b>Result</b>

@@ -104,7 +104,7 @@ See it in action:
   .. html ::
 
     <div id="example1" class="style1">This node will be changed.</div>
-    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove class</button>
+    <button id="button1" data-dojo-type="dijit/form/Button" type="button">Remove class</button>
 
 
 Remove several classes as a string
@@ -148,7 +148,7 @@ See it in action:
   .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
-    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
+    <button id="button1" data-dojo-type="dijit/form/Button" type="button">Remove classes</button>
 
 
 Remove several classes as an array
@@ -192,7 +192,7 @@ See it in action:
   .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
-    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
+    <button id="button1" data-dojo-type="dijit/form/Button" type="button">Remove classes</button>
 
 
 Remove all classes
@@ -236,7 +236,7 @@ See it in action:
   .. html ::
 
     <div id="example1" class="style2 style1">This node will be changed.</div>
-    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Remove classes</button>
+    <button id="button1" data-dojo-type="dijit/form/Button" type="button">Remove classes</button>
 
 
 Remove from multiple nodes
@@ -284,7 +284,7 @@ See it in action:
         <div class="style3">This node also.</div>
         <div class="style3">And this is the last one.</div>
     </div>
-    <button id="button3" data-dojo-type="dijit.form.Button" type="button">Remove from multiple nodes</button>
+    <button id="button3" data-dojo-type="dijit/form/Button" type="button">Remove from multiple nodes</button>
 
 
 See also

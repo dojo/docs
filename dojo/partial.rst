@@ -91,7 +91,7 @@ Basic Example
 
   .. html ::
     
-    <button data-dojo-type="dijit.form.Button" id="myButton">Click me to append in a preset value!</button>
+    <button data-dojo-type="dijit/form/Button" id="myButton">Click me to append in a preset value!</button>
     <div id="appendLocation"></div>
 
 .. api-inline :: dojo.partial

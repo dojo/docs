@@ -39,8 +39,8 @@ Note that the padding of the content which gets wiped in is set on a separate in
   .. html ::
 
     <div style="height: 110px;">
-      <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeInOne">Wipe in</button>
-      <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeOutOne">Wipe out</button>
+      <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:wipeInOne">Wipe in</button>
+      <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:wipeOutOne">Wipe out</button>
       <div id="wipeDisplayNode" style="position: absolute; top: 50px; background: #ccc; display: none;">
         <div style=" padding: 10px;">Hi friends<br />We like dojofx. don't we?</div>
       </div>

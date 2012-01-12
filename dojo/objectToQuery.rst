@@ -93,7 +93,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
 
   .. html ::
 
-    <button id="convertQuery" data-dojo-type="dijit.form.Button" type="button">Click to update the URI with a query generated from an object</button><br><br>
+    <button id="convertQuery" data-dojo-type="dijit/form/Button" type="button">Click to update the URI with a query generated from an object</button><br><br>
     <b>The URI</b><br><br>
     http://uri.some.org/context
     <br><br>

@@ -127,8 +127,8 @@ The following example will set several attributes such as the "tabindex" and "na
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="buttonOne" data-dojo-props="onClick:setAttributes">Set attributes</button>
-    <button data-dojo-type="dijit.form.Button" id="buttonTwo" data-dojo-props="onClick:displayAttributes">Get attributes</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonOne" data-dojo-props="onClick:setAttributes">Set attributes</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonTwo" data-dojo-props="onClick:displayAttributes">Get attributes</button>
     <div id="testNode">Hi friends :)</div>
     <div id="console"></div>
 
@@ -157,7 +157,7 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="buttonThree" data-dojo-props="onClick:setupHandlers">Setup handlers</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonThree" data-dojo-props="onClick:setupHandlers">Setup handlers</button>
     <div id="testNodeTwo">Hi, try the events! Click me or hover me.</div>
     <div id="consoleOne"></div>
 
@@ -180,7 +180,7 @@ The following example will set the "style" attribute of the given dom node. When
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="buttonFour" data-dojo-props="onClick:changeStyle">Change style</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonFour" data-dojo-props="onClick:changeStyle">Change style</button>
     <div id="testNodeThree">Hi, change my style</div>
 
 See also

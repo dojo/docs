@@ -59,14 +59,14 @@ Examples
   .. html ::
 
         <p>Click button to insert nested value into obj</p>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             <script type="dojo/method" data-dojo-event="onClick">
                 dojo.setObject('x.y.z', "hi!", obj);
                  dojo.byId('resultDiv').innerHTML = dojo.toJson(obj, true);
             </script>
             x.y.z
         </button>
-        <button data-dojo-type="dijit.form.Button">
+        <button data-dojo-type="dijit/form/Button">
             <script type="dojo/method" data-dojo-event="onClick">
                 dojo.setObject('p.d.q', "world!", obj);
                  dojo.byId('resultDiv').innerHTML = dojo.toJson(obj, true);

@@ -94,7 +94,7 @@ Example 1: Creating a deferred and adding callbacks
     <b>Push the button to create a deferred and set up an async callback</B>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="deferredButton" onClick="createDeferred();">Create deferred!</button>
+    <button data-dojo-type="dijit/form/Button" id="deferredButton" onClick="createDeferred();">Create deferred!</button>
     <br>
     <br>
     <b>Result</b>

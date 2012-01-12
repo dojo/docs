@@ -92,8 +92,8 @@ Example 1:  Demonstration of combining three chained animations
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" id="startButton">Start the complex loop!</button>
-    <button data-dojo-type="dijit.form.Button" id="endButton">End the complex loop!</button>
+    <button data-dojo-type="dijit/form/Button" id="startButton">Start the complex loop!</button>
+    <button data-dojo-type="dijit/form/Button" id="endButton">End the complex loop!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>
 
 See Also
