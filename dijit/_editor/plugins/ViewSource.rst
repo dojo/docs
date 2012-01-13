@@ -73,7 +73,7 @@ Please see the following table:
 | stripComments             |When enabled, comments are stripped from the source.  The default is true.  It is highly recommended       |
 |                           |that this option is left enabled.  Disabling it opens up a vector for XSS attacks                          |
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
-| stripIframes              |When enabled, iframe tags are stripped from the source.  The default is true.  It is highly recommended    |
+| stripIFrames              |When enabled, iframe tags are stripped from the source.  The default is true.  It is highly recommended    |
 |                           |that this option is left enabled.  Disabling it opens up a vector for XSS attacks                          |
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
 
