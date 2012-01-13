@@ -64,8 +64,8 @@ This example shows how you can set up the same select as the previous example, b
 
   .. js ::
 
-    require(["dijit/form/Select", "dojo/_base/window"], function(selectState, win){
-        new selectState({
+    require(["dijit/form/Select", "dojo/_base/window"], function(Select, win){
+        new Select({
             name: 'select2',
             options: [
                 { label: 'TN', value: 'Tennessee' },
