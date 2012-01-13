@@ -48,7 +48,7 @@ As a more complicated example, this code will wait until the DOM has finished lo
       query(".a").style("color", "red");
   });
 
-dojo/domReady! is similar to :ref:`dojo/ready <dojo/ready>` or :ref:`dojo/addOnLoad <dojo/addOnLoad>`, but more granular, because dojo/domReady! merely waits for the DOM to finish loading, without waiting for other require() or dojo.require() calls to complete.
+dojo/domReady! is similar to old usage prior to 1.7 of :ref:`dojo.ready <dojo/ready>` or :ref:`dojo.addOnLoad <dojo/addOnLoad>`, but more granular, because dojo/domReady! merely waits for the DOM to finish loading, without waiting for other require() or dojo.require() calls to complete.
 
 Cautions
 ========
