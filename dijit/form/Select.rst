@@ -33,8 +33,8 @@ If the dropdown menu would be larger than that value (in pixels), then scrollbar
 Examples
 ========
 
-A simple Select
----------------
+A simple declarative Select
+---------------------------
 
 This example shows a simple Select widget - converted from a select tag.
 
@@ -42,7 +42,7 @@ This example shows a simple Select widget - converted from a select tag.
 
   .. js ::
 
-        dojo.require("dijit.form.Select");
+        require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
@@ -64,20 +64,18 @@ This example shows how you can set up the same select as the previous example, b
 
   .. js ::
 
-      dojo.require("dijit.form.Select");
-
-      dojo.ready(function(){
-        new dijit.form.Select({
-          name: 'select2',
-          options: [
-            { label: 'TN', value: 'Tennessee' },
-            { label: 'VA', value: 'Virginia', selected: true },
-            { label: 'WA', value: 'Washington' },
-            { label: 'FL', value: 'Florida' },
-            { label: 'CA', value: 'California' }
-          ]
-        }).placeAt(dojo.body());
-      });
+    require(["dijit/form/Select", "dojo/_base/window"], function(selectState, win){
+        new selectState({
+            name: 'select2',
+            options: [
+                { label: 'TN', value: 'Tennessee' },
+                { label: 'VA', value: 'Virginia', selected: true },
+                { label: 'WA', value: 'Washington' },
+                { label: 'FL', value: 'Florida' },
+                { label: 'CA', value: 'California' }
+            ]
+        }).placeAt(win.body());
+    });
 
 
 A "styled" Select
@@ -89,7 +87,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
 
   .. js ::
 
-          dojo.require("dijit.form.Select");
+      require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
@@ -112,7 +110,7 @@ However, you can specify a width on the select to force a fixed width.
 
   .. js ::
 
-          dojo.require("dijit.form.Select");
+          require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
