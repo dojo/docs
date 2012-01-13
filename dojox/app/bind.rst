@@ -18,18 +18,20 @@ The method signature of the bind function ``dojox.app.bind`` is:
   function(/*Array of widgets*/ widgets, /*Object*/ models)
 
 Parameters Detail
------------
+-----------------
 
+-------
 widgets
-~~~~~~~~~~~~~
+-------
 An array of dojo widgets where bind function will search for bindable ``dojox.mvc`` widgets
 
+------
 models
-~~~~~~~~~~~~~
+------
 An object which contains pairs of model name and its associated ``dojo.Stateful`` model object
 
 Sample Binding
------------
+--------------
 Sample raw data could look like:
 
 .. code-block :: javascript
@@ -101,8 +103,9 @@ The result would look like:
 
 .. image :: ./pic1.png
 
+
 Sample Summary
-~~~~~~~~~~~~~
+--------------
 In this sample, “stores” use “modelApp.names” data to create a  dojo.store.Memory store  named “namesStore”. While “models” use “namesStore” to create a ``dojox.mvc.StatefulModel` model. Then simple.html template bind the model to  infoGroup with ref="'names.0'", and each  ``dojox.mobile.TextBox`` widget bind a data with “ref” property.
 
 After the application startup, you can see the data was bound to the view (in the red rectangle) and there's no data operation in user's code to complete this function.

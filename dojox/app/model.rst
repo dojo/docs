@@ -1,7 +1,7 @@
 .. _dojox/app/model:
 
 dojox.app.model
-================
+===============
 
 :Status: Draft
 :Version: 1.0
@@ -13,7 +13,7 @@ dojox.app.model
 Models can be declared in the application configuration at application level or different view levels. The model declared at application level can be accessed by all scenes and views in this application. The model declared at view level can be accessed by this view or its children views.
 
 Sample Model
------------
+------------
 Sample application configuration for ``dojox.app.model`` could look like:
 
 .. code-block :: javascript
