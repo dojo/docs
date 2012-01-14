@@ -33,21 +33,20 @@ Declarative example
 In this example using USD, both dollars and cents are required.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.CurrencyTextBox");
+    require(["dojo/parser", "dijit/form/CurrencyTextBox"]);
 
   .. html ::
 
     <label for="income1">U.S. Dollars</label>
-    <input type="text" name="income1" id="income1" value="54775.53"
+    <input type="text" name="income1" id="income1" value="54775.53" required="true"
         data-dojo-type="dijit/form/CurrencyTextBox"
-        data-dojo-props="required:true,
-        constraints:{fractional:true},
+        data-dojo-props="constraints:{fractional:true},
         currency:'USD',
-                value:'54775.53',
-        invalidMessage:'Invalid amount. Cents are required.'">
+        invalidMessage:'Invalid amount. Cents are required.'" />
 
 
 
@@ -57,29 +56,25 @@ Programmatic example
 In this example using euros with German formatting, the invalid message contains a custom formatted example value.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-        dojo.require("dijit.form.CurrencyTextBox");
-        dojo.require("dojo.currency");
-        dojo.requireLocalization("dojo.cldr", "currency", 'de-de');
-        dojo.requireLocalization("dojo.cldr", "number", 'de-de');
-        function createWidget(){
-            var example = dojo.currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
-            var props = {
-                value: 54775.53,
-                lang: 'de-de',
-                currency: "EUR",
-                invalidMessage: "Invalid amount.  Example: " + example
-            };
-            new dijit.form.CurrencyTextBox(props, "eurde");
-        }
-        dojo.ready(createWidget);
+    require(["dojo/currency", "dijit/form/CurrencyTextBox"], function(currency, CurrencyTextBox){
+        var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+        var props = {
+            value: 54775.53,
+            lang: 'de-de',
+            currency: "EUR",
+            invalidMessage: "Invalid amount.  Example: " + example
+        };
+        new CurrencyTextBox(props, "eurde");
+    });
 
   .. html ::
 
     <label for="eurde">euros (lang: de-de):</label>
-    <input id="eurde">EUR
+    <input id="eurde" />EUR
         
 
 Accessibility
