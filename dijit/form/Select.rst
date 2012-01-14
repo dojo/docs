@@ -39,10 +39,11 @@ A simple declarative Select
 This example shows a simple Select widget - converted from a select tag.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        require(["dojo/parser", "dijit/form/Select"]);
+    require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
@@ -61,6 +62,7 @@ A simple programmatic Select
 This example shows how you can set up the same select as the previous example, but programmatically.
 
 .. code-example::
+  :djConfig: async: true
 
   .. js ::
 
@@ -84,10 +86,11 @@ A "styled" Select
 When styling the entries of a Select widget, you must use div and span tags, instead of select and option tags - as IE will strip out any HTML within the option tags.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      require(["dojo/parser", "dijit/form/Select"]);
+    require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
@@ -107,10 +110,11 @@ By default, the width of the select widget will be to fit the width of the selec
 However, you can specify a width on the select to force a fixed width.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-          require(["dojo/parser", "dijit/form/Select"]);
+    require(["dojo/parser", "dijit/form/Select"]);
 
   .. html ::
 
