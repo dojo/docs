@@ -51,7 +51,7 @@ Also, it is possible to reverse the process and parse String objects into Dates.
 
    localeDate.parse("maandag 30 oktober 2006", {formatLength: "full"});
 
-Special patterns may be specified may be used to provide custom formats, however using such a pattern overrides the locale-specific behavior and may result in an application that is not properly localized. The patterns used follow the specification and are similar to those used by the Java dateformat class (e.g. MMddyyyy).
+Special patterns may be specified to provide custom formats, however using such a pattern overrides the locale-specific behavior and may result in an application that is not properly localized. The patterns used follow the specification and are similar to those used by the Java dateformat class (e.g. MMddyyyy).
 
 Also available under :ref:`dojo.cldr.supplemental <dojo/cldr>` are routines to provide the first day of the week and the start and end of the weekend, according to local custom.
 
