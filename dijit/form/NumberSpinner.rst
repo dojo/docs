@@ -33,18 +33,18 @@ Note here the constraints attribute.
 You have all the options available in the :ref:`Dojo constraint language <quickstart/numbersDates>`, shared by :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` and other widgets.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser", "dijit/form/NumberSpinner"]);
 
   .. html ::
 
-   <input data-dojo-type="dijit/form/NumberSpinner"
-        value="1000"
-        smallDelta="10"
-        constraints="{min:9,max:1550,places:0}"
+    <input data-dojo-type="dijit/form/NumberSpinner"
         id="integerspinner2"
+        value="1000"
+        data-dojo-props="smallDelta:10, constraints:{min:9,max:1550,places:0}"
         name="someNumber"
         />
 
@@ -57,25 +57,25 @@ You can set the size of the enclosing box by setting the style attribute, like m
 Here, we'll use a programmatically-created NumberSpinner:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-      dojo.require("dijit.form.NumberSpinner");
-      dojo.ready(function(){
-        var mySpinner = new dijit.form.NumberSpinner({
-          value: 1000,
-          smallDelta: 10,
-          constraints: { min:9, max:1550, places:0 },
-          id: "integerspinner3",
-          style: "width:100px"
+    require(["dijit/form/NumberSpinner", "dojo/domReady!"], function(NumberSpinner){
+        var mySpinner = new NumberSpinner({
+            value: 1000,
+            smallDelta: 10,
+            constraints: { min:9, max:1550, places:0 },
+            id: "integerspinner3",
+            style: "width:100px"
         }, "spinnerId" );
-      });
+    });
 
   .. html ::
 
       <div id="spinnerId"></div>
 
-**Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.
+**Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what. You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.
 
 Change Events
 -------------
@@ -86,45 +86,42 @@ Just clicking on an up or down button changes the value, but the changes doesn't
 If you'd like onChange to fire after every button click, set the attribute intermediateChanges, as in this example:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-    dojo.require("dojo.parser");
-    dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser", "dijit/form/NumberSpinner"]);
 
     var cutoffPoints = [
-        { over:35, color:"darkred"},
-        { over:30, color:"lightred"},
-        { over:25, color:"green"},
-        { over:15, color:"lightblue"},
-        { over:-1, color:"darkblue"}
+        {over:35, color:"darkred"},
+        {over:30, color:"lightred"},
+        {over:25, color:"green"},
+        {over:15, color:"lightblue"},
+        {over:-1, color:"darkblue"}
     ];
 
   .. html ::
 
     <label for="temperatureCelsius">Temperature in Celsius:</label>
     <div data-dojo-type="dijit/form/NumberSpinner"
-       intermediateChanges="true"
-       id="temperatureCelsius"
-       constraints="{min:0,max:40}"
-       value="15">
-      <script type="dojo/connect" data-dojo-event="onChange">
-        // dojo.filter() applies a boolean function to each array element
-        // and returns an array of matches.  In our case, the over:
-        // attributes are sorted downwards, so the first return element
-        // will be the lowest
-        var self=this;  // So widget is referencable in function
-        var tempColor = dojo.filter(cutoffPoints, function(temp){
-          return self.getValue() > temp.over;
-        })[0].color;
-
-        // Lastly set the background color of the indicator box
-        dojo.style(dojo.byId("tempBox"), "backgroundColor", tempColor)
-      </script>
+        data-dojo-props="intermediateChanges:true, constraints:{min:0,max:40}, value:15"
+        id="temperatureCelsius">
+        <script type="dojo/on" data-dojo-event="change">
+            // dojo.filter() applies a boolean function to each array element
+            // and returns an array of matches.  In our case, the over:
+            // attributes are sorted downwards, so the first return element
+            // will be the lowest
+            var self=this;  // So widget is referencable in function
+            require(["dojo/_base/array", "dojo/dom-style", "dojo/dom"], function(array, domStyle, dom){
+                var tempColor = array.filter(cutoffPoints, function(temp){
+                    return self.getValue() > temp.over;
+                })[0].color;
+                // Lastly set the background color of the indicator box
+                domStyle.set(dom.byId("tempBox"), "backgroundColor", tempColor);
+            });
+        </script>
     </div>
-    <span id="tempBox" >
-      &nbsp;&nbsp;&nbsp;
-    </span>
+    <span id="tempBox" >&nbsp;&nbsp;&nbsp;</span>
 
 Accessibility
 =============
