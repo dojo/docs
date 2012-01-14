@@ -47,7 +47,7 @@ Example
 
   .. html ::
 
-    <div id="showMe" style="padding: 10px;">
+    <div id="showMe" style="background-color: #ffffff; padding: 10px;">
         click here to see how it works
     </div>
 
