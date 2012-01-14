@@ -13,7 +13,7 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
 
 .. html ::
 
-    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>
+  <script data-dojo-config="async:true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript"></script>
 
 
 Dojo's now included on your page, no install, no fuss. So what do you get for all that hard work?
@@ -28,23 +28,21 @@ Example
 
   .. js ::
 
-        dojo.ready(function(){
-            dojo.query("#showMe").onclick(function(e){
-                var node = e.target;
+    require(["dojo/query", "dojo/_base/fx", "dojo/on", "dojo/domReady!"], function(query, fx, on){
+        on(query("#showMe"), "click", function(e){
+            var node = e.target;
 
-                var a = dojo.anim(node, {
-                    backgroundColor: "#363636",
-                    color: "#f7f7f7"
-                }, 1000);
-
-                dojo.connect(a, "onEnd", function(){
-                    dojo.anim(node, { color: "#363636" }, null, null, function(){
-                        node.innerHTML = "wow, that was easy!";
-                        dojo.anim(node, { color: "white" });
-                    });
+            var a = fx.anim(node, {
+                backgroundColor: "#363636",
+                color: "#f7f7f7"
+            }, 1000, null, function(){
+                fx.anim(node, { color: "#363636" }, null, null, function(){
+                    node.innerHTML = "wow, that was easy!";
+                    fx.anim(node, { color: "white" });
                 });
             });
         });
+    });
 
   .. html ::
 
