@@ -28,11 +28,11 @@ Example
 
   .. js ::
 
-    require(["dojo/query", "dojo/_base/fx", "dojo/on", "dojo/domReady!"], function(query, fx, on){
+    require(["dojo/on", "dojo/query", "dojo/_base/fx", "dojo/domReady!"], function(on, query, fx){
         on(query("#showMe"), "click", function(e){
             var node = e.target;
 
-            var a = fx.anim(node, {
+            fx.anim(node, {
                 backgroundColor: "#363636",
                 color: "#f7f7f7"
             }, 1000, null, function(){
