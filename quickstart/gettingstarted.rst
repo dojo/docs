@@ -28,14 +28,15 @@ Example
 
   .. js ::
 
-    require(["dojo/on", "dojo/query", "dojo/_base/fx", "dojo/domReady!"], function(on, query, fx){
+    require(["dojo/on", "dojo/query", "dojo/_base/fx", "dojo/fx/easing", "dojo/domReady!"], function(on, query, fx, easing){
         on(query("#showMe"), "click", function(e){
             var node = e.target;
 
             fx.anim(node, {
                 backgroundColor: "#363636",
                 color: "#f7f7f7"
-            }, 1000, null, function(){
+            }, 1500, easing.cubicInOut, function(){
+                // first animation has ended, second starts
                 fx.anim(node, { color: "#363636" }, null, null, function(){
                     node.innerHTML = "wow, that was easy!";
                     fx.anim(node, { color: "white" });
