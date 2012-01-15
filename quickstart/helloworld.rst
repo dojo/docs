@@ -460,10 +460,10 @@ Contents of HelloWorld.html file:
       <title>Dojo: Hello World!</title>
 
       <style type="text/css">
-          @import "dtk/dijit/themes/claro/claro.css";
-          @import "dtk/dojo/resources/dojo.css"
+          @import "dojoroot/dijit/themes/claro/claro.css";
+          @import "dojoroot/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="dtk/dojo/dojo.js"
+      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
       <script type="text/javascript">
           // Load Dojo's code relating to the Button widget
@@ -490,10 +490,10 @@ Contents of HelloWorld-txt.html file:
       <title>Dojo: Hello World!</title>
 
       <style type="text/css">
-          @import "dtk/dijit/themes/claro/claro.css";
-          @import "dtk/dojo/resources/dojo.css"
+          @import "dojoroot/dijit/themes/claro/claro.css";
+          @import "dojoroot/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="dtk/dojo/dojo.js"
+      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
       <script type="text/javascript">
           // Load Dojo's code relating to the Button widget
@@ -540,10 +540,10 @@ Contents of HelloWorld-get.html file:
       <title>Dojo: Hello World!</title>
 
       <style type="text/css">
-          @import "dtk/dijit/themes/claro/claro.css";
-          @import "dtk/dojo/resources/dojo.css"
+          @import "dojoroot/dijit/themes/claro/claro.css";
+          @import "dojoroot/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="dtk/dojo/dojo.js"
+      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
       <script type="text/javascript">
           // Load Dojo's code relating to the Button widget
@@ -585,10 +585,10 @@ Contents of HelloWorld-post.html file:
       <title>Dojo: Hello World!</title>
 
       <style type="text/css">
-          @import "dtk/dijit/themes/claro/claro.css";
-          @import "dtk/dojo/resources/dojo.css"
+          @import "dojoroot/dijit/themes/claro/claro.css";
+          @import "dojoroot/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="dtk/dojo/dojo.js"
+      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
       <script type="text/javascript">
           // Load Dojo's code relating to the Button widget
