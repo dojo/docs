@@ -9,7 +9,7 @@ dojo.declare (dojo/_base/declare)
 .. contents ::
     :depth: 2
 
-JavaScript uses `prototype-based inheritance <http://en.wikipedia.org/wiki/Prototype-based_programming>`_, not class-based inheritance (which is used by most programming languages). Dojo provides the ability to simulate class-based inheritance using ``dojo.declare``.
+JavaScript uses `prototype-based inheritance`_, not class-based inheritance (which is used by most programming languages). Dojo provides the ability to simulate class-based inheritance using ``dojo.declare``.
 
 Basic Usage
 ===========
@@ -1434,3 +1434,5 @@ See Also
 
 * `Classy JavaScript with dojo.declare <http://dojotoolkit.org/documentation/tutorials/1.6/declare/>`_
 * `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03
+
+.. _`prototype-based inheritance`: http://en.wikipedia.org/wiki/Prototype-based_programming
