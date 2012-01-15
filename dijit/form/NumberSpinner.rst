@@ -61,19 +61,21 @@ Here, we'll use a programmatically-created NumberSpinner:
 
   .. js ::
 
-    require(["dijit/form/NumberSpinner", "dojo/domReady!"], function(NumberSpinner){
-        var mySpinner = new NumberSpinner({
-            value: 1000,
-            smallDelta: 10,
-            constraints: { min:9, max:1550, places:0 },
-            id: "integerspinner3",
-            style: "width:100px"
-        }, "spinnerId" );
+    require(["dojo/ready", "dijit/form/NumberSpinner"], function(ready, NumberSpinner){
+        ready(function(){
+            var mySpinner = new NumberSpinner({
+                value: 1000,
+                smallDelta: 10,
+                constraints: { min:9, max:1550, places:0 },
+                id: "integerspinner3",
+                style: "width:100px"
+            }, "spinnerId" );
+        });
     });
 
   .. html ::
 
-      <div id="spinnerId"></div>
+    <div id="spinnerId"></div>
 
 **Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what. You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.
 
