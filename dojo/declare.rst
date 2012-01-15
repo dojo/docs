@@ -323,7 +323,7 @@ See `inherited()`_ for more details.
 Multiple inheritance
 --------------------
 
-Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance* using `C3 superclass linearization <http://en.wikipedia.org/wiki/C3_linearization>`_. This algorithm is what Python and some other languages use for its implementation of multiple inheritance. You can learn more details in the `Python 2.3 Method Resolution Order documentation <http://www.python.org/download/releases/2.3/mro/>`_.
+Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance* using `C3 superclass linearization`_. This algorithm is what Python and some other languages use for its implementation of multiple inheritance. You can learn more details in the `Python 2.3 Method Resolution Order documentation`_.
 
 In static languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). In Dojo, you can use the mixed-in properties directly.
 
@@ -430,7 +430,7 @@ This information describes the major revision of ``dojo.declare`` made in 1.4.
 Inheritance Info
 ----------------
 
-Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
+Since 1.4 ``dojo.declare`` uses `C3 superclass linearization`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
 
 [Dojo 1.7 (AMD)]
 
@@ -454,7 +454,7 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
   var D = dojo.declare([B, A]);
   var E = dojo.declare([C, D]);
 
-As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ inheritance will be linearized correctly including the famous `Diamond problem <http://en.wikipedia.org/wiki/Diamond_problem>`_.
+As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG`_ inheritance will be linearized correctly including the famous `Diamond problem`_.
 
 In same rare cases it is possible to build a linear chain, which cannot reuse the base class:
 
@@ -522,7 +522,7 @@ While ``this.inherited()`` takes care of all scenarios, chaining has following b
 
 Chained methods should not return values: all returned values are going to be ignored. They all be called with the same arguments. A good practice is to avoid modifications to the arguments. It will ensure that your classes play nice with others when used as superclasses.
 
-There are two ways to chain methods: **after** and **before** (`AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
+There are two ways to chain methods: **after** and **before** (`AOP`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
 
 [Dojo 1.7 (AMD)]
 
@@ -622,7 +622,7 @@ Constructor invocations are governed by Chaining_.
 Default constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default all constructors are chained using **after** algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
+By default all constructors are chained using **after** algorithm (using `AOP`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
 
 [Dojo 1.7 (AMD)]
 
@@ -1432,7 +1432,14 @@ Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixi
 See Also
 ========
 
-* `Classy JavaScript with dojo.declare <http://dojotoolkit.org/documentation/tutorials/1.6/declare/>`_
-* `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03
+* `Classy JavaScript with dojo.declare`_
+* `Understanding dojo.declare, dojo.require, and dojo.provide`_ - 2008-06-03
 
 .. _`prototype-based inheritance`: http://en.wikipedia.org/wiki/Prototype-based_programming
+.. _`C3 superclass linearization`: http://en.wikipedia.org/wiki/C3_linearization
+.. _`Python 2.3 Method Resolution Order documentation`: http://www.python.org/download/releases/2.3/mro
+.. _`DAG`: http://en.wikipedia.org/wiki/Directed_acyclic_graph
+.. _`Diamond problem`: http://en.wikipedia.org/wiki/Diamond_problem
+.. _`AOP`: http://en.wikipedia.org/wiki/Aspect-oriented_programming
+.. _`Classy JavaScript with dojo.declare`: http://dojotoolkit.org/documentation/tutorials/1.6/declare/
+.. _`Understanding dojo.declare, dojo.require, and dojo.provide`: http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/
