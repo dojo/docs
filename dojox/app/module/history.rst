@@ -6,14 +6,18 @@ dojox.app.module.history
 
 :since: V1.7
 
-dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
+``dojox.app.module.history`` manages transition forward and backward between views/scenes. A view can use ``transitionOptions`` or ``href`` to navigate forward or backward by utilizing HTML5 history API.
 
 Usage
-==========
+-----
 
+<<<<<<< HEAD
+``trasitionOptions`` can be used on any ``dojox.mobile`` widgets which inherit from ``dojox.mobile._ItemBase``. The following sample will result in transition to the 'second' view in 'main' scene of the application.
+=======
 Forward transition using transitionOptions
 
 transitionOptions can be used on any dojox.mobile widgets which inherited from dojox.mobile._ItemBase. The following sample will result in transition to the 'second' view in 'main' scene of the application.
+>>>>>>> baf4a4717a90c7542de55b8461fa3d397455ba0a
 
 .. html ::
 
@@ -21,39 +25,53 @@ transitionOptions can be used on any dojox.mobile widgets which inherited from d
     Main Scene::Second View
   </li>
 
-transitionOptions attributes
+Transition Attributes
+---------------------
 
-+-------------------+---------------------------------------------------------------+----------------+
-|**Attribute**      |**Description**                                                |**Type**        |
-+-------------------+---------------------------------------------------------------+----------------+
-|target             |The target view or scene id path. Note the value for the target|String          |
-|                   |should be the complete id path from its ancestor scene to the  |                |
-|                   |leaf view                                                      |                |
-+-------------------+---------------------------------------------------------------+----------------+
-|url                |The url that will be used to update the location value in      |String          |
-|                   |browser's address bar after the transition.                    |                |
-+-------------------+---------------------------------------------------------------+----------------+
+------
+target
+------
+String.  The target view or scene id path. Note the value for the target|String
+should be the complete id path from its ancestor scene to the
+leaf view.
 
-Forward transition using href
+---
+url
+---
+String.  The url that will be used to update the location value in
+browser's address bar after the transition.
 
-Besides the transitionOptions on mobile widgets, href attribute in hyperlink can also start the transition in dojox.app. Following sample will result in transition to 'main' view of 'main' scene.
+
+Forward Transition Using ``href``
+---------------------------------
+Besides the ``transitionOptions`` on mobile widgets, the ``href`` attribute in a hyperlink can also start the transition in ``dojox.app``. The following HTML snippet results in a transition to the 'main' view of 'main' scene.
 
 .. html ::
 
   <a href="#main,main">to main,main</a>
 
+
 Backward transition
-To start backward transition, all we need to do is to add a back button on the Heading widgets of dojox.mobile. The back attribute declares the back button label on the heading in the following sample.
+-------------------
+To start the backward transition, all we need to do is to add a back button on the Heading widgets of ``dojox.mobile``. The back attribute declares the back button label on the heading in the following sample.
 
 .. html ::
 
   <h1 data-dojo-type="dojox.mobile.Heading" back="Home">Data Binding Example</h1>
 
+<<<<<<< HEAD
+
+Sample App Navigation
+---------------------
+=======
 Sample
 =====================
+>>>>>>> baf4a4717a90c7542de55b8461fa3d397455ba0a
 Sample excerpt of view template with regarding to navigation and history
 
+---------
 main.html
+---------
 
 .. html ::
 
@@ -71,7 +89,9 @@ main.html
     </li>
   </ul>
 
+-----------
 second.html
+-----------
 
 .. html ::
 
@@ -85,7 +105,7 @@ second.html
     <a href="#tabscene,tab2">to tabscene,tab2</a><br>
   </div>
 
-Sample views are rendered as following. 'Main Scene::Second View' will transition to 'View simple/second' by  transitionOptions configuration, and 'to main,main' link will transition to 'Main Scene Views' by 'href' configuration. And 'back' button will backward to 'Main Scene Views'.
+The following images show the resulting views. 'Main Scene::Second View' will transition to 'View simple/second' by ``transitionOptions`` configuration, and the 'to main,main' link will transition to 'Main Scene Views' by 'href' configuration. The 'back' button will navigate backward to 'Main Scene Views'.
 
 .. image :: ./pic1.png
   

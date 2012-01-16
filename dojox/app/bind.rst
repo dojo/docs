@@ -6,33 +6,32 @@ dojox.app.bind
 
 :since: V1.7
 
-dojox.app.bind provides a function to query dojox.mvc widgets, get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. data-dojo-type, data-dojo-type, ref and data-dojo-props are compatible in a view.
+``dojox.app.bind`` provides a function to query ``dojox.mvc` widgets, and get and set binding data for each widgets with "ref" or data-dojo-props="ref: xxx" tag. ``dojoType``, ``data-dojo-type``, ``ref`` and ``data-dojo-props`` are compatible in a view.
 
 Binding API
-==============
-
-Method signature of the bind function dojox.app.bind provides.
+-----------
+The method signature of the bind function ``dojox.app.bind`` is:
 
 .. js ::
 
   function(/*Array of widgets*/ widgets, /*Object*/ models)
 
 Parameters Detail
+-----------------
 
-+----------------------+---------------------------------------------+
-|**Parameter**         |**Description**                              |
-+----------------------+---------------------------------------------+
-| widgets              |An array of dojo widgets where bind function |
-|                      |will search for bindable dojox.mvc widgets   |
-+----------------------+---------------------------------------------+
-| models               |An object which contains pairs of model name |
-|                      |and its associated dojo.Stateful model object|
-+----------------------+---------------------------------------------+
+-------
+widgets
+-------
+An array of dojo widgets where bind function will search for bindable ``dojox.mvc`` widgets
 
-Sample
-=============
+------
+models
+------
+An object which contains pairs of model name and its associated ``dojo.Stateful`` model object
 
-Sample raw data for data binding
+Sample Binding
+--------------
+Sample raw data could look like:
 
 .. js ::
 
@@ -55,7 +54,7 @@ Sample raw data for data binding
             }
         }];
 
-Sample application configuration for data to be bound
+The sample application configuration for data to be bound could look like:
 
 .. js ::
 
@@ -77,7 +76,7 @@ Sample application configuration for data to be bound
     }
   }
 
-Sample view template for data binding - simple.html
+The sample view template for data binding could look like:
 
 .. html ::
 
@@ -99,12 +98,13 @@ Sample view template for data binding - simple.html
     </div>
   </div>
 
-Sample UI rendering result with data bound
+The result would look like:
 
 .. image :: ./pic1.png
 
-Sample Summary
 
-In this sample, “stores” use “modelApp.names” data to create a  dojo.store.Memory store  named “namesStore”. While “models” use “namesStore” to create a dojox.mvc.StatefulModel model. Then simple.html template bind the model to  infoGroup with ref="'names.0'", and each  dojox.mobile.TextBox widget bind a data with “ref” property.
+Sample Summary
+--------------
+In this sample, “stores” use “modelApp.names” data to create a  dojo.store.Memory store  named “namesStore”. While “models” use “namesStore” to create a ``dojox.mvc.StatefulModel` model. Then simple.html template bind the model to  infoGroup with ref="'names.0'", and each  ``dojox.mobile.TextBox`` widget bind a data with “ref” property.
 
 After the application startup, you can see the data was bound to the view (in the red rectangle) and there's no data operation in user's code to complete this function.

@@ -2,15 +2,15 @@
 
 ================
 dojox.app.view
-================
+==============
 
 :since: V1.7
 
-dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
+``dojox.app.view`` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
-Sample
-==============
-Sample application configuration for dojox.app.view
+Sample View Configuration
+-------------------------
+A sample application configuration for ``dojox.app.view`` could look like:
 
 .. js ::
 
@@ -20,16 +20,16 @@ Sample application configuration for dojox.app.view
     "template": "views/simple/home.html"
   }
 
-dojox.app.view sample template - views/simple/home.html
+A sample ``dojox.app.view`` template could look like:
 
 .. html ::
 
-  <div style="background:#c5ccd3;width: 100%; height: 100%;"  class="view mblView">
-    <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
+  <div style="background: #c5ccd3; width: 100%; height: 100%;" class="view mblView">
+    <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-params="shadow: true">
       This is the content of the home scene. Hello World.
     </div>
   </div>
 
-Sample render result
+The result of this configuration would look like:
 
 .. image :: ./pic.png
