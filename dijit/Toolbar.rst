@@ -60,6 +60,7 @@ Declarative example
 Creation from markup is even easier.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
