@@ -11,7 +11,7 @@ dojox.app.model
 Models can be declared in the application configuration at application level or different view levels. The model declared at application level can be accessed by all scenes and views in this application. The model declared at view level can be accessed by this view or its children views.
 
 Sample Model
-------------
+============
 dojox.app.model creates statefulModel data objects using JSON data or dojo data store. The data model can be bound to a dojox.mvc widget by dojox.app.bind.
 
 Models can be declared in the application configuration at application level or different view levels. The model declared at application level can be accessed by all scenes and views in this application. The model declared at view level can be accessed by this view or its children views.

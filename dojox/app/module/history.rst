@@ -9,7 +9,7 @@ dojox.app.module.history
 ``dojox.app.module.history`` manages transition forward and backward between views/scenes. A view can use ``transitionOptions`` or ``href`` to navigate forward or backward by utilizing HTML5 history API.
 
 Usage
------
+=====
 
 ``trasitionOptions`` can be used on any ``dojox.mobile`` widgets which inherit from ``dojox.mobile._ItemBase``. The following sample will result in transition to the 'second' view in 'main' scene of the application.
 
@@ -20,16 +20,14 @@ Usage
   </li>
 
 Transition Attributes
----------------------
+=====================
 
-------
 target
 ------
 String.  The target view or scene id path. Note the value for the target|String
 should be the complete id path from its ancestor scene to the
 leaf view.
 
----
 url
 ---
 String.  The url that will be used to update the location value in
@@ -37,7 +35,7 @@ browser's address bar after the transition.
 
 
 Forward Transition Using ``href``
----------------------------------
+=================================
 Besides the ``transitionOptions`` on mobile widgets, the ``href`` attribute in a hyperlink can also start the transition in ``dojox.app``. The following HTML snippet results in a transition to the 'main' view of 'main' scene.
 
 .. html ::
@@ -45,8 +43,8 @@ Besides the ``transitionOptions`` on mobile widgets, the ``href`` attribute in a
   <a href="#main,main">to main,main</a>
 
 
-Backward transition
--------------------
+Backward Transition
+===================
 To start the backward transition, all we need to do is to add a back button on the Heading widgets of ``dojox.mobile``. The back attribute declares the back button label on the heading in the following sample.
 
 .. html ::
@@ -55,10 +53,9 @@ To start the backward transition, all we need to do is to add a back button on t
 
 
 Sample App Navigation
----------------------
+=====================
 A sample excerpt of view template with regarding to navigation and history would look like:
 
----------
 main.html
 ---------
 
@@ -78,7 +75,6 @@ main.html
     </li>
   </ul>
 
------------
 second.html
 -----------
 

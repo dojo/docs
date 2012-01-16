@@ -9,7 +9,7 @@ dojox.app.view
 ``dojox.app.view`` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
 Sample View Configuration
--------------------------
+=========================
 A sample application configuration for ``dojox.app.view`` could look like:
 
 .. js ::
