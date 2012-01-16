@@ -356,7 +356,7 @@ The complete configuration for the sample app could look like:
     },
 
     //models and instantiation parameters for the models. Including 'type' as a property
-    // allows one to overide the class that will be used for the model.  By default it is
+    // allows one to override the class that will be used for the model.  By default it is
     // dojox/mvc/model
     // The model declared at application level will be initialized before application startup
     // The model declared at scene/view level will be initialized before scene/view loaded
@@ -391,7 +391,7 @@ The complete configuration for the sample app could look like:
     "views": {
       //simple view without any children views or scenes
       //views can has its own dependencies which will be loaded
-      //before the view is first intialized.
+      //before the view is first initialized.
       "home": {
         "type": "dojox.app.view",
         "dependencies":[
@@ -449,7 +449,7 @@ The complete configuration for the sample app could look like:
 
 An application may have as many scenes and views as required.  The end product will look like:
 
-.. image:: ./app/pic3.png
+.. image :: ./app/pic3.png
 
 
 Comparison with dojox.mobile.app
@@ -463,10 +463,10 @@ The main difference between ``dojox.app`` and ``dojox.mobile.app`` is listed as 
 
 The following graphics compare ``dojox.app`` with ``dojox.mobile.app``:
 
-.. image:: ./app/Diagram3.png
+.. image :: ./app/Diagram3.png
 
 With ``dojox.mobile.app``, layout is managed by the widget library.  A scene has only one view and SceneAssistant is responsible for the lifecycle of that view.
 
-.. image:: ./app/Diagram1.png
+.. image :: ./app/Diagram1.png
 
 With ``dojox.app``, layout is managed by scene.  The difference between the scene and views is that a scene may have multiple views and children scenes, a view does not have children.
