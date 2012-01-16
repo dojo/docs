@@ -1,7 +1,7 @@
 .. _dijit/form/ToggleButton:
 
 =======================
-dijit.form.ToggleButton
+dijit/form/ToggleButton
 =======================
 
 :Authors: Doug Hays
@@ -27,17 +27,19 @@ Programmatic example
 Let's create a ToggleButton widget programmatically, initially unchecked:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.ready(function(){
-      new dijit.form.ToggleButton({
-        showLabel: true,
-        checked: false,
-        onChange: function(val){this.set('label',val)},
-        label: "false"
-      }, "programmatic");
+    require(["dojo/ready", "dijit/form/ToggleButton"], function(ready, ToggleButton){
+        ready(function(){
+            new ToggleButton({
+                showLabel: true,
+                checked: false,
+                onChange: function(val){this.set('label',val)},
+                label: "false"
+            }, "programmatic");
+        });
     });
 
   .. html ::
@@ -50,10 +52,11 @@ Declarative example
 Now let's create a ToggleButton widget with HTML markup, initially checked:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/form/ToggleButton"]);
 
   .. html ::
  
