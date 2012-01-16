@@ -1,7 +1,7 @@
 .. _dijit/Toolbar:
 
 =============
-dijit.Toolbar
+dijit/Toolbar
 =============
 
 :Project owner: Bill Keese
@@ -27,17 +27,15 @@ Programmatic example
 In this example, we borrow some of the toolbar buttons from the Editor.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-        dojo.require("dijit.Toolbar");
-        dojo.require("dijit.form.Button");
-
-        var toolbar;
-        dojo.ready(function(){
-            toolbar = new dijit.Toolbar({}, "toolbar");
-            dojo.forEach(["Cut", "Copy", "Paste"], function(label){
-                var button = new dijit.form.Button({
+    require(["dojo/ready", "dijit/Toolbar", "dijit/form/Button", "dojo/_base/array"], function(ready, Toolbar, Button, array){
+        ready(function(){
+            var toolbar = new Toolbar({}, "toolbar");
+            array.forEach(["Cut", "Copy", "Paste"], function(label){
+                var button = new Button({
                     // note: should always specify a label, for accessibility reasons.
                     // Just set showLabel=false if you don't want it to be displayed normally
                     label: label,
@@ -47,6 +45,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
                 toolbar.addChild(button);
             });
         });
+    });
 
   .. html ::
 
@@ -64,8 +63,7 @@ Creation from markup is even easier.
 
   .. js ::
 
-      dojo.require("dijit.Toolbar");
-      dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/Toolbar", "dijit/form/Button", "dijit/form/ToggleButton", "dijit/ToolbarSeparator"]);
 
   .. html ::
 
@@ -81,23 +79,20 @@ Creation from markup is even easier.
             --><span data-dojo-type="dijit/ToolbarSeparator"></span
          ><div data-dojo-type="dijit/form/ToggleButton" id="toolbar1.bold"
             data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">Bold</div>
-   </div>
+    </div>
 
 
 Drop Downs
 ==========
 
-By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`dijit.form.ComboButton <dijit/form/ComboButton>` you can make a toolbar with drop downs.
+By using :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>` and :ref:`dijit/form/ComboButton <dijit/form/ComboButton>` you can make a toolbar with drop downs.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.Toolbar");
-      dojo.require("dijit.form.DropDownButton");
-      dojo.require("dijit.ColorPalette");
-      dojo.require("dijit.TooltipDialog");
-      dojo.require("dijit.form.TextBox");
+    require(["dojo/parser", "dijit/Toolbar", "dijit/form/DropDownButton", "dijit/ColorPalette", "dijit/TooltipDialog", "dijit/form/TextBox"]);
 
   .. html ::
 
@@ -114,7 +109,7 @@ By using :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>` and :ref:`
                 <label for="last">Last name:</label> <input data-dojo-type="dijit/form/TextBox" name="last" id="last"/>
             </div>
         </div>
-        </div>
+    </div>
 
 (The icons are no good but hopefully convey the idea.)
 
@@ -146,4 +141,4 @@ In IE6 with high contrast mode turned on, a checked toggle button in a toolbar d
 See also
 ========
 
-* :ref:`dijit.MenuBar <dijit/MenuBar>`
+* :ref:`dijit/MenuBar <dijit/MenuBar>`
