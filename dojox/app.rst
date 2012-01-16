@@ -449,7 +449,7 @@ The complete configuration for the sample app could look like:
 
 An application may have as many scenes and views as required.  The end product will look like:
 
-.. image:: ./pic3.png
+.. image:: ./app/pic3.png
 
 
 Comparison with dojox.mobile.app
