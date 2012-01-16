@@ -1,7 +1,7 @@
 .. _dijit/DropDownMenu:
 
 ==================
-dijit.DropDownMenu
+dijit/DropDownMenu
 ==================
 
 :Authors: Bill Keese
@@ -17,8 +17,8 @@ Introduction
 The DropDownMenu widget is a vertical menu (contrast with the horizontal
 :ref:`dijit.MenuBar <dijit/MenuBar>`) that is used for:
 
-  * drop down menu from :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`,
-    :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit.MenuBar <dijit/MenuBar>` widgets,
+  * drop down menu from :ref:`dijit/form/ComboButton <dijit/form/ComboButton>`,
+    :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`, and :ref:`dijit/MenuBar <dijit/MenuBar>` widgets,
     typically appearing below the parent widget
   * child menu spawned from another DropDownMenu (a.k.a, a nested menu), appearing to the left or right of the
     parent DropDownMenu
@@ -26,18 +26,18 @@ The DropDownMenu widget is a vertical menu (contrast with the horizontal
 
 Items In a DropDownMenu
 =======================
-:ref:`dijit.MenuItem <dijit/MenuItem>` widgets are the actual items in the menu.
+:ref:`dijit/MenuItem <dijit/MenuItem>` widgets are the actual items in the menu.
 
-:ref:`dijit.CheckedMenuItem <dijit/CheckedMenuItem>` widgets are like :ref:`dijit.MenuItem <dijit/MenuItem>`
+:ref:`dijit/CheckedMenuItem <dijit/CheckedMenuItem>` widgets are like :ref:`dijit/MenuItem <dijit/MenuItem>`
 widgets, but can be clicked to change between a checked and unchecked state.
 
-The :ref:`dijit.PopupMenuItem <dijit/PopupMenuItem>` is like a :ref:`dijit.MenuItem <dijit/MenuItem>`,
+The :ref:`dijit/PopupMenuItem <dijit/PopupMenuItem>` is like a :ref:`dijit/MenuItem <dijit/MenuItem>`,
 but when clicked displays a submenu or other widget to the right or left.
-A :ref:`dijit.PopupMenuItem <dijit/PopupMenuItem>` always has two child nodes:
+A :ref:`dijit/PopupMenuItem <dijit/PopupMenuItem>` always has two child nodes:
 a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up,
-typically another dijit.DropDownMenu widget.
+typically another dijit/DropDownMenu widget.
 
-:ref:`dijit.MenuSeparator <dijit/MenuSeparator>` widgets render as horizontal lines between other
+:ref:`dijit/MenuSeparator <dijit/MenuSeparator>` widgets render as horizontal lines between other
 DropDownMenu items.
 
 Examples
@@ -45,8 +45,8 @@ Examples
 
 Drop Down Menu
 --------------
-See the :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`,
-:ref:`dijit.form.ComboButton <dijit/form/ComboButton>`, and :ref:`dijit.MenuBar <dijit/MenuBar>` pages
+See the :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`,
+:ref:`dijit/form/ComboButton <dijit/form/ComboButton>`, and :ref:`dijit/MenuBar <dijit/MenuBar>` pages
 for examples of drop down menus.
 
 Navigation Menu
@@ -60,13 +60,11 @@ Usage to display a Menu statically is the same as context menus,
 except that you don't specify style="display: none" or contextMenuForWindow or any connect ids.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.DropDownMenu");
-      dojo.require("dijit.MenuItem");
-      dojo.require("dijit.MenuSeparator");
-      dojo.require("dijit.PopupMenuItem");
+    require(["dojo/parser", "dijit/DropDownMenu", "dijit/MenuItem", "dijit/MenuSeparator", "dijit/PopupMenuItem"]);
 
   .. html ::
 
