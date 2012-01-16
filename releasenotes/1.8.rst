@@ -61,18 +61,6 @@ An example:
 
 Dijit
 =====
-Performance Improvements
-------------------------
-There have been a few performance improvements to dijit:
-
-- All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images.
-  This reduces the number of files downloaded, speeding up page load.
-- _CssStateMixin now creates listeners at the document level, rather than separate listeners
-  for each widget.   This will speed up page instantiation time, especially on a page with many small widgets
-  like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
-- Similar event handling changes were made to Menu, putting the event handlers on the Menu rather than each
-  individual MenuItem
-
 _WidgetBase
 -----------
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
@@ -123,6 +111,33 @@ Tree
 - New `dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>`_ class for connecting `dijit/Tree <dijit/Tree>`_ to stores with the new `dojo.store <dojo/store>`_ API. (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
 - New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
+
+Claro
+-----
+All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images.
+This reduces the number of files downloaded, speeding up page load.
+
+Also, the remaining gradient images files (for IE) no longer contain any blue.
+Thus, customizing claro to a different does not require modifying those files.
+You are still required however to update icon files that contain the theme's primary color, such as:
+   - checkboxes and radio buttons
+   - the slider handles
+   - calendar arrows
+   - Dialog and TabContainer close icons
+   - etc.
+
+
+Performance Improvements
+------------------------
+There have been a few performance improvements to dijit:
+
+- CSS gradients used in claro (see above)
+- _CssStateMixin now creates listeners at the document level, rather than separate listeners
+  for each widget.   This will speed up page instantiation time, especially on a page with many small widgets
+  like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
+- Similar event handling changes were made to Menu, putting the event handlers on the Menu rather than each
+  individual MenuItem
+
 
 DojoX
 =====
