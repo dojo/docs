@@ -11,17 +11,11 @@ dojox.app.module.history
 Usage
 -----
 
-<<<<<<< HEAD
 ``trasitionOptions`` can be used on any ``dojox.mobile`` widgets which inherit from ``dojox.mobile._ItemBase``. The following sample will result in transition to the 'second' view in 'main' scene of the application.
-=======
-Forward transition using transitionOptions
-
-transitionOptions can be used on any dojox.mobile widgets which inherited from dojox.mobile._ItemBase. The following sample will result in transition to the 'second' view in 'main' scene of the application.
->>>>>>> baf4a4717a90c7542de55b8461fa3d397455ba0a
 
 .. html ::
 
-  <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{target:"main,second",url: "#main,second"}'>
+  <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: '{target:\'main,second\', url: \'#main,second\'}'">
     Main Scene::Second View
   </li>
 
@@ -57,17 +51,12 @@ To start the backward transition, all we need to do is to add a back button on t
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading" back="Home">Data Binding Example</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Home'">Data Binding Example</h1>
 
-<<<<<<< HEAD
 
 Sample App Navigation
 ---------------------
-=======
-Sample
-=====================
->>>>>>> baf4a4717a90c7542de55b8461fa3d397455ba0a
-Sample excerpt of view template with regarding to navigation and history
+A sample excerpt of view template with regarding to navigation and history would look like:
 
 ---------
 main.html
@@ -75,16 +64,16 @@ main.html
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList" iconBase="../images/i-icon-all.png">
+  <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props="iconBase: '../images/i-icon-all.png'">
     <h2 data-dojo-type="dojox.mobile.EdgeToEdgeCategory">Main Scene Views</h2>
   
-    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,0,29,29" clickable="false">
+    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="iconPos: '0,0,29,29', clickable: false">
       Main Scene::Main View (Current View)
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{title:"Main Scene::SecondView",target:"main,second",url: "#main,second"}'>
+    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="iconPos: '0,0,29,29', clickable: true, transitionOptions: '{title:\'Main Scene::SecondView\',target:\'main,second\',url: \'#main,second\'}'">
       Main Scene::Second View
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{title:"Main Scene::ThirdView",target:"main,third",url: "#main,third"}'>
+    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: '{title:\'Main Scene::ThirdView\',target:\'main,third\',url: \'#main,third\'}'">
       Main Scene::Third View
     </li>
   </ul>
@@ -95,13 +84,13 @@ second.html
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading" back="Back">View simple/second</h1>
-  <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
+  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back: 'Back'">View simple/second</h1>
+  <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props="shadow: true">
     <a href="#main,main">to main,main</a><br>
     <a href="#main,second">to main,second</a><br>
     <a href="#main,third">to main,third</a><br>
   </div>
-  <div data-dojo-type="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props="shadow: true">
     <a href="#tabscene,tab2">to tabscene,tab2</a><br>
   </div>
 

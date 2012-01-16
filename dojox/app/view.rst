@@ -16,7 +16,7 @@ A sample application configuration for ``dojox.app.view`` could look like:
 
   "home": {
     "type": "dojox.app.view",
-    "dependencies":["dojox/mobile/RoundRectList", "dojox/mobile/ListItem"],
+    "dependencies": ["dojox/mobile/RoundRectList", "dojox/mobile/ListItem"],
     "template": "views/simple/home.html"
   }
 
@@ -25,7 +25,7 @@ A sample ``dojox.app.view`` template could look like:
 .. html ::
 
   <div style="background: #c5ccd3; width: 100%; height: 100%;" class="view mblView">
-    <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-params="shadow: true">
+    <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props="shadow: true">
       This is the content of the home scene. Hello World.
     </div>
   </div>
