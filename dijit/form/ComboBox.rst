@@ -1,7 +1,7 @@
 .. _dijit/form/ComboBox:
 
 ===================
-dijit.form.ComboBox
+dijit/form/ComboBox
 ===================
 
 :Authors: Doug Hays, Nikolai Onken
@@ -44,6 +44,7 @@ To set the default value for a programmatic ComboBox,
 include the *value* attribute in the attribute list passed to the constructor.
 
 .. code-example ::
+  djConfig: async: true
 
   .. js ::
 
@@ -92,17 +93,18 @@ For ComboBox widgets, only the OPTION's child text node is used as both the subm
 To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.form.ComboBox");
+    require(["dojo/parser", "dijit/form/ComboBox"]);
 
   .. html ::
 
     <select data-dojo-type="dijit/form/ComboBox" id="fruit" name="fruit">
-      <option>Apples</option>
-      <option selected>Oranges</option>
-      <option>Pears</option>
+        <option>Apples</option>
+        <option selected>Oranges</option>
+        <option>Pears</option>
     </select>
 
 
@@ -112,11 +114,11 @@ Declarative markup using a dojo.store
 To set the default value for this example, specify the *value* attribute in the markup.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.store.Memory");
+    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/store/Memory"]);
 
   .. html ::
 
@@ -127,7 +129,7 @@ To set the default value for this example, specify the *value* attribute in the 
         value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
-        id="stateInput">
+        id="stateInput" />
 
 
 Codependent FilteringSelect/ComboBox widgets
