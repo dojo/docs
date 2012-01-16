@@ -1,7 +1,7 @@
 .. _dijit/form/SimpleTextarea:
 
 =========================
-dijit.form.SimpleTextarea
+dijit/form/SimpleTextarea
 =========================
 
 :Authors: Doug Hays, Bill Keese, Nikolai Onken
@@ -11,12 +11,12 @@ dijit.form.SimpleTextarea
 .. contents ::
     :depth: 2
 
-A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide
+A SimpleTextarea widget is an exact replacement for the native textarea HTML element and was created to provide
 a thin widget wrapper that was necessary to interact with the :ref:`Form <dijit/form/Form>` widget,
 and to provide the ability to specify *rows* and *cols* attributes
 which are not available in the :ref:`Textarea <dijit/form/Textarea>` widget.
 Unlike the :ref:`Textarea <dijit/form/Textarea>` widget, the height of this widget does not adjust to its content.
-It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native TEXTAREA element.
+It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native textarea HTML element.
 Note that when declaring a SimpleTextarea in markup you should use a <textarea> node to preserve the newline formatting.
 When specifying the *cols* attribute, you must also specify *style="width:auto;"* in order for the parameter to take effect.
 
@@ -31,19 +31,21 @@ Notice how we pass the *name*, *rows* and *cols* parameters into the object crea
 The *value* attribute can be set with the widget's set('value', text) method.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-      dojo.require("dijit.form.SimpleTextarea");
-      dojo.ready(function(){
-        var textarea = new dijit.form.SimpleTextarea({
-          name: "myarea",
-          rows: "4",
-          cols: "50",
-          style: "width:auto;"
-        }, "myarea");
-        textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
-      });
+    require(["dojo/ready", "dijit/form/SimpleTextarea"], function(ready, SimpleTextarea){
+        ready(function(){
+            var textarea = new SimpleTextarea({
+                name: "myarea",
+                rows: "4",
+                cols: "50",
+                style: "width:auto;"
+            }, "myarea");
+            textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
+        });
+    });
 
   .. html ::
 
@@ -53,13 +55,14 @@ Declarative example
 -------------------
 
 Here we'll create a SimpleTextarea widget declaratively.
-In this instance, the initial *value* is the child text node of the TEXTAREA element.
+In this instance, the initial *value* is the child text node of the textarea element.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-      dojo.require("dijit.form.SimpleTextarea");
+    require(["dojo/parser", "dijit/form/SimpleTextarea"]);
 
   .. html ::
 
@@ -72,4 +75,4 @@ Accessibility
 Keyboard
 --------
 
-The SimpleTextarea widget uses native HTML TEXTAREA controls.
+The SimpleTextarea widget uses native HTML textarea controls.
