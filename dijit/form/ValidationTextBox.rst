@@ -1,7 +1,7 @@
 .. _dijit/form/ValidationTextBox:
 
 ============================
-dijit.form.ValidationTextBox
+dijit/form/ValidationTextBox
 ============================
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
@@ -18,7 +18,7 @@ A ValidationTextBox is an <input>-like widget that checks to make sure the user'
 It flags invalid input by changing the box color, showing an icon, and displaying a tooltip detailing the error.
 
 Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission.
-To ensure they're not, simply surround your form with a :ref:`dijit.form.Form <dijit/form/Form>` widget.
+To ensure they're not, simply surround your form with a :ref:`dijit/form/Form <dijit/form/Form>` widget.
 
 
 Usage
@@ -45,7 +45,7 @@ isValid()
 validator()
     Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: :ref:`tips <dijit/form/ValidationTextBox-tricks>`.
 displayMessage()
-    Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
+    Method that displays validation errors or prompt messages. Uses dijit/Tooltip by default.
 
 
 Examples
@@ -57,17 +57,18 @@ Declarative example
 ValidationTextBox widgets usually use Regular Expression validation, as in the following example:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.form.ValidationTextBox");
+    require(["dojo/parser", "dijit/form/ValidationTextBox"]);
 
   .. html ::
 
     <label for="phone">Phone number, no spaces:</label>
-    <input type="text" name="phone" id="phone" value="someTestString"
+    <input type="text" name="phone" id="phone" value="someTestString" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'[\\w]+', required:true, invalidMessage:'Invalid Non-Space Text.'">
+        data-dojo-props="regExp:'[\\w]+', invalidMessage:'Invalid Non-Space Text.'" />
 
 Using regular expressions
 -------------------------
@@ -77,17 +78,18 @@ The start and ending qualifiers of the regular expression, ^ and $, are implicit
 This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.ValidationTextBox");
+    require(["dojo/parser", "dijit/form/ValidationTextBox"]);
 
   .. html ::
 
     <label for="zip">Also 5-Digit U.S. Zipcode only:</label>
-    <input type="text" name="zip" value="00000"
+    <input type="text" name="zip" value="00000" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'\\d{5}', required:true, invalidMessage:'Invalid zip code.'">
+        data-dojo-props="regExp:'\\d{5}', invalidMessage:'Invalid zip code.'" />
 
 Generate regular expressions
 ----------------------------
@@ -98,25 +100,27 @@ ValidationTextBox passes its constraints object to the generating function.
 The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.form.ValidationTextBox");
-      var after5 = function(constraints){
-          var date=new Date();
-          if(date.getHours() >= 17){
-              return "\\d{5}";
-          }else{
-              return "\\D+";
-          }
-      }
+    require(["dojo/parser", "dijit/form/ValidationTextBox"]);
+
+    var after5 = function(constraints){
+        var date = new Date();
+        if(date.getHours() >= 17){
+            return "\\d{5}";
+        }else{
+            return "\\D+";
+        }
+    }
 
   .. html ::
 
     <label for="zip2">Also 5-Digit U.S. Zipcode only:</label>
-    <input type="text" name="zip" value="00000" id="zip2"
+    <input type="text" name="zip" value="00000" id="zip2" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExpGen:after5, required:true, invalidMessage:'Zip codes after 5, county name before then.'">
+        data-dojo-props="regExpGen:after5, invalidMessage:'Zip codes after 5, county name before then.'" />
 
 
 Accessibility
@@ -152,4 +156,4 @@ As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fi
 See also
 ========
 
-* :ref:`Tips, tricks and edge cases for dijit.form.ValidationTextBox <dijit/form/ValidationTextBox-tricks>`.
+* :ref:`Tips, tricks and edge cases for dijit/form/ValidationTextBox <dijit/form/ValidationTextBox-tricks>`.
