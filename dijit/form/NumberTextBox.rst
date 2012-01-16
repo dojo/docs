@@ -1,7 +1,7 @@
 .. _dijit/form/NumberTextBox:
 
 ========================
-dijit.form.NumberTextBox
+dijit/form/NumberTextBox
 ========================
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
@@ -42,10 +42,11 @@ Declarative example
 This example defines a ``min`` and ``max`` constraint and an initial value.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-     dojo.require("dijit.form.NumberTextBox");
+    require(["dojo/parser", "dijit/form/NumberTextBox"]);
 
   .. html ::
 
@@ -53,10 +54,10 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
     <input id="q05" type="text"
         data-dojo-type="dijit/form/NumberTextBox"
         name= "elevation"
-        value="3000"
-        constraints="{min:-20000,max:20000,places:0}"
         required="true"
-        invalidMessage= "Invalid elevation.">
+        value="3000"
+        data-dojo-props="constraints:{min:-20000,max:20000,places:0},
+        invalidMessage:'Invalid elevation.'" />
 
 
 Programmatic example
@@ -66,23 +67,26 @@ This example creates a simple NumberTextBox programmatically.
 The fractional part can be 0 to 6 digits long.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-         dojo.require("dijit.form.NumberTextBox");
-         function createWidget(){
-              var props = {
-                  name: "programmatic",
-                  constraints: {pattern: "0.######"}
-              };
-              new dijit.form.NumberTextBox(props, "programmatic");
-         }
-         dojo.ready(createWidget);
+    require(["dojo/ready", "dijit/form/NumberTextBox"], function(ready, NumberTextBox){
+        function createWidget(){
+            var props = {
+                name: "programmatic",
+                constraints: {pattern: "0.######"}
+            };
+            new NumberTextBox(props, "programmatic");
+        }
+        
+        ready(createWidget);
+    });
 
   .. html ::
 
      <label for="programmatic">Input any number with up to 6 fractional digits:</label>
-     <input id="programmatic" type="text">
+     <input id="programmatic" type="text" />
 
 
 
@@ -93,21 +97,22 @@ The example below always makes sure that the field shows three digits after the 
 Try entering a simple value like "-3" and then tab away to see the effect.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-     dojo.require("dijit.form.NumberTextBox");
+     require(["dojo/parser", "dijit/form/NumberTextBox"]);
 
   .. html ::
 
-       <label for="zeroPadded">Fractional value:</label>
-       <input id="zeroPadded" type="text"
-            data-dojo-type="dijit/form/NumberTextBox"
-            name= "decimal"
-            value="0"
-            constraints="{pattern: '+0.000;-0.000'}"
-            required="true">
-       <button>dummy button (tab to here)</button>
+    <label for="zeroPadded">Fractional value:</label>
+    <input id="zeroPadded" type="text"
+        data-dojo-type="dijit/form/NumberTextBox"
+        name= "decimal"
+        value="0"
+        constraints="{pattern: '+0.000;-0.000'}"
+        required="true" />
+    <button>dummy button (tab to here)</button>
 
 Accessibility
 =============
