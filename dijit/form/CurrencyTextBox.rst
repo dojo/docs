@@ -1,7 +1,7 @@
 .. _dijit/form/CurrencyTextBox:
 
 ==========================
-dijit.form.CurrencyTextBox
+dijit/form/CurrencyTextBox
 ==========================
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
@@ -60,15 +60,17 @@ In this example using euros with German formatting, the invalid message contains
 
   .. js ::
 
-    require(["dojo/currency", "dijit/form/CurrencyTextBox"], function(currency, CurrencyTextBox){
-        var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
-        var props = {
-            value: 54775.53,
-            lang: 'de-de',
-            currency: "EUR",
-            invalidMessage: "Invalid amount.  Example: " + example
-        };
-        new CurrencyTextBox(props, "eurde");
+    require(["dojo/ready", "dojo/currency", "dijit/form/CurrencyTextBox"], function(ready, currency, CurrencyTextBox){
+        ready(function(){
+            var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+            var props = {
+                value: 54775.53,
+                lang: 'de-de',
+                currency: "EUR",
+                invalidMessage: "Invalid amount.  Example: " + example
+            };
+            new CurrencyTextBox(props, "eurde");
+        });
     });
 
   .. html ::
@@ -80,4 +82,4 @@ In this example using euros with German formatting, the invalid message contains
 Accessibility
 =============
 
-See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
+See the Accessibility Section in :ref:`dijit/form/ValidationTextBox <dijit/form/ValidationTextBox>`
