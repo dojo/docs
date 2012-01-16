@@ -166,7 +166,7 @@ Firstly, in the markup section of the HelloWorld-get.html file (i.e. the body se
                   error: helloError
               });
           });
-    </script>
+      </script>
   </button>
 
 to:
@@ -190,7 +190,7 @@ to:
 
 Before we go any further - it is important to mention that the url property in the xhr.get function call must be set to the file that is appropriate to your environment. If you are using an ASP server then the value must read 'HelloWorldResponseGET.asp' instead of 'HelloWorldResponseGET.php' Likewise, if you are using a ColdFusion server then the value must read 'HelloWorldResponseGET.cfm' instead of 'HelloWorldResponseGET.php'. Finally, if you are using a Java server (JSP) then the value must read 'HelloWorldResponseGET.jsp' instead of 'HelloWorldResponseGET.php', or if you are using a Perl server then the value must read 'HelloWorldResponseGET.pl' instead of 'HelloWorldResponseGET.php'. The code for these files is in the sections below.
 
-In the code above, you will notice that there is a new property that has been passed to the xhr.get function. This property - content - allows the programmer to send arbitrary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):</p>
+In the code above, you will notice that there is a new property that has been passed to the xhr.get function. This property - content - allows the programmer to send arbitrary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):
 
 .. html ::
 
