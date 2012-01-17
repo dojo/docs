@@ -1,7 +1,7 @@
 .. _dijit/MenuBar:
 
 =============
-dijit.MenuBar
+dijit/MenuBar
 =============
 
 :Author: Bill Keese
@@ -18,7 +18,7 @@ Introduction
 PopupMenuBarItem widgets are the actual items in the menu, and like PopupMenuItem it displays a submenu or other widget below it.
 A PopupMenuBarItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
-There's also a :ref:`dijit.MenuBarItem <dijit/MenuBarItem>` widget if you need an entry in your MenuBar that *doesn't* have a drop down.
+There's also a :ref:`dijit/MenuBarItem <dijit/MenuBarItem>` widget if you need an entry in your MenuBar that *doesn't* have a drop down.
 
 
 Examples
@@ -28,45 +28,42 @@ Programmatic example
 --------------------
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-      dojo.require("dijit.MenuBar");
-      dojo.require("dijit.PopupMenuBarItem");
-      dojo.require("dijit.Menu");
-      dojo.require("dijit.MenuItem");
+    require(["dojo/ready", "dijit/MenuBar", "dijit/PopupMenuBarItem", "dijit/Menu", "dijit/MenuItem", "dijit/DropDownMenu"], function(ready, MenuBar, PopupMenuBarItem, Menu, MenuItem, DropDownMenu){
+        ready(function(){
+            var pMenuBar = new MenuBar({});
 
-      var pMenuBar;
-      dojo.ready(function(){
-            pMenuBar = new dijit.MenuBar({});
-
-            var pSubMenu = new dijit.DropDownMenu({});
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"File item #1"
+            var pSubMenu = new DropDownMenu({});
+            pSubMenu.addChild(new MenuItem({
+                label: "File item #1"
             }));
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"File item #2"
+            pSubMenu.addChild(new MenuItem({
+                label: "File item #2"
             }));
-            pMenuBar.addChild(new dijit.PopupMenuBarItem({
-                label:"File",
-                popup:pSubMenu
+            pMenuBar.addChild(new PopupMenuBarItem({
+                label: "File",
+                popup: pSubMenu
             }));
 
-            var pSubMenu2 = new dijit.DropDownMenu({});
-            pSubMenu2.addChild(new dijit.MenuItem({
-                label:"Edit item #1"
+            var pSubMenu2 = new DropDownMenu({});
+            pSubMenu2.addChild(new MenuItem({
+                label: "Edit item #1"
             }));
-            pSubMenu2.addChild(new dijit.MenuItem({
-                label:"Edit item #2"
+                pSubMenu2.addChild(new MenuItem({
+                label: "Edit item #2"
             }));
-            pMenuBar.addChild(new dijit.PopupMenuBarItem({
-                label:"Edit",
-                popup:pSubMenu2
+            pMenuBar.addChild(new PopupMenuBarItem({
+                label: "Edit",
+                popup: pSubMenu2
             }));
 
-             pMenuBar.placeAt("wrapper");
-             pMenuBar.startup();
+            pMenuBar.placeAt("wrapper");
+            pMenuBar.startup();
         });
+    });
 
   .. html ::
 
@@ -79,13 +76,11 @@ Declarative markup
 Creation from markup is even easier.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.MenuBar");
-      dojo.require("dijit.PopupMenuBarItem");
-      dojo.require("dijit.DropDownMenu");
-      dojo.require("dijit.MenuItem");
+    require(["dojo/parser", "dijit/MenuBar", "dijit/PopupMenuBarItem", "dijit/DropDownMenu", "dijit/MenuItem"]);
 
   .. html ::
 
@@ -127,4 +122,4 @@ Close a submenu                               Esc, or use right arrow to navigat
 See also
 ========
 
-* See :ref:`dijit.DropDownMenu <dijit/DropDownMenu>`.
+* See :ref:`dijit/DropDownMenu <dijit/DropDownMenu>`.
