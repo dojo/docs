@@ -97,6 +97,7 @@ A programmatic tree
 Creating a programmatic tree is very simple:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
@@ -162,12 +163,11 @@ If you need the functionality, we suggest creating the store in javascript, or c
 In any case, the dijit.tree.Model and dijit.Tree themselves can still be created in markup.)
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dojo.store.Memory");
-        dojo.require("dijit.tree.ObjectStoreModel");
-        dojo.require("dijit.Tree");
+    require(["dojo/parser", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
@@ -281,12 +281,11 @@ In that case you should set showRoot=false.
 The item still exists in the model but it's hidden on the screen:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-    dojo.require("dojo.store.Memory");
-    dojo.require("dijit.tree.ObjectStoreModel");
-    dojo.require("dijit.Tree");
+    require(["dojo/parser", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
@@ -356,6 +355,7 @@ When using :ref:`dijit.tree.ObjectStoreModel <dijit/tree/ObjectStoreModel>`, the
 in a `dojo.store.Observable <dojo/store/Observable>`, as below:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
@@ -457,6 +457,7 @@ In addition, to enable DnD on the Tree you must require ``dijit/tree/dndSource``
 and set the Tree's dndController to ``dijit.tree.dndSource``.
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
@@ -558,6 +559,7 @@ rather than the child of the drop target.
 This is useful for when a user can control the order of the children of the child nodes:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
@@ -660,14 +662,11 @@ Context Menu
 Tree has no built-in support for context menus, but you can use the Menu widget in conjunction with the Tree
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-            dojo.require("dijit.Menu");
-            dojo.require("dijit.MenuItem");
-            dojo.require("dijit.tree.ObjectStoreModel");
-            dojo.require("dojo.store.Memory");
-            dojo.require("dijit.Tree");
+    require(["dojo/parser", "dijit/Menu", "dijit/MenuItem", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
