@@ -17,7 +17,7 @@ Device Independent behavior means more than just supporting the keyboard. Where 
 Determining Keyboard Behavior
 -----------------------------
 
-When implementing keyboard navigation, the ideal solution is to mimic the behavior of the operating system. For example, the right and left arrow keys are used to expand and collapse nodes in a Windows tree control and the up and down arrow keys move between nodes in the control. Unfortunately it is not always possible to mimic the operating system or browser behavior because the widgets may not be able to capture the necessary keys. A group of industry representatives are working to create a style guide to describe the navigation and behaviors of Web widgets. When completed, this Style Guide will be provided to open source and dijit plans to implement the recommendations. Eventually, the Style Guide will attempt to normalize the differences between operating systems and provide a generalized solution for Web components
+When implementing keyboard navigation, the ideal solution is to mimic the behavior of the operating system. For example, the right and left arrow keys are used to expand and collapse nodes in a Windows tree control and the up and down arrow keys move between nodes in the control. Unfortunately it is not always possible to mimic the operating system or browser behavior because the widgets may not be able to capture the necessary keys. A group of industry representatives are working to create a style guide to describe the navigation and behaviors of Web widgets. When completed, this Style Guide will be provided to open source and dijit plans to implement the recommendations. Eventually, the Style Guide will attempt to normalize the differences between operating systems and provide a generalized solution for Web components.
 
 Within all widgets interaction with both the keyboard and the mouse is important – users may switch between using the mouse and using the keyboard at any time. A widget author can not assume only keyboard or only mouse interaction. Thus, the widget component will generally need to store information about the current item with focus. This can also be useful when the keyboard event handler is placed on an owning object in the component hierarchy rather than the actual element generating the event – for example on the table element rather than on each td element. Even though the event handler provides information on exactly what element generated the event, it is often necessary or easier to use the stored point of reference. In addition, the point of regard is often needed in order to update the style on the element losing focus before updating the new item irregardless or whether the mouse or the keyboard generated the event that results in a focus change.
 
@@ -31,7 +31,7 @@ Here is an example of using widget connect to handle the ondijitclick event on t
 
 The ondijitclick event can also be specified in the template via the data-dojo-attach-event mechanism:
 
-.. js ::
+.. html ::
 
   <span class="dijit dijitReset dijitLeft dijitInline"
     data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
@@ -80,7 +80,7 @@ Additional ARIA resources:
 Assigning Roles
 ~~~~~~~~~~~~~~~
 
-Use the tabindex to provide keyboard focus or to allow programmatic focus to an object. By adding a tabindex to an element, the element will now be included in the accessibility hierarchy of the Firefox browser. Information about elements in the accessibility hierarchy will be provided to assistive technologies. If you use a tabindex attribute on a <DIV>, <SPAN>, <IMG> or any element which has no natural role of its own then you need to provide a role. In Firefox 3 <div> elements are added into the hierarchy even if they do not have a tabindex attribute. If you are using a div as a container element it will need a role="presentation" to remove it from the accessibility hierarchy. Any element that can receive focus must have a role, either implied, such as input elements and anchors, or specified via a role attribute. For things with an implied role such as input fields and anchors, you can use tabindex=”-1” to remove them from the tab order. You can also specify a different role for elements which already have an implied role.
+Use the tabindex to provide keyboard focus or to allow programmatic focus to an object. By adding a tabindex to an element, the element will now be included in the accessibility hierarchy of the Firefox browser. Information about elements in the accessibility hierarchy will be provided to assistive technologies. If you use a tabindex attribute on a <div>, <span>, <img> or any element which has no natural role of its own then you need to provide a role. In Firefox 3 <div> elements are added into the hierarchy even if they do not have a tabindex attribute. If you are using a div as a container element it will need a role="presentation" to remove it from the accessibility hierarchy. Any element that can receive focus must have a role, either implied, such as input elements and anchors, or specified via a role attribute. For things with an implied role such as input fields and anchors, you can use tabindex=”-1” to remove them from the tab order. You can also specify a different role for elements which already have an implied role.
 
 The role and states are added to Dojo widgets within the widget template or via the dijit.wai APIs as described in the :ref:`Dijit A11y Resources <dijit/a11y/resources>`
 
@@ -89,52 +89,52 @@ Providing Hierarchical Information
 
 In order for Firefox to determine the correct parent child relationships between objects, and to communicate this via an accessibility API to assistive technologies, it is best to create components in a hierarchical fashion. For example, when creating a menubar it is best to have the components that make up the menus and menuitems of the menubar be children of the menubar. Likewise, menuitems should be children of the owning menus. This hierarchy allows Firefox to provide menu information to the assistive technologies, and for a screen reader to speak more information about the menu such as, “menu open, File, item 1 of 5” when the user opens a menu. Here is a simple pseudo code example demonstrating a hierarchical layout of elements for a menu control. This example only shows the addition of role attributes and does not represent a complete menu widget. (Note: Attributes are not quoted in pseudo-code examples to help improve the readability):
 
-.. js ::
+.. html ::
 
-  <div role="menubar">
-    <div role="menuitem">A</div>
-      <div role="menu">
-         <div role="menuitem">A.1</div>
-         <div role="menuitem">A.2</div>
-      </div>
-      <div role="menuitem">B</div>
-      <div role="menu">
-        <div role="menuitem">B.1</div>
-        <div role="menuitem">B.2</div>
+    <div role="menubar">
+        <div role="menuitem">A</div>
         <div role="menu">
-          <div role="menuitem">B.2.1</div>
+           <div role="menuitem">A.1</div>
+           <div role="menuitem">A.2</div>
         </div>
-      </div>
-  </div>
+        <div role="menuitem">B</div>
+        <div role="menu">
+            <div role="menuitem">B.1</div>
+            <div role="menuitem">B.2</div>
+            <div role="menu">
+                <div role="menuitem">B.2.1</div>
+            </div>
+        </div>
+    </div>
 
 It may not always be practical to create items via HTML in a hierarchical fashion. In that case the group role can help to associate the items properly. This is illustrated in the following simple pseudo code example of a tree hierarchy.
 
-.. js ::
+.. html ::
 
-  <div role="tree">
-    <div role="treeitem">Top </div>
-    <div role="group">
-      <div role="treeitem">1</div>
-      <div role="group">
-        <div role="treeitem">1.1 </div>
-        <div role="treeitem">1.2</div>
-        <div role="treeitem">1.3</div>
+    <div role="tree">
+        <div role="treeitem">Top</div>
         <div role="group">
-          <div role="treeitem">1.3.1</div>
-          <div role="treeitem">1.3.2</div>
-          <div role="treeitem">1.3.3</div>
-          <div role="treeitem">1.3.4</div>
-       </div>
-       <div role="treeitem">1.4</div>
-     </div>
-     <div role="treeitem">2</div>
-     <div role="treeitem">3</div>
-     <div role="group">
-       <div role="treeitem">3.1</div>
-       <div role="treeitem">">3.2</div>
-     </div>
-  </div>
-  </div>
+            <div role="treeitem">1</div>
+            <div role="group">
+                <div role="treeitem">1.1 </div>
+                <div role="treeitem">1.2</div>
+                <div role="treeitem">1.3</div>
+                <div role="group">
+                    <div role="treeitem">1.3.1</div>
+                    <div role="treeitem">1.3.2</div>
+                    <div role="treeitem">1.3.3</div>
+                    <div role="treeitem">1.3.4</div>
+                </div>
+                <div role="treeitem">1.4</div>
+            </div>
+            <div role="treeitem">2</div>
+            <div role="treeitem">3</div>
+            <div role="group">
+                <div role="treeitem">3.1</div>
+                <div role="treeitem">">3.2</div>
+            </div>
+        </div>
+    </div>
 
 The tree items at the same level in the hierarchy are grouped together within an element identified with role=group. With this organization, the assistive technologies can be provided with the information about what level and item number a particular treeitem represents. For example, in the above tree example, with focus on item 1.3.3 a screen reader might speak, “one dot three dot three item three of four, level four” or something similar.
 
@@ -145,37 +145,37 @@ Using the Presentation Role
 
 While it is preferable to use CSS for layout, tables are still used to quickly and easily arrange elements on a page. This is especially true of existing widgets which were originally created to work in older browsers. Putting information in tables can easily confuse the hierarchy of the component. If tables must be used, they can be marked with a role of presentation to eliminate them from the hierarchy. Here is a pseudo code example where the presentation role was used on tables within a tree component:
 
- .. js ::
+.. html ::
 
-  <div role="tree">
-      <table role="presentation">
+    <div role="tree">
+        <table role="presentation">
             <tr><td><div role="treeitem">Top</div></td></tr>
-      </table>
-      <div role="group">
+        </table>
+        <div role="group">
             <table role="presentation">
-                  <tr><td><span role="treeitem">1</span></td></tr>
+                <tr><td><span role="treeitem">1</span></td></tr>
             </table>
-            <div role="group">
-                  <table role="presentation">
-                        <tr><td><span role="treeitem">1.1</span></td></tr>
-                  </table>
-                  <table role="presentation">
-                        <tr><td><span role="treeitem">1.2</span></td></tr>
-                  </table>
-            </div>
+        <div role="group">
             <table role="presentation">
-                  <tr><td><span role="treeitem">2</span></td></tr>
+                <tr><td><span role="treeitem">1.1</span></td></tr>
             </table>
-      </div>
-  </div>
+            <table role="presentation">
+                <tr><td><span role="treeitem">1.2</span></td></tr>
+            </table>
+        </div>
+            <table role="presentation">
+                <tr><td><span role="treeitem">2</span></td></tr>
+            </table>
+        </div>
+    </div>
 
 Since the table is only used for layout it is identified with a role of presentation to remove if from the accessibility hierarchy so that information about the table is not provided to assistive technology. Other elements may need to be removed from the accessibility hierarchy as well. For example, when creating a DHTML checkbox, an image may be contained within a span element that is marked with a role of checkbox and an appropriate state of checked equals true or false. The image which represents the checkbox is contained within the span and should not contain any alt text since the role and state are managed by the surrounding span. Images are considered important elements and are normally included with the accessibility hierarchy of the browser. In order to ignore this image in the accessibility hierarchy, it is marked with a role of presentation. Here is a generic HTML representation:
 
- .. js ::
+.. html ::
 
-  <span role="checkbox" checked="true">
-    <img src="checked.gif" role="presentation">
-  </span>
+    <span role="checkbox" checked="true">
+        <img src="checked.gif" role="presentation">
+    </span>
 
 And, as mentioned previously, Firefox 3 now puts all div elements into the accessibility hierarchy, so if the div is being used for layout purposes or has no other specific role, it should be marked with role=presentation.
 
