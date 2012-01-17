@@ -1,7 +1,7 @@
 .. _dijit/MenuItem:
 
 ==============
-dijit.MenuItem
+dijit/MenuItem
 ==============
 
 .. contents ::
@@ -13,5 +13,5 @@ Although Menu can display accelerator keys there is no infrastructure currently 
 The developer is responsible for the key event handler to support this.
 
 
-See the :ref:`dijit.DropDownMenu <dijit/DropDownMenu>` page for details and examples.
+See the :ref:`dijit/DropDownMenu <dijit/DropDownMenu>` page for details and examples.
 
