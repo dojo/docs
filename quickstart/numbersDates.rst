@@ -6,9 +6,9 @@ Parsing, Formatting, and Validating: Dates and Numbers
 
 :Author: CraigRiecke, AdamPeller
 
-These widgets augment the functionality of the ``<INPUT type="text">`` tag.
+These widgets augment the functionality of the ``<input type="text" />`` tag.
 The base widget dijit.form.Textbox by itself can trim, change case, and require input.
-dijit.form.ValidationTextbox extends this by validating the input when the box loses focus.  The other widgets further extend the validation function with range and format checking.  Internal to the MappedTextBox widget subclass are two INPUT elements.  One interacts with the user obeying local customs, the other is hidden and represents the named form element to submit data to the server using a normalized serialization.  By default, the widget will discover the appropriate locale and behavior `as specified by Dojo
+dijit/form/ValidationTextbox extends this by validating the input when the box loses focus.  The other widgets further extend the validation function with range and format checking.  Internal to the MappedTextBox widget subclass are two HTML input elements.  One interacts with the user obeying local customs, the other is hidden and represents the named form element to submit data to the server using a normalized serialization.  By default, the widget will discover the appropriate locale and behavior `as specified by Dojo
 <quickstart/internationalization/specifying-locale>`_.
 
 For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when interacting with the user.  For German users, a period is used for the thousands separator and a comma for the decimal separator.  Other locales may have different conventions.  When using currencies, the currency type must be specified, but it may be represented differently according to locale.  The US Dollar (USD) will simply have a "$" symbol when used in the United States, but that would be ambiguous in Canada, so US$ is used instead.
@@ -21,7 +21,7 @@ Constraints
 To override the defaults, you can use the "constraints" attribute.  "constraints" is an
 object passed to functions responsible for validating, parsing, and formatting the data in the box, and
 various properties may be provided to override system or locale-specific defaults.  Constraints are handled in Dojo low-level routines in
-:ref:`dojo.date <dojo/date>`, dojo.currency and dojo.number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:
+:ref:`dojo/date <dojo/date>`, dojo/currency and dojo/number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:
 
 Number Constraints
 ------------------
@@ -49,13 +49,13 @@ Number Pattern Characters
    "@","Number","No","Significant digit"
    "#","Number","Yes","Digit, zero shows as absent"
    ".","Number","Yes","Decimal separator or monetary decimal separator"
-   "-","Number","Yes","Minus sign"
+   "\-","Number","Yes","Minus sign"
    ",","Number","Yes","Grouping separator"
    "E","Number","Yes","Separates mantissa and exponent in scientific notation. Need not be quoted in prefix or suffix."
-   "+","Exponent","Yes","Prefix positive exponents with localized plus sign. Need not be quoted in prefix or suffix."
+   "\+","Exponent","Yes","Prefix positive exponents with localized plus sign. Need not be quoted in prefix or suffix."
    ";","Subpattern boundary","Yes","Separates positive and negative subpatterns"
    "%","Prefix or suffix","Yes","Multiply by 100 and show as percentage"
-   "*","Prefix/suffix boundary","Yes","Pad escape, precedes pad character"
+   "\*","Prefix/suffix boundary","Yes","Pad escape, precedes pad character"
 
 
 Examples
