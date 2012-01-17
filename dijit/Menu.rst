@@ -1,7 +1,7 @@
 .. _dijit/Menu:
 
 ==========
-dijit.Menu
+dijit/Menu
 ==========
 
 :Authors: Bill Keese
@@ -16,9 +16,9 @@ Introduction
 The Menu widget is used for context menus, otherwise known as a right-click or popup menus.
 
 Previously Menu was also used for drop-down menus, but that functionality has been split off to the
-:ref:`dijit.DropDownMenu <dijit/form/DropDownMenu>` widget.
+:ref:`dijit/DropDownMenu <dijit/form/DropDownMenu>` widget.
 
-Since Menu extends :ref:`dijit.DropDownMenu <dijit/form/DropDownMenu>`, consult that page for general
+Since Menu extends :ref:`dijit/DropDownMenu <dijit/form/DropDownMenu>`, consult that page for general
 documentation about the children of Menu, etc.
 
 Examples
@@ -28,51 +28,52 @@ Programmatic example
 --------------------
 
 .. code-example ::
+  :djConfig: async: true
 
   .. js ::
 
-      dojo.require("dijit.Menu");
-
-      var pMenu;
-      dojo.ready(function(){
-            pMenu = new dijit.Menu({
-                targetNodeIds:["prog_menu"]
+    require(["dojo/ready", "dijit/Menu", "dijit/MenuItem", "dijit/CheckedMenuItem", "dijit/MenuSeparator", "dijit/PopupMenuItem"], function(ready, Menu, MenuItem, CheckedMenuItem, MenuSeparator, PopupMenuItem){
+        ready(function(){
+            var pMenu;
+            pMenu = new Menu({
+                targetNodeIds: ["progmenu"]
             });
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Simple menu item"
+            pMenu.addChild(new MenuItem({
+                label: "Simple menu item"
             }));
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Disabled menu item",
+            pMenu.addChild(new MenuItem({
+                label: "Disabled menu item",
                 disabled: true
             }));
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Menu Item With an icon",
-                iconClass:"dijitEditorIcon dijitEditorIconCut",
+            pMenu.addChild(new MenuItem({
+                label: "Menu Item With an icon",
+                iconClass: "dijitEditorIcon dijitEditorIconCut",
                 onClick: function(){alert('i was clicked')}
             }));
-            pMenu.addChild(new dijit.CheckedMenuItem({
+            pMenu.addChild(new CheckedMenuItem({
                 label: "checkable menu item"
             }));
-            pMenu.addChild(new dijit.MenuSeparator());
+            pMenu.addChild(new MenuSeparator());
 
-            var pSubMenu = new dijit.Menu();
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"Submenu item"
+            var pSubMenu = new Menu();
+            pSubMenu.addChild(new MenuItem({
+                label: "Submenu item"
             }));
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"Submenu item"
+            pSubMenu.addChild(new MenuItem({
+                label: "Submenu item"
             }));
-            pMenu.addChild(new dijit.PopupMenuItem({
-                label:"Submenu",
-                popup:pSubMenu
+            pMenu.addChild(new PopupMenuItem({
+                label: "Submenu",
+                popup: pSubMenu
             }));
 
             pMenu.startup();
         });
+    });
 
   .. html ::
 
-    <span id="prog_menu">Right click me to get a menu</span>
+    <span id="progmenu">Right click me to get a menu</span>
 
 
 Declarative markup
@@ -82,11 +83,11 @@ Creation from markup is even easier.
 This example creates a context menu for the whole window.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.Menu");
-      dojo.require("dijit.ColorPalette");
+    require(["dojo/parser", "dijit/Menu", "dijit/MenuItem", "dijit/MenuSeparator", "dijit/PopupMenuItem", "dijit/ColorPalette"]);
 
   .. html ::
 
