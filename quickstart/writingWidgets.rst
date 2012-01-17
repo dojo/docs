@@ -19,7 +19,7 @@ Starting From Scratch
 
 Let's look at how to create a widget from scratch.
 
-Technically, a widget can be any javascript "class" that implements a constructor taking parameters and a srcNodeRef (a pointer to a source DOM node).
+Technically, a widget can be any JavaScript "class" that implements a constructor taking parameters and a srcNodeRef (a pointer to a source DOM node).
 
 .. js ::
 
@@ -59,7 +59,7 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
   
     <span data-dojo-type="MyFirstBehavioralWidget">hi</span>
 
-This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.  You would create a postCreate() method referencing this.domNode that did connections, etc. to do something interesting w/that DOM node.
+This is merely creating a JavaScript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.  You would create a postCreate() method referencing this.domNode that did connections, etc. to do something interesting w/that DOM node.
 
 This kind of behavioral widget is useful in some cases, but it has severe limitations, namely that the widget user must supply a DOM tree.   Normally, widgets create their own DOM tree, replacing a simple <span> or <button> node with a complex DOM tree.  Note that sometimes, if the user just calls
 
@@ -102,7 +102,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
-Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
+Now let's write a widget that performs some JavaScript.   We'll setup an onclick handler on a button node which will increment a counter:
 
 .. code-example ::
   :djConfig: parseOnLoad: false
@@ -110,9 +110,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
   Define the widget
 
   .. js ::
-    
 
-    <script>
         require([
             "dojo/_base/declare", "dojo/dom-construct", "dojo/parser", "dojo/ready",
             "dijit/_WidgetBase",
@@ -141,7 +139,6 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
                 parser.parse();
             });
         });
-    </script>
 
   Instantiate declaratively
 
@@ -269,7 +266,7 @@ Mapping widget attributes to DOMNode attributes
 -----------------------------------------------
 Often widget attributes are mapped into the widget's DOM.  For example, the tabIndex setting on a widget should map to that widget's focusNode.
 
-This is not done by putting ${...} strings inside the widget's template.   Actually, most of the time, the mapping happens automatically.   Standard DOMNode attributes like tabIndex, alt, aria-labelledby, etc. are copied to the widget's "focusNode" if it's defined, or to the "domNode" otherwise.
+This is not done by putting ${...} strings inside the widget's template.   Actually, most of the time, the mapping happens automatically.   Standard DOMNode attributes like tabindex, alt, aria-labelledby, etc. are copied to the widget's "focusNode" if it's defined, or to the "domNode" otherwise.
 
 You can also explicitly specify mappings to DOM node attributes, innerHTML, or class, overriding the default behavior.   This allows more complicated mappings, like when TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a data-dojo-attach-point, see above).
 
@@ -495,7 +492,7 @@ Creating extension points
 =========================
 Let's say you've written a widget, and when the user clicks on it, something happens. What you want is for the programmer using the widget to be able to either *change* what happens, or have something happen in addition, without having to edit your widget.
 
-To see how to do this, let's see how dijit.form.Button does it for clicking. Note that we need to distinguish between DOM events, which happen on DOM elements; and widget events, which fire when things happen in the widget. (To make this clearer: DOM onclick might fire on elements in your widget, but you would only want the widget's onClick (Note: camelCase!) to fire when your widget is an "enabled" state.)
+To see how to do this, let's see how dijit/form/Button does it for clicking. Note that we need to distinguish between DOM events, which happen on DOM elements; and widget events, which fire when things happen in the widget. (To make this clearer: DOM onclick might fire on elements in your widget, but you would only want the widget's onClick (Note: camelCase!) to fire when your widget is an "enabled" state.)
 
 1. In your template html, on the html elements you want to have fire DOM events, add the attribute data-dojo-attach-event as follows. Here's some of the dijit Button's Button.html (with ... where I've left stuff out):
 
@@ -555,7 +552,7 @@ or alternately this:
 
 Now, whenever someone in the browser clicks on the widget (ok, specifically inside it's top-level div in this case), _onButtonClick and _onClick will execute, but so will the extra alert() statement.
 
-3a. What if you don't want to override the extension point, but want it to execute and then have something custom execute? Just use type="dojo/connect" instead of type="dojo/method".
+4. What if you don't want to override the extension point, but want it to execute and then have something custom execute? Just use type="dojo/connect" instead of type="dojo/method".
 
 Closing words:
 
