@@ -35,7 +35,8 @@ Within the dialog template there is an additional span that contains the charact
         <div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
             <span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="${id}_title">${title}</span>
             <span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="onclick: onCancel">
-            <span data-dojo-attach-point="closeText" class="closeText">x</span>
+                <span data-dojo-attach-point="closeText" class="closeText">x</span>
+            </span>
         </div>
         <div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"></div>
     </div>
