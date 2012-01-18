@@ -41,16 +41,17 @@ Programmatic example
 --------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-      dojo.require("dijit.TitlePane");
-
-      var tp;
-      dojo.ready(function(){
-        tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
-            dojo.byId("holder").appendChild(tp.domNode);
-      });
+    require(["dojo/ready", "dijit/TitlePane", "dojo/dom"], function(ready, TitlePane, dom){
+        ready(function(){
+            var tp;
+            tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
+            dom.byId("holder").appendChild(tp.domNode);
+        });
+    });
 
   .. html ::
 
@@ -63,10 +64,11 @@ Declarative markup
 Creation from markup is even easier.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.TitlePane");
+      require(["dojo/parser", "dijit/TitlePane"]);
 
   .. html ::
 
@@ -84,23 +86,24 @@ With a set of TitlePanes the outer div doesn't have any fixed height, and you ca
 For example:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-      dojo.require("dijit.TitlePane");
+    require(["dojo/parser", "dijit/TitlePane"]);
 
   .. html ::
 
     <div style="border: solid black 1px;">
-      <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #1'">
-        I'm pane #1
-      </div>
-      <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #2'">
-        I'm pane #2
-      </div>
-      <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #3'">
-        I'm pane #3
-      </div>
+        <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #1'">
+            I'm pane #1
+        </div>
+        <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #2'">
+            I'm pane #2
+        </div>
+        <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Pane #3'">
+            I'm pane #3
+        </div>
     </div>
 
 
