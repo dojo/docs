@@ -164,7 +164,7 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
 Setting styles
 --------------
 
-The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to :ref:`dojo.style() <dojo/style>`.
+The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to :ref:`dojo.style() <dojo/style>` if the third argument is an object. If the third argument is a string, then the value is set like any other attribute.
 
 .. code-example ::
 
