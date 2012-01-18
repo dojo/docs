@@ -31,14 +31,14 @@ Here's an example defining a widget called Employee, and then creating two of th
 
   .. js ::
 
-        dojo.require("dijit.Declaration");
+    require(["dojo/parser", "dijit/Declaration"]);
 
   .. html ::
 
     <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'Employee', defaults:{empid:123, name:''}">
         <span>${name}</span>
-        <a href="update.php?id=${empid}">update</a>
-        <a href="delete.php?id=${empid}">delete</a>
+        <a href="#update.php?id=${empid}">update</a>
+        <a href="#delete.php?id=${empid}">delete</a>
     </div>
     <div data-dojo-type="Employee" data-dojo-props="empid:100, name:'Alan Allen'"></div>
     <div data-dojo-type="Employee" data-dojo-props="empid:101, name:'Bob Brown'"></div>
@@ -55,8 +55,8 @@ And then it's defining a template
 .. html ::
  
  <span>${name}</span>
- <a href="update.php?id=${empid}">update</a>
- <a href="delete.php?id=${empid}">delete</a>
+ <a href="#update.php?id=${empid}">update</a>
+ <a href="#delete.php?id=${empid}">delete</a>
 
 And finally that it's using the widget parameters name and empid in the template, as the substitution variables ${name} and ${empid}.
 
@@ -71,17 +71,22 @@ Methods, data-dojo-attach-point, and data-dojo-attach-event
 
 The example below defines a widget named "HideButton" that will hide itself when clicked, and then creates two HideButtons:
 
+.. code-example ::
 
-.. html ::
+  .. js ::
+
+    require(["dojo/parser", "dijit/Declaration"]);
+
+  .. html ::
  
- <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
-   XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
-   <script type='dojo/method' data-dojo-event='myClickHandler'>
-     this.domNode.style.display="none";
-   </script>
- </div>
- <button data-dojo-type="HideButton">Click to hide</button>
- <button data-dojo-type="HideButton">Click to hide #2</button>
+    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
+        XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
+       <script type='dojo/method' data-dojo-event='myClickHandler'>
+           this.domNode.style.display="none";
+       </script>
+    </div>
+    <button data-dojo-type="HideButton">Click to hide</button>
+    <button data-dojo-type="HideButton">Click to hide #2</button>
 
 
 A few things to note here:
@@ -96,13 +101,25 @@ Often dijit.Declaration is used to define a widget as an extension of another wi
 HideButton2 extends HideButton (above) and changes the template (but keeps the onclick handler).
 Here we define HideButton2 and then create two HideButton2's:
 
-.. html ::
- 
- <span data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
-   YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
- </span>
- <button data-dojo-type="HideButton2">Hide me extended</button>
- <button data-dojo-type="HideButton2">Hide me extended #2</button>
+.. code-example ::
+
+  .. js ::
+
+    require(["dojo/parser", "dijit/Declaration"]);
+
+  .. html ::
+
+    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
+        XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
+       <script type='dojo/method' data-dojo-event='myClickHandler'>
+           this.domNode.style.display="none";
+       </script>
+    </div>
+    <span data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:['HideButton']">
+        YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
+    </span>
+    <button data-dojo-type="HideButton2">Hide me extended</button>
+    <button data-dojo-type="HideButton2">Hide me extended #2</button>
 
 
 The mixins attribute tells which classes you widget will be based on.
@@ -122,12 +139,12 @@ An example of dojo/connect is:
 
 .. html ::
  
- <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
-   Just a plain ol' piece of text
-   <script type="dojo/connect" data-dojo-event="dblclick">
-     console.debug("Ouch!  I've been double-clicked");
-   </script>
- </div>
+    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
+        Just a plain ol' piece of text
+        <script type="dojo/connect" data-dojo-event="dblclick">
+            console.debug("Ouch!  I've been double-clicked");
+        </script>
+    </div>
 
 Every widget declared with class simpleConnectedWidget will have the handler connected to it.
 
