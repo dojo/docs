@@ -23,11 +23,17 @@ A plain Calendar widget with the formatted date below
 
   .. js ::
 
-      dojo.require("dijit.CalendarLite");
+      require(["dojo/parser", "dijit/CalendarLite"]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/CalendarLite" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
+    <div data-dojo-type="dijit/CalendarLite">
+        <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
+            require(["dojo/dom", "dojo/date/locale"], function(dom, locale){
+                dom.byId('formatted').innerHTML = locale.format(value, {formatLength: 'full', selector:'date'})
+            });
+        </script>
+    </div>
     <p id="formatted"></p>
 
 
