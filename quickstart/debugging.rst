@@ -45,7 +45,7 @@ The following code has a subtle bug:
   <title>Fix me!</title>
       <style type="text/css">
           @import "http://ajax.googleapis.com/ajax/libs/dojo/1.7/dijit/themes/claro/claro.css";
-          @import "http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/resources/dojo.css"
+          @import "http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
           data-dojo-config="parseOnLoad: true, isDebug: true"></script>
@@ -92,7 +92,7 @@ The following code has an error:
       <style type="text/css">
           /* FIXME: adjust to goog cdn url */
           @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
+          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true"></script>
@@ -216,7 +216,7 @@ Since that code is now running, we try a minor variant which sets the button to 
   <title>Fix me!</title>
       <style type="text/css">
           @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
+          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0/dojo/dojo.xd.js"
               data-dojo-config="parseOnLoad: true"></script>
@@ -243,7 +243,7 @@ You can find out for sure by using a local copy of Dojo. CDN Dojo is very quiet 
   
   <style type="text/css">
           @import "/dojoroot/dijit/themes/tundra/tundra.css";
-          @import "/dojoroot/dojo/resources/dojo.css"
+          @import "/dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true"></script>
@@ -293,7 +293,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
   <title>Fix me!</title>
       <style type="text/css">
           @import "/dojoroot/dijit/themes/tundra/tundra.css";
-          @import "/dojoroot/dojo/resources/dojo.css"
+          @import "/dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true"></script>
@@ -351,7 +351,7 @@ the displayed error location will now be correct:
   ?>
       <style type="text/css">
           @import "<?= $loadLocation ?>/dijit/themes/tundra/tundra.css";
-          @import "<?= $loadLocation ?>/dojo/resources/dojo.css"
+          @import "<?= $loadLocation ?>/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="<?= $loadLocation ?>/dojo/dojo<?= $useXd ?>.js"
               data-dojo-config="<?= $dojoConfig ?>"></script>
