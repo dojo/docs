@@ -25,28 +25,28 @@ This example shows how to create a menu and combo button programmatically.
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Menu");
-        dojo.ready(function(){
-            var menu = new dijit.Menu({ style: "display: none;"});
-            var menuItem1 = new dijit.MenuItem({
+    require(["dojo/ready", "dijit/Menu", "dijit/MenuItem", "dijit/form/ComboButton"], function(ready, Menu, MenuItem, ComboButton){
+        ready(function(){
+            var menu = new Menu({ style: "display: none;"});
+            var menuItem1 = new MenuItem({
                 label: "Yahoo",
                 onClick: function(){ alert('hi'); }
             });
             menu.addChild(menuItem1);
 
-            var menuItem2 = new dijit.MenuItem({
+            var menuItem2 = new MenuItem({
                 label: "Google",
                 onClick: function(){ alert('ho'); }
             });
             menu.addChild(menuItem2);
 
-            var button = new dijit.form.ComboButton({
+            var button = new ComboButton({
                 label: "get all mail",
                 dropDown: menu
             });
             button.placeAt(dojo.body());
         });
+    });
 
 
 Declarative example
@@ -60,9 +60,7 @@ and the other for the drop-down widget that's displayed when you press the butto
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.DropDownMenu");
-        dojo.require("dijit.MenuItem");
+    require(["dojo/parser", "dijit/form/ComboButton", "dijit/DropDownMenu", "dijit/MenuItem"]);
 
   .. html ::
 
