@@ -11,7 +11,6 @@ dojox.calendar allows to display events in time and edit them.
 .. contents ::
   :depth: 3
 
-=============
 Introduction
 =============
 
@@ -56,7 +55,6 @@ The following example shows how to declare a calendar widget programmatically:
   <div id="someId" ></div>  
 
 
-=========================
 Configuring Calendar data
 =========================
 
@@ -147,7 +145,6 @@ All-day events can be displayed differently: for example by default they are dis
 The calendar is looking to the “allDay” property of a data store item to determine if an item is an all day event or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
 
 
-=====================
 Time range definition
 =====================
 
@@ -184,7 +181,6 @@ The following example shows how to define the time range from the 1st of January
        data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
        style="position:relative;width:500px;height:500px"></div>         
 
-=================
 Styling renderers
 =================
 
@@ -246,7 +242,6 @@ For example, we can use this feature to change the color of a renderer depending
 
 For further customization, custom renderers can be created. See dedicated section of advanced configuration.
 
-=====
 Views
 =====
 
@@ -261,7 +256,7 @@ The calendar is using (by default):
 See Advanced configuration to change this behavior.
 
 Columns View
-============
+------------
 
 .. image :: calendar/columnView.png
 
@@ -298,7 +293,7 @@ To specify constructor parameters of the column view, set the columnViewProps pr
 Note: The ColumnView can be replaced by the SimpleColumnView widget which is a columns view without the secondary sheet. See advanced configuration to see how to use this alternate view.
 
 Matrix View
-===========
+-----------
 
 .. image :: calendar/matrixView.png
 
@@ -343,15 +338,14 @@ In the following image the first row is expanded:
 .. image :: calendar/matrixViewExpanded.png
 
 
-============
 Interactions
 ============
 
 Selection
-=========
+---------
 
 Properties
-----------
+``````````
 
 The selectionMode property controls the selection, this property can take the following values:
   * **“none”** - no selection is possible.
@@ -363,7 +357,7 @@ The selectedItems property contains the list of selected items from the data sto
 The selectedItem property contains the last selected item.
 
 Using the mouse
----------------
+```````````````
 
 To select an item, simply click on an renderer.
 
@@ -372,7 +366,7 @@ To deselect an item, press the control key and click on a renderer.
 If the selection mode is “multiple”, you can extend the selection or deselect an item by pressing the control key and click on a renderer.
 
 Using the keyboard
-------------------
+``````````````````
 
 If the calendar widget has the focus, press the left or right arrow keys to select an item.
 
@@ -381,12 +375,12 @@ To move only the focus on an item and not select it at the same time, press left
 To deselect an item or extend selection (if selection mode is “multiple”), move the focus to an renderer and press the space bar while maintaining the control key.
 
 Using the touch events
-----------------------
+``````````````````````
 
 To select an item, simply tap on it. 
 
 Item editing
-============
+------------
 
 The calendar widget allows to move and resize an event. 
 
@@ -395,7 +389,7 @@ Only one event can be edited at a time.
 Note: for more information on item editing behavior and events, See dedicated section of advanced configuration.
 
 Using the mouse
----------------
+```````````````
 
 To move an event, press the mouse button over the body of a renderer, drag the event at the desired position and release the mouse button.
 
@@ -404,7 +398,7 @@ To resize an event, press the mouse button over the start or end of a renderer, 
 If you press the escape key while editing an item, the editing gesture will be canceled.
 
 Using the keyboard
-------------------
+``````````````````
 
 If an item has the focus (see selection section), press the enter key to edit the event.
 
@@ -416,7 +410,7 @@ In editing mode:
   * press the escape key to cancel the changes and leaving the edit mode.
 
 Using touch events
-------------------
+``````````````````
 
 To enter in edit mode press a renderer for a small amount of time, until the renderer visually change its state.
 
@@ -428,7 +422,7 @@ In editing mode:
 
 
 Navigation buttons
-==================
+------------------
 
 .. image :: calendar/buttonBar.png
 
@@ -454,7 +448,6 @@ The following functions are also exposed to help navigation:
 
 These buttons and methods are just shortcuts that define the date, dateInterval and dateIntervalSteps properties.
 
-===============
 Calendar events
 ===============
 
@@ -495,12 +488,11 @@ To react on a calendar event use the on() method to register a listener as shown
   });
 
 
-======================
 Advanced configuration
 ======================
 
 Class diagram
-=============
+-------------
 
 .. image :: calendar/MainCalendarDiagram.png
 
@@ -539,10 +531,10 @@ LabelRenderer            The default renderer class for labels used in matrix vi
 ======================== ===========
 
 Calendar
-========
+--------
 
 View management
----------------
+```````````````
 
 The default views are created in the _createDefaultViews() function.
 To specify the views to use instead of the default views, set the views property.
@@ -594,21 +586,21 @@ The following example shows the creation of custom views and a change the defaul
   }, "calendarNode");
 
 Right-to-left 
-=============
+-------------
 
 See http://dojotoolkit.org/reference-guide/quickstart/internationalization/bi-directional-text.html
 
 To have a correct rendering in right-to-left display, you must import the calendar_rtl.css file in addition to the calendar.css file.
 
 Bidi
-====
+----
 
 The calendar is also supporting the “textDir” property. 
 
 Import the dijit._BidiSupport class and set the “textDir” property to “rtl”, “ltr” or “auto” to set the contextual text direction.
 
 Alternate calendars
-===================
+-------------------
 
 The calendar is using by default the gregorian calendar to display time, but the alternate calendars defined in dojox.date package can be set on the calendar.
 
@@ -621,7 +613,7 @@ The following example shows to how to set the Hebrew calendar:
   new Calendar({datePackage: "dojox.date.hebrew"}, "calendarNode");        
 
 Date/time formatting
-====================
+--------------------
 
 The displayed dates labels are formatted using dojo formatters. If no specific calendar is specified the dojo.date.locale object is used, otherwise it is the dojox.date.XXXX.locale.
 
@@ -649,14 +641,14 @@ We can define a function to have a more compact display:
 This will result into “10am” and “8:15am” when using the previous examples.
 
 Common properties
-=================
+-----------------
 
 This section describes properties and concepts that are common to the views classes.
 
 Note: the views are first citizen widgets that can be use alone without enclosing them into a Calendar widget.
 
 Renderer kind mapping
----------------------
+`````````````````````
 
 The itemToRendererKindFunc properties allow to specify a mapping between a store item and a kind of renderer (vertical, horizontal or label).
 
@@ -703,7 +695,7 @@ You can customize this behavior to show only horizontal renderers, for example:
   }, null);
 
 Renderer overlap
-----------------
+````````````````
 
 When two event renderers are overlapping in time, the renderer can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical renderers) or vertically (horizontal renderers). 
 
@@ -719,7 +711,7 @@ The first one shows a percentOverlap of 70%, the second on a percentOverlap of 0
 .. image :: calendar/overlap0.png
 
 Layout priority
----------------
+```````````````
 
 During the layout process, the events that are in the displayed time range are sorted according to the follwing comparison function:
   * Events that starts first are placed first
@@ -730,17 +722,17 @@ These simple rules allow to have nice looking layout when events are overlapping
 If you want to change this event layout priority management, set a sorting function to the layoutPriorityFunction. One use case is to build a sort function based on a priority value set on the data store item itself.
 
 Renderers
----------
+`````````
 
 The renderer classes are not set by default on the views. 
 
 The calendar widget is setting the default renderers to the views. If a view is used alone, the renderer must be set explicitly.
 
 Column View
-===========
+-----------
 
 Properties
-----------
+``````````
 
 The displayed time interval is defined by the startDate and columnCount properties. It is columnCount days from the startDate.
 
@@ -766,14 +758,14 @@ For example to programmatically scroll the view to 9 am using an animation, use 
 The columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
 Layout
-------
+``````
 
 In addition to the properties defined in the common section, the column view also exposes the horizontalGap property (default is 4). 
 
 This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
 
 Renderers
----------
+`````````
 
 The column view is using several renderers:
   * vertical renderers to show the events in the main sheet.
@@ -784,7 +776,7 @@ The vertical renderer class can be set on the verticalRenderer property.
 The secondary sheet is a custom matrix view, see matrix view renderers for more information on the horizontal and expand renderers.
 
 Styling
--------
+```````
 
 The styling of a column view  is defined in the themes/claro/ColumnView.css and themes/claro/ColumnView_rtl.css. The base CSS pseudo class name is dojoxCalendarColumnView.
 
@@ -796,7 +788,7 @@ Several functions are provided to style or set a style class on part of the view
   * styleGridColumn(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
 
 Date formatting
----------------
+```````````````
 
 To change the default formatting of the a label, one can:
   * set a custom date pattern in a dedicated property or
@@ -812,17 +804,17 @@ column header cell columnHeaderDatePattern _formatColumnHeaderLabel()
 ================== ======================= ===================
 
 Matrix View
-===========
+-----------
 
 Properties
-----------
+``````````
 
 The displayed time range is defined by the startDate, columnCount and rowCount properties. The time range is columnCount x rowCount days from the startDate.
 
 The refStartTime and refEndTime can be used to define a time range of interest. This time range must be included in the displayed time range. It allows to show days out of the time range of interest by greying their cells.
 
 Expanded row
-------------
+````````````
 
 The matrix view can have one row expanded to show mode events on this particular row (usually a week).
 
@@ -837,7 +829,7 @@ getExpandedRowIndex() Returns the expanded row index if any, -1 otherwise.
 ===================== ===========
 
 Renderers
----------
+`````````
 
 The matrix view is using several renderers:
 
@@ -850,7 +842,7 @@ Horizontal renderers are placed and sized according to the start and end time of
 Label renderers a placed in a cell and takes the cell width. They cannot overlap and cannot be resized.
 
 Layout
-------
+``````
 
 The matrix view has several layout properties.
 
@@ -877,7 +869,7 @@ expand     expandRendererHeight     15
 In addition all the renderers shifted vertically of the value of the cellPaddingTop property (16 by default) to show the cell header.
 
 Styling
--------
+```````
 
 The styling of a matrix view is defined in the themes/claro/MatrixView.css and themes/claro/MatrixView_rtl.css.
 
@@ -890,7 +882,7 @@ Several functions are provided to style or set a style class on part of the view
 
 
 Date formatting
----------------
+```````````````
 
 To change the default formatting of the a label, one can:
   * set a custom date pattern or a custom format length in a dedicated property or
@@ -907,7 +899,7 @@ grid cell header   _formatGridCellLabel()     cellHeaderLongPattern (first visib
 ================== ========================== ========
 
 Custom renderers
-================
+----------------
 
 Several default renderers are provided but you can develop your own renderer.
 
@@ -932,15 +924,15 @@ If the renderer needs a substantial refresh, the updateRendering() function is c
 Other utility functions are provided to format time and set text using Bidi text direction etc.
 
 Event editing
-=============
+-------------
 
 Introduction
-------------
+````````````
 
 The calendar allows to interactively move or resize an event
 
 Steps
------
+`````
 
 The event editing process is going through the following steps:
   * The editing is initialized by a user interaction, the widget is entering in edit mode.
@@ -952,7 +944,7 @@ There are some specifics depending on the device used:
   * Using touch events: cancellation is not possible (possible future improvement).
 
 Editing flags
--------------
+`````````````
 
 The editable property allows to globally enable or disable the editing capability of the widget.
 
@@ -961,7 +953,7 @@ If the editable property is true, the moveEnabled and resizeEnabled properties a
 To have a control of move or resize at the event level, override respectively the isItemMoveEnabled() or isItemResizeEnabled() functions.
 
 Editing behavior properties
----------------------------
+```````````````````````````
 To customize the event editing behavior, a set of properties are exposed by the views.
 
 ============================ ========================= ========================= ===========
@@ -996,7 +988,7 @@ For example to change the minimal duration of an event to 30 minutes.
   calendar.columnView.set(“minDurationUnit”, “minute”;
 
 Editing handlers
-----------------
+````````````````
 
 In some advanced use cases, the editing properties are not sufficient, the editing events are used to have a specific behavior.
 
