@@ -27,37 +27,36 @@ The first example shows how to create a menu and drop down button programmatical
 
   .. js ::
 
-         dojo.require("dijit.form.Button");
-         dojo.require("dijit.DropDownMenu");
-         dojo.require("dijit.MenuItem");
-         dojo.ready(function(){
-            var menu = new dijit.DropDownMenu({ style: "display: none;"});
-            var menuItem1 = new dijit.MenuItem({
+    require(["dojo/ready", "dijit/form/DropDownButton", "dijit/DropDownMenu", "dijit/MenuItem", "dojo/dom"], function(ready, DropDownButton, DropDownMenu, MenuItem, dom){
+        ready(function(){
+            var menu = new DropDownMenu({ style: "display: none;"});
+            var menuItem1 = new MenuItem({
                 label: "Save",
                 iconClass:"dijitEditorIcon dijitEditorIconSave",
                 onClick: function(){ alert('save'); }
             });
             menu.addChild(menuItem1);
 
-            var menuItem2 = new dijit.MenuItem({
+            var menuItem2 = new MenuItem({
                 label: "Cut",
                 iconClass:"dijitEditorIcon dijitEditorIconCut",
                 onClick: function(){ alert('cut'); }
             });
             menu.addChild(menuItem2);
 
-            var button = new dijit.form.DropDownButton({
+            var button = new DropDownButton({
                 label: "hello!",
                 name: "programmatic2",
                 dropDown: menu,
                 id: "progButton"
             });
-            dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
-         });
+            dom.byId("dropDownButtonContainer").appendChild(button.domNode);
+        });
+    });
 
   .. html ::
 
-    <div id="dropdownButtonContainer"></div>
+    <div id="dropDownButtonContainer"></div>
 
 Declarative example
 -------------------
@@ -72,10 +71,7 @@ Here's one displaying a :ref:`TooltipDialog <dijit/TooltipDialog>`:
 
   .. js ::
 
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Dialog");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.TooltipDialog");
+    require(["dojo/parser", "dijit/form/DropDownButton", "dijit/form/TextBox", "dijit/TooltipDialog", "dijit/form/Button"]);
 
   .. html ::
 
