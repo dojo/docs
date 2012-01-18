@@ -58,7 +58,7 @@ and the other for the drop-down widget that's displayed when you press the butto
 
 .. code-example ::
 
-  ..js ::
+  .. js ::
 
         dojo.require("dijit.form.Button");
         dojo.require("dijit.DropDownMenu");
