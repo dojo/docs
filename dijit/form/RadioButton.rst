@@ -35,15 +35,13 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
 
   .. js ::
  
-      dojo.require("dijit.form.CheckBox");
-
-      dojo.ready(function(){
-        var radioOne = new dijit.form.RadioButton({
-          checked: true,
-          value: "tea",
-          name: "drink",
+    require(["dojo/ready", "dojo/parser", "dijit/form/RadioButton"], function(ready, parser, RadioButton){
+        var radioOne = new RadioButton({
+            checked: true,
+            value: "tea",
+            name: "drink",
         }, "radioOne");
-      });
+    });
 
   .. html ::
 
