@@ -43,15 +43,16 @@ Default color palette
 Default color palette, created programmatically:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-       require(["dijit/ColorPalette"], function(ColorPalette){
-         var myPalette = new ColorPalette({
-           palette: "7x10",
-           onChange: function(val){ alert(val); }
-         }, "placeHolder");
-       });
+    require(["dijit/ColorPalette"], function(ColorPalette){
+        var myPalette = new ColorPalette({
+            palette: "7x10",
+            onChange: function(val){ alert(val); }
+        }, "placeHolder");
+    });
 
   .. html ::
 
@@ -63,10 +64,11 @@ Small color palette
 Small color palette, created declaratively:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.ColorPalette");
+    require(["dojo/parser", "dijit/ColorPalette"]);
 
   .. html ::
 
