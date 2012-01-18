@@ -1,6 +1,5 @@
 .. _dojo/parser:
 
-===============
 The Dojo Parser
 ===============
 
@@ -37,10 +36,10 @@ The parser also allows function parameters and connections to be done via ``<scr
 
 
 Getting Started
-===============
+---------------
 
 Loading the Parser
-------------------
+``````````````````
 
 To include the Dojo parser on your page, require the module ``dojo.parser``:
 
@@ -64,7 +63,7 @@ Also, starting in 1.7, many widgets extend :ref:`dijit._TemplatedMixin <dijit/_T
 :ref:`dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
 
 Running the Parser
-------------------
+``````````````````
 
 There are two ways to run the dojo.parser: manually, or before onLoad.
 
@@ -115,12 +114,12 @@ example calling ``startup()`` on each widget:
     }
 
 Markup
-======
+------
 
 This section discusses how to write markup (HTML) on your page to be interpreted by the parser.
 
 Parser parameters
------------------
+`````````````````
 
 Attributes which correspond to native HTML attributes appear directly in the markup.    Custom widget parameters are put
 into the data-dojo-props field.   For example:
@@ -195,8 +194,8 @@ Incidentally, this is also how dates are returned to the server when a form is s
 Function parameters
 ~~~~~~~~~~~~~~~~~~~
 
-There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below).
-To specify a function as an attribute you can either specify the name of a function:
+There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below). To
+specify a function as an attribute you can either specify the name of a function:
 
 .. html ::
 
@@ -214,7 +213,7 @@ Alternately, you can inline the text of a function:
 
 
 Script Tags
------------
+```````````
 
 The parser allows the specification of behaviours through custom types in script blocks to extend and enhance the
 functionality of declarative widgets. This is done by specifying a script block that is a direct child of a node with
@@ -355,12 +354,12 @@ Note that ``this`` points to the widget object.
 
 
 Writing widgets
-===============
+---------------
 
 This section discusses how to write widgets that the parser can understand.
 
 Specifying attributes and types
--------------------------------
+```````````````````````````````
 
 HTML treats all attributes on nodes as strings. However, when the parser instantiates your nodes, it looks at the
 prototype of the class you are trying to instantiate (via data-dojo-type attribute) and tries to make a "best guess" at
@@ -424,7 +423,7 @@ values of types are as follows:
 
 
 markupFactory
--------------
+`````````````
 
 As listed above, the parser expects widget constructors to follow a certain format (where the first argument is a hash
 of attribute names/values, and the second is the srcNodeRef.
@@ -455,10 +454,10 @@ invokes the markupFactory.  For example:
 This also ensures that subsequent descendant classes that do not override the markupFactory are created properly.
 
 Parser API notes
-================
+----------------
 
 parser.parse()
---------------
+``````````````
 
 Instead of parsing the whole document, you can select a smaller portion of the document by passing the parser the node
 that the parsing should start at.  This is accomplished by passing the ``rootNode`` argument directly in the
@@ -493,7 +492,7 @@ would be valid:
 
 
 parser.instantiate()
---------------------
+````````````````````
 
 You can manually call ``dojo.parser.instantiate()`` on any node - and pass in an additional mixin to specify options,
 such as ``data-dojo-type``, etc.  The values in the mixin would override any values in your node. For example:
@@ -518,13 +517,13 @@ You specify that you do not want subwidgets to be started if you pass _started: 
     parser.instantiate([dojo.byId("myDiv")], {data-dojo-type: "my.custom.type", _started: false});
 
 Caveats
-=======
+-------
 
 If you try to parse the same content twice, or parse content mentioning id's of existing widgets, it will cause an
 exception about duplicate id's.
 
 Examples
-========
+--------
 
 Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert the nodes decorated with
 ``data-dojo-type``'s into widgets:
@@ -576,6 +575,6 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 
 See Also
-========
+--------
 
 - `Introduction to the Parser <http://dojocampus.org/content/2008/03/08/the-dojo-parser/>`_
