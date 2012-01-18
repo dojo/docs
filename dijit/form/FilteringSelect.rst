@@ -45,6 +45,7 @@ To get the current value (the identity of the currently selected store item), ge
 To get the text currently displayed in the textbox (the value of the currently selected store item's attribute indicated by the FilteringSelect's ``searchAttr`` property), get the *displayedValue* attribute.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -99,10 +100,11 @@ NOTE: if you do not specify a selected option, the browser will select the first
 If you want the FilteringSelect to start blank, use a different method to create it.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.FilteringSelect");
+    require(["dojo/parser", "dijit/form/FilteringSelect"]);
 
   .. html ::
 
@@ -119,11 +121,11 @@ Declarative markup using a dojo.store
 To set the default value for this example, specify the *value* attribute (the hidden text value to be submitted) in the markup.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-        dojo.require("dijit.form.FilteringSelect");
-        dojo.require("dojo.store.Memory");
+    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/store/Memory"]);
 
   .. html ::
 
@@ -134,7 +136,7 @@ To set the default value for this example, specify the *value* attribute (the hi
         value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
-        id="stateInput">
+        id="stateInput" />
 
 Custom displayed value/search text
 ----------------------------------
@@ -146,6 +148,7 @@ searchAttr enables you to do just that.
 In this example, the FilteringSelect has been set to display the ids for states rather than their full names.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -188,6 +191,7 @@ The city ComboBox sets the state FilteringSelect value,
 and the state FilteringSelect filters the city ComboBox choices in this example.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -513,9 +517,9 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
   .. html ::
 
     <label for="city">City:</label>
-    <input id="city">
+    <input id="city" />
     <label for="state">State:</label>
-    <input id="state">
+    <input id="state" />
 
 Displaying rich text menu labels with labelAttr and labelType
 -------------------------------------------------------------
@@ -530,6 +534,7 @@ If you try this example with a screen reader, you will notice that the screen re
 the autocompleted value in the textbox, as with other FilteringSelects, rather than trying to parse the rich text label.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -557,7 +562,7 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
 
   .. html ::
 
-    <input id="dojoBox">
+    <input id="dojoBox" />
 
 
 
