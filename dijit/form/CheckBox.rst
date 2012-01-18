@@ -37,19 +37,18 @@ Let's create a checkbox programmatically, initially unchecked:
 
   .. js ::
 
-    dojo.require("dijit.form.CheckBox");
-    dojo.ready(function(){
-      var checkBox = new dijit.form.CheckBox({
-        name: "checkBox",
-        value: "agreed",
-        checked: false,
-        onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + checkBox.get('value') ); }
-      }, "checkBox");
+    require(["dojo/ready", "dijit/form/CheckBox"], function(ready, CheckBox){
+        var checkBox = new dijit.form.CheckBox({
+            name: "checkBox",
+            value: "agreed",
+            checked: false,
+            onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + this.get('value') ); }
+        }, "checkBox");
     });
 
   .. html ::
  
-    <input id="checkBox"> <label for="checkBox">I agree</label>
+    <input id="checkBox" /> <label for="checkBox">I agree</label>
 
 Declarative example
 -------------------
@@ -60,11 +59,11 @@ Let's create a checkbox with HTML markup, initially checked:
 
   .. js ::
 
-        dojo.require("dijit.form.CheckBox");
+    require(["dojo/parser", "dijit/form/CheckBox"]);
 
   .. html ::
  
-    <input id="mycheck" name="mycheck" data-dojo-type="dijit/form/CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + dijit.byId('mycheck').get('value'))"> <label for="mycheck">I agree</label>
+    <input id="mycheck" name="mycheck" data-dojo-type="dijit/form/CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + this.get('value'))" /> <label for="mycheck">I agree</label>
 
 
 Accessibility
