@@ -23,13 +23,23 @@ Note that if you want your tooltip to contain a form or something that the user 
 Usage
 =====
 
-.. js ::
+.. code-example ::
+  :djConfig: async: true
+
+  .. js ::
  
-   dojo.require("dijit.Tooltip");
-   new dijit.Tooltip({
-      connectId: ["exampleNode"],
-      label: "the text for the tooltip"
-   });
+    require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
+        ready(function(){
+            new Tooltip({
+                connectId: ["exampleNode"],
+                label: "the text for the tooltip"
+            });
+        });
+    });
+
+  .. html ::
+
+    <span id="exampleNode">Lorem ipsum dolor sit amet.</span>
 
 =========  =========================  =============================================================================
 Parameter  Type                       Description
@@ -57,41 +67,41 @@ Programmatic example
 Here's a tooltip created programmatically:
 
 .. code-example ::
+  :djConfig: async: true
 
   .. css ::
 
     .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; position: absolute; top: 100px; left: 10px; }
     .bar2 { background-color: #ffd4a0; width: 17px; height: 45px; position: absolute; top: 129px; left: 40px; }
     .bar3 { background-color: #fff79e; width: 17px; height: 30px; position: absolute; top: 144px; left: 70px; }
-
+    .bar4 { background-color: #ffa0a0; width: 17px; height: 74px; position: absolute; top: 100px; left: 100px; }
 
   .. js ::
 
-           dojo.require("dijit.Tooltip");
-           dojo.ready(function(){
-              // create a new Tooltip and connect it to bar1 and bar4
-              new dijit.Tooltip({
-                  connectId: ["bar1", "bar4"],
-                  label: "value <b>74</b>"
-              });
-              // create a new Tooltip and connect it to bar2
-              new dijit.Tooltip({
-                  connectId: ["bar2"],
-                  label: "value <b>45</b>"
-              });
-              // create a new Tooltip and connect it to bar3
-              new dijit.Tooltip({
-                  connectId: ["bar3"],
-                  label: "value <b>30</b>"
-              });
-           });
+    require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
+        // create a new Tooltip and connect it to bar1 and bar4
+        new Tooltip({
+            connectId: ["bar1", "bar4"],
+            label: "value <b>74</b>"
+        });
+        // create a new Tooltip and connect it to bar2
+        new Tooltip({
+            connectId: ["bar2"],
+            label: "value <b>45</b>"
+        });
+        // create a new Tooltip and connect it to bar3
+        new Tooltip({
+            connectId: ["bar3"],
+            label: "value <b>30</b>"
+        });
+    });
 
   .. html ::
 
     <span id="bar1" class="bar1">&nbsp;</span>
     <span id="bar2" class="bar2">&nbsp;</span>
     <span id="bar3" class="bar3">&nbsp;</span>
-    <span id="bar4" class="bar1">&nbsp;</span>
+    <span id="bar4" class="bar4">&nbsp;</span>
     <div>Move your mouse over a colored bar</div>
 
 
@@ -101,29 +111,28 @@ Declarative markup
 And here's a tooltip created from markup connected to a :ref:`dijit.form.Button <dijit/form/Button>` widget:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
   .. css ::
 
     .box { color: white; background-color: #ba2929; width: 200px; height: 50px; padding: 10px; }
 
-
   .. js ::
 
-           dojo.require("dijit.Tooltip");
-           dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/Tooltip", "dijit/form/Button"]);
 
   .. html ::
 
-        <div class="box">Example content above button</div>
-        <button id="buttonId" data-dojo-type="dijit/form/Button">Longanimity</button>
-        <button id="button2" data-dojo-type="dijit/form/Button">Tooltip below</button>
-        <div class="box">Example content below button</div>
-        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'buttonId',position:['above']">
-            a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
-        </div>
-        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'button2',position:['below']">
-            a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
-        </div>
+    <div class="box">Example content above button</div>
+    <button id="buttonId" data-dojo-type="dijit/form/Button">Longanimity</button>
+    <button id="button2" data-dojo-type="dijit/form/Button">Tooltip below</button>
+    <div class="box">Example content below button</div>
+    <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'buttonId',position:['above']">
+        a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
+    </div>
+    <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'button2',position:['below']">
+        a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
+    </div>
 
 
 Tooltip Positioning
