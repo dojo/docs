@@ -39,7 +39,7 @@ Once we have setup the directory and file structure for the tutorial, we will ne
 
       <style type="text/css">
           @import "dojoroot/dijit/themes/claro/claro.css";
-          @import "dojoroot/dojo/resources/dojo.css"
+          @import "dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
@@ -461,7 +461,7 @@ Contents of HelloWorld.html file:
 
       <style type="text/css">
           @import "dojoroot/dijit/themes/claro/claro.css";
-          @import "dojoroot/dojo/resources/dojo.css"
+          @import "dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
@@ -491,7 +491,7 @@ Contents of HelloWorld-txt.html file:
 
       <style type="text/css">
           @import "dojoroot/dijit/themes/claro/claro.css";
-          @import "dojoroot/dojo/resources/dojo.css"
+          @import "dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
@@ -541,7 +541,7 @@ Contents of HelloWorld-get.html file:
 
       <style type="text/css">
           @import "dojoroot/dijit/themes/claro/claro.css";
-          @import "dojoroot/dojo/resources/dojo.css"
+          @import "dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
@@ -586,7 +586,7 @@ Contents of HelloWorld-post.html file:
 
       <style type="text/css">
           @import "dojoroot/dijit/themes/claro/claro.css";
-          @import "dojoroot/dojo/resources/dojo.css"
+          @import "dojoroot/dojo/resources/dojo.css";
       </style>
       <script type="text/javascript" src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
