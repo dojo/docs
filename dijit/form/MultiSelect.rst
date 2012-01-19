@@ -52,14 +52,14 @@ Eg. <select data-dojo-type="dijit/form/MultiSelect" multiple="true"...
 
   .. js ::
 
-      dojo.require("dijit.form.MultiSelect");
+    require(["dojo/parser", "dijit/form/MultiSelect"]);
 
   .. html ::
 
     <select data-dojo-type="dijit/form/MultiSelect" id="fruit" name="fruit" size="4">
-      <option value="AP">Apples</option>
-      <option value="OR">Oranges</option>
-      <option value="PE" selected>Pears</option>
+        <option value="AP">Apples</option>
+        <option value="OR">Oranges</option>
+        <option value="PE" selected="selected">Pears</option>
     </select>
 
 
@@ -70,23 +70,30 @@ Programmatic example
 
   .. js ::
 
-        dojo.require("dijit.form.MultiSelect");
-        dojo.ready(function(){
-                var sel = dojo.byId('dynamic');
-                var n = 0;
-                for(var i in dijit){
-                        var c = dojo.doc.createElement('option');
-                        c.innerHTML = i;
-                        c.value = n++;
-                        sel.appendChild(c);
+    require(["dojo/ready", "dijit/form/MultiSelect", "dijit/form/Button", "dojo/dom", "dojo/_base/window"], function(ready, MultiSelect, Button, dom, win){
+        ready(function(){
+            var sel = dom.byId('dynamic');
+            var n = 0;
+            for(var i in dijit){
+                var c = win.doc.createElement('option');
+                c.innerHTML = i;
+                c.value = n++;
+                sel.appendChild(c);
+            }
+            var myMultiSelect = new MultiSelect({ name: 'dynamic' }, sel);
+            
+            new Button({
+                onClick: function(){
+                    alert(myMultiSelect.get('value'));
                 }
-                new dijit.form.MultiSelect({ name: 'dynamic' }, sel);
+            }, "progbutton");
         });
+    });
 
   .. html ::
 
     <select id="dynamic"></select>
-    <p><button onClick="alert(dijit.byId('dynamic').get('value'))">Get value</button></p>
+    <p><button id="progbutton" type="button">Get value</button></p>
 
 
 Accessibility
