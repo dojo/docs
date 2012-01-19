@@ -51,6 +51,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     Provides base player control widgets for building a media player
 
+* :ref:`dojox.calendar <dojox/calendar>`
+
+    Provides a widget to display events in time using several views
+
 * :ref:`dojox.charting <dojox/charting>`
 
   Amazing charting library
