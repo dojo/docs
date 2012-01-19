@@ -4,10 +4,7 @@
 dojox.app
 =========
 
-:Status: Draft
-:Version: 1.0
-:Available: since V1.7
-
+:since: V1.7
 
 ``dojox.app`` is an application framework designed to allow simple configuration
 of nested scenes and views and to facilitate the transitioning between these
@@ -17,13 +14,8 @@ and tablets will be configurable and buildable for easy and fast deployment.
 
 There are two core modules that will need to work together to accomplish these goals:
 
-dojox/app
-=========
-A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
-
-dojox/mvc
-=========
-A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app.
+  - dojox/app - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
+  - dojox/mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app.
 
 Overview
 =========
@@ -133,7 +125,7 @@ params properties to be passed to store during initialization.
   "stores": {
     "store1":{
       "type": "dojo.store.Memory",
-      "params": { //parameters used to initialize the data store
+      "params": { // parameters used to initialize the data store
         "data": "modelApp.names"
       }
     },
@@ -192,9 +184,9 @@ Object.  The children views/scenes of the application or current scene. Dependen
 .. js ::
   
   "views": {
-    //simple view without any children views or scenes
-    //views can has its own dependencies which will be loaded
-    //before the view is first intialized.
+    // simple view without any children views or scenes
+    // views can has its own dependencies which will be loaded
+    // before the view is first intialized.
     "home": {
       "type": "dojox.app.view",
       "dependencies":[
@@ -205,15 +197,15 @@ Object.  The children views/scenes of the application or current scene. Dependen
       "template": "views/simple/home.html"
     },
 
-    //simple scene which loads all views and shows the default first
+    // simple scene which loads all views and shows the default first
     "main":{
-      //all views in the main scene will be bound to the user model
+      // all views in the main scene will be bound to the user model
       "models": [],
       "type": "dojox.app.scene",
       "template": "simple.html",
       "defaultView": "main",
       "defaultTransition": "slide",
-      //the views available to this scene
+      // the views available to this scene
       "views": {
         "main":{
           "template": "views/simple/main.html"
@@ -234,7 +226,7 @@ Object.  The children views/scenes of the application or current scene. Dependen
     },
     "repeat": {
       "type": "dojox.app.view",
-      //model declared at scene/view level will be accessible to this scene/view
+      // model declared at scene/view level will be accessible to this scene/view
       // or its children.
       "models": {
         "repeatmodels": {
@@ -258,7 +250,7 @@ As with any Dojo-based web application, it's important to create your HTML page 
 
 .. html
 
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  <!DOCTYPE HTML PUBLIC "-// W3C// DTD HTML 4.01// EN" "http:// www.w3.org/TR/html4/strict.dtd">
   <html>
     <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
@@ -280,20 +272,20 @@ The next step is registering the modules path for the custom application namespa
 
 .. js ::
 
-  //Get current path
+  // Get current path
   var path = window.location.pathname;
-  if (path.charAt(path.length)!="/"){
+  if(path.charAt(path.length)!="/"){
     path = path.split("/");
     path.pop();
     path=path.join("/");
   }
 
-  //register current application module path
+  // register current application module path
   dojo.registerModulePath("app", path);
 
-  //load configuration json file
+  // load configuration json file
   require(["dojo/_base/html", "dojox/app/main", "dojo/text!app/config.json"], function(dojo, Application, config){
-    //startup the application
+    // startup the application
     app = Application(eval("(" + config + ")"));
   });
 
@@ -309,8 +301,8 @@ The complete configuration for the sample app could look like:
     "description": "A Sample App",
     "splash": "splash",
 
-    //Dependencies for the application. The modules in the dependencies array object will be
-    //loaded before application is started.
+    // Dependencies for the application. The modules in the dependencies array object will be
+    // loaded before application is started.
     "dependencies": [
       "dojox/mobile/TabBar",
       "dojox/mobile/RoundRect",
@@ -320,11 +312,11 @@ The complete configuration for the sample app could look like:
       "dojox/mobile/Heading"
     ],
 
-    //stores we are using
+    // stores we are using
     "stores": {
       "namesStore":{
         "type": "dojo.store.Memory",
-        "params": {//parameters used to initialize the data store
+        "params": { // parameters used to initialize the data store
           "data": "modelApp.names"
         }
       },
@@ -336,7 +328,7 @@ The complete configuration for the sample app could look like:
       }
     },
 
-    //models and instantiation parameters for the models. Including 'type' as a property
+    // models and instantiation parameters for the models. Including 'type' as a property
     // allows one to override the class that will be used for the model.  By default it is
     // dojox/mvc/model
     // The model declared at application level will be initialized before application startup
@@ -360,19 +352,19 @@ The complete configuration for the sample app could look like:
 
     "template": "application.html",
 
-    //the name of the scene to load when the app is initialized.
+    // the name of the scene to load when the app is initialized.
     "defaultView": "home",
 
-    //The default animation effect of transition between sub scenes and views of
+    // The default animation effect of transition between sub scenes and views of
     // this application.
     "defaultTransition": "slide",
 
-    //scenes are groups of views and models loaded at once
-    //scenes and view in the application all have access to application level models
+    // scenes are groups of views and models loaded at once
+    // scenes and view in the application all have access to application level models
     "views": {
-      //simple view without any children views or scenes
-      //views can has its own dependencies which will be loaded
-      //before the view is first initialized.
+      // simple view without any children views or scenes
+      // views can has its own dependencies which will be loaded
+      // before the view is first initialized.
       "home": {
         "type": "dojox.app.view",
         "dependencies":[
@@ -383,15 +375,15 @@ The complete configuration for the sample app could look like:
         "template": "views/simple/home.html"
       },
 
-      //simple scene which loads all views and shows the default first
+      // simple scene which loads all views and shows the default first
       "main":{
-        //all views in the main scene will be bound to the user model
+        // all views in the main scene will be bound to the user model
         "models": [],
         "type": "dojox.app.scene",
         "template": "simple.html",
         "defaultView": "main",
         "defaultTransition": "slide",
-        //the views available to this scene
+        // the views available to this scene
         "views": {
           "main":{
             "template": "views/simple/main.html"
@@ -412,7 +404,7 @@ The complete configuration for the sample app could look like:
       },
       "repeat": {
         "type": "dojox.app.view",
-        //model declared at scene/view level will be accessible to this scene/view
+        // model declared at scene/view level will be accessible to this scene/view
         // or its children.
         "models": {
           "repeatmodels": {
