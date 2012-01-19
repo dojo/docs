@@ -66,17 +66,19 @@ This example shows how you can set up the same select as the previous example, b
 
   .. js ::
 
-    require(["dijit/form/Select", "dojo/_base/window"], function(Select, win){
-        new Select({
-            name: 'select2',
-            options: [
-                { label: 'TN', value: 'Tennessee' },
-                { label: 'VA', value: 'Virginia', selected: true },
-                { label: 'WA', value: 'Washington' },
-                { label: 'FL', value: 'Florida' },
-                { label: 'CA', value: 'California' }
-            ]
-        }).placeAt(win.body());
+    require(["dojo/ready", "dijit/form/Select", "dojo/_base/window"], function(ready, Select, win){
+        ready(function(){
+            new Select({
+                name: 'select2',
+                options: [
+                    { label: 'TN', value: 'Tennessee' },
+                    { label: 'VA', value: 'Virginia', selected: true },
+                    { label: 'WA', value: 'Washington' },
+                    { label: 'FL', value: 'Florida' },
+                    { label: 'CA', value: 'California' }
+                ]
+            }).placeAt(win.body());
+        });
     });
 
 
