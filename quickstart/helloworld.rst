@@ -9,19 +9,29 @@ Hello, World!
 .. contents ::
     :depth: 2
 
-The purpose of this tutorial is to provide a starting point for users who are new to Dojo. Whilst every effort is made to introduce as much as possible about Dojo, it is impossible to include more of the detailed information since to do so would be counterproductive and confusing to new users. For more information on the concepts introduced here, please see the links to other resources at the end of this document (Finding More Resources).
+The purpose of this tutorial is to provide a starting point for users who are new to Dojo.  Whilst every effort is made
+to introduce as much as possible about Dojo, it is impossible to include more of the detailed information since to do so
+would be counterproductive and confusing to new users.  For more information on the concepts introduced here, please see
+the links to other resources at the end of this document (Finding More Resources).
 
 Requirements
 ------------
 
-Obviously, you need Dojo first! You can get the latest stable build from `dojotoolkit.org <http://dojotoolkit.org/download>`_. Next you need a web server. Whether it's hosted offsite or onsite, on Linux or Windows or Mac ... matters naught. The Dojo JavaScript library is simply pulled from your web server to the browser as needed. However, the AJAX examples in this document require a server-side scripting language like PHP or ASP.
+Obviously, you need Dojo first! You can get the latest stable build from
+`dojotoolkit.org <http://dojotoolkit.org/download>`_.  Next you need a web server.  Whether it's hosted offsite or
+onsite, on Linux or Windows or Mac ... matters naught.  The Dojo JavaScript library is simply pulled from your web server
+to the browser as needed.  However, the AJAX examples in this document require a server-side scripting language like PHP
+or ASP.
 
-The Dojo and Dijit code, which runs on the client browser, is certified to run on IE, Firefox, Safari, Opera, Chrome, iOS, Android and Blackberry.
+The Dojo and Dijit code, which runs on the client browser, is certified to run on IE, Firefox, Safari, Opera, Chrome,
+iOS, Android and Blackberry.
 
 Setting Up Dojo
 ---------------
 
-First, you should create a directory on the web server. We'll call ours HelloWorldTutorial. Then create a directory called dojoroot underneath it. Finally, use your favorite unzipping tool to unzip Dojo into /HelloWorldTutorial/dojoroot. It'll look like this when you're done:
+First, you should create a directory on the web server.  We'll call ours HelloWorldTutorial.  Then create a directory
+called dojoroot underneath it.  Finally, use your favorite unzipping tool to unzip Dojo into
+/HelloWorldTutorial/dojoroot.  It'll look like this when you're done:
 
 .. image :: helloworld.png
   :alt: server directory structure
@@ -29,7 +39,8 @@ First, you should create a directory on the web server. We'll call ours HelloWor
 Getting Started
 ---------------
 
-Once we have setup the directory and file structure for the tutorial, we will need to setup the JavaScript component of our HTML page. Create a new html file HelloWorld.html in /HelloWorldTutorial directory:
+Once we have setup the directory and file structure for the tutorial, we will need to setup the JavaScript component of
+our HTML page.  Create a new HTML file HelloWorld.html in /HelloWorldTutorial directory:
 
 .. html ::
 
@@ -59,9 +70,12 @@ As it can be seen above, the page is a just a standard HTML skeleton with three 
 Creating a Button Widget
 ------------------------
 
-Ok, now for the exciting part! In this example we're going to create a Button widget with the text 'Hello World!'. In the case of the Button widget, three visual states (mouseOut, mouseOver, and mouseDown) are available which means that we are able to enhance the user's experience somewhat.
+Ok, now for the exciting part!  In this example we're going to create a Button widget with the text 'Hello World!'.  In
+the case of the Button widget, three visual states (mouseOut, mouseOver, and mouseDown) are available which means that
+we are able to enhance the user's experience somewhat.
 
-The first step in creating the widget is telling Dojo to load the appropriate modules. In the header, add the following JavaScript code:
+The first step in creating the widget is telling Dojo to load the appropriate modules.  In the header, add the following
+JavaScript code:
 
 .. html ::
 
@@ -70,7 +84,10 @@ The first step in creating the widget is telling Dojo to load the appropriate mo
       require(["dojo/parser", "dijit/form/Button"]);
   </script>
 
-The require line instructs Dojo to load dojo/parser module and the Button widget. If you were to omit this line, the markup code in the following steps for the button would not be evaluated by Dojo upon loading, resulting in a plain HTML button instead of what you expect. Parser module converts specially decorated nodes in the DOM (HTML5 valid data-dojo-* attributes) as you will see in the next step.
+The require line instructs Dojo to load dojo/parser module and the Button widget.  If you were to omit this line, the
+markup code in the following steps for the button would not be evaluated by Dojo upon loading, resulting in a plain HTML
+button instead of what you expect.  Parser module converts specially decorated nodes in the DOM (HTML5 valid data-dojo-*
+attributes) as you will see in the next step.
 
 After making the changes, insert the following code into the body section of the HTML:
 
@@ -78,14 +95,21 @@ After making the changes, insert the following code into the body section of the
 
   <button data-dojo-type="dijit/form/Button">Hello World!</button>
 
-The key attribute of this HTML element to notice is the data-dojo-type attribute. This attribute is responsible for instructing Dojo on how to process the element when the page is loading. In this case we've used a button element for the button though we could have used an input element - Dojo will work with either as long as the data-dojo-type attribute is present. It is worth noting that if we did use an input element, we would have to specify the button's text by using adding a caption attribute that contained the desired text. Dojo parser will convert this specially decorated DOM node into Dijit. In this case into a dijit/form/Button widget.
+The key attribute of this HTML element to notice is the data-dojo-type attribute.  This attribute is responsible for
+instructing Dojo on how to process the element when the page is loading.  In this case we've used a button element for
+the button though we could have used an input element - Dojo will work with either as long as the data-dojo-type
+attribute is present.  It is worth noting that if we did use an input element, we would have to specify the button's
+text by using adding a caption attribute that contained the desired text.  Dojo parser will convert this specially
+decorated DOM node into Dijit.  In this case into a dijit/form/Button widget.
 
 Connecting an Event to the Widget
 ---------------------------------
 
-A button is all well and good, but what about getting it to do something when it's clicked? We could just specify an onclick event handler for the button, but there's another, more efficient way - the Dojo event system!
+A button is all well and good, but what about getting it to do something when it's clicked?  We could just specify an
+onclick event handler for the button, but there's another, more efficient way - the Dojo event system!
 
-The easiest way to attach an event to a button is through a script tag. But not just any script tag ... this one has a type of dojo/on, like this:
+The easiest way to attach an event to a button is through a script tag.  But not just any script tag ... this one has a
+type of dojo/on, like this:
 
 .. html ::
 
@@ -96,14 +120,20 @@ The easiest way to attach an event to a button is through a script tag. But not 
       </script>
   </button>
 
-Pretty simple, eh? Putting the script inside the tag body makes a good deal of sense. And you can harness the full power of DOM Level 2 events inside the script. That means you can detect SHIFT and CTRL keys, get all sorts of event properties, and bubble events up through the HTML tree. If you've ever used Level 2 events, you know how IE and Firefox use different syntax. In Dojo, the same functions work in any supported browser. That's powerful stuff!
+Pretty simple, eh? Putting the script inside the tag body makes a good deal of sense.  And you can harness the full
+power of DOM Level 2 events inside the script.  That means you can detect SHIFT and CTRL keys, get all sorts of event
+properties, and bubble events up through the HTML tree.  If you've ever used Level 2 events, you know how IE and Firefox
+use different syntax.  In Dojo, the same functions work in any supported browser.  That's powerful stuff!
 
 Reading Data from the Server
 ----------------------------
 
-Having an alert pop up when we press the button is great, but what if we want to retrieve some data from the server? Again, Dojo comes to the rescue with an easy method of accomplishing this - dojo.xhr. For easy reference, all the code for examples in this tutorial is available at the bottom of this page (attachments section).
+Having an alert pop up when we press the button is great, but what if we want to retrieve some data from the server?
+Again, Dojo comes to the rescue with an easy method of accomplishing this - dojo.xhr.  For easy reference, all the code
+for examples in this tutorial is available at the bottom of this page (attachments section).
 
-To get started, we first need a callback function to handle the data to be returned from the server. Create a new file HelloWorld-txt.html based on the HelloWorld.html and insert the following code into the header:
+To get started, we first need a callback function to handle the data to be returned from the server.  Create a new file
+HelloWorld-txt.html based on your previous HelloWorld.html and insert the following code into the header:
 
 .. html ::
 
@@ -116,9 +146,11 @@ To get started, we first need a callback function to handle the data to be retur
       }
   </script>
 
-The two arguments to the functions (data, and ioArgs) are important - don't leave any of them out! The first argument (data) contains the data sent back from the server, whilst the second argument contains a Dojo I/O Bind object. Only the first concerns us right now.
+The two arguments to the functions (data, and ioArgs) are important - don't leave any of them out!  The first argument
+(data) contains the data sent back from the server, whilst the second argument contains a Dojo I/O Bind object.  Only
+the first concerns us right now.
 
-The next step is to link the click of the button to the server request. To do this, modify the following code:
+The next step is to link the click of the button to the server request.  To do this, modify the following code:
 
 .. html ::
 
@@ -140,9 +172,11 @@ To this:
       });
   </script>
 
-The above code basically tells Dojo to query the URL specified by url and to use the function specified by handler to process the response from the server.
+The above code basically tells Dojo to query the URL specified by url and to use the function specified by handler to
+process the response from the server.
 
-Finally, we need to create another file in the same directory as HelloWorld-txt.html called response.txt. In this file, place the text 'Welcome to the Dojo Hello World Tutorial'.
+Finally, we need to create another file in the same directory as HelloWorld-txt.html called response.txt.  In this file,
+place the text 'Welcome to the Dojo Hello World Tutorial'.
 
 Now, when the button is clicked, a JavaScript alert should display the text from the response.txt file. Dojo-Easy!
 
@@ -151,13 +185,20 @@ Next, we'll look at doing something meaningful with that server request.
 Sending Data to the Server Using GET
 ------------------------------------
 
-It's all well and good retrieving static data from the server, but it is hardly a widely used situation in real life. So, instead of simply requesting data from the server we will also send some information for it to process. In this section, we'll use the GET method whilst in the next section we'll use the POST method. For easy reference, the code for this section is available as HelloWorld-get.html in the attachments section at the bottom of this tutorial. For server side code create file HelloWorldResponseGET.<type> where type is ASP ('.asp'), PHP ('.php'), ColdFusion ('.cfm'), or Java ('.jsp').
+It's all well and good retrieving static data from the server, but it is hardly a widely used situation in real life.  So,
+instead of simply requesting data from the server we will also send some information for it to process.  In this section,
+we'll use the GET method whilst in the next section we'll use the POST method.  For easy reference, the code for this
+section is available as HelloWorld-get.html in the attachments section at the bottom of this tutorial.  For server side
+code create file HelloWorldResponseGET.<type> where type is ASP ('.asp'), PHP ('.php'), ColdFusion ('.cfm'), or Java
+('.jsp').
 
-Firstly, in the markup section of the HelloWorld-get.html file (i.e. the body section), we need to add another element - an input element. So, change the code from:
+Firstly, in the markup section of the HelloWorld-get.html file (i.e. the body section), we need to add another
+element - an input element.  So, change the code from:
 
 .. html ::
 
   <button data-dojo-type="dijit/form/Button">
+      Hello World!
       <script type="dojo/on" data-dojo-event="click">
           require(["dojo/_base/xhr"], function(xhr){
               xhr.get({
@@ -188,17 +229,30 @@ to:
   </button>
   Please enter your name: <input type="text" id="name" />
 
-Before we go any further - it is important to mention that the url property in the xhr.get function call must be set to the file that is appropriate to your environment. If you are using an ASP server then the value must read 'HelloWorldResponseGET.asp' instead of 'HelloWorldResponseGET.php' Likewise, if you are using a ColdFusion server then the value must read 'HelloWorldResponseGET.cfm' instead of 'HelloWorldResponseGET.php'. Finally, if you are using a Java server (JSP) then the value must read 'HelloWorldResponseGET.jsp' instead of 'HelloWorldResponseGET.php', or if you are using a Perl server then the value must read 'HelloWorldResponseGET.pl' instead of 'HelloWorldResponseGET.php'. The code for these files is in the sections below.
+Before we go any further - it is important to mention that the url property in the xhr.get function call must be set to
+the file that is appropriate to your environment.  If you are using an ASP server then the value must read
+'HelloWorldResponseGET.asp' instead of 'HelloWorldResponseGET.php' Likewise, if you are using a ColdFusion server then
+the value must read 'HelloWorldResponseGET.cfm' instead of 'HelloWorldResponseGET.php'.  Finally, if you are using a
+Java server (JSP) then the value must read 'HelloWorldResponseGET.jsp' instead of 'HelloWorldResponseGET.php', or if you
+are using a Perl server then the value must read 'HelloWorldResponseGET.pl' instead of 'HelloWorldResponseGET.php'.  The
+code for these files is in the sections below.
 
-In the code above, you will notice that there is a new property that has been passed to the xhr.get function. This property - content - allows the programmer to send arbitrary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):
+In the code above, you will notice that there is a new property that has been passed to the xhr.get function. This
+property - content - allows the programmer to send arbitrary values to the server as parameters.  In this case, since we
+are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox
+available to it as the GET parameter 'name'.  It is worth mentioning that if the script expected the parameter under a
+different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName'
+on the left of the assignment operator ':'):
 
 .. html ::
 
   content: {myName: dom.byId('name').value }
 
-Since we've not used it before, it is also worth noting the call dom.byId('name').value. Quite simply, this call is a shortcut for the standard document.getElementById(..) function.
+Since we've not used it before, it is also worth noting the call dom.byId('name').value.  Quite simply, this call is a
+shortcut for the standard document.getElementById(..) function.
 
-Finally, if you enter your name into the text box and you click the 'Hello World' button, an alert box should appear with the message 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
+Finally, if you enter your name into the text box and you click the 'Hello World' button, an alert box should appear
+with the message 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
 
 Here are the server side scripts.
 
@@ -296,7 +350,11 @@ ___________________
 Sending Data to the Server Using POST
 -------------------------------------
 
-Using GET data is all well and good, but sometimes you want to use Dojo to improve the user's experience when using a traditional HTML form. As usual, Dojo has a very nice way of making this easier. For easy reference, the code for this section is available as HelloWorld-post.html in the attachments section. Additionally, as with the last section, you will need to change the 'url' property to point to the file that is appropriate to your environment.
+Using GET data is all well and good, but sometimes you want to use Dojo to improve the user's experience when using a
+traditional HTML form.  As usual, Dojo has a very nice way of making this easier.  For easier reference, the code for
+this section is available as HelloWorld-post.html in the attachments section at the bottom of this document.  Additionally,
+as with the last section, you will need to change the 'url' property to point to the file that is appropriate to your
+environment.
 
 First, we need to change the markup in the body from:
 
@@ -308,11 +366,11 @@ to:
 
 .. html ::
 
-  <form id="myForm" method="POST">
+  <form id="myForm" method="post">
       Please enter your name: <input type="text" name="name" />
   </form>
 
-Next we need to change the dojo/method:
+Next we need to change the dojo/on type script:
 
 .. html ::
   
@@ -345,9 +403,12 @@ to:
       });
   </script>
 
-As can be seen from the code above, we've changed our function xhr.get to xhr.post. We've removed the 'content' property and replaced it with a new property 'form'. This basically informs the dojo.xhrPost function that it needs to use the form 'myForm' as the source for the data in the call.
+As can be seen from the code above, we've changed our function xhr.get to xhr.post.  We've removed the 'content' property
+and replaced it with a new property 'form'.  This basically informs the dojo.xhrPost function that it needs to use the
+form 'myForm' as the source for the data in the call.
 
-As with the last section, entering your name and clicking 'Hello World!' should yield a message such as 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
+As with the last section, entering your name and clicking 'Hello World!' should yield a message such as 'Hello <name>,
+welcome to the world of Dojo!' where <name> is the name you entered into the text box.
 
 Using a PHP Server
 __________________
@@ -443,7 +504,8 @@ ___________________
 Finding more resources
 ----------------------
 
-I hope you've enjoyed this tutorial and found it informative. No doubt though, you will need more information on Dojo and how it and it's widgets work. Below is a list of links that will point you in the right direction.
+I hope you've enjoyed this tutorial and found it informative.  No doubt though, you will need more information on Dojo
+and how it and it's widgets work.  Below is a list of links that will point you in the right direction.
 
 1. `The documentation page for Dojo <http://dojotoolkit.org/documentation/>`_ with links to all documentation.
 
@@ -617,7 +679,7 @@ Contents of HelloWorld-post.html file:
               });
           </script>
       </button>
-      <form id="myForm" method="POST">
+      <form id="myForm" method="post">
           Please enter your name: <input type="text" name="name" />
       </form>
   </body>
