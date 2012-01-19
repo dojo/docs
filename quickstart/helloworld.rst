@@ -17,7 +17,7 @@ the links to other resources at the end of this document (Finding More Resources
 Requirements
 ------------
 
-Obviously, you need Dojo first! You can get the latest stable build from
+Obviously, you need Dojo first!  You can get the latest stable build from
 `dojotoolkit.org <http://dojotoolkit.org/download>`_.  Next you need a web server.  Whether it's hosted offsite or
 onsite, on Linux or Windows or Mac ... matters naught.  The Dojo JavaScript library is simply pulled from your web server
 to the browser as needed.  However, the AJAX examples in this document require a server-side scripting language like PHP
@@ -64,7 +64,7 @@ As it can be seen above, the page is a just a standard HTML skeleton with three 
 
 1. A couple of CSS style sheets.
 2. Dojo bootstrap file dojo.js with some dojo configuration flags.
-3. Claro *theme* which we will use from Dijit for this example. There are other themes available.
+3. Claro *theme* which we will use from Dijit for this example.  There are other themes available.
 
 
 Creating a Button Widget
@@ -120,7 +120,7 @@ type of dojo/on, like this:
       </script>
   </button>
 
-Pretty simple, eh? Putting the script inside the tag body makes a good deal of sense.  And you can harness the full
+Pretty simple, eh?  Putting the script inside the tag body makes a good deal of sense.  And you can harness the full
 power of DOM Level 2 events inside the script.  That means you can detect SHIFT and CTRL keys, get all sorts of event
 properties, and bubble events up through the HTML tree.  If you've ever used Level 2 events, you know how IE and Firefox
 use different syntax.  In Dojo, the same functions work in any supported browser.  That's powerful stuff!
