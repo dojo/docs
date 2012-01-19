@@ -19,7 +19,7 @@ The dojox calendar widget displays events from a data store along time using wid
 Creating a Calendar
 ===================
 
-Note: a standard doctype must be set on the page that includes a calendar in order to be displayed properly on Internet Explorer.
+Note: a standard doctype must be set on the page that includes a calendar in order to be displayed properly on Internet Explorer (IE7+ only).
 
 
 The calendar widget is available on the dojox.calendar package.
