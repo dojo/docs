@@ -53,7 +53,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.calendar <dojox/calendar>`
 
-    Provides a widget to display events in time using several views
+  Provides a widget to display events in time using several views
 
 * :ref:`dojox.charting <dojox/charting>`
 
