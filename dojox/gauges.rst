@@ -10,6 +10,8 @@ dojox.gauges
 .. contents ::
     :depth: 2
 
+NOTE: A new gauges framework is available since Dojo 1.8, see http://livedocs.dojotoolkit.org/dojox/dgauges
+
 This is a collection of gauge widgets used to display numerical data.
 
 Base gauges
