@@ -213,7 +213,7 @@ An example of declarative would be:
 .. html ::
 
     <div data-dojo-type="dojox/data/JsonRestStore" data-dojo-id="userDataStore"
-        data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
+        data-dojo-props="target: '/users/', idAttribute: 'id'"></div>
 
 *Note* it is necessary to use ``data-dojo-id`` with non-Widget (dijit) declarative objects, like DataStores in order to
 make available a JavaScript variable that can be passed to other declarative objects.  Also it should be noted that
