@@ -22,12 +22,15 @@ Usage
 
 .. js ::
  
-    dojo.require("dijit.Dialog");
-    // create the dialog:
-    myDialog = new dijit.Dialog({
-        title: "My Dialog",
-        content: "test content",
-        style: "width: 300px"
+    require(["dojo/ready", "dijit/Dialog"], function(ready, Dialog){
+        ready(function(){
+            // create the dialog:
+            myDialog = new Dialog({
+                title: "My Dialog",
+                content: "test content",
+                style: "width: 300px"
+            });
+        });
     });
 
 After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the 
@@ -38,13 +41,13 @@ to your <body> tag, in order to show the Dialog with the right styles:
 
 .. html ::
 
- <html>
- <head>
- ...
- </head>
- <body class="claro">
- ...
- </body>
+    <html>
+    <head>
+        ...
+    </head>
+    <body class="claro">
+        ...
+    </body>
 
 
 Examples
@@ -61,10 +64,7 @@ The first example creates a Dialog via markup from an existing DOM node:
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Button", "dijit/layout/TabContainer", "dijit/layout/ContentPane"]);
 
   Some simple HTML code you need to define the place where your Dialog should be created.
   
@@ -81,7 +81,9 @@ The first example creates a Dialog via markup from an existing DOM node:
     <button id="buttonOne" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Show the Dialog:
-            dijit.byId("dialogOne").show();
+            require(["dijit/registry"], function(registry){
+                registry.byId("dialogOne").show();
+            });
         </script>
     </button>
 
@@ -102,27 +104,29 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-
-    var secondDlg;
-    dojo.ready(function(){
-        // create the dialog:
-        secondDlg = new dijit.Dialog({
-            title: "Programmatic Dialog Creation",
-            style: "width: 300px"
+    require(["dojo/ready", "dijit/Dialog", "dijit/form/Button"], function(ready, Dialog, Button){
+        ready(function(){
+            // create the dialog
+            var myDialog = new Dialog({
+                title: "Programmatic Dialog Creation",
+                style: "width: 300px"
+            });
+            
+            // create a button for Dialog demonstration
+            var myButton = new Button({
+                label: "Show me!",
+                onClick: function(){
+                    myDialog.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
+                    myDialog.show();
+                }
+            }, "progbutton");
         });
     });
-    showDialogTwo = function(){
-        // set the content of the dialog:
-        secondDlg.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
-        secondDlg.show();
-    }
 
   .. html ::
     
     <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
-    <button id="buttonTwo" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
+    <button id="progbutton" type="button">Show me!</button>
 
 
 
@@ -138,16 +142,15 @@ The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Button"]);
 
   And some CSS rules:
 
   .. css ::
 
-        #dialogColor_underlay {
-            background-color:green;
-        }
+    #dialogColor_underlay {
+        background-color:green;
+    }
 
 
   And the markup to create the Dialog:
@@ -155,13 +158,15 @@ The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``
   .. html ::
 
     <div id="dialogColor" title="Colorful" data-dojo-type="dijit/Dialog">
-         My background color is Green
+        My background color is Green
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
     <button id="button4" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("dialogColor").show();
+            require(["dijit/registry"], function(registry){
+                registry.byId("dialogColor").show();
+            });
         </script>
     </button>
 
