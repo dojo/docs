@@ -396,16 +396,15 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
 
   .. html ::
 
-    <div id="external" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
+    <div data-dojo-id="myExternalDialog" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('external').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){myExternalDialog.show();}" type="button">Show me!</button>
 
 
 
@@ -419,12 +418,11 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
 
   .. html ::
 
-    <div id="sized" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
+    <div data-dojo-id="mySizedDialog" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
         <div style="width: 200px; height: 100px; overflow: auto;">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
@@ -436,7 +434,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     </div>
 
     <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mySizedDialog.show();}" type="button">Show me!</button>
 
 
 Accessibility
@@ -505,7 +503,7 @@ spoken by the screen reader when the dialog opens, add the aria-describedby prop
 Include an element containing the text you want spoken in the dialog.
 The value of the aria-describedby property is the id of the element containing the text.
 
-.. js ::
+.. html ::
 
   <div data-dojo-type="dijit/Dialog" title="Example Dialog" aria-describedby="intro">
     <div id="intro">Text to describe dialog</div>
@@ -514,7 +512,7 @@ The value of the aria-describedby property is the id of the element containing t
 
 For earlier Dojo versions, you can add an onshow event handler that adds the aria-describedby property:
 
-.. js ::
+.. html ::
 
   <div data-dojo-type="dijit/Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
     <div id="intro">Text to describe dialog</div>
