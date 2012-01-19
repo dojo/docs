@@ -57,7 +57,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.charting <dojox/charting>`
 
-  Amazing charting library
+  A charting library
 
 * :ref:`dojox.collections <dojox/collections>`
 
@@ -368,6 +368,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 * :ref:`dojox.gantt <dojox/gantt>`
 
   A project and resource management tool
+
+* :ref:`dojox.dgauges <dojox/dgauges>`
+
+  The new Gauges module provides a framework of classes for creating custom gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular gauges (horizontal and vertical) are supported.
 
 * :ref:`dojox.gauges <dojox/gauges>`
 
