@@ -120,11 +120,12 @@ This reduces the number of files downloaded, speeding up page load.
 Also, the remaining gradient images files (for IE) no longer contain any blue.
 Thus, customizing claro to a different does not require modifying those files.
 You are still required however to update icon files that contain the theme's primary color, such as:
-   - checkboxes and radio buttons
-   - the slider handles
-   - calendar arrows
-   - Dialog and TabContainer close icons
-   - etc.
+
+- checkboxes and radio buttons
+- the slider handles
+- calendar arrows
+- Dialog and TabContainer close icons
+- etc.
 
 
 Performance Improvements
