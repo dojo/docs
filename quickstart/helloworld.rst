@@ -85,13 +85,13 @@ Connecting an Event to the Widget
 
 A button is all well and good, but what about getting it to do something when it's clicked? We could just specify an onclick event handler for the button, but there's another, more efficient way - the Dojo event system!
 
-The easiest way to attach an event to a button is through a script tag. But not just any script tag ... this one has a type of dojo/method, like this:
+The easiest way to attach an event to a button is through a script tag. But not just any script tag ... this one has a type of dojo/on, like this:
 
 .. html ::
 
   <button data-dojo-type="dijit/form/Button">
       Hello World!
-      <script type="dojo/method" data-dojo-event="onClick">
+      <script type="dojo/on" data-dojo-event="click">
           alert('You pressed the button');
       </script>
   </button>
@@ -122,7 +122,7 @@ The next step is to link the click of the button to the server request. To do th
 
 .. html ::
 
-  <script type="dojo/method" data-dojo-event="onClick">
+  <script type="dojo/on" data-dojo-event="click">
       alert('You pressed the button');
   </script>
 
@@ -130,7 +130,7 @@ To this:
 
 .. html ::
 
-  <script type="dojo/method" data-dojo-event="onClick">
+  <script type="dojo/on" data-dojo-event="click">
       require(["dojo/_base/xhr"], function(xhr){
           xhr.get({
               url: 'response.txt',
@@ -158,7 +158,7 @@ Firstly, in the markup section of the HelloWorld-get.html file (i.e. the body se
 .. html ::
 
   <button data-dojo-type="dijit/form/Button">
-      <script type="dojo/method" data-dojo-event="onClick">
+      <script type="dojo/on" data-dojo-event="click">
           require(["dojo/_base/xhr"], function(xhr){
               xhr.get({
                   url: 'response.txt',
@@ -175,7 +175,7 @@ to:
 
   <button data-dojo-type="dijit/form/Button">
       Hello World!
-      <script type="dojo/method" data-dojo-event="onClick">
+      <script type="dojo/on" data-dojo-event="click">
           require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom){
               xhr.get({
                   url: 'HelloWorldResponseGET.php',
@@ -316,7 +316,7 @@ Next we need to change the dojo/method:
 
 .. html ::
   
-  <script type="dojo/method" data-dojo-event="onClick">
+  <script type="dojo/on" data-dojo-event="click">
       require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom){
           xhr.get({
               url: 'HelloWorldResponseGET.php',
@@ -331,7 +331,7 @@ to:
 
 .. html ::
 
-  <script type="dojo/method" data-dojo-event="onClick">
+  <script type="dojo/on" data-dojo-event="click">
       // Don't forget to replace the value for 'url' with
       // the value of appropriate file for your server
       // (i.e. 'HelloWorldResponsePOST.asp') for an ASP server
@@ -474,7 +474,7 @@ Contents of HelloWorld.html file:
   <body class="claro">
       <button data-dojo-type="dijit/form/Button">
           Hello World!
-          <script type="dojo/method" data-dojo-event="onClick">
+          <script type="dojo/on" data-dojo-event="click">
               alert('You pressed the button');
           </script>
       </button>
@@ -511,7 +511,7 @@ Contents of HelloWorld-txt.html file:
   <body class="claro">
       <button data-dojo-type="dijit/form/Button">
           Hello World!
-          <script type="dojo/method" data-dojo-event="onClick">
+          <script type="dojo/on" data-dojo-event="click">
               require(["dojo/_base/xhr"], function(xhr){
                   xhr.get({
                       url: 'response.txt',
@@ -561,7 +561,7 @@ Contents of HelloWorld-get.html file:
   <body class="claro">
       <button data-dojo-type="dijit/form/Button">
           Hello World!
-          <script type="dojo/method" data-dojo-event="onClick">
+          <script type="dojo/on" data-dojo-event="click">
               require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom){
                   xhr.get({
                       url: 'HelloWorldResponseGET.php',
@@ -606,7 +606,7 @@ Contents of HelloWorld-post.html file:
   <body class="claro">
       <button data-dojo-type="dijit/form/Button">
           Hello World!
-          <script type="dojo/method" data-dojo-event="onClick">
+          <script type="dojo/on" data-dojo-event="click">
               require(["dojo/_base/xhr"], function(xhr){
                   xhr.post({
                       url: 'HelloWorldResponsePOST.php',
