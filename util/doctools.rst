@@ -1,8 +1,8 @@
 .. _util/doctools:
 
-========================
-Dojo Documentation Tools
-========================
+============================
+Dojo API Documentation Tools
+============================
 
 :Project owner: Neil Roberts
 :since: V1.3
