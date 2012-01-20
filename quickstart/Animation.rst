@@ -525,6 +525,6 @@ See details on application of animation in specific Digits in :ref:`Themes and t
 See Also
 ========
 
-* :ref:`dojo.fx <dojo/fx>`_
-* :ref:`dojox.fx <dojox/fx>`_
-* :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`_
+* :ref:`dojo.fx <dojo/fx>`
+* :ref:`dojox.fx <dojox/fx>`
+* :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`
