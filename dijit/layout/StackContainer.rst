@@ -1,7 +1,7 @@
 .. _dijit/layout/StackContainer:
 
 ===========================
-dijit.layout.StackContainer
+dijit/layout/StackContainer
 ===========================
 
 :since: V1.0
@@ -79,30 +79,30 @@ Here's an example of a programmatically created StackContainer, and associated S
  
   .. js ::
 
-    dojo.require("dijit.layout.StackContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
-        var sc = new dijit.layout.StackContainer({
-            style: "height: 300px; width: 400px;",
-            id: "myProgStackContainer"
-        }, "scontainer-prog");
-  
-        var cp1 = new dijit.layout.ContentPane({
-             title: "page 1",
-             content: "page 1 content"
-        });
-        sc.addChild(cp1);
-  
-        var cp2 = new dijit.layout.ContentPane({
-             title: "page 2",
-             content: "page 2 content"
-        });
-        sc.addChild(cp2);
-  
-        var controller = new dijit.layout.StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
+    require(["dojo/ready", "dijit/layout/StackContainer", "dijit/layout/ContentPane", "dijit/layout/StackController"], function(ready, StackContainer, ContentPane, StackController){
+        ready(function(){
+            var sc = new StackContainer({
+                style: "height: 300px; width: 400px;",
+                id: "myProgStackContainer"
+            }, "scontainer-prog");
 
-        sc.startup();
-        controller.startup();
+            var cp1 = new ContentPane({
+                title: "page 1",
+                content: "page 1 content"
+            });
+            sc.addChild(cp1);
+
+            var cp2 = new ContentPane({
+                title: "page 2",
+                content: "page 2 content"
+            });
+            sc.addChild(cp2);
+
+            var controller = new StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
+
+            sc.startup();
+            controller.startup();
+        });
     });
 
   The HTML is very simple
@@ -122,23 +122,21 @@ Here you will see a declaratively created StackContainer
   
   .. js ::
 
-    dojo.require("dijit.layout.StackContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/layout/StackContainer", "dijit/layout/StackController", "dijit/layout/ContentPane", "dijit/form/Button"]);
 
   .. html ::
 
-    <button id="previous" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').back()}">&lt;</button>
-    <span data-dojo-type="dijit/layout/StackController" data-dojo-props="containerId:'stackContainer'"></span>
-    <button id="next" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').forward()}">&gt;</button>
-  
-    <div data-dojo-type="dijit/layout/StackContainer" id="stackContainer">
-      <div data-dojo-type="dijit/layout/ContentPane" title="Questions">
-      Please answer following questions
-      </div>
-      <div data-dojo-type="dijit/layout/ContentPane" title="Answers">
-      Here is what you should have answered :P
-      </div>
+    <button id="previous" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){myStackContainer.back()}">&lt;</button>
+        <span data-dojo-type="dijit/layout/StackController" data-dojo-props="containerId:'stackContainer'"></span>
+    <button id="next" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){myStackContainer.forward()}">&gt;</button>
+
+    <div data-dojo-type="dijit/layout/StackContainer" data-dojo-id="myStackContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" title="Questions">
+            Please answer following questions
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" title="Answers">
+            Here is what you should have answered :P
+        </div>
     </div>
 
   .. css ::
