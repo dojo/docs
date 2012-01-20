@@ -1,17 +1,17 @@
 .. _dijit/form/VerticalRule:
 
 =======================
-dijit.form.VerticalRule
+dijit/form/VerticalRule
 =======================
 
 .. contents ::
     :depth: 3
 
-This widget is used primarily for creating Hash marks for the :ref:`dijit.form.VerticalSlider <dijit/form/Slider>` widget.
+This widget is used primarily for creating Hash marks for the :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>` widget.
 The rule is currently displayed to the right of the slider, if present.
 The number of hash marks to be displayed is to be specified through the 'count' attribute.
 
-For examples of using this widget along with the VerticalSlider refer :ref:`dijit.form.VerticalSlider <dijit/form/Slider>` .
+For examples of using this widget along with the VerticalSlider refer :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>` .
 
 Examples
 ========
@@ -23,8 +23,7 @@ Standalone Ruler
 
   .. js ::
 
-    dojo.require("dijit.form.VerticalRule");
-    dojo.require("dijit.form.VerticalRuleLabels");
+    require(["dojo/parser", "dijit/form/VerticalRule", "dijit/form/VerticalRuleLabels"]);
 
   .. html ::
 
@@ -45,4 +44,4 @@ Standalone Ruler
 See Also
 ========
 
-* :ref:`dijit.form.VerticalSlider <dijit/form/Slider>`
+* :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>`
