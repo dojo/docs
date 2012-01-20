@@ -10,8 +10,7 @@ dijit/form/VerticalSlider
 Introduction
 ============
 
-A **dijit/form/VerticalSlider** is a scale with a handle you can drag up/down to select a value.  It is based on module
-dijit/form/HorizontalSlider.
+A **dijit/form/VerticalSlider** is a scale with a handle you can drag up/down to select a value.  It is based on module :ref:`dijit/form/HorizontalSlider <dijit/form/HorizontalSlider>`.
 
 Usage
 =====
