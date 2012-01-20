@@ -15,7 +15,7 @@ dijit/_OnDijitClickMixin
 Introduction
 ============
 
-`dijit/_OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>`_ is a useful mixin
+`dijit/_OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>` is a useful mixin
 for widgets that need to be accessible, that require nodes to be "clicked" via the keyboard
 in addition to via the mouse(or a touch event).
 
