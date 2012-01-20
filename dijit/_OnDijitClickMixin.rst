@@ -1,7 +1,7 @@
 .. _dijit/_OnDijitClickMixin:
 
 ========================
-dijit._OnDijitClickMixin
+dijit/_OnDijitClickMixin
 ========================
 
 :Authors: Bill Keese
@@ -15,7 +15,7 @@ dijit._OnDijitClickMixin
 Introduction
 ============
 
-`dijit._OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>`_ is a useful mixin
+`dijit/_OnDijitClickMixin <http://dojotoolkit.org/api/dijit/_OnDijitClickMixin>`_ is a useful mixin
 for widgets that need to be accessible, that require nodes to be "clicked" via the keyboard
 in addition to via the mouse(or a touch event).
 
@@ -23,27 +23,31 @@ For example, in the code below the user can tab to the <span> node and press eit
 and it will have the same effect as clicking the span with the mouse:
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async:true, parseOnLoad: false
   :width: 400
   :height: 250
   :toolbar: versions, dir
 
   .. js ::
 
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dijit._OnDijitClickMixin");
-        dojo.require("dojo.parser");
-
-        dojo.ready(function(){
-            var MyButton = dojo.declare([dijit._WidgetBase, dijit._TemplatedMixin, dijit._OnDijitClickMixin], {
+    require([
+        "dojo/ready",
+        "dijit/_WidgetBase",
+        "dijit/_TemplatedMixin",
+        "dijit/_OnDijitClickMixin",
+        "dojo/_base/declare",
+        "dojo/dom"
+    ], function(ready, _WidgetBase, _TemplatedMixin, _OnDijitClickMixin, declare, dom){
+        ready(function(){
+            var MyButton = declare([_WidgetBase, _TemplatedMixin, _OnDijitClickMixin], {
                 templateString: "<span tabIndex=0 data-dojo-attach-event='ondijitclick: onClick'>click me</span>",
                 onClick: function(evt){
-                        alert("Awesome!!");
+                    alert("Awesome!!");
                 }
             });
-            new MyButton({}, dojo.byId("myButton"));
+            new MyButton({}, dom.byId("myButton"));
         });
+    });
 
   .. html ::
 
