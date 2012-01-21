@@ -1,7 +1,7 @@
 .. _dijit/layout/BorderContainer:
 
 ============================
-dijit.layout.BorderContainer
+dijit/layout/BorderContainer
 ============================
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
@@ -84,28 +84,27 @@ Declarative example
 
   .. css ::
 
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        overflow:hidden;
-      }
+   html, body {
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       overflow:hidden;
+   }
 
-      #borderContainer {
-        width: 100%;
-        height: 100%;
-      }
+   #borderContainer {
+       width: 100%;
+       height: 100%;
+   }
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dijit.layout.BorderContainer");
+    require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
 
   .. html ::
     
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi, I'm leading pane</div>
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center pane</div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi, I'm leading pane</div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center pane</div>
     </div>
 
 
@@ -122,30 +121,29 @@ This example uses layoutPriority to include two left panes in one BorderContaine
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dijit.layout.BorderContainer");
+    require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
   
   .. html ::
     
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="layoutPriorityBorderContainer">
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:1" style="width: 100px;">Left #1</div>
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:2" style="width: 100px;">Left #2</div>
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:1" style="width: 100px;">Left #1</div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:2" style="width: 100px;">Left #2</div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
   
   .. css ::
  
-      html, body {
+    html, body {
         width: 100%;
         height: 100%;
         margin: 0;
         overflow:hidden;
-      }
+    }
 
-      #layoutPriorityBorderContainer {
+    #layoutPriorityBorderContainer {
         width: 100%;
         height: 100%;
-      }
+    }
 
 
 Nested Layout Widgets
@@ -163,57 +161,54 @@ Let's take a look at a more advanced example of using BorderContainer and other 
 
   .. js ::
 
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dijit.layout.BorderContainer");
-      dojo.require("dijit.layout.TabContainer");
-      dojo.require("dijit.layout.AccordionContainer");
+    require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "dijit/layout/TabContainer", "dijit/layout/AccordionContainer", "dijit/layout/AccordionPane"]);
 
   The markup has to look as follows: Note the tabStrip attribute on the TabContainer.
    
   .. html ::
     
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:true, liveSplitters:false" id="borderContainerTwo">
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top', splitter:false">
-        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
-      </div>
-      <div data-dojo-type="dijit/layout/AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
-          <div data-dojo-type="dijit/layout/AccordionPane" title="One fancy Pane">
-          </div>
-          <div data-dojo-type="dijit/layout/AccordionPane" title="Another one">
-          </div>
-          <div data-dojo-type="dijit/layout/AccordionPane" title="Even more fancy" selected="true">
-          </div>
-          <div data-dojo-type="dijit/layout/AccordionPane" title="Last, but not least">
-          </div>
-      </div><!-- end AccordionContainer -->
-      <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region:'center', tabStrip:true">
-          <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top', splitter:false">
+            Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..
+        </div>
+        <div data-dojo-type="dijit/layout/AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
+            <div data-dojo-type="dijit/layout/AccordionPane" title="One fancy Pane">
+            </div>
+            <div data-dojo-type="dijit/layout/AccordionPane" title="Another one">
+            </div>
+            <div data-dojo-type="dijit/layout/AccordionPane" title="Even more fancy" selected="true">
+            </div>
+            <div data-dojo-type="dijit/layout/AccordionPane" title="Last, but not least">
+            </div>
+        </div><!-- end AccordionContainer -->
+        <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region:'center', tabStrip:true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
             Lorem ipsum and all around...
-          </div>
-          <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
             Lorem ipsum and all around - second...
-          </div>
-          <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" closable="true">
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="closable:true" title="My last tab">
             Lorem ipsum and all around - last...
-          </div>
-      </div><!-- end TabContainer -->
+            </div>
+        </div><!-- end TabContainer -->
     </div><!-- end BorderContainer -->
 
   A few simple CSS rules
 
   .. css ::
 
-      html, body {
+    html, body {
         width: 100%;
         height: 100%;
         margin: 0;
         overflow:hidden;
-      }
+    }
 
-      #borderContainerTwo {
+    #borderContainerTwo {
         width: 100%;
         height: 100%;
-      }
+    }
 
 
 BorderContainer Inside A Dijit Template
@@ -231,31 +226,25 @@ after it has been added to the DOM, so that its contained BorderContainer can la
 
   .. css ::
 
-      html, body {
+    html, body {
         width: 100%;
         height: 100%;
         margin: 0;
-      }
+    }
 
-      #borderContainerThree {
+    #borderContainerThree {
         width: 100%;
         height: 100%;
         overflow:hidden;
         border: none;
-      }
+    }
 
   .. js ::
 
-        dojo.require("dijit._Widget");
-        dojo.require("dijit._Templated");
-        dojo.require("dijit.layout.BorderContainer");
-        dojo.require("dijit.layout.ContentPane");
-        dojo.require("dijit.form.Button");
-
-        dojo.ready(function(){
-            dojo.declare("MyDijit",
-                [dijit._Widget, dijit._Templated], {
-                    widgetsInTemplate: true,
+    require(["dojo/parser", "dojo/ready", "dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dijit/_WidgetsInTemplateMixin", "dijit/form/Button", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "dijit/layout/TabContainer", "dijit/layout/AccordionContainer", "dijit/layout/AccordionPane"], function(parser, ready, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin){
+        ready(function(){
+            declare("MyDijit",
+                [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
                     // Note: string would come from dojo/text! plugin in a 'proper' dijit
                     templateString: '<div style="width: 100%; height: 100%;">' +
                         '<div data-dojo-type="dijit/layout/BorderContainer" design="headline" ' +
@@ -267,35 +256,38 @@ after it has been added to the DOM, so that its contained BorderContainer can la
                         '</div></div>'
             });
         });
+    });
 
   The markup has to look as follows:
   
   .. html ::
 
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
-        <div data-dojo-type="dijit/form/Button" id="createButton">Create Inner Dijit
-          <script type="dojo/connect" data-dojo-event="onClick">
-            // Create a new instance
-            var newdijit = new MyDijit( {}, dojo.create('DIV'));
-            newdijit.placeAt(dojo.byId('mydijitDestination'));
-            newdijit.startup();
-          </script>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+            <div data-dojo-type="dijit/form/Button" id="createButton">Create Inner Dijit
+                <script type="dojo/on" data-dojo-event="click">
+                    require(["dojo/dom", "dojo/dom-construct"], function(dom, domConstruct){
+                        // Create a new instance
+                        var newdijit = new MyDijit({}, domConstruct.create('div'));
+                        newdijit.placeAt(dom.byId('mydijitDestination'));
+                        newdijit.startup();
+                    });
+                </script>
+            </div>
         </div>
-      </div>
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left', splitter:false">
-        OUTER LEFT<br/>
-        This is my content.<br/>
-        There is much like it,<br/>
-        but this is mine.<br/>
-        My content is my best friend.<br/>
-        It is my life.<br/>
-        I must master it,<br/>
-        as I must master my life.
-      </div>
-      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', splitter:false">
-        <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
-      </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left', splitter:false">
+            OUTER LEFT<br />
+            This is my content.<br />
+            There is much like it,<br />
+            but this is mine.<br />
+            My content is my best friend.<br />
+            It is my life.<br />
+            I must master it,<br />
+            as I must master my life.
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', splitter:false">
+            <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
+        </div>
     </div>
 
 Accessibility
