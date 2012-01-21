@@ -1,7 +1,7 @@
 .. _dijit/layout/TabContainer:
 
 =========================
-dijit.layout.TabContainer
+dijit/layout/TabContainer
 =========================
 
 :Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
@@ -91,13 +91,13 @@ Here are some markup examples:
 
     <div style="width: 350px; height: 300px">
         <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%; height: 100%;">
-            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
                 Lorem ipsum and all around...
             </div>
             <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
                 Lorem ipsum and all around - second...
             </div>
-            <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" closable="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" data-dojo-props="closable:true">
                 Lorem ipsum and all around - last...
             </div>
         </div>
@@ -126,10 +126,10 @@ The second tab is closable.
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
     <div style="height: 105px;">
         <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
-            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
                 Lorem ipsum and all around...
             </div>
-            <div data-dojo-type="dijit/layout/ContentPane" title="My second tab" closable="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My second tab" data-dojo-props="closable:true">
                 Lorem ipsum and all around - second...<br />
                 Hmmm expanding tabs......
             </div>
@@ -199,7 +199,7 @@ More examples
 
 There are several more examples of basic use cases :ref:`available <dijit/layout/TabContainer-examples>`
 
-Like :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon.
+Like :ref:`dijit/layout/StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon.
 
 Manipulating Children
 ---------------------
@@ -264,10 +264,10 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
     
     <div style="height: 100px;">
         <div data-dojo-id="onCloseEx" data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
-            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
                 Lorem ipsum and all around...
             </div>
-            <div data-dojo-type="dijit/layout/ContentPane" title="Other Closable" closable="true" onClose="return confirm('really?');">
+            <div data-dojo-type="dijit/layout/ContentPane" title="Other Closable" data-dojo-props="closable:true, onClose:function(){return confirm('really?');}">
                 ... I have an in-line onClose
             </div>
         </div>
