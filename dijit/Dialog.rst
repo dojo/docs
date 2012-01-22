@@ -1,7 +1,7 @@
 .. _dijit/Dialog:
 
 ============
-dijit.Dialog
+dijit/Dialog
 ============
 
 :since: V0.1.0
@@ -190,26 +190,11 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.form.TextBox");
-        dojo.require("dijit.form.DateTextBox");
-        dojo.require("dijit.form.TimeTextBox");
-
-        function checkData(){
-            var data = formDlg.get('value');
-            console.log(data);
-            if(data.sdate > data.edate){
-                alert("Start date must be before end date");
-                return false;
-            }else{
-                return true;
-            }
-        }
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Button", "dijit/form/TextBox", "dijit/form/DateTextBox", "dijit/form/TimeTextBox"]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Form Dialog"
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog"
         execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <table>
             <tr>
@@ -222,11 +207,11 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myStartDate" onChange="myEndDate.constraints.min = arguments[0];" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myEndDate" onChange="myStartDate.constraints.max = arguments[0];" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
@@ -239,9 +224,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
             <tr>
                 <td align="center" colspan="2">
                     <button data-dojo-type="dijit/form/Button" type="submit"
-                        data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
+                        data-dojo-props="onClick:function(){return myFormDialog.isValid();}">OK</button>
                     <button data-dojo-type="dijit/form/Button" type="button"
-                        data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
+                        data-dojo-props="onClick:function(){myFormDialog.hide();}">Cancel</button>
                 </td>
             </tr>
         </table>
@@ -249,8 +234,8 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog").show();
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+            myFormDialog.show();
         </script>
     </button>
 
