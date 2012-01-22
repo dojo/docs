@@ -544,14 +544,14 @@ Known Issues
 
 .. js ::
   
-  dialogObj = new dijit.Dialog({
+  dialogObj = new Dialog({
       id: 'dialogWithHref',
-      title: 'The title'
-      href: "/url/to/dialog/content/including/layout/dijit/",
+      title: 'The title',
+      href: "/url/to/dialog/content/including/layout/dijit/"
   });
   
-  dojo.style(dialogObj.containerNode, {
-          position:'relative',
+  domStyle.set(dialogObj.containerNode, {
+      position: 'relative'
   });
 
 
