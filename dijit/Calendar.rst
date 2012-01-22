@@ -38,14 +38,23 @@ A plain Calendar widget with the formatted date below:
 
   .. js ::
 
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit.Calendar");
+    require([
+        "dojo/parser",
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar"
+    ]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
+    <div data-dojo-type="dijit/Calendar">
+        <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
+            require(["dojo/dom", "dojo/date"], function(dom, date){
+                dom.byId('formatted').innerHTML = date.locale.format(value, {formatLength: 'full', selector:'date'});
+            });
+        </script>
+    </div>
     <p id="formatted"></p>
-    
+
   .. css ::
 
       .{{ theme }} table.dijitCalendarContainer {
