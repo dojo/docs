@@ -1,7 +1,7 @@
 .. _dijit/form/TimeTextBox:
 
 ======================
-dijit.form.TimeTextBox
+dijit/form/TimeTextBox
 ======================
 
 :Authors: Doug Hays, Nikolai Onken, Marcus Reimann, Craig Riecke
@@ -16,7 +16,7 @@ TimeTextBox widgets are time input controls that allow either typing or choosing
 Introduction
 ============
 
-``dijit.form.TimeTextBox``:
+``dijit/form/TimeTextBox``:
 
 * is a :ref:`mapped form control <dijit/form>`
 * validates against locale-specific :ref:`i18n <dojo/i18n>` rules
@@ -49,17 +49,23 @@ Programmatic example
 
   .. js ::
 
-       dojo.require("dijit.form.TimeTextBox");
-       dojo.ready(function(){
-         new dijit.form.TimeTextBox({name:"prog_val", value:new Date(),
-           constraints:{timePattern:'HH:mm:ss', clickableIncrement:'T00:15:00', visibleIncrement:'T00:15:00', visibleRange:'T01:00:00'}
-         }, "prog_val");
-       });
+    require(["dojo/ready", "dijit/form/TimeTextBox"], function(ready, TimeTextBox){
+        ready(function(){
+            new TimeTextBox({name: "progval", value: new Date(),
+                constraints: {
+                    timePattern: 'HH:mm:ss',
+                    clickableIncrement: 'T00:15:00',
+                    visibleIncrement: 'T00:15:00',
+                    visibleRange: 'T01:00:00'
+                }
+            }, "progval");
+        });
+    });
 
   .. html ::
 
-     <label for="prog_val">Drop down Time box:</label>
-     <input id="prog_val"/>
+     <label for="progval">Drop down Time box:</label>
+     <input id="progval" />
 
 Declarative example
 -------------------
@@ -68,16 +74,16 @@ Declarative example
 
   .. js ::
 
-       dojo.require("dijit.form.TimeTextBox");
+    require(["dojo/parser", "dijit/form/TimeTextBox"]);
 
   .. html ::
 
-     <label for="time1">Drop down Time box:</label>
-     <input type="text" name="date1" id="time1" value="T15:00:00"
-       data-dojo-type="dijit/form/TimeTextBox"
-       onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
-       required="true" />
-     <br>string value: <input readonly disabled id='val' value='value not changed' />
+    <label for="time1">Drop down Time box:</label>
+    <input type="text" name="date1" id="time1" value="T15:00:00"
+        data-dojo-type="dijit/form/TimeTextBox"
+        onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
+        required="true" />
+    <br>string value: <input id="val" value="value not changed" readonly="readonly" disabled="disabled" />
 
 Accessibility
 =============
