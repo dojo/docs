@@ -249,21 +249,20 @@ handles the onSubmit event, validation, and an xhrPost to the server.
 
   .. js ::
 
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.Form");
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.form.ValidationTextBox");
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Form", "dijit/form/Button", "dijit/form/ValidationTextBox"]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog2" title="Form Dialog" style="display: none">
-        <form data-dojo-type="dijit/form/Form">
-            <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
-                dojo.stopEvent(e); // prevent the default submit
-                if(!this.isValid()){ window.alert('Please fix fields'); return; }
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog" style="display: none">
+        <form data-dojo-type="dijit/form/Form" data-dojo-id="myForm">
+            <script type="dojo/on" data-dojo-event="submit" data-dojo-args="e">
+                require(["dojo/_base/event"], function(event){
+                    event.stop(e); // prevent the default submit
+                    if(!myForm.isValid()){ window.alert('Please fix fields'); return; }
+                });
 
-                window.alert("Would submit here via xhr");
-                // dojo.xhrPost( {
+                window.alert("Would submit here via dojo/xhr");
+                // xhr.post( {
                 //      url: 'foo.com/handler',
                 //      content: { field: 'go here' },
                 //      handleAs: 'json'
@@ -272,13 +271,12 @@ handles the onSubmit event, validation, and an xhrPost to the server.
                 //  });
             </script>
             <div class="dijitDialogPaneContentArea">
-
                 <label for='foo'>Foo:</label><div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true"></div>
             </div>
             <div class="dijitDialogPaneActionBar">
                     <button data-dojo-type="dijit/form/Button" type="submit">OK</button>
                     <button data-dojo-type="dijit/form/Button" type="button"
-                        data-dojo-props="onClick:function(){dijit.byId('formDialog2').hide();}">Cancel</button>
+                        data-dojo-props="onClick:function(){myFormDialog.hide();}">Cancel</button>
             </div>
          </form>
     </div>
@@ -286,7 +284,7 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog2").show();
+            myFormDialog.show();
         </script>
     </button>
 
@@ -301,36 +299,34 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.RadioButton");
+    require(["dojo/parser", "dojo/ready", "dijit/Dialog", "dijit/form/Button", "dijit/form/RadioButton", "dojo/dom", "dojo/dom-style"], function(parser, ready, Dialog, Button, RadioButton, dom, domStyle){
+        this.accept = function(){
+            dom.byId("decision").innerHTML = "Terms and conditions have been accepted.";
+            domStyle.set("decision", "color", "#00CC00");
+            myFormDialog.hide();
+        }
 
-    var accept = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
-        dojo.style("decision", "color", "#00CC00");
-        dijit.byId("formDialog").hide();
-    }
-
-    var decline = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
-        dojo.style("decision", "color", "#FF0000");
-        dijit.byId("formDialog").hide();
-    }
+        this.decline = function(){
+            dom.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
+            domStyle.set("decision", "color", "#FF0000");
+            myFormDialog.hide();
+        }
+    });
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Accept or decline agreement terms">
         <h1>Agreement Terms</h1>
     
-         <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
-                Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-         </div>
+        <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto;">
+            Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        </div>
     
-        <br>
+        <br />
         <table>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept" />
                     <label for="radioOne">
                         I accept the terms of this agreement
                     </label>
@@ -338,7 +334,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
             </tr>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline" />
                     <label for="radioTwo">
                         I decline
                     </label>
@@ -355,13 +351,10 @@ This example shows a Dialog that will ask the user to accept or decline the term
     </label>
     <button id="termsButton" data-dojo-type="dijit/form/Button" type="button">
         View terms and conditions to accept
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog").show();
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+            myFormDialog.show();
         </script>
     </button>
-
-
-
 
 
 External Dialog content using HREF attribute
