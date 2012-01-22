@@ -81,7 +81,7 @@ Declarative example
     <label for="time1">Drop down Time box:</label>
     <input type="text" name="date1" id="time1" value="T15:00:00"
         data-dojo-type="dijit/form/TimeTextBox"
-        onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
+        onChange="require(['dojo/dom'], function(dom){dom.byId('val').value=dom.byId('time1').value.toString().replace(/.*1970\s(\S+).*/,'T$1')})"
         required="true" />
     <br>string value: <input id="val" value="value not changed" readonly="readonly" disabled="disabled" />
 
