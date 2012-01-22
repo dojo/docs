@@ -1,13 +1,13 @@
 .. _dijit/layout/_LayoutWidget:
 
-===================
-dijit._LayoutWidget
-===================
+==========================
+dijit/layout/_LayoutWidget
+==========================
 
 .. contents ::
     :depth: 2
 
-Typically layout widgets inherit from the dijit.layout._LayoutWidget base class.
+Typically layout widgets inherit from the dijit/layout/_LayoutWidget base class.
 This implements addChild(), removeChild(), startup(), and resize().
 
 The widget is responsible for implementing some callback methods and setting some properties though:
@@ -48,15 +48,17 @@ in the markup below:
 .. html ::
 
      <div data-dojo-type="dijit/layout/TabContainer" id="tc">
-       <div data-dojo-type="dijit/layout/ContentPane" title=...>...</div>
-       <div data-dojo-type="dijit/layout/ContentPane" title=...>...</div>
+         <div data-dojo-type="dijit/layout/ContentPane" title=...>...</div>
+         <div data-dojo-type="dijit/layout/ContentPane" title=...>...</div>
      </div>
 
 However, addChild() is called when children are added programmatically, like:
 
 .. js ::
 
-    dijit.byId("tc").addChild( new dijit.layout.ContentPane() );
+  require(["dijit/registry", "dijit/layout/ContentPane"], function(registry, ContentPane)){
+      registry.byId("tc").addChild( new ContentPane() );
+  }
 
 To bridge this gap and do processing common to both initial children and added children, there's a method called _setupChild().
 _setupChild() is useful for tasks like in TabContainer where it sets up a tab label for each child.
