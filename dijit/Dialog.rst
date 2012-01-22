@@ -543,15 +543,17 @@ Known Issues
   and will cause JAWS to speak the title of the dialog and the user will know that a dialog has been opened.
 
 .. js ::
+
+  require(["dojo/ready", "dijit/Dialog", "dojo/dom-style"], function(ready, Dialog, domStyle){
+      dialogObj = new Dialog({
+          id: 'dialogWithHref',
+          title: 'The title',
+          href: "/url/to/dialog/content/including/layout/dijit/"
+      });
   
-  dialogObj = new Dialog({
-      id: 'dialogWithHref',
-      title: 'The title',
-      href: "/url/to/dialog/content/including/layout/dijit/"
-  });
-  
-  domStyle.set(dialogObj.containerNode, {
-      position: 'relative'
+      domStyle.set(dialogObj.containerNode, {
+          position: 'relative'
+      });
   });
 
 
