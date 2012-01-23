@@ -1,7 +1,7 @@
 .. _dijit/_editor/plugins/TextColor:
 
 ===============================
-dijit._editor.plugins.TextColor
+dijit/_editor/plugins/TextColor
 ===============================
 
 :Authors: Jared Jurkiewicz
@@ -44,8 +44,7 @@ For example:
 
 .. js ::
  
-    dojo.require("dijit.Editor");
-    dojo.require("dijit.editor._plugins.TextColor");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/TextColor"]);
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
@@ -68,41 +67,34 @@ Basic Usage: foreColor (Text Color)
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.TextColor");
-
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/TextColor"]);
     
   .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the TextColor button to select a new color for it.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor']">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+            <tr>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+            </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 
@@ -111,41 +103,34 @@ Basic Usage: hiliteColor (Text Background Color)
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.TextColor");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/TextColor"]);
 
-    
   .. html ::
 
     <b>Enter some text and select it, or select existing text, then push the Text Background Color button to select a new background color for it.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['hiliteColor']">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br>
+        </div>
+        <br />
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 
@@ -154,46 +139,39 @@ Basic Usage: Both foreground and background color buttons together
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.TextColor");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/TextColor"]);
 
-    
   .. html ::
 
     <b>Enter some text and select it, or select existing text, then change its colors via the text color and text background color buttons.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['foreColor', 'hiliteColor']">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 See Also
 ========
 
-* :ref:`dijit.Editor <dijit/Editor>`
-* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
-* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dijit/Editor <dijit/Editor>`
+* :ref:`dijit/_editor/plugins <dijit/_editor/plugins>`
+* :ref:`dojox/editor/plugins <dojox/editor/plugins>`
