@@ -1,7 +1,7 @@
 .. _dijit/_editor/plugins/NewPage:
 
 =============================
-dijit._editor.plugins.NewPage
+dijit/_editor/plugins/NewPage
 =============================
 
 :Authors: Jared Jurkiewicz
@@ -35,8 +35,7 @@ For example:
 
 .. js ::
  
-    dojo.require("dijit.Editor");
-    dojo.require("dijit._editor.plugins.NewPage");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/NewPage"]);
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
@@ -80,38 +79,32 @@ Basic Usage
 
   .. js ::
 
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.NewPage");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/NewPage"]);
 
     
   .. html ::
 
     <b>Enter some text then press the New Page button.  The editor content will then clear.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['newpage']">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 Custom New Page Content
@@ -123,44 +116,38 @@ Custom New Page Content
 
   .. js ::
 
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.NewPage");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/NewPage"]);
 
     
   .. html ::
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 
 See Also
 ========
 
-* :ref:`dijit.Editor <dijit/Editor>`
-* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
-* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dijit/Editor <dijit/Editor>`
+* :ref:`dijit/_editor/plugins <dijit/_editor/plugins>`
+* :ref:`dojox/editor/plugins <dojox/editor/plugins>`
