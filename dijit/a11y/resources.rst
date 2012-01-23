@@ -144,7 +144,7 @@ This mechanism is useful when templates are used to create the objects requiring
 Here is an example of setting the role in the diijt tree template.
 The domNode is given the “tree” role.
 
-.. js ::
+.. html ::
 
   <div class="dijitTreeContainer" style="" role="tree"
     data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
@@ -152,7 +152,7 @@ The domNode is given the “tree” role.
 The role or state can also be specified via variables.
 This example shows an excerpt from the dijit button template that sets the role and state on the button element.
 
-.. js ::
+.. html ::
 
   <div class="dijit dijitLeft dijitInline dijitButton"
     data-dojo-attach-event="onclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse">
