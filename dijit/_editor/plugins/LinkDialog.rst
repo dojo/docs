@@ -1,7 +1,7 @@
 .. _dijit/_editor/plugins/LinkDialog:
 
 ================================
-dijit._editor.plugins.LinkDialog
+dijit/_editor/plugins/LinkDialog
 ================================
 
 :Authors: Jared Jurkiewicz
@@ -49,8 +49,7 @@ For example:
 
 .. js ::
  
-    dojo.require("dijit.Editor");
-    dojo.require("dijit._editor.plugins.LinkDialog");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/LinkDialog"]);
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
@@ -83,30 +82,29 @@ Basic Usage
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.LinkDialog");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/LinkDialog"]);
 
     
   .. html ::
 
     <b>Select any of the links or images below and click the appropriate button to change their properties.  Or, click where on the page you want to insert an image or a link, then click the appropriate button and create the image or link.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['createLink', 'unlink', 'insertImage']">
-      <br>
-      <br>
-      <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
-      <br>
-      <br>
-      <br>
-      <br>
-      It even has a cool logo: <img src="http://jaredj.dojotoolkit.org/images/dojo.logo.png" alt="The Dojo Toolkit" />
-      <br>
+        <br />
+        <br />
+        <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        It even has a cool logo: <img src="http://jaredj.dojotoolkit.org/images/dojo.logo.png" alt="The Dojo Toolkit" />
+        <br>
     </div>
 
 
 See Also
 ========
 
-* :ref:`dijit.Editor <dijit/Editor>`
-* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
-* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dijit/Editor <dijit/Editor>`
+* :ref:`dijit/_editor.plugins <dijit/_editor/plugins>`
+* :ref:`dojox/editor/plugins <dojox/editor/plugins>`
