@@ -102,14 +102,15 @@ Of course the toolbar can be reordered and customized to suit your layout needs.
 
   .. js ::
 
-    require(["dojo/parser", "dijit/Editor"]);
+      require(["dojo/parser", "dijit/Editor"]);
 
   .. html ::
 
     <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
-plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
+        plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
         <p>This instance is created with a subset of functions enabled in the order we want</p>
     </div>
+
 
 
 
