@@ -535,13 +535,19 @@ In the following code the labeling function is used to add a unit after the expe
   };
   chart1.addAxis("x", { labelFunc: myLabelFunc });
 
-The first parameter of the labelling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
+The first parameter of the labeling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
 
 Note that by default the axis make sure to drop superfluous labels to avoid them to overlap. However computing this might be costly and if you know that the labels are short enough to not overlap you can disabled this mechanism by setting the dropLabels property to false on the axis:
 
 .. js ::
 
   chart1.addAxis("x", { dropLabels: false });
+
+Also if you keep dropLabels to true, and you know minor labels won't show up or you don't want them to show up it is advised to set minorLabels property to false to speed up computations:
+
+.. js ::
+
+  chart1.addAxis("x", { minorLabels: false });
 
 TODO: Month Labels Example
 
