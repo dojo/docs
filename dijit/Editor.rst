@@ -102,14 +102,14 @@ Of course the toolbar can be reordered and customized to suit your layout needs.
 
   .. js ::
 
-      dojo.require("dijit.Editor");
+    require(["dojo/parser", "dijit/Editor"]);
 
   .. html ::
 
-      <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
-      plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
+    <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
+plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
         <p>This instance is created with a subset of functions enabled in the order we want</p>
-      </div>
+    </div>
 
 
 
@@ -141,9 +141,12 @@ This example adds the text color, background color, and font selection plugins t
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FontChoice");  // 'fontName','fontSize','formatBlock'
-      dojo.require("dijit._editor.plugins.TextColor");
+    require([
+        "dojo/parser",
+        "dijit/Editor",
+        "dijit/_editor/plugins/FontChoice", // 'fontName','fontSize','formatBlock'
+        "dijit/_editor/plugins/TextColor"
+    ]);
 
   .. html ::
 
@@ -159,8 +162,7 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.LinkDialog");
+      require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/LinkDialog"]);
 
   .. html ::
 
@@ -273,8 +275,7 @@ It's used along with setting height="" parameter setting.
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+      require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar"]);
 
   .. html ::
 
