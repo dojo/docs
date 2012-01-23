@@ -517,6 +517,7 @@ Individuals who have signed Dojo CLAs
 * Stern, David
 * Stojic, Ivan
 * Stott, Nathan Rains
+* Strimpel, Jason
 * Sulliman, Hani
 * Sumilang, Richard
 * Svensson, Peter
