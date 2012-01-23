@@ -44,7 +44,7 @@ Thus, putting it all together:
       <link rel="stylesheet" href="lib/dijit/themes/claro/claro.css">
       <script src="lib/dojo/dojo.js"></script>
       <script type="text/javascript">
-         dojo.require("dijit.Dialog");
+         require(["dojo/parser", "dijit/Dialog"]);
       </script>
   </head>
   <body class="claro">
@@ -458,7 +458,7 @@ Often an application will include a theme, but then override some of the rules i
 .. css ::
 
     .claro .dijitInputField {
-        background-color: yellow;
+      background-color: yellow;
     }
 
 You can also override a theme but only in certain sections of a page, for example:
@@ -471,16 +471,16 @@ You can also override a theme but only in certain sections of a page, for exampl
 .. html ::
 
   <div data-dojo-type="dijit/layout/TabContainer">
-        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
-                <input data-dojo-type="dijit/form/TextBox">
-                <button data-dojo-type="dijit/form/Button">Yellow Button</button>
-                ...
-        </div>
-        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab2'" class="blueForm">
-                <input data-dojo-type="dijit/form/TextBox">
-                <button data-dojo-type="dijit/form/Button">Blue Button</button>
-                ...
-        </div>
+      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
+          <input data-dojo-type="dijit/form/TextBox">
+          <button data-dojo-type="dijit/form/Button">Yellow Button</button>
+          ...
+      </div>
+      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="label:'Tab2'" class="blueForm">
+          <input data-dojo-type="dijit/form/TextBox">
+          <button data-dojo-type="dijit/form/Button">Blue Button</button>
+          ...
+      </div>
   </div>
 
 The two tabs would then be the Tundra theme except for the background color on form fields.
@@ -546,8 +546,8 @@ In the Claro theme, each of these states is defined by a specific hex value that
 .. css ::
 
   .claro .dijitAccordionInnerContainerActive {
-      border:1px solid #769DC0;
-      background-color:#7dbefa;
+    border:1px solid #769DC0;
+    background-color:#7dbefa;
   }
 
 
@@ -611,9 +611,9 @@ For the Claro theme, 11px (.688em) has been defined as the body font size in cla
 .. css ::
 
     .claro {
-        font-family:Verdana,Arial,Helvetica,sans-serif;
-        font-size: .688em;
-        color:#131313;
+      font-family:Verdana,Arial,Helvetica,sans-serif;
+      font-size: .688em;
+      color:#131313;
     }
 
 So in claro/Calendar.css, the font sizes for the following MonthLabel and DayLabel style elements
@@ -624,8 +624,8 @@ are relative to the claro default body font size. (i.e. MonthLabel= 12px, DayLab
 .. css ::
 
     .claro .dijitCalendarMonthLabel {
-        color:#000000;
-        font-size: 1.091em;
+      color:#000000;
+      font-size: 1.091em;
     }
 
 and
@@ -633,8 +633,8 @@ and
 .. css ::
 
     .claro .dijitCalendarDayLabelTemplate {
-        text-align:center;
-        font-size:0.909em;
+      text-align:center;
+      font-size:0.909em;
     }
 
 
@@ -729,10 +729,10 @@ the latter is preferred.
 
 Several widgets have inherited .lucid dijitPopup(CSS3) drop shadow treatment:
 
- - dijit.form.Button; dijit.form.ComboButton, dijit.form.DropDownButton, dijit.form.ToggleButton
- - dijit.Calendar, dijit.form.TimeTextBox, dijit.form.DateTextBox
- - dijit.ColorPalette
- - dijit.Menu
+ - dijit/form/Button; dijit/form/ComboButton, dijit/form/DropDownButton, dijit/form/ToggleButton
+ - dijit/Calendar, dijit/form/TimeTextBox, dijit/form/DateTextBox
+ - dijit/ColorPalette
+ - dijit/Menu
 
 
 (generic)
@@ -749,8 +749,8 @@ Several widgets have inherited .lucid dijitPopup(CSS3) drop shadow treatment:
 
 Widgets with unique CSS3 drop shadow treatment:
 
- - dijit.Dialog
- - dijit.Tooltip
+ - dijit/Dialog
+ - dijit/Tooltip
 
 
 Animation
