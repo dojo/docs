@@ -53,13 +53,22 @@ In JavaScript:
 
 In HTML markup:
 
-.. html ::
+.. html::
 
   <link rel="stylesheet" href="{{baseUrl}}/dojox/treemap/themes/TreeMap.css">
   <div id="treeMap" data-dojo-type="dojox.treemap.TreeMap" data-dojo-props="store: dataStore, areaAttr:'sales', 
      colorAttr:'profit', groupAttrs:['region'], colorModel: colorModel"
      style="width: 640px; height: 480px;">
   </div>
+
+You might want to listen to store query errors, for that you can use the promise returned by the store setter:
+
+.. js::
+
+  require(["dojox/treemap/TreeMap", "dojo/_base/Deferred", ..], function(TreeMap, Deferred, ...){
+    var treeMap = new TreeMap(...);
+    Deferred.when(treeMap.set("store", mystore), function onOk() {}, function onFail() {});
+  });
 
 
 Configuring treemap data
