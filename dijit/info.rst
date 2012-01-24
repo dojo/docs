@@ -46,12 +46,14 @@ The declarative method requires you include the :ref:`dojo/parser <dojo/parser>`
 .. html ::
   
   <script type="text/javascript">
-     dojo.ready(function(){
-         // dojo.byId("foobar") would only be a normal domNode.
-         var myDialog = dijit.byId("foobar");
-         myDialog.set("content", "<p>I've been replaced!</p>");
-         myDialog.show();
-     });
+      require(["dojo/parser", "dojo/ready", "dijit/registry", "dojo/dom"], function(parser, ready, registry, dom){
+          ready(function(){
+              // dom.byId("foobar") would only be a normal domNode.
+              var myDialog = registry.byId("foobar");
+              myDialog.set("content", "<p>I've been replaced!</p>");
+              myDialog.show();
+          });
+      });
   </script>
   <div data-dojo-type="dijit/Dialog" id="foobar" title="Foo!">
      <p>I am some content</p>
@@ -190,10 +192,11 @@ Some of the more popular are:
   The declaredClass is a string equal to the fully qualified name of the widget class.
 
 .. js ::
- 
-  var dialog = new dijit.Dialog({ title:"foo" }, "bar");
-  dialog.declaredClass == "dijit.Dialog" // true
 
+  require(["dijit/Dialog"], function(Dialog){
+      var myDialog = new Dialog({ title:"foo" }, "bar");
+      myDialog.declaredClass == "dijit/Dialog" // true
+  });
 
 Events
 ======
@@ -307,10 +310,13 @@ In general, widgets create their own DOM structure.
 For example,
 
 .. js ::
- 
-  var b = new dijit.form.Button({label: "press me"})
+  
+  require(["dijit/form/Button"], function(Button){
+      var myButton = new Button({label: "press me"});
+  });
 
-will create a new widget, where b.domNode can be inserted into the document at the appropriate point.
+
+will create a new widget, where myButton.domNode can be inserted into the document at the appropriate point.
 
 When instantiated declaratively,
 
