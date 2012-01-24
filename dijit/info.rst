@@ -62,7 +62,7 @@ You can use this property for styling, positioning, or other :ref:`DOM manipulat
 
 .. js ::
   
-  require(["dijit/registry", "dojo/dom-construct", ""dojo/_base/window""], function(registry, domConstruct, win){
+  require(["dijit/registry", "dojo/dom-construct", "dojo/_base/window"], function(registry, domConstruct, win){
        var thinger = registry.byId("foobar");
        domConstruct.place(thinger.domNode, win.body(), "last");
        // functionally equivalent to:
@@ -97,19 +97,23 @@ Create a new instance with the JavaScript ``new`` function, pass an object-hash 
 (in this case, title:"No ID"), and supply an optional "source node reference".
 
 .. js ::
-  
-  var node = dojo.byId("makeADialog");
-  var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
-  dialog.show();
+
+  require(["dijit/Dialog", "dojo/dom"], function(Dialog, dom){
+      var node = dom.byId("makeADialog");
+      var myDialog = new Dialog({ title:"From Source Node" }, node);
+      myDialog.show();
+  });
 
 This will cause the creator to use the node with id="makeADialog", and turn it into a :ref:`Dialog <dijit/Dialog>`.
 You can pass a node reference directly (as seen above), or simply pass a string id.
 Either way, the reference passes through dojo.byId:
 
 .. js ::
-  
-  var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
-  dialog.show();
+
+  require(["dijit/Dialog"], function(Dialog){
+      var myDialog = new Dialog({ title:"From Source byId" }, "makeADialog");
+      myDialog.show();
+  });
 
 
 Attributes
@@ -197,18 +201,20 @@ The other interface for dealing with widgets is to setup event handlers.
 For example:
 
 .. js ::
- 
-  new dijit.form.Button({
-       label: 'Click me!',
-       onClick: function(evt){ console.log("clicked!"); }
-  })
+
+  require(["dijit/form/Button"], function(Button){
+      new Button({
+          label: 'Click me!',
+          onClick: function(evt){ console.log("clicked!"); }
+      });
+  });
 
 Event handlers can be setup programmatically (as above), or declaratively, like:
 
 .. html ::
  
   <div data-dojo-type="dijit/form/Button">
-     <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
+     <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
            console.log("clicked, event object is ", evt);
      </script>
      Click me!
@@ -262,7 +268,7 @@ The Dialog instance would be available through the byId call to `myDialog`:
 
 .. js ::
   
-  dijit.byId("myDialog").show(); // show my dialog instance
+  registry.byId("myDialog").show(); // show my dialog instance
 
 If the ID is unknown for some reason, the function :ref:`dijit.getEnclosingWidget <dijit/getEnclosingWidget>` can be used by passing any child DOM Node reference.
 Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
@@ -321,7 +327,7 @@ When using behavioral widgets, you need to specify a source DOM node for them to
 For example:
 
 .. js ::
- 
+
    new dojox.widget.FishEyeLite({...}, "mySourceDom");
 
 This comes naturally if you are instantiating from markup.
