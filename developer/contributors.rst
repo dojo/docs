@@ -613,7 +613,7 @@ Corporations or Organizations with a CCLA on file
 * Adaptive Technology Resource Centre
 * AG Interactive
 * AOL, LLC
-* Asseverate Limited: Kitson Kelley (kitsonk)
+* Asseverate Limited: Kitson Kelly (kitsonk)
 * Atomic Labs, Inc.
 * BBC: Matthew Wood, Chris Warren, Ian Pouncey, Richard Hodgson, Thomas Yandell, Michael Mathews
 * BEA Systems
