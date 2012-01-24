@@ -37,7 +37,7 @@ Dojo 1.7 (AMD)
 
 .. js ::
 
-   require(['dojo/_base/kernel', 'dojo/_base/loader], function(dojo){
+   require(['dojo/_base/kernel', 'dojo/_base/loader'], function(dojo){
      // Register "lib" to be a peer to Dojo's parent folder.
      // Make sure the module path does *not* end in a slash.
      dojo.registerModulePath("lib", "../../lib");
