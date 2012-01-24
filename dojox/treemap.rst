@@ -74,7 +74,7 @@ You might want to listen to store query errors, for that you can use the promise
 Configuring treemap data
 ========================
 
-The TreeMap can connect to any implementation of the dojo.store interface that implements get/query and id management. It supports flat data and optionally creates a hierarchy from this data 
+The TreeMap can connect to any implementation of the dojo.store interface that implements get/query and id management (getIdentity). It supports flat data and optionally creates a hierarchy from this data 
 using attributes of the data to group them based on certain criteria.
 
 Mapping using attributes 
