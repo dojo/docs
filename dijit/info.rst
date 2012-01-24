@@ -62,30 +62,36 @@ You can use this property for styling, positioning, or other :ref:`DOM manipulat
 
 .. js ::
   
-  var thinger = dijit.byId("foobar");
-  dojo.place(thinger.domNode, dojo.body(), "last");
-  // functionally equivalent to:
-  // dojo.body().appendChild(thinger.domNode);
+  require(["dijit/registry", "dojo/dom-construct", ""dojo/_base/window""], function(registry, domConstruct, win){
+       var thinger = registry.byId("foobar");
+       domConstruct.place(thinger.domNode, win.body(), "last");
+       // functionally equivalent to:
+       // win.body().appendChild(thinger.domNode); 
+  });
 
 When creating widgets programmatically, pass an id:"" parameter:
 
 .. js ::
   
-  var dialog = new dijit.Dialog({
-     id:"myDialog",
-     title:"Programmatic"
+  require(["dijit/Dialog", "dijit/registry"], function(Dialog, registry){
+      var myDialog = new Dialog({
+          id: "myDialog",
+          title: "Programmatic"
+      });
+      myDialog.startup();
+      // compare them:
+      console.log(registry.byId("myDialog") == myDialog);
   });
-  dialog.startup();
-  // compare them:
-  console.log(dijit.byId("myDialog") == dialog);
 
 Otherwise, a unique ID will be generated for you:
 
 .. js ::
-  
-  var dialog = new dijit.Dialog({ title:"No ID" })
-  console.log(dialog.get("id"));
-  
+
+  require(["dijit/Dialog", "dijit/registry"], function(Dialog, registry){
+      var myDialog = new Dialog({ title:"No ID" })
+      console.log(myDialog.get("id"));
+  });
+
 All Dijits follow the same programmatic convention.
 Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions
 (in this case, title:"No ID"), and supply an optional "source node reference".
