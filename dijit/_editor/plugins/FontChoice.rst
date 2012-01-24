@@ -1,7 +1,7 @@
 .. _dijit/_editor/plugins/FontChoice:
 
 ================================
-dijit._editor.plugins.FontChoice
+dijit/_editor/plugins/FontChoice
 ================================
 
 :Authors: Jared Jurkiewicz
@@ -38,8 +38,7 @@ For example:
 
 .. js ::
  
-    dojo.require("dijit.Editor");
-    dojo.require("dijit._editor.plugins.FontChoice");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/FontChoice"]);
 
 
 Once it has been required in, all you have to do is include the control names in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
@@ -86,25 +85,23 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FontChoice");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/FontChoice"]);
 
     
   .. html ::
 
     <b>Select any of the text below and experiment with the font options</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['fontName', 'fontSize', 'formatBlock']">
-      <br>
-      <br>
-      <h1>This is a header</h1>
-      <p>This is some basic paragraph text.</p>
-      <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
-      <br>
+        <br />
+        <br />
+        <h1>This is a header</h1>
+        <p>This is some basic paragraph text.</p>
+        <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
+        <br />
     </div>
 
 
@@ -117,27 +114,26 @@ Basic Usage: Plain Text Previews
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FontChoice");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/FontChoice"]);
 
     
   .. html ::
 
     <b>Select any of the text below and experiment with the font options</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]">
-      <br>
-      <br>
-      <h1>This is a header</h1>
-      <p>This is some basic paragraph text.</p>
-      <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
-      <br>
+        <br />
+        <br />
+        <h1>This is a header</h1>
+        <p>This is some basic paragraph text.</p>
+        <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
+        <br />
     </div>
 
 
 See Also
 ========
 
-* :ref:`dijit.Editor <dijit/Editor>`
-* :ref:`dijit._editor.plugins <dijit/_editor/plugins>`
-* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dijit/Editor <dijit/Editor>`
+* :ref:`dijit/_editor/plugins <dijit/_editor/plugins>`
+* :ref:`dojox/editor/plugins <dojox/editor/plugins>`

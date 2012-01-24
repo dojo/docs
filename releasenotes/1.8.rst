@@ -149,6 +149,15 @@ There have been a few performance improvements to dijit:
 DojoX
 =====
 
+Charting
+--------
+
+- A new dropLabels mode was introduced on axis. It is true by default and allows to drop superfluous labels on the axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that by:
+
+   * setting dropLabels to false (but then you don't get the automatic drop labels)
+   * setting minorLabels to false if you know minorLabels won't show up anyway 
+
+
 
 Util
 ====

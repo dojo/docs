@@ -1,7 +1,7 @@
 .. _dijit/_editor/plugins/ViewSource:
 
 ================================
-dijit._editor.plugins.ViewSource
+dijit/_editor/plugins/ViewSource
 ================================
 
 :Authors: Jared Jurkiewicz
@@ -39,9 +39,8 @@ This is done in the same spot all your dojo.require calls are made, usually a he
 For example:
 
 .. js ::
- 
-    dojo.require("dijit.Editor");
-    dojo.require("dijit._editor.plugins.ViewSource");
+
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/ViewSource"]);
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
@@ -98,8 +97,8 @@ Other useful notes
 
 This plugin is particularly powerful when it is combined with the following plugins:
 
-* :ref:`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>` - Edit the document in the full 'viewport' of the window running dojo.
-* :ref:`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>` - Format the content in the editor so that it is easily human readable and modifiable.
+* :ref:`dijit/_editor/plugins/FullScreen <dijit/_editor/plugins/FullScreen>` - Edit the document in the full 'viewport' of the window running dojo.
+* :ref:`dojox/editor/plugins/PrettyPrint <dojox/editor/plugins/PrettyPrint>` - Format the content in the editor so that it is easily human readable and modifiable.
 
 
 A11Y Considerations
@@ -117,40 +116,34 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.ViewSource");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/ViewSource"]);
 
   .. html ::
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:['viewsource']">
-    <div>
-      <br>
-      blah blah & blah!
-      <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+            <tr>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+            </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 
@@ -162,37 +155,31 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.ViewSource");
-      dojo.require("dojox.editor.plugins.PrettyPrint");
+    require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/ViewSource", "dojox/editor/plugins/PrettyPrint"]);
 
   .. html ::
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'viewsource',readOnly: true}, 'prettyprint']">
-    <div>
-      <br>
-      blah blah & blah!
-      <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+            <br />
+            blah blah & blah!
+            <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                    <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 Viewing Source with PrettyPrint and FullScreen Plugins enabled
@@ -214,35 +201,31 @@ This example also organizes the toolbar a bit.
   .. html ::
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
-    <br>
+    <br />
     <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
-    <div>
-      <br>
-      blah blah & blah!
-      <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul>
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+        <div>
+        <br />
+        blah blah & blah!
+        <br />
+        </div>
+        <br />
+        <table>
+            <tbody>
+            <tr>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+                <td style="border-style:solid; border-width: 2px; border-color: gray;">Two cell</td>
+            </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>item one</li>
+            <li>item two</li>
+        </ul>
     </div>
 
 
 See Also
 ========
 
-* :ref:`dijit.Editor <dijit/Editor>`
-* :ref:`dojox.editor.plugins <dojox/editor/plugins>`
+* :ref:`dijit/Editor <dijit/Editor>`
+* :ref:`dojox/editor/plugins <dojox/editor/plugins>`

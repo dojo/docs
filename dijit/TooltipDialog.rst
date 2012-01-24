@@ -1,7 +1,7 @@
 .. _dijit/TooltipDialog:
 
 ===================
-dijit.TooltipDialog
+dijit/TooltipDialog
 ===================
 
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
@@ -16,11 +16,11 @@ A variant on Dialog Box is dijit.TooltipDialog.
 Introduction
 ============
 
-The dijit.TooltipDialog displays a tooltip that contains form elements (like a dialog).
+The dijit/TooltipDialog displays a tooltip that contains form elements (like a dialog).
 
 Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
 
-A TooltipDialog can only be opened as a drop down from another widget, usually `dijit.form.DropDownButton`.
+A TooltipDialog can only be opened as a drop down from another widget, usually `dijit/form/DropDownButton`.
 
 
 Examples
@@ -35,29 +35,26 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
   .. js ::
 
-        dojo.require("dijit.form.DropDownButton");
-        dojo.require("dijit.TooltipDialog");
-        dojo.require("dijit.form.TextBox");
-        dojo.require("dijit.form.Button");
-
-        dojo.ready(function(){
-            var dialog = new dijit.TooltipDialog({
+    require(["dojo/ready", "dijit/TooltipDialog", "dijit/form/TextBox", "dijit/form/Button", "dijit/form/DropDownButton", "dojo/dom"], function(ready, TooltipDialog, TextBox, Button, DropDownButton, dom){
+        ready(function(){
+            var myDialog = new TooltipDialog({
                 content:
                     '<label for="name">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name" name="name"><br>' +
                     '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby" name="hobby"><br>' +
                     '<button data-dojo-type="dijit/form/Button" type="submit">Save</button>'
             });
- 
-            var button = new dijit.form.DropDownButton({
+
+            var myButton = new DropDownButton({
                 label: "show tooltip dialog",
-                dropDown: dialog
+                dropDown: myDialog
             });
-            dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
+            dom.byId("dropDownButtonContainer").appendChild(myButton.domNode);
         });
+    });
 
   .. html ::
 
-    <div id="dropdownButtonContainer"></div>
+    <div id="dropDownButtonContainer"></div>
 
 A TooltipDialog may be popped up from any node.
 
@@ -65,25 +62,25 @@ A TooltipDialog may be popped up from any node.
 
   .. js ::
 
-        dojo.require("dijit.TooltipDialog");
-
-        dojo.ready(function(){
-            var myTooltipDialog = new dijit.TooltipDialog({
+    require(["dojo/ready", "dijit/TooltipDialog", "dijit/popup", "dojo/on", "dojo/dom"], function(ready, TooltipDialog, popup, on, dom){
+        ready(function(){
+            var myTooltipDialog = new TooltipDialog({
                 id: 'myTooltipDialog',
                 style: "width: 300px;",
                 content: "<p>I have a mouse leave event handler that will close the dialog.",
                 onMouseLeave: function(){
-                    dijit.popup.close(myTooltipDialog);
+                    popup.close(myTooltipDialog);
                 }
             });
 
-            dojo.connect(dojo.byId('thenode'), 'onmouseenter', function(){
-                dijit.popup.open({
+            on(dojo.byId('thenode'), 'mouseover', function(){
+                popup.open({
                     popup: myTooltipDialog,
-                    around: dojo.byId('thenode')
+                    around: dom.byId('thenode')
                 });
             });
         });
+    });
 
   .. html ::
 
@@ -103,20 +100,17 @@ Here's one displaying a TooltipDialog:
 
   .. js ::
 
-      dojo.require("dijit.form.DropDownButton");
-      dojo.require("dijit.TooltipDialog");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/TooltipDialog", "dijit/form/DropDownButton", "dijit/form/TextBox", "dijit/form/Button"]);
 
   .. html ::
 
     <div data-dojo-type="dijit/form/DropDownButton">
-      <span>Register</span>
-      <div data-dojo-type="dijit/TooltipDialog">
-         <label for="name2">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name2" name="name2"><br>
-         <label for="hobby2">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby2" name="hobby2"><br>
-         <button data-dojo-type="dijit/form/Button" type="submit">Save</button>
-      </div>
+        <span>Register</span>
+        <div data-dojo-type="dijit/TooltipDialog">
+            <label for="name2">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name2" name="name2" /><br />
+            <label for="hobby2">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby2" name="hobby2" /><br />
+            <button data-dojo-type="dijit/form/Button" type="submit">Save</button>
+        </div>
     </div>
 
 
@@ -134,4 +128,4 @@ Navigate to previous focusable element in the tooltip dialog    shift-tab
 Close the tooltip dialog                                        escape
 ============================================================    =================================================
 
-See the detailed Keyboard Navigation Notes and Known Issues in :ref:`dijit.Dialog <dijit/Dialog>`
+See the detailed Keyboard Navigation Notes and Known Issues in :ref:`dijit/Dialog <dijit/Dialog>`

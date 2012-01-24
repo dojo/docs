@@ -172,13 +172,16 @@ Available 2D chart types include:
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
    * **Grid** - For adding a grid layer to your chart.
 
+Lines, Areas and Markers Plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. js ::
   
   chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, markers: false});
 
-There are also two graphical options, **tension** and **shadows**.
+There are also three graphical options, **tension**, **shadows** and **interpolate**.
 
 Tension allows you to add some curve to the lines on you plot. By default this option is set to "" which is off. Other valid values are:
 
@@ -191,6 +194,11 @@ Shadows allow you to add a shadow effect, and can be a :ref:`dojox.gfx <dojox/gf
 .. js ::
   
   chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2}});
+
+Finally interpolate let's you choose the behavior when a data point is missing in the chart (i.e. its data value is null). If interpolate is false (default) a the line or area will be cut at that data point and will start back at the next valid data point. If interpolate is true, the missing data point will be interpolated and the chart continuously drawn.
+
+Bars, Columns, Candle Stick Plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Bar, column, and candle stick graph types have some unique option to control width of columns:
 
@@ -218,6 +226,9 @@ For any chart type that supports axes, you can also define custom names to your 
   
   chart1.addPlot("default", {type: "Bars", hAxis: "cool x", vAxis: "super y"});
 
+Pie Plot
+~~~~~~~~
+
 Pie charts have a separate list of parameters. Here are the parameters for the pie chart, from Pie.js:
 
 .. js ::
@@ -236,6 +247,9 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
       fontColor: "",
       radius: 0
   },
+
+Spider Plot
+~~~~~~~~~~~
 
 Spider chart also keeps a separate list of parameters. Here comes the parameters of spider chart.
 
@@ -277,6 +291,8 @@ And here is an example for spider chart:
         
   var legend = new dc.widget.SelectableLegend({chart: chart, horizontal: true}, "legend");
 
+Grid Plot
+~~~~~~~~~
 
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks.
 
@@ -298,6 +314,9 @@ Shadows and curve can be added to the lines, and markers on data points as follo
 The resulting chart looks like this:
 
 TODO: Example Chart
+
+Multiple Plots
+~~~~~~~~~~~~~~
 
 One last feature I'd like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
 
@@ -535,13 +554,19 @@ In the following code the labeling function is used to add a unit after the expe
   };
   chart1.addAxis("x", { labelFunc: myLabelFunc });
 
-The first parameter of the labelling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
+The first parameter of the labeling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
 
 Note that by default the axis make sure to drop superfluous labels to avoid them to overlap. However computing this might be costly and if you know that the labels are short enough to not overlap you can disabled this mechanism by setting the dropLabels property to false on the axis:
 
 .. js ::
 
   chart1.addAxis("x", { dropLabels: false });
+
+Also if you keep dropLabels to true, and you know minor labels won't show up or you don't want them to show up it is advised to set minorLabels property to false to speed up computations:
+
+.. js ::
+
+  chart1.addAxis("x", { minorLabels: false });
 
 TODO: Month Labels Example
 

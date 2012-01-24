@@ -44,7 +44,6 @@ To set the default value for a programmatic ComboBox,
 include the *value* attribute in the attribute list passed to the constructor.
 
 .. code-example ::
-  djConfig: async: true
 
   .. js ::
 

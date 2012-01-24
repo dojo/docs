@@ -1,7 +1,7 @@
 .. _dijit/InlineEditBox:
 
 ===================
-dijit.InlineEditBox
+dijit/InlineEditBox
 ===================
 
 :Project owner: Bill Keese
@@ -21,22 +21,20 @@ Programmatic InlineEditBox
 
   .. js ::
 
-        dojo.require("dijit.InlineEditBox");
-        dojo.require("dijit.form.Textarea");
-
-        var eb;
-        dojo.ready(function(){
-            eb = new dijit.InlineEditBox({
-                editor: "dijit.form.Textarea",
+    require(["dojo/ready", "dijit/InlineEditBox", "dijit/form/Textarea"], function(ready, InlineEditBox, Textarea){
+        ready(function(){
+            var eb = new InlineEditBox({
+                editor: Textarea,
                 autoSave: false
             }, "ieb");
         });
+    });
 
   .. html ::
 
     <div id="ieb">
-      When you click on this div you'll be able to edit it (in plain text).
-      The editor's size will initially match the size of the (original) text, but will expand/contract as you type.
+        When you click on this div you'll be able to edit it (in plain text).
+        The editor's size will initially match the size of the (original) text, but will expand/contract as you type.
     </div>
 
 Note that it was created with autoSave=false to make save/cancel buttons appear.
@@ -52,8 +50,7 @@ Here's an example with an initial value.
 
   .. js ::
 
-      dojo.require("dijit.InlineEditBox");
-      dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser", "dijit/InlineEditBox", "dijit/form/NumberSpinner"]);
 
   .. html ::
 
@@ -69,8 +66,7 @@ Note also that the width argument is important so to indicate the editors width,
 
   .. js ::
 
-      dojo.require("dijit.InlineEditBox");
-      dojo.require("dijit.form.NumberTextBox");
+    require(["dojo/parser", "dijit/InlineEditBox", "dijit/form/NumberTextBox"]);
 
   .. html ::
 
@@ -96,14 +92,12 @@ To make the editor's initial size match the size the readonly text (ie, the size
 
   .. js ::
 
-      dojo.require("dijit.InlineEditBox");
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+    require(["dojo/parser", "dijit/InlineEditBox", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar"]);
 
   .. html ::
 
     <div data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit.Editor', renderAsHtml:true, autoSave:false,
-            editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
+        editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
 
 Notes on i18n
 =============

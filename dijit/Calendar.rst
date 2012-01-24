@@ -1,7 +1,7 @@
 .. _dijit/Calendar:
 
 ===============
-dijit.Calendar
+dijit/Calendar
 ===============
 
 :Authors: Adam Peller
@@ -38,22 +38,31 @@ A plain Calendar widget with the formatted date below:
 
   .. js ::
 
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit.Calendar");
+    require([
+        "dojo/parser",
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar"
+    ]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
+    <div data-dojo-type="dijit/Calendar">
+        <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
+            require(["dojo/dom", "dojo/date"], function(dom, date){
+                dom.byId('formatted').innerHTML = date.locale.format(value, {formatLength: 'full', selector:'date'});
+            });
+        </script>
+    </div>
     <p id="formatted"></p>
-    
+
   .. css ::
 
-      .{{ theme }} table.dijitCalendarContainer {
+    .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
-      }
-      #formatted {
+    }
+    #formatted {
         text-align: center;
-      }
+    }
 
 With an initial selection and weekends disabled:
 
@@ -64,8 +73,11 @@ With an initial selection and weekends disabled:
 
   .. js ::
 
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit.Calendar");
+    require([
+        "dojo/parser",
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar"
+    ]);
 
   .. html ::
 
@@ -73,14 +85,14 @@ With an initial selection and weekends disabled:
     
   .. css ::
 
-      .{{ theme }} .dijitCalendarDisabledDate {
+    .{{ theme }} .dijitCalendarDisabledDate {
         background-color:#333 !important;
         text-decoration:none !important;
-      }
+    }
 
-      .{{ theme }} table.dijitCalendarContainer {
+    .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
-      }
+    }
 
 Javascript declaration, with a restriction of +/- one week from the current date:
 
@@ -91,19 +103,22 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
   .. js ::
 
-        dojo.require("dijit.dijit"); // loads the optimized dijit layer
-        dojo.require("dijit.Calendar");
-
-        dojo.ready(function(){
-            new dijit.Calendar({
-                value: new Date(),
-                isDisabledDate: function(d){
-                    var d = new Date(d); d.setHours(0, 0, 0, 0);
-                    var today = new Date(); today.setHours(0, 0, 0, 0);
-                    return Math.abs(dojo.date.difference(d, today, "week")) > 0;
-                }
+    require([
+        "dojo/ready",
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar"
+    ], function(ready, dijit, Calendar){
+        ready(function(){
+            new Calendar({
+            value: new Date(),
+            isDisabledDate: function(d){
+                var d = new Date(d); d.setHours(0, 0, 0, 0);
+                var today = new Date(); today.setHours(0, 0, 0, 0);
+                return Math.abs(dojo.date.difference(d, today, "week")) > 0;
+            }
             }, "mycal");
         });
+    });
 
   .. html ::
 
@@ -126,20 +141,24 @@ Custom styling:
 
   .. js ::
 
-      dojo.require("dijit.Calendar");
+    require([
+        "dojo/parser",
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar"
+    ]);
   
 
   .. html ::
 
-    <input id="calendar5" data-dojo-type="dijit/Calendar" dayWidth="abbr" value="2008-03-13">
+    <input id="calendar5" data-dojo-type="dijit/Calendar" data-dojo-props="dayWidth:'abbr'" value="2008-03-13" />
     
   .. css ::
 
-        #calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
-        #calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
-        #calendar5 .dijitCalendarDayLabel { font-weight: bold }
-        #calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
-        #calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
+    #calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
+    #calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
+    #calendar5 .dijitCalendarDayLabel { font-weight: bold }
+    #calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
+    #calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
         
 
 [1.4+] Non-Gregorian calendars:

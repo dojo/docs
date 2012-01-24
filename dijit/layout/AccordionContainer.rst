@@ -1,7 +1,7 @@
 .. _dijit/layout/AccordionContainer:
 
 ===============================
-dijit.layout.AccordionContainer
+dijit/layout/AccordionContainer
 ===============================
 
 :Authors: Becky Gibson, Nikolai Onken
@@ -30,30 +30,28 @@ Programmatic example
 
   .. js ::
 
-        dojo.require("dijit.layout.AccordionContainer");
-        dojo.require("dijit.layout.ContentPane");
-
-        dojo.ready(function(){
-          var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
-
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This is a content pane",
-                    content:"Hi!"
-          }));
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This is as well",
-                    content:"Hi how are you?"
-              }));
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This too",
-                    content:"Hello im fine.. thnx"
-          }));
-          aContainer.startup();
+    require(["dojo/ready", "dijit/layout/AccordionContainer", "dijit/layout/ContentPane"], function(ready, AccordionContainer, ContentPane){
+        ready(function(){
+            var aContainer = new AccordionContainer({style:"height: 300px"}, "markup");
+            aContainer.addChild(new ContentPane({
+                title: "This is a content pane",
+                content: "Hi!"
+            }));
+            aContainer.addChild(new ContentPane({
+                title:"This is as well",
+                content:"Hi how are you?"
+            }));
+            aContainer.addChild(new ContentPane({
+                title:"This too",
+                content:"Hello im fine.. thnx"
+            }));
+            aContainer.startup();
         });
+    });
 
   .. html ::
 
-     <div id="markup" style="width:300px; height: 300px"></div>
+     <div id="markup" style="width: 300px; height: 300px"></div>
   
 
 Declarative example
@@ -63,22 +61,22 @@ Declarative example
 
   .. js ::
 
-    dojo.require("dijit.layout.AccordionContainer");
+    require(["dojo/parser", "dijit/layout/AccordionContainer", "dijit/layout/ContentPane"]);
 
   .. html ::
 
     <div style="width: 300px; height: 300px">
-      <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 300px;">
-        <div data-dojo-type="dijit/layout/ContentPane" title="Heeh, this is a content pane">
-        Hi!
+        <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 300px;">
+            <div data-dojo-type="dijit/layout/ContentPane" title="Heeh, this is a content pane">
+                Hi!
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="This is as well" selected="true">
+                Hi how are you?
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="This too">
+                Hi how are you? .....Great, thx
+            </div>
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="This is as well" selected="true">
-        Hi how are you?
-        </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="This too">
-        Hi how are you? .....Great, thx
-        </div>
-      </div>
     </div>
 
 

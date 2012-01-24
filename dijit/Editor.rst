@@ -1,7 +1,7 @@
 .. _dijit/Editor:
 
 ============
-dijit.Editor
+dijit/Editor
 ============
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
@@ -11,7 +11,7 @@ dijit.Editor
 .. contents ::
     :depth: 2
 
-Dijit's Rich Text editor, dijit.Editor, is a text box on steroids, designed to look and work like a word processor.
+Dijit's Rich Text editor, dijit/Editor, is a text box on steroids, designed to look and work like a word processor.
 The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
 
 Features
@@ -26,22 +26,22 @@ Features
 Limitations
 ===========
 
-* Dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
+* Dijit/Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
 
 .. js ::
  
-    dojo.ready(function(){
-      var editor = dijit.byId("myEditor");
-
-      editor.onLoadDeferred.then(function(){
-        editor.set("value", "<b>This is new content.</b>");
-      });
+    require(["dojo/parser", "dojo/ready", "dijit/Editor"], function(parser, ready){
+        ready(function(){
+            myEditor.onLoadDeferred.then(function(){
+            myEditor.set("value", "<b>This is new content.</b>");
+            });
+        });
     });
 
 .. html ::
 
   <div data-dojo-type="dijit/Editor" id="myEditor">
-    <p>This is the initial content.</p>
+      <p>This is the initial content.</p>
   </div>
 
 * The editor cannot be created on a hidden div.  This is in large part due to the frames and similar.  You will get odd browser errors should you attempt to create an editor on a hidden div.
@@ -58,12 +58,12 @@ Declarative example
 
   .. js ::
 
-      dojo.require("dijit.Editor");
+    require(["dojo/parser", "dijit/Editor"]);
 
   .. html ::
 
       <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])}">
-        <p>This instance is created from a div directly with default toolbar and plugins</p>
+          <p>This instance is created from a div directly with default toolbar and plugins</p>
       </div>
 
 Programmatic example
@@ -76,20 +76,20 @@ although even when created programmatically you need to specify a source DOM nod
 
   .. js ::
 
-        dojo.require("dijit.Editor");
-        dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
-        function create(){
-            new dijit.Editor({
+    require(["dojo/ready", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar", "dojo/dom", "dojo/query"], function(ready, Editor, AlwaysShowToolbar, dom, query){
+        this.createEditor = function(){
+            new Editor({
                 height: '',
-                extraPlugins: [dijit._editor.plugins.AlwaysShowToolbar]
-            }, dojo.byId('programmatic2'));
-            dojo.query('#create2').orphan();
+                extraPlugins: [AlwaysShowToolbar]
+            }, dom.byId('programmatic2'));
+            query('#create2').orphan();
         }
+    });
 
   .. html ::
  
     <div id="programmatic2">This div will become an auto-expanding editor.</div>
-    <button id="create2" onclick="create();">
+    <button id="create2" onclick="createEditor();">
         create expanding editor
     </button>
 
@@ -102,14 +102,15 @@ Of course the toolbar can be reordered and customized to suit your layout needs.
 
   .. js ::
 
-      dojo.require("dijit.Editor");
+      require(["dojo/parser", "dijit/Editor"]);
 
   .. html ::
 
-      <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
-      plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
+    <div data-dojo-type="dijit/Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
+        plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
         <p>This instance is created with a subset of functions enabled in the order we want</p>
-      </div>
+    </div>
+
 
 
 
@@ -141,9 +142,12 @@ This example adds the text color, background color, and font selection plugins t
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FontChoice");  // 'fontName','fontSize','formatBlock'
-      dojo.require("dijit._editor.plugins.TextColor");
+    require([
+        "dojo/parser",
+        "dijit/Editor",
+        "dijit/_editor/plugins/FontChoice", // 'fontName','fontSize','formatBlock'
+        "dijit/_editor/plugins/TextColor"
+    ]);
 
   .. html ::
 
@@ -159,8 +163,7 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.LinkDialog");
+      require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/LinkDialog"]);
 
   .. html ::
 
@@ -273,8 +276,7 @@ It's used along with setting height="" parameter setting.
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+      require(["dojo/parser", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar"]);
 
   .. html ::
 

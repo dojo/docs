@@ -1,7 +1,7 @@
 .. _dijit/Dialog:
 
 ============
-dijit.Dialog
+dijit/Dialog
 ============
 
 :since: V0.1.0
@@ -190,26 +190,11 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.form.TextBox");
-        dojo.require("dijit.form.DateTextBox");
-        dojo.require("dijit.form.TimeTextBox");
-
-        function checkData(){
-            var data = formDlg.get('value');
-            console.log(data);
-            if(data.sdate > data.edate){
-                alert("Start date must be before end date");
-                return false;
-            }else{
-                return true;
-            }
-        }
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Button", "dijit/form/TextBox", "dijit/form/DateTextBox", "dijit/form/TimeTextBox"]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Form Dialog"
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog"
         execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <table>
             <tr>
@@ -222,11 +207,11 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myStartDate" onChange="myEndDate.constraints.min = arguments[0];" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myEndDate" onChange="myStartDate.constraints.max = arguments[0];" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
@@ -239,9 +224,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
             <tr>
                 <td align="center" colspan="2">
                     <button data-dojo-type="dijit/form/Button" type="submit"
-                        data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
+                        data-dojo-props="onClick:function(){return myFormDialog.isValid();}">OK</button>
                     <button data-dojo-type="dijit/form/Button" type="button"
-                        data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
+                        data-dojo-props="onClick:function(){myFormDialog.hide();}">Cancel</button>
                 </td>
             </tr>
         </table>
@@ -249,8 +234,8 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog").show();
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+            myFormDialog.show();
         </script>
     </button>
 
@@ -264,21 +249,20 @@ handles the onSubmit event, validation, and an xhrPost to the server.
 
   .. js ::
 
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.Form");
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.form.ValidationTextBox");
+    require(["dojo/parser", "dijit/Dialog", "dijit/form/Form", "dijit/form/Button", "dijit/form/ValidationTextBox"]);
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog2" title="Form Dialog" style="display: none">
-        <form data-dojo-type="dijit/form/Form">
-            <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
-                dojo.stopEvent(e); // prevent the default submit
-                if(!this.isValid()){ window.alert('Please fix fields'); return; }
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog" style="display: none">
+        <form data-dojo-type="dijit/form/Form" data-dojo-id="myForm">
+            <script type="dojo/on" data-dojo-event="submit" data-dojo-args="e">
+                require(["dojo/_base/event"], function(event){
+                    event.stop(e); // prevent the default submit
+                    if(!myForm.isValid()){ window.alert('Please fix fields'); return; }
+                });
 
-                window.alert("Would submit here via xhr");
-                // dojo.xhrPost( {
+                window.alert("Would submit here via dojo/xhr");
+                // xhr.post( {
                 //      url: 'foo.com/handler',
                 //      content: { field: 'go here' },
                 //      handleAs: 'json'
@@ -287,13 +271,12 @@ handles the onSubmit event, validation, and an xhrPost to the server.
                 //  });
             </script>
             <div class="dijitDialogPaneContentArea">
-
                 <label for='foo'>Foo:</label><div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true"></div>
             </div>
             <div class="dijitDialogPaneActionBar">
                     <button data-dojo-type="dijit/form/Button" type="submit">OK</button>
                     <button data-dojo-type="dijit/form/Button" type="button"
-                        data-dojo-props="onClick:function(){dijit.byId('formDialog2').hide();}">Cancel</button>
+                        data-dojo-props="onClick:function(){myFormDialog.hide();}">Cancel</button>
             </div>
          </form>
     </div>
@@ -301,7 +284,7 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog2").show();
+            myFormDialog.show();
         </script>
     </button>
 
@@ -316,36 +299,34 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.form.RadioButton");
+    require(["dojo/parser", "dojo/ready", "dijit/Dialog", "dijit/form/Button", "dijit/form/RadioButton", "dojo/dom", "dojo/dom-style"], function(parser, ready, Dialog, Button, RadioButton, dom, domStyle){
+        this.accept = function(){
+            dom.byId("decision").innerHTML = "Terms and conditions have been accepted.";
+            domStyle.set("decision", "color", "#00CC00");
+            myFormDialog.hide();
+        }
 
-    var accept = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
-        dojo.style("decision", "color", "#00CC00");
-        dijit.byId("formDialog").hide();
-    }
-
-    var decline = function(){
-        dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
-        dojo.style("decision", "color", "#FF0000");
-        dijit.byId("formDialog").hide();
-    }
+        this.decline = function(){
+            dom.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
+            domStyle.set("decision", "color", "#FF0000");
+            myFormDialog.hide();
+        }
+    });
 
   .. html ::
 
-    <div data-dojo-type="dijit/Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Accept or decline agreement terms">
         <h1>Agreement Terms</h1>
     
-         <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
-                Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-         </div>
+        <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto;">
+            Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        </div>
     
-        <br>
+        <br />
         <table>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept" />
                     <label for="radioOne">
                         I accept the terms of this agreement
                     </label>
@@ -353,7 +334,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
             </tr>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
+                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline" />
                     <label for="radioTwo">
                         I decline
                     </label>
@@ -370,13 +351,10 @@ This example shows a Dialog that will ask the user to accept or decline the term
     </label>
     <button id="termsButton" data-dojo-type="dijit/form/Button" type="button">
         View terms and conditions to accept
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            dijit.byId("formDialog").show();
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+            myFormDialog.show();
         </script>
     </button>
-
-
-
 
 
 External Dialog content using HREF attribute
@@ -396,16 +374,15 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
 
   .. html ::
 
-    <div id="external" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
+    <div data-dojo-id="myExternalDialog" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('external').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){myExternalDialog.show();}" type="button">Show me!</button>
 
 
 
@@ -419,12 +396,11 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
 
   .. js ::
 
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+    require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
 
   .. html ::
 
-    <div id="sized" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
+    <div data-dojo-id="mySizedDialog" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
         <div style="width: 200px; height: 100px; overflow: auto;">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
@@ -436,7 +412,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     </div>
 
     <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mySizedDialog.show();}" type="button">Show me!</button>
 
 
 Accessibility
@@ -505,7 +481,7 @@ spoken by the screen reader when the dialog opens, add the aria-describedby prop
 Include an element containing the text you want spoken in the dialog.
 The value of the aria-describedby property is the id of the element containing the text.
 
-.. js ::
+.. html ::
 
   <div data-dojo-type="dijit/Dialog" title="Example Dialog" aria-describedby="intro">
     <div id="intro">Text to describe dialog</div>
@@ -514,7 +490,7 @@ The value of the aria-describedby property is the id of the element containing t
 
 For earlier Dojo versions, you can add an onshow event handler that adds the aria-describedby property:
 
-.. js ::
+.. html ::
 
   <div data-dojo-type="dijit/Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
     <div id="intro">Text to describe dialog</div>
@@ -567,15 +543,17 @@ Known Issues
   and will cause JAWS to speak the title of the dialog and the user will know that a dialog has been opened.
 
 .. js ::
+
+  require(["dojo/ready", "dijit/Dialog", "dojo/dom-style"], function(ready, Dialog, domStyle){
+      dialogObj = new Dialog({
+          id: 'dialogWithHref',
+          title: 'The title',
+          href: "/url/to/dialog/content/including/layout/dijit/"
+      });
   
-  dialogObj = new dijit.Dialog({
-      id: 'dialogWithHref',
-      title: 'The title'
-      href: "/url/to/dialog/content/including/layout/dijit/",
-  });
-  
-  dojo.style(dialogObj.containerNode, {
-          position:'relative',
+      domStyle.set(dialogObj.containerNode, {
+          position: 'relative'
+      });
   });
 
 

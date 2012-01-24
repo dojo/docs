@@ -38,6 +38,7 @@ Individuals who have signed Dojo CLAs
 * Bannister, Michael
 * Barber, Chris
 * Barnt, Dave
+* Barrett, Christopher
 * Barzilai, Joseph
 * Basler, Mark
 * Bates, Simon
@@ -516,6 +517,7 @@ Individuals who have signed Dojo CLAs
 * Stern, David
 * Stojic, Ivan
 * Stott, Nathan Rains
+* Strimpel, Jason
 * Sulliman, Hani
 * Sumilang, Richard
 * Svensson, Peter

@@ -1,7 +1,7 @@
 .. _dijit/form/Form:
 
 ===============
-dijit.form.Form
+dijit/form/Form
 ===============
 
 :Authors: Doug Hays, Bill Keese
@@ -11,7 +11,7 @@ dijit.form.Form
 .. contents ::
     :depth: 2
 
-**dijit.form.Form** is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
+**dijit/form/Form** is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
 
 
 Examples
@@ -28,20 +28,17 @@ Try opening this example and immediately clicking Submit, and compare the behavi
 
   .. js ::
 
-        dojo.require("dijit.form.Form");
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.form.ValidationTextBox");
-        dojo.require("dijit.form.DateTextBox");
+    require(["dojo/parser", "dijit/form/Form", "dijit/form/Button", "dijit/form/ValidationTextBox", "dijit/form/DateTextBox"]);
 
   .. html ::
 
     <div data-dojo-type="dijit/form/Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
-        <script type="dojo/method" data-dojo-event="onReset">
+        <script type="dojo/on" data-dojo-event="reset">
             return confirm('Press OK to reset widget values');
         </script>
 
-        <script type="dojo/method" data-dojo-event="onSubmit">
+        <script type="dojo/on" data-dojo-event="submit">
             if(this.validate()){
                 return confirm('Form is valid, press OK to submit');
             }else{
@@ -70,7 +67,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
             </tr>
         </table>
 
-        <button data-dojo-type="dijit/form/Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
+        <button data-dojo-type="dijit/form/Button" type="button" onClick="console.log(myForm.getValues())">Get Values from form!</button>
         <button data-dojo-type="dijit/form/Button" type="submit" name="submitButton" value="Submit">Submit</button>
         <button data-dojo-type="dijit/form/Button" type="reset">Reset</button>
     </div>
@@ -96,9 +93,7 @@ AND when you have selected 1 of the native HTML radio buttons.
 
   .. js ::
 
-        dojo.require("dijit.form.Form");
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.form.ValidationTextBox");
+    require(["dojo/parser", "dijit/form/Form", "dijit/form/Button", "dijit/form/ValidationTextBox"]);
 
   .. html ::
 
@@ -109,15 +104,17 @@ AND when you have selected 1 of the native HTML radio buttons.
            dijit.form.Form.prototype.validate.apply(this, arguments);
         </script>
         <script type="dojo/method" data-dojo-event="onSubmit">
-            var f = dojo.byId("myFormThree");
-            var s = "";
-            for(var i = 0; i < f.elements.length; i++){
-                var elem = f.elements[i];
-                if(elem.name == "button"){ continue; }
-                if(elem.type == "radio" && !elem.checked){ continue; }
-                s += elem.name + ": " + elem.value + "\n";
-            }
-            alert("Unvalidated data that would be submitted:\n" + s);
+            require(["dojo/dom"], function(dom){
+                var f = dojo.byId("myFormThree");
+                var s = "";
+                for(var i = 0; i < f.elements.length; i++){
+                    var elem = f.elements[i];
+                    if(elem.name == "button"){ continue; }
+                    if(elem.type == "radio" && !elem.checked){ continue; }
+                    s += elem.name + ": " + elem.value + "\n";
+                }
+                alert("Unvalidated data that would be submitted:\n" + s);
+            });
             return false;
         </script>
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">

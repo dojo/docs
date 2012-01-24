@@ -1,7 +1,7 @@
 .. _dijit/ProgressBar:
 
 =================
-dijit.ProgressBar
+dijit/ProgressBar
 =================
 
 A ProgressBar gives dynamic feedback on the progress of a long-running operation.
@@ -19,23 +19,21 @@ Declarative markup
 
   .. js ::
 
-        dojo.require("dijit.ProgressBar");
-        dojo.require("dojo.parser");
-
-        var i=0;
-        function download(){
-            jsProgress.update({maximum: 10, progress: ++i});
+    require(["dojo/parser", "dijit/ProgressBar"], function(){
+        var i = 0;
+        this.download = function(){
+            myProgressBar.update({maximum: 10, progress: ++i});
             if(i < 10){
-                setTimeout(download, 100 + Math.floor(Math.random() * 100));
+                setTimeout(download, 10 + Math.floor(Math.random() * 100));
             }
         }
+    });
 
   .. html ::
 
     <div data-dojo-type="dijit/ProgressBar" style="width:300px"
-         data-dojo-id="jsProgress" id="downloadProgress" data-dojo-props="maximum:10"></div>
-    
-    <br /><input type="button" value="Go!" onclick="download();" />
+        data-dojo-id="myProgressBar" id="downloadProgress" data-dojo-props="maximum:10"></div>
+    <input type="button" value="Go!" onclick="download();" />
 
 
 Accessibility

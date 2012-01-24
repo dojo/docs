@@ -1,7 +1,7 @@
 .. _dijit/layout/TabContainer:
 
 =========================
-dijit.layout.TabContainer
+dijit/layout/TabContainer
 =========================
 
 :Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
@@ -38,26 +38,26 @@ Note that the tabs all have a fixed height.
  
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
-        var tc = new dijit.layout.TabContainer({
-            style: "height: 100%; width: 100%;"
-        }, "tc1-prog");
-  
-        var cp1 = new dijit.layout.ContentPane({
-             title: "Food",
-             content: "We offer amazing food"
+    require(["dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(ready, TabContainer, ContentPane){
+        ready(function(){
+            var tc = new TabContainer({
+                style: "height: 100%; width: 100%;"
+            }, "tc1-prog");
+      
+            var cp1 = new ContentPane({
+                 title: "Food",
+                 content: "We offer amazing food"
+            });
+            tc.addChild(cp1);
+      
+            var cp2 = new ContentPane({
+                 title: "Drinks",
+                 content: "We are known for our drinks."
+            });
+            tc.addChild(cp2);
+      
+            tc.startup();
         });
-        tc.addChild(cp1);
-  
-        var cp2 = new dijit.layout.ContentPane({
-             title: "Drinks",
-             content: "We are known for our drinks."
-        });
-        tc.addChild(cp2);
-  
-        tc.startup();
     });
 
   The HTML is very simple:
@@ -83,8 +83,7 @@ Here are some markup examples:
 
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
+    require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane"]);
 
   The HTML is very simple
 
@@ -92,13 +91,13 @@ Here are some markup examples:
 
     <div style="width: 350px; height: 300px">
         <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%; height: 100%;">
-            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
                 Lorem ipsum and all around...
             </div>
             <div data-dojo-type="dijit/layout/ContentPane" title="My second tab">
                 Lorem ipsum and all around - second...
             </div>
-            <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" closable="true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" data-dojo-props="closable:true">
                 Lorem ipsum and all around - last...
             </div>
         </div>
@@ -118,8 +117,7 @@ The second tab is closable.
 
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
+    require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane"]);
 
   The HTML is very simple
 
@@ -127,26 +125,21 @@ The second tab is closable.
     
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
     <div style="height: 105px;">
-
-      <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
-        <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
-          Lorem ipsum and all around...
+        <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
+                Lorem ipsum and all around...
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="My second tab" data-dojo-props="closable:true">
+                Lorem ipsum and all around - second...<br />
+                Hmmm expanding tabs......
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
+                Lorem ipsum and all around - last...<br />
+                <br />
+                <br />
+                Hmmm even more expanding tabs......
+            </div>
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="My second tab" closable="true">
-          Lorem ipsum and all around - second...
-          <br />
-          Hmmm expanding tabs......
-        </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="My last tab">
-          Lorem ipsum and all around - last...
-          <br />
-          <br />
-          <br />
-          Hmmm even more expanding tabs......
-        </div>
-      </div>
-
-    <!-- end of the div -->
     </div>
 
 
@@ -163,34 +156,33 @@ true (if programmatically created) or the attribute selected="true" (if declarat
  
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
-        var tc = new dijit.layout.TabContainer({
-            style: "height: 100%; width: 100%;"
-        }, "tc1-prog");
-  
-        var cp1 = new dijit.layout.ContentPane({
-             title: "First Tab",
-             content: "We offer amazing food"
-        });
-        tc.addChild(cp1);
-  
-        var cp2 = new dijit.layout.ContentPane({
-             title: "Second Tab",
-             content: "We are known for our drinks."
-        });
-        tc.addChild(cp2);
+    require(["dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(ready, TabContainer, ContentPane){
+        ready(function(){
+            var tc = new TabContainer({
+                style: "height: 100%; width: 100%;"
+            }, "tc1-prog");
+      
+            var cp1 = new ContentPane({
+                title: "First Tab",
+                content: "We offer amazing food"
+            });
+            tc.addChild(cp1);
+      
+            var cp2 = new ContentPane({
+                title: "Second Tab",
+                content: "We are known for our drinks."
+            });
+            tc.addChild(cp2);
 
-        var cp3 = new dijit.layout.ContentPane({
-             title: "Third Tab",
-             content: "This Tab has the attribute 'selected: true' set.",
-             selected: true
+            var cp3 = new ContentPane({
+                title: "Third Tab",
+                content: "This Tab has the attribute 'selected: true' set.",
+                selected: true
+            });
+            tc.addChild(cp3);
+            
+            tc.startup();
         });
-        tc.addChild(cp3);
-
-  
-        tc.startup();
     });
 
   The HTML is very simple:
@@ -207,33 +199,39 @@ More examples
 
 There are several more examples of basic use cases :ref:`available <dijit/layout/TabContainer-examples>`
 
-Like :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon.
+Like :ref:`dijit/layout/StackContainer <dijit/layout/StackContainer>`, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon.
 
 Manipulating Children
 ---------------------
 
 .. js ::
-  
-  var tabs = dijit.byId("myTabContainer");
-  var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
-  tabs.addChild(pane);
+
+  require(["dijit/registry", "dijit/layout/ContentPane"], function(registry, ContentPane){
+      var tabs = registry.byId("myTabContainer");
+      var pane = new ContentPane({ title:"Remote Content", href:"remote.html" });
+      tabs.addChild(pane);
+  });
 
 A Tab doesn't get displayed unless you call ``.selectChild``
 
 .. js ::
-  
-  var tabs = dijit.byId("myTabContainer");
-  var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
-  tabs.addChild(pane);
-  tabs.selectChild(pane);
+
+  require(["dijit/registry", "dijit/layout/ContentPane"], function(registry, ContentPane){
+      var tabs = registry.byId("myTabContainer");
+      var pane = new ContentPane({ title:"Remote Content", href:"remote.html" });
+      tabs.addChild(pane);
+      tabs.selectChild(pane);
+  });
 
 the ``addChild`` method accepts a position index, telling where in the order to add the new pane:
 
 .. js ::
-  
-  var tabs = dijit.byId("myTabContainer");
-  var pane = new dijit.layout.ContentPane({ title:"Remote Content", href:"remote.html" });
-  tabs.addChild(pane, 1);
+
+  require(["dijit/registry", "dijit/layout/ContentPane"], function(registry, ContentPane){
+      var tabs = registry.byId("myTabContainer");
+      var pane = new ContentPane({ title:"Remote Content", href:"remote.html" });
+      tabs.addChild(pane, 1);
+  });
 
 This will add the new remote pane after the first pane (0).
 
@@ -246,19 +244,18 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
-        var tabs = dijit.byId("onClose-ex");
-        var closablePane = new dijit.layout.ContentPane({
-            title:"Close Me",
-            closable: true,
-            onClose: function(){
-               // confirm() returns true or false, so return that.
-               return confirm("Do you really want to Close this?");
-            }
+    require(["dojo/parser", "dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(parser, ready, TabContainer, ContentPane){
+        ready(function(){
+            var closablePane = new ContentPane({
+                title:"Close Me",
+                closable: true,
+                onClose: function(){
+                   // confirm() returns true or false, so return that.
+                   return confirm("Do you really want to Close this?");
+                }
+            });
+            onCloseEx.addChild(closablePane);
         });
-        tabs.addChild(closablePane);
     });
 
   You can, of course, attach the onClose function directly on a pane as well:
@@ -266,16 +263,14 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
   .. html ::
     
     <div style="height: 100px;">
-
-      <div id="onClose-ex" data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
-        <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" selected="true">
-          Lorem ipsum and all around...
+        <div data-dojo-id="onCloseEx" data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false">
+            <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
+                Lorem ipsum and all around...
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="Other Closable" data-dojo-props="closable:true, onClose:function(){return confirm('really?');}">
+                ... I have an in-line onClose
+            </div>
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" title="Other Closable" closable="true" onClose="return confirm('really?');">
-            ... I have an in-line onClose
-        </div>
-      </div>
-
     </div>
 
 
@@ -293,14 +288,15 @@ To monitor when a pane is selected (and the previous pane is deselected), the pr
 To monitor when children are added/deleted, use dojo/aspect or dojo.connect:
 
 .. js ::
-  
-  // assuming the same id="bar" TabContainer
-  var tabs = dijit.byId("bar");
-  
-  dojo.connect(tabs, "addChild", function(child){
-      console.log("just added: ", child);
-  });
 
+  require(["dijit/registry"], function(registry){
+      // assuming the same id="bar" TabContainer
+      var tabs = registry.byId("bar");
+  
+      dojo.connect(tabs, "addChild", function(child){
+          console.log("just added: ", child);
+      });
+  });
 
 
 It is worth noting: if you need a function to be called *absolutely every* time a child is added to a TabContainer
@@ -309,12 +305,14 @@ to ensure you are notified of the children already existing in markup.
 This is only relevant if you are subclassing, for example:
 
 .. js ::
-   
-  dojo.declare("my.TabContainer", dijit.layout.TabContainer, {
-      _setupChild: function(child){
-           this.inherited(arguments);
-           console.log("I've seen: ", child);
-      }
+
+  require(["dojo/_base/declare", "dijit/layout/TabContainer"], function(declare, TabContainer){
+      declare("my.TabContainer", TabContainer, {
+          _setupChild: function(child){
+               this.inherited(arguments);
+               console.log("I've seen: ", child);
+          }
+      });
   });
   
 This is because ``addChild`` will not be called for the initial panes, specified in markup.

@@ -66,7 +66,7 @@ Declarative example
 
   .. js ::
 
-     dojo.require("dijit.form.DateTextBox");
+     require(["dojo/parser", "dijit/form/DateTextBox"]);
 
   .. html ::
 
@@ -95,23 +95,23 @@ Here's an example:
 
   .. js ::
 
-        dojo.require("dijit.form.DateTextBox");
-        dojo.ready(function(){
-            dojo.declare("OracleDateTextBox", dijit.form.DateTextBox, {
+    require(["dojo/ready", "dojo/_base/declare", "dijit/form/DateTextBox", "dojo/date/locale", "dojo/dom"], function(ready, declare, DateTextBox, locale, dom){
+        ready(function(){
+            declare("OracleDateTextBox", DateTextBox, {
                 oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
                 value: "", // prevent parser from trying to convert to Date object
                 postMixInProperties: function(){ // change value string to Date object
                     this.inherited(arguments);
                     // convert value to Date object
-                    this.value = dojo.date.locale.parse(this.value, this.oracleFormat);
+                    this.value = locale.parse(this.value, this.oracleFormat);
                 },
                 // To write back to the server in Oracle format, override the serialize method:
                 serialize: function(dateObject, options){
-                    return dojo.date.locale.format(dateObject, this.oracleFormat).toUpperCase();
+                    return locale.format(dateObject, this.oracleFormat).toUpperCase();
                 }
             });
             function showServerValue(){
-                dojo.byId('toServerValue').value=document.getElementsByName('oracle')[0].value;
+                dom.byId('toServerValue').value = document.getElementsByName('oracle')[0].value;
             }
             new OracleDateTextBox({
                 value: "31-DEC-2009",
@@ -120,15 +120,16 @@ Here's an example:
             }, "oracle");
             showServerValue();
         });
+    });
 
   .. html ::
 
-    <label for"fromServerValue">Oracle date coming from server:</label>
-    <input id="fromServerValue" readOnly disabled value="31-DEC-2009"/><br/>
+    <label for="fromServerValue">Oracle date coming from server:</label>
+    <input id="fromServerValue" readonly="readonly" disabled="disabled" value="31-DEC-2009" /><br />
     <label for="oracle">Client date:</label>
     <input id="oracle" /><br/>
-    <label for"toServerValue">Oracle date going back to server:</label>
-    <input id="toServerValue" readOnly disabled/>
+    <label for="toServerValue">Oracle date going back to server:</label>
+    <input id="toServerValue" readonly="readonly" disabled="disabled" />
 
 
 Changing Constraints on the Fly
@@ -143,16 +144,16 @@ and the second widget sets the `min` constraint of the first widget.
 
   .. js ::
 
-        dojo.require("dijit.form.DateTextBox");
+    require(["dojo/parser", "dijit/form/DateTextBox"]);
 
   .. html ::
 
     <label for="fromDate">From:</label>
-    <input id="fromDate" type="text" name="fromDate" data-dojo-type="dijit/form/DateTextBox" required="true"
-        onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
+    <input data-dojo-id="myFromDate" type="text" name="fromDate" data-dojo-type="dijit/form/DateTextBox" required="true"
+        onChange="myToDate.constraints.min = arguments[0];" />
     <label for="toDate">To:</label>
-    <input id="toDate" type="text" name="toDate" data-dojo-type="dijit/form/DateTextBox" required="true"
-        onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
+    <input data-dojo-id="myToDate" type="text" name="toDate" data-dojo-type="dijit/form/DateTextBox" required="true"
+        onChange="myFromDate.constraints.max = arguments[0];" />
 
 
 Working with Two-Digit Years
@@ -201,3 +202,5 @@ See the Accessibility Section in :ref:`dijit.form.ValidationTextBox <dijit/form/
 The calendar popup associated with the DateTextBox is not yet keyboard accessible.
 However, the DateTextBox will still meet accessibility requirements as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the DateTextBox (note that there is a default invalidMessage but not a promptMessage).
 These messages are implemented in a format that is accessible to all users.
+
+.. api-inline :: dijit.form.DateTextBox

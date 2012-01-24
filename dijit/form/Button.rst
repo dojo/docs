@@ -33,18 +33,17 @@ The first example shows how to create a button programmatically.
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-
-    dojo.ready(function(){
-        // Create a button programmatically:
-        var button = new dijit.form.Button({
-            label: "Click me!",
-            onClick: function(){
-                // Do something:
-                dojo.byId("result1").innerHTML += "Thank you! ";
-            }
-        }, "progButtonNode");
-
+    require(["dojo/ready", "dijit/form/Button", "dojo/dom"], function(ready, Button, dom){
+        ready(function(){
+            // Create a button programmatically:
+            var myButton = new Button({
+                label: "Click me!",
+                onClick: function(){
+                    // Do something:
+                    dom.byId("result1").innerHTML += "Thank you! ";
+                }
+            }, "progButtonNode");
+        });
     });
 
   .. html ::
@@ -62,14 +61,15 @@ As usual, you can create the Button widget declaratively using the data-dojo-typ
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/form/Button"]);
 
   .. html ::
 
     <button data-dojo-type="dijit/form/Button" type="button">Click me too!
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            // Do something:
-            dojo.byId("result2").innerHTML += "Thank you! ";
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+            require(["dojo/dom"], function(dom){
+                dom.byId("result2").innerHTML += "Thank you! ";
+            });
         </script>
     </button>
     <div id="result2"></div>
@@ -85,7 +85,7 @@ Use the showLabel parameter to suppress it from appearing under normal circumsta
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
+    require(["dojo/parser", "dijit/form/Button"]);
 
   .. html ::
 
@@ -102,17 +102,17 @@ Following example toggles the icon if the button:
 
   .. js ::
 
-    dojo.require("dijit.form.Button");
-
+    require(["dojo/parser", "dijit/form/Button"]);
+    
     var toggled = false;
     function toggle(){
-        dijit.byId("toggleButton").set("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");
+        myToggleButton.set("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");
         toggled = !toggled;
     }
 
   .. html ::
 
-    <button data-dojo-type="dijit/form/Button" id="toggleButton" onClick="toggle();" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
+    <button data-dojo-type="dijit/form/Button" data-dojo-id="myToggleButton" onClick="toggle();" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
         Click me!
     </button>
 

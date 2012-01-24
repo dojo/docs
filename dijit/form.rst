@@ -114,9 +114,13 @@ Miscellaneous
 
   Corresponds to a <form> itself; wraps other widgets
 
-* :ref:`dijit.form.Slider <dijit/form/Slider>`
+* :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`
 
-  A scale with a handle you can drag up/down or left/right to select a value
+  A scale with a handle you can drag left/right to select a value
+
+* :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>`
+
+  A scale with a handle you can drag up/down to select a value
 
 * :ref:`dijit.form.CheckBox <dijit/form/CheckBox>`
 

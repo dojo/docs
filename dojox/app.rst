@@ -21,37 +21,25 @@ Overview
 =========
 The following diagram represents layout management.  The difference between a scene and a view is that scenes may have multiple children views but a view does not have a child.
 
+.. image :: ./app/Diagram1.png
+
 dojox.app Components
 ====================
 ``dojox.app`` is constructed of seven core modules;  each very focused and compact.
 
-:ref:`dojox.app.view <dojox/app/view>`
---------------------------------------
-``dojox.app.view`` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
+:ref:`dojox.app.view <dojox/app/view>` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
 
-:ref:`dojox.app.bind <dojox/app/bind>`
---------------------------------------
-``dojox.app.bind`` is used to query ``dojox.mvc`` widgets and get/set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. ``dojoType``, ``data-dojo-type``, ``ref`` and ``data-dojo-props`` attributes are compatible in a view.
+:ref:`dojox.app.bind <dojox/app/bind>` is used to query ``dojox.mvc`` widgets and get/set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. ``dojoType``, ``data-dojo-type``, ``ref`` and ``data-dojo-props`` attributes are compatible in a view.
 
-:ref:`dojox.app.model <dojox/app/model>`
-----------------------------------------
-``dojox.app.model`` creates a ``StatefulModel`` data source with JSON data or dojo data store. The data model can be ``binded`` to a ``dojox.mvc`` widget using ``dojox.app.bind``.
+:ref:`dojox.app.model <dojox/app/model>` creates a ``StatefulModel`` data source with JSON data or dojo data store. The data model can be ``binded`` to a ``dojox.mvc`` widget using ``dojox.app.bind``.
 
-:ref:`dojox.app.scene <dojox/app/scene>`
-----------------------------------------
-``dojox.app.scene`` is used to create the layout for each child view, manage the transition between views, and resize the layout to fit the display area. A scene can contain one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view cannot have children.
+:ref:`dojox.app.scene <dojox/app/scene>` is used to create the layout for each child view, manage the transition between views, and resize the layout to fit the display area. A scene can contain one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view cannot have children.
 
-dojox.app.module.env
---------------------
 ``dojox.app.module.env`` provides the dojo, dijit, and dojox environments.
 
-:ref:`dojox.app.module.history <dojox/app/module/history>`
-----------------------------------------------------------
-``dojox.app.module.history`` manages transitions forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
+:ref:`dojox.app.module.history <dojox/app/module/history>` manages transitions forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
 
-:ref:`dojox.app.main <dojox/app/main>`
---------------------------------------
-``dojox.app.main`` (Application) is used to create a ``dojox.app`` application by the configuration in ``config.json``. The main responsibilities of ``dojox.app.main`` include loading the application configuration, loading data from data source, creating views, creating data models, binding data models to views using ``dojox.app.bind``, creating scenes between views, and parsing the application with ``dojo.parser.parse``.
+:ref:`dojox.app.main <dojox/app/main>` (Application) is used to create a ``dojox.app`` application by the configuration in ``config.json``. The main responsibilities of ``dojox.app.main`` include loading the application configuration, loading data from data source, creating views, creating data models, binding data models to views using ``dojox.app.bind``, creating scenes between views, and parsing the application with ``dojo.parser.parse``.
 
 
 The Configuration Object
