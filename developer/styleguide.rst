@@ -176,7 +176,7 @@ Specific Naming Conventions
     
     #. Negated boolean variable names MUST be avoided: ``isNotError`` and ``isNotFound`` are unacceptable.
 
-    # Methods returning an object MAY be named after what they return, and methods returning void after what they do.
+    #. Methods returning an object MAY be named after what they return, and methods returning void after what they do.
 
 Files
 =====
@@ -228,7 +228,7 @@ Variables
         
         #. The use of ``do...while`` loops is acceptable (unlike in Java).
         
-        # The use of ``break`` and ``continue`` is not discouraged (unlike in Java).
+        #. The use of ``break`` and ``continue`` is not discouraged (unlike in Java).
 
     #. Conditionals
         
@@ -297,7 +297,7 @@ Layout
                     statements;
                 }while(condition);
          
-         #. ``switch`` statements SHOULD have the following form:
+        #. ``switch`` statements SHOULD have the following form:
          
             .. js ::
             
@@ -408,8 +408,8 @@ Layout
         
         #. Comments SHOULD NOT be included for every single line of code.
  
-Documentation
-=============
+API Documentation
+=================
  
 Markup Guidelines
 -----------------

@@ -130,6 +130,10 @@ Miscellaneous
 
   To select one choice from a list
 
+* :ref:`dijit/form/DataList <dijit/form/DataList>`
+
+  data store that processes OPTION tags as data items
+
 There are also some notable widgets in :ref:`dojox.form <dojox/form>` and :ref:`dojox.widget <dojox/widget>` that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
 
 

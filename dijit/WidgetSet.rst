@@ -135,5 +135,5 @@ Validating all widgets in a WidgetSet
 See also
 ========
 
-* :ref:`dijit/registry`
+* :ref:`dijit/registry <dijit/registry>`
 * :ref:`dojo.NodeList <dojo/NodeList>`

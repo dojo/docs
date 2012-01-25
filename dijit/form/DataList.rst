@@ -1,7 +1,7 @@
 .. _dijit/form/DataList:
 
 ===================
-dijit.form.DataList
+dijit/form/DataList
 ===================
 
 :Authors: Doug Hays
@@ -23,18 +23,24 @@ Examples
 HTML5 markup
 ------------
 
-.. html ::
+.. code-example ::
 
-  <select data-dojo-type="dijit/form/DataList" data-dojo-props='id:"fruit"' >
+  .. js ::
+
+    require(["dojo/parser", "dojo/ready", "dijit/form/DataList", "dijit/registry"], function(parser, ready, DataList, registry){
+        ready(function(){
+            var store = registry.byId('fruit');
+            alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
+        });
+    });
+
+  .. html ::
+
+    <select data-dojo-type="dijit/form/DataList" id="fruit">
         <option value="Ap">Apples</option>
         <option value="Ba">Bananas</option>
         <option value="Bl">Blueberries</option>
         <option value="Or">Oranges</option>
-  </select>
-
-  <script type="text/javascript">
-        var store = dijit.byId('fruit');
-        alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
-  </script>
+    </select>
 
 .. image :: DataList.png

@@ -5,8 +5,6 @@ Functions used Everywhere
 =========================
 
 :Authors: Carla, Peter Higgins, Shane O'Sullivan, Marcus Reimann, Craig Riecke, Alex Russell
-:Developers: ?-
-:since: V?
 
 .. contents ::
     :depth: 2
