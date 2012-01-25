@@ -44,7 +44,7 @@ Usage
 =========  =========================  =============================================================================
 Parameter  Type                       Description
 =========  =========================  =============================================================================
-connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. Note: Currently connectId can only be specified on initialization, it cannot be changed via set('connectId', ...). Note: in 2.0 this will be renamed to connectIds for less confusion.  Note: functions addTarget and removeTarget have been added to allow dynamic registration/deregistration of connected ids.
+connectId  Strings|DomNodes           Id of DomNode to attach the tooltip to. When user hovers over the specified dom nodes, the tooltip will appear.
 label      String                     Text to display in the tooltip. Specified as innerHTML when creating the widget from markup.
 position   Array of Strings           This variable controls the position of tooltips, if the position is not specified to the Tooltip widget or TextBox widget itself. The property "connectId" is an array, since it can contain multiple nodes to connect to. The following values are possible:
                                       
@@ -143,6 +143,51 @@ You can control the search path for positions via a global setting like:
 
 dijit.Tooltip.defaultPosition = ["above", "below"];
 
+Attaching to Multiple Nodes
+===========================
+The Tooltip widget has two optional parameters:
+  - selector
+  - getContent()
+
+These parameters allow a single Tooltip widget to display unique tooltips for (for example) each row in a table:
+
+.. code-example ::
+
+  .. js ::
+
+      require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
+          ready(function(){
+              new Tooltip({
+                  connectId: "myTable",
+                  selector: "tr",
+                  getContent: function(matchedNode){
+                      return matchedNode.getAttribute("tooltipText");
+                  }
+              });
+          });
+      });
+
+  .. html ::
+
+      <table id="myTable">
+           <tr tooltipText="tooltip for row 1"><td>row 1</td></tr>
+           <tr tooltipText="tooltip for row 2"><td>row 2</td></tr>
+           <tr tooltipText="tooltip for row 3"><td>row 3</td></tr>
+      </table>
+
+Further, the table contents can be changed freely after the Tooltip is created.
+Rows can be created, removed, or modified, and no calls to the Tooltip widget are necessary.
+The node specified by the connectId, however, should exist at the time the Tooltip is created.
+
+Selector is a CSS selector that specifies that the Tooltip should be attached, via event delegation,
+to matching subnodes of the connectId node, rather than the connectId node itself.
+So, specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
+each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
+
+getContent() lets the app customize the tooltip text that's displayed based on the node that triggered
+the tooltip.
+
+
 Accessibility
 =============
 
@@ -154,12 +199,10 @@ This can be accomplished by adding a tabindex="0" attribute onto the trigger ele
 Known Issues
 ------------
 
-When using Firefox 2 with JAWS 9, the tooltip text is spoken twice.
-This has been fixed in Firefox 3.
-
 Tooltips are not spoken in IE 8 with JAWS 10.
 This is because Dijit Tooltips are implemented using the ARIA alert role and IE 8 does not support that role.
-A ticket (http://bugs.dojotoolkit.org/ticket/3957) has been filed to modify Dijit Tooltips to use the ARIA tooltip role since that role is now supported in Firefox 3 and IE 8
+A ticket (`#3957 <http://bugs.dojotoolkit.org/ticket/3957>`_) has been filed to modify Dijit Tooltips
+to use the ARIA tooltip role since that role is now supported in Firefox 3 and IE 8.
 
 See also
 ========

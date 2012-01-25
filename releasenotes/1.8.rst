@@ -112,6 +112,35 @@ Editor
 ------
 - Performance fixes for editor's with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
 
+Tooltip
+-------
+The Tooltip widget has two new (optional) parameters:
+  - selector
+  - getContent()
+
+These parameters allow a single Tooltip widget to display unique tooltips for (for example) each row in a table:
+
+.. js ::
+
+ new Tooltip({
+   connectId: myTable,
+   selector: "tr",
+   getContent: function(matchedNode){ return ...; /* String */}
+ });
+
+Further, the table contents can be changed freely after the Tooltip is created.
+Rows can be created, removed, or modified, and no calls to the Tooltip widget are necessary.
+
+
+Selector is a CSS selector that specifies that the Tooltip should be attached, via event delegation,
+to matching subnodes of the connectId node, rather than the connectId itself.
+So, specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
+each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
+
+getContent() lets the app customize the tooltip text that's displayed based on the node that triggered
+the tooltip.
+
+
 Tree
 ----
 - New `dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>`_ class for connecting `dijit/Tree <dijit/Tree>`_ to stores with the new `dojo.store <dojo/store>`_ API. (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
