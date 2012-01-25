@@ -139,6 +139,30 @@ into the data-dojo-props field.   For example:
 **Note:** as of Dojo 1.8, the parser accepts the Module ID (MID) for the `data-dojo-type` attribute.  Developers should
 use the MID instead of the variable format to ensure compatibility with baseless modules.
 
+Another optional parameter is `data-dojo-mixins`, it allows to dynamically mixin one or several classes into the main
+`data-dojo-type` class.
+
+The following:
+
+.. html ::
+
+  <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"
+    data-dojo-props="store: myStore"></div>
+
+is equivalent to using the following class construction for the div:
+
+.. js ::
+
+  require(["dojo/parser", "dojo/_base/declare", "dojox/treemap/TreeMap", "dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
+    function(parser, declare, TreeMap, Keyboard, DrillDownUp){
+      new declare([TreeMap, Keyboard, DrillDownUp])({ store: myStore });
+  });
+
+If the data-dojo-type is not a class based on dojo declare, the parser will look for an `extend` method on the
+data-dojo-type class object and call it with the list of mixins as parameters in order to build the composed object.
+This makes this mechanism compatible with ComposeJS.
+
+
 Boolean parameters
 ~~~~~~~~~~~~~~~~~~
 
