@@ -58,6 +58,21 @@ An example:
       <button data-dojo-type="dijit/form/Button">Click Me!</button>
     </div>
 
+The parser now also supports a new data-dojo-mixins attribute that allows to dynamically mixin one or several classes into the main data-dojo-type class as follows:
+
+.. js ::
+
+    require(["dojo/parser","dojox/treemap/TreeMap","dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
+      function(parser) {
+        parser.parse();
+      }
+    );
+
+.. html ::
+
+    <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
+
+
 
 dojo/sniff
 ----------
