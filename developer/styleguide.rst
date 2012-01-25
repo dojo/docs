@@ -297,7 +297,7 @@ Layout
                     statements;
                 }while(condition);
          
-         #. ``switch`` statements SHOULD have the following form:
+        #. ``switch`` statements SHOULD have the following form:
          
             .. js ::
             
