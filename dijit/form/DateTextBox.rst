@@ -1,7 +1,7 @@
 .. _dijit/form/DateTextBox:
 
 ======================
-dijit.form.DateTextBox
+dijit/form/DateTextBox
 ======================
 
 :Authors: Becky Gibson, Doug Hays, Craig Riecke, Adam Peller
@@ -17,7 +17,7 @@ DateTextBox widgets are easy-to-use date entry controls that allow either typing
 Introduction
 ============
 
-``dijit.form.DateTextBox``:
+``dijit/form/DateTextBox``:
 
 * is a :ref:`mapped form control <dijit/form>`
 * validates against locale-specific :ref:`i18n <quickstart/internationalization/index>` rules
@@ -168,18 +168,17 @@ The catch is that this can only be set after the widget has been created.
 
   .. js ::
 
-        dojo.require("dijit.form.DateTextBox");
-        function setShortYear(){
-            var w = dijit.byId('shortYear');
-            w.constraints.fullYear = false;
-            w.set('value', w.get('value')); // reformat display to short year
-        }
-        dojo.ready(setShortYear);
+    require(["dojo/parser", "dojo/ready", "dijit/form/DateTextBox"], function(parser, ready){
+        ready(function(){
+            myShortYear.constraints.fullYear = false;
+            myShortYear.set('value', myShortYear.get('value')); // reformat display to short year
+        });
+    });
 
   .. html ::
 
-    <label for="shortYear">From:</label>
-    <input id="shortYear" type="text" name="shortYear" data-dojo-type="dijit/form/DateTextBox" value="1999-12-31" required="true"/>
+    <label for="myShortYear">From:</label>
+    <input data-dojo-id="myShortYear" type="text" name="shortYear" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="constraints:{fullYear: false}" value="1999-12-31" required="true" />
 
 Accessibility
 =============
