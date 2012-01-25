@@ -170,56 +170,58 @@ Custom styling:
 
   .. js ::
 
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit.Calendar");
+      require([
+        "dijit/dijit", // loads the optimized dijit layer
+        "dijit/Calendar",
+        "dijit/registry",
+        "dojo/dom",
+        "dojox/date/hebrew",
+        "dojox/date/hebrew/Date",
+        "dojox/date/hebrew/locale",
+        "dojox/date/islamic",
+        "dojox/date/islamic/Date",
+        "dojox/date/islamic/locale"
+    ], function(dijit, Calendar, registry, dom, hebrew){
+        this.publishing = false;
 
-      dojo.require("dojox.date.hebrew");
-      dojo.require("dojox.date.hebrew.Date");
-      dojo.require("dojox.date.hebrew.locale");
-
-      dojo.require("dojox.date.islamic");
-      dojo.require("dojox.date.islamic.Date");
-      dojo.require("dojox.date.islamic.locale");
-
-      var publishing = false;
-
-      publishDate = function(d){
-        if(!publishing){
-          publishing = true;
-          dojo.publish("date", [{date: d.toGregorian ? d.toGregorian() : d, id: this.id}]);
-          publishing = false;
+        this.publishDate = function(d){
+            if(!publishing){
+                publishing = true;
+                dojo.publish("date", [{date: d.toGregorian ? d.toGregorian() : d, id: this.id}]);
+                publishing = false;
+            }
         }
-      }
 
-      dojo.subscribe("date", function(data){
-        dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.set('value', data.date); });
-      });
-
-      formatDate = function(d){
-        var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
-    dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
-          formatLength: 'long',
-          selector: 'date'
+        dojo.subscribe("date", function(data){
+            registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.set('value', data.date); });
         });
-      }
+
+        this.formatDate = function(d){
+            var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
+                dom.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
+                formatLength: 'long',
+                selector: 'date'
+            });
+        }
+    });
 
   .. html ::
 
     <table class="container">
-      <tr>
-        <td>
-          <div id="hebrew" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
-          <div id="hebrewFormatted"></div>
-        </td>
-        <td>
-          <div id="islamic" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.islamic, onValueSelected:publishDate, onChange:formatDate"></div>
-          <div id="islamicFormatted"></div>
-        </td>
-        <td>
-          <div id="gregorian" data-dojo-type="dijit/Calendar" data-dojo-props="onValueSelected:publishDate, onChange:formatDate"></div>
-          <div id="gregorianFormatted"></div>
-        </td>
-      </tr>
+        <tr>
+            <td>
+                <div id="hebrew" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
+                <div id="hebrewFormatted"></div>
+            </td>
+            <td>
+                <div id="islamic" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.islamic, onValueSelected:publishDate, onChange:formatDate"></div>
+                <div id="islamicFormatted"></div>
+            </td>
+            <td>
+                <div id="gregorian" data-dojo-type="dijit/Calendar" data-dojo-props="onValueSelected:publishDate, onChange:formatDate"></div>
+                <div id="gregorianFormatted"></div>
+            </td>
+        </tr>
     </table>
 
 Note
