@@ -176,7 +176,7 @@ Specific Naming Conventions
     
     #. Negated boolean variable names MUST be avoided: ``isNotError`` and ``isNotFound`` are unacceptable.
 
-    # Methods returning an object MAY be named after what they return, and methods returning void after what they do.
+    #. Methods returning an object MAY be named after what they return, and methods returning void after what they do.
 
 Files
 =====
