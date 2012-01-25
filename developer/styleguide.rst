@@ -228,7 +228,7 @@ Variables
         
         #. The use of ``do...while`` loops is acceptable (unlike in Java).
         
-        # The use of ``break`` and ``continue`` is not discouraged (unlike in Java).
+        #. The use of ``break`` and ``continue`` is not discouraged (unlike in Java).
 
     #. Conditionals
         
