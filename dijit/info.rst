@@ -178,9 +178,13 @@ Some of the more popular are:
   If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
 
 .. js ::
- 
-  // hide a widget with id="myThiner"
-  dojo.style(dijit.byId("myThinger").domNode, "display", "none");
+
+  require(["dojo/ready", "dojo/dom-style", "dijit/registry"], function(ready, domStyle, registry){
+      ready(function(){
+          // hide a widget with id="myThiner"
+          domStyle.set(registry.byId("myThinger").domNode, "display", "none");
+      });
+  });
 
 * containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed
   within the widget, the containerNode member is a reference to the node where the content was moved to.
