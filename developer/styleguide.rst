@@ -408,8 +408,8 @@ Layout
         
         #. Comments SHOULD NOT be included for every single line of code.
  
-Documentation
-=============
+API Documentation
+=================
  
 Markup Guidelines
 -----------------
