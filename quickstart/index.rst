@@ -102,7 +102,7 @@ Other Information
 Drag and Drop
 =============
 
-* is the DnD tutorial ready for take off?
+`Drag and Drop Redux <http://www.sitepen.com/blog/2011/12/05/dojo-drag-n-drop-redux/>`_
 
 
 Charting
