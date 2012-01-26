@@ -29,7 +29,7 @@ Usage
 .. js ::
  
  // Dojo 1.7+ (AMD)
- require(["dojo/dom/attr"], function(domAttr){
+ require(["dojo/dom-attr"], function(domAttr){
    domAttr.get(node, attr); // get
    domAttr.set(node, attr, value); // set
  });
