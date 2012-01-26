@@ -152,7 +152,7 @@ This example adds the text color, background color, and font selection plugins t
   .. html ::
 
       <div data-dojo-type="dijit/Editor" id="editor2"
-    data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}],
+              data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit/_editor/plugins/FontChoice', command:'fontName', generic:true}],
         onChange:function(){console.log('editor2 onChange handler: ' + arguments[0])}">
         <p>This instance is created with additional toolbar/ plugins</p>
       </div>
