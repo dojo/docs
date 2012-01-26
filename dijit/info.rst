@@ -339,7 +339,7 @@ For example:
 .. js ::
 
   require(["dojox/widget/FishEyeLite"], function(FishEyeLite){
-      new ({...}, "mySourceDom");
+      new FishEyeLite({...}, "mySourceDom");
   });
 
 This comes naturally if you are instantiating from markup.
