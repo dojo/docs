@@ -13,7 +13,7 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
 
 .. html ::
 
-  <script data-dojo-config="async:true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript"></script>
+  <script data-dojo-config="async:true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
 
 
 Dojo's now included on your page, no install, no fuss. So what do you get for all that hard work?
