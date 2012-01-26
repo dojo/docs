@@ -52,7 +52,7 @@ our HTML page.  Create a new HTML file HelloWorld.html in /HelloWorldTutorial di
           @import "dojoroot/dijit/themes/claro/claro.css";
           @import "dojoroot/dojo/resources/dojo.css";
       </style>
-      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
+      <script src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
   </head>
 
@@ -137,7 +137,7 @@ HelloWorld-txt.html based on your previous HelloWorld.html and insert the follow
 
 .. html ::
 
-  <script type="text/javascript">
+  <script>
       function helloCallback(data, ioArgs){
           alert(data);
       }
@@ -525,9 +525,9 @@ Contents of HelloWorld.html file:
           @import "dojoroot/dijit/themes/claro/claro.css";
           @import "dojoroot/dojo/resources/dojo.css";
       </style>
-      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
+      <script src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
-      <script type="text/javascript">
+      <script>
           // Load Dojo's code relating to the Button widget
           require(["dojo/parser", "dijit/form/Button"]);
       </script>
@@ -555,9 +555,9 @@ Contents of HelloWorld-txt.html file:
           @import "dojoroot/dijit/themes/claro/claro.css";
           @import "dojoroot/dojo/resources/dojo.css";
       </style>
-      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
+      <script src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
-      <script type="text/javascript">
+      <script>
           // Load Dojo's code relating to the Button widget
           require(["dojo/parser", "dijit/form/Button"]);
 
@@ -605,9 +605,9 @@ Contents of HelloWorld-get.html file:
           @import "dojoroot/dijit/themes/claro/claro.css";
           @import "dojoroot/dojo/resources/dojo.css";
       </style>
-      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
+      <script src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
-      <script type="text/javascript">
+      <script>
           // Load Dojo's code relating to the Button widget
           require(["dojo/parser", "dijit/form/Button"]);
 
@@ -650,9 +650,9 @@ Contents of HelloWorld-post.html file:
           @import "dojoroot/dijit/themes/claro/claro.css";
           @import "dojoroot/dojo/resources/dojo.css";
       </style>
-      <script type="text/javascript" src="dojoroot/dojo/dojo.js"
+      <script src="dojoroot/dojo/dojo.js"
           data-dojo-config="async: true, parseOnLoad: true"></script>
-      <script type="text/javascript">
+      <script>
           // Load Dojo's code relating to the Button widget
           require(["dojo/parser", "dijit/form/Button"]);
 
