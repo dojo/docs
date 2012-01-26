@@ -54,7 +54,7 @@ Here's an example with an initial value.
 
   .. html ::
 
-    <span data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit.form.NumberSpinner', editorParams:{constraints: {places:0} }" width="70px" title="quantity">15</span>
+    <span data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit/form/NumberSpinner', editorParams:{constraints: {places:0} }" width="70px" title="quantity">15</span>
 
 Initial blank value
 ===================
@@ -70,7 +70,7 @@ Note also that the width argument is important so to indicate the editors width,
 
   .. html ::
 
-    <span data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit.form.NumberTextBox'" title="quantity" width="70px"></span>
+    <span data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit/form/NumberTextBox'" title="quantity" width="70px"></span>
 
 
 Rich Text Editor
@@ -96,7 +96,7 @@ To make the editor's initial size match the size the readonly text (ie, the size
 
   .. html ::
 
-    <div data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit.Editor', renderAsHtml:true, autoSave:false,
+    <div data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit/Editor', renderAsHtml:true, autoSave:false,
         editorParams:{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
 
 Notes on i18n
