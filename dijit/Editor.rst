@@ -281,7 +281,7 @@ It's used along with setting height="" parameter setting.
   .. html ::
 
         <div data-dojo-type="dijit/Editor" id="editor5"
-                   data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
+                   data-dojo-props="extraPlugins:['dijit/_editor/plugins/AlwaysShowToolbar']">
             <p>
                 This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
             </p>
