@@ -189,20 +189,16 @@ This example also organizes the toolbar a bit.
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.ViewSource");
-      dojo.require("dijit._editor.plugins.FullScreen");
-      dojo.require("dojox.editor.plugins.PrettyPrint");
+    require(["dijit/Editor", "dijit/_editor/plugins/ViewSource", "dijit/_editor/plugins/FullScreen", "dojox/editor/plugins/PrettyPrint", "dijit/_editor/plugins/EnterKeyHandling"]);
 
   .. html ::
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br />
-    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
+    <div data-dojo-type="dijit/Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit/_editor/plugins/EnterKeyHandling',blockNodeForEnter:'DIV'}]">
         <div>
         <br />
         blah blah & blah!
