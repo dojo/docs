@@ -34,18 +34,18 @@ is identical to:
 
 .. html ::
   
-  <script type="text/javascript">
+  <script>
        require(["dojo/parser", "dijit/Dialog"]);
   </script>
   <div data-dojo-type="dijit/Dialog" title="Hello Dijit!" id="someId"></div>
 
 The declarative method requires you include the :ref:`dojo/parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (aka: Dijits) to be created.
 
-**note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit.registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+**note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit/registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. html ::
   
-  <script type="text/javascript">
+  <script>
       require(["dojo/parser", "dojo/ready", "dijit/registry", "dojo/dom"], function(parser, ready, registry, dom){
           ready(function(){
               // dom.byId("foobar") would only be a normal domNode.
@@ -146,7 +146,7 @@ Specifically, to get/set attributes after initialization, you need to use the ``
   // set to the current date
   myDateTextBox.set('value', new Date());
 
-Set() also supports a hash API like :ref:`dojo.attr() <dojo/attr>`, for setting multiple attributes:
+Set() also supports a hash API like dojo/dom-style, for setting multiple attributes:
 
 .. js ::
  
@@ -338,14 +338,16 @@ For example:
 
 .. js ::
 
-   new dojox.widget.FishEyeLite({...}, "mySourceDom");
+  require(["dojox/widget/FishEyeLite"], function(FishEyeLite){
+      new ({...}, "mySourceDom");
+  });
 
 This comes naturally if you are instantiating from markup.
 For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
 
 .. html ::
- 
-   <a href="..." data-dojo-type="dojoc.widget.ConfirmAnchor">
+
+   <a href="..." data-dojo-type="dojoc/widget/ConfirmAnchor">
 
 Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit.
 
