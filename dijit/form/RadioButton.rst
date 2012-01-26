@@ -1,7 +1,7 @@
 .. _dijit/form/RadioButton:
 
 ======================
-dijit.form.RadioButton
+dijit/form/RadioButton
 ======================
 
 :Authors: Becky Gibson, Doug Hays, Nikolai Onken
@@ -19,7 +19,7 @@ Usage
 Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute.
 Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
 
-**Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
+**Note:** To use the RadioButton widget, you currently have to call ``require(["dijit/form/RadioButton"])``
 
 
 Examples
@@ -35,7 +35,12 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
 
   .. js ::
  
-    require(["dojo/ready", "dojo/parser", "dijit/form/RadioButton"], function(ready, parser, RadioButton){
+    require([
+        "dojo/ready",
+        "dojo/parser",
+        "dijit/form/RadioButton",
+        "dijit/form/Button" // used for example purpose
+    ], function(ready, parser, RadioButton){
         ready(function(){
             var radioOne = new RadioButton({
                 checked: true,
@@ -50,8 +55,17 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
     <form id="myform">
         <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />
         <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioTwo" value="coffee"/> <label for="radioTwo">Coffee</label> <br />
+        
+        <button data-dojo-type="dijit/form/Button" type="button">
+            Show form submit value
+            <script type="dojo/on" data-dojo-event="click">
+                require(["dojo/dom"], function(dom){
+                     with(dom.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);
+                     return false;
+                });
+            </script>
+        </button>
     </form>
-    <button onclick="with(dojo.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);return false">Show form submit value</button>
 
 
 Accessibility
