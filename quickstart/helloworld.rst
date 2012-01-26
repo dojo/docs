@@ -79,7 +79,7 @@ JavaScript code:
 
 .. html ::
 
-  <script type="text/javascript">
+  <script>
       // Load Dojo's code relating to the Button widget
       require(["dojo/parser", "dijit/form/Button"]);
   </script>
