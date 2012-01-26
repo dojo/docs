@@ -277,35 +277,39 @@ The Dialog instance would be available through the byId call to `myDialog`:
   
   registry.byId("myDialog").show(); // show my dialog instance
 
-If the ID is unknown for some reason, the function :ref:`dijit.getEnclosingWidget <dijit/getEnclosingWidget>` can be used by passing any child DOM Node reference.
+If the ID is unknown for some reason, the function :ref:`registry.getEnclosingWidget <dijit/registry>` can be used by passing any child DOM Node reference.
 Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
 
 .. js ::
-  
-  var node = dojo.query("p.innerContent")[0]; // a domNode found by query
-  var w = dijit.getEnclosingWidget(node); // find the widget this node is in
-  w.show();
+
+  require(["dojo/query", "dijit/registry"], function(query, registry){
+      var node = query("p.innerContent")[0]; // a domNode found by query
+      var w = registry.getEnclosingWidget(node); // find the widget this node is in
+      w.show();
+  });
 
 The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
 
 .. js ::
-  
-  var w = dijit.byId("myDialog");
-  var node = w.domNode; // this is a bad example, but illustrates the relationship
-  var widget = dijit.byNode(node); // now, w == widget
-  widget.show();
 
-Note: it typically doesn't take that many lines to use :ref:`dijit.byNode <dijit/byNode>`, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property.
+  require(["dijit/registry"], function(registry){
+      var w = registry.byId("myDialog");
+      var node = w.domNode; // this is a bad example, but illustrates the relationship
+      var widget = registry.byNode(node); // now, w == widget
+      widget.show();
+  });
+
+Note: it typically doesn't take that many lines to use :ref:`registry.byNode <dijit/byNode>`, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property.
 Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
 
 .. js ::
   
-  dojo.connect(someNode, "onclick", function(e){
-      var w = dijit.byNode(e.target);
+  on(someNode, "click", function(e){
+      var w = registry.byNode(e.target);
       if(w){ w.show(); }
   });
 
-There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit.registry <dijit/registry>`, a collection of all widgets active on a page.
+There are other ways of accessing and manipulating widgets, mostly involving the :ref:`dijit/registry <dijit/registry>`, a collection of all widgets active on a page.
 
 Behavioral widgets
 ==================
