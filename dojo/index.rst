@@ -350,7 +350,6 @@ Colors
 * :ref:`dojo._base.Color <dojo/_base/Color>`
 
   Color object and utility functions to handle colors.
-  Details on
 
 * dojo.colorFromArray
 
