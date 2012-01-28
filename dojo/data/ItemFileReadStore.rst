@@ -819,99 +819,94 @@ Demonstrating custom sorting
 ----------------------------
 
 .. code-example ::
-  
+
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.Button");
-
-      var sortData = {
+    var sortData = {
         identifier: "uniqueId",
         items: [
-          {uniqueId: 1, status:"CLOSED"},
-          {uniqueId: 2,  status:"OPEN"},
-          {uniqueId: 3,  status:"PENDING"},
-          {uniqueId: 4,  status:"BLOCKED"},
-          {uniqueId: 5,  status:"CLOSED"},
-          {uniqueId: 6,  status:"OPEN"},
-          {uniqueId: 7,  status:"PENDING"},
-          {uniqueId: 8,  status:"PENDING"},
-          {uniqueId: 10, status:"BLOCKED"},
-          {uniqueId: 12, status:"BLOCKED"},
-          {uniqueId: 11, status:"OPEN"},
-          {uniqueId: 9,  status:"CLOSED"}
+            {uniqueId: 1, status:"CLOSED"},
+            {uniqueId: 2,  status:"OPEN"},
+            {uniqueId: 3,  status:"PENDING"},
+            {uniqueId: 4,  status:"BLOCKED"},
+            {uniqueId: 5,  status:"CLOSED"},
+            {uniqueId: 6,  status:"OPEN"},
+            {uniqueId: 7,  status:"PENDING"},
+            {uniqueId: 8,  status:"PENDING"},
+            {uniqueId: 10, status:"BLOCKED"},
+            {uniqueId: 12, status:"BLOCKED"},
+            {uniqueId: 11, status:"OPEN"},
+            {uniqueId: 9,  status:"CLOSED"}
         ]
-      };
+    };
 
-      // This function performs some basic dojo initialization. In this case it connects the button
-      // onClick to a function which invokes the fetch(). The fetch function queries for all items
-      // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(function(){
-        // Define the comparator function for status.
-        sortStore.comparatorMap = {};
-        sortStore.comparatorMap["status"] = function(a, b){
-          var ret = 0;
-          // We want to map these by what the priority of these items are, not by alphabetical.
-          // So, custom comparator.
-          var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
-          if(enumMap[a] > enumMap[b]){
-            ret = 1;
-          }
-          if(enumMap[a] < enumMap[b]){
-            ret = -1;
-          }
-          return ret;
-        };
+    require(["dojo/ready", "dojo/dom", "dojo/on", "dojo/data/ItemFileReadStore", "dijit/form/Button", "dojo/parser"], function(ready, dom, on){
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
+        // Set the init function to run when dojo loading and page parsing has completed.
+        ready(function(){
+            // Define the comparator function for status.
+            sortStore.comparatorMap = {};
+            sortStore.comparatorMap["status"] = function(a, b){
+                var ret = 0;
+                // We want to map these by what the priority of these items are, not by alphabetical.
+                // So, custom comparator.
+                var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
+                if(enumMap[a] > enumMap[b]){
+                    ret = 1;
+                }
+                if(enumMap[a] < enumMap[b]){
+                    ret = -1;
+                }
+                return ret;
+            };
 
-        // Function to perform a fetch on the datastore when a button is clicked
-        function getItems(){
+            // Function to perform a fetch on the datastore when a button is clicked
+            function getItems(){
+                // Callback to perform an action when the data items are starting to be returned:
+                function clearOldCList(size, request){
+                    var list = dom.byId("list4");
+                    if(list){
+                        while(list.firstChild){
+                            list.removeChild(list.firstChild);
+                        }
+                    }
+                }
 
-          // Callback to perform an action when the data items are starting to be returned:
-          function clearOldCList(size, request){
-            var list = dojo.byId("list4");
-            if(list){
-              while(list.firstChild){
-                list.removeChild(list.firstChild);
-              }
+                // Callback for processing a returned list of items.
+                function gotItems(items, request){
+                    var list = dom.byId("list4");
+                    if(list){
+                        var i;
+                        for(i = 0; i < items.length; i++){
+                            var item = items[i];
+                            list.appendChild(document.createTextNode("Item ID: [" + sortStore.getValue(items[i], "uniqueId") + "] with status: [" + sortStore.getValue(items[i], "status") + "]"));
+                            list.appendChild(document.createElement("br"));
+                        }
+                    }
+                }
+
+                // Callback for if the lookup fails.
+                function fetchFailed(error, request){
+                    alert("lookup failed.");
+                    alert(error);
+                }
+
+                var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
+                // Fetch the data.
+                sortStore.fetch({query: {}, onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}, sort: sortAttributes});
             }
-          }
-  
-          // Callback for processing a returned list of items.
-          function gotItems(items, request){
-            var list = dojo.byId("list4");
-            if(list){
-              var i;
-              for(i = 0; i < items.length; i++){
-                var item = items[i];
-                list.appendChild(document.createTextNode("Item ID: [" + sortStore.getValue(items[i], "uniqueId") + "] with status: [" + sortStore.getValue(items[i], "status") + "]"));
-                list.appendChild(document.createElement("br"));
-              }
-            }
-          }
-            
-          // Callback for if the lookup fails.
-          function fetchFailed(error, request){
-            alert("lookup failed.");
-            alert(error);
-          }
-
-          var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
-          // Fetch the data.
-          sortStore.fetch({query: {}, onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}, sort: sortAttributes});
-        }
-        // Link the click event of the button to driving the fetch.
-        dojo.connect(button4, "onClick", getItems );
-      });
+            // Link the click event of the button to driving the fetch.
+            on(dom.byId("myButton"), "click", getItems);
+        });
+    });
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:sortData" data-dojo-id="sortStore"></div>
-    <div data-dojo-type="dijit/form/Button" data-dojo-id="button4">Custom sort!</div>
-    <br>
-    <br>
-    <span id="list4">
-    </span>
+    <div data-dojo-type="dijit/form/Button" id="myButton">Custom sort!</div>
+    <div id="list4"></div>
 
 
 Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
@@ -920,48 +915,43 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
-  
+
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.ComboBox");
-      dojo.require("dijit.form.Button");
-
-      var storeData10 =   { identifier: 'abbr',
+    var storeData10 = { identifier: 'abbr',
         label: 'name',
         items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]};
+            { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+            { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+            { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+            { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+            { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+            { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+            { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+    ]};
+    var reloadCount = 0; // Simple global so we can show how many times the data gets reset.
 
-      // Simple global so we can show how many times the data gets reset.
-      var reloadCount = 0;
-
-      // Now set up a linkage so that the store can be reloaded.
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("reloadButton1"), "onClick", function(){
-            reloadCount++;
-            reloadableStore1.clearOnClose = true;
-            reloadableStore1.data = {identifier: 'abbr',
-              label: 'name',
-              items: [
-                { abbr:'ec', name:'Ecuador RELOADED: ' + reloadCount,           capital:'Quito' },
-                { abbr:'eg', name:'Egypt RELOADED: ' + reloadCount,             capital:'Cairo' },
-                { abbr:'sv', name:'El Salvador RELOADED: ' + reloadCount,       capital:'San Salvador' },
-                { abbr:'gq', name:'Equatorial Guinea RELOADED: ' + reloadCount, capital:'Malabo' },
-                { abbr:'er', name:'Eritrea RELOADED: ' + reloadCount,           capital:'Asmara' },
-                { abbr:'ee', name:'Estonia RELOADED: ' + reloadCount,           capital:'Tallinn' },
-                { abbr:'et', name:'Ethiopia RELOADED: ' + reloadCount,          capital:'Addis Ababa' }
-            ]};
-            reloadableStore1.close();
-         });
-      });
+    require(["dojo/ready", "dojo/on", "dijit/registry", "dojo/data/ItemFileReadStore", "dijit/form/ComboBox", "dijit/form/Button", "dojo/parser"], function(ready, on, registry){
+        ready(function(){
+            // Now set up a linkage so that the store can be reloaded.
+            on(registry.byId("reloadButton1"), "click", function(){
+                reloadCount++;
+                reloadableStore1.clearOnClose = true;
+                reloadableStore1.data = {identifier: 'abbr',
+                    label: 'name',
+                    items: [
+                        { abbr:'ec', name:'Ecuador RELOADED: ' + reloadCount,           capital:'Quito' },
+                        { abbr:'eg', name:'Egypt RELOADED: ' + reloadCount,             capital:'Cairo' },
+                        { abbr:'sv', name:'El Salvador RELOADED: ' + reloadCount,       capital:'San Salvador' },
+                        { abbr:'gq', name:'Equatorial Guinea RELOADED: ' + reloadCount, capital:'Malabo' },
+                        { abbr:'er', name:'Eritrea RELOADED: ' + reloadCount,           capital:'Asmara' },
+                        { abbr:'ee', name:'Estonia RELOADED: ' + reloadCount,           capital:'Tallinn' },
+                        { abbr:'et', name:'Ethiopia RELOADED: ' + reloadCount,          capital:'Addis Ababa' }
+                ]};
+                reloadableStore1.close();
+            });
+        });
+    });
 
   .. html ::
 
@@ -975,29 +965,27 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.ComboBox");
-      dojo.require("dijit.form.Button");
-
-      // Now set up a linkage so that the store can be reloaded.
-      dojo.ready(function(){
-         dojo.connect(dijit.byId("reloadButton2"), "onClick", function(){
-            // Reset the url and call close.  Note this could be a different JSON file, but for this example, just
-            // Showing how you would set the URL.
-            reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json";
-            reloadableStore2.close();
-         });
-      });
+    require(["dojo/ready", "dojo/on", "dijit/registry", "dojo/data/ItemFileReadStore", "dijit/form/ComboBox", "dijit/form/Button", "dojo/parser"], function(ready, on, registry){
+        ready(function(){
+            // Now set up a linkage so that the store can be reloaded.
+            on(registry.byId("reloadButton2"), "click", function(){
+                // Reset the url and call close.  Note this could be a different JSON file, but for this example, just
+                // Showing how you would set the URL.
+                reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json";
+                reloadableStore2.close();
+            });
+        });
+    });
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="url:'{{dataUrl}}/dojox/data/tests/stores/countries.json', urlPreventCache:true, clearOnClose:true" data-dojo-id="reloadableStore2"></div>
     <div data-dojo-type="dijit/form/ComboBox" data-dojo-props="store:reloadableStore2, searchAttr:'name'"></div>
     <div id="reloadButton2" data-dojo-type="dijit/form/Button">Reload DataStore</div>
+
 
 API Info
 ========
