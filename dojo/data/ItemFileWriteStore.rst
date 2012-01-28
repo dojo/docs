@@ -1,7 +1,7 @@
 .. _dojo/data/ItemFileWriteStore:
 
 ============================
-dojo.data.ItemFileWriteStore
+dojo/data/ItemFileWriteStore
 ============================
 
 :Author: Jared Jurkiewicz
@@ -24,12 +24,12 @@ API Support
 Constructor Parameters
 ======================
 
-The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
+The constructor for ItemFileWriteStore takes the same parameters as :ref:`dojo/data/ItemFileReadStore <dojo/data/ItemFileReadStore>`
 
 Custom Types
 ============
 
-As with dojo.data.ItemFileReadStore, the ItemFileWriteStore supports using custom defined types in the data format. Since ItemFileWriteStore supports mechanisms for serializing the store contents back out, the custom type support has been extended to allow for custom serializers so that the complex types can be converted back into their necessary encodings.
+As with dojo/data/ItemFileReadStore, the ItemFileWriteStore supports using custom defined types in the data format. Since ItemFileWriteStore supports mechanisms for serializing the store contents back out, the custom type support has been extended to allow for custom serializers so that the complex types can be converted back into their necessary encodings.
 
 
 Custom Type Examples
@@ -40,15 +40,16 @@ By default, ItemFileWriteStore has registered a custom type handler for JavaScri
 .. js ::
  
   {
-    "Date": {
-      type: Date,
-      deserialize: function(value){
-        return dojo.date.stamp.fromISOString(value);
-      },
-      serialize: function(obj){
-        return dojo.date.stamp.toISOString(obj, {zulu:true});
+      "Date": {
+          type: Date,
+          deserialize: function(value){
+              return dojo.date.stamp.fromISOString(value);
+          },
+          serialize: function(obj){
+              return dojo.date.stamp.toISOString(obj, {zulu:true});
+          }
       }
-    }
+  }
   
 So, when Date objects are encountered, ItemFileWriteStore automatically serializes it out as a custom type of the following format:
 
@@ -120,7 +121,7 @@ The revert API is intended to undo changes made through calls to *newItem*, *del
 Referential Integrity
 ---------------------
 
-As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware. This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references. This will also generate Notification events when it occurs.
+As of dojo 1.1, dojo/data/ItemFileWriteStore Write actions are reference aware. This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references. This will also generate Notification events when it occurs.
 
 To put it more simply, say you have Item C which is referenced by Items A and B. If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
 
@@ -154,8 +155,8 @@ Add in a new country
 --------------------
 
 .. js ::
- 
-  var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});
+
+  var store = new ItemFileWriteStore({url: "countries.json"});
   var usa = store.newItem({abbr: 'us', name: 'United States of America', capital: 'Washington DC'});
 
   function saveDone(){
@@ -171,8 +172,8 @@ Delete a country
 ----------------
 
 .. js ::
- 
-  var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});
+
+  var store = new ItemFileWriteStore({url: "countries.json"});
 
   function saveDone(){
     alert("Done saving.");
@@ -199,119 +200,105 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
 The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.
 
 .. code-example ::
-  
+
   .. js ::
 
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.form.NumberSpinner");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dojox.grid.DataGrid");
-
-      var geoData = {
-        'identifier': 'name',
-        'label': 'name',
-        'items': [
-          { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' },
-            { 'name':'Kenya', 'type':'country', children:[
-              { 'name':'Nairobi', 'type':'city' },
-              { 'name':'Mombasa', 'type':'city' } ]
+    var geoData = {
+        identifier: 'name',
+        label: 'name',
+        items: [
+            { name:'Africa', type:'continent', children:[
+                { name:'Egypt', type:'country' },
+                { name:'Kenya', type:'country', children:[
+                    { name:'Nairobi', type:'city' },
+                    { name:'Mombasa', type:'city' } ]
+                },
+                { name:'Sudan', type:'country', children:
+                    { name:'Khartoum', type:'city' }
+                }
+            ]},
+            { name:'Asia', type:'continent', children:[
+                { name:'China', type:'country' },
+                { name:'India', type:'country' },
+                { name:'Russia', type:'country' },
+                { name:'Mongolia', type:'country' } ]
             },
-            { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' }
-            } ]
-          },
-          { 'name':'Asia', 'type':'continent', 'children':[
-            { 'name':'China', 'type':'country' },
-            { 'name':'India', 'type':'country' },
-            { 'name':'Russia', 'type':'country' },
-            { 'name':'Mongolia', 'type':'country' } ]
-          },
-          { 'name':'Australia', 'type':'continent', 'population':'21 million', 'children':
-            { 'name':'Commonwealth of Australia', 'type':'country', 'population':'21 million'}
-          },
-          { 'name':'Europe', 'type':'continent', 'children':[
-            { 'name':'Germany', 'type':'country' },
-            { 'name':'France', 'type':'country' },
-            { 'name':'Spain', 'type':'country' },
-            { 'name':'Italy', 'type':'country' } ]
-          },
-          { 'name':'North America', 'type':'continent', 'children':[
-            { 'name':'Mexico', 'type':'country',  'population':'108 million', 'area':'1,972,550 sq km', 'children':[
-              { 'name':'Mexico City', 'type':'city', 'population':'19 million', 'timezone':'-6 UTC'},
-              { 'name':'Guadalajara', 'type':'city', 'population':'4 million', 'timezone':'-6 UTC' } ]
+            { name:'Australia', type:'continent', population:'21 million', children:
+                { name:'Commonwealth of Australia', type:'country', population:'21 million'}
             },
-            { 'name':'Canada', 'type':'country', 'population':'33 million', 'area':'9,984,670 sq km', 'children':[
-              { 'name':'Ottawa', 'type':'city', 'population':'0.9 million', 'timezone':'-5 UTC'},
-              { 'name':'Toronto', 'type':'city', 'population':'2.5 million', 'timezone':'-5 UTC' }]
+            { name:'Europe', type:'continent', children:[
+                { name:'Germany', type:'country' },
+                { name:'France', type:'country' },
+                { name:'Spain', type:'country' },
+                { name:'Italy', type:'country' } ]
             },
-            { 'name':'United States of America', 'type':'country' } ]
-          },
-          { 'name':'South America', 'type':'continent', children:[
-            { 'name':'Brazil', 'type':'country', 'population':'186 million' },
-            { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          }
-        ]
-      };
-
-      var layoutGeo = [
-        [
-          { field: "name", name: "Name", width: 10 },
-          { field: "type", name: "Geography Type", width: 10 },
-          { field: "population", name: "Population", width: 'auto' }
-        ]
-      ];
-
-      // This function performs some basic dojo initialization. In this case it connects the button
-      // onClick to a function which invokes the fetch(). The fetch function queries for all items
-      // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2(){
-        // Function to perform a fetch on the datastore when a button is clicked
-        function updateAll(){
-
-           // Callback for processing a returned list of items.
-          function gotAll(items, request){
-            var value = spinner.getValue();
-            if( value >= 0 ){
-              var i;
-              for(i = 0; i < items.length; i++){
-                var item = items[i];
-                geoStore.setValue(item, "population", value);
-              }
+            { name:'North America', type:'continent', children:[
+                { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+                    { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+                    { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+                },
+                { name:'Canada', type:'country', population:'33 million', area:'9,984,670 sq km', children:[
+                    { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+                    { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+                },
+                { name:'United States of America', type:'country' } ]
+            },
+            { name:'South America', type:'continent', children:[
+                { name:'Brazil', type:'country', population:'186 million' },
+                { name:'Argentina', type:'country', population:'40 million' } ]
             }
-          }
+        ]
+    };
 
-          // Callback for if the lookup fails.
-          function fetchFailed(error, request){
-            alert("lookup failed.");
-            alert(error);
-          }
+    var layoutGeo = [
+    [
+        { field: "name", name: "Name", width: 10 },
+        { field: "type", name: "Geography Type", width: 10 },
+        { field: "population", name: "Population", width: 'auto' }
+    ]
+    ];
+    
+    require(["dojo/ready", "dojo/on", "dojo/data/ItemFileWriteStore", "dijit/form/Button", "dijit/form/NumberSpinner", "dijit/form/TextBox", "dojox/grid/DataGrid", "dojo/parser"], function(ready, on){
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
+        ready(function(){
+            // Function to perform a fetch on the datastore when a button is clicked
+            function updateAll(){
+                // Callback for processing a returned list of items.
+                function gotAll(items, request){
+                    var value = spinner.getValue();
+                    if( value >= 0 ){
+                        var i;
+                        for(i = 0; i < items.length; i++){
+                            var item = items[i];
+                            geoStore.setValue(item, "population", value);
+                        }
+                    }
+                }
 
-          // Fetch the data.
-          geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
-        }
-        // Link the click event of the button to driving the fetch.
-        dojo.connect(button2, "onClick", updateAll);
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init2);
+                // Callback for if the lookup fails.
+                function fetchFailed(error, request){
+                    alert("lookup failed." + error);
+                }
+
+                // Fetch the data.
+                geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
+            }
+            // Link the click event of the button to driving the fetch.
+            on(button2, "click", updateAll);
+        });
+    });
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
-    <b>Set the population to assign to all items</b>
-    <br>
-    <br>
-    <div data-dojo-type="dijit/form/NumberSpinner" data-dojo-id="spinner" value="10000"></div>
-    <br>
-    <br>
-    <div data-dojo-type="dijit/form/Button" data-dojo-id="button2">Update all geography items populations!</div>
-    <br>
-    <br>
+    <b>Set the population to assign to all items</b><br>
+    <div data-dojo-type="dijit/form/NumberSpinner" data-dojo-id="spinner" value="10000"></div><br><br>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button2">Update all geography items populations!</div><br>
     <div id="grid"
       style="width: 400px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid"
+      data-dojo-type="dojox/grid/DataGrid"
       data-dojo-props="store:geoStore,
       structure:layoutGeo,
       query:{},
@@ -325,7 +312,7 @@ The following is a semi-complex example of the write API in action. In this exam
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
-        margin: 0;
+          margin: 0;
       }
 
 
@@ -335,89 +322,83 @@ ItemFileWriteStore deletions reflected in dijit.Tree
 This example demonstrates how to use a function such as *deleteItem*. In this case dijit.Tree is used to show a hierarchy of items. By pressing the delete button, all items that are of type city are deleted. Since the tree is dojo.data.api.Notification aware, it catches the delete event and updates its rendering accordingly.
 
 .. code-example ::
-  
+
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Tree");
-      var storeData2 = {
+    var storeData2 = {
         identifier: 'name',
         label: 'name',
         items: [
-          { name:'Africa', type:'continent', children:[
-            { name:'Egypt', type:'country' },
-            { name:'Kenya', type:'country', children:[
-            { name:'Nairobi', type:'city' },
-            { name:'Mombasa', type:'city' } ]
+            { name:'Africa', type:'continent', children:[
+                { name:'Egypt', type:'country' },
+                { name:'Kenya', type:'country', children:[
+                    { name:'Nairobi', type:'city' },
+                    { name:'Mombasa', type:'city' } ]
+                },
+                { name:'Sudan', type:'country', children:
+                    { name:'Khartoum', type:'city' }
+                }
+            ]},
+            { name:'Asia', type:'continent', children:[
+                { name:'China', type:'country' },
+                { name:'India', type:'country' },
+                { name:'Russia', type:'country' },
+                { name:'Mongolia', type:'country' } ]
             },
-            { name:'Sudan', type:'country', children:
-              { name:'Khartoum', type:'city' }
-            } ]
-          },
-          { name:'Asia', type:'continent', children:[
-            { name:'China', type:'country' },
-            { name:'India', type:'country' },
-            { name:'Russia', type:'country' },
-            { name:'Mongolia', type:'country' } ]
-          },
-          { name:'Australia', type:'continent', population:'21 million', children:
-            { name:'Commonwealth of Australia', type:'country', population:'21 million'}
-          },
-          { name:'Europe', type:'continent', children:[
-            { name:'Germany', type:'country' },
-            { name:'France', type:'country' },
-            { name:'Spain', type:'country' },
-            { name:'Italy', type:'country' } ]
-          },
-          { name:'North America', type:'continent', children:[
-            { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
-              { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
-              { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+            { name:'Australia', type:'continent', population:'21 million', children:
+                { name:'Commonwealth of Australia', type:'country', population:'21 million'}
             },
-            { name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
-              { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
-              { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+            { name:'Europe', type:'continent', children:[
+                { name:'Germany', type:'country' },
+                { name:'France', type:'country' },
+                { name:'Spain', type:'country' },
+                { name:'Italy', type:'country' } ]
             },
-            { name:'United States of America', type:'country' } ]
-          },
-          { name:'South America', type:'continent', children:[
-            { name:'Brazil', type:'country', population:'186 million' },
-            { name:'Argentina', type:'country', population:'40 million' } ]
-          }
-        ]
-      };
-
-      function init(){
-        function deleteCities(){
-          function gotCities(items, request){
-            if(items ){
-              var i;
-              for(i = 0; i < items.length; i++){
-                var item = items[i];
-                geographyStore2.deleteItem(item);
-              }
+            { name:'North America', type:'continent', children:[
+                { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+                    { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+                    { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+                },
+                { name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
+                    { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+                    { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+                },
+                { name:'United States of America', type:'country' } ]
+            },
+            { name:'South America', type:'continent', children:[
+                { name:'Brazil', type:'country', population:'186 million' },
+                { name:'Argentina', type:'country', population:'40 million' } ]
             }
-          }
-          geographyStore2.fetch({query:{type: "city"}, onComplete: gotCities, queryOptions: {deep:true}});
-        }
-        dojo.connect(button3, "onClick", deleteCities);
-      }
-      dojo.ready(init);
+        ]
+    };
+    
+    require(["dojo/ready", "dojo/on", "dojo/parser", "dojo/data/ItemFileReadStore", "dojo/data/ItemFileWriteStore", "dijit/form/Button", "dijit/Tree"], function(ready, on){
+        ready(function(){
+            function deleteCities(){
+                function gotCities(items, request){
+                    if(items ){
+                        var i;
+                        for(i = 0; i < items.length; i++){
+                            var item = items[i];
+                            geographyStore2.deleteItem(item);
+                        }
+                    }
+                }
+                geographyStore2.fetch({query:{type: "city"}, onComplete: gotCities, queryOptions: {deep:true}});
+            }
+            on(button3, "click", deleteCities);
+        });
+    });
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
-    <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
-    <br>
-    <div data-dojo-type="dijit/form/Button" data-dojo-id="button3">Delete All Cities!</div>
-    <br>
-    <br>
+    <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b><br>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button3">Delete All Cities!</div><br><br>
     <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
     <div data-dojo-type="dijit/Tree" data-dojo-props="model:geographyModel2"></div>
 
-ItemFileWriteStore changes reflected in dojox.data.DataGrid (with _saveCustom)
+ItemFileWriteStore changes reflected in dojox/data/DataGrid (with _saveCustom)
 ------------------------------------------------------------------------------
 
 The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.  In addition, save() is called on the store, which in turn invokes a custom save handler.  This custom save handler generated a serialized view of the changes to send back to some location.  This view
@@ -427,190 +408,178 @@ is displayed in an alert.
   
   .. js ::
 
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.form.NumberSpinner");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dojox.grid.DataGrid");
-
-      var geoData2 = {
-        'identifier': 'name',
-        'label': 'name',
-        'items': [
-          { 'name':'Africa', 'type':'continent', children:[
-            { 'name':'Egypt', 'type':'country' },
-            { 'name':'Kenya', 'type':'country', children:[
-              { 'name':'Nairobi', 'type':'city' },
-              { 'name':'Mombasa', 'type':'city' } ]
-            },
-            { 'name':'Sudan', 'type':'country', 'children':
-              { 'name':'Khartoum', 'type':'city' }
-            } ]
-          },
-          { 'name':'Asia', 'type':'continent', 'children':[
-            { 'name':'China', 'type':'country' },
-            { 'name':'India', 'type':'country' },
-            { 'name':'Russia', 'type':'country' },
-            { 'name':'Mongolia', 'type':'country' } ]
-          },
-          { 'name':'Australia', 'type':'continent', 'population':'21 million', 'children':
-            { 'name':'Commonwealth of Australia', 'type':'country', 'population':'21 million'}
-          },
-          { 'name':'Europe', 'type':'continent', 'children':[
-            { 'name':'Germany', 'type':'country' },
-            { 'name':'France', 'type':'country' },
-            { 'name':'Spain', 'type':'country' },
-            { 'name':'Italy', 'type':'country' } ]
-          },
-          { 'name':'North America', 'type':'continent', 'children':[
-            { 'name':'Mexico', 'type':'country',  'population':'108 million', 'area':'1,972,550 sq km', 'children':[
-              { 'name':'Mexico City', 'type':'city', 'population':'19 million', 'timezone':'-6 UTC'},
-              { 'name':'Guadalajara', 'type':'city', 'population':'4 million', 'timezone':'-6 UTC' } ]
-            },
-            { 'name':'Canada', 'type':'country', 'population':'33 million', 'area':'9,984,670 sq km', 'children':[
-              { 'name':'Ottawa', 'type':'city', 'population':'0.9 million', 'timezone':'-5 UTC'},
-              { 'name':'Toronto', 'type':'city', 'population':'2.5 million', 'timezone':'-5 UTC' }]
-            },
-            { 'name':'United States of America', 'type':'country' } ]
-          },
-          { 'name':'South America', 'type':'continent', children:[
-            { 'name':'Brazil', 'type':'country', 'population':'186 million' },
-            { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
-          }
-        ]
-      };
-
-      var layoutGeo2 = [
-        [
-          { field: "name", name: "Name", width: 10 },
-          { field: "type", name: "Geography Type", width: 10 },
-          { field: "population", name: "Population", width: 'auto' }
-        ]
-      ];
-
-      // This function performs some basic dojo initialization. In this case it connects the button
-      // onClick to a function which invokes the fetch(). The fetch function queries for all items
-      // and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init3(){
-
-        var itemToJS = function(store, item){
-          // summary: Function to convert an item into a simple JS object.
-          // store:
-          //    The datastore the item came from.
-          // item:
-          //    The item in question.
-          var js = {};
-          if(item && store){
-            // Determine the attributes we need to process.
-            var attributes = store.getAttributes(item);
-            if(attributes && attributes.length > 0){
-              var i;
-              for(i = 0; i < attributes.length; i++){
-                var values = store.getValues(item, attributes[i]);
-                if(values){
-                  // Handle multivalued and single-valued attributes.
-                  if(values.length > 1 ){
-                    var j;
-                    js[attributes[i]] = [];
-                    for(j = 0; j < values.length; j++ ){
-                      var value = values[j];
-                      // Check that the value isn't another item. If it is, process it as an item.
-                      if(store.isItem(value)){
-                        js[attributes[i]].push(itemToJS(store, value));
-                      }else{
-                        js[attributes[i]].push(value);
-                      }
-                    }
-                  }else{
-                    if(store.isItem(values[0])){
-                      js[attributes[i]] = itemToJS(store, values[0]);
-                    }else{
-                      js[attributes[i]] = values[0];
-                    }
-                  }
+    var geoData2 = {
+        identifier: 'name',
+        label: 'name',
+        items: [
+            { name:'Africa', type:'continent', children:[
+                { name:'Egypt', type:'country' },
+                { name:'Kenya', type:'country', children:[
+                    { name:'Nairobi', type:'city' },
+                    { name:'Mombasa', type:'city' } ]
+                },
+                { name:'Sudan', type:'country', children:
+                    { name:'Khartoum', type:'city' }
                 }
-              }
+            ]},
+            { name:'Asia', type:'continent', children:[
+                { name:'China', type:'country' },
+                { name:'India', type:'country' },
+                { name:'Russia', type:'country' },
+                { name:'Mongolia', type:'country' } ]
+            },
+            { name:'Australia', type:'continent', population:'21 million', children:
+                { name:'Commonwealth of Australia', type:'country', population:'21 million'}
+            },
+            { name:'Europe', type:'continent', children:[
+                { name:'Germany', type:'country' },
+                { name:'France', type:'country' },
+                { name:'Spain', type:'country' },
+                { name:'Italy', type:'country' } ]
+            },
+            { name:'North America', type:'continent', children:[
+                { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+                    { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+                    { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+                },
+                { name:'Canada', type:'country', population:'33 million', area:'9,984,670 sq km', children:[
+                    { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+                    { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+                },
+                { name:'United States of America', type:'country' } ]
+            },
+            { name:'South America', type:'continent', children:[
+                { name:'Brazil', type:'country', population:'186 million' },
+                { name:'Argentina', type:'country', population:'40 million' } ]
             }
-          }
-          return js;
-        };
+        ]
+    };
+    
+    var layoutGeo2 = [
+    [
+        { field: "name", name: "Name", width: 10 },
+        { field: "type", name: "Geography Type", width: 10 },
+        { field: "population", name: "Population", width: 'auto' }
+    ]
+    ];
+    
+    require(["dojo/ready", "dojo/on", "dojo/_base/json", "dojo/parser", "dojo/data/ItemFileWriteStore", "dijit/form/Button", "dijit/form/NumberSpinner", "dijit/form/TextBox", "dojox/grid/DataGrid"], function(ready, on, json){
+        // This function performs some basic dojo initialization. In this case it connects the button
+        // onClick to a function which invokes the fetch(). The fetch function queries for all items
+        // and provides callbacks to use for completion of data retrieval or reporting of errors.
+        ready(function(){
+            var itemToJS = function(store, item){
+                // summary: Function to convert an item into a simple JS object.
+                // store:
+                //    The datastore the item came from.
+                // item:
+                //    The item in question.
+                var js = {};
+                if(item && store){
+                    // Determine the attributes we need to process.
+                    var attributes = store.getAttributes(item);
+                    if(attributes && attributes.length > 0){
+                        var i;
+                        for(i = 0; i < attributes.length; i++){
+                            var values = store.getValues(item, attributes[i]);
+                            if(values){
+                                // Handle multivalued and single-valued attributes.
+                                if(values.length > 1 ){
+                                    var j;
+                                    js[attributes[i]] = [];
+                                    for(j = 0; j < values.length; j++ ){
+                                        var value = values[j];
+                                        // Check that the value isn't another item. If it is, process it as an item.
+                                        if(store.isItem(value)){
+                                            js[attributes[i]].push(itemToJS(store, value));
+                                        }else{
+                                            js[attributes[i]].push(value);
+                                        }
+                                    }
+                                }else{
+                                    if(store.isItem(values[0])){
+                                        js[attributes[i]] = itemToJS(store, values[0]);
+                                    }else{
+                                        js[attributes[i]] = values[0];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                return js;
+            };
 
-        geoStore2._saveCustom = function(saveComplete, saveFailed){
-           //  summary:
-           //    This is a custom save function for the geoStore to allow emitting only the modified items as
-           //    a block of JSON text.
-           var changeSet  = geoStore2._pending;
-           var changes = {};
-           changes.modified = [];
-           for(var i in changeSet._modifiedItems){
-              // Use the identity to look up the current version of the item from the store's array
-              // Can't use the object IN the modified items array because it is the saved state before modification.
-              var item = null;
-              // Find the modified item, it can be in one of two places to look up
-              // Either by an explicit identity if it was specified, or by its index.
-              if(geoStore2._itemsByIdentity){
-                 item = geoStore2._itemsByIdentity[i];
-              }else{
-                 item = geoStore2._arrayOfAllItems[i];
-              }
-              changes.modified.push(itemToJS(geoStore2, item));
-           }
-           alert(dojo.toJson(changes, true));
-           saveComplete();
-        };
+            geoStore2._saveCustom = function(saveComplete, saveFailed){
+                //  summary:
+                //    This is a custom save function for the geoStore to allow emitting only the modified items as
+                //    a block of JSON text.
+                var changeSet  = geoStore2._pending;
+                var changes = {};
+                changes.modified = [];
+                for(var i in changeSet._modifiedItems){
+                    // Use the identity to look up the current version of the item from the store's array
+                    // Can't use the object IN the modified items array because it is the saved state before modification.
+                    var item = null;
+                    // Find the modified item, it can be in one of two places to look up
+                    // Either by an explicit identity if it was specified, or by its index.
+                    if(geoStore2._itemsByIdentity){
+                        item = geoStore2._itemsByIdentity[i];
+                    }else{
+                        item = geoStore2._arrayOfAllItems[i];
+                    }
+                    changes.modified.push(itemToJS(geoStore2, item));
+                }
+                alert(json.toJson(changes, true));
+                saveComplete();
+            };
 
 
-        // Function to perform a fetch on the datastore when a button is clicked
-        function updateAll(){
+            // Function to perform a fetch on the datastore when a button is clicked
+            function updateAll(){
+                // Callback for processing a returned list of items.
+                function gotAll(items, request){
+                    var value = spinner2.getValue();
+                    if( value >= 0 ){
+                        var i;
+                        for(i = 0; i < items.length; i++){
+                            var item = items[i];
+                            geoStore2.setValue(item, "population", value);
+                        }
+                    }
+                }
 
-           // Callback for processing a returned list of items.
-          function gotAll(items, request){
-            var value = spinner2.getValue();
-            if( value >= 0 ){
-              var i;
-              for(i = 0; i < items.length; i++){
-                var item = items[i];
-                geoStore2.setValue(item, "population", value);
-              }
+                // Callback for if the lookup fails.
+                function fetchFailed(error, request){
+                    alert("lookup failed.");
+                    alert(error);
+                }
+
+                // Fetch the data.
+                geoStore2.fetch({query: {type:"city"}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
             }
-          }
-
-          // Callback for if the lookup fails.
-          function fetchFailed(error, request){
-            alert("lookup failed.");
-            alert(error);
-          }
-
-          // Fetch the data.
-          geoStore2.fetch({query: {type:"city"}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
-        }
-        // Link the click event of the button to driving the fetch.
-        dojo.connect(button3, "onClick", updateAll);
-        dojo.connect(button3, "onClick", geoStore2, "save");
-      }
-      // Set the init function to run when dojo loading and page parsing has completed.
-      dojo.ready(init3);
+            // Link the click event of the button to driving the fetch.
+            on(button3, "click", function(){
+                updateAll();
+                geoStore2.save();
+            });
+        });
+    });
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props="data:geoData2" data-dojo-id="geoStore2"></div>
-    <b>Set the population to assign to all items of type city</b>
-    <br>
-    <br>
-    <div data-dojo-type="dijit/form/NumberSpinner" data-dojo-id="spinner2" value="10000"></div>
-    <br>
-    <br>
-    <div data-dojo-type="dijit/form/Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div>
-    <br>
-    <br>
+    <b>Set the population to assign to all items of type city</b><br>
+    <div data-dojo-type="dijit/form/NumberSpinner" data-dojo-id="spinner2" value="10000"></div><br><br>
+    <div data-dojo-type="dijit/form/Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div><br><br>
     <div id="grid2"
-      style="width: 400px; height: 300px;"
-      data-dojo-type="dojox.grid.DataGrid"
-      data-dojo-props="store:geoStore2,
-      structure:layoutGeo2,
-      query:{},
-      queryOptions:{'deep':true},
-      rowsPerPage:40">
+        style="width: 400px; height: 300px;"
+        data-dojo-type="dojox.grid.DataGrid"
+        data-dojo-props="store:geoStore2,
+        structure:layoutGeo2,
+        query:{},
+        queryOptions:{'deep':true},
+        rowsPerPage:40">
     </div>
 
   .. css ::
@@ -618,7 +587,7 @@ is displayed in an alert.
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
       .dojoxGrid table {
-        margin: 0;
+          margin: 0;
       }
 
 API Info
