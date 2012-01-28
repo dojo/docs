@@ -440,53 +440,57 @@ Custom Sorting
 
 ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
 
-.. js ::
- 
-  var store = new dojo.data.ItemFileReadStore({data: { identifier: "uniqueId",
-    items: [ {uniqueId: 1, status:"CLOSED"},
-      {uniqueId: 2,  status:"OPEN"},
-      {uniqueId: 3,  status:"PENDING"},
-      {uniqueId: 4,  status:"BLOCKED"},
-      {uniqueId: 5,  status:"CLOSED"},
-      {uniqueId: 6,  status:"OPEN"},
-      {uniqueId: 7,  status:"PENDING"},
-      {uniqueId: 8,  status:"PENDING"},
-      {uniqueId: 10, status:"BLOCKED"},
-      {uniqueId: 12, status:"BLOCKED"},
-      {uniqueId: 11, status:"OPEN"},
-      {uniqueId: 9,  status:"CLOSED"}
-    ]
-  }});
+.. code-example ::
 
-  // Define the comparator function for status.
-  store.comparatorMap = {};
-  store.comparatorMap["status"] = function(a, b){
-    var ret = 0;
-    // We want to map these by what the priority of these items are, not by alphabetical.
-    // So, custom comparator.
-    var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
-    if(enumMap[a] > enumMap[b]){
-      ret = 1;
-    }
-    if(enumMap[a] < enumMap[b]){
-      ret = -1;
-    }
-    return ret;
-  };
+  .. js ::
 
-  var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
-  function completed(items, findResult){
-    for(var i = 0; i < items.length; i++){
-      var value = store.getValue(items[i], "uniqueId");
-      console.log("Item ID: [" + store.getValue(items[i], "uniqueId") + "] with status: [" + store.getValue(items[i], "status") + "]");
-    }
-  }
-  function error(errData, request){
-    console.log("Failed in sorting data.");
-  }
+    require(["dojo/data/ItemFileReadStore"], function(ItemFileReadStore){
+        var store = new ItemFileReadStore({data: { identifier: "uniqueId",
+            items: [ {uniqueId: 1, status:"CLOSED"},
+                {uniqueId: 2,  status:"OPEN"},
+                {uniqueId: 3,  status:"PENDING"},
+                {uniqueId: 4,  status:"BLOCKED"},
+                {uniqueId: 5,  status:"CLOSED"},
+                {uniqueId: 6,  status:"OPEN"},
+                {uniqueId: 7,  status:"PENDING"},
+                {uniqueId: 8,  status:"PENDING"},
+                {uniqueId: 10, status:"BLOCKED"},
+                {uniqueId: 12, status:"BLOCKED"},
+                {uniqueId: 11, status:"OPEN"},
+                {uniqueId: 9,  status:"CLOSED"}
+            ]
+        }});
 
-  // Invoke the fetch.
-  store.fetch({onComplete: completed, onError: error, sort: sortAttributes});
+        // Define the comparator function for status.
+        store.comparatorMap = {};
+        store.comparatorMap["status"] = function(a, b){
+            var ret = 0;
+            // We want to map these by what the priority of these items are, not by alphabetical.
+            // So, custom comparator.
+            var enumMap = { OPEN: 3, BLOCKED: 2, PENDING: 1, CLOSED: 0};
+            if(enumMap[a] > enumMap[b]){
+                ret = 1;
+            }
+            if(enumMap[a] < enumMap[b]){
+                ret = -1;
+            }
+            return ret;
+        };
+
+        var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
+        function completed(items, findResult){
+            for(var i = 0; i < items.length; i++){
+                var value = store.getValue(items[i], "uniqueId");
+                console.log("Item ID: [" + store.getValue(items[i], "uniqueId") + "] with status: [" + store.getValue(items[i], "status") + "]");
+            }
+        }
+        function error(errData, request){
+            console.log("Failed in sorting data.");
+        }
+
+        // Invoke the fetch.
+        store.fetch({onComplete: completed, onError: error, sort: sortAttributes});
+    });
 
 Query Syntax
 ============
@@ -574,23 +578,22 @@ Connecting ItemFileReadStore to ComboBox
 ----------------------------------------
 
 .. code-example ::
-  
+
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.ComboBox");
+    require(["dojo/parser", "dojo/data/ItemFileReadStore", "dijit/form/ComboBox"]);
 
-      var storeData2 =   { identifier: 'abbr',
+    var storeData2 = {identifier: 'abbr',
         label: 'name',
         items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
+            {abbr:'ec', name:'Ecuador',           capital:'Quito'},
+            {abbr:'eg', name:'Egypt',             capital:'Cairo'},
+            {abbr:'sv', name:'El Salvador',       capital:'San Salvador'},
+            {abbr:'gq', name:'Equatorial Guinea', capital:'Malabo'},
+            {abbr:'er', name:'Eritrea',           capital:'Asmara'},
+            {abbr:'ee', name:'Estonia',           capital:'Tallinn'},
+            {abbr:'et', name:'Ethiopia',          capital:'Addis Ababa'}
+    ]};
 
   .. html ::
 
