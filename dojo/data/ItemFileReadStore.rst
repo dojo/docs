@@ -323,14 +323,13 @@ Example: General Case Type Map for JavaScript Date Objects
 ----------------------------------------------------------
 
 .. js ::
- 
+
   {
     "Date": {
       type: Date,
       deserialize: function(value){
-        require(["dojo/date/stamp"], function(stamp){
-          value = stamp.fromISOString(value);
-        });
+        // supposing object is in require function and you required dojo/date/stamp module
+        value = stamp.fromISOString(value);
         return value;
       }
     }
@@ -359,7 +358,7 @@ Example: Simplified Form Type Map for dojo.Color Objects
 .. js ::
  
   {
-    "Color": dojo.Color
+    "Color": Color // supposing this object is in require function and you required dojo/_base/Color module
   }
 
 Functional Example: Using custom type maps with ItemFileReadStore
