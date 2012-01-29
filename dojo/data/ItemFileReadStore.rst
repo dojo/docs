@@ -328,7 +328,10 @@ Example: General Case Type Map for JavaScript Date Objects
     "Date": {
       type: Date,
       deserialize: function(value){
-        return dojo.date.stamp.fromISOString(value);
+        require(["dojo/date/stamp"], function(stamp){
+          value = stamp.fromISOString(value);
+        });
+        return value;
       }
     }
   }
