@@ -48,8 +48,8 @@ A plain Calendar widget with the formatted date below:
 
     <div data-dojo-type="dijit/Calendar">
         <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
-            require(["dojo/dom", "dojo/date"], function(dom, date){
-                dom.byId('formatted').innerHTML = date.locale.format(value, {formatLength: 'full', selector:'date'});
+            require(["dojo/dom", "dojo/date/locale"], function(dom, locale){
+                dom.byId('formatted').innerHTML = locale.format(value, {formatLength: 'full', selector:'date'});
             });
         </script>
     </div>
@@ -106,15 +106,16 @@ Javascript declaration, with a restriction of +/- one week from the current date
     require([
         "dojo/ready",
         "dijit/dijit", // loads the optimized dijit layer
-        "dijit/Calendar"
-    ], function(ready, dijit, Calendar){
+        "dijit/Calendar",
+        "dojo/date"
+    ], function(ready, dijit, Calendar, date){
         ready(function(){
             new Calendar({
             value: new Date(),
             isDisabledDate: function(d){
                 var d = new Date(d); d.setHours(0, 0, 0, 0);
                 var today = new Date(); today.setHours(0, 0, 0, 0);
-                return Math.abs(dojo.date.difference(d, today, "week")) > 0;
+                return Math.abs(date.difference(d, today, "week")) > 0;
             }
             }, "mycal");
         });
