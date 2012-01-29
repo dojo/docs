@@ -1,10 +1,10 @@
 .. _dijit/tree/ForestStoreModel:
 
 ===========================
-dijit.tree.ForestStoreModel
+dijit/tree/ForestStoreModel
 ===========================
 
-The ForestStoreModel connects a data store with multiple "root" items to a :ref:`dijit.Tree <dijit/Tree>`.
+The ForestStoreModel connects a data store with multiple "root" items to a :ref:`dijit/Tree <dijit/Tree>`.
 
 An example might be a geographical database; there are multiple continents but no ''single'' top level item called "world".
 
@@ -42,8 +42,7 @@ For example:
 
 .. js ::
 
-
-    var model = new dijit.tree.ForestStoreModel({
+    var model = new ForestStoreModel({
         store: continentStore,
         query: {type: 'continent'},
         rootLabel: "The World",
@@ -94,26 +93,25 @@ Creating a programmatic tree is very simple:
 
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
+    require(["dojo/ready", "dijit/Tree", "dojo/data/ItemFileReadStore", "dijit/tree/ForestStoreModel"], function(ready, Tree, ItemFileReadStore, ForestStoreModel){
+        ready(function(){
+            var store = new ItemFileReadStore({
+                url: "{{dataUrl}}/dijit/tests/_data/countries.json"
+            });
 
-      dojo.ready(function(){
-        var store = new dojo.data.ItemFileReadStore({
-            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
+            var treeModel = new ForestStoreModel({
+                store: store,
+                query: {"type": "continent"},
+                rootId: "root",
+                rootLabel: "Continents",
+                childrenAttrs: ["children"]
+            });
+
+            new Tree({
+                model: treeModel
+            }, "treeOne");
         });
-
-        var treeModel = new dijit.tree.ForestStoreModel({
-            store: store,
-            query: {"type": "continent"},
-            rootId: "root",
-            rootLabel: "Continents",
-            childrenAttrs: ["children"]
-        });
-
-        new dijit.Tree({
-            model: treeModel
-        }, "treeOne");
-      });
+    });
 
   .. html ::
 
@@ -129,21 +127,20 @@ A markup tree
 
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
+    require(["dojo/parser", "dojo/data/ItemFileReadStore", "dijit/Tree"]);
 
   .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
+        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
     <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="continentModel"
-      data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
+        data-dojo-props="store:continentStore, query:{type:'continent'},
+        rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
     <div data-dojo-type="dijit/Tree" id="mytree"
-      data-dojo-props="model:continentModel, openOnClick:true">
-      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
-        alert("Execute of node " + continentStore.getLabel(item)
+        data-dojo-props="model:continentModel, openOnClick:true">
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="item">
+            alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
-      </script>
+        </script>
     </div>
