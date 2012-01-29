@@ -1,7 +1,7 @@
 .. _dijit/Tree-examples:
 
 ===================
-dijit.Tree examples
+dijit/Tree examples
 ===================
 
 
@@ -15,7 +15,7 @@ Use the onLoadDeferred to detect when the Tree has finished loading
 
 .. js ::
   
-    var tree = dijit.byId('myTree');
+    var tree = registry.byId('myTree');
 
     // Connect to tree onLoad to do work once it has initialized
     tree.onLoadDeferred.then(function(){
@@ -45,9 +45,7 @@ Combining those all together into an example:
 
   .. js ::
 
-        dojo.require("dojo.store.Memory");
-        dojo.require("dijit.tree.ObjectStoreModel");
-        dojo.require("dijit.Tree");
+    require(["dojo/parser", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
@@ -123,9 +121,7 @@ simply set the ``openOnClick`` attribute to ``true``
 
   .. js ::
 
-        dojo.require("dojo.store.Memory");
-        dojo.require("dijit.tree.ObjectStoreModel");
-        dojo.require("dijit.Tree");
+    require(["dojo/parser", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
