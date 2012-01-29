@@ -14,7 +14,7 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 .. html ::
 
     <div data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-id="store"
-        data-dojo-props="url:'../tests/_data/treeTest.json'></div>
+        data-dojo-props="url:'../tests/_data/treeTest.json'"></div>
     <div data-dojo-type="dijit/tree/TreeStoreModel" data-dojo-id="model"
         data-dojo-props="childrenAttrs:'kids',
         store:store, query:{id:'root'}"></div>
