@@ -22,7 +22,7 @@ This file provides the bootstrap for loading other modules, in particular the ``
 
 See the :ref:`loader documentation <loader/index>` for details.
 
-For backwards-compatibility, when dojo.js is included without the async:false configuration flag, all the symbols in dojo/_base
+For backwards-compatibility, when dojo.js is included without the async:true configuration flag, all the symbols in dojo/_base
 are implicitly loaded.
 
 dojo/_base
