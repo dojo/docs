@@ -462,7 +462,7 @@ Chain works in much the same way - though plays each animation one right after t
         dojo.fadeIn({ node: "bar" })
     ]).play();
 
-All of the same patterns apply to chain as to other animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus.
+All of the same patterns apply to chain as to other animation instances.
 
 combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
 
@@ -500,6 +500,45 @@ combine and chain accept an Array, and will work on a one-element array. This is
 
 Obviously, any logic for determining if a node should participate in an animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list.
 
+Example
+-------
+
+.. code-example ::
+
+  .. js ::
+
+    require(["dojo/query", "dojo/_base/fx", "dojo/fx", "dojo/domReady!"], function(query, fx, coreFx){
+        var demoDoit = function(){
+            var int = 175;
+            var delay = 300;
+            var anims = [];
+            query(".entry p").reverse()
+                .forEach(function(n){
+                    anims.push(fx.fadeOut({ node:n, delay: parseInt(delay), duration:420 }));
+                    delay += int;
+                }).reverse().forEach(function(n){
+                    delay += int;
+                    anims.push(fx.animateProperty({
+                        node:n,
+                        delay: parseInt(delay),
+                        duration:500, properties: { height:1 } 
+                    }));
+                });
+            coreFx.combine(anims).play();
+        };
+        demoDoit();
+    });
+
+  .. html ::
+
+    <div class="entry">
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet</p>
+    </div>
 
 Animation Easing
 ================
