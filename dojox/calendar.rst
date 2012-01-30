@@ -63,9 +63,19 @@ Configuring Calendar data
 
 The calendar widget is populated with events using a dojo.store.Store set on its store property.
 
+You might want to listen to store query errors, for that you can use the promise returned by the store setter:
+
+.. js::
+
+  require(["dojox/calendar/Calendar", "dojo/_base/Deferred", ..], function(Calendar, Deferred, ...){
+    var calendar= new Calendar(...);
+    Deferred.when(calendar.set("store", mystore), function onOk() {}, function onFail() {});
+  });
+
 In order to display events, the widget must determine for each event its start and end time.
 It will look by default at the “startTime” and “endTime” properties of the store item.
 
+ 
 .. js ::
 
   var someData = [
@@ -106,8 +116,6 @@ The property names can be configured by setting the “startTimeAttr” and “e
     dateInterval: "day",
     style: "position:relative;width:500px;height:500px"
   }, "someId");
-
-
 
 The value retrieved can be a date directly usable by the calendar or must converted into a date.
 In the latter case, the decodeDate() and encodeDate() functions must be set to respectively decode the object into a date and encore the date into a custom object after an editing.
