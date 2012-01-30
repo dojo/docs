@@ -45,4 +45,4 @@ See Also
 
 * :ref:`dojo.date.* <dojo/date>`
 * :ref:`dojo.date.locale.* <dojo/date/locale>`
-* `Dojo Cookie: Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_
+* `ISO-8601 <http://wikipedia.org/wiki/ISO_8601>`_
