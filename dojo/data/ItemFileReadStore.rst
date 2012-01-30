@@ -913,8 +913,8 @@ Demonstrating custom sorting
 Clearing out the existing Data in a store, and populating it with new Data
 --------------------------------------------------------------------------
 
-This is a pretty common need with a pretty simple solution.  How do you clear out the existing Data in a store, and 
-populate it with new Data?  The solution is pretty easy.  Let’s assume you have an ItemFileReadStore (this works with 
+This is a pretty common need with a pretty simple solution.  How do you clear out the existing Data in a store, and
+populate it with new Data?  The solution is pretty easy.  Let's assume you have an ItemFileReadStore (this works with
 ItemFileWriteStore as well) named myStore.
 
 .. html ::
