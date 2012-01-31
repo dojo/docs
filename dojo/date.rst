@@ -12,7 +12,7 @@ dojo.date
 Introduction
 ============
 
-Dealing with dates in software can be trickier than it seems.  The web and Javascript add to the challenge.  Because your 
+Dealing with dates in software can be trickier than it seems.  The web and JavaScript add to the challenge.  Because your 
 code is on the web, users are likely to execute it in a variety of platforms in different locales and time zones, and 
 JavaScript isn't always helpful abstracting these issues in development.  JavaScript has got a bunch of quirks of its
 own related to dates, perhaps worthy of their own cookies, but it's got a reasonably straightforward API.  When you're 
@@ -24,7 +24,7 @@ dojo.date.locale.*, for culturally-sensitive formatting and parsing of dates for
 English: Thursday, October 8, 2008 11:59:59PM)
 
 
-Note that in JavaScript, counting of months starts at "0" so if you want to create following date: August 23rd 2034 you will have to do::
+Note that in JavaScript, counting of months starts at "0" so if you want to create following date: August 23rd 2034 you will have to do:
 
 .. js ::
 
