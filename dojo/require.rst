@@ -114,9 +114,9 @@ Examples
 
   .. js ::
 
-        // The following line will load the Dijit Widget "dijit.form.Button".
-        // Without this line you will get a "dijit.form.Button not defined" error.
-        dojo.require("dijit.form.Button");
+        // The following line will load the Dijit Widget "dijit/form/Button".
+        // Without this line you will get an undefinedModule error
+        require(["dojo/parser", "dijit/form/Button"]);
 
   .. html ::
 
