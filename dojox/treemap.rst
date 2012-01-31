@@ -210,8 +210,8 @@ The following example shows how to:
 
 .. code-example::
   :type: inline
-  :width: 640
-  :height: 640
+  :width: 620
+  :height: 620
 
   .. javascript::
   
@@ -376,8 +376,8 @@ The first rendering mixin is the GroupLabel mixin. It allows to remove cell labe
 
 .. code-example::
   :type: inline
-  :width: 640
-  :height: 640
+  :width: 620
+  :height: 620
 
   .. javascript::
 
@@ -418,8 +418,8 @@ The second rendering mixin is the ScaledLabel mixin. It allows to scale the cell
 
 .. code-example::
   :type: inline
-  :width: 640
-  :height: 640
+  :width: 620
+  :height: 620
 
   .. javascript::
 
