@@ -115,48 +115,49 @@ A simple example formatting a date in a number of ways
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
-            dojo.require( "dojo.date.locale" );
-            function format(date, fmt){ return dojo.date.locale.format( date, {selector:"date", datePattern:fmt } ); };
-
-            var initDates = function(){
-                var date = new Date(2009,9,26,13,37,43,777);
-                var fmto = "EEEE, MMMM d yyyy GGG, h:m:s.SSS a z (ZZZZ)";
-                var fmt2 = "EEEE, MMMM d yyyy GGG, 'day' D, 'week' w, 'quarter' q, h:m:s.SSS a z 'ie hour' H -- ZZZZ";
-                var txt = dojo.query( ".date" )[0];
-                txt.innerHTML = format( date, fmto );
-                var fmts = {
-                    explicit: fmto,
-                    simple:"MMM d, yyyy",
-                    abbreviated:"EEE, MMM d, yyyy G",
-                    full:"MMMM d, 'in the year' yyyy GGGG",
-                    time: "h:m:s.SSS a z",
-                    ordinal: "'day' D, 'week' w, 'quarter' q 'of the year' yyyy",
-                    literal: "'this is not really a date'",
-                    "extra stuff": "MMM d, yyyy -- 39:45, ____+1"
-                };
-                var out = dojo.query( ".output" )[0];
-                for(var ii in fmts){
-                    var fmt = fmts[ii];
-                    var res = format( date, fmt );
-                    out.innerHTML += "<tr><td>" + ii + "</td><td>" + fmt + "</td><td>" + res + "</td></tr>";
-                }
-            }
-            dojo.ready( initDates );
+    require(["dojo/ready", "dojo/date/locale", "dojo/query"], function(ready, locale, query){
+        function format(date, fmt){ return locale.format( date, {selector:"date", datePattern:fmt } ); };
         
-    .. css ::
+        var initDates = function(){
+            var date = new Date(2009,9,26,13,37,43,777);
+            var fmto = "EEEE, MMMM d yyyy GGG, h:m:s.SSS a z (ZZZZ)";
+            var fmt2 = "EEEE, MMMM d yyyy GGG, 'day' D, 'week' w, 'quarter' q, h:m:s.SSS a z 'ie hour' H -- ZZZZ";
+            var txt = dojo.query( ".date" )[0];
+            txt.innerHTML = format( date, fmto );
+            var fmts = {
+                explicit: fmto,
+                simple: "MMM d, yyyy",
+                abbreviated: "EEE, MMM d, yyyy G",
+                full: "MMMM d, 'in the year' yyyy GGGG",
+                time: "h:m:s.SSS a z",
+                ordinal: "'day' D, 'week' w, 'quarter' q 'of the year' yyyy",
+                literal: "'this is not really a date'",
+                "extra stuff": "MMM d, yyyy -- 39:45, ____+1"
+            };
+            var out = query( ".output" )[0];
+            for(var ii in fmts){
+                var fmt = fmts[ii];
+                var res = format( date, fmt );
+                out.innerHTML += "<tr><td>" + ii + "</td><td>" + fmt + "</td><td>" + res + "</td></tr>";
+            }
+        }
+        ready(initDates);
+    });
 
-        th,td  { border:1px solid black; padding: .2em 1em; }
-        table { border-collapse:collapse }
+  .. css ::
 
-    .. html ::
+    th,td  { border:1px solid black; padding: .2em 1em; }
+    table { border-collapse:collapse }
 
-        <h3>dojo.date.locale test</h3>
-        The following table shows the date: <div class="date"></div> formatted using dojo.date.locale.format
-        <table class="output" style="border:1px solid black; width: auto;">
-            <tr> <th>style</th> <th>format</th> <th>result</th> </tr>
-        </table>
+  .. html ::
+
+    <h3>dojo/date/locale test</h3>
+    The following table shows the date: <div class="date"></div> formatted using dojo/date/locale.format
+    <table class="output" style="border:1px solid black; width: auto;">
+        <tr><th>style</th><th>format</th><th>result</th></tr>
+    </table>
 
 
 Formatting dates and times using custom patterns
