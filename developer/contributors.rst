@@ -641,7 +641,8 @@ Corporations or Organizations with a CCLA on file
 * GCGF
 * Global Media Systems
 * GreenPlum
-* IBM: Adam Peller, Becky Gibson, David Boloker, William Keese, Christopher Mitchell, Douglas Hays, Jared Jurkiewicz, William Higgins, Richard Backhouse, Christophe Jolif
+* IBM: Adam Peller, Becky Gibson, David Boloker, Bill Keese, Christopher Mitchell, Douglas Hays, William Higgins,
+  Richard Backhouse, Christophe Jolif, Yoshihiro Kamiyama
 * Indico Group
 * Laszlo Systems, Inc.
 * Leorent, GmbH: Michael Rasmussen
