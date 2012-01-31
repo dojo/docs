@@ -83,6 +83,8 @@ Mapping using attributes
 In this example the data are mapped from the data store using an attribute based mapping. That means the cell size and color as well as the grouping are extracted from attributes value in the data.
 
 .. code-example::
+  :width: 620
+  :height: 620
 
   .. javascript::
   
@@ -135,6 +137,8 @@ Mapping using custom functions
 In this example the data are mapped from the data store using custom functions. That means the cell size and color as well as the grouping are computed by functions specified by the application.
 
 .. code-example::
+  :width: 620
+  :height: 620
 
   .. javascript::
   
