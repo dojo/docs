@@ -49,7 +49,7 @@ In JavaScript:
 .. html::
 
   <link rel="stylesheet" href="{{baseUrl}}/dojox/treemap/themes/TreeMap.css">
-  <div id="treeMap" style="width: 640px; height: 480px;"></div>
+  <div id="treeMap" style="width: 600px; height: 450px;"></div>
 
 In HTML markup:
 
@@ -58,7 +58,7 @@ In HTML markup:
   <link rel="stylesheet" href="{{baseUrl}}/dojox/treemap/themes/TreeMap.css">
   <div id="treeMap" data-dojo-type="dojox.treemap.TreeMap" data-dojo-props="store: dataStore, areaAttr:'sales', 
      colorAttr:'profit', groupAttrs:['region'], colorModel: colorModel"
-     style="width: 640px; height: 480px;">
+     style="width: 600px; height: 450px;">
   </div>
 
 You might want to listen to store query errors, for that you can use the promise returned by the store setter:
@@ -112,7 +112,7 @@ In this example the data are mapped from the data store using an attribute based
 
   .. html::
   
-    <div id="treeMap" style="width:640px;height:640px"></div>
+    <div id="treeMap" style="width:600px;height:600px"></div>
 
 For the cell colors in the value of the binding is used as an input into the specified color model. In this case this is a color model that returns a color interpolated between the red and 
 green colors with a mean neutral value. One can specify his one color model like a similar one based on average neutral value instead of mean neutral. If no color model is specified at all
@@ -172,7 +172,7 @@ In this example the data are mapped from the data store using custom functions. 
 
   .. html::
   
-    <div id="treeMap" style="width:640px;height:640px"></div>
+    <div id="treeMap" style="width:600px;height:600px"></div>
 
 The example is very similar to the previous one, except that it is using a function to compute the input value for the cells color. In this case instead of using the absolute profit figure
 we are computing the profit percentage. 
@@ -241,7 +241,7 @@ The following example shows how to:
 
   .. html::
 
-    <div id="treeMap" style="width:640px;height:640px"></div>
+    <div id="treeMap" style="width:600px;height:600px"></div>
 
   .. css::
   
@@ -405,7 +405,7 @@ The first rendering mixin is the GroupLabel mixin. It allows to remove cell labe
 
   .. html::
 
-    <div id="treeMap" style="width:640px;height:640px"></div>
+    <div id="treeMap" style="width:600px;height:600px"></div>
 
   .. css::
   
@@ -447,7 +447,7 @@ The second rendering mixin is the ScaledLabel mixin. It allows to scale the cell
 
   .. html::
 
-    <div id="treeMap" style="width:640px;height:640px"></div>
+    <div id="treeMap" style="width:600px;height:600px"></div>
 
   .. css::
   
