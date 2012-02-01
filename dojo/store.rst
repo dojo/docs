@@ -133,7 +133,7 @@ With this one can easily mix and match wrappers and base stores to achieve vario
 
 .. js ::
 
-  store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
+  store = Observable(new Memory({data: someData}));
 
 There are also a couple of utility modules:
 
