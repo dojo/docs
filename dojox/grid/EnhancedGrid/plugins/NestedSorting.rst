@@ -148,7 +148,7 @@ with JavaScript way
   }, div);
   grid.startup();
     
-When nested sorting is enabled, you can also use comparatorMap for custom sorting; see :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>` on DojoCampus.org for more details.
+When nested sorting is enabled, you can also use comparatorMap for custom sorting; see :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>` for more details.
 
 Scenario
 --------
