@@ -13,7 +13,7 @@ Dojo 1.8 Release Notes
 Browser support
 ===============
 
-The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
+The following browsers have been tested and are supported in this release. If a browser version is not listed as supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases of dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
 
 Desktop
 
