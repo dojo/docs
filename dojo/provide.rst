@@ -10,7 +10,7 @@ dojo.provide
 .. contents ::
    :depth: 2
 
-dojo.provide is a core part of the dojo module system. It tells the loader that a specific module has been loaded.
+dojo.provide is a core part of the legacy dojo module system. It tells the loader that a specific module has been loaded.
 
 
 Introduction
@@ -55,6 +55,15 @@ Dojo < 1.7
    my.module.name = "my module";
 
 Multiple dojo.provide calls can live in a file, but outside of built layer, it is normal just to see one for the module that matches the file name.
+
+Prior to Dojo 1.7 the legacy module format was used in combination with dojo.require and dojo.declare like this:
+
+.. js ::
+
+    dojo.provide("my._TemplatedWidget");
+    dojo.require("dijit._WidgetBase");
+    dojo.require("dijit._TemplatedMixin");
+    dojo.declare("my._TemplatedWidget", [ dijit._WidgetBase, dijit._TemplatedMixin ], {});
 
 See also
 ========

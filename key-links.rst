@@ -54,7 +54,6 @@ Core
 * `Using Dojo for Client-side Validation <http://www.informit.com/articles/article.aspx?p=1221432&rll=1>`_, James Harmon, Object Training Group, Dojo User
 * `dojo.hitch and scope <http://dojocampus.org/content/?p=154>`_, Sam Foster, mozilla, Dojo Committer
 * `Extending DnD with a Creator Function <http://dojocampus.org/content/2008/06/24/extending-dojodnd-with-a-creator-function/>`_, Jeff Balogh, Dojo Contributor
-* `Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_, Adam Peller, IBM, DojoX Project Lead
 * `Making Browser Sense... dojo.isBrowser? <http://dojocampus.org/content/2008/06/26/browser-sense/>`_, Gerald Lopez, Dojo Contributor
 * `Dojo Module Packaging and Loading <http://dojocampus.org/content/2008/10/09/dojo-module-packaging-and-loading/>`_, Peter Higgins, Adconion, Dojo Project Lead
 * `delegate(), delegate(), delegate() <http://infrequently.org/2008/10/delegate-delegate-delegate/>`_, Alex Russell, Google, Dojo Co-founder

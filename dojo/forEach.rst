@@ -96,6 +96,32 @@ does the same thing. But that's not all! New in 1.0 you can collapse the functio
   // Dojo < 1.7
   dojo.query("select").forEach("item.disabled = true;");
 
+Using the third argument ``thisObject`` forEach is capable of scoping:
+
+.. js ::
+
+  // Dojo 1.7+ (AMD)
+  require(["dojo/_base/array"], function(array){
+      var foo = {
+          myMethod: function(el){
+              console.log(el);
+          }
+      };
+      array.forEach(["a","b","c"],function(item){
+          this.myMethod(item);
+      },foo);
+  });
+  
+  // Dojo < 1.7
+  var foo = {
+      myMethod: function(el){
+          console.log(el);
+      }
+  };
+  dojo.forEach(["a","b","c"],function(item){
+       this.myMethod(item);
+  },foo);
+
 That's a lot of functionality from a single method! Once you get used to the syntax, you'll never want to go back.
 
 .. api-inline :: dojo.forEach
