@@ -41,7 +41,7 @@ is identical to:
 
 The declarative method requires you include the :ref:`dojo/parser <dojo/parser>` and have either ``dojoConfig.parseOnLoad`` set to true, or you manually call ``parser.parse()`` when you would like the widgets (aka: Dijits) to be created.
 
-**note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit/registry <dijit/registry>`, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+**note:** Dijit uses a special function for access, :ref:`dijit.byId() <dijit/byId>` ... This is **not** the same as :ref:`dojo.byId <dojo/byId>`, which works exclusively on DomNodes. Dijit stores all active widgets in the :ref:`dijit/registry <dijit/registry>`, and uses id's as unique qualifiers. ``registry.byId()`` returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. html ::
   
