@@ -127,7 +127,7 @@ All the information should be wrapper within a <textarea> html control. It would
 
   <textarea>{"file":"..\/tests\/uploads\/1079.gif","name":"1079.gif","width":400,"height":118,"type":"gif","size":2260,"additionalParams":[]}</textarea>
 
-For more information, please refer to http://docs.dojocampus.org/dojox/form/FileUploader .
+For more information, please refer to :ref:`dojox.form.FileUploader <dojox/form/FileUploader>`.
 
 User Interface
 ==============

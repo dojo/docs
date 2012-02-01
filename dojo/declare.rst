@@ -1442,4 +1442,3 @@ See Also
 .. _`Diamond problem`: http://en.wikipedia.org/wiki/Diamond_problem
 .. _`AOP`: http://en.wikipedia.org/wiki/Aspect-oriented_programming
 .. _`Classy JavaScript with dojo.declare`: http://dojotoolkit.org/documentation/tutorials/1.6/declare/
-.. _`Understanding dojo.declare, dojo.require, and dojo.provide`: http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/
