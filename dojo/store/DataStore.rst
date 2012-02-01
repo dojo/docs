@@ -1,7 +1,7 @@
 .. _dojo/store/DataStore:
 
 ====================
-dojo.store.DataStore
+dojo/store/DataStore
 ====================
 
 :Authors: Kris Zyp
@@ -11,7 +11,7 @@ dojo.store.DataStore
 .. contents ::
     :depth: 3
 
-**dojo.store.DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new :ref:`Dojo Object Store API <dojo/store>`.
+**dojo/store/DataStore** is an adapter for using Dojo DataStores with an object store consumer. This store allows the developer to convert existing datastores to implement the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
 Examples
@@ -19,13 +19,15 @@ Examples
 
 .. js ::
 
- datastore = new dojo.data.ItemFileWriteStore({url:"data.json"});
-
- store = new dojo.store.DataStore({store: datastore});
-
- store.query("foo=bar").then(function(results){
-   // use the query results returned from the server
- });
+    require(["dojo/data/ItemFileWriteStore", "dojo/store/DataStore"], function(ItemFileWriteStore, DataStore){
+        datastore = new ItemFileWriteStore({url:"data.json"});
+        
+        store = new DataStore({store: datastore});
+        
+        store.query("foo=bar").then(function(results){
+            // use the query results returned from the server
+        });
+    });
 
 Method Mapping
 ==============
