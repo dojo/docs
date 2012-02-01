@@ -1,7 +1,7 @@
 .. _dojo/store/Memory:
 
 =================
-dojo.store.Memory
+dojo/store/Memory
 =================
 
 :Authors: Kris Zyp
@@ -11,7 +11,7 @@ dojo.store.Memory
 .. contents ::
     :depth: 3
 
-**dojo.store.Memory** is a object store wrapper for JavaScript/JSON available directly with an array. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
+**dojo/store/Memory** is an object store wrapper for JavaScript/JSON available directly with an array. This store implements the new :ref:`Dojo Object Store API <dojo/store>`.
 
 
 Introduction
@@ -24,23 +24,25 @@ Examples
 
 .. js ::
 
- var someData = [
-   {id:1, name:"One"},
-   {id:2, name:"Two"}
- ];
- store = new dojo.store.Memory({data: someData});
+    require(["dojo/store/Memory"], function(Memory){
+        var someData = [
+            {id:1, name:"One"},
+            {id:2, name:"Two"}
+        ];
+        store = new Memory({data: someData});
 
- store.get(1) -> Returns the object with an id of 1
+        store.get(1) -> Returns the object with an id of 1
 
- store.query({name:"One"}) -> // Returns query results from the array that match the given query
+        store.query({name:"One"}) // Returns query results from the array that match the given query
 
- store.query(function(object){
-   return object.id > 1;
- }) -> // Pass a function to do more complex querying
+        store.query(function(object){
+            return object.id > 1;
+        }) // Pass a function to do more complex querying
 
- store.put({id:3, name:"Three"}); // store the object with the given identity
+        store.put({id:3, name:"Three"}); // store the object with the given identity
 
- store.remove(3); // delete the object
+        store.remove(3); // delete the object
+    });
 
 See Also
 ========
