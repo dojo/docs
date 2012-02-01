@@ -200,8 +200,22 @@ Charting
 - A new dropLabels mode was introduced on axis. It is true by default and allows to drop superfluous labels on the axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that by:
 
    * setting dropLabels to false (but then you don't get the automatic drop labels)
-   * setting minorLabels to false if you know minorLabels won't show up anyway 
+   * setting minorLabels to false if you know minorLabels won't show up anyway
 
+- Bars, Columns and Pie plots now support drop shadow property.
+
+Calendar
+--------
+
+A new Calendar component is introduced in dojox.calendar package. It displays events from a data store along time using
+widespread representation and allows to interactively edit the position in time and duration of these events.
+
+Gauges
+------
+
+A new gauges package is introduced in dojox.dgauges package. It provides a fully extensible gauges framework allowing
+you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
+gauges (horizontal and vertical) are supported.
 
 
 Util
