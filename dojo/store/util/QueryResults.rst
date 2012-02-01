@@ -1,7 +1,7 @@
 .. _dojo/store/util/QueryResults:
 
 ============================
-dojo.store.util.QueryResults
+dojo/store/util/QueryResults
 ============================
 
 :Authors: Kris Zyp
@@ -21,11 +21,12 @@ Examples
 
 .. js ::
 
- require(["dojo/store/util/QueryResults"],
-   function(QueryResults){
- var someData = [
-   {id:1, name:"One"},
-   {id:2, name:"Two"}
- ];
- var results = QueryResults(someData);
- results.forEach(objectHandler); // works in all browsers
+  require(["dojo/store/util/QueryResults"],
+      function(QueryResults){
+          var someData = [
+              {id:1, name:"One"},
+              {id:2, name:"Two"}
+          ];
+          var results = QueryResults(someData);
+          results.forEach(objectHandler); // works in all browsers
+  });
