@@ -34,15 +34,15 @@ The following example shows how to declare a calendar widget in markup:
 
   .. javascript::
 
-  <script type="text/javascript">
-          require(["dojo/parser", "dojox/calendar/Calendar"]);
-  </script>
+    <script type="text/javascript">
+            require(["dojo/parser", "dojox/calendar/Calendar"]);
+    </script>
 
   .. html::
                                                                       
-  <div data-dojo-type="dojox.calendar.Calendar" 
-                   data-dojo-props="dateInterval:'day'" 
-                   style="position:relative;width:500px;height:500px"></div>
+    <div data-dojo-type="dojox.calendar.Calendar" 
+         data-dojo-props="dateInterval:'day'" 
+         style="position:relative;width:500px;height:500px"></div>
 
 The following example shows how to declare a calendar widget programmatically:
 
