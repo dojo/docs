@@ -39,11 +39,14 @@ The following example shows how to declare a calendar widget in markup:
     </script>
 
   .. html::
+
+    <link rel="stylesheet" href="{{baseUrl}}/dojox/calendar/themes/claro/Calendar.css">
                                                                       
     <div data-dojo-type="dojox.calendar.Calendar" 
          data-dojo-props="dateInterval:'day'" 
          style="position:relative;width:500px;height:500px">
     </div>
+    
 
 The following example shows how to declare a calendar widget programmatically:
 
@@ -67,6 +70,8 @@ The following example shows how to declare a calendar widget programmatically:
     </script>
   
   .. html::
+
+    <link rel="stylesheet" href="{{baseUrl}}/dojox/calendar/themes/claro/Calendar.css">
                                                                         
     <div id="someId" >
     </div>  
