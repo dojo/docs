@@ -127,7 +127,7 @@ example:
 
   groupAttrs:['continent', 'country']
 
-Another binding attributes available are not described here:
+Other binding attributes are available:
  * the labelAttr that binds the cell labels to a data attribute.
  * the tooltipAttr that binds the cell tooltips to a data attribute.
 
