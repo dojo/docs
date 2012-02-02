@@ -94,7 +94,7 @@ With an initial selection and weekends disabled:
         margin: 25px auto;
     }
 
-Javascript declaration, with a restriction of +/- one week from the current date:
+JavaScript declaration, with a restriction of +/- one week from the current date:
 
 .. code-example::
   :height: 320
