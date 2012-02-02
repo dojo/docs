@@ -281,7 +281,9 @@ The views are displaying time and events differently and are more adapted for a 
 
 The calendar is using (by default):
   * the columns view for time ranges that last from one day to seven days.
-  * the matrix view for time ranges that last more than seven ways.
+  * the matrix view for time ranges that last more than seven days.
+
+Another optional view is the month columns view that can be used to display one or several entire months.
 
 See Advanced configuration to change this behavior.
 
@@ -344,7 +346,7 @@ Properties with an (*) are computed by the calendar widget.
 
 See advanced configuration dedicated section for more advanced properties like layout properties and renderers.
 
-To specify constructor parameters of the column view, set the matrixViewProps property as show in the following example:
+To specify constructor parameters of the matrix view, set the matrixViewProps property as show in the following example:
 
 .. html ::
 
@@ -366,6 +368,24 @@ By default the calendar is using this feature when an expand renderer is clicked
 In the following image the first row is expanded:
 
 .. image :: calendar/matrixViewExpanded.png
+
+Month Columns View
+------------------
+
+.. image :: calendar/monthColumnView.png
+
+The month columns view is displaying one column per month.
+
+This view is not in the calendar by default but it can be added, see advanced configuration for more information.
+
+The main properties of the columns view are:
+  * **startDate** - The date of the first column,  
+  * **columnCount** - The number of column to display,
+  * **daySize** - The desired size in pixels of one hour,
+
+Properties with an (*) are computed by the calendar widget.
+
+See Advanced configuration for more advanced properties like layout properties and renderers.
 
 
 Interactions
@@ -545,10 +565,11 @@ Calendar                 The desktop specific calendar that defines a column vie
 Class                    Description
 ======================== ===========
 MobileCalendar           The mobile specific calendar that defines a column view and a matrix view with touch interactions enabled and specific default renderers.
-MatrixView               The view that display days as a matrix of days.
+MatrixView               The view that displays days as a matrix of days.
 SimpleColumnView         The view that displays each day as a column.
 ColumnView               A SimpleColumnView with a secondary sheet that is showing all day events.
 ColumnViewSecondarySheet A MatrixView designed to be integrated as a secondary sheet of a ColumnView. 
+MonthColumnsView         The view that displays each month as a column.
 Mouse                    A mixin that enables interactions on events using the mouse.
 Keyboard                 A mixin that enables interactions on events using the keyboard.
 Touch                    A mixin that enables interactions on events using the touch events
@@ -927,6 +948,70 @@ row header cell	   _formatRowHeaderLabel()    none
 column header cell _formatColumnHeaderLabel() columnHeaderLabelLength 
 grid cell header   _formatGridCellLabel()     cellHeaderLongPattern (first visible day of month) and/or cellHeaderShortPattern (other days of month) 
 ================== ========================== ========
+
+Month Column View
+-----------------
+
+Properties
+``````````
+
+The displayed time interval is defined by the startDate and columnCount properties. It is columnCount months from the first day of month defined by the startDate.
+
+The desired size of a day is defined by the daySize property (30 by default). 
+
+The scroll position can be retrieved or set using the scrollPosition property. The value is an objet containing the following properties:
+
+  * **date** - The scroll position in day,
+  * **duration** (setter) - the scroll animation duration to scroll from the minHours to the maxHours. The actual duration is computed according to the distance to scroll in order to scroll always at the same speed.
+  * **easer** (setter) - if duration is greater than 0, the easing function to use to animate the scroll.
+
+For example to programmatically scroll the view to the 10th using an animation, use the following code:
+
+.. js ::
+
+  monthColumnView.set(“scrollPosition”, {position:10, duration:1000});
+
+The month columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
+
+Layout
+``````
+
+In addition to the properties defined in the common section, the month column view also exposes the horizontalGap property (default is 4). 
+
+This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
+
+Renderers
+`````````
+
+The month columns view is only using vertical renderers.
+
+The vertical renderer class can be set on the verticalRenderer property.
+
+Styling
+```````
+
+The styling of a month columns view  is defined in the themes/claro/MonthColumnView.css and themes/claro/MonthColumnView_rtl.css. The base CSS pseudo class name is dojoxCalendarMonthColumnView.
+
+Several functions are provided to style or set a style class on part of the view:
+  * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell.
+  * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+
+Date formatting
+```````````````
+
+To change the default formatting of the a label, one can:
+  * set a custom date pattern in a dedicated property or
+  * override the function that formats the date.
+
+The properties and function used by the column view are described in the following table:
+
+================== ======================= ===================
+Label              Custom pattern property Formatting function
+================== ======================= ===================
+column header cell columnHeaderDatePattern _formatColumnHeaderLabel()
+grid cell          gridCellPattern         _formatGridCellLabel()
+================== ======================= ===================
+
 
 Custom renderers
 ----------------
