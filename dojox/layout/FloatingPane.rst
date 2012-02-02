@@ -95,7 +95,7 @@ Declarative example
      </div>
      
      <div data-dojo-type="dijit.form.Button" data-dojo-props="label:'Show me', onClick:function(){dijit.byId('dFloatingPane').show();}"></div>
-     <!-- make campus preview div big enough: --><div style="height:280px;width:100%;"></div>
+     <!-- makes example preview div big enough: --><div style="height:280px;width:100%;"></div>
 
 Troubleshooting
 ===============
