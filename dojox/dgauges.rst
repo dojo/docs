@@ -68,16 +68,16 @@ Setting properties using markup
 -------------------------------
 
 Predefined gauges inherit from DefaultPropertiesMixin which wraps the main properties of sub-elements on the top-level widget. Supported properties are:
-   * value
-   * minimum 
-   * maximum
-   * snapInterval
-   * majorTickInterval
-   * minorTickInterval
-   * minorTicksEnabled
-   * interactionArea
-   * interactionMode
-   * animationDuration    
+   * value: The value of the marker. Default: 0
+   * minimum: The minimum value of the scale. Default: 0
+   * maximum: The maximum value of the scale. Default: 100
+   * snapInterval: The snapping interval (only used on mouse and gesture interactions). Default: 1
+   * majorTickInterval: The interval between two major ticks. Default: 10
+   * minorTickInterval: The interval between two minor ticks. Default: 1
+   * minorTicksEnabled: Show/Hide minor ticks. Default: true
+   * interactionArea: The area that reacts to user interaction. Valid values are "indicator", "gauge" and "none". Default: "gauge"
+   * interactionMode: The interaction method, "mouse" or "touch". Default: "mouse"
+   * animationDuration: The duration of the animation in milliseconds. Default: 0
 
 ======================
 Main framework classes
