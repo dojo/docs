@@ -434,6 +434,7 @@ Individuals who have signed Dojo CLAs
 * Roberts, Neil
 * Romero, Carlos
 * Rought, Edward T.
+* Rouse, Joseph (loodwig)
 * Roy, Dibyendu
 * Ruffles, Tim
 * Ruggia, Pablo
