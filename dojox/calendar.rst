@@ -28,19 +28,29 @@ You can create a calendar widget either with markup or programmatically.
 
 The following example shows how to declare a calendar widget in markup:
 
-.. html ::
+.. code-example::
+  :width: 620
+  :height: 620
+
+  .. javascript::
 
   <script type="text/javascript">
           require(["dojo/parser", "dojox/calendar/Calendar"]);
   </script>
-                                                                        
+
+  .. html::
+                                                                      
   <div data-dojo-type="dojox.calendar.Calendar" 
                    data-dojo-props="dateInterval:'day'" 
                    style="position:relative;width:500px;height:500px"></div>
 
 The following example shows how to declare a calendar widget programmatically:
 
-.. html ::
+.. code-example::
+  :width: 620
+  :height: 620
+
+  .. javascript::
 
   <script type="text/javascript">
         require(["dojo/parser", "dojo/ready", "dojox/calendar/Calendar"], 
@@ -54,6 +64,8 @@ The following example shows how to declare a calendar widget programmatically:
                 )}
         );
   </script>
+
+  .. html::
                                                                         
   <div id="someId" ></div>  
 
