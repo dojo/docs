@@ -1071,29 +1071,29 @@ Editing behavior properties
 ```````````````````````````
 To customize the event editing behavior, a set of properties are exposed by the views.
 
-============================ ========================= ========================= ===========
-Property                     Column view default value Matrix view default value Description
-============================ ========================= ========================= ===========
-allDayKeyboardLeftRightSteps 1                         1                         How many unit to add or removed when using the keyboard left or right keys when editing an all day event.
-allDayKeyboardLeftRightUnit  “day”                     “day”                     Unit to add or remove when using the keyboard left or right keys when editing an all day event.
-allDayKeyboardUpDownSteps    0                         7                         How many unit to add or remove when using the keyboard up tor bottom keys when editing an all day event.
-allDayKeyboardUpDownUnit     “day”                     “day”                     Unit to add or remove when using the keyboard up tor down keys when editing an all day event.
-allowResizeLessThan24H       true                      false                     Allow or not to resize an event that is lasting more than 24 hours to a duration less than 24 hours. Matrix view is preventing this because by default two renderer kinds are used to display events depending on their duration.
-allowStartEndSwap            true                      true                      Allows move the end of an event before the start and vice  versa.
-keyboardLeftRightSteps       1                         15                        How many unit to add or remove when using the keyboard left tor right keys.
-keyboardLeftRightUnit        “day”                     “minutes”                 Unit to add or remove when using the keyboard left tor right keys..
-keyboardUpDownSteps          15                        7                         How many unit to add or remove when using the keyboard up or downkeys.
-keyboardUpDownUnit           “minutes”                 “day”                     Unit to add or remove when using the keyboard up or down keys..
-liveLayout                   false                     false                     If false, only the edited renderer position/size is updated during the editing gestures. Otherwise all the renderers are updates during the editing gesture (more CPU intensive).
-minDurationSteps             15                        15                        The number of unit used to define the minimum duration of an event.
-minDurationUnit              “minutes”                 “minutes”                 The unit used to define the minimum duration of an event.
-snapSteps                    15                        15                        The number of unit used to compute the snapping of edited dates.
-snapUnit                     “minutes”                 “minute”                  The used to compute the snapping of edited dates.
-stayInView                   true                      true                      Forces the event to stay in the view.
-touchEndEditingTimer         5000                      5000                      The time out after a implicit validation of changes in touch environment.
-touchStartEditingTimer       750                       750                       The amount of time needed a renderer needs to be pressed before entering in edit mode.
-triggerExtent                3                         3                         The distance in pixels needed to trigger the editing using the mouse.
-============================ ========================= ========================= ===========	
+============================ ========================= ========================= =========================== ===============
+Property                     Column view default value Matrix view default value Month Columns default value ViewDescription
+============================ ========================= ========================= =========================== ===============
+allDayKeyboardLeftRightSteps 1                         1                         1                            How many unit to add or removed when using the keyboard left or right keys when editing an all day event.
+allDayKeyboardLeftRightUnit  “day”                     “day”                     "month"                      Unit to add or remove when using the keyboard left or right keys when editing an all day event.
+allDayKeyboardUpDownSteps    0                         7                         1                            How many unit to add or remove when using the keyboard up tor bottom keys when editing an all day event.
+allDayKeyboardUpDownUnit     “day”                     “day”                     "day"                        Unit to add or remove when using the keyboard up tor down keys when editing an all day event.
+allowResizeLessThan24H       true                      false                     false                        Allow or not to resize an event that is lasting more than 24 hours to a duration less than 24 hours. Matrix view is preventing this because by default two renderer kinds are used to display events depending on their duration.
+allowStartEndSwap            true                      true                      true                         Allows move the end of an event before the start and vice  versa.
+keyboardLeftRightSteps       1                         15                        1                            How many unit to add or remove when using the keyboard left or right keys.
+keyboardLeftRightUnit        “day”                     “minute”                  "month"                      Unit to add or remove when using the keyboard left tor right keys..
+keyboardUpDownSteps          15                        7                         1                            How many unit to add or remove when using the keyboard up or down keys.
+keyboardUpDownUnit           “minutes”                 “day”                     "day"                        Unit to add or remove when using the keyboard up or down keys..
+liveLayout                   false                     false                     false                        If false, only the edited renderer position/size is updated during the editing gestures. Otherwise all the renderers are updates during the editing gesture (more CPU intensive).
+minDurationSteps             15                        15                        1                            The number of unit used to define the minimum duration of an event.
+minDurationUnit              “minute”                  “minute”                  "day"                        The unit used to define the minimum duration of an event.
+snapSteps                    15                        15                        1                            The number of unit used to compute the snapping of edited dates.
+snapUnit                     “minutes”                 “minute”                  "day"                        The used to compute the snapping of edited dates.
+stayInView                   true                      true                      true                         Forces the event to stay in the view.
+touchEndEditingTimer         5000                      5000                      5000                         The time out after a implicit validation of changes in touch environment.
+touchStartEditingTimer       750                       750                       750                          The amount of time needed a renderer needs to be pressed before entering in edit mode.
+triggerExtent                3                         3                         3                            The distance in pixels needed to trigger the editing using the mouse.
+============================ ========================= ========================= =========================== ===============
 
 For example to change the minimal duration of an event to 30 minutes.
 
