@@ -140,6 +140,7 @@ of settings, and uses the FlickrRestStore data store.
 
   .. js ::
 
+    require(["dojo/_base/kernel"], function(dojo){
         dojo.require("dojo.parser");
         dojo.require("dojox.image.ThumbnailPicker");
         dojo.require("dojox.data.FlickrRestStore");
@@ -167,7 +168,7 @@ of settings, and uses the FlickrRestStore data store.
             // Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
             dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
         });
-
+    });
 
   .. html ::
 
@@ -175,7 +176,7 @@ of settings, and uses the FlickrRestStore data store.
        This ThumbnailPicker should have 4 thumbnails, witheach of them linking
        to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
        The widget is laid out in the default horizontal layout.
-       <div id="thumbPicker1" data-dojo-type="dojox.image.ThumbnailPicker" data-dojo-props="numberThumbs:4, useHyperlink:true,
+       <div id="thumbPicker1" data-dojo-type="dojox/image/ThumbnailPicker" data-dojo-props="numberThumbs:4, useHyperlink:true,
        hyperlinkTarget:this"></div>
 
   .. css ::
