@@ -569,7 +569,7 @@ MatrixView               The view that displays days as a matrix of days.
 SimpleColumnView         The view that displays each day as a column.
 ColumnView               A SimpleColumnView with a secondary sheet that is showing all day events.
 ColumnViewSecondarySheet A MatrixView designed to be integrated as a secondary sheet of a ColumnView. 
-MonthColumnView         The view that displays each month as a column.
+MonthColumnView          The view that displays each month as a column.
 Mouse                    A mixin that enables interactions on events using the mouse.
 Keyboard                 A mixin that enables interactions on events using the keyboard.
 Touch                    A mixin that enables interactions on events using the touch events
