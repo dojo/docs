@@ -596,9 +596,3 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
          // do something();
          dojo.parser.parse();
     });
-
-
-See Also
---------
-
-- `Introduction to the Parser <http://dojocampus.org/content/2008/03/08/the-dojo-parser/>`_

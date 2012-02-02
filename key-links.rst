@@ -40,7 +40,6 @@ Core
 * `Improving Component Communication <http://www.sitepen.com/blog/2008/02/19/improving-component-communication-with-the-dojo-toolkit/>`_ , SitePen and Mike Wilcox, Dojo Committer
 * `Creating Your Own $ with Dojo <http://dojocampus.org/content/?p=67>`_, Neil Roberts, Dojo Committer
 * `Functional Ajax with Dojo <http://dojocampus.org/content/?p=66>`_, Neil Roberts, Dojo Committer
-* `The Dojo Parser <http://dojocampus.org/content/?p=63>`_, Peter Higgins, Dojo Project Lead
 * `Are You Sure You Should be Subclassing That? <http://www.sitepen.com/blog/2008/03/16/are-you-sure-you-should-be-subclassing-that/>`_, SitePen and Neil Roberts, Dojo Committer
 * `JavaScript Metaclass Programming <http://www.sitepen.com/blog/2008/03/18/javascript-metaclass-programming/>`_, SitePen and Neil Roberts, Dojo Committer
 * `dojo.DnD Complete Documentation <http://docs.google.com/View?docid=d764479_11fcs7s397>`_, Eugene Lazutkin, Dojo Committer
