@@ -1,7 +1,7 @@
 .. _dijit/layout/ContentPane:
 
 ========================
-dijit.layout.ContentPane
+dijit/layout/ContentPane
 ========================
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken
@@ -58,9 +58,9 @@ An example of using a callback might be as follows:
 
 .. js ::
 
-  var myCp= dijit.byId("myContentPane");
+  var myCp= registry.byId("myContentPane");
   myCp.set("onDownloadEnd", function(){
-    console.log("Download complete!");
+      console.log("Download complete!");
   });
   myCp.set("href", "myHtml.html");
 
@@ -81,7 +81,7 @@ Declarative example
   .. html ::
 
     <div data-dojo-type="dijit/layout/ContentPane">
-      Hi, pretty boring huh?
+        Hi, pretty boring huh?
     </div>
 
 
@@ -106,7 +106,7 @@ Programmatic example
   .. html ::
 
     <div id="targetID">
-      I get replaced.
+        I get replaced.
     </div>
 
 
@@ -128,7 +128,7 @@ Programmatic example
   .. html ::
 
     <div id="targetID2">
-      A contentPane will appear here:
+        A contentPane will appear here:
     </div>
 
 Accessibility
