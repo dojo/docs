@@ -105,7 +105,7 @@ Simply pass it a string:
   // load dojox/widget/Toaster.js:
   dojo.require("dojox.widget.Toaster");
 
-Throughout Dojo, the pattern above remains consistent. However, by using :ref:`dojo.registerModulePath <dojo/registerModulePath>` in your code, you are able to redefine the meaning of parts of namespaces.
+Throughout Dojo, the pattern above remains consistent. However, by using ``paths`` Dojo configuration flag in your code, you are able to redefine the meaning of parts of namespaces.
 
 Examples
 ========
