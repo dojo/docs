@@ -78,7 +78,6 @@ Dijit
 * `Accessibility <http://www-03.ibm.com/able/resources/dojo.html>`_, Becky Gibson, IBM, Dojo Committer
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 * `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
-* `Adding setTitle to TabContainer <http://dojocampus.org/content/2008/06/06/hacking-tabcontainer-settitle-extension/>`_, Peter Higgins, SitePen, Dojo Project Lead
 * `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
 * `dijit.Tree - server fetch on node expansion <http://dojocampus.org/content/2008/06/07/tree-server-fetch-on-node-expansion/>`_, Josh Trutwin, Dojo User
 * `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
