@@ -303,8 +303,8 @@ See Advanced configuration section to see how to change this behavior.
 This view is accessible through the columnView property of  the calendar widget.
 
 The main properties of the columns view are:
-  * **startDate** - The date of the first column,  
-  * **columnCount** - The number of column to display,
+  * **startDate** * - The date of the first column,  
+  * **columnCount** * - The number of column to display,
   * **minHours** - The first hour displayed by the main sheet,
   * **maxHours** - The last hour displayed (excluded),
   * **hourSize** - The desired size in pixels of one hour,
@@ -334,9 +334,9 @@ The matrix view is displaying a matrix in which each day is a cell. Time is flow
 This view is accessible through the matrixView property of  the calendar widget.
 
 The main properties of the columns view are:
-  * **startDate** - The date of the first cell,
-  * **rowCount** - The number of rows to display,
-  * **columnCount** - The number of columns to display,
+  * **startDate** * - The date of the first cell,
+  * **rowCount** * - The number of rows to display,
+  * **columnCount** * - The number of columns to display,
   * **refStartTime** - (optional) Start time of the time range of interest,
   * **refEndTime** - (optional) end time of the time range of interest,
   * **expandDuration** - Duration in milliseconds of the row expand animation,
@@ -379,8 +379,8 @@ The month columns view is displaying one column per month.
 This view is not in the calendar by default but it can be added, see advanced configuration for more information.
 
 The main properties of the columns view are:
-  * **startDate** - The date of the first column,  
-  * **columnCount** - The number of column to display,
+  * **startDate** * - The date of the first column,  
+  * **columnCount** * - The number of column to display,
   * **daySize** - The desired size in pixels of one hour,
 
 Properties with an (*) are computed by the calendar widget.
