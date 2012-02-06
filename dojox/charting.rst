@@ -724,15 +724,22 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
 Changing Color Themes
 =====================
 
-Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make sure to require the theme you want to use, and then set the theme on your chart as follows:
+Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make
+sure to require the theme you want to use, and then set the theme on your chart as follows:
 
 .. js ::
-  
-  chart1.setTheme(dojox.charting.themes.PlotKit.blue);
+
+  require(["dojox/charting/themes/PlotKit/blue", ...], function(blue, ...){
+    chart.setTheme(blue);
+  });
+
+There are two categories of themes:
+   * SimpleTheme that do not support gradient but are lighter.
+   * Theme that supports gradients but that requires a bit more loading time.
 
 *Note*: If you are using a theme that includes gradients, for the gradients to show in Safari 5.x you *must* use:
 
-.. js ::
+.. html ::
   
    <!DOCTYPE HTML>
 
