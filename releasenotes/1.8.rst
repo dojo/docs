@@ -204,6 +204,10 @@ Charting
 
 - Bars, Columns and Pie plots now support drop shadow property.
 
+- dojox.charting.widget classes now inherits from _WidgetBase instead of _Widget.
+
+- Base class for themes is now !SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from !SimpleTheme.
+
 Calendar
 --------
 
@@ -216,6 +220,11 @@ Gauges
 A new gauges package is introduced in dojox.dgauges package. It provides a fully extensible gauges framework allowing
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
+
+Treemap
+-------
+
+A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
 
 
 Util
