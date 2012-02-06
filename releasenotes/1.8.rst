@@ -206,7 +206,7 @@ Charting
 
 - dojox.charting.widget classes now inherits from _WidgetBase instead of _Widget.
 
-- Base class for themes is now !SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from !SimpleTheme.
+- Base class for themes is now SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from SimpleTheme.
 
 Calendar
 --------
