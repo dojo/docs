@@ -80,7 +80,12 @@ The following example shows how to declare a calendar widget programmatically:
 Configuring Calendar data
 =========================
 
-The calendar widget is populated with events using a dojo.store.Store set on its store property.
+The calendar widget is populated with the list events using a dojo.store.Store set on its store property.
+
+The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity) using its store property.
+
+Manage store errors
+-------------------
 
 You might want to listen to store query errors, for that you can use the promise returned by the store setter:
 
@@ -90,6 +95,10 @@ You might want to listen to store query errors, for that you can use the promise
     var calendar= new Calendar(...);
     Deferred.when(calendar.set("store", mystore), function onOk() {}, function onFail() {});
   });
+
+
+Data mapping
+------------
 
 In order to display events, the widget must determine for each event its start and end time.
 It will look by default at the “startTime” and “endTime” properties of the store item.
