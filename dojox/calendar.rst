@@ -80,9 +80,9 @@ The following example shows how to declare a calendar widget programmatically:
 Configuring Calendar data
 =========================
 
-The calendar widget is populated with the list events using a dojo.store.Store set on its store property.
+The calendar widget is populated with the list events using a store set on its store property.
 
-The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity) using its store property.
+The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity).
 
 Manage store errors
 -------------------
