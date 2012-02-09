@@ -28,6 +28,6 @@ Note: this is in tmpdocs.dojotoolkit.org on the fileserver at the moment. When i
 and apache2 conf need to be updated.
 
 1. Make whatever changes you need to the repo at https://github.com/phiggins42/rstwiki
-2. ``sudo -u website git pull`` on the server to retrieve the update
+2. ``sudo -u website git pull && sudo -u website git submodule update`` on the server to retrieve the update
 3. ``cd _static && sudo -u website ./build.sh`` if any CSS or JS changes were made
 4. ``sudo /etc/init.d/rstwiki restart`` to pick up any Python changes
