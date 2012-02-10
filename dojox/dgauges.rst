@@ -105,8 +105,8 @@ Using gauge events
 ~~~~~~~~~~~~~~~~~~
 
 The framework provides 2 events: 
- - "startEditing" dipatched when an indicator's value change; programmatically or by user interaction.
- - "endEditing" dipatched when an indicator's value has changed; programmatically or by user interaction.
+ - "startEditing" dispatched when an indicator's value change; programmatically or by user interaction.
+ - "endEditing" dispatched when an indicator's value has changed; programmatically or by user interaction.
  
 .. html ::
 
