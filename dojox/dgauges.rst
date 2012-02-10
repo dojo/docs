@@ -110,7 +110,7 @@ The framework provides 2 events:
  
 .. html ::
 
- 						var gauge = dijit.byId("g1");
+ 						var gauge = registry.byId("g1");
 						gauge.on("startEditing", function(event){console.log(event.indicator.value);});
 						gauge.on("endEditing", function(event){console.log(event.indicator.value);});
 
