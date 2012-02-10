@@ -394,6 +394,13 @@ The main properties of the columns view are:
 
 Properties with an (*) are computed by the calendar widget.
 
+by default, this is view is using vertical renderers to show all day and events longer than one day.
+
+If a day is containing one or several hidden items (i.e. short events by default), a decoration is displayed on the grid cell.
+
+.. image :: calendar/monthColumnViewHidden.png
+
+
 See Advanced configuration for more advanced properties like layout properties and renderers.
 
 
@@ -988,6 +995,8 @@ Layout
 In addition to the properties defined in the common section, the month column view also exposes the horizontalGap property (default is 4). 
 
 This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
+
+The hidden items grid cell decoration can be not displayed by setting the showHiddenEvents property.
 
 Renderers
 `````````
