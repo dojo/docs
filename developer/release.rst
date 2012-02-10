@@ -14,7 +14,7 @@ Creating a Dojo Release/RC/Beta
 
 1. Log into your shell account at <username>.dojotoolkit.org
 2. Check out a copy of the appropriate branch
-3. Run ``util/build_release.sh <version> <username> <revision>``, where:
+3. Run ``util/buildscripts/build_release.sh <version> <username> <revision>``, where:
 
    ``version`` is the version number, e.g. 1.7.1rc1
 
