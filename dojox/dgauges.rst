@@ -94,7 +94,9 @@ A gauge is made of GFX decorations, text indicators and scales (subclasses of Sc
 
 There is a noticeable difference between circular and rectangular gauges about their drawing/layout mechanisms:
 
-Circular gauges have a fixed aspect ratio; the gauge visual representation is scaled to use as much room as possible, and then translated to be centered.
+Circular gauges have a fixed aspect ratio; the gauge visual representation is scaled to use as much room as possible, and then translated to be centered. 
+
+*Note:* To create a circular gauge with no background, add a drawing function which return a "ghost" shape (no fill and no stroke) of the desired gauge size.
 
 Rectangular gauges use a different approach; they are redrawn when the widget is resized. This allows having "elastic" components that can have any size. A rectangular gauge can be separated into 3 parts: "leading", "middle" and "trailing". The "leading" and "trailing" areas have fixed size; the "middle" area fills the remaining room. When adding an element to a rectangular gauge, set the third argument of addElement method to "leading", "middle" or "trailing". If the third argument is not specified, the element uses all the room. For an example of rectangular gauge layout, see gauge.components.default.LinearHorizontalGauge implementation.
 
