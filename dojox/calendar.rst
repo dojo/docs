@@ -385,7 +385,7 @@ Month Columns View
 
 The month columns view is displaying one column per month.
 
-This view is not in the calendar by default but it can be added, see advanced configuration for more information.
+This view is not in the calendar by default but it can be added, see tests/ExtendedCalendar sample class and advanced configuration for more information.
 
 The main properties of the columns view are:
   * **startDate** * - The date of the first column,  
