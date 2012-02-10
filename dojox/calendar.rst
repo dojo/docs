@@ -394,7 +394,7 @@ The main properties of the columns view are:
 
 Properties with an (*) are computed by the calendar widget.
 
-by default, this is view is using vertical renderers to show all day and events longer than one day.
+By default, this is view is using vertical renderers to show all-day events and events longer than one day.
 
 If a day is containing one or several hidden items (i.e. short events by default), a decoration is displayed on the grid cell.
 
