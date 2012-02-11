@@ -23,14 +23,15 @@ Creating a Dojo Release/RC/Beta
    ``revision`` is the revision of the version to tag as the release. If unspecified, the head revision will be used.
 4. Press a key to start the build
 5. Press "Enter" when asked whether you want to do any manual packaging
-6. Move the release to /srv/www/vhosts/download.dojotoolkit.org
+6. Move the release to ``download.dojotoolkit.org:/srv/www/vhosts.d/download.dojotoolkit.org/``
    (if you built it locally, then copy it to <username>.dojotoolkit.org first, using the command suggested by the
    build script)
-7. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
-8. Update the tags on the GitHub repos.
-9. Add new version and milestone numbers to Trac.
-10. Bulk move all open tickets to the next release number in Trac.
-11. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
+7. Untar the files to download.dojotoolkit.org, then delete the tarball
+8. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
+9. Update the tags on the GitHub repos.
+10. Add new version and milestone numbers to Trac.
+11. Bulk move all open tickets to the next release number in Trac.
+12. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
 
     ``ANT_HOME=/home/peller/ant-1.7.1/ ./cdnBuild.sh <version>``, where:
 
@@ -41,12 +42,12 @@ Creating a Dojo Release/RC/Beta
     You will also need to comment out the <property name="locales"/> node in ``util/buildscripts/cldr/build.xml``.
 
     **READ THE CDNBUILD.TXT INSTRUCTIONS OR YOU MIGHT BUILD THE WRONG VERSION**.
-12. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
+13. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
     will take forever and ever.
-13. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
+14. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
     something.
-14. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
-15. Celebrate!
+15. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
+16. Celebrate!
 
 Creating a new DTK branch (for new major versions)
 ==================================================
