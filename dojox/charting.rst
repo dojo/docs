@@ -294,6 +294,7 @@ And here is an example for spider chart:
 The Spider plot contains as many axes as the number of dimensions in its data (5 in the example above). By default each axis minimum and maximum is computed from the data. You can override this (for example if you have a single data series) by explicitly adding axis to you charts instead of relying on the default mechanism. In the following example the minimum and maxium for GDP axis is overriden:
 
 .. js ::
+
   require(["dojox/charting/axis2d/Base"], function(Base){
     chart.addAxis("GDP", { type: Base, min: 0, max: 5 });
     chart.addSeries("China", {data: {"GDP": 2, "area": 6, "population": 2000 }}, { fill: "blue" });
