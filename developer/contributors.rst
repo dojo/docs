@@ -681,7 +681,7 @@ Corporations or Organizations with a CCLA on file
 * UC Davis
 * UPW Innovative IT - Losungen GMBH
 * Uxebu Consulting, Ltd. & Co.KG: Nikolai Onken, Wolfram Kriesing, David Aurelio, Jens Arps, Tobias Schneider, Stephan Scidt, Tobias von Klipstein
-* VMWare, Inc.  Scott Andrews, Jeremy Grelle
+* VMWare, Inc.  Scott Andrews, Jeremy Grelle, John Hann, Brian Cavalier
 * Weswit S.R.L.
 * Wotan, LLC
 * Yuma Union High School District #70
