@@ -291,6 +291,18 @@ And here is an example for spider chart:
         
   var legend = new dc.widget.SelectableLegend({chart: chart, horizontal: true}, "legend");
 
+The Spider plot contains as many axes as the number of dimensions in its data (5 in the example above). By default each axis minimum and maximum is computed from the data. You can override this (for example if you have a single data series) by explicitly adding axis to you charts instead of relying on the default mechanism. In the following example the minimum and maxium for GDP axis is overriden:
+
+.. js ::
+  require(["dojox/charting/axis2d/Base"], function(Base){
+    chart.addAxis("GDP", { type: Base, min: 0, max: 5 });
+    chart.addSeries("China", {data: {"GDP": 2, "area": 6, "population": 2000 }}, { fill: "blue" });
+    chart.addSeries("USA", {data: {"GDP": 3, "area": 20, "population": 1500 }}, { fill: "green" });
+  });
+ 
+Note that all the parameters supported for Cartesian plots except min and max are not support here.
+
+
 Grid Plot
 ~~~~~~~~~
 
@@ -401,7 +413,7 @@ Configuring Axis
 Specifying Axes
 ---------------
 
-The addAxis() call on a chart has several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use "x" and "y" as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don't have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let's look at all the addPlot() options that make this and more possible.
+When you are using Cartesian plots you can use the addAxis() method on a chart which provides several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use "x" and "y" as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don't have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let's look at all the addPlot() options that make this and more possible.
 
 The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are "x" and "y" by default, on your plot or your chart will not render.
 
