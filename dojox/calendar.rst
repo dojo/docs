@@ -390,7 +390,7 @@ This view is not in the calendar by default but it can be added, see tests/Exten
 The main properties of the columns view are:
   * **startDate** * - The date of the first column,  
   * **columnCount** * - The number of column to display,
-  * **daySize** - The desired size in pixels of one hour,
+  * **daySize** - The desired size in pixels of one day.
 
 Properties with an (*) are computed by the calendar widget.
 
