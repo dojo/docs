@@ -253,8 +253,12 @@ Example of a custom circular gauge
 
 .. html ::
   
-    define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge", "dojox/dgauges/LinearScaler", "dojox/dgauges/CircularScale", "dojox/dgauges/CircularValueIndicator", "dojox/dgauges/CircularRangeIndicator", "dojox/dgauges/TextIndicator"], 
-    function(lang, declare, CircularGauge, LinearScaler, CircularScale, CircularValueIndicator, CircularRangeIndicator, TextIndicator){
+    define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge", 
+            "dojox/dgauges/LinearScaler", "dojox/dgauges/CircularScale", 
+            "dojox/dgauges/CircularValueIndicator", "dojox/dgauges/CircularRangeIndicator", 
+            "dojox/dgauges/TextIndicator"], 
+    function(lang, declare, CircularGauge, LinearScaler, CircularScale, CircularValueIndicator, 
+              CircularRangeIndicator, TextIndicator){
     	return declare("dojox.dgauges.tests.gauges.SimpleCircularGauge", CircularGauge, {
     		constructor: function(){
     			// Changes the font
@@ -343,7 +347,11 @@ Example of a custom horizontal gauge
 
 .. html ::
 
-    define(["dojo/_base/lang", "dojo/_base/declare", "../../RectangularGauge", "../../LinearScaler", "../../RectangularScale", "../../RectangularValueIndicator", "../../RectangularRangeIndicator", "../../TextIndicator"], function(lang, declare, RectangularGauge, LinearScaler, RectangularScale, RectangularValueIndicator, RectangularRangeIndicator, TextIndicator){
+    define(["dojo/_base/lang", "dojo/_base/declare", "../../RectangularGauge", 
+             "../../LinearScaler", "../../RectangularScale", "../../RectangularValueIndicator", 
+             "../../RectangularRangeIndicator", "../../TextIndicator"], 
+            function(lang, declare, RectangularGauge, LinearScaler, RectangularScale, RectangularValueIndicator,
+                     RectangularRangeIndicator, TextIndicator){
     	return declare("dojox.dgauges.tests.gauges.SimpleRectangularGauge", RectangularGauge, {
     		constructor: function(){
     			// Draw background
