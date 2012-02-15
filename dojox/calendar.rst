@@ -1014,6 +1014,8 @@ Several functions are provided to style or set a style class on part of the view
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell.
   * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
 
+In an additional layout pass, the dojoxCalendarHiddenEvents CSS pseudo class is installed on grid cells if they are hidden days in the corresponding date.
+
 Date formatting
 ```````````````
 
