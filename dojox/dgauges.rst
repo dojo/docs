@@ -110,7 +110,7 @@ The framework provides 2 events:
  - "startEditing" dispatched when an indicator's value change; programmatically or by user interaction.
  - "endEditing" dispatched when an indicator's value has changed; programmatically or by user interaction.
  
-.. html ::
+.. js ::
 
  						var gauge = registry.byId("g1");
 						gauge.on("startEditing", function(event){console.log(event.indicator.value);});
@@ -138,7 +138,7 @@ Scales
 A scale handles a scaler (mandatory) and one or more value or range indicators.
 A scale and its scaler collaborate to handle the ticks. The scale provides a tick drawing function which can be redefined by the user. This function takes a tick and a GFX Group as arguments; the following code snippet shows the default tick rendering function used in the library:
 
-.. html ::
+.. js ::
 
            scale.tickShapeFunc = function(group, scale, tick){
                return group.createLine({
@@ -156,7 +156,7 @@ A scale and its scaler collaborate to handle the ticks. The scale provides a tic
 
 Ticks labeling is handled in a similar way using the tickLabelFunc method:
 
-.. html ::
+.. js ::
 
     scale.tickLabelFunc = function(tick){
 		  if (!tick.isMinor){
@@ -176,7 +176,7 @@ Range indicators display a range of values defined by start and value properties
 
 A value indicator is drawn by its indicatorShapeFunc. The following code show a needle drawn around its (0, 0) coordinates origin. The origin is used as center for rotation of needles in circular gauges. For rectangular gauges, the origin is aligned with the rendered value.
 
-.. html ::
+.. js ::
 
          indicator1.indicatorShapeFunc = function(group, indicator){
                return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
@@ -217,7 +217,7 @@ The first thing to decide is the type of gauge to create, i.e. circular or recta
 
 For creating a circular gauges, subclass CircularGauge:
 
-.. html ::
+.. js ::
 
     define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge"], 
       function(lang, declare, CircularGauge){
@@ -229,7 +229,7 @@ For creating a circular gauges, subclass CircularGauge:
 
 For creating a horizontal or vertical gauge, subclass RectangularGauge and set the orientation property:
 
-.. html ::
+.. js ::
 
      define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge"], 
        function(lang, declare, RectangularGauge){
@@ -251,7 +251,7 @@ The addElement() method accepts three kinds of arguments:
 Example of a custom circular gauge
 ----------------------------------
 
-.. html ::
+.. js ::
   
     define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge", 
             "dojox/dgauges/LinearScaler", "dojox/dgauges/CircularScale", 
@@ -345,7 +345,7 @@ Example of a custom circular gauge
 Example of a custom horizontal gauge
 ------------------------------------
 
-.. html ::
+.. js ::
 
     define(["dojo/_base/lang", "dojo/_base/declare", "../../RectangularGauge", 
              "../../LinearScaler", "../../RectangularScale", "../../RectangularValueIndicator", 
