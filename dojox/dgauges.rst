@@ -347,9 +347,9 @@ Example of a custom horizontal gauge
 
 .. js ::
 
-    define(["dojo/_base/lang", "dojo/_base/declare", "../../RectangularGauge", 
-             "../../LinearScaler", "../../RectangularScale", "../../RectangularValueIndicator", 
-             "../../RectangularRangeIndicator", "../../TextIndicator"], 
+    define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge", 
+             "dojox/dgauges/LinearScaler", "dojox/dgauges/RectangularScale", "dojox/dgauges/RectangularValueIndicator", 
+             "dojox/dgauges/RectangularRangeIndicator", "dojox/dgauges/TextIndicator"], 
             function(lang, declare, RectangularGauge, LinearScaler, RectangularScale, RectangularValueIndicator,
                      RectangularRangeIndicator, TextIndicator){
     	return declare("dojox.dgauges.tests.gauges.SimpleRectangularGauge", RectangularGauge, {
