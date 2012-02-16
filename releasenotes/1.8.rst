@@ -4,8 +4,6 @@
 Dojo 1.8 Release Notes
 ======================
 
-(documentation in progress)
-
 .. contents ::
    :depth: 3
 
@@ -128,33 +126,66 @@ Editor
 ------
 - Performance fixes for editor's with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
 
+Menu
+----
+The Menu widget has two new (optional) attributes:
+  - selector:
+    CSS selector that specifies that the Menu should be attached, via event delegation,
+    to matching subnodes of targetNodeIds, rather than the targetNodeIds nodes themselves.
+  - currentTarget:
+    (readonly) which node the menu is being displayed for
+
+Together, they allow a single Menu to attach to multiple nodes through delegation,
+and for the Menu's action to be adjusted depending on the node.   For example:
+
+.. js ::
+
+  require(["dijit/registry", "dijit/Menu", "dijit/MenuItem"], function(registry, Menu, MenuItem){
+      var menu = new Menu({
+          targetNodeIds: ["myTable"],
+          selector: "td.foo"
+      });
+      menu.addChild(new MenuItem({
+          label: "click me"
+          onClick: function(evt){
+              var node = this.getParent().currentTarget;
+              console.log("menu clicked for node ", node);
+          }
+      }));
+  });
+
+This will track right-click events on each cell of a table with class="foo".
+
+Further, the targetNode's contents can be changed freely after the Menu is created.
+Nodes matching the selector can be created or removed, and no calls to bindDomNode() or
+unBindDomNode() are necessary.
+
+
 Tooltip
 -------
 The Tooltip widget has two new (optional) parameters:
-  - selector
-  - getContent()
+  - selector:
+    CSS selector that specifies that the Tooltip should be attached, via event delegation,
+    to matching subnodes of the connectId node, rather than the connectId itself.
+  - getContent():
+    lets the app customize the tooltip text that's displayed based on the node that triggered
+    the tooltip.
 
 These parameters allow a single Tooltip widget to display unique tooltips for (for example) each row in a table:
 
 .. js ::
 
- new Tooltip({
-   connectId: myTable,
-   selector: "tr",
-   getContent: function(matchedNode){ return ...; /* String */}
- });
+  new Tooltip({
+    connectId: myTable,
+    selector: "tr",
+    getContent: function(matchedNode){ return ...; /* String */}
+  });
 
 Further, the table contents can be changed freely after the Tooltip is created.
 Rows can be created, removed, or modified, and no calls to the Tooltip widget are necessary.
 
-
-Selector is a CSS selector that specifies that the Tooltip should be attached, via event delegation,
-to matching subnodes of the connectId node, rather than the connectId itself.
-So, specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
+Another example: specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
 each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
-
-getContent() lets the app customize the tooltip text that's displayed based on the node that triggered
-the tooltip.
 
 
 Tree
@@ -189,6 +220,8 @@ There have been a few performance improvements to dijit:
   like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
 - Similar event handling changes were made to Menu, putting the event handlers on the Menu rather than each
   individual MenuItem
+- Performance improvement for TabContainer's with closable tabs, because only one close Menu is created per
+  TabContainer, rather than one Menu per tab.
 
 
 DojoX
