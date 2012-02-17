@@ -576,11 +576,19 @@ Note that by default the axis make sure to drop superfluous labels to avoid them
 
   chart1.addAxis("x", { dropLabels: false });
 
+The drop labels mechanism computes once the size of the labels at initialization time and recompute how many must be dropped when zooming in or out the chart. However in some cases the labels size is varying with the zoom levels. In that case you need to explicitly set the labelSizeChange property on the chart for it to recompute the size of the labels on each zoom level:
+
+.. js ::
+  chart1.addAxis("x", { labelSizeChange: true });
+
+Note that this will hurt performances, so enable this only if your labels are changing size on zoom and you noticed the drop labels mechanism does not work when zooming in or out the chart.
+
 Also if you keep dropLabels to true, and you know minor labels won't show up or you don't want them to show up it is advised to set minorLabels property to false to speed up computations:
 
 .. js ::
 
   chart1.addAxis("x", { minorLabels: false });
+
 
 TODO: Month Labels Example
 
