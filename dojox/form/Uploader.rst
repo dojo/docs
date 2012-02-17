@@ -24,26 +24,27 @@ Features
  - An additional widget, dojox.form.uploader.FileList is provided to show the selection set and visualize the upload progress.
  - :ref:`dojox.form.uploader.FileList <dojox/form/uploader/FileList>`
 
-Important Notes
----------------
+Important AMD Note
+------------------
 
-When using the Uploader programmatically, you cannot use the reference argument from require() - you must use the global. In other this will NOT work:
+When using the Uploader programmatically, you cannot use the reference argument from require() - you must use the global. This is because the plugins redefine the original Uploader class, and AMD does not allow time for this to happen. In other this will NOT work:
 
 .. js ::
   
-require(['dojox/form/Uploader'], function(Uploader){
-	myUploader = Uploader(...);
-})
+ require(['dojox/form/Uploader', 'dojox/form/uploader/plugins/Flash'], function(Uploader){
+     myUploader = Uploader(...);
+ });
  
-
 Until 2.0, you must use:
  
 .. js ::
   
-require(['dojox/form/Uploader'], function(Uploader){
-	myUploader = new dojox.form.Uploader(...);
-})
+ require(['dojox/form/Uploader', 'dojox/form/uploader/plugins/Flash'], function(Uploader){
+     myUploader = new dojox.form.Uploader(...); // disregard reference argument
+ });
  
+Important Form Note
+-------------------
 
 Because the Uploader uses your existing form, you must set its *enctype* to "multipart/form-data" which is used for uploading files.
 
