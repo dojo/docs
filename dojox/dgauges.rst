@@ -75,7 +75,7 @@ Predefined gauges inherit from DefaultPropertiesMixin which wraps the main prope
    * majorTickInterval: The interval between two major ticks. Default: 10
    * minorTickInterval: The interval between two minor ticks. Default: 1
    * minorTicksEnabled: Show/Hide minor ticks. Default: true
-   * interactionArea: The area that reacts to user interaction. Valid values are "indicator", "gauge" and "none". Default: "gauge"
+   * interactionArea: The area that reacts to user interaction. Valid values are "indicator", "gauge", "area" and "none". Default: "gauge"
    * interactionMode: The interaction method, "mouse" or "touch". Default: "mouse"
    * animationDuration: The duration of the animation in milliseconds. Default: 0
 
