@@ -73,7 +73,6 @@ Dijit
 * `Develop a Dojo-based Blog Reader <http://www.ibm.com/developerworks/web/library/wa-aj-basics2/index.html?ca=drs->`_, IBM Developer Works
 * `TinyBuddy IM <http://tagneto.blogspot.com/2007/07/tinybuddy-im-instant-messaging-for.html>`_, James Burke, AOL, Dojo Committer
 * `dijit.Tree and dojo.data in Dojo 1.1 <http://dojotoolkit.org/2008/02/12/dijit-tree-and-dojo-data-dojo-1-1>`_, Bill Keese, IBM, Dojo Committer
-* `Templating Made Nicer with Jaxer, Dijit, and dojo.query <http://dojofindings.blogspot.com/2008/03/templating-made-nicer-with-jaxer-dijit.html>`_, Tony Issakov, Dojo User
 * `Dojo 1.1 Custom Widgets <http://docs.google.com/Present?docid=dfxgjqrf_78fr7h6sd7#0>`_, Peter Svensson, Mashup Station, Dojo Contributor
 * `Accessibility <http://www-03.ibm.com/able/resources/dojo.html>`_, Becky Gibson, IBM, Dojo Committer
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer

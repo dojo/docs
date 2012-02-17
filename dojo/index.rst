@@ -798,8 +798,6 @@ Miscellaneous Core
 
   Utility classes to enable loading of resources for internationalization
 
-* :ref:`dojo.jaxer <dojo/jaxer>`
-
 * :ref:`dojo.number <dojo/number>`
 
   Localized formatting and parsing methods for number data
