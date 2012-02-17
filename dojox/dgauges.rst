@@ -147,7 +147,7 @@ A scale and its scaler collaborate to handle the ticks. The scale provides a tic
                    x2: tick.isMinor ? 6 : 10,
                    y2: 0
                }).setStroke({
-                   color: 'black',
+                   color: "black",
                    width: 1
                });
            };
@@ -180,7 +180,7 @@ A value indicator is drawn by its indicatorShapeFunc. The following code show a 
 
          indicator1.indicatorShapeFunc = function(group, indicator){
                return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
-                   color: 'blue',
+                   color: "blue",
                    width: 0.25
                }).setFill([100, 100, 255, 1]);
            }
