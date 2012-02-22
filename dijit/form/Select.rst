@@ -132,6 +132,11 @@ However, you can specify a width on the select to force a fixed width.
 
 The above example also demonstrates using type="separator" to get dividing lines between groups of options.
 
+Note about validation
+=====================
+
+If you mark a select as ``required``, user will be forced to select a value. However, you often want to have a dummy "prompt" as first select value (eg. ``-- SELECT --`` or ``-- CITY --``). If you set its value to "", validation will reject form when nothing is select *but* the prompt will appear as a separator in the options list. To have a prompt option and still use default validation, set its value to " " (or any number of spaces). Validation rejects any blank value (zero, one or more spaces) but only false values (false, "", 0) appear as separator so all will be right.
+
 Accessibility
 =============
 
