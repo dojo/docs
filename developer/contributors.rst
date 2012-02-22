@@ -480,6 +480,7 @@ Individuals who have signed Dojo CLAs
 * Shimizu, Fumiyuki
 * Shinnick, Thomas Loren
 * Shneyderman, Alex
+* Siemoneit, Oliver
 * Simpson, Matt
 * Simser, Daniel M.
 * Sitter, Sean
