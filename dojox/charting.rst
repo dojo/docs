@@ -181,7 +181,7 @@ With any of the lines, areas or markers types you have five specific options. Fi
   
   chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, markers: false});
 
-There are also three graphical options, **tension**, **shadows** and **interpolate**.
+There are also two specific graphical options, **tension** and **interpolate**.
 
 Tension allows you to add some curve to the lines on you plot. By default this option is set to "" which is off. Other valid values are:
 
@@ -189,11 +189,9 @@ Tension allows you to add some curve to the lines on you plot. By default this o
  * **"x"** is similar to "X" but assumes that the point set is closed (a loop). It can be used when plotting true XY data.
  * **"S"** for a quadratic bezier smooth lines.
 
-Shadows allow you to add a shadow effect, and can be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
-
 .. js ::
   
-  chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2}});
+  chart1.addPlot("default", {type: "StackedLines", tension: "S" });
 
 Finally interpolate let's you choose the behavior when a data point is missing in the chart (i.e. its data value is null). If interpolate is false (default) a the line or area will be cut at that data point and will start back at the next valid data point. If interpolate is true, the missing data point will be interpolated and the chart continuously drawn.
 
@@ -247,6 +245,22 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
       fontColor: "",
       radius: 0
   },
+
+Shadows on Lines, Areas, Bars, Columns and Pie plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+These plots support a **shadow** property that allows you to add a shadow effect, and can
+be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the
+right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce
+a shadow that is to the left or above the chart line.
+
+Shadows can be added to a plot on data points as follows:
+
+.. js ::
+
+  chart1.addPlot("default", {type: "Lines", markers: true,
+      tension: "X", shadow: {dx: 2, dy: 2}});
+      
 
 Spider Plot
 ~~~~~~~~~~~
@@ -308,7 +322,9 @@ Note that all the parameters supported for Cartesian plots except min and max ar
 Grid Plot
 ~~~~~~~~~
 
-One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks.
+One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports
+the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or
+minor axis tick marks.
 
 .. js ::
   
@@ -318,16 +334,25 @@ One other type with unique options is the grid. This plot type will draw grid li
           vMajorLines: true,
           vMinorLines: false});
 
-Shadows and curve can be added to the lines, and markers on data points as follows:
+If you need the grid to be aligned with alternate axes you can do the following:
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Lines", markers: true,
-      tension: "X", shadows: {dx: 2, dy: 2}});
 
-The resulting chart looks like this:
+  chart1.addPlot("Grid", {type: "Grid",
+    hAxis: "other x",
+    vAxis: "other y",
+  });
 
-TODO: Example Chart
+Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
+
+.. js ::
+
+  chart1.addPlot("Grid", {type: "Grid",
+    hAxis: "other x",
+    vAxis: "other y",
+    enableCache: true
+  });
+
 
 Multiple Plots
 ~~~~~~~~~~~~~~
@@ -357,36 +382,6 @@ Listing labels on both sides of the pie, it keeps labels from overlapping with e
   
   labelWiring: "ccc"
   labelStyle:  "columns"
-
-
-Adding a Background Grid Plot
------------------------------
-
-You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let's add a grid to the other axes in our above example.
-
-.. js ::
-  
-  chart1.addPlot("Grid", {type: "Grid",
-      hAxis: "other x",
-      vAxis: "other y",
-      hMajorLines: true,
-      hMinorLines: false,
-      vMajorLines: true,
-      vMinorLines: false
-  });
-
-Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
-
-.. js ::
-  
-  chart1.addPlot("Grid", {type: "Grid",
-      hAxis: "other x",
-      vAxis: "other y",
-      enableCache: true
-  });
-  
-
-TODO: Grid Plot Example
 
 Plots Animation
 ---------------
