@@ -140,6 +140,6 @@ DataChart has a convenient method for applying the store item labels. The chart.
 Demos
 -----
 
-DojoX Test: http://user.sitepen.com/~mwilcox/dojotoolkit/dojox/charting/tests/test_DataChart.html
+DojoX Test: http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/charting/tests/test_DataChart.html
 
 DataChart Property Demo: https://user.sitepen.com/~mwilcox/Chart/DataChart.html
