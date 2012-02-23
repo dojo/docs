@@ -246,10 +246,11 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
       radius: 0
   },
 
-Shadows on Lines, Areas, Bars, Columns and Pie plots
+Style on Lines, Areas, Bars, Columns and Pie plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These plots support a **shadow** property that allows you to add a shadow effect, and can
+These plots support a common set of style properties that when provided override the style taken from the chart theme. This includes for example **fill** property to specify with fill is used by the plot.
+This includes as well a **shadow** property that allows you to add a shadow effect, and can
 be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the
 right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce
 a shadow that is to the left or above the chart line.
@@ -261,6 +262,18 @@ Shadows can be added to a plot on data points as follows:
   chart1.addPlot("default", {type: "Lines", markers: true,
       tension: "X", shadow: {dx: 2, dy: 2}});
       
+Finally if you need to specify the style of your plot elements depending on a function you can use the **styleFunc** property of these plots to compute the color based for example on data values:
+
+.. js ::
+
+  chart1.addPlot("default", {type: "Columns", styleFunc: function(item){
+    if(item.y < 10){
+      return { fill : "red" };
+    }else if(item.y > 60){
+      return { fill: "green" };
+    }
+    return {}
+  }});
 
 Spider Plot
 ~~~~~~~~~~~
