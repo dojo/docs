@@ -87,6 +87,7 @@ Individuals who have signed Dojo CLAs
 * Cavalier, Brian
 * Cavatorta, Andy
 * Chauduary, Dipen
+* Chen, Andrew
 * Childers, James
 * Chimene, Jeffrey
 * Chiumenti, Andrea
