@@ -52,6 +52,14 @@ the following properties:
   Optional. If present, gives a copywrite message to include when the layer is written. Either a string or a filename
   of a resource containing the copyright text can be provided.
 
+``noref``
+  Optional. If present and truthy, instructs the loader to consume the cache of layer member modules (see below)
+  immediately; otherwise, the cache is not consumed until the layer module is defined or another cache of modules is
+  presented to the loader.
+
+``compat``
+  Optional. If set to the value of "1.6", then all layer member modules are immediately defined.
+
 The modules to include in a particular layer are computed as follows:
 
 1. The layer module itself.
@@ -76,7 +84,7 @@ depsScan transform are also written. If the owning package configuration for the
 If the module is a layer and either of the layer properties ``discard`` or ``boot`` are truthy, then the transform
 computes and memorizes the contents of the module resource but does not write it. If the layer property ``boot`` is
 truthy, the resource should be processed by the writeDojo transform which will recall the memorized contents and write
-the layer along with the dojo loader so that the layer may serve as a boot module. See xxx.
+the layer along with the dojo loader so that the layer may serve as a boot module.
 
 Otherwise, the layer module's transformed text is written together with the transformed text or all the layer member
 modules. Member module layer text is written by providing a hash of module values for the dojo loader ``cache``
@@ -124,10 +132,61 @@ evaluated which results in the same effect as if the module has been script inje
 Similar to a non-layer, if the layer property ``copyright`` exists, then the value of that property is included in the
 written resource.
 
-Lastly, if the profile property ``insertAbsMids`` is truthy, then the transform will ensure that the define application
+Backcompat
+==========
+
+The insertAbsMids Switch
+------------------------
+
+If the profile property ``insertAbsMids`` is truthy, then the transform will ensure that the define application
 that defines each AMD module includes a module identifier argument. This is a backcompat feature that is used to
 construct modules that can be loaded with a script tag in the context of the dojo loader operating in a legacy
 mode. Normally, this feature should be avoided.
+
+The noref Switch
+----------------
+
+In a non-legacy, pure AMD-style build, a layer includes a loader cache configuration value as described above that
+includes all of the layer member modules followed by a single ``define`` application that defines the layer module. When the layer is evaluated in the browser, the loader delays consuming the cache until the ``define`` application is
+processed. This allows the loader to map the layer member modules in the same way as the layer module in cases where the layer module is mapped to a different namespace by the ``packageMap`` loader configuration.
+
+General namespace mapping was not available in v1.6, and this particular optimization causes the layer to be consumed in a slightly different way compared to v1.6. Since some Dojo users have leveraged v1.6- build system internals to build additional optimizations, the new behavior breaks these optimizations. The common example is server-side machinery that predicts dependencies and bundles several layers into a single script injects.
+
+In order to accommodate these kinds of optimizations, a cache value may include the pseudo-module ``"*noref"``, which
+instructs the loader to consume the cache immediately, thereby making all layer member modules available without an
+additional server transaction. Of course it is impossible to use both the package mapping and noref feature.
+
+Individual layers may be designated as noref layers by setting the layer property ``noref`` to a truthy value in a
+particular layer config. All layers may be designated as noref by setting the property ``noref`` to a truthy value in
+the profile. If the config variable is set in both places, the layer setting overrides the global profile setting for any particular layer.
+
+The compat Switch
+-----------------
+
+In v1.6-, a built layer immediately defined all member modules and contained other behaviors that caused built versions to follow slightly different code paths than unbuilt versions. In contrast, the v1.7+ builder/loader attempts to execute the exact same code path for built and unbuilt versions of a particular application. In particular, layer member modules are not defined until demanded consequent to requiring some other module. As described above, some Dojo users have constructed optimizations that depend on the old behavior.
+
+In order to accommodate these kinds of optimizations, the switch ``"compat"`` may be set to ``"1.6"``, in which case all layer member modules will be immediately ``require``d. Naturally, the ``noref`` switch should be set truthy if the ``compat`` switch is set to ``"1.6"`` (this is not automatic in 1.7.2, but will be in 1.8).
+
+
+NLS Bundles
+-----------
+
+Recall that NLS bundles work differently in AMD compared to the legacy algorithms. The legacy algorithms loaded a root
+bundle and then attempted to load progressively specialized bundles according to the runtime locale until a 404 error
+occurred. The AMD algorithm specifies which localized bundles are available in the root bundle, so it can load exactly
+the available/appropriate bundles given a runtime locale value.
+
+Notice that the AMD algorithm requires two transaction slices in order to fully load localized bundles:
+
+  1. Load the root bundle.
+  2. Load all of the available/appropriate localized bundles.
+
+Although Step 2 may result in multiple (almost-never more than two) script injections, those server transactions are
+typically concurrent. Therefore, layers that have NLS dependencies include the root bundle and the normal loader
+machinery loads available localizations as required during runtime. In the typical case, this is just as fast as the old bundle flattening algorithms that were available in v1.6-.
+
+In order to accommodate some legacy usages, the v1.7 build program outputs flattened NLS bundles for any locale specified by the ``localeList`` profile knob.
+
 
 Profile Knobs
 =============
@@ -146,7 +205,23 @@ Profile Knobs
   * [*falsy*] The transform does nothing to the module identifier argument in define applications. In particular, a
     falsy value doe *not* cause the transform to remove a module identifier argument that exists in the source code.
 
-Layer items are Javascript objects with the following properties
+``noref`` (default = ``undefined``)
+  Optional. If present and truthy, instructs the loader to consume the cache of layer member modules immediately;
+  otherwise, the cache is not consumed until the layer module is defined or another cache of modules is presented to the
+  loader. When set on the profile level, applies to all layers that do not specifically override.
+
+``compat`` (default = ``undefined``)
+  Optional. If set to the value of "1.6", then all layer member modules are immediately ``require``d. For example, if
+  the cache presented with a layer includes the modules "my/a", "my/b", and "my/c", then setting ``compat`` to "1.6"
+  results in the statement ``require(["my/a", "my/b", "my/c"])`` to be inserted in the layer resource immediately
+  following the cache. When set on the profile level, applies to all layers that do not specifically override.
+
+``localeList`` (default = ``undefined``)
+
+  Optional. A comma-separated list of locale identifiers (a string) that specifies the list of locales to output as
+  flattened bundles for each layer that includes NLS bundle dependencies.
+
+Layer items are JavaScript objects with the following properties
 
 ``include`` (default = ``[]``)
   The set of module identifiers that, together with their dependency graphs, should be included in the layer, exclusive
@@ -169,6 +244,19 @@ Layer items are Javascript objects with the following properties
   module. Relative filenames are computed with respect to the path that holds the profile resource that contains the
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
+
+
+``noref`` (default = ``undefined``)
+  Optional. If present and truthy, instructs the loader to consume the cache of layer member modules immediately;
+  otherwise, the cache is not consumed until the layer module is defined or another cache of modules is presented to the
+  loader.
+
+``compat`` (default = ``undefined``)
+  Optional. If set to the value of "1.6", then all layer member modules are immediately ``require``d. For example, if
+  the cache presented with a layer includes the modules "my/a", "my/b", and "my/c", then setting ``compat`` to "1.6"
+  results in the statement ``require(["my/a", "my/b", "my/c"])`` to be inserted in the layer resource immediately
+  following the cache.
+
 
 Source Location
 ===============
