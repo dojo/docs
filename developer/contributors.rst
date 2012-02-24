@@ -653,6 +653,7 @@ Corporations or Organizations with a CCLA on file
 * LUCIAD NV: Tom Makieu, Thomas Neiaynck
 * Maastermedia
 * Media Hive
+* Media Distribution Solutions, LLC: Mike Wilcox
 * Meebo
 * Mobular Technologies
 * Nexaweb Technologies, Inc.
