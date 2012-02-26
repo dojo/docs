@@ -670,11 +670,6 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 
   .. html ::
 
-    <ul data-dojo-type="dijit/Menu" id="tree_menu" style="display: none;">
-        <li data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
-        <li data-dojo-type="dijit/MenuItem">Item #2</li>
-    </ul>
-        
     <div data-dojo-type="dojo/store/Memory" data-dojo-id="myStore">
         <!-- Create store with inlined data.
             For larger data sets should use dojo.store.JsonRest etc. instead of dojo.store.Memory. -->
@@ -715,32 +710,24 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
     <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
       data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
-    <!-- Create the tree, and connect to the menu -->
+    <!-- Create the tree -->
     <div data-dojo-type="dijit/Tree" id="menuTree"
              data-dojo-props="model: myModel, showRoot: false, openOnClick: true">
-                 
-        <script type="dojo/connect">
-            var menu = dijit.byId("tree_menu");
-            // when we right-click anywhere on the tree, make sure we open the menu
-            menu.bindDomNode(this.domNode);
-                        
-            dojo.connect(menu, "_openMyself", this, function(e){
-                // get a hold of, and log out, the tree node that was the source of this open event
-                var tn = dijit.getEnclosingWidget(e.target);
-                console.debug(tn);
-                                
-                // now inspect the data store item that backs the tree node:
-                console.debug(tn.item);
-                               
-                // contrived condition: disable all menu items on countries
-                dojo.forEach(menu.getChildren(), function(child){
-                    child.set('disabled', tn.item.type == "country");
-                });
-                                
-                // IMPLEMENT CUSTOM MENU BEHAVIOR HERE
-            });
-        </script>
     </div>
+
+	<ul id="menuTree_menu" data-dojo-type="dijit/Menu"
+			data-dojo-props='style:"display: none;", targetNodeIds: ["menuTree"], selector: ".dijitTreeNode"'>
+		<li data-dojo-type="dijit/MenuItem">
+			<script type="dojo/connect" data-dojo-event="onClick">
+				// get a hold of the dijit.TreeNode that was the source of this open event
+				var tn = dijit.byNode(this.getParent().currentTarget);
+
+				// now print the data store item that backs the tree node
+				console.debug("menu click for item: ", tn.item.name);
+			</script>
+			Click Me
+		</li>
+	</ul>
 
 Styling
 =======
