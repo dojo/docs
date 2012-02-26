@@ -296,4 +296,6 @@ Dijit
     new MyWidget({xyz: "cat"})
 
   Then _setXyzAttr("cat") will be called, rather than _setXyzAttr("dog") like before.
- 
+
+- Connecting to Menu._openMyself(): If you have menus on Trees etc. where you have connected to the private
+  method Menu._openMyself(), you should switch to the pattern shown above in the Menu section.
