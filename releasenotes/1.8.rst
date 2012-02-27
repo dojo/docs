@@ -124,7 +124,7 @@ Dialog
 
 Editor
 ------
-- Performance fixes for editor's with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
+- Performance fixes for editors with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
 
 Menu
 ----
@@ -212,16 +212,17 @@ You are still required however to update icon files that contain the theme's pri
 
 Performance Improvements
 ------------------------
-There have been a few performance improvements to dijit:
+There have been many performance improvements to dijit:
 
 - CSS gradients used in claro (see above)
 - _CssStateMixin now creates listeners at the document level, rather than separate listeners
-  for each widget.   This will speed up page instantiation time, especially on a page with many small widgets
+  for each widget.   This speeds up page instantiation time, especially on a page with many small widgets
   like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
-- Similar event handling changes were made to Menu, putting the event handlers on the Menu rather than each
-  individual MenuItem
-- Performance improvement for TabContainer's with closable tabs, because only one close Menu is created per
-  TabContainer, rather than one Menu per tab.
+- Similar event delegation changes were made for Menu and Tree, putting the listeners on the Menu or Tree rather than each
+  individual MenuItem/TreeNode
+- Performance improvement for TabContainers with closable tabs, because only one close Menu is created per
+  TabContainer, rather than one Menu per tab.   Event handling was also moved to TabContainer level rather than
+  at each individual tab.
 
 
 DojoX
@@ -299,3 +300,6 @@ Dijit
 
 - Connecting to Menu._openMyself(): If you have menus on Trees etc. where you have connected to the private
   method Menu._openMyself(), you should switch to the pattern shown above in the Menu section.
+
+- Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or TabButton,
+  you should edit the templates to remove the data-dojo-attach-event="..." attributes.
