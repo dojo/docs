@@ -41,7 +41,13 @@ Dojo 1.7 (AMD)
   
     require(["dojo/io/iframe"], function(ioIframe){
       ioIframe.send({
-        form: my;
+        form: "myform",
+        url: "handler.php",
+        handleAs: "json"
+      }).then(function(data){
+        // Do something
+      }, function(err){
+        // Handle Error
       });
     });
 
@@ -50,6 +56,19 @@ Dojo < 1.7
 
 .. js ::
   
+    dojo.require("dojo.io.iframe");
+    
+    dojo.io.iframe.send({
+      form: "myForm",
+      url: "handler.php",
+      handleAs: "json",
+      load: function(response, ioArgs){
+        // Do something
+      },
+      error: function(response, ioArgs){
+        // Handle error
+      }
+    });
 
 dojo.io.iframe supported object properties
 -------------------------------------------
