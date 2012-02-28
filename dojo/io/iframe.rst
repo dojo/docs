@@ -14,17 +14,42 @@ dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload fi
 Introduction
 ============
 
-The iframe IO functions are intended to handle complex IO operations that cannot be done through a basic dojo.xhr*() call.  These situations are fairly common and include the following:
+The iframe IO functions are intended to handle complex IO operations that cannot be done through a basic dojo.xhr*()
+call. These situations are fairly common and include the following:
 
-* Calling a service on a server other than the one that originated the calling page (cross-domain request). Note that in this case, the response body cannot be read.  So you can send stuff, but not get any replies.
-* Uploading files from a form (File Input controls).  The normal XHR mechanism cannot access file data referenced by file selection tags as a security measure.  An iframe, however, can, so by proxying those calls through an iframe make it possible to still do file uploads in an asynchronous manner.
+* Calling a service on a server other than the one that originated the calling page (cross-domain request). Note that in
+  this case, the response body cannot be read. So you can send stuff, but not get any replies. 
+* Uploading files from a form (File Input controls). The normal XHR mechanism cannot access file data referenced by file
+  selection tags as a security measure. An iframe, however, can, so by proxying those calls through an iframe make it
+  possible to still do file uploads in an asynchronous manner.
 
-It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responses back in a very specific format, please refer to the :ref:`Additional Information <dojo/io/iframe>` section.
+It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the
+service. All results are response data is returned through callbacks. There is a caveat to this; it requires the server
+to send the responses back in a very specific format, please refer to the :ref:`Additional Information <dojo/io/iframe>`
+section.
 
 Usage
 =====
 
-Usage is similar to :ref:`dojo.xhrGet <dojo/xhrGet>` and :ref:`dojo.xhrPost <dojo/xhrPost>`.  Please see below for information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
+Usage is similar to :ref:`dojo.xhrGet <dojo/xhrGet>` and :ref:`dojo.xhrPost <dojo/xhrPost>`. Please see below for
+information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
+
+Dojo 1.7 (AMD)
+--------------
+
+.. js ::
+  
+    require(["dojo/io/iframe"], function(ioIframe){
+      ioIframe.send({
+        form: my;
+      });
+    });
+
+Dojo < 1.7
+----------
+
+.. js ::
+  
 
 dojo.io.iframe supported object properties
 -------------------------------------------
@@ -68,11 +93,15 @@ dojo.io.iframe supported object properties
 Additional Information
 ----------------------
 
-dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.
+dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in
+dojo.xhrGet()) will do nothing.
 
-**IMPORTANT:** For all values EXCEPT html and xml, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html (Or XML) mimetype, just return a normal HTML/XML document.  In other words, your services for JSON and Text formats should return the data wrapped as the following:
+**IMPORTANT:** For all values EXCEPT html and xml, The server response should be an HTML file with a textarea element.
+The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way
+this transport can know when the response has loaded. For the text/html (Or XML) mimetype, just return a normal HTML/XML
+document. In other words, your services for JSON and Text formats should return the data wrapped as the following:
 
-.. js ::
+.. html ::
   
   <html>
     <body>
@@ -83,7 +112,10 @@ dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sy
   </html>
 
 
-Other than the reason noted above about reliability (getting proper events indicating data retrieved), the choice of using textarea was because a textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo process it and pass it back through the callbacks specified by the user.
+Other than the reason noted above about reliability (getting proper events indicating data retrieved), the choice of
+using textarea was because a textarea provides a fixed container that dojo can locate in the iframe DOM and extract the
+contents from. And since it is a text area, it can contain JSON, XML, Text, etc. Once the data is obtained, the usual
+data handlers from dojo process it and pass it back through the callbacks specified by the user.
 
 
 Examples
@@ -203,7 +235,8 @@ Pass in parameters manually
 See Also
 ========
 
-A common use of dojo.io.iframe is for uploading files in an Ajax-like manner. There are prefabricated widgets to do this as well, some using iframe transports, some using flash 9+
+A common use of dojo.io.iframe is for uploading files in an Ajax-like manner. There are prefabricated widgets to do this
+as well, some using iframe transports, some using flash 9+
 
 * :ref:`File Uploader <dojox/form/FileUploader>`
 * :ref:`File Input <dojox/form/FileInput>`

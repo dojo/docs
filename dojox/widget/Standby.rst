@@ -10,23 +10,38 @@ dojox.widget.Standby
 .. contents ::
    :depth: 2
 
-Marks a widget as busy.
+Marks a widget as "busy".
 
 Introduction
 ============
 
-Ever want to mark a widget as busy? Ever have a time it was taking a grid a bit to fetch data? Ever want to overlay some progress information on top of a login widget? Well, this little widget solves all those scenarios! The dojox.widget.Standby widget is designed as a 'overlay' style widget that will position a translucent overlay in a color of your choice with a graphic of your choice on top of of any visible DOM node in your page. The widget overlay blocks access to the underlying DOM node and will even track the DOM node's position so that if it moves, the overlay will shift its position to match. It's very simple and easy to use!
+Ever want to mark a widget as busy? Ever have a time it was taking a grid a bit to fetch data? Ever want to overlay some
+progress information on top of a login widget? Well, this little widget solves all those scenarios! The
+``dojox.widget.Standby`` widget is designed as a 'overlay' style widget that will position a translucent overlay in a
+color of your choice with a graphic of your choice on top of of any visible DOM node in your page. The widget overlay
+blocks access to the underlying DOM node and will even track the DOM node's position so that if it moves, the overlay
+will shift its position to match. It's very simple and easy to use!
 
-**Note:** There have been several examples of this style of widget around, including one done by Peter Higgins as an example of writing a dojo widget. None of them, though, handle all the cases this one does. It will mirror over any CSS applied curved borders in Firefox and Safari, as well as any CSS3 compliant browser, it will track position and update if the target node moves. It will also rescale itself should the target rescale as well as try to adapt for any margins applied to the target.
+**Note:** There have been several examples of this style of widget around, though they do not handle all the cases this
+one does. It will mirror over any CSS applied curved borders in any CSS3 compliant browser, it will track position and
+update if the target node moves. It will also rescale itself should the target rescale as well as try to adapt for any
+margins applied to the target.
 
 Usage
 =====
 
-Using the widget is simple. At its most basic form, all you have to provide the widget on construction is a value for 'target', the id of a DOM node or widget, or a direct reference to the dom node you want to overlay. When you want it to appear, you invoke the 'show' function of the widget. When you want it to hide, you invoke the 'hide' function. That's all there is to it.
+Using the widget is simple. At its most basic form, all you have to provide the widget on construction is a value for
+'target', the id of a DOM node or widget, or a direct reference to the DOM node you want to overlay. When you want it to
+appear, you invoke the 'show' function of the widget. When you want it to hide, you invoke the 'hide' function. That's
+all there is to it.
 
-For more custom control, you can also set the 'color' attribute on the widget to a color to use for the overlay as well as an 'image' attribute with the location/url of an image to center in the middle of the widget. Its default image is the same one that dojox.image.Lightbox uses, a basic spinner/busy animated gif.
+For more custom control, you can also set the ``color`` attribute on the widget to a color to use for the overlay as
+well as an 'image' attribute with the location/url of an image to center in the middle of the widget. Its default image
+is the same one that :ref:`dojox.image.Lightbox <dojox/image/Lightbox>` uses, a basic spinner/busy animated gif.
 
-Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/Standby.css into your page. The CSS contains specific positioning details for the divs in the template that are needed for it to display properly.  Dojo 1.4 users do not need a CSS import, the CSS was inlined into the template.
+**Note:** For Dojo 1.3, the ``dojox/widget/Standby/Standby.css into your page``. The CSS contains specific positioning
+details for the divs in the template that are needed for it to display properly. Dojo 1.4 and later users do not need a
+CSS import, the CSS was inlined into the template.
 
 Constructor params/attributes
 -----------------------------
@@ -65,75 +80,78 @@ Useful functions
 
 The following functions are useful for controlling the state of the Standby widget:
 
-* **show** - This function triggers the fadeIn effect of the widget. It will do nothing if the widget is already displaying.
-* **hide** - This function triggers the fadeOut effect of the widget. It will do nothing if the widget is already hidden.
+* **show** - This function triggers the fadeIn effect of the widget. It will do nothing if the widget is already
+  displaying. 
+* **hide** - This function triggers the fadeOut effect of the widget. It will do nothing if the widget is already
+  hidden.
 
 Events
 ------
 
-As of the Dojo Toolkit 1.4, the Standby widget has added events that you can listen to via dojo.connect. These events allow you to track the state and do things when it is shown or hidden. The events are denoted below:
+The Standby widget has added events that you can listen to via dojo.connect. These events allow you to track the state
+and do things when it is shown or hidden. The events are denoted below:
 
 * **onShow** - This event is triggered when the fadeIn show animation has completed. *New to 1.4*
 * **onHide** - This event is triggered when the fadeOut hide animation has completed. *New to 1.4*
 
-
 Examples
 ========
 
-Basic usage
------------
+Basic Declarative Usage
+-----------------------
 
 .. code-example ::
   
-  .. css ::
-
-    @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-
   .. js ::
 
-      dojo.require("dojox.widget.Standby");
-      dojo.require("dijit.form.Button");
-
-      dojo.ready(function(){
-         document.body.appendChild(basicStandby1.domNode);
-         dojo.connect(b1, "onClick", function(){basicStandby1.show();});
-         dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
-      });
+      require(["dojox/widget/Standby", "dijit/form/Button", "dijit/registry"]);
 
   .. html ::
 
-    <button data-dojo-id="b1" data-dojo-type="dijit.form.Button">Show Standby widget</button>
-    <button data-dojo-id="b2" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
+    <button id="b1" data-dojo-type="dijit.form.Button">
+      <span>Show Standby widget</span>
+      <script type="dojo/on" data-dojo-event="click">
+        var registry = require("dijit/registry");
+        registry.byId("basicStandby1").show();
+      </script>
+    </button>
+    <button id="b2" data-dojo-type="dijit.form.Button">
+      <span>Hide Standby widget</span>
+      <script type="dojo/on" data-dojo-event="click">
+        var registry = require("dijit/registry");
+        registry.byId("basicStandby1").hide();
+      </script>
+    </button>
     <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div data-dojo-id="basicStandby1" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic'"></div>
+    <div id="basicStandby1" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic'"></div>
 
 
-Programmatic creation
----------------------
+Basic Programmatic Usage
+------------------------
 
 .. code-example ::
   
-  .. css ::
-
-    @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-
   .. js ::
 
-      dojo.require("dojox.widget.Standby");
-      dojo.require("dijit.form.Button");
-
-      dojo.ready(function(){
-         var standby = new dojox.widget.Standby({target: "basic2"});
+      require(["dojox/widget/Standby", "dijit/form/Button", "dojo/domReady!"],
+      function(Standby, Button){
+         var standby = new Standby({target: "basic2"});
          document.body.appendChild(standby.domNode);
          standby.startup();
-         dojo.connect(b3, "onClick", function(){standby.show();});
-         dojo.connect(b4, "onClick", function(){standby.hide();});
+         var b3 = new Button({
+           label: "Show Standby widget",
+           onClick: function(){ standby.show(); }
+         }, "b3");
+         var b4 = new Button({
+           label: "Hide Standby widget",
+           onClick: function(){ standby.hide(); }
+         }, "b4");
       });
 
   .. html ::
 
-    <button data-dojo-id="b3" data-dojo-type="dijit.form.Button">Show Standby widget</button>
-    <button data-dojo-id="b4" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
+    <button id="b3">Show Standby widget</button>
+    <button id="b4">Hide Standby widget</button>
     <div id="basic2" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
 
 
@@ -141,10 +159,6 @@ Changing overlay color
 ----------------------
 
 .. code-example ::
-
-  .. css ::
-
-      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
 
   .. js ::
 
@@ -170,10 +184,6 @@ Changing overlay color and image
 
 .. code-example ::
   
-  .. css ::
-
-    @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-
   .. js ::
 
       dojo.require("dojox.widget.Standby");
@@ -195,14 +205,10 @@ Changing overlay color and image
 Showing curved border cloning
 -----------------------------
 
-This example works on Firefox and Safari only.
+This example does not work in Internet Explorer 8 and earlier.
 
 .. code-example ::
   
-  .. css ::
-
-      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-
   .. js ::
 
       dojo.require("dojox.widget.Standby");
@@ -227,10 +233,6 @@ Overlaying a dijit.form.TextBox
 
 .. code-example ::
   
-  .. css ::
-
-      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
-
   .. js ::
 
       dojo.require("dojox.widget.Standby");
@@ -255,6 +257,12 @@ Overlaying a dijit.form.TextBox
 Known issues
 ============
 
-* When creating the widget programmatically, make sure to either have its parent node rooted as a direct child of document.body, or assign the domNode into the tree before calling startup(). The widget will reparent itself to document.body if it detects it isn't there. The reason for this is that if the widget gets attached under nodes with relative position, the overlay does not position correctly. The simplest method to deal with that was to always put the widget domNode onto the document.body, where it will not have to deal with relative versus absolute issues.
+* When creating the widget programmatically, make sure to either have its parent node rooted as a direct child of
+  document.body, or assign the ``domNode`` into the tree before calling ``startup()``. The widget will reparent itself
+  to document.body if it detects it isn't there. The reason for this is that if the widget gets attached under nodes
+  with relative position, the overlay does not position correctly. The simplest method to deal with that was to always
+  put the widget ``domNode`` onto the document.body, where it will not have to deal with relative versus absolute
+  issues.
 
-* RTL mode does not work perfectly across all browsers, particularly when the target div is contained within a div/section that is scrollable.
+* RTL mode does not work perfectly across all browsers, particularly when the target div is contained within a
+  div/section that is scrollable.
