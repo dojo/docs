@@ -10,26 +10,41 @@ dijit.byId
 .. contents ::
    :depth: 2
 
-dijit.byId is a function for looking up a specific widget by its assigned name (id).
-This function is similar to :ref:`dojo.byId <dojo/byId>` but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.
+dijit.byId is a function for looking up a specific widget by its assigned name (id). This function is similar to
+:ref:`dojo.byId <dojo/byId>` but whereas ``dojo.byId`` returns DOMNodes, ``dijit.byId`` returns a JavaScript object that
+is the instance of the widget.
+
+As of Dojo 1.7, the features that manage dijits and other widgets on a page has been located in :ref:`dijit/registry
+<dijit/registry>` and the preferred method for looking up a widget is now available there and it is best practice to use
+``registry.byId`` in lieu of ``dijit.byId``.
 
 Introduction
 ============
 
-dijit.byId and dojo.byId are often confused, particularly by first time users.
-This function should be used when you wish to obtain a direct handle the JavaScript object instance of your widget and access functions of that widget.
+``dijit.byId`` and ``dojo.byId`` are often confused, particularly by first time users. ``dijit.byId`` function should be
+used when you wish to obtain a direct reference to the JavaScript object instance of your widget and access functions of
+that widget. ``dojo.byId`` should be used when you want to directly access a DOM node.
 
 .. api-inline :: dijit.byId
 
 Usage
 =====
 
-Usage of this function is trivial.
-Simply call it with a string of the id for the widget you wish to obtain the handle of.
-The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
+Usage of this function is trivial. Simply call it with a string of the id for the widget you wish to obtain the handle
+of. The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is
+not found in the widget registry.
 
 .. js ::
  
+   // Dojo 1.7+ (AMD)
+   require("dijit/registry", function(registry)){
+     var myWidget = registry.byId("myWidget");
+   });
+
+.. js ::
+
+   // Dojo < 1.7
+   dojo.require("dijit");
    var myWidget = dijit.byId("myWidget");
 
 Examples
@@ -39,22 +54,26 @@ Example 1: Locating a widget by its ID
 --------------------------------------
 
 .. code-example ::
-  
+
+  We need to require in the modules we need and lookup our widget:
+
   .. js ::
 
-      dojo.require("dijit.form.TextBox");
-
-      dojo.ready(function(){
-        // Locate the JS object.
-        var widget = dijit.byId("myTextBox");
-        if(widget){
-          // Find my output node and write out I found my textbox and got its value.
-          dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "]";
-        }else{
-          // Find my output node and write out I couldn't find the widget.
-          dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
-        }
+      require(["dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
+        function(dom, registry) {
+          // Locate the JS object.
+          console.log(dom.byId("textNode"));
+          var widget = registry.byId("myTextBox");
+          if (widget){
+            // Find my output node and write out I found my textbox and got its value.
+            dom.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "]";
+          }else{
+            // Find my output node and write out I couldn't find the widget.
+            dom.byId("textNode").innerHTML = "Could not locate my text box widget!";
+          }
       });
+
+  Here is the HTML structure we need to support our example:
 
   .. html ::
 
