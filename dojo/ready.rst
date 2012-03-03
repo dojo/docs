@@ -23,7 +23,7 @@ A typical usage is:
        ready(function(){
              // This won't run until the DOM has loaded, the parser has run, and other modules like dijit/hccss
              // have also run.
-             var dialog = registry.byId("myDialog");
+             var myDialog = registry.byId("myDialog");
              ...
        });
   });
