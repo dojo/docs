@@ -316,6 +316,7 @@ Individuals who have signed Dojo CLAs
 * Lucas, Brian
 * Lulek, Marcin
 * Lv, Yong
+* Lynch, Jim
 * Lytle, Seth
 * MacDonald, Jay John
 * Machi, Dustin
@@ -645,7 +646,7 @@ Corporations or Organizations with a CCLA on file
 * Global Media Systems
 * GreenPlum
 * IBM: Adam Peller, Becky Gibson, David Boloker, Bill Keese, Christopher Mitchell, Douglas Hays, William Higgins,
-  Richard Backhouse, Christophe Jolif, Yoshihiro Kamiyama
+  Richard Backhouse, Christophe Jolif, Yoshihiro Kamiyama, Emmanuel Tissandier, Patrick Ruzand
 * Indico Group
 * Laszlo Systems, Inc.
 * Leorent, GmbH: Michael Rasmussen
