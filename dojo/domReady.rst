@@ -63,6 +63,21 @@ Note that waiting for dojo/domReady! to fire is often not sufficient when workin
 
 Thus when working with widgets you should generally put your code inside of a dojo/ready() callback, or use nested requires statements.
 
+.. js ::
+
+    // Dojo 1.7 (AMD)
+    require(["dojo/ready"], function(ready){
+        ready(function(){
+            require(["dijit/Dialog", "dijit/TitlePane"], function(Dialog, TitlePane){
+                ready(function(){
+                    // dijit.Dialog and friends are ready, create one from a node with id="bar"
+                    var dialog = new Dialog({ title:"Lazy Loaded" }, "bar");
+                });
+            });
+        });
+    });
+
+
 Sync loader
 -----------
 You should not use dojo/domReady! in any modules that may be loaded with the legacy synchronous loader.
