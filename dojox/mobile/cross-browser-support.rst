@@ -18,7 +18,7 @@ As of Dojo 1.7, with AMD loading you can now simply require dojox/mobile/compat 
 
 .. js ::
 
-  require(["dojo/mobile", "dojo/mobile/compat"], function(mobile, compat){
+  require(["dojox/mobile", "dojox/mobile/compat"], function(mobile, compat){
       // Do something with dojo mobile...
   });
 
