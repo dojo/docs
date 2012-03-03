@@ -5,7 +5,7 @@ dojox.charting
 ==============
 
 :Project owners: Eugene Lazutkin, Tom Trenka, Christophe Jolif
-:since: V?
+:since: V0.9
 
 .. contents ::
    :depth: 2
@@ -59,25 +59,10 @@ In historical syntax:
 
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
-  .. js ::
-
-      dojo.require("dojox.charting.Chart");
-      dojo.require("dojox.charting.axis2d.Default");
-      dojo.require("dojox.charting.plot2d.Lines");
-      dojo.ready(function(){
-        var chart1 = new dojox.charting.Chart("simplechart");
-        chart1.addPlot("default", {type: "Lines"});
-        chart1.addAxis("x");
-        chart1.addAxis("y", {vertical: true});
-        chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-        chart1.render();
-      });
-
-In AMD syntax:
-
 .. js ::
 
-      require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
+      // Dojo 1.7+ (AMD)
+      require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
         function(Chart, Default, Lines, ready){
         ready(function(){
           var chart1 = new Chart("chartamd");
@@ -89,6 +74,20 @@ In AMD syntax:
         });
       });
   
+  .. js ::
+
+      // Dojo <1.7
+      dojo.require("dojox.charting.Chart");
+      dojo.require("dojox.charting.axis2d.Default");
+      dojo.require("dojox.charting.plot2d.Lines");
+      dojo.ready(function(){
+        var chart1 = new dojox.charting.Chart("simplechart");
+        chart1.addPlot("default", {type: "Lines"});
+        chart1.addAxis("x");
+        chart1.addAxis("y", {vertical: true});
+        chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+        chart1.render();
+      });
 
 As you can see from the source it is simple to create charts.
 
@@ -111,6 +110,7 @@ And here comes an example:
 
 .. js ::
   
+  // Dojo <1.7
   var chart = new dojox.charting.Chart("test", {
     title: "Production(Quantity)",
     titlePos: "bottom",
@@ -941,6 +941,7 @@ Here is an example showing how to attach a MouseZoomAndPan action to the chart a
 
 .. js ::
   
+  // Dojo <1.7
   var chart = new dojox.charting.Chart("test");
   chart.addAxis("x", {type : "Default", enableCache: true});
   chart.addAxis("y", {vertical: true});
@@ -977,6 +978,7 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
 
 .. js ::
   
+  // Dojo <1.7
   var chart = new dojox.charting.Chart("test");
   chart.addAxis("x", {type : "Default", enableCache: true});
   chart.addAxis("y", {vertical: true});
@@ -1017,6 +1019,7 @@ Here is an example showing how to attach a TouchZoomAndPan action to the chart a
 
 .. js ::
   
+  // Dojo <1.7
   var chart = new dojox.charting.Chart("test");
   chart.addAxis("x", {type : "Default", enableCache: true});
   chart.addAxis("y", {vertical: true});
@@ -1055,6 +1058,7 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
 
 .. js ::
   
+  // Dojo <1.7
   var chart = new dojox.charting.Chart("test");
   chart.addAxis("x", {type : "Default", enableCache: true});
   chart.addAxis("y", {vertical: true});
@@ -1095,6 +1099,7 @@ All actions can be constructed like this:
 
 .. js ::
   
+  // Dojo <1.7
   var a = new dojox.charting.action2d.Magnify(
     chart1,
     "default",
@@ -1116,6 +1121,7 @@ One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. Th
 
 .. html ::
   
+  <!-- Dojo <1.7 -->
   <div data-dojo-type="dojox.charting.widget.Chart2D" id="chart4"
       theme="dojox.charting.themes.PlotKit.green"
       style="width: 300px; height: 300px;">
@@ -1156,6 +1162,7 @@ Here is a very simple example of a stacked area chart.
 
   .. js ::
 
+    // Dojo <1.7
     dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.themes.Wetland");
 
@@ -1184,6 +1191,7 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
   .. js ::
 
+    // Dojo <1.7
     dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.plot2d.Pie");
     dojo.require("dojox.charting.action2d.Highlight");
@@ -1229,6 +1237,7 @@ Here is a clustered bar chart with a rendering animation:
 
   .. js ::
 
+      // Dojo <1.7
       dojo.require("dojox.charting.Chart2D");
       dojo.require("dojox.charting.axis2d.Default");
       dojo.require("dojox.charting.plot2d.ClusteredColumns");
@@ -1263,6 +1272,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
   .. js ::
 
+      // Dojo <1.7
         dojo.require("dojox.charting.Chart3D");
         dojo.require("dojox.charting.plot3d.Bars");
 
