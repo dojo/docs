@@ -7,33 +7,39 @@ Dojo
 .. contents ::
    :depth: 2
 
-The dojo directory contains three categories of modules:
+The dojo package is the foundation package of the Dojo Toolkit.  It consists of three main areas:
 
-   * dojo.js - the bootstrap
-   * dojo/_base - basic functionality historically pulled in as part of dojo.js, and historically existing directly under the ``dojo`` namespace
-   * "dojo core" - more advanced functionality under a sub-namespace under dojo like ``dojo.dnd``
+* `dojo.js`_ - the bootstrap
 
-Each category is described in detail below.
+* `dojo/_base`_ - basic functionality historically pulled in as part of dojo.js, and historically existing directly
+  under the ``dojo`` namespace
+
+* `Dojo Core`_ - more advanced functionality, with some of the functionality available in sub-packages (e.g.
+  ``dojo/dnd`` and ``dojo/store``)
+
+Each of these areas are detailed in the following sections.
 
 dojo.js
 =======
 
-This file provides the bootstrap for loading other modules, in particular the ``require()`` function, previously known as ``dojo.require()``.
+This file provides the bootstrap for loading other modules, in particular the ``require()`` function, previously known
+as ``dojo.require()``. See the :ref:`loader documentation <loader/index>` for further details of how modules are loaded.
 
-See the :ref:`loader documentation <loader/index>` for details.
-
-For backwards-compatibility, when dojo.js is included without the async:true configuration flag, all the symbols in dojo/_base
-are implicitly loaded.
+For backwards-compatibility, when ``dojo.js`` is included without the ``async: true`` configuration flag, all the
+modules in `dojo/_base`_ are implicitly loaded.
 
 dojo/_base
 ==========
 
-The dojo/_base directory contains modules with basic functionality, such as array operations.
-Typically, if a function or class exists within the dojo namespace directly (eg: ``dojo.forEach()``) then it is defined in dojo/_base.
+The dojo/_base directory contains modules with basic functionality, such as array operations. Typically, if a function
+or class exists within the dojo namespace directly (eg: ``dojo.forEach()``) then it is defined in dojo/_base.
 
 However, note that the modules in dojo/_base are being phased out in favor of top level modules in the dojo/ directory.
-The dojo/_base files will be maintained until the 2.0 release.   See details below for replacement modules.
- 
+The ``dojo/_base`` files will be maintained until the 2.0 release. See details below for replacement modules.
+
+* :ref:`dojo/_base <dojo/_base>`
+* :ref:`dojo/_base/ <dojo/_base/>`
+  TODO Clean up/combine _base and _base/ 
 
 Configuring Dojo (dojo/_base/config)
 ------------------------------------
@@ -78,15 +84,6 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 * :ref:`NodeList array methods <dojo/NodeList>`
 
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
-
-Browser utilities (dojo/_base/browser)
---------------------------------------
-
-TODO: Describe module
-
-* :ref:`dojo/_base/broswer <dojo/_base/browser>`
-
-  **STUB** This module causes the browser-only base modules to be loaded. 
 
 Language Utilities (dojo/_base/lang)
 ------------------------------------
@@ -156,47 +153,49 @@ Language Utilities (dojo/_base/lang)
 
   Determine if an object supports a given method
 
-HTML Utility (dojo/_base/html)
-------------------------------
-The :ref:`dojo/_base/html <dojo/_base/html>` module contains basic DOM & HTML handling functions for backward compatibility purpose.
+HTML Utilities (dojo/_base/html)
+--------------------------------
+The :ref:`dojo/_base/html <dojo/_base/html>` module contains basic DOM & HTML handling functions for backward compatibility purposes.
 
 New code should use the dojo/dom* modules (see "Dojo core" section below for details).
 
-Deferred Utility (dojo/_base/Deferred)
---------------------------------------
+Deferred Utilities (dojo/_base/Deferred)
+----------------------------------------
 
 * :ref:`dojo/_base/Deferred <dojo/_base/Deferred>`
 
   Communication between asynchronous calls
 
+  * :ref:`dojo.when <dojo/when>`
+
+    Allows a single code path for synchronous and asynchronous code execution.
+
 Kernel (dojo/_base/kernel)
 --------------------------
 
-* :ref:`dojo/_base/kernel <dojo/_base/kernel`
+* :ref:`dojo/_base/kernel <dojo/_base/kernel>`
 
-  **STUB** The "bootstrap" module for dojo
+  **STUB** from 1.7+ `dojo/_base/kernel` module contains the following parts of Dojo API:
 
-from 1.7 + dojo/_base/kernel module collects following part of dojo APIs
+  * :ref:`dojo.deprecated <dojo/deprecated>`
 
-* :ref:`dojo.deprecated <dojo/deprecated>`
+    Log a debug message to indicate that a behavior has been deprecated
 
-  Log a debug message to indicate that a behavior has been deprecated
+  * :ref:`dojo.eval <dojo/eval>`
 
-* :ref:`dojo.eval <dojo/eval>`
+    Evaluate some string of JavaScript
 
-  Evaluate some string of JavaScript
+  * :ref:`dojo.locale <dojo/locale>`
 
-* :ref:`dojo.locale <dojo/locale>`
+    A string containing the current locale as defined by Dojo
 
-  A string containing the current locale as defined by Dojo
+  * :ref:`dojo.moduleUrl <dojo/moduleUrl>`
 
-* :ref:`dojo.moduleUrl <dojo/moduleUrl>`
+    Returns a URL relative to a module
 
-  Returns a URL relative to a module
+  * :ref:`dojo.version <dojo/version>`
 
-* :ref:`dojo.version <dojo/version>`
-
-  The current version number of Dojo
+    The current version number of Dojo
 
 Window (dojo/_base/window)
 --------------------------
@@ -307,8 +306,8 @@ Document Lifecycle - Unload (dojo/_base/unload)
 
   Signal fired by impending window destruction
 
-Ajax / XHR (dojo/_base/xhr)
----------------------------
+AJAX/XHR (dojo/_base/xhr)
+-------------------------
 
 * :ref:`IO Pipeline Topics <dojo/ioPipelineTopics>`
 
@@ -332,8 +331,8 @@ Ajax / XHR (dojo/_base/xhr)
 
 * :ref:`dojo.rawXhrPut <dojo/rawXhrPut>`
 
-Package System (defined in dojo/_base/loader)
----------------------------------------------
+Package System (dojo/_base/loader)
+----------------------------------
 
 This module is defining deprecated symbols for loading.   See the :ref:`loader documentation <loader/index>` for details on new replacement API's.
 
@@ -362,33 +361,36 @@ JSON Tools (dojo/_base/json)
 
   Returns a JSON serialization of an object
 
-Objects / OO Tool (dojo/_base/declare)
---------------------------------------
+Objects / OO Tools (dojo/_base/declare)
+---------------------------------------
 
 * :ref:`dojo.declare (dojo/_base/declare) <dojo/declare>`
 
   Creates a constructor using a compact notation for inheritance and prototype extension
 
 
-Colors
-------
+Colors (dojo/_base/Color)
+-------------------------
 
 * :ref:`dojo._base.Color <dojo/_base/Color>`
 
-  Color object and utility functions to handle colors.
-  Details on
+  Color object and utility functions to handle colors.  Defines the following API functions:
 
-* dojo.colorFromArray
+  * dojo.colorFromArray
 
-* dojo.colorFromHex
+  * dojo.colorFromHex
 
-* dojo.colorFromString
+  * dojo.colorFromString
 
-* dojo.colorFromRgb.
+  * dojo.colorFromRgb
 
 
 Miscellaneous Base
 ------------------
+
+* :ref:`dojo/browser <dojo/_base/browser>`
+
+  This module causes the browser-only base modules to be loaded.
 
 * :ref:`dojo.global <dojo/global>`
 
@@ -414,17 +416,24 @@ If the function or class exists beneath t:!he dojo namespace (eg: ``dojo.dnd.Mov
 
 DOM (dojo/dom*)
 ---------------
-from 1.7 + dojo/dom module collects following part of dojo APIs
 
-* :ref:`dojo.byId <dojo/byId>`
+The following modules define the core DOM API for the Dojo Toolkit.
 
-  Select a DOM node by 'id'.
+* DOM Core (:ref:`dojo/dom <dojo/dom>`) **STUB**
 
-* dojo.isDescendant
+  This module defines the core dojo DOM API.
 
-* dojo.setSelectable
+  * :ref:`dojo.byId <dojo/byId>`
 
-* Manipulation (dojo/dom-construct)
+    Select a DOM node by 'id'.
+
+  * dojo.isDescendant
+
+  * dojo.setSelectable
+
+* Manipulation (:ref:`dojo/dom-construct <dojo/dom-construct>`) **STUB**
+
+  This module defines the core dojo DOM construction API.
 
   * dojo.toDom
 
@@ -446,8 +455,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Empty the contents of a DOM element
 
+* Attributes (:ref:`dojo/dom-attr <dojo/dom-attr>`) **STUB**
 
-* Attributes (dojo/dom-attr)
+  This module defines the core Dojo DOM attributes API.
 
   * :ref:`dojo.attr <dojo/attr>`
 
@@ -473,7 +483,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Returns an effective value of a property or an attribute.
 
-* Form (dojo/dom-form)
+* Form (:ref:`dojo/dom-form <dojo/dom-form>`) **STUB**
+
+  This module defines form-processing functions.
 
   * :ref:`dojo.fieldToObject <dojo/fieldToObject>`
 
@@ -491,7 +503,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
 
-* Styles (dojo/dom-style)
+* Styles (:ref:`dojo/dom-style <dojo/dom-style>`) **STUB**
+
+  This module defines the core dojo DOM style API.
 
   * :ref:`dojo.style <dojo/style>`
 
@@ -509,7 +523,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Sets styles on a node.
 
-* Class (dojo/dom-class)
+* Class (:ref:`dojo/dom-class <dojo/dom-class>`) **STUB**
+
+  This module defines the core Dojo DOM class API
 
   * :ref:`dojo.hasClass <dojo/hasClass>`
 
@@ -531,7 +547,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass
 
-* Geometry (dojo/dom-geometry)
+* Geometry (:ref:`dojo/dom-geometry <dojo/dom-geometry>`) **STUB**
+
+  This module defines the core dojo DOM geometry API.
 
   * :ref:`dojo.coords <dojo/coords>`
 
@@ -565,7 +583,9 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Sets the size of the node's contents, irrespective of margins, padding, or borders.
 
-* Property (dojo/dom-prop)
+* Property (:ref:`dojo/dom-prop <dojo/dom-prop>`) **STUB**
+
+  This module defines the core dojo DOM properties API.
 
   * :ref:`dojo.prop <dojo/prop>`
 
@@ -589,23 +609,24 @@ IO-Query (dojo/io-query)
 * :ref:`dojo.queryToObject <dojo/queryToObject>`
 
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
-  
-Robot (dojo/robot & dojo/robotx)
---------------------------------
+
+Robot (dojo/robot - dojo/robotx)
+-------------------------------
 * :ref:`dojo/robot <dojo/robot>`
 
-  Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of their
-  elements themselves
+  Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of
+  their elements themselves.
   
 * :ref:`dojo/robotx <dojo/robotx>`
 
-  Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
+Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it
 
 Document Lifecycle - Onload (dojo/ready)
 ----------------------------------------
 * :ref:`dojo.ready <dojo/ready>`
 
-  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
+  Call functions after the DOM has finished loading and widgets declared in markup have been instantiated. When using
+  AMD, in most situations the loader plugin :ref:`dojo/domReady <dojo/domReady>` is preferable.
 
 AJAX I/O transports (dojo/io/\*)
 --------------------------------
@@ -641,8 +662,29 @@ Query (dojo/query)
 
   The swiss army knife of DOM node manipulation in Dojo.
 
+Selectors (dojo/selector/\*)
+----------------------------
+
+The different selector engines that are available in Dojo.
+
+* :ref:`dojo/selector/_loader <dojo/selector/_loader>` **STUB**
+
+  This module handles loading the appropriate selector engine for the given browser
+
+* :ref:`dojo/selector/acme <dojo/selector/acme>` **STUB**
+
+  This is the default selector engine for Dojo.
+
+* :ref:`dojo/selector/lite <dojo/selector/lite>` **STUB**
+
+  A small lightweight query selector engine that implements CSS2.1 selectors minus pseudo-classes and the sibling
+  combinator, plus CSS3 attribute selectors.
+
 NodeList (dojo/NodeList-\*)
 ---------------------------
+
+Various modules that wrap DOM nodes and provide enhanced functionality and management.
+
 * :ref:`dojo.NodeList <dojo/NodeList>`
 
   A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
@@ -653,11 +695,11 @@ NodeList (dojo/NodeList-\*)
 
 * :ref:`dojo.NodeList-data <dojo/NodeList-data>`
 
-  Adds a .data() and .removeData() API to :ref:`dojo.query <dojo/query>` operations
+  Adds a ``.data()`` and ``.removeData()`` API to :ref:`dojo.query <dojo/query>` operations
 
 * :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`
 
-  Adds dojo.fx animation support to dojo.query()
+  Adds ``dojo.fx`` animation support to ``dojo.query()``.
 
 * :ref:`dojo.NodeList-html <dojo/NodeList-html>`
 
@@ -671,8 +713,8 @@ NodeList (dojo/NodeList-\*)
 
   **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
 
-Browser's History (dojo/back & dojo/hash)
------------------------------------------
+Browser History (dojo/back - dojo/hash)
+--------------------------------------
 * :ref:`dojo.back <dojo/back>` (dojo/back)
 
   Browser history management resources (Back button functionality)
@@ -681,31 +723,11 @@ Browser's History (dojo/back & dojo/hash)
  
   Normalized onhashchange module
 
-Data (dojo/data)
-----------------
-* :ref:`dojo.data <dojo/data>`
-
-  A uniform data access layer
-
-  * :ref:`dojo.data.api <dojo/data/api>`
-
-  * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
-
-  * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
-
-  * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
-
-  * :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
-
-  * :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
-
-  * :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`
-
 Store (dojo/store)
 ------------------
 * :ref:`dojo.store <dojo/store>`
 
-  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace :ref:`dojo.data <dojo/data>`
+  Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace `dojo/data <#data-dojo-data>`_
 
   * :ref:`dojo.store.Memory <dojo/store/Memory>`
 
@@ -723,11 +745,31 @@ Store (dojo/store)
 
     A wrapper for data stores that are cacheable
 
+Data (dojo/data)
+----------------
+* :ref:`dojo.data <dojo/data>`
+
+  The deprecated uniform data access layer
+
+  * :ref:`dojo.data.api <dojo/data/api>`
+
+  * :ref:`dojo.data.api.Read <dojo/data/api/Read>`
+
+  * :ref:`dojo.data.api.Write <dojo/data/api/Write>`
+
+  * :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`
+
+  * :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`
+
+  * :ref:`dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`
+
+  * :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`
+
 Cache (dojo/cache)
 ------------------
 * :ref:`dojo.cache <dojo/cache>`
 
-  **1.4+** A mechanism to cache inline text.
+  A mechanism to cache inline text.  This has been deprecated in 1.7 in lieu of the :ref:`dojo/text <dojo/text>` AMD loader plugin.
 
 Date (dojo/date)
 ----------------
@@ -770,6 +812,42 @@ DND (dojo/dnd)
   Drag and Drop
 
   * :ref:`dojo.dnd.Moveable <dojo/dnd/Moveable>`
+
+AMD Loader Plugins
+------------------
+
+There are several modules that are plugins for the AMD Loader system. Consult the Loader documentation for more
+information on :ref:`AMD Loader Plugins <loader/amd#plugins>`.
+
+* :ref:`dojo/domReady <dojo/domReady>`
+
+  Defers execution of the module's factory function until the DOM is ready.
+
+* :ref:`dojo/text <dojo/text>`
+
+  Loads text resources; it is a superset of RequireJS's text plugin, and subsumes ``dojo.cache``.
+
+* :ref:`dojo/i18n <dojo/i18n>`
+
+  Loads i18n bundles either in legacy or AMD format. It includes the legacy i18n API and is a superset of RequireJS's
+  i18n plugin.
+
+* :ref:`dojo/has <dojo/has>`
+
+  Allows has.js expressions to be used to conditionally load modules.
+
+* :ref:`dojo/load <dojo/load>`
+
+  A convenience plugin for loading dependencies computed at runtime.
+
+* :ref:`dojo/require <dojo/require>`
+
+  Downloads a legacy module without loading it. This allows the legacy code path to be guaranteed.
+
+* :ref:`dojo/loadInit <dojo/loadInit>`
+
+  Causes ``dojo.loadInit`` callbacks then other legacy API functions to be executed--in particular those that are
+  associated with a module.
 
 Miscellaneous Core
 ------------------
@@ -826,15 +904,13 @@ Miscellaneous Core
 
   Utility classes to enable loading of resources for internationalization
 
-* :ref:`dojo.jaxer <dojo/jaxer>`
-
 * :ref:`dojo.number <dojo/number>`
 
   Localized formatting and parsing methods for number data
 
 * :ref:`dojo.parser <dojo/parser>`
 
-  The Dom/Widget parsing package
+  The DOM/Widget parsing package
 
 * :ref:`dojo.regexp <dojo/regexp>`
 

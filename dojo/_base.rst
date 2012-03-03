@@ -1,4 +1,4 @@
-.. _dojo/base:
+.. _dojo/_base:
 
 ==========
 dojo._base
