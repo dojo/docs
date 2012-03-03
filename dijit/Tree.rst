@@ -18,11 +18,13 @@ The Dijit tree widget is like that.
 Dojo makes simple trees easy, and complicated trees possible.
 In particular, you can:
 
-* Connect your tree to any dojo.data store implementing the Identity API,  with or without a single root item, and with various ways to express parent/child relationships
+* Connect your tree to any dojo.store, with or without a single root item, and with various ways to express parent/child relationships
 * Nest items to an arbitrary depth ... each branch is independently expandable
 * Apply different icons to different leaf or branch items
 * Setup a global handler for when a user clicks or double clicks a particular nodes.
-* Tree will automatically reflect changes made to the underlying data store (when connected to the data store through the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`)
+* Tree will automatically reflect changes made to the underlying data store (when connected to the data store through
+  the :ref:`ObjectStoreModel <dijit/tree/ObjectStoreModel>`, or legacy
+  :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`)
 * Allow nodes to be dragged and dropped through the familiar Dojo DnD API.
 * Drag and drop onto the tree, which updates the data store indirectly
 
@@ -40,16 +42,17 @@ It's in charge of displaying the data and handling user events only.
 The Tree is a black-box in the sense that the developer generally won't be dealing with individual nodes of the Tree.
 Rather, there are just onClick() etc.
 notifications, which refer to the *item* that was clicked.
-Item is usually an item in the dojo.data store that the tree is connected to.
+Item is usually an item in a dojo.store that the tree is connected to.
 
 Note also that a Tree has an idea of a currently selected item, such as the currently opened folder in a mail program.
 
 Model
 -----
-The real power comes in the :ref:`tree model <dijit/tree/Model>`, which represents the hierarchical data that the tree will display.
+The real power comes in the :ref:`tree model <dijit/tree/Model>`,
+which represents the hierarchical data that the tree will display.
 Tree can interface to any class implementing the model API,
-but typically either the :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>` are used,
-both of which themselves interface with the powerful dojo.data API.
+but typically interfaces through the :ref:`ObjectStoreModel <dijit/tree/ObjectStoreModel>`,
+which itself interfaces with the powerful :ref:`dojo.store <dojo/store>` API.
 
 It's important to note that the tree is merely a '''view''' onto the model.
 The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.
@@ -63,20 +66,13 @@ It's the same concept as a primary key in a database.
 
 Data Stores
 -----------
-Although not required, usually the model interfaces with a dojo.data store.
+Although not required, usually the model interfaces with a :ref:`dojo.store <dojo/store>`.
 
 There can be many different types of stores, such as stores that work from XML vs.
 stores that work from JSON, stores that execute on the client vs.
 stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.
-All the stores, though, have the same API, so they can be connected to with either :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>` or :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`,
-depending on whether there is a single or multiple top level item in the store.
-
-One might wonder why Tree doesn't interface directly with a dojo.data store.
-There are a number of reasons:
-
-  * The parent-child relationship of items in the store might not be expressed by a children attribute on the parent item.  For relational databases it's the other way around, where the child points to the parent.  The dijit.tree.Model code specifies how to trace parent-child relationships for a given data store.
-  * The interface of dojo.data to load children is rather cumbersome... must call _loadItem() on each item in the children[] array, which means that any item in the store needs to know the list of id's of its children at any time.  It's more efficient to not require that, and to lookup children only when they are needed (when the user clicks the expando icon to open the node).
-  * Sometimes developers might use a custom model that doesn't connect to a data store at all.
+All the stores, though, have the same API, so they can be connected to with the
+:ref:`ObjectStoreModel <dijit/tree/ObjectStoreModel>`.
 
 Relationship
 ------------
@@ -228,7 +224,7 @@ It tries to guess if the node is a folder or not by whether or not it has a chil
 
 .. js ::
   
-    getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+    getIconClass: function(/*dojo.store.Item*/ item, /*Boolean*/ opened){
         return (!item || this.model.mayHaveChildren(item)) ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf"
     },
 
@@ -244,7 +240,7 @@ would determine if the item was a folder or not based on whether or not the item
 
 .. js ::
   
-    getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+    getIconClass: function(/*dojo.store.Item*/ item, /*Boolean*/ opened){
         return myStore.getValue(item, 'directory') ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf";
     },
 
@@ -427,7 +423,7 @@ Currently this is really only supported (out of the box) by a :ref:`dojo.store <
 wrapped in a `dojo.store.Observable <dojo/store/Observable>`, or by
 :ref:`dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`.
 
-Setting up a client-server dojo.data source where the server notifies the client whenever the data has changed
+Setting up a client-server dojo.store source where the server notifies the client whenever the data has changed
 is quite complicated, and beyond the scope of dojo, which is a client-only solution.
 
 Lazy Loading a Tree

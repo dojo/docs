@@ -190,9 +190,12 @@ each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the T
 
 Tree
 ----
-- New `dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>`_ class for connecting `dijit/Tree <dijit/Tree>`_ to stores with the new `dojo.store <dojo/store>`_ API. (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
+- New :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` class for connecting
+  :ref:`dijit/Tree <dijit/Tree>` to stores with the new :ref:`dojo.store <dojo/store>` API.
+  (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
-- New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
+- New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically
+  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
 
 Claro
 -----
