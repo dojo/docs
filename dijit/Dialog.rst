@@ -562,6 +562,6 @@ See also
 
 * :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` - mixin of dijit.Dialog and dojox.layout.ContentPane
 * :ref:`dojox.widget.Dialog <dojox/widget/Dialog>` - more flexible dialog allowing animations and different styles/theme support
-*  :ref:`dojox.image.Lightbox <dojox/image/Lightbox>` - a dojo-based Lightbox implementation
+* :ref:`dojox.image.Lightbox <dojox/image/Lightbox>` - a dojo-based Lightbox implementation
 * :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
 * :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` - modal tooltip with rich content for user interactions (forms ...)
