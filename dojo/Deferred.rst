@@ -1,8 +1,8 @@
 .. _dojo/Deferred:
 
-=============
-dojo.Deferred
-=============
+===================
+dojo/Deferred
+===================
 
 :since: V0.9
 
