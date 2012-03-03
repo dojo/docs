@@ -12,7 +12,7 @@ dojo.hasClass
 
 Returns a boolean depending on whether or not a node has a passed class string.
 
-Since Dojo 1.7, ``dojo.hasClass`` is exposed via the ``contains`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.hasClass`` is exposed via the ``contains()`` method of the :ref:`dojo/dom-class <dojo/dom-class>` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====

@@ -17,7 +17,7 @@ Introduction
 
 Follows the same pattern as most Dojo functionality by accepting a string ID of a Node, or a DOM Node reference, removing a passed class from the class="" attribute.
 
-Since Dojo 1.7, ``dojo.removeClass`` is exposed via the ``remove`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.removeClass`` is exposed via the ``remove()`` method of the :ref:`dojo/dom-class <dojo/dom-class>` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 
 Usage
