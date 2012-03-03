@@ -21,7 +21,7 @@ If it is not specified, then the first pane is taken by default.
 Examples
 ========
 
-In the example below, second pane is selected when the widget is loaded.
+In the example below, the second pane is selected when the widget is loaded.
 
 Programmatic example
 --------------------
@@ -30,25 +30,47 @@ Programmatic example
 
   .. js ::
 
+        // Dojo 1.7+ (AMD)
+        require(["dijit/layout/AccordionContainer", "dijit/layout/ContentPane", "dojo/domReady!"
+        ], function(AccordionContainer, ContentPane) {
+            var aContainer = new AccordionContainer({style:"height: 300px"}, "markup");
+
+            aContainer.addChild(new ContentPane({
+                title:"This is a content pane",
+                content:"Hi!"
+            }));
+            aContainer.addChild(new ContentPane({
+                title:"This is as well",
+                content:"Hi how are you?"
+            }));
+            aContainer.addChild(new ContentPane({
+                title:"This too",
+                content:"Hello im fine.. thnx"
+            }));
+            aContainer.startup();
+    	});
+
+
+        // Dojo <1.7
         dojo.require("dijit.layout.AccordionContainer");
         dojo.require("dijit.layout.ContentPane");
 
         dojo.ready(function(){
-          var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
+            var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
 
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This is a content pane",
-                    content:"Hi!"
-          }));
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This is as well",
-                    content:"Hi how are you?"
-              }));
-          aContainer.addChild(new dijit.layout.ContentPane({
-                    title:"This too",
-                    content:"Hello im fine.. thnx"
-          }));
-          aContainer.startup();
+            aContainer.addChild(new dijit.layout.ContentPane({
+                title:"This is a content pane",
+                content:"Hi!"
+            }));
+            aContainer.addChild(new dijit.layout.ContentPane({
+                title:"This is as well",
+                content:"Hi how are you?"
+            }));
+            aContainer.addChild(new dijit.layout.ContentPane({
+                title:"This too",
+                content:"Hello im fine.. thnx"
+            }));
+            aContainer.startup();
         });
 
   .. html ::
@@ -62,11 +84,35 @@ Declarative example
 .. code-example ::
 
   .. js ::
+    // Dojo 1.7+ (AMD)
+    require(["dijit/layout/AccordionContainer", "dijit/layout/ContentPane", "dojo/domReady!"
+    ], function(AccordionContainer, ContentPane) {
+				
+	});
+
+    // Dojo <1.7
 
     dojo.require("dijit.layout.AccordionContainer");
 
   .. html ::
 
+    <!-- Dojo 1.7+ (AMD) -->
+    <div style="width: 300px; height: 300px">
+      <div data-dojo-type="dijit.layout.AccordionContainer" style="height: 300px;">
+        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title:'Heeh, this is a content pane'">
+        Hi!
+        </div>
+        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title:'This is as well', selected: true">
+        Hi how are you?
+        </div>
+        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title:'This too'">
+        Hi how are you? .....Great, thx
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Dojo <1.7 -->
     <div style="width: 300px; height: 300px">
       <div data-dojo-type="dijit.layout.AccordionContainer" style="height: 300px;">
         <div data-dojo-type="dijit.layout.ContentPane" title="Heeh, this is a content pane">
