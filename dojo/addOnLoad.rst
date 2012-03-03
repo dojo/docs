@@ -4,6 +4,9 @@
 dojo.addOnLoad
 ==============
 
+Introduction
+============
+
 dojo.addOnLoad() has been deprecated in favor of the (equivalent) :ref:`dojo.ready <dojo/ready>` function, and more recently, in favor of the :ref:`The AMD API <loader/amd>`, and the :ref:`domReady! plugin <dojo/domReady>`.
 
 The documentation below is preserved for legacy purposes:
