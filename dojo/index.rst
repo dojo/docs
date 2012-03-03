@@ -38,7 +38,7 @@ The dojo/_base files will be maintained until the 2.0 release.   See details bel
 Configuring Dojo (dojo/_base/config)
 ------------------------------------
 
-* :ref:`dojoConfig (dojo/_base/config) <dojo/config>`
+* :ref:`dojoConfig (dojo/_base/config) <dojo/_base/config>`
 
   Possibility to override certain global settings that control how the framework operates
 
@@ -46,6 +46,10 @@ Array utilities (dojo/_base/array)
 ----------------------------------
 
 Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the :ref:`Array QuickStart <quickstart/arrays>` for an overview.
+
+* :ref:`dojo/_base/array <dojo/_base/array>`
+
+  **STUB** Overview of the array module
 
 * :ref:`dojo.forEach <dojo/forEach>`
 
@@ -74,6 +78,15 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 * :ref:`NodeList array methods <dojo/NodeList>`
 
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
+
+Browser utilities (dojo/_base/browser)
+--------------------------------------
+
+TODO: Describe module
+
+* :ref:`dojo/_base/broswer <dojo/_base/browser>`
+
+  **STUB** This module causes the browser-only base modules to be loaded. 
 
 Language Utilities (dojo/_base/lang)
 ------------------------------------
@@ -151,12 +164,17 @@ New code should use the dojo/dom* modules (see "Dojo core" section below for det
 
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
-* :ref:`dojo.Deferred <dojo/Deferred>`
+
+* :ref:`dojo/_base/Deferred <dojo/_base/Deferred>`
 
   Communication between asynchronous calls
 
 Kernel (dojo/_base/kernel)
 --------------------------
+
+* :ref:`dojo/_base/kernel <dojo/_base/kernel`
+
+  **STUB** The "bootstrap" module for dojo
 
 from 1.7 + dojo/_base/kernel module collects following part of dojo APIs
 
@@ -273,6 +291,10 @@ The :ref:`dojo/_base/event <dojo/_base/event>` module defines dojo DOM event API
 Document Lifecycle - Unload (dojo/_base/unload)
 -----------------------------------------------
 
+* :ref:`dojo/_base/unload <dojo/_base/unload>`
+
+  **STUB** functions related to document unloading
+
 * :ref:`dojo.addOnUnload <dojo/addOnUnload>`
 
   Call functions when the page unloads
@@ -294,7 +316,7 @@ Ajax / XHR (dojo/_base/xhr)
 
   **1.4+** Pre-defined XHR content handlers, and an extension point to add your own custom handling.
 
-* :ref:`dojo.xhr <dojo/xhr>`
+* :ref:`dojo/_base/xhr <dojo/_base/xhr>`
 
   Core for all xhr* verbs, eg: xhrPost, getGet
 
@@ -314,6 +336,10 @@ Package System (defined in dojo/_base/loader)
 ---------------------------------------------
 
 This module is defining deprecated symbols for loading.   See the :ref:`loader documentation <loader/index>` for details on new replacement API's.
+
+* :ref:`dojo/_base/loader <dojo/_base/loader>`
+
+  **STUB** module overview
 
 * :ref:`dojo.registerModulePath <dojo/registerModulePath>`
 
@@ -372,18 +398,19 @@ Miscellaneous Base
 
   A collection of key constants.
 
-* :ref:`dojo._Url <dojo/Url>`
+* :ref:`dojo._Url <dojo/_base/url>`
 
   dojo._Url is used to manage the url object.
 
 * :ref:`dojo/_base/sniff <quickstart/browser-sniffing>`
+* :ref:`dojo/sniff <dojo/sniff>` **STUB**
 
   dojo/_base/sniff is introduced in dojo 1.7 as the browser detection utility.
 
 Dojo Core
 =========
 
-If the function or class exists beneath the dojo namespace (eg: ``dojo.dnd.Mover``), it is defined in "dojo core" and you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``) to use it.
+If the function or class exists beneath t:!he dojo namespace (eg: ``dojo.dnd.Mover``), it is defined in "dojo core" and you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``) to use it.
 
 DOM (dojo/dom*)
 ---------------
