@@ -17,7 +17,7 @@ Introduction
 
 dojo.toggleClass adds a class to node if not present, or removes if present.
 
-Since Dojo 1.7, ``dojo.toggleClass`` is exposed via the ``toggle`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.toggleClass`` is exposed via the ``toggle()`` method of the :ref:`dojo/dom-class <dojo/dom-class>` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====

@@ -523,7 +523,7 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
     Sets styles on a node.
 
-* Class (:ref:`dojo/dom-class <dojo/dom-class>`) **STUB**
+* Class (:ref:`dojo/dom-class <dojo/dom-class>`)
 
   This module defines the core Dojo DOM class API
 

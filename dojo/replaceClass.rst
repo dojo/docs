@@ -14,7 +14,7 @@ Introduction
 
 Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass.
 
-Since Dojo 1.7, ``dojo.replaceClass`` is exposed via the ``replace`` method of the ``dojo/dom-class`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.replaceClass`` is exposed via the ``replace()`` method of the :ref:`dojo/dom-class <dojo/dom-class>` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====
