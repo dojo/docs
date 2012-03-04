@@ -55,6 +55,7 @@ A big "thank you" goes to
 * Dean Williams,
 * Mike Wilcox,
 * Kris Zyp
+* JChimene
 
 for their great engagement to improve the documentation of our unmatched Dojo Toolkit!
 
