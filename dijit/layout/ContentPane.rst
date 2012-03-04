@@ -129,10 +129,31 @@ Programmatic example
     </div>
 
 
+Executing JavaScript inside ContentPane
+---------------------------------------
+
+You can also execute scripts with dijit/layout/ContentPane in the content pane definition via dojo/method:
+
+.. html ::
+
+    <div id="foo" data-dojo-type="dijit.layout.ContentPane" href="/some/page.html">
+        <script type="dojo/method">
+            alert ('Hello World!');
+        </script>
+    </div>
+
+For extended script execution there is an extension of ContentPane ``dojox/layout/ContentPane`` which provides script
+execution, among other things.
+
 Accessibility
 =============
 
 The developer is responsible for determining if the ContentPane should be in the tab order of the page or not.
-If the ContentPane is not likely to have a focusable item within the contents, the developer may want to add tabindex=""0" onto the ContentPane element.
+If the ContentPane is not likely to have a focusable item within the contents, the developer may want to add tabindex="0" onto the ContentPane element.
 This will put the ContentPane into the tab order so if someone is using the tab key to navigate through the elements on the page, the ContentPane itself will get focus.
 Having focus go to the ContentPane itself can be helpful for users of assistive technology to be able to navigate to an area that may not have any focusable elements within it such as a preview pane for mail messages or a page footer containing important information.
+
+See also
+========
+
+* `dojox/layout/ContentPane <dojox/layout/ContentPane>`_ - extension of dijit/layout/ContentPane
