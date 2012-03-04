@@ -9,13 +9,15 @@ dojo.registerModulePath
 .. contents ::
    :depth: 2
 
-Maps a module name to a path
+Maps a module name to a path.  **Warning**: ``dojo.registerModulePath`` has been deprecated in Dojo 1.7 in favor of AMD.
+Use ``require({paths:...})`` or Dojo config ``paths`` flag and load the module using ``require()``.
 
 
 Introduction
 ============
 
-Dojo maps module names used in dojo.require calls to paths names. By default, Dojo uses a couple pieces of information to map a module name to a path name:
+Dojo module loader maps module names used in dojo.require or require() calls to paths names.  By default, Dojo uses a
+couple pieces of information to map a module name to a path name:
 
 The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.3/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.3/dojo/". Dojo automatically determines this path, but you can explicitly set it via dojoConfig.baseUrl.
 
@@ -35,9 +37,13 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
+Be aware that dojo.registerModulePath is deprecated if you use async:true Dojo's configuration flag.  For AMD written
+application you should use paths dojoConfig flag.  If you want to use the legacy loader and it's api, then you can use it
+like this:
+
 .. js ::
 
-   require(['dojo/_base/kernel', 'dojo/_base/loader], function(dojo){
+   require(['dojo/_base/kernel', 'dojo/_base/loader'], function(dojo){
      // Register "lib" to be a peer to Dojo's parent folder.
      // Make sure the module path does *not* end in a slash.
      dojo.registerModulePath("lib", "../../lib");
