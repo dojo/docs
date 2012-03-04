@@ -15,4 +15,3 @@ And here are some IT projects:
   * `SVN reorg <http://thread.gmane.org/gmane.comp.web.dojo.devel/12891>`_
   * split of dojox projects into separate release cycles
   * website refactor
-  * moving docs out of docs.dojocampus.org into SVN (or GIT)

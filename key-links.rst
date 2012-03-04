@@ -40,7 +40,6 @@ Core
 * `Improving Component Communication <http://www.sitepen.com/blog/2008/02/19/improving-component-communication-with-the-dojo-toolkit/>`_ , SitePen and Mike Wilcox, Dojo Committer
 * `Creating Your Own $ with Dojo <http://dojocampus.org/content/?p=67>`_, Neil Roberts, Dojo Committer
 * `Functional Ajax with Dojo <http://dojocampus.org/content/?p=66>`_, Neil Roberts, Dojo Committer
-* `The Dojo Parser <http://dojocampus.org/content/?p=63>`_, Peter Higgins, Dojo Project Lead
 * `Are You Sure You Should be Subclassing That? <http://www.sitepen.com/blog/2008/03/16/are-you-sure-you-should-be-subclassing-that/>`_, SitePen and Neil Roberts, Dojo Committer
 * `JavaScript Metaclass Programming <http://www.sitepen.com/blog/2008/03/18/javascript-metaclass-programming/>`_, SitePen and Neil Roberts, Dojo Committer
 * `dojo.DnD Complete Documentation <http://docs.google.com/View?docid=d764479_11fcs7s397>`_, Eugene Lazutkin, Dojo Committer
@@ -79,7 +78,6 @@ Dijit
 * `Accessibility <http://www-03.ibm.com/able/resources/dojo.html>`_, Becky Gibson, IBM, Dojo Committer
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 * `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
-* `Adding setTitle to TabContainer <http://dojocampus.org/content/2008/06/06/hacking-tabcontainer-settitle-extension/>`_, Peter Higgins, SitePen, Dojo Project Lead
 * `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
 * `dijit.Tree - server fetch on node expansion <http://dojocampus.org/content/2008/06/07/tree-server-fetch-on-node-expansion/>`_, Josh Trutwin, Dojo User
 * `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
