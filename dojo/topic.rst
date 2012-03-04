@@ -19,11 +19,11 @@ Using AMD style (Dojo 1.7+)
 .. js ::
 
   require(["dojo/topic"], function(topic){
-    topic.subscribe("some/topic", function(){
-      console.log("received:", arguments);
-    });
-    // ...
-    topic.publish("some/topic", "one", "two");
+      topic.subscribe("some/topic", function(){
+          console.log("received:", arguments);
+      });
+      // ...
+      topic.publish("some/topic", "one", "two");
   });
 
 Using dojo.require
@@ -33,11 +33,11 @@ Using dojo.require
 
   dojo.require("dojo.topic");
   dojo.ready(function(){
-    dojo.topic.subscribe("some/topic", function(){
-      console.log("received:", arguments);
-    });
-    // ...
-    dojo.topic.publish("some/topic", "one", "two");
+      dojo.topic.subscribe("some/topic", function(){
+          console.log("received:", arguments);
+      });
+      // ...
+      dojo.topic.publish("some/topic", "one", "two");
   });
 
 Differences from old APIs
