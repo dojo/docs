@@ -995,6 +995,44 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore1, searchAttr:'name'"></div>
     <div id="reloadButton1" data-dojo-type="dijit.form.Button">Reload DataStore</div>
 
+
+Clearing out the existing Data in a store, and populating it with new Data
+--------------------------------------------------------------------------
+
+This is a pretty common need with a pretty simple solution.  How do you clear out the existing Data in a store, and
+populate it with new Data?  The solution is pretty easy.  Let's assume you have an ItemFileReadStore (this works with
+ItemFileWriteStore as well) named myStore.
+
+.. html ::
+
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'myData.json', clearOnClose:true" id="myStore" data-dojo-id="myStore"></div>
+
+This creates an ItemFileRead store and assigns it to the global variable myStore.
+
+Then you can force it to reload as such:
+
+.. js ::
+
+    myStore.close();
+    myStore.fetch();
+
+If you need to change the url of the store you can do it like this:
+
+.. js ::
+
+    myStore.close();
+    myStore._jsonFileUrl = 'myNewData.json';
+    myStore.fetch();
+
+And if you have a grid bound to the store, force it to reload:
+
+.. js ::
+
+    myStore.close();
+    myStore.fetch();
+    myGrid._refresh();
+
+
 Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 ---------------------------------------------------------------------
 *Note that you can see the data reload after clicking the button then activating the dropdown in Firebug or if you are viewing the demo through a proxy that shows requests made.*
@@ -1033,5 +1071,4 @@ API Info
 See Also
 ========
 
-* `Refreshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
 * Consider :ref:`dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>` if you want an ItemFileReadStore with better querying capabilities, but don't want to use an entirely different flavor of store.
