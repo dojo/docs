@@ -1,8 +1,8 @@
 .. _dojo/index:
 
-====
-Dojo
-====
+=============
+Dojo Overview
+=============
 
 .. contents ::
    :depth: 2
