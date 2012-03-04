@@ -9,8 +9,10 @@ dojo.registerModulePath
 .. contents ::
    :depth: 2
 
-Maps a module name to a path.  **Warning**: ``dojo.registerModulePath`` has been deprecated in Dojo 1.7 in favor of AMD.
-Use ``require({paths:...})`` or Dojo config ``paths`` flag and load the module using ``require()``.
+Maps a module name to a path.
+
+**Warning**: ``dojo.registerModulePath`` and the ``modulePaths`` configuration property
+have been deprecated in Dojo 1.7 in favor of the ``packages`` configuration property.
 
 
 Introduction
@@ -34,42 +36,25 @@ The second argument to dojo.registerModulePath, the path, should *not* end with 
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
 
-Be aware that dojo.registerModulePath is deprecated if you use async:true Dojo's configuration flag.  For AMD written
-application you should use paths dojoConfig flag.  If you want to use the legacy loader and it's api, then you can use it
-like this:
+``dojo.registerModulePath`` is deprecated in Dojo 1.7+.  Going forward,
+the ``packages`` configuration property should be used.  For example:
 
 .. js ::
 
-   require(['dojo/_base/kernel', 'dojo/_base/loader'], function(dojo){
-     // Register "lib" to be a peer to Dojo's parent folder.
-     // Make sure the module path does *not* end in a slash.
-     dojo.registerModulePath("lib", "../../lib");
+  var dojoConfig = {
+    packages: [
+      {
+        name: "lib",
+        location: "../../lib"
+      }
+    ]
+  };
 
-     // This module path is relative to the dojo baseUrl,
-     // so we can find resources without knowing details
-     // of the file structure.
-
-     // E.g. if dojo lives at /somepath/dojotoolkit/dojo/dojo.js
-     // then baseURL is "/somepath/dojotoolkit/dojo/"
-     // and "lib" module path refers to "/somepath/lib"
-
-     // lib.foo is required from /somepath/lib/foo.js
-     dojo.require("lib.foo");
-
-     // get a dojo.URI that points to "/somepath/lib/foo/images"
-     var images = dojo.moduleUrl("lib.foo.images");
-
-     // module paths can be overridden, e.g.
-     dojo.registerModulePath("lib.css", "../../css");
-     // module "lib" is unchanged except that "lib.css"
-     // now refers to "/somepath/css"
-
-     // we can set an absolute path by prefixing it with "/" or "http:"
-     dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.5/dojo");
-   });
+For more information on ``packages`` and other loader configuration properties,
+see the documentation for :ref:`the Dojo Loader <loader/amd>`.
 
 Dojo < 1.7
 ----------
