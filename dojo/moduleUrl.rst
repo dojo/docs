@@ -11,25 +11,32 @@ dojo.moduleUrl
 
 dojo.moduleUrl is used to return a dojo._Url object relative to a module.
 
+**Note:** ``dojo.moduleUrl`` is deprecated in Dojo 1.7+; use ``require.toUrl``
+instead.
+
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
+Dojo 1.7+ (AMD)
+---------------
+
+In Dojo 1.7+, use ``require.toUrl`` instead of ``dojo.moduleUrl``:
 
 .. js ::
 
-   require(["dojo/_base/kernel", "dojo/_base/xhr", "dojo/dom"], function(dojo, xhr, dom){
-      // points to $dojoroot/dijit/form/tests/TestFile.html
-      var url = dojo.moduleUrl("dijit.form", "tests/TestFile.html");
-      xhr.get({
-         url: url,
-          load: function(html){
-              dom.byId("foo").innerHTML = html;
-         }
-      });
-   });
+   require(["dojo/_base/xhr", "dojo/dom"], function(xhr, dom){
+       // points to $dojoroot/dijit/form/tests/TestFile.html
+       var url = require.toUrl("dijit/form/tests/TestFile.html");
+       xhr.get({
+           url: url,
+           load: function(html){
+               dom.byId("foo").innerHTML = html;
+           }
+       });
+  });
 
+For more information on ``require.toUrl``,
+see the documentation for :ref:`the Dojo Loader <loader/amd>`.
 
 Dojo < 1.7
 ----------
@@ -41,7 +48,7 @@ Dojo < 1.7
    dojo.xhrGet({
        url: url,
        load: function(html){
-            dojo.byId("foo").innerHTML = html;
+           dojo.byId("foo").innerHTML = html;
        }
    });
 
