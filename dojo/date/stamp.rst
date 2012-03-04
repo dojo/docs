@@ -12,7 +12,7 @@ dojo.date.stamp
 Introduction
 ============
 
-dojo.date.stamp methods use a profile of the ISO-8601 standard to handle dates in a way that is unambiguous, culturally and location independent, fast, and easily machine readable.  The format is yyyy-MM-ddTHH:mm:ss.SSS where the fields do not all need to be specified, and either local time, GMT offset or "Zulu" may be used.  See the API documentation for details.
+Methods of dojo.date.stamp module use a profile of the ISO-8601 standard to handle dates in a way that is unambiguous, culturally and location independent, fast, and easily machine readable.  The format is yyyy-MM-ddTHH:mm:ss.SSS where the fields do not all need to be specified, and either local time, GMT offset or "Zulu" may be used.  See the API documentation for details.
 
 
 
@@ -49,4 +49,3 @@ See Also
 
 * :ref:`dojo.date.* <dojo/date>`
 * :ref:`dojo.date.locale.* <dojo/date/locale>`
-* `Dojo Cookie: Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_
