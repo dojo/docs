@@ -32,14 +32,12 @@ dojo/_base
 ==========
 
 The dojo/_base directory contains modules with basic functionality, such as array operations. Typically, if a function
-or class exists within the dojo namespace directly (eg: ``dojo.forEach()``) then it is defined in dojo/_base.
+or class exists within the dojo namespace directly (e.g. ``dojo.forEach()``) then it is defined in ``dojo/_base``.
 
-However, note that the modules in dojo/_base are being phased out in favor of top level modules in the dojo/ directory.
-The ``dojo/_base`` files will be maintained until the 2.0 release. See details below for replacement modules.
+However, note that the modules in ``dojo/_base`` are being phased out in favor of top level modules in the ``dojo/``
+directory. The ``dojo/_base`` files will be maintained until the 2.0 release. See details below for replacement modules.
 
-* :ref:`dojo/_base <dojo/_base>`
-* :ref:`dojo/_base/ <dojo/_base/>`
-  TODO Clean up/combine _base and _base/ 
+* :ref:`dojo/_base <dojo/_base/>` - Overview of all the ``dojo/_base`` modules.
 
 Configuring Dojo (dojo/_base/config)
 ------------------------------------
@@ -522,9 +520,10 @@ this.
 
   * :ref:`dojo.formToQuery <dojo/formToQuery>`
 
-    Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
+    Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to
+    serialize.
 
-* Styles (:ref:`dojo/dom-style <dojo/dom-style>`) **STUB**
+* Styles (:ref:`dojo/dom-style <dojo/dom-style>`)
 
   This module defines the core dojo DOM style API. The convention for the return variable for this module is
   ``domStyle``.
@@ -571,7 +570,7 @@ this.
     Replaces one or more classes on a node if not present. Operates more quickly than calling ``dojo.removeClass`` and
     ``dojo.addClass``.
 
-* Geometry (:ref:`dojo/dom-geometry <dojo/dom-geometry>`) **STUB**
+* Geometry (:ref:`dojo/dom-geometry <dojo/dom-geometry>`)
 
   This module defines the core dojo DOM geometry API. The convention for the return variable for this module is
   ``domGeom``.
@@ -609,7 +608,7 @@ this.
 
     Sets the size of the node's contents, irrespective of margins, padding, or borders.
 
-* Property (:ref:`dojo/dom-prop <dojo/dom-prop>`) **STUB**
+* Property (:ref:`dojo/dom-prop <dojo/dom-prop>`)
 
   This module defines the core dojo DOM properties API. The convention for the return variable for this module is
   ``domProp``.
