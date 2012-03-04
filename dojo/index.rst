@@ -48,7 +48,7 @@ Configuring Dojo (dojo/_base/config)
 
   Possibility to override certain global settings that control how the framework operates
 
-Array utilities (dojo/_base/array)
+Array Utilities (dojo/_base/array)
 ----------------------------------
 
 Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the :ref:`Array QuickStart <quickstart/arrays>` for an overview.
@@ -361,8 +361,8 @@ JSON Tools (dojo/_base/json)
 
   Returns a JSON serialization of an object
 
-Objects / OO Tools (dojo/_base/declare)
----------------------------------------
+Objects / OO Utilities (dojo/_base/declare)
+-------------------------------------------
 
 * :ref:`dojo.declare (dojo/_base/declare) <dojo/declare>`
 
@@ -412,16 +412,35 @@ Miscellaneous Base
 Dojo Core
 =========
 
-If the function or class exists beneath t:!he dojo namespace (eg: ``dojo.dnd.Mover``), it is defined in "dojo core" and you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``) to use it.
+While using the legacy API, many of the modules listed here are auto-loaded and made available in the global scope for
+Legacy compatibility purposes, it is not advisable. The best practice is to require in only the modules you need to use
+within your application. For example, previously, if you need to retrieve a DOM node by its ID, you might have
+accomplished this by just accessing the ``dojo`` global scope object like:
+
+.. js::
+
+  var myNode = dojo.byId("myNode");
+
+But to ensure the current best practices from Dojo 1.7 onwards, you should do the following:
+
+.. js::
+
+  require("dojo/dom", function(dom){
+    var myNode = dom.byId("myNode");
+  });
 
 DOM (dojo/dom*)
 ---------------
 
-The following modules define the core DOM API for the Dojo Toolkit.
+The following modules define the core DOM API for the Dojo Toolkit. For compatibility purposes, aliases to the Legacy
+API are defined in :ref:`dojo/_base/html <dojo/_base/html>` and :ref:`dojo/_base/xhr <dojo/_base/xhr>` modules. For new
+development it is recommended to require only the individual modules of the parts of the API that are needed and to
+reference them via their return variable. See each module for examples of what the common conventions are for doing
+this.
 
-* DOM Core (:ref:`dojo/dom <dojo/dom>`) **STUB**
+* DOM Core (:ref:`dojo/dom <dojo/dom>`)
 
-  This module defines the core dojo DOM API.
+  This module defines the core dojo DOM API.  The convention for the return variable for this module is ``dom``.
 
   * :ref:`dojo.byId <dojo/byId>`
 
@@ -431,17 +450,18 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
   * dojo.setSelectable
 
-* Manipulation (:ref:`dojo/dom-construct <dojo/dom-construct>`) **STUB**
+* Manipulation (:ref:`dojo/dom-construct <dojo/dom-construct>`)
 
-  This module defines the core dojo DOM construction API.
+  This module defines the core dojo DOM construction API. The convention for the return variable for this module is
+  ``domConstruct``.
 
-  * dojo.toDom
+  * :ref:`dojo.toDom <dojo/toDom>`
 
     Instantiates an HTML fragment returning the corresponding DOM.
 
   * :ref:`dojo.create <dojo/create>`
 
-    Creates a dom node with optional values and placement
+    Creates a DOM node with optional values and placement
 
   * :ref:`dojo.place <dojo/place>`
 
@@ -449,15 +469,16 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
   * :ref:`dojo.destroy <dojo/destroy>`
 
-    Destroy a DOM element
+    Destroy a DOM node
 
   * :ref:`dojo.empty <dojo/empty>`
 
-    Empty the contents of a DOM element
+    Empty the contents of a DOM node
 
-* Attributes (:ref:`dojo/dom-attr <dojo/dom-attr>`) **STUB**
+* Attributes (:ref:`dojo/dom-attr <dojo/dom-attr>`)
 
-  This module defines the core Dojo DOM attributes API.
+  This module defines the core Dojo DOM attributes API. This module will be retired in the future and superseded by
+  :ref:`dojo/dom-prop <dojo/dom-prop>`.  The convention for the return variable for this module is ``domAttr``.
 
   * :ref:`dojo.attr <dojo/attr>`
 
@@ -483,9 +504,9 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
     Returns an effective value of a property or an attribute.
 
-* Form (:ref:`dojo/dom-form <dojo/dom-form>`) **STUB**
+* Form (:ref:`dojo/dom-form <dojo/dom-form>`)
 
-  This module defines form-processing functions.
+  This module defines form-processing functions.  The convention for the return variable for this module is ``domForm``.
 
   * :ref:`dojo.fieldToObject <dojo/fieldToObject>`
 
@@ -505,7 +526,8 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
 * Styles (:ref:`dojo/dom-style <dojo/dom-style>`) **STUB**
 
-  This module defines the core dojo DOM style API.
+  This module defines the core dojo DOM style API. The convention for the return variable for this module is
+  ``domStyle``.
 
   * :ref:`dojo.style <dojo/style>`
 
@@ -525,7 +547,8 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
 * Class (:ref:`dojo/dom-class <dojo/dom-class>`)
 
-  This module defines the core Dojo DOM class API
+  This module defines the core Dojo DOM class API. The convention for the return variable for this module is
+  ``domClass``.
 
   * :ref:`dojo.hasClass <dojo/hasClass>`
 
@@ -545,11 +568,13 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
   * :ref:`dojo.replaceClass <dojo/replaceClass>`
 
-    Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass
+    Replaces one or more classes on a node if not present. Operates more quickly than calling ``dojo.removeClass`` and
+    ``dojo.addClass``.
 
 * Geometry (:ref:`dojo/dom-geometry <dojo/dom-geometry>`) **STUB**
 
-  This module defines the core dojo DOM geometry API.
+  This module defines the core dojo DOM geometry API. The convention for the return variable for this module is
+  ``domGeom``.
 
   * :ref:`dojo.coords <dojo/coords>`
 
@@ -577,7 +602,8 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
   * :ref:`dojo.getContentBox <dojo/getContentBox>`
 
-    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model.
+    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the
+    current box model.
 
   * :ref:`dojo.setContentSize <dojo/setContentSize>`
 
@@ -585,7 +611,8 @@ The following modules define the core DOM API for the Dojo Toolkit.
 
 * Property (:ref:`dojo/dom-prop <dojo/dom-prop>`) **STUB**
 
-  This module defines the core dojo DOM properties API.
+  This module defines the core dojo DOM properties API. The convention for the return variable for this module is
+  ``domProp``.
 
   * :ref:`dojo.prop <dojo/prop>`
 
@@ -611,7 +638,7 @@ IO-Query (dojo/io-query)
   Create an object representing a de-serialized query section of a URL. Query keys with multiple values are returned in an array.
 
 Robot (dojo/robot - dojo/robotx)
--------------------------------
+--------------------------------
 * :ref:`dojo/robot <dojo/robot>`
 
   Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of
@@ -714,7 +741,8 @@ Various modules that wrap DOM nodes and provide enhanced functionality and manag
   **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
 
 Browser History (dojo/back - dojo/hash)
---------------------------------------
+---------------------------------------
+
 * :ref:`dojo.back <dojo/back>` (dojo/back)
 
   Browser history management resources (Back button functionality)
@@ -805,8 +833,9 @@ Date (dojo/date)
 
       Builds the regular needed to parse a localized date
 
-DND (dojo/dnd)
---------------
+Drag and Drop (dojo/dnd)
+------------------------
+
 * :ref:`dojo.dnd <dojo/dnd>`
 
   Drag and Drop
