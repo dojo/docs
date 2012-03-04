@@ -1613,4 +1613,6 @@ Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixi
 See Also
 ========
 
-* `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03 - Dojo Cookie article
+* `Classy JavaScript with dojo.declare`_
+
+.. _`Classy JavaScript with dojo.declare`: http://dojotoolkit.org/documentation/tutorials/1.7/declare/

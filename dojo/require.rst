@@ -131,4 +131,4 @@ Examples
 See Also
 ========
 
-* `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03 - Dojo Cookie article
+* `The Dojo Loader <loader/amd>`_ - Further information on the loading process
