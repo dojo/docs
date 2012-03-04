@@ -40,18 +40,7 @@ AMD Features
   Adds a class to node if not present, or removes if present. Pass a boolean condition if you want to explicitly add or
   remove. Returns the condition that was specified directly or indirectly.
 
-Legacy Features
----------------
-
-* :ref:`dojo.hasClass <dojo/hasClass>`
-
-* :ref:`dojo.addClass <dojo/addClass>`
-
-* :ref:`dojo.removeClass <dojo/removeClass>`
-
-* :ref:`dojo.replaceClass <dojo/replaceClass>`
-
-* :ref:`dojo.toggleClass <dojo/toggleClass>`
+Legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
 
 Examples
 ========
@@ -70,5 +59,15 @@ Here is an example of using ``domClass.contains`` to determine if a DOM node con
 
 See also
 ========
+
+* :ref:`dojo/dom <dojo/dom>` - Core DOM API
+
+* :ref:`dojo/dom-attr <dojo/dom-attr>` - Dojo DOM Attribute API
+
+* :ref:`dojo/dom-prop <dojo/dom-prop>` - DOM Property API
+
+* :ref:`dojo/dom-style <dojo/dom-style>` - DOM Style API
+
+* :ref:`dojo/_base/html <dojo/_base/html>` - Legacy API aliases
 
 .. api-link :: dojo.dom-class
