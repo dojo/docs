@@ -64,9 +64,16 @@ In this example using euros with German formatting, the invalid message contains
   .. js ::
 
     // Dojo 1.7+ (AMD)
-    require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/parser", "dojo/domReady!"
-    ], function(CurrencyTextBox, parser){
-        // TODO
+    require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"
+    ], function(CurrencyTextBox, currency){
+        var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+        var props = {
+            value: 54775.53,
+            lang: 'de-de',
+            currency: "EUR",
+            invalidMessage: "Invalid amount.  Example: " + example
+        };
+        var currencyTextBox = new CurrencyTextBox(props, "eurde");
     });
 
     // Dojo <1.7
