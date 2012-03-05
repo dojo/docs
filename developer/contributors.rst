@@ -330,7 +330,7 @@ Individuals who have signed Dojo CLAs
 * Marginian, David
 * Marginian, David Brian
 * Mark, David
-* Marko, Martin
+* Marko, Martin (mm)
 * Marsh, John T. Jr.
 * Martin, Benoit
 * Martin, Nicholas
