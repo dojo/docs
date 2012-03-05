@@ -84,6 +84,7 @@ Declarative example
 .. code-example ::
 
   .. js ::
+
     // Dojo 1.7+ (AMD)
     require(["dijit/layout/AccordionContainer", "dijit/layout/ContentPane", "dojo/domReady!"
     ], function(AccordionContainer, ContentPane) {
