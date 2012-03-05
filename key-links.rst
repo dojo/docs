@@ -73,7 +73,6 @@ Dijit
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 * `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
 * `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
-* `dijit.Tree - server fetch on node expansion <http://dojocampus.org/content/2008/06/07/tree-server-fetch-on-node-expansion/>`_, Josh Trutwin, Dojo User
 * `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
 * `Implementing an Application Preloading Overlay <https://www.sitepen.com/blog/2008/10/06/implementing-a-web-application-preloading-overlay/>`_, SitePen and Peter Higgins, Adconion, Dojo Project Lead
 * `Dojo Tag Cloud Widget <http://ekrantz.com/index.php/2008/07/29/dojo-tag-cloud-widget.html>`_, Viktor Krantz, ekrantz.com, Dojo User
