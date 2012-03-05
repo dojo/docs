@@ -18,7 +18,7 @@ Introduction
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
-Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -81,7 +81,7 @@ Version <1.7
             height: 20em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -195,7 +195,7 @@ formatter
 - Note: When a widget is returned from a formatter, it's important to use the following way to ensure widget.destroyed() is called when the page containing it get destroyed - this may happen when grid is scrolled away from the current view-port or when the grid instance is destroyed, otherwise significant memory increase will be observed when Grid is kept scrolling or creating/destroying. See the related `#13961 <http://bugs.dojotoolkit.org/ticket/13961>`_
 
 
--    Version <1.7
+-    Dojo <1.7
 
 .. js ::
   
@@ -205,7 +205,7 @@ formatter
       return w;
   }
 
--    Version 1.7
+-    Dojo 1.7
 
   Note that the dijit/form/Button module must have been loaded before executing this function or the require will throw an error. There is an example of creating a widget in a cell in the examples section, "`Inserting a dijit widget (Button) in a field`_". 
 
@@ -477,7 +477,7 @@ A simple Grid
 
 This example shows how to create a simple Grid programmatically.
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -540,7 +540,7 @@ This example shows how to create a simple Grid programmatically.
             height: 20em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -609,7 +609,7 @@ Working with selections
 
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -710,7 +710,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             height: 15em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -830,7 +830,7 @@ Grid allows you to edit your data easily and send the changed values back to you
 
 First, you have to set a editor for each cell, you would like to edit:
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -901,7 +901,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
 
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -974,7 +974,7 @@ If you want to add (remove) data programmatically, you just have to add (remove)
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
 
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -1072,7 +1072,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
             height: 15em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -1172,7 +1172,7 @@ Filtering data
 
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -1259,7 +1259,7 @@ The Grid offers a filter() method, to filter data from the current query (client
             height: 15em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -1350,7 +1350,7 @@ Grid styling: Rows
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
 To use it, you just have to override default behavior by yours.
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
  
@@ -1432,7 +1432,7 @@ To use it, you just have to override default behavior by yours.
             height: 20em;
         }
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
  
@@ -1518,7 +1518,7 @@ Formatting a Date Field
 
 Showing localized datetime data in grid is a very common requirement. Here's an example on how to do this using the formatter function, complete with localization.
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
   :width: 400
@@ -1578,7 +1578,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
     @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
   :width: 400
@@ -1642,7 +1642,7 @@ Editable Date Field
 Sometimes it's not enough to just show the datetime data, so here's another example on how to make the date field editable.
 Note: In editing mode, the text box will show the data in store, which is ISO format in this case; and no validation is provided.
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example ::
   :width: 400
@@ -1701,7 +1701,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
     @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
--    Version 1.7
+-    Dojo 1.7
     
 .. code-example ::
   :width: 400
@@ -1762,7 +1762,7 @@ Using a dijit widget to edit a Date Field
 
 Using dijit.form.DateTextBox in editing mode will provide an improved user experience with easy date selection.  Like everything in Dijit, the user experience is localized and respects cultural conventions.  constraint is used to pass along properties to the DateTextBox widget.
 
--    Version <1.7
+-    Dojo <1.7
     
 .. code-example::
   :toolbar: themes, versions, dir
@@ -1830,7 +1830,7 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -1900,7 +1900,7 @@ Using a dijit widget to edit a Date Field - with custom patterns
 
 Although ISO dates are recommended as a convenient and culturally neutral data format, the values in store may not be provided this way, so we have to parse them to convert them to Date objects.  Here the constraint object is also used to pass along a custom formatter to override the default cultural user behavior with a different display.
 
--    Version <1.7
+-    Dojo <1.7
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -1971,7 +1971,7 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
     @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -2042,7 +2042,7 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 _`Inserting a dijit widget (Button) in a field`
 ----------------------------------------------------------------
 
--    Version 1.7
+-    Dojo 1.7
 
 .. code-example ::
   :width: 400
