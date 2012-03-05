@@ -11,7 +11,7 @@ dijit/form/CurrencyTextBox
 .. contents ::
     :depth: 2
 
-CurrencyTextBox widgets inherit all the attributes and behaviors of the :ref:`NumberTextBox <dijit/form/NumberTextBox>` widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
+CurrencyTextBox widgets inherit all the attributes and behaviors of the :ref:`NumberTextBox <dijit/form/NumberTextBox>` widget, but are specialized for input monetary values, much like the currency type in spreadsheet programs.
 
 
 Usage
@@ -37,7 +37,7 @@ In this example using USD, both dollars and cents are required.
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/CurrencyTextBox"]);
+    require(["dijit/form/CurrencyTextBox", "dojo/parser", "dojo/domReady!"]);
 
   .. html ::
 
@@ -59,18 +59,16 @@ In this example using euros with German formatting, the invalid message contains
   :djConfig: async: true
 
   .. js ::
-
-    require(["dojo/ready", "dojo/currency", "dijit/form/CurrencyTextBox"], function(ready, currency, CurrencyTextBox){
-        ready(function(){
-            var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
-            var props = {
-                value: 54775.53,
-                lang: 'de-de',
-                currency: "EUR",
-                invalidMessage: "Invalid amount.  Example: " + example
-            };
-            new CurrencyTextBox(props, "eurde");
-        });
+    require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"
+    ], function(CurrencyTextBox, currency){
+        var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+        var props = {
+            value: 54775.53,
+            lang: 'de-de',
+            currency: "EUR",
+            invalidMessage: "Invalid amount.  Example: " + example
+        };
+        new CurrencyTextBox(props, "eurde");
     });
 
   .. html ::
