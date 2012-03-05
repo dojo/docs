@@ -26,10 +26,10 @@ module documentation.
 Dojo Base
 =========
 
-The base functionality of the Dojo Toolkit, provided by just including ``dojo.js``. This includes tons of features
+The base functionality of the Dojo Toolkit is provided by just including ``dojo.js``. This includes tons of features
 like :ref:`CSS-based queries <dojo/query>`, :ref:`event handling <quickstart/events>`, 
-:ref:`animations <quickstart/Animation>`, :ref:`Ajax <quickstart/ajax>`, :ref:`class-based programming 
-<dojo/declare>`, and a package system that makes getting access to the rest of :ref:`Dojo <dojo/index>` a snap.
+:ref:`animations <quickstart/Animation>`, :ref:`Ajax <quickstart/ajax>`, :ref:`class-based programming <dojo/declare>`, 
+and a package system that makes getting access to the rest of :ref:`Dojo <dojo/index>` a snap.
 
 .. code-example ::
 
