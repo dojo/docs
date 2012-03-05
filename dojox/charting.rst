@@ -897,8 +897,6 @@ All plot actions except Tooltip support the following common keyword parameters:
 | easing   | Function |dojox.fx.easing.elasticOut|The easing function that specifies how controlled parameter changes over time.    |
 +----------+----------+--------------------------+----------------------------------------------------------------------------------+
 
-You can further experiment with easing functions at DojoCampus.
-
 Highlight
 ---------
 
