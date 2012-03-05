@@ -49,7 +49,6 @@ Core
 * `Firebug Lite and Dojo <http://www.sitepen.com/blog/2008/06/02/firebug-lite-and-dojo-not-just-for-ie/>`_, SitePen and Mike Wilcox, Dojo Committer
 * `Dojo Drag and Drop, Part 1 <http://www.sitepen.com/blog/2008/06/10/dojo-drag-and-drop-1/>`_, SitePen and Revin Guillen, Dojo Committer
 * `Using Dojo for Client-side Validation <http://www.informit.com/articles/article.aspx?p=1221432&rll=1>`_, James Harmon, Object Training Group, Dojo User
-* `Extending DnD with a Creator Function <http://dojocampus.org/content/2008/06/24/extending-dojodnd-with-a-creator-function/>`_, Jeff Balogh, Dojo Contributor
 * `delegate(), delegate(), delegate() <http://infrequently.org/2008/10/delegate-delegate-delegate/>`_, Alex Russell, Google, Dojo Co-founder
 * `Dojo Concepts for Java Developers <http://www.ibm.com/developerworks/web/library/wa-aj-dojo/index.html?ca=drs->`_, Dave Draper, IBM, Dojo User
 * `Dojo: Building Blocks of the Web <http://www.sitepen.com/blog/2008/10/17/dojo-building-blocks-of-the-web/>`_, SitePen and Peter Higgins, Dojo Project Lead
@@ -74,7 +73,6 @@ Dijit
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 * `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
 * `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
-* `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
 * `Implementing an Application Preloading Overlay <https://www.sitepen.com/blog/2008/10/06/implementing-a-web-application-preloading-overlay/>`_, SitePen and Peter Higgins, Adconion, Dojo Project Lead
 * `Dojo Tag Cloud Widget <http://ekrantz.com/index.php/2008/07/29/dojo-tag-cloud-widget.html>`_, Viktor Krantz, ekrantz.com, Dojo User
 * `Extending Dojo Widgets <http://heather.koyuk.net/refractions/?p=41>`_, Heather Koyuk, Dojo User
@@ -88,7 +86,6 @@ Grid
 
 * `Simple Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `Diving Deeper into Dojo Grids <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_, Bryan Forbes, SitePen, Dojo Committer
-* `Grid 1.1 screencast <http://dojocampus.org/content/?p=36>`_, Mark Hays, IBM, Dojo Committer
 * `Dojo 1.2 Grid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `New Features in the Dojo 1.2 Grid <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `A million records in the grid <http://www.oreillynet.com/onlamp/blog/2008/04/dojo_goodness_part_6_a_million.html>`_, Matthew Russell, Zaffra, Dojo Contributor
