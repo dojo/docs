@@ -88,13 +88,13 @@ This example shows how to center a small DOM node (with background image) over a
   .. css ::
 
       .container {
-          background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=frame.png) no-repeat;
+          background: url(http://livedocs.dojotoolkit.org/dojo/frame.png) no-repeat;
           width: 237px;
           height: 181px;
       }
 
       .centered {
-          background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=img.png) no-repeat;
+          background: url(http://livedocs.dojotoolkit.org/dojo/img.png) no-repeat;
           width: 171px;
           height: 121px;
           position: absolute;
