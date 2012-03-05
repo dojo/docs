@@ -35,6 +35,7 @@ In this example using USD, both dollars and cents are required.
 .. code-example ::
 
   .. js ::
+
     // Dojo 1.7+ (AMD)
     require(["dijit/form/CurrencyTextBox", "dojo/parser", "dojo/domReady!"]);
 
