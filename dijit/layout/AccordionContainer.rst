@@ -89,7 +89,7 @@ Declarative example
     require(["dijit/layout/AccordionContainer", "dijit/layout/ContentPane", "dojo/domReady!"
     ], function(AccordionContainer, ContentPane) {
 				
-	});
+    });
 
     // Dojo <1.7
 
