@@ -26,7 +26,7 @@ Demos
 * `Queued <http://www.sitepen.com/services/showcase/queued/>`_, Dojo + AIR Netflix Queue Manager, by SitePen
 * `StockList <http://www.sitepen.com/blog/2011/04/04/stocklist-real-time-business-analytics-using-dojo-and-lightstreamer/>`_, SitePen
 * `JavaScript Dojo API Docs <http://dojodocs.uxebu.com/>`_, JavaScript-based documentation viewer, by Uxebu
-* `Toura Mulberry <http://mulberry.toura.com/>`, Toura
+* `Toura Mulberry <http://mulberry.toura.com/>`_, Toura
 
 Core
 ====
