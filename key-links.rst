@@ -13,7 +13,7 @@ Getting Started
 ===============
 
 * `SitePen Dojo QuickStart Guide <http://www.sitepen.com/blog/series/dojo-quick-start-guide/>`_, SitePen
-* `Hello Dojo <http://dojotoolkit.org/documentation/tutorials/1.6/hello_dojo>`_, SitePen and Sam Foster, mozilla, Dojo Committer
+* `Hello Dojo <http://dojotoolkit.org/documentation/tutorials/1.7/hello_dojo>`_, SitePen and Sam Foster, mozilla, Dojo Committer
 
 Demos
 =====
