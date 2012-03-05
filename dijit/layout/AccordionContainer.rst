@@ -51,7 +51,7 @@ Programmatic example
     	});
 
 
-        // Dojo <1.7
+        // Dojo <1.7 (pre-AMD)
         dojo.require("dijit.layout.AccordionContainer");
         dojo.require("dijit.layout.ContentPane");
 
