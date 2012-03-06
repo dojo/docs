@@ -58,9 +58,9 @@ Additionally, you can re-call addOnLoad anytime you immediately call dojo.requir
   // Dojo 1.7 (AMD)
   require(["dojo/ready", "dojo/fx"], function(ready, fx){
        ready(function(){
-             require(["dijit/form/Button", "dojo/_base/window"], function(btn, win){
+             require(["dijit/form/Button", "dojo/_base/window"], function(Button, win){
                   ready(function(){
-                        new dijit.form.Button({}).placeAt(win.body());
+                        new Button({}).placeAt(win.body());
                   });
              });
        });
@@ -105,7 +105,7 @@ Simply pass it a string:
   // load dojox/widget/Toaster.js:
   dojo.require("dojox.widget.Toaster");
 
-Throughout Dojo, the pattern above remains consistent. However, by using :ref:`dojo.registerModulePath <dojo/registerModulePath>` in your code, you are able to redefine the meaning of parts of namespaces.
+Throughout Dojo, the pattern above remains consistent. However, by using ``paths`` Dojo configuration flag in your code, you are able to redefine the meaning of parts of namespaces.
 
 Examples
 ========
@@ -122,7 +122,7 @@ Examples
 
     <div data-dojo-type="dijit.form.Button">
         Just an example button, please don't click
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
             alert("I said, please don't click!");
         </script>
     </div>
