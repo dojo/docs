@@ -65,40 +65,42 @@ This example creates both radio buttons programmatically and uses the query modu
 
   .. js ::
 
-        require(["dojo/query", "dojo/dom", "dojo/on", "dojo/parser", "dijit/form/RadioButton", "dijit/form/Form", "dojo/domReady!"],
-            function(query, dom, on, parser, RadioButton){
-                parser.parse();
-        
-                var radioOne = new dijit.form.RadioButton({
-                    checked: true,
-                    value: "tea",
-                    name: "drink",
-                });
-                radioOne.placeAt('rad');
-                var radioTwo = new dijit.form.RadioButton({
-                    checked: false,
-                    value: "coffee",
-                    name: "drink",
-                });
-                radioTwo.placeAt('rad1');
-                on(dom.byId('sub'),'click',function(e){
-                    dojo.stopEvent(e);
-                    var checkedButtons =  query("[name=drink]:checked");
-                    console.dir(checkedButtons);
-                    if(checkedButtons.length) {
-                        alert("Selected "+checkedButtons[0].value);
-                    }
-                    return false;
-                });
-            });
+    require(["dojo/_base/event", "dojo/query", "dojo/dom", "dojo/on", "dojo/parser", "dijit/form/RadioButton", "dijit/form/Form", "dojo/domReady!"],
+      function(event, query, dom, on, parser, RadioButton) {
+        parser.parse();
+        var radioOne = new RadioButton( {
+          checked: true,
+          value: "tea",
+          name: "drink",
+        });
+
+        radioOne.placeAt('rad','before');
+        var radioTwo = new RadioButton( {
+          checked: false,
+          value: "coffee",
+          name: "drink",
+        });
+
+        radioTwo.placeAt('rad1','before');
+        on(dom.byId('sub'),'click',
+        function(e) {
+          var checkedButtons =  query("[name=drink]:checked");
+          event.stop(e);
+          if(checkedButtons.length) {
+            alert("Selected "+checkedButtons[0].value);
+          }
+          return false;
+        });
+      }
+    );
  
   .. html ::
 
-            <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm"
+            <div data-dojo-type="dijit.form.Form" id="myform" data-dojo-id="myform"
                 encType="multipart/form-data" action="" method="">
 
-                <div id="rad" style="padding: 10px;">Tea&nbsp;</div>
-                <div id="rad1" style="padding: 10px;">Coffee&nbsp;</div>
+                <span id="rad" style="padding: 10px;">Tea</span>
+                <span id="rad1" style="padding: 10px;">Coffee</span>
                 <button id='sub'>Test</button>
             </div>
 
