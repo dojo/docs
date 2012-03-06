@@ -23,4 +23,4 @@ This section contains links to information useful to contributors or committers 
 
 * :ref:`Cutting a Dojo Release/RC/Beta <developer/release>`
 
-* :ref:`How to rstWiki <developer/rstwiki>`
+* :ref:`Editing/exporting/etc. the reference documentation <developer/rstwiki>`

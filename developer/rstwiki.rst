@@ -1,12 +1,240 @@
 .. _developer/rstwiki:
 
-==============
-How to rstWiki
-==============
+======================================
+Editing Dojo's Reference Documentation
+======================================
 
 .. contents ::
 
-Content from http://oksoclap.com/22eEx9Hh4Q needs to be merged here.
+
+The dojo reference documentation is stored at https://github.com/dojo/docs.  The documentation is all flat text files, in reST format.
+
+Editing documentation online
+============================
+
+You can edit the documentation online, through http://livedocs.dojotoolkit.org (previously docs.dojocampus.org).  Changes will be pushed upstream to the master git repository.
+
+Editing documentation locally
+=============================
+
+As an alternative to editing documentation online, you can clone the documentation repository from github, and edit it locally, pushing the changes back to github when you are finished.   (If you don't have write permission on the github dojo/docs repository you can submit a pull request).
+
+In this case, in order to test your documentation changes, you should run rstwiki, the tool at http://livedocs.dojotoolkit.org, locally, against your clone of the documentation repository. In this case you will disable automatic commit and push to github.
+
+This strategy is ideal for testing large changes, and being able to use your favorite text editor / IDE to manage the files, while giving you a simple preview of the content.
+
+Setup for mac
+-------------
+
+1. clone `rstwiki` somewhere:
+
+.. code :: shell
+
+    $ cd ~/
+    $ git clone git@github.com:phiggins42/rstwiki.git
+
+If you'd like to participate in the development of rstwiki itself (UI, backend, etc), ask for write permission on that repo.
+
+2. install required python things (tested w/ Python 2.6 & 2.7):
+
+.. code :: shell
+
+    $ easy_install cheetah cherrypy docutils pygments gitdb==0.5.2 gitpython
+
+3. update submodules / dojo:
+
+.. code :: shell
+
+    $ cd rstwiki
+    $ git submodule init && git submodule update
+
+4. copy local.sample.conf to wiki.conf, edit. adjust paths. For this example, we'll set wiki.root to point to a dojodocs git clone, eg:
+
+.. code :: script
+
+    [wiki]
+    root = "/home/me/rstwiki/dojodocs"
+
+5. clone the "Dojo Docs" repository into that path:
+
+.. code :: shell
+
+    $ cd ~/rstwiki
+    $ git clone git@github.com:dojo/docs.git dojodocs
+
+6. run rstwiki:
+
+.. code :: shell
+
+    $ export LC_CTYPE=""
+    $ mkdir /tmp/rstwiki_sessions
+    $ ./wiki.py
+
+A server should be listening on local port "4200". Point your web browser there. rstwiki will be a live preview of files on disk, following a simple wiki format of a/b/c -> a/b/c.rst, with the exception of a/b/ -> a/b/index.rst and a/b -> a/b.rst ...
+
+Notes to Windows Users:
+  - The %TMP% directory is not used for rstwiki_sessions. It seems to be hardcoded to c:\\tmp so you need to create c:\\tmp\\rstwiki_sessions
+  - I had to modify wiki.py to change
+
+.. code :: python
+
+    sys.path.append(os.path.join(os.path.dirname(__file__), "_templates", "templates"))
+
+to
+
+.. code :: python
+
+   sys.path.append(os.path.join(os.path.dirname(__file__), "templates"))
+
+I have no python knowledge so I don't know if that is a good move, but it makes it work ;) It's fine, you are just appending something to the path. Not sure why you'd need to for templates, but it's windows.
+
+Updating Toolkit
+----------------
+
+rstwiki has a checkout of the dojotoolkit from our github repo, managed as submodules. You can occasionally update this by calling:
+
+.. code :: shell
+
+    $ cd ~/rstwiki
+    $ git submodule foreach git pull origin master
+
+Or you can replace the dijit/ dojox/ dojo/ and util/ folders with [links to] an svn checkout, which would reflect a more recent "trunk".
+
+There is a `docs` namespace in rstwiki/_static/, and a build profile. This is used for both the wiki and the eventual reference-guide export.
+
+
+Sending documentation updates as pull requests
+----------------------------------------------
+ * fork a dojo/docs repo: https://github.com/dojo/docs
+ * git clone git@github.com:yourusername/docs.git
+ * git remote add upstream git://github.com/dojo/docs.git
+ * git config branch.master.remote upstream
+ * git checkout -b your-new-branch upstream/master
+ * git add .
+ * git commit -m "typo in dijit/Button"
+ * git push origin your-branch
+ * open pull request on your github account and send your-branch to
+   upstream's master
+
+Note: github has also online file editing capabilites.
+
+ If the upstream dojo/docs have changed then you will have to do some
+ merging and rebasing in your-branch (after you've commited your changes):
+ * git pull --rebase
+
+Example for editing the 1.7 docs branch without rstwiki
+-------------------------------------------------------
+ * fork a dojo/docs repo: https://github.com/dojo/docs
+ * git clone git@github.com:yourusername/docs.git
+ * git remote add upstream git://github.com/dojo/docs.git
+ * git config branch.master.remote upstream
+ * git checkout -b my-contribution-branch-to-1.7 upstream/1.7
+ * make changes in rst files
+ * git add .
+ * git commit -m "my contribution"
+ * git push origin my-contribution-branch-to-1.7
+ * open pull request on your github account and send my-contribution-branch-to-1.7 to
+   upstream's 1.7
+
+ If the upstream dojo/docs have changed then you will have to do some
+ merging and rebasing in your-branch (after you've commited your changes):
+ * git pull --rebase
+
+Testing and Exporting the doc
+=============================
+
+To create the HTML version of the documentation from the RST files, do
+
+.. code :: shell
+
+  $ cd rstwiki/export
+  $ export LC_CTYPE=""
+  $ mkdir build
+
+If your documentation is in a non-standard place, first edit the makefile.   Search for "dojodocs" and replace it with the proper path.   Then:
+
+.. code :: shell
+
+  $ make data html
+
+Look in build/warnings.txt for error/warning messages, such as misformatted tables or broken links.
+
+Backporting trunk doc changes to a doc branch
+=============================================
+
+Normally in git you merge from the version branch (ex: 1.7) into the master (aka trunk).   However, with our documentation, at least for 1.7, we've been making all changes initially on   master, and then backporting the relevant ones to the 1.7 branch.    This is partly because the web interface (livedocs.dojotoolkit.org) checks into the trunk.
+
+So these are instructions about how to copy relevant changes from the master (aka trunk) into a version branch.   They assume a local clone of the github docs repository, created by:
+
+.. code :: shell
+
+    $ git clone git@github.com:dojo/docs
+
+First, get the latest doc on the trunk:
+
+.. code :: shell
+
+  $ cd [path to documentation]
+  $ git pull
+
+Then, follow one of the two paths below.
+
+If the branch doesn't contain any branch-specific commits...
+------------------------------------------------------------
+
+Assuming that no changes have been made on the 1.7/ branch ever, other than copying commits from the trunk, the easiest way to "merge" trunk changes to the branch (according to http://stackoverflow.com/questions/1994463/how-to-cherry-pick-a-range-of-commits-and-merge-into-another-branch) is to do an interactive rebase:
+
+.. code :: shell
+
+  $ git checkout 1.7
+  $ git rebase -i
+
+This will bring up an editor with a list of commits, listing from oldest to newest.
+
+Now, delete the lines for the commits that don't apply to the branch (i.e. new information about the 1.8 release).   You can look up each commit on https://github.com/dojo/docs/commits/master to see the diff.  Then save the file and close the editor.
+
+You can call
+
+.. code :: shell
+
+   $ git log
+
+to check that the right changes were merged, plus check the files themselves.
+
+Finally, push the branch changes on your local repository back to the master repository on github, and switch your local repository back to the trunk:
+
+.. code :: shell
+
+  $ git push
+  $ git checkout master
+
+If branch specific changes have already been made, or most trunk changes don't apply...
+---------------------------------------------------------------------------------------
+
+If someone has directly changed the 1.7 branch, or at some point when most of the changes to trunk don't need to be back ported, then should switch to using the cherry-pick command to merge, which is something like
+
+.. code :: shell
+
+  $ git checkout 1.7
+  $ git cherry-pick -x commit1
+  $ git cherry-pick -x commit2
+  $ git cherry-pick -x commit3
+
+commit1 should be the oldest, and commit3 should be the newest.
+
+The -x flag is important to link the new commit with the old commit, for reference.   It adds a message to the new commit like "cherry picked from commit ...".
+
+Starting with git 1.7.7.3 you can specify a range of commits to the cherry-pick command:
+
+.. code :: shell
+
+  $ git cherry-pick -x commit0..commit2
+
+This syntax will *not* merge commit0, it starts at the commit *after* commit0.
+
+Caution: once we run cherry-pick on the branch we can't go back to using rebase for merging changes.
+
+
 
 Creating reference guide for Web site
 =====================================
