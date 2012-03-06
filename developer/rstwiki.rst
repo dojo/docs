@@ -322,42 +322,38 @@ since you can use your favorite text editor / IDE to manage the files, and previ
 (see next section for info on previewing).
 
 
-Sending documentation updates as pull requests
-----------------------------------------------
- * fork a dojo/docs repo: https://github.com/dojo/docs
- * git clone git@github.com:yourusername/docs.git
- * git remote add upstream git://github.com/dojo/docs.git
- * git config branch.master.remote upstream
- * git checkout -b your-new-branch upstream/master
- * git add .
- * git commit -m "typo in dijit/Button"
- * git push origin your-branch
- * open pull request on your github account and send your-branch to
+Updating the documentation through pull requests
+------------------------------------------------
+If you don't have write permission on the github dojo/docs repository then follow these steps.
+
+ * create a github fork of the dojo/docs github repo by pressing fork button on https://github.com/dojo/docs
+ * create local fork of your github fork: git clone git@github.com:yourusername/docs.git
+ * if working on a branch:  git checkout -b 1.7
+ * edit and fix some files
+ * git commit -a -m "typo in dijit/Button"
+ * git push (sends changes to your github account)
+ * open pull request on your github account to send your changes to
    upstream's master
 
- If the upstream dojo/docs have changed then you will have to do some
- merging and rebasing in your-branch (after you've commited your changes):
+If the upstream dojo/docs have changed then you will have to do some
+merging and rebasing in your repository (after you've commited your changes):
+
  * git pull --rebase
 
-Example of editing the 1.7 branch locally
------------------------------------------
+Updating the documentation directly
+-----------------------------------
+If you do have write permission on the github dojo/docs repository then follow these steps:
 
- * fork a dojo/docs repo: https://github.com/dojo/docs
- * git clone git@github.com:yourusername/docs.git
- * git remote add upstream git://github.com/dojo/docs.git
- * git config branch.master.remote upstream
- * git checkout -b my-contribution-branch-to-1.7 upstream/1.7
- * make changes in rst files
- * git add .
- * git commit -m "my contribution"
- * git push origin my-contribution-branch-to-1.7
- * open pull request on your github account and send my-contribution-branch-to-1.7 to
-   upstream's 1.7
+ * create local fork of dojo/docs: git clone git@github.com:dojo/docs.git
+ * if working on a branch:  git checkout -b 1.7
+ * edit and fix some files
+ * git commit -a -m "typo in dijit/Button"
+ * git push
 
- If the upstream dojo/docs have changed then you will have to do some
- merging and rebasing in your-branch (after you've commited your changes):
+If the upstream dojo/docs have changed then you will have to do some
+merging and rebasing in your repository (after you've commited your changes):
+
  * git pull --rebase
-
 
 Previewing local changes before commit
 ======================================
@@ -371,8 +367,8 @@ to confirm the reST formatting of your files.
 Alternately, you can do an export of the doc, as explained in the "Exporting the doc" section below.
 However, that is not recommended since it takes a long time to build all the documentation.
 
-Setup on mac
-------------
+Setup rstwiki on Mac
+--------------------
 
 Follow these instructions to setup on mac or another UNIX box:
 
@@ -425,8 +421,8 @@ Follow these instructions to setup on mac or another UNIX box:
 
     A server should be listening on local port "4200". Point your web browser there. rstwiki will be a live preview of files on disk, following a simple wiki format of a/b/c -> a/b/c.rst, with the exception of a/b/ -> a/b/index.rst and a/b -> a/b.rst ...
 
-Setup on Windows
-----------------
+Setup rstwiki on Windows
+------------------------
 
 Follow the general instructions above, but with these changes/notes:
 
@@ -443,8 +439,8 @@ Follow the general instructions above, but with these changes/notes:
 
        sys.path.append(os.path.join(os.path.dirname(__file__), "templates"))
 
-Updating Toolkit
-----------------
+Updating Dojo Toolkit in rstwiki
+--------------------------------
 
 rstwiki has a checkout of the dojotoolkit from our github repo, managed as submodules. You can occasionally update this by calling:
 
