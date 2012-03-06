@@ -12,112 +12,9 @@ The dojo reference documentation is stored at https://github.com/dojo/docs.  The
 Documentation Formatting Rules
 ==============================
 
-A handy reference guide is available: http://docutils.sourceforge.net/docs/user/rst/quickref.html.
+A handy reference guide of reST syntax is available at http://docutils.sourceforge.net/docs/user/rst/quickref.html.
 
-Here are some basics though:
-
-Paragraphs
-----------
-
-The following text:
-
-  ::
-
-    Paragraphs are lines of text separated by a blank link.
-    This will not become a new paragraph.
-
-    But this will.
-
-will format as:
-
-  Paragraphs are lines of text separated by a blank link.
-  This will not become a new paragraph.
-
-  But this will.
-
-Inline text
------------
-
-The following text:
-
-  ::
-
-    **bold** ... *less bold* ... ``code`` ... `emphasis` ...
-
-will format as
-
-
-    **bold** ... *less bold* ... ``code`` ... `emphasis` ...
-
-Indentation
------------
-reST is whitespace sensitive, like most python things. All `directives`_ need consistent indention.
-
-The following text:
-
-    ::
-
-        .. js ::
-
-            alert("I am 4 spaces indented from the first . in the previous directive");
-
-        I align with the previous directive, and am not included in it.
-
-        * list item 1
-            * list item 1.1
-            * list item 1.2
-        * list item 2
-            * list item 2.1
-                * list item 2.1.1
-        * list item 3
-
-produces:
-
-    .. js ::
-
-        alert("I am 4 spaces indented from the first . in the previous directive");
-
-    I align with the previous directive, and am not included in it.
-
-    * list item 1
-        * list item 1.1
-        * list item 1.2
-    * list item 2
-        * list item 2.1
-            * list item 2.1.1
-    * list item 3
-
-
-Unlike Dojo Toolkit, the docs use 4 spaces for indention, so please do not mix spaces/tabs.
-
-Links
------
-
-You can link to external pages, internal pages, and sections within the same page.
-
-External links look like::
-
-    `Text of Link <http://example.com/link.url.html>`_
-
-This would become: `Text of Link <http://example.com/link.url.html>`_
-
-Linking to other internal pages uses `ref` ::
-
-    :ref:`Jump to Somewhere! <somewhere/else>`
-
-This would become: :ref:`Jump to Dijit! <somewhere/else>`
-
-Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word::
-
-    Jump to Links_
-
-This would create a link back to a major section: Links_
-
-To reference a multi-word section header, surround the words with **`** and add a following underscore::
-
-    Jump to `the basics`_
-
-This would become: Jump to `the basics`_ (notice the case insensitivity here. It is not possible to have two headings with the same wording, even if under different subheadings)
+Here are some basics though, plus information on dojo's conventions, and our reST extensions like .. code-example.
 
 Pages
 -----
@@ -167,6 +64,84 @@ Then continue on adding subsections, separated by headings. Using a top/bottom b
     Text under section 2
 
 The depth of the sections is relevant, and can be previewed in the table of contents (which uses embedded unordered-lists as output)
+
+Paragraphs
+----------
+
+The following text:
+
+  ::
+
+    Paragraphs are lines of text separated by a blank link.
+    This will not become a new paragraph.
+
+    But this will.
+
+will format as:
+
+  Paragraphs are lines of text separated by a blank link.
+  This will not become a new paragraph.
+
+  But this will.
+
+Inline text
+-----------
+
+The following text:
+
+  ::
+
+    **bold** ... *less bold* ... ``code`` ... `emphasis` ...
+
+will format as
+
+
+    **bold** ... *less bold* ... ``code`` ... `emphasis` ...
+
+
+Links
+-----
+
+You can link to external pages, internal pages, and sections within the same page.
+
+External links look like::
+
+    `Text of Link <http://example.com/link.url.html>`_
+
+This would become: `Text of Link <http://example.com/link.url.html>`_
+
+Linking to other internal pages uses `ref` ::
+
+    :ref:`Jump to Somewhere! <somewhere/else>`
+
+This would become: :ref:`Jump to Dijit! <somewhere/else>`
+
+Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word::
+
+    Jump to Links_
+
+This would create a link back to a major section: Links_
+
+To reference a multi-word section header, surround the words with **`** and add a following underscore::
+
+    Jump to `the basics`_
+
+This would become: Jump to `the basics`_ (notice the case insensitivity here. It is not possible to have two headings with the same wording, even if under different subheadings)
+
+Images
+------
+
+Images can be referenced by an ``image`` directive::
+
+    .. image :: pathtoimage.png
+
+The location is relative::
+
+    .. image :: /logo.png
+    .. image :: logo.png
+
+The former will look for an image in the root of the document tree, whereas the latter will look for an image in the current directory.
+
 
 Directives
 ----------
@@ -249,19 +224,46 @@ The above example will produce
         #bar { color:green; }
 
 
-Images
-------
+Indentation
+-----------
+reST is whitespace sensitive, like most python things. All `directives`_ need consistent indention.
 
-Images can be referenced by an ``image`` directive::
+The following text:
 
-    .. image :: pathtoimage.png
+    ::
 
-The location is relative::
+        .. js ::
 
-    .. image :: /logo.png
-    .. image :: logo.png
+            alert("I am 4 spaces indented from the first . in the previous directive");
 
-The former will look for an image in the root of the document tree, whereas the latter will look for an image in the current directory.
+        I align with the previous directive, and am not included in it.
+
+        * list item 1
+            * list item 1.1
+            * list item 1.2
+        * list item 2
+            * list item 2.1
+                * list item 2.1.1
+        * list item 3
+
+produces:
+
+    .. js ::
+
+        alert("I am 4 spaces indented from the first . in the previous directive");
+
+    I align with the previous directive, and am not included in it.
+
+    * list item 1
+        * list item 1.1
+        * list item 1.2
+    * list item 2
+        * list item 2.1
+            * list item 2.1.1
+    * list item 3
+
+
+Unlike Dojo Toolkit, the docs use 4 spaces for indention, so please do not mix spaces/tabs.
 
 Index Files
 -----------
