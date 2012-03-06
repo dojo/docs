@@ -296,21 +296,83 @@ But documents linking to additional ``dijit.tree`` namespace information would l
 Editing documentation online
 ============================
 
-You can edit the documentation online, through http://livedocs.dojotoolkit.org (previously docs.dojocampus.org).  Changes will be pushed upstream to the master git repository.
+You can edit the documentation online, through http://livedocs.dojotoolkit.org (previously docs.dojocampus.org).
+Changes will be pushed upstream to the master git repository.
+
+Alternately, you can edit online through the github interface:
+
+   1. Go to https://github.com/dojo/docs
+   2. Select a file
+   3. Click "Edit this file" or "Fork and edit this file"
+
+If you don't have write permission into the dojo/docs github repository, this will create a fork of the dojo/docs
+github repository.   After you have edited files in your fork, you can submit a push request to have your patch
+integrated into the github repository.
+
 
 Editing documentation locally
 =============================
 
-As an alternative to editing documentation online, you can clone the documentation repository from github, and edit it locally, pushing the changes back to github when you are finished.   (If you don't have write permission on the github dojo/docs repository you can submit a pull request).
+As an alternative to editing documentation online, you can clone the documentation repository from github, and edit it locally, pushing the changes back to github when you are finished.  If you don't have write permission on the github dojo/docs repository you can submit a pull request.
 
-In this case, in order to test your documentation changes, you should run rstwiki, the tool at http://livedocs.dojotoolkit.org, locally, against your clone of the documentation repository. In this case you will disable automatic commit and push to github.
+This strategy is ideal for large changes,
+since you can use your favorite text editor / IDE to manage the files, and preview the content before committing it
+(see next section for info on previewing).
 
-This strategy is ideal for testing large changes, and being able to use your favorite text editor / IDE to manage the files, while giving you a simple preview of the content.
+
+Sending documentation updates as pull requests
+----------------------------------------------
+ * fork a dojo/docs repo: https://github.com/dojo/docs
+ * git clone git@github.com:yourusername/docs.git
+ * git remote add upstream git://github.com/dojo/docs.git
+ * git config branch.master.remote upstream
+ * git checkout -b your-new-branch upstream/master
+ * git add .
+ * git commit -m "typo in dijit/Button"
+ * git push origin your-branch
+ * open pull request on your github account and send your-branch to
+   upstream's master
+
+ If the upstream dojo/docs have changed then you will have to do some
+ merging and rebasing in your-branch (after you've commited your changes):
+ * git pull --rebase
+
+Example of editing the 1.7 branch locally
+-----------------------------------------
+
+ * fork a dojo/docs repo: https://github.com/dojo/docs
+ * git clone git@github.com:yourusername/docs.git
+ * git remote add upstream git://github.com/dojo/docs.git
+ * git config branch.master.remote upstream
+ * git checkout -b my-contribution-branch-to-1.7 upstream/1.7
+ * make changes in rst files
+ * git add .
+ * git commit -m "my contribution"
+ * git push origin my-contribution-branch-to-1.7
+ * open pull request on your github account and send my-contribution-branch-to-1.7 to
+   upstream's 1.7
+
+ If the upstream dojo/docs have changed then you will have to do some
+ merging and rebasing in your-branch (after you've commited your changes):
+ * git pull --rebase
+
+
+Previewing local changes before commit
+======================================
+In order to test your documentation changes, you should run rstwiki, the tool at http://livedocs.dojotoolkit.org,
+locally, against your clone of the documentation repository.
+In this case you will disable automatic commit and push to github.
+
+Running rstwiki locally will allow you to make sure that code examples work and
+to confirm the reST formatting of your files.
+
+Alternately, you can do an export of the doc, as explained in the "Exporting the doc" section below.
+However, that is not recommended since it takes a long time to build all the documentation.
 
 Setup for mac
 -------------
 
-1. clone `rstwiki` somewhere:
+1. clone `rstwiki` somewhere
 
 .. code :: shell
 
@@ -319,13 +381,13 @@ Setup for mac
 
 If you'd like to participate in the development of rstwiki itself (UI, backend, etc), ask for write permission on that repo.
 
-2. install required python things (tested w/ Python 2.6 & 2.7):
+2. install required python things (tested w/ Python 2.6 & 2.7)
 
 .. code :: shell
 
     $ easy_install cheetah cherrypy docutils pygments gitdb==0.5.2 gitpython
 
-3. update submodules / dojo:
+3. update submodules / dojo
 
 .. code :: shell
 
@@ -339,14 +401,14 @@ If you'd like to participate in the development of rstwiki itself (UI, backend, 
     [wiki]
     root = "/home/me/rstwiki/dojodocs"
 
-5. clone the "Dojo Docs" repository into that path:
+5. clone the "Dojo Docs" repository into that path
 
 .. code :: shell
 
     $ cd ~/rstwiki
     $ git clone git@github.com:dojo/docs.git dojodocs
 
-6. run rstwiki:
+6. run rstwiki
 
 .. code :: shell
 
@@ -386,46 +448,8 @@ Or you can replace the dijit/ dojox/ dojo/ and util/ folders with [links to] an 
 
 There is a `docs` namespace in rstwiki/_static/, and a build profile. This is used for both the wiki and the eventual reference-guide export.
 
-
-Sending documentation updates as pull requests
-----------------------------------------------
- * fork a dojo/docs repo: https://github.com/dojo/docs
- * git clone git@github.com:yourusername/docs.git
- * git remote add upstream git://github.com/dojo/docs.git
- * git config branch.master.remote upstream
- * git checkout -b your-new-branch upstream/master
- * git add .
- * git commit -m "typo in dijit/Button"
- * git push origin your-branch
- * open pull request on your github account and send your-branch to
-   upstream's master
-
-Note: github has also online file editing capabilites.
-
- If the upstream dojo/docs have changed then you will have to do some
- merging and rebasing in your-branch (after you've commited your changes):
- * git pull --rebase
-
-Example for editing the 1.7 docs branch without rstwiki
--------------------------------------------------------
- * fork a dojo/docs repo: https://github.com/dojo/docs
- * git clone git@github.com:yourusername/docs.git
- * git remote add upstream git://github.com/dojo/docs.git
- * git config branch.master.remote upstream
- * git checkout -b my-contribution-branch-to-1.7 upstream/1.7
- * make changes in rst files
- * git add .
- * git commit -m "my contribution"
- * git push origin my-contribution-branch-to-1.7
- * open pull request on your github account and send my-contribution-branch-to-1.7 to
-   upstream's 1.7
-
- If the upstream dojo/docs have changed then you will have to do some
- merging and rebasing in your-branch (after you've commited your changes):
- * git pull --rebase
-
-Testing and Exporting the doc
-=============================
+Exporting the doc
+=================
 
 To create the HTML version of the documentation from the RST files, do
 
@@ -442,6 +466,9 @@ If your documentation is in a non-standard place, first edit the makefile.   Sea
   $ make data html
 
 Look in build/warnings.txt for error/warning messages, such as misformatted tables or broken links.
+
+Exporting the doc is necessary to put it on the dojotoolkit.org website, and it also generates a report about
+errors/warnings in the documentation, which is useful for fixing problems.
 
 Backporting trunk doc changes to a doc branch
 =============================================
