@@ -17,7 +17,7 @@ DOM and AJAX convenience methods, animations, and other base functionality suita
 and i18n components, and data stores. `Dijit`_ is a complete widget system, providing all core UI components and
 utilities, and `DojoX`_ is a collection of advanced components, including data grids, low-level graphics libraries,
 mobile components, and other experimental software. Finally, the `Utilities`_ section provides extensive information
-about the :ref:`Dojo Build system <build/index>`, :ref:`Dojo Module Loader <loader/index>`, and  a variety of other
+about the :ref:`Dojo Build system <build/index>`, :ref:`Dojo Module Loader <loader/index>`, and a variety of other
 Dojo-related utilities.
 
 Additionally, a :ref:`quick-start <quickstart/index>` guide is provided covering various topics, linking to related 
