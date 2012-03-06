@@ -61,7 +61,7 @@ The parser now also supports a new data-dojo-mixins attribute that allows to dyn
 
 .. js ::
 
-    require(["dojo/parser","dojox/treemap/TreeMap","dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
+    require(["dojo/parser", "dojox/treemap/TreeMap", "dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
       function(parser) {
         parser.parse();
       }
@@ -72,6 +72,16 @@ The parser now also supports a new data-dojo-mixins attribute that allows to dyn
     <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
 
 
+There's also a new method construct() that's useful for when you have a widget constructor and want to apply it to
+a node that may or may not have data-dojo-type specified:
+
+.. js ::
+
+      require(["dojo/parser", "dojo/query", "dijit/form/Slider",], function(parser, query, Slider){
+          query("input[type=slider]").forEach(function(node){
+               parser.construct(Slider, node);
+          }
+      }
 
 dojo/sniff
 ----------
