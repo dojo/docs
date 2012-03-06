@@ -371,70 +371,77 @@ to confirm the reST formatting of your files.
 Alternately, you can do an export of the doc, as explained in the "Exporting the doc" section below.
 However, that is not recommended since it takes a long time to build all the documentation.
 
-Setup for mac
--------------
+Setup on mac
+------------
 
-1. clone `rstwiki` somewhere
+Follow these instructions to setup on mac or another UNIX box:
 
-.. code :: shell
+1. Clone `rstwiki` somewhere
 
-    $ cd ~/
-    $ git clone git@github.com:phiggins42/rstwiki.git
+    .. code :: shell
 
-If you'd like to participate in the development of rstwiki itself (UI, backend, etc), ask for write permission on that repo.
+        $ cd ~/
+        $ git clone git@github.com:phiggins42/rstwiki.git
 
-2. install required python things (tested w/ Python 2.6 & 2.7)
+    If you'd like to participate in the development of rstwiki itself (UI, backend, etc), ask for write permission on that repo.
 
-.. code :: shell
+2. Install required python things (tested w/ Python 2.6 & 2.7)
 
-    $ easy_install cheetah cherrypy docutils pygments gitdb==0.5.2 gitpython
+    .. code :: shell
 
-3. update submodules / dojo
+        $ easy_install cheetah cherrypy docutils pygments gitdb==0.5.2 gitpython
 
-.. code :: shell
+3. Update submodules / dojo
 
-    $ cd rstwiki
-    $ git submodule init && git submodule update
+    .. code :: shell
 
-4. copy local.sample.conf to wiki.conf, edit. adjust paths. For this example, we'll set wiki.root to point to a dojodocs git clone, eg:
+        $ cd rstwiki
+        $ git submodule init && git submodule update
 
-.. code :: script
+4. Create wiki.conf
 
-    [wiki]
-    root = "/home/me/rstwiki/dojodocs"
+    Copy local.sample.conf to wiki.conf.   Edit and adjust paths.
+    For this example, we'll set wiki.root to point to a dojodocs git clone, eg:
 
-5. clone the "Dojo Docs" repository into that path
+    .. code :: script
 
-.. code :: shell
+        [wiki]
+        root = "/home/me/rstwiki/dojodocs"
 
-    $ cd ~/rstwiki
-    $ git clone git@github.com:dojo/docs.git dojodocs
+5. Clone the "Dojo Docs" repository into that path
 
-6. run rstwiki
+    .. code :: shell
 
-.. code :: shell
+        $ cd ~/rstwiki
+        $ git clone git@github.com:dojo/docs.git dojodocs
 
-    $ export LC_CTYPE=""
-    $ mkdir /tmp/rstwiki_sessions
-    $ ./wiki.py
+6. Run rstwiki
 
-A server should be listening on local port "4200". Point your web browser there. rstwiki will be a live preview of files on disk, following a simple wiki format of a/b/c -> a/b/c.rst, with the exception of a/b/ -> a/b/index.rst and a/b -> a/b.rst ...
+    .. code :: shell
 
-Notes to Windows Users:
+        $ export LC_CTYPE=""
+        $ mkdir /tmp/rstwiki_sessions
+        $ ./wiki.py
+
+    A server should be listening on local port "4200". Point your web browser there. rstwiki will be a live preview of files on disk, following a simple wiki format of a/b/c -> a/b/c.rst, with the exception of a/b/ -> a/b/index.rst and a/b -> a/b.rst ...
+
+Setup on Windows
+----------------
+
+Follow the general instructions above, but with these changes/notes:
+
   - The %TMP% directory is not used for rstwiki_sessions. It seems to be hardcoded to c:\\tmp so you need to create c:\\tmp\\rstwiki_sessions
   - I had to modify wiki.py to change
 
-.. code :: python
+    .. code :: python
 
-    sys.path.append(os.path.join(os.path.dirname(__file__), "_templates", "templates"))
+        sys.path.append(os.path.join(os.path.dirname(__file__), "_templates", "templates"))
 
-to
+    to
 
-.. code :: python
+    .. code :: python
 
-   sys.path.append(os.path.join(os.path.dirname(__file__), "templates"))
-
-I have no python knowledge so I don't know if that is a good move, but it makes it work ;) It's fine, you are just appending something to the path. Not sure why you'd need to for templates, but it's windows.
+       sys.path.append(os.path.join(os.path.dirname(__file__), "templates"))
 
 Updating Toolkit
 ----------------
@@ -445,8 +452,13 @@ rstwiki has a checkout of the dojotoolkit from our github repo, managed as submo
 
     $ cd ~/rstwiki
     $ git submodule foreach git pull origin master
+    $ git commit -a -m "update dojo to latest trunk"
+    $ git push
 
-Or you can replace the dijit/ dojox/ dojo/ and util/ folders with [links to] an svn checkout, which would reflect a more recent "trunk".
+
+Or you can replace the dijit/ dojox/ dojo/ and util/ folders with [links to] an svn checkout,
+which would reflect a more recent "trunk".
+(In that case, put them back to the originals before trying the commands above)
 
 There is a `docs` namespace in rstwiki/_static/, and a build profile. This is used for both the wiki and the eventual reference-guide export.
 
