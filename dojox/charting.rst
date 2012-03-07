@@ -24,7 +24,7 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
           c.addPlot("default", {type: "StackedAreas", tension:3})
             .addAxis("x", {fixLower: "major", fixUpper: "major"})
             .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
-            .setTheme(Wetland).
+            .setTheme(Wetland)
             .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
             .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
             .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
@@ -40,7 +40,7 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
     dojo.require("dojox.charting.themes.Wetland");
 
     dojo.ready(function(){
-      var c = new dojox.charting.Chart2D("chartOne");
+      var c = new dojox.charting.Chart2D("chartTwo");
       c.addPlot("default", {type: "StackedAreas", tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
           .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
@@ -54,6 +54,8 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
   .. html ::
 
     <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+    <div id="chartTwo" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+
 
 Introduction
 ============
@@ -76,6 +78,7 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
 
   .. html ::
 
+    <div id="chartamd" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
   .. js ::
@@ -92,8 +95,6 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
           chart1.render();
         });
       });
-
-.. js ::
 
       // Dojo <1.7
       dojo.require("dojox.charting.Chart");
