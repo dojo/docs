@@ -104,29 +104,38 @@ Links
 
 You can link to external pages, internal pages, and sections within the same page.
 
-External links look like::
+External links look like
 
-    `Text of Link <http://example.com/link.url.html>`_
+    ::
+
+        `Text of Link <http://example.com/link.url.html>`_
 
 This would become: `Text of Link <http://example.com/link.url.html>`_
 
-Linking to other internal pages uses `ref` ::
+Linking to other internal pages uses `ref`
 
-    :ref:`Jump to Somewhere! <somewhere/else>`
+    ::
+
+        :ref:`Jump to Somewhere! <somewhere/else>`
 
 This would become: :ref:`Jump to Dijit! <somewhere/else>`
 
-Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word::
+Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word
 
-    Jump to Links_
+    ::
+
+        Jump to Links_
 
 This would create a link back to a major section: Links_
 
-To reference a multi-word section header, surround the words with **`** and add a following underscore::
+To reference a multi-word section header, surround the words with **`** and add a following underscore
 
-    Jump to `the basics`_
+    ::
 
-This would become: Jump to `the basics`_ (notice the case insensitivity here. It is not possible to have two headings with the same wording, even if under different subheadings)
+        Jump to `the basics`_
+
+Note that links are case insensitive. It is not possible to have two headings with the same wording,
+even if under different subheadings.
 
 Images
 ------
