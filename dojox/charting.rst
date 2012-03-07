@@ -63,9 +63,10 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Charting Basics
 ===============
 
-Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more details on AMD.
-
-In historical syntax:
+Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the
+the new Dojo AMD syntax for modules while the second one is basically the same using historical Dojo syntax for packages.
+Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use
+the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more details on AMD.
 
 .. code-example::
   :type: inline
