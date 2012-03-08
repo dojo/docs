@@ -7,22 +7,54 @@ Dijit Overview
 .. contents ::
    :depth: 2
 
-Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``.
-Dijit requires Dojo Core.
-Each of the widgets and functionality provided by Dijit are described in the following sections,
-though the aforementioned :ref:`quickstart <quickstart/index>` guides cover some basics.
+**Dijit** is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires :ref:`Dojo Core <dojo/#dojo-core>` and :ref:`Dojo Base <dojo/_base>`.
+
+Each of the widgets and functionality provided by Dijit are described in the following sections, though the the
+:ref:`quickstart <quickstart>` guides and the `Tutorials <http://dojotoolkit.org/documentation/>`_ cover some basics.
 
 General Information
 ===================
+
 * :ref:`About Dijit <dijit/info>`
+
 * :ref:`Themes and Theming <dijit/themes>`
-* :ref:`a11y  <dijit/a11y/index>`
-    * :ref:`a11y Strategy <dijit/a11y/strategy>`
-    * :ref:`a11y Resources <dijit/a11y/resources>`
-    * :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
-    * :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
-    * :ref:`a11y Requirements <developer/a11y-requirements>`
-    * :ref:`a11y Statement <dijit/a11y/statement>`
+
+* :ref:`Accessibility (a11y) <dijit/a11y>`
+
+  * :ref:`a11y Strategy <dijit/a11y/strategy>`
+
+  * :ref:`a11y Resources <dijit/a11y/resources>`
+
+  * :ref:`Creating Accessible Widgets <quickstart/writingWidgets/a11y>`
+
+  * :ref:`Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`
+
+  * :ref:`a11y Requirements <developer/a11y-requirements>`
+
+  * :ref:`a11y Statement <dijit/a11y/statement>`
+
+Base Utilities
+==============
+
+* :ref:`dijit/_base <dijit/_base/>` **STUB**
+
+  * :ref:`dijit/_base/focus <dijit/_base/focus>` **COPIED**
+
+  * :ref:`dijit/_base/place <dijit/_base/place>` **COPIED**
+
+  * :ref:`dijit/_base/popup <dijit/_base/popup>` **COPIED**
+
+  * :ref:`dijit/_base/typematic <dijit/_base/typematic>` **COPIED**
+
+  * :ref:`dijit/_base/manager <dijit/_base/manager>` **STUB**
+
+  * :ref:`dijit/_base/scroll <dijit/_base/scroll>` **STUB**
+
+  * :ref:`dijit/_base/sniff <dijit/_base/sniff>` **STUB**
+
+  * :ref:`dijit/_base/wai <dijit/_base/wai>` **STUB**
+
+  * :ref:`dijit/_base/window <dijit/_base/window>` **STUB**
 
 Utility Classes
 ===============
@@ -30,63 +62,122 @@ Utility Classes
 Utility methods and classes used by widgets or by applications with widgets.
 
 * :ref:`dijit.focus <dijit/focus>` - keeps track of focused node and active widgets
+
 * :ref:`dijit.hccss <dijit/hccss>` - for detecting when IE or FF is in high contrast (aka no background images) mode
+
 * :ref:`dijit.place <dijit/place>` - low level code for positioning popups / drop downs
+
 * :ref:`dijit.popup <dijit/popup>` - high level library routines for positioning popups / drop downs
+
 * :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
+
 * :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
 
 Infrastructure Widgets
 ======================
+
 * :ref:`dijit._WidgetBase <dijit/_WidgetBase>` (and also deprecated :ref:`dijit._Widget <dijit/_Widget>`)
+
 * :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` (and also deprecated :ref:`dijit._Templated <dijit/_Templated>`)
+
 * :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
+
 * :ref:`dijit._CssStateMixin <dijit/_CssStateMixin>`
+
 * :ref:`dijit._FocusMixin <dijit/_FocusMixin>`
+
 * :ref:`dijit._HasDropDown <dijit/_HasDropDown>`
+
 * :ref:`dijit._OnDijitClickMixin <dijit/_OnDijitClickMixin>`
+
+* :ref:`dijit._BidiSupport <dijit/_BidiSupport>` **STUB**
+
+* :ref:`dijit._Calendar <dijit/_Calendar>` **STUB**
+
+* :ref:`dijit._Contained <dijit/_Contained>` **STUB**
+
+* :ref:`dijit._Container <dijit/_Container>` **STUB**
+
+* :ref:`dijit._DialogMixin <dijit/_DialogMixin>` **STUB**
+
+* :ref:`dijit._KeyNavContainer <dijit/_KeyNavContainer>` **STUB**
+
+* :ref:`dijit._MenuBase <dijit/_MenuBase>` **STUB**
+
+* :ref:`dijit._PaletteMixin <dijit/_PaletteMixin>` **STUB**
+
+* :ref:`dijit._TimePicker <dijit/_TimePicker>` **STUB**
 
 Menu Widgets
 ============
 These are the main Menu widgets:
 
 * :ref:`dijit.DropDownMenu <dijit/DropDownMenu>`
+
 * :ref:`dijit.Menu <dijit/Menu>`
+
 * :ref:`dijit.MenuBar <dijit/MenuBar>`
 
-There are also supporting widgets such as :ref:`dijit.MenuItem <dijit/MenuItem>` which are discussed
-on the pages above.
+There are also supporting widgets such as :ref:`dijit.MenuItem <dijit/MenuItem>` which are discussed on the pages above.
 
 Tree Widgets
 ============
 * :ref:`dijit.Tree <dijit/Tree>`
 
   * :ref:`Model <dijit/tree/Model>`
+
   * :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>`
+
   * :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
+
+* :ref:`dijit/_tree <dijit/_tree/>` **STUB**
+
+  * :ref:`dijit._tree.dndSource <dijit/_tree/dndSource>` **STUB**
+
+  * :ref:`dijit.tree._dndContainer <dijit/_tree/_dndContainer>` **STUB**
+
+  * :ref:`dijit.tree._dndSelector <dijit/_tree/_dndSelector>` **STUB**
+
+  * :ref:`dijit.tree.dndSource <dijit/tree/dndSource>` **STUB**
 
 Miscellaneous Widgets
 =====================
+
+* :ref:`dijit.BackgroundIframe <dijit/BackgroundIframe>` **STUB**
+
 * :ref:`dijit.Calendar <dijit/Calendar>`
+
 * :ref:`dijit.CalendarLite <dijit/CalendarLite>`
 
   **1.7+** A lighter version of :ref:`dijit.Calendar <dijit/Calendar>`, more geared for mobile devices (e.g. does not 
   have keyboard navigation)
 
 * :ref:`dijit.ColorPalette <dijit/ColorPalette>`
+
 * :ref:`dijit.Declaration <dijit/Declaration>`
+
 * :ref:`dijit.Dialog <dijit/Dialog>`
+
+* :ref:`dijit.DialogUnderlay <dijit/DialogUnderlay>` **STUB**
+
 * :ref:`dijit.Editor <dijit/Editor>`
+
 * :ref:`dijit.InlineEditBox <dijit/InlineEditBox>`
+
 * :ref:`dijit.ProgressBar <dijit/ProgressBar>`
+
 * :ref:`dijit.TitlePane <dijit/TitlePane>`
+
 * :ref:`dijit.Toolbar <dijit/Toolbar>`
+
+* :ref:`dijit.ToolbarSeperator <dijit/ToolbarSeperator>` **STUB**
+
 * :ref:`dijit.Tooltip <dijit/Tooltip>`
+
 * :ref:`dijit.TooltipDialog <dijit/TooltipDialog>`
 
-
-Form Handling
-=============
+Form Widgets and Handling
+=========================
 
 * :ref:`dijit.form <dijit/form>`
 
@@ -102,11 +193,14 @@ Form Handling
 
     * :ref:`dijit.form.MappedTextBox <dijit/form/MappedTextBox>`
 
-      A subclass of :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` that is designed to be a base class for widgets that have a visible formatted display value, and a serializable value in a hidden input field which is actually sent to the server.
+      A subclass of :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` that is designed to be a base
+      class for widgets that have a visible formatted display value, and a serializable value in a hidden input field
+      which is actually sent to the server.
 
     * :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>`
 
-      An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
+      An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number
+      up and down
 
     * :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`
 
@@ -227,36 +321,81 @@ Form Handling
 
       Base class for form widgets with a value
 
+  * :ref:`dijit/form <dijit/form/>` **STUB**
+
+    * :ref:`dijit.form._AutoCompleterMixin <dijit/form/_AutoCompleterMixin>` **STUB**
+
+    * :ref:`dijit.form._ButtonMixin <dijit/form/_ButtonMixin>` **STUB**
+
+    * :ref:`dijit.form._CheckBoxMixin <dijit/form/_CheckBoxMixin>` **STUB**
+
+    * :ref:`dijit.form._ComboBoxMenu <dijit/form/_ComboBoxMenu>` **STUB**
+
+    * :ref:`dijit.form._DateTimeTextBox <dijit/form/_DateTimeTextBox>` **STUB**
+
+    * :ref:`dijit.form._ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>` **STUB**
+
+    * :ref:`dijit.form._FormMixin <dijit/form/_FormMixin>` **STUB**
+
+    * :ref:`dijit.form._FormValueMixin <dijit/form/_FormValueMixin>` **STUB**
+
+    * :ref:`dijit.form._FormWidgetMixin <dijit/form/_FormWidgetMixin>` **STUB**
+
+    * :ref:`dijit.form._ListBase <dijit/form/_ListBase>` **STUB**
+
+    * :ref:`dijit.form._ListMouseMixin <dijit/form/_ListMouseMixin` **STUB**
+
+    * :ref:`dijit.form._RadioButtonMixin <dijit/form/_RadioButtonMixin` **STUB**
+
+    * :ref:`dijit.form._Spinner <dijit/form/_Spinner>` **STUB**
+
+    * :ref:`dijit.form._TextBoxMixin <dijit/form/_TextBoxMixin>` **STUB**
+
+    * :ref:`dijit.form._ToggleButtonMixin <dijit/form/_ToggleButtonMixin>` **STUB**
 
 Layout
 ======
 
-* :ref:`dijit.layout <dijit/layout>`
+* :ref:`dijit.layout <dijit/layout/>`
 
   * :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>`
+
   * :ref:`dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`
+
   * :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>`
+
   * :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`
+
   * :ref:`dijit.layout.LinkPane <dijit/layout/LinkPane>`
+
   * :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`
+
   * :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`
 
+* :ref:`dijit/layout/utils <dijit/layout/utils>` **STUB**
+
+* :ref:`dijit.layout.ScrollingTabController <dijit/layout/ScrollingTabController>` **STUB**
+
+* :ref:`dijit.layout.StackController <dijit/layout/StackController>` **STUB**
+
+* :ref:`dijit.layout.TabController <dijit/layout/TabController>` **STUB**
 
 Note about programmatic instantiation
 =====================================
 
-For most of the dijit widgets, you can provide a ``refNode`` which is a placeholder to position your node.
-Beware that any attribute set on it (form action, input value, etc.) won't be taken into account.
-If you want to degrade nicely and have a non-JS compatible version of your site and avoid duplicating attributes
-on controls and on instantiation, you should use ``dojo/parser``:
+For most of the Dijit widgets, you can provide a ``refNode`` which is a placeholder to position your node. Beware that
+any attribute set on it (form action, input value, etc.) won't be taken into account.  If you want to degrade nicely and
+have a non-JS compatible version of your site and avoid duplicating attributes on controls and on instantiation, you
+should use :ref:`parser.instantiate() <dojo/parser>`:
 
 .. js ::
 
-  require(["dojo/parser"], function(parser){
-      // All attributes of myNode will be preserved in the widget
-      parser.instantiate([ myNode ], {
-          data-dojo-type: "dijit/form/ValidationTextBox",
-          dojoSpecificAttr1: value,
-          dojoSpecificAttr2: value
-      })
+  require(["dojo/parser", "dojo/dom", "dijit/form/ValidationTextBox"], function(parser, dom, ValidationTextBox){
+    var myNode = dom.byId("myNode");
+    // All attributes of myNode will be preserved in the widget
+    parser.instantiate([ myNode ], {
+      data-dojo-type: "dijit.form.ValidationTextBox",
+      dojoSpecificAttr1: value,
+      dojoSpecificAttr2: value
+    });
   });
