@@ -1433,7 +1433,6 @@ See Also
 ========
 
 * `Classy JavaScript with dojo.declare`_
-* `Understanding dojo.declare, dojo.require, and dojo.provide`_ - 2008-06-03
 
 .. _`prototype-based inheritance`: http://en.wikipedia.org/wiki/Prototype-based_programming
 .. _`C3 superclass linearization`: http://en.wikipedia.org/wiki/C3_linearization

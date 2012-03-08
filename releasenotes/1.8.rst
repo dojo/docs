@@ -61,7 +61,7 @@ The parser now also supports a new data-dojo-mixins attribute that allows to dyn
 
 .. js ::
 
-    require(["dojo/parser","dojox/treemap/TreeMap","dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
+    require(["dojo/parser", "dojox/treemap/TreeMap", "dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
       function(parser) {
         parser.parse();
       }
@@ -72,6 +72,16 @@ The parser now also supports a new data-dojo-mixins attribute that allows to dyn
     <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
 
 
+There's also a new method construct() that's useful for when you have a widget constructor and want to apply it to
+a node that may or may not have data-dojo-type specified:
+
+.. js ::
+
+      require(["dojo/parser", "dojo/query", "dijit/form/Slider",], function(parser, query, Slider){
+          query("input[type=slider]").forEach(function(node){
+               parser.construct(Slider, node);
+          }
+      }
 
 dojo/sniff
 ----------
@@ -190,9 +200,12 @@ each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the T
 
 Tree
 ----
-- New `dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>`_ class for connecting `dijit/Tree <dijit/Tree>`_ to stores with the new `dojo.store <dojo/store>`_ API. (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
+- New :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` class for connecting
+  :ref:`dijit/Tree <dijit/Tree>` to stores with the new :ref:`dojo.store <dojo/store>` API.
+  (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
-- New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
+- New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically
+  (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
 
 Claro
 -----

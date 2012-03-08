@@ -5,27 +5,45 @@ dojox.charting
 ==============
 
 :Project owners: Eugene Lazutkin, Tom Trenka, Christophe Jolif
-:since: V?
+:since: V0.9
 
 .. contents ::
    :depth: 2
 
-Dojo comes with an amazing charting library, in the form of dojox.charting. A large number of features are supported, with new ones being added constantly.
+Dojo comes with an amazing charting library, in the form of dojox/charting. A large number of features are supported, with new ones being added constantly.
 
 .. code-example::
 
   .. js ::
 
+    // Dojo 1.7+ (AMD)
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojox/charting/themes/Wetland" , "dojo/ready"],
+      function(Chart, Default, Lines, Wetland, ready){
+        ready(function(){
+          var c = new Chart("chartOne");
+          c.addPlot("default", {type: "StackedAreas", tension:3})
+            .addAxis("x", {fixLower: "major", fixUpper: "major"})
+            .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
+            .setTheme(Wetland)
+            .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
+            .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
+            .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
+            .render();
+        });
+    });
+
+
+    // Dojo <1.7 (Pre-AMD)
     dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.axis2d.Default");
     dojo.require("dojox.charting.plot2d.Default");
     dojo.require("dojox.charting.themes.Wetland");
 
     dojo.ready(function(){
-      var c = new dojox.charting.Chart2D("chartOne");
+      var c = new dojox.charting.Chart2D("chartTwo");
       c.addPlot("default", {type: "StackedAreas", tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
-      .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
+          .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
           .setTheme(dojox.charting.themes.Wetland)
           .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
           .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
@@ -36,6 +54,8 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
   .. html ::
 
     <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+    <div id="chartTwo" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+
 
 Introduction
 ============
@@ -45,9 +65,10 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Charting Basics
 ===============
 
-Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more details on AMD.
-
-In historical syntax:
+Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the
+the new Dojo AMD syntax for modules while the second one is basically the same using historical Dojo syntax for packages.
+Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use
+the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more details on AMD.
 
 .. code-example::
   :type: inline
@@ -57,10 +78,25 @@ In historical syntax:
 
   .. html ::
 
+    <div id="chartamd" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
   .. js ::
 
+      // Dojo 1.7+ (AMD)
+      require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
+        function(Chart, Default, Lines, ready){
+        ready(function(){
+          var chart1 = new Chart("chartamd");
+          chart1.addPlot("default", {type: Lines});
+          chart1.addAxis("x");
+          chart1.addAxis("y", {vertical: true});
+          chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+          chart1.render();
+        });
+      });
+
+      // Dojo <1.7
       dojo.require("dojox.charting.Chart");
       dojo.require("dojox.charting.axis2d.Default");
       dojo.require("dojox.charting.plot2d.Lines");
@@ -71,22 +107,6 @@ In historical syntax:
         chart1.addAxis("y", {vertical: true});
         chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
         chart1.render();
-      });
-
-In AMD syntax:
-
-.. js ::
-
-      require(["dojox/chart/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
-        function(Chart, Default, Lines, ready){
-        ready(function(){
-          var chart1 = new Chart("chartamd");
-          chart1.addPlot("default", {type: Lines});
-          chart1.addAxis("x");
-          chart1.addAxis("y", {vertical: true});
-          chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-          chart1.render();
-        });
       });
   
 
@@ -896,8 +916,6 @@ All plot actions except Tooltip support the following common keyword parameters:
 +----------+----------+--------------------------+----------------------------------------------------------------------------------+
 | easing   | Function |dojox.fx.easing.elasticOut|The easing function that specifies how controlled parameter changes over time.    |
 +----------+----------+--------------------------+----------------------------------------------------------------------------------+
-
-You can further experiment with easing functions at DojoCampus.
 
 Highlight
 ---------
