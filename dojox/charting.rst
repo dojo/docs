@@ -34,7 +34,6 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
   .. html ::
 
     <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
-    <div id="chartTwo" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
 
 
 Introduction
@@ -58,7 +57,6 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
 
   .. html ::
 
-    <div id="chartamd" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
   .. js ::
@@ -66,7 +64,7 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
       require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
         function(Chart, Default, Lines, ready){
         ready(function(){
-          var chart1 = new Chart("chartamd");
+          var chart1 = new Chart("simplechart");
           chart1.addPlot("default", {type: Lines});
           chart1.addAxis("x");
           chart1.addAxis("y", {vertical: true});
