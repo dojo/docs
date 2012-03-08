@@ -20,11 +20,7 @@ Usage
 
 .. js ::
 
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
+    // TODO
 
 Examples
 ========
