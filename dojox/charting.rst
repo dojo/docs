@@ -44,10 +44,10 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Charting Basics
 ===============
 
-Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the
-the new Dojo AMD syntax for modules while the second one is basically the same using historical Dojo syntax for packages.
-Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use
-the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more details on AMD.
+Below is a typical example of how to create a Dojo Chart in HTML and JavaScript. It is using the
+the new Dojo AMD syntax for modules however you can still use the historical Dojo provide / require syntax for packages
+if you want to. However you are encouraged using the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for
+more details on AMD.
 
 .. code-example::
   :type: inline
@@ -385,16 +385,19 @@ Multiple Plots
 One last feature I'd like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
 
 .. js ::
-  
-  var chart1 = new dojox.charting.Chart2D("simplechart");
-  chart1.addPlot("default", {type: "Lines"});
-  chart1.addPlot("other", {type: "Areas"});
-  chart1.addAxis("x");
-  chart1.addAxis("y", {vertical: true});
-  chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Lines", "dojox/charting/plot2d/Areas", ...],
+    function(Chart, Lines, Areas, ...){
+    var chart = new Chart("simplechart");
+    chart.addPlot("default", {type: Lines});
+    chart.addPlot("other", {type: Areas});
+    chart.addAxis("x");
+    chart.addAxis("y", {vertical: true});
+    chart.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+    chart.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
       {plot: "other", stroke: {color:"blue"}, fill: "lightblue"});
-  chart1.render();
+    chart.render();
+  });
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
@@ -415,7 +418,9 @@ When a plot is rendered an animation can be triggered. In order to enable this, 
 
 .. js ::
 
-  chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.easing.linear} });
+  require(["dojox/charting/plot2d/Columns", "dojo/fx/easing", ...], function(Columns, easing, ...){
+    chart.addPlot("cols", {type: Columns, animate: { duration: 1000, easing: easing.linear} });
+  });
   
 
 The animate parameter is itself an object that can takes several parameters including:
@@ -440,40 +445,45 @@ When you are using Cartesian plots you can use the addAxis() method on a chart w
 The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are "x" and "y" by default, on your plot or your chart will not render.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
-  chart1.addAxis("x");
-  chart1.addAxis("y", {vertical: true});
+
+  require(["dojox/charting/plot2d/Lines", ...], function(Columns, ...){
+    chart.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
+    chart.addAxis("x");
+    chart.addAxis("y", {vertical: true});
+  });
 
 Next we have the fixUpper and fixLower options, which align the ticks and have 4 available options; major, minor, micro, and none. These default to none, and when set will force the end bounds to align to the corresponding tick division. If none is chosen, the end bounds will be the highest and lowest values in your data set. Another related option is the includeZero option, which will make your lower bound be zero. If your lowest data value is negative the includeZero option has no effect.
 
 .. js ::
   
-  chart1.addAxis("x", {fixUpper: "major", fixLower:"minor"});
-  chart1.addAxis("y", {vertical: true, fixUpper: "major", includeZero: true});
+  chart.addAxis("x", {fixUpper: "major", fixLower:"minor"});
+  chart.addAxis("y", {vertical: true, fixUpper: "major", includeZero: true});
 
 Now let's examine the leftBottom option. This option defaults to true, and along with the vertical option determines the side of the chart the axis is placed. At the end of Part 1 we examined adding a second plot to our chart. Let's use that sample and give the second plot its own set of axes and anchor them on the top and right using leftBottom.
 
 .. js ::
-  
-  var chart1 = new dojox.charting.Chart2D("simplechart");
-  chart1.addPlot("default", {type: "Lines"});
-  chart1.addPlot("other", {type: "Areas", hAxis: "other x", vAxis: "other y"});
-  chart1.addAxis("x");
-  chart1.addAxis("y", {vertical: true});
-  chart1.addAxis("other x", {leftBottom: false});
-  chart1.addAxis("other y", {vertical: true, leftBottom: false});
-  chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Lines", ...], function(Chart, Lines, ...){
+    // ...
+    var chart = new Chart("simplechart");
+    chart.addPlot("default", {type: Lines});
+    chart.addPlot("other", {type: "Areas", hAxis: "other x", vAxis: "other y"});
+    chart.addAxis("x");
+    chart.addAxis("y", {vertical: true});
+    chart.addAxis("other x", {leftBottom: false});
+    chart.addAxis("other y", {vertical: true, leftBottom: false});
+    chart.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+    chart.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
           {plot: "other", stroke: {color:"blue"}, fill: "lightblue"}
-  );
-  chart1.render();
+    );
+    chart.render();
+  });
 
 Finally another option is the enableCache parameter. If your axis are meant to be often re-rendered (that is the case for example if you use a mouse or touch zoom action on the chart) it might be good to cache the underlying gfx objects and not re-create them. For that do:
 
 .. js ::
   
-  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
+  chart.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
           {plot: "other", stroke: {color:"blue"}, fill: "lightblue", enableCache: true, htmlLabels: false}
   );
   
@@ -542,7 +552,7 @@ The color of the axis, the color and length of your tick marks and the font and 
 
 .. js ::
   
-  chart1.addAxis("other y", {vertical: true,
+  chart.addAxis("other y", {vertical: true,
     leftBottom: false,
     max: 7,
     stroke: "green",
@@ -566,7 +576,7 @@ This code excerpt shows how to use the axis labels property to display abbreviat
 
 .. js ::
   
-  chart1.addAxis("x", {
+  chart.addAxis("x", {
       labels: [{value: 1, text: "Jan"}, {value: 2, text: "Feb"},
           {value: 3, text: "Mar"}, {value: 4, text: "Apr"},
           {value: 5, text: "May"}, {value: 6, text: "Jun"},
@@ -586,7 +596,7 @@ In the following code the labeling function is used to add a unit after the expe
   var myLabelFunc = function(text, value, precision){
      return text+" my unit";
   };
-  chart1.addAxis("x", { labelFunc: myLabelFunc });
+  chart.addAxis("x", { labelFunc: myLabelFunc });
 
 The first parameter of the labeling function is the text already formatted by the default processing. The second parameter is the raw value for that label and the third one is the desired precision for display. Note that all parameters are optional.
 
@@ -594,12 +604,12 @@ Note that by default the axis make sure to drop superfluous labels to avoid them
 
 .. js ::
 
-  chart1.addAxis("x", { dropLabels: false });
+  chart.addAxis("x", { dropLabels: false });
 
 The drop labels mechanism computes once the size of the labels at initialization time and recompute how many must be dropped when zooming in or out the chart. However in some cases the labels size is varying with the zoom levels. In that case you need to explicitly set the labelSizeChange property on the chart for it to recompute the size of the labels on each zoom level:
 
 .. js ::
-  chart1.addAxis("x", { labelSizeChange: true });
+  chart.addAxis("x", { labelSizeChange: true });
 
 Note that this will hurt performances, so enable this only if your labels are changing size on zoom and you noticed the drop labels mechanism does not work when zooming in or out the chart.
 
@@ -607,7 +617,7 @@ Also if you keep dropLabels to true, and you know minor labels won't show up or 
 
 .. js ::
 
-  chart1.addAxis("x", { minorLabels: false });
+  chart.addAxis("x", { minorLabels: false });
 
 
 TODO: Month Labels Example
@@ -637,7 +647,7 @@ There are only a few options to cover for the addSeries() call. First up is stro
 
 .. js ::
   
-  chart1.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
+  chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
       fill: "lightblue"});
 
 The other option is marker and it allows you to define custom markers using SVG path segments. Here are some of marker types as defined in the Dojo Charting source code. Note that each is just defined internally as an SVG path:
@@ -660,15 +670,15 @@ The data array, is just an array of data. All plot types can accept a one dimens
 
 .. js ::
   
-  chart1.addSeries("Series A", [1, 2, 3, 4, 5]);
+  chart.addSeries("Series A", [1, 2, 3, 4, 5]);
 
 For any non "stacked" line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
 
 .. js ::
   
-  chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7},
+  chart.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7},
       {x: 2, y: 9}, {x: 5, y: 3}]);
-  chart1.addSeries("Series B", [{x: 3, y: 8.5}, {x: 4.2, y: 6}, {x: 5.4, y: 2}]);
+  chart.addSeries("Series B", [{x: 3, y: 8.5}, {x: 4.2, y: 6}, {x: 5.4, y: 2}]);
 
 Here is an example of using coordinate pairs with a scatter plot:
 
@@ -678,8 +688,8 @@ With any of the stacked plot types each data set added with addSeries() is place
 
 .. js ::
   
-  chart1.addSeries("Series 1", [1, 2, 3, 4, 5]);
-  chart1.addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
+  chart.addSeries("Series 1", [1, 2, 3, 4, 5]);
+  chart.addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
 
 TODO: Example Stacked Data Series
 
@@ -687,7 +697,7 @@ For pie type charts you can specify additional information: the text label for e
 
 .. js ::
   
-  chart1.addSeries("Series A", [
+  chart.addSeries("Series A", [
       {y: 4, color: "red"},
       {y: 2, color: "green"},
       {y: 1, color: "blue"},
@@ -1035,14 +1045,17 @@ MouseZoomAndPan supports several additional parameters:
 Here is an example showing how to attach a MouseZoomAndPan action to the chart and configure it:
 
 .. js ::
-  
-  var chart = new dojox.charting.Chart("test");
-  chart.addAxis("x", {type : "Default", enableCache: true});
-  chart.addAxis("y", {vertical: true});
-  chart.addPlot("default", {type: "Columns", enableCache: true});
-  chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.MouseZoomAndPan(chart, "default", { axis: "x", "none" });
-  chart.render()
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/MouseZoomAndPan", ...],
+    function(Chart, Default, Columns, MouseZoomAndPan, ...){
+    var chart = new Chart("test");
+    chart.addAxis("x", {type : Default, enableCache: true});
+    chart.addAxis("y", {vertical: true});
+    chart.addPlot("default", {type: Columns, enableCache: true});
+    chart.addSeries("Series A", [ ... ]);
+    new MouseZoomAndPan(chart, "default", { axis: "x", "none" });
+    chart.render()
+  });
 
 
 MouseIndicator
@@ -1071,21 +1084,24 @@ It also includes several styling additional parameters that allows to change the
 Here is an example showing how to attach a MouseIndicator action to the chart and configure it:
 
 .. js ::
-  
-  var chart = new dojox.charting.Chart("test");
-  chart.addAxis("x", {type : "Default", enableCache: true});
-  chart.addAxis("y", {vertical: true});
-  chart.addPlot("default", {type: "Columns", enableCache: true});
-  chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.MouseIndicator(chart, "default", { series: "Series A",
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/MouseIndicator", ...],
+    function(Chart, Default, Columns, MouseIndicator, ...){
+    var chart = new Chart("test");
+    chart.addAxis("x", {type : Default, enableCache: true});
+    chart.addAxis("y", {vertical: true});
+    chart.addPlot("default", {type: Columns, enableCache: true});
+    chart.addSeries("Series A", [ ... ]);
+    new MouseIndicator(chart, "default", { series: "Series A",
       font: "normal normal bold 12pt Tahoma",
       fillFunc: function(v){
-    return v.y>55?"green":"red";
+        return v.y>55?"green":"red";
       },
       labelFunc: function(v){
         return "x: "+v.x+", y:"+v.y;
       }});
-  chart.render();
+    chart.render();
+  });
 
 TouchZoomAndPan
 ---------------
@@ -1111,14 +1127,17 @@ TouchZoomAndPan supports several additional parameters:
 Here is an example showing how to attach a TouchZoomAndPan action to the chart and configure it:
 
 .. js ::
-  
-  var chart = new dojox.charting.Chart("test");
-  chart.addAxis("x", {type : "Default", enableCache: true});
-  chart.addAxis("y", {vertical: true});
-  chart.addPlot("default", {type: "Columns", enableCache: true});
-  chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.TouchZoomAndPan(chart, "default", { axis: "x" });
-  chart.render()
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/TouchZoomAndPan", ...],
+    function(Chart, Default, Columns, TouchZoomAndPan, ...){
+    var chart = new Chart("test");
+    chart.addAxis("x", {type : "Default", enableCache: true});
+    chart.addAxis("y", {vertical: true});
+    chart.addPlot("default", {type: "Columns", enableCache: true});
+    chart.addSeries("Series A", [ ... ]);
+    new TouchZoomAndPan(chart, "default", { axis: "x" });
+    chart.render();
+  });
 
 
 TouchIndicator
@@ -1149,23 +1168,26 @@ It also includes several styling additional parameters that allows to change the
 Here is an example showing how to attach a TouchIndicator action to the chart and configure it:
 
 .. js ::
-  
-  var chart = new dojox.charting.Chart("test");
-  chart.addAxis("x", {type : "Default", enableCache: true});
-  chart.addAxis("y", {vertical: true});
-  chart.addPlot("default", {type: "Columns", enableCache: true});
-  chart.addSeries("Series A", [ ... ]);
-  new dojox.charting.action2d.TouchIndicator(chart, "default", {
+
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/TouchIndicator", ...],
+    function(Chart, Default, Columns, TouchIndicator, ...){
+  	var chart = new Chart("test");
+  	chart.addAxis("x", {type : Default, enableCache: true});
+  	chart.addAxis("y", {vertical: true});
+  	chart.addPlot("default", {type: Columns, enableCache: true});
+  	chart.addSeries("Series A", [ ... ]);
+  	new TouchIndicator(chart, "default", {
      series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma",
      fillFunc: function(v1, v2){
-    if(v2){
-      return v2.y>v1.y?"green":"red";
-        }else{
-      return "white";
-    }
+       if(v2){
+        return v2.y>v1.y?"green":"red";
+       }else{
+        return "white";
+       }
      }
+    });
+    chart.render();
   });
-  chart.render();
 
 
 Using Actions
