@@ -29,9 +29,6 @@ All `XHR` functions follow the same pattern in the `property-bag` configuration 
 
 Example usage:
 
-Dojo 1.7 (AMD)
---------------
-
 .. js ::
   
   require(["dojo/_base/xhr"], function(xhr){
@@ -54,29 +51,6 @@ Dojo 1.7 (AMD)
       });
   });
 
-Dojo < 1.7
-----------
-
-.. js ::
-  
-  // post some data, ignore the response:
-  dojo.xhrPost({
-      form: "someFormId", // read the url: from the action="" of the <form>
-      timeout: 3000, // give up after 3 seconds
-      content: { part:"one", another:"part" } // creates ?part=one&another=part with GET, Sent as POST data when using xhrPost
-  });
-
-  // get some data, convert to JSON
-  dojo.xhrGet({
-      url:"data.json",
-      handleAs:"json",
-      load: function(data){
-          for(var i in data){
-             console.log("key", i, "value", data[i]);
-          }
-      }
-  });
-
 Introduced was the load: function, which is explained in the XHR Callbacks section below.
 
 XHR Callbacks
@@ -87,9 +61,6 @@ There are three methods one can attach to the XHR Options object to determine wh
 * load - executed when a successful Ajax call is complete. Is passed the data and an object of the XHR properties.
 * error - executed when an Ajax call times out, or otherwise fails. Is passed the error and an object of the XHR properties.
 * handle - combination of load and error callbacks, fired when either of the two conditions are met. In the success case, behaves just like load:, and in the failure case like error:
-
-Dojo 1.7 (AMD)
---------------
 
 .. js ::
   
@@ -116,34 +87,6 @@ Dojo 1.7 (AMD)
              }
           }
       });
-  });
-
-Dojo < 1.7
-----------
-
-.. js ::
- 
-  dojo.xhrPost({
-     form:"someForm",
-     load: function(data, ioArgs){
-         // ioArgs is loaded with XHR information, but not useful in simple cases
-         // data is the response from the form's action="" url
-     },
-     error: function(err, ioArgs){
-         // again, ioArgs is useful, but not in simple cases
-         console.error(err); // display the error
-     }
-  });
-  // or like this:
-  dojo.xhrPost({
-      form:"someForm",
-      handle: function(dataOrError, ioArgs){
-         if(dojo.isString(dataOrError)){
-            // handleAs defaults to text, so look for a string here
-         }else{
-            // this must be an error object
-         }
-      }
   });
 
 Alternately, you can "use plain :ref:`Deferred's <dojo/Deferred>`" to register callbacks. They are slightly more difficult to work with, but the concept is the same.
