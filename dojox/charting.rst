@@ -121,7 +121,7 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 **type** is the main option, with a default value being a basic line chart.
 
 .. js ::
-  require(["dojox/charting/plot2d/Areas", ...], function(Areas, ..){
+  require(["dojox/charting/plot2d/Areas", ...], function(Areas, ...){
     // ...
     chart.addPlot("default", { type: Areas });
   });
@@ -168,7 +168,7 @@ With any of the lines, areas or markers types you have five specific options. Fi
 
 .. js ::
 
-  require(["dojox/charting/plot2d/StackedAreas", ...], function(StackedAreas, ..){
+  require(["dojox/charting/plot2d/StackedAreas", ...], function(StackedAreas, ...){
     chart.addPlot("default", { type: StackedAreas, lines: true, areas: true, markers: false });
   });
 
@@ -182,7 +182,7 @@ Tension allows you to add some curve to the lines on you plot. By default this o
 
 .. js ::
 
-  require(["dojox/charting/plot2d/StackedLines", ...], function(StackedLines, ..){
+  require(["dojox/charting/plot2d/StackedLines", ...], function(StackedLines, ...){
     chart.addPlot("default", {type: StackedLines, tension: "S" });
   });
 
@@ -201,7 +201,7 @@ All three restrictions are applied in the following order: gap, minBarSize, maxB
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ..){
+  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ...){
     chart.addPlot("default", { type: Bars, gap: 5, minBarSize: 3, maxBarSize: 20 });
   });
   
@@ -209,7 +209,7 @@ In addition the bar and column graph types can benefit from gfx shapes caching w
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ..){
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ...){
     chart.addPlot("default", {type: Columns, enableCache: true});
   });
   
@@ -219,7 +219,7 @@ For any chart type that supports axes, you can also define custom names to your 
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ..){
+  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ...){
     chart.addPlot("default", { type: Bars, hAxis: "cool x", vAxis: "super y" });
   });
 
@@ -258,7 +258,7 @@ Shadows can be added to a plot on data points as follows:
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Lines", ...], function(Lines, ..){
+  require(["dojox/charting/plot2d/Lines", ...], function(Lines, ...){
     chart.addPlot("default", { type: Lines, markers: true,
       tension: "X", shadow: {dx: 2, dy: 2} });
   });
@@ -267,7 +267,7 @@ Finally if you need to specify the style of your plot elements depending on a fu
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ..){
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ...){
     chart.addPlot("default", { type: Columns, styleFunc: function(item){
       if(item.y < 10){
         return { fill : "red" };
@@ -303,23 +303,26 @@ Spider chart also keeps a separate list of parameters. Here comes the parameters
 And here is an example for spider chart:
 
 .. js ::
-  
-  chart.addPlot("default", {
-    type:         "Spider",
-    labelOffset:      -10,
-    divisions:           5,
-    seriesFillAlpha:     0.2,
-    markerSize:       3,
-    precision:         0,
-    spiderType:          "polygon"
+
+  require(["dojox/charting/plot2d/Spider", "dojox/charting/widget/SelectableLegend, ...], function(Spider, SelectableLegend, ...){
+     // ...
+    chart.addPlot("default", {
+      type: Spider,
+      labelOffset: -10,
+      divisions: 5,
+      seriesFillAlpha: 0.2,
+      markerSize: 3,
+      precision: 0,
+      spiderType: "polygon"
+    });
+    chart.addSeries("China", {data: {"GDP": 2, "area": 6, "population": 2000, "inflation": 15, "growth": 12}}, { fill: "blue" });
+    chart.addSeries("USA", {data: {"GDP": 3, "area": 20, "population": 1500, "inflation": 10, "growth": 3}}, { fill: "green" });
+    // ...
+    chart.addSeries("Canada", {data: {"GDP": 1, "area": 18, "population": 300, "inflation": 3, "growth": 15}}, { fill: "purple" });
+    chart.render();
+
+    var legend = new SelectableLegend({chart: chart, horizontal: true}, "legend");
   });
-  chart.addSeries("China", {data: {"GDP": 2, "area": 6, "population": 2000, "inflation": 15, "growth": 12}}, { fill: "blue" });
-  chart.addSeries("USA", {data: {"GDP": 3, "area": 20, "population": 1500, "inflation": 10, "growth": 3}}, { fill: "green" });
-  ...
-  chart.addSeries("Canada", {data: {"GDP": 1, "area": 18, "population": 300, "inflation": 3, "growth": 15}}, { fill: "purple" });
-  chart.render();
-        
-  var legend = new dc.widget.SelectableLegend({chart: chart, horizontal: true}, "legend");
 
 The Spider plot contains as many axes as the number of dimensions in its data (5 in the example above). By default each axis minimum and maximum is computed from the data. You can override this (for example if you have a single data series) by explicitly adding axis to you charts instead of relying on the default mechanism. In the following example the minimum and maxium for GDP axis is overridden:
 
@@ -343,30 +346,36 @@ the following four boolean options to determine if lines will be displayed at th
 minor axis tick marks.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Grid",
+
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("default", { type: "Grid",
           hMajorLines: true,
           hMinorLines: false,
           vMajorLines: true,
-          vMinorLines: false});
+          vMinorLines: false });
+  });
 
 If you need the grid to be aligned with alternate axes you can do the following:
 
 .. js ::
 
-  chart1.addPlot("Grid", {type: "Grid",
-    hAxis: "other x",
-    vAxis: "other y",
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart1.addPlot("Grid", { type: Grid,
+      hAxis: "other x",
+      vAxis: "other y",
+    });
   });
 
 Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
 
 .. js ::
 
-  chart1.addPlot("Grid", {type: "Grid",
-    hAxis: "other x",
-    vAxis: "other y",
-    enableCache: true
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("Grid", { type: Grid,
+      hAxis: "other x",
+      vAxis: "other y",
+      enableCache: true
+    });
   });
 
 
