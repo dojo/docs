@@ -317,6 +317,7 @@ Individuals who have signed Dojo CLAs
 * Lulek, Marcin
 * Lv, Yong
 * Lynch, James William (Jim)
+* Lyon, Matt
 * Lytle, Seth
 * MacDonald, Jay John
 * Machi, Dustin
