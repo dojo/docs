@@ -36,16 +36,9 @@ not found in the widget registry.
 
 .. js ::
  
-   // Dojo 1.7+ (AMD)
    require("dijit/registry", function(registry)){
      var myWidget = registry.byId("myWidget");
    });
-
-.. js ::
-
-   // Dojo < 1.7
-   dojo.require("dijit");
-   var myWidget = dijit.byId("myWidget");
 
 Examples
 ========
