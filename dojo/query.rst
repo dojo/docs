@@ -54,9 +54,6 @@ Usage
 
 Users of other libraries will find the syntax very familiar:
 
-Dojo 1.7 (AMD)
---------------
-
 .. js ::
 
   require("dojo/query", function(query){  // Note, query or any other variable name can be used
@@ -66,19 +63,6 @@ Dojo 1.7 (AMD)
       console.debug(node.innerHTML);
     });
 
-  });
-
-
-Dojo < 1.7
-----------
-
-.. js ::
-
-  dojo.ready(function(){
-    // every element in the page with the class "blueButton" assigned
-    dojo.query(".blueButton").forEach(function(node, index, arr){
-        console.debug(node.innerHTML);
-    });
   });
 
 The returned object of a **dojo.query()** call is an instance of :ref:`dojo.NodeList <dojo/NodeList>`, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the **dojo.NodeList** class are supported and encouraged.

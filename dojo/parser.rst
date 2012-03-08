@@ -45,15 +45,9 @@ To include the Dojo parser on your page, require the module ``dojo.parser``:
 
 .. js ::
 
-    // Dojo 1.7+ (AMD)
     require("dojo/parser", function(parser){
          // write your code here
     });
-
-.. js ::
-
-    // Dojo < 1.7
-    dojo.require("dojo.parser");
 
 **Note:** ``dijit._Templated`` ``require()``'s ``dojo.parser``, so a lot of examples don't include this step
 (``dijit._Templated`` is loaded by most every Dijit). It is always safer to explicitly :ref:`require <dojo/require>`
@@ -71,15 +65,9 @@ To execute the parser manually, simply call the function ``parse``:
 
 .. js ::
 
-    // Dojo 1.7 (AMD)
     require("dojo/parser", function(parser){
          parser.parse();
     });
-
-.. js ::
-  
-    // Dojo < 1.7
-    dojo.parser.parse();
 
 To run the parser when your page loads, add a ``data-dojo-config="parseOnLoad: true"`` to your dojo script tag:
 
@@ -97,20 +85,11 @@ example calling ``startup()`` on each widget:
 
 .. js ::
   
-    // Dojo 1.7+ (AMD)
     require(["dojo/parser","dojo/_base/array"], function(parser,array){
          var widgets = parser.parse();
          array.forEach(widgets, function(w){
               w.start();
          }
-    }
-
-.. js ::
-  
-    // Dojo < 1.7
-    var widgets = dojo.parser.parse();
-    dojo.forEach(widgets, function(w){
-         w.start();
     }
 
 Markup
@@ -554,7 +533,6 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
 
 .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/_base/xhr", "dojo/parser", "dojo/dom"], function(xhr, parser, dom){
       xhr.get({
         url: "widgets.html",
@@ -565,34 +543,13 @@ Load some HTML content from a :ref:`remote URL <quickstart/ajax>`, and convert t
       });
     });
 
-.. js ::
-
-    // Dojo < 1.7
-    dojo.xhrGet({
-      url: "widgets.html",
-      load: function(data){
-        dojo.byId("container").innerHTML = data;
-        dojo.parser.parse("container");
-      }
-    });
-
 Delay page-level parsing until after some custom code (having set parseOnLoad:false):
 
 .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/parser", "dojo/ready"], function(parser, ready){
          ready(function(){
             // do something();
             parser.parse();
          });
-    });
-
-.. js ::
-
-    // Dojo < 1.7
-    dojo.require("dojo.parser");
-    dojo.ready(function(){
-         // do something();
-         dojo.parser.parse();
     });

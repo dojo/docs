@@ -26,7 +26,6 @@ Examples
 
 .. html ::
    
-    // Dojo 1.7 (AMD)
     <script type="text/javascript">
         require(["dojo/html", "dojo/ready"], function(html, ready){
             ready(function(){
@@ -42,29 +41,10 @@ Examples
     </div>
 
 
-
-.. html ::
-
-    // Dojo < 1.7
-    <script type="text/javascript">
-        dojo.require("dojo.html");
-        dojo.addOnLoad(function(){
-          // the first argument is a node reference
-          console.log("loaded");
-          dojo.html.set(dojo.byId("mycontent"), "loaded!");
-        });
-    </script>
-
-    <div id="mycontent">
-      Loading...
-    </div>
-
-
 Of course, if that was all you needed to do, you'd be better of just setting innerHTML directly. The value of dojo.html.set comes when things get a little less trivial:
 
 .. html ::
 
-    // Dojo 1.7 (AMD)
     <button id="setbtn">Click to set content</button>
     <table id="mytable">
       <tr><td>Nothing here yet</td></tr>
@@ -92,41 +72,6 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
               sethandle = null;
               dom.byId("setbtn").innerHTML = "Done";
             });
-        });
-    </script>
-
-
-.. html ::
-
-    // Dojo < 1.7
-    <button id="setbtn">Click to set content</button>
-    <table id="mytable">
-      <tr><td>Nothing here yet</td></tr>
-    </table>
-
-
-    <script type="text/javascript">
-        dojo.require("dojo.html");
-
-        var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function(){
-
-          dojo.html.set(dojo.byId("mytable"), '<tr>'
-            +'<td><label>How much?</label></td>'
-            +'<td><input type="text" data-dojo-type="dijit/form/NumberTextBox" value="0"'
-            +  ' constraints="{min:0, max:20, places:0}"'
-            +  ' promptMessage= "Enter a value between 0 and +20"'
-            +  ' required= "true" invalidMessage= "Wrong!" />'
-            +'</td>'
-            +'</tr>', {
-              parseContent: true,
-              onBegin: function(){
-                dojo.require('dijit.form.NumberTextBox');
-                this.inherited("onBegin", arguments);
-              }
-          });
-          dojo.disconnect(sethandle);
-          sethandle = null;
-          dojo.byId("setbtn").innerHTML = "Done";
         });
     </script>
 

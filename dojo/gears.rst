@@ -21,15 +21,3 @@ Dojo 1.7 (AMD)
             }
         });
     });
-
-Dojo < 1.7
-----------
-
-  .. js ::
-
-    dojo.require("dojo.gears");
-    dojo.ready(function(){
-        if(dojo.gears.available){
-            // safe to assume google.gears.factory is a gears factory
-        }
-    });

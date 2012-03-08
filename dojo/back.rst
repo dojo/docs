@@ -25,27 +25,18 @@ To use dojo.back:
 
    .. js ::
 
-      // dojo 1.7 (AMD)
       require(["dojo/back"], function(back){
           
       });
-
-      // dojo < 1.7
-      dojo.require("dojo.back");
-   ..
 
 2. Register the initial state of the page by calling:
 
    .. js ::
 
-      // dojo 1.7 (AMD)
       require(["dojo/back"], function(back){
           back.setInitialState(state);
       });
 
-      // dojo < 1.7
-       dojo.back.setInitialState(state);
-   ..
 
    This state object will be called when the user clicks Back all the way back to the start of the web application. If the user clicks Back once more, they will go back in the browser to wherever they were before loading the web application.
 
@@ -70,20 +61,16 @@ To use dojo.back:
 
        <body>
          <script type="text/javascript">
-              // dojo 1.7 (AMD)
               require(["dojo/back"], function(back){
                    back.init();
               });
-
-             // dojo < 1.7
-             dojo.back.init();
          </script>
          (rest of the body here)
        </body>
 
    ..
 
-**WARNING:** dojo.back.init() must be called before the page's DOM is finished loading. Otherwise it will not work. Be careful with xdomain loading or dojoConfig.debugAtAllCosts scenarios, in order for this method to work, dojo.back will need to be part of a build layer.
+**WARNING:** back.init() must be called before the page's DOM is finished loading. Otherwise it will not work. Be careful with xdomain loading or dojoConfig.debugAtAllCosts scenarios, in order for this method to work, dojo.back will need to be part of a build layer.
 
 Register a state object
 -----------------------
@@ -92,13 +79,9 @@ To register a state object that represents the result of a user action, use the 
 
 .. js ::
 
-  // dojo 1.7 (AMD)
   require(["dojo/back"], function(back){
      back.addToHistory(state);
   });
-
-  // dojo < 1.7
-  dojo.back.addToHistory(state);
 
 Change the URL in the location bar
 ----------------------------------

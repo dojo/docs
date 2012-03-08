@@ -22,9 +22,6 @@ dojo.Stateful provides the ability to get and set named properties in conjunctio
 Usage
 =====
 
-Dojo 1.7 (AMD)
---------------
-
 .. js ::
   
   require(["dojo/Stateful"], function(Stateful){
@@ -37,22 +34,6 @@ Dojo 1.7 (AMD)
        // test: change obj.foo:
        myObj.set("foo", "bar");
   });
-
-Dojo < 1.7
-----------
-
-.. js ::
- 
-   dojo.require('dojo.Stateful');
-
-   // create a new Stateful object:
-   var myObj = new dojo.Stateful();
-   // watch changes of property 'foo':
-   myObj.watch("foo", function(){
-       console.log("foo changed to " + myObj.get("foo"));
-   });
-   // test: change obj.foo:
-   myObj.set("foo", "bar");
 
 Available Methods
 =================
@@ -84,7 +65,6 @@ this just retrieves the object's property.
 
 .. js ::
  
-    // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object with foo = 3:
        var myObj = new Stateful({foo: 3});
@@ -94,14 +74,6 @@ this just retrieves the object's property.
        myObj.foo;         // returns 3
    });
 
-   // dojo < 1.7
-
-   // create a new Stateful object with foo = 3:
-   var myObj = new dojo.Stateful({foo: 3});
-   // call the getter for property 'foo':
-   myObj.get('foo');  // returns 3
-   // alternative syntax:
-   myObj.foo;         // returns 3
 
 set
 ---
@@ -113,7 +85,6 @@ the property. A programmatic setter may be defined in subclasses.
 
 .. js ::
  
-    // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
        var myObj = new dojo.Stateful();
@@ -124,21 +95,10 @@ the property. A programmatic setter may be defined in subclasses.
        myObj.set(foo, 5);
    });
 
-   // dojo < 1.7
-
-   // create a new Stateful object:
-   var myObj = new dojo.Stateful();
-   // watch changes of each property:
-   myObj.watch(function(name, oldValue, value){
-       // this will be called on the set below
-   }
-   myObj.set(foo, 5);
-
 set() may also be called with a hash of name/value pairs, ex:
 
 .. js ::
  
-    // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
        var myObj = new Stateful();
@@ -149,17 +109,6 @@ set() may also be called with a hash of name/value pairs, ex:
            bar: 3
        });
    });
-
-   // dojo < 1.7
-
-   // create a new Stateful object:
-   var myObj = new dojo.Stateful();
-   // The following is equivalent to calling
-   // set(foo, "Howdy") and set(bar, 3):
-   myObj.set({
-       foo: "Howdy",
-       bar: 3
-   })
 
 watch
 -----
@@ -180,7 +129,6 @@ returns:
 
 .. js ::
  
-    // dojo 1.7 (AMD)
     require(["dojo/Stateful"], function(Stateful){
        // create a new Stateful object:
        var myObj = new Stateful();
@@ -190,16 +138,6 @@ returns:
        // discontinue watching this property:
        watchHandle.unwatch(); // callback won't be called now
    });
-
-   // dojo < 1.7
-
-   // create a new Stateful object:
-   var myObj = new dojo.Stateful();
-   // watch changes of property 'foo':
-   var watchHandle = myObj.watch("foo", callback);
-   // ...
-   // discontinue watching this property:
-   watchHandle.unwatch(); // callback won't be called now
 
 
 See also

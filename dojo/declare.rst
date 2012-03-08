@@ -19,8 +19,6 @@ Basic example
 
 Define a class, "my/Person".
 
-[Dojo 1.7 (AMD)]
-
 .. js ::
 
   // in my/Person.js
@@ -39,26 +37,10 @@ Define a class, "my/Person".
     var folk = new Person("phiggins", 42, "Tennessee");
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Person", null, {
-    constructor: function(name, age, residence){
-      this.name = name;
-      this.age = age;
-      this.residence = residence;
-    }
-  });
-
-  var folk = new my.Person("phiggins", 42, "Tennessee");
-
-Using dojo.mixin in constructor
+Using lang.mixin in constructor
 -------------------------------
 
 Define a class, "my/Person", using an object for mixing in arguments instead of an argument list.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -90,32 +72,6 @@ Define a class, "my/Person", using an object for mixing in arguments instead of 
     console.log(alice.residence); // "Universe 420"
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Person", null, {
-    name: "Anonymous",
-    age: null,
-    residence: "Universe A",
-
-    constructor: function(/*Object*/ kwArgs){
-      dojo.mixin(this, kwArgs);
-    },
-
-    moveTo: function(/*string*/ residence){
-      this.residence = residence;
-    }
-  });
-
-  var anon  = new my.Person(),
-      alice = new my.Person({ name: "Alice", age: 42, residence: "Universe 1" });
-
-  console.log(anon.name, alice.name); // "Anonymous", "Alice"
-  console.log(anon.residence, alice.residence); // "Universe A", "Universe 1"
-  alice.moveTo("Universe 420");
-  console.log(alice.residence); // "Universe 420"
-
 Arrays and objects as member variables
 ======================================
 
@@ -125,8 +81,6 @@ Instance objects
 ----------------
 
 Define a class, "my/Demo.js", with instance objects.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -145,28 +99,11 @@ Define a class, "my/Demo.js", with instance objects.
     });
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Demo", null, {
-    arr: [ 1, 2, 3, 4 ], // object. shared by all instances!
-    num: 5,              // non-object. not shared.
-    str: "string",       // non-object. not shared.
-    obj: new my.Foo(),   // object. shared by all instances!
-
-    constructor: function(){
-      this.arr = [ 1, 2, 3, 4 ]; // per-instance object.
-      this.obj = new my.Foo();   // per-instance object.
-    }
-  });
 
 Static objects
 --------------
 
 Define a class, "my/Demo.js", with "static" properties.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -182,18 +119,6 @@ Define a class, "my/Demo.js", with "static" properties.
     return Demo;
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Demo", null, {
-    constructor: function(){
-      dojo.debug("this is Demo object #" + my.Demo.counter++);
-    }
-  });
-
-  my.Demo.counter = 0;
-
 Inheritance
 ===========
 
@@ -203,8 +128,6 @@ Single inheritance
 ------------------
 
 Define a "my/Employee" class that extends the "my/Person" class from the first example.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -241,40 +164,10 @@ Define a "my/Employee" class that extends the "my/Person" class from the first e
     console.log(kathryn.askForRaise(), matt.askForRaise()); // 2250, 20
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Employee", my.Person, {
-    constructor: function(name, age, residence, salary){
-      // The "constructor" method is special: the parent class (Person)
-      // constructor is called automatically before this one.
-
-      this.salary = salary;
-    },
-
-    askForRaise: function(){
-      return this.salary * 0.02;
-    }
-  });
-
-  dojo.declare("my.Boss", my.Employee, {
-    askForRaise: function(){
-      return this.salary * 0.25;
-    }
-  });
-
-  var kathryn = new my.Boss("Kathryn", 26, "Minnesota", 9000),
-      matt    = new my.Employee("Matt", 33, "California", 1000);
-
-  console.log(kathryn.askForRaise(), matt.askForRaise()); // 2250, 20
-
 Calling superclass methods
 --------------------------
 
 Superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn’t fit your needs see `Manual constructor chaining`_ below. For all other methods, use ``this.inherited(arguments)`` to call the superclass method of the same name.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -296,22 +189,6 @@ Superclass constructors are *always* called automatically, and *always* before t
     console.log(kathryn.askForRaise(), matt.askForRaise()); // 3600, 20
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.Boss", my.Employee, {
-    // override the askForRaise function from the Employee class
-    askForRaise: function(){
-      return this.inherited(arguments) * 20; // boss multiplier!
-    }
-  });
-
-  var kathryn = new my.Boss("Kathryn", 26, "Minnesota", 9000),
-      matt    = new my.Employee("Matt", 33, "California", 1000);
-
-  console.log(kathryn.askForRaise(), matt.askForRaise()); // 3600, 20
-
 Note that the first argument to ``this.inherited()`` is always literally ``arguments``, a special JavaScript array-like pseudo-variable which holds all the arguments (like argv in C). If you want to override the arguments passed to the superclass, pass them in an array as a second argument:
 
 .. js ::
@@ -328,8 +205,6 @@ Just as Dojo adds class-based inheritance to JavaScript, so it adds support for 
 In static languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). In Dojo, you can use the mixed-in properties directly.
 
 Define a "my/Blizzard" class using the base class "VanillaSoftServe" and mixins "OreoMixin" and "CookieDoughMixin":
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -380,45 +255,6 @@ Define a "my/Blizzard" class using the base class "VanillaSoftServe" and mixins 
     var yummyTreat = new Blizzard();
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  dojo.declare("my.ingredients.VanillaSoftServe", null, {
-    constructor: function(){
-      console.debug ("adding soft serve");
-    }
-  });
-
-  dojo.declare("my.ingredients.OreoMixin", null, {
-    constructor: function(){
-      console.debug("mixing in oreos");
-    },
-    kind: "plain"
-  });
-
-  dojo.declare("my.ingredients.CookieDoughMixin", null, {
-    constructor: function(){
-      console.debug("mixing in cookie dough");
-    },
-    chunkSize: "medium"
-  });
-
-  dojo.declare("my.Blizzard", [ my.ingredients.VanillaSoftServe, my.ingredients.OreoMixin, my.ingredients.CookieDoughMixin ], {
-    constructor: function(){
-      console.debug("A blizzard with " +
-        this.kind + " oreos and " +
-        this.chunkSize + "-sized chunks of cookie dough."
-      );
-    }
-  });
-
-  // This will print to console:
-  // "adding soft serve",
-  // "mixing in oreos",
-  // "mixing in cookie dough",
-  // "A blizzard with plain oreos and medium-sized chunks of cookie dough."
-  var tastyTreat = new my.Blizzard();
 
 Only the first class passed for multiple inheritance is a true superclass. The rest are *mixins*, and are mixed into the child class to produce the inheritance chain we need. On a practical level, this means that the ``instanceof`` operator cannot be used for mixins, only for base classes. Instead, use the `isInstanceOf()`_ function.
 
@@ -432,8 +268,6 @@ Inheritance Info
 
 Since 1.4 ``dojo.declare`` uses `C3 superclass linearization`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
 
-[Dojo 1.7 (AMD)]
-
 .. js ::
 
   require(['dojo/_base/declare'], function(declare){
@@ -444,21 +278,9 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization`_ to convert multip
     var E = declare([C, D]);
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null);
-  var B = dojo.declare(null);
-  var C = dojo.declare([A, B]);
-  var D = dojo.declare([B, A]);
-  var E = dojo.declare([C, D]);
-
 As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG`_ inheritance will be linearized correctly including the famous `Diamond problem`_.
 
 In same rare cases it is possible to build a linear chain, which cannot reuse the base class:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -475,22 +297,6 @@ In same rare cases it is possible to build a linear chain, which cannot reuse th
     // the quirky case
     var F = declare([C, E]);
   });
-
-[Dojo < 1.7]
-
-.. js ::
-
-  // the first batch
-  var A = dojo.declare(null);
-  var B = dojo.declare(A);
-  var C = dojo.declare(B);
-
-  // the second batch
-  var D = dojo.declare(null);
-  var E = dojo.declare([D, B]);
-
-  // the quirky case
-  var F = dojo.declare([C, E]);
 
 Let's look at ``C`` and ``E`` inheritance chains:
 
@@ -523,8 +329,6 @@ While ``this.inherited()`` takes care of all scenarios, chaining has following b
 Chained methods should not return values: all returned values are going to be ignored. They all be called with the same arguments. A good practice is to avoid modifications to the arguments. It will ensure that your classes play nice with others when used as superclasses.
 
 There are two ways to chain methods: **after** and **before** (`AOP`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -568,48 +372,6 @@ There are two ways to chain methods: **after** and **before** (`AOP`_ terminolog
   // B.destroy
   // A.destroy
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null, {
-    "-chains-": {
-      init:    "after",
-      destroy: "before"
-    },
-    init: function(token){
-      this.initialized = true;
-      this.token = token;
-      this.node = dojo.create("div", null, dojo.body());
-      console.log("A.init");
-    },
-    destroy: function(){
-      dojo.destroy(this.node);
-      this.node = null;
-      console.log("A.destroy");
-    }
-  });
-  var B = dojo.declare(A, {
-    init: function(token){
-      console.log("B.init");
-      // more code
-    },
-    destroy: function(){
-      console.log("B.destroy");
-      // more code
-    }
-  });
-
-  var x = new B();
-  x.init(42);
-  x.destroy();
-
-  // prints:
-  // A.init
-  // B.init
-  // B.destroy
-  // A.destroy
-
 Chain declarations are inherited. Chaining for individual methods can be overridden in child classes, but not advised.
 
 There is a special case: chain declaration for ``constructor``. This method supports two chaining directives: **after**, and **manual**. See more details in Constructors_.
@@ -623,8 +385,6 @@ Default constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default all constructors are chained using **after** algorithm (using `AOP`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -646,25 +406,6 @@ By default all constructors are chained using **after** algorithm (using `AOP`_ 
   // B
   // C
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null,
-    constructor: function(){ console.log("A"); }
-  };
-  var B = dojo.declare(A,
-    constructor: function(){ console.log("B"); }
-  };
-  var C = dojo.declare(B,
-    constructor: function(){ console.log("C"); }
-  };
-  new C();
-  // prints:
-  // A
-  // B
-  // C
-
 The exact algorithm of an instance initialization for chained constructors:
 
 
@@ -681,8 +422,6 @@ Manual constructor chaining
 New in 1.4.
 
 In some cases users may want to redefine how initialization works. In this case the chaining should be turned off so ``this.inherited()`` can be used instead.
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -715,36 +454,6 @@ In some cases users may want to redefine how initialization works. In this case 
   // B
   // C - 2
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null,
-    constructor: function(){
-      console.log("A");
-    }
-  };
-  var B = dojo.declare(A,
-    "-chains-": {
-      constructor: "manual"
-    },
-    constructor: function(){
-      console.log("B");
-    }
-  };
-  var C = dojo.declare(B,
-    constructor: function(){
-      console.log("C - 1");
-      this.inherited(arguments);
-      console.log("C - 2");
-    }
-  };
-  var x = new C();
-  // prints:
-  // C - 1
-  // B
-  // C - 2
-
 The example above doesn't call the constructor of ``A`` at all, and runs some code before and after calling the constructor of ``B``.
 
 The exact algorithm of an instance initialization for manual constructors:
@@ -770,8 +479,6 @@ The method has one argument: an object to mix in. It returns the constructor its
 
 Example:
 
-[Dojo 1.7 (AMD)]
-
 .. js ::
 
   require(['dojo/_base/declare'], function(declare){
@@ -796,37 +503,11 @@ Example:
     a.m2();
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null, {
-    m1: function(){
-      // ...
-    }
-  });
-
-  A.extend({
-    m1: function(){
-      // this method will replace the original method
-      // ...
-    },
-    m2: function(){
-      // ...
-    }
-  });
-
-  var x = new A();
-  a.m1();
-  a.m2();
-
 Internally this method uses :ref:`dojo.safeMixin <dojo/safeMixin>`.
 
 **Important note:** Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods would not be replaced because they are already copied.
 
 Example:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -895,73 +576,6 @@ Example:
     abc.m4(); // C org
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null, {
-    m1: function(){ console.log("A org"); },
-    m2: function(){ console.log("A org"); }
-  });
-
-  var B = dojo.declare(null, {
-    m2: function(){ this.inherited(arguments); console.log("B org"); },
-    m3: function(){ this.inherited(arguments); console.log("B org"); }
-  });
-
-  var C = dojo.declare(null, {
-    m3: function(){ this.inherited(arguments); console.log("C org"); },
-    m4: function(){ this.inherited(arguments); console.log("C org"); }
-  });
-
-  var ABC = dojo.declare([A, B, C], {});
-
-  // now A is the true base, B and C are mixed in
-
-  var abc = new ABC();
-
-  abc instanceof A; // true
-  abc instanceof B; // false
-  abc instanceof C; // false
-
-  // use isInstanceOf() to check if you include
-  // proper mixins
-
-  // let's list top methods:
-  // m1 comes from A (inherited)
-  // m2 comes from B (copied)
-  // m3 comes from C (copied)
-  // m4 comes from D (copied)
-
-  abc.m1(); // A org
-  abc.m2(); // A org, B org
-  abc.m3(); // B org, C org
-  abc.m4(); // C org
-
-  // let's extend() all prototypes
-
-  A.extend({
-    m1: function(){ console.log("A new"); },
-    m2: function(){ console.log("A new"); }
-  });
-
-  B.extend({
-    m2: function(){ this.inherited(arguments); console.log("B new"); },
-    m3: function(){ this.inherited(arguments); console.log("B new"); }
-  });
-
-  C.extend({
-    m3: function(){ this.inherited(arguments); console.log("C new"); },
-    m4: function(){ this.inherited(arguments); console.log("C new"); }
-  });
-
-  // observe that top copied methods are not changed
-
-  abc.m1(); // A new
-  abc.m2(); // A new, B org
-  abc.m3(); // B new, C org
-  abc.m4(); // C org
-
 You can see that copied methods were not replaced in ``ABC`` and ``abc``.
 
 
@@ -983,8 +597,6 @@ It returns whatever value was returned by a superclass method that was called. I
 
 
 Examples:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -1078,97 +690,6 @@ Examples:
     x.m5(); // our instance-specific method is called
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null,
-    m1: function(){
-      // ...
-    },
-    m2: function(){
-      // ...
-    },
-    m3: function(){
-      // ...
-    },
-    m4: function(){
-      // ...
-    },
-    m5: function(){
-      // ...
-    }
-  };
-
-  var B = dojo.declare(A, {
-    m1: function(){
-      // simple super call with the same arguments
-      this.inherited(arguments);
-      // super call with new arguments
-      this.inherited(arguments, [1, 2, 3]);
-    }
-  });
-
-  // extend B using extend()
-  B.extend({
-    m2: function(){
-      // this method is going to be properly annotated =>
-      // we can use the same form of this.inherited() as
-      // normal methods:
-      // simple super call with the same arguments
-      this.inherited(arguments);
-      // super call with new arguments
-      this.inherited(arguments, ["a"]);
-    }
-  });
-
-  // extend B using dojo.extend()
-  dojo.extend(B, {
-    m3: function(){
-      // this method is not annotated =>
-      // we should supply its name when calling
-      // a superclass:
-      // simple super call with the same arguments
-      this.inherited("m3", arguments);
-      // super call with new arguments
-      this.inherited("m3", arguments, ["a"]);
-    }
-  });
-
-  // let's create an instance
-  var x = new B();
-  x.m1();
-  x.m2();
-  x.m3();
-  x.m4(); // A.m4() is called
-  x.m5(); // A.m5() is called
-
-  // add a method on the fly using dojo.safeMixin()
-  dojo.safeMixin(x, {
-    m4: function(){
-      // this method is going to be properly annotated =>
-      // we can use the same form of this.inherited() as
-      // normal methods:
-      // simple super call with the same arguments
-      this.inherited(arguments);
-      // super call with new arguments
-      this.inherited(arguments, ["a"]);
-    }
-  });
-
-  // add a method on the fly
-  x.m5 = function(){
-    // this method is not annotated =>
-    // we should supply its name when calling
-    // a superclass:
-    // simple super call with the same arguments
-    this.inherited("m5", arguments);
-    // super call with new arguments
-    this.inherited("m5", arguments, ["a"]);
-  };
-
-  x.m4(); // our instance-specific method is called
-  x.m5(); // our instance-specific method is called
 
 getInherited()
 ~~~~~~~~~~~~~~
@@ -1183,8 +704,6 @@ The method accepts up to two arguments:
 The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
 
 Examples:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -1219,39 +738,6 @@ Examples:
     };
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null,
-    m1: function(){
-      // ...
-    },
-    m2: function(){
-      // ...
-    }
-  });
-
-  var B = dojo.declare(A, {
-    logAndCall: function(name, method, args){
-      console.log("Calling " + name + "...");
-      method.apply(this, args);
-      console.log("...done");
-    },
-    m1: function(){
-      var supermethod = this.getInherited(arguments);
-      this.logAndCall("A.m1", supermethod, [1, 2]);
-    }
-  });
-
-  var x = new B();
-  x.m2 = function(){
-    // we need to use a name here because
-    // this method was not properly annotated:
-    var supermethod = this.getInherited("m2", arguments);
-    this.logAndCall("A.m2", supermethod, [1, 2]);
-  };
-
 Internally this method is a helper, which calls `inherited()`_ with ``true`` as the last argument.
 
 isInstanceOf()
@@ -1262,8 +748,6 @@ This method checks if an instance is derived from a given class. It is modeled o
 The method accepts one argument: class (constructor). It returns ``true``/``false``.
 
 Examples:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -1289,38 +773,12 @@ Examples:
     console.log(x.isInstanceOf(D));  // true
   });
 
-[Dojo < 1.7]
-
-.. js ::
-
-  var A = dojo.declare(null);
-  var B = dojo.declare(null);
-  var C = dojo.declare(null);
-
-  var D = dojo.declare([A, B]);
-
-  var x = new D();
-
-  console.log(x instanceof A);     // true
-  console.log(x.isInstanceOf(A));  // true
-
-  console.log(x instanceof B);     // false
-  console.log(x.isInstanceOf(B));  // true
-
-  console.log(x instanceof C);     // false
-  console.log(x.isInstanceOf(C));  // false
-
-  console.log(x instanceof D);     // true
-  console.log(x.isInstanceOf(D));  // true
-
 Using "raw" classes with dojo.declare()
 ---------------------------------------
 
 ``dojo.declare`` allows to use "raw" classes created by other means as a superclass. Such classes are considered to be monolithic (because their structure cannot be introspected) and they cannot use advanced features like `inherited()`_. But their methods will be called by `inherited()`_ and all their methods can be chained (see Chaining_) including constructors.
 
 Examples:
-
-[Dojo 1.7 (AMD)]
 
 .. js ::
 
@@ -1361,46 +819,6 @@ Examples:
     x.m1(); // A.m1 will be called via this.inherited()
     x.m2(); // B.m2 will be called via this.inherited()
   });
-
-[Dojo < 1.7]
-
-.. js ::
-
-  // plain vanilla constructor
-  var A = function(){
-    this.a = 42;
-  };
-  A.prototype.m1 = function(){
-    // ...
-  };
-
-  // another plain vanilla constructor
-  var B = function(){
-    this.b = "abc";
-  };
-  dojo.extend(B, {
-    m2: function(){
-      // ...
-    }
-  });
-
-  var C = dojo.declare([A, B], {
-    m1: function(){
-      return this.inherited(arguments);
-    },
-    m2: function(){
-      return this.inherited(arguments);
-    }
-  });
-
-  var x = new C();
-  // both A and B will be called at this point
-
-  console.log(x.isInstanceOf(A)); // true
-  console.log(x.isInstanceOf(B)); // true
-
-  x.m1(); // A.m1 will be called via this.inherited()
-  x.m2(); // B.m2 will be called via this.inherited()
 
 Meta-information
 ----------------
