@@ -16,7 +16,6 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
 
   .. js ::
 
-    // Dojo 1.7+ (AMD)
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojox/charting/themes/Wetland" , "dojo/ready"],
       function(Chart, Default, Lines, Wetland, ready){
         ready(function(){
@@ -30,25 +29,6 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
             .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
             .render();
         });
-    });
-
-
-    // Dojo <1.7 (Pre-AMD)
-    dojo.require("dojox.charting.Chart2D");
-    dojo.require("dojox.charting.axis2d.Default");
-    dojo.require("dojox.charting.plot2d.Default");
-    dojo.require("dojox.charting.themes.Wetland");
-
-    dojo.ready(function(){
-      var c = new dojox.charting.Chart2D("chartTwo");
-      c.addPlot("default", {type: "StackedAreas", tension:3})
-          .addAxis("x", {fixLower: "major", fixUpper: "major"})
-          .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
-          .setTheme(dojox.charting.themes.Wetland)
-          .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
-          .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
-          .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
-          .render();
     });
 
   .. html ::
@@ -83,7 +63,6 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
 
   .. js ::
 
-      // Dojo 1.7+ (AMD)
       require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
         function(Chart, Default, Lines, ready){
         ready(function(){
@@ -95,20 +74,6 @@ the new AMD syntax. See :ref:`AMD loader documentation <loader/index>` for more 
           chart1.render();
         });
       });
-
-      // Dojo <1.7
-      dojo.require("dojox.charting.Chart");
-      dojo.require("dojox.charting.axis2d.Default");
-      dojo.require("dojox.charting.plot2d.Lines");
-      dojo.ready(function(){
-        var chart1 = new dojox.charting.Chart("simplechart");
-        chart1.addPlot("default", {type: "Lines"});
-        chart1.addAxis("x");
-        chart1.addAxis("y", {vertical: true});
-        chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-        chart1.render();
-      });
-  
 
 As you can see from the source it is simple to create charts.
 

@@ -55,13 +55,9 @@ A cross-namespace module which mixes all the `base dojox.fx animations`_ into :r
 
 .. js ::
 
-    // Dojo 1.7+
     require(["dojo/query", "dojox/fx/ext-dojo/NodeList"], function(query){
         // ...
     })
-
-    // Dojo < 1.7
-    dojo.require("dojox.fx.ext-dojo.NodeList");
 
 This allows you to use :ref:`dojo.query <dojo/query>` to select groups of nodes and create animation instances from them. If you *only* want stock Dojo Core animations in your ``dojo.query`` lists, check out :ref:`dojo.NodeList-fx <dojo/NodeList-fx>`
 
@@ -70,10 +66,7 @@ Additionally, a module in dojox.fx also provides the :ref:`dojox.fx.style <dojox
 
 .. js ::
  
-  // 1.7+
   require(["dojox/fx/ext-dojo/NodeList-style"], function(){ });
-  // or < 1.7
-  dojo.require("dojox.fx.ext-dojo.NodeList-style");
 
 Read more about CSS morphing at :ref:`dojox.fx.style docs <dojox/fx/style>`
 
