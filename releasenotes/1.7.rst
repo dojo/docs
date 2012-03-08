@@ -551,3 +551,6 @@ Dijit
         <textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
 
 Previously this was done automatically in general (although it was always necessary for XD builds).
+
+- If you are setting ValidationTextBox.tooltipPosition or Tooltip.defaultPosition, note that as of 1.7.2 the valid values are
+  "above-centered", "below-centered", "after-centered", "before-centered".
