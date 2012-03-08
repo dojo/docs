@@ -29,27 +29,17 @@ To use dojo.hash to listen for hash changes:
 
    .. js ::
    
-      // Dojo 1.7(AMD)
       require(["dojo/hash"], function(hash){
          // Write your code here
       });
-
-      // Dojo < 1.7
-      dojo.require("dojo.hash");
-   ..
 
 2. Subscribe to /dojo/hashchange event:
 
    .. js ::
   
-    // Dojo 1.7 (AMD)
     require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
-
-    // Dojo < 1.7
-    dojo.subscribe("/dojo/hashchange", context, callback);
-   ..
 
 Whenever the hash changes, your callback will be called with the new hash value passed as the first parameter.
 
@@ -65,28 +55,18 @@ Setter
 
   .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash){
         hash("someHashValue");
     });
-
-    // Dojo < 1.7
-    dojo.hash("someHashValue");
-  ..
 
 
   To update the hash without creating a new entry in the back history, pass true as the second (replace) param. This will update the URL to the new hash, and will replace the current history state:
 
   .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash){
         hash("someHashValue", true);
     });
-
-    // Dojo < 1.7
-    dojo.hash("someHashValue", true);
-  ..
 
 Getter
 ------
@@ -94,14 +74,9 @@ Getter
 
   .. js ::
   
-    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash){
         var hashValue = hash();
     });
-
-    // Dojo < 1.7
-    var hashValue = dojo.hash();
-  ..
 
 
 Examples
@@ -111,20 +86,14 @@ Examples
 
    .. js ::
    
-    // Dojo 1.7 (AMD)
     require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
         connect.subscribe("/dojo/hashchange", context, callback);
     });
-
-    // Dojo < 1.7
-    dojo.subscribe("/dojo/hashchange", context, callback);
-   ..
 
 2) Set the hash using query notation:
 
    .. js ::
    
-    // Dojo 1.7 (AMD)
     require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         var obj = {
             firstParam: true,
@@ -132,16 +101,6 @@ Examples
         }
         hash(ioQuery.objectToQuery(obj));
     });
-
-    // Dojo < 1.7
-    function(){
-        var obj = {
-            firstParam: true,
-            secondParam: false
-        }
-        dojo.hash(dojo.objectToQuery(obj));
-    }
-   ..
 
  Hash: #firstParam=true&secondParam=false
 
@@ -152,7 +111,6 @@ Examples
 
  .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function updateHash(){
             var obj = ioQuery.queryToObject(dojo.hash());  // get
@@ -160,14 +118,6 @@ Examples
             hash(ioQuery.objectToQuery(obj));  // set
         }
     });
-    
-    // Dojo < 1.7
-    function updateHash(){
-        var obj = dojo.queryToObject(dojo.hash());  // get
-        obj.someNewParam = true;
-        dojo.hash(dojo.objectToQuery(obj));  // set
-    }
- ..
 
  End hash: #firstParam=true&secondParam=false&someNewParam=true
 
@@ -175,7 +125,6 @@ Examples
 
    .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function callback(hash){
             // hashchange event!
@@ -185,16 +134,6 @@ Examples
             }
         }
     });
-    
-    // Dojo < 1.7
-    function callback(hash){
-        // hashchange event!
-        var obj = dojo.queryToObject(hash);
-        if(obj.firstParam){
-            // do something
-        }
-    }
-   ..
 
 5) Get and set the hash using slash notation:
 
@@ -202,7 +141,6 @@ Examples
 
  .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/hash"], function(hash){
         function updateHash(){
             var obj = hash().split("/");
@@ -210,15 +148,7 @@ Examples
             hash(obj.join("/"));
         }
     });
-    
-    // Dojo < 1.7
-    function updateHash(){
-        var obj = dojo.hash().split("/");
-        obj.push("trailingSegment");
-        dojo.hash(obj.join("/"));
-    }
- ..
- 
+
  End hash:  #/firstSegment/secondSegment/trailingSegment
 
 Advanced
@@ -231,8 +161,6 @@ Customizing the polling loop frequency
 
   var dojoConfig = { hashPollFrequency: 200 };
 
- ..
-
 Encoding/Decoding
  dojo.hash does not attempt to do any encoding or decoding.  There are many cases where consumers of dojo.hash want unencoded slashes, etc, so it's up to the consumer to encode and decode where appropriate. Anything with HTML encoding (i.e. &amp;) must be encoded with encodeURIComponent before being passed into dojo.hash due to discrepancies between browsers (Firefox decodes HTML encoding automatically before setting the URL, IE does not).
 
@@ -241,13 +169,9 @@ Encoding/Decoding
 
    dojo.hash(encodeURIComponent("hash with &amp; HTML encoding"))
 
- ..
-
 XD Dojo
  If you're using cross-domain Dojo, you must specify a local copy of a blank HTML page via 'dojoBlankHtmlUrl' configuration parameter.  If you don't, dojo.hash will not work in IE 6 or IE 7.
 
  .. js ::
 
   var dojoConfig = { dojoBlankHtmlUrl: '/blank.html' };
-
- ..
