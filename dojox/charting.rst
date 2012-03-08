@@ -93,14 +93,18 @@ title    string      null    chart title text.
 And here comes an example:
 
 .. js ::
-  
-  var chart = new dojox.charting.Chart("test", {
-    title: "Production(Quantity)",
-    titlePos: "bottom",
-    titleGap: 25,
-    titleFont: "normal normal normal 15pt Arial",
-    titleFontColor: "orange"
-  })
+
+  require(["dojox/charting/Chart", "dojo/ready"], function(Chart, ready){
+    ready(function(){
+      var chart = new dojox.charting.Chart("test", {
+        title: "Production(Quantity)",
+        titlePos: "bottom",
+        titleGap: 25,
+        titleFont: "normal normal normal 15pt Arial",
+        titleFontColor: "orange"
+      });
+    }
+  });
 
 Working with Plots
 ==================
@@ -117,8 +121,10 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 **type** is the main option, with a default value being a basic line chart.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Areas"});
+  require(["dojox/charting/plot2d/Areas", ...], function(Areas, ..){
+    // ...
+    chart.addPlot("default", { type: Areas });
+  });
 
 Available 2D chart types include:
 
@@ -161,8 +167,10 @@ Lines, Areas and Markers Plots
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, markers: false});
+
+  require(["dojox/charting/plot2d/StackedAreas", ...], function(StackedAreas, ..){
+    chart.addPlot("default", { type: StackedAreas, lines: true, areas: true, markers: false });
+  });
 
 There are also two specific graphical options, **tension** and **interpolate**.
 
@@ -173,8 +181,10 @@ Tension allows you to add some curve to the lines on you plot. By default this o
  * **"S"** for a quadratic bezier smooth lines.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "StackedLines", tension: "S" });
+
+  require(["dojox/charting/plot2d/StackedLines", ...], function(StackedLines, ..){
+    chart.addPlot("default", {type: StackedLines, tension: "S" });
+  });
 
 Finally interpolate let's you choose the behavior when a data point is missing in the chart (i.e. its data value is null). If interpolate is false (default) a the line or area will be cut at that data point and will start back at the next valid data point. If interpolate is true, the missing data point will be interpolated and the chart continuously drawn.
 
@@ -190,22 +200,28 @@ Bar, column, and candle stick graph types have some unique option to control wid
 All three restrictions are applied in the following order: gap, minBarSize, maxBarSize.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Bars", gap: 5, minBarSize: 3, maxBarSize: 20});
 
+  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ..){
+    chart.addPlot("default", { type: Bars, gap: 5, minBarSize: 3, maxBarSize: 20 });
+  });
+  
 In addition the bar and column graph types can benefit from gfx shapes caching when rendered in order to improve further rendering performances. To enable this option do the following:
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Columns", enableCache: true});
 
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ..){
+    chart.addPlot("default", {type: Columns, enableCache: true});
+  });
+  
 Note that you should enable it only if you except the chart to re-render often like for example when you intend to zoom it in or out in order to not penalize first rendering for nothing.
 
 For any chart type that supports axes, you can also define custom names to your axes here. By default they are "x" and "y", but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
 .. js ::
-  
-  chart1.addPlot("default", {type: "Bars", hAxis: "cool x", vAxis: "super y"});
+
+  require(["dojox/charting/plot2d/Bars", ...], function(Bars, ..){
+    chart.addPlot("default", { type: Bars, hAxis: "cool x", vAxis: "super y" });
+  });
 
 Pie Plot
 ~~~~~~~~
@@ -227,7 +243,7 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
       font: "",
       fontColor: "",
       radius: 0
-  },
+  }
 
 Style on Lines, Areas, Bars, Columns and Pie plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,21 +258,25 @@ Shadows can be added to a plot on data points as follows:
 
 .. js ::
 
-  chart1.addPlot("default", {type: "Lines", markers: true,
-      tension: "X", shadow: {dx: 2, dy: 2}});
-      
+  require(["dojox/charting/plot2d/Lines", ...], function(Lines, ..){
+    chart.addPlot("default", { type: Lines, markers: true,
+      tension: "X", shadow: {dx: 2, dy: 2} });
+  });
+  
 Finally if you need to specify the style of your plot elements depending on a function you can use the **styleFunc** property of these plots to compute the color based for example on data values:
 
 .. js ::
 
-  chart1.addPlot("default", {type: "Columns", styleFunc: function(item){
-    if(item.y < 10){
-      return { fill : "red" };
-    }else if(item.y > 60){
-      return { fill: "green" };
-    }
-    return {}
-  }});
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ..){
+    chart.addPlot("default", { type: Columns, styleFunc: function(item){
+      if(item.y < 10){
+        return { fill : "red" };
+      }else if(item.y > 60){
+        return { fill: "green" };
+      }
+      return {};
+    }});
+  });
 
 Spider Plot
 ~~~~~~~~~~~
