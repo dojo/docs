@@ -1211,11 +1211,11 @@ All action objects implement the following methods (no parameters are expected b
 All actions can be constructed like this:
 
 .. js ::
-  
-  var a = new dojox.charting.action2d.Magnify(
-    chart1,
-    "default",
-    {duration: 200, scale: 1.1});
+
+  require(["dojox/charting/action2d/Magnify", ...], function(Magnify, ...){
+    // ...
+    var a = new Magnify(chart, "default", {duration: 200, scale: 1.1});
+  });
 
 The first parameter is a chart. The second parameter is the name of a plot. The third parameter is an object (property bag) with all relevant keyword parameters.
 
@@ -1233,7 +1233,7 @@ One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. Th
 
 .. html ::
   
-  <div data-dojo-type="dojox.charting.widget.Chart2D" id="chart4"
+  <div data-dojo-type="dojox/charting/widget/Chart" id="chart4"
       theme="dojox.charting.themes.PlotKit.green"
       style="width: 300px; height: 300px;">
     <div class="plot" name="default" type="Pie" radius="100"
@@ -1257,8 +1257,11 @@ Interactive Legend Widget
 An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart. And series will be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows.
 
 .. js ::
-  
-  var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true}, "selectableLegend");
+
+  require(["dojox/charting/widget/SelectableLegend", ...], function(SelectableLegend, ...){
+    // ...
+    var selectableLegend = new SelectableLegend({chart: chart, outline: true}, "selectableLegend");
+  });
 
 
 Examples
