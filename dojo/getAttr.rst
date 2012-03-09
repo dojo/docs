@@ -13,9 +13,12 @@ Gets an attribute on an HTML element.
 Introduction
 ============
 
-``dojo.getAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or default value.
+``dojo.getAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It handles normalized getting of attributes
+on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or
+default value.
 
-Since Dojo 1.7, ``dojo.getAttr`` is exposed via the :ref:`get() <dojo/dom-attr#domattr-get>` method of the ``dojo/dom-attr`` module.  An alias is kept in dojo/_base/html for backward-compatibility.
+Since Dojo 1.7, ``dojo.getAttr`` is exposed via the :ref:`get() <dojo/dom-attr#get-function>` method of the
+``dojo/dom-attr`` module. An alias is kept in dojo/_base/html for backward-compatibility.
 
 Usage
 =====

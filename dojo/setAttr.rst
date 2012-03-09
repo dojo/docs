@@ -20,7 +20,7 @@ event handler properties will be normalized and that some caveats with regards t
 apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of
 returning a boolean value from the handler itself. It returns the DOM node.
 
-Since Dojo 1.7, ``dojo.setAttr`` is exposed via the :ref:`set() <dojo/dom-attr#domattr-set>` method of the
+Since Dojo 1.7, ``dojo.setAttr`` is exposed via the :ref:`set() <dojo/dom-attr#set-function>` method of the
 ``dojo/dom-attr`` module. An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage

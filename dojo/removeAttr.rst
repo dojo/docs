@@ -20,7 +20,7 @@ Introduction
 names to smooth over differences between browsers, or to provide convenient aliases, e.g., ``className`` is aliased to
 ``class``, and so on. The same algorithm is used by `dojo.attr <dojo/attr>`_.
 
-Since Dojo 1.7, ``dojo.removeAttr`` is exposed via the :ref:`remove() <dojo/dom-attr#domattr-remove>` method of the
+Since Dojo 1.7, ``dojo.removeAttr`` is exposed via the :ref:`remove() <dojo/dom-attr#remove-function>` method of the
 ``dojo/dom-attr`` module. An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage

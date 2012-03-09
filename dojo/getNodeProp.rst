@@ -25,7 +25,7 @@ attributes exactly, just use ``dojo.getNodeProp``.
 
 There is no corresponding ``dojo.setNodeProp``. If you want to set a property value, use straight assignment.
 
-Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the :ref:`getNodeProp() <dojo/dom-attr#domattr-getnodeprop>` method
+Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the :ref:`getNodeProp() <dojo/dom-attr#getnodeprop-function>` method
 of the ``dojo/dom-attr`` module. An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
