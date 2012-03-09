@@ -73,7 +73,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 20em;
         }
@@ -136,9 +136,10 @@ formatter
 .. js ::
  
   function formatter(){
+      var w;
       require(['dijit/form/Button',  'dojo/domReady!'],
-      var Button = require('dijit/form/Button');
-      var w = new Button({...});
+      function(Button) {
+          w = new Button({...});
           w._destroyOnRemove=true;
       });
       return w;
@@ -155,7 +156,7 @@ The structure of the table can also be set programmatically.  The ``<table>`` at
 
 Event handling
 --------------
-Event handlers can be associated with the DataGrid.  Many of these events are expected to be handled by the DataGrid itself.  Grabbing these events without passing the event on to the grid can cause unexpected results.  As such, it is wise to add an event handler as opposed to replace the event handler.   Consider using :ref:`dojo.connect() <dojo/connect>`.
+Event handlers can be associated with the DataGrid.  Many of these events are expected to be handled by the DataGrid itself.  Grabbing these events without passing the event on to the grid can cause unexpected results.  As such, it is wise to add an event handler as opposed to replace the event handler.   Consider using :ref:`, Buttondojo/on() <dojo/on>`.
 
 The following handlers are defined:
 
@@ -454,7 +455,7 @@ This example shows how to create a simple Grid programmatically.
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 20em;
         }
@@ -473,8 +474,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
  
   .. js ::
 
-       require(['dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
-        function(lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
+       require(['dojo/_base/array', 'dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
+        function(array, lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
           parser.parse();
           /*set up data store*/
           var data = {
@@ -518,12 +519,12 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                   /* Iterate through the list of selected items.
                   The current item is available in the variable
                   'selectedItem' within the following function: */
-                  dojo.forEach(items, function(selectedItem){
+                  array.forEach(items, function(selectedItem){
                       if(selectedItem !== null){
                           /* Iterate through the list of attributes of each item.
                           The current attribute is available in the variable
                           'attribute' within the following function: */
-                          dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
+                          array.forEach(grid.store.getAttributes(selectedItem), function(attribute){
                               /* Get the value of the current attribute:*/
                               var value = grid.store.getValues(selectedItem, attribute);
                               /* Now, you can do something with this attribute/value pair.
@@ -563,7 +564,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 15em;
         }
@@ -649,7 +650,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 20em;
         }
@@ -667,8 +668,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
  
   .. js ::
 
-       require(['dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
-        function(lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
+       require(['dojo/_base/array', 'dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
+        function(array, lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
           parser.parse();
           /*set up data store*/
           var data = {
@@ -722,7 +723,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                   /* Iterate through the list of selected items.
                      The current item is available in the variable
                      "selectedItem" within the following function: */
-                  dojo.forEach(items, function(selectedItem){
+                  array.forEach(items, function(selectedItem){
                       if(selectedItem !== null){
                           /* Delete the item from the data store: */
                           store.deleteItem(selectedItem);
@@ -759,7 +760,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
         @import '{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css';
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 15em;
         }
@@ -855,7 +856,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 15em;
         }
@@ -940,7 +941,7 @@ To use it, you just have to override default behavior by yours.
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid needs a explicit height by default*/
+        /*Grid needs an explicit height by default*/
         #grid {
             height: 20em;
         }
@@ -1026,8 +1027,8 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
           function(DataGrid, ItemFileWriteStore, stamp, locale){
             function formatDate(datum){
                 /* Format the value in store, so as to be displayed.*/
-                var d = dojo.date.stamp.fromISOString(datum);
-                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+                var d = stamp.fromISOString(datum);
+                return locale.format(d, {selector: 'date', formatLength: 'long'});
             }
             
             var layout = [
@@ -1087,13 +1088,13 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
           function(DataGrid, ItemFileWriteStore, cells, stamp, locale){
             function formatDate(datum){
                 /*Format the value in store, so as to be displayed.*/
-                var d = dojo.date.stamp.fromISOString(datum);
-                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+                var d = stamp.fromISOString(datum);
+                return locale.format(d, {selector: 'date', formatLength: 'long'});
             }
         
             function getDateValue(){
                 /*Override the default getValue function for dojox.grid.cells.DateTextBox*/
-                return dojo.date.stamp.toISOString(this.widget.get('value'));
+                return stamp.toISOString(this.widget.get('value'));
             }
         
             var layout = [
@@ -1106,7 +1107,7 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
                     constraint: {formatLength: 'long'} /*Format the date value shown in DateTextBox*/
                 }
             ];
-            var store = new dojo.data.ItemFileWriteStore({
+            var store = new ItemFileWriteStore({
                 data: {
                     identifier: "id",
                     items: [
@@ -1152,20 +1153,20 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
   .. js ::
 
-        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/date/locale', 'dojo/domReady!'],
-          function(DataGrid, ItemFileWriteStore, cells, stamp){
+        require(['dojo/date/locale', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/date/stamp', 'dojo/domReady!'],
+          function(locale, DataGrid, ItemFileWriteStore, cells, stamp){
             var storePattern = 'yyyy/MM/dd';
             var displayPattern = 'yyyy, MMMM, d';
         
             function formatDate(datum){
                 /*Format the value in store, so as to be displayed.*/
-                var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
-                return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
+                var d = locale.parse(datum, {selector: 'date', datePattern: storePattern});
+                return locale.format(d, {selector: 'date', datePattern: displayPattern});
             }
         
             function getDateValue(){
                 /*Override the default getValue function for dojox.grid.cells.DateTextBox*/
-                return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
+                return locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
             }
         
             var layout = [
@@ -1178,7 +1179,7 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
                     constraint: {datePattern: displayPattern}/*Format the date value shown in DateTextBox*/
                 }
             ];
-            var store = new dojo.data.ItemFileWriteStore({
+            var store = new ItemFileWriteStore({
                 data: {
                     identifier: "id",
                     items: [
@@ -1221,9 +1222,8 @@ _`Inserting a dijit widget (Button) in a field`
   .. js ::
 
         require(['dojox/grid/DataGrid', 'dojo/data/ItemFileReadStore', 'dojo/date/stamp', 'dojo/date/locale',  'dijit/form/Button',  'dojo/domReady!'],
-            function(DataGrid, ItemFileReadStore, stamp, locale){
+            function(DataGrid, ItemFileReadStore, stamp, locale, Button){
                 function formatter(){
-                    var Button = require('dijit/form/Button');
                     var w = new Button({
                         label: "Click me!",
                         onClick: function() {
@@ -1343,13 +1343,17 @@ However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to m
 
 .. html ::
   
-  var grid = new dojox.grid.DataGrid({keepSelection: true}, div);
-
-  var grid = new dojox.grid.EnhancedGrid({keepSelection: true}, div);
-
-  var grid = new dojox.grid.TreeGrid({keepSelection: true}, div);
-
-  var grid = new dojox.grid.LazyTreeGrid({keepSelection: true}, div);
+  require(['dojox/grid/DataGrid', 'dojox/grid/EnhancedGrid', 'dojox/grid/TreeGrid', 'dojox/grid/LazyTreeGrid', 'dojo/domReady!'],
+    function(DataGrid, EnhancedGrid, TreeGrid, LazyTreeGrid) {
+      var grid = new DataGrid({keepSelection: true}, div);
+  
+      var grid = new EnhancedGrid({keepSelection: true}, div);
+  
+      var grid = new TreeGrid({keepSelection: true}, div);
+  
+      var grid = new LazyTreeGrid({keepSelection: true}, div);
+    }
+  );
 
 
 But please note:
