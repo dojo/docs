@@ -18,17 +18,17 @@ Introduction
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileWriteStore");
-    
-      dojo.ready(function(){
+        require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
+          function(lang, DataGrid, ItemFileWriteStore, dom){
+
           /*set up data store*/
           var data = {
-            identifier: 'id',
+            identifier: "id",
             items: []
           };
           var data_list = [
@@ -37,33 +37,33 @@ Grids are familiar in the client/server development world. Basically a grid is a
             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+              data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
-        
+          var store = new ItemFileWriteStore({data: data});
+
           /*set up layout*/
           var layout = [[
             {'name': 'Column 1', 'field': 'id', 'width': '100px'},
             {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
             {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+            {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
           ]];
 
-          /*create a new grid:*/
-          var grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          var grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
-          /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+              /*append the new grid to the div*/
+              grid.placeAt("gridDiv");
 
-          /*Call startup() to render the grid*/
-          grid.startup();
+              /*Call startup() to render the grid*/
+              grid.startup();
       });
+
 
   .. html ::
 
@@ -73,9 +73,8 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 20em;
         }
 
@@ -130,14 +129,20 @@ formatter
 
 - Note: When a widget is returned from a formatter, it's important to use the following way to ensure widget.destroyed() is called when the page containing it get destroyed - this may happen when grid is scrolled away from the current view-port or when the grid instance is destroyed, otherwise significant memory increase will be observed when Grid is kept scrolling or creating/destroying. See the related `#13961 <http://bugs.dojotoolkit.org/ticket/13961>`_
 
+
+
+- Note that the dijit/form/Button module must have been loaded before executing this function or the require will throw an error. There is an example of creating a widget in a cell in the examples section, "`Inserting a dijit widget (Button) in a field`_". 
+
 .. js ::
-  
+ 
   function formatter(){
-      var w = new dijit.form.Button({...});
-      w._destroyOnRemove = true;
+      require(['dijit/form/Button',  'dojo/domReady!'],
+      var Button = require('dijit/form/Button');
+      var w = new Button({...});
+          w._destroyOnRemove=true;
+      });
       return w;
   }
-
 
 get
   A JavaScript function that is called which returns the value to be shown in the cell.  The function is passed two parameters.  The first is the row index in the DataGrid.  The second is the DataStore record/item.  Given these two parameters, the function is expected to know what to return.  It should *not* be a dijit Widget as that is not parsed.  Care should be taken that the ``item`` parameter is not null.  Tests have shown that the function may be called more often than it should be and this is highlighted with an ``item = null``.
@@ -389,24 +394,23 @@ Finally, you can use the escapeHTMLInData option - however, this is `VERY HIGHLY
 Examples
 ========
 
-The following examples are for the new Grid 1.2.
+The following examples are for the new Grid 1.2 and changes for Dojo version 1.7.
 
 A simple Grid
 -------------
 
 This example shows how to create a simple Grid programmatically.
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileWriteStore");
-    
-      dojo.ready(function(){
+      require(['dojo/_base/lang', 'dojox/grid/DataGrid' , 'dojo/data/ItemFileWriteStore' , 'dojo/dom' , 'dojo/domReady!'],
+        function(lang, DataGrid, ItemFileWriteStore, Button, dom){
           /*set up data store*/
           var data = {
-            identifier: 'id',
+            identifier: "id",
             items: []
           };
           var data_list = [
@@ -415,29 +419,28 @@ This example shows how to create a simple Grid programmatically.
             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
+          var store = new ItemFileWriteStore({data: data});
         
           /*set up layout*/
           var layout = [[
             {'name': 'Column 1', 'field': 'id', 'width': '100px'},
             {'name': 'Column 2', 'field': 'col2', 'width': '100px'},
             {'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                    {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+            {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
           ]];
 
-          /*create a new grid:*/
-          var grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          var grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt("gridDiv");
 
           /*Call startup() to render the grid*/
           grid.startup();
@@ -451,9 +454,8 @@ This example shows how to create a simple Grid programmatically.
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 20em;
         }
 
@@ -466,30 +468,29 @@ Working with selections
 
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dijit.form.Button");
-    
-      dojo.ready(function(){
+       require(['dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
+        function(lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
+          parser.parse();
           /*set up data store*/
           var data = {
             identifier: 'id',
             items: []
           };
           var data_list = [
-            { col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-            { col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-            { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+            { col1: 'normal', col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+            { col1: 'important', col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+            { col1: 'important', col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
+          var store = new ItemFileWriteStore({data: data});
         
           /*set up layout*/
           var layout = [[
@@ -499,16 +500,44 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                     {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
           ]];
 
-          /*create a new grid:*/
-          grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt('gridDiv');
+
+          /* attach an event handler */
+          on(button1,'click',
+          function(e){
+              var items = grid.selection.getSelected();
+              if(items.length) {
+                  /* Iterate through the list of selected items.
+                  The current item is available in the variable
+                  'selectedItem' within the following function: */
+                  dojo.forEach(items, function(selectedItem){
+                      if(selectedItem !== null){
+                          /* Iterate through the list of attributes of each item.
+                          The current attribute is available in the variable
+                          'attribute' within the following function: */
+                          dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
+                              /* Get the value of the current attribute:*/
+                              var value = grid.store.getValues(selectedItem, attribute);
+                              /* Now, you can do something with this attribute/value pair.
+                              Our short example shows the attribute together
+                              with the value in an alert box, but we are sure, that
+                              you'll find a more ambitious usage in your own code:*/
+                              alert('attribute: ' + attribute + ', value: ' + value);
+                          }); /* end forEach */
+                      } /* end if */
+                  }); /* end forEach */
+              } /* end if */
+              event.stop(e);
+          }
+          );
 
           /*Call startup() to render the grid*/
           grid.startup();
@@ -525,33 +554,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
        <div id="gridDiv"></div>
 
        <p>
-            <span data-dojo-type="dijit.form.Button">
+            <span data-dojo-id="button1" data-dojo-type="dijit.form.Button">
                 get all Selected Items
-                <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-                    /* Get all selected items from the Grid: */
-                    var items = grid.selection.getSelected();
-                    if(items.length){
-                        /* Iterate through the list of selected items.
-                           The current item is available in the variable
-                           "selectedItem" within the following function: */
-                        dojo.forEach(items, function(selectedItem){
-                            if(selectedItem !== null){
-                                /* Iterate through the list of attributes of each item.
-                                   The current attribute is available in the variable
-                                   "attribute" within the following function: */
-                                dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute){
-                                    /* Get the value of the current attribute:*/
-                                    var value = grid.store.getValues(selectedItem, attribute);
-                                    /* Now, you can do something with this attribute/value pair.
-                                       Our short example shows the attribute together
-                                       with the value in an alert box, but we are sure, that
-                                       you'll find a more ambitious usage in your own code:*/
-                                    alert('attribute: ' + attribute + ', value: ' + value);
-                                }); /* end forEach */
-                            } /* end if */
-                        }); /* end forEach */
-                    } /* end if */
-                </script>
             </span>
         </p>
 
@@ -559,11 +563,11 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 15em;
         }
+
 
 
 Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behavior of the selection functionality:
@@ -587,18 +591,16 @@ Grid allows you to edit your data easily and send the changed values back to you
 
 First, you have to set a editor for each cell, you would like to edit:
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileWriteStore");
-      dojo.require("dojox.grid.cells.dijit");
-    
-      dojo.ready(function(){
+       require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/dom', 'dojo/domReady!'],
+        function(lang, DataGrid, ItemFileWriteStore, cells, dom){
           /*set up data store*/
           var data = {
-            identifier: 'id',
+            identifier: "id",
             items: []
           };
           var data_list = [
@@ -607,10 +609,10 @@ First, you have to set a editor for each cell, you would like to edit:
             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
+          var store = new ItemFileWriteStore({data: data});
 
           /*set up layout*/
           var layout = [[
@@ -620,16 +622,15 @@ First, you have to set a editor for each cell, you would like to edit:
                     {'name': 'Column 4', 'field': 'col4', 'width': '150px', editable: true}
           ]];
 
-          /*create a new grid:*/
-          var grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          var grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt("gridDiv");
 
           /*Call startup() to render the grid*/
           grid.startup();
@@ -648,9 +649,8 @@ First, you have to set a editor for each cell, you would like to edit:
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 20em;
         }
 
@@ -661,18 +661,18 @@ Adding and Deleting data
 If you want to add (remove) data programmatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
 
+
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.data.ItemFileWriteStore");
-    
-      dojo.ready(function(){
+       require(['dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
+        function(lang, event, on, DataGrid, ItemFileWriteStore, Button, dom, parser){
+          parser.parse();
           /*set up data store*/
           var data = {
-                    identifier: 'id',
+                    identifier: "id",
             items: []
           };
           var data_list = [
@@ -681,10 +681,10 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 5;
-          for(i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          store = new dojo.data.ItemFileWriteStore({data: data});
+          store = new ItemFileWriteStore({data: data});
 
           /*set up layout*/
           var layout = [[
@@ -694,42 +694,28 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                     {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
           ]];
 
-          /*create a new grid:*/
-          grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt("gridDiv");
 
-          /*Call startup() to render the grid*/
-          grid.startup();
-      });
-
-  .. html ::
-
-    <p>
-        This example shows, how to add/remove rows
-    </p>
-    <div id="gridDiv"></div>
-
-    <p>
-      <span data-dojo-type="dijit.form.Button">
-          Add Row
-          <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+          /* attach an event handler */
+          on(button2,'click',
+          function(e){
               /* set the properties for the new item: */
               var myNewItem = {id: (++i), col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888};
               /* Insert the new item into the store:*/
               store.newItem(myNewItem);
-          </script>
-      </span>
-    
-      <span data-dojo-type="dijit.form.Button">
-          Remove Selected Rows
-          <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+          }
+          );
+          /* attach an event handler */
+          on(button1,'click',
+          function(e){
               /* Get all selected items from the Grid: */
               var items = grid.selection.getSelected();
               if(items.length){
@@ -743,17 +729,38 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                       } /* end if */
                   }); /* end forEach */
               } /* end if */
-          </script>
+              event.stop(e);
+          }
+          );
+
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+      });
+
+  .. html ::
+
+    <p>
+        This example shows, how to add/remove rows
+    </p>
+    <div id='gridDiv'></div>
+
+    <p>
+      <span data-dojo-id='button2' data-dojo-type='dijit.form.Button'>
+          Add Row
+      </span>
+    
+      <span data-dojo-id='button1' data-dojo-type='dijit.form.Button'>
+          Remove Selected Rows
       </span>
     </p>
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import '{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css';
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 15em;
         }
 
@@ -763,18 +770,17 @@ Filtering data
 
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.data.ItemFileWriteStore");
-    
-      dojo.ready(function(){
+       require(['dojo/_base/lang', 'dojo/on', 'dojo/parser', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/domReady!'],
+        function(lang, on, parser, DataGrid, ItemFileWriteStore, Button, dom){
+          parser.parse();
           /*set up data store*/
           var data = {
-            identifier: 'id',
+            identifier: "id",
             items: []
           };
           var data_list = [
@@ -783,10 +789,10 @@ The Grid offers a filter() method, to filter data from the current query (client
             { col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
+          var store = new ItemFileWriteStore({data: data});
 
           /*set up layout*/
           var layout = [[
@@ -796,16 +802,31 @@ The Grid offers a filter() method, to filter data from the current query (client
                     {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
           ]];
 
-          /*create a new grid:*/
-          grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt("gridDiv");
+
+          /* attach an event handler */
+          on(button1,'click',
+          function(e){
+            /* Filter the movies from the data store: */
+            grid.filter({col2: true});
+          }
+          );
+
+          /* attach an event handler */
+          on(button2,'click',
+          function(e){
+            /* reset the filter: */
+            grid.filter({col2: '*'});
+          }
+          );
 
           /*Call startup() to render the grid*/
           grid.startup();
@@ -821,20 +842,12 @@ The Grid offers a filter() method, to filter data from the current query (client
     <div id="gridDiv"></div>
 
     <p>
-    <span data-dojo-type="dijit.form.Button">
+    <span data-dojo-id='button1' data-dojo-type="dijit.form.Button">
         Filter
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            /* Filter the movies from the data store: */
-            grid.filter({col2: true});
-        </script>
     </span>
 
-    <span data-dojo-type="dijit.form.Button">
+    <span data-dojo-id='button2' data-dojo-type="dijit.form.Button">
         Show all
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            /* reset the filter: */
-            grid.filter({col2: '*'});
-        </script>
     </span>
     </p>
 
@@ -842,11 +855,11 @@ The Grid offers a filter() method, to filter data from the current query (client
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 15em;
         }
+
 
 
 Grid styling: Rows
@@ -855,17 +868,16 @@ Grid styling: Rows
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
 To use it, you just have to override default behavior by yours.
 
+
 .. code-example ::
  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileWriteStore");
-    
-      dojo.ready(function(){
+        require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
+          function(lang, DataGrid, ItemFileWriteStore, dom){
           /*set up data store*/
           var data = {
-            identifier: 'id',
+            identifier: "id",
             items: []
           };
           var data_list = [
@@ -874,10 +886,10 @@ To use it, you just have to override default behavior by yours.
             { col1: "important", col2: true, col3: 'Signs can be selectively', col4: 19.34}
           ];
           var rows = 60;
-          for(var i=0, l=data_list.length; i<rows; i++){
-            data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+          for(var i = 0, l = data_list.length; i < rows; i++){
+            data.items.push(lang.mixin({ id: i+1 }, data_list[i%l]));
           }
-          var store = new dojo.data.ItemFileWriteStore({data: data});
+          var store = new ItemFileWriteStore({data: data});
 
           /*set up layout*/
           var layout = [[
@@ -905,17 +917,16 @@ To use it, you just have to override default behavior by yours.
              grid.edit.styleRow(row);
           }
 
-          /*create a new grid:*/
-          grid = new dojox.grid.DataGrid({
+          /*create a new grid*/
+          grid = new DataGrid({
               id: 'grid',
               store: store,
               structure: layout,
               onStyleRow: myStyleRow,
-              rowSelector: '20px'},
-            document.createElement('div'));
+              rowSelector: '20px'});
 
           /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          grid.placeAt("gridDiv");
 
           /*Call startup() to render the grid*/
           grid.startup();
@@ -929,11 +940,11 @@ To use it, you just have to override default behavior by yours.
 
         @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /*Grid needs a explicit height by default*/
         #grid {
-            width: 43em;
             height: 20em;
         }
+
 
 
 Formatting a Date Field
@@ -941,22 +952,19 @@ Formatting a Date Field
 
 Showing localized datetime data in grid is a very common requirement. Here's an example on how to do this using the formatter function, complete with localization.
 
+
 .. code-example ::
   :width: 400
   :height: 300
 
   .. js ::
 
-        dojo.require("dojo.data.ItemFileReadStore");
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.date.stamp");
-        dojo.require("dojo.date.locale");
-        
-        dojo.ready(function(){
+        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileReadStore', 'dojo/date/stamp', 'dojo/date/locale', 'dojo/domReady!'],
+          function(DataGrid, ItemFileReadStore, stamp, locale){
             function formatDate(datum){
                 /* Format the value in store, so as to be displayed.*/
-                var d = dojo.date.stamp.fromISOString(datum);
-                return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+                var d = stamp.fromISOString(datum);
+                return locale.format(d, {selector: 'date', formatLength: 'long'});
             }
             
             var layout = [
@@ -966,7 +974,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
                 }
             ];
         
-            var store = new dojo.data.ItemFileReadStore({
+            var store = new ItemFileReadStore({
                 data: {
                     identifier: "id",
                     items: [
@@ -978,7 +986,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
                     ]
                 }
             });
-            var grid = new dojox.grid.DataGrid({
+            var grid = DataGrid({
                 id: 'grid',
                 store: store,
                 structure: layout,
@@ -1000,25 +1008,22 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
 
+
 Editable Date Field
 -------------------
 
 Sometimes it's not enough to just show the datetime data, so here's another example on how to make the date field editable.
 Note: In editing mode, the text box will show the data in store, which is ISO format in this case; and no validation is provided.
 
+    
 .. code-example ::
   :width: 400
   :height: 300
 
   .. js ::
 
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.date.stamp");
-        dojo.require("dojo.date.locale");
-
-
-        dojo.ready(function(){
+        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/date/stamp', 'dojo/date/locale', 'dojo/domReady!'],
+          function(DataGrid, ItemFileWriteStore, stamp, locale){
             function formatDate(datum){
                 /* Format the value in store, so as to be displayed.*/
                 var d = dojo.date.stamp.fromISOString(datum);
@@ -1032,9 +1037,9 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
                     editable: true    /*Editable cell, will show ISO format in a text box*/
                 }
             ];
-            var store = new dojo.data.ItemFileWriteStore({
+            var store = new ItemFileWriteStore({
                 data: {
-                    identifier: "id",
+                    identifier: 'id',
                     items: [
                         {id: 1, date: '2010-01-01'},
                         {id: 2, date: '2011-03-04'},
@@ -1044,7 +1049,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
                     ]
                 }
             });
-            var grid = new dojox.grid.DataGrid({
+            var grid = new DataGrid({
                 id: 'grid',
                 store: store,
                 structure: layout
@@ -1055,7 +1060,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. html ::
 
-   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
+   <div id='gridContainer' style='width: 100%; height: 200px;'></div>
 
   .. css ::
 
@@ -1064,10 +1069,12 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
 
+
 Using a dijit widget to edit a Date Field
 -----------------------------------------
 
 Using dijit.form.DateTextBox in editing mode will provide an improved user experience with easy date selection.  Like everything in Dijit, the user experience is localized and respects cultural conventions.  constraint is used to pass along properties to the DateTextBox widget.
+
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -1076,13 +1083,8 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
   .. js ::
 
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.grid.cells.dijit");
-        dojo.require("dojo.date.stamp");
-        dojo.require("dojo.date.locale");
-        
-        dojo.ready(function(){
+        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/date/stamp', 'dojo/date/locale', 'dojo/domReady!'],
+          function(DataGrid, ItemFileWriteStore, cells, stamp, locale){
             function formatDate(datum){
                 /*Format the value in store, so as to be displayed.*/
                 var d = dojo.date.stamp.fromISOString(datum);
@@ -1136,10 +1138,12 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
 
+
 Using a dijit widget to edit a Date Field - with custom patterns
 ----------------------------------------------------------------
 
 Although ISO dates are recommended as a convenient and culturally neutral data format, the values in store may not be provided this way, so we have to parse them to convert them to Date objects.  Here the constraint object is also used to pass along a custom formatter to override the default cultural user behavior with a different display.
+
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -1148,12 +1152,8 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
   .. js ::
 
-        dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.grid.cells.dijit");
-        dojo.require("dojo.date.locale");
-        
-        dojo.ready(function(){
+        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/date/locale', 'dojo/domReady!'],
+          function(DataGrid, ItemFileWriteStore, cells, stamp){
             var storePattern = 'yyyy/MM/dd';
             var displayPattern = 'yyyy, MMMM, d';
         
@@ -1211,6 +1211,77 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
     @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
 
 
+_`Inserting a dijit widget (Button) in a field`
+----------------------------------------------------------------
+
+.. code-example ::
+  :width: 400
+  :height: 300
+
+  .. js ::
+
+        require(['dojox/grid/DataGrid', 'dojo/data/ItemFileReadStore', 'dojo/date/stamp', 'dojo/date/locale',  'dijit/form/Button',  'dojo/domReady!'],
+            function(DataGrid, ItemFileReadStore, stamp, locale){
+                function formatter(){
+                    var Button = require('dijit/form/Button');
+                    var w = new Button({
+                        label: "Click me!",
+                        onClick: function() {
+                            alert("Thanks for all the fish.  ");
+                        }
+                    });
+                    w._destroyOnRemove=true;
+                    return w;
+                }
+                function formatDate(datum){
+                    /* Format the value in store, so as to be displayed.*/
+                    var d = stamp.fromISOString(datum);
+                    return locale.format(d, {selector: 'date', formatLength: 'long'});
+                }
+
+                var layout = [
+                    {name: 'Index', field: 'id'},
+                    {name: 'Date', field: 'date', width: 10,
+                        formatter: formatDate    /*Custom format, change the format in store. */
+                    },
+                    {name: 'Message', field: 'message', width: 8,
+                        formatter: formatter    /*Custom format, add a button. */
+                    }
+                ];
+
+                var store = new ItemFileReadStore({
+                    data: {
+                        identifier: "id",
+                        items: [
+                            {id: 1, date: '2010-01-01'},
+                            {id: 2, date: '2011-03-04'},
+                            {id: 3, date: '2011-03-08'},
+                            {id: 4, date: '2007-02-14'},
+                            {id: 5, date: '2008-12-26'}
+                        ]
+                    }
+                });
+                var grid = new DataGrid({
+                    id: 'grid',
+                    store: store,
+                    structure: layout,
+                    autoWidth: true,
+                    autoHeight: true
+                });
+                grid.placeAt('gridContainer');
+                grid.startup();
+            });
+  .. html ::
+
+   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
+
+  .. css ::
+
+    @import "{{baseUrl}}/dojo/resources/dojo.css";
+    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
+    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+
+
 
 
 Tips
@@ -1239,9 +1310,13 @@ There are times when you may wish to update the content of the grid. For example
 
 .. js ::
   
-  var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
-  var grid = dijit.byId("gridId");
-  grid.setStore(newStore);
+  require(['dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/domReady!'],
+  function(DataGrid, ItemFileWriteStore ){
+      ...
+      var newStore = new ItemFileReadStore({data: {... some data ...});
+      var grid = dijit.byId("gridId");
+      grid.setStore(newStore);
+  };
 
 
 Layout multiple views by percentage
@@ -1353,3 +1428,4 @@ See also
 * `Dojo Grids: Diving Deeper <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_
 * `Simple Dojo Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_
 * `Dojo Grid Widget Updated. Data Integration and Editing Improvements. <http://ajaxian.com/archives/dojo-grid-widget-updated-data-integration-and-editing-improvements>`_
+
