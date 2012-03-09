@@ -19,7 +19,7 @@ Introduction
 
 Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
 
-Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the ``has`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the :ref:`has() <dojo/dom-attr#domattr-has>` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====
