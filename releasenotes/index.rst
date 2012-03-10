@@ -29,3 +29,8 @@ Archive
 * :ref:`Dojo Toolkit v1.3 Release Notes <releasenotes/1.3>`
 * :ref:`Dojo Toolkit v1.2 Release Notes <releasenotes/1.2>`
 * :ref:`Dojo Toolkit v1.1 Release Notes <releasenotes/1.1>`
+
+Migration References
+====================
+* :ref:`2.0 Migration Notes <releasenotes/migration-2.0>` (in progress)
+
