@@ -190,12 +190,12 @@ Connecting to MouseWheel events
 -------------------------------
 
 One event not mentioned above, though entirely useful: onmousewheel (okay, it's two events, which is the reason for pointing this out ... )
-All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`isSomething <quickstart/browser-sniffing>` variables:
+All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`dojo/sniff <dojo/sniff>` module:
 
 .. js ::
 
   var node = dojo.byId("foobar");
-  dojo.connect(node, (!dojo.isMozilla ? "onmousewheel" : "DOMMouseScroll"), function(e){
+  dojo.connect(node, (!has("mozilla") ? "onmousewheel" : "DOMMouseScroll"), function(e){
      // except the direction is REVERSED, and the event isn't normalized! one more line to normalize that:
      var scroll = e[(!dojo.isMozilla ? "wheelDelta" : "detail")] * (!dojo.isMozilla ? 1 : -1);
      console.log(scroll);

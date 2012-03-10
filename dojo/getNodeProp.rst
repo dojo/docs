@@ -15,13 +15,18 @@ Returns a property value falling back to an attribute, if property is not availa
 Introduction
 ============
 
-``dojo.getNodeProp`` is a companion function for :ref:`dojo.attr <dojo/attr>`. Unlike the latter it favors properties falling back on attributes, if a property was not present.
+``dojo.getNodeProp`` is a companion function for :ref:`dojo.attr <dojo/attr>`. Unlike the latter it favors properties
+falling back on attributes, if a property was not present.
 
-It is useful when you don't care if somebody set an attribute on a node in HTML, or not, but you want to read a default/current value, which is used by a browser. For example, if user didn't specify ``type`` attribute on ``input`` element, it is default value is ``"text"``. You don't need to know all defaults, or how browser interprets missing attributes exactly, just use ``dojo.getNodeProp``.
+It is useful when you don't care if somebody set an attribute on a node in HTML, or not, but you want to read a
+default/current value, which is used by a browser. For example, if user didn't specify ``type`` attribute on ``input``
+element, it is default value is ``"text"``. You don't need to know all defaults, or how browser interprets missing
+attributes exactly, just use ``dojo.getNodeProp``.
 
 There is no corresponding ``dojo.setNodeProp``. If you want to set a property value, use straight assignment.
 
-Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the ``getNodeProp`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.getNodeProp`` is exposed via the :ref:`getNodeProp() <dojo/dom-attr#getnodeprop-function>` method
+of the ``dojo/dom-attr`` module. An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====

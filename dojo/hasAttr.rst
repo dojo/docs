@@ -15,11 +15,14 @@ Checks a node for the presence of an attribute.
 Introduction
 ============
 
-``dojo.hasAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy value otherwise.
+``dojo.hasAttr()`` is a companion function for :ref:`dojo.attr <dojo/attr>`. It checks if an attribute is present on a
+DOM node, and returns the truthy value if it is there, and falsy value otherwise.
 
-Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
+Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or
+``class``.
 
-Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the ``has`` method of the ``dojo/dom-attr`` module.  An alias is kept in ``dojo/_base/html`` for backward-compatibility.
+Since Dojo 1.7, ``dojo.hasAttr`` is exposed via the :ref:`has() <dojo/dom-attr#has-function>` method of the
+``dojo/dom-attr`` module. An alias is kept in ``dojo/_base/html`` for backward-compatibility.
 
 Usage
 =====

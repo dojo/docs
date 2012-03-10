@@ -25,7 +25,7 @@ Dojo Core and Dijit modules make use of has() feature detection in 1.7.  There a
 
 Ternary has() conditional expressions can also be used during module loading for conditional loading of modules based on feature availability.  See the Dojo loader documentation for more details on this capability.
 
-The basic tests within dojo/has module can be augmented with additional tests by any other module.  One frequently used module that extends dojo/has with additional tests is :ref:`dojo/sniff <quickstart/browser-sniffing>`.
+The basic tests within dojo/has module can be augmented with additional tests by any other module.  One frequently used module that extends dojo/has with additional tests is :ref:`dojo/sniff <dojo/sniff>`.
 
 Usage
 ========

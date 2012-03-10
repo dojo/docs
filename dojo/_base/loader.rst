@@ -49,43 +49,6 @@ Features
 
   Alias for the global scope
 
-* :ref:`dojo.isBrowser <quickstart/browser-sniffing>`
-
-  Returns true if the client is a web-browser
-
-* :ref:`dojo.isChrome <quickstart/browser-sniffing>` (new in V1.3)
-
-  Returns the version number of the browser, if the client is a Chrome-Browser, otherwise *undefined*
-
-* :ref:`dojo.isFF <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is a Mozilla FireFox-Browser, otherwise *undefined*
-
-* :ref:`dojo.isIE <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is a MS Internet Explorer-Browser, otherwise *undefined*
-
-* :ref:`dojo.isKhtml <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is a KHTML browser, otherwise *undefined*
-
-* :ref:`dojo.isMozilla <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is a Mozilla-based browser (Firefox, SeaMonkey), otherwise *undefined*
-
-* :ref:`dojo.isOpera <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is a Opera-Browser, otherwise *undefined*
-
-* :ref:`dojo.isSafari <quickstart/browser-sniffing>`
-
-  Returns the version number of the browser, if the client is is Safari or iPhone, otherwise *undefined*
-
-* :ref:`dojo.isWebKit <quickstart/browser-sniffing>` (new in V1.3)
-
-  Returns the version number of the browser, if the client is a WebKit-derived browser (Konqueror, Safari, Chrome, etc.), otherwise *undefined*
-
-
 * :ref:`dojo.mixin <dojo/mixin>`
 
   Multiple inheritance
