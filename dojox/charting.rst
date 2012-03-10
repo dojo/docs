@@ -1288,6 +1288,7 @@ Here is a very simple example of a stacked area chart.
           .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
           .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
           .render();
+      });
     });
  
   .. html ::
@@ -1303,20 +1304,16 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
   .. js ::
 
-    dojo.require("dojox.charting.Chart2D");
-    dojo.require("dojox.charting.plot2d.Pie");
-    dojo.require("dojox.charting.action2d.Highlight");
-    dojo.require("dojox.charting.action2d.MoveSlice");
-    dojo.require("dojox.charting.action2d.Tooltip");
-    dojo.require("dojox.charting.themes.MiamiNice");
-    dojo.require("dojox.charting.widget.Legend");
+    require(["dojox/charting/Chart", "dojox/charting/plot2d/Pie", "dojox/charting/action2d/Highlight",
+             "dojox/charting/action2d/MoveSlice" , "dojox/charting/action2d/Tooltip",
+             "dojox/charting/themes/MiamiNice", "dojox/charting/widget/Legend", "dojo/ready"],
+      function(Chart, Pie, Highlight, MoveSlice, Tooltip, MiamiNice, Legend, ready){
 
-    dojo.ready(function(){
-      var dc = dojox.charting;
-      var chartTwo = new dc.Chart2D("chartTwo");
-      chartTwo.setTheme(dc.themes.MiamiNice)
+      ready(function(){
+        var chartTwo = new Chart("chartTwo");
+        chartTwo.setTheme(MiamiNice)
          .addPlot("default", {
-            type: "Pie",
+            type: Pie,
             font: "normal normal 11pt Tahoma",
             fontColor: "black",
             labelOffset: -30,
@@ -1327,12 +1324,13 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
           {y: 1, text: "Blue",  stroke: "black", tooltip: "I am feeling Blue!"},
           {y: 1, text: "Other", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
       ]);
-      var anim_a = new dc.action2d.MoveSlice(chartTwo, "default");
-      var anim_b = new dc.action2d.Highlight(chartTwo, "default");
-      var anim_c = new dc.action2d.Tooltip(chartTwo, "default");
+      var anim_a = new MoveSlice(chartTwo, "default");
+      var anim_b = new Highlight(chartTwo, "default");
+      var anim_c = new Tooltip(chartTwo, "default");
       chartTwo.render();
-      var legendTwo = new dojox.charting.widget.Legend({chart: chartTwo}, "legendTwo");
+      var legendTwo = new Legend({chart: chartTwo}, "legendTwo");
     });
+  });
 
   .. html ::
 
@@ -1348,26 +1346,24 @@ Here is a clustered bar chart with a rendering animation:
 
   .. js ::
 
-      dojo.require("dojox.charting.Chart2D");
-      dojo.require("dojox.charting.axis2d.Default");
-      dojo.require("dojox.charting.plot2d.ClusteredColumns");
-      dojo.require("dojo.fx.easing");
-      dojo.require("dojox.charting.themes.Tufte");
-  
- 
-      dojo.ready(function(){
-          var animChart = new dojox.charting.Chart2D("animChart");
-          animChart.setTheme(dojox.charting.themes.Tufte).
-               addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
-                   addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
-               addPlot("default", { type: "ClusteredColumns", gap: 10, animate: { duration: 2000, easing: dojo.fx.easing.bounceInOut } }).
-               addSeries("Series A", [ 2, 1, 0.5, -1, -2 ] ).
-               addSeries("Series B", [ -2, -1, -0.5, 1, 2 ] ).
-               addSeries("Series C", [ 1, 0.5, -1, -2, -3 ] ).
-               addSeries("Series D", [ 0.7, 1.5, -1.2, -1.25, 3 ] ).
-               render();
-      });
+    require(["dojox/charting/Chart", "dojox/charting/axi2d/Default", "dojox/charting/plot2d/ClusteredColumns",
+             "dojo/fx/easing" , "dojox/charting/themes/Tufte", "dojo/ready"],
+      function(Chart, Default, ClusteredColumns, easing, Tufte, ready){
 
+      ready(function(){
+        var animChart = new Chart("animChart");
+        animChart.setTheme(Tufte).
+          addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
+          addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
+          addPlot("default", { type: ClusteredColumns, gap: 10, animate: { duration: 2000, easing: easing.bounceInOut } }).
+          addSeries("Series A", [ 2, 1, 0.5, -1, -2 ] ).
+          addSeries("Series B", [ -2, -1, -0.5, 1, 2 ] ).
+          addSeries("Series C", [ 1, 0.5, -1, -2, -3 ] ).
+          addSeries("Series D", [ 0.7, 1.5, -1.2, -1.25, 3 ] ).
+          render();
+      });
+    });
+    
   .. html ::
 
     <div id="animChart" style="width: 300px; height: 300px;"></div>
@@ -1382,12 +1378,11 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
   .. js ::
 
-        dojo.require("dojox.charting.Chart3D");
-        dojo.require("dojox.charting.plot3d.Bars");
+    require(["dojox/charting/Chart3D", "dojox/charting/plo3d/Bars", "dojox/gfx3d/matrix", "dojo/ready"],
+      function(Chart3D, Bars, m, ready){
 
-        dojo.ready(function(){
-            var m = dojox.gfx3d.matrix;
-            var chart3d = new dojox.charting.Chart3D("chart3d",
+        ready(function(){
+            var chart3d = new Chart3D("chart3d",
                 {
                     lights:   [{direction: {x: 5, y: 5, z: -5}, color: "white"}],
                     ambient:  {color:"white", intensity: 2},
@@ -1396,15 +1391,15 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
                 [m.cameraRotateXg(10), m.cameraRotateYg(-10), m.scale(0.8), m.cameraTranslate(-50, -50, 0)]
             );
 
-            var bars3d_a = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "yellow"});
+            var bars3d_a = new Bars(500, 500, {gap: 10, material: "yellow"});
             bars3d_a.setData([1, 2, 3, 2, 1, 2, 3, 4, 5]);
             chart3d.addPlot(bars3d_a);
 
-            var bars3d_b = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "red"});
+            var bars3d_b = new Bars(500, 500, {gap: 10, material: "red"});
             bars3d_b.setData([2, 3, 4, 3, 2, 3, 4, 5, 5]);
             chart3d.addPlot(bars3d_b);
 
-            var bars3d_c = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "blue"});
+            var bars3d_c = new Bars(500, 500, {gap: 10, material: "blue"});
             bars3d_c.setData([3, 4, 5, 4, 3, 4, 5, 5, 5]);
             chart3d.addPlot(bars3d_c);
 
