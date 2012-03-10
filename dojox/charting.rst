@@ -121,6 +121,7 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 **type** is the main option, with a default value being a basic line chart.
 
 .. js ::
+
   require(["dojox/charting/plot2d/Areas", ...], function(Areas, ...){
     // ...
     chart.addPlot("default", { type: Areas });
@@ -1323,19 +1324,19 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
             fontColor: "black",
             labelOffset: -30,
             radius: 80
-      }).addSeries("Series A", [
-          {y: 4, text: "Red",   stroke: "black", tooltip: "Red is 50%"},
-          {y: 2, text: "Green", stroke: "black", tooltip: "Green is 25%"},
-          {y: 1, text: "Blue",  stroke: "black", tooltip: "I am feeling Blue!"},
-          {y: 1, text: "Other", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
-      ]);
-      var anim_a = new MoveSlice(chartTwo, "default");
-      var anim_b = new Highlight(chartTwo, "default");
-      var anim_c = new Tooltip(chartTwo, "default");
-      chartTwo.render();
-      var legendTwo = new Legend({chart: chartTwo}, "legendTwo");
+        }).addSeries("Series A", [
+            {y: 4, text: "Red",   stroke: "black", tooltip: "Red is 50%"},
+            {y: 2, text: "Green", stroke: "black", tooltip: "Green is 25%"},
+            {y: 1, text: "Blue",  stroke: "black", tooltip: "I am feeling Blue!"},
+            {y: 1, text: "Other", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
+        ]);
+        var anim_a = new MoveSlice(chartTwo, "default");
+        var anim_b = new Highlight(chartTwo, "default");
+        var anim_c = new Tooltip(chartTwo, "default");
+        chartTwo.render();
+        var legendTwo = new Legend({chart: chartTwo}, "legendTwo");
+      });
     });
-  });
 
   .. html ::
 
@@ -1408,6 +1409,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
             chart3d.generate().render();
         });
+    });
 
   .. html ::
 
