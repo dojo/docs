@@ -16,11 +16,11 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojox/charting/themes/Wetland" , "dojo/ready"],
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas", "dojox/charting/themes/Wetland" , "dojo/ready"],
       function(Chart, Default, Lines, Wetland, ready){
         ready(function(){
           var c = new Chart("chartOne");
-          c.addPlot("default", {type: "StackedAreas", tension:3})
+          c.addPlot("default", {type: StackedAreas, tension:3})
             .addAxis("x", {fixLower: "major", fixUpper: "major"})
             .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
             .setTheme(Wetland)
@@ -304,7 +304,7 @@ And here is an example for spider chart:
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Spider", "dojox/charting/widget/SelectableLegend, ...], function(Spider, SelectableLegend, ...){
+  require(["dojox/charting/plot2d/Spider", "dojox/charting/widget/SelectableLegend", ...], function(Spider, SelectableLegend, ...){
      // ...
     chart.addPlot("default", {
       type: Spider,
@@ -609,6 +609,7 @@ Note that by default the axis make sure to drop superfluous labels to avoid them
 The drop labels mechanism computes once the size of the labels at initialization time and recompute how many must be dropped when zooming in or out the chart. However in some cases the labels size is varying with the zoom levels. In that case you need to explicitly set the labelSizeChange property on the chart for it to recompute the size of the labels on each zoom level:
 
 .. js ::
+
   chart.addAxis("x", { labelSizeChange: true });
 
 Note that this will hurt performances, so enable this only if your labels are changing size on zoom and you noticed the drop labels mechanism does not work when zooming in or out the chart.
@@ -1046,7 +1047,8 @@ Here is an example showing how to attach a MouseZoomAndPan action to the chart a
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/MouseZoomAndPan", ...],
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+    "dojox/charting/action2d/MouseZoomAndPan", ...],
     function(Chart, Default, Columns, MouseZoomAndPan, ...){
     var chart = new Chart("test");
     chart.addAxis("x", {type : Default, enableCache: true});
@@ -1085,7 +1087,8 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/MouseIndicator", ...],
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+    "dojox/charting/action2d/MouseIndicator", ...],
     function(Chart, Default, Columns, MouseIndicator, ...){
     var chart = new Chart("test");
     chart.addAxis("x", {type : Default, enableCache: true});
@@ -1128,7 +1131,8 @@ Here is an example showing how to attach a TouchZoomAndPan action to the chart a
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/TouchZoomAndPan", ...],
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+    "dojox/charting/action2d/TouchZoomAndPan", ...],
     function(Chart, Default, Columns, TouchZoomAndPan, ...){
     var chart = new Chart("test");
     chart.addAxis("x", {type : "Default", enableCache: true});
@@ -1169,7 +1173,8 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns", "dojox/charting/action2d/TouchIndicator", ...],
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+    "dojox/charting/action2d/TouchIndicator", ...],
     function(Chart, Default, Columns, TouchIndicator, ...){
   	var chart = new Chart("test");
   	chart.addAxis("x", {type : Default, enableCache: true});
@@ -1276,7 +1281,8 @@ Here is a very simple example of a stacked area chart.
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojox/charting/themes/Wetland" , "dojo/ready"],
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas",
+       "dojox/charting/themes/Wetland" , "dojo/ready"],
       function(Chart, Default, Lines, Wetland, ready){
       ready(function(){
         var c = new Chart("chartOne");
