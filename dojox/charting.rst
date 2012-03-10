@@ -1383,7 +1383,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
   .. js ::
 
-    require(["dojox/charting/Chart3D", "dojox/charting/plo3d/Bars", "dojox/gfx3d/matrix", "dojo/ready"],
+    require(["dojox/charting/Chart3D", "dojox/charting/plot3d/Bars", "dojox/gfx3d/matrix", "dojo/ready"],
       function(Chart3D, Bars, m, ready){
         ready(function(){
             var chart3d = new Chart3D("chart3d",
