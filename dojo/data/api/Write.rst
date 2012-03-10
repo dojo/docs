@@ -126,7 +126,7 @@ This example shows how to get all modified items before a save has been called.
 Further examples
 ----------------
 
-Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth.
+Further examples of the API usage are covered in the :ref:`Using Datastores <quickstart/data/usingdatastores>` section. Refer to it for examples on paging, sorting, selecting, and so forth.
 
 
 API Info
