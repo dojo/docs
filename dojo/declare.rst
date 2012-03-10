@@ -389,15 +389,15 @@ By default all constructors are chained using **after** algorithm (using `AOP`_ 
 .. js ::
 
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       constructor: function(){ console.log("A"); }
-    };
-    var B = declare(A,
+    });
+    var B = declare(A, {
       constructor: function(){ console.log("B"); }
-    };
-    var C = declare(B,
+    });
+    var C = declare(B, {
       constructor: function(){ console.log("C"); }
-    };
+    });
     new C();
   });
 
@@ -426,26 +426,26 @@ In some cases users may want to redefine how initialization works. In this case 
 .. js ::
 
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       constructor: function(){
         console.log("A");
       }
-    };
-    var B = declare(A,
+    });
+    var B = declare(A, {
       "-chains-": {
         constructor: "manual"
       },
       constructor: function(){
         console.log("B");
       }
-    };
-    var C = declare(B,
+    });
+    var C = declare(B, {
       constructor: function(){
         console.log("C - 1");
         this.inherited(arguments);
         console.log("C - 2");
       }
-    };
+    });
     var x = new C();
   });
 
@@ -601,7 +601,7 @@ Examples:
 .. js ::
 
   require(['dojo/_base/lang', 'dojo/_base/declare'], function(lang, declare){
-    var A = declare(null,
+    var A = declare(null, {
       m1: function(){
         // ...
       },
@@ -617,7 +617,7 @@ Examples:
       m5: function(){
         // ...
       }
-    };
+    });
 
     var B = declare(A, {
       m1: function(){
@@ -690,7 +690,6 @@ Examples:
     x.m5(); // our instance-specific method is called
   });
 
-
 getInherited()
 ~~~~~~~~~~~~~~
 
@@ -708,7 +707,7 @@ Examples:
 .. js ::
 
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       m1: function(){
         // ...
       },
