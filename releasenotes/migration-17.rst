@@ -269,7 +269,7 @@ There is no need to duplicate modules in a ``dojo.require()`` call versus a ``do
         "dojo", "dijit", "dojox", "my/HotController", "dijit._Widget", "dojo/text!my/templates/HotApplication.html"
     ], function(dojo, dijit, dojox, Controller, _Widget, template){
         
-        return dojo.decalre("my.HotApplication", Controller, {
+        return dojo.declare("my.HotApplication", Controller, {
             templateString: template
         });
         
