@@ -657,7 +657,7 @@ Corner styling
 --------------
 
 CSS3 ('border-radius') is used to render corner styling (rounded corners);
-Rounded corners are supported in all browsers except IE, where styling defaults to square corners.
+Rounded corners are supported in all browsers except old IE, where styling defaults to square corners.
 
 * Claro theme defaults to 4px rounded corners (based on Dojo community feedback),
   with the exception of dijit.tabContainer at 2px.
@@ -675,7 +675,7 @@ Example of CSS3 corner styling:
    }
 
 
-* If rounded corner styling is required in IE, it will need to be implemented using rounded corner images and
+* If rounded corner styling is required in old IE, it will need to be implemented using rounded corner images and
   will require significant modifications to CSS, JS and HTML templates; basically, not recommended.
 
 Examples of corner style output renderings:
