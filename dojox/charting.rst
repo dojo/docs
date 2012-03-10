@@ -1352,7 +1352,7 @@ Here is a clustered bar chart with a rendering animation:
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axi2d/Default", "dojox/charting/plot2d/ClusteredColumns",
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/ClusteredColumns",
              "dojo/fx/easing" , "dojox/charting/themes/Tufte", "dojo/ready"],
       function(Chart, Default, ClusteredColumns, easing, Tufte, ready){
 
