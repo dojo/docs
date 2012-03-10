@@ -17,7 +17,7 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
   .. js ::
 
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas", "dojox/charting/themes/Wetland" , "dojo/ready"],
-      function(Chart, Default, Lines, Wetland, ready){
+      function(Chart, Default, StackedAreas, Wetland, ready){
         ready(function(){
           var c = new Chart("chartOne");
           c.addPlot("default", {type: StackedAreas, tension:3})
@@ -1283,7 +1283,7 @@ Here is a very simple example of a stacked area chart.
 
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas",
        "dojox/charting/themes/Wetland" , "dojo/ready"],
-      function(Chart, Default, Lines, Wetland, ready){
+      function(Chart, Default, StackedAreas, Wetland, ready){
       ready(function(){
         var c = new Chart("chartOne");
         c.addPlot("default", {type: StackedAreas, tension:3})
@@ -1314,7 +1314,6 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
              "dojox/charting/action2d/MoveSlice" , "dojox/charting/action2d/Tooltip",
              "dojox/charting/themes/MiamiNice", "dojox/charting/widget/Legend", "dojo/ready"],
       function(Chart, Pie, Highlight, MoveSlice, Tooltip, MiamiNice, Legend, ready){
-
       ready(function(){
         var chartTwo = new Chart("chartTwo");
         chartTwo.setTheme(MiamiNice)
@@ -1355,7 +1354,6 @@ Here is a clustered bar chart with a rendering animation:
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/ClusteredColumns",
              "dojo/fx/easing" , "dojox/charting/themes/Tufte", "dojo/ready"],
       function(Chart, Default, ClusteredColumns, easing, Tufte, ready){
-
       ready(function(){
         var animChart = new Chart("animChart");
         animChart.setTheme(Tufte).
@@ -1386,7 +1384,6 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
     require(["dojox/charting/Chart3D", "dojox/charting/plo3d/Bars", "dojox/gfx3d/matrix", "dojo/ready"],
       function(Chart3D, Bars, m, ready){
-
         ready(function(){
             var chart3d = new Chart3D("chart3d",
                 {
