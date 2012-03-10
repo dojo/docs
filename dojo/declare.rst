@@ -810,15 +810,15 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 .. js ::
   
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       constructor: function(){ console.log("A"); }
-    };
-    var B = declare(A,
+    });
+    var B = declare(A, {
       constructor: function(){ console.log("B"); }
-    };
-    var C = declare(B,
+    });
+    var C = declare(B, {
       constructor: function(){ console.log("C"); }
-    };
+    });
     new C();
   });
 
@@ -831,15 +831,15 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 
 .. js ::
   
-  var A = dojo.declare(null,
+  var A = dojo.declare(null, {
     constructor: function(){ console.log("A"); }
-  };
-  var B = dojo.declare(A,
+  });
+  var B = dojo.declare(A, {
     constructor: function(){ console.log("B"); }
-  };
-  var C = dojo.declare(B,
+  });
+  var C = dojo.declare(B, {
     constructor: function(){ console.log("C"); }
-  };
+  });
   new C();
   // prints:
   // A
@@ -868,26 +868,26 @@ In some cases users may want to redefine how initialization works. In this case 
 .. js ::
   
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       constructor: function(){
         console.log("A");
       }
-    };
-    var B = declare(A,
+    });
+    var B = declare(A, {
       "-chains-": {
         constructor: "manual"
       },
       constructor: function(){
         console.log("B");
       }
-    };
-    var C = declare(B,
+    });
+    var C = declare(B, {
       constructor: function(){
         console.log("C - 1");
         this.inherited(arguments);
         console.log("C - 2");
       }
-    };
+    });
     var x = new C();
   });
 
@@ -900,26 +900,26 @@ In some cases users may want to redefine how initialization works. In this case 
 
 .. js ::
   
-  var A = dojo.declare(null,
+  var A = dojo.declare(null, {
     constructor: function(){
       console.log("A");
     }
-  };
-  var B = dojo.declare(A,
+  });
+  var B = dojo.declare(A, {
     "-chains-": {
       constructor: "manual"
     },
     constructor: function(){
       console.log("B");
     }
-  };
-  var C = dojo.declare(B,
+  });
+  var C = dojo.declare(B, {
     constructor: function(){
       console.log("C - 1");
       this.inherited(arguments);
       console.log("C - 2");
     }
-  };
+  });
   var x = new C();
   // prints:
   // C - 1
@@ -1170,7 +1170,7 @@ Examples:
 .. js ::
   
   require(['dojo/_base/lang', 'dojo/_base/declare'], function(lang, declare){
-    var A = declare(null,
+    var A = declare(null, {
       m1: function(){
         // ...
       },
@@ -1186,7 +1186,7 @@ Examples:
       m5: function(){
         // ...
       }
-    };
+    });
 
     var B = declare(A, {
       m1: function(){
@@ -1263,7 +1263,7 @@ Examples:
 
 .. js ::
   
-  var A = dojo.declare(null,
+  var A = dojo.declare(null, {
     m1: function(){
       // ...
     },
@@ -1279,7 +1279,7 @@ Examples:
     m5: function(){
       // ...
     }
-  };
+  });
 
   var B = dojo.declare(A, {
     m1: function(){
@@ -1370,7 +1370,7 @@ Examples:
 .. js ::
   
   require(['dojo/_base/declare'], function(declare){
-    var A = declare(null,
+    var A = declare(null, {
       m1: function(){
         // ...
       },
@@ -1404,7 +1404,7 @@ Examples:
 
 .. js ::
   
-  var A = dojo.declare(null,
+  var A = dojo.declare(null, {
     m1: function(){
       // ...
     },
