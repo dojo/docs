@@ -33,7 +33,7 @@ JavaScript Extensions
 
 * :ref:`Dojo basics <quickstart/dojo-basics>`
 * :ref:`Arrays <quickstart/arrays>`
-* :ref:`Browser Sniffing <quickstart/browser-sniffing>`
+* :ref:`Browser Sniffing <dojo/sniff>`
 * :ref:`Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`
 * :ref:`OOP with dojo.declare() <quickstart/oop>`
 * :ref:`Dojo Topic System <quickstart/topics>`
