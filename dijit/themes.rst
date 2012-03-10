@@ -233,7 +233,7 @@ The second class ``dijitEditorIconCut`` is specific to the Cut icon:
 
 
 The Cut icon starts 54 px from the right edge, and measures 18px by 18px.
-108 equals 6 * 18, so it's the 4th image from the left in the sprite.
+54 equals 3 * 18, so it's the 4th image from the left in the sprite.
 
 You can define your own icons by setting up CSS selectors using code similar to above,
 and wiring up the iconClass.
