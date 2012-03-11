@@ -38,7 +38,7 @@ Do not forget to include the default TreeMap CSS to get the expected default ren
 
 In JavaScript:
 
-.. js::
+.. js ::
 
   require(["dojox/treemap/TreeMap", ...], function(TreeMap, ...){
     new TreeMap({store: dataStore,
@@ -53,7 +53,7 @@ In JavaScript:
 
 In HTML markup:
 
-.. html::
+.. html ::
 
   <link rel="stylesheet" href="{{baseUrl}}/dojox/treemap/themes/TreeMap.css">
   <div id="treeMap" data-dojo-type="dojox.treemap.TreeMap" data-dojo-props="store: dataStore, areaAttr:'sales', 
@@ -63,7 +63,7 @@ In HTML markup:
 
 You might want to listen to store query errors, for that you can use the promise returned by the store setter:
 
-.. js::
+.. js ::
 
   require(["dojox/treemap/TreeMap", "dojo/_base/Deferred", ..], function(TreeMap, Deferred, ...){
     var treeMap = new TreeMap(...);
@@ -82,13 +82,12 @@ Mapping using attributes
 
 In this example the data are mapped from the data store using an attribute based mapping. That means the cell size and color as well as the grouping are extracted from attributes value in the data.
 
-.. code-example::
+.. code-example ::
   :width: 620
   :height: 620
 
-  .. javascript::
+  .. js ::
   
-    <script type="text/javascript">
       require(["dojo/ready", "dojo/dom", "dojox/treemap/TreeMap",
         "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color"],
         function(ready, dom, TreeMap, Memory, MeanColorModel, Color) {
@@ -110,9 +109,8 @@ In this example the data are mapped from the data store using an attribute based
 	   colorModel: colorModel }, dom.byId("treeMap"));
         });
       });
-    </script>
 
-  .. html::
+  .. html ::
   
     <div id="treeMap" style="width:600px;height:600px"></div>
 
@@ -123,7 +121,7 @@ the color is expected to be found directly in the value of the colorAttr binding
 Note also that the groupAttrs property is of type array instead of just a single attribute. This allows one to specify several attributes for grouping thus creating a multi-level hierarchy. As for
 example:
 
-.. js::
+.. js ::
 
   groupAttrs:['continent', 'country']
 
@@ -136,13 +134,12 @@ Mapping using custom functions
 
 In this example the data are mapped from the data store using custom functions. That means the cell size and color as well as the grouping are computed by functions specified by the application.
 
-.. code-example::
+.. code-example ::
   :width: 620
   :height: 620
 
-  .. javascript::
-  
-    <script type="text/javascript">
+  .. js ::
+
       require(["dojo/ready", "dojo/dom", "dojox/treemap/TreeMap",
         "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color"],
         function(ready, dom, TreeMap, Memory, MeanColorModel, Color) {
@@ -172,9 +169,8 @@ In this example the data are mapped from the data store using custom functions. 
 	    }}, dom.byId("treeMap"));
         });
       });
-    </script>
 
-  .. html::
+  .. html ::
   
     <div id="treeMap" style="width:600px;height:600px"></div>
 
@@ -212,14 +208,13 @@ The following example shows how to:
  * change the font size
  * use rounded corners on treemap cells (HTML5 browsers only)
 
-.. code-example::
+.. code-example ::
   :type: inline
   :width: 620
   :height: 620
 
-  .. javascript::
-  
-    <script type="text/javascript">
+  .. js ::
+
       require(["dojo/ready", "dojo/dom", "dojox/treemap/TreeMap",
         "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color"],
         function(ready, dom, TreeMap, Memory, MeanColorModel, Color) {
@@ -241,13 +236,12 @@ The following example shows how to:
 	   colorModel: colorModel }, dom.byId("treeMap"));
         });
       });
-    </script>
 
-  .. html::
+  .. html ::
 
     <div id="treeMap" style="width:600px;height:600px"></div>
 
-  .. css::
+  .. css ::
   
     <style type="text/css">
       @import "{{baseUrl}}/dojox/treemap/themes/TreeMap.css";
@@ -307,7 +301,7 @@ Other interaction must be explicitly mixed in the TreeMap in order to be availab
 
 To get drill down ability on double click or double tap:
 
-.. js::
+.. js ::
 
   require(["dojo/ready", "dojo/dom", "dojo/_base/declare", "dojox/treemap/TreeMap",
     "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color", "dojox/treemap/DrillDownUp"],
@@ -334,7 +328,7 @@ To get drill down ability on double click or double tap:
 
 To get keyboard interaction:
 
-.. js::
+.. js ::
 
   require(["dojo/ready", "dojo/dom", "dojo/_base/declare", "dojox/treemap/TreeMap",
     "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color", "dojox/treemap/Keyboard"],
@@ -383,7 +377,7 @@ The first rendering mixin is the GroupLabel mixin. It allows to remove cell labe
   :width: 620
   :height: 620
 
-  .. javascript::
+  .. js ::
 
     require(["dojo/ready", "dojo/dom", "dojo/_base/declare", "dojox/treemap/TreeMap",
       "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color", "dojox/treemap/GroupLabel"],
@@ -407,7 +401,7 @@ The first rendering mixin is the GroupLabel mixin. It allows to remove cell labe
        });
     });
 
-  .. html::
+  .. html ::
 
     <div id="treeMap" style="width:600px;height:600px"></div>
 
@@ -420,12 +414,12 @@ The first rendering mixin is the GroupLabel mixin. It allows to remove cell labe
 
 The second rendering mixin is the ScaledLabel mixin. It allows to scale the cell labels so that they fill as much as possible the cells size:
 
-.. code-example::
+.. code-example ::
   :type: inline
   :width: 620
   :height: 620
 
-  .. javascript::
+  .. js ::
 
     require(["dojo/ready", "dojo/dom", "dojo/_base/declare", "dojox/treemap/TreeMap",
       "dojo/store/Memory", "dojox/color/MeanColorModel", "dojo/_base/Color", "dojox/treemap/ScaledLabel"],
@@ -449,11 +443,11 @@ The second rendering mixin is the ScaledLabel mixin. It allows to scale the cell
        });
     });
 
-  .. html::
+  .. html ::
 
     <div id="treeMap" style="width:600px;height:600px"></div>
 
-  .. css::
+  .. css ::
   
     <style type="text/css">
       @import "{{baseUrl}}/dojox/treemap/themes/TreeMap.css";
