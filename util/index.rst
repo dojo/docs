@@ -4,7 +4,7 @@
 Util
 ====
 
-The util/ directory is different than dojo/dijit/dojox in that it doesn't contain javascript code that accessed directly from web pages.   Rather, it contains utility scripts as listed below.
+The util/ directory is different than dojo/dijit/dojox in that it doesn't contain JavaScript code that accessed directly from web pages.   Rather, it contains utility scripts as listed below.
 
 :ref:`Dojo Build System <build/index>`
 --------------------------------------

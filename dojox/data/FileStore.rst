@@ -10,7 +10,7 @@ dojox.data.FileStore
 .. contents ::
     :depth: 3
 
-The dojox.data.FileStore is a lightweight javascript implementation for accessing details about a remote FileSystem. This includes being able to search the filesystem to locate file names, display path information, file sizes, if it’s a directory or not, and if a directory, what children files are contained within it. The dojox.data.FileStore is also an excellent example of how DataStores can do lazy-loading.
+The dojox.data.FileStore is a lightweight JavaScript implementation for accessing details about a remote FileSystem. This includes being able to search the filesystem to locate file names, display path information, file sizes, if it’s a directory or not, and if a directory, what children files are contained within it. The dojox.data.FileStore is also an excellent example of how DataStores can do lazy-loading.
 
 The datastore implementation and its example PHP back-end by default do not inflate the child file objects of a DataStore file item. This allows it to quickly return information about a file without having to return everything, while at the same time providing hooks that allow for the extra information to be gathered on-demand.
 
@@ -18,7 +18,7 @@ The datastore implementation and its example PHP back-end by default do not infl
 Features
 ========
 
-1. The client javascript and example server php script implement the following dojo.data APIs:
+1. The client JavaScript and example server php script implement the following dojo.data APIs:
 
    - :ref:`dojo.data.api.Read <dojo/data/api/Read>` and
    - :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`.

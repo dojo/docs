@@ -169,7 +169,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * :ref:`dojox.data.jsonPathStore <dojox/data/jsonPathStore>`
 
-    A local (in memory) store which can attach a dojo.data interface to each javascript object and uses jsonPath as the query language
+    A local (in memory) store which can attach a dojo.data interface to each JavaScript object and uses jsonPath as the query language
 
   * :ref:`dojox.data.JsonRestStore <dojox/data/JsonRestStore>`
 
@@ -796,4 +796,4 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * :ref:`dojox.xmpp <dojox/xmpp>`
 
-  XMPP (Jabber Client) Service implementation in pure javascript
+  XMPP (Jabber Client) Service implementation in pure JavaScript

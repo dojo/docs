@@ -16,7 +16,7 @@ dojo.provide is a core part of the legacy dojo module system. It tells the loade
 Introduction
 ============
 
-Each javascript source file must have at least one dojo.provide() call at the top of the file, corresponding to the file name. For example, `js/dojo/foo.js` must have `dojo.provide("dojo.foo");` before any calls to `dojo.require()` are made.
+Each JavaScript source file must have at least one dojo.provide() call at the top of the file, corresponding to the file name. For example, `js/dojo/foo.js` must have `dojo.provide("dojo.foo");` before any calls to `dojo.require()` are made.
 
 
 Usage

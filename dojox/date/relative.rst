@@ -20,7 +20,7 @@ Dates are formatted according to the following logic:
 Options
 -------
 
-dojox.date.relative.format takes a javascript Date object, and an optional kwArgs parameter.
+dojox.date.relative.format takes a JavaScript Date object, and an optional kwArgs parameter.
 
 Possible values for the kwArgs are:
  * '''locale''': Set if you want to specify a locale.  Defaults to current locale.

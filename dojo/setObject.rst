@@ -15,7 +15,7 @@ Set a property from a dot-separated string, such as "A.B.C".
 Usage
 =====
 
-In javascript, a dot separated string like obj.parent.child refers to an item called child inside an object called parent inside of obj.
+In JavaScript, a dot separated string like obj.parent.child refers to an item called child inside an object called parent inside of obj.
 
 setObject will let you set the value of child, creating the intermediate parent object(s) if they don't exist.
 

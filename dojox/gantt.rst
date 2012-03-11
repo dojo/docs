@@ -28,7 +28,7 @@ Usage
 
 The following step shows how to create a typical gantt chart in dojo.
 
-Step 1: Import related CSS file and required javascript:
+Step 1: Import related CSS file and required JavaScript:
 
 .. html ::
   

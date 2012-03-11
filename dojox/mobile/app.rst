@@ -61,7 +61,7 @@ To load an initial scene other than 'main', set the 'initialScene' value in appI
 View resources
 ==============
 
-Application view resources are all javascript files needed to run the application. They should be accessible through ``view-resources.json`` under the same directory as the initialization page. It should provide an array of objects under the form of ``[ { scene: '', source: 'url', module: 'module.name' }, ... ]``. If ``source`` is set, it will be treated as an URL and fetched directly, if ``module`` is set it will be treated as a classic module name and transformed accordingly (dots become slashes and ``.js`` added). If no ``scene`` is specified, resource will be loaded at application startup, otherwise it will be loaded when a given scene is requested.
+Application view resources are all JavaScript files needed to run the application. They should be accessible through ``view-resources.json`` under the same directory as the initialization page. It should provide an array of objects under the form of ``[ { scene: '', source: 'url', module: 'module.name' }, ... ]``. If ``source`` is set, it will be treated as an URL and fetched directly, if ``module`` is set it will be treated as a classic module name and transformed accordingly (dots become slashes and ``.js`` added). If no ``scene`` is specified, resource will be loaded at application startup, otherwise it will be loaded when a given scene is requested.
 
 You should use view resources instead of ``dojo.require`` to support browsers without synchronous XMLHttpRequest.
 

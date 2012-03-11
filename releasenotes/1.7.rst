@@ -542,7 +542,7 @@ Dijit
 
 - For ComboBox/FilteringSelect, if you need to set the store after creation, be sure to use the set("store", myStore) API rather than just setting it directly (myCombo.store = myStore).    The latter will fail when myStore is an old dojo.data store rather than the new dojo.store API.
 
-- If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new :ref:`dojo.store <dojo/store>` API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a javascript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
+- If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new :ref:`dojo.store <dojo/store>` API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a JavaScript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
 
 - If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
 
