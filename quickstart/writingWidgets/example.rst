@@ -79,7 +79,7 @@ Note how we assign classes to each major part, so we can apply design as CSS sty
 
 There's one more thing: the base class _Widget automatically copies certain attributes like `id` and `name` to the widget's top level node.
 Since we don't want that functionality in this case, we should override it, by adding the following code to the widget's
-javascript:
+JavaScript:
 
 .. js ::
 

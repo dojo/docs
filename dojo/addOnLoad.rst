@@ -12,7 +12,7 @@ Old Documentation
 =================
 dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing.
 
-Sooner or later, every Javascript programmer tries something like this:
+Sooner or later, every JavaScript programmer tries something like this:
 
 .. js ::
 

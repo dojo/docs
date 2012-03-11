@@ -273,7 +273,7 @@ To fade out two nodes simultaneously:
 
 (Notice we wrapped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which :ref:`addOnLoad <dojo/addOnLoad>` alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
 
-Javascript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
+JavaScript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
 
 .. js ::
   

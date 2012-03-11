@@ -77,11 +77,11 @@ Usage
 Constructor Parameters
 ----------------------
 
-The jsonPathStore takes a single optional parameter in the form of a javascript object containing one or more of the following properties:
+The jsonPathStore takes a single optional parameter in the form of a JavaScript object containing one or more of the following properties:
 
 data
-  JSON String or Javascript Object
-  JSON String or Javascript object this store will control JSON is converted into an object, and an object passed to the store will be used directly. If no data and no url is provide, an empty object, {}, will be used as the initial store.
+  JSON String or JavaScript Object
+  JSON String or JavaScript object this store will control JSON is converted into an object, and an object passed to the store will be used directly. If no data and no url is provide, an empty object, {}, will be used as the initial store.
 
 url - string
   Load data from this url in JSON format and use the Object created from the data as the data source.

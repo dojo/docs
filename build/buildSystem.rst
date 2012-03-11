@@ -51,7 +51,7 @@ Overview
 
 The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
-user-configurable Javascript object termed a "profile".
+user-configurable JavaScript object termed a "profile".
 
 When a resource is discovered, it is tagged with one or more flags that help identify the role of that resource. For
 example, an AMD module may be tagged "AMD". The profile controls how resources are tagged. After a resource is
@@ -69,7 +69,7 @@ tree. Notice the build system to "know" that the deployment tree will contain th
 by other transforms that ensure requisite files exist. For example, a CSS style sheet checker could check to see that
 all referenced images exist.
 
-Perhaps the most important transform for resource deployment is dependency scanning Javascript modules and then bundling
+Perhaps the most important transform for resource deployment is dependency scanning JavaScript modules and then bundling
 dependencies into a single resource to reduce the HTTP transactions required to load a resource.
 
 Road Map
@@ -117,9 +117,9 @@ so you don't have to path to the build system executable.
 Invoking the Build System
 =========================
 
-The build system is a Javascript program comprised of a set of AMD modules that may be executed by node.js or Rhino. The
+The build system is a JavaScript program comprised of a set of AMD modules that may be executed by node.js or Rhino. The
 program is distributed with the source version of the Dojo Toolkit. The source tree resides at util/build/. Dojo can be
-used to execute console-based Javascript programs in node by issuing the following command:
+used to execute console-based JavaScript programs in node by issuing the following command:
 
 .. code-block :: text
 
@@ -171,14 +171,14 @@ unless /util/buildscripts/ is the current working directory. The current build s
 Command Line Switches
 =====================
 
-The build system is controlled by a Javascript object termed a "profile" which instructs the system what files to
+The build system is controlled by a JavaScript object termed a "profile" which instructs the system what files to
 process and how to process them. The profile itself is constructed from one or more inputs:
 
-1. Zero or more Javascript resources that contain a profile object, as specified by the command line switch
+1. Zero or more JavaScript resources that contain a profile object, as specified by the command line switch
 ``--profile``. This switch requires a filename argument that points to a profile resource.
 
 2. Zero or more loader configuration variables (``dojoConfig`` or ``require``), as specified by the command line switches
-``--require`` or ``--dojoConfig``. These switches require a filename argument that points to a Javascript resource that contains a
+``--require`` or ``--dojoConfig``. These switches require a filename argument that points to a JavaScript resource that contains a
 loader configuration.
 
 3. Zero or more package.json resources that describe a CommonJS package, as specified by the command line switch
@@ -226,7 +226,7 @@ understanding and debugging how a particular build system invocation is consumin
     }
 
 This example points out that number, true, false, and null values are not stored as strings but rather are converted to
-Javascript numbers, booleans, and null.
+JavaScript numbers, booleans, and null.
 
 Profile Basics
 ==============
@@ -238,7 +238,7 @@ resource is used as the basis for the aggregate.
 Profile Resources
 -----------------
 
-A profile resource is a Javascript resource that defines the variable ``profile``, which must be a Javascript
+A profile resource is a JavaScript resource that defines the variable ``profile``, which must be a JavaScript
 object. Typically, a profile resource is given the file type
 ".profile.js". /util/build/examples/simple-profile1.profile.js contains a trivial example; here are the contents of that
 resource:
@@ -296,7 +296,7 @@ Which causes the following ``basePath`` initialization:
 relative paths contained within the profile resource te be independent of both the location of the package hierarchy
 within the greater file system and the current working directory at the time the build program is invoked.
 
-Profile resources are Javascript resources that are evaluated by the build system. They are not restricted to hold
+Profile resources are JavaScript resources that are evaluated by the build system. They are not restricted to hold
 JSON. They can, and often will, contain functions. For example, /util/build/examples/profile-with-code.profile.js
 has contents:
 
@@ -859,7 +859,7 @@ Typically, the best way to organize a profile for an application is as follows:
 
 2. Organize the source code for the application into one or more packages as is appropriate for the design.
 
-3. Construct a Javascript resource that contains the loader configuration necessary to develop the application. Don't
+3. Construct a JavaScript resource that contains the loader configuration necessary to develop the application. Don't
    worry about build issues while developing the application. This resource should be included in appropriate HTML
    resources via a script element before including the dojo loader. Typically, the configuration should reside at the
    root of the application hierarchy, but this is not required.
@@ -930,7 +930,7 @@ for complete documentation.
 
 * :ref:`hasReport <build/transforms/hasReport>`: Outputs a report describing the name and location of all has.js feature tests.
 
-* :ref:`insertSymbols <build/transforms/insertSymbols>`: Inserts debugging symbols into Javascript resources.
+* :ref:`insertSymbols <build/transforms/insertSymbols>`: Inserts debugging symbols into JavaScript resources.
 
 * :ref:`optimizeCss <build/transforms/optimizeCss>`: Inlines CSS imports and/or removes comments from CSS files.
 

@@ -34,7 +34,7 @@ a legacy NLS module is detected, then it is automatically converted to the AMD N
 assumed to have no dependencies.
 
 Modules that are not tagged with "amd" and are not NLS modules are scanned for dependencies using a process that
-depends on regular expressions. Due to the lexical conventions of Javascript, it is impossible to construct a regular
+depends on regular expressions. Due to the lexical conventions of JavaScript, it is impossible to construct a regular
 expression that can properly differentiate between comments, strings, and regular expression literals (a parser is
 required that can compute context). Nevertheless, the regular-expression-based dependency scanning process works in all
 but the most defective cases and is identical to the process that is used with the legacy xdomain loader and build
@@ -62,7 +62,7 @@ In all cases, the pattern matching algorithm is not sensitive to white space.
 
 Zero or more string resources may be excluded from being interned by placing the resource module identifier in the
 profile property ``internStringsSkipList``, an array of module identifiers (strings). Module identifiers of
-non-Javascript resources (e.g. HTML template files) must include the proper file type. For example, the resource at
+non-JavaScript resources (e.g. HTML template files) must include the proper file type. For example, the resource at
 dijit/templates/tree.html has the resource identifier "dijit/templates/TreeNode.html".
 
 After strings are interned (if necessary), the module is scanned for legacy loader API functions applications

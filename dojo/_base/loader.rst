@@ -59,7 +59,7 @@ Features
 
 * :ref:`dojo.require <dojo/require>`
 
-  Loads a Javascript module from the appropriate URI
+  Loads a JavaScript module from the appropriate URI
 
 * :ref:`dojo.setObject <dojo/setObject>`
 

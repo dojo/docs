@@ -13,7 +13,7 @@ Cultural conventions: Date, Number and Currency
 Dates and Times
 ===============
 
-Unlike standard Javascript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`.
+Unlike standard JavaScript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`.
 
 For example, look at the following date formatted using the default locale for the user (in this case, English - United States) and also with a specific locale override of Chinese - PRC China:
 
@@ -109,4 +109,4 @@ Note: handling of Hindi and Arabic style numerals is not yet implemented.
 Locale support
 ==============
 
-It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as Javascript objects in the Dojo repository under :ref:`dojo.cldr <dojo/cldr>`. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.
+It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as JavaScript objects in the Dojo repository under :ref:`dojo.cldr <dojo/cldr>`. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.

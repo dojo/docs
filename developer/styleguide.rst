@@ -110,7 +110,7 @@ Naming Conventions
 
     #. The name of the return object is implicit, and SHOULD be avoided in a method name:
     
-        .. javascript:
+        .. js ::
         
             getHandler(); // NOT getEventHandler()``
 

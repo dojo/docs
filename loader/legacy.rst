@@ -94,7 +94,7 @@ scope. Consider the module text:
 If the code above is evaluated in the global scope, then someVariable is entered into the global namespace; however, if
 it's evaluated in a function scope, then someVariable is a lexical variable and disappears when the function returns.
 
-In version 1.7+, all code that is downloaded as text and evaluated with Javascript eval is evaluated in a function
+In version 1.7+, all code that is downloaded as text and evaluated with JavaScript eval is evaluated in a function
 scope. If you've got code like above and expect someVariable be defined in the global space, it will not work in v1.7
 (it only worked sometimes anyway--even if you didn't know it). Here's how to get the effect you want:
 
@@ -104,7 +104,7 @@ scope. If you've got code like above and expect someVariable be defined in the g
   dojo.global.someVariable = anAwesomeCalculation();
 
 Let's review how dojo.require normally operates. dojo.require executes a synchronous XHR to get the resource text and
-then applies Javascript eval to that text. If a dojo.require application is encountered during the evaluation of the
+then applies JavaScript eval to that text. If a dojo.require application is encountered during the evaluation of the
 text, then another synchronous XHR retrieves the demanded resource's text and that text is eval'd, and so on util the
 entire dependency tree is evaluated. This guarantees a particular code path. Consider the following module:
 
@@ -170,8 +170,8 @@ Now comes the really crazy part of the cross-domain loader: loading not-cross-do
 loading cross-domain, built modules. And yes, this happens all the time--whenever an unbuilt application references dojo
 on a CDN. In this case, the not-cross-domain, not-built modules are downloaded by synchronous XHR and converted to built
 modules on-the-fly. Of course the only way to do this is to scan the module's text for dojo.provide, dojo.require, and
-the rest. But, owing to Javascript's regular expression lexical rules, it is impossible to remove comments and strings
-from Javascript text without fully parsing the text! And without removing comments and strings, it is possible
+the rest. But, owing to JavaScript's regular expression lexical rules, it is impossible to remove comments and strings
+from JavaScript text without fully parsing the text! And without removing comments and strings, it is possible
 "discover" loader API applications that aren't really there and/or miss others.
 
 Be that as it may, the v1.6- cross-domain loader removes comments with a regular expression, sniffs for legacy loader
@@ -436,7 +436,7 @@ object associated with the module is undefined. This sounds better in code:
   }
 
 The `dojoRequire(modulename)` application causes the loader to resolved the module `moduleName`. Upon return it pushes
-the value of the module into the Javascript object given by module name if and only if that object is undefined. This
+the value of the module into the JavaScript object given by module name if and only if that object is undefined. This
 algorithm my be suppressed by setting the has feature "config-publishRequireResult" to falsy; this feature is true by
 default.
 
@@ -479,7 +479,7 @@ The conversion process used to convert an unbuilt legacy module to an AMD module
 converted is termed the "reference module" in the description that follows):
 
 1. The text of the reference module is analyzed by first removing all comments with a regular expression. The regular
-   expression has been in place for many versions, but is far from perfect and can be fooled (e.g., when Javascript
+   expression has been in place for many versions, but is far from perfect and can be fooled (e.g., when JavaScript
    comment delimiters are contained in strings). For the record, the regular expression used to find comments is
    ```/(\/\*([\s\S]*?)\*\/|\/\/(.*)$)/mg```. The comment-filtered text is then scanned for the legacy loader
    functions. When found, the text of each loadInit application is aggregated to a single string and the text to all

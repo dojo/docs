@@ -1380,7 +1380,7 @@ baseUrl (string)
   The base URL prepended to a module identifier when converting it to a path or URL. Defaults to the path to dojo.js in browser environments, and the current working directory in non-browser environments.
 
 packages (array of package configuration objects)
-  Defined in `Module Identifiers`_. Default is shown in the `Default Configuration`_ section. Note: other properties provided by a package object will be copied (via the Javascript = operator) to the package configuration variable maintained by the loader at ``require.packs[<name>]``. Client applications may specify and use such additional properties as required.
+  Defined in `Module Identifiers`_. Default is shown in the `Default Configuration`_ section. Note: other properties provided by a package object will be copied (via the JavaScript = operator) to the package configuration variable maintained by the loader at ``require.packs[<name>]``. Client applications may specify and use such additional properties as required.
 
 packagePaths (object)
   This is a shorthand notation that can be used to specify package configuration for several packages that have the same root location. A particular package's location configuration variable is computed by concatenating the map key at which the particular package configuration object resides and the package name. The package configuration object may be specified as a string, thereby indicating the package name and default values for main and packageMap. For example:

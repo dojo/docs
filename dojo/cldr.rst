@@ -18,7 +18,7 @@ Introduction
 This data contains tables with culturally sensitive information for hundreds of languages and country variants, such as translations of days of the week, months of the year, patterns for formatting dates and numbers. This is used by dojo.date, dojo.number, and dojo.currency to produce localized output. The nls/ directory as provided in the standard download of Dojo contains a subset of the available locales; a complete set is available by running the ant script in util/buildscripts/cldr.  See the section "Buildscripts" below for more information.  It is therefore usually not necessary to hand-craft localized copies of this information.  The unicode.org CLDR project is responsible for the choices made in these files and has both a bug tracker and survey application on their website.
 
 
-The data is transformed, as a pre-build step, from XML data to JSON-style Javascript you see under the nls/ directory.
+The data is transformed, as a pre-build step, from XML data to JSON-style JavaScript you see under the nls/ directory.
 This data is used by other modules in core Dojo such as dojo.date, dojo.number and dojo.currency,
 which provides more friendly programmatic APIs. It usually is not necessary to use dojo.cldr.nls directly.
 Other packages available in the CLDR provide methods to supplemental data:

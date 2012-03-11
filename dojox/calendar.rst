@@ -32,11 +32,9 @@ The following example shows how to declare a calendar widget in markup:
   :width: 620
   :height: 620
 
-  .. javascript::
+  .. js ::
 
-    <script type="text/javascript">
-            require(["dojo/parser", "dojox/calendar/Calendar"]);
-    </script>
+    require(["dojo/parser", "dojox/calendar/Calendar"]);
 
   .. html::
 
@@ -54,9 +52,8 @@ The following example shows how to declare a calendar widget programmatically:
   :width: 620
   :height: 620
 
-  .. javascript::
+  .. js ::
 
-    <script type="text/javascript">
       require(["dojo/parser", "dojo/ready", "dojox/calendar/Calendar"], 
         function(parser, ready, Calendar){
           ready(function(){
@@ -67,7 +64,6 @@ The following example shows how to declare a calendar widget programmatically:
                     }
                 )}
         );
-    </script>
   
   .. html::
 

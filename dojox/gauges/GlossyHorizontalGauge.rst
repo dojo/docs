@@ -77,7 +77,7 @@ The HTML <div> element to display the gauge widget:
     <div id="HorizontalGauge" ></div>
 
 
-The Javascript code creating the gauge:
+The JavaScript code creating the gauge:
 
 .. js ::
 

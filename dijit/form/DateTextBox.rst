@@ -37,22 +37,22 @@ or the locale of the user's browser to determine the appropriate behavior.
 Another problem is that your application may interact with various users in different locales,
 and the same server interaction is expected to work for all of them.
 If your widget markup specifies the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?
-You could write your application to assume US-English conventions, as Javascript often does,
+You could write your application to assume US-English conventions, as JavaScript often does,
 but that programming practice will not be well understood in other parts of the world
 and may cause problems interacting with other software.
 To prevent this ambiguity, DateTextBox uses ISO8601/RFC3339 format ``yyyy-MM-dd`` to specify dates
-when communicating outside the Javascript realm.
+when communicating outside the JavaScript realm.
 This format is both neutral to cultural formatting conventions as well as to time zones.
 For example:
 
 * 2007-12-25 means December 25, 2007.
 
-ISO formatted date values sort properly as strings and are lighter-weight than Javascript Date objects, which make them convenient for programming.
+ISO formatted date values sort properly as strings and are lighter-weight than JavaScript Date objects, which make them convenient for programming.
 
 The DateTextBox widget uses a hidden form element with the *NAME* of the original tag to submit the ISO data;
 the form element provided for user interaction is an additional form element instantiated only for this purpose.
 When you access the DateTextBox value attribute programmatically from the widget using JavaScript,
-you must use a native Javascript Date object, e.g. new Date(2007, 11, 25).
+you must use a native JavaScript Date object, e.g. new Date(2007, 11, 25).
 The time portion of the Date object is ignored.
 
 

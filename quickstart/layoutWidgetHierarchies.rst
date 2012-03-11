@@ -37,7 +37,7 @@ so that child can call getParent().
 
 isLayoutContainer children
 ---------------------------
-Since javascript sizing doesn't work until a widget has been made visible, child widgets of an isLayoutContainer will usually detect if parent has the isLayoutContainer container, then branch:
+Since JavaScript sizing doesn't work until a widget has been made visible, child widgets of an isLayoutContainer will usually detect if parent has the isLayoutContainer container, then branch:
 
  * yes: on startup(), skip layout operations.    instead wait for resize() call.
  * no: startup() must do sizing

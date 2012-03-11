@@ -4,7 +4,4 @@
 dojo.every
 ==========
 
-Usage & examples
-================
-
-See array documentation : :ref:`dojo.every <quickstart/arrays>`.
+Deprecated, see :ref:`dojo/base/array::every() <dojo/_base/array#every>` instead.

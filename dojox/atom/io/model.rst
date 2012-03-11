@@ -84,7 +84,7 @@ There are also several utility functions defined by the model.  These functions 
 Usage
 =====
 
-The model is intended for creating, parsing, and working with ATOM feeds in Javascript and being able to easily serialize them out.  Generally to create a Feed you would use dojo.xhrGet() to load an XML document into a DOM, then pass that dom Object to buildFromDom() of a newly instantiated Atom Feed model class.  It will then construct all its subclasses and set its attributes correctly.  For specific usage, please refer to the examples section.
+The model is intended for creating, parsing, and working with ATOM feeds in JavaScript and being able to easily serialize them out.  Generally to create a Feed you would use dojo.xhrGet() to load an XML document into a DOM, then pass that dom Object to buildFromDom() of a newly instantiated Atom Feed model class.  It will then construct all its subclasses and set its attributes correctly.  For specific usage, please refer to the examples section.
 
 Examples
 ========

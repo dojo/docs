@@ -155,7 +155,7 @@ A markup tree
 Here's an example of creating a Tree in markup.
 It's not wrapping the store in Observable(), so that store updates won't be reflected into the tree.
 (Wrapping the store in Observable is not easy to do through markup.
-If you need the functionality, we suggest creating the store in javascript, or create your own custom store.
+If you need the functionality, we suggest creating the store in JavaScript, or create your own custom store.
 In any case, the dijit.tree.Model and dijit.Tree themselves can still be created in markup.)
 
 .. code-example ::

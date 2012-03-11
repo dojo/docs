@@ -4,7 +4,4 @@
 dojo.some
 =========
 
-Usage & examples
-================
-
-See array documentation : :ref:`dojo.some <quickstart/arrays>`.
+Deprecated, see :ref:`dojo/base/array::some() <dojo/_base/array#some>` instead.

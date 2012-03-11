@@ -77,7 +77,7 @@ Dojo <1.7
 
 As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to that value, and animate to the end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px".
 
-It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``.
+It is also worth noting: when animating multi-word CSS properties such as ``font-size``, JavaScript requires they be converted to the mixed-case: ``fontSize``.
 
 Advanced Properties
 ===================
@@ -86,22 +86,22 @@ In addition to being able to use the above syntax to define the properties:{} ob
 
 A simple, though redundant, example:
 
-.. code-block: javascript
-  
-  dojo.animateProperty({
-    node:"someNode",
-    properties:{
-       width:{
-          start:function(){
-              // calculate the width before being play'd
-              return dojo.marginBox("someNode").w / 2;
-          },
-          end:function(){
-             return 600;
-          }
-       }
-    }
-  }).play();
+.. js ::
+
+    dojo.animateProperty({
+        node:"someNode",
+        properties:{
+            width:{
+                start:function(){
+                    // calculate the width before being play'd
+                    return dojo.marginBox("someNode").w / 2;
+                },
+                end:function(){
+                    return 600;
+                }
+            }
+        }
+    }).play();
 
 **new in Dojo 1.4**: dojo.animateProperty allows a function to be directly passed to the property:
 

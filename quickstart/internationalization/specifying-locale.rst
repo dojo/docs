@@ -19,7 +19,7 @@ Localization is driven by a *locale*, a short string often supplied by the host 
 How does Dojo find the locale?
 ==============================
 
-By default, Dojo derives the user locale setting from the navigator browser object, the only locale information available from Javascript. The browser locale is determined during browser installation and is not easily configurable. Note that this is not the same as the locale in the preferences dialog which can be used to accompany HTTP requests; there is unfortunately no way to access that locale from the client without a server round-trip.
+By default, Dojo derives the user locale setting from the navigator browser object, the only locale information available from JavaScript. The browser locale is determined during browser installation and is not easily configurable. Note that this is not the same as the locale in the preferences dialog which can be used to accompany HTTP requests; there is unfortunately no way to access that locale from the client without a server round-trip.
 
 The user's locale may easily be overridden on a page prior to the Dojo bootstrap by setting the :ref:`dojoConfig.locale <dojo/config>` property. Of course, setting this property in a static way defeats internationalization for other users. This setting may be established by a server to achieve personalization of web applications, where a user may be able to select their locale or this information may be available through some other means.
 
