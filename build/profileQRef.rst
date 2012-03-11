@@ -233,7 +233,7 @@ Transform: writeAmd
   * [*falsy*] The transform does nothing to the module identifier argument in define applications. In particular, a
     falsy value does *not* cause the transform to remove a module identifier argument that exists in the source code.
 
-Layer items are Javascript objects with the following properties
+Layer items are JavaScript objects with the following properties
 
 ``include`` (default = ``[]``)
   The set of module identifiers that, together with their dependency graphs, should be included in the layer, exclusive

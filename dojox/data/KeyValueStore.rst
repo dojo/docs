@@ -14,7 +14,7 @@ This is a dojo.data store implementation. The KeyValueStore is a store that take
 Input Format
 ============
 
-It can take in either a Javascript array, JSON string, or URL as the data source. Data is expected to be in the following format:
+It can take in either a JavaScript array, JSON string, or URL as the data source. Data is expected to be in the following format:
 
 .. js ::
  

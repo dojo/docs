@@ -103,7 +103,7 @@ When you get the bundle object, you can use it as a normal JSON object (a hash) 
 You should use dojoConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-dojoConfig.locale overrides the browser's default locale as specified by the navigator Javascript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. dojoConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accommodate multiple languages on a single page. No other locales may be used on the page.
+dojoConfig.locale overrides the browser's default locale as specified by the navigator JavaScript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. dojoConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accommodate multiple languages on a single page. No other locales may be used on the page.
 
 If you omit the locale parameter when calling the dojo.requireLocalization function, the function will load the resource bundles for locales in dojoConfig.locale as well as for all the locales in dojoConfig.extraLocale.
 

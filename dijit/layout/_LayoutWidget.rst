@@ -70,7 +70,7 @@ Lifecycle
 =========
 
 The lifecycle of layout widgets is particularly complex because they
-  * do sizing in javascript
+  * do sizing in JavaScript
   * are hierarchical: there's a relationship between parent and children widgets.
 
 At the time that postCreate() etc. is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done.

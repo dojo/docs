@@ -77,7 +77,7 @@ Dojo <1.7
 
 As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to that value, and animate to the end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px".
 
-It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``.
+It is also worth noting: when animating multi-word CSS properties such as ``font-size``, JavaScript requires they be converted to the mixed-case: ``fontSize``.
 
 Advanced Properties
 ===================

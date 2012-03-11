@@ -54,7 +54,7 @@ loader factory to be deleted. This transform constructs user configuration and d
 these to along with the transformed loader factory text.
 
 The user configuration object may be specified in the profile property ``userConfig``. If ``userConfig`` is a string,
-then it is used verbatim; otherwise, it must be a Javascript object giving a loader configuration see xxx. The object
+then it is used verbatim; otherwise, it must be a JavaScript object giving a loader configuration see xxx. The object
 need not be a JSON object and may contain functions. For example,
 
 .. js ::

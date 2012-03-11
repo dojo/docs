@@ -133,7 +133,7 @@ layerOptimize=shrinksafe
   Specifies how to optimize the layer files. If "comments" is specified, then code comments are stripped. See the 'optimize' parameter for possible values.
 
 scopeDjConfig=
-  Burn in a djConfig object into the built dojo.js file. Useful if you are making your own scoped dojo and you want a djConfig object local to your version that will not be affected by any globally declared djConfig object in the page. Value must be a string that will look like a javascript object literal once it is placed in the built source. use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox. Example (note that the backslashes below are required to avoid shell escaping if you type this on the command line): ``scopeDjConfig={isDebug:true,scopeMap:[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]}``
+  Burn in a djConfig object into the built dojo.js file. Useful if you are making your own scoped dojo and you want a djConfig object local to your version that will not be affected by any globally declared djConfig object in the page. Value must be a string that will look like a JavaScript object literal once it is placed in the built source. use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox. Example (note that the backslashes below are required to avoid shell escaping if you type this on the command line): ``scopeDjConfig={isDebug:true,scopeMap:[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]}``
 
 
 xdDojoScopeName=dojo

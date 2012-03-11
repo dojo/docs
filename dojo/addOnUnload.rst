@@ -66,7 +66,7 @@ Dojo < 1.7
 Examples
 ========
 
-This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnload`.
+This example demonstrates how a `JavaScript:` link will trigger a `dojo.addOnUnload`.
 
 .. code-example ::
 

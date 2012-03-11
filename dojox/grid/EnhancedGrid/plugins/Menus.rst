@@ -119,7 +119,7 @@ HTML markup usage sample
         height: 20em;
     }
 
-Javascript usage sample
+JavaScript usage sample
 
 .. code-example::
   :toolbar: themes, versions, dir
