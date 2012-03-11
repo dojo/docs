@@ -336,5 +336,3 @@ See also
 * :ref:`dojo/dom-style <dojo/dom-style>` - DOM Style API
 
 * :ref:`dojo/_base/html <dojo/_base/html>` - Legacy API aliases
-
-.. api-link :: dojo.dom-attr
