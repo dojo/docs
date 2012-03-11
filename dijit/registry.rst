@@ -23,7 +23,7 @@ Starting in Dojo 1.7, it is its own object.
 Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some).
 Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0).
 If you need to iterate over the entire registry, it is best to call ``registry.toArray``
-and use the standard :ref:`dojo array <quickstart/arrays>` functions.
+and use the standard :ref:`dojo array <dojo/_base/array>` functions.
 
 Usage
 =====
