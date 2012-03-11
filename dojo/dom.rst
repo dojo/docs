@@ -23,8 +23,6 @@ byId Function
 This is a simple alias to ``document.getElementById``, which not only is shorter to write, but fortunately works in all
 browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode.
 
-.. api-link :: dojo.byId
-
 Usage
 ~~~~~
 
@@ -59,7 +57,7 @@ If you pass byId a domNode reference, the same node is returned:
   // output
   >>> true
 
-If you pass dojo.byId a string, and no domNode is found to match, ``undefined`` or the null object is returned
+If you pass ``byId()`` a string, and no domNode is found to match, ``undefined`` or the null object is returned
 (depending on the browser), which is adequate truthiness to use conditionally:
 
 .. js ::
@@ -74,7 +72,7 @@ If you pass dojo.byId a string, and no domNode is found to match, ``undefined`` 
   });
 
 Most (if not all) functions in Dojo accept either a string or DomNode as a parameter. If passed a string, the function
-typically calls dojo.byId(), ensuring a domNode is always the object. For instance:
+typically calls ``byId()``, ensuring a domNode is always the object. For instance:
 
 .. js ::
 
@@ -84,7 +82,7 @@ typically calls dojo.byId(), ensuring a domNode is always the object. For instan
     domStyle.set("foo", "opacity", 0.5);
   });
 
-The latter is preferred, as the call to dojo.byId is made in both cases. The passing of a string ID is consistent
+The latter is preferred, as the call to ``byId()`` is made in both cases. The passing of a string ID is consistent
 throughout the Dojo Toolkit.
 
 JavaScript has a fun convention for conditionals inline. Imagine wanting a domNode reference, and if not present,
@@ -103,11 +101,11 @@ Above, if the node id="missingNode" is in fact missing, the logical OR will cont
 Arguments
 ~~~~~~~~~
 
-======== =====================================
-Argument Description
-======== =====================================
-id       The id of the DOM node to be returned
-======== =====================================
+======== ====== =====================================
+Argument Type   Description
+======== ====== =====================================
+id       String The id of the DOM node to be returned
+======== ====== =====================================
 
 Examples
 ~~~~~~~~
@@ -156,8 +154,6 @@ isDescendant Function
 ---------------------
 
 Returns true if node is a descendant of ancestor.
-
-.. api-link :: dojo.isDescendant
 
 Usage
 ~~~~~
@@ -217,8 +213,6 @@ setSelectable Function
 ----------------------
 
 Enable or disable selection on a node
-
-.. api-link :: dojo.setSelectable
 
 Usage
 ~~~~~
