@@ -86,22 +86,22 @@ In addition to being able to use the above syntax to define the properties:{} ob
 
 A simple, though redundant, example:
 
-.. code-block: javascript
-  
-  dojo.animateProperty({
-    node:"someNode",
-    properties:{
-       width:{
-          start:function(){
-              // calculate the width before being play'd
-              return dojo.marginBox("someNode").w / 2;
-          },
-          end:function(){
-             return 600;
-          }
-       }
-    }
-  }).play();
+.. js ::
+
+    dojo.animateProperty({
+        node:"someNode",
+        properties:{
+            width:{
+                start:function(){
+                    // calculate the width before being play'd
+                    return dojo.marginBox("someNode").w / 2;
+                },
+                end:function(){
+                    return 600;
+                }
+            }
+        }
+    }).play();
 
 **new in Dojo 1.4**: dojo.animateProperty allows a function to be directly passed to the property:
 
