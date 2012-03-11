@@ -586,7 +586,7 @@ dojo.fromJson                                           dojo/json               
 dojo.toJson                                             dojo/json                      json.stringify
 =====================================================   ============================   ====================================
 
-Note that the new methods only accept true JSON, not arbitrary javascript.  Even the keys in a hash must be quoted
+Note that the new methods only accept true JSON, not arbitrary JavaScript.  Even the keys in a hash must be quoted
 
 Valid:
 

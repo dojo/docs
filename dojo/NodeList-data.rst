@@ -19,16 +19,16 @@ The public APIs for the module are exposed on :ref:`dojo.NodeList <dojo/NodeList
 
 For Dojo 1.6 and earlier, the include the *data* APIs in your environment issue an appropriate :ref:`dojo.require <dojo/require>` call:
 
-.. javascript ::
+.. js ::
 
   dojo.require("dojo.NodeList-data");
 
 Since Dojo 1.7, you need to use 'require()' to import this module:
 
-.. javascript ::
+.. js ::
 
   require(["dojo/NodeList-data"], function(nodeListData){
-    // your codes here
+      // your codes here
   });
 
 Using data()

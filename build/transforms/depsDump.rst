@@ -22,7 +22,7 @@ resource. The format includes a map from module name to unique identifier and th
 the dependency graph, thereby eliminating verbose module identifiers.
 
 The unique identifiers are continuously increasing integers, starting at zero. The map is encapsulated in a tree of
-nested objects. The dotted Javascript property name for any property indicates the module name by replacing the dots
+nested objects. The dotted JavaScript property name for any property indicates the module name by replacing the dots
 with slashes. The "*" property of any object indicates that module's unique identifier. The forrest of module names is
 rooted at the property ``idTree`` of the output JSON object. Consider the following example:
 

@@ -103,7 +103,7 @@ Tag names may be reused. They can be used to indicate the intended semantics. Fo
 
 Notice that this example simply used the value of the profile property ``myBlock`` rather than a binary expression. The
 text between the comma and the last parenthesis is evaluated and this text may be arbitrarily simple or complex so long as
-it remains on the single line that contains the pragma and is legal Javascript that returns a booleanish value.
+it remains on the single line that contains the pragma and is legal JavaScript that returns a booleanish value.
 
 Profile Knobs
 =============

@@ -62,7 +62,7 @@ for complete documentation.
   Outputs a report describing the name and location of all has.js feature tests.
 
 :ref:`insertSymbols <build/transforms/insertSymbols>`
-  Inserts debugging symbols into Javascript resources.
+  Inserts debugging symbols into JavaScript resources.
 
 :ref:`optimizeCss <build/transforms/optimizeCss>`
   Inlines CSS imports and/or removes comments from CSS files.

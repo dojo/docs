@@ -770,7 +770,7 @@ Animation is generated using the following technologies:
   - animated GIF files
 
 
-Javascript and CSS3 Animations
+JavaScript and CSS3 Animations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 dojo.fx and CSS3 -webkit-transition (supported and viewable in Safari & Chrome) animations have been applied

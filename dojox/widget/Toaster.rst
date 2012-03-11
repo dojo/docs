@@ -42,7 +42,7 @@ The first example uses setContent() and show() to vary the message and display i
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
-  Javascript
+  JavaScript
 
   .. js ::
 
@@ -82,7 +82,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
-  Javascript
+  JavaScript
 
   .. js ::
 
@@ -118,7 +118,7 @@ This example builds a Toaster programmatically and lets you set params.
 
     <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
-  Javascript
+  JavaScript
 
   .. js ::
 

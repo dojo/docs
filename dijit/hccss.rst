@@ -44,7 +44,7 @@ Execution Time
 ==============
 
 Note that the dojo/domReady! dependency (if present) will resolve before the CSS class is added.
-Thus if your widget has javascript sizing code, it's not sufficient to wait for dojo/domReady!.
+Thus if your widget has JavaScript sizing code, it's not sufficient to wait for dojo/domReady!.
 Rather, the widget should be instantiated inside of a ready() call:
 
 .. js ::

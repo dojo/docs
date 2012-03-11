@@ -15,7 +15,7 @@ This page attempts to describe how to include localized strings bundles in your 
 Introduction
 ============
 
-The dojo build system results in "layers", which are single large .js files that contain a concatenation (plus some magic sugar) of individual .js files from the SDK.  Localization bundles are not, by default, included in these layer .js files.  They exist in their own parallel set of .js files, and are built into their own concatenated .js file.  So, a "layer" can actually be thought of two files, a main .js file containing the Javascript implementation (and interned template strings), and a set of strings bundle .js files.
+The dojo build system results in "layers", which are single large .js files that contain a concatenation (plus some magic sugar) of individual .js files from the SDK.  Localization bundles are not, by default, included in these layer .js files.  They exist in their own parallel set of .js files, and are built into their own concatenated .js file.  So, a "layer" can actually be thought of two files, a main .js file containing the JavaScript implementation (and interned template strings), and a set of strings bundle .js files.
 
 This document is more to do with how to arrange your source files so that the build system can work its magic.  We do not directly employ any build system switches or capabilities via ``build.sh`` or the profile .js file.
 
@@ -235,7 +235,7 @@ Suddenly, the load performance is very different.  The Net panel now shows:
   test/dojo/nls/testdijits_en-us.js
 
 Important points to note here:
-  * ``test/dojo/testdijits.js`` contains the javascript implementation and inlined templates of all dijits mentioned in the profile .js file for that layer.
+  * ``test/dojo/testdijits.js`` contains the JavaScript implementation and inlined templates of all dijits mentioned in the profile .js file for that layer.
   * ``test/dojo/nls/testdijits_en-us.js`` contains the strings bundles for all those dijits.
 
 The Build Bakes Available Locales Into Your Code
@@ -329,7 +329,7 @@ then dojo will automatically serve the page with the ``fr`` string resources, an
 Trees of Locales
 ================
 
-Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The :ref:`requireLocalization <dojo/requireLocalization>` page mentions that the bundles for each locale are merged to provide a single javascript object.  An example would be useful at this point.
+Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The :ref:`requireLocalization <dojo/requireLocalization>` page mentions that the bundles for each locale are merged to provide a single JavaScript object.  An example would be useful at this point.
 
 If we provide the following:
 

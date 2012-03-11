@@ -70,7 +70,7 @@ An example 2-level TreeGrid defined via HTMl would look like this:
     </thead>
   </table>
 
-The equivalent javascript structure definition would be:
+The equivalent JavaScript structure definition would be:
 
 .. js ::
 

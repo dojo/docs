@@ -359,7 +359,7 @@ Instead of showing the Dialog, it will change the browser's URL.    The workarou
 
    <a href="javascript: dialog.show() && undefined">show</a>
 
-Alternately, stop using A tags with "href" as a way to execute javascript, and use onclick instead.
+Alternately, stop using A tags with "href" as a way to execute JavaScript, and use onclick instead.
 
 .. html ::
 

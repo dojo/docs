@@ -81,7 +81,7 @@ visual cue down the road as to why you are using dojox/layout/ContentPane.
                 style:"height:125px"
             }, "targetID");
             
-            myContentPane.setHref("contentWithJavascript.html");
+            myContentPane.setHref("contentWithJavaScript.html");
         });
     });
 

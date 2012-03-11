@@ -4,7 +4,5 @@
 dojo.filter
 ===========
 
-Usage & examples
-================
 
-See array documentation : :ref:`dojo.filter <quickstart/arrays>`.
+Deprecated, see :ref:`dojo/base/array::filter() <dojo/_base/array#filter>` instead.

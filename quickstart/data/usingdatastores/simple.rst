@@ -34,7 +34,7 @@ For the following examples, the defined JavaScript will be used. Note that it ha
 
 In the following examples:
 
-* The data source is the above javascript object
+* The data source is the above JavaScript object
 * Each item is a country, and each item has three attributes: name, abbr, and capital.
 * The abbr attribute is an identifier. Each country has a different abbr for unique look up.
 

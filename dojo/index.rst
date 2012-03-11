@@ -49,39 +49,18 @@ Configuring Dojo (dojo/_base/config)
 Array Utilities (dojo/_base/array)
 ----------------------------------
 
-Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the :ref:`Array QuickStart <quickstart/arrays>` for an overview.
+See :ref:`Arrays and Dojo <dojo/_base/array>` for details on dojo's array methods:
 
-* :ref:`dojo/_base/array <dojo/_base/array>`
+* forEach() - Invokes a callback function for every item in array
+* map() - Applies a callback to each element of arr and returns an Array with the results
+* some() - Iterate over an array, escaping when the callback returns true for some logic check.
+* every() - Iterate over an array, escaping when the callback returns false for some logic check.
+* filter() - Iterate over an array, reducing the array based on the callback return.
+* indexOf() - Find the index of some element in an Array.
 
-  **STUB** Overview of the array module
+See also the :ref:`NodeList array methods <dojo/NodeList>`:
 
-* :ref:`dojo.forEach <dojo/forEach>`
-
-  Invokes a callback function for every item in array
-
-* :ref:`dojo.map <dojo/map>`
-
-  Applies a callback to each element of arr and returns an Array with the results
-
-* :ref:`dojo.some <dojo/some>`
-
-  Iterate over an array, escaping when the callback returns true for some logic check.
-
-* :ref:`dojo.every <dojo/every>`
-
-  Iterate over an array, escaping when the callback returns false for some logic check.
-
-* :ref:`dojo.filter <dojo/filter>`
-
-  Iterate over an array, reducing the array based on the callback return.
-
-* :ref:`dojo.indexOf <dojo/indexOf>`
-
-  Find the index of some element in an Array.
-
-* :ref:`NodeList array methods <dojo/NodeList>`
-
-  * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
+* NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
 Language Utilities (dojo/_base/lang)
 ------------------------------------
@@ -344,7 +323,7 @@ This module is defining deprecated symbols for loading.   See the :ref:`loader d
 
 * :ref:`dojo.require <dojo/require>`
 
-  Loads a Javascript module from the appropriate URI
+  Loads a JavaScript module from the appropriate URI
 
 * :ref:`dojo.provide <dojo/provide>`
 
@@ -402,10 +381,9 @@ Miscellaneous Base
 
   dojo._Url is used to manage the url object.
 
-* :ref:`dojo/_base/sniff <quickstart/browser-sniffing>`
-* :ref:`dojo/sniff <dojo/sniff>` **STUB**
+* :ref:`dojo/sniff <dojo/sniff>`
 
-  dojo/_base/sniff is introduced in dojo 1.7 as the browser detection utility.
+  dojo/sniff is introduced in dojo 1.8 as the browser detection utility.
 
 Dojo Core
 =========
