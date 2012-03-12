@@ -15,189 +15,133 @@ Dojo's event system offers a refreshing alternative to the normal JavaScript eve
 This means that you can connect a function of your own to:
 
 * a DOM event, such as when a link is clicked
-* an event of an object, such as an animation starting or stopping;
-* a function call of your own, such as bar();
+* an event of an object, such as an animation starting or stopping
+* a function call of your own, such as bar()
 * a topic, which acts as a queue that other objects can publish objects to.
 
 Your connected function is called when the event occurs. With simple events, when it calls your function, dojo passes your function a normalized event object, so that it can respond correctly, responding to keystrokes or stopping default behavior. With topics, Dojo passes any subscribed functions the object that was published. Dojo happily abstracts away all of the difficulty of cross-browser event systems, offering programmers a coherent event system that acts consistently across browsers.
 
 Dojo's event system is flexible and gives you a few options for connecting your functions. In the core package, you have both simple events (which use a signal and slot system, similar to Qt's) and topics. In this section, you'll learn the following:
 
-* how to connect functions to one another with :ref:`dojo.connect <dojo/connect>`
+* how to connect functions to one another with :ref:`dojo/on <dojo/on>` and :ref:`dojo/aspect <dojo/aspect>`
 * what comes with an event object
 * how to connect functions with topics and even publish your own objects to the topic
 * how to enjoy event-based programming
 
 
-Simple Connections
+DOM Events
 ==================
 
-Dojo provides a pair of functions to handle many of your event-handling needs: ``dojo.connect`` and ``dojo.disconnect``. With :ref:`dojo.connect <dojo/connect>`, you can link one function to fire when another does, handling DOM events and custom functions with a single mechanism. Additionally, :ref:`dojo.connect <dojo/connect>` allows you to connect as many functions to an event as necessary. With :ref:`dojo.disconnect <dojo/disconnect>`, you can cancel a connection, assuming you've kept some reference to it.
+Dojo provides two modules to handle many of your event-handling needs.
+
+With :ref:`dojo.on <dojo/on>`, you can link functions to fire when a DOM event occurs.
 
 How does it work?
 -----------------
 
 Imagine that you're hungry and have decided to cook a pizza in your oven. The pizza will take 17 minutes, so you set a timer. You have better things to do than sit around your kitchen hanging out by the timer though, so you get your brother and tell him, "When you hear the oven timer, take the pizza out of the oven and bring me a slice." Your brother can only keep track of one thing at a time, and you don't want your house to burn down, so you tell your sister, "When you hear the over timer, turn off the oven." Because you're a little worried that your dirty oven might start to smoke, you tell them both, "If you hear the smoke alarm, come get me and then go outside." After you get your pizza, you tell your brother and sister that they don't have to worry about the oven alarm now and that they can go play until you call for them again. You then set the oven alarm to wake you up from a nap.
 
-In this example, your siblings are functions. Your telling them to respond to certain events, such as "onPizzaDone" and "onHouseOnFire" performs the same function as :ref:`dojo.connect <dojo/connect>` - it sets up your siblings (functions) to listen for an event and perform their tasks when they receive notice. The various alarms are similar to event objects; they inform your siblings of important details about the situation (such as what is beeping). Telling your siblings that they don't need to worry about the oven alarm anymore is similar to :ref:`dojo.disconnect <dojo/disconnect>`; the next time the oven alarm goes off, it means that you need to wake up, and you don't want your brother hunting for a pizza needlessly, so you've told him to stop listening to that event.
+In this example, your siblings are functions. Your telling them to respond to certain events, such as "onPizzaDone" and "onHouseOnFire" performs the same function as :ref:`dojo/on <dojo/on>` (for DOMNodes) or :ref:`dojo/aspect <dojo/aspect>` for plain objects - it sets up your siblings (functions) to listen for an event and perform their tasks when they receive notice. The various alarms are similar to event objects; they inform your siblings of important details about the situation (such as what is beeping). Telling your siblings that they don't need to worry about the oven alarm anymore is similar to handle.remove(); the next time the oven alarm goes off, it means that you need to wake up, and you don't want your brother hunting for a pizza needlessly, so you've told him to stop listening to that event.
 
-Syntax
-------
-:ref:`dojo.connect <dojo/connect>` takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introduction provided in :ref:`Functions Used Everywhere <quickstart/dojo-basics>`.
-
-dojo.connect has the following signature (acceptable types in square brackets):
-
-.. js ::
-
-  handle = dojo.connect(Scope of Event [object or null], Event [string], Context of Linked Method [string or null], Linked Method [string or function], Don't Fix Flag [boolean])
-
-All of the options for calling ``dojo.connect`` are explored further below.
-
-Example Code for Reference
---------------------------
-
-Sometimes, it is easier to see an example first:
-
-.. html ::
-
-     <html>
-     <head>
-       <title>Dojo Events are Great</title>
-       <script src="dojo/dojo.js" type="text/javascript"></script>
-       <script type="text/javascript">
-          function foo(){ console.debug("A click upon your houses!"); }
-          function globalGuy(){ console.debug("Global Guy fired!"); }
-          var someObject = {
-             bar: function(){ console.debug("Bar fired!"); return 7; },
-             baz: function(){ console.debug("Baz fired!"); return 14; }
-          }
-
-          var anotherObject = {
-              afterBaz: function(){ console.debug("afterBaz fired!"); }
-          }
-       </script>
-     </head>
-     <body>
-          <p><a id="firstLink" href="http://dojotoolkit.org/">Dojo</a> is an excellent tool kit.</p>
-     </body>
-     </html>
 
 Connecting to a DOM Event
 -------------------------
 
 To connect a function to a DOM event with Dojo, you first need to get the node that you want to connect to. Here, I'll use the venerable
-:ref:`dojo.byId <dojo/byId>`.
+:ref:`dojo/dom byId <dojo/dom#byId>`.
 
 .. js ::
 
-  firstLinkNode = dojo.byId("firstLink");
+  firstLinkNode = dom.byId("firstLink");
 
 
-Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I just need to use dojo.connect for the heavy lifting:
+Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I just need to use dojo/on for the heavy lifting:
 
 .. js ::
 
   firstLinkConnections = [];
-  firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', foo));
+  firstLinkConnections.push(on(firstLinkNode, 'click', foo));
 
 
-In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node),
-the name of the function that should trigger my function's call (in this case, the "onclick" event),
-and the name of my function.
+In this example, I passed ``on`` the DOMNode I want my function to listen to,
+the name of the event that should trigger my function's call,
+and my function.
 Note that I keep a reference to the connection (called a handle) by setting firstLinkConnections[0] to the return value
-of ``dojo.connect``.
+of ``on``.
 This will allow me to disconnect the listener later, if I desire.
 Now, when a user clicks "Dojo", a message appears in the log.
-Because my function is global in scope, I can pass it directly to connect.
-The following, however, are equivalent:
-
-.. js ::
-
-  firstLinkConnections[0] = dojo.connect(firstLinkNode, 'onclick', null, foo);
-
-
-**and**
-
-.. js ::
-
-  firstLinkConnections[0] = dojo.connect(firstLinkNode, 'onclick', null, "foo");
 
 
 Now, if I also want to connect someObject.bar() to #firstLink, we can do that too:
 
 .. js ::
 
-  firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', someObject, "bar"));
+  firstLinkConnections.push(on(firstLinkNode, 'click', lang.hitch(someObject, "bar")));
 
-Because I've used Dojo's event handling, I can connect an arbitrary number of functions to fire on an event.
+In this case I am using lang.hitch() (from :ref:`dojo/_base/lang <dojo/_base/lang#hitch>`) to call someObject.bar.
 
-To stop listening to all the registered event handlers stored in ``firstLinkConnections``, pass the values in the Array to :ref:`dojo.disconnect <dojo/disconnect>`
+To stop listening to all the registered event handlers stored in ``firstLinkConnections``, call handle.remove() for each handle:
 
 .. js ::
 
-   dojo.forEach(firstLinkConnections, dojo.disconnect);
+   require(["dojo/_base/array"], function(array){
+       array.forEach(firstLinkConnections, function(handle){ handle.remove(); });
+   });
 
-*note:* Notice the lack of () on dojo.disconnect. Here, we've passed ``forEach`` a function *reference*, which will be called forEach value in the Array.
 
 Events available for Connection
 -------------------------------
 
-Using dojo.connect on Dom Events is only the beginning or the power contained within. As a convenience, here is a quick list of normalized Dom Events
+As a convenience, here is a quick list of normalized Dom Events:
 
-* onclick - the user clicked a node
-* onfocus - a node received focus
-* onblur - a node was 'blurred', or otherwise lost focus
-* onchange - an input value was changed
-* onkeypress - fired when the user presses a key
-* onkeydown - shouldn't be necessary to be used... all key presses go to onkeypress
-* onkeyup - fired when the user releases a key
-* onmouseover - a node was hovered (*warning:* may fire more than you'd like because of bubbling)
-* onmouseout - a node was un-hovered
-* onmouseenter - a normalized version of onmouseover that *wont* fire more than you'd like (only on first enter)
-* onmouseleave - a normalized version of onmouseout that *wont* fire more than you'd like (only once when leaving)
-* onsubmit - a form has been submitted
+* "click" - the user clicked a node
+* "focus" - a node received focus
+* "blur" - a node was 'blurred', or otherwise lost focus
+* "change" - an input value was changed
+* "keypress" - fired when the user presses a key that displays
+* "keydown" - fired for non-printable keys
+* "keyup" - fired when the user releases a key
+* "mouseover" - a node was hovered (*warning:* may fire more than you'd like because of bubbling)
+* "mouseout" - a node was un-hovered
+* :ref:`dojo/mouse#enter <dojo/mouse#enter>` - a normalized version of onmouseover that *wont* fire more than you'd like (only on first enter)
+* :ref:`dojo/mouse#leave <dojo/mouse#leave>` - a normalized version of onmouseout that *wont* fire more than you'd like (only once when leaving)
+* submit - a form has been submitted
 
-All of these events are also mapped into :ref:`dojo.NodeList <dojo/NodeList>` as direct methods. To register an onclick event for many nodes at once:
+All of these events are also mapped into :ref:`dojo.NodeList <dojo/NodeList>` as direct methods. To register an click event for many nodes at once:
 
 .. js ::
   
   dojo.query(".foo").onclick(function(e){ /* handle the event */ }).onmouseenter(function(e){ /* handle event */ });
 
-*A note about the event names:* Event names now are lower case, except in special cases (e.g., some Mozilla DOM events). Dojo will add "on" to your event name if you leave it off (e.g., 'click' and 'onclick' are the same thing to dojo). This differs from **Widget Events** in the sense Dijit uses mixedCase event names, to avoid potential conflicts.
+*A note about the event names:* Event names now are lower case, except in special cases (e.g., some Mozilla DOM events). Your event name should not have "on". This differs from **Widget Events** in the sense Dijit uses mixedCase event names, to avoid potential conflicts.   However, widget's on() method functions similarly to `dojo/on`:
 
 .. js ::
 
   // connect to domEvent "onclick"
-  var node = dojo.byId("foo");
-  dojo.connect(node, "onclick", function(){
+  var node = dom.byId("foo");
+  on(node, "click", function(){
 
   });
   // connect to dijit event "onClick"
   var widget = dijit.byId("foo");
-  dojo.connect(widget, "onClick", function(){
+  widget.on("click", function(){
 
   });
-  // and finally, connect to the domEvent "onclick" as it bubbles to our widget's domNode
-  dojo.connect(widget.domNode, "onclick", function(){
-      // if dojo.byId("foo") is inside this widget, both these functions will run
-  });
 
-The big difference being dojo.byId versus dijit.byId -- dojo.connect can connect to any function, method, or event. using dijit.byId, we're passed a reference to the Widget, and are connecting to it's pre-fabricated 'onClick' stub.
-
-**A note about return values:** Any value returned by a function called by ``dojo.connect`` will be lost.
+**A note about return values:** Any value returned by a function called by ``on()`` will be lost.
 
 Connecting to MouseWheel events
 -------------------------------
 
-One event not mentioned above, though entirely useful: onmousewheel (okay, it's two events, which is the reason for pointing this out ... )
-All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`dojo/sniff <dojo/sniff>` module:
+One event not mentioned above, though entirely useful: mousewheel (okay, it's two events, which is the reason for pointing this out ... )
+All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``mousewheel`` ... You can quickly connect to whichever is needed using Dojo's :ref:`dojo/sniff <dojo/sniff>` module:
 
 .. js ::
 
-  var node = dojo.byId("foobar");
-  dojo.connect(node, (!has("mozilla") ? "onmousewheel" : "DOMMouseScroll"), function(e){
+  var node = dom.byId("foobar");
+  on(node, (!has("mozilla") ? "mousewheel" : "DOMMouseScroll"), function(e){
      // except the direction is REVERSED, and the event isn't normalized! one more line to normalize that:
-     var scroll = e[(!dojo.isMozilla ? "wheelDelta" : "detail")] * (!dojo.isMozilla ? 1 : -1);
+     var scroll = e[(!has("mozilla") ? "wheelDelta" : "detail")] * (!has("mozilla") ? 1 : -1);
      console.log(scroll);
   });
 
@@ -207,121 +151,47 @@ Keyboard Events
 ---------------
 Although different browsers report keyboard events differently, you can write portable keyboard event handling code using dojo, by following these rules:
 
-  - Setup an onkeypress (not onkeydown) handler to monitor both printable and non-printable keys
+  - Setup a keypress (not keydown) handler to monitor printable aeys
+
+  - Setup a keydown (not keypress) handler to monitor non-printable aeys
 
   - For non-printable keys (arrows, function keys, etc) compare evt.keyCode against the :ref:`Key code constants <dojo/keys>`, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
 
-  - Ignore onkeypress events where keyCode == dojo.keys.CTRL, dojo.keys.SHIFT, etc. as these may occur as part of a user pressing (for example) Ctrl-C.
+  - Ignore keypress events where keyCode == keys.CTRL, keys.SHIFT, etc. as these may occur as part of a user pressing (for example) Ctrl-C.
 
-  - call dojo.stopEvent(e) for CTRL combinations (like Ctrl-B) or function keys (like F5) that have special meaning to the browser (like refreshing the page).
+  - call event.stop(e) (:ref:`dojo/_base/event <dojo/_base/event#stop>`) for CTRL combinations (like Ctrl-B) or function keys (like F5) that have special meaning to the browser (like refreshing the page).
 
-
-Implementation details: Dojo synthesizes onkeypress events for non-printable keys, for browsers that don't generate such events naturally.
 
 As mentioned above, non-printable character events define a keyCode.  Printable character events define a keyChar.  For example, if the user presses the 'a' key than evt.keyChar == 'a'.  If the user presses SHIFT-A then evt.keyChar == 'A'.
-
-However, you can also reference an event's charOrCode attribute for making a single switch() statement to handle both printable and non-printable keys.  For example:
-
-.. js ::
-
-  var node = dojo.byId("foobar");
-  dojo.connect(node, "onekeypress, function(e){
-     switch(e.charOrCode){
-          case dojo.keys.LEFT:
-          case 'h':
-               // go left
-          ...
-     }
-     dojo.stopEvent(e);
-  });
-
-
-
-Connecting Functions to One Another
------------------------------------
-
-Connecting functions to one another is even simpler than connecting them to DOM events; because you already have a reference to the function, you don't need to do any byId or query work. To have anotherObject.afterBaz fire after someObject.baz fires, use the following:
-
-.. js ::
-
-  objectConnections = [];
-  objectConnections[0] = dojo.connect(someObject, "baz", anotherObject, "afterBaz");
-
-In the above code, the first argument is the context of "baz", the second argument is the event (in this case, when baz fires), the third argument is the context of your listener function, and the fourth argument is the listener function itself. Connecting two global functions is even easier:
-
-.. js ::
-
-  objectConnections[1] = dojo.connect("foo", globalGuy);
-
-Now, whenever foo is called, globalGuy will also fire. As you might expect, connecting a method to a global function, or vice versa, is logical and simple:
-
-.. js ::
-
-  objectConnections[2] = dojo.connect("foo", anotherObject, "afterBaz");
-  objectConnections[3] = dojo.connect(someObject, "baz", globalGuy);
 
 Disconnecting
 -------------
 
-To disconnect listeners from events, you simply pass the connection handle (the return value of ``dojo.connect`` to ``dojo.disconnect``. To disconnect globalGuy from someObject.baz, I use the following code:
+To disconnect listeners from events, you simply call handle.remove():
 
 .. js ::
 
-  dojo.disconnect(objectConnections[3]);
+  objectConnections[3].remove();
 
-Or, by using :ref:`dojo.forEach <dojo/forEach>`, passing ``dojo.disconnect`` as a function reference as illustrated earlier:
-
-.. js ::
-
-  dojo.forEach(objectConnections, dojo.disconnect);
-
-
-Gotchas with direct references to functions
--------------------------------------------
-Note that the first connection to a function actually modifies the function, by wrapping it another function.   So that
+Or, by using :ref:`array.forEach <dojo/_base/array#foreach>`:
 
 .. js ::
 
-  dojo.connect(foo, bar);
-
-is like saying:
-
-.. js ::
-
-  var originalFoo = foo;
-  foo = function(){ originalFoo(); bar(); }
-
-
-This means that you need to be careful with code that directly references (the original) function foo(), including other dojo.connect() calls.   For example, the code below *won't* work correctly:
-
-.. js ::
-
-  dojo.connect(first, foo);
-  dojo.connect(foo, bar);
-
-Calling first() will call foo(), but not bar(), since it's calling the original foo() method rather than the wrapped foo() method shown above.
-
-This issue doesn't exist when calling methods on object, for example:
-
-.. js ::
-
-  dojo.connect(myFunc, object, "method");
-  dojo.connect(object, method, bar);
-
-
-In this case calling myFunc() will call the new object.method(), which will then call bar().
+   require(["dojo/_base/array"], function(array){
+       array.forEach(objectConnections, function(handle){ handle.remove(); });
+   });
 
 
 The Event Object
-================
+----------------
 
-When you connect a function to a DOM event with :ref:`dojo.connect <dojo/connect>`, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
+When you connect a function to a DOM event with :ref:`dojo/on <dojo/on>`, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
 
-Assume that your function has been called by dojo.connect and takes an argument named ``event``, like:
+Assume that your function has been called by dojo/on and takes an argument named ``event``, like:
 
 .. js ::
 
-  dojo.connect(dojo.byId("node"), "onclick", function(event){
+  on(dom.byId("node"), "click", function(event){
      // the var 'event' is available, and is the normalized object
   });
 
@@ -333,36 +203,78 @@ Dojo provides the following attributes with an event object:
 * event.layerY - the y coordinate, relative to the ``event.currentTarget``
 * event.pageX - the x coordinate, relative to the view port
 * event.pageY - the y coordinate, relative to the view port
-* event.relatedTarget - For ``onmouseover`` and ``onmouseout``, the object that the mouse pointer is moving to or out of
+* event.relatedTarget - For ``mouseover`` and ``mouseout``, the object that the mouse pointer is moving to or out of
 * event.charCode - For keypress events, the character code of the key pressed
 * event.keyCode - for keypress events, handles special keys like ENTER and spacebar.
-* event.charOrCode - a normalized version of charCode and keyCode, which can be used for direct comparison for alpha keys and special keys together. (added in 1.1)
 
 Dojo normalizes the following methods with an event object:
 
 * event.preventDefault - prevent an event's default behavior (e.g., a link from loading a new page)
 * event.stopPropagation - prevent an event from triggering a parent node's event
+* event.stopImmediatePropagation - prevent an event from triggering a parent node's event and from firing any more event handlers on this node
 
-Additionally, :ref:`dojo.stopEvent(event) <dojo/stopEvent>` will prevent both default behavior any any propagation (bubbling) of an event.
+Additionally, :ref:`event.stop(event) <dojo/_base/event#stop>` will prevent both default behavior any any propagation (bubbling) of an event.
 
 
 Page Load and Unload
-====================
+--------------------
 
 Dojo has three functions recommended for registering code to run on page load and unload:
 
-* :ref:`dojo.ready(func) <dojo/ready>` - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
+* :ref:`ready(func) <dojo/ready>` - Runs the specified function after the page has finished loading, require() calls have completed, and the parser (if enabled) has instantiated widgets.
 
-* :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
+* :ref:`dojo/_basekernel#addOnWindowUnload(func) <dojo/_basekernel#addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
 
-* :ref:`dojo.addOnUnload(func) <dojo/addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `dojo.addOnUnload(func) <dojo/addOnUnload>` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
+* :ref:`dojo/_basekernel#addOnUnload(func) <dojo/_base/kernel#addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo/_basekernel#addOnWindowUnload(func) <dojo/_basekernel#addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `addOnUnload(func)` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
 
-Like dojo.connect(), these methods are useful because multiple pieces of code calling :ref:`dojo.ready(func) <dojo/ready>` etc. won't overwrite each other.
+Like on(), these methods are useful because multiple pieces of code calling `ready()` etc. won't overwrite each other.
 
-Topic Based Events
-==================
+Connecting Functions to One Another
+===================================
 
-In addition to the simple event system created by :ref:`dojo.connect <dojo/connect>`, dojo offers support for anonymous publication and subscription of objects, via :ref:`dojo.publish <dojo/publish>` and :ref:`dojo.subscribe <dojo/subscribe>`. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  :ref:`dojo.publish <dojo/publish>` calls any functions that are connected to the topic via :ref:`dojo.subcribe <dojo/subscribe>`, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, :ref:`dojo.unsubscribe <dojo/unsubscribe>` will cause a previously subscribed function to no longer be called when :ref:`dojo.publish <dojo/publish>` is called in the future
+With :ref:`dojo.aspect <dojo/aspect>`, you can link one function to fire when another does.
+This is for setting up advice on a regular (non DOMNode) object.
+
+Connecting functions to one another is even simpler than connecting them to DOM events; because you already have a reference to the function, you don't need to do any byId or query work. To have anotherObject.afterBaz fire after someObject.baz fires, use the following:
+
+.. js ::
+
+  objectConnections = [];
+  objectConnections[0] = aspect.after(someObject, "baz", lang.hitch(anotherObject, "afterBaz"), true);
+
+In the above code, the first argument is the context of "baz", the second argument is the event (in this case, when baz fires),anotherObject is the context of your listener function, and "afterBaz" is the name of the listener function itself. Connecting two global functions is even easier:
+
+.. js ::
+
+  objectConnections[1] = aspect.after(null, "foo", globalGuy, true);
+
+
+
+
+Gotchas with direct references to functions
+-------------------------------------------
+Note that the first connection to a function actually modifies the function, by wrapping it another function.   So that
+
+.. js ::
+
+  aspect.after(null, "foo", bar);
+
+is like saying:
+
+.. js ::
+
+  var originalFoo = foo;
+  foo = function(){ originalFoo(); bar(); }
+
+
+This means that you need to be careful with code that directly references (the original) function foo(), including other aspect.after() calls.
+
+
+
+Publish and Subscribe
+=====================
+
+In addition to the simple event system created by :ref:`dojo/aspect <dojo/aspect>`, dojo offers support for anonymous publication and subscription of objects, via :ref:`dojo/topic#publish <dojo/topic#publish>` and :ref:`dojo/topic#subscribe <dojo/topic#subscribe>`. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  :ref:`dojo/topic#publish <dojo/topic#publish>` calls any functions that are connected to the topic via :ref:`dojo/topic#subscribe <dojo/topic#subscribe>`, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, `handle.remove()` will cause a previously subscribed function to no longer be called when :ref:`dojo/topic#publish <dojo/topic#publish>` is called in the future
 
 How does it work?
 -----------------
@@ -380,69 +292,87 @@ Example Code for Reference
     }
   }
 
-Subscribing and Publishing Topics
----------------------------------
-
-To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullNames", you simply use ``dojo.subscribe``, as follows:
+To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullNames", you simply use ``topic.subscribe``, as follows:
 
 .. js ::
 
   topics = [];
-  topics[0] = dojo.subscribe("globalEvents", null, globalGuy);
-  topics[1] = dojo.subscribe("fullNames", someObject, bar);
+  topics[0] = topic.subscribe("globalEvents",globalGuy);
+  topics[1] = topic.subscribe("fullNames", lang.hitch(someObject, bar));
 
-Note that the following alternative form would also work:
 
-.. js ::
-
-  topics = [];
-  topics[0] = dojo.subscribe("globalEvents", globalGuy);
-  topics[1] = dojo.subscribe("fullNames", someObject, "bar");
-
-To publish information to both of these topics, you pass ``dojo.publish`` the topic names and arrays of the arguments that you want to pass to subscribed functions, as follows
+To publish information to both of these topics, you pass ``topic.publish`` the topic names and arguments that you want to pass to subscribed functions, as follows
 
 .. js ::
 
-  dojo.publish("globalEvents", ["data from an interesting source"]);
-  dojo.publish("fullNames", ["Alex", "Russell"]);
+  topic.publish("globalEvents", "data from an interesting source");
+  topic.publish("fullNames", "Alex", "Russell");
 
-To disconnect someObject.bar from its topic, you use ``dojo.unsubscribe``, just as you would ``dojo.disconnect``:
+To disconnect someObject.bar from its topic, you use the handle's ``remove()`` method:
 
 .. js ::
 
-  dojo.unsubscribe(topics[1]);
+  topics[1].remove();
 
 
 Events with Dijit
 =================
 
-The Dijit widgets have many "events", similar to events on DOM nodes.  For example, the dijit.form.Button widget has an onClick
-event synonymous with a <button> node's onclick event.  The biggest difference is that dijit.form.Button's event is in
-camel case ("onClick").
+The Dijit widgets have many "events", similar to events on DOM nodes.
+For example, the dijit.form.Button widget has an click
+event synonymous with a <button> node's click event.
 
 
-Overriding vs. Connecting
--------------------------
-
-You can connect to widget events just like connecting to DOM events, using dojo.connect:
+You can connect to widget events similarly to connecting to DOM events, using the ``on()`` method of the widget:
 
 .. js ::
 
   var myWidget = new dijit.form.Button({label: ...});
-  dojo.connect(myWidget, "onClick", myFunc);
+  myWidget.on("click", myFunc);
 
 or in markup as:
 
 .. html ::
 
   <div data-dojo-type="dijit/form/Button">
-     <script type="dojo/connect" data-dojo-event="onClick">
+     <script type="dojo/on" data-dojo-event="click">
         ...
      </script>
      Click me!
   </div>
 
-However, rather than connecting (as above), it's often more convenient to specify the handler as a parameter to the widget on initialization:
+
+
+Dijit events similar to DOM events
+----------------------------------
+As stated above, the widgets tend to support all events similar to DOM events, like:
+
+ * "click": especially useful for button widgets
+ * "change": note that the first argument to onChange is the new value, not the event object itself
+ * "dblclick"
+ * "keydown"
+ * "keypress"
+ * "keyup"
+ * "mousemove"
+ * "mousedown"
+ * "mouseout": probably not useful since it will report mouse out events within the widget's internal DOM nodes; consider using "mouseleave" instead
+ * "mouseover": probably not useful since it will report mouse in events within the widget's internal DOM nodes; consider using "mouseenter" instead
+ * "mouseleave": when the mouse is moved away from the widget's outermost DOM node
+ * "mouseenter": when the mouse is moved over the widget's outermost DOM node
+ * "mouseup"
+
+See the documentation for each widget for details.
+Note that the events in widget documentation may be listed in camel case and starting with "on",
+reflecting the internal functions in the widgets corresponding to those events.
+
+Notable differences between the widget's event and the similar event on a DOM node:
+
+  * event's corresponding function name is camel case (ex: onClick) for widgets
+  * in the handler for a widget's event, "this" points to the widget
+
+Overriding vs. Connecting
+-------------------------
+Rather than connecting (as above), you can specify a handler as a parameter to the widget on initialization:
 
 .. js ::
 
@@ -457,60 +387,35 @@ or in markup:
 
    <button data-dojo-type="dijit/form/Button" onClick="myFunc">Click me!</button>
 
-or in markup using the script tag:
 
-.. html ::
+There's a subtle difference between the third and fourth example (using onClick="myFunc") and
+the others:
+the third and fourth examples are *overriding* (i.e., replacing) the widget's onClick method
+whereas the other examples are connecting to the widget's click event, which internally means they
+are setting up advice on the existing onClick method.
+Note that you can also override by using <script type="dojo/method"> instead of type="dojo/connect".
 
-  <div data-dojo-type="dijit/form/Button">
-     <script type="dojo/method" data-dojo-event="onClick">
-        ...
-     </script>
-     Click me!
-  </div>
+Also note that when overriding, you specify the function name rather than the event name,
+so it is prepended with "on" and in camel case: "onClick".
 
+In practice the distinction between connecting and overriding is irrelevant
+because the widgets default onClick method is an empty function.
+However, occasionally you will need to override the default function to return a value.
 
-There's a subtle difference between the first two examples (using dojo.connect() and type="dojo/connect") and
-the subsequent examples: the first two examples are connecting to the widget's existing onClick method whereas
-the remaining examples are *overriding* (i.e., replacing) the widget's onClick method.   (Note that the final <script> example uses
-type="dojo/method" instead of type="dojo/connect".)
+watch()
+-------
+You can also watch attribute value changes on widgets.   For example:
 
-In practice this distinction is irrelevant because the widgets default onClick method is an empty function.
-However, if you end up connecting to another method in a widget that doesn't begin with "on" then you need
-to be careful not to override the default function (unless you do so on-purpose).
+.. js ::
 
+   myTitlePane.watch("open", callback);
 
-Dijit events similar to DOM events
-----------------------------------
-As stated above, the widgets tend to support all events similar to DOM events, like:
+focused
+--------
+There's a "focused" attribute on all widgets.
 
- * onClick(evt): especially useful for button widgets
- * onChange(newVal): note that the first argument to onChange is the new value, not the event object itself
- * onDblClick(evt)
- * onKeyDown(evt)
- * onKeyPress:(evt)
- * onKeyUp(evt)
- * onMouseMove(evt)
- * onMouseDown(evt)
- * onMouseOut(evt): probably not useful since it will report mouse out events within the widget's internal DOM nodes; consider using onMouseLeave instead
- * onMouseOver(evt): probably not useful since it will report mouse in events within the widget's internal DOM nodes; consider using onMouseEnter instead
- * onMouseLeave(evt): when the mouse is moved away from the widget's outermost DOM node
- * onMouseEnter(evt): when the mouse is moved over the widget's outermost DOM node
- * onMouseUp(evt)
-
-See the documentation for each widget for details.
-
-Notable differences between the widget's event and the similar event on a DOM node:
-
-  * name is camel case (ex: onClick) for widgets
-  * in the handler for a widget's event, "this" points to the widget
-
-
-_onFocus and _onBlur
---------------------
-There are two private but useful methods on every widget: _onFocus and _onBlur.
-
-Despite the names of these methods, they don't correspond exactly to the DOM focus and blur events.
-One might say that they indicate when a widget is "active", although "active" is also an overloaded word,
+Despite the names of this readonly attribute, it don't correspond exactly to the DOM focus and blur events.
+One might say that it indicates when a widget is "active", although "active" is also an overloaded word,
 having a separate meaning in CSS.
 
 By way of example, consider a Spinner widget inside of a ContentPane inside of a TabContainer:
@@ -523,16 +428,13 @@ By way of example, consider a Spinner widget inside of a ContentPane inside of a
      </div>
   </div>
 
-Clicking the spinner widget predictably causes it's _onFocus event to fire (as the widget is actually getting keyboard focus).
-However, clicking the arrows of the spinner also causes it's _onFocus event to fire, even though technically that removes
+Clicking the spinner widget predictably causes it's focused attribute to become true (as the widget is actually getting keyboard focus).
+However, clicking the arrows of the spinner also causes it's focused attribute to become true, even though technically that removes
 keyboard focus (at least on some browsers).
 
-In addition, clicking or tabbing to the spinner widget also cause an _onFocus event on the ContentPane and TabContainer, since they
+In addition, clicking or tabbing to the spinner widget also cause the focused attribute on the ContentPane and TabContainer to become true, since they
 are ancestors of the Spinner widget.
-At any point in time there's a stack of active widgets, and dijit keeps track of that stack and fires _onFocus and _onBlur
-events as each widget joins or leaves the stack.
-
-Note that you should connect to _onFocus and _onBlur events rather than overriding them.
+At any point in time there's a stack of active widgets, and dijit keeps track of that stack and sets each widget's focused attribute to true or false as each widget joins or leaves the stack.
 
 
 High level events

@@ -8,13 +8,11 @@ dojo/topic
 :Project owner: Kris Zyp
 :since: 1.7.0
 
-dojo/topic provides a centralized hub for publishing and subscribing to global messages by topic (using the same hub as dojo.connect). One can subscribe to these messages by using ``topic.subscribe``, and one can publish by using ``topic.publish``.
+dojo/topic provides a centralized hub for publishing and subscribing to global messages by topic.
+One can subscribe to these messages by using ``topic.subscribe``, and one can publish by using ``topic.publish``.
 
 Usage
 =====
-
-Using AMD style (Dojo 1.7+)
----------------------------
 
 .. js ::
 
@@ -26,19 +24,18 @@ Using AMD style (Dojo 1.7+)
       topic.publish("some/topic", "one", "two");
   });
 
-Using dojo.require
-------------------
+Globbing
+--------
+
+Topics do ``not`` support `globbing`, or mixing of channel names based on wildcards. This example is ``invalid``:
 
 .. js ::
 
-  dojo.require("dojo.topic");
-  dojo.ready(function(){
-      dojo.topic.subscribe("some/topic", function(){
-          console.log("received:", arguments);
-      });
-      // ...
-      dojo.topic.publish("some/topic", "one", "two");
+  require(["dojo/topic"], function(topic){
+    topic.subscribe("/foo/*", function(data){ /*handle*/ });
   });
+
+While this works when using :ref:`cometd <dojox/cometd>`'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported.
 
 Differences from old APIs
 =========================

@@ -4,41 +4,9 @@
 dojo.connectPublisher
 =====================
 
-:Project owner: Alex Russell
-:since: V0.9
+Deprecated.
 
-.. contents ::
-   :depth: 2
-
-Ensure that every time an event is called, a message is published on the topic.
-
-
-Introduction
-============
-
-dojo.connectPublisher is an automation of this common form:
-
-[ Dojo 1.7 AMD ]
-
-.. js ::
-  
-  require(["dojo/_base/connect"], function(connect){
-    connect.connect(myObject, "myEvent", function(){
-      connect.publish("/some/topic/name", arguments);
-    });
-  });
-  
-
-Which becomes:
-
-.. js ::
-  
-  require("dojo/_base/connect", function(connect){
-    connect.connectPublisher("/some/topic/name", myObject, "myEvent");
-  });
-
-
-[ Dojo < 1.7 ]
+dojo.connectPublisher() was an automation of this common form:
 
 .. js ::
   
@@ -46,36 +14,29 @@ Which becomes:
        dojo.publish("/some/topic/name", arguments);
   });
 
-Which becomes:
+Which became:
 
-.. js ::
+.. code-block :: javascript
   
   dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
+But going forward users should use the following for connecting to DOM events:
 
-Example
-=======
-
-Dojo 1.7 (AMD)
---------------
 .. js ::
- 
-   require(["dojo/_base/connect"], function(connect){
-      connect.connectPublisher("/ajax/start", dojo, "xhrGet");
-   });
+  
+  require(["dojo/on", "dojo/topic"], function(on, topic){
+    on(myNode, "click", function(){
+      topic.publish("/some/topic/name", arg1, arg2, arg3);
+    });
+  });
+  
+Or this for after-advice on arbitrary methods of arbitrary objects:
 
-Dojo < 1.7
-----------
 .. js ::
-
-   dojo.connectPublisher("/ajax/start", dojo, "xhrGet");
-
-.. api-inline :: dojo.connectPublisher
-
-See also
-========
-
-* :ref:`Event QuickStart <quickstart/events>`
-* :ref:`dojo.connect <dojo/connect>`
-* :ref:`dojo.publish <dojo/publish>`
-* :ref:`dojo.disconnect <dojo/disconnect>`
+  
+  require(["dojo/aspect", "dojo/topic"], function(aspect, topic){
+    aspect.after(myObj, "myFunc", function(){
+      topic.publish("/some/topic/name", arg1, arg2, arg3);
+    });
+  });
+  

@@ -4,14 +4,22 @@
 dojo.unsubscribe
 ================
 
-:since: 0.9
+Deprecated.   Dojo.unsubscribe() has been replaced by the :ref:`dojo/topic module <dojo/topic>`.
 
-.. contents ::
-   :depth: 2
+Code is changed from:
 
-Remove a topic listener.
+.. js ::
 
-Introduction
-============
+     var handle = dojo.unsubscribe("some/topic", callback);
+     ...
+     dojo.ununsubscribe(handle);
 
-This function simply removes a topic subscription based on a handle returned from :ref:`dojo.subscribe <dojo/subscribe>`. It is best explained with it's companion functions :ref:`publish <dojo/publish>` and :ref:`subscribe <dojo/subscribe>`, so it is recommended you visit those documents for more information.
+to:
+
+.. js ::
+
+    require(["dojo/topic"], function(topic){
+		 var handle = topic.unsubscribe("some/topic", listener)
+		 ...
+		 handle.remove();
+	});

@@ -59,13 +59,9 @@ For example, we could write:
 
 .. js ::
   
-  // Dojo 1.7 preferred
   define(["dojo/query"], function($){
     $("button").on("click", clickHandler);
   });
- 
-  // Pre 1.7 style
-  dojo.query("button").on("click", buttonClickHandler);
 
 Normalization
 -------------
