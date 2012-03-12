@@ -11,8 +11,6 @@ dojo/_base/lang
 
 **dojo._base.lang** contains functions for supporting Polymorphism.
 
-As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
-
 
 Features
 ========
@@ -32,30 +30,6 @@ Features
 * :ref:`dojo.delegate <dojo/delegate>`
 
   Returns a new object which "looks" to obj for properties which it does not have a value for.
-
-* :ref:`dojo.isString <dojo/isString>`
-
-  Checks if the parameter is a String
-
-* :ref:`dojo.isArray <dojo/isArray>`
-
-  Checks if the parameter is an Array
-
-* :ref:`dojo.isFunction <dojo/isFunction>`
-
-  Checks if the parameter is a Function
-
-* :ref:`dojo.isObject <dojo/isObject>`
-
-  Checks if the parameter is a Object
-
-* :ref:`dojo.isArrayLike <dojo/isArrayLike>`
-
-  Checks if the parameter is like an Array
-
-* :ref:`dojo.isAlien <dojo/isAlien>`
-
-  Checks if the parameter is a built-in function
 
 * :ref:`dojo.trim <dojo/trim>`
 
@@ -78,6 +52,36 @@ Features
 * :ref:`dojo.setObject <dojo/setObject>`
 
   Set a property from a dot-separated string, such as "A.B.C"
+
+
+Deprecated
+==========
+See :ref:`Testing Object Types <releasenotes/migration-2.0#testing-object-types>` for advice on how to
+differentiate between different types of objects without using dojo methods.  The methods below are deprecated:
+
+* isString()
+
+  Checks if the parameter is a String
+
+* isArray()
+
+  Checks if the parameter is an Array
+
+* isFunction()
+
+  Checks if the parameter is a Function
+
+* isObject()
+
+  Checks if the parameter is a Object
+
+* isArrayLike()
+
+  Checks if the parameter is like an Array
+
+* isAlien()
+
+  Checks if the parameter is a built-in function
 
 
 

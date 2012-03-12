@@ -5,7 +5,7 @@ Dojo 1.x to 2.0 migration guide
 ===============================
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 These notes explain how to port a Dojo 1.x application to run against Dojo 2.0.
 
@@ -133,12 +133,15 @@ Testing object types
 dojo.isString(v)        typeof v == "string"
 dojo.isArray(v)         v instanceof Array
 dojo.isFunction(v)      typeof v == "function"
-dojo.isArrayLike(v)     "length" in v, etc.
+dojo.isArrayLike(v)     "length" in v, etc. (but see note below)
 ======================  ======================
 
 Notes:
-  - on some browsers "length" in v will return true for strings, so if you are trying to differentiate between strings and arrays of strings, use the typeof v == "string" test instead.   It will also return true for built-in constructors (Number, String, ...) which have length
-  - typeof value == "function" won't allow IE's hosted functions (like alert)
+  - on some browsers "length" in v will return true for strings and functions,
+    so if you are trying to differentiate between strings and arrays of strings, use the typeof v == "string" test instead,
+    and if you are trying to differentiate between functions and arrays of functions, use the typeof v == "function" test instead.
+    It will also return true for built-in constructors (Number, String, ...) which have length.
+  - typeof value == "function" won't match IE's hosted functions (like alert)
   - v instanceof Array won't work if v was created in a different frame
 
 
