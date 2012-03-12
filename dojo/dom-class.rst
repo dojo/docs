@@ -8,7 +8,7 @@ dojo/dom-class
 :since: V1.7
 
 .. contents ::
-    :depth: 2
+    :depth: 3
 
 This module defines the core dojo DOM class API.  The standard return variable for this module is ``domClass``.
 

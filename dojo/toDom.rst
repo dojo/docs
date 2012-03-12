@@ -4,11 +4,7 @@
 dojo.toDom
 ==========
 
-TODOC!
-
 .. contents ::
   :depth: 2
 
-.. api-inline :: dojo.toDom
-
-.. api-inline :: dojo._toDom
+*Deprecated*, see :ref:`dojo/dom-construct::toDom() <dojo/dom-construct#todom-function>` instead.
