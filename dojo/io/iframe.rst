@@ -34,9 +34,6 @@ Usage
 Usage is similar to :ref:`dojo.xhrGet <dojo/xhrGet>` and :ref:`dojo.xhrPost <dojo/xhrPost>`. Please see below for
 information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
 
-Dojo 1.7 (AMD)
---------------
-
 .. js ::
   
     require(["dojo/io/iframe"], function(ioIframe){
@@ -49,25 +46,6 @@ Dojo 1.7 (AMD)
       }, function(err){
         // Handle Error
       });
-    });
-
-Dojo < 1.7
-----------
-
-.. js ::
-  
-    dojo.require("dojo.io.iframe");
-    
-    dojo.io.iframe.send({
-      form: "myForm",
-      url: "handler.php",
-      handleAs: "json",
-      load: function(response, ioArgs){
-        // Do something
-      },
-      error: function(response, ioArgs){
-        // Handle error
-      }
     });
 
 dojo.io.iframe supported object properties

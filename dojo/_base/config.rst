@@ -202,7 +202,6 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
 
 .. js ::
   
-    // Dojo 1.7+ (AMD style)
     require(["dojo/_base/declare", "dojo/_base/config"], function(declare, config){
         declare("my.Thinger", null, {
             thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
@@ -210,14 +209,6 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
                 if(config.myCustomVariable){ ... }
             }
         });
-    });
-    
-    // Dojo < 1.7
-    dojo.declare("my.Thinger", null, {
-        thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
-        constructor: function(){
-            if(dojo.config.myCustomVariable){ ... }
-        }
     });
 
 By referencing ``dojo.config.myCustomVariable`` as opposed to relying on ``dojoConfig.myCustomVariable`` you will be able to utilize the variable safely in built versions using an alternate scopeName.

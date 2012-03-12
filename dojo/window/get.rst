@@ -23,7 +23,6 @@ Here's some code to trace up from a node to the root of the main document, passi
 
 .. js ::
 
-    // Dojo 1.7 (AMD)
     require(["dojo/window", "dojo/_base/window"], function(win, baseWin){
         while(node){
             if(node.tagName && node.tagName.toLowerCase() == "body"){
@@ -40,21 +39,3 @@ Here's some code to trace up from a node to the root of the main document, passi
             }
         }
     );
-
-.. js ::
-            
-    // Dojo < 1.7
-    while(node){
-        if(node.tagName && node.tagName.toLowerCase() == "body"){
-            // is this the root of the document or just the root of an iframe?
-            if(node === dojo.body()){
-                // node is the root of the main document
-                break;
-            }
-            // otherwise, find the iframe this node refers to (can't access it via parentNode,
-            // need to do this trick instead). window.frameElement is supported in IE/FF/Webkit
-            node=dojo.window.get(node.ownerDocument).frameElement;
-        }else{
-            node=node.parentNode;
-        }
-    }

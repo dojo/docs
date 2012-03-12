@@ -1,8 +1,8 @@
-.. _dojo/template:
+.. _dojo/_base/unload:
 
-=====
-dojo/
-=====
+=================
+dojo/_base/unload
+=================
 
 :Authors: TODO Author 
 :since: 1.?
@@ -13,52 +13,22 @@ dojo/
 Introduction
 ============
 
-TODO: introduce the module 
+Contains addOnUnload() and addOnWindowUnload() methods
 
 Usage
 =====
 
 .. js ::
 
-  // Dojo 1.7 (AMD)
+    // TODO
 
-.. js ::
-
-  // Dojo < 1.7
 
 Examples
 ========
-
-Programmatic example
---------------------
 
 .. code-example ::
 
   TODO - Here is a programmatic example
 
   .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
-
-.. api-link :: dojo.
 

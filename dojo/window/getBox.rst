@@ -22,25 +22,12 @@ Usage
 
 .. js ::
 
- // Dojo 1.7 (AMD)
  // Load the window-related functions:
  require(["dojo/window"], function(win){
       // Get the viewport-size of the document:
-      var vs =win.getBox();
+      var vs = win.getBox();
       console.log('viewport size:', ' width: ', vs.w, ', height: ', vs.h, ', left: ', vs.l, ', top: ', vs.t);
  );
-
-
-.. js ::
-
-  // Dojo < 1.7
-  // Load the window-related functions:
-  dojo.require("dojo.window");
-
-  // Get the viewport-size of the document:
-  var vs = dojo.window.getBox();
-
-  console.log('viewport size:', ' width: ', vs.w, ', height: ', vs.h, ', left: ', vs.l, ', top: ', vs.t);
 
 
 Examples

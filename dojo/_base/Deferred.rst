@@ -31,17 +31,11 @@ Pseudocode Example 1:  Creating and calling a deferred.
 
 .. js ::
     
-  // Dojo 1.7+ (AMD)
   require(["dojo/_base/Deferred"], function(Deferred){
     var deferred = new Deferred();
     setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
     return deferred;
   });
-
-  // Dojo < 1.7
-  var deferred = new dojo.Deferred();
-  setTimeout(function(){ deferred.resolve({success: true}); }, 1000);
-  return deferred;
 
 Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 -------------------------------------------------------------------------
