@@ -21,87 +21,44 @@ Usage
 
 Here is a list of topics that you can subscribe to, with the parameters they pass:
 
-Dojo 1.7 (AMD)
---------------
-
 .. js ::
     
-  require(["dojo/_base/connect"], function(connect){
-    connect.subscribe("/dojo/io/start", function(){
+  require(["dojo/topic"], function(topic){
+    topic.subscribe("/dojo/io/start", function(){
       // Triggered when there are no outstanding IO requests,
       // and a new IO request is started. No arguments are passed with this topic.
     });
 
-    connect.subscribe("/dojo/io/send", function(/*dojo.Deferred*/ dfd){
+    topic.subscribe("/dojo/io/send", function(/*dojo.Deferred*/ dfd){
       // Triggered whenever a new IO request is started.
       // It passes the dojo.Deferred for the request.
     });
 
-    connect.subscribe("/dojo/io/load", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
+    topic.subscribe("/dojo/io/load", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has loaded
       // successfully. It passes the response and the
       // dojo.Deferred for the request.
     });
 
-    connect.subscribe("/dojo/io/error", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
+    topic.subscribe("/dojo/io/error", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has errored.
       // It passes the error and the dojo.Deferred
       // for the request with the topic.
     });
 
-    connect.subscribe("/dojo/io/done", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
+    topic.subscribe("/dojo/io/done", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
       // Triggered whenever an IO request has completed,
       // either by loading or by erroring. It passes the error and
       // the dojo.Deferred for the request with the topic.
     });
 
-    connect.subscribe("/dojo/io/stop", function(){
+    topic.subscribe("/dojo/io/stop", function(){
       // Triggered when all outstanding IO requests have
       // finished. No arguments are passed with this topic.
     });
   });
 
-
-Dojo < 1.7
-----------
-
-.. js ::
-    
-  dojo.subscribe("/dojo/io/start", function(){
-    // Triggered when there are no outstanding IO requests,
-    // and a new IO request is started. No arguments are passed with this topic.
-  });
-
-  dojo.subscribe("/dojo/io/send", function(/*dojo.Deferred*/ dfd){
-    // Triggered whenever a new IO request is started.
-    // It passes the dojo.Deferred for the request.
-  });
-
-  dojo.subscribe("/dojo/io/load", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
-    // Triggered whenever an IO request has loaded
-    // successfully. It passes the response and the
-    // dojo.Deferred for the request.
-  });
-
-  dojo.subscribe("/dojo/io/error", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
-    // Triggered whenever an IO request has errored.
-    // It passes the error and the dojo.Deferred
-    // for the request with the topic.
-  });
-
-  dojo.subscribe("/dojo/io/done", function(/*dojo.Deferred*/ dfd, /*Object*/ response){
-    // Triggered whenever an IO request has completed,
-    // either by loading or by erroring. It passes the error and
-    // the dojo.Deferred for the request with the topic.
-  });
-
-  dojo.subscribe("/dojo/io/stop", function(){
-    // Triggered when all outstanding IO requests have
-    // finished. No arguments are passed with this topic.
-  });
-
 See also
 ========
 
-* :ref:`dojo.publish <dojo/publish>`
-* :ref:`dojo.subscribe <dojo/subscribe>`
+* :ref:`dojo/topic <dojo/topic>`
