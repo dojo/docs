@@ -647,7 +647,7 @@ Corporations or Organizations with a CCLA on file
 * Global Media Systems
 * GreenPlum
 * IBM: Adam Peller, Becky Gibson, David Boloker, Bill Keese, Christopher Mitchell, Douglas Hays, William Higgins,
-  Richard Backhouse, Christophe Jolif, Yoshihiro Kamiyama, Emmanuel Tissandier, Patrick Ruzand
+  Richard Backhouse, Christophe Jolif, Yoshihiro Kamiyama, Emmanuel Tissandier, Patrick Ruzand, Ed Chatelain, Damien Mandrioli, Damien Garbarino, Adrian Vasiliu, Eric Durocher, Philippe Toussaint, Marc Durocher, Qi Ruan, Xiang Zhou, Wei Huang (Evan),  Xiao Wen Zhu
 * Indico Group
 * Laszlo Systems, Inc.
 * Leorent, GmbH: Michael Rasmussen
