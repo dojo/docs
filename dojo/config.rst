@@ -204,7 +204,6 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
 
 .. js ::
   
-    // Dojo 1.7+ (AMD style)
     require(["dojo/_base/declare", "dojo/_base/config"], function(declare, config){
         declare("my.Thinger", null, {
             thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
@@ -212,14 +211,6 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
                 if(config.myCustomVariable){ ... }
             }
         });
-    });
-    
-    // Dojo < 1.7
-    dojo.declare("my.Thinger", null, {
-        thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
-        constructor: function(){
-            if(dojo.config.myCustomVariable){ ... }
-        }
     });
 
 By referencing ``dojo.config.myCustomVariable`` as opposed to relying on ``dojoConfig.myCustomVariable`` you will be able to utilize the variable safely in built versions using an alternate scopeName.
@@ -232,3 +223,7 @@ For backwards compatibility, the deprecated variable ``djConfig`` is still recog
 Note, however, that if both ``dojoConfig`` and ``djConfig`` are defined, ``djConfig`` is ignored.
 
 Also note that if the ``dojoConfig`` or ``djConfig`` variable exists *and* the ``data-dojo-config`` attribute is defined, both are consumed, with values in ``data-dojo-config`` taking precedence over those in the variable.
+
+See Also
+========
+* :ref:`AMD configuration <loader/amd#configuration>`
