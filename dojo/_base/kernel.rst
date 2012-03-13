@@ -40,6 +40,27 @@ This function simply throws a warning message, alerting developers a method or m
 
 This means that MyClass's API may change, etc.
 
+global
+======
+
+kernel.global is an alias for the global scope.
+
+In a browser environment, global is the window object. You should refer to `global` rather than `window` so that your code will run correctly in other contexts (e.g. Rhino on a server).
+
+.. js ::
+
+   // connect a global "onclick" handler
+   require(["dojo/_base/kernel", "dojo/on"], function(kernel, on){
+       on(kernel.global, "click", function(e){
+           console.log("clicked: ", e.target);
+       });
+   });
+
+Though this example is clearly targeted at a browser environment, by using `global` over the `window` object we are ensuring the code will run in any other environments with a defined host environment file (hostenv_something).
+
+
+See also :ref:`dojo/_base/window::withGlobal <dojo/_base/window#withglobal>`.
+
 locale
 ======
 locale contains the locale for loading localized resources, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_. This string can be specified with the help of dojoConfig.locale.
