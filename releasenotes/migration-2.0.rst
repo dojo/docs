@@ -7,24 +7,24 @@ Dojo 1.x to 2.0 migration guide
 .. contents::
    :depth: 3
 
-Currently, many parts of Dojo 2.0 are under development.  As with any major software that is under-development, it is 
-hard to predict that the final solution will look like.  These notes provide guidence though on how to try to "future 
+Currently, many parts of Dojo 2.0 are under development.  As with any major software that is under-development, it is
+hard to predict that the final solution will look like.  These notes provide guidence though on how to try to "future
 proof" your application to make it easier to transistion to Dojo 2.0 when it release.
 
-Since Dojo 1.X is backwards compatible with previous Dojo 1.x releases, none of these changes are necessary until Dojo 
-2.0, but refactoring your code earlier will not only make future porting easier, but also can deliver performance and 
+Since Dojo 1.X is backwards compatible with previous Dojo 1.x releases, none of these changes are necessary until Dojo
+2.0, but refactoring your code earlier will not only make future porting easier, but also can deliver performance and
 code maintenance benefits early.
 
 AMD
 ===
 
-Dojo has been upgraded to use the Asynronous Module Definition (AMD) standard for all of its modules.  This changes 
+Dojo has been upgraded to use the Asynronous Module Definition (AMD) standard for all of its modules.  This changes
 the way you load, access, and define modules.
 
 Loading dojo.js
 ---------------
 
-Dojo is loaded basically in the same way as before, except that in the ``<script>`` tag the ``djConfig`` attribute has 
+Dojo is loaded basically in the same way as before, except that in the ``<script>`` tag the ``djConfig`` attribute has
 been renamed to ``data-dojo-config``.
 
 To get the 2.0-like behavior in 1.7, you should set ``async: true``.
@@ -33,7 +33,7 @@ To get the 2.0-like behavior in 1.7, you should set ``async: true``.
 
   <script src="dojo/dojo.js" data-dojo-config="async: true"></script>
 
-If configuration options are specified outside of the ``<script>`` tag (rather than as a ``data-dojo-config`` 
+If configuration options are specified outside of the ``<script>`` tag (rather than as a ``data-dojo-config``
 attribute), instead of ``djConfig`` you should set ``dojoConfig``:
 
 .. js ::
@@ -60,11 +60,11 @@ into a single require statement:
     // CODE HERE
   });
 
-Notice how the dots (e.g. ``dijit.form.Button``) have been changed to slashes (e.g. ``dijit/form/Button``).  This is 
-dot notation represented a global scope object where as the slash notation represent a Module ID (MID).  While these 
+Notice how the dots (e.g. ``dijit.form.Button``) have been changed to slashes (e.g. ``dijit/form/Button``).  This is
+dot notation represented a global scope object where as the slash notation represent a Module ID (MID).  While these
 are similiar in naming, there are actually wholly different concepts.
 
-Also, be careful to never load a module using a ``<script>`` tag.  This will not work; it causes "multiply defined" 
+Also, be careful to never load a module using a ``<script>`` tag.  This will not work; it causes "multiply defined"
 errors from the loader.
 
 Accessing Modules
@@ -78,14 +78,14 @@ Each module you load is mapped to a function parameter:
       Color.fromRgb(...)
   });
 
-That function parameter is the way that you access methods or the class defined in that module. You should no longer 
+That function parameter is the way that you access methods or the class defined in that module. You should no longer
 access any functionality through global variables like ``dojo``, ``dijit``, or ``dojox``.
 
-One implication of this change is that every module you are (directly) using must be put into your dependency list. 
-That includes any functionality previously loaded by ``dojo.js``.  The modules that formerly composed ``dojo.js`` 
+One implication of this change is that every module you are (directly) using must be put into your dependency list.
+That includes any functionality previously loaded by ``dojo.js``.  The modules that formerly composed ``dojo.js``
 (modules in ``dojo/_base``) have been replaced with smaller, more specific modules in the top level ``dojo`` directory.
 
-Also, note that some method names have been shortened to avoid redundancy. For example, the previous 
+Also, note that some method names have been shortened to avoid redundancy. For example, the previous
 ``dojo.colorFromRgb()`` is now accessed as ``Color.fromRgb()``, rather than ``Color.colorFromRgb()``.
 
 Defining Modules
@@ -109,10 +109,10 @@ into:
     return MyWidget;
   });
 
-Notice that the module (a.k.a. file) itself is *returning* a value.   That is the way other modules access your 
+Notice that the module (a.k.a. file) itself is *returning* a value.   That is the way other modules access your
 module, as explained in the section above.
 
-Also, notice how the module name previously listed in the ``dojo.provide()`` call (``acme.Dialog`` in the example 
+Also, notice how the module name previously listed in the ``dojo.provide()`` call (``acme.Dialog`` in the example
 above) is not listed anymore.   The file name itself suffices.
 
 I18N
@@ -160,10 +160,10 @@ New syntax:
 URLs
 ----
 
-Most of the time you use the ``dojo/text!`` plugin to load text from a specific URL, but if you need an actual URL in 
+Most of the time you use the ``dojo/text!`` plugin to load text from a specific URL, but if you need an actual URL in
 your classes you should use ``require.toUrl()``.
 
-See :ref:`require.toUrl() <loader/amd#utility-functions>` and 
+See :ref:`require.toUrl() <loader/amd#utility-functions>` and
 :ref:`context sensitive require <loader/amd#context-sensitive-require>` for details.
 
 Quick Reference
@@ -191,7 +191,7 @@ Basic functions
 Testing object types
 ~~~~~~~~~~~~~~~~~~~~
 
-2.0 will remove the ``isXXX()`` functions defined in ``dojo/_base/lang``.  In most cases they can be easily replaced 
+2.0 will remove the ``isXXX()`` functions defined in ``dojo/_base/lang``.  In most cases they can be easily replaced
 with simple native tests:
 
 =========================== ============================================
@@ -205,9 +205,9 @@ with simple native tests:
 
 Notes:
 
-- On some browsers ``"length" in v`` will return true for strings and functions, so if you are trying to differentiate 
-  between strings and arrays of strings, use the ``typeof v == "string"`` test instead, and if you are trying to 
-  differentiate between functions and arrays of functions, use the ``typeof v == "function"`` test instead. It will 
+- On some browsers ``"length" in v`` will return true for strings and functions, so if you are trying to differentiate
+  between strings and arrays of strings, use the ``typeof v == "string"`` test instead, and if you are trying to
+  differentiate between functions and arrays of functions, use the ``typeof v == "function"`` test instead. It will
   also return ``true`` for built-in constructors (``Number``, ``String``, etc.) which have ``length``.
 
 - ``typeof value == "function"`` won't match IE's hosted functions (like ``alert``).
@@ -269,7 +269,7 @@ dojo.indexOf                                        dojo/_base/array            
 Browser/Device Sniffing
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If your code uses browser sniffing, you should load :ref:`dojo/sniff <dojo/sniff>` or 
+If your code uses browser sniffing, you should load :ref:`dojo/sniff <dojo/sniff>` or
 :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`.  Both these modules leverage the :ref:`dojo/has <dojo/has>` API for feature detection.
 
 For example, old code like:
@@ -307,8 +307,8 @@ dojo.addOnWindowUnload                              dojo/_base/unload           
 Events
 ------
 
-``dojo.connect()`` / ``dojo.disconnect()`` for monitoring DOMNode events have been replaced by the ``on()`` method 
-returned from the :ref:`dojo/on <dojo/on>` module.  (For ``dojo.connect()`` usage as advice on plain JavaScript 
+``dojo.connect()`` / ``dojo.disconnect()`` for monitoring DOMNode events have been replaced by the ``on()`` method
+returned from the :ref:`dojo/on <dojo/on>` module.  (For ``dojo.connect()`` usage as advice on plain JavaScript
 functions/methods, see the Advice_ section below)
 
 Old code like:
@@ -354,7 +354,7 @@ should be converted to:
 mouseenter/mouseleave
 ~~~~~~~~~~~~~~~~~~~~~
 
-Dojo supports ``onmouseenter``/``onmouseleave`` synthetically for browsers that do not support those events natively. 
+Dojo supports ``onmouseenter``/``onmouseleave`` synthetically for browsers that do not support those events natively.
 In 1.x these events were specified as strings, just like native events:
 
 .. js ::
@@ -397,7 +397,7 @@ should be converted to:
 Keys
 ~~~~
 
-The symbolic names for keys have been put into the :ref:`dojo/keys <dojo/keys>` module, which must be explicitly 
+The symbolic names for keys have been put into the :ref:`dojo/keys <dojo/keys>` module, which must be explicitly
 loaded and can be accessed like this:
 
 .. js ::
@@ -436,13 +436,13 @@ and keydown for non-printable characters (e.g. arrow keys):
     }
   });
 
-Note that the normalization of ``evt.charOrCode`` is also gone, so use ``evt.charCode`` for keypress events, or 
+Note that the normalization of ``evt.charOrCode`` is also gone, so use ``evt.charCode`` for keypress events, or
 ``evt.keyCode`` for keydown events.
 
 Event Delegation
 ~~~~~~~~~~~~~~~~
 
-The ``dojo.behavior`` and ``dojox.NodeList.delegate`` modules have been replaced by functionality built-in to 
+The ``dojo.behavior`` and ``dojox.NodeList.delegate`` modules have been replaced by functionality built-in to
 ``dojo/on``.
 
 Old code:
@@ -523,7 +523,7 @@ dojo.isCopyKey                                          ?                       
 Advice
 ------
 
-``dojo.connect()`` could be used to perform after advice (based on the conecpts of Aspect Oriented Programming) on a 
+``dojo.connect()`` could be used to perform after advice (based on the conecpts of Aspect Oriented Programming) on a
 method.  In 2.0 that has been replaced by the ``dojo/aspect`` package.
 
 Old code:
@@ -544,7 +544,7 @@ is changed to:
     handle.remove();
   });
 
-Note that ``callback()`` should not return a value, because if it did the returned value would be reported as the 
+Note that ``callback()`` should not return a value, because if it did the returned value would be reported as the
 value that ``myInstance.execute()`` appeared to return, which is not what ``dojo.connect()`` did.
 
 Quick Reference
@@ -631,10 +631,10 @@ The Dojo DOM related functions previously available as part of ``dojo/dojo.js`` 
 
 * :ref:`dojo/dom-style <dojo/dom-style>`: setting/getting style for a node
 
-Note in particular that node attribute setting and property setting has been split up. ``dojo/dom-attr`` will 
+Note in particular that node attribute setting and property setting has been split up. ``dojo/dom-attr`` will
 eventually be deprecated in lieu of ``dojo/dom-prop``.
 
-Note also that combination accessor functions like ``dojo.marginBox()``, ``dojo.contentBox()``, and ``dojo.style()`` 
+Note also that combination accessor functions like ``dojo.marginBox()``, ``dojo.contentBox()``, and ``dojo.style()``
 have been split into separate setter and getter methods.
 
 Quick Reference
@@ -747,13 +747,13 @@ The parser is in the :ref:`dojo/parser <dojo/parser>` module, invoked like:
     parser.parse();
   });
 
-Even if you are parsing declaratively via the ``parseOnLoad: true`` ``dojoConfig`` setting, you need to explicitly 
+Even if you are parsing declaratively via the ``parseOnLoad: true`` ``dojoConfig`` setting, you need to explicitly
 require the parser.
 
 data-dojo-type and data-dojo-props
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``dojoType`` has been renamed to ``data-dojo-type``, and a new ``data-dojo-props`` parameter has been created to 
+``dojoType`` has been renamed to ``data-dojo-type``, and a new ``data-dojo-props`` parameter has been created to
 specify non-native attributes in a way that doesn't violate HTML5 validation.
 
 Old code:
@@ -817,7 +817,7 @@ The `jsId` attribute has been removed. Replace all `jsId` references with `data-
 Query
 -----
 
-``dojo/query`` is a new module similar to the old ``dojo.query()`` function.  In general you can use it like 
+``dojo/query`` is a new module similar to the old ``dojo.query()`` function.  In general you can use it like
 ``dojo.query()``, so old code like:
 
 .. js ::
@@ -834,8 +834,8 @@ can been replaced by:
 
 Points of caution:
 
-  1. As before, you need to require certain NodeList extension modules to get added methods on the NodeList return 
-  from ``query()``. The difference is that now the NodeList DOM functions also need to be explicitly loaded. So you 
+  1. As before, you need to require certain NodeList extension modules to get added methods on the NodeList return
+  from ``query()``. The difference is that now the NodeList DOM functions also need to be explicitly loaded. So you
   need to do:
 
   .. js ::
@@ -845,19 +845,19 @@ Points of caution:
     });
 
 
-  2. ``query()`` can load various selector engines. By default it uses the ``dojo/selector/light`` engine. If you have 
-  complicated queries you need to switch it to use a more powerful engine. See :ref:`dojo/query <dojo/query>` for 
+  2. ``query()`` can load various selector engines. By default it uses the ``dojo/selector/light`` engine. If you have
+  complicated queries you need to switch it to use a more powerful engine. See :ref:`dojo/query <dojo/query>` for
   details.
 
-  There are a couple of ways to set the selector engine. First, we can define the selector engine as part of the dojo 
+  There are a couple of ways to set the selector engine. First, we can define the selector engine as part of the dojo
   configuration for the whole page:
 
   .. html ::
 
     <script data-dojo-config="selectorEngine='css2.1'" src="dojo/dojo.js"></script>
 
-  You can also specify the selector engine level you are dependent on for each of your modules. This is done by 
-  indicating the CSS selector engine level after ``!`` in the ``dojo/query`` module id. For example, if your module 
+  You can also specify the selector engine level you are dependent on for each of your modules. This is done by
+  indicating the CSS selector engine level after ``!`` in the ``dojo/query`` module id. For example, if your module
   needed to do a CSS3 level query, you could write:
 
   .. js ::
@@ -886,14 +886,14 @@ In order to aid transistion, there are two modules that are available:
 
 * :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` - Wraps a ``dojo/store`` API store and makes it appear to be a legacy ``dojo.data`` store.
 
-Many Dijits are now directly ``dojo/store`` aware, including: :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`, 
+Many Dijits are now directly ``dojo/store`` aware, including: :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`,
 :ref:`dijit/form/FilteringSelect <dijit/form/FilteringSelect>`, and :ref:`dijit/Tree <dijit/Tree>`.
 
 Declaring Classes
 -----------------
 
-``dojo.declare()`` has been migrated to :ref:`dojo/_base/declare <dojo/_base/declare>`.  There may be further changes 
-for Dojo 2.0, for example replacing it by ComposeJS, or may have more modest changes.  For now, for classes you don't 
+``dojo.declare()`` has been migrated to :ref:`dojo/_base/declare <dojo/_base/declare>`.  There may be further changes
+for Dojo 2.0, for example replacing it by ComposeJS, or may have more modest changes.  For now, for classes you don't
 need in the global scope, you should declare them as baseless.  Something like this:
 
 .. js ::
@@ -908,16 +908,16 @@ Should change to something like this:
 
 .. js ::
 
-  define(["dojo/_base/declare", "dijit/_WidgetBase"], 
+  define(["dojo/_base/declare", "dijit/_WidgetBase"],
   function(declare, _WidgetBase){
     return declare([_WidgetBase], {
       // myWidget Class declaration
     });
   });
 
-Notice the omission of the first argument in the ``declare()``. This means that nothing will be set in the global 
-scope.  Also, the mixin array uses the return values of the define requirement array, instead of the legacy class 
-names. This means that your custom class will only be available within the closure scope of a ``require()`` or 
+Notice the omission of the first argument in the ``declare()``. This means that nothing will be set in the global
+scope.  Also, the mixin array uses the return values of the define requirement array, instead of the legacy class
+names. This means that your custom class will only be available within the closure scope of a ``require()`` or
 ``define()`` that has required it in.
 
 This does mean your module can only return a single public class, which is more consistent with the concepts of AMD and
@@ -984,7 +984,7 @@ Dijit
 Mapping table for dijit
 -----------------------
 
-This is a quick lookup table for methods, attributes, etc. in 1.x mapped to their equivalent method in that module in 
+This is a quick lookup table for methods, attributes, etc. in 1.x mapped to their equivalent method in that module in
 2.0.   Note that many methods that were previously included automatically now need to be explicitly loaded.
 
 The sections underneath this give more detail on conversions.
@@ -1112,7 +1112,7 @@ have been replaced by the standard ``set()`` and ``get()`` methods:
 watch(), on()
 -------------
 
-Old widget methods to monitor widget events or changes in widget parameters have been consolidated to use ``on()`` and 
+Old widget methods to monitor widget events or changes in widget parameters have been consolidated to use ``on()`` and
 ``watch()``:
 
 Old code:
@@ -1135,8 +1135,8 @@ New code:
 Templated Widgets
 -----------------
 
-The ``dijit/_Templated`` mixin has been split into ``dijit/_TemplatedMixin`` and ``dijit/_WidgetsInTemplateMixin``. In 
-addition, ``dojoAttachPoint`` and ``dojoAttachEvent`` have been changed to the HTML5 valid ``data-dojo-attach-point`` 
+The ``dijit/_Templated`` mixin has been split into ``dijit/_TemplatedMixin`` and ``dijit/_WidgetsInTemplateMixin``. In
+addition, ``dojoAttachPoint`` and ``dojoAttachEvent`` have been changed to the HTML5 valid ``data-dojo-attach-point``
 and ``data-dojo-attach-event``.
 
 For example, old code like:
@@ -1164,7 +1164,7 @@ will change to:
 
 If the above example had widgets in the templates, it would also mixin ``dijit/_WidgetsInTemplateMixin``.
 
-To specify a template from a file, ``templatePath`` is no longer supported, and ``dojo.cache()`` shouldn't be used 
+To specify a template from a file, ``templatePath`` is no longer supported, and ``dojo.cache()`` shouldn't be used
 either.
 
 Old code:
@@ -1210,8 +1210,8 @@ attributeMap in 1.x was a hash mapping widget attributes to DOM nodes.   For exa
     "style": "domNode"
   }
 
-Currently, this is achieved by making separate ``_setXXXAttr`` attribute for each attribute to map. Originally 
-``_setXXXAttr`` was a function to set a widget attribute.   It can still be a function, but now it can also be an 
+Currently, this is achieved by making separate ``_setXXXAttr`` attribute for each attribute to map. Originally
+``_setXXXAttr`` was a function to set a widget attribute.   It can still be a function, but now it can also be an
 object like one of the values from ``attributeMap``.
 
 The code above would be expressed as:
@@ -1231,20 +1231,20 @@ TODO: list stuff in ``dijit/registry``, ``dijit/a11y``.
 dijit/focus, dijit/place, and dijit/popup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The focus, place, and popup modules in ``dijit/_base`` have been promoted to root of ``dijit``, so they need included 
+The focus, place, and popup modules in ``dijit/_base`` have been promoted to root of ``dijit``, so they need included
 explicitly by applications that don't want to include all of ``dijit/_base``.
 
-There are a few API changes in the top level modules compared to the ones in ``dijit/_base`` (although for backwards 
+There are a few API changes in the top level modules compared to the ones in ``dijit/_base`` (although for backwards
 compatibility the modules in ``dijit/_base`` maintain their old API):
 
-* ``Popup.around()`` (analogous to ``dijit.popup.placeAroundElement()``) takes a position parameter like 
-  ``["before", "after"]`` rather than a set of tuples like ``{BL: "TL", ...}``.   In other words, ``Popup.around()`` 
-  replaces ``dijit.popup.placeAroundElement()`` but instead of ``dijit.getPopupAroundAlignment(xyz)``, just pass in 
+* ``Popup.around()`` (analogous to ``dijit.popup.placeAroundElement()``) takes a position parameter like
+  ``["before", "after"]`` rather than a set of tuples like ``{BL: "TL", ...}``.   In other words, ``Popup.around()``
+  replaces ``dijit.popup.placeAroundElement()`` but instead of ``dijit.getPopupAroundAlignment(xyz)``, just pass in
   ``xzy`` directly.
 
 * ``dijit/focus`` doesn't include the selection related code, just focus related code
 
-* ``dijit/focus`` provides ``.watch()`` and ``.on()`` methods to monitor the focused node and active widgets, rather 
+* ``dijit/focus`` provides ``.watch()`` and ``.on()`` methods to monitor the focused node and active widgets, rather
   than publishing topics ``focusNode``, ``widgetBlur``, and ``widgetFocus``.
 
 * Some methods in ``dijit/_base/popup`` used to take DOMNodes or widgets as a parameter; now they just take a widget
@@ -1257,15 +1257,15 @@ Also note that the new dijit/popup module is only available through the new AMD 
 
 Some functions from ``dijit`` have been moved to ``dojo`` core.
 
-* ``dojo/uacss`` will add classes to the ``<html>`` node like ``dj_ie``, representing the browser, browser version, 
+* ``dojo/uacss`` will add classes to the ``<html>`` node like ``dj_ie``, representing the browser, browser version,
   box model, etc.  Formerly ``dojo.require("dijit.sniff")``.
 
 * ``getBox()`` from ``dojo/window`` gets the viewport size. Formerly ``dijit.getViewport()``.
 
-* ``get()`` from ``dojo/window`` converts a document to the corresponding window. Formerly 
+* ``get()`` from ``dojo/window`` converts a document to the corresponding window. Formerly
   ``dijit.getDocumentWindow()``
 
-* ``scrollIntoView()`` from ``dojo/window`` scrolls a node into view, similar to ``node.scrollIntoView()`` but working 
+* ``scrollIntoView()`` from ``dojo/window`` scrolls a node into view, similar to ``node.scrollIntoView()`` but working
   around browser quirks. Formerly ``dijit.scrollIntoView()``.
 
 Editor
@@ -1286,9 +1286,9 @@ _Widget --> _WidgetBase
 DojoX
 =====
 
-The ``dojox`` namespace will be removed in Dojo 2.0.  Some of the mature sub-packages will like migrate into Dojo Core 
-or into Dijit.  The remaining code will be "spun off" into seperate packages that will be available via package 
+The ``dojox`` namespace will be removed in Dojo 2.0.  Some of the mature sub-packages will like migrate into Dojo Core
+or into Dijit.  The remaining code will be "spun off" into seperate packages that will be available via package
 management tools and a repository of packages.
 
-In order to ensure your code is easily migrateable, refactoring it to fully leverage AMD and not relay upon the 
+In order to ensure your code is easily migrateable, refactoring it to fully leverage AMD and not relay upon the
 ``dojox`` global variable is critically important.
