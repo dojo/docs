@@ -4,16 +4,13 @@
 dojo/_base/kernel
 =================
 
-:Authors: TODO Author 
-:since: 1.?
-
 .. contents ::
     :depth: 2
 
 Introduction
 ============
 
-Generally not used directly, this defines version and deprecated().
+Generally not used directly, this defines a few basic methods and attributes, including "global".
 
 
 deprecated()
