@@ -13,10 +13,12 @@ dojo/json
 
 The dojo/json module is a JSON parsing and serialization module based on the standard EcmaScript 5's JSON object.
 
-dojo/json parse
-===============
+The module provides two functions, parse() and stringify().
 
-The module provides two functions, parse() and stringify(). The parse() function has a single required argument, the JSON string to be parsed, and an optional second argument indicating if secure parsing should always be used. The signature is:
+parse()
+=======
+
+The parse() function has a single required argument, the JSON string to be parsed, and an optional second argument indicating if secure parsing should always be used. The signature is:
 
 .. js ::
   
@@ -26,7 +28,7 @@ To parse a JSON string into a parsed value, we can use the dojo/json this:
 
 .. js ::
   
-  define(["dojo/json"], function(JSON){
+  require(["dojo/json"], function(JSON){
     var parsed = JSON.parse(jsonString);
   });
 
@@ -34,12 +36,12 @@ If the target platform supports native JSON parsing, dojo/json will always use t
 
 .. js ::
   
-  define(["dojo/json"], function(JSON){
+  require(["dojo/json"], function(JSON){
     var parsed = JSON.parse(unsecureJSONString, true);
   });
 
-dojo/json stringify
-===================
+stringify()
+===========
 
 The stringify() function takes a JavaScript value and serializes it to JSON. The signature of stringify is:
 
@@ -52,7 +54,7 @@ For example, to serialize an object we could write:
 
 .. js ::
 
-  define(["dojo/json"], function(JSON){
+  require(["dojo/json"], function(JSON){
     var jsonString = JSON.stringify(object);
   });
 

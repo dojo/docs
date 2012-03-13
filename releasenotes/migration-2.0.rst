@@ -202,6 +202,7 @@ dojo/_base/kernel
 dojo.deprecated                                         dojo/_base/kernel              kernel.deprecated
 dojo.experimental                                       dojo/_base/kernel              kernel.experimental
 dojo.version                                            dojo/_base/kernel              kernel.version
+dojo.eval                                               dojo/json                      native eval() or json.parse() for json
 =====================================================   ============================   ====================================
 
 dojo/_base/array

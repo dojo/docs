@@ -4,75 +4,20 @@
 dojo.eval
 =========
 
-:Project owner: ?--
-:since: V?
+*Deprecated*.
 
-.. contents ::
-   :depth: 2
-
-Evaluate some string of JavaScript in global context.
-
-
-Introduction
-============
-
-Evaluates the given string into window (global) scope rather than in current scope. Use this rather than ``eval``.
-
-
-Usage
-=====
-
-Dojo 1.7 (AMD)
---------------
+To convert JSON to a javascript object, use :ref:`dojo/json::parse() <dojo/json#parse>`:
 
 .. js ::
- 
-  require(["dojo/_base/declare", "dojo/_base/kernel"], function(declare, dojo){
-    declare('Foo', null, {
-      foo: function(){
-        eval('var fooBar = "bar"');
-      }
-    });
 
-    var foo = new Foo();
-    foo.foo();
-    // This will generate a "ReferenceError fooBar is not defined"
-    console.info(fooBar);
-
-    declare('Bar', null, {
-      bar: function(){
-        dojo.eval('var barBaz = "baz"');
-      }
-    });
-    var bar = new Bar();
-    bar.bar();
-    // Show "baz" !
-    console.info(barBaz);
+  require(["dojo/json"], function(json){
+    var parsed = json.parse("{x: 5, y: 3}");
   });
 
 
-Dojo < 1.7
-----------
+To evaluate an arbitrary string of javascript, just use eval():
 
 .. js ::
- 
-  dojo.declare('Foo', null, {
-    foo: function(){
-      eval('var fooBar = "bar"');
-    }
-  });
 
-  var foo = new Foo();
-  foo.foo();
-  // This will generate a "ReferenceError fooBar is not defined"
-  console.info(fooBar);
+   eval("x = 5");
 
-  dojo.declare('Bar', null, {
-    bar: function(){
-      dojo.eval('var barBaz = "baz"');
-    }
-  });
-  var bar = new Bar();
-  bar.bar();
-  // Show "baz" !
-  console.info(barBaz);
