@@ -1,7 +1,7 @@
-.. _dojo/requireLocalization:
+.. _dojo/getLocalization:
 
 ========================
-dojo.requireLocalization
+dojo.getLocalization
 ========================
 
 *Deprecated*.    Use :ref:`dojo/i18n! plugin <dojo/i18n>` plugin instead.

@@ -12,29 +12,17 @@ dojo.i18n
 
 Utility classes to enable loading of resources for internationalization.
 
-Used exclusively with :ref:`dojo.requireLocalization <dojo/requireLocalization>`.
 
 Usage
 =====
 
-dojo.i18n.getLocalization gets a reference to an Object with localized strings, as loaded by dojo.requireLocalization()
-
-Dojo 1.7 (AMD)
---------------
+Gets a reference to an Object with localized strings.
 
 .. js ::
 
     require(["dojo/i18n!dijit/form/nls/validate"], function(i18n){
         console.log(i18n.invalidMessage);
     });
-
-Dojo < 1.7
---------------
- 
-.. js ::
- 
-  var validate = dojo.i18n.getLocalization("dijit.form", "validate");
-  console.log(validate.invalidMessage);
 
 
 See also
