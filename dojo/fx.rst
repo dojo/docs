@@ -11,7 +11,7 @@ dojo.fx
 .. contents ::
     :depth: 2
 
-Have you ever wanted to nicely fade out or fade in a block of text, slide or wipe a DOM node into position, or even chain together numerous animations to provide a nice, dynamically changing page for your users?  Well, that is exactly what the dojo.fx module is for.  This module provides several commonly used animation effects.  These FX functions all build upon the basic FX support in :ref:`dojo base <dojo/_base/fx>`.  There are also less commonly used FX functions available in dojox under the :ref:`dojox.fx <dojox/fx>` package.
+Have you ever wanted to nicely fade out or fade in a block of text, slide or wipe a DOM node into position, or even chain together numerous animations to provide a nice, dynamically changing page for your users?  Well, that is exactly what the dojo/fx module is for.  This module provides several commonly used animation effects.  These FX functions all build upon the basic FX support in :ref:`dojo base <dojo/_base/fx>`.  There are also less commonly used FX functions available in dojox under the :ref:`dojox.fx <dojox/fx>` package.
 
 This page is a landing point for reference off to each function, their description, and examples.
 
@@ -21,16 +21,16 @@ Features
 ========
 
 
-Functions always available (Dojo 'Base')
+Functions in dojo/_base/fx module
 ----------------------------------------
 
-* :ref:`dojo.animateProperty <dojo/animateProperty>` - The most basic animation function in dojo.  It allows you to animate the change of most CSS properties, as well as perform, pre and post operations as the animation executes.  Almost all the following animation functions are built using this function.
+* :ref:`animateProperty() <dojo/_base/fx#animateproperty>` - The most basic animation function in dojo.  It allows you to animate the change of most CSS properties, as well as perform, pre and post operations as the animation executes.  Almost all the following animation functions are built using this function.
 
 * :ref:`dojo.fadeIn <dojo/fadeIn>` - A simple function for fading a currently invisible (opacity 0), node into view.
 
 * :ref:`dojo.fadeOut <dojo/fadeOut>` - A simple function for fading a currently visible(opacity 1), node to opacity 0.
 
-Functions provided by the dojo.fx module
+Functions provided by the dojo/fx module
 ----------------------------------------
 
 * :ref:`dojo.fx.wipeIn <dojo/fx/wipeIn>` -  Wipe in a node (Height 0 to max height of node).
