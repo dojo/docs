@@ -50,14 +50,36 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
       // Do something on failure.
   });
 
-dojo.when
-=========
+when()
+======
 
-The :ref:`dojo.when <dojo/when>` function is a useful tool for interacting with Deferred objects since it can provide normalization between asynchronous Deferreds and normal synchronous values.
+The `when()` function is a useful tool for interacting with Deferred objects since it can provide normalization between asynchronous Deferreds and normal synchronous values.
 
-As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor).  It is aliased to ``dojo.when`` for backward-compatibility.
+As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor).
 
+.. js ::
+
+  require(["dojo/_base/Deferred"], function(Deferred){
+
+    Deferred.when(4, print); // this will print 4 immediately
+
+    var fourAsync = new Deferred();
+    Deferred.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
+    setTimeout(function(){
+      fourAsync.resolve(4);
+    }, 1000);
+
+    function print(value){
+      console.log(value);
+    };
+  });
+
+
+
+promise
+=======
 Deferred objects also have a ``promise`` property that provides a read-only view of the result of the operation. This provides a safe robust object that can be passed to other functions without worry of the Deferred being mutated or improperly resolved against expectations.
+
 
 Examples
 ========
@@ -69,26 +91,26 @@ Example 1: Creating a deferred and adding callbacks
   
   .. js ::
 
-      dojo.require("dijit.form.Button");
-
-      function createDeferred(){
-          // Create a deferred and set it to fire in 1 second.
-          var deferred = new dojo.Deferred();
-          setTimeout(function(){ deferred.resolve({called: true});}, 1000);
-          dojo.byId("response").innerHTML = "Created a deferred.";
- 
-          // Add a callback that changes the displayed message after it fires.
-          deferred.then(function(){
-            dojo.byId("response").innerHTML = "Deferred has fired.";
-          });
-      }
+      require(["dojo/_base/Deferred", "dojo/dom"], function(Deferred, dom){
+          createDeferred = function(){
+              // Create a deferred and set it to fire in 1 second.
+              var deferred = new Deferred();
+              setTimeout(function(){ deferred.resolve({called: true});}, 1000);
+              dom.byId("response").innerHTML = "Created a deferred.";
+     
+              // Add a callback that changes the displayed message after it fires.
+              deferred.then(function(){
+                dom.byId("response").innerHTML = "Deferred has fired.";
+              });
+          };
+    });
 
   .. html ::
 
     <b>Push the button to create a deferred and set up an async callback</B>
     <br>
     <br>
-    <button data-dojo-type="dijit.form.Button" id="deferredButton" onClick="createDeferred();">Create deferred!</button>
+    <button id="deferredButton" onclick="createDeferred();">Create deferred!</button>
     <br>
     <br>
     <b>Result</b>
@@ -99,7 +121,6 @@ Example 1: Creating a deferred and adding callbacks
 See Also
 ========
 
-* :ref:`dojo.when() <dojo/when>`
-* :ref:`dojo.xhrGet() <dojo/xhrGet>`
+* :ref:`dojo/xhr() <dojo/xhr>`
 * Article on the new design of Deferreds in 1.5: http://www.sitepen.com/blog/2010/05/03/robust-promises-with-dojo-deferred-1-5/
 * Tutorial "Getting Started with Deferreds" at http://dojotoolkit.org/documentation/tutorials/1.6/deferreds/
