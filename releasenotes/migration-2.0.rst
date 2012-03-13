@@ -136,7 +136,7 @@ dojo.provide("foo/bar"); dojo.require("a/b"); ...                               
 dojo.require(a.b); a.b.foo();                                                          require(["a/b"], function(b){ b.foo(); }
 djConfig                                                                               data-dojo-config
 dojo._Url                                                                              require.toUrl()
-dojo.moduleUrl("dijit", "foo.template.html)             require                        require.toUrl("dijit/foo/template.html")
+dojo.moduleUrl("dijit", "foo.template.html")            require                        require.toUrl("dijit/foo/template.html")
 dojo.requireLocalization()                              dojo/i18n!                     see I18N section above
 dojo.getLocalization()                                  dojo/i18n!                     see I18N section above
 =====================================================   ============================   ====================================
