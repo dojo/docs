@@ -27,7 +27,7 @@ With the introduction of AMD-style loading in Dojo 1.7, localized content is loa
 
 .. js ::
 
-    require(["dojo/i18n!myApp/nls/myResources", function(resources) {
+    require(["dojo/i18n!myApp/nls/myResources"], function(resources) {
       dojo.byId("myDiv");
       myDiv.innerText = resources.greeting;
     });
