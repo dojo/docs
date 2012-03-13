@@ -20,11 +20,11 @@ The mouse.enter event is an extension event for being notified of when the mouse
 
 .. js ::
 
-  define(["dojo/listen", "dojo/mouse"], function(listen, mouse){
-    listen(node, mouse.enter, function(event){
-      dojo.addClass(node, "hoverClass");
+    define(["dojo/dom-class", "dojo/on", "dojo/mouse"], function(domClass, on, mouse){
+        on(node, mouse.enter, function(event){
+            domClass.add(node, "hoverClass");
+        });
     });
-  });
 
 mouse.leave
 ===========
@@ -33,9 +33,11 @@ The mouse.leave event is an extension event for being notified of when the mouse
 
 .. js ::
 
-  listen(node, mouse.leave, function(event){
-    dojo.removeClass(node, "hoverClass");
-  });
+    define(["dojo/dom-class", "dojo/on", "dojo/mouse"], function(domClass, on, mouse){
+        on(node, mouse.leave, function(event){
+            domClass.remove(node, "hoverClass");
+        });
+    });
 
 mouseButtons
 ============
@@ -48,4 +50,3 @@ The mouseButtons object has the following properties and methods:
 * isLeft(event) - Indicates if the left mouse button was used in the provided event.
 * isMiddle(event) - Indicates if the middle mouse button was used in the provided event.
 * isRight(event) - Indicates if the right mouse button was used in the provided event.
-* isButton(event) - Indicates if any mouse button was used in the provided event.
