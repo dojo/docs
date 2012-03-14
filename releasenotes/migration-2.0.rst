@@ -419,6 +419,7 @@ The dojo onkeypress simulation has been desupported.   You should use keydown or
 event delegation
 ~~~~~~~~~~~~~~~~
 The dojo.behavior and dojox.NodeList.delegate modules have been replaced by functionality built-in to on().
+
 Old code:
 
 .. js ::
@@ -484,8 +485,11 @@ quick reference
 =====================================================   ============================   ====================================
 1.x syntax                                              2.0 module                     2.0 syntax
 =====================================================   ============================   ====================================
-dojo.connect(node,"onclick",cb)                         dojo/on                        on(node,"click",cb)
-dojo.disconnect(handle)                                                                handle.remove();
+dojo.connect(node,"onclick",cb)                         dojo/on                        on(node,"click",cb)   (note that "on" prefix removed)
+dojo.connect(node,"onmouseenter",cb)                    dojo/on,dojo/mouse             on(node,mouse.enter,cb)
+dojo.connect(node,"onmouseleave",cb)                    dojo/on,dojo/mouse             on(node,mouse.leave,cb)
+dojo.connect(node,"onkeypress",cb)                      dojo/on                        on(node,"keypress",cb) for printable or on(node,"keydown",cb) for arrows etc.
+dojo.disconnect(handle)                                                                handle.remove()
 dojo.connectPublisher                                                                  see above
 dojo.fixEvent                                           dojo/_base/event               event.fix
 dojo.stopEvent                                          dojo/_base/event               event.stop
