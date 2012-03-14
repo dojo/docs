@@ -626,7 +626,7 @@ dojo.create                                             dojo/dom-construct      
 dojo.empty                                              dojo/dom-construct             construct.empty
 dojo.destroy                                            dojo/dom-construct             construct.destroy
 dojo.fieldToObject                                      dojo/dom-form                  form.fieldToObject
-dojo.formToObject                                       dojo/dom-form                  form.formToObject
+dojo.formToObject                                       dojo/dom-form                  form.toObject
 dojo.formToQuery                                        dojo/dom-form                  form.toQuery
 dojo.formToJson                                         dojo/dom-form                  form.toJson
 dojo._getPadExtents                                     dojo/dom-geometry              geometry.getPadExtents
