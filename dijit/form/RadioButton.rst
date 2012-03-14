@@ -19,9 +19,6 @@ Usage
 Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute.
 Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*.
 
-**Note:** To use the RadioButton widget, you currently have to call ``require(["dijit/form/RadioButton"])``
-
-
 Examples
 ========
 
