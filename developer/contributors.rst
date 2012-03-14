@@ -217,7 +217,7 @@ Individuals who have signed Dojo CLAs
 * Hayes, Kyle
 * Hays, Jason Scott
 * Heeringson, Jaanus
-* Heil, Jerome
+* Heil, Jerome (ID)
 * Heimbuch, Ryan C.
 * Henderson, Cal
 * Hennebrueder, Sebastian
