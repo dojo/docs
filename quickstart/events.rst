@@ -151,9 +151,9 @@ Keyboard Events
 ---------------
 Although different browsers report keyboard events differently, you can write portable keyboard event handling code using dojo, by following these rules:
 
-  - Setup a keypress (not keydown) handler to monitor printable aeys
+  - Setup a keypress (not keydown) handler to monitor printable keys
 
-  - Setup a keydown (not keypress) handler to monitor non-printable aeys
+  - Setup a keydown (not keypress) handler to monitor non-printable keys
 
   - For non-printable keys (arrows, function keys, etc) compare evt.keyCode against the :ref:`Key code constants <dojo/keys>`, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
 
