@@ -1,7 +1,7 @@
 .. _dijit/form/RadioButton:
 
 ======================
-dijit/form/RadioButton
+dijit.form.RadioButton
 ======================
 
 :Authors: Becky Gibson, Doug Hays, Nikolai Onken
@@ -22,48 +22,52 @@ Upon FORM submission, the 1 checked RadioButton *value* is submitted using this 
 Examples
 ========
 
-Programmatic and declarative example
+Programmatic example
 ------------------------------------
 
-Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.
-We'll wrap both inside a FORM to illustrate what happens on submit.
+This example creates both radio buttons programmatically and uses the query module to obtain the value of the selected button.
 
 .. code-example ::
 
   .. js ::
- 
-    require([
-        "dojo/ready",
-        "dojo/parser",
-        "dijit/form/RadioButton",
-        "dijit/form/Button" // used for example purpose
-    ], function(ready, parser, RadioButton){
-        ready(function(){
-            var radioOne = new RadioButton({
-                checked: true,
-                value: "tea",
-                name: "drink",
-            }, "radioOne");
+
+    require(["dojo/_base/event", "dojo/query", "dojo/dom", "dojo/on", "dojo/parser", "dijit/form/RadioButton", "dijit/form/Form", "dojo/domReady!"],
+      function(event, query, dom, on, parser, RadioButton){
+        parser.parse();
+    
+        var radioOne = new RadioButton({
+          checked: true,
+          value: "tea",
+          name: "drink"
         });
-    });
+  
+        radioOne.placeAt('rad');
+        var radioTwo = new RadioButton({
+          checked: false,
+          value: "coffee",
+          name: "drink"
+        });
+        radioTwo.placeAt('rad1');
+        on(dom.byId('sub'),'click',function(e){
+          event.stop(e);
+          var checkedButtons =  query("[name=drink]:checked");
+          if(checkedButtons.length) {
+            alert("Selected "+checkedButtons[0].value);
+          }
+          return false;
+        });
+      }
+    );
 
   .. html ::
 
-    <form id="myform">
-        <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />
-        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioTwo" value="coffee"/> <label for="radioTwo">Coffee</label> <br />
-        
-        <button data-dojo-type="dijit/form/Button" type="button">
-            Show form submit value
-            <script type="dojo/on" data-dojo-event="click">
-                require(["dojo/dom"], function(dom){
-                     with(dom.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);
-                     return false;
-                });
-            </script>
-        </button>
-    </form>
+            <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm"
+                encType="multipart/form-data" action="" method="">
 
+                <div id="rad" style="padding: 10px;">Tea&nbsp;</div>
+                <div id="rad1" style="padding: 10px;">Coffee&nbsp;</div>
+                <button id='sub'>Test</button>
+            </div>
 
 Accessibility
 =============
