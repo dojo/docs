@@ -1,8 +1,8 @@
 .. _quickstart/widgetHierarchies:
 
-================================================================
-Widget Hierarchies: isContainer, dijit._Container, and startup()
-================================================================
+===============================================================
+Widget Hierarchies: containers, dijit._Container, and startup()
+===============================================================
 :Authors: Bill Keese
 
 .. contents ::
@@ -10,30 +10,39 @@ Widget Hierarchies: isContainer, dijit._Container, and startup()
 
 Often developers will build a hierarchy of widgets.  For example, a :ref:`dijit.Menu <dijit/Menu>` will contain :ref:`dijit.MenuItem <dijit/MenuItem>`'s, or a :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>` will contain multiple :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`'s, each of which contains some other widgets like :ref:`dijit.form.TextBox <dijit/form/TextBox>` and :ref:`dijit.form.Button <dijit/form/Button>`.
 
-There are two levels of classification for widgets that contain other widgets, isContainer and _Container:
 
-===========
-isContainer
-===========
-Widgets that define the isContainer flag are meant to contain other widgets.  They must:
+Widgets that are meant to contain other widgets must:
 
   * define a containerNode attribute pointing to the DOMNode containing the child widgets (either to the widget's root node or a descendant)
-  * call startup() on the child widgets (when startup() is called on the isContainer widget)
+  * call startup() on the child widgets (when startup() is called on the widget)
 
-Since isContainer widgets promise to call startup() on their children, the parser (:ref:`dojo.parser <dojo/parser>`) will ***not*** call startup on those widgets.  This allows the parent widget to do processing both before and after the child widget is started.  Therefore, when adding child widgets to a parent widget, be sure to use the proper API, so that the parent knows the child exists.
+Note that "other widgets" here refers to widgets added by the user (ie, by the calling code),
+rather than an internal widgets which are hidden from the user, and appear to be part of the main widget.
+Examples are :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>` and :ref:`dijit/Toolbar <dijit/Toolbar>`.
+A widget that is *not* considered a container is  :ref:`dijit/InlineEditBox <dijit/InlineEditBox>`,
+because even though it contains button widgets, they appear to be part of the InlineEditBox and are not listed by
+getChildren().
 
-dijit._Container
+Since widgets are required to call startup() on their children, the parser (:ref:`dojo.parser <dojo/parser>`) will ***not*** call startup on those widgets.  This allows the parent widget to do processing both before and after the child widget is started.  Therefore, when adding child widgets to a parent widget, be sure to use the proper API, so that the parent knows the child exists.
+
+dijit/_Container
 ================
 
-dijit._Container implements the isContainer contract above, and goes farther.   It is a base class for widgets with an ordered list of children, like a :ref:`dijit.Menu <dijit/Menu>`.
+:ref:`dijit/_Container <dijit/_Container>`
+is a mixin for widgets with an ordered list of children, like a :ref:`dijit.Menu <dijit/Menu>`.
+It implements the contract for containers listed above, and goes farther.
 
-In particular, dijit._Container implements the addChild() and removeChild() API, and a simple getChildren() method based on the assumption that all children are direct descendants of containerNode.
+In particular, dijit/_Container implements the addChild() and removeChild() API.
 
-All of the widgets named \*\*\*Container (ex: :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`) extend dijit._Container.
+All of the widgets named \*\*\*Container (ex: :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`) extend dijit/_Container.
 
-:ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`, on the other hand, defines isContainer but does not extend dijit._Container (since it contains rich text rather than a simple list of widgets).
+:ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`, on the other hand, fulfills the container contract
+listed above but does not extend dijit/_Container, since it contains rich text rather than a simple list of widgets.
 
-dijit._Contained
+dijit/_Contained
 ================
 
-This is the counterpart to dijit._Container.  It represents a widget that has a dijit._Container as a parent.   dijit._Contained.getParent() will find the immediate parent widget and return it, but only if it defines isContainer.   Essentially that means that it will always return the parent, since all widgets that can contain other widgets (at least those defined by dijit) define isContainer.
+:ref:`dijit/_Contained <dijit/_Contained>` is the counterpart to :ref:`dijit/_Container <dijit/_Container>`.
+It represents a widget that has a dijit._Container as a parent.
+However, :ref:`dijit/_Container <dijit/_Container>` can contain any widget, regardless of whether it extends
+:ref:`dijit/_Contained <dijit/_Contained>`, so this class is generally not used.

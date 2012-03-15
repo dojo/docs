@@ -1,11 +1,8 @@
 .. _dijit/_Contained:
 
-===============
-dojo._Contained
-===============
-
-:Authors: TODO Author 
-:since: 1.?
+================
+dijit/_Contained
+================
 
 .. contents ::
     :depth: 2
@@ -13,48 +10,20 @@ dojo._Contained
 Introduction
 ============
 
-TODO: introduce the module 
+dijit/_Contained is a mixin sometimes used for children of a :ref:`dijit/_Container <dijit/_Container>`.
 
-Usage
-=====
+It provides methods like getNextSibling() and getPreviousSibling().
 
-.. js ::
-
-    // TODO
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
+However, a widget implementing :ref:`dijit/_Container <dijit/_Container>` can have any type of children,
+regardless of whether or not they implement dijit/_Contained.   Thus it's usually not necessary to
+extend this class.
 
 
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
+.. api-link :: dijit._Contained
 
 
 See also
 ========
 
-.. api-link :: dojo.
+* :ref:`dijit/_Container <dijit/_Container>`
 

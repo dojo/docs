@@ -94,9 +94,9 @@ Infrastructure Widgets
 
 * :ref:`dijit._Calendar <dijit/_Calendar>` **STUB**
 
-* :ref:`dijit._Contained <dijit/_Contained>` **STUB**
+* :ref:`dijit._Contained <dijit/_Contained>`
 
-* :ref:`dijit._Container <dijit/_Container>` **STUB**
+* :ref:`dijit._Container <dijit/_Container>`
 
 * :ref:`dijit._DialogMixin <dijit/_DialogMixin>` **STUB**
 

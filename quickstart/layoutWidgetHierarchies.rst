@@ -23,17 +23,11 @@ Both layout widgets and their children need to support the resize() method.    (
 
 isLayoutContainer
 =================
-Widgets that define an isLayoutContainer attribute extend the isContainer contract (see :ref:`Widget Hierarchies <quickstart/widgetHierarchies>`), and in addition promise to:
+Widgets that define an isLayoutContainer attribute extend the :ref:`dijit/_Container <dijit/_Container>` contract (see :ref:`Widget Hierarchies <quickstart/widgetHierarchies>`), and in addition promise to:
 
     * call resize() on (top level) child widgets when those widgets become visible
 
 isLayoutContainer widgets often will pass in a size on the child.resize() call, but they might just call resize() w/out any parameters.
-
-isLayoutContainer widgets also define the flag:
-
-    * isContainer: true
-
-so that child can call getParent().
 
 isLayoutContainer children
 ---------------------------
@@ -44,21 +38,21 @@ Since JavaScript sizing doesn't work until a widget has been made visible, child
 
 This is important because it means that the appropriate interfaces (addChild(), set("content", ...)) must be used so that the parent knows about the child.   If the child DOM is added directly to the parent's DOM, the parent won't know about it, and it won't call resize()
 
-dijit.layout._LayoutWidget
+dijit/layout/_LayoutWidget
 ==========================
-Most layout widgets extend dijit.layout._LayoutWidget.   _LayoutWidget implements the isLayoutContainer contract specified above, with some helper functions.
+Most layout widgets extend :ref:`dijit/layout/_LayoutWidget <dijit/layout/_LayoutWidget>`.   _LayoutWidget implements the isLayoutContainer contract specified above, with some helper functions.
 
 It also implements (by extension of dijit._Container) the idea that the widget simply contains a list of widgets of children,  rather than a rich-text mixture of plain DOM Nodes and widgets.
 
 Finally, any :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>` can be the child of another :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>`, so it implements the idea listed above about skipping calling resize() from startup().
 
-dijit.layout._LayoutWidget children
+dijit/layout/_LayoutWidget children
 -----------------------------------
-Children of a :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>` need to implement the resize(size) method which sets the size of the widget (and does any necessary JS size calculations).
+Children of a :ref:`dijit/layout/_LayoutWidget <dijit/layout/_LayoutWidget>` need to implement the resize(size) method which sets the size of the widget (and does any necessary JS size calculations).
 
-dijit.layout.ContentPane
+dijit/layout/ContentPane
 ========================
-Since dijit.layout.ContentPane <dijit/layout/ContentPane>`_ is often used in layout widget hierarchies, it implements the isLayoutContainer interface.   When the ContentPane itself is made visible, it calls resize() on each top level widget child.
+Since :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>` is often used in layout widget hierarchies, it implements the isLayoutContainer interface.   When the ContentPane itself is made visible, it calls resize() on each top level widget child.
 
 It doesn't extend :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>` because it can contain a rich text mixture of plain DOM nodes and widgets, as opposed to :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>` which simply contains an ordered (linear) list of widgets.     This is also the reason that ContentPane doesn't have addChild() and removeChild() methods.    It does have a getChildren() method to find all of it's "top level" widgets.
 
