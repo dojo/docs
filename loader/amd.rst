@@ -888,6 +888,15 @@ point to the resource ``http://acmeCopy.com/myApp/widgets/button.js``. In such a
 ``http://acmeCopy.com/myApp/widgets/templates/button.html``.
 
 This also works with relative IDs when ``require`` is a `context-sensitive require`_.
+For example:
+
+.. js ::
+
+     define(["require", ...], function(require, ...){
+          ... require.toUrl("./images/foo.jpg") ...
+     }
+
+Note how the URL begins with "./".
 
 ``require.toAbsMid`` converts the given module ID to an absolute module ID. This function is only useful when used in
 conjunction with a `context-sensitive require`_.
