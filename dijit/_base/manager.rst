@@ -4,22 +4,6 @@
 dijit/_base/manager
 ===================
 
-:Authors: TODO Author
-:since: V1.?
+*Deprecated*.
 
-.. contents ::
-    :depth: 2
-
-TODO: Description of module
-
-Features
-========
-
-Examples
-========
-
-See also
-========
-
-.. api-link :: dojo.
-
+Use :ref:`dijit/registry <dijit/registry>` instead.

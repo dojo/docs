@@ -4,22 +4,6 @@
 dijit/_base/scroll
 ==================
 
-:Authors: TODO Author
-:since: V1.?
+*Deprecated*.
 
-.. contents ::
-    :depth: 2
-
-TODO: Description of module
-
-Features
-========
-
-Examples
-========
-
-See also
-========
-
-.. api-link :: dojo.
-
+Use :ref:`dojo/window::scrollIntoView() <dojo/window#scrollintoview>` instead.

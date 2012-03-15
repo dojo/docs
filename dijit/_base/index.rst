@@ -4,21 +4,8 @@
 dijit/_base
 ===========
 
-:Authors: TODO Author
-:since: V1.?
+*Deprecated*.
 
-.. contents ::
-    :depth: 2
-
-TODO: Description of module
-
-Features
-========
-
-Examples
-========
-
-See also
-========
+Applications should not need to reference modules from dijit/_base.
 
 

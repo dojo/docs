@@ -4,22 +4,19 @@
 dijit/_base/wai
 ===============
 
-:Authors: TODO Author
-:since: V1.?
+*Deprecated*.
 
-.. contents ::
-    :depth: 2
+Use the following replacements instead:
 
-TODO: Description of module
-
-Features
-========
-
-Examples
-========
-
-See also
-========
-
-.. api-link :: dojo.
-
+=====================================================                                  ====================================
+1.x syntax                                                                             2.0 syntax
+=====================================================                                  ====================================
+dijit.hasWaiRole(node, role)                                                           node.getAttribute("role")==role
+dijit.getWaiRole(node)                                                                 node.getAttribute("role")
+dijit.setWaiRole(node, role)                                                           node.setAttribute("role", role)
+dijit.removeWaiRole                                                                    node.setAttribute(role, "")
+dijit.hasWaiState("selected")                                                          node.hasAttribute("aria-selected")
+dijit.getWaiState("describedby")                                                       node.getAttribute("aria-describedby")
+dijit.setWaiState("describedby", desc)                                                 node.getAttribute("aria-describedby", desc)
+dijit.removeWaiState("selected")                                                       node.removeAttribute("aria-selected")
+=====================================================                                  ====================================

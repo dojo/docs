@@ -1,60 +1,7 @@
-.. _ddijit/_Calendar:
+.. _dijit/_Calendar:
 
 ===============
-dijit._Calendar
+dijit/_Calendar
 ===============
 
-:Authors: TODO Author 
-:since: 1.?
-
-.. contents ::
-    :depth: 2
-
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-    // TODO
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
-
-.. api-link :: dojo.
-
+*Deprecated*.   Use :ref:`dijit/Calendar <dijit/Calendar>` instead.
