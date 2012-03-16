@@ -20,8 +20,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
-toDom Function
---------------
+toDom()
+-------
 
 Instantiates an HTML fragment returning the corresponding DOM.
 
@@ -79,8 +79,8 @@ This example adds a row to a table.  This is somewhat contrived, since ``place()
       </tbody>
     </table>
 
-place Function
---------------
+place()
+-------
 
 ``place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML
 document as well as create new nodes and immediately position them in the document. It encapsulates all necessary
@@ -364,11 +364,11 @@ Or you can construct DOM programmatically.
 Alternatives
 ~~~~~~~~~~~~
 
-An alternative way to place (and create) a node is :ref:`dojo/dom-construct::create() <dojo/dom-construct#create-function>`.
+An alternative way to place (and create) a node is :ref:`dojo/dom-construct::create() <dojo/dom-construct#create>`.
 It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally
 :ref:`dojo/dom-attr::set() <dojo/dom-attr#set-function>` and ``place()`` to it. While its creation part is not as rich,
 it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of
-:ref:`dojo/dom-construct::create() <dojo/dom-construct#create-function>` is that by using :ref:`dojo/dom-attr::set()
+:ref:`dojo/dom-construct::create() <dojo/dom-construct#create>` is that by using :ref:`dojo/dom-attr::set()
 <dojo/dom-attr#set-function>` all attributes will be applied in a browser-independent way avoiding possible differences.
 
 .. js ::
@@ -380,8 +380,8 @@ it allows to set complex attributes and styles dynamically without messy string 
      domConstruct.create("div", null, win.body(), "first");
   });
 
-create Function
----------------
+create()
+--------
 
 A convenient DOM creation, manipulation and placement utility shorthand. It is designed to simplify the frequently used
 sequence of DOM manipulation:
@@ -490,7 +490,7 @@ Creating and/or placing with place()
 ''''''''''''''''''''''''''''''''''''
 
 In some cases it is easier to create a node from an HTML fragment and place it, without applying any attributes, or
-specifying them as a part of the HTML fragment. If this is the case consider :ref:`dojo/dom-construct::place() <dojo/dom-construct#place-function>`:
+specifying them as a part of the HTML fragment. If this is the case consider :ref:`dojo/dom-construct::place() <dojo/dom-construct#place>`:
 
 .. js ::
   
@@ -525,8 +525,8 @@ While you can use ``create()`` to set attributes on the existing node without pl
     domAttr.set(node, "innerHTML", "<p>hi</p>");
   });
 
-empty Function
---------------
+empty()
+-------
 
 Safely empty the contents of a DOM element. ``empty()`` deletes all children but keeps the node there.
 
@@ -637,8 +637,8 @@ applying ``empty()``.
         float: left; background-color: red; padding: 2px }
     #panel { clear: both }
 
-destroy Function
-----------------
+destroy()
+---------
 
 Destroys a DOM element. ``destroy()`` deletes all children and the node itself.
 
