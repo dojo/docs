@@ -13,95 +13,74 @@ dojo/dom-geometry
 This module defines the core dojo DOM geometry API. The convention for the return variable for this module is
 ``domGeom``.
 
+Support for *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
+
 Features
 ========
 
-AMD Features
-------------
+Because ``dom-geometry`` is a large module, the documentation of the features has been broken up into several pages.
+Please see the following pages for each of the following features.
 
-* `domGeom.getPadExtents`
+* :ref:`dojo/dom-geometry::position() <dojo/dom-geometry/position>`
 
-  Returns object with special values specifically useful for node fitting.
+  Gets the position and size of the passed element relative to the viewport (if ``includeScroll==false``), or relative
+  to the document root (if ``includeScroll==true``).
 
-* `domGeom.getBorderExtents`
-
-  Returns an object with properties useful for noting the border dimensions.
-
-* `domGeom.getPadBorderExtents`
-
-  Returns object with properties useful for box fitting with regards to padding.
-
-* `domGeom.getMarginExtents`
-
-  Returns object with properties useful for box fitting with regards to box margins (i.e., the outer-box).
-
-* :ref:`domGeom.getMarginBox <dojo/getMarginBox>`
+* :ref:`dojo/dom-geometry::getMarginBox() <dojo/dom-geometry/getMarginBox>`
 
   Returns an object that encodes the width, height, left and top positions of the node's margin box.
 
-* :ref:`domGeom.setMarginBox <dojo/setMarginBox>`
+* :ref:`dojo/dom-geometry::setMarginBox() <dojo/dom-geometry/setMarginBox>`
 
   Sets the size of the node's margin box and placement (left/top), irrespective of box model. Think of it as a
   passthrough to setBox that handles box-model vagaries for you.
 
-* :ref:`domGeom.getContentBox <dojo/getContentBox>`
+* :ref:`dojo/dom-geometry::getContentBox() <dojo/dom-geometry/getContentBox>`
 
   Returns an object that encodes the width, height, left and top positions of the node's content box, irrespective of
   the current box model.
 
-* :ref:`domGeom.setContentBox <dojo/setContentBox>`
-
-  Sets the size of the node's margin box and placement (left/top), irrespective of box model. Think of it as a
-  passthrough to setBox that handles box-model vagaries for you.
-
-* :ref:`domGeom.setContentSize <dojo/setContentSize>`
+* :ref:`dojo/dom-geometry::setContentSize() <dojo/dom-geometry/setContentSize>`
 
   Sets the size of the node's contents, irrespective of margins, padding, or borders.
 
-* `domGeom.isBodyLtr`
+* :ref:`dojo/dom-geometry::getPadExtents() <dojo/dom-geometry/getPadExtents>`
+
+  Returns object with special values specifically useful for node fitting.
+
+* :ref:`dojo/dom-geometry::getBorderExtents() <dojo/dom-geometry/getBorderExtents>`
+
+  Returns an object with properties useful for noting the border dimensions.
+
+* :ref:`dojo/dom-geometry::getPadBorderExtents() <dojo/dom-geometry/getPadBorderExtents>`
+
+  Returns object with properties useful for box fitting with regards to padding.
+
+* :ref:`dojo/dom-geometry::getMarginExtents() <dojo/dom-geometry/getMarginExtents>`
+
+  Returns object with properties useful for box fitting with regards to box margins (i.e., the outer-box).
+
+* :ref:`dojo/dom-geometry::isBodyLtr() <dojo/dom-geometry/isBodyLtr>`
 
   Returns true if the current language is left-to-right, and false otherwise.
 
-* `domGeom.docScroll`
+* :ref:`dojo/dom-geometry::docScroll() <dojo/dom-geometry/docScroll>`
 
   Returns an object with {node, x, y} with corresponding offsets.
 
-* `domGeom.fixIeBiDiScrollLeft`
+* :ref:`dojo/dom-geometry::fixIeBiDiScrollLeft() <dojo/dom-geometry/fixIeBiDiScrollLeft>`
 
   In RTL direction, scrollLeft should be a negative value, but IE returns a positive one. All codes using
   documentElement.scrollLeft must call this function to fix this error, otherwise the position will offset to right when
   there is a horizontal scrollbar.
 
-* :ref:`domGeom.position <dojo/position>`
+* :ref:`dojo/dom-geometry::getMarginSize() <dojo/dom-geometry/getMarginSize>`
 
-  Gets the position and size of the passed element relative to the viewport (if includeScroll==false), or relative to
-  the document root (if includeScroll==true).
-
-* `domGeom.getMarginSize`
-
-  returns an object that encodes the width and height of the node's margin box
-
-* `domGeom.normalizeEvent`
-
-  Normalizes the geometry of a DOM event, normalizing the pageX, pageY, offsetX, offsetY, layerX, and layerX properties
-
-Supported legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
-
-Examples
-========
-
-The following example would return the margin box for a node:
-
-.. js::
-
-  require(["dojo/dom", "dojo/dom-geometry", "dojo/dom-style"], function(dom, domGeom, domStyle){
-    var myNode = dom.byId("myNode");
-    var computedStyle = domStyle.getComputedStyle(myNode);
-    var marginBox = domGeom.getMarginBox(node, computedStyle);
-  });
+  Returns an object that encodes the width and height of the node's margin box
 
 See also
 ========
 
-.. api-link :: dojo.dom-geometry
+* :ref:`dojo/dom <dojo/dom>` - Core DOM API Library
 
+* :ref:`dojo/dom-construct <dojo/dom-construct>` - Dojo DOM Construction Library
