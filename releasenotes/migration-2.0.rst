@@ -727,7 +727,8 @@ Even if you are parsing declaratively via the parseOnLoad: true dojoConfig setti
 
 data-dojo-type and data-dojo-props
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"dojoType" has been renamed to "data-dojo-type", and a new "data-dojo-props" parameter has been created to specify non-native attributes in a way that doesn't violate HTML5 validation.
+
+``dojoType`` has been renamed to ``data-dojo-type``, and a new ``data-dojo-props`` parameter has been created to specify non-native attributes in a way that doesn't violate HTML5 validation.
 
 Old code:
 
@@ -743,8 +744,28 @@ New code:
      <button data-dojo-type="dijit.form.Button" tabIndex=2
         data-dojo-props="iconClass: 'checkmark'">OK</button>
 
-data-dojo-props is a hash that contains name value pairs, for example: data-dojo-props=" name: 'hi', size: 123".
+``data-dojo-props`` is a hash that contains name value pairs, for example: ``data-dojo-props=" name: 'hi', size: 123"``.
 
+using MIDs
+~~~~~~~~~~
+
+Starting in 1.8, referring to classes by their module ID (MID) is the preferred way.
+
+Old code:
+
+.. html ::
+
+  <button data-dojo-type="dijit.form.Button" tabIndex=2
+    data-dojo-props="iconClass: 'checkmark'">OK</button>
+
+New code:
+
+.. html ::
+
+  <button data-dojo-type="dijit/form/Button" tabIndex=2
+    data-dojo-props="iconClass: 'checkmark'">OK</button>
+
+The MID should match the ``require(...)`` used to require it in and the ``require(...)`` must occur before the parser is invoked, but the parse doesn't have to specifically occur within the closure of the ``require(...)``.
 
 connecting to widget events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
