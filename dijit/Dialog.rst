@@ -17,84 +17,90 @@ Dijit's modal Dialog Box simulates a regular GUI dialog box.
 The contents can be arbitrary HTML, but are most often a form or a short paragraph.
 The user can close the dialog box without acting by clicking on the X button in the top-right corner.
 
-Usage
-=====
+Dialog sizes itself to be just big enough to show it's contents.
+If the contents are too large to fit in the viewport, Dialog uses a scrollbar to scroll it's contents.
 
-.. js ::
- 
-    require(["dojo/ready", "dijit/Dialog"], function(ready, Dialog){
-        ready(function(){
-            // create the dialog:
-            myDialog = new Dialog({
-                title: "My Dialog",
-                content: "test content",
-                style: "width: 300px"
-            });
-        });
-    });
-
-After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the 
+After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the
 DOM, so it can overlay the entire webpage.
 With this move no other elements parent the Dialog.domNode.
 Therefore you have to add a ``class="claro"`` attribute (or some other applicable :ref:`theme name <dijit/themes>`)
 to your <body> tag, in order to show the Dialog with the right styles:
 
-.. html ::
+Usage
+=====
 
-    <html>
-    <head>
-        ...
-    </head>
-    <body class="claro">
-        ...
-    </body>
+Programmatic instantiation
+--------------------------
 
+.. code-example ::
+
+    .. js ::
+
+        require(["dojo/ready", "dijit/Dialog"], function(ready, Dialog){
+            ready(function(){
+                myDialog = new Dialog({
+                    title: "My Dialog",
+                    content: "Test content.",
+                    style: "width: 300px"
+                });
+            });
+        });
+
+
+    .. html ::
+
+        <button onclick="myDialog.show();">show</button>
+
+
+Dialog via markup, and actionBar
+--------------------------------
+
+This example shows creating a dialog declaratively, and use of the CSS classes
+dijitDialogPaneContentArea and dijitDialogPaneActionBar to make a Dialog with a
+standard "action bar", a gray bar at the bottom of the dialog with action buttons, typically OK and cancel.
+Simply create your dialog but separate the dialog contents from the buttons like this:
+
+.. code-example ::
+
+    .. js ::
+
+        require(["dijit/Dialog", "dijit/form/TextBox", "dijit/form/Button"]);
+
+    .. html ::
+
+        <div data-dojo-type="dijit/Dialog" data-dojo-id="myDialog" title="Name and Address">
+            <table class="dijitDialogPaneContentArea">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input data-dojo-type="dijit/form/TextBox" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input data-dojo-type="dijit/form/TextBox" name="address" id="address"></td>
+                </tr>
+            </table>
+
+            <div class="dijitDialogPaneActionBar">
+                <button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
+                <button dojoType="dijit.form.Button" type="button" onClick="myDialog.onCancel();"
+                        id="cancel">Cancel</button>
+            </div>
+        </div>
+
+        <button data-dojo-type="dijit/form/Button" type="button" onClick="myDialog.show();">
+            Show me!
+        </button>
+
+Note that dialog's source markup can be hidden via specifying style="display: none", to prevent it from flashing on
+the screen during page load.
+However, hiding the dialog indirectly via a class won't work, in that the dialog will
+remain invisible even when it's supposed to be displayed.
 
 Examples
 ========
 
-Dialog via markup
------------------
-
-The first example creates a Dialog via markup from an existing DOM node:
-
-.. code-example ::
-
-  Require the modules we are using:
-
-  .. js ::
-
-    require(["dojo/parser", "dijit/Dialog", "dijit/form/Button", "dijit/layout/TabContainer", "dijit/layout/ContentPane"]);
-
-  Some simple HTML code you need to define the place where your Dialog should be created.
-  
-  .. html ::
-
-    <div id="dialogOne" data-dojo-type="dijit/Dialog" title="My Dialog Title">
-        <div data-dojo-type="dijit/layout/TabContainer" style="width: 200px; height: 300px;">
-            <div data-dojo-type="dijit/layout/ContentPane" title="foo">Content of Tab "foo"</div>
-            <div data-dojo-type="dijit/layout/ContentPane" title="boo">Hi, I'm Tab "boo"</div>
-        </div>
-    </div>
-
-    <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonOne" data-dojo-type="dijit/form/Button" type="button">Show me!
-        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            // Show the Dialog:
-            require(["dijit/registry"], function(registry){
-                registry.byId("dialogOne").show();
-            });
-        </script>
-    </button>
-
-
-Note that dialog's source markup can be hidden via specifying style="display: none", to prevent it from flashing on
-the screen during page load.
-However, hiding the dialog indirectly via a class won't work (in that the dialog will
-remain invisible even when it's supposed to be displayed).
-
-Dialog programmatically
------------------------
+Dynamically setting content
+---------------------------
 
 Now let's create a dialog programmatically, and change the dialog's content dynamically
 
@@ -106,13 +112,11 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
 
     require(["dojo/ready", "dijit/Dialog", "dijit/form/Button"], function(ready, Dialog, Button){
         ready(function(){
-            // create the dialog
             var myDialog = new Dialog({
                 title: "Programmatic Dialog Creation",
                 style: "width: 300px"
             });
             
-            // create a button for Dialog demonstration
             var myButton = new Button({
                 label: "Show me!",
                 onClick: function(){
@@ -196,47 +200,49 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
     <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog"
         execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
-        <table>
-            <tr>
-                <td><label for="name">Name: </label></td>
-                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="name" id="name"></td>
-            </tr>
-            <tr>
-                <td><label for="loc">Location: </label></td>
-                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="loc" id="loc"></td>
-            </tr>
-            <tr>
-                <td><label for="date">Start date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myStartDate" onChange="myEndDate.constraints.min = arguments[0];" type="text" name="sdate" id="sdate"></td>
-            </tr>
-            <tr>
-                <td><label for="date">End date: </label></td>
-                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myEndDate" onChange="myStartDate.constraints.max = arguments[0];" type="text" name="edate" id="edate"></td>
-            </tr>
-            <tr>
-                <td><label for="date">Time: </label></td>
-                <td><input data-dojo-type="dijit/form/TimeTextBox" type="text" name="time" id="time"></td>
-            </tr>
-            <tr>
-                <td><label for="desc">Description: </label></td>
-                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="desc" id="desc"></td>
-            </tr>
-            <tr>
-                <td align="center" colspan="2">
-                    <button data-dojo-type="dijit/form/Button" type="submit"
-                        data-dojo-props="onClick:function(){return myFormDialog.isValid();}">OK</button>
-                    <button data-dojo-type="dijit/form/Button" type="button"
-                        data-dojo-props="onClick:function(){myFormDialog.hide();}">Cancel</button>
-                </td>
-            </tr>
-        </table>
+
+        <div class="dijitDialogPaneContentArea">
+            <table>
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input data-dojo-type="dijit/form/TextBox" type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="loc">Location: </label></td>
+                    <td><input data-dojo-type="dijit/form/TextBox" type="text" name="loc" id="loc"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Start date: </label></td>
+                    <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myStartDate" onChange="myEndDate.constraints.min = arguments[0];" type="text" name="sdate" id="sdate"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">End date: </label></td>
+                    <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myEndDate" onChange="myStartDate.constraints.max = arguments[0];" type="text" name="edate" id="edate"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Time: </label></td>
+                    <td><input data-dojo-type="dijit/form/TimeTextBox" type="text" name="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td><label for="desc">Description: </label></td>
+                    <td><input data-dojo-type="dijit/form/TextBox" type="text" name="desc" id="desc"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="dijitDialogPaneActionBar">
+            <button data-dojo-type="dijit/form/Button" type="submit" onClick="return myFormDialog.isValid();">
+                OK
+            </button>
+            <button data-dojo-type="dijit/form/Button" type="button" onClick="myFormDialog.hide()">
+                Cancel
+            </button>
+        </div>
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button">Show me!
-        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
-            myFormDialog.show();
-        </script>
+    <button id="buttonThree" data-dojo-type="dijit/form/Button" type="button" onClick="myFormDialog.show();">
+        Show me!
     </button>
 
 
@@ -256,10 +262,8 @@ handles the onSubmit event, validation, and an xhrPost to the server.
     <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Form Dialog" style="display: none">
         <form data-dojo-type="dijit/form/Form" data-dojo-id="myForm">
             <script type="dojo/on" data-dojo-event="submit" data-dojo-args="e">
-                require(["dojo/_base/event"], function(event){
-                    event.stop(e); // prevent the default submit
-                    if(!myForm.isValid()){ window.alert('Please fix fields'); return; }
-                });
+                e.preventDefault(); // prevent the default submit
+                if(!myForm.isValid()){ alert('Please fix fields'); return; }
 
                 window.alert("Would submit here via dojo/xhr");
                 // xhr.post( {
@@ -299,14 +303,16 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   .. js ::
 
-    require(["dojo/parser", "dojo/ready", "dijit/Dialog", "dijit/form/Button", "dijit/form/RadioButton", "dojo/dom", "dojo/dom-style"], function(parser, ready, Dialog, Button, RadioButton, dom, domStyle){
-        this.accept = function(){
+    require(["dijit/Dialog", "dijit/form/Button", "dijit/form/RadioButton", "dojo/dom", "dojo/dom-style"],
+            function(Dialog, Button, RadioButton, dom, domStyle){
+
+        accept = function(){
             dom.byId("decision").innerHTML = "Terms and conditions have been accepted.";
             domStyle.set("decision", "color", "#00CC00");
             myFormDialog.hide();
-        }
+        };
 
-        this.decline = function(){
+        decline = function(){
             dom.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
             domStyle.set("decision", "color", "#FF0000");
             myFormDialog.hide();
@@ -316,32 +322,32 @@ This example shows a Dialog that will ask the user to accept or decline the term
   .. html ::
 
     <div data-dojo-type="dijit/Dialog" data-dojo-id="myFormDialog" title="Accept or decline agreement terms">
-        <h1>Agreement Terms</h1>
-    
-        <div data-dojo-type="dijit/layout/ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto;">
-            Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+            <h1>Agreement Terms</h1>
+
+            <div style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto;">
+                Dojo is available under *either* the terms of the modified BSD license *or* the Academic Free License version 2.1. As a recipient of Dojo, you may choose which license to receive this code under (except as noted in per-module LICENSE files). Some modules may not be the copyright of the Dojo Foundation. These modules contain explicit declarations of copyright in both the LICENSE files in the directories in which they reside and in the code itself. No external contributions are allowed under licenses which are fundamentally incompatible with the AFL or BSD licenses that Dojo is distributed under. The text of the AFL and BSD licenses is reproduced below. ------------------------------------------------------------------------------- The "New" BSD License: ********************** Copyright (c) 2005-2010, The Dojo Foundation All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+            </div>
+
+            <br />
+            <table>
+                        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept" />
+                        <label for="radioOne">
+                            I accept the terms of this agreement
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline" />
+                        <label for="radioTwo">
+                            I decline
+                        </label>
+                    </td>
+                </tr>
+            </table>
         </div>
-    
-        <br />
-        <table>
-            <tr>
-                <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept" />
-                    <label for="radioOne">
-                        I accept the terms of this agreement
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="radio" data-dojo-type="dijit/form/RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline" />
-                    <label for="radioTwo">
-                        I decline
-                    </label>
-                </td>
-            </tr>
-        </table>
     </div>
+
     <p>
         When pressing this button the dialog will popup:
     </p>
@@ -349,11 +355,8 @@ This example shows a Dialog that will ask the user to accept or decline the term
     <label id="decision" style="color:#FF0000;">
         Terms and conditions have not been accepted.
     </label>
-    <button id="termsButton" data-dojo-type="dijit/form/Button" type="button">
+    <button id="termsButton" data-dojo-type="dijit/form/Button" type="button" onClick="myFormDialog.show();">
         View terms and conditions to accept
-        <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
-            myFormDialog.show();
-        </script>
     </button>
 
 
@@ -370,7 +373,6 @@ The :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` provides the ``
 of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialog``.
 
 .. code-example ::
-  :height: 500
 
   .. js ::
 
@@ -378,11 +380,12 @@ of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialo
 
   .. html ::
 
-    <div data-dojo-id="myExternalDialog" data-dojo-type="dijit/Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
+    <div data-dojo-id="myExternalDialog" data-dojo-type="dijit/Dialog" title="My external dialog"
+            href="{{dataUrl}}dojo/resources/LICENSE">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){myExternalDialog.show();}" type="button">Show me!</button>
+    <button data-dojo-type="dijit/form/Button" onClick="myExternalDialog.show();" type="button">Show me!</button>
 
 
 
@@ -390,29 +393,38 @@ Sizing the Dialog
 -----------------
 
 A dialog by default sizes itself according to its content, just like a plain <div>.
-If you want a scrollbar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
+If the contents are too large for the screen, then Dialog will automatically add a scrollbar.
+
+Therefore, you usually shouldn't need to set an explicit size for a dialog.
+If you do want to, then you need to add width/height to a div *inside* the dialog, or set a size on the
+.dijitDialogPaneContent div:
 
 .. code-example ::
 
+  .. css ::
+
+      .dijitDialogPaneContent {
+          width: 300px !important;
+          height: 200px !important;
+      }
+
   .. js ::
 
-    require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
+      require(["dojo/parser", "dijit/form/Button", "dijit/Dialog"]);
 
   .. html ::
 
-    <div data-dojo-id="mySizedDialog" data-dojo-type="dijit/Dialog" title="My scrolling dialog">
-        <div style="width: 200px; height: 100px; overflow: auto;">
+      <div data-dojo-id="mySizedDialog" data-dojo-type="dijit/Dialog" title="My explicitly sized dialog">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
                 porta rutrum lacus. Etiam consequat scelerisque quam. Nulla facilisi.
                 Maecenas luctus venenatis nulla. In sit amet dui non mi semper iaculis.
                 Sed molestie tortor at ipsum. Morbi dictum rutrum magna. Sed vitae
                 risus.</p>
-        </div>
-    </div>
+      </div>
 
-    <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mySizedDialog.show();}" type="button">Show me!</button>
+      <p>When pressing this button the dialog will popup (with a scrollbar):</p>
+      <button data-dojo-type="dijit/form/Button" onClick="mySizedDialog.show();" type="button">Show me!</button>
 
 
 Accessibility
@@ -428,9 +440,6 @@ Navigate to next focusable element in the dialog        tab
 Navigate to previous focusable element in the dialog    shift-tab
 Close the dialog                                        escape
 ====================================================    =================================================
-
-Keyboard Navigation in Release 1.1 and later
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When a dialog is opened focus goes to the first focusable element within the dialog.
 The first focusable element may
@@ -449,33 +458,8 @@ Pressing shift-tab will move focus backwards through focusable elements within t
 When the first focusable item is reached,
 pressing shift-tab will move focus to the last focusable item in the dialog.
 
-Keyboard Navigation Previous to Release 1.1
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When a dialog is opened focus goes to the title section of the dialog.
-This was implemented to provide screen reader
-support to speak the title of the dialog when it is opened.
-Likewise, when a tooltip dialog is opened, focus is placed
-on the container of the tooltip dialog.
-In future versions of the dialog and tooltip dialog widgets, focus will go to
-the first item in the dialog or tooltip dialog.
-
-When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog.
-When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title.
-Pressing shift-tab will move focus backwards through focusable elements within the dialog until the dialog title is 
-reached.
-If focus has previous cycled forward through all of the elements, pressing shift-tab with focus on the dialog
-title will move focus to the last element in the dialog.
-If focus has not previously been cycled through all of the
-focusable elements in the dialog using the tab key, pressing shift-tab with focus on the dialog title will leave focus 
-in the title.
-The same focus cycling applies to the tooltip dialog as well with focus being set to the tooltip dialog
-container since there is no dialog title.
-
-Improved Screen Reader Support in 1.4
--------------------------------------
-
-The dialog now supports the aria-describedby property.
+The dialog supports the aria-describedby property.
 If you have a description of the dialog that you would like
 spoken by the screen reader when the dialog opens, add the aria-describedby property to the dialog.
 Include an element containing the text you want spoken in the dialog.
@@ -488,21 +472,10 @@ The value of the aria-describedby property is the id of the element containing t
     <div>Additional dialog contents....</div>
   </div>
 
-For earlier Dojo versions, you can add an onshow event handler that adds the aria-describedby property:
-
-.. html ::
-
-  <div data-dojo-type="dijit/Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
-    <div id="intro">Text to describe dialog</div>
-    <div>Additional dialog contents....</div>
-  </div>
-
 Known Issues
 ------------
 
-* On Windows, In Firefox 2, when in High Contrast mode, the dialog with display correctly, but the underlying page  
-  will not be seen.
-* Dialogs with an input type=file as the only focusable element will not work with the keyboard. This is because input 
+* Dialogs with an input type=file as the only focusable element will not work with the keyboard. This is because input
   type=file elements require two tab stops - one in the textbox and the other on the "Browse" button. Rather 
   than clutter the dialog box widget with code to special case for this one condition, dialog boxes with an input 
   type=file as the only focusable element are not supported.
@@ -521,16 +494,10 @@ Known Issues
   via text that a dialog will be opened.
 
   * JAWS 9 does not speak "dialog" when the dialog is opened in Firefox or IE 8.
-  * In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item 
-    is also not spoken.
-  * In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which 
+  * In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which
     gets focus is spoken. The issue has been fixed in JAWS 10 with Firefox 3.
   * In IE 8 with JAWS 10 and JAWS 11 the dialog information and title is not spoken. This is due to the fact that IE 8 
     does not support the ARIA labelledby property that is used to assign the title to the dialog.
-* There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set 
-  nor properly trapped
-  in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue has been 
-  addressed in the 1.5 release.
 * When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content 
   contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do 
   not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the 
@@ -544,7 +511,7 @@ Known Issues
 
 .. js ::
 
-  require(["dojo/ready", "dijit/Dialog", "dojo/dom-style"], function(ready, Dialog, domStyle){
+  require(["dijit/Dialog", "dojo/dom-style"], function(Dialog, domStyle){
       dialogObj = new Dialog({
           id: 'dialogWithHref',
           title: 'The title',

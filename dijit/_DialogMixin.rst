@@ -1,11 +1,8 @@
 .. _dijit/_DialogMixin:
 
-=================
-dojo._DialogMixin
-=================
-
-:Authors: TODO Author 
-:since: 1.?
+==================
+dijit/_DialogMixin
+==================
 
 .. contents ::
     :depth: 2
@@ -13,49 +10,16 @@ dojo._DialogMixin
 Introduction
 ============
 
-TODO: introduce the module 
+dijit/_DialogMixin provides functions used by :ref:`dijit/Dialog <dijit/Dialog>` and
+:ref:`dijit/TooltipDialog <dijit/TooltipDialog>`.
 
-Usage
-=====
-
-.. js ::
-
-    // TODO
-
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
+It's not generally used by itself.
 
 See also
 ========
 
-.. api-link :: dojo.
+* :ref:`dijit/Dialog <dijit/Dialog>`
+* :ref:`dijit/TooltipDialog <dijit/TooltipDialog>`
+
+.. api-inline :: dijit._DialogMixin
 
