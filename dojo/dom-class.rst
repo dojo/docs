@@ -17,8 +17,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
-contains Function
------------------
+contains()
+----------
 
 Returns a boolean depending on whether or not a node has a passed class string.
 
@@ -86,8 +86,8 @@ A basic example of checking a node to see if it contains a CSS class.
       font-weight: bold;
     }
 
-add Function
-------------
+add()
+-----
 
 Safely adds a CSS class or a set of classes to a node avoiding duplications.
 
@@ -143,8 +143,8 @@ Here is an example of how to add a class to a node:
     <div id="example1">This node will be changed.</div>
     <button id="button1" type="button">Add class</button>
 
-remove Function
----------------
+remove()
+--------
 
 Removes a class or a list of classes from a DOM node.
 
@@ -310,8 +310,8 @@ This feature is exposed as ``removeClass`` for :ref:`NodeLists <dojo/NodeList>`,
     </div>
     <button id="button3" type="button">Remove from multiple nodes</button>
 
-replace Function
-----------------
+replace()
+---------
 
 Replaces one or more classes on a node if not present. Operates more quickly than calling ``domClass.remove()`` and then
 ``domClass.add()``.
@@ -364,8 +364,8 @@ The following example removes the class "oldStyle" from the node "example" and r
     <div id="example" class="oldStyle">This node will be changed.</div>
     <button id="button1" type="button">Replace class</button>
 
-toggle Function
----------------
+toggle()
+--------
 
 Adds a class to node if not present, or removes if present.
 
