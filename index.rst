@@ -51,7 +51,7 @@ and a package system that makes getting access to the rest of :ref:`Dojo <dojo/i
 
     require(["dojo/query", "dojo/_base/fx", "dojo/_base/connect", "dojo/domReady!"],
     function(query, baseFx, conn){
-      query("#showMe").onclick(function(e){
+      query("#showMe").on("click", function(e){
         var node = this,
             anim = baseFx.anim(node, {
               backgroundColor: "#363636",
@@ -87,7 +87,7 @@ Additional stable (but optional) components for :ref:`advanced animations <dojo/
 
     require(["dojo/query", "dojo/_base/fx", "dojo/fx/easing", "dojo/domReady!"],
     function(query, baseFx, easing){
-      query("#showMe2").onclick(function(e){
+      query("#showMe2").on("click", function(e){
         baseFx.animateProperty({
           node: e.target,
           properties: {
