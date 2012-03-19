@@ -17,8 +17,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
-byId Function
--------------
+byId()
+------
 
 This is a simple alias to ``document.getElementById``, which not only is shorter to write, but fortunately works in all
 browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode.
@@ -150,8 +150,8 @@ The following example lets a node by id disappear from the screen.
         margin: 10px;
       }
 
-isDescendant Function
----------------------
+isDescendant()
+--------------
 
 Returns true if node is a descendant of ancestor.
 
@@ -209,8 +209,8 @@ Examples
     <div id="output"></div>
 
 
-setSelectable Function
-----------------------
+setSelectable()
+---------------
 
 Enable or disable selection on a node
 
