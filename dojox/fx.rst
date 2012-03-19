@@ -20,8 +20,10 @@ These are the animations provided by calling ``dojo.require("dojox.fx");``
 * dojox.fx.sizeTo - animates a node about it's center to a defined width and height
 * dojox.fx.slideBy - slide a node by a defined offset
 * dojox.fx.crossFade - conveniently fade two nodes simultaneously
-* dojox.fx.highlight - highlights a node for a short timespan
+* dojox.fx.highlight - highlights a node for a short timespan **
 * dojox.fx.fadeTo - fade a node to a defined opacity
+
+** Note that the `transparentColor` config property must be set for some animations to correctly match colours to the background colour.  e.g. `data-dojo-config="transparentColor: [255,255,255]"`
 
 Additionally, dojox.fx includes the Dojo Core :ref:`animations <dojo/fx>`, and creates aliases to them in the dojox.fx namespace. For instance:
 
