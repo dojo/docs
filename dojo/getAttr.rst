@@ -7,4 +7,4 @@ dojo.getAttr
 .. contents ::
    :depth: 2
 
-*Deprecated*, see :ref:`dojo/dom-attr::get() <dojo/dom-attr#get-function>` instead.
+*Deprecated*, see :ref:`dojo/dom-attr::get() <dojo/dom-attr#get>` instead.

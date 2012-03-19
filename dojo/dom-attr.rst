@@ -19,8 +19,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
-has Function
-------------
+has()
+-----
 
 A function that checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy
 value otherwise.
@@ -80,8 +80,8 @@ Checking to see if a particular node as an attribute.
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
 
-get Function
-------------
+get()
+-----
 
 A function that handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or
 null if that attribute does not have a specified or default value.
@@ -132,8 +132,8 @@ Getting some values from a node.
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
 
-set Function
-------------
+set()
+-----
 
 A function that handles normalized setting of attributes on DOM Nodes. When passing functions as values, note that they
 will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior
@@ -206,8 +206,8 @@ Here is an example of using an object to set multiple attribute values:
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
 
-remove Function
----------------
+remove()
+--------
 
 Is a function that removes an attribute from a DOM node. It is modeled after DOM's `removeAttribute
 <https://developer.mozilla.org/En/DOM/Element.removeAttribute>`_, but unlike the latter it normalizes standard attribute
@@ -254,8 +254,8 @@ Here is an example of removing the ``disabled`` attribute from a DOM node:
     <input id="model" name="model" disabled="disabled" type="text" baz="foo" /> &mdash; our model node <br/>
     <button onclick="removeDisabled();">Remove Disabled</button>
 
-getNodeProp Function
---------------------
+getNodeProp()
+-------------
 
 Is a companion function for :ref:`domAttr.get <dojo/domAttr#domattr-get>`. Unlike the latter it favors properties
 falling back on attributes, if a property was not present.

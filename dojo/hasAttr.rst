@@ -7,4 +7,4 @@ dojo.hasAttr
 .. contents ::
    :depth: 2
 
-*Deprecated*, see :ref:`dojo/dom-attr::has() <dojo/dom-attr#has-function>` instead.
+*Deprecated*, see :ref:`dojo/dom-attr::has() <dojo/dom-attr#has>` instead.
