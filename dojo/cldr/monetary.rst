@@ -16,11 +16,15 @@ The following example prints out the monetary data (places and round) for EUR (E
     require(["dojo/cldr/monetary", "dojo/dom", "dojo/on", "dojo/domReady!"],
     function(cldrMonetary, dom, on){
       on(dom.byId("monetaryButton"), "click", function(){
+        // the ISO 4217 currency code for Euro:
         var iso = "EUR";
+        // get monetary data:
         var cldrMonetaryData = cldrMonetary.getData(iso);
       
+        // print out places:
         dom.byId("places").innerHTML = "Places: " + cldrMonetaryData.places;
       
+        // proint out round:
         dom.byId("round").innerHTML = "Round: " + cldrMonetaryData.round;
       });
     });
