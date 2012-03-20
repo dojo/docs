@@ -7,6 +7,8 @@ dojo.data Identity API
 .. contents ::
   :depth: 2
 
+*Deprecated*, :ref:`dojo/store <dojo/store>` will eventually replace the ``dojo/data`` API.
+
 The dojo.data.api.Identity interface defines the set of APIs that are implemented by a datastore if a data source provides a method by which to uniquely identify each item. This API then allows users of that datastore to request a specific item without searching for an item that matches specific attributes. Review the following examples, guidelines, and complete API documentation for further information on the Identity API.
 
 Identity API Requirements

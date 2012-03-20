@@ -7,6 +7,7 @@ dojo.data API
 .. contents ::
   :depth: 2
 
+*Deprecated*, :ref:`dojo/store <dojo/store>` will eventually replace the ``dojo/data`` API.
 
 Before diving directly into the APIs of dojo.data, the basic concepts behind the APIs need to be explored because some design decisions that were made might seem odd without an explanation as to why they were chosen. Therefore, read this page in its entirety before moving onto the individual APIs.
 

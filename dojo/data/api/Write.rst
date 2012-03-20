@@ -7,10 +7,12 @@ dojo.data Write API
 .. contents ::
   :depth: 2
 
-Some datastores provide the ability to create new items and save those items back to a service, in addition to simply 
-reading items from a service. Stores with this capability will implement the Write API, which provides standard functions 
-for creating new items, modifying existing items, and deleting existing items. Review the following examples, guidelines, 
-and complete API documentation for further information on the Write API.
+*Deprecated*, :ref:`dojo/store <dojo/store>` will eventually replace the ``dojo/data`` API.
+
+Some datastores provide the ability to create new items and save those items back to a service, in addition to simply
+reading items from a service. Stores with this capability will implement the Write API, which provides standard
+functions for creating new items, modifying existing items, and deleting existing items. Review the following examples,
+guidelines, and complete API documentation for further information on the Write API.
 
 This feature defines the API for implementing:
 

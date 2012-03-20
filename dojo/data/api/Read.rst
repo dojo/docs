@@ -7,6 +7,8 @@ dojo.data Read API
 .. contents ::
   :depth: 3
 
+*Deprecated*, :ref:`dojo/store <dojo/store>` will eventually replace the ``dojo/data`` API.
+
 The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:
 
 * Introspect any datastore to determine the APIs the datastore implements through the getFeatures() call.
