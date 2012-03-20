@@ -7,10 +7,10 @@ dojo.colors
 .. contents ::
     :depth: 2
 
-A module which augments the base :ref:`dojo.Color <dojo/Color>` class with additional methods and named colors. This is 
-not included in base ``dojo.js`` by default for size reasons.
+A module which augments the base :ref:`dojo/_base/Color <dojo/_base/Color>` class with additional methods and named
+colors. This is not included in base Dojo by default for size reasons.
 
-methods
+Methods
 =======
 
 New methods are provided by this module.
@@ -21,7 +21,7 @@ New methods are provided by this module.
 :dojo.colorFromRgb:
   get the rgb(a) array from css-style color declarations
 
-mixins
+Mixins
 ======
 
 In addition to providing some color-specific functionality, the dojo.colors module mixes all named css3 colors and SVG 
@@ -33,4 +33,4 @@ attributes, and are valid.
 See Also
 ========
 
-* :ref:`dojo.Color <dojo/Color>`
+* :ref:`dojo/_base/Color <dojo/_base/Color>`
