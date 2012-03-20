@@ -328,6 +328,8 @@ dojo.addOnWindowUnload                                  dojo/_base/unload       
 Events
 ------
 
+TODO: update this section with context variable after Kris adds it as a fourth optional parameter
+
 dojo.connect()/dojo.disconnect() for monitoring DOMNode events have been replaced by the on() method returned from the "dojo/on" module.   (For dojo.connect() usage as advice on plain javascript objects, see the "Advice" section below.)
 
 Old code like:
@@ -544,13 +546,15 @@ dojo.disconnect(handle)                                                         
 
 Publish and subscribe
 ---------------------
+TODO: update this section with context variable after Kris adds it as a fourth optional parameter
+
 ``dojo.publish()``/``dojo.subscribe()``/``dojo.unsubscribe()`` have been replaced by the ``dojo/topic`` module.
 
 Old code:
 
 .. js ::
 
-     var handle = dojo.subscribe("some/topic", callback);
+     var handle = dojo.subscribe("some/topic", context, callback);
      ...
      dojo.unsubscribe(handle);
 
