@@ -1,13 +1,14 @@
 .. _dojo/cookie:
 
 ===========
-dojo.cookie
+dojo/cookie
 ===========
 
 .. contents ::
-  :depth: 3
+  :depth: 2
 
-``dojo.cookie`` is your one stop for handling client side cookies. Its usage is very simple and the following example should make it clear
+**dojo/cookie** is your one stop for handling client side cookies. Its usage is very simple and the following example
+should make it clear.
 
 Usage
 =====
@@ -24,7 +25,8 @@ Usage
 Example
 =======
 
-Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set.
+Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie
+got set.
 
 *Note: cookies must be enabled for this to work ;)*
 
@@ -32,24 +34,24 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
 
   .. js ::
 
-    dojo.require("dijit.form.Button"); // this is there only to make things look fancy
-    dojo.require("dojo.cookie");
-
-    setCookie = function(){
-      dojo.cookie("favouriteDish", "Noodles", {expires: 5});
-    };
-
-    getCookie = function(){
-      alert("The value of the cookie is: "+dojo.cookie("favouriteDish"));
-    };
+    require(["dojo/cookie", "dojo/dom", "dojo/on", "dojo/domReady!"], 
+    function(cookie, dom, on){
+      on(dom.byId("setCookie"), "click", function(){
+        cookie("favouriteDish", "Noodles", { expires: 5 });
+      });
+      on(dom.byId("getCookie"), "click", function(){
+        alert("The value of the cookies is: " + cookie("favouriteDish"));
+      });
+    });
 
   .. html ::
 
-    <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:setCookie">Set Cookie</button> <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:getCookie">Get Cookie</button>
+    <button id="setCookie">Set Cookie</button>
+    <button id="getCookie">Get Cookie</button>
 
 .. api-inline :: dojo.cookie
 
 See also
 ========
 
-`Mozilla documentation about cookies <https://developer.mozilla.org/en/DOM/document.cookie>`_.
+* `Mozilla documentation about cookies <https://developer.mozilla.org/en/DOM/document.cookie>`_.
