@@ -197,6 +197,7 @@ Individuals who have signed Dojo CLAs
 * Grandrath, Martin (mg)
 * Green, Amit
 * Greenberg, Jeffrey
+* Grencik, Jozef
 * Grimm, Steven
 * Groth, Ryan
 * Guillen, Revin (revin)
@@ -239,6 +240,7 @@ Individuals who have signed Dojo CLAs
 * Huang, Ming Zhe
 * Humphreys, Martin
 * Hussenet, Claude
+* Illit, Marcel
 * Ionushonis, Victoria
 * Ippolito, Robert
 * Irish, Paul
