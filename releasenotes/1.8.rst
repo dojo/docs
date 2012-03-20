@@ -268,6 +268,7 @@ A new gauges package is introduced in dojox.dgauges package. It provides a fully
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
 
+
 Treemap
 -------
 
@@ -316,3 +317,8 @@ Dijit
 
 - Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or TabButton,
   you should edit the templates to remove the data-dojo-attach-event="..." attributes.
+
+Dojox/mobile
+------------
+See https://www.ibm.com/developerworks/mydeveloperworks/blogs/ykami/entry/migration_to_dojox_mobile_1_82
+
