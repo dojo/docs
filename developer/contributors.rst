@@ -637,6 +637,7 @@ Corporations or Organizations with a CCLA on file
 * Core Technology
 * Coyote Point System, Inc.  Sachin Maheshwari, Sergey Katsev
 * Curam Software
+* Curve Dental Limited: Michael Cramm,Michael Talbot,Dale Fukami,Carey Cunningham,Joel Tulloch,Richard Compton,Cong Ma,Steven Hines
 * DFKI GmbH
 * Defence Science &amp; Technology Organisation
 * DoYouSoft
