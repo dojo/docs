@@ -362,6 +362,7 @@ Individuals who have signed Dojo CLAs
 * Mikula, Tomas
 * Miles, Scott Joseph
 * Mills, Drew
+* Minarik, Andrej (andrejm)
 * Moeller, Jonathan
 * Mohan, Nirdesh
 * Monroe, Daniel
