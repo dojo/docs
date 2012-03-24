@@ -105,7 +105,7 @@ Okay, so starting up D.O.H. is as simple as running runner.html ...
 but now you may be asking how do I load *my* tests?
 Simple!  You pass it as a query parameter to the runner.html.
 For example, say you just want to run the dojo.date tests, you would load the following in your browser:
-*util/doh/runner.html?testModule=tests.date*.
+*util/doh/runner.html?testModule=dojo.tests.date*.
 What this does is instruct the runner to look in dojo/tests and load the date.js file.
 Please note here that you do not have to put your unit tests in dojo/tests!
 The browser runner just has a default search path to look in dojo/ for a module
