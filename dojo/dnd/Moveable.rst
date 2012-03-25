@@ -1,17 +1,17 @@
 .. _dojo/dnd/Moveable:
 
 =================
-dojo.dnd.Moveable
+dojo/dnd/Moveable
 =================
 
 
 .. contents ::
-  :depth: 3
+  :depth: 2
 
 Introduction
 ============
 
-Makes a DOM node moveable using the mouse.
+This is a specific sub-module of the Dojo DnD system that makes a DOM node moveable using the mouse.
 
 Usage
 =====
@@ -36,12 +36,24 @@ Events
 ------
 
 You can connect to the following events of a Moveable:
- * onMoveStart : called when the node starts to be moved;
- * onMoveStop : called when the node has been moved (the mouse button has been released) ;
- * onFirstMove : called when the user first moves the node :
- * onMove : called at every step of the move (every onmousemove event);
- * onMoving : called at the begining of any move step (before the moveable position has been updated);
- * onMoved : called at the end of any move step (after the moveable position has been updated).
+
+``onMoveStart``
+  called when the node starts to be moved;
+
+``onMoveStop``
+  called when the node has been moved (the mouse button has been released) ;
+
+``onFirstMove``
+  called when the user first moves the node :
+
+``onMove``
+  called at every step of the move (every ``onmousemove`` event);
+
+``onMoving``
+  called at the beginning of any move step (before the moveable position has been updated);
+
+``onMoved``
+  called at the end of any move step (after the moveable position has been updated).
 
 Example
 =======
@@ -50,19 +62,19 @@ Example
 
   .. js ::
 
-    dojo.require("dijit.form.Button"); // this we only require to make the demo look fancy
-    dojo.require("dojo.dnd.Moveable");
-
-    function makeMoveable(node){
-      var dnd = new dojo.dnd.Moveable(dojo.byId(node));
-    }
+    require(["dojo/dnd/Moveable", "dojo/dom", "dojo/on", "dojo/domReady!"],
+    function(Moveable, dom, on){
+      on(dom.byId("doIt"), "click", function(){
+        var dnd = new Moveable(dom.byId("dndOne"));
+      });
+    });
 
   .. html ::
 
     <div id="dndArea">
       <div id="dndOne">Hi, I am moveable when you want to.</div>
     </div>
-    <p><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){makeMoveable('dndOne');}">Make moveable</button>
+    <p><button id="doIt" type="button">Make moveable</button></p>
 
   .. css ::
 
@@ -83,28 +95,33 @@ Example
 Custom Mover Example
 ====================
 
-Here is an example of a custom mover allowing to move an object with 5 pixels steps when Control key is pressed while dragging:
+Here is an example of a custom mover allowing to move an object with 5 pixels steps when ``Ctrl`` key is pressed while
+dragging:
 
 .. js ::
  
-  dojo.declare("dojo.dnd.StepMover", dojo.dnd.Mover, {
-    onMouseMove: function(e){
-      dojo.dnd.autoScroll(e);
-      var m = this.marginBox;
-      if(e.ctrlKey){
-        this.host.onMove(this, {l: parseInt((m.l + e.pageX) / 5) * 5, t: parseInt((m.t + e.pageY) / 5) * 5});
-      }else{
-        this.host.onMove(this, {l: m.l + e.pageX, t: m.t + e.pageY});
+  require(["dojo/_base/declare", "dojo/_base/event", "dojo/dnd/Mover", "dojo/dnd/autoScroll"], 
+  function(declare, event, Mover, autoScroll, dom))
+    var StepMover = declare([Mover], {
+      onMouseMove: function(e){
+        autoScroll(e);
+        var m = this.marginBox;
+        if(e.ctrlKey){
+          this.host.onMove(this, {l: parseInt((m.l + e.pageX) / 5) * 5, t: parseInt((m.t + e.pageY) / 5) * 5});
+        }else{
+          this.host.onMove(this, {l: m.l + e.pageX, t: m.t + e.pageY});
+        }
+        event.stop(e);
       }
-      dojo.stopEvent(e);
-    }
+    });
+    
+    //Create your "Moveable" as
+    var myMoveable = new Moveable("aNode", {
+      mover: StepMover
+    });
   });
 
+See also
+========
 
-Create your ''Moveable'' as:
-
-.. js ::
- 
-  new dojo.dnd.Moveable(node, {
-    mover: dojo.dnd.StepMover
-  });
+* :ref:`dojo/dnd <dojo/dnd>` - The Dojo Drag and Drop Package/System
