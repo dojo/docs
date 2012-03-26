@@ -581,6 +581,7 @@ Individuals who have signed Dojo CLAs
 * Wei, Coach
 * Weinberger, Ferdinand
 * Weisberg, Adrian
+* Weiss, Robert
 * Welte, Robert John
 * Wenk, Norman
 * Werner, Punz
