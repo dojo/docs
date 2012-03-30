@@ -409,9 +409,9 @@ Properties
 ``````````
 
 The selectionMode property controls the selection, this property can take the following values:
-  * **“none”** - no selection is possible.
-  * **“single”** - only one item can be selected at most.
-  * **“multiple** - zero or several items can be selected.
+  * **"none"** - no selection is possible.
+  * **"single"** - only one item can be selected at most.
+  * **"multiple"** - zero or several items can be selected.
 
 The selectedItems property contains the list of selected items from the data store.
 
