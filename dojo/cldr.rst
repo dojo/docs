@@ -10,12 +10,12 @@ dojo.cldr
 .. contents ::
    :depth: 2
 
-Contains data from the Common Locale Data Repository (CLDR) http://unicode.org/cldr with associated utility classes
+Contains data from the `Common Locale Data Repository (CLDR) <http://unicode.org/cldr>`_. with associated utility classes
 
 Introduction
 ============
 
-This data contains tables with culturally sensitive information for hundreds of languages and country variants, such as translations of days of the week, months of the year, patterns for formatting dates and numbers. This is used by dojo.date, dojo.number, and dojo.currency to produce localized output. The nls/ directory as provided in the standard download of Dojo contains a subset of the available locales; a complete set is available by running the ant script in util/buildscripts/cldr.  See the section "Buildscripts" below for more information.  It is therefore usually not necessary to hand-craft localized copies of this information.  The unicode.org CLDR project is responsible for the choices made in these files and has both a bug tracker and survey application on their website.
+This data contains tables with culturally sensitive information for hundreds of languages and country variants, such as translations of days of the week, months of the year, patterns for formatting dates and numbers. This is used by dojo/date, dojo/number, and dojo/currency to produce localized output. The nls/ directory as provided in the standard download of Dojo contains a subset of the available locales; a complete set is available by running the ant script in util/buildscripts/cldr.  See the section "Buildscripts" below for more information.  It is therefore usually not necessary to hand-craft localized copies of this information.  The unicode.org CLDR project is responsible for the choices made in these files and has both a bug tracker and survey application on their website.
 
 
 The data is transformed, as a pre-build step, from XML data to JSON-style JavaScript you see under the nls/ directory.
@@ -23,8 +23,8 @@ This data is used by other modules in core Dojo such as dojo.date, dojo.number a
 which provides more friendly programmatic APIs. It usually is not necessary to use dojo.cldr.nls directly.
 Other packages available in the CLDR provide methods to supplemental data:
 
-* :ref:`dojo.cldr.monetary <dojo/cldr/monetary>`
-* :ref:`dojo.cldr.supplemental <dojo/cldr/supplemental>`
+* :ref:`dojo/cldr/monetary <dojo/cldr/monetary>`
+* :ref:`dojo/cldr/supplemental <dojo/cldr/supplemental>`
 
 
 Buildscripts in util/buildscripts/cldr
@@ -34,11 +34,11 @@ The scripts in this directory are responsible for generating the data tables in 
 
 To trigger generation of a full set of locale resources, change into the directory util/buildscripts/cldr and simply type "ant".  An optional list of locales may be specified as an ant property to limit the set of locales built. Currencies may also be specified, but a default list is included in the ant script.
 
-NOTE: it is currently necessary to perform a one-time installation of the Saxon XSLT processor in ~/.ant/lib due to classpath issues and workarounds.  The ant task will do this for you. Also, ant version 1.6.5 is recommended. The build script does not properly resolve the XSLT catalog with newer versions of ant which makes the process take much longer. See ticket #7969
+NOTE: it is currently necessary to perform a one-time installation of the Saxon XSLT processor in ~/.ant/lib due to classpath issues and workarounds.  The ant task will do this for you. Also, ant version 1.6.5 is recommended. The build script does not properly resolve the XSLT catalog with newer versions of ant which makes the process take much longer. See ticket `#7969 <http://bugs.dojotoolkit.org/ticket/7969>`_.
 
 See also
 ========
 
-* :ref:`dojo.date.locale <dojo/date/locale>`
-* :ref:`dojo.number <dojo/number>`
-* :ref:`dojo.currency <dojo/currency>`
+* :ref:`dojo/date/locale <dojo/date/locale>`
+* :ref:`dojo/number <dojo/number>`
+* :ref:`dojo/currency <dojo/currency>`
