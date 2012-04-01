@@ -508,7 +508,7 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
                 autoComplete: true,
                 style: "width: 150px;",
                 onChange: function(state){
-                    dijit.byId('city').query.state = state || /.*/;
+                    dijit.byId('city').query.state = this.item.state || /.*/;
                 }
             }, "state");
         });

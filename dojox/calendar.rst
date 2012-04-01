@@ -96,7 +96,7 @@ Data mapping
 ------------
 
 In order to display events, the widget must determine for each event its start and end time.
-It will look by default at the “startTime” and “endTime” properties of the store item.
+It will look by default at the "startTime" and "endTime" properties of the store item.
 
  
 .. js ::
@@ -118,7 +118,7 @@ It will look by default at the “startTime” and “endTime” properties of t
   }, "someId");
 
 
-The property names can be configured by setting the “startTimeAttr” and “endTimeAttr”.
+The property names can be configured by setting the "startTimeAttr" and "endTimeAttr".
 
 .. js ::
 
@@ -169,14 +169,14 @@ In the latter case, the decodeDate() and encodeDate() functions must be set to r
  }, "someId");
 
 
-In addition to the start and end time, a summary is retrieved on the store item, by default using the “summary” property name (use summaryAttr property to change the property name).
+In addition to the start and end time, a summary is retrieved on the store item, by default using the "summary" property name (use summaryAttr property to change the property name).
 
 
-The event can also be flagged “all day”. An all-day event is a particular event that span over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
+The event can also be flagged "all day". An all-day event is a particular event that span over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
 
 
 All-day events can be displayed differently: for example by default they are displayed in the secondary sheet of a column view. The editing behavior of an all-day event is also different to keep the all-day constraint.
-The calendar is looking to the “allDay” property of a data store item to determine if an item is an all day event or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
+The calendar is looking to the "allDay" property of a data store item to determine if an item is an all day event or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
 
 
 Time range definition
@@ -191,9 +191,9 @@ The date property defines the reference date.
 The dateInterval property defines the interval (day, week, month) and dateIntervalSteps the number of intervals.
 
 So, depending of these dateInterval values, if ‘n’ is the dateIntervalSteps value, the time range will be:
-  * **“day”** - n days from the reference date,
-  * **“week”** - n week from the first day of week that contains the reference date,
-  * **“month”** - n months from the first day of the month that contains the reference date.
+  * **"day"** - n days from the reference date,
+  * **"week"** - n week from the first day of week that contains the reference date,
+  * **"month"** - n months from the first day of the month that contains the reference date.
 
 The following example shows how to display 2 weeks, whose first week contains the 1st of January 2012.
 
@@ -409,9 +409,9 @@ Properties
 ``````````
 
 The selectionMode property controls the selection, this property can take the following values:
-  * **“none”** - no selection is possible.
-  * **“single”** - only one item can be selected at most.
-  * **“multiple** - zero or several items can be selected.
+  * **"none"** - no selection is possible.
+  * **"single"** - only one item can be selected at most.
+  * **"multiple"** - zero or several items can be selected.
 
 The selectedItems property contains the list of selected items from the data store.
 
@@ -424,7 +424,7 @@ To select an item, simply click on an renderer.
 
 To deselect an item, press the control key and click on a renderer.
 
-If the selection mode is “multiple”, you can extend the selection or deselect an item by pressing the control key and click on a renderer.
+If the selection mode is "multiple", you can extend the selection or deselect an item by pressing the control key and click on a renderer.
 
 Using the keyboard
 ``````````````````
@@ -433,7 +433,7 @@ If the calendar widget has the focus, press the left or right arrow keys to sele
 
 To move only the focus on an item and not select it at the same time, press left or right arrow keys while maintaining the control key.
 
-To deselect an item or extend selection (if selection mode is “multiple”), move the focus to an renderer and press the space bar while maintaining the control key.
+To deselect an item or extend selection (if selection mode is "multiple"), move the focus to an renderer and press the space bar while maintaining the control key.
 
 Using the touch events
 ``````````````````````
@@ -495,10 +495,10 @@ Button     Action
 Previous   Go the previous time range. For example if four days are displayed, show the four previous days.
 Next       Go to the next time range. For example if four days are displayed, show the four next days.
 Today      Show the current day.
-Day        Shows the day defined by the “date” property or the current day if the date property is null.
+Day        Shows the day defined by the "date" property or the current day if the date property is null.
 Four days  Shows four days from the the day defined by the day property of  the current day if the date property is null.
-Week       shows the week that contains the day defined by the “date” property.
-Month      shows the month that contains the day defined by the “date” property.    
+Week       shows the week that contains the day defined by the "date" property.
+Month      shows the month that contains the day defined by the "date" property.    
 ========== ======
 
 The following functions are also exposed to help navigation:
@@ -657,9 +657,9 @@ To have a correct rendering in right-to-left display, you must import the calend
 Bidi
 ----
 
-The calendar is also supporting the “textDir” property. 
+The calendar is also supporting the "textDir" property. 
 
-Import the dijit._BidiSupport class and set the “textDir” property to “rtl”, “ltr” or “auto” to set the contextual text direction.
+Import the dijit._BidiSupport class and set the "textDir" property to “rtl”, “ltr” or “auto” to set the contextual text direction.
 
 Alternate calendars
 -------------------
@@ -752,7 +752,7 @@ You can customize this behavior to show only horizontal renderers, for example:
 
   new MatrixView({
     itemToRendererKindFunc: function(item){
-      return “horizontal”;
+      return "horizontal";
     }
   }, null);
 
@@ -815,7 +815,7 @@ For example to programmatically scroll the view to 9 am using an animation, use 
 
 .. js ::
 
-  columnView.set(“startTimeOfDay”, {hours:9, duration:1000});
+  columnView.set("startTimeOfDay", {hours:9, duration:1000});
 
 The columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
@@ -980,7 +980,7 @@ For example to programmatically scroll the view to the 10th using an animation, 
 
 .. js ::
 
-  monthColumnView.set(“scrollPosition”, {position:10, duration:1000});
+  monthColumnView.set("scrollPosition", {position:10, duration:1000});
 
 The month columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
@@ -1114,8 +1114,8 @@ For example to change the minimal duration of an event to 30 minutes.
 
 .. js ::
 
-  calendar.columnView.set(“minDurationSteps”, 30);
-  calendar.columnView.set(“minDurationUnit”, “minute”;
+  calendar.columnView.set("minDurationSteps", 30);
+  calendar.columnView.set("minDurationUnit", "minute");
 
 Editing handlers
 ````````````````
