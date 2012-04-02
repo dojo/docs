@@ -279,6 +279,7 @@ This example shows how to use Flash and IFrame plugins for both cases (browsers 
        uploadOnSelect: true,
        url: "UploadFile.php",
      }, "uploader");
+   });
 
 .. html ::
 
