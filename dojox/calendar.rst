@@ -79,6 +79,8 @@ The calendar widget is populated with the list events using a store set on its s
 
 The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity).
 
+If the Calendar is displaying live data (ie. data that can be edited by the Calendar itself or data that can change outside of the Calendar), the store must be a dojo.store.Observable.
+
 Manage store errors
 -------------------
 
