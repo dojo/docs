@@ -26,7 +26,6 @@ Localizing Strings
 With the introduction of AMD-style loading in Dojo 1.7, localized content is loaded much like JavaScript modules, using the dojo/i18n! plugin as follows:
 
 .. html ::
-
 <html>
     <head>
         <script
