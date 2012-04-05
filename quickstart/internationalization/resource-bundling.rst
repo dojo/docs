@@ -26,7 +26,7 @@ Localizing Strings
 With the introduction of AMD-style loading in Dojo 1.7, localized content is loaded much like JavaScript modules, using the dojo/i18n! plugin as follows:
 
 .. html ::
-<html>
+    <html>
     <head>
         <script
             src="dojo/dojo.js"
@@ -48,7 +48,8 @@ With the introduction of AMD-style loading in Dojo 1.7, localized content is loa
         <div id="myDiv">
         </div>
     </body>
-</html>
+    </html>
+
 where the localized content is simply an Object with properties, defined according to a special convention that gives a default set of strings as well as references to various translations. The resource at the path myApp/nls/myResources.js might look something like this:
 
 .. js ::
