@@ -289,6 +289,7 @@ Individuals who have signed Dojo CLAs
 * Kress Jorg
 * Kriesing, Wolfram
 * Kuhnert, George "Jesse"
+* Kuka, Radovan (kuko)
 * Kulesa, Chad
 * Kumar, Naresh
 * Kuzmik, Roman

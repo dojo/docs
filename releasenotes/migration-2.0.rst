@@ -773,32 +773,40 @@ The MID should match the ``require(...)`` used to require it in and the ``requir
 
 connecting to widget events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Previously you would use <script type="dojo/connect"> to monitor widget events:
 
-   .. html ::
+Previously you would use ``<script type="dojo/connect">`` to monitor widget events and connect to methods:
 
-       <button data-dojo-type="dijit.form.Button">Click Me!
-         <script type="dojo/connect"event="onclick" args="e">
-           ...
-         </script>
-       </button>
+.. html ::
 
+  <button data-dojo-type="dijit.form.Button">
+    <span>Click Me!</span>
+    <script type="dojo/connect" event="onclick" args="e">
+      // ...
+    </script>
+  </button>
 
-In 2.0, we instead use <script type="dojo/on"> for events like click, and <script type="dojo/watch"> to monitor changes to a widget's attribute:
+In 2.0, we instead use ``<script type="dojo/on">`` for events like click, ``<script type="dojo/watch">`` to monitor
+changes to a widget's attribute and ``<script type="dojo/aspect">`` to modify the behavior of methods:
 
-   .. html ::
+.. html ::
 
-       <button data-dojo-type="dijit.form.Button">Click Me!
-         <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
-           ...
-         </script>
-       </button>
-       <div data-dojo-type="dijit.form.TextBox" id="textBox1"
-            data-dojo-props="value: 'Old Value'">
-         <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
-           console.log("Prop '"+prop+"' was '"+oldValue+"' and is now '"+newValue+"'");
-         </script>
-       </div>
+  <button data-dojo-type="dijit/form/Button">Click Me!
+    <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
+      // ...
+    </script>
+  </button>
+  <div data-dojo-type="dijit.form.TextBox" id="textBox1"
+      data-dojo-props="value: 'Old Value'">
+    <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
+      console.log("Prop '"+prop+"' was '"+oldValue+"' and is now '"+newValue+"'");
+    </script>
+  </div>
+  <form data-dojo-type="dijit/form/Form">
+    <script type="dojo/aspect" data-dojo-advice="before" data-dojo-method="onSubmit">
+      // ...
+    </script>
+    <!-- ... -->
+  </form>
 
 jsId
 ----

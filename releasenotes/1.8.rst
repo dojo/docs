@@ -36,8 +36,11 @@ Dojo Base
 Dojo Core
 =========
 
-Parser
-------
+dojo/parser
+-----------
+
+Module IDs (MIDs)
+~~~~~~~~~~~~~~~~~
 
 The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup (`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_).  Developers should use the MID in their code to ensure future compatibility with baseless modules.  Just as before, the parser will not load a module that is not already loaded, therefore they need to be required prior to invoking the parser.
 
@@ -57,7 +60,10 @@ An example:
       <button data-dojo-type="dijit/form/Button">Click Me!</button>
     </div>
 
-The parser now also supports a new data-dojo-mixins attribute that allows to dynamically mixin one or several classes into the main data-dojo-type class as follows:
+data-dojo-mixins
+~~~~~~~~~~~~~~~~
+
+The parser now also supports a new ``data-dojo-mixins`` attribute that allows to dynamically mixin one or several classes into the main ``data-dojo-type`` class as follows:
 
 .. js ::
 
@@ -71,6 +77,8 @@ The parser now also supports a new data-dojo-mixins attribute that allows to dyn
 
     <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
 
+parser.construct()
+~~~~~~~~~~~~~~~~~~
 
 There's also a new method construct() that's useful for when you have a widget constructor and want to apply it to
 a node that may or may not have data-dojo-type specified:
@@ -82,6 +90,42 @@ a node that may or may not have data-dojo-type specified:
                parser.construct(Slider, node);
           }
       }
+
+Script Type "dojo/aspect"
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The parser now fully supports the declarative script tags with a ``type="dojo/aspect"`` (`#15117 <http://bugs.dojotoolkit.org/ticket/15117>`_).  This allows you to define scripts that run in line with the aspect concepts behind aspect programming used in the :ref:`dojo/aspect <dojo/aspect>` module.
+
+Each of the following is possible:
+
+.. html ::
+
+  <div data-dojo-type="package/module" data-dojo-props="foo:'bar'">
+  
+    <!-- A script with "before" advice -->
+    <script type="dojo/aspect" data-dojo-advice="before" data-dojo-method="method1" data-dojo-args="i">
+      console.log("I ran before!");
+      i++; // Modify an argument
+      return [i]; // Return the modified argument to be used by the original method
+    </script>
+    
+    <!-- A script with "around" advice -->
+    <script type="dojo/aspect" data-dojo-advice="around" data-dojo-method="method2" data-dojo-args="origFn">
+      return function(){ // you have to be a factory and return a function
+        console.log("I ran before!");
+        origFn.call(this); // With around advice, you have to call the original method
+        console.log("I ran after!");
+      });
+    </script>
+    
+    <!-- A script with "after" advice -->
+    <script type="dojo/aspect" data-dojo-advice="after" data-dojo-method="method3">
+      console.log("I ran after!");
+    </script>
+    
+  </div>
+
+*Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script tags of ``type="dojo/connect"`` and ``type="dojo/method"`` are fully deprecated and will likely be dropped in 2.0.  In fact, internally the parser uses ``dojo/aspect`` to accomplish a connect anyways.
 
 dojo/sniff
 ----------
@@ -123,6 +167,19 @@ Calendar
 .. js ::
 
     new dijit.Calendar({value: "2011-12-25"});
+
+ContentPane
+-----------
+ContentPane now supports addChild() and removeChild().
+
+However, the behavior of addChild(widget, index) is undefined if the ContentPane already contains
+random HTML.   It's intended to be used when the pane contains just a list of widgets,
+like Toolbar or BorderContainer.
+
+Also, ContentPane.addChild(child) will not call resize() on the new child widgets,
+so it should be used carefully on ContentPanes inside of a layout widget hierarchy.
+Note that resize() only works on visible widgets, not hidden widgets such as unselected tabs
+of a TabContainer.
 
 DateTextBox
 -----------

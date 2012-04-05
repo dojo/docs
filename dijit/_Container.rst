@@ -10,16 +10,15 @@ dijit/_Container
 Introduction
 ============
 
-Use this mixin for widgets that needs to know about and keep track of their widget children.
-Suitable for widgets like :ref:`dijit/layout/BorderContainer <dijit/layout/BorderContainer>`
+Use this mixin for widgets that contain (or sometimes contain) a list of child widgets,
+in order to be able to adjust the list of child widgets via addChild() and removeChild().
+
+_Container can be used as a superclass for any widget with this.containerNode defined, but it's especially useful
+for widgets like :ref:`dijit/layout/BorderContainer <dijit/layout/BorderContainer>`
 and  :ref:`dijit/layout/TabContainer <dijit/layout/TabContainer>` which contain (only) a set of child widgets.
 
-It's not suitable for widgets like  :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>`
-which contains mixed HTML (plain DOM nodes in addition to widgets),
-and where contained widgets are not necessarily directly below
-this.containerNode.   In that case calls like addChild(node, position)
-wouldn't make sense.
-
+When a widget that extends _Container contains nothing but a set of child widgets (or contains nothing at all),
+you can use the addChild() and removeChild() API to adjust the list of widget children.
 
 Example
 ========

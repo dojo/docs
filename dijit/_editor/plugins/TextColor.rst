@@ -20,7 +20,7 @@ Each makes use of the dijit ColorPicker, so they are simple to use.
 Features
 ========
 
-Once required in and enabled, this plugin provides the following features to dijit.Editor.
+Once required and enabled, this plugin provides the following features to dijit.Editor.
 
 * Button with icon in toolbar for changing the color of the selected text.
 * Button with icon in toolbar for changing the background color of the selected text.

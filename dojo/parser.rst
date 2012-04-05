@@ -222,35 +222,93 @@ The parser allows the specification of behaviours through custom types in script
 functionality of declarative widgets. This is done by specifying a script block that is a direct child of a node with
 decorate with `data-dojo-type`. There are different types of script tags supported:
 
-Connecting to a Function
-~~~~~~~~~~~~~~~~~~~~~~~~
+Changing the Behavior of a Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To perform a ``dojo.connect()`` on a method in a widget, use ``type="dojo/connect"`` inside a script node:
+The execute code that changes the behavior of a method, use ``type="dojo/aspect"``. All three forms of advice supported
+by :ref:`dojo/aspect <dojo/aspect>` are usable:
 
 .. html ::
 
-    <div data-dojo-type="someType">
-        <script type="dojo/connect" data-dojo-event="methodOfSomeType">
-           console.log("I will execute in addition to methodOfSomeType().");
+  <div data-dojo-type=...>
+    <script type="dojo/aspect" data-dojo-advice="after" data-dojo-method="method1" data-dojo-args="e">
+      console.log("I ran after!");
+    </script>
+    <script type="dojo/aspect" data-dojo-advice="around" data-dojo-method="method2" data-dojo-args="origFn">
+      return function(){ // Have to act as a function factory
+        console.log("I ran before!");
+        origFn.call(this); // You have to call the original function
+        console.log("I ran after!");
+      };
+    </script>
+    <script type="dojo/aspect" data-dojo-advice="before" data-dojo-method="method3" data-dojo-args="i">
+      console.log("I ran before!");
+      i++; // Modifying argument
+      return [i]; // Returning modified arguments to be used with original function
+    </script>
+  </div>
+
+**Note** If `data-dojo-advice` is omitted, ``"after"`` is assumed.
+
+Execute Code when an Event Occurs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The execute code when an event occurs ``type="dojo/on"`` can be used and it normalises events between DOM and widget
+events. It also follows the conventions in :ref:`dojo/on <dojo/on>`:
+
+.. html ::
+
+    <div data-dojo-type=...>
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
+           console.log("I was clicked!");
         </script>
     </div>
 
-Override a Function
+Execute Code on Change of Property
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To execute code when a value changes for a property for objects that support ``object.watch()`` (
+:ref:`dojo/Stateful <dojo/Stateful>`) the ``type="dojo/watch"`` can be used:
+
+.. html ::
+
+    <div data-dojo-type=...>
+        <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
+           console.log("Property '"+prop+"' changed from '"+oldValue+"' to '"+newValue+"'");
+        </script>
+    </div>
+
+The ``.watch()`` function always passes three arguments when it is called, representing the property that change, the
+old value and then the new value.
+
+**Note** because ``data-dojo-prop`` attribute was introduced after the attribute changes of 1.6, there is no backwards
+support for just ``prop`` as an attribute.
+
+Connecting to a Method
+~~~~~~~~~~~~~~~~~~~~~~
+
+*Deprecated*, use ``"dojo/aspect"`` or ``"dojo/on"`` instead.  To connect to a method the following can be used:
+
+.. html ::
+
+  <div data-dojo-type=...>
+    <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
+      console.log("I was clicked!");
+    </script>
+  </div>
+
+Overriding a Method
 ~~~~~~~~~~~~~~~~~~~
 
-Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function
-that returns a value. (The value returned from ``dojo.connect()``'d functions is ignored.)
-
-In that case use the ``type="dojo/method"`` syntax:
+*Deprecated*, use ``"dojo/aspect"`` instead.  To override a method, the following can be used:
 
 .. html ::
 
-    <div data-dojo-type="someType">
-        <script type="dojo/method" data-dojo-event="methodOfSomeType">
-           console.log("I will execute instead of methodOfSomeType().");
-        </script>
-    </div>
-
+  <div data-dojo-type=...>
+    <script type="dojo/method" data-dojo-event="someMethod">
+      console.log("I am the override!");
+    </script>
+  </div>
 
 Execute Code on Instantiation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -265,41 +323,9 @@ To execute code on instantiation, use the same format but don't specify an event
         </script>
     </div>
 
-
-Execute Code on Change of Property
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To execute code when a value changes for a property for objects that support ``object.watch()`` the
-``type="dojo/watch"`` can be used:
-
-.. html ::
-
-    <div data-dojo-type=...>
-        <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
-           console.log("Property '"+prop+"' changed from '"+oldValue+"' to '"+newValue+"'");
-        </script>
-    </div>
-
-
-The ``.watch()`` function always passes three arguments when it is called, representing the property that change, the
-old value and then the new value.
-
-**Note** because ``data-dojo-prop`` attribute was introduced after the attribute changes of 1.6, there is no backwards
-support for just ``prop`` as an attribute.
-
-Execute Code when an Event Occurs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-While similar to ``dojo.connect()``, the ``type="dojo/on"`` can be used to specify ``on`` behaviour:
-
-.. html ::
-
-    <div data-dojo-type=...>
-        <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
-           console.log("I was clicked!");
-        </script>
-    </div>
-
+**Note** both ``<script type="dojo/connect">`` and ``<script type="dojo/method">`` for connecting to methods are now
+*deprecated* and ``<script type="dojo/aspect">``, ``<script type="dojo/on">`` or ``<script type="dojo/watch">`` should
+be used instead.
 
 Arguments
 ~~~~~~~~~

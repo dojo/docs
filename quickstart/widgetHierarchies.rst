@@ -29,15 +29,13 @@ dijit/_Container
 ================
 
 :ref:`dijit/_Container <dijit/_Container>`
-is a mixin for widgets with an ordered list of children, like a :ref:`dijit.Menu <dijit/Menu>`.
+is a mixin for widgets with child widgets,
+especially for widgets that contain nothing but an ordered list of child widgets, like a :ref:`dijit.Menu <dijit/Menu>`.
 It implements the contract for containers listed above, and goes farther.
 
 In particular, dijit/_Container implements the addChild() and removeChild() API.
 
 All of the widgets named \*\*\*Container (ex: :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`) extend dijit/_Container.
-
-:ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`, on the other hand, fulfills the container contract
-listed above but does not extend dijit/_Container, since it contains rich text rather than a simple list of widgets.
 
 dijit/_Contained
 ================
