@@ -21,7 +21,7 @@ This data contains tables with culturally sensitive information for hundreds of 
 The data is transformed, as a pre-build step, from XML data to JSON-style JavaScript you see under the nls/ directory.
 This data is used by other modules in core Dojo such as dojo.date, dojo.number and dojo.currency,
 which provides more friendly programmatic APIs. It usually is not necessary to use dojo.cldr.nls directly.
-Other packages available in the CLDR provide methods to supplemental data:
+Other modules available in the CLDR provide access to supplemental data:
 
 * :ref:`dojo/cldr/monetary <dojo/cldr/monetary>`
 * :ref:`dojo/cldr/supplemental <dojo/cldr/supplemental>`
