@@ -25,13 +25,31 @@ Localizing Strings
 
 With the introduction of AMD-style loading in Dojo 1.7, localized content is loaded much like JavaScript modules, using the dojo/i18n! plugin as follows:
 
-.. js ::
+.. html ::
 
-    require(["dojo/i18n!myApp/nls/myResources"], function(resources) {
-      dojo.byId("myDiv");
-      myDiv.innerText = resources.greeting;
-    });
-
+<html>
+    <head>
+        <script
+            src="dojo/dojo.js"
+            data-dojo-config="'packages':[{'name': 'myApp', 'location':'myApp'}]
+        ></script>
+        <script language="JavaScript" type="text/javascript">
+            require([
+                "dojo/ready",
+                "dojo/dom",
+                "dojo/i18n!myApp/nls/myResources"
+            ], function(ready, dom, sampleStrings){
+                ready(function() {
+                    dom.byId("myDiv").textContent = sampleStrings.greeting;
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id="myDiv">
+        </div>
+    </body>
+</html>
 where the localized content is simply an Object with properties, defined according to a special convention that gives a default set of strings as well as references to various translations. The resource at the path myApp/nls/myResources.js might look something like this:
 
 .. js ::
