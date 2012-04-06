@@ -284,23 +284,10 @@ old value and then the new value.
 **Note** because ``data-dojo-prop`` attribute was introduced after the attribute changes of 1.6, there is no backwards
 support for just ``prop`` as an attribute.
 
-Connecting to a Method
-~~~~~~~~~~~~~~~~~~~~~~
-
-*Deprecated*, use ``"dojo/aspect"`` or ``"dojo/on"`` instead.  To connect to a method the following can be used:
-
-.. html ::
-
-  <div data-dojo-type=...>
-    <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
-      console.log("I was clicked!");
-    </script>
-  </div>
-
 Overriding a Method
 ~~~~~~~~~~~~~~~~~~~
 
-*Deprecated*, use ``"dojo/aspect"`` instead.  To override a method, the following can be used:
+To fully override a method, the following can be used:
 
 .. html ::
 
@@ -323,9 +310,21 @@ To execute code on instantiation, use the same format but don't specify an event
         </script>
     </div>
 
-**Note** both ``<script type="dojo/connect">`` and ``<script type="dojo/method">`` for connecting to methods are now
-*deprecated* and ``<script type="dojo/aspect">``, ``<script type="dojo/on">`` or ``<script type="dojo/watch">`` should
-be used instead.
+Connecting to a Method
+~~~~~~~~~~~~~~~~~~~~~~
+
+*Deprecated*, use ``"dojo/aspect"`` or ``"dojo/on"`` instead.  To connect to a method the following can be used:
+
+.. html ::
+
+  <div data-dojo-type=...>
+    <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
+      console.log("I was clicked!");
+    </script>
+  </div>
+
+**Note** ``<script type="dojo/connect">`` for connecting to methods is now *deprecated* and ``<script
+type="dojo/aspect">``, ``<script type="dojo/on">`` or ``<script type="dojo/watch">`` should be used instead.
 
 Arguments
 ~~~~~~~~~

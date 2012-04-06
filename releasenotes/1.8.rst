@@ -125,7 +125,7 @@ Each of the following is possible:
     
   </div>
 
-*Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script tags of ``type="dojo/connect"`` and ``type="dojo/method"`` are fully deprecated and will likely be dropped in 2.0.  In fact, internally the parser uses ``dojo/aspect`` to accomplish a connect anyways.
+*Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0.  In fact, internally the parser uses ``dojo/aspect`` to accomplish a connect anyways.
 
 dojo/sniff
 ----------
