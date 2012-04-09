@@ -12,6 +12,26 @@ This method works best for long-running JavaScript operations, or a series of Ja
 Examples
 ========
 
+Programmatic
+------------
+
+.. code-example ::
+
+  .. js ::
+
+    require(["dijit/ProgressBar", "dojo/_base/window", "dojo/ready"], function(ProgressBar, win, ready){
+        ready(function(){
+            var i = 0;
+            var myProgressBar = new ProgressBar({
+                style: "width: 300px"
+            }).placeAt(win.body());
+            setInterval(function(){
+               myProgressBar.set("value", i++ % 100);
+            }, 100);
+        });
+    });
+
+
 Declarative markup
 ------------------
 
@@ -21,10 +41,10 @@ Declarative markup
 
     require(["dojo/parser", "dijit/ProgressBar"], function(){
         var i = 0;
-        this.download = function(){
-            myProgressBar.update({maximum: 10, progress: ++i});
+        download = function(){
+            myProgressBar.set({value: ++i});
             if(i < 10){
-                setTimeout(download, 10 + Math.floor(Math.random() * 100));
+                setTimeout(download, 100 + Math.floor(Math.random() * 1000));
             }
         }
     });
