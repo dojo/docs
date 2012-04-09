@@ -351,13 +351,13 @@ When using :ref:`dijit.tree.ObjectStoreModel <dijit/tree/ObjectStoreModel>`, the
 in a `dojo.store.Observable <dojo/store/Observable>`, as below:
 
 .. code-example ::
-  :djConfig: async: true
+  :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
         require([
             "dojo/store/Memory", "dojo/store/Observable",
-            "dijit/tree/ObjectStoreModel", "dijit/Tree"
+            "dijit/tree/ObjectStoreModel", "dijit/Tree", "dojo/parser"
         ], function(Memory, Observable, ObjectStoreModel, Tree){
             // Create test store, adding a getChildren() method needed by the model
             myStore = new Memory({
@@ -394,13 +394,14 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
 
             // Wrap the store in Observable so that updates to the store are reflected to the Tree
             myStore = new Observable(myStore);
+
+            myModel = new ObjectStoreModel({
+                store: myStore,
+                query: { id: "world" }
+            });
         });
 
   .. html ::
-
-    <!-- Create the model bridging the store and the Tree -->
-    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="myModel"
-      data-dojo-props="store: myStore, query: {id: 'world'}"></div>
 
     <!-- Create the tree -->
     <div data-dojo-type="dijit/Tree" id="myTree" data-dojo-props="model: myModel"></div>
@@ -655,14 +656,15 @@ In this way, the Tree, Model, and data store are always in sync.
 Context Menu
 ============
 
-Tree has no built-in support for context menus, but you can use the Menu widget in conjunction with the Tree
+Tree has no built-in support for context menus, but you can use the Menu widget in conjunction with the Tree:
 
 .. code-example ::
   :djConfig: async: true, parseOnLoad: true
 
   .. js ::
 
-    require(["dojo/parser", "dijit/Menu", "dijit/MenuItem", "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
+    require(["dojo/parser", "dojo/store/Memory", "dojo/query!css2",
+    	"dijit/Menu", "dijit/MenuItem", "dijit/tree/ObjectStoreModel", "dijit/Tree"]);
 
   .. html ::
 
@@ -724,6 +726,8 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 			Click Me
 		</li>
 	</ul>
+
+Note that it's including dojo/query in order to use Menu.selector.
 
 Styling
 =======
