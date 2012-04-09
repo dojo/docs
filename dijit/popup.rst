@@ -1,7 +1,7 @@
 .. _dijit/popup:
 
 ===========
-dijit.popup
+dijit/popup
 ===========
 
 :Project owner: Bill Keese
@@ -16,13 +16,69 @@ Introduction
 dijit/popup is the main mechanism within dijit that enables the creation of pop-ups like dropdowns and tooltips.
 It is used by every widget that creates a pop-up around another element.
 
-Parent widgets
-==============
+Note that often custom widgets will want to extend :ref:`dijit/_HasDropDown <dijit/_HasDropDown>`
+rather than using ``dijit/popup`` directly.
 
-When creating a pop-up, there are usually two widgets involved:
+When displaying a pop-up, there are usually two widgets involved:
 
-* The parent widget, which controls opening and closing of the pop-up
-* The pop-up widget itself
+* The parent widget, which controls opening and closing of the pop-up (by using ``dijit/popup``)
+* The pop-up/dropdown widget itself
+
+API
+===
+
+Here’s an example that illustrates how a widget might open and close a drop down using ``dijit/popup``.
+It's the basic pattern followed by :ref:`dijit/_HasDropDown <dijit/_HasDropDown>`.
+
+The example involves two widgets:
+    * this - The parent widget, which controls opening and closing of the pop-up
+    * dropDown - The pop-up (aka dropdown) widget itself
+
+
+.. js ::
+
+    define(["dijit/popup"], function(popup){
+        ...
+
+        // wrap the pop-up widget and position it offscreen so
+        // that it can be measured by the widget’s startup method
+        popup.moveOffScreen(dropDown);
+
+        // if the pop-up has not been started yet, start it now
+        if(dropDown.startup && !dropDown._started){
+            dropDown.startup();
+        }
+
+        // make the pop-up appear around my node
+        popup.open({
+            parent: this,
+            popup: dropDown,
+            around: this.domNode,
+            orient: ["below-centered", "above-centered"],
+            onExecute: function(){
+                popup.close(dropDown);
+            },
+            onCancel: function(){
+                popup.close(dropDown);
+            },
+            onClose: function(){
+            }
+        });
+
+        ...
+    }
+
+As you can see, there are three essential calls here, ``popup.moveOffScreen``, ``popup.open``, and ``popup.close``.
+``popup.moveOffScreen`` wraps the popup widget in a container, appends it to the ``<body>``,
+then moves it off-screen so that any measurement ``dropDown.startup`` needs to do is possible.
+Once that’s done, it opens the pop-up by calling ``popup.open``.
+Finally, the ``onExecute`` and ``onCancel`` callbacks both call ``popup.close``, passing in the correct pop-up widget to close.
+
+It’s important to note here that the parent widget is responsible for both opening *and closing* the pop-up.
+This architecture was used so that the parent widget is always aware of whether or not its child pop-up is open, and so that it can easily perform any necessary clean-up or other relevant activity once its pop-up has closed.
+
+Details of dijit/popup::open()
+------------------------------
 
 Opening a pop-up from a parent widget involves calling ``popup.open`` with a kwArgs object
 that provides information about the pop-up and its related parent widget.
@@ -41,12 +97,22 @@ y (number)
 orient (string[])
   When placing a pop-up around a DOM node, it is possible to specify where the pop-up should appear around it by providing an array of position strings. Dijit will try each position in order until the pop-up appears fully within the viewport. Possible values are:
 
-  * before: places drop down to the left of the anchor node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
-  * after: places drop down to the right of the anchor node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
-  * above: drop down goes above anchor node
-  * above-alt: same as above except right sides aligned instead of left
-  * below: drop down goes below anchor node
-  * below-alt: same as below except right sides aligned instead of left
+    * before: places drop down to the left of the anchor node/widget, or to the right in the case
+      of RTL scripts like Hebrew and Arabic; aligns either the top of the drop down
+      with the top of the anchor, or the bottom of the drop down with bottom of the anchor.
+    * after: places drop down to the right of the anchor node/widget, or to the left in the case
+      of RTL scripts like Hebrew and Arabic; aligns either the top of the drop down
+      with the top of the anchor, or the bottom of the drop down with bottom of the anchor.
+    * before-centered: centers drop down to the left of the anchor node/widget, or to the right
+      in the case of RTL scripts like Hebrew and Arabic
+    * after-centered: centers drop down to the right of the anchor node/widget, or to the left
+      in the case of RTL scripts like Hebrew and Arabic
+    * above-centered: drop down is centered above anchor node
+    * above: drop down goes above anchor node, left sides aligned
+    * above-alt: drop down goes above anchor node, right sides aligned
+    * below-centered: drop down is centered above anchor node
+    * below: drop down goes below anchor node
+    * below-alt: drop down goes below anchor node, right sides aligned
 
   If left undefined, the default value is ``[ "below", "below-alt", "above", "above-alt" ]``.
 
@@ -61,57 +127,14 @@ padding (``{x: Number, y: Number}``)
 
 While only the ``popup`` property is required, most pop-ups will normally need to also provide ``onCancel`` and ``onExecute`` callbacks (as explained below) as well as either an ``around`` or ``x`` and ``y`` properties.
 
-Here’s an example that roughly illustrates how :ref:`dijit/_HasDropDown` opens and closes pop-ups:
 
-.. js ::
- 
-    var self = this;
-
-    // wrap the pop-up widget and position it offscreen so
-    // that it can be measured by the widget’s startup method
-    popup.moveOffScreen(dropDown);
-
-    // if the pop-up has not been started yet, start it now
-    if(dropDown.startup && !dropDown._started){
-        dropDown.startup();
-    }
-
-    // make the pop-up appear around aroundNode
-    popup.open({
-        parent: this,
-        popup: dropDown,
-        around: aroundNode,
-        orient: this.dropDownPosition,
-        onExecute: function(){
-            popup.close(dropDown);
-        },
-        onCancel: function(){
-            popup.close(dropDown);
-        },
-        onClose: function(){
-            domAttr.set(self._popupStateNode, "popupActive", false);
-            domClass.remove(self._popupStateNode, "dijitHasDropDownOpen");
-        }
-    });
-
-    domAttr.set(this._popupStateNode, "popupActive", "true");
-    domClass.add(this._popupStateNode, "dijitHasDropDownOpen");
-
-As you can see, there are three essential calls here, ``popup.moveOffScreen``, ``popup.open``, and ``popup.close``.
-``popup.moveOffScreen`` wraps the widget in a container, appends it to the ``<body>``,
-then moves it off-screen so that any measurement ``dropDown.startup`` needs to do is possible.
-Once that’s done, it opens the pop-up by calling ``popup.open``.
-Finally, the ``onExecute`` and ``onCancel`` callbacks both call ``popup.close``, passing in the correct pop-up widget to close.
-
-It’s important to note here that the parent widget is responsible for both opening *and closing* the pop-up.
-This architecture was used so that the parent widget is always aware of whether or not its child pop-up is open, and so that it can easily perform any necessary clean-up or other relevant activity once its pop-up has closed.
-
-Pop-up widgets
-==============
+Notes on Widgets Used as Popups
+===============================
 
 Any normal widget can be used as a pop-up.
 For example, :ref:`dijit/Calendar` is a normal widget that can be displayed inline in the page, but is used as a pop-up by the :ref:`DateTextBox <dijit/form/DateTextBox>` widget.
-In other words, there’s no need for a :ref:``PopupWidget`` base class for pop-up widgets.
+In other words, there’s no ``PopupWidget`` base class (and no need for one).
+
 However, there are two important methods that the pop-up widget can use to hint to the parent widget that it's ready to be closed:
 
 .. js ::
@@ -191,3 +214,8 @@ However, since the drop-down has actually been repositioned as the last element 
 As a compromise, the TAB key (while focus is on a pop-up) will re-focus on the DropDownButton/MenuBarItem that spawned the top pop-up.
 This is handled by the code that calls ``popup.open``, in the return handler for ``onCancel``.
 See :ref:`dijit/form/DropDownButton` for an example.
+
+
+See Also
+========
+- :ref:`dijit/_HasDropDown <dijit/_HasDropDown>`
