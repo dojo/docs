@@ -155,7 +155,7 @@ These parameters allow a single Tooltip widget to display unique tooltips for (f
 
   .. js ::
 
-      require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
+      require(["dojo/ready", "dijit/Tooltip", "dojo/query!css2"], function(ready, Tooltip){
           ready(function(){
               new Tooltip({
                   connectId: "myTable",
@@ -183,6 +183,9 @@ Selector is a CSS selector that specifies that the Tooltip should be attached, v
 to matching subnodes of the connectId node, rather than the connectId node itself.
 So, specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
 each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
+
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
+you need to require() an appropriate level of dojo/query to handle your selector.
 
 getContent() lets the app customize the tooltip text that's displayed based on the node that triggered
 the tooltip.

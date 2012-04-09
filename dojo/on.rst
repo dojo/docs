@@ -59,7 +59,7 @@ For example, we could write:
 
 .. js ::
   
-  define(["dojo/query"], function($){
+  require(["dojo/query"], function($){
     $("button").on("click", clickHandler);
   });
 
@@ -107,8 +107,6 @@ The "focus" and "blur" events do not bubble, but dojo/on normalizes "focusin" an
 Also, "scroll" events don't bubble.
 
 Also note that dojo/query must be loaded for event delegation to work.
-The dojo/query module is part of Dojo base and therefore is normally loaded
-unless you are doing a baseless application and dojo/query hasn't been included.
 
 Sometimes an event may occur on a sub-node beneath the node matching the selector.
 For example, you may have a table where you want to monitor which <tr> row was clicked,
@@ -151,11 +149,13 @@ For example, to listen for the mouse.enter extension event on elements with the 
 
 .. js ::
 
-  define(["dojo/on", "dojo/mouse"], function(on, mouse){
+  define(["dojo/on", "dojo/mouse", "dojo/query!css2"], function(on, mouse){
     on(node, on.selector(".myClass", mouse.enter), myClassHoverHandler);
   });
 
 The on.selector function can also be used with custom selector functions, by providing a function instead of a selector string as the first argument. The function will be called each time the indicated event takes place, and provide the event's target as the single argument. If the selector function has a corresponding node that matches for the event target, it can return that node. If the selector does not match, it should return a falsy value.
+
+Also note that dojo/query must be loaded for on.selector() to work.
 
 emit function
 -----------------

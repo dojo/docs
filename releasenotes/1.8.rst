@@ -207,7 +207,7 @@ and for the Menu's action to be adjusted depending on the node.   For example:
 
 .. js ::
 
-  require(["dijit/registry", "dijit/Menu", "dijit/MenuItem"], function(registry, Menu, MenuItem){
+  require(["dijit/registry", "dijit/Menu", "dijit/MenuItem", "dojo/query!css2"], function(registry, Menu, MenuItem){
       var menu = new Menu({
           targetNodeIds: ["myTable"],
           selector: "td.foo"
@@ -227,6 +227,8 @@ Further, the targetNode's contents can be changed freely after the Menu is creat
 Nodes matching the selector can be created or removed, and no calls to bindDomNode() or
 unBindDomNode() are necessary.
 
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
+you need to require() an appropriate level of dojo/query to handle your selector.
 
 Tooltip
 -------
@@ -254,6 +256,8 @@ Rows can be created, removed, or modified, and no calls to the Tooltip widget ar
 Another example: specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
 each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
 
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
+you need to require() an appropriate level of dojo/query to handle your selector.
 
 Tree
 ----

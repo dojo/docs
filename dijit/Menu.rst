@@ -117,6 +117,43 @@ This example creates a context menu for the whole window.
 Note that popup menus should be hidden via specifying style="display: none".
 Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
 
+Attaching to Multiple Nodes
+===========================
+The Menu widget has two optional attributes:
+  - selector:
+    CSS selector that specifies that the Menu should be attached, via event delegation,
+    to matching subnodes of targetNodeIds, rather than the targetNodeIds nodes themselves.
+  - currentTarget:
+    (readonly) which node the menu is being displayed for
+
+Together, they allow a single Menu to attach to multiple nodes through delegation,
+and for the Menu's action to be adjusted depending on the node.   For example:
+
+.. js ::
+
+  require(["dijit/registry", "dijit/Menu", "dijit/MenuItem", "dojo/query!css2"], function(registry, Menu, MenuItem){
+      var menu = new Menu({
+          targetNodeIds: ["myTable"],
+          selector: "td.foo"
+      });
+      menu.addChild(new MenuItem({
+          label: "click me"
+          onClick: function(evt){
+              var node = this.getParent().currentTarget;
+              console.log("menu clicked for node ", node);
+          }
+      }));
+  });
+
+This will track right-click events on each cell of a table with class="foo".
+
+Further, the targetNode's contents can be changed freely after the Menu is created.
+Nodes matching the selector can be created or removed, and no calls to bindDomNode() or
+unBindDomNode() are necessary.
+
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
+you need to require() an appropriate level of dojo/query to handle your selector.
+
 Accessibility
 =============
 
