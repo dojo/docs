@@ -50,10 +50,16 @@ Programmatic example
 
             var pSubMenu2 = new DropDownMenu({});
             pSubMenu2.addChild(new MenuItem({
-                label: "Edit item #1"
+                label: "Cut",
+                iconClass: "dijitEditorIcon dijitEditorIconCut"
             }));
-                pSubMenu2.addChild(new MenuItem({
-                label: "Edit item #2"
+            pSubMenu2.addChild(new MenuItem({
+                label: "Copy",
+                iconClass: "dijitEditorIcon dijitEditorIconCopy"
+            }));
+            pSubMenu2.addChild(new MenuItem({
+                label: "Paste",
+                iconClass: "dijitEditorIcon dijitEditorIconPaste"
             }));
             pMenuBar.addChild(new PopupMenuBarItem({
                 label: "Edit",
@@ -80,7 +86,8 @@ Creation from markup is even easier.
 
   .. js ::
 
-    require(["dojo/parser", "dijit/MenuBar", "dijit/PopupMenuBarItem", "dijit/DropDownMenu", "dijit/MenuItem"]);
+    require(["dojo/parser", "dijit/MenuBar", "dijit/MenuBarItem", "dijit/PopupMenuBarItem",
+    	"dijit/DropDownMenu", "dijit/MenuItem"]);
 
   .. html ::
 
@@ -95,12 +102,25 @@ Creation from markup is even easier.
         <div data-dojo-type="dijit/PopupMenuBarItem">
             <span>Edit</span>
             <div data-dojo-type="dijit/DropDownMenu" id="editMenu">
-                <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('edit 1');}">Edit #1</div>
-                <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('edit 2');}">Edit #2</div>
+				<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
+					onClick:function(){alert('cut!')}">Cut</div>
+				<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+					onClick:function(){alert('copy!')}">Copy</div>
+				<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+					onClick:function(){alert('paste!')}">Paste</div>
             </div>
+        </div>
+        <div data-dojo-type="dijit/MenuBarItem">
+        	Save
         </div>
     </div>
 
+
+Icons
+=====
+MenuBar does not support icons.
+If you want icons, you may be able to use :ref:`dijit/Toolbar <dijit/Toolbar>`
+with :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>` instead of MenuBar with PopupMenuBarItems.
 
 Accessibility
 =============
@@ -118,8 +138,16 @@ Open a submenu                                Down arrow
 Close a submenu                               Esc, or use right arrow to navigate to next menu
 ==========================================    =================================================
 
+Focus
+-----
+For a static Menu/MenuBar, focus is deferred until user clicks it, or tabs into it.
+Once user clicks on a Menu/MenuBar, it focuses on it, and then (as with a context menu)
+any mouse movement or keyboard movement (via arrow keys) will change focus.
+
 
 See also
 ========
 
 * See :ref:`dijit/DropDownMenu <dijit/DropDownMenu>`.
+* See :ref:`dijit/DropDownMenu <dijit/MenuBarItem>`.
+* See :ref:`dijit/DropDownMenu <dijit/PopupMenuBarItem>`.

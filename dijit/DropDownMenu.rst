@@ -70,17 +70,17 @@ except that you don't specify style="display: none" or contextMenuForWindow or a
 
     <div data-dojo-type="dijit/DropDownMenu" id="navMenu">
         <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
-            onClick:function(){alert('drama!')}">Drama</div>
+            onClick:function(){alert('cut!')}">Cut</div>
         <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
-            onClick:function(){alert('comedy!')}">Comedy</div>
+            onClick:function(){alert('copy!')}">Copy</div>
         <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
-            onClick:function(){alert('romance!')}">Romance</div>
+            onClick:function(){alert('paste!')}">Paste</div>
         <div data-dojo-type="dijit/MenuSeparator"></div>
         <div data-dojo-type="dijit/PopupMenuItem">
             <span>Action</span>
             <div data-dojo-type="dijit/DropDownMenu" id="submenu2">
-                <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('diehard!')}">Diehard</div>
-                <div data-dojo-type="dijit/MenuItem" onclick="alert('indiana!')">Indiana Jones</div>
+                <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('nested #1!')}">Nested #1</div>
+                <div data-dojo-type="dijit/MenuItem" onclick="alert('nested #2!')">Nested #2</div>
             </div>
         </div>
     </div>
@@ -106,12 +106,6 @@ Close a context menu and all open submenus    Tab
 
 Implementation Notes
 ====================
-
-Focus
------
-For a static Menu/MenuBar, focus is deferred until user clicks it, or tabs into it.
-Once user clicks on a Menu/MenuBar, it focuses on it, and then (as with a context menu)
-any mouse movement or keyboard movement (via arrow keys) will change focus.
 
 CSS Classes
 -----------
