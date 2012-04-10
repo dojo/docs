@@ -78,7 +78,7 @@ Constructor Parameters
 |                |              |                                                                                                |           |
 |                |              |  Prior to dojo 1.4, ItemFileReadStore, when loading the initial data set, treated attributes   |           |
 |                |              |  that are JavaScript objects as data store items and processed them accordingly.  As of Dojo   |           |
-|                |              |  1.4 this function can be disabled by setting this to false in the constructor or on the store  |           |
+|                |              |  1.4 this function can be disabled by setting this to false in the constructor or on the store |           |
 |                |              |  before the first fetch.  Note that 'custom types' and 'references' are still processed.       |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
   
