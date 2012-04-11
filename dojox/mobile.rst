@@ -221,6 +221,13 @@ Spin Wheel
 
   A time picker component that is derived from SpinWheel.
 
+Utils
+-----
+
+* :ref:`Badge <dojox/mobile/Badge>`
+
+  An utility to create/update a badge node.
+
 
 Getting Started
 ===============
