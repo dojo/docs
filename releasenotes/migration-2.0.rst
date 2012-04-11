@@ -424,7 +424,34 @@ The symbolic names for keys have been put into the "dojo/keys" module, which mus
 
 onkeypress
 ~~~~~~~~~~
-The dojo onkeypress simulation has been desupported.   You should use keydown or keypress depending on whether you are monitoring printable characters (ex: A-Z, 1-9) or non-printable characters (ex: arrow keys).   TODO: which is which?   evt.charOrKeyCode is also gone, I think.
+The dojo onkeypress normalization to firefox behavior has been desupported.
+For portable applications, you must use keypress for monitoring printable characters, (ex: A-Z, 1-9):
+
+.. js ::
+
+    on(node, "keypress", function(evt){
+        if(e.charCode <= 32){
+            // Avoid duplicate events on firefox (this is an arrow key etc. that will be handled by keydown handler)
+            return;
+        }
+        var char = String.fromCharCode(evt.charCode);
+        ...
+    });
+
+
+and keydown for non-printable characters (ex: arrow keys):
+
+.. js ::
+
+    on(node, "keydown", function(evt){
+        switch(evt.keyCode){
+           case keys.UP_ARROW:
+              ...
+              break;
+        }
+    });
+
+Note that evt.charOrCode is also gone, so use evt.charCode for keypress events, or evt.keyCode for keydown events.
 
 
 event delegation
@@ -564,10 +591,10 @@ is changed to
 .. js ::
 
     require(["dojo/topic"], function(topic){
-		 var handle = topic.subscribe("some/topic", listener)
-		 ...
-		 handle.remove();
-	});
+         var handle = topic.subscribe("some/topic", listener)
+         ...
+         handle.remove();
+    });
 
 And publishing code is changed from:
 
@@ -580,7 +607,7 @@ to:
 .. js ::
 
     require(["dojo/topic"], function(topic){
-    	topic.publish("some/topic", 1, 2, 3);
+        topic.publish("some/topic", 1, 2, 3);
     });
 
 
