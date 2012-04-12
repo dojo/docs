@@ -39,6 +39,10 @@ Views
 
   A view that can be swiped horizontally (formerly known as FlippableView)
 
+* :ref:`TreeView <dojox/mobile/TreeView>`
+
+  A scrollable view with tree-style navigation. (Experimental)
+
 Heading
 -------
 
@@ -77,6 +81,14 @@ Lists
 
   EdgeToEdgeList with dojo.data support
 
+* :ref:`RoundRectStoreList <dojox/mobile/RoundRectStoreList>`
+
+  RoundRectList with dojo.store support
+
+* :ref:`EdgeToEdgeStoreList <dojox/mobile/EdgeToEdgeStoreList>`
+
+  EdgeToEdgeList with dojo.store support
+
 * :ref:`ListItem <dojox/mobile/ListItem>`
 
   A list item to use in a list widget
@@ -114,6 +126,18 @@ Panes
 
   A pane that can load and display HTML content/fragments. Similar to dijit/layout/ContentPane.
 
+* :ref:`Container <dojox/mobile/Container>`
+
+  A simple container widget that can be used for any purposes.
+
+* :ref:`Pane <dojox/mobile/Pane>`
+
+  A simple div-wrapper pane widget that can be used for any purposes.
+
+* :ref:`ScrollablePane <dojox/mobile/ScrollablePane>`
+
+  A pane that has the touch-scrolling capability.
+
 Openers
 -------
 
@@ -143,7 +167,7 @@ Form Controls
 
 * :ref:`ComboBox <dojox/mobile/ComboBox>`
 
-  A combo box allowing user to edit input values with the built-in keyboard.
+  A combo box allowing user to edit input values with the built-in keyboard. (Experimental)
 
 * :ref:`ExpandingTextArea <dojox/mobile/ExpandingTextArea>`
 
@@ -184,16 +208,48 @@ Layout
 
   Used for the two content areas in a fixed splitter control.
 
+* :ref:`Accordion <dojox/mobile/Accordion>`
+
+  A layout widget that allows the user to freely navigate between panes.
+
+* :ref:`GridLayout <dojox/mobile/GridLayout>`
+
+  A container widget that places its children in the grid layout.
+
+* :ref:`IconMenu <dojox/mobile/IconMenu>`
+
+  A pop-up menu that shows icons and labels in a table layout.
+
+* :ref:`IconMenuItem <dojox/mobile/IconMenuItem>`
+
+  A widget that represents an item of IconMenu.
+
+* :ref:`ScreenSizeAware <dojox/mobile/ScreenSizeAware>`
+
+  A module to make a screen size aware application. (Experimental)
+
+* :ref:`SimpleDialog <dojox/mobile/SimpleDialog>`
+
+  A simple dialog box for mobile.
+
 Indicators
 ----------
 
 * :ref:`PageIndicator <dojox/mobile/PageIndicator>`
 
-  A
+  A widget that displays a series of gray and white dots to indicate which page is currently being viewed.
 
 * :ref:`ProgressIndicator <dojox/mobile/ProgressIndicator>`
 
   A round spinning graphical indicator
+
+* :ref:`ProgressBar <dojox/mobile/ProgressBar>`
+
+  A progress indication widget that shows the status of a task.
+
+* :ref:`Rating <dojox/mobile/Rating>`
+
+  A widget that shows the rating using stars.
 
 Carousel
 --------
@@ -233,12 +289,57 @@ Spin Wheel
 
   A time picker component that is derived from SpinWheel.
 
+Value Picker
+------------
+
+* :ref:`ValuePicker <dojox/mobile/ValuePicker>`
+
+  A widget for selecting some values using the +/- buttons or an input field.
+
+* :ref:`ValuePickerSlot <dojox/mobile/ValuePickerSlot>`
+
+  A slot that is placed in a ValuePicker.
+
+* :ref:`ValuePickerDatePicker <dojox/mobile/ValuePickerDatePicker>`
+
+  A date picker component that is derived from ValuePicker.
+
+* :ref:`ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`
+
+  A time picker component that is derived from ValuePicker.
+
+Date/Time Picker
+----------------
+
+* :ref:`DatePicker <dojox/mobile/DatePicker>`
+
+  A wrapper widget around SpinWheelDatePicker or ValuePickerDatePicker.
+
+* :ref:`TimePicker <dojox/mobile/TimePicker>`
+
+  A wrapper widget around SpinWheelTimePicker or ValuePickerTimePicker.
+
+Media
+-----
+
+* :ref:`Audio <dojox/mobile/Audio>`
+
+  A thin wrapper around the html5 <audio> element.
+
+* :ref:`Video <dojox/mobile/Video>`
+
+  A thin wrapper around the html5 <video> element.
+
 Utils
 -----
 
 * :ref:`Badge <dojox/mobile/Badge>`
 
   An utility to create/update a badge node.
+
+* :ref:`Icon <dojox/mobile/Icon>`
+
+  An utility for creating an image icon.
 
 
 Getting Started
