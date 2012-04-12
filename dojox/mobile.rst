@@ -202,6 +202,18 @@ Carousel
 
   A widget that manages a list of images or content, and displays a paging indicator.  Allows a user to flick left/right to move between content items.
 
+* :ref:`CarouselItem <dojox/mobile/CarouselItem>`
+
+  A widget that represents an item of Carousel.
+
+* :ref:`DataCarousel <dojox/mobile/DataCarousel>`
+
+  An enhanced version of Carousel that supports dojo.data.
+
+* :ref:`StoreCarousel <dojox/mobile/StoreCarousel>`
+
+  An enhanced version of Carousel that supports dojo.store.
+
 Spin Wheel
 ----------
 
