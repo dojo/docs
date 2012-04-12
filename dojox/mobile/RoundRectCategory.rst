@@ -1,3 +1,4 @@
+
 .. _dojox/mobile/RoundRectCategory:
 
 ==============================
@@ -21,7 +22,7 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label         |Boolean   |""       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
+|label         |String    |""       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
@@ -29,6 +30,13 @@ Examples
 
 Declarative example
 -------------------
+
+.. js ::
+
+  require([
+    "dojox/mobile",
+    "dojox/mobile/parser"
+  ]);
 
 .. html ::
 
