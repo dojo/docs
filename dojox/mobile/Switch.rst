@@ -18,17 +18,20 @@ Switch is a toggle switch with a sliding knob. You can either tap or slide the k
 Constructor Parameters
 ======================
 
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Default  |Description                                                                                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|value         |String    |"on"     |The initial state of the switch. "on" or "off". The default value is "on".                                 |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|name          |String    |""       |A name for a hidden input field, which holds the current value.                                            |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|leftLabel     |String    |"ON"     |The left-side label of the switch.                                                                         |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|rightLabel    |String    |"OFF"    |The right-side label of the switch.                                                                        |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|Parameter     |Type      |Default            |Description                                                                                      |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|value         |String    |"on"               |The initial state of the switch. "on" or "off". The default value is "on".                       |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|name          |String    |""                 |A name for a hidden input field, which holds the current value.                                  |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|leftLabel     |String    |"ON"               |The left-side label of the switch.                                                               |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|rightLabel    |String    |"OFF"              |The right-side label of the switch.                                                              |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
+|shape         |String    |"mblSwDefaultShape"|The shape of the switch. "mblSwDefaultShape", "mblSwSquareShape", "mblSwRoundShape1",            |
+|              |          |                   |"mblSwRoundShape2", "mblSwArcShape1" or "mblSwArcShape2".                                        |
++--------------+----------+-------------------+-------------------------------------------------------------------------------------------------+
 
 Examples
 ========
@@ -50,6 +53,15 @@ Declarative example 2
   <div data-dojo-type="dojox.mobile.Switch" value="on" leftLabel="Start" rightLabel="Stop"></div>
 
 .. image :: Switch-example2.png
+
+Square Shape
+------------
+
+.. html ::
+
+  <div class="mblSwSquareShape" data-dojo-type="dojox.mobile.Switch"></div>
+
+.. image :: Switch-SquareShape.png
 
 Round Shape 1
 -------------
@@ -93,15 +105,23 @@ Custom Color
 .. css ::
 
   .color1 .mblSwitchBgLeft {
-      background: -webkit-gradient(linear, left top, left bottom, from(#28B159), to(#75FBAC), color-stop(0.5, #3FEB84), color-stop(0.5, #4CEE8E));
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#28B159), to(#75FBAC),
+                                 color-stop(0.5, #3FEB84),
+                                 color-stop(0.5, #4CEE8E));
   }
   .color1 .mblSwitchBgRight {
-      background: -webkit-gradient(linear, left top, left bottom, from(#CECECE), to(#FDFDFD), color-stop(0.5, #EEEEEE), color-stop(0.5, #F8F8F8));
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#CECECE), to(#FDFDFD),
+                                 color-stop(0.5, #EEEEEE),
+                                 color-stop(0.5, #F8F8F8));
   }
   .color1 .mblSwitchKnob {
-      background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#FAFAFA), color-stop(0.5, #BBBBBB), color-stop(0.5, #CACACA));
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#999999), to(#FAFAFA),
+                                 color-stop(0.5, #BBBBBB),
+                                 color-stop(0.5, #CACACA));
   }
-
 .. html ::
 
   <div class="mblSwRoundShape1 color1" data-dojo-type="dojox.mobile.Switch"></div>
