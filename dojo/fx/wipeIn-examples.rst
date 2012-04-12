@@ -19,22 +19,21 @@ Note that the padding of the content which gets wiped in is set on a separate in
 
   .. js ::
 
-    dojo.require("dojo.fx");
-    dojo.require("dijit.form.Button");
+     require(["dijit/form/Button", "dojo/fx", "dojo/parser"], function(button, fx){
+	wipeInOne = function(){ 
+		fx.wipeIn({ 
+			node: "wipeDisplayNode", 
+			duration: 300 
+		}).play(); 
+	} 
+	wipeOutOne = function(){ 
+		fx.wipeOut({ 
+			node: "wipeDisplayNode", 
+			duration: 300 
+		}).play(); 
+	}
+    });
 
-    wipeInOne = function(){
-      dojo.fx.wipeIn({
-        node: "wipeDisplayNode",
-        duration: 300
-      }).play();
-    }
-
-    wipeOutOne = function(){
-      dojo.fx.wipeOut({
-        node: "wipeDisplayNode",
-        duration: 300
-      }).play();
-    }
 
   .. html ::
 
