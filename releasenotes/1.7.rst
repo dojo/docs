@@ -23,7 +23,7 @@ The following browsers have been tested and are supported in this release. If a 
 
 Desktop
 
- * Firefox 3.6-8
+ * Firefox 3.6-8 (Dojo 1.7.2+ also supports Firefox 9-10)
  * Safari 5.0-5.1
  * Chrome 13-15
  * IE 6-9
