@@ -127,7 +127,6 @@ debugContainerId: "yourContainerId"
 
 debugAtAllCosts: true (Dojo < 1.7 only)
   This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <quickstart/debugging>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.ready.
-  
   Version 1.6 has issues with this setting; see http://bugs.dojotoolkit.org/ticket/12608 for more information.  It has been removed in 1.7; see the :ref:`release notes <releasenotes/1.7>`.
 
 Language and Localization Settings in dojoConfig
@@ -140,7 +139,6 @@ locale: "en-us"
 
 extraLocale: ["ja-jp"]
   In addition to the locale, developers can specify that extra locale files also be downloaded in parallel.  The argument to the extraLocale parameter is an array of strings representing locales.
-
   The extraLocale is used only for edge cases like multi-lingual pages or for dynamically switching languages. It is generally more efficient and preferred to switch languages by reloading the page and changing the locale setting.  An example use case for extraLocale would be a language tutorial – a page in the user's native language that teaches Japanese.
 
 Finding Resources in Non-Standard Locations
@@ -152,7 +150,7 @@ baseUrl: "/assets/mydojo/"
   When using multiple versions of dojo in parallel in a given site, or if the core dojo.js file has been renamed when creating a custom build, the baseUrl parameter should be used to indicate where the dojo core is located. This may also be necessary for sites that use the <base> tag which can confuse some browsers (e.g. IE6). The value for baseUrl should be the directory that contains the dojo.js file. The value should always be defined with an ending slash (/) character.
 
 paths: {"foo": "../../bar"}
-  Using this parameter is equivalent of calling require({ paths:{ "foo": "../../bar" }}) and allows dojo to locate custom modules. See :ref:`AMD loader <loader/amd>`.
+  Using this parameter is equivalent of calling require({ paths:{ "foo": "../../bar" }}) and allows dojo to locate custom modules. See more details on this and other loader related configurations :ref:`AMD loader identifiers <loader/amd#module-identifiers>` and :ref:`AMD loader configuration <loader/amd#configuration>`
 
 Other Options
 -------------
