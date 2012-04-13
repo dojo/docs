@@ -29,4 +29,4 @@ Notice how the dots (ex: dijit.form.Button) have been changed to slashes (ex: "d
 See Also
 ========
 
-* `The Dojo Loader <loader/amd>`_ - Further information on the loading process
+* `The Dojo Loader </loader/amd>`_ - Further information on the loading process
