@@ -154,7 +154,7 @@ Individuals who have signed Dojo CLAs
 * Ferrari, Alessandro
 * Ferrydiansyah, Reza
 * Field, Terry
-* Firsov, Olekasandr
+* Firsov, Olekasandr (nickname=Sasha, trac=suns)
 * Fitzgerald, Nick
 * Fitzgerald, Patrick
 * Follia, Pierpaolo
