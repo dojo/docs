@@ -116,9 +116,9 @@ This type of bar is typically used at the top of the screen to control visibilit
 .. html ::
 
   <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"segmentedControl"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">DOM Button</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>New</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">What's Hot</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Genius</li>
   </ul>
 
 .. image :: TabBar-SegmentedControl.png
