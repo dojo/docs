@@ -39,7 +39,8 @@ The basic usage looks like:
     on(document, "click", clickHandler);
   });
 
-The return value from the on function is a signal handler that has a remove() method that can be used to stop listening for the events. For example, to listen for a single click, one could do:
+
+Dojo provides a way to remove an event handler. The return value of `on` is a simple object with a `remove` method, which will remove the event listener when called. For example, to listen for a single click, one could do:
 
 .. js ::
 
