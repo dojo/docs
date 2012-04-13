@@ -58,6 +58,11 @@ dojo.io.script.get() supported object properties
 
 **Note:** "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached).
 
+Return type (dojo.Deferred)
+---------------------------
+
+The dojo.io.script.get() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.io.script.get().  
+
 Examples
 ========
 
