@@ -17,13 +17,6 @@ dijit/registry stores a collection of all the dijit widgets within a page.
 It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID).
 It contains functions formerly found on the root ``dijit`` object for looking up widgets, such as ``dijit.byId`` and ``dijit.byNode``.
 
-In Dojo 1.6 and earlier, the registry is an instance of :ref:`dijit.WidgetSet <dijit/WidgetSet>`.
-Starting in Dojo 1.7, it is its own object.
-
-Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some).
-Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0).
-If you need to iterate over the entire registry, it is best to call ``registry.toArray``
-and use the standard :ref:`dojo array <dojo/_base/array>` functions.
 
 Usage
 =====
@@ -108,6 +101,23 @@ The following will return the TextBox widget, **not** the Form widget:
   require(["dojo/dom", "dijit/registry"], function(dom, registry){
       registry.getEnclosingWidget(dom.byId("myTextField")); // returns TextBox
   });
+
+Iterating Over The Registry
+---------------------------
+If you need to iterate over the entire registry, it is best to call ``registry.toArray``
+and use the standard :ref:`dojo array <dojo/_base/array>` functions.
+
+.. js ::
+
+  require(["dojo/_base/array", "dijit/registry"], function(array, registry){
+      array.forEach(registry.toArray(), ...);
+  });
+
+
+Note that for backwards compatibility, the dijit.registry global variable (as opposed to the dijit/registry module)
+includes array iterator methods (forEach, filter, byClass, map, every, and some).
+However, AMD code should not expect these functions to be available in the Object returned from
+require(["dijit/registry"]).
 
 See also
 ========

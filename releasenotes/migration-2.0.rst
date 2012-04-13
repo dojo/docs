@@ -1042,6 +1042,11 @@ dijit.byId                                              dijit/registry          
 dijit.byNode                                            dijit/registry                 registry.byNode
 dijit.registry.toArray                                  dijit/registry                 registry.toArray
 dijit.registry.forEach()                                dijit/registry                 array.forEach(registry.toArray(), ...)
+dijit.registry.filter()                                 dijit/registry                 array.filter(registry.toArray(), ...)
+dijit.registry.map()                                    dijit/registry                 array.map(registry.toArray(), ...)
+dijit.registry.every()                                  dijit/registry                 array.every(registry.toArray(), ...)
+dijit.registry.some()                                   dijit/registry                 array.some(registry.toArray(), ...)
+dijit.registry.byClass("dijit.form.Button")             dijit/registry                 array.filter(registry.toArray(), function(widget){ return widget.constructor === require("dijit/form/Button"); })
 dijit.findWidgets                                       dijit/registry                 registry.findWidgets
 dijit.getEnclosingWidget                                dijit/registry                 registry.getEnclosingWidget
 dijit.focus                                             dijit/focus                    focus.focus
