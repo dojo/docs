@@ -17,7 +17,7 @@ Desktop
 
   * Firefox 3.6-11
   * Safari 5-6
-  * Chrome 13-17
+  * Chrome 13-18
   * IE 6-9
   * Opera 10.50-12 (Dojo core only)
 
