@@ -26,17 +26,18 @@ Inherited from dojox.mobile._ItemBase
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |transition    |String    |"none"   |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
 |              |          |         |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "reveal", "revealv",         |
-|              |          |         |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut". If "none" is specified, transition occurs   |
-|              |          |         |immediately without animation.                                                                             |
+|              |          |         |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut", "cube", and "swap". If "none" is specified, |
+|              |          |         |transition occurs immediately without animation.                                                           |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |transitionDir |Number    |1        |The transition direction. If 1, transition forward. If -1, transition backward. For example, the slide     |
 |              |          |         |transition slides the view from right to left when dir == 1, and from left to right when dir == -1.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
-|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module is loaded by the user application, the view     |
-|              |          |         |transition updates the hash in the browser URL so that the user can bookmark the destination view. In this |
-|              |          |         |case, the user can also use the browser's back/forward button to navigate through the views in the browser |
-|              |          |         |history. If null, transitions to a blank view. If '#', returns immediately without transition.             |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module (=the dojox.mobile.bookmarkable module since    |
+|              |          |         |V1.8) is loaded by the user application, the view transition updates the hash in the browser URL so that   |
+|              |          |         |the user can bookmark the destination view. In this case, the user can also use the browser's back/forward |
+|              |          |         |button to navigate through the views in the browser history. If null, transitions to a blank view. If '#', |
+|              |          |         |returns to the previous view immediately without transition.                                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |href          |String    |""       |A URL of another web page to go to.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -55,9 +56,14 @@ Inherited from dojox.mobile._ItemBase
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |sync          |Boolean   |true     |If true, XHR for the view content specified with the url parameter is performed synchronously. If false, it|
 |              |          |         |is done asynchronously and the progress indicator is displayed while loading the content. This parameter is|
-|              |          |         |effective only when the url parameter is used.                                                             |
+|              |          |         |effective only when the url parameter is used. In dojo-1.8, however, this property is no longer supported. |
+|              |          |         |It always behaves in the async manner regardless of the value of this property.                            |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |label         |String    |""       |A label of the item. If the label is not specified, innerHTML is used as a label.                          |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|alt           |String    |""       |An alt text for the icon image.                                                                            |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|tabIndex      |String    |"0"      |Tabindex setting for the item so users can hit the tab key to focus on it.                                 |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Parameters from this widget
@@ -81,6 +87,8 @@ Parameters from this widget
 |              |          |         |widget or iconPos1 is used.                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |selected      |Boolean   |false    |If true, the button is in the selected status. The default value is false.                                 |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|badge         |String    |""       |A string to show on a badget. (ex. "12")                                                                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Usage
