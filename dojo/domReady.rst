@@ -67,4 +67,28 @@ Sync loader
 -----------
 You should not use dojo/domReady! in any modules that may be loaded with the legacy synchronous loader.
 
-In other words, if your application does *not* specify async:true dojo config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
+In other words, if your application does *not* specify async:true dojo config parameter,
+or if it loads modules via dojo.require() instead of the new AMD require() API,
+then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
+
+For reference, the cause of this intermittent failure is that when you write:
+
+.. js ::
+
+   define(["m1", "m2", ..., "mn"], function(m1, m2, ..., mn){//...
+
+and run in sync mode, the loader *ensures* the evaluation of m1..mn *in
+order*. It does than by just traversing each dependency tree as it comes to
+it. And it expects each dependency tree to be fully "traversable" and the
+module completely resolved at the end of the traversal.
+
+Now comes along dojo/domReady!. The loader loads all the dependencies for
+dojo/domReady! and then demands the plugin resource be resolved. But
+dojo/domReady! may not be able to resolve the demanded plugin resource (an
+empty module id which is intended to signal the DOM is ready) because the DOM
+may not be ready. The loader notices this an sees that the module was not
+capable of being loaded synchronously...and gives up.
+
+
+This is an intentional limitation in the loader, since handling it would have required more complicated code.
+It will cease to be an issue for Dojo 2.0, when the synchronous loader is desupported.
