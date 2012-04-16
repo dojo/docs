@@ -11,16 +11,15 @@ dojox.mobile.FixedSplitterPane
 .. contents ::
     :depth: 2
 
-FixedSplitterPane is a pane widget that is used in a :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>`. It is a widget, but can be regarded as a simple <div> element.
+Introduction
+============
+
+FixedSplitterPane is a pane widget that is used in a :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>`. It is a widget, but can be regarded as a simple <div> element. In V1.8, this widget was deprecated and replaced by :ref:`dojox.mobile.Container <dojox/mobile/Container>`.
 
 Usage
 =====
 
 :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>` has dependency on this widget. You should dojo.require :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>` rather than dojox.mobile.FixedSplitterPane.
-
-.. js ::
-
-  dojo.require("dojox.mobile.FixedSplitter");
 
 Constructor Parameters
 ======================
