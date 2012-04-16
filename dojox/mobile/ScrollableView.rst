@@ -11,9 +11,12 @@ dojox.mobile.ScrollableView
 .. contents ::
     :depth: 2
 
-ScrollableView is a container widget that represents entire mobile device screen, and has a touch scrolling capability. ScrollableView is a subclass of View (=dojox.mobile.View). Unlike the base View class, ScrollableView's domNode always stays at the top of the screen and its height is "100%" of the screen. Inside this fixed domNode, containerNode scrolls. Browser's default scrolling behavior is disabled, and the scrolling machinery is re-implemented with JavaScript. Thus the user does not need to use the two-finger operation to scroll an inner DIV (containerNode). The main purpose of this widget is to realize fixed-positioned header and/or footer bars.
+Introduction
+============
 
-The animation below shows the difference of scrolling behavior between View and ScrollableView.
+ScrollableView is a container widget which represents an entire mobile device screen, and has a touch scrolling capability. ScrollableView is a subclass of :ref:`dojox.mobile.View <dojox/mobile/View>`. Unlike the base View class, ScrollableView's domNode always stays at the top of the screen and its height is "100%" of the screen. Inside this fixed domNode, the containerNode scrolls. The browser's default scrolling behavior is disabled, and the scrolling mechanism is re-implemented in JavaScript. Thus the user does not need to use the two-finger operation to scroll the inner DIV (containerNode). The main purpose of this widget is to realize fixed-positioned header and/or footer bars.
+
+The animation below shows the difference between View and ScrollableView scrolling behavior. 
 
 .. image :: ScrollableView-anim.gif
 
@@ -27,8 +30,6 @@ Inherited from dojox.mobile.View
 |Parameter     |Type      |Default  |Description                                                                    |
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 |selected      |Boolean   |false    |If true, the view is displayed at startup time.                                |
-+--------------+----------+---------+-------------------------------------------------------------------------------+
-|keepScrollPos |Boolean   |true     |If true, the scroll position is kept when transition occurs between views.     |
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 
 Inherited from dojox.mobile.scrollable
@@ -64,38 +65,42 @@ Examples
 View header/footer bar example
 ------------------------------
 
-View header/footer bars are fixed-positioned bars that are local to the view to which they belong. That is, the bars stay at the fixed position while their parent view is shown, but when the view moves to another, they go away with the view.
+View header/footer bars are fixed-positioned bars which are local to the view in which they belong. That is, the bars stay in fixed positions while their parent view is shown, but when the view moves to another, they go away with the view.
 
 To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-positioned,
 
 1. Place it inside ScrollableView
-2. Add fixed="top" for a header bar, or fixed="bottom" for a footer bar
+2. Add fixed:"top" for a header bar, or fixed:"bottom" for a footer bar
 
 .. html ::
 
   <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
-    <h1 data-dojo-type="dojox.mobile.Heading" fixed="top">View Header Bar</h1>
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>View Header Bar</h1>
     ....
-    <h1 data-dojo-type="dojox.mobile.Heading" fixed="bottom">View Footer Bar</h1>
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"bottom"'>View Footer Bar</h1>
   </div>
+
+.. image :: ScrollableView-example1-anim.gif
 
 Application header/footer bar example
 -------------------------------------
 
-Application header/footer bars are fixed-positioned bars that are global to the application (=page). That is, the bars always stay at the fixed position regardless of what view is currently shown.
+Application header/footer bars are fixed-positioned bars which are global to the application (=page). That is, the bars always stay in fixed positions regardless of what view is currently shown.
 
 To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-positioned,
 
 1. Place it outside ScrollableView
-2. Add fixed="top" for a header bar, or fixed="bottom" for a footer bar
+2. Add fixed:"top" for a header bar, or fixed:"bottom" for a footer bar
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading" fixed="top">Application Header Bar</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>Application Header Bar</h1>
   <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
       ....
   </div>
   <div id="view2" data-dojo-type="dojox.mobile.ScrollableView">
       ....
   </div>
-  <h1 data-dojo-type="dojox.mobile.Heading" fixed="bottom">Application Footer Bar</h1>
+  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"bottom"'>Application Footer Bar</h1>
+
+.. image :: ScrollableView-example2-anim.gif

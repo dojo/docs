@@ -1,8 +1,8 @@
 .. _dojox/mobile/PageIndicator:
 
-==============================
+==========================
 dojox.mobile.PageIndicator
-==============================
+==========================
 
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
@@ -10,6 +10,9 @@ dojox.mobile.PageIndicator
 
 .. contents ::
     :depth: 2
+
+Introduction
+============
 
 PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with :ref:`dojox.mobile.SwapView <dojox/mobile/SwapView>`. It is also internally used in :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`.
 
@@ -38,25 +41,59 @@ Examples
 Declarative example
 -------------------
 
+.. js ::
+
+  require([
+    "dojox/mobile",
+    "dojox/mobile/parser",
+    "dojox/mobile/SwapView",
+    "dojox/mobile/PageIndicator"
+  ]);
+
+.. css ::
+
+  html,body{
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  img {
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    width: 90%;
+  }
+  h1 {
+    background-color: #3a3a3b;
+    color: #b1b1b1;
+    font: bold 16px arial,helvetica,clean,sans-serif;
+    margin: 0 0 15px 0;
+    height: 45px;
+    line-height: 45px;
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.5);
+  }
+  .mblSwapView {
+    text-align: center;
+  }
+
 .. html ::
 
-  <body style="background-color:#6D6D6D">
-      <div data-dojo-type="dojox.mobile.SwapView">
-          <h1>My Pictures</h1>
-          <img src="images/pic1.jpg">
-      </div>
+  <body style="visibility:hidden;background-color:#6d6d6d">
+    <div data-dojo-type="dojox.mobile.SwapView">
+      <h1>My Pictures</h1>
+      <img src="images/pic1.jpg">
+    </div>
 
-      <div data-dojo-type="dojox.mobile.SwapView">
-          <h1>May 3, 2011</h1>
-          <img src="images/pic2.jpg">
-      </div>
+    <div data-dojo-type="dojox.mobile.SwapView">
+      <h1>May 3, 2011</h1>
+      <img src="images/pic2.jpg">
+    </div>
 
-      <div data-dojo-type="dojox.mobile.SwapView">
-          <h1>May 3, 2011</h1>
-          <img src="images/pic3.jpg">
-      </div>
+    <div data-dojo-type="dojox.mobile.SwapView">
+      <h1>May 3, 2011</h1>
+      <img src="images/pic3.jpg">
+    </div>
 
-      <div data-dojo-type="dojox.mobile.PageIndicator" fixed="bottom"></div>
+    <div data-dojo-type="dojox.mobile.PageIndicator"
+         data-dojo-props='fixed:"bottom"'></div>
   </body>
 
-.. image :: PageIndicator-anim.png
+.. image :: PageIndicator-anim.gif

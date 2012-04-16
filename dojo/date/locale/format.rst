@@ -119,15 +119,17 @@ m                       minutes               37
 s                       seconds               43
 S                       milliseconds          777                                     SSS
 vz                      timezone              EST
-Z                       timezone offset       GMT-04:0  0                             ZZZZ
+Z                       timezone offset       GMT-04:00                               ZZZZ
 "                       "                     -0400                                   Z
 ======================  ====================  ======================================  ======
 
 Notes:
 
-* Everything in this module assumes Gregorian calendars. Other calendars will be implemented in separate modules.
+* Everything in this module assumes Gregorian calendars. For other calendars, see dojox/date
 
-* The source mentions that a single quote can be added by supplying 2 of them, but this doesn't appear to work
+* The representation of timezone names vary by browser and operating system.  The string is simply parsed and passed through from the representation in Date.toString().  For more precise handling of timezones, see dojox/date
+
+* A single quote can be incorporated in a quoted string by supplying 2 of them, for example 'o''clock'
 
 Examples
 ========
