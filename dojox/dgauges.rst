@@ -59,8 +59,8 @@ This example shows how to add a gauge to a Dojo application using markup:
 .. html ::
 
     <div data-dojo-type="dojox.dgauges.components.default.CircularLinearGauge"
-					value="20" minimum="-50" maximum="50"
-					style="width:300px; height:300px">
+         value="20" minimum="-50" maximum="50"
+         style="width:300px; height:300px">
     </div>
 	
 
@@ -112,9 +112,9 @@ The framework provides 2 events:
  
 .. js ::
 
- 						var gauge = registry.byId("g1");
-						gauge.on("startEditing", function(event){console.log(event.indicator.value);});
-						gauge.on("endEditing", function(event){console.log(event.indicator.value);});
+var gauge = registry.byId("g1");
+gauge.on("startEditing", function(event){console.log(event.indicator.value);});
+gauge.on("endEditing", function(event){console.log(event.indicator.value);});
 
 
 Scalers
@@ -140,17 +140,17 @@ A scale and its scaler collaborate to handle the ticks. The scale provides a tic
 
 .. js ::
 
-           scale.tickShapeFunc = function(group, scale, tick){
-               return group.createLine({
-                   x1: 0,
-                   y1: 0,
-                   x2: tick.isMinor ? 6 : 10,
-                   y2: 0
-               }).setStroke({
-                   color: "black",
-                   width: 1
-               });
-           };
+scale.tickShapeFunc = function(group, scale, tick){
+  return group.createLine({
+    x1: 0,
+    y1: 0,
+    x2: tick.isMinor ? 6 : 10,
+    y2: 0
+  }).setStroke({
+    color: "black",
+    width: 1
+  });
+};
 
 
 
@@ -158,11 +158,11 @@ Ticks labeling is handled in a similar way using the tickLabelFunc method:
 
 .. js ::
 
-    scale.tickLabelFunc = function(tick){
-		  if (!tick.isMinor){
-		    return tick.value + "°";
-              }
-	    };
+scale.tickLabelFunc = function(tick){
+  if (!tick.isMinor){
+    return tick.value + "°";
+  }
+};
 
 
 
@@ -178,12 +178,12 @@ A value indicator is drawn by its indicatorShapeFunc. The following code show a 
 
 .. js ::
 
-         indicator1.indicatorShapeFunc = function(group, indicator){
-               return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
-                   color: "blue",
-                   width: 0.25
-               }).setFill([100, 100, 255, 1]);
-           }
+indicator1.indicatorShapeFunc = function(group, indicator){
+  return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
+    color: "blue",
+    width: 0.25
+  }).setFill([100, 100, 255, 1]);
+}
 
 Note: Due to VML limitations, circular range indicators are displayed quite distorded.
 
@@ -219,26 +219,28 @@ For creating a circular gauges, subclass CircularGauge:
 
 .. js ::
 
-    define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge"], 
-      function(lang, declare, CircularGauge){
-	return declare("MyGauge", CircularGauge, {
-		constructor: function(){
-                  // Add your elements here
-		}
-    })});
+define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge"], 
+   function(lang, declare, CircularGauge){
+     return declare("MyGauge", CircularGauge, {
+	constructor: function(){
+          // Add your elements here
+	}
+   })
+});
 
 For creating a horizontal or vertical gauge, subclass RectangularGauge and set the orientation property:
 
 .. js ::
 
-     define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge"], 
-       function(lang, declare, RectangularGauge){
-	 return declare("MyGauge", RectangularGauge, {
-		constructor: function(){
-                   this.orientation = "vertical" // or "horizontal" (default)
-                   // Add your elements here
-		}
-    })});
+define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge"], 
+  function(lang, declare, RectangularGauge){
+  return declare("MyGauge", RectangularGauge, {
+    constructor: function(){
+      this.orientation = "vertical" // or "horizontal" (default)
+      // Add your elements here
+    }
+  });
+});
 
 
 Then you define the logic and the visual representation of the gauge in the constructor by adding elements. 
