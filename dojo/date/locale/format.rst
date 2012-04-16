@@ -119,7 +119,7 @@ m                       minutes               37
 s                       seconds               43
 S                       milliseconds          777                                     SSS
 vz                      timezone              EST
-Z                       timezone offset       GMT-04:0  0                             ZZZZ
+Z                       timezone offset       GMT-04:00                               ZZZZ
 "                       "                     -0400                                   Z
 ======================  ====================  ======================================  ======
 
