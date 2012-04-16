@@ -46,27 +46,25 @@ Connecting dijit.form.ComboBox
 ------------------------------
 
 .. code-example ::
+ :djConfig: async: true, parseOnLoad: true
   
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.ComboBox");
-
-      var storeData =   { identifier: 'abbr',
-        label: 'name',
-        items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
+        require(["dojo/store/Memory", "dijit/form/ComboBox", "dojo/parser"], function () {
+            storeData =  [
+                { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+                { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+                { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+                { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+                { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+                { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+                { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+            ];
+        });
 
   .. html ::
 
-    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dojo/store/Memory" data-dojo-props="data:storeData, idProperty:'abbr'" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit/form/ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
 
 
@@ -74,56 +72,66 @@ Connecting dijit.Tree
 ---------------------
 
 .. code-example ::
+ :djConfig: async: true, parseOnLoad: true
   
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
+        require(["dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree", "dojo/parser"], function () {
+            storeData =  [
+                { abbr:'world', name: 'Countries' },
+                { abbr:'ec', name:'Ecuador',           capital:'Quito', parent: 'world' },
+                { abbr:'eg', name:'Egypt',             capital:'Cairo', parent: 'world' },
+                { abbr:'sv', name:'El Salvador',       capital:'San Salvador', parent: 'world' },
+                { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo', parent: 'world' },
+                { abbr:'er', name:'Eritrea',           capital:'Asmara', parent: 'world' },
+                { abbr:'ee', name:'Estonia',           capital:'Tallinn', parent: 'world' },
+                { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa', parent: 'world' }
+            ];
+        });
 
-      var storeData =   { identifier: 'abbr',
-        label: 'name',
-        items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
 
   .. html ::
 
-    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
-    <div data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-id="countryModel" data-dojo-props="store:countryStore, query:{}, rootId:'Countries', rootLabel:'Countries'"></div>
-    <div data-dojo-type="dijit/Tree" data-dojo-props="model:countryModel"></div>
+     <div data-dojo-type="dojo/store/Memory" data-dojo-props="data:storeData, idProperty:'abbr'" data-dojo-id="countryStore">
+     <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="object">
+         // Supply a getChildren() method to store for the data model where
+         // children objects point to their parent (aka relational model)
+         return this.query({parent: object.abbr});
+    </script>
+        
+    </div>
 
-    
+    <!-- Create the model bridging the store and the Tree -->
+    <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="countryModel"
+        data-dojo-props="store: countryStore, query: {'abbr':'world'}"></div>
+
+    <!-- Create the tree -->
+    <div data-dojo-type="dijit/Tree" id="myTree" data-dojo-props="model: countryModel"></div>
+
 Connecting dijit.form.FilteringSelect
 -------------------------------------
 
 .. code-example ::
+ :djConfig: async: true, parseOnLoad: true
   
   .. js ::
 
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.form.FilteringSelect");
+        require(["dojo/store/Memory", "dijit/form/FilteringSelect", "dojo/parser"], function () {
+            storeData =  [
+                { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+                { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+                { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+                { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+                { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+                { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+                { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+            ];
+        });
 
-      var storeData =   { identifier: 'abbr',
-        label: 'name',
-        items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
 
   .. html ::
 
-    <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dojo/store/Memory" data-dojo-props="data:storeData, idProperty:'abbr'" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
 
 
@@ -131,44 +139,46 @@ Connecting dojox.grid.DataGrid
 ------------------------------
 
 .. code-example ::
-
+ :djConfig: async: true, parseOnLoad: true
+  
   .. js ::
 
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileReadStore");
-      var layoutCountries = [
-        [
-          { field: "abbr", name: "Abbreviation", width: 10 },
-          { field: "name", name: "Name", width: 10 },
-          { field: "capital", name: "Capital", width: 'auto' }
-        ]
-      ];
+        require(["dojo/store/Memory", "dojo/data/ObjectStore", "dojox/grid/DataGrid", "dojo/parser"], function () {
+            layoutCountries = [[
+                { field: "abbr", name: "Abbreviation", width: 10 },
+                { field: "name", name: "Name", width: 10 },
+                { field: "capital", name: "Capital", width: 'auto' }
+            ]];
 
-      var storeData =   { identifier: 'abbr',
-        label: 'name',
-        items: [
-          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
-          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
-          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
-          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
-          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
-          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
-          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
-
+            storeData =  [
+                { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+                { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+                { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+                { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+                { abbr:'er', name:'Eritrea',           capital:'Asmara'  },
+                { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+                { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+            ];
+        });
 
   .. html ::
 
     <div style="width: 400px; height: 300px;">
-      <div data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-id="countryStoreForGrid" data-dojo-props="data:storeData"></div>
-      <div id="grid"
-        data-dojo-type="dojox/grid/DataGrid"
-        data-dojo-props="store:countryStoreForGrid,
-        structure:'layoutCountries',
-        queryOptions:{deep:true},
-        query:{},
-        rowsPerPage:40">
-      </div>
+          <div data-dojo-type="dojo.store.Memory" data-dojo-props="data:storeData, idProperty:'abbr'" data-dojo-id="countryStore">
+          </div>
+
+          <!-- Create the model bridging the store and the Tree -->
+          <div data-dojo-type="dojo.data.ObjectStore" data-dojo-id="countryStoreForGrid"
+              data-dojo-props="objectStore: countryStore"></div>
+
+          <div id="grid"
+              data-dojo-type="dojox/grid/DataGrid"
+              data-dojo-props="store:countryStoreForGrid,
+              structure:'layoutCountries',
+              queryOptions:{deep:true},
+              query:{},
+              rowsPerPage:40">
+          </div>
     </div>
 
   .. css ::
