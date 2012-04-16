@@ -176,12 +176,12 @@ A value indicator is drawn by its indicatorShapeFunc. The following code show a 
 
 .. js ::
 
-indicator1.indicatorShapeFunc = function(group, indicator){
-  return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
-    color: "blue",
-    width: 0.25
-  }).setFill([100, 100, 255, 1]);
-}
+  indicator1.indicatorShapeFunc = function(group, indicator){
+    return group.createPolyline([0, -3, 30, 0, 0, 3, 0, -3]).setStroke({
+      color: "blue",
+      width: 0.25
+    }).setFill([100, 100, 255, 1]);
+  }
 
 Note: Due to VML limitations, circular range indicators are displayed quite distorded.
 
@@ -217,28 +217,28 @@ For creating a circular gauges, subclass CircularGauge:
 
 .. js ::
 
-define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge"], 
-   function(lang, declare, CircularGauge){
-     return declare("MyGauge", CircularGauge, {
-	constructor: function(){
-          // Add your elements here
-	}
-   })
-});
+  define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/CircularGauge"], 
+     function(lang, declare, CircularGauge){
+       return declare("MyGauge", CircularGauge, {
+	  constructor: function(){
+            // Add your elements here
+         }
+      });
+  });
 
 For creating a horizontal or vertical gauge, subclass RectangularGauge and set the orientation property:
 
 .. js ::
 
-define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge"], 
-  function(lang, declare, RectangularGauge){
-  return declare("MyGauge", RectangularGauge, {
-    constructor: function(){
-      this.orientation = "vertical" // or "horizontal" (default)
-      // Add your elements here
-    }
+  define(["dojo/_base/lang", "dojo/_base/declare", "dojox/dgauges/RectangularGauge"], 
+    function(lang, declare, RectangularGauge){
+    return declare("MyGauge", RectangularGauge, {
+      constructor: function(){
+        this.orientation = "vertical" // or "horizontal" (default)
+        // Add your elements here
+      }
+    });
   });
-});
 
 
 Then you define the logic and the visual representation of the gauge in the constructor by adding elements. 
