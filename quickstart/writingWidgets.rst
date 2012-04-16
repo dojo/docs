@@ -593,6 +593,32 @@ There's an alternate template syntax for widgets which lets you have conditional
   
   * `just a proposal`
 
+Common Issues
+=============
+
+Having trouble adding support for widgets templates? Ensure that any mixins referenced (_TemplatedMixin, _WidgetsInTemplate) in the dependency list for the widget are listed after the _WidgetBase dependency. This ensures those mixins will extend methods provided by _WidgetBase, rather than the other way round. 
+
+For example, the following sample:
+
+.. js ::
+
+       require(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], 
+           function(declare, _WidgetBase, _TemplatedMixin){
+               declare("SomeModule", [_TemplatedMixin, _WidgetBase], {
+               });
+        });
+
+Should be changed to: 
+
+.. js ::
+
+       require(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], 
+           function(declare, _WidgetBase, _TemplatedMixin){
+               declare("SomeModule", [_WidgetBase, _TemplatedMixin], {
+               });
+        });
+
+
 See also
 ========
 
