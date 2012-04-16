@@ -112,9 +112,9 @@ The framework provides 2 events:
  
 .. js ::
 
-var gauge = registry.byId("g1");
-gauge.on("startEditing", function(event){console.log(event.indicator.value);});
-gauge.on("endEditing", function(event){console.log(event.indicator.value);});
+  var gauge = registry.byId("g1");
+  gauge.on("startEditing", function(event){console.log(event.indicator.value);});
+  gauge.on("endEditing", function(event){console.log(event.indicator.value);});
 
 
 Scalers
@@ -140,30 +140,28 @@ A scale and its scaler collaborate to handle the ticks. The scale provides a tic
 
 .. js ::
 
-scale.tickShapeFunc = function(group, scale, tick){
-  return group.createLine({
-    x1: 0,
-    y1: 0,
-    x2: tick.isMinor ? 6 : 10,
-    y2: 0
-  }).setStroke({
-    color: "black",
-    width: 1
-  });
-};
-
+  scale.tickShapeFunc = function(group, scale, tick){
+    return group.createLine({
+      x1: 0,
+      y1: 0,
+      x2: tick.isMinor ? 6 : 10,
+      y2: 0
+    }).setStroke({
+      color: "black",
+      width: 1
+    });
+  };
 
 
 Ticks labeling is handled in a similar way using the tickLabelFunc method:
 
 .. js ::
 
-scale.tickLabelFunc = function(tick){
-  if (!tick.isMinor){
-    return tick.value + "°";
-  }
-};
-
+  scale.tickLabelFunc = function(tick){
+    if (!tick.isMinor){
+      return tick.value + "°";
+    }
+  };
 
 
 Value and Range Indicators
