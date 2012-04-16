@@ -465,3 +465,5 @@ Example of a custom horizontal gauge
       }
     });
   });
+
+  
