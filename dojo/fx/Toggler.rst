@@ -106,7 +106,10 @@ Example 2:  Toggle a DOM node with custom durations
 Example 3:  Toggle a DOM node with custom animation functions
 -------------------------------------------------------------
 
-*You can also use the `dojo.fx.wipeIn` and `dojo.fx.WipeOut` .*
-Check example in :ref:`dojo.fx.wipeIn</wipeIn-examples>`
+You can also use the `dojo.fx.wipeIn` and `dojo.fx.WipeOut` .
+Check this example for 
+`dojo.fx.wipeIn </dojo/fx/wipeIn-examples>`_
+
+
 
  
