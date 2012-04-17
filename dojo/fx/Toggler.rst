@@ -54,25 +54,21 @@ Examples
 Example 1:  Toggle a DOM node (with defaults)
 ---------------------------------------------
 
-.. code-example ::
   
   .. js ::
-
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.fx");
-      function basicToggle(){
-         var toggler = new dojo.fx.Toggler({
-           node: "basicNode"
-         });
-         dojo.connect(dijit.byId("showButton"), "onClick", toggler, "show");
-         dojo.connect(dijit.byId("hideButton"), "onClick", toggler, "hide");
-      }
-      dojo.ready(basicToggle);
+		
+      require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
+        var toggler = new dojo.fx.Toggler({
+	  node: "basicNode"
+	});
+	hideFunc = function (){toggler.hide();}
+	showFunc = function (){toggler.show();}
+      });
 
   .. html ::
 
-    <button data-dojo-type="dijit/form/Button" id="hideButton">Hide the node!</button>
-    <button data-dojo-type="dijit/form/Button" id="showButton">Show the node!</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:hideFunc">Hide the node! </button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showFunc">Show the node! </button>
     <div id="basicNode" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
@@ -82,57 +78,35 @@ Example 2:  Toggle a DOM node with custom durations
 
 *This example has a slow fade out and a slowish fade in.*
 
-.. code-example ::
   
   .. js ::
 
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.fx");
-      function basicToggle1(){
-         var toggler = new dojo.fx.Toggler({
-           node: "basicNode1",
-           showDuration: 3000,
-           hideDuration: 5000
-         });
-         dojo.connect(dijit.byId("showButton1"), "onClick", toggler, "show");
-         dojo.connect(dijit.byId("hideButton1"), "onClick", toggler, "hide");
-      }
-      dojo.ready(basicToggle1);
+      require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
+        var toggler = new dojo.fx.Toggler({
+	  node: "basicNode",
+          showDuration: 3000,
+          hideDuration: 5000
+	});
+	hideFunc = function (){
+          toggler.hide();
+        }
+	showFunc = function (){
+          toggler.show();
+        }
+      });
 
   .. html ::
 
-    <button data-dojo-type="dijit/form/Button" id="hideButton1">Hide the node!</button>
-    <button data-dojo-type="dijit/form/Button" id="showButton1">Show the node!</button>
-    <div id="basicNode1" style="width: 200px; background-color: red;">
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:hideFunc">Hide the node! </button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showFunc">Show the node! </button>
+    <div id="basicNode" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
 
-Example 2:  Toggle a DOM node with custom animation functions
+Example 3:  Toggle a DOM node with custom animation functions
 -------------------------------------------------------------
 
-*This example uses the wipeOut and wipeIn functions.*
+*You can also use the `dojo.fx.wipeIn` and `dojo.fx.WipeOut` .*
+Check example in :ref:`dojo.fx.wipeIn</wipeIn-examples>`
 
-.. code-example ::
-  
-  .. js ::
-
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.fx");
-      function basicToggle2(){
-         var toggler = new dojo.fx.Toggler({
-           node: "basicNode2",
-           showFunc: dojo.fx.wipeIn,
-           hideFunc: dojo.fx.wipeOut
-         });
-         dojo.connect(dijit.byId("showButton2"), "onClick", toggler, "show");
-         dojo.connect(dijit.byId("hideButton2"), "onClick", toggler, "hide");
-      }
-      dojo.ready(basicToggle2);
-
-  .. html ::
-
-    <button data-dojo-type="dijit/form/Button" id="hideButton2">Hide the node!</button>
-    <button data-dojo-type="dijit/form/Button" id="showButton2">Show the node!</button>
-    <div id="basicNode2" style="width: 200px; background-color: red;">
-      <b>This is a container of random content to toggle!</b>
-    </div>
+ 
