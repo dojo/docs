@@ -56,7 +56,8 @@ Example 1:  Toggle a DOM node (with defaults)
 
   
   .. js ::
-		
+
+      // Dojo 1.7 (AMD)		
       require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
         var toggler = new dojo.fx.Toggler({
 	  node: "basicNode"
@@ -81,6 +82,7 @@ Example 2:  Toggle a DOM node with custom durations
   
   .. js ::
 
+      // Dojo 1.7 (AMD)	
       require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
         var toggler = new dojo.fx.Toggler({
 	  node: "basicNode",
