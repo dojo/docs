@@ -12,7 +12,8 @@ The Dojo Toolkit is dual-licensed. The preferred license is the Academic Free Li
 For users who face the problem of artificial ambiguity the FSF has created regarding the compatibility of the AFL and the (L)GPL, The Dojo Toolkit may alternately be used under the terms of the BSD License. Both the AFL and the BSD licenses meet the licensing goals of the Dojo Foundation.
 
 Dojo's "dual licensing" is different than that of many Open Source projects in that the terms of both licenses are Open Source and extremely permissive. There are no royalties or commercial use clauses to complicate the matter. In almost every case, you will not need to choose anything other than the AFL and in the common case you need not do anything to denote this choice of license. If you have questions regarding Dojo licensing, please do not hesitate to contact Alex Russell, current President of the Dojo Foundation.
-The Role of the Dojo Foundation
+
+**The Role of the Dojo Foundation**
 
 Dojo is Open Source software, distributed by a non-profit foundation which has been set up for the purpose of providing a vendor-neutral owner of Dojo intellectual property. In order to ensure to users of Foundation projects that there is no ambiguity or hidden liability regarding the use of Foundation code, all contributors are required to provide signed Contributor License Agreements.
 
