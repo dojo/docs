@@ -39,6 +39,8 @@ The basic usage looks like:
     on(document, "click", clickHandler);
   });
 
+Removing an event handler
+-------------------------
 
 Dojo provides a way to remove an event handler. The return value of `on` is a simple object with a `remove` method, which will remove the event listener when called. For example, to listen for a single click, one could do:
 
