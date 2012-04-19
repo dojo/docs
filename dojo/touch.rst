@@ -13,21 +13,21 @@ dojo.touch
 Introduction
 ============
 
-This module provides an unified set of touch events - "press | move | release | cancel", which can run well across a wide range of devices(including desktops).
+This module provides a set of events designed to work similarly on desktop (i.e. mouse) and touch devices:
 
-The rationale is very simple - "press | move | release | cancel" are mapped to:
+   - press, release - "mousedown" and "mouseup" on desktop, "touchstart" and "touchend" on touch devices
+   - over, out - "mouseover" and "mouseout" on desktop, and functionally equivalent events on touch devices
+   - enter, leave - :ref:`dojo/mouse::enter <dojo/mouse#mouse-enter>` and :ref:`dojo/mouse::leave <dojo/mouse#mouse-leave>`
+     on desktop,and functionally equivalent events on touch devices
+   - move - "mousemove" on desktop, and functionally equivalent event on touch devices; note that unlike the native
+     touchmove event, this synthetic event fires on the node that the finger is currently over, rather than the node
+     where the drag started
+   - cancel - "mouseleave" on desktop and "touchcancel" on touch devices
 
-- "touchstart | touchmove | touchend | touchcancel" on touch devices(`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_)
-
-- "mousedown | mousemove | mouseup | mouseleave" on desktops.
-
-So by using dojo/touch, we don't need to worry about appropriate native events when switching running platforms.
 
 
 Usages
 ======
-
-dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | release | cancel" 4 event handles. Following below are detail usages:
 
 
 1. Used with dojo/on
@@ -38,7 +38,7 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
         on(node, touch.press, function(e){});
         on(node, touch.move, function(e){});
         on(node, touch.release, function(e){});
-        on(node, touch.cancel, function(e){});
+        ...
       }
 
 
@@ -50,27 +50,22 @@ dojo/touch is based on :ref:`dojo/on <dojo/on>` and provides "press | move | rel
         touch.press(node, function(e){});
         touch.move(node, function(e){});
         touch.release(node, function(e){});
-        touch.cancel(node, function(e){});
+        ...
       }
-
-3. Or used with the traditional dojo/connect
-
-.. js ::
-  
-        dojo.connect(node, dojo.touch.press, function(e){});
-        dojo.connect(node, dojo.touch.move, function(e){});
-        dojo.connect(node, dojo.touch.release, function(e){});
-        dojo.connect(node, dojo.touch.cancel, function(e){});
-
-
 
 Relationship with dojo/gesture
 ==============================
 
-dojo/touch is the underneath basis for :ref:`dojox/gesture <dojox/gesture>`
+:ref:`dojox/gesture <dojox/gesture>` extends dojo/touch
 
 
 Known Issues
 ============
 
-If a device (like blackberry phones or some high end desktop computers) has both mouse and touch, dojo.touch will only monitor touch events, ideally it should be monitoring both. Please also See `#13048 <http://bugs.dojotoolkit.org/ticket/13048>`_.
+If a device (like blackberry phones or some high end desktop computers) has both mouse and touch,
+dojo.touch will only monitor touch events; ideally it should be monitoring both.
+Please see `#13048 <http://bugs.dojotoolkit.org/ticket/13048>`_.
+
+See Also
+========
+`W3C Touch Events Specification <http://www.w3.org/TR/touch-events/>`_

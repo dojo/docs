@@ -137,6 +137,21 @@ The dojo/_base/sniff module was superseded by dojo/sniff.
 dojo/sniff functions the same way as the old module, except doesn't set globals like dojo.isIE.
 Instead, use has("ie") etc.
 
+dojo/touch
+----------
+dojo/touch was enhanced to support touch.over, touch.out, touch.enter and touch.leave synthetic events similar to
+mouseover, mouseout, mouseenter, and mouseleave.
+
+In addition, touch.move on mobile was changed to work like mousemove on desktop, so that when connecting to a DOMNode:
+
+.. js ::
+
+    on(node, touch.move, func)
+
+It fires whenever and only when the finger is dragged over the specified node, regardless of where the drag started.
+Behavior when connecting to a document is unchanged.
+
+
 Dijit
 =====
 _WidgetBase
