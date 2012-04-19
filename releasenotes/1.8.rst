@@ -36,6 +36,10 @@ Dojo Base
 Dojo Core
 =========
 
+dojo/dnd
+--------
+dojo/dnd was enhanced to work on touch devices.
+
 dojo/parser
 -----------
 
@@ -267,6 +271,7 @@ Tree
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
 - New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically
   (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
+- Tree DnD now works on touch devices.
 
 Claro
 -----
