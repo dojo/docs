@@ -1,7 +1,7 @@
 .. _dojo/fx/Toggler:
 
 ===============
-dojo.fx.Toggler
+dojo/fx/Toggler
 ===============
 
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
@@ -11,7 +11,10 @@ dojo.fx.Toggler
 .. contents ::
     :depth: 2
 
-The dojo.fx.Toggler is a helper class for wrapping a DOM node with 'FX' to use when showing and hiding that node.  By default it uses the :ref:`dojo.fadeIn <dojo/fadeIn>` for showing and :ref:`dojo.fadeOut <dojo/fadeOut>` for hiding of a node.  The Togger is set up by passing in an JavaScript object of parameters that define the node, the animation functions to use, and the duration for the show and hide operations.
+**dojo/fx/Toggler** is a helper class for wrapping a DOM node with 'FX' to use when showing and hiding that node. By
+default it uses the :ref:`dojo/_base/fx::fadeIn() <dojo/_base/fx#fadein>` for showing and :ref:`dojo/_base/fx::fadeOut()
+<dojo/_base/fx#fadeout>` for hiding of a node. The Toggler is set up by passing in an JavaScript object of parameters
+that define the node, the animation functions to use, and the duration for the show and hide operations.
 
 
 Constructor Parameters
@@ -54,22 +57,27 @@ Examples
 Example 1:  Toggle a DOM node (with defaults)
 ---------------------------------------------
 
+.. code-example ::
   
   .. js ::
 
-      // Dojo 1.7 (AMD)		
-      require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
-        var toggler = new dojo.fx.Toggler({
-	  node: "basicNode"
-	});
-	hideFunc = function (){toggler.hide();}
-	showFunc = function (){toggler.show();}
+    require(["dojo/fx/Toggler", "dojo/dom", "dojo/on", "dojo/domReady!"], 
+    function(Toggler, dom, on){
+      var toggler = new Toggler({
+        node: "basicNode"
       });
+      on(dom.byId("hideButton"), "click", function(e){
+        toggler.hide();
+      });
+      on(dom.byId("showButton"), "click", function(e){
+        toggler.show();
+      });
+    });
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:hideFunc">Hide the node! </button>
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showFunc">Show the node! </button>
+    <button type="button" id="hideButton">Hide the node! </button>
+    <button type="button" id="showButton">Show the node! </button>
     <div id="basicNode" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
@@ -77,30 +85,31 @@ Example 1:  Toggle a DOM node (with defaults)
 Example 2:  Toggle a DOM node with custom durations
 ---------------------------------------------------
 
-*This example has a slow fade out and a slowish fade in.*
+.. code-example ::
 
-  
+  This example has a slow fade out and a slowish fade in.
+
   .. js ::
 
-      // Dojo 1.7 (AMD)	
-      require(["dojo/fx/Toggler", "dijit/form/Button"], function(){
-        var toggler = new dojo.fx.Toggler({
-	  node: "basicNode",
-          showDuration: 3000,
-          hideDuration: 5000
-	});
-	hideFunc = function (){
-          toggler.hide();
-        }
-	showFunc = function (){
-          toggler.show();
-        }
+    require(["dojo/fx/Toggler", "dojo/dom", "dojo/on", "dojo/domReady!"], 
+    function(Toggler, dom, on){
+      var toggler = new Toggler({
+        node: "basicNode",
+        showDuration: 3000,
+        hideDuration: 5000
       });
+      on(dom.byId("hideButton"), "click", function(e){
+        toggler.hide();
+      });
+      on(dom.byId("showButton"), "click", function(e){
+        toggler.show();
+      });
+    });
 
   .. html ::
 
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:hideFunc">Hide the node! </button>
-    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showFunc">Show the node! </button>
+    <button type="button" id="hideButton">Hide the node! </button>
+    <button type="button" id="showButton">Show the node! </button>
     <div id="basicNode" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
@@ -108,10 +117,31 @@ Example 2:  Toggle a DOM node with custom durations
 Example 3:  Toggle a DOM node with custom animation functions
 -------------------------------------------------------------
 
-You can also use the `dojo.fx.wipeIn` and `dojo.fx.WipeOut` .
-Check this example for 
-`dojo.fx.wipeIn </dojo/fx/wipeIn-examples>`_
+.. code-example ::
 
+  This examples uses the `wipeOut` and `wipeIn` functions.
 
+  .. js ::
 
- 
+    require(["dojo/fx/Toggler", "dojo/fx", "dojo/dom", "dojo/on", "dojo/domReady!"],
+    function(Toggler, coreFx, dom, on){
+      var toggler = new Toggler({
+        node: "basicNode",
+        showFunc: coreFx.wipeIn,
+        hideFunc: coreFx.wipeOut
+      });
+      on(dom.byId("hideButton"), "click", function(e){
+        toggler.hide();
+      });
+      on(dom.byId("showButton"), "click", function(e){
+        toggler.show();
+      });
+    });
+
+  .. html ::
+
+    <button type="button" id="hideButton">Hide the node! </button>
+    <button type="button" id="showButton">Show the node! </button>
+    <div id="basicNode" style="width: 200px; background-color: red;">
+      <b>This is a container of random content to toggle!</b>
+    </div>
