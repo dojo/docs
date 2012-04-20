@@ -1,8 +1,8 @@
-.. _dojo/when:
+.. _dojo/promise/first:
 
-=========
-dojo/when
-=========
+==================
+dojo/promise/first
+==================
 
 :authors: Mark Wubben
 :since: V1.8

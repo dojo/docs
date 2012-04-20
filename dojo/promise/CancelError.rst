@@ -1,8 +1,8 @@
-.. _dojo/when:
+.. _dojo/promise/CancelError:
 
-=========
-dojo/when
-=========
+========================
+dojo/promise/CancelError
+========================
 
 :authors: Mark Wubben
 :since: V1.8

@@ -1,8 +1,8 @@
-.. _dojo/when:
+.. _dojo/promise/tracer:
 
-=========
-dojo/when
-=========
+===================
+dojo/promise/tracer
+===================
 
 :authors: Mark Wubben
 :since: V1.8

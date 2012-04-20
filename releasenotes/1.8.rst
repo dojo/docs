@@ -33,20 +33,45 @@ Mobile (dojox/mobile)
 Dojo Base
 =========
 
+dojo/_base/Deferred
+-------------------
+
+``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilise the new promise
+architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
+``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
+
 Dojo Core
 =========
 
 dojo/dnd
 --------
-dojo/dnd was enhanced to work on touch devices.
+
+``dojo/dnd`` was enhanced to work on touch devices.
+
+dojo/Deferred
+-------------
+
+A new implementation of ``dojo/Deferred`` based on ``dojo/promise``. It only supports the "modern" promise syntax (e.g.
+``.then()`` instead of ``.addCallback()`` and ``.addErrback()``). It is strongly recommended that you migrate from
+``dojo/_base/Deferred`` and adopt the new API. See :ref:`dojo/Deferred <dojo/Deferred>`.
+
+dojo/DeferredList
+-----------------
+
+While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/promise/all`` and ``dojo/promise/first``.
 
 dojo/parser
 -----------
 
+There are several enhancements to ``dojo/parser``:
+
 Module IDs (MIDs)
 ~~~~~~~~~~~~~~~~~
 
-The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup (`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_).  Developers should use the MID in their code to ensure future compatibility with baseless modules.  Just as before, the parser will not load a module that is not already loaded, therefore they need to be required prior to invoking the parser.
+The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup
+(`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_). Developers should use the MID in their code to ensure future
+compatibility with baseless modules. Just as before, the parser will not load a module that is not already loaded,
+therefore they need to be required prior to invoking the parser.
 
 An example:
 
@@ -67,7 +92,8 @@ An example:
 data-dojo-mixins
 ~~~~~~~~~~~~~~~~
 
-The parser now also supports a new ``data-dojo-mixins`` attribute that allows to dynamically mixin one or several classes into the main ``data-dojo-type`` class as follows:
+The parser now also supports a new ``data-dojo-mixins`` attribute that allows to dynamically mixin one or several
+classes into the main ``data-dojo-type`` class as follows:
 
 .. js ::
 
@@ -129,20 +155,65 @@ Each of the following is possible:
     
   </div>
 
-*Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0.  In fact, internally the parser uses ``dojo/aspect`` to accomplish a connect anyways.
+*Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script
+tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0. In fact, internally the parser
+uses ``dojo/aspect`` to accomplish a connect anyways.
+
+dojo/promise
+------------
+
+The new ``dojo/promise`` package introduces a new architecture for asynchronous promises (callbacks), which are the
+foundation for :ref:`dojo/Deferred <dojo/Deferred>`.
+
+dojo/promise/Promise
+~~~~~~~~~~~~~~~~~~~~
+
+Promise base class. All promises will be instances of this class. See 
+:ref:`dojo/promise/Promise <dojo/promise/Promise>`.
+
+dojo/promise/CancelError
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Default error if a promise is canceled without a reason. See :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`.
+
+dojo/promise/all
+~~~~~~~~~~~~~~~~
+
+Takes multiple promises and returns a new promise that is fulfilled when all promises have been fulfilled. This
+essentially replaces ``dojo/DeferredList``. See :ref:`dojo/promise/all <dojo/promise/all>`.
+
+dojo/promise/first
+~~~~~~~~~~~~~~~~~~
+
+Takes multiple promises and returns a new promise that is fulfilled when the first of these promises is fulfilled. See
+:ref:`dojo/promise/first <dojo/promise/first>`.
+
+dojo/promise/tracer
+~~~~~~~~~~~~~~~~~~~
+
+A mixin that allows tracing of promise fulfilment. Calling ``.trace()`` or ``.traceError()`` on a promise enables
+tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See :ref:`dojo/promise/tracer
+<dojo/promise/tracer>`.
+
+dojo/request
+------------
+
+*TODOC*
 
 dojo/sniff
 ----------
-The dojo/_base/sniff module was superseded by dojo/sniff.
-dojo/sniff functions the same way as the old module, except doesn't set globals like dojo.isIE.
-Instead, use has("ie") etc.
+
+The dojo/_base/sniff module was superseded by dojo/sniff. ``dojo/sniff`` functions the same way as the old module,
+except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
 
 dojo/touch
 ----------
-dojo/touch was enhanced to support touch.over, touch.out, touch.enter and touch.leave synthetic events similar to
-mouseover, mouseout, mouseenter, and mouseleave.
 
-In addition, touch.move on mobile was changed to work like mousemove on desktop, so that when connecting to a DOMNode:
+``dojo/touch`` was enhanced to support touch.over, touch.out, touch.enter and touch.leave synthetic events similar to
+``mouseover``, ``mouseout``, ``mouseenter``, and ``mouseleave``.
+
+In addition, touch.move on mobile was changed to work like ``mousemove`` on desktop, so that when connecting to a
+DOMNode:
 
 .. js ::
 
@@ -151,11 +222,17 @@ In addition, touch.move on mobile was changed to work like mousemove on desktop,
 It fires whenever and only when the finger is dragged over the specified node, regardless of where the drag started.
 Behavior when connecting to a document is unchanged.
 
+dojo/when
+---------
+
+Transparently applies callbacks to values and/or promises.  See :ref:`dojo/when <dojo/when>`.
 
 Dijit
 =====
+
 _WidgetBase
 -----------
+
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
 
 .. js ::
@@ -181,6 +258,7 @@ _WidgetBase
 
 Calendar
 --------
+
 - Can now accept a String for the value parameter (either as an argument to the constructor, or to set("value", ...).
 
 .. js ::
@@ -189,40 +267,50 @@ Calendar
 
 ContentPane
 -----------
-ContentPane now supports addChild() and removeChild().
 
-However, the behavior of addChild(widget, index) is undefined if the ContentPane already contains
-random HTML.   It's intended to be used when the pane contains just a list of widgets,
-like Toolbar or BorderContainer.
+ContentPane now supports ``addChild()`` and ``removeChild()``.
 
-Also, ContentPane.addChild(child) will not call resize() on the new child widgets,
-so it should be used carefully on ContentPanes inside of a layout widget hierarchy.
-Note that resize() only works on visible widgets, not hidden widgets such as unselected tabs
-of a TabContainer.
+However, the behavior of ``addChild(widget, index)`` is undefined if the ContentPane already contains random HTML. It's
+intended to be used when the pane contains just a list of widgets, like Toolbar or BorderContainer.
+
+Also, ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used
+carefully on ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not
+hidden widgets such as unselected tabs of a TabContainer.
 
 DateTextBox
 -----------
-- DateTextBox's drop down Calendar no longer automatically opens upon clicking the input area, unless the hasDownArrow=false option is set (in which case that's the only way to open the drop down Calendar).(`#14142 <http://bugs.dojotoolkit.org/ticket/14142>`_)
+
+- DateTextBox's drop down Calendar no longer automatically opens upon clicking the input area, unless the
+  hasDownArrow=false option is set (in which case that's the only way to open the drop down Calendar).
+  (`#14142 <http://bugs.dojotoolkit.org/ticket/14142>`_)
 
 Dialog
 ------
-- Sizing improved for when Dialog is too big to fit in viewport.   Also, sizing automatically adjusts if users resizes the browser window. (`#14147 <http://bugs.dojotoolkit.org/ticket/14147>`_)
+
+- Sizing improved for when Dialog is too big to fit in viewport. Also, sizing automatically adjusts if users resizes the
+  browser window. (`#14147 <http://bugs.dojotoolkit.org/ticket/14147>`_)
 
 Editor
 ------
+
 - Performance fixes for editors with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
 
 Menu
 ----
-The Menu widget has two new (optional) attributes:
-  - selector:
-    CSS selector that specifies that the Menu should be attached, via event delegation,
-    to matching subnodes of targetNodeIds, rather than the targetNodeIds nodes themselves.
-  - currentTarget:
-    (readonly) which node the menu is being displayed for
 
-Together, they allow a single Menu to attach to multiple nodes through delegation,
-and for the Menu's action to be adjusted depending on the node.   For example:
+The Menu widget has two new (optional) attributes:
+
+- selector:
+
+  CSS selector that specifies that the Menu should be attached, via event delegation,
+  to matching subnodes of targetNodeIds, rather than the targetNodeIds nodes themselves.
+
+- currentTarget:
+
+  (readonly) which node the menu is being displayed for
+
+Together, they allow a single Menu to attach to multiple nodes through delegation, and for the Menu's action to be
+adjusted depending on the node. For example:
 
 .. js ::
 
@@ -242,19 +330,21 @@ and for the Menu's action to be adjusted depending on the node.   For example:
 
 This will track right-click events on each cell of a table with class="foo".
 
-Further, the targetNode's contents can be changed freely after the Menu is created.
-Nodes matching the selector can be created or removed, and no calls to bindDomNode() or
-unBindDomNode() are necessary.
+Further, the targetNode's contents can be changed freely after the Menu is created. Nodes matching the selector can be
+created or removed, and no calls to ``bindDomNode()`` or ``unBindDomNode()`` are necessary.
 
-Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
-you need to require() an appropriate level of dojo/query to handle your selector.
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
+dojo/query to handle your selector.
 
 Tooltip
 -------
+
 The Tooltip widget has two new (optional) parameters:
+
   - selector:
     CSS selector that specifies that the Tooltip should be attached, via event delegation,
     to matching subnodes of the connectId node, rather than the connectId itself.
+  
   - getContent():
     lets the app customize the tooltip text that's displayed based on the node that triggered
     the tooltip.
@@ -269,55 +359,64 @@ These parameters allow a single Tooltip widget to display unique tooltips for (f
     getContent: function(matchedNode){ return ...; /* String */}
   });
 
-Further, the table contents can be changed freely after the Tooltip is created.
-Rows can be created, removed, or modified, and no calls to the Tooltip widget are necessary.
+Further, the table contents can be changed freely after the Tooltip is created. Rows can be created, removed, or
+modified, and no calls to the Tooltip widget are necessary.
 
-Another example: specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on
-each row of a Tree, rather than merely monitoring mouseenter/mouseleave on the Tree itself.
+Another example: specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on each row of a Tree,
+rather than merely monitoring mouseenter/mouseleave on the Tree itself.
 
-Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`,
-you need to require() an appropriate level of dojo/query to handle your selector.
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
+dojo/query to handle your selector.
 
 Tree
 ----
-- New :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` class for connecting
-  :ref:`dijit/Tree <dijit/Tree>` to stores with the new :ref:`dojo.store <dojo/store>` API.
+
+- New :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` class for connecting 
+  :ref:`dijit/Tree <dijit/Tree>` to stores with the new :ref:`dojo.store <dojo/store>` API. 
   (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
+
 - persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
+
 - New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically
   (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
+
 - Tree DnD now works on touch devices.
 
 Claro
 -----
-All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images.
-This reduces the number of files downloaded, speeding up page load.
 
-Also, the remaining gradient images files (for IE) no longer contain any blue.
-Thus, customizing claro to a different does not require modifying those files.
-You are still required however to update icon files that contain the theme's primary color, such as:
+All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images. This
+reduces the number of files downloaded, speeding up page load.
+
+Also, the remaining gradient images files (for IE) no longer contain any blue. Thus, customizing claro to a different
+does not require modifying those files. You are still required however to update icon files that contain the theme's
+primary color, such as:
 
 - checkboxes and radio buttons
-- the slider handles
-- calendar arrows
-- Dialog and TabContainer close icons
-- etc.
 
+- the slider handles
+
+- calendar arrows
+
+- Dialog and TabContainer close icons
+
+- etc.
 
 Performance Improvements
 ------------------------
 There have been many performance improvements to dijit:
 
 - CSS gradients used in claro (see above)
-- _CssStateMixin now creates listeners at the document level, rather than separate listeners
-  for each widget.   This speeds up page instantiation time, especially on a page with many small widgets
-  like TextBoxes, Buttons, Trees (because of the many rows of the Tree), and Menus.
-- Similar event delegation changes were made for Menu and Tree, putting the listeners on the Menu or Tree rather than each
-  individual MenuItem/TreeNode
-- Performance improvement for TabContainers with closable tabs, because only one close Menu is created per
-  TabContainer, rather than one Menu per tab.   Event handling was also moved to TabContainer level rather than
-  at each individual tab.
 
+- _CssStateMixin now creates listeners at the document level, rather than separate listeners for each widget. This
+  speeds up page instantiation time, especially on a page with many small widgets like TextBoxes, Buttons, Trees
+  (because of the many rows of the Tree), and Menus.
+
+- Similar event delegation changes were made for Menu and Tree, putting the listeners on the Menu or Tree rather than
+  each individual MenuItem/TreeNode
+
+- Performance improvement for TabContainers with closable tabs, because only one close Menu is created per TabContainer,
+  rather than one Menu per tab. Event handling was also moved to TabContainer level rather than at each individual tab.
 
 DojoX
 =====

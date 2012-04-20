@@ -9,6 +9,8 @@ dojo/_base/Deferred
 .. contents ::
     :depth: 2
 
+*Deprecated*, use :ref:`dojo/Deferred <dojo/Deferred>` instead.
+
 dojo.Deferred manages the communication between asynchronous threads (Callbacks). dojo.Deferred encapsulates a sequence of callbacks in response to a value that may not yet be available.  All of dojo.xhr* functions make use of this class, as do many others, such as dojo.io.script.
 
 
