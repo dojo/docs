@@ -40,18 +40,20 @@ Retrieving a widget by its id and accessing its DOM node (main DOM rendering ele
   
   .. js ::
       
-      require(["dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-        function(dom, registry) {
-          // Locate the JS object.
-          var widget = registry.byId("myTextBox2");
-          if (widget){
-            var dNode = widget.domNode;
-            // Find my output node and write out I found my textbox and got its value.
-            dom.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
-          }else{
-            // Find my output node and write out I couldn't find the widget.
-            dom.byId("textNode2").innerHTML = "Could not locate my text box widget!";
-          }
+      require(["dojo/ready","dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
+        function(ready, dom, registry) {
+          ready(function() {
+              // Locate the JS object.
+              var widget = registry.byId("myTextBox2");
+              if (widget){
+                var dNode = widget.domNode;
+                // Find my output node and write out I found my textbox and got its value.
+                dom.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
+              }else{
+                // Find my output node and write out I couldn't find the widget.
+                dom.byId("textNode2").innerHTML = "Could not locate my text box widget!";
+              }
+          });
       });
 
   .. html ::
@@ -226,19 +228,21 @@ Comparing dom.byId and registry.byId
   
   .. js ::
   
-    require(["dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-            function(dom, registry) {
-                // Locate the JS object.
-                var dibiWidget = registry.byId("myTextBox3");
-                var dobiWidget = dom.byId("myTextBox3");
-                var dibiDOM = registry.byId("textNode3");
-                var dobiDOM = dom.byId("textNode3");
+    require(["dojo/ready", "dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
+            function(ready, dom, registry) {
+                ready(function() {
+                    // Locate the JS object.
+                    var dibiWidget = registry.byId("myTextBox3");
+                    var dobiWidget = dom.byId("myTextBox3");
+                    var dibiDOM = registry.byId("textNode3");
+                    var dobiDOM = dom.byId("textNode3");
 
 
-                dom.byId("textNode3").innerHTML = "registry.byId for widget id returned: " + dibiWidget + "<br>" +
+                    dom.byId("textNode3").innerHTML = "registry.byId for widget id returned: " + dibiWidget + "<br>" +
                                                   "dom.byId for widget id returned: " + dobiWidget + "<br>" +
                                                   "registry.byId for dom id returned: " + dibiDOM + "<br>" +
                                                   "dom.byId for dom id returned: " + dobiDOM + "<br>";
+                });
       });
 
   .. html ::
