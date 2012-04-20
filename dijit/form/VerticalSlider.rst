@@ -155,3 +155,9 @@ Known Issues
 Currently the text labels of a slider are not spoken by screen readers.  Firefox 3 provides the infrastructure necessary
 for spoken text labels so the slider will be updated to support them in a future Dojo release.  Developers should take
 care when using text labels since a screen reader user will hear only a numeric interpretation.
+
+There is currently no way to dynamically add labels into the Horizontal or VerticalRuleLabels, without destroying and recreating the label dijit.
+
+Workarounds
+-----------
+By default the VerticalSlider's display is set to table.  In order to stack 2 Vertical slider's side-by-side, you can override the .dijitSliderV style and specify inline-table instead.
