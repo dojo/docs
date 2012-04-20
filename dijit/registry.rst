@@ -37,11 +37,12 @@ If no such widget exists, it returns undefined.
 Retrieving a widget by its id and accessing its DOM node (main DOM rendering element)
 ----------------------------------------------------------------------------------------------
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
   
   .. js ::
       
-      require(["dojo/ready","dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-        function(ready, dom, registry) {
+      require(["dojo/parser","dojo/ready","dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
+        function(parser,ready, dom, registry) {
           ready(function() {
               // Locate the JS object.
               var widget = registry.byId("myTextBox2");
@@ -225,11 +226,12 @@ Comparing dom.byId and registry.byId
 *This example shows how the output of each is different.*
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
   
   .. js ::
   
-    require(["dojo/ready", "dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-            function(ready, dom, registry) {
+    require(["dojo/parser","dojo/ready", "dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
+            function(parser,ready, dom, registry) {
                 ready(function() {
                     // Locate the JS object.
                     var dibiWidget = registry.byId("myTextBox3");
