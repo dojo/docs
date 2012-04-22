@@ -55,9 +55,11 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 when()
 ======
 
+*Deprecated*, use :ref:`dojo/when <dojo/when>` instead.
+
 The `when()` function is a useful tool for interacting with Deferred objects since it can provide normalization between asynchronous Deferreds and normal synchronous values.
 
-As of Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor).
+In Dojo 1.7, the ``when`` function is exposed as a member of the ``dojo/_base/Deferred`` module return (which is also the ``Deferred`` constructor), but in Dojo 1.8, the module was moved to stand on its own.
 
 .. js ::
 
