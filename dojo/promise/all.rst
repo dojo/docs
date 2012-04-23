@@ -25,7 +25,9 @@ would only wait for the longest service to respond.
 Usage
 =====
 
-Usage is straight forward, in that ``dojo/promise/all`` a single argument that is either an Object or an Array.  The results are either returned as an Object that uses the same keys as supplied in the argument or an Array in the same order that the supplied one:
+Usage is straight forward, in that ``dojo/promise/all`` is a single argument that is either an Object or an Array. The
+results are either returned as an Object that uses the same keys as supplied in the argument or an Array in the same
+order that the supplied one:
 
 .. js ::
 
@@ -161,3 +163,10 @@ Examples
 
 See also
 ========
+
+* :ref:`dojo/promise <dojo/promise>` - The rest of the Dojo Promise API
+
+* :ref:`dojo/promise/first <dojo/promise/first>` - Like ``dojo/promise/all`` except gets fulfilled when the first
+  promise gets fulfilled.
+
+* :ref:`dojo/Deferred <dojo/Deferred>` - The base class for managing asynchronous thread communication in Dojo.
