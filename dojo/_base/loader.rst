@@ -1,4 +1,4 @@
-.. _dojo/base/loader:
+.. _dojo/_base/loader:
 
 =================
 dojo._base.loader

@@ -1,4 +1,4 @@
-.. _dijit/layout:
+.. _dijit/layout/index:
 
 ============
 dijit.layout

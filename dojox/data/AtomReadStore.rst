@@ -76,10 +76,6 @@ Query Example With One Parameter
     user: '1234'
   }
 
-Examples in Dojo Explorer
-====================================================
-Many examples are available in Dojo Explorer, at http://dojocampus.org/explorer/#Dojo_Data_AtomReadStore
-
 
 Example Usage of using AtomReadStore with a DataGrid
 ====================================================

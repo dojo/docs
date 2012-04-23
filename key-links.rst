@@ -13,7 +13,7 @@ Getting Started
 ===============
 
 * `SitePen Dojo QuickStart Guide <http://www.sitepen.com/blog/series/dojo-quick-start-guide/>`_, SitePen
-* `Hello Dojo <http://dojotoolkit.org/documentation/tutorials/1.6/hello_dojo>`_, SitePen and Sam Foster, mozilla, Dojo Committer
+* `Hello Dojo <http://dojotoolkit.org/documentation/tutorials/1.7/hello_dojo>`_, SitePen and Sam Foster, mozilla, Dojo Committer
 
 Demos
 =====
@@ -26,7 +26,7 @@ Demos
 * `Queued <http://www.sitepen.com/services/showcase/queued/>`_, Dojo + AIR Netflix Queue Manager, by SitePen
 * `StockList <http://www.sitepen.com/blog/2011/04/04/stocklist-real-time-business-analytics-using-dojo-and-lightstreamer/>`_, SitePen
 * `JavaScript Dojo API Docs <http://dojodocs.uxebu.com/>`_, JavaScript-based documentation viewer, by Uxebu
-* `Toura Mulberry <http://mulberry.toura.com/>`, Toura
+* `Toura Mulberry <http://mulberry.toura.com/>`_, Toura
 
 Core
 ====
@@ -38,9 +38,6 @@ Core
 * `X-Domain Loading using the AOL CDN <http://shaneosullivan.wordpress.com/2008/01/22/using-aol-hosted-dojo-with-your-custom-code/>`_
 * `Extending dojo.query <http://infrequently.org/2008/02/extending-dojoquery/>`_, Alex Russell, Google, Dojo Co-founder
 * `Improving Component Communication <http://www.sitepen.com/blog/2008/02/19/improving-component-communication-with-the-dojo-toolkit/>`_ , SitePen and Mike Wilcox, Dojo Committer
-* `Creating Your Own $ with Dojo <http://dojocampus.org/content/?p=67>`_, Neil Roberts, Dojo Committer
-* `Functional Ajax with Dojo <http://dojocampus.org/content/?p=66>`_, Neil Roberts, Dojo Committer
-* `The Dojo Parser <http://dojocampus.org/content/?p=63>`_, Peter Higgins, Dojo Project Lead
 * `Are You Sure You Should be Subclassing That? <http://www.sitepen.com/blog/2008/03/16/are-you-sure-you-should-be-subclassing-that/>`_, SitePen and Neil Roberts, Dojo Committer
 * `JavaScript Metaclass Programming <http://www.sitepen.com/blog/2008/03/18/javascript-metaclass-programming/>`_, SitePen and Neil Roberts, Dojo Committer
 * `dojo.DnD Complete Documentation <http://docs.google.com/View?docid=d764479_11fcs7s397>`_, Eugene Lazutkin, Dojo Committer
@@ -52,11 +49,6 @@ Core
 * `Firebug Lite and Dojo <http://www.sitepen.com/blog/2008/06/02/firebug-lite-and-dojo-not-just-for-ie/>`_, SitePen and Mike Wilcox, Dojo Committer
 * `Dojo Drag and Drop, Part 1 <http://www.sitepen.com/blog/2008/06/10/dojo-drag-and-drop-1/>`_, SitePen and Revin Guillen, Dojo Committer
 * `Using Dojo for Client-side Validation <http://www.informit.com/articles/article.aspx?p=1221432&rll=1>`_, James Harmon, Object Training Group, Dojo User
-* `dojo.hitch and scope <http://dojocampus.org/content/?p=154>`_, Sam Foster, mozilla, Dojo Committer
-* `Extending DnD with a Creator Function <http://dojocampus.org/content/2008/06/24/extending-dojodnd-with-a-creator-function/>`_, Jeff Balogh, Dojo Contributor
-* `Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_, Adam Peller, IBM, DojoX Project Lead
-* `Making Browser Sense... dojo.isBrowser? <http://dojocampus.org/content/2008/06/26/browser-sense/>`_, Gerald Lopez, Dojo Contributor
-* `Dojo Module Packaging and Loading <http://dojocampus.org/content/2008/10/09/dojo-module-packaging-and-loading/>`_, Peter Higgins, Adconion, Dojo Project Lead
 * `delegate(), delegate(), delegate() <http://infrequently.org/2008/10/delegate-delegate-delegate/>`_, Alex Russell, Google, Dojo Co-founder
 * `Dojo Concepts for Java Developers <http://www.ibm.com/developerworks/web/library/wa-aj-dojo/index.html?ca=drs->`_, Dave Draper, IBM, Dojo User
 * `Dojo: Building Blocks of the Web <http://www.sitepen.com/blog/2008/10/17/dojo-building-blocks-of-the-web/>`_, SitePen and Peter Higgins, Dojo Project Lead
@@ -80,10 +72,7 @@ Dijit
 * `Accessibility <http://www-03.ibm.com/able/resources/dojo.html>`_, Becky Gibson, IBM, Dojo Committer
 * `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 * `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
-* `Adding setTitle to TabContainer <http://dojocampus.org/content/2008/06/06/hacking-tabcontainer-settitle-extension/>`_, Peter Higgins, SitePen, Dojo Project Lead
 * `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
-* `dijit.Tree - server fetch on node expansion <http://dojocampus.org/content/2008/06/07/tree-server-fetch-on-node-expansion/>`_, Josh Trutwin, Dojo User
-* `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
 * `Implementing an Application Preloading Overlay <https://www.sitepen.com/blog/2008/10/06/implementing-a-web-application-preloading-overlay/>`_, SitePen and Peter Higgins, Adconion, Dojo Project Lead
 * `Dojo Tag Cloud Widget <http://ekrantz.com/index.php/2008/07/29/dojo-tag-cloud-widget.html>`_, Viktor Krantz, ekrantz.com, Dojo User
 * `Extending Dojo Widgets <http://heather.koyuk.net/refractions/?p=41>`_, Heather Koyuk, Dojo User
@@ -97,7 +86,6 @@ Grid
 
 * `Simple Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `Diving Deeper into Dojo Grids <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_, Bryan Forbes, SitePen, Dojo Committer
-* `Grid 1.1 screencast <http://dojocampus.org/content/?p=36>`_, Mark Hays, IBM, Dojo Committer
 * `Dojo 1.2 Grid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `New Features in the Dojo 1.2 Grid <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_, Bryan Forbes, SitePen, Dojo Committer
 * `A million records in the grid <http://www.oreillynet.com/onlamp/blog/2008/04/dojo_goodness_part_6_a_million.html>`_, Matthew Russell, Zaffra, Dojo Contributor
@@ -254,7 +242,6 @@ There are many blogs exclusively or partly devoted to dojo.
 
 * `Dojo's own blog <http://dojotoolkit.org/blog/feed>`_ (`RSS <http://www.dojotoolkit.org/blog/feed>`__)
 * `Dojo Toolkit Aggregator <http://www.dojotoolkit.org/aggregator>`_ (`RSS <http://www.dojotoolkit.org/aggregator/rss>`__) - collects articles from various sources
-* `Dojo Campus cookies <http://dojocampus.org/content/category/dojo-cookies/>`_ (`RSS <http://dojocampus.org/content/category/dojo-cookies/rss>`__)
 * `SitePen's blog <http://www.sitepen.com/blog/>`_ (`RSS <http://www.sitepen.com/blog/feed/rss/>`__) - has many articles about dojo
 * `Eugene's blog <http://lazutkin.com/blog/>`_ (`ATOM <http://lazutkin.com/blog/feeds/atom/latest/>`__) - has many articles about dojo
 * `Sam's blog <http://www.sam-i-am.com/work/blog.html>`_ - sometimes has dojo articles.

@@ -29,12 +29,12 @@ Usage
 .. js ::
  
  // Dojo 1.7+ (AMD)
- require(["dojo/dom/attr"], function(domAttr){
+ require(["dojo/dom-attr"], function(domAttr){
    domAttr.get(node, attr); // get
    domAttr.set(node, attr, value); // set
  });
  
- // Dojo < 1.7
+ // Dojo <1.7
  dojo.attr(node, attr); // get
  dojo.attr(node, attr, value); // set
 
@@ -105,6 +105,7 @@ The following example will set several attributes such as the "tabindex" and "na
 
   .. js ::
 
+      // Dojo < 1.7
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");
@@ -141,6 +142,7 @@ This example will demonstrate how you can set events using dojo.attr(). You shou
 
   .. js ::
 
+      // Dojo < 1.7
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");
@@ -170,6 +172,7 @@ The following example will set the "style" attribute of the given dom node. When
 
   .. js ::
 
+      // Dojo < 1.7
       // load modules for widgets in HTML to parse
       dojo.require("dojo.parser");
       dojo.require("dijit.form.Button");

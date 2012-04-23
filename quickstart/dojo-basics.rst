@@ -172,7 +172,7 @@ does the same thing. But that's not all!  *New in 1.0*, you can collapse the fun
   dojo.query("select", document).forEach("item.disabled = true;");
 
 
-Ay carumba!  That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about `forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
+Ay carumba!  That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be.
 
 
 dojo.connect

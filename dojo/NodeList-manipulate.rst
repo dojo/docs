@@ -551,8 +551,8 @@ Results in this DOM structure:
 
 insertBefore
 --------------------
-The nodes in this NodeList will be placed after the nodes
-matched by the query passed to insertAfter.
+The nodes in this NodeList will be placed before the nodes
+matched by the query passed to insertBefore.
 
 The nodes in this NodeList will be cloned if the query
 matches more than one element. Only the DOM nodes are cloned, not

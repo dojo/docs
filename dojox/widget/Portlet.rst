@@ -18,7 +18,8 @@ Introduction
 
 The Portlet widget adds enhanced features to the dijit.TitlePane widget. It adds the ability to close (remove) the widget from a GridContainer, and also to have configurable settings.
 
-The settings types included are
+The settings types included are:
+
  * dojox.widget.PortletSettings
    The base settings widget. Places the settings at the top of the Portlet, which slide into view when the settings icon is pressed.
  * dojox.widget.PortletDialogSettings
@@ -32,8 +33,8 @@ It is worth noting that this widget just implements one possible front end of a 
 Usage
 =====
 
-.. js ::
- 
+.. html ::
+
  <div data-dojo-type="dojox.widget.Portlet" title="My Flickr">
 
    <div data-dojo-type="dojox.widget.PortletSettings">
@@ -71,7 +72,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
       dojo.require("dojox.widget.Portlet");
 
   .. html ::
-   
+
     <div data-dojo-type="dojox.widget.Portlet" title="A Simple Portlet">
         <div data-dojo-type="dojox.widget.PortletSettings">
               This is a simple settings widget.
@@ -87,7 +88,7 @@ This example shows a very simplistic Portlet, with just a simple PortletSettings
 
   .. css ::
 
-      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+      @import "{{baseUrl}}dojox/widget/Portlet/Portlet.css"
 
 Basic Feed Portlet
 ------------------
@@ -109,7 +110,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
       dojo.require("dojox.widget.FeedPortlet");
 
   .. html ::
-   
+
      <div data-dojo-type="dojox.widget.FeedPortlet" title="Todays News"
         id="todaysNews"
         url="http://news.google.com/news?hl=en&topic=t&output=atom"
@@ -127,7 +128,7 @@ The FeedPortlet displays the titles of the feed items, and shows the contents of
 
   .. css ::
 
-      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+      @import "{{baseUrl}}dojox/widget/Portlet/Portlet.css"
 
 
 Expandable Feed Portlet With Multiple URLs
@@ -150,7 +151,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
       dojo.require("dojox.widget.FeedPortlet");
 
   .. html ::
-   
+
       <div data-dojo-type="dojox.widget.ExpandableFeedPortlet" title="Dojo News"
         id="todaysNews"
         maxResults="5"
@@ -170,7 +171,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
   .. css ::
 
-      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+      @import "{{baseUrl}}dojox/widget/Portlet/Portlet.css"
 
 Portlets In A Grid Container
 ----------------------------
@@ -194,9 +195,9 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 
   .. css ::
 
-      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css";
-      @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css";
-      @import "{{ baseUrl }}dojox/widget/Calendar/Calendar.css";
+      @import "{{baseUrl}}dojox/widget/Portlet/Portlet.css";
+      @import "{{baseUrl}}dojox/layout/resources/GridContainer.css";
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
 
       .dndDropIndicator {
         border: 2px dashed #99BBE8;
@@ -208,7 +209,7 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
   The GridContainer in this example has two columns, set using the 'nbZones' attribute.  This example also shows the Calendar Portlet containing another Dojo widget, the dojox.widget.Calendar.
 
   .. html ::
-   
+
     <div data-dojo-type="dojox.layout.GridContainer"
         id="gc1"
         acceptTypes="dojox.widget.Portlet, dojox.widget.FeedPortlet,dojox.widget.ExpandableFeedPortlet"
@@ -247,8 +248,8 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
                 Click the settings icon in the title bar to choose different feed to load.
           </div>
         </div>
-      
-        
+
+
         <div data-dojo-type="dojox.widget.Portlet" title="Calendar Portlet">
           <div data-dojo-type="dojox.widget.PortletSettings">
             Put whatever settings you like in here

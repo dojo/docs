@@ -1,7 +1,7 @@
-.. _dojo/xhr:
+.. _dojo/_base/xhr:
 
 ==============
-dojo.xhr
+dojo/_base/xhr
 ==============
 
 :since: V0.9
@@ -9,7 +9,7 @@ dojo.xhr
 .. contents ::
     :depth: 2
 
-**dojo.xhr** offers AJAX I/O transports and utility methods.
+**dojo/_base/xhr** offers AJAX I/O transports and utility methods.
 
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
 

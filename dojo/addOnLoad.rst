@@ -4,15 +4,18 @@
 dojo.addOnLoad
 ==============
 
+Introduction
+============
+
 dojo.addOnLoad() has been deprecated in favor of the (equivalent) :ref:`dojo.ready <dojo/ready>` function, and more recently, in favor of the :ref:`The AMD API <loader/amd>`, and the :ref:`domReady! plugin <dojo/domReady>`.
 
 The documentation below is preserved for legacy purposes:
 
 Old Documentation
 =================
-dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the Dom is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing.
+dojo.addOnLoad is a fundamental aspect of using Dojo. Passing addOnLoad a function will register the function to run when the DOM is ready. This differs slightly from document.ready and body.onload in that addOnLoad waits until all dependencies (and their recursive dependencies) have loaded before firing.
 
-Sooner or later, every Javascript programmer tries something like this:
+Sooner or later, every JavaScript programmer tries something like this:
 
 .. js ::
 
@@ -28,42 +31,62 @@ Sooner or later, every Javascript programmer tries something like this:
 
 It doesn't work because the "other" control is not defined yet. You can move the code to the bottom of the page, but that removes the linear nature of HTML. If you're reading the code, you want to zero in on a control, and see the code that influences it close by.
 
-dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. It is currently deprecated and replaced by dojo.ready function. When use dojo1.7, you should require 'dojo/ready' and use 'ready((...))' function instead. So this code:
+dojo.addOnLoad(...) defers script execution until all the HTML and modules are loaded. It is currently deprecated and replaced by the :ref:`dojo.ready <dojo/ready>` function, and more recently, in favor of the :ref:`The AMD API <loader/amd>`, and the :ref:`domReady! plugin <dojo/domReady>`. When use Dojo 1.7+, you should require 'dojo/ready' and use 'ready((...))' function instead, or use the domReady AMD plugin. So this code:
 
 .. js ::
 
-  // Dojo 1.7 (AMD)
+  // Dojo 1.7+ (AMD, domReady plugin)
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
-  require("dojo/ready", function(ready){
+
+  require(["dojo/domReady!"], function(){
+    setAfrobeat();
+  });
+
+.. js ::
+
+  // Dojo 1.7+ (AMD, dojo/ready module)
+  function setAfrobeat(){
+     document.musicPrefs.other.value="Afrobeat";
+  }
+  require(["dojo/ready"], function(ready){
        ready(function(){
            setAfrobeat();
        });
   });
 
+conveniently replaces this code:
+
 .. js ::
 
-  // Dojo < 1.7
+  // Dojo <1.7
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
   dojo.addOnLoad(setAfrobeat);
 
-conveniently replaces the one above. When the function is small, you may prefer to write it inline:
+When the function is small, you may prefer to write it inline:
 
 .. js ::
 
-    // Dojo 1.7+ (AMD)
-    require("dojo/ready", function(ready){
-        ready(function(){
-            document.musicPrefs.other.value="Afrobeat";
-        });
+  // Dojo 1.7+ (AMD, domReady plugin)
+  require(["dojo/domReady!"], function(){
+     document.musicPrefs.other.value="Afrobeat";
+  });
+
+.. js ::
+
+  // Dojo 1.7+ (AMD, dojo/ready module)
+  require(["dojo/ready"], function(ready){
+    ready(function(){
+      document.musicPrefs.other.value="Afrobeat";
     });
+  });
 
 .. js ::
 
-    // Dojo < 1.7
+    // Dojo <1.7
     dojo.addOnLoad(function(){
         document.musicPrefs.other.value="Afrobeat";
     });
@@ -75,12 +98,12 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 .. js ::
 
     // Dojo 1.7 (AMD)
-    require("dojo/ready", function(ready){
+    require(["dojo/ready"], function(ready){
         ready(function(){
-            require(["dijit/Dialog", "dijit/TitlePane"], function(dialog, pane){
+            require(["dijit/Dialog", "dijit/TitlePane"], function(Dialog, TitlePane){
                 ready(function(){
                     // dijit.Dialog and friends are ready, create one from a node with id="bar"
-                    var dialog = new dialog({ title:"Lazy Loaded" }, "bar");
+                    var dialog = new Dialog({ title:"Lazy Loaded" }, "bar");
                 });
             });
         });
@@ -88,7 +111,7 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 
 .. js ::
 
-    // Dojo < 1.7
+    // Dojo <1.7
     dojo.addOnLoad(function(){
         dojo.require("dijit.Dialog");
         dojo.require("dijit.TitlePane");
@@ -117,6 +140,7 @@ Let's dynamically include code on button press and fire an event once the code i
 
   .. js ::
 
+    // Dojo <1.7
     dojo.require("dijit.form.Button");
 
     // connect to button

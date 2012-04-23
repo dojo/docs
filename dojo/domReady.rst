@@ -9,7 +9,7 @@ Introduction
 
 dojo/domReady! is an AMD plugin that resolves when the DOM has finished loading.
 
-Sooner or later, every Javascript programmer tries something like this:
+Sooner or later, every JavaScript programmer tries something like this:
 
 .. html ::
 
@@ -27,7 +27,7 @@ It doesn't work because the "other" control is not defined yet. You can move the
 .. js :: 
 
   function setAfrobeat(){
-     document.musicPrefs.other.value="Afrobeat";
+    document.musicPrefs.other.value="Afrobeat";
   }
   require(["dojo/domReady!"], setAfrobeat);
 
@@ -36,7 +36,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 .. js ::
 
   require(["dojo/domReady!"], function(){
-           document.musicPrefs.other.value="Afrobeat";
+    document.musicPrefs.other.value="Afrobeat";
   });
 
 As a more complicated example, this code will wait until the DOM has finished loading and then change all anchors to be red:
@@ -61,10 +61,25 @@ Note that waiting for dojo/domReady! to fire is often not sufficient when workin
    * :ref:`dijit/hccss <dijit/hccss>`
    * :ref:`dojo/parser <dojo/parser>`
 
-Thus when working with widgets you should generally put your code inside of a dojo/ready() callback.
+Thus when working with widgets you should generally put your code inside of a dojo/ready() callback, or use nested requires statements.
+
+.. js ::
+
+    // Dojo 1.7 (AMD)
+    require(["dojo/ready"], function(ready){
+        ready(function(){
+            require(["dijit/Dialog", "dijit/TitlePane"], function(Dialog, TitlePane){
+                ready(function(){
+                    // dijit.Dialog and friends are ready, create one from a node with id="bar"
+                    var dialog = new Dialog({ title:"Lazy Loaded" }, "bar");
+                });
+            });
+        });
+    });
+
 
 Sync loader
 -----------
 You should not use dojo/domReady! in any modules that may be loaded with the legacy synchronous loader.
 
-In other words, if your application does *not* specify async:true as a data-dojo-config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call it's callback before all the modules have loaded.
+In other words, if your application does *not* specify async:true as a data-dojo-config parameter, or if it loads modules via dojo.require() instead of the new AMD require() API, then using dojo/domReady! may cause dojo.ready() to call its callback before all the modules have loaded.
