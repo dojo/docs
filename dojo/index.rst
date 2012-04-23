@@ -146,6 +146,9 @@ New code should use the :ref:`dojo/dom* <dojo/#dom-dojo-dom>` modules instead.
 Deferred Utilities (dojo/_base/Deferred)
 ----------------------------------------
 
+This has been *deprecated* in lieu of :ref:`dojo/Deferred <dojo/Deferred>`, :ref:`dojo/when <dojo/when>` and
+:ref:`dojo/promise <dojo/promise>`.  New code should use these modules instead.
+
 * :ref:`dojo/_base/Deferred <dojo/_base/Deferred>`
 
   Communication between asynchronous calls
@@ -623,10 +626,10 @@ Robot (dojo/robot - dojo/robotx)
 --------------------------------
 * :ref:`dojo/robot <dojo/robot>`
 
-  Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of
-  their elements themselves.
+  Users who use D.O.H. plus Dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute
+  coordinates of their elements themselves.
   
-* :ref:`dojo/robotx <dojo/robotx>`
+  * :ref:`dojo/robotx <dojo/robotx>`
 
   Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it.
 
@@ -637,6 +640,43 @@ Document Lifecycle - Onload (:ref:`dojo/ready <dojo/ready>`)
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated. When using
   AMD, in most situations the loader plugin :ref:`dojo/domReady <dojo/domReady>` is preferable.
+
+Deferred and Promises (dojo/Deferred, dojo/promise/\*, dojo/when)
+-----------------------------------------------------------------
+
+* :ref:`dojo/Deferred <dojo/Deferred>`
+
+  The main class for managing asynchronous threads.
+
+* :ref:`dojo/promise <dojo/promise>`
+
+  The package that is the foundation for asynchronous thread management in Dojo.
+
+  * :ref:`dojo/promise/Promise <dojo/promise/Promise>`
+
+    The abstract base class that defines Dojo Promises.
+
+  * :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`
+
+    Defines the default error that will be raised if a promise is cancelled without a reason.
+
+  * :ref:`dojo/promise/all <dojo/promise/all>`
+
+    Takes multiple promises and returns a new promise that is fulfilled when all promises have been fulfilled. Replaces
+    :ref:`dojo/DeferredList <dojo/DeferredList>`.
+
+  * :ref:`dojo/promise/first <dojo/promise/first>`
+
+    Takes multiple promises and returns a new promise that is fulfilled when the first of the promises have been
+    fulfilled.
+
+  * :ref:`dojo/promise/tracer <dojo/promise/tracer>`
+
+    Trace promise fulfillment.  Traced promises will emit events.
+
+* :ref:`dojo/when <dojo/when>`
+
+  Provides transparent application of callbacks to promises or other arbitrary values.
 
 AJAX I/O transports (dojo/io/\*)
 --------------------------------
@@ -795,7 +835,8 @@ Cache (dojo/cache)
 
 * :ref:`dojo.cache <dojo/cache>`
 
-  A mechanism to cache inline text.  This has been deprecated in 1.7 in lieu of the :ref:`dojo/text <dojo/text>` AMD loader plugin.
+  A mechanism to cache inline text. This has been deprecated in 1.7 in lieu of the :ref:`dojo/text <dojo/text>` AMD
+  loader plugin.
 
 Date (dojo/date)
 ----------------
@@ -915,7 +956,7 @@ Miscellaneous Core
 
 * :ref:`dojo.DeferredList <dojo/DeferredList>`
 
-  Event handling for a group of Deferred objects
+  *Deprecated* Event handling for a group of Deferred objects.  Use :ref:`dojo/promise/all <dojo/promise/all>` instead.
 
 * :ref:`dojo.fx <dojo/fx>`
 
