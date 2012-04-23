@@ -20,7 +20,7 @@ Note that the padding of the content which gets wiped in is set on a separate in
   .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dijit/form/Button", "dojo/fx", "dojo/parser", "dojo/domReady!"], function(button, fx){
+    require(["dijit/form/Button", "dojo/fx", "dojo/parser"], function(button, fx){
       wipeInOne = function(){ 
         fx.wipeIn({ 
           node: "wipeDisplayNode", 
