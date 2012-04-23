@@ -15,10 +15,11 @@ When you are trying to wipe in a node to a fixed height or width you have to use
  
 Note that the padding of the content which gets wiped in is set on a separate inner node. This ensures that you don't get weird x-browser behaviour.
 
+.. code-example ::
   .. js ::
 
     // Dojo 1.7 (AMD)
-    require(["dijit/form/Button", "dojo/fx"], function(button, fx){
+    require(["dijit/form/Button", "dojo/fx", "dojo/parser"], function(button, fx){
       wipeInOne = function(){ 
         fx.wipeIn({ 
           node: "wipeDisplayNode", 
