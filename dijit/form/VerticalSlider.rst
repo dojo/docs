@@ -102,7 +102,7 @@ to 11, meaning that the slider will have 11 focus points.  This example also sho
         value="6" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
         showButtons="false" style="height:400px;" name="verticalSlider">
-        <ol data-dojo-type="dijit/form/VerticalRuleLabels" container="topDecoration"
+        <ol data-dojo-type="dijit/form/VerticalRuleLabels" container="leftDecoration"
             style="width:1.5em;font-size:75%;color:gray;">
             <li> </li>
             <li>20%</li>
@@ -111,9 +111,9 @@ to 11, meaning that the slider will have 11 focus points.  This example also sho
             <li>80%</li>
             <li> </li>
         </ol>
-        <div data-dojo-type="dijit/form/VerticalRule" container="bottomDecoration"
+        <div data-dojo-type="dijit/form/VerticalRule" container="rightDecoration"
             count="11" style="width:5px;"></div>
-        <ol data-dojo-type="dijit/form/VerticalRuleLabels" container="bottomDecoration"
+        <ol data-dojo-type="dijit/form/VerticalRuleLabels" container="rightDecoration"
             style="width:1em;font-size:75%;color:gray;">
             <li>0%</li>
             <li>50%</li>
