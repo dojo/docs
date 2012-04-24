@@ -40,7 +40,7 @@ Then require it into the page where you're using the editor:
 .. js ::
  
     dojo.require("dijit.Editor");
-    dojo.require("dojox.editor.plugins.ShowblockNodes");
+    dojo.require("dojox.editor.plugins.ShowBlockNodes");
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.  For example:
