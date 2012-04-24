@@ -43,12 +43,6 @@ Since it is an abstract class, direct usage doesn't make sense.  Developers want
       },
       isCanceled: function(){
         // Implementation of .isCanceled()
-      },
-      trace: function(){
-        // Implementation of .trace()
-      },
-      traceRejected: function(){
-        // Implementation of .traceRejected()
       }
     });
   });
@@ -128,12 +122,14 @@ callbackOrErrback Function? The function that should be called on resolution or 
 trace()
 -------
 
-Trace the promise. Any supplied arguments are emitted in trace events.  It returns the original promise.
+Trace the promise. Any supplied arguments are emitted in trace events. It returns the original promise. The
+:ref:`dojo/promise/tracer <dojo/promise/tracer>` module will extend ``dojo/promise/Promise`` to enable this feature.
 
 traceRejected()
 ---------------
 
-Trace rejection of the promise. Any supplied arguments are emitted in trace events.  It returns the original promise.
+Trace rejection of the promise. Any supplied arguments are emitted in trace events. It returns the original promise. The
+:ref:`dojo/promise/tracer <dojo/promise/tracer>` module will extend ``dojo/promise/Promise`` to enable this feature.
 
 See also
 ========
