@@ -16,9 +16,9 @@ Introduction
 The Menu widget is used for context menus, otherwise known as a right-click or popup menus.
 
 Previously Menu was also used for drop-down menus, but that functionality has been split off to the
-:ref:`dijit/DropDownMenu <dijit/form/DropDownMenu>` widget.
+:ref:`dijit/DropDownMenu <dijit/DropDownMenu>` widget.
 
-Since Menu extends :ref:`dijit/DropDownMenu <dijit/form/DropDownMenu>`, consult that page for general
+Since Menu extends :ref:`dijit/DropDownMenu <dijit/DropDownMenu>`, consult that page for general
 documentation about the children of Menu, etc.
 
 Examples
