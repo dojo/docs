@@ -10,7 +10,7 @@ dojo/promise
 .. contents ::
     :depth: 2
 
-**dojo/promise** is the module that manages promises, or in other words, communication between asynchronous threads.
+**dojo/promise** is the package that manages promises, or in other words, communication between asynchronous threads.
 
 Introduction
 ============
