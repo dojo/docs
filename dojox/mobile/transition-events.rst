@@ -1,3 +1,4 @@
+
 .. _dojox/mobile/transition-events:
 
 ==============================
@@ -32,7 +33,7 @@ Example
   .. js ::
 
     dojo.connect(view1, "onStartView", null, function(){
-    console.log("startView: view="+this);
+        console.log("startView: view="+this);
     });
 
 onBeforeTransitionIn
@@ -50,15 +51,15 @@ Syntax
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.connect(view1, "onBeforeTransitionIn", null,
-     function(moveTo, dir, transition, context, method){
-         print("onBeforeTransitionIn");
+       function(moveTo, dir, transition, context, method){
+           print("onBeforeTransitionIn");
     });
 
 onAfterTransitionIn
@@ -76,15 +77,15 @@ Syntax
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.connect(view1, "onAfterTransitionIn", null,
-     function(moveTo, dir, transition, context, method){
-        print("afterTransitionIn");
+       function(moveTo, dir, transition, context, method){
+          print("afterTransitionIn");
     });
 
 onBeforeTransitionOut
@@ -92,7 +93,7 @@ onBeforeTransitionOut
 
 Summary
 
-  A method that is called immediately before a view transition that makes this view invisible.
+  A method that is called immediately before a view transition that makes this view hidden.
 
 Syntax
 
@@ -102,15 +103,15 @@ Syntax
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.connect(view1, "onBeforeTransitionOut", null,
-     function(moveTo, dir, transition, context, method){
-        print("onBeforeTransitionOut");
+       function(moveTo, dir, transition, context, method){
+          print("onBeforeTransitionOut");
     });
 
 onAfterTransitionOut
@@ -118,7 +119,7 @@ onAfterTransitionOut
 
 Summary
 
-  A method that is called immediately after a view transition that makes this view invisible.
+  A method that is called immediately after a view transition that makes this view hidden.
 
 Syntax
 
@@ -128,15 +129,15 @@ Syntax
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.connect(view1, "onAfterTransitionOut", null,
-     function(moveTo, dir, transition, context, method){
-        print("afterTransitionOut");
+       function(moveTo, dir, transition, context, method){
+          print("afterTransitionOut");
     });
 
 Subscribe Transition Events
@@ -149,7 +150,7 @@ The View widget publishes five topics that are related to view transition.
 
 Summary
 
-  A topic that is published only when this view is shown at startup time. That is, if the view is invisible at startup time and then becomes visible as a result of a view transition, the view does NOT publishes this topic.
+  A topic that is published only when this view is shown at startup time. That is, if the view is invisible at startup time and then becomes visible as a result of a view transition, the view does NOT publish this topic.
 
 Topic Subscriber
 
@@ -181,15 +182,15 @@ Topic Subscriber
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.subscribe("/dojox/mobile/beforeTransitionIn",
-      function(view, moveTo, dir, transition, context, method){
-        print("onBeforeTransitionIn");
+        function(view, moveTo, dir, transition, context, method){
+          print("onBeforeTransitionIn");
     });
 
 /dojox/mobile/afterTransitionIn
@@ -208,15 +209,15 @@ Topic Subscriber
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.subscribe("/dojox/mobile/afterTransitionIn",
-      function(view, moveTo, dir, transition, context, method){
-        print("afterTransitionIn");
+        function(view, moveTo, dir, transition, context, method){
+          print("afterTransitionIn");
     });
 
 /dojox/mobile/beforeTransitionOut
@@ -224,7 +225,7 @@ Example
 
 Summary
 
-  A topic that is published immediately before a view transition that makes this view invisible.
+  A topic that is published immediately before a view transition that makes this view hidden.
 
 Topic Subscriber
 
@@ -235,15 +236,15 @@ Topic Subscriber
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.subscribe("/dojox/mobile/beforeTransitionOut",
-      function(view, moveTo, dir, transition, context, method){
-         print("onBeforeTransitionOut");
+        function(view, moveTo, dir, transition, context, method){
+           print("onBeforeTransitionOut");
     });
 
 /dojox/mobile/afterTransitionOut
@@ -251,7 +252,7 @@ Example
 
 Summary
 
-  A topic that is published immediately after a view transition that makes this view invisible.
+  A topic that is published immediately after a view transition that makes this view hidden.
 
 Topic Subscriber
 
@@ -262,13 +263,13 @@ Topic Subscriber
   * dir - The transition direction. If 1, transition forward. If -1, transition backward.
   * transition - The name of transition to perform. Ex. "slide"
   * context - The object that the callback function will receive as "this".
-  * method - A callback function that is called when the transition has been finished.
+  * method - A callback function that is called when the transition has finished.
 
 Example
 
   .. js ::
 
     dojo.subscribe("/dojox/mobile/afterTransitionOut",
-      function(view, moveTo, dir, transition, context, method){
-         print("afterTransitionOut");
+        function(view, moveTo, dir, transition, context, method){
+           print("afterTransitionOut");
     });
