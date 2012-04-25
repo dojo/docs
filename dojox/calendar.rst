@@ -523,6 +523,7 @@ Event                   Description                                             
 ======================= =========================================================== ===============
 itemClick               A renderer of an event has been clicked                     item
 itemDoubleClick         A renderer of an event has been double-clicked              item
+itemContextMenu         A renderer of an event has been context-clicked             item
 gridClick               The grid (background of the calendar) has been clicked      date
 gridDoubleClick         The grid has been double-clicked                            date
 change                  The selection has changed                                   item
