@@ -60,6 +60,10 @@ dojo/DeferredList
 
 While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/promise/all`` and ``dojo/promise/first``.
 
+dojo/hccss
+----------
+The dijit/hccss module has moved to dojo core, with a stub left in dijit for backwards compatibility.
+
 dojo/parser
 -----------
 
