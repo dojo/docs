@@ -14,7 +14,7 @@ dojox.mobile supports not only webkit-based mobile browsers, but also non-CSS3 d
 Typical Use
 ===========
 
-As of Dojo 1.7, with AMD loading you can now simply require dojox/mobile/compat as follows:
+In Dojo 1.7 or later, using AMD loading you can now simply require dojox/mobile/compat as follows:
 
 .. js ::
 
@@ -22,16 +22,17 @@ As of Dojo 1.7, with AMD loading you can now simply require dojox/mobile/compat 
       // Do something with dojo mobile...
   });
 
-In previous versions, typical usage would be to do conditional loading with dojo.requireIf() as follows. The code below is an alternative way to loads dojox.mobile.compat only when dojo.isWebKit is true and using the pre 1.7-style synchronous loader.
+In previous versions, typical usage would be to conditionally load using dojo.requireIf() as follows. The code below is an alternative way to load dojox.mobile.compat only when dojo.isWebKit is not true and using the pre 1.7-style synchronous loader.
 
 .. js ::
 
   dojo.require("dojox.mobile");
   dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
 
-
-Once dojox/mobile/compat is loaded, it directly replaces some of the methods of the dojox.mobile widgets instead of subclassing. This way your applications do not need to be changed, and html pages remains the same regardless of whether this compatibility module is used or not.
+Once dojox/mobile/compat is loaded, it overwrites some of the methods of dojox.mobile widgets instead of subclassing them. This way your applications do not need to be changed, and html pages remain the same regardless of whether this compatibility module is used or not.
 
 dojox/mobile/compat simply uses traditional HTML/CSS techniques, rather than modern approaches using CSS3. For example, images are used for buttons, gradient colors, rounded corners, etc. For transition animations, dojo/fx (JavaScript animation package) is used.
 
-dojox/mobile/compat automatically loads the compatibility CSS files. It searches the current page for <link> elements or @import directives in a <style> element, and tries to load corresponding -compat.css files. For example, if it finds .../themes/iphone/iphone.css, it loads .../themes/iphone/iphone-compat.css. (Note: dojox.mobile.compat in dojo-1.5 searches only for <link> elements, but the one in dojo-1.6 or later searches for @import as well.)
+dojox/mobile/compat automatically loads the compatibility CSS files. It searches the current page for <link> elements or @import directives in a <style> element, and tries to load the corresponding -compat.css files. For example, if it finds .../themes/iphone/iphone.css, it loads .../themes/iphone/iphone-compat.css. (Note: dojox.mobile.compat in dojo-1.5 searches only for <link> elements, but in dojo-1.6 or later it searches for @import as well.)
+
+Note that, in dojo-1.7, compat was divided into two pieces, compat.js and _compat.js. _compat.js includes all the implementation code, and compat.js is simply a loader of _compat.js. compat.js loads _compat.js only when the current browser is not WebKit-based. compat.js is such a tiny piece of code that it does not affect mobile performance even if it is in a build. This way, on WebKit-based browsers, performance does not degrade since _compat.js will never be loaded. On non-WebKit browsers, _compat.js is loaded automatically, and Dojo Mobile works in the compat mode.
