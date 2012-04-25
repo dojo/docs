@@ -15,9 +15,9 @@ Introduction
 ============
 
 The Dojo Mobile package provides a number of widgets that can be used to build web-based applications for mobile devices such as iPhone, Android, or BlackBerry. These widgets work best with webkit-based browsers, such as Safari or Chrome, since webkit-specific CSS3 features are extensively used. However, the widgets should work in a "graceful degradation" manner even on non-CSS3 browsers, such as IE or (older) Firefox. In that case, fancy effects, such as animation, gradient color, or round corner rectangle, may not work, but you can still operate your application.
-Furthermore, as a separate file, a compatibility module, dojox/mobile/compat, is available, which simulates some of CSS3 features used in this module. If you use the compatibility module, fancy visual effects work better even on non-CSS3 browsers.
+Furthermore, as a separate file, a compatibility module, dojox/mobile/compat, is available, which simulates some of the CSS3 features used in this module. If you use the compatibility module, fancy visual effects work better even on non-CSS3 browsers.
 
-Dojo Mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It has only a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo and dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo.parser, but has enough capability to bootstrap your application.
+Dojo Mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It only has a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo and dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo.parser, but has enough capability to bootstrap your application.
 
 .. image :: settings-i-a.png
 
@@ -42,6 +42,10 @@ Views
 * :ref:`TreeView <dojox/mobile/TreeView>`
 
   A scrollable view with tree-style navigation. (Experimental)
+
+* :ref:`ViewController <dojox/mobile/ViewController>`
+
+  A singleton class that controls view transitions
 
 Heading
 -------
@@ -151,8 +155,7 @@ Openers
 
 * :ref:`Tooltip <dojox/mobile/Tooltip>`
 
-  A
-
+  A non-templated popup bubble widget
 
 Form Controls
 -------------
@@ -167,7 +170,7 @@ Form Controls
 
 * :ref:`ComboBox <dojox/mobile/ComboBox>`
 
-  A combo box allowing user to edit input values with the built-in keyboard. (Experimental)
+  A combo box allowing users to edit input values with the built-in keyboard. (Experimental)
 
 * :ref:`ExpandingTextArea <dojox/mobile/ExpandingTextArea>`
 
@@ -197,6 +200,10 @@ Form Controls
 
   A button that can toggle between two states.
 
+* :ref:`SearchBox <dojox/mobile/SearchBox>`
+
+  A non-templated base class for INPUT type="search"
+
 Layout
 ------
 
@@ -214,7 +221,7 @@ Layout
 
 * :ref:`GridLayout <dojox/mobile/GridLayout>`
 
-  A container widget that places its children in the grid layout.
+  A container widget that places its children in a grid layout.
 
 * :ref:`IconMenu <dojox/mobile/IconMenu>`
 
@@ -245,7 +252,7 @@ Indicators
 
 * :ref:`ProgressBar <dojox/mobile/ProgressBar>`
 
-  A progress indication widget that shows the status of a task.
+  A widget that shows the progress of a task.
 
 * :ref:`Rating <dojox/mobile/Rating>`
 
@@ -335,11 +342,19 @@ Utils
 
 * :ref:`Badge <dojox/mobile/Badge>`
 
-  An utility to create/update a badge node.
+  A utility to create/update a badge node.
 
 * :ref:`Icon <dojox/mobile/Icon>`
 
-  An utility for creating an image icon.
+  A utility for creating an image icon.
+
+* :ref:`deviceTheme <dojox/mobile/deviceTheme>`
+
+  An automatic theme loader.
+
+* :ref:`pageTurningUtils <dojox/mobile/pageTurningUtils>`
+
+  Utilities to provide page turning effects just like turning a real book.
 
 
 Getting Started
@@ -351,10 +366,10 @@ Loading Dojo Mobile (using Dojo 1.7+ preferred api's)
 -----------------------------------------------------
 
 This example assumes Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
-helps ensure the bare minimum code is used, and loaded as fast as possible.
+helps to ensure that the bare minimum code is used, and loaded as fast as possible.
 
 .. js ::
- 
+
   require([
     "dojox/mobile/parser", // (Optional) This mobile app uses declarative programming with fast mobile parser
     "dojox/mobile",        // (Required) This is a mobile app.
@@ -363,9 +378,9 @@ helps ensure the bare minimum code is used, and loaded as fast as possible.
     // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
   );
 
-If you prefer to use "progressive enhancement" design techniques and not use Dojo's simple declarative programming model, you can choose not to specify the dojox/mobile/parser module and in script construct widgets programmatically.
+If you prefer to use "progressive enhancement" design techniques and not use Dojo's simple declarative programming model, you can choose not to specify the dojox/mobile/parser module, and instead script and construct widgets programmatically.
 
-If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose note to specify the dojox/mobile/compat module.  In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
+If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose not to specify the dojox/mobile/compat module.  In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
 
 Loading Dojo Mobile (using Dojo pre-1.7 style api's)
 ----------------------------------------------------
@@ -373,7 +388,7 @@ Loading Dojo Mobile (using Dojo pre-1.7 style api's)
 This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
 
 .. js ::
-     
+
     dojo.require("dojox.mobile"); // Load the basic mobile widget kernel and support code.
     dojo.require("dojox.mobile.parser"); // (Optional) Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
     dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat"); // (Optional) Load the compat layer if the incoming browser isn't webkit based
@@ -398,7 +413,7 @@ Typical Use
 -----------
 
 Typical usage is to create one or more views in a page, and create a round rectangle list, an edge-to-edge list, an icon container, etc. in the views. You can specify an animated transition between the views.
-The following example shows how to create views and make a transition between them.
+The following example shows how to create views and perform a transition between them.
 
 .. image :: hello-example.png
 
@@ -408,78 +423,78 @@ Example (using HTML5 validating declarative markup and mobile parser)
 
 .. html ::
 
-   <!DOCTYPE HTML>
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1,
-       maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
-        <script src="dojo/dojo.js" djConfig="async:1,parseOnLoad: true"></script>
-        <script>
-          require([
-            "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
-            "dojox/mobile",        // This is a mobile app.
-          ]); // Skip module alias and function block because we're not doing anything special...
-        </script>
-      </head>
-      <body>
-        <div id="foo" data-dojo-type="dojox.mobile.View">
-          <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
-          <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-                 icon="dojox/mobile/tests/images/i-icon-1.png"></li>
-          </ul>
-        </div>
-   
-        <div id="bar" data-dojo-type="dojox.mobile.View">
-          <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
-          <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" label="World"
-                 icon="dojox/mobile/tests/images/i-icon-2.png"></li>
-          </ul>
-        </div>
-      </body>
-    </html>
+  01:<!DOCTYPE HTML>
+  02: <html>
+  03:   <head>
+  04:     <meta name="viewport" content="width=device-width,initial-scale=1,
+      maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+  05:     <meta name="apple-mobile-web-app-capable" content="yes" />
+  06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+  07:     <script src="dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+  08:     <script>
+  09:       require([
+  10:         "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
+  11:         "dojox/mobile",		// This is a mobile app.
+  12:       ]); // Skip module alias and function block because we're not doing anything special...
+  13:     </script>
+  14:   </head>
+  15:   <body>
+  16:     <div id="foo" data-dojo-type="dojox.mobile.View">
+  17:       <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
+  18:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+  19:         <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
+  20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+  21:       </ul>
+  22:     </div>
+  23:
+  24:     <div id="bar" data-dojo-type="dojox.mobile.View">
+  25:       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
+  26:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+  27:         <li data-dojo-type="dojox.mobile.ListItem" label="World"
+  28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+  29:       </ul>
+  30:     </div>
+  31:   </body>
+  32: </html>
 ..
 
-Example using older (non-validating) HTML and mobile parser:
+Example (using older HTML (non-validating) and mobile parser)
 
 .. html ::
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1,
-       maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
-        <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
-        <script>
-          require([
-            "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
-            "dojox/mobile",        // This is a mobile app.
-          ]); // Skip module alias and function block because we're not doing anything special...
-        </script>
-      </head>
-      <body>
-        <div id="foo" data-dojo-type="dojox.mobile.View">
-          <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
-          <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-                icon="dojox/mobile/tests/images/i-icon-1.png"></li>
-          </ul>
-        </div>
-   
-        <div id="bar" data-dojo-type="dojox.mobile.View">
-          <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
-          <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" label="World"
-                icon="dojox/mobile/tests/images/i-icon-2.png"></li>
-          </ul>
-        </div>
-      </body>
-    </html>
+  01: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  02: <html>
+  03:   <head>
+  04:     <meta name="viewport" content="width=device-width,initial-scale=1,
+      maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+  05:     <meta name="apple-mobile-web-app-capable" content="yes" />
+  06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+  07:     <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+  08:     <script>
+  09:       require([
+  10:         "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
+  11:         "dojox/mobile",		// This is a mobile app.
+  12:       ]); // Skip module alias and function block because we're not doing anything special...
+  13:     </script>
+  14:   </head>
+  15:   <body>
+  16:     <div id="foo" dojoType="dojox.mobile.View">
+  17:       <h1 dojoType="dojox.mobile.Heading">View 1</h1>
+  18:       <ul dojoType="dojox.mobile.RoundRectList">
+  19:         <li dojoType="dojox.mobile.ListItem" moveTo="bar" label="Hello"
+  20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+  21:       </ul>
+  22:     </div>
+  23:
+  24:     <div id="bar" dojoType="dojox.mobile.View">
+  25:       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
+  26:       <ul dojoType="dojox.mobile.RoundRectList">
+  27:         <li dojoType="dojox.mobile.ListItem" label="World"
+  28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+  29:       </ul>
+  30:     </div>
+  31:   </body>
+  32: </html>
 
 ..
 
@@ -491,11 +506,9 @@ Example using older (non-validating) HTML and mobile parser:
 
 * Line 6 loads a style sheet for iPhone theme. You may want to load a different theme instead.
 
-* Line 7 loads Dojo kernel API's.  The first example is using asynchronous AMD loader, the second example uses synchronous pre-Dojo1.7 style loader.  If you debug this example with browser debug tools, you'll see that example1 loads and enters document ready state much faster than example 2.  The async loader (ex1) style is the preferred notation going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
+* Line 7 loads Dojo kernel API's.  The first example is using asynchronous AMD loader, the second example uses synchronous pre-Dojo1.7 style loader.  If you debug this example with browser debug tools, you'll see that example 1 loads and enters document ready state much faster than example 2.  The async loader (ex1) style is the preferred notation going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
 
-* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiates the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example.
-
-  The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
+* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiate the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example. The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
 
 * Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected="true" attribute is not specified for the second view.
 
@@ -510,9 +523,12 @@ Programmer's Guide
 * :ref:`Cross-browser Support <dojox/mobile/cross-browser-support>`
 * :ref:`Internationalization (i18n) <dojox/mobile/internationalization>`
 * :ref:`Build <dojox/mobile/build>`
+* :ref:`View Navigation History Management <dojox/mobile/bookmarkable>`
+* :ref:`Data Handlers <dojox/mobile/data-handlers>`
 
 Appendix
 ========
 
 * :ref:`Frequently Asked Questions <dojox/mobile/faq>`
 * :ref:`Differences between 1.6 and 1.7 <dojox/mobile/differences-16-17>`
+* :ref:`Differences between 1.7 and 1.8 <dojox/mobile/differences-17-18>`
