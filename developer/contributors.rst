@@ -559,6 +559,7 @@ Individuals who have signed Dojo CLAs
 * Tyson, Matt
 * Ukrop, Jakub
 * Ultis, Jonathan
+* Upton, Thomas
 * Uren, Richard
 * Vachou, Travis
 * Valdelievre, Florent
