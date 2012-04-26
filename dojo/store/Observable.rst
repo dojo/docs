@@ -23,7 +23,7 @@ The result sets returned from store.query() calls from a Observable store will h
 
 .. js ::
 
-  resultSet.observe(listener);
+  resultSet.observe(listener, includeObjectUpdates);
 
 The listener function is called with following arguments:
 
@@ -36,6 +36,8 @@ The listener function is called with following arguments:
 * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set). If the store does not have a queryEngine, it may not be possible to determine the index of a newly created object, and the index will default to the store's defaultIndex property or 0 if the property is not present.
 
 The observe() method returns an object with a cancel() method that can be called to stop observing the given result set.
+
+The second argument (includeObjectUpdates) to observe indicates whether or not to include updates to objects that don't affect the inclusion or order of the changed object. If this is not set to true, object updates that don't result in addition, removal, or change in order won't trigger the listener.
 
 Examples
 ========
