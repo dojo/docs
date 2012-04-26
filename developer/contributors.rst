@@ -387,6 +387,7 @@ Individuals who have signed Dojo CLAs
 * Neuberg, Bradley Keith
 * Newbill, Christopher
 * Newlau, Andrei
+* Newman, Joshua
 * Nguyen, TA
 * Nguyen, Thanh (Tom)
 * Noheda, Jose
