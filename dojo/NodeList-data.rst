@@ -27,7 +27,7 @@ Since Dojo 1.7, you need to use 'require()' to import this module:
 
 .. js ::
 
-  require(["dojo/NodeList-data"], function(nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       // your codes here
   });
 
@@ -42,7 +42,7 @@ The API to *data* is very simple. Each node has some arbitrary object hash of da
   dojo.query("#mynode").data("datakey", "This is the data I'm setting");
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       query("#mynode").data("datakey", "This is the data I'm setting");
   });
 
@@ -54,7 +54,7 @@ Now, the node with id="mynode" has a string data item under the key *datakey*. W
   var mydata = dojo.query("#mynode").data("datakey");
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       var mydata = query("#mynode").data("datakey");
       if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
   });
@@ -70,7 +70,7 @@ We can set any type of data at some key name, be it a String, Array, Object, and
   dojo.query("#diffNode").data("handlerFunction", function(){ ... });
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       query("#someNode").data("myarray", [1,2]);
       query("#diffNode").data("handlerFunction", function(){ ... });
   });
@@ -96,7 +96,7 @@ Or an example of using an object has *as* the actual data:
 
 .. js ::
 
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
      query("#navNode").data("special-information", {
        huh: "the Data at `special-information` is this complex object",
        anumber: 42,
@@ -127,7 +127,7 @@ Like other Dojo APIs, *data* accepts an object argument, which would be mixed in
 
 .. js ::
 
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       // like calling .data("a", 'b").data("c", "d").data("e", [1,2,3]
       query("#foo").data({
          a:"b", c:"d", e:[1,2,3]
@@ -147,7 +147,7 @@ This is useful when needing to set multiple independent data keys. Note how this
   });
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       query("#foo").data("stuff", {
           a:"b", c:"d", e:[1,2,3]
       });
@@ -166,7 +166,7 @@ There are several different types of returns that can come from *NodeList.data*.
   dojo.query("#bar").data("foo", 10).onclick(function(){ alert(dojo.query(this).data("foo")[0] == 10) });
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
         query("#bar").data("foo", 10).onclick(function(){ alert(query(this).data("foo")[0] == 10) });
   });
 
@@ -185,7 +185,7 @@ When acting as a getter, NodeList.data *always* returns an Array. The array is p
 
 .. js ::
 
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
       // calling with no arguments return _entire_ data set bound to node.
       var data = query("#bar").data()[0];
@@ -221,7 +221,7 @@ Here is a comparison:
 
 .. js ::
 
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
        // setters:
        query("#bar").data("baz", 10);
        dojo._nodeData("bar", "baz", 10);
@@ -245,7 +245,7 @@ The *removeData* API works nearly the same as *data*. Calling *removeData* with 
   dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
 
   // [ Dojo 1.7 AMD ]
-  require(["dojo/query", "dojo/NodeList-data"], function(query, nodeListData){
+  require(["dojo/query", "dojo/NodeList-data"], function(query){
       query("#bar").removeData(); // erases all information
       query("#baz").removeData("e"); // removed [1,2,3] for instance
   });
@@ -263,7 +263,7 @@ There is, however, no way to remove a list of keys. An example of how to do so w
 
 .. js ::
 
-  require(["dojo/_base/lang","dojo/_base/array", "dojo/NodeList-data"], function(lang, array, nodeListData){
+  require(["dojo/_base/lang","dojo/_base/array", "dojo/NodeList-data"], function(lang, array){
       var remover = lang.partial(nodeListData._removeNodeData, "nodeId");
       array.forEach(["key", "otherkey", "somekey"], remover);
   });
