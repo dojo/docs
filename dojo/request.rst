@@ -10,7 +10,8 @@ dojo/request
 .. contents ::
     :depth: 2
 
-**dojo/request** is a package which provides asynchronous requests in a cross platform way.  This is commonly referred to as AJAX.
+**dojo/request** is a package which provides asynchronous requests in a cross platform way. This is commonly referred to
+as AJAX.
 
 Introduction
 ============
@@ -150,6 +151,13 @@ See also
 
 * :ref:`dojo/request/handlers <dojo/request/handlers>` - Handles the data from a response as designated in the
   ``handleAs`` request option. Also provides the ability to register additional types of handlers.
+
+* :ref:`dojo/request/registry <dojo/request/registry>` - Allows for registration of different providers against
+  different URIs.
+
+* :ref:`dojo/request/notify <dojo/request/notify>` - Publishes the ``dojo/request`` topics for requests.
+
+* :ref:`dojo/request/watch <dojo/request/watch>` - Allows the watching of inflight requests.
 
 * :ref:`dojo/Deferred <dojo/Deferred>` - The base class for managing asynchronous processes.
 
