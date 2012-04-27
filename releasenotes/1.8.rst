@@ -40,6 +40,12 @@ dojo/_base/Deferred
 architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
 ``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
 
+dojo/_base/xhr
+--------------
+
+``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/xhr``.
+
 Dojo Core
 =========
 
@@ -63,6 +69,18 @@ While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/p
 dojo/hccss
 ----------
 The dijit/hccss module has moved to dojo core, with a stub left in dijit for backwards compatibility.
+
+dojo/io/iframe
+--------------
+
+``dojo/io/iframe`` has was *deprecated* in lieu of ``dojo/request/iframe``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/iframe``.
+
+dojo/io/script
+--------------
+
+``dojo/io/script`` has was *deprecated* in lieu of ``dojo/request/script``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/script``.
 
 dojo/parser
 -----------
@@ -202,7 +220,74 @@ tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See :ref:`
 dojo/request
 ------------
 
-*TODOC*
+The ``dojo/request`` package introduces a new architecture for making asynchronous requests from code. The module
+abstracts the user, for the most part, from the actual provider that makes the request. This means the doesn't have to
+normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise`` package.
+
+Requiring the ``dojo/request`` as a module will return the default provider, based on platform. Browser based platforms
+use ``dojo/request/xhr`` and node based platforms use ``dojo/request/node``.
+
+See :ref:`dojo/request <dojo/request>` for more information.
+
+dojo/request/default
+~~~~~~~~~~~~~~~~~~~~
+
+Returns the default provider.  See :ref:`dojo/request/default <dojo/request/default>` for more information.
+
+dojo/request/xhr
+~~~~~~~~~~~~~~~~
+
+The XHR provider. This is the default provider for browser based platforms. This deprecates ``dojo/_base/xhr``. See
+:ref:`dojo/request/xhr <dojo/request/xhr>` for more information.
+
+dojo/request/node
+~~~~~~~~~~~~~~~~~
+
+The node provider.  This is the default provider for node based platforms.  See 
+:ref:`dojo/request/node <dojo/request/node>` for more information.
+
+dojo/request/iframe
+~~~~~~~~~~~~~~~~~~~
+
+The iframe provider.  This deprecates :ref:`dojo/io/iframe <dojo/io/iframe>`.  See 
+:ref:`dojo/request/iframe <dojo/request/iframe>` for more information.
+
+dojo/request/script
+~~~~~~~~~~~~~~~~~~~
+
+The script provider. This deprecates :ref:`dojo/io/script <dojo/io/script>`. See :ref:`dojo/request/script
+<dojo/request/script>` for more information.
+
+dojo/request/handlers
+~~~~~~~~~~~~~~~~~~~~~
+
+This module defines the handles for the responses to requests as well as provides a mechanism for registering additional
+handlers. The modules automatically registers ``javascript``, ``json`` and ``xml``. See :ref:`dojo/request/handlers` for
+more information.
+
+dojo/request/notify
+~~~~~~~~~~~~~~~~~~~
+
+Creates and manages the ``dojo/request/*`` topics. See :ref:`dojo/request/notify <dojo/request/notify>` for more
+information.
+
+dojo/request/watch
+~~~~~~~~~~~~~~~~~~
+
+Used for watching and managing inflight requests. See :ref:`dojo/request/watch <dojo/request/watch>` for more
+information.
+
+dojo/request/registry
+~~~~~~~~~~~~~~~~~~~~~
+
+Used mapping URIs to particular providers. Useful when certain URIs require one type of provider, but others require a
+different one (like cross domain scenarios), but allow the user to develop a single path in the code. See
+:ref:`dojo/request/registry <dojo/request/registry>` for more information.
+
+dojo/request/util
+~~~~~~~~~~~~~~~~~
+
+A set of utilities used by the ``dojo/request`` package.
 
 dojo/sniff
 ----------

@@ -135,16 +135,16 @@ The following features are *deprecated* and will be removed in Dojo 2.0.  See :r
 
   Checks if the parameter is a built-in function
 
-HTML Utilities (dojo/_base/html)
---------------------------------
+HTML Utilities (dojo/_base/html) - Deprecated
+---------------------------------------------
 
 The :ref:`dojo/_base/html <dojo/_base/html>` module contains basic DOM & HTML handling functions for backward
 compatibility purposes.
 
 New code should use the :ref:`dojo/dom* <dojo/#dom-dojo-dom>` modules instead.
 
-Deferred Utilities (dojo/_base/Deferred)
-----------------------------------------
+Deferred Utilities (dojo/_base/Deferred) - Deprecated
+-----------------------------------------------------
 
 This has been *deprecated* in lieu of :ref:`dojo/Deferred <dojo/Deferred>`, :ref:`dojo/when <dojo/when>` and
 :ref:`dojo/promise <dojo/promise>`.  New code should use these modules instead.
@@ -308,8 +308,8 @@ Document Lifecycle - Unload (dojo/_base/unload)
 
     Signal fired by impending window destruction
 
-AJAX/XHR (dojo/_base/xhr)
--------------------------
+AJAX/XHR (dojo/_base/xhr) - Deprecated
+--------------------------------------
 
 * :ref:`IO Pipeline Topics <dojo/ioPipelineTopics>`
 
@@ -678,15 +678,59 @@ Deferred and Promises (dojo/Deferred, dojo/promise/\*, dojo/when)
 
   Provides transparent application of callbacks to promises or other arbitrary values.
 
-AJAX I/O transports (dojo/io/\*)
---------------------------------
+AJAX Requests (dojo/request)
+----------------------------
+
+* :ref:`dojo/request <dojo/request>`
+
+  The base module of the package that will return the default request provider based upon the current platform.
+
+  * :ref:`dojo/request/default <dojo/request/default>`
+
+  The plugin loader that returns the default provider.
+
+  * :ref:`dojo/request/xhr <dojo/request/xhr>`
+
+  The default provider for browser based platforms that provides a cross browser compatible XmlHttpRequest.
+
+  * :ref:`dojo/request/node <dojo/request/node>`
+
+  The default provider for node based platforms that provides an asynchronous node request.
+
+  * :ref:`dojo/request/iframe <dojo/request/iframe>`
+
+  The iframe provider, that uses a browser iframe to manage the communication.
+
+  * :ref:`dojo/request/script <dojo/request/script>`
+
+  The script provider that expects a ``<script>`` tag to embed the request payload.
+
+  * :ref:`dojo/request/handlers <dojo/request/handlers>`
+
+  Contains the payload handlers for requests and also provides the ability to register additional content handlers.
+
+  * :ref:`dojo/request/notify <dojo/request/notify>`
+
+  Publishes the ``dojo/request`` topics.
+
+  * :ref:`dojo/request/watch <dojo/request/watch>`
+
+  Provides the ability to watch inflight requests.
+
+  * :ref:`dojo/request/registry <dojo/request/registry>`
+
+  Allows for the mapping of providers by URI.
+
+AJAX I/O transports (dojo/io/\*) - Deprecated
+---------------------------------------------
+
 * :ref:`dojo.io.iframe <dojo/io/iframe>`
 
-  Sends an AJAX I/O call using an IFrame
+  *Deprecated* - Sends an AJAX I/O call using an IFrame
 
 * :ref:`dojo.io.script <dojo/io/script>`
 
-  Sends a JSONP request using a script tag
+  *Deprecated* - Sends a JSONP request using a script tag
 
 AJAX RPC transports (dojo/rpc/\*)
 ---------------------------------

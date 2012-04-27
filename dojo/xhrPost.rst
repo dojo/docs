@@ -9,6 +9,7 @@ dojo.xhrPost
 .. contents ::
    :depth: 2
 
+*Deprecated* - See :ref:`dojo/request/xhr <dojo/request/xhr>` instead.
 
 Introduction
 ============
