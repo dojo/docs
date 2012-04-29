@@ -34,7 +34,7 @@ An example of making a request to retrieve some JSON would look like:
 .. js ::
 
   require(["dojo/request/xhr"], function(xhr){
-    xhr("http://example.com/some.json", {
+    xhr("example.json", {
       handleAs: "json"
     }).then(function(response){
       // Do something with the response

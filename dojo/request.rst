@@ -66,7 +66,7 @@ require that module and specify the resource you need. The most basic usage woul
 .. js ::
 
   require(["dojo/request"], function(request){
-    request("http://example.com/something.html").then(function(response){
+    request("request.html").then(function(response){
       // do something with results
     }, function(err){
       // handle an error condition
