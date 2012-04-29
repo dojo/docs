@@ -181,6 +181,34 @@ Each of the following is possible:
 tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0. In fact, internally the parser
 uses ``dojo/aspect`` to accomplish a connect anyways.
 
+Declarative Require
+~~~~~~~~~~~~~~~~~~~
+
+The parser now supports the ability to require modules declaratively. This is accomplished using the ``<script
+type="dojo/require">`` tag. Before the document is scanned and parsed, the parser will look for any ``<script>`` tags of
+type ``dojo/require`` and the parser will attempt to load any modules identified in the hash that is contained within
+the text of the tag and put it in the global scope. For example:
+
+.. html ::
+
+  <script type="dojo/require">
+    on: "dojo/on",
+    Button: "dijit/layout/button"
+  </script>
+
+Because of the nature of AMD and ``require()``, when you use this feature, ``.parse()`` will operate in an asynchronous
+mode. In order to maintain backwards compatibility though, the results of ``.parser()`` continue to be an Array, but
+will also have a promise mixed in which is fulfilled with the results of the ``.parse()``. For new development, the
+safest way to interact with ``.parse()`` is to treat the return as a promise.  For example:
+
+.. js ::
+
+  require(["dojo/parser"], function(parser){
+    parser.parse().then(function(instances){
+      // instances contains the instantiated objects
+    });
+  });
+
 dojo/promise
 ------------
 
