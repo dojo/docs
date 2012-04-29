@@ -70,6 +70,8 @@ require that module and specify the resource you need. The most basic usage woul
       // do something with results
     }, function(err){
       // handle an error condition
+    }, function(evt){
+      // handle a progress event
     });
   });
 
@@ -87,18 +89,20 @@ options  Object? *Optional* A hash of any options for the provider.
 
 The ``options`` argument is dependent upon the provider, but some common options are:
 
-======== ============= =============================================================
-Option   Type          Description
-======== ============= =============================================================
-data     String|Object Any data that needs to be sent along with the request
-query    Object        The query that needs to be sent along with the request
-method   String        What method (HTTP verb) should be used for making the request
-headers  Object        Any HTTP headers that need to be sent along with the request
-handleAs String        Handle the response as a particular type of encoding
-======== ============= =============================================================
+============ ============= ========= ===================================================================================
+Property     Type          Default   Description
+============ ============= ========= ===================================================================================
+data         String|Object ``null``  Data, if any, that should be sent with the request.
+query        String|Object ``null``  The query string, if any, that should be sent with the request.
+preventCache Boolean       ``false`` If ``true`` will send an extra query parameter to ensure the the server won't
+                                     supply cached values.
+method       String        ``GET``   The HTTP method that should be used to send the request.
+headers      Object                  A hash of the custom headers to be sent with the request.
+============ ============= ========= ===================================================================================
 
 The provider returns a deferred promise (see :ref:`dojo/Deferred <dojo/Deferred>`) that is fulfilled with the results of
-the request.
+the request. Provider will also error out by calling the errorback function and provide progress by calling the progback
+functions if provided.
 
 The response that is returned when the promise is fulfilled will be and object that will contain:
 
