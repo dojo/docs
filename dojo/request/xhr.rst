@@ -45,9 +45,6 @@ An example of making a request to retrieve some JSON would look like:
     });
   });
 
-Unlike the legacy API, there are no discreet functions that determine the method (HTTP verb) used for the request. The
-provider defaults to ``GET`` but the ``method`` option can be used to expressly set the method.
-
 ``dojo/request/xhr`` takes two arguments:
 
 ======== ======= ===========================================
@@ -78,6 +75,29 @@ headers      Object                  A hash of the custom headers to be sent wit
 
 ``dojo/request/xhr()`` returns a promise that is fulfilled with the response. Errors will be directed to the errback and
 progress to the progback if supplied.
+
+The provider defaults to ``GET`` but the ``method`` option can be used to expressly set the method. Also there are
+helper functions for common methods:
+
+get()
+-----
+
+Same as the base function, but the ``method`` is set to ``GET``.
+
+post()
+------
+
+Same as the base function, but the ``method`` is set to ``POST``.
+
+put()
+-----
+
+Same as the base function, but the ``method`` is set to ``PUT``.
+
+del()
+-----
+
+Same as the base function, but the ``method`` is set to ``DELETE``.
 
 Examples
 ========
