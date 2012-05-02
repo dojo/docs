@@ -34,6 +34,7 @@ HTML markup usage sample
       dojo.require("dojox.grid.EnhancedGrid");
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.Menu");
 
       dojo.ready(function(){
           /*set up data store*/
@@ -131,6 +132,7 @@ JavaScript usage sample
        dojo.require("dojox.grid.EnhancedGrid");
        dojo.require("dojox.grid.enhanced.plugins.Menu");
        dojo.require("dojo.data.ItemFileWriteStore");
+       dojo.require("dijit.Menu");
     
        dojo.ready(function(){
            /*set up data store*/
