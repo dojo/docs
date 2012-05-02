@@ -40,7 +40,7 @@ and runs in many environments from browsers to JS runtime environments such as R
 
 It's main purpose is a framework for developers (both dojo committers and others),
 to unit test out JavaScript functions and custom widgets.
-Its goal isn't soo much as a way to test a full-blown web application as it is to test the parts
+Its goal isn't so much as a way to test a full-blown web application as it is to test the parts
 that make up the applications in a cross-browser (and even non-browser), compatible manner.
 By having a good set of unit tests, developers can feel confident that code changes they later make
 do not cause regressions in existing functions.
