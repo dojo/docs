@@ -92,6 +92,19 @@ parameter to "false". e.g.
 
 This causes a delay when the user attempts to view an image, since it must wait to be loaded.
 
+Enabling Autostart (autoplay)
+----------------------
+
+The Slideshow widget does not automatically play by default. The autoStart parameter overrides this behavior:
+
+.. js ::
+ 
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="autoStart:true">
+  </div>
+
+
+The above slideshow plays immediately.
+
 Disabling Resizing to Fit the Image
 -----------------------------------
 
