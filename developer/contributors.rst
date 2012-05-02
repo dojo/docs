@@ -578,6 +578,7 @@ Individuals who have signed Dojo CLAs
 * Von Klipstein, Tobias
 * Wagener, Peter
 * Waite, Robert
+* Walker, Andrew
 * Walker, Joe
 * Wallez, Sylvain
 * Wang, Pei
@@ -619,6 +620,7 @@ Individuals who have signed Dojo CLAs
 * Zhang, Stephen
 * Zhang, Xiaoming
 * Zhen, Wang
+* Zhu, Wei
 * Zipkin, Joel
 * Zou, Ran
 * Zyp, Kris
