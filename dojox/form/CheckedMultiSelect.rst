@@ -36,7 +36,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
 
   .. js ::
 
-      dojo.require("dojox.form.CheckedMultiSelect");
+      require(["dojox/form/CheckedMultiSelect"]);
 
   .. html ::
 
@@ -61,7 +61,7 @@ By not specifying "multiple=true" in your widget, you will create a widget using
 
   .. js ::
 
-      dojo.require("dojox.form.CheckedMultiSelect");
+      require(["dojox/form/CheckedMultiSelect"]);
 
   .. html ::
 
