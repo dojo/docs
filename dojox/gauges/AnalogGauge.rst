@@ -127,7 +127,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
         console.debug(gauge);
         gauge.addIndicator(new dojox.gauges.AnalogLineIndicator({
           'id': 'target',
-          'value': '52,
+          'value': 52,
           'color': '#D00000',
           'width': 3,
           'hover': 'Target: 52',
