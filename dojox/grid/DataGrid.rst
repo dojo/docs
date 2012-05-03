@@ -124,6 +124,8 @@ editable
   A boolean value that declares whether or not the cell is editable
 ``New in 1.4`` draggable
   A boolean value that you can set to false if you want a cell not to be draggable but others to be draggable
+sortDesc
+  A boolean value setting the default initial sort direction for a cell. When no sort action has been taken on a cell this value determines which direction (true = descending, false/default = ascending) to sort the columm upon first clicking the header. Subsequent clicks simply toggle the existing direction.
 formatter
   A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.  The returned value that is inserted into the page can be any legal HTML.  In dojo 1.3 and earlier, it should *not* be a dijit Widget as that is not parsed.  ``New in 1.4`` You can return a dijit Widget and it will be placed in that location in the cell.  ``New in 1.4`` You can also return a dojo.Deferred and can then pass the deferred's callback function a string to insert at a later point in time.
 
@@ -226,6 +228,8 @@ loadingMessage
   The message to show while the content of the grid is loading.
 errorMessage
   The message to show if an error has occurred loading the data.
+sortInfo
+  Set an initial sort start for the grid, based on the cell. Eg: sortInfo: 1 would sort cell 1 (1-based index) descending, -3 would sort cell 3 ascending. 
 ``New in 1.3`` selectable
   Set to true if you want to enable text selection on your grid.
 ``New in 1.4`` formatterScope
@@ -240,6 +244,7 @@ errorMessage
 .. js ::
   
   <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="escapeHTMLInData:false" ...>
+
 
 Editing cells
 -------------
