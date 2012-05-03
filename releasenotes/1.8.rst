@@ -68,7 +68,26 @@ While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/p
 
 dojo/hccss
 ----------
+
 The dijit/hccss module has moved to dojo core, with a stub left in dijit for backwards compatibility.
+
+dojo/html
+---------
+
+``dojo/html::_ContentSetter`` is now async aware when it comes to parsing content being set.  The promise returned from ``dojo/parser::parse()`` will be stored in ``parseDeferred``.  If using ``_ContentSetter`` directly, ensure that you use the ``parserDeferred`` to detect when the parsing is actually complete.  For example:
+
+.. js ::
+
+  require(["dojo/html", "dojo/when"], function(html, when){
+    var setter = new html._ContentSetter({
+      node: someNode,
+      parseContent: true
+    });
+    setter.set(someContent);
+    when(setter.parseDeferred, function(){
+      // Do something
+    });
+  });
 
 dojo/io/iframe
 --------------
@@ -184,10 +203,10 @@ uses ``dojo/aspect`` to accomplish a connect anyways.
 Declarative Require
 ~~~~~~~~~~~~~~~~~~~
 
-The parser now supports the ability to require modules declaratively. This is accomplished using the ``<script
-type="dojo/require">`` tag. Before the document is scanned and parsed, the parser will look for any ``<script>`` tags of
-type ``dojo/require`` and the parser will attempt to load any modules identified in the hash that is contained within
-the text of the tag and put it in the global scope. For example:
+The parser now supports the ability to require modules declaratively (`#15118 <http://bugs.dojotoolkit.org/ticket/15118>`_). This is accomplished using the ``<script type="dojo/require">`` tag.
+Before the document is scanned and parsed, the parser will look for any ``<script>`` tags of type ``dojo/require`` and
+the parser will attempt to load any modules identified in the hash that is contained within the text of the tag and put
+it in the global scope. For example:
 
 .. html ::
 
@@ -196,10 +215,34 @@ the text of the tag and put it in the global scope. For example:
     Button: "dijit/layout/button"
   </script>
 
-Because of the nature of AMD and ``require()``, when you use this feature, ``.parse()`` will operate in an asynchronous
-mode. In order to maintain backwards compatibility though, the results of ``.parser()`` continue to be an Array, but
-will also have a promise mixed in which is fulfilled with the results of the ``.parse()``. For new development, the
-safest way to interact with ``.parse()`` is to treat the return as a promise.  For example:
+Auto Require
+~~~~~~~~~~~~
+
+The parser now supports the ability to automatically require in modules when encountered declaratively (`#14591 <http://bugs.dojotoolkit.org/ticket/14591>`_). As the document is being scanned and parsed, but before the widgets are
+instantiated, the parser will automatically attempt to require in modules that it hasn't been able to resolve a
+constructor for and the ``data-dojo-type`` looks like a MID (e.g. ``package/module``).
+
+Developers should really be cautious when using this features, because you are not making your dependencies clear, you
+may have a harder time isolating where your issue is, because the parser is automatically loading modules that you may
+not be consciously aware of.
+
+.. code-example ::
+
+  Here is an example of the feature in action.  Notice how no modules are required.
+
+  .. html ::
+
+    <input type="text" name="field1" data-dojo-type="dijit/form/TextBox" value="Hello World" />
+    <button type="button" data-dojo-type="dijit/form/Button">Button</button>
+
+Async Nature of ``.parse()``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Because of the nature of AMD and ``require()``, when you use either the declarative require feature or the auto require
+feature, ``.parse()`` will operate in an asynchronous mode. In order to maintain backwards compatibility though, the
+results of ``.parser()`` continue to be an Array, but will also have a promise mixed in which is fulfilled with the
+results of the ``.parse()``. For new development, the safest way to interact with ``.parse()`` is to treat the return as
+a promise. For example:
 
 .. js ::
 
@@ -385,14 +428,15 @@ Calendar
 ContentPane
 -----------
 
-ContentPane now supports ``addChild()`` and ``removeChild()``.
+- ContentPane now supports ``addChild()`` and ``removeChild()``. However, the behavior of ``addChild(widget, index)`` is
+  undefined if the ContentPane already contains random HTML. It's intended to be used when the pane contains just a list
+  of widgets, like Toolbar or BorderContainer.
 
-However, the behavior of ``addChild(widget, index)`` is undefined if the ContentPane already contains random HTML. It's
-intended to be used when the pane contains just a list of widgets, like Toolbar or BorderContainer.
+- ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used carefully on
+  ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not hidden
+  widgets such as unselected tabs of a TabContainer.
 
-Also, ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used
-carefully on ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not
-hidden widgets such as unselected tabs of a TabContainer.
+- ContentPane is now async aware when setting its content via the ContentSetter.
 
 DateTextBox
 -----------
