@@ -9,6 +9,8 @@ dojo.io.iframe
 .. contents ::
   :depth: 2
 
+*Deprecated* - See :ref:`dojo/request/iframe <dojo/request/iframe>` instead.
+
 dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload files).
 
 Introduction

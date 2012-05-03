@@ -40,6 +40,12 @@ dojo/_base/Deferred
 architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
 ``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
 
+dojo/_base/xhr
+--------------
+
+``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/xhr``.
+
 Dojo Core
 =========
 
@@ -59,6 +65,41 @@ dojo/DeferredList
 -----------------
 
 While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/promise/all`` and ``dojo/promise/first``.
+
+dojo/hccss
+----------
+
+The dijit/hccss module has moved to dojo core, with a stub left in dijit for backwards compatibility.
+
+dojo/html
+---------
+
+``dojo/html::_ContentSetter`` is now async aware when it comes to parsing content being set.  The promise returned from ``dojo/parser::parse()`` will be stored in ``parseDeferred``.  If using ``_ContentSetter`` directly, ensure that you use the ``parserDeferred`` to detect when the parsing is actually complete.  For example:
+
+.. js ::
+
+  require(["dojo/html", "dojo/when"], function(html, when){
+    var setter = new html._ContentSetter({
+      node: someNode,
+      parseContent: true
+    });
+    setter.set(someContent);
+    when(setter.parseDeferred, function(){
+      // Do something
+    });
+  });
+
+dojo/io/iframe
+--------------
+
+``dojo/io/iframe`` has was *deprecated* in lieu of ``dojo/request/iframe``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/iframe``.
+
+dojo/io/script
+--------------
+
+``dojo/io/script`` has was *deprecated* in lieu of ``dojo/request/script``. It was updated to utilise the new request
+architecture, but developers should transition to ``dojo/request/script``.
 
 dojo/parser
 -----------
@@ -159,6 +200,58 @@ Each of the following is possible:
 tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0. In fact, internally the parser
 uses ``dojo/aspect`` to accomplish a connect anyways.
 
+Declarative Require
+~~~~~~~~~~~~~~~~~~~
+
+The parser now supports the ability to require modules declaratively (`#15118 <http://bugs.dojotoolkit.org/ticket/15118>`_). This is accomplished using the ``<script type="dojo/require">`` tag.
+Before the document is scanned and parsed, the parser will look for any ``<script>`` tags of type ``dojo/require`` and
+the parser will attempt to load any modules identified in the hash that is contained within the text of the tag and put
+it in the global scope. For example:
+
+.. html ::
+
+  <script type="dojo/require">
+    on: "dojo/on",
+    Button: "dijit/layout/button"
+  </script>
+
+Auto Require
+~~~~~~~~~~~~
+
+The parser now supports the ability to automatically require in modules when encountered declaratively (`#14591 <http://bugs.dojotoolkit.org/ticket/14591>`_). As the document is being scanned and parsed, but before the widgets are
+instantiated, the parser will automatically attempt to require in modules that it hasn't been able to resolve a
+constructor for and the ``data-dojo-type`` looks like a MID (e.g. ``package/module``).
+
+Developers should really be cautious when using this features, because you are not making your dependencies clear, you
+may have a harder time isolating where your issue is, because the parser is automatically loading modules that you may
+not be consciously aware of.
+
+.. code-example ::
+
+  Here is an example of the feature in action.  Notice how no modules are required.
+
+  .. html ::
+
+    <input type="text" name="field1" data-dojo-type="dijit/form/TextBox" value="Hello World" />
+    <button type="button" data-dojo-type="dijit/form/Button">Button</button>
+
+Async Nature of ``.parse()``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Because of the nature of AMD and ``require()``, when you use either the declarative require feature or the auto require
+feature, ``.parse()`` will operate in an asynchronous mode. In order to maintain backwards compatibility though, the
+results of ``.parser()`` continue to be an Array, but will also have a promise mixed in which is fulfilled with the
+results of the ``.parse()``. For new development, the safest way to interact with ``.parse()`` is to treat the return as
+a promise. For example:
+
+.. js ::
+
+  require(["dojo/parser"], function(parser){
+    parser.parse().then(function(instances){
+      // instances contains the instantiated objects
+    });
+  });
+
 dojo/promise
 ------------
 
@@ -198,7 +291,74 @@ tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See :ref:`
 dojo/request
 ------------
 
-*TODOC*
+The ``dojo/request`` package introduces a new architecture for making asynchronous requests from code. The module
+abstracts the user, for the most part, from the actual provider that makes the request. This means the doesn't have to
+normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise`` package.
+
+Requiring the ``dojo/request`` as a module will return the default provider, based on platform. Browser based platforms
+use ``dojo/request/xhr`` and node based platforms use ``dojo/request/node``.
+
+See :ref:`dojo/request <dojo/request>` for more information.
+
+dojo/request/default
+~~~~~~~~~~~~~~~~~~~~
+
+Returns the default provider.  See :ref:`dojo/request/default <dojo/request/default>` for more information.
+
+dojo/request/xhr
+~~~~~~~~~~~~~~~~
+
+The XHR provider. This is the default provider for browser based platforms. This deprecates ``dojo/_base/xhr``. See
+:ref:`dojo/request/xhr <dojo/request/xhr>` for more information.
+
+dojo/request/node
+~~~~~~~~~~~~~~~~~
+
+The node provider.  This is the default provider for node based platforms.  See 
+:ref:`dojo/request/node <dojo/request/node>` for more information.
+
+dojo/request/iframe
+~~~~~~~~~~~~~~~~~~~
+
+The iframe provider.  This deprecates :ref:`dojo/io/iframe <dojo/io/iframe>`.  See 
+:ref:`dojo/request/iframe <dojo/request/iframe>` for more information.
+
+dojo/request/script
+~~~~~~~~~~~~~~~~~~~
+
+The script provider. This deprecates :ref:`dojo/io/script <dojo/io/script>`. See :ref:`dojo/request/script
+<dojo/request/script>` for more information.
+
+dojo/request/handlers
+~~~~~~~~~~~~~~~~~~~~~
+
+This module defines the handles for the responses to requests as well as provides a mechanism for registering additional
+handlers. The modules automatically registers ``javascript``, ``json`` and ``xml``. See :ref:`dojo/request/handlers` for
+more information.
+
+dojo/request/notify
+~~~~~~~~~~~~~~~~~~~
+
+Creates and manages the ``dojo/request/*`` topics. See :ref:`dojo/request/notify <dojo/request/notify>` for more
+information.
+
+dojo/request/watch
+~~~~~~~~~~~~~~~~~~
+
+Used for watching and managing inflight requests. See :ref:`dojo/request/watch <dojo/request/watch>` for more
+information.
+
+dojo/request/registry
+~~~~~~~~~~~~~~~~~~~~~
+
+Used mapping URIs to particular providers. Useful when certain URIs require one type of provider, but others require a
+different one (like cross domain scenarios), but allow the user to develop a single path in the code. See
+:ref:`dojo/request/registry <dojo/request/registry>` for more information.
+
+dojo/request/util
+~~~~~~~~~~~~~~~~~
+
+A set of utilities used by the ``dojo/request`` package.
 
 dojo/sniff
 ----------
@@ -268,14 +428,15 @@ Calendar
 ContentPane
 -----------
 
-ContentPane now supports ``addChild()`` and ``removeChild()``.
+- ContentPane now supports ``addChild()`` and ``removeChild()``. However, the behavior of ``addChild(widget, index)`` is
+  undefined if the ContentPane already contains random HTML. It's intended to be used when the pane contains just a list
+  of widgets, like Toolbar or BorderContainer.
 
-However, the behavior of ``addChild(widget, index)`` is undefined if the ContentPane already contains random HTML. It's
-intended to be used when the pane contains just a list of widgets, like Toolbar or BorderContainer.
+- ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used carefully on
+  ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not hidden
+  widgets such as unselected tabs of a TabContainer.
 
-Also, ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used
-carefully on ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not
-hidden widgets such as unselected tabs of a TabContainer.
+- ContentPane is now async aware when setting its content via the ContentSetter.
 
 DateTextBox
 -----------

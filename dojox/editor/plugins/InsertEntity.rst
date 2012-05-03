@@ -59,7 +59,7 @@ Something to be aware of is that if you also use the :ref:`dojox.editor.plugins.
 
 .. html ::
 
-  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity', {name: 'prettyprint' entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]"></div>
+  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity', {name: 'prettyprint', entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]"></div>
 
 The above configures prettyprint to escape all the same entities that the InsertEntity plugin can insert.
 

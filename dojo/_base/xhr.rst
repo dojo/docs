@@ -9,6 +9,8 @@ dojo/_base/xhr
 .. contents ::
     :depth: 2
 
+*Deprecated* - See :ref:`dojo/request/xhr <dojo/request/xhr>` instead.
+
 **dojo/_base/xhr** offers AJAX I/O transports and utility methods.
 
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.

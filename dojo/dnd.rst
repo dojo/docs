@@ -1245,23 +1245,8 @@ representations are used for the DnD operations:
 
 * If the move operation can be performed the DnD character is a <.
 
-* If the move opertation can not be performed the DnD character is an o.
+* If the move operation can not be performed the DnD character is an o.
 
-However, in order to detect that high contrast mode has been set on a Windows system, you will need to include an
-additional file from the :ref:`Dijit system <dijit/a11y>` on your pages which use DnD. This file performs the check that
-high contrast mode has been set on a Windows system. When high contrast mode is turned on all color references are
-reduced to just a foreground and background color and CSS background images are not displayed. For more information on
-Windows High Contrast mode see `Widgets and High Contrast Mode <http://dojotoolkit.org/community/a11yHighContrastMode>`_
-. Since DnD uses background images for the icons, the character equivalents are rendered when High Contrast mode is
-detected. You should include this additional file in all of your pages that use drag and drop in order to provide full
-accessibility. Add the following in your page below the other dojo includes:
-
-.. js ::
-
-  require(["dijit/_base/hccss.js"]);
-
-Note that your src path may vary and you may need to do a custom build to include this file since it is not included in
-``dojo.js`` by default.
 
 See also
 ========

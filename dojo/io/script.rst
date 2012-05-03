@@ -9,6 +9,8 @@ dojo.io.script
 .. contents ::
   :depth: 2
 
+*Deprecated* - See :ref:`dojo/request/script <dojo/request/script>` instead.
+
 Introduction
 ============
 

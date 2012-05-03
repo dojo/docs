@@ -135,16 +135,19 @@ The following features are *deprecated* and will be removed in Dojo 2.0.  See :r
 
   Checks if the parameter is a built-in function
 
-HTML Utilities (dojo/_base/html)
---------------------------------
+HTML Utilities (dojo/_base/html) - Deprecated
+---------------------------------------------
 
 The :ref:`dojo/_base/html <dojo/_base/html>` module contains basic DOM & HTML handling functions for backward
 compatibility purposes.
 
 New code should use the :ref:`dojo/dom* <dojo/#dom-dojo-dom>` modules instead.
 
-Deferred Utilities (dojo/_base/Deferred)
-----------------------------------------
+Deferred Utilities (dojo/_base/Deferred) - Deprecated
+-----------------------------------------------------
+
+This has been *deprecated* in lieu of :ref:`dojo/Deferred <dojo/Deferred>`, :ref:`dojo/when <dojo/when>` and
+:ref:`dojo/promise <dojo/promise>`.  New code should use these modules instead.
 
 * :ref:`dojo/_base/Deferred <dojo/_base/Deferred>`
 
@@ -305,8 +308,8 @@ Document Lifecycle - Unload (dojo/_base/unload)
 
     Signal fired by impending window destruction
 
-AJAX/XHR (dojo/_base/xhr)
--------------------------
+AJAX/XHR (dojo/_base/xhr) - Deprecated
+--------------------------------------
 
 * :ref:`IO Pipeline Topics <dojo/ioPipelineTopics>`
 
@@ -623,10 +626,10 @@ Robot (dojo/robot - dojo/robotx)
 --------------------------------
 * :ref:`dojo/robot <dojo/robot>`
 
-  Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of
-  their elements themselves.
+  Users who use D.O.H. plus Dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute
+  coordinates of their elements themselves.
   
-* :ref:`dojo/robotx <dojo/robotx>`
+  * :ref:`dojo/robotx <dojo/robotx>`
 
   Loads an external app into an iframe and points dojo.doc to the iframe document, allowing the robot to control it.
 
@@ -638,15 +641,96 @@ Document Lifecycle - Onload (:ref:`dojo/ready <dojo/ready>`)
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated. When using
   AMD, in most situations the loader plugin :ref:`dojo/domReady <dojo/domReady>` is preferable.
 
-AJAX I/O transports (dojo/io/\*)
---------------------------------
+Deferred and Promises (dojo/Deferred, dojo/promise/\*, dojo/when)
+-----------------------------------------------------------------
+
+* :ref:`dojo/Deferred <dojo/Deferred>`
+
+  The main class for managing asynchronous threads.
+
+* :ref:`dojo/promise <dojo/promise>`
+
+  The package that is the foundation for asynchronous thread management in Dojo.
+
+  * :ref:`dojo/promise/Promise <dojo/promise/Promise>`
+
+    The abstract base class that defines Dojo Promises.
+
+  * :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`
+
+    Defines the default error that will be raised if a promise is cancelled without a reason.
+
+  * :ref:`dojo/promise/all <dojo/promise/all>`
+
+    Takes multiple promises and returns a new promise that is fulfilled when all promises have been fulfilled. Replaces
+    :ref:`dojo/DeferredList <dojo/DeferredList>`.
+
+  * :ref:`dojo/promise/first <dojo/promise/first>`
+
+    Takes multiple promises and returns a new promise that is fulfilled when the first of the promises have been
+    fulfilled.
+
+  * :ref:`dojo/promise/tracer <dojo/promise/tracer>`
+
+    Trace promise fulfillment.  Traced promises will emit events.
+
+* :ref:`dojo/when <dojo/when>`
+
+  Provides transparent application of callbacks to promises or other arbitrary values.
+
+AJAX Requests (dojo/request)
+----------------------------
+
+* :ref:`dojo/request <dojo/request>`
+
+  The base module of the package that will return the default request provider based upon the current platform.
+
+  * :ref:`dojo/request/default <dojo/request/default>`
+
+  The plugin loader that returns the default provider.
+
+  * :ref:`dojo/request/xhr <dojo/request/xhr>`
+
+  The default provider for browser based platforms that provides a cross browser compatible XmlHttpRequest.
+
+  * :ref:`dojo/request/node <dojo/request/node>`
+
+  The default provider for node based platforms that provides an asynchronous node request.
+
+  * :ref:`dojo/request/iframe <dojo/request/iframe>`
+
+  The iframe provider, that uses a browser iframe to manage the communication.
+
+  * :ref:`dojo/request/script <dojo/request/script>`
+
+  The script provider that expects a ``<script>`` tag to embed the request payload.
+
+  * :ref:`dojo/request/handlers <dojo/request/handlers>`
+
+  Contains the payload handlers for requests and also provides the ability to register additional content handlers.
+
+  * :ref:`dojo/request/notify <dojo/request/notify>`
+
+  Publishes the ``dojo/request`` topics.
+
+  * :ref:`dojo/request/watch <dojo/request/watch>`
+
+  Provides the ability to watch inflight requests.
+
+  * :ref:`dojo/request/registry <dojo/request/registry>`
+
+  Allows for the mapping of providers by URI.
+
+AJAX I/O transports (dojo/io/\*) - Deprecated
+---------------------------------------------
+
 * :ref:`dojo.io.iframe <dojo/io/iframe>`
 
-  Sends an AJAX I/O call using an IFrame
+  *Deprecated* - Sends an AJAX I/O call using an IFrame
 
 * :ref:`dojo.io.script <dojo/io/script>`
 
-  Sends a JSONP request using a script tag
+  *Deprecated* - Sends a JSONP request using a script tag
 
 AJAX RPC transports (dojo/rpc/\*)
 ---------------------------------
@@ -795,7 +879,8 @@ Cache (dojo/cache)
 
 * :ref:`dojo.cache <dojo/cache>`
 
-  A mechanism to cache inline text.  This has been deprecated in 1.7 in lieu of the :ref:`dojo/text <dojo/text>` AMD loader plugin.
+  A mechanism to cache inline text. This has been deprecated in 1.7 in lieu of the :ref:`dojo/text <dojo/text>` AMD
+  loader plugin.
 
 Date (dojo/date)
 ----------------
@@ -915,7 +1000,7 @@ Miscellaneous Core
 
 * :ref:`dojo.DeferredList <dojo/DeferredList>`
 
-  Event handling for a group of Deferred objects
+  *Deprecated* Event handling for a group of Deferred objects.  Use :ref:`dojo/promise/all <dojo/promise/all>` instead.
 
 * :ref:`dojo.fx <dojo/fx>`
 
