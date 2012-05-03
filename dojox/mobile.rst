@@ -407,7 +407,7 @@ Automatically Applying Mobile Device Themes Using CSS
 -----------------------------------------------------
 You can also use Dojo Mobile's automatic device detection and theme loading by adding the "dojox/mobile/deviceTheme" to your requires list.  When automatic device detection and theme loading is enabled, Dojo Mobile will insert appropriate stylesheet links dynamically into the header, based on user agent sniffing.
 
-When this approach is taken, you can also pass an additional query parameter string, device={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices).
+When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, BlackBerry, iPhone, iPad or Custom.
 
 Typical Use
 -----------
