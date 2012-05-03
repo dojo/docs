@@ -11,6 +11,8 @@ dojox.dgauges
 
 This page describes how to use and extend the Dojo Gauges Framework.
 
+.. image :: dgauges/all_gauges.png
+
 ============
 Introduction
 ============
