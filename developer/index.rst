@@ -11,7 +11,7 @@ This section contains links to information useful to contributors or committers 
 
 * :ref:`Style guide <developer/styleguide>`
 
-* :ref:`Contributor list <developer/contributors>` - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to dojo
+* :ref:`Contributor list <developer/contributors>` - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to Dojo
 
 * :ref:`Rules and Responsibilities for Dojo Committers <developer/rules>`
 
