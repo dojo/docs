@@ -1,147 +1,345 @@
 .. _dojo/Stateful:
 
 =============
-dojo.Stateful
+dojo/Stateful
 =============
 
-:Authors: Kris Zyp, Marcus Reimann
+:Authors: Kris Zyp, Marcus Reimann, Kitson Kelly
 :Project owner: Kris Zyp
 :since: V1.5
 
 .. contents ::
    :depth: 2
 
-A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
-
+A new generic interface and base class for getting, setting, and watching for property changes (with getters and
+setters) in a consistent manner.
 
 Introduction
 ============
 
-dojo.Stateful provides the ability to get and set named properties in conjunction with the ability to monitor these properties for changes. dojo.Stateful is intended to be a base class that can be extended by other components that wish to support watchable properties. This can be very useful for creating live bindings that utilize current property states and must react to any changes in properties.
+``dojo/Stateful`` provides the ability to get and set named properties, including using custom accessors in conjunction
+with the ability to monitor these properties for changes. ``dojo.Stateful`` is intended to be a base class that can be
+extended by other components that wish to support watchable properties. This can be very useful for creating live
+bindings that utilize current property states and must react to any changes in properties. It also allows a developer to
+customize the behavior of accessing the property by providing auto-magic getters and setters (accessors).
 
 Usage
 =====
 
+Usage of the class can be an instance of the class, although subclassing is recommended.
+
 .. js ::
-  
-  require(["dojo/Stateful"], function(Stateful){
-       // create a new Stateful object:
-       var myObj = new Stateful();
-       // watch changes of property 'foo':
-       myObj.watch("foo", function(){
-           console.log("foo changed to " + myObj.get("foo"));
-       });
-       // test: change obj.foo:
-       myObj.set("foo", "bar");
+
+  require(["dojo/Stateful", "dojo/_base/declare"], function(Stateful, declare){
+    // Subclass dojo/Stateful:
+    var MyClass = declare([Stateful], {
+      foo: null,
+      _fooGetter: function(){
+        return this.foo;
+      },
+      _fooSetter: function(value){
+        this.foo = value;
+      }
+    });
+    
+    // Create an instance and set some initial property values:
+    myObj = new MyClass({
+      foo: "baz"
+    });
+    
+    // Watch changes on a property:
+    myObj.watch("foo", function(name, oldValue, value){
+      // Do something based on the change
+    });
+    
+    // Get the value of a property:
+    myObj.get("foo");
+    
+    // Set the value of a property:
+    myObj.set("foo", "bar");
   });
 
-Available Methods
-=================
+The constructor takes an optional argument of an Object which defines any of the initial properties of the instance.
+Anything passed will utilise ``.set()`` to set the value.
 
-* :ref:`Stateful.get <dojo/Stateful>`
+get()
+-----
 
-  Get a property on a Stateful instance. ***new in 1.5***
+Gets the value of a property. If a custom getter is defined for the property, the custom getter will be called instead.
+The function takes a single argument:
 
-* :ref:`Stateful.set <dojo/Stateful>`
+======== ====== ===============================
+Argument Type   Description
+======== ====== ===============================
+name     String The name of the property to get
+======== ====== ===============================
 
-  Set a property on a Stateful instance. ***new in 1.5***
+set()
+-----
 
-* :ref:`Stateful.watch <dojo/Stateful>`
+Sets the value of a property. If a custom setter is defined for the property, the custom setter will be used instead.
+The function takes up to two arguments:
 
-  Watches a property for changes. ***new in 1.5***
+======== ============= ==============================================================================================
+Argument Type          Description
+======== ============= ==============================================================================================
+name     String|Object The name of the property to set, or a hash of key/value pairs of several properties to set.
+value    Any?          *Optional* The value of the property to set, or if ``name`` is a hash, this argument should be
+                       omitted.
+======== ============= ==============================================================================================
 
+watch()
+-------
+
+Sets a callback to be called when the property changes.  The function takes up to two arguments:
+
+======== ======== =================================================================================================
+Argument Type     Description
+======== ======== =================================================================================================
+name     String?  *Optional* The name of the property to watch.  If omitted, all properties will be watched and the
+                  callback will be called.
+callback Function The callback function that should be called when the property changes.
+======== ======== =================================================================================================
+
+``watch()`` returns a handle that allows disconnection of the watch at some point in the future.  For example:
+
+.. js ::
+
+  var handle = myObj.watch("foo", function(name, oldValue, value){
+    console.log(name, oldValue, value);
+  });
+  
+  handle.unwatch();
+
+The callback function will be passed three arguments:
+
+======== ====== ============================================
+Argument Type   Description
+======== ====== ============================================
+name     String The name of the property that changed.
+oldValue Any    The value of the property before the change.
+value    Any    The value of the property after the change.
+======== ====== ============================================
+
+_changeAttrValue()
+------------------
+
+This is a helper function to be used in custom setters that is used in scenarios where calling ``.set()`` is not
+appropriate, but the value of the property needs to be changed and any watches called. The typical scenario is when
+there are interlinked values, where changing one value affects another value, and therefore can avoid an infinite loop
+of one property changing the value of the other property. The function takes two arguments:
+
+======== ====== ====================================
+Argument Type   Description
+======== ====== ====================================
+name     String The name of the property to change.
+value    Any    The value to change the property to.
+======== ====== ====================================
+
+Custom Accessors
+----------------
+
+``dojo/Stateful`` supports the ability to define custom accessors (getters and setters) that allow control over how values of properties are set and retrieved.  When a custom accessors is defined, a call to ``.get()`` or ``.set()`` will auto-magically use the custom accessor instead of accessing the property directly.
+
+A custom getter is defined in the format of ``_xxxGetter`` and a custom setter is defined in the format of ``_xxxSetter`` where the name of the property is ``xxx``.  The name of the property is not mutated in any way.  For example, the following demonstrates several different examples of how custom accessors would be defined:
+
+.. js ::
+
+  require(["dojo/Stateful", "dojo/_base/declare"], function(Stateful, declare){
+    var MyClass = declare([Stateful], {
+      foo: null,
+      _fooGetter: function(){
+        return this.foo;
+      },
+      _fooSetter: function(value){
+        this.foo = value;
+      },
+      
+      fooBar: null,
+      _fooBarGetter: function(){
+        return this.fooBar;
+      },
+      _fooBarSetter: function(value){
+        this.fooBar = value;
+      },
+      
+      foo_bar: null,
+      _foo_barGetter: function(){
+        return this.fooBar; 
+      },
+      _foo_barSetter: function(value){
+        this.foo_bar = value;
+      }
+      
+      _foo: null,
+      __fooGetter: function(){
+        return this._foo;
+      },
+      __fooSetter: function(value){
+        this._foo = value;
+      }
+    });
+  });
+
+In addition, ``.set()`` has the ability to detect promise returns from a custom setter. This can be used in situations
+where the customer setter will not be immediately setting the value of the attribute. For example, if a custom setter
+needs to validate or post a value to a back end service via XHR before actually setting the value of the attribute. The
+custom setter can return a Deferred or promise value and any watch callbacks will not be called until the promise is
+resolved. If the promise is rejected, the watch will not be called. For example:
+
+.. js ::
+
+  require(["dojo/Stateful", "dojo/Deferred", "dojo/_base/declare"], 
+  function(Stateful, Deferred, declare){
+    var MyClass = declare([Stateful], {
+      foo: null,
+      _fooSetter: function(value){
+        var d = new Deferred();
+        
+        // do something async and then
+        this.foo = value;
+        d.resolve(true);
+        
+        return d;
+      }
+    });
+  });
 
 Examples
 ========
 
-get
----
+.. code-example ::
 
-Get a property on a Stateful instance. ***new in 1.5***
+  And example of basic attribute getting, setting and watching.
 
-Get a named property on a Stateful object. The property may
-potentially be retrieved via a getter method in subclasses. In the base class
-this just retrieves the object's property.
+  .. js ::
 
-.. js ::
- 
-    require(["dojo/Stateful"], function(Stateful){
-       // create a new Stateful object with foo = 3:
-       var myObj = new Stateful({foo: 3});
-       // call the getter for property 'foo':
-       myObj.get('foo');  // returns 3
-       // alternative syntax:
-       myObj.foo;         // returns 3
-   });
+    require(["dojo/Stateful", "dojo/_base/declare", "dojo/dom", "dojo/dom-construct", "dojo/on", "dojo/domReady!"],
+    function(Stateful, declare, dom, domConst, on){
+      var FooClass = declare([Stateful], {
+        foo: null,
+        bar: null
+      });
+      
+      // Setting initial values for properties on construction
+      var aFoo = new FooClass({
+        foo: "baz",
+        bar: "qux"
+      });
+      
+      // Creating a watch handler
+      function watchCallback(name, oldValue, value){
+        domConst.place("<br />change: " + name + " from: " + oldValue + " to: " + value, "output");
+      }
+      
+      // Setting watches
+      aFoo.watch("foo", watchCallback);
+      aFoo.watch("bar", watchCallback);
+      
+      // Setting "click" event handler
+      on(dom.byId("startButton"), "click", function(){
+        domConst.place("aFoo.get('foo'): " + aFoo.get("foo"), "output");
+        domConst.place("<br />aFoo.get('bar'): " + aFoo.get("bar"), "output");
+        aFoo.set("foo", 1);
+        aFoo.set("bar", 2);
+      });
+      
+    });
 
+  .. html ::
 
-set
----
+    <p><strong>Output:</strong></p>
+    <div id="output"></div>
+    <button type="button" id="startButton">Start</button>
 
-Set a property on a Stateful instance. ***new in 1.5***
+.. code-example ::
 
-Sets named properties on a stateful object and notifies any watchers of
-the property. A programmatic setter may be defined in subclasses.
+  An example that uses custom accessors.
 
-.. js ::
- 
-    require(["dojo/Stateful"], function(Stateful){
-       // create a new Stateful object:
-       var myObj = new dojo.Stateful();
-       // watch changes of each property:
-       myObj.watch(function(name, oldValue, value){
-           // this will be called on the set below
-       }
-       myObj.set(foo, 5);
-   });
+  .. js ::
 
-set() may also be called with a hash of name/value pairs, ex:
+    require(["dojo/Stateful", "dojo/_base/declare", "dojo/dom", "dojo/dom-construct", "dojo/on", "dojo/domReady!"],
+    function(Stateful, declare, dom, domConst, on){
+      var FooClass = declare([Stateful], {
+        foo: null,
+        _fooGetter: function(){
+          domConst.place("<code>_fooGetter()</code> called<br />", "output");
+          return this.foo;
+        },
+        _fooSetter: function(value){
+          domConst.place("<code>_fooSetter()</code> called<br />", "output");
+          this.foo = value;
+        }
+      });
+      
+      on(dom.byId("startButton"), "click", function(){
+        var aFoo = new FooClass({
+          foo: "bar"
+        });
+        domConst.place("<code>aFoo.get('foo')</code>: " + aFoo.get("foo") + "<br />", "output");
+        domConst.place("<code>aFoo.set('foo', 'baz')</code>...<br />", "output");
+        aFoo.set("foo", "baz");
+      });
+      
+    });
 
-.. js ::
- 
-    require(["dojo/Stateful"], function(Stateful){
-       // create a new Stateful object:
-       var myObj = new Stateful();
-       // The following is equivalent to calling
-       // set(foo, "Howdy") and set(bar, 3):
-       myObj.set({
-           foo: "Howdy",
-           bar: 3
-       });
-   });
+  .. html ::
 
-watch
------
+    <p><strong>Output:</strong></p>
+    <div id="output"></div>
+    <button type="button" id="startButton">Start</button>
 
-Watches a property for changes. ***new in 1.5***
+.. code-example ::
 
-Parameters:
+  An example of a property that is not set immediatly when ``.set()`` is called, but after 500ms, which means the
+  ``.watch()`` callback will not be called until the property is actually set.
 
-name:
-  Indicates the property to watch. This is optional (the callback may be the only parameter), and if omitted, all the properties will be watched
+  .. js ::
 
-callback:
-  The function to execute when the property changes. This will be called after the property has been changed. The callback will be called with the **this** set to the instance, the first argument as the name of the property, the second argument as the old value and the third argument as the new value.
+    require(["dojo/Stateful", "dojo/Deferred", "dojo/_base/declare", "dojo/dom", "dojo/dom-construct", "dojo/on",
+        "dojo/domReady!"],
+    function(Stateful, Deferred, declare, dom, domConst, on){
+      var FooClass = declare([Stateful], {
+        foo: null,
+        _fooSetter: function(value){
+          domConst.place("<code>_fooSetter()</code> called<br />", "output");
+          var d = new Deferred();
+          
+          var self = this;
+          setTimeout(function(){
+            self.foo = value;
+            d.resolve(true);
+          }, 500);
+          
+          return d;
+        }
+      });
+      
+      var aFoo = new FooClass();
+      
+      aFoo.watch("foo", function(name, oldValue, value){
+        domConst.place("<code>" + name + "</code> changed from: " + oldValue + " to: " + value + "<br />", "output");
+      });
+      
+      on(dom.byId("startButton"), "click", function(){
+        domConst.place("<code>aFoo.set('foo', 'bar')</code>...<br />", "output");
+        aFoo.set("foo", "bar");
+      });
+    });
 
-returns:
-  An object handle for the watch. The unwatch method of this object can be used to discontinue watching this property:
+  .. html ::
 
-
-.. js ::
- 
-    require(["dojo/Stateful"], function(Stateful){
-       // create a new Stateful object:
-       var myObj = new Stateful();
-       // watch changes of property 'foo':
-       var watchHandle = myObj.watch("foo", callback);
-       // ...
-       // discontinue watching this property:
-       watchHandle.unwatch(); // callback won't be called now
-   });
-
+    <p><strong>Output:</strong></p>
+    <div id="output"></div>
+    <button type="button" id="startButton">Start</button>
 
 See also
 ========
 
-* :ref:`dijit._Widget.set/get <dijit/_Widget>` a setter or getter for properties of Dijits
-* Introductory article on dojo.Stateful - http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/
+* :ref:`dijit/_WidgetBase::set/get <dijit/_WidgetBase#custom-setters-getters>` - Custom accessors for widgets that deal
+  with both object properties and DOM attributes.
+
+* :ref:`dojo/Evented <dojo/Evented>` - A base class for classes that utilize events.
+
+* Introductory article on dojo.Stateful -
+  http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/

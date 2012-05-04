@@ -366,6 +366,42 @@ dojo/sniff
 The dojo/_base/sniff module was superseded by dojo/sniff. ``dojo/sniff`` functions the same way as the old module,
 except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
 
+dojo/Stateful
+-------------
+
+``dojo/Stateful`` now supports custom accessors for Object properties (`#15187 <http://bugs.dojotoolkit.org/ticket/15187>`_). This is similar to the functionality in ``dijit/_WidgetBase``. Setting a
+custom accessor in the format of ``_xxxSetter`` or ``_xxxGetter`` will automagically be called when ``set()`` or
+``get()`` or invoked. For example:
+
+.. js ::
+
+  require(["dojo/Stateful", "dojo/_base/declare"], function(Stateful, declare){
+    var aClass = declare(null, {
+      foo: null,
+      _fooGetter: function(){
+        return this.foo;
+      },
+      _fooSetter: function(value){
+        this.foo = value;
+      }
+    });
+    
+    var aInstance = new aClass();
+    
+    aInstance.set("foo", "bar");
+    aInstance.get("foo");
+  });
+
+In addition, custom setters that will not be setting an attribute immediately (for example doing an XHR request to
+transform a value) can return a promise and the attribute watches, if any, will not be called until the promise is
+fulfilled.
+
+There is a helper function directly setting the value of an attribute/property named ``_changeAttrValue`` that is
+intended for use when you have co-dependent values where calling ``set()`` is not appropriate, like when a ``value`` is
+set on a widget the ``checked`` state needs to change as well.
+
+See :ref:`dojo/Stateful <dojo/Stateful>` for further information.
+
 dojo/touch
 ----------
 
