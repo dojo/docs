@@ -135,6 +135,28 @@ And here's a tooltip created from markup connected to a :ref:`dijit.form.Button 
     </div>
 
 
+Ad-Hoc Popup
+------------
+
+Sometimes you want to pop a tooltip up somewhere in response to some decision made in your code.  The complication here is to know when to hide the tooltip again.  The mouseleave event handler is only set up when the dijit/Tooltip instance is created with the `connectId` argument specified, if you simply pop one up around a DOM node this handler is not installed and the Tooltip will never dissappear.  Fix this by setting one up yourself.
+
+.. code-example ::
+  :djConfig: async: true
+
+  .. js ::
+
+    require(["dijit/Tooltip", "dojo/dom", "dojo/on", "dojo/mouse", "dojo/domReady!"], function(Tooltip, dom, on, mouse) {
+      var node = dom.byId('someNode');
+      Tooltip.show("I am a tooltip", node);
+      on.once(node, mouse.leave, function() {
+          Tooltip.hide(node);
+      })
+    })
+
+  .. html ::
+
+    <p>The tooltip will appear over <strong><span id='someNode'>This Node</span></strong>.</p>
+
 Tooltip Positioning
 ===================
 
