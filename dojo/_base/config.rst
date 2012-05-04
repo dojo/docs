@@ -167,6 +167,39 @@ afterOnLoad: true
             d.type = "text/javascript";
         }
 
+addOnLoad: Function or Array
+	Adds a callback via dojo.ready(). Useful when Dojo is added after
+	the page loads and djConfig.afterOnLoad is true. Supports the same
+	arguments as dojo.addOnLoad. When using a function reference, use
+	`djConfig.addOnLoad = function(){};`. For object with function name use
+	`djConfig.addOnLoad = [myObject, "functionName"];` and for object with
+	function reference use `djConfig.addOnLoad = [myObject, function(){}];`
+
+require: Array
+	An array of module names to be loaded immediately after dojo.js has been included
+	in a page.
+
+dojoBlankHtmlUrl: "dojo/resources/blank.html"
+	Used by some modules to configure an empty iframe. Used by dojo.io.iframe and
+	dojo.back, and dijit popup support in IE where an iframe is needed to make sure native
+	controls do not bleed through the popups. Normally this configuration variable
+	does not need to be set, except when using cross-domain/CDN Dojo builds.
+	Save dojo/resources/blank.html to your domain and set `djConfig.dojoBlankHtmlUrl`
+	to the path on your domain your copy of blank.html.
+
+ioPublish:false
+	Set this to true to enable publishing of topics for the different phases of
+	IO operations. Publishing is done via dojo.publish. See dojo.__IoPublish for a list
+	of topics that are published.
+
+useCustomLogger: Anything?
+	If set to a value that evaluates to true such as a string or array and
+	isDebug is true and Firebug is not available or running, then it bypasses
+	the creation of Firebug Lite allowing you to define your own console object.
+
+transparentColor: [255,255,255]
+	Array containing the r, g, b components used as transparent color in dojo.Color;
+	if undefined, [255,255,255] (white) will be used.
 
 skipIeDomLoaded: false
   For IE only, skip the DOMContentLoaded hack used. Sometimes it can cause an Operation Aborted error if the rest of the page triggers script defers before the DOM is ready. If this is config value is set to true, then dojo.ready callbacks will not be triggered until the page load event, which is after images and iframes load. If you want to trigger the callbacks sooner, you can put a script block in the bottom of your HTML that calls dojo._loadInit();. If you are using multiversion support, change "dojo." to the appropriate scope name for dojo.
