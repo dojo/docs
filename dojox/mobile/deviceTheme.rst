@@ -20,7 +20,7 @@ It detects the user agent of the browser and loads the appropriate theme files.
 dojox.mobile provides five pre-defined themes, android, blackberry, iphone, ipad, and custom.
 If the iPhone device is detected, for example, the deviceTheme loads the iphone theme.
 
-You can also pass an additional query parameter string, device={theme id} to force a specific theme through the browser url input. The available theme ids are Android, BlackBerry, Custom, iPhone, and iPad. They are case sensitive. If the given id does not match, the iphone theme is used.
+You can also pass an additional query parameter string, theme={theme id} to force a specific theme through the browser url input. The available theme ids are Android, BlackBerry, Custom, iPhone, and iPad. They are case sensitive. If the given id does not match, the iphone theme is used.
 
 .. html ::
 
