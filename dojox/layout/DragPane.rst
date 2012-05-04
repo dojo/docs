@@ -66,16 +66,18 @@ Declarative example
 	</div>
 
   .. css ::
-    	.largeFont {
-		font-size:x-large;
-	}
-	.dragBox {
-		overflow:hidden;
-		white-space: nowrap;
-		width:675px;
-		height:200px;
-		border:2px solid black;
-	}
+    	
+    .largeFont {
+	font-size:x-large;
+    }
+
+    .dragBox {
+        overflow:hidden;
+	white-space: nowrap;
+	width:675px;
+	height:200px;
+	border:2px solid black;
+    }
 
 See also
 ========
