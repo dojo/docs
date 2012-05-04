@@ -16,17 +16,20 @@ dojox.layout.DragPane provides drag-based scrolling for divs with overflow.
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+A small widget which takes a node with overflow and 
+allows dragging to position the content. Useful with text, images,		
+or for just adding "something" to a overflow-able div.
+	
 
 Usage
 =====
+The content is draggable upon selecting and moving the mouse.
+You need to make sure to set the css overflow property (auto or hidden). 
 
-TODO: how to use the component/class/method
+.. html ::
 
-.. js ::
+   <div data-dojo-type="dojox.layout.DragPane"></div>
 
-   // your code
 
 
 
@@ -41,8 +44,38 @@ TODO: example
 Declarative example
 -------------------
 
-TODO: example
 
+  .. js ::
+
+          require(["dojox/layout/DragPane"]);
+
+  .. html ::
+          
+    <h2>Drag the text in the box below:</h2>
+	
+	<div class="dragBox" data-dojo-type="dojox.layout.DragPane">
+		<div class="largeFont">Dojo saves you time and scales with your development process, using web   standards as its platform. It’s the toolkit experienced developers turn to for building high quality desktop and mobile web applications.
+		From simple websites to large packaged enterprise applications whether desktop or mobile, Dojo will meet your needs.</div>
+	</div>
+	
+	<h2>Inverted:</h2>
+	
+	<div class="dragBox" data-dojo-props="invert:false" data-dojo-type="dojox.layout.DragPane">
+		<div class="largeFont">Dojo saves you time and scales with your development process, using web standards as its platform. It’s the toolkit experienced developers turn to for building high quality desktop and mobile web applications.
+		From simple websites to large packaged enterprise applications whether desktop or mobile, Dojo will meet your needs.</div>
+	</div>
+
+  .. css ::
+    	.largeFont {
+		font-size:x-large;
+	}
+	.dragBox {
+		overflow:hidden;
+		white-space: nowrap;
+		width:675px;
+		height:200px;
+		border:2px solid black;
+	}
 
 See also
 ========
