@@ -24,11 +24,11 @@ or for just adding "something" to a overflow-able div.
 Usage
 =====
 The content is draggable upon selecting and moving the mouse.
-You need to make sure to set the css overflow property (auto or hidden). 
+You need to make sure to set the css overflow property (auto or hidden). You can also set the css white-space property to nowrap to eliminate wrapping the images or text.
 
 .. html ::
 
-   <div data-dojo-type="dojox.layout.DragPane"></div>
+   <div data-dojo-type="dojox.layout.DragPane"> some content </div>
 
 
 
