@@ -128,7 +128,7 @@ in the ``packages`` array via ``dojoConfig``:
             packages: [
                 {
                     name: "my",
-                    location: "/absolute/path/to/local/modules"
+                    location: "/absolute/path/to/local/modules/my"
                 }
             ]
         };
@@ -168,7 +168,7 @@ via ``dojoConfig``:
     <script type="text/javascript">
         var dojoConfig = {
             baseUrl: "./",
-            modulePaths: { my: "relative/path/to/local/modules" }
+            modulePaths: { my: "relative/path/to/local/modules/my" }
         };
     </script>
     
