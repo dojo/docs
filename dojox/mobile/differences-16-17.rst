@@ -85,4 +85,3 @@ New Widgets
 * :ref:`dojox.mobile.TextArea <dojox/mobile/TextArea>`
 * :ref:`dojox.mobile.TextBox <dojox/mobile/TextBox>`
 * :ref:`dojox.mobile.ToggleButton <dojox/mobile/ToggleButton>`
-* :ref:`dojox.mobile. <dojox/mobile>`
