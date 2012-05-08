@@ -43,7 +43,7 @@ Inherited from dojox.mobile.RoundRectList
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |select        |String    |""       |Selection mode of the list. The check mark is shown for the selected list item(s). The value can be        |
 |              |          |         |"single", "multiple", or "". If "single", there can be only one selected item at a time. If "multiple",    |
-|              |          |         |there can be multiple selected items at a time.                                                            |
+|              |          |         |there can be multiple selected items at a time. If "", the check mark is not shown.                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |stateful      |Boolean   |false    |If true, the last selected item remains highlighted.                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
