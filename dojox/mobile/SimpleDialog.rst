@@ -20,6 +20,8 @@ When a SimpleDialog is created, it is initially hidden and not displayed (displa
 
 The contents can be arbitrary HTML, text, or widgets. Note, however, that the widget is initially hidden. You need to be careful when you place something that cannot be initialized under the hidden state into a SimpleDialog.
 
+After a SimpleDialog is created, its DOM node is moved right under the <body> element so that it is positioned correctly at the center of the screen and can be placed over the translucent cover that blocks the entire screen.
+
 .. image :: SimpleDialog.png
 
 Constructor Parameters
@@ -49,6 +51,7 @@ Examples
 
 Declarative example
 -------------------
+
 .. js ::
 
   // Java Script
@@ -62,6 +65,7 @@ Declarative example
       registry.byId(dlg).hide();
     };
   });
+
 .. css ::
 
   /* Style */
@@ -93,6 +97,7 @@ Declarative example
     margin: 14px 0 7px;
     top: 0;
   }
+
 .. html ::
 
   <div id="dlg_message" data-dojo-type="dojox.mobile.SimpleDialog">
@@ -165,6 +170,7 @@ This is an example of creating a SimpleDialog from HTML fragment by mixing in do
 	     data-dojo-type="dojox.mobile.SimpleDialog"
 	     data-dojo-mixins="dojox.mobile._ContentPaneMixin"
 	     data-dojo-props='href:"dialog.html"'></div>
+
 .. html ::
 
   <!-- dialog.html (HTML fragment file) -->
@@ -214,6 +220,7 @@ Large dialog example for Tablet
     font-size: 17px;
     margin: 14px;
   }
+
 .. html ::
 
   <div id="dlg1" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
@@ -239,3 +246,4 @@ Large dialog example for Tablet
   </div>
 
 .. image :: SimpleDialog-example4.png
+
