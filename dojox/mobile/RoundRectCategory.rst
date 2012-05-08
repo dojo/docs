@@ -1,4 +1,3 @@
-
 .. _dojox/mobile/RoundRectCategory:
 
 ==============================
@@ -11,6 +10,9 @@ dojox.mobile.RoundRectCategory
 
 .. contents ::
     :depth: 2
+
+Introduction
+============
 
 RoundRectCategory is a category header for a rounded rectangle list.
 
