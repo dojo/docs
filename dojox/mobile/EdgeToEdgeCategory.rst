@@ -11,6 +11,9 @@ dojox.mobile.EdgeToEdgeCategory
 .. contents ::
     :depth: 2
 
+Introduction
+============
+
 EdgeToEdgeCategory is a category header for an :ref:`edge-to-edge list <dojox/mobile/EdgeToEdgeList>`.
 
 .. image :: EdgeToEdgeCategory.png
@@ -29,6 +32,13 @@ Examples
 
 Declarative example
 -------------------
+
+.. js ::
+
+  require([
+    "dojox/mobile",
+    "dojox/mobile/parser"
+  ]);
 
 .. html ::
 
