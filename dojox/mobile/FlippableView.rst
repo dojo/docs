@@ -11,6 +11,9 @@ dojox.mobile.FlippableView
 .. contents ::
     :depth: 2
 
+Introduction
+============
+
 FlippableView is a container widget that represents entire mobile device screen, and can be flipped horizontally. FlippableView is a subclass of View (=:ref:`dojox.mobile.View <dojox/mobile/View>`). FlippableView allows the user to swipe the screen left or right to flip between the views. When FlippableView is flipped, it finds an adjacent FlippableView, and opens it.
 
 Constructor Parameters
