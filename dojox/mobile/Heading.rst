@@ -30,7 +30,7 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |href          |String    |""            |A URL to open when the navigational control is pressed.                                                    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|moveTo        |String    |""            |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
+|moveTo        |String    |""            |The id of the transition destination of the navigation control. If the value has a hash sign               |
 |              |          |              |('#') before the id (e.g. #view1) and the dojox.mobile.bookmarkable module is loaded by the user           |
 |              |          |              |application, the view transition updates the hash in the browser URL so that the user can bookmark the     |
 |              |          |              |destination view. In this case, the user can also use the browser's back/forward button to navigate through|
@@ -39,8 +39,8 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |transition    |String    |"slide"       |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
 |              |          |              |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "reveal", "revealv",         |
-|              |          |              |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut". If "none" is specified, transition occurs   |
-|              |          |              |immediately without animation.                                                                             |
+|              |          |              |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut", "cube", and "swap". If "none" is specified, |
+|              |          |              |transition occurs immediately without animation.                                                           |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |label         |String    |""            |A title text of the heading. If the label is not specified, the innerHTML of the node is used as a label.  |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -61,6 +61,7 @@ Examples
 
 Example 1
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading"
@@ -68,9 +69,9 @@ Example 1
 
 .. image :: Heading-general.png
 
-
 Example 2
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"World Clock"'>
@@ -82,9 +83,9 @@ Example 2
 
 .. image :: Heading-world.png
 
-
 Example 3
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"Voice Memos"'>
@@ -97,9 +98,9 @@ Example 3
 
 .. image :: Heading-voice.png
 
-
 Example 4
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"Updates"'>
@@ -109,9 +110,9 @@ Example 4
 
 .. image :: Heading-update.png
 
-
 Example 5
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading"
@@ -123,9 +124,9 @@ Example 5
 
 .. image :: Heading-news.png
 
-
 Example 6
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading">
@@ -138,9 +139,9 @@ Example 6
 
 .. image :: Heading-done.png
 
-
 Example 7
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading">
@@ -161,9 +162,9 @@ Example 7
 
 .. image :: Heading-toggle.png
 
-
 Example 8
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading">
@@ -179,9 +180,9 @@ Example 8
 
 .. image :: Heading-catalog.png
 
-
 Example 9
 ---------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading">
@@ -202,9 +203,9 @@ Example 9
 
 .. image :: Heading-search.png
 
-
 Example 10
 ----------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading"
@@ -221,9 +222,9 @@ Example 10
 
 .. image :: Heading-inbox.png
 
-
 Example 11
 ----------
+
 .. html ::
 
   <div data-dojo-type="dojox.mobile.Heading"
