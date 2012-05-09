@@ -656,6 +656,9 @@ Treemap
 
 A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
 
+Mobile
+------
+
 Gfx
 ---
 
