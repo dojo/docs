@@ -128,10 +128,10 @@ Since 1.1, in addition to dojo.xhrGet(), dojo.xhrPost(), dojo.xhrRawPost(), dojo
 To do a HEAD request, you can do something like this:
 
  .. js ::
-
- dojo.xhr("HEAD", {
-    url: "/path/to/resource"
-    load: function(result, ioArgs){
-        // Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
-    }
- });
+    
+    dojo.xhr ("HEAD, {
+        url: "/path/to/resource",
+        load: function(result, ioArgs){
+            //Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
+        }
+    });
