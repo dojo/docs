@@ -100,6 +100,7 @@ Declarative example
 -------------------
 
 .. code-example::
+
   :djConfig: parseOnLoad: true
   :type: inline
 
