@@ -103,6 +103,14 @@ Declarative example
   :djConfig: parseOnLoad: true
   :type: inline
 
+  .. cs ::
+
+	td
+	{
+	  border: 1px solid black;
+ 	  padding: 6px;
+	}
+
   .. js ::
 
 	require(["dojox/layout/ScrollPane"]);
