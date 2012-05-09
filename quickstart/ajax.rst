@@ -129,7 +129,7 @@ To do a HEAD request, you can do something like this:
 
  .. js ::
     
-    dojo.xhr ("HEAD, {
+    dojo.xhr ("HEAD", {
         url: "/path/to/resource",
         load: function(result, ioArgs){
             //Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
