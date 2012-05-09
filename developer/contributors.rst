@@ -472,7 +472,7 @@ Individuals who have signed Dojo CLAs
 * Schindler, William F.
 * Schmidt, Andreas
 * Scholz, Kyle
-* Schontzler, David
+* Schontzler, David (david)
 * Schreiber, Maik
 * Schuerig, Michael
 * Schuster, Stefan
