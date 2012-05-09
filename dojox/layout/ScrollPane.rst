@@ -27,6 +27,8 @@ Horizontal scrolling is supported. Combination scrolling is not.
 
 Vertical orientation is set by default, you can set orientation to horizontal.
 
+All example are > 1.7.
+
 Programmatic Creation:
 
 .. js ::
@@ -42,7 +44,7 @@ Declarative (HTML) Creation:
 
 .. html ::
 
-    <div dojoType="dojox.layout.ScrollPane" style="width:150px height:300px;">
+    <div data-dojo-type=="dojox.layout.ScrollPane" style="width:150px height:300px;">
       <!-- Any Height Content -->
     </div>
 
@@ -107,7 +109,7 @@ Declarative example
 
   .. html ::
 
-	<h2>Declaritive (HTML) Vertical:</h2>
+	<h2>Declarative (HTML) Vertical:</h2>
 	<div>
 
 		<div data-dojo-type="dojox.layout.ScrollPane" style="width:100px; height:150px; border:1px solid; overflow:hidden;">
