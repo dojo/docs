@@ -103,7 +103,7 @@ Declarative example
   :djConfig: parseOnLoad: true
   :type: inline
 
-  .. cs ::
+  .. css ::
 
 	td
 	{
