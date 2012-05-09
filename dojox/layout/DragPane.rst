@@ -44,6 +44,9 @@ TODO: example
 Declarative example
 -------------------
 
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :type: inline
 
   .. js ::
 
