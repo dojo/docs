@@ -165,7 +165,8 @@ a node that may or may not have data-dojo-type specified:
 Script Type "dojo/aspect"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The parser now fully supports the declarative script tags with a ``type="dojo/aspect"`` (`#15117 <http://bugs.dojotoolkit.org/ticket/15117>`_).  This allows you to define scripts that run in line with the aspect concepts behind aspect programming used in the :ref:`dojo/aspect <dojo/aspect>` module.
+The parser now fully supports the declarative script tags with a ``type="dojo/aspect"`` (`#15117 <http://bugs.dojotoolkit.org/ticket/15117>`_). This allows you to define scripts that run in line with the aspect
+concepts behind aspect programming used in the :ref:`dojo/aspect <dojo/aspect>` module.
 
 Each of the following is possible:
 
@@ -212,8 +213,11 @@ it in the global scope. For example:
 
   <script type="dojo/require">
     on: "dojo/on",
+    "app.registry": "dijit/registry",
     Button: "dijit/layout/button"
   </script>
+
+See :ref:`Parser Declarative Require <dojo/parser#declarative-require>` for more information.
 
 Auto Require
 ~~~~~~~~~~~~
@@ -234,6 +238,8 @@ not be consciously aware of.
 
     <input type="text" name="field1" data-dojo-type="dijit/form/TextBox" value="Hello World" />
     <button type="button" data-dojo-type="dijit/form/Button">Button</button>
+
+See :ref:`Parser Auto Require <dojo/parser#auto-require>` for more information.
 
 Async Nature of ``.parse()``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

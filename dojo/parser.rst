@@ -121,7 +121,9 @@ the instantiated objects, you would want to do something like:
 
   require(["dojo/parser", "dojo/_base/array"], function(parser, array){
     parser.parse().then(function(instances){
-      // do something with instances
+      array.forEach(instances, function(instance){
+        // do something with instances
+      });
     });
   });
 
@@ -272,6 +274,18 @@ the other one is clicked:
 When ``parse()`` is invoked, the parser will scan the DOM, look for the declarative require script blocks, require in
 any modules and map them to the variables in the global scope and remove the script blocks from the DOM. It will then
 continue with parsing the rest of the DOM and start instantiating the objects.
+
+Because the parser uses the key name to set the object in the global scope, so a key name of ``app.module`` would deep
+create an ``app`` object, and then a ``module`` property of the ``app`` object. You will need to escape the key name by
+wrapping it in double quotes(``"``) like the following:
+
+.. html ::
+
+  <script type="dojo/require">
+    "app.on": "dojo/on",
+    "app.registry": "dijit/registry",
+    "app.Button": "dijit/form/Button"
+  </script>
 
 Parser Parameters
 -----------------
