@@ -651,11 +651,19 @@ A new gauges package is introduced in dojox.dgauges package. It provides a fully
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
 
-
 Treemap
 -------
 
 A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
+
+Gfx
+---
+
+Mvc
+---
+
+App
+---
 
 
 Util
