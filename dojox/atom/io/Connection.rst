@@ -112,7 +112,7 @@ Example 1: Load an ATOM Feed
       <b>As XML (Showing toString() returning the XML version)</b>
       <pre id="simpleAtomXml">
       </pre>
-    </span>
+    </div>
 
 
 Example 2: Update an entry in a Feed
