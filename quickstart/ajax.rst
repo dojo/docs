@@ -121,3 +121,17 @@ dojo.xhrDelete
 xhrDelete will create an Ajax request using the HTTP DELETE method, which is commonly used to signal to a service to delete a resource at a URI. Data returned is done via the form of a callback.  The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred.then() method.
 
 For complete details and examples, see the :ref:`dojo.xhrDelete documentation <dojo/xhrDelete>`.
+
+dojo.xhr
+========
+Since 1.1, in addition to dojo.xhrGet(), dojo.xhrPost(), dojo.xhrRawPost(), dojo.xhrPut(), dojo.xhrRawPut() and dojo.xhrDelete(), there is now a general purpose XMLHttpRequest call: dojo.xhr(). It allows you to call other HTTP methods not covered by the other dojo.xhr* methods.
+To do a HEAD request, you can do something like this:
+
+ .. js ::
+
+ dojo.xhr("HEAD", {
+    url: "/path/to/resource"
+    load: function(result, ioArgs){
+        // Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
+    }
+ });
