@@ -16,19 +16,35 @@ dojox.layout.ScrollPane is an interesting UI, scrolling an overflowed div based 
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+A pane that "scrolls" its content based on the mouse poisition inside
 
 Usage
 =====
 
-TODO: how to use the component/class/method
+A sizable container that takes it's content's natural size and creates a scroll effect based on the relative mouse position. It is an interesting way to display lists of data, or blocks of content, within a confined space.
+
+Horizontal scrolling is supported. Combination scrolling is not.
+
+Vertical orientation is set by default, you can set orientation to horizontal.
+
+Programmatic Creation:
 
 .. js ::
 
-   // your code
+   require(["dojox/layout/ScrollPane"], function( ScrollPane){
+		var scrollPane = new dojox.layout.ScrollPane({
+			orientation: "vertical",
+			style:"width:125px; height:200px; border:1px solid; overflow:hidden;"
+		},"someNodeId");
+	});
 
+Declarative (HTML) Creation:
 
+.. html ::
+
+    <div dojoType="dojox.layout.ScrollPane" style="width:150px height:300px;">
+      <!-- Any Height Content -->
+    </div>
 
 Examples
 ========
@@ -36,15 +52,122 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :type: inline
+
+  .. js ::
+
+	require(["dojox/layout/ScrollPane"], function( ScrollPane){
+		var scrollPane = new dojox.layout.ScrollPane({
+			orientation: "vertical",
+			style:"width:125px; height:200px; border:1px solid; overflow:hidden;"
+		},"someNodeId");
+	});
+
+  .. html ::
+
+	<h2>Programatic Vertical:<h2>
+	
+	<div id="someNodeId">
+		<ol>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+		</ol>
+	</div>
 
 Declarative example
 -------------------
 
-TODO: example
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :type: inline
+
+  .. js ::
+
+	require(["dojox/layout/ScrollPane"]);
+
+  .. html ::
+
+	<h2>Declaritive (HTML) Vertical:</h2>
+	<div>
+
+		<div data-dojo-type="dojox.layout.ScrollPane" style="width:100px; height:150px; border:1px solid; overflow:hidden;">
+			<ol>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ol>
+		</div>
+		
+	</div>
 
 
-See also
-========
+	<br style="clear:both;">	
 
-* TODO: links to other related articles
+	<h2>Declaritive (HTML) Horizontal</h2>
+	<div data-dojo-type="dojox.layout.ScrollPane" data-dojo-props='orientation:"horizontal"' style="width:500px; height:50px; border:1px solid; overflow:hidden;">
+	<table>
+		<tr>
+			<td>Text</td>
+			<td>Text</td>
+
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+			<td>Text</td>
+		</tr>
+
+	</table>
+	</div>
+
