@@ -64,14 +64,14 @@ Programmatic example
 	    var scrollPane = new dojox.layout.ScrollPane({
 		orientation: "vertical",
 		style:"width:125px; height:200px; border:1px solid; overflow:hidden;"
-	    },"someNodeId");
+	    },"someNodeId0");
 	});
 
   .. html ::
 
 	<h2>Programatic Vertical:<h2>
 	
-	<div id="someNodeId">
+	<div id="someNodeId0">
 	    <ol>
 		<li>text</li>
 		<li>text</li>
@@ -100,7 +100,6 @@ Declarative example
 -------------------
 
 .. code-example::
-
   :djConfig: parseOnLoad: true
   :type: inline
 
