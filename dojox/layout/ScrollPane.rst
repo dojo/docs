@@ -61,10 +61,10 @@ Programmatic example
   .. js ::
 
 	require(["dojox/layout/ScrollPane"], function( ScrollPane){
-		var scrollPane = new dojox.layout.ScrollPane({
-			orientation: "vertical",
-			style:"width:125px; height:200px; border:1px solid; overflow:hidden;"
-		},"someNodeId");
+	    var scrollPane = new dojox.layout.ScrollPane({
+		orientation: "vertical",
+		style:"width:125px; height:200px; border:1px solid; overflow:hidden;"
+	    },"someNodeId");
 	});
 
   .. html ::
@@ -72,28 +72,28 @@ Programmatic example
 	<h2>Programatic Vertical:<h2>
 	
 	<div id="someNodeId">
-		<ol>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-			<li>text</li>
-		</ol>
+	    <ol>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+	    </ol>
 	</div>
 
 Declarative example
