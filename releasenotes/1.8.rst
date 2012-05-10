@@ -662,6 +662,16 @@ Mobile
 Gfx
 ---
 
+- The Gfx API now supports clipping at shape level via the new Shape.setClip(clipGeometry) method. The possible clipping geometry types are rectangle, ellipse, polyline and path (vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping.
+
+- A new Shape.destroy() method has been added to properly dispose a shape when it is not used anymore. The Group.clear() method has been updated to take an optional boolean parameter that indicates whether the group children should be disposed while clearing the group.
+
+- The Group.getBoundingBox() method now returns the children bounding rectangle.
+
+- New modules specific to the svg and canvas renderers have been added, respectively dojox/gfx/svgext and dojox/gfx/canvasext. The purpose of these modules is to give the user access to the specific capabilities of the renderer.
+   * canvasext defines new methods enabling access to the Canvas pixel manipulation API, via the new Surface.getContext(), Surface.getImageData() and the Surface.render() public method. 
+   * svgext defines a new Shape.addRenderingOption(option, value) that adds the specified SVG rendering option on this shape, as specified by the SVG specification (http://www.w3.org/TR/SVG/painting.html#RenderingProperties)
+
 Mvc
 ---
 
