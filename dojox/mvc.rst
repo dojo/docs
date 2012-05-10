@@ -49,7 +49,7 @@ Features
   * Conversion of dojox.mvc.StatefulModel from/to plain objects/values
 
   * Bridge to Dojo Object Store
-* Though some applications use all of them, some applications do not.
+* Though some applications use all of these features, some applications do not.
 
   * As 1.8 dojox.mvc supports binding any stateful attribute, dojox.mvc.StatefulModel’s unique approach of converting non-object value to dojox.mvc.StatefulModel (with “value” attribute) is no longer needed. Regular dojo.Stateful can be used as data model, in many cases.
 
