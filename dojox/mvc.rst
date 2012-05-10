@@ -25,14 +25,14 @@ dojox/mvc has the following properties:
 
 * The data model is "live" data i.e. it maintains any updates driven by the view on the underlying data.
 
-* The data model issues updates to portions of the view if the data they bind to is updated in the model. For example, if two widgets are bound to the same part of a data model, updating the value of one in the view will cause the data model to issue an update to the other containing the new value.
+* The data model issues updates to portions of the view if the data they bind to is updated in the model. For example, if two widgets are bound to the same part of a data model, updating the value of one in the view will cause the data model to issue an update to the other widget with the new value.
 
 * When the model is backed by a dojo.store or dojo.data query, the client-side updates can be persisted once the client is ready to "submit" the changes (which may include both value changes or structural changes - adds/deletes). The datamodel allows control over when the underlying data is persisted i.e. this can be more incremental or batched per application needs. 
 
 Features
 ========
 
-* A simple data binding layer (dojox/mvc/sync) which support one-way or two-way binding and a converter:
+* dojox/mvc/sync, a simple data binding layer which support one-way or two-way binding and a converter:
 
   * :ref:`dojox/mvc/sync  <dojox/mvc/sync>`
 
@@ -40,14 +40,45 @@ Features
 
   * :ref:`dojox/mvc/at  <dojox/mvc/at>`
 
-* A number of new widgets and MVC containers, including:
+* :ref:`StatefulModel has been depricated.  <dojox/mvc/StatefulModel>`
+
+* dojox.mvc.StatefulModel has several different features:
+
+  * Support for array (Notifying removals/additions of elements to watchers)
+
+  * Conversion of dojox.mvc.StatefulModel from/to plain objects/values
+
+  * Bridge to Dojo Object Store
+* Though some applications use all of them, some applications do not.
+
+  * As 1.8 dojox.mvc supports binding any stateful attribute, dojox.mvc.StatefulModel’s unique approach of converting non-object value to dojox.mvc.StatefulModel (with “value” attribute) is no longer needed. Regular dojo.Stateful can be used as data model, in many cases.
+
+  * Some applications do not use array in data model at all.
+
+  * Some applications use arrays in data model in a static manner (No notification is needed for removals/additions of elements for such kind of applications).
+
+  * Some applications would implement getters/setters in its data models to work with more complex data (e.g. XML from REST call, whose request for data item tends to be served by XPath).
+
+* To be able to support these different needs dojox.mvc.StatefulModel is being separated into to classes that support each item:
+
+  * A class that supports handling array, which can notify removals/additions of elements 
+
+    * :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray >`
+
+  * dojox.mvc.getStateful() - A function that creates stateful objects from plain objects/values (Will work as a successor of dojox.mvc.newStatefulModel())
+
+  * dojox.mvc.getPlainData() - A function that creates plain objects/values from stateful objects (Will works as a successor of dojox.mvc.StatefulModel.toPlainObject())
+
+  * (dojox/mvc/EditStoreRefController) - Components to work with Dojo Object Store (Something that does dojox.mvc.StatefulModel.commit(), dojox.mvc.StatefulModel._commit() and dojox.mvc.StatefulModel._saveToStore())
+
+* A number of widgets and MVC containers, including:
 
   * :ref:`Output: A data-bound output widget  <dojox/mvc/Output>`
   * :ref:`Group: An aggregation of widgets with the same parent data binding context  <dojox/mvc/Group>`
   * :ref:`Repeat: A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`
   * :ref:`Generate: A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`
 
-* :ref:`StatefulModel has been depricated.  <dojox/mvc/StatefulModel>`
+
 * :ref:`_DataBindingMixin has been depricated.  <dojox/mvc/_DataBindingMixin>`
  
 Usage
