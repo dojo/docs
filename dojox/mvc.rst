@@ -83,7 +83,7 @@ Examples
 Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: false, async: 1, mvc:{debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
@@ -92,22 +92,15 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 		var model; 
 		require([
 			'dojo/parser',
-			'dojo/ready',
-			'dojox/mvc',
+			'dojo/Stateful',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
-			'dojox/mvc/Group',
 			'dojox/mvc/Output'
-			], function(parser, ready, mvc){
+			], function(parser, Stateful){
 
-				// The dojox.mvc.StatefulModel class creates a data model instance
-				// where each leaf within the data model is decorated with dojo.Stateful
-				// properties that widgets can bind to and watch for their changes.
-				model = mvc.newStatefulModel({ data : {
-				            "First" : "John",
-				            "Last"  : "Doe",
-				            "Email" : "jdoe@example.com"
-				        }});
+				// For this test we can use a simple dojo/Stateful as our model
+				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
+				parser.parse();
 			});
 
   .. css ::
@@ -118,41 +111,46 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
   .. html ::
 
-    <div id="main">
-        <div class="row">
-            <label class="cell" for="firstId">First:</label>
-            <input class="textcell" id="firstId" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.First"></input>
-            <!-- Content in output below will always be in sync with value of textbox above -->
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
-                (first name is: ${this.value})
-            </span>
-        </div>
-        <div class="row">
-            <label class="cell" for="lastnameInput">Last:</label>
-            <input class="textcell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.Last"></input>
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Last">
-                (last name is: ${this.value})
-            </span>
-        </div>
-        <div class="row">
-            <label class="cell" for="emailInput">Email:</label>
-            <input class="textcell" id="emailInput" data-dojo-type="dijit.form.TextBox"
-                   data-dojo-props="ref: model.Email"></input>
-            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Email">
-                (email is: ${this.value})
-            </span>
-        </div>
-        <br/>
-        Model:
-        <button id="reset" type="button" data-dojo-type="dijit.form.Button" 
-                data-dojo-props="onClick: function(){model.reset();}">Reset</button>
-	<button id="fromModel" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
-        	function(){model.First.set('value','Updated in Model');}">Update First from Model</button>
-	<button id="fromWidget" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
-                function(){dijit.byId('firstId').set('value','Updated Widget');}">Update First from Widget</button>
-    </div>
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+      <div id="wrapper">
+	  <div id="header">
+	    <div id="navigation"></div>
+		<div id="headerInsert">
+		  <h1>Input Ouput Sync</h1>
+		  <h2>Data Binding Example</h2>
+		</div>
+	    </div>
+	<div id="main">
+	  <div id="leftNav"></div>
+	  <div id="mainContent">
+		<div class="row">
+		  <label class="cell" for="firstnameInput">First:</label>
+		  <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox" 
+					data-dojo-props="value: at(model, 'First')">
+		<!-- Content in output below will always be in sync with value of textbox above -->
+		(first name is: <span data-dojo-type="dojox/mvc/Output" 
+				data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
+                                                                 value: at(model, 'First')"></span>)
+		</div>
+		<div class="row">
+			<label class="cell" for="lastnameInput">Last:</label>
+			<input class="cell" id="lastnameInput" data-dojo-type="dijit.form.TextBox" 
+						data-dojo-props="value: at(model, 'Last')">
+			(last name is: <span data-dojo-type="dojox/mvc/Output" 
+				data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
+                                                                 value: at(model, 'Last')"></span>)
+		</div>
+		<div class="row">
+			<label class="cell" for="emailInput">Email:</label>
+			<input class="cell" id="emailInput" data-dojo-type="dijit.form.TextBox" 
+					data-dojo-props="value: at(model, 'Email')">
+			(email is: <span data-dojo-type="dojox/mvc/Output" 
+					data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
+									value: at(model, 'Email')"></span>)
+		</div>
+	    </div>
+	  </div>
+	</div>
 
 
 
