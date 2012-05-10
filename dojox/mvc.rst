@@ -28,8 +28,11 @@ Features
 ========
 
 * A simple data binding layer (dojox/mvc/sync) which support one-way or two-way binding and a converter:
+
   * :ref:`dojox/mvc/sync  <dojox/mvc/sync>`
+
 * dojox/mvc/at, typically used in in data-dojo-props so that a widget can synchronize its attribute with another dojo.Stateful:
+
   * :ref:`dojox/mvc/at  <dojox/mvc/at>`
 
 * A number of new widgets and MVC containers, including:
