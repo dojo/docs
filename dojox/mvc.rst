@@ -83,7 +83,7 @@ Examples
 Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.
 
 .. code-example::
-  :djConfig: parseOnLoad: false, async: 1, mvc:{debugBindings: true}
+  :djConfig: parseOnLoad: 1, async: 1, mvc:{debugBindings:1}
   :version: local
   :toolbar: versions, themes
 
@@ -100,7 +100,6 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
-				parser.parse();
 			});
 
   .. css ::
@@ -128,7 +127,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 		  <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox" 
 					data-dojo-props="value: at(model, 'First')">
 		<!-- Content in output below will always be in sync with value of textbox above -->
-		(first name is: <span data-dojo-type="dojox/mvc/Output" 
+			(first name is: <span data-dojo-type="dojox/mvc/Output" 
 				data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
                                                                  value: at(model, 'First')"></span>)
 		</div>
