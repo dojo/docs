@@ -17,12 +17,17 @@ Introduction
 Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox/mvc package focuses on View to Model data binding (eg. View Controller) concerns on the client, easing development of data-rich UI’s which Create, Read, Update, and Delete data. dojox.mvc deals with data binding/controller concerns within a View, but does not deal with application level concerns that span multiple Views (such as navigation), see dojox/app for Application-level Controller concerns.
 
 How it works
+============
+
 dojox/mvc has the following properties:
 
-    It enables widgets (desktop and mobile) to "bind" to data within the model. A bind creates a bi-directional or a single directional update mechanism between the bound view and the underlying data.
-    The data model is "live" data i.e. it maintains any updates driven by the view on the underlying data.
-    The data model issues updates to portions of the view if the data they bind to is updated in the model. For example, if two widgets are bound to the same part of a data model, updating the value of one in the view will cause the data model to issue an update to the other containing the new value.
-    When the model is backed by a dojo.store or dojo.data query, the client-side updates can be persisted once the client is ready to "submit" the changes (which may include both value changes or structural changes - adds/deletes). The datamodel allows control over when the underlying data is persisted i.e. this can be more incremental or batched per application needs. 
+* It enables widgets (desktop and mobile) to "bind" to data within the model. A bind creates a bi-directional or a single directional update mechanism between the bound view and the underlying data.
+
+* The data model is "live" data i.e. it maintains any updates driven by the view on the underlying data.
+
+* The data model issues updates to portions of the view if the data they bind to is updated in the model. For example, if two widgets are bound to the same part of a data model, updating the value of one in the view will cause the data model to issue an update to the other containing the new value.
+
+* When the model is backed by a dojo.store or dojo.data query, the client-side updates can be persisted once the client is ready to "submit" the changes (which may include both value changes or structural changes - adds/deletes). The datamodel allows control over when the underlying data is persisted i.e. this can be more incremental or batched per application needs. 
 
 Features
 ========
