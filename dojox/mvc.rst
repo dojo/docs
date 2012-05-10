@@ -4,8 +4,8 @@
 dojox.mvc
 =========
 
-:Authors: Rahul Akolkar, Ed Chatelain
-:Developers: Rahul Akolkar, Ed Chatelain
+:Authors: Rahul Akolkar, Ed Chatelain, Akira Sudoh
+:Developers: Rahul Akolkar, Ed Chatelain, Akira Sudoh
 :since: V1.7
 
 .. contents ::
@@ -14,7 +14,7 @@ dojox.mvc
 Introduction
 ============
 
-Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox.mvc project focuses on separation of MVC concerns on the client, thereby on easing development of data-rich applications and accelerating the authoring of applications to Create, Read, Update, and Delete data using a set of Dojo-based patterns.
+Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox/mvc package focuses on View to Model data binding (eg. View Controller) concerns on the client, easing development of data-rich UI’s which Create, Read, Update, and Delete data. dojox.mvc deals with data binding/controller concerns within a View, but does not deal with application level concerns that span multiple Views (such as navigation), see dojox/app for Application-level Controller concerns.
 
 This project is useful across form factors. For example, it may be used with dijit as well as dojox.mobile.
 
