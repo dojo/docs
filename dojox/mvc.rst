@@ -89,7 +89,8 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
   .. js ::
 
-		var model; 
+		var model;
+		var at;
 		require([
 			'dojo/parser',
 			'dojo/Stateful',
@@ -97,8 +98,9 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			'dijit/form/TextBox',
 			'dijit/form/Button',
 			'dojox/mvc/Output'
-			], function(parser, Stateful, at){
-				window.at = at;
+			], function(parser, Stateful, at1){
+				//window.at = at;
+at = at1;
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 			});
