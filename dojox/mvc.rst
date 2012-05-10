@@ -16,16 +16,20 @@ Introduction
 
 Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox/mvc package focuses on View to Model data binding (eg. View Controller) concerns on the client, easing development of data-rich UI’s which Create, Read, Update, and Delete data. dojox.mvc deals with data binding/controller concerns within a View, but does not deal with application level concerns that span multiple Views (such as navigation), see dojox/app for Application-level Controller concerns.
 
-This project is useful across form factors. For example, it may be used with dijit as well as dojox.mobile.
+How it works
+dojox/mvc has the following properties:
 
-We begin by introducing a first-class client-side data model based on dojo.Stateful and extending Dojo Form widgets with support for the Model-View-Control (MVC) pattern key to separating data from presentation in user interface design. This basic MVC pattern allows for the flexible reuse of each of the Model, View, and Control artifacts by application authors in varying configurations.
+    It enables widgets (desktop and mobile) to "bind" to data within the model. A bind creates a bi-directional or a single directional update mechanism between the bound view and the underlying data.
+    The data model is "live" data i.e. it maintains any updates driven by the view on the underlying data.
+    The data model issues updates to portions of the view if the data they bind to is updated in the model. For example, if two widgets are bound to the same part of a data model, updating the value of one in the view will cause the data model to issue an update to the other containing the new value.
+    When the model is backed by a dojo.store or dojo.data query, the client-side updates can be persisted once the client is ready to "submit" the changes (which may include both value changes or structural changes - adds/deletes). The datamodel allows control over when the underlying data is persisted i.e. this can be more incremental or batched per application needs. 
 
 Features
 ========
 
-* :ref:`First-class client-side data model, StatefulModel  <dojox/mvc/StatefulModel>`
-* :ref:`Simple data binding layer, Bind  <dojox/mvc/Bind>`
-* :ref:`Data binding mixin for dijits, _DataBindingMixin  <dojox/mvc/_DataBindingMixin>`
+* :ref:`A simple data binding layer (dojox/mvc/sync) which support one-way or two-way binding and a converter.  <dojox/mvc/sync>`
+* :ref:`at - Typically used in in data-dojo-props so that a widget can synchronize its attribute with another dojo.Stateful (dojox/mvc/at)  <dojox/mvc/at>`
+
 * A number of new widgets and MVC containers, including:
 
   * :ref:`Output: A data-bound output widget  <dojox/mvc/Output>`
@@ -33,6 +37,8 @@ Features
   * :ref:`Repeat: A model-bound repeater widget that binds to a data collection  <dojox/mvc/Repeat>`
   * :ref:`Generate: A simple example of UI generation from a supplied data model  <dojox/mvc/Generate>`
 
+* :ref:`StatefulModel has been depricated.  <dojox/mvc/StatefulModel>`
+* :ref:`_DataBindingMixin has been depricated.  <dojox/mvc/_DataBindingMixin>`
  
 Usage
 =====
