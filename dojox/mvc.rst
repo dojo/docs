@@ -83,7 +83,7 @@ Examples
 Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.
 
 .. code-example::
-  :djConfig: parseOnLoad: 1, async: 1, mvc:{debugBindings:1}
+  :djConfig: parseOnLoad: true, async: true, mvc:{debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
@@ -111,7 +111,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
   .. html ::
 
-    <script type="dojo/require">at: "dojox/mvc/at"</script>
+
       <div id="wrapper">
 	  <div id="header">
 	    <div id="navigation"></div>
