@@ -638,6 +638,10 @@ Charting
 
 - Base class for themes is now SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from SimpleTheme.
 
+- Provide a styleFunc on the various plots to allow to dynamically style the plot items.
+
+- Improve the management of missing data point in line-based plot by providing a interpolate option.
+
 Calendar
 --------
 
