@@ -36,15 +36,21 @@ Dojo Base
 dojo/_base/Deferred
 -------------------
 
-``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilise the new promise
+``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilize the new promise
 architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
 ``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
 
 dojo/_base/xhr
 --------------
 
-``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilise the new request
+``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilize the new request
 architecture, but developers should transition to ``dojo/request/xhr``.
+
+dojo/_base/sniff
+----------------
+
+``dojo/_base/sniff`` was *deprecated* in lieu of ``dojo/sniff``. It was updated to utilize the new sniff
+module, but developers should transition to ``dojo/sniff``.
 
 Dojo Core
 =========
