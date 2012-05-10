@@ -83,7 +83,7 @@ Examples
 Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.
 
 .. code-example::
-  :djConfig: parseOnLoad: true, async: true, mvc:{debugBindings: true}
+  :djConfig: parseOnLoad: false, async: true, mvc:{debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
@@ -101,6 +101,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
+				parser.parse();
 			});
 
   .. css ::
