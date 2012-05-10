@@ -77,35 +77,86 @@ Features
 
 * :ref:`dojox/mvc/_DataBindingMixin <dojox/mvc/_DataBindingMixin>` has been depricated.
  
-Usage
-=====
-
-Loading the basic dojox.mvc codebase is extremely simple.
-
-.. js ::
-
-    require([
-        "dojox/mvc", // load the basic MVC support, including the data binding mixin
-        "dojox/mvc/Group" // load other MVC containers, as needed by the application
-    ], function(mvc, Group){
-        // ...
-    });
-
-dojox.mvc can also be loaded using the legacy ``dojo.require`` API:
-
-.. js ::
- 
-    // Load the basic MVC support, including the data binding mixin.
-    dojo.require("dojox.mvc");
-
-    // Load other MVC containers, as needed by the application.
-    dojo.require("dojox.mvc.Group");
-
-
 Examples
 ========
 
-Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.  The "Reset" button will reset the model back to it's original values.  The other buttons show how to programmatically set things in the model to have the update reflected in the widget, and how to programmatically update the widget and have it update the model.
+Basic example, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: local
+  :toolbar: versions, themes
+
+  .. js ::
+
+		var model; 
+		require([
+			'dojo/parser',
+			'dojo/ready',
+			'dojox/mvc',
+			'dijit/form/TextBox',
+			'dijit/form/Button',
+			'dojox/mvc/Group',
+			'dojox/mvc/Output'
+			], function(parser, ready, mvc){
+
+				// The dojox.mvc.StatefulModel class creates a data model instance
+				// where each leaf within the data model is decorated with dojo.Stateful
+				// properties that widgets can bind to and watch for their changes.
+				model = mvc.newStatefulModel({ data : {
+				            "First" : "John",
+				            "Last"  : "Doe",
+				            "Email" : "jdoe@example.com"
+				        }});
+			});
+
+  .. css ::
+
+        .row { width: 500px; display: inline-block; margin: 5px; }
+        .cell { width: 20%;  display:inline-block; }
+        .textcell { width: 30%;  display:inline-block; }   
+
+  .. html ::
+
+    <div id="main">
+        <div class="row">
+            <label class="cell" for="firstId">First:</label>
+            <input class="textcell" id="firstId" data-dojo-type="dijit.form.TextBox"
+                   data-dojo-props="ref: model.First"></input>
+            <!-- Content in output below will always be in sync with value of textbox above -->
+            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
+                (first name is: ${this.value})
+            </span>
+        </div>
+        <div class="row">
+            <label class="cell" for="lastnameInput">Last:</label>
+            <input class="textcell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
+                   data-dojo-props="ref: model.Last"></input>
+            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Last">
+                (last name is: ${this.value})
+            </span>
+        </div>
+        <div class="row">
+            <label class="cell" for="emailInput">Email:</label>
+            <input class="textcell" id="emailInput" data-dojo-type="dijit.form.TextBox"
+                   data-dojo-props="ref: model.Email"></input>
+            <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Email">
+                (email is: ${this.value})
+            </span>
+        </div>
+        <br/>
+        Model:
+        <button id="reset" type="button" data-dojo-type="dijit.form.Button" 
+                data-dojo-props="onClick: function(){model.reset();}">Reset</button>
+	<button id="fromModel" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
+        	function(){model.First.set('value','Updated in Model');}">Update First from Model</button>
+	<button id="fromWidget" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: 
+                function(){dijit.byId('firstId').set('value','Updated Widget');}">Update First from Widget</button>
+    </div>
+
+
+
+Basic example two, input-output sync: Anything typed into the input fields will be updated in the model and reflected in the output field when you leave the input field.  The "Reset" button will reset the model back to it's original values.  The other buttons show how to programmatically set things in the model to have the update reflected in the widget, and how to programmatically update the widget and have it update the model.
 
 .. code-example::
   :djConfig: parseOnLoad: true
