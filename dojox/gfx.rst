@@ -731,6 +731,59 @@ The implementation has the following limitations:
 Silverlight supports following events: onclick, onmouseenter, onmouseleave, onmousedown, onmouseup, onmousemove, onkeydown, onkeyup.
 If you want to target the broadest range of renderers, you are advised to restrict yourself to this list of events.
 
+Clipping
+--------
+
+The 1.8 release introduces clipping support at shape level. A clipping area defines the shape area that will be effectively visible. Everything that would be drawn outside of the clipping area will not be rendered. The possible clipping area types are rectangle, ellipse, polyline and path (see below for renderer-specific limitations). 
+
+The clip parameter defines the clipping area geometry, and should be an object with the following properties:
+   * {x:Number, y:Number, width:Number, height:Number} for rectangular clip
+   * {cx:Number, cy:Number, rx:Number, ry:Number} for ellipse clip
+   * {points:Array} for polyline clip
+   * {d:String} for a path clip.
+
+The clip geometry coordinates are expressed in the coordinate system used to draw the shape. 	
+
+The following example shows how to clip a gfx image with all the possible clip geometry: 
+
+The image not clipped:
+
+Clipped by a rectangle: 
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({x:120, y:120, width:50,height:50});
+
+Clipped by an ellipse:
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:20, ry:50});
+
+Clipped by a circle (using the ellipse geometry):
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:30, ry:30});
+
+Clipped by a polyline:
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({points:[150,110,180,145,120,185,150,110]});
+
+Clipped by a path:
+
+.. js ::
+
+  surface.createImage({src:img, x:300,y:350,width:200,height:200}).setClip({d:"M 110,105 C104,194 117,167 173,110.0000 z"});
+
+
+Implementation details:
+
+vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping geometry.
+
+
 Helper Methods
 --------------
 
