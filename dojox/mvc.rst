@@ -84,7 +84,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc:{debugBindings: true}
-  :version: local
+  :version: 1.8
   :toolbar: versions, themes
 
   .. js ::
