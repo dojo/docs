@@ -756,11 +756,16 @@ Clipped by a rectangle:
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({x:120, y:120, width:50,height:50});
 
+
+.. image :: rectclip.PNG
+
 Clipped by an ellipse:
 
 .. js ::
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:20, ry:50});
+
+.. image :: ellipseclip.PNG
 
 Clipped by a circle (using the ellipse geometry):
 
@@ -768,11 +773,15 @@ Clipped by a circle (using the ellipse geometry):
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:30, ry:30});
 
+.. image :: circleclip.PNG
+
 Clipped by a polyline:
 
 .. js ::
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({points:[150,110,180,145,120,185,150,110]});
+
+.. image :: plineclip.PNG
 
 Clipped by a path:
 
@@ -780,6 +789,7 @@ Clipped by a path:
 
   surface.createImage({src:img, x:300,y:350,width:200,height:200}).setClip({d:"M 110,105 C104,194 117,167 173,110.0000 z"});
 
+.. image :: pathclip.PNG
 
 Implementation details:
 
