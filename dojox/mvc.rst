@@ -97,12 +97,12 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			'dojo/Stateful',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
-			'dojox/mvc/Output',
-			'dojox/mvc/at'
-			], function(kernel, parser, Stateful, TextBox, Button, Output, at){
+			'dojox/mvc/Output'//,
+			//'dojox/mvc/at'
+			], function(kernel, parser, Stateful, TextBox, Button, Output){
 				console.log("dojo kernel.version() is ",kernel.version);
 				//alert(kernel.version);
-				window.at = at;
+				//window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
@@ -133,7 +133,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 		<div class="row">
 		  <label class="cell" for="firstnameInput">First:</label>
 		  <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox" 
-					data-dojo-props="value: at(model, 'First')">
+					data-dojo-props="value: model.First)">
 		<!-- Content in output below will always be in sync with value of textbox above -->
 			(first name is: <span data-dojo-type="dojox/mvc/Output" 
 				data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
