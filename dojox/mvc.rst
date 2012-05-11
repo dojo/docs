@@ -91,7 +91,6 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
 
 		//var model;
-                console.log("dojo.version() is "+dojo.version);
 		require([
 			'dojo/_base/kernel',
 			'dojo/parser',
