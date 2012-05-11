@@ -4,8 +4,8 @@
 dojox.mvc
 =========
 
-:Authors: Rahul Akolkar, Ed Chatelain, Akira Sudoh
-:Developers: Rahul Akolkar, Ed Chatelain, Akira Sudoh
+:Authors: Akira Sudoh, Ed Chatelain, Rahul Akolkar
+:Developers: Akira Sudoh, Ed Chatelain, Rahul Akolkar
 :since: V1.7
 
 .. contents ::
@@ -101,6 +101,8 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
+				console.log("model=",model);
+				console.debug("dojo.version() is "+dojo.version);
 				parser.parse();
 			});
 
