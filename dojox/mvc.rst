@@ -96,12 +96,12 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			'dojo/Stateful',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
-			'dojox/mvc/Output'//,
-			//'dojox/mvc/at'
+			'dojox/mvc/Output',
+			'dojox/mvc/at'
 			], function(kernel, parser, Stateful, TextBox, Button, Output){
 				console.log("dojo kernel.version() is ",kernel.version);
 				//alert(kernel.version);
-				//window.at = at;
+				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
 				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
