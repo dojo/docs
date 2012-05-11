@@ -89,7 +89,8 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
   .. js ::
 
-		var model;
+
+		//var model;
 		require([
 			'dojo/parser',
 			'dojo/Stateful',
@@ -100,7 +101,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			], function(parser, Stateful, at){
 				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
-				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
+				window.model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
 				console.debug("dojo.version() is "+dojo.version);
 				parser.parse();
