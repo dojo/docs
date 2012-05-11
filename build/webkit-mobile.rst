@@ -4,14 +4,18 @@
 Special Dojo Build: WebKit Mobile
 ===================================
 
-This is a simple build one can run to remove a percentage of the base ``dojo.js`` by omitting branches of code designed to accommodate Internet Explorer.
+This is a simple build to remove branches of code designed to accommodate Internet Explorer, Firefox, etc.
+It should be used when:
 
-To create this special ``dojo.js`` file, invoke the build with a **webkitMobile=true** parameter.
+    - target is only webkit mobile platforms (iOS and Android)
+    - document is in standards mode (i.e., with <!DOCTYPE html>)
 
-.. js ::
+To create this special build
+
+.. code-block :: shell
 
   cd util/buildscripts/
-  ./build.sh profile=base webkitMobile=true version=1.5.0 action=release
+  ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
 
 
  

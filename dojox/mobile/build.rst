@@ -22,7 +22,6 @@ Dojo Mobile provides two sample profile files: mobile-all.profile.js and mobile.
   Usage: build separate|single [webkit]
     separate  Create mobile.js that includes only dojox.mobile
     single    Create a single dojo.js layer that includes dojox.mobile
-    webkit    Enable webkitMobile=true option (Loses PC browser support)
 
 separate
 --------
@@ -36,9 +35,8 @@ The "single" option uses mobile-all.profile.js and creates a single dojo.js laye
 
 webkit
 ------
-The webkit option enables the webkitMobile=true build option, which strips out code chunks that are not necessary for Webkit-based mobile browsers. For example, Internet Explorer- or Firefox-specific code is excluded from the build. This reduces the total code size, but the built module will not work on desktop browsers even with the compatibility module (compat.js).
-
-Note that this option reduces a significant amount of code in Dojo 1.6. But in Dojo 1.7, it has less effect on code reduction, because some of the feature detection/testing were moved to dojo.has. In Dojo 1.8, the webkitMobile build pragmas were completely removed from the source code, and this option is no longer effective.
+See :ref:`Special Dojo Build: WebKit Mobile <build/webkit-mobile>` for information on how to do a webkit-mobile only
+build of dojo.   This will reduce a significant amount of code by eliminating code paths for Internet explorer, etc.
 
 Patching Build Scripts pre-1.7
 ==============================
