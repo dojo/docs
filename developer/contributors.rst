@@ -629,6 +629,7 @@ Corporations or Organizations with a CCLA on file
 =================================================
 
 * ActiveGrid, Inc.
+* Adconion Media, Inc.: Peter Higgins (Only to cover Stacked Charts, Better Tooltip)
 * Adaptive Technology Resource Centre
 * AG Interactive
 * AOL, LLC
