@@ -90,7 +90,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
   .. js ::
 
 
-		//var model;
+		var model;
 		require([
 			'dojo/_base/kernel',
 			'dojo/parser',
@@ -101,10 +101,10 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			'dojox/mvc/Output'
 			], function(kernel, parser, Stateful, at){
 				console.log("dojo kernel.version() is ",kernel.version);
-				alert(kernel.version);
+				//alert(kernel.version);
 				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
-				window.model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
+				model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
 				//console.log("dojo.version() is "+dojo.version);
 				parser.parse();
