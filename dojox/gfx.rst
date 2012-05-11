@@ -748,6 +748,8 @@ The following example shows how to clip a gfx image with all the possible clip g
 
 The image not clipped:
 
+.. image :: noclip.PNG
+
 Clipped by a rectangle: 
 
 .. js ::
