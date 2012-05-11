@@ -107,7 +107,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 				// For this test we can use a simple dojo/Stateful as our model
 				window.model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
-				console.log("dojo.version() is "+dojo.version);
+				//console.log("dojo.version() is "+dojo.version);
 				parser.parse();
 			});
 
