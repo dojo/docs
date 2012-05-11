@@ -91,19 +91,23 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 
 
 		//var model;
+                console.log("dojo.version() is "+dojo.version);
 		require([
+			'dojo/_base/kernel',
 			'dojo/parser',
 			'dojo/Stateful',
 			'dojox/mvc/at',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
 			'dojox/mvc/Output'
-			], function(parser, Stateful, at){
+			], function(kernel, parser, Stateful, at){
+				console.log("dojo kernel.version() is ",kernel.version);
+				alert(kernel.version);
 				window.at = at;
 				// For this test we can use a simple dojo/Stateful as our model
 				window.model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
 				console.log("model=",model);
-				console.debug("dojo.version() is "+dojo.version);
+				console.log("dojo.version() is "+dojo.version);
 				parser.parse();
 			});
 
