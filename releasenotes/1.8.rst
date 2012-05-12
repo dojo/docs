@@ -668,6 +668,17 @@ A new Treemap component is introduced in dojox.treemap package. It displays data
 
 Mobile
 ------
+A webkit-mobile build profile was added to eliminate IE etc. code paths from a build intended only to run on
+webkit-mobile devices.
+
+To create this special build:
+
+.. code-block :: shell
+
+  cd util/buildscripts/
+  ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
+
+
 
 Gfx
 ---
