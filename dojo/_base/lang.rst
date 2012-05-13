@@ -56,9 +56,9 @@ If you have a pointer to some node already, or want to avoid id's all together, 
 
 clone() is always "deep". Cyclic (e.g., circular or DAG) cases are explicitly not supported due to speed and space concerns.
 
-    * If you want a shallow copy of an object y = mixin()({}, x);
-    * If you want a shallow copy of an array: y = map()(x, "return value;");
-    * The rest will be covered by the deep copy: y = clone()(x);
+    * If you want a shallow copy of an object y = lang.mixin({}, x);
+    * If you want a shallow copy of an array: y = arrayUtil.map(x, "return value;");
+    * The rest will be covered by the deep copy: y = lang.clone(x);
 
 TODOC: clone + events?
 
@@ -712,10 +712,10 @@ while everything else is going to be filtered.
 			}
 			// escape
 			return fn(_, name).
-			  replace(/&/g, "&amp;").
-			  replace(/</g, "&lt;").
-			  replace(/>/g, "&gt;").
-			  replace(/"/g, "&quot;");
+			  replace(/&/g, "&").
+			  replace(/</g, "<").
+			  replace(/>/g, ">").
+			  replace(/"/g, """);
 		  });
 		}
 
