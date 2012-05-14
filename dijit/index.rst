@@ -40,8 +40,6 @@ Utility methods and classes used by widgets or by applications with widgets.
 
 * :ref:`dijit.focus <dijit/focus>` - keeps track of focused node and active widgets
 
-* :ref:`dijit.hccss <dijit/hccss>` - for detecting when IE or FF is in high contrast (aka no background images) mode
-
 * :ref:`dijit.place <dijit/place>` - low level code for positioning popups / drop downs
 
 * :ref:`dijit.popup <dijit/popup>` - high level library routines for positioning popups / drop downs
@@ -49,6 +47,8 @@ Utility methods and classes used by widgets or by applications with widgets.
 * :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
 
 * :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
+
+* :ref:`dijit.Destroyable <dijit/Destroyable>` - for tracking handles and releasing them when an object is destroyed
 
 Infrastructure Widgets
 ======================
