@@ -11,6 +11,8 @@ Getting started
    :alt: Dojo Documentation
    :class: logowelcome;
 
+This tutorial is *deprecated*.  Please see `Dojo Toolkit Tutorials <http://dojotoolkit.org/documentation/>`_ instead.
+
 * :ref:`Getting started fast <quickstart/gettingstarted>`
 * :ref:`Hello World tutorial <quickstart/helloworld>`
 * :ref:`History of Dojo <quickstart/introduction/history>`
