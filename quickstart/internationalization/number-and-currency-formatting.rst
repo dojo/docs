@@ -51,6 +51,8 @@ Note that the positioning of month, day, and year are all different, as well as 
    localeDate.format(d, {selector:'date', formatLength:'short'});
    // => "10/29/06"
 
+   // Support for additional locales can be specified at startup using the 'extraLocale' configuration setting
+   // This example will return the time portion of the date in Simplified Chinese
    localeDate.format(d, {selector:'time', formatLength:'long', locale:'zh-cn'});
    // => "下午12时30分00秒"
 
