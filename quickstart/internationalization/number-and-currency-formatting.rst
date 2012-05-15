@@ -31,7 +31,7 @@ For example, look at the following date formatted using the default locale for t
      // such as overriding the default locale
      // Note: the page must specify dojoConfig.extraLocale: 'zh-cn'
      // to bootstrap the environment with support for a locale which is not the user's default
-     localeDate.format(d, {locale:'zh-cn'})
+     localeDate.format(d, {locale: 'zh-cn'})
      // => "06-10-29 下午12:30"
    });
 
@@ -41,6 +41,15 @@ Note that the positioning of month, day, and year are all different, as well as 
 
    localeDate.format(d, {selector:'date', formatLength:'full'});
    // => "Sunday, October 29, 2006"
+
+   localeDate.format(d, {selector:'date', formatLength:'long'});
+   // => "October 29, 2006"
+
+   localeDate.format(d, {selector:'date', formatLength:'medium'});
+   // => "Oct 29, 2006"
+
+   localeDate.format(d, {selector:'date', formatLength:'short'});
+   // => "10/29/06"
 
    localeDate.format(d, {selector:'time', formatLength:'long', locale:'zh-cn'});
    // => "下午12时30分00秒"
