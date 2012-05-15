@@ -435,6 +435,8 @@ Setup rstwiki on Windows
 
 Follow the general instructions above, but with these changes/notes:
 
+  - If you have not installed ez_setup.py you will need to find it, download it and run it.
+
   - The %TMP% directory is not used for rstwiki_sessions. It seems to be hardcoded to c:\\tmp so you need to create c:\\tmp\\rstwiki_sessions
   - I had to modify wiki.py to change
 
