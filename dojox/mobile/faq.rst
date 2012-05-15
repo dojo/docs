@@ -211,3 +211,8 @@ If you want to apply it to all the views at once, you could set css style as bel
   .mblView {
     border-top: 1px solid transparent;
   }
+
+Is dojox.mobile.app still alive?
+--------------------------------
+
+dojox.mobile.app is no longer actively developed. It has been superseded by dojox.app, which targets both desktop and mobile platforms (see http://dojotoolkit.org/reference-guide/1.7/dojox/app.html).
