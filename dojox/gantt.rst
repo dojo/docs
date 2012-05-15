@@ -85,7 +85,7 @@ The following step shows how to create a typical gantt chart in dojo.
       dojo.require("dojox.gantt.GanttChart");
       // ...
     </script>
-
+    <div id="gantt"></div>
 
 There are several imported parameters in ``dojox.gantt.GanttTaskItem`` declaration as follows.
 
