@@ -33,7 +33,7 @@ The following step shows how to create a typical gantt chart in dojo.
 
   .. js ::
 
-    require(["dojo","dojox/gantt/GanttChart","dojo/date/locale"],function(dojo, GanttChart){
+    require(["dojo","dojox/gantt/GanttChart","dojo/date/locale","dijit"],function(dojo, GanttChart){
       // Declare gantt chart.  
       var ganttChart = new dojox.gantt.GanttChart({
         readOnly: false,        // optional: determine if gantt chart is editable
