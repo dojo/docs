@@ -99,7 +99,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 			'dijit/form/Button',
 			'dojox/mvc/Output',
 			'dojox/mvc/at'
-			], function(kernel, parser, Stateful, TextBox, Button, Output){
+			], function(kernel, parser, Stateful, TextBox, Button, Output, at){
 				console.log("dojo kernel.version() is ",kernel.version);
 				//alert(kernel.version);
 				window.at = at;
