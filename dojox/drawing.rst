@@ -56,7 +56,7 @@ The files are laid out as such:
 Example
 -------
 
-After using the proper requires, the following is all that is needed to embed Drawing in your document:
+Here is an example of using dojox.drawing in an HTML document. The example consists of two parts: the drawing canvas itself and a customized toolbar. The require statement loads the drawing and the tools.
 
 .. html ::
  
