@@ -33,7 +33,8 @@ The following step shows how to create a typical gantt chart in dojo.
 
   .. js ::
 
-    // Step 2: Declare gantt chart.  
+    dojo.require("dojox.gantt.GanttChart");
+    // Declare gantt chart.  
     var ganttChart = new dojox.gantt.GanttChart({
       readOnly: false,        // optional: determine if gantt chart is editable
       dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
@@ -42,7 +43,7 @@ The following step shows how to create a typical gantt chart in dojo.
       withResource: true      // optional: display the resource chart or not
     }, "gantt");              //"gantt" is the node container id of gantt chart widget
 
-    // Step 3: Add project with tasks.
+    // Add project with tasks.
   
     var project = new dojox.gantt.GanttProjectItem({
       id: 1,
@@ -77,15 +78,12 @@ The following step shows how to create a typical gantt chart in dojo.
 
   .. html ::
 
-    <!-- Step 1: Import related CSS file and required JavaScript: -->  
-    <link type="text/css" rel="stylesheet" href="{baseUrl}/dijit/themes/claro/claro.css">
-    <link type="text/css" rel="stylesheet" href="{baseUrl}/dojox/gantt/resources/gantt.css">
-    <!-- ... -->
-    <script type="text/javascript">
-      dojo.require("dojox.gantt.GanttChart");
-      // ...
-    </script>
     <div id="gantt"></div>
+
+  .. css ::
+
+        @import "{{baseUrl}}dojox/gantt/resources/gantt.css";
+
 
 There are several imported parameters in ``dojox.gantt.GanttTaskItem`` declaration as follows.
 
