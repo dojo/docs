@@ -441,6 +441,21 @@ Dijit
 _WidgetBase
 -----------
 
+- widget events, including attribute changes, are emitted as events on the DOM tree
+
+.. js ::
+
+    on(dom.byId("buttonContainer"), "click", function(evt){
+        var widget = registry.getEnclosingWidget(evt.target);
+        if(widget){
+            console.log("click on widget " + widget.id);
+        }
+    });
+
+
+See :ref:`Widget events published to the DOM <quickstart/events#widget-events-published-to-the-dom>` for details.
+
+
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
 
 .. js ::
