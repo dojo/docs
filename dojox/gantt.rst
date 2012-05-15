@@ -33,48 +33,49 @@ The following step shows how to create a typical gantt chart in dojo.
 
   .. js ::
 
-    dojo.require("dojox.gantt.GanttChart");
-    // Declare gantt chart.  
-    var ganttChart = new dojox.gantt.GanttChart({
-      readOnly: false,        // optional: determine if gantt chart is editable
-      dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
-      height: 400,            // optional: chart height in pixel, default is 400px
-      width: 1200,            // optional: chart width in pixel, default is 600px
-      withResource: true      // optional: display the resource chart or not
-    }, "gantt");              //"gantt" is the node container id of gantt chart widget
+    require("dojo","dojox.gannt.GanttChart",function(dojo, GanttChart){
+      // Declare gantt chart.  
+      var ganttChart = new dojox.gantt.GanttChart({
+        readOnly: false,        // optional: determine if gantt chart is editable
+        dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
+        height: 400,            // optional: chart height in pixel, default is 400px
+        width: 1200,            // optional: chart width in pixel, default is 600px
+        withResource: true      // optional: display the resource chart or not
+      }, "gantt");              //"gantt" is the node container id of gantt chart widget
 
-    // Add project with tasks.
+      // Add project with tasks.
   
-    var project = new dojox.gantt.GanttProjectItem({
-      id: 1,
-      name: "Development Project",
-      startDate: new Date(2006, 5, 11)
-    });
-    var taskRequirement = new dojox.gantt.GanttTaskItem({
-      id: 1,
-      name: "Requirement",
-      startTime: new Date(2006, 5, 11),
-      duration: 50,
-      percentage: 50,
-      taskOwner: "Jack"
-    });
-    var taskAnalysis = new dojox.gantt.GanttTaskItem({
-      id: 2,
-      name: "Analysis",
-      startTime: new Date(2006, 5, 18),
-      duration: 40,
-      percentage: 0,
-      previousTaskId: "1",
-      taskOwner: "Michael"
-    });
+      var project = new dojox.gantt.GanttProjectItem({
+        id: 1,
+        name: "Development Project",
+        startDate: new Date(2006, 5, 11)
+      });
+      var taskRequirement = new dojox.gantt.GanttTaskItem({
+        id: 1,
+        name: "Requirement",
+        startTime: new Date(2006, 5, 11),
+        duration: 50,
+        percentage: 50,
+        taskOwner: "Jack"
+      });
+      var taskAnalysis = new dojox.gantt.GanttTaskItem({
+        id: 2,
+        name: "Analysis",
+        startTime: new Date(2006, 5, 18),
+        duration: 40,
+        percentage: 0,
+        previousTaskId: "1",
+        taskOwner: "Michael"
+      });
 
-    project.addTask(taskRequirement);
-    project.addTask(taskAnalysis);
+      project.addTask(taskRequirement);
+      project.addTask(taskAnalysis);
   
-    ganttChart.addProject(project);
+      ganttChart.addProject(project);
 
-    // Initialize and Render
-    ganttChart.init();
+      // Initialize and Render
+      ganttChart.init();
+    });
 
   .. html ::
 
