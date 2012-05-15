@@ -23,7 +23,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
  
   .. js ::
 
-        require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!', 'dojo/date/locale'],
+        require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
           function(lang, DataGrid, ItemFileWriteStore, dom){
 
           /*set up data store*/
