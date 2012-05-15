@@ -35,7 +35,7 @@ For example, look at the following date formatted using the default locale for t
      // => "06-10-29 下午12:30"
    });
 
-Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") dojo/date offers a variety of formatting choices, such as formatLength -- arbitrary choices of different formats as set by the CLDR: "short", "medium", "long", or "full" -- or selection of only the date or time portion of the Date object:
+Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") dojo/date offers a variety of formatting choices, such as formatLength -- arbitrary choices of different formats as set by the CLDR: "short", "medium", "long", or "full" -- or selection of only the date or time portion of the Date object.  For a user running in an English locale:
 
 .. js ::
 
