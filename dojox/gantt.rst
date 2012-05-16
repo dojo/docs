@@ -29,7 +29,7 @@ Usage
 The following step shows how to create a typical gantt chart in dojo.
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoad: true
+  :djConfig: async: false, parseOnLoad: true
 
   .. js ::
 
