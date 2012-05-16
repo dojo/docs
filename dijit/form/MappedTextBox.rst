@@ -33,8 +33,3 @@ This is handled internally by having two <input> fields in the widget:
 The upshot of this is that Dijit handles localization issues on the client,
 so the server doesn't have to worry about it
 (except of course for translating the boilerplate text on the page, like the label for the above control).
-
-Extending MappedTextBox
-=======================
-
-MappedTextBox is an abstract class. Subclasses of MappedTextBox **MUST** implement the serialize function. MappedTextBox automatically calls the serialize function after the user enters a value. The serialize function takes two arguments: the displayed value to convert, and an object of arbitrary constraints. The syntax and semantics of the constraints depends entirely on what the subclass's serialize function expects. An instance of MappedTextBox **MAY** state per-instance constraints through the constraints property. The serialize function **MUST** return the canonical value corresponding to the passed displayed value.
