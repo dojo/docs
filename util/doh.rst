@@ -496,5 +496,4 @@ See also
 ========
 
 * The numerous unit tests in dojo itself!  For example: dojo/tests/\*, dijit/tests/module.js, dojox/\*/ tests/\*, and so on.
-* `D.O.H tutorial by Medryx <http://blog.medryx.org/2008/06/08/dojo-doh-unit-testing/>`_
 * `D.O.H tutorial by IBM <http://www.ibm.com/developerworks/web/library/wa-aj-doh/index.html>`_  *(Has example code)*
