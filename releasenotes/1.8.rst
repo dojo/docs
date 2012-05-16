@@ -761,7 +761,7 @@ New Demos
 Updated demos
 -------------
 
-- mobileGallery; the mobile gallery now highlights the latest dojox/mobile features
+- mobileGallery: the mobile gallery now highlights the latest dojox/mobile features
 - gauges & mobileGauges: the gauges demos now use the new dojox/dgauges package
 
 Migration
