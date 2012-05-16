@@ -60,7 +60,7 @@ This example shows how to add a gauge to a Dojo application using markup:
 
 .. html ::
 
-    <div data-dojo-type="dojox.dgauges.components.default.CircularLinearGauge"
+    <div data-dojo-type="dojox/dgauges/components/default/CircularLinearGauge"
          value="20" minimum="-50" maximum="50"
          style="width:300px; height:300px">
     </div>
