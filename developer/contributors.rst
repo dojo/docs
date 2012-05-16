@@ -281,7 +281,7 @@ Individuals who have signed Dojo CLAs
 * Klubnik, Justin
 * Knapp, Matthew
 * Koberg, Robert S.
-* Kokot, Peter (maastermedia)
+* Kokot, Peter (peterkokot)
 * Kolba, Nicholas
 * Komarneni, Vamsikrishna
 * Koonce, Grayson
@@ -667,7 +667,7 @@ Corporations or Organizations with a CCLA on file
 * Leorent, GmbH: Michael Rasmussen
 * Livando.com
 * LUCIAD NV: Tom Makieu, Thomas Neiaynck
-* Maastermedia
+* Maastermedia: Peter Kokot
 * Media Hive
 * Media Distribution Solutions, LLC: Mike Wilcox
 * Meebo
