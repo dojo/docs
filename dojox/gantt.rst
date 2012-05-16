@@ -33,9 +33,10 @@ The following step shows how to create a typical gantt chart in dojo.
 
   .. js ::
 
-    require(["dojo","dojox/gantt/GanttChart","dojo/date/locale","dijit/_base/manager"],function(dojo, GanttChart){
+    setTimeout(function(){
+    require(["dojo","dojox/gantt/GanttChart", "dojox/gantt/GanttProjectItem", "dojox/gantt/GanttTaskItem"],function(dojo, GanttChart, GanttProjectItem, GanttTaskItem){
       // Declare gantt chart.  
-      var ganttChart = new dojox.gantt.GanttChart({
+      var ganttChart = new GanttChart({
         readOnly: false,        // optional: determine if gantt chart is editable
         dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
         height: 400,            // optional: chart height in pixel, default is 400px
@@ -45,12 +46,12 @@ The following step shows how to create a typical gantt chart in dojo.
 
       // Add project with tasks.
   
-      var project = new dojox.gantt.GanttProjectItem({
+      var project = new GanttProjectItem({
         id: 1,
         name: "Development Project",
         startDate: new Date(2006, 5, 11)
       });
-      var taskRequirement = new dojox.gantt.GanttTaskItem({
+      var taskRequirement = new GanttTaskItem({
         id: 1,
         name: "Requirement",
         startTime: new Date(2006, 5, 11),
@@ -58,7 +59,7 @@ The following step shows how to create a typical gantt chart in dojo.
         percentage: 50,
         taskOwner: "Jack"
       });
-      var taskAnalysis = new dojox.gantt.GanttTaskItem({
+      var taskAnalysis = new GanttTaskItem({
         id: 2,
         name: "Analysis",
         startTime: new Date(2006, 5, 18),
@@ -76,6 +77,7 @@ The following step shows how to create a typical gantt chart in dojo.
       // Initialize and Render
       ganttChart.init();
     });
+    },0);
 
   .. html ::
 
