@@ -504,7 +504,7 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
 
             new dijit.form.FilteringSelect({
                 id: "state",
-                store: new Memory({ data: states }),
+                store: new Memory({ idProperty: "state", data: states }),
                 autoComplete: true,
                 style: "width: 150px;",
                 onChange: function(state){
