@@ -62,6 +62,9 @@ The following simple example demonstrates how MappedTextBox translates the displ
                         return "canonicalInvalidValue";
                 }
             }
-        });
-        dojo.body().appendChild(textbox.domNode);
+        },"textBox");
     });
+
+    .. html ::
+
+      <div id="textBox" />
