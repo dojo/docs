@@ -72,6 +72,20 @@ On your server, you should look at the Range header in the request to know which
 
  Content-Range: items 0-24/66
 
+The returned total is available as a further promise on the returned promise of data which returns the total number of available rows indicated in the Content-Range header as a number, so you can retrieve it like this:
+
+.. js ::
+ 
+  var _this = this,
+    queryResults = this.store.query(this.query, this.queryOpts);
+  
+  queryResults.then(function(data){
+    queryResults.total.then(function(totalResults){
+      console.log("total results: ", totalResults);
+      console.log("go on and use data ", data, " with this ", _this);
+    })
+  })
+
 Sorting
 =======
 
