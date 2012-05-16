@@ -65,6 +65,6 @@ The following simple example demonstrates how MappedTextBox translates the displ
         },"textBox");
     });
 
-    .. html ::
+  .. html ::
 
       <div id="textBox" />
