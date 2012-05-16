@@ -58,7 +58,7 @@ In HTML markup:
 .. html ::
 
   <link rel="stylesheet" href="{{baseUrl}}/dojox/treemap/themes/TreeMap.css">
-  <div id="treeMap" data-dojo-type="dojox.treemap.TreeMap" data-dojo-props="store: dataStore, areaAttr:'sales', 
+  <div id="treeMap" data-dojo-type="dojox/treemap/TreeMap" data-dojo-props="store: dataStore, areaAttr:'sales', 
      colorAttr:'profit', groupAttrs:['region'], colorModel: colorModel"
      style="width: 600px; height: 450px;">
   </div>
@@ -67,9 +67,9 @@ You might want to listen to store query errors, for that you can use the promise
 
 .. js ::
 
-  require(["dojox/treemap/TreeMap", "dojo/_base/Deferred", ..], function(TreeMap, Deferred, ...){
+  require(["dojox/treemap/TreeMap", "dojo/when", ..], function(TreeMap, when, ...){
     var treeMap = new TreeMap(...);
-    Deferred.when(treeMap.set("store", mystore), function onOk() {}, function onFail() {});
+    when(treeMap.set("store", mystore), function onOk() {}, function onFail() {});
   });
 
 
