@@ -39,7 +39,7 @@ The following example shows how to declare a calendar widget in markup:
 
     <link rel="stylesheet" href="{{baseUrl}}/dojox/calendar/themes/claro/Calendar.css">
                                                                       
-    <div data-dojo-type="dojox.calendar.Calendar" 
+    <div data-dojo-type="dojox/calendar/Calendar" 
          data-dojo-props="dateInterval:'day'" 
          style="position:relative;width:500px;height:500px">
     </div>
@@ -201,7 +201,7 @@ The following example shows how to display 2 weeks, whose first week contains th
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="date: new Date(2012, 0, 1), dateInterval:'week', dateIntervalSteps:2" 
        style="position:relative;width:500px;height:500px"></div>    
 
@@ -213,7 +213,7 @@ The following example shows how to define the time range from the 1st of January
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
        style="position:relative;width:500px;height:500px"></div>         
 
@@ -324,7 +324,7 @@ To specify constructor parameters of the column view, set the columnViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="dateInterval:'day',columnViewProps:{minHours:6}" 
        style="position:relative;width:500px;height:500px"></div>
 
@@ -356,7 +356,7 @@ To specify constructor parameters of the matrix view, set the matrixViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="matrixViewProps:{expandDuration:0}" 
        style="position:relative;width:500px;height:500px"></div>
 
