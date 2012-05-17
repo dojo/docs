@@ -32,8 +32,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
 
   .. html ::
 
-    <div data-dojo-type="dijit/form/Form" id="myForm" data-dojo-id="myForm"
-    encType="multipart/form-data" action="" method="">
+    <div data-dojo-type="dijit/form/Form" id="myForm" data-dojo-id="myForm" enctype="multipart/form-data">
         <script type="dojo/on" data-dojo-event="reset">
             return confirm('Press OK to reset widget values');
         </script>
@@ -79,11 +78,11 @@ Note that it's using a <div> node instead of the obvious choice of a <form> node
 Using native form elements
 --------------------------
 
-dijit.form.Form doesn't fully support native elements as children.
+dijit/form/Form doesn't fully support native elements as children.
 In particular, myForm.get("value") will return an Object listing all the values of the contained widgets,
 but it won't list the values of the contained native <input> elements.
 
-It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.
+It is possible to submit a dijit/form/Form with native elements to the server, via standard (non-ajax) form submission.
 Both types of values (widgets and plain <input> elements) will be submitted.
 However, in that case the app has to do validation itself.
 The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget
@@ -97,15 +96,16 @@ AND when you have selected 1 of the native HTML radio buttons.
 
   .. html ::
 
-    <div data-dojo-type="dijit/form/Form" id="myFormThree" data-dojo-id="myFormThree"
-    encType="multipart/form-data" action="" method="">
-        <script type="dojo/method" data-dojo-event="validate">
-           return dojo.query('INPUT[name=order]', 'myFormThree').filter(function(n){return n.checked;}).length > 0 &&
-           dijit.form.Form.prototype.validate.apply(this, arguments);
+    <div data-dojo-type="dijit/form/Form" id="myFormThree" data-dojo-id="myFormThree" enctype="multipart/form-data">
+        <script type="dojo/on" data-dojo-event="validate">
+            require(["dojo/query", "dijit/form/Form"], function(query, Form){
+                return query('INPUT[name=order]', 'myFormThree').filter(function(n){return n.checked;}).length > 0 &&
+                Form.prototype.validate.apply(this, arguments);
+            });
         </script>
-        <script type="dojo/method" data-dojo-event="onSubmit">
+        <script type="dojo/on" data-dojo-event="submit">
             require(["dojo/dom"], function(dom){
-                var f = dojo.byId("myFormThree");
+                var f = dom.byId("myFormThree");
                 var s = "";
                 for(var i = 0; i < f.elements.length; i++){
                     var elem = f.elements[i];
