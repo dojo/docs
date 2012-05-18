@@ -238,6 +238,7 @@ Individuals who have signed Dojo CLAs
 * Horowitz, Richard
 * Hu, Jian
 * Huang, Ming Zhe
+* Hudson, David
 * Humphreys, Martin
 * Hussenet, Claude
 * Illit, Marcel
