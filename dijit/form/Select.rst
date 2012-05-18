@@ -69,13 +69,13 @@ This example shows how you can set up the same select as the previous example, b
     require(["dojo/ready", "dijit/form/Select", "dojo/_base/window"], function(ready, Select, win){
         ready(function(){
             new Select({
-                name: 'select2',
+                name: "select2",
                 options: [
-                    { label: 'TN', value: 'Tennessee' },
-                    { label: 'VA', value: 'Virginia', selected: true },
-                    { label: 'WA', value: 'Washington' },
-                    { label: 'FL', value: 'Florida' },
-                    { label: 'CA', value: 'California' }
+                    { label: "TN", value: "Tennessee" },
+                    { label: "VA", value: "Virginia", selected: true },
+                    { label: "WA", value: "Washington" },
+                    { label: "FL", value: "Florida" },
+                    { label: "CA", value: "California" }
                 ]
             }).placeAt(win.body());
         });
@@ -92,16 +92,15 @@ A Select can take its data from a data store, which must currently conform to th
 
   .. js ::
 
-    require(['dijit/form/Select',
-      'dojo/data/ObjectStore',
-      'dojo/store/Memory',
-      'dojo/on'
-    ], function(Select, ObjectStore, Memory, on){
+    require(["dijit/form/Select",
+      "dojo/data/ObjectStore",
+      "dojo/store/Memory"
+    ], function(Select, ObjectStore, Memory){
   
       var store = new Memory({
         data: [
-          { id: 'foo', label: 'Foo' },
-          { id: 'bar', label: 'Bar' }
+          { id: "foo", label: "Foo" },
+          { id: "bar", label: "Bar" }
         ]
       });
   
@@ -109,17 +108,17 @@ A Select can take its data from a data store, which must currently conform to th
   
       var s = new Select({
         store: os
-      }, 'target');
+      }, "target");
       s.startup();
     
-      on(s, 'change', function(){
-          console.log('my value: ', this.get('value'))
+      s.on("change", function(){
+          console.log("my value: ", this.get("value"))
       })
     })
   
   .. html ::
   
-    <div id='target'></div>
+    <div id="target"></div>
 
 A "styled" Select
 -----------------
