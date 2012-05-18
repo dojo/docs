@@ -589,6 +589,14 @@ created or removed, and no calls to ``bindDomNode()`` or ``unBindDomNode()`` are
 Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
 dojo/query to handle your selector.
 
+TabContainer
+------------
+You can now disable tabs by setting the disabled property of the pane:
+
+.. js ::
+
+    pane.set("disabled", true);
+
 Tooltip
 -------
 

@@ -274,6 +274,43 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
     </div>
 
 
+Disabling Tabs
+--------------
+You can disable tabs by setting the disabled property of the pane:
+
+.. js ::
+
+    pane.set("disabled", true);
+
+Disabling a pane disables the tab button for that pane.
+However, it doesn't disable the pane from being programatically selected.
+Also, the results of disabling the currently selected pane are undefined.
+
+
+.. code-example::
+
+  .. html ::
+
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: width: 350px; height: 200px">
+        <div data-dojo-type="dijit/layout/ContentPane" title="My first tab" data-dojo-props="selected:true">
+            Lorem ipsum and all around...
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" id="second" title="My second tab">
+            Lorem ipsum and all around - second...
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" title="My last tab" data-dojo-props="closable:true">
+            Lorem ipsum and all around - last...
+        </div>
+    </div>
+
+    <script type="dojo/require">
+        registry: "dijit/registry"
+    </script>
+    <button type=button onclick="registry.byId('second').set('disabled', !registry.byId('second').get('disabled'));">
+        toggle tab #2 disabled
+    </button>
+
+
 TabContainer Events
 -------------------
 
