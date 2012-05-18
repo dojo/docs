@@ -81,6 +81,45 @@ This example shows how you can set up the same select as the previous example, b
         });
     });
 
+A Select Fed By A Store
+-----------------------
+
+A Select can take its data from a data store, which must currently conform to the dojo.data.Read API.  `Selects Using Stores <http://dojotoolkit.org/documentation/tutorials/1.6/selects_using_stores>`_ may help.  One gotcha to look out for is that, at least in this example, the data from the store must have ``id`` and ``label`` attributes, not ``value`` and ``label`` attributes.
+
+
+.. code-example::
+  :djConfig: async: true
+
+  .. js ::
+
+    require(['dijit/form/Select',
+      'dojo/data/ObjectStore',
+      'dojo/store/Memory',
+      'dojo/on'
+    ], function(Select, ObjectStore, Memory, on){
+  
+      var store = new Memory({
+        data: [
+          { id: 'foo', label: 'Foo' },
+          { id: 'bar', label: 'Bar' }
+        ]
+      });
+  
+      var os = new ObjectStore({ objectStore: store });
+  
+      var s = new Select({
+        store: os
+      }, 'target');
+      s.startup();
+    
+      on(s, 'change', function(){
+          console.log('my value: ', this.get('value'))
+      })
+    })
+  
+  .. html ::
+  
+    <div id='target'></div>
 
 A "styled" Select
 -----------------

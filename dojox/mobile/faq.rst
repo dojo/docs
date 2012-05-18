@@ -216,3 +216,8 @@ Is dojox.mobile.app still alive?
 --------------------------------
 
 dojox.mobile.app is no longer actively developed. It has been superseded by dojox.app, which targets both desktop and mobile platforms (see http://dojotoolkit.org/reference-guide/1.7/dojox/app.html).
+
+How should I use dojox.mobile.deviceTheme? Are there changes in Dojo 1.8 with this respect?
+-------------------------------------------------------------------------------------------
+
+Yes, Dojo 1.8 brings improvements that allow to safely load the deviceTheme with a script tag, and for overriding the theme styles. See http://livedocs.dojotoolkit.org/dojox/mobile/deviceTheme for details.
