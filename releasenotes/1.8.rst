@@ -357,8 +357,7 @@ information.
 dojo/request/watch
 ~~~~~~~~~~~~~~~~~~
 
-Used for watching and managing inflight requests. See :ref:`dojo/request/watch <dojo/request/watch>` for more
-information.
+An internal module for the used for watching and managing inflight IO requests.
 
 dojo/request/registry
 ~~~~~~~~~~~~~~~~~~~~~
