@@ -182,4 +182,5 @@ See also
 
 * :ref:`dojox/fx <dojox/fx>` - Additional FX libraries
 
-* `Animation Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/animation/>`_
+* `Animation Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/animation/>`_ - The tutorial to find out about
+  Dojo's FX API

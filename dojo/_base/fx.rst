@@ -202,11 +202,93 @@ To change the framerate you use the rate attribute which defines the pause betwe
      </p>
      <div id="animateProperty">This will be animated</div>
 
-For more on Animations overall, see the :ref:`FX User Guide <quickstart/Animation>`
+Animation
+=========
+
+``dojo/_base/fx::Animation`` is a class that has features that allow control of an animation. An instance of the class
+is returned from most animation functions.
+
+Features
+--------
+
+There are several key properties to the class:
+
+======== =========== ======== ==========================================================================================
+Property Type        Default  Description
+======== =========== ======== ==========================================================================================
+duration Integer     350      How long in milliseconds the animation should take to play.
+curve    _Line|Array ``null`` A two element array of start and end values, or a 
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>` instance to be used in the Animation.
+easing   Function    ``null`` A Function to adjust the acceleration (or deceleration) of the progress across a 
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>`
+repeat   Integer     0        The number of times the animation should repeat (loop).
+rate     Integer     20       The rate in milliseconds the Animation should attempt to update.  20ms = 50fps.
+delay    Integer     ``null`` The time in milliseconds to wait before starting animation after it has been 
+                              ``.play()``\'ed
+======== =========== ======== ==========================================================================================
+
+play()
+~~~~~~
+
+This method starts the animation and takes two optional arguments:
+
+========= ======== =====================================================================================================
+Argument  Type     Description
+========= ======== =====================================================================================================
+delay     Integer? *Optional* The number of milliseconds to delay before starting the animation.  Defaults to ``0``.
+gotoStart Boolean? *Optional* If true, starts the animation from the beginning; otherwise, starts it from its current
+                   position.
+========= ======== =====================================================================================================
+
+The method returns the instance of ``dojo/_base/fx::Animation``.
+
+pause()
+~~~~~~~
+
+This method pauses the running animation and returns the instance of ``dojo/_base/fx::Animation``.
+
+gotoPercent()
+~~~~~~~~~~~~~
+
+This method goes to a particular point in the animation and takes up to two arguments:
+
+======== ======== =================================================================================
+Argument Type     Description
+======== ======== =================================================================================
+percent  Decimal  The percentage in decimal notation (between 0.0 and 1.0)
+andPlay  Boolean? *Optional* Set to ``true`` to start playing the animation, defaults to ``false``.
+======== ======== =================================================================================
+
+The method returns the instance of ``dojo/_base/fx::Animation``.
+
+stop()
+~~~~~~
+
+This method stops the playing of an animation and takes one optional argument:
+
+======== ======== =======================================================================
+Argument Type     Description
+======== ======== =======================================================================
+goToEnd  Boolean? *Optional* If ``true``, the animation will end.  Defaults to ``false``.
+======== ======== =======================================================================
+
+The method returns the instance of ``dojo/_base/fx::Animation``.
+
+status()
+~~~~~~~~
+
+This method returns a string token representation of the status of the animation, one of: ``paused``, ``playing``,
+``stopped``.
+
+_Line
+=====
+
+A private class object that is used to generate values from a start value to an end value
 
 fadeIn()
 ========
-This function is a helper function that wraps the `animateProperty()` function to provide an easy interface to fading a node into view on the page.  While this can be done with the `animateProperty()` function, this function is simpler to use and will handle 99% of the cases a fade-in is desired.
+
+This function is a helper function that wraps the ``animateProperty()`` function to provide an easy interface to fading a node into view on the page.  While this can be done with the ``animateProperty()`` function, this function is simpler to use and will handle 99% of the cases a fade-in is desired.
 
 Parameters
 ----------
@@ -357,7 +439,6 @@ Example 1:  Fade out a dom node
     <button id="basicFadeButton">Fade It Out!</button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
 
-
 Example 2:  Fade out a dom node with a custom duration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -383,8 +464,6 @@ Example 2:  Fade out a dom node with a custom duration
 
     <button id="basicFadeButton2">Fade It Out Slow!</button>
     <div id="basicFadeNode2" style="width: 100px; height: 100px; background-color: red;"></div>
-
-
 
 Example 3:  Fade out a dom node with an easing function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -414,18 +493,12 @@ Example 3:  Fade out a dom node with an easing function
     <button id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
 
-
 See also
 ========
 
-* :ref:`dojo/fx <dojo/fx>`
+* :ref:`dojo/fx <dojo/fx>` - Some advanced animation functions
 
-  Advanced animation functions in dojo/fx
+* :ref:`dojox/fx <dojox/fx>` - More advanced animation functions
 
-* :ref:`dojox/fx <dojox/fx>`
-
-  More advanced animation functions in dojox/fx
-
-* :ref:`Animation Quickstart <quickstart/Animation>`
-
-  Animation introduction
+* `Animation Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/animation/>`_ - The tutorial to find out about
+  Dojo's FX API
