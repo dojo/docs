@@ -211,11 +211,11 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
   .. css ::
 
-    @import "{{ baseUrl }}dojo/resources/dojo.css";
-    @import "{{ baseUrl }}dijit/themes/claro/claro.css";
-    @import "{{ baseUrl }}dijit/themes/claro/document.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dijit/themes/claro/document.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
 
 Configuration
