@@ -1346,7 +1346,7 @@ Keeping row selection across various actions e.g. sorting, filtering is a known 
 
 However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to make it work under some scenario, the 'keepSelection' attr can be applied to any Grid types including DataGrid, EnhancedGrid, TreeGrid or LazyTreeGrid e.g
 
-.. html ::
+.. js ::
   
   require(['dojox/grid/DataGrid', 'dojox/grid/EnhancedGrid', 'dojox/grid/TreeGrid', 'dojox/grid/LazyTreeGrid', 'dojo/domReady!'],
     function(DataGrid, EnhancedGrid, TreeGrid, LazyTreeGrid) {
@@ -1367,6 +1367,15 @@ But please note:
 
 2. Known issue - it might not be accurate if some unloaded rows are selected by range(e.g.SHIFT + click)
 
+
+Display grid from a hidden container
+------------------------------------
+
+There are some occasions when grid is created within a hidden container e.g. Dialogue or TabContainer etc. an explicit resize() might be needed to let grid calculate its size appropriately
+
+.. js ::
+  
+  grid.resize();
 
 
 Accessibility in 1.3 and Beyond
