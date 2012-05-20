@@ -1371,7 +1371,7 @@ But please note:
 Display grid from a hidden container
 ------------------------------------
 
-There are some occasions when grid is created within a hidden container e.g. Dialogue or TabContainer etc. an explicit resize() might be needed to let grid calculate its size appropriately
+There are some occasions when grid is created within a hidden container e.g. Dialogue or TabContainer, an explicit resize() would be needed to let grid calculate its size appropriately
 
 .. js ::
   
