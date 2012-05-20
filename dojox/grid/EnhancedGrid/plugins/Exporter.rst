@@ -101,11 +101,11 @@ The following of this document first describes how to use the export functions o
 
   .. css ::
 
-    @import "{{ baseUrl }}dojo/resources/dojo.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dijit/themes/claro/document.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
     #output {
         width: 100%;
