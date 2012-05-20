@@ -35,6 +35,7 @@ HTML markup usage sample
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.Menu");
+      dojo.require("dijit.MenuItem");
 
       dojo.ready(function(){
           /*set up data store*/
