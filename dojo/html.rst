@@ -50,7 +50,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-        require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect){
+        require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit/form/NumberTextBox"], function(html, dom, connect){
             var handle = connect.connect(dom.byId("setbtn"), "onclick", function(){
               html.set(dom.byId("mytable"), '<tr>'
                 +'<td><label>How much?</label></td>'
