@@ -694,7 +694,7 @@ destroy()
   Clean up the internal resources used by this shape. This method must be called when the shape is not used anymore and should be removed from the gfx **scene** (not just its container). Once this method has been invoked, the shape must not be accessed anymore. See the "Destructors API" section for more information.
 
 getUID()
-  Returns the internal shape id.
+  Returns the shape internal id.
 
 Event processing
 ----------------
