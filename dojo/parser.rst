@@ -203,7 +203,7 @@ Auto Require
 ~~~~~~~~~~~~
 
 As of Dojo 1.8, the parser supports auto require. If as the document is being parsed any of the constructors are missing
-in either ``data-dojo-type`` or ``data-dojo-mixins`` and that class name looks like a MID (e.g. contains a backslash),
+in either ``data-dojo-type`` or ``data-dojo-mixins`` and that class name looks like a MID (e.g. contains a blash),
 the parser will attempt to require in those modules after it has finished scanning the DOM. This means that you do not
 explicitly have to require in classes in your declarative markup before the parser is invoked. The following example
 demonstrates that feature:
