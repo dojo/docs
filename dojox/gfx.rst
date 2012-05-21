@@ -17,18 +17,18 @@ dojox.gfx (GFX) is a cross-platform vector graphics API. It loosely follows SVG 
 Renderer Options
 ----------------
 
-As of Dojo 1.2, the following native vector graphics engine adaptations are implemented:
+As of Dojo 1.8, the following native vector graphics engine adaptations are implemented:
 
-* SVG (Firefox 1.5-3.0, Safari(Webkit) 3.0, Opera 9.0, Chrome 1.0(Webkit) (beta), iPhone Safari 2.1)
-* VML (IE 6-7)
+* SVG (Firefox 1.5-3.0, Safari(Webkit) 3+, Opera 9+, Chrome 1.0+, iPhone Safari 2.1+
+* VML (IE 6-7-8)
 * Silverlight (wherever it is supported by Microsoft)
-* Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
+* Canvas (Firefox 3.0+, Safari 3.0+ including iOS Safari 1.0+), Opera 9.0+, Chrome, IE9+
 
 Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_ is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_.
 
 Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
-Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture (and in the future, will allow responding to events on Shapes).
+Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture and responding to events on Shapes.
 
 Core Concepts
 -------------
@@ -96,7 +96,7 @@ In addition, all the basic graphics primitives required for 2D graphics are prov
 * 2D linear transformation matrices
 * Colors
 
-Note that Dojo GFX operates as a high-level "retained mode" graphics system, even when running on top of lower-level rendering implementations that may not operate in retained mode, such as Canvas, which is an immediate mode graphics api.  This allows scenes to be manipulated and for your application code to be easily notified of user interactions via events in the same way as when working with retained mode graphics implementations (although at the cost of having to keep the scene graph objects around). (We're still working on event support for the Canvas renderer, see ticket http://trac.dojotoolkit.org/ticket/7782 for updates)
+Note that Dojo GFX operates as a high-level "retained mode" graphics system, even when running on top of lower-level rendering implementations that may not operate in retained mode, such as Canvas, which is an immediate mode graphics api.  This allows scenes to be manipulated and for your application code to be easily notified of user interactions via events in the same way as when working with retained mode graphics implementations (although at the cost of having to keep the scene graph objects around).
 
 Groups
 ------
@@ -1384,6 +1384,52 @@ The final version of the TextPath object will have the IE/VML behavior (as the g
 
 Silverlight and Canvas
   don't support this shape.
+
+Renderer-specific extensions
+============================
+
+In 1.8, new optional modules have been introduced enabling to leverage the capabilities of the underlying rendering technology that are not exposed in the standard gfx API because of their specific nature.
+
+Canvas extension (module: dojox/gfx/canvasext)
+----------------------------------------------
+
+The dojox/gfx/canvasext module adds the following new APIs:
+
+Surface
+~~~~~~~
+
+  getContext()
+    Returns the surface CanvasRenderingContext2D.
+
+  getImageData(rect)
+    Returns an ImageData object containing the image data for the given rectangle of the Surface canvas.
+
+Coupled with the new Surface.render() method and dojo/aspect, these new methods allow to implement post- or pre- image processing. For example, the following example draws a text before the gfx scene is drawn, and processes the gfx scene image buffer to apply a color effect:
+ 
+.. js ::
+
+  // wire a pre render callback to draw a text.
+  aspect.before(surface,"render", function(context){
+    context.save();
+    context.fillStyle    = "black"; 
+    context.font         = "italic 30px sans-serif";
+    context.textBaseline = "top";
+    context.fillText("Canvas pixel-based manipulation with dojox.gfx", 0, 0);
+    context.restore();
+  }, true);
+  // wire a post render callback to apply a "negate color" filter.
+  aspect.after(surface,"render", function(context){
+    input = context.getImageData(0,100,width,height);
+    var inputData = input.data;
+    // negate colors
+    for(var i=0, n=inputData.length; i<n; i+=4){
+      inputData[i  ] = 255 - inputData[i  ]; // red
+      inputData[i+1] = 255 - inputData[i+1]; // green
+      inputData[i+2] = 255 - inputData[i+2]; // blue
+    }
+    context.putImageData(input, 0, 100);
+  }, true);
+
 
 Utilities
 =========
