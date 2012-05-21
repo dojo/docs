@@ -237,7 +237,7 @@ Using event delegation on a html table to highlight rows and columns.
       'dojo/dom-class',
       'dojo/dom-attr',
       'dojo/query'  // note that dojo/query must be loaded for event delegation to work
-    ], function(on, domClass, domAttr) {
+    ], function(on, domClass, domAttr, query) {
   
       var highlighter = {
   
