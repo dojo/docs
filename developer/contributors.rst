@@ -612,6 +612,7 @@ Individuals who have signed Dojo CLAs
 * Yarimagan, Ilgin
 * Yeow, Cheah
 * Young, Matthew
+* Young, Rex
 * Yu, Leon
 * Zamir, Brett
 * Zammetti, Frank
