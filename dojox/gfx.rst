@@ -690,6 +690,9 @@ getBoundingBox()
 getTransformedBoundingBox()
   Returns four point array, which represents four corners of the bounding box transformed by all applicable transformations.
 
+destroy()
+  Clean up the internal resources used by this shape. This method must be called when the shape is not used anymore and should be removed from the gfx **scene** (not just its container). Once this method has been invoked, the shape must not be accessed anymore. See the "Destructors API" section for more information.
+
 Event processing
 ----------------
 
@@ -791,10 +794,17 @@ Clipped by a path:
 
 .. image :: pathclip.PNG
 
-Implementation details:
+Implementation details
+~~~~~~~~~~~~~~~~~~~~~~
 
 vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping geometry.
 
+Destructors API
+----------------
+
+In 1.8, the Surface.destroy() api has been extended to the Shape hierarchy, allowing to clean up resources used by a shape when it is destroyed from the gfx scene. Note that it is different from the Shape.removeParent() method, which only removes the shape from its container. Such a shape can still be added to an another container later, and therefore is still considered part of the scene. The destroy() method, on its side, applies to shape that should not live in the gfx scene anymore. 
+
+Note that Shape.destroy() does not remove the shape from its parent container, this operation must be performed explicitly before the destructor is called, or when clearing a Group passing a truthy value to the Group.clear() method which cause the children destructor to be called.
 
 Helper Methods
 --------------
