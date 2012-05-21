@@ -106,6 +106,9 @@ Gfx also has the concept of a **Group**, which is a pseudo-shape. Groups combine
 All group members share a single z-order, but can be re-arranged within a group.
 In order to draw a picture a programmer constructs a pseudo-DOM from a surface object, shapes, and groups, sets appropriate attributes, and a picture is drawn automatically by a browser. Modifications of shapes change picture automatically.
 
+Conventions
+-----------
+
 The following conventions are used:
 
 While a **Path** is the most universal geometric shape which can emulate almost all other shapes (exceptions: Image, and Text shapes), all frequently-used shapes are provided as a convenience: Rectangle (with optional round corners), Circle, Ellipse, Line, Polyline/Polygon.
