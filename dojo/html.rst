@@ -50,15 +50,14 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-        require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect, numberTextBox){
-            var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
-
+        require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect){
+            var handle = connect.connect(dom.byId("setbtn"), "onclick", function(){
               html.set(dom.byId("mytable"), '<tr>'
                 +'<td><label>How much?</label></td>'
                 +'<td><input type="text" data-dojo-type="dijit/form/NumberTextBox" value="0"'
                 +  ' constraints="{min:0,max:20,places:0}"'
-                +  ' promptMessage= "Enter a value between 0 and +20"'
-                +  ' required= "true" invalidMessage= "Wrong!" />'
+                +  ' promptMessage="Enter a value between 0 and +20"'
+                +  ' required="true" invalidMessage="Wrong!">'
                 +'</td>'
                 +'</tr>', {
                   parseContent: true,
@@ -66,8 +65,8 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
                       this.inherited("onBegin", arguments);
                   }
               });
-              connect.disconnect(sethandle);
-              sethandle = null;
+              connect.disconnect(handle);
+              handle = null;
               dom.byId("setbtn").innerHTML = "Done";
             });
         });
