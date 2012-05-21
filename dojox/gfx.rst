@@ -1388,7 +1388,7 @@ Silverlight and Canvas
 Renderer-specific extensions
 ============================
 
-In 1.8, new optional modules have been introduced enabling to leverage the capabilities of the underlying rendering technology that are not exposed in the standard gfx API because of their specific nature.
+From 1.8, new optional modules have been introduced enabling to leverage the capabilities of the underlying rendering technology that are not exposed in the standard gfx API because of their specific nature.
 
 Canvas extension (module: dojox/gfx/canvasext)
 ----------------------------------------------
@@ -1429,6 +1429,28 @@ Coupled with the new Surface.render() method and dojo/aspect, these new methods 
     }
     context.putImageData(input, 0, 100);
   }, true);
+
+SVG extension (module: dojox/gfx/svgext)
+----------------------------------------------
+
+The dojox/gfx/svg module adds the following new APIs:
+
+Shape
+~~~~~
+  addRenderingOption(option, value)
+    Adds the specified SVG rendering option on this shape. The value of the option and value parameters should conform to the SVG specification (http://www.w3.org/TR/SVG/painting.html#RenderingProperties). Note that these rendering options are considered only as hints by the browser svg engine (so the option may have no effect), and the result can be different depending on the browser. 
+
+For example, the following code specifies that the line should be drawn using the "crispEdges" option:
+
+.. js ::
+
+  surface.createLine({
+    x1 : 10,
+    y1 : 10,
+    x2 : 490,
+    y2 : 100
+  }).setStroke("blue").addRenderingOption("shape-rendering", "crispEdges);
+
 
 
 Utilities
