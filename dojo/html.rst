@@ -27,12 +27,10 @@ Examples
 .. html ::
    
     <script type="text/javascript">
-        require(["dojo/html", "dojo/ready"], function(html, ready){
-            ready(function(){
-                // the first argument is a node reference
-                console.log("loaded");
-                html.set(dojo.byId("mycontent"), "loaded!");
-            });
+        require(["dojo/html", "dojo/domReady!"], function(html){
+            // the first argument is a node reference
+            console.log("loaded");
+            html.set(dojo.byId("mycontent"), "loaded!");
         });
     </script>
 
