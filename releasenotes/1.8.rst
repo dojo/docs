@@ -15,9 +15,9 @@ The following browsers have been tested and are supported in this release. If a 
 
 Desktop
 
-  * Firefox 3.6-11
+  * Firefox 3.6-12
   * Safari 5-6
-  * Chrome 13-18
+  * Chrome 13-19
   * IE 6-9
   * Opera 10.50-12 (Dojo core only)
 
