@@ -12,9 +12,9 @@ dojo/fx::wipeOut()
 .. contents ::
     :depth: 2
 
-This function is a helper function that wraps the `dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>`
-function to provide an easy interface to wiping a node out of view on the page. While this can be done with the
-``animateProperty()`` function, this function is simpler to use and will handle 99% of the cases a wipe-out is desired.
+This function is a helper function that wraps the :ref:`dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>` function to provide an easy interface to wiping a node out of view on the page. While 
+this can be done with the ``animateProperty()`` function, this function is simpler to use and will handle 99% of the 
+cases a wipe-out is desired.
 
 **NOTE:** The wipe end wipes from the full height of the target DOMNode to a height of ``0px``.
 

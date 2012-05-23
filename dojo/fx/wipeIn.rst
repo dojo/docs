@@ -12,9 +12,9 @@ dojo/fx::wipeIn()
 .. contents ::
     :depth: 2
 
-This function is a helper function that wraps the `dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>`
-function to provide an easy interface to wiping a node into view on the page. While this can be done with the
-``animateProperty()`` function, this function is simpler to use and will handle 99% of the cases a wipe-in is desired.
+This function is a helper function that wraps the :ref:`dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>` function to provide an easy interface to wiping a node into view on the page. While 
+this can be done with the ``animateProperty()`` function, this function is simpler to use and will handle 99% of the 
+cases a wipe-in is desired.
 
 **NOTE:** The wipe end wipes from a height of ``0px`` to the full height of the target DOMNode.
 
@@ -31,7 +31,7 @@ Basic usage require just the node to be wiped-in to be passed:
     }).play();
   });
 
-The function configuration hash can take the other properties of `dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>`.
+The function configuration hash can take the other properties of :ref:`dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>`.
 
 The ``wipeIn()`` function returns an instance of :ref:`dojo/_base/fx::Animation <dojo/_base/fx#animation>`. To start the
 wipe-in, call the ``play()`` function on the Animation. This object can be used with other Dojo animation functions,
