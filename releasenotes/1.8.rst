@@ -749,7 +749,7 @@ Mvc
 
 - The Mvc API now supports binding to attributes in addition to value, along with support to transform data and support one way binding to or from a model in addition to the support for two way binding.
 
-- :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been depricated in favor of different controller options which give the developer more fexibility.
+- :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated in favor of different controller options which give the developer more fexibility.
 
 - See :ref:`dojox/mvc <dojox/mvc>` for more information.
 
