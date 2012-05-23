@@ -36,7 +36,7 @@ Features
 
 :ref:`dojox/mvc/at <dojox/mvc/at>` typically used in in data-dojo-props so that a widget can synchronize its attribute with another dojo.Stateful.
 
-:ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been depricated.
+:ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated.
 
 * dojox/mvc/StatefulModel had several different features:
 
@@ -75,7 +75,7 @@ Features
   * :ref:`dojox/mvc/Repeat <dojox/mvc/Repeat>` A model-bound repeater widget that binds to a data collection.
   * :ref:`dojox/mvc/Generate <dojox/mvc/Generate>` A simple example of UI generation from a supplied data model.
 
-* :ref:`dojox/mvc/_DataBindingMixin <dojox/mvc/_DataBindingMixin>` has been depricated.
+* :ref:`dojox/mvc/_DataBindingMixin <dojox/mvc/_DataBindingMixin>` has been deprecated.
  
 Examples
 ========
