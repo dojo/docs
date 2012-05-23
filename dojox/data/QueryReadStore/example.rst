@@ -7,30 +7,30 @@ dojox.data.QueryReadStore
 .. contents ::
   :depth: 2
 
-This page is out-dated/unfinished.
+The following example illustrates a client implementation of a QueryReadStore extension. It uses the QueryReadStore.php found in dojox/data/tests/stores/ as server-side data provider, and is a simplified version of the dojox/data/tests/QueryReadStore.html.
 
-
-Here a full client program. In order for it to work:
-
-   1. Place the following HTML in a file (call it qrs.html) on a web server that has PHP 5.2 or greater.
+In order for it to work, place the following HTML in a file (call it qrs.html) on a web server that has PHP 5.2 or greater.
 
 The directory structure should look like this when you are done:
 
 --qrs.html
 
---dojo
+--dojo/
 
---dijit
+--dijit/
 
---dojox
+--dojox/
 
-----data
+----data/
 
-------tests
+------tests/
 
---------QueryReadStore.php
+--------stores/
+
+----------QueryReadStore.php
 
 
+Here is the content of the html file, including the QueryReadStore extension code.
 
 **Example HTML**
 
@@ -65,7 +65,7 @@ The directory structure should look like this when you are done:
     </head>
     <body class="tundra">
         <div data-dojo-type="ComboBoxReadStore" data-dojo-id="store"
-             data-dojo-props="url:'dojox/data/stores/QueryReadStore.php',
+             data-dojo-props="url:'dojox/data/tests/stores/QueryReadStore.php',
              requestMethod:'get'">
         </div>
         State: <input id="fs" data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:store, pageSize:5" />
