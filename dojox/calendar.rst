@@ -217,20 +217,6 @@ The following example shows how to define the time range from the 1st of January
        data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
        style="position:relative;width:500px;height:500px"></div>      
 
-Calendar views animations
-========================= 
-
-On modern browsers, the calendar is performing an animation when:
-   * The displayed time interval is changing and/or
-   * The current view is changing to display the time interval.
-
-To disable this animation set the calendar animateRange property to false (true by default).
-
-To change the duration of the animation set the animationRangeDuration property (400 by default).
-
-For the most skillful developers, subclass the _animateRange() method to implement your own animation. 
-
-
 Styling renderers
 =================
 
@@ -528,9 +514,9 @@ These buttons and methods are just shortcuts that define the date, dateInterval 
 Event creation
 --------------
 
-Events are retrieved in the data store. To add a new event, the developer can use the store put() method.
+Events are retrieved in the data store. To programmatically add a new event, the developer can use the store put() method.
 
-The calendar is allowing to interactively create and event by pressing the mouse button on the grid and dragging to set the duration of the event.
+The calendar is allowing to interactively create an event by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
 To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
 Furthermore, a custom function creating the item must be set on the createItemFunc property.
@@ -665,6 +651,20 @@ LabelRenderer            The default renderer class for labels used in matrix vi
 
 Calendar
 --------
+
+
+Calendar views animations
+`````````````````````````
+
+On modern browsers, the calendar is performing an animation when:
+   * The displayed time interval is changing and/or
+   * The current view is changing to display the time interval.
+
+To disable this animation set the calendar animateRange property to false (true by default).
+
+To change the duration of the animation set the animationRangeDuration property (400 by default).
+
+For the most skillful developers, subclass the _animateRange() method to implement your own animation. 
 
 View management
 ```````````````
