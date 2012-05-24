@@ -56,7 +56,7 @@ If your grid is created in JavaScript:
     store:"mystore",
     structure:"mystructure",
     plugins:{
-      search: /* a Boolean value or an argument object */{}
+      search: /* a Boolean value or an argument object {}*/
     }
   });
 

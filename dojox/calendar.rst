@@ -39,7 +39,7 @@ The following example shows how to declare a calendar widget in markup:
 
     <link rel="stylesheet" href="{{baseUrl}}/dojox/calendar/themes/claro/Calendar.css">
                                                                       
-    <div data-dojo-type="dojox.calendar.Calendar" 
+    <div data-dojo-type="dojox/calendar/Calendar" 
          data-dojo-props="dateInterval:'day'" 
          style="position:relative;width:500px;height:500px">
     </div>
@@ -201,7 +201,7 @@ The following example shows how to display 2 weeks, whose first week contains th
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="date: new Date(2012, 0, 1), dateInterval:'week', dateIntervalSteps:2" 
        style="position:relative;width:500px;height:500px"></div>    
 
@@ -213,9 +213,9 @@ The following example shows how to define the time range from the 1st of January
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
-       style="position:relative;width:500px;height:500px"></div>         
+       style="position:relative;width:500px;height:500px"></div>      
 
 Styling renderers
 =================
@@ -324,7 +324,7 @@ To specify constructor parameters of the column view, set the columnViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="dateInterval:'day',columnViewProps:{minHours:6}" 
        style="position:relative;width:500px;height:500px"></div>
 
@@ -356,7 +356,7 @@ To specify constructor parameters of the matrix view, set the matrixViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox.calendar.Calendar" 
+  <div data-dojo-type="dojox/calendar/Calendar" 
        data-dojo-props="matrixViewProps:{expandDuration:0}" 
        style="position:relative;width:500px;height:500px"></div>
 
@@ -511,6 +511,60 @@ The following functions are also exposed to help navigation:
 
 These buttons and methods are just shortcuts that define the date, dateInterval and dateIntervalSteps properties.
 
+Event creation
+--------------
+
+Events are retrieved in the data store. To programmatically add a new event, the developer can use the store put() method.
+
+The calendar is allowing to interactively create an event by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
+
+To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
+Furthermore, a custom function creating the item must be set on the createItemFunc property.
+
+This custom function is taking three arguments:
+   * The current view,
+   * The date of the clicked location,
+   * The mouse event.
+
+The following example is showing an implementation of the createItemFunc that is creating an event if and only if the control key only is pressed during the interaction. The created event initial position and duration is depending on the current view.
+
+.. js ::
+
+  var createItem = function(view, d, e){
+
+    // create item by maintaining control key
+    if(!e.ctrlKey || e.shiftKey || e.altKey){
+      return;
+    }
+
+    var start, end;
+    var colView = calendar.columnView;
+    var cal = calendar.dateFuncObj;
+	
+    if(view == colView){
+      start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
+      end = cal.add(start, "minute", colView.timeSlotDuration); 
+    }else{
+      start = calendar.floorToDay(d);
+      end = cal.add(start, "day", 1);
+    }
+	
+    var item = {
+      id: id,
+      summary: "New event " + id,
+      startTime: start,
+      endTime: end,
+      allDay: view.viewKind == "matrix"
+    };
+	
+    id++;	
+	
+    return item;							
+  }
+
+  calendar.set("createOnGridClick", true);
+  calendar.set("createItemFunc", createItem);	
+
 Calendar events
 ===============
 
@@ -597,6 +651,20 @@ LabelRenderer            The default renderer class for labels used in matrix vi
 
 Calendar
 --------
+
+
+Calendar views animations
+`````````````````````````
+
+On modern browsers, the calendar is performing an animation when:
+   * The displayed time interval is changing and/or
+   * The current view is changing to display the time interval.
+
+To disable this animation set the calendar animateRange property to false (true by default).
+
+To change the duration of the animation set the animationRangeDuration property (400 by default).
+
+For the most skillful developers, subclass the _animateRange() method to implement your own animation. 
 
 View management
 ```````````````

@@ -15,9 +15,9 @@ The following browsers have been tested and are supported in this release. If a 
 
 Desktop
 
-  * Firefox 3.6-11
+  * Firefox 3.6-12
   * Safari 5-6
-  * Chrome 13-18
+  * Chrome 13-19
   * IE 6-9
   * Opera 10.50-12 (Dojo core only)
 
@@ -26,7 +26,7 @@ Mobile (dojox/mobile)
   * iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2-2.3, 3.1-3.2, 4.0
   * Blackberry 6-7
-  * Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-11, Safari 5-6, Chrome 13-17
+  * Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-11, Safari 5-6, Chrome 13-18
 
   TODO: Link to page with specific vendor device models tested on
 
@@ -36,15 +36,21 @@ Dojo Base
 dojo/_base/Deferred
 -------------------
 
-``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilise the new promise
+``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilize the new promise
 architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
 ``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
 
 dojo/_base/xhr
 --------------
 
-``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilise the new request
+``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilize the new request
 architecture, but developers should transition to ``dojo/request/xhr``.
+
+dojo/_base/sniff
+----------------
+
+``dojo/_base/sniff`` was *deprecated* in lieu of ``dojo/sniff``. It was updated to utilize the new sniff
+module, but developers should transition to ``dojo/sniff``.
 
 Dojo Core
 =========
@@ -351,8 +357,7 @@ information.
 dojo/request/watch
 ~~~~~~~~~~~~~~~~~~
 
-Used for watching and managing inflight requests. See :ref:`dojo/request/watch <dojo/request/watch>` for more
-information.
+An internal module for the used for watching and managing inflight IO requests.
 
 dojo/request/registry
 ~~~~~~~~~~~~~~~~~~~~~
@@ -435,6 +440,21 @@ Dijit
 _WidgetBase
 -----------
 
+- widget events, including attribute changes, are emitted as events on the DOM tree
+
+.. js ::
+
+    on(dom.byId("buttonContainer"), "click", function(evt){
+        var widget = registry.getEnclosingWidget(evt.target);
+        if(widget){
+            console.log("click on widget " + widget.id);
+        }
+    });
+
+
+See :ref:`Widget events published to the DOM <quickstart/events#widget-events-published-to-the-dom>` for details.
+
+
 - attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
 
 .. js ::
@@ -487,6 +507,35 @@ DateTextBox
   hasDownArrow=false option is set (in which case that's the only way to open the drop down Calendar).
   (`#14142 <http://bugs.dojotoolkit.org/ticket/14142>`_)
 
+Destroyable
+-----------
+dijit/Destroyable is new utility mixin to track handles of an instance, and then destroy them when the instance is destroyed.
+The application must call destroy() on the instance in order to release the handles.
+
+This functionality was extracted from _WigetBase and most users will access it through _WidgetBase (or a subclass
+of _WidgetBase).
+
+Example usage:
+
+.. js ::
+
+    var DestroyableSubClass = declare(Destroyable, {
+        constructor: function(aStatefulObject){
+            var self = this;
+            this.domNode = domConstruct.create("button");
+            this.own(
+                // setup an event handler (automatically remove() when I'm destroyed)
+                on(this.domNode, "click", function(){ ... }),
+
+                // watch external object (automatically unwatch() when I'm destroyed)
+                aStatefulObject.watch("x", function(name, oVal, nVal){ ... }),
+
+                // create a supporting (internal) widget, to be destroyed when I'm destroyed
+                new MySupportingWidget(...)
+            );
+        }
+    });
+
 Dialog
 ------
 
@@ -538,6 +587,14 @@ created or removed, and no calls to ``bindDomNode()`` or ``unBindDomNode()`` are
 
 Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
 dojo/query to handle your selector.
+
+TabContainer
+------------
+You can now disable tabs by setting the disabled property of the pane:
+
+.. js ::
+
+    pane.set("disabled", true);
 
 Tooltip
 -------
@@ -632,11 +689,15 @@ Charting
    * setting dropLabels to false (but then you don't get the automatic drop labels)
    * setting minorLabels to false if you know minorLabels won't show up anyway
 
-- Bars, Columns and Pie plots now support drop shadow property.
+- Bars, Columns and their stacked versions as well as Pie plots now support drop shadow property.
 
 - dojox.charting.widget classes now inherits from _WidgetBase instead of _Widget.
 
 - Base class for themes is now SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from SimpleTheme.
+
+- Provide a styleFunc on the various plots to allow to dynamically style the plot items.
+
+- Improve the management of missing data point in line-based plot by providing a interpolate option.
 
 Calendar
 --------
@@ -651,16 +712,71 @@ A new gauges package is introduced in dojox.dgauges package. It provides a fully
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
 
-
 Treemap
 -------
 
 A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
 
+Mobile
+------
+A webkit-mobile build profile was added to eliminate IE etc. code paths from a build intended only to run on
+webkit-mobile devices.
+
+To create this special build:
+
+.. code-block :: shell
+
+  cd util/buildscripts/
+  ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
+
+
+
+Gfx
+---
+
+- The Gfx API now supports clipping at shape level via the new Shape.setClip(clipGeometry) method. The possible clipping geometry types are rectangle, ellipse, polyline and path (vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping.
+
+- A new Shape.destroy() method has been added to properly dispose a shape when it is not used anymore. The Group.clear() method has been updated to take an optional boolean parameter that indicates whether the group children should be disposed while clearing the group.
+
+- The Group.getBoundingBox() method now returns the children bounding rectangle.
+
+- New modules specific to the svg and canvas renderers have been added, respectively dojox/gfx/svgext and dojox/gfx/canvasext. The purpose of these modules is to give the user access to the specific capabilities of the renderer.
+   * canvasext defines new methods enabling access to the Canvas pixel manipulation API, via the new Surface.getContext(), Surface.getImageData() and the Surface.render() public method. 
+   * svgext defines a new Shape.addRenderingOption(option, value) that adds the specified SVG rendering option on this shape, as specified by the SVG specification (http://www.w3.org/TR/SVG/painting.html#RenderingProperties)
+
+Mvc
+---
+
+- The Mvc API now supports binding to attributes in addition to value, along with support to transform data and support one way binding to or from a model in addition to the support for two way binding.
+
+- :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated in favor of different controller options which give the developer more fexibility.
+
+- See :ref:`dojox/mvc <dojox/mvc>` for more information.
+
+App
+---
+
 
 Util
 ====
 
+Demos
+=====
+
+New Demos
+---------
+
+- tracTreemap: a treemap demo visualizing trac ticket status
+- calendar: a calendar component demo
+- todoApp: a "todo" application leveraging dojox/mobile, dojox/app & dojox/mvc packages
+
+
+Updated demos
+-------------
+
+- mobileGallery: the mobile gallery now highlights the latest dojox/mobile features
+- gauges & mobileGauges: the gauges demos now use the new dojox/dgauges package
+- mobileStockPortfolio: updates to contains live chart & other enhancements
 
 Migration
 =========
@@ -701,7 +817,12 @@ Dijit
 - Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or TabButton,
   you should edit the templates to remove the data-dojo-attach-event="..." attributes.
 
-Dojox/mobile
+
+dojox/charting
+--------------
+dojox/charting/Theme use to be automatically required by dojox/charting/Chart. This is not the case anymore, if you use it, you need to explicitly require it in your application.
+
+dojox/mobile
 ------------
 See https://www.ibm.com/developerworks/mydeveloperworks/blogs/ykami/entry/migration_to_dojox_mobile_1_82
 

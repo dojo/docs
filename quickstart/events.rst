@@ -448,3 +448,99 @@ Most of the events start with "on" in their name.
 
 Finally, note that you can connect to/override any method in a widget, not just the ones that are considered
 "events".   However, note the caveats listed above about connecting vs. overriding.
+
+Widget events published to the DOM
+----------------------------------
+Starting in version 1.8, widget events are published to the DOM tree and can be monitored by setting up listeners
+on the DOM tree.
+This allows event delegation: setting up an event handler on a high level DOMNode to handle events on multiple widgets.
+
+There are two main types of events that widgets publish:
+   - native events, ex: "click"
+   - attribute changes, ex: attrmodified-open
+
+
+Here's a simple example of monitoring click events coming from any widget.
+Note that since dijit widgets leverage :ref:`dijit/_OnDijitClickMixin <dijit/_OnDijitClickMixin>`,
+keyboard "click" events (i.e using the space or enter key) are also emitted as DOMNode click events.
+
+.. code-example ::
+
+    .. js ::
+
+        require(["dojo/dom", "dojo/on", "dijit/registry", "dojo/domReady!"], function(dom, on, registry){
+            on(dom.byId("buttonContainer"), "click", function(evt){
+                var widget = registry.getEnclosingWidget(evt.target);
+                if(widget){
+                    console.log("click on widget " + widget.id);
+                }
+            });
+        });
+             
+    .. html ::
+     
+        <div id="buttonContainer">
+            <button type="button" data-dojo-type="dijit/form/Button" id="button1">1</button>
+            <button type="button" data-dojo-type="dijit/form/Button" id="button2">2</button>
+            <button type="button" data-dojo-type="dijit/form/Button" id="button3">3</button>
+        </div>
+
+
+Here's an example using the attrmodified-* events to detect when TitlePanes are opened or closed.
+Note that there's a separate event type for each attribute; in this example a change to the open
+attribute generates an event of type "attrmodified-open".
+
+.. code-example ::
+
+    .. js ::
+
+        require(["dojo/dom", "dojo/on", "dijit/registry", "dojo/domReady!"], function(dom, on, registry){
+            on(dom.byId("tpContainer"), "attrmodified-open", function(evt){
+                var widget = registry.getEnclosingWidget(evt.target);
+                console.log(widget.id + ".open changed from " +
+                    evt.detail.prevValue + " to " + evt.detail.newValue);
+            });
+        });
+
+    .. html ::
+
+        <div id="tpContainer">
+            <div data-dojo-type="dijit/TitlePane" title="pane #1" id="pane1">
+                Contents of TitlePane #1
+            </div>
+            <div data-dojo-type="dijit/TitlePane" title="pane #2" id="pane2">
+                Contents of TitlePane #2
+            </div>
+            <div data-dojo-type="dijit/TitlePane" title="pane #3" id="pane3">
+                Contents of TitlePane #3
+            </div>
+        </div>
+
+
+You can also use on.selector() to limit the notifications to certain widgets (technically, limiting the events
+to the root DOMNodes of certain widgets).  For example:
+
+.. code-example ::
+
+    .. js ::
+
+        require(["dojo/dom", "dojo/on", "dijit/registry", "dojo/query!css2", "dojo/domReady!"],
+                function(dom, on, registry){
+            on(dom.byId("buttonContainer"), on.selector(".watchme", "click"), function(evt){
+                // "this" is the node that matched the selector, the root DOMNode of a Button widget
+                // with class="watchme"
+                var widget = registry.byNode(this);
+                if(widget){
+                    console.log("click on widget " + widget.id);
+                }
+            });
+        });
+
+    .. html ::
+
+        <div id="buttonContainer">
+            <button type="button" data-dojo-type="dijit/form/Button" id="watched" class="watchme">watched</button>
+            <button type="button" data-dojo-type="dijit/form/Button" id="unwatched">not watched</button>
+        </div>
+
+Note that as shown above, when on.selector() is used, the app must also require() dojo/query.

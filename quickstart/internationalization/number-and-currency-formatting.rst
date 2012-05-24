@@ -13,7 +13,7 @@ Cultural conventions: Date, Number and Currency
 Dates and Times
 ===============
 
-Unlike standard JavaScript, Dojo is capable of formatting and parsing date formats for many locales, using the CLDR repository at unicode.org. Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo.date.locale <dojo/date/locale>`.
+In JavaScript, the ability to format and parse Date objects is limited to a fixed locale and set heuristics. Leveraging data from the `Unicode Common Locale Data Repository (CLDR) <http://cldr.unicode.org>`__ project, Dojo provides the ability to format and parse date objects in many different locales.  Both the date and time portion of a JavaScript Date object may be converted to or from a String representation using the routines of :ref:`dojo/date/locale <dojo/date/locale>`.
 
 For example, look at the following date formatted using the default locale for the user (in this case, English - United States) and also with a specific locale override of Chinese - PRC China:
 
@@ -31,17 +31,28 @@ For example, look at the following date formatted using the default locale for t
      // such as overriding the default locale
      // Note: the page must specify dojoConfig.extraLocale: 'zh-cn'
      // to bootstrap the environment with support for a locale which is not the user's default
-     localeDate.format(d, {locale:'zh-cn'})
+     localeDate.format(d, {locale: 'zh-cn'})
      // => "06-10-29 下午12:30"
    });
 
-Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") Dojo.date offers a variety of formatting choices, such as the option to a different format "length" -- a choice of "short", "medium", "long", or "full" -- or to print only the date or time portion of the Date object:
+Note that the positioning of month, day, and year are all different, as well as the "PM" symbol and its placement. Use of a locale override in this API is limited to examples like this one; usually the correct thing to do is to assume the user's default, or override the locale for the entire page (see "Setting a locale") dojo/date offers a variety of formatting choices, such as formatLength -- arbitrary choices of different formats as set by the CLDR: "short", "medium", "long", or "full" -- or selection of only the date or time portion of the Date object.  For a user running in an English locale:
 
 .. js ::
 
    localeDate.format(d, {selector:'date', formatLength:'full'});
    // => "Sunday, October 29, 2006"
 
+   localeDate.format(d, {selector:'date', formatLength:'long'});
+   // => "October 29, 2006"
+
+   localeDate.format(d, {selector:'date', formatLength:'medium'});
+   // => "Oct 29, 2006"
+
+   localeDate.format(d, {selector:'date', formatLength:'short'});
+   // => "10/29/06"
+
+   // Support for additional locales can be specified at startup using the 'extraLocale' configuration setting
+   // This example will return the time portion of the date in Simplified Chinese
    localeDate.format(d, {selector:'time', formatLength:'long', locale:'zh-cn'});
    // => "下午12时30分00秒"
 

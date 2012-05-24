@@ -11,7 +11,7 @@ dojox.mobile.pageTurningUtils
 .. contents ::
   :depth: 2
 
-The dojox.mobile.pageTurningUtils is an **EXPERIMENTAL** class.
+The dojox.mobile.pageTurningUtils is an **EXPERIMENTAL** module. It works only on webkit-based browsers. It does not work on other desktop browsers such as Firefox or IE.
 
 Introduction
 ============

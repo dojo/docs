@@ -713,10 +713,6 @@ AJAX Requests (dojo/request)
 
   Publishes the ``dojo/request`` topics.
 
-  * :ref:`dojo/request/watch <dojo/request/watch>`
-
-  Provides the ability to watch inflight requests.
-
   * :ref:`dojo/request/registry <dojo/request/registry>`
 
   Allows for the mapping of providers by URI.

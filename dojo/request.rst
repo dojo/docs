@@ -52,8 +52,6 @@ There are a few modules as part of the package which assist in managing requests
 
 * :ref:`dojo/request/notify <dojo/request/notify>` - Publishes the ``dojo/request`` topic for requests.
 
-* :ref:`dojo/request/watch <dojo/request/watch>` - Provides the capability to watch in-flight requests.
-
 * :ref:`dojo/request/registry <dojo/request/registry>` - Allows registering different providers by a URI pattern, so
   that different providers can be used based on the target URI without the user having to code separate code paths.
 

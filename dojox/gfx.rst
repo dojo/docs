@@ -17,18 +17,18 @@ dojox.gfx (GFX) is a cross-platform vector graphics API. It loosely follows SVG 
 Renderer Options
 ----------------
 
-As of Dojo 1.2, the following native vector graphics engine adaptations are implemented:
+As of Dojo 1.8, the following native vector graphics engine adaptations are implemented:
 
-* SVG (Firefox 1.5-3.0, Safari(Webkit) 3.0, Opera 9.0, Chrome 1.0(Webkit) (beta), iPhone Safari 2.1)
-* VML (IE 6-7)
+* SVG (Firefox 1.5-3.0, Safari(Webkit) 3+, Opera 9+, Chrome 1.0+, iPhone Safari 2.1+
+* VML (IE 6-7-8)
 * Silverlight (wherever it is supported by Microsoft)
-* Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
+* Canvas (Firefox 3.0+, Safari 3.0+ including iOS Safari 1.0+), Opera 9.0+, Chrome, IE9+
 
 Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_ is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_.
 
 Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
-Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture (and in the future, will allow responding to events on Shapes).
+Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture and responding to events on Shapes.
 
 Core Concepts
 -------------
@@ -96,7 +96,7 @@ In addition, all the basic graphics primitives required for 2D graphics are prov
 * 2D linear transformation matrices
 * Colors
 
-Note that Dojo GFX operates as a high-level "retained mode" graphics system, even when running on top of lower-level rendering implementations that may not operate in retained mode, such as Canvas, which is an immediate mode graphics api.  This allows scenes to be manipulated and for your application code to be easily notified of user interactions via events in the same way as when working with retained mode graphics implementations (although at the cost of having to keep the scene graph objects around). (We're still working on event support for the Canvas renderer, see ticket http://trac.dojotoolkit.org/ticket/7782 for updates)
+Note that Dojo GFX operates as a high-level "retained mode" graphics system, even when running on top of lower-level rendering implementations that may not operate in retained mode, such as Canvas, which is an immediate mode graphics api.  This allows scenes to be manipulated and for your application code to be easily notified of user interactions via events in the same way as when working with retained mode graphics implementations (although at the cost of having to keep the scene graph objects around).
 
 Groups
 ------
@@ -105,6 +105,9 @@ Gfx also has the concept of a **Group**, which is a pseudo-shape. Groups combine
 
 All group members share a single z-order, but can be re-arranged within a group.
 In order to draw a picture a programmer constructs a pseudo-DOM from a surface object, shapes, and groups, sets appropriate attributes, and a picture is drawn automatically by a browser. Modifications of shapes change picture automatically.
+
+Conventions
+-----------
 
 The following conventions are used:
 
@@ -690,6 +693,12 @@ getBoundingBox()
 getTransformedBoundingBox()
   Returns four point array, which represents four corners of the bounding box transformed by all applicable transformations.
 
+destroy()
+  Clean up the internal resources used by this shape. This method must be called when the shape is not used anymore and should be removed from the gfx **scene** (not just its container). Once this method has been invoked, the shape must not be accessed anymore. See the "Destructors API" section for more information.
+
+getUID()
+  Returns the shape internal id.
+
 Event processing
 ----------------
 
@@ -730,6 +739,78 @@ The implementation has the following limitations:
 
 Silverlight supports following events: onclick, onmouseenter, onmouseleave, onmousedown, onmouseup, onmousemove, onkeydown, onkeyup.
 If you want to target the broadest range of renderers, you are advised to restrict yourself to this list of events.
+
+Clipping
+--------
+
+The 1.8 release introduces clipping support at shape level. A clipping area defines the shape area that will be effectively visible. Everything that would be drawn outside of the clipping area will not be rendered. The possible clipping area types are rectangle, ellipse, polyline and path (see below for renderer-specific limitations). 
+
+The clip parameter defines the clipping area geometry, and should be an object with the following properties:
+   * {x:Number, y:Number, width:Number, height:Number} for rectangular clip
+   * {cx:Number, cy:Number, rx:Number, ry:Number} for ellipse clip
+   * {points:Array} for polyline clip
+   * {d:String} for a path clip.
+
+The clip geometry coordinates are expressed in the coordinate system used to draw the shape. 	
+
+The following example shows how to clip a gfx image with all the possible clip geometry: 
+
+The image not clipped:
+
+.. image :: noclip.PNG
+
+Clipped by a rectangle: 
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({x:120, y:120, width:50,height:50});
+
+
+.. image :: rectclip.PNG
+
+Clipped by an ellipse:
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:20, ry:50});
+
+.. image :: ellipseclip.PNG
+
+Clipped by a circle (using the ellipse geometry):
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:30, ry:30});
+
+.. image :: circleclip.PNG
+
+Clipped by a polyline:
+
+.. js ::
+
+  surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({points:[150,110,180,145,120,185,150,110]});
+
+.. image :: plineclip.PNG
+
+Clipped by a path:
+
+.. js ::
+
+  surface.createImage({src:img, x:300,y:350,width:200,height:200}).setClip({d:"M 110,105 C104,194 117,167 173,110.0000 z"});
+
+.. image :: pathclip.PNG
+
+Implementation details
+~~~~~~~~~~~~~~~~~~~~~~
+
+vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping geometry.
+
+Destructors API
+----------------
+
+In 1.8, the Surface.destroy() api has been extended to the Shape hierarchy, allowing to clean up resources used by a shape when it is destroyed from the gfx scene. Note that it is different from the Shape.removeParent() method, which only removes the shape from its container. Such a shape can still be added to an another container later, and therefore is still considered part of the scene. The destroy() method, on its side, applies to shape that should not live in the gfx scene anymore. 
+
+Note that Shape.destroy() does not remove the shape from its parent container, this operation must be performed explicitly before the destructor is called, or when clearing a Group passing a truthy value to the Group.clear() method which cause the children destructor to be called.
 
 Helper Methods
 --------------
@@ -1319,6 +1400,74 @@ The final version of the TextPath object will have the IE/VML behavior (as the g
 
 Silverlight and Canvas
   don't support this shape.
+
+Renderer-specific extensions
+============================
+
+From 1.8, new optional modules have been introduced enabling to leverage the capabilities of the underlying rendering technology that are not exposed in the standard gfx API because of their specific nature.
+
+Canvas extension (module: dojox/gfx/canvasext)
+----------------------------------------------
+
+The dojox/gfx/canvasext module adds the following new APIs:
+
+Surface
+~~~~~~~
+
+  getContext()
+    Returns the surface CanvasRenderingContext2D.
+
+  getImageData(rect)
+    Returns an ImageData object containing the image data for the given rectangle of the Surface canvas.
+
+Coupled with the new Surface.render() method and dojo/aspect, these new methods allow to implement post- or pre- image processing. For example, the following example draws a text before the gfx scene is drawn, and processes the gfx scene image buffer to apply a color effect:
+ 
+.. js ::
+
+  // wire a pre render callback to draw a text.
+  aspect.before(surface,"render", function(context){
+    context.save();
+    context.fillStyle    = "black"; 
+    context.font         = "italic 30px sans-serif";
+    context.textBaseline = "top";
+    context.fillText("Canvas pixel-based manipulation with dojox.gfx", 0, 0);
+    context.restore();
+  }, true);
+  // wire a post render callback to apply a "negate color" filter.
+  aspect.after(surface,"render", function(context){
+    input = context.getImageData(0,100,width,height);
+    var inputData = input.data;
+    // negate colors
+    for(var i=0, n=inputData.length; i<n; i+=4){
+      inputData[i  ] = 255 - inputData[i  ]; // red
+      inputData[i+1] = 255 - inputData[i+1]; // green
+      inputData[i+2] = 255 - inputData[i+2]; // blue
+    }
+    context.putImageData(input, 0, 100);
+  }, true);
+
+SVG extension (module: dojox/gfx/svgext)
+----------------------------------------------
+
+The dojox/gfx/svg module adds the following new APIs:
+
+Shape
+~~~~~
+  addRenderingOption(option, value)
+    Adds the specified SVG rendering option on this shape. The value of the option and value parameters should conform to the SVG specification (http://www.w3.org/TR/SVG/painting.html#RenderingProperties). Note that these rendering options are considered only as hints by the browser svg engine (so the option may have no effect), and the result can be different depending on the browser. 
+
+For example, the following code specifies that the line should be drawn using the "crispEdges" option:
+
+.. js ::
+
+  surface.createLine({
+    x1 : 10,
+    y1 : 10,
+    x2 : 490,
+    y2 : 100
+  }).setStroke("blue").addRenderingOption("shape-rendering", "crispEdges);
+
+
 
 Utilities
 =========

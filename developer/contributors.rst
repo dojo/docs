@@ -238,6 +238,7 @@ Individuals who have signed Dojo CLAs
 * Horowitz, Richard
 * Hu, Jian
 * Huang, Ming Zhe
+* Hudson, David
 * Humphreys, Martin
 * Hussenet, Claude
 * Illit, Marcel
@@ -281,7 +282,7 @@ Individuals who have signed Dojo CLAs
 * Klubnik, Justin
 * Knapp, Matthew
 * Koberg, Robert S.
-* Kokot, Peter (maastermedia)
+* Kokot, Peter (peterkokot)
 * Kolba, Nicholas
 * Komarneni, Vamsikrishna
 * Koonce, Grayson
@@ -611,6 +612,7 @@ Individuals who have signed Dojo CLAs
 * Yarimagan, Ilgin
 * Yeow, Cheah
 * Young, Matthew
+* Young, Rex
 * Yu, Leon
 * Zamir, Brett
 * Zammetti, Frank
@@ -629,6 +631,7 @@ Corporations or Organizations with a CCLA on file
 =================================================
 
 * ActiveGrid, Inc.
+* Adconion Media, Inc.: Peter Higgins (Only to cover Stacked Charts, Better Tooltip)
 * Adaptive Technology Resource Centre
 * AG Interactive
 * AOL, LLC
@@ -666,7 +669,7 @@ Corporations or Organizations with a CCLA on file
 * Leorent, GmbH: Michael Rasmussen
 * Livando.com
 * LUCIAD NV: Tom Makieu, Thomas Neiaynck
-* Maastermedia
+* Maastermedia: Peter Kokot
 * Media Hive
 * Media Distribution Solutions, LLC: Mike Wilcox
 * Meebo

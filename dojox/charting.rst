@@ -165,7 +165,7 @@ Available 2D chart types include:
 Lines, Areas and Markers Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
+With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points. 
 
 .. js ::
 
@@ -188,6 +188,23 @@ Tension allows you to add some curve to the lines on you plot. By default this o
   });
 
 Finally interpolate let's you choose the behavior when a data point is missing in the chart (i.e. its data value is null). If interpolate is false (default) a the line or area will be cut at that data point and will start back at the next valid data point. If interpolate is true, the missing data point will be interpolated and the chart continuously drawn.
+
+*About markers*
+
+The markers are fixed size symbols retrieved from the chart theme. To change the markers size you need to change the symbols in the theme. For example to double the size of the first symbols:
+
+.. js ::
+
+  require["dojox/charting/Chart", "dojox/charting/SimpleTheme"], function(Chart, SimpleTheme){
+    var myTheme = new SimpleTheme({
+      markers: {
+        CIRCLE: "m-6,0 c0,-8 12,-8 12,0, m-12,0 c0,8 12,8 12,0"
+        SQUARE: "m-6,-6 12,0 0,12 -12,0z"
+      }
+    });
+    var chart = new Chart().setTheme(myTheme);
+  });
+
 
 Bars, Columns, Candle Stick Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

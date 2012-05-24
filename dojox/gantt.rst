@@ -28,64 +28,65 @@ Usage
 
 The following step shows how to create a typical gantt chart in dojo.
 
-Step 1: Import related CSS file and required JavaScript:
+.. code-example ::
+  :djConfig: async: false, parseOnLoad: true
 
-.. html ::
+  .. js ::
+
+    setTimeout(function(){
+    require(["dojo","dojox/gantt/GanttChart", "dojox/gantt/GanttProjectItem", "dojox/gantt/GanttTaskItem"],function(dojo, GanttChart, GanttProjectItem, GanttTaskItem){
+      // Declare gantt chart.  
+      var ganttChart = new GanttChart({
+        readOnly: false,        // optional: determine if gantt chart is editable
+        dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
+        height: 400,            // optional: chart height in pixel, default is 400px
+        width: 1200,            // optional: chart width in pixel, default is 600px
+        withResource: true      // optional: display the resource chart or not
+      }, "gantt");              //"gantt" is the node container id of gantt chart widget
+
+      // Add project with tasks.
   
-  <link type="text/css" rel="stylesheet" href="{baseUrl}/dijit/themes/claro/claro.css">
-  <link type="text/css" rel="stylesheet" href="{baseUrl}/dojox/gantt/resources/gantt.css">
-  ...
-  <script type="text/javascript">
-    dojo.require("dojox.gantt.GanttChart");
-    ...
-  </script>
+      var project = new GanttProjectItem({
+        id: 1,
+        name: "Development Project",
+        startDate: new Date(2006, 5, 11)
+      });
+      var taskRequirement = new GanttTaskItem({
+        id: 1,
+        name: "Requirement",
+        startTime: new Date(2006, 5, 11),
+        duration: 50,
+        percentage: 50,
+        taskOwner: "Jack"
+      });
+      var taskAnalysis = new GanttTaskItem({
+        id: 2,
+        name: "Analysis",
+        startTime: new Date(2006, 5, 18),
+        duration: 40,
+        percentage: 0,
+        previousTaskId: "1",
+        taskOwner: "Michael"
+      });
 
-Step 2: Declare gantt chart.
-
-.. js ::
+      project.addTask(taskRequirement);
+      project.addTask(taskAnalysis);
   
-  var ganttChart = new dojox.gantt.GanttChart({
-    readOnly: false,        // optional: determine if gantt chart is editable
-    dataFilePath: "gantt_default.json",    // optional: json data file path for load and save, default is "gantt_default.json"
-    height: 400,            // optional: chart height in pixel, default is 400px
-    width: 1200,            // optional: chart width in pixel, default is 600px
-    withResource: true      // optional: display the resource chart or not
-  }, "gantt");              //"gantt" is the node container id of gantt chart widget
+      ganttChart.addProject(project);
 
-Step 3: Add project with tasks.
+      // Initialize and Render
+      ganttChart.init();
+    });
+    },0);
 
-.. js ::
-  
-  var projec = new dojox.gantt.GanttProjectItem({
-    id: 1,
-    name: "Development Project",
-    startDate: new Date(2006, 5, 11)
-  });
-  var taskRequirement = new dojox.gantt.GanttTaskItem({
-    id: 1,
-    name: "Requirement",
-    startTime: new Date(2006, 5, 11),
-    duration: 50,
-    percentage: 50,
-    taskOwner: "Jack"
-  });
-  var taskAnalysis = new dojox.gantt.GanttTaskItem({
-    id: 2,
-    name: "Analysis",
-    startTime: new Date(2006, 5, 18),
-    duration: 40,
-    percentage: 0,
-    previousTaskId: "1",
-    taskOwner: "Michael"
-  });
+  .. html ::
 
-  project.addTask(taskRequirement);
-  project.addTask(taskAnalysis);
+    <div id="gantt"></div>
 
-  ganttChart.addProject(project);
+  .. css ::
 
-  // Initialize and Render
-  ganttChart.init();
+        @import "{{baseUrl}}dojox/gantt/resources/gantt.css";
+
 
 There are several imported parameters in ``dojox.gantt.GanttTaskItem`` declaration as follows.
 

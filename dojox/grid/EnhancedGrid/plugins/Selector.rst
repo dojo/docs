@@ -141,11 +141,11 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 
   .. css ::
 
-    @import "{{ baseUrl }}dojo/resources/dojo.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{baseUrl}}dojo/resources/dojo.css";
+    @import "{{baseUrl}}dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}dijit/themes/claro/document.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
     .cfgtable th,
     .cfgtable td{

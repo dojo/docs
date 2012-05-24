@@ -165,6 +165,4 @@ See also
 
 * You can read more about using JSON Referencing here: http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/
 
-* And this article describes more about JsonRestStore and using referencing for lazy loading: http://blog.medryx.org/2008/07/24/jsonreststore-overview/
-
 * In a .NET environment, http://msdn.microsoft.com/en-us/library/bb412170.aspx has useful information about JSON serialization

@@ -27,12 +27,10 @@ Examples
 .. html ::
    
     <script type="text/javascript">
-        require(["dojo/html", "dojo/ready"], function(html, ready){
-            ready(function(){
-                // the first argument is a node reference
-                console.log("loaded");
-                html.set(dojo.byId("mycontent"), "loaded!");
-            });
+        require(["dojo/html", "dojo/domReady!"], function(html){
+            // the first argument is a node reference
+            console.log("loaded");
+            html.set(dojo.byId("mycontent"), "loaded!");
         });
     </script>
 
@@ -52,15 +50,14 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 
     <script type="text/javascript">
-        require(["dojo/html", "dojo/dom", "dojo/_base/connect", "dijit.form.NumberTextBox"], function(html, dom, connect, numberTextBox){
-            var sethandle = connect.connect(dom.byId("setbtn"), "onclick", function(){
-
+        require(["dojo/html", "dojo/dom", "dojo/on", "dijit/form/NumberTextBox"], function(html, dom, on){
+            on.once(dom.byId("setbtn"), "click", function(){
               html.set(dom.byId("mytable"), '<tr>'
                 +'<td><label>How much?</label></td>'
                 +'<td><input type="text" data-dojo-type="dijit/form/NumberTextBox" value="0"'
                 +  ' constraints="{min:0,max:20,places:0}"'
-                +  ' promptMessage= "Enter a value between 0 and +20"'
-                +  ' required= "true" invalidMessage= "Wrong!" />'
+                +  ' promptMessage="Enter a value between 0 and +20"'
+                +  ' required="true" invalidMessage="Wrong!">'
                 +'</td>'
                 +'</tr>', {
                   parseContent: true,
@@ -68,8 +65,6 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
                       this.inherited("onBegin", arguments);
                   }
               });
-              connect.disconnect(sethandle);
-              sethandle = null;
               dom.byId("setbtn").innerHTML = "Done";
             });
         });
@@ -79,7 +74,7 @@ We're getting a lot done here. First, note that we're setting content on a table
 
 This is a common pattern, and yields a common problem - what if we haven't got the classes necessary already required? We provide an ``onBegin`` function to the set operation to first require the necessary widget. We call ``this.inherited`` just in case ``onBegin`` has other work it needs to do. But what is "``this``"? ``dojo.html.set`` makes use of a ``dojo.html._ContentSetter`` class to encapsulate the work it needs to do, so ``this`` is an instance of that class. For advanced usage like this, see the api docs and look over source code to fully understand how you can leverage the _ContentSetter class.
 
-My use of ``dojo.connect`` to trigger the new content is purely an example, you could obviously make this call from an event handler, xhr callback, etc. There are many many possibilities - here's just a couple ideas: applying ``dojo.behavior`` to the new content, fading/animating the new content, cloning the new content into another node, escaping or performing substitutions on the content before it lands. I'll also mention here that this functionality is also made available for ``NodeLists`` (``dojo.query`` result objects) via the ``dojo.NodeList-html`` module
+My use of ``dojo/on`` to trigger the new content is purely an example, you could obviously make this call from an event handler, xhr callback, etc. There are many many possibilities - here's just a couple ideas: applying ``dojo.behavior`` to the new content, fading/animating the new content, cloning the new content into another node, escaping or performing substitutions on the content before it lands. I'll also mention here that this functionality is also made available for ``NodeLists`` (``dojo.query`` result objects) via the ``dojo.NodeList-html`` module
 
 What else comes out of the box? set takes the following optional params to configure its behavior:
 

@@ -71,7 +71,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -330,7 +330,7 @@ Some style sheets supplied with the Dojo distribution are required:
 .. css ::
   
     @import "/dojox/grid/resources/Grid.css";
-    @import "/dojox/grid/resources/{{theme}}Grid.css";
+    @import "/dojox/grid/resources/claroGrid.css";
 
     .dojoxGrid table {
       margin: 0;
@@ -458,7 +458,7 @@ This example shows how to create a simple Grid programmatically.
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -567,7 +567,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -653,7 +653,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -763,7 +763,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. css ::
 
-        @import '{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css';
+        @import '{{baseUrl}}dojox/grid/resources/claroGrid.css';
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -859,7 +859,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -944,7 +944,7 @@ To use it, you just have to override default behavior by yours.
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/{{theme}}Grid.css";
+        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #grid {
@@ -1010,8 +1010,8 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
   .. css ::
 
     @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
-    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
 
 
 
@@ -1071,8 +1071,8 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
   .. css ::
 
     @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
-    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
 
 
 
@@ -1140,8 +1140,8 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
   .. css ::
 
     @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
-    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
 
 
 
@@ -1213,8 +1213,8 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
   .. css ::
 
     @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
-    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
 
 
 _`Inserting a dijit widget (Button) in a field`
@@ -1283,8 +1283,8 @@ _`Inserting a dijit widget (Button) in a field`
   .. css ::
 
     @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/{{theme}}/{{theme}}.css";
-    @import "{{baseUrl}}/dojox/grid/resources/{{theme}}Grid.css";
+    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
+    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
 
 
 
@@ -1346,7 +1346,7 @@ Keeping row selection across various actions e.g. sorting, filtering is a known 
 
 However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to make it work under some scenario, the 'keepSelection' attr can be applied to any Grid types including DataGrid, EnhancedGrid, TreeGrid or LazyTreeGrid e.g
 
-.. html ::
+.. js ::
   
   require(['dojox/grid/DataGrid', 'dojox/grid/EnhancedGrid', 'dojox/grid/TreeGrid', 'dojox/grid/LazyTreeGrid', 'dojo/domReady!'],
     function(DataGrid, EnhancedGrid, TreeGrid, LazyTreeGrid) {
@@ -1367,6 +1367,15 @@ But please note:
 
 2. Known issue - it might not be accurate if some unloaded rows are selected by range(e.g.SHIFT + click)
 
+
+Display grid from a hidden container
+------------------------------------
+
+There are some occasions when grid is created within a hidden container e.g. Dialogue or TabContainer, an explicit resize() would be needed to let grid calculate its size appropriately
+
+.. js ::
+  
+  grid.resize();
 
 
 Accessibility in 1.3 and Beyond
@@ -1437,4 +1446,3 @@ See also
 * `Dojo Grids: Diving Deeper <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_
 * `Simple Dojo Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_
 * `Dojo Grid Widget Updated. Data Integration and Editing Improvements. <http://ajaxian.com/archives/dojo-grid-widget-updated-data-integration-and-editing-improvements>`_
-

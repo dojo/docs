@@ -26,18 +26,19 @@ Usage
 
 The following attributes can be specified when you create a ValidationTextBox:
 
-===============  =============  ======================================================================
-Parameter        Type           Description
-===============  =============  ======================================================================
-required                        Whether the field is required or not. false by default.
-promptMessage                   Tooltip text that appears when the text box is empty and on focus. Null by default.
-invalidMessage                  Tooltip text that appears when the content of the text box is invalid.
-constraints                     TBC.
-regExp                          Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
-regExpGen                       TBC. If this is used, do not use regExp.
-tooltipPosition                 Define where Tooltip will appear.
-===============  =============  ======================================================================
-
+================  =============  ======================================================================
+Parameter         Type           Description
+================  =============  ======================================================================
+required          boolean        Whether the field is required or not. false by default.
+promptMessage     String         Tooltip text that appears when the text box is empty and on focus. Null by default.
+invalidMessage    String         Tooltip text that appears when the content of the text box is invalid.
+missingMessage    String         Tooltip text that appears when the content of the text box is empty and the field is required.
+constraints       Object         Holds constraints (like min and max values) for use in subclasses of ValidationTextBox.
+regExp            RegExp         Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
+regExpGen         function       Function that should return a string representing the body of a regular expression; see the String.replace() format. If this is used, do not use regExp.
+tooltipPosition   String         Define where Tooltip will appear.
+================  =============  ======================================================================
+ 
 Methods:
 
 isValid()

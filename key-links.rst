@@ -157,7 +157,6 @@ Miscellaneous
 * `Dojo for Sling 101 <http://dev.day.com/microsling/content/blogs/main/dojosling101.html>`_, Lars Trieloff, Day Software, Dojo User
 * `Dojo Modules for AIM <http://dojotoolkit.org/2008/06/16/dojo-modules-aim>`_, James Burke, AOL, Dojo Committer
 * `Dojo + jabsorb <http://www.sitepen.com/blog/2008/06/18/dojo-jabsorb/>`_, Kris Zyp, SitePen, Dojo Committer
-* `Medryx Observations <http://blog.medryx.org/category/dojo/>`_, Maulin Shah, Medryx, Dojo Contributor
 * `Gears PubTools Search <http://gears-pubtools.googlecode.com/svn/trunk/docs/fast_search_article.html>`_, Brad Neuberg, Dojo Committer
 * `Getting Started Using Persevere with Dojo <http://www.sitepen.com/blog/2008/07/23/getting-started-with-persevere-using-dojo/>`_, Kris Zyp, SitePen, Dojo Committer
 * `Dojo 1.2 and Django 1.0 on Google App Engine <http://adamfisk.wordpress.com/2008/09/17/dojo-12-and-django-10-on-google-app-engine-113/>`_, Adam Fisk, LittleShoot, Dojo User

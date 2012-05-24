@@ -69,18 +69,56 @@ This example shows how you can set up the same select as the previous example, b
     require(["dojo/ready", "dijit/form/Select", "dojo/_base/window"], function(ready, Select, win){
         ready(function(){
             new Select({
-                name: 'select2',
+                name: "select2",
                 options: [
-                    { label: 'TN', value: 'Tennessee' },
-                    { label: 'VA', value: 'Virginia', selected: true },
-                    { label: 'WA', value: 'Washington' },
-                    { label: 'FL', value: 'Florida' },
-                    { label: 'CA', value: 'California' }
+                    { label: "TN", value: "Tennessee" },
+                    { label: "VA", value: "Virginia", selected: true },
+                    { label: "WA", value: "Washington" },
+                    { label: "FL", value: "Florida" },
+                    { label: "CA", value: "California" }
                 ]
             }).placeAt(win.body());
         });
     });
 
+A Select Fed By A Store
+-----------------------
+
+A Select can take its data from a data store, which must currently conform to the dojo.data.Read API.  `Selects Using Stores <http://dojotoolkit.org/documentation/tutorials/1.6/selects_using_stores>`_ may help.  One gotcha to look out for is that, at least in this example, the data from the store must have ``id`` and ``label`` attributes, not ``value`` and ``label`` attributes.
+
+
+.. code-example::
+  :djConfig: async: true
+
+  .. js ::
+
+    require(["dijit/form/Select",
+      "dojo/data/ObjectStore",
+      "dojo/store/Memory"
+    ], function(Select, ObjectStore, Memory){
+  
+      var store = new Memory({
+        data: [
+          { id: "foo", label: "Foo" },
+          { id: "bar", label: "Bar" }
+        ]
+      });
+  
+      var os = new ObjectStore({ objectStore: store });
+  
+      var s = new Select({
+        store: os
+      }, "target");
+      s.startup();
+    
+      s.on("change", function(){
+          console.log("my value: ", this.get("value"))
+      })
+    })
+  
+  .. html ::
+  
+    <div id="target"></div>
 
 A "styled" Select
 -----------------

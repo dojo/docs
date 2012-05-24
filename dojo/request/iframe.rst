@@ -18,7 +18,7 @@ Introduction
 ``dojo/request/iframe`` deprecates :ref:`dojo/io/iframe <dojo/io/iframe>` and is part of Dojo's Request API. It is designed to handle complex request/response scenarios which cannot be handled by the standard :ref:`dojo/request/xhr <dojo/request/xhr>`.  The two main scenarios are:
 
 * Calling a service on a server other than the one that originated the calling page (cross-domain request). Note that in
-  this case, the response body cannot be read. So you can send stuff, but not get any replies. If you need access to the
+  this case, the response body cannot be read. So you can send data, but not get any replies. If you need access to the
   return data, see :ref:`dojo/request/script <dojo/request/script>`.
 
 * Uploading files from a form (e.g. file input controls). The normal XHR mechanism cannot access file data referenced by
@@ -214,9 +214,9 @@ See also
 
 * :ref:`dojo/request <dojo/request>` - The whole Dojo Request API
 
-* :ref:`dojo/request/node <dojo/request/node>` - The default provider for the node.js platform
+* :ref:`dojo/request/xhr <dojo/request/xhr>` - The default provider for a browser based platform
 
-* :ref:`dojo/request/iframe <dojo/request/iframe>` - A provider that uses IFrame for transport
+* :ref:`dojo/request/node <dojo/request/node>` - The default provider for the node.js platform
 
 * :ref:`dojo/request/script <dojo/request/script>` - A provider that expects the response to be embedded in a
   ``<script>`` tag.
