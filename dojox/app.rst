@@ -6,6 +6,8 @@ dojox.app
 
 :since: V1.7
 
+*Foreword*: ``dojox/app`` is an experimental module and its architecture is still evolving. In particular it was greatly improved between 1.7 and 1.8. It is for now compatible with Webkit-based browsers. 
+
 ``dojox.app`` is an application framework designed to allow simple configuration
 of nested scenes and views and to facilitate the transitioning between these
 views.  It is similar in function to the ``dojox.mobile.app`` framework, but will
