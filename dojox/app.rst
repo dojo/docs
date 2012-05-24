@@ -415,6 +415,9 @@ An application may have as many scenes and views as required.  The end product w
 
 Comparison with dojox.mobile.app
 ================================
+
+First please note that going forward ``dojox.mobile.app`` will be deprecated in favor of ``dojox.app``.
+
 The main difference between ``dojox.app`` and ``dojox.mobile.app`` is listed as following.
 
 * ``dojox.app`` enables the model binding
