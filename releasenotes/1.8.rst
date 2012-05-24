@@ -768,7 +768,6 @@ New Demos
 
 - tracTreemap: a treemap demo visualizing trac ticket status
 - calendar: a calendar component demo
-- mobileStockPortfolio: updates to contains live chart & other enhancements
 - todoApp: a "todo" application leveraging dojox/mobile, dojox/app & dojox/mvc packages
 
 
@@ -777,6 +776,7 @@ Updated demos
 
 - mobileGallery: the mobile gallery now highlights the latest dojox/mobile features
 - gauges & mobileGauges: the gauges demos now use the new dojox/dgauges package
+- mobileStockPortfolio: updates to contains live chart & other enhancements
 
 Migration
 =========
