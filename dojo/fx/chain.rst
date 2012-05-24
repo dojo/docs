@@ -1,63 +1,76 @@
 .. _dojo/fx/chain:
 
-=============
-dojo.fx.chain
-=============
+================
+dojo/fx::chain()
+================
 
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
-:Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
+:Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, 
+             sjmiles
 :since: v1.0
 
 .. contents ::
     :depth: 2
 
-The *dojo.fx.chain()* is a helper function that can take a list of dojo._Animation objects and combine them so that their effects run sequentially.  With this function animations that affect multiple nodes can be generated and executed with a single call.
+**dojo/fx::chain()** is a helper function that can take a list of :ref:`dojo/_base/fx::Animation <dojo/_base/fx#animation>` objects and combine them so that their effects run sequentially. With this function
+animations that affect multiple nodes can be generated and executed with a single call.
 
-Function Parameters
-===================
+Usage
+=====
 
-The *dojo.fx.chain()* function takes a JavaScript array as its parameter.  This array is a list of dojo._Animation objects you want to run sequentially.
+To use ``dojo/fx::chain()`` pass it an array of ``dojo/_base/fx::Animation`` objects:
 
-Return Value
-============
+.. js ::
 
-The return value from a call to *dojo.fx.chain()* is another instance of dojo._Animation.  It can them be used as you would any other animation object, such as playing it, or combining it with other animation effects by passing it back to a *dojo.fx.chain()* call.
+  require(["dojo/fx"], function(coreFx){
+    var animA = coreFx.wipeIn({
+      node: "someNode"
+    });
+    var animB = coreFx.wipeOut({
+      node: "someNode"
+    });
+    
+    coreFx([animA, animB]).play();
+  });
+
+``.chain()`` returns another instance of Animation that can be used to control the chained Animation.
 
 Examples
 ========
 
-Example 1:  Fade and Wipe in two DOM nodes sequentially
--------------------------------------------------------
-
 .. code-example ::
-  
+
+  This example fades and wipes in two DOM nodes sequentially.
+
   .. js ::
 
-      dojo.require("dijit.form.Button");
-      dojo.require("dojo.fx");
-      function basicChain(){
-         dojo.style("basicNode1", "opacity", "0");
-         dojo.style("basicNode2", "height", "0px");
-
-         // Function linked to the button to trigger the fade.
-         function chainIt(){
-            dojo.style("basicNode1", "opacity", "0");
-            dojo.style("basicNode2", "height", "0px");
-            dojo.style("basicNode2", "display", "none");
-            dojo.fx.chain([
-              dojo.fadeIn({node: "basicNode1", duration: 2000}),
-              dojo.fx.wipeIn({node: "basicNode2", duration: 2000}),
-            ]).play();
-         }
-         dojo.connect(dijit.byId("basicButton"), "onClick", chainIt);
-      }
-      dojo.ready(basicChain);
+    require(["dojo/fx", "dojo/_base/fx", "dojo/dom", "dojo/dom-style", "dojo/on", "dojo/domReady!"],
+    function(coreFx, baseFx, dom, style, on){
+      style.set("basicNode1", "opacity", "0");
+      style.set("basicNode2", "height", "0px");
+      
+      on(dom.byId("basicButton"), "click", function(){
+        style.set("basicNode1", "opacity", "0");
+        style.set("basicNode2", "height", "0px");
+        style.set("basicNode2", "display", "none");
+        coreFx.chain([
+          baseFx.fadeIn({
+            node: "basicNode1",
+            duration: 2000
+          }),
+          coreFx.wipeIn({
+            node: "basicNode2",
+            duration: 2000
+          })
+        ]).play();
+      });
+    });
 
   .. html ::
 
-    <button data-dojo-type="dijit/form/Button" id="basicButton">Fade and Wipe in Nodes!!</button>
+    <button type="button" id="basicButton">Fade and Wipe in Nodes!!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>
-    <br>
+    <br />
     <div id="basicNode2" style="width: 100px; background-color: green; display: none;">
       <b>Some random text in a node to wipe in.</b>
     </div>
@@ -65,12 +78,11 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
 See Also
 ========
 
-* :ref:`Animation Quickstart <quickstart/Animation>`
-* :ref:`Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`
-* :ref:`dojo.fx.combine <dojo/fx/combine>`
-* :ref:`dojo.animateProperty <dojo/animateProperty>`
-* :ref:`dojo.fadeOut <dojo/fadeOut>`
-* :ref:`dojo.fadeIn <dojo/fadeIn>`
-* :ref:`dojo.fx.wipeOut <dojo/fx/wipeOut>`
-* :ref:`dojo.fx.wipeIn <dojo/fx/wipeIn>`
-* :ref:`dojo.fx.slideTo <dojo/fx/slideTo>`
+* :ref:`dojo/fx <dojo/fx>` - Overview of the core Dojo FX API
+
+* :ref:`dojo/fx::combine() <dojo/fx/combine>` - A helper function that combines animations.
+
+* :ref:`dojo/_base/fx::animateProperty() <dojo/_base/fx#animateproperty>` - Details around the other options possible
+
+* `Animation Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/animation/>`_ - The tutorial to find out about
+  Dojo's FX API
