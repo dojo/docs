@@ -21,7 +21,7 @@ cases a wipe-in is desired.
 Usage
 =====
 
-Basic usage require just the node to be wiped-in to be passed:
+Basic usage requires just the node to be wiped-in to be passed:
 
 .. js ::
 
