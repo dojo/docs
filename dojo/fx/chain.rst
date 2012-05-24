@@ -30,7 +30,7 @@ To use ``dojo/fx::chain()`` pass it an array of ``dojo/_base/fx::Animation`` obj
       node: "someNode"
     });
     
-    coreFx([animA, animB]).play();
+    coreFx.chain([animA, animB]).play();
   });
 
 ``.chain()`` returns another instance of Animation that can be used to control the chained Animation.
