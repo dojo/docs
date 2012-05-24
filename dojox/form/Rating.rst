@@ -1,7 +1,7 @@
 .. _dojox/form/Rating:
 
 ===================
-dojox.widget.Rating
+dojox.form.Rating
 ===================
 
 :Authors: Wolfram Kriesing
@@ -144,7 +144,6 @@ Inside a dojo form
 
   .. js ::
 
-    dojo.require("dojox.form.Rating");
     dojo.require("dojox.form.Rating");
     dojo.require("dijit.form.Form");
     dojo.require("dijit.form.FilteringSelect");
