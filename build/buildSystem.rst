@@ -111,7 +111,7 @@ whatever directory is convenient for you. For all users, there is nothing specia
 indicate the root that holds the Dojo Toolkit source distribution.
 
 Unless specifically stated otherwise, all examples assume the current working directory is
-~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the build system, both rather a convenience
+~/dev/dtk/util/buildscripts. As we'll see, this is not a requirement of the build system, but rather a convenience
 so you don't have to path to the build system executable.
 
 Invoking the Build System
