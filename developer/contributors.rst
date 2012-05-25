@@ -4,6 +4,8 @@
 Contributor Listing
 ===================
 
+Note: The canonical list for users with CLAs is now at http://dojofoundation.org/about/claCheck. This list will be removed at some point in the future.
+
 Individuals who have signed Dojo CLAs
 =====================================
 
