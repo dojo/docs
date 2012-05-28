@@ -63,7 +63,7 @@ Features
 
   * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` A function that creates stateful objects from plain objects/values (Will work as a successor of dojox.mvc.newStatefulModel()).
 
-  * :ref:`dojox/mvc/getPlainData <dojox/mvc/getPlainData>` A function that creates plain objects/values from stateful objects (Will works as a successor of dojox.mvc.StatefulModel.toPlainObject()).
+  * :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` A function that creates plain objects/values from stateful objects (Will works as a successor of dojox.mvc.StatefulModel.toPlainObject()).
 
   * :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` Components to work with Dojo Object Store (Something that does dojox.mvc.StatefulModel.commit(), dojox.mvc.StatefulModel._commit() and dojox.mvc.StatefulModel._saveToStore()).
 
