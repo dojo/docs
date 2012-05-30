@@ -719,6 +719,71 @@ A new Treemap component is introduced in dojox.treemap package. It displays data
 
 Mobile
 ------
+
+New Widgets
+~~~~~~~~~~~
+
+The following Dojo Mobile widgets are new in Dojo 1.8. Click each widget name for details.
+
+* :ref:`TreeView <dojox/mobile/TreeView>`
+* :ref:`RoundRectStoreList <dojox/mobile/RoundRectStoreList>`
+* :ref:`EdgeToEdgeStoreList <dojox/mobile/EdgeToEdgeStoreList>`
+* :ref:`Container <dojox/mobile/Container>`
+* :ref:`Pane <dojox/mobile/Pane>`
+* :ref:`ScrollablePane <dojox/mobile/ScrollablePane>`
+* :ref:`SearchBox <dojox/mobile/SearchBox>`
+* :ref:`Accordion <dojox/mobile/Accordion>`
+* :ref:`GridLayout <dojox/mobile/GridLayout>`
+* :ref:`IconMenu <dojox/mobile/IconMenu>`
+* :ref:`IconMenuItem <dojox/mobile/IconMenuItem>`
+* :ref:`ScreenSizeAware <dojox/mobile/ScreenSizeAware>`
+* :ref:`SimpleDialog <dojox/mobile/SimpleDialog>`
+* :ref:`ProgressBar <dojox/mobile/ProgressBar>`
+* :ref:`Rating <dojox/mobile/Rating>`
+* :ref:`CarouselItem <dojox/mobile/CarouselItem>`
+* :ref:`DataCarousel <dojox/mobile/DataCarousel>`
+* :ref:`StoreCarousel <dojox/mobile/StoreCarousel>`
+* :ref:`ValuePicker <dojox/mobile/ValuePicker>`
+* :ref:`ValuePickerSlot <dojox/mobile/ValuePickerSlot>`
+* :ref:`ValuePickerDatePicker <dojox/mobile/ValuePickerDatePicker>`
+* :ref:`ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`
+* :ref:`DatePicker <dojox/mobile/DatePicker>`
+* :ref:`TimePicker <dojox/mobile/TimePicker>`
+* :ref:`Audio <dojox/mobile/Audio>`
+* :ref:`Video <dojox/mobile/Video>`
+* :ref:`Badge <dojox/mobile/Badge>`
+* :ref:`Icon <dojox/mobile/Icon>`
+
+dojox.mobile.parser
+~~~~~~~~~~~~~~~~~~~
+
+- stopParser
+
+To support dojox.mvc, the stopParser feature was added to dojox.mobile.parser. If a widget has the stopParser flag, the parser stops parsing its child widgets. dojo.parser has this capability, but dojox.mobile.parser didn't until 1.8 to keep the code size small.
+ 
+- New data-dojo-type syntax
+
+dojox.mobile.parser accepts the new data-dojo-type syntax like data-dojo-type="dijit/form/Button".
+
+- Function type property
+
+dojox.mobile.parser handles function-type properties correctly. In the following example, the onClick() method of the ListItem widget is overridden by the myClick function.
+
+.. html ::
+
+  <li data-dojo-type="dojox.mobile.ListItem"
+      data-dojo-props='moveTo:"bar", onClick:myClick'>
+      Slide
+  </li>
+
+ProgressIndicator
+~~~~~~~~~~~~~~~~~
+
+ProgressIndicator was a singleton non-widget module. In 1.8, it is an ordinary widget which inherits from _WidgetBase. A new enhanced ProgressIndicator has the ability to customize size, color, and display position. See :ref:`ProgressIndicator <dojox/mobile/ProgressIndicator>` for details.
+
+New Build Profile
+~~~~~~~~~~~~~~~~~
+
 A webkit-mobile build profile was added to eliminate IE etc. code paths from a build intended only to run on
 webkit-mobile devices.
 
