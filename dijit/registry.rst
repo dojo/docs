@@ -189,11 +189,11 @@ The same id attribute is used as a parameter, but what is returned in this case 
 by the dojo widget system when the markup is parsed and transformed into a dijit.
 This allows you to change dojo-specific attributes for the widget or call methods defined in the class
 the dijit corresponds to (in this case, we can call methods of the ContentPane class).
-For example, we can set the content of the ContentPane via setContent().
+For example, we can set the content of the ContentPane via set("content", value).
 
 .. js ::
 
- regsitry.byId("myDivId").setContent("Hello World!");
+ regsitry.byId("myDivId").set("content", "Hello World!");
 
 You could also change the style like we did with dom.byId() above using the domNode property of the ContentPane.
 (Actually, domNode is defined higher up the inheritance tree so every dijit has a domNode property.  Very convenient!)
@@ -203,7 +203,7 @@ This example also saves the results of registry.byId() into a local variable.
 
  myContentPane = registry.byId("myDivId");
  myContentPane.domNode.style.height = '300px';
- myContentPane.setContent("Hello World!");
+ myContentPane.set("content", "Hello World!");
 
 data-dojo-id (jsId before dojo 1.6)
 -----------------------------------
@@ -216,7 +216,7 @@ Since my Content Pane has a data-dojo-id attribute value of myDojoId I could sim
 .. js ::
 
  myDojoId.domNode.style.height = '300px';
- myDojoId.setContent("Hello World!");
+ myDojoId.set("content", "Hello World!");
 
 Attribute data-dojo-id is not required, it is there as a convenience.
 
