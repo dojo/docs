@@ -160,6 +160,7 @@ Available 2D chart types include:
    * **Pie** - Goes great with punch!
    * **Spider** - A very effective tool for comparing multiple entities based on different characteristics
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
+   * **Bubble** - Similar to scatter but with bubbles elements which sizes vary depending on the data.
    * **Grid** - For adding a grid layer to your chart.
 
 Lines, Areas and Markers Plots
@@ -241,6 +242,27 @@ For any chart type that supports axes, you can also define custom names to your 
     chart.addPlot("default", { type: Bars, hAxis: "cool x", vAxis: "super y" });
   });
 
+
+Bubble Plots
+~~~~~~~~~~~~
+
+Tne bubble plot provides several options including bubble fill, stroke and shadow.
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Bubble", ...], function(Bubble, ...){
+    chart.addPlot("default", { type: Bubble, fill: "red" });
+  });
+
+The important point is that the data series used for the Bubble plot must be of the following form:
+
+.. js ::
+
+[ { x: x0, y: y0, size: size0 }, { x: x1, y: y1, size: size1 }, ... ]
+
+With size corresponding to the size of the bubble for a given data point.
+
+
 Pie Plot
 ~~~~~~~~
 
@@ -263,8 +285,8 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
       radius: 0
   }
 
-Style on Lines, Areas, Bars, Columns and Pie plots
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Style on Lines, Areas, Bars, Columns, Bubble & Pie plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These plots support a common set of style properties that when provided override the style taken from the chart theme. This includes for example **fill** property to specify with fill is used by the plot.
 This includes as well a **shadow** property that allows you to add a shadow effect, and can
