@@ -256,8 +256,6 @@ Tne bubble plot provides several options including bubble fill, stroke and shado
 
 The important point is that the data series used for the Bubble plot must be of the following form:
 
-.. js ::
-
 [ { x: x0, y: y0, size: size0 }, { x: x1, y: y1, size: size1 }, ... ]
 
 With size corresponding to the size of the bubble for a given data point.
