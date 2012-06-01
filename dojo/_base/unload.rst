@@ -53,7 +53,10 @@ Usage
 
      // call a method of an object
      // example: calls a method, unLoad, set on the window
-     window.unLoad=function(){ console.log("an unload function"); };
+     window.unLoad=function(){
+         console.log("an unload function");
+         return "This is a message that will appear on unLoad.";
+     };
      baseUnload.addOnUnload(window, "unLoad");
    });
 
