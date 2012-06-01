@@ -35,18 +35,20 @@ Usage
 	   alert("unloading...");
      });
      
-     // make sync xhr before page unloads
-     xhr("POST",{
-          url: location.href,
-          sync: true,
-          handleAs: "text",
-          content:{
-              param1:1
-          },
-          load:function(result){
-               // will return before next handler fires
-               console.log(result);
-          }
+     baseUnload.addOnUnload(function(){
+          // make sync xhr before page unloads
+          xhr("POST",{
+               url: location.href,
+               sync: true,
+               handleAs: "text",
+               content:{
+                   param1:1
+               },
+               load:function(result){
+                    // will return before next handler fires
+                    console.log(result);
+               }
+          });
      });
 
      // call a method of an object
