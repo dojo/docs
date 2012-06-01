@@ -26,17 +26,34 @@ Usage
 
 .. js ::
 
-   require(['dojo/_base/unload'], function(baseUnload){
+   require(['dojo/_base/unload','dojo/_base/xhr'], function(baseUnload, xhr){
      // pass a function pointer
      baseUnload.addOnUnload(function(){
 	   // do some unload stuff
+	   console.log("unloading...");
+	   // NOTE: some browsers block alerts in onunload
 	   alert("unloading...");
-	 });
+     });
+     
+     // make sync xhr before page unloads
+     xhr("POST",{
+          url: location.href,
+          sync: true,
+          handleAs: "text",
+          content:{
+              param1:1
+          },
+          load:function(result){
+               // will return before next handler fires
+               console.log(result);
+          }
+     });
 
      // call a method of an object
+     // example: calls a method, unLoad, set on the window
+     window.unLoad=function(){ console.log("an unload function"); };
      baseUnload.addOnUnload(window, "unLoad");
    });
-
 
 
 addOnWindowUnload()
@@ -56,6 +73,7 @@ Usage
      // pass a function pointer
      baseUnload.addOnWindowUnload(function(){
 		 // do some unload stuff
+	         // NOTE: some browsers block alerts in onunload
 		 alert("unloading...");
 	 });
 
