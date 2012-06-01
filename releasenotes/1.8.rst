@@ -434,6 +434,16 @@ dojo/when
 
 Transparently applies callbacks to values and/or promises.  See :ref:`dojo/when <dojo/when>`.
 
+dojo/node
+---------
+
+An AMD plugin that allows easier loading of Node.js modules when running Dojo in Node.js.
+
+dojo/router
+-----------
+
+A new component for routing to different client-side “pages”.
+
 Dijit
 =====
 
@@ -824,6 +834,8 @@ App
 
 Util
 ====
+
+The documentation scripts at ``docscripts`` have been deprecated and replaced with a new documentation parser that works properly with AMD modules.
 
 Demos
 =====
