@@ -45,7 +45,7 @@ Dojo Configuration            :ref:`dojo/_base/config <dojo/_base/config>`      
                                                                                      default platform configuration
 Module Loading                :ref:`dojo/_base/loader <dojo/_base/loader>`           The legacy and AMD module loader 
                                                                                      for Dojo
-                              :ref:`dojo/require <dojo/require>`
+                              :ref:`dojo/require <dojo/require>` [1]_
 Loader Plugins                :ref:`dojo/domReady <dojo/domReady>`                   AMD Loader Plugins
                               
                               :ref:`dojo/i18n <dojo/i18n>`

@@ -107,6 +107,11 @@ dojo/io/script
 ``dojo/io/script`` has was *deprecated* in lieu of ``dojo/request/script``. It was updated to utilise the new request
 architecture, but developers should transition to ``dojo/request/script``.
 
+dojo/node
+---------
+
+``dojo/node`` is an AMD plugin that allows easier loading of Node.js modules when running Dojo in Node.js.  See :ref:`dojo/node <dojo/node>` for more information.
+
 dojo/parser
 -----------
 
@@ -371,11 +376,17 @@ dojo/request/util
 
 A set of utilities used by the ``dojo/request`` package.
 
+dojo/router
+-----------
+
+A new component for routing to different client-side “pages”.  See :ref:`dojo/router <dojo/router>` for more 
+information.
+
 dojo/sniff
 ----------
 
-The dojo/_base/sniff module was superseded by dojo/sniff. ``dojo/sniff`` functions the same way as the old module,
-except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
+The ``dojo/_base/sniff`` module was superseded by ``dojo/sniff``. ``dojo/sniff`` functions the same way as the old 
+module, except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
 
 dojo/Stateful
 -------------
@@ -433,16 +444,6 @@ dojo/when
 ---------
 
 Transparently applies callbacks to values and/or promises.  See :ref:`dojo/when <dojo/when>`.
-
-dojo/node
----------
-
-An AMD plugin that allows easier loading of Node.js modules when running Dojo in Node.js.
-
-dojo/router
------------
-
-A new component for routing to different client-side “pages”.
 
 Dijit
 =====
