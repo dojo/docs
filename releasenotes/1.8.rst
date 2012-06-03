@@ -11,7 +11,9 @@ Dojo 1.8 Release Notes
 Browser support
 ===============
 
-The following browsers have been tested and are supported in this release. If a browser version is not listed as supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases of dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
+The following browsers have been tested and are supported in this release. If a browser version is not listed as 
+supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases 
+of Dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
 
 Desktop
 
@@ -21,7 +23,7 @@ Desktop
   * IE 6-9
   * Opera 10.50-12 (Dojo core only)
 
-Mobile (dojox/mobile)
+Mobile (``dojox/mobile``)
 
   * iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2-2.3, 3.1-3.2, 4.0
