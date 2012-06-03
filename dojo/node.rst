@@ -4,7 +4,7 @@
 dojo/node
 =========
 
-**dojo/node** is a loader plugin that is used to load "native" `node.js <http://nodejs.com/>`_ modules when using the Dojo loader.
+**dojo/node** is a loader plugin that is used to load "native" `node.js <http://nodejs.org/>`_ modules when using the Dojo loader.
 
 Introduction
 ============
@@ -67,4 +67,4 @@ See Also
 
 * :ref:`Dojo's Loader <loader>`
 
-* `node.js <http://nodejs.com/>`_
+* `node.js <http://nodejs.org/>`_
