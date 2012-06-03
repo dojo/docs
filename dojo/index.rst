@@ -188,7 +188,7 @@ Internationalization          :ref:`dojo/i18n <dojo/i18n>`                      
 Accessibility                 :ref:`dojo/hccss <dojo/hccss>`                         Accessibility CSS enhancements
 Remote Procedure Calls        :ref:`dojo/rpc <dojo/rpc>`                             Ability to invoke remote procedure 
                                                                                      calls
-Miscellanous                  :ref:`dojo/gears <dojo/gears>` [2]_
+Miscellaneous                 :ref:`dojo/gears <dojo/gears>` [2]_
                               
                               :ref:`dojo/jaxer <dojo/jaxer>` [1]_
                               
