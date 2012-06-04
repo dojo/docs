@@ -56,6 +56,17 @@ In order to use this module, it must be added to your module's dependency list, 
 The feature detection convention is to return a "truthy" value, meaning that if the feature is available, a value that 
 would evaluate as ``true`` is returned.  If the feature is not present, ``dojo/has`` should return a ``false``.
 
+The modules can be used as a loader plugin.  To do so, the plugin argument is a ternary logic expression where the 
+first argument is the feature, the second is the module to load if it is true and the optional third is module to load 
+if the feature is false:
+
+.. js ::
+
+  require(["dojo/has!feature?package/module:package/other"], function(featureModule){
+    // If feature is true, package/module loaded
+    // If feature is false, package/other loaded
+  });
+
 Features can be registered by providing a feature name and a test function:
 
 .. js ::
