@@ -6,174 +6,242 @@ dojo/has
 
 :Authors: Chris Mitchell, Pete Higgins
 :Project owner: Kris Zyp
-:since: 1.7.0
+:since: 1.7
 
 .. contents ::
   :depth: 2
 
-About
-========
+**dojo/has** provides standardized feature detection with an extensible API.  It is based on the conventions in the `has.js project <https://github.com/phiggins42/has.js>`_.
 
-Dojo 1.7 introduces a standard feature testing and detection api, based on conventions established by the awesome `has.js project <https://github.com/phiggins42/has.js>`_.
+Introduction
+============
 
-Browser sniffing and feature inference are flawed techniques for detecting browser support in client side JavaScript.
-The has() API is useful for adding new feature tests the result of which can be used later when features need to be detected. The goal of the Dojo has() API is to provide a standard feature testing and feature detection module for use in Dojo modules.
+Browser sniffing and feature inference are flawed techniques for detecting browser support in client side JavaScript. 
+The ``dojo/has`` API is useful for adding new feature tests the result of which can be used later when features need to 
+be detected. The goal of the ``dojo/has`` API is to provide a standard feature testing and feature detection module for 
+use in Dojo modules.  Although the signature of the ``dojo/has`` API conforms to the has.js implementation and feature 
+names, Dojo modules implement their own version of ``dojo/has`` tests, as some shortcuts and inferences are already 
+available in the Toolkit.
 
-Although the signature of the has() API conforms to the has.js implementation and feature names, Dojo modules implement their own version of has() tests, as some shortcuts and inferences are already available in the toolkit.
+``dojo/has`` feature detection is lazy instantiated, meaning that the code that determines if the feature is detected 
+will not be executed until the feature is actually requested and the return value is then cached for future calls for 
+the same feature.
 
-Dojo Core and Dijit modules make use of has() feature detection in 1.7.  There are still a number of dojox projects that continue to use dojo.isXXX ua sniffing.  These remaining projects will likely be converted to use has() in the 1.8 time frame.
+Dojo Core and Dijit modules make use of ``dojo/has`` feature detection.  There are still a number of DojoX projects 
+that continue to use ``dojo.isXXX`` user agent sniffing.  This conversion is an ongoing process.
 
-Ternary has() conditional expressions can also be used during module loading for conditional loading of modules based on feature availability.  See the Dojo loader documentation for more details on this capability.
+``dojo/has`` can be used a loader plugin with a ternary conditional expression so that modules can be loaded 
+conditionally.
 
-The basic tests within dojo/has module can be augmented with additional tests by any other module.  One frequently used module that extends dojo/has with additional tests is :ref:`dojo/sniff <dojo/sniff>`.
+The basic tests defined within the ``dojo/has`` module can be enhanced with other modules registering additional 
+features and tests.  One frequently used module that extends ``dojo/has`` with additional tests and features is 
+:ref:`dojo/sniff <dojo/sniff>`.
+
+Using ``staticHasFeatures`` in a build configuration, along with the closure JavaScript complier can produce a build 
+where dead code paths are removed.  See the :ref:`builder <build/index>` documentation for more information.
 
 Usage
-========
+=====
 
-Dojo's implementation of has() is provided by the dojo/has.js module.  In order to use this module, it must be added to your module's define dependency list, for example:
+In order to use this module, it must be added to your module's dependency list, for example:
 
 .. js ::
- 
-  define(["dojo/has", "dojo/_base/kernel"], function(has, dojo){
-   // Use has() and has.add() as in examples below...
+
+  define(["dojo/has"], function(has){
+    if(has("dom")){
+      // Do something based on feature
+    }
   });
- 
 
-Currently, the testing convention is `has('somefeature')` returns Boolean, e.g.:
+The feature detection convention is to return a "truthy" value, meaning that if the feature is available, a value that 
+would evaluate as ``true`` is returned.  If the feature is not present, ``dojo/has`` should return a ``false``.
 
-.. js ::
- 
- if(has("function-bind")){
-    // your environment has a native Function.prototype.bind
- }else{
-    // you'll have to workaround or degrade because the feature's not available in your environment.
- }
-    
-In the real world, this may translate into something like:
+Features can be registered by providing a feature name and a test function:
 
 .. js ::
- 
- mylibrary.trim = has("string-trim") ? function(str){
-     return (str || "").trim();
- } : function(str){
-     /* do the regexp based string trimming you feel like using */
- }
 
-By using this approach, we can easily defer to browser-native versions of common functions and can also isolate non-standard codepaths. As browsers change over time (hopefully converging on standard api's), non-standard codepaths can more easily be pruned by build tools.
-Using this approach also simplifies the ability to prune browser-specific codepaths.  For example, if you're only interested in webkit environments, non-webkit feature paths can more easily be stripped out in a build, resulting in smaller more targeted code being sent to clients.
+  has.add("some-test-name", function(global, document, anElement){
+    // Feature dection code, returning a truthy value if true
+    return true;
+  });
 
-Running `has()` is a one-time cost, deferred until needed. After first run, subsequent `has()` checks are cached and return immediately.
+The test function should take up to three arguments:
 
-There are also groups working on server-side has() optimizations, to precompute the cache of tests to reduce startup times.
+========= =========================================
+Argument  Description
+========= =========================================
+global    Reference to the global scope
+document  Reference to the document object
+anElement A generic element to be used if required
+========= =========================================
 
-Testing Registration
---------------------
+*Note* any test function should clean up after itself.  Ensure there are no leaks!
 
-Each test is self-contained. Register a test with `has.add()`:
-
-.. js ::
- 
- has.add("some-test-name", function(global, document, anElement){
-   // global is a reference to global scope, document is the same
-   // anElement only exists in browser environments, and can be used
-   // as a common element from which to do DOM working.
-   // ALWAYS CLEAN UP AFTER YOURSELF in a test. No leaks, thanks.
-   // return a Boolean from here.
-   return true;
- });
-    
 You can register and run a test immediately by passing a truthy value after the test function:
 
 .. js ::
- 
- has.add("some-other-test", function(){
-   return false; // Boolean
- }, true)
 
-This is preferred over what would seem a much more effective version:
+  has.add("some-other-test", function(){
+    return false; // Boolean
+  }, true);
+
+While it may seem logical to pass a non-wrapped function like the following, it is not advised:
 
 .. js ::
- 
+
  // this is not wrapped in a function, and should be:
  has.add("some-other-test", ("foo" in bar)); // or whatever
-    
-By forcing a function wrapper around the test logic we are able to defer execution until needed, as well as provide a normalized way for each test to have its own execution context. This way, we can remove some or all the tests we do not need in whatever upstream library should adopt _has_.
 
+Without it being wrapped as a function, the execution takes place immediately instead of being lazy executed when the 
+feature is actually required in a code path.
 
-Dojo 1.7 Feature Names
-======================
+Feature Names
+=============
 
-The following feature tests are available in Dojo 1.7.  This table shows the module in which the feature test is added, and the name of the feature test.  View the source code of each module to understand exactly how the test is performed (explicit testing, inference, user agent sniff etc.)
+The following feature tests are available in Dojo.  This table shows the module in which the feature test is added, and 
+the name of the feature test.
 
-.. js ::
- 
-  dojo/_base/browser.js , config-selectorEngine
-  dojo/_base/config.js , dojo-sniff
-  dojo/_base/connect.js , events-keypress-typed
-  dojo/_base/event.js , dom-addeventlistener
-  dojo/_base/kernel.js , config-* // All djConfig properties are added dynamically
-  dojo/_base/kernel.js , dojo-guarantee-console
-  dojo/_base/kernel.js , bug-for-in-skips-shadowed
-  dojo/_base/kernel.js , dojo-debug-messages
-  dojo/_base/kernel.js , dojo-moduleUrl
-  dojo/_base/loader.js , config-publishRequireResult
-  dojo/_base/sniff.js , opera
-  dojo/_base/sniff.js , air
-  dojo/_base/sniff.js , khtml
-  dojo/_base/sniff.js , webkit
-  dojo/_base/sniff.js , chrome
-  dojo/_base/sniff.js , mac
-  dojo/_base/sniff.js , safari
-  dojo/_base/sniff.js , mozilla
-  dojo/_base/sniff.js , ie
-  dojo/_base/sniff.js , ff
-  dojo/_base/sniff.js , quirks
-  dojo/_base/sniff.js , ios
-  dojo/_base/sniff.js , vml
-  dojo/_base/xhr.js , native-xhr
-  dojo/dojo.js , host-node
-  dojo/dojo.js , host-rhino
-  dojo/dojo.js , config-* // All djConfig properties are added dynamically
-  dojo/dojo.js , dojo-force-activex-xhr
-  dojo/dojo.js , native-xhr
-  dojo/dojo.js , ie-event-behavior
-  dojo/dom/class.js , dom-classList
-  dojo/has.js , host-browser
-  dojo/has.js , dom
-  dojo/has.js , dojo-dom-ready-api
-  dojo/has.js , dojo-sniff
-  dojo/has.js , dom-addeventlistener
-  dojo/has.js , touch
-  dojo/has.js , device-width
-  dojo/has.js , agent-ios
-  dojo/has.js , agent-android
-  dojo/i18n.js , dojo-v1x-i18n-Api
-  dojo/json.js , json-parse
-  dojo/json.js , json-stringify
-  dojo/main.js , dojo-load-firebug-console
-  dojo/main.js , dojo-config-require
-  dojo/mouse.js , dom-quirks
-  dojo/mouse.js , events-mouseenter
-  dojo/on.js , jscript
-  dojo/on.js , event-orientationchange
-  dojo/ready.js , dojo-config-addOnLoad
-  dojo/selector/_loader.js , dom-qsa2.1
-  dojo/selector/_loader.js , dom-qsa3
-  dojo/selector/lite.js , dom-matches-selector
-  dojo/selector/lite.js , dom-qsa
-  util/build/main.js , is-windows
+=============================================================================== =================================
+Module                                                                          Feature
+=============================================================================== =================================
+:ref:`dijit/_WidgetBase <dijit/_WidgetBase>`                                    dijit-legacy-requires
+:ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`  textarea-needs-help-shrinking
+:ref:`dojo/_base/browser <dojo/_base/browser>`                                  config-selectorEngine
+:ref:`dojo/_base/connect <dojo/_base/connect>`                                  events-keypress-typed
+:ref:`dojo/_base/kernel <dojo/_base/kernel>`                                    extend-dojo
 
-Note: The above list was generated automatically with the following script in the root of the src dir, and edited manually:
+                                                                                dojo-guarantee-console
 
-.. js ::
- 
-  grep -r --include=*.js "has.add(\"" * | awk -F"[ \t\":,]+" '{ print " ",$1,",", $3}'
+                                                                                dojo-debug-messages
 
+                                                                                dojo-modulePaths
+
+                                                                                dojo-moduleUrl
+:ref:`dojo/_base/lang <dojo/_base/lang>`                                        bug-for-in-skips-shadowed
+:ref:`dojo/_base/loader <dojo/_base/loader>`                                    config-publishRequireResult
+:ref:`dojo/dojo <dojo/dojo>`                                                    host-node
+
+                                                                                host-rhino
+
+                                                                                dojo-xhr-factory
+
+                                                                                dojo-force-activex-xhr
+
+                                                                                native-xhr
+
+                                                                                dojo-gettext-api
+
+                                                                                dojo-loader-eval-hint-url
+
+                                                                                ie-event-behavior
+:ref:`dojo/dom-class <dojo/dom-class>`                                          dom-classList
+:ref:`dojo/has <dojo/has>`                                                      host-browser
+
+                                                                                dom
+
+                                                                                dojo-dom-ready-api
+
+                                                                                dojo-sniff
+
+                                                                                dom-addeventlistener
+
+                                                                                touch
+
+                                                                                device-width
+
+                                                                                dom-attributes-explicit
+
+                                                                                dom-attributes-specified-flag
+:ref:`dojo/hccss <dojo/hccss>`                                                  highcontrast
+:ref:`dojo/i18n <dojo/i18n>`                                                    dojo-preload-i18n-Api
+
+                                                                                dojo-v1x-i18n-Api
+:ref:`dojo/json <dojo/json>`                                                    json-parse
+
+                                                                                json-stringify
+:ref:`dojo/main <dojo/main>`                                                    dojo-config-require
+:ref:`dojo/mouse <dojo/mouse>`                                                  dom-quirks
+
+                                                                                events-mouseenter
+
+                                                                                events-mousewheel
+:ref:`dojo/on <dojo/on>`                                                        jscript
+
+                                                                                event-orientationchange
+
+                                                                                event-stopimmediatepropogation
+:ref:`dojo/query <dojo/query>`                                                  array-extensible
+:ref:`dojo/ready <dojo/ready>`                                                  dojo-config-addOnLoad
+:ref:`dojo/selector/_loader <dojo/selector/_loader>`                            dom-qsa2.1
+
+                                                                                dom-qsa3
+:ref:`dojo/selector/lite <dojo/selector/lite>`                                  dom-matches-selector
+
+                                                                                dom-qsa
+:ref:`dojo/sniff <dojo/sniff>`                                                  air
+
+                                                                                khtml
+
+                                                                                webkit
+
+                                                                                chrome
+
+                                                                                safari
+
+                                                                                mac
+
+                                                                                quirks
+
+                                                                                ios
+
+                                                                                android
+
+                                                                                opera
+
+                                                                                mozilla
+
+                                                                                ff
+
+                                                                                ie
+
+                                                                                wii
+:ref:`dojox/app/main <dojox/app/main>`                                          app-log-api
+:ref:`dojox/mobile/Audio <dojox/mobile/Audio>`                                  mobile-embed-audio-video-support
+:ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`                        translate3d
+:ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`                    dom-qsa
+:ref:`dojox/mvc/sync <dojox/mvc/sync>`                                          mvc-bindings-log-api
+:ref:`util/build/main <util/build/main>`                                        is-windows
+=============================================================================== =================================
+
+Examples
+========
+
+.. code-example ::
+
+  This example uses the ``dojo/has`` module as both a normal module and as a plugin.  It detects if you have a touch 
+  capable device or not.
+
+  .. js ::
+
+    require(["dojo/has", "dojo/has!touch?dojo/touch:dojo/mouse", "dojo/dom", "dojo/domReady!"], 
+    function(has, hid, dom){
+      if(has("touch")){
+        dom.byId("output").innerHTML = "You have a touch capable device and so I loaded <code>dojo/touch</code>.";
+      }else{
+        dom.byId("output").innerHTML = "You do not have a touch capable device and so I loaded <code>dojo/mouse</code>.";
+      }
+    });
+
+  .. html ::
+
+    <div id="output"></div>
 
 See Also
 ========
 
-* `has.js standard feature test names (this page can be also used to test your browser's capabilities) <http://dante.dojotoolkit.org/hasjs/tests/runTests.html>`_
-* `has.js project (here you'll find standard tests and feature names) <https://github.com/phiggins42/has.js>`_
+* `has.js Project <https://github.com/phiggins42/has.js>`_ - You can find standard tests and feature names.
 
-Some portions of this document were copied with permission from has.js project.  Thanks to the has.js team for this work!
+* `dojo/sniff <dojo/sniff>` - The modules that provides browser detection by building on top of ``dojo/has``.
+
+Some portions of this document were copied with permission from has.js Project.  Thanks to the has.js team for this 
+work!
