@@ -143,8 +143,6 @@ Finally, requiring this class also enables all dijits to become data binding awa
 
 To illustrate, the following is the "Hello World" of such data-bound widget examples.
 
-Using AMD format:
-
 .. js ::
 
         var model;
@@ -158,23 +156,6 @@ Using AMD format:
     <input id="helloInput" data-dojo-type="dijit.form.TextBox"
         data-dojo-props="ref: 'model.hello'">
 
-
-or, using legacy patterns e.g. ``dojo.require``:
-
-.. js ::
-
-        dojo.require("dojox.mvc");
-        dojo.require("dojo.parser");
-        var model;
-        dojo.ready(function(){
-            model = dojox.mvc.newStatefulModel({ data : {
-                hello : "Hello World"
-            }});
-            dojo.parser.parse();
-        }
-
-    <input id="helloInput" data-dojo-type="dijit.form.TextBox"
-        ref="model.hello">
 
 Such data binding awareness for dijits is added by extending the dijit._WidgetBase class to include data binding capabilities provided by dojox.mvc._DataBindingMixin, and this class declares a dependency on dojox.mvc._DataBindingMixin.
 
