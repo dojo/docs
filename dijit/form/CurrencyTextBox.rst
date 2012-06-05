@@ -59,6 +59,7 @@ In this example using euros with German formatting, the invalid message contains
   :djConfig: async: true, parseOnLoad: false
 
   .. js ::
+
     require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"
     ], function(CurrencyTextBox, currency){
         var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});

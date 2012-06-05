@@ -12,10 +12,10 @@ It should be used when:
 
 To create this special build:
 
-.. code-block :: shell
+.. code-block :: bash
 
-  cd util/buildscripts/
-  ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
+  $ cd util/buildscripts/
+  $ ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
 
 
  

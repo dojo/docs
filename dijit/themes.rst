@@ -368,7 +368,7 @@ Thus, by modifying variables.less and rebuilding the CSS files, you could make y
 
 The beginning of variables.less looks like:
 
-.. code-block :: less
+.. code-block :: css
 
     @primary-color: #cfe5fa;                                                    // Base color for entire theme
     @secondary-color: #efefef;                                                // Base color for bar-backgrounds
@@ -389,7 +389,7 @@ The beginning of variables.less looks like:
 
 To compile all the less files into CSS files, on mac or other UNIX boxes do:
 
-.. code-block :: shell
+.. code-block :: bash
 
   $ cd dijit/themes/claro
   $ node compile.js
@@ -401,14 +401,14 @@ This requires Node.js.   If you don't have it, then
 
 2. Edit .bash_profile etc. to add node to your path
 
-.. code-block :: shell
+.. code-block :: bash
 
-    export PATH=$PATH:/opt/less/bin
+    $ export PATH=$PATH:/opt/less/bin
 
 
 On a PC, do:
 
-.. code-block :: shell
+::
 
     C:\> cd C:\myworkspace\dijit\themes\claro
     C:\> node compile.js

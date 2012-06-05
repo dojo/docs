@@ -66,7 +66,7 @@ Previously, one would ``dojo.require()`` modules into a page. Take this basic ex
         alert("wait! DOM might not be ready yet?!")
     }); 
 
-The ``require()`` call follows the `requirejs <>`_ API. It does lots of amazing things. That is beyond the scope of this document, currently.
+The ``require()`` call follows the `requirejs <http://requirejs.org/docs/api.html>`_ API. It does lots of amazing things. That is beyond the scope of this document, currently.
 
 Take notice of the difference in the two examples:
 
@@ -85,7 +85,7 @@ The ``require()`` callback function is important. In the former example, we ``al
         alert("okay, NOW the modules I wanted AND DOM are ready! phew.");
     })
 
-So to summarize: instead of calling dojo.require() N times, call require() once, passing an array of module names you want. If you need DOMReady, use ``"dojo/domReady!"``. Note the ``!`` following the module name. That puts the ``dojo/domReady`` module into "plugin" mode.  (more on `loader plugins`_ later)
+So to summarize: instead of calling dojo.require() N times, call require() once, passing an array of module names you want. If you need DOMReady, use ``"dojo/domReady!"``. Note the ``!`` following the module name. That puts the ``dojo/domReady`` module into "plugin" mode.
 
 The special ``Thinger`` and ``cookie`` variables created for our ``require()`` callback are whatever the return values from ``dojo/cookie.js`` and ``my/Thinger.js`` were, respectively. We will discuss the return value of ``my/Thinger`` while we deprecate dojo.provide_ in the next section.
 

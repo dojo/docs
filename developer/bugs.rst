@@ -78,7 +78,7 @@ When working in DojoX, if no Component is more accurate than the top level ``doj
 Do this recursively in projects with components.
 eg: If a bug is against ``dojox.layout.FloatingPane``, the Component would be ``DojoX Layout`` and the meta tag would be: ``[FloatingPane]``, making the summary look something like:
 
-.. code-block :: bash
+::
 
     [patch][cla][FloatingPane] Fails to start when created in an iframe
 
@@ -86,7 +86,7 @@ This indicates to the ``FloatingPane`` owner a fix covered under CLA lives in th
 
 Dijit prefers the module name be included in the summary, when in the "component" ``Dijit``, eg:
 
-.. code-block :: bash
+::
 
     [regression] TabContainer: Title Heights collapse when ...
     

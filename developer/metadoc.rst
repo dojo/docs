@@ -1,4 +1,4 @@
-.. _developer/rstwiki:
+.. _developer/metadoc:
 
 ======================================
 Editing Dojo's Reference Documentation
