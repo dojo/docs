@@ -227,7 +227,7 @@ However, you can also reference an event's charOrCode attribute for making a sin
   var node = dojo.byId("foobar");
   dojo.connect(node, "onkeypress, function(e){
      switch(e.charOrCode){
-          case dojo.keys.LEFT:
+          case dojo.keys.LEFT_ARROW:
           case 'h':
                // go left
           ...
