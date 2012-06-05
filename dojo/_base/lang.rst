@@ -514,6 +514,7 @@ Example
 -------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Let's look at a quick running example:
 
@@ -553,7 +554,7 @@ If the second argument is an object, all names within braces are interpreted as 
 
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -583,7 +584,7 @@ With array
 In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -618,7 +619,7 @@ Let's take a look at example where we are calculating values lazily on demand fr
 This code in action:
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -659,7 +660,7 @@ With custom pattern
 In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to ``{abc}``, but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -694,7 +695,7 @@ We will borrow Dijit syntax: all names starting with ``!`` are going to be place
 while everything else is going to be filtered.
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -743,7 +744,7 @@ Let's add a simple formatting to substituted fields. We will use the following n
 In this example we are going to format numbers as fixed or exponential with optional precision.
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -841,7 +842,7 @@ Usage
 trim() accepts the only argument: a string to be trimmed.
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

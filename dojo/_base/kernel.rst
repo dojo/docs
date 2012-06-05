@@ -108,6 +108,7 @@ It is important to note the `version` value is easily set as part of the build p
 The `revision` member refers to the SVN revision used to create the version. You can inspect individual changesets at `the Dojo bug tracker <http://bugs.dojotoolkit.org/changeset>`_
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

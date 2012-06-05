@@ -46,6 +46,7 @@ The following code retrieves the "wide" versions of the months based on the curr
 array of values.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

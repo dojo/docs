@@ -52,6 +52,7 @@ Examples
 Checking to see if a particular node as an attribute.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -112,6 +113,7 @@ Examples
 Getting some values from a node.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Here is the JavaScript code that will read the values of the attributes and output the results.
 
@@ -169,6 +171,7 @@ Examples
 Here is an example of changing a value of an attribute:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -188,6 +191,7 @@ Here is an example of changing a value of an attribute:
 Here is an example of using an object to set multiple attribute values:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -240,6 +244,7 @@ Examples
 Here is an example of removing the ``disabled`` attribute from a DOM node:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

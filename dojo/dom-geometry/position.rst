@@ -52,6 +52,7 @@ Basic usage
 -----------
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -92,6 +93,7 @@ vertically and horizontally relative to the document root.
 
 .. code-example ::
   :version: 1.7-2.0
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -144,6 +146,7 @@ content area.
 
 .. code-example ::
   :version: 1.7-2.0
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

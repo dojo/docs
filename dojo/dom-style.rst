@@ -55,6 +55,7 @@ Examples
 The following example computes the style for a node and outputs some of its values.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -133,6 +134,7 @@ Examples
 ~~~~~~~~
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -215,6 +217,7 @@ The following example changes the background color of a node and then shows the 
 the current value:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -249,6 +252,7 @@ the current value:
 The following example changes several style properties at once by passing a hash of the values:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -286,6 +290,7 @@ The return values of :ref:`dojo/query <dojo/query>` also allow you to access to 
 way. The following turns all the all the red nodes orange.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

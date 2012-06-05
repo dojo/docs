@@ -85,7 +85,8 @@ Example 1:  Toggle a DOM node (with defaults)
 ---------------------------------------------
 
 .. code-example ::
-  
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
     require(["dojo/fx/Toggler", "dojo/dom", "dojo/on", "dojo/domReady!"], 
@@ -113,6 +114,7 @@ Example 2:  Toggle a DOM node with custom durations
 ---------------------------------------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example has a slow fade out and a slowish fade in.
 
@@ -145,6 +147,7 @@ Example 3:  Toggle a DOM node with custom animation functions
 -------------------------------------------------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This examples uses the `wipeOut` and `wipeIn` functions.
 

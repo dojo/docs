@@ -31,6 +31,7 @@ got set.
 *Note: cookies must be enabled for this to work ;)*
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

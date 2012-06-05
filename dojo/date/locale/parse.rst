@@ -55,6 +55,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

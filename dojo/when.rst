@@ -50,6 +50,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   In this example, we demonstrate how we can handle both a synchronous and asyncronous process with the same code, by
   using when.

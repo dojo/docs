@@ -141,7 +141,7 @@ Ad-Hoc Popup
 Sometimes you want to pop a tooltip up somewhere in response to some decision made in your code.  The complication here is to know when to hide the tooltip again.  The mouseleave event handler is only set up when the dijit/Tooltip instance is created with the `connectId` argument specified, if you simply pop one up around a DOM node this handler is not installed and the Tooltip will never disappear.  Fix this by setting one up yourself.
 
 .. code-example ::
-  :djConfig: async: true
+  :djConfig: parseOnLoad: false, async: true
 
   .. js ::
 

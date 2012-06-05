@@ -20,7 +20,8 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
 
 .. code-example ::
- 
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
         require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
@@ -409,7 +410,8 @@ This example shows how to create a simple Grid programmatically.
 
 
 .. code-example ::
- 
+   :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
       require(['dojo/_base/lang', 'dojox/grid/DataGrid' , 'dojo/data/ItemFileWriteStore' , 'dojo/dom' , 'dojo/domReady!'],
@@ -476,7 +478,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
 
 .. code-example ::
- 
+   :djConfig: async: true, parseOnLoad: true
+
   .. js ::
 
        require(['dojo/_base/array', 'dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
@@ -560,7 +563,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
        <div id="gridDiv"></div>
 
        <p>
-            <span data-dojo-id="button1" data-dojo-type="dijit.form.Button">
+            <span data-dojo-id="button1">
                 get all Selected Items
             </span>
         </p>
@@ -599,7 +602,8 @@ First, you have to set a editor for each cell, you would like to edit:
 
 
 .. code-example ::
- 
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
        require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojox/grid/cells/dijit', 'dojo/dom', 'dojo/domReady!'],
@@ -670,7 +674,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
 
 .. code-example ::
- 
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
        require(['dojo/_base/array', 'dojo/_base/lang', 'dojo/_base/event', 'dojo/on', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/parser', 'dojo/domReady!'],
@@ -752,11 +757,11 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <div id='gridDiv'></div>
 
     <p>
-      <span data-dojo-id='button2' data-dojo-type='dijit.form.Button'>
+      <span data-dojo-id='button2'>
           Add Row
       </span>
     
-      <span data-dojo-id='button1' data-dojo-type='dijit.form.Button'>
+      <span data-dojo-id='button1'>
           Remove Selected Rows
       </span>
     </p>
@@ -778,11 +783,12 @@ The Grid offers a filter() method, to filter data from the current query (client
 
 
 .. code-example ::
- 
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
-       require(['dojo/_base/lang', 'dojo/on', 'dojo/parser', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dijit/form/Button', 'dojo/dom', 'dojo/domReady!'],
-        function(lang, on, parser, DataGrid, ItemFileWriteStore, Button, dom){
+       require(['dojo/_base/lang', 'dojo/on', 'dojo/parser', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
+        function(lang, on, parser, DataGrid, ItemFileWriteStore, dom){
           parser.parse();
           /*set up data store*/
           var data = {
@@ -848,11 +854,11 @@ The Grid offers a filter() method, to filter data from the current query (client
     <div id="gridDiv"></div>
 
     <p>
-    <span data-dojo-id='button1' data-dojo-type="dijit.form.Button">
+    <span data-dojo-id='button1'>
         Filter
     </span>
 
-    <span data-dojo-id='button2' data-dojo-type="dijit.form.Button">
+    <span data-dojo-id='button2'>
         Show all
     </span>
     </p>
@@ -876,7 +882,8 @@ To use it, you just have to override default behavior by yours.
 
 
 .. code-example ::
- 
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
         require(['dojo/_base/lang', 'dojox/grid/DataGrid', 'dojo/data/ItemFileWriteStore', 'dojo/dom', 'dojo/domReady!'],
@@ -962,6 +969,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 .. code-example ::
   :width: 400
   :height: 300
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -1025,6 +1033,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 .. code-example ::
   :width: 400
   :height: 300
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -1083,9 +1092,9 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
 
 .. code-example::
-  :toolbar: themes, versions, dir
   :width: 400
   :height: 300
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -1152,9 +1161,9 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
 
 .. code-example::
-  :toolbar: themes, versions, dir
   :width: 400
   :height: 300
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -1223,6 +1232,7 @@ _`Inserting a dijit widget (Button) in a field`
 .. code-example ::
   :width: 400
   :height: 300
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

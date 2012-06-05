@@ -49,6 +49,7 @@ Examples
 The following code gets the ``innerHTML`` property of a DOM node.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -94,6 +95,7 @@ Examples
 Using ``set()`` to set the value of ``innerHTML`` on a node:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -112,6 +114,7 @@ Using ``set()`` to set the value of ``innerHTML`` on a node:
 Using ``set()`` to set multiple values in the same call:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

@@ -132,6 +132,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves some JSON from the server and then outputs the data that is returned.
 
@@ -156,6 +157,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example intentionally attempts to retrieve a resource that doesn't exist in order to demonstrate how the error
   handling works.
@@ -181,6 +183,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   The following example demonstrates how to have the provider automatically post a form.
 

@@ -118,6 +118,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves a resource from the server and then outputs the results that are returned.
 

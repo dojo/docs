@@ -93,6 +93,7 @@ complete.
 call our server, as in the following example:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

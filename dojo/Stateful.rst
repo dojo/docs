@@ -209,6 +209,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   And example of basic attribute getting, setting and watching.
 
@@ -253,6 +254,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   An example that uses custom accessors.
 
@@ -290,8 +292,9 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
-  An example of a property that is not set immediatly when ``.set()`` is called, but after 500ms, which means the
+  An example of a property that is not set immediately when ``.set()`` is called, but after 500ms, which means the
   ``.watch()`` callback will not be called until the property is actually set.
 
   .. js ::

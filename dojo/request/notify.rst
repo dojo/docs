@@ -71,7 +71,7 @@ Examples
 ========
 
 .. code-example ::
-  :djConfig: async: true
+  :djConfig: async: true, parseOnLoad: false
 
   This example subscribes to all the topics supported and then makes a request to retrieve some JSON and displays the
   results.

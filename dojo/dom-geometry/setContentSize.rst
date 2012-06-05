@@ -43,6 +43,7 @@ Examples
 ========
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   This example changes the size of the example node to 300px wide by 300px tall.
 

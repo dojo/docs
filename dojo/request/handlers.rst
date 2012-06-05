@@ -68,6 +68,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves a JSON resource, which is set to be handled as ``json`` and outputs the ``response.data``,
   which will be a JavaScript object that has been converted from the JSON.
@@ -93,6 +94,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves an XML resource, which is set to be handled as ``xml`` and outputs the ``response.data``, which
   will be a JavaScript object that has been converted from the XML.
@@ -118,6 +120,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves an JavaScript resource, which is set to be handled as ``javascript`` and outputs the
   ``response.data``, which will be a JavaScript object that was retrieved. Any retrieved JavaScript is ``eval()``\ed in
@@ -144,6 +147,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example registers a custom handler and requests a resource that will be handled by the custom handler.
 

@@ -54,7 +54,8 @@ Examples
 This example uses ``fieldToObject()`` to get field values.
 
 .. code-example ::
-  
+  :djConfig: async: true, parseOnLoad: false
+
   Here is the JavaScript required, which also uses the ``dojo/dom`` and ``dojo/on`` modules to facilitate the example.
   
   .. js ::
@@ -123,7 +124,8 @@ Examples
 This example creates an object version of a form.
 
 .. code-example::
-  
+  :djConfig: async: true, parseOnLoad: false
+
   This code requires the ``dojo/json`` module in order to output the object in a human readable fashion.
 
   .. js ::
@@ -196,6 +198,7 @@ Examples
 This example uses ``toQuery()`` to create an query string version of a form.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Here is the JavaScript code:
 
@@ -266,7 +269,8 @@ Examples
 This example uses ``formToJson()`` to create an JSON version of a form.
 
 .. code-example ::
-  
+  :djConfig: async: true, parseOnLoad: false
+
   .. js ::
 
     require(["dojo/dom-form", "dojo/dom", "dojo/on", "dojo/domReady!"],

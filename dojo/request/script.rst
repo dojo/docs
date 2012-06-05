@@ -93,6 +93,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example retrieves some JSONP from a webserver and returns the response in the ``data`` property.
 

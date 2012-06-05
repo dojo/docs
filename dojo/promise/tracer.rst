@@ -55,6 +55,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   In this example, we create an async process which automatically turns on its own trace. Then we set our response to
   events on the tracer and then we start the process.

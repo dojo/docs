@@ -308,6 +308,7 @@ Example 1:  Fade in a dom node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -337,6 +338,7 @@ Example 2:  Fade in a dom node with a custom duration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -368,6 +370,7 @@ Example 3:  Fade in a dom node with an easing function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -418,6 +421,7 @@ Example 1:  Fade out a dom node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -443,6 +447,7 @@ Example 2:  Fade out a dom node with a custom duration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -469,6 +474,7 @@ Example 3:  Fade out a dom node with an easing function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

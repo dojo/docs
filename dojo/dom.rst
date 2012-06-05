@@ -113,6 +113,7 @@ Examples
 The following example lets a node by id disappear from the screen.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example uses some of the basic libraries of ``dojo/on`` and ``dojo/_base/fx`` in addition to ``dojo/dom``.
   
@@ -178,6 +179,7 @@ Examples
 ~~~~~~~~
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Code that checks if two nodes are descended from a third.
 
@@ -239,6 +241,7 @@ Examples
 An example of how to set a node to selectable or not.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Code using ``dojo/on`` to set the click handlers of two buttons to allow the ability to turn selectable on and off.
 

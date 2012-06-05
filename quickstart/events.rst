@@ -465,6 +465,7 @@ Note that since dijit widgets leverage :ref:`dijit/_OnDijitClickMixin <dijit/_On
 keyboard "click" events (i.e using the space or enter key) are also emitted as DOMNode click events.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
     .. js ::
 
@@ -491,6 +492,7 @@ Note that there's a separate event type for each attribute; in this example a ch
 attribute generates an event of type "attrmodified-open".
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: true
 
     .. js ::
 

@@ -58,6 +58,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example demonstrates simulating 3 service requests and then acting on the first one to return.
 
@@ -106,6 +107,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example is essentially the same as above, but passes an Object as a parameter to ``dojo/promise/first``.
 

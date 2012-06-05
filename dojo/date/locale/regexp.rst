@@ -42,6 +42,7 @@ options   dojo/date/locale::__FormatOptions? *Optional* Uses the format options 
 The function returns a String.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

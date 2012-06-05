@@ -10,6 +10,7 @@ Examples
 The following example prints out the monetary data (places and round) for EUR (Euro):
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

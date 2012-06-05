@@ -354,6 +354,7 @@ Example
 -------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

@@ -102,6 +102,7 @@ Examples
 ========
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example provides a basic usage of Deferred, where we are creating an async process via the ``setTimeout``
   function.
@@ -138,6 +139,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example shows how ``.then()`` can be chained.
 
@@ -176,6 +178,7 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example shows how ``.progress()`` and ``.reject()`` are used. You can see that while the `.resolve()` gets
   called, because the promise will already be fullfilled (by being rejected), the callback is never called.
@@ -223,8 +226,9 @@ Examples
     <button type="button" id="startButton">Start</button>
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
-  In this example, we have implimented the ability to ``.cancel()`` a Deferred.
+  In this example, we have implemented the ability to ``.cancel()`` a Deferred.
 
   .. js ::
 

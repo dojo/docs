@@ -67,6 +67,7 @@ Example 1: Using objectToQuery() to create a query string and assign it to a URI
 --------------------------------------------------------------------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -101,6 +102,7 @@ Example 2: Using queryToObject to create a JavaScript form of a query
 ---------------------------------------------------------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -131,6 +133,7 @@ Example 3: Using queryToObject and objectToQuery to alter query strings
 -----------------------------------------------------------------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 

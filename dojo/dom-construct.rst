@@ -52,6 +52,7 @@ Examples
 This example adds a row to a table.  This is somewhat contrived, since ``place()`` will handle the conversion of HTML fragments itself.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example uses ``dojo/dom`` and ``dojo/on`` as well.
   
@@ -152,6 +153,7 @@ This two options position the node in the reference node's parent children list.
 the reference node, and "after" places the node right after the reference node.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -198,6 +200,7 @@ Place "replace"
 "replace" replaces the reference node with the node.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -243,6 +246,7 @@ These three options position the node as a child of the reference node. "first" 
 If no position is specified, or position is not recognized, "last" is assumed as the default.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -294,6 +298,7 @@ appended to the reference node making it the last child. If the number is less t
 position 0 making it the first child of the reference node.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
@@ -560,6 +565,7 @@ Empty a single node
 The following example shows the basic functionality of ``empty()``:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   Empty a DomNode by the node ID
    
@@ -589,6 +595,7 @@ The following example uses :ref:`dojo/query <dojo/query>` to retrieve a set of n
 applying ``empty()``.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   Empty all Nodes in a list who have the CSS class ``red``.
   
@@ -669,11 +676,12 @@ Examples
 Destroy a single node
 '''''''''''''''''''''
 
-The following example shows the basic functionality of ``destory()``:
+The following example shows the basic functionality of ``Destroy()``:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
-  Destory a DomNode by the node ID
+  Destroy a DomNode by the node ID
    
   .. js ::
 
@@ -690,7 +698,7 @@ The following example shows the basic functionality of ``destory()``:
   .. html ::
     
     <div id="testnode1">TestNode 1</div>
-    <button id="progButtonNode" type="button">Destory TestNode1</button>
+    <button id="progButtonNode" type="button">Destroy TestNode1</button>
     <div id="result1"></div>
 
 
@@ -698,11 +706,12 @@ Destroy all nodes in a list by reference
 ''''''''''''''''''''''''''''''''''''''''
 
 The following example uses :ref:`dojo/query <dojo/query>` to retrieve a set of nodes and iterates over the list,
-applying ``destory()``.
+applying ``Destroy()``.
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
-  Destory all Nodes in a list who have the CSS class ``red``.
+  Destroy all Nodes in a list who have the CSS class ``red``.
   
   .. js ::
 

@@ -56,7 +56,7 @@ Programmatic example
 In this example using euros with German formatting, the invalid message contains a custom formatted example value.
 
 .. code-example ::
-  :djConfig: async: true
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
     require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"

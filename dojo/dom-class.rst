@@ -50,6 +50,7 @@ Examples
 A basic example of checking a node to see if it contains a CSS class.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   This example uses ``dojo/dom`` as well.
   
@@ -118,6 +119,7 @@ Examples
 Here is an example of how to add a class to a node:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   Here is the CSS class that will be applied to the node.
 
@@ -180,6 +182,7 @@ Remove a class
 The following example removes the class "style1" from the node "example1":
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -206,6 +209,7 @@ Remove several classes as a string
 The following example removes two classes: "style1" and "style2" from the node "example1":
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -233,6 +237,7 @@ Remove several classes as an array
 The following example removes two classes: "style1" and "style2" from the node "example1":
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -259,6 +264,7 @@ Remove all classes
 The following example removes all classes from the node "example1":
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -286,6 +292,7 @@ Remove from multiple nodes
 This feature is exposed as ``removeClass`` for :ref:`NodeLists <dojo/NodeList>`, so that it's also possible to remove classes for multiple nodes. The following example removes the class for each node in the NodeList returned from a ``query()``:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -344,6 +351,7 @@ Examples
 The following example removes the class "oldStyle" from the node "example" and replaces it with "newStyle":
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -401,6 +409,7 @@ The following example adds the class "style1" to the node "example1", if there i
 it, if there is already such a class:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -428,6 +437,7 @@ The following example adds the class "style2" to the node "example2", no matter 
 this node or not:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
@@ -456,6 +466,7 @@ the class for multiple nodes. The following example toggles the class for each n
 ``query()``:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. css ::
 
