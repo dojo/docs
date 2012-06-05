@@ -735,7 +735,7 @@ See `Treemap Reference Guide <https://github.com/cjolif/dojo-treemap/wiki/treema
 
 
 Mobile
-======
+------
 
 New Widgets
 ~~~~~~~~~~~
