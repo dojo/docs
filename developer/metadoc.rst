@@ -116,9 +116,9 @@ Linking to other internal pages uses `ref`
 
     ::
 
-        :ref:`Jump to Somewhere! <somewhere/else>`
+        :ref:`Jump to Dijit! <dijit/index>`
 
-This would become: :ref:`Jump to Dijit! <somewhere/else>`
+This would become: :ref:`Jump to Dijit! <dijit/index>`
 
 Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word
 
