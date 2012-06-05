@@ -717,7 +717,7 @@ Calendar
 
 A new Calendar component is introduced in dojox.calendar package. It displays events from a data store along time using
 widespread representation and allows to interactively edit the position in time and duration of these events.
-See `Calendar reference guide <http://livedocs.dojotoolkit.org/dojox/calendar>`_. 
+See :ref:`Calendar reference guide <dojox/calendar>`. 
 
 Gauges
 ------
@@ -725,13 +725,13 @@ Gauges
 A new gauges package is introduced in dojox.dgauges package. It provides a fully extensible gauges framework allowing
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
-See `Gauge Framework Reference Guide <http://livedocs.dojotoolkit.org/dojox/dgauges'_.
+See :ref:`Gauge Framework Reference Guide <dojox/dgauges>'.
 
 Treemap
 -------
 
 A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
-See `Treemap Reference Guide <http://livedocs.dojotoolkit.org/dojox/treemap'_.
+See :ref:`Treemap Reference Guide <dojox/treemap>'.
 
 
 Mobile
