@@ -383,7 +383,7 @@ Follow these instructions to setup on mac or another UNIX box:
 
 1. Clone `rstwiki` somewhere
 
-    .. code :: shell
+    ::
 
         $ cd ~/
         $ git clone git@github.com:phiggins42/rstwiki.git
@@ -392,13 +392,13 @@ Follow these instructions to setup on mac or another UNIX box:
 
 2. Install required python things (tested w/ Python 2.6 & 2.7)
 
-    .. code :: shell
+    ::
 
         $ easy_install cheetah cherrypy docutils pygments gitdb==0.5.2 gitpython
 
 3. Update submodules / dojo
 
-    .. code :: shell
+    ::
 
         $ cd rstwiki
         $ git submodule init && git submodule update
@@ -408,21 +408,21 @@ Follow these instructions to setup on mac or another UNIX box:
     Copy local.sample.conf to wiki.conf.   Edit and adjust paths.
     For this example, we'll set wiki.root to point to a dojodocs git clone, eg:
 
-    .. code :: script
+    ::
 
         [wiki]
         root = "/home/me/rstwiki/dojodocs"
 
 5. Clone the "Dojo Docs" repository into that path
 
-    .. code :: shell
+    ::
 
         $ cd ~/rstwiki
         $ git clone git@github.com:dojo/docs.git dojodocs
 
 6. Run rstwiki
 
-    .. code :: shell
+    ::
 
         $ export LC_CTYPE=""
         $ mkdir /tmp/rstwiki_sessions
@@ -440,13 +440,13 @@ Follow the general instructions above, but with these changes/notes:
   - The %TMP% directory is not used for rstwiki_sessions. It seems to be hardcoded to c:\\tmp so you need to create c:\\tmp\\rstwiki_sessions
   - I had to modify wiki.py to change
 
-    .. code :: python
+    ::
 
         sys.path.append(os.path.join(os.path.dirname(__file__), "_templates", "templates"))
 
     to
 
-    .. code :: python
+    ::
 
        sys.path.append(os.path.join(os.path.dirname(__file__), "templates"))
 
@@ -455,7 +455,7 @@ Updating Dojo Toolkit in rstwiki
 
 rstwiki has a checkout of the dojotoolkit from our github repo, managed as submodules. You can occasionally update this by calling:
 
-.. code :: shell
+::
 
     $ cd ~/rstwiki
     $ git submodule foreach git pull origin master
@@ -474,7 +474,7 @@ Exporting the doc
 
 To create the HTML version of the documentation from the RST files, do
 
-.. code :: shell
+::
 
   $ cd rstwiki/export
   $ export LC_CTYPE=""
@@ -482,7 +482,7 @@ To create the HTML version of the documentation from the RST files, do
 
 If your documentation is in a non-standard place, first edit the makefile.   Search for "dojodocs" and replace it with the proper path.   Then:
 
-.. code :: shell
+::
 
   $ make data html
 
@@ -498,13 +498,13 @@ Normally in git you merge from the version branch (ex: 1.7) into the master (aka
 
 So these are instructions about how to copy relevant changes from the master (aka trunk) into a version branch.   They assume a local clone of the github docs repository, created by:
 
-.. code :: shell
+::
 
     $ git clone git@github.com:dojo/docs
 
 First, get the latest doc on the trunk:
 
-.. code :: shell
+::
 
   $ cd [path to documentation]
   $ git pull
@@ -516,7 +516,7 @@ If the branch doesn't contain any branch-specific commits...
 
 Assuming that no changes have been made on the 1.7/ branch ever, other than copying commits from the trunk, the easiest way to "merge" trunk changes to the branch (according to http://stackoverflow.com/questions/1994463/how-to-cherry-pick-a-range-of-commits-and-merge-into-another-branch) is to do an interactive rebase:
 
-.. code :: shell
+::
 
   $ git checkout 1.7
   $ git rebase -i
@@ -527,7 +527,7 @@ Now, delete the lines for the commits that don't apply to the branch (i.e. new i
 
 You can call
 
-.. code :: shell
+::
 
    $ git log
 
@@ -535,7 +535,7 @@ to check that the right changes were merged, plus check the files themselves.
 
 Finally, push the branch changes on your local repository back to the master repository on github, and switch your local repository back to the trunk:
 
-.. code :: shell
+::
 
   $ git push
   $ git checkout master
@@ -545,7 +545,7 @@ If branch specific changes have already been made, or most trunk changes don't a
 
 If someone has directly changed the 1.7 branch, or at some point when most of the changes to trunk don't need to be back ported, then should switch to using the cherry-pick command to merge, which is something like
 
-.. code :: shell
+::
 
   $ git checkout 1.7
   $ git cherry-pick -x commit1
@@ -558,7 +558,7 @@ The -x flag is important to link the new commit with the old commit, for referen
 
 Starting with git 1.7.7.3 you can specify a range of commits to the cherry-pick command:
 
-.. code :: shell
+::
 
   $ git cherry-pick -x commit0..commit2
 
