@@ -1,4 +1,4 @@
-.. _dojo/config:
+.. _dojo/_base/config:
 
 ===============================
 dojo.config (dojo/_base/config)

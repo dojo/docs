@@ -33,7 +33,7 @@ Features
 
   Call functions when window.onunload fires
 
-* :ref:`dojo.deprecated <dojo/deprecated>`
+* :ref:`dojo.deprecated <dojo/_base/kernel#deprecated>`
 
   Log a debug message to indicate that a behavior has been deprecated
 

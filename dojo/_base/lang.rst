@@ -29,7 +29,7 @@ Simply pass _something_ to clone(), and a new version of that _something_ will b
     var newarray = lang.clone(["a", "b", "c"]);
   });
 
-Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is :ref:`byId <dom.byId>`, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
+Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node is :ref:`dojo/dom::byId <dojo/dom#byId>`, though consideration to change the id after cloning is required (id's are unique, and should be used as such)
 
 .. js ::
   
@@ -39,7 +39,7 @@ Often times, you want to clone a DOM Node. The easiest way to locate a DOM Node 
     attr.set(newnode, "id", "someNewId");
   });
 
-If you have a pointer to some node already, or want to avoid id's all together, :ref:`query() <query()>` may be useful:
+If you have a pointer to some node already, or want to avoid id's all together, :ref:`dojo/query() <dojo/query>` may be useful:
 
 .. js ::
   
@@ -223,7 +223,7 @@ getObject() also takes an optional boolean parameter which, if `true`, will crea
         */
      });
 
-You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is :ref:`global() <global()>`.
+You can also pass an object as the third parameter. This will define the context in which to search for the property. By default, the context is :ref:`dojo/_base/kernel::global <dojo/_base/kernel#global>`.
 
 .. js ::
  
@@ -377,7 +377,7 @@ The above example won't work. If we want to access this.foo, we need to have 'me
 
 mixin()
 =======
-mixin() is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. mixin() is very similar to :ref:`extend() <extend()>` but only works on objects, whereas extend explicitly extends an object.prototype. Merging two objects
+mixin() is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. mixin() is very similar to ``extend()`` but only works on objects, whereas extend explicitly extends an object.prototype. Merging two objects
 
 
 Simple Mixes
@@ -417,7 +417,7 @@ Mixin modifies the first object in the list, mixing in second object. If you wis
     var newObject = lang.mixin(lang.clone(a), b);
   });
 
-Here, the return from :ref:`clone() <clone()>` is a new object, then b is mixed in.
+Here, the return from ``clone()`` is a new object, then b is mixed in.
 
 Alternately, you can pass an empty object as the first mix, and mix another object into it. You can then repeat this pattern as often as you'd like:
 
@@ -472,7 +472,7 @@ Now, that instance of the ContentPane as a Date object attached in the _timeCrea
 Mixing methods
 --------------
 
-If you want to mix in some methods into an instance using two previous techniques, be aware that :ref:`declare() <declare()>` decorates them, while ``mixin()`` does not, which may affect how ``this.inherited()`` works, if used in mixed-in methods. Use :ref:`safeMixin() <safeMixin()>`, which correctly handles all properties in ``declare()``-compatible way.
+If you want to mix in some methods into an instance using two previous techniques, be aware that :ref:`dojo/_base/declare() <dojo/_base/declare>` decorates them, while ``mixin()`` does not, which may affect how ``this.inherited()`` works, if used in mixed-in methods. Use ``safeMixin()``, which correctly handles all properties in ``declare()``-compatible way.
 
 partial()
 =========

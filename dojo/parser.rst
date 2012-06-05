@@ -69,7 +69,7 @@ To include the Dojo parser on your page, require the module ``dojo.parser``:
   });
 
 **Note:** While many examples historically don't expressly require the ``dojo/parser`` because it was required by
-:ref:`dijit.Templated <dijit/Templated>` and :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin`, it is always best to
+:ref:`dijit.Templated <dijit/_Templated>` and :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>`, it is always best to
 be explicit about requiring the parser.
 
 Running the Parser
