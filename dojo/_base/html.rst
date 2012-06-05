@@ -22,11 +22,11 @@ Features
 
   Returns the DOM node with the matching 'id.  Alias of ``dom.byId`` in ``dojo/dom``.
 
-* :ref:`dojo.isDescendant <dojo/isDescendant>`
+* dojo.isDescendant
 
   Determines whether a node is a descendant of another.  Alias of ``dom.isDescendant`` in ``dojo/dom``.
 
-* :ref:`dojo.setSelectable <dojo/setSelectable>`
+* dojo.setSelectable
 
   Enables or disables selection on a node.  Alias of ``dom.setSelectable`` in ``dojo/dom``.
 
@@ -94,23 +94,23 @@ Features
 
   Removes a node from its parent, clobbering it and all of its children.  Alias of ``domConstruct.destroy`` in ``dojo/dom-construct``.
 
-* :ref:`dojo.getPadExtents <dojo/getPadExtents>`
+* dojo.getPadExtents
 
   Returns object with special values specifically useful for node fitting.  Alias of ``domGeom.getPadExtents`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.getBorderExtents <dojo/getBorderExtents>`
+* dojo.getBorderExtents
 
   Returns an object with properties useful for noting the border dimensions.  Alias of ``domGeom.getBorderExtents`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.getPadBorderExtents <dojo/getPadBorderExtents>`
+* dojo.getPadBorderExtents
 
   Returns object with properties useful for box fitting with regards to padding.  Alias of ``domGeom.getPadBorderExtents`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.getMarginExtents <dojo/getMarginExtents>`
+* dojo.getMarginExtents
 
   Returns object with properties useful for box fitting with regards to box margins (i.e., the outer-box).  Alias of ``domGeom.getMarginExtents`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.getMarginSize <dojo/getMarginSize>`
+* dojo.getMarginSize
 
   Returns an object that encodes the width and height of the node's margin box.  Alias of ``domGeom.getMarginSize`` in ``dojo/dom-geometry``.
 
@@ -130,19 +130,19 @@ Features
 
   Sets the size of the node's contents, irrespective of margins, padding, or borders.  Alias of ``domGeom.setContentSize`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.isBodyLtr <dojo/isBodyLtr>`
+* dojo.isBodyLtr
 
   Returns true if the current language is left-to-right, and false otherwise.  Alias of ``domGeom.isBodyLtr`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.docScroll <dojo/docScroll>`
+* dojo.docScroll
 
   Returns an object with {node, x, y} with corresponding offsets.  Alias of ``domGeom.docScroll`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.getIeDocumentElementOffset <dojo/getIeDocumentElementOffset>`
+* dojo.getIeDocumentElementOffset
 
   Returns the offset in x and y from the document body to the visual edge of the page for IE.  Alias of ``domGeom.getIeDocumentElementOffset`` in ``dojo/dom-geometry``.
 
-* :ref:`dojo.fixIeBiDiScrollLeft <dojo/fixIeBiDiScrollLeft>`
+* dojo.fixIeBiDiScrollLeft
 
   In RTL direction, scrollLeft should be a negative value, but IE returns a positive one. All codes using documentElement.scrollLeft must call this function to fix this error, otherwise the position will offset to right when there is a horizontal scrollbar.  Alias of ``domGeom.fixIeBiDiScrollLeft`` in ``dojo/dom-geometry``.
 
@@ -186,7 +186,7 @@ Features
 
   Returns a `computed style` object.  Alias of ``domStyle.getComputedStyle`` in ``dojo/dom-style``.
 
-* :ref:`dojo.toPixelValue <dojo/toPixelValue>`
+* dojo.toPixelValue
 
   Converts style value to pixels on IE or return a numeric value.  Alias of ``domStyle.toPixelValue`` in ``dojo/dom-style``.
 
