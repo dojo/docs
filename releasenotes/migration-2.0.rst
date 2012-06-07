@@ -873,7 +873,7 @@ Points of caution:
   });
 
 
-2. query() can execute various selector engines.   By default it uses a light engine.   If you have complicated queries you need to switch it to use a more powerful engine.   See :ref:`<dojo/query>` for details
+2. query() can execute various selector engines.   By default it uses a light engine.   If you have complicated queries you need to switch it to use a more powerful engine.   See :ref:`dojo/query <dojo/query>` for details
 
 There are a couple of ways to set the selector engine. First, we can define the selector engine as part of the dojo configuration for the whole page:
 

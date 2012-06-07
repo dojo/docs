@@ -284,9 +284,9 @@ New plugins are available for the following features:
   * :ref:`Paste image inline  <dojox/editor/plugins/LocalImage>`
   * :ref:`Batch spell check  <dojox/editor/plugins/SpellCheck>`
   * :ref:`Recognize URL as a link  <dojox/editor/plugins/AutoUrlLink>`
-  * :ref:`Set color on table cells, row, columns (background)  <dojox/editor/plugins/ColorTableCell>`
+  * :ref:`Set color on table cells, row, columns (background)  <dojox/editor/plugins/TablePlugins>`
   * :ref:`Spell Check as You Type  <dojox/editor/plugins/SpellCheck>`
-  * :ref:`Size table column via drag  <dojox/editor/plugins/ResizeTableColumn>`
+  * :ref:`Size table column via drag  <dojox/editor/plugins/TablePlugins>`
 
 
 DataGrid

@@ -32,5 +32,5 @@ Archive
 
 Migration References
 ====================
-* :ref:`2.0 Migration Notes <releasenotes/migration-2.0>` (in progress)
+* :ref:`2.0 Migration Notes <releasenotes/migration20>` (in progress)
 
