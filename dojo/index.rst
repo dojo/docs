@@ -189,10 +189,6 @@ Accessibility                 :ref:`dojo/hccss <dojo/hccss>`                    
 Remote Procedure Calls        :ref:`dojo/rpc <dojo/rpc>`                             Ability to invoke remote procedure 
                                                                                      calls
 Miscellaneous                 :ref:`dojo/gears <dojo/gears>` [2]_
-                              
-                              :ref:`dojo/jaxer <dojo/jaxer>` [1]_
-                              
-                              :ref:`dojo/OpenAjax <dojo/OpenAjax>`
 ============================= ====================================================== ===================================
 
 .. [1] This package/module is *deprecated*
