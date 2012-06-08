@@ -37,7 +37,7 @@ When running on a non WebKit-based browser, dojox/mobile/compat automatically lo
 
 Note that, in Dojo 1.7, compat was divided into two pieces, compat.js and _compat.js. _compat.js includes all the implementation code, and compat.js is simply a loader of _compat.js. compat.js loads _compat.js only when the current browser is not WebKit-based. compat.js is such a tiny piece of code that it does not affect mobile performance even if it is in a build. This way, on WebKit-based browsers, performance does not degrade since _compat.js will never be loaded. On non-WebKit browsers, _compat.js is loaded automatically, and Dojo Mobile works in the compat mode.
 
-Also, note that, by default, compatibility CSS files are only loaded for CSS files located in a directory containing a "mobile/themes" path. For that, a matching is done using the default pattern "/\\/mobile\\/themes\\/.*\.css$/". If a custom theme is not located in a directory containing this path, the data-dojo-config needs to specify a custom pattern using the "mblLoadCompatPattern" configuration parameter, for instance:
+Also, note that, by default, compatibility CSS files are only loaded for CSS files located in a directory containing a "mobile/themes" path. For that, a matching is done using the default pattern "/\\/mobile\\/themes\\/.*\\.css$/". If a custom theme is not located in a directory containing this path, the data-dojo-config needs to specify a custom pattern using the "mblLoadCompatPattern" configuration parameter, for instance:
 
 .. js ::
 
