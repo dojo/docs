@@ -52,8 +52,16 @@ Putting a value
 
   .. js ::
 
-    var myObject={key1:true};
-    dojox.storage.put("myValue", myObject, function(status, keyName){
+    dojo.require("dojox.storage");
+    var storageProvider=null;
+    dojo.addOnLoad(function(){
+    	dojox.storage.manager.initialize();
+    	storageProvider=dojox.storage.manager.getProvider();
+        var myObject={key1:true};
+        storageProvider.put("myValue", myObject, function(status, keyName){
+        	alert("value put in "+keyName);
+        });
+    });
 
 Getting a value
 ---------------
@@ -62,6 +70,13 @@ Getting a value
 
   .. js ::
 
-    var myObject = dojox.storage.get("myValue");
-    alert(myValue.key1);
+    dojo.require("dojox.storage");
+    var storageProvider=null;
+    dojo.addOnLoad(function(){
+    	dojox.storage.manager.initialize();
+    	storageProvider=dojox.storage.manager.getProvider();
+        var myObject = dojox.storage.get("myValue");
+        alert(myValue.key1);
+    });
+
 
