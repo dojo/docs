@@ -57,6 +57,7 @@ Putting a value
     dojo.addOnLoad(function(){
     	dojox.storage.manager.initialize();
     	storageProvider=dojox.storage.manager.getProvider();
+    	storageProvider.initialize();
         var myObject={key1:true};
         storageProvider.put("myValue", myObject, function(status, keyName){
         	alert("value put in "+keyName);
@@ -75,6 +76,7 @@ Getting a value
     dojo.addOnLoad(function(){
     	dojox.storage.manager.initialize();
     	storageProvider=dojox.storage.manager.getProvider();
+    	storageProvider.initialize();
         var myObject = storageProvider.get("myValue");
         alert(myObject.key1);
     });
