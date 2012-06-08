@@ -100,22 +100,22 @@ Usage
 ``place()`` returns the node it placed. In case of an HTML fragment, if it has just one root element, that element is
 returned directly. Otherwise a document fragment is returned. The returned node can be:
 
-  - A regular DOM element node: ``nodeType`` is 1 for ``ELEMENT_NODE`` , example: ``<div>42</div>``.
+- A regular DOM element node: ``nodeType`` is 1 for ``ELEMENT_NODE`` , example: ``<div>42</div>``.
 
-    See `DOM Core Level 1: Element <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614>`_ for more
-    details.
+  See `DOM Core Level 1: Element <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614>`_ for more
+  details.
 
-  - A document fragment representing a group of nodes: ``nodeType`` is 11 for ``DOCUMENT_FRAGMENT``, example: ``<p>1st
-    paragraph</p><p>2nd paragraph</p>``.
+- A document fragment representing a group of nodes: ``nodeType`` is 11 for ``DOCUMENT_FRAGMENT``, example: ``<p>1st
+  paragraph</p><p>2nd paragraph</p>``.
 
-    See `DOM Core Level 1: DocumentFragment <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3>`_ for
-    more details.
+  See `DOM Core Level 1: DocumentFragment <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3>`_ for
+  more details.
 
-    The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods
-    can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
+  The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods
+  can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
 
-    Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other
-    familiar attributes of the element.
+  Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other
+  familiar attributes of the element.
 
 Attributes
 ~~~~~~~~~~
