@@ -179,7 +179,7 @@ Example 2: dojo.xhrPost call to send some text data
 Example 3: dojo.xhrPost call to send some JSON data
 ---------------------------------------------------
 
-To send JSON, encode the JSON in the ``postData`` attribute. This may seem counter-intuitive considering the ``content`` attribute takes a JSON object; the problem is that the object is parsed into POST key-value pairs. Thus postData should be used to send raw JSON, for instance to a REST service. 
+To send JSON, encode the JSON in the ``postData`` attribute. This may seem counter-intuitive considering the ``content`` attribute takes a JSON object; the problem is that the object is parsed into POST key-value pairs. Thus ``postData`` should be used to send raw JSON, for instance to a REST service. 
 
 .. code-example::
 
