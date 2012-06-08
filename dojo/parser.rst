@@ -105,6 +105,9 @@ To run the parser when your page loads, add a ``data-dojo-config="parseOnLoad: t
   <script type="text/javascript" src="dojo/dojo.js"
       data-dojo-config="parseOnLoad: true"></script>
 
+**Note:** again, don't forget to explicitly require ``dojo/parser`` in this case!
+See :ref:`the 1.7 release notes <releasenotes/1.7#parser>` for more details.
+
 Return Results
 --------------
 
