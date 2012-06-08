@@ -75,7 +75,7 @@ Getting a value
     dojo.addOnLoad(function(){
     	dojox.storage.manager.initialize();
     	storageProvider=dojox.storage.manager.getProvider();
-        var myObject = dojox.storage.get("myValue");
+        var myObject = storageProvider.get("myValue");
         alert(myObject.key1);
     });
 
