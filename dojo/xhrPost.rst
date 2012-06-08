@@ -176,6 +176,53 @@ Example 2: dojo.xhrPost call to send some text data
     <b>Result</b>
     <div id="response2"></div>
 
+Example 3: dojo.xhrPost call to send some JSON data
+---------------------------------------------------
+
+To send JSON, encode the JSON in the ``postData`` attribute. This may seem counter-intuitive considering the ``content`` attribute takes a JSON object, but the problem is that the object is parsed into POST key-value pairs. Thus postData should be used to send raw JSON, for instance to a REST service. 
+
+.. code-example::
+
+  .. js ::
+
+      dojo.require("dijit.form.Button");
+
+      function sendText(){
+        var button = dijit.byId("submitButton2");
+
+        dojo.connect(button, "onClick", function(event){
+          // The parameters to pass to xhrPost, the message, and the url to send it to
+          // Also, how to handle the return and callbacks.
+          var xhrArgs = {
+            url: "postIt",
+            postData: dojo.toJson({key1:"value1",key2:{key3:"value2"}}),
+            handleAs: "text",
+            load: function(data){
+              dojo.byId("response2").innerHTML = "Message posted.";
+            },
+            error: function(error){
+              // We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
+              // docs server.
+              dojo.byId("response2").innerHTML = "Message posted.";
+            }
+          }
+          dojo.byId("response2").innerHTML = "Message being sent..."
+          // Call the asynchronous xhrPost
+          var deferred = dojo.xhrPost(xhrArgs);
+        });
+      }
+      dojo.ready(sendText);
+
+  .. html ::
+
+    <b>Push the button to POST some JSON.</b>
+    <br>
+    <br>
+    <button data-dojo-type="dijit/form/Button" id="submitButton2">Send it!</button>
+    <br>
+    <br>
+    <b>Result</b>
+    <div id="response2"></div>
 See also
 ========
 
