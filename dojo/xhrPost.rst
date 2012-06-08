@@ -194,7 +194,7 @@ To send JSON, encode the JSON in the ``postData`` attribute. This may seem count
           // The parameters to pass to xhrPost, the message, and the url to send it to
           // Also, how to handle the return and callbacks.
           var xhrArgs = {
-            url: "postIt",
+            url: "{{baseUrl}}dojo/dojo.js",
             postData: dojo.toJson({key1:"value1",key2:{key3:"value2"}}),
             handleAs: "text",
             load: function(data){
