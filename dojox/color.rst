@@ -14,7 +14,7 @@ generating color palettes (``dojox.color.Palette``) as well as advanced colorspa
 :ref:`dojox.color.Palette <dojox/color/Palette>` will generate a set of colors based on a single color
 and a chosen color theory rule.
 
-:ref:`dojox.color.Colorspace <dojox/color/Colorspace>` provides a slew of functionality to convert
+``dojox.color.Colorspace`` provides a slew of functionality to convert
 colors to various advanced models (such as XYZ, xyY, Lab, Luv, LCHab) as well as working with
 various color profiles (such as Adobe RGB, ColorMatch RGB, NTSC, PAL and more).
 

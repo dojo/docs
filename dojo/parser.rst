@@ -69,7 +69,7 @@ To include the Dojo parser on your page, require the module ``dojo.parser``:
   });
 
 **Note:** While many examples historically don't expressly require the ``dojo/parser`` because it was required by
-:ref:`dijit.Templated <dijit/Templated>` and :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin`, it is always best to
+:ref:`dijit.Templated <dijit/_Templated>` and :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>`, it is always best to
 be explicit about requiring the parser.
 
 Running the Parser
@@ -104,6 +104,9 @@ To run the parser when your page loads, add a ``data-dojo-config="parseOnLoad: t
 
   <script type="text/javascript" src="dojo/dojo.js"
       data-dojo-config="parseOnLoad: true"></script>
+
+**Note:** again, don't forget to explicitly require ``dojo/parser`` in this case!
+See :ref:`the 1.7 release notes <releasenotes/1.7#parser>` for more details.
 
 Return Results
 --------------

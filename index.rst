@@ -49,8 +49,8 @@ Reference Guide Structure
 This guide not only covers of the main packages of the toolkit, it also provides a few other areas of reference
 information:
 
-* :ref:`Release Notes <releasenotes>` - The release notes for the Dojo Toolkit and a couple of other release related
+* :ref:`Release Notes <releasenotes/index>` - The release notes for the Dojo Toolkit and a couple of other release related
   transition notes.
 
-* :ref:`Developer Notes <developer>` - Several documents that are used to document Dojo contributor and committer
+* :ref:`Developer Notes <developer/index>` - Several documents that are used to document Dojo contributor and committer
   guidelines.

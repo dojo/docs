@@ -9,8 +9,8 @@ Dijit Overview
 
 **Dijit** is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires :ref:`Dojo Core <dojo/#dojo-core>` and :ref:`Dojo Base <dojo/_base>`.
 
-Each of the widgets and functionality provided by Dijit are described in the following sections, though the the
-:ref:`quickstart <quickstart>` guides and the `Tutorials <http://dojotoolkit.org/documentation/>`_ cover some basics.
+Each of the widgets and functionality provided by Dijit are described in the following sections, though the
+:ref:`Getting Started <quickstart/index>` guides and the `Tutorials <http://dojotoolkit.org/documentation/>`_ cover some basics.
 
 General Information
 ===================
@@ -19,7 +19,7 @@ General Information
 
 * :ref:`Themes and Theming <dijit/themes>`
 
-* :ref:`Accessibility (a11y) <dijit/a11y>`
+* :ref:`Accessibility (a11y) <dijit/a11y/index>`
 
   * :ref:`a11y Strategy <dijit/a11y/strategy>`
 
@@ -99,21 +99,18 @@ Tree Widgets
 ============
 * :ref:`dijit.Tree <dijit/Tree>`
 
-  * :ref:`Model <dijit/tree/Model>`
+  * :ref:`Model <dijit/tree/Model>` interface
 
-  * :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>`
+  * :ref:`ObjectStoreModel <dijit/tree/ObjectStoreModel>` plus legacy :ref:`TreeStoreModel <dijit/tree/TreeStoreModel>`
+    :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
 
-  * :ref:`ForestStoreModel <dijit/tree/ForestStoreModel>`
+  * :ref:`dijit/tree/dndSource <dijit/tree/dndSource>` **STUB**
 
-* :ref:`dijit/_tree <dijit/_tree/>` **STUB**
+  * :ref:`dijit/tree_dndContainer <dijit/tree/_dndContainer>` **STUB**
 
-  * :ref:`dijit._tree.dndSource <dijit/_tree/dndSource>` **STUB**
+  * :ref:`dijit/tree/_dndSelector <dijit/tree/_dndSelector>` **STUB**
 
-  * :ref:`dijit.tree._dndContainer <dijit/_tree/_dndContainer>` **STUB**
-
-  * :ref:`dijit.tree._dndSelector <dijit/_tree/_dndSelector>` **STUB**
-
-  * :ref:`dijit.tree.dndSource <dijit/tree/dndSource>` **STUB**
+  * :ref:`dijit/tree/dndSource <dijit/tree/dndSource>` **STUB**
 
 Miscellaneous Widgets
 =====================
@@ -145,7 +142,7 @@ Miscellaneous Widgets
 
 * :ref:`dijit.Toolbar <dijit/Toolbar>`
 
-* :ref:`dijit.ToolbarSeperator <dijit/ToolbarSeperator>` **STUB**
+* :ref:`dijit.ToolbarSeparator <dijit/ToolbarSeparator>` **STUB**
 
 * :ref:`dijit.Tooltip <dijit/Tooltip>`
 
@@ -296,8 +293,6 @@ Form Widgets and Handling
 
       Base class for form widgets with a value
 
-  * :ref:`dijit/form <dijit/form/>` **STUB**
-
     * :ref:`dijit.form._AutoCompleterMixin <dijit/form/_AutoCompleterMixin>` **STUB**
 
     * :ref:`dijit.form._ButtonMixin <dijit/form/_ButtonMixin>` **STUB**
@@ -318,9 +313,9 @@ Form Widgets and Handling
 
     * :ref:`dijit.form._ListBase <dijit/form/_ListBase>` **STUB**
 
-    * :ref:`dijit.form._ListMouseMixin <dijit/form/_ListMouseMixin` **STUB**
+    * :ref:`dijit.form._ListMouseMixin <dijit/form/_ListMouseMixin>` **STUB**
 
-    * :ref:`dijit.form._RadioButtonMixin <dijit/form/_RadioButtonMixin` **STUB**
+    * :ref:`dijit.form._RadioButtonMixin <dijit/form/_RadioButtonMixin>` **STUB**
 
     * :ref:`dijit.form._Spinner <dijit/form/_Spinner>` **STUB**
 
@@ -331,7 +326,7 @@ Form Widgets and Handling
 Layout
 ======
 
-* :ref:`dijit.layout <dijit/layout/>`
+* :ref:`dijit.layout <dijit/layout>`
 
   * :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>`
 
@@ -347,13 +342,13 @@ Layout
 
   * :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`
 
-* :ref:`dijit/layout/utils <dijit/layout/utils>` **STUB**
+  * :ref:`dijit/layout/utils <dijit/layout/utils>` **STUB**
 
-* :ref:`dijit.layout.ScrollingTabController <dijit/layout/ScrollingTabController>` **STUB**
+  * :ref:`dijit.layout.ScrollingTabController <dijit/layout/ScrollingTabController>` **STUB**
 
-* :ref:`dijit.layout.StackController <dijit/layout/StackController>` **STUB**
+  * :ref:`dijit.layout.StackController <dijit/layout/StackController>` **STUB**
 
-* :ref:`dijit.layout.TabController <dijit/layout/TabController>` **STUB**
+  * :ref:`dijit.layout.TabController <dijit/layout/TabController>` **STUB**
 
 Note about programmatic instantiation
 =====================================

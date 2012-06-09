@@ -170,6 +170,11 @@ However, you can specify a width on the select to force a fixed width.
 
 The above example also demonstrates using type="separator" to get dividing lines between groups of options.
 
+Setting Height
+--------------
+
+A ``maxHeight`` (integer) attribute is available to define maximum height of select popup. ``0`` means no max height. Starting with dojo 1.6.0 you can set it to ``-1`` to specify that height should be automatically computed based on available space available between the select and the bottom of the screen.
+
 Note about validation
 =====================
 

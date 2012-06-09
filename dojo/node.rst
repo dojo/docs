@@ -65,6 +65,6 @@ In ``lib/app/src.js``:
 See Also
 ========
 
-* :ref:`Dojo's Loader <loader>`
+* :ref:`Dojo's Loader <loader/index>`
 
 * `node.js <http://nodejs.org/>`_

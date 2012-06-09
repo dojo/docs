@@ -117,15 +117,15 @@ To set the default value for this example, specify the *value* attribute in the 
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/store/Memory"]);
+    require(["dojo/parser", "dijit/form/ComboBox", "dojo/store/Memory"]);
 
   .. html ::
 
     <div data-dojo-type="dojo/store/Memory"
         data-dojo-id="stateStore"
         data-dojo-props="data: [{id: 'y', name: 'yes'}, {id: 'n', name: 'no'}]"></div>
-    <input data-dojo-type="dijit/form/FilteringSelect"
-        value="y"
+    <input data-dojo-type="dijit/form/ComboBox"
+        value="yes"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
         id="stateInput" />

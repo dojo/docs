@@ -170,7 +170,7 @@ Module                                                                          
 :ref:`dojo/json <dojo/json>`                                                    json-parse
 
                                                                                 json-stringify
-:ref:`dojo/main <dojo/main>`                                                    dojo-config-require
+:ref:`dojo/_base/kernel <dojo/_base/kernel>`                                    dojo-config-require
 :ref:`dojo/mouse <dojo/mouse>`                                                  dom-quirks
 
                                                                                 events-mouseenter

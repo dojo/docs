@@ -470,7 +470,8 @@ Event processors
 Following event handlers are overloaded: ``onMouseDown``, ``onMouseUp``, and ``onMouseMove``. They are used to perform
 additional actions required by Source_.
 
-Following local events are defined by Source_, which are meant to be overridden or connected with :ref:`dojo/on <dojo/on>` or :ref:`dojo.connect() <dojo/connect>`:
+Following local events are defined by Source_, which are meant to be overridden or connected with
+:ref:`dojo/on <dojo/on>` or :ref:`dojo.connect() <dojo/_base/connect>`:
 
 ``onDrop(source, nodes, copy)``
   this method is called when DnD items is dropped in this target. The default implementation calls ``onDropExternal()`` 

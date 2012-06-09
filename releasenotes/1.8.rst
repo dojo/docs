@@ -717,6 +717,7 @@ Calendar
 
 A new Calendar component is introduced in dojox.calendar package. It displays events from a data store along time using
 widespread representation and allows to interactively edit the position in time and duration of these events.
+See :ref:`Calendar reference guide <dojox/calendar>`. 
 
 Gauges
 ------
@@ -724,11 +725,14 @@ Gauges
 A new gauges package is introduced in dojox.dgauges package. It provides a fully extensible gauges framework allowing
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
+See :ref:`Gauge Framework Reference Guide <dojox/dgauges>`.
 
 Treemap
 -------
 
 A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
+See :ref:`Treemap Reference Guide <dojox/treemap>`.
+
 
 Mobile
 ------
@@ -834,6 +838,16 @@ Mvc
 App
 ---
 
+Dojox.app framework now gives a clearer MVC structure by providing application controllers (dojox/app/Controller), 
+view objects (dojox/app/View) and integration with data model/binding (dojox/mvc).
+
+* dojox/app/view has been removed, use dojox/app/View to create the view instance and render view widget.
+* dojox/app/scene has been removed, dojox/app/View can have parent view and children views removing the need for a specific object.
+* dojox/app/bind has been removed, use dojox/mvc controllers which give the developer more fexibility.
+* dojox/app/Controller has been added to add more fexibility in controlling the application, several controllers are provided in dojox/app/controllers package: Load controller, Transition controller, Layout controller and History controller
+* dojox/app/widgets/Container has been added as a scrollable and layout widget.
+
+See :ref:`dojox/app <dojox/app>` for more information.
 
 Util
 ====

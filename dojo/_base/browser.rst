@@ -1,7 +1,7 @@
-.. _dojo/_base/broswer:
+.. _dojo/_base/browser:
 
 ==================
-dojo/_base/broswer
+dojo/_base/browser
 ==================
 
 :Authors: TODO Author 

@@ -192,7 +192,7 @@ The following code shows how to display a point at the New York location. A circ
    
     require(["dojo/ready", "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
               "dojox/geo/openlayers/GeometryFeature", "dojox/geo/openlayers/Point" ],
-         function(ready, Map, Gfxlayer, GeometryFeature, Point){
+         function(ready, Map, GfxLayer, GeometryFeature, Point){
   
       ready(function(){
         // create a map widget.

@@ -10,41 +10,75 @@ dojox.storage
 .. contents ::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+**NOTE**: dojox/storage has not yet been converted to the new AMD format. Loading it asynchronously is not advised.
 
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojox/storage provides persistent client-side storage. It unifies HTML5 local databases with emulators for older browsers under a common API.
 
+There are three parts to dojox/storage:
+ - **Implementations**: HTML5, Flash, even cookies
+ - **Provider**: API that abstracts implementations
+ - **dojox.storage.manager**: automatically selects the best implementation available and provides its corresponding Provider
 
 Usage
 =====
 
-TODO: how to use the component/class/method
+To use dojox/storage, load dojox/storage and get a provider like so:
 
-.. js ::
+.. code-example ::
+  .. js ::
 
-   // your code
+    dojo.require("dojox.storage");
+    var storageProvider=null;
+    dojo.addOnLoad(function(){
+    	dojox.storage.manager.initialize();
+    	storageProvider=dojox.storage.manager.getProvider();
+    });
 
+This will load everything that is needed to use the best available stock dojox/storage implementation.
 
 
 Examples
 ========
 
-Programmatic example
---------------------
+The dojox.storage Provider API is like a persistent version of a Java HashMap: you 'put' values into storage by assigning them a key, then 'get' them later by supplying the same key.
 
-TODO: example
+Putting a value
+---------------
 
-Declarative example
--------------------
+.. code-example ::
 
-TODO: example
+  .. js ::
+
+    dojo.require("dojox.storage");
+    var storageProvider=null;
+    dojo.addOnLoad(function(){
+    	dojox.storage.manager.initialize();
+    	storageProvider=dojox.storage.manager.getProvider();
+    	storageProvider.initialize();
+        var myObject={key1:true};
+        storageProvider.put("myValue", myObject, function(status, keyName){
+        	alert("value put in "+keyName);
+        });
+    });
+
+Getting a value
+---------------
+
+.. code-example ::
+
+  .. js ::
+
+    dojo.require("dojox.storage");
+    var storageProvider=null;
+    dojo.addOnLoad(function(){
+    	dojox.storage.manager.initialize();
+    	storageProvider=dojox.storage.manager.getProvider();
+    	storageProvider.initialize();
+        var myObject = storageProvider.get("myValue");
+        alert(myObject.key1);
+    });
 
 
-See also
-========
-
-* TODO: links to other related articles

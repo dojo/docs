@@ -68,15 +68,18 @@ Tags
 Tags are used to help the documentation tool group things by purpose and to provide other modifiers that the language doesn't necessarily provide (public, private, protected, etc.). Most tags are ad-hoc, which is to say you can invent your own, but several are pre-defined and used throughout Dojo code. Most UIs that show documentation understand at least public, private, protected, callback, and extension.
 Methods are assumed to be public, but are considered protected by default if they start with a _prefix. This means that the only time you'd use protected is if you don't want someone to use a function without a _prefix, and the only time you'd use private is if you don't want someone to touch your method at all.
 
-* **protected**: The method can be called or overridden by subclasses but should not be accessed (directly) by a user. For example:
+General tags
+------------
+
+* **protected**: The method or property can be called or overridden by subclasses but should not be accessed (directly) by a user. For example:
 
     .. js ::
 
         postCreate: function(){
                 // summary:
-                //            Called after a widget's dom has been setup
+                //      Called after a widget's dom has been setup
                 // tags:
-                //            protected
+                //      protected
         },
 
 * **private**: The method or property is not intended for use by anything other than the class itself. For example:
@@ -85,33 +88,44 @@ Methods are assumed to be public, but are considered protected by default if the
 
         _attrToDom: function(/*String*/ attr, /*String*/  value){
                 // summary:
-                //            Reflect a widget attribute (title, tabIndex, duration etc.) to
-                //            the widget DOM, as specified in attributeMap.
+                //      Reflect a widget attribute (title, tabIndex, duration etc.) to
+                //      the widget DOM, as specified in attributeMap.
                 // tags:
-                //            private
+                //      private
                 ...
         }
 
-* **multiple tags**: Multiple tags can separated by spaces:
+* **readonly**: The property should only be read, not set (during new MyClass() call or via set("prop", ...) API). For example:
 
     .. js ::
 
-        parse: function(/*Node*/ node){
-                // summary:
-                //            Parse things.
-                // tags:
-                //            protected extension
-                ...
-        }
+            // hovering: [readonly] Boolean
+            //		True if cursor is over this widget
+            hovering: false,
 
-A Note
-------
+* **const**: The property can only be set during construction, not changed via set("prop", ...). For example:
 
-The current API tools (for displaying the documentation) not only assumes that any variable beginning with a _prefix is considered private, but also assumes that any method beginning with the phrase "on" is an event handler (i.e. onFoo, onClick, onmouseover).
+    .. js ::
 
+        // palette: [const] String
+        //		Size of grid, either "7x10" or "3x4".
+        palette: "7x10",
+
+* **deprecated**: The property or method's use is discouraged; it will be removed in a future release. For example:
+
+    .. js ::
+
+        setAttribute: function(/*String*/ attr, /*anything*/ value){
+            // summary:
+            //		Deprecated.  Use set() instead.
+            // tags:
+            //		deprecated
+            kernel.deprecated(this.declaredClass+"::setAttribute(attr, value) is deprecated. Use set() instead.", "", "2.0");
+            this.set(attr, value);
+        },
 
 Method-Specific Tags
-====================
+--------------------
 
 * **callback**: This method represents a location that a user can connect to (i.e. using dojo.connect) to receive notification that some event happened, such as a user clicking a button or an animation completing. For example:
 
@@ -120,28 +134,57 @@ Method-Specific Tags
 
         onClick: function(){
             // summary:
-            //            Called when the user clicks the widget
+            //      Called when the user clicks the widget
             // tags:
-            //            callback
+            //      callback
             ...
         }
 
 * **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar:
 
-.. js ::
+    .. js ::
 
-    isDisabledDate: function(date){
-        // summary:
-        //            Return true if the specified date should be disabled (i.e. grayed
-        //            out and unclickable)
-        // description:
-        //            Override this method to define special days to gray out, such as
-        //            weekends or (for an airline) black-out days when discount fares
-        //            aren't available.
-        // tags:
-        //            extension
-        ...
-    }
+        isDisabledDate: function(date){
+            // summary:
+            //      Return true if the specified date should be disabled (i.e. grayed
+            //      out and unclickable)
+            // description:
+            //      Override this method to define special days to gray out, such as
+            //      weekends or (for an airline) black-out days when discount fares
+            //      aren't available.
+            // tags:
+            //      extension
+            ...
+        }
+
+Multiple Tags
+-------------
+Multiple tags can separated by spaces:
+
+    .. js ::
+
+        parse: function(/*Node*/ node){
+                // summary:
+                //      Parse things.
+                // tags:
+                //      protected extension
+                ...
+        }
+
+or
+    .. js ::
+
+        // templatePath: [protected deprecated] String
+        //		Path to template (HTML file) for this widget relative to dojo.baseUrl.
+        //		Deprecated: use templateString with require([... "dojo/text!..."], ...) instead
+        templatePath: null,
+
+A Note
+------
+
+The current API tools (for displaying the documentation) not only assumes that any variable beginning with a _prefix is considered private, but also assumes that any method beginning with the phrase "on" is an event handler (i.e. onFoo, onClick, onmouseover).
+
+
 
 General Function Information
 ============================
@@ -150,14 +193,14 @@ General Function Information
 
     Foo = function(){
       // summary:
-      //        Soon we will have enough treasure to rule all of New Jersey.
+      //      Soon we will have enough treasure to rule all of New Jersey.
       // description:
-      //        Or we could just get a new roommate. Look, you go find him. He
-      //        don't yell at you.  All I ever try to do is make him smile and sing
-      //        around him and dance around him and he just lays into me. He told
-      //        me to get in the freezer 'cause there was a carnival in there.
+      //      Or we could just get a new roommate. Look, you go find him. He
+      //      don't yell at you.  All I ever try to do is make him smile and sing
+      //      around him and dance around him and he just lays into me. He told
+      //      me to get in the freezer 'cause there was a carnival in there.
       // returns:
-      //        Look, a Bananarama tape!
+      //      Look, a Bananarama tape!
     }
 
 
@@ -170,13 +213,13 @@ Has no description of what it returns
 
     var mcChris = {
       // summary:
-      //        Dingle, engage the rainbow machine!
+      //      Dingle, engage the rainbow machine!
       // description:
-      //        Tell you what, I wish I was--oh my g--that beam,
-      //        coming up like that, the speed, you might wanna adjust that.
-      //        It really did a number on my back, there. I mean, and I don't
-      //        wanna say whiplash, just yet, cause that's a little too far,
-      //        but, you're insured, right?
+      //      Tell you what, I wish I was--oh my g--that beam,
+      //      coming up like that, the speed, you might wanna adjust that.
+      //      It really did a number on my back, there. I mean, and I don't
+      //      wanna say whiplash, just yet, cause that's a little too far,
+      //      but, you're insured, right?
     }
 
 Function Assembler Information (declare)
@@ -239,9 +282,9 @@ If you want to also add a summary, you can do so in the initial comment block. I
 
     function(foo, bar){
         // foo: String
-        //        used for being the first parameter
+        //      used for being the first parameter
         // bar: int
-        //        used for being the second parameter
+        //      used for being the second parameter
     }
 
 
@@ -255,9 +298,9 @@ Instance variables, prototype variables and external variables can all be define
     function Foo(){
         // myString: String
         // times: int
-        //        How many times to print myString
+        //      How many times to print myString
         // separator: String
-        //        What to print out in between myString*
+        //      What to print out in between myString*
         this.myString = "placeholder text";
         this.times = 5;
     }
@@ -283,7 +326,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
     .. js ::
 
       // label: [deprecated readonly] String
-      //        A label thingie
+      //      A label thingie
       label: ""
 
 * **const**: A widget attribute that can be used for configuration, but can only have its value assigned during initialization. This means that changing this value on a widget instance (even with the attr method) will be a no-op.
@@ -291,7 +334,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
     .. js ::
 
         // id: [const] String
-        //        A unique, opaque ID string that can be assigned by users...
+        //      A unique, opaque ID string that can be assigned by users...
         id: ""
 
 * **readonly**: This property is intended to be read and cannot be specified during initialization, or changed after initialization.
@@ -299,7 +342,7 @@ Variables can be tagged by placing them in a whitespace-separated format before 
     .. js ::
 
         // domNode: [readonly] DomNode
-        //        This is our visible representation of the widget...
+        //      This is our visible representation of the widget...
         domNode: null
 
 
@@ -313,10 +356,10 @@ The parser takes the comments in between object values and applies the same rule
 
     {
       // key: String
-      //        A simple value
+      //      A simple value
       key: "value",
       // key2: String
-      //        Another simple value
+      //      Another simple value
     }
 
 Return Value
@@ -367,14 +410,14 @@ The parser simply replaces the ``/*=====`` and ``=====*/`` with whitespace at th
     dojo.mixin(wwwizard, {
     /*=====
       // url: String
-      //        The location of the file
+      //      The location of the file
       url: "",
       // mimeType: String
-      //        text/html, text/xml, etc
+      //      text/html, text/xml, etc
       mimeType: "",
     =====*/
       // somethingElse: Boolean
-      //        Put something else here
+      //      Put something else here
       somethingElse: "eskimo"
     });
 
@@ -395,9 +438,9 @@ A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe h
     dojo.provide("module._arg");
     module._arg.myFuncArgs = function(/*Object*/ kwArgs){
         // url: String
-        //        Location of the thing to use
+        //      Location of the thing to use
         // mimeType: String
-        //        Mimetype to return data as
+        //      Mimetype to return data as
         this.url = kwArgs.url;
         this.mimeType = kwArgs.mimeType;
     }

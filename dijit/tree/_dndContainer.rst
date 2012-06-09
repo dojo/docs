@@ -1,4 +1,4 @@
-.. _dijit/tree/_dndContianer:
+.. _dijit/tree/_dndContainer:
 
 ========================
 dijit.tree._dndContainer

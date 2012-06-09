@@ -1,4 +1,4 @@
-.. _dojo/index:
+.. _dojo/dojo:
 
 =========
 dojo/dojo

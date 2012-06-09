@@ -74,7 +74,9 @@ Programmatic example
 
 Create the LightboxNano on an <img> element:
 
-.. js ::
+.. code-example ::
+
+  .. js ::
   
       dojo.require("dojox.image.LightboxNano");
     
@@ -84,13 +86,15 @@ Create the LightboxNano on an <img> element:
           }, "myImg");
       });
 
-.. html ::
+  .. html ::
 
       <img id="myImg" src="/path/to/small/image.jpg">
 
 Create the LightboxNano on an <a> element:
 
-.. js ::
+.. code-example ::
+
+  .. js ::
 
       dojo.require("dojox.image.LightboxNano");
 
@@ -98,7 +102,7 @@ Create the LightboxNano on an <a> element:
           new dojox.image.LightboxNano({}, "myLink");
       });
 
-.. html ::
+  .. html ::
 
       <a id="myLink" href="/path/to/large/image.jpg">
           <img src="/path/to/small/image.jpg">
@@ -109,12 +113,14 @@ Declarative example
 
 Standard way to declaratively create the LightboxNano
 
-.. js ::
+.. code-example ::
+
+  .. js ::
 
      dojo.require("dojox.image.LightboxNano");
      dojo.require("dojo.parser");
 
-.. html ::
+  .. html ::
 
      <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
          <img src="/path/to/small/image.jpg">
@@ -122,12 +128,14 @@ Standard way to declaratively create the LightboxNano
 
 Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
-.. js ::
+.. code-example ::
+
+  .. js ::
 
      dojo.require("dojox.image.LightboxNano");
      dojo.require("dojo.parser");
 
-.. html ::
+  .. html ::
 
      <a data-dojo-type="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
          <img src="/path/to/small/image.jpg">
@@ -163,7 +171,7 @@ Dojo 1.6 introduced the use of data-dojo-type instead of data-dojo-type, and cha
 
 .. html ::
   
- <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
+ <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
      <img src="/path/to/small/image.jpg">
  </a>
  

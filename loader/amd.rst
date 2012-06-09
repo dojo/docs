@@ -1433,6 +1433,9 @@ cacheBust (boolean)
 deps (array of module identifier strings) / callback (function)
   These configuration variables are only applicable before the loader has been loaded. When provided, they cause the loader to execute ``require(deps, callback)`` once it has finished loading.
 
+stripStrict (boolean)
+  This flag will strip the "use strict" strict directive out of modules. This can be enabled if you need to access the call stack through arguments.callee.caller, but generally it should be disabled (it is disabled by default). This feature only works in sync mode.
+
 Default Configuration
 ---------------------
 
