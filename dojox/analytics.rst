@@ -74,7 +74,7 @@ Base
 ----
  * sendInterval - The time between posts of new data to the server. Data will be queued and then sent off when the interval has passed. Defaults to 5000 ms
  * inTransitRetry - If the interval has passed and the client already has an in progress transmission, the client will back off this amount of time. Defaults to 200ms
- * dataUrl - The url you wish to send the data logs to
+ * analyticsUrl - The url you wish to send the data logs to
  * sendMode - The method by which data is sent to the server. "xhrPost"(default) or "script" for x-domain delivery.
  * maxRequestSize - Limit the size of messages to this length.  Defaults to 2000 for IE and 4000 otherwise.  This is need to limit the size of urls in the script use case
 
