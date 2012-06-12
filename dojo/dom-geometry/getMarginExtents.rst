@@ -14,6 +14,8 @@ Returns an object with properties useful for box fitting in relationship to the 
 
 * ``l`` = marginLeft
 * ``t`` = marginTop
+* ``r`` = marginRight
+* ``b`` = marginBottom
 * ``w`` = total width, margin inclusive
 * ``h`` = total height, margin inclusive
 
