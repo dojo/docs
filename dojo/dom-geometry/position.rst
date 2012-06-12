@@ -31,7 +31,7 @@ Usage
   require(["dojo/dom-geometry", "dojo/dom", "dojo/dom-style"], function(domGeom, dom, style){
     var node = dom.byId("someNode");
     var includeScroll = false;
-    var output = domGeom.getMarginBox(node, includeScroll);
+    var output = domGeom.position(node, includeScroll);
   });
 
 Attributes
