@@ -12,7 +12,7 @@ dojo/dom-geometry::getPadBorderExtents()
 
 Returns object with properties useful for box fitting with regards to padding.
 
-* ``l``/``t``/``r``/``b`` = left/top/right/bottom padding and left/top/right/bottom border (respectively)
+* ``l``/``t``/``r``/``b`` = the sum of left/top/right/bottom padding and left/top/right/bottom border (respectively)
 * ``w`` = the sum of the left and right padding and border
 * ``h`` = the sum of the top and bottom padding and border
 
