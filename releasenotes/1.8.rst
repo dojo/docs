@@ -866,6 +866,39 @@ Util
 
 The documentation scripts at ``docscripts`` have been deprecated and replaced with a new documentation parser that works properly with AMD modules.
 
+util/build
+----------
+
+The builder supports the ability to detect declarative dependencies (both auto-requirement and declarative require 
+modules) in static files and allow the building of them into a layer (`#15367 <http://bugs.dojotoolkit.org/ticket/15367>`_).  To have resources scanned for dependencies, add them to the include 
+array of a layer and tag them as declarative:
+
+.. js ::
+
+  var profile = {
+    action: "release",
+    
+    packages:[{
+      name: "dojo",
+      location: "./dojo"
+    },{
+      name: "app",
+      location: "./app"
+    }],
+    
+    layers: {
+      "app/main": {
+        include: ["app/index.html"]
+      }
+    },
+    
+    resourceTags: {
+      declarative: function(filename){
+        return /\.htm(l)?$/.test(filename);
+      }
+    }
+  };
+
 Demos
 =====
 
@@ -873,15 +906,21 @@ New Demos
 ---------
 
 - tracTreemap: a treemap demo visualizing trac ticket status
+
 - calendar: a calendar component demo
+
 - todoApp: a "todo" application leveraging dojox/mobile, dojox/app & dojox/mvc packages
 
+- parserAutoRequire: a demonstration application for the auto-requirement and declarative requirement features of 
+  dojo/parser.
 
 Updated demos
 -------------
 
 - mobileGallery: the mobile gallery now highlights the latest dojox/mobile features
+
 - gauges & mobileGauges: the gauges demos now use the new dojox/dgauges package
+
 - mobileStockPortfolio: updates to contains live chart & other enhancements
 
 Migration
