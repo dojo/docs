@@ -719,6 +719,12 @@ A new Calendar component is introduced in dojox.calendar package. It displays ev
 widespread representation and allows to interactively edit the position in time and duration of these events.
 See :ref:`Calendar reference guide <dojox/calendar>`. 
 
+CometD
+------
+
+The CometD library has been removed from DojoX. The CometD project now maintains its own Dojo library in AMD format
+as part of their project. This will be available via cpm, or may be downloaded from GitHub.
+
 Gauges
 ------
 
@@ -726,6 +732,12 @@ A new gauges package is introduced in dojox.dgauges package. It provides a fully
 you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
 gauges (horizontal and vertical) are supported.
 See :ref:`Gauge Framework Reference Guide <dojox/dgauges>`.
+
+Lightstreamer
+-------------
+
+The LightstreamerStore has been removed from DojoX. The Lightstreamer project now maintains its own Dojo library in
+AMD format as part of their project. This will be available via cpm, or may be downloaded from GitHub.
 
 Treemap
 -------
