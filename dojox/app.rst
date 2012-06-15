@@ -128,19 +128,19 @@ Array of AMD modules identifiers. Controllers for the application. All the contr
 stores
 ------
 
-Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the name of the Dojo store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.
+Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the AMD module identifier for the store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.
 
 .. js ::
 
   "stores": {
     "store1":{
-      "type": "dojo.store.Memory",
+      "type": "dojo/store/Memory",
       "params": { // parameters used to initialize the data store
         "data": "modelApp.names"
       }
     },
     "store1":{
-      "type": "dojo.store.JsonRest",
+      "type": "dojo/store/JsonRest",
       "params": {
         "data": "modelApp.repeatData"
       }
