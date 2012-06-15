@@ -6,77 +6,90 @@ dojox.app
 
 :since: V1.7
 
-*Foreword*: ``dojox/app`` is an experimental module and its architecture is still evolving. In particular it was greatly improved between 1.7 and 1.8. It is for now compatible with Webkit-based browsers. 
+*Foreword*: ``dojox/app`` is an experimental module and its architecture is still evolving. In particular it was greatly improved between 1.7 and 1.8. It is for now only fully-functional with Webkit-based browsers.
 
-``dojox.app`` is an application framework designed to allow simple configuration
-of nested scenes and views and to facilitate the transitioning between these
-views.  It is similar in function to the ``dojox.mobile.app`` framework, but will
-not be limited to use on mobile devices.  Applications for desktops, mobiles,
-and tablets will be configurable and buildable for easy and fast deployment.
-
+``dojox/app`` is an application framework designed to allow simple configuration of potentially nested views and to facilitate the transitioning between these views. Its main current targets are mobile (phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment.
 There are two core modules that will need to work together to accomplish these goals:
 
-  - dojox/app - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
-  - dojox/mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app.
+* ``dojox/app`` - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
+* ``dojox/mvc`` – An optional library that provides the ability to have view concerns separated from model or data concerns by using simple binding between them so that they can be kept in sync.
 
 Overview
-=========
-The following diagram represents layout management.  The difference between a scene and a view is that scenes may have multiple children views but a view does not have a child.
+========
 
-.. image :: ./app/Diagram1.png
+The following diagram represents the high level architecture of ``dojox/app``:
 
-dojox.app Components
-====================
-``dojox.app`` is constructed of seven core modules;  each very focused and compact.
+.. image :: ./app/AppDiagram.png
 
-:ref:`dojox.app.view <dojox/app/view>` provides a view like ``dojox.mobile.View``. It contains a template string which will be rendered with user defined template segments. A view should have no child view.
+The main dojox/app modules
+==========================
 
-:ref:`dojox.app.bind <dojox/app/bind>` is used to query ``dojox.mvc`` widgets and get/set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. ``dojoType``, ``data-dojo-type``, ``ref`` and ``data-dojo-props`` attributes are compatible in a view.
+``dojox/app`` is built around the following focused core modules:
 
-:ref:`dojox.app.model <dojox/app/model>` creates a ``StatefulModel`` data source with JSON data or dojo data store. The data model can be ``binded`` to a ``dojox.mvc`` widget using ``dojox.app.bind``.
+* ``dojox/app/main`` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
 
-:ref:`dojox.app.scene <dojox/app/scene>` is used to create the layout for each child view, manage the transition between views, and resize the layout to fit the display area. A scene can contain one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view cannot have children.
+* ``dojox/app/View`` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
 
-``dojox.app.module.env`` provides the dojo, dijit, and dojox environments.
+* ``dojox/app/controllers/Layout`` a controller that performs nested view layout
 
-:ref:`dojox.app.module.history <dojox/app/module/history>` manages transitions forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API.
+* ``dojox/app/controllers/Load`` a controller that loads the view templates and view definition modules
 
-:ref:`dojox.app.main <dojox/app/main>` (Application) is used to create a ``dojox.app`` application by the configuration in ``config.json``. The main responsibilities of ``dojox.app.main`` include loading the application configuration, loading data from data source, creating views, creating data models, binding data models to views using ``dojox.app.bind``, creating scenes between views, and parsing the application with ``dojo.parser.parse``.
+* ``dojox/app/controllers/History`` a controller that maintains application history using HTM5 history API. This will not work on platforms that don’t support it like IE, Android 3 & 4, iOS 4.
 
+* ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
+
+* ``dojox/app/model``, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
 
 The Configuration Object
 ========================
-Configuration comes in the form of a basic object with several key, pre-defined properties:
+
+Configuration comes in the form of a basic JSON-like object with several key, pre-defined properties:
 
 id
 --
-String.  The ``dojox.app`` application's id.
+
+String. The ``dojox/app`` application's id. A global variable with id’s name is created by ``dojox/app/main``.
 
 .. js ::
 
-  id: "sampleApp",
+  id: "sampleApp"
+
 
 name
 ----
-String.  The ``dojox.app`` application's name.
+
+String. The ``dojox/app`` application's name.
 
 .. js ::
 
-  name: "Sample App",
+  name: "Sample App"
 
 description
 -----------
-String.  The description of the ``dojox.app`` application
+
+String. The description of the ``dojox/app`` application
 
 .. js ::
 
-  description: "Sample application that does what is needed",
+  description: "Sample application that does what is needed"
+
+loaderConfig
+------------
+
+Object. Dependencies, modules and controllers are loaded using the Dojo AMD loader. This parameter allows to configure the loader itself and specify for example where custom modules can be found. See http://livedocs.dojotoolkit.org/loader/amd#module-identifiers
+
+.. js ::
+
+  "loaderConfig" : {
+    "paths": {
+      "mypackage" : "can/be/found/here"
+     }
+  }
 
 dependencies
 ------------
-Array. Dependencies of ``dojox.app`` application. It can be defined as global     
-dependencies for application or as view dependencies in a view.        
-Represented as array of string paths to dependencies.
+
+Array of AMD modules identifiers. When defined at the top level dependencies of the ``dojox/app`` application. When defined at view level, dependencies for the view.
 
 .. js ::
 
@@ -87,28 +100,35 @@ Represented as array of string paths to dependencies.
     "dojox/mobile/Button",
     "dojox/mobile/RoundRect",
     "dojox/mobile/Heading"
-  ],
+  ]
 
 modules
 -------
-Array.  Modules for the application. Used as the mixins in 
-``dojo.declare()`` for the application. They modify the top level behavior 
-of the application, how it processes the config, or any other life cycle
-Represented as array of string paths to modules.
+
+Array of AMD modules identifiers. Modules for the application. Used as the mixins when declaring the Application class in ``dojox/app/main``. They modify the top level behavior of the application, how it processes the config, or any other life cycle. The “``dojox/app/module/lifecycle``” is automatically mixed into the application you don’t have the explicitly include it.
 
 .. js ::
 
   "modules": [
-  "dojox/app/module/env",
-  "dojox/app/module/history"
-  ],
+    "my/custom/module"
+  ]
+
+controllers
+-----------
+
+Array of AMD modules identifiers. Controllers for the application. All the controllers defined here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``” and “``dojox/app/controllers/Transition``” are automatically mixed into the application you don’t have the explicitly include them.
+
+.. js ::
+
+  "controllers": [
+    "dojox/app/controllers/History",
+    "my/custom/appController"
+  ]
 
 stores
 ------
-Object.  Dojo data stores which are used by ``dojox.app`` the data model. A data    
-store is composed by store name, store type and store parameters.      
-Represented as an object with sub-objects, with type and               
-params properties to be passed to store during initialization.
+
+Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the name of the Dojo store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.
 
 .. js ::
 
@@ -125,86 +145,101 @@ params properties to be passed to store during initialization.
         "data": "modelApp.repeatData"
       }
     }
-  },
+  }
 
 template
 --------
-String.  HTML file which will act as the application template.
+
+String. HTML file. When defined at application level defines the application root template. When defined at view level defined the view template.
 
 .. js ::
 
-  "template": "application.html",
+  "template": "application.html"
 
 models
 ------
-Object.  Models and instantiation parameters for the models including 'type' as 
-a property allows one to override the class that will be used for the  
-model. By default it is ``dojox.mvc.model``.
+
+Object. Models and their instantiation parameters. A model item is an object with three properties: the model type, the modelLoader and the params. The modelLoader property defines whether an MVC or a simple model must be loaded. The type property defines which class must be used for that model using an AMD module identifier and finally the params property content is passed to the model class constructor to build an instance.
 
 .. js ::
 
   "models": {
-    "names": {
+    "model1": {
+        "modelLoader": "dojox/app/utils/mvcModel",
+        "type": "dojox/mvc/EditStoreRefListController",
+        "params":{
+          "store": {"$ref":"#stores.namesStore"}
+        }
+    },
+    "model2": {
+      "modelLoader": "dojox/app/utils/simpleModel",
       "params":{
         "store": {"$ref":"#stores.namesStore"}
       }
     }
-  },
+  }
+
 
 defaultView
 -----------
-String. The name of the scene/view to load when the application is initialized.
+
+String. The name of the view to load when the application is initialized.
 
 .. js ::
 
-  "defaultView": "home",
+  "defaultView": "home"
+
 
 defaultTransition
 -----------------
+
 String. The default animation type for the view transition.
 
 .. js ::
 
-  "defaultTransition": "slide",
+  "defaultTransition": "slide"
+
 
 views
 -----
-Object.  The children views/scenes of the application or current scene. Dependencies may be defined via views for optimization and organization purposes.  View types, models, and transition properties may be defined, along with the template. 
+Object. The children views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as three additional properties: transition for specific view transitions, template for defining the view rendering and finally definition to provide an AMD module to be mixed into the view to control it.
+AMD modules identifiers starting with “.” will be resolved relative to the application root. All other modules identifiers will be resolved according to the Dojo AMD loader rules and in particular with respect to its configuration provided as part of the loaderConfig attribute.
+By default if no definition module is specified for a view it is looked up automatically in "./view/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
 
 .. js ::
-  
+
   "views": {
     // simple view without any children views or scenes
     // views can has its own dependencies which will be loaded
-    // before the view is first intialized.
+    // before the view is first initialized.
     "home": {
-      "type": "dojox.app.view",
       "dependencies":[
         "dojox/mobile/RoundRectList",
         "dojox/mobile/ListItem",
         "dojox/mobile/EdgeToEdgeCategory"
       ],
-      "template": "views/simple/home.html"
+      "template": "./views/simple/home.html"
+      "definition": "./views/simple/home.js "
     },
 
-    // simple scene which loads all views and shows the default first
+    // simple composite view which loads all views and shows the default
     "main":{
       // all views in the main scene will be bound to the user model
       "models": [],
-      "type": "dojox.app.scene",
       "template": "simple.html",
       "defaultView": "main",
       "defaultTransition": "slide",
       // the views available to this scene
       "views": {
         "main":{
-          "template": "views/simple/main.html"
+          "template": "./views/simple/main.html"
+          "definition": "none"
         },
         "second":{
-          "template": "views/simple/second.html"
+          "template": "./views/simple/second.html"
         },
         "third":{
-          "template": "views/simple/third.html"
+          "template": "./views/simple/third.html"
         }
       },
       "dependencies":[
@@ -215,8 +250,7 @@ Object.  The children views/scenes of the application or current scene. Dependen
       ]
     },
     "repeat": {
-      "type": "dojox.app.view",
-      // model declared at scene/view level will be accessible to this scene/view
+      // model declared at view level will be accessible to this view
       // or its children.
       "models": {
         "repeatmodels": {
@@ -225,214 +259,196 @@ Object.  The children views/scenes of the application or current scene. Dependen
           }
         }
       },
-      "template": "views/repeat.html",
+       "template": "./views/repeat.html",
       "dependencies":["dojox/mobile/TextBox"]
     }
   }
 
-This configuration serves two purposes:  configuring the application within the client and acting as a map for building the application for production.
+This configuration serves two purposes: configuring the application within the client and acting as a map for building the application for production.
 
+How to use ``dojox/app``
+========================
 
-Sample dojox.app Usage
-======================
-
-As with any Dojo-based web application, it's important to create your HTML page with a ``SCRIPT`` tag referencing ``dojo.js`` and a ``SCRIPT`` tag referencing the application configuration file:
-
-.. html
-
-  <!DOCTYPE HTML PUBLIC "-// W3C// DTD HTML 4.01// EN" "http:// www.w3.org/TR/html4/strict.dtd">
-  <html>
-    <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Sample App</title>
-    <link href="../../../mobile/themes/iphone/base.css" rel="stylesheet"></link>
-
-    <script type="text/javascript" src="../../../../dojo/dojo.js"></script>
-    <!-- the actual application launcher -->
-    <script type="text/javascript" src="sampleApp.js"></script>
-
-    </head>
-  <body>
-
-  </body>
-  </html>
-
-The next step is registering the modules path for the custom application namespace which will be called "app".  After the module is registered, the base dependencies are loaded via ``require()`` including the ``dojox/app`` base as well as application configuration:
+As with any Dojo-based web application, it's important to create your HTML page with a script tag referencing the Dojo loader dojo. Once done you load the main module and provide it with the configuration file as follows:
 
 .. js ::
 
-  // Get current path
-  var path = window.location.pathname;
-  if(path.charAt(path.length)!="/"){
-    path = path.split("/");
-    path.pop();
-    path=path.join("/");
-  }
-
-  // register current application module path
-  dojo.registerModulePath("app", path);
-
-  // load configuration json file
-  require(["dojo/_base/html", "dojox/app/main", "dojo/text!app/config.json"], function(dojo, Application, config){
+  require(["dojox/app/main", "dojox/json/ref", "dojo/text!./config.json"],
+      function(Application, json, config){
     // startup the application
-    app = Application(eval("(" + config + ")"));
+    Application(json.fromJson(config));
   });
 
-Upon loading the ``dojox.app`` configuration file, views, scenes, and models are created with the template. The env resource provides a dojo runtime environment for ``dojox.app`` and history caching operations.
-
-The complete configuration for the sample app could look like:
+Upon loading the ``dojox/app`` views, stores and models are created and the application lifecycle is started.
+Here is a full example of a configuration file:
 
 .. js ::
 
-  {
-    "id": "sampleApp",
-    "name": "Sample App",
-    "description": "A Sample App",
-    "splash": "splash",
+	{
+		"id": "todoApp",
+		"name": "ToDo App",
+		"description": "These is a ToDo sample application based on the Dojo Toolkit and provided under Dojo license.",
+		"splash": "splash",
 
-    // Dependencies for the application. The modules in the dependencies array object will be
-    // loaded before application is started.
-    "dependencies": [
-      "dojox/mobile/TabBar",
-      "dojox/mobile/RoundRect",
-      "dojox/mobile/TabBarButton",
-      "dojox/mobile/Button",
-      "dojox/mobile/RoundRect",
-      "dojox/mobile/Heading"
-    ],
+		"dependencies": [
+			"dojox/mobile/TabBar",
+			"dojox/mobile/RoundRect",
+			"dojox/mobile/TabBarButton",
+			"dojox/mobile/TextBox",
+			"dojox/mobile/TextArea",
+			"dojox/mobile/CheckBox",
+			"dojox/mobile/ExpandingTextArea",
+			"dojox/mobile/Button",
+			"dojox/mobile/RoundRect",
+			"dojox/mobile/Heading",
+			"dojox/mobile/ListItem",
+			"dojox/mobile/RoundRectList",
+			"dojox/mobile/RoundRectCategory",
+			"dojox/mobile/Switch",
+			"dojox/mobile/SimpleDialog",
+			"dojox/mobile/DatePicker",
+			"dojox/mobile/Opener",
+			"dojo/date/stamp",
+			"dojox/app/widgets/Container",
+			"dojo/data/ItemFileWriteStore",
+			"dojox/mvc/EditStoreRefListController",
+			"dojox/mvc/Repeat",
+			"dojox/mvc/Group",
+			"dojox/mvc/Output",
+			"dojox/mvc/at"
+		],
 
-    // stores we are using
-    "stores": {
-      "namesStore":{
-        "type": "dojo.store.Memory",
-        "params": { // parameters used to initialize the data store
-          "data": "modelApp.names"
-        }
-      },
-      "repeatStore":{
-        "type": "dojo.store.Memory",
-        "params": {
-          "data": "modelApp.repeatData"
-        }
-      }
-    },
+		"modules": [],
 
-    // models and instantiation parameters for the models. Including 'type' as a property
-    // allows one to override the class that will be used for the model.  By default it is
-    // dojox/mvc/model
-    // The model declared at application level will be initialized before application startup
-    // The model declared at scene/view level will be initialized before scene/view loaded
-    "models": {
-      "names": {
-        "params":{
-          "store": {"$ref":"#stores.namesStore"}
-        }
-      }
-    },
+		"controllers": [
+			"dojox/app/controllers/History"
+		],
 
-    // Modules for the app.  The are basically used as the second
-    // array of mixins in a dojo.declare().  Modify the top level behavior
-    // of the app, how it processes the config or any other life cycle
-    // by creating and including one or more of these
-    "modules": [
-      "dojox/app/module/env",
-      "dojox/app/module/history"
-    ],
+		"stores": {
+			"listsDataStore":{
+			   "type": "dojo/data/ItemFileWriteStore",
+			   "params": {
+					"url": "./resources/data/lists-emoji.json"
+			   }
+			},
 
-    "template": "application.html",
+			"allitemlistStore":{
+			   "type": "dojo/data/ItemFileWriteStore",
+			   "params": {
+					"url": "./resources/data/all-items-emoji.json"
+			   }
+		   }
+		},
 
-    // the name of the scene to load when the app is initialized.
-    "defaultView": "home",
+		"models": {
+			"listsmodel": {
+				"modelLoader": "dojox/app/utils/mvcModel",
+				"type": "dojox/mvc/EditStoreRefListController",
+				"params":{
+					"datastore": {"$ref":"#stores.listsDataStore"}
+				}
+			},
 
-    // The default animation effect of transition between sub scenes and views of
-    // this application.
-    "defaultTransition": "slide",
+			"allitemlistmodel": {
+				"modelLoader": "dojox/app/utils/mvcModel",
+				"type": "dojox/mvc/EditStoreRefListController",
+				"params":{
+					"datastore": {"$ref":"#stores.allitemlistStore"}
+				}
+			},
 
-    // scenes are groups of views and models loaded at once
-    // scenes and view in the application all have access to application level models
-    "views": {
-      // simple view without any children views or scenes
-      // views can has its own dependencies which will be loaded
-      // before the view is first initialized.
-      "home": {
-        "type": "dojox.app.view",
-        "dependencies":[
-          "dojox/mobile/RoundRectList",
-          "dojox/mobile/ListItem",
-          "dojox/mobile/EdgeToEdgeCategory"
-        ],
-        "template": "views/simple/home.html"
-      },
+			"itemlistmodel": {
+				"modelLoader": "dojox/app/utils/mvcModel",
+				"type": "dojox/mvc/EditStoreRefListController",
+				"params":{
+					"datastore": {"$ref":"#stores.allitemlistStore"},
+									"query": {"listId": 0}
+				}
+			}
+		},
 
-      // simple scene which loads all views and shows the default first
-      "main":{
-        // all views in the main scene will be bound to the user model
-        "models": [],
-        "type": "dojox.app.scene",
-        "template": "simple.html",
-        "defaultView": "main",
-        "defaultTransition": "slide",
-        // the views available to this scene
-        "views": {
-          "main":{
-            "template": "views/simple/main.html"
-          },
-          "second":{
-            "template": "views/simple/second.html"
-          },
-          "third":{
-            "template": "views/simple/third.html"
-          }
-        },
-        "dependencies":[
-          "dojox/mobile/RoundRectList",
-          "dojox/mobile/ListItem",
-          "dojox/mobile/EdgeToEdgeCategory",
-          "dojox/mobile/EdgeToEdgeList"
-        ]
-      },
-      "repeat": {
-        "type": "dojox.app.view",
-        // model declared at scene/view level will be accessible to this scene/view
-        // or its children.
-        "models": {
-          "repeatmodels": {
-            "params":{
-              "store": {"$ref":"#stores.repeatStore"}
-            }
-          }
-        },
-        "template": "views/repeat.html",
-        "dependencies":["dojox/mobile/TextBox"]
-      }
-    }
-  }
+		"defaultView": "items,ViewListTodoItemsByPriority",
+
+		"defaultTransition": "fade",
+
+		"views": {
+			"configuration": {
+				"defaultView": "SelectTodoList",
+				"defaultTransition": "fade",
+				"definition": "none",
+
+				"views": {
+					"SelectTodoList": {
+						"template": "./templates/configuration/SelectTodoList.html"
+					},
+
+					"ModifyTodoLists": {
+						"template": "./templates/configuration/ModifyTodoLists.html"
+					},
+
+					"EditTodoList": {
+						"template": "./templates/configuration/EditTodoList.html"
+					}
+				}
+			},
+
+			"items": {
+				"template": "./templates/items.html",
+				"defaultView": "ViewListTodoItemsByPriority",
+				"defaultTransition": "fade",
+				"views": {
+					"ViewListTodoItemsByPriority":{
+						"template": "./templates/items/ViewListTodoItemsByPriority.html"
+					},
+					"ViewAllTodoItemsByDate":{
+						"template": "./templates/items/ViewAllTodoItemsByDate.html"
+					}
+				}
+			},
+
+			"details": {
+				"defaultView": "EditTodoItem",
+				"defaultTransition": "fade",
+				"definition": "none",
+
+				"views": {
+					"EditTodoItem":{
+						"template": "./templates/details/EditTodoItem.html"
+					},
+
+					"EditItemRepeat":{
+						"template": "./templates/details/EditItemRepeat.html"
+					},
+
+					"EditItemRemindMe":{
+						"template": "./templates/details/EditItemRemindMe.html"
+					},
+					"EditItemPriority":{
+						"template": "./templates/details/EditItemPriority.html"
+					},
+					"EditItemList":{
+						"template": "./templates/details/EditItemList.html"
+					}
+				}
+			}
+		}
+	}
 
 
-An application may have as many scenes and views as required.  The end product will look like:
+The corresponding application looks like the following:
 
-.. image :: ./app/pic3.png
+.. image :: ./app/AppExample.png
 
+See the todoApp example in Dojo demos installation directory for the full application.
 
-Comparison with dojox.mobile.app
-================================
+Comparison with ``dojox/mobile/app``
+====================================
 
-First please note that going forward ``dojox.mobile.app`` will be deprecated in favor of ``dojox.app``.
+First please note that going forward ``dojox/mobile/app`` will be deprecated in favor of ``dojox/app``.
 
-The main difference between ``dojox.app`` and ``dojox.mobile.app`` is listed as following.
+The main differences between ``dojox/app`` and ``dojox/mobile/app`` are the following:
 
-* ``dojox.app`` enables the model binding
-* ``dojox.app`` uses scene/view structure to enable the nested scene or view which resembles the composite design pattern. It does not mean ``dojox.mobile.app`` cannot do that but it needs coding to implement that.
-* ``dojox.app`` contains the layout mechanism to ensure the content at different application/scene/view level work well together
-* ``dojox.mobile.app`` manage the navigation history in StageController by using a history stack. ``dojox.app`` manage the navigation history through HTML5 pushState standard and delegate it to browser enabled history management.
-
-The following graphics compare ``dojox.app`` with ``dojox.mobile.app``:
-
-.. image :: ./app/Diagram3.png
-
-With ``dojox.mobile.app``, layout is managed by the widget library.  A scene has only one view and SceneAssistant is responsible for the lifecycle of that view.
-
-.. image :: ./app/Diagram1.png
-
-With ``dojox.app``, layout is managed by scene.  The difference between the scene and views is that a scene may have multiple views and children scenes, a view does not have children.
+* ``dojox/app`` enables the model binding
+* ``dojox/app`` uses view structure to enable the nested views using a composite design pattern. ``dojox/mobile/app`` will require additional code for that.
+* ``dojox/app`` contains the layout mechanism to ensure the content at different application/view level work well together
+* ``dojox/mobile/app`` manages the navigation history in StageController by using a history stack. Dojox/app provides both HTML5 pushState & history stack for  managing the navigation history.
