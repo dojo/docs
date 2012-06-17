@@ -8,81 +8,88 @@ Dojo 1.8 Release Notes
    :depth: 3
 
 
-Browser support
+Browser Support
 ===============
 
 The following browsers have been tested and are supported in this release. If a browser version is not listed as 
 supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases 
 of Dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
 
-Desktop
+**Desktop**
 
-  * Firefox 3.6-12
-  * Safari 5-6
-  * Chrome 13-19
-  * IE 6-9
-  * Opera 10.50-12 (Dojo core only)
+* Firefox 3.6-12
 
-Mobile (``dojox/mobile``)
+* Safari 5-6
 
-  * iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
-  * Android 2.2-2.3, 3.1-3.2, 4.0
-  * Blackberry 6-7
-  * Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-11, Safari 5-6, Chrome 13-18
+* Chrome 13-19
 
-  TODO: Link to page with specific vendor device models tested on
+* IE 6-9
 
-Dojo Base
-=========
+* Opera 10.50-12 (Dojo core only)
+
+**Mobile (dojox/mobile)**
+
+* iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
+
+* Android 2.2-2.3, 3.1-3.2, 4.0
+
+* Blackberry 6-7
+
+* Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-11, Safari 5-6, Chrome 13-18
+
+TODO: Link to page with specific vendor device models tested on
+
+Dojo
+====
 
 dojo/_base/Deferred
 -------------------
 
-``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilize the new promise
-architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
-``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
+- ``dojo/_base/Deferred`` was *deprecated* in lieu of ``dojo/Deferred``. It was updated to utilize the new promise
+  architecture and maintains its legacy API, but developers should transition to ``dojo/Deferred``. Also,
+  ``dojo/_base/Deferred::when()`` has been *deprecated* in lieu of ``dojo/when``.
 
 dojo/_base/xhr
 --------------
 
-``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilize the new request
-architecture, but developers should transition to ``dojo/request/xhr``.
+- ``dojo/_base/xhr`` was *deprecated* in lieu of ``dojo/request/xhr``. It was updated to utilize the new request
+  architecture, but developers should transition to ``dojo/request/xhr``.
 
 dojo/_base/sniff
 ----------------
 
-``dojo/_base/sniff`` was *deprecated* in lieu of ``dojo/sniff``. It was updated to utilize the new sniff
-module, but developers should transition to ``dojo/sniff``.
-
-Dojo Core
-=========
+- ``dojo/_base/sniff`` was *deprecated* in lieu of ``dojo/sniff``. It was updated to utilize the new sniff
+  module, but developers should transition to ``dojo/sniff``.
 
 dojo/dnd
 --------
 
-``dojo/dnd`` was enhanced to work on touch devices.
+- ``dojo/dnd`` was enhanced to work on touch devices.
 
 dojo/Deferred
 -------------
 
-A new implementation of ``dojo/Deferred`` based on ``dojo/promise``. It only supports the "modern" promise syntax (e.g.
-``.then()`` instead of ``.addCallback()`` and ``.addErrback()``). It is strongly recommended that you migrate from
-``dojo/_base/Deferred`` and adopt the new API. See :ref:`dojo/Deferred <dojo/Deferred>`.
+- A new implementation of ``dojo/Deferred`` based on ``dojo/promise``. It only supports the "modern" promise syntax 
+  (e.g. ``.then()`` instead of ``.addCallback()`` and ``.addErrback()``). It is strongly recommended that you migrate  
+  from ``dojo/_base/Deferred`` and adopt the new API. See :ref:`dojo/Deferred <dojo/Deferred>`.
 
 dojo/DeferredList
 -----------------
 
-While ``dojo/DeferredList`` is not changed, it is deprecated in lieu of ``dojo/promise/all`` and ``dojo/promise/first``.
+- While ``dojo/DeferredList`` is not changed, it is *deprecated* in lieu of ``dojo/promise/all`` and 
+  ``dojo/promise/first``.
 
 dojo/hccss
 ----------
 
-The dijit/hccss module has moved to dojo core, with a stub left in dijit for backwards compatibility.
+- The ``dijit/hccss`` module has moved to dojo core, with a stub left in ``dijit`` for backwards compatibility.
 
 dojo/html
 ---------
 
-``dojo/html::_ContentSetter`` is now async aware when it comes to parsing content being set.  The promise returned from ``dojo/parser::parse()`` will be stored in ``parseDeferred``.  If using ``_ContentSetter`` directly, ensure that you use the ``parserDeferred`` to detect when the parsing is actually complete.  For example:
+- ``dojo/html::_ContentSetter`` is now async aware when it comes to parsing content being set.  The promise returned 
+  from ``dojo/parser::parse()`` will be stored in ``parseDeferred``.  If using ``_ContentSetter`` directly, ensure that 
+  you use the ``parserDeferred`` to detect when the parsing is actually complete.  For example:
 
 .. js ::
 
@@ -100,19 +107,20 @@ dojo/html
 dojo/io/iframe
 --------------
 
-``dojo/io/iframe`` has was *deprecated* in lieu of ``dojo/request/iframe``. It was updated to utilise the new request
-architecture, but developers should transition to ``dojo/request/iframe``.
+- ``dojo/io/iframe`` has was *deprecated* in lieu of ``dojo/request/iframe``. It was updated to utilise the new request
+  architecture, but developers should transition to ``dojo/request/iframe``.
 
 dojo/io/script
 --------------
 
-``dojo/io/script`` has was *deprecated* in lieu of ``dojo/request/script``. It was updated to utilise the new request
-architecture, but developers should transition to ``dojo/request/script``.
+- ``dojo/io/script`` has was *deprecated* in lieu of ``dojo/request/script``. It was updated to utilise the new request
+  architecture, but developers should transition to ``dojo/request/script``.
 
 dojo/node
 ---------
 
-``dojo/node`` is an AMD plugin that allows easier loading of Node.js modules when running Dojo in Node.js.  See :ref:`dojo/node <dojo/node>` for more information.
+- ``dojo/node`` is an AMD plugin that allows easier loading of Node.js modules when running Dojo in Node.js.  See 
+  :ref:`dojo/node <dojo/node>` for more information.
 
 dojo/parser
 -----------
@@ -122,78 +130,82 @@ There are several enhancements to ``dojo/parser``:
 Module IDs (MIDs)
 ~~~~~~~~~~~~~~~~~
 
-The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup
-(`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_). Developers should use the MID in their code to ensure future
-compatibility with baseless modules. Just as before, the parser will not load a module that is not already loaded,
-therefore they need to be required prior to invoking the parser.
+- The Parser now supports the use of Module IDs (MID) when specifying the ``data-dojo-type`` in declarative markup
+  (`#13778 <http://bugs.dojotoolkit.org/ticket/13778>`_). Developers should use the MID in their code to ensure future
+  compatibility with baseless modules. Just as before, the parser will not load a module that is not already loaded,
+  therefore they need to be required prior to invoking the parser.
 
 An example:
 
 .. js ::
 
-    require(["dojo/parser","dijit/form/Button","dijit/layout/ContentPane"],
-      function(parser) {
+  require(["dojo/parser", "dojo/ready", "dijit/form/Button", "dijit/layout/ContentPane"],
+    function(parser, ready){
+      ready(function(){
         parser.parse();
-      }
-    );
+      });
+    }
+  );
 
 .. html ::
 
-    <div data-dojo-type="dijit/layout/ContentPane">
-      <button data-dojo-type="dijit/form/Button">Click Me!</button>
-    </div>
+  <div data-dojo-type="dijit/layout/ContentPane">
+    <button data-dojo-type="dijit/form/Button">Click Me!</button>
+  </div>
 
 data-dojo-mixins
 ~~~~~~~~~~~~~~~~
 
-The parser now also supports a new ``data-dojo-mixins`` attribute that allows to dynamically mixin one or several
-classes into the main ``data-dojo-type`` class as follows:
+- The parser now also supports a new ``data-dojo-mixins`` attribute that allows to dynamically mixin one or several
+  classes into the main ``data-dojo-type`` class as follows:
 
 .. js ::
 
-    require(["dojo/parser", "dojox/treemap/TreeMap", "dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
-      function(parser) {
-        parser.parse();
-      }
-    );
+  require(["dojo/parser", "dojox/treemap/TreeMap", "dojox/treemap/Keyboard", "dojox/treemap/DrillDownUp"],
+    function(parser) {
+      parser.parse();
+    }
+  );
 
 .. html ::
 
-    <div data-dojo-type="dojox/treemap/TreeMap" data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
+  <div data-dojo-type="dojox/treemap/TreeMap" 
+    data-dojo-mixins="dojox/treemap/Keyboard, dojox/treemap/DrillDownUp"></div>
 
-parser.construct()
-~~~~~~~~~~~~~~~~~~
+dojo/parser::construct()
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-There's also a new method construct() that's useful for when you have a widget constructor and want to apply it to
-a node that may or may not have data-dojo-type specified:
+- There is also a new method ``construct()`` that is useful for when you have a widget constructor and want to apply it 
+  to a node that may or may not have ``data-dojo-type`` specified:
 
 .. js ::
 
-      require(["dojo/parser", "dojo/query", "dijit/form/Slider",], function(parser, query, Slider){
-          query("input[type=slider]").forEach(function(node){
-               parser.construct(Slider, node);
-          }
-      }
+  require(["dojo/parser", "dojo/query", "dijit/form/Slider"], 
+  function(parser, query, Slider){
+    query("input[type=slider]").forEach(function(node){
+      parser.construct(Slider, node);
+    }
+  }
 
 Script Type "dojo/aspect"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The parser now fully supports the declarative script tags with a ``type="dojo/aspect"`` (`#15117 <http://bugs.dojotoolkit.org/ticket/15117>`_). This allows you to define scripts that run in line with the aspect
-concepts behind aspect programming used in the :ref:`dojo/aspect <dojo/aspect>` module.
+- The parser now fully supports the declarative script tags with a ``type="dojo/aspect"`` (`#15117 <http://bugs.dojotoolkit.org/ticket/15117>`_). This allows you to define scripts that run in line with the aspect
+  concepts behind aspect programming used in the :ref:`dojo/aspect <dojo/aspect>` module.
 
 Each of the following is possible:
 
 .. html ::
 
   <div data-dojo-type="package/module" data-dojo-props="foo:'bar'">
-  
+
     <!-- A script with "before" advice -->
     <script type="dojo/aspect" data-dojo-advice="before" data-dojo-method="method1" data-dojo-args="i">
       console.log("I ran before!");
       i++; // Modify an argument
       return [i]; // Return the modified argument to be used by the original method
     </script>
-    
+
     <!-- A script with "around" advice -->
     <script type="dojo/aspect" data-dojo-advice="around" data-dojo-method="method2" data-dojo-args="origFn">
       return function(){ // you have to be a factory and return a function
@@ -202,25 +214,26 @@ Each of the following is possible:
         console.log("I ran after!");
       });
     </script>
-    
+
     <!-- A script with "after" advice -->
     <script type="dojo/aspect" data-dojo-advice="after" data-dojo-method="method3">
       console.log("I ran after!");
     </script>
-    
+
   </div>
 
 *Note* with the addition of this coupled with the support of script tags of ``type="dojo/on"``, it does mean that script
 tags of ``type="dojo/connect"`` are fully deprecated and will likely be dropped in 2.0. In fact, internally the parser
-uses ``dojo/aspect`` to accomplish a connect anyways.
+uses ``dojo/aspect`` to accomplish a connect.
 
 Declarative Require
 ~~~~~~~~~~~~~~~~~~~
 
-The parser now supports the ability to require modules declaratively (`#15118 <http://bugs.dojotoolkit.org/ticket/15118>`_). This is accomplished using the ``<script type="dojo/require">`` tag.
-Before the document is scanned and parsed, the parser will look for any ``<script>`` tags of type ``dojo/require`` and
-the parser will attempt to load any modules identified in the hash that is contained within the text of the tag and put
-it in the global scope. For example:
+- The parser now supports the ability to require modules declaratively 
+  (`#15118 <http://bugs.dojotoolkit.org/ticket/15118>`_). This is accomplished using the 
+  ``<script type="dojo/require">`` tag. Before the document is scanned and parsed, the parser will look for any 
+  ``<script>`` tags of type ``dojo/require`` and the parser will attempt to load any modules identified in the hash 
+  that is contained within the text of the tag and put it in the global scope. For example:
 
 .. html ::
 
@@ -235,13 +248,14 @@ See :ref:`Parser Declarative Require <dojo/parser#declarative-require>` for more
 Auto Require
 ~~~~~~~~~~~~
 
-The parser now supports the ability to automatically require in modules when encountered declaratively (`#14591 <http://bugs.dojotoolkit.org/ticket/14591>`_). As the document is being scanned and parsed, but before the widgets are
-instantiated, the parser will automatically attempt to require in modules that it hasn't been able to resolve a
-constructor for and the ``data-dojo-type`` looks like a MID (e.g. ``package/module``).
+- The parser now supports the ability to automatically require in modules when encountered declaratively 
+  (`#14591 <http://bugs.dojotoolkit.org/ticket/14591>`_). As the document is being scanned and parsed, but before the  
+  widgets are instantiated, the parser will automatically attempt to require in modules that it hasn't been able to  
+  resolve a constructor for and the ``data-dojo-type`` looks like a MID (e.g. ``package/module``).
 
-Developers should really be cautious when using this features, because you are not making your dependencies clear, you
-may have a harder time isolating where your issue is, because the parser is automatically loading modules that you may
-not be consciously aware of.
+*Note* Developers should really be cautious when using this features, because you are not making your dependencies 
+clear, you may have a harder time isolating where your issue is, because the parser is automatically loading modules 
+that you may not be consciously aware of.
 
 .. code-example ::
 
@@ -257,11 +271,11 @@ See :ref:`Parser Auto Require <dojo/parser#auto-require>` for more information.
 Async Nature of ``.parse()``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because of the nature of AMD and ``require()``, when you use either the declarative require feature or the auto require
-feature, ``.parse()`` will operate in an asynchronous mode. In order to maintain backwards compatibility though, the
-results of ``.parser()`` continue to be an Array, but will also have a promise mixed in which is fulfilled with the
-results of the ``.parse()``. For new development, the safest way to interact with ``.parse()`` is to treat the return as
-a promise. For example:
+- Because of the nature of AMD and ``require()``, when you use either the declarative require feature or the auto 
+  require feature, ``.parse()`` will operate in an asynchronous mode. In order to maintain backwards compatibility 
+  though, the results of ``.parser()`` continue to be an Array, but will also have a promise mixed in which is 
+  fulfilled with the results of the ``.parse()``. For new development, the safest way to interact with ``.parse()`` is 
+  to treat the return as a promise. For example:
 
 .. js ::
 
@@ -274,128 +288,85 @@ a promise. For example:
 dojo/promise
 ------------
 
-The new ``dojo/promise`` package introduces a new architecture for asynchronous promises (callbacks), which are the
-foundation for :ref:`dojo/Deferred <dojo/Deferred>`.
+- The new ``dojo/promise`` package introduces a new architecture for asynchronous promises (callbacks), which are the
+  foundation for :ref:`dojo/Deferred <dojo/Deferred>`.
 
-dojo/promise/Promise
-~~~~~~~~~~~~~~~~~~~~
+  * ``dojo/promise/Promise`` - Promise base class. All promises will be instances of this class. See  
+    :ref:`dojo/promise/Promise <dojo/promise/Promise>`.
 
-Promise base class. All promises will be instances of this class. See 
-:ref:`dojo/promise/Promise <dojo/promise/Promise>`.
+  * ``dojo/promise/CancelError`` - Default error if a promise is canceled without a reason. See 
+    :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`.
 
-dojo/promise/CancelError
-~~~~~~~~~~~~~~~~~~~~~~~~
+  * ``dojo/promise/all`` - Takes multiple promises and returns a new promise that is fulfilled when all promises have 
+    been fulfilled. This essentially replaces ``dojo/DeferredList``. See :ref:`dojo/promise/all <dojo/promise/all>`.
 
-Default error if a promise is canceled without a reason. See :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`.
+  * ``dojo/promise/first`` - Takes multiple promises and returns a new promise that is fulfilled when the first of 
+    these promises is fulfilled. See :ref:`dojo/promise/first <dojo/promise/first>`.
 
-dojo/promise/all
-~~~~~~~~~~~~~~~~
-
-Takes multiple promises and returns a new promise that is fulfilled when all promises have been fulfilled. This
-essentially replaces ``dojo/DeferredList``. See :ref:`dojo/promise/all <dojo/promise/all>`.
-
-dojo/promise/first
-~~~~~~~~~~~~~~~~~~
-
-Takes multiple promises and returns a new promise that is fulfilled when the first of these promises is fulfilled. See
-:ref:`dojo/promise/first <dojo/promise/first>`.
-
-dojo/promise/tracer
-~~~~~~~~~~~~~~~~~~~
-
-A mixin that allows tracing of promise fulfilment. Calling ``.trace()`` or ``.traceError()`` on a promise enables
-tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See :ref:`dojo/promise/tracer
-<dojo/promise/tracer>`.
+  * ``dojo/promise/tracer`` - A mixin that allows tracing of promise fulfilment. Calling ``.trace()`` or 
+    ``.traceError()`` on a promise enables tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See 
+    :ref:`dojo/promise/tracer <dojo/promise/tracer>`.
 
 dojo/request
 ------------
 
-The ``dojo/request`` package introduces a new architecture for making asynchronous requests from code. The module
-abstracts the user, for the most part, from the actual provider that makes the request. This means the doesn't have to
-normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise`` package.
+- The ``dojo/request`` package introduces a new architecture for making asynchronous requests from code. The module
+  abstracts the user, for the most part, from the actual provider that makes the request. This means the doesn't have to
+  normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise`` package.
 
-Requiring the ``dojo/request`` as a module will return the default provider, based on platform. Browser based platforms
-use ``dojo/request/xhr`` and node based platforms use ``dojo/request/node``.
+  Requiring the ``dojo/request`` as a module will return the default provider, based on platform. Browser based 
+  platforms use ``dojo/request/xhr`` and node based platforms use ``dojo/request/node``.
 
-See :ref:`dojo/request <dojo/request>` for more information.
+  See :ref:`dojo/request <dojo/request>` for more information.
 
-dojo/request/default
-~~~~~~~~~~~~~~~~~~~~
+  * ``dojo/request/default`` - Returns the default provider.  See :ref:`dojo/request/default <dojo/request/default>` 
+    for more information.
 
-Returns the default provider.  See :ref:`dojo/request/default <dojo/request/default>` for more information.
+  * ``dojo/request/xhr`` - The XHR provider. This is the default provider for browser based platforms. This deprecates 
+    ``dojo/_base/xhr``. See :ref:`dojo/request/xhr <dojo/request/xhr>` for more information.
 
-dojo/request/xhr
-~~~~~~~~~~~~~~~~
+  * ``dojo/request/node`` - The node provider.  This is the default provider for node based platforms.  See 
+    :ref:`dojo/request/node <dojo/request/node>` for more information.
 
-The XHR provider. This is the default provider for browser based platforms. This deprecates ``dojo/_base/xhr``. See
-:ref:`dojo/request/xhr <dojo/request/xhr>` for more information.
+  * ``dojo/request/iframe`` - The iframe provider.  This deprecates :ref:`dojo/io/iframe <dojo/io/iframe>`.  See 
+    :ref:`dojo/request/iframe <dojo/request/iframe>` for more information.
 
-dojo/request/node
-~~~~~~~~~~~~~~~~~
+  * ``dojo/request/script`` - The script provider. This deprecates :ref:`dojo/io/script <dojo/io/script>`. See 
+    :ref:`dojo/request/script <dojo/request/script>` for more information.
 
-The node provider.  This is the default provider for node based platforms.  See 
-:ref:`dojo/request/node <dojo/request/node>` for more information.
+  * ``dojo/request/handlers`` - This module defines the handles for the responses to requests as well as provides a 
+    mechanism for registering additional handlers. The modules automatically registers ``javascript``, ``json`` and 
+    ``xml``. See :ref:`dojo/request/handlers` for more information.
 
-dojo/request/iframe
-~~~~~~~~~~~~~~~~~~~
+  * ``dojo/request/notify`` - Creates and manages the ``dojo/request/*`` topics. See 
+    :ref:`dojo/request/notify <dojo/request/notify>` for more information.
 
-The iframe provider.  This deprecates :ref:`dojo/io/iframe <dojo/io/iframe>`.  See 
-:ref:`dojo/request/iframe <dojo/request/iframe>` for more information.
+  * ``dojo/request/watch`` - An internal module for the used for watching and managing inflight IO requests.
 
-dojo/request/script
-~~~~~~~~~~~~~~~~~~~
+  * ``dojo/request/registry`` - Used mapping URIs to particular providers. Useful when certain URIs require one type of 
+    provider, but others require a different one (like cross domain scenarios), but allow the user to develop a single 
+    path in the code. See :ref:`dojo/request/registry <dojo/request/registry>` for more information.
 
-The script provider. This deprecates :ref:`dojo/io/script <dojo/io/script>`. See :ref:`dojo/request/script
-<dojo/request/script>` for more information.
-
-dojo/request/handlers
-~~~~~~~~~~~~~~~~~~~~~
-
-This module defines the handles for the responses to requests as well as provides a mechanism for registering additional
-handlers. The modules automatically registers ``javascript``, ``json`` and ``xml``. See :ref:`dojo/request/handlers` for
-more information.
-
-dojo/request/notify
-~~~~~~~~~~~~~~~~~~~
-
-Creates and manages the ``dojo/request/*`` topics. See :ref:`dojo/request/notify <dojo/request/notify>` for more
-information.
-
-dojo/request/watch
-~~~~~~~~~~~~~~~~~~
-
-An internal module for the used for watching and managing inflight IO requests.
-
-dojo/request/registry
-~~~~~~~~~~~~~~~~~~~~~
-
-Used mapping URIs to particular providers. Useful when certain URIs require one type of provider, but others require a
-different one (like cross domain scenarios), but allow the user to develop a single path in the code. See
-:ref:`dojo/request/registry <dojo/request/registry>` for more information.
-
-dojo/request/util
-~~~~~~~~~~~~~~~~~
-
-A set of utilities used by the ``dojo/request`` package.
+  * ``dojo/request/util`` - A set of utilities used by the ``dojo/request`` package.
 
 dojo/router
 -----------
 
-A new component for routing to different client-side “pages”.  See :ref:`dojo/router <dojo/router>` for more 
-information.
+- A new component for routing to different client-side “pages”.  See :ref:`dojo/router <dojo/router>` for more 
+  information.
 
 dojo/sniff
 ----------
 
-The ``dojo/_base/sniff`` module was superseded by ``dojo/sniff``. ``dojo/sniff`` functions the same way as the old 
+- The ``dojo/_base/sniff`` module was superseded by ``dojo/sniff``. ``dojo/sniff`` functions the same way as the old 
 module, except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
 
 dojo/Stateful
 -------------
 
-``dojo/Stateful`` now supports custom accessors for Object properties (`#15187 <http://bugs.dojotoolkit.org/ticket/15187>`_). This is similar to the functionality in ``dijit/_WidgetBase``. Setting a
-custom accessor in the format of ``_xxxSetter`` or ``_xxxGetter`` will automagically be called when ``set()`` or
-``get()`` or invoked. For example:
+- The class now supports custom accessors for Object properties (`#15187 <http://bugs.dojotoolkit.org/ticket/15187>`_). 
+  This is similar to the functionality in ``dijit/_WidgetBase``. Setting a custom accessor in the format of 
+  ``_xxxSetter`` or ``_xxxGetter`` will automagically be called when ``set()`` or ``get()`` or invoked. For example:
 
 .. js ::
 
@@ -409,159 +380,163 @@ custom accessor in the format of ``_xxxSetter`` or ``_xxxGetter`` will automagic
         this.foo = value;
       }
     });
-    
+
     var aInstance = new aClass();
-    
+
     aInstance.set("foo", "bar");
     aInstance.get("foo");
   });
 
-In addition, custom setters that will not be setting an attribute immediately (for example doing an XHR request to
-transform a value) can return a promise and the attribute watches, if any, will not be called until the promise is
-fulfilled.
+- In addition, custom setters that will not be setting an attribute immediately (for example doing an XHR request to
+  transform a value) can return a promise and the attribute watches, if any, will not be called until the promise is
+  fulfilled.
 
-There is a helper function directly setting the value of an attribute/property named ``_changeAttrValue`` that is
-intended for use when you have co-dependent values where calling ``set()`` is not appropriate, like when a ``value`` is
-set on a widget the ``checked`` state needs to change as well.
+- There is a helper function directly setting the value of an attribute/property named ``_changeAttrValue`` that is
+  intended for use when you have co-dependent values where calling ``set()`` is not appropriate, like when a ``value`` 
+  is set on a widget the ``checked`` state needs to change as well.
 
 See :ref:`dojo/Stateful <dojo/Stateful>` for further information.
 
 dojo/touch
 ----------
 
-``dojo/touch`` was enhanced to support touch.over, touch.out, touch.enter and touch.leave synthetic events similar to
-``mouseover``, ``mouseout``, ``mouseenter``, and ``mouseleave``.
+- The module was enhanced to support touch.over, touch.out, touch.enter and touch.leave synthetic events similar to
+  ``mouseover``, ``mouseout``, ``mouseenter``, and ``mouseleave``.
 
-In addition, touch.move on mobile was changed to work like ``mousemove`` on desktop, so that when connecting to a
-DOMNode:
+- In addition, touch.move on mobile was changed to work like ``mousemove`` on desktop, so that when connecting to a
+  DOMNode:
 
 .. js ::
 
-    on(node, touch.move, func)
+  require(["dojo/on", "dojo/touch"], function(on, touch){
+    on(node, touch.move, function(e){
+      // handle event here
+    });
+  });
 
-It fires whenever and only when the finger is dragged over the specified node, regardless of where the drag started.
-Behavior when connecting to a document is unchanged.
+*Note* It fires whenever and only when the finger is dragged over the specified node, regardless of where the drag started. Behavior when connecting to a document is unchanged.
 
 dojo/when
 ---------
 
-Transparently applies callbacks to values and/or promises.  See :ref:`dojo/when <dojo/when>`.
+- Transparently applies callbacks to values and/or promises.  See :ref:`dojo/when <dojo/when>`.
 
 Dijit
 =====
 
-_WidgetBase
------------
+dijit/_WidgetBase
+-----------------
 
-- widget events, including attribute changes, are emitted as events on the DOM tree
+- Widget events, including attribute changes, are emitted as events on the DOM tree
 
 .. js ::
 
-    on(dom.byId("buttonContainer"), "click", function(evt){
-        var widget = registry.getEnclosingWidget(evt.target);
-        if(widget){
-            console.log("click on widget " + widget.id);
-        }
-    });
-
+  on(dom.byId("buttonContainer"), "click", function(evt){
+    var widget = registry.getEnclosingWidget(evt.target);
+    if(widget){
+      console.log("click on widget " + widget.id);
+    }
+  });
 
 See :ref:`Widget events published to the DOM <quickstart/events#widget-events-published-to-the-dom>` for details.
 
-
-- attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, ex:
+- Attribute setters specified with string values can now point to sub-widgets as well as DOMNodes, for example:
 
 .. js ::
 
-    dojo.declare("MyWidget",
-        [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin], {
+  dojo.declare("MyWidget",
+    [dijit._WidgetBase, dijit._TemplatedMixin, dijit._WidgetsInTemplateMixin], {
 
-        templateString:
-            "<div>" +
-                "<button data-dojo-type='dijit/form/Button'
-                    data-dojo-attach-point='buttonWidget'>hi</button>" +
-                "<input data-dojo-attach-point='focusNode'>" +
-            "</div>"
+    templateString:
+      "<div>" +
+        "<button data-dojo-type='dijit/form/Button'
+          data-dojo-attach-point='buttonWidget'>hi</button>" +
+        "<input data-dojo-attach-point='focusNode'>" +
+      "</div>"
 
-        // Mapping this.label to this.buttonWidget.label
-        label: "",
-        _setLabelAttr: "buttonWidget",
+    // Mapping this.label to this.buttonWidget.label
+    label: "",
+    _setLabelAttr: "buttonWidget",
 
-        // Mapping this.value to this.focusNode DOMNode
-        value: "",
-        _setValueAttr: "focusNode",
-    });
+    // Mapping this.value to this.focusNode DOMNode
+    value: "",
+    _setValueAttr: "focusNode",
+  });
 
-Calendar
---------
+dijit/Calendar
+--------------
 
 - Can now accept a String for the value parameter (either as an argument to the constructor, or to set("value", ...).
 
 .. js ::
 
-    new dijit.Calendar({value: "2011-12-25"});
+  require(["dijit/Calendar"], {
+    var calendar = new Calendar({value: "2011-12-25"});
+  });
 
-ContentPane
------------
+dijit/layout/ContentPane
+------------------------
 
 - ContentPane now supports ``addChild()`` and ``removeChild()``. However, the behavior of ``addChild(widget, index)`` is
   undefined if the ContentPane already contains random HTML. It's intended to be used when the pane contains just a list
   of widgets, like Toolbar or BorderContainer.
 
-- ``ContentPane.addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be used carefully on
-  ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible widgets, not hidden
-  widgets such as unselected tabs of a TabContainer.
+- ``dijit/layout/ContentPane::addChild(child)`` will not call ``resize()`` on the new child widgets, so it should be 
+  used carefully on ContentPanes inside of a layout widget hierarchy. Note that ``resize()`` only works on visible 
+  widgets, not hidden widgets such as unselected tabs of a TabContainer.
 
 - ContentPane is now async aware when setting its content via the ContentSetter.
 
-DateTextBox
------------
+dijit/form/DateTextBox
+----------------------
 
 - DateTextBox's drop down Calendar no longer automatically opens upon clicking the input area, unless the
   hasDownArrow=false option is set (in which case that's the only way to open the drop down Calendar).
   (`#14142 <http://bugs.dojotoolkit.org/ticket/14142>`_)
 
-Destroyable
------------
-dijit/Destroyable is new utility mixin to track handles of an instance, and then destroy them when the instance is destroyed.
-The application must call destroy() on the instance in order to release the handles.
+dijit/Destroyable
+-----------------
 
-This functionality was extracted from _WigetBase and most users will access it through _WidgetBase (or a subclass
-of _WidgetBase).
+- dijit/Destroyable is new utility mixin to track handles of an instance, and then destroy them when the instance is 
+  destroyed. The application must call destroy() on the instance in order to release the handles.
+
+  This functionality was extracted from ``dijit/_WigetBase`` and most users will access it through 
+  ``dijit/_WidgetBase`` (or a subclass).
 
 Example usage:
 
 .. js ::
 
-    var DestroyableSubClass = declare(Destroyable, {
-        constructor: function(aStatefulObject){
-            var self = this;
-            this.domNode = domConstruct.create("button");
-            this.own(
-                // setup an event handler (automatically remove() when I'm destroyed)
-                on(this.domNode, "click", function(){ ... }),
+  var DestroyableSubClass = declare(Destroyable, {
+    constructor: function(aStatefulObject){
+      var self = this;
+      this.domNode = domConstruct.create("button");
+      this.own(
+        // setup an event handler (automatically remove() when I'm destroyed)
+        on(this.domNode, "click", function(){ ... }),
 
-                // watch external object (automatically unwatch() when I'm destroyed)
-                aStatefulObject.watch("x", function(name, oVal, nVal){ ... }),
+        // watch external object (automatically unwatch() when I'm destroyed)
+        aStatefulObject.watch("x", function(name, oVal, nVal){ ... }),
 
-                // create a supporting (internal) widget, to be destroyed when I'm destroyed
-                new MySupportingWidget(...)
-            );
-        }
-    });
+        // create a supporting (internal) widget, to be destroyed when I'm destroyed
+        new MySupportingWidget(...)
+      );
+    }
+  });
 
-Dialog
-------
+dijit/Dialog
+------------
 
 - Sizing improved for when Dialog is too big to fit in viewport. Also, sizing automatically adjusts if users resizes the
   browser window. (`#14147 <http://bugs.dojotoolkit.org/ticket/14147>`_)
 
-Editor
-------
+dijit/Editor
+------------
 
 - Performance fixes for editors with lots of text (`#14231 <http://bugs.dojotoolkit.org/ticket/14231>`_)
 
-Menu
-----
+dijit/Menu
+----------
 
 The Menu widget has two new (optional) attributes:
 
@@ -580,17 +555,17 @@ adjusted depending on the node. For example:
 .. js ::
 
   require(["dijit/registry", "dijit/Menu", "dijit/MenuItem", "dojo/query!css2"], function(registry, Menu, MenuItem){
-      var menu = new Menu({
-          targetNodeIds: ["myTable"],
-          selector: "td.foo"
-      });
-      menu.addChild(new MenuItem({
-          label: "click me"
-          onClick: function(evt){
-              var node = this.getParent().currentTarget;
-              console.log("menu clicked for node ", node);
-          }
-      }));
+    var menu = new Menu({
+      targetNodeIds: ["myTable"],
+      selector: "td.foo"
+    });
+    menu.addChild(new MenuItem({
+      label: "click me"
+      onClick: function(evt){
+        var node = this.getParent().currentTarget;
+        console.log("menu clicked for node ", node);
+      }
+    }));
   });
 
 This will track right-click events on each cell of a table with class="foo".
@@ -598,78 +573,80 @@ This will track right-click events on each cell of a table with class="foo".
 Further, the targetNode's contents can be changed freely after the Menu is created. Nodes matching the selector can be
 created or removed, and no calls to ``bindDomNode()`` or ``unBindDomNode()`` are necessary.
 
-Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
-dojo/query to handle your selector.
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to ``require()`` an appropriate level of ``dojo/query`` to handle your selector.
 
-TabContainer
-------------
-You can now disable tabs by setting the disabled property of the pane:
+dijit/layout/TabContainer
+-------------------------
+
+- You can now disable tabs by setting the disabled property of the pane:
 
 .. js ::
 
     pane.set("disabled", true);
 
-Tooltip
--------
+dijit/Tooltip
+-------------
 
 The Tooltip widget has two new (optional) parameters:
 
-  - selector:
-    CSS selector that specifies that the Tooltip should be attached, via event delegation,
-    to matching subnodes of the connectId node, rather than the connectId itself.
+- selector:
+
+  CSS selector that specifies that the Tooltip should be attached, via event delegation,
+  to matching subnodes of the connectId node, rather than the connectId itself.
   
-  - getContent():
-    lets the app customize the tooltip text that's displayed based on the node that triggered
-    the tooltip.
+- getContent():
+
+  lets the app customize the tooltip text that's displayed based on the node that triggered
+  the tooltip.
 
 These parameters allow a single Tooltip widget to display unique tooltips for (for example) each row in a table:
 
 .. js ::
 
-  new Tooltip({
-    connectId: myTable,
-    selector: "tr",
-    getContent: function(matchedNode){ return ...; /* String */}
+  require(["dijit/Tooltip"], function(Tooltip){
+    var tooltip = new Tooltip({
+      connectId: myTable,
+      selector: "tr",
+      getContent: function(matchedNode){ return ...; /* String */ }
+    });
   });
 
 Further, the table contents can be changed freely after the Tooltip is created. Rows can be created, removed, or
 modified, and no calls to the Tooltip widget are necessary.
 
-Another example: specifying selector=".dijitTreeRow" will track mouseenter and mouseleave events on each row of a Tree,
-rather than merely monitoring mouseenter/mouseleave on the Tree itself.
+Another example: specifying ``selector=".dijitTreeRow"`` will track ``mouseenter`` and ``mouseleave`` events on each row of a Tree, rather than merely monitoring ``mouseenter``/``mouseleave`` on the Tree itself.
 
-Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to require() an appropriate level of
-dojo/query to handle your selector.
+Note that, like :ref:`dojo/on::selector() <dojo/on#selector-function>`, you need to ``require()`` an appropriate level 
+of ``dojo/query`` to handle your selector.
 
-Tree
-----
+dijit/Tree
+----------
 
 - New :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` class for connecting 
   :ref:`dijit/Tree <dijit/Tree>` to stores with the new :ref:`dojo.store <dojo/store>` API. 
   (`#13781 <http://bugs.dojotoolkit.org/ticket/13781>`_)
 
-- persist=true flag also saves (and restores) selected Tree nodes (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
+- ``persist=true`` flag also saves (and restores) selected Tree nodes 
+  (`#14058 <http://bugs.dojotoolkit.org/ticket/14058>`_)
 
-- New expandAll()/collapseAll() methods for expanding/collapsing all the nodes in a Tree dynamically
+- New ``expandAll()``/``collapseAll()`` methods for expanding/collapsing all the nodes in a Tree dynamically
   (`#14287 <http://bugs.dojotoolkit.org/ticket/14287>`_)
 
-- Tree DnD now works on touch devices.
+- Tree Drag and Drop now works on touch devices.
 
-Claro
------
+Themes - Claro
+--------------
 
-All browsers except IE now implement shading in the claro theme via CSS gradients, rather than by using images. This
+All browsers except IE now implement shading in the ``claro`` theme via CSS gradients, rather than by using images. This
 reduces the number of files downloaded, speeding up page load.
 
-Also, the remaining gradient images files (for IE) no longer contain any blue. Thus, customizing claro to a different
-does not require modifying those files. You are still required however to update icon files that contain the theme's
-primary color, such as:
+Also, the remaining gradient images files (for IE) no longer contain any blue. Thus, customizing ``claro`` to a different does not require modifying those files. You are still required however to update icon files that contain the theme's primary color, such as:
 
-- checkboxes and radio buttons
+- Checkboxes and radio buttons
 
-- the slider handles
+- The slider handles
 
-- calendar arrows
+- Calendar arrows
 
 - Dialog and TabContainer close icons
 
@@ -677,16 +654,17 @@ primary color, such as:
 
 Performance Improvements
 ------------------------
-There have been many performance improvements to dijit:
 
-- CSS gradients used in claro (see above)
+There have been many performance improvements to ``dijit``:
 
-- _CssStateMixin now creates listeners at the document level, rather than separate listeners for each widget. This
-  speeds up page instantiation time, especially on a page with many small widgets like TextBoxes, Buttons, Trees
+- CSS gradients used in ``claro`` (see above)
+
+- ``dijit/_CssStateMixin`` now creates listeners at the document level, rather than separate listeners for each widget. 
+  This speeds up page instantiation time, especially on a page with many small widgets like TextBoxes, Buttons, Trees
   (because of the many rows of the Tree), and Menus.
 
 - Similar event delegation changes were made for Menu and Tree, putting the listeners on the Menu or Tree rather than
-  each individual MenuItem/TreeNode
+  each individual MenuItem/TreeNode.
 
 - Performance improvement for TabContainers with closable tabs, because only one close Menu is created per TabContainer,
   rather than one Menu per tab. Event handling was also moved to TabContainer level rather than at each individual tab.
@@ -694,109 +672,143 @@ There have been many performance improvements to dijit:
 DojoX
 =====
 
-Charting
---------
+dojox/charting
+--------------
 
-- A new dropLabels mode was introduced on axis. It is true by default and allows to drop superfluous labels on the axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that by:
+- A new dropLabels mode was introduced on axis. It is true by default and allows to drop superfluous labels on the 
+  axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that by:
 
    * setting dropLabels to false (but then you don't get the automatic drop labels)
    * setting minorLabels to false if you know minorLabels won't show up anyway
 
 - Bars, Columns and their stacked versions as well as Pie plots now support drop shadow property.
 
-- dojox.charting.widget classes now inherits from _WidgetBase instead of _Widget.
+- ``dojox/charting/widget`` classes now inherits from ``dijit/_WidgetBase`` instead of ``dijit/_Widget``.
 
-- Base class for themes is now SimpleTheme instead of Theme. Themes that require gradients still need to use Theme which now inherits from SimpleTheme.
+- Base class for themes is now SimpleTheme instead of Theme. Themes that require gradients still need to use Theme 
+  which now inherits from SimpleTheme.
 
-- Provide a styleFunc on the various plots to allow to dynamically style the plot items.
+- Provide a ``styleFunc`` on the various plots to allow to dynamically style the plot items.
 
 - Improve the management of missing data point in line-based plot by providing a interpolate option.
 
-Calendar
---------
+dojox/calendar
+--------------
 
-A new Calendar component is introduced in dojox.calendar package. It displays events from a data store along time using
-widespread representation and allows to interactively edit the position in time and duration of these events.
-See :ref:`Calendar reference guide <dojox/calendar>`. 
+- A new Calendar component is introduced in ``dojox/calendar`` package. It displays events from a data store over a 
+  time duration and allows the interactive editing of the position in time and duration of these events. See 
+  :ref:`dojox/calendar <dojox/calendar>`. 
 
-CometD
-------
+dojox/cometd
+------------
 
-The CometD library has been removed from DojoX. The CometD project now maintains its own Dojo library in AMD format
-as part of their project. This will be available via cpm, or may be downloaded from GitHub.
+- The CometD library has been removed from DojoX. The CometD project now maintains its own Dojo library in AMD format 
+  as part of their project. This will be available via ``cpm``, or may be downloaded from GitHub.  See: 
+  `CometD Project <http://cometd.org/>`_.
 
-Gauges
-------
-
-A new gauges package is introduced in dojox.dgauges package. It provides a fully extensible gauges framework allowing
-you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and rectangular
-gauges (horizontal and vertical) are supported.
-See :ref:`Gauge Framework Reference Guide <dojox/dgauges>`.
-
-Lightstreamer
+dojox/dgauges
 -------------
 
-The LightstreamerStore has been removed from DojoX. The Lightstreamer project now maintains its own Dojo library in
-AMD format as part of their project. This will be available via cpm, or may be downloaded from GitHub.
+- A new gauges package is introduced in ``dojox/dgauges`` package. It provides a fully extensible gauges framework 
+  allowing you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and 
+  rectangular gauges (horizontal and vertical) are supported. See :ref:`dojox/dguages <dojox/dgauges>`.
 
-Treemap
--------
+dojox/data/LightstreamerStore
+-----------------------------
 
-A new Treemap component is introduced in dojox.treemap package. It displays data as a set of colored, potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down capabilities. They reveal data patterns and trends easily. 
-See :ref:`Treemap Reference Guide <dojox/treemap>`.
+- The ``dojox/data/LightstreamerStore`` has been removed from DojoX. The Lightstreamer project now maintains its own 
+  Dojo library in AMD format as part of their project. This will be available via ``cpm``, or may be downloaded from 
+  GitHub. See: `Lightstreamer <http://www.lightstreamer.com/>`_.
 
+dojox/treemap
+-------------
 
-Mobile
-------
+- A new Treemap component is introduced in the ``dojox/treemap`` package. It displays data as a set of colored, 
+  potentially nested, rectangular cells. Treemaps can be used to explore large data sets by using convenient drill-down 
+  capabilities. They reveal data patterns and trends easily. See :ref:`dojox/treemap <dojox/treemap>`.
+
+dojox/mobile
+------------
 
 New Widgets
 ~~~~~~~~~~~
 
-The following Dojo Mobile widgets are new in Dojo 1.8. Click each widget name for details.
+The following Dojo Mobile widgets are new in Dojo 1.8. Click each widget name for details:
 
 * :ref:`TreeView <dojox/mobile/TreeView>`
+
 * :ref:`RoundRectStoreList <dojox/mobile/RoundRectStoreList>`
+
 * :ref:`EdgeToEdgeStoreList <dojox/mobile/EdgeToEdgeStoreList>`
+
 * :ref:`Container <dojox/mobile/Container>`
+
 * :ref:`Pane <dojox/mobile/Pane>`
+
 * :ref:`ScrollablePane <dojox/mobile/ScrollablePane>`
+
 * :ref:`SearchBox <dojox/mobile/SearchBox>`
+
 * :ref:`Accordion <dojox/mobile/Accordion>`
+
 * :ref:`GridLayout <dojox/mobile/GridLayout>`
+
 * :ref:`IconMenu <dojox/mobile/IconMenu>`
+
 * :ref:`IconMenuItem <dojox/mobile/IconMenuItem>`
+
 * :ref:`ScreenSizeAware <dojox/mobile/ScreenSizeAware>`
+
 * :ref:`SimpleDialog <dojox/mobile/SimpleDialog>`
+
 * :ref:`ProgressBar <dojox/mobile/ProgressBar>`
+
 * :ref:`Rating <dojox/mobile/Rating>`
+
 * :ref:`CarouselItem <dojox/mobile/CarouselItem>`
+
 * :ref:`DataCarousel <dojox/mobile/DataCarousel>`
+
 * :ref:`StoreCarousel <dojox/mobile/StoreCarousel>`
+
 * :ref:`ValuePicker <dojox/mobile/ValuePicker>`
+
 * :ref:`ValuePickerSlot <dojox/mobile/ValuePickerSlot>`
+
 * :ref:`ValuePickerDatePicker <dojox/mobile/ValuePickerDatePicker>`
+
 * :ref:`ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`
+
 * :ref:`DatePicker <dojox/mobile/DatePicker>`
+
 * :ref:`TimePicker <dojox/mobile/TimePicker>`
+
 * :ref:`Audio <dojox/mobile/Audio>`
+
 * :ref:`Video <dojox/mobile/Video>`
+
 * :ref:`Badge <dojox/mobile/Badge>`
+
 * :ref:`Icon <dojox/mobile/Icon>`
 
-dojox.mobile.parser
+dojox/mobile/parser
 ~~~~~~~~~~~~~~~~~~~
 
-- stopParser
+- ``stopParser``
 
-To support dojox.mvc, the stopParser feature was added to dojox.mobile.parser. If a widget has the stopParser flag, the parser stops parsing its child widgets. dojo.parser has this capability, but dojox.mobile.parser didn't until 1.8 to keep the code size small.
+  To support ``dojox/mvc``, the stopParser feature was added to ``dojox/mobile/parser``. If a widget has the 
+  ``stopParser`` flag, the parser stops parsing its child widgets. ``dojo/parser`` has this capability, but 
+  ``dojox/mobile/parser`` didn't until 1.8 to keep the code size small.
  
-- New data-dojo-type syntax
+- New ``data-dojo-type`` syntax
 
-dojox.mobile.parser accepts the new data-dojo-type syntax like data-dojo-type="dijit/form/Button".
+  ``dojox/mobile/parser`` accepts the new ``data-dojo-type`` syntax using the MID (e.g. 
+  ``data-dojo-type="dijit/form/Button"``).
 
 - Function type property
 
-dojox.mobile.parser handles function-type properties correctly. In the following example, the onClick() method of the ListItem widget is overridden by the myClick function.
+  ``dojox.mobile.parser`` handles function-type properties correctly. In the following example, the ``onClick()`` 
+  method of the ListItem widget is overridden by the myClick function.
 
 .. html ::
 
@@ -805,16 +817,18 @@ dojox.mobile.parser handles function-type properties correctly. In the following
       Slide
   </li>
 
-ProgressIndicator
-~~~~~~~~~~~~~~~~~
+dojox/mobile/ProgressIndicator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ProgressIndicator was a singleton non-widget module. In 1.8, it is an ordinary widget which inherits from _WidgetBase. A new enhanced ProgressIndicator has the ability to customize size, color, and display position. See :ref:`ProgressIndicator <dojox/mobile/ProgressIndicator>` for details.
+- ProgressIndicator was a singleton non-widget module. In 1.8, it is an ordinary widget which inherits from 
+  ``dijit/_WidgetBase``. A new enhanced ProgressIndicator has the ability to customize size, color, and display 
+  position. See :ref:`dojox/mobile/ProgressIndicator <dojox/mobile/ProgressIndicator>` for details.
 
 New Build Profile
 ~~~~~~~~~~~~~~~~~
 
-A webkit-mobile build profile was added to eliminate IE etc. code paths from a build intended only to run on
-webkit-mobile devices.
+- A webkit-mobile build profile was added to eliminate IE etc. code paths from a build intended only to run on 
+  webkit-mobile devices.
 
 To create this special build:
 
@@ -823,48 +837,66 @@ To create this special build:
   $ cd util/buildscripts/
   $ ./build.sh releaseDir=... action=release optimize=closure profile=webkitMobile
 
+dojox/gfx
+---------
 
+- The GFX API now supports clipping at shape level via the new ``Shape.setClip(clipGeometry)`` method. The possible 
+  clipping geometry types are ``rectangle``, ``ellipse``, ``polyline`` and ``path`` (vml only supports rectangle 
+  clipping, while the GFX silverlight renderer does not support path clipping.
 
-Gfx
----
+- A new ``Shape.destroy()`` method has been added to properly dispose a shape when it is not used anymore. The 
+  ``Group.clear()`` method has been updated to take an optional boolean parameter that indicates whether the group 
+  children should be disposed while clearing the group.
 
-- The Gfx API now supports clipping at shape level via the new Shape.setClip(clipGeometry) method. The possible clipping geometry types are rectangle, ellipse, polyline and path (vml only supports rectangle clipping, while the gfx silverlight renderer does not support path clipping.
+- The ``Group.getBoundingBox()`` method now returns the children bounding rectangle.
 
-- A new Shape.destroy() method has been added to properly dispose a shape when it is not used anymore. The Group.clear() method has been updated to take an optional boolean parameter that indicates whether the group children should be disposed while clearing the group.
+- New modules specific to the SVG and canvas renderers have been added, respectively ``dojox/gfx/svgext`` and 
+  ``dojox/gfx/canvasext``. The purpose of these modules is to give the user access to the specific capabilities of the 
+  renderer:
 
-- The Group.getBoundingBox() method now returns the children bounding rectangle.
+  * ``canvasext`` defines new methods enabling access to the Canvas pixel manipulation API, via the new 
+    ``Surface.getContext()``, ``Surface.getImageData()`` and the ``Surface.render()`` public method. 
 
-- New modules specific to the svg and canvas renderers have been added, respectively dojox/gfx/svgext and dojox/gfx/canvasext. The purpose of these modules is to give the user access to the specific capabilities of the renderer.
-   * canvasext defines new methods enabling access to the Canvas pixel manipulation API, via the new Surface.getContext(), Surface.getImageData() and the Surface.render() public method. 
-   * svgext defines a new Shape.addRenderingOption(option, value) that adds the specified SVG rendering option on this shape, as specified by the SVG specification (http://www.w3.org/TR/SVG/painting.html#RenderingProperties)
+  * ``svgext`` defines a new ``Shape.addRenderingOption(option, value)`` that adds the specified SVG rendering option 
+    on this shape, as specified by the 
+    `SVG specification <http://www.w3.org/TR/SVG/painting.html#RenderingProperties>`_.
 
-Mvc
----
+dojox/mvc
+---------
 
-- The Mvc API now supports binding to attributes in addition to value, along with support to transform data and support one way binding to or from a model in addition to the support for two way binding.
+- The MVC API now supports binding to attributes in addition to value, along with support to transform data and support 
+  one way binding to or from a model in addition to the support for two way binding.
 
-- :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated in favor of different controller options which give the developer more fexibility.
+- :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated in favor of different controller options 
+  which give the developer more flexibility.
 
-- See :ref:`dojox/mvc <dojox/mvc>` for more information.
+See :ref:`dojox/mvc <dojox/mvc>` for more information.
 
-App
----
+dojox/app
+---------
 
-Dojox.app framework now gives a clearer MVC structure by providing application controllers (dojox/app/Controller), 
-view objects (dojox/app/View) and integration with data model/binding (dojox/mvc).
+- ``dojox/app`` framework now gives a clearer MVC structure by providing application controllers (``dojox/app/Controller``), view objects (``dojox/app/View``) and integration with data model/binding (``dojox/mvc``):
 
-* dojox/app/view has been removed, use dojox/app/View to create the view instance and render view widget.
-* dojox/app/scene has been removed, dojox/app/View can have parent view and children views removing the need for a specific object.
-* dojox/app/bind has been removed, use dojox/mvc controllers which give the developer more fexibility.
-* dojox/app/Controller has been added to add more fexibility in controlling the application, several controllers are provided in dojox/app/controllers package: Load controller, Transition controller, Layout controller and History controller
-* dojox/app/widgets/Container has been added as a scrollable and layout widget.
+  * ``dojox/app/view`` has been removed, use ``dojox/app/View`` to create the view instance and render view widget.
+
+  * ``dojox/app/scene`` has been removed, ``dojox/app/View`` can have parent view and children views removing the need 
+    for a specific object.
+
+  * ``dojox/app/bind`` has been removed, use ``dojox/mvc`` controllers which give the developer more flexibility.
+
+  * ``dojox/app/Controller`` has been added to add more flexibility in controlling the application, several controllers 
+    are provided in ``dojox/app/controllers`` package: Load controller, Transition controller, Layout controller and 
+    History controller
+
+  * ``dojox/app/widgets/Container`` has been added as a scrollable and layout widget.
 
 See :ref:`dojox/app <dojox/app>` for more information.
 
 Util
 ====
 
-The documentation scripts at ``docscripts`` have been deprecated and replaced with a new documentation parser that works properly with AMD modules.
+- The documentation scripts at ``docscripts`` have been deprecated and replaced with a new documentation parser that 
+  works properly with AMD modules.
 
 util/build
 ----------
@@ -877,7 +909,7 @@ array of a layer and tag them as declarative:
 
   var profile = {
     action: "release",
-    
+
     packages:[{
       name: "dojo",
       location: "./dojo"
@@ -885,13 +917,13 @@ array of a layer and tag them as declarative:
       name: "app",
       location: "./app"
     }],
-    
+
     layers: {
       "app/main": {
         include: ["app/index.html"]
       }
     },
-    
+
     resourceTags: {
       declarative: function(filename){
         return /\.htm(l)?$/.test(filename);
@@ -905,199 +937,240 @@ Demos
 New Demos
 ---------
 
-- tracTreemap: a treemap demo visualizing trac ticket status
+- `tracTreemap <http://demos.dojotoolkit.org/demos/tracTreemap/demo.html>`_: a Treemap demo visualizing Trac ticket 
+  status
 
-- calendar: a calendar component demo
+- `calendar <http://demos.dojotoolkit.org/demos/calendar/demo.html>`_: a Calendar component demo
 
-- todoApp: a "todo" application leveraging dojox/mobile, dojox/app & dojox/mvc packages
+- `todoApp <http://demos.dojotoolkit.org/demos/todoApp/demo.html>`_: a "ToDo" application leveraging ``dojox/mobile``, 
+  ``dojox/app`` & ``dojox/mvc`` packages
 
-- parserAutoRequire: a demonstration application for the auto-requirement and declarative requirement features of 
-  dojo/parser.
+- `parserAutoRequire <http://demos.dojotoolkit.org/demos/parserAutoRequire/demo.html>`_: a demonstration application 
+  for the auto-requirement and declarative requirement features of ``dojo/parser``
 
-Updated demos
+Updated Demos
 -------------
 
-- mobileGallery: the mobile gallery now highlights the latest dojox/mobile features
+- `mobileGallery <http://demos.dojotoolkit.org/demos/mobileGallery/demo.html>`_: the mobile gallery now highlights the 
+  latest ``dojox/mobile`` features
 
-- gauges & mobileGauges: the gauges demos now use the new dojox/dgauges package
+- `gauges <http://demos.dojotoolkit.org/demos/guages/demo.html>`_ and 
+  `mobileGauges <http://demos.dojotoolkit.org/demos/mobileGuages/demo.html>`_: the gauges demos now use the new 
+  ``dojox/dgauges`` package
 
-- mobileStockPortfolio: updates to contains live chart & other enhancements
+- `mobileStockPortfolio <http://demos.dojotoolkit.org/demos/mapTileProviders/demo.html>`_: updates to demo to include a 
+  "live" chart & other enhancements
 
-Migration
-=========
+Migration Notes
+===============
+
+dojo/parser
+-----------
+
+- The ``dojo/parser`` can operate in an async fashion when running under ``async: true`` configuration and using 
+  auto-require or declarative require features.  If the results of `parse()` are needed, utilise the returned promise.  
+  Also any errors encountered during the parse will be raised as a promise errback.
 
 Dijit
 -----
-- Constructor parameters: Execution of custom setters during widget construction has slightly changed.
-  This may affect custom widgets that adjust widget parameters in postMixInProperties().
 
-  As before, during initialization, _setXyzAttr(val) is called for each attribute xyz passed to the constructor
-  where the attribute has a corresponding _setXyzAttr() function or string.
-  The change is that the value passed is the value specified to the constructor, rather than this.xyz.
-  In other words, given a widget like
+- Constructor Parameters: Execution of custom setters during widget construction has slightly changed.
+  This may affect custom widgets that adjust widget parameters in ``postMixInProperties()``.
+
+  As before, during initialization, ``_setXyzAttr(val)`` is called for each attribute ``xyz`` is passed to the 
+  constructor where the attribute has a corresponding ``_setXyzAttr()`` function or string.  The change is that the 
+  value passed is the value specified to the constructor, rather than ``this.xyz``. In other words, given a widget like:
 
   .. js ::
 
     declare("MyWidget", {
-         this.xyz: "",
-         postMixInProperties: function(){
-             this.xyz = "dog";
-         },
-         _setXyzAttr(val){
-            ...
-         }
-    }
+      this.xyz: "",
+      postMixInProperties: function(){
+        this.xyz = "dog";
+      },
+      _setXyzAttr(val){
+        // ...
+      }
+    };
 
   and then calling the constructor with a custom value:
 
   .. js ::
 
-    new MyWidget({xyz: "cat"})
+    new MyWidget({ xyz: "cat" });
 
-  Then _setXyzAttr("cat") will be called, rather than _setXyzAttr("dog") like before.
+  ``_setXyzAttr("cat")`` would be called, rather than ``_setXyzAttr("dog")`` as before.
 
-- Connecting to Menu._openMyself(): If you have menus on Trees etc. where you have connected to the private
-  method Menu._openMyself(), you should switch to the pattern shown above in the Menu section.
+- Connecting to ``dijit/Menu::_openMyself()``: If you have menus on Trees etc. where you have connected to the private 
+  method ``dojo/Menu::_openMyself()``, you should switch to the pattern shown above in the Menu section.
 
-- Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or TabButton,
-  you should edit the templates to remove the data-dojo-attach-event="..." attributes.
-
+- Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or 
+  TabButton, you should edit your templates to remove the ``data-dojo-attach-event="..."`` attributes.
 
 dojox/charting
 --------------
-dojox/charting/Theme use to be automatically required by dojox/charting/Chart. This is not the case anymore, if you use it, you need to explicitly require it in your application.
+
+- ``dojox/charting/Theme`` used to be automatically required by ``dojox/charting/Chart``. This is not the case anymore, 
+  if you use it, you need to explicitly require it in your application.
 
 dojox/mobile
 ------------
+
 migrationAssist
 ~~~~~~~~~~~~~~~
 
-The dojox/mobile/migrationAssist module helps you migrate your dojox.mobile applications from 1.6/1.7 to 1.8. To enable migrationAssist, all you need to do is require this module as shown in the examples below.
- 
-sync mode example:
+- The ``dojox/mobile/migrationAssist`` module helps you migrate your ``dojox/mobile`` applications from 1.6/1.7 to 1.8. 
+  To enable ``migrationAssist``, all you need to do is require this module as shown in the examples below.
 
-.. html ::
+  Legacy mode example:
 
-    <script language="JavaScript" type="text/javascript">
-        dojo.require("dojox.mobile.migrationAssist");
-        dojo.require("dojox.mobile"); // This is a mobile app.
-        ....
-    </script>
+  .. js ::
 
- 
-async mode example:
+    dojo.require("dojox.mobile.migrationAssist");
+    dojo.require("dojox.mobile"); // This is a mobile app.
+    // ...
 
-.. html ::
+  AMD Style example:
 
-    <script language="JavaScript" type="text/javascript">
-        require([
-            "dojox/mobile/migrationAssist",
-            "dojox/mobile", // This is a mobile app.
-            ....
-        ]);
-    </script>
+  .. js ::
 
- 
+    require([
+      "dojox/mobile/migrationAssist",
+      "dojox/mobile", // This is a mobile app.
+      // ....
+    ]);
 
-If your application uses deprecated or no longer available functions, this module detects them and displays messages in the browser console.
+  If your application uses deprecated or no longer available functions, this module detects them and displays messages 
+  in the browser console.
 
-Also, it tries to dynamically fix them as much as possible so that the target application can work somehow. For example, dojox.mobile.View is no longer a container-type widget, and thus you cannot use addChild to add a child widget to View. This module dynamically inserts the addChild method into View in case the application is using it.
+  Also, it tries to dynamically fix them as much as possible so that the target application can work somehow. For 
+  example, ``dojox/mobile/View`` is no longer a container-type widget, and thus you cannot use ``addChild`` to add a 
+  child widget to View. This module dynamically inserts the ``addChild`` method into View in case the application is 
+  using it.
 
-Note, however, that the purpose of migrationAssist is not to run the older applications as they are, but to assist migration.
+  Note, however, that the purpose of migrationAssist is not to run the older applications as they are, but to assist 
+  migration.
 
-The remainder of this section gives a complete list of changes in dojox.mobile that may require to modify your application, so you can also migrate your application without using the migrationAssist module.
+The remainder of this section gives a complete list of changes in ``dojox/mobile`` that may require a modification to your application, so you can also migrate your application without using the ``migrationAssist`` module.
 
 Carousel
 ~~~~~~~~
-- The Carousel widget has been refactored and the new API has no backward compatibility, since it was experimental in 1.7. The new Carousel base class does not support data stores any more. There are two subclasses that support data stores. Use :ref:`DataCarousel <dojox/mobile/DataCarousel>` if you want to use carousel with dojo.data. Use :ref:`StoreCarousel <dojox/mobile/StoreCarousel>` if you want to use carousel with dojo.store.
+
+- The Carousel widget has been refactored and the new API and has no backward compatibility, since it was experimental 
+  in 1.7. The new Carousel base class does not support data stores any more. There are two subclasses that support data 
+  stores. Use :ref:`dojox/mobile/DataCarousel <dojox/mobile/DataCarousel>` if you want to use carousel with the 
+  ``dojo/data`` API. Use :ref:`dojox/mobile/StoreCarousel <dojox/mobile/StoreCarousel>` if you want to use carousel 
+  with the ``dojo/store`` API.
 
 FixedSplitter
 ~~~~~~~~~~~~~
-- FixedSplitter.css is no longer in the themes/common folder. It is in the device theme folder. (e.g. themes/iphone/FixedSplitter.css)
+
+- ``FixedSplitter.css`` is no longer in the themes/common folder. It is in the device themes folders. (e.g. 
+  ``themes/iphone/FixedSplitter.css``)
 
 FlippableView
 ~~~~~~~~~~~~~
+
 - FlippableView was deprecated in 1.7, and removed in 1.8. Use SwapView instead.
 
 ListItem
 ~~~~~~~~
-- The sync property is no longer supported. It always behaves asynchronously.
-- The btnClass property is no longer supported. Use rightIcon instead.
-- The btnClass2 property is no longer supported. Use rightIcon2 instead.
+
+- The ``sync`` property is no longer supported. It always behaves asynchronously.
+
+- The ``btnClass`` property is no longer supported. Use ``rightIcon`` instead.
+
+- The ``btnClass2`` property is no longer supported. Use ``rightIcon2`` instead.
 
 SpinWheel
 ~~~~~~~~~
-- SpinWheel.css is no longer in the themes/common folder. It is in the device theme folder. (e.g. themes/iphone/SpinWheel.css)
-- getValue() is no longer supported. Use get("values") instead.
-- setValue() is no longer supported. Use set("values", newValue) instead.
+
+- ``SpinWheel.css`` is no longer in the themes/common folder. It is in the devices themes folder. (e.g. 
+  ``themes/iphone/SpinWheel.css``)
+
+- ``getValue()`` is no longer supported. Use ``get("values")`` instead.
+
+- ``setValue()`` is no longer supported. Use ``set("values", newValue)`` instead.
 
 SpinWheelSlot
 ~~~~~~~~~~~~~
-- getValue() is no longer supported. Use get("value") instead.
-- getKey() is no longer supported. Use get("key") instead.
-- setValue() is no longer supported. Use set("value", newValue) instead.
+
+- ``getValue()`` is no longer supported. Use ``get("value")`` instead.
+
+- ``getKey()`` is no longer supported. Use ``get("key")`` instead.
+
+- ``setValue()`` is no longer supported. Use ``set("value", newValue)`` instead.
 
 Switch
 ~~~~~~
-- When you place it in a ListItem, class="mblItemSwitch" is no longer necessary.
+
+- When you place it in a ListItem, ``class="mblItemSwitch"`` is no longer necessary.
 
 TabBar
 ~~~~~~
-In 1.7 or older, barType="segmentedControl" produced different UIs
-according to the current theme. In the iphone theme, it was a
-segmented control, but in other themes, it was tabs with or without
-icons. In 1.8, however, barType="segmentedControl" always produces a
-segmented control UI regardless of the current theme.
 
-If you still need the old behavior,
+- In 1.7 and prior, ``barType="segmentedControl"`` produced different UIs according to the current theme. In the 
+  ``iphone`` theme, it was a segmented control, but in other themes, it was tabs with or without icons. In 1.8, 
+  however, ``barType="segmentedControl"`` always produces a segmented control UI regardless of the current theme.
 
-.. html ::
+  If you still need the old behavior the following:
 
-      barType:{"iphone_theme":"segmentedControl","*":"tallTab"}
+  .. js ::
 
-should produce a segmented control for the iphone theme, and a tall
-tab bar for the other themes. You need to use deviceTheme.js to
-specify barType that way.  Also, if you want to hide the tab icons of the
-segmented control in the iphone theme, you could apply a css like this:
+    barType:{ "iphone_theme": "segmentedControl", "*": "tallTab" }
 
-.. html ::
+  Should produce a segmented control for the ``iphone`` theme, and a tall tab bar for the other themes. You need  to 
+  use ``deviceTheme.js`` to specify ``barType`` that way.
+  
+- Also, if you want to hide the tab icons of the segmented control in the ``iphone`` theme, you could apply the CSS 
+  like this:
 
-  <style>
-  .iphone_theme .mblTabBarSegmentedControl .mblTabBarButtonIconArea {
+  .. css ::
+
+    .iphone_theme .mblTabBarSegmentedControl .mblTabBarButtonIconArea {
       display: none;
-  }
-  </style>
+    }
 
-See test_ScrollableView-demo.html for an example usage.
+  See ``test_ScrollableView-demo.html`` for an example usage.
 
 TabBarButton
 ~~~~~~~~~~~~
-- Specifying a DOM Button with the class attribute like class="mblDomButtonWhitePlus" is no longer supported. Use icon="mblDomButtonWhitePlus" instead.
-- select() and deselect() are no longer supported. Use set("selected", boolean) instead.
+
+- Specifying a DOM Button with the class attribute like ``class="mblDomButtonWhitePlus"`` is no longer supported. Use 
+  ``icon="mblDomButtonWhitePlus"`` instead.
+
+- ``select()`` and ``deselect()`` are no longer supported. Use ``set("selected", boolean)`` instead.
 
 ToolBarButton
 ~~~~~~~~~~~~~
-- Specifying the button color style with the class attribute like class="mblColorBlue" is no longer supported. Use defaultColor="mblColorBlue" instead.
-- Specifying a DOM Button with the class attribute like class="mblDomButtonWhitePlus" is no longer supported. Use icon="mblDomButtonWhitePlus" instead.
-- select() and deselect() are no longer supported. Use set("selected", boolean) instead.
 
-dojox.mobile.parser
+- Specifying the button color style with the class attribute like ``class="mblColorBlue"`` is no longer supported. Use 
+  ``defaultColor="mblColorBlue"`` instead.
+
+- Specifying a DOM Button with the class attribute like ``class="mblDomButtonWhitePlus"`` is no longer supported. Use 
+  ``icon="mblDomButtonWhitePlus"`` instead.
+
+- ``select()`` and ``deselect()`` are no longer supported. Use ``set("selected", boolean)`` instead.
+
+dojox/mobile/parser
 ~~~~~~~~~~~~~~~~~~~
-- dojox.mobile.parser no longer accepts array-type attributes like:
 
-.. html ::
+- ``dojox/mobile/parser`` no longer accepts array-type attributes like:
 
-     labels="['A','B','C','D','E']"
+  .. html ::
 
-Instead, you should specify array-type attributes as follows:
+    <div data-dojo-type="..." labels="['A','B','C','D','E']"></div>
 
-.. html ::
+  Instead, you should specify array-type attributes as follows:
 
- labels="A,B,C,D,E"
+  .. html ::
 
-which is the format dojo.parser accepts.
+    <div data-dojo-type="..." labels="A,B,C,D,E"></div>
+
+  This is the same format ``dojo/parser`` accepts.
 
 bookmarkable
 ~~~~~~~~~~~~
-- To enable the bookmarkable feature, require dojox.mobile.bookmarkable instead of dojo.hash. See `View Navigation History Management <bookmarkable>`_ for details.
 
+- To enable the bookmarkable feature, require ``dojox/mobile/bookmarkable`` instead of ``dojo/hash``. See 
+  :ref:`View Navigation History Management <dojox/mobile/bookmarkable>` for details.
