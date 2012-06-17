@@ -1,16 +1,43 @@
 .. _developer/metadoc:
 
-======================================
-Editing Dojo's Reference Documentation
-======================================
+==============================
+Editing Dojo's Reference Guide
+==============================
 
 .. contents ::
+  :depth: 2
 
+The dojo reference documentation is stored at https://github.com/dojo/docs.  The documentation is all flat text files, 
+in reStructuredText (reST) format.
 
-The dojo reference documentation is stored at https://github.com/dojo/docs.  The documentation is all flat text files, in reST format.
+General Style Notes
+===================
 
-Documentation Formatting Rules
-==============================
+The Reference Guide is a reference guide.  This means that it isn't a tutorial, it isn't the API documentation.  It is designed to provide a lookup reference describing packages and modules, their usage and examples.  Some general considerations you should make when editing the documentation:
+
+* Be concise and brief.
+
+* Cross-reference a lot.
+
+* Avoid writing in the singular first person (e.g. *My example...* or *I would recommend...*).  This is technical 
+  documentation not written by a single author.  It would be better to utilize *An example...* or *It is 
+  recommended...*.
+
+* Historically, there was a lot of "new in Dojo 1.4" notes.  These have quickly become dated.
+
+* The foundation packages are Dojo, Dijit and DojoX.  Please note the capitalization.  The entire toolkit is referred 
+  to as the Dojo Toolkit or DTK.  You can refer to Dojo Core and Dojo Base, although this is having less meaning and 
+  may not be appropriate for Dojo 2.0.
+
+* The preference is for US English spelling of English words (e.g. *color* not *colour*).
+
+* When referring to a module, package, property, etc. utilize the double back ticks (\`\`) to mark the words as inline 
+  code (e.g. ``dojo/_base/kernel``, ``dijit/layout/ContentPane`` or ``data-dojo-type``).
+
+* Use a spellchecker!
+
+Documentation Formatting
+========================
 
 A handy reference guide of reST syntax is available at http://docutils.sourceforge.net/docs/user/rst/quickref.html.
 
@@ -25,18 +52,18 @@ Each page must contain some basic information. When creating a page via the wiki
 
 The above would point to a file at foo/bar/baz.rst
 
-Next, include a top-level page heading. It can be anything, and serves as the document title. Many Dojo pages simply use the module as the first title::
+Next, include a top-level page heading. It can be anything, and serves as the document title. When documenting a package or module, the title should be the package or module (in *path* notation versus *dot*)::
 
     ===========
-    foo.bar.baz
+    foo/bar/baz
     ===========
 
-The number of ``=`` characters must be equal or greater than the length of the title.
+The number of ``=`` characters must be equal or greater than the length of the title.  Common convention is to make them equal.
 
 Next, provide a ``contents`` directive, to auto generate links to the various subsections::
 
     .. contents ::
-        :depth: 2
+      :depth: 2
 
 Then continue on adding subsections, separated by headings. Using a top/bottom bar for your first heading, you could use the following syntax for sub-headings::
 
@@ -63,7 +90,23 @@ Then continue on adding subsections, separated by headings. Using a top/bottom b
 
     Text under section 2
 
-The depth of the sections is relevant, and can be previewed in the table of contents (which uses embedded unordered-lists as output)
+The reStructuredText parser will create each unique section separator character as a new level.  The preferred 
+separators per level are:
+
+======= ========================================
+Level   Character
+======= ========================================
+Title   ``=`` top and bottom
+Level 1 ``=`` bottom only
+Level 2 ``-`` bottom only
+Level 3 ``~`` bottom only
+Level 4 ``'`` bottom only
+Level 5 ``,`` bottom only and but please rethink 
+        the structure of the document
+======= ========================================
+
+The depth of the sections is relevant, and can be previewed in the Table of Contents (which uses embedded 
+unordered-lists as output).
 
 Paragraphs
 ----------
@@ -84,17 +127,14 @@ will format as:
 
   But this will.
 
-Inline text
+Inline Text
 -----------
 
-The following text:
-
-  ::
+The following text::
 
     **bold** ... *less bold* ... ``code`` ... `emphasis` ...
 
-will format as
-
+Will render as:
 
     **bold** ... *less bold* ... ``code`` ... `emphasis` ...
 
@@ -104,53 +144,73 @@ Links
 
 You can link to external pages, internal pages, and sections within the same page.
 
-External links look like
+External links look like:
 
-    ::
+  ::
 
-        `Text of Link <http://example.com/link.url.html>`_
+    `Text of Link <http://example.com/link.url.html>`_
 
-This would become: `Text of Link <http://example.com/link.url.html>`_
+This would become:
 
-Linking to other internal pages uses `ref`
+  `Text of Link <http://example.com/link.url.html>`_
 
-    ::
+Linking to other internal pages uses ``:ref:``:
 
-        :ref:`Jump to Dijit! <dijit/index>`
+  ::
 
-This would become: :ref:`Jump to Dijit! <dijit/index>`
+    :ref:`Jump to Dijit! <dijit/index>`
 
-Finally, it is possible to cross-reference sections internally. If the section heading is a single word, you can simply add a trailing underscore to the word
+This would become:
 
-    ::
+  :ref:`Jump to Dijit! <dijit/index>`
 
-        Jump to Links_
+You should try to use the package/module name when linking to a package or module:
 
-This would create a link back to a major section: Links_
+  ::
 
-To reference a multi-word section header, surround the words with **`** and add a following underscore
+    :ref:`dojo/parser <dojo/parser>`
 
-    ::
+It is possible to cross-reference sections internally. If the section heading is a single word, you can simply 
+add a trailing underscore to the word:
 
-        Jump to `the basics`_
+  ::
 
-Note that links are case insensitive. It is not possible to have two headings with the same wording,
-even if under different subheadings.
+    Jump to Links_
+
+This would create a link back to a major section:
+
+  Jump to Links_
+
+To reference a multi-word section header, surround the words with a single back-tick (`````) and add a following 
+underscore:
+
+  ::
+
+    Jump to `Inline Text`_
+
+Would result in:
+
+  Jump to `Inline Text`_
+
+Note that links are case insensitive. It is not possible to have two headings with the same wording, even if under  
+different subheadings.
 
 Images
 ------
 
 Images can be referenced by an ``image`` directive::
 
-    .. image :: pathtoimage.png
+  .. image :: pathtoimage.png
 
 The location is relative::
 
-    .. image :: /logo.png
-    .. image :: logo.png
+  .. image :: /logo.png
+  .. image :: logo.png
 
-The former will look for an image in the root of the document tree, whereas the latter will look for an image in the current directory.
+The former will look for an image in the root of the document tree, whereas the latter will look for an image in the 
+current directory.
 
+*Note:* When the guide is rendered for the official website, the documentation area is only 630 pixels wide, so while your image may fit appropriately on rstWiki/livedocs, it will overrun on the official website.
 
 Directives
 ----------
@@ -159,26 +219,26 @@ rstWiki ships with a ``dojo.py`` collection of custom directives in addition to 
 
 To define a block of any of those type code snippets, include the following::
 
-    .. js ::
+  .. js ::
 
-        alert('this is code')
+    alert('this is code')
 
 This will produce output like:
 
 .. js ::
 
-    alert('this is code')
+  alert('this is code')
 
 Similarly for ``css`` and ``html``
 
 .. css ::
 
-    @import "/foo/bar/baz.css";
-    #main { color: red }
+  @import "/foo/bar/baz.css";
+  #main { color: red }
 
 .. html ::
 
-    <div id="foobar"></div>
+  <div id="foobar"></div>
 
 These three block types can be embedded in a ``code-example`` directive, which will produce a live/runnable example::
 
@@ -196,7 +256,7 @@ These three block types can be embedded in a ``code-example`` directive, which w
 
             });
 
-        You don't have to put words about the subsections
+        You don't have to put words about the subsections, but you can
 
         .. html ::
 
@@ -222,7 +282,7 @@ The above example will produce
 
         });
 
-    You don't have to put words about the subsections
+    You don't have to put words about the subsections, but you can
 
     .. html ::
 
@@ -231,7 +291,6 @@ The above example will produce
     .. css ::
 
         #bar { color:green; }
-
 
 Indentation
 -----------
@@ -566,32 +625,49 @@ This syntax will *not* merge commit0, it starts at the commit *after* commit0.
 
 Caution: once we run cherry-pick on the branch we can't go back to using rebase for merging changes.
 
-
-
 Creating reference guide for Web site
 =====================================
 
-1. ``git clone --recursive git@github.com:phiggins42/rstwiki.git`` (recursive is important, build will not work if submodules are not checked out)
-2. Inside there, ``git clone git@github.com:dojo/docs.git dojodocs`` (edit the Makefile in ``export`` if you want these docs to come from somewhere else)
-3. Go into ``dojodocs`` and ``git checkout 1.7`` (or whatever the latest RELEASE branch is; this repo tracks trunk by default!)
-4. Go into each of ``_static/{dojo,dijit,dojox,util}`` and ``git checkout 1.7.1`` (or whatever the latest RELEASE version of DTK is; rstwiki tracks some version of trunk by default!)
+1. ``git clone --recursive git@github.com:phiggins42/rstwiki.git`` (recursive is important, build will not work if 
+  submodules are not checked out)
+
+2. Inside there, ``git clone git@github.com:dojo/docs.git dojodocs`` (edit the Makefile in ``export`` if you want these 
+  docs to come from somewhere else)
+
+3. Go into ``dojodocs`` and ``git checkout 1.7`` (or whatever the latest RELEASE branch is; this repo tracks trunk by 
+  default!)
+
+4. Go into each of ``_static/{dojo,dijit,dojox,util}`` and ``git checkout 1.7.1`` (or whatever the latest RELEASE 
+  version of DTK is; rstwiki tracks some version of trunk by default!)
+
 5. ``cd export``
+
 6. Edit ``Makefile`` to contain the correct Dojo version
+
 7. ``mkdir build``
+
 8. ``export LC_CTYPE=""`` (not sure why this is necessary, but it was in the original docs!)
+
 9. ``make clean dojo data html``
-10. In the dtk repo, ``svn rm reference-guide && svn ci -m "Replacing old reference guide"``
-11. Move the ``export/build/html`` directory to ``reference-guide`` in the DTK repo
+
+10. In the DTK repo, ``svn rm reference-guide/1.7 && svn ci -m "Replacing old reference guide"`` (noting that you 
+  change it to the version of the documentation you actually built).
+
+11. Move the ``export/build/html`` directory to ``reference-guide/1.7`` in the DTK repo
+
 12. ``svn add reference-guide && svn ci -m "Adding new reference guide"``
+
 13. Done, finally!
 
 Updating rstWiki on livedocs
 ============================
 
-Note: this is in tmpdocs.dojotoolkit.org on the fileserver at the moment. When it moves, init.d
-and apache2 conf need to be updated.
+Note: this is in ``tmpdocs.dojotoolkit.org`` on the fileserver at the moment. When it moves, init.d and apache2 conf need to be updated.
 
 1. Make whatever changes you need to the repo at https://github.com/phiggins42/rstwiki
+
 2. ``sudo -u website git pull && sudo -u website git submodule update`` on the server to retrieve the update
+
 3. ``cd _static && sudo -u website ./build.sh`` if any CSS or JS changes were made
+
 4. ``sudo /etc/init.d/rstwiki restart`` to pick up any Python changes
