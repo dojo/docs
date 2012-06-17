@@ -1,112 +1,135 @@
 .. _dojo/html:
 
 =========
-dojo.html
+dojo/html
 =========
 
 :Authors: Sam Foster, Nikolai Onken, Marcus Reimann
 :Developers: Sam Foster, Alex Russell, Dylan Schiemann
-:since: V1.2
+:Since: V1.2
 
 .. contents ::
     :depth: 2
- 
-As of version 1.2, **dojo.html** is home to a single public helper method: **dojo.html.set()**. It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
 
-As of version 1.3, :ref:`dojo.place() <dojo/place>` accepts HTML strings for inserting HTML, and may be a better choice for simple HTML insertion. Unless you need to use the params capabilities of **dojo.html.set**, you should use dojo.place(cont, node, "only"). dojo.place() has more robust support for injecting an HTML string into the DOM, but it only handles inserting an HTML string as DOM elements, or inserting a DOM node. dojo.place does not handle NodeList insertions or the other capabilities as defined by the params argument for dojo.html.set().
+**dojo/html** provides useful utilities for managing HTML.
+
+Introduction
+============
+
+``dojo/html`` is a module that provides a single public function ``set()``.  It is used to safely and conviently replace an element's content, while providing some hooks and options for how the replacement should be handled.  This is generally only applicable to "complex" replacement, (e.g. where the options parameters are needed, or you are inserting a NodeList).  If you are just placing strings of HTML in a DOM node, it is preferable to use :ref:`dojo/dom-construct::place() <dojo/dom-construct#place>`.
+
+Also, while designed as a private class, the ``_ContentSetter()`` object is used in the toolkit for complex setting operations as well.  In the early days of Dojo, the ContentPane contained all this functionality directly, but it was moved as a separate module to make it easier to use by the rest of the toolkit.
 
 Usage
 =====
 
-You can think of dojo.html.set() like the good old :ref:`ContentPane <dijit/layout/ContentPane>`, but outside of a "Pane".
+You can think of ``set()`` like the :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>`, but standalone.
 
+.. js ::
+
+  require(["dojo/html"], function(html){
+    html.set(node, cont, params);
+  });
+
+``set()`` takes up to three arguments:
+
+======== ======================= =======================================================================================
+Argument Type                    Description
+======== ======================= =======================================================================================
+node     DomNode                 The node where the content should be set
+cont     String|DomNode|NodeList The content that should be set, which can be a string a DOM node, a NodeList or any 
+                                 other enumerable list of nodes.
+params   Object?                 *Optional* a hash of options/flags that affect the behavior of the ``.set()``
+======== ======================= =======================================================================================
+
+The options that can be set in ``params`` are:
+
+============== ======== ================================================================================================
+Option         Type     Description
+============== ======== ================================================================================================
+cleanContent   Boolean  Should the content be treated be stripped of ``<!DOCTYPE>`` and other content that might be an 
+                        issue. Defaults to ``false``.
+extractContent Boolean  Should the content be treated as a full HTML document and the real content be stripped out of 
+                        the ``<html>`` and ``<body>`` tags before injection.  Defaults to ``false``.
+parseContent   Boolean  Should the content be passed to the ``dojo/parser`` before being set in order to instantiate 
+                        any marked up Objects.  Defaults to ``false``.
+parserScope    String   Passed to the parser to identify the "scope" of which to identify the marked up content.  Only 
+                        useful when ``parseContent`` is ``true``.  Defaults to ``dojo/_base/kernel::_scopeName``.
+startup        Boolean  Start the child widgets after parsing content.  Only effective when ``parseContent`` is 
+                        ``true``.  Defaults to ``true``.
+onBegin        Function Called right before the content is replaced.  *Note* there is a default implementation of 
+                        ``onBegin`` and you should call ``this.inherited(arguments)`` in your custom function to ensure 
+                        the default behaviors occur.
+onEnd          Function Called right after the content is replaced.  *Note* there is a default implementation of 
+                        ``onBegin`` and you should ``this.inherited(arguments)`` in your custom function to ensure the 
+                        default behaviors occur.  If you need access to the parsed results of the content, they are 
+                        available in ``this.parseResults``.
+onContentError Function Called whenever there is an error replacing the content.
+============== ======== ================================================================================================
 
 Examples
 ========
 
-.. html ::
-   
-    <script type="text/javascript">
-        require(["dojo/html", "dojo/domReady!"], function(html){
-            // the first argument is a node reference
-            console.log("loaded");
-            html.set(dojo.byId("mycontent"), "loaded!");
-        });
-    </script>
+.. code-example ::
+  :djConfig: async:true
 
-    <div id="mycontent">
-      Loading...
-    </div>
+  This example does nothing more than what you could accomplish with ``dojo/dom-construct::place()`` or setting the 
+  ``innerHTML`` of the node directly.
 
+  .. js ::
 
-Of course, if that was all you needed to do, you'd be better of just setting innerHTML directly. The value of dojo.html.set comes when things get a little less trivial:
+    require(["dojo/html", "dojo/dom", "dojo/on", "dojo/domReady!"],
+    function(html, dom, on){
+      on(dom.byId("setContent"), "click", function(){
+        html.set(dom.byId("content"), "I was set!");
+      });
+    });
 
-.. html ::
+  .. html ::
 
-    <button id="setbtn">Click to set content</button>
-    <table id="mytable">
-      <tr><td>Nothing here yet</td></tr>
+    <button type="button" id="setContent">Set Content</button>
+    <div id="content">I haven't been replaced.</div>
+
+.. code-example ::
+  :djConfig: async: true
+
+  This example does something slightly more complex, in that it uses the ``dojo/parser`` to parse the content.
+
+  .. js ::
+
+    require(["dojo/html", "dojo/dom", "dojo/on", "dijit/form/NumberTextBox", "dojo/domReady!"],
+    function(html, dom, on){
+      on(dom.byId("setContent"), "click", function(){
+        html.set(dom.byId("content"), '<tbody>'
+          + '<tr>'
+            + '<td><label for="amt">How Much?</label></td>'
+            + '<td><input type="text" id="amt" name="amt" data-dojo-type="dijit/form/NumberTextBox" value="0"'
+              + ' data-dojo-props="constraints: { min: 0, max: 20, places: 0 },'
+              + ' promptMessage: \'Enter a value between 0 and +20\','
+              + ' required: true,'
+              + ' invalidMessage: \'Wrong!\'" />'
+            + '</td>'
+          + '</tr></tbody>',
+          {
+            parseContent: true
+          });
+      });
+    });
+
+  .. html ::
+
+    <button type="button" id="setContent">Set Content</button>
+    <table id="content">
+      <tbody>
+        <tr>
+          <td>Not Set Yet</td>
+        </tr>
+      </tbody>
     </table>
 
-
-    <script type="text/javascript">
-        require(["dojo/html", "dojo/dom", "dojo/on", "dijit/form/NumberTextBox"], function(html, dom, on){
-            on.once(dom.byId("setbtn"), "click", function(){
-              html.set(dom.byId("mytable"), '<tr>'
-                +'<td><label>How much?</label></td>'
-                +'<td><input type="text" data-dojo-type="dijit/form/NumberTextBox" value="0"'
-                +  ' constraints="{min:0,max:20,places:0}"'
-                +  ' promptMessage="Enter a value between 0 and +20"'
-                +  ' required="true" invalidMessage="Wrong!">'
-                +'</td>'
-                +'</tr>', {
-                  parseContent: true,
-                  onBegin: function(){
-                      this.inherited("onBegin", arguments);
-                  }
-              });
-              dom.byId("setbtn").innerHTML = "Done";
-            });
-        });
-    </script>
-
-We're getting a lot done here. First, note that we're setting content on a table. Some browsers get very unhappy when you try and set ``innerHTML`` on tables (and other elements) - ``dojo.html.set`` handles all that for you. Also, note that the content includes a widget, and we've added a 3rd parameter to our ``set()`` call - an object with some configuration for this set operation. ``parseContent: true`` tells ``set`` that when the content has been slopped in there, it should run the parser over the element.
-
-This is a common pattern, and yields a common problem - what if we haven't got the classes necessary already required? We provide an ``onBegin`` function to the set operation to first require the necessary widget. We call ``this.inherited`` just in case ``onBegin`` has other work it needs to do. But what is "``this``"? ``dojo.html.set`` makes use of a ``dojo.html._ContentSetter`` class to encapsulate the work it needs to do, so ``this`` is an instance of that class. For advanced usage like this, see the api docs and look over source code to fully understand how you can leverage the _ContentSetter class.
-
-My use of ``dojo/on`` to trigger the new content is purely an example, you could obviously make this call from an event handler, xhr callback, etc. There are many many possibilities - here's just a couple ideas: applying ``dojo.behavior`` to the new content, fading/animating the new content, cloning the new content into another node, escaping or performing substitutions on the content before it lands. I'll also mention here that this functionality is also made available for ``NodeLists`` (``dojo.query`` result objects) via the ``dojo.NodeList-html`` module
-
-What else comes out of the box? set takes the following optional params to configure its behavior:
-
-:cleanContent:
-    Should the content be cleaned of doctype, title and other bothersome markup before injection?
-
-:extractContent:
-    Should the content extracted from the ``<body>`` wrapper before injection?
-
-:parseContent:
-    Should the node be passed to the parser after the new content is set?
-
-:onBegin:
-    Called right before the content is swapped out, use it for pre-processing your content, preparing the target node, or whatever. **Note**: ``onBegin`` does have a default implementation, so unless you wish to replace that, you should include ``this.inherited("onBegin", arguments)`` in the function you provide here. You can refer to your target node as ``this.node``, and your content is available as ``this.content`` - be sure to put them back when you are done.
-
-:onEnd:
-    Called right after the content is swapped out, use it for post-processing your content, or whatever. **Note**: ``onEnd`` also has a default implementation. If you use ``parseContent`` you can grab the array of widget objects that yields from ``this.parseResults``
-
-:onContentError:
-    This event is called if an error is caught while inserting the new content. A typical example might be if you attempt to inject a ``div`` into a ``tr`` or similar.
-
-
-Background
-==========
-
-If all of this seems a little familiar to you, its because this functionality previously lived inside the :ref:`ContentPane <dijit/layout/ContentPane>` widget (since dojo's early days). The goal of ``dojo.html.set``, the :ref:``ContentSetter`` and the helper methods it employs were to make this functionality available outside of the dijit context, and promote code reuse both across the toolkit and in your code. Some of the other options you may have used in 0.4, or :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` are destined to live in a dojox counterpart to this module, and should be available by 1.2's release.
-
-.. api-inline :: dojo.html.set
+In the above example we are accomplishing a few things.  First some browsers object to setting the ``innerHTML`` on tables, ``dojo/html`` accommodates for that.  We are also parsing the marked-up content with the ``dojo/parser`` by setting ``parseContent`` to ``true``.
 
 See also
 ========
 
-* :ref:`dojo._base.html <dojo/_base/html>`
-
-  Basic DOM handling functions, included in Dojo Base
+* :ref:`dojo/dom-construct <dojo/dom-construct>` - A module used for creating and placing DOM nodes
