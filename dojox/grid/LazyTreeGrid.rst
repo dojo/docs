@@ -352,6 +352,8 @@ Accessibility
 
 LazyTreeGrid provides the same a11y support level as :ref:`DataGrid <dojox/grid/DataGrid>` .
 
+And summary attribute can be added in a similar way as `DataGrid <http://livedocs.dojotoolkit.org/dojox/grid/DataGrid#add-summary-attribute>`_.
+
 See Also
 ========
 
