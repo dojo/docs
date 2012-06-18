@@ -158,3 +158,5 @@ See Also
 * :ref:`dojo/back <dojo/back>` - Module for handling browser "back" events.
 
 * :ref:`dojo/io-query <dojo/io-query>` - Module the contains URL processing functions.
+
+* :ref:`dojo/router <dojo/router>` - Module that provides mapping of a hash to a callback.
