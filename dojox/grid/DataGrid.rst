@@ -1388,6 +1388,27 @@ There are some occasions when grid is created within a hidden container e.g. Dia
   grid.resize();
 
 
+Add summary attribute
+---------------------
+
+Adding a summary attribute to grid is feasible in Dojo 1.8+
+
+.. js ::
+
+  var grid = new DataGrid({
+      store: store,
+      structure: layout，
+      summary: "A customized grid summary"
+  });
+
+or
+
+.. html ::
+
+  <div dojoType="dojox.grid.DataGrid" data-dojo-props="summary: 'A customized grid summary'"></div>
+
+
+
 Accessibility in 1.3 and Beyond
 ===============================
 
