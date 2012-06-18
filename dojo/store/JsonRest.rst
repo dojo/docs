@@ -116,6 +116,24 @@ If ``sortParam`` is not set, the sort value is appended without a key-value pair
   /FooObject/?foo=value1&sort(+foo,-bar)
 
 
+Headers
+=======
+
+Starting in Dojo 1.8, it is possible to send headers along with all requests made using the JsonRest store. This can either be done by setting the ``headers`` property of the store itself, in which case all requests will include the provided headers, or on a per-call basis by setting the ``headers`` property of the associated ``options`` object for calls to ``get``, ``add``, ``put``, ``remove``, or ``query``.
+
+If header is provided on the ``options`` object passed to a call, it will override any similarly-named headers given directly on the store.
+
+.. js ::
+ 
+  var store = new JsonRestStore({
+    target: "/FooObject/",
+    headers: { "X-Custom-Header": "Foo" } // All calls to server will include X-Custom-Header: Foo
+  });
+
+  store.query({ foo: "value1" }, {
+    headers: { "X-Custom-Header": "Bar" } // This call will include X-Custom-Header: Bar instead
+  });
+
 Misc
 ====
 
