@@ -92,7 +92,7 @@ forEach()
 .. js ::
 
   require(["dojo/_base/array"], function(array){
-    array.forEach(arrayObject, callback, fromIndex);
+    array.forEach(arrayObject, callback, thisObject);
   });
 
 This is a heavy lifter you will use often when writing your apps.
