@@ -1,7 +1,7 @@
 .. _dojox/app:
 
 =========
-dojox.app
+dojox/app
 =========
 
 :since: V1.7
@@ -26,9 +26,11 @@ The main dojox/app modules
 
 ``dojox/app`` is built around the following focused core modules:
 
-* ``dojox/app/main`` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
+:ref:`dojox/app/main <dojox/app/main>` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
 
-* ``dojox/app/View`` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
+:ref:`dojox/app/View <dojox/app/view>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
+
+:ref:`dojox/app/Controller <dojox/app/Controller>` a base class for the various application controllers:
 
 * ``dojox/app/controllers/Layout`` a controller that performs nested view layout
 
@@ -38,7 +40,7 @@ The main dojox/app modules
 
 * ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
 
-* ``dojox/app/model``, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
+:ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
 
 The Configuration Object
 ========================
