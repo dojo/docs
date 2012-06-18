@@ -1405,7 +1405,7 @@ or
 
 .. html ::
 
-  <div dojoType="dojox.grid.DataGrid" data-dojo-props="summary: 'A customized grid summary'"></div>
+  <div data-dojo-type="dojox.grid.DataGrid" data-dojo-props="summary: 'A customized grid summary'"></div>
 
 
 
