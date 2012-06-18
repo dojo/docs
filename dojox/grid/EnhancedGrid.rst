@@ -142,10 +142,14 @@ Accessibility
 
 EnhancedGrid provides the same a11y support level as :ref:`DataGrid <dojox/grid/DataGrid>` , or see the above plugin pages for more details.
 
+And summary attribute can be added in a similar way as `DataGrid <http://livedocs.dojotoolkit.org/dojox/grid/DataGrid#add-summary-attribute>`_.
+
+
 Known Issues
 ============
 
 * See the `outstanding tickets for the EnhancedGrid <http://bugs.dojotoolkit.org/query?owner=Evan&status=accepted&status=assigned&status=new&status=reopened&type=defect&summary=~enhanced&col=id&col=summary&col=status&col=type&col=priority&col=milestone&col=component&order=priority>`_.
+
 
 See also
 ========
