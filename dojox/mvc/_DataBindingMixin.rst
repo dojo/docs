@@ -47,35 +47,3 @@ In order for Dijits to function correctly in data-bound environments, it is impe
 assess the model validity of the data binding via the this.inherited(arguments) hierarchy and declare any values
 failing the test as invalid.
 
-
-Examples
-========
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  .. js ::
-
-        var model;
-        require(["dijit/StatefulModel", "dojo/parser", "dijit/form/TextBox", "dojo/domReady!"], function(StatefulModel, parser){
-            model = new StatefulModel({ data : {
-                hello : "Hello World"
-            }});
-            parser.parse();
-        });
-
-
-  .. html ::
-
-        <input id="hello1" data-dojo-type="dijit.form.TextBox"
-            data-dojo-props="ref: model.hello"></input>
-
-        <input id="hello2" data-dojo-type="dijit.form.TextBox"
-            data-dojo-props="ref: model.hello"></input>
-
-In the above example, both dijit.form.TextBox instances (with IDs "hello1" and "hello2" respectively) are bound to the same 
-reference location in the data model i.e. "hello" via the "ref" expression "model.hello". Both will have an initial value of "Hello 
-World". Thereafter, a change in the value of either of the two textboxes will cause an update of the value in the data model at 
-location "hello" which will in turn cause a matching update of the value in the other textbox.

@@ -20,9 +20,7 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type         |Default   |Description                                                                                             |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|ref               |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
-|                  |StatefulModel|          |a location within an existing datamodel and may be a relative reference based on the parent / container |
-|                  |             |          |data binding (dot-separated string).                                                                    |
+|target            |dojo/Stateful|          |The data model used for relative data binding.                                                          |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
@@ -39,17 +37,18 @@ Declarative example
 
   .. js ::
 
-		var model; 
+		var model;
+ 
 		require([
 			'dojo/parser',
 			'dojo/ready',
-			'dojox/mvc',
+			'dojox/mvc/getStateful',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
 			'dojox/mvc/Group',
 			'dojox/mvc/Output'
-			], function(parser, ready, mvc){
-
+			], function(parser, ready, getStateful){
+			
 			// Initial data
 			var order = {
 				"Serial" : "360324",
@@ -69,14 +68,22 @@ Declarative example
 					"Zip" : "10532"
 				}
 			};
-				// The dojox.mvc.StatefulModel class creates a data model instance
-				// where each leaf within the data model is decorated with dojo.Stateful
-				// properties that widgets can bind to and watch for their changes.
-				model = mvc.newStatefulModel({ data : order });
-				// the StatefulModel created above is initialized with 
+				// The getStateful call will take json data and create make it Stateful
+				model = getStateful(order);
+				// the model created above is initialized with 
 				// model.First set to "John", model.Last set to "Doe" and model.Email set to "jdoe@example.com"
 
 			});
+
+			function setRef(id, model, attr) {
+				require([
+				         "dijit/registry",
+				         "dojox/mvc/at"
+				         ], function(registry, at){
+								var widget = registry.byId(id);
+								widget.set("target", model[attr]);
+							});
+			};
 
   .. css ::
 
@@ -85,28 +92,51 @@ Declarative example
 
   .. html ::
 
-    <div id="main">
-        <div class="row" id="addrGroup" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'model.ShipTo'">
-            <div class="row">
-                <label class="cell" for="streetInput">Street:</label>
-                <input class="cell" id="streetInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Street'"/>
-            </div>
-            <div class="row">
-                <label class="cell" for="cityInput">City:</label>
-                <input class="cell" id="cityInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'City'"/>
-            </div>
-            <div class="row">
-                <label class="cell" for="stateInput">State:</label>
-                <input class="cell" id="stateInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'State'"/>
-            </div>
-            <div class="row">
-                <label class="cell" for="zipInput">Zipcode:</label>
-                <input class="cell" id="zipInput" data-dojo-type="dijit.form.TextBox" data-dojo-props="ref: 'Zip'"/>
-            </div>
-        </div>
-        <br/>
-        Choose:
-        <button id="shipto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.ShipTo);">Ship To</button>
-        <button id="billto" type="button" data-dojo-type="dijit.form.Button" onClick="dijit.byId('addrGroup').set('ref',model.BillTo);">Bill To</button>
-        <p>In the above example, the TextBoxes inside the group with the id="addrGroup" will display either the ShipTo data or the BillTo data depending upon which button is pressed.
-    </div>
+		<script type="dojo/require">at: "dojox/mvc/at"</script>
+		<div id="main">
+		<div id="leftNav"></div>
+		<div id="mainContent">
+		<!--
+			The group container denotes some logical grouping of widgets and also serves
+			to establish a parent data binding context for its children.
+			The target attribute for the outermost container obtains the binding from the
+			"page scope" itself.
+		-->
+		<!--
+			For convenience, the widget hierarchy matches the data hierarchy
+			(see JSON literal above).
+			In this implementation, the child attributes are simple property names
+			of the parent binding context.
+		-->
+		<div class="row" id="addrGroup" data-dojo-type="dojox/mvc/Group" 
+							data-dojo-props="target: model.ShipTo">
+			<div class="row">
+				<label class="cell" for="streetInput">Street:</label>
+				<input class="cell" id="streetInput" data-dojo-type="dijit/form/TextBox" 
+					data-dojo-props="value: at('rel:', 'Street')">
+			</div>
+			<div class="row">
+				<label class="cell" for="cityInput">City:</label>
+				<input class="cell" id="cityInput" data-dojo-type="dijit/form/TextBox" 
+					data-dojo-props="value: at('rel:', 'City')">
+			</div>
+			<div class="row">
+				<label class="cell" for="stateInput">State:</label>
+				<input class="cell" id="stateInput" data-dojo-type="dijit/form/TextBox" 
+					data-dojo-props="value: at('rel:', 'State')">
+			</div>
+			<div class="row">
+				<label class="cell" for="zipInput">Zipcode:</label>
+				<input class="cell" id="zipInput" data-dojo-type="dijit/form/TextBox" 
+					data-dojo-props="value: at('rel:', 'Zip')">
+			</div>
+		</div>
+		<br/>
+		Choose:
+		<button id="shipto" type="button" data-dojo-type="dijit/form/Button" 
+				data-dojo-props="onClick: function(){setRef('addrGroup', model, 'ShipTo');}">Ship To</button>
+		<button id="billto" type="button" data-dojo-type="dijit/form/Button" 
+				data-dojo-props="onClick: function(){setRef('addrGroup', model, 'BillTo');}">Bill To</button>
+		<br/>
+		<br/>
+		</div></div>

@@ -20,9 +20,7 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type         |Default   |Description                                                                                             |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|ref               |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
-|                  |StatefulModel|          |a location within an existing datamodel and may be a relative reference based on the parent / container |
-|                  |             |          |data binding (dot-separated string).                                                                    |
+|children          |StatefulArray|          |The array of data model that is used to render child nodes.                                             |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |index             |Integer      |          |An index used to track the current iteration when the repeating UI is produced. This may be used to     |
 |                  |             |          |parameterize the content in the repeat template for the current iteration.                              |
@@ -39,7 +37,7 @@ Declarative example
 -------------------
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: true, mvc: {debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
@@ -49,13 +47,13 @@ Declarative example
 		require([
 			'dojo/parser',
 			'dojo/ready',
-			'dojox/mvc',
+			'dojox/mvc/getStateful',
 			'dijit/form/TextBox',
 			'dijit/form/Button',
 			'dojox/mvc/Group',
 			'dojox/mvc/Repeat',
 			'dojox/mvc/Output'
-			], function(parser, ready, mvc){
+			], function(parser, ready, getStateful){
 
 			// Initial data
 			var search_results_init = {
@@ -77,10 +75,8 @@ Declarative example
                                   "Email": "j.j@test.com"
                                 }]
                         };
-				// The dojox.mvc.StatefulModel class creates a data model instance
-				// where each leaf within the data model is decorated with dojo.Stateful
-				// properties that widgets can bind to and watch for their changes.
-				searchRecords  = mvc.newStatefulModel({ data : search_results_init});
+				// The getStateful call will take json data and create make it Stateful
+				searchRecords = getStateful(search_results_init);
 			});
 
   .. css ::
@@ -90,21 +86,22 @@ Declarative example
 
   .. html ::
 
-    <div id="main">
-    <div data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: 'searchRecords'">
+		<script type="dojo/require">at: "dojox/mvc/at"</script>
+		<div id="main">
+		<div data-dojo-type="dojox/mvc/Group" data-dojo-props="target: searchRecords">
         <!--
             The repeat container denotes a templated UI that operates over a collection
             of data records.
             The UI can be customized for each iteration using properties such as
             ${this.index} for the iteration index.
         -->
-        <div id="repeatId" data-dojo-type="dojox.mvc.Repeat" data-dojo-props="ref: 'Results'">
-            <div class="row" data-dojo-type="dojox.mvc.Group" data-dojo-props="ref: '${this.index}'">
+        <div id="repeatId" data-dojo-type="dojox/mvc/Repeat" data-dojo-props="children: at('rel:', 'Results')">
+            <div class="row" data-dojo-type="dojox/mvc/Group" data-dojo-props="target: at('rel:', ${this.index})">
                 <label class="cell" for="nameInput${this.index}">Name:</label>
-                <input class="cell" data-dojo-type="dijit.form.TextBox" id="nameInput${this.index}"
-                                    data-dojo-props="ref: 'First'"></input>
+                <input class="cell" data-dojo-type="dijit/form/TextBox" id="nameInput${this.index}"
+                                    data-dojo-props="value: at('rel:', 'First')"></input>
             </div>
         </div>
-    </div>
+		</div>
         <p>In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
-    </div>
+		</div>

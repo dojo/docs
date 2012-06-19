@@ -133,7 +133,7 @@ Basic example, input-output sync: Anything typed into the input fields will be u
 		<div class="row">
 		  <label class="cell" for="firstnameInput">First:</label>
 		  <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox" 
-					data-dojo-props="value: model.First">
+					data-dojo-props="value: at(model, 'First')">
 		<!-- Content in output below will always be in sync with value of textbox above -->
 			(first name is: <span data-dojo-type="dojox/mvc/Output" 
 				data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, 
