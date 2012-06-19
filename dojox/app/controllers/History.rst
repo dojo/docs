@@ -7,8 +7,8 @@ dojox/app/controllers/History(Hash)
 :since: V1.8
 
 ``dojox/app/controllers/History`` and ``dojox/app/controllers/HistoryHash`` control forward and backward navigation between views.
-A view can use ``transitionOptions`` or ``href`` to navigate forward or backward. ``dojox/app/controllers/History`` leverages HTML5 history API
-for this while ``dojox/app/controllers/HistoryHash`` uses url hashes.
+A view can use ``transitionOptions`` or ``href`` to navigate forward or backward. ``dojox/app/controllers/History`` leverages HTML5 history API for this while ``dojox/app/controllers/HistoryHash`` uses url hashes.
+HTML5 history does not work on Android 3.x and 4.x, iOS 4.x and old desktop browsers. On these plaforms you must use hash history instead.
 
 Usage
 =====
@@ -36,6 +36,9 @@ url
 String.  The url that will be used to update the location value in
 browser's address bar after the transition.
 
+title
+-----
+String. Reserved for future use.
 
 Forward Transition Using ``href``
 =================================
@@ -53,6 +56,12 @@ To start the backward transition, all we need to do is to add a back button on t
 .. html ::
 
   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home'">Data Binding Example</h1>
+
+If you need to achieve this by code call the back method on history:
+
+.. js ::
+
+  history.back();
 
 
 Sample App Navigation
