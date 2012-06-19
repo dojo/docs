@@ -4,7 +4,7 @@
 dojo.isArray
 ============
 
-*Deprecated*.      Will be removed in 2.0.
+*Deprecated*. Will be removed in 2.0.
 
 Use
 
