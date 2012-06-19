@@ -66,8 +66,7 @@ Data converter
 
 sync function allows source.sourceProp and target.targetProp to have different format as they are synchronized, for example, source.soureProp to have String "2" and target.targetProp to have Number 2. It's done by specifying options.converter, which has some interface compatibility with dojo.number, dojo.date.locale, etc., so that those libraries can be used directly as the converter, by having the following properties:
 
-* format - A function that converts source.sourceProp to target.targetProp. When an error is thrown here, 
-target.targetProp won't be set.
+* format - A function that converts source.sourceProp to target.targetProp. When an error is thrown here, target.targetProp won't be set.
 * parse - A function that converts target.targetProp to source.sourceProp. When an error is thrown here, source.sourceProp won't be set.
 
 The basic usage of options.converter is like below:

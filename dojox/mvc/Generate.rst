@@ -40,57 +40,70 @@ Declarative example
 --------------------
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: true, mvc: {debugBindings: 1}
   :version: local
   :toolbar: versions, themes
 
   .. js ::
 
-        // Load the parser, we'll use the declarative data binding syntax (ref).
-        dojo.require("dojo.parser");
-        dojo.require("dijit.form.Textarea");
-        dojo.require("dojox.mvc");
-        dojo.require("dojox.mvc.StatefulModel");
-        dojo.require("dojox.mvc.Generate");
-
-        function updateView(){
-            var modeldata = dojo.fromJson(dijit.byId("modelArea").value);
-            var model = new dojox.mvc.StatefulModel({ data : modeldata });
-            var widget = dijit.byId("view");
-            if(widget){
-               widget.set("ref", model);
-            }
-        }
-        dojo.ready(updateView);
+			require([
+				"dojo/parser",
+				"dojo/_base/json",
+				"dijit/form/Textarea",
+				"dojox/mvc/Generate"
+			], function(parser){
+				parser.parse();
+			});
 
   .. html ::
 
-    <div id="mainContent">
-        <h3>Model</h3>
-        <div class="row">
-            <textarea class="cell" data-dojo-type="dijit.form.Textarea" id="modelArea" data-dojo-props="onBlur: updateView">
-    {
-        "First"  : "John",
-        "Last"   : "Doe",
-        "Email"  : "jdoe@example.com",
-        "Address": {
-            "Street" : "123 Valley Rd",
-            "City"   : "Katonah",
-            "State"  : "NY",
-            "Zip"    : "10536"
-        },
-        "Phones" : [{
-            "Areacode" : "111",
-            "Local"    : "111-1111"
-        },{
-            "Areacode" : "222",
-            "Local"    : "222-2222"
-        }]
-    }
-            </textarea>
-        </div>
-        <h3>Generated View</h3>
-        <div id="view" data-dojo-type="dojox.mvc.Generate" data-dojo-props="idNameMapping:{'String' : 'view_t'}"></div>
-    </div>
+		<script type="dojo/require">at: "dojox/mvc/at"</script>
+		<div id="wrapper">
+			<div id="header">
+				<div id="navigation"></div>
+				<div id="headerInsert">
+				<h1>View generation example</h1>
+				<h2>Data Binding - Generate Container.</h2>
+			</div>
+		</div>
+		<div id="main">
+			<div id="leftNav"></div>
+			<div id="mainContent">
+				<h3>Model</h3>
+				<div class="row">
+					<textarea id="textarea" class="cell" data-dojo-type="dijit/form/Textarea">
+		{
+			Serial: "360324",
+			First: "John",
+			Last: "Doe",
+			Email: "jdoe@example.com",
+			Address: {
+				Street: "123 Valley Rd",
+				City: "Katonah",
+				State: "NY",
+				Zip: "10536"
+			},
+			Phones: [
+				{
+					Areacode: "111",
+					Local: "111-1111"
+				},{
+					Areacode: "222",
+					Local: "222-2222"
+				}
+			],
+			Member: {
+				Since: "2010",
+				Type: "Gold"
+			}
+		}
+					</textarea>
+				</div>
+				<h3>Generated View</h3>
+				<div data-dojo-type="dojox.mvc.Generate"
+				 data-dojo-props="children: at('widget:textarea', 'value').direction(at.from).transform({format: dojo.fromJson}), idNameMapping: {String: 'view_t'}"></div>
+			</div>
+		</div>
+		</div>
 
 In the above example, the Generate will create a view with a label and TextBox for each of the fields listed in the textarea, and any updates to the textarea will be cause the view to be updated when you tab out of the text area.
