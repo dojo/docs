@@ -206,12 +206,12 @@ views
 -----
 Object. The children views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as three additional properties: transition for specific view transitions, template for defining the view rendering and finally definition to provide an AMD module to be mixed into the view to control it.
 AMD modules identifiers starting with “.” will be resolved relative to the application root. All other modules identifiers will be resolved according to the Dojo AMD loader rules and in particular with respect to its configuration provided as part of the loaderConfig attribute.
-By default if no definition module is specified for a view it is looked up automatically in "./view/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
+By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
 
 .. js ::
 
   "views": {
-    // simple view without any children views or scenes
+    // simple view without any children views 
     // views can has its own dependencies which will be loaded
     // before the view is first initialized.
     "home": {
@@ -226,12 +226,12 @@ By default if no definition module is specified for a view it is looked up autom
 
     // simple composite view which loads all views and shows the default
     "main":{
-      // all views in the main scene will be bound to the user model
+      // all views in the main view will be bound to the user model
       "models": [],
       "template": "simple.html",
       "defaultView": "main",
       "defaultTransition": "slide",
-      // the views available to this scene
+      // the child views available to this view
       "views": {
         "main":{
           "template": "./views/simple/main.html"
