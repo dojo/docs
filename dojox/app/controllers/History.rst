@@ -18,7 +18,7 @@ Usage
 .. html ::
 
   <li data-dojo-type="dojox/mobile/ListItem"
-    data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: '{target:"main,second", url: "#main,second"}'">
+    data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: {target:'main,second', url: '#main,second}">
     Main Scene::Second View
   </li>
 
@@ -80,11 +80,11 @@ main.html
       Main Scene::Main View (Current View)
     </li>
     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="iconPos: '0,0,29,29', clickable: true,
-          transitionOptions: "'{title:"Main Scene::SecondView",target:"main,second",url: "#main,second"}'">
+          transitionOptions: {title:'Main Scene::SecondView',target:'main,second',url: '#main,second'}">
       Main Scene::Second View
     </li>
     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="iconPos:'0,0,29,29', clickable: true,
-          transitionOptions: '{title:"Main Scene::ThirdView",target:"main,third",url: "#main,third"}'">
+          transitionOptions: {title:'Main Scene::ThirdView',target:'main,third',url: '#main,third'}">
       Main Scene::Third View
     </li>
   </ul>
