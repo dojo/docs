@@ -6,7 +6,7 @@ dojox/app/controllers/History(Hash)
 
 :since: V1.8
 
-``dojox/app/controllers/History`` and ``dojox/app/controllers/HistoryHash`` control the navigation forward and backward between views.
+``dojox/app/controllers/History`` and ``dojox/app/controllers/HistoryHash`` control forward and backward navigation between views.
 A view can use ``transitionOptions`` or ``href`` to navigate forward or backward. ``dojox/app/controllers/History`` leverages HTML5 history API
 for this while ``dojox/app/controllers/HistoryHash`` uses url hashes.
 
