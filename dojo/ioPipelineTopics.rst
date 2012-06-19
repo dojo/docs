@@ -9,6 +9,8 @@ IO Pipeline Topics
 .. contents ::
    :depth: 2
 
+*Deprecated* - See :ref:`dojo/request/notify <dojo/request/notify>` instead.
+
 Topics that are published via :ref:`dojo.publish <dojo/publish>` that correspond to events in the Input/Output (IO) pipeline used by Dojo.
 
 Introduction
