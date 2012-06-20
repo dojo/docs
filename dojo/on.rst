@@ -128,7 +128,7 @@ Extension Events
 
 The eventType parameter may also be an extension event.
 An extension event is a custom event that may be based on extended functionality.
-Dojo includes several extension events, including touch gestures available in dojo/gestures and mouse tracking functionality with dojo/mouse's enter and leave extension events.
+Dojo includes several extension events, such as mouse tracking functionality with dojo/mouse's enter and leave extension events.
 For example, to listen for the mouse hovering over a DOM node, we could write:
 
 .. js ::
