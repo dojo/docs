@@ -1272,7 +1272,7 @@ In addition to using the charts programmatically as shown in previous sections, 
 The Chart Widget
 ----------------
 
-One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. The example below is taken from the Dojo Chart2D widget test:
+One of the easiest ways to use Dojo Charting is to use the dojox/charting/widget/Chart widget as shown in the following example:
 
 .. html ::
   
