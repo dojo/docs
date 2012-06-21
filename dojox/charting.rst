@@ -743,8 +743,8 @@ For pie type charts you can specify additional information: the text label for e
       {y: 1, text: "Other", color: "white", fontColor: "red"}
   ]);
 
-Using dojo/store Data Sources with Charts
------------------------------------------
+Using dojo/store and dojo/data Data Sources with Charts
+-------------------------------------------------------
 
 `dojox/charting/StoreSeries` are specific series to be used to connect a chart to a :ref:`dojo/store <dojo/store>`. Similarly
 `dojox/charting/DataSeries` can be used to connect to the deprecated :ref:`dojo/data <dojo/data>` instances.
