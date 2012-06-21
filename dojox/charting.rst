@@ -743,36 +743,39 @@ For pie type charts you can specify additional information: the text label for e
       {y: 1, text: "Other", color: "white", fontColor: "red"}
   ]);
 
-Using dojo.data Data Sources with Charts
-----------------------------------------
+Using dojo/store Data Sources with Charts
+-----------------------------------------
 
-dojox.charting.DataSeries is used to connect to :ref:`dojo.data <dojo/data>` stores. User should create it and pass it instead of a data array in chart.addSeries() call.
+`dojox/charting/StoreSeries` are specific series to be used to connect a chart to a :ref:`dojo/store <dojo/store>`. Similarly
+`dojox/charting/DataSeries` can be used to connect to the deprecated :ref:`dojo/data <dojo/data>` instances.
 
-DataSeries' constructor has following parameters:
+User should create an instance of these series and pass it instead of a data array to Chart.addSeries() method.
+
+StoreSeries and DataSeries constructor have following parameters:
 
 ====== ========================== ======= ===========
 Name   Type                       Default Description
 ====== ========================== ======= ===========
-store  object                     none    Data store to use. Should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
-kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo.data.api.Read.fetch() <dojo/data/api/Read>` for details.
+store  object                     none    The dojo/store or dojo/data to use. For dojo/data it should implement at least :ref:`dojo.data.api.Read <dojo/data/api/Read>` and :ref:`dojo.data.api.Identity <dojo/data/api/Identity>`. If it implements :ref:`dojo.data.api.Notification <dojo/data/api/Notification>`, it will be used to redraw chart dynamically.
+kwArgs object                     none    Used for fetching items. Will vary depending upon store. See :ref:`dojo/store <dojo/store>` or :ref:`dojo/data/api/Read.fetch() <dojo/data/api/Read>` for details.
 value  object | function | string "value" Function, which takes a store, and an object handle, and produces an output possibly inspecting the store's item. Or a dictionary object, which tells what names to extract from an object and how to map them to an output. Or a field name to be used as a numeric output.
 ====== ========================== ======= ===========
 
-DataSeries doesn't define any user-facing methods.
+Once instantiated the StoreSeries and DataSeries are not supposed to be manipulated by the application developper.
 
 The "value" argument allows to supply complex values for some charts (OHLC, candle stick), and additional values for customization purposes (text labels, tooltips, and so on).
 
-Example of a function that can be used to extract values:
+The following example shows a function that can be used to extract the values:
 
 .. js ::
   
-  function trans1(store, item){
+  function getValueObject(store, item){
     // let's create our object
     var o = {
-      x: store.getValue(item, "order"),
-      y: store.getValue(item, "value"),
-      tooltip: store.getValue(item, "title"),
-      color: store.getValue(item, "urgency") ? "red" : "green"
+      x: item["order"],
+      y: item["value"],
+      tooltip: item["title"],
+      color: item["urgency"] ? "red" : "green"
     };
     // we can massage the object, if we want, and return it
     return o;
@@ -792,11 +795,11 @@ The effect will be the same as the following function was applied to extract val
 
 .. js ::
   
-  function trans2(store, item){
+  function getValueObect(store, item){
     var o = {
-      x: store.getValue(item, "order"),
-      y: store.getValue(item, "value"),
-      tooltip: store.getValue(item, "title")
+      x: item["order"],
+      y: item["value"],
+      tooltip: item["title"]
     };
     return o;
   }
@@ -808,8 +811,8 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
 .. js ::
   
   var field = "abc";
-  function trans3(store, item){
-    return store.getValue(item, field);
+  function getValueObject(store, item){
+    return item[field];
   }
 
 Changing Color Themes
