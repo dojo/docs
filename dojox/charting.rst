@@ -1058,17 +1058,18 @@ The default text function checks if a data point is an object, and uses an optio
 The picture below demonstrates Tooltip action.
 .. js ::
 
-require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
-  "dojox/charting/action2d/Tooltip"],
-  function(Chart, Default, Columns, Tooltip){
-  var chart = new Chart("test");
-  chart.addAxis("x", {type : Default, enableCache: true});
-  chart.addAxis("y", {vertical: true});
-  chart.addPlot("default", {type: Columns, enableCache: true});
-  chart.addSeries("Series A", [ ... ]);
-  new Tooltip(chart, "default", { text: "x" });
-  chart.render()
-});
+  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+    "dojox/charting/action2d/Tooltip"],
+    function(Chart, Default, Columns, Tooltip){
+      var chart = new Chart("test");
+      chart.addAxis("x", {type : Default, enableCache: true});
+      chart.addAxis("y", {vertical: true});
+      chart.addPlot("default", {type: Columns, enableCache: true});
+      chart.addSeries("Series A", [ ... ]);
+      new Tooltip(chart, "default", { text: "x" });
+      chart.render()
+  });
+
 
 MouseZoomAndPan
 ---------------
