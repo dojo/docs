@@ -1056,8 +1056,19 @@ Tooltip supports the following keyword parameters:
 The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
 The picture below demonstrates Tooltip, and Highlight actions.
+.. js ::
 
-TODO: Example Tooltip and Highlight
+require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  "dojox/charting/action2d/Tooltip"],
+  function(Chart, Default, Columns, Tooltip){
+  var chart = new Chart("test");
+  chart.addAxis("x", {type : Default, enableCache: true});
+  chart.addAxis("y", {vertical: true});
+  chart.addPlot("default", {type: Columns, enableCache: true});
+  chart.addSeries("Series A", [ ... ]);
+  new Tooltip(chart, "default", { text: "x" });
+  chart.render()
+});
 
 MouseZoomAndPan
 ---------------
