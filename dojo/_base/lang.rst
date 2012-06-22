@@ -240,7 +240,7 @@ You can also pass an object as the third parameter. This will define the context
 
 hitch()
 =======
-hitch() is a neat function. It returns a function that will execute a given function in a given scope.  This function allows you to control how a function executes, particularly in asynchronous operations.  How many times have you done something like:
+hitch() is a neat function. It returns a function that will execute a given function in a given context.  This function allows you to control how a function executes, particularly in asynchronous operations.  How many times have you done something like:
 
 .. js ::
 
@@ -254,7 +254,7 @@ hitch() is a neat function. It returns a function that will execute a given func
 
 
 Only to have it fail with a cryptic error like:
-dataLoaded is not a function, or errors about unresolved variables?   Why does that occur?  Well, because in asynchronous callbacks such as above, you're changing the scope of 'dataLoaded' when you assign it into an associative map.  It will no longer refer to the widget that originally provided it, but its scope will now refer to the enclosing object, the xhr arguments!  To get around this, you can use hitch to force the function to retain its original scope.  The same code done properly will look like:
+dataLoaded is not a function, or errors about unresolved variables?   Why does that occur?  Well, because in asynchronous callbacks such as above, you're changing the context of 'dataLoaded' when you assign it into an associative map.  It will no longer refer to the widget that originally provided it, but its context will now refer to the enclosing object, the xhr arguments!  To get around this, you can use hitch to force the function to retain its original context.  The same code done properly will look like:
 
 .. js ::
 
@@ -266,7 +266,7 @@ dataLoaded is not a function, or errors about unresolved variables?   Why does t
     xhr.get(args);
   });
 
-And now when the xhr.get call runs the load function, it will run in the appropriate widget scope.
+And now when the xhr.get call runs the load function, it will run in the appropriate widget context.
 
 
 
@@ -291,10 +291,10 @@ Let's look at a quick example:
 
 When we open up firebug, we should get "bar" printed. That's because the scope we provided in hitch() was 'myObj', so inside the function, 'this' refers to 'myObj'.
 
-Using Methods in the Scope
---------------------------
+Using Methods in the Context
+----------------------------
 
-Let's say I want to call a method in a given scope. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
+Let's say I want to call a method in a given context. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
 
 .. code-example::
 
