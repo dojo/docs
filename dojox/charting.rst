@@ -1066,7 +1066,7 @@ The picture below demonstrates Tooltip action.
       chart.addAxis("y", {vertical: true});
       chart.addPlot("default", {type: Columns, enableCache: true});
       chart.addSeries("Series A", [ ... ]);
-      new Tooltip(chart, "default", { text: "x" });
+      new Tooltip(chart, "default");
       chart.render()
   });
 
