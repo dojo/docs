@@ -30,7 +30,7 @@ Creating a Dojo Release/RC/Beta
    build script)
 9. Untar the files to download.dojotoolkit.org, then delete the tarball
 10. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
-11. Add tags to GitHub for each repo (these instructions are for point releases; major releases are easier and you can figure that out on your own): ``cd <cloned-repo-name> && git checkout <last-version> && svn export --force http://svn.dojotoolkit.org/src/tags/release-<version>/<reponame> . && git commit -a -m "Release <version>" && git tag -a -m "Release <version>" <version> && git push --tags``
+11. Add tags to GitHub for each repo (these instructions are for point releases; major releases are easier and you can figure that out on your own): ``cd <cloned-repo-name> && git checkout <last-version> && rm -rf * && svn export --force http://svn.dojotoolkit.org/src/tags/release-<version>/<reponame> . && git commit -a -m "Release <version>" && git tag -a -m "Release <version>" <version> && git push --tags``
 12. Add new version and milestone numbers to Trac.
 13. Bulk move all open tickets to the next release number in Trac.
 14. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
