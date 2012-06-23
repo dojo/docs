@@ -14,24 +14,26 @@ Creating a Dojo Release/RC/Beta
 
 1. Log into your shell account at <username>.dojotoolkit.org
 2. Check out a copy of the appropriate branch
-3. Run ``util/buildscripts/build_release.sh <version> <username> <revision>``, where:
+3. ``cd util/buildscripts``
+4. Run ``./build_release.sh <version> <username> <revision>``, where:
 
    ``version`` is the version number, e.g. 1.7.1rc1
 
    ``username`` is your subversion username
 
    ``revision`` is the revision of the version to tag as the release. If unspecified, the head revision will be used.
-4. Press a key to start the build
-5. Press "Enter" when asked whether you want to do any manual packaging
-6. Move the release to ``download.dojotoolkit.org:/srv/www/vhosts.d/download.dojotoolkit.org/``
+5. Press a key to start the build
+6. Press "Enter" when asked whether you want to do any manual packaging
+7. Ignore any errors about ``cd`` failure
+8. Move the release to ``download.dojotoolkit.org:/srv/www/vhosts.d/download.dojotoolkit.org/``
    (if you built it locally, then copy it to <username>.dojotoolkit.org first, using the command suggested by the
    build script)
-7. Untar the files to download.dojotoolkit.org, then delete the tarball
-8. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
-9. Update the tags on the GitHub repos.
-10. Add new version and milestone numbers to Trac.
-11. Bulk move all open tickets to the next release number in Trac.
-12. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
+9. Untar the files to download.dojotoolkit.org, then delete the tarball
+10. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
+11. Update the tags on the GitHub repos.
+12. Add new version and milestone numbers to Trac.
+13. Bulk move all open tickets to the next release number in Trac.
+14. Do a CDN build! Ant 1.8 does not work, so use peller’s copy of 1.7.1:
 
     ``ANT_HOME=/home/peller/ant-1.7.1/ ./cdnBuild.sh <version>``, where:
 
@@ -39,15 +41,15 @@ Creating a Dojo Release/RC/Beta
 
     If this is the first time you have run ant, it will not work. You will need to ctrl+c after it fails and start over.
 
-    You will also need to comment out the <property name="locales"/> node in ``util/buildscripts/cldr/build.xml``.
+    You will also need to remove the <property name="locales"/> node in ``util/buildscripts/cldr/build.xml`` so all locales are built.
 
     **READ THE CDNBUILD.TXT INSTRUCTIONS OR YOU MIGHT BUILD THE WRONG VERSION**.
-13. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
+15. Transfer the CDN build directory to archive.dojotoolkit.org/cdn. You probably wanna archive it first or else it
     will take forever and ever.
-14. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
+16. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
     something.
-15. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
-16. Celebrate!
+17. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
+18. Celebrate!
 
 Creating a new DTK branch (for new major versions)
 ==================================================
