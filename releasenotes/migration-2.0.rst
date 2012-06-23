@@ -1,4 +1,4 @@
-.. _releasenotes/migration20:
+.. _releasenotes/migration-2.0:
 
 ===============================
 Dojo 1.x to 2.0 migration guide
