@@ -358,8 +358,8 @@ dojo/router
 dojo/sniff
 ----------
 
-- The ``dojo/_base/sniff`` module was superseded by ``dojo/sniff``. ``dojo/sniff`` functions the same way as the old 
-module, except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
+- The ``dojo/_base/sniff`` module was superseded by ``dojo/sniff``. ``dojo/sniff`` functions the same way as the old
+  module, except doesn't set globals like ``dojo.isIE``. Instead, use ``has("ie")`` etc.
 
 dojo/Stateful
 -------------
