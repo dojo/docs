@@ -311,8 +311,9 @@ dojo/request
 ------------
 
 - The ``dojo/request`` package introduces a new architecture for making asynchronous requests from code. The module
-  abstracts the user, for the most part, from the actual provider that makes the request. This means the doesn't have to
-  normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise`` package.
+  abstracts the user, for the most part, from the actual provider that makes the request. This means the user doesn't
+  have to normally deal with the specifics of how the request is actually made. It builds upon the ``dojo/promise``
+  package.
 
   Requiring the ``dojo/request`` as a module will return the default provider, based on platform. Browser based 
   platforms use ``dojo/request/xhr`` and node based platforms use ``dojo/request/node``.
@@ -640,7 +641,7 @@ Themes - Claro
 All browsers except IE now implement shading in the ``claro`` theme via CSS gradients, rather than by using images. This
 reduces the number of files downloaded, speeding up page load.
 
-Also, the remaining gradient images files (for IE) no longer contain any blue. Thus, customizing ``claro`` to a different does not require modifying those files. You are still required however to update icon files that contain the theme's primary color, such as:
+Also, the remaining gradient images files (for IE) no longer contain any blue. Thus, customizing ``claro`` to a different color does not require modifying those files. You are still required however to update icon files that contain the theme's primary color, such as:
 
 - Checkboxes and radio buttons
 
