@@ -286,7 +286,7 @@ To monitor when a pane is selected (and the previous pane is deselected), the pr
 
 .. js ::
 
-   myTabContainer.watch("selectedChild", function(name, oval, nval){
+   myTabContainer.watch("selectedChildWidget", function(name, oval, nval){
        console.log("selected child changed from ", oval, " to ", nval);
    });
 

@@ -45,7 +45,7 @@ For example:
 .. js ::
  
     dojo.require("dijit.Editor");
-    dojo.require("dijit.editor._plugins.TextColor");
+    dojo.require("dijit._editor.plugins.TextColor");
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins (or the plugins property if you're reorganizing the toolbar) for you want to load into the editor.
