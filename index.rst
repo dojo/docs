@@ -10,7 +10,6 @@ Dojo Toolkit Reference Guide
 Welcome
 =======
 
-
 Dojo is a collection of JavaScript utilities providing solutions for a vast array of problems faced by the 
 professional JavaScript developer. `Dojo Base`_ is the foundation of the Dojo Toolkit and functionality such as
 DOM and AJAX convenience methods, animations, and other base functionality suitable for building simple Web sites.
