@@ -29,8 +29,8 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
 * The selected value of combo box is bound to the same value property in the dojo.Stateful (titleModel).
 
 .. code-example::
-  :width: 320
-  :height: 160
+  :width: 280
+  :height: 120
 
   .. css ::
 
