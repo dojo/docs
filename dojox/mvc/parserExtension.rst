@@ -44,7 +44,6 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
         titleModel = new Stateful({value: "Foo"});
         colorModel = new Stateful({value: "bgRed"});
         boldTextModel = new Stateful({checked: false});
-        parser.parse();
     });
   
   .. html::
