@@ -49,6 +49,7 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
   
   .. html::
 
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
     <div>
         Text:
         <span data-mvc-bindings="class: at(boldTextModel, 'checked').direction(at.from).transform({format: function(value){ return value ? 'boldText' : ''; }}),
