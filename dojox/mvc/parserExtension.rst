@@ -38,11 +38,11 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
         "dojox",
         "dojo/Stateful",
         "dojo/parser",
-"dojo/has",
+        "dojo/has",
         "dojox/mvc/parserExtension",
         "dojo/domReady!"
     ], function(dojox, Stateful, parser, has){
-has.add(“mvc-bindings-log-api”, 1);
+        has.add(“mvc-bindings-log-api”, 1);
 
         titleModel = new Stateful({value: "Foo"});
         colorModel = new Stateful({value: "bgRed"});
