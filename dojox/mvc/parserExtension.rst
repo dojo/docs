@@ -32,6 +32,12 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
   :width: 620
   :height: 620
 
+  .. css ::
+
+    .boldText {
+        font-weight: Bold;
+    }
+
   .. js ::
 
     require([
