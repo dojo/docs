@@ -48,7 +48,6 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
         "dojo/domReady!"
     ], function(dojox, Stateful, parser){
         titleModel = new Stateful({value: "Foo"});
-        colorModel = new Stateful({value: "bgRed"});
         boldTextModel = new Stateful({checked: false});
     });
   
