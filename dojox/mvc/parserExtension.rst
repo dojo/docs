@@ -35,15 +35,14 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
   .. js ::
 
     require([
-        "dojox",
+        "dojox”,
+        “dojo/_base/config”,
         "dojo/Stateful",
         "dojo/parser",
-        "dojo/has",
         "dojox/mvc/parserExtension",
         "dojo/domReady!"
-    ], function(dojox, Stateful, parser, has){
-        has.add("mvc-bindings-log-api", 1);
-
+    ], function(dojox, config, Stateful, parser){
+        config.mvc = {debugBindings: 1};
         titleModel = new Stateful({value: "Foo"});
         colorModel = new Stateful({value: "bgRed"});
         boldTextModel = new Stateful({checked: false});
