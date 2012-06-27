@@ -40,7 +40,6 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
 
   .. js ::
 
-    require(["dojo/_base/config"], function(config){ config.mvc = {debugBindings: 1}; });
     require([
         "dojox",
         "dojo/Stateful",
