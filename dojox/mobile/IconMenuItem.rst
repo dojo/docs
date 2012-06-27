@@ -14,7 +14,7 @@ dojox.mobile.IconMenuItem
 Introduction
 ============
 
-IconMenuItem represents a menu item of :ref:`dojox.mobile.MenuItem <dojox/mobile/MenuItem>`. This widget inherits from dojox.mobile._ItemBase. Basic usage is same as the other subclasses such as :ref:`dojox.mobile.ListItem <dojox/mobile/ListItem>`.
+IconMenuItem represents a menu item of :ref:`dojox.mobile.IconMenu <dojox/mobile/IconMenu>`. This widget inherits from dojox.mobile._ItemBase. Basic usage is same as the other subclasses such as :ref:`dojox.mobile.ListItem <dojox/mobile/ListItem>`.
 
 .. image :: IconMenuItem.png
 
