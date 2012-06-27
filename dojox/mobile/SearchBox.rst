@@ -145,7 +145,7 @@ Using a dojo.store and nextPage function
     data-dojo-props='store:store, searchAttr: "label", ignoreCase: true, onSearch:onSearch, pageSize:2'>
   <ul data-dojo-type="dojox/mobile/RoundRectList" jsId="list"></ul>
 
-.. image :: SearchBoxPaged.png
+.. image :: SearchBox/SearchBoxPaged.png
 
 Using inline OPTION tags
 ------------------------
