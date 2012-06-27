@@ -23,6 +23,7 @@ The ``queryExpr`` attribute lets you specify how matching is done. For example, 
 
 Search results can be paged using the ``pageSize`` attribute. For example, if ``pageSize`` is set to 5 and there are 14 search results,
 the ``onSearch`` function will be called with 3 parameters:
+
 * ``results``: An object containing an array of search results from the store (with ``length`` = 5 in this example) and also contains the ``nextPage`` function as well as the ``total`` number of search results (14 in this example),
 
 * ``query``: A copy of the originating query property (useful for multiple query environments),
