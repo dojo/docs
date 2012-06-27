@@ -96,8 +96,8 @@ Attributes from this widget
 Examples
 ========
 
-Using a dojo.store
-------------------
+Using a dojo.store and nextPage function
+----------------------------------------
 
 .. js ::
  
@@ -109,6 +109,7 @@ Using a dojo.store
     "dojox/mobile",
     "dojo/store/Memory",
     "dojox/mobile/ListItem",
+    "dojox/mobile/RoundRectList",
     "dojox/mobile/SearchBox",
     "dojox/mobile/deviceTheme"
   ], function(array, ready, parser, mobile, MemoryStore, ListItem){
@@ -118,24 +119,33 @@ Using a dojo.store
       {label: "Alaska"},
       {label: "American Samoa"},
       {label: "Arizona"},
-      {label: "Arkansas"}
+      {label: "Arkansas"},
+      {label: "Kansas"},
+      {label: "Kentucky"}
     ]});
 
     onSearch = function(results, query, options){
-      list.destroyDescendants();
+      if(options.start == 0){
+        list.destroyDescendants();
+      }
+      list.addChild(new ListItem({label: 'Page '+(options.start/options.count+1)+
+        ' of '+Math.ceil(results.total/options.count), header:true }));
       array.forEach(results, function(item){
         list.addChild(new ListItem({label: item.label})); 
       });
+      if((options.start+results.length) < results.total){
+        results.nextPage();
+      }
     };
   });
 
 .. html ::
 
-  <input data-dojo-type="dojox.mobile.SearchBox" type="search" placeHolder="Search"
-    data-dojo-props='store:store, searchAttr: "label", ignoreCase: true, onSearch:onSearch'>
-  <ul data-dojo-type="dojox.mobile.RoundRectList" jsId="list"></ul>
+  <input data-dojo-type="dojox/mobile/SearchBox" type="search" placeHolder="Search"
+    data-dojo-props='store:store, searchAttr: "label", ignoreCase: true, onSearch:onSearch, pageSize:2'>
+  <ul data-dojo-type="dojox/mobile/RoundRectList" jsId="list"></ul>
 
-.. image :: SearchBox.png
+.. image :: SearchBoxPaged.png
 
 Using inline OPTION tags
 ------------------------
