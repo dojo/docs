@@ -35,7 +35,7 @@ Also, the text in <span> changes when user makes a selection in combo box, as:
   .. js ::
 
     require([
-        "dojox”,
+        "dojox",
         "dojo/_base/config",
         "dojo/Stateful",
         "dojo/parser",
