@@ -1299,6 +1299,9 @@ loader-finish-exec
 loader-define-module
   Emitted when the loader is about to process a previous ``define`` call. See loader-define, above. args[0] is the module identifier.
 
+loader-circular-dependency
+  Emitted when the loader detects a circular dependency, which may or may not indicate a programming error.
+
 
 Non-browser Environments
 ========================
