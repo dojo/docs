@@ -39,6 +39,8 @@ Examples
             return object.id > 1;
         }) // Pass a function to do more complex querying
 
+        store.query({name:"One"}, {sort: [{attribute: "id"}]}) // Returns query results and sort by id
+
         store.put({id:3, name:"Three"}); // store the object with the given identity
 
         store.remove(3); // delete the object
@@ -46,6 +48,8 @@ Examples
 
 See Also
 ========
+
+The Memory store uses the `dojo/store/util/SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>` for querying.
 
 You may also wish to use the Observable store wrapper to add notifications of changes to data:
 
