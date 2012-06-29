@@ -88,6 +88,8 @@ value    Any?          *Optional* The value of the property to set, or if ``name
                        omitted.
 ======== ============= ==============================================================================================
 
+If no custom setter is defined on an object, performing a set() will result in the property value being set directly on the object. This can be convenient, as the property can be accessed directly through standard JS syntax (object.property). But, be aware that setting arbitrary property names could lead to overriding the object's methods (like set(), get(), etc.), which may be undesirable. If you are setting arbitrary property names, you may wish to guard against reserved method names, or prefix property names to avoid collision.
+
 watch()
 -------
 
