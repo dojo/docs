@@ -49,7 +49,7 @@ Examples
 See Also
 ========
 
-The Memory store uses the `dojo/store/util/SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>` for querying.
+The Memory store uses the :ref:`dojo/store/util/SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>` for querying.
 
 You may also wish to use the Observable store wrapper to add notifications of changes to data:
 
