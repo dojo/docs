@@ -57,7 +57,7 @@ transaction()                                     Starts a transaction and retur
                                                   * commit() - Commits all the changes that took place during the transaction.
                                                   * abort() - Aborts all the changes that took place during the transaction.
 
-                                                  Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+                                                  Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions. Also note that within a transaction, notification events may still occur immediately, rather after a commit. Consequently, aborting a transaction may require sending new notification events to notify of the rollback of the data.
 
 getChildren(object, options)                      Returns the children of an object. The options parameter may include the same properties as query options
 
