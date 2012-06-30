@@ -1,0 +1,11 @@
+.. _build/messages/303:
+
+========================================================================================
+303 - amdMissingLayerIncludeModule
+========================================================================================
+
+:Message Number: 303
+:Message: amdMissingLayerIncludeModule
+:Text: Missing include module for layer.
+:Type: Error
+

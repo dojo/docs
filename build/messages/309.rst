@@ -1,0 +1,11 @@
+.. _build/messages/309:
+
+========================================================================================
+309 - i18nNoRoot
+========================================================================================
+
+:Message Number: 309
+:Message: i18nNoRoot
+:Text: Missing root bundle for locale-specific legacy i18n bundle
+:Type: Error
+

@@ -1,0 +1,11 @@
+.. _build/messages/100:
+
+========================================================================================
+100 - legacyAssumed
+========================================================================================
+
+:Message Number: 100
+:Message: legacyAssumed
+:Text: Assumed module uses legacy loader API.
+:Type: Information
+

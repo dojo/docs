@@ -1,0 +1,11 @@
+.. _build/messages/331:
+
+========================================================================================
+331 - getDependencyListRemoved
+========================================================================================
+
+:Message Number: 331
+:Message: getDependencyListRemoved
+:Text: load("getDependencyList.js") is no supported.
+:Type: Error
+

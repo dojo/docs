@@ -1,0 +1,11 @@
+.. _build/messages/355:
+
+========================================================================================
+355 - declarativeRequireFailed
+========================================================================================
+
+:Message Number: 355
+:Message: declarativeRequireFailed
+:Text: Unable to convert declarative require.
+:Type: Error
+

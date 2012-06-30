@@ -1,0 +1,11 @@
+.. _build/messages/200:
+
+========================================================================================
+200 - configUnresolvedValues
+========================================================================================
+
+:Message Number: 200
+:Message: configUnresolvedValues
+:Text: Configuration contains unsolved values.
+:Type: Warning
+

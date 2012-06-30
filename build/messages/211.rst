@@ -1,0 +1,11 @@
+.. _build/messages/211:
+
+========================================================================================
+211 - inputDeprecated
+========================================================================================
+
+:Message Number: 211
+:Message: inputDeprecated
+:Text: Deprecated switch; ignored
+:Type: Warning
+

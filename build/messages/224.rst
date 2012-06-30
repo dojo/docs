@@ -1,0 +1,11 @@
+.. _build/messages/224:
+
+========================================================================================
+224 - missingPluginResolver
+========================================================================================
+
+:Message Number: 224
+:Message: missingPluginResolver
+:Text: A plugin dependency was encountered but there was not build-time plugin resolver.
+:Type: Warning
+

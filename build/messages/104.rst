@@ -1,0 +1,11 @@
+.. _build/messages/104:
+
+========================================================================================
+104 - optimizeMessages
+========================================================================================
+
+:Message Number: 104
+:Message: optimizeMessages
+:Text: Optimizer messages.
+:Type: Information
+

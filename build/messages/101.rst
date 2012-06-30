@@ -1,0 +1,11 @@
+.. _build/messages/101:
+
+========================================================================================
+101 - legacyUsingLoadInitPlug
+========================================================================================
+
+:Message Number: 101
+:Message: legacyUsingLoadInitPlug
+:Text: Using dojo/loadInit plugin for module.
+:Type: Information
+

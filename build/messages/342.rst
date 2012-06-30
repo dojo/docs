@@ -1,0 +1,11 @@
+.. _build/messages/342:
+
+========================================================================================
+342 - inputHTMLDirNoFiles
+========================================================================================
+
+:Message Number: 342
+:Message: inputHTMLDirNoFiles
+:Text: HTML directory given for "htmlDir" switch contains no HTML files.
+:Type: Error
+

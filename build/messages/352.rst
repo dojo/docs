@@ -1,0 +1,11 @@
+.. _build/messages/352:
+
+========================================================================================
+352 - failedToReadLayerCopyrightFile
+========================================================================================
+
+:Message Number: 352
+:Message: failedToReadLayerCopyrightFile
+:Text: Failed to read copyright file given with layer.
+:Type: Error
+

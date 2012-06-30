@@ -1,0 +1,11 @@
+.. _build/messages/335:
+
+========================================================================================
+335 - dojoPragmaEvalFail
+========================================================================================
+
+:Message Number: 335
+:Message: dojoPragmaEvalFail
+:Text: Failed to evaluate dojo pragma.
+:Type: Error
+

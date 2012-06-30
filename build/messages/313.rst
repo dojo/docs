@@ -1,0 +1,11 @@
+.. _build/messages/313:
+
+========================================================================================
+313 - cssOptimizeFailed
+========================================================================================
+
+:Message Number: 313
+:Message: cssOptimizeFailed
+:Text: Failed to optimize CSS file.
+:Type: Error
+

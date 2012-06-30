@@ -1,0 +1,11 @@
+.. _build/messages/222:
+
+========================================================================================
+222 - assumeLayerDependencyIsDojoModule
+========================================================================================
+
+:Message Number: 222
+:Message: assumeLayerDependencyIsDojoModule
+:Text: Assumed layer is referencing a dojo module.
+:Type: Warning
+

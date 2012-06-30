@@ -1,0 +1,11 @@
+.. _build/messages/214:
+
+========================================================================================
+214 - ignoringReleaseDirName
+========================================================================================
+
+:Message Number: 214
+:Message: ignoringReleaseDirName
+:Text: DestBasePath given; ignoring releaseDir and releaseName.
+:Type: Warning
+

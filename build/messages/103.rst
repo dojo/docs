@@ -1,0 +1,11 @@
+.. _build/messages/103:
+
+========================================================================================
+103 - optimizeDone
+========================================================================================
+
+:Message Number: 103
+:Message: optimizeDone
+:Text: Optimizing module complete.
+:Type: Information
+

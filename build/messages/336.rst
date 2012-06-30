@@ -1,0 +1,11 @@
+.. _build/messages/336:
+
+========================================================================================
+336 - dojoPragmaInvalid
+========================================================================================
+
+:Message Number: 336
+:Message: dojoPragmaInvalid
+:Text: Failed to find end marker for dojo pragma.
+:Type: Error
+

@@ -1,0 +1,11 @@
+.. _build/messages/220:
+
+========================================================================================
+220 - outputToProfileFileDeprecated
+========================================================================================
+
+:Message Number: 220
+:Message: outputToProfileFileDeprecated
+:Text: Writing htmlFiles- or htmlDirs-derived profile via the profileFile option is deprecated; use the writeProfile option instead
+:Type: Warning
+

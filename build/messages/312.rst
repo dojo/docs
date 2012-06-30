@@ -1,0 +1,11 @@
+.. _build/messages/312:
+
+========================================================================================
+312 - optimizeFailedWrite
+========================================================================================
+
+:Message Number: 312
+:Message: optimizeFailedWrite
+:Text: Failed to write optimized file.
+:Type: Error
+

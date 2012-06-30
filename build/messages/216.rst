@@ -1,0 +1,11 @@
+.. _build/messages/216:
+
+========================================================================================
+216 - dojoHasUnresolvedMid
+========================================================================================
+
+:Message Number: 216
+:Message: dojoHasUnresolvedMid
+:Text: dojo/has plugin resource could not be resolved during build-time.
+:Type: Warning
+

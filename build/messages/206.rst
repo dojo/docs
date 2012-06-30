@@ -1,0 +1,11 @@
+.. _build/messages/206:
+
+========================================================================================
+206 - legacyMultipleProvides
+========================================================================================
+
+:Message Number: 206
+:Message: legacyMultipleProvides
+:Text: Module included multiple dojo.provide applications.
+:Type: Warning
+

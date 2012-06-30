@@ -1,0 +1,11 @@
+.. _build/messages/351:
+
+========================================================================================
+351 - cannotDeduceModuleIdFrom16LayerDependency
+========================================================================================
+
+:Message Number: 351
+:Message: cannotDeduceModuleIdFrom16LayerDependency
+:Text: Cannot deduce module identifier from layer dependency
+:Type: Error
+

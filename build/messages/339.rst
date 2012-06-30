@@ -1,0 +1,11 @@
+.. _build/messages/339:
+
+========================================================================================
+339 - inputProfileFileDoesNotExist
+========================================================================================
+
+:Message Number: 339
+:Message: inputProfileFileDoesNotExist
+:Text: Profile file given for "profileFile" switch does not exist.
+:Type: Error
+

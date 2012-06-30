@@ -1,0 +1,11 @@
+.. _build/messages/341:
+
+========================================================================================
+341 - inputHTMLDirDoesNotExist
+========================================================================================
+
+:Message Number: 341
+:Message: inputHTMLDirDoesNotExist
+:Text: HTML directory given for "htmlDir" switch does not exist.
+:Type: Error
+

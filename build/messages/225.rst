@@ -1,0 +1,11 @@
+.. _build/messages/225:
+
+========================================================================================
+225 - missingDirDuringDiscovery
+========================================================================================
+
+:Message Number: 225
+:Message: missingDirDuringDiscovery
+:Text: A directory that was scheduled to be read during discovery did not exist.
+:Type: Warning
+

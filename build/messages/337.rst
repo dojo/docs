@@ -1,0 +1,14 @@
+.. _build/messages/337:
+
+========================================================================================
+337 - inputMalformedPackageJson
+========================================================================================
+
+:Message Number: 337
+:Message: inputMalformedPackageJson
+:Text: Malformed package.json file.
+:Type: Error
+
+specified by package flag.
+:Type: Error
+

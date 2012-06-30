@@ -1,0 +1,11 @@
+.. _build/messages/207:
+
+========================================================================================
+207 - legacyImproperProvide
+========================================================================================
+
+:Message Number: 207
+:Message: legacyImproperProvide
+:Text: dojo.provide application identifier inconsistent with module identifier.
+:Type: Warning
+

@@ -1,0 +1,11 @@
+.. _build/messages/333:
+
+========================================================================================
+333 - legacyMissingDependency
+========================================================================================
+
+:Message Number: 333
+:Message: legacyMissingDependency
+:Text: Missing dependency in legacy module.
+:Type: Error
+

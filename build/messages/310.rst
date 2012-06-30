@@ -1,0 +1,11 @@
+.. _build/messages/310:
+
+========================================================================================
+310 - i18nImproperBundle
+========================================================================================
+
+:Message Number: 310
+:Message: i18nImproperBundle
+:Text: Non-i18n module found in nls tree (copied only).
+:Type: Error
+

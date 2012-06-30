@@ -1,0 +1,11 @@
+.. _build/messages/345:
+
+========================================================================================
+345 - inputProcessingHtmlFileNotImplemented
+========================================================================================
+
+:Message Number: 345
+:Message: inputProcessingHtmlFileNotImplemented
+:Text: Pulling profiles from HTML files is not implemented.
+:Type: Error
+

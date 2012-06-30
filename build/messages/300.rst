@@ -1,0 +1,11 @@
+.. _build/messages/300:
+
+========================================================================================
+300 - dojoHasMissingPlugin
+========================================================================================
+
+:Message Number: 300
+:Message: dojoHasMissingPlugin
+:Text: Missing dojo/has module.
+:Type: Error
+

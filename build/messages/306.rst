@@ -1,0 +1,11 @@
+.. _build/messages/306:
+
+========================================================================================
+306 - legacyFailedEval
+========================================================================================
+
+:Message Number: 306
+:Message: legacyFailedEval
+:Text: Failed to evaluate legacy API application.
+:Type: Error
+

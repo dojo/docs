@@ -1,0 +1,11 @@
+.. _build/messages/350:
+
+========================================================================================
+350 - cannotDeduceModuleIdFrom16LayerName
+========================================================================================
+
+:Message Number: 350
+:Message: cannotDeduceModuleIdFrom16LayerName
+:Text: Cannot deduce module identifier from layer name
+:Type: Error
+

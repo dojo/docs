@@ -1,0 +1,11 @@
+.. _build/messages/325:
+
+========================================================================================
+325 - discoveryFailed
+========================================================================================
+
+:Message Number: 325
+:Message: discoveryFailed
+:Text: Failed to discover any resources to transform. Nothing to do; terminating application
+:Type: Error
+

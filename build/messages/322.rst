@@ -1,0 +1,11 @@
+.. _build/messages/322:
+
+========================================================================================
+322 - inputNoLoaderForBoot
+========================================================================================
+
+:Message Number: 322
+:Message: inputNoLoaderForBoot
+:Text: Unable to find loader for boot layer.
+:Type: Error
+

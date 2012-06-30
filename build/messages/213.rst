@@ -1,0 +1,11 @@
+.. _build/messages/213:
+
+========================================================================================
+213 - buildUsingDifferentDojo
+========================================================================================
+
+:Message Number: 213
+:Message: buildUsingDifferentDojo
+:Text: Dojo path specified in profile is different than the dojo being used for the build program
+:Type: Warning
+

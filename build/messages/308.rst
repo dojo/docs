@@ -1,0 +1,11 @@
+.. _build/messages/308:
+
+========================================================================================
+308 - amdFailedDefineEval
+========================================================================================
+
+:Message Number: 308
+:Message: amdFailedDefineEval
+:Text: Failed to evaluate AMD define function.
+:Type: Error
+

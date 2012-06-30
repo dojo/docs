@@ -1,0 +1,11 @@
+.. _build/messages/302:
+
+========================================================================================
+302 - dojoHasMissingMid
+========================================================================================
+
+:Message Number: 302
+:Message: dojoHasMissingMid
+:Text: Missing dojo/has plugin resource that was resolved at build-time.
+:Type: Error
+

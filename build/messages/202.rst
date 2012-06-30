@@ -1,0 +1,11 @@
+.. _build/messages/202:
+
+========================================================================================
+202 - amdInconsistentMid
+========================================================================================
+
+:Message Number: 202
+:Message: amdInconsistentMid
+:Text: AMD module specified and absolute module identifier that is not consistent with the configuration and filename
+:Type: Warning
+

@@ -1,0 +1,11 @@
+.. _build/messages/305:
+
+========================================================================================
+305 - amdMissingLayerModuleText
+========================================================================================
+
+:Message Number: 305
+:Message: amdMissingLayerModuleText
+:Text: Missing module text for layer.
+:Type: Error
+

@@ -1,0 +1,11 @@
+.. _build/messages/338:
+
+========================================================================================
+338 - inputProfileDoesNotExist
+========================================================================================
+
+:Message Number: 338
+:Message: inputProfileDoesNotExist
+:Text: Profile given for "profile" switch does not exist.
+:Type: Error
+

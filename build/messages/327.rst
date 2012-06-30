@@ -1,0 +1,11 @@
+.. _build/messages/327:
+
+========================================================================================
+327 - outputCollide
+========================================================================================
+
+:Message Number: 327
+:Message: outputCollide
+:Text: Multiple resources are destined for same filename.
+:Type: Error
+

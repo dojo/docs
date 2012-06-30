@@ -1,0 +1,11 @@
+.. _build/messages/215:
+
+========================================================================================
+215 - inputLoggerRemoved
+========================================================================================
+
+:Message Number: 215
+:Message: inputLoggerRemoved
+:Text: Logger has been removed; all calls ignored
+:Type: Warning
+

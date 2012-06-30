@@ -1,0 +1,11 @@
+.. _build/messages/340:
+
+========================================================================================
+340 - inputHTMLFileDoesNotExist
+========================================================================================
+
+:Message Number: 340
+:Message: inputHTMLFileDoesNotExist
+:Text: HTML file given for "htmlFiles" switch does not exist.
+:Type: Error
+

@@ -1,0 +1,11 @@
+.. _build/messages/208:
+
+========================================================================================
+208 - inputDeprecatedProfileFile
+========================================================================================
+
+:Message Number: 208
+:Message: inputDeprecatedProfileFile
+:Text: The "profileFile" switch has been deprecated; use "profile" instead.
+:Type: Warning
+

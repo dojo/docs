@@ -1,0 +1,11 @@
+.. _build/messages/311:
+
+========================================================================================
+311 - amdMissingDependency
+========================================================================================
+
+:Message Number: 311
+:Message: amdMissingDependency
+:Text: Missing dependency.
+:Type: Error
+

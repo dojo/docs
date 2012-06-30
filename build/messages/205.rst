@@ -1,0 +1,11 @@
+.. _build/messages/205:
+
+========================================================================================
+205 - amdNotPureContainedNoLegacyApi
+========================================================================================
+
+:Message Number: 205
+:Message: amdNotPureContainedNoLegacyApi
+:Text: Module not tagged as pure AMD yet it contains AMD API applications.
+:Type: Warning
+

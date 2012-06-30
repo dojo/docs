@@ -1,0 +1,11 @@
+.. _build/messages/209:
+
+========================================================================================
+209 - missingPackageJson
+========================================================================================
+
+:Message Number: 209
+:Message: missingPackageJson
+:Text: Missing or empty package.json.
+:Type: Warning
+

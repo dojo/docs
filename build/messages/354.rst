@@ -1,0 +1,11 @@
+.. _build/messages/354:
+
+========================================================================================
+354 - missingL10n
+========================================================================================
+
+:Message Number: 354
+:Message: missingL10n
+:Text: Root bundle indicates localized bundles that don't exist.
+:Type: Error
+

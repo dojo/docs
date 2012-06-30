@@ -1,0 +1,11 @@
+.. _build/messages/304:
+
+========================================================================================
+304 - amdMissingLayerExcludeModule
+========================================================================================
+
+:Message Number: 304
+:Message: amdMissingLayerExcludeModule
+:Text: Missing exclude module for layer.
+:Type: Error
+

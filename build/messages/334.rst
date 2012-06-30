@@ -1,0 +1,11 @@
+.. _build/messages/334:
+
+========================================================================================
+334 - amdCannotInstantiateLayer
+========================================================================================
+
+:Message Number: 334
+:Message: amdCannotInstantiateLayer
+:Text: Cannot instantiate all modules in layer.
+:Type: Error
+

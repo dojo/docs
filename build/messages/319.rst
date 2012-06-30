@@ -1,0 +1,11 @@
+.. _build/messages/319:
+
+========================================================================================
+319 - inputUnknownOptimize
+========================================================================================
+
+:Message Number: 319
+:Message: inputUnknownOptimize
+:Text: Unknown optimize value.
+:Type: Error
+

@@ -1,0 +1,11 @@
+.. _build/messages/201:
+
+========================================================================================
+201 - amdCircularDependency
+========================================================================================
+
+:Message Number: 201
+:Message: amdCircularDependency
+:Text: Cycle detected in layer dependencies.
+:Type: Warning
+

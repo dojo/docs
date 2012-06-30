@@ -1,0 +1,11 @@
+.. _build/messages/307:
+
+========================================================================================
+307 - amdFailedEval
+========================================================================================
+
+:Message Number: 307
+:Message: amdFailedEval
+:Text: Failed to evaluate module tagged as pure AMD (fell back to processing with regular expressions).
+:Type: Error
+

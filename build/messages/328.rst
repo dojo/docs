@@ -1,0 +1,11 @@
+.. _build/messages/328:
+
+========================================================================================
+328 - noTransform
+========================================================================================
+
+:Message Number: 328
+:Message: noTransform
+:Text: No transform found for discovered resouce.
+:Type: Error
+

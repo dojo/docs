@@ -1,0 +1,11 @@
+.. _build/messages/210:
+
+========================================================================================
+210 - inputDeprecatedStripConsole
+========================================================================================
+
+:Message Number: 210
+:Message: inputDeprecatedStripConsole
+:Text: Given strip console value is deprecated.
+:Type: Warning
+

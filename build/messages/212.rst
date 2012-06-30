@@ -1,0 +1,11 @@
+.. _build/messages/212:
+
+========================================================================================
+212 - oddDojoPath
+========================================================================================
+
+:Message Number: 212
+:Message: oddDojoPath
+:Text: No profile.basePath provided, yet dojo path is relative and running build with the current working directory different than util/buildscripts
+:Type: Warning
+

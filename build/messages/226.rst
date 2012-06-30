@@ -1,0 +1,11 @@
+.. _build/messages/226:
+
+========================================================================================
+226 - missingProfile
+========================================================================================
+
+:Message Number: 226
+:Message: missingProfile
+:Text: A package without a profile could throw errors or warnings.
+:Type: Warning
+

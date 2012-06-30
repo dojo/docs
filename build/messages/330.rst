@@ -1,0 +1,11 @@
+.. _build/messages/330:
+
+========================================================================================
+330 - layerMissingDependency
+========================================================================================
+
+:Message Number: 330
+:Message: layerMissingDependency
+:Text: Failed to resolve layer dependency.
+:Type: Error
+

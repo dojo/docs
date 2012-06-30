@@ -1,0 +1,11 @@
+.. _build/messages/318:
+
+========================================================================================
+318 - inputUnknownLayerOptimize
+========================================================================================
+
+:Message Number: 318
+:Message: inputUnknownLayerOptimize
+:Text: Unknown layer optimize value.
+:Type: Error
+

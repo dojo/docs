@@ -1,0 +1,11 @@
+.. _build/messages/223:
+
+========================================================================================
+223 - possibleLegacyModuleId
+========================================================================================
+
+:Message Number: 223
+:Message: possibleLegacyModuleId
+:Text: Name in internStringsSkipList looks like a legacy module identifier.
+:Type: Warning
+

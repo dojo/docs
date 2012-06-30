@@ -1,0 +1,11 @@
+.. _build/messages/218:
+
+========================================================================================
+218 - inputProfileFileDeprecated
+========================================================================================
+
+:Message Number: 218
+:Message: inputProfileFileDeprecated
+:Text: the command line switch profileFile is deprectated; use profile for both files and profiles
+:Type: Warning
+

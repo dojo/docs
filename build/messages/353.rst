@@ -1,0 +1,11 @@
+.. _build/messages/353:
+
+========================================================================================
+353 - i18nUnevaluableBundle
+========================================================================================
+
+:Message Number: 353
+:Message: i18nUnevaluableBundle
+:Text: I18n bundle was not evaluable in the build environment; therefore it will not be included in the flattening computations.
+:Type: Error
+

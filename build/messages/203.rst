@@ -1,0 +1,11 @@
+.. _build/messages/203:
+
+========================================================================================
+203 - amdPureContainedLegacyApi
+========================================================================================
+
+:Message Number: 203
+:Message: amdPureContainedLegacyApi
+:Text: Module tagged as pure AMD yet it contains legacy loader API applications.
+:Type: Warning
+
