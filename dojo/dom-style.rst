@@ -193,6 +193,14 @@ Multiple styles can be done by using a hash as the ``name`` argument:
     });
   });
 
+To remove an inline style, set the value to an empty string(``""``):
+
+.. js ::
+
+  require(["dojo/dom-style"], function(domStyle){
+    domStyle.set("someNode", "display", "");
+  });
+
 *Note* CSS attributes that contain a dash are lowerCamelCased in JavaScript. Like as above the CSS ``background-color``
 becomes ``backgroundColor``.
 
