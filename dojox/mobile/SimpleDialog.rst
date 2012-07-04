@@ -56,7 +56,11 @@ Declarative example
 
   // Java Script
   require([
-    "dijit/registry"
+    "dijit/registry",
+    "dojox/mobile",
+    "dojox/mobile/parser",
+    "dojox/mobile/SimpleDialog",
+    "dojox/mobile/Button"
   ], function(registry){
     show = function(dlg){
       registry.byId(dlg).show();
@@ -240,10 +244,4 @@ Large dialog example for Tablet
       </tr>
       <tr>
         <td colspan="2">
-          <textarea>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</textarea></td>
-      </tr>
-    </table>
-  </div>
-
-.. image :: SimpleDialog-example4.png
-
+          <textarea>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
