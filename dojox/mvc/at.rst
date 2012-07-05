@@ -76,7 +76,7 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
 In below example, edit in text box is reflected to the text next to it:
 
 .. code-example::
-  :width: 320
+  :width: 480
   :height: 60
 
   .. js ::
