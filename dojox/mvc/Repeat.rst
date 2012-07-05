@@ -57,24 +57,34 @@ Declarative example
 
 			// Initial data
 			var search_results_init = {
-  			   "Query" : "Engineers",
-  			      "Results" : [
-                                {
-                                  "First": "Anne",
-                                  "Last" : "Ackerman",
-                                  "Email": "a.a@test.com"
-                                },
-                                {
-                                  "First": "Ben",
-                                  "Last" : "Beckham",
-                                  "Email": "b.b@test.com"
-                                },
-                                {
-                                  "First": "John",
-                                  "Last" : "Jacklin",
-                                  "Email": "j.j@test.com"
-                                }]
-                        };
+  			"identifier": "Serial",
+   			"items": [ 
+                    {
+                        "Serial"  : "A111",
+                        "First"   : "Anne",
+                        "Last"    : "Ackerman",
+                        "Email"   : "a.a@test.com"
+                    },
+                    {
+                        "Serial"  : "B111",
+                        "First"   : "Ben",
+                        "Last"    : "Beckham",
+                        "Email"   : "b.b@test.com"
+                    },
+                    {
+                        "Serial"  : "I111",
+                        "First"   : "Irene",
+                        "Last"    : "Ira",
+                        "Email"   : "i.i@test.com"
+                    },
+                    {
+                        "Serial"  : "J111",
+                        "First"   : "John",
+                        "Last"    : "Jacklin",
+                        "Email"   : "j.j@test.com"
+                    }
+                ]
+			};
 				// The getStateful call will take json data and create make it Stateful
 				searchRecords = getStateful(search_results_init);
 			});
@@ -85,7 +95,7 @@ Declarative example
         .cell { width: 20%;  display:inline-block; }
 
   .. html ::
-
+  
 		<script type="dojo/require">at: "dojox/mvc/at"</script>
 		<div id="main">
 		<div data-dojo-type="dojox/mvc/Group" data-dojo-props="target: searchRecords">
@@ -95,13 +105,26 @@ Declarative example
             The UI can be customized for each iteration using properties such as
             ${this.index} for the iteration index.
         -->
-        <div id="repeatId" data-dojo-type="dojox/mvc/Repeat" data-dojo-props="children: at('rel:', 'Results')">
+        	<h4>Repeat with TextBox for First and Last properties: </h4>        
+        	<div id="repeatId" data-dojo-type="dojox/mvc/Repeat" data-dojo-props="children: at('rel:', 'items')">
             <div class="row" data-dojo-type="dojox/mvc/Group" data-dojo-props="target: at('rel:', ${this.index})">
                 <label class="cell" for="nameInput${this.index}">Name:</label>
                 <input class="cell" data-dojo-type="dijit/form/TextBox" id="nameInput${this.index}"
                                     data-dojo-props="value: at('rel:', 'First')"></input>
+                <input class="cell" data-dojo-type="dijit/form/TextBox"
+                                    data-dojo-props="value: at('rel:', 'Last')"></input>
+            </div>
+        </div>
+        <h4>Repeat with mvc/Output for First and Last properties, will be updated when the TextBox is updated: </h4>        
+        <div id="repeatIdOutput" data-dojo-type="dojox/mvc/Repeat" data-dojo-props="children: at('rel:', 'items')">
+            <div class="row" data-dojo-type="dojox/mvc/Group" data-dojo-props="target: at('rel:', ${this.index})">
+                <label class="cell" for="nameOutput${this.index}">Name:</label>
+                <div class="cell" data-dojo-type="dojox/mvc/Output" id="nameOutput${this.index}"
+                                    data-dojo-props="value: at('rel:', 'First')"></div>
+                <div class="cell" data-dojo-type="dojox/mvc/Output"
+                                    data-dojo-props="value: at('rel:', 'Last')"></div>
             </div>
         </div>
 		</div>
-        <p>In the above example, the TextBoxes inside the repeat with the id="repeatId" will display the firstname of each of the entries in the model.
+        <p>In the above example, the TextBoxes inside the repeat will display the firstname of each of the entries in the model.
 		</div>
