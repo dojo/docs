@@ -71,7 +71,7 @@ Declarative example
 			<div id="mainContent">
 				<h3>Model</h3>
 				<div class="row">
-					<textarea id="textarea" class="cell" data-dojo-type="dijit/form/Textarea">
+					<textarea id="textarea" data-dojo-type="dijit/form/Textarea">
 		{
 			Serial: "360324",
 			First: "John",
@@ -106,4 +106,4 @@ Declarative example
 		</div>
 		</div>
 
-In the above example, the Generate will create a view with a label and TextBox for each of the fields listed in the textarea, and any updates to the textarea will be cause the view to be updated when you tab out of the text area.
+		<p>In the above example, the Generate will create a view with a label and TextBox for each of the fields listed in the textarea, and any updates to the textarea will be cause the view to be updated when you tab out of the text area.</p>
