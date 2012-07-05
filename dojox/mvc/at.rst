@@ -53,7 +53,7 @@ at function is typically used as a mixin property of a widget (data-dojo-props o
 Basic examples
 --------------
 
-In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes.
+In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes:
 
 .. code-example::
   :width: 320
@@ -72,6 +72,27 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
     <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
+
+In below example, edit in text box is reflected to the text next to it:
+
+.. code-example::
+  :width: 320
+  :height: 80
+
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, Stateful){
+        model = new Stateful({value: "Foo"});
+        parser.parse();
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
+    <span data-dojo-type="dijit/_WidgetBase" data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, value: at(model, 'value')"></span>
 
 ----------------------
 Data binding direction
