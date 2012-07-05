@@ -72,6 +72,7 @@ Features
 
   * :ref:`dojox/mvc/Output <dojox/mvc/Output>` A data-bound output widget.
   * :ref:`dojox/mvc/Group <dojox/mvc/Group>` An aggregation of widgets with the same parent data binding context.
+  * :ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>` A model-bound widget that creates child widgets repeatedly based on a data collection.
   * :ref:`dojox/mvc/Repeat <dojox/mvc/Repeat>` A model-bound repeater widget that binds to a data collection.
   * :ref:`dojox/mvc/Generate <dojox/mvc/Generate>` A simple example of UI generation from a supplied data model.
 
