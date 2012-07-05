@@ -77,7 +77,7 @@ In below example, edit in text box is reflected to the text next to it:
 
 .. code-example::
   :width: 320
-  :height: 80
+  :height: 60
 
   .. js ::
 
