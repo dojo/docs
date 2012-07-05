@@ -56,8 +56,8 @@ Basic examples
 In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes.
 
 .. code-example::
-  :width: 240
-  :height: 80
+  :width: 320
+  :height: 60
 
   .. js ::
 
