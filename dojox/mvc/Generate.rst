@@ -100,7 +100,7 @@ Declarative example
 					</textarea>
 				</div>
 				<h3>Generated View</h3>
-				<div data-dojo-type="dojox.mvc.Generate"
+				<div data-dojo-type="dojox/mvc/Generate"
 				 data-dojo-props="children: at('widget:textarea', 'value').direction(at.from).transform({format: dojo.fromJson}), idNameMapping: {String: 'view_t'}"></div>
 			</div>
 		</div>
