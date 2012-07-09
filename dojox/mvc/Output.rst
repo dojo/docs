@@ -21,8 +21,9 @@ Parameters
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |Parameter         |Type         |Default   |Description                                                                                             |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|ref               |String or    |          |The value of the data binding expression passed declaratively by the developer. This usually references |
-|                  |StatefulModel|          |a location within an existing datamodel and may be a relative reference based on the parent / container |
+|ref               |String or    |          |*Deprecated*. ref is only used with StatefulModel which is Deprecated, use value: at(model, 'attr').    |
+|                  |StatefulModel|          |The value of the data binding expression passed declaratively by the developer. This usually references |
+|                  |             |          |a location within an existing datamodel and may be a relative reference based on the parent / container |
 |                  |             |          |data binding (dot-separated string).                                                                    |
 +------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
 |exprchar          |Character    | '$'      |Character to use for a substitution expression, for a substitution string like ${this.value}            |

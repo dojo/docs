@@ -12,7 +12,7 @@ dojox.mvc.StatefulModel
 .. contents ::
    :depth: 2
 
-The first-class native JavaScript data model based on dojo.Stateful that wraps any data structure(s) that may be relevant for a view, a view portion, a dijit or any custom view layer component.
+*Deprecated*. The first-class native JavaScript data model based on dojo.Stateful that wraps any data structure(s) that may be relevant for a view, a view portion, a dijit or any custom view layer component.
 
 
 Constructor Parameters

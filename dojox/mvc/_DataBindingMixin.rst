@@ -12,7 +12,7 @@ dojox.mvc._DataBindingMixin
 .. contents ::
    :depth: 2
 
-Provides the ability for dijits or custom view components to become data binding aware.  Data binding awareness enables Dijits 
+*Deprecated*. Provides the ability for dijits or custom view components to become data binding aware.  Data binding awareness enables Dijits 
 or other view layer components to bind to locations within a client-side data model, which is commonly an instance of the 
 :ref:`dojox.mvc.StatefulModel <dojox/mvc/StatefulModel>` class. A bind is a bi-directional update mechanism which is capable of 
 synchronizing value changes between the bound dijit or other view component and the specified location within the data model, as 
