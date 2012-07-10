@@ -112,7 +112,7 @@ Array of AMD modules identifiers. Modules for the application. Used as the mixin
 .. js ::
 
   "modules": [
-    "my/custom/module"
+    "mypackage/custom/module"
   ]
 
 controllers
@@ -124,7 +124,7 @@ Array of AMD modules identifiers. Controllers for the application. All the contr
 
   "controllers": [
     "dojox/app/controllers/History",
-    "my/custom/appController"
+    "mypackage/custom/appController"
   ]
 
 stores
